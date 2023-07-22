@@ -10,10 +10,17 @@ import software.amazon.awscdk.services.cloudfront.DistributionAttributes
 public class DistributionAttributesDsl {
   private val cdkBuilder: DistributionAttributes.Builder = DistributionAttributes.builder()
 
+  /**
+   * @param distributionId The distribution ID for this distribution. 
+   */
   public fun distributionId(distributionId: String) {
     cdkBuilder.distributionId(distributionId)
   }
 
+  /**
+   * @param domainName The generated domain name of the Distribution, such as
+   * d111111abcdef8.cloudfront.net. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }

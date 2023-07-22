@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.eks.CfnCluster
 public class CfnClusterLoggingPropertyDsl {
   private val cdkBuilder: CfnCluster.LoggingProperty.Builder = CfnCluster.LoggingProperty.builder()
 
+  /**
+   * @param clusterLogging The cluster control plane logging configuration for your cluster.
+   */
   public fun clusterLogging(clusterLogging: IResolvable) {
     cdkBuilder.clusterLogging(clusterLogging)
   }
 
+  /**
+   * @param clusterLogging The cluster control plane logging configuration for your cluster.
+   */
   public fun clusterLogging(clusterLogging: CfnCluster.ClusterLoggingProperty) {
     cdkBuilder.clusterLogging(clusterLogging)
   }

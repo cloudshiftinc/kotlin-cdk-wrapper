@@ -16,31 +16,58 @@ public class CfnVirtualGatewayVirtualGatewaySpecPropertyDsl {
 
   private val _listeners: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param backendDefaults A reference to an object that represents the defaults for backends.
+   */
   public fun backendDefaults(backendDefaults: IResolvable) {
     cdkBuilder.backendDefaults(backendDefaults)
   }
 
+  /**
+   * @param backendDefaults A reference to an object that represents the defaults for backends.
+   */
   public
       fun backendDefaults(backendDefaults: CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty) {
     cdkBuilder.backendDefaults(backendDefaults)
   }
 
+  /**
+   * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
+   * from. 
+   * You can specify one listener.
+   */
   public fun listeners(vararg listeners: Any) {
     _listeners.addAll(listOf(*listeners))
   }
 
+  /**
+   * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
+   * from. 
+   * You can specify one listener.
+   */
   public fun listeners(listeners: Collection<Any>) {
     _listeners.addAll(listeners)
   }
 
+  /**
+   * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
+   * from. 
+   * You can specify one listener.
+   */
   public fun listeners(listeners: IResolvable) {
     cdkBuilder.listeners(listeners)
   }
 
+  /**
+   * @param logging An object that represents logging information.
+   */
   public fun logging(logging: IResolvable) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * @param logging An object that represents logging information.
+   */
   public fun logging(logging: CfnVirtualGateway.VirtualGatewayLoggingProperty) {
     cdkBuilder.logging(logging)
   }

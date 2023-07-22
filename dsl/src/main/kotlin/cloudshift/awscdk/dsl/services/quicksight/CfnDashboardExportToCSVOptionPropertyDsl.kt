@@ -11,6 +11,9 @@ public class CfnDashboardExportToCSVOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.ExportToCSVOptionProperty.Builder =
       CfnDashboard.ExportToCSVOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus Availability status.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

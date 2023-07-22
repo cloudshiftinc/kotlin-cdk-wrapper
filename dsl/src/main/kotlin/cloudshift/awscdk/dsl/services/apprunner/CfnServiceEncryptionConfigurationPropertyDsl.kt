@@ -11,6 +11,9 @@ public class CfnServiceEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.EncryptionConfigurationProperty.Builder =
       CfnService.EncryptionConfigurationProperty.builder()
 
+  /**
+   * @param kmsKey The ARN of the KMS key that's used for encryption. 
+   */
   public fun kmsKey(kmsKey: String) {
     cdkBuilder.kmsKey(kmsKey)
   }

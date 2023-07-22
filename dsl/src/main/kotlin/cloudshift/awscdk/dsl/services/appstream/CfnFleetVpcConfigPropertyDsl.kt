@@ -16,18 +16,34 @@ public class CfnFleetVpcConfigPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds The identifiers of the security groups for the fleet.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The identifiers of the security groups for the fleet.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds The identifiers of the subnets to which a network interface is attached from
+   * the fleet instance.
+   * Fleet instances can use one or two subnets.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The identifiers of the subnets to which a network interface is attached from
+   * the fleet instance.
+   * Fleet instances can use one or two subnets.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

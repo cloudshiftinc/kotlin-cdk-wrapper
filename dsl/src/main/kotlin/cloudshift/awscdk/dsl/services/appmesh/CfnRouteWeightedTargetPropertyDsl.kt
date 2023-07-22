@@ -12,14 +12,23 @@ public class CfnRouteWeightedTargetPropertyDsl {
   private val cdkBuilder: CfnRoute.WeightedTargetProperty.Builder =
       CfnRoute.WeightedTargetProperty.builder()
 
+  /**
+   * @param port The targeted port of the weighted object.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param virtualNode The virtual node to associate with the weighted target. 
+   */
   public fun virtualNode(virtualNode: String) {
     cdkBuilder.virtualNode(virtualNode)
   }
 
+  /**
+   * @param weight The relative weight of the weighted target. 
+   */
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)
   }

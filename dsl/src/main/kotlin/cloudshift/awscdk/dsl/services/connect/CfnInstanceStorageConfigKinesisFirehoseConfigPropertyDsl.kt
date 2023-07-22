@@ -11,6 +11,9 @@ public class CfnInstanceStorageConfigKinesisFirehoseConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceStorageConfig.KinesisFirehoseConfigProperty.Builder =
       CfnInstanceStorageConfig.KinesisFirehoseConfigProperty.builder()
 
+  /**
+   * @param firehoseArn The Amazon Resource Name (ARN) of the delivery stream. 
+   */
   public fun firehoseArn(firehoseArn: String) {
     cdkBuilder.firehoseArn(firehoseArn)
   }

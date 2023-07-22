@@ -13,22 +13,34 @@ public class CfnJobDefinitionResourcesPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.ResourcesProperty.Builder =
       CfnJobDefinition.ResourcesProperty.builder()
 
-  public fun limits(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param limits the value to be set.
+   */
+  public fun limits(limits: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(limits)
     cdkBuilder.limits(builder.map)
   }
 
+  /**
+   * @param limits the value to be set.
+   */
   public fun limits(limits: Any) {
     cdkBuilder.limits(limits)
   }
 
-  public fun requests(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param requests the value to be set.
+   */
+  public fun requests(requests: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(requests)
     cdkBuilder.requests(builder.map)
   }
 
+  /**
+   * @param requests the value to be set.
+   */
   public fun requests(requests: Any) {
     cdkBuilder.requests(requests)
   }

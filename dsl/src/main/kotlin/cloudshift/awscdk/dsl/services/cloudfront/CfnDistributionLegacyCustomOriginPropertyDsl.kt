@@ -16,26 +16,44 @@ public class CfnDistributionLegacyCustomOriginPropertyDsl {
 
   private val _originSslProtocols: MutableList<String> = mutableListOf()
 
+  /**
+   * @param dnsName the value to be set. 
+   */
   public fun dnsName(dnsName: String) {
     cdkBuilder.dnsName(dnsName)
   }
 
+  /**
+   * @param httpPort the value to be set.
+   */
   public fun httpPort(httpPort: Number) {
     cdkBuilder.httpPort(httpPort)
   }
 
+  /**
+   * @param httpsPort the value to be set.
+   */
   public fun httpsPort(httpsPort: Number) {
     cdkBuilder.httpsPort(httpsPort)
   }
 
+  /**
+   * @param originProtocolPolicy the value to be set. 
+   */
   public fun originProtocolPolicy(originProtocolPolicy: String) {
     cdkBuilder.originProtocolPolicy(originProtocolPolicy)
   }
 
+  /**
+   * @param originSslProtocols the value to be set. 
+   */
   public fun originSslProtocols(vararg originSslProtocols: String) {
     _originSslProtocols.addAll(listOf(*originSslProtocols))
   }
 
+  /**
+   * @param originSslProtocols the value to be set. 
+   */
   public fun originSslProtocols(originSslProtocols: Collection<String>) {
     _originSslProtocols.addAll(originSslProtocols)
   }

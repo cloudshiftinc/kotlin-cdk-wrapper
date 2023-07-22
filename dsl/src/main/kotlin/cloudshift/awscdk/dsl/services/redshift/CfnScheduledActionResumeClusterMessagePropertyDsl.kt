@@ -11,6 +11,9 @@ public class CfnScheduledActionResumeClusterMessagePropertyDsl {
   private val cdkBuilder: CfnScheduledAction.ResumeClusterMessageProperty.Builder =
       CfnScheduledAction.ResumeClusterMessageProperty.builder()
 
+  /**
+   * @param clusterIdentifier The identifier of the cluster to be resumed. 
+   */
   public fun clusterIdentifier(clusterIdentifier: String) {
     cdkBuilder.clusterIdentifier(clusterIdentifier)
   }

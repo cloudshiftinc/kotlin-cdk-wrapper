@@ -11,6 +11,10 @@ public class CfnLaunchTemplateCreditSpecificationPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.CreditSpecificationProperty.Builder =
       CfnLaunchTemplate.CreditSpecificationProperty.builder()
 
+  /**
+   * @param cpuCredits The credit option for CPU usage of a T instance.
+   * Valid values: `standard` | `unlimited`
+   */
   public fun cpuCredits(cpuCredits: String) {
     cdkBuilder.cpuCredits(cpuCredits)
   }

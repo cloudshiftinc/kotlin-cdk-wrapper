@@ -11,10 +11,16 @@ public class CfnScalableTargetScalableTargetActionPropertyDsl {
   private val cdkBuilder: CfnScalableTarget.ScalableTargetActionProperty.Builder =
       CfnScalableTarget.ScalableTargetActionProperty.builder()
 
+  /**
+   * @param maxCapacity The maximum capacity.
+   */
   public fun maxCapacity(maxCapacity: Number) {
     cdkBuilder.maxCapacity(maxCapacity)
   }
 
+  /**
+   * @param minCapacity The minimum capacity.
+   */
   public fun minCapacity(minCapacity: Number) {
     cdkBuilder.minCapacity(minCapacity)
   }

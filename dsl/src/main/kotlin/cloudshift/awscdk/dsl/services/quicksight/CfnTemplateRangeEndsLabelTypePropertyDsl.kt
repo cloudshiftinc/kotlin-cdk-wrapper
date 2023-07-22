@@ -11,6 +11,9 @@ public class CfnTemplateRangeEndsLabelTypePropertyDsl {
   private val cdkBuilder: CfnTemplate.RangeEndsLabelTypeProperty.Builder =
       CfnTemplate.RangeEndsLabelTypeProperty.builder()
 
+  /**
+   * @param visibility The visibility of the range ends label.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

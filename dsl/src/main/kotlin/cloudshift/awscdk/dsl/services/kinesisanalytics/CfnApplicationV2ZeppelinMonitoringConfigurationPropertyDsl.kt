@@ -11,6 +11,10 @@ public class CfnApplicationV2ZeppelinMonitoringConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.ZeppelinMonitoringConfigurationProperty.Builder =
       CfnApplicationV2.ZeppelinMonitoringConfigurationProperty.builder()
 
+  /**
+   * @param logLevel The verbosity of the CloudWatch Logs for an application.
+   * You can set it to `INFO` , `WARN` , `ERROR` , or `DEBUG` .
+   */
   public fun logLevel(logLevel: String) {
     cdkBuilder.logLevel(logLevel)
   }

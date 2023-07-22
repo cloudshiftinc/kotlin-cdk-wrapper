@@ -11,10 +11,16 @@ import software.amazon.awscdk.CfnDynamicReferenceService
 public class CfnDynamicReferencePropsDsl {
   private val cdkBuilder: CfnDynamicReferenceProps.Builder = CfnDynamicReferenceProps.builder()
 
+  /**
+   * @param referenceKey The reference key of the dynamic reference. 
+   */
   public fun referenceKey(referenceKey: String) {
     cdkBuilder.referenceKey(referenceKey)
   }
 
+  /**
+   * @param service The service to retrieve the dynamic reference from. 
+   */
   public fun service(service: CfnDynamicReferenceService) {
     cdkBuilder.service(service)
   }

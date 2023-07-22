@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.s3.IBucket
 public class LoggingConfigurationDsl {
   private val cdkBuilder: LoggingConfiguration.Builder = LoggingConfiguration.builder()
 
+  /**
+   * @param bucket Bucket to log requests to.
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param includeCookies Whether to include the cookies in the logs.
+   */
   public fun includeCookies(includeCookies: Boolean) {
     cdkBuilder.includeCookies(includeCookies)
   }
 
+  /**
+   * @param prefix Where in the bucket to store logs.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

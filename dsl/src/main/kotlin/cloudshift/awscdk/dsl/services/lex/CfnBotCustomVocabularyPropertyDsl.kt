@@ -16,14 +16,26 @@ public class CfnBotCustomVocabularyPropertyDsl {
 
   private val _customVocabularyItems: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param customVocabularyItems Specifies a list of words that you expect to be used during a
+   * conversation with your bot. 
+   */
   public fun customVocabularyItems(vararg customVocabularyItems: Any) {
     _customVocabularyItems.addAll(listOf(*customVocabularyItems))
   }
 
+  /**
+   * @param customVocabularyItems Specifies a list of words that you expect to be used during a
+   * conversation with your bot. 
+   */
   public fun customVocabularyItems(customVocabularyItems: Collection<Any>) {
     _customVocabularyItems.addAll(customVocabularyItems)
   }
 
+  /**
+   * @param customVocabularyItems Specifies a list of words that you expect to be used during a
+   * conversation with your bot. 
+   */
   public fun customVocabularyItems(customVocabularyItems: IResolvable) {
     cdkBuilder.customVocabularyItems(customVocabularyItems)
   }

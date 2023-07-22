@@ -11,19 +11,31 @@ public class CfnDashboardTextAreaControlDisplayOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.TextAreaControlDisplayOptionsProperty.Builder =
       CfnDashboard.TextAreaControlDisplayOptionsProperty.builder()
 
+  /**
+   * @param placeholderOptions The configuration of the placeholder options in a text area control.
+   */
   public fun placeholderOptions(placeholderOptions: IResolvable) {
     cdkBuilder.placeholderOptions(placeholderOptions)
   }
 
+  /**
+   * @param placeholderOptions The configuration of the placeholder options in a text area control.
+   */
   public
       fun placeholderOptions(placeholderOptions: CfnDashboard.TextControlPlaceholderOptionsProperty) {
     cdkBuilder.placeholderOptions(placeholderOptions)
   }
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: IResolvable) {
     cdkBuilder.titleOptions(titleOptions)
   }
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: CfnDashboard.LabelOptionsProperty) {
     cdkBuilder.titleOptions(titleOptions)
   }

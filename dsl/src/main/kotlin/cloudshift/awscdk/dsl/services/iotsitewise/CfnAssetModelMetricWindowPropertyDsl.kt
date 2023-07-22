@@ -11,10 +11,16 @@ public class CfnAssetModelMetricWindowPropertyDsl {
   private val cdkBuilder: CfnAssetModel.MetricWindowProperty.Builder =
       CfnAssetModel.MetricWindowProperty.builder()
 
+  /**
+   * @param tumbling The tumbling time interval window.
+   */
   public fun tumbling(tumbling: IResolvable) {
     cdkBuilder.tumbling(tumbling)
   }
 
+  /**
+   * @param tumbling The tumbling time interval window.
+   */
   public fun tumbling(tumbling: CfnAssetModel.TumblingWindowProperty) {
     cdkBuilder.tumbling(tumbling)
   }

@@ -11,10 +11,18 @@ public class CfnProjectAppConfigResourceObjectPropertyDsl {
   private val cdkBuilder: CfnProject.AppConfigResourceObjectProperty.Builder =
       CfnProject.AppConfigResourceObjectProperty.builder()
 
+  /**
+   * @param applicationId The ID of the AWS AppConfig application to use for client-side evaluation.
+   * 
+   */
   public fun applicationId(applicationId: String) {
     cdkBuilder.applicationId(applicationId)
   }
 
+  /**
+   * @param environmentId The ID of the AWS AppConfig environment to use for client-side evaluation.
+   * 
+   */
   public fun environmentId(environmentId: String) {
     cdkBuilder.environmentId(environmentId)
   }

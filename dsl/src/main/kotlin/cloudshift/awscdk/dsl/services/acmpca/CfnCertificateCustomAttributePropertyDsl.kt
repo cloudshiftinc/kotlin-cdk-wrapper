@@ -11,10 +11,17 @@ public class CfnCertificateCustomAttributePropertyDsl {
   private val cdkBuilder: CfnCertificate.CustomAttributeProperty.Builder =
       CfnCertificate.CustomAttributeProperty.builder()
 
+  /**
+   * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
+   * relative distinguished name (RDN). 
+   */
   public fun objectIdentifier(objectIdentifier: String) {
     cdkBuilder.objectIdentifier(objectIdentifier)
   }
 
+  /**
+   * @param value Specifies the attribute value of relative distinguished name (RDN). 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

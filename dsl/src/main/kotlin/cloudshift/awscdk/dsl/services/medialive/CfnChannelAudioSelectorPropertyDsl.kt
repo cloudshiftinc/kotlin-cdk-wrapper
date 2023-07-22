@@ -12,14 +12,23 @@ public class CfnChannelAudioSelectorPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioSelectorProperty.Builder =
       CfnChannel.AudioSelectorProperty.builder()
 
+  /**
+   * @param name A name for this AudioSelector.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param selectorSettings Information about the specific audio to extract from the input.
+   */
   public fun selectorSettings(selectorSettings: IResolvable) {
     cdkBuilder.selectorSettings(selectorSettings)
   }
 
+  /**
+   * @param selectorSettings Information about the specific audio to extract from the input.
+   */
   public fun selectorSettings(selectorSettings: CfnChannel.AudioSelectorSettingsProperty) {
     cdkBuilder.selectorSettings(selectorSettings)
   }

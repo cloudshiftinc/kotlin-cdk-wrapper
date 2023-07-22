@@ -11,6 +11,9 @@ public class CfnClusterLoggingTypeConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.LoggingTypeConfigProperty.Builder =
       CfnCluster.LoggingTypeConfigProperty.builder()
 
+  /**
+   * @param type The name of the log type.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

@@ -16,14 +16,33 @@ public class ParameterGroupDsl(
 ) {
   private val cdkBuilder: ParameterGroup.Builder = ParameterGroup.Builder.create(scope, id)
 
+  /**
+   * Description for this parameter group.
+   *
+   * Default: a CDK generated description
+   *
+   * @param description Description for this parameter group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The database engine for this parameter group.
+   *
+   * @param engine The database engine for this parameter group. 
+   */
   public fun engine(engine: IEngine) {
     cdkBuilder.engine(engine)
   }
 
+  /**
+   * The parameters in this parameter group.
+   *
+   * Default: - None
+   *
+   * @param parameters The parameters in this parameter group. 
+   */
   public fun parameters(parameters: Map<String, String>) {
     cdkBuilder.parameters(parameters)
   }

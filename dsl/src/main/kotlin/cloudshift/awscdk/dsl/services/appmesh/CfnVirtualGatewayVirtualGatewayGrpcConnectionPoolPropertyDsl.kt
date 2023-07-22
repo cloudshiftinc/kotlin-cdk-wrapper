@@ -11,6 +11,10 @@ public class CfnVirtualGatewayVirtualGatewayGrpcConnectionPoolPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty.Builder =
       CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty.builder()
 
+  /**
+   * @param maxRequests Maximum number of inflight requests Envoy can concurrently support across
+   * hosts in upstream cluster. 
+   */
   public fun maxRequests(maxRequests: Number) {
     cdkBuilder.maxRequests(maxRequests)
   }

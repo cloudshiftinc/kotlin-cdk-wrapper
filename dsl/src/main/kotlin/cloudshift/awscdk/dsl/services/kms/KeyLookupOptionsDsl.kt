@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.kms.KeyLookupOptions
 public class KeyLookupOptionsDsl {
   private val cdkBuilder: KeyLookupOptions.Builder = KeyLookupOptions.builder()
 
+  /**
+   * @param aliasName The alias name of the Key. 
+   * Must be in the format `alias/&lt;AliasName&gt;`.
+   */
   public fun aliasName(aliasName: String) {
     cdkBuilder.aliasName(aliasName)
   }

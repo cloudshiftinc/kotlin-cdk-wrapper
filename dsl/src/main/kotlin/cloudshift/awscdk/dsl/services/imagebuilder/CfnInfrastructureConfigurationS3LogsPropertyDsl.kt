@@ -11,10 +11,16 @@ public class CfnInfrastructureConfigurationS3LogsPropertyDsl {
   private val cdkBuilder: CfnInfrastructureConfiguration.S3LogsProperty.Builder =
       CfnInfrastructureConfiguration.S3LogsProperty.builder()
 
+  /**
+   * @param s3BucketName The S3 bucket in which to store the logs.
+   */
   public fun s3BucketName(s3BucketName: String) {
     cdkBuilder.s3BucketName(s3BucketName)
   }
 
+  /**
+   * @param s3KeyPrefix The Amazon S3 path to the bucket where the logs are stored.
+   */
   public fun s3KeyPrefix(s3KeyPrefix: String) {
     cdkBuilder.s3KeyPrefix(s3KeyPrefix)
   }

@@ -1,6 +1,8 @@
 package cloudshift.awscdkdsl.build.dsl.asm
 
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
+import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceClass
+import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceMethod
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import com.squareup.kotlinpoet.TypeName
@@ -16,7 +18,7 @@ import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
 
-internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass.Method {
+internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod : CdkSourceMethod? = null) : CdkClass.Method {
     override val name: String = delegate.name
     override val signature: String = delegate.signature ?: delegate.desc
     private val annotations: List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
@@ -68,6 +70,7 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass.Met
             else -> GenericSignatureParser().parseAsMethodSignature(delegate.signature).returnType.toTypeName()
         }
     }
+    override val comment: String? = sourceMethod?.comment
 
     override fun toString(): String {
         return "AsmMethodAdapter(name=${name}; desc=${delegate.desc})"

@@ -19,26 +19,46 @@ public class CfnMitigationActionPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param actionName The friendly name of the mitigation action.
+   */
   public fun actionName(actionName: String) {
     cdkBuilder.actionName(actionName)
   }
 
+  /**
+   * @param actionParams The set of parameters for this mitigation action. 
+   * The parameters vary, depending on the kind of action you apply.
+   */
   public fun actionParams(actionParams: IResolvable) {
     cdkBuilder.actionParams(actionParams)
   }
 
+  /**
+   * @param actionParams The set of parameters for this mitigation action. 
+   * The parameters vary, depending on the kind of action you apply.
+   */
   public fun actionParams(actionParams: CfnMitigationAction.ActionParamsProperty) {
     cdkBuilder.actionParams(actionParams)
   }
 
+  /**
+   * @param roleArn The IAM role ARN used to apply this mitigation action. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param tags Metadata that can be used to manage the mitigation action.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Metadata that can be used to manage the mitigation action.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

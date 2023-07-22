@@ -11,6 +11,9 @@ public class CfnFunctionTableSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.TableSAMPTProperty.Builder =
       CfnFunction.TableSAMPTProperty.builder()
 
+  /**
+   * @param tableName the value to be set. 
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }

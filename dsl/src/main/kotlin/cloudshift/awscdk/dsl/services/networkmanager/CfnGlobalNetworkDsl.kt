@@ -21,14 +21,34 @@ public class CfnGlobalNetworkDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A description of the global network.
+   *
+   * Constraints: Maximum length of 256 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-description)
+   * @param description A description of the global network. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The tags for the global network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-tags)
+   * @param tags The tags for the global network. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags for the global network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-tags)
+   * @param tags The tags for the global network. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

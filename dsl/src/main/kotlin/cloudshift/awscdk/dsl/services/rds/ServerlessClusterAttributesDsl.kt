@@ -18,30 +18,51 @@ public class ServerlessClusterAttributesDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
+  /**
+   * @param clusterEndpointAddress Cluster endpoint address.
+   */
   public fun clusterEndpointAddress(clusterEndpointAddress: String) {
     cdkBuilder.clusterEndpointAddress(clusterEndpointAddress)
   }
 
+  /**
+   * @param clusterIdentifier Identifier for the cluster. 
+   */
   public fun clusterIdentifier(clusterIdentifier: String) {
     cdkBuilder.clusterIdentifier(clusterIdentifier)
   }
 
+  /**
+   * @param port The database port.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param readerEndpointAddress Reader endpoint address.
+   */
   public fun readerEndpointAddress(readerEndpointAddress: String) {
     cdkBuilder.readerEndpointAddress(readerEndpointAddress)
   }
 
+  /**
+   * @param secret The secret attached to the database cluster.
+   */
   public fun secret(secret: ISecret) {
     cdkBuilder.secret(secret)
   }
 
+  /**
+   * @param securityGroups The security groups of the database cluster.
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The security groups of the database cluster.
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }

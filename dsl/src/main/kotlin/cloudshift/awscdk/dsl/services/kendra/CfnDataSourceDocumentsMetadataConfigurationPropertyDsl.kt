@@ -11,6 +11,11 @@ public class CfnDataSourceDocumentsMetadataConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.DocumentsMetadataConfigurationProperty.Builder =
       CfnDataSource.DocumentsMetadataConfigurationProperty.builder()
 
+  /**
+   * @param s3Prefix A prefix used to filter metadata configuration files in the AWS S3 bucket.
+   * The S3 bucket might contain multiple metadata files. Use `S3Prefix` to include only the desired
+   * metadata files.
+   */
   public fun s3Prefix(s3Prefix: String) {
     cdkBuilder.s3Prefix(s3Prefix)
   }

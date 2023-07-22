@@ -11,10 +11,16 @@ public class CfnAnalysisWaterfallChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.WaterfallChartFieldWellsProperty.Builder =
       CfnAnalysis.WaterfallChartFieldWellsProperty.builder()
 
+  /**
+   * @param waterfallChartAggregatedFieldWells The field well configuration of a waterfall visual.
+   */
   public fun waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells: IResolvable) {
     cdkBuilder.waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells)
   }
 
+  /**
+   * @param waterfallChartAggregatedFieldWells The field well configuration of a waterfall visual.
+   */
   public
       fun waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells: CfnAnalysis.WaterfallChartAggregatedFieldWellsProperty) {
     cdkBuilder.waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells)

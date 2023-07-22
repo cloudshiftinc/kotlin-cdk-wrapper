@@ -12,18 +12,33 @@ import software.amazon.awscdk.services.xray.CfnResourcePolicyProps
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()
 
+  /**
+   * @param bypassPolicyLockoutCheck A flag to indicate whether to bypass the resource-based policy
+   * lockout safety check.
+   */
   public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: Boolean) {
     cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck)
   }
 
+  /**
+   * @param bypassPolicyLockoutCheck A flag to indicate whether to bypass the resource-based policy
+   * lockout safety check.
+   */
   public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable) {
     cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck)
   }
 
+  /**
+   * @param policyDocument The resource-based policy document, which can be up to 5kb in size. 
+   */
   public fun policyDocument(policyDocument: String) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * @param policyName The name of the resource-based policy. 
+   * Must be unique within a specific AWS account.
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }

@@ -11,10 +11,16 @@ public class CfnAnalysisSliderControlDisplayOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SliderControlDisplayOptionsProperty.Builder =
       CfnAnalysis.SliderControlDisplayOptionsProperty.builder()
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: IResolvable) {
     cdkBuilder.titleOptions(titleOptions)
   }
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: CfnAnalysis.LabelOptionsProperty) {
     cdkBuilder.titleOptions(titleOptions)
   }

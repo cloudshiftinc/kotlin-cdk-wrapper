@@ -13,18 +13,32 @@ public class CfnConnectorS3LogDeliveryPropertyDsl {
   private val cdkBuilder: CfnConnector.S3LogDeliveryProperty.Builder =
       CfnConnector.S3LogDeliveryProperty.builder()
 
+  /**
+   * @param bucket The name of the S3 bucket that is the destination for log delivery.
+   */
   public fun bucket(bucket: String) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
+   * destination. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Specifies whether connector logs get sent to the specified Amazon S3
+   * destination. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param prefix The S3 prefix that is the destination for log delivery.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

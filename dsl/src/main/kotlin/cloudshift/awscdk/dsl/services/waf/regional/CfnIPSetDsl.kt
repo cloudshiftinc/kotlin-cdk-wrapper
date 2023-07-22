@@ -20,18 +20,50 @@ public class CfnIPSetDsl(
 
   private val _ipSetDescriptors: MutableList<Any> = mutableListOf()
 
+  /**
+   * The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in CIDR notation) that web
+   * requests originate from.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html#cfn-wafregional-ipset-ipsetdescriptors)
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from. 
+   */
   public fun ipSetDescriptors(vararg ipSetDescriptors: Any) {
     _ipSetDescriptors.addAll(listOf(*ipSetDescriptors))
   }
 
+  /**
+   * The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in CIDR notation) that web
+   * requests originate from.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html#cfn-wafregional-ipset-ipsetdescriptors)
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from. 
+   */
   public fun ipSetDescriptors(ipSetDescriptors: Collection<Any>) {
     _ipSetDescriptors.addAll(ipSetDescriptors)
   }
 
+  /**
+   * The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in CIDR notation) that web
+   * requests originate from.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html#cfn-wafregional-ipset-ipsetdescriptors)
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from. 
+   */
   public fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
     cdkBuilder.ipSetDescriptors(ipSetDescriptors)
   }
 
+  /**
+   * A friendly name or description of the `IPSet` .
+   *
+   * You can't change the name of an `IPSet` after you create it.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html#cfn-wafregional-ipset-name)
+   * @param name A friendly name or description of the `IPSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

@@ -11,10 +11,16 @@ public class CfnDashboardFreeFormLayoutElementBackgroundStylePropertyDsl {
   private val cdkBuilder: CfnDashboard.FreeFormLayoutElementBackgroundStyleProperty.Builder =
       CfnDashboard.FreeFormLayoutElementBackgroundStyleProperty.builder()
 
+  /**
+   * @param color The background color of a free-form layout element.
+   */
   public fun color(color: String) {
     cdkBuilder.color(color)
   }
 
+  /**
+   * @param visibility The background visibility of a free-form layout element.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

@@ -20,18 +20,45 @@ public class CfnXssMatchSetDsl(
 
   private val _xssMatchTuples: MutableList<Any> = mutableListOf()
 
+  /**
+   * The name, if any, of the `XssMatchSet` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html#cfn-wafregional-xssmatchset-name)
+   * @param name The name, if any, of the `XssMatchSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html#cfn-wafregional-xssmatchset-xssmatchtuples)
+   * @param xssMatchTuples Specifies the parts of web requests that you want to inspect for
+   * cross-site scripting attacks. 
+   */
   public fun xssMatchTuples(vararg xssMatchTuples: Any) {
     _xssMatchTuples.addAll(listOf(*xssMatchTuples))
   }
 
+  /**
+   * Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html#cfn-wafregional-xssmatchset-xssmatchtuples)
+   * @param xssMatchTuples Specifies the parts of web requests that you want to inspect for
+   * cross-site scripting attacks. 
+   */
   public fun xssMatchTuples(xssMatchTuples: Collection<Any>) {
     _xssMatchTuples.addAll(xssMatchTuples)
   }
 
+  /**
+   * Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html#cfn-wafregional-xssmatchset-xssmatchtuples)
+   * @param xssMatchTuples Specifies the parts of web requests that you want to inspect for
+   * cross-site scripting attacks. 
+   */
   public fun xssMatchTuples(xssMatchTuples: IResolvable) {
     cdkBuilder.xssMatchTuples(xssMatchTuples)
   }

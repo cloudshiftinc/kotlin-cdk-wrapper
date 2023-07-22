@@ -15,18 +15,34 @@ import software.amazon.awscdk.services.sqs.IQueue
 public class EmailSubscriptionPropsDsl {
   private val cdkBuilder: EmailSubscriptionProps.Builder = EmailSubscriptionProps.builder()
 
+  /**
+   * @param deadLetterQueue Queue to be used as dead letter queue.
+   * If not passed no dead letter queue is enabled.
+   */
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)
   }
 
+  /**
+   * @param filterPolicy The filter policy.
+   */
   public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
     cdkBuilder.filterPolicy(filterPolicy)
   }
 
+  /**
+   * @param filterPolicyWithMessageBody The filter policy that is applied on the message body.
+   * To apply a filter policy to the message attributes, use `filterPolicy`. A maximum of one of
+   * `filterPolicyWithMessageBody` and `filterPolicy` may be used.
+   */
   public fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>) {
     cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody)
   }
 
+  /**
+   * @param json Indicates if the full notification JSON should be sent to the email address or just
+   * the message text.
+   */
   public fun json(json: Boolean) {
     cdkBuilder.json(json)
   }

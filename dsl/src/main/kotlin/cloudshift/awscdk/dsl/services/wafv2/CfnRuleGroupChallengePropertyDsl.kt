@@ -11,10 +11,16 @@ public class CfnRuleGroupChallengePropertyDsl {
   private val cdkBuilder: CfnRuleGroup.ChallengeProperty.Builder =
       CfnRuleGroup.ChallengeProperty.builder()
 
+  /**
+   * @param customRequestHandling Custom request handling.
+   */
   public fun customRequestHandling(customRequestHandling: IResolvable) {
     cdkBuilder.customRequestHandling(customRequestHandling)
   }
 
+  /**
+   * @param customRequestHandling Custom request handling.
+   */
   public
       fun customRequestHandling(customRequestHandling: CfnRuleGroup.CustomRequestHandlingProperty) {
     cdkBuilder.customRequestHandling(customRequestHandling)

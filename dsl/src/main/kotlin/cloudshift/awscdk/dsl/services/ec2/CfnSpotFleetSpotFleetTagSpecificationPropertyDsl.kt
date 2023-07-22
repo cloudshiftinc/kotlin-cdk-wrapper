@@ -18,14 +18,27 @@ public class CfnSpotFleetSpotFleetTagSpecificationPropertyDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param resourceType The type of resource.
+   * Currently, the only resource type that is supported is `instance` . To tag the Spot Fleet
+   * request on creation, use the `TagSpecifications` parameter in
+   * `[SpotFleetRequestConfigData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)`
+   * .
+   */
   public fun resourceType(resourceType: String) {
     cdkBuilder.resourceType(resourceType)
   }
 
+  /**
+   * @param tags The tags.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

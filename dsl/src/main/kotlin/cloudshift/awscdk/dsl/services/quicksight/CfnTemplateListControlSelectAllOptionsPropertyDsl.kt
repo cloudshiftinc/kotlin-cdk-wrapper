@@ -11,6 +11,9 @@ public class CfnTemplateListControlSelectAllOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.ListControlSelectAllOptionsProperty.Builder =
       CfnTemplate.ListControlSelectAllOptionsProperty.builder()
 
+  /**
+   * @param visibility The visibility configuration of the `Select all` options in a list control.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

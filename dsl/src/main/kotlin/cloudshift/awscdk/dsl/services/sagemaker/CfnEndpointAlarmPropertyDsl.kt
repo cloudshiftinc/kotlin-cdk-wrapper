@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 public class CfnEndpointAlarmPropertyDsl {
   private val cdkBuilder: CfnEndpoint.AlarmProperty.Builder = CfnEndpoint.AlarmProperty.builder()
 
+  /**
+   * @param alarmName The name of a CloudWatch alarm in your account. 
+   */
   public fun alarmName(alarmName: String) {
     cdkBuilder.alarmName(alarmName)
   }

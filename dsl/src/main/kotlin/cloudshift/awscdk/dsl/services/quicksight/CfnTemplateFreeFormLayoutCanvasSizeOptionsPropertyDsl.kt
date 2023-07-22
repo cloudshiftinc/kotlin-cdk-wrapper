@@ -11,10 +11,18 @@ public class CfnTemplateFreeFormLayoutCanvasSizeOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.FreeFormLayoutCanvasSizeOptionsProperty.Builder =
       CfnTemplate.FreeFormLayoutCanvasSizeOptionsProperty.builder()
 
+  /**
+   * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
+   * free-form layout.
+   */
   public fun screenCanvasSizeOptions(screenCanvasSizeOptions: IResolvable) {
     cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
   }
 
+  /**
+   * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
+   * free-form layout.
+   */
   public
       fun screenCanvasSizeOptions(screenCanvasSizeOptions: CfnTemplate.FreeFormLayoutScreenCanvasSizeOptionsProperty) {
     cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)

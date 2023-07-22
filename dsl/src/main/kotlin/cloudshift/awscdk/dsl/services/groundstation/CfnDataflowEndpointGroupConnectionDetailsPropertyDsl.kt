@@ -12,14 +12,23 @@ public class CfnDataflowEndpointGroupConnectionDetailsPropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.ConnectionDetailsProperty.Builder =
       CfnDataflowEndpointGroup.ConnectionDetailsProperty.builder()
 
+  /**
+   * @param mtu the value to be set.
+   */
   public fun mtu(mtu: Number) {
     cdkBuilder.mtu(mtu)
   }
 
+  /**
+   * @param socketAddress the value to be set.
+   */
   public fun socketAddress(socketAddress: IResolvable) {
     cdkBuilder.socketAddress(socketAddress)
   }
 
+  /**
+   * @param socketAddress the value to be set.
+   */
   public fun socketAddress(socketAddress: CfnDataflowEndpointGroup.SocketAddressProperty) {
     cdkBuilder.socketAddress(socketAddress)
   }

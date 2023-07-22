@@ -17,22 +17,37 @@ public class CfnEnvironmentPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description of the environment.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name of the environment. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param networkFabricType The network fabric type of the environment. 
+   */
   public fun networkFabricType(networkFabricType: String) {
     cdkBuilder.networkFabricType(networkFabricType)
   }
 
+  /**
+   * @param tags The tags assigned to the environment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags assigned to the environment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

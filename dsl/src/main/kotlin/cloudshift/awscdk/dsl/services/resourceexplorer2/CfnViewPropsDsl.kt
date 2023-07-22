@@ -18,30 +18,87 @@ public class CfnViewPropsDsl {
 
   private val _includedProperties: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param filters An array of strings that include search keywords, prefixes, and operators that
+   * filter the results that are returned for queries made using this view.
+   * When you use this view in a
+   * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+   * operation, the filter string is combined with the search's `QueryString` parameter using a logical
+   * `AND` operator.
+   *
+   * For information about the supported syntax, see [Search query reference for Resource
+   * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+   * in the *AWS Resource Explorer User Guide* .
+   *
+   *
+   * This query string in the context of this operation supports only [filter
+   * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+   * with optional
+   * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+   * . It doesn't support free-form text. For example, the string `region:us*
+   * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+   * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+   */
   public fun filters(filters: IResolvable) {
     cdkBuilder.filters(filters)
   }
 
+  /**
+   * @param filters An array of strings that include search keywords, prefixes, and operators that
+   * filter the results that are returned for queries made using this view.
+   * When you use this view in a
+   * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+   * operation, the filter string is combined with the search's `QueryString` parameter using a logical
+   * `AND` operator.
+   *
+   * For information about the supported syntax, see [Search query reference for Resource
+   * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+   * in the *AWS Resource Explorer User Guide* .
+   *
+   *
+   * This query string in the context of this operation supports only [filter
+   * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+   * with optional
+   * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+   * . It doesn't support free-form text. For example, the string `region:us*
+   * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+   * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+   */
   public fun filters(filters: CfnView.FiltersProperty) {
     cdkBuilder.filters(filters)
   }
 
+  /**
+   * @param includedProperties A list of fields that provide additional information about the view.
+   */
   public fun includedProperties(vararg includedProperties: Any) {
     _includedProperties.addAll(listOf(*includedProperties))
   }
 
+  /**
+   * @param includedProperties A list of fields that provide additional information about the view.
+   */
   public fun includedProperties(includedProperties: Collection<Any>) {
     _includedProperties.addAll(includedProperties)
   }
 
+  /**
+   * @param includedProperties A list of fields that provide additional information about the view.
+   */
   public fun includedProperties(includedProperties: IResolvable) {
     cdkBuilder.includedProperties(includedProperties)
   }
 
+  /**
+   * @param tags Tag key and value pairs that are attached to the view.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * @param viewName The name of the new view. 
+   */
   public fun viewName(viewName: String) {
     cdkBuilder.viewName(viewName)
   }

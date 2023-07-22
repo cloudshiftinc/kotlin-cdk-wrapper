@@ -11,10 +11,16 @@ public class CfnDataSetRenameColumnOperationPropertyDsl {
   private val cdkBuilder: CfnDataSet.RenameColumnOperationProperty.Builder =
       CfnDataSet.RenameColumnOperationProperty.builder()
 
+  /**
+   * @param columnName The name of the column to be renamed. 
+   */
   public fun columnName(columnName: String) {
     cdkBuilder.columnName(columnName)
   }
 
+  /**
+   * @param newColumnName The new name for the column. 
+   */
   public fun newColumnName(newColumnName: String) {
     cdkBuilder.newColumnName(newColumnName)
   }

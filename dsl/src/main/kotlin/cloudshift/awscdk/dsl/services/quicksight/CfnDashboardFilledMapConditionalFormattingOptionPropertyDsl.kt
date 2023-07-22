@@ -11,10 +11,16 @@ public class CfnDashboardFilledMapConditionalFormattingOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.FilledMapConditionalFormattingOptionProperty.Builder =
       CfnDashboard.FilledMapConditionalFormattingOptionProperty.builder()
 
+  /**
+   * @param shape The conditional formatting that determines the shape of the filled map. 
+   */
   public fun shape(shape: IResolvable) {
     cdkBuilder.shape(shape)
   }
 
+  /**
+   * @param shape The conditional formatting that determines the shape of the filled map. 
+   */
   public fun shape(shape: CfnDashboard.FilledMapShapeConditionalFormattingProperty) {
     cdkBuilder.shape(shape)
   }

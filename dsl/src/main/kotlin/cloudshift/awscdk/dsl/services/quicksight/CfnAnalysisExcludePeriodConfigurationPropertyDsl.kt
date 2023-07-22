@@ -12,14 +12,25 @@ public class CfnAnalysisExcludePeriodConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ExcludePeriodConfigurationProperty.Builder =
       CfnAnalysis.ExcludePeriodConfigurationProperty.builder()
 
+  /**
+   * @param amount The amount or number of the exclude period. 
+   */
   public fun amount(amount: Number) {
     cdkBuilder.amount(amount)
   }
 
+  /**
+   * @param granularity The granularity or unit (day, month, year) of the exclude period. 
+   */
   public fun granularity(granularity: String) {
     cdkBuilder.granularity(granularity)
   }
 
+  /**
+   * @param status The status of the exclude period. Choose from the following options:.
+   * * `ENABLED`
+   * * `DISABLED`
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

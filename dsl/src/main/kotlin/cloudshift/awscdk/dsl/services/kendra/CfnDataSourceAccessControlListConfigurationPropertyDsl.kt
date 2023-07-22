@@ -11,6 +11,9 @@ public class CfnDataSourceAccessControlListConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.AccessControlListConfigurationProperty.Builder =
       CfnDataSource.AccessControlListConfigurationProperty.builder()
 
+  /**
+   * @param keyPath Path to the AWS S3 bucket that contains the access control list files.
+   */
   public fun keyPath(keyPath: String) {
     cdkBuilder.keyPath(keyPath)
   }

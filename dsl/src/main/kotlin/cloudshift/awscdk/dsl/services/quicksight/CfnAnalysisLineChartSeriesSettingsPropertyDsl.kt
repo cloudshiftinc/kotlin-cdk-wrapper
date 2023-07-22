@@ -11,18 +11,30 @@ public class CfnAnalysisLineChartSeriesSettingsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LineChartSeriesSettingsProperty.Builder =
       CfnAnalysis.LineChartSeriesSettingsProperty.builder()
 
+  /**
+   * @param lineStyleSettings Line styles options for a line series in `LineChartVisual` .
+   */
   public fun lineStyleSettings(lineStyleSettings: IResolvable) {
     cdkBuilder.lineStyleSettings(lineStyleSettings)
   }
 
+  /**
+   * @param lineStyleSettings Line styles options for a line series in `LineChartVisual` .
+   */
   public fun lineStyleSettings(lineStyleSettings: CfnAnalysis.LineChartLineStyleSettingsProperty) {
     cdkBuilder.lineStyleSettings(lineStyleSettings)
   }
 
+  /**
+   * @param markerStyleSettings Marker styles options for a line series in `LineChartVisual` .
+   */
   public fun markerStyleSettings(markerStyleSettings: IResolvable) {
     cdkBuilder.markerStyleSettings(markerStyleSettings)
   }
 
+  /**
+   * @param markerStyleSettings Marker styles options for a line series in `LineChartVisual` .
+   */
   public
       fun markerStyleSettings(markerStyleSettings: CfnAnalysis.LineChartMarkerStyleSettingsProperty) {
     cdkBuilder.markerStyleSettings(markerStyleSettings)

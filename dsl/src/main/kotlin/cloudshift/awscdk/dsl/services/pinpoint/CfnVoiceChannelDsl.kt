@@ -16,14 +16,33 @@ public class CfnVoiceChannelDsl(
 ) {
   private val cdkBuilder: CfnVoiceChannel.Builder = CfnVoiceChannel.Builder.create(scope, id)
 
+  /**
+   * The unique identifier for the Amazon Pinpoint application that the voice channel applies to.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-voicechannel.html#cfn-pinpoint-voicechannel-applicationid)
+   * @param applicationId The unique identifier for the Amazon Pinpoint application that the voice
+   * channel applies to. 
+   */
   public fun applicationId(applicationId: String) {
     cdkBuilder.applicationId(applicationId)
   }
 
+  /**
+   * Specifies whether to enable the voice channel for the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-voicechannel.html#cfn-pinpoint-voicechannel-enabled)
+   * @param enabled Specifies whether to enable the voice channel for the application. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * Specifies whether to enable the voice channel for the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-voicechannel.html#cfn-pinpoint-voicechannel-enabled)
+   * @param enabled Specifies whether to enable the voice channel for the application. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

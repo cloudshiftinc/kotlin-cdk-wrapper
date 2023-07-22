@@ -11,18 +11,34 @@ import software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps
 public class CfnSyncJobPropsDsl {
   private val cdkBuilder: CfnSyncJobProps.Builder = CfnSyncJobProps.builder()
 
+  /**
+   * @param syncRole The SyncJob IAM role. 
+   * This IAM role is used by the sync job to read from the syncSource, and create, update or delete
+   * the corresponding resources.
+   */
   public fun syncRole(syncRole: String) {
     cdkBuilder.syncRole(syncRole)
   }
 
+  /**
+   * @param syncSource The sync source. 
+   *
+   * Currently the only supported syncSoucre is `SITEWISE` .
+   */
   public fun syncSource(syncSource: String) {
     cdkBuilder.syncSource(syncSource)
   }
 
+  /**
+   * @param tags Metadata you can use to manage the SyncJob.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * @param workspaceId The ID of the workspace that contains the sync job. 
+   */
   public fun workspaceId(workspaceId: String) {
     cdkBuilder.workspaceId(workspaceId)
   }

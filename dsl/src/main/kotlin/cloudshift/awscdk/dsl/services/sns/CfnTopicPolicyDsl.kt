@@ -21,20 +21,60 @@ public class CfnTopicPolicyDsl(
 
   private val _topics: MutableList<String> = mutableListOf()
 
-  public fun policyDocument(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * A policy document that contains permissions to add to the specified SNS topics.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicpolicy.html#cfn-sns-topicpolicy-policydocument)
+   * @param policyDocument A policy document that contains permissions to add to the specified SNS
+   * topics. 
+   */
+  public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policyDocument)
     cdkBuilder.policyDocument(builder.map)
   }
 
+  /**
+   * A policy document that contains permissions to add to the specified SNS topics.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicpolicy.html#cfn-sns-topicpolicy-policydocument)
+   * @param policyDocument A policy document that contains permissions to add to the specified SNS
+   * topics. 
+   */
   public fun policyDocument(policyDocument: Any) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * The Amazon Resource Names (ARN) of the topics to which you want to add the policy.
+   *
+   * You can use the
+   * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
+   * function to specify an
+   * `[AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html)`
+   * resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicpolicy.html#cfn-sns-topicpolicy-topics)
+   * @param topics The Amazon Resource Names (ARN) of the topics to which you want to add the
+   * policy. 
+   */
   public fun topics(vararg topics: String) {
     _topics.addAll(listOf(*topics))
   }
 
+  /**
+   * The Amazon Resource Names (ARN) of the topics to which you want to add the policy.
+   *
+   * You can use the
+   * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
+   * function to specify an
+   * `[AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html)`
+   * resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicpolicy.html#cfn-sns-topicpolicy-topics)
+   * @param topics The Amazon Resource Names (ARN) of the topics to which you want to add the
+   * policy. 
+   */
   public fun topics(topics: Collection<String>) {
     _topics.addAll(topics)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget
 public class AttachedSecretOptionsDsl {
   private val cdkBuilder: AttachedSecretOptions.Builder = AttachedSecretOptions.builder()
 
+  /**
+   * @param target The target to attach the secret to. 
+   */
   public fun target(target: ISecretAttachmentTarget) {
     cdkBuilder.target(target)
   }

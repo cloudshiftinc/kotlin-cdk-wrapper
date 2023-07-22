@@ -11,6 +11,9 @@ public class CfnApplicationKinesisStreamsInputPropertyDsl {
   private val cdkBuilder: CfnApplication.KinesisStreamsInputProperty.Builder =
       CfnApplication.KinesisStreamsInputProperty.builder()
 
+  /**
+   * @param resourceArn The ARN of the input Kinesis data stream to read. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

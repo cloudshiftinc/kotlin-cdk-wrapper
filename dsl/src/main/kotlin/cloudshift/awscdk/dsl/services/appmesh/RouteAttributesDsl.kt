@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.RouteAttributes
 public class RouteAttributesDsl {
   private val cdkBuilder: RouteAttributes.Builder = RouteAttributes.builder()
 
+  /**
+   * @param routeName The name of the Route. 
+   */
   public fun routeName(routeName: String) {
     cdkBuilder.routeName(routeName)
   }
 
+  /**
+   * @param virtualRouter The VirtualRouter the Route belongs to. 
+   */
   public fun virtualRouter(virtualRouter: IVirtualRouter) {
     cdkBuilder.virtualRouter(virtualRouter)
   }

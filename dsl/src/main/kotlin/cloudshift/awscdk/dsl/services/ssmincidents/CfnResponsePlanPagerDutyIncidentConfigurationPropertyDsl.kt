@@ -11,6 +11,10 @@ public class CfnResponsePlanPagerDutyIncidentConfigurationPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.PagerDutyIncidentConfigurationProperty.Builder =
       CfnResponsePlan.PagerDutyIncidentConfigurationProperty.builder()
 
+  /**
+   * @param serviceId The ID of the PagerDuty service that the response plan associates with an
+   * incident when it launches. 
+   */
   public fun serviceId(serviceId: String) {
     cdkBuilder.serviceId(serviceId)
   }

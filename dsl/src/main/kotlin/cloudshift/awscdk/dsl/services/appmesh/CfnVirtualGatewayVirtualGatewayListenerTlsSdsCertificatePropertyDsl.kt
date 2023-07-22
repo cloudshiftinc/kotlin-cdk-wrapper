@@ -11,6 +11,11 @@ public class CfnVirtualGatewayVirtualGatewayListenerTlsSdsCertificatePropertyDsl
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty.Builder
       = CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty.builder()
 
+  /**
+   * @param secretName A reference to an object that represents the name of the secret secret
+   * requested from the Secret Discovery Service provider representing Transport Layer Security (TLS)
+   * materials like a certificate or certificate chain. 
+   */
   public fun secretName(secretName: String) {
     cdkBuilder.secretName(secretName)
   }

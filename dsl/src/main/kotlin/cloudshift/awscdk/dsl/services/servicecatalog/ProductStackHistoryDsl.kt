@@ -17,26 +17,67 @@ public class ProductStackHistoryDsl(
   private val cdkBuilder: ProductStackHistory.Builder = ProductStackHistory.Builder.create(scope,
       id)
 
+  /**
+   * If this is set to true, the ProductStack will not be overwritten if a snapshot is found for the
+   * currentVersionName.
+   *
+   * @param currentVersionLocked If this is set to true, the ProductStack will not be overwritten if
+   * a snapshot is found for the currentVersionName. 
+   */
   public fun currentVersionLocked(currentVersionLocked: Boolean) {
     cdkBuilder.currentVersionLocked(currentVersionLocked)
   }
 
+  /**
+   * The current version name of the ProductStack.
+   *
+   * @param currentVersionName The current version name of the ProductStack. 
+   */
   public fun currentVersionName(currentVersionName: String) {
     cdkBuilder.currentVersionName(currentVersionName)
   }
 
+  /**
+   * The description of the product version.
+   *
+   * Default: - No description provided
+   *
+   * @param description The description of the product version. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The directory where template snapshots will be stored.
+   *
+   * Default: 'product-stack-snapshots'
+   *
+   * @param directory The directory where template snapshots will be stored. 
+   */
   public fun directory(directory: String) {
     cdkBuilder.directory(directory)
   }
 
+  /**
+   * The ProductStack whose history will be retained as a snapshot.
+   *
+   * @param productStack The ProductStack whose history will be retained as a snapshot. 
+   */
   public fun productStack(productStack: ProductStack) {
     cdkBuilder.productStack(productStack)
   }
 
+  /**
+   * Whether the specified product template will be validated by CloudFormation.
+   *
+   * If turned off, an invalid template configuration can be stored.
+   *
+   * Default: true
+   *
+   * @param validateTemplate Whether the specified product template will be validated by
+   * CloudFormation. 
+   */
   public fun validateTemplate(validateTemplate: Boolean) {
     cdkBuilder.validateTemplate(validateTemplate)
   }

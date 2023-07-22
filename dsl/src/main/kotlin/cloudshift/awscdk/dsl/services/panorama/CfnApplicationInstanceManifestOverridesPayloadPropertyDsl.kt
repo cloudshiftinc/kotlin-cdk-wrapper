@@ -11,6 +11,9 @@ public class CfnApplicationInstanceManifestOverridesPayloadPropertyDsl {
   private val cdkBuilder: CfnApplicationInstance.ManifestOverridesPayloadProperty.Builder =
       CfnApplicationInstance.ManifestOverridesPayloadProperty.builder()
 
+  /**
+   * @param payloadData The overrides document.
+   */
   public fun payloadData(payloadData: String) {
     cdkBuilder.payloadData(payloadData)
   }

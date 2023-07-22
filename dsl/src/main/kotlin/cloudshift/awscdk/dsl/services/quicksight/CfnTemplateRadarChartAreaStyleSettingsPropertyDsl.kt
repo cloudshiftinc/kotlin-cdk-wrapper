@@ -11,6 +11,9 @@ public class CfnTemplateRadarChartAreaStyleSettingsPropertyDsl {
   private val cdkBuilder: CfnTemplate.RadarChartAreaStyleSettingsProperty.Builder =
       CfnTemplate.RadarChartAreaStyleSettingsProperty.builder()
 
+  /**
+   * @param visibility The visibility settings of a radar chart.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

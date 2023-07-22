@@ -12,10 +12,16 @@ public class CfnRouteResponseParameterConstraintsPropertyDsl {
   private val cdkBuilder: CfnRouteResponse.ParameterConstraintsProperty.Builder =
       CfnRouteResponse.ParameterConstraintsProperty.builder()
 
+  /**
+   * @param required Specifies whether the parameter is required. 
+   */
   public fun required(required: Boolean) {
     cdkBuilder.required(required)
   }
 
+  /**
+   * @param required Specifies whether the parameter is required. 
+   */
   public fun required(required: IResolvable) {
     cdkBuilder.required(required)
   }

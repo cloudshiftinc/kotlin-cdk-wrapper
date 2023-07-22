@@ -11,6 +11,9 @@ public class CfnWorkGroupCustomerContentEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.Builder =
       CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.builder()
 
+  /**
+   * @param kmsKey The KMS key that is used to encrypt the user's data stores in Athena. 
+   */
   public fun kmsKey(kmsKey: String) {
     cdkBuilder.kmsKey(kmsKey)
   }

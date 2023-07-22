@@ -19,22 +19,43 @@ public class CfnACLPropsDsl {
 
   private val _userNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param aclName The name of the Access Control List. 
+   */
   public fun aclName(aclName: String) {
     cdkBuilder.aclName(aclName)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param userNames The list of users that belong to the Access Control List.
+   */
   public fun userNames(vararg userNames: String) {
     _userNames.addAll(listOf(*userNames))
   }
 
+  /**
+   * @param userNames The list of users that belong to the Access Control List.
+   */
   public fun userNames(userNames: Collection<String>) {
     _userNames.addAll(userNames)
   }

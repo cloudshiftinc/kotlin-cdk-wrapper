@@ -17,18 +17,30 @@ public class CfnObjectTypeKeyMapPropertyDsl {
 
   private val _objectTypeKeyList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param name Name of the key.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param objectTypeKeyList A list of ObjectTypeKey.
+   */
   public fun objectTypeKeyList(vararg objectTypeKeyList: Any) {
     _objectTypeKeyList.addAll(listOf(*objectTypeKeyList))
   }
 
+  /**
+   * @param objectTypeKeyList A list of ObjectTypeKey.
+   */
   public fun objectTypeKeyList(objectTypeKeyList: Collection<Any>) {
     _objectTypeKeyList.addAll(objectTypeKeyList)
   }
 
+  /**
+   * @param objectTypeKeyList A list of ObjectTypeKey.
+   */
   public fun objectTypeKeyList(objectTypeKeyList: IResolvable) {
     cdkBuilder.objectTypeKeyList(objectTypeKeyList)
   }

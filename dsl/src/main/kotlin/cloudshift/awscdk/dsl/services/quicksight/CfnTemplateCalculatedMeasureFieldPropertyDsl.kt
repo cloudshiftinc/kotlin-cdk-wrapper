@@ -11,10 +11,16 @@ public class CfnTemplateCalculatedMeasureFieldPropertyDsl {
   private val cdkBuilder: CfnTemplate.CalculatedMeasureFieldProperty.Builder =
       CfnTemplate.CalculatedMeasureFieldProperty.builder()
 
+  /**
+   * @param expression The expression in the table calculation. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }
 
+  /**
+   * @param fieldId The custom field ID. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }

@@ -19,19 +19,33 @@ public class CfnStreamingDistributionPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param streamingDistributionConfig The current configuration information for the RTMP
+   * distribution. 
+   */
   public fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
     cdkBuilder.streamingDistributionConfig(streamingDistributionConfig)
   }
 
+  /**
+   * @param streamingDistributionConfig The current configuration information for the RTMP
+   * distribution. 
+   */
   public
       fun streamingDistributionConfig(streamingDistributionConfig: CfnStreamingDistribution.StreamingDistributionConfigProperty) {
     cdkBuilder.streamingDistributionConfig(streamingDistributionConfig)
   }
 
+  /**
+   * @param tags A complex type that contains zero or more `Tag` elements.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A complex type that contains zero or more `Tag` elements.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

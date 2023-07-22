@@ -15,32 +15,55 @@ import software.amazon.awscdk.services.logs.RetentionDays
 public class LogRetentionPropsDsl {
   private val cdkBuilder: LogRetentionProps.Builder = LogRetentionProps.builder()
 
+  /**
+   * @param logGroupName The log group name. 
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }
 
+  /**
+   * @param logGroupRegion The region where the log group should be created.
+   */
   public fun logGroupRegion(logGroupRegion: String) {
     cdkBuilder.logGroupRegion(logGroupRegion)
   }
 
-  public fun logRetentionRetryOptions(block: LogRetentionRetryOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param logRetentionRetryOptions Retry options for all AWS API calls.
+   */
+  public
+      fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptionsDsl.() -> Unit
+      = {}) {
     val builder = LogRetentionRetryOptionsDsl()
-    builder.apply(block)
+    builder.apply(logRetentionRetryOptions)
     cdkBuilder.logRetentionRetryOptions(builder.build())
   }
 
+  /**
+   * @param logRetentionRetryOptions Retry options for all AWS API calls.
+   */
   public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
     cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
   }
 
+  /**
+   * @param removalPolicy The removalPolicy for the log group when the stack is deleted.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }
 
+  /**
+   * @param retention The number of days log events are kept in CloudWatch Logs. 
+   */
   public fun retention(retention: RetentionDays) {
     cdkBuilder.retention(retention)
   }
 
+  /**
+   * @param role The IAM role for the Lambda function associated with the custom resource.
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

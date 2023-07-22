@@ -11,6 +11,9 @@ public class CfnDashboardFontWeightPropertyDsl {
   private val cdkBuilder: CfnDashboard.FontWeightProperty.Builder =
       CfnDashboard.FontWeightProperty.builder()
 
+  /**
+   * @param name The lexical name for the level of boldness of the text display.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

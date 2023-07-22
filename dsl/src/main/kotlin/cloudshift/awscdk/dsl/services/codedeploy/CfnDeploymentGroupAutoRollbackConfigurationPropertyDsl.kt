@@ -17,18 +17,36 @@ public class CfnDeploymentGroupAutoRollbackConfigurationPropertyDsl {
 
   private val _events: MutableList<String> = mutableListOf()
 
+  /**
+   * @param enabled Indicates whether a defined automatic rollback configuration is currently
+   * enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether a defined automatic rollback configuration is currently
+   * enabled.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param events The event type or types that trigger a rollback.
+   * Valid values are `DEPLOYMENT_FAILURE` , `DEPLOYMENT_STOP_ON_ALARM` , or
+   * `DEPLOYMENT_STOP_ON_REQUEST` .
+   */
   public fun events(vararg events: String) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * @param events The event type or types that trigger a rollback.
+   * Valid values are `DEPLOYMENT_FAILURE` , `DEPLOYMENT_STOP_ON_ALARM` , or
+   * `DEPLOYMENT_STOP_ON_REQUEST` .
+   */
   public fun events(events: Collection<String>) {
     _events.addAll(events)
   }

@@ -22,26 +22,68 @@ public class CfnCustomerGatewayDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * For devices that support BGP, the customer gateway's BGP ASN.
+   *
+   * Default: 65000
+   *
+   * Default: - 65000
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasn)
+   * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN. 
+   */
   public fun bgpAsn(bgpAsn: Number) {
     cdkBuilder.bgpAsn(bgpAsn)
   }
 
+  /**
+   * The name of customer gateway device.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-devicename)
+   * @param deviceName The name of customer gateway device. 
+   */
   public fun deviceName(deviceName: String) {
     cdkBuilder.deviceName(deviceName)
   }
 
+  /**
+   * IPv4 address for the customer gateway device's outside interface.
+   *
+   * The address must be static.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-ipaddress)
+   * @param ipAddress IPv4 address for the customer gateway device's outside interface. 
+   */
   public fun ipAddress(ipAddress: String) {
     cdkBuilder.ipAddress(ipAddress)
   }
 
+  /**
+   * One or more tags for the customer gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-tags)
+   * @param tags One or more tags for the customer gateway. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * One or more tags for the customer gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-tags)
+   * @param tags One or more tags for the customer gateway. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The type of VPN connection that this customer gateway supports ( `ipsec.1` ).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-type)
+   * @param type The type of VPN connection that this customer gateway supports ( `ipsec.1` ). 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

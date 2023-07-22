@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.stepfunctions.ActivityProps
 public class ActivityPropsDsl {
   private val cdkBuilder: ActivityProps.Builder = ActivityProps.builder()
 
+  /**
+   * @param activityName The name for this activity.
+   */
   public fun activityName(activityName: String) {
     cdkBuilder.activityName(activityName)
   }

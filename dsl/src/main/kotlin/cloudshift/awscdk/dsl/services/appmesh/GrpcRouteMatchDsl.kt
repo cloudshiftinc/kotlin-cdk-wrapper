@@ -16,22 +16,40 @@ public class GrpcRouteMatchDsl {
 
   private val _metadata: MutableList<HeaderMatch> = mutableListOf()
 
+  /**
+   * @param metadata Create metadata based gRPC route match.
+   * All specified metadata must match for the route to match.
+   */
   public fun metadata(vararg metadata: HeaderMatch) {
     _metadata.addAll(listOf(*metadata))
   }
 
+  /**
+   * @param metadata Create metadata based gRPC route match.
+   * All specified metadata must match for the route to match.
+   */
   public fun metadata(metadata: Collection<HeaderMatch>) {
     _metadata.addAll(metadata)
   }
 
+  /**
+   * @param methodName The method name to match from the request.
+   * If the method name is specified, service name must be also provided.
+   */
   public fun methodName(methodName: String) {
     cdkBuilder.methodName(methodName)
   }
 
+  /**
+   * @param port The port to match from the request.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param serviceName Create service name based gRPC route match.
+   */
   public fun serviceName(serviceName: String) {
     cdkBuilder.serviceName(serviceName)
   }

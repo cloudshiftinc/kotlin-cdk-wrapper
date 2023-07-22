@@ -12,10 +12,16 @@ public class CfnServerlessClusterIamPropertyDsl {
   private val cdkBuilder: CfnServerlessCluster.IamProperty.Builder =
       CfnServerlessCluster.IamProperty.builder()
 
+  /**
+   * @param enabled SASL/IAM authentication is enabled or not. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled SASL/IAM authentication is enabled or not. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

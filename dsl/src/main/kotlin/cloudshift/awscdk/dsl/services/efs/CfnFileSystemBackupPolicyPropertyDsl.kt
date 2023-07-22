@@ -11,6 +11,11 @@ public class CfnFileSystemBackupPolicyPropertyDsl {
   private val cdkBuilder: CfnFileSystem.BackupPolicyProperty.Builder =
       CfnFileSystem.BackupPolicyProperty.builder()
 
+  /**
+   * @param status Set the backup policy status for the file system. 
+   * * *`ENABLED`* - Turns automatic backups on for the file system.
+   * * *`DISABLED`* - Turns automatic backups off for the file system.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

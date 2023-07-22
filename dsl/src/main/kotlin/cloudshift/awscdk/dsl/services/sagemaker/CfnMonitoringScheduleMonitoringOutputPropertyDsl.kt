@@ -11,10 +11,18 @@ public class CfnMonitoringScheduleMonitoringOutputPropertyDsl {
   private val cdkBuilder: CfnMonitoringSchedule.MonitoringOutputProperty.Builder =
       CfnMonitoringSchedule.MonitoringOutputProperty.builder()
 
+  /**
+   * @param s3Output The Amazon S3 storage location where the results of a monitoring job are saved.
+   * 
+   */
   public fun s3Output(s3Output: IResolvable) {
     cdkBuilder.s3Output(s3Output)
   }
 
+  /**
+   * @param s3Output The Amazon S3 storage location where the results of a monitoring job are saved.
+   * 
+   */
   public fun s3Output(s3Output: CfnMonitoringSchedule.S3OutputProperty) {
     cdkBuilder.s3Output(s3Output)
   }

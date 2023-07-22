@@ -15,14 +15,31 @@ public class CfnDistributionHeaderObjectPropertyDsl {
 
   private val _headersAllowList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param headersAllowList The specific headers to forward to your distribution's origin.
+   */
   public fun headersAllowList(vararg headersAllowList: String) {
     _headersAllowList.addAll(listOf(*headersAllowList))
   }
 
+  /**
+   * @param headersAllowList The specific headers to forward to your distribution's origin.
+   */
   public fun headersAllowList(headersAllowList: Collection<String>) {
     _headersAllowList.addAll(headersAllowList)
   }
 
+  /**
+   * @param option The headers that you want your distribution to forward to your origin.
+   * Your distribution caches your content based on these headers.
+   *
+   * Use one of the following configurations for your distribution:
+   *
+   * * *`all`* - Forwards all headers to your origin..
+   * * *`none`* - Forwards only the default headers.
+   * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
+   * parameter.
+   */
   public fun option(option: String) {
     cdkBuilder.option(option)
   }

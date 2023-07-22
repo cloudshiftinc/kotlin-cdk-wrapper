@@ -17,18 +17,40 @@ public class CfnExperimentOnlineAbConfigObjectPropertyDsl {
 
   private val _treatmentWeights: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param controlTreatmentName The name of the variation that is to be the default variation that
+   * the other variations are compared to.
+   */
   public fun controlTreatmentName(controlTreatmentName: String) {
     cdkBuilder.controlTreatmentName(controlTreatmentName)
   }
 
+  /**
+   * @param treatmentWeights A set of key-value pairs.
+   * The keys are treatment names, and the values are the portion of experiment traffic to be
+   * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000 for
+   * a variation would allocate 20% of the experiment traffic to that variation.
+   */
   public fun treatmentWeights(vararg treatmentWeights: Any) {
     _treatmentWeights.addAll(listOf(*treatmentWeights))
   }
 
+  /**
+   * @param treatmentWeights A set of key-value pairs.
+   * The keys are treatment names, and the values are the portion of experiment traffic to be
+   * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000 for
+   * a variation would allocate 20% of the experiment traffic to that variation.
+   */
   public fun treatmentWeights(treatmentWeights: Collection<Any>) {
     _treatmentWeights.addAll(treatmentWeights)
   }
 
+  /**
+   * @param treatmentWeights A set of key-value pairs.
+   * The keys are treatment names, and the values are the portion of experiment traffic to be
+   * assigned to that treatment. Specify the traffic portion in thousandths of a percent, so 20,000 for
+   * a variation would allocate 20% of the experiment traffic to that variation.
+   */
   public fun treatmentWeights(treatmentWeights: IResolvable) {
     cdkBuilder.treatmentWeights(treatmentWeights)
   }

@@ -15,10 +15,24 @@ public class VdmAttributesDsl(
 ) {
   private val cdkBuilder: VdmAttributes.Builder = VdmAttributes.Builder.create(scope, id)
 
+  /**
+   * Whether engagement metrics are enabled for your account.
+   *
+   * Default: true
+   *
+   * @param engagementMetrics Whether engagement metrics are enabled for your account. 
+   */
   public fun engagementMetrics(engagementMetrics: Boolean) {
     cdkBuilder.engagementMetrics(engagementMetrics)
   }
 
+  /**
+   * Whether optimized shared delivery is enabled for your account.
+   *
+   * Default: true
+   *
+   * @param optimizedSharedDelivery Whether optimized shared delivery is enabled for your account. 
+   */
   public fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean) {
     cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
   }

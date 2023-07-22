@@ -12,10 +12,16 @@ public class CfnDataSourceSslPropertiesPropertyDsl {
   private val cdkBuilder: CfnDataSource.SslPropertiesProperty.Builder =
       CfnDataSource.SslPropertiesProperty.builder()
 
+  /**
+   * @param disableSsl A Boolean option to control whether SSL should be disabled.
+   */
   public fun disableSsl(disableSsl: Boolean) {
     cdkBuilder.disableSsl(disableSsl)
   }
 
+  /**
+   * @param disableSsl A Boolean option to control whether SSL should be disabled.
+   */
   public fun disableSsl(disableSsl: IResolvable) {
     cdkBuilder.disableSsl(disableSsl)
   }

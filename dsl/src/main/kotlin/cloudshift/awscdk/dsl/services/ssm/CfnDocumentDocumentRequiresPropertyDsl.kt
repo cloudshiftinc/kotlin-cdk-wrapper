@@ -11,10 +11,17 @@ public class CfnDocumentDocumentRequiresPropertyDsl {
   private val cdkBuilder: CfnDocument.DocumentRequiresProperty.Builder =
       CfnDocument.DocumentRequiresProperty.builder()
 
+  /**
+   * @param name The name of the required SSM document.
+   * The name can be an Amazon Resource Name (ARN).
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param version The document version required by the current document.
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

@@ -11,10 +11,22 @@ import software.amazon.awscdk.services.sns.ITopic
 public class SnsDsl {
   private val cdkBuilder: Sns.Builder = Sns.Builder.create()
 
+  /**
+   * The encoding to use for the email within the Amazon SNS notification.
+   *
+   * Default: UTF-8
+   *
+   * @param encoding The encoding to use for the email within the Amazon SNS notification. 
+   */
   public fun encoding(encoding: EmailEncoding) {
     cdkBuilder.encoding(encoding)
   }
 
+  /**
+   * The SNS topic to notify.
+   *
+   * @param topic The SNS topic to notify. 
+   */
   public fun topic(topic: ITopic) {
     cdkBuilder.topic(topic)
   }

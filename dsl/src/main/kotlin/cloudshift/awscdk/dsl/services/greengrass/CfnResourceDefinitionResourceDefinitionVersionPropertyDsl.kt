@@ -16,14 +16,23 @@ public class CfnResourceDefinitionResourceDefinitionVersionPropertyDsl {
 
   private val _resources: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param resources The resources in this version. 
+   */
   public fun resources(vararg resources: Any) {
     _resources.addAll(listOf(*resources))
   }
 
+  /**
+   * @param resources The resources in this version. 
+   */
   public fun resources(resources: Collection<Any>) {
     _resources.addAll(resources)
   }
 
+  /**
+   * @param resources The resources in this version. 
+   */
   public fun resources(resources: IResolvable) {
     cdkBuilder.resources(resources)
   }

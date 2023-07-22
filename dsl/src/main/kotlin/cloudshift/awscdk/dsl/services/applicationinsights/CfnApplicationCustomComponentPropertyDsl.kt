@@ -15,14 +15,23 @@ public class CfnApplicationCustomComponentPropertyDsl {
 
   private val _resourceList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param componentName The name of the component. 
+   */
   public fun componentName(componentName: String) {
     cdkBuilder.componentName(componentName)
   }
 
+  /**
+   * @param resourceList The list of resource ARNs that belong to the component. 
+   */
   public fun resourceList(vararg resourceList: String) {
     _resourceList.addAll(listOf(*resourceList))
   }
 
+  /**
+   * @param resourceList The list of resource ARNs that belong to the component. 
+   */
   public fun resourceList(resourceList: Collection<String>) {
     _resourceList.addAll(resourceList)
   }

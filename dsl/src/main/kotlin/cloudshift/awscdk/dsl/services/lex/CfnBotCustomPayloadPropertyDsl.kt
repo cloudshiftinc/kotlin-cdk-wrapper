@@ -11,6 +11,9 @@ public class CfnBotCustomPayloadPropertyDsl {
   private val cdkBuilder: CfnBot.CustomPayloadProperty.Builder =
       CfnBot.CustomPayloadProperty.builder()
 
+  /**
+   * @param value The string that is sent to your application. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

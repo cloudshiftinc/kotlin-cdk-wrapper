@@ -11,6 +11,10 @@ public class CfnMitigationActionUpdateDeviceCertificateParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.UpdateDeviceCertificateParamsProperty.Builder =
       CfnMitigationAction.UpdateDeviceCertificateParamsProperty.builder()
 
+  /**
+   * @param action The action that you want to apply to the device certificate. 
+   * The only supported value is `DEACTIVATE` .
+   */
   public fun action(action: String) {
     cdkBuilder.action(action)
   }

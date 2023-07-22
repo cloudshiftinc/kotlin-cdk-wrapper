@@ -10,10 +10,19 @@ import software.amazon.awscdk.services.connect.CfnRule
 public class CfnRuleReferencePropertyDsl {
   private val cdkBuilder: CfnRule.ReferenceProperty.Builder = CfnRule.ReferenceProperty.builder()
 
+  /**
+   * @param type The type of the reference. `DATE` must be of type Epoch timestamp. 
+   * *Allowed values* : `URL` | `ATTACHMENT` | `NUMBER` | `STRING` | `DATE` | `EMAIL`
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param value A valid value for the reference. 
+   * For example, for a URL reference, a formatted URL that is displayed to an agent in the Contact
+   * Control Panel (CCP).
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

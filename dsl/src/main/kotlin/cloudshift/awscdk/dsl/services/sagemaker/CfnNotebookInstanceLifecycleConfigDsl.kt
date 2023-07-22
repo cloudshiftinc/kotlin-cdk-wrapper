@@ -23,30 +23,90 @@ public class CfnNotebookInstanceLifecycleConfigDsl(
 
   private val _onStart: MutableList<Any> = mutableListOf()
 
+  /**
+   * The name of the lifecycle configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname)
+   * @param notebookInstanceLifecycleConfigName The name of the lifecycle configuration. 
+   */
   public fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String) {
     cdkBuilder.notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName)
   }
 
+  /**
+   * A shell script that runs only once, when you create a notebook instance.
+   *
+   * The shell script must be a base64-encoded string.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+   * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+   */
   public fun onCreate(vararg onCreate: Any) {
     _onCreate.addAll(listOf(*onCreate))
   }
 
+  /**
+   * A shell script that runs only once, when you create a notebook instance.
+   *
+   * The shell script must be a base64-encoded string.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+   * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+   */
   public fun onCreate(onCreate: Collection<Any>) {
     _onCreate.addAll(onCreate)
   }
 
+  /**
+   * A shell script that runs only once, when you create a notebook instance.
+   *
+   * The shell script must be a base64-encoded string.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+   * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+   */
   public fun onCreate(onCreate: IResolvable) {
     cdkBuilder.onCreate(onCreate)
   }
 
+  /**
+   * A shell script that runs every time you start a notebook instance, including when you create
+   * the notebook instance.
+   *
+   * The shell script must be a base64-encoded string.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+   * @param onStart A shell script that runs every time you start a notebook instance, including
+   * when you create the notebook instance. 
+   */
   public fun onStart(vararg onStart: Any) {
     _onStart.addAll(listOf(*onStart))
   }
 
+  /**
+   * A shell script that runs every time you start a notebook instance, including when you create
+   * the notebook instance.
+   *
+   * The shell script must be a base64-encoded string.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+   * @param onStart A shell script that runs every time you start a notebook instance, including
+   * when you create the notebook instance. 
+   */
   public fun onStart(onStart: Collection<Any>) {
     _onStart.addAll(onStart)
   }
 
+  /**
+   * A shell script that runs every time you start a notebook instance, including when you create
+   * the notebook instance.
+   *
+   * The shell script must be a base64-encoded string.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+   * @param onStart A shell script that runs every time you start a notebook instance, including
+   * when you create the notebook instance. 
+   */
   public fun onStart(onStart: IResolvable) {
     cdkBuilder.onStart(onStart)
   }

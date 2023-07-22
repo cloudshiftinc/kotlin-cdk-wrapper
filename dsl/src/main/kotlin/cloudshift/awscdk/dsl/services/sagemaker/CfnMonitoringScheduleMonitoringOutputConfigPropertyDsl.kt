@@ -17,18 +17,34 @@ public class CfnMonitoringScheduleMonitoringOutputConfigPropertyDsl {
 
   private val _monitoringOutputs: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to
+   * encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+   * This is where the output of the periodic monitoring jobs is uploaded.
+   */
   public fun monitoringOutputs(vararg monitoringOutputs: Any) {
     _monitoringOutputs.addAll(listOf(*monitoringOutputs))
   }
 
+  /**
+   * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+   * This is where the output of the periodic monitoring jobs is uploaded.
+   */
   public fun monitoringOutputs(monitoringOutputs: Collection<Any>) {
     _monitoringOutputs.addAll(monitoringOutputs)
   }
 
+  /**
+   * @param monitoringOutputs Monitoring outputs for monitoring jobs. 
+   * This is where the output of the periodic monitoring jobs is uploaded.
+   */
   public fun monitoringOutputs(monitoringOutputs: IResolvable) {
     cdkBuilder.monitoringOutputs(monitoringOutputs)
   }

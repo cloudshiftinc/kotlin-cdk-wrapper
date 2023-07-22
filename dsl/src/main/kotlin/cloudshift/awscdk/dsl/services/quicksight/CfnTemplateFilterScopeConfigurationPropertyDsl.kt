@@ -11,10 +11,16 @@ public class CfnTemplateFilterScopeConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.FilterScopeConfigurationProperty.Builder =
       CfnTemplate.FilterScopeConfigurationProperty.builder()
 
+  /**
+   * @param selectedSheets The configuration for applying a filter to specific sheets.
+   */
   public fun selectedSheets(selectedSheets: IResolvable) {
     cdkBuilder.selectedSheets(selectedSheets)
   }
 
+  /**
+   * @param selectedSheets The configuration for applying a filter to specific sheets.
+   */
   public
       fun selectedSheets(selectedSheets: CfnTemplate.SelectedSheetsFilterScopeConfigurationProperty) {
     cdkBuilder.selectedSheets(selectedSheets)

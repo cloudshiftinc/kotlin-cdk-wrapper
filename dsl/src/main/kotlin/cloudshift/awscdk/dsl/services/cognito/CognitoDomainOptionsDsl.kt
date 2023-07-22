@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.cognito.CognitoDomainOptions
 public class CognitoDomainOptionsDsl {
   private val cdkBuilder: CognitoDomainOptions.Builder = CognitoDomainOptions.builder()
 
+  /**
+   * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated with
+   * the user pool. 
+   */
   public fun domainPrefix(domainPrefix: String) {
     cdkBuilder.domainPrefix(domainPrefix)
   }

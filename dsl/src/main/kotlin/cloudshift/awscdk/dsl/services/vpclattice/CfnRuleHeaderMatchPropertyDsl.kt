@@ -13,22 +13,39 @@ public class CfnRuleHeaderMatchPropertyDsl {
   private val cdkBuilder: CfnRule.HeaderMatchProperty.Builder =
       CfnRule.HeaderMatchProperty.builder()
 
+  /**
+   * @param caseSensitive Indicates whether the match is case sensitive.
+   * Defaults to false.
+   */
   public fun caseSensitive(caseSensitive: Boolean) {
     cdkBuilder.caseSensitive(caseSensitive)
   }
 
+  /**
+   * @param caseSensitive Indicates whether the match is case sensitive.
+   * Defaults to false.
+   */
   public fun caseSensitive(caseSensitive: IResolvable) {
     cdkBuilder.caseSensitive(caseSensitive)
   }
 
+  /**
+   * @param match The header match type. 
+   */
   public fun match(match: IResolvable) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param match The header match type. 
+   */
   public fun match(match: CfnRule.HeaderMatchTypeProperty) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param name The name of the header. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

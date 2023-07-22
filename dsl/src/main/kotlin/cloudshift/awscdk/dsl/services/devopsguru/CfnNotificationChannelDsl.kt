@@ -16,10 +16,26 @@ public class CfnNotificationChannelDsl(
   private val cdkBuilder: CfnNotificationChannel.Builder =
       CfnNotificationChannel.Builder.create(scope, id)
 
+  /**
+   * A `NotificationChannelConfig` object that contains information about configured notification
+   * channels.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html#cfn-devopsguru-notificationchannel-config)
+   * @param config A `NotificationChannelConfig` object that contains information about configured
+   * notification channels. 
+   */
   public fun config(config: IResolvable) {
     cdkBuilder.config(config)
   }
 
+  /**
+   * A `NotificationChannelConfig` object that contains information about configured notification
+   * channels.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html#cfn-devopsguru-notificationchannel-config)
+   * @param config A `NotificationChannelConfig` object that contains information about configured
+   * notification channels. 
+   */
   public fun config(config: CfnNotificationChannel.NotificationChannelConfigProperty) {
     cdkBuilder.config(config)
   }

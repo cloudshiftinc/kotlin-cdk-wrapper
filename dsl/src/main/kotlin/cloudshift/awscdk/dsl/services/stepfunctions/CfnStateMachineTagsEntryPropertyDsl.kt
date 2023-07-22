@@ -11,10 +11,16 @@ public class CfnStateMachineTagsEntryPropertyDsl {
   private val cdkBuilder: CfnStateMachine.TagsEntryProperty.Builder =
       CfnStateMachine.TagsEntryProperty.builder()
 
+  /**
+   * @param key The `key` for a key-value pair in a tag entry. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The `value` for a key-value pair in a tag entry. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

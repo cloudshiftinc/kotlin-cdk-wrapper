@@ -11,6 +11,15 @@ public class CfnCodeSigningConfigCodeSigningPoliciesPropertyDsl {
   private val cdkBuilder: CfnCodeSigningConfig.CodeSigningPoliciesProperty.Builder =
       CfnCodeSigningConfig.CodeSigningPoliciesProperty.builder()
 
+  /**
+   * @param untrustedArtifactOnDeployment Code signing configuration policy for deployment
+   * validation failure. 
+   * If you set the policy to `Enforce` , Lambda blocks the deployment request if signature
+   * validation checks fail. If you set the policy to `Warn` , Lambda allows the deployment and creates
+   * a CloudWatch log.
+   *
+   * Default value: `Warn`
+   */
   public fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: String) {
     cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment)
   }

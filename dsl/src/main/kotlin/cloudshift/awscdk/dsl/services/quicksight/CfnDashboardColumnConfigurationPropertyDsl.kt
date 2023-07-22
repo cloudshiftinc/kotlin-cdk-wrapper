@@ -12,22 +12,37 @@ public class CfnDashboardColumnConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.ColumnConfigurationProperty.Builder =
       CfnDashboard.ColumnConfigurationProperty.builder()
 
+  /**
+   * @param column The column. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column. 
+   */
   public fun column(column: CfnDashboard.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param formatConfiguration The format configuration of a column.
+   */
   public fun formatConfiguration(formatConfiguration: IResolvable) {
     cdkBuilder.formatConfiguration(formatConfiguration)
   }
 
+  /**
+   * @param formatConfiguration The format configuration of a column.
+   */
   public fun formatConfiguration(formatConfiguration: CfnDashboard.FormatConfigurationProperty) {
     cdkBuilder.formatConfiguration(formatConfiguration)
   }
 
+  /**
+   * @param role The role of the column.
+   */
   public fun role(role: String) {
     cdkBuilder.role(role)
   }

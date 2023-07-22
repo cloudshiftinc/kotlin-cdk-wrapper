@@ -15,10 +15,22 @@ public class CfnClientVpnTargetNetworkAssociationDsl(
   private val cdkBuilder: CfnClientVpnTargetNetworkAssociation.Builder =
       CfnClientVpnTargetNetworkAssociation.Builder.create(scope, id)
 
+  /**
+   * The ID of the Client VPN endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid)
+   * @param clientVpnEndpointId The ID of the Client VPN endpoint. 
+   */
   public fun clientVpnEndpointId(clientVpnEndpointId: String) {
     cdkBuilder.clientVpnEndpointId(clientVpnEndpointId)
   }
 
+  /**
+   * The ID of the subnet to associate with the Client VPN endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-subnetid)
+   * @param subnetId The ID of the subnet to associate with the Client VPN endpoint. 
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

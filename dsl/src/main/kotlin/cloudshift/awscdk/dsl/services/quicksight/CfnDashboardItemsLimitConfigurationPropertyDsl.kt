@@ -12,10 +12,20 @@ public class CfnDashboardItemsLimitConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.ItemsLimitConfigurationProperty.Builder =
       CfnDashboard.ItemsLimitConfigurationProperty.builder()
 
+  /**
+   * @param itemsLimit The limit on how many items of a field are showed in the chart.
+   * For example, the number of slices that are displayed in a pie chart.
+   */
   public fun itemsLimit(itemsLimit: Number) {
     cdkBuilder.itemsLimit(itemsLimit)
   }
 
+  /**
+   * @param otherCategories The `Show other` of an axis in the chart. Choose one of the following
+   * options:.
+   * * `INCLUDE`
+   * * `EXCLUDE`
+   */
   public fun otherCategories(otherCategories: String) {
     cdkBuilder.otherCategories(otherCategories)
   }

@@ -14,6 +14,13 @@ public class GenericWindowsImageDsl(
 ) {
   private val cdkBuilder: GenericWindowsImage.Builder = GenericWindowsImage.Builder.create(amiMap)
 
+  /**
+   * Initial user data.
+   *
+   * Default: - Empty UserData for Windows machines
+   *
+   * @param userData Initial user data. 
+   */
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)
   }

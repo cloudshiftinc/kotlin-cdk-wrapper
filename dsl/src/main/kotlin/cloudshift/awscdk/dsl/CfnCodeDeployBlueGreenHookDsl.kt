@@ -24,45 +24,122 @@ public class CfnCodeDeployBlueGreenHookDsl(
 
   private val _applications: MutableList<CfnCodeDeployBlueGreenApplication> = mutableListOf()
 
-  public fun additionalOptions(block: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit = {}) {
+  /**
+   * Additional options for the blue/green deployment.
+   *
+   * Default: - no additional options
+   *
+   * @param additionalOptions Additional options for the blue/green deployment. 
+   */
+  public
+      fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
+      = {}) {
     val builder = CfnCodeDeployBlueGreenAdditionalOptionsDsl()
-    builder.apply(block)
+    builder.apply(additionalOptions)
     cdkBuilder.additionalOptions(builder.build())
   }
 
+  /**
+   * Additional options for the blue/green deployment.
+   *
+   * Default: - no additional options
+   *
+   * @param additionalOptions Additional options for the blue/green deployment. 
+   */
   public fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions) {
     cdkBuilder.additionalOptions(additionalOptions)
   }
 
+  /**
+   * Properties of the Amazon ECS applications being deployed.
+   *
+   * @param applications Properties of the Amazon ECS applications being deployed. 
+   */
   public fun applications(applications: CfnCodeDeployBlueGreenApplicationDsl.() -> Unit) {
     _applications.add(CfnCodeDeployBlueGreenApplicationDsl().apply(applications).build())
   }
 
+  /**
+   * Properties of the Amazon ECS applications being deployed.
+   *
+   * @param applications Properties of the Amazon ECS applications being deployed. 
+   */
   public fun applications(applications: Collection<CfnCodeDeployBlueGreenApplication>) {
     _applications.addAll(applications)
   }
 
-  public fun lifecycleEventHooks(block: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit =
-      {}) {
+  /**
+   * Use lifecycle event hooks to specify a Lambda function that CodeDeploy can call to validate a
+   * deployment.
+   *
+   * You can use the same function or a different one for deployment lifecycle events.
+   * Following completion of the validation tests,
+   * the Lambda `CfnCodeDeployBlueGreenLifecycleEventHooks.afterAllowTraffic`
+   * function calls back CodeDeploy and delivers a result of 'Succeeded' or 'Failed'.
+   *
+   * Default: - no lifecycle event hooks
+   *
+   * @param lifecycleEventHooks Use lifecycle event hooks to specify a Lambda function that
+   * CodeDeploy can call to validate a deployment. 
+   */
+  public
+      fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
+      = {}) {
     val builder = CfnCodeDeployBlueGreenLifecycleEventHooksDsl()
-    builder.apply(block)
+    builder.apply(lifecycleEventHooks)
     cdkBuilder.lifecycleEventHooks(builder.build())
   }
 
+  /**
+   * Use lifecycle event hooks to specify a Lambda function that CodeDeploy can call to validate a
+   * deployment.
+   *
+   * You can use the same function or a different one for deployment lifecycle events.
+   * Following completion of the validation tests,
+   * the Lambda `CfnCodeDeployBlueGreenLifecycleEventHooks.afterAllowTraffic`
+   * function calls back CodeDeploy and delivers a result of 'Succeeded' or 'Failed'.
+   *
+   * Default: - no lifecycle event hooks
+   *
+   * @param lifecycleEventHooks Use lifecycle event hooks to specify a Lambda function that
+   * CodeDeploy can call to validate a deployment. 
+   */
   public fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks) {
     cdkBuilder.lifecycleEventHooks(lifecycleEventHooks)
   }
 
+  /**
+   * The IAM Role for CloudFormation to use to perform blue-green deployments.
+   *
+   * @param serviceRole The IAM Role for CloudFormation to use to perform blue-green deployments. 
+   */
   public fun serviceRole(serviceRole: String) {
     cdkBuilder.serviceRole(serviceRole)
   }
 
-  public fun trafficRoutingConfig(block: CfnTrafficRoutingConfigDsl.() -> Unit = {}) {
+  /**
+   * Traffic routing configuration settings.
+   *
+   * Default: - time-based canary traffic shifting, with a 15% step percentage and a five minute
+   * bake time
+   *
+   * @param trafficRoutingConfig Traffic routing configuration settings. 
+   */
+  public fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfigDsl.() -> Unit =
+      {}) {
     val builder = CfnTrafficRoutingConfigDsl()
-    builder.apply(block)
+    builder.apply(trafficRoutingConfig)
     cdkBuilder.trafficRoutingConfig(builder.build())
   }
 
+  /**
+   * Traffic routing configuration settings.
+   *
+   * Default: - time-based canary traffic shifting, with a 15% step percentage and a five minute
+   * bake time
+   *
+   * @param trafficRoutingConfig Traffic routing configuration settings. 
+   */
   public fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig) {
     cdkBuilder.trafficRoutingConfig(trafficRoutingConfig)
   }

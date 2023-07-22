@@ -20,51 +20,89 @@ public class CfnPartnerAccountPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param accountLinked Whether the partner account is linked to the AWS account.
+   */
   public fun accountLinked(accountLinked: Boolean) {
     cdkBuilder.accountLinked(accountLinked)
   }
 
+  /**
+   * @param accountLinked Whether the partner account is linked to the AWS account.
+   */
   public fun accountLinked(accountLinked: IResolvable) {
     cdkBuilder.accountLinked(accountLinked)
   }
 
+  /**
+   * @param partnerAccountId The ID of the partner account to update.
+   */
   public fun partnerAccountId(partnerAccountId: String) {
     cdkBuilder.partnerAccountId(partnerAccountId)
   }
 
+  /**
+   * @param partnerType The partner type.
+   */
   public fun partnerType(partnerType: String) {
     cdkBuilder.partnerType(partnerType)
   }
 
+  /**
+   * @param sidewalk The Sidewalk account credentials.
+   */
   public fun sidewalk(sidewalk: IResolvable) {
     cdkBuilder.sidewalk(sidewalk)
   }
 
+  /**
+   * @param sidewalk The Sidewalk account credentials.
+   */
   public fun sidewalk(sidewalk: CfnPartnerAccount.SidewalkAccountInfoProperty) {
     cdkBuilder.sidewalk(sidewalk)
   }
 
+  /**
+   * @param sidewalkResponse the value to be set.
+   */
   public fun sidewalkResponse(sidewalkResponse: IResolvable) {
     cdkBuilder.sidewalkResponse(sidewalkResponse)
   }
 
+  /**
+   * @param sidewalkResponse the value to be set.
+   */
   public
       fun sidewalkResponse(sidewalkResponse: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty) {
     cdkBuilder.sidewalkResponse(sidewalkResponse)
   }
 
+  /**
+   * @param sidewalkUpdate the value to be set.
+   */
   public fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
     cdkBuilder.sidewalkUpdate(sidewalkUpdate)
   }
 
+  /**
+   * @param sidewalkUpdate the value to be set.
+   */
   public fun sidewalkUpdate(sidewalkUpdate: CfnPartnerAccount.SidewalkUpdateAccountProperty) {
     cdkBuilder.sidewalkUpdate(sidewalkUpdate)
   }
 
+  /**
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource.
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource.
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

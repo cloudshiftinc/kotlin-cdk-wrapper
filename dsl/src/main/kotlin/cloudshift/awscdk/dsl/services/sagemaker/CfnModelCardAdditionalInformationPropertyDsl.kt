@@ -13,18 +13,31 @@ public class CfnModelCardAdditionalInformationPropertyDsl {
   private val cdkBuilder: CfnModelCard.AdditionalInformationProperty.Builder =
       CfnModelCard.AdditionalInformationProperty.builder()
 
+  /**
+   * @param caveatsAndRecommendations Caveats and recommendations for those who might use this model
+   * in their applications.
+   */
   public fun caveatsAndRecommendations(caveatsAndRecommendations: String) {
     cdkBuilder.caveatsAndRecommendations(caveatsAndRecommendations)
   }
 
+  /**
+   * @param customDetails Any additional information to document about the model.
+   */
   public fun customDetails(customDetails: Map<String, String>) {
     cdkBuilder.customDetails(customDetails)
   }
 
+  /**
+   * @param customDetails Any additional information to document about the model.
+   */
   public fun customDetails(customDetails: IResolvable) {
     cdkBuilder.customDetails(customDetails)
   }
 
+  /**
+   * @param ethicalConsiderations Any ethical considerations documented by the model card author.
+   */
   public fun ethicalConsiderations(ethicalConsiderations: String) {
     cdkBuilder.ethicalConsiderations(ethicalConsiderations)
   }

@@ -11,10 +11,16 @@ public class CfnProfilingGroupChannelPropertyDsl {
   private val cdkBuilder: CfnProfilingGroup.ChannelProperty.Builder =
       CfnProfilingGroup.ChannelProperty.builder()
 
+  /**
+   * @param channelId The channel ID.
+   */
   public fun channelId(channelId: String) {
     cdkBuilder.channelId(channelId)
   }
 
+  /**
+   * @param channelUri The channel URI. 
+   */
   public fun channelUri(channelUri: String) {
     cdkBuilder.channelUri(channelUri)
   }

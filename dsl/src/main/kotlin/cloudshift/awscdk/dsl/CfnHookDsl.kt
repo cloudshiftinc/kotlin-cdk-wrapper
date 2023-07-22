@@ -18,16 +18,35 @@ public class CfnHookDsl(
 ) {
   private val cdkBuilder: CfnHook.Builder = CfnHook.Builder.create(scope, id)
 
-  public fun properties(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The properties of the hook.
+   *
+   * Default: - no properties
+   *
+   * @param properties The properties of the hook. 
+   */
+  public fun properties(properties: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(properties)
     cdkBuilder.properties(builder.map)
   }
 
+  /**
+   * The properties of the hook.
+   *
+   * Default: - no properties
+   *
+   * @param properties The properties of the hook. 
+   */
   public fun properties(properties: Map<String, Any>) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * The type of the hook (for example, "AWS::CodeDeploy::BlueGreen").
+   *
+   * @param type The type of the hook (for example, "AWS::CodeDeploy::BlueGreen"). 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

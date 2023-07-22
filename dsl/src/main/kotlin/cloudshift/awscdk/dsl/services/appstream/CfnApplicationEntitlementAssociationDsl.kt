@@ -15,14 +15,32 @@ public class CfnApplicationEntitlementAssociationDsl(
   private val cdkBuilder: CfnApplicationEntitlementAssociation.Builder =
       CfnApplicationEntitlementAssociation.Builder.create(scope, id)
 
+  /**
+   * The identifier of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-applicationidentifier)
+   * @param applicationIdentifier The identifier of the application. 
+   */
   public fun applicationIdentifier(applicationIdentifier: String) {
     cdkBuilder.applicationIdentifier(applicationIdentifier)
   }
 
+  /**
+   * The name of the entitlement.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-entitlementname)
+   * @param entitlementName The name of the entitlement. 
+   */
   public fun entitlementName(entitlementName: String) {
     cdkBuilder.entitlementName(entitlementName)
   }
 
+  /**
+   * The name of the stack.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-stackname)
+   * @param stackName The name of the stack. 
+   */
   public fun stackName(stackName: String) {
     cdkBuilder.stackName(stackName)
   }

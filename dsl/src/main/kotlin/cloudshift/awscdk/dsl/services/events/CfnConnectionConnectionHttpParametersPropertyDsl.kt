@@ -20,38 +20,65 @@ public class CfnConnectionConnectionHttpParametersPropertyDsl {
 
   private val _queryStringParameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param bodyParameters Contains additional body string parameters for the connection.
+   */
   public fun bodyParameters(vararg bodyParameters: Any) {
     _bodyParameters.addAll(listOf(*bodyParameters))
   }
 
+  /**
+   * @param bodyParameters Contains additional body string parameters for the connection.
+   */
   public fun bodyParameters(bodyParameters: Collection<Any>) {
     _bodyParameters.addAll(bodyParameters)
   }
 
+  /**
+   * @param bodyParameters Contains additional body string parameters for the connection.
+   */
   public fun bodyParameters(bodyParameters: IResolvable) {
     cdkBuilder.bodyParameters(bodyParameters)
   }
 
+  /**
+   * @param headerParameters Contains additional header parameters for the connection.
+   */
   public fun headerParameters(vararg headerParameters: Any) {
     _headerParameters.addAll(listOf(*headerParameters))
   }
 
+  /**
+   * @param headerParameters Contains additional header parameters for the connection.
+   */
   public fun headerParameters(headerParameters: Collection<Any>) {
     _headerParameters.addAll(headerParameters)
   }
 
+  /**
+   * @param headerParameters Contains additional header parameters for the connection.
+   */
   public fun headerParameters(headerParameters: IResolvable) {
     cdkBuilder.headerParameters(headerParameters)
   }
 
+  /**
+   * @param queryStringParameters Contains additional query string parameters for the connection.
+   */
   public fun queryStringParameters(vararg queryStringParameters: Any) {
     _queryStringParameters.addAll(listOf(*queryStringParameters))
   }
 
+  /**
+   * @param queryStringParameters Contains additional query string parameters for the connection.
+   */
   public fun queryStringParameters(queryStringParameters: Collection<Any>) {
     _queryStringParameters.addAll(queryStringParameters)
   }
 
+  /**
+   * @param queryStringParameters Contains additional query string parameters for the connection.
+   */
   public fun queryStringParameters(queryStringParameters: IResolvable) {
     cdkBuilder.queryStringParameters(queryStringParameters)
   }

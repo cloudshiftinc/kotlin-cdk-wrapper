@@ -11,10 +11,16 @@ public class CfnDataflowEndpointGroupIntegerRangePropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.IntegerRangeProperty.Builder =
       CfnDataflowEndpointGroup.IntegerRangeProperty.builder()
 
+  /**
+   * @param maximum the value to be set.
+   */
   public fun maximum(maximum: Number) {
     cdkBuilder.maximum(maximum)
   }
 
+  /**
+   * @param minimum the value to be set.
+   */
   public fun minimum(minimum: Number) {
     cdkBuilder.minimum(minimum)
   }

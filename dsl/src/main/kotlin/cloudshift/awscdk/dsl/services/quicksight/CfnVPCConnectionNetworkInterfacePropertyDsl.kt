@@ -11,22 +11,37 @@ public class CfnVPCConnectionNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnVPCConnection.NetworkInterfaceProperty.Builder =
       CfnVPCConnection.NetworkInterfaceProperty.builder()
 
+  /**
+   * @param availabilityZone The availability zone that the network interface resides in.
+   */
   public fun availabilityZone(availabilityZone: String) {
     cdkBuilder.availabilityZone(availabilityZone)
   }
 
+  /**
+   * @param errorMessage An error message.
+   */
   public fun errorMessage(errorMessage: String) {
     cdkBuilder.errorMessage(errorMessage)
   }
 
+  /**
+   * @param networkInterfaceId The network interface ID.
+   */
   public fun networkInterfaceId(networkInterfaceId: String) {
     cdkBuilder.networkInterfaceId(networkInterfaceId)
   }
 
+  /**
+   * @param status The status of the network interface.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
+  /**
+   * @param subnetId The subnet ID associated with the network interface.
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

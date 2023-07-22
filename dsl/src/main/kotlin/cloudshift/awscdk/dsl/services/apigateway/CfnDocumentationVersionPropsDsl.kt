@@ -11,14 +11,23 @@ public class CfnDocumentationVersionPropsDsl {
   private val cdkBuilder: CfnDocumentationVersionProps.Builder =
       CfnDocumentationVersionProps.builder()
 
+  /**
+   * @param description A description about the new documentation snapshot.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param documentationVersion The version identifier of the to-be-updated documentation version. 
+   */
   public fun documentationVersion(documentationVersion: String) {
     cdkBuilder.documentationVersion(documentationVersion)
   }
 
+  /**
+   * @param restApiId The string identifier of the associated RestApi. 
+   */
   public fun restApiId(restApiId: String) {
     cdkBuilder.restApiId(restApiId)
   }

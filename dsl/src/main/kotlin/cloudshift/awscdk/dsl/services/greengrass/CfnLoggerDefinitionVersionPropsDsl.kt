@@ -17,18 +17,31 @@ public class CfnLoggerDefinitionVersionPropsDsl {
 
   private val _loggers: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param loggerDefinitionId The ID of the logger definition associated with this version. 
+   * This value is a GUID.
+   */
   public fun loggerDefinitionId(loggerDefinitionId: String) {
     cdkBuilder.loggerDefinitionId(loggerDefinitionId)
   }
 
+  /**
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(vararg loggers: Any) {
     _loggers.addAll(listOf(*loggers))
   }
 
+  /**
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(loggers: Collection<Any>) {
     _loggers.addAll(loggers)
   }
 
+  /**
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(loggers: IResolvable) {
     cdkBuilder.loggers(loggers)
   }

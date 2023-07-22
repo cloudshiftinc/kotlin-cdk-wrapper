@@ -10,14 +10,28 @@ import software.amazon.awscdk.services.stepfunctions.ChoiceProps
 public class ChoicePropsDsl {
   private val cdkBuilder: ChoiceProps.Builder = ChoiceProps.builder()
 
+  /**
+   * @param comment An optional description for this state.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * @param inputPath JSONPath expression to select part of the state to be the input to this state.
+   * May also be the special value DISCARD, which will cause the effective
+   * input to be the empty object {}.
+   */
   public fun inputPath(inputPath: String) {
     cdkBuilder.inputPath(inputPath)
   }
 
+  /**
+   * @param outputPath JSONPath expression to select part of the state to be the output to this
+   * state.
+   * May also be the special value DISCARD, which will cause the effective
+   * output to be the empty object {}.
+   */
   public fun outputPath(outputPath: String) {
     cdkBuilder.outputPath(outputPath)
   }

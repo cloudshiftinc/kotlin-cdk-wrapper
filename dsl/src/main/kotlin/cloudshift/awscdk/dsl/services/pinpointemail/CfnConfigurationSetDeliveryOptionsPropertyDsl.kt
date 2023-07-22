@@ -11,6 +11,10 @@ public class CfnConfigurationSetDeliveryOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.DeliveryOptionsProperty.Builder =
       CfnConfigurationSet.DeliveryOptionsProperty.builder()
 
+  /**
+   * @param sendingPoolName The name of the dedicated IP pool that you want to associate with the
+   * configuration set.
+   */
   public fun sendingPoolName(sendingPoolName: String) {
     cdkBuilder.sendingPoolName(sendingPoolName)
   }

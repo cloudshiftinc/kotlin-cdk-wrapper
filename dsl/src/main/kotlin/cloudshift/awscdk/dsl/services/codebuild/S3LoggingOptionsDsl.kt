@@ -12,18 +12,30 @@ import software.amazon.awscdk.services.s3.IBucket
 public class S3LoggingOptionsDsl {
   private val cdkBuilder: S3LoggingOptions.Builder = S3LoggingOptions.builder()
 
+  /**
+   * @param bucket The S3 Bucket to send logs to. 
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param enabled The current status of the logs in Amazon CloudWatch Logs for a build project.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param encrypted Encrypt the S3 build log output.
+   */
   public fun encrypted(encrypted: Boolean) {
     cdkBuilder.encrypted(encrypted)
   }
 
+  /**
+   * @param prefix The path prefix for S3 logs.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

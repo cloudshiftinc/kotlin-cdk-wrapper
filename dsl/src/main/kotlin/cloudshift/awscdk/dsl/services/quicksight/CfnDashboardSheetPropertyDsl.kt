@@ -10,10 +10,17 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
 public class CfnDashboardSheetPropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetProperty.Builder = CfnDashboard.SheetProperty.builder()
 
+  /**
+   * @param name The name of a sheet.
+   * This name is displayed on the sheet's tab in the Amazon QuickSight console.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param sheetId The unique identifier associated with a sheet.
+   */
   public fun sheetId(sheetId: String) {
     cdkBuilder.sheetId(sheetId)
   }

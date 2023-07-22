@@ -11,14 +11,40 @@ public class CfnScalingPolicyStepAdjustmentPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.StepAdjustmentProperty.Builder =
       CfnScalingPolicy.StepAdjustmentProperty.builder()
 
+  /**
+   * @param metricIntervalLowerBound The lower bound for the difference between the alarm threshold
+   * and the CloudWatch metric.
+   * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
+   * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is exclusive
+   * (the metric must be greater than the threshold plus the lower bound). A null value indicates
+   * negative infinity.
+   *
+   * You must specify at least one upper or lower bound.
+   */
   public fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
     cdkBuilder.metricIntervalLowerBound(metricIntervalLowerBound)
   }
 
+  /**
+   * @param metricIntervalUpperBound The upper bound for the difference between the alarm threshold
+   * and the CloudWatch metric.
+   * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
+   * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric must
+   * be less than or equal to the threshold plus the upper bound). A null value indicates positive
+   * infinity.
+   *
+   * You must specify at least one upper or lower bound.
+   */
   public fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
     cdkBuilder.metricIntervalUpperBound(metricIntervalUpperBound)
   }
 
+  /**
+   * @param scalingAdjustment The amount by which to scale. 
+   * The adjustment is based on the value that you specified in the `AdjustmentType` property
+   * (either an absolute number or a percentage). A positive value adds to the current capacity and a
+   * negative number subtracts from the current capacity.
+   */
   public fun scalingAdjustment(scalingAdjustment: Number) {
     cdkBuilder.scalingAdjustment(scalingAdjustment)
   }

@@ -11,10 +11,16 @@ public class CfnStackUserSettingPropertyDsl {
   private val cdkBuilder: CfnStack.UserSettingProperty.Builder =
       CfnStack.UserSettingProperty.builder()
 
+  /**
+   * @param action The action that is enabled or disabled. 
+   */
   public fun action(action: String) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param permission Indicates whether the action is enabled or disabled. 
+   */
   public fun permission(permission: String) {
     cdkBuilder.permission(permission)
   }

@@ -11,10 +11,17 @@ public class CfnUsagePlanThrottleSettingsPropertyDsl {
   private val cdkBuilder: CfnUsagePlan.ThrottleSettingsProperty.Builder =
       CfnUsagePlan.ThrottleSettingsProperty.builder()
 
+  /**
+   * @param burstLimit The API target request burst rate limit.
+   * This allows more requests through for a period of time than the target rate limit.
+   */
   public fun burstLimit(burstLimit: Number) {
     cdkBuilder.burstLimit(burstLimit)
   }
 
+  /**
+   * @param rateLimit The API target request rate limit.
+   */
   public fun rateLimit(rateLimit: Number) {
     cdkBuilder.rateLimit(rateLimit)
   }

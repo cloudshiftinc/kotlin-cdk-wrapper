@@ -15,14 +15,38 @@ public class RepositoryDsl(
 ) {
   private val cdkBuilder: Repository.Builder = Repository.Builder.create(scope, id)
 
+  /**
+   * The contents with which to initialize the repository after it has been created.
+   *
+   * Default: - No initialization (create empty repo)
+   *
+   * @param code The contents with which to initialize the repository after it has been created. 
+   */
   public fun code(code: Code) {
     cdkBuilder.code(code)
   }
 
+  /**
+   * A description of the repository.
+   *
+   * Use the description to identify the
+   * purpose of the repository.
+   *
+   * Default: - No description.
+   *
+   * @param description A description of the repository. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * Name of the repository.
+   *
+   * This property is required for all CodeCommit repositories.
+   *
+   * @param repositoryName Name of the repository. 
+   */
   public fun repositoryName(repositoryName: String) {
     cdkBuilder.repositoryName(repositoryName)
   }

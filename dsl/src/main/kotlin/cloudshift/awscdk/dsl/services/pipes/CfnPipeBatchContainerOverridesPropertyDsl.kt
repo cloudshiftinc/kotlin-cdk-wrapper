@@ -21,38 +21,94 @@ public class CfnPipeBatchContainerOverridesPropertyDsl {
 
   private val _resourceRequirements: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param command The command to send to the container that overrides the default command from the
+   * Docker image or the task definition.
+   */
   public fun command(vararg command: String) {
     _command.addAll(listOf(*command))
   }
 
+  /**
+   * @param command The command to send to the container that overrides the default command from the
+   * Docker image or the task definition.
+   */
   public fun command(command: Collection<String>) {
     _command.addAll(command)
   }
 
+  /**
+   * @param environment The environment variables to send to the container.
+   * You can add new environment variables, which are added to the container at launch, or you can
+   * override the existing environment variables from the Docker image or the task definition.
+   *
+   *
+   * Environment variables cannot start with " `AWS Batch` ". This naming convention is reserved for
+   * variables that AWS Batch sets.
+   */
   public fun environment(vararg environment: Any) {
     _environment.addAll(listOf(*environment))
   }
 
+  /**
+   * @param environment The environment variables to send to the container.
+   * You can add new environment variables, which are added to the container at launch, or you can
+   * override the existing environment variables from the Docker image or the task definition.
+   *
+   *
+   * Environment variables cannot start with " `AWS Batch` ". This naming convention is reserved for
+   * variables that AWS Batch sets.
+   */
   public fun environment(environment: Collection<Any>) {
     _environment.addAll(environment)
   }
 
+  /**
+   * @param environment The environment variables to send to the container.
+   * You can add new environment variables, which are added to the container at launch, or you can
+   * override the existing environment variables from the Docker image or the task definition.
+   *
+   *
+   * Environment variables cannot start with " `AWS Batch` ". This naming convention is reserved for
+   * variables that AWS Batch sets.
+   */
   public fun environment(environment: IResolvable) {
     cdkBuilder.environment(environment)
   }
 
+  /**
+   * @param instanceType The instance type to use for a multi-node parallel job.
+   *
+   * This parameter isn't applicable to single-node container jobs or jobs that run on Fargate
+   * resources, and shouldn't be provided.
+   */
   public fun instanceType(instanceType: String) {
     cdkBuilder.instanceType(instanceType)
   }
 
+  /**
+   * @param resourceRequirements The type and amount of resources to assign to a container.
+   * This overrides the settings in the job definition. The supported resources include `GPU` ,
+   * `MEMORY` , and `VCPU` .
+   */
   public fun resourceRequirements(vararg resourceRequirements: Any) {
     _resourceRequirements.addAll(listOf(*resourceRequirements))
   }
 
+  /**
+   * @param resourceRequirements The type and amount of resources to assign to a container.
+   * This overrides the settings in the job definition. The supported resources include `GPU` ,
+   * `MEMORY` , and `VCPU` .
+   */
   public fun resourceRequirements(resourceRequirements: Collection<Any>) {
     _resourceRequirements.addAll(resourceRequirements)
   }
 
+  /**
+   * @param resourceRequirements The type and amount of resources to assign to a container.
+   * This overrides the settings in the job definition. The supported resources include `GPU` ,
+   * `MEMORY` , and `VCPU` .
+   */
   public fun resourceRequirements(resourceRequirements: IResolvable) {
     cdkBuilder.resourceRequirements(resourceRequirements)
   }

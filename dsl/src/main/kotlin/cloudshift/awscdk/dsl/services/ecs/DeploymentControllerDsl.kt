@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ecs.DeploymentControllerType
 public class DeploymentControllerDsl {
   private val cdkBuilder: DeploymentController.Builder = DeploymentController.builder()
 
+  /**
+   * @param type The deployment controller type to use.
+   */
   public fun type(type: DeploymentControllerType) {
     cdkBuilder.type(type)
   }

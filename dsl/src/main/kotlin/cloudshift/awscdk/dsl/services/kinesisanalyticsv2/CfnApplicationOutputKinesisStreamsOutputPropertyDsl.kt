@@ -11,6 +11,9 @@ public class CfnApplicationOutputKinesisStreamsOutputPropertyDsl {
   private val cdkBuilder: CfnApplicationOutput.KinesisStreamsOutputProperty.Builder =
       CfnApplicationOutput.KinesisStreamsOutputProperty.builder()
 
+  /**
+   * @param resourceArn The ARN of the destination Kinesis data stream to write to. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

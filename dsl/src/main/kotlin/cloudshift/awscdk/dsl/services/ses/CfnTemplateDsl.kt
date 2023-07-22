@@ -15,10 +15,26 @@ public class CfnTemplateDsl(
 ) {
   private val cdkBuilder: CfnTemplate.Builder = CfnTemplate.Builder.create(scope, id)
 
+  /**
+   * The content of the email, composed of a subject line and either an HTML part or a text-only
+   * part.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+   * @param template The content of the email, composed of a subject line and either an HTML part or
+   * a text-only part. 
+   */
   public fun template(template: IResolvable) {
     cdkBuilder.template(template)
   }
 
+  /**
+   * The content of the email, composed of a subject line and either an HTML part or a text-only
+   * part.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+   * @param template The content of the email, composed of a subject line and either an HTML part or
+   * a text-only part. 
+   */
   public fun template(template: CfnTemplate.TemplateProperty) {
     cdkBuilder.template(template)
   }

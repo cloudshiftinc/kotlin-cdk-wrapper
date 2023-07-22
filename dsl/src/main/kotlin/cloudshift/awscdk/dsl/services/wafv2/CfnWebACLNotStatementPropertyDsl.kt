@@ -11,10 +11,18 @@ public class CfnWebACLNotStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.NotStatementProperty.Builder =
       CfnWebACL.NotStatementProperty.builder()
 
+  /**
+   * @param statement The statement to negate. 
+   * You can use any statement that can be nested.
+   */
   public fun statement(statement: IResolvable) {
     cdkBuilder.statement(statement)
   }
 
+  /**
+   * @param statement The statement to negate. 
+   * You can use any statement that can be nested.
+   */
   public fun statement(statement: CfnWebACL.StatementProperty) {
     cdkBuilder.statement(statement)
   }

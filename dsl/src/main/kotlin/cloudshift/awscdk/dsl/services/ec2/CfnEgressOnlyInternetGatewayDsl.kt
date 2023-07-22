@@ -15,6 +15,12 @@ public class CfnEgressOnlyInternetGatewayDsl(
   private val cdkBuilder: CfnEgressOnlyInternetGateway.Builder =
       CfnEgressOnlyInternetGateway.Builder.create(scope, id)
 
+  /**
+   * The ID of the VPC for which to create the egress-only internet gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html#cfn-ec2-egressonlyinternetgateway-vpcid)
+   * @param vpcId The ID of the VPC for which to create the egress-only internet gateway. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

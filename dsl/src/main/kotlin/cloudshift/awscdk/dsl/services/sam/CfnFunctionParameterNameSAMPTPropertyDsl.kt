@@ -11,6 +11,9 @@ public class CfnFunctionParameterNameSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.ParameterNameSAMPTProperty.Builder =
       CfnFunction.ParameterNameSAMPTProperty.builder()
 
+  /**
+   * @param parameterName the value to be set. 
+   */
   public fun parameterName(parameterName: String) {
     cdkBuilder.parameterName(parameterName)
   }

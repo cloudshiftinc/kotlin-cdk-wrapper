@@ -11,10 +11,16 @@ public class CfnExperimentTemplateS3ConfigurationPropertyDsl {
   private val cdkBuilder: CfnExperimentTemplate.S3ConfigurationProperty.Builder =
       CfnExperimentTemplate.S3ConfigurationProperty.builder()
 
+  /**
+   * @param bucketName The name of the destination bucket. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param prefix The bucket prefix.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

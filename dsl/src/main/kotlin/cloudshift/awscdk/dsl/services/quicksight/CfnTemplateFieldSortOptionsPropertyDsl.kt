@@ -11,18 +11,30 @@ public class CfnTemplateFieldSortOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.FieldSortOptionsProperty.Builder =
       CfnTemplate.FieldSortOptionsProperty.builder()
 
+  /**
+   * @param columnSort The sort configuration for a column that is not used in a field well.
+   */
   public fun columnSort(columnSort: IResolvable) {
     cdkBuilder.columnSort(columnSort)
   }
 
+  /**
+   * @param columnSort The sort configuration for a column that is not used in a field well.
+   */
   public fun columnSort(columnSort: CfnTemplate.ColumnSortProperty) {
     cdkBuilder.columnSort(columnSort)
   }
 
+  /**
+   * @param fieldSort The sort configuration for a field in a field well.
+   */
   public fun fieldSort(fieldSort: IResolvable) {
     cdkBuilder.fieldSort(fieldSort)
   }
 
+  /**
+   * @param fieldSort The sort configuration for a field in a field well.
+   */
   public fun fieldSort(fieldSort: CfnTemplate.FieldSortProperty) {
     cdkBuilder.fieldSort(fieldSort)
   }

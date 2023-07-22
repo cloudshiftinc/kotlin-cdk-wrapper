@@ -21,48 +21,127 @@ public class GraphqlApiDsl(
 ) {
   private val cdkBuilder: GraphqlApi.Builder = GraphqlApi.Builder.create(scope, id)
 
-  public fun authorizationConfig(block: AuthorizationConfigDsl.() -> Unit = {}) {
+  /**
+   * Optional authorization configuration.
+   *
+   * Default: - API Key authorization
+   *
+   * @param authorizationConfig Optional authorization configuration. 
+   */
+  public fun authorizationConfig(authorizationConfig: AuthorizationConfigDsl.() -> Unit = {}) {
     val builder = AuthorizationConfigDsl()
-    builder.apply(block)
+    builder.apply(authorizationConfig)
     cdkBuilder.authorizationConfig(builder.build())
   }
 
+  /**
+   * Optional authorization configuration.
+   *
+   * Default: - API Key authorization
+   *
+   * @param authorizationConfig Optional authorization configuration. 
+   */
   public fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
     cdkBuilder.authorizationConfig(authorizationConfig)
   }
 
-  public fun domainName(block: DomainOptionsDsl.() -> Unit = {}) {
+  /**
+   * The domain name configuration for the GraphQL API.
+   *
+   * The Route 53 hosted zone and CName DNS record must be configured in addition to this setting to
+   * enable custom domain URL
+   *
+   * Default: - no domain name
+   *
+   * @param domainName The domain name configuration for the GraphQL API. 
+   */
+  public fun domainName(domainName: DomainOptionsDsl.() -> Unit = {}) {
     val builder = DomainOptionsDsl()
-    builder.apply(block)
+    builder.apply(domainName)
     cdkBuilder.domainName(builder.build())
   }
 
+  /**
+   * The domain name configuration for the GraphQL API.
+   *
+   * The Route 53 hosted zone and CName DNS record must be configured in addition to this setting to
+   * enable custom domain URL
+   *
+   * Default: - no domain name
+   *
+   * @param domainName The domain name configuration for the GraphQL API. 
+   */
   public fun domainName(domainName: DomainOptions) {
     cdkBuilder.domainName(domainName)
   }
 
-  public fun logConfig(block: LogConfigDsl.() -> Unit = {}) {
+  /**
+   * Logging configuration for this api.
+   *
+   * Default: - None
+   *
+   * @param logConfig Logging configuration for this api. 
+   */
+  public fun logConfig(logConfig: LogConfigDsl.() -> Unit = {}) {
     val builder = LogConfigDsl()
-    builder.apply(block)
+    builder.apply(logConfig)
     cdkBuilder.logConfig(builder.build())
   }
 
+  /**
+   * Logging configuration for this api.
+   *
+   * Default: - None
+   *
+   * @param logConfig Logging configuration for this api. 
+   */
   public fun logConfig(logConfig: LogConfig) {
     cdkBuilder.logConfig(logConfig)
   }
 
+  /**
+   * the name of the GraphQL API.
+   *
+   * @param name the name of the GraphQL API. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * GraphQL schema definition. Specify how you want to define your schema.
+   *
+   * Schema.fromFile(filePath: string) allows schema definition through schema.graphql file
+   *
+   * Default: - schema will be generated code-first (i.e. addType, addObjectType, etc.)
+   *
+   * @param schema GraphQL schema definition. Specify how you want to define your schema. 
+   */
   public fun schema(schema: ISchema) {
     cdkBuilder.schema(schema)
   }
 
+  /**
+   * A value indicating whether the API is accessible from anywhere (GLOBAL) or can only be access
+   * from a VPC (PRIVATE).
+   *
+   * Default: - GLOBAL
+   *
+   * @param visibility A value indicating whether the API is accessible from anywhere (GLOBAL) or
+   * can only be access from a VPC (PRIVATE). 
+   */
   public fun visibility(visibility: Visibility) {
     cdkBuilder.visibility(visibility)
   }
 
+  /**
+   * A flag indicating whether or not X-Ray tracing is enabled for the GraphQL API.
+   *
+   * Default: - false
+   *
+   * @param xrayEnabled A flag indicating whether or not X-Ray tracing is enabled for the GraphQL
+   * API. 
+   */
   public fun xrayEnabled(xrayEnabled: Boolean) {
     cdkBuilder.xrayEnabled(xrayEnabled)
   }

@@ -14,14 +14,43 @@ public class ChoiceDsl(
 ) {
   private val cdkBuilder: Choice.Builder = Choice.Builder.create(scope, id)
 
+  /**
+   * An optional description for this state.
+   *
+   * Default: No comment
+   *
+   * @param comment An optional description for this state. 
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * JSONPath expression to select part of the state to be the input to this state.
+   *
+   * May also be the special value DISCARD, which will cause the effective
+   * input to be the empty object {}.
+   *
+   * Default: $
+   *
+   * @param inputPath JSONPath expression to select part of the state to be the input to this state.
+   * 
+   */
   public fun inputPath(inputPath: String) {
     cdkBuilder.inputPath(inputPath)
   }
 
+  /**
+   * JSONPath expression to select part of the state to be the output to this state.
+   *
+   * May also be the special value DISCARD, which will cause the effective
+   * output to be the empty object {}.
+   *
+   * Default: $
+   *
+   * @param outputPath JSONPath expression to select part of the state to be the output to this
+   * state. 
+   */
   public fun outputPath(outputPath: String) {
     cdkBuilder.outputPath(outputPath)
   }

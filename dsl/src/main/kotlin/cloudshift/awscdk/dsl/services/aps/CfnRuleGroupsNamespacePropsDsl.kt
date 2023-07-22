@@ -18,22 +18,38 @@ public class CfnRuleGroupsNamespacePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param data The rules definition file for this namespace. 
+   */
   public fun `data`(`data`: String) {
     cdkBuilder.`data`(`data`)
   }
 
+  /**
+   * @param name The name of the rule groups namespace. 
+   * This property is required.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags A list of key and value pairs for the workspace resources.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of key and value pairs for the workspace resources.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param workspace The ARN of the workspace that contains this rule groups namespace. 
+   */
   public fun workspace(workspace: String) {
     cdkBuilder.workspace(workspace)
   }

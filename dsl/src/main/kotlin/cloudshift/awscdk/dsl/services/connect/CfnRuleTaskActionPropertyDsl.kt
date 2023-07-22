@@ -15,28 +15,58 @@ import software.amazon.awscdk.services.connect.CfnRule
 public class CfnRuleTaskActionPropertyDsl {
   private val cdkBuilder: CfnRule.TaskActionProperty.Builder = CfnRule.TaskActionProperty.builder()
 
+  /**
+   * @param contactFlowArn The Amazon Resource Name (ARN) of the flow. 
+   */
   public fun contactFlowArn(contactFlowArn: String) {
     cdkBuilder.contactFlowArn(contactFlowArn)
   }
 
+  /**
+   * @param description The description.
+   * Supports variable injection. For more information, see [JSONPath
+   * reference](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-variable-injection.html)
+   * in the *Amazon Connect Administrators Guide* .
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name. 
+   * Supports variable injection. For more information, see [JSONPath
+   * reference](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-variable-injection.html)
+   * in the *Amazon Connect Administrators Guide* .
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun references(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param references Information about the reference when the `referenceType` is `URL` .
+   * Otherwise, null. `URL` is the only accepted type. (Supports variable injection in the `Value`
+   * field.)
+   */
+  public fun references(references: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(references)
     cdkBuilder.references(builder.map)
   }
 
+  /**
+   * @param references Information about the reference when the `referenceType` is `URL` .
+   * Otherwise, null. `URL` is the only accepted type. (Supports variable injection in the `Value`
+   * field.)
+   */
   public fun references(references: Map<String, Any>) {
     cdkBuilder.references(references)
   }
 
+  /**
+   * @param references Information about the reference when the `referenceType` is `URL` .
+   * Otherwise, null. `URL` is the only accepted type. (Supports variable injection in the `Value`
+   * field.)
+   */
   public fun references(references: IResolvable) {
     cdkBuilder.references(references)
   }

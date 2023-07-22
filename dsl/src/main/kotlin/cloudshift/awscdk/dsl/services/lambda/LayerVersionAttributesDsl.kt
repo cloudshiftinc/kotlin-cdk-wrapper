@@ -15,14 +15,23 @@ public class LayerVersionAttributesDsl {
 
   private val _compatibleRuntimes: MutableList<Runtime> = mutableListOf()
 
+  /**
+   * @param compatibleRuntimes The list of compatible runtimes with this Layer.
+   */
   public fun compatibleRuntimes(vararg compatibleRuntimes: Runtime) {
     _compatibleRuntimes.addAll(listOf(*compatibleRuntimes))
   }
 
+  /**
+   * @param compatibleRuntimes The list of compatible runtimes with this Layer.
+   */
   public fun compatibleRuntimes(compatibleRuntimes: Collection<Runtime>) {
     _compatibleRuntimes.addAll(compatibleRuntimes)
   }
 
+  /**
+   * @param layerVersionArn The ARN of the LayerVersion. 
+   */
   public fun layerVersionArn(layerVersionArn: String) {
     cdkBuilder.layerVersionArn(layerVersionArn)
   }

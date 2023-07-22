@@ -11,6 +11,9 @@ public class NotificationRuleSourceConfigDsl {
   private val cdkBuilder: NotificationRuleSourceConfig.Builder =
       NotificationRuleSourceConfig.builder()
 
+  /**
+   * @param sourceArn The Amazon Resource Name (ARN) of the notification source. 
+   */
   public fun sourceArn(sourceArn: String) {
     cdkBuilder.sourceArn(sourceArn)
   }

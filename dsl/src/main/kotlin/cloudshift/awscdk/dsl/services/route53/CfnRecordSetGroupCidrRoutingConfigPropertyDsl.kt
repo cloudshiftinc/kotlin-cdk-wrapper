@@ -11,10 +11,16 @@ public class CfnRecordSetGroupCidrRoutingConfigPropertyDsl {
   private val cdkBuilder: CfnRecordSetGroup.CidrRoutingConfigProperty.Builder =
       CfnRecordSetGroup.CidrRoutingConfigProperty.builder()
 
+  /**
+   * @param collectionId The CIDR collection ID. 
+   */
   public fun collectionId(collectionId: String) {
     cdkBuilder.collectionId(collectionId)
   }
 
+  /**
+   * @param locationName The CIDR collection location name. 
+   */
   public fun locationName(locationName: String) {
     cdkBuilder.locationName(locationName)
   }

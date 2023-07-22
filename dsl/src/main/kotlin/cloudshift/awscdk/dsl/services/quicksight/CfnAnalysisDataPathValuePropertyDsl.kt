@@ -11,10 +11,16 @@ public class CfnAnalysisDataPathValuePropertyDsl {
   private val cdkBuilder: CfnAnalysis.DataPathValueProperty.Builder =
       CfnAnalysis.DataPathValueProperty.builder()
 
+  /**
+   * @param fieldId The field ID of the field that needs to be sorted. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param fieldValue The actual value of the field that needs to be sorted. 
+   */
   public fun fieldValue(fieldValue: String) {
     cdkBuilder.fieldValue(fieldValue)
   }

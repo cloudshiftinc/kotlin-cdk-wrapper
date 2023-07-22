@@ -11,6 +11,9 @@ public class CfnFlowMarketoSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.MarketoSourcePropertiesProperty.Builder =
       CfnFlow.MarketoSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Marketo flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

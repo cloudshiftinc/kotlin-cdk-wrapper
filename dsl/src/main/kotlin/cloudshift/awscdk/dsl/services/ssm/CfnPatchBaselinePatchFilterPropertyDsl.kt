@@ -15,14 +15,32 @@ public class CfnPatchBaselinePatchFilterPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param key The key for the filter.
+   * For information about valid keys, see
+   * [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html)
+   * in the *AWS Systems Manager API Reference* .
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param values The value for the filter key.
+   * For information about valid values for each key based on operating system type, see
+   * [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html)
+   * in the *AWS Systems Manager API Reference* .
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The value for the filter key.
+   * For information about valid values for each key based on operating system type, see
+   * [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html)
+   * in the *AWS Systems Manager API Reference* .
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

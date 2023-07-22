@@ -10,10 +10,16 @@ import software.amazon.awscdk.CfnTag
 public class CfnTagDsl {
   private val cdkBuilder: CfnTag.Builder = CfnTag.builder()
 
+  /**
+   * @param key the value to be set. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value the value to be set. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

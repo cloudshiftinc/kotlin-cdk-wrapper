@@ -11,6 +11,9 @@ public class CfnTemplateBinCountOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.BinCountOptionsProperty.Builder =
       CfnTemplate.BinCountOptionsProperty.builder()
 
+  /**
+   * @param value The options that determine the bin count value.
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

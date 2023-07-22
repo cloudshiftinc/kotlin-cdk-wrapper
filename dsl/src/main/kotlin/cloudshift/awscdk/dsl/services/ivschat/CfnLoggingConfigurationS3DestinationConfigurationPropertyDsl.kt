@@ -11,6 +11,9 @@ public class CfnLoggingConfigurationS3DestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.S3DestinationConfigurationProperty.Builder =
       CfnLoggingConfiguration.S3DestinationConfigurationProperty.builder()
 
+  /**
+   * @param bucketName Name of the Amazon S3 bucket where chat activity will be logged. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }

@@ -23,54 +23,145 @@ public class CfnPricingRuleDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The seller of services provided by AWS , their affiliates, or third-party providers selling
+   * services via AWS Marketplace .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-billingentity)
+   * @param billingEntity The seller of services provided by AWS , their affiliates, or third-party
+   * providers selling services via AWS Marketplace . 
+   */
   public fun billingEntity(billingEntity: String) {
     cdkBuilder.billingEntity(billingEntity)
   }
 
+  /**
+   * The pricing rule description.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-description)
+   * @param description The pricing rule description. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * A percentage modifier applied on the public pricing rates.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-modifierpercentage)
+   * @param modifierPercentage A percentage modifier applied on the public pricing rates. 
+   */
   public fun modifierPercentage(modifierPercentage: Number) {
     cdkBuilder.modifierPercentage(modifierPercentage)
   }
 
+  /**
+   * The name of a pricing rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-name)
+   * @param name The name of a pricing rule. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Operation is the specific AWS action covered by this line item.
+   *
+   * This describes the specific usage of the line item.
+   *
+   * If the `Scope` attribute is set to `SKU` , this attribute indicates which operation the
+   * `PricingRule` is modifying. For example, a value of `RunInstances:0202` indicates the operation of
+   * running an Amazon EC2 instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-operation)
+   * @param operation Operation is the specific AWS action covered by this line item. 
+   */
   public fun operation(operation: String) {
     cdkBuilder.operation(operation)
   }
 
+  /**
+   * The scope of pricing rule that indicates if it's globally applicable or service-specific.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-scope)
+   * @param scope The scope of pricing rule that indicates if it's globally applicable or
+   * service-specific. 
+   */
   public fun scope(scope: String) {
     cdkBuilder.scope(scope)
   }
 
+  /**
+   * If the `Scope` attribute is `SERVICE` , this attribute indicates which service the
+   * `PricingRule` is applicable for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-service)
+   * @param service If the `Scope` attribute is `SERVICE` , this attribute indicates which service
+   * the `PricingRule` is applicable for. 
+   */
   public fun service(service: String) {
     cdkBuilder.service(service)
   }
 
+  /**
+   * A map that contains tag keys and tag values that are attached to a pricing rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-tags)
+   * @param tags A map that contains tag keys and tag values that are attached to a pricing rule. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A map that contains tag keys and tag values that are attached to a pricing rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-tags)
+   * @param tags A map that contains tag keys and tag values that are attached to a pricing rule. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The set of tiering configurations for the pricing rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-tiering)
+   * @param tiering The set of tiering configurations for the pricing rule. 
+   */
   public fun tiering(tiering: IResolvable) {
     cdkBuilder.tiering(tiering)
   }
 
+  /**
+   * The set of tiering configurations for the pricing rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-tiering)
+   * @param tiering The set of tiering configurations for the pricing rule. 
+   */
   public fun tiering(tiering: CfnPricingRule.TieringProperty) {
     cdkBuilder.tiering(tiering)
   }
 
+  /**
+   * The type of pricing rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-type)
+   * @param type The type of pricing rule. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * Usage Type is the unit that each service uses to measure the usage of a specific type of
+   * resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html#cfn-billingconductor-pricingrule-usagetype)
+   * @param usageType Usage Type is the unit that each service uses to measure the usage of a
+   * specific type of resource. 
+   */
   public fun usageType(usageType: String) {
     cdkBuilder.usageType(usageType)
   }

@@ -11,14 +11,23 @@ public class CfnFeatureGroupDataCatalogConfigPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.DataCatalogConfigProperty.Builder =
       CfnFeatureGroup.DataCatalogConfigProperty.builder()
 
+  /**
+   * @param catalog The name of the Glue table catalog. 
+   */
   public fun catalog(catalog: String) {
     cdkBuilder.catalog(catalog)
   }
 
+  /**
+   * @param database The name of the Glue table database. 
+   */
   public fun database(database: String) {
     cdkBuilder.database(database)
   }
 
+  /**
+   * @param tableName The name of the Glue table. 
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }

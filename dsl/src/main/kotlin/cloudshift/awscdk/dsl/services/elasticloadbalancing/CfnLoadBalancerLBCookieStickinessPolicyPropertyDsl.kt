@@ -11,10 +11,20 @@ public class CfnLoadBalancerLBCookieStickinessPolicyPropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.LBCookieStickinessPolicyProperty.Builder =
       CfnLoadBalancer.LBCookieStickinessPolicyProperty.builder()
 
+  /**
+   * @param cookieExpirationPeriod The time period, in seconds, after which the cookie should be
+   * considered stale.
+   * If this parameter is not specified, the stickiness session lasts for the duration of the
+   * browser session.
+   */
   public fun cookieExpirationPeriod(cookieExpirationPeriod: String) {
     cdkBuilder.cookieExpirationPeriod(cookieExpirationPeriod)
   }
 
+  /**
+   * @param policyName The name of the policy.
+   * This name must be unique within the set of policies for this load balancer.
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }

@@ -11,10 +11,16 @@ public class CfnTemplateWordCloudFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.WordCloudFieldWellsProperty.Builder =
       CfnTemplate.WordCloudFieldWellsProperty.builder()
 
+  /**
+   * @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud.
+   */
   public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: IResolvable) {
     cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
   }
 
+  /**
+   * @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud.
+   */
   public
       fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: CfnTemplate.WordCloudAggregatedFieldWellsProperty) {
     cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)

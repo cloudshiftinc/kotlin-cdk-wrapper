@@ -11,10 +11,16 @@ public class CfnDistributionLegacyS3OriginPropertyDsl {
   private val cdkBuilder: CfnDistribution.LegacyS3OriginProperty.Builder =
       CfnDistribution.LegacyS3OriginProperty.builder()
 
+  /**
+   * @param dnsName the value to be set. 
+   */
   public fun dnsName(dnsName: String) {
     cdkBuilder.dnsName(dnsName)
   }
 
+  /**
+   * @param originAccessIdentity the value to be set.
+   */
   public fun originAccessIdentity(originAccessIdentity: String) {
     cdkBuilder.originAccessIdentity(originAccessIdentity)
   }

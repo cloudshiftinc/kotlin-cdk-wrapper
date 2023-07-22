@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.codedeploy.LambdaApplicationProps
 public class LambdaApplicationPropsDsl {
   private val cdkBuilder: LambdaApplicationProps.Builder = LambdaApplicationProps.builder()
 
+  /**
+   * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+   */
   public fun applicationName(applicationName: String) {
     cdkBuilder.applicationName(applicationName)
   }

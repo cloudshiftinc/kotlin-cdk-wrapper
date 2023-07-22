@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps
 public class ProfilingGroupPropsDsl {
   private val cdkBuilder: ProfilingGroupProps.Builder = ProfilingGroupProps.builder()
 
+  /**
+   * @param computePlatform The compute platform of the profiling group.
+   */
   public fun computePlatform(computePlatform: ComputePlatform) {
     cdkBuilder.computePlatform(computePlatform)
   }
 
+  /**
+   * @param profilingGroupName A name for the profiling group.
+   */
   public fun profilingGroupName(profilingGroupName: String) {
     cdkBuilder.profilingGroupName(profilingGroupName)
   }

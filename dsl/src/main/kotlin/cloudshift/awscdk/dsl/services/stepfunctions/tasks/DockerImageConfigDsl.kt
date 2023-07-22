@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig
 public class DockerImageConfigDsl {
   private val cdkBuilder: DockerImageConfig.Builder = DockerImageConfig.builder()
 
+  /**
+   * @param imageUri The fully qualified URI of the Docker image. 
+   */
   public fun imageUri(imageUri: String) {
     cdkBuilder.imageUri(imageUri)
   }

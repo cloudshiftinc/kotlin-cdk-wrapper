@@ -21,14 +21,32 @@ public class CfnCarrierGatewayDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The tags assigned to the carrier gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carriergateway.html#cfn-ec2-carriergateway-tags)
+   * @param tags The tags assigned to the carrier gateway. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags assigned to the carrier gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carriergateway.html#cfn-ec2-carriergateway-tags)
+   * @param tags The tags assigned to the carrier gateway. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ID of the VPC associated with the carrier gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carriergateway.html#cfn-ec2-carriergateway-vpcid)
+   * @param vpcId The ID of the VPC associated with the carrier gateway. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

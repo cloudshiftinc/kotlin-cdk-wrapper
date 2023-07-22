@@ -25,67 +25,231 @@ public class CfnClusterDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The encryption configuration for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig)
+   * @param encryptionConfig The encryption configuration for the cluster. 
+   */
   public fun encryptionConfig(vararg encryptionConfig: Any) {
     _encryptionConfig.addAll(listOf(*encryptionConfig))
   }
 
+  /**
+   * The encryption configuration for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig)
+   * @param encryptionConfig The encryption configuration for the cluster. 
+   */
   public fun encryptionConfig(encryptionConfig: Collection<Any>) {
     _encryptionConfig.addAll(encryptionConfig)
   }
 
+  /**
+   * The encryption configuration for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig)
+   * @param encryptionConfig The encryption configuration for the cluster. 
+   */
   public fun encryptionConfig(encryptionConfig: IResolvable) {
     cdkBuilder.encryptionConfig(encryptionConfig)
   }
 
+  /**
+   * The Kubernetes network configuration for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubernetesnetworkconfig)
+   * @param kubernetesNetworkConfig The Kubernetes network configuration for the cluster. 
+   */
   public fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable) {
     cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig)
   }
 
+  /**
+   * The Kubernetes network configuration for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubernetesnetworkconfig)
+   * @param kubernetesNetworkConfig The Kubernetes network configuration for the cluster. 
+   */
   public
       fun kubernetesNetworkConfig(kubernetesNetworkConfig: CfnCluster.KubernetesNetworkConfigProperty) {
     cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig)
   }
 
+  /**
+   * The logging configuration for your cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-logging)
+   * @param logging The logging configuration for your cluster. 
+   */
   public fun logging(logging: IResolvable) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * The logging configuration for your cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-logging)
+   * @param logging The logging configuration for your cluster. 
+   */
   public fun logging(logging: CfnCluster.LoggingProperty) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * The unique name to give to your cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name)
+   * @param name The unique name to give to your cluster. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * An object representing the configuration of your local Amazon EKS cluster on an AWS Outpost.
+   *
+   * This object isn't available for clusters on the AWS cloud.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-outpostconfig)
+   * @param outpostConfig An object representing the configuration of your local Amazon EKS cluster
+   * on an AWS Outpost. 
+   */
   public fun outpostConfig(outpostConfig: IResolvable) {
     cdkBuilder.outpostConfig(outpostConfig)
   }
 
+  /**
+   * An object representing the configuration of your local Amazon EKS cluster on an AWS Outpost.
+   *
+   * This object isn't available for clusters on the AWS cloud.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-outpostconfig)
+   * @param outpostConfig An object representing the configuration of your local Amazon EKS cluster
+   * on an AWS Outpost. 
+   */
   public fun outpostConfig(outpostConfig: CfnCluster.OutpostConfigProperty) {
     cdkBuilder.outpostConfig(outpostConfig)
   }
 
+  /**
+   * The VPC configuration that's used by the cluster control plane.
+   *
+   * Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more
+   * information, see [Cluster VPC
+   * Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster
+   * Security Group
+   * Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the
+   * *Amazon EKS User Guide* . You must specify at least two subnets. You can specify up to five
+   * security groups, but we recommend that you use a dedicated security group for your cluster control
+   * plane.
+   *
+   *
+   * Updates require replacement of the `SecurityGroupIds` and `SubnetIds` sub-properties.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-resourcesvpcconfig)
+   * @param resourcesVpcConfig The VPC configuration that's used by the cluster control plane. 
+   */
   public fun resourcesVpcConfig(resourcesVpcConfig: IResolvable) {
     cdkBuilder.resourcesVpcConfig(resourcesVpcConfig)
   }
 
+  /**
+   * The VPC configuration that's used by the cluster control plane.
+   *
+   * Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more
+   * information, see [Cluster VPC
+   * Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster
+   * Security Group
+   * Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the
+   * *Amazon EKS User Guide* . You must specify at least two subnets. You can specify up to five
+   * security groups, but we recommend that you use a dedicated security group for your cluster control
+   * plane.
+   *
+   *
+   * Updates require replacement of the `SecurityGroupIds` and `SubnetIds` sub-properties.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-resourcesvpcconfig)
+   * @param resourcesVpcConfig The VPC configuration that's used by the cluster control plane. 
+   */
   public fun resourcesVpcConfig(resourcesVpcConfig: CfnCluster.ResourcesVpcConfigProperty) {
     cdkBuilder.resourcesVpcConfig(resourcesVpcConfig)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes
+   * control plane to make calls to AWS API operations on your behalf.
+   *
+   * For more information, see [Amazon EKS Service IAM
+   * Role](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) in the **Amazon EKS
+   * User Guide** .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn)
+   * @param roleArn The Amazon Resource Name (ARN) of the IAM role that provides permissions for the
+   * Kubernetes control plane to make calls to AWS API operations on your behalf. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * The metadata that you apply to the cluster to assist with categorization and organization.
+   *
+   * Each tag consists of a key and an optional value, both of which you define. Cluster tags don't
+   * propagate to any other resources associated with the cluster.
+   *
+   *
+   * You must have the `eks:TagResource` and `eks:UntagResource` permissions for your [IAM
+   * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+   * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+   * unexpected behavior with stack-level tags propagating to the resource during resource creation and
+   * update.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-tags)
+   * @param tags The metadata that you apply to the cluster to assist with categorization and
+   * organization. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The metadata that you apply to the cluster to assist with categorization and organization.
+   *
+   * Each tag consists of a key and an optional value, both of which you define. Cluster tags don't
+   * propagate to any other resources associated with the cluster.
+   *
+   *
+   * You must have the `eks:TagResource` and `eks:UntagResource` permissions for your [IAM
+   * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+   * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+   * unexpected behavior with stack-level tags propagating to the resource during resource creation and
+   * update.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-tags)
+   * @param tags The metadata that you apply to the cluster to assist with categorization and
+   * organization. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The desired Kubernetes version for your cluster.
+   *
+   * If you don't specify a value here, the default version available in Amazon EKS is used.
+   *
+   *
+   * The default version might not be the latest version available.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version)
+   * @param version The desired Kubernetes version for your cluster. 
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

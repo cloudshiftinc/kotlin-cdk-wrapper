@@ -16,22 +16,49 @@ public class CfnRecipeRecipeStepPropertyDsl {
 
   private val _conditionExpressions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param action The particular action to be performed in the recipe step. 
+   */
   public fun action(action: IResolvable) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param action The particular action to be performed in the recipe step. 
+   */
   public fun action(action: CfnRecipe.ActionProperty) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param conditionExpressions One or more conditions that must be met for the recipe step to
+   * succeed.
+   *
+   * All of the conditions in the array must be met. In other words, all of the conditions must be
+   * combined using a logical AND operation.
+   */
   public fun conditionExpressions(vararg conditionExpressions: Any) {
     _conditionExpressions.addAll(listOf(*conditionExpressions))
   }
 
+  /**
+   * @param conditionExpressions One or more conditions that must be met for the recipe step to
+   * succeed.
+   *
+   * All of the conditions in the array must be met. In other words, all of the conditions must be
+   * combined using a logical AND operation.
+   */
   public fun conditionExpressions(conditionExpressions: Collection<Any>) {
     _conditionExpressions.addAll(conditionExpressions)
   }
 
+  /**
+   * @param conditionExpressions One or more conditions that must be met for the recipe step to
+   * succeed.
+   *
+   * All of the conditions in the array must be met. In other words, all of the conditions must be
+   * combined using a logical AND operation.
+   */
   public fun conditionExpressions(conditionExpressions: IResolvable) {
     cdkBuilder.conditionExpressions(conditionExpressions)
   }

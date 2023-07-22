@@ -15,18 +15,35 @@ public class CfnReportPlanReportDeliveryChannelPropertyDsl {
 
   private val _formats: MutableList<String> = mutableListOf()
 
+  /**
+   * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+   * If not specified, the default format is `CSV` .
+   */
   public fun formats(vararg formats: String) {
     _formats.addAll(listOf(*formats))
   }
 
+  /**
+   * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+   * If not specified, the default format is `CSV` .
+   */
   public fun formats(formats: Collection<String>) {
     _formats.addAll(formats)
   }
 
+  /**
+   * @param s3BucketName The unique name of the S3 bucket that receives your reports. 
+   */
   public fun s3BucketName(s3BucketName: String) {
     cdkBuilder.s3BucketName(s3BucketName)
   }
 
+  /**
+   * @param s3KeyPrefix The prefix for where AWS Backup Audit Manager delivers your reports to
+   * Amazon S3.
+   * The prefix is this part of the following path: s3://your-bucket-name/ `prefix`
+   * /Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+   */
   public fun s3KeyPrefix(s3KeyPrefix: String) {
     cdkBuilder.s3KeyPrefix(s3KeyPrefix)
   }

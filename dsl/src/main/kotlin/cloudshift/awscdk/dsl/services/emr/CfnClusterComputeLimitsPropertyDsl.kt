@@ -12,22 +12,52 @@ public class CfnClusterComputeLimitsPropertyDsl {
   private val cdkBuilder: CfnCluster.ComputeLimitsProperty.Builder =
       CfnCluster.ComputeLimitsProperty.builder()
 
+  /**
+   * @param maximumCapacityUnits The upper boundary of Amazon EC2 units. 
+   * It is measured through vCPU cores or instances for instance groups and measured through units
+   * for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit
+   * only applies to the core and task nodes. The master node cannot be scaled after initial
+   * configuration.
+   */
   public fun maximumCapacityUnits(maximumCapacityUnits: Number) {
     cdkBuilder.maximumCapacityUnits(maximumCapacityUnits)
   }
 
+  /**
+   * @param maximumCoreCapacityUnits The upper boundary of Amazon EC2 units for core node type in a
+   * cluster.
+   * It is measured through vCPU cores or instances for instance groups and measured through units
+   * for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter
+   * is used to split capacity allocation between core and task nodes.
+   */
   public fun maximumCoreCapacityUnits(maximumCoreCapacityUnits: Number) {
     cdkBuilder.maximumCoreCapacityUnits(maximumCoreCapacityUnits)
   }
 
+  /**
+   * @param maximumOnDemandCapacityUnits The upper boundary of On-Demand Amazon EC2 units.
+   * It is measured through vCPU cores or instances for instance groups and measured through units
+   * for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The
+   * parameter is used to split capacity allocation between On-Demand and Spot Instances.
+   */
   public fun maximumOnDemandCapacityUnits(maximumOnDemandCapacityUnits: Number) {
     cdkBuilder.maximumOnDemandCapacityUnits(maximumOnDemandCapacityUnits)
   }
 
+  /**
+   * @param minimumCapacityUnits The lower boundary of Amazon EC2 units. 
+   * It is measured through vCPU cores or instances for instance groups and measured through units
+   * for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit
+   * only applies to the core and task nodes. The master node cannot be scaled after initial
+   * configuration.
+   */
   public fun minimumCapacityUnits(minimumCapacityUnits: Number) {
     cdkBuilder.minimumCapacityUnits(minimumCapacityUnits)
   }
 
+  /**
+   * @param unitType The unit type used for specifying a managed scaling policy. 
+   */
   public fun unitType(unitType: String) {
     cdkBuilder.unitType(unitType)
   }

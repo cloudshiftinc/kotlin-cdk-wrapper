@@ -17,18 +17,38 @@ public class CfnApplicationVpcConfigurationPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds The array of
+   * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html) IDs
+   * used by the VPC configuration. 
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The array of
+   * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html) IDs
+   * used by the VPC configuration. 
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds The array of
+   * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by the
+   * VPC configuration. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The array of
+   * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by the
+   * VPC configuration. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

@@ -18,14 +18,38 @@ public class CfnRegexPatternSetDsl(
 
   private val _regexPatternStrings: MutableList<String> = mutableListOf()
 
+  /**
+   * A friendly name or description of the `RegexPatternSet` .
+   *
+   * You can't change `Name` after you create a `RegexPatternSet` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html#cfn-wafregional-regexpatternset-name)
+   * @param name A friendly name or description of the `RegexPatternSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Specifies the regular expression (regex) patterns that you want AWS WAF to search for, such as
+   * `B[a&#64;]dB[o0]t` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html#cfn-wafregional-regexpatternset-regexpatternstrings)
+   * @param regexPatternStrings Specifies the regular expression (regex) patterns that you want AWS
+   * WAF to search for, such as `B[a&#64;]dB[o0]t` . 
+   */
   public fun regexPatternStrings(vararg regexPatternStrings: String) {
     _regexPatternStrings.addAll(listOf(*regexPatternStrings))
   }
 
+  /**
+   * Specifies the regular expression (regex) patterns that you want AWS WAF to search for, such as
+   * `B[a&#64;]dB[o0]t` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html#cfn-wafregional-regexpatternset-regexpatternstrings)
+   * @param regexPatternStrings Specifies the regular expression (regex) patterns that you want AWS
+   * WAF to search for, such as `B[a&#64;]dB[o0]t` . 
+   */
   public fun regexPatternStrings(regexPatternStrings: Collection<String>) {
     _regexPatternStrings.addAll(regexPatternStrings)
   }

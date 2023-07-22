@@ -13,18 +13,35 @@ public class NetworkUtilizationScalingPropsDsl {
   private val cdkBuilder: NetworkUtilizationScalingProps.Builder =
       NetworkUtilizationScalingProps.builder()
 
+  /**
+   * @param cooldown Period after a scaling completes before another scaling activity can start.
+   */
   public fun cooldown(cooldown: Duration) {
     cdkBuilder.cooldown(cooldown)
   }
 
+  /**
+   * @param disableScaleIn Indicates whether scale in by the target tracking policy is disabled.
+   * If the value is true, scale in is disabled and the target tracking policy
+   * won't remove capacity from the autoscaling group. Otherwise, scale in is
+   * enabled and the target tracking policy can remove capacity from the
+   * group.
+   */
   public fun disableScaleIn(disableScaleIn: Boolean) {
     cdkBuilder.disableScaleIn(disableScaleIn)
   }
 
+  /**
+   * @param estimatedInstanceWarmup Estimated time until a newly launched instance can send metrics
+   * to CloudWatch.
+   */
   public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
     cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
   }
 
+  /**
+   * @param targetBytesPerSecond Target average bytes/seconds on each instance. 
+   */
   public fun targetBytesPerSecond(targetBytesPerSecond: Number) {
     cdkBuilder.targetBytesPerSecond(targetBytesPerSecond)
   }

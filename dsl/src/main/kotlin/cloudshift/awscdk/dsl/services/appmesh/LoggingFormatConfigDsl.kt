@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.appmesh.LoggingFormatConfig
 public class LoggingFormatConfigDsl {
   private val cdkBuilder: LoggingFormatConfig.Builder = LoggingFormatConfig.builder()
 
-  public fun formatConfig(block: CfnVirtualNodeLoggingFormatPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param formatConfig CFN configuration for Access Logging Format.
+   */
+  public fun formatConfig(formatConfig: CfnVirtualNodeLoggingFormatPropertyDsl.() -> Unit = {}) {
     val builder = CfnVirtualNodeLoggingFormatPropertyDsl()
-    builder.apply(block)
+    builder.apply(formatConfig)
     cdkBuilder.formatConfig(builder.build())
   }
 
+  /**
+   * @param formatConfig CFN configuration for Access Logging Format.
+   */
   public fun formatConfig(formatConfig: CfnVirtualNode.LoggingFormatProperty) {
     cdkBuilder.formatConfig(formatConfig)
   }

@@ -13,20 +13,32 @@ import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 public class CfnEntityPropertyPropertyDsl {
   private val cdkBuilder: CfnEntity.PropertyProperty.Builder = CfnEntity.PropertyProperty.builder()
 
-  public fun definition(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param definition An object that specifies information about a property.
+   */
+  public fun definition(definition: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(definition)
     cdkBuilder.definition(builder.map)
   }
 
+  /**
+   * @param definition An object that specifies information about a property.
+   */
   public fun definition(definition: Any) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * @param value An object that contains information about a value for a time series property.
+   */
   public fun `value`(`value`: IResolvable) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param value An object that contains information about a value for a time series property.
+   */
   public fun `value`(`value`: CfnEntity.DataValueProperty) {
     cdkBuilder.`value`(`value`)
   }

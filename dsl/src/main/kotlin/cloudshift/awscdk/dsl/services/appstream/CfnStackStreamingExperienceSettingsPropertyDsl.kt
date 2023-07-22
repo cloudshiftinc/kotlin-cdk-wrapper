@@ -11,6 +11,10 @@ public class CfnStackStreamingExperienceSettingsPropertyDsl {
   private val cdkBuilder: CfnStack.StreamingExperienceSettingsProperty.Builder =
       CfnStack.StreamingExperienceSettingsProperty.builder()
 
+  /**
+   * @param preferredProtocol The preferred protocol that you want to use while streaming your
+   * application.
+   */
   public fun preferredProtocol(preferredProtocol: String) {
     cdkBuilder.preferredProtocol(preferredProtocol)
   }

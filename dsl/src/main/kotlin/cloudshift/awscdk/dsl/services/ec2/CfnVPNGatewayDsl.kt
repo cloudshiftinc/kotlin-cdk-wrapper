@@ -22,18 +22,43 @@ public class CfnVPNGatewayDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The private Autonomous System Number (ASN) for the Amazon side of a BGP session.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngateway.html#cfn-ec2-vpngateway-amazonsideasn)
+   * @param amazonSideAsn The private Autonomous System Number (ASN) for the Amazon side of a BGP
+   * session. 
+   */
   public fun amazonSideAsn(amazonSideAsn: Number) {
     cdkBuilder.amazonSideAsn(amazonSideAsn)
   }
 
+  /**
+   * Any tags assigned to the virtual private gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngateway.html#cfn-ec2-vpngateway-tags)
+   * @param tags Any tags assigned to the virtual private gateway. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Any tags assigned to the virtual private gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngateway.html#cfn-ec2-vpngateway-tags)
+   * @param tags Any tags assigned to the virtual private gateway. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The type of VPN connection the virtual private gateway supports.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngateway.html#cfn-ec2-vpngateway-type)
+   * @param type The type of VPN connection the virtual private gateway supports. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

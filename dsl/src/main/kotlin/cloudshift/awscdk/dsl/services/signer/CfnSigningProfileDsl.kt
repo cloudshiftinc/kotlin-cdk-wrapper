@@ -22,23 +22,59 @@ public class CfnSigningProfileDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The ID of a platform that is available for use by a signing profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-platformid)
+   * @param platformId The ID of a platform that is available for use by a signing profile. 
+   */
   public fun platformId(platformId: String) {
     cdkBuilder.platformId(platformId)
   }
 
+  /**
+   * The validity period override for any signature generated using this signing profile.
+   *
+   * If unspecified, the default is 135 months.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-signaturevalidityperiod)
+   * @param signatureValidityPeriod The validity period override for any signature generated using
+   * this signing profile. 
+   */
   public fun signatureValidityPeriod(signatureValidityPeriod: IResolvable) {
     cdkBuilder.signatureValidityPeriod(signatureValidityPeriod)
   }
 
+  /**
+   * The validity period override for any signature generated using this signing profile.
+   *
+   * If unspecified, the default is 135 months.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-signaturevalidityperiod)
+   * @param signatureValidityPeriod The validity period override for any signature generated using
+   * this signing profile. 
+   */
   public
       fun signatureValidityPeriod(signatureValidityPeriod: CfnSigningProfile.SignatureValidityPeriodProperty) {
     cdkBuilder.signatureValidityPeriod(signatureValidityPeriod)
   }
 
+  /**
+   * A list of tags associated with the signing profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-tags)
+   * @param tags A list of tags associated with the signing profile. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A list of tags associated with the signing profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-tags)
+   * @param tags A list of tags associated with the signing profile. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

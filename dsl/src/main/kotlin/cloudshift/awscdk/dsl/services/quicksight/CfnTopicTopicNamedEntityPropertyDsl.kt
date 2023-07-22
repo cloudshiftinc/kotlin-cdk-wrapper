@@ -19,38 +19,65 @@ public class CfnTopicTopicNamedEntityPropertyDsl {
 
   private val _entitySynonyms: MutableList<String> = mutableListOf()
 
+  /**
+   * @param definition The definition of a named entity.
+   */
   public fun definition(vararg definition: Any) {
     _definition.addAll(listOf(*definition))
   }
 
+  /**
+   * @param definition The definition of a named entity.
+   */
   public fun definition(definition: Collection<Any>) {
     _definition.addAll(definition)
   }
 
+  /**
+   * @param definition The definition of a named entity.
+   */
   public fun definition(definition: IResolvable) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * @param entityDescription The description of the named entity.
+   */
   public fun entityDescription(entityDescription: String) {
     cdkBuilder.entityDescription(entityDescription)
   }
 
+  /**
+   * @param entityName The name of the named entity. 
+   */
   public fun entityName(entityName: String) {
     cdkBuilder.entityName(entityName)
   }
 
+  /**
+   * @param entitySynonyms The other names or aliases for the named entity.
+   */
   public fun entitySynonyms(vararg entitySynonyms: String) {
     _entitySynonyms.addAll(listOf(*entitySynonyms))
   }
 
+  /**
+   * @param entitySynonyms The other names or aliases for the named entity.
+   */
   public fun entitySynonyms(entitySynonyms: Collection<String>) {
     _entitySynonyms.addAll(entitySynonyms)
   }
 
+  /**
+   * @param semanticEntityType The type of named entity that a topic represents.
+   */
   public fun semanticEntityType(semanticEntityType: IResolvable) {
     cdkBuilder.semanticEntityType(semanticEntityType)
   }
 
+  /**
+   * @param semanticEntityType The type of named entity that a topic represents.
+   */
   public fun semanticEntityType(semanticEntityType: CfnTopic.SemanticEntityTypeProperty) {
     cdkBuilder.semanticEntityType(semanticEntityType)
   }

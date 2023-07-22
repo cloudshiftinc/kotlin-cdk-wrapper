@@ -11,10 +11,16 @@ public class CfnAutoScalingGroupNetworkInterfaceCountRequestPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty.Builder =
       CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty.builder()
 
+  /**
+   * @param max The maximum number of network interfaces.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum number of network interfaces.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

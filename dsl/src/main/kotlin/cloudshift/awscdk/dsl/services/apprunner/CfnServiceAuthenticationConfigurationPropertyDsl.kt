@@ -11,10 +11,20 @@ public class CfnServiceAuthenticationConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.AuthenticationConfigurationProperty.Builder =
       CfnService.AuthenticationConfigurationProperty.builder()
 
+  /**
+   * @param accessRoleArn The Amazon Resource Name (ARN) of the IAM role that grants the App Runner
+   * service access to a source repository.
+   * It's required for ECR image repositories (but not for ECR Public repositories).
+   */
   public fun accessRoleArn(accessRoleArn: String) {
     cdkBuilder.accessRoleArn(accessRoleArn)
   }
 
+  /**
+   * @param connectionArn The Amazon Resource Name (ARN) of the App Runner connection that enables
+   * the App Runner service to connect to a source repository.
+   * It's required for GitHub code repositories.
+   */
   public fun connectionArn(connectionArn: String) {
     cdkBuilder.connectionArn(connectionArn)
   }

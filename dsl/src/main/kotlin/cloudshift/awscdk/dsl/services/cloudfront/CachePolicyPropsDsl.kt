@@ -15,42 +15,81 @@ import software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior
 public class CachePolicyPropsDsl {
   private val cdkBuilder: CachePolicyProps.Builder = CachePolicyProps.builder()
 
+  /**
+   * @param cachePolicyName A unique name to identify the cache policy.
+   * The name must only include '-', '_', or alphanumeric characters.
+   */
   public fun cachePolicyName(cachePolicyName: String) {
     cdkBuilder.cachePolicyName(cachePolicyName)
   }
 
+  /**
+   * @param comment A comment to describe the cache policy.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * @param cookieBehavior Determines whether any cookies in viewer requests are included in the
+   * cache key and automatically included in requests that CloudFront sends to the origin.
+   */
   public fun cookieBehavior(cookieBehavior: CacheCookieBehavior) {
     cdkBuilder.cookieBehavior(cookieBehavior)
   }
 
+  /**
+   * @param defaultTtl The default amount of time for objects to stay in the CloudFront cache.
+   * Only used when the origin does not send Cache-Control or Expires headers with the object.
+   */
   public fun defaultTtl(defaultTtl: Duration) {
     cdkBuilder.defaultTtl(defaultTtl)
   }
 
+  /**
+   * @param enableAcceptEncodingBrotli Whether to normalize and include the `Accept-Encoding` header
+   * in the cache key when the `Accept-Encoding` header is 'br'.
+   */
   public fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean) {
     cdkBuilder.enableAcceptEncodingBrotli(enableAcceptEncodingBrotli)
   }
 
+  /**
+   * @param enableAcceptEncodingGzip Whether to normalize and include the `Accept-Encoding` header
+   * in the cache key when the `Accept-Encoding` header is 'gzip'.
+   */
   public fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean) {
     cdkBuilder.enableAcceptEncodingGzip(enableAcceptEncodingGzip)
   }
 
+  /**
+   * @param headerBehavior Determines whether any HTTP headers are included in the cache key and
+   * automatically included in requests that CloudFront sends to the origin.
+   */
   public fun headerBehavior(headerBehavior: CacheHeaderBehavior) {
     cdkBuilder.headerBehavior(headerBehavior)
   }
 
+  /**
+   * @param maxTtl The maximum amount of time for objects to stay in the CloudFront cache.
+   * CloudFront uses this value only when the origin sends Cache-Control or Expires headers with the
+   * object.
+   */
   public fun maxTtl(maxTtl: Duration) {
     cdkBuilder.maxTtl(maxTtl)
   }
 
+  /**
+   * @param minTtl The minimum amount of time for objects to stay in the CloudFront cache.
+   */
   public fun minTtl(minTtl: Duration) {
     cdkBuilder.minTtl(minTtl)
   }
 
+  /**
+   * @param queryStringBehavior Determines whether any query strings are included in the cache key
+   * and automatically included in requests that CloudFront sends to the origin.
+   */
   public fun queryStringBehavior(queryStringBehavior: CacheQueryStringBehavior) {
     cdkBuilder.queryStringBehavior(queryStringBehavior)
   }

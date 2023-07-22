@@ -17,18 +17,34 @@ public class CfnInferenceExperimentCaptureContentTypeHeaderPropertyDsl {
 
   private val _jsonContentTypes: MutableList<String> = mutableListOf()
 
+  /**
+   * @param csvContentTypes The list of all content type headers that SageMaker will treat as CSV
+   * and capture accordingly.
+   */
   public fun csvContentTypes(vararg csvContentTypes: String) {
     _csvContentTypes.addAll(listOf(*csvContentTypes))
   }
 
+  /**
+   * @param csvContentTypes The list of all content type headers that SageMaker will treat as CSV
+   * and capture accordingly.
+   */
   public fun csvContentTypes(csvContentTypes: Collection<String>) {
     _csvContentTypes.addAll(csvContentTypes)
   }
 
+  /**
+   * @param jsonContentTypes The list of all content type headers that SageMaker will treat as JSON
+   * and capture accordingly.
+   */
   public fun jsonContentTypes(vararg jsonContentTypes: String) {
     _jsonContentTypes.addAll(listOf(*jsonContentTypes))
   }
 
+  /**
+   * @param jsonContentTypes The list of all content type headers that SageMaker will treat as JSON
+   * and capture accordingly.
+   */
   public fun jsonContentTypes(jsonContentTypes: Collection<String>) {
     _jsonContentTypes.addAll(jsonContentTypes)
   }

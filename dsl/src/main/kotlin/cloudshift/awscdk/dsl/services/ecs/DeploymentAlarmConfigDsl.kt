@@ -15,14 +15,23 @@ public class DeploymentAlarmConfigDsl {
 
   private val _alarmNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param alarmNames List of alarm names to monitor during deployments. 
+   */
   public fun alarmNames(vararg alarmNames: String) {
     _alarmNames.addAll(listOf(*alarmNames))
   }
 
+  /**
+   * @param alarmNames List of alarm names to monitor during deployments. 
+   */
   public fun alarmNames(alarmNames: Collection<String>) {
     _alarmNames.addAll(alarmNames)
   }
 
+  /**
+   * @param behavior Default rollback on alarm.
+   */
   public fun behavior(behavior: AlarmBehavior) {
     cdkBuilder.behavior(behavior)
   }

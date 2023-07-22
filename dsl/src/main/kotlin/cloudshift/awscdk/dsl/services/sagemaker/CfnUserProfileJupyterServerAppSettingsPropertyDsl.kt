@@ -11,10 +11,18 @@ public class CfnUserProfileJupyterServerAppSettingsPropertyDsl {
   private val cdkBuilder: CfnUserProfile.JupyterServerAppSettingsProperty.Builder =
       CfnUserProfile.JupyterServerAppSettingsProperty.builder()
 
+  /**
+   * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the
+   * default SageMaker image used by the JupyterServer app.
+   */
   public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
     cdkBuilder.defaultResourceSpec(defaultResourceSpec)
   }
 
+  /**
+   * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the
+   * default SageMaker image used by the JupyterServer app.
+   */
   public fun defaultResourceSpec(defaultResourceSpec: CfnUserProfile.ResourceSpecProperty) {
     cdkBuilder.defaultResourceSpec(defaultResourceSpec)
   }

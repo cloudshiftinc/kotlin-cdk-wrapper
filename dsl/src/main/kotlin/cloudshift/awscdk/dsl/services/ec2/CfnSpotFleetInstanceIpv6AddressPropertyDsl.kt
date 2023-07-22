@@ -11,6 +11,9 @@ public class CfnSpotFleetInstanceIpv6AddressPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.InstanceIpv6AddressProperty.Builder =
       CfnSpotFleet.InstanceIpv6AddressProperty.builder()
 
+  /**
+   * @param ipv6Address The IPv6 address. 
+   */
   public fun ipv6Address(ipv6Address: String) {
     cdkBuilder.ipv6Address(ipv6Address)
   }

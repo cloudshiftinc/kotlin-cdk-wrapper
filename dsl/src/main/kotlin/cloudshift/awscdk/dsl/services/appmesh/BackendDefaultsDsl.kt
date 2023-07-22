@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.appmesh.TlsClientPolicy
 public class BackendDefaultsDsl {
   private val cdkBuilder: BackendDefaults.Builder = BackendDefaults.builder()
 
-  public fun tlsClientPolicy(block: TlsClientPolicyDsl.() -> Unit = {}) {
+  /**
+   * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
+   */
+  public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicyDsl.() -> Unit = {}) {
     val builder = TlsClientPolicyDsl()
-    builder.apply(block)
+    builder.apply(tlsClientPolicy)
     cdkBuilder.tlsClientPolicy(builder.build())
   }
 
+  /**
+   * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
+   */
   public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
     cdkBuilder.tlsClientPolicy(tlsClientPolicy)
   }

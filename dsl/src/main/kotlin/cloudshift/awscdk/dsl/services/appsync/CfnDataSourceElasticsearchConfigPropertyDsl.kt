@@ -11,10 +11,16 @@ public class CfnDataSourceElasticsearchConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.ElasticsearchConfigProperty.Builder =
       CfnDataSource.ElasticsearchConfigProperty.builder()
 
+  /**
+   * @param awsRegion The AWS Region. 
+   */
   public fun awsRegion(awsRegion: String) {
     cdkBuilder.awsRegion(awsRegion)
   }
 
+  /**
+   * @param endpoint The endpoint. 
+   */
   public fun endpoint(endpoint: String) {
     cdkBuilder.endpoint(endpoint)
   }

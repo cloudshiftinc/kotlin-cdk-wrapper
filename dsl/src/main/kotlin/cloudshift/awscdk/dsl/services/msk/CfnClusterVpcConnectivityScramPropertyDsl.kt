@@ -12,10 +12,16 @@ public class CfnClusterVpcConnectivityScramPropertyDsl {
   private val cdkBuilder: CfnCluster.VpcConnectivityScramProperty.Builder =
       CfnCluster.VpcConnectivityScramProperty.builder()
 
+  /**
+   * @param enabled SASL/SCRAM authentication is enabled or not. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled SASL/SCRAM authentication is enabled or not. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

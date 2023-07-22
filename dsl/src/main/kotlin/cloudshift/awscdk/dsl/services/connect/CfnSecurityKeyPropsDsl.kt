@@ -10,10 +10,24 @@ import software.amazon.awscdk.services.connect.CfnSecurityKeyProps
 public class CfnSecurityKeyPropsDsl {
   private val cdkBuilder: CfnSecurityKeyProps.Builder = CfnSecurityKeyProps.builder()
 
+  /**
+   * @param instanceId The Amazon Resource Name (ARN) of the instance. 
+   * *Minimum* : `1`
+   *
+   * *Maximum* : `100`
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }
 
+  /**
+   * @param key A valid security key in PEM format. For example:. 
+   * `"-----BEGIN PUBLIC KEY-----\ [a lot of characters] ----END PUBLIC KEY-----"`
+   *
+   * *Minimum* : `1`
+   *
+   * *Maximum* : `1024`
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }

@@ -11,10 +11,16 @@ public class CfnVirtualGatewayJsonFormatRefPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.JsonFormatRefProperty.Builder =
       CfnVirtualGateway.JsonFormatRefProperty.builder()
 
+  /**
+   * @param key The specified key for the JSON. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The specified value for the JSON. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

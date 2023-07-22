@@ -12,14 +12,23 @@ public class CfnAnalysisScrollBarOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ScrollBarOptionsProperty.Builder =
       CfnAnalysis.ScrollBarOptionsProperty.builder()
 
+  /**
+   * @param visibility The visibility of the data zoom scroll bar.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }
 
+  /**
+   * @param visibleRange The visibility range for the data zoom scroll bar.
+   */
   public fun visibleRange(visibleRange: IResolvable) {
     cdkBuilder.visibleRange(visibleRange)
   }
 
+  /**
+   * @param visibleRange The visibility range for the data zoom scroll bar.
+   */
   public fun visibleRange(visibleRange: CfnAnalysis.VisibleRangeOptionsProperty) {
     cdkBuilder.visibleRange(visibleRange)
   }

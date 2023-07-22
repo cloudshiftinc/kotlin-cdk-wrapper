@@ -11,6 +11,11 @@ public class CfnEndpointConfigAsyncInferenceClientConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.AsyncInferenceClientConfigProperty.Builder =
       CfnEndpointConfig.AsyncInferenceClientConfigProperty.builder()
 
+  /**
+   * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent by
+   * the SageMaker client to the model container.
+   * If no value is provided, SageMaker will choose an optimal value for you.
+   */
   public fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number) {
     cdkBuilder.maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance)
   }

@@ -11,10 +11,16 @@ public class CfnMissionProfileStreamsKmsKeyPropertyDsl {
   private val cdkBuilder: CfnMissionProfile.StreamsKmsKeyProperty.Builder =
       CfnMissionProfile.StreamsKmsKeyProperty.builder()
 
+  /**
+   * @param kmsAliasArn the value to be set.
+   */
   public fun kmsAliasArn(kmsAliasArn: String) {
     cdkBuilder.kmsAliasArn(kmsAliasArn)
   }
 
+  /**
+   * @param kmsKeyArn the value to be set.
+   */
   public fun kmsKeyArn(kmsKeyArn: String) {
     cdkBuilder.kmsKeyArn(kmsKeyArn)
   }

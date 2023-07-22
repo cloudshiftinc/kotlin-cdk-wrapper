@@ -17,20 +17,32 @@ public class TopicPolicyPropsDsl {
 
   private val _topics: MutableList<ITopic> = mutableListOf()
 
-  public fun policyDocument(block: PolicyDocumentDsl.() -> Unit = {}) {
+  /**
+   * @param policyDocument IAM policy document to apply to topic(s).
+   */
+  public fun policyDocument(policyDocument: PolicyDocumentDsl.() -> Unit = {}) {
     val builder = PolicyDocumentDsl()
-    builder.apply(block)
+    builder.apply(policyDocument)
     cdkBuilder.policyDocument(builder.build())
   }
 
+  /**
+   * @param policyDocument IAM policy document to apply to topic(s).
+   */
   public fun policyDocument(policyDocument: PolicyDocument) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * @param topics The set of topics this policy applies to. 
+   */
   public fun topics(vararg topics: ITopic) {
     _topics.addAll(listOf(*topics))
   }
 
+  /**
+   * @param topics The set of topics this policy applies to. 
+   */
   public fun topics(topics: Collection<ITopic>) {
     _topics.addAll(topics)
   }

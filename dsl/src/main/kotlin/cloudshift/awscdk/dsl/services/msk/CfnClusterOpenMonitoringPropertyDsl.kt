@@ -11,10 +11,16 @@ public class CfnClusterOpenMonitoringPropertyDsl {
   private val cdkBuilder: CfnCluster.OpenMonitoringProperty.Builder =
       CfnCluster.OpenMonitoringProperty.builder()
 
+  /**
+   * @param prometheus Prometheus exporter settings. 
+   */
   public fun prometheus(prometheus: IResolvable) {
     cdkBuilder.prometheus(prometheus)
   }
 
+  /**
+   * @param prometheus Prometheus exporter settings. 
+   */
   public fun prometheus(prometheus: CfnCluster.PrometheusProperty) {
     cdkBuilder.prometheus(prometheus)
   }

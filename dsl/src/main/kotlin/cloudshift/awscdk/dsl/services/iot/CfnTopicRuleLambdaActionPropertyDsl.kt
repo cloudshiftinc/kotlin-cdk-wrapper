@@ -11,6 +11,9 @@ public class CfnTopicRuleLambdaActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.LambdaActionProperty.Builder =
       CfnTopicRule.LambdaActionProperty.builder()
 
+  /**
+   * @param functionArn The ARN of the Lambda function.
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }

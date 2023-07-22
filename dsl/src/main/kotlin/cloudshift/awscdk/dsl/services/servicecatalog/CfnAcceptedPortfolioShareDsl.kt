@@ -15,10 +15,25 @@ public class CfnAcceptedPortfolioShareDsl(
   private val cdkBuilder: CfnAcceptedPortfolioShare.Builder =
       CfnAcceptedPortfolioShare.Builder.create(scope, id)
 
+  /**
+   * The language code.
+   *
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-acceptlanguage)
+   * @param acceptLanguage The language code. 
+   */
   public fun acceptLanguage(acceptLanguage: String) {
     cdkBuilder.acceptLanguage(acceptLanguage)
   }
 
+  /**
+   * The portfolio identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-portfolioid)
+   * @param portfolioId The portfolio identifier. 
+   */
   public fun portfolioId(portfolioId: String) {
     cdkBuilder.portfolioId(portfolioId)
   }

@@ -16,14 +16,23 @@ public class CfnDashboardGradientColorPropertyDsl {
 
   private val _stops: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param stops The list of gradient color stops.
+   */
   public fun stops(vararg stops: Any) {
     _stops.addAll(listOf(*stops))
   }
 
+  /**
+   * @param stops The list of gradient color stops.
+   */
   public fun stops(stops: Collection<Any>) {
     _stops.addAll(stops)
   }
 
+  /**
+   * @param stops The list of gradient color stops.
+   */
   public fun stops(stops: IResolvable) {
     cdkBuilder.stops(stops)
   }

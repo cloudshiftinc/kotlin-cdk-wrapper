@@ -21,18 +21,44 @@ public class CfnResourceDefinitionVersionDsl(
 
   private val _resources: MutableList<Any> = mutableListOf()
 
+  /**
+   * The ID of the resource definition associated with this version.
+   *
+   * This value is a GUID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html#cfn-greengrass-resourcedefinitionversion-resourcedefinitionid)
+   * @param resourceDefinitionId The ID of the resource definition associated with this version. 
+   */
   public fun resourceDefinitionId(resourceDefinitionId: String) {
     cdkBuilder.resourceDefinitionId(resourceDefinitionId)
   }
 
+  /**
+   * The resources in this version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html#cfn-greengrass-resourcedefinitionversion-resources)
+   * @param resources The resources in this version. 
+   */
   public fun resources(vararg resources: Any) {
     _resources.addAll(listOf(*resources))
   }
 
+  /**
+   * The resources in this version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html#cfn-greengrass-resourcedefinitionversion-resources)
+   * @param resources The resources in this version. 
+   */
   public fun resources(resources: Collection<Any>) {
     _resources.addAll(resources)
   }
 
+  /**
+   * The resources in this version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html#cfn-greengrass-resourcedefinitionversion-resources)
+   * @param resources The resources in this version. 
+   */
   public fun resources(resources: IResolvable) {
     cdkBuilder.resources(resources)
   }

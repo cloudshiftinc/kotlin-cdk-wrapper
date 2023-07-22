@@ -11,10 +11,16 @@ public class CfnOriginEndpointEncryptionContractConfigurationPropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.EncryptionContractConfigurationProperty.Builder =
       CfnOriginEndpoint.EncryptionContractConfigurationProperty.builder()
 
+  /**
+   * @param presetSpeke20Audio A collection of audio encryption presets. 
+   */
   public fun presetSpeke20Audio(presetSpeke20Audio: String) {
     cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
   }
 
+  /**
+   * @param presetSpeke20Video A collection of video encryption presets. 
+   */
   public fun presetSpeke20Video(presetSpeke20Video: String) {
     cdkBuilder.presetSpeke20Video(presetSpeke20Video)
   }

@@ -15,14 +15,23 @@ public class CfnAnalysisStringParameterPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param name A display name for a string parameter. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param values The values of a string parameter. 
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values of a string parameter. 
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

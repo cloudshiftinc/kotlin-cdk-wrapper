@@ -11,6 +11,9 @@ public class CfnIntegrationZendeskSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.ZendeskSourcePropertiesProperty.Builder =
       CfnIntegration.ZendeskSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Zendesk flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

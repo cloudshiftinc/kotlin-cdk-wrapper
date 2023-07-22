@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.globalaccelerator.AcceleratorProps
 public class AcceleratorPropsDsl {
   private val cdkBuilder: AcceleratorProps.Builder = AcceleratorProps.builder()
 
+  /**
+   * @param acceleratorName The name of the accelerator.
+   */
   public fun acceleratorName(acceleratorName: String) {
     cdkBuilder.acceleratorName(acceleratorName)
   }
 
+  /**
+   * @param enabled Indicates whether the accelerator is enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }

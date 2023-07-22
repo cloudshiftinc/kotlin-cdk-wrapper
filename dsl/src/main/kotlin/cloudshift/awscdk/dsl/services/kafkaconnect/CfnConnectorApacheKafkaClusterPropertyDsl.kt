@@ -12,14 +12,25 @@ public class CfnConnectorApacheKafkaClusterPropertyDsl {
   private val cdkBuilder: CfnConnector.ApacheKafkaClusterProperty.Builder =
       CfnConnector.ApacheKafkaClusterProperty.builder()
 
+  /**
+   * @param bootstrapServers The bootstrap servers of the cluster. 
+   */
   public fun bootstrapServers(bootstrapServers: String) {
     cdkBuilder.bootstrapServers(bootstrapServers)
   }
 
+  /**
+   * @param vpc Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.
+   * 
+   */
   public fun vpc(vpc: IResolvable) {
     cdkBuilder.vpc(vpc)
   }
 
+  /**
+   * @param vpc Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.
+   * 
+   */
   public fun vpc(vpc: CfnConnector.VpcProperty) {
     cdkBuilder.vpc(vpc)
   }

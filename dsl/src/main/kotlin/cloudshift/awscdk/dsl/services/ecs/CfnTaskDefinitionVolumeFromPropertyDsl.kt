@@ -13,14 +13,28 @@ public class CfnTaskDefinitionVolumeFromPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.VolumeFromProperty.Builder =
       CfnTaskDefinition.VolumeFromProperty.builder()
 
+  /**
+   * @param readOnly If this value is `true` , the container has read-only access to the volume.
+   * If this value is `false` , then the container can write to the volume. The default value is
+   * `false` .
+   */
   public fun readOnly(readOnly: Boolean) {
     cdkBuilder.readOnly(readOnly)
   }
 
+  /**
+   * @param readOnly If this value is `true` , the container has read-only access to the volume.
+   * If this value is `false` , then the container can write to the volume. The default value is
+   * `false` .
+   */
   public fun readOnly(readOnly: IResolvable) {
     cdkBuilder.readOnly(readOnly)
   }
 
+  /**
+   * @param sourceContainer The name of another container within the same task definition to mount
+   * volumes from.
+   */
   public fun sourceContainer(sourceContainer: String) {
     cdkBuilder.sourceContainer(sourceContainer)
   }

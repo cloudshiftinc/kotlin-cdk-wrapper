@@ -18,22 +18,43 @@ public class CfnRoleAliasPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param credentialDurationSeconds The number of seconds for which the credential is valid.
+   */
   public fun credentialDurationSeconds(credentialDurationSeconds: Number) {
     cdkBuilder.credentialDurationSeconds(credentialDurationSeconds)
   }
 
+  /**
+   * @param roleAlias The role alias.
+   */
   public fun roleAlias(roleAlias: String) {
     cdkBuilder.roleAlias(roleAlias)
   }
 
+  /**
+   * @param roleArn The role ARN. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

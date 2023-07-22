@@ -16,14 +16,29 @@ public class CfnDeploymentGroupEC2TagSetListObjectPropertyDsl {
 
   private val _ec2TagGroup: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+   * For an instance to be included in the deployment group, it must be identified by all of the tag
+   * groups in the list.
+   */
   public fun ec2TagGroup(vararg ec2TagGroup: Any) {
     _ec2TagGroup.addAll(listOf(*ec2TagGroup))
   }
 
+  /**
+   * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+   * For an instance to be included in the deployment group, it must be identified by all of the tag
+   * groups in the list.
+   */
   public fun ec2TagGroup(ec2TagGroup: Collection<Any>) {
     _ec2TagGroup.addAll(ec2TagGroup)
   }
 
+  /**
+   * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+   * For an instance to be included in the deployment group, it must be identified by all of the tag
+   * groups in the list.
+   */
   public fun ec2TagGroup(ec2TagGroup: IResolvable) {
     cdkBuilder.ec2TagGroup(ec2TagGroup)
   }

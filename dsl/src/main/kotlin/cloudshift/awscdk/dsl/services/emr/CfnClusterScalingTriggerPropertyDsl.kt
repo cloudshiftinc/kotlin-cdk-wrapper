@@ -11,10 +11,20 @@ public class CfnClusterScalingTriggerPropertyDsl {
   private val cdkBuilder: CfnCluster.ScalingTriggerProperty.Builder =
       CfnCluster.ScalingTriggerProperty.builder()
 
+  /**
+   * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+   * When the defined alarm conditions are met along with other trigger parameters, scaling activity
+   * begins.
+   */
   public fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
     cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition)
   }
 
+  /**
+   * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+   * When the defined alarm conditions are met along with other trigger parameters, scaling activity
+   * begins.
+   */
   public
       fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CfnCluster.CloudWatchAlarmDefinitionProperty) {
     cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition)

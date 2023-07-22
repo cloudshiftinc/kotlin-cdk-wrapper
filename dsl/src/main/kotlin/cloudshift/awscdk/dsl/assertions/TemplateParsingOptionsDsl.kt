@@ -10,6 +10,12 @@ import software.amazon.awscdk.assertions.TemplateParsingOptions
 public class TemplateParsingOptionsDsl {
   private val cdkBuilder: TemplateParsingOptions.Builder = TemplateParsingOptions.builder()
 
+  /**
+   * @param skipCyclicalDependenciesCheck If set to true, will skip checking for cyclical / circular
+   * dependencies.
+   * Should be set to false other than for
+   * templates that are valid despite containing cycles, such as unprocessed transform stacks.
+   */
   public fun skipCyclicalDependenciesCheck(skipCyclicalDependenciesCheck: Boolean) {
     cdkBuilder.skipCyclicalDependenciesCheck(skipCyclicalDependenciesCheck)
   }

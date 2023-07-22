@@ -16,22 +16,41 @@ public class CfnAlarmMetricPropertyDsl {
 
   private val _dimensions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dimensions The metric dimensions that you want to be used for the metric that the alarm
+   * will watch.
+   */
   public fun dimensions(vararg dimensions: Any) {
     _dimensions.addAll(listOf(*dimensions))
   }
 
+  /**
+   * @param dimensions The metric dimensions that you want to be used for the metric that the alarm
+   * will watch.
+   */
   public fun dimensions(dimensions: Collection<Any>) {
     _dimensions.addAll(dimensions)
   }
 
+  /**
+   * @param dimensions The metric dimensions that you want to be used for the metric that the alarm
+   * will watch.
+   */
   public fun dimensions(dimensions: IResolvable) {
     cdkBuilder.dimensions(dimensions)
   }
 
+  /**
+   * @param metricName The name of the metric that you want the alarm to watch.
+   * This is a required field.
+   */
   public fun metricName(metricName: String) {
     cdkBuilder.metricName(metricName)
   }
 
+  /**
+   * @param namespace The namespace of the metric that the alarm will watch.
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }

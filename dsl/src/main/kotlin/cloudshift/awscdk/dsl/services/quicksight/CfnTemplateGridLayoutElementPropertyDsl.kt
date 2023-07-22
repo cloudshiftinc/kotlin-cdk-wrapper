@@ -12,26 +12,44 @@ public class CfnTemplateGridLayoutElementPropertyDsl {
   private val cdkBuilder: CfnTemplate.GridLayoutElementProperty.Builder =
       CfnTemplate.GridLayoutElementProperty.builder()
 
+  /**
+   * @param columnIndex The column index for the upper left corner of an element.
+   */
   public fun columnIndex(columnIndex: Number) {
     cdkBuilder.columnIndex(columnIndex)
   }
 
+  /**
+   * @param columnSpan The width of a grid element expressed as a number of grid columns. 
+   */
   public fun columnSpan(columnSpan: Number) {
     cdkBuilder.columnSpan(columnSpan)
   }
 
+  /**
+   * @param elementId A unique identifier for an element within a grid layout. 
+   */
   public fun elementId(elementId: String) {
     cdkBuilder.elementId(elementId)
   }
 
+  /**
+   * @param elementType The type of element. 
+   */
   public fun elementType(elementType: String) {
     cdkBuilder.elementType(elementType)
   }
 
+  /**
+   * @param rowIndex The row index for the upper left corner of an element.
+   */
   public fun rowIndex(rowIndex: Number) {
     cdkBuilder.rowIndex(rowIndex)
   }
 
+  /**
+   * @param rowSpan The height of a grid element expressed as a number of grid rows. 
+   */
   public fun rowSpan(rowSpan: Number) {
     cdkBuilder.rowSpan(rowSpan)
   }

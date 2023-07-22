@@ -13,34 +13,66 @@ import software.amazon.awscdk.services.cloudfront.CfnFunctionProps
 public class CfnFunctionPropsDsl {
   private val cdkBuilder: CfnFunctionProps.Builder = CfnFunctionProps.builder()
 
+  /**
+   * @param autoPublish A flag that determines whether to automatically publish the function to the
+   * `LIVE` stage when it’s created.
+   * To automatically publish to the `LIVE` stage, set this property to `true` .
+   */
   public fun autoPublish(autoPublish: Boolean) {
     cdkBuilder.autoPublish(autoPublish)
   }
 
+  /**
+   * @param autoPublish A flag that determines whether to automatically publish the function to the
+   * `LIVE` stage when it’s created.
+   * To automatically publish to the `LIVE` stage, set this property to `true` .
+   */
   public fun autoPublish(autoPublish: IResolvable) {
     cdkBuilder.autoPublish(autoPublish)
   }
 
+  /**
+   * @param functionCode The function code. 
+   * For more information about writing a CloudFront function, see [Writing function code for
+   * CloudFront
+   * Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/writing-function-code.html)
+   * in the *Amazon CloudFront Developer Guide* .
+   */
   public fun functionCode(functionCode: String) {
     cdkBuilder.functionCode(functionCode)
   }
 
+  /**
+   * @param functionConfig Contains configuration information about a CloudFront function. 
+   */
   public fun functionConfig(functionConfig: IResolvable) {
     cdkBuilder.functionConfig(functionConfig)
   }
 
+  /**
+   * @param functionConfig Contains configuration information about a CloudFront function. 
+   */
   public fun functionConfig(functionConfig: CfnFunction.FunctionConfigProperty) {
     cdkBuilder.functionConfig(functionConfig)
   }
 
+  /**
+   * @param functionMetadata Contains metadata about a CloudFront function.
+   */
   public fun functionMetadata(functionMetadata: IResolvable) {
     cdkBuilder.functionMetadata(functionMetadata)
   }
 
+  /**
+   * @param functionMetadata Contains metadata about a CloudFront function.
+   */
   public fun functionMetadata(functionMetadata: CfnFunction.FunctionMetadataProperty) {
     cdkBuilder.functionMetadata(functionMetadata)
   }
 
+  /**
+   * @param name A name to identify the function. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

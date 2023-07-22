@@ -11,10 +11,16 @@ public class CfnChannelMediaPackageGroupSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.MediaPackageGroupSettingsProperty.Builder =
       CfnChannel.MediaPackageGroupSettingsProperty.builder()
 
+  /**
+   * @param destination The MediaPackage channel destination.
+   */
   public fun destination(destination: IResolvable) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param destination The MediaPackage channel destination.
+   */
   public fun destination(destination: CfnChannel.OutputLocationRefProperty) {
     cdkBuilder.destination(destination)
   }

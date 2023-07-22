@@ -18,38 +18,69 @@ public class CfnAnalysisTopBottomFilterPropertyDsl {
 
   private val _aggregationSortConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param aggregationSortConfigurations The aggregation and sort configuration of the top bottom
+   * filter. 
+   */
   public fun aggregationSortConfigurations(vararg aggregationSortConfigurations: Any) {
     _aggregationSortConfigurations.addAll(listOf(*aggregationSortConfigurations))
   }
 
+  /**
+   * @param aggregationSortConfigurations The aggregation and sort configuration of the top bottom
+   * filter. 
+   */
   public fun aggregationSortConfigurations(aggregationSortConfigurations: Collection<Any>) {
     _aggregationSortConfigurations.addAll(aggregationSortConfigurations)
   }
 
+  /**
+   * @param aggregationSortConfigurations The aggregation and sort configuration of the top bottom
+   * filter. 
+   */
   public fun aggregationSortConfigurations(aggregationSortConfigurations: IResolvable) {
     cdkBuilder.aggregationSortConfigurations(aggregationSortConfigurations)
   }
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
+   * or template. 
+   */
   public fun filterId(filterId: String) {
     cdkBuilder.filterId(filterId)
   }
 
+  /**
+   * @param limit The number of items to include in the top bottom filter results.
+   */
   public fun limit(limit: Number) {
     cdkBuilder.limit(limit)
   }
 
+  /**
+   * @param parameterName The parameter whose value should be used for the filter value.
+   */
   public fun parameterName(parameterName: String) {
     cdkBuilder.parameterName(parameterName)
   }
 
+  /**
+   * @param timeGranularity The level of time precision that is used to aggregate `DateTime` values.
+   */
   public fun timeGranularity(timeGranularity: String) {
     cdkBuilder.timeGranularity(timeGranularity)
   }

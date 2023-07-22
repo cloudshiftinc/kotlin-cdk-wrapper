@@ -11,14 +11,24 @@ public class CfnApplicationS3ContentLocationPropertyDsl {
   private val cdkBuilder: CfnApplication.S3ContentLocationProperty.Builder =
       CfnApplication.S3ContentLocationProperty.builder()
 
+  /**
+   * @param bucketArn The Amazon Resource Name (ARN) for the S3 bucket containing the application
+   * code. 
+   */
   public fun bucketArn(bucketArn: String) {
     cdkBuilder.bucketArn(bucketArn)
   }
 
+  /**
+   * @param fileKey The file key for the object containing the application code. 
+   */
   public fun fileKey(fileKey: String) {
     cdkBuilder.fileKey(fileKey)
   }
 
+  /**
+   * @param objectVersion The version of the object containing the application code.
+   */
   public fun objectVersion(objectVersion: String) {
     cdkBuilder.objectVersion(objectVersion)
   }

@@ -18,14 +18,23 @@ public class CfnTransitGatewayRouteTablePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param tags Any tags assigned to the route table.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Any tags assigned to the route table.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param transitGatewayId The ID of the transit gateway. 
+   */
   public fun transitGatewayId(transitGatewayId: String) {
     cdkBuilder.transitGatewayId(transitGatewayId)
   }

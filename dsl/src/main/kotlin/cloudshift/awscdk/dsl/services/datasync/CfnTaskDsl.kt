@@ -27,66 +27,233 @@ public class CfnTaskDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor and
+   * log events in the task.
+   *
+   * For more information about how to use CloudWatch Logs with DataSync, see [Monitoring Your
+   * Task](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs)
+   * in the *AWS DataSync User Guide.*
+   *
+   * For more information about these groups, see [Working with Log Groups and Log
+   * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
+   * in the *Amazon CloudWatch Logs User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn)
+   * @param cloudWatchLogGroupArn The Amazon Resource Name (ARN) of the Amazon CloudWatch log group
+   * that is used to monitor and log events in the task. 
+   */
   public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
     cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of an AWS storage resource's location.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-destinationlocationarn)
+   * @param destinationLocationArn The Amazon Resource Name (ARN) of an AWS storage resource's
+   * location. 
+   */
   public fun destinationLocationArn(destinationLocationArn: String) {
     cdkBuilder.destinationLocationArn(destinationLocationArn)
   }
 
+  /**
+   * Specifies a list of filter rules that exclude specific data during your transfer.
+   *
+   * For more information and examples, see [Filtering data transferred by
+   * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
+   * @param excludes Specifies a list of filter rules that exclude specific data during your
+   * transfer. 
+   */
   public fun excludes(vararg excludes: Any) {
     _excludes.addAll(listOf(*excludes))
   }
 
+  /**
+   * Specifies a list of filter rules that exclude specific data during your transfer.
+   *
+   * For more information and examples, see [Filtering data transferred by
+   * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
+   * @param excludes Specifies a list of filter rules that exclude specific data during your
+   * transfer. 
+   */
   public fun excludes(excludes: Collection<Any>) {
     _excludes.addAll(excludes)
   }
 
+  /**
+   * Specifies a list of filter rules that exclude specific data during your transfer.
+   *
+   * For more information and examples, see [Filtering data transferred by
+   * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
+   * @param excludes Specifies a list of filter rules that exclude specific data during your
+   * transfer. 
+   */
   public fun excludes(excludes: IResolvable) {
     cdkBuilder.excludes(excludes)
   }
 
+  /**
+   * Specifies a list of filter rules that include specific data during your transfer.
+   *
+   * For more information and examples, see [Filtering data transferred by
+   * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
+   * @param includes Specifies a list of filter rules that include specific data during your
+   * transfer. 
+   */
   public fun includes(vararg includes: Any) {
     _includes.addAll(listOf(*includes))
   }
 
+  /**
+   * Specifies a list of filter rules that include specific data during your transfer.
+   *
+   * For more information and examples, see [Filtering data transferred by
+   * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
+   * @param includes Specifies a list of filter rules that include specific data during your
+   * transfer. 
+   */
   public fun includes(includes: Collection<Any>) {
     _includes.addAll(includes)
   }
 
+  /**
+   * Specifies a list of filter rules that include specific data during your transfer.
+   *
+   * For more information and examples, see [Filtering data transferred by
+   * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
+   * @param includes Specifies a list of filter rules that include specific data during your
+   * transfer. 
+   */
   public fun includes(includes: IResolvable) {
     cdkBuilder.includes(includes)
   }
 
+  /**
+   * The name of a task.
+   *
+   * This value is a text reference that is used to identify the task in the console.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-name)
+   * @param name The name of a task. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Specifies the configuration options for a task. Some options include preserving file or object
+   * metadata and verifying data integrity.
+   *
+   * You can also override these options before starting an individual run of a task (also known as
+   * a *task execution* ). For more information, see
+   * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
+   * @param options Specifies the configuration options for a task. Some options include preserving
+   * file or object metadata and verifying data integrity. 
+   */
   public fun options(options: IResolvable) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * Specifies the configuration options for a task. Some options include preserving file or object
+   * metadata and verifying data integrity.
+   *
+   * You can also override these options before starting an individual run of a task (also known as
+   * a *task execution* ). For more information, see
+   * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
+   * @param options Specifies the configuration options for a task. Some options include preserving
+   * file or object metadata and verifying data integrity. 
+   */
   public fun options(options: CfnTask.OptionsProperty) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * Specifies a schedule used to periodically transfer files from a source to a destination
+   * location.
+   *
+   * The schedule should be specified in UTC time. For more information, see [Scheduling your
+   * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
+   * @param schedule Specifies a schedule used to periodically transfer files from a source to a
+   * destination location. 
+   */
   public fun schedule(schedule: IResolvable) {
     cdkBuilder.schedule(schedule)
   }
 
+  /**
+   * Specifies a schedule used to periodically transfer files from a source to a destination
+   * location.
+   *
+   * The schedule should be specified in UTC time. For more information, see [Scheduling your
+   * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
+   * @param schedule Specifies a schedule used to periodically transfer files from a source to a
+   * destination location. 
+   */
   public fun schedule(schedule: CfnTask.TaskScheduleProperty) {
     cdkBuilder.schedule(schedule)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the source location for the task.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-sourcelocationarn)
+   * @param sourceLocationArn The Amazon Resource Name (ARN) of the source location for the task. 
+   */
   public fun sourceLocationArn(sourceLocationArn: String) {
     cdkBuilder.sourceLocationArn(sourceLocationArn)
   }
 
+  /**
+   * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
+   * task.
+   *
+   * *Tags* are key-value pairs that help you manage, filter, and search for your DataSync
+   * resources.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags)
+   * @param tags Specifies the tags that you want to apply to the Amazon Resource Name (ARN)
+   * representing the task. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
+   * task.
+   *
+   * *Tags* are key-value pairs that help you manage, filter, and search for your DataSync
+   * resources.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags)
+   * @param tags Specifies the tags that you want to apply to the Amazon Resource Name (ARN)
+   * representing the task. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -11,10 +11,17 @@ public class CfnCrawlerMongoDBTargetPropertyDsl {
   private val cdkBuilder: CfnCrawler.MongoDBTargetProperty.Builder =
       CfnCrawler.MongoDBTargetProperty.builder()
 
+  /**
+   * @param connectionName The name of the connection to use to connect to the Amazon DocumentDB or
+   * MongoDB target.
+   */
   public fun connectionName(connectionName: String) {
     cdkBuilder.connectionName(connectionName)
   }
 
+  /**
+   * @param path The path of the Amazon DocumentDB or MongoDB target (database/collection).
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }

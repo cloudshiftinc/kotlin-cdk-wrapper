@@ -11,6 +11,9 @@ public class CfnDatastorePartitionPropertyDsl {
   private val cdkBuilder: CfnDatastore.PartitionProperty.Builder =
       CfnDatastore.PartitionProperty.builder()
 
+  /**
+   * @param attributeName The name of the attribute that defines a partition dimension. 
+   */
   public fun attributeName(attributeName: String) {
     cdkBuilder.attributeName(attributeName)
   }

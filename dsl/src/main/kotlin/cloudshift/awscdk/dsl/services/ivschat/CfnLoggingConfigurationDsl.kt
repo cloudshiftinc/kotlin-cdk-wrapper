@@ -23,23 +23,67 @@ public class CfnLoggingConfigurationDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The DestinationConfiguration is a complex type that contains information about where chat
+   * content will be logged.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html#cfn-ivschat-loggingconfiguration-destinationconfiguration)
+   * @param destinationConfiguration The DestinationConfiguration is a complex type that contains
+   * information about where chat content will be logged. 
+   */
   public fun destinationConfiguration(destinationConfiguration: IResolvable) {
     cdkBuilder.destinationConfiguration(destinationConfiguration)
   }
 
+  /**
+   * The DestinationConfiguration is a complex type that contains information about where chat
+   * content will be logged.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html#cfn-ivschat-loggingconfiguration-destinationconfiguration)
+   * @param destinationConfiguration The DestinationConfiguration is a complex type that contains
+   * information about where chat content will be logged. 
+   */
   public
       fun destinationConfiguration(destinationConfiguration: CfnLoggingConfiguration.DestinationConfigurationProperty) {
     cdkBuilder.destinationConfiguration(destinationConfiguration)
   }
 
+  /**
+   * Logging-configuration name.
+   *
+   * The value does not need to be unique.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html#cfn-ivschat-loggingconfiguration-name)
+   * @param name Logging-configuration name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html#cfn-ivschat-loggingconfiguration-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html#cfn-ivschat-loggingconfiguration-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

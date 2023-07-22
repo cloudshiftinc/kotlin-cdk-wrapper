@@ -11,10 +11,16 @@ public class CfnCalculatedAttributeDefinitionThresholdPropertyDsl {
   private val cdkBuilder: CfnCalculatedAttributeDefinition.ThresholdProperty.Builder =
       CfnCalculatedAttributeDefinition.ThresholdProperty.builder()
 
+  /**
+   * @param operator The operator of the threshold. 
+   */
   public fun `operator`(`operator`: String) {
     cdkBuilder.`operator`(`operator`)
   }
 
+  /**
+   * @param value The value of the threshold. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

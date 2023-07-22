@@ -12,18 +12,30 @@ public class CfnDecoderManifestCanNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.CanNetworkInterfaceProperty.Builder =
       CfnDecoderManifest.CanNetworkInterfaceProperty.builder()
 
+  /**
+   * @param canInterface the value to be set. 
+   */
   public fun canInterface(canInterface: IResolvable) {
     cdkBuilder.canInterface(canInterface)
   }
 
+  /**
+   * @param canInterface the value to be set. 
+   */
   public fun canInterface(canInterface: CfnDecoderManifest.CanInterfaceProperty) {
     cdkBuilder.canInterface(canInterface)
   }
 
+  /**
+   * @param interfaceId the value to be set. 
+   */
   public fun interfaceId(interfaceId: String) {
     cdkBuilder.interfaceId(interfaceId)
   }
 
+  /**
+   * @param type the value to be set. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

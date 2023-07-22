@@ -11,18 +11,30 @@ import software.amazon.awscdk.services.s3.IBucket
 public class S3DownloadOptionsDsl {
   private val cdkBuilder: S3DownloadOptions.Builder = S3DownloadOptions.builder()
 
+  /**
+   * @param bucket Name of the S3 bucket to download from. 
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param bucketKey The key of the file to download. 
+   */
   public fun bucketKey(bucketKey: String) {
     cdkBuilder.bucketKey(bucketKey)
   }
 
+  /**
+   * @param localFile The name of the local file.
+   */
   public fun localFile(localFile: String) {
     cdkBuilder.localFile(localFile)
   }
 
+  /**
+   * @param region The region of the S3 Bucket (needed for access via VPC Gateway).
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }

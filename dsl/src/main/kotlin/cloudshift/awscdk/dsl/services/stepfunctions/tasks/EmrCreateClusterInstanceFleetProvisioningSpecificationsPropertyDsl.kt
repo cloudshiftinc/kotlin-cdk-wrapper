@@ -11,14 +11,22 @@ public class EmrCreateClusterInstanceFleetProvisioningSpecificationsPropertyDsl 
   private val cdkBuilder: EmrCreateCluster.InstanceFleetProvisioningSpecificationsProperty.Builder =
       EmrCreateCluster.InstanceFleetProvisioningSpecificationsProperty.builder()
 
+  /**
+   * @param spotSpecification The launch specification for Spot instances in the fleet, which
+   * determines the defined duration and provisioning timeout behavior. 
+   */
   public
-      fun spotSpecification(block: EmrCreateClusterSpotProvisioningSpecificationPropertyDsl.() -> Unit
+      fun spotSpecification(spotSpecification: EmrCreateClusterSpotProvisioningSpecificationPropertyDsl.() -> Unit
       = {}) {
     val builder = EmrCreateClusterSpotProvisioningSpecificationPropertyDsl()
-    builder.apply(block)
+    builder.apply(spotSpecification)
     cdkBuilder.spotSpecification(builder.build())
   }
 
+  /**
+   * @param spotSpecification The launch specification for Spot instances in the fleet, which
+   * determines the defined duration and provisioning timeout behavior. 
+   */
   public
       fun spotSpecification(spotSpecification: EmrCreateCluster.SpotProvisioningSpecificationProperty) {
     cdkBuilder.spotSpecification(spotSpecification)

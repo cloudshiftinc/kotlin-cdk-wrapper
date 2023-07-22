@@ -23,44 +23,157 @@ public class CfnPortalDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun alarms(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor
+   * portal.
+   *
+   * You can use the alarm to monitor an asset property and get notified when the asset property
+   * value is outside a specified range. For more information, see [Monitoring with
+   * alarms](https://docs.aws.amazon.com/iot-sitewise/latest/appguide/monitor-alarms.html) in the *AWS
+   * IoT SiteWise Application Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-alarms)
+   * @param alarms Contains the configuration information of an alarm created in an AWS IoT SiteWise
+   * Monitor portal. 
+   */
+  public fun alarms(alarms: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(alarms)
     cdkBuilder.alarms(builder.map)
   }
 
+  /**
+   * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor
+   * portal.
+   *
+   * You can use the alarm to monitor an asset property and get notified when the asset property
+   * value is outside a specified range. For more information, see [Monitoring with
+   * alarms](https://docs.aws.amazon.com/iot-sitewise/latest/appguide/monitor-alarms.html) in the *AWS
+   * IoT SiteWise Application Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-alarms)
+   * @param alarms Contains the configuration information of an alarm created in an AWS IoT SiteWise
+   * Monitor portal. 
+   */
   public fun alarms(alarms: Any) {
     cdkBuilder.alarms(alarms)
   }
 
+  /**
+   * The email address that sends alarm notifications.
+   *
+   *
+   * If you use the [AWS IoT Events managed Lambda
+   * function](https://docs.aws.amazon.com/iotevents/latest/developerguide/lambda-support.html) to
+   * manage your emails, you must [verify the sender email address in Amazon
+   * SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html) .
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-notificationsenderemail)
+   * @param notificationSenderEmail The email address that sends alarm notifications. 
+   */
   public fun notificationSenderEmail(notificationSenderEmail: String) {
     cdkBuilder.notificationSenderEmail(notificationSenderEmail)
   }
 
+  /**
+   * The service to use to authenticate users to the portal. Choose from the following options:.
+   *
+   * * `SSO` – The portal uses AWS IAM Identity Center (successor to AWS Single Sign-On) to
+   * authenticate users and manage user permissions. Before you can create a portal that uses IAM
+   * Identity Center , you must enable IAM Identity Center . For more information, see [Enabling IAM
+   * Identity
+   * Center](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso)
+   * in the *AWS IoT SiteWise User Guide* . This option is only available in AWS Regions other than the
+   * China Regions.
+   * * `IAM` – The portal uses AWS Identity and Access Management ( IAM ) to authenticate users and
+   * manage user permissions.
+   *
+   * You can't change this value after you create a portal.
+   *
+   * Default: `SSO`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portalauthmode)
+   * @param portalAuthMode The service to use to authenticate users to the portal. Choose from the
+   * following options:. 
+   */
   public fun portalAuthMode(portalAuthMode: String) {
     cdkBuilder.portalAuthMode(portalAuthMode)
   }
 
+  /**
+   * The AWS administrator's contact email address.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portalcontactemail)
+   * @param portalContactEmail The AWS administrator's contact email address. 
+   */
   public fun portalContactEmail(portalContactEmail: String) {
     cdkBuilder.portalContactEmail(portalContactEmail)
   }
 
+  /**
+   * A description for the portal.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portaldescription)
+   * @param portalDescription A description for the portal. 
+   */
   public fun portalDescription(portalDescription: String) {
     cdkBuilder.portalDescription(portalDescription)
   }
 
+  /**
+   * A friendly name for the portal.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portalname)
+   * @param portalName A friendly name for the portal. 
+   */
   public fun portalName(portalName: String) {
     cdkBuilder.portalName(portalName)
   }
 
+  /**
+   * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of a
+   * service role that allows the portal's users to access your AWS IoT SiteWise resources on your
+   * behalf. For more information, see [Using service roles for AWS IoT SiteWise
+   * Monitor](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-service-role.html) in
+   * the *AWS IoT SiteWise User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-rolearn)
+   * @param roleArn The
+   * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of a service
+   * role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf. For
+   * more information, see [Using service roles for AWS IoT SiteWise
+   * Monitor](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-service-role.html) in
+   * the *AWS IoT SiteWise User Guide* . 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * A list of key-value pairs that contain metadata for the portal.
+   *
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-tags)
+   * @param tags A list of key-value pairs that contain metadata for the portal. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A list of key-value pairs that contain metadata for the portal.
+   *
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-tags)
+   * @param tags A list of key-value pairs that contain metadata for the portal. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

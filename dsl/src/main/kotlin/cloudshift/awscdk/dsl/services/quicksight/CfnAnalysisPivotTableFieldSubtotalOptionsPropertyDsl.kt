@@ -11,6 +11,9 @@ public class CfnAnalysisPivotTableFieldSubtotalOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotTableFieldSubtotalOptionsProperty.Builder =
       CfnAnalysis.PivotTableFieldSubtotalOptionsProperty.builder()
 
+  /**
+   * @param fieldId The field ID of the subtotal options.
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }

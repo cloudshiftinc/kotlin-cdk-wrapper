@@ -12,14 +12,23 @@ public class CfnDashboardWhatIfRangeScenarioPropertyDsl {
   private val cdkBuilder: CfnDashboard.WhatIfRangeScenarioProperty.Builder =
       CfnDashboard.WhatIfRangeScenarioProperty.builder()
 
+  /**
+   * @param endDate The end date in the date range that you need the forecast results for. 
+   */
   public fun endDate(endDate: String) {
     cdkBuilder.endDate(endDate)
   }
 
+  /**
+   * @param startDate The start date in the date range that you need the forecast results for. 
+   */
   public fun startDate(startDate: String) {
     cdkBuilder.startDate(startDate)
   }
 
+  /**
+   * @param value The target value that you want to meet for the provided date range. 
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

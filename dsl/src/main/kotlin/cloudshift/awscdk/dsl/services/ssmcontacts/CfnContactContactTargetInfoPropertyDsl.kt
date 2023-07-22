@@ -13,14 +13,25 @@ public class CfnContactContactTargetInfoPropertyDsl {
   private val cdkBuilder: CfnContact.ContactTargetInfoProperty.Builder =
       CfnContact.ContactTargetInfoProperty.builder()
 
+  /**
+   * @param contactId The Amazon Resource Name (ARN) of the contact. 
+   */
   public fun contactId(contactId: String) {
     cdkBuilder.contactId(contactId)
   }
 
+  /**
+   * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
+   * progress of stages in the plan. 
+   */
   public fun isEssential(isEssential: Boolean) {
     cdkBuilder.isEssential(isEssential)
   }
 
+  /**
+   * @param isEssential A Boolean value determining if the contact's acknowledgement stops the
+   * progress of stages in the plan. 
+   */
   public fun isEssential(isEssential: IResolvable) {
     cdkBuilder.isEssential(isEssential)
   }

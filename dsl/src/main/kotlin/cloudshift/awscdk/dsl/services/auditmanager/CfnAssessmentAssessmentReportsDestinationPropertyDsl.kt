@@ -11,10 +11,16 @@ public class CfnAssessmentAssessmentReportsDestinationPropertyDsl {
   private val cdkBuilder: CfnAssessment.AssessmentReportsDestinationProperty.Builder =
       CfnAssessment.AssessmentReportsDestinationProperty.builder()
 
+  /**
+   * @param destination The destination bucket where Audit Manager stores assessment reports.
+   */
   public fun destination(destination: String) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param destinationType The destination type, such as Amazon S3.
+   */
   public fun destinationType(destinationType: String) {
     cdkBuilder.destinationType(destinationType)
   }

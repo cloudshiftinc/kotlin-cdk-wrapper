@@ -11,6 +11,10 @@ public class CfnPolicyThirdPartyFirewallPolicyPropertyDsl {
   private val cdkBuilder: CfnPolicy.ThirdPartyFirewallPolicyProperty.Builder =
       CfnPolicy.ThirdPartyFirewallPolicyProperty.builder()
 
+  /**
+   * @param firewallDeploymentModel Defines the deployment model to use for the third-party firewall
+   * policy. 
+   */
   public fun firewallDeploymentModel(firewallDeploymentModel: String) {
     cdkBuilder.firewallDeploymentModel(firewallDeploymentModel)
   }

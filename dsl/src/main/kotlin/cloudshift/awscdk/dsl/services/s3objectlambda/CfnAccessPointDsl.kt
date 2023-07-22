@@ -15,14 +15,34 @@ public class CfnAccessPointDsl(
 ) {
   private val cdkBuilder: CfnAccessPoint.Builder = CfnAccessPoint.Builder.create(scope, id)
 
+  /**
+   * The name of this access point.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-name)
+   * @param name The name of this access point. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * A configuration used when creating an Object Lambda Access Point.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration)
+   * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
+   * Point. 
+   */
   public fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
     cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
   }
 
+  /**
+   * A configuration used when creating an Object Lambda Access Point.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration)
+   * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
+   * Point. 
+   */
   public
       fun objectLambdaConfiguration(objectLambdaConfiguration: CfnAccessPoint.ObjectLambdaConfigurationProperty) {
     cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)

@@ -11,10 +11,16 @@ public class CfnUserPoolPoliciesPropertyDsl {
   private val cdkBuilder: CfnUserPool.PoliciesProperty.Builder =
       CfnUserPool.PoliciesProperty.builder()
 
+  /**
+   * @param passwordPolicy The password policy.
+   */
   public fun passwordPolicy(passwordPolicy: IResolvable) {
     cdkBuilder.passwordPolicy(passwordPolicy)
   }
 
+  /**
+   * @param passwordPolicy The password policy.
+   */
   public fun passwordPolicy(passwordPolicy: CfnUserPool.PasswordPolicyProperty) {
     cdkBuilder.passwordPolicy(passwordPolicy)
   }

@@ -17,38 +17,67 @@ public class CfnVirtualNodeClientPolicyTlsPropertyDsl {
 
   private val _ports: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param certificate A reference to an object that represents a client's TLS certificate.
+   */
   public fun certificate(certificate: IResolvable) {
     cdkBuilder.certificate(certificate)
   }
 
+  /**
+   * @param certificate A reference to an object that represents a client's TLS certificate.
+   */
   public fun certificate(certificate: CfnVirtualNode.ClientTlsCertificateProperty) {
     cdkBuilder.certificate(certificate)
   }
 
+  /**
+   * @param enforce Whether the policy is enforced.
+   * The default is `True` , if a value isn't specified.
+   */
   public fun enforce(enforce: Boolean) {
     cdkBuilder.enforce(enforce)
   }
 
+  /**
+   * @param enforce Whether the policy is enforced.
+   * The default is `True` , if a value isn't specified.
+   */
   public fun enforce(enforce: IResolvable) {
     cdkBuilder.enforce(enforce)
   }
 
+  /**
+   * @param ports One or more ports that the policy is enforced for.
+   */
   public fun ports(vararg ports: Number) {
     _ports.addAll(listOf(*ports))
   }
 
+  /**
+   * @param ports One or more ports that the policy is enforced for.
+   */
   public fun ports(ports: Collection<Number>) {
     _ports.addAll(ports)
   }
 
+  /**
+   * @param ports One or more ports that the policy is enforced for.
+   */
   public fun ports(ports: IResolvable) {
     cdkBuilder.ports(ports)
   }
 
+  /**
+   * @param validation A reference to an object that represents a TLS validation context. 
+   */
   public fun validation(validation: IResolvable) {
     cdkBuilder.validation(validation)
   }
 
+  /**
+   * @param validation A reference to an object that represents a TLS validation context. 
+   */
   public fun validation(validation: CfnVirtualNode.TlsValidationContextProperty) {
     cdkBuilder.validation(validation)
   }

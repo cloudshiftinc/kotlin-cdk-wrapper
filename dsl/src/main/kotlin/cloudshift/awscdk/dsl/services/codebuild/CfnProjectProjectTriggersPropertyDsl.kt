@@ -18,26 +18,54 @@ public class CfnProjectProjectTriggersPropertyDsl {
 
   private val _filterGroups: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param buildType Specifies the type of build this webhook will trigger. Allowed values are:.
+   * * **BUILD** - A single build
+   * * **BUILD_BATCH** - A batch build
+   */
   public fun buildType(buildType: String) {
     cdkBuilder.buildType(buildType)
   }
 
+  /**
+   * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
+   * events are triggered.
+   * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
+   */
   public fun filterGroups(vararg filterGroups: Any) {
     _filterGroups.addAll(listOf(*filterGroups))
   }
 
+  /**
+   * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
+   * events are triggered.
+   * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
+   */
   public fun filterGroups(filterGroups: Collection<Any>) {
     _filterGroups.addAll(filterGroups)
   }
 
+  /**
+   * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
+   * events are triggered.
+   * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
+   */
   public fun filterGroups(filterGroups: IResolvable) {
     cdkBuilder.filterGroups(filterGroups)
   }
 
+  /**
+   * @param webhook Specifies whether or not to begin automatically rebuilding the source code every
+   * time a code change is pushed to the repository.
+   */
   public fun webhook(webhook: Boolean) {
     cdkBuilder.webhook(webhook)
   }
 
+  /**
+   * @param webhook Specifies whether or not to begin automatically rebuilding the source code every
+   * time a code change is pushed to the repository.
+   */
   public fun webhook(webhook: IResolvable) {
     cdkBuilder.webhook(webhook)
   }

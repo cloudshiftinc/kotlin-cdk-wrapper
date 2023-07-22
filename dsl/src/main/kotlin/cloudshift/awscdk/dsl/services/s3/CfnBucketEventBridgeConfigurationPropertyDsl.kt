@@ -12,10 +12,16 @@ public class CfnBucketEventBridgeConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.EventBridgeConfigurationProperty.Builder =
       CfnBucket.EventBridgeConfigurationProperty.builder()
 
+  /**
+   * @param eventBridgeEnabled Enables delivery of events to Amazon EventBridge. 
+   */
   public fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
     cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
   }
 
+  /**
+   * @param eventBridgeEnabled Enables delivery of events to Amazon EventBridge. 
+   */
   public fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
     cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
   }

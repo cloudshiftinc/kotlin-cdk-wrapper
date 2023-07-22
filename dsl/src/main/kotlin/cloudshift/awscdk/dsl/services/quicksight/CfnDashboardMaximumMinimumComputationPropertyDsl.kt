@@ -12,30 +12,53 @@ public class CfnDashboardMaximumMinimumComputationPropertyDsl {
   private val cdkBuilder: CfnDashboard.MaximumMinimumComputationProperty.Builder =
       CfnDashboard.MaximumMinimumComputationProperty.builder()
 
+  /**
+   * @param computationId The ID for a computation. 
+   */
   public fun computationId(computationId: String) {
     cdkBuilder.computationId(computationId)
   }
 
+  /**
+   * @param name The name of a computation.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param time The time field that is used in a computation. 
+   */
   public fun time(time: IResolvable) {
     cdkBuilder.time(time)
   }
 
+  /**
+   * @param time The time field that is used in a computation. 
+   */
   public fun time(time: CfnDashboard.DimensionFieldProperty) {
     cdkBuilder.time(time)
   }
 
+  /**
+   * @param type The type of computation. Choose one of the following options:. 
+   * * MAXIMUM: A maximum computation.
+   * * MINIMUM: A minimum computation.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param value The value field that is used in a computation.
+   */
   public fun `value`(`value`: IResolvable) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param value The value field that is used in a computation.
+   */
   public fun `value`(`value`: CfnDashboard.MeasureFieldProperty) {
     cdkBuilder.`value`(`value`)
   }

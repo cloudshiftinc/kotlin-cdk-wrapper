@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.ecs.RuntimePlatform
 public class RuntimePlatformDsl {
   private val cdkBuilder: RuntimePlatform.Builder = RuntimePlatform.builder()
 
+  /**
+   * @param cpuArchitecture The CpuArchitecture for Fargate Runtime Platform.
+   */
   public fun cpuArchitecture(cpuArchitecture: CpuArchitecture) {
     cdkBuilder.cpuArchitecture(cpuArchitecture)
   }
 
+  /**
+   * @param operatingSystemFamily The operating system for Fargate Runtime Platform.
+   */
   public fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily) {
     cdkBuilder.operatingSystemFamily(operatingSystemFamily)
   }

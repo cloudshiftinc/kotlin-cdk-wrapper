@@ -12,10 +12,16 @@ public class CfnStateMachineTracingConfigurationPropertyDsl {
   private val cdkBuilder: CfnStateMachine.TracingConfigurationProperty.Builder =
       CfnStateMachine.TracingConfigurationProperty.builder()
 
+  /**
+   * @param enabled the value to be set.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled the value to be set.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

@@ -11,6 +11,9 @@ public class CfnEndpointSecondaryPropertyDsl {
   private val cdkBuilder: CfnEndpoint.SecondaryProperty.Builder =
       CfnEndpoint.SecondaryProperty.builder()
 
+  /**
+   * @param route Defines the secondary Region. 
+   */
   public fun route(route: String) {
     cdkBuilder.route(route)
   }

@@ -10,19 +10,31 @@ import software.amazon.awscdk.services.databrew.CfnRecipe
 public class CfnRecipeInputPropertyDsl {
   private val cdkBuilder: CfnRecipe.InputProperty.Builder = CfnRecipe.InputProperty.builder()
 
+  /**
+   * @param dataCatalogInputDefinition the value to be set.
+   */
   public fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
     cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition)
   }
 
+  /**
+   * @param dataCatalogInputDefinition the value to be set.
+   */
   public
       fun dataCatalogInputDefinition(dataCatalogInputDefinition: CfnRecipe.DataCatalogInputDefinitionProperty) {
     cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition)
   }
 
+  /**
+   * @param s3InputDefinition the value to be set.
+   */
   public fun s3InputDefinition(s3InputDefinition: IResolvable) {
     cdkBuilder.s3InputDefinition(s3InputDefinition)
   }
 
+  /**
+   * @param s3InputDefinition the value to be set.
+   */
   public fun s3InputDefinition(s3InputDefinition: CfnRecipe.S3LocationProperty) {
     cdkBuilder.s3InputDefinition(s3InputDefinition)
   }

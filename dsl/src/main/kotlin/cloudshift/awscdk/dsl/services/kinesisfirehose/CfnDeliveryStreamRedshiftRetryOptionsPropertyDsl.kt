@@ -11,6 +11,13 @@ public class CfnDeliveryStreamRedshiftRetryOptionsPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.RedshiftRetryOptionsProperty.Builder =
       CfnDeliveryStream.RedshiftRetryOptionsProperty.builder()
 
+  /**
+   * @param durationInSeconds The length of time during which Kinesis Data Firehose retries delivery
+   * after a failure, starting from the initial request and including the first attempt.
+   * The default value is 3600 seconds (60 minutes). Kinesis Data Firehose does not retry if the
+   * value of `DurationInSeconds` is 0 (zero) or if the first delivery attempt takes longer than the
+   * current value.
+   */
   public fun durationInSeconds(durationInSeconds: Number) {
     cdkBuilder.durationInSeconds(durationInSeconds)
   }

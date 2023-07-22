@@ -14,20 +14,40 @@ public class CfnChannelChannelStoragePropertyDsl {
   private val cdkBuilder: CfnChannel.ChannelStorageProperty.Builder =
       CfnChannel.ChannelStorageProperty.builder()
 
+  /**
+   * @param customerManagedS3 Used to store channel data in an S3 bucket that you manage.
+   * If customer managed storage is selected, the `retentionPeriod` parameter is ignored. You can't
+   * change the choice of S3 storage after the data store is created.
+   */
   public fun customerManagedS3(customerManagedS3: IResolvable) {
     cdkBuilder.customerManagedS3(customerManagedS3)
   }
 
+  /**
+   * @param customerManagedS3 Used to store channel data in an S3 bucket that you manage.
+   * If customer managed storage is selected, the `retentionPeriod` parameter is ignored. You can't
+   * change the choice of S3 storage after the data store is created.
+   */
   public fun customerManagedS3(customerManagedS3: CfnChannel.CustomerManagedS3Property) {
     cdkBuilder.customerManagedS3(customerManagedS3)
   }
 
-  public fun serviceManagedS3(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param serviceManagedS3 Used to store channel data in an S3 bucket managed by AWS IoT Analytics
+   * .
+   * You can't change the choice of S3 storage after the data store is created.
+   */
+  public fun serviceManagedS3(serviceManagedS3: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(serviceManagedS3)
     cdkBuilder.serviceManagedS3(builder.map)
   }
 
+  /**
+   * @param serviceManagedS3 Used to store channel data in an S3 bucket managed by AWS IoT Analytics
+   * .
+   * You can't change the choice of S3 storage after the data store is created.
+   */
   public fun serviceManagedS3(serviceManagedS3: Any) {
     cdkBuilder.serviceManagedS3(serviceManagedS3)
   }

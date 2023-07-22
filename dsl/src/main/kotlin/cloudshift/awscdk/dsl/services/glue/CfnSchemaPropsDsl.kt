@@ -19,46 +19,89 @@ public class CfnSchemaPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param checkpointVersion Specify the `VersionNumber` or the `IsLatest` for setting the
+   * checkpoint for the schema.
+   * This is only required for updating a checkpoint.
+   */
   public fun checkpointVersion(checkpointVersion: IResolvable) {
     cdkBuilder.checkpointVersion(checkpointVersion)
   }
 
+  /**
+   * @param checkpointVersion Specify the `VersionNumber` or the `IsLatest` for setting the
+   * checkpoint for the schema.
+   * This is only required for updating a checkpoint.
+   */
   public fun checkpointVersion(checkpointVersion: CfnSchema.SchemaVersionProperty) {
     cdkBuilder.checkpointVersion(checkpointVersion)
   }
 
+  /**
+   * @param compatibility The compatibility mode of the schema. 
+   */
   public fun compatibility(compatibility: String) {
     cdkBuilder.compatibility(compatibility)
   }
 
+  /**
+   * @param dataFormat The data format of the schema definition. 
+   * Currently only `AVRO` is supported.
+   */
   public fun dataFormat(dataFormat: String) {
     cdkBuilder.dataFormat(dataFormat)
   }
 
+  /**
+   * @param description A description of the schema if specified when created.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name Name of the schema to be created of max length of 255, and may only contain
+   * letters, numbers, hyphen, underscore, dollar sign, or hash mark. 
+   * No whitespace.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param registry The registry where a schema is stored.
+   */
   public fun registry(registry: IResolvable) {
     cdkBuilder.registry(registry)
   }
 
+  /**
+   * @param registry The registry where a schema is stored.
+   */
   public fun registry(registry: CfnSchema.RegistryProperty) {
     cdkBuilder.registry(registry)
   }
 
+  /**
+   * @param schemaDefinition The schema definition using the `DataFormat` setting for `SchemaName` .
+   * 
+   */
   public fun schemaDefinition(schemaDefinition: String) {
     cdkBuilder.schemaDefinition(schemaDefinition)
   }
 
+  /**
+   * @param tags AWS tags that contain a key value pair and may be searched by console, command
+   * line, or API.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags AWS tags that contain a key value pair and may be searched by console, command
+   * line, or API.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -14,20 +14,36 @@ public class CfnStorageLensEncryptionPropertyDsl {
   private val cdkBuilder: CfnStorageLens.EncryptionProperty.Builder =
       CfnStorageLens.EncryptionProperty.builder()
 
+  /**
+   * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the S3
+   * Storage Lens metrics export file.
+   */
   public fun ssekms(ssekms: IResolvable) {
     cdkBuilder.ssekms(ssekms)
   }
 
+  /**
+   * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the S3
+   * Storage Lens metrics export file.
+   */
   public fun ssekms(ssekms: CfnStorageLens.SSEKMSProperty) {
     cdkBuilder.ssekms(ssekms)
   }
 
-  public fun sses3(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param sses3 Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3 Storage
+   * Lens metrics export file.
+   */
+  public fun sses3(sses3: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(sses3)
     cdkBuilder.sses3(builder.map)
   }
 
+  /**
+   * @param sses3 Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3 Storage
+   * Lens metrics export file.
+   */
   public fun sses3(sses3: Any) {
     cdkBuilder.sses3(sses3)
   }

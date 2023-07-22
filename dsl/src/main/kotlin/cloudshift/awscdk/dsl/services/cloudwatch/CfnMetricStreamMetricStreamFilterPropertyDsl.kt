@@ -15,14 +15,37 @@ public class CfnMetricStreamMetricStreamFilterPropertyDsl {
 
   private val _metricNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param metricNames The names of the metrics to either include or exclude from the metric
+   * stream.
+   * If you omit this parameter, all metrics in the namespace are included or excluded, depending on
+   * whether this filter is specified as an exclude filter or an include filter.
+   *
+   * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126). Each
+   * metric name must contain at least one non-whitespace character.
+   */
   public fun metricNames(vararg metricNames: String) {
     _metricNames.addAll(listOf(*metricNames))
   }
 
+  /**
+   * @param metricNames The names of the metrics to either include or exclude from the metric
+   * stream.
+   * If you omit this parameter, all metrics in the namespace are included or excluded, depending on
+   * whether this filter is specified as an exclude filter or an include filter.
+   *
+   * Each metric name can contain only ASCII printable characters (ASCII range 32 through 126). Each
+   * metric name must contain at least one non-whitespace character.
+   */
   public fun metricNames(metricNames: Collection<String>) {
     _metricNames.addAll(metricNames)
   }
 
+  /**
+   * @param namespace The name of the metric namespace in the filter. 
+   * The namespace can contain only ASCII printable characters (ASCII range 32 through 126). It must
+   * contain at least one non-whitespace character.
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }

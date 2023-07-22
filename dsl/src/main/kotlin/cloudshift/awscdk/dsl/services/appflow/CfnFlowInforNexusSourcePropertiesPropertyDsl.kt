@@ -11,6 +11,9 @@ public class CfnFlowInforNexusSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.InforNexusSourcePropertiesProperty.Builder =
       CfnFlow.InforNexusSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Infor Nexus flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

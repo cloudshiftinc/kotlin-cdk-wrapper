@@ -27,54 +27,137 @@ public class CfnVPCConnectionDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The availability status of the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-availabilitystatus)
+   * @param availabilityStatus The availability status of the VPC connection. 
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }
 
+  /**
+   * The AWS account ID of the account where you want to create a new VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-awsaccountid)
+   * @param awsAccountId The AWS account ID of the account where you want to create a new VPC
+   * connection. 
+   */
   public fun awsAccountId(awsAccountId: String) {
     cdkBuilder.awsAccountId(awsAccountId)
   }
 
+  /**
+   * A list of IP addresses of DNS resolver endpoints for the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-dnsresolvers)
+   * @param dnsResolvers A list of IP addresses of DNS resolver endpoints for the VPC connection. 
+   */
   public fun dnsResolvers(vararg dnsResolvers: String) {
     _dnsResolvers.addAll(listOf(*dnsResolvers))
   }
 
+  /**
+   * A list of IP addresses of DNS resolver endpoints for the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-dnsresolvers)
+   * @param dnsResolvers A list of IP addresses of DNS resolver endpoints for the VPC connection. 
+   */
   public fun dnsResolvers(dnsResolvers: Collection<String>) {
     _dnsResolvers.addAll(dnsResolvers)
   }
 
+  /**
+   * The display name for the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-name)
+   * @param name The display name for the VPC connection. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The ARN of the IAM role associated with the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-rolearn)
+   * @param roleArn The ARN of the IAM role associated with the VPC connection. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * The Amazon EC2 security group IDs associated with the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-securitygroupids)
+   * @param securityGroupIds The Amazon EC2 security group IDs associated with the VPC connection. 
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * The Amazon EC2 security group IDs associated with the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-securitygroupids)
+   * @param securityGroupIds The Amazon EC2 security group IDs associated with the VPC connection. 
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * A list of subnet IDs for the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-subnetids)
+   * @param subnetIds A list of subnet IDs for the VPC connection. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * A list of subnet IDs for the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-subnetids)
+   * @param subnetIds A list of subnet IDs for the VPC connection. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * A map of the key-value pairs for the resource tag or tags assigned to the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-tags)
+   * @param tags A map of the key-value pairs for the resource tag or tags assigned to the VPC
+   * connection. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A map of the key-value pairs for the resource tag or tags assigned to the VPC connection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-tags)
+   * @param tags A map of the key-value pairs for the resource tag or tags assigned to the VPC
+   * connection. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ID of the VPC connection that you're creating.
+   *
+   * This ID is a unique identifier for each AWS Region in an AWS account.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html#cfn-quicksight-vpcconnection-vpcconnectionid)
+   * @param vpcConnectionId The ID of the VPC connection that you're creating. 
+   */
   public fun vpcConnectionId(vpcConnectionId: String) {
     cdkBuilder.vpcConnectionId(vpcConnectionId)
   }

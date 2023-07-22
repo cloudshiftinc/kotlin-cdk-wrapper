@@ -11,10 +11,22 @@ public class CfnFeatureGroupS3StorageConfigPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.S3StorageConfigProperty.Builder =
       CfnFeatureGroup.S3StorageConfigProperty.builder()
 
+  /**
+   * @param kmsKeyId The AWS Key Management Service (KMS) key ARN of the key used to encrypt any
+   * objects written into the `OfflineStore` S3 location.
+   * The IAM `roleARN` that is passed as a parameter to `CreateFeatureGroup` must have below
+   * permissions to the `KmsKeyId` :
+   *
+   * * `"kms:GenerateDataKey"`
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param s3Uri The S3 URI, or location in Amazon S3, of `OfflineStore` . 
+   * S3 URIs have a format similar to the following: `s3://example-bucket/prefix/` .
+   */
   public fun s3Uri(s3Uri: String) {
     cdkBuilder.s3Uri(s3Uri)
   }

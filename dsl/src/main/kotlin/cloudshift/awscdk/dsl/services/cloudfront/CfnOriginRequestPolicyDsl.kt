@@ -16,10 +16,22 @@ public class CfnOriginRequestPolicyDsl(
   private val cdkBuilder: CfnOriginRequestPolicy.Builder =
       CfnOriginRequestPolicy.Builder.create(scope, id)
 
+  /**
+   * The origin request policy configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originrequestpolicy.html#cfn-cloudfront-originrequestpolicy-originrequestpolicyconfig)
+   * @param originRequestPolicyConfig The origin request policy configuration. 
+   */
   public fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
     cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)
   }
 
+  /**
+   * The origin request policy configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originrequestpolicy.html#cfn-cloudfront-originrequestpolicy-originrequestpolicyconfig)
+   * @param originRequestPolicyConfig The origin request policy configuration. 
+   */
   public
       fun originRequestPolicyConfig(originRequestPolicyConfig: CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty) {
     cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)

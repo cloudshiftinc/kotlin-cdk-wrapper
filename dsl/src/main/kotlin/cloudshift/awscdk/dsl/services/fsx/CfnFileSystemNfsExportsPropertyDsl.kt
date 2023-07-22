@@ -16,14 +16,26 @@ public class CfnFileSystemNfsExportsPropertyDsl {
 
   private val _clientConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param clientConfigurations A list of configuration objects that contain the client and options
+   * for mounting the OpenZFS file system.
+   */
   public fun clientConfigurations(vararg clientConfigurations: Any) {
     _clientConfigurations.addAll(listOf(*clientConfigurations))
   }
 
+  /**
+   * @param clientConfigurations A list of configuration objects that contain the client and options
+   * for mounting the OpenZFS file system.
+   */
   public fun clientConfigurations(clientConfigurations: Collection<Any>) {
     _clientConfigurations.addAll(clientConfigurations)
   }
 
+  /**
+   * @param clientConfigurations A list of configuration objects that contain the client and options
+   * for mounting the OpenZFS file system.
+   */
   public fun clientConfigurations(clientConfigurations: IResolvable) {
     cdkBuilder.clientConfigurations(clientConfigurations)
   }

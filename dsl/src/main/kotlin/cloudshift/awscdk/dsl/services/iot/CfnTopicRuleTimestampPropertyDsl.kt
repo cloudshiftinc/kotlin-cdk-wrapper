@@ -11,10 +11,17 @@ public class CfnTopicRuleTimestampPropertyDsl {
   private val cdkBuilder: CfnTopicRule.TimestampProperty.Builder =
       CfnTopicRule.TimestampProperty.builder()
 
+  /**
+   * @param unit The precision of the timestamp value that results from the expression described in
+   * `value` .
+   */
   public fun unit(unit: String) {
     cdkBuilder.unit(unit)
   }
 
+  /**
+   * @param value An expression that returns a long epoch time value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

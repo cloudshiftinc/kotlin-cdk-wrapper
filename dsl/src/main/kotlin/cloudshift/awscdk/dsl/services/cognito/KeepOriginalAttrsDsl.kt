@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.cognito.KeepOriginalAttrs
 public class KeepOriginalAttrsDsl {
   private val cdkBuilder: KeepOriginalAttrs.Builder = KeepOriginalAttrs.builder()
 
+  /**
+   * @param email Whether the email address of the user should remain the original value until the
+   * new email address is verified.
+   */
   public fun email(email: Boolean) {
     cdkBuilder.email(email)
   }
 
+  /**
+   * @param phone Whether the phone number of the user should remain the original value until the
+   * new phone number is verified.
+   */
   public fun phone(phone: Boolean) {
     cdkBuilder.phone(phone)
   }

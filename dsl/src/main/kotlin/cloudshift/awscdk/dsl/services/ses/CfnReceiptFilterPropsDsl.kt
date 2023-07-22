@@ -11,10 +11,18 @@ import software.amazon.awscdk.services.ses.CfnReceiptFilterProps
 public class CfnReceiptFilterPropsDsl {
   private val cdkBuilder: CfnReceiptFilterProps.Builder = CfnReceiptFilterProps.builder()
 
+  /**
+   * @param filter A data structure that describes the IP address filter to create, which consists
+   * of a name, an IP address range, and whether to allow or block mail from it. 
+   */
   public fun filter(filter: IResolvable) {
     cdkBuilder.filter(filter)
   }
 
+  /**
+   * @param filter A data structure that describes the IP address filter to create, which consists
+   * of a name, an IP address range, and whether to allow or block mail from it. 
+   */
   public fun filter(filter: CfnReceiptFilter.FilterProperty) {
     cdkBuilder.filter(filter)
   }

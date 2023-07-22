@@ -11,6 +11,12 @@ public class CfnDatasetSchedulePropertyDsl {
   private val cdkBuilder: CfnDataset.ScheduleProperty.Builder =
       CfnDataset.ScheduleProperty.builder()
 
+  /**
+   * @param scheduleExpression The expression that defines when to trigger an update. 
+   * For more information, see [Schedule Expressions for
+   * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) in the
+   * Amazon CloudWatch documentation.
+   */
   public fun scheduleExpression(scheduleExpression: String) {
     cdkBuilder.scheduleExpression(scheduleExpression)
   }

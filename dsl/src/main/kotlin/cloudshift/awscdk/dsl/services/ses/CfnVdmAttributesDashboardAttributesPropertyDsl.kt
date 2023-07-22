@@ -11,6 +11,12 @@ public class CfnVdmAttributesDashboardAttributesPropertyDsl {
   private val cdkBuilder: CfnVdmAttributes.DashboardAttributesProperty.Builder =
       CfnVdmAttributes.DashboardAttributesProperty.builder()
 
+  /**
+   * @param engagementMetrics Specifies the status of your VDM engagement metrics collection. Can be
+   * one of the following:.
+   * * `ENABLED` – Amazon SES enables engagement metrics for your account.
+   * * `DISABLED` – Amazon SES disables engagement metrics for your account.
+   */
   public fun engagementMetrics(engagementMetrics: String) {
     cdkBuilder.engagementMetrics(engagementMetrics)
   }

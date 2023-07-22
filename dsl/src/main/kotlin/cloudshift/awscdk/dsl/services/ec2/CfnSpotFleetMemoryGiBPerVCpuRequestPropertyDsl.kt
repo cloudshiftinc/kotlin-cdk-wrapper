@@ -11,10 +11,18 @@ public class CfnSpotFleetMemoryGiBPerVCpuRequestPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.MemoryGiBPerVCpuRequestProperty.Builder =
       CfnSpotFleet.MemoryGiBPerVCpuRequestProperty.builder()
 
+  /**
+   * @param max The maximum amount of memory per vCPU, in GiB.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum amount of memory per vCPU, in GiB.
+   * To specify no minimum limit, omit this parameter.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

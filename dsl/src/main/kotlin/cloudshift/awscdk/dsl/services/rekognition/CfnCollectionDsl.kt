@@ -21,14 +21,32 @@ public class CfnCollectionDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * ID for the collection that you are creating.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-collection.html#cfn-rekognition-collection-collectionid)
+   * @param collectionId ID for the collection that you are creating. 
+   */
   public fun collectionId(collectionId: String) {
     cdkBuilder.collectionId(collectionId)
   }
 
+  /**
+   * A set of tags (key-value pairs) that you want to attach to the collection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-collection.html#cfn-rekognition-collection-tags)
+   * @param tags A set of tags (key-value pairs) that you want to attach to the collection. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A set of tags (key-value pairs) that you want to attach to the collection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-collection.html#cfn-rekognition-collection-tags)
+   * @param tags A set of tags (key-value pairs) that you want to attach to the collection. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

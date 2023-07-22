@@ -20,18 +20,42 @@ public class CfnCidrCollectionDsl(
 
   private val _locations: MutableList<Any> = mutableListOf()
 
+  /**
+   * A complex type that contains information about the list of CIDR locations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+   * @param locations A complex type that contains information about the list of CIDR locations. 
+   */
   public fun locations(vararg locations: Any) {
     _locations.addAll(listOf(*locations))
   }
 
+  /**
+   * A complex type that contains information about the list of CIDR locations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+   * @param locations A complex type that contains information about the list of CIDR locations. 
+   */
   public fun locations(locations: Collection<Any>) {
     _locations.addAll(locations)
   }
 
+  /**
+   * A complex type that contains information about the list of CIDR locations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+   * @param locations A complex type that contains information about the list of CIDR locations. 
+   */
   public fun locations(locations: IResolvable) {
     cdkBuilder.locations(locations)
   }
 
+  /**
+   * The name of a CIDR collection.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-name)
+   * @param name The name of a CIDR collection. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

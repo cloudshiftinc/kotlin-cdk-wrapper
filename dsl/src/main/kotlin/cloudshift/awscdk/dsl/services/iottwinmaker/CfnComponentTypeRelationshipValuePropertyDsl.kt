@@ -11,10 +11,16 @@ public class CfnComponentTypeRelationshipValuePropertyDsl {
   private val cdkBuilder: CfnComponentType.RelationshipValueProperty.Builder =
       CfnComponentType.RelationshipValueProperty.builder()
 
+  /**
+   * @param targetComponentName The target component name.
+   */
   public fun targetComponentName(targetComponentName: String) {
     cdkBuilder.targetComponentName(targetComponentName)
   }
 
+  /**
+   * @param targetEntityId The target entity Id.
+   */
   public fun targetEntityId(targetEntityId: String) {
     cdkBuilder.targetEntityId(targetEntityId)
   }

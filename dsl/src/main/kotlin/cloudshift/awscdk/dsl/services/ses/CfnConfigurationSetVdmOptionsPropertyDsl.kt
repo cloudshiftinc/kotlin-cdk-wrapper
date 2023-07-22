@@ -11,18 +11,30 @@ public class CfnConfigurationSetVdmOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.VdmOptionsProperty.Builder =
       CfnConfigurationSet.VdmOptionsProperty.builder()
 
+  /**
+   * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+   */
   public fun dashboardOptions(dashboardOptions: IResolvable) {
     cdkBuilder.dashboardOptions(dashboardOptions)
   }
 
+  /**
+   * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+   */
   public fun dashboardOptions(dashboardOptions: CfnConfigurationSet.DashboardOptionsProperty) {
     cdkBuilder.dashboardOptions(dashboardOptions)
   }
 
+  /**
+   * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+   */
   public fun guardianOptions(guardianOptions: IResolvable) {
     cdkBuilder.guardianOptions(guardianOptions)
   }
 
+  /**
+   * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+   */
   public fun guardianOptions(guardianOptions: CfnConfigurationSet.GuardianOptionsProperty) {
     cdkBuilder.guardianOptions(guardianOptions)
   }

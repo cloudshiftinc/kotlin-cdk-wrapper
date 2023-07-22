@@ -11,14 +11,23 @@ public class CfnUserPoolUserToGroupAttachmentPropsDsl {
   private val cdkBuilder: CfnUserPoolUserToGroupAttachmentProps.Builder =
       CfnUserPoolUserToGroupAttachmentProps.builder()
 
+  /**
+   * @param groupName The group name. 
+   */
   public fun groupName(groupName: String) {
     cdkBuilder.groupName(groupName)
   }
 
+  /**
+   * @param userPoolId The user pool ID for the user pool. 
+   */
   public fun userPoolId(userPoolId: String) {
     cdkBuilder.userPoolId(userPoolId)
   }
 
+  /**
+   * @param username The username for the user. 
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

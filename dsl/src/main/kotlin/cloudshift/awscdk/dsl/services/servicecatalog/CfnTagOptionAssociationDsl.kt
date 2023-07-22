@@ -15,10 +15,22 @@ public class CfnTagOptionAssociationDsl(
   private val cdkBuilder: CfnTagOptionAssociation.Builder =
       CfnTagOptionAssociation.Builder.create(scope, id)
 
+  /**
+   * The resource identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-resourceid)
+   * @param resourceId The resource identifier. 
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }
 
+  /**
+   * The TagOption identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-tagoptionid)
+   * @param tagOptionId The TagOption identifier. 
+   */
   public fun tagOptionId(tagOptionId: String) {
     cdkBuilder.tagOptionId(tagOptionId)
   }

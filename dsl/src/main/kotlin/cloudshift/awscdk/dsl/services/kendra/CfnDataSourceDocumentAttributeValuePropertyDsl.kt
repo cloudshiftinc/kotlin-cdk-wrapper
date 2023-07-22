@@ -16,22 +16,42 @@ public class CfnDataSourceDocumentAttributeValuePropertyDsl {
 
   private val _stringListValue: MutableList<String> = mutableListOf()
 
+  /**
+   * @param dateValue A date expressed as an ISO 8601 string.
+   * It is important for the time zone to be included in the ISO 8601 date-time format. For example,
+   * 2012-03-25T12:30:10+01:00 is the ISO 8601 date-time format for March 25th 2012 at 12:30PM (plus 10
+   * seconds) in Central European Time.
+   */
   public fun dateValue(dateValue: String) {
     cdkBuilder.dateValue(dateValue)
   }
 
+  /**
+   * @param longValue A long integer value.
+   */
   public fun longValue(longValue: Number) {
     cdkBuilder.longValue(longValue)
   }
 
+  /**
+   * @param stringListValue A list of strings.
+   * The default maximum length or number of strings is 10.
+   */
   public fun stringListValue(vararg stringListValue: String) {
     _stringListValue.addAll(listOf(*stringListValue))
   }
 
+  /**
+   * @param stringListValue A list of strings.
+   * The default maximum length or number of strings is 10.
+   */
   public fun stringListValue(stringListValue: Collection<String>) {
     _stringListValue.addAll(stringListValue)
   }
 
+  /**
+   * @param stringValue A string, such as "department".
+   */
   public fun stringValue(stringValue: String) {
     cdkBuilder.stringValue(stringValue)
   }

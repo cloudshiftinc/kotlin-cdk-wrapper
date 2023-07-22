@@ -11,6 +11,10 @@ public class CfnVersionProvisionedConcurrencyConfigurationPropertyDsl {
   private val cdkBuilder: CfnVersion.ProvisionedConcurrencyConfigurationProperty.Builder =
       CfnVersion.ProvisionedConcurrencyConfigurationProperty.builder()
 
+  /**
+   * @param provisionedConcurrentExecutions The amount of provisioned concurrency to allocate for
+   * the version. 
+   */
   public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
     cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
   }

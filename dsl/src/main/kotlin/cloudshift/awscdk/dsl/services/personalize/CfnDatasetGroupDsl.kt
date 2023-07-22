@@ -14,18 +14,44 @@ public class CfnDatasetGroupDsl(
 ) {
   private val cdkBuilder: CfnDatasetGroup.Builder = CfnDatasetGroup.Builder.create(scope, id)
 
+  /**
+   * The domain of a Domain dataset group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html#cfn-personalize-datasetgroup-domain)
+   * @param domain The domain of a Domain dataset group. 
+   */
   public fun domain(domain: String) {
     cdkBuilder.domain(domain)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the
+   * datasets.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html#cfn-personalize-datasetgroup-kmskeyarn)
+   * @param kmsKeyArn The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key
+   * used to encrypt the datasets. 
+   */
   public fun kmsKeyArn(kmsKeyArn: String) {
     cdkBuilder.kmsKeyArn(kmsKeyArn)
   }
 
+  /**
+   * The name of the dataset group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html#cfn-personalize-datasetgroup-name)
+   * @param name The name of the dataset group. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The ARN of the IAM role that has permissions to create the dataset group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html#cfn-personalize-datasetgroup-rolearn)
+   * @param roleArn The ARN of the IAM role that has permissions to create the dataset group. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

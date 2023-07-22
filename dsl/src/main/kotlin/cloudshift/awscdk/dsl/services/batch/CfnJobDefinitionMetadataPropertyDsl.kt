@@ -13,12 +13,18 @@ public class CfnJobDefinitionMetadataPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.MetadataProperty.Builder =
       CfnJobDefinition.MetadataProperty.builder()
 
-  public fun labels(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param labels the value to be set.
+   */
+  public fun labels(labels: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(labels)
     cdkBuilder.labels(builder.map)
   }
 
+  /**
+   * @param labels the value to be set.
+   */
   public fun labels(labels: Any) {
     cdkBuilder.labels(labels)
   }

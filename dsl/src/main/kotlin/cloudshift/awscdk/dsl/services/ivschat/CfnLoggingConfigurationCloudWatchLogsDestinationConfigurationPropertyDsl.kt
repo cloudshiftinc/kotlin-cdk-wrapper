@@ -12,6 +12,10 @@ public class CfnLoggingConfigurationCloudWatchLogsDestinationConfigurationProper
       CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty.Builder =
       CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty.builder()
 
+  /**
+   * @param logGroupName Name of the Amazon Cloudwatch Logs destination where chat activity will be
+   * logged. 
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }

@@ -15,14 +15,31 @@ public class CfnGroupConfigurationParameterPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param name The name of the group configuration parameter.
+   * For the list of parameters that you can use with each configuration item type, see [Supported
+   * resource types and
+   * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+   * in the *AWS Resource Groups User Guide* .
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param values The value or values to be used for the specified parameter.
+   * For the list of values you can use with each parameter, see [Supported resource types and
+   * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types) .
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The value or values to be used for the specified parameter.
+   * For the list of values you can use with each parameter, see [Supported resource types and
+   * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types) .
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

@@ -11,10 +11,16 @@ public class CfnFunctionCloudWatchLogsEventPropertyDsl {
   private val cdkBuilder: CfnFunction.CloudWatchLogsEventProperty.Builder =
       CfnFunction.CloudWatchLogsEventProperty.builder()
 
+  /**
+   * @param filterPattern the value to be set. 
+   */
   public fun filterPattern(filterPattern: String) {
     cdkBuilder.filterPattern(filterPattern)
   }
 
+  /**
+   * @param logGroupName the value to be set. 
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }

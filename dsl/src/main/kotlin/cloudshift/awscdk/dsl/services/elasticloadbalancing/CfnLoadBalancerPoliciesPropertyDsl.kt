@@ -21,38 +21,69 @@ public class CfnLoadBalancerPoliciesPropertyDsl {
 
   private val _loadBalancerPorts: MutableList<String> = mutableListOf()
 
+  /**
+   * @param attributes The policy attributes. 
+   */
   public fun attributes(vararg attributes: Any) {
     _attributes.addAll(listOf(*attributes))
   }
 
+  /**
+   * @param attributes The policy attributes. 
+   */
   public fun attributes(attributes: Collection<Any>) {
     _attributes.addAll(attributes)
   }
 
+  /**
+   * @param attributes The policy attributes. 
+   */
   public fun attributes(attributes: IResolvable) {
     cdkBuilder.attributes(attributes)
   }
 
+  /**
+   * @param instancePorts The instance ports for the policy.
+   * Required only for some policy types.
+   */
   public fun instancePorts(vararg instancePorts: String) {
     _instancePorts.addAll(listOf(*instancePorts))
   }
 
+  /**
+   * @param instancePorts The instance ports for the policy.
+   * Required only for some policy types.
+   */
   public fun instancePorts(instancePorts: Collection<String>) {
     _instancePorts.addAll(instancePorts)
   }
 
+  /**
+   * @param loadBalancerPorts The load balancer ports for the policy.
+   * Required only for some policy types.
+   */
   public fun loadBalancerPorts(vararg loadBalancerPorts: String) {
     _loadBalancerPorts.addAll(listOf(*loadBalancerPorts))
   }
 
+  /**
+   * @param loadBalancerPorts The load balancer ports for the policy.
+   * Required only for some policy types.
+   */
   public fun loadBalancerPorts(loadBalancerPorts: Collection<String>) {
     _loadBalancerPorts.addAll(loadBalancerPorts)
   }
 
+  /**
+   * @param policyName The name of the policy. 
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }
 
+  /**
+   * @param policyType The name of the policy type. 
+   */
   public fun policyType(policyType: String) {
     cdkBuilder.policyType(policyType)
   }

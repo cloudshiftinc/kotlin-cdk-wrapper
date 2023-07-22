@@ -11,6 +11,9 @@ public class CfnDataSourceVpcConnectionPropertiesPropertyDsl {
   private val cdkBuilder: CfnDataSource.VpcConnectionPropertiesProperty.Builder =
       CfnDataSource.VpcConnectionPropertiesProperty.builder()
 
+  /**
+   * @param vpcConnectionArn The Amazon Resource Name (ARN) for the VPC connection. 
+   */
   public fun vpcConnectionArn(vpcConnectionArn: String) {
     cdkBuilder.vpcConnectionArn(vpcConnectionArn)
   }

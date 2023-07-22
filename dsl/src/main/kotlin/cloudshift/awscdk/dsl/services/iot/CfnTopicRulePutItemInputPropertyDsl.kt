@@ -11,6 +11,9 @@ public class CfnTopicRulePutItemInputPropertyDsl {
   private val cdkBuilder: CfnTopicRule.PutItemInputProperty.Builder =
       CfnTopicRule.PutItemInputProperty.builder()
 
+  /**
+   * @param tableName The table where the message data will be written. 
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }

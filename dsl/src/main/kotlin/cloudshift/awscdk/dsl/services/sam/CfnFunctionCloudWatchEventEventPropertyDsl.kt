@@ -14,20 +14,32 @@ public class CfnFunctionCloudWatchEventEventPropertyDsl {
   private val cdkBuilder: CfnFunction.CloudWatchEventEventProperty.Builder =
       CfnFunction.CloudWatchEventEventProperty.builder()
 
+  /**
+   * @param input the value to be set.
+   */
   public fun input(input: String) {
     cdkBuilder.input(input)
   }
 
+  /**
+   * @param inputPath the value to be set.
+   */
   public fun inputPath(inputPath: String) {
     cdkBuilder.inputPath(inputPath)
   }
 
-  public fun pattern(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param pattern the value to be set. 
+   */
+  public fun pattern(pattern: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(pattern)
     cdkBuilder.pattern(builder.map)
   }
 
+  /**
+   * @param pattern the value to be set. 
+   */
   public fun pattern(pattern: Any) {
     cdkBuilder.pattern(pattern)
   }

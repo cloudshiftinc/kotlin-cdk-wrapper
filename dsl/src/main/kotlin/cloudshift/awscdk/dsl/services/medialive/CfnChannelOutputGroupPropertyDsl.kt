@@ -17,26 +17,46 @@ public class CfnChannelOutputGroupPropertyDsl {
 
   private val _outputs: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param name A custom output group name that you can optionally define.
+   * Only letters, numbers, and the underscore character are allowed. The maximum length is 32
+   * characters.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param outputGroupSettings The settings associated with the output group.
+   */
   public fun outputGroupSettings(outputGroupSettings: IResolvable) {
     cdkBuilder.outputGroupSettings(outputGroupSettings)
   }
 
+  /**
+   * @param outputGroupSettings The settings associated with the output group.
+   */
   public fun outputGroupSettings(outputGroupSettings: CfnChannel.OutputGroupSettingsProperty) {
     cdkBuilder.outputGroupSettings(outputGroupSettings)
   }
 
+  /**
+   * @param outputs The settings for the outputs in the output group.
+   */
   public fun outputs(vararg outputs: Any) {
     _outputs.addAll(listOf(*outputs))
   }
 
+  /**
+   * @param outputs The settings for the outputs in the output group.
+   */
   public fun outputs(outputs: Collection<Any>) {
     _outputs.addAll(outputs)
   }
 
+  /**
+   * @param outputs The settings for the outputs in the output group.
+   */
   public fun outputs(outputs: IResolvable) {
     cdkBuilder.outputs(outputs)
   }

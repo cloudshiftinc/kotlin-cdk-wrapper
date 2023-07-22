@@ -18,26 +18,44 @@ public class NetworkLoadBalancerPropsDsl {
 
   private val _listeners: MutableList<NetworkListenerProps> = mutableListOf()
 
+  /**
+   * @param domainName The domain name for the service, e.g. "api.example.com.".
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
+   */
   public fun domainZone(domainZone: IHostedZone) {
     cdkBuilder.domainZone(domainZone)
   }
 
+  /**
+   * @param listeners Listeners (at least one listener) attached to this load balancer. 
+   */
   public fun listeners(listeners: NetworkListenerPropsDsl.() -> Unit) {
     _listeners.add(NetworkListenerPropsDsl().apply(listeners).build())
   }
 
+  /**
+   * @param listeners Listeners (at least one listener) attached to this load balancer. 
+   */
   public fun listeners(listeners: Collection<NetworkListenerProps>) {
     _listeners.addAll(listeners)
   }
 
+  /**
+   * @param name Name of the load balancer. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param publicLoadBalancer Determines whether the Load Balancer will be internet-facing.
+   */
   public fun publicLoadBalancer(publicLoadBalancer: Boolean) {
     cdkBuilder.publicLoadBalancer(publicLoadBalancer)
   }

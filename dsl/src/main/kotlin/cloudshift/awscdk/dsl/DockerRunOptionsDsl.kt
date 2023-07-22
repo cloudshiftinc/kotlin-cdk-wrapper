@@ -23,58 +23,105 @@ public class DockerRunOptionsDsl {
 
   private val _volumesFrom: MutableList<String> = mutableListOf()
 
+  /**
+   * @param command The command to run in the container.
+   */
   public fun command(vararg command: String) {
     _command.addAll(listOf(*command))
   }
 
+  /**
+   * @param command The command to run in the container.
+   */
   public fun command(command: Collection<String>) {
     _command.addAll(command)
   }
 
+  /**
+   * @param entrypoint The entrypoint to run in the container.
+   */
   public fun entrypoint(vararg entrypoint: String) {
     _entrypoint.addAll(listOf(*entrypoint))
   }
 
+  /**
+   * @param entrypoint The entrypoint to run in the container.
+   */
   public fun entrypoint(entrypoint: Collection<String>) {
     _entrypoint.addAll(entrypoint)
   }
 
+  /**
+   * @param environment The environment variables to pass to the container.
+   */
   public fun environment(environment: Map<String, String>) {
     cdkBuilder.environment(environment)
   }
 
+  /**
+   * @param network Docker [Networking
+   * options](https://docs.docker.com/engine/reference/commandline/run/#connect-a-container-to-a-network---network).
+   */
   public fun network(network: String) {
     cdkBuilder.network(network)
   }
 
+  /**
+   * @param platform Set platform if server is multi-platform capable. *Requires Docker Engine API
+   * v1.38+*.
+   * Example value: `linux/amd64`
+   */
   public fun platform(platform: String) {
     cdkBuilder.platform(platform)
   }
 
+  /**
+   * @param securityOpt [Security
+   * configuration](https://docs.docker.com/engine/reference/run/#security-configuration) when running
+   * the docker container.
+   */
   public fun securityOpt(securityOpt: String) {
     cdkBuilder.securityOpt(securityOpt)
   }
 
+  /**
+   * @param user The user to use when running the container.
+   */
   public fun user(user: String) {
     cdkBuilder.user(user)
   }
 
+  /**
+   * @param volumes Docker volumes to mount.
+   */
   public fun volumes(volumes: DockerVolumeDsl.() -> Unit) {
     _volumes.add(DockerVolumeDsl().apply(volumes).build())
   }
 
+  /**
+   * @param volumes Docker volumes to mount.
+   */
   public fun volumes(volumes: Collection<DockerVolume>) {
     _volumes.addAll(volumes)
   }
 
+  /**
+   * @param volumesFrom Where to mount the specified volumes from.
+   */
   public fun volumesFrom(vararg volumesFrom: String) {
     _volumesFrom.addAll(listOf(*volumesFrom))
   }
 
+  /**
+   * @param volumesFrom Where to mount the specified volumes from.
+   */
   public fun volumesFrom(volumesFrom: Collection<String>) {
     _volumesFrom.addAll(volumesFrom)
   }
 
+  /**
+   * @param workingDirectory Working directory inside the container.
+   */
   public fun workingDirectory(workingDirectory: String) {
     cdkBuilder.workingDirectory(workingDirectory)
   }

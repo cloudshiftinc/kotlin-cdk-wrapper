@@ -27,50 +27,129 @@ public class CfnDecoderManifestDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * (Optional) A brief description of the decoder manifest.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-description)
+   * @param description (Optional) A brief description of the decoder manifest. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of a vehicle model (model manifest) associated with the decoder
+   * manifest.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-modelmanifestarn)
+   * @param modelManifestArn The Amazon Resource Name (ARN) of a vehicle model (model manifest)
+   * associated with the decoder manifest. 
+   */
   public fun modelManifestArn(modelManifestArn: String) {
     cdkBuilder.modelManifestArn(modelManifestArn)
   }
 
+  /**
+   * The name of the decoder manifest.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-name)
+   * @param name The name of the decoder manifest. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * (Optional) A list of information about available network interfaces.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
+   * @param networkInterfaces (Optional) A list of information about available network interfaces. 
+   */
   public fun networkInterfaces(vararg networkInterfaces: Any) {
     _networkInterfaces.addAll(listOf(*networkInterfaces))
   }
 
+  /**
+   * (Optional) A list of information about available network interfaces.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
+   * @param networkInterfaces (Optional) A list of information about available network interfaces. 
+   */
   public fun networkInterfaces(networkInterfaces: Collection<Any>) {
     _networkInterfaces.addAll(networkInterfaces)
   }
 
+  /**
+   * (Optional) A list of information about available network interfaces.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
+   * @param networkInterfaces (Optional) A list of information about available network interfaces. 
+   */
   public fun networkInterfaces(networkInterfaces: IResolvable) {
     cdkBuilder.networkInterfaces(networkInterfaces)
   }
 
+  /**
+   * (Optional) A list of information about signal decoders.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
+   * @param signalDecoders (Optional) A list of information about signal decoders. 
+   */
   public fun signalDecoders(vararg signalDecoders: Any) {
     _signalDecoders.addAll(listOf(*signalDecoders))
   }
 
+  /**
+   * (Optional) A list of information about signal decoders.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
+   * @param signalDecoders (Optional) A list of information about signal decoders. 
+   */
   public fun signalDecoders(signalDecoders: Collection<Any>) {
     _signalDecoders.addAll(signalDecoders)
   }
 
+  /**
+   * (Optional) A list of information about signal decoders.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
+   * @param signalDecoders (Optional) A list of information about signal decoders. 
+   */
   public fun signalDecoders(signalDecoders: IResolvable) {
     cdkBuilder.signalDecoders(signalDecoders)
   }
 
+  /**
+   * (Optional) The state of the decoder manifest.
+   *
+   * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
+   * `DRAFT` , you can edit the decoder manifest.
+   *
+   * Default: - "DRAFT"
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-status)
+   * @param status (Optional) The state of the decoder manifest. 
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
+  /**
+   * (Optional) Metadata that can be used to manage the decoder manifest.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
+   * @param tags (Optional) Metadata that can be used to manage the decoder manifest. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * (Optional) Metadata that can be used to manage the decoder manifest.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
+   * @param tags (Optional) Metadata that can be used to manage the decoder manifest. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

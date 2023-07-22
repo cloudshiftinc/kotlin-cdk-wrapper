@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.QueryStringConditi
 public class QueryStringConditionDsl {
   private val cdkBuilder: QueryStringCondition.Builder = QueryStringCondition.builder()
 
+  /**
+   * @param key The query string key for the condition.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The query string value for the condition. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

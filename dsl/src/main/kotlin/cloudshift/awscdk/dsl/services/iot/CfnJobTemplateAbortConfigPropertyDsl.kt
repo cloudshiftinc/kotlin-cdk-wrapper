@@ -16,14 +16,23 @@ public class CfnJobTemplateAbortConfigPropertyDsl {
 
   private val _criteriaList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param criteriaList The list of criteria that determine when and how to abort the job. 
+   */
   public fun criteriaList(vararg criteriaList: Any) {
     _criteriaList.addAll(listOf(*criteriaList))
   }
 
+  /**
+   * @param criteriaList The list of criteria that determine when and how to abort the job. 
+   */
   public fun criteriaList(criteriaList: Collection<Any>) {
     _criteriaList.addAll(criteriaList)
   }
 
+  /**
+   * @param criteriaList The list of criteria that determine when and how to abort the job. 
+   */
   public fun criteriaList(criteriaList: IResolvable) {
     cdkBuilder.criteriaList(criteriaList)
   }

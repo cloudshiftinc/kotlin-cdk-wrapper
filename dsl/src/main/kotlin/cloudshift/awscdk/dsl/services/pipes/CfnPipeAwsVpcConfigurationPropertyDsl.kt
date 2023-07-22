@@ -17,22 +17,45 @@ public class CfnPipeAwsVpcConfigurationPropertyDsl {
 
   private val _subnets: MutableList<String> = mutableListOf()
 
+  /**
+   * @param assignPublicIp Specifies whether the task's elastic network interface receives a public
+   * IP address.
+   * You can specify `ENABLED` only when `LaunchType` in `EcsParameters` is set to `FARGATE` .
+   */
   public fun assignPublicIp(assignPublicIp: String) {
     cdkBuilder.assignPublicIp(assignPublicIp)
   }
 
+  /**
+   * @param securityGroups Specifies the security groups associated with the task.
+   * These security groups must all be in the same VPC. You can specify as many as five security
+   * groups. If you do not specify a security group, the default security group for the VPC is used.
+   */
   public fun securityGroups(vararg securityGroups: String) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups Specifies the security groups associated with the task.
+   * These security groups must all be in the same VPC. You can specify as many as five security
+   * groups. If you do not specify a security group, the default security group for the VPC is used.
+   */
   public fun securityGroups(securityGroups: Collection<String>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  /**
+   * @param subnets Specifies the subnets associated with the task. 
+   * These subnets must all be in the same VPC. You can specify as many as 16 subnets.
+   */
   public fun subnets(vararg subnets: String) {
     _subnets.addAll(listOf(*subnets))
   }
 
+  /**
+   * @param subnets Specifies the subnets associated with the task. 
+   * These subnets must all be in the same VPC. You can specify as many as 16 subnets.
+   */
   public fun subnets(subnets: Collection<String>) {
     _subnets.addAll(subnets)
   }

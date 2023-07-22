@@ -11,6 +11,9 @@ public class CfnModelPackageModelInputPropertyDsl {
   private val cdkBuilder: CfnModelPackage.ModelInputProperty.Builder =
       CfnModelPackage.ModelInputProperty.builder()
 
+  /**
+   * @param dataInputConfig The input configuration object for the model. 
+   */
   public fun dataInputConfig(dataInputConfig: String) {
     cdkBuilder.dataInputConfig(dataInputConfig)
   }

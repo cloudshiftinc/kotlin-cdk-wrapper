@@ -12,10 +12,22 @@ public class CfnConfigurationSetReputationOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.ReputationOptionsProperty.Builder =
       CfnConfigurationSet.ReputationOptionsProperty.builder()
 
+  /**
+   * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+   * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+   * If the value is `true` , reputation metrics are published. If the value is `false` , reputation
+   * metrics are not published. The default value is `false` .
+   */
   public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
     cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
   }
 
+  /**
+   * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+   * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+   * If the value is `true` , reputation metrics are published. If the value is `false` , reputation
+   * metrics are not published. The default value is `false` .
+   */
   public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
     cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
   }

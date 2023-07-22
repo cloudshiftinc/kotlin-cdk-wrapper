@@ -11,10 +11,16 @@ public class CfnSegmentBehaviorPropertyDsl {
   private val cdkBuilder: CfnSegment.BehaviorProperty.Builder =
       CfnSegment.BehaviorProperty.builder()
 
+  /**
+   * @param recency Specifies how recently segment members were active.
+   */
   public fun recency(recency: IResolvable) {
     cdkBuilder.recency(recency)
   }
 
+  /**
+   * @param recency Specifies how recently segment members were active.
+   */
   public fun recency(recency: CfnSegment.RecencyProperty) {
     cdkBuilder.recency(recency)
   }

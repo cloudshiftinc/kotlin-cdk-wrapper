@@ -19,19 +19,33 @@ public class
 
   private val _eventFilter: MutableList<String> = mutableListOf()
 
+  /**
+   * @param actions The compromised credentials risk configuration actions. 
+   */
   public fun actions(actions: IResolvable) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * @param actions The compromised credentials risk configuration actions. 
+   */
   public
       fun actions(actions: CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * @param eventFilter Perform the action for these events.
+   * The default is to perform all events if no event filter is specified.
+   */
   public fun eventFilter(vararg eventFilter: String) {
     _eventFilter.addAll(listOf(*eventFilter))
   }
 
+  /**
+   * @param eventFilter Perform the action for these events.
+   * The default is to perform all events if no event filter is specified.
+   */
   public fun eventFilter(eventFilter: Collection<String>) {
     _eventFilter.addAll(eventFilter)
   }

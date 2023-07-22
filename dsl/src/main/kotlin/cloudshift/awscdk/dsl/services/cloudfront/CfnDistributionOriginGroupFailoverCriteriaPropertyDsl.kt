@@ -11,10 +11,18 @@ public class CfnDistributionOriginGroupFailoverCriteriaPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginGroupFailoverCriteriaProperty.Builder =
       CfnDistribution.OriginGroupFailoverCriteriaProperty.builder()
 
+  /**
+   * @param statusCodes The status codes that, when returned from the primary origin, will trigger
+   * CloudFront to failover to the second origin. 
+   */
   public fun statusCodes(statusCodes: IResolvable) {
     cdkBuilder.statusCodes(statusCodes)
   }
 
+  /**
+   * @param statusCodes The status codes that, when returned from the primary origin, will trigger
+   * CloudFront to failover to the second origin. 
+   */
   public fun statusCodes(statusCodes: CfnDistribution.StatusCodesProperty) {
     cdkBuilder.statusCodes(statusCodes)
   }

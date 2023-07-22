@@ -11,6 +11,9 @@ public class CfnPipelineParallelismConfigurationPropertyDsl {
   private val cdkBuilder: CfnPipeline.ParallelismConfigurationProperty.Builder =
       CfnPipeline.ParallelismConfigurationProperty.builder()
 
+  /**
+   * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
+   */
   public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
     cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
   }

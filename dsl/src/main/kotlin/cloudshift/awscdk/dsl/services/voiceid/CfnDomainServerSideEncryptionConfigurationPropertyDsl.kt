@@ -11,6 +11,10 @@ public class CfnDomainServerSideEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDomain.ServerSideEncryptionConfigurationProperty.Builder =
       CfnDomain.ServerSideEncryptionConfigurationProperty.builder()
 
+  /**
+   * @param kmsKeyId The identifier of the KMS key to use to encrypt data stored by Voice ID. 
+   * Voice ID doesn't support asymmetric customer managed keys .
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }

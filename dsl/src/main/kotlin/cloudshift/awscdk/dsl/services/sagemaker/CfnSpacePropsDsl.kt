@@ -19,26 +19,50 @@ public class CfnSpacePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param domainId The ID of the associated Domain. 
+   */
   public fun domainId(domainId: String) {
     cdkBuilder.domainId(domainId)
   }
 
+  /**
+   * @param spaceName The name of the space. 
+   */
   public fun spaceName(spaceName: String) {
     cdkBuilder.spaceName(spaceName)
   }
 
+  /**
+   * @param spaceSettings A collection of space settings.
+   */
   public fun spaceSettings(spaceSettings: IResolvable) {
     cdkBuilder.spaceSettings(spaceSettings)
   }
 
+  /**
+   * @param spaceSettings A collection of space settings.
+   */
   public fun spaceSettings(spaceSettings: CfnSpace.SpaceSettingsProperty) {
     cdkBuilder.spaceSettings(spaceSettings)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

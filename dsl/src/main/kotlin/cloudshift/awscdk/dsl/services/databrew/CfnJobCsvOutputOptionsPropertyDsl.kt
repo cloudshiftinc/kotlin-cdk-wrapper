@@ -11,6 +11,9 @@ public class CfnJobCsvOutputOptionsPropertyDsl {
   private val cdkBuilder: CfnJob.CsvOutputOptionsProperty.Builder =
       CfnJob.CsvOutputOptionsProperty.builder()
 
+  /**
+   * @param delimiter A single character that specifies the delimiter used to create CSV job output.
+   */
   public fun delimiter(delimiter: String) {
     cdkBuilder.delimiter(delimiter)
   }

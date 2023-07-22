@@ -11,10 +11,16 @@ public class CfnServiceActionDefinitionParameterPropertyDsl {
   private val cdkBuilder: CfnServiceAction.DefinitionParameterProperty.Builder =
       CfnServiceAction.DefinitionParameterProperty.builder()
 
+  /**
+   * @param key The parameter key. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The value of the parameter. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

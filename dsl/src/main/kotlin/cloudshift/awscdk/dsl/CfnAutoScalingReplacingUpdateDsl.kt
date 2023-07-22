@@ -11,6 +11,9 @@ public class CfnAutoScalingReplacingUpdateDsl {
   private val cdkBuilder: CfnAutoScalingReplacingUpdate.Builder =
       CfnAutoScalingReplacingUpdate.builder()
 
+  /**
+   * @param willReplace the value to be set.
+   */
   public fun willReplace(willReplace: Boolean) {
     cdkBuilder.willReplace(willReplace)
   }

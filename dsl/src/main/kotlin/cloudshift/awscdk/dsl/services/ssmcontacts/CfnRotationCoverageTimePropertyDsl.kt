@@ -11,10 +11,16 @@ public class CfnRotationCoverageTimePropertyDsl {
   private val cdkBuilder: CfnRotation.CoverageTimeProperty.Builder =
       CfnRotation.CoverageTimeProperty.builder()
 
+  /**
+   * @param endTime Information about when an on-call rotation shift ends. 
+   */
   public fun endTime(endTime: String) {
     cdkBuilder.endTime(endTime)
   }
 
+  /**
+   * @param startTime Information about when an on-call rotation shift begins. 
+   */
   public fun startTime(startTime: String) {
     cdkBuilder.startTime(startTime)
   }

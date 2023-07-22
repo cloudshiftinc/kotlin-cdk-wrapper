@@ -20,30 +20,78 @@ public class CfnServiceActionDsl(
 
   private val _definition: MutableList<Any> = mutableListOf()
 
+  /**
+   * The language code.
+   *
+   * * `en` - English (default)
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-acceptlanguage)
+   * @param acceptLanguage The language code. 
+   */
   public fun acceptLanguage(acceptLanguage: String) {
     cdkBuilder.acceptLanguage(acceptLanguage)
   }
 
+  /**
+   * A map that defines the self-service action.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definition)
+   * @param definition A map that defines the self-service action. 
+   */
   public fun definition(vararg definition: Any) {
     _definition.addAll(listOf(*definition))
   }
 
+  /**
+   * A map that defines the self-service action.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definition)
+   * @param definition A map that defines the self-service action. 
+   */
   public fun definition(definition: Collection<Any>) {
     _definition.addAll(definition)
   }
 
+  /**
+   * A map that defines the self-service action.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definition)
+   * @param definition A map that defines the self-service action. 
+   */
   public fun definition(definition: IResolvable) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * The self-service action definition type.
+   *
+   * For example, `SSM_AUTOMATION` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definitiontype)
+   * @param definitionType The self-service action definition type. 
+   */
   public fun definitionType(definitionType: String) {
     cdkBuilder.definitionType(definitionType)
   }
 
+  /**
+   * The self-service action description.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-description)
+   * @param description The self-service action description. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The self-service action name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-name)
+   * @param name The self-service action name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

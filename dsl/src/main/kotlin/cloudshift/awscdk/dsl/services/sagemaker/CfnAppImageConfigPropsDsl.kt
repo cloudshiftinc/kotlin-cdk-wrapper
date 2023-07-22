@@ -19,23 +19,47 @@ public class CfnAppImageConfigPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param appImageConfigName The name of the AppImageConfig. 
+   * Must be unique to your account.
+   */
   public fun appImageConfigName(appImageConfigName: String) {
     cdkBuilder.appImageConfigName(appImageConfigName)
   }
 
+  /**
+   * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
+   * SageMaker image.
+   */
   public fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
     cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig)
   }
 
+  /**
+   * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
+   * SageMaker image.
+   */
   public
       fun kernelGatewayImageConfig(kernelGatewayImageConfig: CfnAppImageConfig.KernelGatewayImageConfigProperty) {
     cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

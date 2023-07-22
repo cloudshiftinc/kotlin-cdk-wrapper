@@ -14,10 +14,32 @@ public class CfnSecurityKeyDsl(
 ) {
   private val cdkBuilder: CfnSecurityKey.Builder = CfnSecurityKey.Builder.create(scope, id)
 
+  /**
+   * The Amazon Resource Name (ARN) of the instance.
+   *
+   * *Minimum* : `1`
+   *
+   * *Maximum* : `100`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securitykey.html#cfn-connect-securitykey-instanceid)
+   * @param instanceId The Amazon Resource Name (ARN) of the instance. 
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }
 
+  /**
+   * A valid security key in PEM format. For example:.
+   *
+   * `"-----BEGIN PUBLIC KEY-----\ [a lot of characters] ----END PUBLIC KEY-----"`
+   *
+   * *Minimum* : `1`
+   *
+   * *Maximum* : `1024`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securitykey.html#cfn-connect-securitykey-key)
+   * @param key A valid security key in PEM format. For example:. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }

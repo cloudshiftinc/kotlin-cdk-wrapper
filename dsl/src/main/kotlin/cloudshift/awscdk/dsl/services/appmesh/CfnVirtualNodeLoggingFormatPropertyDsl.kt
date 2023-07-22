@@ -17,18 +17,30 @@ public class CfnVirtualNodeLoggingFormatPropertyDsl {
 
   private val _json: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param json The logging format for JSON.
+   */
   public fun json(vararg json: Any) {
     _json.addAll(listOf(*json))
   }
 
+  /**
+   * @param json The logging format for JSON.
+   */
   public fun json(json: Collection<Any>) {
     _json.addAll(json)
   }
 
+  /**
+   * @param json The logging format for JSON.
+   */
   public fun json(json: IResolvable) {
     cdkBuilder.json(json)
   }
 
+  /**
+   * @param text The logging format for text.
+   */
   public fun text(text: String) {
     cdkBuilder.text(text)
   }

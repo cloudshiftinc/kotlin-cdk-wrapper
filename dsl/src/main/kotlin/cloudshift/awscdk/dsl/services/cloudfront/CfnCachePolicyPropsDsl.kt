@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps
 public class CfnCachePolicyPropsDsl {
   private val cdkBuilder: CfnCachePolicyProps.Builder = CfnCachePolicyProps.builder()
 
+  /**
+   * @param cachePolicyConfig The cache policy configuration. 
+   */
   public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
     cdkBuilder.cachePolicyConfig(cachePolicyConfig)
   }
 
+  /**
+   * @param cachePolicyConfig The cache policy configuration. 
+   */
   public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
     cdkBuilder.cachePolicyConfig(cachePolicyConfig)
   }

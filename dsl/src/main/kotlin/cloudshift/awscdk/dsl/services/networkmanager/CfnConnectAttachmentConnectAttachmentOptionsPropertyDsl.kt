@@ -11,6 +11,9 @@ public class CfnConnectAttachmentConnectAttachmentOptionsPropertyDsl {
   private val cdkBuilder: CfnConnectAttachment.ConnectAttachmentOptionsProperty.Builder =
       CfnConnectAttachment.ConnectAttachmentOptionsProperty.builder()
 
+  /**
+   * @param protocol The protocol used for the attachment connection.
+   */
   public fun protocol(protocol: String) {
     cdkBuilder.protocol(protocol)
   }

@@ -11,10 +11,16 @@ public class CfnTransitGatewayRouteTablePropagationPropsDsl {
   private val cdkBuilder: CfnTransitGatewayRouteTablePropagationProps.Builder =
       CfnTransitGatewayRouteTablePropagationProps.builder()
 
+  /**
+   * @param transitGatewayAttachmentId The ID of the attachment. 
+   */
   public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
     cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
   }
 
+  /**
+   * @param transitGatewayRouteTableId The ID of the propagation route table. 
+   */
   public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
     cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
   }

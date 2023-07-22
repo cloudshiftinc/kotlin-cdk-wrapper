@@ -12,10 +12,16 @@ public class CfnBudgetsActionActionThresholdPropertyDsl {
   private val cdkBuilder: CfnBudgetsAction.ActionThresholdProperty.Builder =
       CfnBudgetsAction.ActionThresholdProperty.builder()
 
+  /**
+   * @param type The type of threshold for a notification. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param value The threshold of a notification. 
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.eks.LaunchTemplateSpec
 public class LaunchTemplateSpecDsl {
   private val cdkBuilder: LaunchTemplateSpec.Builder = LaunchTemplateSpec.builder()
 
+  /**
+   * @param id The Launch template ID. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param version The launch template version to be used (optional).
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

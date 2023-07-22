@@ -12,22 +12,43 @@ public class CfnDataSourceConnectionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ConnectionConfigurationProperty.Builder =
       CfnDataSource.ConnectionConfigurationProperty.builder()
 
+  /**
+   * @param databaseHost The name of the host for the database. 
+   * Can be either a string (host.subdomain.domain.tld) or an IPv4 or IPv6 address.
+   */
   public fun databaseHost(databaseHost: String) {
     cdkBuilder.databaseHost(databaseHost)
   }
 
+  /**
+   * @param databaseName The name of the database containing the document data. 
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * @param databasePort The port that the database uses for connections. 
+   */
   public fun databasePort(databasePort: Number) {
     cdkBuilder.databasePort(databasePort)
   }
 
+  /**
+   * @param secretArn The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager . 
+   * The credentials should be a user/password pair. For more information, see [Using a Database
+   * Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html) . For more
+   * information about AWS Secrets Manager , see [What Is AWS Secrets
+   * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS
+   * Secrets Manager* user guide.
+   */
   public fun secretArn(secretArn: String) {
     cdkBuilder.secretArn(secretArn)
   }
 
+  /**
+   * @param tableName The name of the table that contains the document data. 
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }

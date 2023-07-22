@@ -11,18 +11,34 @@ import software.amazon.awscdk.services.amazonmq.CfnBroker
 public class CfnBrokerLogListPropertyDsl {
   private val cdkBuilder: CfnBroker.LogListProperty.Builder = CfnBroker.LogListProperty.builder()
 
+  /**
+   * @param audit Enables audit logging.
+   * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+   * apply to RabbitMQ brokers.
+   */
   public fun audit(audit: Boolean) {
     cdkBuilder.audit(audit)
   }
 
+  /**
+   * @param audit Enables audit logging.
+   * Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not
+   * apply to RabbitMQ brokers.
+   */
   public fun audit(audit: IResolvable) {
     cdkBuilder.audit(audit)
   }
 
+  /**
+   * @param general Enables general logging.
+   */
   public fun general(general: Boolean) {
     cdkBuilder.general(general)
   }
 
+  /**
+   * @param general Enables general logging.
+   */
   public fun general(general: IResolvable) {
     cdkBuilder.general(general)
   }

@@ -16,14 +16,26 @@ public class CfnBotSlotDefaultValueSpecificationPropertyDsl {
 
   private val _defaultValueList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param defaultValueList A list of default values. 
+   * Amazon Lex chooses the default value to use in the order that they are presented in the list.
+   */
   public fun defaultValueList(vararg defaultValueList: Any) {
     _defaultValueList.addAll(listOf(*defaultValueList))
   }
 
+  /**
+   * @param defaultValueList A list of default values. 
+   * Amazon Lex chooses the default value to use in the order that they are presented in the list.
+   */
   public fun defaultValueList(defaultValueList: Collection<Any>) {
     _defaultValueList.addAll(defaultValueList)
   }
 
+  /**
+   * @param defaultValueList A list of default values. 
+   * Amazon Lex chooses the default value to use in the order that they are presented in the list.
+   */
   public fun defaultValueList(defaultValueList: IResolvable) {
     cdkBuilder.defaultValueList(defaultValueList)
   }

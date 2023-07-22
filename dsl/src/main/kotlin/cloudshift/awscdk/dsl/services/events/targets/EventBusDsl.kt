@@ -14,10 +14,34 @@ public class EventBusDsl(
 ) {
   private val cdkBuilder: EventBus.Builder = EventBus.Builder.create(eventBus)
 
+  /**
+   * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
+   * dead-letter
+   * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
+   *
+   * The events not successfully delivered are automatically retried for a specified period of time,
+   * depending on the retry policy of the target.
+   * If an event is not delivered before all retry attempts are exhausted, it will be sent to the
+   * dead letter queue.
+   *
+   * Default: - no dead-letter queue
+   *
+   * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
+   * [considerations for using a dead-letter
+   * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
+   * 
+   */
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)
   }
 
+  /**
+   * Role to be used to publish the event.
+   *
+   * Default: a new role is created.
+   *
+   * @param role Role to be used to publish the event. 
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

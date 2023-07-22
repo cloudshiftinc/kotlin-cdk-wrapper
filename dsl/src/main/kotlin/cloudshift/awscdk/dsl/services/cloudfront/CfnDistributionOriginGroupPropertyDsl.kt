@@ -12,23 +12,40 @@ public class CfnDistributionOriginGroupPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginGroupProperty.Builder =
       CfnDistribution.OriginGroupProperty.builder()
 
+  /**
+   * @param failoverCriteria A complex type that contains information about the failover criteria
+   * for an origin group. 
+   */
   public fun failoverCriteria(failoverCriteria: IResolvable) {
     cdkBuilder.failoverCriteria(failoverCriteria)
   }
 
+  /**
+   * @param failoverCriteria A complex type that contains information about the failover criteria
+   * for an origin group. 
+   */
   public
       fun failoverCriteria(failoverCriteria: CfnDistribution.OriginGroupFailoverCriteriaProperty) {
     cdkBuilder.failoverCriteria(failoverCriteria)
   }
 
+  /**
+   * @param id The origin group's ID. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param members A complex type that contains information about the origins in an origin group. 
+   */
   public fun members(members: IResolvable) {
     cdkBuilder.members(members)
   }
 
+  /**
+   * @param members A complex type that contains information about the origins in an origin group. 
+   */
   public fun members(members: CfnDistribution.OriginGroupMembersProperty) {
     cdkBuilder.members(members)
   }

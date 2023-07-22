@@ -14,30 +14,59 @@ public class CfnApiGatewayManagedOverridesRouteSettingsPropertyDsl {
   private val cdkBuilder: CfnApiGatewayManagedOverrides.RouteSettingsProperty.Builder =
       CfnApiGatewayManagedOverrides.RouteSettingsProperty.builder()
 
+  /**
+   * @param dataTraceEnabled Specifies whether ( `true` ) or not ( `false` ) data trace logging is
+   * enabled for this route.
+   * This property affects the log entries pushed to Amazon CloudWatch Logs. Supported only for
+   * WebSocket APIs.
+   */
   public fun dataTraceEnabled(dataTraceEnabled: Boolean) {
     cdkBuilder.dataTraceEnabled(dataTraceEnabled)
   }
 
+  /**
+   * @param dataTraceEnabled Specifies whether ( `true` ) or not ( `false` ) data trace logging is
+   * enabled for this route.
+   * This property affects the log entries pushed to Amazon CloudWatch Logs. Supported only for
+   * WebSocket APIs.
+   */
   public fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
     cdkBuilder.dataTraceEnabled(dataTraceEnabled)
   }
 
+  /**
+   * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
+   */
   public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
     cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
   }
 
+  /**
+   * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
+   */
   public fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
     cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
   }
 
+  /**
+   * @param loggingLevel Specifies the logging level for this route: `INFO` , `ERROR` , or `OFF` .
+   * This property affects the log entries pushed to Amazon CloudWatch Logs. Supported only for
+   * WebSocket APIs.
+   */
   public fun loggingLevel(loggingLevel: String) {
     cdkBuilder.loggingLevel(loggingLevel)
   }
 
+  /**
+   * @param throttlingBurstLimit Specifies the throttling burst limit.
+   */
   public fun throttlingBurstLimit(throttlingBurstLimit: Number) {
     cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
   }
 
+  /**
+   * @param throttlingRateLimit Specifies the throttling rate limit.
+   */
   public fun throttlingRateLimit(throttlingRateLimit: Number) {
     cdkBuilder.throttlingRateLimit(throttlingRateLimit)
   }

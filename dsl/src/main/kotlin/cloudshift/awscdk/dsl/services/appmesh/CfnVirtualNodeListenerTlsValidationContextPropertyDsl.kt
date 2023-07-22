@@ -11,19 +11,35 @@ public class CfnVirtualNodeListenerTlsValidationContextPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ListenerTlsValidationContextProperty.Builder =
       CfnVirtualNode.ListenerTlsValidationContextProperty.builder()
 
+  /**
+   * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+   * listener's Transport Layer Security (TLS) validation context.
+   */
   public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
     cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
   }
 
+  /**
+   * @param subjectAlternativeNames A reference to an object that represents the SANs for a
+   * listener's Transport Layer Security (TLS) validation context.
+   */
   public
       fun subjectAlternativeNames(subjectAlternativeNames: CfnVirtualNode.SubjectAlternativeNamesProperty) {
     cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
   }
 
+  /**
+   * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+   * Transport Layer Security (TLS) certificate. 
+   */
   public fun trust(trust: IResolvable) {
     cdkBuilder.trust(trust)
   }
 
+  /**
+   * @param trust A reference to where to retrieve the trust chain when validating a peer’s
+   * Transport Layer Security (TLS) certificate. 
+   */
   public fun trust(trust: CfnVirtualNode.ListenerTlsValidationContextTrustProperty) {
     cdkBuilder.trust(trust)
   }

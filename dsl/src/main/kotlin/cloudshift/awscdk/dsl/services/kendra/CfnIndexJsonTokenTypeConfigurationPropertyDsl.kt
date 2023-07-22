@@ -11,10 +11,16 @@ public class CfnIndexJsonTokenTypeConfigurationPropertyDsl {
   private val cdkBuilder: CfnIndex.JsonTokenTypeConfigurationProperty.Builder =
       CfnIndex.JsonTokenTypeConfigurationProperty.builder()
 
+  /**
+   * @param groupAttributeField The group attribute field. 
+   */
   public fun groupAttributeField(groupAttributeField: String) {
     cdkBuilder.groupAttributeField(groupAttributeField)
   }
 
+  /**
+   * @param userNameAttributeField The user name attribute field. 
+   */
   public fun userNameAttributeField(userNameAttributeField: String) {
     cdkBuilder.userNameAttributeField(userNameAttributeField)
   }

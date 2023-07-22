@@ -11,6 +11,9 @@ public class CfnCrawlerDynamoDBTargetPropertyDsl {
   private val cdkBuilder: CfnCrawler.DynamoDBTargetProperty.Builder =
       CfnCrawler.DynamoDBTargetProperty.builder()
 
+  /**
+   * @param path The name of the DynamoDB table to crawl.
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }

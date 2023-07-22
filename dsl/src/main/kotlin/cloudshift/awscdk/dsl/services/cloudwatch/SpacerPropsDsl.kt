@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.cloudwatch.SpacerProps
 public class SpacerPropsDsl {
   private val cdkBuilder: SpacerProps.Builder = SpacerProps.builder()
 
+  /**
+   * @param height Height of the spacer.
+   */
   public fun height(height: Number) {
     cdkBuilder.height(height)
   }
 
+  /**
+   * @param width Width of the spacer.
+   */
   public fun width(width: Number) {
     cdkBuilder.width(width)
   }

@@ -16,22 +16,39 @@ public class CfnAppImageConfigKernelGatewayImageConfigPropertyDsl {
 
   private val _kernelSpecs: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param fileSystemConfig The Amazon Elastic File System (EFS) storage configuration for a
+   * SageMaker image.
+   */
   public fun fileSystemConfig(fileSystemConfig: IResolvable) {
     cdkBuilder.fileSystemConfig(fileSystemConfig)
   }
 
+  /**
+   * @param fileSystemConfig The Amazon Elastic File System (EFS) storage configuration for a
+   * SageMaker image.
+   */
   public fun fileSystemConfig(fileSystemConfig: CfnAppImageConfig.FileSystemConfigProperty) {
     cdkBuilder.fileSystemConfig(fileSystemConfig)
   }
 
+  /**
+   * @param kernelSpecs The specification of the Jupyter kernels in the image. 
+   */
   public fun kernelSpecs(vararg kernelSpecs: Any) {
     _kernelSpecs.addAll(listOf(*kernelSpecs))
   }
 
+  /**
+   * @param kernelSpecs The specification of the Jupyter kernels in the image. 
+   */
   public fun kernelSpecs(kernelSpecs: Collection<Any>) {
     _kernelSpecs.addAll(kernelSpecs)
   }
 
+  /**
+   * @param kernelSpecs The specification of the Jupyter kernels in the image. 
+   */
   public fun kernelSpecs(kernelSpecs: IResolvable) {
     cdkBuilder.kernelSpecs(kernelSpecs)
   }

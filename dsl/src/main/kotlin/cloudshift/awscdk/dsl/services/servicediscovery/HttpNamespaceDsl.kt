@@ -14,10 +14,22 @@ public class HttpNamespaceDsl(
 ) {
   private val cdkBuilder: HttpNamespace.Builder = HttpNamespace.Builder.create(scope, id)
 
+  /**
+   * A description of the Namespace.
+   *
+   * Default: none
+   *
+   * @param description A description of the Namespace. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * A name for the Namespace.
+   *
+   * @param name A name for the Namespace. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

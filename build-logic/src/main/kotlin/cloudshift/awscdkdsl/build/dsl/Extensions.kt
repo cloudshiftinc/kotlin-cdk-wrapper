@@ -14,5 +14,6 @@ internal fun dslFunctionSpec(prop: BuilderProperty, block: FunSpec.Builder.() ->
     val builder = FunSpec.builder(prop.name)
     builder.apply(block)
     if (prop.deprecated) builder.addAnnotation(Annotations.Deprecated)
+    prop.comment?.let {  builder.addKdoc("%L", it) }
     return builder.build()
 }

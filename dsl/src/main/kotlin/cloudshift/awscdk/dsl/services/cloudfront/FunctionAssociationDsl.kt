@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.cloudfront.IFunction
 public class FunctionAssociationDsl {
   private val cdkBuilder: FunctionAssociation.Builder = FunctionAssociation.builder()
 
+  /**
+   * @param eventType The type of event which should invoke the function. 
+   */
   public fun eventType(eventType: FunctionEventType) {
     cdkBuilder.eventType(eventType)
   }
 
+  /**
+   * @param function The CloudFront function that will be invoked. 
+   */
   public fun function(function: IFunction) {
     cdkBuilder.function(function)
   }

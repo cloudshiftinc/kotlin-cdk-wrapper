@@ -11,10 +11,16 @@ public class CfnTemplateDefaultSectionBasedLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty.Builder =
       CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty.builder()
 
+  /**
+   * @param canvasSizeOptions Determines the screen canvas size options for a section-based layout. 
+   */
   public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
     cdkBuilder.canvasSizeOptions(canvasSizeOptions)
   }
 
+  /**
+   * @param canvasSizeOptions Determines the screen canvas size options for a section-based layout. 
+   */
   public
       fun canvasSizeOptions(canvasSizeOptions: CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty) {
     cdkBuilder.canvasSizeOptions(canvasSizeOptions)

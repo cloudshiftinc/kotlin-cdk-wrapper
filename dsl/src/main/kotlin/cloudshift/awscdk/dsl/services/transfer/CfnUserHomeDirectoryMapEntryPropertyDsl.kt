@@ -11,10 +11,16 @@ public class CfnUserHomeDirectoryMapEntryPropertyDsl {
   private val cdkBuilder: CfnUser.HomeDirectoryMapEntryProperty.Builder =
       CfnUser.HomeDirectoryMapEntryProperty.builder()
 
+  /**
+   * @param entry Represents an entry for `HomeDirectoryMappings` . 
+   */
   public fun entry(entry: String) {
     cdkBuilder.entry(entry)
   }
 
+  /**
+   * @param target Represents the map target that is used in a `HomeDirectorymapEntry` . 
+   */
   public fun target(target: String) {
     cdkBuilder.target(target)
   }

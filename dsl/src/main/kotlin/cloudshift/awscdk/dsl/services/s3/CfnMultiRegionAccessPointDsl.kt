@@ -21,27 +21,78 @@ public class CfnMultiRegionAccessPointDsl(
 
   private val _regions: MutableList<Any> = mutableListOf()
 
+  /**
+   * The name of the Multi-Region Access Point.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-name)
+   * @param name The name of the Multi-Region Access Point. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The PublicAccessBlock configuration that you want to apply to this Multi-Region Access Point.
+   *
+   * You can enable the configuration options in any combination. For more information about when
+   * Amazon S3 considers an object public, see [The Meaning of
+   * "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status)
+   * in the *Amazon S3 User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-publicaccessblockconfiguration)
+   * @param publicAccessBlockConfiguration The PublicAccessBlock configuration that you want to
+   * apply to this Multi-Region Access Point. 
+   */
   public fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
     cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration)
   }
 
+  /**
+   * The PublicAccessBlock configuration that you want to apply to this Multi-Region Access Point.
+   *
+   * You can enable the configuration options in any combination. For more information about when
+   * Amazon S3 considers an object public, see [The Meaning of
+   * "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status)
+   * in the *Amazon S3 User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-publicaccessblockconfiguration)
+   * @param publicAccessBlockConfiguration The PublicAccessBlock configuration that you want to
+   * apply to this Multi-Region Access Point. 
+   */
   public
       fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty) {
     cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration)
   }
 
+  /**
+   * A collection of the Regions and buckets associated with the Multi-Region Access Point.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-regions)
+   * @param regions A collection of the Regions and buckets associated with the Multi-Region Access
+   * Point. 
+   */
   public fun regions(vararg regions: Any) {
     _regions.addAll(listOf(*regions))
   }
 
+  /**
+   * A collection of the Regions and buckets associated with the Multi-Region Access Point.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-regions)
+   * @param regions A collection of the Regions and buckets associated with the Multi-Region Access
+   * Point. 
+   */
   public fun regions(regions: Collection<Any>) {
     _regions.addAll(regions)
   }
 
+  /**
+   * A collection of the Regions and buckets associated with the Multi-Region Access Point.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-regions)
+   * @param regions A collection of the Regions and buckets associated with the Multi-Region Access
+   * Point. 
+   */
   public fun regions(regions: IResolvable) {
     cdkBuilder.regions(regions)
   }

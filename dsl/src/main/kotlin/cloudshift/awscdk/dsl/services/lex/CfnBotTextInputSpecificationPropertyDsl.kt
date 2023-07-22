@@ -11,6 +11,10 @@ public class CfnBotTextInputSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.TextInputSpecificationProperty.Builder =
       CfnBot.TextInputSpecificationProperty.builder()
 
+  /**
+   * @param startTimeoutMs Time for which a bot waits before re-prompting a customer for text input.
+   * 
+   */
   public fun startTimeoutMs(startTimeoutMs: Number) {
     cdkBuilder.startTimeoutMs(startTimeoutMs)
   }

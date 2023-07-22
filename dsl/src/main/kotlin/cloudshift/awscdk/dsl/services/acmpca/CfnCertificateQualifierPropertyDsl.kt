@@ -11,6 +11,10 @@ public class CfnCertificateQualifierPropertyDsl {
   private val cdkBuilder: CfnCertificate.QualifierProperty.Builder =
       CfnCertificate.QualifierProperty.builder()
 
+  /**
+   * @param cpsUri Contains a pointer to a certification practice statement (CPS) published by the
+   * CA. 
+   */
   public fun cpsUri(cpsUri: String) {
     cdkBuilder.cpsUri(cpsUri)
   }

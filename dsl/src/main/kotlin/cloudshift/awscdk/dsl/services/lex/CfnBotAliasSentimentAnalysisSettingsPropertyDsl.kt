@@ -12,10 +12,18 @@ public class CfnBotAliasSentimentAnalysisSettingsPropertyDsl {
   private val cdkBuilder: CfnBotAlias.SentimentAnalysisSettingsProperty.Builder =
       CfnBotAlias.SentimentAnalysisSettingsProperty.builder()
 
+  /**
+   * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment
+   * of user utterances. 
+   */
   public fun detectSentiment(detectSentiment: Boolean) {
     cdkBuilder.detectSentiment(detectSentiment)
   }
 
+  /**
+   * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment
+   * of user utterances. 
+   */
   public fun detectSentiment(detectSentiment: IResolvable) {
     cdkBuilder.detectSentiment(detectSentiment)
   }

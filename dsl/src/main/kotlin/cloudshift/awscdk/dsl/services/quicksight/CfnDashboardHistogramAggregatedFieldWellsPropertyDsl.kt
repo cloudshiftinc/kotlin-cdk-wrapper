@@ -16,14 +16,26 @@ public class CfnDashboardHistogramAggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param values The value field wells of a histogram.
+   * Values are aggregated by `COUNT` or `DISTINCT_COUNT` .
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The value field wells of a histogram.
+   * Values are aggregated by `COUNT` or `DISTINCT_COUNT` .
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The value field wells of a histogram.
+   * Values are aggregated by `COUNT` or `DISTINCT_COUNT` .
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

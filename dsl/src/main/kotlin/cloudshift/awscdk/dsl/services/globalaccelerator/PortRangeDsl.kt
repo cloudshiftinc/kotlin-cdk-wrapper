@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.globalaccelerator.PortRange
 public class PortRangeDsl {
   private val cdkBuilder: PortRange.Builder = PortRange.builder()
 
+  /**
+   * @param fromPort The first port in the range of ports, inclusive. 
+   */
   public fun fromPort(fromPort: Number) {
     cdkBuilder.fromPort(fromPort)
   }
 
+  /**
+   * @param toPort The last port in the range of ports, inclusive.
+   */
   public fun toPort(toPort: Number) {
     cdkBuilder.toPort(toPort)
   }

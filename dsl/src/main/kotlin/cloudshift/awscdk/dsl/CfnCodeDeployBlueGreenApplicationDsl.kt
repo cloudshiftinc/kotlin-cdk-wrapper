@@ -13,22 +13,34 @@ public class CfnCodeDeployBlueGreenApplicationDsl {
   private val cdkBuilder: CfnCodeDeployBlueGreenApplication.Builder =
       CfnCodeDeployBlueGreenApplication.builder()
 
-  public fun ecsAttributes(block: CfnCodeDeployBlueGreenEcsAttributesDsl.() -> Unit = {}) {
+  /**
+   * @param ecsAttributes The detailed attributes of the deployed target. 
+   */
+  public fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributesDsl.() -> Unit = {}) {
     val builder = CfnCodeDeployBlueGreenEcsAttributesDsl()
-    builder.apply(block)
+    builder.apply(ecsAttributes)
     cdkBuilder.ecsAttributes(builder.build())
   }
 
+  /**
+   * @param ecsAttributes The detailed attributes of the deployed target. 
+   */
   public fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes) {
     cdkBuilder.ecsAttributes(ecsAttributes)
   }
 
-  public fun target(block: CfnCodeDeployBlueGreenApplicationTargetDsl.() -> Unit = {}) {
+  /**
+   * @param target The target that is being deployed. 
+   */
+  public fun target(target: CfnCodeDeployBlueGreenApplicationTargetDsl.() -> Unit = {}) {
     val builder = CfnCodeDeployBlueGreenApplicationTargetDsl()
-    builder.apply(block)
+    builder.apply(target)
     cdkBuilder.target(builder.build())
   }
 
+  /**
+   * @param target The target that is being deployed. 
+   */
   public fun target(target: CfnCodeDeployBlueGreenApplicationTarget) {
     cdkBuilder.target(target)
   }

@@ -11,6 +11,9 @@ public class CfnInstanceLicenseSpecificationPropertyDsl {
   private val cdkBuilder: CfnInstance.LicenseSpecificationProperty.Builder =
       CfnInstance.LicenseSpecificationProperty.builder()
 
+  /**
+   * @param licenseConfigurationArn The Amazon Resource Name (ARN) of the license configuration. 
+   */
   public fun licenseConfigurationArn(licenseConfigurationArn: String) {
     cdkBuilder.licenseConfigurationArn(licenseConfigurationArn)
   }

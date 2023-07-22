@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.codebuild.BucketCacheOptions
 public class BucketCacheOptionsDsl {
   private val cdkBuilder: BucketCacheOptions.Builder = BucketCacheOptions.builder()
 
+  /**
+   * @param prefix The prefix to use to store the cache in the bucket.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

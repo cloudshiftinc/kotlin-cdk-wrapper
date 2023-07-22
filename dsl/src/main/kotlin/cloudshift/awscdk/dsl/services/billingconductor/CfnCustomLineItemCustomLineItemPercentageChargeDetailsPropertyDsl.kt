@@ -16,14 +16,27 @@ public class CfnCustomLineItemCustomLineItemPercentageChargeDetailsPropertyDsl {
 
   private val _childAssociatedResources: MutableList<String> = mutableListOf()
 
+  /**
+   * @param childAssociatedResources A list of resource ARNs to associate to the percentage custom
+   * line item.
+   */
   public fun childAssociatedResources(vararg childAssociatedResources: String) {
     _childAssociatedResources.addAll(listOf(*childAssociatedResources))
   }
 
+  /**
+   * @param childAssociatedResources A list of resource ARNs to associate to the percentage custom
+   * line item.
+   */
   public fun childAssociatedResources(childAssociatedResources: Collection<String>) {
     _childAssociatedResources.addAll(childAssociatedResources)
   }
 
+  /**
+   * @param percentageValue The custom line item's percentage value. 
+   * This will be multiplied against the combined value of its associated resources to determine its
+   * charge value.
+   */
   public fun percentageValue(percentageValue: Number) {
     cdkBuilder.percentageValue(percentageValue)
   }

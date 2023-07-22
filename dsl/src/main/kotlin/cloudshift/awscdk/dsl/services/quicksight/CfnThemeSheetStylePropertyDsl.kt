@@ -11,18 +11,30 @@ public class CfnThemeSheetStylePropertyDsl {
   private val cdkBuilder: CfnTheme.SheetStyleProperty.Builder =
       CfnTheme.SheetStyleProperty.builder()
 
+  /**
+   * @param tile The display options for tiles.
+   */
   public fun tile(tile: IResolvable) {
     cdkBuilder.tile(tile)
   }
 
+  /**
+   * @param tile The display options for tiles.
+   */
   public fun tile(tile: CfnTheme.TileStyleProperty) {
     cdkBuilder.tile(tile)
   }
 
+  /**
+   * @param tileLayout The layout options for tiles.
+   */
   public fun tileLayout(tileLayout: IResolvable) {
     cdkBuilder.tileLayout(tileLayout)
   }
 
+  /**
+   * @param tileLayout The layout options for tiles.
+   */
   public fun tileLayout(tileLayout: CfnTheme.TileLayoutStyleProperty) {
     cdkBuilder.tileLayout(tileLayout)
   }

@@ -13,14 +13,23 @@ public class CfnMonitoringSubscriptionPropsDsl {
   private val cdkBuilder: CfnMonitoringSubscriptionProps.Builder =
       CfnMonitoringSubscriptionProps.builder()
 
+  /**
+   * @param distributionId The ID of the distribution that you are enabling metrics for. 
+   */
   public fun distributionId(distributionId: String) {
     cdkBuilder.distributionId(distributionId)
   }
 
+  /**
+   * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics. 
+   */
   public fun monitoringSubscription(monitoringSubscription: IResolvable) {
     cdkBuilder.monitoringSubscription(monitoringSubscription)
   }
 
+  /**
+   * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics. 
+   */
   public
       fun monitoringSubscription(monitoringSubscription: CfnMonitoringSubscription.MonitoringSubscriptionProperty) {
     cdkBuilder.monitoringSubscription(monitoringSubscription)

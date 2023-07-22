@@ -11,10 +11,18 @@ public class CfnMonitoringSubscriptionMonitoringSubscriptionPropertyDsl {
   private val cdkBuilder: CfnMonitoringSubscription.MonitoringSubscriptionProperty.Builder =
       CfnMonitoringSubscription.MonitoringSubscriptionProperty.builder()
 
+  /**
+   * @param realtimeMetricsSubscriptionConfig A subscription configuration for additional CloudWatch
+   * metrics.
+   */
   public fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: IResolvable) {
     cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig)
   }
 
+  /**
+   * @param realtimeMetricsSubscriptionConfig A subscription configuration for additional CloudWatch
+   * metrics.
+   */
   public
       fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty) {
     cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig)

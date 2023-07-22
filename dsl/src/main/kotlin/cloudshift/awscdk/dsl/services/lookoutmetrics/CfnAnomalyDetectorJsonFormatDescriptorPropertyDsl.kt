@@ -11,10 +11,16 @@ public class CfnAnomalyDetectorJsonFormatDescriptorPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.JsonFormatDescriptorProperty.Builder =
       CfnAnomalyDetector.JsonFormatDescriptorProperty.builder()
 
+  /**
+   * @param charset The character set in which the source JSON file is written.
+   */
   public fun charset(charset: String) {
     cdkBuilder.charset(charset)
   }
 
+  /**
+   * @param fileCompression The level of compression of the source CSV file.
+   */
   public fun fileCompression(fileCompression: String) {
     cdkBuilder.fileCompression(fileCompression)
   }

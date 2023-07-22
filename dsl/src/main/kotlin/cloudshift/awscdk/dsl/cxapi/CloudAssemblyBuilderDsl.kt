@@ -12,10 +12,24 @@ public class CloudAssemblyBuilderDsl(
 ) {
   private val cdkBuilder: CloudAssemblyBuilder.Builder = CloudAssemblyBuilder.Builder.create(outdir)
 
+  /**
+   * Use the given asset output directory.
+   *
+   * Default: - Same as the manifest outdir
+   *
+   * @param assetOutdir Use the given asset output directory. 
+   */
   public fun assetOutdir(assetOutdir: String) {
     cdkBuilder.assetOutdir(assetOutdir)
   }
 
+  /**
+   * If this builder is for a nested assembly, the parent assembly builder.
+   *
+   * Default: - This is a root assembly
+   *
+   * @param parentBuilder If this builder is for a nested assembly, the parent assembly builder. 
+   */
   public fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
     cdkBuilder.parentBuilder(parentBuilder)
   }

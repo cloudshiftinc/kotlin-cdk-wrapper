@@ -11,6 +11,9 @@ public class SqlServerExInstanceEnginePropsDsl {
   private val cdkBuilder: SqlServerExInstanceEngineProps.Builder =
       SqlServerExInstanceEngineProps.builder()
 
+  /**
+   * @param version The exact version of the engine to use. 
+   */
   public fun version(version: SqlServerEngineVersion) {
     cdkBuilder.version(version)
   }

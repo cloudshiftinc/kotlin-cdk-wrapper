@@ -22,22 +22,68 @@ public class CfnTopicRuleDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename)
+   * @param ruleName The name of the rule. 
+   */
   public fun ruleName(ruleName: String) {
     cdkBuilder.ruleName(ruleName)
   }
 
+  /**
+   * Metadata which can be used to manage the topic rule.
+   *
+   *
+   * For URI Request parameters use format: ...key1=value1&amp;key2=value2...
+   *
+   * For the CLI command-line parameter use format: --tags "key1=value1&amp;key2=value2..."
+   *
+   * For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-tags)
+   * @param tags Metadata which can be used to manage the topic rule. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Metadata which can be used to manage the topic rule.
+   *
+   *
+   * For URI Request parameters use format: ...key1=value1&amp;key2=value2...
+   *
+   * For the CLI command-line parameter use format: --tags "key1=value1&amp;key2=value2..."
+   *
+   * For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-tags)
+   * @param tags Metadata which can be used to manage the topic rule. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The rule payload.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-topicrulepayload)
+   * @param topicRulePayload The rule payload. 
+   */
   public fun topicRulePayload(topicRulePayload: IResolvable) {
     cdkBuilder.topicRulePayload(topicRulePayload)
   }
 
+  /**
+   * The rule payload.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-topicrulepayload)
+   * @param topicRulePayload The rule payload. 
+   */
   public fun topicRulePayload(topicRulePayload: CfnTopicRule.TopicRulePayloadProperty) {
     cdkBuilder.topicRulePayload(topicRulePayload)
   }

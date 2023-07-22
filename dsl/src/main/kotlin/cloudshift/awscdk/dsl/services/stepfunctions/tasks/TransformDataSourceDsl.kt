@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource
 public class TransformDataSourceDsl {
   private val cdkBuilder: TransformDataSource.Builder = TransformDataSource.builder()
 
-  public fun s3DataSource(block: TransformS3DataSourceDsl.() -> Unit = {}) {
+  /**
+   * @param s3DataSource S3 location of the input data. 
+   */
+  public fun s3DataSource(s3DataSource: TransformS3DataSourceDsl.() -> Unit = {}) {
     val builder = TransformS3DataSourceDsl()
-    builder.apply(block)
+    builder.apply(s3DataSource)
     cdkBuilder.s3DataSource(builder.build())
   }
 
+  /**
+   * @param s3DataSource S3 location of the input data. 
+   */
   public fun s3DataSource(s3DataSource: TransformS3DataSource) {
     cdkBuilder.s3DataSource(s3DataSource)
   }

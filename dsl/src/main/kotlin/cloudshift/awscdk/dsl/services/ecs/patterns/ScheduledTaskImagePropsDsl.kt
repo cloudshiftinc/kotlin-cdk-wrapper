@@ -18,26 +18,47 @@ public class ScheduledTaskImagePropsDsl {
 
   private val _command: MutableList<String> = mutableListOf()
 
+  /**
+   * @param command The command that is passed to the container.
+   * If you provide a shell command as a single string, you have to quote command-line arguments.
+   */
   public fun command(vararg command: String) {
     _command.addAll(listOf(*command))
   }
 
+  /**
+   * @param command The command that is passed to the container.
+   * If you provide a shell command as a single string, you have to quote command-line arguments.
+   */
   public fun command(command: Collection<String>) {
     _command.addAll(command)
   }
 
+  /**
+   * @param environment The environment variables to pass to the container.
+   */
   public fun environment(environment: Map<String, String>) {
     cdkBuilder.environment(environment)
   }
 
+  /**
+   * @param image The image used to start a container. 
+   * Image or taskDefinition must be specified, but not both.
+   */
   public fun image(image: ContainerImage) {
     cdkBuilder.image(image)
   }
 
+  /**
+   * @param logDriver The log driver to use.
+   */
   public fun logDriver(logDriver: LogDriver) {
     cdkBuilder.logDriver(logDriver)
   }
 
+  /**
+   * @param secrets The secret to expose to the container as an environment variable.
+   */
   public fun secrets(secrets: Map<String, Secret>) {
     cdkBuilder.secrets(secrets)
   }

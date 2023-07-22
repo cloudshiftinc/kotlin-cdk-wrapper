@@ -11,6 +11,9 @@ public class CfnClusterControlPlanePlacementPropertyDsl {
   private val cdkBuilder: CfnCluster.ControlPlanePlacementProperty.Builder =
       CfnCluster.ControlPlanePlacementProperty.builder()
 
+  /**
+   * @param groupName The name of the placement group for the Kubernetes control plane instances.
+   */
   public fun groupName(groupName: String) {
     cdkBuilder.groupName(groupName)
   }

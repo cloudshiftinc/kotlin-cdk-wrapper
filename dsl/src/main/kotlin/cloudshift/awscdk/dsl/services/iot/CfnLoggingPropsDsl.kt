@@ -10,14 +10,24 @@ import software.amazon.awscdk.services.iot.CfnLoggingProps
 public class CfnLoggingPropsDsl {
   private val cdkBuilder: CfnLoggingProps.Builder = CfnLoggingProps.builder()
 
+  /**
+   * @param accountId The account ID. 
+   */
   public fun accountId(accountId: String) {
     cdkBuilder.accountId(accountId)
   }
 
+  /**
+   * @param defaultLogLevel The default log level. 
+   * Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`
+   */
   public fun defaultLogLevel(defaultLogLevel: String) {
     cdkBuilder.defaultLogLevel(defaultLogLevel)
   }
 
+  /**
+   * @param roleArn The role ARN used for the log. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

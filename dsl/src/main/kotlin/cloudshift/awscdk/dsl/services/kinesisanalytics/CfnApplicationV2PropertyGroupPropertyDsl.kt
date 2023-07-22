@@ -13,14 +13,23 @@ public class CfnApplicationV2PropertyGroupPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.PropertyGroupProperty.Builder =
       CfnApplicationV2.PropertyGroupProperty.builder()
 
+  /**
+   * @param propertyGroupId Describes the key of an application execution property key-value pair.
+   */
   public fun propertyGroupId(propertyGroupId: String) {
     cdkBuilder.propertyGroupId(propertyGroupId)
   }
 
+  /**
+   * @param propertyMap Describes the value of an application execution property key-value pair.
+   */
   public fun propertyMap(propertyMap: Map<String, String>) {
     cdkBuilder.propertyMap(propertyMap)
   }
 
+  /**
+   * @param propertyMap Describes the value of an application execution property key-value pair.
+   */
   public fun propertyMap(propertyMap: IResolvable) {
     cdkBuilder.propertyMap(propertyMap)
   }

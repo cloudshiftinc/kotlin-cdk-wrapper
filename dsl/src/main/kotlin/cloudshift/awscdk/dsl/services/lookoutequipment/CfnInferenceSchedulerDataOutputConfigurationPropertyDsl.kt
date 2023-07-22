@@ -12,14 +12,25 @@ public class CfnInferenceSchedulerDataOutputConfigurationPropertyDsl {
   private val cdkBuilder: CfnInferenceScheduler.DataOutputConfigurationProperty.Builder =
       CfnInferenceScheduler.DataOutputConfigurationProperty.builder()
 
+  /**
+   * @param kmsKeyId The ID number for the AWS KMS key used to encrypt the inference output.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param s3OutputConfiguration Specifies configuration information for the output results from
+   * the inference, including output S3 location. 
+   */
   public fun s3OutputConfiguration(s3OutputConfiguration: IResolvable) {
     cdkBuilder.s3OutputConfiguration(s3OutputConfiguration)
   }
 
+  /**
+   * @param s3OutputConfiguration Specifies configuration information for the output results from
+   * the inference, including output S3 location. 
+   */
   public
       fun s3OutputConfiguration(s3OutputConfiguration: CfnInferenceScheduler.S3OutputConfigurationProperty) {
     cdkBuilder.s3OutputConfiguration(s3OutputConfiguration)

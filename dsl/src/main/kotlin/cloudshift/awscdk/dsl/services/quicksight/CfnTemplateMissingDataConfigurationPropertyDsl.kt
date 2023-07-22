@@ -11,6 +11,13 @@ public class CfnTemplateMissingDataConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.MissingDataConfigurationProperty.Builder =
       CfnTemplate.MissingDataConfigurationProperty.builder()
 
+  /**
+   * @param treatmentOption The treatment option that determines how missing data should be
+   * rendered. Choose from the following options:.
+   * * `INTERPOLATE` : Interpolate missing values between the prior and the next known value.
+   * * `SHOW_AS_ZERO` : Show missing values as the value `0` .
+   * * `SHOW_AS_BLANK` : Display a blank space when rendering missing data.
+   */
   public fun treatmentOption(treatmentOption: String) {
     cdkBuilder.treatmentOption(treatmentOption)
   }

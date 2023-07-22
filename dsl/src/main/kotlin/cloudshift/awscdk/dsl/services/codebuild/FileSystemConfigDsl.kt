@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.codebuild.FileSystemConfig
 public class FileSystemConfigDsl {
   private val cdkBuilder: FileSystemConfig.Builder = FileSystemConfig.builder()
 
-  public fun location(block: CfnProjectProjectFileSystemLocationPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param location File system location wrapper property. 
+   */
+  public fun location(location: CfnProjectProjectFileSystemLocationPropertyDsl.() -> Unit = {}) {
     val builder = CfnProjectProjectFileSystemLocationPropertyDsl()
-    builder.apply(block)
+    builder.apply(location)
     cdkBuilder.location(builder.build())
   }
 
+  /**
+   * @param location File system location wrapper property. 
+   */
   public fun location(location: CfnProject.ProjectFileSystemLocationProperty) {
     cdkBuilder.location(location)
   }

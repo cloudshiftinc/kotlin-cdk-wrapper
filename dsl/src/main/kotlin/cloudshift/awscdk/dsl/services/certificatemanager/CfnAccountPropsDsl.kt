@@ -11,10 +11,24 @@ import software.amazon.awscdk.services.certificatemanager.CfnAccountProps
 public class CfnAccountPropsDsl {
   private val cdkBuilder: CfnAccountProps.Builder = CfnAccountProps.builder()
 
+  /**
+   * @param expiryEventsConfiguration Object containing expiration events options associated with an
+   * AWS account . 
+   * For more information, see
+   * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+   * in the API reference.
+   */
   public fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
     cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration)
   }
 
+  /**
+   * @param expiryEventsConfiguration Object containing expiration events options associated with an
+   * AWS account . 
+   * For more information, see
+   * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+   * in the API reference.
+   */
   public
       fun expiryEventsConfiguration(expiryEventsConfiguration: CfnAccount.ExpiryEventsConfigurationProperty) {
     cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration)

@@ -12,14 +12,23 @@ public class CfnDashboardVisualSubtitleLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.VisualSubtitleLabelOptionsProperty.Builder =
       CfnDashboard.VisualSubtitleLabelOptionsProperty.builder()
 
+  /**
+   * @param formatText The long text format of the subtitle label, such as plain text or rich text.
+   */
   public fun formatText(formatText: IResolvable) {
     cdkBuilder.formatText(formatText)
   }
 
+  /**
+   * @param formatText The long text format of the subtitle label, such as plain text or rich text.
+   */
   public fun formatText(formatText: CfnDashboard.LongFormatTextProperty) {
     cdkBuilder.formatText(formatText)
   }
 
+  /**
+   * @param visibility The visibility of the subtitle label.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

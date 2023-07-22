@@ -12,10 +12,18 @@ public class CfnWarmPoolInstanceReusePolicyPropertyDsl {
   private val cdkBuilder: CfnWarmPool.InstanceReusePolicyProperty.Builder =
       CfnWarmPool.InstanceReusePolicyProperty.builder()
 
+  /**
+   * @param reuseOnScaleIn Specifies whether instances in the Auto Scaling group can be returned to
+   * the warm pool on scale in.
+   */
   public fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
     cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
   }
 
+  /**
+   * @param reuseOnScaleIn Specifies whether instances in the Auto Scaling group can be returned to
+   * the warm pool on scale in.
+   */
   public fun reuseOnScaleIn(reuseOnScaleIn: IResolvable) {
     cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
   }

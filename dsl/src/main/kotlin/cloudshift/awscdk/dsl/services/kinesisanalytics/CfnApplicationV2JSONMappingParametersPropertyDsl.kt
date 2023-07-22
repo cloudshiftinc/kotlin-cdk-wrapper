@@ -11,6 +11,9 @@ public class CfnApplicationV2JSONMappingParametersPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.JSONMappingParametersProperty.Builder =
       CfnApplicationV2.JSONMappingParametersProperty.builder()
 
+  /**
+   * @param recordRowPath The path to the top-level parent that contains the records. 
+   */
   public fun recordRowPath(recordRowPath: String) {
     cdkBuilder.recordRowPath(recordRowPath)
   }

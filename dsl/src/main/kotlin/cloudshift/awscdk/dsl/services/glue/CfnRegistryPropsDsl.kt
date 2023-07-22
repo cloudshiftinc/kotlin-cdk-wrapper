@@ -17,18 +17,32 @@ public class CfnRegistryPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description of the registry.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name of the registry. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags AWS tags that contain a key value pair and may be searched by console, command
+   * line, or API.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags AWS tags that contain a key value pair and may be searched by console, command
+   * line, or API.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

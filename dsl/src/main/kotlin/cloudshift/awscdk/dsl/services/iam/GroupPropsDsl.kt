@@ -15,18 +15,46 @@ public class GroupPropsDsl {
 
   private val _managedPolicies: MutableList<IManagedPolicy> = mutableListOf()
 
+  /**
+   * @param groupName A name for the IAM group.
+   * For valid values, see the GroupName parameter
+   * for the CreateGroup action in the IAM API Reference. If you don't specify
+   * a name, AWS CloudFormation generates a unique physical ID and uses that
+   * ID for the group name.
+   *
+   * If you specify a name, you must specify the CAPABILITY_NAMED_IAM value to
+   * acknowledge your template's capabilities. For more information, see
+   * Acknowledging IAM Resources in AWS CloudFormation Templates.
+   */
   public fun groupName(groupName: String) {
     cdkBuilder.groupName(groupName)
   }
 
+  /**
+   * @param managedPolicies A list of managed policies associated with this role.
+   * You can add managed policies later using
+   * `addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName(policyName))`.
+   */
   public fun managedPolicies(vararg managedPolicies: IManagedPolicy) {
     _managedPolicies.addAll(listOf(*managedPolicies))
   }
 
+  /**
+   * @param managedPolicies A list of managed policies associated with this role.
+   * You can add managed policies later using
+   * `addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName(policyName))`.
+   */
   public fun managedPolicies(managedPolicies: Collection<IManagedPolicy>) {
     _managedPolicies.addAll(managedPolicies)
   }
 
+  /**
+   * @param path The path to the group.
+   * For more information about paths, see <a
+   * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?Using_Identifiers.html">IAM
+   * Identifiers</a>
+   * in the IAM User Guide.
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }

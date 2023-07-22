@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.cognito.StringAttributeConstraints
 public class StringAttributeConstraintsDsl {
   private val cdkBuilder: StringAttributeConstraints.Builder = StringAttributeConstraints.builder()
 
+  /**
+   * @param maxLen Maximum length of this attribute.
+   */
   public fun maxLen(maxLen: Number) {
     cdkBuilder.maxLen(maxLen)
   }
 
+  /**
+   * @param minLen Minimum length of this attribute.
+   */
   public fun minLen(minLen: Number) {
     cdkBuilder.minLen(minLen)
   }

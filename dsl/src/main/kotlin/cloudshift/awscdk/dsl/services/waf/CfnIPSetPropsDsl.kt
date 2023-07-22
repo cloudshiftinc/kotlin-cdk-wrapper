@@ -16,18 +16,43 @@ public class CfnIPSetPropsDsl {
 
   private val _ipSetDescriptors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from.
+   * If the `WebACL` is associated with an Amazon CloudFront distribution and the viewer did not use
+   * an HTTP proxy or a load balancer to send the request, this is the value of the c-ip field in the
+   * CloudFront access logs.
+   */
   public fun ipSetDescriptors(vararg ipSetDescriptors: Any) {
     _ipSetDescriptors.addAll(listOf(*ipSetDescriptors))
   }
 
+  /**
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from.
+   * If the `WebACL` is associated with an Amazon CloudFront distribution and the viewer did not use
+   * an HTTP proxy or a load balancer to send the request, this is the value of the c-ip field in the
+   * CloudFront access logs.
+   */
   public fun ipSetDescriptors(ipSetDescriptors: Collection<Any>) {
     _ipSetDescriptors.addAll(ipSetDescriptors)
   }
 
+  /**
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from.
+   * If the `WebACL` is associated with an Amazon CloudFront distribution and the viewer did not use
+   * an HTTP proxy or a load balancer to send the request, this is the value of the c-ip field in the
+   * CloudFront access logs.
+   */
   public fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
     cdkBuilder.ipSetDescriptors(ipSetDescriptors)
   }
 
+  /**
+   * @param name The name of the `IPSet` . 
+   * You can't change the name of an `IPSet` after you create it.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

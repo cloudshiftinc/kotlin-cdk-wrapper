@@ -11,10 +11,18 @@ public class CfnRuleGroupChallengeConfigPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.ChallengeConfigProperty.Builder =
       CfnRuleGroup.ChallengeConfigProperty.builder()
 
+  /**
+   * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
+   * valid after the client successfully responds to a challenge.
+   */
   public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
     cdkBuilder.immunityTimeProperty(immunityTimeProperty)
   }
 
+  /**
+   * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
+   * valid after the client successfully responds to a challenge.
+   */
   public fun immunityTimeProperty(immunityTimeProperty: CfnRuleGroup.ImmunityTimePropertyProperty) {
     cdkBuilder.immunityTimeProperty(immunityTimeProperty)
   }

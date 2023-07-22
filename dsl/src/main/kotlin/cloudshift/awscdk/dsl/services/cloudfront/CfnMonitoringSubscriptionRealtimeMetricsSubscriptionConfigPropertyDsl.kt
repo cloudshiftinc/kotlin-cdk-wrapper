@@ -12,6 +12,10 @@ public class CfnMonitoringSubscriptionRealtimeMetricsSubscriptionConfigPropertyD
       CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty.Builder =
       CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty.builder()
 
+  /**
+   * @param realtimeMetricsSubscriptionStatus A flag that indicates whether additional CloudWatch
+   * metrics are enabled for a given CloudFront distribution. 
+   */
   public fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String) {
     cdkBuilder.realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus)
   }

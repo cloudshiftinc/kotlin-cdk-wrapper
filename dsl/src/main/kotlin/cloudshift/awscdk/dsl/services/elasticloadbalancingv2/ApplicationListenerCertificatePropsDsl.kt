@@ -16,14 +16,25 @@ public class ApplicationListenerCertificatePropsDsl {
 
   private val _certificates: MutableList<IListenerCertificate> = mutableListOf()
 
+  /**
+   * @param certificates Certificates to attach.
+   * Duplicates are not allowed.
+   */
   public fun certificates(vararg certificates: IListenerCertificate) {
     _certificates.addAll(listOf(*certificates))
   }
 
+  /**
+   * @param certificates Certificates to attach.
+   * Duplicates are not allowed.
+   */
   public fun certificates(certificates: Collection<IListenerCertificate>) {
     _certificates.addAll(certificates)
   }
 
+  /**
+   * @param listener The listener to attach the rule to. 
+   */
   public fun listener(listener: IApplicationListener) {
     cdkBuilder.listener(listener)
   }

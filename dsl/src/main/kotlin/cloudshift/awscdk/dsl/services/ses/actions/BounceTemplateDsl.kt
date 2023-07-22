@@ -10,14 +10,31 @@ import software.amazon.awscdk.services.ses.actions.BounceTemplate
 public class BounceTemplateDsl {
   private val cdkBuilder: BounceTemplate.Builder = BounceTemplate.Builder.create()
 
+  /**
+   * Human-readable text to include in the bounce message.
+   *
+   * @param message Human-readable text to include in the bounce message. 
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * The SMTP reply code, as defined by RFC 5321.
+   *
+   * [Documentation](https://tools.ietf.org/html/rfc5321)
+   * @param smtpReplyCode The SMTP reply code, as defined by RFC 5321. 
+   */
   public fun smtpReplyCode(smtpReplyCode: String) {
     cdkBuilder.smtpReplyCode(smtpReplyCode)
   }
 
+  /**
+   * The SMTP enhanced status code, as defined by RFC 3463.
+   *
+   * [Documentation](https://tools.ietf.org/html/rfc3463)
+   * @param statusCode The SMTP enhanced status code, as defined by RFC 3463. 
+   */
   public fun statusCode(statusCode: String) {
     cdkBuilder.statusCode(statusCode)
   }

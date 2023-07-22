@@ -11,22 +11,37 @@ public class CfnPackageStorageLocationPropertyDsl {
   private val cdkBuilder: CfnPackage.StorageLocationProperty.Builder =
       CfnPackage.StorageLocationProperty.builder()
 
+  /**
+   * @param binaryPrefixLocation the value to be set.
+   */
   public fun binaryPrefixLocation(binaryPrefixLocation: String) {
     cdkBuilder.binaryPrefixLocation(binaryPrefixLocation)
   }
 
+  /**
+   * @param bucket the value to be set.
+   */
   public fun bucket(bucket: String) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param generatedPrefixLocation the value to be set.
+   */
   public fun generatedPrefixLocation(generatedPrefixLocation: String) {
     cdkBuilder.generatedPrefixLocation(generatedPrefixLocation)
   }
 
+  /**
+   * @param manifestPrefixLocation the value to be set.
+   */
   public fun manifestPrefixLocation(manifestPrefixLocation: String) {
     cdkBuilder.manifestPrefixLocation(manifestPrefixLocation)
   }
 
+  /**
+   * @param repoPrefixLocation the value to be set.
+   */
   public fun repoPrefixLocation(repoPrefixLocation: String) {
     cdkBuilder.repoPrefixLocation(repoPrefixLocation)
   }

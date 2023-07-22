@@ -17,18 +17,40 @@ public class CfnBucketReplicationConfigurationPropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param role The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
+   * that Amazon S3 assumes when replicating objects. 
+   * For more information, see [How to Set Up
+   * Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-how-setup.html) in the
+   * *Amazon S3 User Guide* .
+   */
   public fun role(role: String) {
     cdkBuilder.role(role)
   }
 
+  /**
+   * @param rules A container for one or more replication rules. 
+   * A replication configuration must have at least one rule and can contain a maximum of 1,000
+   * rules.
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules A container for one or more replication rules. 
+   * A replication configuration must have at least one rule and can contain a maximum of 1,000
+   * rules.
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules A container for one or more replication rules. 
+   * A replication configuration must have at least one rule and can contain a maximum of 1,000
+   * rules.
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

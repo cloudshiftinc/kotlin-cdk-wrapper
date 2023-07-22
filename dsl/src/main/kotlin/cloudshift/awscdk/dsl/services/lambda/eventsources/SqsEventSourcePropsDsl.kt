@@ -19,30 +19,61 @@ public class SqsEventSourcePropsDsl {
 
   private val _filters: MutableList<Map<String, Any>> = mutableListOf()
 
+  /**
+   * @param batchSize The largest number of records that AWS Lambda will retrieve from your event
+   * source at the time of invoking your function.
+   * Your function receives an
+   * event with all the retrieved records.
+   *
+   * Valid Range: Minimum value of 1. Maximum value of 10.
+   * If `maxBatchingWindow` is configured, this value can go up to 10,000.
+   */
   public fun batchSize(batchSize: Number) {
     cdkBuilder.batchSize(batchSize)
   }
 
+  /**
+   * @param enabled If the SQS event source mapping should be enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param filters Add filter criteria option.
+   */
   public fun filters(vararg filters: Map<String, Any>) {
     _filters.addAll(listOf(*filters))
   }
 
+  /**
+   * @param filters Add filter criteria option.
+   */
   public fun filters(filters: Collection<Map<String, Any>>) {
     _filters.addAll(filters)
   }
 
+  /**
+   * @param maxBatchingWindow The maximum amount of time to gather records before invoking the
+   * function.
+   * Valid Range: Minimum value of 0 minutes. Maximum value of 5 minutes.
+   */
   public fun maxBatchingWindow(maxBatchingWindow: Duration) {
     cdkBuilder.maxBatchingWindow(maxBatchingWindow)
   }
 
+  /**
+   * @param maxConcurrency The maximum concurrency setting limits the number of concurrent instances
+   * of the function that an Amazon SQS event source can invoke.
+   */
   public fun maxConcurrency(maxConcurrency: Number) {
     cdkBuilder.maxConcurrency(maxConcurrency)
   }
 
+  /**
+   * @param reportBatchItemFailures Allow functions to return partially successful responses for a
+   * batch of records.
+   */
   public fun reportBatchItemFailures(reportBatchItemFailures: Boolean) {
     cdkBuilder.reportBatchItemFailures(reportBatchItemFailures)
   }

@@ -12,19 +12,33 @@ public class CfnBotAliasBotAliasLocaleSettingsPropertyDsl {
   private val cdkBuilder: CfnBotAlias.BotAliasLocaleSettingsProperty.Builder =
       CfnBotAlias.BotAliasLocaleSettingsProperty.builder()
 
+  /**
+   * @param codeHookSpecification Specifies the Lambda function that should be used in the locale.
+   */
   public fun codeHookSpecification(codeHookSpecification: IResolvable) {
     cdkBuilder.codeHookSpecification(codeHookSpecification)
   }
 
+  /**
+   * @param codeHookSpecification Specifies the Lambda function that should be used in the locale.
+   */
   public
       fun codeHookSpecification(codeHookSpecification: CfnBotAlias.CodeHookSpecificationProperty) {
     cdkBuilder.codeHookSpecification(codeHookSpecification)
   }
 
+  /**
+   * @param enabled Determines whether the locale is enabled for the bot. 
+   * If the value is `false` , the locale isn't available for use.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Determines whether the locale is enabled for the bot. 
+   * If the value is `false` , the locale isn't available for use.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

@@ -16,14 +16,23 @@ public class CfnSpotFleetClassicLoadBalancersConfigPropertyDsl {
 
   private val _classicLoadBalancers: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param classicLoadBalancers One or more Classic Load Balancers. 
+   */
   public fun classicLoadBalancers(vararg classicLoadBalancers: Any) {
     _classicLoadBalancers.addAll(listOf(*classicLoadBalancers))
   }
 
+  /**
+   * @param classicLoadBalancers One or more Classic Load Balancers. 
+   */
   public fun classicLoadBalancers(classicLoadBalancers: Collection<Any>) {
     _classicLoadBalancers.addAll(classicLoadBalancers)
   }
 
+  /**
+   * @param classicLoadBalancers One or more Classic Load Balancers. 
+   */
   public fun classicLoadBalancers(classicLoadBalancers: IResolvable) {
     cdkBuilder.classicLoadBalancers(classicLoadBalancers)
   }

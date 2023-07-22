@@ -11,6 +11,10 @@ public class CfnRuleBatchRetryStrategyPropertyDsl {
   private val cdkBuilder: CfnRule.BatchRetryStrategyProperty.Builder =
       CfnRule.BatchRetryStrategyProperty.builder()
 
+  /**
+   * @param attempts The number of times to attempt to retry, if the job fails.
+   * Valid values are 1–10.
+   */
   public fun attempts(attempts: Number) {
     cdkBuilder.attempts(attempts)
   }

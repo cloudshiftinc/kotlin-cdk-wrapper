@@ -12,27 +12,45 @@ public class CfnTemplateCategoricalDimensionFieldPropertyDsl {
   private val cdkBuilder: CfnTemplate.CategoricalDimensionFieldProperty.Builder =
       CfnTemplate.CategoricalDimensionFieldProperty.builder()
 
+  /**
+   * @param column The column that is used in the `CategoricalDimensionField` . 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column that is used in the `CategoricalDimensionField` . 
+   */
   public fun column(column: CfnTemplate.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param fieldId The custom field ID. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param formatConfiguration The format configuration of the field.
+   */
   public fun formatConfiguration(formatConfiguration: IResolvable) {
     cdkBuilder.formatConfiguration(formatConfiguration)
   }
 
+  /**
+   * @param formatConfiguration The format configuration of the field.
+   */
   public
       fun formatConfiguration(formatConfiguration: CfnTemplate.StringFormatConfigurationProperty) {
     cdkBuilder.formatConfiguration(formatConfiguration)
   }
 
+  /**
+   * @param hierarchyId The custom hierarchy ID.
+   */
   public fun hierarchyId(hierarchyId: String) {
     cdkBuilder.hierarchyId(hierarchyId)
   }

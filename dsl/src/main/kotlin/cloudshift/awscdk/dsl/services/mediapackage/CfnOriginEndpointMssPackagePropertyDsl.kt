@@ -12,26 +12,45 @@ public class CfnOriginEndpointMssPackagePropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.MssPackageProperty.Builder =
       CfnOriginEndpoint.MssPackageProperty.builder()
 
+  /**
+   * @param encryption Parameters for encrypting content.
+   */
   public fun encryption(encryption: IResolvable) {
     cdkBuilder.encryption(encryption)
   }
 
+  /**
+   * @param encryption Parameters for encrypting content.
+   */
   public fun encryption(encryption: CfnOriginEndpoint.MssEncryptionProperty) {
     cdkBuilder.encryption(encryption)
   }
 
+  /**
+   * @param manifestWindowSeconds Time window (in seconds) contained in each manifest.
+   */
   public fun manifestWindowSeconds(manifestWindowSeconds: Number) {
     cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
   }
 
+  /**
+   * @param segmentDurationSeconds Duration (in seconds) of each fragment.
+   * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+   */
   public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
     cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
   }
 
+  /**
+   * @param streamSelection Limitations for outputs from the endpoint, based on the video bitrate.
+   */
   public fun streamSelection(streamSelection: IResolvable) {
     cdkBuilder.streamSelection(streamSelection)
   }
 
+  /**
+   * @param streamSelection Limitations for outputs from the endpoint, based on the video bitrate.
+   */
   public fun streamSelection(streamSelection: CfnOriginEndpoint.StreamSelectionProperty) {
     cdkBuilder.streamSelection(streamSelection)
   }

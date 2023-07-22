@@ -11,10 +11,18 @@ public class CfnStackSetParameterPropertyDsl {
   private val cdkBuilder: CfnStackSet.ParameterProperty.Builder =
       CfnStackSet.ParameterProperty.builder()
 
+  /**
+   * @param parameterKey The key associated with the parameter. 
+   * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the
+   * default value that's specified in your template.
+   */
   public fun parameterKey(parameterKey: String) {
     cdkBuilder.parameterKey(parameterKey)
   }
 
+  /**
+   * @param parameterValue The input value associated with the parameter. 
+   */
   public fun parameterValue(parameterValue: String) {
     cdkBuilder.parameterValue(parameterValue)
   }

@@ -14,20 +14,37 @@ public class HttpGatewayRouteSpecOptionsDsl {
   private val cdkBuilder: HttpGatewayRouteSpecOptions.Builder =
       HttpGatewayRouteSpecOptions.builder()
 
-  public fun match(block: HttpGatewayRouteMatchDsl.() -> Unit = {}) {
+  /**
+   * @param match The criterion for determining a request match for this GatewayRoute.
+   * When path match is defined, this may optionally determine the path rewrite configuration.
+   */
+  public fun match(match: HttpGatewayRouteMatchDsl.() -> Unit = {}) {
     val builder = HttpGatewayRouteMatchDsl()
-    builder.apply(block)
+    builder.apply(match)
     cdkBuilder.match(builder.build())
   }
 
+  /**
+   * @param match The criterion for determining a request match for this GatewayRoute.
+   * When path match is defined, this may optionally determine the path rewrite configuration.
+   */
   public fun match(match: HttpGatewayRouteMatch) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param priority The priority for the gateway route.
+   * When a Virtual Gateway has multiple gateway routes, gateway route match
+   * is performed in the order of specified value, where 0 is the highest priority,
+   * and first matched gateway route is selected.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }
 
+  /**
+   * @param routeTarget The VirtualService this GatewayRoute directs traffic to. 
+   */
   public fun routeTarget(routeTarget: IVirtualService) {
     cdkBuilder.routeTarget(routeTarget)
   }

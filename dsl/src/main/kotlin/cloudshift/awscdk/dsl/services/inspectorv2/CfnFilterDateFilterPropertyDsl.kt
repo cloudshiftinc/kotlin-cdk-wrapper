@@ -11,10 +11,16 @@ public class CfnFilterDateFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.DateFilterProperty.Builder =
       CfnFilter.DateFilterProperty.builder()
 
+  /**
+   * @param endInclusive A timestamp representing the end of the time period filtered on.
+   */
   public fun endInclusive(endInclusive: Number) {
     cdkBuilder.endInclusive(endInclusive)
   }
 
+  /**
+   * @param startInclusive A timestamp representing the start of the time period filtered on.
+   */
   public fun startInclusive(startInclusive: Number) {
     cdkBuilder.startInclusive(startInclusive)
   }

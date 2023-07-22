@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 public class CfnRuleGroupCountPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.CountProperty.Builder = CfnRuleGroup.CountProperty.builder()
 
+  /**
+   * @param customRequestHandling Custom request handling.
+   */
   public fun customRequestHandling(customRequestHandling: IResolvable) {
     cdkBuilder.customRequestHandling(customRequestHandling)
   }
 
+  /**
+   * @param customRequestHandling Custom request handling.
+   */
   public
       fun customRequestHandling(customRequestHandling: CfnRuleGroup.CustomRequestHandlingProperty) {
     cdkBuilder.customRequestHandling(customRequestHandling)

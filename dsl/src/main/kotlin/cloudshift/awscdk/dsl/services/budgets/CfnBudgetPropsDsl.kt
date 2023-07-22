@@ -16,22 +16,46 @@ public class CfnBudgetPropsDsl {
 
   private val _notificationsWithSubscribers: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param budget The budget object that you want to create. 
+   */
   public fun budget(budget: IResolvable) {
     cdkBuilder.budget(budget)
   }
 
+  /**
+   * @param budget The budget object that you want to create. 
+   */
   public fun budget(budget: CfnBudget.BudgetDataProperty) {
     cdkBuilder.budget(budget)
   }
 
+  /**
+   * @param notificationsWithSubscribers A notification that you want to associate with a budget.
+   * A budget can have up to five notifications, and each notification can have one SNS subscriber
+   * and up to 10 email subscribers. If you include notifications and subscribers in your
+   * `CreateBudget` call, AWS creates the notifications and subscribers for you.
+   */
   public fun notificationsWithSubscribers(vararg notificationsWithSubscribers: Any) {
     _notificationsWithSubscribers.addAll(listOf(*notificationsWithSubscribers))
   }
 
+  /**
+   * @param notificationsWithSubscribers A notification that you want to associate with a budget.
+   * A budget can have up to five notifications, and each notification can have one SNS subscriber
+   * and up to 10 email subscribers. If you include notifications and subscribers in your
+   * `CreateBudget` call, AWS creates the notifications and subscribers for you.
+   */
   public fun notificationsWithSubscribers(notificationsWithSubscribers: Collection<Any>) {
     _notificationsWithSubscribers.addAll(notificationsWithSubscribers)
   }
 
+  /**
+   * @param notificationsWithSubscribers A notification that you want to associate with a budget.
+   * A budget can have up to five notifications, and each notification can have one SNS subscriber
+   * and up to 10 email subscribers. If you include notifications and subscribers in your
+   * `CreateBudget` call, AWS creates the notifications and subscribers for you.
+   */
   public fun notificationsWithSubscribers(notificationsWithSubscribers: IResolvable) {
     cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers)
   }

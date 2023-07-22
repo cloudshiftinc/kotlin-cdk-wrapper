@@ -12,10 +12,18 @@ public class CfnApplicationV2ApplicationSnapshotConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.ApplicationSnapshotConfigurationProperty.Builder =
       CfnApplicationV2.ApplicationSnapshotConfigurationProperty.builder()
 
+  /**
+   * @param snapshotsEnabled Describes whether snapshots are enabled for a Flink-based Kinesis Data
+   * Analytics application. 
+   */
   public fun snapshotsEnabled(snapshotsEnabled: Boolean) {
     cdkBuilder.snapshotsEnabled(snapshotsEnabled)
   }
 
+  /**
+   * @param snapshotsEnabled Describes whether snapshots are enabled for a Flink-based Kinesis Data
+   * Analytics application. 
+   */
   public fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
     cdkBuilder.snapshotsEnabled(snapshotsEnabled)
   }

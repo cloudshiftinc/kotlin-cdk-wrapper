@@ -12,18 +12,38 @@ public class CfnAutomationRuleDateFilterPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.DateFilterProperty.Builder =
       CfnAutomationRule.DateFilterProperty.builder()
 
+  /**
+   * @param dateRange A date range for the date filter.
+   */
   public fun dateRange(dateRange: IResolvable) {
     cdkBuilder.dateRange(dateRange)
   }
 
+  /**
+   * @param dateRange A date range for the date filter.
+   */
   public fun dateRange(dateRange: CfnAutomationRule.DateRangeProperty) {
     cdkBuilder.dateRange(dateRange)
   }
 
+  /**
+   * @param end A timestamp that provides the end date for the date filter.
+   * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain spaces,
+   * and date and time should be separated by `T` . For more information, see [RFC 3339 section 5.6,
+   * Internet Date/Time
+   * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+   */
   public fun end(end: String) {
     cdkBuilder.end(end)
   }
 
+  /**
+   * @param start A timestamp that provides the start date for the date filter.
+   * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain spaces,
+   * and date and time should be separated by `T` . For more information, see [RFC 3339 section 5.6,
+   * Internet Date/Time
+   * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+   */
   public fun start(start: String) {
     cdkBuilder.start(start)
   }

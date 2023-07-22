@@ -17,30 +17,62 @@ public class CfnTopicRulePutAssetPropertyValueEntryPropertyDsl {
 
   private val _propertyValues: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param assetId The ID of the AWS IoT SiteWise asset.
+   * You must specify either a `propertyAlias` or both an `aliasId` and a `propertyId` . Accepts
+   * substitution templates.
+   */
   public fun assetId(assetId: String) {
     cdkBuilder.assetId(assetId)
   }
 
+  /**
+   * @param entryId Optional.
+   * A unique identifier for this entry that you can define to better track which message caused an
+   * error in case of failure. Accepts substitution templates. Defaults to a new UUID.
+   */
   public fun entryId(entryId: String) {
     cdkBuilder.entryId(entryId)
   }
 
+  /**
+   * @param propertyAlias The name of the property alias associated with your asset property.
+   * You must specify either a `propertyAlias` or both an `aliasId` and a `propertyId` . Accepts
+   * substitution templates.
+   */
   public fun propertyAlias(propertyAlias: String) {
     cdkBuilder.propertyAlias(propertyAlias)
   }
 
+  /**
+   * @param propertyId The ID of the asset's property.
+   * You must specify either a `propertyAlias` or both an `aliasId` and a `propertyId` . Accepts
+   * substitution templates.
+   */
   public fun propertyId(propertyId: String) {
     cdkBuilder.propertyId(propertyId)
   }
 
+  /**
+   * @param propertyValues A list of property values to insert that each contain timestamp, quality,
+   * and value (TQV) information. 
+   */
   public fun propertyValues(vararg propertyValues: Any) {
     _propertyValues.addAll(listOf(*propertyValues))
   }
 
+  /**
+   * @param propertyValues A list of property values to insert that each contain timestamp, quality,
+   * and value (TQV) information. 
+   */
   public fun propertyValues(propertyValues: Collection<Any>) {
     _propertyValues.addAll(propertyValues)
   }
 
+  /**
+   * @param propertyValues A list of property values to insert that each contain timestamp, quality,
+   * and value (TQV) information. 
+   */
   public fun propertyValues(propertyValues: IResolvable) {
     cdkBuilder.propertyValues(propertyValues)
   }

@@ -11,6 +11,12 @@ public class CfnPolicyNetworkFirewallPolicyPropertyDsl {
   private val cdkBuilder: CfnPolicy.NetworkFirewallPolicyProperty.Builder =
       CfnPolicy.NetworkFirewallPolicyProperty.builder()
 
+  /**
+   * @param firewallDeploymentModel Defines the deployment model to use for the firewall policy. 
+   * To use a distributed model, set
+   * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+   * to `DISTRIBUTED` .
+   */
   public fun firewallDeploymentModel(firewallDeploymentModel: String) {
     cdkBuilder.firewallDeploymentModel(firewallDeploymentModel)
   }

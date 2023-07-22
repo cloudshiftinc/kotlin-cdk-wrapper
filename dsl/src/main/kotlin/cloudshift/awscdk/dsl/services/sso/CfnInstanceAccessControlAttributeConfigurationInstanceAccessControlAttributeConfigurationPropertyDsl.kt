@@ -20,14 +20,23 @@ public class
 
   private val _accessControlAttributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param accessControlAttributes the value to be set. 
+   */
   public fun accessControlAttributes(vararg accessControlAttributes: Any) {
     _accessControlAttributes.addAll(listOf(*accessControlAttributes))
   }
 
+  /**
+   * @param accessControlAttributes the value to be set. 
+   */
   public fun accessControlAttributes(accessControlAttributes: Collection<Any>) {
     _accessControlAttributes.addAll(accessControlAttributes)
   }
 
+  /**
+   * @param accessControlAttributes the value to be set. 
+   */
   public fun accessControlAttributes(accessControlAttributes: IResolvable) {
     cdkBuilder.accessControlAttributes(accessControlAttributes)
   }

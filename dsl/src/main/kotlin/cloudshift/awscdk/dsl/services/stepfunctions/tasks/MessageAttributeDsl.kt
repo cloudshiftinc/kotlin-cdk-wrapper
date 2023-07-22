@@ -13,16 +13,25 @@ import software.amazon.awscdk.services.stepfunctions.tasks.MessageAttributeDataT
 public class MessageAttributeDsl {
   private val cdkBuilder: MessageAttribute.Builder = MessageAttribute.builder()
 
+  /**
+   * @param dataType The data type for the attribute.
+   */
   public fun dataType(dataType: MessageAttributeDataType) {
     cdkBuilder.dataType(dataType)
   }
 
-  public fun `value`(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param value The value of the attribute. 
+   */
+  public fun `value`(`value`: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(`value`)
     cdkBuilder.`value`(builder.map)
   }
 
+  /**
+   * @param value The value of the attribute. 
+   */
   public fun `value`(`value`: Any) {
     cdkBuilder.`value`(`value`)
   }

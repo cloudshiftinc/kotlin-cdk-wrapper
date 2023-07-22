@@ -14,30 +14,48 @@ import software.amazon.awscdk.services.appmesh.ListenerTlsOptions
 public class HttpGatewayListenerOptionsDsl {
   private val cdkBuilder: HttpGatewayListenerOptions.Builder = HttpGatewayListenerOptions.builder()
 
-  public fun connectionPool(block: HttpConnectionPoolDsl.() -> Unit = {}) {
+  /**
+   * @param connectionPool Connection pool for http listeners.
+   */
+  public fun connectionPool(connectionPool: HttpConnectionPoolDsl.() -> Unit = {}) {
     val builder = HttpConnectionPoolDsl()
-    builder.apply(block)
+    builder.apply(connectionPool)
     cdkBuilder.connectionPool(builder.build())
   }
 
+  /**
+   * @param connectionPool Connection pool for http listeners.
+   */
   public fun connectionPool(connectionPool: HttpConnectionPool) {
     cdkBuilder.connectionPool(connectionPool)
   }
 
+  /**
+   * @param healthCheck The health check information for the listener.
+   */
   public fun healthCheck(healthCheck: HealthCheck) {
     cdkBuilder.healthCheck(healthCheck)
   }
 
+  /**
+   * @param port Port to listen for connections on.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
-  public fun tls(block: ListenerTlsOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param tls Represents the configuration for enabling TLS on a listener.
+   */
+  public fun tls(tls: ListenerTlsOptionsDsl.() -> Unit = {}) {
     val builder = ListenerTlsOptionsDsl()
-    builder.apply(block)
+    builder.apply(tls)
     cdkBuilder.tls(builder.build())
   }
 
+  /**
+   * @param tls Represents the configuration for enabling TLS on a listener.
+   */
   public fun tls(tls: ListenerTlsOptions) {
     cdkBuilder.tls(tls)
   }

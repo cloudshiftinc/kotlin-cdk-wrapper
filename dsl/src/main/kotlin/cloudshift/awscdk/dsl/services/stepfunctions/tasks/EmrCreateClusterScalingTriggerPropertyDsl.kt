@@ -11,14 +11,24 @@ public class EmrCreateClusterScalingTriggerPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.ScalingTriggerProperty.Builder =
       EmrCreateCluster.ScalingTriggerProperty.builder()
 
+  /**
+   * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+   * When the defined alarm conditions are met along with other trigger parameters,
+   * scaling activity begins.
+   */
   public
-      fun cloudWatchAlarmDefinition(block: EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl.() -> Unit
+      fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl.() -> Unit
       = {}) {
     val builder = EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl()
-    builder.apply(block)
+    builder.apply(cloudWatchAlarmDefinition)
     cdkBuilder.cloudWatchAlarmDefinition(builder.build())
   }
 
+  /**
+   * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+   * When the defined alarm conditions are met along with other trigger parameters,
+   * scaling activity begins.
+   */
   public
       fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: EmrCreateCluster.CloudWatchAlarmDefinitionProperty) {
     cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition)

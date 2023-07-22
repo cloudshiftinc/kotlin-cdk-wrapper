@@ -17,18 +17,32 @@ public class CfnAnomalyDetectorVpcConfigurationPropertyDsl {
 
   private val _subnetIdList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIdList An array of strings containing the list of security groups. 
+   */
   public fun securityGroupIdList(vararg securityGroupIdList: String) {
     _securityGroupIdList.addAll(listOf(*securityGroupIdList))
   }
 
+  /**
+   * @param securityGroupIdList An array of strings containing the list of security groups. 
+   */
   public fun securityGroupIdList(securityGroupIdList: Collection<String>) {
     _securityGroupIdList.addAll(securityGroupIdList)
   }
 
+  /**
+   * @param subnetIdList An array of strings containing the Amazon VPC subnet IDs (e.g.,
+   * `subnet-0bb1c79de3EXAMPLE` . 
+   */
   public fun subnetIdList(vararg subnetIdList: String) {
     _subnetIdList.addAll(listOf(*subnetIdList))
   }
 
+  /**
+   * @param subnetIdList An array of strings containing the Amazon VPC subnet IDs (e.g.,
+   * `subnet-0bb1c79de3EXAMPLE` . 
+   */
   public fun subnetIdList(subnetIdList: Collection<String>) {
     _subnetIdList.addAll(subnetIdList)
   }

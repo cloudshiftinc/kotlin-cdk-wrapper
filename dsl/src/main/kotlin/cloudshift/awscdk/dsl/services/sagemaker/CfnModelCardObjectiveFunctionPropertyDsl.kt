@@ -12,14 +12,26 @@ public class CfnModelCardObjectiveFunctionPropertyDsl {
   private val cdkBuilder: CfnModelCard.ObjectiveFunctionProperty.Builder =
       CfnModelCard.ObjectiveFunctionProperty.builder()
 
+  /**
+   * @param function A function object that details optimization direction, metric, and additional
+   * descriptions.
+   */
   public fun function(function: IResolvable) {
     cdkBuilder.function(function)
   }
 
+  /**
+   * @param function A function object that details optimization direction, metric, and additional
+   * descriptions.
+   */
   public fun function(function: CfnModelCard.FunctionProperty) {
     cdkBuilder.function(function)
   }
 
+  /**
+   * @param notes Notes about the object function, including other considerations for possible
+   * objective functions.
+   */
   public fun notes(notes: String) {
     cdkBuilder.notes(notes)
   }

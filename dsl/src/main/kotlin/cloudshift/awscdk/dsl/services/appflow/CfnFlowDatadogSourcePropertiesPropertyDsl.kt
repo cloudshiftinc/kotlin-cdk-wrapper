@@ -11,6 +11,9 @@ public class CfnFlowDatadogSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.DatadogSourcePropertiesProperty.Builder =
       CfnFlow.DatadogSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Datadog flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

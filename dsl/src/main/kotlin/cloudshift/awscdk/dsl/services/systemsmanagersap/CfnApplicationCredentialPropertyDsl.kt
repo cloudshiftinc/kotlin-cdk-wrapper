@@ -11,14 +11,24 @@ public class CfnApplicationCredentialPropertyDsl {
   private val cdkBuilder: CfnApplication.CredentialProperty.Builder =
       CfnApplication.CredentialProperty.builder()
 
+  /**
+   * @param credentialType The type of the application credentials.
+   */
   public fun credentialType(credentialType: String) {
     cdkBuilder.credentialType(credentialType)
   }
 
+  /**
+   * @param databaseName The name of the SAP HANA database.
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * @param secretId The secret ID created in AWS Secrets Manager to store the credentials of the
+   * SAP application.
+   */
   public fun secretId(secretId: String) {
     cdkBuilder.secretId(secretId)
   }

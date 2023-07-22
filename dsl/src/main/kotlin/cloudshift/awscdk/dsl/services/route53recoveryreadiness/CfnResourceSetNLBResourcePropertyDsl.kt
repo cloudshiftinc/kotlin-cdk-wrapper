@@ -11,6 +11,9 @@ public class CfnResourceSetNLBResourcePropertyDsl {
   private val cdkBuilder: CfnResourceSet.NLBResourceProperty.Builder =
       CfnResourceSet.NLBResourceProperty.builder()
 
+  /**
+   * @param arn The Network Load Balancer resource Amazon Resource Name (ARN).
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

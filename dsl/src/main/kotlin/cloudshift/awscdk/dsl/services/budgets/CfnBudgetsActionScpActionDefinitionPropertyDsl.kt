@@ -15,14 +15,23 @@ public class CfnBudgetsActionScpActionDefinitionPropertyDsl {
 
   private val _targetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param policyId The policy ID attached. 
+   */
   public fun policyId(policyId: String) {
     cdkBuilder.policyId(policyId)
   }
 
+  /**
+   * @param targetIds A list of target IDs. 
+   */
   public fun targetIds(vararg targetIds: String) {
     _targetIds.addAll(listOf(*targetIds))
   }
 
+  /**
+   * @param targetIds A list of target IDs. 
+   */
   public fun targetIds(targetIds: Collection<String>) {
     _targetIds.addAll(targetIds)
   }

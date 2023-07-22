@@ -17,18 +17,30 @@ public class CfnAnalyzerArchiveRulePropertyDsl {
 
   private val _filter: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param filter The criteria for the rule. 
+   */
   public fun filter(vararg filter: Any) {
     _filter.addAll(listOf(*filter))
   }
 
+  /**
+   * @param filter The criteria for the rule. 
+   */
   public fun filter(filter: Collection<Any>) {
     _filter.addAll(filter)
   }
 
+  /**
+   * @param filter The criteria for the rule. 
+   */
   public fun filter(filter: IResolvable) {
     cdkBuilder.filter(filter)
   }
 
+  /**
+   * @param ruleName The name of the archive rule. 
+   */
   public fun ruleName(ruleName: String) {
     cdkBuilder.ruleName(ruleName)
   }

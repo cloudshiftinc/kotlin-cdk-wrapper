@@ -11,6 +11,13 @@ public class CfnStorageLensSSEKMSPropertyDsl {
   private val cdkBuilder: CfnStorageLens.SSEKMSProperty.Builder =
       CfnStorageLens.SSEKMSProperty.builder()
 
+  /**
+   * @param keyId Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key to
+   * use for encrypting the S3 Storage Lens metrics export file. 
+   * Amazon S3 only supports symmetric encryption keys. For more information, see [Special-purpose
+   * keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html) in the *AWS Key
+   * Management Service Developer Guide* .
+   */
   public fun keyId(keyId: String) {
     cdkBuilder.keyId(keyId)
   }

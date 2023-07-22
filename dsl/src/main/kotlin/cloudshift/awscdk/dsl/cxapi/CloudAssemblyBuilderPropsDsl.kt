@@ -11,10 +11,16 @@ import software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps
 public class CloudAssemblyBuilderPropsDsl {
   private val cdkBuilder: CloudAssemblyBuilderProps.Builder = CloudAssemblyBuilderProps.builder()
 
+  /**
+   * @param assetOutdir Use the given asset output directory.
+   */
   public fun assetOutdir(assetOutdir: String) {
     cdkBuilder.assetOutdir(assetOutdir)
   }
 
+  /**
+   * @param parentBuilder If this builder is for a nested assembly, the parent assembly builder.
+   */
   public fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
     cdkBuilder.parentBuilder(parentBuilder)
   }

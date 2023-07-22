@@ -15,10 +15,18 @@ public class CfnResponseHeadersPolicyAccessControlExposeHeadersPropertyDsl {
 
   private val _items: MutableList<String> = mutableListOf()
 
+  /**
+   * @param items The list of HTTP headers. 
+   * You can specify `*` to expose all headers.
+   */
   public fun items(vararg items: String) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * @param items The list of HTTP headers. 
+   * You can specify `*` to expose all headers.
+   */
   public fun items(items: Collection<String>) {
     _items.addAll(items)
   }

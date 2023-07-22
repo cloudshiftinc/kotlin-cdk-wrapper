@@ -16,23 +16,38 @@ public class CfnApplicationComponentConfigurationPropertyDsl {
 
   private val _subComponentTypeConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param configurationDetails The configuration settings.
+   */
   public fun configurationDetails(configurationDetails: IResolvable) {
     cdkBuilder.configurationDetails(configurationDetails)
   }
 
+  /**
+   * @param configurationDetails The configuration settings.
+   */
   public
       fun configurationDetails(configurationDetails: CfnApplication.ConfigurationDetailsProperty) {
     cdkBuilder.configurationDetails(configurationDetails)
   }
 
+  /**
+   * @param subComponentTypeConfigurations Sub-component configurations of the component.
+   */
   public fun subComponentTypeConfigurations(vararg subComponentTypeConfigurations: Any) {
     _subComponentTypeConfigurations.addAll(listOf(*subComponentTypeConfigurations))
   }
 
+  /**
+   * @param subComponentTypeConfigurations Sub-component configurations of the component.
+   */
   public fun subComponentTypeConfigurations(subComponentTypeConfigurations: Collection<Any>) {
     _subComponentTypeConfigurations.addAll(subComponentTypeConfigurations)
   }
 
+  /**
+   * @param subComponentTypeConfigurations Sub-component configurations of the component.
+   */
   public fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable) {
     cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations)
   }

@@ -11,6 +11,9 @@ public class CfnTransitGatewayConnectTransitGatewayConnectOptionsPropertyDsl {
   private val cdkBuilder: CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty.Builder =
       CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty.builder()
 
+  /**
+   * @param protocol The tunnel protocol.
+   */
   public fun protocol(protocol: String) {
     cdkBuilder.protocol(protocol)
   }

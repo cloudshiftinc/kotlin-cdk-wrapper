@@ -20,24 +20,45 @@ public class CfnTransitGatewayMulticastDomainPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun options(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param options The options for the transit gateway multicast domain.
+   * * AutoAcceptSharedAssociations (enable | disable)
+   * * Igmpv2Support (enable | disable)
+   * * StaticSourcesSupport (enable | disable)
+   */
+  public fun options(options: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(options)
     cdkBuilder.options(builder.map)
   }
 
+  /**
+   * @param options The options for the transit gateway multicast domain.
+   * * AutoAcceptSharedAssociations (enable | disable)
+   * * Igmpv2Support (enable | disable)
+   * * StaticSourcesSupport (enable | disable)
+   */
   public fun options(options: Any) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * @param tags The tags for the transit gateway multicast domain.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the transit gateway multicast domain.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param transitGatewayId The ID of the transit gateway. 
+   */
   public fun transitGatewayId(transitGatewayId: String) {
     cdkBuilder.transitGatewayId(transitGatewayId)
   }

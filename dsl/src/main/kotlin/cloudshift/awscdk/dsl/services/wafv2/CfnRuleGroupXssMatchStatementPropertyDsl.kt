@@ -16,22 +16,49 @@ public class CfnRuleGroupXssMatchStatementPropertyDsl {
 
   private val _textTransformations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
+   */
   public fun fieldToMatch(fieldToMatch: IResolvable) {
     cdkBuilder.fieldToMatch(fieldToMatch)
   }
 
+  /**
+   * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
+   */
   public fun fieldToMatch(fieldToMatch: CfnRuleGroup.FieldToMatchProperty) {
     cdkBuilder.fieldToMatch(fieldToMatch)
   }
 
+  /**
+   * @param textTransformations Text transformations eliminate some of the unusual formatting that
+   * attackers use in web requests in an effort to bypass detection. 
+   * If you specify one or more transformations in a rule statement, AWS WAF performs all
+   * transformations on the content of the request component identified by `FieldToMatch` , starting
+   * from the lowest priority setting, before inspecting the content for a match.
+   */
   public fun textTransformations(vararg textTransformations: Any) {
     _textTransformations.addAll(listOf(*textTransformations))
   }
 
+  /**
+   * @param textTransformations Text transformations eliminate some of the unusual formatting that
+   * attackers use in web requests in an effort to bypass detection. 
+   * If you specify one or more transformations in a rule statement, AWS WAF performs all
+   * transformations on the content of the request component identified by `FieldToMatch` , starting
+   * from the lowest priority setting, before inspecting the content for a match.
+   */
   public fun textTransformations(textTransformations: Collection<Any>) {
     _textTransformations.addAll(textTransformations)
   }
 
+  /**
+   * @param textTransformations Text transformations eliminate some of the unusual formatting that
+   * attackers use in web requests in an effort to bypass detection. 
+   * If you specify one or more transformations in a rule statement, AWS WAF performs all
+   * transformations on the content of the request component identified by `FieldToMatch` , starting
+   * from the lowest priority setting, before inspecting the content for a match.
+   */
   public fun textTransformations(textTransformations: IResolvable) {
     cdkBuilder.textTransformations(textTransformations)
   }

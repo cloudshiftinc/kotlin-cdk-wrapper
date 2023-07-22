@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.ec2.CfnSubnetCidrBlockProps
 public class CfnSubnetCidrBlockPropsDsl {
   private val cdkBuilder: CfnSubnetCidrBlockProps.Builder = CfnSubnetCidrBlockProps.builder()
 
+  /**
+   * @param ipv6CidrBlock The IPv6 network range for the subnet, in CIDR notation. The subnet size
+   * must use a /64 prefix length. 
+   * This parameter is required for an IPv6 only subnet.
+   */
   public fun ipv6CidrBlock(ipv6CidrBlock: String) {
     cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
   }
 
+  /**
+   * @param subnetId The ID of the subnet. 
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

@@ -11,10 +11,16 @@ public class CfnDashboardGeospatialHeatmapConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.GeospatialHeatmapConfigurationProperty.Builder =
       CfnDashboard.GeospatialHeatmapConfigurationProperty.builder()
 
+  /**
+   * @param heatmapColor The color scale specification for the heatmap point style.
+   */
   public fun heatmapColor(heatmapColor: IResolvable) {
     cdkBuilder.heatmapColor(heatmapColor)
   }
 
+  /**
+   * @param heatmapColor The color scale specification for the heatmap point style.
+   */
   public fun heatmapColor(heatmapColor: CfnDashboard.GeospatialHeatmapColorScaleProperty) {
     cdkBuilder.heatmapColor(heatmapColor)
   }

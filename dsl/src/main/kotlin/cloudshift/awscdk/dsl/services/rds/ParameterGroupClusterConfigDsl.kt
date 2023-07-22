@@ -11,6 +11,9 @@ public class ParameterGroupClusterConfigDsl {
   private val cdkBuilder: ParameterGroupClusterConfig.Builder =
       ParameterGroupClusterConfig.builder()
 
+  /**
+   * @param parameterGroupName The name of this parameter group. 
+   */
   public fun parameterGroupName(parameterGroupName: String) {
     cdkBuilder.parameterGroupName(parameterGroupName)
   }

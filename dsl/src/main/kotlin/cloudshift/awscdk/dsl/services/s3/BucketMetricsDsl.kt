@@ -14,20 +14,34 @@ import software.amazon.awscdk.services.s3.BucketMetrics
 public class BucketMetricsDsl {
   private val cdkBuilder: BucketMetrics.Builder = BucketMetrics.builder()
 
+  /**
+   * @param id The ID used to identify the metrics configuration. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param prefix The prefix that an object must have to be included in the metrics results.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }
 
-  public fun tagFilters(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param tagFilters Specifies a list of tag filters to use as a metrics configuration filter.
+   * The metrics configuration includes only objects that meet the filter's criteria.
+   */
+  public fun tagFilters(tagFilters: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(tagFilters)
     cdkBuilder.tagFilters(builder.map)
   }
 
+  /**
+   * @param tagFilters Specifies a list of tag filters to use as a metrics configuration filter.
+   * The metrics configuration includes only objects that meet the filter's criteria.
+   */
   public fun tagFilters(tagFilters: Map<String, Any>) {
     cdkBuilder.tagFilters(tagFilters)
   }

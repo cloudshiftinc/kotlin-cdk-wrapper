@@ -12,23 +12,40 @@ import software.amazon.awscdk.services.lambda.CfnCodeSigningConfigProps
 public class CfnCodeSigningConfigPropsDsl {
   private val cdkBuilder: CfnCodeSigningConfigProps.Builder = CfnCodeSigningConfigProps.builder()
 
+  /**
+   * @param allowedPublishers List of allowed publishers. 
+   */
   public fun allowedPublishers(allowedPublishers: IResolvable) {
     cdkBuilder.allowedPublishers(allowedPublishers)
   }
 
+  /**
+   * @param allowedPublishers List of allowed publishers. 
+   */
   public fun allowedPublishers(allowedPublishers: CfnCodeSigningConfig.AllowedPublishersProperty) {
     cdkBuilder.allowedPublishers(allowedPublishers)
   }
 
+  /**
+   * @param codeSigningPolicies The code signing policy controls the validation failure action for
+   * signature mismatch or expiry.
+   */
   public fun codeSigningPolicies(codeSigningPolicies: IResolvable) {
     cdkBuilder.codeSigningPolicies(codeSigningPolicies)
   }
 
+  /**
+   * @param codeSigningPolicies The code signing policy controls the validation failure action for
+   * signature mismatch or expiry.
+   */
   public
       fun codeSigningPolicies(codeSigningPolicies: CfnCodeSigningConfig.CodeSigningPoliciesProperty) {
     cdkBuilder.codeSigningPolicies(codeSigningPolicies)
   }
 
+  /**
+   * @param description Code signing configuration description.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }

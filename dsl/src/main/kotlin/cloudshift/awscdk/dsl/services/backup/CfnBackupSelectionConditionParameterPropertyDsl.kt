@@ -11,10 +11,18 @@ public class CfnBackupSelectionConditionParameterPropertyDsl {
   private val cdkBuilder: CfnBackupSelection.ConditionParameterProperty.Builder =
       CfnBackupSelection.ConditionParameterProperty.builder()
 
+  /**
+   * @param conditionKey The key in a key-value pair.
+   * For example, in the tag `Department: Accounting` , `Department` is the key.
+   */
   public fun conditionKey(conditionKey: String) {
     cdkBuilder.conditionKey(conditionKey)
   }
 
+  /**
+   * @param conditionValue The value in a key-value pair.
+   * For example, in the tag `Department: Accounting` , `Accounting` is the value.
+   */
   public fun conditionValue(conditionValue: String) {
     cdkBuilder.conditionValue(conditionValue)
   }

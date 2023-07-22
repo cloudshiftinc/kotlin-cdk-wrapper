@@ -23,38 +23,103 @@ public class CfnVPCEndpointServiceDsl(
 
   private val _networkLoadBalancerArns: MutableList<String> = mutableListOf()
 
+  /**
+   * Indicates whether requests from service consumers to create an endpoint to your service must be
+   * accepted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-acceptancerequired)
+   * @param acceptanceRequired Indicates whether requests from service consumers to create an
+   * endpoint to your service must be accepted. 
+   */
   public fun acceptanceRequired(acceptanceRequired: Boolean) {
     cdkBuilder.acceptanceRequired(acceptanceRequired)
   }
 
+  /**
+   * Indicates whether requests from service consumers to create an endpoint to your service must be
+   * accepted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-acceptancerequired)
+   * @param acceptanceRequired Indicates whether requests from service consumers to create an
+   * endpoint to your service must be accepted. 
+   */
   public fun acceptanceRequired(acceptanceRequired: IResolvable) {
     cdkBuilder.acceptanceRequired(acceptanceRequired)
   }
 
+  /**
+   * Indicates whether to enable the built-in Contributor Insights rules provided by AWS PrivateLink
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-contributorinsightsenabled)
+   * @param contributorInsightsEnabled Indicates whether to enable the built-in Contributor Insights
+   * rules provided by AWS PrivateLink . 
+   */
   public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
     cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled)
   }
 
+  /**
+   * Indicates whether to enable the built-in Contributor Insights rules provided by AWS PrivateLink
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-contributorinsightsenabled)
+   * @param contributorInsightsEnabled Indicates whether to enable the built-in Contributor Insights
+   * rules provided by AWS PrivateLink . 
+   */
   public fun contributorInsightsEnabled(contributorInsightsEnabled: IResolvable) {
     cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled)
   }
 
+  /**
+   * The Amazon Resource Names (ARNs) of the Gateway Load Balancers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-gatewayloadbalancerarns)
+   * @param gatewayLoadBalancerArns The Amazon Resource Names (ARNs) of the Gateway Load Balancers. 
+   */
   public fun gatewayLoadBalancerArns(vararg gatewayLoadBalancerArns: String) {
     _gatewayLoadBalancerArns.addAll(listOf(*gatewayLoadBalancerArns))
   }
 
+  /**
+   * The Amazon Resource Names (ARNs) of the Gateway Load Balancers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-gatewayloadbalancerarns)
+   * @param gatewayLoadBalancerArns The Amazon Resource Names (ARNs) of the Gateway Load Balancers. 
+   */
   public fun gatewayLoadBalancerArns(gatewayLoadBalancerArns: Collection<String>) {
     _gatewayLoadBalancerArns.addAll(gatewayLoadBalancerArns)
   }
 
+  /**
+   * The Amazon Resource Names (ARNs) of the Network Load Balancers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-networkloadbalancerarns)
+   * @param networkLoadBalancerArns The Amazon Resource Names (ARNs) of the Network Load Balancers. 
+   */
   public fun networkLoadBalancerArns(vararg networkLoadBalancerArns: String) {
     _networkLoadBalancerArns.addAll(listOf(*networkLoadBalancerArns))
   }
 
+  /**
+   * The Amazon Resource Names (ARNs) of the Network Load Balancers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-networkloadbalancerarns)
+   * @param networkLoadBalancerArns The Amazon Resource Names (ARNs) of the Network Load Balancers. 
+   */
   public fun networkLoadBalancerArns(networkLoadBalancerArns: Collection<String>) {
     _networkLoadBalancerArns.addAll(networkLoadBalancerArns)
   }
 
+  /**
+   * The entity that is responsible for the endpoint costs.
+   *
+   * The default is the endpoint owner. If you set the payer responsibility to the service owner,
+   * you cannot set it back to the endpoint owner.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-payerresponsibility)
+   * @param payerResponsibility The entity that is responsible for the endpoint costs. 
+   */
   public fun payerResponsibility(payerResponsibility: String) {
     cdkBuilder.payerResponsibility(payerResponsibility)
   }

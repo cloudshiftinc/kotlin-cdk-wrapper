@@ -11,6 +11,11 @@ public class CfnApplicationInputParallelismPropertyDsl {
   private val cdkBuilder: CfnApplication.InputParallelismProperty.Builder =
       CfnApplication.InputParallelismProperty.builder()
 
+  /**
+   * @param count Number of in-application streams to create.
+   * For more information, see
+   * [Limits](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html) .
+   */
   public fun count(count: Number) {
     cdkBuilder.count(count)
   }

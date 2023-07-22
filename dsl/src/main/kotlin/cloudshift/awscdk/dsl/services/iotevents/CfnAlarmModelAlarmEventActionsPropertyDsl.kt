@@ -16,14 +16,26 @@ public class CfnAlarmModelAlarmEventActionsPropertyDsl {
 
   private val _alarmActions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param alarmActions Specifies one or more supported actions to receive notifications when the
+   * alarm state changes.
+   */
   public fun alarmActions(vararg alarmActions: Any) {
     _alarmActions.addAll(listOf(*alarmActions))
   }
 
+  /**
+   * @param alarmActions Specifies one or more supported actions to receive notifications when the
+   * alarm state changes.
+   */
   public fun alarmActions(alarmActions: Collection<Any>) {
     _alarmActions.addAll(alarmActions)
   }
 
+  /**
+   * @param alarmActions Specifies one or more supported actions to receive notifications when the
+   * alarm state changes.
+   */
   public fun alarmActions(alarmActions: IResolvable) {
     cdkBuilder.alarmActions(alarmActions)
   }

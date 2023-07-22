@@ -15,14 +15,23 @@ public class CfnFunctionHttpApiFunctionAuthPropertyDsl {
 
   private val _authorizationScopes: MutableList<String> = mutableListOf()
 
+  /**
+   * @param authorizationScopes the value to be set.
+   */
   public fun authorizationScopes(vararg authorizationScopes: String) {
     _authorizationScopes.addAll(listOf(*authorizationScopes))
   }
 
+  /**
+   * @param authorizationScopes the value to be set.
+   */
   public fun authorizationScopes(authorizationScopes: Collection<String>) {
     _authorizationScopes.addAll(authorizationScopes)
   }
 
+  /**
+   * @param authorizer the value to be set.
+   */
   public fun authorizer(authorizer: String) {
     cdkBuilder.authorizer(authorizer)
   }

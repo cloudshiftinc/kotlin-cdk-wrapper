@@ -11,6 +11,9 @@ public class VirtualHostedStyleUrlOptionsDsl {
   private val cdkBuilder: VirtualHostedStyleUrlOptions.Builder =
       VirtualHostedStyleUrlOptions.builder()
 
+  /**
+   * @param regional Specifies the URL includes the region.
+   */
   public fun regional(regional: Boolean) {
     cdkBuilder.regional(regional)
   }

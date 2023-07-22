@@ -10,14 +10,23 @@ import software.amazon.awscdk.services.networkmanager.CfnDevice
 public class CfnDeviceLocationPropertyDsl {
   private val cdkBuilder: CfnDevice.LocationProperty.Builder = CfnDevice.LocationProperty.builder()
 
+  /**
+   * @param address The physical address.
+   */
   public fun address(address: String) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param latitude The latitude.
+   */
   public fun latitude(latitude: String) {
     cdkBuilder.latitude(latitude)
   }
 
+  /**
+   * @param longitude The longitude.
+   */
   public fun longitude(longitude: String) {
     cdkBuilder.longitude(longitude)
   }

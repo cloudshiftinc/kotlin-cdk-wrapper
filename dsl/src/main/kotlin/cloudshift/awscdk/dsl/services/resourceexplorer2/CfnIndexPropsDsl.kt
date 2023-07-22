@@ -11,10 +11,21 @@ import software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps
 public class CfnIndexPropsDsl {
   private val cdkBuilder: CfnIndexProps.Builder = CfnIndexProps.builder()
 
+  /**
+   * @param tags The specified tags are attached to only the index created in this AWS Region .
+   * The tags don't attach to any of the resources listed in the index.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * @param type Specifies the type of the index in this Region. 
+   * For information about the aggregator index and how it differs from a local index, see [Turning
+   * on cross-Region search by creating an aggregator
+   * index](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html)
+   * in the *AWS Resource Explorer User Guide.* .
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

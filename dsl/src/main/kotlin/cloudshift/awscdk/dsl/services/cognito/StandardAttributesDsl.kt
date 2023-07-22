@@ -11,172 +11,276 @@ import software.amazon.awscdk.services.cognito.StandardAttributes
 public class StandardAttributesDsl {
   private val cdkBuilder: StandardAttributes.Builder = StandardAttributes.builder()
 
-  public fun address(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param address The user's postal address.
+   */
+  public fun address(address: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(address)
     cdkBuilder.address(builder.build())
   }
 
+  /**
+   * @param address The user's postal address.
+   */
   public fun address(address: StandardAttribute) {
     cdkBuilder.address(address)
   }
 
-  public fun birthdate(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param birthdate The user's birthday, represented as an ISO 8601:2004 format.
+   */
+  public fun birthdate(birthdate: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(birthdate)
     cdkBuilder.birthdate(builder.build())
   }
 
+  /**
+   * @param birthdate The user's birthday, represented as an ISO 8601:2004 format.
+   */
   public fun birthdate(birthdate: StandardAttribute) {
     cdkBuilder.birthdate(birthdate)
   }
 
-  public fun email(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param email The user's e-mail address, represented as an RFC 5322 [RFC5322] addr-spec.
+   */
+  public fun email(email: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(email)
     cdkBuilder.email(builder.build())
   }
 
+  /**
+   * @param email The user's e-mail address, represented as an RFC 5322 [RFC5322] addr-spec.
+   */
   public fun email(email: StandardAttribute) {
     cdkBuilder.email(email)
   }
 
-  public fun familyName(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param familyName The surname or last name of the user.
+   */
+  public fun familyName(familyName: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(familyName)
     cdkBuilder.familyName(builder.build())
   }
 
+  /**
+   * @param familyName The surname or last name of the user.
+   */
   public fun familyName(familyName: StandardAttribute) {
     cdkBuilder.familyName(familyName)
   }
 
-  public fun fullname(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param fullname The user's full name in displayable form, including all name parts, titles and
+   * suffixes.
+   */
+  public fun fullname(fullname: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(fullname)
     cdkBuilder.fullname(builder.build())
   }
 
+  /**
+   * @param fullname The user's full name in displayable form, including all name parts, titles and
+   * suffixes.
+   */
   public fun fullname(fullname: StandardAttribute) {
     cdkBuilder.fullname(fullname)
   }
 
-  public fun gender(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param gender The user's gender.
+   */
+  public fun gender(gender: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(gender)
     cdkBuilder.gender(builder.build())
   }
 
+  /**
+   * @param gender The user's gender.
+   */
   public fun gender(gender: StandardAttribute) {
     cdkBuilder.gender(gender)
   }
 
-  public fun givenName(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param givenName The user's first name or give name.
+   */
+  public fun givenName(givenName: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(givenName)
     cdkBuilder.givenName(builder.build())
   }
 
+  /**
+   * @param givenName The user's first name or give name.
+   */
   public fun givenName(givenName: StandardAttribute) {
     cdkBuilder.givenName(givenName)
   }
 
-  public fun lastUpdateTime(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param lastUpdateTime The time, the user's information was last updated.
+   */
+  public fun lastUpdateTime(lastUpdateTime: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(lastUpdateTime)
     cdkBuilder.lastUpdateTime(builder.build())
   }
 
+  /**
+   * @param lastUpdateTime The time, the user's information was last updated.
+   */
   public fun lastUpdateTime(lastUpdateTime: StandardAttribute) {
     cdkBuilder.lastUpdateTime(lastUpdateTime)
   }
 
-  public fun locale(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param locale The user's locale, represented as a BCP47 [RFC5646] language tag.
+   */
+  public fun locale(locale: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(locale)
     cdkBuilder.locale(builder.build())
   }
 
+  /**
+   * @param locale The user's locale, represented as a BCP47 [RFC5646] language tag.
+   */
   public fun locale(locale: StandardAttribute) {
     cdkBuilder.locale(locale)
   }
 
-  public fun middleName(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param middleName The user's middle name.
+   */
+  public fun middleName(middleName: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(middleName)
     cdkBuilder.middleName(builder.build())
   }
 
+  /**
+   * @param middleName The user's middle name.
+   */
   public fun middleName(middleName: StandardAttribute) {
     cdkBuilder.middleName(middleName)
   }
 
-  public fun nickname(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param nickname The user's nickname or casual name.
+   */
+  public fun nickname(nickname: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(nickname)
     cdkBuilder.nickname(builder.build())
   }
 
+  /**
+   * @param nickname The user's nickname or casual name.
+   */
   public fun nickname(nickname: StandardAttribute) {
     cdkBuilder.nickname(nickname)
   }
 
-  public fun phoneNumber(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param phoneNumber The user's telephone number.
+   */
+  public fun phoneNumber(phoneNumber: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(phoneNumber)
     cdkBuilder.phoneNumber(builder.build())
   }
 
+  /**
+   * @param phoneNumber The user's telephone number.
+   */
   public fun phoneNumber(phoneNumber: StandardAttribute) {
     cdkBuilder.phoneNumber(phoneNumber)
   }
 
-  public fun preferredUsername(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param preferredUsername The user's preffered username, different from the immutable user name.
+   */
+  public fun preferredUsername(preferredUsername: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(preferredUsername)
     cdkBuilder.preferredUsername(builder.build())
   }
 
+  /**
+   * @param preferredUsername The user's preffered username, different from the immutable user name.
+   */
   public fun preferredUsername(preferredUsername: StandardAttribute) {
     cdkBuilder.preferredUsername(preferredUsername)
   }
 
-  public fun profilePage(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param profilePage The URL to the user's profile page.
+   */
+  public fun profilePage(profilePage: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(profilePage)
     cdkBuilder.profilePage(builder.build())
   }
 
+  /**
+   * @param profilePage The URL to the user's profile page.
+   */
   public fun profilePage(profilePage: StandardAttribute) {
     cdkBuilder.profilePage(profilePage)
   }
 
-  public fun profilePicture(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param profilePicture The URL to the user's profile picture.
+   */
+  public fun profilePicture(profilePicture: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(profilePicture)
     cdkBuilder.profilePicture(builder.build())
   }
 
+  /**
+   * @param profilePicture The URL to the user's profile picture.
+   */
   public fun profilePicture(profilePicture: StandardAttribute) {
     cdkBuilder.profilePicture(profilePicture)
   }
 
-  public fun timezone(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param timezone The user's time zone.
+   */
+  public fun timezone(timezone: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(timezone)
     cdkBuilder.timezone(builder.build())
   }
 
+  /**
+   * @param timezone The user's time zone.
+   */
   public fun timezone(timezone: StandardAttribute) {
     cdkBuilder.timezone(timezone)
   }
 
-  public fun website(block: StandardAttributeDsl.() -> Unit = {}) {
+  /**
+   * @param website The URL to the user's web page or blog.
+   */
+  public fun website(website: StandardAttributeDsl.() -> Unit = {}) {
     val builder = StandardAttributeDsl()
-    builder.apply(block)
+    builder.apply(website)
     cdkBuilder.website(builder.build())
   }
 
+  /**
+   * @param website The URL to the user's web page or blog.
+   */
   public fun website(website: StandardAttribute) {
     cdkBuilder.website(website)
   }

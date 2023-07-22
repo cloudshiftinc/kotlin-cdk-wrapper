@@ -20,38 +20,74 @@ public class CfnDashboardTreeMapAggregatedFieldWellsPropertyDsl {
 
   private val _sizes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param colors The color field well of a tree map.
+   * Values are grouped by aggregations based on group by fields.
+   */
   public fun colors(vararg colors: Any) {
     _colors.addAll(listOf(*colors))
   }
 
+  /**
+   * @param colors The color field well of a tree map.
+   * Values are grouped by aggregations based on group by fields.
+   */
   public fun colors(colors: Collection<Any>) {
     _colors.addAll(colors)
   }
 
+  /**
+   * @param colors The color field well of a tree map.
+   * Values are grouped by aggregations based on group by fields.
+   */
   public fun colors(colors: IResolvable) {
     cdkBuilder.colors(colors)
   }
 
+  /**
+   * @param groups The group by field well of a tree map.
+   * Values are grouped based on group by fields.
+   */
   public fun groups(vararg groups: Any) {
     _groups.addAll(listOf(*groups))
   }
 
+  /**
+   * @param groups The group by field well of a tree map.
+   * Values are grouped based on group by fields.
+   */
   public fun groups(groups: Collection<Any>) {
     _groups.addAll(groups)
   }
 
+  /**
+   * @param groups The group by field well of a tree map.
+   * Values are grouped based on group by fields.
+   */
   public fun groups(groups: IResolvable) {
     cdkBuilder.groups(groups)
   }
 
+  /**
+   * @param sizes The size field well of a tree map.
+   * Values are aggregated based on group by fields.
+   */
   public fun sizes(vararg sizes: Any) {
     _sizes.addAll(listOf(*sizes))
   }
 
+  /**
+   * @param sizes The size field well of a tree map.
+   * Values are aggregated based on group by fields.
+   */
   public fun sizes(sizes: Collection<Any>) {
     _sizes.addAll(sizes)
   }
 
+  /**
+   * @param sizes The size field well of a tree map.
+   * Values are aggregated based on group by fields.
+   */
   public fun sizes(sizes: IResolvable) {
     cdkBuilder.sizes(sizes)
   }

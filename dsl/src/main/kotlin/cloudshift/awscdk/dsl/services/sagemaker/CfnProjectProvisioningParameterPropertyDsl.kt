@@ -11,10 +11,16 @@ public class CfnProjectProvisioningParameterPropertyDsl {
   private val cdkBuilder: CfnProject.ProvisioningParameterProperty.Builder =
       CfnProject.ProvisioningParameterProperty.builder()
 
+  /**
+   * @param key The key that identifies a provisioning parameter. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The value of the provisioning parameter. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

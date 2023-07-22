@@ -15,10 +15,16 @@ public class CfnVirtualNodeTlsValidationContextAcmTrustPropertyDsl {
 
   private val _certificateAuthorityArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
+   */
   public fun certificateAuthorityArns(vararg certificateAuthorityArns: String) {
     _certificateAuthorityArns.addAll(listOf(*certificateAuthorityArns))
   }
 
+  /**
+   * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s. 
+   */
   public fun certificateAuthorityArns(certificateAuthorityArns: Collection<String>) {
     _certificateAuthorityArns.addAll(certificateAuthorityArns)
   }

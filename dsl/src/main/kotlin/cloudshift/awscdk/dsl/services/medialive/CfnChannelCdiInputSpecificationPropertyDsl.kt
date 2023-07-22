@@ -11,6 +11,9 @@ public class CfnChannelCdiInputSpecificationPropertyDsl {
   private val cdkBuilder: CfnChannel.CdiInputSpecificationProperty.Builder =
       CfnChannel.CdiInputSpecificationProperty.builder()
 
+  /**
+   * @param resolution Maximum CDI input resolution.
+   */
   public fun resolution(resolution: String) {
     cdkBuilder.resolution(resolution)
   }

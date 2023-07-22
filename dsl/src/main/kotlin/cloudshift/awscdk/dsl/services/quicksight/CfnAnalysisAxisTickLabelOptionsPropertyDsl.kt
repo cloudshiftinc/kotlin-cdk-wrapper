@@ -12,14 +12,23 @@ public class CfnAnalysisAxisTickLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.AxisTickLabelOptionsProperty.Builder =
       CfnAnalysis.AxisTickLabelOptionsProperty.builder()
 
+  /**
+   * @param labelOptions Determines whether or not the axis ticks are visible.
+   */
   public fun labelOptions(labelOptions: IResolvable) {
     cdkBuilder.labelOptions(labelOptions)
   }
 
+  /**
+   * @param labelOptions Determines whether or not the axis ticks are visible.
+   */
   public fun labelOptions(labelOptions: CfnAnalysis.LabelOptionsProperty) {
     cdkBuilder.labelOptions(labelOptions)
   }
 
+  /**
+   * @param rotationAngle The rotation angle of the axis tick labels.
+   */
   public fun rotationAngle(rotationAngle: Number) {
     cdkBuilder.rotationAngle(rotationAngle)
   }

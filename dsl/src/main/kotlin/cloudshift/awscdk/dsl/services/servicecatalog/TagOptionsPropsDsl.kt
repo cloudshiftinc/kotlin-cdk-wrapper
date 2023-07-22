@@ -12,6 +12,11 @@ import software.amazon.awscdk.services.servicecatalog.TagOptionsProps
 public class TagOptionsPropsDsl {
   private val cdkBuilder: TagOptionsProps.Builder = TagOptionsProps.builder()
 
+  /**
+   * @param allowedValuesForTags The values that are allowed to be set for specific tags. 
+   * The keys of the map represent the tag keys,
+   * and the values of the map are a list of allowed values for that particular tag key.
+   */
   public fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
     cdkBuilder.allowedValuesForTags(allowedValuesForTags)
   }

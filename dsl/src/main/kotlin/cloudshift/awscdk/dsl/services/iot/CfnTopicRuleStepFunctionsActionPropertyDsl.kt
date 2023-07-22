@@ -11,14 +11,28 @@ public class CfnTopicRuleStepFunctionsActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.StepFunctionsActionProperty.Builder =
       CfnTopicRule.StepFunctionsActionProperty.builder()
 
+  /**
+   * @param executionNamePrefix (Optional) A name will be given to the state machine execution
+   * consisting of this prefix followed by a UUID.
+   * Step Functions automatically creates a unique name for each state machine execution if one is
+   * not provided.
+   */
   public fun executionNamePrefix(executionNamePrefix: String) {
     cdkBuilder.executionNamePrefix(executionNamePrefix)
   }
 
+  /**
+   * @param roleArn The ARN of the role that grants IoT permission to start execution of a state
+   * machine ("Action":"states:StartExecution"). 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param stateMachineName The name of the Step Functions state machine whose execution will be
+   * started. 
+   */
   public fun stateMachineName(stateMachineName: String) {
     cdkBuilder.stateMachineName(stateMachineName)
   }

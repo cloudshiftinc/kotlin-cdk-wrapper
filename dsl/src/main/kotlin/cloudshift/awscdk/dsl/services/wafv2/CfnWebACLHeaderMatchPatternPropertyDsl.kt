@@ -20,28 +20,50 @@ public class CfnWebACLHeaderMatchPatternPropertyDsl {
 
   private val _includedHeaders: MutableList<String> = mutableListOf()
 
-  public fun all(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param all Inspect all headers.
+   */
+  public fun all(all: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(all)
     cdkBuilder.all(builder.map)
   }
 
+  /**
+   * @param all Inspect all headers.
+   */
   public fun all(all: Any) {
     cdkBuilder.all(all)
   }
 
+  /**
+   * @param excludedHeaders Inspect only the headers whose keys don't match any of the strings
+   * specified here.
+   */
   public fun excludedHeaders(vararg excludedHeaders: String) {
     _excludedHeaders.addAll(listOf(*excludedHeaders))
   }
 
+  /**
+   * @param excludedHeaders Inspect only the headers whose keys don't match any of the strings
+   * specified here.
+   */
   public fun excludedHeaders(excludedHeaders: Collection<String>) {
     _excludedHeaders.addAll(excludedHeaders)
   }
 
+  /**
+   * @param includedHeaders Inspect only the headers that have a key that matches one of the strings
+   * specified here.
+   */
   public fun includedHeaders(vararg includedHeaders: String) {
     _includedHeaders.addAll(listOf(*includedHeaders))
   }
 
+  /**
+   * @param includedHeaders Inspect only the headers that have a key that matches one of the strings
+   * specified here.
+   */
   public fun includedHeaders(includedHeaders: Collection<String>) {
     _includedHeaders.addAll(includedHeaders)
   }

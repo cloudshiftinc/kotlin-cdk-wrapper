@@ -15,10 +15,36 @@ public class CfnResponseHeadersPolicyAccessControlAllowMethodsPropertyDsl {
 
   private val _items: MutableList<String> = mutableListOf()
 
+  /**
+   * @param items The list of HTTP methods. Valid values are:. 
+   * * `GET`
+   * * `DELETE`
+   * * `HEAD`
+   * * `OPTIONS`
+   * * `PATCH`
+   * * `POST`
+   * * `PUT`
+   * * `ALL`
+   *
+   * `ALL` is a special value that includes all of the listed HTTP methods.
+   */
   public fun items(vararg items: String) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * @param items The list of HTTP methods. Valid values are:. 
+   * * `GET`
+   * * `DELETE`
+   * * `HEAD`
+   * * `OPTIONS`
+   * * `PATCH`
+   * * `POST`
+   * * `PUT`
+   * * `ALL`
+   *
+   * `ALL` is a special value that includes all of the listed HTTP methods.
+   */
   public fun items(items: Collection<String>) {
     _items.addAll(items)
   }

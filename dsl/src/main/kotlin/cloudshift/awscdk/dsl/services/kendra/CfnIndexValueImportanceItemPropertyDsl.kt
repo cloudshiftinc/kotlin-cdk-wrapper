@@ -12,10 +12,16 @@ public class CfnIndexValueImportanceItemPropertyDsl {
   private val cdkBuilder: CfnIndex.ValueImportanceItemProperty.Builder =
       CfnIndex.ValueImportanceItemProperty.builder()
 
+  /**
+   * @param key The document metadata value used for the search boost.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The boost value for a document when the key is part of the metadata of a document.
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

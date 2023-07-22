@@ -11,10 +11,16 @@ public class CfnServiceKeyValuePairPropertyDsl {
   private val cdkBuilder: CfnService.KeyValuePairProperty.Builder =
       CfnService.KeyValuePairProperty.builder()
 
+  /**
+   * @param name The key name string to map to a value.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value string to which the key name is mapped.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

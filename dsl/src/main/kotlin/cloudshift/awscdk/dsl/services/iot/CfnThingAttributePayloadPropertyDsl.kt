@@ -13,10 +13,20 @@ public class CfnThingAttributePayloadPropertyDsl {
   private val cdkBuilder: CfnThing.AttributePayloadProperty.Builder =
       CfnThing.AttributePayloadProperty.builder()
 
+  /**
+   * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+   * example:.
+   * `{\"attributes\":{\"string1\":\"string2\"}}`
+   */
   public fun attributes(attributes: Map<String, String>) {
     cdkBuilder.attributes(attributes)
   }
 
+  /**
+   * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+   * example:.
+   * `{\"attributes\":{\"string1\":\"string2\"}}`
+   */
   public fun attributes(attributes: IResolvable) {
     cdkBuilder.attributes(attributes)
   }

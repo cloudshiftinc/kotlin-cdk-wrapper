@@ -17,12 +17,28 @@ public class CfnJsonDsl(
 ) {
   private val cdkBuilder: CfnJson.Builder = CfnJson.Builder.create(scope, id)
 
-  public fun `value`(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The value to resolve.
+   *
+   * Can be any JavaScript object, including tokens and
+   * references in keys or values.
+   *
+   * @param value The value to resolve. 
+   */
+  public fun `value`(`value`: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(`value`)
     cdkBuilder.`value`(builder.map)
   }
 
+  /**
+   * The value to resolve.
+   *
+   * Can be any JavaScript object, including tokens and
+   * references in keys or values.
+   *
+   * @param value The value to resolve. 
+   */
   public fun `value`(`value`: Any) {
     cdkBuilder.`value`(`value`)
   }

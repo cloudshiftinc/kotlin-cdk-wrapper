@@ -17,22 +17,37 @@ public class CfnFunctionImageConfigPropertyDsl {
 
   private val _entryPoint: MutableList<String> = mutableListOf()
 
+  /**
+   * @param command the value to be set.
+   */
   public fun command(vararg command: String) {
     _command.addAll(listOf(*command))
   }
 
+  /**
+   * @param command the value to be set.
+   */
   public fun command(command: Collection<String>) {
     _command.addAll(command)
   }
 
+  /**
+   * @param entryPoint the value to be set.
+   */
   public fun entryPoint(vararg entryPoint: String) {
     _entryPoint.addAll(listOf(*entryPoint))
   }
 
+  /**
+   * @param entryPoint the value to be set.
+   */
   public fun entryPoint(entryPoint: Collection<String>) {
     _entryPoint.addAll(entryPoint)
   }
 
+  /**
+   * @param workingDirectory the value to be set.
+   */
   public fun workingDirectory(workingDirectory: String) {
     cdkBuilder.workingDirectory(workingDirectory)
   }

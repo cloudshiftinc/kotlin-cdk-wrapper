@@ -11,6 +11,9 @@ public class CfnFlowOutputVpcInterfaceAttachmentPropertyDsl {
   private val cdkBuilder: CfnFlowOutput.VpcInterfaceAttachmentProperty.Builder =
       CfnFlowOutput.VpcInterfaceAttachmentProperty.builder()
 
+  /**
+   * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+   */
   public fun vpcInterfaceName(vpcInterfaceName: String) {
     cdkBuilder.vpcInterfaceName(vpcInterfaceName)
   }

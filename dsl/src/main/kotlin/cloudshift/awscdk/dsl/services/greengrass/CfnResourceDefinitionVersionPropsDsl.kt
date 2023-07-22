@@ -17,18 +17,31 @@ public class CfnResourceDefinitionVersionPropsDsl {
 
   private val _resources: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param resourceDefinitionId The ID of the resource definition associated with this version. 
+   * This value is a GUID.
+   */
   public fun resourceDefinitionId(resourceDefinitionId: String) {
     cdkBuilder.resourceDefinitionId(resourceDefinitionId)
   }
 
+  /**
+   * @param resources The resources in this version. 
+   */
   public fun resources(vararg resources: Any) {
     _resources.addAll(listOf(*resources))
   }
 
+  /**
+   * @param resources The resources in this version. 
+   */
   public fun resources(resources: Collection<Any>) {
     _resources.addAll(resources)
   }
 
+  /**
+   * @param resources The resources in this version. 
+   */
   public fun resources(resources: IResolvable) {
     cdkBuilder.resources(resources)
   }

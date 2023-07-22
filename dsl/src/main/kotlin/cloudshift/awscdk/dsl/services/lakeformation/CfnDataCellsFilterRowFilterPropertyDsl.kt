@@ -14,16 +14,25 @@ public class CfnDataCellsFilterRowFilterPropertyDsl {
   private val cdkBuilder: CfnDataCellsFilter.RowFilterProperty.Builder =
       CfnDataCellsFilter.RowFilterProperty.builder()
 
-  public fun allRowsWildcard(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param allRowsWildcard A wildcard for all rows.
+   */
+  public fun allRowsWildcard(allRowsWildcard: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(allRowsWildcard)
     cdkBuilder.allRowsWildcard(builder.map)
   }
 
+  /**
+   * @param allRowsWildcard A wildcard for all rows.
+   */
   public fun allRowsWildcard(allRowsWildcard: Any) {
     cdkBuilder.allRowsWildcard(allRowsWildcard)
   }
 
+  /**
+   * @param filterExpression A filter expression.
+   */
   public fun filterExpression(filterExpression: String) {
     cdkBuilder.filterExpression(filterExpression)
   }

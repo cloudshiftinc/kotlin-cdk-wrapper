@@ -22,30 +22,72 @@ public class CfnPackagingGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Parameters for CDN authorization.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-authorization)
+   * @param authorization Parameters for CDN authorization. 
+   */
   public fun authorization(authorization: IResolvable) {
     cdkBuilder.authorization(authorization)
   }
 
+  /**
+   * Parameters for CDN authorization.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-authorization)
+   * @param authorization Parameters for CDN authorization. 
+   */
   public fun authorization(authorization: CfnPackagingGroup.AuthorizationProperty) {
     cdkBuilder.authorization(authorization)
   }
 
+  /**
+   * The configuration parameters for egress access logging.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-egressaccesslogs)
+   * @param egressAccessLogs The configuration parameters for egress access logging. 
+   */
   public fun egressAccessLogs(egressAccessLogs: IResolvable) {
     cdkBuilder.egressAccessLogs(egressAccessLogs)
   }
 
+  /**
+   * The configuration parameters for egress access logging.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-egressaccesslogs)
+   * @param egressAccessLogs The configuration parameters for egress access logging. 
+   */
   public fun egressAccessLogs(egressAccessLogs: CfnPackagingGroup.LogConfigurationProperty) {
     cdkBuilder.egressAccessLogs(egressAccessLogs)
   }
 
+  /**
+   * Unique identifier that you assign to the packaging group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-id)
+   * @param id Unique identifier that you assign to the packaging group. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * The tags to assign to the packaging group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-tags)
+   * @param tags The tags to assign to the packaging group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags to assign to the packaging group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-tags)
+   * @param tags The tags to assign to the packaging group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

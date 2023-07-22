@@ -11,6 +11,9 @@ public class CfnIPAMResourceDiscoveryIpamOperatingRegionPropertyDsl {
   private val cdkBuilder: CfnIPAMResourceDiscovery.IpamOperatingRegionProperty.Builder =
       CfnIPAMResourceDiscovery.IpamOperatingRegionProperty.builder()
 
+  /**
+   * @param regionName The name of the operating Region. 
+   */
   public fun regionName(regionName: String) {
     cdkBuilder.regionName(regionName)
   }

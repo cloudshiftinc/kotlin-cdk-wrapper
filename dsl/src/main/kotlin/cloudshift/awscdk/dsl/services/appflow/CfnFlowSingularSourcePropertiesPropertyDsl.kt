@@ -11,6 +11,9 @@ public class CfnFlowSingularSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.SingularSourcePropertiesProperty.Builder =
       CfnFlow.SingularSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Singular flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

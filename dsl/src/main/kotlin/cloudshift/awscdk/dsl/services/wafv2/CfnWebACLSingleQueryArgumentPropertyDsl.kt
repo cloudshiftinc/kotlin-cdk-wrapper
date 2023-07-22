@@ -11,6 +11,9 @@ public class CfnWebACLSingleQueryArgumentPropertyDsl {
   private val cdkBuilder: CfnWebACL.SingleQueryArgumentProperty.Builder =
       CfnWebACL.SingleQueryArgumentProperty.builder()
 
+  /**
+   * @param name The name of the query argument to inspect. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

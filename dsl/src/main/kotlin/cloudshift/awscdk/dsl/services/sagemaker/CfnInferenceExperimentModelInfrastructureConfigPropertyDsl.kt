@@ -12,14 +12,27 @@ public class CfnInferenceExperimentModelInfrastructureConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.ModelInfrastructureConfigProperty.Builder =
       CfnInferenceExperiment.ModelInfrastructureConfigProperty.builder()
 
+  /**
+   * @param infrastructureType The inference option to which to deploy your model. Possible values
+   * are the following:. 
+   * * `RealTime` : Deploy to real-time inference.
+   */
   public fun infrastructureType(infrastructureType: String) {
     cdkBuilder.infrastructureType(infrastructureType)
   }
 
+  /**
+   * @param realTimeInferenceConfig The infrastructure configuration for deploying the model to
+   * real-time inference. 
+   */
   public fun realTimeInferenceConfig(realTimeInferenceConfig: IResolvable) {
     cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig)
   }
 
+  /**
+   * @param realTimeInferenceConfig The infrastructure configuration for deploying the model to
+   * real-time inference. 
+   */
   public
       fun realTimeInferenceConfig(realTimeInferenceConfig: CfnInferenceExperiment.RealTimeInferenceConfigProperty) {
     cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig)

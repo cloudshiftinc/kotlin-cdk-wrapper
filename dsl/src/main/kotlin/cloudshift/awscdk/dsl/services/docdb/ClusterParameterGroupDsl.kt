@@ -16,18 +16,42 @@ public class ClusterParameterGroupDsl(
   private val cdkBuilder: ClusterParameterGroup.Builder =
       ClusterParameterGroup.Builder.create(scope, id)
 
+  /**
+   * The name of the cluster parameter group.
+   *
+   * Default: A CDK generated name for the cluster parameter group
+   *
+   * @param dbClusterParameterGroupName The name of the cluster parameter group. 
+   */
   public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
     cdkBuilder.dbClusterParameterGroupName(dbClusterParameterGroupName)
   }
 
+  /**
+   * Description for this parameter group.
+   *
+   * Default: a CDK generated description
+   *
+   * @param description Description for this parameter group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * Database family of this parameter group.
+   *
+   * @param family Database family of this parameter group. 
+   */
   public fun family(family: String) {
     cdkBuilder.family(family)
   }
 
+  /**
+   * The parameters in this parameter group.
+   *
+   * @param parameters The parameters in this parameter group. 
+   */
   public fun parameters(parameters: Map<String, String>) {
     cdkBuilder.parameters(parameters)
   }

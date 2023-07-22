@@ -15,10 +15,30 @@ public class CfnConfigurationSetSuppressionOptionsPropertyDsl {
 
   private val _suppressedReasons: MutableList<String> = mutableListOf()
 
+  /**
+   * @param suppressedReasons A list that contains the reasons that email addresses are
+   * automatically added to the suppression list for your account.
+   * This list can contain any or all of the following:
+   *
+   * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account when
+   * a message sent to that address results in a complaint.
+   * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when a
+   * message sent to that address results in a hard bounce.
+   */
   public fun suppressedReasons(vararg suppressedReasons: String) {
     _suppressedReasons.addAll(listOf(*suppressedReasons))
   }
 
+  /**
+   * @param suppressedReasons A list that contains the reasons that email addresses are
+   * automatically added to the suppression list for your account.
+   * This list can contain any or all of the following:
+   *
+   * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account when
+   * a message sent to that address results in a complaint.
+   * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when a
+   * message sent to that address results in a hard bounce.
+   */
   public fun suppressedReasons(suppressedReasons: Collection<String>) {
     _suppressedReasons.addAll(suppressedReasons)
   }

@@ -12,25 +12,39 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 public class AccessLogConfigDsl {
   private val cdkBuilder: AccessLogConfig.Builder = AccessLogConfig.builder()
 
+  /**
+   * @param virtualGatewayAccessLog VirtualGateway CFN configuration for Access Logging.
+   */
   public
-      fun virtualGatewayAccessLog(block: CfnVirtualGatewayVirtualGatewayAccessLogPropertyDsl.() -> Unit
+      fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGatewayVirtualGatewayAccessLogPropertyDsl.() -> Unit
       = {}) {
     val builder = CfnVirtualGatewayVirtualGatewayAccessLogPropertyDsl()
-    builder.apply(block)
+    builder.apply(virtualGatewayAccessLog)
     cdkBuilder.virtualGatewayAccessLog(builder.build())
   }
 
+  /**
+   * @param virtualGatewayAccessLog VirtualGateway CFN configuration for Access Logging.
+   */
   public
       fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty) {
     cdkBuilder.virtualGatewayAccessLog(virtualGatewayAccessLog)
   }
 
-  public fun virtualNodeAccessLog(block: CfnVirtualNodeAccessLogPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param virtualNodeAccessLog VirtualNode CFN configuration for Access Logging.
+   */
+  public
+      fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNodeAccessLogPropertyDsl.() -> Unit =
+      {}) {
     val builder = CfnVirtualNodeAccessLogPropertyDsl()
-    builder.apply(block)
+    builder.apply(virtualNodeAccessLog)
     cdkBuilder.virtualNodeAccessLog(builder.build())
   }
 
+  /**
+   * @param virtualNodeAccessLog VirtualNode CFN configuration for Access Logging.
+   */
   public fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty) {
     cdkBuilder.virtualNodeAccessLog(virtualNodeAccessLog)
   }

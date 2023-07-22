@@ -11,10 +11,18 @@ public class CfnEvaluationFormScoringStrategyPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.ScoringStrategyProperty.Builder =
       CfnEvaluationForm.ScoringStrategyProperty.builder()
 
+  /**
+   * @param mode The scoring mode of the evaluation form. 
+   * *Allowed values* : `QUESTION_ONLY` | `SECTION_ONLY`
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }
 
+  /**
+   * @param status The scoring status of the evaluation form. 
+   * *Allowed values* : `ENABLED` | `DISABLED`
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

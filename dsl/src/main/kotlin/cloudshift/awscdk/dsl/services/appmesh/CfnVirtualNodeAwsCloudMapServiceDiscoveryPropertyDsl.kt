@@ -17,26 +17,52 @@ public class CfnVirtualNodeAwsCloudMapServiceDiscoveryPropertyDsl {
 
   private val _attributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param attributes A string map that contains attributes with values that you can use to filter
+   * instances by any custom attribute that you specified when you registered the instance.
+   * Only instances that match all of the specified key/value pairs will be returned.
+   */
   public fun attributes(vararg attributes: Any) {
     _attributes.addAll(listOf(*attributes))
   }
 
+  /**
+   * @param attributes A string map that contains attributes with values that you can use to filter
+   * instances by any custom attribute that you specified when you registered the instance.
+   * Only instances that match all of the specified key/value pairs will be returned.
+   */
   public fun attributes(attributes: Collection<Any>) {
     _attributes.addAll(attributes)
   }
 
+  /**
+   * @param attributes A string map that contains attributes with values that you can use to filter
+   * instances by any custom attribute that you specified when you registered the instance.
+   * Only instances that match all of the specified key/value pairs will be returned.
+   */
   public fun attributes(attributes: IResolvable) {
     cdkBuilder.attributes(attributes)
   }
 
+  /**
+   * @param ipPreference The preferred IP version that this virtual node uses.
+   * Setting the IP preference on the virtual node only overrides the IP preference set for the mesh
+   * on this specific node.
+   */
   public fun ipPreference(ipPreference: String) {
     cdkBuilder.ipPreference(ipPreference)
   }
 
+  /**
+   * @param namespaceName The HTTP name of the AWS Cloud Map namespace to use. 
+   */
   public fun namespaceName(namespaceName: String) {
     cdkBuilder.namespaceName(namespaceName)
   }
 
+  /**
+   * @param serviceName The name of the AWS Cloud Map service to use. 
+   */
   public fun serviceName(serviceName: String) {
     cdkBuilder.serviceName(serviceName)
   }

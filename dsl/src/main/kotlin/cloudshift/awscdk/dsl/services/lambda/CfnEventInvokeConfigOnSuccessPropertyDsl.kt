@@ -11,6 +11,9 @@ public class CfnEventInvokeConfigOnSuccessPropertyDsl {
   private val cdkBuilder: CfnEventInvokeConfig.OnSuccessProperty.Builder =
       CfnEventInvokeConfig.OnSuccessProperty.builder()
 
+  /**
+   * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+   */
   public fun destination(destination: String) {
     cdkBuilder.destination(destination)
   }

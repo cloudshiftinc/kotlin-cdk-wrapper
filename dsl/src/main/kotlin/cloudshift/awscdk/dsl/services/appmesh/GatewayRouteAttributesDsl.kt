@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.IVirtualGateway
 public class GatewayRouteAttributesDsl {
   private val cdkBuilder: GatewayRouteAttributes.Builder = GatewayRouteAttributes.builder()
 
+  /**
+   * @param gatewayRouteName The name of the GatewayRoute. 
+   */
   public fun gatewayRouteName(gatewayRouteName: String) {
     cdkBuilder.gatewayRouteName(gatewayRouteName)
   }
 
+  /**
+   * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
+   */
   public fun virtualGateway(virtualGateway: IVirtualGateway) {
     cdkBuilder.virtualGateway(virtualGateway)
   }

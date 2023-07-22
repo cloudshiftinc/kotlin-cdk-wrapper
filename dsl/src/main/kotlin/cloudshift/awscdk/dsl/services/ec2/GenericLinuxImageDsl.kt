@@ -14,6 +14,13 @@ public class GenericLinuxImageDsl(
 ) {
   private val cdkBuilder: GenericLinuxImage.Builder = GenericLinuxImage.Builder.create(amiMap)
 
+  /**
+   * Initial user data.
+   *
+   * Default: - Empty UserData for Linux machines
+   *
+   * @param userData Initial user data. 
+   */
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)
   }

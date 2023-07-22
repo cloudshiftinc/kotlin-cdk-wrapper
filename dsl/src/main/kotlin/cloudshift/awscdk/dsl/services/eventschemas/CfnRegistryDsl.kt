@@ -19,18 +19,42 @@ public class CfnRegistryDsl(
 
   private val _tags: MutableList<CfnRegistry.TagsEntryProperty> = mutableListOf()
 
+  /**
+   * A description of the registry to be created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-description)
+   * @param description A description of the registry to be created. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the schema registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-registryname)
+   * @param registryName The name of the schema registry. 
+   */
   public fun registryName(registryName: String) {
     cdkBuilder.registryName(registryName)
   }
 
+  /**
+   * Tags to associate with the registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-tags)
+   * @param tags Tags to associate with the registry. 
+   */
   public fun tags(tags: CfnRegistryTagsEntryPropertyDsl.() -> Unit) {
     _tags.add(CfnRegistryTagsEntryPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * Tags to associate with the registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-tags)
+   * @param tags Tags to associate with the registry. 
+   */
   public fun tags(tags: Collection<CfnRegistry.TagsEntryProperty>) {
     _tags.addAll(tags)
   }

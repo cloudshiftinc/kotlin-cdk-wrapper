@@ -15,14 +15,23 @@ public class CfnScalingPlanTagFilterPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param key The tag key. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param values The tag values (0 to 20).
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The tag values (0 to 20).
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

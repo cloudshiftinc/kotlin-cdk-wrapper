@@ -13,30 +13,50 @@ import software.amazon.awscdk.services.iot1click.CfnPlacementProps
 public class CfnPlacementPropsDsl {
   private val cdkBuilder: CfnPlacementProps.Builder = CfnPlacementProps.builder()
 
-  public fun associatedDevices(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param associatedDevices The devices to associate with the placement, as defined by a mapping
+   * of zero or more key-value pairs wherein the key is a template name and the value is a device ID.
+   */
+  public fun associatedDevices(associatedDevices: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(associatedDevices)
     cdkBuilder.associatedDevices(builder.map)
   }
 
+  /**
+   * @param associatedDevices The devices to associate with the placement, as defined by a mapping
+   * of zero or more key-value pairs wherein the key is a template name and the value is a device ID.
+   */
   public fun associatedDevices(associatedDevices: Any) {
     cdkBuilder.associatedDevices(associatedDevices)
   }
 
-  public fun attributes(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param attributes The user-defined attributes associated with the placement.
+   */
+  public fun attributes(attributes: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(attributes)
     cdkBuilder.attributes(builder.map)
   }
 
+  /**
+   * @param attributes The user-defined attributes associated with the placement.
+   */
   public fun attributes(attributes: Any) {
     cdkBuilder.attributes(attributes)
   }
 
+  /**
+   * @param placementName The name of the placement.
+   */
   public fun placementName(placementName: String) {
     cdkBuilder.placementName(placementName)
   }
 
+  /**
+   * @param projectName The name of the project containing the placement. 
+   */
   public fun projectName(projectName: String) {
     cdkBuilder.projectName(projectName)
   }

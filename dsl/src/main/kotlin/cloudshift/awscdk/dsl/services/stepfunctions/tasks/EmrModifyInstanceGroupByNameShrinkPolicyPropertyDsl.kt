@@ -12,18 +12,30 @@ public class EmrModifyInstanceGroupByNameShrinkPolicyPropertyDsl {
   private val cdkBuilder: EmrModifyInstanceGroupByName.ShrinkPolicyProperty.Builder =
       EmrModifyInstanceGroupByName.ShrinkPolicyProperty.builder()
 
+  /**
+   * @param decommissionTimeout The desired timeout for decommissioning an instance.
+   * Overrides the default YARN decommissioning timeout.
+   */
   public fun decommissionTimeout(decommissionTimeout: Duration) {
     cdkBuilder.decommissionTimeout(decommissionTimeout)
   }
 
+  /**
+   * @param instanceResizePolicy Custom policy for requesting termination protection or termination
+   * of specific instances when shrinking an instance group.
+   */
   public
-      fun instanceResizePolicy(block: EmrModifyInstanceGroupByNameInstanceResizePolicyPropertyDsl.() -> Unit
+      fun instanceResizePolicy(instanceResizePolicy: EmrModifyInstanceGroupByNameInstanceResizePolicyPropertyDsl.() -> Unit
       = {}) {
     val builder = EmrModifyInstanceGroupByNameInstanceResizePolicyPropertyDsl()
-    builder.apply(block)
+    builder.apply(instanceResizePolicy)
     cdkBuilder.instanceResizePolicy(builder.build())
   }
 
+  /**
+   * @param instanceResizePolicy Custom policy for requesting termination protection or termination
+   * of specific instances when shrinking an instance group.
+   */
   public
       fun instanceResizePolicy(instanceResizePolicy: EmrModifyInstanceGroupByName.InstanceResizePolicyProperty) {
     cdkBuilder.instanceResizePolicy(instanceResizePolicy)

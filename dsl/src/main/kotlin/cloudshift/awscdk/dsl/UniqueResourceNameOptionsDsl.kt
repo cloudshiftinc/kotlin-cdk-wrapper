@@ -11,14 +11,24 @@ import software.amazon.awscdk.UniqueResourceNameOptions
 public class UniqueResourceNameOptionsDsl {
   private val cdkBuilder: UniqueResourceNameOptions.Builder = UniqueResourceNameOptions.builder()
 
+  /**
+   * @param allowedSpecialCharacters Non-alphanumeric characters allowed in the unique resource
+   * name.
+   */
   public fun allowedSpecialCharacters(allowedSpecialCharacters: String) {
     cdkBuilder.allowedSpecialCharacters(allowedSpecialCharacters)
   }
 
+  /**
+   * @param maxLength The maximum length of the unique resource name.
+   */
   public fun maxLength(maxLength: Number) {
     cdkBuilder.maxLength(maxLength)
   }
 
+  /**
+   * @param separator The separator used between the path components.
+   */
   public fun separator(separator: String) {
     cdkBuilder.separator(separator)
   }

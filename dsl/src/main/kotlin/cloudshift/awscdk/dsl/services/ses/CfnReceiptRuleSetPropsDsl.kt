@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ses.CfnReceiptRuleSetProps
 public class CfnReceiptRuleSetPropsDsl {
   private val cdkBuilder: CfnReceiptRuleSetProps.Builder = CfnReceiptRuleSetProps.builder()
 
+  /**
+   * @param ruleSetName The name of the receipt rule set to reorder.
+   */
   public fun ruleSetName(ruleSetName: String) {
     cdkBuilder.ruleSetName(ruleSetName)
   }

@@ -12,14 +12,23 @@ public class CfnChannelStaticKeySettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.StaticKeySettingsProperty.Builder =
       CfnChannel.StaticKeySettingsProperty.builder()
 
+  /**
+   * @param keyProviderServer The URL of the license server that is used for protecting content.
+   */
   public fun keyProviderServer(keyProviderServer: IResolvable) {
     cdkBuilder.keyProviderServer(keyProviderServer)
   }
 
+  /**
+   * @param keyProviderServer The URL of the license server that is used for protecting content.
+   */
   public fun keyProviderServer(keyProviderServer: CfnChannel.InputLocationProperty) {
     cdkBuilder.keyProviderServer(keyProviderServer)
   }
 
+  /**
+   * @param staticKeyValue The static key value as a 32 character hexadecimal string.
+   */
   public fun staticKeyValue(staticKeyValue: String) {
     cdkBuilder.staticKeyValue(staticKeyValue)
   }

@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.codepipeline.StagePlacement
 public class StagePlacementDsl {
   private val cdkBuilder: StagePlacement.Builder = StagePlacement.builder()
 
+  /**
+   * @param justAfter Inserts the new Stage as a child of the given Stage (changing its current
+   * child Stage, if it had one).
+   */
   public fun justAfter(justAfter: IStage) {
     cdkBuilder.justAfter(justAfter)
   }
 
+  /**
+   * @param rightBefore Inserts the new Stage as a parent of the given Stage (changing its current
+   * parent Stage, if it had one).
+   */
   public fun rightBefore(rightBefore: IStage) {
     cdkBuilder.rightBefore(rightBefore)
   }

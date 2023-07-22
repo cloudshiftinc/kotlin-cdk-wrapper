@@ -17,18 +17,30 @@ public class CfnThemeThemeValuePropertyDsl {
 
   private val _children: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param children A list of key-value pairs that define the theme's properties.
+   */
   public fun children(vararg children: Any) {
     _children.addAll(listOf(*children))
   }
 
+  /**
+   * @param children A list of key-value pairs that define the theme's properties.
+   */
   public fun children(children: Collection<Any>) {
     _children.addAll(children)
   }
 
+  /**
+   * @param children A list of key-value pairs that define the theme's properties.
+   */
   public fun children(children: IResolvable) {
     cdkBuilder.children(children)
   }
 
+  /**
+   * @param value The value of a theme property.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

@@ -11,10 +11,16 @@ public class CfnAnalysisLineChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LineChartFieldWellsProperty.Builder =
       CfnAnalysis.LineChartFieldWellsProperty.builder()
 
+  /**
+   * @param lineChartAggregatedFieldWells The field well configuration of a line chart.
+   */
   public fun lineChartAggregatedFieldWells(lineChartAggregatedFieldWells: IResolvable) {
     cdkBuilder.lineChartAggregatedFieldWells(lineChartAggregatedFieldWells)
   }
 
+  /**
+   * @param lineChartAggregatedFieldWells The field well configuration of a line chart.
+   */
   public
       fun lineChartAggregatedFieldWells(lineChartAggregatedFieldWells: CfnAnalysis.LineChartAggregatedFieldWellsProperty) {
     cdkBuilder.lineChartAggregatedFieldWells(lineChartAggregatedFieldWells)

@@ -21,50 +21,95 @@ public class CfnRuleActionsPropertyDsl {
 
   private val _taskActions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param assignContactCategoryActions Information about the contact category action.
+   * The syntax can be empty, for example, `{}` .
+   */
   public fun assignContactCategoryActions(vararg assignContactCategoryActions: Any) {
     _assignContactCategoryActions.addAll(listOf(*assignContactCategoryActions))
   }
 
+  /**
+   * @param assignContactCategoryActions Information about the contact category action.
+   * The syntax can be empty, for example, `{}` .
+   */
   public fun assignContactCategoryActions(assignContactCategoryActions: Collection<Any>) {
     _assignContactCategoryActions.addAll(assignContactCategoryActions)
   }
 
+  /**
+   * @param assignContactCategoryActions Information about the contact category action.
+   * The syntax can be empty, for example, `{}` .
+   */
   public fun assignContactCategoryActions(assignContactCategoryActions: IResolvable) {
     cdkBuilder.assignContactCategoryActions(assignContactCategoryActions)
   }
 
+  /**
+   * @param eventBridgeActions Information about the EventBridge action.
+   */
   public fun eventBridgeActions(vararg eventBridgeActions: Any) {
     _eventBridgeActions.addAll(listOf(*eventBridgeActions))
   }
 
+  /**
+   * @param eventBridgeActions Information about the EventBridge action.
+   */
   public fun eventBridgeActions(eventBridgeActions: Collection<Any>) {
     _eventBridgeActions.addAll(eventBridgeActions)
   }
 
+  /**
+   * @param eventBridgeActions Information about the EventBridge action.
+   */
   public fun eventBridgeActions(eventBridgeActions: IResolvable) {
     cdkBuilder.eventBridgeActions(eventBridgeActions)
   }
 
+  /**
+   * @param sendNotificationActions Information about the send notification action.
+   */
   public fun sendNotificationActions(vararg sendNotificationActions: Any) {
     _sendNotificationActions.addAll(listOf(*sendNotificationActions))
   }
 
+  /**
+   * @param sendNotificationActions Information about the send notification action.
+   */
   public fun sendNotificationActions(sendNotificationActions: Collection<Any>) {
     _sendNotificationActions.addAll(sendNotificationActions)
   }
 
+  /**
+   * @param sendNotificationActions Information about the send notification action.
+   */
   public fun sendNotificationActions(sendNotificationActions: IResolvable) {
     cdkBuilder.sendNotificationActions(sendNotificationActions)
   }
 
+  /**
+   * @param taskActions Information about the task action.
+   * This field is required if `TriggerEventSource` is one of the following values:
+   * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
+   */
   public fun taskActions(vararg taskActions: Any) {
     _taskActions.addAll(listOf(*taskActions))
   }
 
+  /**
+   * @param taskActions Information about the task action.
+   * This field is required if `TriggerEventSource` is one of the following values:
+   * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
+   */
   public fun taskActions(taskActions: Collection<Any>) {
     _taskActions.addAll(taskActions)
   }
 
+  /**
+   * @param taskActions Information about the task action.
+   * This field is required if `TriggerEventSource` is one of the following values:
+   * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
+   */
   public fun taskActions(taskActions: IResolvable) {
     cdkBuilder.taskActions(taskActions)
   }

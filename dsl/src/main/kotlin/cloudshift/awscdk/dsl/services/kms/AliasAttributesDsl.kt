@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.kms.IKey
 public class AliasAttributesDsl {
   private val cdkBuilder: AliasAttributes.Builder = AliasAttributes.builder()
 
+  /**
+   * @param aliasName Specifies the alias name. 
+   * This value must begin with alias/ followed by a name (i.e. alias/ExampleAlias)
+   */
   public fun aliasName(aliasName: String) {
     cdkBuilder.aliasName(aliasName)
   }
 
+  /**
+   * @param aliasTargetKey The customer master key (CMK) to which the Alias refers. 
+   */
   public fun aliasTargetKey(aliasTargetKey: IKey) {
     cdkBuilder.aliasTargetKey(aliasTargetKey)
   }

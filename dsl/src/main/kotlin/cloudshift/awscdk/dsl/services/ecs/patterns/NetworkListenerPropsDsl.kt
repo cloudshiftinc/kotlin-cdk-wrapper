@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps
 public class NetworkListenerPropsDsl {
   private val cdkBuilder: NetworkListenerProps.Builder = NetworkListenerProps.builder()
 
+  /**
+   * @param name Name of the listener. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param port The port on which the listener listens for requests.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

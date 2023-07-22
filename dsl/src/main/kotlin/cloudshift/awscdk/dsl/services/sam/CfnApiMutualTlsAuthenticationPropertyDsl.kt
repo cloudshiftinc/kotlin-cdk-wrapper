@@ -11,10 +11,16 @@ public class CfnApiMutualTlsAuthenticationPropertyDsl {
   private val cdkBuilder: CfnApi.MutualTlsAuthenticationProperty.Builder =
       CfnApi.MutualTlsAuthenticationProperty.builder()
 
+  /**
+   * @param truststoreUri the value to be set.
+   */
   public fun truststoreUri(truststoreUri: String) {
     cdkBuilder.truststoreUri(truststoreUri)
   }
 
+  /**
+   * @param truststoreVersion the value to be set.
+   */
   public fun truststoreVersion(truststoreVersion: String) {
     cdkBuilder.truststoreVersion(truststoreVersion)
   }

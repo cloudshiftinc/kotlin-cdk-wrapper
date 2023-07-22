@@ -19,28 +19,54 @@ public class CfnCoreNetworkPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of a core network.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param globalNetworkId The ID of the global network that your core network is a part of. 
+   */
   public fun globalNetworkId(globalNetworkId: String) {
     cdkBuilder.globalNetworkId(globalNetworkId)
   }
 
-  public fun policyDocument(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policyDocument Describes a core network policy. For more information, see [Core network
+   * policies](https://docs.aws.amazon.com/network-manager/latest/cloudwan/cloudwan-policy-change-sets.html)
+   * .
+   * If you update the policy document, CloudFormation will apply the core network change set
+   * generated from the updated policy document, and then set it as the LIVE policy.
+   */
+  public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policyDocument)
     cdkBuilder.policyDocument(builder.map)
   }
 
+  /**
+   * @param policyDocument Describes a core network policy. For more information, see [Core network
+   * policies](https://docs.aws.amazon.com/network-manager/latest/cloudwan/cloudwan-policy-change-sets.html)
+   * .
+   * If you update the policy document, CloudFormation will apply the core network change set
+   * generated from the updated policy document, and then set it as the LIVE policy.
+   */
   public fun policyDocument(policyDocument: Any) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * @param tags The list of key-value tags associated with a core network.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The list of key-value tags associated with a core network.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

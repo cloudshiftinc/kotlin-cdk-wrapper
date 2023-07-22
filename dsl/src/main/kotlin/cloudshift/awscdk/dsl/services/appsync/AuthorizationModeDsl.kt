@@ -15,46 +15,82 @@ import software.amazon.awscdk.services.appsync.UserPoolConfig
 public class AuthorizationModeDsl {
   private val cdkBuilder: AuthorizationMode.Builder = AuthorizationMode.builder()
 
-  public fun apiKeyConfig(block: ApiKeyConfigDsl.() -> Unit = {}) {
+  /**
+   * @param apiKeyConfig If authorizationType is `AuthorizationType.API_KEY`, this option can be
+   * configured.
+   */
+  public fun apiKeyConfig(apiKeyConfig: ApiKeyConfigDsl.() -> Unit = {}) {
     val builder = ApiKeyConfigDsl()
-    builder.apply(block)
+    builder.apply(apiKeyConfig)
     cdkBuilder.apiKeyConfig(builder.build())
   }
 
+  /**
+   * @param apiKeyConfig If authorizationType is `AuthorizationType.API_KEY`, this option can be
+   * configured.
+   */
   public fun apiKeyConfig(apiKeyConfig: ApiKeyConfig) {
     cdkBuilder.apiKeyConfig(apiKeyConfig)
   }
 
+  /**
+   * @param authorizationType One of possible four values AppSync supports. 
+   */
   public fun authorizationType(authorizationType: AuthorizationType) {
     cdkBuilder.authorizationType(authorizationType)
   }
 
-  public fun lambdaAuthorizerConfig(block: LambdaAuthorizerConfigDsl.() -> Unit = {}) {
+  /**
+   * @param lambdaAuthorizerConfig If authorizationType is `AuthorizationType.LAMBDA`, this option
+   * is required.
+   */
+  public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigDsl.() -> Unit =
+      {}) {
     val builder = LambdaAuthorizerConfigDsl()
-    builder.apply(block)
+    builder.apply(lambdaAuthorizerConfig)
     cdkBuilder.lambdaAuthorizerConfig(builder.build())
   }
 
+  /**
+   * @param lambdaAuthorizerConfig If authorizationType is `AuthorizationType.LAMBDA`, this option
+   * is required.
+   */
   public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfig) {
     cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig)
   }
 
-  public fun openIdConnectConfig(block: OpenIdConnectConfigDsl.() -> Unit = {}) {
+  /**
+   * @param openIdConnectConfig If authorizationType is `AuthorizationType.OIDC`, this option is
+   * required.
+   */
+  public fun openIdConnectConfig(openIdConnectConfig: OpenIdConnectConfigDsl.() -> Unit = {}) {
     val builder = OpenIdConnectConfigDsl()
-    builder.apply(block)
+    builder.apply(openIdConnectConfig)
     cdkBuilder.openIdConnectConfig(builder.build())
   }
 
+  /**
+   * @param openIdConnectConfig If authorizationType is `AuthorizationType.OIDC`, this option is
+   * required.
+   */
   public fun openIdConnectConfig(openIdConnectConfig: OpenIdConnectConfig) {
     cdkBuilder.openIdConnectConfig(openIdConnectConfig)
   }
 
-  public fun userPoolConfig(block: UserPoolConfigDsl.() -> Unit = {}) {
+  /**
+   * @param userPoolConfig If authorizationType is `AuthorizationType.USER_POOL`, this option is
+   * required.
+   */
+  public fun userPoolConfig(userPoolConfig: UserPoolConfigDsl.() -> Unit = {}) {
     val builder = UserPoolConfigDsl()
-    builder.apply(block)
+    builder.apply(userPoolConfig)
     cdkBuilder.userPoolConfig(builder.build())
   }
 
+  /**
+   * @param userPoolConfig If authorizationType is `AuthorizationType.USER_POOL`, this option is
+   * required.
+   */
   public fun userPoolConfig(userPoolConfig: UserPoolConfig) {
     cdkBuilder.userPoolConfig(userPoolConfig)
   }

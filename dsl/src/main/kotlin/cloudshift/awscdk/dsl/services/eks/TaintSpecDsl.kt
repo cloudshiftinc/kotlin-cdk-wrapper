@@ -11,14 +11,23 @@ import software.amazon.awscdk.services.eks.TaintSpec
 public class TaintSpecDsl {
   private val cdkBuilder: TaintSpec.Builder = TaintSpec.builder()
 
+  /**
+   * @param effect Effect type.
+   */
   public fun effect(effect: TaintEffect) {
     cdkBuilder.effect(effect)
   }
 
+  /**
+   * @param key Taint key.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value Taint value.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

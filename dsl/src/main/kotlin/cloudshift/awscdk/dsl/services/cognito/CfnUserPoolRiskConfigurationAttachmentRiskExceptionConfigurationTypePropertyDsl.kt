@@ -18,18 +18,40 @@ public class CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTyp
 
   private val _skippedIpRangeList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param blockedIpRangeList Overrides the risk decision to always block the pre-authentication
+   * requests.
+   * The IP range is in CIDR notation, a compact representation of an IP address and its routing
+   * prefix.
+   */
   public fun blockedIpRangeList(vararg blockedIpRangeList: String) {
     _blockedIpRangeList.addAll(listOf(*blockedIpRangeList))
   }
 
+  /**
+   * @param blockedIpRangeList Overrides the risk decision to always block the pre-authentication
+   * requests.
+   * The IP range is in CIDR notation, a compact representation of an IP address and its routing
+   * prefix.
+   */
   public fun blockedIpRangeList(blockedIpRangeList: Collection<String>) {
     _blockedIpRangeList.addAll(blockedIpRangeList)
   }
 
+  /**
+   * @param skippedIpRangeList Risk detection isn't performed on the IP addresses in this range
+   * list.
+   * The IP range is in CIDR notation.
+   */
   public fun skippedIpRangeList(vararg skippedIpRangeList: String) {
     _skippedIpRangeList.addAll(listOf(*skippedIpRangeList))
   }
 
+  /**
+   * @param skippedIpRangeList Risk detection isn't performed on the IP addresses in this range
+   * list.
+   * The IP range is in CIDR notation.
+   */
   public fun skippedIpRangeList(skippedIpRangeList: Collection<String>) {
     _skippedIpRangeList.addAll(skippedIpRangeList)
   }

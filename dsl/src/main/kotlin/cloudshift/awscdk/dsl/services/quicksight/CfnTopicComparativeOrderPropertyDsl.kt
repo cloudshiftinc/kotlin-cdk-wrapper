@@ -15,18 +15,32 @@ public class CfnTopicComparativeOrderPropertyDsl {
 
   private val _specifedOrder: MutableList<String> = mutableListOf()
 
+  /**
+   * @param specifedOrder The list of columns to be used in the ordering.
+   */
   public fun specifedOrder(vararg specifedOrder: String) {
     _specifedOrder.addAll(listOf(*specifedOrder))
   }
 
+  /**
+   * @param specifedOrder The list of columns to be used in the ordering.
+   */
   public fun specifedOrder(specifedOrder: Collection<String>) {
     _specifedOrder.addAll(specifedOrder)
   }
 
+  /**
+   * @param treatUndefinedSpecifiedValues The treat of undefined specified values.
+   * Valid values for this structure are `LEAST` and `MOST` .
+   */
   public fun treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues: String) {
     cdkBuilder.treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues)
   }
 
+  /**
+   * @param useOrdering The ordering type for a column.
+   * Valid values for this structure are `GREATER_IS_BETTER` , `LESSER_IS_BETTER` and `SPECIFIED` .
+   */
   public fun useOrdering(useOrdering: String) {
     cdkBuilder.useOrdering(useOrdering)
   }

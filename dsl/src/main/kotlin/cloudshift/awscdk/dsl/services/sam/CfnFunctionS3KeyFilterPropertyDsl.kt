@@ -16,14 +16,23 @@ public class CfnFunctionS3KeyFilterPropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param rules the value to be set. 
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules the value to be set. 
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules the value to be set. 
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

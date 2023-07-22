@@ -11,6 +11,12 @@ public class CfnDomainConfigurationTlsConfigPropertyDsl {
   private val cdkBuilder: CfnDomainConfiguration.TlsConfigProperty.Builder =
       CfnDomainConfiguration.TlsConfigProperty.builder()
 
+  /**
+   * @param securityPolicy The security policy for a domain configuration.
+   * For more information, see [Security
+   * policies](https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html#tls-policy-table)
+   * in the *AWS IoT Core developer guide* .
+   */
   public fun securityPolicy(securityPolicy: String) {
     cdkBuilder.securityPolicy(securityPolicy)
   }

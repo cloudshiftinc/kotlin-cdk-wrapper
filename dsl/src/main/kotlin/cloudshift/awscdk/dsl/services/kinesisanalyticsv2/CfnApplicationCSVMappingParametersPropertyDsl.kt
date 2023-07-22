@@ -11,10 +11,18 @@ public class CfnApplicationCSVMappingParametersPropertyDsl {
   private val cdkBuilder: CfnApplication.CSVMappingParametersProperty.Builder =
       CfnApplication.CSVMappingParametersProperty.builder()
 
+  /**
+   * @param recordColumnDelimiter The column delimiter. 
+   * For example, in a CSV format, a comma (",") is the typical column delimiter.
+   */
   public fun recordColumnDelimiter(recordColumnDelimiter: String) {
     cdkBuilder.recordColumnDelimiter(recordColumnDelimiter)
   }
 
+  /**
+   * @param recordRowDelimiter The row delimiter. 
+   * For example, in a CSV format, *'\n'* is the typical row delimiter.
+   */
   public fun recordRowDelimiter(recordRowDelimiter: String) {
     cdkBuilder.recordRowDelimiter(recordRowDelimiter)
   }

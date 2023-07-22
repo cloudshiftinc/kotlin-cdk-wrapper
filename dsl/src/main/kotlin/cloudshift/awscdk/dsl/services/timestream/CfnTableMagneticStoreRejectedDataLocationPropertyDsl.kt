@@ -11,10 +11,18 @@ public class CfnTableMagneticStoreRejectedDataLocationPropertyDsl {
   private val cdkBuilder: CfnTable.MagneticStoreRejectedDataLocationProperty.Builder =
       CfnTable.MagneticStoreRejectedDataLocationProperty.builder()
 
+  /**
+   * @param s3Configuration Configuration of an S3 location to write error reports for records
+   * rejected, asynchronously, during magnetic store writes.
+   */
   public fun s3Configuration(s3Configuration: IResolvable) {
     cdkBuilder.s3Configuration(s3Configuration)
   }
 
+  /**
+   * @param s3Configuration Configuration of an S3 location to write error reports for records
+   * rejected, asynchronously, during magnetic store writes.
+   */
   public fun s3Configuration(s3Configuration: CfnTable.S3ConfigurationProperty) {
     cdkBuilder.s3Configuration(s3Configuration)
   }

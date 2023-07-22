@@ -11,10 +11,16 @@ public class CfnRotationWeeklySettingPropertyDsl {
   private val cdkBuilder: CfnRotation.WeeklySettingProperty.Builder =
       CfnRotation.WeeklySettingProperty.builder()
 
+  /**
+   * @param dayOfWeek The day of the week when weekly recurring on-call shift rotations begins. 
+   */
   public fun dayOfWeek(dayOfWeek: String) {
     cdkBuilder.dayOfWeek(dayOfWeek)
   }
 
+  /**
+   * @param handOffTime The time of day when a weekly recurring on-call shift rotation begins. 
+   */
   public fun handOffTime(handOffTime: String) {
     cdkBuilder.handOffTime(handOffTime)
   }

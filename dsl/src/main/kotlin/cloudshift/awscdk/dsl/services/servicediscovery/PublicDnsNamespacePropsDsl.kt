@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps
 public class PublicDnsNamespacePropsDsl {
   private val cdkBuilder: PublicDnsNamespaceProps.Builder = PublicDnsNamespaceProps.builder()
 
+  /**
+   * @param description A description of the Namespace.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name A name for the Namespace. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

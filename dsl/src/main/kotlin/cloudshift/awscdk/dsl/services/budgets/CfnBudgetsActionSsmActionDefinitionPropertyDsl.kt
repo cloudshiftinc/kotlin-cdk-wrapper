@@ -15,18 +15,30 @@ public class CfnBudgetsActionSsmActionDefinitionPropertyDsl {
 
   private val _instanceIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param instanceIds The EC2 and RDS instance IDs. 
+   */
   public fun instanceIds(vararg instanceIds: String) {
     _instanceIds.addAll(listOf(*instanceIds))
   }
 
+  /**
+   * @param instanceIds The EC2 and RDS instance IDs. 
+   */
   public fun instanceIds(instanceIds: Collection<String>) {
     _instanceIds.addAll(instanceIds)
   }
 
+  /**
+   * @param region The Region to run the ( SSM ) document. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * @param subtype The action subType. 
+   */
   public fun subtype(subtype: String) {
     cdkBuilder.subtype(subtype)
   }

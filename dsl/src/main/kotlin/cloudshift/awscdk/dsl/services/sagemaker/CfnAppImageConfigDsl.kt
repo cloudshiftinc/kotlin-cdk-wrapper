@@ -22,23 +22,65 @@ public class CfnAppImageConfigDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the AppImageConfig.
+   *
+   * Must be unique to your account.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-appimageconfigname)
+   * @param appImageConfigName The name of the AppImageConfig. 
+   */
   public fun appImageConfigName(appImageConfigName: String) {
     cdkBuilder.appImageConfigName(appImageConfigName)
   }
 
+  /**
+   * The configuration for the file system and kernels in the SageMaker image.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
+   * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
+   * SageMaker image. 
+   */
   public fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
     cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig)
   }
 
+  /**
+   * The configuration for the file system and kernels in the SageMaker image.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
+   * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
+   * SageMaker image. 
+   */
   public
       fun kernelGatewayImageConfig(kernelGatewayImageConfig: CfnAppImageConfig.KernelGatewayImageConfigProperty) {
     cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

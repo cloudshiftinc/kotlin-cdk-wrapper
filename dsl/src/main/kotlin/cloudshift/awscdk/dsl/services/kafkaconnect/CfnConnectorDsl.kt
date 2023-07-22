@@ -21,88 +21,237 @@ public class CfnConnectorDsl(
 
   private val _plugins: MutableList<Any> = mutableListOf()
 
+  /**
+   * The connector's compute capacity settings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-capacity)
+   * @param capacity The connector's compute capacity settings. 
+   */
   public fun capacity(capacity: IResolvable) {
     cdkBuilder.capacity(capacity)
   }
 
+  /**
+   * The connector's compute capacity settings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-capacity)
+   * @param capacity The connector's compute capacity settings. 
+   */
   public fun capacity(capacity: CfnConnector.CapacityProperty) {
     cdkBuilder.capacity(capacity)
   }
 
+  /**
+   * The configuration of the connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorconfiguration)
+   * @param connectorConfiguration The configuration of the connector. 
+   */
   public fun connectorConfiguration(connectorConfiguration: Map<String, String>) {
     cdkBuilder.connectorConfiguration(connectorConfiguration)
   }
 
+  /**
+   * The configuration of the connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorconfiguration)
+   * @param connectorConfiguration The configuration of the connector. 
+   */
   public fun connectorConfiguration(connectorConfiguration: IResolvable) {
     cdkBuilder.connectorConfiguration(connectorConfiguration)
   }
 
+  /**
+   * The description of the connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectordescription)
+   * @param connectorDescription The description of the connector. 
+   */
   public fun connectorDescription(connectorDescription: String) {
     cdkBuilder.connectorDescription(connectorDescription)
   }
 
+  /**
+   * The name of the connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorname)
+   * @param connectorName The name of the connector. 
+   */
   public fun connectorName(connectorName: String) {
     cdkBuilder.connectorName(connectorName)
   }
 
+  /**
+   * The details of the Apache Kafka cluster to which the connector is connected.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-kafkacluster)
+   * @param kafkaCluster The details of the Apache Kafka cluster to which the connector is
+   * connected. 
+   */
   public fun kafkaCluster(kafkaCluster: IResolvable) {
     cdkBuilder.kafkaCluster(kafkaCluster)
   }
 
+  /**
+   * The details of the Apache Kafka cluster to which the connector is connected.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-kafkacluster)
+   * @param kafkaCluster The details of the Apache Kafka cluster to which the connector is
+   * connected. 
+   */
   public fun kafkaCluster(kafkaCluster: CfnConnector.KafkaClusterProperty) {
     cdkBuilder.kafkaCluster(kafkaCluster)
   }
 
+  /**
+   * The type of client authentication used to connect to the Apache Kafka cluster.
+   *
+   * The value is NONE when no client authentication is used.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-kafkaclusterclientauthentication)
+   * @param kafkaClusterClientAuthentication The type of client authentication used to connect to
+   * the Apache Kafka cluster. 
+   */
   public fun kafkaClusterClientAuthentication(kafkaClusterClientAuthentication: IResolvable) {
     cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication)
   }
 
+  /**
+   * The type of client authentication used to connect to the Apache Kafka cluster.
+   *
+   * The value is NONE when no client authentication is used.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-kafkaclusterclientauthentication)
+   * @param kafkaClusterClientAuthentication The type of client authentication used to connect to
+   * the Apache Kafka cluster. 
+   */
   public
       fun kafkaClusterClientAuthentication(kafkaClusterClientAuthentication: CfnConnector.KafkaClusterClientAuthenticationProperty) {
     cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication)
   }
 
+  /**
+   * Details of encryption in transit to the Apache Kafka cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-kafkaclusterencryptionintransit)
+   * @param kafkaClusterEncryptionInTransit Details of encryption in transit to the Apache Kafka
+   * cluster. 
+   */
   public fun kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit: IResolvable) {
     cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit)
   }
 
+  /**
+   * Details of encryption in transit to the Apache Kafka cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-kafkaclusterencryptionintransit)
+   * @param kafkaClusterEncryptionInTransit Details of encryption in transit to the Apache Kafka
+   * cluster. 
+   */
   public
       fun kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit: CfnConnector.KafkaClusterEncryptionInTransitProperty) {
     cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit)
   }
 
+  /**
+   * The version of Kafka Connect.
+   *
+   * It has to be compatible with both the Apache Kafka cluster's version and the plugins.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-kafkaconnectversion)
+   * @param kafkaConnectVersion The version of Kafka Connect. 
+   */
   public fun kafkaConnectVersion(kafkaConnectVersion: String) {
     cdkBuilder.kafkaConnectVersion(kafkaConnectVersion)
   }
 
+  /**
+   * The settings for delivering connector logs to Amazon CloudWatch Logs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-logdelivery)
+   * @param logDelivery The settings for delivering connector logs to Amazon CloudWatch Logs. 
+   */
   public fun logDelivery(logDelivery: IResolvable) {
     cdkBuilder.logDelivery(logDelivery)
   }
 
+  /**
+   * The settings for delivering connector logs to Amazon CloudWatch Logs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-logdelivery)
+   * @param logDelivery The settings for delivering connector logs to Amazon CloudWatch Logs. 
+   */
   public fun logDelivery(logDelivery: CfnConnector.LogDeliveryProperty) {
     cdkBuilder.logDelivery(logDelivery)
   }
 
+  /**
+   * Specifies which plugin to use for the connector.
+   *
+   * You must specify a single-element list. Amazon MSK Connect does not currently support
+   * specifying multiple plugins.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-plugins)
+   * @param plugins Specifies which plugin to use for the connector. 
+   */
   public fun plugins(vararg plugins: Any) {
     _plugins.addAll(listOf(*plugins))
   }
 
+  /**
+   * Specifies which plugin to use for the connector.
+   *
+   * You must specify a single-element list. Amazon MSK Connect does not currently support
+   * specifying multiple plugins.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-plugins)
+   * @param plugins Specifies which plugin to use for the connector. 
+   */
   public fun plugins(plugins: Collection<Any>) {
     _plugins.addAll(plugins)
   }
 
+  /**
+   * Specifies which plugin to use for the connector.
+   *
+   * You must specify a single-element list. Amazon MSK Connect does not currently support
+   * specifying multiple plugins.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-plugins)
+   * @param plugins Specifies which plugin to use for the connector. 
+   */
   public fun plugins(plugins: IResolvable) {
     cdkBuilder.plugins(plugins)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon Web
+   * Services resources.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-serviceexecutionrolearn)
+   * @param serviceExecutionRoleArn The Amazon Resource Name (ARN) of the IAM role used by the
+   * connector to access Amazon Web Services resources. 
+   */
   public fun serviceExecutionRoleArn(serviceExecutionRoleArn: String) {
     cdkBuilder.serviceExecutionRoleArn(serviceExecutionRoleArn)
   }
 
+  /**
+   * The worker configurations that are in use with the connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-workerconfiguration)
+   * @param workerConfiguration The worker configurations that are in use with the connector. 
+   */
   public fun workerConfiguration(workerConfiguration: IResolvable) {
     cdkBuilder.workerConfiguration(workerConfiguration)
   }
 
+  /**
+   * The worker configurations that are in use with the connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-workerconfiguration)
+   * @param workerConfiguration The worker configurations that are in use with the connector. 
+   */
   public fun workerConfiguration(workerConfiguration: CfnConnector.WorkerConfigurationProperty) {
     cdkBuilder.workerConfiguration(workerConfiguration)
   }

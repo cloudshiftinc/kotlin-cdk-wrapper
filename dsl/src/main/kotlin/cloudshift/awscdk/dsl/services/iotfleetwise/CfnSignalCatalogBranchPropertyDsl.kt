@@ -11,10 +11,17 @@ public class CfnSignalCatalogBranchPropertyDsl {
   private val cdkBuilder: CfnSignalCatalog.BranchProperty.Builder =
       CfnSignalCatalog.BranchProperty.builder()
 
+  /**
+   * @param description (Optional) A brief description of the branch.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param fullyQualifiedName The fully qualified name of the branch. 
+   * For example, the fully qualified name of a branch might be `Vehicle.Body.Engine` .
+   */
   public fun fullyQualifiedName(fullyQualifiedName: String) {
     cdkBuilder.fullyQualifiedName(fullyQualifiedName)
   }

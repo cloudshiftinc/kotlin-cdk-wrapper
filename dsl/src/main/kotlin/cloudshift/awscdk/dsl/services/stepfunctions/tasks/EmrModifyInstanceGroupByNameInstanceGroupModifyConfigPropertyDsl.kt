@@ -20,33 +20,59 @@ public class EmrModifyInstanceGroupByNameInstanceGroupModifyConfigPropertyDsl {
 
   private val _eC2InstanceIdsToTerminate: MutableList<String> = mutableListOf()
 
+  /**
+   * @param configurations A list of new or modified configurations to apply for an instance group.
+   */
   public fun configurations(configurations: EmrCreateClusterConfigurationPropertyDsl.() -> Unit) {
     _configurations.add(EmrCreateClusterConfigurationPropertyDsl().apply(configurations).build())
   }
 
+  /**
+   * @param configurations A list of new or modified configurations to apply for an instance group.
+   */
   public fun configurations(configurations: Collection<EmrCreateCluster.ConfigurationProperty>) {
     _configurations.addAll(configurations)
   }
 
+  /**
+   * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
+   * After you terminate the instances, the instance group will not return to its original requested
+   * size.
+   */
   public fun eC2InstanceIdsToTerminate(vararg eC2InstanceIdsToTerminate: String) {
     _eC2InstanceIdsToTerminate.addAll(listOf(*eC2InstanceIdsToTerminate))
   }
 
+  /**
+   * @param eC2InstanceIdsToTerminate The EC2 InstanceIds to terminate.
+   * After you terminate the instances, the instance group will not return to its original requested
+   * size.
+   */
   public fun eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate: Collection<String>) {
     _eC2InstanceIdsToTerminate.addAll(eC2InstanceIdsToTerminate)
   }
 
+  /**
+   * @param instanceCount Target size for the instance group.
+   */
   public fun instanceCount(instanceCount: Number) {
     cdkBuilder.instanceCount(instanceCount)
   }
 
-  public fun shrinkPolicy(block: EmrModifyInstanceGroupByNameShrinkPolicyPropertyDsl.() -> Unit =
-      {}) {
+  /**
+   * @param shrinkPolicy Policy for customizing shrink operations.
+   */
+  public
+      fun shrinkPolicy(shrinkPolicy: EmrModifyInstanceGroupByNameShrinkPolicyPropertyDsl.() -> Unit
+      = {}) {
     val builder = EmrModifyInstanceGroupByNameShrinkPolicyPropertyDsl()
-    builder.apply(block)
+    builder.apply(shrinkPolicy)
     cdkBuilder.shrinkPolicy(builder.build())
   }
 
+  /**
+   * @param shrinkPolicy Policy for customizing shrink operations.
+   */
   public fun shrinkPolicy(shrinkPolicy: EmrModifyInstanceGroupByName.ShrinkPolicyProperty) {
     cdkBuilder.shrinkPolicy(shrinkPolicy)
   }

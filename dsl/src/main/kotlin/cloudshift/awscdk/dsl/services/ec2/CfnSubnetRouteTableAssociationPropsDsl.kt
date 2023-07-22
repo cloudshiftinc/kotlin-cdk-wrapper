@@ -11,10 +11,17 @@ public class CfnSubnetRouteTableAssociationPropsDsl {
   private val cdkBuilder: CfnSubnetRouteTableAssociationProps.Builder =
       CfnSubnetRouteTableAssociationProps.builder()
 
+  /**
+   * @param routeTableId The ID of the route table. 
+   * The physical ID changes when the route table ID is changed.
+   */
   public fun routeTableId(routeTableId: String) {
     cdkBuilder.routeTableId(routeTableId)
   }
 
+  /**
+   * @param subnetId The ID of the subnet. 
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

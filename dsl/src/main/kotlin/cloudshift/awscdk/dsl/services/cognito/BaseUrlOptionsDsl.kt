@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.cognito.BaseUrlOptions
 public class BaseUrlOptionsDsl {
   private val cdkBuilder: BaseUrlOptions.Builder = BaseUrlOptions.builder()
 
+  /**
+   * @param fips Whether to return the FIPS-compliant endpoint.
+   */
   public fun fips(fips: Boolean) {
     cdkBuilder.fips(fips)
   }

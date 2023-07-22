@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.appmesh.HeaderMatchConfig
 public class HeaderMatchConfigDsl {
   private val cdkBuilder: HeaderMatchConfig.Builder = HeaderMatchConfig.builder()
 
-  public fun headerMatch(block: CfnRouteHttpRouteHeaderPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param headerMatch Route CFN configuration for the route header match. 
+   */
+  public fun headerMatch(headerMatch: CfnRouteHttpRouteHeaderPropertyDsl.() -> Unit = {}) {
     val builder = CfnRouteHttpRouteHeaderPropertyDsl()
-    builder.apply(block)
+    builder.apply(headerMatch)
     cdkBuilder.headerMatch(builder.build())
   }
 
+  /**
+   * @param headerMatch Route CFN configuration for the route header match. 
+   */
   public fun headerMatch(headerMatch: CfnRoute.HttpRouteHeaderProperty) {
     cdkBuilder.headerMatch(headerMatch)
   }

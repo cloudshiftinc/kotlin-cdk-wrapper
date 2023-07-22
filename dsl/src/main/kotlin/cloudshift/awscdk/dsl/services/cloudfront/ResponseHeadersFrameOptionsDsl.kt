@@ -12,10 +12,17 @@ public class ResponseHeadersFrameOptionsDsl {
   private val cdkBuilder: ResponseHeadersFrameOptions.Builder =
       ResponseHeadersFrameOptions.builder()
 
+  /**
+   * @param frameOption The value of the X-Frame-Options HTTP response header. 
+   */
   public fun frameOption(frameOption: HeadersFrameOption) {
     cdkBuilder.frameOption(frameOption)
   }
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides the X-Frame-Options HTTP
+   * response header received from the origin with the one specified in this response headers policy. 
+   */
   public fun `override`(`override`: Boolean) {
     cdkBuilder.`override`(`override`)
   }

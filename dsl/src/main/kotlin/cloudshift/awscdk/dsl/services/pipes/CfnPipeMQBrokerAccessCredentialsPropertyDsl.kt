@@ -11,6 +11,9 @@ public class CfnPipeMQBrokerAccessCredentialsPropertyDsl {
   private val cdkBuilder: CfnPipe.MQBrokerAccessCredentialsProperty.Builder =
       CfnPipe.MQBrokerAccessCredentialsProperty.builder()
 
+  /**
+   * @param basicAuth The ARN of the Secrets Manager secret. 
+   */
   public fun basicAuth(basicAuth: String) {
     cdkBuilder.basicAuth(basicAuth)
   }

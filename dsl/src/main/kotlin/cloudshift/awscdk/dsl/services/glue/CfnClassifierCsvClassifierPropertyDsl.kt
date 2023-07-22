@@ -17,42 +17,83 @@ public class CfnClassifierCsvClassifierPropertyDsl {
 
   private val _header: MutableList<String> = mutableListOf()
 
+  /**
+   * @param allowSingleColumn Enables the processing of files that contain only one column.
+   */
   public fun allowSingleColumn(allowSingleColumn: Boolean) {
     cdkBuilder.allowSingleColumn(allowSingleColumn)
   }
 
+  /**
+   * @param allowSingleColumn Enables the processing of files that contain only one column.
+   */
   public fun allowSingleColumn(allowSingleColumn: IResolvable) {
     cdkBuilder.allowSingleColumn(allowSingleColumn)
   }
 
+  /**
+   * @param containsHeader Indicates whether the CSV file contains a header.
+   * A value of `UNKNOWN` specifies that the classifier will detect whether the CSV file contains
+   * headings.
+   *
+   * A value of `PRESENT` specifies that the CSV file contains headings.
+   *
+   * A value of `ABSENT` specifies that the CSV file does not contain headings.
+   */
   public fun containsHeader(containsHeader: String) {
     cdkBuilder.containsHeader(containsHeader)
   }
 
+  /**
+   * @param delimiter A custom symbol to denote what separates each column entry in the row.
+   */
   public fun delimiter(delimiter: String) {
     cdkBuilder.delimiter(delimiter)
   }
 
+  /**
+   * @param disableValueTrimming Specifies not to trim values before identifying the type of column
+   * values.
+   * The default value is `true` .
+   */
   public fun disableValueTrimming(disableValueTrimming: Boolean) {
     cdkBuilder.disableValueTrimming(disableValueTrimming)
   }
 
+  /**
+   * @param disableValueTrimming Specifies not to trim values before identifying the type of column
+   * values.
+   * The default value is `true` .
+   */
   public fun disableValueTrimming(disableValueTrimming: IResolvable) {
     cdkBuilder.disableValueTrimming(disableValueTrimming)
   }
 
+  /**
+   * @param header A list of strings representing column names.
+   */
   public fun `header`(vararg `header`: String) {
     _header.addAll(listOf(*`header`))
   }
 
+  /**
+   * @param header A list of strings representing column names.
+   */
   public fun `header`(`header`: Collection<String>) {
     _header.addAll(`header`)
   }
 
+  /**
+   * @param name The name of the classifier.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param quoteSymbol A custom symbol to denote what combines content into a single column value.
+   * It must be different from the column delimiter.
+   */
   public fun quoteSymbol(quoteSymbol: String) {
     cdkBuilder.quoteSymbol(quoteSymbol)
   }

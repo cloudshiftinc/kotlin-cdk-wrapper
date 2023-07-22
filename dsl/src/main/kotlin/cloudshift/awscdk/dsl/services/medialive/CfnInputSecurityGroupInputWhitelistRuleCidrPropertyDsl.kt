@@ -11,6 +11,9 @@ public class CfnInputSecurityGroupInputWhitelistRuleCidrPropertyDsl {
   private val cdkBuilder: CfnInputSecurityGroup.InputWhitelistRuleCidrProperty.Builder =
       CfnInputSecurityGroup.InputWhitelistRuleCidrProperty.builder()
 
+  /**
+   * @param cidr An IPv4 CIDR range to include in this input security group.
+   */
   public fun cidr(cidr: String) {
     cdkBuilder.cidr(cidr)
   }

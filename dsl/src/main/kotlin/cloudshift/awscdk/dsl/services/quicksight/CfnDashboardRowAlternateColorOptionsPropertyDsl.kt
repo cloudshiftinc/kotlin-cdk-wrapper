@@ -15,14 +15,23 @@ public class CfnDashboardRowAlternateColorOptionsPropertyDsl {
 
   private val _rowAlternateColors: MutableList<String> = mutableListOf()
 
+  /**
+   * @param rowAlternateColors Determines the list of row alternate colors.
+   */
   public fun rowAlternateColors(vararg rowAlternateColors: String) {
     _rowAlternateColors.addAll(listOf(*rowAlternateColors))
   }
 
+  /**
+   * @param rowAlternateColors Determines the list of row alternate colors.
+   */
   public fun rowAlternateColors(rowAlternateColors: Collection<String>) {
     _rowAlternateColors.addAll(rowAlternateColors)
   }
 
+  /**
+   * @param status Determines the widget status.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

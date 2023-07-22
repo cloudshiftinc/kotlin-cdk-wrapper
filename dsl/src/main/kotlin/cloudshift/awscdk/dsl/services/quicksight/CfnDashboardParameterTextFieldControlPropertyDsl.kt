@@ -12,22 +12,37 @@ public class CfnDashboardParameterTextFieldControlPropertyDsl {
   private val cdkBuilder: CfnDashboard.ParameterTextFieldControlProperty.Builder =
       CfnDashboard.ParameterTextFieldControlProperty.builder()
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: IResolvable) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: CfnDashboard.TextFieldControlDisplayOptionsProperty) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param parameterControlId The ID of the `ParameterTextFieldControl` . 
+   */
   public fun parameterControlId(parameterControlId: String) {
     cdkBuilder.parameterControlId(parameterControlId)
   }
 
+  /**
+   * @param sourceParameterName The source parameter name of the `ParameterTextFieldControl` . 
+   */
   public fun sourceParameterName(sourceParameterName: String) {
     cdkBuilder.sourceParameterName(sourceParameterName)
   }
 
+  /**
+   * @param title The title of the `ParameterTextFieldControl` . 
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }

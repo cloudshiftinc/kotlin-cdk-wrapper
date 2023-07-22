@@ -11,10 +11,16 @@ import software.amazon.awscdk.LazyListValueOptions
 public class LazyListValueOptionsDsl {
   private val cdkBuilder: LazyListValueOptions.Builder = LazyListValueOptions.builder()
 
+  /**
+   * @param displayHint Use the given name as a display hint.
+   */
   public fun displayHint(displayHint: String) {
     cdkBuilder.displayHint(displayHint)
   }
 
+  /**
+   * @param omitEmpty If the produced list is empty, return 'undefined' instead.
+   */
   public fun omitEmpty(omitEmpty: Boolean) {
     cdkBuilder.omitEmpty(omitEmpty)
   }

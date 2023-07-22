@@ -17,18 +17,32 @@ public class CfnDeliveryStreamHttpEndpointRequestConfigurationPropertyDsl {
 
   private val _commonAttributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination.
+   */
   public fun commonAttributes(vararg commonAttributes: Any) {
     _commonAttributes.addAll(listOf(*commonAttributes))
   }
 
+  /**
+   * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination.
+   */
   public fun commonAttributes(commonAttributes: Collection<Any>) {
     _commonAttributes.addAll(commonAttributes)
   }
 
+  /**
+   * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination.
+   */
   public fun commonAttributes(commonAttributes: IResolvable) {
     cdkBuilder.commonAttributes(commonAttributes)
   }
 
+  /**
+   * @param contentEncoding Kinesis Data Firehose uses the content encoding to compress the body of
+   * a request before sending the request to the destination.
+   * For more information, see Content-Encoding in MDN Web Docs, the official Mozilla documentation.
+   */
   public fun contentEncoding(contentEncoding: String) {
     cdkBuilder.contentEncoding(contentEncoding)
   }

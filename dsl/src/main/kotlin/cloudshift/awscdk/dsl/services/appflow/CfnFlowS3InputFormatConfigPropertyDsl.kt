@@ -11,6 +11,9 @@ public class CfnFlowS3InputFormatConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.S3InputFormatConfigProperty.Builder =
       CfnFlow.S3InputFormatConfigProperty.builder()
 
+  /**
+   * @param s3InputFileType The file type that Amazon AppFlow gets from your Amazon S3 bucket.
+   */
   public fun s3InputFileType(s3InputFileType: String) {
     cdkBuilder.s3InputFileType(s3InputFileType)
   }

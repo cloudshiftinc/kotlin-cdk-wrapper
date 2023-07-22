@@ -12,19 +12,31 @@ public class CfnFunctionEventInvokeConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.EventInvokeConfigProperty.Builder =
       CfnFunction.EventInvokeConfigProperty.builder()
 
+  /**
+   * @param destinationConfig the value to be set.
+   */
   public fun destinationConfig(destinationConfig: IResolvable) {
     cdkBuilder.destinationConfig(destinationConfig)
   }
 
+  /**
+   * @param destinationConfig the value to be set.
+   */
   public
       fun destinationConfig(destinationConfig: CfnFunction.EventInvokeDestinationConfigProperty) {
     cdkBuilder.destinationConfig(destinationConfig)
   }
 
+  /**
+   * @param maximumEventAgeInSeconds the value to be set.
+   */
   public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
     cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
   }
 
+  /**
+   * @param maximumRetryAttempts the value to be set.
+   */
   public fun maximumRetryAttempts(maximumRetryAttempts: Number) {
     cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
   }

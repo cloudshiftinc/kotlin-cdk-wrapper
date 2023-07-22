@@ -11,19 +11,31 @@ public class CfnAnalysisTextFieldControlDisplayOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TextFieldControlDisplayOptionsProperty.Builder =
       CfnAnalysis.TextFieldControlDisplayOptionsProperty.builder()
 
+  /**
+   * @param placeholderOptions The configuration of the placeholder options in a text field control.
+   */
   public fun placeholderOptions(placeholderOptions: IResolvable) {
     cdkBuilder.placeholderOptions(placeholderOptions)
   }
 
+  /**
+   * @param placeholderOptions The configuration of the placeholder options in a text field control.
+   */
   public
       fun placeholderOptions(placeholderOptions: CfnAnalysis.TextControlPlaceholderOptionsProperty) {
     cdkBuilder.placeholderOptions(placeholderOptions)
   }
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: IResolvable) {
     cdkBuilder.titleOptions(titleOptions)
   }
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: CfnAnalysis.LabelOptionsProperty) {
     cdkBuilder.titleOptions(titleOptions)
   }

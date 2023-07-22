@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.stepfunctions.LogOptions
 public class LogOptionsDsl {
   private val cdkBuilder: LogOptions.Builder = LogOptions.builder()
 
+  /**
+   * @param destination The log group where the execution history events will be logged. 
+   */
   public fun destination(destination: ILogGroup) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param includeExecutionData Determines whether execution data is included in your log.
+   */
   public fun includeExecutionData(includeExecutionData: Boolean) {
     cdkBuilder.includeExecutionData(includeExecutionData)
   }
 
+  /**
+   * @param level Defines which category of execution history events are logged.
+   */
   public fun level(level: LogLevel) {
     cdkBuilder.level(level)
   }

@@ -11,6 +11,9 @@ public class CfnTemplateTableFieldCustomIconContentPropertyDsl {
   private val cdkBuilder: CfnTemplate.TableFieldCustomIconContentProperty.Builder =
       CfnTemplate.TableFieldCustomIconContentProperty.builder()
 
+  /**
+   * @param icon The icon set type (link) of the custom icon content for table URL link content.
+   */
   public fun icon(icon: String) {
     cdkBuilder.icon(icon)
   }

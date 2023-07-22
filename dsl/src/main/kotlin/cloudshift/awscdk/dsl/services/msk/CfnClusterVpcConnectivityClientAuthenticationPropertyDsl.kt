@@ -11,18 +11,30 @@ public class CfnClusterVpcConnectivityClientAuthenticationPropertyDsl {
   private val cdkBuilder: CfnCluster.VpcConnectivityClientAuthenticationProperty.Builder =
       CfnCluster.VpcConnectivityClientAuthenticationProperty.builder()
 
+  /**
+   * @param sasl Details for VpcConnectivity ClientAuthentication using SASL.
+   */
   public fun sasl(sasl: IResolvable) {
     cdkBuilder.sasl(sasl)
   }
 
+  /**
+   * @param sasl Details for VpcConnectivity ClientAuthentication using SASL.
+   */
   public fun sasl(sasl: CfnCluster.VpcConnectivitySaslProperty) {
     cdkBuilder.sasl(sasl)
   }
 
+  /**
+   * @param tls Details for VpcConnectivity ClientAuthentication using TLS.
+   */
   public fun tls(tls: IResolvable) {
     cdkBuilder.tls(tls)
   }
 
+  /**
+   * @param tls Details for VpcConnectivity ClientAuthentication using TLS.
+   */
   public fun tls(tls: CfnCluster.VpcConnectivityTlsProperty) {
     cdkBuilder.tls(tls)
   }

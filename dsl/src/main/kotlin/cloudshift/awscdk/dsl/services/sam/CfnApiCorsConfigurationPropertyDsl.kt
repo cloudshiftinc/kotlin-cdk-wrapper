@@ -13,26 +13,44 @@ public class CfnApiCorsConfigurationPropertyDsl {
   private val cdkBuilder: CfnApi.CorsConfigurationProperty.Builder =
       CfnApi.CorsConfigurationProperty.builder()
 
+  /**
+   * @param allowCredentials the value to be set.
+   */
   public fun allowCredentials(allowCredentials: Boolean) {
     cdkBuilder.allowCredentials(allowCredentials)
   }
 
+  /**
+   * @param allowCredentials the value to be set.
+   */
   public fun allowCredentials(allowCredentials: IResolvable) {
     cdkBuilder.allowCredentials(allowCredentials)
   }
 
+  /**
+   * @param allowHeaders the value to be set.
+   */
   public fun allowHeaders(allowHeaders: String) {
     cdkBuilder.allowHeaders(allowHeaders)
   }
 
+  /**
+   * @param allowMethods the value to be set.
+   */
   public fun allowMethods(allowMethods: String) {
     cdkBuilder.allowMethods(allowMethods)
   }
 
+  /**
+   * @param allowOrigin the value to be set. 
+   */
   public fun allowOrigin(allowOrigin: String) {
     cdkBuilder.allowOrigin(allowOrigin)
   }
 
+  /**
+   * @param maxAge the value to be set.
+   */
   public fun maxAge(maxAge: String) {
     cdkBuilder.maxAge(maxAge)
   }

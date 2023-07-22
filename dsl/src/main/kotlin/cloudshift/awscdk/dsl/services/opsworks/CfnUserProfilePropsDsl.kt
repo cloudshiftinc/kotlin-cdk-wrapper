@@ -12,22 +12,43 @@ import software.amazon.awscdk.services.opsworks.CfnUserProfileProps
 public class CfnUserProfilePropsDsl {
   private val cdkBuilder: CfnUserProfileProps.Builder = CfnUserProfileProps.builder()
 
+  /**
+   * @param allowSelfManagement Whether users can specify their own SSH public key through the My
+   * Settings page.
+   * For more information, see [Managing User
+   * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) .
+   */
   public fun allowSelfManagement(allowSelfManagement: Boolean) {
     cdkBuilder.allowSelfManagement(allowSelfManagement)
   }
 
+  /**
+   * @param allowSelfManagement Whether users can specify their own SSH public key through the My
+   * Settings page.
+   * For more information, see [Managing User
+   * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) .
+   */
   public fun allowSelfManagement(allowSelfManagement: IResolvable) {
     cdkBuilder.allowSelfManagement(allowSelfManagement)
   }
 
+  /**
+   * @param iamUserArn The user's IAM ARN. 
+   */
   public fun iamUserArn(iamUserArn: String) {
     cdkBuilder.iamUserArn(iamUserArn)
   }
 
+  /**
+   * @param sshPublicKey The user's SSH public key.
+   */
   public fun sshPublicKey(sshPublicKey: String) {
     cdkBuilder.sshPublicKey(sshPublicKey)
   }
 
+  /**
+   * @param sshUsername The user's SSH user name.
+   */
   public fun sshUsername(sshUsername: String) {
     cdkBuilder.sshUsername(sshUsername)
   }

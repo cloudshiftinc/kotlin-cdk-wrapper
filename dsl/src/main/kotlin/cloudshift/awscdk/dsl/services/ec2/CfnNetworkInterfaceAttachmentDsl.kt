@@ -17,22 +17,60 @@ public class CfnNetworkInterfaceAttachmentDsl(
   private val cdkBuilder: CfnNetworkInterfaceAttachment.Builder =
       CfnNetworkInterfaceAttachment.Builder.create(scope, id)
 
+  /**
+   * Whether to delete the network interface when the instance terminates.
+   *
+   * By default, this value is set to `true` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html#cfn-ec2-networkinterfaceattachment-deleteontermination)
+   * @param deleteOnTermination Whether to delete the network interface when the instance
+   * terminates. 
+   */
   public fun deleteOnTermination(deleteOnTermination: Boolean) {
     cdkBuilder.deleteOnTermination(deleteOnTermination)
   }
 
+  /**
+   * Whether to delete the network interface when the instance terminates.
+   *
+   * By default, this value is set to `true` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html#cfn-ec2-networkinterfaceattachment-deleteontermination)
+   * @param deleteOnTermination Whether to delete the network interface when the instance
+   * terminates. 
+   */
   public fun deleteOnTermination(deleteOnTermination: IResolvable) {
     cdkBuilder.deleteOnTermination(deleteOnTermination)
   }
 
+  /**
+   * The network interface's position in the attachment order.
+   *
+   * For example, the first attached network interface has a `DeviceIndex` of 0.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html#cfn-ec2-networkinterfaceattachment-deviceindex)
+   * @param deviceIndex The network interface's position in the attachment order. 
+   */
   public fun deviceIndex(deviceIndex: String) {
     cdkBuilder.deviceIndex(deviceIndex)
   }
 
+  /**
+   * The ID of the instance to which you will attach the ENI.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html#cfn-ec2-networkinterfaceattachment-instanceid)
+   * @param instanceId The ID of the instance to which you will attach the ENI. 
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }
 
+  /**
+   * The ID of the ENI that you want to attach.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html#cfn-ec2-networkinterfaceattachment-networkinterfaceid)
+   * @param networkInterfaceId The ID of the ENI that you want to attach. 
+   */
   public fun networkInterfaceId(networkInterfaceId: String) {
     cdkBuilder.networkInterfaceId(networkInterfaceId)
   }

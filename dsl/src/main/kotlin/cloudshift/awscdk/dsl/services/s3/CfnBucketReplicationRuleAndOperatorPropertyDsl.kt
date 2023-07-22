@@ -17,18 +17,31 @@ public class CfnBucketReplicationRuleAndOperatorPropertyDsl {
 
   private val _tagFilters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param prefix An object key name prefix that identifies the subset of objects to which the rule
+   * applies.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }
 
+  /**
+   * @param tagFilters An array of tags containing key and value pairs.
+   */
   public fun tagFilters(vararg tagFilters: Any) {
     _tagFilters.addAll(listOf(*tagFilters))
   }
 
+  /**
+   * @param tagFilters An array of tags containing key and value pairs.
+   */
   public fun tagFilters(tagFilters: Collection<Any>) {
     _tagFilters.addAll(tagFilters)
   }
 
+  /**
+   * @param tagFilters An array of tags containing key and value pairs.
+   */
   public fun tagFilters(tagFilters: IResolvable) {
     cdkBuilder.tagFilters(tagFilters)
   }

@@ -11,6 +11,9 @@ public class CfnHostedZoneHostedZoneConfigPropertyDsl {
   private val cdkBuilder: CfnHostedZone.HostedZoneConfigProperty.Builder =
       CfnHostedZone.HostedZoneConfigProperty.builder()
 
+  /**
+   * @param comment Any comments that you want to include about the hosted zone.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }

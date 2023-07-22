@@ -11,6 +11,9 @@ public class CfnAnalysisTrendArrowOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TrendArrowOptionsProperty.Builder =
       CfnAnalysis.TrendArrowOptionsProperty.builder()
 
+  /**
+   * @param visibility The visibility of the trend arrows.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

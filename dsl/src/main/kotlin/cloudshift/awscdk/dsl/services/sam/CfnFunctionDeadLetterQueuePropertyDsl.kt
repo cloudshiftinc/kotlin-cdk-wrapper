@@ -11,10 +11,16 @@ public class CfnFunctionDeadLetterQueuePropertyDsl {
   private val cdkBuilder: CfnFunction.DeadLetterQueueProperty.Builder =
       CfnFunction.DeadLetterQueueProperty.builder()
 
+  /**
+   * @param targetArn the value to be set. 
+   */
   public fun targetArn(targetArn: String) {
     cdkBuilder.targetArn(targetArn)
   }
 
+  /**
+   * @param type the value to be set. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

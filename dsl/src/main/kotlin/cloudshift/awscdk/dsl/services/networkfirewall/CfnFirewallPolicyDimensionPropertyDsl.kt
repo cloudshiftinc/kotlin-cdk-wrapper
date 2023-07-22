@@ -11,6 +11,9 @@ public class CfnFirewallPolicyDimensionPropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.DimensionProperty.Builder =
       CfnFirewallPolicy.DimensionProperty.builder()
 
+  /**
+   * @param value The value to use in the custom metric dimension. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

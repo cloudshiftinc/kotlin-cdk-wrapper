@@ -11,10 +11,18 @@ public class CfnDashboardSheetControlLayoutPropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetControlLayoutProperty.Builder =
       CfnDashboard.SheetControlLayoutProperty.builder()
 
+  /**
+   * @param configuration The configuration that determines the elements and canvas size options of
+   * sheet control. 
+   */
   public fun configuration(configuration: IResolvable) {
     cdkBuilder.configuration(configuration)
   }
 
+  /**
+   * @param configuration The configuration that determines the elements and canvas size options of
+   * sheet control. 
+   */
   public fun configuration(configuration: CfnDashboard.SheetControlLayoutConfigurationProperty) {
     cdkBuilder.configuration(configuration)
   }

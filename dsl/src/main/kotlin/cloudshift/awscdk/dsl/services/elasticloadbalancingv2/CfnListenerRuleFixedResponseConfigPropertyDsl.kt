@@ -11,14 +11,24 @@ public class CfnListenerRuleFixedResponseConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.FixedResponseConfigProperty.Builder =
       CfnListenerRule.FixedResponseConfigProperty.builder()
 
+  /**
+   * @param contentType The content type.
+   * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+   */
   public fun contentType(contentType: String) {
     cdkBuilder.contentType(contentType)
   }
 
+  /**
+   * @param messageBody The message.
+   */
   public fun messageBody(messageBody: String) {
     cdkBuilder.messageBody(messageBody)
   }
 
+  /**
+   * @param statusCode The HTTP response code (2XX, 4XX, or 5XX). 
+   */
   public fun statusCode(statusCode: String) {
     cdkBuilder.statusCode(statusCode)
   }

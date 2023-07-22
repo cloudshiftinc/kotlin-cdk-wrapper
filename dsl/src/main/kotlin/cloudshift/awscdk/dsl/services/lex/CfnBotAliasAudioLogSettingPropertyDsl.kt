@@ -12,18 +12,32 @@ public class CfnBotAliasAudioLogSettingPropertyDsl {
   private val cdkBuilder: CfnBotAlias.AudioLogSettingProperty.Builder =
       CfnBotAlias.AudioLogSettingProperty.builder()
 
+  /**
+   * @param destination The location of audio log files collected when conversation logging is
+   * enabled for a bot. 
+   */
   public fun destination(destination: IResolvable) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param destination The location of audio log files collected when conversation logging is
+   * enabled for a bot. 
+   */
   public fun destination(destination: CfnBotAlias.AudioLogDestinationProperty) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param enabled Determines whether audio logging in enabled for the bot. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Determines whether audio logging in enabled for the bot. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

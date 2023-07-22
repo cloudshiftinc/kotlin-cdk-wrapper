@@ -11,6 +11,9 @@ public class CfnConnectorProfileInforNexusConnectorProfilePropertiesPropertyDsl 
   private val cdkBuilder: CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param instanceUrl The location of the Infor Nexus resource. 
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }

@@ -11,10 +11,18 @@ public class CfnEndpointRoutingConfigPropertyDsl {
   private val cdkBuilder: CfnEndpoint.RoutingConfigProperty.Builder =
       CfnEndpoint.RoutingConfigProperty.builder()
 
+  /**
+   * @param failoverConfig The failover configuration for an endpoint. 
+   * This includes what triggers failover and what happens when it's triggered.
+   */
   public fun failoverConfig(failoverConfig: IResolvable) {
     cdkBuilder.failoverConfig(failoverConfig)
   }
 
+  /**
+   * @param failoverConfig The failover configuration for an endpoint. 
+   * This includes what triggers failover and what happens when it's triggered.
+   */
   public fun failoverConfig(failoverConfig: CfnEndpoint.FailoverConfigProperty) {
     cdkBuilder.failoverConfig(failoverConfig)
   }

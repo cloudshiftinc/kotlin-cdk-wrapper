@@ -15,10 +15,26 @@ public class CfnReceiptFilterDsl(
 ) {
   private val cdkBuilder: CfnReceiptFilter.Builder = CfnReceiptFilter.Builder.create(scope, id)
 
+  /**
+   * A data structure that describes the IP address filter to create, which consists of a name, an
+   * IP address range, and whether to allow or block mail from it.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html#cfn-ses-receiptfilter-filter)
+   * @param filter A data structure that describes the IP address filter to create, which consists
+   * of a name, an IP address range, and whether to allow or block mail from it. 
+   */
   public fun filter(filter: IResolvable) {
     cdkBuilder.filter(filter)
   }
 
+  /**
+   * A data structure that describes the IP address filter to create, which consists of a name, an
+   * IP address range, and whether to allow or block mail from it.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html#cfn-ses-receiptfilter-filter)
+   * @param filter A data structure that describes the IP address filter to create, which consists
+   * of a name, an IP address range, and whether to allow or block mail from it. 
+   */
   public fun filter(filter: CfnReceiptFilter.FilterProperty) {
     cdkBuilder.filter(filter)
   }

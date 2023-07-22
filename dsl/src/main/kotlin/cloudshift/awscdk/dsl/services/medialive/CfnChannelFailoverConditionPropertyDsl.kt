@@ -11,10 +11,16 @@ public class CfnChannelFailoverConditionPropertyDsl {
   private val cdkBuilder: CfnChannel.FailoverConditionProperty.Builder =
       CfnChannel.FailoverConditionProperty.builder()
 
+  /**
+   * @param failoverConditionSettings Settings for a specific failover condition.
+   */
   public fun failoverConditionSettings(failoverConditionSettings: IResolvable) {
     cdkBuilder.failoverConditionSettings(failoverConditionSettings)
   }
 
+  /**
+   * @param failoverConditionSettings Settings for a specific failover condition.
+   */
   public
       fun failoverConditionSettings(failoverConditionSettings: CfnChannel.FailoverConditionSettingsProperty) {
     cdkBuilder.failoverConditionSettings(failoverConditionSettings)

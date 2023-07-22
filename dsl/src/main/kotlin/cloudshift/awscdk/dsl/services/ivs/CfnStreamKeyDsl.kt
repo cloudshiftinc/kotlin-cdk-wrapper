@@ -21,14 +21,40 @@ public class CfnStreamKeyDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Channel ARN for the stream.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-streamkey.html#cfn-ivs-streamkey-channelarn)
+   * @param channelArn Channel ARN for the stream. 
+   */
   public fun channelArn(channelArn: String) {
     cdkBuilder.channelArn(channelArn)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-streamkey.html#cfn-ivs-streamkey-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-streamkey.html#cfn-ivs-streamkey-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

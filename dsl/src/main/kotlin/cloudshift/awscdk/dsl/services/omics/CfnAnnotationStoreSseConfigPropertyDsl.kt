@@ -11,10 +11,16 @@ public class CfnAnnotationStoreSseConfigPropertyDsl {
   private val cdkBuilder: CfnAnnotationStore.SseConfigProperty.Builder =
       CfnAnnotationStore.SseConfigProperty.builder()
 
+  /**
+   * @param keyArn An encryption key ARN.
+   */
   public fun keyArn(keyArn: String) {
     cdkBuilder.keyArn(keyArn)
   }
 
+  /**
+   * @param type The encryption type. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

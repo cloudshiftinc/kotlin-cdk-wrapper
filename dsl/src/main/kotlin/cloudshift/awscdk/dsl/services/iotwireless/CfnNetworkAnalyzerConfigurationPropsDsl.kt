@@ -24,44 +24,82 @@ public class CfnNetworkAnalyzerConfigurationPropsDsl {
 
   private val _wirelessGateways: MutableList<String> = mutableListOf()
 
+  /**
+   * @param description The description of the resource.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name Name of the network analyzer configuration. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags The tags to attach to the specified resource.
+   * Tags are metadata that you can use to manage a resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to attach to the specified resource.
+   * Tags are metadata that you can use to manage a resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
-  public fun traceContent(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param traceContent Trace content for your wireless gateway and wireless device resources.
+   */
+  public fun traceContent(traceContent: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(traceContent)
     cdkBuilder.traceContent(builder.map)
   }
 
+  /**
+   * @param traceContent Trace content for your wireless gateway and wireless device resources.
+   */
   public fun traceContent(traceContent: Any) {
     cdkBuilder.traceContent(traceContent)
   }
 
+  /**
+   * @param wirelessDevices Wireless device resources to add to the network analyzer configuration.
+   * Provide the `WirelessDeviceId` of the resource to add in the input array.
+   */
   public fun wirelessDevices(vararg wirelessDevices: String) {
     _wirelessDevices.addAll(listOf(*wirelessDevices))
   }
 
+  /**
+   * @param wirelessDevices Wireless device resources to add to the network analyzer configuration.
+   * Provide the `WirelessDeviceId` of the resource to add in the input array.
+   */
   public fun wirelessDevices(wirelessDevices: Collection<String>) {
     _wirelessDevices.addAll(wirelessDevices)
   }
 
+  /**
+   * @param wirelessGateways Wireless gateway resources to add to the network analyzer
+   * configuration.
+   * Provide the `WirelessGatewayId` of the resource to add in the input array.
+   */
   public fun wirelessGateways(vararg wirelessGateways: String) {
     _wirelessGateways.addAll(listOf(*wirelessGateways))
   }
 
+  /**
+   * @param wirelessGateways Wireless gateway resources to add to the network analyzer
+   * configuration.
+   * Provide the `WirelessGatewayId` of the resource to add in the input array.
+   */
   public fun wirelessGateways(wirelessGateways: Collection<String>) {
     _wirelessGateways.addAll(wirelessGateways)
   }

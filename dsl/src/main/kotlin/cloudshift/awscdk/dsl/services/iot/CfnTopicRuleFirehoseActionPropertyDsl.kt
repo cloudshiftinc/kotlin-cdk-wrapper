@@ -13,22 +13,51 @@ public class CfnTopicRuleFirehoseActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.FirehoseActionProperty.Builder =
       CfnTopicRule.FirehoseActionProperty.builder()
 
+  /**
+   * @param batchMode Whether to deliver the Kinesis Data Firehose stream as a batch by using
+   * [`PutRecordBatch`](https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html)
+   * . The default value is `false` .
+   * When `batchMode` is `true` and the rule's SQL statement evaluates to an Array, each Array
+   * element forms one record in the
+   * [`PutRecordBatch`](https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html)
+   * request. The resulting array can't have more than 500 records.
+   */
   public fun batchMode(batchMode: Boolean) {
     cdkBuilder.batchMode(batchMode)
   }
 
+  /**
+   * @param batchMode Whether to deliver the Kinesis Data Firehose stream as a batch by using
+   * [`PutRecordBatch`](https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html)
+   * . The default value is `false` .
+   * When `batchMode` is `true` and the rule's SQL statement evaluates to an Array, each Array
+   * element forms one record in the
+   * [`PutRecordBatch`](https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html)
+   * request. The resulting array can't have more than 500 records.
+   */
   public fun batchMode(batchMode: IResolvable) {
     cdkBuilder.batchMode(batchMode)
   }
 
+  /**
+   * @param deliveryStreamName The delivery stream name. 
+   */
   public fun deliveryStreamName(deliveryStreamName: String) {
     cdkBuilder.deliveryStreamName(deliveryStreamName)
   }
 
+  /**
+   * @param roleArn The IAM role that grants access to the Amazon Kinesis Firehose stream. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param separator A character separator that will be used to separate records written to the
+   * Firehose stream.
+   * Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+   */
   public fun separator(separator: String) {
     cdkBuilder.separator(separator)
   }

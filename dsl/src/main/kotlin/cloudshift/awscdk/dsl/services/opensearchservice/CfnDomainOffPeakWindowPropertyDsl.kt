@@ -11,10 +11,16 @@ public class CfnDomainOffPeakWindowPropertyDsl {
   private val cdkBuilder: CfnDomain.OffPeakWindowProperty.Builder =
       CfnDomain.OffPeakWindowProperty.builder()
 
+  /**
+   * @param windowStartTime The desired start time for an off-peak maintenance window.
+   */
   public fun windowStartTime(windowStartTime: IResolvable) {
     cdkBuilder.windowStartTime(windowStartTime)
   }
 
+  /**
+   * @param windowStartTime The desired start time for an off-peak maintenance window.
+   */
   public fun windowStartTime(windowStartTime: CfnDomain.WindowStartTimeProperty) {
     cdkBuilder.windowStartTime(windowStartTime)
   }

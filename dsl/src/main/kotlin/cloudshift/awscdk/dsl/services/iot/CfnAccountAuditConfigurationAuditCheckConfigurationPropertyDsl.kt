@@ -12,10 +12,16 @@ public class CfnAccountAuditConfigurationAuditCheckConfigurationPropertyDsl {
   private val cdkBuilder: CfnAccountAuditConfiguration.AuditCheckConfigurationProperty.Builder =
       CfnAccountAuditConfiguration.AuditCheckConfigurationProperty.builder()
 
+  /**
+   * @param enabled True if this audit check is enabled for this account.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled True if this audit check is enabled for this account.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.ses.StopActionConfig
 public class StopActionConfigDsl {
   private val cdkBuilder: StopActionConfig.Builder = StopActionConfig.builder()
 
+  /**
+   * @param scope The scope of the StopAction. 
+   * The only acceptable value is RuleSet.
+   */
   public fun scope(scope: String) {
     cdkBuilder.scope(scope)
   }
 
+  /**
+   * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the stop
+   * action is taken.
+   */
   public fun topicArn(topicArn: String) {
     cdkBuilder.topicArn(topicArn)
   }

@@ -11,10 +11,16 @@ public class CfnStudioComponentScriptParameterKeyValuePropertyDsl {
   private val cdkBuilder: CfnStudioComponent.ScriptParameterKeyValueProperty.Builder =
       CfnStudioComponent.ScriptParameterKeyValueProperty.builder()
 
+  /**
+   * @param key A script parameter key.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value A script parameter value.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

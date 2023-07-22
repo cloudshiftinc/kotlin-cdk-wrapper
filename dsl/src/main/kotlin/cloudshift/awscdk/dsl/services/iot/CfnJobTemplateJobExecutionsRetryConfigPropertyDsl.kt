@@ -16,14 +16,23 @@ public class CfnJobTemplateJobExecutionsRetryConfigPropertyDsl {
 
   private val _retryCriteriaList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param retryCriteriaList the value to be set.
+   */
   public fun retryCriteriaList(vararg retryCriteriaList: Any) {
     _retryCriteriaList.addAll(listOf(*retryCriteriaList))
   }
 
+  /**
+   * @param retryCriteriaList the value to be set.
+   */
   public fun retryCriteriaList(retryCriteriaList: Collection<Any>) {
     _retryCriteriaList.addAll(retryCriteriaList)
   }
 
+  /**
+   * @param retryCriteriaList the value to be set.
+   */
   public fun retryCriteriaList(retryCriteriaList: IResolvable) {
     cdkBuilder.retryCriteriaList(retryCriteriaList)
   }

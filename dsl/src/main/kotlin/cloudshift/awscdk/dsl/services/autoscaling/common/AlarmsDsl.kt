@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.autoscaling.common.Alarms
 public class AlarmsDsl {
   private val cdkBuilder: Alarms.Builder = Alarms.builder()
 
+  /**
+   * @param lowerAlarmIntervalIndex the value to be set.
+   */
   public fun lowerAlarmIntervalIndex(lowerAlarmIntervalIndex: Number) {
     cdkBuilder.lowerAlarmIntervalIndex(lowerAlarmIntervalIndex)
   }
 
+  /**
+   * @param upperAlarmIntervalIndex the value to be set.
+   */
   public fun upperAlarmIntervalIndex(upperAlarmIntervalIndex: Number) {
     cdkBuilder.upperAlarmIntervalIndex(upperAlarmIntervalIndex)
   }

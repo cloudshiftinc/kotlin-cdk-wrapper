@@ -17,18 +17,46 @@ public class EcsEc2LaunchTargetDsl {
 
   private val _placementStrategies: MutableList<PlacementStrategy> = mutableListOf()
 
+  /**
+   * Placement constraints.
+   *
+   * Default: - None
+   *
+   * @param placementConstraints Placement constraints. 
+   */
   public fun placementConstraints(vararg placementConstraints: PlacementConstraint) {
     _placementConstraints.addAll(listOf(*placementConstraints))
   }
 
+  /**
+   * Placement constraints.
+   *
+   * Default: - None
+   *
+   * @param placementConstraints Placement constraints. 
+   */
   public fun placementConstraints(placementConstraints: Collection<PlacementConstraint>) {
     _placementConstraints.addAll(placementConstraints)
   }
 
+  /**
+   * Placement strategies.
+   *
+   * Default: - None
+   *
+   * @param placementStrategies Placement strategies. 
+   */
   public fun placementStrategies(vararg placementStrategies: PlacementStrategy) {
     _placementStrategies.addAll(listOf(*placementStrategies))
   }
 
+  /**
+   * Placement strategies.
+   *
+   * Default: - None
+   *
+   * @param placementStrategies Placement strategies. 
+   */
   public fun placementStrategies(placementStrategies: Collection<PlacementStrategy>) {
     _placementStrategies.addAll(placementStrategies)
   }

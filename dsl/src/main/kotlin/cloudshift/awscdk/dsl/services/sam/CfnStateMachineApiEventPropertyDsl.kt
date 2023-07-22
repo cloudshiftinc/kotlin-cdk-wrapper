@@ -11,14 +11,23 @@ public class CfnStateMachineApiEventPropertyDsl {
   private val cdkBuilder: CfnStateMachine.ApiEventProperty.Builder =
       CfnStateMachine.ApiEventProperty.builder()
 
+  /**
+   * @param method the value to be set. 
+   */
   public fun method(method: String) {
     cdkBuilder.method(method)
   }
 
+  /**
+   * @param path the value to be set. 
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param restApiId the value to be set.
+   */
   public fun restApiId(restApiId: String) {
     cdkBuilder.restApiId(restApiId)
   }

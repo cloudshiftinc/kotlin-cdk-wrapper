@@ -11,10 +11,16 @@ public class CfnTemplateBarChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.BarChartFieldWellsProperty.Builder =
       CfnTemplate.BarChartFieldWellsProperty.builder()
 
+  /**
+   * @param barChartAggregatedFieldWells The aggregated field wells of a bar chart.
+   */
   public fun barChartAggregatedFieldWells(barChartAggregatedFieldWells: IResolvable) {
     cdkBuilder.barChartAggregatedFieldWells(barChartAggregatedFieldWells)
   }
 
+  /**
+   * @param barChartAggregatedFieldWells The aggregated field wells of a bar chart.
+   */
   public
       fun barChartAggregatedFieldWells(barChartAggregatedFieldWells: CfnTemplate.BarChartAggregatedFieldWellsProperty) {
     cdkBuilder.barChartAggregatedFieldWells(barChartAggregatedFieldWells)

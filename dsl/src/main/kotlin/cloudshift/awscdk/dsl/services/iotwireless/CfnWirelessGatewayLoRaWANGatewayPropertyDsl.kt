@@ -11,10 +11,16 @@ public class CfnWirelessGatewayLoRaWANGatewayPropertyDsl {
   private val cdkBuilder: CfnWirelessGateway.LoRaWANGatewayProperty.Builder =
       CfnWirelessGateway.LoRaWANGatewayProperty.builder()
 
+  /**
+   * @param gatewayEui The gateway's EUI value. 
+   */
   public fun gatewayEui(gatewayEui: String) {
     cdkBuilder.gatewayEui(gatewayEui)
   }
 
+  /**
+   * @param rfRegion The frequency band (RFRegion) value. 
+   */
   public fun rfRegion(rfRegion: String) {
     cdkBuilder.rfRegion(rfRegion)
   }

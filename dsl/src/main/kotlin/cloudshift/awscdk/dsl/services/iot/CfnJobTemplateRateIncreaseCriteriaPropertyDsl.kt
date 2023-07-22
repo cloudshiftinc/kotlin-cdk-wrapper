@@ -11,10 +11,18 @@ public class CfnJobTemplateRateIncreaseCriteriaPropertyDsl {
   private val cdkBuilder: CfnJobTemplate.RateIncreaseCriteriaProperty.Builder =
       CfnJobTemplate.RateIncreaseCriteriaProperty.builder()
 
+  /**
+   * @param numberOfNotifiedThings The threshold for number of notified things that will initiate
+   * the increase in rate of rollout.
+   */
   public fun numberOfNotifiedThings(numberOfNotifiedThings: Number) {
     cdkBuilder.numberOfNotifiedThings(numberOfNotifiedThings)
   }
 
+  /**
+   * @param numberOfSucceededThings The threshold for number of succeeded things that will initiate
+   * the increase in rate of rollout.
+   */
   public fun numberOfSucceededThings(numberOfSucceededThings: Number) {
     cdkBuilder.numberOfSucceededThings(numberOfSucceededThings)
   }

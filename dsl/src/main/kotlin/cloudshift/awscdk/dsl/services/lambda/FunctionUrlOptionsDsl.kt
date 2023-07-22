@@ -13,20 +13,32 @@ import software.amazon.awscdk.services.lambda.InvokeMode
 public class FunctionUrlOptionsDsl {
   private val cdkBuilder: FunctionUrlOptions.Builder = FunctionUrlOptions.builder()
 
+  /**
+   * @param authType The type of authentication that your function URL uses.
+   */
   public fun authType(authType: FunctionUrlAuthType) {
     cdkBuilder.authType(authType)
   }
 
-  public fun cors(block: FunctionUrlCorsOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param cors The cross-origin resource sharing (CORS) settings for your function URL.
+   */
+  public fun cors(cors: FunctionUrlCorsOptionsDsl.() -> Unit = {}) {
     val builder = FunctionUrlCorsOptionsDsl()
-    builder.apply(block)
+    builder.apply(cors)
     cdkBuilder.cors(builder.build())
   }
 
+  /**
+   * @param cors The cross-origin resource sharing (CORS) settings for your function URL.
+   */
   public fun cors(cors: FunctionUrlCorsOptions) {
     cdkBuilder.cors(cors)
   }
 
+  /**
+   * @param invokeMode The type of invocation mode that your Lambda function uses.
+   */
   public fun invokeMode(invokeMode: InvokeMode) {
     cdkBuilder.invokeMode(invokeMode)
   }

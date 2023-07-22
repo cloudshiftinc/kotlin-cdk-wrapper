@@ -11,14 +11,25 @@ public class CfnGraphQLApiCognitoUserPoolConfigPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.CognitoUserPoolConfigProperty.Builder =
       CfnGraphQLApi.CognitoUserPoolConfigProperty.builder()
 
+  /**
+   * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito user
+   * pool app client ID.
+   * If this value isn't set, no filtering is applied.
+   */
   public fun appIdClientRegex(appIdClientRegex: String) {
     cdkBuilder.appIdClientRegex(appIdClientRegex)
   }
 
+  /**
+   * @param awsRegion The AWS Region in which the user pool was created.
+   */
   public fun awsRegion(awsRegion: String) {
     cdkBuilder.awsRegion(awsRegion)
   }
 
+  /**
+   * @param userPoolId The user pool ID.
+   */
   public fun userPoolId(userPoolId: String) {
     cdkBuilder.userPoolId(userPoolId)
   }

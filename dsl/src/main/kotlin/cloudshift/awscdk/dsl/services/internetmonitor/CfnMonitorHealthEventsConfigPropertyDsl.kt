@@ -11,10 +11,16 @@ public class CfnMonitorHealthEventsConfigPropertyDsl {
   private val cdkBuilder: CfnMonitor.HealthEventsConfigProperty.Builder =
       CfnMonitor.HealthEventsConfigProperty.builder()
 
+  /**
+   * @param availabilityScoreThreshold the value to be set.
+   */
   public fun availabilityScoreThreshold(availabilityScoreThreshold: Number) {
     cdkBuilder.availabilityScoreThreshold(availabilityScoreThreshold)
   }
 
+  /**
+   * @param performanceScoreThreshold the value to be set.
+   */
   public fun performanceScoreThreshold(performanceScoreThreshold: Number) {
     cdkBuilder.performanceScoreThreshold(performanceScoreThreshold)
   }

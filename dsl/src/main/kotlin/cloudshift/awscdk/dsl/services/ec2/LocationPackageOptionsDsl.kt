@@ -15,14 +15,24 @@ public class LocationPackageOptionsDsl {
 
   private val _serviceRestartHandles: MutableList<InitServiceRestartHandle> = mutableListOf()
 
+  /**
+   * @param key Identifier key for this package.
+   * You can use this to order package installs.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param serviceRestartHandles Restart the given service after this command has run.
+   */
   public fun serviceRestartHandles(vararg serviceRestartHandles: InitServiceRestartHandle) {
     _serviceRestartHandles.addAll(listOf(*serviceRestartHandles))
   }
 
+  /**
+   * @param serviceRestartHandles Restart the given service after this command has run.
+   */
   public fun serviceRestartHandles(serviceRestartHandles: Collection<InitServiceRestartHandle>) {
     _serviceRestartHandles.addAll(serviceRestartHandles)
   }

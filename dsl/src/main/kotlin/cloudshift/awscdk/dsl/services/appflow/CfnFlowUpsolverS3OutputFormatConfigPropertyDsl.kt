@@ -12,22 +12,42 @@ public class CfnFlowUpsolverS3OutputFormatConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.UpsolverS3OutputFormatConfigProperty.Builder =
       CfnFlow.UpsolverS3OutputFormatConfigProperty.builder()
 
+  /**
+   * @param aggregationConfig The aggregation settings that you can use to customize the output
+   * format of your flow data.
+   */
   public fun aggregationConfig(aggregationConfig: IResolvable) {
     cdkBuilder.aggregationConfig(aggregationConfig)
   }
 
+  /**
+   * @param aggregationConfig The aggregation settings that you can use to customize the output
+   * format of your flow data.
+   */
   public fun aggregationConfig(aggregationConfig: CfnFlow.AggregationConfigProperty) {
     cdkBuilder.aggregationConfig(aggregationConfig)
   }
 
+  /**
+   * @param fileType Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3
+   * bucket.
+   */
   public fun fileType(fileType: String) {
     cdkBuilder.fileType(fileType)
   }
 
+  /**
+   * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+   * names in the flow destination. 
+   */
   public fun prefixConfig(prefixConfig: IResolvable) {
     cdkBuilder.prefixConfig(prefixConfig)
   }
 
+  /**
+   * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+   * names in the flow destination. 
+   */
   public fun prefixConfig(prefixConfig: CfnFlow.PrefixConfigProperty) {
     cdkBuilder.prefixConfig(prefixConfig)
   }

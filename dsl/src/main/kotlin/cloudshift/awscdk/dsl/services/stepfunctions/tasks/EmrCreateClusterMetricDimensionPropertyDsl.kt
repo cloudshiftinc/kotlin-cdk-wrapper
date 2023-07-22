@@ -11,10 +11,16 @@ public class EmrCreateClusterMetricDimensionPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.MetricDimensionProperty.Builder =
       EmrCreateCluster.MetricDimensionProperty.builder()
 
+  /**
+   * @param key The dimension name. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The dimension value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

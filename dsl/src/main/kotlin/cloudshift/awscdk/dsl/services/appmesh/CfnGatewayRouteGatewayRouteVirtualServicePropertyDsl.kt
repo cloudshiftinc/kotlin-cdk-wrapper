@@ -11,6 +11,9 @@ public class CfnGatewayRouteGatewayRouteVirtualServicePropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.GatewayRouteVirtualServiceProperty.Builder =
       CfnGatewayRoute.GatewayRouteVirtualServiceProperty.builder()
 
+  /**
+   * @param virtualServiceName The name of the virtual service that traffic is routed to. 
+   */
   public fun virtualServiceName(virtualServiceName: String) {
     cdkBuilder.virtualServiceName(virtualServiceName)
   }

@@ -11,6 +11,9 @@ public class CfnListenerCertificatePropertyDsl {
   private val cdkBuilder: CfnListener.CertificateProperty.Builder =
       CfnListener.CertificateProperty.builder()
 
+  /**
+   * @param certificateArn The Amazon Resource Name (ARN) of the certificate.
+   */
   public fun certificateArn(certificateArn: String) {
     cdkBuilder.certificateArn(certificateArn)
   }

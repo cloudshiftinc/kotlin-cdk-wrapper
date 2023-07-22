@@ -12,14 +12,23 @@ public class CfnDashboardGeospatialWindowOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.GeospatialWindowOptionsProperty.Builder =
       CfnDashboard.GeospatialWindowOptionsProperty.builder()
 
+  /**
+   * @param bounds The bounds options (north, south, west, east) of the geospatial window options.
+   */
   public fun bounds(bounds: IResolvable) {
     cdkBuilder.bounds(bounds)
   }
 
+  /**
+   * @param bounds The bounds options (north, south, west, east) of the geospatial window options.
+   */
   public fun bounds(bounds: CfnDashboard.GeospatialCoordinateBoundsProperty) {
     cdkBuilder.bounds(bounds)
   }
 
+  /**
+   * @param mapZoomMode The map zoom modes (manual, auto) of the geospatial window options.
+   */
   public fun mapZoomMode(mapZoomMode: String) {
     cdkBuilder.mapZoomMode(mapZoomMode)
   }

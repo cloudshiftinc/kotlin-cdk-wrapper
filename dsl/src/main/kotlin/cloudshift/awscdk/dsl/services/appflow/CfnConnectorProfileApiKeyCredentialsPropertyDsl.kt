@@ -11,10 +11,16 @@ public class CfnConnectorProfileApiKeyCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.ApiKeyCredentialsProperty.Builder =
       CfnConnectorProfile.ApiKeyCredentialsProperty.builder()
 
+  /**
+   * @param apiKey The API key required for API key authentication. 
+   */
   public fun apiKey(apiKey: String) {
     cdkBuilder.apiKey(apiKey)
   }
 
+  /**
+   * @param apiSecretKey The API secret key required for API key authentication.
+   */
   public fun apiSecretKey(apiSecretKey: String) {
     cdkBuilder.apiSecretKey(apiSecretKey)
   }

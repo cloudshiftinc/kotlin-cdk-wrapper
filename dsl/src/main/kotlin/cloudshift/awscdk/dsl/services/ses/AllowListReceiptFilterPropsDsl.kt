@@ -15,10 +15,16 @@ public class AllowListReceiptFilterPropsDsl {
 
   private val _ips: MutableList<String> = mutableListOf()
 
+  /**
+   * @param ips A list of ip addresses or ranges to allow list. 
+   */
   public fun ips(vararg ips: String) {
     _ips.addAll(listOf(*ips))
   }
 
+  /**
+   * @param ips A list of ip addresses or ranges to allow list. 
+   */
   public fun ips(ips: Collection<String>) {
     _ips.addAll(ips)
   }

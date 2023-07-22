@@ -23,26 +23,70 @@ public class CfnSubnetGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A description of the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-description)
+   * @param description A description of the subnet group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the subnet group to be used for the cluster .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-subnetgroupname)
+   * @param subnetGroupName The name of the subnet group to be used for the cluster . 
+   */
   public fun subnetGroupName(subnetGroupName: String) {
     cdkBuilder.subnetGroupName(subnetGroupName)
   }
 
+  /**
+   * A list of Amazon VPC subnet IDs for the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-subnetids)
+   * @param subnetIds A list of Amazon VPC subnet IDs for the subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * A list of Amazon VPC subnet IDs for the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-subnetids)
+   * @param subnetIds A list of Amazon VPC subnet IDs for the subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

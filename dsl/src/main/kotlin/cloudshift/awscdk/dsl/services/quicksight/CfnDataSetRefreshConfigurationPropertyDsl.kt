@@ -11,10 +11,16 @@ public class CfnDataSetRefreshConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSet.RefreshConfigurationProperty.Builder =
       CfnDataSet.RefreshConfigurationProperty.builder()
 
+  /**
+   * @param incrementalRefresh Incremental Refresh</p>.
+   */
   public fun incrementalRefresh(incrementalRefresh: IResolvable) {
     cdkBuilder.incrementalRefresh(incrementalRefresh)
   }
 
+  /**
+   * @param incrementalRefresh Incremental Refresh</p>.
+   */
   public fun incrementalRefresh(incrementalRefresh: CfnDataSet.IncrementalRefreshProperty) {
     cdkBuilder.incrementalRefresh(incrementalRefresh)
   }

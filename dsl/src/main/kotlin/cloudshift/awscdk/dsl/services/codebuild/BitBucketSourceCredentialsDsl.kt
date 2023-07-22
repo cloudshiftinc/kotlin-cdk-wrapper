@@ -16,10 +16,20 @@ public class BitBucketSourceCredentialsDsl(
   private val cdkBuilder: BitBucketSourceCredentials.Builder =
       BitBucketSourceCredentials.Builder.create(scope, id)
 
+  /**
+   * Your BitBucket application password.
+   *
+   * @param password Your BitBucket application password. 
+   */
   public fun password(password: SecretValue) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * Your BitBucket username.
+   *
+   * @param username Your BitBucket username. 
+   */
   public fun username(username: SecretValue) {
     cdkBuilder.username(username)
   }

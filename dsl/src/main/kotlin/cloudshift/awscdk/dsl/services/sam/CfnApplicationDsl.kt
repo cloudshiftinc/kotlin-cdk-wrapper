@@ -21,38 +21,74 @@ public class CfnApplicationDsl(
 
   private val _notificationArns: MutableList<String> = mutableListOf()
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-location)
+   * @param location 
+   */
   public fun location(location: String) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-location)
+   * @param location 
+   */
   public fun location(location: IResolvable) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-location)
+   * @param location 
+   */
   public fun location(location: CfnApplication.ApplicationLocationProperty) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-notificationarns)
+   * @param notificationArns 
+   */
   public fun notificationArns(vararg notificationArns: String) {
     _notificationArns.addAll(listOf(*notificationArns))
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-notificationarns)
+   * @param notificationArns 
+   */
   public fun notificationArns(notificationArns: Collection<String>) {
     _notificationArns.addAll(notificationArns)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-parameters)
+   * @param parameters 
+   */
   public fun parameters(parameters: Map<String, String>) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-parameters)
+   * @param parameters 
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-tags)
+   * @param tags 
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-timeoutinminutes)
+   * @param timeoutInMinutes 
+   */
   public fun timeoutInMinutes(timeoutInMinutes: Number) {
     cdkBuilder.timeoutInMinutes(timeoutInMinutes)
   }

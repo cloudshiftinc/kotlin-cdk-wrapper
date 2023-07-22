@@ -12,10 +12,16 @@ public class CfnThemeMarginStylePropertyDsl {
   private val cdkBuilder: CfnTheme.MarginStyleProperty.Builder =
       CfnTheme.MarginStyleProperty.builder()
 
+  /**
+   * @param show This Boolean value controls whether to display sheet margins.
+   */
   public fun show(show: Boolean) {
     cdkBuilder.show(show)
   }
 
+  /**
+   * @param show This Boolean value controls whether to display sheet margins.
+   */
   public fun show(show: IResolvable) {
     cdkBuilder.show(show)
   }

@@ -12,16 +12,25 @@ import software.amazon.awscdk.services.rds.InstanceEngineFeatures
 public class InstanceEngineConfigDsl {
   private val cdkBuilder: InstanceEngineConfig.Builder = InstanceEngineConfig.builder()
 
-  public fun features(block: InstanceEngineFeaturesDsl.() -> Unit = {}) {
+  /**
+   * @param features Features supported by the database engine.
+   */
+  public fun features(features: InstanceEngineFeaturesDsl.() -> Unit = {}) {
     val builder = InstanceEngineFeaturesDsl()
-    builder.apply(block)
+    builder.apply(features)
     cdkBuilder.features(builder.build())
   }
 
+  /**
+   * @param features Features supported by the database engine.
+   */
   public fun features(features: InstanceEngineFeatures) {
     cdkBuilder.features(features)
   }
 
+  /**
+   * @param optionGroup Option group of the database.
+   */
   public fun optionGroup(optionGroup: IOptionGroup) {
     cdkBuilder.optionGroup(optionGroup)
   }

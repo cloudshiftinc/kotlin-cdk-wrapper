@@ -27,46 +27,112 @@ public class CfnApplicationDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The ID of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-applicationid)
+   * @param applicationId The ID of the application. 
+   */
   public fun applicationId(applicationId: String) {
     cdkBuilder.applicationId(applicationId)
   }
 
+  /**
+   * The type of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-applicationtype)
+   * @param applicationType The type of the application. 
+   */
   public fun applicationType(applicationType: String) {
     cdkBuilder.applicationType(applicationType)
   }
 
+  /**
+   * The credentials of the SAP application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
+   * @param credentials The credentials of the SAP application. 
+   */
   public fun credentials(vararg credentials: Any) {
     _credentials.addAll(listOf(*credentials))
   }
 
+  /**
+   * The credentials of the SAP application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
+   * @param credentials The credentials of the SAP application. 
+   */
   public fun credentials(credentials: Collection<Any>) {
     _credentials.addAll(credentials)
   }
 
+  /**
+   * The credentials of the SAP application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
+   * @param credentials The credentials of the SAP application. 
+   */
   public fun credentials(credentials: IResolvable) {
     cdkBuilder.credentials(credentials)
   }
 
+  /**
+   * The Amazon EC2 instances on which your SAP application is running.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-instances)
+   * @param instances The Amazon EC2 instances on which your SAP application is running. 
+   */
   public fun instances(vararg instances: String) {
     _instances.addAll(listOf(*instances))
   }
 
+  /**
+   * The Amazon EC2 instances on which your SAP application is running.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-instances)
+   * @param instances The Amazon EC2 instances on which your SAP application is running. 
+   */
   public fun instances(instances: Collection<String>) {
     _instances.addAll(instances)
   }
 
+  /**
+   * The SAP instance number of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-sapinstancenumber)
+   * @param sapInstanceNumber The SAP instance number of the application. 
+   */
   public fun sapInstanceNumber(sapInstanceNumber: String) {
     cdkBuilder.sapInstanceNumber(sapInstanceNumber)
   }
 
+  /**
+   * The System ID of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-sid)
+   * @param sid The System ID of the application. 
+   */
   public fun sid(sid: String) {
     cdkBuilder.sid(sid)
   }
 
+  /**
+   * The tags on the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-tags)
+   * @param tags The tags on the application. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags on the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-tags)
+   * @param tags The tags on the application. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

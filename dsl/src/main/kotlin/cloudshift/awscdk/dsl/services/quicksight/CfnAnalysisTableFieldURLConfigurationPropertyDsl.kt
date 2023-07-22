@@ -11,19 +11,31 @@ public class CfnAnalysisTableFieldURLConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableFieldURLConfigurationProperty.Builder =
       CfnAnalysis.TableFieldURLConfigurationProperty.builder()
 
+  /**
+   * @param imageConfiguration The image configuration of a table field URL.
+   */
   public fun imageConfiguration(imageConfiguration: IResolvable) {
     cdkBuilder.imageConfiguration(imageConfiguration)
   }
 
+  /**
+   * @param imageConfiguration The image configuration of a table field URL.
+   */
   public
       fun imageConfiguration(imageConfiguration: CfnAnalysis.TableFieldImageConfigurationProperty) {
     cdkBuilder.imageConfiguration(imageConfiguration)
   }
 
+  /**
+   * @param linkConfiguration The link configuration of a table field URL.
+   */
   public fun linkConfiguration(linkConfiguration: IResolvable) {
     cdkBuilder.linkConfiguration(linkConfiguration)
   }
 
+  /**
+   * @param linkConfiguration The link configuration of a table field URL.
+   */
   public fun linkConfiguration(linkConfiguration: CfnAnalysis.TableFieldLinkConfigurationProperty) {
     cdkBuilder.linkConfiguration(linkConfiguration)
   }

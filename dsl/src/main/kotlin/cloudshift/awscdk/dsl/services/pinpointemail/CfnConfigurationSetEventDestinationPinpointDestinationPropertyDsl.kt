@@ -11,6 +11,10 @@ public class CfnConfigurationSetEventDestinationPinpointDestinationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.PinpointDestinationProperty.Builder =
       CfnConfigurationSetEventDestination.PinpointDestinationProperty.builder()
 
+  /**
+   * @param applicationArn The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you
+   * want to send email events to.
+   */
   public fun applicationArn(applicationArn: String) {
     cdkBuilder.applicationArn(applicationArn)
   }

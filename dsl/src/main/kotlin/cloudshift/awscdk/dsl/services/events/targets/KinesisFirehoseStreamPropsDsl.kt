@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps
 public class KinesisFirehoseStreamPropsDsl {
   private val cdkBuilder: KinesisFirehoseStreamProps.Builder = KinesisFirehoseStreamProps.builder()
 
+  /**
+   * @param message The message to send to the stream.
+   * Must be a valid JSON text passed to the target stream.
+   */
   public fun message(message: RuleTargetInput) {
     cdkBuilder.message(message)
   }

@@ -13,14 +13,23 @@ public class CfnLicenseBorrowConfigurationPropertyDsl {
   private val cdkBuilder: CfnLicense.BorrowConfigurationProperty.Builder =
       CfnLicense.BorrowConfigurationProperty.builder()
 
+  /**
+   * @param allowEarlyCheckIn Indicates whether early check-ins are allowed. 
+   */
   public fun allowEarlyCheckIn(allowEarlyCheckIn: Boolean) {
     cdkBuilder.allowEarlyCheckIn(allowEarlyCheckIn)
   }
 
+  /**
+   * @param allowEarlyCheckIn Indicates whether early check-ins are allowed. 
+   */
   public fun allowEarlyCheckIn(allowEarlyCheckIn: IResolvable) {
     cdkBuilder.allowEarlyCheckIn(allowEarlyCheckIn)
   }
 
+  /**
+   * @param maxTimeToLiveInMinutes Maximum time for the borrow configuration, in minutes. 
+   */
   public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
     cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
   }

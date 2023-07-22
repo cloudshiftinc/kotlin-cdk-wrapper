@@ -16,14 +16,23 @@ public class CfnDeploymentGroupOnPremisesTagSetListObjectPropertyDsl {
 
   private val _onPremisesTagGroup: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param onPremisesTagGroup Information about groups of on-premises instance tags.
+   */
   public fun onPremisesTagGroup(vararg onPremisesTagGroup: Any) {
     _onPremisesTagGroup.addAll(listOf(*onPremisesTagGroup))
   }
 
+  /**
+   * @param onPremisesTagGroup Information about groups of on-premises instance tags.
+   */
   public fun onPremisesTagGroup(onPremisesTagGroup: Collection<Any>) {
     _onPremisesTagGroup.addAll(onPremisesTagGroup)
   }
 
+  /**
+   * @param onPremisesTagGroup Information about groups of on-premises instance tags.
+   */
   public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
     cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
   }

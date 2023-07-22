@@ -11,6 +11,9 @@ public class CfnDashboardListControlSelectAllOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.ListControlSelectAllOptionsProperty.Builder =
       CfnDashboard.ListControlSelectAllOptionsProperty.builder()
 
+  /**
+   * @param visibility The visibility configuration of the `Select all` options in a list control.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

@@ -11,10 +11,18 @@ public class CfnBridgeBridgeOutputPropertyDsl {
   private val cdkBuilder: CfnBridge.BridgeOutputProperty.Builder =
       CfnBridge.BridgeOutputProperty.builder()
 
+  /**
+   * @param networkOutput The output of the bridge.
+   * A network output is delivered to your premises.
+   */
   public fun networkOutput(networkOutput: IResolvable) {
     cdkBuilder.networkOutput(networkOutput)
   }
 
+  /**
+   * @param networkOutput The output of the bridge.
+   * A network output is delivered to your premises.
+   */
   public fun networkOutput(networkOutput: CfnBridge.BridgeNetworkOutputProperty) {
     cdkBuilder.networkOutput(networkOutput)
   }

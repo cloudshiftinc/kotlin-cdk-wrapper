@@ -16,14 +16,29 @@ public class CfnEndpointAutoRollbackConfigPropertyDsl {
 
   private val _alarms: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param alarms List of CloudWatch alarms in your account that are configured to monitor metrics
+   * on an endpoint. 
+   * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+   */
   public fun alarms(vararg alarms: Any) {
     _alarms.addAll(listOf(*alarms))
   }
 
+  /**
+   * @param alarms List of CloudWatch alarms in your account that are configured to monitor metrics
+   * on an endpoint. 
+   * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+   */
   public fun alarms(alarms: Collection<Any>) {
     _alarms.addAll(alarms)
   }
 
+  /**
+   * @param alarms List of CloudWatch alarms in your account that are configured to monitor metrics
+   * on an endpoint. 
+   * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+   */
   public fun alarms(alarms: IResolvable) {
     cdkBuilder.alarms(alarms)
   }

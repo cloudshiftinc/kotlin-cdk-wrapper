@@ -17,31 +17,52 @@ public class CfnEvaluationFormEvaluationFormNumericQuestionPropertiesPropertyDsl
 
   private val _options: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param automation The automation properties of the numeric question.
+   */
   public fun automation(automation: IResolvable) {
     cdkBuilder.automation(automation)
   }
 
+  /**
+   * @param automation The automation properties of the numeric question.
+   */
   public
       fun automation(automation: CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty) {
     cdkBuilder.automation(automation)
   }
 
+  /**
+   * @param maxValue The maximum answer value. 
+   */
   public fun maxValue(maxValue: Number) {
     cdkBuilder.maxValue(maxValue)
   }
 
+  /**
+   * @param minValue The minimum answer value. 
+   */
   public fun minValue(minValue: Number) {
     cdkBuilder.minValue(minValue)
   }
 
+  /**
+   * @param options The scoring options of the numeric question.
+   */
   public fun options(vararg options: Any) {
     _options.addAll(listOf(*options))
   }
 
+  /**
+   * @param options The scoring options of the numeric question.
+   */
   public fun options(options: Collection<Any>) {
     _options.addAll(options)
   }
 
+  /**
+   * @param options The scoring options of the numeric question.
+   */
   public fun options(options: IResolvable) {
     cdkBuilder.options(options)
   }

@@ -16,30 +16,51 @@ public class CfnNetworkInsightsAccessScopeAccessScopePathRequestPropertyDsl {
 
   private val _throughResources: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param destination The destination.
+   */
   public fun destination(destination: IResolvable) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param destination The destination.
+   */
   public fun destination(destination: CfnNetworkInsightsAccessScope.PathStatementRequestProperty) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param source The source.
+   */
   public fun source(source: IResolvable) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param source The source.
+   */
   public fun source(source: CfnNetworkInsightsAccessScope.PathStatementRequestProperty) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param throughResources The through resources.
+   */
   public fun throughResources(vararg throughResources: Any) {
     _throughResources.addAll(listOf(*throughResources))
   }
 
+  /**
+   * @param throughResources The through resources.
+   */
   public fun throughResources(throughResources: Collection<Any>) {
     _throughResources.addAll(throughResources)
   }
 
+  /**
+   * @param throughResources The through resources.
+   */
   public fun throughResources(throughResources: IResolvable) {
     cdkBuilder.throughResources(throughResources)
   }

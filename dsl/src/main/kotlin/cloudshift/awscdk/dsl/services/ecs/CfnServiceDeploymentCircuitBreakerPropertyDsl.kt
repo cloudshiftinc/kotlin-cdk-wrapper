@@ -12,18 +12,36 @@ public class CfnServiceDeploymentCircuitBreakerPropertyDsl {
   private val cdkBuilder: CfnService.DeploymentCircuitBreakerProperty.Builder =
       CfnService.DeploymentCircuitBreakerProperty.builder()
 
+  /**
+   * @param enable Determines whether to use the deployment circuit breaker logic for the service. 
+   */
   public fun enable(enable: Boolean) {
     cdkBuilder.enable(enable)
   }
 
+  /**
+   * @param enable Determines whether to use the deployment circuit breaker logic for the service. 
+   */
   public fun enable(enable: IResolvable) {
     cdkBuilder.enable(enable)
   }
 
+  /**
+   * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+   * service deployment fails. 
+   * If rollback is on, when a service deployment fails, the service is rolled back to the last
+   * deployment that completed successfully.
+   */
   public fun rollback(rollback: Boolean) {
     cdkBuilder.rollback(rollback)
   }
 
+  /**
+   * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+   * service deployment fails. 
+   * If rollback is on, when a service deployment fails, the service is rolled back to the last
+   * deployment that completed successfully.
+   */
   public fun rollback(rollback: IResolvable) {
     cdkBuilder.rollback(rollback)
   }

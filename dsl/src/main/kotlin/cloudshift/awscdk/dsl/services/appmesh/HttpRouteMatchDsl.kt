@@ -21,34 +21,65 @@ public class HttpRouteMatchDsl {
 
   private val _queryParameters: MutableList<QueryParameterMatch> = mutableListOf()
 
+  /**
+   * @param headers Specifies the client request headers to match on.
+   * All specified headers
+   * must match for the route to match.
+   */
   public fun headers(vararg headers: HeaderMatch) {
     _headers.addAll(listOf(*headers))
   }
 
+  /**
+   * @param headers Specifies the client request headers to match on.
+   * All specified headers
+   * must match for the route to match.
+   */
   public fun headers(headers: Collection<HeaderMatch>) {
     _headers.addAll(headers)
   }
 
+  /**
+   * @param method The HTTP client request method to match on.
+   */
   public fun method(method: HttpRouteMethod) {
     cdkBuilder.method(method)
   }
 
+  /**
+   * @param path Specifies how is the request matched based on the path part of its URL.
+   */
   public fun path(path: HttpRoutePathMatch) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param port The port to match from the request.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param protocol The client request protocol to match on.
+   * Applicable only for HTTP2 routes.
+   */
   public fun protocol(protocol: HttpRouteProtocol) {
     cdkBuilder.protocol(protocol)
   }
 
+  /**
+   * @param queryParameters The query parameters to match on.
+   * All specified query parameters must match for the route to match.
+   */
   public fun queryParameters(vararg queryParameters: QueryParameterMatch) {
     _queryParameters.addAll(listOf(*queryParameters))
   }
 
+  /**
+   * @param queryParameters The query parameters to match on.
+   * All specified query parameters must match for the route to match.
+   */
   public fun queryParameters(queryParameters: Collection<QueryParameterMatch>) {
     _queryParameters.addAll(queryParameters)
   }

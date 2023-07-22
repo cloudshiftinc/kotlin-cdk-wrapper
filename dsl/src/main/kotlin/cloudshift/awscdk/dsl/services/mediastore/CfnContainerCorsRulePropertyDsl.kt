@@ -22,38 +22,93 @@ public class CfnContainerCorsRulePropertyDsl {
 
   private val _exposeHeaders: MutableList<String> = mutableListOf()
 
+  /**
+   * @param allowedHeaders Specifies which headers are allowed in a preflight `OPTIONS` request
+   * through the `Access-Control-Request-Headers` header.
+   * Each header name that is specified in `Access-Control-Request-Headers` must have a
+   * corresponding entry in the rule. Only the headers that were requested are sent back.
+   *
+   * This element can contain only one wildcard character (*).
+   */
   public fun allowedHeaders(vararg allowedHeaders: String) {
     _allowedHeaders.addAll(listOf(*allowedHeaders))
   }
 
+  /**
+   * @param allowedHeaders Specifies which headers are allowed in a preflight `OPTIONS` request
+   * through the `Access-Control-Request-Headers` header.
+   * Each header name that is specified in `Access-Control-Request-Headers` must have a
+   * corresponding entry in the rule. Only the headers that were requested are sent back.
+   *
+   * This element can contain only one wildcard character (*).
+   */
   public fun allowedHeaders(allowedHeaders: Collection<String>) {
     _allowedHeaders.addAll(allowedHeaders)
   }
 
+  /**
+   * @param allowedMethods Identifies an HTTP method that the origin that is specified in the rule
+   * is allowed to execute.
+   * Each CORS rule must contain at least one `AllowedMethods` and one `AllowedOrigins` element.
+   */
   public fun allowedMethods(vararg allowedMethods: String) {
     _allowedMethods.addAll(listOf(*allowedMethods))
   }
 
+  /**
+   * @param allowedMethods Identifies an HTTP method that the origin that is specified in the rule
+   * is allowed to execute.
+   * Each CORS rule must contain at least one `AllowedMethods` and one `AllowedOrigins` element.
+   */
   public fun allowedMethods(allowedMethods: Collection<String>) {
     _allowedMethods.addAll(allowedMethods)
   }
 
+  /**
+   * @param allowedOrigins One or more response headers that you want users to be able to access
+   * from their applications (for example, from a JavaScript `XMLHttpRequest` object).
+   * Each CORS rule must have at least one `AllowedOrigins` element. The string value can include
+   * only one wildcard character (*), for example, http:// *.example.com. Additionally, you can specify
+   * only one wildcard character to allow cross-origin access for all origins.
+   */
   public fun allowedOrigins(vararg allowedOrigins: String) {
     _allowedOrigins.addAll(listOf(*allowedOrigins))
   }
 
+  /**
+   * @param allowedOrigins One or more response headers that you want users to be able to access
+   * from their applications (for example, from a JavaScript `XMLHttpRequest` object).
+   * Each CORS rule must have at least one `AllowedOrigins` element. The string value can include
+   * only one wildcard character (*), for example, http:// *.example.com. Additionally, you can specify
+   * only one wildcard character to allow cross-origin access for all origins.
+   */
   public fun allowedOrigins(allowedOrigins: Collection<String>) {
     _allowedOrigins.addAll(allowedOrigins)
   }
 
+  /**
+   * @param exposeHeaders One or more headers in the response that you want users to be able to
+   * access from their applications (for example, from a JavaScript `XMLHttpRequest` object).
+   * This element is optional for each rule.
+   */
   public fun exposeHeaders(vararg exposeHeaders: String) {
     _exposeHeaders.addAll(listOf(*exposeHeaders))
   }
 
+  /**
+   * @param exposeHeaders One or more headers in the response that you want users to be able to
+   * access from their applications (for example, from a JavaScript `XMLHttpRequest` object).
+   * This element is optional for each rule.
+   */
   public fun exposeHeaders(exposeHeaders: Collection<String>) {
     _exposeHeaders.addAll(exposeHeaders)
   }
 
+  /**
+   * @param maxAgeSeconds The time in seconds that your browser caches the preflight response for
+   * the specified resource.
+   * A CORS rule can have only one `MaxAgeSeconds` element.
+   */
   public fun maxAgeSeconds(maxAgeSeconds: Number) {
     cdkBuilder.maxAgeSeconds(maxAgeSeconds)
   }

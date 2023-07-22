@@ -17,50 +17,86 @@ public class CfnModelCardModelOverviewPropertyDsl {
 
   private val _modelArtifact: MutableList<String> = mutableListOf()
 
+  /**
+   * @param algorithmType The algorithm used to solve the problem.
+   */
   public fun algorithmType(algorithmType: String) {
     cdkBuilder.algorithmType(algorithmType)
   }
 
+  /**
+   * @param inferenceEnvironment An overview about model inference.
+   */
   public fun inferenceEnvironment(inferenceEnvironment: IResolvable) {
     cdkBuilder.inferenceEnvironment(inferenceEnvironment)
   }
 
+  /**
+   * @param inferenceEnvironment An overview about model inference.
+   */
   public fun inferenceEnvironment(inferenceEnvironment: CfnModelCard.InferenceEnvironmentProperty) {
     cdkBuilder.inferenceEnvironment(inferenceEnvironment)
   }
 
+  /**
+   * @param modelArtifact The location of the model artifact.
+   */
   public fun modelArtifact(vararg modelArtifact: String) {
     _modelArtifact.addAll(listOf(*modelArtifact))
   }
 
+  /**
+   * @param modelArtifact The location of the model artifact.
+   */
   public fun modelArtifact(modelArtifact: Collection<String>) {
     _modelArtifact.addAll(modelArtifact)
   }
 
+  /**
+   * @param modelCreator The creator of the model.
+   */
   public fun modelCreator(modelCreator: String) {
     cdkBuilder.modelCreator(modelCreator)
   }
 
+  /**
+   * @param modelDescription A description of the model.
+   */
   public fun modelDescription(modelDescription: String) {
     cdkBuilder.modelDescription(modelDescription)
   }
 
+  /**
+   * @param modelId The SageMaker Model ARN or non- SageMaker Model ID.
+   */
   public fun modelId(modelId: String) {
     cdkBuilder.modelId(modelId)
   }
 
+  /**
+   * @param modelName The name of the model.
+   */
   public fun modelName(modelName: String) {
     cdkBuilder.modelName(modelName)
   }
 
+  /**
+   * @param modelOwner The owner of the model.
+   */
   public fun modelOwner(modelOwner: String) {
     cdkBuilder.modelOwner(modelOwner)
   }
 
+  /**
+   * @param modelVersion The version of the model.
+   */
   public fun modelVersion(modelVersion: Number) {
     cdkBuilder.modelVersion(modelVersion)
   }
 
+  /**
+   * @param problemType The problem being solved with the model.
+   */
   public fun problemType(problemType: String) {
     cdkBuilder.problemType(problemType)
   }

@@ -11,14 +11,26 @@ public class CfnPartitionSchemaIdPropertyDsl {
   private val cdkBuilder: CfnPartition.SchemaIdProperty.Builder =
       CfnPartition.SchemaIdProperty.builder()
 
+  /**
+   * @param registryName The name of the schema registry that contains the schema.
+   */
   public fun registryName(registryName: String) {
     cdkBuilder.registryName(registryName)
   }
 
+  /**
+   * @param schemaArn The Amazon Resource Name (ARN) of the schema.
+   * One of `SchemaArn` or `SchemaName` has to be
+   * provided.
+   */
   public fun schemaArn(schemaArn: String) {
     cdkBuilder.schemaArn(schemaArn)
   }
 
+  /**
+   * @param schemaName The name of the schema.
+   * One of `SchemaArn` or `SchemaName` has to be provided.
+   */
   public fun schemaName(schemaName: String) {
     cdkBuilder.schemaName(schemaName)
   }

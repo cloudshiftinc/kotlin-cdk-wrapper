@@ -12,14 +12,24 @@ public class CfnDashboardConditionalFormattingGradientColorPropertyDsl {
   private val cdkBuilder: CfnDashboard.ConditionalFormattingGradientColorProperty.Builder =
       CfnDashboard.ConditionalFormattingGradientColorProperty.builder()
 
+  /**
+   * @param color Determines the color. 
+   */
   public fun color(color: IResolvable) {
     cdkBuilder.color(color)
   }
 
+  /**
+   * @param color Determines the color. 
+   */
   public fun color(color: CfnDashboard.GradientColorProperty) {
     cdkBuilder.color(color)
   }
 
+  /**
+   * @param expression The expression that determines the formatting configuration for gradient
+   * color. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }

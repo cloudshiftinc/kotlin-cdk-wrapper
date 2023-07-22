@@ -5,9 +5,10 @@ import com.squareup.kotlinpoet.*
 internal data class BuilderProperty(
     val name: String,
     val type: TypeName,
-    val deprecated : Boolean,
+    val deprecated: Boolean,
     val builderClass: CdkClass?,
     val methodSignature: String,
+    val comment: String?,
 ) {
     fun typeName(): TypeName = type
 

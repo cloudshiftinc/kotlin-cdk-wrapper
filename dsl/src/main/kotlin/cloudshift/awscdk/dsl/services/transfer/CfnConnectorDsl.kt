@@ -23,32 +23,93 @@ public class CfnConnectorDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * With AS2, you can send files by calling `StartFileTransfer` and specifying the file paths in
+   * the request parameter, `SendFilePaths` .
+   *
+   * We use the file’s parent directory (for example, for `--send-file-paths /bucket/dir/file.txt` ,
+   * parent directory is `/bucket/dir/` ) to temporarily store a processed AS2 message file, store the
+   * MDN when we receive them from the partner, and write a final JSON file containing relevant
+   * metadata of the transmission. So, the `AccessRole` needs to provide read and write access to the
+   * parent directory of the file location used in the `StartFileTransfer` request. Additionally, you
+   * need to provide read and write access to the parent directory of the files that you intend to send
+   * with `StartFileTransfer` .
+   *
+   * If you are using Basic authentication for your AS2 connector, the access role requires the
+   * `secretsmanager:GetSecretValue` permission for the secret. If the secret is encrypted using a
+   * customer-managed key instead of the AWS managed key in Secrets Manager, then the role also needs
+   * the `kms:Decrypt` permission for that key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-accessrole)
+   * @param accessRole With AS2, you can send files by calling `StartFileTransfer` and specifying
+   * the file paths in the request parameter, `SendFilePaths` . 
+   */
   public fun accessRole(accessRole: String) {
     cdkBuilder.accessRole(accessRole)
   }
 
-  public fun as2Config(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * A structure that contains the parameters for a connector object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-as2config)
+   * @param as2Config A structure that contains the parameters for a connector object. 
+   */
+  public fun as2Config(as2Config: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(as2Config)
     cdkBuilder.as2Config(builder.map)
   }
 
+  /**
+   * A structure that contains the parameters for a connector object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-as2config)
+   * @param as2Config A structure that contains the parameters for a connector object. 
+   */
   public fun as2Config(as2Config: Any) {
     cdkBuilder.as2Config(as2Config)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that allows
+   * a connector to turn on CloudWatch logging for Amazon S3 events.
+   *
+   * When set, you can view connector activity in your CloudWatch logs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-loggingrole)
+   * @param loggingRole The Amazon Resource Name (ARN) of the AWS Identity and Access Management
+   * (IAM) role that allows a connector to turn on CloudWatch logging for Amazon S3 events. 
+   */
   public fun loggingRole(loggingRole: String) {
     cdkBuilder.loggingRole(loggingRole)
   }
 
+  /**
+   * Key-value pairs that can be used to group and search for connectors.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-tags)
+   * @param tags Key-value pairs that can be used to group and search for connectors. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Key-value pairs that can be used to group and search for connectors.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-tags)
+   * @param tags Key-value pairs that can be used to group and search for connectors. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The URL of the partner's AS2 endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-url)
+   * @param url The URL of the partner's AS2 endpoint. 
+   */
   public fun url(url: String) {
     cdkBuilder.url(url)
   }

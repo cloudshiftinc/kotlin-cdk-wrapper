@@ -11,10 +11,16 @@ public class CfnProjectS3DestinationPropertyDsl {
   private val cdkBuilder: CfnProject.S3DestinationProperty.Builder =
       CfnProject.S3DestinationProperty.builder()
 
+  /**
+   * @param bucketName The name of the bucket in which Evidently stores evaluation events. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param prefix The bucket prefix in which Evidently stores evaluation events.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

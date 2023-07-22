@@ -11,10 +11,16 @@ public class CfnDataSourceDataSourceErrorInfoPropertyDsl {
   private val cdkBuilder: CfnDataSource.DataSourceErrorInfoProperty.Builder =
       CfnDataSource.DataSourceErrorInfoProperty.builder()
 
+  /**
+   * @param message Error message.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * @param type Error type.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

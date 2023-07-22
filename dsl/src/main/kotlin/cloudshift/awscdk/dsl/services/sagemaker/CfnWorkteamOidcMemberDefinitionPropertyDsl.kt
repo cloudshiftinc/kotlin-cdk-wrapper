@@ -15,10 +15,16 @@ public class CfnWorkteamOidcMemberDefinitionPropertyDsl {
 
   private val _oidcGroups: MutableList<String> = mutableListOf()
 
+  /**
+   * @param oidcGroups the value to be set. 
+   */
   public fun oidcGroups(vararg oidcGroups: String) {
     _oidcGroups.addAll(listOf(*oidcGroups))
   }
 
+  /**
+   * @param oidcGroups the value to be set. 
+   */
   public fun oidcGroups(oidcGroups: Collection<String>) {
     _oidcGroups.addAll(oidcGroups)
   }

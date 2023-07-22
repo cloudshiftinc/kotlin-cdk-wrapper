@@ -15,14 +15,26 @@ public class CfnUserAuthenticationModePropertyDsl {
 
   private val _passwords: MutableList<String> = mutableListOf()
 
+  /**
+   * @param passwords Specifies the passwords to use for authentication if `Type` is set to
+   * `password` .
+   */
   public fun passwords(vararg passwords: String) {
     _passwords.addAll(listOf(*passwords))
   }
 
+  /**
+   * @param passwords Specifies the passwords to use for authentication if `Type` is set to
+   * `password` .
+   */
   public fun passwords(passwords: Collection<String>) {
     _passwords.addAll(passwords)
   }
 
+  /**
+   * @param type Specifies the authentication type. 
+   * Possible options are IAM authentication, password and no password.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

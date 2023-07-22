@@ -21,18 +21,45 @@ public class CfnDatabaseDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the Timestream database.
+   *
+   * *Length Constraints* : Minimum length of 3 bytes. Maximum length of 256 bytes.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html#cfn-timestream-database-databasename)
+   * @param databaseName The name of the Timestream database. 
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * The identifier of the AWS KMS key used to encrypt the data stored in the database.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html#cfn-timestream-database-kmskeyid)
+   * @param kmsKeyId The identifier of the AWS KMS key used to encrypt the data stored in the
+   * database. 
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * The tags to add to the database.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html#cfn-timestream-database-tags)
+   * @param tags The tags to add to the database. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags to add to the database.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html#cfn-timestream-database-tags)
+   * @param tags The tags to add to the database. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

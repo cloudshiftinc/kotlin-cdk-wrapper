@@ -10,6 +10,9 @@ import software.amazon.awscdk.EncodingOptions
 public class EncodingOptionsDsl {
   private val cdkBuilder: EncodingOptions.Builder = EncodingOptions.builder()
 
+  /**
+   * @param displayHint A hint for the Token's purpose when stringifying it.
+   */
   public fun displayHint(displayHint: String) {
     cdkBuilder.displayHint(displayHint)
   }

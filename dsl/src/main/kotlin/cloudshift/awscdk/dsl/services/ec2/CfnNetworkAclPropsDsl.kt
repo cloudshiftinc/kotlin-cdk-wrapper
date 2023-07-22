@@ -17,14 +17,23 @@ public class CfnNetworkAclPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param tags The tags for the network ACL.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the network ACL.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param vpcId The ID of the VPC for the network ACL. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

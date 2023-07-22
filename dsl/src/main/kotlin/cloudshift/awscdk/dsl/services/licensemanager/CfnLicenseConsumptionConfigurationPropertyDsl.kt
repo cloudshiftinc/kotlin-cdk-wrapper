@@ -12,23 +12,38 @@ public class CfnLicenseConsumptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnLicense.ConsumptionConfigurationProperty.Builder =
       CfnLicense.ConsumptionConfigurationProperty.builder()
 
+  /**
+   * @param borrowConfiguration Details about a borrow configuration.
+   */
   public fun borrowConfiguration(borrowConfiguration: IResolvable) {
     cdkBuilder.borrowConfiguration(borrowConfiguration)
   }
 
+  /**
+   * @param borrowConfiguration Details about a borrow configuration.
+   */
   public fun borrowConfiguration(borrowConfiguration: CfnLicense.BorrowConfigurationProperty) {
     cdkBuilder.borrowConfiguration(borrowConfiguration)
   }
 
+  /**
+   * @param provisionalConfiguration Details about a provisional configuration.
+   */
   public fun provisionalConfiguration(provisionalConfiguration: IResolvable) {
     cdkBuilder.provisionalConfiguration(provisionalConfiguration)
   }
 
+  /**
+   * @param provisionalConfiguration Details about a provisional configuration.
+   */
   public
       fun provisionalConfiguration(provisionalConfiguration: CfnLicense.ProvisionalConfigurationProperty) {
     cdkBuilder.provisionalConfiguration(provisionalConfiguration)
   }
 
+  /**
+   * @param renewType Renewal frequency.
+   */
   public fun renewType(renewType: String) {
     cdkBuilder.renewType(renewType)
   }

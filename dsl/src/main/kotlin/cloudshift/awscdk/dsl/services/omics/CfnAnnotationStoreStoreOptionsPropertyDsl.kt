@@ -11,10 +11,16 @@ public class CfnAnnotationStoreStoreOptionsPropertyDsl {
   private val cdkBuilder: CfnAnnotationStore.StoreOptionsProperty.Builder =
       CfnAnnotationStore.StoreOptionsProperty.builder()
 
+  /**
+   * @param tsvStoreOptions Formatting options for a TSV file. 
+   */
   public fun tsvStoreOptions(tsvStoreOptions: IResolvable) {
     cdkBuilder.tsvStoreOptions(tsvStoreOptions)
   }
 
+  /**
+   * @param tsvStoreOptions Formatting options for a TSV file. 
+   */
   public fun tsvStoreOptions(tsvStoreOptions: CfnAnnotationStore.TsvStoreOptionsProperty) {
     cdkBuilder.tsvStoreOptions(tsvStoreOptions)
   }

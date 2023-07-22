@@ -17,14 +17,23 @@ public class CfnCarrierGatewayPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param tags The tags assigned to the carrier gateway.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags assigned to the carrier gateway.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param vpcId The ID of the VPC associated with the carrier gateway. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

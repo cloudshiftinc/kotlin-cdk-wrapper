@@ -11,6 +11,10 @@ public class CfnAnalysisTableCellImageSizingConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableCellImageSizingConfigurationProperty.Builder =
       CfnAnalysis.TableCellImageSizingConfigurationProperty.builder()
 
+  /**
+   * @param tableCellImageScalingConfiguration The cell scaling configuration of the sizing options
+   * for the table image configuration.
+   */
   public fun tableCellImageScalingConfiguration(tableCellImageScalingConfiguration: String) {
     cdkBuilder.tableCellImageScalingConfiguration(tableCellImageScalingConfiguration)
   }

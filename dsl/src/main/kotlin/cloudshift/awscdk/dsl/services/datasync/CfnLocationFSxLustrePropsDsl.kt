@@ -19,26 +19,60 @@ public class CfnLocationFSxLustrePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param fsxFilesystemArn The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+   */
   public fun fsxFilesystemArn(fsxFilesystemArn: String) {
     cdkBuilder.fsxFilesystemArn(fsxFilesystemArn)
   }
 
+  /**
+   * @param securityGroupArns The ARNs of the security groups that are used to configure the FSx for
+   * Lustre file system. 
+   * *Pattern* :
+   * `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`
+   *
+   * *Length constraints* : Maximum length of 128.
+   */
   public fun securityGroupArns(vararg securityGroupArns: String) {
     _securityGroupArns.addAll(listOf(*securityGroupArns))
   }
 
+  /**
+   * @param securityGroupArns The ARNs of the security groups that are used to configure the FSx for
+   * Lustre file system. 
+   * *Pattern* :
+   * `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`
+   *
+   * *Length constraints* : Maximum length of 128.
+   */
   public fun securityGroupArns(securityGroupArns: Collection<String>) {
     _securityGroupArns.addAll(securityGroupArns)
   }
 
+  /**
+   * @param subdirectory A subdirectory in the location's path.
+   * This subdirectory in the FSx for Lustre file system is used to read data from the FSx for
+   * Lustre source location or write data to the FSx for Lustre destination.
+   */
   public fun subdirectory(subdirectory: String) {
     cdkBuilder.subdirectory(subdirectory)
   }
 
+  /**
+   * @param tags The key-value pair that represents a tag that you want to add to the resource.
+   * The value can be an empty string. This value helps you manage, filter, and search for your
+   * resources. We recommend that you create a name tag for your location.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The key-value pair that represents a tag that you want to add to the resource.
+   * The value can be an empty string. This value helps you manage, filter, and search for your
+   * resources. We recommend that you create a name tag for your location.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

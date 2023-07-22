@@ -11,10 +11,16 @@ public class CfnAnalysisTableInlineVisualizationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableInlineVisualizationProperty.Builder =
       CfnAnalysis.TableInlineVisualizationProperty.builder()
 
+  /**
+   * @param dataBars The configuration of the inline visualization of the data bars within a chart.
+   */
   public fun dataBars(dataBars: IResolvable) {
     cdkBuilder.dataBars(dataBars)
   }
 
+  /**
+   * @param dataBars The configuration of the inline visualization of the data bars within a chart.
+   */
   public fun dataBars(dataBars: CfnAnalysis.DataBarsOptionsProperty) {
     cdkBuilder.dataBars(dataBars)
   }

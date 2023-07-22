@@ -11,6 +11,9 @@ public class CfnCustomLineItemCustomLineItemFlatChargeDetailsPropertyDsl {
   private val cdkBuilder: CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.Builder =
       CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.builder()
 
+  /**
+   * @param chargeValue The custom line item's fixed charge value in USD. 
+   */
   public fun chargeValue(chargeValue: Number) {
     cdkBuilder.chargeValue(chargeValue)
   }

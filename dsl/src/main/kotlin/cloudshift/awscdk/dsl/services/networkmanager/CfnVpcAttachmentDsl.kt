@@ -24,43 +24,103 @@ public class CfnVpcAttachmentDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The core network ID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-corenetworkid)
+   * @param coreNetworkId The core network ID. 
+   */
   public fun coreNetworkId(coreNetworkId: String) {
     cdkBuilder.coreNetworkId(coreNetworkId)
   }
 
+  /**
+   * Options for creating the VPC attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-options)
+   * @param options Options for creating the VPC attachment. 
+   */
   public fun options(options: IResolvable) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * Options for creating the VPC attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-options)
+   * @param options Options for creating the VPC attachment. 
+   */
   public fun options(options: CfnVpcAttachment.VpcOptionsProperty) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * The attachment to move from one segment to another.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposedsegmentchange)
+   * @param proposedSegmentChange The attachment to move from one segment to another. 
+   */
   public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * The attachment to move from one segment to another.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposedsegmentchange)
+   * @param proposedSegmentChange The attachment to move from one segment to another. 
+   */
   public
       fun proposedSegmentChange(proposedSegmentChange: CfnVpcAttachment.ProposedSegmentChangeProperty) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * The subnet ARNs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-subnetarns)
+   * @param subnetArns The subnet ARNs. 
+   */
   public fun subnetArns(vararg subnetArns: String) {
     _subnetArns.addAll(listOf(*subnetArns))
   }
 
+  /**
+   * The subnet ARNs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-subnetarns)
+   * @param subnetArns The subnet ARNs. 
+   */
   public fun subnetArns(subnetArns: Collection<String>) {
     _subnetArns.addAll(subnetArns)
   }
 
+  /**
+   * The tags associated with the VPC attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-tags)
+   * @param tags The tags associated with the VPC attachment. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags associated with the VPC attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-tags)
+   * @param tags The tags associated with the VPC attachment. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ARN of the VPC attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-vpcarn)
+   * @param vpcArn The ARN of the VPC attachment. 
+   */
   public fun vpcArn(vpcArn: String) {
     cdkBuilder.vpcArn(vpcArn)
   }

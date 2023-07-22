@@ -11,18 +11,32 @@ import software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions
 public class TcpHealthCheckOptionsDsl {
   private val cdkBuilder: TcpHealthCheckOptions.Builder = TcpHealthCheckOptions.builder()
 
+  /**
+   * @param healthyThreshold The number of consecutive successful health checks that must occur
+   * before declaring listener healthy.
+   */
   public fun healthyThreshold(healthyThreshold: Number) {
     cdkBuilder.healthyThreshold(healthyThreshold)
   }
 
+  /**
+   * @param interval The time period between each health check execution.
+   */
   public fun interval(interval: Duration) {
     cdkBuilder.interval(interval)
   }
 
+  /**
+   * @param timeout The amount of time to wait when receiving a response from the health check.
+   */
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }
 
+  /**
+   * @param unhealthyThreshold The number of consecutive failed health checks that must occur before
+   * declaring a listener unhealthy.
+   */
   public fun unhealthyThreshold(unhealthyThreshold: Number) {
     cdkBuilder.unhealthyThreshold(unhealthyThreshold)
   }

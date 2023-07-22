@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig
 public class S3LocationConfigDsl {
   private val cdkBuilder: S3LocationConfig.Builder = S3LocationConfig.builder()
 
+  /**
+   * @param uri Uniquely identifies the resource in Amazon S3. 
+   */
   public fun uri(uri: String) {
     cdkBuilder.uri(uri)
   }

@@ -11,6 +11,9 @@ public class CfnTopicRuleDestinationHttpUrlDestinationSummaryPropertyDsl {
   private val cdkBuilder: CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.Builder =
       CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.builder()
 
+  /**
+   * @param confirmationUrl The URL used to confirm the HTTP topic rule destination URL.
+   */
   public fun confirmationUrl(confirmationUrl: String) {
     cdkBuilder.confirmationUrl(confirmationUrl)
   }

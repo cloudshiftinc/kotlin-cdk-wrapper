@@ -12,15 +12,24 @@ public class CfnDataSourceRelationalDatabaseConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.RelationalDatabaseConfigProperty.Builder =
       CfnDataSource.RelationalDatabaseConfigProperty.builder()
 
+  /**
+   * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+   */
   public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable) {
     cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig)
   }
 
+  /**
+   * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
+   */
   public
       fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: CfnDataSource.RdsHttpEndpointConfigProperty) {
     cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig)
   }
 
+  /**
+   * @param relationalDatabaseSourceType The type of relational data source. 
+   */
   public fun relationalDatabaseSourceType(relationalDatabaseSourceType: String) {
     cdkBuilder.relationalDatabaseSourceType(relationalDatabaseSourceType)
   }

@@ -11,10 +11,16 @@ public class CfnPricingRuleTieringPropertyDsl {
   private val cdkBuilder: CfnPricingRule.TieringProperty.Builder =
       CfnPricingRule.TieringProperty.builder()
 
+  /**
+   * @param freeTier The possible customizable free tier configurations.
+   */
   public fun freeTier(freeTier: IResolvable) {
     cdkBuilder.freeTier(freeTier)
   }
 
+  /**
+   * @param freeTier The possible customizable free tier configurations.
+   */
   public fun freeTier(freeTier: CfnPricingRule.FreeTierProperty) {
     cdkBuilder.freeTier(freeTier)
   }

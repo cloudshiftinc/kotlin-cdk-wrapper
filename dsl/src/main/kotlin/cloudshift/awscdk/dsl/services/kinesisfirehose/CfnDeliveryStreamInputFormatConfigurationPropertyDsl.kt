@@ -11,10 +11,20 @@ public class CfnDeliveryStreamInputFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.InputFormatConfigurationProperty.Builder =
       CfnDeliveryStream.InputFormatConfigurationProperty.builder()
 
+  /**
+   * @param deserializer Specifies which deserializer to use.
+   * You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. If both are non-null,
+   * the server rejects the request.
+   */
   public fun deserializer(deserializer: IResolvable) {
     cdkBuilder.deserializer(deserializer)
   }
 
+  /**
+   * @param deserializer Specifies which deserializer to use.
+   * You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. If both are non-null,
+   * the server rejects the request.
+   */
   public fun deserializer(deserializer: CfnDeliveryStream.DeserializerProperty) {
     cdkBuilder.deserializer(deserializer)
   }

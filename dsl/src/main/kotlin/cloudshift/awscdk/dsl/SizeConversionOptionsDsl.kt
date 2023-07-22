@@ -10,6 +10,9 @@ import software.amazon.awscdk.SizeRoundingBehavior
 public class SizeConversionOptionsDsl {
   private val cdkBuilder: SizeConversionOptions.Builder = SizeConversionOptions.builder()
 
+  /**
+   * @param rounding How conversions should behave when it encounters a non-integer result.
+   */
   public fun rounding(rounding: SizeRoundingBehavior) {
     cdkBuilder.rounding(rounding)
   }

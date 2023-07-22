@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.databrew.CfnProject
 public class CfnProjectSamplePropertyDsl {
   private val cdkBuilder: CfnProject.SampleProperty.Builder = CfnProject.SampleProperty.builder()
 
+  /**
+   * @param size The number of rows in the sample.
+   */
   public fun size(size: Number) {
     cdkBuilder.size(size)
   }
 
+  /**
+   * @param type The way in which DataBrew obtains rows from a dataset. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

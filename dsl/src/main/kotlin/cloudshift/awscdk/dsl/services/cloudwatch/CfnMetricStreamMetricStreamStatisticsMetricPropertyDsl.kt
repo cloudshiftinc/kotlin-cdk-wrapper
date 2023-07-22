@@ -11,10 +11,16 @@ public class CfnMetricStreamMetricStreamStatisticsMetricPropertyDsl {
   private val cdkBuilder: CfnMetricStream.MetricStreamStatisticsMetricProperty.Builder =
       CfnMetricStream.MetricStreamStatisticsMetricProperty.builder()
 
+  /**
+   * @param metricName The name of the metric. 
+   */
   public fun metricName(metricName: String) {
     cdkBuilder.metricName(metricName)
   }
 
+  /**
+   * @param namespace The namespace of the metric. 
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }

@@ -17,64 +17,116 @@ public class ResponseSecurityHeadersBehaviorDsl {
   private val cdkBuilder: ResponseSecurityHeadersBehavior.Builder =
       ResponseSecurityHeadersBehavior.builder()
 
-  public fun contentSecurityPolicy(block: ResponseHeadersContentSecurityPolicyDsl.() -> Unit = {}) {
+  /**
+   * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as
+   * values for the Content-Security-Policy HTTP response header.
+   */
+  public
+      fun contentSecurityPolicy(contentSecurityPolicy: ResponseHeadersContentSecurityPolicyDsl.() -> Unit
+      = {}) {
     val builder = ResponseHeadersContentSecurityPolicyDsl()
-    builder.apply(block)
+    builder.apply(contentSecurityPolicy)
     cdkBuilder.contentSecurityPolicy(builder.build())
   }
 
+  /**
+   * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as
+   * values for the Content-Security-Policy HTTP response header.
+   */
   public fun contentSecurityPolicy(contentSecurityPolicy: ResponseHeadersContentSecurityPolicy) {
     cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
   }
 
-  public fun contentTypeOptions(block: ResponseHeadersContentTypeOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param contentTypeOptions Determines whether CloudFront includes the X-Content-Type-Options
+   * HTTP response header with its value set to nosniff.
+   */
+  public fun contentTypeOptions(contentTypeOptions: ResponseHeadersContentTypeOptionsDsl.() -> Unit
+      = {}) {
     val builder = ResponseHeadersContentTypeOptionsDsl()
-    builder.apply(block)
+    builder.apply(contentTypeOptions)
     cdkBuilder.contentTypeOptions(builder.build())
   }
 
+  /**
+   * @param contentTypeOptions Determines whether CloudFront includes the X-Content-Type-Options
+   * HTTP response header with its value set to nosniff.
+   */
   public fun contentTypeOptions(contentTypeOptions: ResponseHeadersContentTypeOptions) {
     cdkBuilder.contentTypeOptions(contentTypeOptions)
   }
 
-  public fun frameOptions(block: ResponseHeadersFrameOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param frameOptions Determines whether CloudFront includes the X-Frame-Options HTTP response
+   * header and the header’s value.
+   */
+  public fun frameOptions(frameOptions: ResponseHeadersFrameOptionsDsl.() -> Unit = {}) {
     val builder = ResponseHeadersFrameOptionsDsl()
-    builder.apply(block)
+    builder.apply(frameOptions)
     cdkBuilder.frameOptions(builder.build())
   }
 
+  /**
+   * @param frameOptions Determines whether CloudFront includes the X-Frame-Options HTTP response
+   * header and the header’s value.
+   */
   public fun frameOptions(frameOptions: ResponseHeadersFrameOptions) {
     cdkBuilder.frameOptions(frameOptions)
   }
 
-  public fun referrerPolicy(block: ResponseHeadersReferrerPolicyDsl.() -> Unit = {}) {
+  /**
+   * @param referrerPolicy Determines whether CloudFront includes the Referrer-Policy HTTP response
+   * header and the header’s value.
+   */
+  public fun referrerPolicy(referrerPolicy: ResponseHeadersReferrerPolicyDsl.() -> Unit = {}) {
     val builder = ResponseHeadersReferrerPolicyDsl()
-    builder.apply(block)
+    builder.apply(referrerPolicy)
     cdkBuilder.referrerPolicy(builder.build())
   }
 
+  /**
+   * @param referrerPolicy Determines whether CloudFront includes the Referrer-Policy HTTP response
+   * header and the header’s value.
+   */
   public fun referrerPolicy(referrerPolicy: ResponseHeadersReferrerPolicy) {
     cdkBuilder.referrerPolicy(referrerPolicy)
   }
 
-  public fun strictTransportSecurity(block: ResponseHeadersStrictTransportSecurityDsl.() -> Unit =
-      {}) {
+  /**
+   * @param strictTransportSecurity Determines whether CloudFront includes the
+   * Strict-Transport-Security HTTP response header and the header’s value.
+   */
+  public
+      fun strictTransportSecurity(strictTransportSecurity: ResponseHeadersStrictTransportSecurityDsl.() -> Unit
+      = {}) {
     val builder = ResponseHeadersStrictTransportSecurityDsl()
-    builder.apply(block)
+    builder.apply(strictTransportSecurity)
     cdkBuilder.strictTransportSecurity(builder.build())
   }
 
+  /**
+   * @param strictTransportSecurity Determines whether CloudFront includes the
+   * Strict-Transport-Security HTTP response header and the header’s value.
+   */
   public
       fun strictTransportSecurity(strictTransportSecurity: ResponseHeadersStrictTransportSecurity) {
     cdkBuilder.strictTransportSecurity(strictTransportSecurity)
   }
 
-  public fun xssProtection(block: ResponseHeadersXSSProtectionDsl.() -> Unit = {}) {
+  /**
+   * @param xssProtection Determines whether CloudFront includes the X-XSS-Protection HTTP response
+   * header and the header’s value.
+   */
+  public fun xssProtection(xssProtection: ResponseHeadersXSSProtectionDsl.() -> Unit = {}) {
     val builder = ResponseHeadersXSSProtectionDsl()
-    builder.apply(block)
+    builder.apply(xssProtection)
     cdkBuilder.xssProtection(builder.build())
   }
 
+  /**
+   * @param xssProtection Determines whether CloudFront includes the X-XSS-Protection HTTP response
+   * header and the header’s value.
+   */
   public fun xssProtection(xssProtection: ResponseHeadersXSSProtection) {
     cdkBuilder.xssProtection(xssProtection)
   }

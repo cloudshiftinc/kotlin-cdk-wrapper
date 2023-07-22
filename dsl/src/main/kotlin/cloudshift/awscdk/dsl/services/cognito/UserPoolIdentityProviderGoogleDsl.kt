@@ -24,37 +24,105 @@ public class UserPoolIdentityProviderGoogleDsl(
 
   private val _scopes: MutableList<String> = mutableListOf()
 
-  public fun attributeMapping(block: AttributeMappingDsl.() -> Unit = {}) {
+  /**
+   * Mapping attributes from the identity provider to standard and custom attributes of the user
+   * pool.
+   *
+   * Default: - no attribute mapping
+   *
+   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+   * attributes of the user pool. 
+   */
+  public fun attributeMapping(attributeMapping: AttributeMappingDsl.() -> Unit = {}) {
     val builder = AttributeMappingDsl()
-    builder.apply(block)
+    builder.apply(attributeMapping)
     cdkBuilder.attributeMapping(builder.build())
   }
 
+  /**
+   * Mapping attributes from the identity provider to standard and custom attributes of the user
+   * pool.
+   *
+   * Default: - no attribute mapping
+   *
+   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+   * attributes of the user pool. 
+   */
   public fun attributeMapping(attributeMapping: AttributeMapping) {
     cdkBuilder.attributeMapping(attributeMapping)
   }
 
+  /**
+   * The client id recognized by Google APIs.
+   *
+   * [Documentation](https://developers.google.com/identity/sign-in/web/sign-in#specify_your_apps_client_id)
+   * @param clientId The client id recognized by Google APIs. 
+   */
   public fun clientId(clientId: String) {
     cdkBuilder.clientId(clientId)
   }
 
+  /**
+   * (deprecated) The client secret to be accompanied with clientId for Google APIs to authenticate
+   * the client.
+   *
+   * Default: none
+   *
+   * [Documentation](https://developers.google.com/identity/sign-in/web/sign-in)
+   * @deprecated use clientSecretValue instead
+   * @param clientSecret The client secret to be accompanied with clientId for Google APIs to
+   * authenticate the client. 
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun clientSecret(clientSecret: String) {
     cdkBuilder.clientSecret(clientSecret)
   }
 
+  /**
+   * The client secret to be accompanied with clientId for Google APIs to authenticate the client as
+   * SecretValue.
+   *
+   * Default: none
+   *
+   * [Documentation](https://developers.google.com/identity/sign-in/web/sign-in)
+   * @param clientSecretValue The client secret to be accompanied with clientId for Google APIs to
+   * authenticate the client as SecretValue. 
+   */
   public fun clientSecretValue(clientSecretValue: SecretValue) {
     cdkBuilder.clientSecretValue(clientSecretValue)
   }
 
+  /**
+   * The list of google permissions to obtain for getting access to the google profile.
+   *
+   * Default: [ profile ]
+   *
+   * [Documentation](https://developers.google.com/identity/sign-in/web/sign-in)
+   * @param scopes The list of google permissions to obtain for getting access to the google
+   * profile. 
+   */
   public fun scopes(vararg scopes: String) {
     _scopes.addAll(listOf(*scopes))
   }
 
+  /**
+   * The list of google permissions to obtain for getting access to the google profile.
+   *
+   * Default: [ profile ]
+   *
+   * [Documentation](https://developers.google.com/identity/sign-in/web/sign-in)
+   * @param scopes The list of google permissions to obtain for getting access to the google
+   * profile. 
+   */
   public fun scopes(scopes: Collection<String>) {
     _scopes.addAll(scopes)
   }
 
+  /**
+   * The user pool to which this construct provides identities.
+   *
+   * @param userPool The user pool to which this construct provides identities. 
+   */
   public fun userPool(userPool: IUserPool) {
     cdkBuilder.userPool(userPool)
   }

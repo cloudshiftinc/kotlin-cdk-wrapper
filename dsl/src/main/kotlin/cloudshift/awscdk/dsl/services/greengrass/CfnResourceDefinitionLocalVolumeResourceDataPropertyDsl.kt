@@ -12,18 +12,33 @@ public class CfnResourceDefinitionLocalVolumeResourceDataPropertyDsl {
   private val cdkBuilder: CfnResourceDefinition.LocalVolumeResourceDataProperty.Builder =
       CfnResourceDefinition.LocalVolumeResourceDataProperty.builder()
 
+  /**
+   * @param destinationPath The absolute local path of the resource in the Lambda environment. 
+   */
   public fun destinationPath(destinationPath: String) {
     cdkBuilder.destinationPath(destinationPath)
   }
 
+  /**
+   * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give to
+   * the Lambda function process.
+   */
   public fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
     cdkBuilder.groupOwnerSetting(groupOwnerSetting)
   }
 
+  /**
+   * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give to
+   * the Lambda function process.
+   */
   public fun groupOwnerSetting(groupOwnerSetting: CfnResourceDefinition.GroupOwnerSettingProperty) {
     cdkBuilder.groupOwnerSetting(groupOwnerSetting)
   }
 
+  /**
+   * @param sourcePath The local absolute path of the volume resource on the host. 
+   * The source path for a volume resource type cannot start with `/sys` .
+   */
   public fun sourcePath(sourcePath: String) {
     cdkBuilder.sourcePath(sourcePath)
   }

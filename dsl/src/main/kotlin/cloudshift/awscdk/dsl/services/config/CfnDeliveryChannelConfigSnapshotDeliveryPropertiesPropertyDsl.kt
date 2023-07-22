@@ -11,6 +11,9 @@ public class CfnDeliveryChannelConfigSnapshotDeliveryPropertiesPropertyDsl {
   private val cdkBuilder: CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty.Builder =
       CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty.builder()
 
+  /**
+   * @param deliveryFrequency The frequency with which AWS Config delivers configuration snapshots.
+   */
   public fun deliveryFrequency(deliveryFrequency: String) {
     cdkBuilder.deliveryFrequency(deliveryFrequency)
   }

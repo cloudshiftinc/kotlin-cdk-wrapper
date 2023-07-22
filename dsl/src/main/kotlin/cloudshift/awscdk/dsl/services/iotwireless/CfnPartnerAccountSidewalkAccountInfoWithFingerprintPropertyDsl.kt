@@ -11,14 +11,23 @@ public class CfnPartnerAccountSidewalkAccountInfoWithFingerprintPropertyDsl {
   private val cdkBuilder: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty.Builder =
       CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty.builder()
 
+  /**
+   * @param amazonId The Sidewalk Amazon ID.
+   */
   public fun amazonId(amazonId: String) {
     cdkBuilder.amazonId(amazonId)
   }
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the resource.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param fingerprint The fingerprint of the Sidewalk application server private key.
+   */
   public fun fingerprint(fingerprint: String) {
     cdkBuilder.fingerprint(fingerprint)
   }

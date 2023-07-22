@@ -16,22 +16,56 @@ public class PortfolioDsl(
 ) {
   private val cdkBuilder: Portfolio.Builder = Portfolio.Builder.create(scope, id)
 
+  /**
+   * Description for portfolio.
+   *
+   * Default: - No description provided
+   *
+   * @param description Description for portfolio. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the portfolio.
+   *
+   * @param displayName The name of the portfolio. 
+   */
   public fun displayName(displayName: String) {
     cdkBuilder.displayName(displayName)
   }
 
+  /**
+   * The message language.
+   *
+   * Controls language for
+   * status logging and errors.
+   *
+   * Default: - English
+   *
+   * @param messageLanguage The message language. 
+   */
   public fun messageLanguage(messageLanguage: MessageLanguage) {
     cdkBuilder.messageLanguage(messageLanguage)
   }
 
+  /**
+   * The provider name.
+   *
+   * @param providerName The provider name. 
+   */
   public fun providerName(providerName: String) {
     cdkBuilder.providerName(providerName)
   }
 
+  /**
+   * TagOptions associated directly to a portfolio.
+   *
+   * Default: - No tagOptions provided
+   *
+   * @param tagOptions TagOptions associated directly to a portfolio. 
+   */
   public fun tagOptions(tagOptions: TagOptions) {
     cdkBuilder.tagOptions(tagOptions)
   }

@@ -12,10 +12,16 @@ public class SecretTargetAttachmentPropsDsl {
   private val cdkBuilder: SecretTargetAttachmentProps.Builder =
       SecretTargetAttachmentProps.builder()
 
+  /**
+   * @param secret The secret to attach to the target. 
+   */
   public fun secret(secret: ISecret) {
     cdkBuilder.secret(secret)
   }
 
+  /**
+   * @param target The target to attach the secret to. 
+   */
   public fun target(target: ISecretAttachmentTarget) {
     cdkBuilder.target(target)
   }

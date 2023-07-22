@@ -14,16 +14,26 @@ public class CfnAutomationRuleRelatedFindingPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.RelatedFindingProperty.Builder =
       CfnAutomationRule.RelatedFindingProperty.builder()
 
-  public fun id(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param id The product-generated identifier for a related finding. 
+   */
+  public fun id(id: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(id)
     cdkBuilder.id(builder.map)
   }
 
+  /**
+   * @param id The product-generated identifier for a related finding. 
+   */
   public fun id(id: Any) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param productArn The Amazon Resource Name (ARN) for the product that generated a related
+   * finding. 
+   */
   public fun productArn(productArn: String) {
     cdkBuilder.productArn(productArn)
   }

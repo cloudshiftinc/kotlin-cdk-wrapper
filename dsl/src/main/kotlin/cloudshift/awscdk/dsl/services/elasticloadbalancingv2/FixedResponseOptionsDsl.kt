@@ -10,10 +10,17 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptio
 public class FixedResponseOptionsDsl {
   private val cdkBuilder: FixedResponseOptions.Builder = FixedResponseOptions.builder()
 
+  /**
+   * @param contentType Content Type of the response.
+   * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
+   */
   public fun contentType(contentType: String) {
     cdkBuilder.contentType(contentType)
   }
 
+  /**
+   * @param messageBody The response body.
+   */
   public fun messageBody(messageBody: String) {
     cdkBuilder.messageBody(messageBody)
   }

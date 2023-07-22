@@ -12,18 +12,30 @@ public class CfnDataSetOverrideDatasetParameterOperationPropertyDsl {
   private val cdkBuilder: CfnDataSet.OverrideDatasetParameterOperationProperty.Builder =
       CfnDataSet.OverrideDatasetParameterOperationProperty.builder()
 
+  /**
+   * @param newDefaultValues the value to be set.
+   */
   public fun newDefaultValues(newDefaultValues: IResolvable) {
     cdkBuilder.newDefaultValues(newDefaultValues)
   }
 
+  /**
+   * @param newDefaultValues the value to be set.
+   */
   public fun newDefaultValues(newDefaultValues: CfnDataSet.NewDefaultValuesProperty) {
     cdkBuilder.newDefaultValues(newDefaultValues)
   }
 
+  /**
+   * @param newParameterName Name of the parameter created in the dataset.</p>.
+   */
   public fun newParameterName(newParameterName: String) {
     cdkBuilder.newParameterName(newParameterName)
   }
 
+  /**
+   * @param parameterName Name of the parameter created in the dataset.</p>. 
+   */
   public fun parameterName(parameterName: String) {
     cdkBuilder.parameterName(parameterName)
   }

@@ -11,6 +11,9 @@ public class CfnAnalysisSecondaryValueOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SecondaryValueOptionsProperty.Builder =
       CfnAnalysis.SecondaryValueOptionsProperty.builder()
 
+  /**
+   * @param visibility Determines the visibility of the secondary value.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

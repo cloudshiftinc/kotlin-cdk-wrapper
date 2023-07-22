@@ -12,10 +12,16 @@ public class CfnClusterEndpointPropertyDsl {
   private val cdkBuilder: CfnCluster.EndpointProperty.Builder =
       CfnCluster.EndpointProperty.builder()
 
+  /**
+   * @param address The DNS hostname of the node.
+   */
   public fun address(address: String) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param port The port number that the engine is listening on.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

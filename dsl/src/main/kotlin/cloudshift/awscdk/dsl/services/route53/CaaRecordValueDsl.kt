@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.route53.CaaTag
 public class CaaRecordValueDsl {
   private val cdkBuilder: CaaRecordValue.Builder = CaaRecordValue.builder()
 
+  /**
+   * @param flag The flag. 
+   */
   public fun flag(flag: Number) {
     cdkBuilder.flag(flag)
   }
 
+  /**
+   * @param tag The tag. 
+   */
   public fun tag(tag: CaaTag) {
     cdkBuilder.tag(tag)
   }
 
+  /**
+   * @param value The value associated with the tag. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

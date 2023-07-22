@@ -12,14 +12,23 @@ public class CfnDataSourcePrestoParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.PrestoParametersProperty.Builder =
       CfnDataSource.PrestoParametersProperty.builder()
 
+  /**
+   * @param catalog Catalog. 
+   */
   public fun catalog(catalog: String) {
     cdkBuilder.catalog(catalog)
   }
 
+  /**
+   * @param host Host. 
+   */
   public fun host(host: String) {
     cdkBuilder.host(host)
   }
 
+  /**
+   * @param port Port. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

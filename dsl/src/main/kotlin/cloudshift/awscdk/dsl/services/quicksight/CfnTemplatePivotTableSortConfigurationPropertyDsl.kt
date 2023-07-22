@@ -16,14 +16,23 @@ public class CfnTemplatePivotTableSortConfigurationPropertyDsl {
 
   private val _fieldSortOptions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param fieldSortOptions The field sort options for a pivot table sort configuration.
+   */
   public fun fieldSortOptions(vararg fieldSortOptions: Any) {
     _fieldSortOptions.addAll(listOf(*fieldSortOptions))
   }
 
+  /**
+   * @param fieldSortOptions The field sort options for a pivot table sort configuration.
+   */
   public fun fieldSortOptions(fieldSortOptions: Collection<Any>) {
     _fieldSortOptions.addAll(fieldSortOptions)
   }
 
+  /**
+   * @param fieldSortOptions The field sort options for a pivot table sort configuration.
+   */
   public fun fieldSortOptions(fieldSortOptions: IResolvable) {
     cdkBuilder.fieldSortOptions(fieldSortOptions)
   }

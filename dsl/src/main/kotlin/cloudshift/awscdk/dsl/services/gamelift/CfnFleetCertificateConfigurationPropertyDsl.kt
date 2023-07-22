@@ -11,6 +11,13 @@ public class CfnFleetCertificateConfigurationPropertyDsl {
   private val cdkBuilder: CfnFleet.CertificateConfigurationProperty.Builder =
       CfnFleet.CertificateConfigurationProperty.builder()
 
+  /**
+   * @param certificateType Indicates whether a TLS/SSL certificate is generated for a fleet. 
+   * Valid values include:
+   *
+   * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
+   * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
+   */
   public fun certificateType(certificateType: String) {
     cdkBuilder.certificateType(certificateType)
   }

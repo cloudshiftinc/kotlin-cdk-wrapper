@@ -11,10 +11,16 @@ public class CfnFunctionS3KeyFilterRulePropertyDsl {
   private val cdkBuilder: CfnFunction.S3KeyFilterRuleProperty.Builder =
       CfnFunction.S3KeyFilterRuleProperty.builder()
 
+  /**
+   * @param name the value to be set. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value the value to be set. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

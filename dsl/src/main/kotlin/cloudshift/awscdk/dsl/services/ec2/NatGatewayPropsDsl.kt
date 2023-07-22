@@ -14,10 +14,16 @@ public class NatGatewayPropsDsl {
 
   private val _eipAllocationIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param eipAllocationIds EIP allocation IDs for the NAT gateways.
+   */
   public fun eipAllocationIds(vararg eipAllocationIds: String) {
     _eipAllocationIds.addAll(listOf(*eipAllocationIds))
   }
 
+  /**
+   * @param eipAllocationIds EIP allocation IDs for the NAT gateways.
+   */
   public fun eipAllocationIds(eipAllocationIds: Collection<String>) {
     _eipAllocationIds.addAll(eipAllocationIds)
   }

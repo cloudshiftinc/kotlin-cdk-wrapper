@@ -11,10 +11,16 @@ public class CfnBucketNotificationFilterPropertyDsl {
   private val cdkBuilder: CfnBucket.NotificationFilterProperty.Builder =
       CfnBucket.NotificationFilterProperty.builder()
 
+  /**
+   * @param s3Key A container for object key name prefix and suffix filtering rules. 
+   */
   public fun s3Key(s3Key: IResolvable) {
     cdkBuilder.s3Key(s3Key)
   }
 
+  /**
+   * @param s3Key A container for object key name prefix and suffix filtering rules. 
+   */
   public fun s3Key(s3Key: CfnBucket.S3KeyFilterProperty) {
     cdkBuilder.s3Key(s3Key)
   }

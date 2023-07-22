@@ -11,10 +11,16 @@ public class CfnVirtualNodeLoggingPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.LoggingProperty.Builder =
       CfnVirtualNode.LoggingProperty.builder()
 
+  /**
+   * @param accessLog The access log configuration for a virtual node.
+   */
   public fun accessLog(accessLog: IResolvable) {
     cdkBuilder.accessLog(accessLog)
   }
 
+  /**
+   * @param accessLog The access log configuration for a virtual node.
+   */
   public fun accessLog(accessLog: CfnVirtualNode.AccessLogProperty) {
     cdkBuilder.accessLog(accessLog)
   }

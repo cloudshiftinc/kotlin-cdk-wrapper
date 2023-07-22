@@ -17,22 +17,41 @@ public class CfnTemplateChartAxisLabelOptionsPropertyDsl {
 
   private val _axisLabelOptions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param axisLabelOptions The label options for a chart axis.
+   */
   public fun axisLabelOptions(vararg axisLabelOptions: Any) {
     _axisLabelOptions.addAll(listOf(*axisLabelOptions))
   }
 
+  /**
+   * @param axisLabelOptions The label options for a chart axis.
+   */
   public fun axisLabelOptions(axisLabelOptions: Collection<Any>) {
     _axisLabelOptions.addAll(axisLabelOptions)
   }
 
+  /**
+   * @param axisLabelOptions The label options for a chart axis.
+   */
   public fun axisLabelOptions(axisLabelOptions: IResolvable) {
     cdkBuilder.axisLabelOptions(axisLabelOptions)
   }
 
+  /**
+   * @param sortIconVisibility The visibility configuration of the sort icon on a chart's axis
+   * label.
+   */
   public fun sortIconVisibility(sortIconVisibility: String) {
     cdkBuilder.sortIconVisibility(sortIconVisibility)
   }
 
+  /**
+   * @param visibility The visibility of an axis label on a chart. Choose one of the following
+   * options:.
+   * * `VISIBLE` : Shows the axis.
+   * * `HIDDEN` : Hides the axis.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

@@ -11,6 +11,11 @@ public class CfnModelCardSecurityConfigPropertyDsl {
   private val cdkBuilder: CfnModelCard.SecurityConfigProperty.Builder =
       CfnModelCard.SecurityConfigProperty.builder()
 
+  /**
+   * @param kmsKeyId A AWS Key Management Service [key
+   * ID](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id) used to
+   * encrypt a model card.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }

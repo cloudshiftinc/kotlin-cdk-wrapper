@@ -11,6 +11,9 @@ public class CfnFlowSlackSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.SlackSourcePropertiesProperty.Builder =
       CfnFlow.SlackSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Slack flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

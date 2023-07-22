@@ -14,16 +14,25 @@ public class CfnHttpApiHttpApiAuthPropertyDsl {
   private val cdkBuilder: CfnHttpApi.HttpApiAuthProperty.Builder =
       CfnHttpApi.HttpApiAuthProperty.builder()
 
-  public fun authorizers(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param authorizers the value to be set.
+   */
+  public fun authorizers(authorizers: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(authorizers)
     cdkBuilder.authorizers(builder.map)
   }
 
+  /**
+   * @param authorizers the value to be set.
+   */
   public fun authorizers(authorizers: Any) {
     cdkBuilder.authorizers(authorizers)
   }
 
+  /**
+   * @param defaultAuthorizer the value to be set.
+   */
   public fun defaultAuthorizer(defaultAuthorizer: String) {
     cdkBuilder.defaultAuthorizer(defaultAuthorizer)
   }

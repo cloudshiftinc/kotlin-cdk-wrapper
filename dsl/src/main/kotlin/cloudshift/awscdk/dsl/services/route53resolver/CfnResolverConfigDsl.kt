@@ -14,10 +14,26 @@ public class CfnResolverConfigDsl(
 ) {
   private val cdkBuilder: CfnResolverConfig.Builder = CfnResolverConfig.Builder.create(scope, id)
 
+  /**
+   * Represents the desired status of `AutodefinedReverse` .
+   *
+   * The only supported value on creation is `DISABLE` . Deletion of this resource will return
+   * `AutodefinedReverse` to its default value of `ENABLED` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-autodefinedreverseflag)
+   * @param autodefinedReverseFlag Represents the desired status of `AutodefinedReverse` . 
+   */
   public fun autodefinedReverseFlag(autodefinedReverseFlag: String) {
     cdkBuilder.autodefinedReverseFlag(autodefinedReverseFlag)
   }
 
+  /**
+   * The ID of the Amazon Virtual Private Cloud VPC that you're configuring Resolver for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-resourceid)
+   * @param resourceId The ID of the Amazon Virtual Private Cloud VPC that you're configuring
+   * Resolver for. 
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }

@@ -11,6 +11,9 @@ public class CfnListenerFixedResponsePropertyDsl {
   private val cdkBuilder: CfnListener.FixedResponseProperty.Builder =
       CfnListener.FixedResponseProperty.builder()
 
+  /**
+   * @param statusCode The HTTP response code. 
+   */
   public fun statusCode(statusCode: Number) {
     cdkBuilder.statusCode(statusCode)
   }

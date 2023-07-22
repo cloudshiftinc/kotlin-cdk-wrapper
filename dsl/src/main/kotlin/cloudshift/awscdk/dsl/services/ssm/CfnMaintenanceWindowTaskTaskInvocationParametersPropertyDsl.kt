@@ -11,40 +11,66 @@ public class CfnMaintenanceWindowTaskTaskInvocationParametersPropertyDsl {
   private val cdkBuilder: CfnMaintenanceWindowTask.TaskInvocationParametersProperty.Builder =
       CfnMaintenanceWindowTask.TaskInvocationParametersProperty.builder()
 
+  /**
+   * @param maintenanceWindowAutomationParameters The parameters for an `AUTOMATION` task type.
+   */
   public
       fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: IResolvable) {
     cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters)
   }
 
+  /**
+   * @param maintenanceWindowAutomationParameters The parameters for an `AUTOMATION` task type.
+   */
   public
       fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty) {
     cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters)
   }
 
+  /**
+   * @param maintenanceWindowLambdaParameters The parameters for a `LAMBDA` task type.
+   */
   public fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: IResolvable) {
     cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters)
   }
 
+  /**
+   * @param maintenanceWindowLambdaParameters The parameters for a `LAMBDA` task type.
+   */
   public
       fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty) {
     cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters)
   }
 
+  /**
+   * @param maintenanceWindowRunCommandParameters The parameters for a `RUN_COMMAND` task type.
+   */
   public
       fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: IResolvable) {
     cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters)
   }
 
+  /**
+   * @param maintenanceWindowRunCommandParameters The parameters for a `RUN_COMMAND` task type.
+   */
   public
       fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty) {
     cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters)
   }
 
+  /**
+   * @param maintenanceWindowStepFunctionsParameters The parameters for a `STEP_FUNCTIONS` task
+   * type.
+   */
   public
       fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: IResolvable) {
     cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters)
   }
 
+  /**
+   * @param maintenanceWindowStepFunctionsParameters The parameters for a `STEP_FUNCTIONS` task
+   * type.
+   */
   public
       fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty) {
     cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters)

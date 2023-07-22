@@ -16,16 +16,46 @@ public class CfnWebACLAssociationConfigPropertyDsl {
   private val cdkBuilder: CfnWebACL.AssociationConfigProperty.Builder =
       CfnWebACL.AssociationConfigProperty.builder()
 
-  public fun requestBody(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param requestBody Customizes the maximum size of the request body that your protected
+   * CloudFront distributions forward to AWS WAF for inspection.
+   * The default size is 16 KB (16,384 kilobytes).
+   *
+   *
+   * You are charged additional fees when your protected resources forward body sizes that are
+   * larger than the default. For more information, see [AWS WAF
+   * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+   */
+  public fun requestBody(requestBody: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(requestBody)
     cdkBuilder.requestBody(builder.map)
   }
 
+  /**
+   * @param requestBody Customizes the maximum size of the request body that your protected
+   * CloudFront distributions forward to AWS WAF for inspection.
+   * The default size is 16 KB (16,384 kilobytes).
+   *
+   *
+   * You are charged additional fees when your protected resources forward body sizes that are
+   * larger than the default. For more information, see [AWS WAF
+   * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+   */
   public fun requestBody(requestBody: Map<String, Any>) {
     cdkBuilder.requestBody(requestBody)
   }
 
+  /**
+   * @param requestBody Customizes the maximum size of the request body that your protected
+   * CloudFront distributions forward to AWS WAF for inspection.
+   * The default size is 16 KB (16,384 kilobytes).
+   *
+   *
+   * You are charged additional fees when your protected resources forward body sizes that are
+   * larger than the default. For more information, see [AWS WAF
+   * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+   */
   public fun requestBody(requestBody: IResolvable) {
     cdkBuilder.requestBody(requestBody)
   }

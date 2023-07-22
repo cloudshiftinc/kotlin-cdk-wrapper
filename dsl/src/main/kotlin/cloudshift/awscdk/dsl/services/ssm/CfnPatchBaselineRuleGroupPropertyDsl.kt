@@ -16,14 +16,23 @@ public class CfnPatchBaselineRuleGroupPropertyDsl {
 
   private val _patchRules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param patchRules The rules that make up the rule group.
+   */
   public fun patchRules(vararg patchRules: Any) {
     _patchRules.addAll(listOf(*patchRules))
   }
 
+  /**
+   * @param patchRules The rules that make up the rule group.
+   */
   public fun patchRules(patchRules: Collection<Any>) {
     _patchRules.addAll(patchRules)
   }
 
+  /**
+   * @param patchRules The rules that make up the rule group.
+   */
   public fun patchRules(patchRules: IResolvable) {
     cdkBuilder.patchRules(patchRules)
   }

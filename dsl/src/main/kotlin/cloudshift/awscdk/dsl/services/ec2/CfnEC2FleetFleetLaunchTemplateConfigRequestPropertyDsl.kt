@@ -16,23 +16,49 @@ public class CfnEC2FleetFleetLaunchTemplateConfigRequestPropertyDsl {
 
   private val _overrides: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param launchTemplateSpecification The launch template to use.
+   * You must specify either the launch template ID or launch template name in the request.
+   */
   public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
     cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
   }
 
+  /**
+   * @param launchTemplateSpecification The launch template to use.
+   * You must specify either the launch template ID or launch template name in the request.
+   */
   public
       fun launchTemplateSpecification(launchTemplateSpecification: CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty) {
     cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
   }
 
+  /**
+   * @param overrides Any parameters that you specify override the same parameters in the launch
+   * template.
+   * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+   * launch templates.
+   */
   public fun overrides(vararg overrides: Any) {
     _overrides.addAll(listOf(*overrides))
   }
 
+  /**
+   * @param overrides Any parameters that you specify override the same parameters in the launch
+   * template.
+   * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+   * launch templates.
+   */
   public fun overrides(overrides: Collection<Any>) {
     _overrides.addAll(overrides)
   }
 
+  /**
+   * @param overrides Any parameters that you specify override the same parameters in the launch
+   * template.
+   * For fleets of type `request` and `maintain` , a maximum of 300 items is allowed across all
+   * launch templates.
+   */
   public fun overrides(overrides: IResolvable) {
     cdkBuilder.overrides(overrides)
   }

@@ -12,14 +12,23 @@ public class CfnDataSourceAuroraParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.AuroraParametersProperty.Builder =
       CfnDataSource.AuroraParametersProperty.builder()
 
+  /**
+   * @param database Database. 
+   */
   public fun database(database: String) {
     cdkBuilder.database(database)
   }
 
+  /**
+   * @param host Host. 
+   */
   public fun host(host: String) {
     cdkBuilder.host(host)
   }
 
+  /**
+   * @param port Port. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

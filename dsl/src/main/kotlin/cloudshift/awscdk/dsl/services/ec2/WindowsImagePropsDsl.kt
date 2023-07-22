@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ec2.WindowsImageProps
 public class WindowsImagePropsDsl {
   private val cdkBuilder: WindowsImageProps.Builder = WindowsImageProps.builder()
 
+  /**
+   * @param userData Initial user data.
+   */
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)
   }

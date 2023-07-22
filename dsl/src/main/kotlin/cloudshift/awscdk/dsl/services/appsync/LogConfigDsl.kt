@@ -14,22 +14,40 @@ import software.amazon.awscdk.services.logs.RetentionDays
 public class LogConfigDsl {
   private val cdkBuilder: LogConfig.Builder = LogConfig.builder()
 
+  /**
+   * @param excludeVerboseContent exclude verbose content.
+   */
   public fun excludeVerboseContent(excludeVerboseContent: Boolean) {
     cdkBuilder.excludeVerboseContent(excludeVerboseContent)
   }
 
+  /**
+   * @param excludeVerboseContent exclude verbose content.
+   */
   public fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
     cdkBuilder.excludeVerboseContent(excludeVerboseContent)
   }
 
+  /**
+   * @param fieldLogLevel log level for fields.
+   */
   public fun fieldLogLevel(fieldLogLevel: FieldLogLevel) {
     cdkBuilder.fieldLogLevel(fieldLogLevel)
   }
 
+  /**
+   * @param retention The number of days log events are kept in CloudWatch Logs.
+   * By default AppSync keeps the logs infinitely. When updating this property,
+   * unsetting it doesn't remove the log retention policy.
+   * To remove the retention policy, set the value to `INFINITE`
+   */
   public fun retention(retention: RetentionDays) {
     cdkBuilder.retention(retention)
   }
 
+  /**
+   * @param role The role for CloudWatch Logs.
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

@@ -17,18 +17,50 @@ public class CfnApplicationNetworkConfigurationPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
+   * *Minimum* : 1
+   *
+   * *Maximum* : 32
+   *
+   * *Pattern* : `^[-0-9a-zA-Z]+`
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The array of security group Ids for customer VPC connectivity.
+   * *Minimum* : 1
+   *
+   * *Maximum* : 32
+   *
+   * *Pattern* : `^[-0-9a-zA-Z]+`
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds The array of subnet Ids for customer VPC connectivity.
+   * *Minimum* : 1
+   *
+   * *Maximum* : 32
+   *
+   * *Pattern* : `^[-0-9a-zA-Z]+`
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The array of subnet Ids for customer VPC connectivity.
+   * *Minimum* : 1
+   *
+   * *Maximum* : 32
+   *
+   * *Pattern* : `^[-0-9a-zA-Z]+`
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

@@ -11,10 +11,16 @@ public class CfnAnalysisColumnIdentifierPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ColumnIdentifierProperty.Builder =
       CfnAnalysis.ColumnIdentifierProperty.builder()
 
+  /**
+   * @param columnName The name of the column. 
+   */
   public fun columnName(columnName: String) {
     cdkBuilder.columnName(columnName)
   }
 
+  /**
+   * @param dataSetIdentifier The data set that the column belongs to. 
+   */
   public fun dataSetIdentifier(dataSetIdentifier: String) {
     cdkBuilder.dataSetIdentifier(dataSetIdentifier)
   }

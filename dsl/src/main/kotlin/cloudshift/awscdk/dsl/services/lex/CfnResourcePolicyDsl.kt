@@ -17,16 +17,43 @@ public class CfnResourcePolicyDsl(
 ) {
   private val cdkBuilder: CfnResourcePolicy.Builder = CfnResourcePolicy.Builder.create(scope, id)
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * A resource policy to add to the resource.
+   *
+   * The policy is a JSON structure that contains one or more statements that define the policy. The
+   * policy must follow IAM syntax. If the policy isn't valid, Amazon Lex returns a validation
+   * exception.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-policy)
+   * @param policy A resource policy to add to the resource. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * A resource policy to add to the resource.
+   *
+   * The policy is a JSON structure that contains one or more statements that define the policy. The
+   * policy must follow IAM syntax. If the policy isn't valid, Amazon Lex returns a validation
+   * exception.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-policy)
+   * @param policy A resource policy to add to the resource. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-resourcearn)
+   * @param resourceArn The Amazon Resource Name (ARN) of the bot or bot alias that the resource
+   * policy is attached to. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

@@ -19,26 +19,52 @@ public class CfnSubnetGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param cacheSubnetGroupName The name for the cache subnet group. This value is stored as a
+   * lowercase string.
+   * Constraints: Must contain no more than 255 alphanumeric characters or hyphens.
+   *
+   * Example: `mysubnetgroup`
+   */
   public fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
     cdkBuilder.cacheSubnetGroupName(cacheSubnetGroupName)
   }
 
+  /**
+   * @param description The description for the cache subnet group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param subnetIds The EC2 subnet IDs for the cache subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The EC2 subnet IDs for the cache subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param tags A tag that can be added to an ElastiCache subnet group.
+   * Tags are composed of a Key/Value pair. You can use tags to categorize and track all your subnet
+   * groups. A tag with a null Value is permitted.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A tag that can be added to an ElastiCache subnet group.
+   * Tags are composed of a Key/Value pair. You can use tags to categorize and track all your subnet
+   * groups. A tag with a null Value is permitted.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

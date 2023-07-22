@@ -11,10 +11,19 @@ public class CfnTaskDefinitionRuntimePlatformPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.RuntimePlatformProperty.Builder =
       CfnTaskDefinition.RuntimePlatformProperty.builder()
 
+  /**
+   * @param cpuArchitecture The CPU architecture.
+   * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` . This
+   * option is available for tasks that run on Linux Amazon EC2 instance or Linux containers on
+   * Fargate.
+   */
   public fun cpuArchitecture(cpuArchitecture: String) {
     cdkBuilder.cpuArchitecture(cpuArchitecture)
   }
 
+  /**
+   * @param operatingSystemFamily The operating system.
+   */
   public fun operatingSystemFamily(operatingSystemFamily: String) {
     cdkBuilder.operatingSystemFamily(operatingSystemFamily)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.route53.AliasRecordTargetConfig
 public class AliasRecordTargetConfigDsl {
   private val cdkBuilder: AliasRecordTargetConfig.Builder = AliasRecordTargetConfig.builder()
 
+  /**
+   * @param dnsName DNS name of the target. 
+   */
   public fun dnsName(dnsName: String) {
     cdkBuilder.dnsName(dnsName)
   }
 
+  /**
+   * @param hostedZoneId Hosted zone ID of the target. 
+   */
   public fun hostedZoneId(hostedZoneId: String) {
     cdkBuilder.hostedZoneId(hostedZoneId)
   }

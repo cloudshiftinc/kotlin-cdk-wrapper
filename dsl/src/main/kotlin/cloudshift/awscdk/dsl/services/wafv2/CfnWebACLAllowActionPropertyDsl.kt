@@ -11,10 +11,24 @@ public class CfnWebACLAllowActionPropertyDsl {
   private val cdkBuilder: CfnWebACL.AllowActionProperty.Builder =
       CfnWebACL.AllowActionProperty.builder()
 
+  /**
+   * @param customRequestHandling Defines custom handling for the web request.
+   * For information about customizing web requests and responses, see [Customizing web requests and
+   * responses in AWS
+   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in
+   * the *AWS WAF Developer Guide* .
+   */
   public fun customRequestHandling(customRequestHandling: IResolvable) {
     cdkBuilder.customRequestHandling(customRequestHandling)
   }
 
+  /**
+   * @param customRequestHandling Defines custom handling for the web request.
+   * For information about customizing web requests and responses, see [Customizing web requests and
+   * responses in AWS
+   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in
+   * the *AWS WAF Developer Guide* .
+   */
   public fun customRequestHandling(customRequestHandling: CfnWebACL.CustomRequestHandlingProperty) {
     cdkBuilder.customRequestHandling(customRequestHandling)
   }

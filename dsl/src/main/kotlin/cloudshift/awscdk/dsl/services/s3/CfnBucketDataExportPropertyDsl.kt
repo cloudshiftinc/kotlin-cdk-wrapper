@@ -12,14 +12,24 @@ public class CfnBucketDataExportPropertyDsl {
   private val cdkBuilder: CfnBucket.DataExportProperty.Builder =
       CfnBucket.DataExportProperty.builder()
 
+  /**
+   * @param destination The place to store the data for an analysis. 
+   */
   public fun destination(destination: IResolvable) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param destination The place to store the data for an analysis. 
+   */
   public fun destination(destination: CfnBucket.DestinationProperty) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param outputSchemaVersion The version of the output schema to use when exporting data. 
+   * Must be `V_1` .
+   */
   public fun outputSchemaVersion(outputSchemaVersion: String) {
     cdkBuilder.outputSchemaVersion(outputSchemaVersion)
   }

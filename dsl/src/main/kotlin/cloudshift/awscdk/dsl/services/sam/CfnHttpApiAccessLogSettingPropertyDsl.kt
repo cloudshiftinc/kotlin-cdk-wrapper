@@ -11,10 +11,16 @@ public class CfnHttpApiAccessLogSettingPropertyDsl {
   private val cdkBuilder: CfnHttpApi.AccessLogSettingProperty.Builder =
       CfnHttpApi.AccessLogSettingProperty.builder()
 
+  /**
+   * @param destinationArn the value to be set.
+   */
   public fun destinationArn(destinationArn: String) {
     cdkBuilder.destinationArn(destinationArn)
   }
 
+  /**
+   * @param format the value to be set.
+   */
   public fun format(format: String) {
     cdkBuilder.format(format)
   }

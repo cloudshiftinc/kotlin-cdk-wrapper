@@ -12,6 +12,9 @@ public class CfnApplicationCloudWatchLoggingOptionV2CloudWatchLoggingOptionPrope
       CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.Builder =
       CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.builder()
 
+  /**
+   * @param logStreamArn The ARN of the CloudWatch log to receive application messages. 
+   */
   public fun logStreamArn(logStreamArn: String) {
     cdkBuilder.logStreamArn(logStreamArn)
   }

@@ -17,26 +17,50 @@ public class CfnPipePipeEnrichmentHttpParametersPropertyDsl {
 
   private val _pathParameterValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param headerParameters The headers that need to be sent as part of request invoking the API
+   * Gateway REST API or EventBridge ApiDestination.
+   */
   public fun headerParameters(headerParameters: Map<String, String>) {
     cdkBuilder.headerParameters(headerParameters)
   }
 
+  /**
+   * @param headerParameters The headers that need to be sent as part of request invoking the API
+   * Gateway REST API or EventBridge ApiDestination.
+   */
   public fun headerParameters(headerParameters: IResolvable) {
     cdkBuilder.headerParameters(headerParameters)
   }
 
+  /**
+   * @param pathParameterValues The path parameter values to be used to populate API Gateway REST
+   * API or EventBridge ApiDestination path wildcards ("*").
+   */
   public fun pathParameterValues(vararg pathParameterValues: String) {
     _pathParameterValues.addAll(listOf(*pathParameterValues))
   }
 
+  /**
+   * @param pathParameterValues The path parameter values to be used to populate API Gateway REST
+   * API or EventBridge ApiDestination path wildcards ("*").
+   */
   public fun pathParameterValues(pathParameterValues: Collection<String>) {
     _pathParameterValues.addAll(pathParameterValues)
   }
 
+  /**
+   * @param queryStringParameters The query string keys/values that need to be sent as part of
+   * request invoking the API Gateway REST API or EventBridge ApiDestination.
+   */
   public fun queryStringParameters(queryStringParameters: Map<String, String>) {
     cdkBuilder.queryStringParameters(queryStringParameters)
   }
 
+  /**
+   * @param queryStringParameters The query string keys/values that need to be sent as part of
+   * request invoking the API Gateway REST API or EventBridge ApiDestination.
+   */
   public fun queryStringParameters(queryStringParameters: IResolvable) {
     cdkBuilder.queryStringParameters(queryStringParameters)
   }

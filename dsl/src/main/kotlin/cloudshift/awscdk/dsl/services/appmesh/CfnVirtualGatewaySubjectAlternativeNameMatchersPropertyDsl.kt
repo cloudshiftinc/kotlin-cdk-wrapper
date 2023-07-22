@@ -15,10 +15,16 @@ public class CfnVirtualGatewaySubjectAlternativeNameMatchersPropertyDsl {
 
   private val _exact: MutableList<String> = mutableListOf()
 
+  /**
+   * @param exact The values sent must match the specified values exactly.
+   */
   public fun exact(vararg exact: String) {
     _exact.addAll(listOf(*exact))
   }
 
+  /**
+   * @param exact The values sent must match the specified values exactly.
+   */
   public fun exact(exact: Collection<String>) {
     _exact.addAll(exact)
   }

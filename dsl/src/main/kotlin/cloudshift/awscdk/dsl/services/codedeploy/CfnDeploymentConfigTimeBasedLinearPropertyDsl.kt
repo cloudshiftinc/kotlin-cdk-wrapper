@@ -11,10 +11,18 @@ public class CfnDeploymentConfigTimeBasedLinearPropertyDsl {
   private val cdkBuilder: CfnDeploymentConfig.TimeBasedLinearProperty.Builder =
       CfnDeploymentConfig.TimeBasedLinearProperty.builder()
 
+  /**
+   * @param linearInterval The number of minutes between each incremental traffic shift of a
+   * `TimeBasedLinear` deployment. 
+   */
   public fun linearInterval(linearInterval: Number) {
     cdkBuilder.linearInterval(linearInterval)
   }
 
+  /**
+   * @param linearPercentage The percentage of traffic that is shifted at the start of each
+   * increment of a `TimeBasedLinear` deployment. 
+   */
   public fun linearPercentage(linearPercentage: Number) {
     cdkBuilder.linearPercentage(linearPercentage)
   }

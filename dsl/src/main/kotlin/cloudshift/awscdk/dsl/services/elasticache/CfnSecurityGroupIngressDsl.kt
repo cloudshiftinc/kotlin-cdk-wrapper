@@ -15,14 +15,36 @@ public class CfnSecurityGroupIngressDsl(
   private val cdkBuilder: CfnSecurityGroupIngress.Builder =
       CfnSecurityGroupIngress.Builder.create(scope, id)
 
+  /**
+   * The name of the Cache Security Group to authorize.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroupingress.html#cfn-elasticache-securitygroupingress-cachesecuritygroupname)
+   * @param cacheSecurityGroupName The name of the Cache Security Group to authorize. 
+   */
   public fun cacheSecurityGroupName(cacheSecurityGroupName: String) {
     cdkBuilder.cacheSecurityGroupName(cacheSecurityGroupName)
   }
 
+  /**
+   * Name of the EC2 Security Group to include in the authorization.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroupingress.html#cfn-elasticache-securitygroupingress-ec2securitygroupname)
+   * @param ec2SecurityGroupName Name of the EC2 Security Group to include in the authorization. 
+   */
   public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
     cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
   }
 
+  /**
+   * Specifies the Amazon Account ID of the owner of the EC2 security group specified in the
+   * EC2SecurityGroupName property.
+   *
+   * The Amazon access key ID is not an acceptable value.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroupingress.html#cfn-elasticache-securitygroupingress-ec2securitygroupownerid)
+   * @param ec2SecurityGroupOwnerId Specifies the Amazon Account ID of the owner of the EC2 security
+   * group specified in the EC2SecurityGroupName property. 
+   */
   public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
     cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
   }

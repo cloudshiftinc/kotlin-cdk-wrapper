@@ -13,56 +13,107 @@ public class CfnAnalysisRelativeDatesFilterPropertyDsl {
   private val cdkBuilder: CfnAnalysis.RelativeDatesFilterProperty.Builder =
       CfnAnalysis.RelativeDatesFilterProperty.builder()
 
+  /**
+   * @param anchorDateConfiguration The date configuration of the filter. 
+   */
   public fun anchorDateConfiguration(anchorDateConfiguration: IResolvable) {
     cdkBuilder.anchorDateConfiguration(anchorDateConfiguration)
   }
 
+  /**
+   * @param anchorDateConfiguration The date configuration of the filter. 
+   */
   public
       fun anchorDateConfiguration(anchorDateConfiguration: CfnAnalysis.AnchorDateConfigurationProperty) {
     cdkBuilder.anchorDateConfiguration(anchorDateConfiguration)
   }
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param excludePeriodConfiguration The configuration for the exclude period of the filter.
+   */
   public fun excludePeriodConfiguration(excludePeriodConfiguration: IResolvable) {
     cdkBuilder.excludePeriodConfiguration(excludePeriodConfiguration)
   }
 
+  /**
+   * @param excludePeriodConfiguration The configuration for the exclude period of the filter.
+   */
   public
       fun excludePeriodConfiguration(excludePeriodConfiguration: CfnAnalysis.ExcludePeriodConfigurationProperty) {
     cdkBuilder.excludePeriodConfiguration(excludePeriodConfiguration)
   }
 
+  /**
+   * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
+   * or template. 
+   */
   public fun filterId(filterId: String) {
     cdkBuilder.filterId(filterId)
   }
 
+  /**
+   * @param minimumGranularity The minimum granularity (period granularity) of the relative dates
+   * filter.
+   */
   public fun minimumGranularity(minimumGranularity: String) {
     cdkBuilder.minimumGranularity(minimumGranularity)
   }
 
+  /**
+   * @param nullOption This option determines how null values should be treated when filtering data.
+   * 
+   * * `ALL_VALUES` : Include null values in filtered results.
+   * * `NULLS_ONLY` : Only include null values in filtered results.
+   * * `NON_NULLS_ONLY` : Exclude null values from filtered results.
+   */
   public fun nullOption(nullOption: String) {
     cdkBuilder.nullOption(nullOption)
   }
 
+  /**
+   * @param parameterName The parameter whose value should be used for the filter value.
+   */
   public fun parameterName(parameterName: String) {
     cdkBuilder.parameterName(parameterName)
   }
 
+  /**
+   * @param relativeDateType The range date type of the filter. Choose one of the options below:. 
+   * * `PREVIOUS`
+   * * `THIS`
+   * * `LAST`
+   * * `NOW`
+   * * `NEXT`
+   */
   public fun relativeDateType(relativeDateType: String) {
     cdkBuilder.relativeDateType(relativeDateType)
   }
 
+  /**
+   * @param relativeDateValue The date value of the filter.
+   */
   public fun relativeDateValue(relativeDateValue: Number) {
     cdkBuilder.relativeDateValue(relativeDateValue)
   }
 
+  /**
+   * @param timeGranularity The level of time precision that is used to aggregate `DateTime` values.
+   * 
+   */
   public fun timeGranularity(timeGranularity: String) {
     cdkBuilder.timeGranularity(timeGranularity)
   }

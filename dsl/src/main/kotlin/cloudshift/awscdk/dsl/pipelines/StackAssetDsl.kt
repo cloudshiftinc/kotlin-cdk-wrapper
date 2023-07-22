@@ -12,26 +12,46 @@ import software.amazon.awscdk.pipelines.StackAsset
 public class StackAssetDsl {
   private val cdkBuilder: StackAsset.Builder = StackAsset.builder()
 
+  /**
+   * @param assetId Asset identifier. 
+   */
   public fun assetId(assetId: String) {
     cdkBuilder.assetId(assetId)
   }
 
+  /**
+   * @param assetManifestPath Absolute asset manifest path. 
+   * This needs to be made relative at a later point in time, but when this
+   * information is parsed we don't know about the root cloud assembly yet.
+   */
   public fun assetManifestPath(assetManifestPath: String) {
     cdkBuilder.assetManifestPath(assetManifestPath)
   }
 
+  /**
+   * @param assetPublishingRoleArn Role ARN to assume to publish.
+   */
   public fun assetPublishingRoleArn(assetPublishingRoleArn: String) {
     cdkBuilder.assetPublishingRoleArn(assetPublishingRoleArn)
   }
 
+  /**
+   * @param assetSelector Asset selector to pass to `cdk-assets`. 
+   */
   public fun assetSelector(assetSelector: String) {
     cdkBuilder.assetSelector(assetSelector)
   }
 
+  /**
+   * @param assetType Type of asset to publish. 
+   */
   public fun assetType(assetType: AssetType) {
     cdkBuilder.assetType(assetType)
   }
 
+  /**
+   * @param isTemplate Does this asset represent the CloudFormation template for the stack. 
+   */
   public fun isTemplate(isTemplate: Boolean) {
     cdkBuilder.isTemplate(isTemplate)
   }

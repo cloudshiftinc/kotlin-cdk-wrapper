@@ -17,18 +17,30 @@ public class CfnLifecyclePolicyActionPropertyDsl {
 
   private val _crossRegionCopy: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param crossRegionCopy The rule for copying shared snapshots across Regions. 
+   */
   public fun crossRegionCopy(vararg crossRegionCopy: Any) {
     _crossRegionCopy.addAll(listOf(*crossRegionCopy))
   }
 
+  /**
+   * @param crossRegionCopy The rule for copying shared snapshots across Regions. 
+   */
   public fun crossRegionCopy(crossRegionCopy: Collection<Any>) {
     _crossRegionCopy.addAll(crossRegionCopy)
   }
 
+  /**
+   * @param crossRegionCopy The rule for copying shared snapshots across Regions. 
+   */
   public fun crossRegionCopy(crossRegionCopy: IResolvable) {
     cdkBuilder.crossRegionCopy(crossRegionCopy)
   }
 
+  /**
+   * @param name A descriptive name for the action. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

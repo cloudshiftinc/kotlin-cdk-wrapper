@@ -11,10 +11,17 @@ public class CfnBucketRedirectAllRequestsToPropertyDsl {
   private val cdkBuilder: CfnBucket.RedirectAllRequestsToProperty.Builder =
       CfnBucket.RedirectAllRequestsToProperty.builder()
 
+  /**
+   * @param hostName Name of the host where requests are redirected. 
+   */
   public fun hostName(hostName: String) {
     cdkBuilder.hostName(hostName)
   }
 
+  /**
+   * @param protocol Protocol to use when redirecting requests.
+   * The default is the protocol that is used in the original request.
+   */
   public fun protocol(protocol: String) {
     cdkBuilder.protocol(protocol)
   }

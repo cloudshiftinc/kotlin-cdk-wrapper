@@ -11,10 +11,16 @@ public class CfnSimpleTablePrimaryKeyPropertyDsl {
   private val cdkBuilder: CfnSimpleTable.PrimaryKeyProperty.Builder =
       CfnSimpleTable.PrimaryKeyProperty.builder()
 
+  /**
+   * @param name the value to be set.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param type the value to be set. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

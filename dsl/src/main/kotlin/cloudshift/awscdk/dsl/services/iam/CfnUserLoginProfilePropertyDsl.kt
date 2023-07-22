@@ -13,14 +13,25 @@ public class CfnUserLoginProfilePropertyDsl {
   private val cdkBuilder: CfnUser.LoginProfileProperty.Builder =
       CfnUser.LoginProfileProperty.builder()
 
+  /**
+   * @param password The user's password. 
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * @param passwordResetRequired Specifies whether the user is required to set a new password on
+   * next sign-in.
+   */
   public fun passwordResetRequired(passwordResetRequired: Boolean) {
     cdkBuilder.passwordResetRequired(passwordResetRequired)
   }
 
+  /**
+   * @param passwordResetRequired Specifies whether the user is required to set a new password on
+   * next sign-in.
+   */
   public fun passwordResetRequired(passwordResetRequired: IResolvable) {
     cdkBuilder.passwordResetRequired(passwordResetRequired)
   }

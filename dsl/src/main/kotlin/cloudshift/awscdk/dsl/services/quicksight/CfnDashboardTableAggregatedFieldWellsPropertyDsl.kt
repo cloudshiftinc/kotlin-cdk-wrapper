@@ -18,26 +18,50 @@ public class CfnDashboardTableAggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param groupBy The group by field well for a pivot table.
+   * Values are grouped by group by fields.
+   */
   public fun groupBy(vararg groupBy: Any) {
     _groupBy.addAll(listOf(*groupBy))
   }
 
+  /**
+   * @param groupBy The group by field well for a pivot table.
+   * Values are grouped by group by fields.
+   */
   public fun groupBy(groupBy: Collection<Any>) {
     _groupBy.addAll(groupBy)
   }
 
+  /**
+   * @param groupBy The group by field well for a pivot table.
+   * Values are grouped by group by fields.
+   */
   public fun groupBy(groupBy: IResolvable) {
     cdkBuilder.groupBy(groupBy)
   }
 
+  /**
+   * @param values The values field well for a pivot table.
+   * Values are aggregated based on group by fields.
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values field well for a pivot table.
+   * Values are aggregated based on group by fields.
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The values field well for a pivot table.
+   * Values are aggregated based on group by fields.
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

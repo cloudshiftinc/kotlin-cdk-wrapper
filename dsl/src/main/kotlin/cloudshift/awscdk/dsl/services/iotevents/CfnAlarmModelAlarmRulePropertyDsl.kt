@@ -11,10 +11,18 @@ public class CfnAlarmModelAlarmRulePropertyDsl {
   private val cdkBuilder: CfnAlarmModel.AlarmRuleProperty.Builder =
       CfnAlarmModel.AlarmRuleProperty.builder()
 
+  /**
+   * @param simpleRule A rule that compares an input property value to a threshold value with a
+   * comparison operator.
+   */
   public fun simpleRule(simpleRule: IResolvable) {
     cdkBuilder.simpleRule(simpleRule)
   }
 
+  /**
+   * @param simpleRule A rule that compares an input property value to a threshold value with a
+   * comparison operator.
+   */
   public fun simpleRule(simpleRule: CfnAlarmModel.SimpleRuleProperty) {
     cdkBuilder.simpleRule(simpleRule)
   }

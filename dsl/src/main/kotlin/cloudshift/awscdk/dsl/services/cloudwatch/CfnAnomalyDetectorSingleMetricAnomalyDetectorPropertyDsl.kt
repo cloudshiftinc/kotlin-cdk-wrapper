@@ -17,26 +17,44 @@ public class CfnAnomalyDetectorSingleMetricAnomalyDetectorPropertyDsl {
 
   private val _dimensions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dimensions The metric dimensions to create the anomaly detection model for.
+   */
   public fun dimensions(vararg dimensions: Any) {
     _dimensions.addAll(listOf(*dimensions))
   }
 
+  /**
+   * @param dimensions The metric dimensions to create the anomaly detection model for.
+   */
   public fun dimensions(dimensions: Collection<Any>) {
     _dimensions.addAll(dimensions)
   }
 
+  /**
+   * @param dimensions The metric dimensions to create the anomaly detection model for.
+   */
   public fun dimensions(dimensions: IResolvable) {
     cdkBuilder.dimensions(dimensions)
   }
 
+  /**
+   * @param metricName The name of the metric to create the anomaly detection model for.
+   */
   public fun metricName(metricName: String) {
     cdkBuilder.metricName(metricName)
   }
 
+  /**
+   * @param namespace The namespace of the metric to create the anomaly detection model for.
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }
 
+  /**
+   * @param stat The statistic to use for the metric and anomaly detection model.
+   */
   public fun stat(stat: String) {
     cdkBuilder.stat(stat)
   }

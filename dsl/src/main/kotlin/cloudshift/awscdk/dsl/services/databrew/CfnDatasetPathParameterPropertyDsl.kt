@@ -12,14 +12,23 @@ public class CfnDatasetPathParameterPropertyDsl {
   private val cdkBuilder: CfnDataset.PathParameterProperty.Builder =
       CfnDataset.PathParameterProperty.builder()
 
+  /**
+   * @param datasetParameter The path parameter definition. 
+   */
   public fun datasetParameter(datasetParameter: IResolvable) {
     cdkBuilder.datasetParameter(datasetParameter)
   }
 
+  /**
+   * @param datasetParameter The path parameter definition. 
+   */
   public fun datasetParameter(datasetParameter: CfnDataset.DatasetParameterProperty) {
     cdkBuilder.datasetParameter(datasetParameter)
   }
 
+  /**
+   * @param pathParameterName The name of the path parameter. 
+   */
   public fun pathParameterName(pathParameterName: String) {
     cdkBuilder.pathParameterName(pathParameterName)
   }

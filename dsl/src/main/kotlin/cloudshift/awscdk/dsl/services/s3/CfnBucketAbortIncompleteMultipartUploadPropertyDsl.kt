@@ -11,6 +11,10 @@ public class CfnBucketAbortIncompleteMultipartUploadPropertyDsl {
   private val cdkBuilder: CfnBucket.AbortIncompleteMultipartUploadProperty.Builder =
       CfnBucket.AbortIncompleteMultipartUploadProperty.builder()
 
+  /**
+   * @param daysAfterInitiation Specifies the number of days after which Amazon S3 stops an
+   * incomplete multipart upload. 
+   */
   public fun daysAfterInitiation(daysAfterInitiation: Number) {
     cdkBuilder.daysAfterInitiation(daysAfterInitiation)
   }

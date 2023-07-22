@@ -20,32 +20,59 @@ public class CfnDBClusterParameterGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description for the cluster parameter group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param family The cluster parameter group family name. 
+   */
   public fun family(family: String) {
     cdkBuilder.family(family)
   }
 
+  /**
+   * @param name The name of the DB cluster parameter group.
+   * Constraints:
+   *
+   * * Must not match the name of an existing `DBClusterParameterGroup` .
+   *
+   *
+   * This value is stored as a lowercase string.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun parameters(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param parameters Provides a list of parameters for the cluster parameter group. 
+   */
+  public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(parameters)
     cdkBuilder.parameters(builder.map)
   }
 
+  /**
+   * @param parameters Provides a list of parameters for the cluster parameter group. 
+   */
   public fun parameters(parameters: Any) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param tags The tags to be assigned to the cluster parameter group.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to be assigned to the cluster parameter group.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

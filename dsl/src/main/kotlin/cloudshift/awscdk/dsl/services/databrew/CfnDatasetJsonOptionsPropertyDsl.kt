@@ -12,10 +12,18 @@ public class CfnDatasetJsonOptionsPropertyDsl {
   private val cdkBuilder: CfnDataset.JsonOptionsProperty.Builder =
       CfnDataset.JsonOptionsProperty.builder()
 
+  /**
+   * @param multiLine A value that specifies whether JSON input contains embedded new line
+   * characters.
+   */
   public fun multiLine(multiLine: Boolean) {
     cdkBuilder.multiLine(multiLine)
   }
 
+  /**
+   * @param multiLine A value that specifies whether JSON input contains embedded new line
+   * characters.
+   */
   public fun multiLine(multiLine: IResolvable) {
     cdkBuilder.multiLine(multiLine)
   }

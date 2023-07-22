@@ -16,20 +16,36 @@ public class CfnComponentComponentVariantPropertyDsl {
   private val cdkBuilder: CfnComponent.ComponentVariantProperty.Builder =
       CfnComponent.ComponentVariantProperty.builder()
 
-  public fun overrides(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param overrides The properties of the component variant that can be overriden when customizing
+   * an instance of the component.
+   * You can't specify `tags` as a valid property for `overrides` .
+   */
+  public fun overrides(overrides: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(overrides)
     cdkBuilder.overrides(builder.map)
   }
 
+  /**
+   * @param overrides The properties of the component variant that can be overriden when customizing
+   * an instance of the component.
+   * You can't specify `tags` as a valid property for `overrides` .
+   */
   public fun overrides(overrides: Any) {
     cdkBuilder.overrides(overrides)
   }
 
+  /**
+   * @param variantValues The combination of variants that comprise this variant.
+   */
   public fun variantValues(variantValues: Map<String, String>) {
     cdkBuilder.variantValues(variantValues)
   }
 
+  /**
+   * @param variantValues The combination of variants that comprise this variant.
+   */
   public fun variantValues(variantValues: IResolvable) {
     cdkBuilder.variantValues(variantValues)
   }

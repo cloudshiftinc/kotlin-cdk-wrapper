@@ -16,14 +16,35 @@ public class CfnWebACLCustomRequestHandlingPropertyDsl {
 
   private val _insertHeaders: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param insertHeaders The HTTP headers to insert into the request. Duplicate header names are
+   * not allowed. 
+   * For information about the limits on count and size for custom request and response settings,
+   * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
+   * *AWS WAF Developer Guide* .
+   */
   public fun insertHeaders(vararg insertHeaders: Any) {
     _insertHeaders.addAll(listOf(*insertHeaders))
   }
 
+  /**
+   * @param insertHeaders The HTTP headers to insert into the request. Duplicate header names are
+   * not allowed. 
+   * For information about the limits on count and size for custom request and response settings,
+   * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
+   * *AWS WAF Developer Guide* .
+   */
   public fun insertHeaders(insertHeaders: Collection<Any>) {
     _insertHeaders.addAll(insertHeaders)
   }
 
+  /**
+   * @param insertHeaders The HTTP headers to insert into the request. Duplicate header names are
+   * not allowed. 
+   * For information about the limits on count and size for custom request and response settings,
+   * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
+   * *AWS WAF Developer Guide* .
+   */
   public fun insertHeaders(insertHeaders: IResolvable) {
     cdkBuilder.insertHeaders(insertHeaders)
   }

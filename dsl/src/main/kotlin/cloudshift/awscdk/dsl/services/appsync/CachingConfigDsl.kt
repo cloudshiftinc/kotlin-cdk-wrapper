@@ -15,14 +15,28 @@ public class CachingConfigDsl {
 
   private val _cachingKeys: MutableList<String> = mutableListOf()
 
+  /**
+   * @param cachingKeys The caching keys for a resolver that has caching enabled.
+   * Valid values are entries from the $context.arguments, $context.source, and $context.identity
+   * maps.
+   */
   public fun cachingKeys(vararg cachingKeys: String) {
     _cachingKeys.addAll(listOf(*cachingKeys))
   }
 
+  /**
+   * @param cachingKeys The caching keys for a resolver that has caching enabled.
+   * Valid values are entries from the $context.arguments, $context.source, and $context.identity
+   * maps.
+   */
   public fun cachingKeys(cachingKeys: Collection<String>) {
     _cachingKeys.addAll(cachingKeys)
   }
 
+  /**
+   * @param ttl The TTL in seconds for a resolver that has caching enabled. 
+   * Valid values are between 1 and 3600 seconds.
+   */
   public fun ttl(ttl: Duration) {
     cdkBuilder.ttl(ttl)
   }

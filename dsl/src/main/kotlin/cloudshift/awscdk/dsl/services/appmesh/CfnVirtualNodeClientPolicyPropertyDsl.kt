@@ -11,10 +11,18 @@ public class CfnVirtualNodeClientPolicyPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ClientPolicyProperty.Builder =
       CfnVirtualNode.ClientPolicyProperty.builder()
 
+  /**
+   * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+   * policy.
+   */
   public fun tls(tls: IResolvable) {
     cdkBuilder.tls(tls)
   }
 
+  /**
+   * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+   * policy.
+   */
   public fun tls(tls: CfnVirtualNode.ClientPolicyTlsProperty) {
     cdkBuilder.tls(tls)
   }

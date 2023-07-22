@@ -12,15 +12,27 @@ public class CfnAnalysisReferenceLineValueLabelConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ReferenceLineValueLabelConfigurationProperty.Builder =
       CfnAnalysis.ReferenceLineValueLabelConfigurationProperty.builder()
 
+  /**
+   * @param formatConfiguration The format configuration of the value label.
+   */
   public fun formatConfiguration(formatConfiguration: IResolvable) {
     cdkBuilder.formatConfiguration(formatConfiguration)
   }
 
+  /**
+   * @param formatConfiguration The format configuration of the value label.
+   */
   public
       fun formatConfiguration(formatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty) {
     cdkBuilder.formatConfiguration(formatConfiguration)
   }
 
+  /**
+   * @param relativePosition The relative position of the value label. Choose one of the following
+   * options:.
+   * * `BEFORE_CUSTOM_LABEL`
+   * * `AFTER_CUSTOM_LABEL`
+   */
   public fun relativePosition(relativePosition: String) {
     cdkBuilder.relativePosition(relativePosition)
   }

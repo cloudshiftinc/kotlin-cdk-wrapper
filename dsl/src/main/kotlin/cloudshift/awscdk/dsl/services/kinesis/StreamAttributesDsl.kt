@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.kms.IKey
 public class StreamAttributesDsl {
   private val cdkBuilder: StreamAttributes.Builder = StreamAttributes.builder()
 
+  /**
+   * @param encryptionKey The KMS key securing the contents of the stream if encryption is enabled.
+   */
   public fun encryptionKey(encryptionKey: IKey) {
     cdkBuilder.encryptionKey(encryptionKey)
   }
 
+  /**
+   * @param streamArn The ARN of the stream. 
+   */
   public fun streamArn(streamArn: String) {
     cdkBuilder.streamArn(streamArn)
   }

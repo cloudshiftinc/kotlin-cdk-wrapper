@@ -15,10 +15,22 @@ public class VpnGatewayDsl(
 ) {
   private val cdkBuilder: VpnGateway.Builder = VpnGateway.Builder.create(scope, id)
 
+  /**
+   * Explicitly specify an Asn or let aws pick an Asn for you.
+   *
+   * Default: 65000
+   *
+   * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you. 
+   */
   public fun amazonSideAsn(amazonSideAsn: Number) {
     cdkBuilder.amazonSideAsn(amazonSideAsn)
   }
 
+  /**
+   * Default type ipsec.1.
+   *
+   * @param type Default type ipsec.1. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

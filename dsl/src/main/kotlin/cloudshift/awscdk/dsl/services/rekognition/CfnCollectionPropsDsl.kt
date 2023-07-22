@@ -17,14 +17,23 @@ public class CfnCollectionPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param collectionId ID for the collection that you are creating. 
+   */
   public fun collectionId(collectionId: String) {
     cdkBuilder.collectionId(collectionId)
   }
 
+  /**
+   * @param tags A set of tags (key-value pairs) that you want to attach to the collection.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A set of tags (key-value pairs) that you want to attach to the collection.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

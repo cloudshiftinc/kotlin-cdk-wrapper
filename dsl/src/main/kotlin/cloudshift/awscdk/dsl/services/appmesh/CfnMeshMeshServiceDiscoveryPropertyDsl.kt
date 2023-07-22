@@ -11,6 +11,9 @@ public class CfnMeshMeshServiceDiscoveryPropertyDsl {
   private val cdkBuilder: CfnMesh.MeshServiceDiscoveryProperty.Builder =
       CfnMesh.MeshServiceDiscoveryProperty.builder()
 
+  /**
+   * @param ipPreference The IP version to use to control traffic within the mesh.
+   */
   public fun ipPreference(ipPreference: String) {
     cdkBuilder.ipPreference(ipPreference)
   }

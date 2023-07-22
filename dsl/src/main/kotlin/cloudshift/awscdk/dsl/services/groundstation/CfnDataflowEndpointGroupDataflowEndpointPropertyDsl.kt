@@ -13,18 +13,35 @@ public class CfnDataflowEndpointGroupDataflowEndpointPropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.DataflowEndpointProperty.Builder =
       CfnDataflowEndpointGroup.DataflowEndpointProperty.builder()
 
+  /**
+   * @param address The address and port of an endpoint.
+   */
   public fun address(address: IResolvable) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param address The address and port of an endpoint.
+   */
   public fun address(address: CfnDataflowEndpointGroup.SocketAddressProperty) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+   * Valid values are between 1400 and 1500. A default value of 1500 is used if not set.
+   */
   public fun mtu(mtu: Number) {
     cdkBuilder.mtu(mtu)
   }
 
+  /**
+   * @param name The endpoint name.
+   * When listing available contacts for a satellite, Ground Station searches for a dataflow
+   * endpoint whose name matches the value specified by the dataflow endpoint config of the selected
+   * mission profile. If no matching dataflow endpoints are found then Ground Station will not display
+   * any available contacts for the satellite.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

@@ -11,6 +11,10 @@ public class CfnIntegrationIncrementalPullConfigPropertyDsl {
   private val cdkBuilder: CfnIntegration.IncrementalPullConfigProperty.Builder =
       CfnIntegration.IncrementalPullConfigProperty.builder()
 
+  /**
+   * @param datetimeTypeFieldName A field that specifies the date time or timestamp field as the
+   * criteria to use when importing incremental records from the source.
+   */
   public fun datetimeTypeFieldName(datetimeTypeFieldName: String) {
     cdkBuilder.datetimeTypeFieldName(datetimeTypeFieldName)
   }

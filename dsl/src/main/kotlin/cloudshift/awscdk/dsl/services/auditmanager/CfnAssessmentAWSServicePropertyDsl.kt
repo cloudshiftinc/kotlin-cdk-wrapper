@@ -11,6 +11,9 @@ public class CfnAssessmentAWSServicePropertyDsl {
   private val cdkBuilder: CfnAssessment.AWSServiceProperty.Builder =
       CfnAssessment.AWSServiceProperty.builder()
 
+  /**
+   * @param serviceName The name of the AWS service .
+   */
   public fun serviceName(serviceName: String) {
     cdkBuilder.serviceName(serviceName)
   }

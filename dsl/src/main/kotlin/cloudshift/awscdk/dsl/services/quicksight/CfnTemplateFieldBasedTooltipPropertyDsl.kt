@@ -17,22 +17,40 @@ public class CfnTemplateFieldBasedTooltipPropertyDsl {
 
   private val _tooltipFields: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param aggregationVisibility The visibility of `Show aggregations` .
+   */
   public fun aggregationVisibility(aggregationVisibility: String) {
     cdkBuilder.aggregationVisibility(aggregationVisibility)
   }
 
+  /**
+   * @param tooltipFields The fields configuration in the tooltip.
+   */
   public fun tooltipFields(vararg tooltipFields: Any) {
     _tooltipFields.addAll(listOf(*tooltipFields))
   }
 
+  /**
+   * @param tooltipFields The fields configuration in the tooltip.
+   */
   public fun tooltipFields(tooltipFields: Collection<Any>) {
     _tooltipFields.addAll(tooltipFields)
   }
 
+  /**
+   * @param tooltipFields The fields configuration in the tooltip.
+   */
   public fun tooltipFields(tooltipFields: IResolvable) {
     cdkBuilder.tooltipFields(tooltipFields)
   }
 
+  /**
+   * @param tooltipTitleType The type for the &gt;tooltip title. Choose one of the following
+   * options:.
+   * * `NONE` : Doesn't use the primary value as the title.
+   * * `PRIMARY_VALUE` : Uses primary value as the title.
+   */
   public fun tooltipTitleType(tooltipTitleType: String) {
     cdkBuilder.tooltipTitleType(tooltipTitleType)
   }

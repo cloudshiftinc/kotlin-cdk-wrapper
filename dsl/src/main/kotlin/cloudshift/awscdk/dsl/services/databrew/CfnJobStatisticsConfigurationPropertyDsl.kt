@@ -19,22 +19,39 @@ public class CfnJobStatisticsConfigurationPropertyDsl {
 
   private val _overrides: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param includedStatistics List of included evaluations.
+   * When the list is undefined, all supported evaluations will be included.
+   */
   public fun includedStatistics(vararg includedStatistics: String) {
     _includedStatistics.addAll(listOf(*includedStatistics))
   }
 
+  /**
+   * @param includedStatistics List of included evaluations.
+   * When the list is undefined, all supported evaluations will be included.
+   */
   public fun includedStatistics(includedStatistics: Collection<String>) {
     _includedStatistics.addAll(includedStatistics)
   }
 
+  /**
+   * @param overrides List of overrides for evaluations.
+   */
   public fun overrides(vararg overrides: Any) {
     _overrides.addAll(listOf(*overrides))
   }
 
+  /**
+   * @param overrides List of overrides for evaluations.
+   */
   public fun overrides(overrides: Collection<Any>) {
     _overrides.addAll(overrides)
   }
 
+  /**
+   * @param overrides List of overrides for evaluations.
+   */
   public fun overrides(overrides: IResolvable) {
     cdkBuilder.overrides(overrides)
   }

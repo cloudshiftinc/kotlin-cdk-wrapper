@@ -15,10 +15,16 @@ public class CfnRuleGroupPortSetPropertyDsl {
 
   private val _definition: MutableList<String> = mutableListOf()
 
+  /**
+   * @param definition The set of port ranges.
+   */
   public fun definition(vararg definition: String) {
     _definition.addAll(listOf(*definition))
   }
 
+  /**
+   * @param definition The set of port ranges.
+   */
   public fun definition(definition: Collection<String>) {
     _definition.addAll(definition)
   }

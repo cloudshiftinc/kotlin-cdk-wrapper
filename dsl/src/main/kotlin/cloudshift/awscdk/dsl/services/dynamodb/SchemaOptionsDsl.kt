@@ -11,22 +11,34 @@ import software.amazon.awscdk.services.dynamodb.SchemaOptions
 public class SchemaOptionsDsl {
   private val cdkBuilder: SchemaOptions.Builder = SchemaOptions.builder()
 
-  public fun partitionKey(block: AttributeDsl.() -> Unit = {}) {
+  /**
+   * @param partitionKey Partition key attribute definition. 
+   */
+  public fun partitionKey(partitionKey: AttributeDsl.() -> Unit = {}) {
     val builder = AttributeDsl()
-    builder.apply(block)
+    builder.apply(partitionKey)
     cdkBuilder.partitionKey(builder.build())
   }
 
+  /**
+   * @param partitionKey Partition key attribute definition. 
+   */
   public fun partitionKey(partitionKey: Attribute) {
     cdkBuilder.partitionKey(partitionKey)
   }
 
-  public fun sortKey(block: AttributeDsl.() -> Unit = {}) {
+  /**
+   * @param sortKey Sort key attribute definition.
+   */
+  public fun sortKey(sortKey: AttributeDsl.() -> Unit = {}) {
     val builder = AttributeDsl()
-    builder.apply(block)
+    builder.apply(sortKey)
     cdkBuilder.sortKey(builder.build())
   }
 
+  /**
+   * @param sortKey Sort key attribute definition.
+   */
   public fun sortKey(sortKey: Attribute) {
     cdkBuilder.sortKey(sortKey)
   }

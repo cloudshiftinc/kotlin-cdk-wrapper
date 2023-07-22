@@ -11,10 +11,17 @@ public class CfnIntegrationS3SourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.S3SourcePropertiesProperty.Builder =
       CfnIntegration.S3SourcePropertiesProperty.builder()
 
+  /**
+   * @param bucketName The Amazon S3 bucket name where the source files are stored. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param bucketPrefix The object key for the Amazon S3 bucket in which the source files are
+   * stored.
+   */
   public fun bucketPrefix(bucketPrefix: String) {
     cdkBuilder.bucketPrefix(bucketPrefix)
   }

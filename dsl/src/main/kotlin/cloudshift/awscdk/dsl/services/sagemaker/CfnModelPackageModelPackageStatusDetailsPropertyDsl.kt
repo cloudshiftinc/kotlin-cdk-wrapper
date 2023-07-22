@@ -16,14 +16,23 @@ public class CfnModelPackageModelPackageStatusDetailsPropertyDsl {
 
   private val _validationStatuses: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param validationStatuses The validation status of the model package.
+   */
   public fun validationStatuses(vararg validationStatuses: Any) {
     _validationStatuses.addAll(listOf(*validationStatuses))
   }
 
+  /**
+   * @param validationStatuses The validation status of the model package.
+   */
   public fun validationStatuses(validationStatuses: Collection<Any>) {
     _validationStatuses.addAll(validationStatuses)
   }
 
+  /**
+   * @param validationStatuses The validation status of the model package.
+   */
   public fun validationStatuses(validationStatuses: IResolvable) {
     cdkBuilder.validationStatuses(validationStatuses)
   }

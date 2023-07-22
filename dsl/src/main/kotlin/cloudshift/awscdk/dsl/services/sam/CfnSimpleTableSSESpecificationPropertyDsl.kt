@@ -12,10 +12,16 @@ public class CfnSimpleTableSSESpecificationPropertyDsl {
   private val cdkBuilder: CfnSimpleTable.SSESpecificationProperty.Builder =
       CfnSimpleTable.SSESpecificationProperty.builder()
 
+  /**
+   * @param sseEnabled the value to be set.
+   */
   public fun sseEnabled(sseEnabled: Boolean) {
     cdkBuilder.sseEnabled(sseEnabled)
   }
 
+  /**
+   * @param sseEnabled the value to be set.
+   */
   public fun sseEnabled(sseEnabled: IResolvable) {
     cdkBuilder.sseEnabled(sseEnabled)
   }

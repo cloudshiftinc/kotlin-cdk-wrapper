@@ -19,34 +19,58 @@ public class CfnApplicationPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param apiGatewayProxy The endpoint URL of the Amazon API Gateway proxy.
+   */
   public fun apiGatewayProxy(apiGatewayProxy: IResolvable) {
     cdkBuilder.apiGatewayProxy(apiGatewayProxy)
   }
 
+  /**
+   * @param apiGatewayProxy The endpoint URL of the Amazon API Gateway proxy.
+   */
   public fun apiGatewayProxy(apiGatewayProxy: CfnApplication.ApiGatewayProxyInputProperty) {
     cdkBuilder.apiGatewayProxy(apiGatewayProxy)
   }
 
+  /**
+   * @param environmentIdentifier The unique identifier of the environment. 
+   */
   public fun environmentIdentifier(environmentIdentifier: String) {
     cdkBuilder.environmentIdentifier(environmentIdentifier)
   }
 
+  /**
+   * @param name The name of the application. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param proxyType The proxy type of the proxy created within the application. 
+   */
   public fun proxyType(proxyType: String) {
     cdkBuilder.proxyType(proxyType)
   }
 
+  /**
+   * @param tags The tags assigned to the application.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags assigned to the application.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param vpcId The ID of the virtual private cloud (VPC). 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

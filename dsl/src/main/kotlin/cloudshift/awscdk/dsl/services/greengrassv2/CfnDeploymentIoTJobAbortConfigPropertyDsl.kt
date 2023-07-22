@@ -16,14 +16,26 @@ public class CfnDeploymentIoTJobAbortConfigPropertyDsl {
 
   private val _criteriaList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param criteriaList The list of criteria that define when and how to cancel the configuration
+   * deployment. 
+   */
   public fun criteriaList(vararg criteriaList: Any) {
     _criteriaList.addAll(listOf(*criteriaList))
   }
 
+  /**
+   * @param criteriaList The list of criteria that define when and how to cancel the configuration
+   * deployment. 
+   */
   public fun criteriaList(criteriaList: Collection<Any>) {
     _criteriaList.addAll(criteriaList)
   }
 
+  /**
+   * @param criteriaList The list of criteria that define when and how to cancel the configuration
+   * deployment. 
+   */
   public fun criteriaList(criteriaList: IResolvable) {
     cdkBuilder.criteriaList(criteriaList)
   }

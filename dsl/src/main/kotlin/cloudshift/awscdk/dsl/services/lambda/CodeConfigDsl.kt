@@ -14,26 +14,45 @@ import software.amazon.awscdk.services.s3.Location
 public class CodeConfigDsl {
   private val cdkBuilder: CodeConfig.Builder = CodeConfig.builder()
 
-  public fun image(block: CodeImageConfigDsl.() -> Unit = {}) {
+  /**
+   * @param image Docker image configuration (mutually exclusive with `s3Location` and
+   * `inlineCode`).
+   */
+  public fun image(image: CodeImageConfigDsl.() -> Unit = {}) {
     val builder = CodeImageConfigDsl()
-    builder.apply(block)
+    builder.apply(image)
     cdkBuilder.image(builder.build())
   }
 
+  /**
+   * @param image Docker image configuration (mutually exclusive with `s3Location` and
+   * `inlineCode`).
+   */
   public fun image(image: CodeImageConfig) {
     cdkBuilder.image(image)
   }
 
+  /**
+   * @param inlineCode Inline code (mutually exclusive with `s3Location` and `image`).
+   */
   public fun inlineCode(inlineCode: String) {
     cdkBuilder.inlineCode(inlineCode)
   }
 
-  public fun s3Location(block: LocationDsl.() -> Unit = {}) {
+  /**
+   * @param s3Location The location of the code in S3 (mutually exclusive with `inlineCode` and
+   * `image`).
+   */
+  public fun s3Location(s3Location: LocationDsl.() -> Unit = {}) {
     val builder = LocationDsl()
-    builder.apply(block)
+    builder.apply(s3Location)
     cdkBuilder.s3Location(builder.build())
   }
 
+  /**
+   * @param s3Location The location of the code in S3 (mutually exclusive with `inlineCode` and
+   * `image`).
+   */
   public fun s3Location(s3Location: Location) {
     cdkBuilder.s3Location(s3Location)
   }

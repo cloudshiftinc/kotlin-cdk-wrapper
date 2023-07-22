@@ -16,18 +16,50 @@ public class ClientVpnRouteDsl(
 ) {
   private val cdkBuilder: ClientVpnRoute.Builder = ClientVpnRoute.Builder.create(scope, id)
 
+  /**
+   * The IPv4 address range, in CIDR notation, of the route destination.
+   *
+   * For example:
+   *
+   * * To add a route for Internet access, enter 0.0.0.0/0
+   * * To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR range
+   * * To add a route for an on-premises network, enter the AWS Site-to-Site VPN
+   * connection's IPv4 CIDR range
+   * * To add a route for the local network, enter the client CIDR range
+   *
+   * @param cidr The IPv4 address range, in CIDR notation, of the route destination. 
+   */
   public fun cidr(cidr: String) {
     cdkBuilder.cidr(cidr)
   }
 
+  /**
+   * The client VPN endpoint to which to add the route.
+   *
+   * Default: clientVpnEndpoint is required
+   *
+   * @param clientVpnEndpoint The client VPN endpoint to which to add the route. 
+   */
   public fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint) {
     cdkBuilder.clientVpnEndpoint(clientVpnEndpoint)
   }
 
+  /**
+   * A brief description of the authorization rule.
+   *
+   * Default: - no description
+   *
+   * @param description A brief description of the authorization rule. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The target for the route.
+   *
+   * @param target The target for the route. 
+   */
   public fun target(target: ClientVpnRouteTarget) {
     cdkBuilder.target(target)
   }

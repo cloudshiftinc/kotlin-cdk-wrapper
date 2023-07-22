@@ -14,10 +14,16 @@ public class InitSourceOptionsDsl {
 
   private val _serviceRestartHandles: MutableList<InitServiceRestartHandle> = mutableListOf()
 
+  /**
+   * @param serviceRestartHandles Restart the given services after this archive has been extracted.
+   */
   public fun serviceRestartHandles(vararg serviceRestartHandles: InitServiceRestartHandle) {
     _serviceRestartHandles.addAll(listOf(*serviceRestartHandles))
   }
 
+  /**
+   * @param serviceRestartHandles Restart the given services after this archive has been extracted.
+   */
   public fun serviceRestartHandles(serviceRestartHandles: Collection<InitServiceRestartHandle>) {
     _serviceRestartHandles.addAll(serviceRestartHandles)
   }

@@ -17,26 +17,44 @@ public class CfnTemplateColorScalePropertyDsl {
 
   private val _colors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param colorFillType Determines the color fill type. 
+   */
   public fun colorFillType(colorFillType: String) {
     cdkBuilder.colorFillType(colorFillType)
   }
 
+  /**
+   * @param colors Determines the list of colors that are applied to the visual. 
+   */
   public fun colors(vararg colors: Any) {
     _colors.addAll(listOf(*colors))
   }
 
+  /**
+   * @param colors Determines the list of colors that are applied to the visual. 
+   */
   public fun colors(colors: Collection<Any>) {
     _colors.addAll(colors)
   }
 
+  /**
+   * @param colors Determines the list of colors that are applied to the visual. 
+   */
   public fun colors(colors: IResolvable) {
     cdkBuilder.colors(colors)
   }
 
+  /**
+   * @param nullValueColor Determines the color that is applied to null values.
+   */
   public fun nullValueColor(nullValueColor: IResolvable) {
     cdkBuilder.nullValueColor(nullValueColor)
   }
 
+  /**
+   * @param nullValueColor Determines the color that is applied to null values.
+   */
   public fun nullValueColor(nullValueColor: CfnTemplate.DataColorProperty) {
     cdkBuilder.nullValueColor(nullValueColor)
   }

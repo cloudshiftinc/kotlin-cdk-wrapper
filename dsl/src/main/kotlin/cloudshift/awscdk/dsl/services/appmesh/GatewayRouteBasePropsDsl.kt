@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.GatewayRouteSpec
 public class GatewayRouteBasePropsDsl {
   private val cdkBuilder: GatewayRouteBaseProps.Builder = GatewayRouteBaseProps.builder()
 
+  /**
+   * @param gatewayRouteName The name of the GatewayRoute.
+   */
   public fun gatewayRouteName(gatewayRouteName: String) {
     cdkBuilder.gatewayRouteName(gatewayRouteName)
   }
 
+  /**
+   * @param routeSpec What protocol the route uses. 
+   */
   public fun routeSpec(routeSpec: GatewayRouteSpec) {
     cdkBuilder.routeSpec(routeSpec)
   }

@@ -11,6 +11,10 @@ public class CfnBotSampleUtterancePropertyDsl {
   private val cdkBuilder: CfnBot.SampleUtteranceProperty.Builder =
       CfnBot.SampleUtteranceProperty.builder()
 
+  /**
+   * @param utterance A sample utterance that invokes an intent or respond to a slot elicitation
+   * prompt. 
+   */
   public fun utterance(utterance: String) {
     cdkBuilder.utterance(utterance)
   }

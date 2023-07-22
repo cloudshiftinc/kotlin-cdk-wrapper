@@ -11,10 +11,17 @@ public class CfnVPCDHCPOptionsAssociationPropsDsl {
   private val cdkBuilder: CfnVPCDHCPOptionsAssociationProps.Builder =
       CfnVPCDHCPOptionsAssociationProps.builder()
 
+  /**
+   * @param dhcpOptionsId The ID of the DHCP options set, or `default` to associate no DHCP options
+   * with the VPC. 
+   */
   public fun dhcpOptionsId(dhcpOptionsId: String) {
     cdkBuilder.dhcpOptionsId(dhcpOptionsId)
   }
 
+  /**
+   * @param vpcId The ID of the VPC. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

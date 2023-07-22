@@ -13,38 +13,67 @@ public class CfnAnomalyDetectorRDSSourceConfigPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.RDSSourceConfigProperty.Builder =
       CfnAnomalyDetector.RDSSourceConfigProperty.builder()
 
+  /**
+   * @param databaseHost The host name of the database. 
+   */
   public fun databaseHost(databaseHost: String) {
     cdkBuilder.databaseHost(databaseHost)
   }
 
+  /**
+   * @param databaseName The name of the RDS database. 
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * @param databasePort The port number where the database can be accessed. 
+   */
   public fun databasePort(databasePort: Number) {
     cdkBuilder.databasePort(databasePort)
   }
 
+  /**
+   * @param dbInstanceIdentifier A string identifying the database instance. 
+   */
   public fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
     cdkBuilder.dbInstanceIdentifier(dbInstanceIdentifier)
   }
 
+  /**
+   * @param roleArn The Amazon Resource Name (ARN) of the role. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param secretManagerArn The Amazon Resource Name (ARN) of the AWS Secrets Manager role. 
+   */
   public fun secretManagerArn(secretManagerArn: String) {
     cdkBuilder.secretManagerArn(secretManagerArn)
   }
 
+  /**
+   * @param tableName The name of the table in the database. 
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }
 
+  /**
+   * @param vpcConfiguration An object containing information about the Amazon Virtual Private Cloud
+   * (VPC) configuration. 
+   */
   public fun vpcConfiguration(vpcConfiguration: IResolvable) {
     cdkBuilder.vpcConfiguration(vpcConfiguration)
   }
 
+  /**
+   * @param vpcConfiguration An object containing information about the Amazon Virtual Private Cloud
+   * (VPC) configuration. 
+   */
   public fun vpcConfiguration(vpcConfiguration: CfnAnomalyDetector.VpcConfigurationProperty) {
     cdkBuilder.vpcConfiguration(vpcConfiguration)
   }

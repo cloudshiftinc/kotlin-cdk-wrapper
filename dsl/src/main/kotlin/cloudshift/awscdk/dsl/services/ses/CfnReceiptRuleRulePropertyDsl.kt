@@ -20,46 +20,99 @@ public class CfnReceiptRuleRulePropertyDsl {
 
   private val _recipients: MutableList<String> = mutableListOf()
 
+  /**
+   * @param actions An ordered list of actions to perform on messages that match at least one of the
+   * recipient email addresses or domains specified in the receipt rule.
+   */
   public fun actions(vararg actions: Any) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * @param actions An ordered list of actions to perform on messages that match at least one of the
+   * recipient email addresses or domains specified in the receipt rule.
+   */
   public fun actions(actions: Collection<Any>) {
     _actions.addAll(actions)
   }
 
+  /**
+   * @param actions An ordered list of actions to perform on messages that match at least one of the
+   * recipient email addresses or domains specified in the receipt rule.
+   */
   public fun actions(actions: IResolvable) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * @param enabled If `true` , the receipt rule is active.
+   * The default value is `false` .
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled If `true` , the receipt rule is active.
+   * The default value is `false` .
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param name The name of the receipt rule. The name must meet the following requirements:.
+   * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), or periods
+   * (.).
+   * * Start and end with a letter or number.
+   * * Contain 64 characters or fewer.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param recipients The recipient domains and email addresses that the receipt rule applies to.
+   * If this field is not specified, this rule matches all recipients on all verified domains.
+   */
   public fun recipients(vararg recipients: String) {
     _recipients.addAll(listOf(*recipients))
   }
 
+  /**
+   * @param recipients The recipient domains and email addresses that the receipt rule applies to.
+   * If this field is not specified, this rule matches all recipients on all verified domains.
+   */
   public fun recipients(recipients: Collection<String>) {
     _recipients.addAll(recipients)
   }
 
+  /**
+   * @param scanEnabled If `true` , then messages that this receipt rule applies to are scanned for
+   * spam and viruses.
+   * The default value is `false` .
+   */
   public fun scanEnabled(scanEnabled: Boolean) {
     cdkBuilder.scanEnabled(scanEnabled)
   }
 
+  /**
+   * @param scanEnabled If `true` , then messages that this receipt rule applies to are scanned for
+   * spam and viruses.
+   * The default value is `false` .
+   */
   public fun scanEnabled(scanEnabled: IResolvable) {
     cdkBuilder.scanEnabled(scanEnabled)
   }
 
+  /**
+   * @param tlsPolicy Specifies whether Amazon SES should require that incoming email is delivered
+   * over a connection encrypted with Transport Layer Security (TLS).
+   * If this parameter is set to `Require` , Amazon SES bounces emails that are not received over
+   * TLS. The default is `Optional` .
+   *
+   * Valid Values: `Require | Optional`
+   */
   public fun tlsPolicy(tlsPolicy: String) {
     cdkBuilder.tlsPolicy(tlsPolicy)
   }

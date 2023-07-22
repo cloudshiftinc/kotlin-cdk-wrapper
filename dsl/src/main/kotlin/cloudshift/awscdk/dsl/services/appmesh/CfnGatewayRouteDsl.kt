@@ -22,34 +22,98 @@ public class CfnGatewayRouteDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the gateway route.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-gatewayroutename)
+   * @param gatewayRouteName The name of the gateway route. 
+   */
   public fun gatewayRouteName(gatewayRouteName: String) {
     cdkBuilder.gatewayRouteName(gatewayRouteName)
   }
 
+  /**
+   * The name of the service mesh that the resource resides in.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-meshname)
+   * @param meshName The name of the service mesh that the resource resides in. 
+   */
   public fun meshName(meshName: String) {
     cdkBuilder.meshName(meshName)
   }
 
+  /**
+   * The AWS IAM account ID of the service mesh owner.
+   *
+   * If the account ID is not your own, then it's the ID of the account that shared the mesh with
+   * your account. For more information about mesh sharing, see [Working with shared
+   * meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-meshowner)
+   * @param meshOwner The AWS IAM account ID of the service mesh owner. 
+   */
   public fun meshOwner(meshOwner: String) {
     cdkBuilder.meshOwner(meshOwner)
   }
 
+  /**
+   * The specifications of the gateway route.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-spec)
+   * @param spec The specifications of the gateway route. 
+   */
   public fun spec(spec: IResolvable) {
     cdkBuilder.spec(spec)
   }
 
+  /**
+   * The specifications of the gateway route.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-spec)
+   * @param spec The specifications of the gateway route. 
+   */
   public fun spec(spec: CfnGatewayRoute.GatewayRouteSpecProperty) {
     cdkBuilder.spec(spec)
   }
 
+  /**
+   * Optional metadata that you can apply to the gateway route to assist with categorization and
+   * organization.
+   *
+   * Each tag consists of a key and an optional value, both of which you define. Tag keys can have a
+   * maximum character length of 128 characters, and tag values can have a maximum length of 256
+   * characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-tags)
+   * @param tags Optional metadata that you can apply to the gateway route to assist with
+   * categorization and organization. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Optional metadata that you can apply to the gateway route to assist with categorization and
+   * organization.
+   *
+   * Each tag consists of a key and an optional value, both of which you define. Tag keys can have a
+   * maximum character length of 128 characters, and tag values can have a maximum length of 256
+   * characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-tags)
+   * @param tags Optional metadata that you can apply to the gateway route to assist with
+   * categorization and organization. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The virtual gateway that the gateway route is associated with.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-virtualgatewayname)
+   * @param virtualGatewayName The virtual gateway that the gateway route is associated with. 
+   */
   public fun virtualGatewayName(virtualGatewayName: String) {
     cdkBuilder.virtualGatewayName(virtualGatewayName)
   }

@@ -11,6 +11,9 @@ public class CfnTemplateMinimumLabelTypePropertyDsl {
   private val cdkBuilder: CfnTemplate.MinimumLabelTypeProperty.Builder =
       CfnTemplate.MinimumLabelTypeProperty.builder()
 
+  /**
+   * @param visibility The visibility of the minimum label.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

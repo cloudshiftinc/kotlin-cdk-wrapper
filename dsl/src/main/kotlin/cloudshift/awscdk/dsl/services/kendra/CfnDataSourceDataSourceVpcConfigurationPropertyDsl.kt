@@ -17,18 +17,36 @@ public class CfnDataSourceDataSourceVpcConfigurationPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds A list of identifiers of security groups within your Amazon VPC. 
+   * The security groups should enable Amazon Kendra to connect to the data source.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds A list of identifiers of security groups within your Amazon VPC. 
+   * The security groups should enable Amazon Kendra to connect to the data source.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds A list of identifiers for subnets within your Amazon VPC. 
+   * The subnets should be able to connect to each other in the VPC, and they should have outgoing
+   * access to the Internet through a NAT device.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds A list of identifiers for subnets within your Amazon VPC. 
+   * The subnets should be able to connect to each other in the VPC, and they should have outgoing
+   * access to the Internet through a NAT device.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

@@ -15,10 +15,18 @@ public class CfnGameSessionQueueFilterConfigurationPropertyDsl {
 
   private val _allowedLocations: MutableList<String> = mutableListOf()
 
+  /**
+   * @param allowedLocations A list of locations to allow game session placement in, in the form of
+   * AWS Region codes such as `us-west-2` .
+   */
   public fun allowedLocations(vararg allowedLocations: String) {
     _allowedLocations.addAll(listOf(*allowedLocations))
   }
 
+  /**
+   * @param allowedLocations A list of locations to allow game session placement in, in the form of
+   * AWS Region codes such as `us-west-2` .
+   */
   public fun allowedLocations(allowedLocations: Collection<String>) {
     _allowedLocations.addAll(allowedLocations)
   }

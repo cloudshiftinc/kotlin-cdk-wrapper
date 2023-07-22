@@ -11,6 +11,10 @@ public class CfnEventSourceMappingScalingConfigPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.ScalingConfigProperty.Builder =
       CfnEventSourceMapping.ScalingConfigProperty.builder()
 
+  /**
+   * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS event
+   * source can invoke.
+   */
   public fun maximumConcurrency(maximumConcurrency: Number) {
     cdkBuilder.maximumConcurrency(maximumConcurrency)
   }

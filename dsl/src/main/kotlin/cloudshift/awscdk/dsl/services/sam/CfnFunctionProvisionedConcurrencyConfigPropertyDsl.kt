@@ -11,6 +11,9 @@ public class CfnFunctionProvisionedConcurrencyConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.ProvisionedConcurrencyConfigProperty.Builder =
       CfnFunction.ProvisionedConcurrencyConfigProperty.builder()
 
+  /**
+   * @param provisionedConcurrentExecutions the value to be set. 
+   */
   public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: String) {
     cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
   }

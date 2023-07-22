@@ -12,6 +12,10 @@ public class CfnDistributionConfigurationFastLaunchSnapshotConfigurationProperty
       CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty.Builder =
       CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty.builder()
 
+  /**
+   * @param targetResourceCount The number of pre-provisioned snapshots to keep on hand for a
+   * fast-launch enabled Windows AMI.
+   */
   public fun targetResourceCount(targetResourceCount: Number) {
     cdkBuilder.targetResourceCount(targetResourceCount)
   }

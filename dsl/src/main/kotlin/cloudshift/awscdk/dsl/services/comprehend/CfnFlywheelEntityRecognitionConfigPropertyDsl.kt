@@ -16,14 +16,23 @@ public class CfnFlywheelEntityRecognitionConfigPropertyDsl {
 
   private val _entityTypes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+   */
   public fun entityTypes(vararg entityTypes: Any) {
     _entityTypes.addAll(listOf(*entityTypes))
   }
 
+  /**
+   * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+   */
   public fun entityTypes(entityTypes: Collection<Any>) {
     _entityTypes.addAll(entityTypes)
   }
 
+  /**
+   * @param entityTypes Up to 25 entity types that the model is trained to recognize.
+   */
   public fun entityTypes(entityTypes: IResolvable) {
     cdkBuilder.entityTypes(entityTypes)
   }

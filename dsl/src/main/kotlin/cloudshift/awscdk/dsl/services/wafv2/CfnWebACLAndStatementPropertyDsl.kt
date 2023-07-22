@@ -16,14 +16,26 @@ public class CfnWebACLAndStatementPropertyDsl {
 
   private val _statements: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param statements The statements to combine with AND logic. 
+   * You can use any statements that can be nested.
+   */
   public fun statements(vararg statements: Any) {
     _statements.addAll(listOf(*statements))
   }
 
+  /**
+   * @param statements The statements to combine with AND logic. 
+   * You can use any statements that can be nested.
+   */
   public fun statements(statements: Collection<Any>) {
     _statements.addAll(statements)
   }
 
+  /**
+   * @param statements The statements to combine with AND logic. 
+   * You can use any statements that can be nested.
+   */
   public fun statements(statements: IResolvable) {
     cdkBuilder.statements(statements)
   }

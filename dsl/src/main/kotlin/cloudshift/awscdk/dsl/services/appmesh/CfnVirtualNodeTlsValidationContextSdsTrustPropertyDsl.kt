@@ -11,6 +11,10 @@ public class CfnVirtualNodeTlsValidationContextSdsTrustPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.TlsValidationContextSdsTrustProperty.Builder =
       CfnVirtualNode.TlsValidationContextSdsTrustProperty.builder()
 
+  /**
+   * @param secretName A reference to an object that represents the name of the secret for a
+   * Transport Layer Security (TLS) Secret Discovery Service validation context trust. 
+   */
   public fun secretName(secretName: String) {
     cdkBuilder.secretName(secretName)
   }

@@ -11,10 +11,16 @@ public class CfnAnalysisCustomActionNavigationOperationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.CustomActionNavigationOperationProperty.Builder =
       CfnAnalysis.CustomActionNavigationOperationProperty.builder()
 
+  /**
+   * @param localNavigationConfiguration The configuration that chooses the navigation target.
+   */
   public fun localNavigationConfiguration(localNavigationConfiguration: IResolvable) {
     cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)
   }
 
+  /**
+   * @param localNavigationConfiguration The configuration that chooses the navigation target.
+   */
   public
       fun localNavigationConfiguration(localNavigationConfiguration: CfnAnalysis.LocalNavigationConfigurationProperty) {
     cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)

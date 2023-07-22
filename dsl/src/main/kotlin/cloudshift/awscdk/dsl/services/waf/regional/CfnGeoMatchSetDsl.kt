@@ -20,18 +20,50 @@ public class CfnGeoMatchSetDsl(
 
   private val _geoMatchConstraints: MutableList<Any> = mutableListOf()
 
+  /**
+   * An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to
+   * search for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html#cfn-wafregional-geomatchset-geomatchconstraints)
+   * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the country
+   * that you want AWS WAF to search for. 
+   */
   public fun geoMatchConstraints(vararg geoMatchConstraints: Any) {
     _geoMatchConstraints.addAll(listOf(*geoMatchConstraints))
   }
 
+  /**
+   * An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to
+   * search for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html#cfn-wafregional-geomatchset-geomatchconstraints)
+   * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the country
+   * that you want AWS WAF to search for. 
+   */
   public fun geoMatchConstraints(geoMatchConstraints: Collection<Any>) {
     _geoMatchConstraints.addAll(geoMatchConstraints)
   }
 
+  /**
+   * An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to
+   * search for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html#cfn-wafregional-geomatchset-geomatchconstraints)
+   * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the country
+   * that you want AWS WAF to search for. 
+   */
   public fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
     cdkBuilder.geoMatchConstraints(geoMatchConstraints)
   }
 
+  /**
+   * A friendly name or description of the `GeoMatchSet` .
+   *
+   * You can't change the name of an `GeoMatchSet` after you create it.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html#cfn-wafregional-geomatchset-name)
+   * @param name A friendly name or description of the `GeoMatchSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

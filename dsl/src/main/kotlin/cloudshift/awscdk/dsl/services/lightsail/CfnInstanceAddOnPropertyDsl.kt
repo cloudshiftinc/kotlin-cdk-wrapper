@@ -11,19 +11,36 @@ import software.amazon.awscdk.services.lightsail.CfnInstance
 public class CfnInstanceAddOnPropertyDsl {
   private val cdkBuilder: CfnInstance.AddOnProperty.Builder = CfnInstance.AddOnProperty.builder()
 
+  /**
+   * @param addOnType The add-on type (for example, `AutoSnapshot` ). 
+   *
+   * `AutoSnapshot` is the only add-on that can be enabled for an instance.
+   */
   public fun addOnType(addOnType: String) {
     cdkBuilder.addOnType(addOnType)
   }
 
+  /**
+   * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as the
+   * daily time when an automatic snapshot will be created.
+   */
   public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
     cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest)
   }
 
+  /**
+   * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as the
+   * daily time when an automatic snapshot will be created.
+   */
   public
       fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: CfnInstance.AutoSnapshotAddOnProperty) {
     cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest)
   }
 
+  /**
+   * @param status The status of the add-on.
+   * Valid Values: `Enabled` | `Disabled`
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

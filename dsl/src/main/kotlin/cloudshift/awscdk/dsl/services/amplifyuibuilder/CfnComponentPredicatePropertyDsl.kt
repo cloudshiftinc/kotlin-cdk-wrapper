@@ -19,38 +19,65 @@ public class CfnComponentPredicatePropertyDsl {
 
   private val _or: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param and A list of predicates to combine logically.
+   */
   public fun and(vararg and: Any) {
     _and.addAll(listOf(*and))
   }
 
+  /**
+   * @param and A list of predicates to combine logically.
+   */
   public fun and(and: Collection<Any>) {
     _and.addAll(and)
   }
 
+  /**
+   * @param and A list of predicates to combine logically.
+   */
   public fun and(and: IResolvable) {
     cdkBuilder.and(and)
   }
 
+  /**
+   * @param field The field to query.
+   */
   public fun `field`(`field`: String) {
     cdkBuilder.`field`(`field`)
   }
 
+  /**
+   * @param operand The value to use when performing the evaluation.
+   */
   public fun operand(operand: String) {
     cdkBuilder.operand(operand)
   }
 
+  /**
+   * @param operator The operator to use to perform the evaluation.
+   */
   public fun `operator`(`operator`: String) {
     cdkBuilder.`operator`(`operator`)
   }
 
+  /**
+   * @param or A list of predicates to combine logically.
+   */
   public fun or(vararg or: Any) {
     _or.addAll(listOf(*or))
   }
 
+  /**
+   * @param or A list of predicates to combine logically.
+   */
   public fun or(or: Collection<Any>) {
     _or.addAll(or)
   }
 
+  /**
+   * @param or A list of predicates to combine logically.
+   */
   public fun or(or: IResolvable) {
     cdkBuilder.or(or)
   }

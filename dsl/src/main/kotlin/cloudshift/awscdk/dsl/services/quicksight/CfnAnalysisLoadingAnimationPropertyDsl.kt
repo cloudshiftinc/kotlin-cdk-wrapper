@@ -11,6 +11,9 @@ public class CfnAnalysisLoadingAnimationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LoadingAnimationProperty.Builder =
       CfnAnalysis.LoadingAnimationProperty.builder()
 
+  /**
+   * @param visibility The visibility configuration of `LoadingAnimation` .
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

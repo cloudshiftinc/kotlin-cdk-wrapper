@@ -11,6 +11,9 @@ public class CfnFunctionEphemeralStoragePropertyDsl {
   private val cdkBuilder: CfnFunction.EphemeralStorageProperty.Builder =
       CfnFunction.EphemeralStorageProperty.builder()
 
+  /**
+   * @param size The size of the function's `/tmp` directory. 
+   */
   public fun size(size: Number) {
     cdkBuilder.size(size)
   }

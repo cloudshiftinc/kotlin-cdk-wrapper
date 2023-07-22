@@ -12,10 +12,16 @@ public class CfnOriginRequestPolicyPropsDsl {
   private val cdkBuilder: CfnOriginRequestPolicyProps.Builder =
       CfnOriginRequestPolicyProps.builder()
 
+  /**
+   * @param originRequestPolicyConfig The origin request policy configuration. 
+   */
   public fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
     cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)
   }
 
+  /**
+   * @param originRequestPolicyConfig The origin request policy configuration. 
+   */
   public
       fun originRequestPolicyConfig(originRequestPolicyConfig: CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty) {
     cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)

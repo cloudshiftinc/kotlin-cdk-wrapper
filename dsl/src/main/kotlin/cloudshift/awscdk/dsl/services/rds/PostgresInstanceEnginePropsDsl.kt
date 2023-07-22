@@ -11,6 +11,9 @@ public class PostgresInstanceEnginePropsDsl {
   private val cdkBuilder: PostgresInstanceEngineProps.Builder =
       PostgresInstanceEngineProps.builder()
 
+  /**
+   * @param version The exact version of the engine to use. 
+   */
   public fun version(version: PostgresEngineVersion) {
     cdkBuilder.version(version)
   }

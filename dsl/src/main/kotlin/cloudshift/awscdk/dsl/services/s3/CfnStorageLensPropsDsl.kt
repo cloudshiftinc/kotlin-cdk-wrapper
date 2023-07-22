@@ -18,19 +18,33 @@ public class CfnStorageLensPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param storageLensConfiguration This resource contains the details Amazon S3 Storage Lens
+   * configuration. 
+   */
   public fun storageLensConfiguration(storageLensConfiguration: IResolvable) {
     cdkBuilder.storageLensConfiguration(storageLensConfiguration)
   }
 
+  /**
+   * @param storageLensConfiguration This resource contains the details Amazon S3 Storage Lens
+   * configuration. 
+   */
   public
       fun storageLensConfiguration(storageLensConfiguration: CfnStorageLens.StorageLensConfigurationProperty) {
     cdkBuilder.storageLensConfiguration(storageLensConfiguration)
   }
 
+  /**
+   * @param tags A set of tags (key–value pairs) to associate with the Storage Lens configuration.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A set of tags (key–value pairs) to associate with the Storage Lens configuration.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

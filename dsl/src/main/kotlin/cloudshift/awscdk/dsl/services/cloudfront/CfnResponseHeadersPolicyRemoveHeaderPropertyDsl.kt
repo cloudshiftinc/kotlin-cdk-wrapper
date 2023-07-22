@@ -11,6 +11,9 @@ public class CfnResponseHeadersPolicyRemoveHeaderPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.RemoveHeaderProperty.Builder =
       CfnResponseHeadersPolicy.RemoveHeaderProperty.builder()
 
+  /**
+   * @param header The HTTP header name. 
+   */
   public fun `header`(`header`: String) {
     cdkBuilder.`header`(`header`)
   }

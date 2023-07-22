@@ -11,10 +11,16 @@ public class CfnAccessPointContentTransformationPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.ContentTransformationProperty.Builder =
       CfnAccessPoint.ContentTransformationProperty.builder()
 
+  /**
+   * @param awsLambda the value to be set. 
+   */
   public fun awsLambda(awsLambda: IResolvable) {
     cdkBuilder.awsLambda(awsLambda)
   }
 
+  /**
+   * @param awsLambda the value to be set. 
+   */
   public fun awsLambda(awsLambda: CfnAccessPoint.AwsLambdaProperty) {
     cdkBuilder.awsLambda(awsLambda)
   }

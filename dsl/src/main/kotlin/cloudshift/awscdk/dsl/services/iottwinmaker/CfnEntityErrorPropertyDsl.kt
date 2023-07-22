@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 public class CfnEntityErrorPropertyDsl {
   private val cdkBuilder: CfnEntity.ErrorProperty.Builder = CfnEntity.ErrorProperty.builder()
 
+  /**
+   * @param code The entity error code.
+   */
   public fun code(code: String) {
     cdkBuilder.code(code)
   }
 
+  /**
+   * @param message The entity error message.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }

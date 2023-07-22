@@ -26,63 +26,214 @@ public class CfnModelDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Specifies the containers in the inference pipeline.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-containers)
+   * @param containers Specifies the containers in the inference pipeline. 
+   */
   public fun containers(vararg containers: Any) {
     _containers.addAll(listOf(*containers))
   }
 
+  /**
+   * Specifies the containers in the inference pipeline.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-containers)
+   * @param containers Specifies the containers in the inference pipeline. 
+   */
   public fun containers(containers: Collection<Any>) {
     _containers.addAll(containers)
   }
 
+  /**
+   * Specifies the containers in the inference pipeline.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-containers)
+   * @param containers Specifies the containers in the inference pipeline. 
+   */
   public fun containers(containers: IResolvable) {
     cdkBuilder.containers(containers)
   }
 
+  /**
+   * Isolates the model container.
+   *
+   * No inbound or outbound network calls can be made to or from the model container.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-enablenetworkisolation)
+   * @param enableNetworkIsolation Isolates the model container. 
+   */
   public fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
     cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
   }
 
+  /**
+   * Isolates the model container.
+   *
+   * No inbound or outbound network calls can be made to or from the model container.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-enablenetworkisolation)
+   * @param enableNetworkIsolation Isolates the model container. 
+   */
   public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
     cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the IAM role that SageMaker can assume to access model
+   * artifacts and docker image for deployment on ML compute instances or for batch transform jobs.
+   *
+   * Deploying on ML compute instances is part of model hosting. For more information, see
+   * [SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html) .
+   *
+   *
+   * To be able to pass this role to SageMaker, the caller of this API must have the `iam:PassRole`
+   * permission.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-executionrolearn)
+   * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM role that SageMaker can
+   * assume to access model artifacts and docker image for deployment on ML compute instances or for
+   * batch transform jobs. 
+   */
   public fun executionRoleArn(executionRoleArn: String) {
     cdkBuilder.executionRoleArn(executionRoleArn)
   }
 
+  /**
+   * Specifies details of how containers in a multi-container endpoint are called.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-inferenceexecutionconfig)
+   * @param inferenceExecutionConfig Specifies details of how containers in a multi-container
+   * endpoint are called. 
+   */
   public fun inferenceExecutionConfig(inferenceExecutionConfig: IResolvable) {
     cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig)
   }
 
+  /**
+   * Specifies details of how containers in a multi-container endpoint are called.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-inferenceexecutionconfig)
+   * @param inferenceExecutionConfig Specifies details of how containers in a multi-container
+   * endpoint are called. 
+   */
   public
       fun inferenceExecutionConfig(inferenceExecutionConfig: CfnModel.InferenceExecutionConfigProperty) {
     cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig)
   }
 
+  /**
+   * The name of the new model.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-modelname)
+   * @param modelName The name of the new model. 
+   */
   public fun modelName(modelName: String) {
     cdkBuilder.modelName(modelName)
   }
 
+  /**
+   * The location of the primary docker image containing inference code, associated artifacts, and
+   * custom environment map that the inference code uses when the model is deployed for predictions.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-primarycontainer)
+   * @param primaryContainer The location of the primary docker image containing inference code,
+   * associated artifacts, and custom environment map that the inference code uses when the model is
+   * deployed for predictions. 
+   */
   public fun primaryContainer(primaryContainer: IResolvable) {
     cdkBuilder.primaryContainer(primaryContainer)
   }
 
+  /**
+   * The location of the primary docker image containing inference code, associated artifacts, and
+   * custom environment map that the inference code uses when the model is deployed for predictions.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-primarycontainer)
+   * @param primaryContainer The location of the primary docker image containing inference code,
+   * associated artifacts, and custom environment map that the inference code uses when the model is
+   * deployed for predictions. 
+   */
   public fun primaryContainer(primaryContainer: CfnModel.ContainerDefinitionProperty) {
     cdkBuilder.primaryContainer(primaryContainer)
   }
 
+  /**
+   * A list of key-value pairs to apply to this resource.
+   *
+   * For more information, see [Resource
+   * Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * and [Using Cost Allocation
+   * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
+   * in the *AWS Billing and Cost Management User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-tags)
+   * @param tags A list of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A list of key-value pairs to apply to this resource.
+   *
+   * For more information, see [Resource
+   * Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * and [Using Cost Allocation
+   * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)
+   * in the *AWS Billing and Cost Management User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-tags)
+   * @param tags A list of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html) object that
+   * specifies the VPC that you want your model to connect to. Control access to and from your model
+   * container by configuring the VPC. `VpcConfig` is used in hosting services and in batch transform.
+   * For more information, see [Protect Endpoints by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Data in Batch
+   * Transform Jobs by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-vpcconfig)
+   * @param vpcConfig A
+   * [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html) object that
+   * specifies the VPC that you want your model to connect to. Control access to and from your model
+   * container by configuring the VPC. `VpcConfig` is used in hosting services and in batch transform.
+   * For more information, see [Protect Endpoints by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Data in Batch
+   * Transform Jobs by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) . 
+   */
   public fun vpcConfig(vpcConfig: IResolvable) {
     cdkBuilder.vpcConfig(vpcConfig)
   }
 
+  /**
+   * A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html) object that
+   * specifies the VPC that you want your model to connect to. Control access to and from your model
+   * container by configuring the VPC. `VpcConfig` is used in hosting services and in batch transform.
+   * For more information, see [Protect Endpoints by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Data in Batch
+   * Transform Jobs by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-vpcconfig)
+   * @param vpcConfig A
+   * [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html) object that
+   * specifies the VPC that you want your model to connect to. Control access to and from your model
+   * container by configuring the VPC. `VpcConfig` is used in hosting services and in batch transform.
+   * For more information, see [Protect Endpoints by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Data in Batch
+   * Transform Jobs by Using an Amazon Virtual Private
+   * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) . 
+   */
   public fun vpcConfig(vpcConfig: CfnModel.VpcConfigProperty) {
     cdkBuilder.vpcConfig(vpcConfig)
   }

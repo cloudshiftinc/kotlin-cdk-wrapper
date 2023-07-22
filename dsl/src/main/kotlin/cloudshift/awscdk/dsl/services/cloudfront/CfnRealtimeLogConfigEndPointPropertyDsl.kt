@@ -12,15 +12,27 @@ public class CfnRealtimeLogConfigEndPointPropertyDsl {
   private val cdkBuilder: CfnRealtimeLogConfig.EndPointProperty.Builder =
       CfnRealtimeLogConfig.EndPointProperty.builder()
 
+  /**
+   * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where you
+   * are sending real-time log data. 
+   */
   public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
     cdkBuilder.kinesisStreamConfig(kinesisStreamConfig)
   }
 
+  /**
+   * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where you
+   * are sending real-time log data. 
+   */
   public
       fun kinesisStreamConfig(kinesisStreamConfig: CfnRealtimeLogConfig.KinesisStreamConfigProperty) {
     cdkBuilder.kinesisStreamConfig(kinesisStreamConfig)
   }
 
+  /**
+   * @param streamType The type of data stream where you are sending real-time log data. 
+   * The only valid value is `Kinesis` .
+   */
   public fun streamType(streamType: String) {
     cdkBuilder.streamType(streamType)
   }

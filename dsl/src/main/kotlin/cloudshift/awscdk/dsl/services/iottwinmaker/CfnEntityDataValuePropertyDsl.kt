@@ -22,66 +22,111 @@ public class CfnEntityDataValuePropertyDsl {
 
   private val _listValue: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param booleanValue A boolean value.
+   */
   public fun booleanValue(booleanValue: Boolean) {
     cdkBuilder.booleanValue(booleanValue)
   }
 
+  /**
+   * @param booleanValue A boolean value.
+   */
   public fun booleanValue(booleanValue: IResolvable) {
     cdkBuilder.booleanValue(booleanValue)
   }
 
+  /**
+   * @param doubleValue A double value.
+   */
   public fun doubleValue(doubleValue: Number) {
     cdkBuilder.doubleValue(doubleValue)
   }
 
+  /**
+   * @param expression An expression that produces the value.
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }
 
+  /**
+   * @param integerValue An integer value.
+   */
   public fun integerValue(integerValue: Number) {
     cdkBuilder.integerValue(integerValue)
   }
 
+  /**
+   * @param listValue A list of multiple values.
+   */
   public fun listValue(vararg listValue: Any) {
     _listValue.addAll(listOf(*listValue))
   }
 
+  /**
+   * @param listValue A list of multiple values.
+   */
   public fun listValue(listValue: Collection<Any>) {
     _listValue.addAll(listValue)
   }
 
+  /**
+   * @param listValue A list of multiple values.
+   */
   public fun listValue(listValue: IResolvable) {
     cdkBuilder.listValue(listValue)
   }
 
+  /**
+   * @param longValue A long value.
+   */
   public fun longValue(longValue: Number) {
     cdkBuilder.longValue(longValue)
   }
 
-  public fun mapValue(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param mapValue An object that maps strings to multiple DataValue objects.
+   */
+  public fun mapValue(mapValue: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(mapValue)
     cdkBuilder.mapValue(builder.map)
   }
 
+  /**
+   * @param mapValue An object that maps strings to multiple DataValue objects.
+   */
   public fun mapValue(mapValue: Map<String, Any>) {
     cdkBuilder.mapValue(mapValue)
   }
 
+  /**
+   * @param mapValue An object that maps strings to multiple DataValue objects.
+   */
   public fun mapValue(mapValue: IResolvable) {
     cdkBuilder.mapValue(mapValue)
   }
 
-  public fun relationshipValue(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param relationshipValue A value that relates a component to another component.
+   */
+  public fun relationshipValue(relationshipValue: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(relationshipValue)
     cdkBuilder.relationshipValue(builder.map)
   }
 
+  /**
+   * @param relationshipValue A value that relates a component to another component.
+   */
   public fun relationshipValue(relationshipValue: Any) {
     cdkBuilder.relationshipValue(relationshipValue)
   }
 
+  /**
+   * @param stringValue A string value.
+   */
   public fun stringValue(stringValue: String) {
     cdkBuilder.stringValue(stringValue)
   }

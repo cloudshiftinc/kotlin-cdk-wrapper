@@ -17,18 +17,37 @@ public class CfnPlaybackKeyPairPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param name Playback-key-pair name.
+   * The value does not need to be unique.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param publicKeyMaterial The public portion of a customer-generated key pair.
+   */
   public fun publicKeyMaterial(publicKeyMaterial: String) {
     cdkBuilder.publicKeyMaterial(publicKeyMaterial)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

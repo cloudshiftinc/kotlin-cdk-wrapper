@@ -12,10 +12,16 @@ public class CfnPlaybackConfigurationAdMarkerPassthroughPropertyDsl {
   private val cdkBuilder: CfnPlaybackConfiguration.AdMarkerPassthroughProperty.Builder =
       CfnPlaybackConfiguration.AdMarkerPassthroughProperty.builder()
 
+  /**
+   * @param enabled Enables ad marker passthrough for your configuration.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Enables ad marker passthrough for your configuration.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

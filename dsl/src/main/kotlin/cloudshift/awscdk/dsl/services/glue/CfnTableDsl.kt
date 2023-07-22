@@ -15,18 +15,44 @@ public class CfnTableDsl(
 ) {
   private val cdkBuilder: CfnTable.Builder = CfnTable.Builder.create(scope, id)
 
+  /**
+   * The ID of the Data Catalog in which to create the `Table` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-catalogid)
+   * @param catalogId The ID of the Data Catalog in which to create the `Table` . 
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * The name of the database where the table metadata resides.
+   *
+   * For Hive compatibility, this must be all lowercase.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-databasename)
+   * @param databaseName The name of the database where the table metadata resides. 
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * A structure used to define a table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+   * @param tableInput A structure used to define a table. 
+   */
   public fun tableInput(tableInput: IResolvable) {
     cdkBuilder.tableInput(tableInput)
   }
 
+  /**
+   * A structure used to define a table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+   * @param tableInput A structure used to define a table. 
+   */
   public fun tableInput(tableInput: CfnTable.TableInputProperty) {
     cdkBuilder.tableInput(tableInput)
   }

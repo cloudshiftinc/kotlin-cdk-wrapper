@@ -16,14 +16,29 @@ public class CfnDataSourceWebCrawlerAuthenticationConfigurationPropertyDsl {
 
   private val _basicAuthentication: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param basicAuthentication The list of configuration information that's required to connect to
+   * and crawl a website host using basic authentication credentials.
+   * The list includes the name and port number of the website host.
+   */
   public fun basicAuthentication(vararg basicAuthentication: Any) {
     _basicAuthentication.addAll(listOf(*basicAuthentication))
   }
 
+  /**
+   * @param basicAuthentication The list of configuration information that's required to connect to
+   * and crawl a website host using basic authentication credentials.
+   * The list includes the name and port number of the website host.
+   */
   public fun basicAuthentication(basicAuthentication: Collection<Any>) {
     _basicAuthentication.addAll(basicAuthentication)
   }
 
+  /**
+   * @param basicAuthentication The list of configuration information that's required to connect to
+   * and crawl a website host using basic authentication credentials.
+   * The list includes the name and port number of the website host.
+   */
   public fun basicAuthentication(basicAuthentication: IResolvable) {
     cdkBuilder.basicAuthentication(basicAuthentication)
   }

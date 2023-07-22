@@ -19,18 +19,42 @@ public class KeyGroupDsl(
 
   private val _items: MutableList<IPublicKey> = mutableListOf()
 
+  /**
+   * A comment to describe the key group.
+   *
+   * Default: - no comment
+   *
+   * @param comment A comment to describe the key group. 
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * A list of public keys to add to the key group.
+   *
+   * @param items A list of public keys to add to the key group. 
+   */
   public fun items(vararg items: IPublicKey) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * A list of public keys to add to the key group.
+   *
+   * @param items A list of public keys to add to the key group. 
+   */
   public fun items(items: Collection<IPublicKey>) {
     _items.addAll(items)
   }
 
+  /**
+   * A name to identify the key group.
+   *
+   * Default: - generated from the `id`
+   *
+   * @param keyGroupName A name to identify the key group. 
+   */
   public fun keyGroupName(keyGroupName: String) {
     cdkBuilder.keyGroupName(keyGroupName)
   }

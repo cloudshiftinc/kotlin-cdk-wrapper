@@ -17,22 +17,41 @@ public class CfnChannelRemixSettingsPropertyDsl {
 
   private val _channelMappings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param channelMappings A mapping of input channels to output channels, with appropriate gain
+   * adjustments.
+   */
   public fun channelMappings(vararg channelMappings: Any) {
     _channelMappings.addAll(listOf(*channelMappings))
   }
 
+  /**
+   * @param channelMappings A mapping of input channels to output channels, with appropriate gain
+   * adjustments.
+   */
   public fun channelMappings(channelMappings: Collection<Any>) {
     _channelMappings.addAll(channelMappings)
   }
 
+  /**
+   * @param channelMappings A mapping of input channels to output channels, with appropriate gain
+   * adjustments.
+   */
   public fun channelMappings(channelMappings: IResolvable) {
     cdkBuilder.channelMappings(channelMappings)
   }
 
+  /**
+   * @param channelsIn The number of input channels to be used.
+   */
   public fun channelsIn(channelsIn: Number) {
     cdkBuilder.channelsIn(channelsIn)
   }
 
+  /**
+   * @param channelsOut The number of output channels to be produced.
+   * Valid values: 1, 2, 4, 6, 8.
+   */
   public fun channelsOut(channelsOut: Number) {
     cdkBuilder.channelsOut(channelsOut)
   }

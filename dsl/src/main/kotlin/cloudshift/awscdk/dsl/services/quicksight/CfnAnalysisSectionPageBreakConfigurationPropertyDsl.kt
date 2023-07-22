@@ -11,10 +11,16 @@ public class CfnAnalysisSectionPageBreakConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SectionPageBreakConfigurationProperty.Builder =
       CfnAnalysis.SectionPageBreakConfigurationProperty.builder()
 
+  /**
+   * @param after The configuration of a page break after a section.
+   */
   public fun after(after: IResolvable) {
     cdkBuilder.after(after)
   }
 
+  /**
+   * @param after The configuration of a page break after a section.
+   */
   public fun after(after: CfnAnalysis.SectionAfterPageBreakProperty) {
     cdkBuilder.after(after)
   }

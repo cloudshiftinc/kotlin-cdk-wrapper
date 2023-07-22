@@ -17,26 +17,54 @@ public class CfnServiceDeploymentAlarmsPropertyDsl {
 
   private val _alarmNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param alarmNames One or more CloudWatch alarm names. 
+   * Use a "," to separate the alarms.
+   */
   public fun alarmNames(vararg alarmNames: String) {
     _alarmNames.addAll(listOf(*alarmNames))
   }
 
+  /**
+   * @param alarmNames One or more CloudWatch alarm names. 
+   * Use a "," to separate the alarms.
+   */
   public fun alarmNames(alarmNames: Collection<String>) {
     _alarmNames.addAll(alarmNames)
   }
 
+  /**
+   * @param enable Determines whether to use the CloudWatch alarm option in the service deployment
+   * process. 
+   */
   public fun enable(enable: Boolean) {
     cdkBuilder.enable(enable)
   }
 
+  /**
+   * @param enable Determines whether to use the CloudWatch alarm option in the service deployment
+   * process. 
+   */
   public fun enable(enable: IResolvable) {
     cdkBuilder.enable(enable)
   }
 
+  /**
+   * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+   * service deployment fails. 
+   * If rollback is used, when a service deployment fails, the service is rolled back to the last
+   * deployment that completed successfully.
+   */
   public fun rollback(rollback: Boolean) {
     cdkBuilder.rollback(rollback)
   }
 
+  /**
+   * @param rollback Determines whether to configure Amazon ECS to roll back the service if a
+   * service deployment fails. 
+   * If rollback is used, when a service deployment fails, the service is rolled back to the last
+   * deployment that completed successfully.
+   */
   public fun rollback(rollback: IResolvable) {
     cdkBuilder.rollback(rollback)
   }

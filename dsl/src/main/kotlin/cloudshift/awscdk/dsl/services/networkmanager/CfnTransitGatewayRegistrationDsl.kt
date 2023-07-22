@@ -15,10 +15,22 @@ public class CfnTransitGatewayRegistrationDsl(
   private val cdkBuilder: CfnTransitGatewayRegistration.Builder =
       CfnTransitGatewayRegistration.Builder.create(scope, id)
 
+  /**
+   * The ID of the global network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-globalnetworkid)
+   * @param globalNetworkId The ID of the global network. 
+   */
   public fun globalNetworkId(globalNetworkId: String) {
     cdkBuilder.globalNetworkId(globalNetworkId)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the transit gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-transitgatewayarn)
+   * @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway. 
+   */
   public fun transitGatewayArn(transitGatewayArn: String) {
     cdkBuilder.transitGatewayArn(transitGatewayArn)
   }

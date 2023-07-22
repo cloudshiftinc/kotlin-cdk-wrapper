@@ -22,14 +22,35 @@ public class UntrustedCodeBoundaryPolicyDsl(
 
   private val _additionalStatements: MutableList<PolicyStatement> = mutableListOf()
 
+  /**
+   * Additional statements to add to the default set of statements.
+   *
+   * Default: - No additional statements
+   *
+   * @param additionalStatements Additional statements to add to the default set of statements. 
+   */
   public fun additionalStatements(additionalStatements: PolicyStatementDsl.() -> Unit) {
     _additionalStatements.add(PolicyStatementDsl().apply(additionalStatements).build())
   }
 
+  /**
+   * Additional statements to add to the default set of statements.
+   *
+   * Default: - No additional statements
+   *
+   * @param additionalStatements Additional statements to add to the default set of statements. 
+   */
   public fun additionalStatements(additionalStatements: Collection<PolicyStatement>) {
     _additionalStatements.addAll(additionalStatements)
   }
 
+  /**
+   * The name of the managed policy.
+   *
+   * Default: - A name is automatically generated.
+   *
+   * @param managedPolicyName The name of the managed policy. 
+   */
   public fun managedPolicyName(managedPolicyName: String) {
     cdkBuilder.managedPolicyName(managedPolicyName)
   }

@@ -17,22 +17,39 @@ public class CfnPrincipalPermissionsLFTagPolicyResourcePropertyDsl {
 
   private val _expression: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param catalogId The identifier for the Data Catalog . 
+   * The Data Catalog is the persistent metadata store. It contains database definitions, table
+   * definitions, and other control information to manage your AWS Lake Formation environment.
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+   */
   public fun expression(vararg expression: Any) {
     _expression.addAll(listOf(*expression))
   }
 
+  /**
+   * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+   */
   public fun expression(expression: Collection<Any>) {
     _expression.addAll(expression)
   }
 
+  /**
+   * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
+   */
   public fun expression(expression: IResolvable) {
     cdkBuilder.expression(expression)
   }
 
+  /**
+   * @param resourceType The resource type for which the LF-tag policy applies. 
+   */
   public fun resourceType(resourceType: String) {
     cdkBuilder.resourceType(resourceType)
   }

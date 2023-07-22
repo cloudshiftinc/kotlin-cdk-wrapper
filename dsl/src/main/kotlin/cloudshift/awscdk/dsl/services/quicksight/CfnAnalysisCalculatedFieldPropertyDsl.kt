@@ -11,14 +11,23 @@ public class CfnAnalysisCalculatedFieldPropertyDsl {
   private val cdkBuilder: CfnAnalysis.CalculatedFieldProperty.Builder =
       CfnAnalysis.CalculatedFieldProperty.builder()
 
+  /**
+   * @param dataSetIdentifier The data set that is used in this calculated field. 
+   */
   public fun dataSetIdentifier(dataSetIdentifier: String) {
     cdkBuilder.dataSetIdentifier(dataSetIdentifier)
   }
 
+  /**
+   * @param expression The expression of the calculated field. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }
 
+  /**
+   * @param name The name of the calculated field. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

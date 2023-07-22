@@ -15,6 +15,16 @@ public class CfnDefaultViewAssociationDsl(
   private val cdkBuilder: CfnDefaultViewAssociation.Builder =
       CfnDefaultViewAssociation.Builder.create(scope, id)
 
+  /**
+   * The ARN of the view to set as the default for the AWS Region and AWS account in which you call
+   * this operation.
+   *
+   * The specified view must already exist in the specified Region.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-defaultviewassociation.html#cfn-resourceexplorer2-defaultviewassociation-viewarn)
+   * @param viewArn The ARN of the view to set as the default for the AWS Region and AWS account in
+   * which you call this operation. 
+   */
   public fun viewArn(viewArn: String) {
     cdkBuilder.viewArn(viewArn)
   }

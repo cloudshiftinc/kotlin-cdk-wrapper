@@ -16,14 +16,25 @@ public class CfnRulePropsDsl {
 
   private val _assertions: MutableList<CfnRuleAssertion> = mutableListOf()
 
+  /**
+   * @param assertions Assertions which define the rule.
+   */
   public fun assertions(assertions: CfnRuleAssertionDsl.() -> Unit) {
     _assertions.add(CfnRuleAssertionDsl().apply(assertions).build())
   }
 
+  /**
+   * @param assertions Assertions which define the rule.
+   */
   public fun assertions(assertions: Collection<CfnRuleAssertion>) {
     _assertions.addAll(assertions)
   }
 
+  /**
+   * @param ruleCondition If the rule condition evaluates to false, the rule doesn't take effect.
+   * If the function in the rule condition evaluates to true, expressions in each assert are
+   * evaluated and applied.
+   */
   public fun ruleCondition(ruleCondition: ICfnConditionExpression) {
     cdkBuilder.ruleCondition(ruleCondition)
   }

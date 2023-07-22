@@ -24,102 +24,209 @@ public class CfnLifecyclePolicySchedulePropertyDsl {
 
   private val _variableTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param archiveRule the value to be set.
+   */
   public fun archiveRule(archiveRule: IResolvable) {
     cdkBuilder.archiveRule(archiveRule)
   }
 
+  /**
+   * @param archiveRule the value to be set.
+   */
   public fun archiveRule(archiveRule: CfnLifecyclePolicy.ArchiveRuleProperty) {
     cdkBuilder.archiveRule(archiveRule)
   }
 
+  /**
+   * @param copyTags Copy all user-defined tags on a source volume to snapshots of the volume
+   * created by this policy.
+   */
   public fun copyTags(copyTags: Boolean) {
     cdkBuilder.copyTags(copyTags)
   }
 
+  /**
+   * @param copyTags Copy all user-defined tags on a source volume to snapshots of the volume
+   * created by this policy.
+   */
   public fun copyTags(copyTags: IResolvable) {
     cdkBuilder.copyTags(copyTags)
   }
 
+  /**
+   * @param createRule The creation rule.
+   */
   public fun createRule(createRule: IResolvable) {
     cdkBuilder.createRule(createRule)
   }
 
+  /**
+   * @param createRule The creation rule.
+   */
   public fun createRule(createRule: CfnLifecyclePolicy.CreateRuleProperty) {
     cdkBuilder.createRule(createRule)
   }
 
+  /**
+   * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+   *
+   * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost. If
+   * the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions or
+   * Outposts.
+   */
   public fun crossRegionCopyRules(vararg crossRegionCopyRules: Any) {
     _crossRegionCopyRules.addAll(listOf(*crossRegionCopyRules))
   }
 
+  /**
+   * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+   *
+   * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost. If
+   * the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions or
+   * Outposts.
+   */
   public fun crossRegionCopyRules(crossRegionCopyRules: Collection<Any>) {
     _crossRegionCopyRules.addAll(crossRegionCopyRules)
   }
 
+  /**
+   * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+   *
+   * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost. If
+   * the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions or
+   * Outposts.
+   */
   public fun crossRegionCopyRules(crossRegionCopyRules: IResolvable) {
     cdkBuilder.crossRegionCopyRules(crossRegionCopyRules)
   }
 
+  /**
+   * @param deprecateRule the value to be set.
+   */
   public fun deprecateRule(deprecateRule: IResolvable) {
     cdkBuilder.deprecateRule(deprecateRule)
   }
 
+  /**
+   * @param deprecateRule the value to be set.
+   */
   public fun deprecateRule(deprecateRule: CfnLifecyclePolicy.DeprecateRuleProperty) {
     cdkBuilder.deprecateRule(deprecateRule)
   }
 
+  /**
+   * @param fastRestoreRule *[Snapshot policies only]* The rule for enabling fast snapshot restore.
+   */
   public fun fastRestoreRule(fastRestoreRule: IResolvable) {
     cdkBuilder.fastRestoreRule(fastRestoreRule)
   }
 
+  /**
+   * @param fastRestoreRule *[Snapshot policies only]* The rule for enabling fast snapshot restore.
+   */
   public fun fastRestoreRule(fastRestoreRule: CfnLifecyclePolicy.FastRestoreRuleProperty) {
     cdkBuilder.fastRestoreRule(fastRestoreRule)
   }
 
+  /**
+   * @param name The name of the schedule.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param retainRule The retention rule for snapshots or AMIs created by the policy.
+   */
   public fun retainRule(retainRule: IResolvable) {
     cdkBuilder.retainRule(retainRule)
   }
 
+  /**
+   * @param retainRule The retention rule for snapshots or AMIs created by the policy.
+   */
   public fun retainRule(retainRule: CfnLifecyclePolicy.RetainRuleProperty) {
     cdkBuilder.retainRule(retainRule)
   }
 
+  /**
+   * @param shareRules *[Snapshot policies only]* The rule for sharing snapshots with other AWS
+   * accounts .
+   */
   public fun shareRules(vararg shareRules: Any) {
     _shareRules.addAll(listOf(*shareRules))
   }
 
+  /**
+   * @param shareRules *[Snapshot policies only]* The rule for sharing snapshots with other AWS
+   * accounts .
+   */
   public fun shareRules(shareRules: Collection<Any>) {
     _shareRules.addAll(shareRules)
   }
 
+  /**
+   * @param shareRules *[Snapshot policies only]* The rule for sharing snapshots with other AWS
+   * accounts .
+   */
   public fun shareRules(shareRules: IResolvable) {
     cdkBuilder.shareRules(shareRules)
   }
 
+  /**
+   * @param tagsToAdd The tags to apply to policy-created resources.
+   * These user-defined tags are in addition to the AWS -added lifecycle tags.
+   */
   public fun tagsToAdd(vararg tagsToAdd: Any) {
     _tagsToAdd.addAll(listOf(*tagsToAdd))
   }
 
+  /**
+   * @param tagsToAdd The tags to apply to policy-created resources.
+   * These user-defined tags are in addition to the AWS -added lifecycle tags.
+   */
   public fun tagsToAdd(tagsToAdd: Collection<Any>) {
     _tagsToAdd.addAll(tagsToAdd)
   }
 
+  /**
+   * @param tagsToAdd The tags to apply to policy-created resources.
+   * These user-defined tags are in addition to the AWS -added lifecycle tags.
+   */
   public fun tagsToAdd(tagsToAdd: IResolvable) {
     cdkBuilder.tagsToAdd(tagsToAdd)
   }
 
+  /**
+   * @param variableTags *[AMI policies and snapshot policies that target instances only]* A
+   * collection of key/value pairs with values determined dynamically when the policy is executed.
+   * Keys may be any valid Amazon EC2 tag key. Values must be in one of the two following formats:
+   * `$(instance-id)` or `$(timestamp)` . Variable tags are only valid for EBS Snapshot Management –
+   * Instance policies.
+   */
   public fun variableTags(vararg variableTags: Any) {
     _variableTags.addAll(listOf(*variableTags))
   }
 
+  /**
+   * @param variableTags *[AMI policies and snapshot policies that target instances only]* A
+   * collection of key/value pairs with values determined dynamically when the policy is executed.
+   * Keys may be any valid Amazon EC2 tag key. Values must be in one of the two following formats:
+   * `$(instance-id)` or `$(timestamp)` . Variable tags are only valid for EBS Snapshot Management –
+   * Instance policies.
+   */
   public fun variableTags(variableTags: Collection<Any>) {
     _variableTags.addAll(variableTags)
   }
 
+  /**
+   * @param variableTags *[AMI policies and snapshot policies that target instances only]* A
+   * collection of key/value pairs with values determined dynamically when the policy is executed.
+   * Keys may be any valid Amazon EC2 tag key. Values must be in one of the two following formats:
+   * `$(instance-id)` or `$(timestamp)` . Variable tags are only valid for EBS Snapshot Management –
+   * Instance policies.
+   */
   public fun variableTags(variableTags: IResolvable) {
     cdkBuilder.variableTags(variableTags)
   }

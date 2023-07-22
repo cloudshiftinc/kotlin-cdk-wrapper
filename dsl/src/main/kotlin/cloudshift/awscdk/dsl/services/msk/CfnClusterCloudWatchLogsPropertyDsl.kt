@@ -13,14 +13,25 @@ public class CfnClusterCloudWatchLogsPropertyDsl {
   private val cdkBuilder: CfnCluster.CloudWatchLogsProperty.Builder =
       CfnCluster.CloudWatchLogsProperty.builder()
 
+  /**
+   * @param enabled Specifies whether broker logs get sent to the specified CloudWatch Logs
+   * destination. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Specifies whether broker logs get sent to the specified CloudWatch Logs
+   * destination. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param logGroup The CloudWatch log group that is the destination for broker logs.
+   */
   public fun logGroup(logGroup: String) {
     cdkBuilder.logGroup(logGroup)
   }

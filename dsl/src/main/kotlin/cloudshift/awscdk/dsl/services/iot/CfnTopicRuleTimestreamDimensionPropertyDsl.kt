@@ -11,10 +11,17 @@ public class CfnTopicRuleTimestreamDimensionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.TimestreamDimensionProperty.Builder =
       CfnTopicRule.TimestreamDimensionProperty.builder()
 
+  /**
+   * @param name The metadata dimension name. 
+   * This is the name of the column in the Amazon Timestream database table record.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value to write in this column of the database record. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

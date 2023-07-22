@@ -11,10 +11,18 @@ public class CfnFHIRDatastoreSseConfigurationPropertyDsl {
   private val cdkBuilder: CfnFHIRDatastore.SseConfigurationProperty.Builder =
       CfnFHIRDatastore.SseConfigurationProperty.builder()
 
+  /**
+   * @param kmsEncryptionConfig The server-side encryption key configuration for a customer provided
+   * encryption key (CMK). 
+   */
   public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
     cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig)
   }
 
+  /**
+   * @param kmsEncryptionConfig The server-side encryption key configuration for a customer provided
+   * encryption key (CMK). 
+   */
   public
       fun kmsEncryptionConfig(kmsEncryptionConfig: CfnFHIRDatastore.KmsEncryptionConfigProperty) {
     cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig)

@@ -11,6 +11,10 @@ public class CfnBucketReplicaModificationsPropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicaModificationsProperty.Builder =
       CfnBucket.ReplicaModificationsProperty.builder()
 
+  /**
+   * @param status Specifies whether Amazon S3 replicates modifications on replicas. 
+   * *Allowed values* : `Enabled` | `Disabled`
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

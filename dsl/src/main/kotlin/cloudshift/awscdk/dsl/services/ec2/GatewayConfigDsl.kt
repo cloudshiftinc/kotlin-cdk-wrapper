@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.ec2.GatewayConfig
 public class GatewayConfigDsl {
   private val cdkBuilder: GatewayConfig.Builder = GatewayConfig.builder()
 
+  /**
+   * @param az Availability Zone. 
+   */
   public fun az(az: String) {
     cdkBuilder.az(az)
   }
 
+  /**
+   * @param gatewayId Identity of gateway spawned by the provider. 
+   */
   public fun gatewayId(gatewayId: String) {
     cdkBuilder.gatewayId(gatewayId)
   }

@@ -13,22 +13,42 @@ public class CfnNetworkInterfaceAttachmentPropsDsl {
   private val cdkBuilder: CfnNetworkInterfaceAttachmentProps.Builder =
       CfnNetworkInterfaceAttachmentProps.builder()
 
+  /**
+   * @param deleteOnTermination Whether to delete the network interface when the instance
+   * terminates.
+   * By default, this value is set to `true` .
+   */
   public fun deleteOnTermination(deleteOnTermination: Boolean) {
     cdkBuilder.deleteOnTermination(deleteOnTermination)
   }
 
+  /**
+   * @param deleteOnTermination Whether to delete the network interface when the instance
+   * terminates.
+   * By default, this value is set to `true` .
+   */
   public fun deleteOnTermination(deleteOnTermination: IResolvable) {
     cdkBuilder.deleteOnTermination(deleteOnTermination)
   }
 
+  /**
+   * @param deviceIndex The network interface's position in the attachment order. 
+   * For example, the first attached network interface has a `DeviceIndex` of 0.
+   */
   public fun deviceIndex(deviceIndex: String) {
     cdkBuilder.deviceIndex(deviceIndex)
   }
 
+  /**
+   * @param instanceId The ID of the instance to which you will attach the ENI. 
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }
 
+  /**
+   * @param networkInterfaceId The ID of the ENI that you want to attach. 
+   */
   public fun networkInterfaceId(networkInterfaceId: String) {
     cdkBuilder.networkInterfaceId(networkInterfaceId)
   }

@@ -15,14 +15,23 @@ public class CfnImageRecipeComponentParameterPropertyDsl {
 
   private val _value: MutableList<String> = mutableListOf()
 
+  /**
+   * @param name The name of the component parameter to set. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value Sets the value for the named component parameter. 
+   */
   public fun `value`(vararg `value`: String) {
     _value.addAll(listOf(*`value`))
   }
 
+  /**
+   * @param value Sets the value for the named component parameter. 
+   */
   public fun `value`(`value`: Collection<String>) {
     _value.addAll(`value`)
   }

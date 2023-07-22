@@ -11,10 +11,16 @@ public class CfnDashboardDashboardSourceEntityPropertyDsl {
   private val cdkBuilder: CfnDashboard.DashboardSourceEntityProperty.Builder =
       CfnDashboard.DashboardSourceEntityProperty.builder()
 
+  /**
+   * @param sourceTemplate Source template.
+   */
   public fun sourceTemplate(sourceTemplate: IResolvable) {
     cdkBuilder.sourceTemplate(sourceTemplate)
   }
 
+  /**
+   * @param sourceTemplate Source template.
+   */
   public fun sourceTemplate(sourceTemplate: CfnDashboard.DashboardSourceTemplateProperty) {
     cdkBuilder.sourceTemplate(sourceTemplate)
   }

@@ -13,14 +13,23 @@ public class CfnWorkflowWorkflowParameterPropertyDsl {
   private val cdkBuilder: CfnWorkflow.WorkflowParameterProperty.Builder =
       CfnWorkflow.WorkflowParameterProperty.builder()
 
+  /**
+   * @param description The parameter's description.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param optional Whether the parameter is optional.
+   */
   public fun optional(optional: Boolean) {
     cdkBuilder.optional(optional)
   }
 
+  /**
+   * @param optional Whether the parameter is optional.
+   */
   public fun optional(optional: IResolvable) {
     cdkBuilder.optional(optional)
   }

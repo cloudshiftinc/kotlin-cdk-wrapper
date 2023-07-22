@@ -11,10 +11,16 @@ public class CfnDashboardFilledMapFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.FilledMapFieldWellsProperty.Builder =
       CfnDashboard.FilledMapFieldWellsProperty.builder()
 
+  /**
+   * @param filledMapAggregatedFieldWells The aggregated field well of the filled map.
+   */
   public fun filledMapAggregatedFieldWells(filledMapAggregatedFieldWells: IResolvable) {
     cdkBuilder.filledMapAggregatedFieldWells(filledMapAggregatedFieldWells)
   }
 
+  /**
+   * @param filledMapAggregatedFieldWells The aggregated field well of the filled map.
+   */
   public
       fun filledMapAggregatedFieldWells(filledMapAggregatedFieldWells: CfnDashboard.FilledMapAggregatedFieldWellsProperty) {
     cdkBuilder.filledMapAggregatedFieldWells(filledMapAggregatedFieldWells)

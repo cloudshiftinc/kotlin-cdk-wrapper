@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.appmesh.TcpTimeout
 public class TcpTimeoutDsl {
   private val cdkBuilder: TcpTimeout.Builder = TcpTimeout.builder()
 
+  /**
+   * @param idle Represents an idle timeout.
+   * The amount of time that a connection may be idle.
+   */
   public fun idle(idle: Duration) {
     cdkBuilder.idle(idle)
   }

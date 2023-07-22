@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.cloudfront.FileCodeOptions
 public class FileCodeOptionsDsl {
   private val cdkBuilder: FileCodeOptions.Builder = FileCodeOptions.builder()
 
+  /**
+   * @param filePath The path of the file to read the code from. 
+   */
   public fun filePath(filePath: String) {
     cdkBuilder.filePath(filePath)
   }

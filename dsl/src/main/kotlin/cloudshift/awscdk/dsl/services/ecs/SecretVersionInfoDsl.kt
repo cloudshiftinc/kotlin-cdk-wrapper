@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.ecs.SecretVersionInfo
 public class SecretVersionInfoDsl {
   private val cdkBuilder: SecretVersionInfo.Builder = SecretVersionInfo.builder()
 
+  /**
+   * @param versionId version id of the secret.
+   */
   public fun versionId(versionId: String) {
     cdkBuilder.versionId(versionId)
   }
 
+  /**
+   * @param versionStage version stage of the secret.
+   */
   public fun versionStage(versionStage: String) {
     cdkBuilder.versionStage(versionStage)
   }

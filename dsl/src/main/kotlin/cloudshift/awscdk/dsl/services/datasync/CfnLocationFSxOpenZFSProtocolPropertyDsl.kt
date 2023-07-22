@@ -11,10 +11,18 @@ public class CfnLocationFSxOpenZFSProtocolPropertyDsl {
   private val cdkBuilder: CfnLocationFSxOpenZFS.ProtocolProperty.Builder =
       CfnLocationFSxOpenZFS.ProtocolProperty.builder()
 
+  /**
+   * @param nfs Represents the Network File System (NFS) protocol that DataSync uses to access your
+   * FSx for OpenZFS file system.
+   */
   public fun nfs(nfs: IResolvable) {
     cdkBuilder.nfs(nfs)
   }
 
+  /**
+   * @param nfs Represents the Network File System (NFS) protocol that DataSync uses to access your
+   * FSx for OpenZFS file system.
+   */
   public fun nfs(nfs: CfnLocationFSxOpenZFS.NFSProperty) {
     cdkBuilder.nfs(nfs)
   }

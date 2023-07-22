@@ -11,10 +11,16 @@ public class CfnTopicNegativeFormatPropertyDsl {
   private val cdkBuilder: CfnTopic.NegativeFormatProperty.Builder =
       CfnTopic.NegativeFormatProperty.builder()
 
+  /**
+   * @param prefix The prefix for a negative format.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }
 
+  /**
+   * @param suffix The suffix for a negative format.
+   */
   public fun suffix(suffix: String) {
     cdkBuilder.suffix(suffix)
   }

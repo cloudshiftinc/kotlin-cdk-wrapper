@@ -11,6 +11,9 @@ public class CfnDashboardExportWithHiddenFieldsOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.ExportWithHiddenFieldsOptionProperty.Builder =
       CfnDashboard.ExportWithHiddenFieldsOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus The status of the export with hidden fields options.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

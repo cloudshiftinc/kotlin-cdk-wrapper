@@ -11,6 +11,10 @@ public class CfnScheduledQueryScheduleConfigurationPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.ScheduleConfigurationProperty.Builder =
       CfnScheduledQuery.ScheduleConfigurationProperty.builder()
 
+  /**
+   * @param scheduleExpression An expression that denotes when to trigger the scheduled query run. 
+   * This can be a cron expression or a rate expression.
+   */
   public fun scheduleExpression(scheduleExpression: String) {
     cdkBuilder.scheduleExpression(scheduleExpression)
   }

@@ -17,18 +17,30 @@ public class LoadBalancerFilterDsl {
 
   private val _loadBalancerTags: MutableList<Tag> = mutableListOf()
 
+  /**
+   * @param loadBalancerArn Find by load balancer's ARN.
+   */
   public fun loadBalancerArn(loadBalancerArn: String) {
     cdkBuilder.loadBalancerArn(loadBalancerArn)
   }
 
+  /**
+   * @param loadBalancerTags Match load balancer tags.
+   */
   public fun loadBalancerTags(loadBalancerTags: TagDsl.() -> Unit) {
     _loadBalancerTags.add(TagDsl().apply(loadBalancerTags).build())
   }
 
+  /**
+   * @param loadBalancerTags Match load balancer tags.
+   */
   public fun loadBalancerTags(loadBalancerTags: Collection<Tag>) {
     _loadBalancerTags.addAll(loadBalancerTags)
   }
 
+  /**
+   * @param loadBalancerType Filter load balancers by their type. 
+   */
   public fun loadBalancerType(loadBalancerType: LoadBalancerType) {
     cdkBuilder.loadBalancerType(loadBalancerType)
   }

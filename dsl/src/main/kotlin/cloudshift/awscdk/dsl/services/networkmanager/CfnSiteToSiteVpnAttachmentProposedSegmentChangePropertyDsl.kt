@@ -19,18 +19,31 @@ public class CfnSiteToSiteVpnAttachmentProposedSegmentChangePropertyDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param attachmentPolicyRuleNumber The rule number in the policy document that applies to this
+   * change.
+   */
   public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
     cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
   }
 
+  /**
+   * @param segmentName The name of the segment to change.
+   */
   public fun segmentName(segmentName: String) {
     cdkBuilder.segmentName(segmentName)
   }
 
+  /**
+   * @param tags The list of key-value tags that changed for the segment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The list of key-value tags that changed for the segment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

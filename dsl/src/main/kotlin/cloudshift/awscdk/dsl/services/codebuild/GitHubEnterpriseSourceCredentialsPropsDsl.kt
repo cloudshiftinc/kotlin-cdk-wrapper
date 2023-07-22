@@ -11,6 +11,10 @@ public class GitHubEnterpriseSourceCredentialsPropsDsl {
   private val cdkBuilder: GitHubEnterpriseSourceCredentialsProps.Builder =
       GitHubEnterpriseSourceCredentialsProps.builder()
 
+  /**
+   * @param accessToken The personal access token to use when contacting the instance of the GitHub
+   * Enterprise API. 
+   */
   public fun accessToken(accessToken: SecretValue) {
     cdkBuilder.accessToken(accessToken)
   }

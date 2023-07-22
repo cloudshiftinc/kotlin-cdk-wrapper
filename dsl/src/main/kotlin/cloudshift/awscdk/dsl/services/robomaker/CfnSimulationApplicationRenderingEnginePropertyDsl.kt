@@ -11,10 +11,16 @@ public class CfnSimulationApplicationRenderingEnginePropertyDsl {
   private val cdkBuilder: CfnSimulationApplication.RenderingEngineProperty.Builder =
       CfnSimulationApplication.RenderingEngineProperty.builder()
 
+  /**
+   * @param name The name of the rendering engine. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param version The version of the rendering engine. 
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

@@ -12,14 +12,23 @@ public class CfnTemplateAxisLabelReferenceOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.AxisLabelReferenceOptionsProperty.Builder =
       CfnTemplate.AxisLabelReferenceOptionsProperty.builder()
 
+  /**
+   * @param column The column that the axis label is targeted to. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column that the axis label is targeted to. 
+   */
   public fun column(column: CfnTemplate.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param fieldId The field that the axis label is targeted to. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }

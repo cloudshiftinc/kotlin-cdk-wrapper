@@ -11,6 +11,10 @@ public class CfnDatasetOutputFileUriValuePropertyDsl {
   private val cdkBuilder: CfnDataset.OutputFileUriValueProperty.Builder =
       CfnDataset.OutputFileUriValueProperty.builder()
 
+  /**
+   * @param fileName The URI of the location where dataset contents are stored, usually the URI of a
+   * file in an S3 bucket. 
+   */
   public fun fileName(fileName: String) {
     cdkBuilder.fileName(fileName)
   }

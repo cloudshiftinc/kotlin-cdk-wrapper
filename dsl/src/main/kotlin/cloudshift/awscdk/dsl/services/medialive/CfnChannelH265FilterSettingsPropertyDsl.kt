@@ -11,10 +11,16 @@ public class CfnChannelH265FilterSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.H265FilterSettingsProperty.Builder =
       CfnChannel.H265FilterSettingsProperty.builder()
 
+  /**
+   * @param temporalFilterSettings Settings for applying the temporal filter to the video.
+   */
   public fun temporalFilterSettings(temporalFilterSettings: IResolvable) {
     cdkBuilder.temporalFilterSettings(temporalFilterSettings)
   }
 
+  /**
+   * @param temporalFilterSettings Settings for applying the temporal filter to the video.
+   */
   public
       fun temporalFilterSettings(temporalFilterSettings: CfnChannel.TemporalFilterSettingsProperty) {
     cdkBuilder.temporalFilterSettings(temporalFilterSettings)

@@ -11,10 +11,17 @@ public class CfnScheduleEventBridgeParametersPropertyDsl {
   private val cdkBuilder: CfnSchedule.EventBridgeParametersProperty.Builder =
       CfnSchedule.EventBridgeParametersProperty.builder()
 
+  /**
+   * @param detailType A free-form string, with a maximum of 128 characters, used to decide what
+   * fields to expect in the event detail. 
+   */
   public fun detailType(detailType: String) {
     cdkBuilder.detailType(detailType)
   }
 
+  /**
+   * @param source The source of the event. 
+   */
   public fun source(source: String) {
     cdkBuilder.source(source)
   }

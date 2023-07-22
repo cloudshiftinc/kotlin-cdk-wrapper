@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.VirtualNodeAttributes
 public class VirtualNodeAttributesDsl {
   private val cdkBuilder: VirtualNodeAttributes.Builder = VirtualNodeAttributes.builder()
 
+  /**
+   * @param mesh The Mesh that the VirtualNode belongs to. 
+   */
   public fun mesh(mesh: IMesh) {
     cdkBuilder.mesh(mesh)
   }
 
+  /**
+   * @param virtualNodeName The name of the VirtualNode. 
+   */
   public fun virtualNodeName(virtualNodeName: String) {
     cdkBuilder.virtualNodeName(virtualNodeName)
   }

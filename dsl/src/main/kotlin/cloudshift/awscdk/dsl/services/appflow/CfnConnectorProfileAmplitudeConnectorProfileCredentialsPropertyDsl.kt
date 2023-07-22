@@ -11,10 +11,17 @@ public class CfnConnectorProfileAmplitudeConnectorProfileCredentialsPropertyDsl 
   private val cdkBuilder: CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty.Builder =
       CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty.builder()
 
+  /**
+   * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+   * calling program to your API. 
+   */
   public fun apiKey(apiKey: String) {
     cdkBuilder.apiKey(apiKey)
   }
 
+  /**
+   * @param secretKey The Secret Access Key portion of the credentials. 
+   */
   public fun secretKey(secretKey: String) {
     cdkBuilder.secretKey(secretKey)
   }

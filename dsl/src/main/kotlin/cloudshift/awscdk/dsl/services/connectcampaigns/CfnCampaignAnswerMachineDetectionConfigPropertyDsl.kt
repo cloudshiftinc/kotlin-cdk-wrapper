@@ -12,10 +12,18 @@ public class CfnCampaignAnswerMachineDetectionConfigPropertyDsl {
   private val cdkBuilder: CfnCampaign.AnswerMachineDetectionConfigProperty.Builder =
       CfnCampaign.AnswerMachineDetectionConfigProperty.builder()
 
+  /**
+   * @param enableAnswerMachineDetection Flag to decided whether outbound calls should have
+   * answering machine detection enabled or not. 
+   */
   public fun enableAnswerMachineDetection(enableAnswerMachineDetection: Boolean) {
     cdkBuilder.enableAnswerMachineDetection(enableAnswerMachineDetection)
   }
 
+  /**
+   * @param enableAnswerMachineDetection Flag to decided whether outbound calls should have
+   * answering machine detection enabled or not. 
+   */
   public fun enableAnswerMachineDetection(enableAnswerMachineDetection: IResolvable) {
     cdkBuilder.enableAnswerMachineDetection(enableAnswerMachineDetection)
   }

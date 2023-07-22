@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.rds.AuroraEngineVersion
 public class AuroraClusterEnginePropsDsl {
   private val cdkBuilder: AuroraClusterEngineProps.Builder = AuroraClusterEngineProps.builder()
 
+  /**
+   * @param version The version of the Aurora cluster engine. 
+   */
   public fun version(version: AuroraEngineVersion) {
     cdkBuilder.version(version)
   }

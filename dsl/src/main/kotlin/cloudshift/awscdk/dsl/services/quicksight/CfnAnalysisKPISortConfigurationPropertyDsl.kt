@@ -16,14 +16,23 @@ public class CfnAnalysisKPISortConfigurationPropertyDsl {
 
   private val _trendGroupSort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param trendGroupSort The sort configuration of the trend group fields.
+   */
   public fun trendGroupSort(vararg trendGroupSort: Any) {
     _trendGroupSort.addAll(listOf(*trendGroupSort))
   }
 
+  /**
+   * @param trendGroupSort The sort configuration of the trend group fields.
+   */
   public fun trendGroupSort(trendGroupSort: Collection<Any>) {
     _trendGroupSort.addAll(trendGroupSort)
   }
 
+  /**
+   * @param trendGroupSort The sort configuration of the trend group fields.
+   */
   public fun trendGroupSort(trendGroupSort: IResolvable) {
     cdkBuilder.trendGroupSort(trendGroupSort)
   }

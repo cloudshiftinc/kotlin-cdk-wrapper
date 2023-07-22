@@ -11,10 +11,19 @@ public class CfnDirectoryConfigServiceAccountCredentialsPropertyDsl {
   private val cdkBuilder: CfnDirectoryConfig.ServiceAccountCredentialsProperty.Builder =
       CfnDirectoryConfig.ServiceAccountCredentialsProperty.builder()
 
+  /**
+   * @param accountName The user name of the account. 
+   * This account must have the following privileges: create computer objects, join computers to the
+   * domain, and change/reset the password on descendant computer objects for the organizational units
+   * specified.
+   */
   public fun accountName(accountName: String) {
     cdkBuilder.accountName(accountName)
   }
 
+  /**
+   * @param accountPassword The password for the account. 
+   */
   public fun accountPassword(accountPassword: String) {
     cdkBuilder.accountPassword(accountPassword)
   }

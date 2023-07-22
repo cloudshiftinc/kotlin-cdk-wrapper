@@ -12,14 +12,35 @@ import software.amazon.awscdk.services.eks.NodeType
 public class EksOptimizedImageDsl {
   private val cdkBuilder: EksOptimizedImage.Builder = EksOptimizedImage.Builder.create()
 
+  /**
+   * What cpu architecture to retrieve the image for (arm64 or x86_64).
+   *
+   * Default: CpuArch.X86_64
+   *
+   * @param cpuArch What cpu architecture to retrieve the image for (arm64 or x86_64). 
+   */
   public fun cpuArch(cpuArch: CpuArch) {
     cdkBuilder.cpuArch(cpuArch)
   }
 
+  /**
+   * The Kubernetes version to use.
+   *
+   * Default: - The latest version
+   *
+   * @param kubernetesVersion The Kubernetes version to use. 
+   */
   public fun kubernetesVersion(kubernetesVersion: String) {
     cdkBuilder.kubernetesVersion(kubernetesVersion)
   }
 
+  /**
+   * What instance type to retrieve the image for (standard or GPU-optimized).
+   *
+   * Default: NodeType.STANDARD
+   *
+   * @param nodeType What instance type to retrieve the image for (standard or GPU-optimized). 
+   */
   public fun nodeType(nodeType: NodeType) {
     cdkBuilder.nodeType(nodeType)
   }

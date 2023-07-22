@@ -11,10 +11,16 @@ public class CfnFunctionDestinationConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.DestinationConfigProperty.Builder =
       CfnFunction.DestinationConfigProperty.builder()
 
+  /**
+   * @param onFailure the value to be set. 
+   */
   public fun onFailure(onFailure: IResolvable) {
     cdkBuilder.onFailure(onFailure)
   }
 
+  /**
+   * @param onFailure the value to be set. 
+   */
   public fun onFailure(onFailure: CfnFunction.DestinationProperty) {
     cdkBuilder.onFailure(onFailure)
   }

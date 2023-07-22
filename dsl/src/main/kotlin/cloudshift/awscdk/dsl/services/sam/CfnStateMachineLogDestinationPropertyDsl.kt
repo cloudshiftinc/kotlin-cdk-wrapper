@@ -11,10 +11,16 @@ public class CfnStateMachineLogDestinationPropertyDsl {
   private val cdkBuilder: CfnStateMachine.LogDestinationProperty.Builder =
       CfnStateMachine.LogDestinationProperty.builder()
 
+  /**
+   * @param cloudWatchLogsLogGroup the value to be set. 
+   */
   public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
     cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup)
   }
 
+  /**
+   * @param cloudWatchLogsLogGroup the value to be set. 
+   */
   public
       fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CfnStateMachine.CloudWatchLogsLogGroupProperty) {
     cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup)

@@ -11,10 +11,18 @@ public class CfnTrafficMirrorFilterRuleTrafficMirrorPortRangePropertyDsl {
   private val cdkBuilder: CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty.Builder =
       CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty.builder()
 
+  /**
+   * @param fromPort The start of the Traffic Mirror port range. 
+   * This applies to the TCP and UDP protocols.
+   */
   public fun fromPort(fromPort: Number) {
     cdkBuilder.fromPort(fromPort)
   }
 
+  /**
+   * @param toPort The end of the Traffic Mirror port range. 
+   * This applies to the TCP and UDP protocols.
+   */
   public fun toPort(toPort: Number) {
     cdkBuilder.toPort(toPort)
   }

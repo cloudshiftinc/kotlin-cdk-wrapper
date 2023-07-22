@@ -11,6 +11,9 @@ public class CfnSpotFleetIamInstanceProfileSpecificationPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.IamInstanceProfileSpecificationProperty.Builder =
       CfnSpotFleet.IamInstanceProfileSpecificationProperty.builder()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the instance profile.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

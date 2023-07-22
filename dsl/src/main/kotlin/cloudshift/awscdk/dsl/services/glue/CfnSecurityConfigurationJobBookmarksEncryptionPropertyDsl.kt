@@ -11,10 +11,16 @@ public class CfnSecurityConfigurationJobBookmarksEncryptionPropertyDsl {
   private val cdkBuilder: CfnSecurityConfiguration.JobBookmarksEncryptionProperty.Builder =
       CfnSecurityConfiguration.JobBookmarksEncryptionProperty.builder()
 
+  /**
+   * @param jobBookmarksEncryptionMode The encryption mode to use for job bookmarks data.
+   */
   public fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String) {
     cdkBuilder.jobBookmarksEncryptionMode(jobBookmarksEncryptionMode)
   }
 
+  /**
+   * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+   */
   public fun kmsKeyArn(kmsKeyArn: String) {
     cdkBuilder.kmsKeyArn(kmsKeyArn)
   }

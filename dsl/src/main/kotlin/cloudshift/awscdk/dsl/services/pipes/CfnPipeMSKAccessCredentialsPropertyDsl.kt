@@ -11,10 +11,16 @@ public class CfnPipeMSKAccessCredentialsPropertyDsl {
   private val cdkBuilder: CfnPipe.MSKAccessCredentialsProperty.Builder =
       CfnPipe.MSKAccessCredentialsProperty.builder()
 
+  /**
+   * @param clientCertificateTlsAuth The ARN of the Secrets Manager secret.
+   */
   public fun clientCertificateTlsAuth(clientCertificateTlsAuth: String) {
     cdkBuilder.clientCertificateTlsAuth(clientCertificateTlsAuth)
   }
 
+  /**
+   * @param saslScram512Auth The ARN of the Secrets Manager secret.
+   */
   public fun saslScram512Auth(saslScram512Auth: String) {
     cdkBuilder.saslScram512Auth(saslScram512Auth)
   }

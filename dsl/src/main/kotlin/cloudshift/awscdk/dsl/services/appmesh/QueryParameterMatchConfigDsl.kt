@@ -11,12 +11,19 @@ import software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig
 public class QueryParameterMatchConfigDsl {
   private val cdkBuilder: QueryParameterMatchConfig.Builder = QueryParameterMatchConfig.builder()
 
-  public fun queryParameterMatch(block: CfnRouteQueryParameterPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param queryParameterMatch Route CFN configuration for route query parameter match. 
+   */
+  public fun queryParameterMatch(queryParameterMatch: CfnRouteQueryParameterPropertyDsl.() -> Unit =
+      {}) {
     val builder = CfnRouteQueryParameterPropertyDsl()
-    builder.apply(block)
+    builder.apply(queryParameterMatch)
     cdkBuilder.queryParameterMatch(builder.build())
   }
 
+  /**
+   * @param queryParameterMatch Route CFN configuration for route query parameter match. 
+   */
   public fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty) {
     cdkBuilder.queryParameterMatch(queryParameterMatch)
   }

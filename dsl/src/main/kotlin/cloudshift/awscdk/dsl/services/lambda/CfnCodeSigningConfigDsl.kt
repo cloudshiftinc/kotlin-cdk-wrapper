@@ -16,23 +16,57 @@ public class CfnCodeSigningConfigDsl(
   private val cdkBuilder: CfnCodeSigningConfig.Builder = CfnCodeSigningConfig.Builder.create(scope,
       id)
 
+  /**
+   * List of allowed publishers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-allowedpublishers)
+   * @param allowedPublishers List of allowed publishers. 
+   */
   public fun allowedPublishers(allowedPublishers: IResolvable) {
     cdkBuilder.allowedPublishers(allowedPublishers)
   }
 
+  /**
+   * List of allowed publishers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-allowedpublishers)
+   * @param allowedPublishers List of allowed publishers. 
+   */
   public fun allowedPublishers(allowedPublishers: CfnCodeSigningConfig.AllowedPublishersProperty) {
     cdkBuilder.allowedPublishers(allowedPublishers)
   }
 
+  /**
+   * The code signing policy controls the validation failure action for signature mismatch or
+   * expiry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-codesigningpolicies)
+   * @param codeSigningPolicies The code signing policy controls the validation failure action for
+   * signature mismatch or expiry. 
+   */
   public fun codeSigningPolicies(codeSigningPolicies: IResolvable) {
     cdkBuilder.codeSigningPolicies(codeSigningPolicies)
   }
 
+  /**
+   * The code signing policy controls the validation failure action for signature mismatch or
+   * expiry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-codesigningpolicies)
+   * @param codeSigningPolicies The code signing policy controls the validation failure action for
+   * signature mismatch or expiry. 
+   */
   public
       fun codeSigningPolicies(codeSigningPolicies: CfnCodeSigningConfig.CodeSigningPoliciesProperty) {
     cdkBuilder.codeSigningPolicies(codeSigningPolicies)
   }
 
+  /**
+   * Code signing configuration description.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-description)
+   * @param description Code signing configuration description. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }

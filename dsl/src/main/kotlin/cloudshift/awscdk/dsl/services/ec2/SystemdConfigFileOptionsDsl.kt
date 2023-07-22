@@ -11,30 +11,53 @@ import software.amazon.awscdk.services.ec2.SystemdConfigFileOptions
 public class SystemdConfigFileOptionsDsl {
   private val cdkBuilder: SystemdConfigFileOptions.Builder = SystemdConfigFileOptions.builder()
 
+  /**
+   * @param afterNetwork Start the service after the networking part of the OS comes up.
+   */
   public fun afterNetwork(afterNetwork: Boolean) {
     cdkBuilder.afterNetwork(afterNetwork)
   }
 
+  /**
+   * @param command The command to run to start this service. 
+   */
   public fun command(command: String) {
     cdkBuilder.command(command)
   }
 
+  /**
+   * @param cwd The working directory for the command.
+   */
   public fun cwd(cwd: String) {
     cdkBuilder.cwd(cwd)
   }
 
+  /**
+   * @param description A description of this service.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param group The group to execute the process under.
+   */
   public fun group(group: String) {
     cdkBuilder.group(group)
   }
 
+  /**
+   * @param keepRunning Keep the process running all the time.
+   * Restarts the process when it exits for any reason other
+   * than the machine shutting down.
+   */
   public fun keepRunning(keepRunning: Boolean) {
     cdkBuilder.keepRunning(keepRunning)
   }
 
+  /**
+   * @param user The user to execute the process under.
+   */
   public fun user(user: String) {
     cdkBuilder.user(user)
   }

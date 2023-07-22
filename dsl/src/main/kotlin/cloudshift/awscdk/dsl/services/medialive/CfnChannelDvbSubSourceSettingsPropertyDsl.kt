@@ -12,10 +12,20 @@ public class CfnChannelDvbSubSourceSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.DvbSubSourceSettingsProperty.Builder =
       CfnChannel.DvbSubSourceSettingsProperty.builder()
 
+  /**
+   * @param ocrLanguage If you will configure a WebVTT caption description that references this
+   * caption selector, use this field to provide the language to consider when translating the
+   * image-based source to text.
+   */
   public fun ocrLanguage(ocrLanguage: String) {
     cdkBuilder.ocrLanguage(ocrLanguage)
   }
 
+  /**
+   * @param pid When using DVB-Sub with burn-in or SMPTE-TT, use this PID for the source content.
+   * It is unused for DVB-Sub passthrough. All DVB-Sub content is passed through, regardless of
+   * selectors.
+   */
   public fun pid(pid: Number) {
     cdkBuilder.pid(pid)
   }

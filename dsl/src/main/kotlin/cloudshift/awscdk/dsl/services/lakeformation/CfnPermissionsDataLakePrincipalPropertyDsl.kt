@@ -11,6 +11,9 @@ public class CfnPermissionsDataLakePrincipalPropertyDsl {
   private val cdkBuilder: CfnPermissions.DataLakePrincipalProperty.Builder =
       CfnPermissions.DataLakePrincipalProperty.builder()
 
+  /**
+   * @param dataLakePrincipalIdentifier An identifier for the Lake Formation principal.
+   */
   public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
     cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
   }

@@ -12,46 +12,75 @@ import software.amazon.awscdk.services.appmesh.RouteSpecConfig
 public class RouteSpecConfigDsl {
   private val cdkBuilder: RouteSpecConfig.Builder = RouteSpecConfig.builder()
 
-  public fun grpcRouteSpec(block: CfnRouteGrpcRoutePropertyDsl.() -> Unit = {}) {
+  /**
+   * @param grpcRouteSpec The spec for a grpc route.
+   */
+  public fun grpcRouteSpec(grpcRouteSpec: CfnRouteGrpcRoutePropertyDsl.() -> Unit = {}) {
     val builder = CfnRouteGrpcRoutePropertyDsl()
-    builder.apply(block)
+    builder.apply(grpcRouteSpec)
     cdkBuilder.grpcRouteSpec(builder.build())
   }
 
+  /**
+   * @param grpcRouteSpec The spec for a grpc route.
+   */
   public fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty) {
     cdkBuilder.grpcRouteSpec(grpcRouteSpec)
   }
 
-  public fun http2RouteSpec(block: CfnRouteHttpRoutePropertyDsl.() -> Unit = {}) {
+  /**
+   * @param http2RouteSpec The spec for an http2 route.
+   */
+  public fun http2RouteSpec(http2RouteSpec: CfnRouteHttpRoutePropertyDsl.() -> Unit = {}) {
     val builder = CfnRouteHttpRoutePropertyDsl()
-    builder.apply(block)
+    builder.apply(http2RouteSpec)
     cdkBuilder.http2RouteSpec(builder.build())
   }
 
+  /**
+   * @param http2RouteSpec The spec for an http2 route.
+   */
   public fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty) {
     cdkBuilder.http2RouteSpec(http2RouteSpec)
   }
 
-  public fun httpRouteSpec(block: CfnRouteHttpRoutePropertyDsl.() -> Unit = {}) {
+  /**
+   * @param httpRouteSpec The spec for an http route.
+   */
+  public fun httpRouteSpec(httpRouteSpec: CfnRouteHttpRoutePropertyDsl.() -> Unit = {}) {
     val builder = CfnRouteHttpRoutePropertyDsl()
-    builder.apply(block)
+    builder.apply(httpRouteSpec)
     cdkBuilder.httpRouteSpec(builder.build())
   }
 
+  /**
+   * @param httpRouteSpec The spec for an http route.
+   */
   public fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty) {
     cdkBuilder.httpRouteSpec(httpRouteSpec)
   }
 
+  /**
+   * @param priority The priority for the route.
+   * When a Virtual Router has multiple routes, route match is performed in the
+   * order of specified value, where 0 is the highest priority, and first matched route is selected.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }
 
-  public fun tcpRouteSpec(block: CfnRouteTcpRoutePropertyDsl.() -> Unit = {}) {
+  /**
+   * @param tcpRouteSpec The spec for a tcp route.
+   */
+  public fun tcpRouteSpec(tcpRouteSpec: CfnRouteTcpRoutePropertyDsl.() -> Unit = {}) {
     val builder = CfnRouteTcpRoutePropertyDsl()
-    builder.apply(block)
+    builder.apply(tcpRouteSpec)
     cdkBuilder.tcpRouteSpec(builder.build())
   }
 
+  /**
+   * @param tcpRouteSpec The spec for a tcp route.
+   */
   public fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty) {
     cdkBuilder.tcpRouteSpec(tcpRouteSpec)
   }

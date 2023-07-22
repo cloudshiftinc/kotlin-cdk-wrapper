@@ -17,18 +17,33 @@ public class CfnTemplateDateTimeHierarchyPropertyDsl {
 
   private val _drillDownFilters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param drillDownFilters The option that determines the drill down filters for the `DateTime`
+   * hierarchy.
+   */
   public fun drillDownFilters(vararg drillDownFilters: Any) {
     _drillDownFilters.addAll(listOf(*drillDownFilters))
   }
 
+  /**
+   * @param drillDownFilters The option that determines the drill down filters for the `DateTime`
+   * hierarchy.
+   */
   public fun drillDownFilters(drillDownFilters: Collection<Any>) {
     _drillDownFilters.addAll(drillDownFilters)
   }
 
+  /**
+   * @param drillDownFilters The option that determines the drill down filters for the `DateTime`
+   * hierarchy.
+   */
   public fun drillDownFilters(drillDownFilters: IResolvable) {
     cdkBuilder.drillDownFilters(drillDownFilters)
   }
 
+  /**
+   * @param hierarchyId The hierarchy ID of the `DateTime` hierarchy. 
+   */
   public fun hierarchyId(hierarchyId: String) {
     cdkBuilder.hierarchyId(hierarchyId)
   }

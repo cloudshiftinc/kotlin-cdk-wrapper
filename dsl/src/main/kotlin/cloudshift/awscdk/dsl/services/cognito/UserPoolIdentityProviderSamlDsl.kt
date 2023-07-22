@@ -24,36 +24,98 @@ public class UserPoolIdentityProviderSamlDsl(
 
   private val _identifiers: MutableList<String> = mutableListOf()
 
-  public fun attributeMapping(block: AttributeMappingDsl.() -> Unit = {}) {
+  /**
+   * Mapping attributes from the identity provider to standard and custom attributes of the user
+   * pool.
+   *
+   * Default: - no attribute mapping
+   *
+   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+   * attributes of the user pool. 
+   */
+  public fun attributeMapping(attributeMapping: AttributeMappingDsl.() -> Unit = {}) {
     val builder = AttributeMappingDsl()
-    builder.apply(block)
+    builder.apply(attributeMapping)
     cdkBuilder.attributeMapping(builder.build())
   }
 
+  /**
+   * Mapping attributes from the identity provider to standard and custom attributes of the user
+   * pool.
+   *
+   * Default: - no attribute mapping
+   *
+   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+   * attributes of the user pool. 
+   */
   public fun attributeMapping(attributeMapping: AttributeMapping) {
     cdkBuilder.attributeMapping(attributeMapping)
   }
 
+  /**
+   * Identifiers.
+   *
+   * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
+   *
+   * Default: - no identifiers used
+   *
+   * @param identifiers Identifiers. 
+   */
   public fun identifiers(vararg identifiers: String) {
     _identifiers.addAll(listOf(*identifiers))
   }
 
+  /**
+   * Identifiers.
+   *
+   * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
+   *
+   * Default: - no identifiers used
+   *
+   * @param identifiers Identifiers. 
+   */
   public fun identifiers(identifiers: Collection<String>) {
     _identifiers.addAll(identifiers)
   }
 
+  /**
+   * Whether to enable the "Sign-out flow" feature.
+   *
+   * Default: - false
+   *
+   * @param idpSignout Whether to enable the "Sign-out flow" feature. 
+   */
   public fun idpSignout(idpSignout: Boolean) {
     cdkBuilder.idpSignout(idpSignout)
   }
 
+  /**
+   * The SAML metadata.
+   *
+   * @param metadata The SAML metadata. 
+   */
   public fun metadata(metadata: UserPoolIdentityProviderSamlMetadata) {
     cdkBuilder.metadata(metadata)
   }
 
+  /**
+   * The name of the provider.
+   *
+   * Must be between 3 and 32 characters.
+   *
+   * Default: - the unique ID of the construct
+   *
+   * @param name The name of the provider. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The user pool to which this construct provides identities.
+   *
+   * @param userPool The user pool to which this construct provides identities. 
+   */
   public fun userPool(userPool: IUserPool) {
     cdkBuilder.userPool(userPool)
   }

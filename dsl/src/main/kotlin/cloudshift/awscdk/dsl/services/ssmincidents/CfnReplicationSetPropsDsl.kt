@@ -21,30 +21,55 @@ public class CfnReplicationSetPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param deletionProtected Determines if the replication set deletion protection is enabled or
+   * not.
+   * If deletion protection is enabled, you can't delete the last Region in the replication set.
+   */
   public fun deletionProtected(deletionProtected: Boolean) {
     cdkBuilder.deletionProtected(deletionProtected)
   }
 
+  /**
+   * @param deletionProtected Determines if the replication set deletion protection is enabled or
+   * not.
+   * If deletion protection is enabled, you can't delete the last Region in the replication set.
+   */
   public fun deletionProtected(deletionProtected: IResolvable) {
     cdkBuilder.deletionProtected(deletionProtected)
   }
 
+  /**
+   * @param regions Specifies the Regions of the replication set. 
+   */
   public fun regions(vararg regions: Any) {
     _regions.addAll(listOf(*regions))
   }
 
+  /**
+   * @param regions Specifies the Regions of the replication set. 
+   */
   public fun regions(regions: Collection<Any>) {
     _regions.addAll(regions)
   }
 
+  /**
+   * @param regions Specifies the Regions of the replication set. 
+   */
   public fun regions(regions: IResolvable) {
     cdkBuilder.regions(regions)
   }
 
+  /**
+   * @param tags A list of tags to add to the replication set.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of tags to add to the replication set.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

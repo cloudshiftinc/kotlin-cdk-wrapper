@@ -16,26 +16,55 @@ public class CfnProjectPlacementTemplatePropertyDsl {
   private val cdkBuilder: CfnProject.PlacementTemplateProperty.Builder =
       CfnProject.PlacementTemplateProperty.builder()
 
-  public fun defaultAttributes(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param defaultAttributes The default attributes (key-value pairs) to be applied to all
+   * placements using this template.
+   */
+  public fun defaultAttributes(defaultAttributes: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(defaultAttributes)
     cdkBuilder.defaultAttributes(builder.map)
   }
 
+  /**
+   * @param defaultAttributes The default attributes (key-value pairs) to be applied to all
+   * placements using this template.
+   */
   public fun defaultAttributes(defaultAttributes: Any) {
     cdkBuilder.defaultAttributes(defaultAttributes)
   }
 
-  public fun deviceTemplates(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param deviceTemplates An object specifying the
+   * [DeviceTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_DeviceTemplate.html)
+   * for all placements using this (
+   * [PlacementTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_PlacementTemplate.html)
+   * ) template.
+   */
+  public fun deviceTemplates(deviceTemplates: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(deviceTemplates)
     cdkBuilder.deviceTemplates(builder.map)
   }
 
+  /**
+   * @param deviceTemplates An object specifying the
+   * [DeviceTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_DeviceTemplate.html)
+   * for all placements using this (
+   * [PlacementTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_PlacementTemplate.html)
+   * ) template.
+   */
   public fun deviceTemplates(deviceTemplates: Map<String, Any>) {
     cdkBuilder.deviceTemplates(deviceTemplates)
   }
 
+  /**
+   * @param deviceTemplates An object specifying the
+   * [DeviceTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_DeviceTemplate.html)
+   * for all placements using this (
+   * [PlacementTemplate](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_PlacementTemplate.html)
+   * ) template.
+   */
   public fun deviceTemplates(deviceTemplates: IResolvable) {
     cdkBuilder.deviceTemplates(deviceTemplates)
   }

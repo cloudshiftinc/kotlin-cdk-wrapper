@@ -14,20 +14,32 @@ public class CfnDatastoreFileFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnDatastore.FileFormatConfigurationProperty.Builder =
       CfnDatastore.FileFormatConfigurationProperty.builder()
 
-  public fun jsonConfiguration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param jsonConfiguration Contains the configuration information of the JSON format.
+   */
+  public fun jsonConfiguration(jsonConfiguration: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(jsonConfiguration)
     cdkBuilder.jsonConfiguration(builder.map)
   }
 
+  /**
+   * @param jsonConfiguration Contains the configuration information of the JSON format.
+   */
   public fun jsonConfiguration(jsonConfiguration: Any) {
     cdkBuilder.jsonConfiguration(jsonConfiguration)
   }
 
+  /**
+   * @param parquetConfiguration Contains the configuration information of the Parquet format.
+   */
   public fun parquetConfiguration(parquetConfiguration: IResolvable) {
     cdkBuilder.parquetConfiguration(parquetConfiguration)
   }
 
+  /**
+   * @param parquetConfiguration Contains the configuration information of the Parquet format.
+   */
   public fun parquetConfiguration(parquetConfiguration: CfnDatastore.ParquetConfigurationProperty) {
     cdkBuilder.parquetConfiguration(parquetConfiguration)
   }

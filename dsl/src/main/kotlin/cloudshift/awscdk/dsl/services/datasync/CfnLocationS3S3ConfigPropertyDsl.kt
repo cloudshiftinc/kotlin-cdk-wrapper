@@ -11,6 +11,9 @@ public class CfnLocationS3S3ConfigPropertyDsl {
   private val cdkBuilder: CfnLocationS3.S3ConfigProperty.Builder =
       CfnLocationS3.S3ConfigProperty.builder()
 
+  /**
+   * @param bucketAccessRoleArn The ARN of the IAM role for accessing the S3 bucket. 
+   */
   public fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
     cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
   }

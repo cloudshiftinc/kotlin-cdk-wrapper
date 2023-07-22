@@ -12,22 +12,34 @@ import software.amazon.awscdk.cloudassembly.schema.DestroyCommand
 public class CdkCommandsDsl {
   private val cdkBuilder: CdkCommands.Builder = CdkCommands.builder()
 
-  public fun deploy(block: DeployCommandDsl.() -> Unit = {}) {
+  /**
+   * @param deploy Options to for the cdk deploy command.
+   */
+  public fun deploy(deploy: DeployCommandDsl.() -> Unit = {}) {
     val builder = DeployCommandDsl()
-    builder.apply(block)
+    builder.apply(deploy)
     cdkBuilder.deploy(builder.build())
   }
 
+  /**
+   * @param deploy Options to for the cdk deploy command.
+   */
   public fun deploy(deploy: DeployCommand) {
     cdkBuilder.deploy(deploy)
   }
 
-  public fun destroy(block: DestroyCommandDsl.() -> Unit = {}) {
+  /**
+   * @param destroy Options to for the cdk destroy command.
+   */
+  public fun destroy(destroy: DestroyCommandDsl.() -> Unit = {}) {
     val builder = DestroyCommandDsl()
-    builder.apply(block)
+    builder.apply(destroy)
     cdkBuilder.destroy(builder.build())
   }
 
+  /**
+   * @param destroy Options to for the cdk destroy command.
+   */
   public fun destroy(destroy: DestroyCommand) {
     cdkBuilder.destroy(destroy)
   }

@@ -17,18 +17,30 @@ public class CfnAnalysisDecimalParameterPropertyDsl {
 
   private val _values: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param name A display name for the decimal parameter. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param values The values for the decimal parameter. 
+   */
   public fun values(vararg values: Number) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values for the decimal parameter. 
+   */
   public fun values(values: Collection<Number>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The values for the decimal parameter. 
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

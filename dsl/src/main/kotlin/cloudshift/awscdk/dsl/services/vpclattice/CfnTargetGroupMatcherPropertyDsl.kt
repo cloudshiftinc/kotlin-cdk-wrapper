@@ -11,6 +11,9 @@ public class CfnTargetGroupMatcherPropertyDsl {
   private val cdkBuilder: CfnTargetGroup.MatcherProperty.Builder =
       CfnTargetGroup.MatcherProperty.builder()
 
+  /**
+   * @param httpCode The HTTP code to use when checking for a successful response from a target. 
+   */
   public fun httpCode(httpCode: String) {
     cdkBuilder.httpCode(httpCode)
   }

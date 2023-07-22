@@ -16,26 +16,46 @@ public class CfnVpcEndpointPropsDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param name The name of the endpoint. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param securityGroupIds The unique identifiers of the security groups that define the ports,
+   * protocols, and sources for inbound traffic that you are authorizing into your endpoint.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The unique identifiers of the security groups that define the ports,
+   * protocols, and sources for inbound traffic that you are authorizing into your endpoint.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param vpcId The ID of the VPC from which you access OpenSearch Serverless. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

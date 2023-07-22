@@ -12,14 +12,25 @@ import software.amazon.awscdk.services.lambda.IFunction
 public class LambdaAuthorizerConfigDsl {
   private val cdkBuilder: LambdaAuthorizerConfig.Builder = LambdaAuthorizerConfig.builder()
 
+  /**
+   * @param handler The authorizer lambda function. 
+   */
   public fun handler(handler: IFunction) {
     cdkBuilder.handler(handler)
   }
 
+  /**
+   * @param resultsCacheTtl How long the results are cached.
+   * Disable caching by setting this to 0.
+   */
   public fun resultsCacheTtl(resultsCacheTtl: Duration) {
     cdkBuilder.resultsCacheTtl(resultsCacheTtl)
   }
 
+  /**
+   * @param validationRegex A regular expression for validation of tokens before the Lambda function
+   * is called.
+   */
   public fun validationRegex(validationRegex: String) {
     cdkBuilder.validationRegex(validationRegex)
   }

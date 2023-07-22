@@ -16,14 +16,26 @@ public class CfnLoggingConfigurationLoggingConfigurationPropertyDsl {
 
   private val _logDestinationConfigs: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param logDestinationConfigs Defines the logging destinations for the logs for a firewall. 
+   * Network Firewall generates logs for stateful rule groups.
+   */
   public fun logDestinationConfigs(vararg logDestinationConfigs: Any) {
     _logDestinationConfigs.addAll(listOf(*logDestinationConfigs))
   }
 
+  /**
+   * @param logDestinationConfigs Defines the logging destinations for the logs for a firewall. 
+   * Network Firewall generates logs for stateful rule groups.
+   */
   public fun logDestinationConfigs(logDestinationConfigs: Collection<Any>) {
     _logDestinationConfigs.addAll(logDestinationConfigs)
   }
 
+  /**
+   * @param logDestinationConfigs Defines the logging destinations for the logs for a firewall. 
+   * Network Firewall generates logs for stateful rule groups.
+   */
   public fun logDestinationConfigs(logDestinationConfigs: IResolvable) {
     cdkBuilder.logDestinationConfigs(logDestinationConfigs)
   }

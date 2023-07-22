@@ -11,6 +11,9 @@ public class CfnBucketAccelerateConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.AccelerateConfigurationProperty.Builder =
       CfnBucket.AccelerateConfigurationProperty.builder()
 
+  /**
+   * @param accelerationStatus Specifies the transfer acceleration status of the bucket. 
+   */
   public fun accelerationStatus(accelerationStatus: String) {
     cdkBuilder.accelerationStatus(accelerationStatus)
   }

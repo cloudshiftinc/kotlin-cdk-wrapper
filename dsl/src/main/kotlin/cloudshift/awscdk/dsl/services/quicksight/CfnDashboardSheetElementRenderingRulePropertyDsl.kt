@@ -12,15 +12,24 @@ public class CfnDashboardSheetElementRenderingRulePropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetElementRenderingRuleProperty.Builder =
       CfnDashboard.SheetElementRenderingRuleProperty.builder()
 
+  /**
+   * @param configurationOverrides The override configuration of the rendering rules of a sheet. 
+   */
   public fun configurationOverrides(configurationOverrides: IResolvable) {
     cdkBuilder.configurationOverrides(configurationOverrides)
   }
 
+  /**
+   * @param configurationOverrides The override configuration of the rendering rules of a sheet. 
+   */
   public
       fun configurationOverrides(configurationOverrides: CfnDashboard.SheetElementConfigurationOverridesProperty) {
     cdkBuilder.configurationOverrides(configurationOverrides)
   }
 
+  /**
+   * @param expression The expression of the rendering rules of a sheet. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }

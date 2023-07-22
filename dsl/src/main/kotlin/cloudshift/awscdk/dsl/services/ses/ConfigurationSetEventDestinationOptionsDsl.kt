@@ -18,22 +18,37 @@ public class ConfigurationSetEventDestinationOptionsDsl {
 
   private val _events: MutableList<EmailSendingEvent> = mutableListOf()
 
+  /**
+   * @param configurationSetEventDestinationName A name for the configuration set event destination.
+   */
   public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
     cdkBuilder.configurationSetEventDestinationName(configurationSetEventDestinationName)
   }
 
+  /**
+   * @param destination The event destination. 
+   */
   public fun destination(destination: EventDestination) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param enabled Whether Amazon SES publishes events to this destination.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param events The type of email sending events to publish to the event destination.
+   */
   public fun events(vararg events: EmailSendingEvent) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * @param events The type of email sending events to publish to the event destination.
+   */
   public fun events(events: Collection<EmailSendingEvent>) {
     _events.addAll(events)
   }

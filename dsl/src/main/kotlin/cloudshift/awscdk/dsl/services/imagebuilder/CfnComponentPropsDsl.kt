@@ -15,46 +15,94 @@ public class CfnComponentPropsDsl {
 
   private val _supportedOsVersions: MutableList<String> = mutableListOf()
 
+  /**
+   * @param changeDescription The change description of the component.
+   * Describes what change has been made in this version, or what makes this version different from
+   * other versions of this component.
+   */
   public fun changeDescription(changeDescription: String) {
     cdkBuilder.changeDescription(changeDescription)
   }
 
+  /**
+   * @param data Component `data` contains inline YAML document content for the component.
+   * Alternatively, you can specify the `uri` of a YAML document file stored in Amazon S3. However,
+   * you cannot specify both properties.
+   */
   public fun `data`(`data`: String) {
     cdkBuilder.`data`(`data`)
   }
 
+  /**
+   * @param description Describes the contents of the component.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param kmsKeyId The ID of the KMS key that is used to encrypt this component.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param name The name of the component. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param platform The operating system platform of the component. 
+   */
   public fun platform(platform: String) {
     cdkBuilder.platform(platform)
   }
 
+  /**
+   * @param supportedOsVersions The operating system (OS) version supported by the component.
+   * If the OS information is available, a prefix match is performed against the base image OS
+   * version during image recipe creation.
+   */
   public fun supportedOsVersions(vararg supportedOsVersions: String) {
     _supportedOsVersions.addAll(listOf(*supportedOsVersions))
   }
 
+  /**
+   * @param supportedOsVersions The operating system (OS) version supported by the component.
+   * If the OS information is available, a prefix match is performed against the base image OS
+   * version during image recipe creation.
+   */
   public fun supportedOsVersions(supportedOsVersions: Collection<String>) {
     _supportedOsVersions.addAll(supportedOsVersions)
   }
 
+  /**
+   * @param tags The tags that apply to the component.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * @param uri The `uri` of a YAML component document file.
+   * This must be an S3 URL ( `s3://bucket/key` ), and the requester must have permission to access
+   * the S3 bucket it points to. If you use Amazon S3, you can specify component content up to your
+   * service quota.
+   *
+   * Alternatively, you can specify the YAML document inline, using the component `data` property.
+   * You cannot specify both properties.
+   */
   public fun uri(uri: String) {
     cdkBuilder.uri(uri)
   }
 
+  /**
+   * @param version The component version. 
+   * For example, `1.0.0` .
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

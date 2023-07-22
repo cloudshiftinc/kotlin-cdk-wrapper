@@ -21,18 +21,44 @@ public class CfnRegistryDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A description of the registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-description)
+   * @param description A description of the registry. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-name)
+   * @param name The name of the registry. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * AWS tags that contain a key value pair and may be searched by console, command line, or API.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-tags)
+   * @param tags AWS tags that contain a key value pair and may be searched by console, command
+   * line, or API. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * AWS tags that contain a key value pair and may be searched by console, command line, or API.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-tags)
+   * @param tags AWS tags that contain a key value pair and may be searched by console, command
+   * line, or API. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -13,16 +13,35 @@ public class AppMeshProxyConfigurationDsl {
   private val cdkBuilder: AppMeshProxyConfiguration.Builder =
       AppMeshProxyConfiguration.Builder.create()
 
+  /**
+   * The name of the container that will serve as the App Mesh proxy.
+   *
+   * @param containerName The name of the container that will serve as the App Mesh proxy. 
+   */
   public fun containerName(containerName: String) {
     cdkBuilder.containerName(containerName)
   }
 
-  public fun properties(block: AppMeshProxyConfigurationPropsDsl.() -> Unit = {}) {
+  /**
+   * The set of network configuration parameters to provide the Container Network Interface (CNI)
+   * plugin.
+   *
+   * @param properties The set of network configuration parameters to provide the Container Network
+   * Interface (CNI) plugin. 
+   */
+  public fun properties(properties: AppMeshProxyConfigurationPropsDsl.() -> Unit = {}) {
     val builder = AppMeshProxyConfigurationPropsDsl()
-    builder.apply(block)
+    builder.apply(properties)
     cdkBuilder.properties(builder.build())
   }
 
+  /**
+   * The set of network configuration parameters to provide the Container Network Interface (CNI)
+   * plugin.
+   *
+   * @param properties The set of network configuration parameters to provide the Container Network
+   * Interface (CNI) plugin. 
+   */
   public fun properties(properties: AppMeshProxyConfigurationProps) {
     cdkBuilder.properties(properties)
   }

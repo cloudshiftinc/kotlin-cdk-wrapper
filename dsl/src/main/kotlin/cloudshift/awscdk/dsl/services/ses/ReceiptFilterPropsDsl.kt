@@ -11,14 +11,23 @@ import software.amazon.awscdk.services.ses.ReceiptFilterProps
 public class ReceiptFilterPropsDsl {
   private val cdkBuilder: ReceiptFilterProps.Builder = ReceiptFilterProps.builder()
 
+  /**
+   * @param ip The ip address or range to filter.
+   */
   public fun ip(ip: String) {
     cdkBuilder.ip(ip)
   }
 
+  /**
+   * @param policy The policy for the filter.
+   */
   public fun policy(policy: ReceiptFilterPolicy) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * @param receiptFilterName The name for the receipt filter.
+   */
   public fun receiptFilterName(receiptFilterName: String) {
     cdkBuilder.receiptFilterName(receiptFilterName)
   }

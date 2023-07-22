@@ -15,14 +15,34 @@ public class CfnApplicationDsl(
 ) {
   private val cdkBuilder: CfnApplication.Builder = CfnApplication.Builder.create(scope, id)
 
+  /**
+   * The description of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description)
+   * @param description The description of the application. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the application.
+   *
+   * The name must be unique in the region in which you are creating the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name)
+   * @param name The name of the application. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Key-value pairs you can use to associate with the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags)
+   * @param tags Key-value pairs you can use to associate with the application. 
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }

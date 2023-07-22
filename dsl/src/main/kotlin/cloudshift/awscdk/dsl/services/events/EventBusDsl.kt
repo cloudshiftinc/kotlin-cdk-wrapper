@@ -14,10 +14,28 @@ public class EventBusDsl(
 ) {
   private val cdkBuilder: EventBus.Builder = EventBus.Builder.create(scope, id)
 
+  /**
+   * The name of the event bus you are creating Note: If 'eventSourceName' is passed in, you cannot
+   * set this.
+   *
+   * Default: - automatically generated name
+   *
+   * @param eventBusName The name of the event bus you are creating Note: If 'eventSourceName' is
+   * passed in, you cannot set this. 
+   */
   public fun eventBusName(eventBusName: String) {
     cdkBuilder.eventBusName(eventBusName)
   }
 
+  /**
+   * The partner event source to associate with this event bus resource Note: If 'eventBusName' is
+   * passed in, you cannot set this.
+   *
+   * Default: - no partner event source
+   *
+   * @param eventSourceName The partner event source to associate with this event bus resource Note:
+   * If 'eventBusName' is passed in, you cannot set this. 
+   */
   public fun eventSourceName(eventSourceName: String) {
     cdkBuilder.eventSourceName(eventSourceName)
   }

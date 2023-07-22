@@ -11,10 +11,16 @@ public class CfnEndpointConfigClarifyTextConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ClarifyTextConfigProperty.Builder =
       CfnEndpointConfig.ClarifyTextConfigProperty.builder()
 
+  /**
+   * @param granularity the value to be set. 
+   */
   public fun granularity(granularity: String) {
     cdkBuilder.granularity(granularity)
   }
 
+  /**
+   * @param language the value to be set. 
+   */
   public fun language(language: String) {
     cdkBuilder.language(language)
   }

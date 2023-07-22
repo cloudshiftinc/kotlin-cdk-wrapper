@@ -12,14 +12,25 @@ public class CfnTemplateTableFieldCustomTextContentPropertyDsl {
   private val cdkBuilder: CfnTemplate.TableFieldCustomTextContentProperty.Builder =
       CfnTemplate.TableFieldCustomTextContentProperty.builder()
 
+  /**
+   * @param fontConfiguration The font configuration of the custom text content for the table URL
+   * link content. 
+   */
   public fun fontConfiguration(fontConfiguration: IResolvable) {
     cdkBuilder.fontConfiguration(fontConfiguration)
   }
 
+  /**
+   * @param fontConfiguration The font configuration of the custom text content for the table URL
+   * link content. 
+   */
   public fun fontConfiguration(fontConfiguration: CfnTemplate.FontConfigurationProperty) {
     cdkBuilder.fontConfiguration(fontConfiguration)
   }
 
+  /**
+   * @param value The string value of the custom text content for the table URL link content.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

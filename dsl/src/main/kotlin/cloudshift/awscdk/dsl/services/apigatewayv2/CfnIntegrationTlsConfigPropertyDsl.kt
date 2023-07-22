@@ -11,6 +11,12 @@ public class CfnIntegrationTlsConfigPropertyDsl {
   private val cdkBuilder: CfnIntegration.TlsConfigProperty.Builder =
       CfnIntegration.TlsConfigProperty.builder()
 
+  /**
+   * @param serverNameToVerify If you specify a server name, API Gateway uses it to verify the
+   * hostname on the integration's certificate.
+   * The server name is also included in the TLS handshake to support Server Name Indication (SNI)
+   * or virtual hosting.
+   */
   public fun serverNameToVerify(serverNameToVerify: String) {
     cdkBuilder.serverNameToVerify(serverNameToVerify)
   }

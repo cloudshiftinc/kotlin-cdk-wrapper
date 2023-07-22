@@ -17,18 +17,36 @@ public class CfnFargateProfileSelectorPropertyDsl {
 
   private val _labels: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param labels The Kubernetes labels that the selector should match.
+   * A pod must contain all of the labels that are specified in the selector for it to be considered
+   * a match.
+   */
   public fun labels(vararg labels: Any) {
     _labels.addAll(listOf(*labels))
   }
 
+  /**
+   * @param labels The Kubernetes labels that the selector should match.
+   * A pod must contain all of the labels that are specified in the selector for it to be considered
+   * a match.
+   */
   public fun labels(labels: Collection<Any>) {
     _labels.addAll(labels)
   }
 
+  /**
+   * @param labels The Kubernetes labels that the selector should match.
+   * A pod must contain all of the labels that are specified in the selector for it to be considered
+   * a match.
+   */
   public fun labels(labels: IResolvable) {
     cdkBuilder.labels(labels)
   }
 
+  /**
+   * @param namespace The Kubernetes namespace that the selector should match. 
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }

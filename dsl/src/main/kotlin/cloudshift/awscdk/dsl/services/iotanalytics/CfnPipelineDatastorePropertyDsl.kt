@@ -11,10 +11,16 @@ public class CfnPipelineDatastorePropertyDsl {
   private val cdkBuilder: CfnPipeline.DatastoreProperty.Builder =
       CfnPipeline.DatastoreProperty.builder()
 
+  /**
+   * @param datastoreName The name of the data store where processed messages are stored. 
+   */
   public fun datastoreName(datastoreName: String) {
     cdkBuilder.datastoreName(datastoreName)
   }
 
+  /**
+   * @param name The name of the datastore activity. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

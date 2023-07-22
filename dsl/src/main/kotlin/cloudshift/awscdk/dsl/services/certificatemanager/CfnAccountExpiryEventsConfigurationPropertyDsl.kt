@@ -11,6 +11,12 @@ public class CfnAccountExpiryEventsConfigurationPropertyDsl {
   private val cdkBuilder: CfnAccount.ExpiryEventsConfigurationProperty.Builder =
       CfnAccount.ExpiryEventsConfigurationProperty.builder()
 
+  /**
+   * @param daysBeforeExpiry This option specifies the number of days prior to certificate
+   * expiration when ACM starts generating `EventBridge` events.
+   * ACM sends one event per day per certificate until the certificate expires. By default, accounts
+   * receive events starting 45 days before certificate expiration.
+   */
   public fun daysBeforeExpiry(daysBeforeExpiry: Number) {
     cdkBuilder.daysBeforeExpiry(daysBeforeExpiry)
   }

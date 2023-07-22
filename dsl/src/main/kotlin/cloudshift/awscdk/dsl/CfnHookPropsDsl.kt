@@ -14,16 +14,25 @@ import software.amazon.awscdk.CfnHookProps
 public class CfnHookPropsDsl {
   private val cdkBuilder: CfnHookProps.Builder = CfnHookProps.builder()
 
-  public fun properties(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param properties The properties of the hook.
+   */
+  public fun properties(properties: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(properties)
     cdkBuilder.properties(builder.map)
   }
 
+  /**
+   * @param properties The properties of the hook.
+   */
   public fun properties(properties: Map<String, Any>) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param type The type of the hook (for example, "AWS::CodeDeploy::BlueGreen"). 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

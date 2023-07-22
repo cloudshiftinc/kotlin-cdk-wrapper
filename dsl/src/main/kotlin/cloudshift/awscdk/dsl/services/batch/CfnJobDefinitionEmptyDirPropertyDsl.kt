@@ -11,10 +11,16 @@ public class CfnJobDefinitionEmptyDirPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EmptyDirProperty.Builder =
       CfnJobDefinition.EmptyDirProperty.builder()
 
+  /**
+   * @param medium the value to be set.
+   */
   public fun medium(medium: String) {
     cdkBuilder.medium(medium)
   }
 
+  /**
+   * @param sizeLimit the value to be set.
+   */
   public fun sizeLimit(sizeLimit: String) {
     cdkBuilder.sizeLimit(sizeLimit)
   }

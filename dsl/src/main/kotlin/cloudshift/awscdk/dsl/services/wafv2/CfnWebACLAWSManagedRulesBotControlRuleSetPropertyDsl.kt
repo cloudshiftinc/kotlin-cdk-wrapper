@@ -11,6 +11,12 @@ public class CfnWebACLAWSManagedRulesBotControlRuleSetPropertyDsl {
   private val cdkBuilder: CfnWebACL.AWSManagedRulesBotControlRuleSetProperty.Builder =
       CfnWebACL.AWSManagedRulesBotControlRuleSetProperty.builder()
 
+  /**
+   * @param inspectionLevel The inspection level to use for the Bot Control rule group. 
+   * The common level is the least expensive. The targeted level includes all common level rules and
+   * adds rules with more advanced inspection criteria. For details, see [AWS WAF Bot Control rule
+   * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html) .
+   */
   public fun inspectionLevel(inspectionLevel: String) {
     cdkBuilder.inspectionLevel(inspectionLevel)
   }

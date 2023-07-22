@@ -11,10 +11,17 @@ public class CfnFeatureEntityOverridePropertyDsl {
   private val cdkBuilder: CfnFeature.EntityOverrideProperty.Builder =
       CfnFeature.EntityOverrideProperty.builder()
 
+  /**
+   * @param entityId The entity ID to be served the variation specified in `Variation` .
+   */
   public fun entityId(entityId: String) {
     cdkBuilder.entityId(entityId)
   }
 
+  /**
+   * @param variation The name of the variation to serve to the user session that matches the
+   * `EntityId` .
+   */
   public fun variation(variation: String) {
     cdkBuilder.variation(variation)
   }

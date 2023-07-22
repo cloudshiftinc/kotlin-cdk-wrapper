@@ -11,10 +11,16 @@ public class CfnDeliveryStreamKinesisStreamSourceConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.Builder =
       CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.builder()
 
+  /**
+   * @param kinesisStreamArn The ARN of the source Kinesis data stream. 
+   */
   public fun kinesisStreamArn(kinesisStreamArn: String) {
     cdkBuilder.kinesisStreamArn(kinesisStreamArn)
   }
 
+  /**
+   * @param roleArn The ARN of the role that provides access to the source Kinesis data stream. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

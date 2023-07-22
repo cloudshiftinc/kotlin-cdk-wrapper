@@ -20,22 +20,41 @@ public class CfnTrafficMirrorFilterPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of the Traffic Mirror filter.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param networkServices The network service traffic that is associated with the Traffic Mirror
+   * filter.
+   * Valid values are `amazon-dns` .
+   */
   public fun networkServices(vararg networkServices: String) {
     _networkServices.addAll(listOf(*networkServices))
   }
 
+  /**
+   * @param networkServices The network service traffic that is associated with the Traffic Mirror
+   * filter.
+   * Valid values are `amazon-dns` .
+   */
   public fun networkServices(networkServices: Collection<String>) {
     _networkServices.addAll(networkServices)
   }
 
+  /**
+   * @param tags The tags to assign to a Traffic Mirror filter.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to assign to a Traffic Mirror filter.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

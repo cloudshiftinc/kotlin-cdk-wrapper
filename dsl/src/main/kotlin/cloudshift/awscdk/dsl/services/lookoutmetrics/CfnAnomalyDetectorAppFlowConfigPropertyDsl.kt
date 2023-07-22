@@ -11,10 +11,17 @@ public class CfnAnomalyDetectorAppFlowConfigPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.AppFlowConfigProperty.Builder =
       CfnAnomalyDetector.AppFlowConfigProperty.builder()
 
+  /**
+   * @param flowName name of the flow. 
+   */
   public fun flowName(flowName: String) {
     cdkBuilder.flowName(flowName)
   }
 
+  /**
+   * @param roleArn An IAM role that gives Amazon Lookout for Metrics permission to access the flow.
+   * 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

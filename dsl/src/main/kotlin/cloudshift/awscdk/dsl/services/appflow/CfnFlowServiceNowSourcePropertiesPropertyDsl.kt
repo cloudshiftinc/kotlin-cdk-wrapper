@@ -11,6 +11,9 @@ public class CfnFlowServiceNowSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.ServiceNowSourcePropertiesProperty.Builder =
       CfnFlow.ServiceNowSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the ServiceNow flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

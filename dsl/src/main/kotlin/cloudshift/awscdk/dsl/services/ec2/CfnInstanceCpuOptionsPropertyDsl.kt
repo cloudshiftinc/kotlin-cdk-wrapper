@@ -11,10 +11,16 @@ public class CfnInstanceCpuOptionsPropertyDsl {
   private val cdkBuilder: CfnInstance.CpuOptionsProperty.Builder =
       CfnInstance.CpuOptionsProperty.builder()
 
+  /**
+   * @param coreCount The number of CPU cores for the instance.
+   */
   public fun coreCount(coreCount: Number) {
     cdkBuilder.coreCount(coreCount)
   }
 
+  /**
+   * @param threadsPerCore The number of threads per CPU core.
+   */
   public fun threadsPerCore(threadsPerCore: Number) {
     cdkBuilder.threadsPerCore(threadsPerCore)
   }

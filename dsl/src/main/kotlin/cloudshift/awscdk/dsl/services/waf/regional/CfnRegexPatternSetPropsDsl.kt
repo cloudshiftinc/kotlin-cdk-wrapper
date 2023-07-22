@@ -14,14 +14,26 @@ public class CfnRegexPatternSetPropsDsl {
 
   private val _regexPatternStrings: MutableList<String> = mutableListOf()
 
+  /**
+   * @param name A friendly name or description of the `RegexPatternSet` . 
+   * You can't change `Name` after you create a `RegexPatternSet` .
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param regexPatternStrings Specifies the regular expression (regex) patterns that you want AWS
+   * WAF to search for, such as `B[a&#64;]dB[o0]t` . 
+   */
   public fun regexPatternStrings(vararg regexPatternStrings: String) {
     _regexPatternStrings.addAll(listOf(*regexPatternStrings))
   }
 
+  /**
+   * @param regexPatternStrings Specifies the regular expression (regex) patterns that you want AWS
+   * WAF to search for, such as `B[a&#64;]dB[o0]t` . 
+   */
   public fun regexPatternStrings(regexPatternStrings: Collection<String>) {
     _regexPatternStrings.addAll(regexPatternStrings)
   }

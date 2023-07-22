@@ -11,10 +11,18 @@ public class CfnApplicationKinesisFirehoseInputPropertyDsl {
   private val cdkBuilder: CfnApplication.KinesisFirehoseInputProperty.Builder =
       CfnApplication.KinesisFirehoseInputProperty.builder()
 
+  /**
+   * @param resourceArn ARN of the input delivery stream. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }
 
+  /**
+   * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to access the
+   * stream on your behalf. 
+   * You need to make sure that the role has the necessary permissions to access the stream.
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

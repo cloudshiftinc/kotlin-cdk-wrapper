@@ -11,6 +11,11 @@ public class CfnConnectorKafkaClusterClientAuthenticationPropertyDsl {
   private val cdkBuilder: CfnConnector.KafkaClusterClientAuthenticationProperty.Builder =
       CfnConnector.KafkaClusterClientAuthenticationProperty.builder()
 
+  /**
+   * @param authenticationType The type of client authentication used to connect to the Apache Kafka
+   * cluster. 
+   * Value NONE means that no client authentication is used.
+   */
   public fun authenticationType(authenticationType: String) {
     cdkBuilder.authenticationType(authenticationType)
   }

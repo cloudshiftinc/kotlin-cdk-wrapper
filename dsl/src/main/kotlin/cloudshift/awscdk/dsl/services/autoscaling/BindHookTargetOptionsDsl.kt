@@ -11,10 +11,18 @@ import software.amazon.awscdk.services.iam.IRole
 public class BindHookTargetOptionsDsl {
   private val cdkBuilder: BindHookTargetOptions.Builder = BindHookTargetOptions.builder()
 
+  /**
+   * @param lifecycleHook The lifecycle hook to attach to. 
+   * [disable-awslint:ref-via-interface]
+   */
   public fun lifecycleHook(lifecycleHook: LifecycleHook) {
     cdkBuilder.lifecycleHook(lifecycleHook)
   }
 
+  /**
+   * @param role The role to use when attaching to the lifecycle hook.
+   * [disable-awslint:ref-via-interface]
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

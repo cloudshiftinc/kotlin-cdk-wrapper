@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.eks.Cluster
 public class AwsAuthPropsDsl {
   private val cdkBuilder: AwsAuthProps.Builder = AwsAuthProps.builder()
 
+  /**
+   * @param cluster The EKS cluster to apply this configuration to. 
+   * [disable-awslint:ref-via-interface]
+   */
   public fun cluster(cluster: Cluster) {
     cdkBuilder.cluster(cluster)
   }

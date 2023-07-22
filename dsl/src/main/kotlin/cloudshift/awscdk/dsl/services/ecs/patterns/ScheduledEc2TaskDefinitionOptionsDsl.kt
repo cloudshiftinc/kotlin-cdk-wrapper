@@ -11,6 +11,11 @@ public class ScheduledEc2TaskDefinitionOptionsDsl {
   private val cdkBuilder: ScheduledEc2TaskDefinitionOptions.Builder =
       ScheduledEc2TaskDefinitionOptions.builder()
 
+  /**
+   * @param taskDefinition The task definition to use for tasks in the service. One of image or
+   * taskDefinition must be specified. 
+   * [disable-awslint:ref-via-interface]
+   */
   public fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
     cdkBuilder.taskDefinition(taskDefinition)
   }

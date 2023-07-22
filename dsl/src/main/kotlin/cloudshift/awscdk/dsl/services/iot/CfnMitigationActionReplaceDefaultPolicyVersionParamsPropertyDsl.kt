@@ -11,6 +11,10 @@ public class CfnMitigationActionReplaceDefaultPolicyVersionParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty.Builder =
       CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty.builder()
 
+  /**
+   * @param templateName The name of the template to be applied. 
+   * The only supported value is `BLANK_POLICY` .
+   */
   public fun templateName(templateName: String) {
     cdkBuilder.templateName(templateName)
   }

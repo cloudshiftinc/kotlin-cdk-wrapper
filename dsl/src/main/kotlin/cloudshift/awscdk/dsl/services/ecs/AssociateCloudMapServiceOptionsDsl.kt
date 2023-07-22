@@ -13,14 +13,23 @@ public class AssociateCloudMapServiceOptionsDsl {
   private val cdkBuilder: AssociateCloudMapServiceOptions.Builder =
       AssociateCloudMapServiceOptions.builder()
 
+  /**
+   * @param container The container to point to for a SRV record.
+   */
   public fun container(container: ContainerDefinition) {
     cdkBuilder.container(container)
   }
 
+  /**
+   * @param containerPort The port to point to for a SRV record.
+   */
   public fun containerPort(containerPort: Number) {
     cdkBuilder.containerPort(containerPort)
   }
 
+  /**
+   * @param service The cloudmap service to register with. 
+   */
   public fun service(service: IService) {
     cdkBuilder.service(service)
   }

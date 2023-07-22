@@ -16,14 +16,26 @@ public class CfnAliasAliasRoutingConfigurationPropertyDsl {
 
   private val _additionalVersionWeights: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param additionalVersionWeights The second version, and the percentage of traffic that's routed
+   * to it. 
+   */
   public fun additionalVersionWeights(vararg additionalVersionWeights: Any) {
     _additionalVersionWeights.addAll(listOf(*additionalVersionWeights))
   }
 
+  /**
+   * @param additionalVersionWeights The second version, and the percentage of traffic that's routed
+   * to it. 
+   */
   public fun additionalVersionWeights(additionalVersionWeights: Collection<Any>) {
     _additionalVersionWeights.addAll(additionalVersionWeights)
   }
 
+  /**
+   * @param additionalVersionWeights The second version, and the percentage of traffic that's routed
+   * to it. 
+   */
   public fun additionalVersionWeights(additionalVersionWeights: IResolvable) {
     cdkBuilder.additionalVersionWeights(additionalVersionWeights)
   }

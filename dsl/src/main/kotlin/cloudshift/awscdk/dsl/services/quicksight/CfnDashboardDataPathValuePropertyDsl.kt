@@ -11,10 +11,16 @@ public class CfnDashboardDataPathValuePropertyDsl {
   private val cdkBuilder: CfnDashboard.DataPathValueProperty.Builder =
       CfnDashboard.DataPathValueProperty.builder()
 
+  /**
+   * @param fieldId The field ID of the field that needs to be sorted. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param fieldValue The actual value of the field that needs to be sorted. 
+   */
   public fun fieldValue(fieldValue: String) {
     cdkBuilder.fieldValue(fieldValue)
   }

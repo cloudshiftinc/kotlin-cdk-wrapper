@@ -12,14 +12,23 @@ public class CfnSegmentGPSPointPropertyDsl {
   private val cdkBuilder: CfnSegment.GPSPointProperty.Builder =
       CfnSegment.GPSPointProperty.builder()
 
+  /**
+   * @param coordinates The GPS coordinates to measure distance from. 
+   */
   public fun coordinates(coordinates: IResolvable) {
     cdkBuilder.coordinates(coordinates)
   }
 
+  /**
+   * @param coordinates The GPS coordinates to measure distance from. 
+   */
   public fun coordinates(coordinates: CfnSegment.CoordinatesProperty) {
     cdkBuilder.coordinates(coordinates)
   }
 
+  /**
+   * @param rangeInKilometers The range, in kilometers, from the GPS coordinates. 
+   */
   public fun rangeInKilometers(rangeInKilometers: Number) {
     cdkBuilder.rangeInKilometers(rangeInKilometers)
   }

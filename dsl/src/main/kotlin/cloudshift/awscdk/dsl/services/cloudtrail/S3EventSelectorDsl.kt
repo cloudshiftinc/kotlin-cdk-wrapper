@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.s3.IBucket
 public class S3EventSelectorDsl {
   private val cdkBuilder: S3EventSelector.Builder = S3EventSelector.builder()
 
+  /**
+   * @param bucket S3 bucket. 
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param objectPrefix Data events for objects whose key matches this prefix will be logged.
+   */
   public fun objectPrefix(objectPrefix: String) {
     cdkBuilder.objectPrefix(objectPrefix)
   }

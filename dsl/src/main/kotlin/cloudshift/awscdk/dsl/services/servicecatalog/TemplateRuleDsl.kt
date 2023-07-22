@@ -17,18 +17,30 @@ public class TemplateRuleDsl {
 
   private val _assertions: MutableList<TemplateRuleAssertion> = mutableListOf()
 
+  /**
+   * @param assertions A list of assertions that make up the rule. 
+   */
   public fun assertions(assertions: TemplateRuleAssertionDsl.() -> Unit) {
     _assertions.add(TemplateRuleAssertionDsl().apply(assertions).build())
   }
 
+  /**
+   * @param assertions A list of assertions that make up the rule. 
+   */
   public fun assertions(assertions: Collection<TemplateRuleAssertion>) {
     _assertions.addAll(assertions)
   }
 
+  /**
+   * @param condition Specify when to apply rule with a rule-specific intrinsic function.
+   */
   public fun condition(condition: ICfnRuleConditionExpression) {
     cdkBuilder.condition(condition)
   }
 
+  /**
+   * @param ruleName Name of the rule. 
+   */
   public fun ruleName(ruleName: String) {
     cdkBuilder.ruleName(ruleName)
   }

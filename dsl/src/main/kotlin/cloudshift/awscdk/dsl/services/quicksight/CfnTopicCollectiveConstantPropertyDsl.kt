@@ -15,10 +15,16 @@ public class CfnTopicCollectiveConstantPropertyDsl {
 
   private val _valueList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param valueList A list of values for the collective constant.
+   */
   public fun valueList(vararg valueList: String) {
     _valueList.addAll(listOf(*valueList))
   }
 
+  /**
+   * @param valueList A list of values for the collective constant.
+   */
   public fun valueList(valueList: Collection<String>) {
     _valueList.addAll(valueList)
   }

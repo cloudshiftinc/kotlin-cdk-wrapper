@@ -11,10 +11,16 @@ public class CfnAnalysisAnalysisSourceEntityPropertyDsl {
   private val cdkBuilder: CfnAnalysis.AnalysisSourceEntityProperty.Builder =
       CfnAnalysis.AnalysisSourceEntityProperty.builder()
 
+  /**
+   * @param sourceTemplate The source template for the source entity of the analysis.
+   */
   public fun sourceTemplate(sourceTemplate: IResolvable) {
     cdkBuilder.sourceTemplate(sourceTemplate)
   }
 
+  /**
+   * @param sourceTemplate The source template for the source entity of the analysis.
+   */
   public fun sourceTemplate(sourceTemplate: CfnAnalysis.AnalysisSourceTemplateProperty) {
     cdkBuilder.sourceTemplate(sourceTemplate)
   }

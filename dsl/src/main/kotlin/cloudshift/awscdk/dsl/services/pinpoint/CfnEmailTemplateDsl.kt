@@ -17,36 +17,110 @@ public class CfnEmailTemplateDsl(
 ) {
   private val cdkBuilder: CfnEmailTemplate.Builder = CfnEmailTemplate.Builder.create(scope, id)
 
+  /**
+   * A JSON object that specifies the default values to use for message variables in the message
+   * template.
+   *
+   * This object is a set of key-value pairs. Each key defines a message variable in the template.
+   * The corresponding value defines the default value for that variable. When you create a message
+   * that's based on the template, you can override these defaults with message-specific and
+   * address-specific variables and values.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-defaultsubstitutions)
+   * @param defaultSubstitutions A JSON object that specifies the default values to use for message
+   * variables in the message template. 
+   */
   public fun defaultSubstitutions(defaultSubstitutions: String) {
     cdkBuilder.defaultSubstitutions(defaultSubstitutions)
   }
 
+  /**
+   * The message body, in HTML format, to use in email messages that are based on the message
+   * template.
+   *
+   * We recommend using HTML format for email clients that render HTML content. You can include
+   * links, formatted text, and more in an HTML message.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-htmlpart)
+   * @param htmlPart The message body, in HTML format, to use in email messages that are based on
+   * the message template. 
+   */
   public fun htmlPart(htmlPart: String) {
     cdkBuilder.htmlPart(htmlPart)
   }
 
+  /**
+   * The subject line, or title, to use in email messages that are based on the message template.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-subject)
+   * @param subject The subject line, or title, to use in email messages that are based on the
+   * message template. 
+   */
   public fun subject(subject: String) {
     cdkBuilder.subject(subject)
   }
 
-  public fun tags(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
+  public fun tags(tags: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(tags)
     cdkBuilder.tags(builder.map)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Any) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * A custom description of the message template.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-templatedescription)
+   * @param templateDescription A custom description of the message template. 
+   */
   public fun templateDescription(templateDescription: String) {
     cdkBuilder.templateDescription(templateDescription)
   }
 
+  /**
+   * The name of the message template.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-templatename)
+   * @param templateName The name of the message template. 
+   */
   public fun templateName(templateName: String) {
     cdkBuilder.templateName(templateName)
   }
 
+  /**
+   * The message body, in plain text format, to use in email messages that are based on the message
+   * template.
+   *
+   * We recommend using plain text format for email clients that don't render HTML content and
+   * clients that are connected to high-latency networks, such as mobile devices.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-textpart)
+   * @param textPart The message body, in plain text format, to use in email messages that are based
+   * on the message template. 
+   */
   public fun textPart(textPart: String) {
     cdkBuilder.textPart(textPart)
   }

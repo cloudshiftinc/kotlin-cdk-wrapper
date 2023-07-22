@@ -12,18 +12,36 @@ public class CfnDashboardAggregationFunctionPropertyDsl {
   private val cdkBuilder: CfnDashboard.AggregationFunctionProperty.Builder =
       CfnDashboard.AggregationFunctionProperty.builder()
 
+  /**
+   * @param categoricalAggregationFunction Aggregation for categorical values.
+   * * `COUNT` : Aggregate by the total number of values, including duplicates.
+   * * `DISTINCT_COUNT` : Aggregate by the total number of distinct values.
+   */
   public fun categoricalAggregationFunction(categoricalAggregationFunction: String) {
     cdkBuilder.categoricalAggregationFunction(categoricalAggregationFunction)
   }
 
+  /**
+   * @param dateAggregationFunction Aggregation for date values.
+   * * `COUNT` : Aggregate by the total number of values, including duplicates.
+   * * `DISTINCT_COUNT` : Aggregate by the total number of distinct values.
+   * * `MIN` : Select the smallest date value.
+   * * `MAX` : Select the largest date value.
+   */
   public fun dateAggregationFunction(dateAggregationFunction: String) {
     cdkBuilder.dateAggregationFunction(dateAggregationFunction)
   }
 
+  /**
+   * @param numericalAggregationFunction Aggregation for numerical values.
+   */
   public fun numericalAggregationFunction(numericalAggregationFunction: IResolvable) {
     cdkBuilder.numericalAggregationFunction(numericalAggregationFunction)
   }
 
+  /**
+   * @param numericalAggregationFunction Aggregation for numerical values.
+   */
   public
       fun numericalAggregationFunction(numericalAggregationFunction: CfnDashboard.NumericalAggregationFunctionProperty) {
     cdkBuilder.numericalAggregationFunction(numericalAggregationFunction)

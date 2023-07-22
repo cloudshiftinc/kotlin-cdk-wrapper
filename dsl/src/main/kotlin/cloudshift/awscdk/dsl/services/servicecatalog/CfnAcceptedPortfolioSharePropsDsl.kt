@@ -11,10 +11,18 @@ public class CfnAcceptedPortfolioSharePropsDsl {
   private val cdkBuilder: CfnAcceptedPortfolioShareProps.Builder =
       CfnAcceptedPortfolioShareProps.builder()
 
+  /**
+   * @param acceptLanguage The language code.
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   */
   public fun acceptLanguage(acceptLanguage: String) {
     cdkBuilder.acceptLanguage(acceptLanguage)
   }
 
+  /**
+   * @param portfolioId The portfolio identifier. 
+   */
   public fun portfolioId(portfolioId: String) {
     cdkBuilder.portfolioId(portfolioId)
   }

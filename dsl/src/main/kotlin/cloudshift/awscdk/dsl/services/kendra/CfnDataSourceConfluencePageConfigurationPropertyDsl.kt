@@ -16,14 +16,44 @@ public class CfnDataSourceConfluencePageConfigurationPropertyDsl {
 
   private val _pageFieldMappings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param pageFieldMappings Maps attributes or field names of Confluence pages to Amazon Kendra
+   * index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Confluence fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Confluence data
+   * source field names must exist in your Confluence custom metadata.
+   *
+   * If you specify the `PageFieldMappings` parameter, you must specify at least one field mapping.
+   */
   public fun pageFieldMappings(vararg pageFieldMappings: Any) {
     _pageFieldMappings.addAll(listOf(*pageFieldMappings))
   }
 
+  /**
+   * @param pageFieldMappings Maps attributes or field names of Confluence pages to Amazon Kendra
+   * index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Confluence fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Confluence data
+   * source field names must exist in your Confluence custom metadata.
+   *
+   * If you specify the `PageFieldMappings` parameter, you must specify at least one field mapping.
+   */
   public fun pageFieldMappings(pageFieldMappings: Collection<Any>) {
     _pageFieldMappings.addAll(pageFieldMappings)
   }
 
+  /**
+   * @param pageFieldMappings Maps attributes or field names of Confluence pages to Amazon Kendra
+   * index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Confluence fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Confluence data
+   * source field names must exist in your Confluence custom metadata.
+   *
+   * If you specify the `PageFieldMappings` parameter, you must specify at least one field mapping.
+   */
   public fun pageFieldMappings(pageFieldMappings: IResolvable) {
     cdkBuilder.pageFieldMappings(pageFieldMappings)
   }

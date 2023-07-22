@@ -11,10 +11,16 @@ public class CfnTaskTemplateRequiredFieldInfoPropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.RequiredFieldInfoProperty.Builder =
       CfnTaskTemplate.RequiredFieldInfoProperty.builder()
 
+  /**
+   * @param id The unique identifier for the field. 
+   */
   public fun id(id: IResolvable) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param id The unique identifier for the field. 
+   */
   public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
     cdkBuilder.id(id)
   }

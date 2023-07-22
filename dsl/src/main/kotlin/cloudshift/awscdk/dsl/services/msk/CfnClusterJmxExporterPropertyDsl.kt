@@ -12,10 +12,16 @@ public class CfnClusterJmxExporterPropertyDsl {
   private val cdkBuilder: CfnCluster.JmxExporterProperty.Builder =
       CfnCluster.JmxExporterProperty.builder()
 
+  /**
+   * @param enabledInBroker Indicates whether you want to enable or disable the JMX Exporter. 
+   */
   public fun enabledInBroker(enabledInBroker: Boolean) {
     cdkBuilder.enabledInBroker(enabledInBroker)
   }
 
+  /**
+   * @param enabledInBroker Indicates whether you want to enable or disable the JMX Exporter. 
+   */
   public fun enabledInBroker(enabledInBroker: IResolvable) {
     cdkBuilder.enabledInBroker(enabledInBroker)
   }

@@ -11,14 +11,23 @@ public class CfnNetworkInterfacePermissionPropsDsl {
   private val cdkBuilder: CfnNetworkInterfacePermissionProps.Builder =
       CfnNetworkInterfacePermissionProps.builder()
 
+  /**
+   * @param awsAccountId The AWS account ID. 
+   */
   public fun awsAccountId(awsAccountId: String) {
     cdkBuilder.awsAccountId(awsAccountId)
   }
 
+  /**
+   * @param networkInterfaceId The ID of the network interface. 
+   */
   public fun networkInterfaceId(networkInterfaceId: String) {
     cdkBuilder.networkInterfaceId(networkInterfaceId)
   }
 
+  /**
+   * @param permission The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE` . 
+   */
   public fun permission(permission: String) {
     cdkBuilder.permission(permission)
   }

@@ -26,30 +26,78 @@ public class CfnReplicationSetDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Determines if the replication set deletion protection is enabled or not.
+   *
+   * If deletion protection is enabled, you can't delete the last Region in the replication set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-deletionprotected)
+   * @param deletionProtected Determines if the replication set deletion protection is enabled or
+   * not. 
+   */
   public fun deletionProtected(deletionProtected: Boolean) {
     cdkBuilder.deletionProtected(deletionProtected)
   }
 
+  /**
+   * Determines if the replication set deletion protection is enabled or not.
+   *
+   * If deletion protection is enabled, you can't delete the last Region in the replication set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-deletionprotected)
+   * @param deletionProtected Determines if the replication set deletion protection is enabled or
+   * not. 
+   */
   public fun deletionProtected(deletionProtected: IResolvable) {
     cdkBuilder.deletionProtected(deletionProtected)
   }
 
+  /**
+   * Specifies the Regions of the replication set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-regions)
+   * @param regions Specifies the Regions of the replication set. 
+   */
   public fun regions(vararg regions: Any) {
     _regions.addAll(listOf(*regions))
   }
 
+  /**
+   * Specifies the Regions of the replication set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-regions)
+   * @param regions Specifies the Regions of the replication set. 
+   */
   public fun regions(regions: Collection<Any>) {
     _regions.addAll(regions)
   }
 
+  /**
+   * Specifies the Regions of the replication set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-regions)
+   * @param regions Specifies the Regions of the replication set. 
+   */
   public fun regions(regions: IResolvable) {
     cdkBuilder.regions(regions)
   }
 
+  /**
+   * A list of tags to add to the replication set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-tags)
+   * @param tags A list of tags to add to the replication set. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A list of tags to add to the replication set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-tags)
+   * @param tags A list of tags to add to the replication set. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

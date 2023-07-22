@@ -15,14 +15,25 @@ public class CfnUserAuthenticationModePropertyDsl {
 
   private val _passwords: MutableList<String> = mutableListOf()
 
+  /**
+   * @param passwords Passwords used for this user account.
+   * You can create up to two passwords for each user.
+   */
   public fun passwords(vararg passwords: String) {
     _passwords.addAll(listOf(*passwords))
   }
 
+  /**
+   * @param passwords Passwords used for this user account.
+   * You can create up to two passwords for each user.
+   */
   public fun passwords(passwords: Collection<String>) {
     _passwords.addAll(passwords)
   }
 
+  /**
+   * @param type Type of authentication strategy for this user.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

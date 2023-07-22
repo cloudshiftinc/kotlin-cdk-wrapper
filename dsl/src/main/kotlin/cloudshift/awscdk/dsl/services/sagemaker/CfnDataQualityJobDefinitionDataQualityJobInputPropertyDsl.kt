@@ -11,19 +11,31 @@ public class CfnDataQualityJobDefinitionDataQualityJobInputPropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.DataQualityJobInputProperty.Builder =
       CfnDataQualityJobDefinition.DataQualityJobInputProperty.builder()
 
+  /**
+   * @param batchTransformInput The batch transform input for a monitoring job.
+   */
   public fun batchTransformInput(batchTransformInput: IResolvable) {
     cdkBuilder.batchTransformInput(batchTransformInput)
   }
 
+  /**
+   * @param batchTransformInput The batch transform input for a monitoring job.
+   */
   public
       fun batchTransformInput(batchTransformInput: CfnDataQualityJobDefinition.BatchTransformInputProperty) {
     cdkBuilder.batchTransformInput(batchTransformInput)
   }
 
+  /**
+   * @param endpointInput Input object for the endpoint.
+   */
   public fun endpointInput(endpointInput: IResolvable) {
     cdkBuilder.endpointInput(endpointInput)
   }
 
+  /**
+   * @param endpointInput Input object for the endpoint.
+   */
   public fun endpointInput(endpointInput: CfnDataQualityJobDefinition.EndpointInputProperty) {
     cdkBuilder.endpointInput(endpointInput)
   }

@@ -11,14 +11,23 @@ public class CfnEnvironmentSuperuserParametersPropertyDsl {
   private val cdkBuilder: CfnEnvironment.SuperuserParametersProperty.Builder =
       CfnEnvironment.SuperuserParametersProperty.builder()
 
+  /**
+   * @param emailAddress The email address of the superuser.
+   */
   public fun emailAddress(emailAddress: String) {
     cdkBuilder.emailAddress(emailAddress)
   }
 
+  /**
+   * @param firstName The first name of the superuser.
+   */
   public fun firstName(firstName: String) {
     cdkBuilder.firstName(firstName)
   }
 
+  /**
+   * @param lastName The last name of the superuser.
+   */
   public fun lastName(lastName: String) {
     cdkBuilder.lastName(lastName)
   }

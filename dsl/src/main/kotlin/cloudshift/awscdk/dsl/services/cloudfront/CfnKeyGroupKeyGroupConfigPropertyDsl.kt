@@ -15,18 +15,31 @@ public class CfnKeyGroupKeyGroupConfigPropertyDsl {
 
   private val _items: MutableList<String> = mutableListOf()
 
+  /**
+   * @param comment A comment to describe the key group.
+   * The comment cannot be longer than 128 characters.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * @param items A list of the identifiers of the public keys in the key group. 
+   */
   public fun items(vararg items: String) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * @param items A list of the identifiers of the public keys in the key group. 
+   */
   public fun items(items: Collection<String>) {
     _items.addAll(items)
   }
 
+  /**
+   * @param name A name to identify the key group. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

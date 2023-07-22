@@ -16,14 +16,34 @@ public class CfnDataCatalogEncryptionSettingsDsl(
   private val cdkBuilder: CfnDataCatalogEncryptionSettings.Builder =
       CfnDataCatalogEncryptionSettings.Builder.create(scope, id)
 
+  /**
+   * The ID of the Data Catalog in which the settings are created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-catalogid)
+   * @param catalogId The ID of the Data Catalog in which the settings are created. 
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * Contains configuration information for maintaining Data Catalog security.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)
+   * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
+   * Catalog security. 
+   */
   public fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
     cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)
   }
 
+  /**
+   * Contains configuration information for maintaining Data Catalog security.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)
+   * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
+   * Catalog security. 
+   */
   public
       fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty) {
     cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)

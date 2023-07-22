@@ -19,26 +19,53 @@ public class CfnWorkspacePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param alertManagerDefinition The alert manager definition for the workspace, as a string.
+   * For more information, see [Alert manager and
+   * templating](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-alert-manager.html) .
+   */
   public fun alertManagerDefinition(alertManagerDefinition: String) {
     cdkBuilder.alertManagerDefinition(alertManagerDefinition)
   }
 
+  /**
+   * @param alias An alias that you assign to this workspace to help you identify it.
+   * It does not need to be unique.
+   *
+   * The alias can be as many as 100 characters and can include any type of characters. Amazon
+   * Managed Service for Prometheus automatically strips any blank spaces from the beginning and end of
+   * the alias that you specify.
+   */
   public fun alias(alias: String) {
     cdkBuilder.alias(alias)
   }
 
+  /**
+   * @param loggingConfiguration The LoggingConfiguration attribute is used to set the logging
+   * configuration for the workspace.
+   */
   public fun loggingConfiguration(loggingConfiguration: IResolvable) {
     cdkBuilder.loggingConfiguration(loggingConfiguration)
   }
 
+  /**
+   * @param loggingConfiguration The LoggingConfiguration attribute is used to set the logging
+   * configuration for the workspace.
+   */
   public fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty) {
     cdkBuilder.loggingConfiguration(loggingConfiguration)
   }
 
+  /**
+   * @param tags A list of tag keys and values to associate with the workspace.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of tag keys and values to associate with the workspace.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

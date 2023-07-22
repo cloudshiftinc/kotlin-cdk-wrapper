@@ -11,10 +11,18 @@ public class CfnEC2FleetNetworkBandwidthGbpsRequestPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty.Builder =
       CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty.builder()
 
+  /**
+   * @param max The maximum amount of network bandwidth, in Gbps.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum amount of network bandwidth, in Gbps.
+   * To specify no minimum limit, omit this parameter.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

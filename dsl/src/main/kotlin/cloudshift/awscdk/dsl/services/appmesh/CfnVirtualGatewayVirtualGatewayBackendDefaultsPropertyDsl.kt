@@ -11,10 +11,16 @@ public class CfnVirtualGatewayVirtualGatewayBackendDefaultsPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty.Builder =
       CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty.builder()
 
+  /**
+   * @param clientPolicy A reference to an object that represents a client policy.
+   */
   public fun clientPolicy(clientPolicy: IResolvable) {
     cdkBuilder.clientPolicy(clientPolicy)
   }
 
+  /**
+   * @param clientPolicy A reference to an object that represents a client policy.
+   */
   public fun clientPolicy(clientPolicy: CfnVirtualGateway.VirtualGatewayClientPolicyProperty) {
     cdkBuilder.clientPolicy(clientPolicy)
   }

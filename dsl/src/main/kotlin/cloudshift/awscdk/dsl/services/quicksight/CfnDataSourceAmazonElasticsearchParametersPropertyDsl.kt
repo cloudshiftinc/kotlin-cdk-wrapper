@@ -11,6 +11,9 @@ public class CfnDataSourceAmazonElasticsearchParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.AmazonElasticsearchParametersProperty.Builder =
       CfnDataSource.AmazonElasticsearchParametersProperty.builder()
 
+  /**
+   * @param domain The OpenSearch domain. 
+   */
   public fun domain(domain: String) {
     cdkBuilder.domain(domain)
   }

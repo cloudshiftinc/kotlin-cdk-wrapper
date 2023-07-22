@@ -23,54 +23,168 @@ public class ServiceDsl(
 ) {
   private val cdkBuilder: Service.Builder = Service.Builder.create(scope, id)
 
-  public fun customHealthCheck(block: HealthCheckCustomConfigDsl.() -> Unit = {}) {
+  /**
+   * Structure containing failure threshold for a custom health checker.
+   *
+   * Only one of healthCheckConfig or healthCheckCustomConfig can be specified.
+   * See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
+   *
+   * Default: none
+   *
+   * @param customHealthCheck Structure containing failure threshold for a custom health checker. 
+   */
+  public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfigDsl.() -> Unit = {}) {
     val builder = HealthCheckCustomConfigDsl()
-    builder.apply(block)
+    builder.apply(customHealthCheck)
     cdkBuilder.customHealthCheck(builder.build())
   }
 
+  /**
+   * Structure containing failure threshold for a custom health checker.
+   *
+   * Only one of healthCheckConfig or healthCheckCustomConfig can be specified.
+   * See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
+   *
+   * Default: none
+   *
+   * @param customHealthCheck Structure containing failure threshold for a custom health checker. 
+   */
   public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
     cdkBuilder.customHealthCheck(customHealthCheck)
   }
 
+  /**
+   * A description of the service.
+   *
+   * Default: none
+   *
+   * @param description A description of the service. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * Controls how instances within this service can be discovered.
+   *
+   * Default: DNS_AND_API
+   *
+   * @param discoveryType Controls how instances within this service can be discovered. 
+   */
   public fun discoveryType(discoveryType: DiscoveryType) {
     cdkBuilder.discoveryType(discoveryType)
   }
 
+  /**
+   * The DNS type of the record that you want AWS Cloud Map to create.
+   *
+   * Supported record types
+   * include A, AAAA, A and AAAA (A_AAAA), CNAME, and SRV.
+   *
+   * Default: A
+   *
+   * @param dnsRecordType The DNS type of the record that you want AWS Cloud Map to create. 
+   */
   public fun dnsRecordType(dnsRecordType: DnsRecordType) {
     cdkBuilder.dnsRecordType(dnsRecordType)
   }
 
+  /**
+   * The amount of time, in seconds, that you want DNS resolvers to cache the settings for this
+   * record.
+   *
+   * Default: Duration.minutes(1)
+   *
+   * @param dnsTtl The amount of time, in seconds, that you want DNS resolvers to cache the settings
+   * for this record. 
+   */
   public fun dnsTtl(dnsTtl: Duration) {
     cdkBuilder.dnsTtl(dnsTtl)
   }
 
-  public fun healthCheck(block: HealthCheckConfigDsl.() -> Unit = {}) {
+  /**
+   * Settings for an optional health check.
+   *
+   * If you specify health check settings, AWS Cloud Map associates the health
+   * check with the records that you specify in DnsConfig. Only one of healthCheckConfig or
+   * healthCheckCustomConfig can
+   * be specified. Not valid for PrivateDnsNamespaces. If you use healthCheck, you can only register
+   * IP instances to
+   * this service.
+   *
+   * Default: none
+   *
+   * @param healthCheck Settings for an optional health check. 
+   */
+  public fun healthCheck(healthCheck: HealthCheckConfigDsl.() -> Unit = {}) {
     val builder = HealthCheckConfigDsl()
-    builder.apply(block)
+    builder.apply(healthCheck)
     cdkBuilder.healthCheck(builder.build())
   }
 
+  /**
+   * Settings for an optional health check.
+   *
+   * If you specify health check settings, AWS Cloud Map associates the health
+   * check with the records that you specify in DnsConfig. Only one of healthCheckConfig or
+   * healthCheckCustomConfig can
+   * be specified. Not valid for PrivateDnsNamespaces. If you use healthCheck, you can only register
+   * IP instances to
+   * this service.
+   *
+   * Default: none
+   *
+   * @param healthCheck Settings for an optional health check. 
+   */
   public fun healthCheck(healthCheck: HealthCheckConfig) {
     cdkBuilder.healthCheck(healthCheck)
   }
 
+  /**
+   * Whether or not this service will have an Elastic LoadBalancer registered to it as an
+   * AliasTargetInstance.
+   *
+   * Setting this to `true` correctly configures the `routingPolicy`
+   * and performs some additional validation.
+   *
+   * Default: false
+   *
+   * @param loadBalancer Whether or not this service will have an Elastic LoadBalancer registered to
+   * it as an AliasTargetInstance. 
+   */
   public fun loadBalancer(loadBalancer: Boolean) {
     cdkBuilder.loadBalancer(loadBalancer)
   }
 
+  /**
+   * A name for the Service.
+   *
+   * Default: CloudFormation-generated name
+   *
+   * @param name A name for the Service. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The namespace that you want to use for DNS configuration.
+   *
+   * @param namespace The namespace that you want to use for DNS configuration. 
+   */
   public fun namespace(namespace: INamespace) {
     cdkBuilder.namespace(namespace)
   }
 
+  /**
+   * The routing policy that you want to apply to all DNS records that AWS Cloud Map creates when
+   * you register an instance and specify this service.
+   *
+   * Default: WEIGHTED for CNAME records and when loadBalancer is true, MULTIVALUE otherwise
+   *
+   * @param routingPolicy The routing policy that you want to apply to all DNS records that AWS
+   * Cloud Map creates when you register an instance and specify this service. 
+   */
   public fun routingPolicy(routingPolicy: RoutingPolicy) {
     cdkBuilder.routingPolicy(routingPolicy)
   }

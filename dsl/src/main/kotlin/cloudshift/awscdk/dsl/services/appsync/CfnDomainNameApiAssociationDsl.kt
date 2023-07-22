@@ -15,10 +15,22 @@ public class CfnDomainNameApiAssociationDsl(
   private val cdkBuilder: CfnDomainNameApiAssociation.Builder =
       CfnDomainNameApiAssociation.Builder.create(scope, id)
 
+  /**
+   * The API ID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html#cfn-appsync-domainnameapiassociation-apiid)
+   * @param apiId The API ID. 
+   */
   public fun apiId(apiId: String) {
     cdkBuilder.apiId(apiId)
   }
 
+  /**
+   * The domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html#cfn-appsync-domainnameapiassociation-domainname)
+   * @param domainName The domain name. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }

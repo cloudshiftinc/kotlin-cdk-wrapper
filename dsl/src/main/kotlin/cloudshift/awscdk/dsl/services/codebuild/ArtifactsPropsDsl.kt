@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.codebuild.ArtifactsProps
 public class ArtifactsPropsDsl {
   private val cdkBuilder: ArtifactsProps.Builder = ArtifactsProps.builder()
 
+  /**
+   * @param identifier The artifact identifier.
+   * This property is required on secondary artifacts.
+   */
   public fun identifier(identifier: String) {
     cdkBuilder.identifier(identifier)
   }

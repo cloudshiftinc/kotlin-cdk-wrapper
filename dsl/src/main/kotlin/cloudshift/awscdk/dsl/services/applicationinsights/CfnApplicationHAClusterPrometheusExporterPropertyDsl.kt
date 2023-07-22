@@ -11,6 +11,10 @@ public class CfnApplicationHAClusterPrometheusExporterPropertyDsl {
   private val cdkBuilder: CfnApplication.HAClusterPrometheusExporterProperty.Builder =
       CfnApplication.HAClusterPrometheusExporterProperty.builder()
 
+  /**
+   * @param prometheusPort The target port to which Prometheus sends metrics.
+   * If not specified, the default port 9668 is used.
+   */
   public fun prometheusPort(prometheusPort: String) {
     cdkBuilder.prometheusPort(prometheusPort)
   }

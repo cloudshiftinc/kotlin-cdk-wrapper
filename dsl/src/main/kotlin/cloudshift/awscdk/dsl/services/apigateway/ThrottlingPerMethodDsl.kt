@@ -12,16 +12,28 @@ import software.amazon.awscdk.services.apigateway.ThrottlingPerMethod
 public class ThrottlingPerMethodDsl {
   private val cdkBuilder: ThrottlingPerMethod.Builder = ThrottlingPerMethod.builder()
 
+  /**
+   * @param method [disable-awslint:ref-via-interface] The method for which you specify the
+   * throttling settings. 
+   */
   public fun method(method: Method) {
     cdkBuilder.method(method)
   }
 
-  public fun throttle(block: ThrottleSettingsDsl.() -> Unit = {}) {
+  /**
+   * @param throttle Specifies the overall request rate (average requests per second) and burst
+   * capacity. 
+   */
+  public fun throttle(throttle: ThrottleSettingsDsl.() -> Unit = {}) {
     val builder = ThrottleSettingsDsl()
-    builder.apply(block)
+    builder.apply(throttle)
     cdkBuilder.throttle(builder.build())
   }
 
+  /**
+   * @param throttle Specifies the overall request rate (average requests per second) and burst
+   * capacity. 
+   */
   public fun throttle(throttle: ThrottleSettings) {
     cdkBuilder.throttle(throttle)
   }

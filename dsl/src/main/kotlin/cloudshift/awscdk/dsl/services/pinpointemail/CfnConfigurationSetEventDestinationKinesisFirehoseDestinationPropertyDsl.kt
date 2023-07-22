@@ -12,10 +12,18 @@ public class CfnConfigurationSetEventDestinationKinesisFirehoseDestinationProper
       CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.Builder =
       CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
 
+  /**
+   * @param deliveryStreamArn The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose
+   * stream that Amazon Pinpoint sends email events to. 
+   */
   public fun deliveryStreamArn(deliveryStreamArn: String) {
     cdkBuilder.deliveryStreamArn(deliveryStreamArn)
   }
 
+  /**
+   * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role that Amazon Pinpoint uses when
+   * sending email events to the Amazon Kinesis Data Firehose stream. 
+   */
   public fun iamRoleArn(iamRoleArn: String) {
     cdkBuilder.iamRoleArn(iamRoleArn)
   }

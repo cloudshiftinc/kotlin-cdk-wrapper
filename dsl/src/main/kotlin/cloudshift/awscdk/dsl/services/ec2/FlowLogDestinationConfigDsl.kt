@@ -16,32 +16,53 @@ import software.amazon.awscdk.services.s3.IBucket
 public class FlowLogDestinationConfigDsl {
   private val cdkBuilder: FlowLogDestinationConfig.Builder = FlowLogDestinationConfig.builder()
 
-  public fun destinationOptions(block: DestinationOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param destinationOptions Options for writing flow logs to a supported destination.
+   */
+  public fun destinationOptions(destinationOptions: DestinationOptionsDsl.() -> Unit = {}) {
     val builder = DestinationOptionsDsl()
-    builder.apply(block)
+    builder.apply(destinationOptions)
     cdkBuilder.destinationOptions(builder.build())
   }
 
+  /**
+   * @param destinationOptions Options for writing flow logs to a supported destination.
+   */
   public fun destinationOptions(destinationOptions: DestinationOptions) {
     cdkBuilder.destinationOptions(destinationOptions)
   }
 
+  /**
+   * @param iamRole The IAM Role that has access to publish to CloudWatch logs.
+   */
   public fun iamRole(iamRole: IRole) {
     cdkBuilder.iamRole(iamRole)
   }
 
+  /**
+   * @param keyPrefix S3 bucket key prefix to publish the flow logs to.
+   */
   public fun keyPrefix(keyPrefix: String) {
     cdkBuilder.keyPrefix(keyPrefix)
   }
 
+  /**
+   * @param logDestinationType The type of destination to publish the flow logs to. 
+   */
   public fun logDestinationType(logDestinationType: FlowLogDestinationType) {
     cdkBuilder.logDestinationType(logDestinationType)
   }
 
+  /**
+   * @param logGroup The CloudWatch Logs Log Group to publish the flow logs to.
+   */
   public fun logGroup(logGroup: ILogGroup) {
     cdkBuilder.logGroup(logGroup)
   }
 
+  /**
+   * @param s3Bucket S3 bucket to publish the flow logs to.
+   */
   public fun s3Bucket(s3Bucket: IBucket) {
     cdkBuilder.s3Bucket(s3Bucket)
   }

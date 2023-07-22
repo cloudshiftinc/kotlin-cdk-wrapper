@@ -20,30 +20,57 @@ public class VpnConnectionPropsDsl {
 
   private val _tunnelOptions: MutableList<VpnTunnelOption> = mutableListOf()
 
+  /**
+   * @param asn The ASN of the customer gateway.
+   */
   public fun asn(asn: Number) {
     cdkBuilder.asn(asn)
   }
 
+  /**
+   * @param ip The ip address of the customer gateway. 
+   */
   public fun ip(ip: String) {
     cdkBuilder.ip(ip)
   }
 
+  /**
+   * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+   * gateway.
+   */
   public fun staticRoutes(vararg staticRoutes: String) {
     _staticRoutes.addAll(listOf(*staticRoutes))
   }
 
+  /**
+   * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+   * gateway.
+   */
   public fun staticRoutes(staticRoutes: Collection<String>) {
     _staticRoutes.addAll(staticRoutes)
   }
 
+  /**
+   * @param tunnelOptions The tunnel options for the VPN connection.
+   * At most two elements (one per tunnel).
+   * Duplicates not allowed.
+   */
   public fun tunnelOptions(tunnelOptions: VpnTunnelOptionDsl.() -> Unit) {
     _tunnelOptions.add(VpnTunnelOptionDsl().apply(tunnelOptions).build())
   }
 
+  /**
+   * @param tunnelOptions The tunnel options for the VPN connection.
+   * At most two elements (one per tunnel).
+   * Duplicates not allowed.
+   */
   public fun tunnelOptions(tunnelOptions: Collection<VpnTunnelOption>) {
     _tunnelOptions.addAll(tunnelOptions)
   }
 
+  /**
+   * @param vpc The VPC to connect to. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

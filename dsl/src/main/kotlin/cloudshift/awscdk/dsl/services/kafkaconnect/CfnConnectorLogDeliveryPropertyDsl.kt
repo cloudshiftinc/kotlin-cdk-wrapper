@@ -11,10 +11,18 @@ public class CfnConnectorLogDeliveryPropertyDsl {
   private val cdkBuilder: CfnConnector.LogDeliveryProperty.Builder =
       CfnConnector.LogDeliveryProperty.builder()
 
+  /**
+   * @param workerLogDelivery The workers can send worker logs to different destination types. 
+   * This configuration specifies the details of these destinations.
+   */
   public fun workerLogDelivery(workerLogDelivery: IResolvable) {
     cdkBuilder.workerLogDelivery(workerLogDelivery)
   }
 
+  /**
+   * @param workerLogDelivery The workers can send worker logs to different destination types. 
+   * This configuration specifies the details of these destinations.
+   */
   public fun workerLogDelivery(workerLogDelivery: CfnConnector.WorkerLogDeliveryProperty) {
     cdkBuilder.workerLogDelivery(workerLogDelivery)
   }

@@ -17,22 +17,39 @@ public class CfnLoggingConfigurationFilterPropertyDsl {
 
   private val _conditions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param behavior How to handle logs that satisfy the filter's conditions and requirement. 
+   */
   public fun behavior(behavior: String) {
     cdkBuilder.behavior(behavior)
   }
 
+  /**
+   * @param conditions Match conditions for the filter. 
+   */
   public fun conditions(vararg conditions: Any) {
     _conditions.addAll(listOf(*conditions))
   }
 
+  /**
+   * @param conditions Match conditions for the filter. 
+   */
   public fun conditions(conditions: Collection<Any>) {
     _conditions.addAll(conditions)
   }
 
+  /**
+   * @param conditions Match conditions for the filter. 
+   */
   public fun conditions(conditions: IResolvable) {
     cdkBuilder.conditions(conditions)
   }
 
+  /**
+   * @param requirement Logic to apply to the filtering conditions. 
+   * You can specify that, in order to satisfy the filter, a log must match all conditions or must
+   * match at least one condition.
+   */
   public fun requirement(requirement: String) {
     cdkBuilder.requirement(requirement)
   }

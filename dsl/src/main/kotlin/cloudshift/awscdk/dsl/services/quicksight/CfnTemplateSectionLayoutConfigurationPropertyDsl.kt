@@ -11,10 +11,16 @@ public class CfnTemplateSectionLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.SectionLayoutConfigurationProperty.Builder =
       CfnTemplate.SectionLayoutConfigurationProperty.builder()
 
+  /**
+   * @param freeFormLayout The free-form layout configuration of a section. 
+   */
   public fun freeFormLayout(freeFormLayout: IResolvable) {
     cdkBuilder.freeFormLayout(freeFormLayout)
   }
 
+  /**
+   * @param freeFormLayout The free-form layout configuration of a section. 
+   */
   public
       fun freeFormLayout(freeFormLayout: CfnTemplate.FreeFormSectionLayoutConfigurationProperty) {
     cdkBuilder.freeFormLayout(freeFormLayout)

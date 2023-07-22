@@ -17,18 +17,34 @@ public class CfnCoreDefinitionVersionPropsDsl {
 
   private val _cores: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param coreDefinitionId The ID of the core definition associated with this version. 
+   * This value is a GUID.
+   */
   public fun coreDefinitionId(coreDefinitionId: String) {
     cdkBuilder.coreDefinitionId(coreDefinitionId)
   }
 
+  /**
+   * @param cores The Greengrass core in this version. 
+   * Currently, the `Cores` property for a core definition version can contain only one core.
+   */
   public fun cores(vararg cores: Any) {
     _cores.addAll(listOf(*cores))
   }
 
+  /**
+   * @param cores The Greengrass core in this version. 
+   * Currently, the `Cores` property for a core definition version can contain only one core.
+   */
   public fun cores(cores: Collection<Any>) {
     _cores.addAll(cores)
   }
 
+  /**
+   * @param cores The Greengrass core in this version. 
+   * Currently, the `Cores` property for a core definition version can contain only one core.
+   */
   public fun cores(cores: IResolvable) {
     cdkBuilder.cores(cores)
   }

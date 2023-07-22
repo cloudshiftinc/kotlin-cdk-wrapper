@@ -12,10 +12,24 @@ public class CfnAlarmModelAcknowledgeFlowPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.AcknowledgeFlowProperty.Builder =
       CfnAlarmModel.AcknowledgeFlowProperty.builder()
 
+  /**
+   * @param enabled The value must be `TRUE` or `FALSE` .
+   * If `TRUE` , you receive a notification when the alarm state changes. You must choose to
+   * acknowledge the notification before the alarm state can return to `NORMAL` . If `FALSE` , you
+   * won't receive notifications. The alarm automatically changes to the `NORMAL` state when the input
+   * property value returns to the specified range.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled The value must be `TRUE` or `FALSE` .
+   * If `TRUE` , you receive a notification when the alarm state changes. You must choose to
+   * acknowledge the notification before the alarm state can return to `NORMAL` . If `FALSE` , you
+   * won't receive notifications. The alarm automatically changes to the `NORMAL` state when the input
+   * property value returns to the specified range.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

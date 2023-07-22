@@ -10,10 +10,17 @@ import software.amazon.awscdk.services.ecs.InferenceAccelerator
 public class InferenceAcceleratorDsl {
   private val cdkBuilder: InferenceAccelerator.Builder = InferenceAccelerator.builder()
 
+  /**
+   * @param deviceName The Elastic Inference accelerator device name.
+   */
   public fun deviceName(deviceName: String) {
     cdkBuilder.deviceName(deviceName)
   }
 
+  /**
+   * @param deviceType The Elastic Inference accelerator type to use.
+   * The allowed values are: eia2.medium, eia2.large and eia2.xlarge.
+   */
   public fun deviceType(deviceType: String) {
     cdkBuilder.deviceType(deviceType)
   }

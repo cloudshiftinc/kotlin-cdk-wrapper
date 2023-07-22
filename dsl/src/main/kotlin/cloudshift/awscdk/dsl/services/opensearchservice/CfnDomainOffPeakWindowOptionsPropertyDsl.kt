@@ -12,18 +12,30 @@ public class CfnDomainOffPeakWindowOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.OffPeakWindowOptionsProperty.Builder =
       CfnDomain.OffPeakWindowOptionsProperty.builder()
 
+  /**
+   * @param enabled Specifies whether off-peak window settings are enabled for the domain.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Specifies whether off-peak window settings are enabled for the domain.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param offPeakWindow Off-peak window settings for the domain.
+   */
   public fun offPeakWindow(offPeakWindow: IResolvable) {
     cdkBuilder.offPeakWindow(offPeakWindow)
   }
 
+  /**
+   * @param offPeakWindow Off-peak window settings for the domain.
+   */
   public fun offPeakWindow(offPeakWindow: CfnDomain.OffPeakWindowProperty) {
     cdkBuilder.offPeakWindow(offPeakWindow)
   }

@@ -15,10 +15,16 @@ public class CfnCapacityReservationCapacityAssignmentPropertyDsl {
 
   private val _workgroupNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param workgroupNames The list of workgroup names for the capacity assignment. 
+   */
   public fun workgroupNames(vararg workgroupNames: String) {
     _workgroupNames.addAll(listOf(*workgroupNames))
   }
 
+  /**
+   * @param workgroupNames The list of workgroup names for the capacity assignment. 
+   */
   public fun workgroupNames(workgroupNames: Collection<String>) {
     _workgroupNames.addAll(workgroupNames)
   }

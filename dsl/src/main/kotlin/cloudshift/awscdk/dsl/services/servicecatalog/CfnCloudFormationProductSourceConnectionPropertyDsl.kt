@@ -12,15 +12,24 @@ public class CfnCloudFormationProductSourceConnectionPropertyDsl {
   private val cdkBuilder: CfnCloudFormationProduct.SourceConnectionProperty.Builder =
       CfnCloudFormationProduct.SourceConnectionProperty.builder()
 
+  /**
+   * @param connectionParameters The connection details based on the connection `Type` . 
+   */
   public fun connectionParameters(connectionParameters: IResolvable) {
     cdkBuilder.connectionParameters(connectionParameters)
   }
 
+  /**
+   * @param connectionParameters The connection details based on the connection `Type` . 
+   */
   public
       fun connectionParameters(connectionParameters: CfnCloudFormationProduct.ConnectionParametersProperty) {
     cdkBuilder.connectionParameters(connectionParameters)
   }
 
+  /**
+   * @param type The only supported `SourceConnection` type is Codestar. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

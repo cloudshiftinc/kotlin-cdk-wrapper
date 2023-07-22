@@ -11,14 +11,24 @@ public class CfnResourceSpecificLoggingPropsDsl {
   private val cdkBuilder: CfnResourceSpecificLoggingProps.Builder =
       CfnResourceSpecificLoggingProps.builder()
 
+  /**
+   * @param logLevel The default log level.Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`. 
+   */
   public fun logLevel(logLevel: String) {
     cdkBuilder.logLevel(logLevel)
   }
 
+  /**
+   * @param targetName The target name. 
+   */
   public fun targetName(targetName: String) {
     cdkBuilder.targetName(targetName)
   }
 
+  /**
+   * @param targetType The target type. 
+   * Valid Values: `DEFAULT | THING_GROUP`
+   */
   public fun targetType(targetType: String) {
     cdkBuilder.targetType(targetType)
   }

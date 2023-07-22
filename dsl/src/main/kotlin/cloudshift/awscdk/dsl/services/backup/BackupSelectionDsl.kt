@@ -22,26 +22,74 @@ public class BackupSelectionDsl(
 
   private val _resources: MutableList<BackupResource> = mutableListOf()
 
+  /**
+   * Whether to automatically give restores permissions to the role that AWS Backup uses.
+   *
+   * If `true`, the `AWSBackupServiceRolePolicyForRestores` managed
+   * policy will be attached to the role.
+   *
+   * Default: false
+   *
+   * @param allowRestores Whether to automatically give restores permissions to the role that AWS
+   * Backup uses. 
+   */
   public fun allowRestores(allowRestores: Boolean) {
     cdkBuilder.allowRestores(allowRestores)
   }
 
+  /**
+   * The backup plan for this selection.
+   *
+   * @param backupPlan The backup plan for this selection. 
+   */
   public fun backupPlan(backupPlan: IBackupPlan) {
     cdkBuilder.backupPlan(backupPlan)
   }
 
+  /**
+   * The name for this selection.
+   *
+   * Default: - a CDK generated name
+   *
+   * @param backupSelectionName The name for this selection. 
+   */
   public fun backupSelectionName(backupSelectionName: String) {
     cdkBuilder.backupSelectionName(backupSelectionName)
   }
 
+  /**
+   * The resources to backup.
+   *
+   * Use the helper static methods defined on `BackupResource`.
+   *
+   * @param resources The resources to backup. 
+   */
   public fun resources(vararg resources: BackupResource) {
     _resources.addAll(listOf(*resources))
   }
 
+  /**
+   * The resources to backup.
+   *
+   * Use the helper static methods defined on `BackupResource`.
+   *
+   * @param resources The resources to backup. 
+   */
   public fun resources(resources: Collection<BackupResource>) {
     _resources.addAll(resources)
   }
 
+  /**
+   * The role that AWS Backup uses to authenticate when backuping or restoring the resources.
+   *
+   * The `AWSBackupServiceRolePolicyForBackup` managed policy
+   * will be attached to this role.
+   *
+   * Default: - a new role will be created
+   *
+   * @param role The role that AWS Backup uses to authenticate when backuping or restoring the
+   * resources. 
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

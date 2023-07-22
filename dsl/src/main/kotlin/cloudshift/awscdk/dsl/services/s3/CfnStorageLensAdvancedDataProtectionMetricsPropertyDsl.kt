@@ -12,10 +12,16 @@ public class CfnStorageLensAdvancedDataProtectionMetricsPropertyDsl {
   private val cdkBuilder: CfnStorageLens.AdvancedDataProtectionMetricsProperty.Builder =
       CfnStorageLens.AdvancedDataProtectionMetricsProperty.builder()
 
+  /**
+   * @param isEnabled Indicates whether advanced data protection metrics are enabled.
+   */
   public fun isEnabled(isEnabled: Boolean) {
     cdkBuilder.isEnabled(isEnabled)
   }
 
+  /**
+   * @param isEnabled Indicates whether advanced data protection metrics are enabled.
+   */
   public fun isEnabled(isEnabled: IResolvable) {
     cdkBuilder.isEnabled(isEnabled)
   }

@@ -11,6 +11,9 @@ public class CfnDashboardAdHocFilteringOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.AdHocFilteringOptionProperty.Builder =
       CfnDashboard.AdHocFilteringOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus Availability status.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

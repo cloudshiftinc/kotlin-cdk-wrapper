@@ -11,27 +11,45 @@ public class CfnDashboardDimensionFieldPropertyDsl {
   private val cdkBuilder: CfnDashboard.DimensionFieldProperty.Builder =
       CfnDashboard.DimensionFieldProperty.builder()
 
+  /**
+   * @param categoricalDimensionField The dimension type field with categorical type columns.
+   */
   public fun categoricalDimensionField(categoricalDimensionField: IResolvable) {
     cdkBuilder.categoricalDimensionField(categoricalDimensionField)
   }
 
+  /**
+   * @param categoricalDimensionField The dimension type field with categorical type columns.
+   */
   public
       fun categoricalDimensionField(categoricalDimensionField: CfnDashboard.CategoricalDimensionFieldProperty) {
     cdkBuilder.categoricalDimensionField(categoricalDimensionField)
   }
 
+  /**
+   * @param dateDimensionField The dimension type field with date type columns.
+   */
   public fun dateDimensionField(dateDimensionField: IResolvable) {
     cdkBuilder.dateDimensionField(dateDimensionField)
   }
 
+  /**
+   * @param dateDimensionField The dimension type field with date type columns.
+   */
   public fun dateDimensionField(dateDimensionField: CfnDashboard.DateDimensionFieldProperty) {
     cdkBuilder.dateDimensionField(dateDimensionField)
   }
 
+  /**
+   * @param numericalDimensionField The dimension type field with numerical type columns.
+   */
   public fun numericalDimensionField(numericalDimensionField: IResolvable) {
     cdkBuilder.numericalDimensionField(numericalDimensionField)
   }
 
+  /**
+   * @param numericalDimensionField The dimension type field with numerical type columns.
+   */
   public
       fun numericalDimensionField(numericalDimensionField: CfnDashboard.NumericalDimensionFieldProperty) {
     cdkBuilder.numericalDimensionField(numericalDimensionField)

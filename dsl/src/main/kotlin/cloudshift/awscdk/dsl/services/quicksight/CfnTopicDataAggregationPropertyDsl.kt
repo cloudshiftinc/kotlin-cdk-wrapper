@@ -11,10 +11,17 @@ public class CfnTopicDataAggregationPropertyDsl {
   private val cdkBuilder: CfnTopic.DataAggregationProperty.Builder =
       CfnTopic.DataAggregationProperty.builder()
 
+  /**
+   * @param datasetRowDateGranularity The level of time precision that is used to aggregate
+   * `DateTime` values.
+   */
   public fun datasetRowDateGranularity(datasetRowDateGranularity: String) {
     cdkBuilder.datasetRowDateGranularity(datasetRowDateGranularity)
   }
 
+  /**
+   * @param defaultDateColumnName The column name for the default date.
+   */
   public fun defaultDateColumnName(defaultDateColumnName: String) {
     cdkBuilder.defaultDateColumnName(defaultDateColumnName)
   }

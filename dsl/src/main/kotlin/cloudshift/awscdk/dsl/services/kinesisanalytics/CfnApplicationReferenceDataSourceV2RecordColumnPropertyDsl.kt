@@ -11,14 +11,26 @@ public class CfnApplicationReferenceDataSourceV2RecordColumnPropertyDsl {
   private val cdkBuilder: CfnApplicationReferenceDataSourceV2.RecordColumnProperty.Builder =
       CfnApplicationReferenceDataSourceV2.RecordColumnProperty.builder()
 
+  /**
+   * @param mapping A reference to the data element in the streaming input or the reference data
+   * source.
+   */
   public fun mapping(mapping: String) {
     cdkBuilder.mapping(mapping)
   }
 
+  /**
+   * @param name The name of the column that is created in the in-application input stream or
+   * reference table. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param sqlType The type of column created in the in-application input stream or reference
+   * table. 
+   */
   public fun sqlType(sqlType: String) {
     cdkBuilder.sqlType(sqlType)
   }

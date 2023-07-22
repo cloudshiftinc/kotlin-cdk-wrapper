@@ -11,10 +11,18 @@ public class CfnDashboardSheetTextBoxPropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetTextBoxProperty.Builder =
       CfnDashboard.SheetTextBoxProperty.builder()
 
+  /**
+   * @param content The content that is displayed in the text box.
+   */
   public fun content(content: String) {
     cdkBuilder.content(content)
   }
 
+  /**
+   * @param sheetTextBoxId The unique identifier for a text box. 
+   * This identifier must be unique within the context of a dashboard, template, or analysis. Two
+   * dashboards, analyses, or templates can have text boxes that share identifiers.
+   */
   public fun sheetTextBoxId(sheetTextBoxId: String) {
     cdkBuilder.sheetTextBoxId(sheetTextBoxId)
   }

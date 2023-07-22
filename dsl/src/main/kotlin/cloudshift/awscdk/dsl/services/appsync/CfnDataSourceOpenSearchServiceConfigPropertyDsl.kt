@@ -11,10 +11,16 @@ public class CfnDataSourceOpenSearchServiceConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.OpenSearchServiceConfigProperty.Builder =
       CfnDataSource.OpenSearchServiceConfigProperty.builder()
 
+  /**
+   * @param awsRegion The AWS Region. 
+   */
   public fun awsRegion(awsRegion: String) {
     cdkBuilder.awsRegion(awsRegion)
   }
 
+  /**
+   * @param endpoint The endpoint. 
+   */
   public fun endpoint(endpoint: String) {
     cdkBuilder.endpoint(endpoint)
   }

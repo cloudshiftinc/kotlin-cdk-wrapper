@@ -12,14 +12,26 @@ public class CfnApplicationInitialCapacityConfigPropertyDsl {
   private val cdkBuilder: CfnApplication.InitialCapacityConfigProperty.Builder =
       CfnApplication.InitialCapacityConfigProperty.builder()
 
+  /**
+   * @param workerConfiguration The resource configuration of the initial capacity configuration. 
+   */
   public fun workerConfiguration(workerConfiguration: IResolvable) {
     cdkBuilder.workerConfiguration(workerConfiguration)
   }
 
+  /**
+   * @param workerConfiguration The resource configuration of the initial capacity configuration. 
+   */
   public fun workerConfiguration(workerConfiguration: CfnApplication.WorkerConfigurationProperty) {
     cdkBuilder.workerConfiguration(workerConfiguration)
   }
 
+  /**
+   * @param workerCount The number of workers in the initial capacity configuration. 
+   * *Minimum* : 1
+   *
+   * *Maximum* : 1000000
+   */
   public fun workerCount(workerCount: Number) {
     cdkBuilder.workerCount(workerCount)
   }

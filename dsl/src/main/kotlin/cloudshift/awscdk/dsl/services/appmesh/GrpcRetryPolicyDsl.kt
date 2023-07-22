@@ -22,34 +22,74 @@ public class GrpcRetryPolicyDsl {
 
   private val _tcpRetryEvents: MutableList<TcpRetryEvent> = mutableListOf()
 
+  /**
+   * @param grpcRetryEvents gRPC events on which to retry.
+   * You must specify at least one value
+   * for at least one types of retry events.
+   */
   public fun grpcRetryEvents(vararg grpcRetryEvents: GrpcRetryEvent) {
     _grpcRetryEvents.addAll(listOf(*grpcRetryEvents))
   }
 
+  /**
+   * @param grpcRetryEvents gRPC events on which to retry.
+   * You must specify at least one value
+   * for at least one types of retry events.
+   */
   public fun grpcRetryEvents(grpcRetryEvents: Collection<GrpcRetryEvent>) {
     _grpcRetryEvents.addAll(grpcRetryEvents)
   }
 
+  /**
+   * @param httpRetryEvents Specify HTTP events on which to retry.
+   * You must specify at least one value
+   * for at least one types of retry events.
+   */
   public fun httpRetryEvents(vararg httpRetryEvents: HttpRetryEvent) {
     _httpRetryEvents.addAll(listOf(*httpRetryEvents))
   }
 
+  /**
+   * @param httpRetryEvents Specify HTTP events on which to retry.
+   * You must specify at least one value
+   * for at least one types of retry events.
+   */
   public fun httpRetryEvents(httpRetryEvents: Collection<HttpRetryEvent>) {
     _httpRetryEvents.addAll(httpRetryEvents)
   }
 
+  /**
+   * @param retryAttempts The maximum number of retry attempts. 
+   */
   public fun retryAttempts(retryAttempts: Number) {
     cdkBuilder.retryAttempts(retryAttempts)
   }
 
+  /**
+   * @param retryTimeout The timeout for each retry attempt. 
+   */
   public fun retryTimeout(retryTimeout: Duration) {
     cdkBuilder.retryTimeout(retryTimeout)
   }
 
+  /**
+   * @param tcpRetryEvents TCP events on which to retry.
+   * The event occurs before any processing of a
+   * request has started and is encountered when the upstream is temporarily or
+   * permanently unavailable. You must specify at least one value for at least
+   * one types of retry events.
+   */
   public fun tcpRetryEvents(vararg tcpRetryEvents: TcpRetryEvent) {
     _tcpRetryEvents.addAll(listOf(*tcpRetryEvents))
   }
 
+  /**
+   * @param tcpRetryEvents TCP events on which to retry.
+   * The event occurs before any processing of a
+   * request has started and is encountered when the upstream is temporarily or
+   * permanently unavailable. You must specify at least one value for at least
+   * one types of retry events.
+   */
   public fun tcpRetryEvents(tcpRetryEvents: Collection<TcpRetryEvent>) {
     _tcpRetryEvents.addAll(tcpRetryEvents)
   }

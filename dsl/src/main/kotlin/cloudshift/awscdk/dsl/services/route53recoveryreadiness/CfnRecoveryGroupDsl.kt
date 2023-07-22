@@ -23,22 +23,52 @@ public class CfnRecoveryGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-recoverygroup.html#cfn-route53recoveryreadiness-recoverygroup-cells)
+   * @param cells A list of the cell Amazon Resource Names (ARNs) in the recovery group. 
+   */
   public fun cells(vararg cells: String) {
     _cells.addAll(listOf(*cells))
   }
 
+  /**
+   * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-recoverygroup.html#cfn-route53recoveryreadiness-recoverygroup-cells)
+   * @param cells A list of the cell Amazon Resource Names (ARNs) in the recovery group. 
+   */
   public fun cells(cells: Collection<String>) {
     _cells.addAll(cells)
   }
 
+  /**
+   * The name of the recovery group to create.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-recoverygroup.html#cfn-route53recoveryreadiness-recoverygroup-recoverygroupname)
+   * @param recoveryGroupName The name of the recovery group to create. 
+   */
   public fun recoveryGroupName(recoveryGroupName: String) {
     cdkBuilder.recoveryGroupName(recoveryGroupName)
   }
 
+  /**
+   * A collection of tags associated with a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-recoverygroup.html#cfn-route53recoveryreadiness-recoverygroup-tags)
+   * @param tags A collection of tags associated with a resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A collection of tags associated with a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-recoverygroup.html#cfn-route53recoveryreadiness-recoverygroup-tags)
+   * @param tags A collection of tags associated with a resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

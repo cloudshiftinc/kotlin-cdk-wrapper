@@ -11,10 +11,16 @@ public class CfnModelCardTrainingHyperParameterPropertyDsl {
   private val cdkBuilder: CfnModelCard.TrainingHyperParameterProperty.Builder =
       CfnModelCard.TrainingHyperParameterProperty.builder()
 
+  /**
+   * @param name The name of the hyper parameter. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value specified for the hyper parameter. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

@@ -11,6 +11,12 @@ public class CfnInstanceFleetConfigOnDemandProvisioningSpecificationPropertyDsl 
   private val cdkBuilder: CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty.Builder =
       CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty.builder()
 
+  /**
+   * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance fleets.
+   * 
+   * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+   * first.
+   */
   public fun allocationStrategy(allocationStrategy: String) {
     cdkBuilder.allocationStrategy(allocationStrategy)
   }

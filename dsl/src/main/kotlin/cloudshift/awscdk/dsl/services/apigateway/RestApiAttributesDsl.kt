@@ -10,14 +10,23 @@ import software.amazon.awscdk.services.apigateway.RestApiAttributes
 public class RestApiAttributesDsl {
   private val cdkBuilder: RestApiAttributes.Builder = RestApiAttributes.builder()
 
+  /**
+   * @param restApiId The ID of the API Gateway RestApi. 
+   */
   public fun restApiId(restApiId: String) {
     cdkBuilder.restApiId(restApiId)
   }
 
+  /**
+   * @param restApiName The name of the API Gateway RestApi.
+   */
   public fun restApiName(restApiName: String) {
     cdkBuilder.restApiName(restApiName)
   }
 
+  /**
+   * @param rootResourceId The resource ID of the root resource. 
+   */
   public fun rootResourceId(rootResourceId: String) {
     cdkBuilder.rootResourceId(rootResourceId)
   }

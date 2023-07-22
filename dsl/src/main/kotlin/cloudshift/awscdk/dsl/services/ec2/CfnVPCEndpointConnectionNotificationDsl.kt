@@ -19,22 +19,56 @@ public class CfnVPCEndpointConnectionNotificationDsl(
 
   private val _connectionEvents: MutableList<String> = mutableListOf()
 
+  /**
+   * The endpoint events for which to receive notifications.
+   *
+   * Valid values are `Accept` , `Connect` , `Delete` , and `Reject` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionevents)
+   * @param connectionEvents The endpoint events for which to receive notifications. 
+   */
   public fun connectionEvents(vararg connectionEvents: String) {
     _connectionEvents.addAll(listOf(*connectionEvents))
   }
 
+  /**
+   * The endpoint events for which to receive notifications.
+   *
+   * Valid values are `Accept` , `Connect` , `Delete` , and `Reject` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionevents)
+   * @param connectionEvents The endpoint events for which to receive notifications. 
+   */
   public fun connectionEvents(connectionEvents: Collection<String>) {
     _connectionEvents.addAll(connectionEvents)
   }
 
+  /**
+   * The ARN of the SNS topic for the notifications.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn)
+   * @param connectionNotificationArn The ARN of the SNS topic for the notifications. 
+   */
   public fun connectionNotificationArn(connectionNotificationArn: String) {
     cdkBuilder.connectionNotificationArn(connectionNotificationArn)
   }
 
+  /**
+   * The ID of the endpoint service.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-serviceid)
+   * @param serviceId The ID of the endpoint service. 
+   */
   public fun serviceId(serviceId: String) {
     cdkBuilder.serviceId(serviceId)
   }
 
+  /**
+   * The ID of the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid)
+   * @param vpcEndpointId The ID of the endpoint. 
+   */
   public fun vpcEndpointId(vpcEndpointId: String) {
     cdkBuilder.vpcEndpointId(vpcEndpointId)
   }

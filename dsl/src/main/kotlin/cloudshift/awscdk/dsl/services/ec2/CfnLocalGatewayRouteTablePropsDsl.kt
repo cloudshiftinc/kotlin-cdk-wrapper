@@ -18,18 +18,30 @@ public class CfnLocalGatewayRouteTablePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param localGatewayId The ID of the local gateway. 
+   */
   public fun localGatewayId(localGatewayId: String) {
     cdkBuilder.localGatewayId(localGatewayId)
   }
 
+  /**
+   * @param mode The mode of the local gateway route table.
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }
 
+  /**
+   * @param tags The tags assigned to the local gateway route table.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags assigned to the local gateway route table.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

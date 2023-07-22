@@ -11,6 +11,9 @@ public class CfnApplicationApplicationMaintenanceConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.ApplicationMaintenanceConfigurationProperty.Builder =
       CfnApplication.ApplicationMaintenanceConfigurationProperty.builder()
 
+  /**
+   * @param applicationMaintenanceWindowStartTime Specifies the start time of the maintence window. 
+   */
   public fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String) {
     cdkBuilder.applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime)
   }

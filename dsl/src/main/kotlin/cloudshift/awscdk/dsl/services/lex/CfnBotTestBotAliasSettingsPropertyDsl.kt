@@ -19,37 +19,68 @@ public class CfnBotTestBotAliasSettingsPropertyDsl {
 
   private val _botAliasLocaleSettings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param botAliasLocaleSettings Specifies settings that are unique to a locale.
+   * For example, you can use a different Lambda function depending on the bot's locale.
+   */
   public fun botAliasLocaleSettings(vararg botAliasLocaleSettings: Any) {
     _botAliasLocaleSettings.addAll(listOf(*botAliasLocaleSettings))
   }
 
+  /**
+   * @param botAliasLocaleSettings Specifies settings that are unique to a locale.
+   * For example, you can use a different Lambda function depending on the bot's locale.
+   */
   public fun botAliasLocaleSettings(botAliasLocaleSettings: Collection<Any>) {
     _botAliasLocaleSettings.addAll(botAliasLocaleSettings)
   }
 
+  /**
+   * @param botAliasLocaleSettings Specifies settings that are unique to a locale.
+   * For example, you can use a different Lambda function depending on the bot's locale.
+   */
   public fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable) {
     cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings)
   }
 
+  /**
+   * @param conversationLogSettings Specifies settings for conversation logs that save audio, text,
+   * and metadata information for conversations with your users.
+   */
   public fun conversationLogSettings(conversationLogSettings: IResolvable) {
     cdkBuilder.conversationLogSettings(conversationLogSettings)
   }
 
+  /**
+   * @param conversationLogSettings Specifies settings for conversation logs that save audio, text,
+   * and metadata information for conversations with your users.
+   */
   public
       fun conversationLogSettings(conversationLogSettings: CfnBot.ConversationLogSettingsProperty) {
     cdkBuilder.conversationLogSettings(conversationLogSettings)
   }
 
+  /**
+   * @param description Specifies a description for the test bot alias.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
-  public fun sentimentAnalysisSettings(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param sentimentAnalysisSettings Specifies whether Amazon Lex will use Amazon Comprehend to
+   * detect the sentiment of user utterances.
+   */
+  public fun sentimentAnalysisSettings(sentimentAnalysisSettings: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(sentimentAnalysisSettings)
     cdkBuilder.sentimentAnalysisSettings(builder.map)
   }
 
+  /**
+   * @param sentimentAnalysisSettings Specifies whether Amazon Lex will use Amazon Comprehend to
+   * detect the sentiment of user utterances.
+   */
   public fun sentimentAnalysisSettings(sentimentAnalysisSettings: Any) {
     cdkBuilder.sentimentAnalysisSettings(sentimentAnalysisSettings)
   }

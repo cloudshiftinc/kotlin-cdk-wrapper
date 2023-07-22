@@ -11,10 +11,18 @@ public class CfnLaunchTemplateAcceleratorTotalMemoryMiBPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty.Builder =
       CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty.builder()
 
+  /**
+   * @param max The maximum amount of accelerator memory, in MiB.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum amount of accelerator memory, in MiB.
+   * To specify no minimum limit, omit this parameter.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

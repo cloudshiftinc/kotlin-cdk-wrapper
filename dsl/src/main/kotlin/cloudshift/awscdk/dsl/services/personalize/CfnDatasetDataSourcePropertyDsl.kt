@@ -11,6 +11,10 @@ public class CfnDatasetDataSourcePropertyDsl {
   private val cdkBuilder: CfnDataset.DataSourceProperty.Builder =
       CfnDataset.DataSourceProperty.builder()
 
+  /**
+   * @param dataLocation The path to the Amazon S3 bucket where the data that you want to upload to
+   * your dataset is stored.
+   */
   public fun dataLocation(dataLocation: String) {
     cdkBuilder.dataLocation(dataLocation)
   }

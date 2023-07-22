@@ -11,6 +11,9 @@ public class CfnFlowSourceVpcInterfaceAttachmentPropertyDsl {
   private val cdkBuilder: CfnFlowSource.VpcInterfaceAttachmentProperty.Builder =
       CfnFlowSource.VpcInterfaceAttachmentProperty.builder()
 
+  /**
+   * @param vpcInterfaceName The name of the VPC interface to use for this resource.
+   */
   public fun vpcInterfaceName(vpcInterfaceName: String) {
     cdkBuilder.vpcInterfaceName(vpcInterfaceName)
   }

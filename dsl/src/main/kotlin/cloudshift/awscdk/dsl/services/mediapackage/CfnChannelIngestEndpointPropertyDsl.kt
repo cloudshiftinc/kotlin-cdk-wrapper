@@ -11,18 +11,30 @@ public class CfnChannelIngestEndpointPropertyDsl {
   private val cdkBuilder: CfnChannel.IngestEndpointProperty.Builder =
       CfnChannel.IngestEndpointProperty.builder()
 
+  /**
+   * @param id The endpoint identifier. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param password The system-generated password for WebDAV input authentication. 
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * @param url The input URL where the source stream should be sent. 
+   */
   public fun url(url: String) {
     cdkBuilder.url(url)
   }
 
+  /**
+   * @param username The system-generated username for WebDAV input authentication. 
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

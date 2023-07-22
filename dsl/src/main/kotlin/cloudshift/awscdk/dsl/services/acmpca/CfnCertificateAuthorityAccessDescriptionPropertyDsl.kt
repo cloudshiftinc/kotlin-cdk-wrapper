@@ -11,18 +11,30 @@ public class CfnCertificateAuthorityAccessDescriptionPropertyDsl {
   private val cdkBuilder: CfnCertificateAuthority.AccessDescriptionProperty.Builder =
       CfnCertificateAuthority.AccessDescriptionProperty.builder()
 
+  /**
+   * @param accessLocation The location of `AccessDescription` information. 
+   */
   public fun accessLocation(accessLocation: IResolvable) {
     cdkBuilder.accessLocation(accessLocation)
   }
 
+  /**
+   * @param accessLocation The location of `AccessDescription` information. 
+   */
   public fun accessLocation(accessLocation: CfnCertificateAuthority.GeneralNameProperty) {
     cdkBuilder.accessLocation(accessLocation)
   }
 
+  /**
+   * @param accessMethod The type and format of `AccessDescription` information. 
+   */
   public fun accessMethod(accessMethod: IResolvable) {
     cdkBuilder.accessMethod(accessMethod)
   }
 
+  /**
+   * @param accessMethod The type and format of `AccessDescription` information. 
+   */
   public fun accessMethod(accessMethod: CfnCertificateAuthority.AccessMethodProperty) {
     cdkBuilder.accessMethod(accessMethod)
   }

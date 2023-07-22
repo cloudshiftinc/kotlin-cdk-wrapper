@@ -16,14 +16,23 @@ public class CfnTemplateFreeFormSectionLayoutConfigurationPropertyDsl {
 
   private val _elements: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param elements The elements that are included in the free-form layout. 
+   */
   public fun elements(vararg elements: Any) {
     _elements.addAll(listOf(*elements))
   }
 
+  /**
+   * @param elements The elements that are included in the free-form layout. 
+   */
   public fun elements(elements: Collection<Any>) {
     _elements.addAll(elements)
   }
 
+  /**
+   * @param elements The elements that are included in the free-form layout. 
+   */
   public fun elements(elements: IResolvable) {
     cdkBuilder.elements(elements)
   }

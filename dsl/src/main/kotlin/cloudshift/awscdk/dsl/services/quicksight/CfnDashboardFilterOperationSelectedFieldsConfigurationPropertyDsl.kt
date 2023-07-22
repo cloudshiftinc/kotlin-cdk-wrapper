@@ -19,26 +19,48 @@ public class CfnDashboardFilterOperationSelectedFieldsConfigurationPropertyDsl {
 
   private val _selectedFields: MutableList<String> = mutableListOf()
 
+  /**
+   * @param selectedColumns The selected columns of a dataset.
+   */
   public fun selectedColumns(vararg selectedColumns: Any) {
     _selectedColumns.addAll(listOf(*selectedColumns))
   }
 
+  /**
+   * @param selectedColumns The selected columns of a dataset.
+   */
   public fun selectedColumns(selectedColumns: Collection<Any>) {
     _selectedColumns.addAll(selectedColumns)
   }
 
+  /**
+   * @param selectedColumns The selected columns of a dataset.
+   */
   public fun selectedColumns(selectedColumns: IResolvable) {
     cdkBuilder.selectedColumns(selectedColumns)
   }
 
+  /**
+   * @param selectedFieldOptions A structure that contains the options that choose which fields are
+   * filtered in the `CustomActionFilterOperation` .
+   * Valid values are defined as follows:
+   *
+   * * `ALL_FIELDS` : Applies the filter operation to all fields.
+   */
   public fun selectedFieldOptions(selectedFieldOptions: String) {
     cdkBuilder.selectedFieldOptions(selectedFieldOptions)
   }
 
+  /**
+   * @param selectedFields Chooses the fields that are filtered in `CustomActionFilterOperation` .
+   */
   public fun selectedFields(vararg selectedFields: String) {
     _selectedFields.addAll(listOf(*selectedFields))
   }
 
+  /**
+   * @param selectedFields Chooses the fields that are filtered in `CustomActionFilterOperation` .
+   */
   public fun selectedFields(selectedFields: Collection<String>) {
     _selectedFields.addAll(selectedFields)
   }

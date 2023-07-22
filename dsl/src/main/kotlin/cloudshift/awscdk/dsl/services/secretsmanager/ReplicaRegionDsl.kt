@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
 public class ReplicaRegionDsl {
   private val cdkBuilder: ReplicaRegion.Builder = ReplicaRegion.builder()
 
+  /**
+   * @param encryptionKey The customer-managed encryption key to use for encrypting the secret
+   * value.
+   */
   public fun encryptionKey(encryptionKey: IKey) {
     cdkBuilder.encryptionKey(encryptionKey)
   }
 
+  /**
+   * @param region The name of the region. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }

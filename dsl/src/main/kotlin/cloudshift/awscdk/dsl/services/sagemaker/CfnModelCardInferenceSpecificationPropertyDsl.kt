@@ -16,14 +16,26 @@ public class CfnModelCardInferenceSpecificationPropertyDsl {
 
   private val _containers: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param containers Contains inference related information which were used to create model
+   * package. 
+   */
   public fun containers(vararg containers: Any) {
     _containers.addAll(listOf(*containers))
   }
 
+  /**
+   * @param containers Contains inference related information which were used to create model
+   * package. 
+   */
   public fun containers(containers: Collection<Any>) {
     _containers.addAll(containers)
   }
 
+  /**
+   * @param containers Contains inference related information which were used to create model
+   * package. 
+   */
   public fun containers(containers: IResolvable) {
     cdkBuilder.containers(containers)
   }

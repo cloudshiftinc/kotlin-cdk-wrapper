@@ -11,10 +11,17 @@ public class CfnSimulationApplicationVersionPropsDsl {
   private val cdkBuilder: CfnSimulationApplicationVersionProps.Builder =
       CfnSimulationApplicationVersionProps.builder()
 
+  /**
+   * @param application The application information for the simulation application. 
+   */
   public fun application(application: String) {
     cdkBuilder.application(application)
   }
 
+  /**
+   * @param currentRevisionId The current revision id for the simulation application.
+   * If you provide a value and it matches the latest revision ID, a new version will be created.
+   */
   public fun currentRevisionId(currentRevisionId: String) {
     cdkBuilder.currentRevisionId(currentRevisionId)
   }

@@ -13,22 +13,44 @@ public class CfnFlowLogDestinationOptionsPropertyDsl {
   private val cdkBuilder: CfnFlowLog.DestinationOptionsProperty.Builder =
       CfnFlowLog.DestinationOptionsProperty.builder()
 
+  /**
+   * @param fileFormat The format for the flow log. 
+   * The default is `plain-text` .
+   */
   public fun fileFormat(fileFormat: String) {
     cdkBuilder.fileFormat(fileFormat)
   }
 
+  /**
+   * @param hiveCompatiblePartitions Indicates whether to use Hive-compatible prefixes for flow logs
+   * stored in Amazon S3. 
+   * The default is `false` .
+   */
   public fun hiveCompatiblePartitions(hiveCompatiblePartitions: Boolean) {
     cdkBuilder.hiveCompatiblePartitions(hiveCompatiblePartitions)
   }
 
+  /**
+   * @param hiveCompatiblePartitions Indicates whether to use Hive-compatible prefixes for flow logs
+   * stored in Amazon S3. 
+   * The default is `false` .
+   */
   public fun hiveCompatiblePartitions(hiveCompatiblePartitions: IResolvable) {
     cdkBuilder.hiveCompatiblePartitions(hiveCompatiblePartitions)
   }
 
+  /**
+   * @param perHourPartition Indicates whether to partition the flow log per hour. 
+   * This reduces the cost and response time for queries. The default is `false` .
+   */
   public fun perHourPartition(perHourPartition: Boolean) {
     cdkBuilder.perHourPartition(perHourPartition)
   }
 
+  /**
+   * @param perHourPartition Indicates whether to partition the flow log per hour. 
+   * This reduces the cost and response time for queries. The default is `false` .
+   */
   public fun perHourPartition(perHourPartition: IResolvable) {
     cdkBuilder.perHourPartition(perHourPartition)
   }

@@ -11,10 +11,16 @@ public class CfnBotAudioLogDestinationPropertyDsl {
   private val cdkBuilder: CfnBot.AudioLogDestinationProperty.Builder =
       CfnBot.AudioLogDestinationProperty.builder()
 
+  /**
+   * @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. 
+   */
   public fun s3Bucket(s3Bucket: IResolvable) {
     cdkBuilder.s3Bucket(s3Bucket)
   }
 
+  /**
+   * @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. 
+   */
   public fun s3Bucket(s3Bucket: CfnBot.S3BucketLogDestinationProperty) {
     cdkBuilder.s3Bucket(s3Bucket)
   }

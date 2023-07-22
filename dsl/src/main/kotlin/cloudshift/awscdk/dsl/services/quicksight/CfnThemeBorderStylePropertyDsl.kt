@@ -12,10 +12,16 @@ public class CfnThemeBorderStylePropertyDsl {
   private val cdkBuilder: CfnTheme.BorderStyleProperty.Builder =
       CfnTheme.BorderStyleProperty.builder()
 
+  /**
+   * @param show The option to enable display of borders for visuals.
+   */
   public fun show(show: Boolean) {
     cdkBuilder.show(show)
   }
 
+  /**
+   * @param show The option to enable display of borders for visuals.
+   */
   public fun show(show: IResolvable) {
     cdkBuilder.show(show)
   }

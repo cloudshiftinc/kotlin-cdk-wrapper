@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.databrew.CfnRecipe
 public class CfnRecipeActionPropertyDsl {
   private val cdkBuilder: CfnRecipe.ActionProperty.Builder = CfnRecipe.ActionProperty.builder()
 
+  /**
+   * @param operation The name of a valid DataBrew transformation to be performed on the data. 
+   */
   public fun operation(operation: String) {
     cdkBuilder.operation(operation)
   }
 
+  /**
+   * @param parameters Contextual parameters for the transformation.
+   */
   public fun parameters(parameters: Map<String, String>) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param parameters Contextual parameters for the transformation.
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }

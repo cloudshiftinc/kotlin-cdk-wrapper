@@ -16,14 +16,26 @@ public class CfnAnalysisSelectedSheetsFilterScopeConfigurationPropertyDsl {
 
   private val _sheetVisualScopingConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param sheetVisualScopingConfigurations The sheet ID and visual IDs of the sheet and visuals
+   * that the filter is applied to.
+   */
   public fun sheetVisualScopingConfigurations(vararg sheetVisualScopingConfigurations: Any) {
     _sheetVisualScopingConfigurations.addAll(listOf(*sheetVisualScopingConfigurations))
   }
 
+  /**
+   * @param sheetVisualScopingConfigurations The sheet ID and visual IDs of the sheet and visuals
+   * that the filter is applied to.
+   */
   public fun sheetVisualScopingConfigurations(sheetVisualScopingConfigurations: Collection<Any>) {
     _sheetVisualScopingConfigurations.addAll(sheetVisualScopingConfigurations)
   }
 
+  /**
+   * @param sheetVisualScopingConfigurations The sheet ID and visual IDs of the sheet and visuals
+   * that the filter is applied to.
+   */
   public fun sheetVisualScopingConfigurations(sheetVisualScopingConfigurations: IResolvable) {
     cdkBuilder.sheetVisualScopingConfigurations(sheetVisualScopingConfigurations)
   }

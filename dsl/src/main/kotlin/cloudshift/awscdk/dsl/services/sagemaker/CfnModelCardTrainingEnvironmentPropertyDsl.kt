@@ -15,10 +15,16 @@ public class CfnModelCardTrainingEnvironmentPropertyDsl {
 
   private val _containerImage: MutableList<String> = mutableListOf()
 
+  /**
+   * @param containerImage SageMaker inference image URI.
+   */
   public fun containerImage(vararg containerImage: String) {
     _containerImage.addAll(listOf(*containerImage))
   }
 
+  /**
+   * @param containerImage SageMaker inference image URI.
+   */
   public fun containerImage(containerImage: Collection<String>) {
     _containerImage.addAll(containerImage)
   }

@@ -11,6 +11,10 @@ public class CfnRouteDefaultRouteInputPropertyDsl {
   private val cdkBuilder: CfnRoute.DefaultRouteInputProperty.Builder =
       CfnRoute.DefaultRouteInputProperty.builder()
 
+  /**
+   * @param activationState If set to `ACTIVE` , traffic is forwarded to this route’s service after
+   * the route is created. 
+   */
   public fun activationState(activationState: String) {
     cdkBuilder.activationState(activationState)
   }

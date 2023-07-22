@@ -13,14 +13,24 @@ public class CfnConfigurationSetEventDestinationPropsDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestinationProps.Builder =
       CfnConfigurationSetEventDestinationProps.builder()
 
+  /**
+   * @param configurationSetName The name of the configuration set that contains the event
+   * destination. 
+   */
   public fun configurationSetName(configurationSetName: String) {
     cdkBuilder.configurationSetName(configurationSetName)
   }
 
+  /**
+   * @param eventDestination The event destination object. 
+   */
   public fun eventDestination(eventDestination: IResolvable) {
     cdkBuilder.eventDestination(eventDestination)
   }
 
+  /**
+   * @param eventDestination The event destination object. 
+   */
   public
       fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty) {
     cdkBuilder.eventDestination(eventDestination)

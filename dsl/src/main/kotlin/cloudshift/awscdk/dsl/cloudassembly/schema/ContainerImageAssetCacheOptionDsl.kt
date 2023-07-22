@@ -12,10 +12,18 @@ public class ContainerImageAssetCacheOptionDsl {
   private val cdkBuilder: ContainerImageAssetCacheOption.Builder =
       ContainerImageAssetCacheOption.builder()
 
+  /**
+   * @param params Any parameters to pass into the docker cache backend configuration.
+   * Refer to https://docs.docker.com/build/cache/backends/ for cache backend configuration.
+   */
   public fun params(params: Map<String, String>) {
     cdkBuilder.params(params)
   }
 
+  /**
+   * @param type The type of cache to use. 
+   * Refer to https://docs.docker.com/build/cache/backends/ for full list of backends.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

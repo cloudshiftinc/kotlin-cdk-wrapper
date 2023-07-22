@@ -11,6 +11,10 @@ public class CfnAliasProvisionedConcurrencyConfigurationPropertyDsl {
   private val cdkBuilder: CfnAlias.ProvisionedConcurrencyConfigurationProperty.Builder =
       CfnAlias.ProvisionedConcurrencyConfigurationProperty.builder()
 
+  /**
+   * @param provisionedConcurrentExecutions The amount of provisioned concurrency to allocate for
+   * the alias. 
+   */
   public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
     cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
   }

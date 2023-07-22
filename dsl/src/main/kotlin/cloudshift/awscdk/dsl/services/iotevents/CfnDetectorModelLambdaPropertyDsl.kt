@@ -12,14 +12,25 @@ public class CfnDetectorModelLambdaPropertyDsl {
   private val cdkBuilder: CfnDetectorModel.LambdaProperty.Builder =
       CfnDetectorModel.LambdaProperty.builder()
 
+  /**
+   * @param functionArn The ARN of the Lambda function that is executed. 
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }
 
+  /**
+   * @param payload You can configure the action payload when you send a message to a Lambda
+   * function.
+   */
   public fun payload(payload: IResolvable) {
     cdkBuilder.payload(payload)
   }
 
+  /**
+   * @param payload You can configure the action payload when you send a message to a Lambda
+   * function.
+   */
   public fun payload(payload: CfnDetectorModel.PayloadProperty) {
     cdkBuilder.payload(payload)
   }

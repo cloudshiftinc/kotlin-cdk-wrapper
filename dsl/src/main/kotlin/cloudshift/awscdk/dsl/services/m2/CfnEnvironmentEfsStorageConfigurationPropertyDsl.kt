@@ -11,10 +11,16 @@ public class CfnEnvironmentEfsStorageConfigurationPropertyDsl {
   private val cdkBuilder: CfnEnvironment.EfsStorageConfigurationProperty.Builder =
       CfnEnvironment.EfsStorageConfigurationProperty.builder()
 
+  /**
+   * @param fileSystemId The file system identifier. 
+   */
   public fun fileSystemId(fileSystemId: String) {
     cdkBuilder.fileSystemId(fileSystemId)
   }
 
+  /**
+   * @param mountPoint The mount point for the file system. 
+   */
   public fun mountPoint(mountPoint: String) {
     cdkBuilder.mountPoint(mountPoint)
   }

@@ -15,10 +15,18 @@ public class CfnResponseHeadersPolicyAccessControlAllowOriginsPropertyDsl {
 
   private val _items: MutableList<String> = mutableListOf()
 
+  /**
+   * @param items The list of origins (domain names). 
+   * You can specify `*` to allow all origins.
+   */
   public fun items(vararg items: String) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * @param items The list of origins (domain names). 
+   * You can specify `*` to allow all origins.
+   */
   public fun items(items: Collection<String>) {
     _items.addAll(items)
   }

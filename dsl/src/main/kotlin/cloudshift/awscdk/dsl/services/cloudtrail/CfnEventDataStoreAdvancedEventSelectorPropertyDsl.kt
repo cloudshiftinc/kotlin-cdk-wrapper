@@ -17,18 +17,31 @@ public class CfnEventDataStoreAdvancedEventSelectorPropertyDsl {
 
   private val _fieldSelectors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+   */
   public fun fieldSelectors(vararg fieldSelectors: Any) {
     _fieldSelectors.addAll(listOf(*fieldSelectors))
   }
 
+  /**
+   * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+   */
   public fun fieldSelectors(fieldSelectors: Collection<Any>) {
     _fieldSelectors.addAll(fieldSelectors)
   }
 
+  /**
+   * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+   */
   public fun fieldSelectors(fieldSelectors: IResolvable) {
     cdkBuilder.fieldSelectors(fieldSelectors)
   }
 
+  /**
+   * @param name An optional, descriptive name for an advanced event selector, such as "Log data
+   * events for only two S3 buckets".
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

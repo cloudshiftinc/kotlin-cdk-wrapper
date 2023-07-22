@@ -11,14 +11,23 @@ public class CfnDomainConfigurationServerCertificateSummaryPropertyDsl {
   private val cdkBuilder: CfnDomainConfiguration.ServerCertificateSummaryProperty.Builder =
       CfnDomainConfiguration.ServerCertificateSummaryProperty.builder()
 
+  /**
+   * @param serverCertificateArn The ARN of the server certificate.
+   */
   public fun serverCertificateArn(serverCertificateArn: String) {
     cdkBuilder.serverCertificateArn(serverCertificateArn)
   }
 
+  /**
+   * @param serverCertificateStatus The status of the server certificate.
+   */
   public fun serverCertificateStatus(serverCertificateStatus: String) {
     cdkBuilder.serverCertificateStatus(serverCertificateStatus)
   }
 
+  /**
+   * @param serverCertificateStatusDetail Details that explain the status of the server certificate.
+   */
   public fun serverCertificateStatusDetail(serverCertificateStatusDetail: String) {
     cdkBuilder.serverCertificateStatusDetail(serverCertificateStatusDetail)
   }

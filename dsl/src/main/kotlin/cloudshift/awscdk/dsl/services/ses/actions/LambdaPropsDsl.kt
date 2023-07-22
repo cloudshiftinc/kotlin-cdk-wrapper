@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.sns.ITopic
 public class LambdaPropsDsl {
   private val cdkBuilder: LambdaProps.Builder = LambdaProps.builder()
 
+  /**
+   * @param function The Lambda function to invoke. 
+   */
   public fun function(function: IFunction) {
     cdkBuilder.function(function)
   }
 
+  /**
+   * @param invocationType The invocation type of the Lambda function.
+   */
   public fun invocationType(invocationType: LambdaInvocationType) {
     cdkBuilder.invocationType(invocationType)
   }
 
+  /**
+   * @param topic The SNS topic to notify when the Lambda action is taken.
+   */
   public fun topic(topic: ITopic) {
     cdkBuilder.topic(topic)
   }

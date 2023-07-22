@@ -11,6 +11,9 @@ public class CfnInputInputDeviceSettingsPropertyDsl {
   private val cdkBuilder: CfnInput.InputDeviceSettingsProperty.Builder =
       CfnInput.InputDeviceSettingsProperty.builder()
 
+  /**
+   * @param id The unique ID for the device.
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }

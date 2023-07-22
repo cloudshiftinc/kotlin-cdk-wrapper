@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.logs.destinations.KinesisDestinationProps
 public class KinesisDestinationPropsDsl {
   private val cdkBuilder: KinesisDestinationProps.Builder = KinesisDestinationProps.builder()
 
+  /**
+   * @param role The role to assume to write log events to the destination.
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

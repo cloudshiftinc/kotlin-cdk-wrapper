@@ -13,15 +13,26 @@ public class CfnSecurityConfigurationPropsDsl {
   private val cdkBuilder: CfnSecurityConfigurationProps.Builder =
       CfnSecurityConfigurationProps.builder()
 
+  /**
+   * @param encryptionConfiguration The encryption configuration associated with this security
+   * configuration. 
+   */
   public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
     cdkBuilder.encryptionConfiguration(encryptionConfiguration)
   }
 
+  /**
+   * @param encryptionConfiguration The encryption configuration associated with this security
+   * configuration. 
+   */
   public
       fun encryptionConfiguration(encryptionConfiguration: CfnSecurityConfiguration.EncryptionConfigurationProperty) {
     cdkBuilder.encryptionConfiguration(encryptionConfiguration)
   }
 
+  /**
+   * @param name The name of the security configuration. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

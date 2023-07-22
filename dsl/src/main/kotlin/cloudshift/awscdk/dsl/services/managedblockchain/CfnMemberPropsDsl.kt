@@ -12,26 +12,47 @@ import software.amazon.awscdk.services.managedblockchain.CfnMemberProps
 public class CfnMemberPropsDsl {
   private val cdkBuilder: CfnMemberProps.Builder = CfnMemberProps.builder()
 
+  /**
+   * @param invitationId The unique identifier of the invitation to join the network sent to the
+   * account that creates the member.
+   */
   public fun invitationId(invitationId: String) {
     cdkBuilder.invitationId(invitationId)
   }
 
+  /**
+   * @param memberConfiguration Configuration properties of the member. 
+   */
   public fun memberConfiguration(memberConfiguration: IResolvable) {
     cdkBuilder.memberConfiguration(memberConfiguration)
   }
 
+  /**
+   * @param memberConfiguration Configuration properties of the member. 
+   */
   public fun memberConfiguration(memberConfiguration: CfnMember.MemberConfigurationProperty) {
     cdkBuilder.memberConfiguration(memberConfiguration)
   }
 
+  /**
+   * @param networkConfiguration Configuration properties of the network to which the member
+   * belongs.
+   */
   public fun networkConfiguration(networkConfiguration: IResolvable) {
     cdkBuilder.networkConfiguration(networkConfiguration)
   }
 
+  /**
+   * @param networkConfiguration Configuration properties of the network to which the member
+   * belongs.
+   */
   public fun networkConfiguration(networkConfiguration: CfnMember.NetworkConfigurationProperty) {
     cdkBuilder.networkConfiguration(networkConfiguration)
   }
 
+  /**
+   * @param networkId The unique identifier of the network to which the member belongs.
+   */
   public fun networkId(networkId: String) {
     cdkBuilder.networkId(networkId)
   }

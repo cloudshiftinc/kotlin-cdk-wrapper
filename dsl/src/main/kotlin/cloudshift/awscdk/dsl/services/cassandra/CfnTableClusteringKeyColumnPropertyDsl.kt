@@ -12,14 +12,25 @@ public class CfnTableClusteringKeyColumnPropertyDsl {
   private val cdkBuilder: CfnTable.ClusteringKeyColumnProperty.Builder =
       CfnTable.ClusteringKeyColumnProperty.builder()
 
+  /**
+   * @param column The name and data type of this clustering key column. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The name and data type of this clustering key column. 
+   */
   public fun column(column: CfnTable.ColumnProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param orderBy The order in which this column's data is stored:.
+   * * `ASC` (default) - The column's data is stored in ascending order.
+   * * `DESC` - The column's data is stored in descending order.
+   */
   public fun orderBy(orderBy: String) {
     cdkBuilder.orderBy(orderBy)
   }

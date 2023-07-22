@@ -26,90 +26,167 @@ public class DockerImageAssetPropsDsl {
 
   private val _outputs: MutableList<String> = mutableListOf()
 
+  /**
+   * @param assetName Unique identifier of the docker image asset and its potential revisions.
+   * Required if using AppScopedStagingSynthesizer.
+   */
   public fun assetName(assetName: String) {
     cdkBuilder.assetName(assetName)
   }
 
+  /**
+   * @param buildArgs Build args to pass to the `docker build` command.
+   * Since Docker build arguments are resolved before deployment, keys and
+   * values cannot refer to unresolved tokens (such as `lambda.functionArn` or
+   * `queue.queueUrl`).
+   */
   public fun buildArgs(buildArgs: Map<String, String>) {
     cdkBuilder.buildArgs(buildArgs)
   }
 
+  /**
+   * @param buildSecrets Build secrets.
+   * Docker BuildKit must be enabled to use build secrets.
+   */
   public fun buildSecrets(buildSecrets: Map<String, String>) {
     cdkBuilder.buildSecrets(buildSecrets)
   }
 
+  /**
+   * @param cacheFrom Cache from options to pass to the `docker build` command.
+   */
   public fun cacheFrom(cacheFrom: DockerCacheOptionDsl.() -> Unit) {
     _cacheFrom.add(DockerCacheOptionDsl().apply(cacheFrom).build())
   }
 
+  /**
+   * @param cacheFrom Cache from options to pass to the `docker build` command.
+   */
   public fun cacheFrom(cacheFrom: Collection<DockerCacheOption>) {
     _cacheFrom.addAll(cacheFrom)
   }
 
-  public fun cacheTo(block: DockerCacheOptionDsl.() -> Unit = {}) {
+  /**
+   * @param cacheTo Cache to options to pass to the `docker build` command.
+   */
+  public fun cacheTo(cacheTo: DockerCacheOptionDsl.() -> Unit = {}) {
     val builder = DockerCacheOptionDsl()
-    builder.apply(block)
+    builder.apply(cacheTo)
     cdkBuilder.cacheTo(builder.build())
   }
 
+  /**
+   * @param cacheTo Cache to options to pass to the `docker build` command.
+   */
   public fun cacheTo(cacheTo: DockerCacheOption) {
     cdkBuilder.cacheTo(cacheTo)
   }
 
+  /**
+   * @param directory The directory where the Dockerfile is stored. 
+   * Any directory inside with a name that matches the CDK output folder (cdk.out by default) will
+   * be excluded from the asset
+   */
   public fun directory(directory: String) {
     cdkBuilder.directory(directory)
   }
 
+  /**
+   * @param exclude File paths matching the patterns will be excluded.
+   * See `ignoreMode` to set the matching behavior.
+   * Has no effect on Assets bundled using the `bundling` property.
+   */
   public fun exclude(vararg exclude: String) {
     _exclude.addAll(listOf(*exclude))
   }
 
+  /**
+   * @param exclude File paths matching the patterns will be excluded.
+   * See `ignoreMode` to set the matching behavior.
+   * Has no effect on Assets bundled using the `bundling` property.
+   */
   public fun exclude(exclude: Collection<String>) {
     _exclude.addAll(exclude)
   }
 
+  /**
+   * @param extraHash Extra information to encode into the fingerprint (e.g. build instructions and
+   * other inputs).
+   */
   public fun extraHash(extraHash: String) {
     cdkBuilder.extraHash(extraHash)
   }
 
+  /**
+   * @param file Path to the Dockerfile (relative to the directory).
+   */
   public fun `file`(`file`: String) {
     cdkBuilder.`file`(`file`)
   }
 
+  /**
+   * @param followSymlinks A strategy for how to handle symlinks.
+   */
   public fun followSymlinks(followSymlinks: SymlinkFollowMode) {
     cdkBuilder.followSymlinks(followSymlinks)
   }
 
+  /**
+   * @param ignoreMode The ignore behavior to use for `exclude` patterns.
+   */
   public fun ignoreMode(ignoreMode: IgnoreMode) {
     cdkBuilder.ignoreMode(ignoreMode)
   }
 
-  public fun invalidation(block: DockerImageAssetInvalidationOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param invalidation Options to control which parameters are used to invalidate the asset hash.
+   */
+  public fun invalidation(invalidation: DockerImageAssetInvalidationOptionsDsl.() -> Unit = {}) {
     val builder = DockerImageAssetInvalidationOptionsDsl()
-    builder.apply(block)
+    builder.apply(invalidation)
     cdkBuilder.invalidation(builder.build())
   }
 
+  /**
+   * @param invalidation Options to control which parameters are used to invalidate the asset hash.
+   */
   public fun invalidation(invalidation: DockerImageAssetInvalidationOptions) {
     cdkBuilder.invalidation(invalidation)
   }
 
+  /**
+   * @param networkMode Networking mode for the RUN commands during build.
+   * Support docker API 1.25+.
+   */
   public fun networkMode(networkMode: NetworkMode) {
     cdkBuilder.networkMode(networkMode)
   }
 
+  /**
+   * @param outputs Outputs to pass to the `docker build` command.
+   */
   public fun outputs(vararg outputs: String) {
     _outputs.addAll(listOf(*outputs))
   }
 
+  /**
+   * @param outputs Outputs to pass to the `docker build` command.
+   */
   public fun outputs(outputs: Collection<String>) {
     _outputs.addAll(outputs)
   }
 
+  /**
+   * @param platform Platform to build for.
+   * *Requires Docker Buildx*.
+   */
   public fun platform(platform: Platform) {
     cdkBuilder.platform(platform)
   }
 
+  /**
+   * @param target Docker target to build to.
+   */
   public fun target(target: String) {
     cdkBuilder.target(target)
   }

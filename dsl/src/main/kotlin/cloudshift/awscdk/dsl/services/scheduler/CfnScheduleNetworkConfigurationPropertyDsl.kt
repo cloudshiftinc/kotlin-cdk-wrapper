@@ -11,10 +11,20 @@ public class CfnScheduleNetworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnSchedule.NetworkConfigurationProperty.Builder =
       CfnSchedule.NetworkConfigurationProperty.builder()
 
+  /**
+   * @param awsvpcConfiguration Specifies the Amazon VPC subnets and security groups for the task,
+   * and whether a public IP address is to be used.
+   * This structure is relevant only for ECS tasks that use the awsvpc network mode.
+   */
   public fun awsvpcConfiguration(awsvpcConfiguration: IResolvable) {
     cdkBuilder.awsvpcConfiguration(awsvpcConfiguration)
   }
 
+  /**
+   * @param awsvpcConfiguration Specifies the Amazon VPC subnets and security groups for the task,
+   * and whether a public IP address is to be used.
+   * This structure is relevant only for ECS tasks that use the awsvpc network mode.
+   */
   public fun awsvpcConfiguration(awsvpcConfiguration: CfnSchedule.AwsVpcConfigurationProperty) {
     cdkBuilder.awsvpcConfiguration(awsvpcConfiguration)
   }

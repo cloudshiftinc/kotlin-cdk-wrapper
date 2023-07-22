@@ -13,22 +13,37 @@ public class CfnAppBlockScriptDetailsPropertyDsl {
   private val cdkBuilder: CfnAppBlock.ScriptDetailsProperty.Builder =
       CfnAppBlock.ScriptDetailsProperty.builder()
 
+  /**
+   * @param executableParameters The parameters used in the run path for the script.
+   */
   public fun executableParameters(executableParameters: String) {
     cdkBuilder.executableParameters(executableParameters)
   }
 
+  /**
+   * @param executablePath The run path for the script. 
+   */
   public fun executablePath(executablePath: String) {
     cdkBuilder.executablePath(executablePath)
   }
 
+  /**
+   * @param scriptS3Location The S3 object location of the script. 
+   */
   public fun scriptS3Location(scriptS3Location: IResolvable) {
     cdkBuilder.scriptS3Location(scriptS3Location)
   }
 
+  /**
+   * @param scriptS3Location The S3 object location of the script. 
+   */
   public fun scriptS3Location(scriptS3Location: CfnAppBlock.S3LocationProperty) {
     cdkBuilder.scriptS3Location(scriptS3Location)
   }
 
+  /**
+   * @param timeoutInSeconds The run timeout, in seconds, for the script. 
+   */
   public fun timeoutInSeconds(timeoutInSeconds: Number) {
     cdkBuilder.timeoutInSeconds(timeoutInSeconds)
   }

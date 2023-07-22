@@ -16,46 +16,96 @@ public class CfnStackSetConstraintPropsDsl {
 
   private val _regionList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param acceptLanguage The language code.
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   */
   public fun acceptLanguage(acceptLanguage: String) {
     cdkBuilder.acceptLanguage(acceptLanguage)
   }
 
+  /**
+   * @param accountList One or more AWS accounts that will have access to the provisioned product. 
+   */
   public fun accountList(vararg accountList: String) {
     _accountList.addAll(listOf(*accountList))
   }
 
+  /**
+   * @param accountList One or more AWS accounts that will have access to the provisioned product. 
+   */
   public fun accountList(accountList: Collection<String>) {
     _accountList.addAll(accountList)
   }
 
+  /**
+   * @param adminRole AdminRole ARN. 
+   */
   public fun adminRole(adminRole: String) {
     cdkBuilder.adminRole(adminRole)
   }
 
+  /**
+   * @param description The description of the constraint. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param executionRole ExecutionRole name. 
+   */
   public fun executionRole(executionRole: String) {
     cdkBuilder.executionRole(executionRole)
   }
 
+  /**
+   * @param portfolioId The portfolio identifier. 
+   */
   public fun portfolioId(portfolioId: String) {
     cdkBuilder.portfolioId(portfolioId)
   }
 
+  /**
+   * @param productId The product identifier. 
+   */
   public fun productId(productId: String) {
     cdkBuilder.productId(productId)
   }
 
+  /**
+   * @param regionList One or more AWS Regions where the provisioned product will be available. 
+   * Applicable only to a `CFN_STACKSET` provisioned product type.
+   *
+   * The specified Regions should be within the list of Regions from the `STACKSET` constraint. To
+   * get the list of Regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters`
+   * operation.
+   *
+   * If no values are specified, the default value is all Regions from the `STACKSET` constraint.
+   */
   public fun regionList(vararg regionList: String) {
     _regionList.addAll(listOf(*regionList))
   }
 
+  /**
+   * @param regionList One or more AWS Regions where the provisioned product will be available. 
+   * Applicable only to a `CFN_STACKSET` provisioned product type.
+   *
+   * The specified Regions should be within the list of Regions from the `STACKSET` constraint. To
+   * get the list of Regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters`
+   * operation.
+   *
+   * If no values are specified, the default value is all Regions from the `STACKSET` constraint.
+   */
   public fun regionList(regionList: Collection<String>) {
     _regionList.addAll(regionList)
   }
 
+  /**
+   * @param stackInstanceControl Permission to create, update, and delete stack instances. 
+   * Choose from ALLOWED and NOT_ALLOWED.
+   */
   public fun stackInstanceControl(stackInstanceControl: String) {
     cdkBuilder.stackInstanceControl(stackInstanceControl)
   }

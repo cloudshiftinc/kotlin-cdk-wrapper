@@ -12,14 +12,23 @@ public class CfnThemeThemeValuesPropertyDsl {
   private val cdkBuilder: CfnTheme.ThemeValuesProperty.Builder =
       CfnTheme.ThemeValuesProperty.builder()
 
+  /**
+   * @param key The name of the property.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The value of the property.
+   */
   public fun `value`(`value`: IResolvable) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param value The value of the property.
+   */
   public fun `value`(`value`: CfnTheme.ThemeValueProperty) {
     cdkBuilder.`value`(`value`)
   }

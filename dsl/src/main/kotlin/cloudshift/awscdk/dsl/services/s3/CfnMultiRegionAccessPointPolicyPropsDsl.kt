@@ -14,16 +14,25 @@ public class CfnMultiRegionAccessPointPolicyPropsDsl {
   private val cdkBuilder: CfnMultiRegionAccessPointPolicyProps.Builder =
       CfnMultiRegionAccessPointPolicyProps.builder()
 
+  /**
+   * @param mrapName The name of the Multi-Region Access Point. 
+   */
   public fun mrapName(mrapName: String) {
     cdkBuilder.mrapName(mrapName)
   }
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policy The access policy associated with the Multi-Region Access Point. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * @param policy The access policy associated with the Multi-Region Access Point. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }

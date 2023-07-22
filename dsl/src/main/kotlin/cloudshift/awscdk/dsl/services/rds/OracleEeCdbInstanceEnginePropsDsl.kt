@@ -11,6 +11,9 @@ public class OracleEeCdbInstanceEnginePropsDsl {
   private val cdkBuilder: OracleEeCdbInstanceEngineProps.Builder =
       OracleEeCdbInstanceEngineProps.builder()
 
+  /**
+   * @param version The exact version of the engine to use. 
+   */
   public fun version(version: OracleEngineVersion) {
     cdkBuilder.version(version)
   }

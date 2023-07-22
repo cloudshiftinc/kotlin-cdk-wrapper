@@ -12,22 +12,34 @@ import software.amazon.awscdk.services.cloudfront.OriginFailoverConfig
 public class OriginBindConfigDsl {
   private val cdkBuilder: OriginBindConfig.Builder = OriginBindConfig.builder()
 
-  public fun failoverConfig(block: OriginFailoverConfigDsl.() -> Unit = {}) {
+  /**
+   * @param failoverConfig The failover configuration for this Origin.
+   */
+  public fun failoverConfig(failoverConfig: OriginFailoverConfigDsl.() -> Unit = {}) {
     val builder = OriginFailoverConfigDsl()
-    builder.apply(block)
+    builder.apply(failoverConfig)
     cdkBuilder.failoverConfig(builder.build())
   }
 
+  /**
+   * @param failoverConfig The failover configuration for this Origin.
+   */
   public fun failoverConfig(failoverConfig: OriginFailoverConfig) {
     cdkBuilder.failoverConfig(failoverConfig)
   }
 
-  public fun originProperty(block: CfnDistributionOriginPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param originProperty The CloudFormation OriginProperty configuration for this Origin.
+   */
+  public fun originProperty(originProperty: CfnDistributionOriginPropertyDsl.() -> Unit = {}) {
     val builder = CfnDistributionOriginPropertyDsl()
-    builder.apply(block)
+    builder.apply(originProperty)
     cdkBuilder.originProperty(builder.build())
   }
 
+  /**
+   * @param originProperty The CloudFormation OriginProperty configuration for this Origin.
+   */
   public fun originProperty(originProperty: CfnDistribution.OriginProperty) {
     cdkBuilder.originProperty(originProperty)
   }

@@ -16,22 +16,37 @@ public class CfnChannelAudioTrackSelectionPropertyDsl {
 
   private val _tracks: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dolbyEDecode the value to be set.
+   */
   public fun dolbyEDecode(dolbyEDecode: IResolvable) {
     cdkBuilder.dolbyEDecode(dolbyEDecode)
   }
 
+  /**
+   * @param dolbyEDecode the value to be set.
+   */
   public fun dolbyEDecode(dolbyEDecode: CfnChannel.AudioDolbyEDecodeProperty) {
     cdkBuilder.dolbyEDecode(dolbyEDecode)
   }
 
+  /**
+   * @param tracks Selects one or more unique audio tracks from within a source.
+   */
   public fun tracks(vararg tracks: Any) {
     _tracks.addAll(listOf(*tracks))
   }
 
+  /**
+   * @param tracks Selects one or more unique audio tracks from within a source.
+   */
   public fun tracks(tracks: Collection<Any>) {
     _tracks.addAll(tracks)
   }
 
+  /**
+   * @param tracks Selects one or more unique audio tracks from within a source.
+   */
   public fun tracks(tracks: IResolvable) {
     cdkBuilder.tracks(tracks)
   }

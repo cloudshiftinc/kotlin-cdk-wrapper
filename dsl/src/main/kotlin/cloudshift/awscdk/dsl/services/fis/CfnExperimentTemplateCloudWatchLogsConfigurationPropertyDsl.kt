@@ -11,6 +11,10 @@ public class CfnExperimentTemplateCloudWatchLogsConfigurationPropertyDsl {
   private val cdkBuilder: CfnExperimentTemplate.CloudWatchLogsConfigurationProperty.Builder =
       CfnExperimentTemplate.CloudWatchLogsConfigurationProperty.builder()
 
+  /**
+   * @param logGroupArn The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log
+   * group. 
+   */
   public fun logGroupArn(logGroupArn: String) {
     cdkBuilder.logGroupArn(logGroupArn)
   }

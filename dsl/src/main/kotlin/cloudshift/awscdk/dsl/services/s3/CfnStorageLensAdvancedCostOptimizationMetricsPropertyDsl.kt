@@ -12,10 +12,16 @@ public class CfnStorageLensAdvancedCostOptimizationMetricsPropertyDsl {
   private val cdkBuilder: CfnStorageLens.AdvancedCostOptimizationMetricsProperty.Builder =
       CfnStorageLens.AdvancedCostOptimizationMetricsProperty.builder()
 
+  /**
+   * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
+   */
   public fun isEnabled(isEnabled: Boolean) {
     cdkBuilder.isEnabled(isEnabled)
   }
 
+  /**
+   * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
+   */
   public fun isEnabled(isEnabled: IResolvable) {
     cdkBuilder.isEnabled(isEnabled)
   }

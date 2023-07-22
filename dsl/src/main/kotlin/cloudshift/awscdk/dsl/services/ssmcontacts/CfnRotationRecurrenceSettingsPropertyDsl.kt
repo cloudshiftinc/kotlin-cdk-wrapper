@@ -24,54 +24,99 @@ public class CfnRotationRecurrenceSettingsPropertyDsl {
 
   private val _weeklySettings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dailySettings Information about on-call rotations that recur daily.
+   */
   public fun dailySettings(vararg dailySettings: String) {
     _dailySettings.addAll(listOf(*dailySettings))
   }
 
+  /**
+   * @param dailySettings Information about on-call rotations that recur daily.
+   */
   public fun dailySettings(dailySettings: Collection<String>) {
     _dailySettings.addAll(dailySettings)
   }
 
+  /**
+   * @param monthlySettings Information about on-call rotations that recur monthly.
+   */
   public fun monthlySettings(vararg monthlySettings: Any) {
     _monthlySettings.addAll(listOf(*monthlySettings))
   }
 
+  /**
+   * @param monthlySettings Information about on-call rotations that recur monthly.
+   */
   public fun monthlySettings(monthlySettings: Collection<Any>) {
     _monthlySettings.addAll(monthlySettings)
   }
 
+  /**
+   * @param monthlySettings Information about on-call rotations that recur monthly.
+   */
   public fun monthlySettings(monthlySettings: IResolvable) {
     cdkBuilder.monthlySettings(monthlySettings)
   }
 
+  /**
+   * @param numberOfOnCalls The number of contacts, or shift team members designated to be on call
+   * concurrently during a shift. 
+   * For example, in an on-call schedule that contains ten contacts, a value of `2` designates that
+   * two of them are on call at any given time.
+   */
   public fun numberOfOnCalls(numberOfOnCalls: Number) {
     cdkBuilder.numberOfOnCalls(numberOfOnCalls)
   }
 
+  /**
+   * @param recurrenceMultiplier The number of days, weeks, or months a single rotation lasts. 
+   */
   public fun recurrenceMultiplier(recurrenceMultiplier: Number) {
     cdkBuilder.recurrenceMultiplier(recurrenceMultiplier)
   }
 
+  /**
+   * @param shiftCoverages Information about the days of the week included in on-call rotation
+   * coverage.
+   */
   public fun shiftCoverages(vararg shiftCoverages: Any) {
     _shiftCoverages.addAll(listOf(*shiftCoverages))
   }
 
+  /**
+   * @param shiftCoverages Information about the days of the week included in on-call rotation
+   * coverage.
+   */
   public fun shiftCoverages(shiftCoverages: Collection<Any>) {
     _shiftCoverages.addAll(shiftCoverages)
   }
 
+  /**
+   * @param shiftCoverages Information about the days of the week included in on-call rotation
+   * coverage.
+   */
   public fun shiftCoverages(shiftCoverages: IResolvable) {
     cdkBuilder.shiftCoverages(shiftCoverages)
   }
 
+  /**
+   * @param weeklySettings Information about on-call rotations that recur weekly.
+   */
   public fun weeklySettings(vararg weeklySettings: Any) {
     _weeklySettings.addAll(listOf(*weeklySettings))
   }
 
+  /**
+   * @param weeklySettings Information about on-call rotations that recur weekly.
+   */
   public fun weeklySettings(weeklySettings: Collection<Any>) {
     _weeklySettings.addAll(weeklySettings)
   }
 
+  /**
+   * @param weeklySettings Information about on-call rotations that recur weekly.
+   */
   public fun weeklySettings(weeklySettings: IResolvable) {
     cdkBuilder.weeklySettings(weeklySettings)
   }

@@ -15,14 +15,23 @@ public class CfnCidrCollectionLocationPropertyDsl {
 
   private val _cidrList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param cidrList List of CIDR blocks. 
+   */
   public fun cidrList(vararg cidrList: String) {
     _cidrList.addAll(listOf(*cidrList))
   }
 
+  /**
+   * @param cidrList List of CIDR blocks. 
+   */
   public fun cidrList(cidrList: Collection<String>) {
     _cidrList.addAll(cidrList)
   }
 
+  /**
+   * @param locationName The CIDR collection location name. 
+   */
   public fun locationName(locationName: String) {
     cdkBuilder.locationName(locationName)
   }

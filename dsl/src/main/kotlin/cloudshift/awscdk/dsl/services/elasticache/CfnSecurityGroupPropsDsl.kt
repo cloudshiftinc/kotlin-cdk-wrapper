@@ -17,14 +17,27 @@ public class CfnSecurityGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description for the cache security group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param tags A tag that can be added to an ElastiCache security group.
+   * Tags are composed of a Key/Value pair. You can use tags to categorize and track all your
+   * security groups. A tag with a null Value is permitted.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A tag that can be added to an ElastiCache security group.
+   * Tags are composed of a Key/Value pair. You can use tags to categorize and track all your
+   * security groups. A tag with a null Value is permitted.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

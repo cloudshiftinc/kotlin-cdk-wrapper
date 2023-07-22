@@ -11,6 +11,9 @@ public class CfnAnnotationStoreReferenceItemPropertyDsl {
   private val cdkBuilder: CfnAnnotationStore.ReferenceItemProperty.Builder =
       CfnAnnotationStore.ReferenceItemProperty.builder()
 
+  /**
+   * @param referenceArn The reference's ARN. 
+   */
   public fun referenceArn(referenceArn: String) {
     cdkBuilder.referenceArn(referenceArn)
   }

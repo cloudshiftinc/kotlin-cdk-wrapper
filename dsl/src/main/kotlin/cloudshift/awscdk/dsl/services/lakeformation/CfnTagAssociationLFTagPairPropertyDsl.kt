@@ -15,18 +15,33 @@ public class CfnTagAssociationLFTagPairPropertyDsl {
 
   private val _tagValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param catalogId The identifier for the Data Catalog . 
+   * By default, it is the account ID of the caller.
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * @param tagKey The key-name for the LF-tag. 
+   */
   public fun tagKey(tagKey: String) {
     cdkBuilder.tagKey(tagKey)
   }
 
+  /**
+   * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag key-value
+   * pair. 
+   */
   public fun tagValues(vararg tagValues: String) {
     _tagValues.addAll(listOf(*tagValues))
   }
 
+  /**
+   * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag key-value
+   * pair. 
+   */
   public fun tagValues(tagValues: Collection<String>) {
     _tagValues.addAll(tagValues)
   }

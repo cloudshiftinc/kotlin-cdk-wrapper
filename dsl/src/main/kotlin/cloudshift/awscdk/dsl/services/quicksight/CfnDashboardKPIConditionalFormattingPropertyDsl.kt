@@ -16,14 +16,23 @@ public class CfnDashboardKPIConditionalFormattingPropertyDsl {
 
   private val _conditionalFormattingOptions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param conditionalFormattingOptions The conditional formatting options of a KPI visual.
+   */
   public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any) {
     _conditionalFormattingOptions.addAll(listOf(*conditionalFormattingOptions))
   }
 
+  /**
+   * @param conditionalFormattingOptions The conditional formatting options of a KPI visual.
+   */
   public fun conditionalFormattingOptions(conditionalFormattingOptions: Collection<Any>) {
     _conditionalFormattingOptions.addAll(conditionalFormattingOptions)
   }
 
+  /**
+   * @param conditionalFormattingOptions The conditional formatting options of a KPI visual.
+   */
   public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable) {
     cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
   }

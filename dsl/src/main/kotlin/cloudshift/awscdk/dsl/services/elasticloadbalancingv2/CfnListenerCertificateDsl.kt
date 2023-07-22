@@ -21,18 +21,48 @@ public class CfnListenerCertificateDsl(
 
   private val _certificates: MutableList<Any> = mutableListOf()
 
+  /**
+   * The certificate.
+   *
+   * You can specify one certificate per resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html#cfn-elasticloadbalancingv2-listenercertificate-certificates)
+   * @param certificates The certificate. 
+   */
   public fun certificates(vararg certificates: Any) {
     _certificates.addAll(listOf(*certificates))
   }
 
+  /**
+   * The certificate.
+   *
+   * You can specify one certificate per resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html#cfn-elasticloadbalancingv2-listenercertificate-certificates)
+   * @param certificates The certificate. 
+   */
   public fun certificates(certificates: Collection<Any>) {
     _certificates.addAll(certificates)
   }
 
+  /**
+   * The certificate.
+   *
+   * You can specify one certificate per resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html#cfn-elasticloadbalancingv2-listenercertificate-certificates)
+   * @param certificates The certificate. 
+   */
   public fun certificates(certificates: IResolvable) {
     cdkBuilder.certificates(certificates)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the listener.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html#cfn-elasticloadbalancingv2-listenercertificate-listenerarn)
+   * @param listenerArn The Amazon Resource Name (ARN) of the listener. 
+   */
   public fun listenerArn(listenerArn: String) {
     cdkBuilder.listenerArn(listenerArn)
   }

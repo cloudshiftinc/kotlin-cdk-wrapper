@@ -15,6 +15,13 @@ public class CfnConditionDsl(
 ) {
   private val cdkBuilder: CfnCondition.Builder = CfnCondition.Builder.create(scope, id)
 
+  /**
+   * The expression that the condition will evaluate.
+   *
+   * Default: - None.
+   *
+   * @param expression The expression that the condition will evaluate. 
+   */
   public fun expression(expression: ICfnConditionExpression) {
     cdkBuilder.expression(expression)
   }

@@ -22,23 +22,53 @@ public class CfnBillingGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the billing group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupname)
+   * @param billingGroupName The name of the billing group. 
+   */
   public fun billingGroupName(billingGroupName: String) {
     cdkBuilder.billingGroupName(billingGroupName)
   }
 
+  /**
+   * The properties of the billing group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+   * @param billingGroupProperties The properties of the billing group. 
+   */
   public fun billingGroupProperties(billingGroupProperties: IResolvable) {
     cdkBuilder.billingGroupProperties(billingGroupProperties)
   }
 
+  /**
+   * The properties of the billing group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+   * @param billingGroupProperties The properties of the billing group. 
+   */
   public
       fun billingGroupProperties(billingGroupProperties: CfnBillingGroup.BillingGroupPropertiesProperty) {
     cdkBuilder.billingGroupProperties(billingGroupProperties)
   }
 
+  /**
+   * Metadata which can be used to manage the billing group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+   * @param tags Metadata which can be used to manage the billing group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Metadata which can be used to manage the billing group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+   * @param tags Metadata which can be used to manage the billing group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

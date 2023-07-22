@@ -11,10 +11,16 @@ public class CfnDatasetFilterValuePropertyDsl {
   private val cdkBuilder: CfnDataset.FilterValueProperty.Builder =
       CfnDataset.FilterValueProperty.builder()
 
+  /**
+   * @param value The value to be associated with the substitution variable. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param valueReference The substitution variable reference. 
+   */
   public fun valueReference(valueReference: String) {
     cdkBuilder.valueReference(valueReference)
   }

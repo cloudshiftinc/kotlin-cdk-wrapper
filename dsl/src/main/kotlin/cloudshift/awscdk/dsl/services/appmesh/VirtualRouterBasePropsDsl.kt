@@ -15,14 +15,23 @@ public class VirtualRouterBasePropsDsl {
 
   private val _listeners: MutableList<VirtualRouterListener> = mutableListOf()
 
+  /**
+   * @param listeners Listener specification for the VirtualRouter.
+   */
   public fun listeners(vararg listeners: VirtualRouterListener) {
     _listeners.addAll(listOf(*listeners))
   }
 
+  /**
+   * @param listeners Listener specification for the VirtualRouter.
+   */
   public fun listeners(listeners: Collection<VirtualRouterListener>) {
     _listeners.addAll(listeners)
   }
 
+  /**
+   * @param virtualRouterName The name of the VirtualRouter.
+   */
   public fun virtualRouterName(virtualRouterName: String) {
     cdkBuilder.virtualRouterName(virtualRouterName)
   }

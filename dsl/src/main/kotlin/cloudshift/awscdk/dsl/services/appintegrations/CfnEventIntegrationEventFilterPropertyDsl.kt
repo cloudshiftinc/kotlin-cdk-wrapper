@@ -11,6 +11,9 @@ public class CfnEventIntegrationEventFilterPropertyDsl {
   private val cdkBuilder: CfnEventIntegration.EventFilterProperty.Builder =
       CfnEventIntegration.EventFilterProperty.builder()
 
+  /**
+   * @param source The source of the events. 
+   */
   public fun source(source: String) {
     cdkBuilder.source(source)
   }

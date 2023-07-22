@@ -11,10 +11,16 @@ public class CfnPrivateDnsNamespacePropertiesPropertyDsl {
   private val cdkBuilder: CfnPrivateDnsNamespace.PropertiesProperty.Builder =
       CfnPrivateDnsNamespace.PropertiesProperty.builder()
 
+  /**
+   * @param dnsProperties DNS properties for the private DNS namespace.
+   */
   public fun dnsProperties(dnsProperties: IResolvable) {
     cdkBuilder.dnsProperties(dnsProperties)
   }
 
+  /**
+   * @param dnsProperties DNS properties for the private DNS namespace.
+   */
   public
       fun dnsProperties(dnsProperties: CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty) {
     cdkBuilder.dnsProperties(dnsProperties)

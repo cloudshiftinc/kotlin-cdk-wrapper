@@ -21,14 +21,38 @@ public class CfnSecurityGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A description for the cache security group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroup.html#cfn-elasticache-securitygroup-description)
+   * @param description A description for the cache security group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * A tag that can be added to an ElastiCache security group.
+   *
+   * Tags are composed of a Key/Value pair. You can use tags to categorize and track all your
+   * security groups. A tag with a null Value is permitted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroup.html#cfn-elasticache-securitygroup-tags)
+   * @param tags A tag that can be added to an ElastiCache security group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A tag that can be added to an ElastiCache security group.
+   *
+   * Tags are composed of a Key/Value pair. You can use tags to categorize and track all your
+   * security groups. A tag with a null Value is permitted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroup.html#cfn-elasticache-securitygroup-tags)
+   * @param tags A tag that can be added to an ElastiCache security group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

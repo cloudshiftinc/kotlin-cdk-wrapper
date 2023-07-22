@@ -11,6 +11,9 @@ public class CfnDashboardDataPointTooltipOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.DataPointTooltipOptionProperty.Builder =
       CfnDashboard.DataPointTooltipOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus The status of the data point tool tip options.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

@@ -16,14 +16,23 @@ public class CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl {
 
   private val _devices: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param devices The devices in this version. 
+   */
   public fun devices(vararg devices: Any) {
     _devices.addAll(listOf(*devices))
   }
 
+  /**
+   * @param devices The devices in this version. 
+   */
   public fun devices(devices: Collection<Any>) {
     _devices.addAll(devices)
   }
 
+  /**
+   * @param devices The devices in this version. 
+   */
   public fun devices(devices: IResolvable) {
     cdkBuilder.devices(devices)
   }

@@ -13,14 +13,23 @@ public class CfnModelExplainabilityJobDefinitionModelExplainabilityBaselineConfi
       CfnModelExplainabilityJobDefinition.ModelExplainabilityBaselineConfigProperty.Builder =
       CfnModelExplainabilityJobDefinition.ModelExplainabilityBaselineConfigProperty.builder()
 
+  /**
+   * @param baseliningJobName The name of the baseline model explainability job.
+   */
   public fun baseliningJobName(baseliningJobName: String) {
     cdkBuilder.baseliningJobName(baseliningJobName)
   }
 
+  /**
+   * @param constraintsResource The constraints resource for a model explainability job.
+   */
   public fun constraintsResource(constraintsResource: IResolvable) {
     cdkBuilder.constraintsResource(constraintsResource)
   }
 
+  /**
+   * @param constraintsResource The constraints resource for a model explainability job.
+   */
   public
       fun constraintsResource(constraintsResource: CfnModelExplainabilityJobDefinition.ConstraintsResourceProperty) {
     cdkBuilder.constraintsResource(constraintsResource)

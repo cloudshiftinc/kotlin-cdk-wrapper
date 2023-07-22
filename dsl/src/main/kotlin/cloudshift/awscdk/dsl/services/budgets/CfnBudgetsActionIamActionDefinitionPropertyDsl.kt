@@ -19,30 +19,57 @@ public class CfnBudgetsActionIamActionDefinitionPropertyDsl {
 
   private val _users: MutableList<String> = mutableListOf()
 
+  /**
+   * @param groups A list of groups to be attached.
+   * There must be at least one group.
+   */
   public fun groups(vararg groups: String) {
     _groups.addAll(listOf(*groups))
   }
 
+  /**
+   * @param groups A list of groups to be attached.
+   * There must be at least one group.
+   */
   public fun groups(groups: Collection<String>) {
     _groups.addAll(groups)
   }
 
+  /**
+   * @param policyArn The Amazon Resource Name (ARN) of the policy to be attached. 
+   */
   public fun policyArn(policyArn: String) {
     cdkBuilder.policyArn(policyArn)
   }
 
+  /**
+   * @param roles A list of roles to be attached.
+   * There must be at least one role.
+   */
   public fun roles(vararg roles: String) {
     _roles.addAll(listOf(*roles))
   }
 
+  /**
+   * @param roles A list of roles to be attached.
+   * There must be at least one role.
+   */
   public fun roles(roles: Collection<String>) {
     _roles.addAll(roles)
   }
 
+  /**
+   * @param users A list of users to be attached.
+   * There must be at least one user.
+   */
   public fun users(vararg users: String) {
     _users.addAll(listOf(*users))
   }
 
+  /**
+   * @param users A list of users to be attached.
+   * There must be at least one user.
+   */
   public fun users(users: Collection<String>) {
     _users.addAll(users)
   }

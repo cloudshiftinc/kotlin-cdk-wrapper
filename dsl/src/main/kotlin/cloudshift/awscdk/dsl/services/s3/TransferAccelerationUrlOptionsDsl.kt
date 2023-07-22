@@ -11,6 +11,9 @@ public class TransferAccelerationUrlOptionsDsl {
   private val cdkBuilder: TransferAccelerationUrlOptions.Builder =
       TransferAccelerationUrlOptions.builder()
 
+  /**
+   * @param dualStack Dual-stack support to connect to the bucket over IPv6.
+   */
   public fun dualStack(dualStack: Boolean) {
     cdkBuilder.dualStack(dualStack)
   }

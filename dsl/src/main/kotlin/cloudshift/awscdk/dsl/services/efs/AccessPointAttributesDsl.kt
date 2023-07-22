@@ -11,14 +11,23 @@ import software.amazon.awscdk.services.efs.IFileSystem
 public class AccessPointAttributesDsl {
   private val cdkBuilder: AccessPointAttributes.Builder = AccessPointAttributes.builder()
 
+  /**
+   * @param accessPointArn The ARN of the AccessPoint One of this, or `accessPointId` is required.
+   */
   public fun accessPointArn(accessPointArn: String) {
     cdkBuilder.accessPointArn(accessPointArn)
   }
 
+  /**
+   * @param accessPointId The ID of the AccessPoint One of this, or `accessPointArn` is required.
+   */
   public fun accessPointId(accessPointId: String) {
     cdkBuilder.accessPointId(accessPointId)
   }
 
+  /**
+   * @param fileSystem The EFS file system.
+   */
   public fun fileSystem(fileSystem: IFileSystem) {
     cdkBuilder.fileSystem(fileSystem)
   }

@@ -11,10 +11,16 @@ public class CfnPipeSageMakerPipelineParameterPropertyDsl {
   private val cdkBuilder: CfnPipe.SageMakerPipelineParameterProperty.Builder =
       CfnPipe.SageMakerPipelineParameterProperty.builder()
 
+  /**
+   * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

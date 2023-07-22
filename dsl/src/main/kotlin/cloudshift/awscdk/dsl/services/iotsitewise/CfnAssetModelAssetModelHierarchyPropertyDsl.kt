@@ -11,14 +11,26 @@ public class CfnAssetModelAssetModelHierarchyPropertyDsl {
   private val cdkBuilder: CfnAssetModel.AssetModelHierarchyProperty.Builder =
       CfnAssetModel.AssetModelHierarchyProperty.builder()
 
+  /**
+   * @param childAssetModelId The Id of the asset model. 
+   */
   public fun childAssetModelId(childAssetModelId: String) {
     cdkBuilder.childAssetModelId(childAssetModelId)
   }
 
+  /**
+   * @param logicalId The `LogicalID` of the asset model hierarchy. This ID is a
+   * `hierarchyLogicalId` . 
+   * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+`
+   */
   public fun logicalId(logicalId: String) {
     cdkBuilder.logicalId(logicalId)
   }
 
+  /**
+   * @param name The name of the asset model hierarchy. 
+   * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

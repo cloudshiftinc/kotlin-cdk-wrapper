@@ -21,30 +21,51 @@ public class CfnRecipePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of the recipe.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The unique name for the recipe. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param steps A list of steps that are defined by the recipe. 
+   */
   public fun steps(vararg steps: Any) {
     _steps.addAll(listOf(*steps))
   }
 
+  /**
+   * @param steps A list of steps that are defined by the recipe. 
+   */
   public fun steps(steps: Collection<Any>) {
     _steps.addAll(steps)
   }
 
+  /**
+   * @param steps A list of steps that are defined by the recipe. 
+   */
   public fun steps(steps: IResolvable) {
     cdkBuilder.steps(steps)
   }
 
+  /**
+   * @param tags Metadata tags that have been applied to the recipe.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Metadata tags that have been applied to the recipe.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

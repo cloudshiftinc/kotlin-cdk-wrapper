@@ -23,56 +23,111 @@ public class NetworkTargetGroupPropsDsl {
 
   private val _targets: MutableList<INetworkLoadBalancerTarget> = mutableListOf()
 
+  /**
+   * @param connectionTermination Indicates whether the load balancer terminates connections at the
+   * end of the deregistration timeout.
+   */
   public fun connectionTermination(connectionTermination: Boolean) {
     cdkBuilder.connectionTermination(connectionTermination)
   }
 
+  /**
+   * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
+   * deregistering a target.
+   * The range is 0-3600 seconds.
+   */
   public fun deregistrationDelay(deregistrationDelay: Duration) {
     cdkBuilder.deregistrationDelay(deregistrationDelay)
   }
 
-  public fun healthCheck(block: HealthCheckDsl.() -> Unit = {}) {
+  /**
+   * @param healthCheck Health check configuration.
+   */
+  public fun healthCheck(healthCheck: HealthCheckDsl.() -> Unit = {}) {
     val builder = HealthCheckDsl()
-    builder.apply(block)
+    builder.apply(healthCheck)
     cdkBuilder.healthCheck(builder.build())
   }
 
+  /**
+   * @param healthCheck Health check configuration.
+   */
   public fun healthCheck(healthCheck: HealthCheck) {
     cdkBuilder.healthCheck(healthCheck)
   }
 
+  /**
+   * @param port The port on which the target receives traffic. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param preserveClientIp Indicates whether client IP preservation is enabled.
+   */
   public fun preserveClientIp(preserveClientIp: Boolean) {
     cdkBuilder.preserveClientIp(preserveClientIp)
   }
 
+  /**
+   * @param protocol Protocol for target group, expects TCP, TLS, UDP, or TCP_UDP.
+   */
   public fun protocol(protocol: Protocol) {
     cdkBuilder.protocol(protocol)
   }
 
+  /**
+   * @param proxyProtocolV2 Indicates whether Proxy Protocol version 2 is enabled.
+   */
   public fun proxyProtocolV2(proxyProtocolV2: Boolean) {
     cdkBuilder.proxyProtocolV2(proxyProtocolV2)
   }
 
+  /**
+   * @param targetGroupName The name of the target group.
+   * This name must be unique per region per account, can have a maximum of
+   * 32 characters, must contain only alphanumeric characters or hyphens, and
+   * must not begin or end with a hyphen.
+   */
   public fun targetGroupName(targetGroupName: String) {
     cdkBuilder.targetGroupName(targetGroupName)
   }
 
+  /**
+   * @param targetType The type of targets registered to this TargetGroup, either IP or Instance.
+   * All targets registered into the group must be of this type. If you
+   * register targets to the TargetGroup in the CDK app, the TargetType is
+   * determined automatically.
+   */
   public fun targetType(targetType: TargetType) {
     cdkBuilder.targetType(targetType)
   }
 
+  /**
+   * @param targets The targets to add to this target group.
+   * Can be `Instance`, `IPAddress`, or any self-registering load balancing
+   * target. If you use either `Instance` or `IPAddress` as targets, all
+   * target must be of the same type.
+   */
   public fun targets(vararg targets: INetworkLoadBalancerTarget) {
     _targets.addAll(listOf(*targets))
   }
 
+  /**
+   * @param targets The targets to add to this target group.
+   * Can be `Instance`, `IPAddress`, or any self-registering load balancing
+   * target. If you use either `Instance` or `IPAddress` as targets, all
+   * target must be of the same type.
+   */
   public fun targets(targets: Collection<INetworkLoadBalancerTarget>) {
     _targets.addAll(targets)
   }
 
+  /**
+   * @param vpc The virtual private cloud (VPC).
+   * only if `TargetType` is `Ip` or `InstanceId`
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

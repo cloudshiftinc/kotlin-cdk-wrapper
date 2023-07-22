@@ -19,22 +19,41 @@ public class CfnCellPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param cellName The name of the cell to create.
+   */
   public fun cellName(cellName: String) {
     cdkBuilder.cellName(cellName)
   }
 
+  /**
+   * @param cells A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in
+   * nested cells.
+   * For example, Availability Zones within specific AWS Regions .
+   */
   public fun cells(vararg cells: String) {
     _cells.addAll(listOf(*cells))
   }
 
+  /**
+   * @param cells A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in
+   * nested cells.
+   * For example, Availability Zones within specific AWS Regions .
+   */
   public fun cells(cells: Collection<String>) {
     _cells.addAll(cells)
   }
 
+  /**
+   * @param tags A collection of tags associated with a resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A collection of tags associated with a resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -17,22 +17,37 @@ public class CfnCoreNetworkCoreNetworkSegmentPropertyDsl {
 
   private val _sharedSegments: MutableList<String> = mutableListOf()
 
+  /**
+   * @param edgeLocations The Regions where the edges are located.
+   */
   public fun edgeLocations(vararg edgeLocations: String) {
     _edgeLocations.addAll(listOf(*edgeLocations))
   }
 
+  /**
+   * @param edgeLocations The Regions where the edges are located.
+   */
   public fun edgeLocations(edgeLocations: Collection<String>) {
     _edgeLocations.addAll(edgeLocations)
   }
 
+  /**
+   * @param name The name of a core network segment.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param sharedSegments The shared segments of a core network.
+   */
   public fun sharedSegments(vararg sharedSegments: String) {
     _sharedSegments.addAll(listOf(*sharedSegments))
   }
 
+  /**
+   * @param sharedSegments The shared segments of a core network.
+   */
   public fun sharedSegments(sharedSegments: Collection<String>) {
     _sharedSegments.addAll(sharedSegments)
   }

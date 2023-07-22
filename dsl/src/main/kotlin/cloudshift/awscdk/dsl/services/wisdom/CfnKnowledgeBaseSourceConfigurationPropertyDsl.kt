@@ -11,10 +11,18 @@ public class CfnKnowledgeBaseSourceConfigurationPropertyDsl {
   private val cdkBuilder: CfnKnowledgeBase.SourceConfigurationProperty.Builder =
       CfnKnowledgeBase.SourceConfigurationProperty.builder()
 
+  /**
+   * @param appIntegrations Configuration information for Amazon AppIntegrations to automatically
+   * ingest content. 
+   */
   public fun appIntegrations(appIntegrations: IResolvable) {
     cdkBuilder.appIntegrations(appIntegrations)
   }
 
+  /**
+   * @param appIntegrations Configuration information for Amazon AppIntegrations to automatically
+   * ingest content. 
+   */
   public
       fun appIntegrations(appIntegrations: CfnKnowledgeBase.AppIntegrationsConfigurationProperty) {
     cdkBuilder.appIntegrations(appIntegrations)

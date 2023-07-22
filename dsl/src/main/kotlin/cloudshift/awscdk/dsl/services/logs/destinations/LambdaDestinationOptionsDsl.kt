@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.logs.destinations.LambdaDestinationOption
 public class LambdaDestinationOptionsDsl {
   private val cdkBuilder: LambdaDestinationOptions.Builder = LambdaDestinationOptions.builder()
 
+  /**
+   * @param addPermissions Whether or not to add Lambda Permissions.
+   */
   public fun addPermissions(addPermissions: Boolean) {
     cdkBuilder.addPermissions(addPermissions)
   }

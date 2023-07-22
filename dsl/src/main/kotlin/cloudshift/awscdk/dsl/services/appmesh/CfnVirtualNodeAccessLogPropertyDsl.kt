@@ -11,10 +11,16 @@ public class CfnVirtualNodeAccessLogPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.AccessLogProperty.Builder =
       CfnVirtualNode.AccessLogProperty.builder()
 
+  /**
+   * @param file The file object to send virtual node access logs to.
+   */
   public fun `file`(`file`: IResolvable) {
     cdkBuilder.`file`(`file`)
   }
 
+  /**
+   * @param file The file object to send virtual node access logs to.
+   */
   public fun `file`(`file`: CfnVirtualNode.FileAccessLogProperty) {
     cdkBuilder.`file`(`file`)
   }

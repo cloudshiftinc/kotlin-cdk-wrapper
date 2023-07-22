@@ -11,6 +11,9 @@ public class CfnTemplateColumnGroupColumnSchemaPropertyDsl {
   private val cdkBuilder: CfnTemplate.ColumnGroupColumnSchemaProperty.Builder =
       CfnTemplate.ColumnGroupColumnSchemaProperty.builder()
 
+  /**
+   * @param name The name of the column group's column schema.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

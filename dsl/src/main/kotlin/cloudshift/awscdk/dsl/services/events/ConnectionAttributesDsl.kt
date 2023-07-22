@@ -10,14 +10,23 @@ import software.amazon.awscdk.services.events.ConnectionAttributes
 public class ConnectionAttributesDsl {
   private val cdkBuilder: ConnectionAttributes.Builder = ConnectionAttributes.builder()
 
+  /**
+   * @param connectionArn The ARN of the connection created. 
+   */
   public fun connectionArn(connectionArn: String) {
     cdkBuilder.connectionArn(connectionArn)
   }
 
+  /**
+   * @param connectionName The Name for the connection. 
+   */
   public fun connectionName(connectionName: String) {
     cdkBuilder.connectionName(connectionName)
   }
 
+  /**
+   * @param connectionSecretArn The ARN for the secret created for the connection. 
+   */
   public fun connectionSecretArn(connectionSecretArn: String) {
     cdkBuilder.connectionSecretArn(connectionSecretArn)
   }

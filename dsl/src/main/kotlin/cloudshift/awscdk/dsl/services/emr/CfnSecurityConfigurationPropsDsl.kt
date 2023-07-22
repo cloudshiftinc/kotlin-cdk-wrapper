@@ -14,16 +14,25 @@ public class CfnSecurityConfigurationPropsDsl {
   private val cdkBuilder: CfnSecurityConfigurationProps.Builder =
       CfnSecurityConfigurationProps.builder()
 
+  /**
+   * @param name The name of the security configuration.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun securityConfiguration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param securityConfiguration The security configuration details in JSON format. 
+   */
+  public fun securityConfiguration(securityConfiguration: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(securityConfiguration)
     cdkBuilder.securityConfiguration(builder.map)
   }
 
+  /**
+   * @param securityConfiguration The security configuration details in JSON format. 
+   */
   public fun securityConfiguration(securityConfiguration: Any) {
     cdkBuilder.securityConfiguration(securityConfiguration)
   }

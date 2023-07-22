@@ -14,18 +14,30 @@ public class CfnSubnetGroupPropsDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param description The description of the subnet group.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param subnetGroupName The name of the subnet group.
+   */
   public fun subnetGroupName(subnetGroupName: String) {
     cdkBuilder.subnetGroupName(subnetGroupName)
   }
 
+  /**
+   * @param subnetIds A list of VPC subnet IDs for the subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds A list of VPC subnet IDs for the subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

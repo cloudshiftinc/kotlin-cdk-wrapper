@@ -11,10 +11,16 @@ public class CfnFunctionDestinationPropertyDsl {
   private val cdkBuilder: CfnFunction.DestinationProperty.Builder =
       CfnFunction.DestinationProperty.builder()
 
+  /**
+   * @param destination the value to be set. 
+   */
   public fun destination(destination: String) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param type the value to be set.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

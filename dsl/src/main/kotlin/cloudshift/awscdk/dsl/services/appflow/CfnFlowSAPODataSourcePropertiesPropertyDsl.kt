@@ -11,6 +11,9 @@ public class CfnFlowSAPODataSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.SAPODataSourcePropertiesProperty.Builder =
       CfnFlow.SAPODataSourcePropertiesProperty.builder()
 
+  /**
+   * @param objectPath The object path specified in the SAPOData flow source. 
+   */
   public fun objectPath(objectPath: String) {
     cdkBuilder.objectPath(objectPath)
   }

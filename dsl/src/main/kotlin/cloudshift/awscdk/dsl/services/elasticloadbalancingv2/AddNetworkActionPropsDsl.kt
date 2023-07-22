@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAct
 public class AddNetworkActionPropsDsl {
   private val cdkBuilder: AddNetworkActionProps.Builder = AddNetworkActionProps.builder()
 
+  /**
+   * @param action Action to perform. 
+   */
   public fun action(action: NetworkListenerAction) {
     cdkBuilder.action(action)
   }

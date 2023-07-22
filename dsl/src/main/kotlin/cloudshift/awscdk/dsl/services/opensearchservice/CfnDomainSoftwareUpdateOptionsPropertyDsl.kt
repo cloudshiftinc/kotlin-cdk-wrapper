@@ -12,10 +12,18 @@ public class CfnDomainSoftwareUpdateOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.SoftwareUpdateOptionsProperty.Builder =
       CfnDomain.SoftwareUpdateOptionsProperty.builder()
 
+  /**
+   * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
+   * enabled for the domain.
+   */
   public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean) {
     cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled)
   }
 
+  /**
+   * @param autoSoftwareUpdateEnabled Specifies whether automatic service software updates are
+   * enabled for the domain.
+   */
   public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable) {
     cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled)
   }

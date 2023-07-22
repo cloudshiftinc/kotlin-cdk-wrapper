@@ -15,10 +15,18 @@ public class CfnJobAllowedStatisticsPropertyDsl {
 
   private val _statistics: MutableList<String> = mutableListOf()
 
+  /**
+   * @param statistics One or more column statistics to allow for columns that contain detected
+   * entities. 
+   */
   public fun statistics(vararg statistics: String) {
     _statistics.addAll(listOf(*statistics))
   }
 
+  /**
+   * @param statistics One or more column statistics to allow for columns that contain detected
+   * entities. 
+   */
   public fun statistics(statistics: Collection<String>) {
     _statistics.addAll(statistics)
   }

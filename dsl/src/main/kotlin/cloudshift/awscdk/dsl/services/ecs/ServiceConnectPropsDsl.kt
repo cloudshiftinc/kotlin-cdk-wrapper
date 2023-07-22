@@ -17,18 +17,36 @@ public class ServiceConnectPropsDsl {
 
   private val _services: MutableList<ServiceConnectService> = mutableListOf()
 
+  /**
+   * @param logDriver The log driver configuration to use for the Service Connect agent logs.
+   */
   public fun logDriver(logDriver: LogDriver) {
     cdkBuilder.logDriver(logDriver)
   }
 
+  /**
+   * @param namespace The cloudmap namespace to register this service into.
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }
 
+  /**
+   * @param services The list of Services, including a port mapping, terse client alias, and
+   * optional intermediate DNS name.
+   * This property may be left blank if the current ECS service does not need to advertise any ports
+   * via Service Connect.
+   */
   public fun services(services: ServiceConnectServiceDsl.() -> Unit) {
     _services.add(ServiceConnectServiceDsl().apply(services).build())
   }
 
+  /**
+   * @param services The list of Services, including a port mapping, terse client alias, and
+   * optional intermediate DNS name.
+   * This property may be left blank if the current ECS service does not need to advertise any ports
+   * via Service Connect.
+   */
   public fun services(services: Collection<ServiceConnectService>) {
     _services.addAll(services)
   }

@@ -11,10 +11,16 @@ public class CfnChannelMultiplexOutputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.MultiplexOutputSettingsProperty.Builder =
       CfnChannel.MultiplexOutputSettingsProperty.builder()
 
+  /**
+   * @param destination Destination is a Multiplex.
+   */
   public fun destination(destination: IResolvable) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param destination Destination is a Multiplex.
+   */
   public fun destination(destination: CfnChannel.OutputLocationRefProperty) {
     cdkBuilder.destination(destination)
   }

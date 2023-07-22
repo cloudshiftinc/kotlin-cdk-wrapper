@@ -17,22 +17,37 @@ public class CfnFleetPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description (Optional) A brief description of the fleet.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param id The unique ID of the fleet. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param signalCatalogArn The ARN of the signal catalog associated with the fleet. 
+   */
   public fun signalCatalogArn(signalCatalogArn: String) {
     cdkBuilder.signalCatalogArn(signalCatalogArn)
   }
 
+  /**
+   * @param tags (Optional) Metadata that can be used to manage the fleet.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags (Optional) Metadata that can be used to manage the fleet.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

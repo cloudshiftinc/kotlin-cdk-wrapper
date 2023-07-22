@@ -11,6 +11,9 @@ public class CfnApplicationV2GlueDataCatalogConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.GlueDataCatalogConfigurationProperty.Builder =
       CfnApplicationV2.GlueDataCatalogConfigurationProperty.builder()
 
+  /**
+   * @param databaseArn The Amazon Resource Name (ARN) of the database.
+   */
   public fun databaseArn(databaseArn: String) {
     cdkBuilder.databaseArn(databaseArn)
   }

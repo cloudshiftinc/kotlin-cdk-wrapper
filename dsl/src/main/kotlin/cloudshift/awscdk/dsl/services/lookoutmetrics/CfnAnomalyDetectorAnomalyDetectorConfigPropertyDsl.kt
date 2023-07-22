@@ -11,6 +11,9 @@ public class CfnAnomalyDetectorAnomalyDetectorConfigPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.AnomalyDetectorConfigProperty.Builder =
       CfnAnomalyDetector.AnomalyDetectorConfigProperty.builder()
 
+  /**
+   * @param anomalyDetectorFrequency The frequency at which the detector analyzes its source data. 
+   */
   public fun anomalyDetectorFrequency(anomalyDetectorFrequency: String) {
     cdkBuilder.anomalyDetectorFrequency(anomalyDetectorFrequency)
   }

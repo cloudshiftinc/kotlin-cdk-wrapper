@@ -11,6 +11,9 @@ public class CfnBucketVersioningConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.VersioningConfigurationProperty.Builder =
       CfnBucket.VersioningConfigurationProperty.builder()
 
+  /**
+   * @param status The versioning state of the bucket. 
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

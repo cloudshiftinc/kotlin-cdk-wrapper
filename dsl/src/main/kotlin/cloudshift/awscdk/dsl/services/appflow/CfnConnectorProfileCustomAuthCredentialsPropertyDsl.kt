@@ -13,14 +13,23 @@ public class CfnConnectorProfileCustomAuthCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.CustomAuthCredentialsProperty.Builder =
       CfnConnectorProfile.CustomAuthCredentialsProperty.builder()
 
+  /**
+   * @param credentialsMap A map that holds custom authentication credentials.
+   */
   public fun credentialsMap(credentialsMap: Map<String, String>) {
     cdkBuilder.credentialsMap(credentialsMap)
   }
 
+  /**
+   * @param credentialsMap A map that holds custom authentication credentials.
+   */
   public fun credentialsMap(credentialsMap: IResolvable) {
     cdkBuilder.credentialsMap(credentialsMap)
   }
 
+  /**
+   * @param customAuthenticationType The custom authentication type that the connector uses. 
+   */
   public fun customAuthenticationType(customAuthenticationType: String) {
     cdkBuilder.customAuthenticationType(customAuthenticationType)
   }

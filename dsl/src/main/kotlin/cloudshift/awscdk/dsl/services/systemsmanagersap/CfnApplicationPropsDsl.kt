@@ -23,46 +23,79 @@ public class CfnApplicationPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param applicationId The ID of the application. 
+   */
   public fun applicationId(applicationId: String) {
     cdkBuilder.applicationId(applicationId)
   }
 
+  /**
+   * @param applicationType The type of the application. 
+   */
   public fun applicationType(applicationType: String) {
     cdkBuilder.applicationType(applicationType)
   }
 
+  /**
+   * @param credentials The credentials of the SAP application.
+   */
   public fun credentials(vararg credentials: Any) {
     _credentials.addAll(listOf(*credentials))
   }
 
+  /**
+   * @param credentials The credentials of the SAP application.
+   */
   public fun credentials(credentials: Collection<Any>) {
     _credentials.addAll(credentials)
   }
 
+  /**
+   * @param credentials The credentials of the SAP application.
+   */
   public fun credentials(credentials: IResolvable) {
     cdkBuilder.credentials(credentials)
   }
 
+  /**
+   * @param instances The Amazon EC2 instances on which your SAP application is running.
+   */
   public fun instances(vararg instances: String) {
     _instances.addAll(listOf(*instances))
   }
 
+  /**
+   * @param instances The Amazon EC2 instances on which your SAP application is running.
+   */
   public fun instances(instances: Collection<String>) {
     _instances.addAll(instances)
   }
 
+  /**
+   * @param sapInstanceNumber The SAP instance number of the application.
+   */
   public fun sapInstanceNumber(sapInstanceNumber: String) {
     cdkBuilder.sapInstanceNumber(sapInstanceNumber)
   }
 
+  /**
+   * @param sid The System ID of the application.
+   */
   public fun sid(sid: String) {
     cdkBuilder.sid(sid)
   }
 
+  /**
+   * @param tags The tags on the application.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags on the application.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

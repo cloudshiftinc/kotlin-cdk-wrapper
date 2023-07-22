@@ -11,10 +11,20 @@ public class CfnVirtualNodeTcpTimeoutPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.TcpTimeoutProperty.Builder =
       CfnVirtualNode.TcpTimeoutProperty.builder()
 
+  /**
+   * @param idle An object that represents an idle timeout.
+   * An idle timeout bounds the amount of time that a connection may be idle. The default value is
+   * none.
+   */
   public fun idle(idle: IResolvable) {
     cdkBuilder.idle(idle)
   }
 
+  /**
+   * @param idle An object that represents an idle timeout.
+   * An idle timeout bounds the amount of time that a connection may be idle. The default value is
+   * none.
+   */
   public fun idle(idle: CfnVirtualNode.DurationProperty) {
     cdkBuilder.idle(idle)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
 public class CfnAnalysisLayoutPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LayoutProperty.Builder = CfnAnalysis.LayoutProperty.builder()
 
+  /**
+   * @param configuration The configuration that determines what the type of layout for a sheet. 
+   */
   public fun configuration(configuration: IResolvable) {
     cdkBuilder.configuration(configuration)
   }
 
+  /**
+   * @param configuration The configuration that determines what the type of layout for a sheet. 
+   */
   public fun configuration(configuration: CfnAnalysis.LayoutConfigurationProperty) {
     cdkBuilder.configuration(configuration)
   }

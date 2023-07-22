@@ -12,22 +12,37 @@ import software.amazon.awscdk.services.omics.CfnRunGroupProps
 public class CfnRunGroupPropsDsl {
   private val cdkBuilder: CfnRunGroupProps.Builder = CfnRunGroupProps.builder()
 
+  /**
+   * @param maxCpus The group's maximum CPU count setting.
+   */
   public fun maxCpus(maxCpus: Number) {
     cdkBuilder.maxCpus(maxCpus)
   }
 
+  /**
+   * @param maxDuration The group's maximum duration setting in minutes.
+   */
   public fun maxDuration(maxDuration: Number) {
     cdkBuilder.maxDuration(maxDuration)
   }
 
+  /**
+   * @param maxRuns The group's maximum concurrent run setting.
+   */
   public fun maxRuns(maxRuns: Number) {
     cdkBuilder.maxRuns(maxRuns)
   }
 
+  /**
+   * @param name The group's name.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags Tags for the group.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }

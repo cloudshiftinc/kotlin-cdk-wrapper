@@ -11,10 +11,18 @@ public class CfnTemplateShapeConditionalFormatPropertyDsl {
   private val cdkBuilder: CfnTemplate.ShapeConditionalFormatProperty.Builder =
       CfnTemplate.ShapeConditionalFormatProperty.builder()
 
+  /**
+   * @param backgroundColor The conditional formatting for the shape background color of a filled
+   * map visual. 
+   */
   public fun backgroundColor(backgroundColor: IResolvable) {
     cdkBuilder.backgroundColor(backgroundColor)
   }
 
+  /**
+   * @param backgroundColor The conditional formatting for the shape background color of a filled
+   * map visual. 
+   */
   public fun backgroundColor(backgroundColor: CfnTemplate.ConditionalFormattingColorProperty) {
     cdkBuilder.backgroundColor(backgroundColor)
   }

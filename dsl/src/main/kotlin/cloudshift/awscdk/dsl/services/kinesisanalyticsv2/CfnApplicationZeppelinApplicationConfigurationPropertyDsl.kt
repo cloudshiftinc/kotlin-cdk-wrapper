@@ -16,40 +16,73 @@ public class CfnApplicationZeppelinApplicationConfigurationPropertyDsl {
 
   private val _customArtifactsConfiguration: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param catalogConfiguration The Amazon Glue Data Catalog that you use in queries in a Kinesis
+   * Data Analytics Studio notebook.
+   */
   public fun catalogConfiguration(catalogConfiguration: IResolvable) {
     cdkBuilder.catalogConfiguration(catalogConfiguration)
   }
 
+  /**
+   * @param catalogConfiguration The Amazon Glue Data Catalog that you use in queries in a Kinesis
+   * Data Analytics Studio notebook.
+   */
   public
       fun catalogConfiguration(catalogConfiguration: CfnApplication.CatalogConfigurationProperty) {
     cdkBuilder.catalogConfiguration(catalogConfiguration)
   }
 
+  /**
+   * @param customArtifactsConfiguration A list of `CustomArtifactConfiguration` objects.
+   */
   public fun customArtifactsConfiguration(vararg customArtifactsConfiguration: Any) {
     _customArtifactsConfiguration.addAll(listOf(*customArtifactsConfiguration))
   }
 
+  /**
+   * @param customArtifactsConfiguration A list of `CustomArtifactConfiguration` objects.
+   */
   public fun customArtifactsConfiguration(customArtifactsConfiguration: Collection<Any>) {
     _customArtifactsConfiguration.addAll(customArtifactsConfiguration)
   }
 
+  /**
+   * @param customArtifactsConfiguration A list of `CustomArtifactConfiguration` objects.
+   */
   public fun customArtifactsConfiguration(customArtifactsConfiguration: IResolvable) {
     cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration)
   }
 
+  /**
+   * @param deployAsApplicationConfiguration The information required to deploy a Kinesis Data
+   * Analytics Studio notebook as an application with durable state.
+   */
   public fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable) {
     cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration)
   }
 
+  /**
+   * @param deployAsApplicationConfiguration The information required to deploy a Kinesis Data
+   * Analytics Studio notebook as an application with durable state.
+   */
   public
       fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: CfnApplication.DeployAsApplicationConfigurationProperty) {
     cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration)
   }
 
+  /**
+   * @param monitoringConfiguration The monitoring configuration of a Kinesis Data Analytics Studio
+   * notebook.
+   */
   public fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
     cdkBuilder.monitoringConfiguration(monitoringConfiguration)
   }
 
+  /**
+   * @param monitoringConfiguration The monitoring configuration of a Kinesis Data Analytics Studio
+   * notebook.
+   */
   public
       fun monitoringConfiguration(monitoringConfiguration: CfnApplication.ZeppelinMonitoringConfigurationProperty) {
     cdkBuilder.monitoringConfiguration(monitoringConfiguration)

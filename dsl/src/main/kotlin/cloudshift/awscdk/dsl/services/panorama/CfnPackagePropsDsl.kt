@@ -19,22 +19,37 @@ public class CfnPackagePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param packageName A name for the package. 
+   */
   public fun packageName(packageName: String) {
     cdkBuilder.packageName(packageName)
   }
 
+  /**
+   * @param storageLocation the value to be set.
+   */
   public fun storageLocation(storageLocation: IResolvable) {
     cdkBuilder.storageLocation(storageLocation)
   }
 
+  /**
+   * @param storageLocation the value to be set.
+   */
   public fun storageLocation(storageLocation: CfnPackage.StorageLocationProperty) {
     cdkBuilder.storageLocation(storageLocation)
   }
 
+  /**
+   * @param tags Tags for the package.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Tags for the package.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

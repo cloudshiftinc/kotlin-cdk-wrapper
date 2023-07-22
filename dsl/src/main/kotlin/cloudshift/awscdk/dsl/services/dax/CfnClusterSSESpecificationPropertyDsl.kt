@@ -12,10 +12,18 @@ public class CfnClusterSSESpecificationPropertyDsl {
   private val cdkBuilder: CfnCluster.SSESpecificationProperty.Builder =
       CfnCluster.SSESpecificationProperty.builder()
 
+  /**
+   * @param sseEnabled Indicates whether server-side encryption is enabled (true) or disabled
+   * (false) on the cluster.
+   */
   public fun sseEnabled(sseEnabled: Boolean) {
     cdkBuilder.sseEnabled(sseEnabled)
   }
 
+  /**
+   * @param sseEnabled Indicates whether server-side encryption is enabled (true) or disabled
+   * (false) on the cluster.
+   */
   public fun sseEnabled(sseEnabled: IResolvable) {
     cdkBuilder.sseEnabled(sseEnabled)
   }

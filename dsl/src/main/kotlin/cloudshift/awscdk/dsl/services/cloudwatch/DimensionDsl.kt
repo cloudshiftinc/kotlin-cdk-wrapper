@@ -13,16 +13,25 @@ import software.amazon.awscdk.services.cloudwatch.Dimension
 public class DimensionDsl {
   private val cdkBuilder: Dimension.Builder = Dimension.builder()
 
+  /**
+   * @param name Name of the dimension. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun `value`(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param value Value of the dimension. 
+   */
+  public fun `value`(`value`: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(`value`)
     cdkBuilder.`value`(builder.map)
   }
 
+  /**
+   * @param value Value of the dimension. 
+   */
   public fun `value`(`value`: Any) {
     cdkBuilder.`value`(`value`)
   }

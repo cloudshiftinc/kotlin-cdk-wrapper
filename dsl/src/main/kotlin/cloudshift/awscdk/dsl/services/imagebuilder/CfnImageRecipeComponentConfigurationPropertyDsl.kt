@@ -17,18 +17,33 @@ public class CfnImageRecipeComponentConfigurationPropertyDsl {
 
   private val _parameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param componentArn The Amazon Resource Name (ARN) of the component.
+   */
   public fun componentArn(componentArn: String) {
     cdkBuilder.componentArn(componentArn)
   }
 
+  /**
+   * @param parameters A group of parameter settings that Image Builder uses to configure the
+   * component for a specific recipe.
+   */
   public fun parameters(vararg parameters: Any) {
     _parameters.addAll(listOf(*parameters))
   }
 
+  /**
+   * @param parameters A group of parameter settings that Image Builder uses to configure the
+   * component for a specific recipe.
+   */
   public fun parameters(parameters: Collection<Any>) {
     _parameters.addAll(parameters)
   }
 
+  /**
+   * @param parameters A group of parameter settings that Image Builder uses to configure the
+   * component for a specific recipe.
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }

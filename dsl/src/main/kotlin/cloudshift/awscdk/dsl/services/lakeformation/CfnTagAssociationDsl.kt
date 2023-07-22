@@ -20,22 +20,56 @@ public class CfnTagAssociationDsl(
 
   private val _lfTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * A structure containing an LF-tag key-value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-lftags)
+   * @param lfTags A structure containing an LF-tag key-value pair. 
+   */
   public fun lfTags(vararg lfTags: Any) {
     _lfTags.addAll(listOf(*lfTags))
   }
 
+  /**
+   * A structure containing an LF-tag key-value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-lftags)
+   * @param lfTags A structure containing an LF-tag key-value pair. 
+   */
   public fun lfTags(lfTags: Collection<Any>) {
     _lfTags.addAll(lfTags)
   }
 
+  /**
+   * A structure containing an LF-tag key-value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-lftags)
+   * @param lfTags A structure containing an LF-tag key-value pair. 
+   */
   public fun lfTags(lfTags: IResolvable) {
     cdkBuilder.lfTags(lfTags)
   }
 
+  /**
+   * UTF-8 string (valid values: `DATABASE | TABLE` ).
+   *
+   * The resource for which the LF-tag policy applies.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-resource)
+   * @param resource UTF-8 string (valid values: `DATABASE | TABLE` ). 
+   */
   public fun resource(resource: IResolvable) {
     cdkBuilder.resource(resource)
   }
 
+  /**
+   * UTF-8 string (valid values: `DATABASE | TABLE` ).
+   *
+   * The resource for which the LF-tag policy applies.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-resource)
+   * @param resource UTF-8 string (valid values: `DATABASE | TABLE` ). 
+   */
   public fun resource(resource: CfnTagAssociation.ResourceProperty) {
     cdkBuilder.resource(resource)
   }

@@ -10,14 +10,30 @@ import software.amazon.awscdk.services.ec2.CfnVolumeAttachmentProps
 public class CfnVolumeAttachmentPropsDsl {
   private val cdkBuilder: CfnVolumeAttachmentProps.Builder = CfnVolumeAttachmentProps.builder()
 
+  /**
+   * @param device The device name (for example, `/dev/sdh` or `xvdh` ).
+   */
   public fun device(device: String) {
     cdkBuilder.device(device)
   }
 
+  /**
+   * @param instanceId The ID of the instance to which the volume attaches. 
+   * This value can be a reference to an
+   * [`AWS::EC2::Instance`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * resource, or it can be the physical ID of an existing EC2 instance.
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }
 
+  /**
+   * @param volumeId The ID of the Amazon EBS volume. 
+   * The volume and instance must be within the same Availability Zone. This value can be a
+   * reference to an
+   * [`AWS::EC2::Volume`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)
+   * resource, or it can be the volume ID of an existing Amazon EBS volume.
+   */
   public fun volumeId(volumeId: String) {
     cdkBuilder.volumeId(volumeId)
   }

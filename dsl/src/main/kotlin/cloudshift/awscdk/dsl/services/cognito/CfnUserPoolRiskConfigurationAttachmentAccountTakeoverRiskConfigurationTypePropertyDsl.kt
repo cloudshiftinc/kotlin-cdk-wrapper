@@ -12,19 +12,31 @@ public class CfnUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurat
       CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty.Builder =
       CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty.builder()
 
+  /**
+   * @param actions Account takeover risk configuration actions. 
+   */
   public fun actions(actions: IResolvable) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * @param actions Account takeover risk configuration actions. 
+   */
   public
       fun actions(actions: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * @param notifyConfiguration The notify configuration used to construct email notifications.
+   */
   public fun notifyConfiguration(notifyConfiguration: IResolvable) {
     cdkBuilder.notifyConfiguration(notifyConfiguration)
   }
 
+  /**
+   * @param notifyConfiguration The notify configuration used to construct email notifications.
+   */
   public
       fun notifyConfiguration(notifyConfiguration: CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty) {
     cdkBuilder.notifyConfiguration(notifyConfiguration)

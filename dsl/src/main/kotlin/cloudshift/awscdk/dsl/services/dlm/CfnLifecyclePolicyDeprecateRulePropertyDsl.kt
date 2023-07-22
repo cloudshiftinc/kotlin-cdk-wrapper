@@ -12,14 +12,23 @@ public class CfnLifecyclePolicyDeprecateRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.DeprecateRuleProperty.Builder =
       CfnLifecyclePolicy.DeprecateRuleProperty.builder()
 
+  /**
+   * @param count the value to be set.
+   */
   public fun count(count: Number) {
     cdkBuilder.count(count)
   }
 
+  /**
+   * @param interval the value to be set.
+   */
   public fun interval(interval: Number) {
     cdkBuilder.interval(interval)
   }
 
+  /**
+   * @param intervalUnit the value to be set.
+   */
   public fun intervalUnit(intervalUnit: String) {
     cdkBuilder.intervalUnit(intervalUnit)
   }

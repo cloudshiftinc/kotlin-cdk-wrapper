@@ -12,18 +12,30 @@ public class CfnTemplateTimeRangeFilterValuePropertyDsl {
   private val cdkBuilder: CfnTemplate.TimeRangeFilterValueProperty.Builder =
       CfnTemplate.TimeRangeFilterValueProperty.builder()
 
+  /**
+   * @param parameter The parameter type input value.
+   */
   public fun parameter(parameter: String) {
     cdkBuilder.parameter(parameter)
   }
 
+  /**
+   * @param rollingDate The rolling date input value.
+   */
   public fun rollingDate(rollingDate: IResolvable) {
     cdkBuilder.rollingDate(rollingDate)
   }
 
+  /**
+   * @param rollingDate The rolling date input value.
+   */
   public fun rollingDate(rollingDate: CfnTemplate.RollingDateConfigurationProperty) {
     cdkBuilder.rollingDate(rollingDate)
   }
 
+  /**
+   * @param staticValue The static input value.
+   */
   public fun staticValue(staticValue: String) {
     cdkBuilder.staticValue(staticValue)
   }

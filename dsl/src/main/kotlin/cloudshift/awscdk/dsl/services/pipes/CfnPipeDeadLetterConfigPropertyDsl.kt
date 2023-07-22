@@ -11,6 +11,9 @@ public class CfnPipeDeadLetterConfigPropertyDsl {
   private val cdkBuilder: CfnPipe.DeadLetterConfigProperty.Builder =
       CfnPipe.DeadLetterConfigProperty.builder()
 
+  /**
+   * @param arn The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

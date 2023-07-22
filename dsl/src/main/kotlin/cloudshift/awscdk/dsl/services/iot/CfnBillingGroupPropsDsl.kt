@@ -19,23 +19,38 @@ public class CfnBillingGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param billingGroupName The name of the billing group.
+   */
   public fun billingGroupName(billingGroupName: String) {
     cdkBuilder.billingGroupName(billingGroupName)
   }
 
+  /**
+   * @param billingGroupProperties The properties of the billing group.
+   */
   public fun billingGroupProperties(billingGroupProperties: IResolvable) {
     cdkBuilder.billingGroupProperties(billingGroupProperties)
   }
 
+  /**
+   * @param billingGroupProperties The properties of the billing group.
+   */
   public
       fun billingGroupProperties(billingGroupProperties: CfnBillingGroup.BillingGroupPropertiesProperty) {
     cdkBuilder.billingGroupProperties(billingGroupProperties)
   }
 
+  /**
+   * @param tags Metadata which can be used to manage the billing group.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Metadata which can be used to manage the billing group.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

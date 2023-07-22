@@ -11,6 +11,9 @@ public class CfnRemediationConfigurationResourceValuePropertyDsl {
   private val cdkBuilder: CfnRemediationConfiguration.ResourceValueProperty.Builder =
       CfnRemediationConfiguration.ResourceValueProperty.builder()
 
+  /**
+   * @param value The value is a resource ID.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

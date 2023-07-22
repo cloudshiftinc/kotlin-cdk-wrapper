@@ -17,18 +17,34 @@ public class CfnImageBuilderVpcConfigPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds The identifiers of the security groups for the image builder.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The identifiers of the security groups for the image builder.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds The identifier of the subnet to which a network interface is attached from the
+   * image builder instance.
+   * An image builder instance can use one subnet.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The identifier of the subnet to which a network interface is attached from the
+   * image builder instance.
+   * An image builder instance can use one subnet.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

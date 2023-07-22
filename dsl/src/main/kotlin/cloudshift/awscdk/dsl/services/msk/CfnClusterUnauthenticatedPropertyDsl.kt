@@ -12,10 +12,16 @@ public class CfnClusterUnauthenticatedPropertyDsl {
   private val cdkBuilder: CfnCluster.UnauthenticatedProperty.Builder =
       CfnCluster.UnauthenticatedProperty.builder()
 
+  /**
+   * @param enabled Unauthenticated is enabled or not. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Unauthenticated is enabled or not. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

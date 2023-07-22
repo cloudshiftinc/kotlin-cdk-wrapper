@@ -11,10 +11,16 @@ public class CfnInfrastructureConfigurationLoggingPropertyDsl {
   private val cdkBuilder: CfnInfrastructureConfiguration.LoggingProperty.Builder =
       CfnInfrastructureConfiguration.LoggingProperty.builder()
 
+  /**
+   * @param s3Logs The Amazon S3 logging configuration.
+   */
   public fun s3Logs(s3Logs: IResolvable) {
     cdkBuilder.s3Logs(s3Logs)
   }
 
+  /**
+   * @param s3Logs The Amazon S3 logging configuration.
+   */
   public fun s3Logs(s3Logs: CfnInfrastructureConfiguration.S3LogsProperty) {
     cdkBuilder.s3Logs(s3Logs)
   }

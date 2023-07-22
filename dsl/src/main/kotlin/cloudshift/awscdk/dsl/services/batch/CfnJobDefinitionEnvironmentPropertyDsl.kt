@@ -11,10 +11,16 @@ public class CfnJobDefinitionEnvironmentPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EnvironmentProperty.Builder =
       CfnJobDefinition.EnvironmentProperty.builder()
 
+  /**
+   * @param name The name of the environment variable.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value of the environment variable.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

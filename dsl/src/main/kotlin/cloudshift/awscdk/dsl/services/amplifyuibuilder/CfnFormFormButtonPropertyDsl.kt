@@ -12,22 +12,37 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 public class CfnFormFormButtonPropertyDsl {
   private val cdkBuilder: CfnForm.FormButtonProperty.Builder = CfnForm.FormButtonProperty.builder()
 
+  /**
+   * @param children Describes the button's properties.
+   */
   public fun children(children: String) {
     cdkBuilder.children(children)
   }
 
+  /**
+   * @param excluded Specifies whether the button is visible on the form.
+   */
   public fun excluded(excluded: Boolean) {
     cdkBuilder.excluded(excluded)
   }
 
+  /**
+   * @param excluded Specifies whether the button is visible on the form.
+   */
   public fun excluded(excluded: IResolvable) {
     cdkBuilder.excluded(excluded)
   }
 
+  /**
+   * @param position The position of the button.
+   */
   public fun position(position: IResolvable) {
     cdkBuilder.position(position)
   }
 
+  /**
+   * @param position The position of the button.
+   */
   public fun position(position: CfnForm.FieldPositionProperty) {
     cdkBuilder.position(position)
   }

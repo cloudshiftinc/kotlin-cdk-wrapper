@@ -16,14 +16,29 @@ public class CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl {
 
   private val _connectors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param connectors The connectors in this version. 
+   * Only one instance of a given connector can be added to a connector definition version at a
+   * time.
+   */
   public fun connectors(vararg connectors: Any) {
     _connectors.addAll(listOf(*connectors))
   }
 
+  /**
+   * @param connectors The connectors in this version. 
+   * Only one instance of a given connector can be added to a connector definition version at a
+   * time.
+   */
   public fun connectors(connectors: Collection<Any>) {
     _connectors.addAll(connectors)
   }
 
+  /**
+   * @param connectors The connectors in this version. 
+   * Only one instance of a given connector can be added to a connector definition version at a
+   * time.
+   */
   public fun connectors(connectors: IResolvable) {
     cdkBuilder.connectors(connectors)
   }

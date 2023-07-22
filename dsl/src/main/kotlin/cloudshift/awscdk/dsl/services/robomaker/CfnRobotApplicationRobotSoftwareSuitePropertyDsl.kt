@@ -11,10 +11,18 @@ public class CfnRobotApplicationRobotSoftwareSuitePropertyDsl {
   private val cdkBuilder: CfnRobotApplication.RobotSoftwareSuiteProperty.Builder =
       CfnRobotApplication.RobotSoftwareSuiteProperty.builder()
 
+  /**
+   * @param name The name of the robot software suite. 
+   * `General` is the only supported value.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param version The version of the robot software suite.
+   * Not applicable for General software suite.
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

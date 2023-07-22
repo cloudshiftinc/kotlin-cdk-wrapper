@@ -28,50 +28,158 @@ public class CfnResolverEndpointDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Indicates whether the Resolver endpoint allows inbound or outbound DNS queries:.
+   *
+   * * `INBOUND` : allows DNS queries to your VPC from your network
+   * * `OUTBOUND` : allows DNS queries from your VPC to your network
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-direction)
+   * @param direction Indicates whether the Resolver endpoint allows inbound or outbound DNS
+   * queries:. 
+   */
   public fun direction(direction: String) {
     cdkBuilder.direction(direction)
   }
 
+  /**
+   * The subnets and IP addresses in your VPC that DNS queries originate from (for outbound
+   * endpoints) or that you forward DNS queries to (for inbound endpoints).
+   *
+   * The subnet ID uniquely identifies a VPC.
+   *
+   *
+   * Even though the minimum is 1, Route 53 requires that you create at least two.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-ipaddresses)
+   * @param ipAddresses The subnets and IP addresses in your VPC that DNS queries originate from
+   * (for outbound endpoints) or that you forward DNS queries to (for inbound endpoints). 
+   */
   public fun ipAddresses(vararg ipAddresses: Any) {
     _ipAddresses.addAll(listOf(*ipAddresses))
   }
 
+  /**
+   * The subnets and IP addresses in your VPC that DNS queries originate from (for outbound
+   * endpoints) or that you forward DNS queries to (for inbound endpoints).
+   *
+   * The subnet ID uniquely identifies a VPC.
+   *
+   *
+   * Even though the minimum is 1, Route 53 requires that you create at least two.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-ipaddresses)
+   * @param ipAddresses The subnets and IP addresses in your VPC that DNS queries originate from
+   * (for outbound endpoints) or that you forward DNS queries to (for inbound endpoints). 
+   */
   public fun ipAddresses(ipAddresses: Collection<Any>) {
     _ipAddresses.addAll(ipAddresses)
   }
 
+  /**
+   * The subnets and IP addresses in your VPC that DNS queries originate from (for outbound
+   * endpoints) or that you forward DNS queries to (for inbound endpoints).
+   *
+   * The subnet ID uniquely identifies a VPC.
+   *
+   *
+   * Even though the minimum is 1, Route 53 requires that you create at least two.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-ipaddresses)
+   * @param ipAddresses The subnets and IP addresses in your VPC that DNS queries originate from
+   * (for outbound endpoints) or that you forward DNS queries to (for inbound endpoints). 
+   */
   public fun ipAddresses(ipAddresses: IResolvable) {
     cdkBuilder.ipAddresses(ipAddresses)
   }
 
+  /**
+   * A friendly name that lets you easily find a configuration in the Resolver dashboard in the
+   * Route 53 console.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-name)
+   * @param name A friendly name that lets you easily find a configuration in the Resolver dashboard
+   * in the Route 53 console. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-outpostarn)
+   * @param outpostArn 
+   */
   public fun outpostArn(outpostArn: String) {
     cdkBuilder.outpostArn(outpostArn)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-preferredinstancetype)
+   * @param preferredInstanceType 
+   */
   public fun preferredInstanceType(preferredInstanceType: String) {
     cdkBuilder.preferredInstanceType(preferredInstanceType)
   }
 
+  /**
+   * The Resolver endpoint IP address type.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-resolverendpointtype)
+   * @param resolverEndpointType The Resolver endpoint IP address type. 
+   */
   public fun resolverEndpointType(resolverEndpointType: String) {
     cdkBuilder.resolverEndpointType(resolverEndpointType)
   }
 
+  /**
+   * The ID of one or more security groups that control access to this VPC.
+   *
+   * The security group must include one or more inbound rules (for inbound endpoints) or outbound
+   * rules (for outbound endpoints). Inbound and outbound rules must allow TCP and UDP access. For
+   * inbound access, open port 53. For outbound access, open the port that you're using for DNS queries
+   * on your network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-securitygroupids)
+   * @param securityGroupIds The ID of one or more security groups that control access to this VPC. 
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * The ID of one or more security groups that control access to this VPC.
+   *
+   * The security group must include one or more inbound rules (for inbound endpoints) or outbound
+   * rules (for outbound endpoints). Inbound and outbound rules must allow TCP and UDP access. For
+   * inbound access, open port 53. For outbound access, open the port that you're using for DNS queries
+   * on your network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-securitygroupids)
+   * @param securityGroupIds The ID of one or more security groups that control access to this VPC. 
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * Route 53 Resolver doesn't support updating tags through CloudFormation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-tags)
+   * @param tags Route 53 Resolver doesn't support updating tags through CloudFormation. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Route 53 Resolver doesn't support updating tags through CloudFormation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-tags)
+   * @param tags Route 53 Resolver doesn't support updating tags through CloudFormation. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

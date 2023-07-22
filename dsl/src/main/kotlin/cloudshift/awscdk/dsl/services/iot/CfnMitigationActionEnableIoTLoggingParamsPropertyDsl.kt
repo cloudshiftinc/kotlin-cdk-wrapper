@@ -11,10 +11,16 @@ public class CfnMitigationActionEnableIoTLoggingParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.EnableIoTLoggingParamsProperty.Builder =
       CfnMitigationAction.EnableIoTLoggingParamsProperty.builder()
 
+  /**
+   * @param logLevel Specifies the type of information to be logged. 
+   */
   public fun logLevel(logLevel: String) {
     cdkBuilder.logLevel(logLevel)
   }
 
+  /**
+   * @param roleArnForLogging The Amazon Resource Name (ARN) of the IAM role used for logging. 
+   */
   public fun roleArnForLogging(roleArnForLogging: String) {
     cdkBuilder.roleArnForLogging(roleArnForLogging)
   }

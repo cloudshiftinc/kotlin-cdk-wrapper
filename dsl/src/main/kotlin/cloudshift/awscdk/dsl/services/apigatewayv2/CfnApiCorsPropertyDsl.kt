@@ -23,46 +23,90 @@ public class CfnApiCorsPropertyDsl {
 
   private val _exposeHeaders: MutableList<String> = mutableListOf()
 
+  /**
+   * @param allowCredentials Specifies whether credentials are included in the CORS request.
+   * Supported only for HTTP APIs.
+   */
   public fun allowCredentials(allowCredentials: Boolean) {
     cdkBuilder.allowCredentials(allowCredentials)
   }
 
+  /**
+   * @param allowCredentials Specifies whether credentials are included in the CORS request.
+   * Supported only for HTTP APIs.
+   */
   public fun allowCredentials(allowCredentials: IResolvable) {
     cdkBuilder.allowCredentials(allowCredentials)
   }
 
+  /**
+   * @param allowHeaders Represents a collection of allowed headers.
+   * Supported only for HTTP APIs.
+   */
   public fun allowHeaders(vararg allowHeaders: String) {
     _allowHeaders.addAll(listOf(*allowHeaders))
   }
 
+  /**
+   * @param allowHeaders Represents a collection of allowed headers.
+   * Supported only for HTTP APIs.
+   */
   public fun allowHeaders(allowHeaders: Collection<String>) {
     _allowHeaders.addAll(allowHeaders)
   }
 
+  /**
+   * @param allowMethods Represents a collection of allowed HTTP methods.
+   * Supported only for HTTP APIs.
+   */
   public fun allowMethods(vararg allowMethods: String) {
     _allowMethods.addAll(listOf(*allowMethods))
   }
 
+  /**
+   * @param allowMethods Represents a collection of allowed HTTP methods.
+   * Supported only for HTTP APIs.
+   */
   public fun allowMethods(allowMethods: Collection<String>) {
     _allowMethods.addAll(allowMethods)
   }
 
+  /**
+   * @param allowOrigins Represents a collection of allowed origins.
+   * Supported only for HTTP APIs.
+   */
   public fun allowOrigins(vararg allowOrigins: String) {
     _allowOrigins.addAll(listOf(*allowOrigins))
   }
 
+  /**
+   * @param allowOrigins Represents a collection of allowed origins.
+   * Supported only for HTTP APIs.
+   */
   public fun allowOrigins(allowOrigins: Collection<String>) {
     _allowOrigins.addAll(allowOrigins)
   }
 
+  /**
+   * @param exposeHeaders Represents a collection of exposed headers.
+   * Supported only for HTTP APIs.
+   */
   public fun exposeHeaders(vararg exposeHeaders: String) {
     _exposeHeaders.addAll(listOf(*exposeHeaders))
   }
 
+  /**
+   * @param exposeHeaders Represents a collection of exposed headers.
+   * Supported only for HTTP APIs.
+   */
   public fun exposeHeaders(exposeHeaders: Collection<String>) {
     _exposeHeaders.addAll(exposeHeaders)
   }
 
+  /**
+   * @param maxAge The number of seconds that the browser should cache preflight request results.
+   * Supported only for HTTP APIs.
+   */
   public fun maxAge(maxAge: Number) {
     cdkBuilder.maxAge(maxAge)
   }

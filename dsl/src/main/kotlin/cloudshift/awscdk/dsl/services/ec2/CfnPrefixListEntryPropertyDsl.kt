@@ -11,10 +11,17 @@ public class CfnPrefixListEntryPropertyDsl {
   private val cdkBuilder: CfnPrefixList.EntryProperty.Builder =
       CfnPrefixList.EntryProperty.builder()
 
+  /**
+   * @param cidr The CIDR block. 
+   */
   public fun cidr(cidr: String) {
     cdkBuilder.cidr(cidr)
   }
 
+  /**
+   * @param description A description for the entry.
+   * Constraints: Up to 255 characters in length.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }

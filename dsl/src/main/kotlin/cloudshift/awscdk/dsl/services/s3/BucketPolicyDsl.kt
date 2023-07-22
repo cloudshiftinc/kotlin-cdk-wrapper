@@ -16,10 +16,22 @@ public class BucketPolicyDsl(
 ) {
   private val cdkBuilder: BucketPolicy.Builder = BucketPolicy.Builder.create(scope, id)
 
+  /**
+   * The Amazon S3 bucket that the policy applies to.
+   *
+   * @param bucket The Amazon S3 bucket that the policy applies to. 
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * Policy to apply when the policy is removed from this stack.
+   *
+   * Default: - RemovalPolicy.DESTROY.
+   *
+   * @param removalPolicy Policy to apply when the policy is removed from this stack. 
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }

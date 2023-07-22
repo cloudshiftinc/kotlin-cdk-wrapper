@@ -12,22 +12,39 @@ public class CfnDashboardAggregationSortConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.AggregationSortConfigurationProperty.Builder =
       CfnDashboard.AggregationSortConfigurationProperty.builder()
 
+  /**
+   * @param aggregationFunction The function that aggregates the values in `Column` .
+   */
   public fun aggregationFunction(aggregationFunction: IResolvable) {
     cdkBuilder.aggregationFunction(aggregationFunction)
   }
 
+  /**
+   * @param aggregationFunction The function that aggregates the values in `Column` .
+   */
   public fun aggregationFunction(aggregationFunction: CfnDashboard.AggregationFunctionProperty) {
     cdkBuilder.aggregationFunction(aggregationFunction)
   }
 
+  /**
+   * @param column The column that determines the sort order of aggregated values. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column that determines the sort order of aggregated values. 
+   */
   public fun column(column: CfnDashboard.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param sortDirection The sort direction of values. 
+   * * `ASC` : Sort in ascending order.
+   * * `DESC` : Sort in descending order.
+   */
   public fun sortDirection(sortDirection: String) {
     cdkBuilder.sortDirection(sortDirection)
   }

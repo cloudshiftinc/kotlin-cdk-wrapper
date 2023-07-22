@@ -15,14 +15,23 @@ public class CfnContainerPublicDomainNamePropertyDsl {
 
   private val _domainNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param certificateName The name of the certificate for the public domains.
+   */
   public fun certificateName(certificateName: String) {
     cdkBuilder.certificateName(certificateName)
   }
 
+  /**
+   * @param domainNames The public domain names to use with the container service.
+   */
   public fun domainNames(vararg domainNames: String) {
     _domainNames.addAll(listOf(*domainNames))
   }
 
+  /**
+   * @param domainNames The public domain names to use with the container service.
+   */
   public fun domainNames(domainNames: Collection<String>) {
     _domainNames.addAll(domainNames)
   }

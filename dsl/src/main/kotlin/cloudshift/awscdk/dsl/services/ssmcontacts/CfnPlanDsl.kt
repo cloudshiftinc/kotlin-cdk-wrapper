@@ -22,26 +22,70 @@ public class CfnPlanDsl(
 
   private val _stages: MutableList<Any> = mutableListOf()
 
+  /**
+   * The Amazon Resource Name (ARN) of the contact.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html#cfn-ssmcontacts-plan-contactid)
+   * @param contactId The Amazon Resource Name (ARN) of the contact. 
+   */
   public fun contactId(contactId: String) {
     cdkBuilder.contactId(contactId)
   }
 
+  /**
+   * The Amazon Resource Names (ARNs) of the on-call rotations associated with the plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html#cfn-ssmcontacts-plan-rotationids)
+   * @param rotationIds The Amazon Resource Names (ARNs) of the on-call rotations associated with
+   * the plan. 
+   */
   public fun rotationIds(vararg rotationIds: String) {
     _rotationIds.addAll(listOf(*rotationIds))
   }
 
+  /**
+   * The Amazon Resource Names (ARNs) of the on-call rotations associated with the plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html#cfn-ssmcontacts-plan-rotationids)
+   * @param rotationIds The Amazon Resource Names (ARNs) of the on-call rotations associated with
+   * the plan. 
+   */
   public fun rotationIds(rotationIds: Collection<String>) {
     _rotationIds.addAll(rotationIds)
   }
 
+  /**
+   * A list of stages that the escalation plan or engagement plan uses to engage contacts and
+   * contact methods.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html#cfn-ssmcontacts-plan-stages)
+   * @param stages A list of stages that the escalation plan or engagement plan uses to engage
+   * contacts and contact methods. 
+   */
   public fun stages(vararg stages: Any) {
     _stages.addAll(listOf(*stages))
   }
 
+  /**
+   * A list of stages that the escalation plan or engagement plan uses to engage contacts and
+   * contact methods.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html#cfn-ssmcontacts-plan-stages)
+   * @param stages A list of stages that the escalation plan or engagement plan uses to engage
+   * contacts and contact methods. 
+   */
   public fun stages(stages: Collection<Any>) {
     _stages.addAll(stages)
   }
 
+  /**
+   * A list of stages that the escalation plan or engagement plan uses to engage contacts and
+   * contact methods.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html#cfn-ssmcontacts-plan-stages)
+   * @param stages A list of stages that the escalation plan or engagement plan uses to engage
+   * contacts and contact methods. 
+   */
   public fun stages(stages: IResolvable) {
     cdkBuilder.stages(stages)
   }

@@ -11,6 +11,10 @@ public class CfnMitigationActionUpdateCACertificateParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.UpdateCACertificateParamsProperty.Builder =
       CfnMitigationAction.UpdateCACertificateParamsProperty.builder()
 
+  /**
+   * @param action The action that you want to apply to the CA certificate. 
+   * The only supported value is `DEACTIVATE` .
+   */
   public fun action(action: String) {
     cdkBuilder.action(action)
   }

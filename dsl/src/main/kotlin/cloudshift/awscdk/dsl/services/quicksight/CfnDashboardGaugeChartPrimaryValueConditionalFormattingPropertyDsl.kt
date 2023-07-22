@@ -11,18 +11,30 @@ public class CfnDashboardGaugeChartPrimaryValueConditionalFormattingPropertyDsl 
   private val cdkBuilder: CfnDashboard.GaugeChartPrimaryValueConditionalFormattingProperty.Builder =
       CfnDashboard.GaugeChartPrimaryValueConditionalFormattingProperty.builder()
 
+  /**
+   * @param icon The conditional formatting of the primary value icon.
+   */
   public fun icon(icon: IResolvable) {
     cdkBuilder.icon(icon)
   }
 
+  /**
+   * @param icon The conditional formatting of the primary value icon.
+   */
   public fun icon(icon: CfnDashboard.ConditionalFormattingIconProperty) {
     cdkBuilder.icon(icon)
   }
 
+  /**
+   * @param textColor The conditional formatting of the primary value text color.
+   */
   public fun textColor(textColor: IResolvable) {
     cdkBuilder.textColor(textColor)
   }
 
+  /**
+   * @param textColor The conditional formatting of the primary value text color.
+   */
   public fun textColor(textColor: CfnDashboard.ConditionalFormattingColorProperty) {
     cdkBuilder.textColor(textColor)
   }

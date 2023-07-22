@@ -12,14 +12,23 @@ public class CfnFlowSourceGatewayBridgeSourcePropertyDsl {
   private val cdkBuilder: CfnFlowSource.GatewayBridgeSourceProperty.Builder =
       CfnFlowSource.GatewayBridgeSourceProperty.builder()
 
+  /**
+   * @param bridgeArn The ARN of the bridge feeding this flow. 
+   */
   public fun bridgeArn(bridgeArn: String) {
     cdkBuilder.bridgeArn(bridgeArn)
   }
 
+  /**
+   * @param vpcInterfaceAttachment The settings for attaching a VPC interface to an resource.
+   */
   public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
     cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment)
   }
 
+  /**
+   * @param vpcInterfaceAttachment The settings for attaching a VPC interface to an resource.
+   */
   public
       fun vpcInterfaceAttachment(vpcInterfaceAttachment: CfnFlowSource.VpcInterfaceAttachmentProperty) {
     cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment)

@@ -11,10 +11,18 @@ public class CfnDashboardGridLayoutCanvasSizeOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.GridLayoutCanvasSizeOptionsProperty.Builder =
       CfnDashboard.GridLayoutCanvasSizeOptionsProperty.builder()
 
+  /**
+   * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
+   * grid layout.
+   */
   public fun screenCanvasSizeOptions(screenCanvasSizeOptions: IResolvable) {
     cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
   }
 
+  /**
+   * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
+   * grid layout.
+   */
   public
       fun screenCanvasSizeOptions(screenCanvasSizeOptions: CfnDashboard.GridLayoutScreenCanvasSizeOptionsProperty) {
     cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)

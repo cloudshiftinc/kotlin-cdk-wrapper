@@ -15,14 +15,25 @@ public class CfnDataSetFieldFolderPropertyDsl {
 
   private val _columns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param columns A folder has a list of columns.
+   * A column can only be in one folder.
+   */
   public fun columns(vararg columns: String) {
     _columns.addAll(listOf(*columns))
   }
 
+  /**
+   * @param columns A folder has a list of columns.
+   * A column can only be in one folder.
+   */
   public fun columns(columns: Collection<String>) {
     _columns.addAll(columns)
   }
 
+  /**
+   * @param description The description for a field folder.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }

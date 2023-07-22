@@ -11,10 +11,16 @@ public class CfnDeliveryStreamHttpEndpointCommonAttributePropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.HttpEndpointCommonAttributeProperty.Builder =
       CfnDeliveryStream.HttpEndpointCommonAttributeProperty.builder()
 
+  /**
+   * @param attributeName The name of the HTTP endpoint common attribute. 
+   */
   public fun attributeName(attributeName: String) {
     cdkBuilder.attributeName(attributeName)
   }
 
+  /**
+   * @param attributeValue The value of the HTTP endpoint common attribute. 
+   */
   public fun attributeValue(attributeValue: String) {
     cdkBuilder.attributeValue(attributeValue)
   }

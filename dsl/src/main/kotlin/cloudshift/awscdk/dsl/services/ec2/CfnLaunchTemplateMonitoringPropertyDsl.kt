@@ -12,10 +12,18 @@ public class CfnLaunchTemplateMonitoringPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.MonitoringProperty.Builder =
       CfnLaunchTemplate.MonitoringProperty.builder()
 
+  /**
+   * @param enabled Specify `true` to enable detailed monitoring.
+   * Otherwise, basic monitoring is enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Specify `true` to enable detailed monitoring.
+   * Otherwise, basic monitoring is enabled.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

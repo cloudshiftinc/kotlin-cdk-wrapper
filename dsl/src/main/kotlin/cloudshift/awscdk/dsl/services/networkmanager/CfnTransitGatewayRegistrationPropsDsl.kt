@@ -11,10 +11,16 @@ public class CfnTransitGatewayRegistrationPropsDsl {
   private val cdkBuilder: CfnTransitGatewayRegistrationProps.Builder =
       CfnTransitGatewayRegistrationProps.builder()
 
+  /**
+   * @param globalNetworkId The ID of the global network. 
+   */
   public fun globalNetworkId(globalNetworkId: String) {
     cdkBuilder.globalNetworkId(globalNetworkId)
   }
 
+  /**
+   * @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway. 
+   */
   public fun transitGatewayArn(transitGatewayArn: String) {
     cdkBuilder.transitGatewayArn(transitGatewayArn)
   }

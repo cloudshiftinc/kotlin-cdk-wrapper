@@ -11,10 +11,16 @@ public class CfnCloudFormationProvisionedProductProvisioningParameterPropertyDsl
   private val cdkBuilder: CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty.Builder
       = CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty.builder()
 
+  /**
+   * @param key The parameter key. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The parameter value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

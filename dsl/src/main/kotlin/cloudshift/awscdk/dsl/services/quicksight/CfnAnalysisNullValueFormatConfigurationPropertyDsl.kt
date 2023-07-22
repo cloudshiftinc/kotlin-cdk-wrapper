@@ -11,6 +11,9 @@ public class CfnAnalysisNullValueFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.NullValueFormatConfigurationProperty.Builder =
       CfnAnalysis.NullValueFormatConfigurationProperty.builder()
 
+  /**
+   * @param nullString Determines the null string of null values. 
+   */
   public fun nullString(nullString: String) {
     cdkBuilder.nullString(nullString)
   }

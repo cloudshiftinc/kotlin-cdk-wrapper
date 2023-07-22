@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.waf.regional.CfnWebACLAssociationProps
 public class CfnWebACLAssociationPropsDsl {
   private val cdkBuilder: CfnWebACLAssociationProps.Builder = CfnWebACLAssociationProps.builder()
 
+  /**
+   * @param resourceArn The Amazon Resource Name (ARN) of the resource to protect with the web ACL. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }
 
+  /**
+   * @param webAclId A unique identifier (ID) for the web ACL. 
+   */
   public fun webAclId(webAclId: String) {
     cdkBuilder.webAclId(webAclId)
   }

@@ -12,15 +12,29 @@ public class CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl {
   private val cdkBuilder: CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.Builder =
       CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.builder()
 
+  /**
+   * @param netBiosName The NetBIOS name of the Active Directory computer object that will be
+   * created for your SVM.
+   */
   public fun netBiosName(netBiosName: String) {
     cdkBuilder.netBiosName(netBiosName)
   }
 
+  /**
+   * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
+   * the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises) Microsoft
+   * Active Directory (AD) directory.
+   */
   public
       fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
     cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration)
   }
 
+  /**
+   * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
+   * the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises) Microsoft
+   * Active Directory (AD) directory.
+   */
   public
       fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty) {
     cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration)

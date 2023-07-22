@@ -11,18 +11,30 @@ public class CfnDashboardAxisDataOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.AxisDataOptionsProperty.Builder =
       CfnDashboard.AxisDataOptionsProperty.builder()
 
+  /**
+   * @param dateAxisOptions The options for an axis with a date field.
+   */
   public fun dateAxisOptions(dateAxisOptions: IResolvable) {
     cdkBuilder.dateAxisOptions(dateAxisOptions)
   }
 
+  /**
+   * @param dateAxisOptions The options for an axis with a date field.
+   */
   public fun dateAxisOptions(dateAxisOptions: CfnDashboard.DateAxisOptionsProperty) {
     cdkBuilder.dateAxisOptions(dateAxisOptions)
   }
 
+  /**
+   * @param numericAxisOptions The options for an axis with a numeric field.
+   */
   public fun numericAxisOptions(numericAxisOptions: IResolvable) {
     cdkBuilder.numericAxisOptions(numericAxisOptions)
   }
 
+  /**
+   * @param numericAxisOptions The options for an axis with a numeric field.
+   */
   public fun numericAxisOptions(numericAxisOptions: CfnDashboard.NumericAxisOptionsProperty) {
     cdkBuilder.numericAxisOptions(numericAxisOptions)
   }

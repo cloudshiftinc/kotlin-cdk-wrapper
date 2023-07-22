@@ -11,6 +11,9 @@ public class CfnTaskTemplateFieldIdentifierPropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.FieldIdentifierProperty.Builder =
       CfnTaskTemplate.FieldIdentifierProperty.builder()
 
+  /**
+   * @param name The name of the task template field. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

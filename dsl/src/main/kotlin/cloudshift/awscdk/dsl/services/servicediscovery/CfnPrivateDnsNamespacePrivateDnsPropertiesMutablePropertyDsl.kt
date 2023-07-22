@@ -11,10 +11,18 @@ public class CfnPrivateDnsNamespacePrivateDnsPropertiesMutablePropertyDsl {
   private val cdkBuilder: CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.Builder =
       CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.builder()
 
+  /**
+   * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the private
+   * DNS namespace.
+   */
   public fun soa(soa: IResolvable) {
     cdkBuilder.soa(soa)
   }
 
+  /**
+   * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the private
+   * DNS namespace.
+   */
   public fun soa(soa: CfnPrivateDnsNamespace.SOAProperty) {
     cdkBuilder.soa(soa)
   }

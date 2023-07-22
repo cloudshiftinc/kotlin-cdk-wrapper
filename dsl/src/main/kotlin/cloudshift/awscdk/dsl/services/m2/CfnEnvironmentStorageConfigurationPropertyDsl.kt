@@ -11,18 +11,30 @@ public class CfnEnvironmentStorageConfigurationPropertyDsl {
   private val cdkBuilder: CfnEnvironment.StorageConfigurationProperty.Builder =
       CfnEnvironment.StorageConfigurationProperty.builder()
 
+  /**
+   * @param efs Defines the storage configuration for an Amazon EFS file system.
+   */
   public fun efs(efs: IResolvable) {
     cdkBuilder.efs(efs)
   }
 
+  /**
+   * @param efs Defines the storage configuration for an Amazon EFS file system.
+   */
   public fun efs(efs: CfnEnvironment.EfsStorageConfigurationProperty) {
     cdkBuilder.efs(efs)
   }
 
+  /**
+   * @param fsx Defines the storage configuration for an Amazon FSx file system.
+   */
   public fun fsx(fsx: IResolvable) {
     cdkBuilder.fsx(fsx)
   }
 
+  /**
+   * @param fsx Defines the storage configuration for an Amazon FSx file system.
+   */
   public fun fsx(fsx: CfnEnvironment.FsxStorageConfigurationProperty) {
     cdkBuilder.fsx(fsx)
   }

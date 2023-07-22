@@ -15,10 +15,26 @@ public class CfnNotificationChannelDsl(
   private val cdkBuilder: CfnNotificationChannel.Builder =
       CfnNotificationChannel.Builder.create(scope, id)
 
+  /**
+   * The Amazon Resource Name (ARN) of the IAM role that allows Amazon SNS to record AWS Firewall
+   * Manager activity.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html#cfn-fms-notificationchannel-snsrolename)
+   * @param snsRoleName The Amazon Resource Name (ARN) of the IAM role that allows Amazon SNS to
+   * record AWS Firewall Manager activity. 
+   */
   public fun snsRoleName(snsRoleName: String) {
     cdkBuilder.snsRoleName(snsRoleName)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the SNS topic that collects notifications from AWS Firewall
+   * Manager .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html#cfn-fms-notificationchannel-snstopicarn)
+   * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic that collects notifications
+   * from AWS Firewall Manager . 
+   */
   public fun snsTopicArn(snsTopicArn: String) {
     cdkBuilder.snsTopicArn(snsTopicArn)
   }

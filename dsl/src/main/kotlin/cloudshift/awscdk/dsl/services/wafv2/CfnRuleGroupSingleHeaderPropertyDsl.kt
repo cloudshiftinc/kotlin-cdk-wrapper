@@ -11,6 +11,9 @@ public class CfnRuleGroupSingleHeaderPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.SingleHeaderProperty.Builder =
       CfnRuleGroup.SingleHeaderProperty.builder()
 
+  /**
+   * @param name The name of the query header to inspect. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

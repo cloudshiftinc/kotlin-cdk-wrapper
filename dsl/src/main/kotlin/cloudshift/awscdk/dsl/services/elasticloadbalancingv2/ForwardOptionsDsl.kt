@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions
 public class ForwardOptionsDsl {
   private val cdkBuilder: ForwardOptions.Builder = ForwardOptions.builder()
 
+  /**
+   * @param stickinessDuration For how long clients should be directed to the same target group.
+   * Range between 1 second and 7 days.
+   */
   public fun stickinessDuration(stickinessDuration: Duration) {
     cdkBuilder.stickinessDuration(stickinessDuration)
   }

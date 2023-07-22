@@ -14,6 +14,15 @@ public class KinesisFirehoseStreamDsl(
   private val cdkBuilder: KinesisFirehoseStream.Builder =
       KinesisFirehoseStream.Builder.create(stream)
 
+  /**
+   * The message to send to the stream.
+   *
+   * Must be a valid JSON text passed to the target stream.
+   *
+   * Default: - the entire Event Bridge event
+   *
+   * @param message The message to send to the stream. 
+   */
   public fun message(message: RuleTargetInput) {
     cdkBuilder.message(message)
   }

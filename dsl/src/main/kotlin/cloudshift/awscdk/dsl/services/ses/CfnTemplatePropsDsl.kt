@@ -11,10 +11,18 @@ import software.amazon.awscdk.services.ses.CfnTemplateProps
 public class CfnTemplatePropsDsl {
   private val cdkBuilder: CfnTemplateProps.Builder = CfnTemplateProps.builder()
 
+  /**
+   * @param template The content of the email, composed of a subject line and either an HTML part or
+   * a text-only part.
+   */
   public fun template(template: IResolvable) {
     cdkBuilder.template(template)
   }
 
+  /**
+   * @param template The content of the email, composed of a subject line and either an HTML part or
+   * a text-only part.
+   */
   public fun template(template: CfnTemplate.TemplateProperty) {
     cdkBuilder.template(template)
   }

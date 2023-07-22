@@ -15,10 +15,16 @@ public class CfnLocationNFSOnPremConfigPropertyDsl {
 
   private val _agentArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param agentArns ARNs of the agents to use for an NFS location. 
+   */
   public fun agentArns(vararg agentArns: String) {
     _agentArns.addAll(listOf(*agentArns))
   }
 
+  /**
+   * @param agentArns ARNs of the agents to use for an NFS location. 
+   */
   public fun agentArns(agentArns: Collection<String>) {
     _agentArns.addAll(agentArns)
   }

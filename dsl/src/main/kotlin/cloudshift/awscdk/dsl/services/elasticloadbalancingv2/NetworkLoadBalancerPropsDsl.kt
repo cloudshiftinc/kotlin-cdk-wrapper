@@ -15,32 +15,53 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalance
 public class NetworkLoadBalancerPropsDsl {
   private val cdkBuilder: NetworkLoadBalancerProps.Builder = NetworkLoadBalancerProps.builder()
 
+  /**
+   * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
+   */
   public fun crossZoneEnabled(crossZoneEnabled: Boolean) {
     cdkBuilder.crossZoneEnabled(crossZoneEnabled)
   }
 
+  /**
+   * @param deletionProtection Indicates whether deletion protection is enabled.
+   */
   public fun deletionProtection(deletionProtection: Boolean) {
     cdkBuilder.deletionProtection(deletionProtection)
   }
 
+  /**
+   * @param internetFacing Whether the load balancer has an internet-routable address.
+   */
   public fun internetFacing(internetFacing: Boolean) {
     cdkBuilder.internetFacing(internetFacing)
   }
 
+  /**
+   * @param loadBalancerName Name of the load balancer.
+   */
   public fun loadBalancerName(loadBalancerName: String) {
     cdkBuilder.loadBalancerName(loadBalancerName)
   }
 
+  /**
+   * @param vpc The VPC network to place the load balancer in. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }
 
-  public fun vpcSubnets(block: SubnetSelectionDsl.() -> Unit = {}) {
+  /**
+   * @param vpcSubnets Which subnets place the load balancer in.
+   */
+  public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
     val builder = SubnetSelectionDsl()
-    builder.apply(block)
+    builder.apply(vpcSubnets)
     cdkBuilder.vpcSubnets(builder.build())
   }
 
+  /**
+   * @param vpcSubnets Which subnets place the load balancer in.
+   */
   public fun vpcSubnets(vpcSubnets: SubnetSelection) {
     cdkBuilder.vpcSubnets(vpcSubnets)
   }

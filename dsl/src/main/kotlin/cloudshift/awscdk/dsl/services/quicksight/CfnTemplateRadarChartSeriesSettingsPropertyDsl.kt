@@ -11,10 +11,16 @@ public class CfnTemplateRadarChartSeriesSettingsPropertyDsl {
   private val cdkBuilder: CfnTemplate.RadarChartSeriesSettingsProperty.Builder =
       CfnTemplate.RadarChartSeriesSettingsProperty.builder()
 
+  /**
+   * @param areaStyleSettings The area style settings of a radar chart.
+   */
   public fun areaStyleSettings(areaStyleSettings: IResolvable) {
     cdkBuilder.areaStyleSettings(areaStyleSettings)
   }
 
+  /**
+   * @param areaStyleSettings The area style settings of a radar chart.
+   */
   public fun areaStyleSettings(areaStyleSettings: CfnTemplate.RadarChartAreaStyleSettingsProperty) {
     cdkBuilder.areaStyleSettings(areaStyleSettings)
   }

@@ -24,30 +24,72 @@ public class CfnVerifiedAccessGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A description for the AWS Verified Access group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-description)
+   * @param description A description for the AWS Verified Access group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The Verified Access policy document.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-policydocument)
+   * @param policyDocument The Verified Access policy document. 
+   */
   public fun policyDocument(policyDocument: String) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * The status of the Verified Access policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-policyenabled)
+   * @param policyEnabled The status of the Verified Access policy. 
+   */
   public fun policyEnabled(policyEnabled: Boolean) {
     cdkBuilder.policyEnabled(policyEnabled)
   }
 
+  /**
+   * The status of the Verified Access policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-policyenabled)
+   * @param policyEnabled The status of the Verified Access policy. 
+   */
   public fun policyEnabled(policyEnabled: IResolvable) {
     cdkBuilder.policyEnabled(policyEnabled)
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ID of the AWS Verified Access instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html#cfn-ec2-verifiedaccessgroup-verifiedaccessinstanceid)
+   * @param verifiedAccessInstanceId The ID of the AWS Verified Access instance. 
+   */
   public fun verifiedAccessInstanceId(verifiedAccessInstanceId: String) {
     cdkBuilder.verifiedAccessInstanceId(verifiedAccessInstanceId)
   }

@@ -16,18 +16,30 @@ public class CfnDataLakeSettingsPrincipalPermissionsPropertyDsl {
 
   private val _permissions: MutableList<String> = mutableListOf()
 
+  /**
+   * @param permissions The permissions that are granted to the principal. 
+   */
   public fun permissions(vararg permissions: String) {
     _permissions.addAll(listOf(*permissions))
   }
 
+  /**
+   * @param permissions The permissions that are granted to the principal. 
+   */
   public fun permissions(permissions: Collection<String>) {
     _permissions.addAll(permissions)
   }
 
+  /**
+   * @param principal The principal who is granted permissions. 
+   */
   public fun principal(principal: IResolvable) {
     cdkBuilder.principal(principal)
   }
 
+  /**
+   * @param principal The principal who is granted permissions. 
+   */
   public fun principal(principal: CfnDataLakeSettings.DataLakePrincipalProperty) {
     cdkBuilder.principal(principal)
   }

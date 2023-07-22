@@ -20,26 +20,54 @@ public class BaseApplicationListenerRulePropsDsl {
 
   private val _targetGroups: MutableList<IApplicationTargetGroup> = mutableListOf()
 
+  /**
+   * @param action Action to perform when requests are received.
+   * Only one of `action`, `fixedResponse`, `redirectResponse` or `targetGroups` can be specified.
+   */
   public fun action(action: ListenerAction) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param conditions Rule applies if matches the conditions.
+   */
   public fun conditions(vararg conditions: ListenerCondition) {
     _conditions.addAll(listOf(*conditions))
   }
 
+  /**
+   * @param conditions Rule applies if matches the conditions.
+   */
   public fun conditions(conditions: Collection<ListenerCondition>) {
     _conditions.addAll(conditions)
   }
 
+  /**
+   * @param priority Priority of the rule. 
+   * The rule with the lowest priority will be used for every request.
+   *
+   * Priorities must be unique.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }
 
+  /**
+   * @param targetGroups Target groups to forward requests to.
+   * Only one of `action`, `fixedResponse`, `redirectResponse` or `targetGroups` can be specified.
+   *
+   * Implies a `forward` action.
+   */
   public fun targetGroups(vararg targetGroups: IApplicationTargetGroup) {
     _targetGroups.addAll(listOf(*targetGroups))
   }
 
+  /**
+   * @param targetGroups Target groups to forward requests to.
+   * Only one of `action`, `fixedResponse`, `redirectResponse` or `targetGroups` can be specified.
+   *
+   * Implies a `forward` action.
+   */
   public fun targetGroups(targetGroups: Collection<IApplicationTargetGroup>) {
     _targetGroups.addAll(targetGroups)
   }

@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptio
 public class LaunchTargetBindOptionsDsl {
   private val cdkBuilder: LaunchTargetBindOptions.Builder = LaunchTargetBindOptions.builder()
 
+  /**
+   * @param cluster A regional grouping of one or more container instances on which you can run
+   * tasks and services.
+   */
   public fun cluster(cluster: ICluster) {
     cdkBuilder.cluster(cluster)
   }
 
+  /**
+   * @param taskDefinition Task definition to run Docker containers in Amazon ECS. 
+   */
   public fun taskDefinition(taskDefinition: ITaskDefinition) {
     cdkBuilder.taskDefinition(taskDefinition)
   }

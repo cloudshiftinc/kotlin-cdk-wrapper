@@ -11,18 +11,32 @@ public class CfnEndpointConfigAsyncInferenceConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.AsyncInferenceConfigProperty.Builder =
       CfnEndpointConfig.AsyncInferenceConfigProperty.builder()
 
+  /**
+   * @param clientConfig Configures the behavior of the client used by SageMaker to interact with
+   * the model container during asynchronous inference.
+   */
   public fun clientConfig(clientConfig: IResolvable) {
     cdkBuilder.clientConfig(clientConfig)
   }
 
+  /**
+   * @param clientConfig Configures the behavior of the client used by SageMaker to interact with
+   * the model container during asynchronous inference.
+   */
   public fun clientConfig(clientConfig: CfnEndpointConfig.AsyncInferenceClientConfigProperty) {
     cdkBuilder.clientConfig(clientConfig)
   }
 
+  /**
+   * @param outputConfig Specifies the configuration for asynchronous inference invocation outputs. 
+   */
   public fun outputConfig(outputConfig: IResolvable) {
     cdkBuilder.outputConfig(outputConfig)
   }
 
+  /**
+   * @param outputConfig Specifies the configuration for asynchronous inference invocation outputs. 
+   */
   public fun outputConfig(outputConfig: CfnEndpointConfig.AsyncInferenceOutputConfigProperty) {
     cdkBuilder.outputConfig(outputConfig)
   }

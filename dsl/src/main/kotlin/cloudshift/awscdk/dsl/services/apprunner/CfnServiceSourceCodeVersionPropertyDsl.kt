@@ -11,10 +11,19 @@ public class CfnServiceSourceCodeVersionPropertyDsl {
   private val cdkBuilder: CfnService.SourceCodeVersionProperty.Builder =
       CfnService.SourceCodeVersionProperty.builder()
 
+  /**
+   * @param type The type of version identifier. 
+   * For a git-based repository, branches represent versions.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param value A source code version. 
+   * For a git-based repository, a branch name maps to a specific version. App Runner uses the most
+   * recent commit to the branch.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

@@ -16,22 +16,39 @@ public class CfnAnalysisDecimalDefaultValuesPropertyDsl {
 
   private val _staticValues: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param dynamicValue The dynamic value of the `DecimalDefaultValues` .
+   * Different defaults are displayed according to users, groups, and values mapping.
+   */
   public fun dynamicValue(dynamicValue: IResolvable) {
     cdkBuilder.dynamicValue(dynamicValue)
   }
 
+  /**
+   * @param dynamicValue The dynamic value of the `DecimalDefaultValues` .
+   * Different defaults are displayed according to users, groups, and values mapping.
+   */
   public fun dynamicValue(dynamicValue: CfnAnalysis.DynamicDefaultValueProperty) {
     cdkBuilder.dynamicValue(dynamicValue)
   }
 
+  /**
+   * @param staticValues The static values of the `DecimalDefaultValues` .
+   */
   public fun staticValues(vararg staticValues: Number) {
     _staticValues.addAll(listOf(*staticValues))
   }
 
+  /**
+   * @param staticValues The static values of the `DecimalDefaultValues` .
+   */
   public fun staticValues(staticValues: Collection<Number>) {
     _staticValues.addAll(staticValues)
   }
 
+  /**
+   * @param staticValues The static values of the `DecimalDefaultValues` .
+   */
   public fun staticValues(staticValues: IResolvable) {
     cdkBuilder.staticValues(staticValues)
   }

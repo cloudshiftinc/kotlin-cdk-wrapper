@@ -15,10 +15,22 @@ public class CfnApplicationFleetAssociationDsl(
   private val cdkBuilder: CfnApplicationFleetAssociation.Builder =
       CfnApplicationFleetAssociation.Builder.create(scope, id)
 
+  /**
+   * The ARN of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationfleetassociation.html#cfn-appstream-applicationfleetassociation-applicationarn)
+   * @param applicationArn The ARN of the application. 
+   */
   public fun applicationArn(applicationArn: String) {
     cdkBuilder.applicationArn(applicationArn)
   }
 
+  /**
+   * The name of the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationfleetassociation.html#cfn-appstream-applicationfleetassociation-fleetname)
+   * @param fleetName The name of the fleet. 
+   */
   public fun fleetName(fleetName: String) {
     cdkBuilder.fleetName(fleetName)
   }

@@ -12,25 +12,39 @@ import software.amazon.awscdk.services.appmesh.HealthCheckConfig
 public class HealthCheckConfigDsl {
   private val cdkBuilder: HealthCheckConfig.Builder = HealthCheckConfig.builder()
 
+  /**
+   * @param virtualGatewayHealthCheck VirtualGateway CFN configuration for Health Checks.
+   */
   public
-      fun virtualGatewayHealthCheck(block: CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl.() -> Unit
+      fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl.() -> Unit
       = {}) {
     val builder = CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl()
-    builder.apply(block)
+    builder.apply(virtualGatewayHealthCheck)
     cdkBuilder.virtualGatewayHealthCheck(builder.build())
   }
 
+  /**
+   * @param virtualGatewayHealthCheck VirtualGateway CFN configuration for Health Checks.
+   */
   public
       fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty) {
     cdkBuilder.virtualGatewayHealthCheck(virtualGatewayHealthCheck)
   }
 
-  public fun virtualNodeHealthCheck(block: CfnVirtualNodeHealthCheckPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param virtualNodeHealthCheck VirtualNode CFN configuration for Health Checks.
+   */
+  public
+      fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNodeHealthCheckPropertyDsl.() -> Unit
+      = {}) {
     val builder = CfnVirtualNodeHealthCheckPropertyDsl()
-    builder.apply(block)
+    builder.apply(virtualNodeHealthCheck)
     cdkBuilder.virtualNodeHealthCheck(builder.build())
   }
 
+  /**
+   * @param virtualNodeHealthCheck VirtualNode CFN configuration for Health Checks.
+   */
   public fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty) {
     cdkBuilder.virtualNodeHealthCheck(virtualNodeHealthCheck)
   }

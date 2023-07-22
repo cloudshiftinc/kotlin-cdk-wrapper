@@ -12,14 +12,24 @@ public class CfnVolumeUserAndGroupQuotasPropertyDsl {
   private val cdkBuilder: CfnVolume.UserAndGroupQuotasProperty.Builder =
       CfnVolume.UserAndGroupQuotasProperty.builder()
 
+  /**
+   * @param id The ID of the user or group. 
+   */
   public fun id(id: Number) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param storageCapacityQuotaGiB The amount of storage that the user or group can use in
+   * gibibytes (GiB). 
+   */
   public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
     cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
   }
 
+  /**
+   * @param type A value that specifies whether the quota applies to a user or group. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

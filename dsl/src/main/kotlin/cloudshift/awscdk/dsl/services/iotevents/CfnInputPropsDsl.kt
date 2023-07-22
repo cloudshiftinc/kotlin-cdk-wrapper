@@ -19,26 +19,50 @@ public class CfnInputPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param inputDefinition The definition of the input. 
+   */
   public fun inputDefinition(inputDefinition: IResolvable) {
     cdkBuilder.inputDefinition(inputDefinition)
   }
 
+  /**
+   * @param inputDefinition The definition of the input. 
+   */
   public fun inputDefinition(inputDefinition: CfnInput.InputDefinitionProperty) {
     cdkBuilder.inputDefinition(inputDefinition)
   }
 
+  /**
+   * @param inputDescription A brief description of the input.
+   */
   public fun inputDescription(inputDescription: String) {
     cdkBuilder.inputDescription(inputDescription)
   }
 
+  /**
+   * @param inputName The name of the input.
+   */
   public fun inputName(inputName: String) {
     cdkBuilder.inputName(inputName)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

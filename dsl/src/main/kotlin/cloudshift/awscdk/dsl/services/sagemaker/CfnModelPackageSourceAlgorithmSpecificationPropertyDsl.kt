@@ -16,14 +16,23 @@ public class CfnModelPackageSourceAlgorithmSpecificationPropertyDsl {
 
   private val _sourceAlgorithms: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+   */
   public fun sourceAlgorithms(vararg sourceAlgorithms: Any) {
     _sourceAlgorithms.addAll(listOf(*sourceAlgorithms))
   }
 
+  /**
+   * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+   */
   public fun sourceAlgorithms(sourceAlgorithms: Collection<Any>) {
     _sourceAlgorithms.addAll(sourceAlgorithms)
   }
 
+  /**
+   * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+   */
   public fun sourceAlgorithms(sourceAlgorithms: IResolvable) {
     cdkBuilder.sourceAlgorithms(sourceAlgorithms)
   }

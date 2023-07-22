@@ -18,38 +18,65 @@ public class DatabaseClusterAttributesDsl {
 
   private val _instanceIdentifiers: MutableList<String> = mutableListOf()
 
+  /**
+   * @param clusterEndpointAddress Cluster endpoint address.
+   */
   public fun clusterEndpointAddress(clusterEndpointAddress: String) {
     cdkBuilder.clusterEndpointAddress(clusterEndpointAddress)
   }
 
+  /**
+   * @param clusterIdentifier Identifier for the cluster. 
+   */
   public fun clusterIdentifier(clusterIdentifier: String) {
     cdkBuilder.clusterIdentifier(clusterIdentifier)
   }
 
+  /**
+   * @param instanceEndpointAddresses Endpoint addresses of individual instances.
+   */
   public fun instanceEndpointAddresses(vararg instanceEndpointAddresses: String) {
     _instanceEndpointAddresses.addAll(listOf(*instanceEndpointAddresses))
   }
 
+  /**
+   * @param instanceEndpointAddresses Endpoint addresses of individual instances.
+   */
   public fun instanceEndpointAddresses(instanceEndpointAddresses: Collection<String>) {
     _instanceEndpointAddresses.addAll(instanceEndpointAddresses)
   }
 
+  /**
+   * @param instanceIdentifiers Identifier for the instances.
+   */
   public fun instanceIdentifiers(vararg instanceIdentifiers: String) {
     _instanceIdentifiers.addAll(listOf(*instanceIdentifiers))
   }
 
+  /**
+   * @param instanceIdentifiers Identifier for the instances.
+   */
   public fun instanceIdentifiers(instanceIdentifiers: Collection<String>) {
     _instanceIdentifiers.addAll(instanceIdentifiers)
   }
 
+  /**
+   * @param port The database port.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param readerEndpointAddress Reader endpoint address.
+   */
   public fun readerEndpointAddress(readerEndpointAddress: String) {
     cdkBuilder.readerEndpointAddress(readerEndpointAddress)
   }
 
+  /**
+   * @param securityGroup The security group of the database cluster.
+   */
   public fun securityGroup(securityGroup: ISecurityGroup) {
     cdkBuilder.securityGroup(securityGroup)
   }

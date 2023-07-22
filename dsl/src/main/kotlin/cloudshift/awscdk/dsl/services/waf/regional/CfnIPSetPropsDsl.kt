@@ -16,18 +16,34 @@ public class CfnIPSetPropsDsl {
 
   private val _ipSetDescriptors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from.
+   */
   public fun ipSetDescriptors(vararg ipSetDescriptors: Any) {
     _ipSetDescriptors.addAll(listOf(*ipSetDescriptors))
   }
 
+  /**
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from.
+   */
   public fun ipSetDescriptors(ipSetDescriptors: Collection<Any>) {
     _ipSetDescriptors.addAll(ipSetDescriptors)
   }
 
+  /**
+   * @param ipSetDescriptors The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in
+   * CIDR notation) that web requests originate from.
+   */
   public fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
     cdkBuilder.ipSetDescriptors(ipSetDescriptors)
   }
 
+  /**
+   * @param name A friendly name or description of the `IPSet` . 
+   * You can't change the name of an `IPSet` after you create it.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

@@ -19,50 +19,88 @@ public class CloudFormationProductPropsDsl {
 
   private val _productVersions: MutableList<CloudFormationProductVersion> = mutableListOf()
 
+  /**
+   * @param description The description of the product.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param distributor The distributor of the product.
+   */
   public fun distributor(distributor: String) {
     cdkBuilder.distributor(distributor)
   }
 
+  /**
+   * @param messageLanguage The language code.
+   * Controls language for logging and errors.
+   */
   public fun messageLanguage(messageLanguage: MessageLanguage) {
     cdkBuilder.messageLanguage(messageLanguage)
   }
 
+  /**
+   * @param owner The owner of the product. 
+   */
   public fun owner(owner: String) {
     cdkBuilder.owner(owner)
   }
 
+  /**
+   * @param productName The name of the product. 
+   */
   public fun productName(productName: String) {
     cdkBuilder.productName(productName)
   }
 
+  /**
+   * @param productVersions The configuration of the product version. 
+   */
   public fun productVersions(productVersions: CloudFormationProductVersionDsl.() -> Unit) {
     _productVersions.add(CloudFormationProductVersionDsl().apply(productVersions).build())
   }
 
+  /**
+   * @param productVersions The configuration of the product version. 
+   */
   public fun productVersions(productVersions: Collection<CloudFormationProductVersion>) {
     _productVersions.addAll(productVersions)
   }
 
+  /**
+   * @param replaceProductVersionIds Whether to give provisioning artifacts a new unique identifier
+   * when the product attributes or provisioning artifacts is updated.
+   */
   public fun replaceProductVersionIds(replaceProductVersionIds: Boolean) {
     cdkBuilder.replaceProductVersionIds(replaceProductVersionIds)
   }
 
+  /**
+   * @param supportDescription The support information about the product.
+   */
   public fun supportDescription(supportDescription: String) {
     cdkBuilder.supportDescription(supportDescription)
   }
 
+  /**
+   * @param supportEmail The contact email for product support.
+   */
   public fun supportEmail(supportEmail: String) {
     cdkBuilder.supportEmail(supportEmail)
   }
 
+  /**
+   * @param supportUrl The contact URL for product support.
+   */
   public fun supportUrl(supportUrl: String) {
     cdkBuilder.supportUrl(supportUrl)
   }
 
+  /**
+   * @param tagOptions TagOptions associated directly to a product.
+   */
   public fun tagOptions(tagOptions: TagOptions) {
     cdkBuilder.tagOptions(tagOptions)
   }

@@ -20,28 +20,51 @@ public class CfnPartitionSkewedInfoPropertyDsl {
 
   private val _skewedColumnValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param skewedColumnNames A list of names of columns that contain skewed values.
+   */
   public fun skewedColumnNames(vararg skewedColumnNames: String) {
     _skewedColumnNames.addAll(listOf(*skewedColumnNames))
   }
 
+  /**
+   * @param skewedColumnNames A list of names of columns that contain skewed values.
+   */
   public fun skewedColumnNames(skewedColumnNames: Collection<String>) {
     _skewedColumnNames.addAll(skewedColumnNames)
   }
 
-  public fun skewedColumnValueLocationMaps(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
+   * them.
+   */
+  public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: MapBuilder.() -> Unit =
+      {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(skewedColumnValueLocationMaps)
     cdkBuilder.skewedColumnValueLocationMaps(builder.map)
   }
 
+  /**
+   * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
+   * them.
+   */
   public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
     cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
   }
 
+  /**
+   * @param skewedColumnValues A list of values that appear so frequently as to be considered
+   * skewed.
+   */
   public fun skewedColumnValues(vararg skewedColumnValues: String) {
     _skewedColumnValues.addAll(listOf(*skewedColumnValues))
   }
 
+  /**
+   * @param skewedColumnValues A list of values that appear so frequently as to be considered
+   * skewed.
+   */
   public fun skewedColumnValues(skewedColumnValues: Collection<String>) {
     _skewedColumnValues.addAll(skewedColumnValues)
   }

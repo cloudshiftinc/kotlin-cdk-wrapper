@@ -12,18 +12,35 @@ public class CfnServiceImageRepositoryPropertyDsl {
   private val cdkBuilder: CfnService.ImageRepositoryProperty.Builder =
       CfnService.ImageRepositoryProperty.builder()
 
+  /**
+   * @param imageConfiguration Configuration for running the identified image.
+   */
   public fun imageConfiguration(imageConfiguration: IResolvable) {
     cdkBuilder.imageConfiguration(imageConfiguration)
   }
 
+  /**
+   * @param imageConfiguration Configuration for running the identified image.
+   */
   public fun imageConfiguration(imageConfiguration: CfnService.ImageConfigurationProperty) {
     cdkBuilder.imageConfiguration(imageConfiguration)
   }
 
+  /**
+   * @param imageIdentifier The identifier of an image. 
+   * For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For the
+   * image name format, see [Pulling an
+   * image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html) in the
+   * *Amazon ECR User Guide* .
+   */
   public fun imageIdentifier(imageIdentifier: String) {
     cdkBuilder.imageIdentifier(imageIdentifier)
   }
 
+  /**
+   * @param imageRepositoryType The type of the image repository. 
+   * This reflects the repository provider and whether the repository is private or public.
+   */
   public fun imageRepositoryType(imageRepositoryType: String) {
     cdkBuilder.imageRepositoryType(imageRepositoryType)
   }

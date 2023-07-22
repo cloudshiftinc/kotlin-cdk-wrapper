@@ -11,6 +11,10 @@ public class CfnAccessPointVpcConfigurationPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.VpcConfigurationProperty.Builder =
       CfnAccessPoint.VpcConfigurationProperty.builder()
 
+  /**
+   * @param vpcId If this field is specified, the access point will only allow connections from the
+   * specified VPC ID.
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

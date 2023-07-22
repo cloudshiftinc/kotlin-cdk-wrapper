@@ -11,6 +11,9 @@ public class CfnGatewayRouteHttpGatewayRoutePathRewritePropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Builder =
       CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.builder()
 
+  /**
+   * @param exact The exact path to rewrite.
+   */
   public fun exact(exact: String) {
     cdkBuilder.exact(exact)
   }

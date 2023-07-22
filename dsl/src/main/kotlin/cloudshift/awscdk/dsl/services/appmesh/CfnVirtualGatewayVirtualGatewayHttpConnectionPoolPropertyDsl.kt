@@ -11,10 +11,18 @@ public class CfnVirtualGatewayVirtualGatewayHttpConnectionPoolPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty.Builder =
       CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty.builder()
 
+  /**
+   * @param maxConnections Maximum number of outbound TCP connections Envoy can establish
+   * concurrently with all hosts in upstream cluster. 
+   */
   public fun maxConnections(maxConnections: Number) {
     cdkBuilder.maxConnections(maxConnections)
   }
 
+  /**
+   * @param maxPendingRequests Number of overflowing requests after `max_connections` Envoy will
+   * queue to upstream cluster.
+   */
   public fun maxPendingRequests(maxPendingRequests: Number) {
     cdkBuilder.maxPendingRequests(maxPendingRequests)
   }

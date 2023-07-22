@@ -11,6 +11,9 @@ public class CfnRuleGroupSingleQueryArgumentPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.SingleQueryArgumentProperty.Builder =
       CfnRuleGroup.SingleQueryArgumentProperty.builder()
 
+  /**
+   * @param name The name of the query argument to inspect. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

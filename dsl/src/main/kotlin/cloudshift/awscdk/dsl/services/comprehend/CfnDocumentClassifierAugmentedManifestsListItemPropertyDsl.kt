@@ -15,18 +15,57 @@ public class CfnDocumentClassifierAugmentedManifestsListItemPropertyDsl {
 
   private val _attributeNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param attributeNames The JSON attribute that contains the annotations for your training
+   * documents. 
+   * The number of attribute names that you specify depends on whether your augmented manifest file
+   * is the output of a single labeling job or a chained labeling job.
+   *
+   * If your file is the output of a single labeling job, specify the LabelAttributeName key that
+   * was used when the job was created in Ground Truth.
+   *
+   * If your file is the output of a chained labeling job, specify the LabelAttributeName key for
+   * one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an
+   * individual job.
+   */
   public fun attributeNames(vararg attributeNames: String) {
     _attributeNames.addAll(listOf(*attributeNames))
   }
 
+  /**
+   * @param attributeNames The JSON attribute that contains the annotations for your training
+   * documents. 
+   * The number of attribute names that you specify depends on whether your augmented manifest file
+   * is the output of a single labeling job or a chained labeling job.
+   *
+   * If your file is the output of a single labeling job, specify the LabelAttributeName key that
+   * was used when the job was created in Ground Truth.
+   *
+   * If your file is the output of a chained labeling job, specify the LabelAttributeName key for
+   * one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an
+   * individual job.
+   */
   public fun attributeNames(attributeNames: Collection<String>) {
     _attributeNames.addAll(attributeNames)
   }
 
+  /**
+   * @param s3Uri The Amazon S3 location of the augmented manifest file. 
+   */
   public fun s3Uri(s3Uri: String) {
     cdkBuilder.s3Uri(s3Uri)
   }
 
+  /**
+   * @param split The purpose of the data you've provided in the augmented manifest.
+   * You can either train or test this data. If you don't specify, the default is train.
+   *
+   * TRAIN - all of the documents in the manifest will be used for training. If no test documents
+   * are provided, Amazon Comprehend will automatically reserve a portion of the training documents for
+   * testing.
+   *
+   * TEST - all of the documents in the manifest will be used for testing.
+   */
   public fun split(split: String) {
     cdkBuilder.split(split)
   }

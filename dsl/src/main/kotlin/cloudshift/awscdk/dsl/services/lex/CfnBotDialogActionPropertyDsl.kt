@@ -13,18 +13,31 @@ public class CfnBotDialogActionPropertyDsl {
   private val cdkBuilder: CfnBot.DialogActionProperty.Builder =
       CfnBot.DialogActionProperty.builder()
 
+  /**
+   * @param slotToElicit If the dialog action is `ElicitSlot` , defines the slot to elicit from the
+   * user.
+   */
   public fun slotToElicit(slotToElicit: String) {
     cdkBuilder.slotToElicit(slotToElicit)
   }
 
+  /**
+   * @param suppressNextMessage When true the next message for the intent is not used.
+   */
   public fun suppressNextMessage(suppressNextMessage: Boolean) {
     cdkBuilder.suppressNextMessage(suppressNextMessage)
   }
 
+  /**
+   * @param suppressNextMessage When true the next message for the intent is not used.
+   */
   public fun suppressNextMessage(suppressNextMessage: IResolvable) {
     cdkBuilder.suppressNextMessage(suppressNextMessage)
   }
 
+  /**
+   * @param type The action that the bot should execute. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

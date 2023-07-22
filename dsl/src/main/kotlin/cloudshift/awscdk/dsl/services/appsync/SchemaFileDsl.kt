@@ -10,6 +10,15 @@ import software.amazon.awscdk.services.appsync.SchemaFile
 public class SchemaFileDsl {
   private val cdkBuilder: SchemaFile.Builder = SchemaFile.Builder.create()
 
+  /**
+   * The file path for the schema.
+   *
+   * When this option is
+   * configured, then the schema will be generated from an
+   * existing file from disk.
+   *
+   * @param filePath The file path for the schema. 
+   */
   public fun filePath(filePath: String) {
     cdkBuilder.filePath(filePath)
   }

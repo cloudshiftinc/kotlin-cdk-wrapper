@@ -11,6 +11,12 @@ public class CfnScheduleKinesisParametersPropertyDsl {
   private val cdkBuilder: CfnSchedule.KinesisParametersProperty.Builder =
       CfnSchedule.KinesisParametersProperty.builder()
 
+  /**
+   * @param partitionKey Specifies the shard to which EventBridge Scheduler sends the event. 
+   * For more information, see [Amazon Kinesis Data Streams terminology and
+   * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon Kinesis
+   * Streams Developer Guide* .
+   */
   public fun partitionKey(partitionKey: String) {
     cdkBuilder.partitionKey(partitionKey)
   }

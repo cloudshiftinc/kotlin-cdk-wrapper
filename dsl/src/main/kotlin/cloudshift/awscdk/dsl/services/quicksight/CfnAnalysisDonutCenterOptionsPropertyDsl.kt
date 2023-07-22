@@ -11,6 +11,10 @@ public class CfnAnalysisDonutCenterOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.DonutCenterOptionsProperty.Builder =
       CfnAnalysis.DonutCenterOptionsProperty.builder()
 
+  /**
+   * @param labelVisibility Determines the visibility of the label in a donut chart.
+   * In the Amazon QuickSight console, this option is called `'Show total'` .
+   */
   public fun labelVisibility(labelVisibility: String) {
     cdkBuilder.labelVisibility(labelVisibility)
   }

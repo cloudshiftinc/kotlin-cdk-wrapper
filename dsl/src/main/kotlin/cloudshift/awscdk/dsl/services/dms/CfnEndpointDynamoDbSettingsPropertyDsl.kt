@@ -11,6 +11,11 @@ public class CfnEndpointDynamoDbSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.DynamoDbSettingsProperty.Builder =
       CfnEndpoint.DynamoDbSettingsProperty.builder()
 
+  /**
+   * @param serviceAccessRoleArn The Amazon Resource Name (ARN) used by the service to access the
+   * IAM role.
+   * The role must allow the `iam:PassRole` action.
+   */
   public fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
     cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
   }

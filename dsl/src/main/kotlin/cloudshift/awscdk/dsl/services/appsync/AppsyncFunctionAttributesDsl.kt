@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes
 public class AppsyncFunctionAttributesDsl {
   private val cdkBuilder: AppsyncFunctionAttributes.Builder = AppsyncFunctionAttributes.builder()
 
+  /**
+   * @param functionArn the ARN of the AppSync function. 
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }

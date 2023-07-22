@@ -15,6 +15,14 @@ public class CfnOrganizationAdminDsl(
   private val cdkBuilder: CfnOrganizationAdmin.Builder = CfnOrganizationAdmin.Builder.create(scope,
       id)
 
+  /**
+   * The AWS account identifier of the account to designate as the Detective administrator account
+   * for the organization.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html#cfn-detective-organizationadmin-accountid)
+   * @param accountId The AWS account identifier of the account to designate as the Detective
+   * administrator account for the organization. 
+   */
   public fun accountId(accountId: String) {
     cdkBuilder.accountId(accountId)
   }

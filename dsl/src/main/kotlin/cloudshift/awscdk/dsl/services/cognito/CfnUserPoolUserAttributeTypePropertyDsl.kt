@@ -11,10 +11,16 @@ public class CfnUserPoolUserAttributeTypePropertyDsl {
   private val cdkBuilder: CfnUserPoolUser.AttributeTypeProperty.Builder =
       CfnUserPoolUser.AttributeTypeProperty.builder()
 
+  /**
+   * @param name The name of the attribute.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value of the attribute.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

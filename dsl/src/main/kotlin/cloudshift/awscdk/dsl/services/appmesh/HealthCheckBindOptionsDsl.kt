@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.appmesh.HealthCheckBindOptions
 public class HealthCheckBindOptionsDsl {
   private val cdkBuilder: HealthCheckBindOptions.Builder = HealthCheckBindOptions.builder()
 
+  /**
+   * @param defaultPort Port for Health Check interface.
+   */
   public fun defaultPort(defaultPort: Number) {
     cdkBuilder.defaultPort(defaultPort)
   }

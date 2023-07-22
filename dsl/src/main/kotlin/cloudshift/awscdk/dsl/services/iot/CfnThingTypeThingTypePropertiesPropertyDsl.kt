@@ -15,14 +15,23 @@ public class CfnThingTypeThingTypePropertiesPropertyDsl {
 
   private val _searchableAttributes: MutableList<String> = mutableListOf()
 
+  /**
+   * @param searchableAttributes A list of searchable thing attribute names.
+   */
   public fun searchableAttributes(vararg searchableAttributes: String) {
     _searchableAttributes.addAll(listOf(*searchableAttributes))
   }
 
+  /**
+   * @param searchableAttributes A list of searchable thing attribute names.
+   */
   public fun searchableAttributes(searchableAttributes: Collection<String>) {
     _searchableAttributes.addAll(searchableAttributes)
   }
 
+  /**
+   * @param thingTypeDescription The description of the thing type.
+   */
   public fun thingTypeDescription(thingTypeDescription: String) {
     cdkBuilder.thingTypeDescription(thingTypeDescription)
   }

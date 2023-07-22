@@ -22,42 +22,120 @@ public class CfnReportPlanDsl(
 
   private val _reportPlanTags: MutableList<Any> = mutableListOf()
 
-  public fun reportDeliveryChannel(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * Contains information about where and how to deliver your reports, specifically your Amazon S3
+   * bucket name, S3 key prefix, and the formats of your reports.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportdeliverychannel)
+   * @param reportDeliveryChannel Contains information about where and how to deliver your reports,
+   * specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports. 
+   */
+  public fun reportDeliveryChannel(reportDeliveryChannel: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(reportDeliveryChannel)
     cdkBuilder.reportDeliveryChannel(builder.map)
   }
 
+  /**
+   * Contains information about where and how to deliver your reports, specifically your Amazon S3
+   * bucket name, S3 key prefix, and the formats of your reports.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportdeliverychannel)
+   * @param reportDeliveryChannel Contains information about where and how to deliver your reports,
+   * specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports. 
+   */
   public fun reportDeliveryChannel(reportDeliveryChannel: Any) {
     cdkBuilder.reportDeliveryChannel(reportDeliveryChannel)
   }
 
+  /**
+   * An optional description of the report plan with a maximum 1,024 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplandescription)
+   * @param reportPlanDescription An optional description of the report plan with a maximum 1,024
+   * characters. 
+   */
   public fun reportPlanDescription(reportPlanDescription: String) {
     cdkBuilder.reportPlanDescription(reportPlanDescription)
   }
 
+  /**
+   * The unique name of the report plan.
+   *
+   * This name is between 1 and 256 characters starting with a letter, and consisting of letters
+   * (a-z, A-Z), numbers (0-9), and underscores (_).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplanname)
+   * @param reportPlanName The unique name of the report plan. 
+   */
   public fun reportPlanName(reportPlanName: String) {
     cdkBuilder.reportPlanName(reportPlanName)
   }
 
+  /**
+   * A list of tags to tag your report plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
+   * @param reportPlanTags A list of tags to tag your report plan. 
+   */
   public fun reportPlanTags(vararg reportPlanTags: Any) {
     _reportPlanTags.addAll(listOf(*reportPlanTags))
   }
 
+  /**
+   * A list of tags to tag your report plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
+   * @param reportPlanTags A list of tags to tag your report plan. 
+   */
   public fun reportPlanTags(reportPlanTags: Collection<Any>) {
     _reportPlanTags.addAll(reportPlanTags)
   }
 
+  /**
+   * A list of tags to tag your report plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
+   * @param reportPlanTags A list of tags to tag your report plan. 
+   */
   public fun reportPlanTags(reportPlanTags: IResolvable) {
     cdkBuilder.reportPlanTags(reportPlanTags)
   }
 
-  public fun reportSetting(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * Identifies the report template for the report. Reports are built using a report template. The
+   * report templates are:.
+   *
+   * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT |
+   * RESTORE_JOB_REPORT`
+   *
+   * If the report template is `RESOURCE_COMPLIANCE_REPORT` or `CONTROL_COMPLIANCE_REPORT` , this
+   * API resource also describes the report coverage by AWS Regions and frameworks.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportsetting)
+   * @param reportSetting Identifies the report template for the report. Reports are built using a
+   * report template. The report templates are:. 
+   */
+  public fun reportSetting(reportSetting: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(reportSetting)
     cdkBuilder.reportSetting(builder.map)
   }
 
+  /**
+   * Identifies the report template for the report. Reports are built using a report template. The
+   * report templates are:.
+   *
+   * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT |
+   * RESTORE_JOB_REPORT`
+   *
+   * If the report template is `RESOURCE_COMPLIANCE_REPORT` or `CONTROL_COMPLIANCE_REPORT` , this
+   * API resource also describes the report coverage by AWS Regions and frameworks.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportsetting)
+   * @param reportSetting Identifies the report template for the report. Reports are built using a
+   * report template. The report templates are:. 
+   */
   public fun reportSetting(reportSetting: Any) {
     cdkBuilder.reportSetting(reportSetting)
   }

@@ -18,20 +18,41 @@ public class EventBusPolicyDsl(
 ) {
   private val cdkBuilder: EventBusPolicy.Builder = EventBusPolicy.Builder.create(scope, id)
 
+  /**
+   * The event bus to which the policy applies.
+   *
+   * @param eventBus The event bus to which the policy applies. 
+   */
   public fun eventBus(eventBus: IEventBus) {
     cdkBuilder.eventBus(eventBus)
   }
 
-  public fun statement(block: PolicyStatementDsl.() -> Unit = {}) {
+  /**
+   * An IAM Policy Statement to apply to the Event Bus.
+   *
+   * @param statement An IAM Policy Statement to apply to the Event Bus. 
+   */
+  public fun statement(statement: PolicyStatementDsl.() -> Unit = {}) {
     val builder = PolicyStatementDsl()
-    builder.apply(block)
+    builder.apply(statement)
     cdkBuilder.statement(builder.build())
   }
 
+  /**
+   * An IAM Policy Statement to apply to the Event Bus.
+   *
+   * @param statement An IAM Policy Statement to apply to the Event Bus. 
+   */
   public fun statement(statement: PolicyStatement) {
     cdkBuilder.statement(statement)
   }
 
+  /**
+   * An identifier string for the external account that you are granting permissions to.
+   *
+   * @param statementId An identifier string for the external account that you are granting
+   * permissions to. 
+   */
   public fun statementId(statementId: String) {
     cdkBuilder.statementId(statementId)
   }

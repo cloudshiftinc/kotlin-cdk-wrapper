@@ -11,6 +11,9 @@ public class CfnAnalysisReferenceLineCustomLabelConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ReferenceLineCustomLabelConfigurationProperty.Builder =
       CfnAnalysis.ReferenceLineCustomLabelConfigurationProperty.builder()
 
+  /**
+   * @param customLabel The string text of the custom label. 
+   */
   public fun customLabel(customLabel: String) {
     cdkBuilder.customLabel(customLabel)
   }

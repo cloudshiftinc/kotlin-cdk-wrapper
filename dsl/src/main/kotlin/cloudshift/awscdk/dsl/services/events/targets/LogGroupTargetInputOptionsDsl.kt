@@ -12,22 +12,44 @@ import software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions
 public class LogGroupTargetInputOptionsDsl {
   private val cdkBuilder: LogGroupTargetInputOptions.Builder = LogGroupTargetInputOptions.builder()
 
-  public fun message(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param message The value provided here will be used in the Log "message" field.
+   * This field must be a string. If an object is passed (e.g. JSON data)
+   * it will not throw an error, but the message that makes it to
+   * CloudWatch logs will be incorrect. This is a likely scenario if
+   * doing something like: EventField.fromPath('$.detail') since in most cases
+   * the `detail` field contains JSON data.
+   */
+  public fun message(message: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(message)
     cdkBuilder.message(builder.map)
   }
 
+  /**
+   * @param message The value provided here will be used in the Log "message" field.
+   * This field must be a string. If an object is passed (e.g. JSON data)
+   * it will not throw an error, but the message that makes it to
+   * CloudWatch logs will be incorrect. This is a likely scenario if
+   * doing something like: EventField.fromPath('$.detail') since in most cases
+   * the `detail` field contains JSON data.
+   */
   public fun message(message: Any) {
     cdkBuilder.message(message)
   }
 
-  public fun timestamp(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param timestamp The timestamp that will appear in the CloudWatch Logs record.
+   */
+  public fun timestamp(timestamp: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(timestamp)
     cdkBuilder.timestamp(builder.map)
   }
 
+  /**
+   * @param timestamp The timestamp that will appear in the CloudWatch Logs record.
+   */
   public fun timestamp(timestamp: Any) {
     cdkBuilder.timestamp(timestamp)
   }

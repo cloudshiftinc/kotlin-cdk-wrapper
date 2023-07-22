@@ -11,6 +11,9 @@ public class CfnModelBiasJobDefinitionConstraintsResourcePropertyDsl {
   private val cdkBuilder: CfnModelBiasJobDefinition.ConstraintsResourceProperty.Builder =
       CfnModelBiasJobDefinition.ConstraintsResourceProperty.builder()
 
+  /**
+   * @param s3Uri The Amazon S3 URI for the constraints resource.
+   */
   public fun s3Uri(s3Uri: String) {
     cdkBuilder.s3Uri(s3Uri)
   }

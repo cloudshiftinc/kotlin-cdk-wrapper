@@ -19,44 +19,75 @@ public class GrpcRouteSpecOptionsDsl {
 
   private val _weightedTargets: MutableList<WeightedTarget> = mutableListOf()
 
-  public fun match(block: GrpcRouteMatchDsl.() -> Unit = {}) {
+  /**
+   * @param match The criterion for determining a request match for this Route. 
+   */
+  public fun match(match: GrpcRouteMatchDsl.() -> Unit = {}) {
     val builder = GrpcRouteMatchDsl()
-    builder.apply(block)
+    builder.apply(match)
     cdkBuilder.match(builder.build())
   }
 
+  /**
+   * @param match The criterion for determining a request match for this Route. 
+   */
   public fun match(match: GrpcRouteMatch) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param priority The priority for the route.
+   * When a Virtual Router has multiple routes, route match is performed in the
+   * order of specified value, where 0 is the highest priority, and first matched route is selected.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }
 
-  public fun retryPolicy(block: GrpcRetryPolicyDsl.() -> Unit = {}) {
+  /**
+   * @param retryPolicy The retry policy.
+   */
+  public fun retryPolicy(retryPolicy: GrpcRetryPolicyDsl.() -> Unit = {}) {
     val builder = GrpcRetryPolicyDsl()
-    builder.apply(block)
+    builder.apply(retryPolicy)
     cdkBuilder.retryPolicy(builder.build())
   }
 
+  /**
+   * @param retryPolicy The retry policy.
+   */
   public fun retryPolicy(retryPolicy: GrpcRetryPolicy) {
     cdkBuilder.retryPolicy(retryPolicy)
   }
 
-  public fun timeout(block: GrpcTimeoutDsl.() -> Unit = {}) {
+  /**
+   * @param timeout An object that represents a grpc timeout.
+   */
+  public fun timeout(timeout: GrpcTimeoutDsl.() -> Unit = {}) {
     val builder = GrpcTimeoutDsl()
-    builder.apply(block)
+    builder.apply(timeout)
     cdkBuilder.timeout(builder.build())
   }
 
+  /**
+   * @param timeout An object that represents a grpc timeout.
+   */
   public fun timeout(timeout: GrpcTimeout) {
     cdkBuilder.timeout(timeout)
   }
 
+  /**
+   * @param weightedTargets List of targets that traffic is routed to when a request matches the
+   * route. 
+   */
   public fun weightedTargets(weightedTargets: WeightedTargetDsl.() -> Unit) {
     _weightedTargets.add(WeightedTargetDsl().apply(weightedTargets).build())
   }
 
+  /**
+   * @param weightedTargets List of targets that traffic is routed to when a request matches the
+   * route. 
+   */
   public fun weightedTargets(weightedTargets: Collection<WeightedTarget>) {
     _weightedTargets.addAll(weightedTargets)
   }

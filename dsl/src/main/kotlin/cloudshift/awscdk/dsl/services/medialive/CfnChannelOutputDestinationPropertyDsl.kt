@@ -19,39 +19,68 @@ public class CfnChannelOutputDestinationPropertyDsl {
 
   private val _settings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param id The ID for this destination.
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param mediaPackageSettings The destination settings for a MediaPackage output.
+   */
   public fun mediaPackageSettings(vararg mediaPackageSettings: Any) {
     _mediaPackageSettings.addAll(listOf(*mediaPackageSettings))
   }
 
+  /**
+   * @param mediaPackageSettings The destination settings for a MediaPackage output.
+   */
   public fun mediaPackageSettings(mediaPackageSettings: Collection<Any>) {
     _mediaPackageSettings.addAll(mediaPackageSettings)
   }
 
+  /**
+   * @param mediaPackageSettings The destination settings for a MediaPackage output.
+   */
   public fun mediaPackageSettings(mediaPackageSettings: IResolvable) {
     cdkBuilder.mediaPackageSettings(mediaPackageSettings)
   }
 
+  /**
+   * @param multiplexSettings Destination settings for a Multiplex output;.
+   * one destination for both encoders.
+   */
   public fun multiplexSettings(multiplexSettings: IResolvable) {
     cdkBuilder.multiplexSettings(multiplexSettings)
   }
 
+  /**
+   * @param multiplexSettings Destination settings for a Multiplex output;.
+   * one destination for both encoders.
+   */
   public
       fun multiplexSettings(multiplexSettings: CfnChannel.MultiplexProgramChannelDestinationSettingsProperty) {
     cdkBuilder.multiplexSettings(multiplexSettings)
   }
 
+  /**
+   * @param settings The destination settings for an output.
+   */
   public fun settings(vararg settings: Any) {
     _settings.addAll(listOf(*settings))
   }
 
+  /**
+   * @param settings The destination settings for an output.
+   */
   public fun settings(settings: Collection<Any>) {
     _settings.addAll(settings)
   }
 
+  /**
+   * @param settings The destination settings for an output.
+   */
   public fun settings(settings: IResolvable) {
     cdkBuilder.settings(settings)
   }

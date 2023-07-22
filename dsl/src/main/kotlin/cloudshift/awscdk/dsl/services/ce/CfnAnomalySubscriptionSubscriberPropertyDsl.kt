@@ -11,14 +11,24 @@ public class CfnAnomalySubscriptionSubscriberPropertyDsl {
   private val cdkBuilder: CfnAnomalySubscription.SubscriberProperty.Builder =
       CfnAnomalySubscription.SubscriberProperty.builder()
 
+  /**
+   * @param address The email address or SNS Topic Amazon Resource Name (ARN), depending on the
+   * `Type` . 
+   */
   public fun address(address: String) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param status Indicates if the subscriber accepts the notifications.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
+  /**
+   * @param type The notification delivery channel. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

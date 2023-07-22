@@ -22,37 +22,89 @@ public class CfnDomainNameDsl(
 
   private val _domainNameConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * The custom domain name for your API in Amazon API Gateway.
+   *
+   * Uppercase letters are not supported.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
+   * @param domainName The custom domain name for your API in Amazon API Gateway. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * The domain name configurations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+   * @param domainNameConfigurations The domain name configurations. 
+   */
   public fun domainNameConfigurations(vararg domainNameConfigurations: Any) {
     _domainNameConfigurations.addAll(listOf(*domainNameConfigurations))
   }
 
+  /**
+   * The domain name configurations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+   * @param domainNameConfigurations The domain name configurations. 
+   */
   public fun domainNameConfigurations(domainNameConfigurations: Collection<Any>) {
     _domainNameConfigurations.addAll(domainNameConfigurations)
   }
 
+  /**
+   * The domain name configurations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+   * @param domainNameConfigurations The domain name configurations. 
+   */
   public fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
     cdkBuilder.domainNameConfigurations(domainNameConfigurations)
   }
 
+  /**
+   * The mutual TLS authentication configuration for a custom domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+   * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom domain
+   * name. 
+   */
   public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
     cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
   }
 
+  /**
+   * The mutual TLS authentication configuration for a custom domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+   * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom domain
+   * name. 
+   */
   public
       fun mutualTlsAuthentication(mutualTlsAuthentication: CfnDomainName.MutualTlsAuthenticationProperty) {
     cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
   }
 
-  public fun tags(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The collection of tags associated with a domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
+   * @param tags The collection of tags associated with a domain name. 
+   */
+  public fun tags(tags: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(tags)
     cdkBuilder.tags(builder.map)
   }
 
+  /**
+   * The collection of tags associated with a domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
+   * @param tags The collection of tags associated with a domain name. 
+   */
   public fun tags(tags: Any) {
     cdkBuilder.tags(tags)
   }

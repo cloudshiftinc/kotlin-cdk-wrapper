@@ -17,18 +17,31 @@ public class CfnDeliveryStreamProcessorPropertyDsl {
 
   private val _parameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param parameters The processor parameters.
+   */
   public fun parameters(vararg parameters: Any) {
     _parameters.addAll(listOf(*parameters))
   }
 
+  /**
+   * @param parameters The processor parameters.
+   */
   public fun parameters(parameters: Collection<Any>) {
     _parameters.addAll(parameters)
   }
 
+  /**
+   * @param parameters The processor parameters.
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param type The type of processor. 
+   * Valid values: `Lambda` .
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

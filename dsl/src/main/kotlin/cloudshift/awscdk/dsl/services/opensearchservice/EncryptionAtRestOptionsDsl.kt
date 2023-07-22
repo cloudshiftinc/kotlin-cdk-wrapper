@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions
 public class EncryptionAtRestOptionsDsl {
   private val cdkBuilder: EncryptionAtRestOptions.Builder = EncryptionAtRestOptions.builder()
 
+  /**
+   * @param enabled Specify true to enable encryption at rest.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param kmsKey Supply if using KMS key for encryption at rest.
+   */
   public fun kmsKey(kmsKey: IKey) {
     cdkBuilder.kmsKey(kmsKey)
   }

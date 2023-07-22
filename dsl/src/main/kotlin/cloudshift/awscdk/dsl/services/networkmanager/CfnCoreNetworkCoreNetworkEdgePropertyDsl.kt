@@ -16,18 +16,30 @@ public class CfnCoreNetworkCoreNetworkEdgePropertyDsl {
 
   private val _insideCidrBlocks: MutableList<String> = mutableListOf()
 
+  /**
+   * @param asn The ASN of a core network edge.
+   */
   public fun asn(asn: Number) {
     cdkBuilder.asn(asn)
   }
 
+  /**
+   * @param edgeLocation The Region where a core network edge is located.
+   */
   public fun edgeLocation(edgeLocation: String) {
     cdkBuilder.edgeLocation(edgeLocation)
   }
 
+  /**
+   * @param insideCidrBlocks The inside IP addresses used for core network edges.
+   */
   public fun insideCidrBlocks(vararg insideCidrBlocks: String) {
     _insideCidrBlocks.addAll(listOf(*insideCidrBlocks))
   }
 
+  /**
+   * @param insideCidrBlocks The inside IP addresses used for core network edges.
+   */
   public fun insideCidrBlocks(insideCidrBlocks: Collection<String>) {
     _insideCidrBlocks.addAll(insideCidrBlocks)
   }

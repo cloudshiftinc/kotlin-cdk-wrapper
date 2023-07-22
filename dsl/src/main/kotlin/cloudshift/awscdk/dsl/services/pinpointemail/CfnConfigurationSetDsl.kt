@@ -21,46 +21,132 @@ public class CfnConfigurationSetDsl(
 
   private val _tags: MutableList<CfnConfigurationSet.TagsProperty> = mutableListOf()
 
+  /**
+   * An object that defines the dedicated IP pool that is used to send emails that you send using
+   * the configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-deliveryoptions)
+   * @param deliveryOptions An object that defines the dedicated IP pool that is used to send emails
+   * that you send using the configuration set. 
+   */
   public fun deliveryOptions(deliveryOptions: IResolvable) {
     cdkBuilder.deliveryOptions(deliveryOptions)
   }
 
+  /**
+   * An object that defines the dedicated IP pool that is used to send emails that you send using
+   * the configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-deliveryoptions)
+   * @param deliveryOptions An object that defines the dedicated IP pool that is used to send emails
+   * that you send using the configuration set. 
+   */
   public fun deliveryOptions(deliveryOptions: CfnConfigurationSet.DeliveryOptionsProperty) {
     cdkBuilder.deliveryOptions(deliveryOptions)
   }
 
+  /**
+   * The name of the configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-name)
+   * @param name The name of the configuration set. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * An object that defines whether or not Amazon Pinpoint collects reputation metrics for the
+   * emails that you send that use the configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-reputationoptions)
+   * @param reputationOptions An object that defines whether or not Amazon Pinpoint collects
+   * reputation metrics for the emails that you send that use the configuration set. 
+   */
   public fun reputationOptions(reputationOptions: IResolvable) {
     cdkBuilder.reputationOptions(reputationOptions)
   }
 
+  /**
+   * An object that defines whether or not Amazon Pinpoint collects reputation metrics for the
+   * emails that you send that use the configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-reputationoptions)
+   * @param reputationOptions An object that defines whether or not Amazon Pinpoint collects
+   * reputation metrics for the emails that you send that use the configuration set. 
+   */
   public fun reputationOptions(reputationOptions: CfnConfigurationSet.ReputationOptionsProperty) {
     cdkBuilder.reputationOptions(reputationOptions)
   }
 
+  /**
+   * An object that defines whether or not Amazon Pinpoint can send email that you send using the
+   * configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-sendingoptions)
+   * @param sendingOptions An object that defines whether or not Amazon Pinpoint can send email that
+   * you send using the configuration set. 
+   */
   public fun sendingOptions(sendingOptions: IResolvable) {
     cdkBuilder.sendingOptions(sendingOptions)
   }
 
+  /**
+   * An object that defines whether or not Amazon Pinpoint can send email that you send using the
+   * configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-sendingoptions)
+   * @param sendingOptions An object that defines whether or not Amazon Pinpoint can send email that
+   * you send using the configuration set. 
+   */
   public fun sendingOptions(sendingOptions: CfnConfigurationSet.SendingOptionsProperty) {
     cdkBuilder.sendingOptions(sendingOptions)
   }
 
+  /**
+   * An object that defines the tags (keys and values) that you want to associate with the
+   * configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-tags)
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the configuration set. 
+   */
   public fun tags(tags: CfnConfigurationSetTagsPropertyDsl.() -> Unit) {
     _tags.add(CfnConfigurationSetTagsPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * An object that defines the tags (keys and values) that you want to associate with the
+   * configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-tags)
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the configuration set. 
+   */
   public fun tags(tags: Collection<CfnConfigurationSet.TagsProperty>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * An object that defines the open and click tracking options for emails that you send using the
+   * configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-trackingoptions)
+   * @param trackingOptions An object that defines the open and click tracking options for emails
+   * that you send using the configuration set. 
+   */
   public fun trackingOptions(trackingOptions: IResolvable) {
     cdkBuilder.trackingOptions(trackingOptions)
   }
 
+  /**
+   * An object that defines the open and click tracking options for emails that you send using the
+   * configuration set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html#cfn-pinpointemail-configurationset-trackingoptions)
+   * @param trackingOptions An object that defines the open and click tracking options for emails
+   * that you send using the configuration set. 
+   */
   public fun trackingOptions(trackingOptions: CfnConfigurationSet.TrackingOptionsProperty) {
     cdkBuilder.trackingOptions(trackingOptions)
   }

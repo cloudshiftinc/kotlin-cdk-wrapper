@@ -15,6 +15,11 @@ public class ResourcePolicyDsl(
 ) {
   private val cdkBuilder: ResourcePolicy.Builder = ResourcePolicy.Builder.create(scope, id)
 
+  /**
+   * The secret to attach a resource-based permissions policy.
+   *
+   * @param secret The secret to attach a resource-based permissions policy. 
+   */
   public fun secret(secret: ISecret) {
     cdkBuilder.secret(secret)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.ses.SNSActionConfig
 public class SNSActionConfigDsl {
   private val cdkBuilder: SNSActionConfig.Builder = SNSActionConfig.builder()
 
+  /**
+   * @param encoding The encoding to use for the email within the Amazon SNS notification.
+   */
   public fun encoding(encoding: String) {
     cdkBuilder.encoding(encoding)
   }
 
+  /**
+   * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify.
+   */
   public fun topicArn(topicArn: String) {
     cdkBuilder.topicArn(topicArn)
   }

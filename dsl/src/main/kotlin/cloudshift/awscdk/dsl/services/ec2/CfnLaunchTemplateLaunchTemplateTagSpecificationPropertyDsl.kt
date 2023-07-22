@@ -18,14 +18,24 @@ public class CfnLaunchTemplateLaunchTemplateTagSpecificationPropertyDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param resourceType The type of resource.
+   * To tag the launch template, `ResourceType` must be `launch-template` .
+   */
   public fun resourceType(resourceType: String) {
     cdkBuilder.resourceType(resourceType)
   }
 
+  /**
+   * @param tags The tags for the resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -12,10 +12,16 @@ public class CfnDomainNodeToNodeEncryptionOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.NodeToNodeEncryptionOptionsProperty.Builder =
       CfnDomain.NodeToNodeEncryptionOptionsProperty.builder()
 
+  /**
+   * @param enabled Specifies whether node-to-node encryption is enabled, as a Boolean.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Specifies whether node-to-node encryption is enabled, as a Boolean.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

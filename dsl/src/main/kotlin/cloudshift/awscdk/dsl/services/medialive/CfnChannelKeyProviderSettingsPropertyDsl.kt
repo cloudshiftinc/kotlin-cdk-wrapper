@@ -11,10 +11,16 @@ public class CfnChannelKeyProviderSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.KeyProviderSettingsProperty.Builder =
       CfnChannel.KeyProviderSettingsProperty.builder()
 
+  /**
+   * @param staticKeySettings The configuration of static key settings.
+   */
   public fun staticKeySettings(staticKeySettings: IResolvable) {
     cdkBuilder.staticKeySettings(staticKeySettings)
   }
 
+  /**
+   * @param staticKeySettings The configuration of static key settings.
+   */
   public fun staticKeySettings(staticKeySettings: CfnChannel.StaticKeySettingsProperty) {
     cdkBuilder.staticKeySettings(staticKeySettings)
   }

@@ -11,14 +11,23 @@ import software.amazon.awscdk.services.cloudfront.FunctionProps
 public class FunctionPropsDsl {
   private val cdkBuilder: FunctionProps.Builder = FunctionProps.builder()
 
+  /**
+   * @param code The source code of the function. 
+   */
   public fun code(code: FunctionCode) {
     cdkBuilder.code(code)
   }
 
+  /**
+   * @param comment A comment to describe the function.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * @param functionName A name to identify the function.
+   */
   public fun functionName(functionName: String) {
     cdkBuilder.functionName(functionName)
   }

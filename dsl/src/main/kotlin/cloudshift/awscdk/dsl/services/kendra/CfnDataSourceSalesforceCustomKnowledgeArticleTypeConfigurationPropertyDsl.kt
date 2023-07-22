@@ -18,26 +18,61 @@ public class CfnDataSourceSalesforceCustomKnowledgeArticleTypeConfigurationPrope
 
   private val _fieldMappings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param documentDataFieldName The name of the field in the custom knowledge article that
+   * contains the document data to index. 
+   */
   public fun documentDataFieldName(documentDataFieldName: String) {
     cdkBuilder.documentDataFieldName(documentDataFieldName)
   }
 
+  /**
+   * @param documentTitleFieldName The name of the field in the custom knowledge article that
+   * contains the document title.
+   */
   public fun documentTitleFieldName(documentTitleFieldName: String) {
     cdkBuilder.documentTitleFieldName(documentTitleFieldName)
   }
 
+  /**
+   * @param fieldMappings Maps attributes or field names of the custom knowledge article to Amazon
+   * Kendra index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Salesforce fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Salesforce data
+   * source field names must exist in your Salesforce custom metadata.
+   */
   public fun fieldMappings(vararg fieldMappings: Any) {
     _fieldMappings.addAll(listOf(*fieldMappings))
   }
 
+  /**
+   * @param fieldMappings Maps attributes or field names of the custom knowledge article to Amazon
+   * Kendra index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Salesforce fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Salesforce data
+   * source field names must exist in your Salesforce custom metadata.
+   */
   public fun fieldMappings(fieldMappings: Collection<Any>) {
     _fieldMappings.addAll(fieldMappings)
   }
 
+  /**
+   * @param fieldMappings Maps attributes or field names of the custom knowledge article to Amazon
+   * Kendra index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Salesforce fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Salesforce data
+   * source field names must exist in your Salesforce custom metadata.
+   */
   public fun fieldMappings(fieldMappings: IResolvable) {
     cdkBuilder.fieldMappings(fieldMappings)
   }
 
+  /**
+   * @param name The name of the configuration. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

@@ -17,26 +17,52 @@ public class CfnBotSlotValueOverridePropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param shape When the shape value is `List` , it indicates that the `values` field contains a
+   * list of slot values.
+   * When the value is `Scalar` , it indicates that the `value` field contains a single value.
+   */
   public fun shape(shape: String) {
     cdkBuilder.shape(shape)
   }
 
+  /**
+   * @param value The current value of the slot.
+   */
   public fun `value`(`value`: IResolvable) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param value The current value of the slot.
+   */
   public fun `value`(`value`: CfnBot.SlotValueProperty) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param values A list of one or more values that the user provided for the slot.
+   * For example, for a slot that elicits pizza toppings, the values might be "pepperoni" and
+   * "pineapple."
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values A list of one or more values that the user provided for the slot.
+   * For example, for a slot that elicits pizza toppings, the values might be "pepperoni" and
+   * "pineapple."
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values A list of one or more values that the user provided for the slot.
+   * For example, for a slot that elicits pizza toppings, the values might be "pepperoni" and
+   * "pineapple."
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

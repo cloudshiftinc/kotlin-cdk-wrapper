@@ -11,6 +11,9 @@ public class CfnFlowGoogleAnalyticsSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.GoogleAnalyticsSourcePropertiesProperty.Builder =
       CfnFlow.GoogleAnalyticsSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Google Analytics flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

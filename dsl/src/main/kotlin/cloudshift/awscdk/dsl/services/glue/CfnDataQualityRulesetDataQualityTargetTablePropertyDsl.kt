@@ -11,10 +11,16 @@ public class CfnDataQualityRulesetDataQualityTargetTablePropertyDsl {
   private val cdkBuilder: CfnDataQualityRuleset.DataQualityTargetTableProperty.Builder =
       CfnDataQualityRuleset.DataQualityTargetTableProperty.builder()
 
+  /**
+   * @param databaseName The name of the database where the AWS Glue table exists.
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * @param tableName The name of the AWS Glue table.
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }

@@ -11,10 +11,16 @@ public class CfnTemplateRadarChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.RadarChartFieldWellsProperty.Builder =
       CfnTemplate.RadarChartFieldWellsProperty.builder()
 
+  /**
+   * @param radarChartAggregatedFieldWells The aggregated field wells of a radar chart visual.
+   */
   public fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: IResolvable) {
     cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)
   }
 
+  /**
+   * @param radarChartAggregatedFieldWells The aggregated field wells of a radar chart visual.
+   */
   public
       fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: CfnTemplate.RadarChartAggregatedFieldWellsProperty) {
     cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)

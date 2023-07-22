@@ -12,10 +12,16 @@ public class ApplicationLoadBalancerLookupOptionsDsl {
   private val cdkBuilder: ApplicationLoadBalancerLookupOptions.Builder =
       ApplicationLoadBalancerLookupOptions.builder()
 
+  /**
+   * @param loadBalancerArn Find by load balancer's ARN.
+   */
   public fun loadBalancerArn(loadBalancerArn: String) {
     cdkBuilder.loadBalancerArn(loadBalancerArn)
   }
 
+  /**
+   * @param loadBalancerTags Match load balancer tags.
+   */
   public fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
     cdkBuilder.loadBalancerTags(loadBalancerTags)
   }

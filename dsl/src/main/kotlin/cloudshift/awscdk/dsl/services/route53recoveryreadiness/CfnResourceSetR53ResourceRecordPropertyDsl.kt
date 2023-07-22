@@ -11,10 +11,16 @@ public class CfnResourceSetR53ResourceRecordPropertyDsl {
   private val cdkBuilder: CfnResourceSet.R53ResourceRecordProperty.Builder =
       CfnResourceSet.R53ResourceRecordProperty.builder()
 
+  /**
+   * @param domainName The DNS target domain name.
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param recordSetId The Amazon Route 53 Resource Record Set ID.
+   */
   public fun recordSetId(recordSetId: String) {
     cdkBuilder.recordSetId(recordSetId)
   }

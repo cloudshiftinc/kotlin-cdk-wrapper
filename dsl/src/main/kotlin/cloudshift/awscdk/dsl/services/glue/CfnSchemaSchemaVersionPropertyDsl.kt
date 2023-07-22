@@ -13,14 +13,23 @@ public class CfnSchemaSchemaVersionPropertyDsl {
   private val cdkBuilder: CfnSchema.SchemaVersionProperty.Builder =
       CfnSchema.SchemaVersionProperty.builder()
 
+  /**
+   * @param isLatest Indicates if this version is the latest version of the schema.
+   */
   public fun isLatest(isLatest: Boolean) {
     cdkBuilder.isLatest(isLatest)
   }
 
+  /**
+   * @param isLatest Indicates if this version is the latest version of the schema.
+   */
   public fun isLatest(isLatest: IResolvable) {
     cdkBuilder.isLatest(isLatest)
   }
 
+  /**
+   * @param versionNumber The version number of the schema.
+   */
   public fun versionNumber(versionNumber: Number) {
     cdkBuilder.versionNumber(versionNumber)
   }

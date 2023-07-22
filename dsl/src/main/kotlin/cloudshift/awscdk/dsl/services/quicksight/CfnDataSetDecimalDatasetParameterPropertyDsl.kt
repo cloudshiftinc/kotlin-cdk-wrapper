@@ -12,22 +12,40 @@ public class CfnDataSetDecimalDatasetParameterPropertyDsl {
   private val cdkBuilder: CfnDataSet.DecimalDatasetParameterProperty.Builder =
       CfnDataSet.DecimalDatasetParameterProperty.builder()
 
+  /**
+   * @param defaultValues List of default values defined for a given decimal dataset parameter type.
+   * Currently only static values are supported.</p>
+   */
   public fun defaultValues(defaultValues: IResolvable) {
     cdkBuilder.defaultValues(defaultValues)
   }
 
+  /**
+   * @param defaultValues List of default values defined for a given decimal dataset parameter type.
+   * Currently only static values are supported.</p>
+   */
   public fun defaultValues(defaultValues: CfnDataSet.DecimalDatasetParameterDefaultValuesProperty) {
     cdkBuilder.defaultValues(defaultValues)
   }
 
+  /**
+   * @param id Identifier of the parameter created in the dataset.</p>. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param name Name of the parameter created in the dataset.</p>. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param valueType Every parameter value could be either a single value or multi value which
+   * helps to validate before evaluation.</p>. 
+   */
   public fun valueType(valueType: String) {
     cdkBuilder.valueType(valueType)
   }

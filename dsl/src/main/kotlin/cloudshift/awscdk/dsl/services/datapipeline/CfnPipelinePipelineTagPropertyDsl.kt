@@ -11,10 +11,16 @@ public class CfnPipelinePipelineTagPropertyDsl {
   private val cdkBuilder: CfnPipeline.PipelineTagProperty.Builder =
       CfnPipeline.PipelineTagProperty.builder()
 
+  /**
+   * @param key The key name of a tag. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The value to associate with the key name. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

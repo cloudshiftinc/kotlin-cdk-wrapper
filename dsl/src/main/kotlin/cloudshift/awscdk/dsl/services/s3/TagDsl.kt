@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.s3.Tag
 public class TagDsl {
   private val cdkBuilder: Tag.Builder = Tag.builder()
 
+  /**
+   * @param key key to e tagged. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value additional value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

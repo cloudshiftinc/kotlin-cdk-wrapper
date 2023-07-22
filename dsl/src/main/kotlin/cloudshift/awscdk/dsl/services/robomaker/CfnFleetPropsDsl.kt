@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.robomaker.CfnFleetProps
 public class CfnFleetPropsDsl {
   private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()
 
+  /**
+   * @param name The name of the fleet.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags The list of all tags added to the fleet.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }

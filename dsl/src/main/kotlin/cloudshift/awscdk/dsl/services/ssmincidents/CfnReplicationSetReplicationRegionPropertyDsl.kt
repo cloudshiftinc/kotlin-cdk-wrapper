@@ -12,15 +12,24 @@ public class CfnReplicationSetReplicationRegionPropertyDsl {
   private val cdkBuilder: CfnReplicationSet.ReplicationRegionProperty.Builder =
       CfnReplicationSet.ReplicationRegionProperty.builder()
 
+  /**
+   * @param regionConfiguration Specifies the Region configuration.
+   */
   public fun regionConfiguration(regionConfiguration: IResolvable) {
     cdkBuilder.regionConfiguration(regionConfiguration)
   }
 
+  /**
+   * @param regionConfiguration Specifies the Region configuration.
+   */
   public
       fun regionConfiguration(regionConfiguration: CfnReplicationSet.RegionConfigurationProperty) {
     cdkBuilder.regionConfiguration(regionConfiguration)
   }
 
+  /**
+   * @param regionName Specifies the region name to add to the replication set.
+   */
   public fun regionName(regionName: String) {
     cdkBuilder.regionName(regionName)
   }

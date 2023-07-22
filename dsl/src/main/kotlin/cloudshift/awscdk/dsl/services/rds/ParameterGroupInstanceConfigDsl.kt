@@ -11,6 +11,9 @@ public class ParameterGroupInstanceConfigDsl {
   private val cdkBuilder: ParameterGroupInstanceConfig.Builder =
       ParameterGroupInstanceConfig.builder()
 
+  /**
+   * @param parameterGroupName The name of this parameter group. 
+   */
   public fun parameterGroupName(parameterGroupName: String) {
     cdkBuilder.parameterGroupName(parameterGroupName)
   }

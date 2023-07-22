@@ -19,28 +19,55 @@ public class CfnDataSetRowLevelPermissionTagConfigurationPropertyDsl {
 
   private val _tagRules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param status the value to be set.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
-  public fun tagRuleConfigurations(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param tagRuleConfigurations A list of tag configuration rules to apply to a dataset.
+   * All tag configurations have the OR condition. Tags within each tile will be joined (AND). At
+   * least one rule in this structure must have all tag values assigned to it to apply Row-level
+   * security (RLS) to the dataset.</p>
+   */
+  public fun tagRuleConfigurations(tagRuleConfigurations: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(tagRuleConfigurations)
     cdkBuilder.tagRuleConfigurations(builder.map)
   }
 
+  /**
+   * @param tagRuleConfigurations A list of tag configuration rules to apply to a dataset.
+   * All tag configurations have the OR condition. Tags within each tile will be joined (AND). At
+   * least one rule in this structure must have all tag values assigned to it to apply Row-level
+   * security (RLS) to the dataset.</p>
+   */
   public fun tagRuleConfigurations(tagRuleConfigurations: Any) {
     cdkBuilder.tagRuleConfigurations(tagRuleConfigurations)
   }
 
+  /**
+   * @param tagRules A set of rules associated with row-level security, such as the tag names and
+   * columns that they are assigned to.</p>. 
+   */
   public fun tagRules(vararg tagRules: Any) {
     _tagRules.addAll(listOf(*tagRules))
   }
 
+  /**
+   * @param tagRules A set of rules associated with row-level security, such as the tag names and
+   * columns that they are assigned to.</p>. 
+   */
   public fun tagRules(tagRules: Collection<Any>) {
     _tagRules.addAll(tagRules)
   }
 
+  /**
+   * @param tagRules A set of rules associated with row-level security, such as the tag names and
+   * columns that they are assigned to.</p>. 
+   */
   public fun tagRules(tagRules: IResolvable) {
     cdkBuilder.tagRules(tagRules)
   }

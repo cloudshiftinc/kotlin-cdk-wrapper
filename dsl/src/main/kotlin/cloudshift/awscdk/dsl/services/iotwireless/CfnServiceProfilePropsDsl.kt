@@ -19,22 +19,39 @@ public class CfnServiceProfilePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param loRaWan LoRaWAN service profile object.
+   */
   public fun loRaWan(loRaWan: IResolvable) {
     cdkBuilder.loRaWan(loRaWan)
   }
 
+  /**
+   * @param loRaWan LoRaWAN service profile object.
+   */
   public fun loRaWan(loRaWan: CfnServiceProfile.LoRaWANServiceProfileProperty) {
     cdkBuilder.loRaWan(loRaWan)
   }
 
+  /**
+   * @param name The name of the new resource.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource.
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource.
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

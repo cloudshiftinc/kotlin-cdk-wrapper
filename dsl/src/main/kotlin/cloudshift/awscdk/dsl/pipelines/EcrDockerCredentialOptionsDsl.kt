@@ -15,14 +15,25 @@ public class EcrDockerCredentialOptionsDsl {
 
   private val _usages: MutableList<DockerCredentialUsage> = mutableListOf()
 
+  /**
+   * @param assumeRole An IAM role to assume prior to accessing the secret.
+   */
   public fun assumeRole(assumeRole: IRole) {
     cdkBuilder.assumeRole(assumeRole)
   }
 
+  /**
+   * @param usages Defines which stages of the pipeline should be granted access to these
+   * credentials.
+   */
   public fun usages(vararg usages: DockerCredentialUsage) {
     _usages.addAll(listOf(*usages))
   }
 
+  /**
+   * @param usages Defines which stages of the pipeline should be granted access to these
+   * credentials.
+   */
   public fun usages(usages: Collection<DockerCredentialUsage>) {
     _usages.addAll(usages)
   }

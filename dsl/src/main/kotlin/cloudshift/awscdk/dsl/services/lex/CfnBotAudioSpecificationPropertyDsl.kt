@@ -11,10 +11,18 @@ public class CfnBotAudioSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.AudioSpecificationProperty.Builder =
       CfnBot.AudioSpecificationProperty.builder()
 
+  /**
+   * @param endTimeoutMs Time for which a bot waits after the customer stops speaking to assume the
+   * utterance is finished. 
+   */
   public fun endTimeoutMs(endTimeoutMs: Number) {
     cdkBuilder.endTimeoutMs(endTimeoutMs)
   }
 
+  /**
+   * @param maxLengthMs Time for how long Amazon Lex waits before speech input is truncated and the
+   * speech is returned to application. 
+   */
   public fun maxLengthMs(maxLengthMs: Number) {
     cdkBuilder.maxLengthMs(maxLengthMs)
   }

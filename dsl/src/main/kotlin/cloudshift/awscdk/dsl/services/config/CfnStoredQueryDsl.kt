@@ -21,22 +21,56 @@ public class CfnStoredQueryDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A unique description for the query.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-querydescription)
+   * @param queryDescription A unique description for the query. 
+   */
   public fun queryDescription(queryDescription: String) {
     cdkBuilder.queryDescription(queryDescription)
   }
 
+  /**
+   * The expression of the query.
+   *
+   * For example, `SELECT resourceId, resourceType,
+   * supplementaryConfiguration.BucketVersioningConfiguration.status WHERE resourceType =
+   * 'AWS::S3::Bucket' AND supplementaryConfiguration.BucketVersioningConfiguration.status = 'Off'.`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-queryexpression)
+   * @param queryExpression The expression of the query. 
+   */
   public fun queryExpression(queryExpression: String) {
     cdkBuilder.queryExpression(queryExpression)
   }
 
+  /**
+   * The name of the query.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-queryname)
+   * @param queryName The name of the query. 
+   */
   public fun queryName(queryName: String) {
     cdkBuilder.queryName(queryName)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

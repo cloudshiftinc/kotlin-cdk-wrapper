@@ -11,6 +11,9 @@ public class CfnUserPoolUserPoolAddOnsPropertyDsl {
   private val cdkBuilder: CfnUserPool.UserPoolAddOnsProperty.Builder =
       CfnUserPool.UserPoolAddOnsProperty.builder()
 
+  /**
+   * @param advancedSecurityMode The advanced security mode.
+   */
   public fun advancedSecurityMode(advancedSecurityMode: String) {
     cdkBuilder.advancedSecurityMode(advancedSecurityMode)
   }

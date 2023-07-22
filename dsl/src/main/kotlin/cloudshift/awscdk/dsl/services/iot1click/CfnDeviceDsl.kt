@@ -16,14 +16,34 @@ public class CfnDeviceDsl(
 ) {
   private val cdkBuilder: CfnDevice.Builder = CfnDevice.Builder.create(scope, id)
 
+  /**
+   * The ID of the device, such as `G030PX0312744DWM` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-device.html#cfn-iot1click-device-deviceid)
+   * @param deviceId The ID of the device, such as `G030PX0312744DWM` . 
+   */
   public fun deviceId(deviceId: String) {
     cdkBuilder.deviceId(deviceId)
   }
 
+  /**
+   * A Boolean value indicating whether the device is enabled ( `true` ) or not ( `false` ).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-device.html#cfn-iot1click-device-enabled)
+   * @param enabled A Boolean value indicating whether the device is enabled ( `true` ) or not (
+   * `false` ). 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * A Boolean value indicating whether the device is enabled ( `true` ) or not ( `false` ).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-device.html#cfn-iot1click-device-enabled)
+   * @param enabled A Boolean value indicating whether the device is enabled ( `true` ) or not (
+   * `false` ). 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

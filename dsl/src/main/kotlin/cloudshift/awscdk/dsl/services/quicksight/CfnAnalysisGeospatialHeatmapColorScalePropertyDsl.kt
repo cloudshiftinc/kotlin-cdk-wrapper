@@ -16,14 +16,23 @@ public class CfnAnalysisGeospatialHeatmapColorScalePropertyDsl {
 
   private val _colors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param colors The list of colors to be used in heatmap point style.
+   */
   public fun colors(vararg colors: Any) {
     _colors.addAll(listOf(*colors))
   }
 
+  /**
+   * @param colors The list of colors to be used in heatmap point style.
+   */
   public fun colors(colors: Collection<Any>) {
     _colors.addAll(colors)
   }
 
+  /**
+   * @param colors The list of colors to be used in heatmap point style.
+   */
   public fun colors(colors: IResolvable) {
     cdkBuilder.colors(colors)
   }

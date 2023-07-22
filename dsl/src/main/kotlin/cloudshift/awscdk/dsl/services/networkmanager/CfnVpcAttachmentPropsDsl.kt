@@ -21,43 +21,73 @@ public class CfnVpcAttachmentPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param coreNetworkId The core network ID. 
+   */
   public fun coreNetworkId(coreNetworkId: String) {
     cdkBuilder.coreNetworkId(coreNetworkId)
   }
 
+  /**
+   * @param options Options for creating the VPC attachment.
+   */
   public fun options(options: IResolvable) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * @param options Options for creating the VPC attachment.
+   */
   public fun options(options: CfnVpcAttachment.VpcOptionsProperty) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * @param proposedSegmentChange The attachment to move from one segment to another.
+   */
   public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * @param proposedSegmentChange The attachment to move from one segment to another.
+   */
   public
       fun proposedSegmentChange(proposedSegmentChange: CfnVpcAttachment.ProposedSegmentChangeProperty) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * @param subnetArns The subnet ARNs. 
+   */
   public fun subnetArns(vararg subnetArns: String) {
     _subnetArns.addAll(listOf(*subnetArns))
   }
 
+  /**
+   * @param subnetArns The subnet ARNs. 
+   */
   public fun subnetArns(subnetArns: Collection<String>) {
     _subnetArns.addAll(subnetArns)
   }
 
+  /**
+   * @param tags The tags associated with the VPC attachment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags associated with the VPC attachment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param vpcArn The ARN of the VPC attachment. 
+   */
   public fun vpcArn(vpcArn: String) {
     cdkBuilder.vpcArn(vpcArn)
   }

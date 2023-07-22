@@ -14,6 +14,12 @@ public class CfnReceiptRuleSetDsl(
 ) {
   private val cdkBuilder: CfnReceiptRuleSet.Builder = CfnReceiptRuleSet.Builder.create(scope, id)
 
+  /**
+   * The name of the receipt rule set to reorder.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html#cfn-ses-receiptruleset-rulesetname)
+   * @param ruleSetName The name of the receipt rule set to reorder. 
+   */
   public fun ruleSetName(ruleSetName: String) {
     cdkBuilder.ruleSetName(ruleSetName)
   }

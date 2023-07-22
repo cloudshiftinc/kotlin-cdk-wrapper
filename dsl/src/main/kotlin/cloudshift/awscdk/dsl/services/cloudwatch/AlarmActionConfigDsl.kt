@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.cloudwatch.AlarmActionConfig
 public class AlarmActionConfigDsl {
   private val cdkBuilder: AlarmActionConfig.Builder = AlarmActionConfig.builder()
 
+  /**
+   * @param alarmActionArn Return the ARN that should be used for a CloudWatch Alarm action. 
+   */
   public fun alarmActionArn(alarmActionArn: String) {
     cdkBuilder.alarmActionArn(alarmActionArn)
   }

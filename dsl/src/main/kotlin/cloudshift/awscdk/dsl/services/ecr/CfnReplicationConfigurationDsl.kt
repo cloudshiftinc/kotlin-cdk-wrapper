@@ -16,10 +16,22 @@ public class CfnReplicationConfigurationDsl(
   private val cdkBuilder: CfnReplicationConfiguration.Builder =
       CfnReplicationConfiguration.Builder.create(scope, id)
 
+  /**
+   * The replication configuration for a registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html#cfn-ecr-replicationconfiguration-replicationconfiguration)
+   * @param replicationConfiguration The replication configuration for a registry. 
+   */
   public fun replicationConfiguration(replicationConfiguration: IResolvable) {
     cdkBuilder.replicationConfiguration(replicationConfiguration)
   }
 
+  /**
+   * The replication configuration for a registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html#cfn-ecr-replicationconfiguration-replicationconfiguration)
+   * @param replicationConfiguration The replication configuration for a registry. 
+   */
   public
       fun replicationConfiguration(replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty) {
     cdkBuilder.replicationConfiguration(replicationConfiguration)

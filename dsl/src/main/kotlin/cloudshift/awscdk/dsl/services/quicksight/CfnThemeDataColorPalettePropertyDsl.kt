@@ -17,22 +17,38 @@ public class CfnThemeDataColorPalettePropertyDsl {
 
   private val _minMaxGradient: MutableList<String> = mutableListOf()
 
+  /**
+   * @param colors The hexadecimal codes for the colors.
+   */
   public fun colors(vararg colors: String) {
     _colors.addAll(listOf(*colors))
   }
 
+  /**
+   * @param colors The hexadecimal codes for the colors.
+   */
   public fun colors(colors: Collection<String>) {
     _colors.addAll(colors)
   }
 
+  /**
+   * @param emptyFillColor The hexadecimal code of a color that applies to charts where a lack of
+   * data is highlighted.
+   */
   public fun emptyFillColor(emptyFillColor: String) {
     cdkBuilder.emptyFillColor(emptyFillColor)
   }
 
+  /**
+   * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color gradient.
+   */
   public fun minMaxGradient(vararg minMaxGradient: String) {
     _minMaxGradient.addAll(listOf(*minMaxGradient))
   }
 
+  /**
+   * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color gradient.
+   */
   public fun minMaxGradient(minMaxGradient: Collection<String>) {
     _minMaxGradient.addAll(minMaxGradient)
   }

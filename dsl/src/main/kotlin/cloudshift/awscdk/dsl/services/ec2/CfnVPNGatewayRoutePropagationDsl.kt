@@ -19,14 +19,41 @@ public class CfnVPNGatewayRoutePropagationDsl(
 
   private val _routeTableIds: MutableList<String> = mutableListOf()
 
+  /**
+   * The ID of the route table.
+   *
+   * The routing table must be associated with the same VPC that the virtual private gateway is
+   * attached to.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngatewayroutepropagation.html#cfn-ec2-vpngatewayroutepropagation-routetableids)
+   * @param routeTableIds The ID of the route table. 
+   */
   public fun routeTableIds(vararg routeTableIds: String) {
     _routeTableIds.addAll(listOf(*routeTableIds))
   }
 
+  /**
+   * The ID of the route table.
+   *
+   * The routing table must be associated with the same VPC that the virtual private gateway is
+   * attached to.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngatewayroutepropagation.html#cfn-ec2-vpngatewayroutepropagation-routetableids)
+   * @param routeTableIds The ID of the route table. 
+   */
   public fun routeTableIds(routeTableIds: Collection<String>) {
     _routeTableIds.addAll(routeTableIds)
   }
 
+  /**
+   * The ID of the virtual private gateway that is attached to a VPC.
+   *
+   * The virtual private gateway must be attached to the same VPC that the routing tables are
+   * associated with.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngatewayroutepropagation.html#cfn-ec2-vpngatewayroutepropagation-vpngatewayid)
+   * @param vpnGatewayId The ID of the virtual private gateway that is attached to a VPC. 
+   */
   public fun vpnGatewayId(vpnGatewayId: String) {
     cdkBuilder.vpnGatewayId(vpnGatewayId)
   }

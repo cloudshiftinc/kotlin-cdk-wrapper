@@ -11,10 +11,16 @@ public class CfnTemplateConditionalFormattingCustomIconOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.ConditionalFormattingCustomIconOptionsProperty.Builder =
       CfnTemplate.ConditionalFormattingCustomIconOptionsProperty.builder()
 
+  /**
+   * @param icon Determines the type of icon.
+   */
   public fun icon(icon: String) {
     cdkBuilder.icon(icon)
   }
 
+  /**
+   * @param unicodeIcon Determines the Unicode icon type.
+   */
   public fun unicodeIcon(unicodeIcon: String) {
     cdkBuilder.unicodeIcon(unicodeIcon)
   }

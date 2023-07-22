@@ -11,10 +11,16 @@ public class CfnAutoScalingGroupNetworkBandwidthGbpsRequestPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty.Builder =
       CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty.builder()
 
+  /**
+   * @param max The maximum amount of network bandwidth, in gigabits per second (Gbps).
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum amount of network bandwidth, in gigabits per second (Gbps).
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

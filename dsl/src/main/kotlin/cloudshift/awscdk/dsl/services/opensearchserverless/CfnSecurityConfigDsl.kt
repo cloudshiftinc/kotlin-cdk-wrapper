@@ -15,22 +15,54 @@ public class CfnSecurityConfigDsl(
 ) {
   private val cdkBuilder: CfnSecurityConfig.Builder = CfnSecurityConfig.Builder.create(scope, id)
 
+  /**
+   * The description of the security configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-description)
+   * @param description The description of the security configuration. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the security configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-name)
+   * @param name The name of the security configuration. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * SAML options for the security configuration in the form of a key-value map.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-samloptions)
+   * @param samlOptions SAML options for the security configuration in the form of a key-value map. 
+   */
   public fun samlOptions(samlOptions: IResolvable) {
     cdkBuilder.samlOptions(samlOptions)
   }
 
+  /**
+   * SAML options for the security configuration in the form of a key-value map.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-samloptions)
+   * @param samlOptions SAML options for the security configuration in the form of a key-value map. 
+   */
   public fun samlOptions(samlOptions: CfnSecurityConfig.SamlConfigOptionsProperty) {
     cdkBuilder.samlOptions(samlOptions)
   }
 
+  /**
+   * The type of security configuration.
+   *
+   * Currently the only option is `saml` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-type)
+   * @param type The type of security configuration. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

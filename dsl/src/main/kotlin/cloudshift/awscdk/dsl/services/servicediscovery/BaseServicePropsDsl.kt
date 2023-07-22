@@ -13,30 +13,64 @@ import software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig
 public class BaseServicePropsDsl {
   private val cdkBuilder: BaseServiceProps.Builder = BaseServiceProps.builder()
 
-  public fun customHealthCheck(block: HealthCheckCustomConfigDsl.() -> Unit = {}) {
+  /**
+   * @param customHealthCheck Structure containing failure threshold for a custom health checker.
+   * Only one of healthCheckConfig or healthCheckCustomConfig can be specified.
+   * See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
+   */
+  public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfigDsl.() -> Unit = {}) {
     val builder = HealthCheckCustomConfigDsl()
-    builder.apply(block)
+    builder.apply(customHealthCheck)
     cdkBuilder.customHealthCheck(builder.build())
   }
 
+  /**
+   * @param customHealthCheck Structure containing failure threshold for a custom health checker.
+   * Only one of healthCheckConfig or healthCheckCustomConfig can be specified.
+   * See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
+   */
   public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
     cdkBuilder.customHealthCheck(customHealthCheck)
   }
 
+  /**
+   * @param description A description of the service.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
-  public fun healthCheck(block: HealthCheckConfigDsl.() -> Unit = {}) {
+  /**
+   * @param healthCheck Settings for an optional health check.
+   * If you specify health check settings, AWS Cloud Map associates the health
+   * check with the records that you specify in DnsConfig. Only one of healthCheckConfig or
+   * healthCheckCustomConfig can
+   * be specified. Not valid for PrivateDnsNamespaces. If you use healthCheck, you can only register
+   * IP instances to
+   * this service.
+   */
+  public fun healthCheck(healthCheck: HealthCheckConfigDsl.() -> Unit = {}) {
     val builder = HealthCheckConfigDsl()
-    builder.apply(block)
+    builder.apply(healthCheck)
     cdkBuilder.healthCheck(builder.build())
   }
 
+  /**
+   * @param healthCheck Settings for an optional health check.
+   * If you specify health check settings, AWS Cloud Map associates the health
+   * check with the records that you specify in DnsConfig. Only one of healthCheckConfig or
+   * healthCheckCustomConfig can
+   * be specified. Not valid for PrivateDnsNamespaces. If you use healthCheck, you can only register
+   * IP instances to
+   * this service.
+   */
   public fun healthCheck(healthCheck: HealthCheckConfig) {
     cdkBuilder.healthCheck(healthCheck)
   }
 
+  /**
+   * @param name A name for the Service.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

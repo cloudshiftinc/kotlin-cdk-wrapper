@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.ec2.UserData
 public class MachineImageConfigDsl {
   private val cdkBuilder: MachineImageConfig.Builder = MachineImageConfig.builder()
 
+  /**
+   * @param imageId The AMI ID of the image to use. 
+   */
   public fun imageId(imageId: String) {
     cdkBuilder.imageId(imageId)
   }
 
+  /**
+   * @param osType Operating system type for this image. 
+   */
   public fun osType(osType: OperatingSystemType) {
     cdkBuilder.osType(osType)
   }
 
+  /**
+   * @param userData Initial UserData for this image. 
+   */
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)
   }

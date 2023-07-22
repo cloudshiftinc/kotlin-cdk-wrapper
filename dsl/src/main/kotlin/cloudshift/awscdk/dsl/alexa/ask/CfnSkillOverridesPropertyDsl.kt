@@ -12,12 +12,20 @@ import software.amazon.awscdk.alexa.ask.CfnSkill
 public class CfnSkillOverridesPropertyDsl {
   private val cdkBuilder: CfnSkill.OverridesProperty.Builder = CfnSkill.OverridesProperty.builder()
 
-  public fun manifest(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+   * The skill manifest contains metadata about the skill. For more information, see  .
+   */
+  public fun manifest(manifest: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(manifest)
     cdkBuilder.manifest(builder.map)
   }
 
+  /**
+   * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+   * The skill manifest contains metadata about the skill. For more information, see  .
+   */
   public fun manifest(manifest: Any) {
     cdkBuilder.manifest(manifest)
   }

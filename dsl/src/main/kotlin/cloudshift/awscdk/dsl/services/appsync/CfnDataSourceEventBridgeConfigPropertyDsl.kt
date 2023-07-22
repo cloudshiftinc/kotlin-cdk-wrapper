@@ -11,6 +11,11 @@ public class CfnDataSourceEventBridgeConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.EventBridgeConfigProperty.Builder =
       CfnDataSource.EventBridgeConfigProperty.builder()
 
+  /**
+   * @param eventBusArn The event bus pipeline's ARN. 
+   * For more information about event buses, see [EventBridge event
+   * buses](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus.html) .
+   */
   public fun eventBusArn(eventBusArn: String) {
     cdkBuilder.eventBusArn(eventBusArn)
   }

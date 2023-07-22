@@ -11,6 +11,9 @@ public class CfnTemplateCustomNarrativeOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.CustomNarrativeOptionsProperty.Builder =
       CfnTemplate.CustomNarrativeOptionsProperty.builder()
 
+  /**
+   * @param narrative The string input of custom narrative. 
+   */
   public fun narrative(narrative: String) {
     cdkBuilder.narrative(narrative)
   }

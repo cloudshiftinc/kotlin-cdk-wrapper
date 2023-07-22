@@ -17,30 +17,55 @@ public class PolicyViolationBeta1Dsl {
 
   private val _violatingResources: MutableList<PolicyViolatingResourceBeta1> = mutableListOf()
 
+  /**
+   * @param description The description of the violation. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param fix How to fix the violation.
+   */
   public fun fix(fix: String) {
     cdkBuilder.fix(fix)
   }
 
+  /**
+   * @param ruleMetadata Additional metadata to include with the rule results.
+   * This can be used to provide additional information that is
+   * plugin specific. The data provided here will be rendered as is.
+   */
   public fun ruleMetadata(ruleMetadata: Map<String, String>) {
     cdkBuilder.ruleMetadata(ruleMetadata)
   }
 
+  /**
+   * @param ruleName The name of the rule. 
+   */
   public fun ruleName(ruleName: String) {
     cdkBuilder.ruleName(ruleName)
   }
 
+  /**
+   * @param severity The severity of the violation, only used for reporting purposes.
+   * This is useful for helping the user discriminate between warnings,
+   * errors, information, etc.
+   */
   public fun severity(severity: String) {
     cdkBuilder.severity(severity)
   }
 
+  /**
+   * @param violatingResources The resources violating this rule. 
+   */
   public fun violatingResources(violatingResources: PolicyViolatingResourceBeta1Dsl.() -> Unit) {
     _violatingResources.add(PolicyViolatingResourceBeta1Dsl().apply(violatingResources).build())
   }
 
+  /**
+   * @param violatingResources The resources violating this rule. 
+   */
   public fun violatingResources(violatingResources: Collection<PolicyViolatingResourceBeta1>) {
     _violatingResources.addAll(violatingResources)
   }

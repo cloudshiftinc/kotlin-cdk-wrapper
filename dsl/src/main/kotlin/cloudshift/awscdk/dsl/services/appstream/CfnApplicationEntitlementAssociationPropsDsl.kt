@@ -11,14 +11,23 @@ public class CfnApplicationEntitlementAssociationPropsDsl {
   private val cdkBuilder: CfnApplicationEntitlementAssociationProps.Builder =
       CfnApplicationEntitlementAssociationProps.builder()
 
+  /**
+   * @param applicationIdentifier The identifier of the application. 
+   */
   public fun applicationIdentifier(applicationIdentifier: String) {
     cdkBuilder.applicationIdentifier(applicationIdentifier)
   }
 
+  /**
+   * @param entitlementName The name of the entitlement. 
+   */
   public fun entitlementName(entitlementName: String) {
     cdkBuilder.entitlementName(entitlementName)
   }
 
+  /**
+   * @param stackName The name of the stack. 
+   */
   public fun stackName(stackName: String) {
     cdkBuilder.stackName(stackName)
   }

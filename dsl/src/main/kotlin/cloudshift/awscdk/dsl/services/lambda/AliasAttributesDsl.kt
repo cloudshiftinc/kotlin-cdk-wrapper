@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.lambda.IVersion
 public class AliasAttributesDsl {
   private val cdkBuilder: AliasAttributes.Builder = AliasAttributes.builder()
 
+  /**
+   * @param aliasName the value to be set. 
+   */
   public fun aliasName(aliasName: String) {
     cdkBuilder.aliasName(aliasName)
   }
 
+  /**
+   * @param aliasVersion the value to be set. 
+   */
   public fun aliasVersion(aliasVersion: IVersion) {
     cdkBuilder.aliasVersion(aliasVersion)
   }

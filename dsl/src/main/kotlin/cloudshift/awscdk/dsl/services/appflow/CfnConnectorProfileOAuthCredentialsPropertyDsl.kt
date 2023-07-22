@@ -12,27 +12,46 @@ public class CfnConnectorProfileOAuthCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.OAuthCredentialsProperty.Builder =
       CfnConnectorProfile.OAuthCredentialsProperty.builder()
 
+  /**
+   * @param accessToken The access token used to access protected SAPOData resources.
+   */
   public fun accessToken(accessToken: String) {
     cdkBuilder.accessToken(accessToken)
   }
 
+  /**
+   * @param clientId The identifier for the desired client.
+   */
   public fun clientId(clientId: String) {
     cdkBuilder.clientId(clientId)
   }
 
+  /**
+   * @param clientSecret The client secret used by the OAuth client to authenticate to the
+   * authorization server.
+   */
   public fun clientSecret(clientSecret: String) {
     cdkBuilder.clientSecret(clientSecret)
   }
 
+  /**
+   * @param connectorOAuthRequest the value to be set.
+   */
   public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
     cdkBuilder.connectorOAuthRequest(connectorOAuthRequest)
   }
 
+  /**
+   * @param connectorOAuthRequest the value to be set.
+   */
   public
       fun connectorOAuthRequest(connectorOAuthRequest: CfnConnectorProfile.ConnectorOAuthRequestProperty) {
     cdkBuilder.connectorOAuthRequest(connectorOAuthRequest)
   }
 
+  /**
+   * @param refreshToken The refresh token used to refresh expired access token.
+   */
   public fun refreshToken(refreshToken: String) {
     cdkBuilder.refreshToken(refreshToken)
   }

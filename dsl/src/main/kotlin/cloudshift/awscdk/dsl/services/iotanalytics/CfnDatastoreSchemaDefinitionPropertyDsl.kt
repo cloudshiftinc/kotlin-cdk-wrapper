@@ -16,14 +16,26 @@ public class CfnDatastoreSchemaDefinitionPropertyDsl {
 
   private val _columns: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param columns Specifies one or more columns that store your data.
+   * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+   */
   public fun columns(vararg columns: Any) {
     _columns.addAll(listOf(*columns))
   }
 
+  /**
+   * @param columns Specifies one or more columns that store your data.
+   * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+   */
   public fun columns(columns: Collection<Any>) {
     _columns.addAll(columns)
   }
 
+  /**
+   * @param columns Specifies one or more columns that store your data.
+   * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+   */
   public fun columns(columns: IResolvable) {
     cdkBuilder.columns(columns)
   }

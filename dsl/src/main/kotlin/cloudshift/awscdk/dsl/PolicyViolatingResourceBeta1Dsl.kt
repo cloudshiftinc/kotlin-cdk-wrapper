@@ -15,18 +15,30 @@ public class PolicyViolatingResourceBeta1Dsl {
 
   private val _locations: MutableList<String> = mutableListOf()
 
+  /**
+   * @param locations The locations in the CloudFormation template that pose the violations. 
+   */
   public fun locations(vararg locations: String) {
     _locations.addAll(listOf(*locations))
   }
 
+  /**
+   * @param locations The locations in the CloudFormation template that pose the violations. 
+   */
   public fun locations(locations: Collection<String>) {
     _locations.addAll(locations)
   }
 
+  /**
+   * @param resourceLogicalId The logical ID of the resource in the CloudFormation template. 
+   */
   public fun resourceLogicalId(resourceLogicalId: String) {
     cdkBuilder.resourceLogicalId(resourceLogicalId)
   }
 
+  /**
+   * @param templatePath The path to the CloudFormation template that contains this resource. 
+   */
   public fun templatePath(templatePath: String) {
     cdkBuilder.templatePath(templatePath)
   }

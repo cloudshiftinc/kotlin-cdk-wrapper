@@ -11,10 +11,16 @@ public class CfnAnalysisDefaultGridLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.DefaultGridLayoutConfigurationProperty.Builder =
       CfnAnalysis.DefaultGridLayoutConfigurationProperty.builder()
 
+  /**
+   * @param canvasSizeOptions Determines the screen canvas size options for a grid layout. 
+   */
   public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
     cdkBuilder.canvasSizeOptions(canvasSizeOptions)
   }
 
+  /**
+   * @param canvasSizeOptions Determines the screen canvas size options for a grid layout. 
+   */
   public fun canvasSizeOptions(canvasSizeOptions: CfnAnalysis.GridLayoutCanvasSizeOptionsProperty) {
     cdkBuilder.canvasSizeOptions(canvasSizeOptions)
   }

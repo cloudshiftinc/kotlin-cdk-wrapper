@@ -11,10 +11,18 @@ public class CfnEC2FleetMaintenanceStrategiesPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.MaintenanceStrategiesProperty.Builder =
       CfnEC2Fleet.MaintenanceStrategiesProperty.builder()
 
+  /**
+   * @param capacityRebalance The strategy to use when Amazon EC2 emits a signal that your Spot
+   * Instance is at an elevated risk of being interrupted.
+   */
   public fun capacityRebalance(capacityRebalance: IResolvable) {
     cdkBuilder.capacityRebalance(capacityRebalance)
   }
 
+  /**
+   * @param capacityRebalance The strategy to use when Amazon EC2 emits a signal that your Spot
+   * Instance is at an elevated risk of being interrupted.
+   */
   public fun capacityRebalance(capacityRebalance: CfnEC2Fleet.CapacityRebalanceProperty) {
     cdkBuilder.capacityRebalance(capacityRebalance)
   }

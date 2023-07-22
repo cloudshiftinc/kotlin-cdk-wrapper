@@ -19,52 +19,96 @@ public class ResponseHeadersPolicyPropsDsl {
 
   private val _removeHeaders: MutableList<String> = mutableListOf()
 
+  /**
+   * @param comment A comment to describe the response headers policy.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
-  public fun corsBehavior(block: ResponseHeadersCorsBehaviorDsl.() -> Unit = {}) {
+  /**
+   * @param corsBehavior A configuration for a set of HTTP response headers that are used for
+   * cross-origin resource sharing (CORS).
+   */
+  public fun corsBehavior(corsBehavior: ResponseHeadersCorsBehaviorDsl.() -> Unit = {}) {
     val builder = ResponseHeadersCorsBehaviorDsl()
-    builder.apply(block)
+    builder.apply(corsBehavior)
     cdkBuilder.corsBehavior(builder.build())
   }
 
+  /**
+   * @param corsBehavior A configuration for a set of HTTP response headers that are used for
+   * cross-origin resource sharing (CORS).
+   */
   public fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior) {
     cdkBuilder.corsBehavior(corsBehavior)
   }
 
-  public fun customHeadersBehavior(block: ResponseCustomHeadersBehaviorDsl.() -> Unit = {}) {
+  /**
+   * @param customHeadersBehavior A configuration for a set of custom HTTP response headers.
+   */
+  public
+      fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehaviorDsl.() -> Unit =
+      {}) {
     val builder = ResponseCustomHeadersBehaviorDsl()
-    builder.apply(block)
+    builder.apply(customHeadersBehavior)
     cdkBuilder.customHeadersBehavior(builder.build())
   }
 
+  /**
+   * @param customHeadersBehavior A configuration for a set of custom HTTP response headers.
+   */
   public fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior) {
     cdkBuilder.customHeadersBehavior(customHeadersBehavior)
   }
 
+  /**
+   * @param removeHeaders A list of HTTP response headers that CloudFront removes from HTTP
+   * responses that it sends to viewers.
+   */
   public fun removeHeaders(vararg removeHeaders: String) {
     _removeHeaders.addAll(listOf(*removeHeaders))
   }
 
+  /**
+   * @param removeHeaders A list of HTTP response headers that CloudFront removes from HTTP
+   * responses that it sends to viewers.
+   */
   public fun removeHeaders(removeHeaders: Collection<String>) {
     _removeHeaders.addAll(removeHeaders)
   }
 
+  /**
+   * @param responseHeadersPolicyName A unique name to identify the response headers policy.
+   */
   public fun responseHeadersPolicyName(responseHeadersPolicyName: String) {
     cdkBuilder.responseHeadersPolicyName(responseHeadersPolicyName)
   }
 
-  public fun securityHeadersBehavior(block: ResponseSecurityHeadersBehaviorDsl.() -> Unit = {}) {
+  /**
+   * @param securityHeadersBehavior A configuration for a set of security-related HTTP response
+   * headers.
+   */
+  public
+      fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehaviorDsl.() -> Unit
+      = {}) {
     val builder = ResponseSecurityHeadersBehaviorDsl()
-    builder.apply(block)
+    builder.apply(securityHeadersBehavior)
     cdkBuilder.securityHeadersBehavior(builder.build())
   }
 
+  /**
+   * @param securityHeadersBehavior A configuration for a set of security-related HTTP response
+   * headers.
+   */
   public fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior) {
     cdkBuilder.securityHeadersBehavior(securityHeadersBehavior)
   }
 
+  /**
+   * @param serverTimingSamplingRate The percentage of responses that you want CloudFront to add the
+   * Server-Timing header to.
+   */
   public fun serverTimingSamplingRate(serverTimingSamplingRate: Number) {
     cdkBuilder.serverTimingSamplingRate(serverTimingSamplingRate)
   }

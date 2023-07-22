@@ -10,10 +10,16 @@ import software.amazon.awscdk.RoleOptions
 public class RoleOptionsDsl {
   private val cdkBuilder: RoleOptions.Builder = RoleOptions.builder()
 
+  /**
+   * @param assumeRoleArn ARN of the role to assume. 
+   */
   public fun assumeRoleArn(assumeRoleArn: String) {
     cdkBuilder.assumeRoleArn(assumeRoleArn)
   }
 
+  /**
+   * @param assumeRoleExternalId External ID to use when assuming the role.
+   */
   public fun assumeRoleExternalId(assumeRoleExternalId: String) {
     cdkBuilder.assumeRoleExternalId(assumeRoleExternalId)
   }

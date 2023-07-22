@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.stepfunctions.WaitTime
 public class WaitPropsDsl {
   private val cdkBuilder: WaitProps.Builder = WaitProps.builder()
 
+  /**
+   * @param comment An optional description for this state.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * @param time Wait duration. 
+   */
   public fun time(time: WaitTime) {
     cdkBuilder.time(time)
   }

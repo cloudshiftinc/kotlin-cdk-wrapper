@@ -11,10 +11,18 @@ public class CfnScheduledQueryTargetConfigurationPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.TargetConfigurationProperty.Builder =
       CfnScheduledQuery.TargetConfigurationProperty.builder()
 
+  /**
+   * @param timestreamConfiguration Configuration needed to write data into the Timestream database
+   * and table. 
+   */
   public fun timestreamConfiguration(timestreamConfiguration: IResolvable) {
     cdkBuilder.timestreamConfiguration(timestreamConfiguration)
   }
 
+  /**
+   * @param timestreamConfiguration Configuration needed to write data into the Timestream database
+   * and table. 
+   */
   public
       fun timestreamConfiguration(timestreamConfiguration: CfnScheduledQuery.TimestreamConfigurationProperty) {
     cdkBuilder.timestreamConfiguration(timestreamConfiguration)

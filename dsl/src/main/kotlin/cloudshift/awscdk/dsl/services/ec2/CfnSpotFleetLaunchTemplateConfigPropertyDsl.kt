@@ -16,23 +16,45 @@ public class CfnSpotFleetLaunchTemplateConfigPropertyDsl {
 
   private val _overrides: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param launchTemplateSpecification The launch template to use.
+   * Make sure that the launch template does not contain the `NetworkInterfaceId` parameter because
+   * you can't specify a network interface ID in a Spot Fleet.
+   */
   public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
     cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
   }
 
+  /**
+   * @param launchTemplateSpecification The launch template to use.
+   * Make sure that the launch template does not contain the `NetworkInterfaceId` parameter because
+   * you can't specify a network interface ID in a Spot Fleet.
+   */
   public
       fun launchTemplateSpecification(launchTemplateSpecification: CfnSpotFleet.FleetLaunchTemplateSpecificationProperty) {
     cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
   }
 
+  /**
+   * @param overrides Any parameters that you specify override the same parameters in the launch
+   * template.
+   */
   public fun overrides(vararg overrides: Any) {
     _overrides.addAll(listOf(*overrides))
   }
 
+  /**
+   * @param overrides Any parameters that you specify override the same parameters in the launch
+   * template.
+   */
   public fun overrides(overrides: Collection<Any>) {
     _overrides.addAll(overrides)
   }
 
+  /**
+   * @param overrides Any parameters that you specify override the same parameters in the launch
+   * template.
+   */
   public fun overrides(overrides: IResolvable) {
     cdkBuilder.overrides(overrides)
   }

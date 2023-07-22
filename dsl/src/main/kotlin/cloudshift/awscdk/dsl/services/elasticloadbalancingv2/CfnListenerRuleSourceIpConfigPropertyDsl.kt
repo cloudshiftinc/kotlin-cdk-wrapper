@@ -15,10 +15,24 @@ public class CfnListenerRuleSourceIpConfigPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param values The source IP addresses, in CIDR format. You can use both IPv4 and IPv6
+   * addresses. Wildcards are not supported.
+   * If you specify multiple addresses, the condition is satisfied if the source IP address of the
+   * request matches one of the CIDR blocks. This condition is not satisfied by the addresses in the
+   * X-Forwarded-For header.
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The source IP addresses, in CIDR format. You can use both IPv4 and IPv6
+   * addresses. Wildcards are not supported.
+   * If you specify multiple addresses, the condition is satisfied if the source IP address of the
+   * request matches one of the CIDR blocks. This condition is not satisfied by the addresses in the
+   * X-Forwarded-For header.
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.rds.MysqlEngineVersion
 public class MySqlInstanceEnginePropsDsl {
   private val cdkBuilder: MySqlInstanceEngineProps.Builder = MySqlInstanceEngineProps.builder()
 
+  /**
+   * @param version The exact version of the engine to use. 
+   */
   public fun version(version: MysqlEngineVersion) {
     cdkBuilder.version(version)
   }

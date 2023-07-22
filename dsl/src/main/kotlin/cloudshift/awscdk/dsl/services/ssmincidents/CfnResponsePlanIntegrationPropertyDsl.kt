@@ -11,10 +11,18 @@ public class CfnResponsePlanIntegrationPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.IntegrationProperty.Builder =
       CfnResponsePlan.IntegrationProperty.builder()
 
+  /**
+   * @param pagerDutyConfiguration Information about the PagerDuty service where the response plan
+   * creates an incident. 
+   */
   public fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable) {
     cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration)
   }
 
+  /**
+   * @param pagerDutyConfiguration Information about the PagerDuty service where the response plan
+   * creates an incident. 
+   */
   public
       fun pagerDutyConfiguration(pagerDutyConfiguration: CfnResponsePlan.PagerDutyConfigurationProperty) {
     cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration)

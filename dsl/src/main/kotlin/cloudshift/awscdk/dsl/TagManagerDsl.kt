@@ -17,6 +17,15 @@ public class TagManagerDsl(
   private val cdkBuilder: TagManager.Builder = TagManager.Builder.create(tagType, resourceTypeName,
       initialTags)
 
+  /**
+   * The name of the property in CloudFormation for these tags.
+   *
+   * Normally this is `tags`, but Cognito UserPool uses UserPoolTags
+   *
+   * Default: "tags"
+   *
+   * @param tagPropertyName The name of the property in CloudFormation for these tags. 
+   */
   public fun tagPropertyName(tagPropertyName: String) {
     cdkBuilder.tagPropertyName(tagPropertyName)
   }

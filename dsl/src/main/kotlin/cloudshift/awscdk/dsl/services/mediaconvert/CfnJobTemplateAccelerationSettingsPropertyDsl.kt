@@ -11,6 +11,10 @@ public class CfnJobTemplateAccelerationSettingsPropertyDsl {
   private val cdkBuilder: CfnJobTemplate.AccelerationSettingsProperty.Builder =
       CfnJobTemplate.AccelerationSettingsProperty.builder()
 
+  /**
+   * @param mode Specify the conditions when the service will run your job with accelerated
+   * transcoding. 
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }

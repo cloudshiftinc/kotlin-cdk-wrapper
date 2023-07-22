@@ -11,70 +11,122 @@ public class CfnFlowConnectorOperatorPropertyDsl {
   private val cdkBuilder: CfnFlow.ConnectorOperatorProperty.Builder =
       CfnFlow.ConnectorOperatorProperty.builder()
 
+  /**
+   * @param amplitude The operation to be performed on the provided Amplitude source fields.
+   */
   public fun amplitude(amplitude: String) {
     cdkBuilder.amplitude(amplitude)
   }
 
+  /**
+   * @param customConnector Operators supported by the custom connector.
+   */
   public fun customConnector(customConnector: String) {
     cdkBuilder.customConnector(customConnector)
   }
 
+  /**
+   * @param datadog The operation to be performed on the provided Datadog source fields.
+   */
   public fun datadog(datadog: String) {
     cdkBuilder.datadog(datadog)
   }
 
+  /**
+   * @param dynatrace The operation to be performed on the provided Dynatrace source fields.
+   */
   public fun dynatrace(dynatrace: String) {
     cdkBuilder.dynatrace(dynatrace)
   }
 
+  /**
+   * @param googleAnalytics The operation to be performed on the provided Google Analytics source
+   * fields.
+   */
   public fun googleAnalytics(googleAnalytics: String) {
     cdkBuilder.googleAnalytics(googleAnalytics)
   }
 
+  /**
+   * @param inforNexus The operation to be performed on the provided Infor Nexus source fields.
+   */
   public fun inforNexus(inforNexus: String) {
     cdkBuilder.inforNexus(inforNexus)
   }
 
+  /**
+   * @param marketo The operation to be performed on the provided Marketo source fields.
+   */
   public fun marketo(marketo: String) {
     cdkBuilder.marketo(marketo)
   }
 
+  /**
+   * @param pardot the value to be set.
+   */
   public fun pardot(pardot: String) {
     cdkBuilder.pardot(pardot)
   }
 
+  /**
+   * @param s3 The operation to be performed on the provided Amazon S3 source fields.
+   */
   public fun s3(s3: String) {
     cdkBuilder.s3(s3)
   }
 
+  /**
+   * @param salesforce The operation to be performed on the provided Salesforce source fields.
+   */
   public fun salesforce(salesforce: String) {
     cdkBuilder.salesforce(salesforce)
   }
 
+  /**
+   * @param sapoData The operation to be performed on the provided SAPOData source fields.
+   */
   public fun sapoData(sapoData: String) {
     cdkBuilder.sapoData(sapoData)
   }
 
+  /**
+   * @param serviceNow The operation to be performed on the provided ServiceNow source fields.
+   */
   public fun serviceNow(serviceNow: String) {
     cdkBuilder.serviceNow(serviceNow)
   }
 
+  /**
+   * @param singular The operation to be performed on the provided Singular source fields.
+   */
   public fun singular(singular: String) {
     cdkBuilder.singular(singular)
   }
 
+  /**
+   * @param slack The operation to be performed on the provided Slack source fields.
+   */
   public fun slack(slack: String) {
     cdkBuilder.slack(slack)
   }
 
+  /**
+   * @param trendmicro The operation to be performed on the provided Trend Micro source fields.
+   */
   public fun trendmicro(trendmicro: String) {
     cdkBuilder.trendmicro(trendmicro)
   }
 
+  /**
+   * @param veeva The operation to be performed on the provided Veeva source fields.
+   */
   public fun veeva(veeva: String) {
     cdkBuilder.veeva(veeva)
   }
 
+  /**
+   * @param zendesk The operation to be performed on the provided Zendesk source fields.
+   */
   public fun zendesk(zendesk: String) {
     cdkBuilder.zendesk(zendesk)
   }

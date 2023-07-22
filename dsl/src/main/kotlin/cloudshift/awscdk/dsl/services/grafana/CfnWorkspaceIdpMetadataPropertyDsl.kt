@@ -11,10 +11,16 @@ public class CfnWorkspaceIdpMetadataPropertyDsl {
   private val cdkBuilder: CfnWorkspace.IdpMetadataProperty.Builder =
       CfnWorkspace.IdpMetadataProperty.builder()
 
+  /**
+   * @param url The URL of the location containing the IdP metadata.
+   */
   public fun url(url: String) {
     cdkBuilder.url(url)
   }
 
+  /**
+   * @param xml The full IdP metadata, in XML format.
+   */
   public fun xml(xml: String) {
     cdkBuilder.xml(xml)
   }

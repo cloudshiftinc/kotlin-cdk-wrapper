@@ -11,6 +11,9 @@ public class CfnCacheClusterCloudWatchLogsDestinationDetailsPropertyDsl {
   private val cdkBuilder: CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty.Builder =
       CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty.builder()
 
+  /**
+   * @param logGroup The name of the CloudWatch Logs log group. 
+   */
   public fun logGroup(logGroup: String) {
     cdkBuilder.logGroup(logGroup)
   }

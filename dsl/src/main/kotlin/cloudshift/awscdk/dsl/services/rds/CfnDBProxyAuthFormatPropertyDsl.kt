@@ -11,22 +11,47 @@ public class CfnDBProxyAuthFormatPropertyDsl {
   private val cdkBuilder: CfnDBProxy.AuthFormatProperty.Builder =
       CfnDBProxy.AuthFormatProperty.builder()
 
+  /**
+   * @param authScheme The type of authentication that the proxy uses for connections from the proxy
+   * to the underlying database.
+   * Valid Values: `SECRETS`
+   */
   public fun authScheme(authScheme: String) {
     cdkBuilder.authScheme(authScheme)
   }
 
+  /**
+   * @param clientPasswordAuthType Specifies the details of authentication used by a proxy to log in
+   * as a specific database user.
+   */
   public fun clientPasswordAuthType(clientPasswordAuthType: String) {
     cdkBuilder.clientPasswordAuthType(clientPasswordAuthType)
   }
 
+  /**
+   * @param description A user-specified description about the authentication used by a proxy to log
+   * in as a specific database user.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param iamAuth Whether to require or disallow AWS Identity and Access Management (IAM)
+   * authentication for connections to the proxy.
+   * The `ENABLED` value is valid only for proxies with RDS for Microsoft SQL Server.
+   *
+   * Valid Values: `ENABLED | DISABLED | REQUIRED`
+   */
   public fun iamAuth(iamAuth: String) {
     cdkBuilder.iamAuth(iamAuth)
   }
 
+  /**
+   * @param secretArn The Amazon Resource Name (ARN) representing the secret that the proxy uses to
+   * authenticate to the RDS DB instance or Aurora DB cluster.
+   * These secrets are stored within Amazon Secrets Manager.
+   */
   public fun secretArn(secretArn: String) {
     cdkBuilder.secretArn(secretArn)
   }

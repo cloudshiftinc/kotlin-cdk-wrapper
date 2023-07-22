@@ -12,10 +12,16 @@ public class CfnThemeGutterStylePropertyDsl {
   private val cdkBuilder: CfnTheme.GutterStyleProperty.Builder =
       CfnTheme.GutterStyleProperty.builder()
 
+  /**
+   * @param show This Boolean value controls whether to display a gutter space between sheet tiles.
+   */
   public fun show(show: Boolean) {
     cdkBuilder.show(show)
   }
 
+  /**
+   * @param show This Boolean value controls whether to display a gutter space between sheet tiles.
+   */
   public fun show(show: IResolvable) {
     cdkBuilder.show(show)
   }

@@ -22,50 +22,86 @@ public class CfnDashboardComboChartAggregatedFieldWellsPropertyDsl {
 
   private val _lineValues: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param barValues The aggregated `BarValues` field well of a combo chart.
+   */
   public fun barValues(vararg barValues: Any) {
     _barValues.addAll(listOf(*barValues))
   }
 
+  /**
+   * @param barValues The aggregated `BarValues` field well of a combo chart.
+   */
   public fun barValues(barValues: Collection<Any>) {
     _barValues.addAll(barValues)
   }
 
+  /**
+   * @param barValues The aggregated `BarValues` field well of a combo chart.
+   */
   public fun barValues(barValues: IResolvable) {
     cdkBuilder.barValues(barValues)
   }
 
+  /**
+   * @param category The aggregated category field wells of a combo chart.
+   */
   public fun category(vararg category: Any) {
     _category.addAll(listOf(*category))
   }
 
+  /**
+   * @param category The aggregated category field wells of a combo chart.
+   */
   public fun category(category: Collection<Any>) {
     _category.addAll(category)
   }
 
+  /**
+   * @param category The aggregated category field wells of a combo chart.
+   */
   public fun category(category: IResolvable) {
     cdkBuilder.category(category)
   }
 
+  /**
+   * @param colors The aggregated colors field well of a combo chart.
+   */
   public fun colors(vararg colors: Any) {
     _colors.addAll(listOf(*colors))
   }
 
+  /**
+   * @param colors The aggregated colors field well of a combo chart.
+   */
   public fun colors(colors: Collection<Any>) {
     _colors.addAll(colors)
   }
 
+  /**
+   * @param colors The aggregated colors field well of a combo chart.
+   */
   public fun colors(colors: IResolvable) {
     cdkBuilder.colors(colors)
   }
 
+  /**
+   * @param lineValues The aggregated `LineValues` field well of a combo chart.
+   */
   public fun lineValues(vararg lineValues: Any) {
     _lineValues.addAll(listOf(*lineValues))
   }
 
+  /**
+   * @param lineValues The aggregated `LineValues` field well of a combo chart.
+   */
   public fun lineValues(lineValues: Collection<Any>) {
     _lineValues.addAll(lineValues)
   }
 
+  /**
+   * @param lineValues The aggregated `LineValues` field well of a combo chart.
+   */
   public fun lineValues(lineValues: IResolvable) {
     cdkBuilder.lineValues(lineValues)
   }

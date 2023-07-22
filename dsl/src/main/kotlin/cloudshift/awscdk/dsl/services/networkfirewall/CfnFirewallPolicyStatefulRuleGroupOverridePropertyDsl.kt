@@ -11,6 +11,10 @@ public class CfnFirewallPolicyStatefulRuleGroupOverridePropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.StatefulRuleGroupOverrideProperty.Builder =
       CfnFirewallPolicy.StatefulRuleGroupOverrideProperty.builder()
 
+  /**
+   * @param action The action that changes the rule group from `DROP` to `ALERT` .
+   * This only applies to managed rule groups.
+   */
   public fun action(action: String) {
     cdkBuilder.action(action)
   }

@@ -12,18 +12,31 @@ public class CfnAnalysisPanelTitleOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PanelTitleOptionsProperty.Builder =
       CfnAnalysis.PanelTitleOptionsProperty.builder()
 
+  /**
+   * @param fontConfiguration the value to be set.
+   */
   public fun fontConfiguration(fontConfiguration: IResolvable) {
     cdkBuilder.fontConfiguration(fontConfiguration)
   }
 
+  /**
+   * @param fontConfiguration the value to be set.
+   */
   public fun fontConfiguration(fontConfiguration: CfnAnalysis.FontConfigurationProperty) {
     cdkBuilder.fontConfiguration(fontConfiguration)
   }
 
+  /**
+   * @param horizontalTextAlignment Sets the horizontal text alignment of the title within each
+   * panel.
+   */
   public fun horizontalTextAlignment(horizontalTextAlignment: String) {
     cdkBuilder.horizontalTextAlignment(horizontalTextAlignment)
   }
 
+  /**
+   * @param visibility Determines whether or not panel titles are displayed.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

@@ -16,44 +16,74 @@ import software.amazon.awscdk.services.omics.CfnWorkflowProps
 public class CfnWorkflowPropsDsl {
   private val cdkBuilder: CfnWorkflowProps.Builder = CfnWorkflowProps.builder()
 
+  /**
+   * @param definitionUri The URI of a definition for the workflow.
+   */
   public fun definitionUri(definitionUri: String) {
     cdkBuilder.definitionUri(definitionUri)
   }
 
+  /**
+   * @param description The parameter's description.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param engine An engine for the workflow.
+   */
   public fun engine(engine: String) {
     cdkBuilder.engine(engine)
   }
 
+  /**
+   * @param main The path of the main definition file for the workflow.
+   */
   public fun main(main: String) {
     cdkBuilder.main(main)
   }
 
+  /**
+   * @param name The workflow's name.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun parameterTemplate(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param parameterTemplate The workflow's parameter template.
+   */
+  public fun parameterTemplate(parameterTemplate: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(parameterTemplate)
     cdkBuilder.parameterTemplate(builder.map)
   }
 
+  /**
+   * @param parameterTemplate The workflow's parameter template.
+   */
   public fun parameterTemplate(parameterTemplate: Map<String, Any>) {
     cdkBuilder.parameterTemplate(parameterTemplate)
   }
 
+  /**
+   * @param parameterTemplate The workflow's parameter template.
+   */
   public fun parameterTemplate(parameterTemplate: IResolvable) {
     cdkBuilder.parameterTemplate(parameterTemplate)
   }
 
+  /**
+   * @param storageCapacity A storage capacity for the workflow in gigabytes.
+   */
   public fun storageCapacity(storageCapacity: Number) {
     cdkBuilder.storageCapacity(storageCapacity)
   }
 
+  /**
+   * @param tags Tags for the workflow.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }

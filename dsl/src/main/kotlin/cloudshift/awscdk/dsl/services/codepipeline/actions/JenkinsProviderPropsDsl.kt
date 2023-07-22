@@ -11,22 +11,40 @@ import software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps
 public class JenkinsProviderPropsDsl {
   private val cdkBuilder: JenkinsProviderProps.Builder = JenkinsProviderProps.builder()
 
+  /**
+   * @param forBuild Whether to immediately register a Jenkins Provider for the build category.
+   * The Provider will always be registered if you create a `JenkinsAction`.
+   */
   public fun forBuild(forBuild: Boolean) {
     cdkBuilder.forBuild(forBuild)
   }
 
+  /**
+   * @param forTest Whether to immediately register a Jenkins Provider for the test category.
+   * The Provider will always be registered if you create a `JenkinsTestAction`.
+   */
   public fun forTest(forTest: Boolean) {
     cdkBuilder.forTest(forTest)
   }
 
+  /**
+   * @param providerName The name of the Jenkins provider that you set in the AWS CodePipeline
+   * plugin configuration of your Jenkins project. 
+   */
   public fun providerName(providerName: String) {
     cdkBuilder.providerName(providerName)
   }
 
+  /**
+   * @param serverUrl The base URL of your Jenkins server. 
+   */
   public fun serverUrl(serverUrl: String) {
     cdkBuilder.serverUrl(serverUrl)
   }
 
+  /**
+   * @param version The version of your provider.
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

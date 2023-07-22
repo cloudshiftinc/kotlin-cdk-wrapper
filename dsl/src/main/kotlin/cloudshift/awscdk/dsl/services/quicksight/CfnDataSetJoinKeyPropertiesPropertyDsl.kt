@@ -12,10 +12,20 @@ public class CfnDataSetJoinKeyPropertiesPropertyDsl {
   private val cdkBuilder: CfnDataSet.JoinKeyPropertiesProperty.Builder =
       CfnDataSet.JoinKeyPropertiesProperty.builder()
 
+  /**
+   * @param uniqueKey A value that indicates that a row in a table is uniquely identified by the
+   * columns in a join key.
+   * This is used by Amazon QuickSight to optimize query performance.
+   */
   public fun uniqueKey(uniqueKey: Boolean) {
     cdkBuilder.uniqueKey(uniqueKey)
   }
 
+  /**
+   * @param uniqueKey A value that indicates that a row in a table is uniquely identified by the
+   * columns in a join key.
+   * This is used by Amazon QuickSight to optimize query performance.
+   */
   public fun uniqueKey(uniqueKey: IResolvable) {
     cdkBuilder.uniqueKey(uniqueKey)
   }

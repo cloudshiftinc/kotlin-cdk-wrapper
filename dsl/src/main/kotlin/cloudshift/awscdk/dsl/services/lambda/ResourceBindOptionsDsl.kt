@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.lambda.ResourceBindOptions
 public class ResourceBindOptionsDsl {
   private val cdkBuilder: ResourceBindOptions.Builder = ResourceBindOptions.builder()
 
+  /**
+   * @param resourceProperty The name of the CloudFormation property to annotate with asset
+   * metadata.
+   */
   public fun resourceProperty(resourceProperty: String) {
     cdkBuilder.resourceProperty(resourceProperty)
   }

@@ -20,22 +20,64 @@ public class CfnBudgetDsl(
 
   private val _notificationsWithSubscribers: MutableList<Any> = mutableListOf()
 
+  /**
+   * The budget object that you want to create.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-budget)
+   * @param budget The budget object that you want to create. 
+   */
   public fun budget(budget: IResolvable) {
     cdkBuilder.budget(budget)
   }
 
+  /**
+   * The budget object that you want to create.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-budget)
+   * @param budget The budget object that you want to create. 
+   */
   public fun budget(budget: CfnBudget.BudgetDataProperty) {
     cdkBuilder.budget(budget)
   }
 
+  /**
+   * A notification that you want to associate with a budget.
+   *
+   * A budget can have up to five notifications, and each notification can have one SNS subscriber
+   * and up to 10 email subscribers. If you include notifications and subscribers in your
+   * `CreateBudget` call, AWS creates the notifications and subscribers for you.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-notificationswithsubscribers)
+   * @param notificationsWithSubscribers A notification that you want to associate with a budget. 
+   */
   public fun notificationsWithSubscribers(vararg notificationsWithSubscribers: Any) {
     _notificationsWithSubscribers.addAll(listOf(*notificationsWithSubscribers))
   }
 
+  /**
+   * A notification that you want to associate with a budget.
+   *
+   * A budget can have up to five notifications, and each notification can have one SNS subscriber
+   * and up to 10 email subscribers. If you include notifications and subscribers in your
+   * `CreateBudget` call, AWS creates the notifications and subscribers for you.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-notificationswithsubscribers)
+   * @param notificationsWithSubscribers A notification that you want to associate with a budget. 
+   */
   public fun notificationsWithSubscribers(notificationsWithSubscribers: Collection<Any>) {
     _notificationsWithSubscribers.addAll(notificationsWithSubscribers)
   }
 
+  /**
+   * A notification that you want to associate with a budget.
+   *
+   * A budget can have up to five notifications, and each notification can have one SNS subscriber
+   * and up to 10 email subscribers. If you include notifications and subscribers in your
+   * `CreateBudget` call, AWS creates the notifications and subscribers for you.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-notificationswithsubscribers)
+   * @param notificationsWithSubscribers A notification that you want to associate with a budget. 
+   */
   public fun notificationsWithSubscribers(notificationsWithSubscribers: IResolvable) {
     cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers)
   }

@@ -11,10 +11,16 @@ public class CfnCustomActionTypeArtifactDetailsPropertyDsl {
   private val cdkBuilder: CfnCustomActionType.ArtifactDetailsProperty.Builder =
       CfnCustomActionType.ArtifactDetailsProperty.builder()
 
+  /**
+   * @param maximumCount The maximum number of artifacts allowed for the action type. 
+   */
   public fun maximumCount(maximumCount: Number) {
     cdkBuilder.maximumCount(maximumCount)
   }
 
+  /**
+   * @param minimumCount The minimum number of artifacts allowed for the action type. 
+   */
   public fun minimumCount(minimumCount: Number) {
     cdkBuilder.minimumCount(minimumCount)
   }

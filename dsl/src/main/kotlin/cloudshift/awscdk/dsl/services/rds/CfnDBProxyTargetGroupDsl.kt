@@ -22,35 +22,92 @@ public class CfnDBProxyTargetGroupDsl(
 
   private val _dbInstanceIdentifiers: MutableList<String> = mutableListOf()
 
+  /**
+   * Settings that control the size and behavior of the connection pool associated with a
+   * `DBProxyTargetGroup` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
+   * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
+   * connection pool associated with a `DBProxyTargetGroup` . 
+   */
   public fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
     cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo)
   }
 
+  /**
+   * Settings that control the size and behavior of the connection pool associated with a
+   * `DBProxyTargetGroup` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
+   * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
+   * connection pool associated with a `DBProxyTargetGroup` . 
+   */
   public
       fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty) {
     cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo)
   }
 
+  /**
+   * One or more DB cluster identifiers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbclusteridentifiers)
+   * @param dbClusterIdentifiers One or more DB cluster identifiers. 
+   */
   public fun dbClusterIdentifiers(vararg dbClusterIdentifiers: String) {
     _dbClusterIdentifiers.addAll(listOf(*dbClusterIdentifiers))
   }
 
+  /**
+   * One or more DB cluster identifiers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbclusteridentifiers)
+   * @param dbClusterIdentifiers One or more DB cluster identifiers. 
+   */
   public fun dbClusterIdentifiers(dbClusterIdentifiers: Collection<String>) {
     _dbClusterIdentifiers.addAll(dbClusterIdentifiers)
   }
 
+  /**
+   * One or more DB instance identifiers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers)
+   * @param dbInstanceIdentifiers One or more DB instance identifiers. 
+   */
   public fun dbInstanceIdentifiers(vararg dbInstanceIdentifiers: String) {
     _dbInstanceIdentifiers.addAll(listOf(*dbInstanceIdentifiers))
   }
 
+  /**
+   * One or more DB instance identifiers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers)
+   * @param dbInstanceIdentifiers One or more DB instance identifiers. 
+   */
   public fun dbInstanceIdentifiers(dbInstanceIdentifiers: Collection<String>) {
     _dbInstanceIdentifiers.addAll(dbInstanceIdentifiers)
   }
 
+  /**
+   * The identifier of the `DBProxy` that is associated with the `DBProxyTargetGroup` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbproxyname)
+   * @param dbProxyName The identifier of the `DBProxy` that is associated with the
+   * `DBProxyTargetGroup` . 
+   */
   public fun dbProxyName(dbProxyName: String) {
     cdkBuilder.dbProxyName(dbProxyName)
   }
 
+  /**
+   * The identifier for the target group.
+   *
+   *
+   * Currently, this property must be set to `default` .
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-targetgroupname)
+   * @param targetGroupName The identifier for the target group. 
+   */
   public fun targetGroupName(targetGroupName: String) {
     cdkBuilder.targetGroupName(targetGroupName)
   }

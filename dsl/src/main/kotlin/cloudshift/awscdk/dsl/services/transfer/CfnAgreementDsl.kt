@@ -21,38 +21,110 @@ public class CfnAgreementDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * With AS2, you can send files by calling `StartFileTransfer` and specifying the file paths in
+   * the request parameter, `SendFilePaths` .
+   *
+   * We use the file’s parent directory (for example, for `--send-file-paths /bucket/dir/file.txt` ,
+   * parent directory is `/bucket/dir/` ) to temporarily store a processed AS2 message file, store the
+   * MDN when we receive them from the partner, and write a final JSON file containing relevant
+   * metadata of the transmission. So, the `AccessRole` needs to provide read and write access to the
+   * parent directory of the file location used in the `StartFileTransfer` request. Additionally, you
+   * need to provide read and write access to the parent directory of the files that you intend to send
+   * with `StartFileTransfer` .
+   *
+   * If you are using Basic authentication for your AS2 connector, the access role requires the
+   * `secretsmanager:GetSecretValue` permission for the secret. If the secret is encrypted using a
+   * customer-managed key instead of the AWS managed key in Secrets Manager, then the role also needs
+   * the `kms:Decrypt` permission for that key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-accessrole)
+   * @param accessRole With AS2, you can send files by calling `StartFileTransfer` and specifying
+   * the file paths in the request parameter, `SendFilePaths` . 
+   */
   public fun accessRole(accessRole: String) {
     cdkBuilder.accessRole(accessRole)
   }
 
+  /**
+   * The landing directory (folder) for files that are transferred by using the AS2 protocol.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-basedirectory)
+   * @param baseDirectory The landing directory (folder) for files that are transferred by using the
+   * AS2 protocol. 
+   */
   public fun baseDirectory(baseDirectory: String) {
     cdkBuilder.baseDirectory(baseDirectory)
   }
 
+  /**
+   * The name or short description that's used to identify the agreement.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-description)
+   * @param description The name or short description that's used to identify the agreement. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * A unique identifier for the AS2 local profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-localprofileid)
+   * @param localProfileId A unique identifier for the AS2 local profile. 
+   */
   public fun localProfileId(localProfileId: String) {
     cdkBuilder.localProfileId(localProfileId)
   }
 
+  /**
+   * A unique identifier for the partner profile used in the agreement.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-partnerprofileid)
+   * @param partnerProfileId A unique identifier for the partner profile used in the agreement. 
+   */
   public fun partnerProfileId(partnerProfileId: String) {
     cdkBuilder.partnerProfileId(partnerProfileId)
   }
 
+  /**
+   * A system-assigned unique identifier for a server instance.
+   *
+   * This identifier indicates the specific server that the agreement uses.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-serverid)
+   * @param serverId A system-assigned unique identifier for a server instance. 
+   */
   public fun serverId(serverId: String) {
     cdkBuilder.serverId(serverId)
   }
 
+  /**
+   * The current status of the agreement, either `ACTIVE` or `INACTIVE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-status)
+   * @param status The current status of the agreement, either `ACTIVE` or `INACTIVE` . 
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
+  /**
+   * Key-value pairs that can be used to group and search for agreements.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-tags)
+   * @param tags Key-value pairs that can be used to group and search for agreements. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Key-value pairs that can be used to group and search for agreements.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-tags)
+   * @param tags Key-value pairs that can be used to group and search for agreements. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

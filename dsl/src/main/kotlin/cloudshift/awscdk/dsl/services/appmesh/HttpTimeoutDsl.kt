@@ -10,10 +10,17 @@ import software.amazon.awscdk.services.appmesh.HttpTimeout
 public class HttpTimeoutDsl {
   private val cdkBuilder: HttpTimeout.Builder = HttpTimeout.builder()
 
+  /**
+   * @param idle Represents an idle timeout.
+   * The amount of time that a connection may be idle.
+   */
   public fun idle(idle: Duration) {
     cdkBuilder.idle(idle)
   }
 
+  /**
+   * @param perRequest Represents per request timeout.
+   */
   public fun perRequest(perRequest: Duration) {
     cdkBuilder.perRequest(perRequest)
   }

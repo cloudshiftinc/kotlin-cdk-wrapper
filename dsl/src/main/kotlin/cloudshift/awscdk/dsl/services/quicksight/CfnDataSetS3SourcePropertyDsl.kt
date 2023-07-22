@@ -17,26 +17,50 @@ public class CfnDataSetS3SourcePropertyDsl {
 
   private val _inputColumns: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dataSourceArn The Amazon Resource Name (ARN) for the data source. 
+   */
   public fun dataSourceArn(dataSourceArn: String) {
     cdkBuilder.dataSourceArn(dataSourceArn)
   }
 
+  /**
+   * @param inputColumns A physical table type for an S3 data source. 
+   *
+   * For files that aren't JSON, only `STRING` data types are supported in input columns.
+   */
   public fun inputColumns(vararg inputColumns: Any) {
     _inputColumns.addAll(listOf(*inputColumns))
   }
 
+  /**
+   * @param inputColumns A physical table type for an S3 data source. 
+   *
+   * For files that aren't JSON, only `STRING` data types are supported in input columns.
+   */
   public fun inputColumns(inputColumns: Collection<Any>) {
     _inputColumns.addAll(inputColumns)
   }
 
+  /**
+   * @param inputColumns A physical table type for an S3 data source. 
+   *
+   * For files that aren't JSON, only `STRING` data types are supported in input columns.
+   */
   public fun inputColumns(inputColumns: IResolvable) {
     cdkBuilder.inputColumns(inputColumns)
   }
 
+  /**
+   * @param uploadSettings Information about the format for the S3 source file or files.
+   */
   public fun uploadSettings(uploadSettings: IResolvable) {
     cdkBuilder.uploadSettings(uploadSettings)
   }
 
+  /**
+   * @param uploadSettings Information about the format for the S3 source file or files.
+   */
   public fun uploadSettings(uploadSettings: CfnDataSet.UploadSettingsProperty) {
     cdkBuilder.uploadSettings(uploadSettings)
   }

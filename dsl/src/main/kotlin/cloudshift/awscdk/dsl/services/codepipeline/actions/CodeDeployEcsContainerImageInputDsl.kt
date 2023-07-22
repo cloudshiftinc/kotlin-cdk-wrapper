@@ -12,10 +12,24 @@ public class CodeDeployEcsContainerImageInputDsl {
   private val cdkBuilder: CodeDeployEcsContainerImageInput.Builder =
       CodeDeployEcsContainerImageInput.builder()
 
+  /**
+   * @param input The artifact that contains an `imageDetails.json` file with the image URI. 
+   * The artifact's `imageDetails.json` file must be a JSON file containing an
+   * `ImageURI` property.  For example:
+   * `{ "ImageURI": "ACCOUNTID.dkr.ecr.us-west-2.amazonaws.com/dk-image-repo&#64;sha256:example3" }`
+   */
   public fun input(input: Artifact) {
     cdkBuilder.input(input)
   }
 
+  /**
+   * @param taskDefinitionPlaceholder The placeholder string in the ECS task definition template
+   * file that will be replaced with the image URI.
+   * The placeholder string must be surrounded by angle brackets in the template file.
+   * For example, if the task definition template file contains a placeholder like
+   * `"image": "&lt;PLACEHOLDER&gt;"`, then the `taskDefinitionPlaceholder` value should
+   * be `PLACEHOLDER`.
+   */
   public fun taskDefinitionPlaceholder(taskDefinitionPlaceholder: String) {
     cdkBuilder.taskDefinitionPlaceholder(taskDefinitionPlaceholder)
   }

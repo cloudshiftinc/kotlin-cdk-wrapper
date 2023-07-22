@@ -11,10 +11,16 @@ public class CfnRulesetSubstitutionValuePropertyDsl {
   private val cdkBuilder: CfnRuleset.SubstitutionValueProperty.Builder =
       CfnRuleset.SubstitutionValueProperty.builder()
 
+  /**
+   * @param value Value or column name. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param valueReference Variable name. 
+   */
   public fun valueReference(valueReference: String) {
     cdkBuilder.valueReference(valueReference)
   }

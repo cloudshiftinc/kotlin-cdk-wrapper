@@ -15,10 +15,23 @@ public class CfnVPCDHCPOptionsAssociationDsl(
   private val cdkBuilder: CfnVPCDHCPOptionsAssociation.Builder =
       CfnVPCDHCPOptionsAssociation.Builder.create(scope, id)
 
+  /**
+   * The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid)
+   * @param dhcpOptionsId The ID of the DHCP options set, or `default` to associate no DHCP options
+   * with the VPC. 
+   */
   public fun dhcpOptionsId(dhcpOptionsId: String) {
     cdkBuilder.dhcpOptionsId(dhcpOptionsId)
   }
 
+  /**
+   * The ID of the VPC.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-vpcid)
+   * @param vpcId The ID of the VPC. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

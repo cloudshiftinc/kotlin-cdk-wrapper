@@ -12,10 +12,18 @@ public class CfnStorageLensCloudWatchMetricsPropertyDsl {
   private val cdkBuilder: CfnStorageLens.CloudWatchMetricsProperty.Builder =
       CfnStorageLens.CloudWatchMetricsProperty.builder()
 
+  /**
+   * @param isEnabled This property identifies whether the CloudWatch publishing option for S3
+   * Storage Lens is enabled. 
+   */
   public fun isEnabled(isEnabled: Boolean) {
     cdkBuilder.isEnabled(isEnabled)
   }
 
+  /**
+   * @param isEnabled This property identifies whether the CloudWatch publishing option for S3
+   * Storage Lens is enabled. 
+   */
   public fun isEnabled(isEnabled: IResolvable) {
     cdkBuilder.isEnabled(isEnabled)
   }

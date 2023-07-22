@@ -15,14 +15,25 @@ public class OriginFailoverConfigDsl {
 
   private val _statusCodes: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param failoverOrigin The origin to use as the fallback origin. 
+   */
   public fun failoverOrigin(failoverOrigin: IOrigin) {
     cdkBuilder.failoverOrigin(failoverOrigin)
   }
 
+  /**
+   * @param statusCodes The HTTP status codes of the response that trigger querying the failover
+   * Origin.
+   */
   public fun statusCodes(vararg statusCodes: Number) {
     _statusCodes.addAll(listOf(*statusCodes))
   }
 
+  /**
+   * @param statusCodes The HTTP status codes of the response that trigger querying the failover
+   * Origin.
+   */
   public fun statusCodes(statusCodes: Collection<Number>) {
     _statusCodes.addAll(statusCodes)
   }

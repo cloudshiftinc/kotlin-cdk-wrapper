@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.route53.MxRecordValue
 public class MxRecordValueDsl {
   private val cdkBuilder: MxRecordValue.Builder = MxRecordValue.builder()
 
+  /**
+   * @param hostName The mail server host name. 
+   */
   public fun hostName(hostName: String) {
     cdkBuilder.hostName(hostName)
   }
 
+  /**
+   * @param priority The priority. 
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }

@@ -16,18 +16,37 @@ public class CfnByteMatchSetPropsDsl {
 
   private val _byteMatchTuples: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+   * characters) that you want AWS WAF to search for in web requests, the location in requests that you
+   * want AWS WAF to search, and other settings.
+   */
   public fun byteMatchTuples(vararg byteMatchTuples: Any) {
     _byteMatchTuples.addAll(listOf(*byteMatchTuples))
   }
 
+  /**
+   * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+   * characters) that you want AWS WAF to search for in web requests, the location in requests that you
+   * want AWS WAF to search, and other settings.
+   */
   public fun byteMatchTuples(byteMatchTuples: Collection<Any>) {
     _byteMatchTuples.addAll(byteMatchTuples)
   }
 
+  /**
+   * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+   * characters) that you want AWS WAF to search for in web requests, the location in requests that you
+   * want AWS WAF to search, and other settings.
+   */
   public fun byteMatchTuples(byteMatchTuples: IResolvable) {
     cdkBuilder.byteMatchTuples(byteMatchTuples)
   }
 
+  /**
+   * @param name A friendly name or description of the `ByteMatchSet` . 
+   * You can't change `Name` after you create a `ByteMatchSet` .
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

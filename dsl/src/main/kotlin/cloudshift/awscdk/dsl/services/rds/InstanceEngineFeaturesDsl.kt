@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.rds.InstanceEngineFeatures
 public class InstanceEngineFeaturesDsl {
   private val cdkBuilder: InstanceEngineFeatures.Builder = InstanceEngineFeatures.builder()
 
+  /**
+   * @param s3Export Feature name for the DB instance that the IAM role to export to S3 bucket is to
+   * be associated with.
+   */
   public fun s3Export(s3Export: String) {
     cdkBuilder.s3Export(s3Export)
   }
 
+  /**
+   * @param s3Import Feature name for the DB instance that the IAM role to access the S3 bucket for
+   * import is to be associated with.
+   */
   public fun s3Import(s3Import: String) {
     cdkBuilder.s3Import(s3Import)
   }

@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkWeightedTar
 public class NetworkWeightedTargetGroupDsl {
   private val cdkBuilder: NetworkWeightedTargetGroup.Builder = NetworkWeightedTargetGroup.builder()
 
+  /**
+   * @param targetGroup The target group. 
+   */
   public fun targetGroup(targetGroup: INetworkTargetGroup) {
     cdkBuilder.targetGroup(targetGroup)
   }
 
+  /**
+   * @param weight The target group's weight.
+   * Range is [0..1000).
+   */
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)
   }

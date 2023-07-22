@@ -17,24 +17,40 @@ public class ConnectionsPropsDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
-  public fun defaultPort(block: PortDsl.() -> Unit = {}) {
+  /**
+   * @param defaultPort Default port range for initiating connections to and from this object.
+   */
+  public fun defaultPort(defaultPort: PortDsl.() -> Unit = {}) {
     val builder = PortDsl()
-    builder.apply(block)
+    builder.apply(defaultPort)
     cdkBuilder.defaultPort(builder.build())
   }
 
+  /**
+   * @param defaultPort Default port range for initiating connections to and from this object.
+   */
   public fun defaultPort(defaultPort: Port) {
     cdkBuilder.defaultPort(defaultPort)
   }
 
+  /**
+   * @param peer Class that represents the rule by which others can connect to this connectable.
+   * This object is required, but will be derived from securityGroup if that is passed.
+   */
   public fun peer(peer: IPeer) {
     cdkBuilder.peer(peer)
   }
 
+  /**
+   * @param securityGroups What securityGroup(s) this object is managing connections for.
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups What securityGroup(s) this object is managing connections for.
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }

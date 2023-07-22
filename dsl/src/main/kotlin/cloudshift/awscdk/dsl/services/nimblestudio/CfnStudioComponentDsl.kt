@@ -25,74 +25,186 @@ public class CfnStudioComponentDsl(
 
   private val _scriptParameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * The configuration of the studio component, based on component type.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-configuration)
+   * @param configuration The configuration of the studio component, based on component type. 
+   */
   public fun configuration(configuration: IResolvable) {
     cdkBuilder.configuration(configuration)
   }
 
+  /**
+   * The configuration of the studio component, based on component type.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-configuration)
+   * @param configuration The configuration of the studio component, based on component type. 
+   */
   public fun configuration(configuration: CfnStudioComponent.StudioComponentConfigurationProperty) {
     cdkBuilder.configuration(configuration)
   }
 
+  /**
+   * A human-readable description for the studio component resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-description)
+   * @param description A human-readable description for the studio component resource. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The EC2 security groups that control access to the studio component.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-ec2securitygroupids)
+   * @param ec2SecurityGroupIds The EC2 security groups that control access to the studio component.
+   * 
+   */
   public fun ec2SecurityGroupIds(vararg ec2SecurityGroupIds: String) {
     _ec2SecurityGroupIds.addAll(listOf(*ec2SecurityGroupIds))
   }
 
+  /**
+   * The EC2 security groups that control access to the studio component.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-ec2securitygroupids)
+   * @param ec2SecurityGroupIds The EC2 security groups that control access to the studio component.
+   * 
+   */
   public fun ec2SecurityGroupIds(ec2SecurityGroupIds: Collection<String>) {
     _ec2SecurityGroupIds.addAll(ec2SecurityGroupIds)
   }
 
+  /**
+   * Initialization scripts for studio components.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-initializationscripts)
+   * @param initializationScripts Initialization scripts for studio components. 
+   */
   public fun initializationScripts(vararg initializationScripts: Any) {
     _initializationScripts.addAll(listOf(*initializationScripts))
   }
 
+  /**
+   * Initialization scripts for studio components.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-initializationscripts)
+   * @param initializationScripts Initialization scripts for studio components. 
+   */
   public fun initializationScripts(initializationScripts: Collection<Any>) {
     _initializationScripts.addAll(initializationScripts)
   }
 
+  /**
+   * Initialization scripts for studio components.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-initializationscripts)
+   * @param initializationScripts Initialization scripts for studio components. 
+   */
   public fun initializationScripts(initializationScripts: IResolvable) {
     cdkBuilder.initializationScripts(initializationScripts)
   }
 
+  /**
+   * A friendly name for the studio component resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-name)
+   * @param name A friendly name for the studio component resource. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-runtimerolearn)
+   * @param runtimeRoleArn 
+   */
   public fun runtimeRoleArn(runtimeRoleArn: String) {
     cdkBuilder.runtimeRoleArn(runtimeRoleArn)
   }
 
+  /**
+   * Parameters for the studio component scripts.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters)
+   * @param scriptParameters Parameters for the studio component scripts. 
+   */
   public fun scriptParameters(vararg scriptParameters: Any) {
     _scriptParameters.addAll(listOf(*scriptParameters))
   }
 
+  /**
+   * Parameters for the studio component scripts.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters)
+   * @param scriptParameters Parameters for the studio component scripts. 
+   */
   public fun scriptParameters(scriptParameters: Collection<Any>) {
     _scriptParameters.addAll(scriptParameters)
   }
 
+  /**
+   * Parameters for the studio component scripts.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters)
+   * @param scriptParameters Parameters for the studio component scripts. 
+   */
   public fun scriptParameters(scriptParameters: IResolvable) {
     cdkBuilder.scriptParameters(scriptParameters)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-secureinitializationrolearn)
+   * @param secureInitializationRoleArn 
+   */
   public fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
     cdkBuilder.secureInitializationRoleArn(secureInitializationRoleArn)
   }
 
+  /**
+   * The unique identifier for a studio resource.
+   *
+   * In Nimble Studio , all other resources are contained in a studio resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid)
+   * @param studioId The unique identifier for a studio resource. 
+   */
   public fun studioId(studioId: String) {
     cdkBuilder.studioId(studioId)
   }
 
+  /**
+   * The specific subtype of a studio component.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-subtype)
+   * @param subtype The specific subtype of a studio component. 
+   */
   public fun subtype(subtype: String) {
     cdkBuilder.subtype(subtype)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * The type of the studio component.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-type)
+   * @param type The type of the studio component. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

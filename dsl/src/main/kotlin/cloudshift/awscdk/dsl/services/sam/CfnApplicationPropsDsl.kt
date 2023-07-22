@@ -18,38 +18,65 @@ public class CfnApplicationPropsDsl {
 
   private val _notificationArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param location the value to be set. 
+   */
   public fun location(location: String) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * @param location the value to be set. 
+   */
   public fun location(location: IResolvable) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * @param location the value to be set. 
+   */
   public fun location(location: CfnApplication.ApplicationLocationProperty) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * @param notificationArns the value to be set.
+   */
   public fun notificationArns(vararg notificationArns: String) {
     _notificationArns.addAll(listOf(*notificationArns))
   }
 
+  /**
+   * @param notificationArns the value to be set.
+   */
   public fun notificationArns(notificationArns: Collection<String>) {
     _notificationArns.addAll(notificationArns)
   }
 
+  /**
+   * @param parameters the value to be set.
+   */
   public fun parameters(parameters: Map<String, String>) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param parameters the value to be set.
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param tags the value to be set.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * @param timeoutInMinutes the value to be set.
+   */
   public fun timeoutInMinutes(timeoutInMinutes: Number) {
     cdkBuilder.timeoutInMinutes(timeoutInMinutes)
   }

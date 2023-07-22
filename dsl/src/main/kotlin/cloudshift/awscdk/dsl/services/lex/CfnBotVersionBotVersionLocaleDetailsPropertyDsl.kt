@@ -11,6 +11,9 @@ public class CfnBotVersionBotVersionLocaleDetailsPropertyDsl {
   private val cdkBuilder: CfnBotVersion.BotVersionLocaleDetailsProperty.Builder =
       CfnBotVersion.BotVersionLocaleDetailsProperty.builder()
 
+  /**
+   * @param sourceBotVersion The version of a bot used for a bot locale. 
+   */
   public fun sourceBotVersion(sourceBotVersion: String) {
     cdkBuilder.sourceBotVersion(sourceBotVersion)
   }

@@ -14,16 +14,25 @@ import software.amazon.awscdk.GetContextKeyResult
 public class GetContextKeyResultDsl {
   private val cdkBuilder: GetContextKeyResult.Builder = GetContextKeyResult.builder()
 
+  /**
+   * @param key the value to be set. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
-  public fun props(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param props the value to be set. 
+   */
+  public fun props(props: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(props)
     cdkBuilder.props(builder.map)
   }
 
+  /**
+   * @param props the value to be set. 
+   */
   public fun props(props: Map<String, Any>) {
     cdkBuilder.props(props)
   }

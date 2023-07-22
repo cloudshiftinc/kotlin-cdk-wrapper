@@ -17,20 +17,48 @@ public class MeshDsl(
 ) {
   private val cdkBuilder: Mesh.Builder = Mesh.Builder.create(scope, id)
 
+  /**
+   * Egress filter to be applied to the Mesh.
+   *
+   * Default: DROP_ALL
+   *
+   * @param egressFilter Egress filter to be applied to the Mesh. 
+   */
   public fun egressFilter(egressFilter: MeshFilterType) {
     cdkBuilder.egressFilter(egressFilter)
   }
 
+  /**
+   * The name of the Mesh being defined.
+   *
+   * Default: - A name is automatically generated
+   *
+   * @param meshName The name of the Mesh being defined. 
+   */
   public fun meshName(meshName: String) {
     cdkBuilder.meshName(meshName)
   }
 
-  public fun serviceDiscovery(block: MeshServiceDiscoveryDsl.() -> Unit = {}) {
+  /**
+   * Defines how upstream clients will discover VirtualNodes in the Mesh.
+   *
+   * Default: - No Service Discovery
+   *
+   * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh. 
+   */
+  public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryDsl.() -> Unit = {}) {
     val builder = MeshServiceDiscoveryDsl()
-    builder.apply(block)
+    builder.apply(serviceDiscovery)
     cdkBuilder.serviceDiscovery(builder.build())
   }
 
+  /**
+   * Defines how upstream clients will discover VirtualNodes in the Mesh.
+   *
+   * Default: - No Service Discovery
+   *
+   * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh. 
+   */
   public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
     cdkBuilder.serviceDiscovery(serviceDiscovery)
   }

@@ -15,6 +15,13 @@ public class SecretRotationApplicationDsl(
   private val cdkBuilder: SecretRotationApplication.Builder =
       SecretRotationApplication.Builder.create(applicationId, semanticVersion)
 
+  /**
+   * Whether the rotation application uses the mutli user scheme.
+   *
+   * Default: false
+   *
+   * @param isMultiUser Whether the rotation application uses the mutli user scheme. 
+   */
   public fun isMultiUser(isMultiUser: Boolean) {
     cdkBuilder.isMultiUser(isMultiUser)
   }

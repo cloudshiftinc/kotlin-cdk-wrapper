@@ -16,18 +16,33 @@ public class CfnXssMatchSetPropsDsl {
 
   private val _xssMatchTuples: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param name The name, if any, of the `XssMatchSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param xssMatchTuples Specifies the parts of web requests that you want to inspect for
+   * cross-site scripting attacks. 
+   */
   public fun xssMatchTuples(vararg xssMatchTuples: Any) {
     _xssMatchTuples.addAll(listOf(*xssMatchTuples))
   }
 
+  /**
+   * @param xssMatchTuples Specifies the parts of web requests that you want to inspect for
+   * cross-site scripting attacks. 
+   */
   public fun xssMatchTuples(xssMatchTuples: Collection<Any>) {
     _xssMatchTuples.addAll(xssMatchTuples)
   }
 
+  /**
+   * @param xssMatchTuples Specifies the parts of web requests that you want to inspect for
+   * cross-site scripting attacks. 
+   */
   public fun xssMatchTuples(xssMatchTuples: IResolvable) {
     cdkBuilder.xssMatchTuples(xssMatchTuples)
   }

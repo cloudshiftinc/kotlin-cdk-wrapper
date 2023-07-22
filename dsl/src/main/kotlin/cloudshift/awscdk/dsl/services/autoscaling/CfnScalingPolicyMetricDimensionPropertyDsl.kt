@@ -11,10 +11,16 @@ public class CfnScalingPolicyMetricDimensionPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.MetricDimensionProperty.Builder =
       CfnScalingPolicy.MetricDimensionProperty.builder()
 
+  /**
+   * @param name The name of the dimension. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value of the dimension. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.route53.IHostedZone
 public class CustomEndpointOptionsDsl {
   private val cdkBuilder: CustomEndpointOptions.Builder = CustomEndpointOptions.builder()
 
+  /**
+   * @param certificate The certificate to use.
+   */
   public fun certificate(certificate: ICertificate) {
     cdkBuilder.certificate(certificate)
   }
 
+  /**
+   * @param domainName The custom domain name to assign. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param hostedZone The hosted zone in Route53 to create the CNAME record in.
+   */
   public fun hostedZone(hostedZone: IHostedZone) {
     cdkBuilder.hostedZone(hostedZone)
   }

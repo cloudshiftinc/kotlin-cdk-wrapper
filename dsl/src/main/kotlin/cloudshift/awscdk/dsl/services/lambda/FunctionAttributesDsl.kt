@@ -14,26 +14,68 @@ import software.amazon.awscdk.services.lambda.FunctionAttributes
 public class FunctionAttributesDsl {
   private val cdkBuilder: FunctionAttributes.Builder = FunctionAttributes.builder()
 
+  /**
+   * @param architecture The architecture of this Lambda Function (this is an optional attribute and
+   * defaults to X86_64).
+   */
   public fun architecture(architecture: Architecture) {
     cdkBuilder.architecture(architecture)
   }
 
+  /**
+   * @param functionArn The ARN of the Lambda function. 
+   * Format: arn:<partition>:lambda:<region>:<account-id>:function:<function-name>
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }
 
+  /**
+   * @param role The IAM execution role associated with this function.
+   * If the role is not specified, any role-related operations will no-op.
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }
 
+  /**
+   * @param sameEnvironment Setting this property informs the CDK that the imported function is in
+   * the same environment as the stack.
+   * This affects certain behaviours such as, whether this function's permission can be modified.
+   * When not configured, the CDK attempts to auto-determine this. For environment agnostic stacks,
+   * i.e., stacks
+   * where the account is not specified with the `env` property, this is determined to be false.
+   *
+   * Set this to property *ONLY IF* the imported function is in the same account as the stack
+   * it's imported in.
+   */
   public fun sameEnvironment(sameEnvironment: Boolean) {
     cdkBuilder.sameEnvironment(sameEnvironment)
   }
 
+  /**
+   * @param securityGroup The security group of this Lambda, if in a VPC.
+   * This needs to be given in order to support allowing connections
+   * to this Lambda.
+   */
   public fun securityGroup(securityGroup: ISecurityGroup) {
     cdkBuilder.securityGroup(securityGroup)
   }
 
+  /**
+   * @param skipPermissions Setting this property informs the CDK that the imported function ALREADY
+   * HAS the necessary permissions for what you are trying to do.
+   * When not configured, the CDK attempts to auto-determine whether or not
+   * additional permissions are necessary on the function when grant APIs are used. If the CDK tried
+   * to add
+   * permissions on an imported lambda, it will fail.
+   *
+   * Set this property *ONLY IF* you are committing to manage the imported function's permissions
+   * outside of
+   * CDK. You are acknowledging that your CDK code alone will have insufficient permissions to
+   * access the
+   * imported function.
+   */
   public fun skipPermissions(skipPermissions: Boolean) {
     cdkBuilder.skipPermissions(skipPermissions)
   }

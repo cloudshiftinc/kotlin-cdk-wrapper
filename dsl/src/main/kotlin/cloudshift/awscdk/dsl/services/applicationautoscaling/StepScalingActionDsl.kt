@@ -19,26 +19,77 @@ public class StepScalingActionDsl(
 ) {
   private val cdkBuilder: StepScalingAction.Builder = StepScalingAction.Builder.create(scope, id)
 
+  /**
+   * How the adjustment numbers are interpreted.
+   *
+   * Default: ChangeInCapacity
+   *
+   * @param adjustmentType How the adjustment numbers are interpreted. 
+   */
   public fun adjustmentType(adjustmentType: AdjustmentType) {
     cdkBuilder.adjustmentType(adjustmentType)
   }
 
+  /**
+   * Grace period after scaling activity.
+   *
+   * For scale out policies, multiple scale outs during the cooldown period are
+   * squashed so that only the biggest scale out happens.
+   *
+   * For scale in policies, subsequent scale ins during the cooldown period are
+   * ignored.
+   *
+   * Default: No cooldown period
+   *
+   * [Documentation](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_StepScalingPolicyConfiguration.html)
+   * @param cooldown Grace period after scaling activity. 
+   */
   public fun cooldown(cooldown: Duration) {
     cdkBuilder.cooldown(cooldown)
   }
 
+  /**
+   * The aggregation type for the CloudWatch metrics.
+   *
+   * Default: Average
+   *
+   * @param metricAggregationType The aggregation type for the CloudWatch metrics. 
+   */
   public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
     cdkBuilder.metricAggregationType(metricAggregationType)
   }
 
+  /**
+   * Minimum absolute number to adjust capacity with as result of percentage scaling.
+   *
+   * Only when using AdjustmentType = PercentChangeInCapacity, this number controls
+   * the minimum absolute effect size.
+   *
+   * Default: No minimum scaling effect
+   *
+   * @param minAdjustmentMagnitude Minimum absolute number to adjust capacity with as result of
+   * percentage scaling. 
+   */
   public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
     cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
   }
 
+  /**
+   * A name for the scaling policy.
+   *
+   * Default: Automatically generated name
+   *
+   * @param policyName A name for the scaling policy. 
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }
 
+  /**
+   * The scalable target.
+   *
+   * @param scalingTarget The scalable target. 
+   */
   public fun scalingTarget(scalingTarget: IScalableTarget) {
     cdkBuilder.scalingTarget(scalingTarget)
   }

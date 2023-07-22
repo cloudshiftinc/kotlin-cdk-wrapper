@@ -16,14 +16,23 @@ public class CfnApplicationV2EnvironmentPropertiesPropertyDsl {
 
   private val _propertyGroups: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param propertyGroups Describes the execution property groups.
+   */
   public fun propertyGroups(vararg propertyGroups: Any) {
     _propertyGroups.addAll(listOf(*propertyGroups))
   }
 
+  /**
+   * @param propertyGroups Describes the execution property groups.
+   */
   public fun propertyGroups(propertyGroups: Collection<Any>) {
     _propertyGroups.addAll(propertyGroups)
   }
 
+  /**
+   * @param propertyGroups Describes the execution property groups.
+   */
   public fun propertyGroups(propertyGroups: IResolvable) {
     cdkBuilder.propertyGroups(propertyGroups)
   }

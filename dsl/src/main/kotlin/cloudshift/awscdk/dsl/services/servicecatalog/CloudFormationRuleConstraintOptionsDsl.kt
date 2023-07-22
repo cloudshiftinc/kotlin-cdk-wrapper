@@ -14,20 +14,33 @@ public class CloudFormationRuleConstraintOptionsDsl {
   private val cdkBuilder: CloudFormationRuleConstraintOptions.Builder =
       CloudFormationRuleConstraintOptions.builder()
 
+  /**
+   * @param description The description of the constraint.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param messageLanguage The language code.
+   * Configures the language for error messages from service catalog.
+   */
   public fun messageLanguage(messageLanguage: MessageLanguage) {
     cdkBuilder.messageLanguage(messageLanguage)
   }
 
-  public fun rule(block: TemplateRuleDsl.() -> Unit = {}) {
+  /**
+   * @param rule The rule with condition and assertions to apply to template. 
+   */
+  public fun rule(rule: TemplateRuleDsl.() -> Unit = {}) {
     val builder = TemplateRuleDsl()
-    builder.apply(block)
+    builder.apply(rule)
     cdkBuilder.rule(builder.build())
   }
 
+  /**
+   * @param rule The rule with condition and assertions to apply to template. 
+   */
   public fun rule(rule: TemplateRule) {
     cdkBuilder.rule(rule)
   }

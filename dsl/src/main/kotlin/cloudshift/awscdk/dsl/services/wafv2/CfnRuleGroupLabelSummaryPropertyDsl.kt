@@ -11,6 +11,9 @@ public class CfnRuleGroupLabelSummaryPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.LabelSummaryProperty.Builder =
       CfnRuleGroup.LabelSummaryProperty.builder()
 
+  /**
+   * @param name An individual label specification.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

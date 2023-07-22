@@ -12,11 +12,19 @@ import software.amazon.awscdk.services.elasticsearch.DomainAttributes
 public class DomainAttributesDsl {
   private val cdkBuilder: DomainAttributes.Builder = DomainAttributes.builder()
 
+  /**
+   * @param domainArn The ARN of the Elasticsearch domain. 
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun domainArn(domainArn: String) {
     cdkBuilder.domainArn(domainArn)
   }
 
+  /**
+   * @param domainEndpoint The domain endpoint of the Elasticsearch domain. 
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun domainEndpoint(domainEndpoint: String) {
     cdkBuilder.domainEndpoint(domainEndpoint)

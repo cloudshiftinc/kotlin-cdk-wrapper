@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.cloudfront.FunctionAttributes
 public class FunctionAttributesDsl {
   private val cdkBuilder: FunctionAttributes.Builder = FunctionAttributes.builder()
 
+  /**
+   * @param functionArn The ARN of the function. 
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }
 
+  /**
+   * @param functionName The name of the function. 
+   */
   public fun functionName(functionName: String) {
     cdkBuilder.functionName(functionName)
   }

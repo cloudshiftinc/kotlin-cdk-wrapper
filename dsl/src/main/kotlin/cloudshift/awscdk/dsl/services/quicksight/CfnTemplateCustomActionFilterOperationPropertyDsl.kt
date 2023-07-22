@@ -11,19 +11,33 @@ public class CfnTemplateCustomActionFilterOperationPropertyDsl {
   private val cdkBuilder: CfnTemplate.CustomActionFilterOperationProperty.Builder =
       CfnTemplate.CustomActionFilterOperationProperty.builder()
 
+  /**
+   * @param selectedFieldsConfiguration The configuration that chooses the fields to be filtered. 
+   */
   public fun selectedFieldsConfiguration(selectedFieldsConfiguration: IResolvable) {
     cdkBuilder.selectedFieldsConfiguration(selectedFieldsConfiguration)
   }
 
+  /**
+   * @param selectedFieldsConfiguration The configuration that chooses the fields to be filtered. 
+   */
   public
       fun selectedFieldsConfiguration(selectedFieldsConfiguration: CfnTemplate.FilterOperationSelectedFieldsConfigurationProperty) {
     cdkBuilder.selectedFieldsConfiguration(selectedFieldsConfiguration)
   }
 
+  /**
+   * @param targetVisualsConfiguration The configuration that chooses the target visuals to be
+   * filtered. 
+   */
   public fun targetVisualsConfiguration(targetVisualsConfiguration: IResolvable) {
     cdkBuilder.targetVisualsConfiguration(targetVisualsConfiguration)
   }
 
+  /**
+   * @param targetVisualsConfiguration The configuration that chooses the target visuals to be
+   * filtered. 
+   */
   public
       fun targetVisualsConfiguration(targetVisualsConfiguration: CfnTemplate.FilterOperationTargetVisualsConfigurationProperty) {
     cdkBuilder.targetVisualsConfiguration(targetVisualsConfiguration)

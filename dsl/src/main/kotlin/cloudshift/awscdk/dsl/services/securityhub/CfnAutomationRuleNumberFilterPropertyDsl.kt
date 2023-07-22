@@ -11,14 +11,25 @@ public class CfnAutomationRuleNumberFilterPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.NumberFilterProperty.Builder =
       CfnAutomationRule.NumberFilterProperty.builder()
 
+  /**
+   * @param eq The equal-to condition to be applied to a single field when querying for findings.
+   */
   public fun eq(eq: Number) {
     cdkBuilder.eq(eq)
   }
 
+  /**
+   * @param gte The greater-than-equal condition to be applied to a single field when querying for
+   * findings.
+   */
   public fun gte(gte: Number) {
     cdkBuilder.gte(gte)
   }
 
+  /**
+   * @param lte The less-than-equal condition to be applied to a single field when querying for
+   * findings.
+   */
   public fun lte(lte: Number) {
     cdkBuilder.lte(lte)
   }

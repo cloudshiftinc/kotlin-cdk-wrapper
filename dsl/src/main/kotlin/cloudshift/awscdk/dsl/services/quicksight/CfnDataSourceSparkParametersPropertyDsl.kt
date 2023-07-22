@@ -12,10 +12,16 @@ public class CfnDataSourceSparkParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.SparkParametersProperty.Builder =
       CfnDataSource.SparkParametersProperty.builder()
 
+  /**
+   * @param host Host. 
+   */
   public fun host(host: String) {
     cdkBuilder.host(host)
   }
 
+  /**
+   * @param port Port. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

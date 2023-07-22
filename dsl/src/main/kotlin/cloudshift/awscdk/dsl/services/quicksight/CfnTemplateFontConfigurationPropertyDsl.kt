@@ -12,30 +12,51 @@ public class CfnTemplateFontConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.FontConfigurationProperty.Builder =
       CfnTemplate.FontConfigurationProperty.builder()
 
+  /**
+   * @param fontColor Determines the color of the text.
+   */
   public fun fontColor(fontColor: String) {
     cdkBuilder.fontColor(fontColor)
   }
 
+  /**
+   * @param fontDecoration Determines the appearance of decorative lines on the text.
+   */
   public fun fontDecoration(fontDecoration: String) {
     cdkBuilder.fontDecoration(fontDecoration)
   }
 
+  /**
+   * @param fontSize The option that determines the text display size.
+   */
   public fun fontSize(fontSize: IResolvable) {
     cdkBuilder.fontSize(fontSize)
   }
 
+  /**
+   * @param fontSize The option that determines the text display size.
+   */
   public fun fontSize(fontSize: CfnTemplate.FontSizeProperty) {
     cdkBuilder.fontSize(fontSize)
   }
 
+  /**
+   * @param fontStyle Determines the text display face that is inherited by the given font family.
+   */
   public fun fontStyle(fontStyle: String) {
     cdkBuilder.fontStyle(fontStyle)
   }
 
+  /**
+   * @param fontWeight The option that determines the text display weight, or boldness.
+   */
   public fun fontWeight(fontWeight: IResolvable) {
     cdkBuilder.fontWeight(fontWeight)
   }
 
+  /**
+   * @param fontWeight The option that determines the text display weight, or boldness.
+   */
   public fun fontWeight(fontWeight: CfnTemplate.FontWeightProperty) {
     cdkBuilder.fontWeight(fontWeight)
   }

@@ -16,14 +16,29 @@ public class CfnScalingPolicyPredictiveScalingCustomizedScalingMetricPropertyDsl
 
   private val _metricDataQueries: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param metricDataQueries One or more metric data queries to provide the data points for a
+   * scaling metric. 
+   * Use multiple metric data queries only if you are performing a math expression on returned data.
+   */
   public fun metricDataQueries(vararg metricDataQueries: Any) {
     _metricDataQueries.addAll(listOf(*metricDataQueries))
   }
 
+  /**
+   * @param metricDataQueries One or more metric data queries to provide the data points for a
+   * scaling metric. 
+   * Use multiple metric data queries only if you are performing a math expression on returned data.
+   */
   public fun metricDataQueries(metricDataQueries: Collection<Any>) {
     _metricDataQueries.addAll(metricDataQueries)
   }
 
+  /**
+   * @param metricDataQueries One or more metric data queries to provide the data points for a
+   * scaling metric. 
+   * Use multiple metric data queries only if you are performing a math expression on returned data.
+   */
   public fun metricDataQueries(metricDataQueries: IResolvable) {
     cdkBuilder.metricDataQueries(metricDataQueries)
   }

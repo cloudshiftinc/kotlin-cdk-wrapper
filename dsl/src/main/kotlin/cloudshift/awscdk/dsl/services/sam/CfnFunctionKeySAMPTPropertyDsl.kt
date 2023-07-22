@@ -11,6 +11,9 @@ public class CfnFunctionKeySAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.KeySAMPTProperty.Builder =
       CfnFunction.KeySAMPTProperty.builder()
 
+  /**
+   * @param keyId the value to be set. 
+   */
   public fun keyId(keyId: String) {
     cdkBuilder.keyId(keyId)
   }

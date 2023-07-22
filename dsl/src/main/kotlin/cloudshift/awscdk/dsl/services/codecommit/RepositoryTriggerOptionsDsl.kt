@@ -17,26 +17,55 @@ public class RepositoryTriggerOptionsDsl {
 
   private val _events: MutableList<RepositoryEventTrigger> = mutableListOf()
 
+  /**
+   * @param branches The names of the branches in the AWS CodeCommit repository that contain events
+   * that you want to include in the trigger.
+   * If you don't specify at
+   * least one branch, the trigger applies to all branches.
+   */
   public fun branches(vararg branches: String) {
     _branches.addAll(listOf(*branches))
   }
 
+  /**
+   * @param branches The names of the branches in the AWS CodeCommit repository that contain events
+   * that you want to include in the trigger.
+   * If you don't specify at
+   * least one branch, the trigger applies to all branches.
+   */
   public fun branches(branches: Collection<String>) {
     _branches.addAll(branches)
   }
 
+  /**
+   * @param customData When an event is triggered, additional information that AWS CodeCommit
+   * includes when it sends information to the target.
+   */
   public fun customData(customData: String) {
     cdkBuilder.customData(customData)
   }
 
+  /**
+   * @param events The repository events for which AWS CodeCommit sends information to the target,
+   * which you specified in the DestinationArn property.If you don't specify events, the trigger runs
+   * for all repository events.
+   */
   public fun events(vararg events: RepositoryEventTrigger) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * @param events The repository events for which AWS CodeCommit sends information to the target,
+   * which you specified in the DestinationArn property.If you don't specify events, the trigger runs
+   * for all repository events.
+   */
   public fun events(events: Collection<RepositoryEventTrigger>) {
     _events.addAll(events)
   }
 
+  /**
+   * @param name A name for the trigger.Triggers on a repository must have unique names.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

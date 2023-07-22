@@ -10,6 +10,9 @@ import software.constructs.IConstruct
 public class UnknownPrincipalPropsDsl {
   private val cdkBuilder: UnknownPrincipalProps.Builder = UnknownPrincipalProps.builder()
 
+  /**
+   * @param resource The resource the role proxy is for. 
+   */
   public fun resource(resource: IConstruct) {
     cdkBuilder.resource(resource)
   }

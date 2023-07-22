@@ -10,10 +10,17 @@ import software.amazon.awscdk.services.appmesh.GrpcTimeout
 public class GrpcTimeoutDsl {
   private val cdkBuilder: GrpcTimeout.Builder = GrpcTimeout.builder()
 
+  /**
+   * @param idle Represents an idle timeout.
+   * The amount of time that a connection may be idle.
+   */
   public fun idle(idle: Duration) {
     cdkBuilder.idle(idle)
   }
 
+  /**
+   * @param perRequest Represents per request timeout.
+   */
   public fun perRequest(perRequest: Duration) {
     cdkBuilder.perRequest(perRequest)
   }

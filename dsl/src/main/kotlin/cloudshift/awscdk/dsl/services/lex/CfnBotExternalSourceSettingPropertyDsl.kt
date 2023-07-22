@@ -11,10 +11,18 @@ public class CfnBotExternalSourceSettingPropertyDsl {
   private val cdkBuilder: CfnBot.ExternalSourceSettingProperty.Builder =
       CfnBot.ExternalSourceSettingProperty.builder()
 
+  /**
+   * @param grammarSlotTypeSetting Settings required for a slot type based on a grammar that you
+   * provide.
+   */
   public fun grammarSlotTypeSetting(grammarSlotTypeSetting: IResolvable) {
     cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting)
   }
 
+  /**
+   * @param grammarSlotTypeSetting Settings required for a slot type based on a grammar that you
+   * provide.
+   */
   public fun grammarSlotTypeSetting(grammarSlotTypeSetting: CfnBot.GrammarSlotTypeSettingProperty) {
     cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting)
   }

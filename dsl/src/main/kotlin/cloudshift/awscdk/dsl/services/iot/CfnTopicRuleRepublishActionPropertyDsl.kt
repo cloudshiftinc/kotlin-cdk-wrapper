@@ -13,22 +13,42 @@ public class CfnTopicRuleRepublishActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.RepublishActionProperty.Builder =
       CfnTopicRule.RepublishActionProperty.builder()
 
+  /**
+   * @param headers MQTT Version 5.0 headers information. For more information, see
+   * [MQTT](https://docs.aws.amazon.com//iot/latest/developerguide/mqtt.html) in the IoT Core Developer
+   * Guide.
+   */
   public fun headers(headers: IResolvable) {
     cdkBuilder.headers(headers)
   }
 
+  /**
+   * @param headers MQTT Version 5.0 headers information. For more information, see
+   * [MQTT](https://docs.aws.amazon.com//iot/latest/developerguide/mqtt.html) in the IoT Core Developer
+   * Guide.
+   */
   public fun headers(headers: CfnTopicRule.RepublishActionHeadersProperty) {
     cdkBuilder.headers(headers)
   }
 
+  /**
+   * @param qos The Quality of Service (QoS) level to use when republishing messages.
+   * The default value is 0.
+   */
   public fun qos(qos: Number) {
     cdkBuilder.qos(qos)
   }
 
+  /**
+   * @param roleArn The ARN of the IAM role that grants access. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param topic The name of the MQTT topic. 
+   */
   public fun topic(topic: String) {
     cdkBuilder.topic(topic)
   }

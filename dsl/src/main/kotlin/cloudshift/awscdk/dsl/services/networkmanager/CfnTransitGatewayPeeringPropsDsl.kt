@@ -18,18 +18,30 @@ public class CfnTransitGatewayPeeringPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param coreNetworkId The ID of the core network. 
+   */
   public fun coreNetworkId(coreNetworkId: String) {
     cdkBuilder.coreNetworkId(coreNetworkId)
   }
 
+  /**
+   * @param tags The list of key-value tags associated with the peering.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The list of key-value tags associated with the peering.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param transitGatewayArn The ARN of the transit gateway. 
+   */
   public fun transitGatewayArn(transitGatewayArn: String) {
     cdkBuilder.transitGatewayArn(transitGatewayArn)
   }

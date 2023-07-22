@@ -14,22 +14,41 @@ public class CfnMountTargetPropsDsl {
 
   private val _securityGroups: MutableList<String> = mutableListOf()
 
+  /**
+   * @param fileSystemId The ID of the file system for which to create the mount target. 
+   */
   public fun fileSystemId(fileSystemId: String) {
     cdkBuilder.fileSystemId(fileSystemId)
   }
 
+  /**
+   * @param ipAddress Valid IPv4 address within the address range of the specified subnet.
+   */
   public fun ipAddress(ipAddress: String) {
     cdkBuilder.ipAddress(ipAddress)
   }
 
+  /**
+   * @param securityGroups Up to five VPC security group IDs, of the form `sg-xxxxxxxx` . 
+   * These must be for the same VPC as subnet specified.
+   */
   public fun securityGroups(vararg securityGroups: String) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups Up to five VPC security group IDs, of the form `sg-xxxxxxxx` . 
+   * These must be for the same VPC as subnet specified.
+   */
   public fun securityGroups(securityGroups: Collection<String>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  /**
+   * @param subnetId The ID of the subnet to add the mount target in. 
+   * For file systems that use One Zone storage classes, use the subnet that is associated with the
+   * file system's Availability Zone.
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

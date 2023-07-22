@@ -12,14 +12,23 @@ public class CfnModelBiasJobDefinitionModelBiasBaselineConfigPropertyDsl {
   private val cdkBuilder: CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty.Builder =
       CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty.builder()
 
+  /**
+   * @param baseliningJobName The name of the baseline model bias job.
+   */
   public fun baseliningJobName(baseliningJobName: String) {
     cdkBuilder.baseliningJobName(baseliningJobName)
   }
 
+  /**
+   * @param constraintsResource The constraints resource for a monitoring job.
+   */
   public fun constraintsResource(constraintsResource: IResolvable) {
     cdkBuilder.constraintsResource(constraintsResource)
   }
 
+  /**
+   * @param constraintsResource The constraints resource for a monitoring job.
+   */
   public
       fun constraintsResource(constraintsResource: CfnModelBiasJobDefinition.ConstraintsResourceProperty) {
     cdkBuilder.constraintsResource(constraintsResource)

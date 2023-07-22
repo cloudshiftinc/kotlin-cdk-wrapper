@@ -11,6 +11,9 @@ public class CfnChannelOutputLocationRefPropertyDsl {
   private val cdkBuilder: CfnChannel.OutputLocationRefProperty.Builder =
       CfnChannel.OutputLocationRefProperty.builder()
 
+  /**
+   * @param destinationRefId A reference ID for this destination.
+   */
   public fun destinationRefId(destinationRefId: String) {
     cdkBuilder.destinationRefId(destinationRefId)
   }

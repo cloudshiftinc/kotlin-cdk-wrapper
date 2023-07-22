@@ -17,22 +17,38 @@ public class CfnAnomalyDetectorMetricPropertyDsl {
 
   private val _dimensions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dimensions The dimensions for the metric.
+   */
   public fun dimensions(vararg dimensions: Any) {
     _dimensions.addAll(listOf(*dimensions))
   }
 
+  /**
+   * @param dimensions The dimensions for the metric.
+   */
   public fun dimensions(dimensions: Collection<Any>) {
     _dimensions.addAll(dimensions)
   }
 
+  /**
+   * @param dimensions The dimensions for the metric.
+   */
   public fun dimensions(dimensions: IResolvable) {
     cdkBuilder.dimensions(dimensions)
   }
 
+  /**
+   * @param metricName The name of the metric. 
+   * This is a required field.
+   */
   public fun metricName(metricName: String) {
     cdkBuilder.metricName(metricName)
   }
 
+  /**
+   * @param namespace The namespace of the metric. 
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }

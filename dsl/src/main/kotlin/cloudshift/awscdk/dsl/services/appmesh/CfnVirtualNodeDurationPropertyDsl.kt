@@ -12,10 +12,16 @@ public class CfnVirtualNodeDurationPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.DurationProperty.Builder =
       CfnVirtualNode.DurationProperty.builder()
 
+  /**
+   * @param unit A unit of time. 
+   */
   public fun unit(unit: String) {
     cdkBuilder.unit(unit)
   }
 
+  /**
+   * @param value A number of time units. 
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

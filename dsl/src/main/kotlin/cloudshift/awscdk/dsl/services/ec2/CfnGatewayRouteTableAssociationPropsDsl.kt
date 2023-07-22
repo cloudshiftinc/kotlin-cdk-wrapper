@@ -11,10 +11,16 @@ public class CfnGatewayRouteTableAssociationPropsDsl {
   private val cdkBuilder: CfnGatewayRouteTableAssociationProps.Builder =
       CfnGatewayRouteTableAssociationProps.builder()
 
+  /**
+   * @param gatewayId The ID of the gateway. 
+   */
   public fun gatewayId(gatewayId: String) {
     cdkBuilder.gatewayId(gatewayId)
   }
 
+  /**
+   * @param routeTableId The ID of the route table. 
+   */
   public fun routeTableId(routeTableId: String) {
     cdkBuilder.routeTableId(routeTableId)
   }

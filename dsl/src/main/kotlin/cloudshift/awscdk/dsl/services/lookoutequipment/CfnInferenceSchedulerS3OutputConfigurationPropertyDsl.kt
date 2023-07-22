@@ -11,10 +11,16 @@ public class CfnInferenceSchedulerS3OutputConfigurationPropertyDsl {
   private val cdkBuilder: CfnInferenceScheduler.S3OutputConfigurationProperty.Builder =
       CfnInferenceScheduler.S3OutputConfigurationProperty.builder()
 
+  /**
+   * @param bucket the value to be set. 
+   */
   public fun bucket(bucket: String) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param prefix the value to be set.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

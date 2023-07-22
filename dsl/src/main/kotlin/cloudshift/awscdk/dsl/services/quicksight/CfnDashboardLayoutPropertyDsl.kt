@@ -11,10 +11,16 @@ public class CfnDashboardLayoutPropertyDsl {
   private val cdkBuilder: CfnDashboard.LayoutProperty.Builder =
       CfnDashboard.LayoutProperty.builder()
 
+  /**
+   * @param configuration The configuration that determines what the type of layout for a sheet. 
+   */
   public fun configuration(configuration: IResolvable) {
     cdkBuilder.configuration(configuration)
   }
 
+  /**
+   * @param configuration The configuration that determines what the type of layout for a sheet. 
+   */
   public fun configuration(configuration: CfnDashboard.LayoutConfigurationProperty) {
     cdkBuilder.configuration(configuration)
   }

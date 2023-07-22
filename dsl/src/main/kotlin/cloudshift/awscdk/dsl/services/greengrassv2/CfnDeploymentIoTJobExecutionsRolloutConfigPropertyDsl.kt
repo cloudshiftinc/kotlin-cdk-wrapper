@@ -12,14 +12,24 @@ public class CfnDeploymentIoTJobExecutionsRolloutConfigPropertyDsl {
   private val cdkBuilder: CfnDeployment.IoTJobExecutionsRolloutConfigProperty.Builder =
       CfnDeployment.IoTJobExecutionsRolloutConfigProperty.builder()
 
+  /**
+   * @param exponentialRate The exponential rate to increase the job rollout rate.
+   */
   public fun exponentialRate(exponentialRate: IResolvable) {
     cdkBuilder.exponentialRate(exponentialRate)
   }
 
+  /**
+   * @param exponentialRate The exponential rate to increase the job rollout rate.
+   */
   public fun exponentialRate(exponentialRate: CfnDeployment.IoTJobExponentialRolloutRateProperty) {
     cdkBuilder.exponentialRate(exponentialRate)
   }
 
+  /**
+   * @param maximumPerMinute The maximum number of devices that receive a pending job notification,
+   * per minute.
+   */
   public fun maximumPerMinute(maximumPerMinute: Number) {
     cdkBuilder.maximumPerMinute(maximumPerMinute)
   }

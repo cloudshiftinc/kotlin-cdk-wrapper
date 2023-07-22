@@ -16,42 +16,72 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig
 public class ChannelDsl {
   private val cdkBuilder: Channel.Builder = Channel.builder()
 
+  /**
+   * @param channelName Name of the channel. 
+   */
   public fun channelName(channelName: String) {
     cdkBuilder.channelName(channelName)
   }
 
+  /**
+   * @param compressionType Compression type if training data is compressed.
+   */
   public fun compressionType(compressionType: CompressionType) {
     cdkBuilder.compressionType(compressionType)
   }
 
+  /**
+   * @param contentType The MIME type of the data.
+   */
   public fun contentType(contentType: String) {
     cdkBuilder.contentType(contentType)
   }
 
-  public fun dataSource(block: DataSourceDsl.() -> Unit = {}) {
+  /**
+   * @param dataSource Location of the channel data. 
+   */
+  public fun dataSource(dataSource: DataSourceDsl.() -> Unit = {}) {
     val builder = DataSourceDsl()
-    builder.apply(block)
+    builder.apply(dataSource)
     cdkBuilder.dataSource(builder.build())
   }
 
+  /**
+   * @param dataSource Location of the channel data. 
+   */
   public fun dataSource(dataSource: DataSource) {
     cdkBuilder.dataSource(dataSource)
   }
 
+  /**
+   * @param inputMode Input mode to use for the data channel in a training job.
+   */
   public fun inputMode(inputMode: InputMode) {
     cdkBuilder.inputMode(inputMode)
   }
 
+  /**
+   * @param recordWrapperType Specify RecordIO as the value when input data is in raw format but the
+   * training algorithm requires the RecordIO format.
+   * In this case, Amazon SageMaker wraps each individual S3 object in a RecordIO record.
+   * If the input data is already in RecordIO format, you don't need to set this attribute.
+   */
   public fun recordWrapperType(recordWrapperType: RecordWrapperType) {
     cdkBuilder.recordWrapperType(recordWrapperType)
   }
 
-  public fun shuffleConfig(block: ShuffleConfigDsl.() -> Unit = {}) {
+  /**
+   * @param shuffleConfig Shuffle config option for input data in a channel.
+   */
+  public fun shuffleConfig(shuffleConfig: ShuffleConfigDsl.() -> Unit = {}) {
     val builder = ShuffleConfigDsl()
-    builder.apply(block)
+    builder.apply(shuffleConfig)
     cdkBuilder.shuffleConfig(builder.build())
   }
 
+  /**
+   * @param shuffleConfig Shuffle config option for input data in a channel.
+   */
   public fun shuffleConfig(shuffleConfig: ShuffleConfig) {
     cdkBuilder.shuffleConfig(shuffleConfig)
   }

@@ -10,6 +10,11 @@ import software.amazon.awscdk.services.appmesh.RouteSpecOptionsBase
 public class RouteSpecOptionsBaseDsl {
   private val cdkBuilder: RouteSpecOptionsBase.Builder = RouteSpecOptionsBase.builder()
 
+  /**
+   * @param priority The priority for the route.
+   * When a Virtual Router has multiple routes, route match is performed in the
+   * order of specified value, where 0 is the highest priority, and first matched route is selected.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }

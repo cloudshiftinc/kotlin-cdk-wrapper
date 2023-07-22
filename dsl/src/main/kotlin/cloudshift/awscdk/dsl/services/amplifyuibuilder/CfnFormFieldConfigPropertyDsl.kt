@@ -18,42 +18,74 @@ public class CfnFormFieldConfigPropertyDsl {
 
   private val _validations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param excluded Specifies whether to hide a field.
+   */
   public fun excluded(excluded: Boolean) {
     cdkBuilder.excluded(excluded)
   }
 
+  /**
+   * @param excluded Specifies whether to hide a field.
+   */
   public fun excluded(excluded: IResolvable) {
     cdkBuilder.excluded(excluded)
   }
 
+  /**
+   * @param inputType Describes the configuration for the default input value to display for a
+   * field.
+   */
   public fun inputType(inputType: IResolvable) {
     cdkBuilder.inputType(inputType)
   }
 
+  /**
+   * @param inputType Describes the configuration for the default input value to display for a
+   * field.
+   */
   public fun inputType(inputType: CfnForm.FieldInputConfigProperty) {
     cdkBuilder.inputType(inputType)
   }
 
+  /**
+   * @param label The label for the field.
+   */
   public fun label(label: String) {
     cdkBuilder.label(label)
   }
 
+  /**
+   * @param position Specifies the field position.
+   */
   public fun position(position: IResolvable) {
     cdkBuilder.position(position)
   }
 
+  /**
+   * @param position Specifies the field position.
+   */
   public fun position(position: CfnForm.FieldPositionProperty) {
     cdkBuilder.position(position)
   }
 
+  /**
+   * @param validations The validations to perform on the value in the field.
+   */
   public fun validations(vararg validations: Any) {
     _validations.addAll(listOf(*validations))
   }
 
+  /**
+   * @param validations The validations to perform on the value in the field.
+   */
   public fun validations(validations: Collection<Any>) {
     _validations.addAll(validations)
   }
 
+  /**
+   * @param validations The validations to perform on the value in the field.
+   */
   public fun validations(validations: IResolvable) {
     cdkBuilder.validations(validations)
   }

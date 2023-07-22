@@ -11,10 +11,18 @@ public class CfnConnectorProfileConnectorOAuthRequestPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.ConnectorOAuthRequestProperty.Builder =
       CfnConnectorProfile.ConnectorOAuthRequestProperty.builder()
 
+  /**
+   * @param authCode The code provided by the connector when it has been authenticated via the
+   * connected app.
+   */
   public fun authCode(authCode: String) {
     cdkBuilder.authCode(authCode)
   }
 
+  /**
+   * @param redirectUri The URL to which the authentication server redirects the browser after
+   * authorization has been granted.
+   */
   public fun redirectUri(redirectUri: String) {
     cdkBuilder.redirectUri(redirectUri)
   }

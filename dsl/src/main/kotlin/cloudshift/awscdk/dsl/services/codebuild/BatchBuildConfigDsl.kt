@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.iam.IRole
 public class BatchBuildConfigDsl {
   private val cdkBuilder: BatchBuildConfig.Builder = BatchBuildConfig.builder()
 
+  /**
+   * @param role The IAM batch service Role of this Project. 
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

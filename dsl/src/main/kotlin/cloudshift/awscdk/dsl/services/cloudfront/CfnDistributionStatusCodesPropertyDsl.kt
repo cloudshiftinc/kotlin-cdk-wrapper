@@ -16,18 +16,30 @@ public class CfnDistributionStatusCodesPropertyDsl {
 
   private val _items: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param items The items (status codes) for an origin group. 
+   */
   public fun items(vararg items: Number) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * @param items The items (status codes) for an origin group. 
+   */
   public fun items(items: Collection<Number>) {
     _items.addAll(items)
   }
 
+  /**
+   * @param items The items (status codes) for an origin group. 
+   */
   public fun items(items: IResolvable) {
     cdkBuilder.items(items)
   }
 
+  /**
+   * @param quantity The number of status codes. 
+   */
   public fun quantity(quantity: Number) {
     cdkBuilder.quantity(quantity)
   }

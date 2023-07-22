@@ -114,6 +114,7 @@ private fun findBuilderProperties(
             builderClass = propertyBuilderClass,
             methodSignature = method.signature,
             deprecated = method.deprecated,
+            comment = method.comment
         )
     }.sortedBy { it.first }.map { it.second }
 }

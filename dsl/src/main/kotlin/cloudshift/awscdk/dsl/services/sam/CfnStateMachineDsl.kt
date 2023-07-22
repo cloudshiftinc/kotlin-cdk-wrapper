@@ -23,102 +23,198 @@ public class CfnStateMachineDsl(
 
   private val _policies: MutableList<Any> = mutableListOf()
 
-  public fun definition(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definition)
+   * @param definition 
+   */
+  public fun definition(definition: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(definition)
     cdkBuilder.definition(builder.map)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definition)
+   * @param definition 
+   */
   public fun definition(definition: Any) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionsubstitutions)
+   * @param definitionSubstitutions 
+   */
   public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
     cdkBuilder.definitionSubstitutions(definitionSubstitutions)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionsubstitutions)
+   * @param definitionSubstitutions 
+   */
   public fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
     cdkBuilder.definitionSubstitutions(definitionSubstitutions)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionuri)
+   * @param definitionUri 
+   */
   public fun definitionUri(definitionUri: String) {
     cdkBuilder.definitionUri(definitionUri)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionuri)
+   * @param definitionUri 
+   */
   public fun definitionUri(definitionUri: IResolvable) {
     cdkBuilder.definitionUri(definitionUri)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionuri)
+   * @param definitionUri 
+   */
   public fun definitionUri(definitionUri: CfnStateMachine.S3LocationProperty) {
     cdkBuilder.definitionUri(definitionUri)
   }
 
-  public fun events(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-events)
+   * @param events 
+   */
+  public fun events(events: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(events)
     cdkBuilder.events(builder.map)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-events)
+   * @param events 
+   */
   public fun events(events: Map<String, Any>) {
     cdkBuilder.events(events)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-events)
+   * @param events 
+   */
   public fun events(events: IResolvable) {
     cdkBuilder.events(events)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-logging)
+   * @param logging 
+   */
   public fun logging(logging: IResolvable) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-logging)
+   * @param logging 
+   */
   public fun logging(logging: CfnStateMachine.LoggingConfigurationProperty) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-name)
+   * @param name 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-permissionsboundaries)
+   * @param permissionsBoundaries 
+   */
   public fun permissionsBoundaries(permissionsBoundaries: String) {
     cdkBuilder.permissionsBoundaries(permissionsBoundaries)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-policies)
+   * @param policies 
+   */
   public fun policies(policies: String) {
     cdkBuilder.policies(policies)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-policies)
+   * @param policies 
+   */
   public fun policies(vararg policies: Any) {
     _policies.addAll(listOf(*policies))
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-policies)
+   * @param policies 
+   */
   public fun policies(policies: Collection<Any>) {
     _policies.addAll(policies)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-policies)
+   * @param policies 
+   */
   public fun policies(policies: IResolvable) {
     cdkBuilder.policies(policies)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-policies)
+   * @param policies 
+   */
   public fun policies(policies: CfnStateMachine.IAMPolicyDocumentProperty) {
     cdkBuilder.policies(policies)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-role)
+   * @param role 
+   */
   public fun role(role: String) {
     cdkBuilder.role(role)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-tags)
+   * @param tags 
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-tracing)
+   * @param tracing 
+   */
   public fun tracing(tracing: IResolvable) {
     cdkBuilder.tracing(tracing)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-tracing)
+   * @param tracing 
+   */
   public fun tracing(tracing: CfnStateMachine.TracingConfigurationProperty) {
     cdkBuilder.tracing(tracing)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-type)
+   * @param type 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

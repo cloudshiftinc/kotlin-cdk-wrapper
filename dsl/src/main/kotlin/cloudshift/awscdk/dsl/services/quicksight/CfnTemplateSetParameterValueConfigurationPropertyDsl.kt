@@ -12,14 +12,24 @@ public class CfnTemplateSetParameterValueConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.SetParameterValueConfigurationProperty.Builder =
       CfnTemplate.SetParameterValueConfigurationProperty.builder()
 
+  /**
+   * @param destinationParameterName The destination parameter name of the
+   * `SetParameterValueConfiguration` . 
+   */
   public fun destinationParameterName(destinationParameterName: String) {
     cdkBuilder.destinationParameterName(destinationParameterName)
   }
 
+  /**
+   * @param value the value to be set. 
+   */
   public fun `value`(`value`: IResolvable) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param value the value to be set. 
+   */
   public fun `value`(`value`: CfnTemplate.DestinationParameterValueConfigurationProperty) {
     cdkBuilder.`value`(`value`)
   }

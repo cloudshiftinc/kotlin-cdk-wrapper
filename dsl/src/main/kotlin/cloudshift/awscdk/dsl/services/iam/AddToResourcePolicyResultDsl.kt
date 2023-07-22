@@ -11,10 +11,16 @@ import software.constructs.IDependable
 public class AddToResourcePolicyResultDsl {
   private val cdkBuilder: AddToResourcePolicyResult.Builder = AddToResourcePolicyResult.builder()
 
+  /**
+   * @param policyDependable Dependable which allows depending on the policy change being applied.
+   */
   public fun policyDependable(policyDependable: IDependable) {
     cdkBuilder.policyDependable(policyDependable)
   }
 
+  /**
+   * @param statementAdded Whether the statement was added. 
+   */
   public fun statementAdded(statementAdded: Boolean) {
     cdkBuilder.statementAdded(statementAdded)
   }

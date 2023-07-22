@@ -11,6 +11,9 @@ public class CfnStateMachineCloudWatchLogsLogGroupPropertyDsl {
   private val cdkBuilder: CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder =
       CfnStateMachine.CloudWatchLogsLogGroupProperty.builder()
 
+  /**
+   * @param logGroupArn the value to be set. 
+   */
   public fun logGroupArn(logGroupArn: String) {
     cdkBuilder.logGroupArn(logGroupArn)
   }

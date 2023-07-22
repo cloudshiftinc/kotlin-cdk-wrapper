@@ -11,6 +11,9 @@ public class CfnDetectorModelResetTimerPropertyDsl {
   private val cdkBuilder: CfnDetectorModel.ResetTimerProperty.Builder =
       CfnDetectorModel.ResetTimerProperty.builder()
 
+  /**
+   * @param timerName The name of the timer to reset. 
+   */
   public fun timerName(timerName: String) {
     cdkBuilder.timerName(timerName)
   }

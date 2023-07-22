@@ -13,26 +13,44 @@ import software.amazon.awscdk.services.iam.IRole
 public class ScalableTaskCountPropsDsl {
   private val cdkBuilder: ScalableTaskCountProps.Builder = ScalableTaskCountProps.builder()
 
+  /**
+   * @param dimension Scalable dimension of the attribute. 
+   */
   public fun dimension(dimension: String) {
     cdkBuilder.dimension(dimension)
   }
 
+  /**
+   * @param maxCapacity Maximum capacity to scale to. 
+   */
   public fun maxCapacity(maxCapacity: Number) {
     cdkBuilder.maxCapacity(maxCapacity)
   }
 
+  /**
+   * @param minCapacity Minimum capacity to scale to.
+   */
   public fun minCapacity(minCapacity: Number) {
     cdkBuilder.minCapacity(minCapacity)
   }
 
+  /**
+   * @param resourceId Resource ID of the attribute. 
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }
 
+  /**
+   * @param role Role to use for scaling. 
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }
 
+  /**
+   * @param serviceNamespace Service namespace of the scalable attribute. 
+   */
   public fun serviceNamespace(serviceNamespace: ServiceNamespace) {
     cdkBuilder.serviceNamespace(serviceNamespace)
   }

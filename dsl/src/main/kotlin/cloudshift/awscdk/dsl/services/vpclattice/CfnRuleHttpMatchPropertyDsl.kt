@@ -16,26 +16,47 @@ public class CfnRuleHttpMatchPropertyDsl {
 
   private val _headerMatches: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param headerMatches The header matches.
+   * Matches incoming requests with rule based on request header value before applying rule action.
+   */
   public fun headerMatches(vararg headerMatches: Any) {
     _headerMatches.addAll(listOf(*headerMatches))
   }
 
+  /**
+   * @param headerMatches The header matches.
+   * Matches incoming requests with rule based on request header value before applying rule action.
+   */
   public fun headerMatches(headerMatches: Collection<Any>) {
     _headerMatches.addAll(headerMatches)
   }
 
+  /**
+   * @param headerMatches The header matches.
+   * Matches incoming requests with rule based on request header value before applying rule action.
+   */
   public fun headerMatches(headerMatches: IResolvable) {
     cdkBuilder.headerMatches(headerMatches)
   }
 
+  /**
+   * @param method The HTTP method type.
+   */
   public fun method(method: String) {
     cdkBuilder.method(method)
   }
 
+  /**
+   * @param pathMatch The path match.
+   */
   public fun pathMatch(pathMatch: IResolvable) {
     cdkBuilder.pathMatch(pathMatch)
   }
 
+  /**
+   * @param pathMatch The path match.
+   */
   public fun pathMatch(pathMatch: CfnRule.PathMatchProperty) {
     cdkBuilder.pathMatch(pathMatch)
   }

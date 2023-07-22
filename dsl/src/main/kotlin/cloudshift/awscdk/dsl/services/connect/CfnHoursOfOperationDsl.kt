@@ -26,38 +26,96 @@ public class CfnHoursOfOperationDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Configuration information for the hours of operation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-config)
+   * @param config Configuration information for the hours of operation. 
+   */
   public fun config(vararg config: Any) {
     _config.addAll(listOf(*config))
   }
 
+  /**
+   * Configuration information for the hours of operation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-config)
+   * @param config Configuration information for the hours of operation. 
+   */
   public fun config(config: Collection<Any>) {
     _config.addAll(config)
   }
 
+  /**
+   * Configuration information for the hours of operation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-config)
+   * @param config Configuration information for the hours of operation. 
+   */
   public fun config(config: IResolvable) {
     cdkBuilder.config(config)
   }
 
+  /**
+   * The description for the hours of operation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-description)
+   * @param description The description for the hours of operation. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) for the instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-instancearn)
+   * @param instanceArn The Amazon Resource Name (ARN) for the instance. 
+   */
   public fun instanceArn(instanceArn: String) {
     cdkBuilder.instanceArn(instanceArn)
   }
 
+  /**
+   * The name for the hours of operation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-name)
+   * @param name The name for the hours of operation. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The tags used to organize, track, or control access for this resource.
+   *
+   * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-tags)
+   * @param tags The tags used to organize, track, or control access for this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags used to organize, track, or control access for this resource.
+   *
+   * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-tags)
+   * @param tags The tags used to organize, track, or control access for this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The time zone for the hours of operation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-timezone)
+   * @param timeZone The time zone for the hours of operation. 
+   */
   public fun timeZone(timeZone: String) {
     cdkBuilder.timeZone(timeZone)
   }

@@ -12,12 +12,18 @@ import software.amazon.awscdk.GetContextValueResult
 public class GetContextValueResultDsl {
   private val cdkBuilder: GetContextValueResult.Builder = GetContextValueResult.builder()
 
-  public fun `value`(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param value the value to be set.
+   */
+  public fun `value`(`value`: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(`value`)
     cdkBuilder.`value`(builder.map)
   }
 
+  /**
+   * @param value the value to be set.
+   */
   public fun `value`(`value`: Any) {
     cdkBuilder.`value`(`value`)
   }

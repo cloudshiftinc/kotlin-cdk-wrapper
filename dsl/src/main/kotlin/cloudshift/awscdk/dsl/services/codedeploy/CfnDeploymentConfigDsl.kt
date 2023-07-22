@@ -16,27 +16,120 @@ public class CfnDeploymentConfigDsl(
   private val cdkBuilder: CfnDeploymentConfig.Builder = CfnDeploymentConfig.Builder.create(scope,
       id)
 
+  /**
+   * The destination platform type for the deployment ( `Lambda` , `Server` , or `ECS` ).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-computeplatform)
+   * @param computePlatform The destination platform type for the deployment ( `Lambda` , `Server` ,
+   * or `ECS` ). 
+   */
   public fun computePlatform(computePlatform: String) {
     cdkBuilder.computePlatform(computePlatform)
   }
 
+  /**
+   * A name for the deployment configuration.
+   *
+   * If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID
+   * for the deployment configuration name. For more information, see [Name
+   * Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
+   *
+   *
+   * If you specify a name, you cannot perform updates that require replacement of this resource.
+   * You can perform updates that require no or some interruption. If you must replace the resource,
+   * specify a new name.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-deploymentconfigname)
+   * @param deploymentConfigName A name for the deployment configuration. 
+   */
   public fun deploymentConfigName(deploymentConfigName: String) {
     cdkBuilder.deploymentConfigName(deploymentConfigName)
   }
 
+  /**
+   * The minimum number of healthy instances that should be available at any time during the
+   * deployment.
+   *
+   * There are two parameters expected in the input: type and value.
+   *
+   * The type parameter takes either of the following values:
+   *
+   * * HOST_COUNT: The value parameter represents the minimum number of healthy instances as an
+   * absolute value.
+   * * FLEET_PERCENT: The value parameter represents the minimum number of healthy instances as a
+   * percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at
+   * the start of the deployment, AWS CodeDeploy converts the percentage to the equivalent number of
+   * instance and rounds up fractional instances.
+   *
+   * The value parameter takes an integer.
+   *
+   * For example, to set a minimum of 95% healthy instance, specify a type of FLEET_PERCENT and a
+   * value of 95.
+   *
+   * For more information about instance health, see [CodeDeploy Instance
+   * Health](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-health.html) in the AWS
+   * CodeDeploy User Guide.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts)
+   * @param minimumHealthyHosts The minimum number of healthy instances that should be available at
+   * any time during the deployment. 
+   */
   public fun minimumHealthyHosts(minimumHealthyHosts: IResolvable) {
     cdkBuilder.minimumHealthyHosts(minimumHealthyHosts)
   }
 
+  /**
+   * The minimum number of healthy instances that should be available at any time during the
+   * deployment.
+   *
+   * There are two parameters expected in the input: type and value.
+   *
+   * The type parameter takes either of the following values:
+   *
+   * * HOST_COUNT: The value parameter represents the minimum number of healthy instances as an
+   * absolute value.
+   * * FLEET_PERCENT: The value parameter represents the minimum number of healthy instances as a
+   * percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at
+   * the start of the deployment, AWS CodeDeploy converts the percentage to the equivalent number of
+   * instance and rounds up fractional instances.
+   *
+   * The value parameter takes an integer.
+   *
+   * For example, to set a minimum of 95% healthy instance, specify a type of FLEET_PERCENT and a
+   * value of 95.
+   *
+   * For more information about instance health, see [CodeDeploy Instance
+   * Health](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-health.html) in the AWS
+   * CodeDeploy User Guide.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts)
+   * @param minimumHealthyHosts The minimum number of healthy instances that should be available at
+   * any time during the deployment. 
+   */
   public
       fun minimumHealthyHosts(minimumHealthyHosts: CfnDeploymentConfig.MinimumHealthyHostsProperty) {
     cdkBuilder.minimumHealthyHosts(minimumHealthyHosts)
   }
 
+  /**
+   * The configuration that specifies how the deployment traffic is routed.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig)
+   * @param trafficRoutingConfig The configuration that specifies how the deployment traffic is
+   * routed. 
+   */
   public fun trafficRoutingConfig(trafficRoutingConfig: IResolvable) {
     cdkBuilder.trafficRoutingConfig(trafficRoutingConfig)
   }
 
+  /**
+   * The configuration that specifies how the deployment traffic is routed.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-trafficroutingconfig)
+   * @param trafficRoutingConfig The configuration that specifies how the deployment traffic is
+   * routed. 
+   */
   public
       fun trafficRoutingConfig(trafficRoutingConfig: CfnDeploymentConfig.TrafficRoutingConfigProperty) {
     cdkBuilder.trafficRoutingConfig(trafficRoutingConfig)

@@ -13,18 +13,43 @@ public class CfnFirewallPolicyStatefulRuleGroupReferencePropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.Builder =
       CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.builder()
 
+  /**
+   * @param override The action that allows the policy owner to override the behavior of the rule
+   * group within a policy.
+   */
   public fun `override`(`override`: IResolvable) {
     cdkBuilder.`override`(`override`)
   }
 
+  /**
+   * @param override The action that allows the policy owner to override the behavior of the rule
+   * group within a policy.
+   */
   public fun `override`(`override`: CfnFirewallPolicy.StatefulRuleGroupOverrideProperty) {
     cdkBuilder.`override`(`override`)
   }
 
+  /**
+   * @param priority An integer setting that indicates the order in which to run the stateful rule
+   * groups in a single `FirewallPolicy` .
+   * This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order in
+   * the stateful engine options settings.
+   *
+   * Network Firewall evalutes each stateful rule group against a packet starting with the group
+   * that has the lowest priority setting. You must ensure that the priority settings are unique within
+   * each policy.
+   *
+   * You can change the priority settings of your rule groups at any time. To make it easier to
+   * insert rule groups later, number them so there's a wide range in between, for example use 100,
+   * 200, and so on.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }
 
+  /**
+   * @param resourceArn The Amazon Resource Name (ARN) of the stateful rule group. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

@@ -24,58 +24,143 @@ public class CfnUserDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The identifier of the user account in the directory used for identity management.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-directoryuserid)
+   * @param directoryUserId The identifier of the user account in the directory used for identity
+   * management. 
+   */
   public fun directoryUserId(directoryUserId: String) {
     cdkBuilder.directoryUserId(directoryUserId)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the user's hierarchy group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-hierarchygrouparn)
+   * @param hierarchyGroupArn The Amazon Resource Name (ARN) of the user's hierarchy group. 
+   */
   public fun hierarchyGroupArn(hierarchyGroupArn: String) {
     cdkBuilder.hierarchyGroupArn(hierarchyGroupArn)
   }
 
+  /**
+   * Information about the user identity.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-identityinfo)
+   * @param identityInfo Information about the user identity. 
+   */
   public fun identityInfo(identityInfo: IResolvable) {
     cdkBuilder.identityInfo(identityInfo)
   }
 
+  /**
+   * Information about the user identity.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-identityinfo)
+   * @param identityInfo Information about the user identity. 
+   */
   public fun identityInfo(identityInfo: CfnUser.UserIdentityInfoProperty) {
     cdkBuilder.identityInfo(identityInfo)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-instancearn)
+   * @param instanceArn The Amazon Resource Name (ARN) of the instance. 
+   */
   public fun instanceArn(instanceArn: String) {
     cdkBuilder.instanceArn(instanceArn)
   }
 
+  /**
+   * The user's password.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-password)
+   * @param password The user's password. 
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * Information about the phone configuration for the user.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-phoneconfig)
+   * @param phoneConfig Information about the phone configuration for the user. 
+   */
   public fun phoneConfig(phoneConfig: IResolvable) {
     cdkBuilder.phoneConfig(phoneConfig)
   }
 
+  /**
+   * Information about the phone configuration for the user.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-phoneconfig)
+   * @param phoneConfig Information about the phone configuration for the user. 
+   */
   public fun phoneConfig(phoneConfig: CfnUser.UserPhoneConfigProperty) {
     cdkBuilder.phoneConfig(phoneConfig)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the user's routing profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-routingprofilearn)
+   * @param routingProfileArn The Amazon Resource Name (ARN) of the user's routing profile. 
+   */
   public fun routingProfileArn(routingProfileArn: String) {
     cdkBuilder.routingProfileArn(routingProfileArn)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the user's security profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-securityprofilearns)
+   * @param securityProfileArns The Amazon Resource Name (ARN) of the user's security profile. 
+   */
   public fun securityProfileArns(vararg securityProfileArns: String) {
     _securityProfileArns.addAll(listOf(*securityProfileArns))
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the user's security profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-securityprofilearns)
+   * @param securityProfileArns The Amazon Resource Name (ARN) of the user's security profile. 
+   */
   public fun securityProfileArns(securityProfileArns: Collection<String>) {
     _securityProfileArns.addAll(securityProfileArns)
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The user name assigned to the user account.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-username)
+   * @param username The user name assigned to the user account. 
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

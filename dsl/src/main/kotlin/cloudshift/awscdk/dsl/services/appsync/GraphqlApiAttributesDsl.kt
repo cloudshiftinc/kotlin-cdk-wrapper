@@ -10,10 +10,17 @@ import software.amazon.awscdk.services.appsync.GraphqlApiAttributes
 public class GraphqlApiAttributesDsl {
   private val cdkBuilder: GraphqlApiAttributes.Builder = GraphqlApiAttributes.builder()
 
+  /**
+   * @param graphqlApiArn the arn for the GraphQL Api.
+   */
   public fun graphqlApiArn(graphqlApiArn: String) {
     cdkBuilder.graphqlApiArn(graphqlApiArn)
   }
 
+  /**
+   * @param graphqlApiId an unique AWS AppSync GraphQL API identifier i.e.
+   * 'lxz775lwdrgcndgz3nurvac7oa'. 
+   */
   public fun graphqlApiId(graphqlApiId: String) {
     cdkBuilder.graphqlApiId(graphqlApiId)
   }

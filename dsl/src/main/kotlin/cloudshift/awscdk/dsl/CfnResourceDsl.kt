@@ -18,16 +18,35 @@ public class CfnResourceDsl(
 ) {
   private val cdkBuilder: CfnResource.Builder = CfnResource.Builder.create(scope, id)
 
-  public fun properties(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * Resource properties.
+   *
+   * Default: - No resource properties.
+   *
+   * @param properties Resource properties. 
+   */
+  public fun properties(properties: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(properties)
     cdkBuilder.properties(builder.map)
   }
 
+  /**
+   * Resource properties.
+   *
+   * Default: - No resource properties.
+   *
+   * @param properties Resource properties. 
+   */
   public fun properties(properties: Map<String, Any>) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * CloudFormation resource type (e.g. `AWS::S3::Bucket`).
+   *
+   * @param type CloudFormation resource type (e.g. `AWS::S3::Bucket`). 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig
 public class AccessLogDestinationConfigDsl {
   private val cdkBuilder: AccessLogDestinationConfig.Builder = AccessLogDestinationConfig.builder()
 
+  /**
+   * @param destinationArn The Amazon Resource Name (ARN) of the destination resource. 
+   */
   public fun destinationArn(destinationArn: String) {
     cdkBuilder.destinationArn(destinationArn)
   }

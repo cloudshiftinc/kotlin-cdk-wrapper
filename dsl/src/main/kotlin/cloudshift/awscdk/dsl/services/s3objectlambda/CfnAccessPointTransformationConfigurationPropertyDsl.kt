@@ -18,20 +18,42 @@ public class CfnAccessPointTransformationConfigurationPropertyDsl {
 
   private val _actions: MutableList<String> = mutableListOf()
 
+  /**
+   * @param actions A container for the action of an Object Lambda Access Point configuration. 
+   * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
+   */
   public fun actions(vararg actions: String) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * @param actions A container for the action of an Object Lambda Access Point configuration. 
+   * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
+   */
   public fun actions(actions: Collection<String>) {
     _actions.addAll(actions)
   }
 
-  public fun contentTransformation(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param contentTransformation A container for the content transformation of an Object Lambda
+   * Access Point configuration. 
+   * Can include the FunctionArn and FunctionPayload. For more information, see
+   * [AwsLambdaTransformation](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_AwsLambdaTransformation.html)
+   * in the *Amazon S3 API Reference* .
+   */
+  public fun contentTransformation(contentTransformation: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(contentTransformation)
     cdkBuilder.contentTransformation(builder.map)
   }
 
+  /**
+   * @param contentTransformation A container for the content transformation of an Object Lambda
+   * Access Point configuration. 
+   * Can include the FunctionArn and FunctionPayload. For more information, see
+   * [AwsLambdaTransformation](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_AwsLambdaTransformation.html)
+   * in the *Amazon S3 API Reference* .
+   */
   public fun contentTransformation(contentTransformation: Any) {
     cdkBuilder.contentTransformation(contentTransformation)
   }

@@ -11,10 +11,16 @@ public class CfnConfigurationTemplateSourceConfigurationPropertyDsl {
   private val cdkBuilder: CfnConfigurationTemplate.SourceConfigurationProperty.Builder =
       CfnConfigurationTemplate.SourceConfigurationProperty.builder()
 
+  /**
+   * @param applicationName The name of the application associated with the configuration. 
+   */
   public fun applicationName(applicationName: String) {
     cdkBuilder.applicationName(applicationName)
   }
 
+  /**
+   * @param templateName The name of the configuration template. 
+   */
   public fun templateName(templateName: String) {
     cdkBuilder.templateName(templateName)
   }

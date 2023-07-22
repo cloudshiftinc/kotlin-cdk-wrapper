@@ -10,14 +10,26 @@ import software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps
 public class CfnHookDefaultVersionPropsDsl {
   private val cdkBuilder: CfnHookDefaultVersionProps.Builder = CfnHookDefaultVersionProps.builder()
 
+  /**
+   * @param typeName The name of the hook.
+   * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+   */
   public fun typeName(typeName: String) {
     cdkBuilder.typeName(typeName)
   }
 
+  /**
+   * @param typeVersionArn The version ID of the type configuration.
+   * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+   */
   public fun typeVersionArn(typeVersionArn: String) {
     cdkBuilder.typeVersionArn(typeVersionArn)
   }
 
+  /**
+   * @param versionId The version ID of the type specified.
+   * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+   */
   public fun versionId(versionId: String) {
     cdkBuilder.versionId(versionId)
   }

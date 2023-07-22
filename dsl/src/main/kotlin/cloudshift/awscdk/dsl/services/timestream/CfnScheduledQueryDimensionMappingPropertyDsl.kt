@@ -11,10 +11,16 @@ public class CfnScheduledQueryDimensionMappingPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.DimensionMappingProperty.Builder =
       CfnScheduledQuery.DimensionMappingProperty.builder()
 
+  /**
+   * @param dimensionValueType Type for the dimension: VARCHAR. 
+   */
   public fun dimensionValueType(dimensionValueType: String) {
     cdkBuilder.dimensionValueType(dimensionValueType)
   }
 
+  /**
+   * @param name Column name from query result. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

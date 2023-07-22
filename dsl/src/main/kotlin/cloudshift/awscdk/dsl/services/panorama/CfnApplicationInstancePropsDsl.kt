@@ -20,47 +20,81 @@ public class CfnApplicationInstancePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param applicationInstanceIdToReplace The ID of an application instance to replace with the new
+   * instance.
+   */
   public fun applicationInstanceIdToReplace(applicationInstanceIdToReplace: String) {
     cdkBuilder.applicationInstanceIdToReplace(applicationInstanceIdToReplace)
   }
 
+  /**
+   * @param defaultRuntimeContextDevice The device's ID. 
+   */
   public fun defaultRuntimeContextDevice(defaultRuntimeContextDevice: String) {
     cdkBuilder.defaultRuntimeContextDevice(defaultRuntimeContextDevice)
   }
 
+  /**
+   * @param description A description for the application instance.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param manifestOverridesPayload Setting overrides for the application manifest.
+   */
   public fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
     cdkBuilder.manifestOverridesPayload(manifestOverridesPayload)
   }
 
+  /**
+   * @param manifestOverridesPayload Setting overrides for the application manifest.
+   */
   public
       fun manifestOverridesPayload(manifestOverridesPayload: CfnApplicationInstance.ManifestOverridesPayloadProperty) {
     cdkBuilder.manifestOverridesPayload(manifestOverridesPayload)
   }
 
+  /**
+   * @param manifestPayload The application's manifest document. 
+   */
   public fun manifestPayload(manifestPayload: IResolvable) {
     cdkBuilder.manifestPayload(manifestPayload)
   }
 
+  /**
+   * @param manifestPayload The application's manifest document. 
+   */
   public fun manifestPayload(manifestPayload: CfnApplicationInstance.ManifestPayloadProperty) {
     cdkBuilder.manifestPayload(manifestPayload)
   }
 
+  /**
+   * @param name A name for the application instance.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param runtimeRoleArn The ARN of a runtime role for the application instance.
+   */
   public fun runtimeRoleArn(runtimeRoleArn: String) {
     cdkBuilder.runtimeRoleArn(runtimeRoleArn)
   }
 
+  /**
+   * @param tags Tags for the application instance.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Tags for the application instance.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

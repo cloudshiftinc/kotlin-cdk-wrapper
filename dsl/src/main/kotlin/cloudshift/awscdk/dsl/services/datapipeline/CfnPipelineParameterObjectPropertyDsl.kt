@@ -17,18 +17,30 @@ public class CfnPipelineParameterObjectPropertyDsl {
 
   private val _attributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param attributes The attributes of the parameter object. 
+   */
   public fun attributes(vararg attributes: Any) {
     _attributes.addAll(listOf(*attributes))
   }
 
+  /**
+   * @param attributes The attributes of the parameter object. 
+   */
   public fun attributes(attributes: Collection<Any>) {
     _attributes.addAll(attributes)
   }
 
+  /**
+   * @param attributes The attributes of the parameter object. 
+   */
   public fun attributes(attributes: IResolvable) {
     cdkBuilder.attributes(attributes)
   }
 
+  /**
+   * @param id The ID of the parameter object. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }

@@ -11,10 +11,16 @@ public class CfnAutoScalingGroupTotalLocalStorageGBRequestPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.Builder =
       CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.builder()
 
+  /**
+   * @param max The storage maximum in GB.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The storage minimum in GB.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

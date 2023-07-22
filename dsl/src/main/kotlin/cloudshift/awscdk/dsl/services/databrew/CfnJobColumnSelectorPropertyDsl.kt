@@ -11,10 +11,16 @@ public class CfnJobColumnSelectorPropertyDsl {
   private val cdkBuilder: CfnJob.ColumnSelectorProperty.Builder =
       CfnJob.ColumnSelectorProperty.builder()
 
+  /**
+   * @param name The name of a column from a dataset.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param regex A regular expression for selecting a column from a dataset.
+   */
   public fun regex(regex: String) {
     cdkBuilder.regex(regex)
   }

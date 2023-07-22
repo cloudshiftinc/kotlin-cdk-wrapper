@@ -21,18 +21,42 @@ public class CfnReadinessCheckDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the readiness check to create.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-readinesscheck.html#cfn-route53recoveryreadiness-readinesscheck-readinesscheckname)
+   * @param readinessCheckName The name of the readiness check to create. 
+   */
   public fun readinessCheckName(readinessCheckName: String) {
     cdkBuilder.readinessCheckName(readinessCheckName)
   }
 
+  /**
+   * The name of the resource set to check.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-readinesscheck.html#cfn-route53recoveryreadiness-readinesscheck-resourcesetname)
+   * @param resourceSetName The name of the resource set to check. 
+   */
   public fun resourceSetName(resourceSetName: String) {
     cdkBuilder.resourceSetName(resourceSetName)
   }
 
+  /**
+   * A collection of tags associated with a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-readinesscheck.html#cfn-route53recoveryreadiness-readinesscheck-tags)
+   * @param tags A collection of tags associated with a resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A collection of tags associated with a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-readinesscheck.html#cfn-route53recoveryreadiness-readinesscheck-tags)
+   * @param tags A collection of tags associated with a resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

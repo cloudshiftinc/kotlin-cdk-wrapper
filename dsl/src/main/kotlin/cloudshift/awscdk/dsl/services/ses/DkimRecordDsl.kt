@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.ses.DkimRecord
 public class DkimRecordDsl {
   private val cdkBuilder: DkimRecord.Builder = DkimRecord.builder()
 
+  /**
+   * @param name The name of the record. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value of the record. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

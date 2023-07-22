@@ -30,52 +30,128 @@ public class CfnTransitGatewayVpcAttachmentDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The IDs of one or more subnets to add.
+   *
+   * You can specify at most one subnet per Availability Zone.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-addsubnetids)
+   * @param addSubnetIds The IDs of one or more subnets to add. 
+   */
   public fun addSubnetIds(vararg addSubnetIds: String) {
     _addSubnetIds.addAll(listOf(*addSubnetIds))
   }
 
+  /**
+   * The IDs of one or more subnets to add.
+   *
+   * You can specify at most one subnet per Availability Zone.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-addsubnetids)
+   * @param addSubnetIds The IDs of one or more subnets to add. 
+   */
   public fun addSubnetIds(addSubnetIds: Collection<String>) {
     _addSubnetIds.addAll(addSubnetIds)
   }
 
-  public fun options(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The VPC attachment options.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-options)
+   * @param options The VPC attachment options. 
+   */
+  public fun options(options: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(options)
     cdkBuilder.options(builder.map)
   }
 
+  /**
+   * The VPC attachment options.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-options)
+   * @param options The VPC attachment options. 
+   */
   public fun options(options: Any) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * The IDs of one or more subnets to remove.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-removesubnetids)
+   * @param removeSubnetIds The IDs of one or more subnets to remove. 
+   */
   public fun removeSubnetIds(vararg removeSubnetIds: String) {
     _removeSubnetIds.addAll(listOf(*removeSubnetIds))
   }
 
+  /**
+   * The IDs of one or more subnets to remove.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-removesubnetids)
+   * @param removeSubnetIds The IDs of one or more subnets to remove. 
+   */
   public fun removeSubnetIds(removeSubnetIds: Collection<String>) {
     _removeSubnetIds.addAll(removeSubnetIds)
   }
 
+  /**
+   * The IDs of the subnets.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-subnetids)
+   * @param subnetIds The IDs of the subnets. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * The IDs of the subnets.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-subnetids)
+   * @param subnetIds The IDs of the subnets. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * The tags for the VPC attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-tags)
+   * @param tags The tags for the VPC attachment. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags for the VPC attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-tags)
+   * @param tags The tags for the VPC attachment. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ID of the transit gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-transitgatewayid)
+   * @param transitGatewayId The ID of the transit gateway. 
+   */
   public fun transitGatewayId(transitGatewayId: String) {
     cdkBuilder.transitGatewayId(transitGatewayId)
   }
 
+  /**
+   * The ID of the VPC.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html#cfn-ec2-transitgatewayvpcattachment-vpcid)
+   * @param vpcId The ID of the VPC. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

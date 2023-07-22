@@ -13,30 +13,83 @@ public class CfnResponseHeadersPolicyXSSProtectionPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.XSSProtectionProperty.Builder =
       CfnResponseHeadersPolicy.XSSProtectionProperty.builder()
 
+  /**
+   * @param modeBlock A Boolean that determines whether CloudFront includes the `mode=block`
+   * directive in the `X-XSS-Protection` header.
+   * For more information about this directive, see
+   * [X-XSS-Protection](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+   * in the MDN Web Docs.
+   */
   public fun modeBlock(modeBlock: Boolean) {
     cdkBuilder.modeBlock(modeBlock)
   }
 
+  /**
+   * @param modeBlock A Boolean that determines whether CloudFront includes the `mode=block`
+   * directive in the `X-XSS-Protection` header.
+   * For more information about this directive, see
+   * [X-XSS-Protection](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+   * in the MDN Web Docs.
+   */
   public fun modeBlock(modeBlock: IResolvable) {
     cdkBuilder.modeBlock(modeBlock)
   }
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides the `X-XSS-Protection`
+   * HTTP response header received from the origin with the one specified in this response headers
+   * policy. 
+   */
   public fun `override`(`override`: Boolean) {
     cdkBuilder.`override`(`override`)
   }
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides the `X-XSS-Protection`
+   * HTTP response header received from the origin with the one specified in this response headers
+   * policy. 
+   */
   public fun `override`(`override`: IResolvable) {
     cdkBuilder.`override`(`override`)
   }
 
+  /**
+   * @param protection A Boolean that determines the value of the `X-XSS-Protection` HTTP response
+   * header. 
+   * When this setting is `true` , the value of the `X-XSS-Protection` header is `1` . When this
+   * setting is `false` , the value of the `X-XSS-Protection` header is `0` .
+   *
+   * For more information about these settings, see
+   * [X-XSS-Protection](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+   * in the MDN Web Docs.
+   */
   public fun protection(protection: Boolean) {
     cdkBuilder.protection(protection)
   }
 
+  /**
+   * @param protection A Boolean that determines the value of the `X-XSS-Protection` HTTP response
+   * header. 
+   * When this setting is `true` , the value of the `X-XSS-Protection` header is `1` . When this
+   * setting is `false` , the value of the `X-XSS-Protection` header is `0` .
+   *
+   * For more information about these settings, see
+   * [X-XSS-Protection](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+   * in the MDN Web Docs.
+   */
   public fun protection(protection: IResolvable) {
     cdkBuilder.protection(protection)
   }
 
+  /**
+   * @param reportUri A reporting URI, which CloudFront uses as the value of the `report` directive
+   * in the `X-XSS-Protection` header.
+   * You cannot specify a `ReportUri` when `ModeBlock` is `true` .
+   *
+   * For more information about using a reporting URL, see
+   * [X-XSS-Protection](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+   * in the MDN Web Docs.
+   */
   public fun reportUri(reportUri: String) {
     cdkBuilder.reportUri(reportUri)
   }

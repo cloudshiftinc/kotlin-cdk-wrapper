@@ -11,10 +11,16 @@ public class CfnDashboardHeatMapFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.HeatMapFieldWellsProperty.Builder =
       CfnDashboard.HeatMapFieldWellsProperty.builder()
 
+  /**
+   * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
+   */
   public fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: IResolvable) {
     cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
   }
 
+  /**
+   * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
+   */
   public
       fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: CfnDashboard.HeatMapAggregatedFieldWellsProperty) {
     cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)

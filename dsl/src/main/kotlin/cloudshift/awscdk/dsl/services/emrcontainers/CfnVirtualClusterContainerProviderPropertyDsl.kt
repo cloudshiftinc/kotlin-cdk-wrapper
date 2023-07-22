@@ -12,18 +12,36 @@ public class CfnVirtualClusterContainerProviderPropertyDsl {
   private val cdkBuilder: CfnVirtualCluster.ContainerProviderProperty.Builder =
       CfnVirtualCluster.ContainerProviderProperty.builder()
 
+  /**
+   * @param id The ID of the container cluster. 
+   * *Minimum* : 1
+   *
+   * *Maximum* : 100
+   *
+   * *Pattern* : `^[0-9A-Za-z][A-Za-z0-9\-_]*`
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param info The information about the container cluster. 
+   */
   public fun info(info: IResolvable) {
     cdkBuilder.info(info)
   }
 
+  /**
+   * @param info The information about the container cluster. 
+   */
   public fun info(info: CfnVirtualCluster.ContainerInfoProperty) {
     cdkBuilder.info(info)
   }
 
+  /**
+   * @param type The type of the container provider. 
+   * Amazon EKS is the only supported type as of now.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

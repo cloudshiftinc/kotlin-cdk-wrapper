@@ -11,10 +11,18 @@ public class CfnConnectorConnectorProvisioningConfigPropertyDsl {
   private val cdkBuilder: CfnConnector.ConnectorProvisioningConfigProperty.Builder =
       CfnConnector.ConnectorProvisioningConfigProperty.builder()
 
+  /**
+   * @param lambda Contains information about the configuration of the lambda which is being
+   * registered as the connector.
+   */
   public fun lambda(lambda: IResolvable) {
     cdkBuilder.lambda(lambda)
   }
 
+  /**
+   * @param lambda Contains information about the configuration of the lambda which is being
+   * registered as the connector.
+   */
   public fun lambda(lambda: CfnConnector.LambdaConnectorProvisioningConfigProperty) {
     cdkBuilder.lambda(lambda)
   }

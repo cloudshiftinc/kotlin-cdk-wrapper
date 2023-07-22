@@ -10,10 +10,25 @@ import software.amazon.awscdk.services.macie.CfnSessionProps
 public class CfnSessionPropsDsl {
   private val cdkBuilder: CfnSessionProps.Builder = CfnSessionProps.builder()
 
+  /**
+   * @param findingPublishingFrequency Specifies how often Amazon Macie publishes updates to policy
+   * findings for the account.
+   * This includes publishing updates to AWS Security Hub and Amazon EventBridge (formerly Amazon
+   * CloudWatch Events ). Valid values are:
+   *
+   * * FIFTEEN_MINUTES
+   * * ONE_HOUR
+   * * SIX_HOURS
+   */
   public fun findingPublishingFrequency(findingPublishingFrequency: String) {
     cdkBuilder.findingPublishingFrequency(findingPublishingFrequency)
   }
 
+  /**
+   * @param status The status of Amazon Macie for the account.
+   * Valid values are: `ENABLED` , start or resume all Macie activities for the account; and,
+   * `PAUSED` , suspend all Macie activities for the account.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

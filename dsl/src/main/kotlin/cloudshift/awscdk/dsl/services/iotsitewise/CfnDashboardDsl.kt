@@ -21,26 +21,74 @@ public class CfnDashboardDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The dashboard definition specified in a JSON literal.
+   *
+   * For detailed information, see [Creating dashboards
+   * (CLI)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-dashboards-using-aws-cli.html)
+   * in the *AWS IoT SiteWise User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html#cfn-iotsitewise-dashboard-dashboarddefinition)
+   * @param dashboardDefinition The dashboard definition specified in a JSON literal. 
+   */
   public fun dashboardDefinition(dashboardDefinition: String) {
     cdkBuilder.dashboardDefinition(dashboardDefinition)
   }
 
+  /**
+   * A description for the dashboard.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html#cfn-iotsitewise-dashboard-dashboarddescription)
+   * @param dashboardDescription A description for the dashboard. 
+   */
   public fun dashboardDescription(dashboardDescription: String) {
     cdkBuilder.dashboardDescription(dashboardDescription)
   }
 
+  /**
+   * A friendly name for the dashboard.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html#cfn-iotsitewise-dashboard-dashboardname)
+   * @param dashboardName A friendly name for the dashboard. 
+   */
   public fun dashboardName(dashboardName: String) {
     cdkBuilder.dashboardName(dashboardName)
   }
 
+  /**
+   * The ID of the project in which to create the dashboard.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html#cfn-iotsitewise-dashboard-projectid)
+   * @param projectId The ID of the project in which to create the dashboard. 
+   */
   public fun projectId(projectId: String) {
     cdkBuilder.projectId(projectId)
   }
 
+  /**
+   * A list of key-value pairs that contain metadata for the dashboard.
+   *
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html#cfn-iotsitewise-dashboard-tags)
+   * @param tags A list of key-value pairs that contain metadata for the dashboard. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A list of key-value pairs that contain metadata for the dashboard.
+   *
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html#cfn-iotsitewise-dashboard-tags)
+   * @param tags A list of key-value pairs that contain metadata for the dashboard. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

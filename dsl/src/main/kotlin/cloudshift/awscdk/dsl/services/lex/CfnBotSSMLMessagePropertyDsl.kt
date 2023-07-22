@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.lex.CfnBot
 public class CfnBotSSMLMessagePropertyDsl {
   private val cdkBuilder: CfnBot.SSMLMessageProperty.Builder = CfnBot.SSMLMessageProperty.builder()
 
+  /**
+   * @param value The SSML text that defines the prompt. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

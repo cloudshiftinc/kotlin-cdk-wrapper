@@ -11,6 +11,11 @@ public class CfnPlaybackConfigurationHlsConfigurationPropertyDsl {
   private val cdkBuilder: CfnPlaybackConfiguration.HlsConfigurationProperty.Builder =
       CfnPlaybackConfiguration.HlsConfigurationProperty.builder()
 
+  /**
+   * @param manifestEndpointPrefix The URL that is used to initiate a playback session for devices
+   * that support Apple HLS.
+   * The session uses server-side reporting.
+   */
   public fun manifestEndpointPrefix(manifestEndpointPrefix: String) {
     cdkBuilder.manifestEndpointPrefix(manifestEndpointPrefix)
   }

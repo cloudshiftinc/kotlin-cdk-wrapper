@@ -17,18 +17,40 @@ public class RouteDsl(
 ) {
   private val cdkBuilder: Route.Builder = Route.Builder.create(scope, id)
 
+  /**
+   * The service mesh to define the route in.
+   *
+   * @param mesh The service mesh to define the route in. 
+   */
   public fun mesh(mesh: IMesh) {
     cdkBuilder.mesh(mesh)
   }
 
+  /**
+   * The name of the route.
+   *
+   * Default: - An automatically generated name
+   *
+   * @param routeName The name of the route. 
+   */
   public fun routeName(routeName: String) {
     cdkBuilder.routeName(routeName)
   }
 
+  /**
+   * Protocol specific spec.
+   *
+   * @param routeSpec Protocol specific spec. 
+   */
   public fun routeSpec(routeSpec: RouteSpec) {
     cdkBuilder.routeSpec(routeSpec)
   }
 
+  /**
+   * The VirtualRouter the Route belongs to.
+   *
+   * @param virtualRouter The VirtualRouter the Route belongs to. 
+   */
   public fun virtualRouter(virtualRouter: IVirtualRouter) {
     cdkBuilder.virtualRouter(virtualRouter)
   }

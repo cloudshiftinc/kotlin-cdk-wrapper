@@ -13,22 +13,37 @@ public class CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl {
   private val cdkBuilder: CfnFHIRDatastore.IdentityProviderConfigurationProperty.Builder =
       CfnFHIRDatastore.IdentityProviderConfigurationProperty.builder()
 
+  /**
+   * @param authorizationStrategy the value to be set. 
+   */
   public fun authorizationStrategy(authorizationStrategy: String) {
     cdkBuilder.authorizationStrategy(authorizationStrategy)
   }
 
+  /**
+   * @param fineGrainedAuthorizationEnabled the value to be set.
+   */
   public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: Boolean) {
     cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled)
   }
 
+  /**
+   * @param fineGrainedAuthorizationEnabled the value to be set.
+   */
   public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable) {
     cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled)
   }
 
+  /**
+   * @param idpLambdaArn the value to be set.
+   */
   public fun idpLambdaArn(idpLambdaArn: String) {
     cdkBuilder.idpLambdaArn(idpLambdaArn)
   }
 
+  /**
+   * @param metadata the value to be set.
+   */
   public fun metadata(metadata: String) {
     cdkBuilder.metadata(metadata)
   }

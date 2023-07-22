@@ -20,46 +20,79 @@ public class CfnVerifiedAccessTrustProviderPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description for the AWS Verified Access trust provider.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param deviceOptions The options for device-identity trust provider.
+   */
   public fun deviceOptions(deviceOptions: IResolvable) {
     cdkBuilder.deviceOptions(deviceOptions)
   }
 
+  /**
+   * @param deviceOptions The options for device-identity trust provider.
+   */
   public fun deviceOptions(deviceOptions: CfnVerifiedAccessTrustProvider.DeviceOptionsProperty) {
     cdkBuilder.deviceOptions(deviceOptions)
   }
 
+  /**
+   * @param deviceTrustProviderType The type of device-based trust provider.
+   */
   public fun deviceTrustProviderType(deviceTrustProviderType: String) {
     cdkBuilder.deviceTrustProviderType(deviceTrustProviderType)
   }
 
+  /**
+   * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
+   */
   public fun oidcOptions(oidcOptions: IResolvable) {
     cdkBuilder.oidcOptions(oidcOptions)
   }
 
+  /**
+   * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
+   */
   public fun oidcOptions(oidcOptions: CfnVerifiedAccessTrustProvider.OidcOptionsProperty) {
     cdkBuilder.oidcOptions(oidcOptions)
   }
 
+  /**
+   * @param policyReferenceName The identifier to be used when working with policy rules. 
+   */
   public fun policyReferenceName(policyReferenceName: String) {
     cdkBuilder.policyReferenceName(policyReferenceName)
   }
 
+  /**
+   * @param tags The tags.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param trustProviderType The type of Verified Access trust provider. 
+   */
   public fun trustProviderType(trustProviderType: String) {
     cdkBuilder.trustProviderType(trustProviderType)
   }
 
+  /**
+   * @param userTrustProviderType The type of user-based trust provider.
+   */
   public fun userTrustProviderType(userTrustProviderType: String) {
     cdkBuilder.userTrustProviderType(userTrustProviderType)
   }

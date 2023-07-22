@@ -11,10 +11,16 @@ public class CfnMemberMemberFrameworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.MemberFrameworkConfigurationProperty.Builder =
       CfnMember.MemberFrameworkConfigurationProperty.builder()
 
+  /**
+   * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+   */
   public fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
     cdkBuilder.memberFabricConfiguration(memberFabricConfiguration)
   }
 
+  /**
+   * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
+   */
   public
       fun memberFabricConfiguration(memberFabricConfiguration: CfnMember.MemberFabricConfigurationProperty) {
     cdkBuilder.memberFabricConfiguration(memberFabricConfiguration)

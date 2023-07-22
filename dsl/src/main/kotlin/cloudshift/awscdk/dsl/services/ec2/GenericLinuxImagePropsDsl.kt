@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ec2.UserData
 public class GenericLinuxImagePropsDsl {
   private val cdkBuilder: GenericLinuxImageProps.Builder = GenericLinuxImageProps.builder()
 
+  /**
+   * @param userData Initial user data.
+   */
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)
   }

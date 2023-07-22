@@ -20,59 +20,101 @@ public class CfnOrganizationConfigRuleOrganizationCustomPolicyRuleMetadataProper
 
   private val _resourceTypesScope: MutableList<String> = mutableListOf()
 
+  /**
+   * @param debugLogDeliveryAccounts the value to be set.
+   */
   public fun debugLogDeliveryAccounts(vararg debugLogDeliveryAccounts: String) {
     _debugLogDeliveryAccounts.addAll(listOf(*debugLogDeliveryAccounts))
   }
 
+  /**
+   * @param debugLogDeliveryAccounts the value to be set.
+   */
   public fun debugLogDeliveryAccounts(debugLogDeliveryAccounts: Collection<String>) {
     _debugLogDeliveryAccounts.addAll(debugLogDeliveryAccounts)
   }
 
+  /**
+   * @param description the value to be set.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param inputParameters the value to be set.
+   */
   public fun inputParameters(inputParameters: String) {
     cdkBuilder.inputParameters(inputParameters)
   }
 
+  /**
+   * @param maximumExecutionFrequency the value to be set.
+   */
   public fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
     cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
   }
 
+  /**
+   * @param organizationConfigRuleTriggerTypes the value to be set.
+   */
   public fun organizationConfigRuleTriggerTypes(vararg organizationConfigRuleTriggerTypes: String) {
     _organizationConfigRuleTriggerTypes.addAll(listOf(*organizationConfigRuleTriggerTypes))
   }
 
+  /**
+   * @param organizationConfigRuleTriggerTypes the value to be set.
+   */
   public
       fun organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes: Collection<String>) {
     _organizationConfigRuleTriggerTypes.addAll(organizationConfigRuleTriggerTypes)
   }
 
+  /**
+   * @param policyText the value to be set. 
+   */
   public fun policyText(policyText: String) {
     cdkBuilder.policyText(policyText)
   }
 
+  /**
+   * @param resourceIdScope the value to be set.
+   */
   public fun resourceIdScope(resourceIdScope: String) {
     cdkBuilder.resourceIdScope(resourceIdScope)
   }
 
+  /**
+   * @param resourceTypesScope the value to be set.
+   */
   public fun resourceTypesScope(vararg resourceTypesScope: String) {
     _resourceTypesScope.addAll(listOf(*resourceTypesScope))
   }
 
+  /**
+   * @param resourceTypesScope the value to be set.
+   */
   public fun resourceTypesScope(resourceTypesScope: Collection<String>) {
     _resourceTypesScope.addAll(resourceTypesScope)
   }
 
+  /**
+   * @param runtime the value to be set. 
+   */
   public fun runtime(runtime: String) {
     cdkBuilder.runtime(runtime)
   }
 
+  /**
+   * @param tagKeyScope the value to be set.
+   */
   public fun tagKeyScope(tagKeyScope: String) {
     cdkBuilder.tagKeyScope(tagKeyScope)
   }
 
+  /**
+   * @param tagValueScope the value to be set.
+   */
   public fun tagValueScope(tagValueScope: String) {
     cdkBuilder.tagValueScope(tagValueScope)
   }

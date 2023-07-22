@@ -19,28 +19,61 @@ public class CfnCampaignCampaignInAppMessagePropertyDsl {
 
   private val _content: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param content An array that contains configurtion information about the in-app message for the
+   * campaign, including title and body text, text colors, background colors, image URLs, and button
+   * configurations.
+   */
   public fun content(vararg content: Any) {
     _content.addAll(listOf(*content))
   }
 
+  /**
+   * @param content An array that contains configurtion information about the in-app message for the
+   * campaign, including title and body text, text colors, background colors, image URLs, and button
+   * configurations.
+   */
   public fun content(content: Collection<Any>) {
     _content.addAll(content)
   }
 
+  /**
+   * @param content An array that contains configurtion information about the in-app message for the
+   * campaign, including title and body text, text colors, background colors, image URLs, and button
+   * configurations.
+   */
   public fun content(content: IResolvable) {
     cdkBuilder.content(content)
   }
 
-  public fun customConfig(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param customConfig Custom data, in the form of key-value pairs, that is included in an in-app
+   * messaging payload.
+   */
+  public fun customConfig(customConfig: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(customConfig)
     cdkBuilder.customConfig(builder.map)
   }
 
+  /**
+   * @param customConfig Custom data, in the form of key-value pairs, that is included in an in-app
+   * messaging payload.
+   */
   public fun customConfig(customConfig: Any) {
     cdkBuilder.customConfig(customConfig)
   }
 
+  /**
+   * @param layout A string that describes how the in-app message will appear. You can specify one
+   * of the following:.
+   * * `BOTTOM_BANNER` – a message that appears as a banner at the bottom of the page.
+   * * `TOP_BANNER` – a message that appears as a banner at the top of the page.
+   * * `OVERLAYS` – a message that covers entire screen.
+   * * `MOBILE_FEED` – a message that appears in a window in front of the page.
+   * * `MIDDLE_BANNER` – a message that appears as a banner in the middle of the page.
+   * * `CAROUSEL` – a scrollable layout of up to five unique messages.
+   */
   public fun layout(layout: String) {
     cdkBuilder.layout(layout)
   }

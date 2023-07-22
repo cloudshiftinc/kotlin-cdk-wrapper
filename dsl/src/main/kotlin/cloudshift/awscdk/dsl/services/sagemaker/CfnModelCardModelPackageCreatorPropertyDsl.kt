@@ -11,6 +11,9 @@ public class CfnModelCardModelPackageCreatorPropertyDsl {
   private val cdkBuilder: CfnModelCard.ModelPackageCreatorProperty.Builder =
       CfnModelCard.ModelPackageCreatorProperty.builder()
 
+  /**
+   * @param userProfileName The name of the user's profile in Studio.
+   */
   public fun userProfileName(userProfileName: String) {
     cdkBuilder.userProfileName(userProfileName)
   }

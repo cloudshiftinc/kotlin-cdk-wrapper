@@ -11,22 +11,35 @@ import software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig
 public class ServiceDiscoveryConfigDsl {
   private val cdkBuilder: ServiceDiscoveryConfig.Builder = ServiceDiscoveryConfig.builder()
 
-  public fun cloudmap(block: CfnVirtualNodeAwsCloudMapServiceDiscoveryPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param cloudmap Cloud Map based Service Discovery.
+   */
+  public fun cloudmap(cloudmap: CfnVirtualNodeAwsCloudMapServiceDiscoveryPropertyDsl.() -> Unit =
+      {}) {
     val builder = CfnVirtualNodeAwsCloudMapServiceDiscoveryPropertyDsl()
-    builder.apply(block)
+    builder.apply(cloudmap)
     cdkBuilder.cloudmap(builder.build())
   }
 
+  /**
+   * @param cloudmap Cloud Map based Service Discovery.
+   */
   public fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty) {
     cdkBuilder.cloudmap(cloudmap)
   }
 
-  public fun dns(block: CfnVirtualNodeDnsServiceDiscoveryPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param dns DNS based Service Discovery.
+   */
+  public fun dns(dns: CfnVirtualNodeDnsServiceDiscoveryPropertyDsl.() -> Unit = {}) {
     val builder = CfnVirtualNodeDnsServiceDiscoveryPropertyDsl()
-    builder.apply(block)
+    builder.apply(dns)
     cdkBuilder.dns(builder.build())
   }
 
+  /**
+   * @param dns DNS based Service Discovery.
+   */
   public fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty) {
     cdkBuilder.dns(dns)
   }

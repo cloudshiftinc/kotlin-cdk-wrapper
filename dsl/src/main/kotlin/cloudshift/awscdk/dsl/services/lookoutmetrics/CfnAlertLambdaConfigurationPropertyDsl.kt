@@ -11,10 +11,16 @@ public class CfnAlertLambdaConfigurationPropertyDsl {
   private val cdkBuilder: CfnAlert.LambdaConfigurationProperty.Builder =
       CfnAlert.LambdaConfigurationProperty.builder()
 
+  /**
+   * @param lambdaArn The ARN of the Lambda function. 
+   */
   public fun lambdaArn(lambdaArn: String) {
     cdkBuilder.lambdaArn(lambdaArn)
   }
 
+  /**
+   * @param roleArn The ARN of an IAM role that has permission to invoke the Lambda function. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

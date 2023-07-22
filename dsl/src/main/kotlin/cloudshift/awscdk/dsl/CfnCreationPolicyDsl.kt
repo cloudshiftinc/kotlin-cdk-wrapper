@@ -13,28 +13,51 @@ import software.amazon.awscdk.CfnResourceSignal
 public class CfnCreationPolicyDsl {
   private val cdkBuilder: CfnCreationPolicy.Builder = CfnCreationPolicy.builder()
 
-  public fun autoScalingCreationPolicy(block: CfnResourceAutoScalingCreationPolicyDsl.() -> Unit =
-      {}) {
+  /**
+   * @param autoScalingCreationPolicy For an Auto Scaling group replacement update, specifies how
+   * many instances must signal success for the update to succeed.
+   */
+  public
+      fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicyDsl.() -> Unit
+      = {}) {
     val builder = CfnResourceAutoScalingCreationPolicyDsl()
-    builder.apply(block)
+    builder.apply(autoScalingCreationPolicy)
     cdkBuilder.autoScalingCreationPolicy(builder.build())
   }
 
+  /**
+   * @param autoScalingCreationPolicy For an Auto Scaling group replacement update, specifies how
+   * many instances must signal success for the update to succeed.
+   */
   public
       fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy) {
     cdkBuilder.autoScalingCreationPolicy(autoScalingCreationPolicy)
   }
 
-  public fun resourceSignal(block: CfnResourceSignalDsl.() -> Unit = {}) {
+  /**
+   * @param resourceSignal When AWS CloudFormation creates the associated resource, configures the
+   * number of required success signals and the length of time that AWS CloudFormation waits for those
+   * signals.
+   */
+  public fun resourceSignal(resourceSignal: CfnResourceSignalDsl.() -> Unit = {}) {
     val builder = CfnResourceSignalDsl()
-    builder.apply(block)
+    builder.apply(resourceSignal)
     cdkBuilder.resourceSignal(builder.build())
   }
 
+  /**
+   * @param resourceSignal When AWS CloudFormation creates the associated resource, configures the
+   * number of required success signals and the length of time that AWS CloudFormation waits for those
+   * signals.
+   */
   public fun resourceSignal(resourceSignal: CfnResourceSignal) {
     cdkBuilder.resourceSignal(resourceSignal)
   }
 
+  /**
+   * @param startFleet For an AppStream Fleet creation, specifies that the fleet is started after
+   * creation.
+   */
   public fun startFleet(startFleet: Boolean) {
     cdkBuilder.startFleet(startFleet)
   }

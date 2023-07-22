@@ -10,18 +10,32 @@ import software.amazon.awscdk.services.opsworks.CfnVolumeProps
 public class CfnVolumePropsDsl {
   private val cdkBuilder: CfnVolumeProps.Builder = CfnVolumeProps.builder()
 
+  /**
+   * @param ec2VolumeId The Amazon EC2 volume ID. 
+   */
   public fun ec2VolumeId(ec2VolumeId: String) {
     cdkBuilder.ec2VolumeId(ec2VolumeId)
   }
 
+  /**
+   * @param mountPoint The volume mount point.
+   * For example, "/mnt/disk1".
+   */
   public fun mountPoint(mountPoint: String) {
     cdkBuilder.mountPoint(mountPoint)
   }
 
+  /**
+   * @param name The volume name.
+   * Volume names are a maximum of 128 characters.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param stackId The stack ID. 
+   */
   public fun stackId(stackId: String) {
     cdkBuilder.stackId(stackId)
   }

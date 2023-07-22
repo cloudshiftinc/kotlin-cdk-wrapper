@@ -11,6 +11,9 @@ public class CfnConnectorProfileMarketoConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param instanceUrl The location of the Marketo resource. 
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }

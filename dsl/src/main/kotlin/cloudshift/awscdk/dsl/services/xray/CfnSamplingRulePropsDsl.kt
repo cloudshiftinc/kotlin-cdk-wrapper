@@ -18,43 +18,76 @@ public class CfnSamplingRulePropsDsl {
 
   private val _tags: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param ruleName The ARN of the sampling rule.
+   * Specify a rule by either name or ARN, but not both.
+   * @deprecated this property has been deprecated
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun ruleName(ruleName: String) {
     cdkBuilder.ruleName(ruleName)
   }
 
+  /**
+   * @param samplingRule The sampling rule to be created or updated.
+   */
   public fun samplingRule(samplingRule: IResolvable) {
     cdkBuilder.samplingRule(samplingRule)
   }
 
+  /**
+   * @param samplingRule The sampling rule to be created or updated.
+   */
   public fun samplingRule(samplingRule: CfnSamplingRule.SamplingRuleProperty) {
     cdkBuilder.samplingRule(samplingRule)
   }
 
+  /**
+   * @param samplingRuleRecord the value to be set.
+   * @deprecated this property has been deprecated
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun samplingRuleRecord(samplingRuleRecord: IResolvable) {
     cdkBuilder.samplingRuleRecord(samplingRuleRecord)
   }
 
+  /**
+   * @param samplingRuleRecord the value to be set.
+   * @deprecated this property has been deprecated
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun samplingRuleRecord(samplingRuleRecord: CfnSamplingRule.SamplingRuleRecordProperty) {
     cdkBuilder.samplingRuleRecord(samplingRuleRecord)
   }
 
+  /**
+   * @param samplingRuleUpdate the value to be set.
+   * @deprecated this property has been deprecated
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun samplingRuleUpdate(samplingRuleUpdate: IResolvable) {
     cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
   }
 
+  /**
+   * @param samplingRuleUpdate the value to be set.
+   * @deprecated this property has been deprecated
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun samplingRuleUpdate(samplingRuleUpdate: CfnSamplingRule.SamplingRuleUpdateProperty) {
     cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   */
   public fun tags(vararg tags: Any) {
     _tags.addAll(listOf(*tags))
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   */
   public fun tags(tags: Collection<Any>) {
     _tags.addAll(tags)
   }

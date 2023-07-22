@@ -17,30 +17,53 @@ public class DatabaseInstanceAttributesDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
+  /**
+   * @param engine The engine of the existing database Instance.
+   */
   public fun engine(engine: IInstanceEngine) {
     cdkBuilder.engine(engine)
   }
 
+  /**
+   * @param instanceEndpointAddress The endpoint address. 
+   */
   public fun instanceEndpointAddress(instanceEndpointAddress: String) {
     cdkBuilder.instanceEndpointAddress(instanceEndpointAddress)
   }
 
+  /**
+   * @param instanceIdentifier The instance identifier. 
+   */
   public fun instanceIdentifier(instanceIdentifier: String) {
     cdkBuilder.instanceIdentifier(instanceIdentifier)
   }
 
+  /**
+   * @param instanceResourceId The AWS Region-unique, immutable identifier for the DB instance.
+   * This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB
+   * instance is accessed.
+   */
   public fun instanceResourceId(instanceResourceId: String) {
     cdkBuilder.instanceResourceId(instanceResourceId)
   }
 
+  /**
+   * @param port The database port. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param securityGroups The security groups of the instance. 
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The security groups of the instance. 
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }

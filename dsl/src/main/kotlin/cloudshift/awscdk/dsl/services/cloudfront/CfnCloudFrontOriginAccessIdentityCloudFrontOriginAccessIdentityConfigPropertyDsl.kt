@@ -12,6 +12,10 @@ public class CfnCloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConf
       CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty.Builder =
       CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty.builder()
 
+  /**
+   * @param comment A comment to describe the origin access identity. 
+   * The comment cannot be longer than 128 characters.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }

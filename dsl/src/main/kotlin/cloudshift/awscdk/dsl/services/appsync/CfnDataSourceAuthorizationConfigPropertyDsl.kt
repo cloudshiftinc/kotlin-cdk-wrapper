@@ -12,14 +12,24 @@ public class CfnDataSourceAuthorizationConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.AuthorizationConfigProperty.Builder =
       CfnDataSource.AuthorizationConfigProperty.builder()
 
+  /**
+   * @param authorizationType The authorization type that the HTTP endpoint requires. 
+   * * *AWS_IAM* : The authorization type is Signature Version 4 (SigV4).
+   */
   public fun authorizationType(authorizationType: String) {
     cdkBuilder.authorizationType(authorizationType)
   }
 
+  /**
+   * @param awsIamConfig The AWS Identity and Access Management settings.
+   */
   public fun awsIamConfig(awsIamConfig: IResolvable) {
     cdkBuilder.awsIamConfig(awsIamConfig)
   }
 
+  /**
+   * @param awsIamConfig The AWS Identity and Access Management settings.
+   */
   public fun awsIamConfig(awsIamConfig: CfnDataSource.AwsIamConfigProperty) {
     cdkBuilder.awsIamConfig(awsIamConfig)
   }

@@ -16,18 +16,32 @@ public class CfnAnalysisCategoryDrillDownFilterPropertyDsl {
 
   private val _categoryValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param categoryValues A list of the string inputs that are the values of the category drill
+   * down filter. 
+   */
   public fun categoryValues(vararg categoryValues: String) {
     _categoryValues.addAll(listOf(*categoryValues))
   }
 
+  /**
+   * @param categoryValues A list of the string inputs that are the values of the category drill
+   * down filter. 
+   */
   public fun categoryValues(categoryValues: Collection<String>) {
     _categoryValues.addAll(categoryValues)
   }
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }

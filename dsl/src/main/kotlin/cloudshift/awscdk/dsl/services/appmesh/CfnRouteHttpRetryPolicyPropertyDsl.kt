@@ -19,30 +19,63 @@ public class CfnRouteHttpRetryPolicyPropertyDsl {
 
   private val _tcpRetryEvents: MutableList<String> = mutableListOf()
 
+  /**
+   * @param httpRetryEvents Specify at least one of the following values.
+   * * *server-error* – HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511
+   * * *gateway-error* – HTTP status codes 502, 503, and 504
+   * * *client-error* – HTTP status code 409
+   * * *stream-error* – Retry on refused stream
+   */
   public fun httpRetryEvents(vararg httpRetryEvents: String) {
     _httpRetryEvents.addAll(listOf(*httpRetryEvents))
   }
 
+  /**
+   * @param httpRetryEvents Specify at least one of the following values.
+   * * *server-error* – HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511
+   * * *gateway-error* – HTTP status codes 502, 503, and 504
+   * * *client-error* – HTTP status code 409
+   * * *stream-error* – Retry on refused stream
+   */
   public fun httpRetryEvents(httpRetryEvents: Collection<String>) {
     _httpRetryEvents.addAll(httpRetryEvents)
   }
 
+  /**
+   * @param maxRetries The maximum number of retry attempts. 
+   */
   public fun maxRetries(maxRetries: Number) {
     cdkBuilder.maxRetries(maxRetries)
   }
 
+  /**
+   * @param perRetryTimeout The timeout for each retry attempt. 
+   */
   public fun perRetryTimeout(perRetryTimeout: IResolvable) {
     cdkBuilder.perRetryTimeout(perRetryTimeout)
   }
 
+  /**
+   * @param perRetryTimeout The timeout for each retry attempt. 
+   */
   public fun perRetryTimeout(perRetryTimeout: CfnRoute.DurationProperty) {
     cdkBuilder.perRetryTimeout(perRetryTimeout)
   }
 
+  /**
+   * @param tcpRetryEvents Specify a valid value.
+   * The event occurs before any processing of a request has started and is encountered when the
+   * upstream is temporarily or permanently unavailable.
+   */
   public fun tcpRetryEvents(vararg tcpRetryEvents: String) {
     _tcpRetryEvents.addAll(listOf(*tcpRetryEvents))
   }
 
+  /**
+   * @param tcpRetryEvents Specify a valid value.
+   * The event occurs before any processing of a request has started and is encountered when the
+   * upstream is temporarily or permanently unavailable.
+   */
   public fun tcpRetryEvents(tcpRetryEvents: Collection<String>) {
     _tcpRetryEvents.addAll(tcpRetryEvents)
   }

@@ -17,46 +17,89 @@ public class CfnConfigurationSetPropsDsl {
 
   private val _tags: MutableList<CfnConfigurationSet.TagsProperty> = mutableListOf()
 
+  /**
+   * @param deliveryOptions An object that defines the dedicated IP pool that is used to send emails
+   * that you send using the configuration set.
+   */
   public fun deliveryOptions(deliveryOptions: IResolvable) {
     cdkBuilder.deliveryOptions(deliveryOptions)
   }
 
+  /**
+   * @param deliveryOptions An object that defines the dedicated IP pool that is used to send emails
+   * that you send using the configuration set.
+   */
   public fun deliveryOptions(deliveryOptions: CfnConfigurationSet.DeliveryOptionsProperty) {
     cdkBuilder.deliveryOptions(deliveryOptions)
   }
 
+  /**
+   * @param name The name of the configuration set. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param reputationOptions An object that defines whether or not Amazon Pinpoint collects
+   * reputation metrics for the emails that you send that use the configuration set.
+   */
   public fun reputationOptions(reputationOptions: IResolvable) {
     cdkBuilder.reputationOptions(reputationOptions)
   }
 
+  /**
+   * @param reputationOptions An object that defines whether or not Amazon Pinpoint collects
+   * reputation metrics for the emails that you send that use the configuration set.
+   */
   public fun reputationOptions(reputationOptions: CfnConfigurationSet.ReputationOptionsProperty) {
     cdkBuilder.reputationOptions(reputationOptions)
   }
 
+  /**
+   * @param sendingOptions An object that defines whether or not Amazon Pinpoint can send email that
+   * you send using the configuration set.
+   */
   public fun sendingOptions(sendingOptions: IResolvable) {
     cdkBuilder.sendingOptions(sendingOptions)
   }
 
+  /**
+   * @param sendingOptions An object that defines whether or not Amazon Pinpoint can send email that
+   * you send using the configuration set.
+   */
   public fun sendingOptions(sendingOptions: CfnConfigurationSet.SendingOptionsProperty) {
     cdkBuilder.sendingOptions(sendingOptions)
   }
 
+  /**
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the configuration set.
+   */
   public fun tags(tags: CfnConfigurationSetTagsPropertyDsl.() -> Unit) {
     _tags.add(CfnConfigurationSetTagsPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the configuration set.
+   */
   public fun tags(tags: Collection<CfnConfigurationSet.TagsProperty>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param trackingOptions An object that defines the open and click tracking options for emails
+   * that you send using the configuration set.
+   */
   public fun trackingOptions(trackingOptions: IResolvable) {
     cdkBuilder.trackingOptions(trackingOptions)
   }
 
+  /**
+   * @param trackingOptions An object that defines the open and click tracking options for emails
+   * that you send using the configuration set.
+   */
   public fun trackingOptions(trackingOptions: CfnConfigurationSet.TrackingOptionsProperty) {
     cdkBuilder.trackingOptions(trackingOptions)
   }

@@ -18,18 +18,30 @@ public class CfnLocalGatewayRouteTableVPCAssociationPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param localGatewayRouteTableId The ID of the local gateway route table. 
+   */
   public fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
     cdkBuilder.localGatewayRouteTableId(localGatewayRouteTableId)
   }
 
+  /**
+   * @param tags The tags assigned to the association.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags assigned to the association.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param vpcId The ID of the VPC. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

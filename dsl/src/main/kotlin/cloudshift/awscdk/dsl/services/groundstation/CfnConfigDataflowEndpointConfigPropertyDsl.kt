@@ -11,10 +11,17 @@ public class CfnConfigDataflowEndpointConfigPropertyDsl {
   private val cdkBuilder: CfnConfig.DataflowEndpointConfigProperty.Builder =
       CfnConfig.DataflowEndpointConfigProperty.builder()
 
+  /**
+   * @param dataflowEndpointName The name of the dataflow endpoint to use during contacts.
+   */
   public fun dataflowEndpointName(dataflowEndpointName: String) {
     cdkBuilder.dataflowEndpointName(dataflowEndpointName)
   }
 
+  /**
+   * @param dataflowEndpointRegion The region of the dataflow endpoint to use during contacts.
+   * When omitted, Ground Station will use the region of the contact.
+   */
   public fun dataflowEndpointRegion(dataflowEndpointRegion: String) {
     cdkBuilder.dataflowEndpointRegion(dataflowEndpointRegion)
   }

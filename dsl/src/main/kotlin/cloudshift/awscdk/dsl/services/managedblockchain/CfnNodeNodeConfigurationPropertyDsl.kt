@@ -11,10 +11,17 @@ public class CfnNodeNodeConfigurationPropertyDsl {
   private val cdkBuilder: CfnNode.NodeConfigurationProperty.Builder =
       CfnNode.NodeConfigurationProperty.builder()
 
+  /**
+   * @param availabilityZone The Availability Zone in which the node exists. 
+   * Required for Ethereum nodes.
+   */
   public fun availabilityZone(availabilityZone: String) {
     cdkBuilder.availabilityZone(availabilityZone)
   }
 
+  /**
+   * @param instanceType The Amazon Managed Blockchain instance type for the node. 
+   */
   public fun instanceType(instanceType: String) {
     cdkBuilder.instanceType(instanceType)
   }

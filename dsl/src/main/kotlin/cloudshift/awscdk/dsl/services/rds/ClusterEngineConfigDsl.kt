@@ -13,20 +13,32 @@ import software.amazon.awscdk.services.rds.IParameterGroup
 public class ClusterEngineConfigDsl {
   private val cdkBuilder: ClusterEngineConfig.Builder = ClusterEngineConfig.builder()
 
-  public fun features(block: ClusterEngineFeaturesDsl.() -> Unit = {}) {
+  /**
+   * @param features Features supported by the database engine.
+   */
+  public fun features(features: ClusterEngineFeaturesDsl.() -> Unit = {}) {
     val builder = ClusterEngineFeaturesDsl()
-    builder.apply(block)
+    builder.apply(features)
     cdkBuilder.features(builder.build())
   }
 
+  /**
+   * @param features Features supported by the database engine.
+   */
   public fun features(features: ClusterEngineFeatures) {
     cdkBuilder.features(features)
   }
 
+  /**
+   * @param parameterGroup The ParameterGroup to use for the cluster.
+   */
   public fun parameterGroup(parameterGroup: IParameterGroup) {
     cdkBuilder.parameterGroup(parameterGroup)
   }
 
+  /**
+   * @param port The port to use for this cluster, unless the customer specified the port directly.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

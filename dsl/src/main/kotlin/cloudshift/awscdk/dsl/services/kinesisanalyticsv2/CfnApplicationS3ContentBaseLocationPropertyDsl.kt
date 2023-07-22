@@ -11,10 +11,16 @@ public class CfnApplicationS3ContentBaseLocationPropertyDsl {
   private val cdkBuilder: CfnApplication.S3ContentBaseLocationProperty.Builder =
       CfnApplication.S3ContentBaseLocationProperty.builder()
 
+  /**
+   * @param basePath The base path for the S3 bucket.
+   */
   public fun basePath(basePath: String) {
     cdkBuilder.basePath(basePath)
   }
 
+  /**
+   * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
+   */
   public fun bucketArn(bucketArn: String) {
     cdkBuilder.bucketArn(bucketArn)
   }

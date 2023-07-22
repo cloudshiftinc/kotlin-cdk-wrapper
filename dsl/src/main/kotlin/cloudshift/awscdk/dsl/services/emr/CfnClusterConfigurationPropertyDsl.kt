@@ -18,26 +18,49 @@ public class CfnClusterConfigurationPropertyDsl {
 
   private val _configurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param classification The classification within a configuration.
+   */
   public fun classification(classification: String) {
     cdkBuilder.classification(classification)
   }
 
+  /**
+   * @param configurationProperties A list of additional configurations to apply within a
+   * configuration object.
+   */
   public fun configurationProperties(configurationProperties: Map<String, String>) {
     cdkBuilder.configurationProperties(configurationProperties)
   }
 
+  /**
+   * @param configurationProperties A list of additional configurations to apply within a
+   * configuration object.
+   */
   public fun configurationProperties(configurationProperties: IResolvable) {
     cdkBuilder.configurationProperties(configurationProperties)
   }
 
+  /**
+   * @param configurations A list of additional configurations to apply within a configuration
+   * object.
+   */
   public fun configurations(vararg configurations: Any) {
     _configurations.addAll(listOf(*configurations))
   }
 
+  /**
+   * @param configurations A list of additional configurations to apply within a configuration
+   * object.
+   */
   public fun configurations(configurations: Collection<Any>) {
     _configurations.addAll(configurations)
   }
 
+  /**
+   * @param configurations A list of additional configurations to apply within a configuration
+   * object.
+   */
   public fun configurations(configurations: IResolvable) {
     cdkBuilder.configurations(configurations)
   }

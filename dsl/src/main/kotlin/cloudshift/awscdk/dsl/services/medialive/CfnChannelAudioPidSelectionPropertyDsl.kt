@@ -11,6 +11,9 @@ public class CfnChannelAudioPidSelectionPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioPidSelectionProperty.Builder =
       CfnChannel.AudioPidSelectionProperty.builder()
 
+  /**
+   * @param pid Select the audio by this PID.
+   */
   public fun pid(pid: Number) {
     cdkBuilder.pid(pid)
   }

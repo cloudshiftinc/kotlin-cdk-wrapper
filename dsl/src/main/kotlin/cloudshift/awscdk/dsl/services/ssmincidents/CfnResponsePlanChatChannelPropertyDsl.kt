@@ -15,10 +15,20 @@ public class CfnResponsePlanChatChannelPropertyDsl {
 
   private val _chatbotSns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param chatbotSns The SNS targets that AWS Chatbot uses to notify the chat channel of updates
+   * to an incident.
+   * You can also make updates to the incident through the chat channel by using the SNS topics
+   */
   public fun chatbotSns(vararg chatbotSns: String) {
     _chatbotSns.addAll(listOf(*chatbotSns))
   }
 
+  /**
+   * @param chatbotSns The SNS targets that AWS Chatbot uses to notify the chat channel of updates
+   * to an incident.
+   * You can also make updates to the incident through the chat channel by using the SNS topics
+   */
   public fun chatbotSns(chatbotSns: Collection<String>) {
     _chatbotSns.addAll(chatbotSns)
   }

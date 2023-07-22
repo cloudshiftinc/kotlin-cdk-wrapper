@@ -12,10 +12,16 @@ public class CfnLifecyclePolicyCrossRegionCopyDeprecateRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty.Builder =
       CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty.builder()
 
+  /**
+   * @param interval the value to be set. 
+   */
   public fun interval(interval: Number) {
     cdkBuilder.interval(interval)
   }
 
+  /**
+   * @param intervalUnit the value to be set. 
+   */
   public fun intervalUnit(intervalUnit: String) {
     cdkBuilder.intervalUnit(intervalUnit)
   }

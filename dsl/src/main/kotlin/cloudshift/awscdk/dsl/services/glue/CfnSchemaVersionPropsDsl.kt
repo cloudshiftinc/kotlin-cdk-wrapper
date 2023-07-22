@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.glue.CfnSchemaVersionProps
 public class CfnSchemaVersionPropsDsl {
   private val cdkBuilder: CfnSchemaVersionProps.Builder = CfnSchemaVersionProps.builder()
 
+  /**
+   * @param schema The schema that includes the schema version. 
+   */
   public fun schema(schema: IResolvable) {
     cdkBuilder.schema(schema)
   }
 
+  /**
+   * @param schema The schema that includes the schema version. 
+   */
   public fun schema(schema: CfnSchemaVersion.SchemaProperty) {
     cdkBuilder.schema(schema)
   }
 
+  /**
+   * @param schemaDefinition The schema definition for the schema version. 
+   */
   public fun schemaDefinition(schemaDefinition: String) {
     cdkBuilder.schemaDefinition(schemaDefinition)
   }

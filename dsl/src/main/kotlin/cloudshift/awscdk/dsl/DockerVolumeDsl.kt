@@ -11,14 +11,24 @@ import software.amazon.awscdk.DockerVolumeConsistency
 public class DockerVolumeDsl {
   private val cdkBuilder: DockerVolume.Builder = DockerVolume.builder()
 
+  /**
+   * @param consistency Mount consistency.
+   * Only applicable for macOS
+   */
   public fun consistency(consistency: DockerVolumeConsistency) {
     cdkBuilder.consistency(consistency)
   }
 
+  /**
+   * @param containerPath The path where the file or directory is mounted in the container. 
+   */
   public fun containerPath(containerPath: String) {
     cdkBuilder.containerPath(containerPath)
   }
 
+  /**
+   * @param hostPath The path to the file or directory on the host machine. 
+   */
   public fun hostPath(hostPath: String) {
     cdkBuilder.hostPath(hostPath)
   }

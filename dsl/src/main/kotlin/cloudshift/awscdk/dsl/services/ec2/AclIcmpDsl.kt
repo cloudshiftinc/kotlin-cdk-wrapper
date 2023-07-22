@@ -10,10 +10,22 @@ import software.amazon.awscdk.services.ec2.AclIcmp
 public class AclIcmpDsl {
   private val cdkBuilder: AclIcmp.Builder = AclIcmp.builder()
 
+  /**
+   * @param code The Internet Control Message Protocol (ICMP) code.
+   * You can use -1 to specify all ICMP
+   * codes for the given ICMP type. Requirement is conditional: Required if you
+   * specify 1 (ICMP) for the protocol parameter.
+   */
   public fun code(code: Number) {
     cdkBuilder.code(code)
   }
 
+  /**
+   * @param type The Internet Control Message Protocol (ICMP) type.
+   * You can use -1 to specify all ICMP types.
+   * Conditional requirement: Required if you specify 1 (ICMP) for the CreateNetworkAclEntry
+   * protocol parameter.
+   */
   public fun type(type: Number) {
     cdkBuilder.type(type)
   }

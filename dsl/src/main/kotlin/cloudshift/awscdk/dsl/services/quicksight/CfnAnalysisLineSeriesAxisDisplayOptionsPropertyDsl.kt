@@ -16,22 +16,40 @@ public class CfnAnalysisLineSeriesAxisDisplayOptionsPropertyDsl {
 
   private val _missingDataConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param axisOptions The options that determine the presentation of the line series axis.
+   */
   public fun axisOptions(axisOptions: IResolvable) {
     cdkBuilder.axisOptions(axisOptions)
   }
 
+  /**
+   * @param axisOptions The options that determine the presentation of the line series axis.
+   */
   public fun axisOptions(axisOptions: CfnAnalysis.AxisDisplayOptionsProperty) {
     cdkBuilder.axisOptions(axisOptions)
   }
 
+  /**
+   * @param missingDataConfigurations The configuration options that determine how missing data is
+   * treated during the rendering of a line chart.
+   */
   public fun missingDataConfigurations(vararg missingDataConfigurations: Any) {
     _missingDataConfigurations.addAll(listOf(*missingDataConfigurations))
   }
 
+  /**
+   * @param missingDataConfigurations The configuration options that determine how missing data is
+   * treated during the rendering of a line chart.
+   */
   public fun missingDataConfigurations(missingDataConfigurations: Collection<Any>) {
     _missingDataConfigurations.addAll(missingDataConfigurations)
   }
 
+  /**
+   * @param missingDataConfigurations The configuration options that determine how missing data is
+   * treated during the rendering of a line chart.
+   */
   public fun missingDataConfigurations(missingDataConfigurations: IResolvable) {
     cdkBuilder.missingDataConfigurations(missingDataConfigurations)
   }

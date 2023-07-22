@@ -16,14 +16,23 @@ public class CfnTemplateCustomActionSetParametersOperationPropertyDsl {
 
   private val _parameterValueConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param parameterValueConfigurations The parameter that determines the value configuration. 
+   */
   public fun parameterValueConfigurations(vararg parameterValueConfigurations: Any) {
     _parameterValueConfigurations.addAll(listOf(*parameterValueConfigurations))
   }
 
+  /**
+   * @param parameterValueConfigurations The parameter that determines the value configuration. 
+   */
   public fun parameterValueConfigurations(parameterValueConfigurations: Collection<Any>) {
     _parameterValueConfigurations.addAll(parameterValueConfigurations)
   }
 
+  /**
+   * @param parameterValueConfigurations The parameter that determines the value configuration. 
+   */
   public fun parameterValueConfigurations(parameterValueConfigurations: IResolvable) {
     cdkBuilder.parameterValueConfigurations(parameterValueConfigurations)
   }

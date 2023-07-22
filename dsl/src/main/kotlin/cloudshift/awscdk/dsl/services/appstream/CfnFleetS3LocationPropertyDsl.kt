@@ -11,10 +11,16 @@ public class CfnFleetS3LocationPropertyDsl {
   private val cdkBuilder: CfnFleet.S3LocationProperty.Builder =
       CfnFleet.S3LocationProperty.builder()
 
+  /**
+   * @param s3Bucket The S3 bucket of the S3 object. 
+   */
   public fun s3Bucket(s3Bucket: String) {
     cdkBuilder.s3Bucket(s3Bucket)
   }
 
+  /**
+   * @param s3Key The S3 key of the S3 object. 
+   */
   public fun s3Key(s3Key: String) {
     cdkBuilder.s3Key(s3Key)
   }

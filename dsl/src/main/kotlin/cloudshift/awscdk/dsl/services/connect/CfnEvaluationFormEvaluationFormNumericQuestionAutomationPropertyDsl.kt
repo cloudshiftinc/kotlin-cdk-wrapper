@@ -11,10 +11,16 @@ public class CfnEvaluationFormEvaluationFormNumericQuestionAutomationPropertyDsl
   private val cdkBuilder: CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.Builder
       = CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.builder()
 
+  /**
+   * @param propertyValue The property value of the automation. 
+   */
   public fun propertyValue(propertyValue: IResolvable) {
     cdkBuilder.propertyValue(propertyValue)
   }
 
+  /**
+   * @param propertyValue The property value of the automation. 
+   */
   public
       fun propertyValue(propertyValue: CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty) {
     cdkBuilder.propertyValue(propertyValue)

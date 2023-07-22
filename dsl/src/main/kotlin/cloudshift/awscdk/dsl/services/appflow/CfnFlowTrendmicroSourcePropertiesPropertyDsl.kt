@@ -11,6 +11,9 @@ public class CfnFlowTrendmicroSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.TrendmicroSourcePropertiesProperty.Builder =
       CfnFlow.TrendmicroSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Trend Micro flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

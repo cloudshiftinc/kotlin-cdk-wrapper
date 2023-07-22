@@ -11,10 +11,16 @@ public class CfnAccessPointAwsLambdaPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.AwsLambdaProperty.Builder =
       CfnAccessPoint.AwsLambdaProperty.builder()
 
+  /**
+   * @param functionArn the value to be set. 
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }
 
+  /**
+   * @param functionPayload the value to be set.
+   */
   public fun functionPayload(functionPayload: String) {
     cdkBuilder.functionPayload(functionPayload)
   }

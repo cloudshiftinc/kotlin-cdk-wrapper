@@ -11,10 +11,17 @@ public class CfnAppImageConfigKernelSpecPropertyDsl {
   private val cdkBuilder: CfnAppImageConfig.KernelSpecProperty.Builder =
       CfnAppImageConfig.KernelSpecProperty.builder()
 
+  /**
+   * @param displayName The display name of the kernel.
+   */
   public fun displayName(displayName: String) {
     cdkBuilder.displayName(displayName)
   }
 
+  /**
+   * @param name The name of the Jupyter kernel in the image. 
+   * This value is case sensitive.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

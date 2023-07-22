@@ -12,14 +12,23 @@ public class CfnVerifiedAccessEndpointNetworkInterfaceOptionsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.Builder =
       CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.builder()
 
+  /**
+   * @param networkInterfaceId The ID of the network interface.
+   */
   public fun networkInterfaceId(networkInterfaceId: String) {
     cdkBuilder.networkInterfaceId(networkInterfaceId)
   }
 
+  /**
+   * @param port The IP port number.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param protocol The IP protocol.
+   */
   public fun protocol(protocol: String) {
     cdkBuilder.protocol(protocol)
   }

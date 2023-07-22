@@ -12,10 +12,16 @@ public class CfnBotSlotPriorityPropertyDsl {
   private val cdkBuilder: CfnBot.SlotPriorityProperty.Builder =
       CfnBot.SlotPriorityProperty.builder()
 
+  /**
+   * @param priority The priority that Amazon Lex should apply to the slot. 
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }
 
+  /**
+   * @param slotName The name of the slot. 
+   */
   public fun slotName(slotName: String) {
     cdkBuilder.slotName(slotName)
   }

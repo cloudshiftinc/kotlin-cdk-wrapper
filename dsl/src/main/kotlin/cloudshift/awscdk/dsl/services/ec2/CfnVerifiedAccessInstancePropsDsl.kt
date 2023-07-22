@@ -25,43 +25,75 @@ public class CfnVerifiedAccessInstancePropsDsl {
 
   private val _verifiedAccessTrustProviders: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param description A description for the AWS Verified Access instance.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param loggingConfigurations The current logging configuration for the Verified Access
+   * instances.
+   */
   public fun loggingConfigurations(loggingConfigurations: IResolvable) {
     cdkBuilder.loggingConfigurations(loggingConfigurations)
   }
 
+  /**
+   * @param loggingConfigurations The current logging configuration for the Verified Access
+   * instances.
+   */
   public
       fun loggingConfigurations(loggingConfigurations: CfnVerifiedAccessInstance.VerifiedAccessLogsProperty) {
     cdkBuilder.loggingConfigurations(loggingConfigurations)
   }
 
+  /**
+   * @param tags The tags.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param verifiedAccessTrustProviderIds The IDs of the AWS Verified Access trust providers.
+   */
   public fun verifiedAccessTrustProviderIds(vararg verifiedAccessTrustProviderIds: String) {
     _verifiedAccessTrustProviderIds.addAll(listOf(*verifiedAccessTrustProviderIds))
   }
 
+  /**
+   * @param verifiedAccessTrustProviderIds The IDs of the AWS Verified Access trust providers.
+   */
   public fun verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds: Collection<String>) {
     _verifiedAccessTrustProviderIds.addAll(verifiedAccessTrustProviderIds)
   }
 
+  /**
+   * @param verifiedAccessTrustProviders The IDs of the AWS Verified Access trust providers.
+   */
   public fun verifiedAccessTrustProviders(vararg verifiedAccessTrustProviders: Any) {
     _verifiedAccessTrustProviders.addAll(listOf(*verifiedAccessTrustProviders))
   }
 
+  /**
+   * @param verifiedAccessTrustProviders The IDs of the AWS Verified Access trust providers.
+   */
   public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: Collection<Any>) {
     _verifiedAccessTrustProviders.addAll(verifiedAccessTrustProviders)
   }
 
+  /**
+   * @param verifiedAccessTrustProviders The IDs of the AWS Verified Access trust providers.
+   */
   public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable) {
     cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders)
   }

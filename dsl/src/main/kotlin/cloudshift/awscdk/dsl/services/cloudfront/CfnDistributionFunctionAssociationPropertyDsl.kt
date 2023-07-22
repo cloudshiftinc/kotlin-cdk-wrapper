@@ -11,10 +11,18 @@ public class CfnDistributionFunctionAssociationPropertyDsl {
   private val cdkBuilder: CfnDistribution.FunctionAssociationProperty.Builder =
       CfnDistribution.FunctionAssociationProperty.builder()
 
+  /**
+   * @param eventType The event type of the function, either `viewer-request` or `viewer-response` .
+   * You cannot use origin-facing event types ( `origin-request` and `origin-response` ) with a
+   * CloudFront function.
+   */
   public fun eventType(eventType: String) {
     cdkBuilder.eventType(eventType)
   }
 
+  /**
+   * @param functionArn The Amazon Resource Name (ARN) of the function.
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }

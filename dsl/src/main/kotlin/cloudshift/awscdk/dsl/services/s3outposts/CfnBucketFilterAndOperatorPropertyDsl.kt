@@ -16,14 +16,23 @@ public class CfnBucketFilterAndOperatorPropertyDsl {
 
   private val _tags: MutableList<CfnBucket.FilterTagProperty> = mutableListOf()
 
+  /**
+   * @param prefix the value to be set.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }
 
+  /**
+   * @param tags the value to be set. 
+   */
   public fun tags(tags: CfnBucketFilterTagPropertyDsl.() -> Unit) {
     _tags.add(CfnBucketFilterTagPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags the value to be set. 
+   */
   public fun tags(tags: Collection<CfnBucket.FilterTagProperty>) {
     _tags.addAll(tags)
   }

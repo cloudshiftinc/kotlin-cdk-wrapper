@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig
 public class ShuffleConfigDsl {
   private val cdkBuilder: ShuffleConfig.Builder = ShuffleConfig.builder()
 
+  /**
+   * @param seed Determines the shuffling order. 
+   */
   public fun seed(seed: Number) {
     cdkBuilder.seed(seed)
   }

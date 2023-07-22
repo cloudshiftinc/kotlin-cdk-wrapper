@@ -12,10 +12,20 @@ public class TimeBasedCanaryTrafficRoutingDsl {
   private val cdkBuilder: TimeBasedCanaryTrafficRouting.Builder =
       TimeBasedCanaryTrafficRouting.Builder.create()
 
+  /**
+   * The amount of time between traffic shifts.
+   *
+   * @param interval The amount of time between traffic shifts. 
+   */
   public fun interval(interval: Duration) {
     cdkBuilder.interval(interval)
   }
 
+  /**
+   * The percentage to increase traffic on each traffic shift.
+   *
+   * @param percentage The percentage to increase traffic on each traffic shift. 
+   */
   public fun percentage(percentage: Number) {
     cdkBuilder.percentage(percentage)
   }

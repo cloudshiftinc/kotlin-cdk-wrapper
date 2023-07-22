@@ -12,14 +12,23 @@ public class CfnComponentComponentEventPropertyDsl {
   private val cdkBuilder: CfnComponent.ComponentEventProperty.Builder =
       CfnComponent.ComponentEventProperty.builder()
 
+  /**
+   * @param action The action to perform when a specific event is raised.
+   */
   public fun action(action: String) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param parameters Describes information about the action.
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param parameters Describes information about the action.
+   */
   public fun parameters(parameters: CfnComponent.ActionParametersProperty) {
     cdkBuilder.parameters(parameters)
   }

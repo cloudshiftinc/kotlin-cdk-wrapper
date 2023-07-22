@@ -11,10 +11,16 @@ public class CfnListenerPortRangePropertyDsl {
   private val cdkBuilder: CfnListener.PortRangeProperty.Builder =
       CfnListener.PortRangeProperty.builder()
 
+  /**
+   * @param fromPort The first port in the range of ports, inclusive. 
+   */
   public fun fromPort(fromPort: Number) {
     cdkBuilder.fromPort(fromPort)
   }
 
+  /**
+   * @param toPort The last port in the range of ports, inclusive. 
+   */
   public fun toPort(toPort: Number) {
     cdkBuilder.toPort(toPort)
   }

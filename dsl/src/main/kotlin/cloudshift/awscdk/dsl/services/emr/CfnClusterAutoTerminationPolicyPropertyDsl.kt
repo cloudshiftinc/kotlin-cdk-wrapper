@@ -11,6 +11,9 @@ public class CfnClusterAutoTerminationPolicyPropertyDsl {
   private val cdkBuilder: CfnCluster.AutoTerminationPolicyProperty.Builder =
       CfnCluster.AutoTerminationPolicyProperty.builder()
 
+  /**
+   * @param idleTimeout the value to be set.
+   */
   public fun idleTimeout(idleTimeout: Number) {
     cdkBuilder.idleTimeout(idleTimeout)
   }

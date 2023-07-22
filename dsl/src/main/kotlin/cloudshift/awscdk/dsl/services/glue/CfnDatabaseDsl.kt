@@ -15,14 +15,37 @@ public class CfnDatabaseDsl(
 ) {
   private val cdkBuilder: CfnDatabase.Builder = CfnDatabase.Builder.create(scope, id)
 
+  /**
+   * The AWS account ID for the account in which to create the catalog object.
+   *
+   *
+   * To specify the account ID, you can use the `Ref` intrinsic function with the `AWS::AccountId`
+   * pseudo parameter. For example: `!Ref AWS::AccountId`
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-catalogid)
+   * @param catalogId The AWS account ID for the account in which to create the catalog object. 
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * The metadata for the database.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput)
+   * @param databaseInput The metadata for the database. 
+   */
   public fun databaseInput(databaseInput: IResolvable) {
     cdkBuilder.databaseInput(databaseInput)
   }
 
+  /**
+   * The metadata for the database.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput)
+   * @param databaseInput The metadata for the database. 
+   */
   public fun databaseInput(databaseInput: CfnDatabase.DatabaseInputProperty) {
     cdkBuilder.databaseInput(databaseInput)
   }

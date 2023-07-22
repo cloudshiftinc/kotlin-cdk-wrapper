@@ -16,14 +16,23 @@ public class CfnPatchBaselinePatchFilterGroupPropertyDsl {
 
   private val _patchFilters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param patchFilters The set of patch filters that make up the group.
+   */
   public fun patchFilters(vararg patchFilters: Any) {
     _patchFilters.addAll(listOf(*patchFilters))
   }
 
+  /**
+   * @param patchFilters The set of patch filters that make up the group.
+   */
   public fun patchFilters(patchFilters: Collection<Any>) {
     _patchFilters.addAll(patchFilters)
   }
 
+  /**
+   * @param patchFilters The set of patch filters that make up the group.
+   */
   public fun patchFilters(patchFilters: IResolvable) {
     cdkBuilder.patchFilters(patchFilters)
   }

@@ -11,10 +11,16 @@ public class CfnConnectorKafkaClusterPropertyDsl {
   private val cdkBuilder: CfnConnector.KafkaClusterProperty.Builder =
       CfnConnector.KafkaClusterProperty.builder()
 
+  /**
+   * @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. 
+   */
   public fun apacheKafkaCluster(apacheKafkaCluster: IResolvable) {
     cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
   }
 
+  /**
+   * @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. 
+   */
   public fun apacheKafkaCluster(apacheKafkaCluster: CfnConnector.ApacheKafkaClusterProperty) {
     cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
   }

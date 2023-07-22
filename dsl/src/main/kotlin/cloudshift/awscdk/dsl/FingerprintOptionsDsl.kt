@@ -16,22 +16,42 @@ public class FingerprintOptionsDsl {
 
   private val _exclude: MutableList<String> = mutableListOf()
 
+  /**
+   * @param exclude File paths matching the patterns will be excluded.
+   * See `ignoreMode` to set the matching behavior.
+   * Has no effect on Assets bundled using the `bundling` property.
+   */
   public fun exclude(vararg exclude: String) {
     _exclude.addAll(listOf(*exclude))
   }
 
+  /**
+   * @param exclude File paths matching the patterns will be excluded.
+   * See `ignoreMode` to set the matching behavior.
+   * Has no effect on Assets bundled using the `bundling` property.
+   */
   public fun exclude(exclude: Collection<String>) {
     _exclude.addAll(exclude)
   }
 
+  /**
+   * @param extraHash Extra information to encode into the fingerprint (e.g. build instructions and
+   * other inputs).
+   */
   public fun extraHash(extraHash: String) {
     cdkBuilder.extraHash(extraHash)
   }
 
+  /**
+   * @param follow A strategy for how to handle symlinks.
+   */
   public fun follow(follow: SymlinkFollowMode) {
     cdkBuilder.follow(follow)
   }
 
+  /**
+   * @param ignoreMode The ignore behavior to use for `exclude` patterns.
+   */
   public fun ignoreMode(ignoreMode: IgnoreMode) {
     cdkBuilder.ignoreMode(ignoreMode)
   }

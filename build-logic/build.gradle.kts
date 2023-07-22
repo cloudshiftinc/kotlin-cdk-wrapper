@@ -23,6 +23,9 @@ dependencies {
     implementation(libs.asm.util)
     implementation(libs.caffeine)
     implementation(libs.aspectj.tools)
+
+    implementation("com.github.javaparser:javaparser-core:3.25.4")
+
     implementation(plugin(libs.plugins.gradle.ktlint))
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }

@@ -18,35 +18,64 @@ public class CfnDBProxyTargetGroupPropsDsl {
 
   private val _dbInstanceIdentifiers: MutableList<String> = mutableListOf()
 
+  /**
+   * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
+   * connection pool associated with a `DBProxyTargetGroup` .
+   */
   public fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
     cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo)
   }
 
+  /**
+   * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
+   * connection pool associated with a `DBProxyTargetGroup` .
+   */
   public
       fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty) {
     cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo)
   }
 
+  /**
+   * @param dbClusterIdentifiers One or more DB cluster identifiers.
+   */
   public fun dbClusterIdentifiers(vararg dbClusterIdentifiers: String) {
     _dbClusterIdentifiers.addAll(listOf(*dbClusterIdentifiers))
   }
 
+  /**
+   * @param dbClusterIdentifiers One or more DB cluster identifiers.
+   */
   public fun dbClusterIdentifiers(dbClusterIdentifiers: Collection<String>) {
     _dbClusterIdentifiers.addAll(dbClusterIdentifiers)
   }
 
+  /**
+   * @param dbInstanceIdentifiers One or more DB instance identifiers.
+   */
   public fun dbInstanceIdentifiers(vararg dbInstanceIdentifiers: String) {
     _dbInstanceIdentifiers.addAll(listOf(*dbInstanceIdentifiers))
   }
 
+  /**
+   * @param dbInstanceIdentifiers One or more DB instance identifiers.
+   */
   public fun dbInstanceIdentifiers(dbInstanceIdentifiers: Collection<String>) {
     _dbInstanceIdentifiers.addAll(dbInstanceIdentifiers)
   }
 
+  /**
+   * @param dbProxyName The identifier of the `DBProxy` that is associated with the
+   * `DBProxyTargetGroup` . 
+   */
   public fun dbProxyName(dbProxyName: String) {
     cdkBuilder.dbProxyName(dbProxyName)
   }
 
+  /**
+   * @param targetGroupName The identifier for the target group. 
+   *
+   * Currently, this property must be set to `default` .
+   */
   public fun targetGroupName(targetGroupName: String) {
     cdkBuilder.targetGroupName(targetGroupName)
   }

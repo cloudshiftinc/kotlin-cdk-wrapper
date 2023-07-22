@@ -11,10 +11,16 @@ public class CfnEventSourceMappingDestinationConfigPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.DestinationConfigProperty.Builder =
       CfnEventSourceMapping.DestinationConfigProperty.builder()
 
+  /**
+   * @param onFailure The destination configuration for failed invocations.
+   */
   public fun onFailure(onFailure: IResolvable) {
     cdkBuilder.onFailure(onFailure)
   }
 
+  /**
+   * @param onFailure The destination configuration for failed invocations.
+   */
   public fun onFailure(onFailure: CfnEventSourceMapping.OnFailureProperty) {
     cdkBuilder.onFailure(onFailure)
   }

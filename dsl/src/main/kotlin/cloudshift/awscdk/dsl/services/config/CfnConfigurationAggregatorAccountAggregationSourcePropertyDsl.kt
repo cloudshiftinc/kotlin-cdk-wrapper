@@ -19,26 +19,44 @@ public class CfnConfigurationAggregatorAccountAggregationSourcePropertyDsl {
 
   private val _awsRegions: MutableList<String> = mutableListOf()
 
+  /**
+   * @param accountIds The 12-digit account ID of the account being aggregated. 
+   */
   public fun accountIds(vararg accountIds: String) {
     _accountIds.addAll(listOf(*accountIds))
   }
 
+  /**
+   * @param accountIds The 12-digit account ID of the account being aggregated. 
+   */
   public fun accountIds(accountIds: Collection<String>) {
     _accountIds.addAll(accountIds)
   }
 
+  /**
+   * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
+   */
   public fun allAwsRegions(allAwsRegions: Boolean) {
     cdkBuilder.allAwsRegions(allAwsRegions)
   }
 
+  /**
+   * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
+   */
   public fun allAwsRegions(allAwsRegions: IResolvable) {
     cdkBuilder.allAwsRegions(allAwsRegions)
   }
 
+  /**
+   * @param awsRegions The source regions being aggregated.
+   */
   public fun awsRegions(vararg awsRegions: String) {
     _awsRegions.addAll(listOf(*awsRegions))
   }
 
+  /**
+   * @param awsRegions The source regions being aggregated.
+   */
   public fun awsRegions(awsRegions: Collection<String>) {
     _awsRegions.addAll(awsRegions)
   }

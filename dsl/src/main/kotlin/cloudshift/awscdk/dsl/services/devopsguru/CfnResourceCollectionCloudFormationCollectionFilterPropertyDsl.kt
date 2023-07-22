@@ -15,10 +15,16 @@ public class CfnResourceCollectionCloudFormationCollectionFilterPropertyDsl {
 
   private val _stackNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param stackNames An array of CloudFormation stack names.
+   */
   public fun stackNames(vararg stackNames: String) {
     _stackNames.addAll(listOf(*stackNames))
   }
 
+  /**
+   * @param stackNames An array of CloudFormation stack names.
+   */
   public fun stackNames(stackNames: Collection<String>) {
     _stackNames.addAll(stackNames)
   }

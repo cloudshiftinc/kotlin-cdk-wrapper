@@ -10,18 +10,30 @@ import software.amazon.awscdk.services.cognito.AuthFlow
 public class AuthFlowDsl {
   private val cdkBuilder: AuthFlow.Builder = AuthFlow.builder()
 
+  /**
+   * @param adminUserPassword Enable admin based user password authentication flow.
+   */
   public fun adminUserPassword(adminUserPassword: Boolean) {
     cdkBuilder.adminUserPassword(adminUserPassword)
   }
 
+  /**
+   * @param custom Enable custom authentication flow.
+   */
   public fun custom(custom: Boolean) {
     cdkBuilder.custom(custom)
   }
 
+  /**
+   * @param userPassword Enable auth using username &amp; password.
+   */
   public fun userPassword(userPassword: Boolean) {
     cdkBuilder.userPassword(userPassword)
   }
 
+  /**
+   * @param userSrp Enable SRP based authentication.
+   */
   public fun userSrp(userSrp: Boolean) {
     cdkBuilder.userSrp(userSrp)
   }

@@ -12,14 +12,23 @@ public class CfnResponsePlanDynamicSsmParameterPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.DynamicSsmParameterProperty.Builder =
       CfnResponsePlan.DynamicSsmParameterProperty.builder()
 
+  /**
+   * @param key The key parameter to use when running the Systems Manager Automation runbook. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The dynamic parameter value. 
+   */
   public fun `value`(`value`: IResolvable) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param value The dynamic parameter value. 
+   */
   public fun `value`(`value`: CfnResponsePlan.DynamicSsmParameterValueProperty) {
     cdkBuilder.`value`(`value`)
   }

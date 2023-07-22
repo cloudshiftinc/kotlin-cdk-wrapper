@@ -11,6 +11,12 @@ public class OrganizationsDeploymentPropsDsl {
   private val cdkBuilder: OrganizationsDeploymentProps.Builder =
       OrganizationsDeploymentProps.builder()
 
+  /**
+   * @param autoDeployment Automatically deploy to new accounts added to Organizational Units.
+   * Whether AWS CloudFormation StackSets automatically deploys to AWS
+   * Organizations accounts that are added to a target organization or
+   * organizational unit (OU).
+   */
   public fun autoDeployment(autoDeployment: StackSetOrganizationsAutoDeployment) {
     cdkBuilder.autoDeployment(autoDeployment)
   }

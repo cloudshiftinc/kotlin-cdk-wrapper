@@ -20,42 +20,72 @@ public class LoadBalancerListenerContextQueryDsl {
 
   private val _loadBalancerTags: MutableList<Tag> = mutableListOf()
 
+  /**
+   * @param account Query account. 
+   */
   public fun account(account: String) {
     cdkBuilder.account(account)
   }
 
+  /**
+   * @param listenerArn Find by listener's arn.
+   */
   public fun listenerArn(listenerArn: String) {
     cdkBuilder.listenerArn(listenerArn)
   }
 
+  /**
+   * @param listenerPort Filter listeners by listener port.
+   */
   public fun listenerPort(listenerPort: Number) {
     cdkBuilder.listenerPort(listenerPort)
   }
 
+  /**
+   * @param listenerProtocol Filter by listener protocol.
+   */
   public fun listenerProtocol(listenerProtocol: LoadBalancerListenerProtocol) {
     cdkBuilder.listenerProtocol(listenerProtocol)
   }
 
+  /**
+   * @param loadBalancerArn Find by load balancer's ARN.
+   */
   public fun loadBalancerArn(loadBalancerArn: String) {
     cdkBuilder.loadBalancerArn(loadBalancerArn)
   }
 
+  /**
+   * @param loadBalancerTags Match load balancer tags.
+   */
   public fun loadBalancerTags(loadBalancerTags: TagDsl.() -> Unit) {
     _loadBalancerTags.add(TagDsl().apply(loadBalancerTags).build())
   }
 
+  /**
+   * @param loadBalancerTags Match load balancer tags.
+   */
   public fun loadBalancerTags(loadBalancerTags: Collection<Tag>) {
     _loadBalancerTags.addAll(loadBalancerTags)
   }
 
+  /**
+   * @param loadBalancerType Filter load balancers by their type. 
+   */
   public fun loadBalancerType(loadBalancerType: LoadBalancerType) {
     cdkBuilder.loadBalancerType(loadBalancerType)
   }
 
+  /**
+   * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
+   */
   public fun lookupRoleArn(lookupRoleArn: String) {
     cdkBuilder.lookupRoleArn(lookupRoleArn)
   }
 
+  /**
+   * @param region Query region. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }

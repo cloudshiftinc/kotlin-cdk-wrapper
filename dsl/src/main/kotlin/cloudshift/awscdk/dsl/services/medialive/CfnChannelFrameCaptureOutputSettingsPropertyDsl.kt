@@ -11,6 +11,10 @@ public class CfnChannelFrameCaptureOutputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.FrameCaptureOutputSettingsProperty.Builder =
       CfnChannel.FrameCaptureOutputSettingsProperty.builder()
 
+  /**
+   * @param nameModifier Required if the output group contains more than one output.
+   * This modifier forms part of the output file name.
+   */
   public fun nameModifier(nameModifier: String) {
     cdkBuilder.nameModifier(nameModifier)
   }

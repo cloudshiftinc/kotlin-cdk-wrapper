@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.quicksight.CfnTheme
 public class CfnThemeTileStylePropertyDsl {
   private val cdkBuilder: CfnTheme.TileStyleProperty.Builder = CfnTheme.TileStyleProperty.builder()
 
+  /**
+   * @param border The border around a tile.
+   */
   public fun border(border: IResolvable) {
     cdkBuilder.border(border)
   }
 
+  /**
+   * @param border The border around a tile.
+   */
   public fun border(border: CfnTheme.BorderStyleProperty) {
     cdkBuilder.border(border)
   }

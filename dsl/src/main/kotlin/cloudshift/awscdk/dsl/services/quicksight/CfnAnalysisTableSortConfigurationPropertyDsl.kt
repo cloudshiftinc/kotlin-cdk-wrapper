@@ -16,23 +16,40 @@ public class CfnAnalysisTableSortConfigurationPropertyDsl {
 
   private val _rowSort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param paginationConfiguration The pagination configuration (page size, page number) for the
+   * table.
+   */
   public fun paginationConfiguration(paginationConfiguration: IResolvable) {
     cdkBuilder.paginationConfiguration(paginationConfiguration)
   }
 
+  /**
+   * @param paginationConfiguration The pagination configuration (page size, page number) for the
+   * table.
+   */
   public
       fun paginationConfiguration(paginationConfiguration: CfnAnalysis.PaginationConfigurationProperty) {
     cdkBuilder.paginationConfiguration(paginationConfiguration)
   }
 
+  /**
+   * @param rowSort The field sort options for rows in the table.
+   */
   public fun rowSort(vararg rowSort: Any) {
     _rowSort.addAll(listOf(*rowSort))
   }
 
+  /**
+   * @param rowSort The field sort options for rows in the table.
+   */
   public fun rowSort(rowSort: Collection<Any>) {
     _rowSort.addAll(rowSort)
   }
 
+  /**
+   * @param rowSort The field sort options for rows in the table.
+   */
   public fun rowSort(rowSort: IResolvable) {
     cdkBuilder.rowSort(rowSort)
   }

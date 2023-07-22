@@ -11,10 +11,17 @@ public class CfnTemplateConditionalFormattingIconSetPropertyDsl {
   private val cdkBuilder: CfnTemplate.ConditionalFormattingIconSetProperty.Builder =
       CfnTemplate.ConditionalFormattingIconSetProperty.builder()
 
+  /**
+   * @param expression The expression that determines the formatting configuration for the icon set.
+   * 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }
 
+  /**
+   * @param iconSetType Determines the icon set type.
+   */
   public fun iconSetType(iconSetType: String) {
     cdkBuilder.iconSetType(iconSetType)
   }

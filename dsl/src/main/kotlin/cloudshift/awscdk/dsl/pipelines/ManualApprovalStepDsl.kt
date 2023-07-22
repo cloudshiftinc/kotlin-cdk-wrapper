@@ -12,6 +12,13 @@ public class ManualApprovalStepDsl(
 ) {
   private val cdkBuilder: ManualApprovalStep.Builder = ManualApprovalStep.Builder.create(id)
 
+  /**
+   * The comment to display with this manual approval.
+   *
+   * Default: - No comment
+   *
+   * @param comment The comment to display with this manual approval. 
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }

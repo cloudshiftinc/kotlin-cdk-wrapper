@@ -18,18 +18,42 @@ public class CfnSubnetGroupDsl(
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * The description of the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-description)
+   * @param description The description of the subnet group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetgroupname)
+   * @param subnetGroupName The name of the subnet group. 
+   */
   public fun subnetGroupName(subnetGroupName: String) {
     cdkBuilder.subnetGroupName(subnetGroupName)
   }
 
+  /**
+   * A list of VPC subnet IDs for the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetids)
+   * @param subnetIds A list of VPC subnet IDs for the subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * A list of VPC subnet IDs for the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetids)
+   * @param subnetIds A list of VPC subnet IDs for the subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

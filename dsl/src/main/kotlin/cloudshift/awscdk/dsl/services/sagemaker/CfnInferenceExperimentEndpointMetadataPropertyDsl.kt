@@ -11,14 +11,26 @@ public class CfnInferenceExperimentEndpointMetadataPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.EndpointMetadataProperty.Builder =
       CfnInferenceExperiment.EndpointMetadataProperty.builder()
 
+  /**
+   * @param endpointConfigName The name of the endpoint configuration.
+   */
   public fun endpointConfigName(endpointConfigName: String) {
     cdkBuilder.endpointConfigName(endpointConfigName)
   }
 
+  /**
+   * @param endpointName The name of the endpoint. 
+   */
   public fun endpointName(endpointName: String) {
     cdkBuilder.endpointName(endpointName)
   }
 
+  /**
+   * @param endpointStatus The status of the endpoint.
+   * For possible values of the status of an endpoint, see
+   * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
+   * .
+   */
   public fun endpointStatus(endpointStatus: String) {
     cdkBuilder.endpointStatus(endpointStatus)
   }

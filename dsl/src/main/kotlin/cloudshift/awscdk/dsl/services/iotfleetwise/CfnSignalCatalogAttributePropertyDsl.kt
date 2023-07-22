@@ -16,42 +16,73 @@ public class CfnSignalCatalogAttributePropertyDsl {
 
   private val _allowedValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+   */
   public fun allowedValues(vararg allowedValues: String) {
     _allowedValues.addAll(listOf(*allowedValues))
   }
 
+  /**
+   * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+   */
   public fun allowedValues(allowedValues: Collection<String>) {
     _allowedValues.addAll(allowedValues)
   }
 
+  /**
+   * @param assignedValue (Optional) A specified value for the attribute.
+   */
   public fun assignedValue(assignedValue: String) {
     cdkBuilder.assignedValue(assignedValue)
   }
 
+  /**
+   * @param dataType The specified data type of the attribute. 
+   */
   public fun dataType(dataType: String) {
     cdkBuilder.dataType(dataType)
   }
 
+  /**
+   * @param defaultValue (Optional) The default value of the attribute.
+   */
   public fun defaultValue(defaultValue: String) {
     cdkBuilder.defaultValue(defaultValue)
   }
 
+  /**
+   * @param description (Optional) A brief description of the attribute.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param fullyQualifiedName The fully qualified name of the attribute. 
+   * For example, the fully qualified name of an attribute might be `Vehicle.Body.Engine.Type` .
+   */
   public fun fullyQualifiedName(fullyQualifiedName: String) {
     cdkBuilder.fullyQualifiedName(fullyQualifiedName)
   }
 
+  /**
+   * @param max (Optional) The specified possible maximum value of the attribute.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min (Optional) The specified possible minimum value of the attribute.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }
 
+  /**
+   * @param unit (Optional) The scientific unit for the attribute.
+   */
   public fun unit(unit: String) {
     cdkBuilder.unit(unit)
   }

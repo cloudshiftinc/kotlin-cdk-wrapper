@@ -20,30 +20,60 @@ public class CfnDatasetExcelOptionsPropertyDsl {
 
   private val _sheetNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param headerRow A variable that specifies whether the first row in the file is parsed as the
+   * header.
+   * If this value is false, column names are auto-generated.
+   */
   public fun headerRow(headerRow: Boolean) {
     cdkBuilder.headerRow(headerRow)
   }
 
+  /**
+   * @param headerRow A variable that specifies whether the first row in the file is parsed as the
+   * header.
+   * If this value is false, column names are auto-generated.
+   */
   public fun headerRow(headerRow: IResolvable) {
     cdkBuilder.headerRow(headerRow)
   }
 
+  /**
+   * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in the
+   * dataset.
+   */
   public fun sheetIndexes(vararg sheetIndexes: Number) {
     _sheetIndexes.addAll(listOf(*sheetIndexes))
   }
 
+  /**
+   * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in the
+   * dataset.
+   */
   public fun sheetIndexes(sheetIndexes: Collection<Number>) {
     _sheetIndexes.addAll(sheetIndexes)
   }
 
+  /**
+   * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in the
+   * dataset.
+   */
   public fun sheetIndexes(sheetIndexes: IResolvable) {
     cdkBuilder.sheetIndexes(sheetIndexes)
   }
 
+  /**
+   * @param sheetNames One or more named sheets in the Excel file that will be included in the
+   * dataset.
+   */
   public fun sheetNames(vararg sheetNames: String) {
     _sheetNames.addAll(listOf(*sheetNames))
   }
 
+  /**
+   * @param sheetNames One or more named sheets in the Excel file that will be included in the
+   * dataset.
+   */
   public fun sheetNames(sheetNames: Collection<String>) {
     _sheetNames.addAll(sheetNames)
   }

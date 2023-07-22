@@ -11,6 +11,9 @@ public class CfnFunctionDeadLetterConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.DeadLetterConfigProperty.Builder =
       CfnFunction.DeadLetterConfigProperty.builder()
 
+  /**
+   * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+   */
   public fun targetArn(targetArn: String) {
     cdkBuilder.targetArn(targetArn)
   }

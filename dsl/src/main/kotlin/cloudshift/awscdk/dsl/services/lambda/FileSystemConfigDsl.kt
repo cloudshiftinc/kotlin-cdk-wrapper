@@ -22,36 +22,60 @@ public class FileSystemConfigDsl {
 
   private val _policies: MutableList<PolicyStatement> = mutableListOf()
 
+  /**
+   * @param arn ARN of the access point. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
-  public fun connections(block: ConnectionsDsl.() -> Unit = {}) {
+  /**
+   * @param connections connections object used to allow ingress traffic from lambda function.
+   */
+  public fun connections(connections: ConnectionsDsl.() -> Unit = {}) {
     val builder = ConnectionsDsl()
-    builder.apply(block)
+    builder.apply(connections)
     cdkBuilder.connections(builder.build())
   }
 
+  /**
+   * @param connections connections object used to allow ingress traffic from lambda function.
+   */
   public fun connections(connections: Connections) {
     cdkBuilder.connections(connections)
   }
 
+  /**
+   * @param dependency array of IDependable that lambda function depends on.
+   */
   public fun dependency(vararg dependency: IDependable) {
     _dependency.addAll(listOf(*dependency))
   }
 
+  /**
+   * @param dependency array of IDependable that lambda function depends on.
+   */
   public fun dependency(dependency: Collection<IDependable>) {
     _dependency.addAll(dependency)
   }
 
+  /**
+   * @param localMountPath mount path in the lambda runtime environment. 
+   */
   public fun localMountPath(localMountPath: String) {
     cdkBuilder.localMountPath(localMountPath)
   }
 
+  /**
+   * @param policies additional IAM policies required for the lambda function.
+   */
   public fun policies(policies: PolicyStatementDsl.() -> Unit) {
     _policies.add(PolicyStatementDsl().apply(policies).build())
   }
 
+  /**
+   * @param policies additional IAM policies required for the lambda function.
+   */
   public fun policies(policies: Collection<PolicyStatement>) {
     _policies.addAll(policies)
   }

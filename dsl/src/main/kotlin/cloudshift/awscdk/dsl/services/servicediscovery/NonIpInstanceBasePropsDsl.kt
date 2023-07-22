@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps
 public class NonIpInstanceBasePropsDsl {
   private val cdkBuilder: NonIpInstanceBaseProps.Builder = NonIpInstanceBaseProps.builder()
 
+  /**
+   * @param customAttributes Custom attributes of the instance.
+   */
   public fun customAttributes(customAttributes: Map<String, String>) {
     cdkBuilder.customAttributes(customAttributes)
   }
 
+  /**
+   * @param instanceId The id of the instance resource.
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }

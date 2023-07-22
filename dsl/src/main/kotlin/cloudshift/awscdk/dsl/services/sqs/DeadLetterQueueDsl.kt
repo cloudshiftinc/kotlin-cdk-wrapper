@@ -11,10 +11,18 @@ import software.amazon.awscdk.services.sqs.IQueue
 public class DeadLetterQueueDsl {
   private val cdkBuilder: DeadLetterQueue.Builder = DeadLetterQueue.builder()
 
+  /**
+   * @param maxReceiveCount The number of times a message can be unsuccesfully dequeued before being
+   * moved to the dead-letter queue. 
+   */
   public fun maxReceiveCount(maxReceiveCount: Number) {
     cdkBuilder.maxReceiveCount(maxReceiveCount)
   }
 
+  /**
+   * @param queue The dead-letter queue to which Amazon SQS moves messages after the value of
+   * maxReceiveCount is exceeded. 
+   */
   public fun queue(queue: IQueue) {
     cdkBuilder.queue(queue)
   }

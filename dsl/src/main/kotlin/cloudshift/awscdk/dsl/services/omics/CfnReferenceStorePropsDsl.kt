@@ -13,22 +13,37 @@ import software.amazon.awscdk.services.omics.CfnReferenceStoreProps
 public class CfnReferenceStorePropsDsl {
   private val cdkBuilder: CfnReferenceStoreProps.Builder = CfnReferenceStoreProps.builder()
 
+  /**
+   * @param description A description for the store.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name A name for the store. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param sseConfig Server-side encryption (SSE) settings for the store.
+   */
   public fun sseConfig(sseConfig: IResolvable) {
     cdkBuilder.sseConfig(sseConfig)
   }
 
+  /**
+   * @param sseConfig Server-side encryption (SSE) settings for the store.
+   */
   public fun sseConfig(sseConfig: CfnReferenceStore.SseConfigProperty) {
     cdkBuilder.sseConfig(sseConfig)
   }
 
+  /**
+   * @param tags Tags for the store.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }

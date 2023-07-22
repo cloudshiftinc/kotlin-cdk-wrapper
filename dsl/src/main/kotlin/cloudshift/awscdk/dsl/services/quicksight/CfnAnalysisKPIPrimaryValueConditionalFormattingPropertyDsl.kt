@@ -11,18 +11,30 @@ public class CfnAnalysisKPIPrimaryValueConditionalFormattingPropertyDsl {
   private val cdkBuilder: CfnAnalysis.KPIPrimaryValueConditionalFormattingProperty.Builder =
       CfnAnalysis.KPIPrimaryValueConditionalFormattingProperty.builder()
 
+  /**
+   * @param icon The conditional formatting of the primary value's icon.
+   */
   public fun icon(icon: IResolvable) {
     cdkBuilder.icon(icon)
   }
 
+  /**
+   * @param icon The conditional formatting of the primary value's icon.
+   */
   public fun icon(icon: CfnAnalysis.ConditionalFormattingIconProperty) {
     cdkBuilder.icon(icon)
   }
 
+  /**
+   * @param textColor The conditional formatting of the primary value's text color.
+   */
   public fun textColor(textColor: IResolvable) {
     cdkBuilder.textColor(textColor)
   }
 
+  /**
+   * @param textColor The conditional formatting of the primary value's text color.
+   */
   public fun textColor(textColor: CfnAnalysis.ConditionalFormattingColorProperty) {
     cdkBuilder.textColor(textColor)
   }

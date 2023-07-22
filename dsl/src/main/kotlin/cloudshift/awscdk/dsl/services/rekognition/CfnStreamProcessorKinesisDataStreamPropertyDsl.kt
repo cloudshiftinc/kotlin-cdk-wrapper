@@ -11,6 +11,9 @@ public class CfnStreamProcessorKinesisDataStreamPropertyDsl {
   private val cdkBuilder: CfnStreamProcessor.KinesisDataStreamProperty.Builder =
       CfnStreamProcessor.KinesisDataStreamProperty.builder()
 
+  /**
+   * @param arn ARN of the output Amazon Kinesis Data Streams stream. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

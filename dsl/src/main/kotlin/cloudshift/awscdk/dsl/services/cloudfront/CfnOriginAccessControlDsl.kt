@@ -16,10 +16,22 @@ public class CfnOriginAccessControlDsl(
   private val cdkBuilder: CfnOriginAccessControl.Builder =
       CfnOriginAccessControl.Builder.create(scope, id)
 
+  /**
+   * The origin access control.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originaccesscontrol.html#cfn-cloudfront-originaccesscontrol-originaccesscontrolconfig)
+   * @param originAccessControlConfig The origin access control. 
+   */
   public fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
     cdkBuilder.originAccessControlConfig(originAccessControlConfig)
   }
 
+  /**
+   * The origin access control.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originaccesscontrol.html#cfn-cloudfront-originaccesscontrol-originaccesscontrolconfig)
+   * @param originAccessControlConfig The origin access control. 
+   */
   public
       fun originAccessControlConfig(originAccessControlConfig: CfnOriginAccessControl.OriginAccessControlConfigProperty) {
     cdkBuilder.originAccessControlConfig(originAccessControlConfig)

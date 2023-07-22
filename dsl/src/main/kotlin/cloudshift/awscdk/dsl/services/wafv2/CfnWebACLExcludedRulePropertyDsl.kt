@@ -11,6 +11,9 @@ public class CfnWebACLExcludedRulePropertyDsl {
   private val cdkBuilder: CfnWebACL.ExcludedRuleProperty.Builder =
       CfnWebACL.ExcludedRuleProperty.builder()
 
+  /**
+   * @param name The name of the rule whose action you want to override to `Count` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

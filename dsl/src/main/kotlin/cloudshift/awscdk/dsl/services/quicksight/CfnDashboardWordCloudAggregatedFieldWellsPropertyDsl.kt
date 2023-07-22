@@ -18,26 +18,50 @@ public class CfnDashboardWordCloudAggregatedFieldWellsPropertyDsl {
 
   private val _size: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param groupBy The group by field well of a word cloud.
+   * Values are grouped by group by fields.
+   */
   public fun groupBy(vararg groupBy: Any) {
     _groupBy.addAll(listOf(*groupBy))
   }
 
+  /**
+   * @param groupBy The group by field well of a word cloud.
+   * Values are grouped by group by fields.
+   */
   public fun groupBy(groupBy: Collection<Any>) {
     _groupBy.addAll(groupBy)
   }
 
+  /**
+   * @param groupBy The group by field well of a word cloud.
+   * Values are grouped by group by fields.
+   */
   public fun groupBy(groupBy: IResolvable) {
     cdkBuilder.groupBy(groupBy)
   }
 
+  /**
+   * @param size The size field well of a word cloud.
+   * Values are aggregated based on group by fields.
+   */
   public fun size(vararg size: Any) {
     _size.addAll(listOf(*size))
   }
 
+  /**
+   * @param size The size field well of a word cloud.
+   * Values are aggregated based on group by fields.
+   */
   public fun size(size: Collection<Any>) {
     _size.addAll(size)
   }
 
+  /**
+   * @param size The size field well of a word cloud.
+   * Values are aggregated based on group by fields.
+   */
   public fun size(size: IResolvable) {
     cdkBuilder.size(size)
   }

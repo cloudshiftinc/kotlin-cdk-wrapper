@@ -14,20 +14,32 @@ import software.amazon.awscdk.services.stepfunctions.TaskMetricsConfig
 public class TaskMetricsConfigDsl {
   private val cdkBuilder: TaskMetricsConfig.Builder = TaskMetricsConfig.builder()
 
-  public fun metricDimensions(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param metricDimensions The dimensions to attach to metrics.
+   */
+  public fun metricDimensions(metricDimensions: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(metricDimensions)
     cdkBuilder.metricDimensions(builder.map)
   }
 
+  /**
+   * @param metricDimensions The dimensions to attach to metrics.
+   */
   public fun metricDimensions(metricDimensions: Map<String, Any>) {
     cdkBuilder.metricDimensions(metricDimensions)
   }
 
+  /**
+   * @param metricPrefixPlural Prefix for plural metric names of activity actions.
+   */
   public fun metricPrefixPlural(metricPrefixPlural: String) {
     cdkBuilder.metricPrefixPlural(metricPrefixPlural)
   }
 
+  /**
+   * @param metricPrefixSingular Prefix for singular metric names of activity actions.
+   */
   public fun metricPrefixSingular(metricPrefixSingular: String) {
     cdkBuilder.metricPrefixSingular(metricPrefixSingular)
   }

@@ -11,6 +11,9 @@ public class CfnDashboardVisualAxisSortOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.VisualAxisSortOptionProperty.Builder =
       CfnDashboard.VisualAxisSortOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus The availaiblity status of a visual's axis sort options.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

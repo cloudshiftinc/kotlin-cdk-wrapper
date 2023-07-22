@@ -11,6 +11,9 @@ public class CfnEmailIdentityConfigurationSetAttributesPropertyDsl {
   private val cdkBuilder: CfnEmailIdentity.ConfigurationSetAttributesProperty.Builder =
       CfnEmailIdentity.ConfigurationSetAttributesProperty.builder()
 
+  /**
+   * @param configurationSetName The configuration set to associate with an email identity.
+   */
   public fun configurationSetName(configurationSetName: String) {
     cdkBuilder.configurationSetName(configurationSetName)
   }

@@ -11,6 +11,10 @@ public class CfnBucketReplicationTimeValuePropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicationTimeValueProperty.Builder =
       CfnBucket.ReplicationTimeValueProperty.builder()
 
+  /**
+   * @param minutes Contains an integer specifying time in minutes. 
+   * Valid value: 15
+   */
   public fun minutes(minutes: Number) {
     cdkBuilder.minutes(minutes)
   }

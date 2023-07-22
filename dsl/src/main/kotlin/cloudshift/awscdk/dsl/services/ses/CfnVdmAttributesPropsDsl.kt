@@ -11,19 +11,35 @@ import software.amazon.awscdk.services.ses.CfnVdmAttributesProps
 public class CfnVdmAttributesPropsDsl {
   private val cdkBuilder: CfnVdmAttributesProps.Builder = CfnVdmAttributesProps.builder()
 
+  /**
+   * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+   * applicable to the Dashboard.
+   */
   public fun dashboardAttributes(dashboardAttributes: IResolvable) {
     cdkBuilder.dashboardAttributes(dashboardAttributes)
   }
 
+  /**
+   * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+   * applicable to the Dashboard.
+   */
   public
       fun dashboardAttributes(dashboardAttributes: CfnVdmAttributes.DashboardAttributesProperty) {
     cdkBuilder.dashboardAttributes(dashboardAttributes)
   }
 
+  /**
+   * @param guardianAttributes Specifies additional settings for your VDM configuration as
+   * applicable to the Guardian.
+   */
   public fun guardianAttributes(guardianAttributes: IResolvable) {
     cdkBuilder.guardianAttributes(guardianAttributes)
   }
 
+  /**
+   * @param guardianAttributes Specifies additional settings for your VDM configuration as
+   * applicable to the Guardian.
+   */
   public fun guardianAttributes(guardianAttributes: CfnVdmAttributes.GuardianAttributesProperty) {
     cdkBuilder.guardianAttributes(guardianAttributes)
   }

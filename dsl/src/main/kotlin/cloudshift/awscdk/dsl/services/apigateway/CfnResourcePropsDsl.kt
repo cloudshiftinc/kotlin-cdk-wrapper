@@ -10,14 +10,23 @@ import software.amazon.awscdk.services.apigateway.CfnResourceProps
 public class CfnResourcePropsDsl {
   private val cdkBuilder: CfnResourceProps.Builder = CfnResourceProps.builder()
 
+  /**
+   * @param parentId The parent resource's identifier. 
+   */
   public fun parentId(parentId: String) {
     cdkBuilder.parentId(parentId)
   }
 
+  /**
+   * @param pathPart The last path segment for this resource. 
+   */
   public fun pathPart(pathPart: String) {
     cdkBuilder.pathPart(pathPart)
   }
 
+  /**
+   * @param restApiId The string identifier of the associated RestApi. 
+   */
   public fun restApiId(restApiId: String) {
     cdkBuilder.restApiId(restApiId)
   }

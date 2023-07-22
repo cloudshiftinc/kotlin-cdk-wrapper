@@ -19,38 +19,69 @@ public class CfnWirelessGatewayPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of the new resource.
+   * The maximum length is 2048 characters.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
+   */
   public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
     cdkBuilder.lastUplinkReceivedAt(lastUplinkReceivedAt)
   }
 
+  /**
+   * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
+   */
   public fun loRaWan(loRaWan: IResolvable) {
     cdkBuilder.loRaWan(loRaWan)
   }
 
+  /**
+   * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
+   */
   public fun loRaWan(loRaWan: CfnWirelessGateway.LoRaWANGatewayProperty) {
     cdkBuilder.loRaWan(loRaWan)
   }
 
+  /**
+   * @param name The name of the new resource.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource.
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource.
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param thingArn The ARN of the thing to associate with the wireless gateway.
+   */
   public fun thingArn(thingArn: String) {
     cdkBuilder.thingArn(thingArn)
   }
 
+  /**
+   * @param thingName The name of the thing associated with the wireless gateway.
+   * The value is empty if a thing isn't associated with the gateway.
+   */
   public fun thingName(thingName: String) {
     cdkBuilder.thingName(thingName)
   }

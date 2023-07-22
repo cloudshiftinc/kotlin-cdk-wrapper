@@ -11,6 +11,10 @@ public class CfnChannelFrameCaptureS3SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.FrameCaptureS3SettingsProperty.Builder =
       CfnChannel.FrameCaptureS3SettingsProperty.builder()
 
+  /**
+   * @param cannedAcl Specify the canned ACL to apply to each S3 request.
+   * Defaults to none.
+   */
   public fun cannedAcl(cannedAcl: String) {
     cdkBuilder.cannedAcl(cannedAcl)
   }

@@ -11,6 +11,9 @@ public class CfnChannelVideoSelectorPidPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorPidProperty.Builder =
       CfnChannel.VideoSelectorPidProperty.builder()
 
+  /**
+   * @param pid Selects a specific PID from within a video source.
+   */
   public fun pid(pid: Number) {
     cdkBuilder.pid(pid)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.cognito.NumberAttributeConstraints
 public class NumberAttributeConstraintsDsl {
   private val cdkBuilder: NumberAttributeConstraints.Builder = NumberAttributeConstraints.builder()
 
+  /**
+   * @param max Maximum value of this attribute.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min Minimum value of this attribute.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

@@ -12,10 +12,19 @@ public class SecurityGroupContextResponseDsl {
   private val cdkBuilder: SecurityGroupContextResponse.Builder =
       SecurityGroupContextResponse.builder()
 
+  /**
+   * @param allowAllOutbound Whether the security group allows all outbound traffic. 
+   * This will be true
+   * when the security group has all-protocol egress permissions to access both
+   * `0.0.0.0/0` and `::/0`.
+   */
   public fun allowAllOutbound(allowAllOutbound: Boolean) {
     cdkBuilder.allowAllOutbound(allowAllOutbound)
   }
 
+  /**
+   * @param securityGroupId The security group's id. 
+   */
   public fun securityGroupId(securityGroupId: String) {
     cdkBuilder.securityGroupId(securityGroupId)
   }

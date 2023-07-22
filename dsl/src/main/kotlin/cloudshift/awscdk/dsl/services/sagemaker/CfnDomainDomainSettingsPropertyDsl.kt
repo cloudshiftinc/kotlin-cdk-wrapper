@@ -16,19 +16,35 @@ public class CfnDomainDomainSettingsPropertyDsl {
 
   private val _securityGroupIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param rStudioServerProDomainSettings A collection of settings that configure the
+   * `RStudioServerPro` Domain-level app.
+   */
   public fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: IResolvable) {
     cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings)
   }
 
+  /**
+   * @param rStudioServerProDomainSettings A collection of settings that configure the
+   * `RStudioServerPro` Domain-level app.
+   */
   public
       fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: CfnDomain.RStudioServerProDomainSettingsProperty) {
     cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings)
   }
 
+  /**
+   * @param securityGroupIds The security groups for the Amazon Virtual Private Cloud that the
+   * `Domain` uses for communication between Domain-level apps and user apps.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The security groups for the Amazon Virtual Private Cloud that the
+   * `Domain` uses for communication between Domain-level apps and user apps.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }

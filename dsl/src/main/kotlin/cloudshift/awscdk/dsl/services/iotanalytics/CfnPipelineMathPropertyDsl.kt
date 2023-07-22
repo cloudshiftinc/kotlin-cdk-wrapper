@@ -10,18 +10,31 @@ import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 public class CfnPipelineMathPropertyDsl {
   private val cdkBuilder: CfnPipeline.MathProperty.Builder = CfnPipeline.MathProperty.builder()
 
+  /**
+   * @param attribute The name of the attribute that contains the result of the math operation. 
+   */
   public fun attribute(attribute: String) {
     cdkBuilder.attribute(attribute)
   }
 
+  /**
+   * @param math An expression that uses one or more existing attributes and must return an integer
+   * value. 
+   */
   public fun math(math: String) {
     cdkBuilder.math(math)
   }
 
+  /**
+   * @param name The name of the 'math' activity. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param next The next activity in the pipeline.
+   */
   public fun next(next: String) {
     cdkBuilder.next(next)
   }

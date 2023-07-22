@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.ec2.VpnGatewayProps
 public class VpnGatewayPropsDsl {
   private val cdkBuilder: VpnGatewayProps.Builder = VpnGatewayProps.builder()
 
+  /**
+   * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you.
+   */
   public fun amazonSideAsn(amazonSideAsn: Number) {
     cdkBuilder.amazonSideAsn(amazonSideAsn)
   }
 
+  /**
+   * @param type Default type ipsec.1. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

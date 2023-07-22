@@ -25,36 +25,121 @@ public class FargateProfileDsl(
 
   private val _selectors: MutableList<Selector> = mutableListOf()
 
+  /**
+   * The EKS cluster to apply the Fargate profile to.
+   *
+   * [disable-awslint:ref-via-interface]
+   *
+   * @param cluster The EKS cluster to apply the Fargate profile to. 
+   */
   public fun cluster(cluster: Cluster) {
     cdkBuilder.cluster(cluster)
   }
 
+  /**
+   * The name of the Fargate profile.
+   *
+   * Default: - generated
+   *
+   * @param fargateProfileName The name of the Fargate profile. 
+   */
   public fun fargateProfileName(fargateProfileName: String) {
     cdkBuilder.fargateProfileName(fargateProfileName)
   }
 
+  /**
+   * The pod execution role to use for pods that match the selectors in the Fargate profile.
+   *
+   * The pod execution role allows Fargate infrastructure to
+   * register with your cluster as a node, and it provides read access to Amazon
+   * ECR image repositories.
+   *
+   * Default: - a role will be automatically created
+   *
+   * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html)
+   * @param podExecutionRole The pod execution role to use for pods that match the selectors in the
+   * Fargate profile. 
+   */
   public fun podExecutionRole(podExecutionRole: IRole) {
     cdkBuilder.podExecutionRole(podExecutionRole)
   }
 
+  /**
+   * The selectors to match for pods to use this Fargate profile.
+   *
+   * Each selector
+   * must have an associated namespace. Optionally, you can also specify labels
+   * for a namespace.
+   *
+   * At least one selector is required and you may specify up to five selectors.
+   *
+   * @param selectors The selectors to match for pods to use this Fargate profile. 
+   */
   public fun selectors(selectors: SelectorDsl.() -> Unit) {
     _selectors.add(SelectorDsl().apply(selectors).build())
   }
 
+  /**
+   * The selectors to match for pods to use this Fargate profile.
+   *
+   * Each selector
+   * must have an associated namespace. Optionally, you can also specify labels
+   * for a namespace.
+   *
+   * At least one selector is required and you may specify up to five selectors.
+   *
+   * @param selectors The selectors to match for pods to use this Fargate profile. 
+   */
   public fun selectors(selectors: Collection<Selector>) {
     _selectors.addAll(selectors)
   }
 
-  public fun subnetSelection(block: SubnetSelectionDsl.() -> Unit = {}) {
+  /**
+   * Select which subnets to launch your pods into.
+   *
+   * At this time, pods running
+   * on Fargate are not assigned public IP addresses, so only private subnets
+   * (with no direct route to an Internet Gateway) are allowed.
+   *
+   * You must specify the VPC to customize the subnet selection
+   *
+   * Default: - all private subnets of the VPC are selected.
+   *
+   * @param subnetSelection Select which subnets to launch your pods into. 
+   */
+  public fun subnetSelection(subnetSelection: SubnetSelectionDsl.() -> Unit = {}) {
     val builder = SubnetSelectionDsl()
-    builder.apply(block)
+    builder.apply(subnetSelection)
     cdkBuilder.subnetSelection(builder.build())
   }
 
+  /**
+   * Select which subnets to launch your pods into.
+   *
+   * At this time, pods running
+   * on Fargate are not assigned public IP addresses, so only private subnets
+   * (with no direct route to an Internet Gateway) are allowed.
+   *
+   * You must specify the VPC to customize the subnet selection
+   *
+   * Default: - all private subnets of the VPC are selected.
+   *
+   * @param subnetSelection Select which subnets to launch your pods into. 
+   */
   public fun subnetSelection(subnetSelection: SubnetSelection) {
     cdkBuilder.subnetSelection(subnetSelection)
   }
 
+  /**
+   * The VPC from which to select subnets to launch your pods into.
+   *
+   * By default, all private subnets are selected. You can customize this using
+   * `subnetSelection`.
+   *
+   * Default: - all private subnets used by the EKS cluster
+   *
+   * @param vpc The VPC from which to select subnets to launch your pods into. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

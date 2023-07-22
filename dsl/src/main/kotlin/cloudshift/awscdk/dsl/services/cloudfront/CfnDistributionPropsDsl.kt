@@ -18,18 +18,30 @@ public class CfnDistributionPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param distributionConfig The distribution's configuration. 
+   */
   public fun distributionConfig(distributionConfig: IResolvable) {
     cdkBuilder.distributionConfig(distributionConfig)
   }
 
+  /**
+   * @param distributionConfig The distribution's configuration. 
+   */
   public fun distributionConfig(distributionConfig: CfnDistribution.DistributionConfigProperty) {
     cdkBuilder.distributionConfig(distributionConfig)
   }
 
+  /**
+   * @param tags A complex type that contains zero or more `Tag` elements.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A complex type that contains zero or more `Tag` elements.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

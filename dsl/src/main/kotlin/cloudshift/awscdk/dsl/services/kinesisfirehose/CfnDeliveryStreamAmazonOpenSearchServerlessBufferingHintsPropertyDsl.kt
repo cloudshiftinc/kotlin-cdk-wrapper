@@ -11,10 +11,16 @@ public class CfnDeliveryStreamAmazonOpenSearchServerlessBufferingHintsPropertyDs
   private val cdkBuilder: CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty.Builder
       = CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty.builder()
 
+  /**
+   * @param intervalInSeconds the value to be set.
+   */
   public fun intervalInSeconds(intervalInSeconds: Number) {
     cdkBuilder.intervalInSeconds(intervalInSeconds)
   }
 
+  /**
+   * @param sizeInMBs the value to be set.
+   */
   public fun sizeInMBs(sizeInMBs: Number) {
     cdkBuilder.sizeInMBs(sizeInMBs)
   }

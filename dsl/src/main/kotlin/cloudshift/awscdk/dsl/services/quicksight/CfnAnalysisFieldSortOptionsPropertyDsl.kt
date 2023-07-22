@@ -11,18 +11,30 @@ public class CfnAnalysisFieldSortOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FieldSortOptionsProperty.Builder =
       CfnAnalysis.FieldSortOptionsProperty.builder()
 
+  /**
+   * @param columnSort The sort configuration for a column that is not used in a field well.
+   */
   public fun columnSort(columnSort: IResolvable) {
     cdkBuilder.columnSort(columnSort)
   }
 
+  /**
+   * @param columnSort The sort configuration for a column that is not used in a field well.
+   */
   public fun columnSort(columnSort: CfnAnalysis.ColumnSortProperty) {
     cdkBuilder.columnSort(columnSort)
   }
 
+  /**
+   * @param fieldSort The sort configuration for a field in a field well.
+   */
   public fun fieldSort(fieldSort: IResolvable) {
     cdkBuilder.fieldSort(fieldSort)
   }
 
+  /**
+   * @param fieldSort The sort configuration for a field in a field well.
+   */
   public fun fieldSort(fieldSort: CfnAnalysis.FieldSortProperty) {
     cdkBuilder.fieldSort(fieldSort)
   }

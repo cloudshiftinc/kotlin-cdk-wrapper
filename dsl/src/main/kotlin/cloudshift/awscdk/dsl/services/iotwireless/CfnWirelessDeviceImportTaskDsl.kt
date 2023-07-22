@@ -23,22 +23,58 @@ public class CfnWirelessDeviceImportTaskDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the destination that describes the IoT rule to route messages from the Sidewalk
+   * devices in the import task to other applications.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html#cfn-iotwireless-wirelessdeviceimporttask-destinationname)
+   * @param destinationName The name of the destination that describes the IoT rule to route
+   * messages from the Sidewalk devices in the import task to other applications. 
+   */
   public fun destinationName(destinationName: String) {
     cdkBuilder.destinationName(destinationName)
   }
 
+  /**
+   * The Sidewalk-related information of the wireless device import task.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html#cfn-iotwireless-wirelessdeviceimporttask-sidewalk)
+   * @param sidewalk The Sidewalk-related information of the wireless device import task. 
+   */
   public fun sidewalk(sidewalk: IResolvable) {
     cdkBuilder.sidewalk(sidewalk)
   }
 
+  /**
+   * The Sidewalk-related information of the wireless device import task.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html#cfn-iotwireless-wirelessdeviceimporttask-sidewalk)
+   * @param sidewalk The Sidewalk-related information of the wireless device import task. 
+   */
   public fun sidewalk(sidewalk: CfnWirelessDeviceImportTask.SidewalkProperty) {
     cdkBuilder.sidewalk(sidewalk)
   }
 
+  /**
+   * Adds to or modifies the tags of the given resource.
+   *
+   * Tags are metadata that you can use to manage a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html#cfn-iotwireless-wirelessdeviceimporttask-tags)
+   * @param tags Adds to or modifies the tags of the given resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Adds to or modifies the tags of the given resource.
+   *
+   * Tags are metadata that you can use to manage a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html#cfn-iotwireless-wirelessdeviceimporttask-tags)
+   * @param tags Adds to or modifies the tags of the given resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

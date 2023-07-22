@@ -18,18 +18,33 @@ public class CfnDataSourceSalesforceStandardObjectAttachmentConfigurationPropert
 
   private val _fieldMappings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param documentTitleFieldName The name of the field used for the document title.
+   */
   public fun documentTitleFieldName(documentTitleFieldName: String) {
     cdkBuilder.documentTitleFieldName(documentTitleFieldName)
   }
 
+  /**
+   * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra index
+   * fields.
+   */
   public fun fieldMappings(vararg fieldMappings: Any) {
     _fieldMappings.addAll(listOf(*fieldMappings))
   }
 
+  /**
+   * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra index
+   * fields.
+   */
   public fun fieldMappings(fieldMappings: Collection<Any>) {
     _fieldMappings.addAll(fieldMappings)
   }
 
+  /**
+   * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra index
+   * fields.
+   */
   public fun fieldMappings(fieldMappings: IResolvable) {
     cdkBuilder.fieldMappings(fieldMappings)
   }

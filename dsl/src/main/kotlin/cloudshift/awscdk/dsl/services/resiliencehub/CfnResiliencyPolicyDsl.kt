@@ -20,36 +20,90 @@ public class CfnResiliencyPolicyDsl(
   private val cdkBuilder: CfnResiliencyPolicy.Builder = CfnResiliencyPolicy.Builder.create(scope,
       id)
 
+  /**
+   * Specifies a high-level geographical location constraint for where your resilience policy data
+   * can be stored.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-datalocationconstraint)
+   * @param dataLocationConstraint Specifies a high-level geographical location constraint for where
+   * your resilience policy data can be stored. 
+   */
   public fun dataLocationConstraint(dataLocationConstraint: String) {
     cdkBuilder.dataLocationConstraint(dataLocationConstraint)
   }
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The resiliency policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policy)
+   * @param policy The resiliency policy. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * The resiliency policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policy)
+   * @param policy The resiliency policy. 
+   */
   public fun policy(policy: Map<String, Any>) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * The resiliency policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policy)
+   * @param policy The resiliency policy. 
+   */
   public fun policy(policy: IResolvable) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * The description for the policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policydescription)
+   * @param policyDescription The description for the policy. 
+   */
   public fun policyDescription(policyDescription: String) {
     cdkBuilder.policyDescription(policyDescription)
   }
 
+  /**
+   * The name of the policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policyname)
+   * @param policyName The name of the policy. 
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }
 
+  /**
+   * The tags assigned to the resource.
+   *
+   * A tag is a label that you assign to an AWS resource. Each tag consists of a key/value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-tags)
+   * @param tags The tags assigned to the resource. 
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * The tier for this resiliency policy, ranging from the highest severity ( `MissionCritical` ) to
+   * lowest ( `NonCritical` ).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-tier)
+   * @param tier The tier for this resiliency policy, ranging from the highest severity (
+   * `MissionCritical` ) to lowest ( `NonCritical` ). 
+   */
   public fun tier(tier: String) {
     cdkBuilder.tier(tier)
   }

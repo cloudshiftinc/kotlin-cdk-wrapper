@@ -11,6 +11,9 @@ public class CfnEndpointReplicationConfigPropertyDsl {
   private val cdkBuilder: CfnEndpoint.ReplicationConfigProperty.Builder =
       CfnEndpoint.ReplicationConfigProperty.builder()
 
+  /**
+   * @param state The state of event replication. 
+   */
   public fun state(state: String) {
     cdkBuilder.state(state)
   }

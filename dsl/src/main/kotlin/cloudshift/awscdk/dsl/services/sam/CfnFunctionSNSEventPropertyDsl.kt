@@ -11,6 +11,9 @@ public class CfnFunctionSNSEventPropertyDsl {
   private val cdkBuilder: CfnFunction.SNSEventProperty.Builder =
       CfnFunction.SNSEventProperty.builder()
 
+  /**
+   * @param topic the value to be set. 
+   */
   public fun topic(topic: String) {
     cdkBuilder.topic(topic)
   }

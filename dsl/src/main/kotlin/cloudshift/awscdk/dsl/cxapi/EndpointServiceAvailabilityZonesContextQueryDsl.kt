@@ -11,14 +11,23 @@ public class EndpointServiceAvailabilityZonesContextQueryDsl {
   private val cdkBuilder: EndpointServiceAvailabilityZonesContextQuery.Builder =
       EndpointServiceAvailabilityZonesContextQuery.builder()
 
+  /**
+   * @param account Query account.
+   */
   public fun account(account: String) {
     cdkBuilder.account(account)
   }
 
+  /**
+   * @param region Query region.
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * @param serviceName Query service name.
+   */
   public fun serviceName(serviceName: String) {
     cdkBuilder.serviceName(serviceName)
   }

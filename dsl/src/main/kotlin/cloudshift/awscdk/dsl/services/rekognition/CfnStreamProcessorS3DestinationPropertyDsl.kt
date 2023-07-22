@@ -11,10 +11,18 @@ public class CfnStreamProcessorS3DestinationPropertyDsl {
   private val cdkBuilder: CfnStreamProcessor.S3DestinationProperty.Builder =
       CfnStreamProcessor.S3DestinationProperty.builder()
 
+  /**
+   * @param bucketName Describes the destination Amazon Simple Storage Service (Amazon S3) bucket
+   * name of a stream processor's exports. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param objectKeyPrefix Describes the destination Amazon Simple Storage Service (Amazon S3)
+   * object keys of a stream processor's exports.
+   */
   public fun objectKeyPrefix(objectKeyPrefix: String) {
     cdkBuilder.objectKeyPrefix(objectKeyPrefix)
   }

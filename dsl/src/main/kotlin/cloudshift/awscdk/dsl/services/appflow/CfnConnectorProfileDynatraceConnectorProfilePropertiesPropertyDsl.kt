@@ -11,6 +11,9 @@ public class CfnConnectorProfileDynatraceConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param instanceUrl The location of the Dynatrace resource. 
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }

@@ -17,18 +17,30 @@ public class UserPoolResourceServerOptionsDsl {
 
   private val _scopes: MutableList<ResourceServerScope> = mutableListOf()
 
+  /**
+   * @param identifier A unique resource server identifier for the resource server. 
+   */
   public fun identifier(identifier: String) {
     cdkBuilder.identifier(identifier)
   }
 
+  /**
+   * @param scopes Oauth scopes.
+   */
   public fun scopes(scopes: ResourceServerScopeDsl.() -> Unit) {
     _scopes.add(ResourceServerScopeDsl().apply(scopes).build())
   }
 
+  /**
+   * @param scopes Oauth scopes.
+   */
   public fun scopes(scopes: Collection<ResourceServerScope>) {
     _scopes.addAll(scopes)
   }
 
+  /**
+   * @param userPoolResourceServerName A friendly name for the resource server.
+   */
   public fun userPoolResourceServerName(userPoolResourceServerName: String) {
     cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)
   }

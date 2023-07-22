@@ -12,14 +12,23 @@ public class CfnLaunchTemplateInstanceMarketOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.InstanceMarketOptionsProperty.Builder =
       CfnLaunchTemplate.InstanceMarketOptionsProperty.builder()
 
+  /**
+   * @param marketType The market type.
+   */
   public fun marketType(marketType: String) {
     cdkBuilder.marketType(marketType)
   }
 
+  /**
+   * @param spotOptions The options for Spot Instances.
+   */
   public fun spotOptions(spotOptions: IResolvable) {
     cdkBuilder.spotOptions(spotOptions)
   }
 
+  /**
+   * @param spotOptions The options for Spot Instances.
+   */
   public fun spotOptions(spotOptions: CfnLaunchTemplate.SpotOptionsProperty) {
     cdkBuilder.spotOptions(spotOptions)
   }

@@ -12,18 +12,30 @@ public class CfnBotAllowedInputTypesPropertyDsl {
   private val cdkBuilder: CfnBot.AllowedInputTypesProperty.Builder =
       CfnBot.AllowedInputTypesProperty.builder()
 
+  /**
+   * @param allowAudioInput Indicates whether audio input is allowed. 
+   */
   public fun allowAudioInput(allowAudioInput: Boolean) {
     cdkBuilder.allowAudioInput(allowAudioInput)
   }
 
+  /**
+   * @param allowAudioInput Indicates whether audio input is allowed. 
+   */
   public fun allowAudioInput(allowAudioInput: IResolvable) {
     cdkBuilder.allowAudioInput(allowAudioInput)
   }
 
+  /**
+   * @param allowDtmfInput Indicates whether DTMF input is allowed. 
+   */
   public fun allowDtmfInput(allowDtmfInput: Boolean) {
     cdkBuilder.allowDtmfInput(allowDtmfInput)
   }
 
+  /**
+   * @param allowDtmfInput Indicates whether DTMF input is allowed. 
+   */
   public fun allowDtmfInput(allowDtmfInput: IResolvable) {
     cdkBuilder.allowDtmfInput(allowDtmfInput)
   }

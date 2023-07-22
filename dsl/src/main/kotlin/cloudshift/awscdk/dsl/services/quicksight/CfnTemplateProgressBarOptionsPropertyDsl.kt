@@ -11,6 +11,9 @@ public class CfnTemplateProgressBarOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.ProgressBarOptionsProperty.Builder =
       CfnTemplate.ProgressBarOptionsProperty.builder()
 
+  /**
+   * @param visibility The visibility of the progress bar.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

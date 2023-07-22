@@ -15,14 +15,23 @@ public class CfnInstanceAssociationParameterPropertyDsl {
 
   private val _value: MutableList<String> = mutableListOf()
 
+  /**
+   * @param key The name of an input parameter that is in the associated SSM document. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The value of an input parameter. 
+   */
   public fun `value`(vararg `value`: String) {
     _value.addAll(listOf(*`value`))
   }
 
+  /**
+   * @param value The value of an input parameter. 
+   */
   public fun `value`(`value`: Collection<String>) {
     _value.addAll(`value`)
   }

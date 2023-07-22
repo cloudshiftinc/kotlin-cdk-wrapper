@@ -15,14 +15,24 @@ public class CfnFlywheelDocumentClassificationConfigPropertyDsl {
 
   private val _labels: MutableList<String> = mutableListOf()
 
+  /**
+   * @param labels One or more labels to associate with the custom classifier.
+   */
   public fun labels(vararg labels: String) {
     _labels.addAll(listOf(*labels))
   }
 
+  /**
+   * @param labels One or more labels to associate with the custom classifier.
+   */
   public fun labels(labels: Collection<String>) {
     _labels.addAll(labels)
   }
 
+  /**
+   * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
+   * `MULTI_LABEL` . 
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }

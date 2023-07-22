@@ -15,10 +15,22 @@ public class CfnSubnetNetworkAclAssociationDsl(
   private val cdkBuilder: CfnSubnetNetworkAclAssociation.Builder =
       CfnSubnetNetworkAclAssociation.Builder.create(scope, id)
 
+  /**
+   * The ID of the network ACL.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetnetworkaclassociation.html#cfn-ec2-subnetnetworkaclassociation-networkaclid)
+   * @param networkAclId The ID of the network ACL. 
+   */
   public fun networkAclId(networkAclId: String) {
     cdkBuilder.networkAclId(networkAclId)
   }
 
+  /**
+   * The ID of the subnet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetnetworkaclassociation.html#cfn-ec2-subnetnetworkaclassociation-subnetid)
+   * @param subnetId The ID of the subnet. 
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

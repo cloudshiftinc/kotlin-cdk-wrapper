@@ -15,24 +15,81 @@ import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps
 public class CfnCoreDefinitionPropsDsl {
   private val cdkBuilder: CfnCoreDefinitionProps.Builder = CfnCoreDefinitionProps.builder()
 
+  /**
+   * @param initialVersion The core definition version to include when the core definition is
+   * created.
+   * Currently, a core definition version can contain only one
+   * [`core`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html)
+   * .
+   *
+   *
+   * To associate a core definition version after the core definition is created, create an
+   * [`AWS::Greengrass::CoreDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html)
+   * resource and specify the ID of this core definition.
+   */
   public fun initialVersion(initialVersion: IResolvable) {
     cdkBuilder.initialVersion(initialVersion)
   }
 
+  /**
+   * @param initialVersion The core definition version to include when the core definition is
+   * created.
+   * Currently, a core definition version can contain only one
+   * [`core`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html)
+   * .
+   *
+   *
+   * To associate a core definition version after the core definition is created, create an
+   * [`AWS::Greengrass::CoreDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html)
+   * resource and specify the ID of this core definition.
+   */
   public fun initialVersion(initialVersion: CfnCoreDefinition.CoreDefinitionVersionProperty) {
     cdkBuilder.initialVersion(initialVersion)
   }
 
+  /**
+   * @param name The name of the core definition. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun tags(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param tags Application-specific metadata to attach to the core definition.
+   * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You can
+   * also use tags to categorize your resources. For more information, see [Tagging Your AWS IoT
+   * Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html)
+   * in the *Developer Guide* .
+   *
+   * This `Json` property type is processed as a map of key-value pairs. It uses the following
+   * format, which is different from most `Tags` implementations in AWS CloudFormation templates.
+   *
+   * ```
+   * "Tags": { "KeyName0": "value", "KeyName1": "value", "KeyName2": "value"
+   * }
+   * ```
+   */
+  public fun tags(tags: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(tags)
     cdkBuilder.tags(builder.map)
   }
 
+  /**
+   * @param tags Application-specific metadata to attach to the core definition.
+   * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You can
+   * also use tags to categorize your resources. For more information, see [Tagging Your AWS IoT
+   * Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html)
+   * in the *Developer Guide* .
+   *
+   * This `Json` property type is processed as a map of key-value pairs. It uses the following
+   * format, which is different from most `Tags` implementations in AWS CloudFormation templates.
+   *
+   * ```
+   * "Tags": { "KeyName0": "value", "KeyName1": "value", "KeyName2": "value"
+   * }
+   * ```
+   */
   public fun tags(tags: Any) {
     cdkBuilder.tags(tags)
   }

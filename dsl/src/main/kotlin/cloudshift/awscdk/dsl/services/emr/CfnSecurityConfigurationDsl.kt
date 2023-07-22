@@ -18,16 +18,34 @@ public class CfnSecurityConfigurationDsl(
   private val cdkBuilder: CfnSecurityConfiguration.Builder =
       CfnSecurityConfiguration.Builder.create(scope, id)
 
+  /**
+   * The name of the security configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-name)
+   * @param name The name of the security configuration. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun securityConfiguration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The security configuration details in JSON format.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-securityconfiguration)
+   * @param securityConfiguration The security configuration details in JSON format. 
+   */
+  public fun securityConfiguration(securityConfiguration: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(securityConfiguration)
     cdkBuilder.securityConfiguration(builder.map)
   }
 
+  /**
+   * The security configuration details in JSON format.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-securityconfiguration)
+   * @param securityConfiguration The security configuration details in JSON format. 
+   */
   public fun securityConfiguration(securityConfiguration: Any) {
     cdkBuilder.securityConfiguration(securityConfiguration)
   }

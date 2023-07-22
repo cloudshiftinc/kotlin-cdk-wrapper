@@ -17,18 +17,30 @@ public class CfnDashboardDataPathSortPropertyDsl {
 
   private val _sortPaths: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param direction Determines the sort direction. 
+   */
   public fun direction(direction: String) {
     cdkBuilder.direction(direction)
   }
 
+  /**
+   * @param sortPaths The list of data paths that need to be sorted. 
+   */
   public fun sortPaths(vararg sortPaths: Any) {
     _sortPaths.addAll(listOf(*sortPaths))
   }
 
+  /**
+   * @param sortPaths The list of data paths that need to be sorted. 
+   */
   public fun sortPaths(sortPaths: Collection<Any>) {
     _sortPaths.addAll(sortPaths)
   }
 
+  /**
+   * @param sortPaths The list of data paths that need to be sorted. 
+   */
   public fun sortPaths(sortPaths: IResolvable) {
     cdkBuilder.sortPaths(sortPaths)
   }

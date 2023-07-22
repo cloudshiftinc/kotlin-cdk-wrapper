@@ -11,10 +11,16 @@ public class CfnAlertSNSConfigurationPropertyDsl {
   private val cdkBuilder: CfnAlert.SNSConfigurationProperty.Builder =
       CfnAlert.SNSConfigurationProperty.builder()
 
+  /**
+   * @param roleArn The ARN of the IAM role that has access to the target SNS topic. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param snsTopicArn The ARN of the target SNS topic. 
+   */
   public fun snsTopicArn(snsTopicArn: String) {
     cdkBuilder.snsTopicArn(snsTopicArn)
   }

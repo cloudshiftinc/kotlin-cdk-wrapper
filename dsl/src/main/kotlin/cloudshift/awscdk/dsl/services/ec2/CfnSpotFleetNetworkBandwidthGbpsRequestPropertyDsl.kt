@@ -11,10 +11,18 @@ public class CfnSpotFleetNetworkBandwidthGbpsRequestPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.Builder =
       CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.builder()
 
+  /**
+   * @param max The maximum amount of network bandwidth, in Gbps.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum amount of network bandwidth, in Gbps.
+   * To specify no minimum limit, omit this parameter.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

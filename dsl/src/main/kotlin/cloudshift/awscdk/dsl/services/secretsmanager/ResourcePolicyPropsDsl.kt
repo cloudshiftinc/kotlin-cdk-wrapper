@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps
 public class ResourcePolicyPropsDsl {
   private val cdkBuilder: ResourcePolicyProps.Builder = ResourcePolicyProps.builder()
 
+  /**
+   * @param secret The secret to attach a resource-based permissions policy. 
+   */
   public fun secret(secret: ISecret) {
     cdkBuilder.secret(secret)
   }

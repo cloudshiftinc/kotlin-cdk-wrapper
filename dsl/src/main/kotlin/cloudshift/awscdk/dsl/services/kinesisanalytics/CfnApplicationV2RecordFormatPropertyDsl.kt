@@ -12,14 +12,27 @@ public class CfnApplicationV2RecordFormatPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.RecordFormatProperty.Builder =
       CfnApplicationV2.RecordFormatProperty.builder()
 
+  /**
+   * @param mappingParameters When you configure application input at the time of creating or
+   * updating an application, provides additional mapping information specific to the record format
+   * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+   */
   public fun mappingParameters(mappingParameters: IResolvable) {
     cdkBuilder.mappingParameters(mappingParameters)
   }
 
+  /**
+   * @param mappingParameters When you configure application input at the time of creating or
+   * updating an application, provides additional mapping information specific to the record format
+   * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+   */
   public fun mappingParameters(mappingParameters: CfnApplicationV2.MappingParametersProperty) {
     cdkBuilder.mappingParameters(mappingParameters)
   }
 
+  /**
+   * @param recordFormatType The type of record format. 
+   */
   public fun recordFormatType(recordFormatType: String) {
     cdkBuilder.recordFormatType(recordFormatType)
   }

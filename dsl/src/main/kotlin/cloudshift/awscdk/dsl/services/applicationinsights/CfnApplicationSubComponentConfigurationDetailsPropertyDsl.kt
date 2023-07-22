@@ -20,38 +20,74 @@ public class CfnApplicationSubComponentConfigurationDetailsPropertyDsl {
 
   private val _windowsEvents: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param alarmMetrics A list of metrics to monitor for the component.
+   * All component types can use `AlarmMetrics` .
+   */
   public fun alarmMetrics(vararg alarmMetrics: Any) {
     _alarmMetrics.addAll(listOf(*alarmMetrics))
   }
 
+  /**
+   * @param alarmMetrics A list of metrics to monitor for the component.
+   * All component types can use `AlarmMetrics` .
+   */
   public fun alarmMetrics(alarmMetrics: Collection<Any>) {
     _alarmMetrics.addAll(alarmMetrics)
   }
 
+  /**
+   * @param alarmMetrics A list of metrics to monitor for the component.
+   * All component types can use `AlarmMetrics` .
+   */
   public fun alarmMetrics(alarmMetrics: IResolvable) {
     cdkBuilder.alarmMetrics(alarmMetrics)
   }
 
+  /**
+   * @param logs A list of logs to monitor for the component.
+   * Only Amazon EC2 instances can use `Logs` .
+   */
   public fun logs(vararg logs: Any) {
     _logs.addAll(listOf(*logs))
   }
 
+  /**
+   * @param logs A list of logs to monitor for the component.
+   * Only Amazon EC2 instances can use `Logs` .
+   */
   public fun logs(logs: Collection<Any>) {
     _logs.addAll(logs)
   }
 
+  /**
+   * @param logs A list of logs to monitor for the component.
+   * Only Amazon EC2 instances can use `Logs` .
+   */
   public fun logs(logs: IResolvable) {
     cdkBuilder.logs(logs)
   }
 
+  /**
+   * @param windowsEvents A list of Windows Events to monitor for the component.
+   * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
+   */
   public fun windowsEvents(vararg windowsEvents: Any) {
     _windowsEvents.addAll(listOf(*windowsEvents))
   }
 
+  /**
+   * @param windowsEvents A list of Windows Events to monitor for the component.
+   * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
+   */
   public fun windowsEvents(windowsEvents: Collection<Any>) {
     _windowsEvents.addAll(windowsEvents)
   }
 
+  /**
+   * @param windowsEvents A list of Windows Events to monitor for the component.
+   * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
+   */
   public fun windowsEvents(windowsEvents: IResolvable) {
     cdkBuilder.windowsEvents(windowsEvents)
   }

@@ -12,10 +12,16 @@ public class CfnOrganizationConformancePackConformancePackInputParameterProperty
       CfnOrganizationConformancePack.ConformancePackInputParameterProperty.Builder =
       CfnOrganizationConformancePack.ConformancePackInputParameterProperty.builder()
 
+  /**
+   * @param parameterName One part of a key-value pair. 
+   */
   public fun parameterName(parameterName: String) {
     cdkBuilder.parameterName(parameterName)
   }
 
+  /**
+   * @param parameterValue One part of a key-value pair. 
+   */
   public fun parameterValue(parameterValue: String) {
     cdkBuilder.parameterValue(parameterValue)
   }

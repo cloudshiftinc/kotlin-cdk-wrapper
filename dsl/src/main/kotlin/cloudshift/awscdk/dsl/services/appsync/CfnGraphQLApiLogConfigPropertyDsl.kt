@@ -13,18 +13,41 @@ public class CfnGraphQLApiLogConfigPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.LogConfigProperty.Builder =
       CfnGraphQLApi.LogConfigProperty.builder()
 
+  /**
+   * @param cloudWatchLogsRoleArn The service role that AWS AppSync will assume to publish to Amazon
+   * CloudWatch Logs in your account.
+   */
   public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
     cdkBuilder.cloudWatchLogsRoleArn(cloudWatchLogsRoleArn)
   }
 
+  /**
+   * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such as
+   * headers, context, and evaluated mapping templates, regardless of logging level.
+   */
   public fun excludeVerboseContent(excludeVerboseContent: Boolean) {
     cdkBuilder.excludeVerboseContent(excludeVerboseContent)
   }
 
+  /**
+   * @param excludeVerboseContent Set to TRUE to exclude sections that contain information such as
+   * headers, context, and evaluated mapping templates, regardless of logging level.
+   */
   public fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
     cdkBuilder.excludeVerboseContent(excludeVerboseContent)
   }
 
+  /**
+   * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, or ALL.
+   * * *NONE* : No field-level logs are captured.
+   * * *ERROR* : Logs the following information only for the fields that are in error:
+   * * The error section in the server response.
+   * * Field-level errors.
+   * * The generated request/response functions that got resolved for error fields.
+   * * *ALL* : The following information is logged for all fields in the query:
+   * * Field-level tracing information.
+   * * The generated request/response functions that got resolved for each field.
+   */
   public fun fieldLogLevel(fieldLogLevel: String) {
     cdkBuilder.fieldLogLevel(fieldLogLevel)
   }

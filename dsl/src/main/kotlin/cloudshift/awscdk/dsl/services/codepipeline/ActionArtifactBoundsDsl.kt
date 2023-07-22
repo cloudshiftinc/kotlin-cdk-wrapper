@@ -10,18 +10,30 @@ import software.amazon.awscdk.services.codepipeline.ActionArtifactBounds
 public class ActionArtifactBoundsDsl {
   private val cdkBuilder: ActionArtifactBounds.Builder = ActionArtifactBounds.builder()
 
+  /**
+   * @param maxInputs the value to be set. 
+   */
   public fun maxInputs(maxInputs: Number) {
     cdkBuilder.maxInputs(maxInputs)
   }
 
+  /**
+   * @param maxOutputs the value to be set. 
+   */
   public fun maxOutputs(maxOutputs: Number) {
     cdkBuilder.maxOutputs(maxOutputs)
   }
 
+  /**
+   * @param minInputs the value to be set. 
+   */
   public fun minInputs(minInputs: Number) {
     cdkBuilder.minInputs(minInputs)
   }
 
+  /**
+   * @param minOutputs the value to be set. 
+   */
   public fun minOutputs(minOutputs: Number) {
     cdkBuilder.minOutputs(minOutputs)
   }

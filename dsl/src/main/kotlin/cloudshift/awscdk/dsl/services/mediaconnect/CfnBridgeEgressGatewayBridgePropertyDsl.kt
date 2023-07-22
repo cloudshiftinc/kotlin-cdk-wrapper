@@ -11,6 +11,9 @@ public class CfnBridgeEgressGatewayBridgePropertyDsl {
   private val cdkBuilder: CfnBridge.EgressGatewayBridgeProperty.Builder =
       CfnBridge.EgressGatewayBridgeProperty.builder()
 
+  /**
+   * @param maxBitrate The maximum expected bitrate (in bps) of the egress bridge. 
+   */
   public fun maxBitrate(maxBitrate: Number) {
     cdkBuilder.maxBitrate(maxBitrate)
   }

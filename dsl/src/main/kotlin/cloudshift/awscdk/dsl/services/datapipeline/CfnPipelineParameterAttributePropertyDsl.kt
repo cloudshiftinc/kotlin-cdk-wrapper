@@ -11,10 +11,16 @@ public class CfnPipelineParameterAttributePropertyDsl {
   private val cdkBuilder: CfnPipeline.ParameterAttributeProperty.Builder =
       CfnPipeline.ParameterAttributeProperty.builder()
 
+  /**
+   * @param key The field identifier. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param stringValue The field value, expressed as a String. 
+   */
   public fun stringValue(stringValue: String) {
     cdkBuilder.stringValue(stringValue)
   }

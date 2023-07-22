@@ -15,10 +15,22 @@ public class CfnKeyGroupDsl(
 ) {
   private val cdkBuilder: CfnKeyGroup.Builder = CfnKeyGroup.Builder.create(scope, id)
 
+  /**
+   * The key group configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html#cfn-cloudfront-keygroup-keygroupconfig)
+   * @param keyGroupConfig The key group configuration. 
+   */
   public fun keyGroupConfig(keyGroupConfig: IResolvable) {
     cdkBuilder.keyGroupConfig(keyGroupConfig)
   }
 
+  /**
+   * The key group configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html#cfn-cloudfront-keygroup-keygroupconfig)
+   * @param keyGroupConfig The key group configuration. 
+   */
   public fun keyGroupConfig(keyGroupConfig: CfnKeyGroup.KeyGroupConfigProperty) {
     cdkBuilder.keyGroupConfig(keyGroupConfig)
   }

@@ -15,14 +15,23 @@ public class CfnResponsePlanSsmParameterPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param key The key parameter to use when running the automation document. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param values The value parameter to use when running the automation document. 
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The value parameter to use when running the automation document. 
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

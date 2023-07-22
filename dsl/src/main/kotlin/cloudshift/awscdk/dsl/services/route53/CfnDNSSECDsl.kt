@@ -14,6 +14,14 @@ public class CfnDNSSECDsl(
 ) {
   private val cdkBuilder: CfnDNSSEC.Builder = CfnDNSSEC.Builder.create(scope, id)
 
+  /**
+   * A unique string (ID) that is used to identify a hosted zone.
+   *
+   * For example: `Z00001111A1ABCaaABC11` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html#cfn-route53-dnssec-hostedzoneid)
+   * @param hostedZoneId A unique string (ID) that is used to identify a hosted zone. 
+   */
   public fun hostedZoneId(hostedZoneId: String) {
     cdkBuilder.hostedZoneId(hostedZoneId)
   }

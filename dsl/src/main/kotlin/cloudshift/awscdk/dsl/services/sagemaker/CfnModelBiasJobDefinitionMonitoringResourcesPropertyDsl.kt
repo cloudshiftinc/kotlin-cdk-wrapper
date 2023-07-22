@@ -11,10 +11,18 @@ public class CfnModelBiasJobDefinitionMonitoringResourcesPropertyDsl {
   private val cdkBuilder: CfnModelBiasJobDefinition.MonitoringResourcesProperty.Builder =
       CfnModelBiasJobDefinition.MonitoringResourcesProperty.builder()
 
+  /**
+   * @param clusterConfig The configuration for the cluster resources used to run the processing
+   * job. 
+   */
   public fun clusterConfig(clusterConfig: IResolvable) {
     cdkBuilder.clusterConfig(clusterConfig)
   }
 
+  /**
+   * @param clusterConfig The configuration for the cluster resources used to run the processing
+   * job. 
+   */
   public fun clusterConfig(clusterConfig: CfnModelBiasJobDefinition.ClusterConfigProperty) {
     cdkBuilder.clusterConfig(clusterConfig)
   }

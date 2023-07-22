@@ -27,79 +27,231 @@ public class CfnFirewallPolicyFirewallPolicyPropertyDsl {
 
   private val _statelessRuleGroupReferences: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param policyVariables Contains variables that you can use to override default Suricata
+   * settings in your firewall policy.
+   */
   public fun policyVariables(policyVariables: IResolvable) {
     cdkBuilder.policyVariables(policyVariables)
   }
 
+  /**
+   * @param policyVariables Contains variables that you can use to override default Suricata
+   * settings in your firewall policy.
+   */
   public fun policyVariables(policyVariables: CfnFirewallPolicy.PolicyVariablesProperty) {
     cdkBuilder.policyVariables(policyVariables)
   }
 
+  /**
+   * @param statefulDefaultActions The default actions to take on a packet that doesn't match any
+   * stateful rules.
+   * The stateful default action is optional, and is only valid when using the strict rule order.
+   *
+   * Valid values of the stateful default action:
+   *
+   * * aws:drop_strict
+   * * aws:drop_established
+   * * aws:alert_strict
+   * * aws:alert_established
+   *
+   * For more information, see [Strict evaluation
+   * order](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html)
+   * in the *AWS Network Firewall Developer Guide* .
+   */
   public fun statefulDefaultActions(vararg statefulDefaultActions: String) {
     _statefulDefaultActions.addAll(listOf(*statefulDefaultActions))
   }
 
+  /**
+   * @param statefulDefaultActions The default actions to take on a packet that doesn't match any
+   * stateful rules.
+   * The stateful default action is optional, and is only valid when using the strict rule order.
+   *
+   * Valid values of the stateful default action:
+   *
+   * * aws:drop_strict
+   * * aws:drop_established
+   * * aws:alert_strict
+   * * aws:alert_established
+   *
+   * For more information, see [Strict evaluation
+   * order](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html)
+   * in the *AWS Network Firewall Developer Guide* .
+   */
   public fun statefulDefaultActions(statefulDefaultActions: Collection<String>) {
     _statefulDefaultActions.addAll(statefulDefaultActions)
   }
 
+  /**
+   * @param statefulEngineOptions Additional options governing how Network Firewall handles stateful
+   * rules.
+   * The stateful rule groups that you use in your policy must have stateful rule options settings
+   * that are compatible with these settings.
+   */
   public fun statefulEngineOptions(statefulEngineOptions: IResolvable) {
     cdkBuilder.statefulEngineOptions(statefulEngineOptions)
   }
 
+  /**
+   * @param statefulEngineOptions Additional options governing how Network Firewall handles stateful
+   * rules.
+   * The stateful rule groups that you use in your policy must have stateful rule options settings
+   * that are compatible with these settings.
+   */
   public
       fun statefulEngineOptions(statefulEngineOptions: CfnFirewallPolicy.StatefulEngineOptionsProperty) {
     cdkBuilder.statefulEngineOptions(statefulEngineOptions)
   }
 
+  /**
+   * @param statefulRuleGroupReferences References to the stateful rule groups that are used in the
+   * policy.
+   * These define the inspection criteria in stateful rules.
+   */
   public fun statefulRuleGroupReferences(vararg statefulRuleGroupReferences: Any) {
     _statefulRuleGroupReferences.addAll(listOf(*statefulRuleGroupReferences))
   }
 
+  /**
+   * @param statefulRuleGroupReferences References to the stateful rule groups that are used in the
+   * policy.
+   * These define the inspection criteria in stateful rules.
+   */
   public fun statefulRuleGroupReferences(statefulRuleGroupReferences: Collection<Any>) {
     _statefulRuleGroupReferences.addAll(statefulRuleGroupReferences)
   }
 
+  /**
+   * @param statefulRuleGroupReferences References to the stateful rule groups that are used in the
+   * policy.
+   * These define the inspection criteria in stateful rules.
+   */
   public fun statefulRuleGroupReferences(statefulRuleGroupReferences: IResolvable) {
     cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences)
   }
 
+  /**
+   * @param statelessCustomActions The custom action definitions that are available for use in the
+   * firewall policy's `StatelessDefaultActions` setting.
+   * You name each custom action that you define, and then you can use it by name in your default
+   * actions specifications.
+   */
   public fun statelessCustomActions(vararg statelessCustomActions: Any) {
     _statelessCustomActions.addAll(listOf(*statelessCustomActions))
   }
 
+  /**
+   * @param statelessCustomActions The custom action definitions that are available for use in the
+   * firewall policy's `StatelessDefaultActions` setting.
+   * You name each custom action that you define, and then you can use it by name in your default
+   * actions specifications.
+   */
   public fun statelessCustomActions(statelessCustomActions: Collection<Any>) {
     _statelessCustomActions.addAll(statelessCustomActions)
   }
 
+  /**
+   * @param statelessCustomActions The custom action definitions that are available for use in the
+   * firewall policy's `StatelessDefaultActions` setting.
+   * You name each custom action that you define, and then you can use it by name in your default
+   * actions specifications.
+   */
   public fun statelessCustomActions(statelessCustomActions: IResolvable) {
     cdkBuilder.statelessCustomActions(statelessCustomActions)
   }
 
+  /**
+   * @param statelessDefaultActions The actions to take on a packet if it doesn't match any of the
+   * stateless rules in the policy. 
+   * If you want non-matching packets to be forwarded for stateful inspection, specify
+   * `aws:forward_to_sfe` .
+   *
+   * You must specify one of the standard actions: `aws:pass` , `aws:drop` , or `aws:forward_to_sfe`
+   * . In addition, you can specify custom actions that are compatible with your standard section
+   * choice.
+   *
+   * For example, you could specify `["aws:pass"]` or you could specify `["aws:pass",
+   * “customActionName”]` . For information about compatibility, see the custom action descriptions.
+   */
   public fun statelessDefaultActions(vararg statelessDefaultActions: String) {
     _statelessDefaultActions.addAll(listOf(*statelessDefaultActions))
   }
 
+  /**
+   * @param statelessDefaultActions The actions to take on a packet if it doesn't match any of the
+   * stateless rules in the policy. 
+   * If you want non-matching packets to be forwarded for stateful inspection, specify
+   * `aws:forward_to_sfe` .
+   *
+   * You must specify one of the standard actions: `aws:pass` , `aws:drop` , or `aws:forward_to_sfe`
+   * . In addition, you can specify custom actions that are compatible with your standard section
+   * choice.
+   *
+   * For example, you could specify `["aws:pass"]` or you could specify `["aws:pass",
+   * “customActionName”]` . For information about compatibility, see the custom action descriptions.
+   */
   public fun statelessDefaultActions(statelessDefaultActions: Collection<String>) {
     _statelessDefaultActions.addAll(statelessDefaultActions)
   }
 
+  /**
+   * @param statelessFragmentDefaultActions The actions to take on a fragmented packet if it doesn't
+   * match any of the stateless rules in the policy. 
+   * If you want non-matching fragmented packets to be forwarded for stateful inspection, specify
+   * `aws:forward_to_sfe` .
+   *
+   * You must specify one of the standard actions: `aws:pass` , `aws:drop` , or `aws:forward_to_sfe`
+   * . In addition, you can specify custom actions that are compatible with your standard section
+   * choice.
+   *
+   * For example, you could specify `["aws:pass"]` or you could specify `["aws:pass",
+   * “customActionName”]` . For information about compatibility, see the custom action descriptions.
+   */
   public fun statelessFragmentDefaultActions(vararg statelessFragmentDefaultActions: String) {
     _statelessFragmentDefaultActions.addAll(listOf(*statelessFragmentDefaultActions))
   }
 
+  /**
+   * @param statelessFragmentDefaultActions The actions to take on a fragmented packet if it doesn't
+   * match any of the stateless rules in the policy. 
+   * If you want non-matching fragmented packets to be forwarded for stateful inspection, specify
+   * `aws:forward_to_sfe` .
+   *
+   * You must specify one of the standard actions: `aws:pass` , `aws:drop` , or `aws:forward_to_sfe`
+   * . In addition, you can specify custom actions that are compatible with your standard section
+   * choice.
+   *
+   * For example, you could specify `["aws:pass"]` or you could specify `["aws:pass",
+   * “customActionName”]` . For information about compatibility, see the custom action descriptions.
+   */
   public fun statelessFragmentDefaultActions(statelessFragmentDefaultActions: Collection<String>) {
     _statelessFragmentDefaultActions.addAll(statelessFragmentDefaultActions)
   }
 
+  /**
+   * @param statelessRuleGroupReferences References to the stateless rule groups that are used in
+   * the policy.
+   * These define the matching criteria in stateless rules.
+   */
   public fun statelessRuleGroupReferences(vararg statelessRuleGroupReferences: Any) {
     _statelessRuleGroupReferences.addAll(listOf(*statelessRuleGroupReferences))
   }
 
+  /**
+   * @param statelessRuleGroupReferences References to the stateless rule groups that are used in
+   * the policy.
+   * These define the matching criteria in stateless rules.
+   */
   public fun statelessRuleGroupReferences(statelessRuleGroupReferences: Collection<Any>) {
     _statelessRuleGroupReferences.addAll(statelessRuleGroupReferences)
   }
 
+  /**
+   * @param statelessRuleGroupReferences References to the stateless rule groups that are used in
+   * the policy.
+   * These define the matching criteria in stateless rules.
+   */
   public fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable) {
     cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences)
   }

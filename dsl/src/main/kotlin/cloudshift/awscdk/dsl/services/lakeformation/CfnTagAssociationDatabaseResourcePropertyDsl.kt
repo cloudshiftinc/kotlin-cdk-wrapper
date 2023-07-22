@@ -11,10 +11,18 @@ public class CfnTagAssociationDatabaseResourcePropertyDsl {
   private val cdkBuilder: CfnTagAssociation.DatabaseResourceProperty.Builder =
       CfnTagAssociation.DatabaseResourceProperty.builder()
 
+  /**
+   * @param catalogId The identifier for the Data Catalog . 
+   * By default, it should be the account ID of the caller.
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * @param name The name of the database resource. 
+   * Unique to the Data Catalog.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

@@ -11,10 +11,22 @@ public class CfnApplicationCatalogConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.CatalogConfigurationProperty.Builder =
       CfnApplication.CatalogConfigurationProperty.builder()
 
+  /**
+   * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon Glue
+   * database.
+   * You use this database for Apache Flink SQL queries and table API transforms that you write in a
+   * Kinesis Data Analytics Studio notebook.
+   */
   public fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
     cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration)
   }
 
+  /**
+   * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon Glue
+   * database.
+   * You use this database for Apache Flink SQL queries and table API transforms that you write in a
+   * Kinesis Data Analytics Studio notebook.
+   */
   public
       fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: CfnApplication.GlueDataCatalogConfigurationProperty) {
     cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration)

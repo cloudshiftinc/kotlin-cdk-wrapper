@@ -11,6 +11,11 @@ public class ResponseHeadersContentTypeOptionsDsl {
   private val cdkBuilder: ResponseHeadersContentTypeOptions.Builder =
       ResponseHeadersContentTypeOptions.builder()
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides the
+   * X-Content-Type-Options HTTP response header received from the origin with the one specified in
+   * this response headers policy. 
+   */
   public fun `override`(`override`: Boolean) {
     cdkBuilder.`override`(`override`)
   }

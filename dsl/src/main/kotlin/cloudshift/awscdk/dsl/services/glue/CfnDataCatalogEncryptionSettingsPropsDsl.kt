@@ -13,14 +13,25 @@ public class CfnDataCatalogEncryptionSettingsPropsDsl {
   private val cdkBuilder: CfnDataCatalogEncryptionSettingsProps.Builder =
       CfnDataCatalogEncryptionSettingsProps.builder()
 
+  /**
+   * @param catalogId The ID of the Data Catalog in which the settings are created. 
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
+   * Catalog security. 
+   */
   public fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
     cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)
   }
 
+  /**
+   * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
+   * Catalog security. 
+   */
   public
       fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty) {
     cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)

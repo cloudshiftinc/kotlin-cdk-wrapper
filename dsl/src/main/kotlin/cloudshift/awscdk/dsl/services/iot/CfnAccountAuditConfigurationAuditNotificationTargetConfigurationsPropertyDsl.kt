@@ -12,10 +12,16 @@ public class CfnAccountAuditConfigurationAuditNotificationTargetConfigurationsPr
       CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty.Builder =
       CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty.builder()
 
+  /**
+   * @param sns The `Sns` notification target.
+   */
   public fun sns(sns: IResolvable) {
     cdkBuilder.sns(sns)
   }
 
+  /**
+   * @param sns The `Sns` notification target.
+   */
   public fun sns(sns: CfnAccountAuditConfiguration.AuditNotificationTargetProperty) {
     cdkBuilder.sns(sns)
   }

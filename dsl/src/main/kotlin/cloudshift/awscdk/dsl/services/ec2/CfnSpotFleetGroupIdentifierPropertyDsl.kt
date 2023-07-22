@@ -11,6 +11,9 @@ public class CfnSpotFleetGroupIdentifierPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.GroupIdentifierProperty.Builder =
       CfnSpotFleet.GroupIdentifierProperty.builder()
 
+  /**
+   * @param groupId The ID of the security group. 
+   */
   public fun groupId(groupId: String) {
     cdkBuilder.groupId(groupId)
   }

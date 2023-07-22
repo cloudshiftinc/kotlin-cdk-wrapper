@@ -11,6 +11,9 @@ public class CfnFunctionTracingConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.TracingConfigProperty.Builder =
       CfnFunction.TracingConfigProperty.builder()
 
+  /**
+   * @param mode The tracing mode.
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }

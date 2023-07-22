@@ -11,10 +11,18 @@ public class CfnStorageLensPrefixLevelPropertyDsl {
   private val cdkBuilder: CfnStorageLens.PrefixLevelProperty.Builder =
       CfnStorageLens.PrefixLevelProperty.builder()
 
+  /**
+   * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+   * Lens. 
+   */
   public fun storageMetrics(storageMetrics: IResolvable) {
     cdkBuilder.storageMetrics(storageMetrics)
   }
 
+  /**
+   * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+   * Lens. 
+   */
   public fun storageMetrics(storageMetrics: CfnStorageLens.PrefixLevelStorageMetricsProperty) {
     cdkBuilder.storageMetrics(storageMetrics)
   }

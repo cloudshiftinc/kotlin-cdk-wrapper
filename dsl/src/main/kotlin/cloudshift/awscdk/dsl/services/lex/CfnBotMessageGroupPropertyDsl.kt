@@ -16,22 +16,43 @@ public class CfnBotMessageGroupPropertyDsl {
 
   private val _variations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param message The primary message that Amazon Lex should send to the user. 
+   */
   public fun message(message: IResolvable) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * @param message The primary message that Amazon Lex should send to the user. 
+   */
   public fun message(message: CfnBot.MessageProperty) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * @param variations Message variations to send to the user.
+   * When variations are defined, Amazon Lex chooses the primary message or one of the variations to
+   * send to the user.
+   */
   public fun variations(vararg variations: Any) {
     _variations.addAll(listOf(*variations))
   }
 
+  /**
+   * @param variations Message variations to send to the user.
+   * When variations are defined, Amazon Lex chooses the primary message or one of the variations to
+   * send to the user.
+   */
   public fun variations(variations: Collection<Any>) {
     _variations.addAll(variations)
   }
 
+  /**
+   * @param variations Message variations to send to the user.
+   * When variations are defined, Amazon Lex chooses the primary message or one of the variations to
+   * send to the user.
+   */
   public fun variations(variations: IResolvable) {
     cdkBuilder.variations(variations)
   }

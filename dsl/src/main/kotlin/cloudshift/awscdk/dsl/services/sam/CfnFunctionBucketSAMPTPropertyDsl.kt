@@ -11,6 +11,9 @@ public class CfnFunctionBucketSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.BucketSAMPTProperty.Builder =
       CfnFunction.BucketSAMPTProperty.builder()
 
+  /**
+   * @param bucketName the value to be set. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }

@@ -19,26 +19,49 @@ public class CfnDBSubnetGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param dbSubnetGroupDescription The description for the DB subnet group. 
+   */
   public fun dbSubnetGroupDescription(dbSubnetGroupDescription: String) {
     cdkBuilder.dbSubnetGroupDescription(dbSubnetGroupDescription)
   }
 
+  /**
+   * @param dbSubnetGroupName The name for the DB subnet group. This value is stored as a lowercase
+   * string.
+   * Constraints: Must contain no more than 255 lowercase alphanumeric characters or hyphens. Must
+   * not be "Default".
+   *
+   * Example: `mysubnetgroup`
+   */
   public fun dbSubnetGroupName(dbSubnetGroupName: String) {
     cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
   }
 
+  /**
+   * @param subnetIds The EC2 Subnet IDs for the DB subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The EC2 Subnet IDs for the DB subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param tags An optional array of key-value pairs to apply to this DB subnet group.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An optional array of key-value pairs to apply to this DB subnet group.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

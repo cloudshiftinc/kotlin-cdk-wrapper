@@ -22,30 +22,80 @@ public class CfnDeviceFleetDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A description of the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html#cfn-sagemaker-devicefleet-description)
+   * @param description A description of the fleet. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * Name of the device fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html#cfn-sagemaker-devicefleet-devicefleetname)
+   * @param deviceFleetName Name of the device fleet. 
+   */
   public fun deviceFleetName(deviceFleetName: String) {
     cdkBuilder.deviceFleetName(deviceFleetName)
   }
 
+  /**
+   * The output configuration for storing sample data collected by the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html#cfn-sagemaker-devicefleet-outputconfig)
+   * @param outputConfig The output configuration for storing sample data collected by the fleet. 
+   */
   public fun outputConfig(outputConfig: IResolvable) {
     cdkBuilder.outputConfig(outputConfig)
   }
 
+  /**
+   * The output configuration for storing sample data collected by the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html#cfn-sagemaker-devicefleet-outputconfig)
+   * @param outputConfig The output configuration for storing sample data collected by the fleet. 
+   */
   public fun outputConfig(outputConfig: CfnDeviceFleet.EdgeOutputConfigProperty) {
     cdkBuilder.outputConfig(outputConfig)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) that has access to AWS Internet of Things (IoT).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html#cfn-sagemaker-devicefleet-rolearn)
+   * @param roleArn The Amazon Resource Name (ARN) that has access to AWS Internet of Things (IoT). 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * An array of key-value pairs that contain metadata to help you categorize and organize your
+   * device fleets.
+   *
+   * Each tag consists of a key and a value, both of which you define.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html#cfn-sagemaker-devicefleet-tags)
+   * @param tags An array of key-value pairs that contain metadata to help you categorize and
+   * organize your device fleets. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs that contain metadata to help you categorize and organize your
+   * device fleets.
+   *
+   * Each tag consists of a key and a value, both of which you define.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html#cfn-sagemaker-devicefleet-tags)
+   * @param tags An array of key-value pairs that contain metadata to help you categorize and
+   * organize your device fleets. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -15,10 +15,16 @@ public class CfnDataSetProjectOperationPropertyDsl {
 
   private val _projectedColumns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param projectedColumns Projected columns. 
+   */
   public fun projectedColumns(vararg projectedColumns: String) {
     _projectedColumns.addAll(listOf(*projectedColumns))
   }
 
+  /**
+   * @param projectedColumns Projected columns. 
+   */
   public fun projectedColumns(projectedColumns: Collection<String>) {
     _projectedColumns.addAll(projectedColumns)
   }

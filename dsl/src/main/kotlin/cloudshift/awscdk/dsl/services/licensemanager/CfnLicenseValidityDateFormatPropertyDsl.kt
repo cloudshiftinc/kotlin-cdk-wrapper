@@ -11,10 +11,16 @@ public class CfnLicenseValidityDateFormatPropertyDsl {
   private val cdkBuilder: CfnLicense.ValidityDateFormatProperty.Builder =
       CfnLicense.ValidityDateFormatProperty.builder()
 
+  /**
+   * @param begin Start of the time range. 
+   */
   public fun begin(begin: String) {
     cdkBuilder.begin(begin)
   }
 
+  /**
+   * @param end End of the time range. 
+   */
   public fun end(end: String) {
     cdkBuilder.end(end)
   }

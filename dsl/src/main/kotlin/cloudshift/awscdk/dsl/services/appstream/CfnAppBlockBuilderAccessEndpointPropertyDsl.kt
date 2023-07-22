@@ -11,10 +11,16 @@ public class CfnAppBlockBuilderAccessEndpointPropertyDsl {
   private val cdkBuilder: CfnAppBlockBuilder.AccessEndpointProperty.Builder =
       CfnAppBlockBuilder.AccessEndpointProperty.builder()
 
+  /**
+   * @param endpointType The type of interface endpoint. 
+   */
   public fun endpointType(endpointType: String) {
     cdkBuilder.endpointType(endpointType)
   }
 
+  /**
+   * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
+   */
   public fun vpceId(vpceId: String) {
     cdkBuilder.vpceId(vpceId)
   }

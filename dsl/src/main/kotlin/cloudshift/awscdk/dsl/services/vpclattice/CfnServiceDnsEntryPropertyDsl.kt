@@ -11,10 +11,16 @@ public class CfnServiceDnsEntryPropertyDsl {
   private val cdkBuilder: CfnService.DnsEntryProperty.Builder =
       CfnService.DnsEntryProperty.builder()
 
+  /**
+   * @param domainName The domain name of the service.
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param hostedZoneId The ID of the hosted zone.
+   */
   public fun hostedZoneId(hostedZoneId: String) {
     cdkBuilder.hostedZoneId(hostedZoneId)
   }

@@ -17,18 +17,38 @@ public class CfnInputInputVpcRequestPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds The list of up to five VPC security group IDs to attach to the input
+   * VPC network interfaces.
+   * The security groups require subnet IDs. If none are specified, MediaLive uses the VPC default
+   * security group.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The list of up to five VPC security group IDs to attach to the input
+   * VPC network interfaces.
+   * The security groups require subnet IDs. If none are specified, MediaLive uses the VPC default
+   * security group.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds The list of two VPC subnet IDs from the same VPC.
+   * You must associate subnet IDs to two unique Availability Zones.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The list of two VPC subnet IDs from the same VPC.
+   * You must associate subnet IDs to two unique Availability Zones.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

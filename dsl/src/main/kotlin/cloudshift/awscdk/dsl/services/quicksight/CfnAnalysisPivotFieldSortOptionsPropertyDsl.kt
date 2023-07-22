@@ -12,14 +12,23 @@ public class CfnAnalysisPivotFieldSortOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotFieldSortOptionsProperty.Builder =
       CfnAnalysis.PivotFieldSortOptionsProperty.builder()
 
+  /**
+   * @param fieldId The field ID for the field sort options. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param sortBy The sort by field for the field sort options. 
+   */
   public fun sortBy(sortBy: IResolvable) {
     cdkBuilder.sortBy(sortBy)
   }
 
+  /**
+   * @param sortBy The sort by field for the field sort options. 
+   */
   public fun sortBy(sortBy: CfnAnalysis.PivotTableSortByProperty) {
     cdkBuilder.sortBy(sortBy)
   }

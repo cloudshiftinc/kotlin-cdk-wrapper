@@ -18,26 +18,44 @@ public class CfnAssessmentScopePropertyDsl {
 
   private val _awsServices: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+   */
   public fun awsAccounts(vararg awsAccounts: Any) {
     _awsAccounts.addAll(listOf(*awsAccounts))
   }
 
+  /**
+   * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+   */
   public fun awsAccounts(awsAccounts: Collection<Any>) {
     _awsAccounts.addAll(awsAccounts)
   }
 
+  /**
+   * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+   */
   public fun awsAccounts(awsAccounts: IResolvable) {
     cdkBuilder.awsAccounts(awsAccounts)
   }
 
+  /**
+   * @param awsServices The AWS services that are included in the scope of the assessment.
+   */
   public fun awsServices(vararg awsServices: Any) {
     _awsServices.addAll(listOf(*awsServices))
   }
 
+  /**
+   * @param awsServices The AWS services that are included in the scope of the assessment.
+   */
   public fun awsServices(awsServices: Collection<Any>) {
     _awsServices.addAll(awsServices)
   }
 
+  /**
+   * @param awsServices The AWS services that are included in the scope of the assessment.
+   */
   public fun awsServices(awsServices: IResolvable) {
     cdkBuilder.awsServices(awsServices)
   }

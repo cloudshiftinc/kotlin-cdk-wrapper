@@ -12,22 +12,37 @@ public class CfnDashboardHeaderFooterSectionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.HeaderFooterSectionConfigurationProperty.Builder =
       CfnDashboard.HeaderFooterSectionConfigurationProperty.builder()
 
+  /**
+   * @param layout The layout configuration of the header or footer section. 
+   */
   public fun layout(layout: IResolvable) {
     cdkBuilder.layout(layout)
   }
 
+  /**
+   * @param layout The layout configuration of the header or footer section. 
+   */
   public fun layout(layout: CfnDashboard.SectionLayoutConfigurationProperty) {
     cdkBuilder.layout(layout)
   }
 
+  /**
+   * @param sectionId The unique identifier of the header or footer section. 
+   */
   public fun sectionId(sectionId: String) {
     cdkBuilder.sectionId(sectionId)
   }
 
+  /**
+   * @param style The style options of a header or footer section.
+   */
   public fun style(style: IResolvable) {
     cdkBuilder.style(style)
   }
 
+  /**
+   * @param style The style options of a header or footer section.
+   */
   public fun style(style: CfnDashboard.SectionStyleProperty) {
     cdkBuilder.style(style)
   }

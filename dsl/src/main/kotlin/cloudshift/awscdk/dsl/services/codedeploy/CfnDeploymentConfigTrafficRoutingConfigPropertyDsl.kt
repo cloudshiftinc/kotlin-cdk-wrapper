@@ -12,22 +12,52 @@ public class CfnDeploymentConfigTrafficRoutingConfigPropertyDsl {
   private val cdkBuilder: CfnDeploymentConfig.TrafficRoutingConfigProperty.Builder =
       CfnDeploymentConfig.TrafficRoutingConfigProperty.builder()
 
+  /**
+   * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+   * function or ECS task set to another in two increments.
+   * The original and target Lambda function versions or ECS task sets are specified in the
+   * deployment's AppSpec file.
+   */
   public fun timeBasedCanary(timeBasedCanary: IResolvable) {
     cdkBuilder.timeBasedCanary(timeBasedCanary)
   }
 
+  /**
+   * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+   * function or ECS task set to another in two increments.
+   * The original and target Lambda function versions or ECS task sets are specified in the
+   * deployment's AppSpec file.
+   */
   public fun timeBasedCanary(timeBasedCanary: CfnDeploymentConfig.TimeBasedCanaryProperty) {
     cdkBuilder.timeBasedCanary(timeBasedCanary)
   }
 
+  /**
+   * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+   * function or Amazon ECS task set to another in equal increments, with an equal number of minutes
+   * between each increment.
+   * The original and target Lambda function versions or Amazon ECS task sets are specified in the
+   * deployment's AppSpec file.
+   */
   public fun timeBasedLinear(timeBasedLinear: IResolvable) {
     cdkBuilder.timeBasedLinear(timeBasedLinear)
   }
 
+  /**
+   * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+   * function or Amazon ECS task set to another in equal increments, with an equal number of minutes
+   * between each increment.
+   * The original and target Lambda function versions or Amazon ECS task sets are specified in the
+   * deployment's AppSpec file.
+   */
   public fun timeBasedLinear(timeBasedLinear: CfnDeploymentConfig.TimeBasedLinearProperty) {
     cdkBuilder.timeBasedLinear(timeBasedLinear)
   }
 
+  /**
+   * @param type The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by a
+   * deployment configuration. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

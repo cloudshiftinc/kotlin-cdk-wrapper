@@ -13,14 +13,42 @@ public class CfnClusterEncryptionInTransitPropertyDsl {
   private val cdkBuilder: CfnCluster.EncryptionInTransitProperty.Builder =
       CfnCluster.EncryptionInTransitProperty.builder()
 
+  /**
+   * @param clientBroker Indicates the encryption setting for data in transit between clients and
+   * brokers.
+   * You must set it to one of the following values.
+   *
+   * `TLS` means that client-broker communication is enabled with TLS only.
+   *
+   * `TLS_PLAINTEXT` means that client-broker communication is enabled for both TLS-encrypted, as
+   * well as plaintext data.
+   *
+   * `PLAINTEXT` means that client-broker communication is enabled in plaintext only.
+   *
+   * The default value is `TLS` .
+   */
   public fun clientBroker(clientBroker: String) {
     cdkBuilder.clientBroker(clientBroker)
   }
 
+  /**
+   * @param inCluster When set to true, it indicates that data communication among the broker nodes
+   * of the cluster is encrypted.
+   * When set to false, the communication happens in plaintext.
+   *
+   * The default value is true.
+   */
   public fun inCluster(inCluster: Boolean) {
     cdkBuilder.inCluster(inCluster)
   }
 
+  /**
+   * @param inCluster When set to true, it indicates that data communication among the broker nodes
+   * of the cluster is encrypted.
+   * When set to false, the communication happens in plaintext.
+   *
+   * The default value is true.
+   */
   public fun inCluster(inCluster: IResolvable) {
     cdkBuilder.inCluster(inCluster)
   }

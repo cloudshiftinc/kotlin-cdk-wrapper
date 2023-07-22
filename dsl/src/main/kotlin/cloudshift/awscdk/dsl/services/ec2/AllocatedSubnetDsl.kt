@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ec2.AllocatedSubnet
 public class AllocatedSubnetDsl {
   private val cdkBuilder: AllocatedSubnet.Builder = AllocatedSubnet.builder()
 
+  /**
+   * @param cidr Cidr Allocations for a Subnet. 
+   */
   public fun cidr(cidr: String) {
     cdkBuilder.cidr(cidr)
   }

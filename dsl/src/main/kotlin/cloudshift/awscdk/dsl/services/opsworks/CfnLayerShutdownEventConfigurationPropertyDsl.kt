@@ -13,14 +13,30 @@ public class CfnLayerShutdownEventConfigurationPropertyDsl {
   private val cdkBuilder: CfnLayer.ShutdownEventConfigurationProperty.Builder =
       CfnLayer.ShutdownEventConfigurationProperty.builder()
 
+  /**
+   * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+   * draining.
+   * For more information, see [Connection
+   * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+   */
   public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
     cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained)
   }
 
+  /**
+   * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+   * draining.
+   * For more information, see [Connection
+   * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+   */
   public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
     cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained)
   }
 
+  /**
+   * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after triggering a
+   * Shutdown event before shutting down an instance.
+   */
   public fun executionTimeout(executionTimeout: Number) {
     cdkBuilder.executionTimeout(executionTimeout)
   }

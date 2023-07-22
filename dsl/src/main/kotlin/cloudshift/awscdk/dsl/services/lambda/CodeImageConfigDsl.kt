@@ -16,26 +16,54 @@ public class CodeImageConfigDsl {
 
   private val _entrypoint: MutableList<String> = mutableListOf()
 
+  /**
+   * @param cmd Specify or override the CMD on the specified Docker image or Dockerfile.
+   * This needs to be in the 'exec form', viz., `[ 'executable', 'param1', 'param2' ]`.
+   */
   public fun cmd(vararg cmd: String) {
     _cmd.addAll(listOf(*cmd))
   }
 
+  /**
+   * @param cmd Specify or override the CMD on the specified Docker image or Dockerfile.
+   * This needs to be in the 'exec form', viz., `[ 'executable', 'param1', 'param2' ]`.
+   */
   public fun cmd(cmd: Collection<String>) {
     _cmd.addAll(cmd)
   }
 
+  /**
+   * @param entrypoint Specify or override the ENTRYPOINT on the specified Docker image or
+   * Dockerfile.
+   * An ENTRYPOINT allows you to configure a container that will run as an executable.
+   * This needs to be in the 'exec form', viz., `[ 'executable', 'param1', 'param2' ]`.
+   */
   public fun entrypoint(vararg entrypoint: String) {
     _entrypoint.addAll(listOf(*entrypoint))
   }
 
+  /**
+   * @param entrypoint Specify or override the ENTRYPOINT on the specified Docker image or
+   * Dockerfile.
+   * An ENTRYPOINT allows you to configure a container that will run as an executable.
+   * This needs to be in the 'exec form', viz., `[ 'executable', 'param1', 'param2' ]`.
+   */
   public fun entrypoint(entrypoint: Collection<String>) {
     _entrypoint.addAll(entrypoint)
   }
 
+  /**
+   * @param imageUri URI to the Docker image. 
+   */
   public fun imageUri(imageUri: String) {
     cdkBuilder.imageUri(imageUri)
   }
 
+  /**
+   * @param workingDirectory Specify or override the WORKDIR on the specified Docker image or
+   * Dockerfile.
+   * A WORKDIR allows you to configure the working directory the container will use.
+   */
   public fun workingDirectory(workingDirectory: String) {
     cdkBuilder.workingDirectory(workingDirectory)
   }

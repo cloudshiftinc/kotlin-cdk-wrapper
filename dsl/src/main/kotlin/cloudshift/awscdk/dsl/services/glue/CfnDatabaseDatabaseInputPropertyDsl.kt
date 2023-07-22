@@ -19,52 +19,99 @@ public class CfnDatabaseDatabaseInputPropertyDsl {
 
   private val _createTableDefaultPermissions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param createTableDefaultPermissions Creates a set of default permissions on the table for
+   * principals.
+   * Used by AWS Lake Formation . Not used in the normal course of AWS Glue operations.
+   */
   public fun createTableDefaultPermissions(vararg createTableDefaultPermissions: Any) {
     _createTableDefaultPermissions.addAll(listOf(*createTableDefaultPermissions))
   }
 
+  /**
+   * @param createTableDefaultPermissions Creates a set of default permissions on the table for
+   * principals.
+   * Used by AWS Lake Formation . Not used in the normal course of AWS Glue operations.
+   */
   public fun createTableDefaultPermissions(createTableDefaultPermissions: Collection<Any>) {
     _createTableDefaultPermissions.addAll(createTableDefaultPermissions)
   }
 
+  /**
+   * @param createTableDefaultPermissions Creates a set of default permissions on the table for
+   * principals.
+   * Used by AWS Lake Formation . Not used in the normal course of AWS Glue operations.
+   */
   public fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
     cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions)
   }
 
+  /**
+   * @param description A description of the database.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param federatedDatabase A `FederatedDatabase` structure that references an entity outside the
+   * AWS Glue Data Catalog .
+   */
   public fun federatedDatabase(federatedDatabase: IResolvable) {
     cdkBuilder.federatedDatabase(federatedDatabase)
   }
 
+  /**
+   * @param federatedDatabase A `FederatedDatabase` structure that references an entity outside the
+   * AWS Glue Data Catalog .
+   */
   public fun federatedDatabase(federatedDatabase: CfnDatabase.FederatedDatabaseProperty) {
     cdkBuilder.federatedDatabase(federatedDatabase)
   }
 
+  /**
+   * @param locationUri The location of the database (for example, an HDFS path).
+   */
   public fun locationUri(locationUri: String) {
     cdkBuilder.locationUri(locationUri)
   }
 
+  /**
+   * @param name The name of the database.
+   * For Hive compatibility, this is folded to lowercase when it is stored.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun parameters(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param parameters These key-value pairs define parameters and properties of the database.
+   */
+  public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(parameters)
     cdkBuilder.parameters(builder.map)
   }
 
+  /**
+   * @param parameters These key-value pairs define parameters and properties of the database.
+   */
   public fun parameters(parameters: Any) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param targetDatabase A `DatabaseIdentifier` structure that describes a target database for
+   * resource linking.
+   */
   public fun targetDatabase(targetDatabase: IResolvable) {
     cdkBuilder.targetDatabase(targetDatabase)
   }
 
+  /**
+   * @param targetDatabase A `DatabaseIdentifier` structure that describes a target database for
+   * resource linking.
+   */
   public fun targetDatabase(targetDatabase: CfnDatabase.DatabaseIdentifierProperty) {
     cdkBuilder.targetDatabase(targetDatabase)
   }

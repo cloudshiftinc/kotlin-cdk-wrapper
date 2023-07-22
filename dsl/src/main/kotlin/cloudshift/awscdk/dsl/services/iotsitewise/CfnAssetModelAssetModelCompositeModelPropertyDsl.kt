@@ -17,26 +17,45 @@ public class CfnAssetModelAssetModelCompositeModelPropertyDsl {
 
   private val _compositeModelProperties: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param compositeModelProperties The asset property definitions for this composite model.
+   */
   public fun compositeModelProperties(vararg compositeModelProperties: Any) {
     _compositeModelProperties.addAll(listOf(*compositeModelProperties))
   }
 
+  /**
+   * @param compositeModelProperties The asset property definitions for this composite model.
+   */
   public fun compositeModelProperties(compositeModelProperties: Collection<Any>) {
     _compositeModelProperties.addAll(compositeModelProperties)
   }
 
+  /**
+   * @param compositeModelProperties The asset property definitions for this composite model.
+   */
   public fun compositeModelProperties(compositeModelProperties: IResolvable) {
     cdkBuilder.compositeModelProperties(compositeModelProperties)
   }
 
+  /**
+   * @param description The description of the composite model.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name of the composite model. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param type The type of the composite model. 
+   * For alarm composite models, this type is `AWS/ALARM` .
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

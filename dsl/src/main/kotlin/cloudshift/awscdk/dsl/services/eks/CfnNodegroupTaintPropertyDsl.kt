@@ -10,14 +10,23 @@ import software.amazon.awscdk.services.eks.CfnNodegroup
 public class CfnNodegroupTaintPropertyDsl {
   private val cdkBuilder: CfnNodegroup.TaintProperty.Builder = CfnNodegroup.TaintProperty.builder()
 
+  /**
+   * @param effect The effect of the taint.
+   */
   public fun effect(effect: String) {
     cdkBuilder.effect(effect)
   }
 
+  /**
+   * @param key The key of the taint.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The value of the taint.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

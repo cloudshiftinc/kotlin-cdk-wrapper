@@ -11,6 +11,9 @@ public class CfnAnalysisBinCountOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.BinCountOptionsProperty.Builder =
       CfnAnalysis.BinCountOptionsProperty.builder()
 
+  /**
+   * @param value The options that determine the bin count value.
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

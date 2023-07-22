@@ -17,22 +17,56 @@ public class CfnTestGridProjectVpcConfigPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds A list of VPC security group IDs. 
+   * A security group allows inbound traffic from network interfaces (and their associated
+   * instances) that are assigned to the same security group. See [Security
+   * groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon
+   * Virtual Private Cloud user guide* .
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds A list of VPC security group IDs. 
+   * A security group allows inbound traffic from network interfaces (and their associated
+   * instances) that are assigned to the same security group. See [Security
+   * groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon
+   * Virtual Private Cloud user guide* .
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds A list of VPC subnet IDs. 
+   * A subnet is a range of IP addresses in your VPC. You can launch Amazon resources, such as EC2
+   * instances, into a specific subnet. When you create a subnet, you specify the IPv4 CIDR block for
+   * the subnet, which is a subset of the VPC CIDR block. See [VPCs and
+   * subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual
+   * Private Cloud user guide* .
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds A list of VPC subnet IDs. 
+   * A subnet is a range of IP addresses in your VPC. You can launch Amazon resources, such as EC2
+   * instances, into a specific subnet. When you create a subnet, you specify the IPv4 CIDR block for
+   * the subnet, which is a subset of the VPC CIDR block. See [VPCs and
+   * subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual
+   * Private Cloud user guide* .
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param vpcId A list of VPC IDs. 
+   * Each VPC is given a unique ID upon creation.
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

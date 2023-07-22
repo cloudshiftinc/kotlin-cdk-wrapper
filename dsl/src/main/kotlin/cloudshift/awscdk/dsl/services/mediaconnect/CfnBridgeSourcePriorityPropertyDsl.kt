@@ -11,6 +11,9 @@ public class CfnBridgeSourcePriorityPropertyDsl {
   private val cdkBuilder: CfnBridge.SourcePriorityProperty.Builder =
       CfnBridge.SourcePriorityProperty.builder()
 
+  /**
+   * @param primarySource The name of the source you choose as the primary source for this flow.
+   */
   public fun primarySource(primarySource: String) {
     cdkBuilder.primarySource(primarySource)
   }

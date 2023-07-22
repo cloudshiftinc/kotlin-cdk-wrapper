@@ -11,10 +11,16 @@ public class CfnQuickConnectUserQuickConnectConfigPropertyDsl {
   private val cdkBuilder: CfnQuickConnect.UserQuickConnectConfigProperty.Builder =
       CfnQuickConnect.UserQuickConnectConfigProperty.builder()
 
+  /**
+   * @param contactFlowArn The Amazon Resource Name (ARN) of the flow. 
+   */
   public fun contactFlowArn(contactFlowArn: String) {
     cdkBuilder.contactFlowArn(contactFlowArn)
   }
 
+  /**
+   * @param userArn The Amazon Resource Name (ARN) of the user. 
+   */
   public fun userArn(userArn: String) {
     cdkBuilder.userArn(userArn)
   }

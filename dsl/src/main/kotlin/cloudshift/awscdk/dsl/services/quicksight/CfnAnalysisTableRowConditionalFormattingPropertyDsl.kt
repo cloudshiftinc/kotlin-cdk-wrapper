@@ -11,18 +11,34 @@ public class CfnAnalysisTableRowConditionalFormattingPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableRowConditionalFormattingProperty.Builder =
       CfnAnalysis.TableRowConditionalFormattingProperty.builder()
 
+  /**
+   * @param backgroundColor The conditional formatting color (solid, gradient) of the background for
+   * a table row.
+   */
   public fun backgroundColor(backgroundColor: IResolvable) {
     cdkBuilder.backgroundColor(backgroundColor)
   }
 
+  /**
+   * @param backgroundColor The conditional formatting color (solid, gradient) of the background for
+   * a table row.
+   */
   public fun backgroundColor(backgroundColor: CfnAnalysis.ConditionalFormattingColorProperty) {
     cdkBuilder.backgroundColor(backgroundColor)
   }
 
+  /**
+   * @param textColor The conditional formatting color (solid, gradient) of the text for a table
+   * row.
+   */
   public fun textColor(textColor: IResolvable) {
     cdkBuilder.textColor(textColor)
   }
 
+  /**
+   * @param textColor The conditional formatting color (solid, gradient) of the text for a table
+   * row.
+   */
   public fun textColor(textColor: CfnAnalysis.ConditionalFormattingColorProperty) {
     cdkBuilder.textColor(textColor)
   }

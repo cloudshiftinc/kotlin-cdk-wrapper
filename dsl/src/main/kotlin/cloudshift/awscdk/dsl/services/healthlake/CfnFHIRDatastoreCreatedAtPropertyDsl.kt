@@ -12,10 +12,16 @@ public class CfnFHIRDatastoreCreatedAtPropertyDsl {
   private val cdkBuilder: CfnFHIRDatastore.CreatedAtProperty.Builder =
       CfnFHIRDatastore.CreatedAtProperty.builder()
 
+  /**
+   * @param nanos Nanoseconds. 
+   */
   public fun nanos(nanos: Number) {
     cdkBuilder.nanos(nanos)
   }
 
+  /**
+   * @param seconds Seconds since epoch. 
+   */
   public fun seconds(seconds: String) {
     cdkBuilder.seconds(seconds)
   }

@@ -11,26 +11,44 @@ public class CfnDashboardDynamicDefaultValuePropertyDsl {
   private val cdkBuilder: CfnDashboard.DynamicDefaultValueProperty.Builder =
       CfnDashboard.DynamicDefaultValueProperty.builder()
 
+  /**
+   * @param defaultValueColumn The column that contains the default value of each user or group. 
+   */
   public fun defaultValueColumn(defaultValueColumn: IResolvable) {
     cdkBuilder.defaultValueColumn(defaultValueColumn)
   }
 
+  /**
+   * @param defaultValueColumn The column that contains the default value of each user or group. 
+   */
   public fun defaultValueColumn(defaultValueColumn: CfnDashboard.ColumnIdentifierProperty) {
     cdkBuilder.defaultValueColumn(defaultValueColumn)
   }
 
+  /**
+   * @param groupNameColumn The column that contains the group name.
+   */
   public fun groupNameColumn(groupNameColumn: IResolvable) {
     cdkBuilder.groupNameColumn(groupNameColumn)
   }
 
+  /**
+   * @param groupNameColumn The column that contains the group name.
+   */
   public fun groupNameColumn(groupNameColumn: CfnDashboard.ColumnIdentifierProperty) {
     cdkBuilder.groupNameColumn(groupNameColumn)
   }
 
+  /**
+   * @param userNameColumn The column that contains the username.
+   */
   public fun userNameColumn(userNameColumn: IResolvable) {
     cdkBuilder.userNameColumn(userNameColumn)
   }
 
+  /**
+   * @param userNameColumn The column that contains the username.
+   */
   public fun userNameColumn(userNameColumn: CfnDashboard.ColumnIdentifierProperty) {
     cdkBuilder.userNameColumn(userNameColumn)
   }

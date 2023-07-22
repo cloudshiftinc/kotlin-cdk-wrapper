@@ -16,14 +16,26 @@ public class CfnConfigurationSetEventDestinationCloudWatchDestinationPropertyDsl
 
   private val _dimensionConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dimensionConfigurations A list of dimensions upon which to categorize your emails when
+   * you publish email sending events to Amazon CloudWatch.
+   */
   public fun dimensionConfigurations(vararg dimensionConfigurations: Any) {
     _dimensionConfigurations.addAll(listOf(*dimensionConfigurations))
   }
 
+  /**
+   * @param dimensionConfigurations A list of dimensions upon which to categorize your emails when
+   * you publish email sending events to Amazon CloudWatch.
+   */
   public fun dimensionConfigurations(dimensionConfigurations: Collection<Any>) {
     _dimensionConfigurations.addAll(dimensionConfigurations)
   }
 
+  /**
+   * @param dimensionConfigurations A list of dimensions upon which to categorize your emails when
+   * you publish email sending events to Amazon CloudWatch.
+   */
   public fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
     cdkBuilder.dimensionConfigurations(dimensionConfigurations)
   }

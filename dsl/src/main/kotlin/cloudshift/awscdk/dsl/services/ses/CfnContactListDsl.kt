@@ -25,30 +25,78 @@ public class CfnContactListDsl(
 
   private val _topics: MutableList<Any> = mutableListOf()
 
+  /**
+   * The name of the contact list.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html#cfn-ses-contactlist-contactlistname)
+   * @param contactListName The name of the contact list. 
+   */
   public fun contactListName(contactListName: String) {
     cdkBuilder.contactListName(contactListName)
   }
 
+  /**
+   * A description of what the contact list is about.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html#cfn-ses-contactlist-description)
+   * @param description A description of what the contact list is about. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The tags associated with a contact list.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html#cfn-ses-contactlist-tags)
+   * @param tags The tags associated with a contact list. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags associated with a contact list.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html#cfn-ses-contactlist-tags)
+   * @param tags The tags associated with a contact list. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * An interest group, theme, or label within a list.
+   *
+   * A contact list can have multiple topics.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html#cfn-ses-contactlist-topics)
+   * @param topics An interest group, theme, or label within a list. 
+   */
   public fun topics(vararg topics: Any) {
     _topics.addAll(listOf(*topics))
   }
 
+  /**
+   * An interest group, theme, or label within a list.
+   *
+   * A contact list can have multiple topics.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html#cfn-ses-contactlist-topics)
+   * @param topics An interest group, theme, or label within a list. 
+   */
   public fun topics(topics: Collection<Any>) {
     _topics.addAll(topics)
   }
 
+  /**
+   * An interest group, theme, or label within a list.
+   *
+   * A contact list can have multiple topics.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html#cfn-ses-contactlist-topics)
+   * @param topics An interest group, theme, or label within a list. 
+   */
   public fun topics(topics: IResolvable) {
     cdkBuilder.topics(topics)
   }

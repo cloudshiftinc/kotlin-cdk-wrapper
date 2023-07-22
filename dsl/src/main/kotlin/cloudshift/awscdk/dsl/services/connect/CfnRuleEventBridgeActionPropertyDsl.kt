@@ -11,6 +11,9 @@ public class CfnRuleEventBridgeActionPropertyDsl {
   private val cdkBuilder: CfnRule.EventBridgeActionProperty.Builder =
       CfnRule.EventBridgeActionProperty.builder()
 
+  /**
+   * @param name The name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

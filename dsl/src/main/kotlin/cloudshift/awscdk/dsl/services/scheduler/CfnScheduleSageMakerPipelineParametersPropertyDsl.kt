@@ -16,14 +16,26 @@ public class CfnScheduleSageMakerPipelineParametersPropertyDsl {
 
   private val _pipelineParameterList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param pipelineParameterList List of parameter names and values to use when executing the
+   * SageMaker Model Building Pipeline.
+   */
   public fun pipelineParameterList(vararg pipelineParameterList: Any) {
     _pipelineParameterList.addAll(listOf(*pipelineParameterList))
   }
 
+  /**
+   * @param pipelineParameterList List of parameter names and values to use when executing the
+   * SageMaker Model Building Pipeline.
+   */
   public fun pipelineParameterList(pipelineParameterList: Collection<Any>) {
     _pipelineParameterList.addAll(pipelineParameterList)
   }
 
+  /**
+   * @param pipelineParameterList List of parameter names and values to use when executing the
+   * SageMaker Model Building Pipeline.
+   */
   public fun pipelineParameterList(pipelineParameterList: IResolvable) {
     cdkBuilder.pipelineParameterList(pipelineParameterList)
   }

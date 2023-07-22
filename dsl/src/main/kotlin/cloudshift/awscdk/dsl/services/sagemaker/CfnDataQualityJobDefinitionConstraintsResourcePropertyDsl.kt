@@ -11,6 +11,9 @@ public class CfnDataQualityJobDefinitionConstraintsResourcePropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.ConstraintsResourceProperty.Builder =
       CfnDataQualityJobDefinition.ConstraintsResourceProperty.builder()
 
+  /**
+   * @param s3Uri The Amazon S3 URI for the constraints resource.
+   */
   public fun s3Uri(s3Uri: String) {
     cdkBuilder.s3Uri(s3Uri)
   }

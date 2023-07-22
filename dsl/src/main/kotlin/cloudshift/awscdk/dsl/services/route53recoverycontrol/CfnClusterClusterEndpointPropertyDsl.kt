@@ -11,10 +11,17 @@ public class CfnClusterClusterEndpointPropertyDsl {
   private val cdkBuilder: CfnCluster.ClusterEndpointProperty.Builder =
       CfnCluster.ClusterEndpointProperty.builder()
 
+  /**
+   * @param endpoint A cluster endpoint URL for one of the five redundant clusters that you specify
+   * to set or retrieve a routing control state.
+   */
   public fun endpoint(endpoint: String) {
     cdkBuilder.endpoint(endpoint)
   }
 
+  /**
+   * @param region The AWS Region for a cluster endpoint.
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }

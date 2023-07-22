@@ -11,6 +11,9 @@ public class CfnFunctionLogGroupSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.LogGroupSAMPTProperty.Builder =
       CfnFunction.LogGroupSAMPTProperty.builder()
 
+  /**
+   * @param logGroupName the value to be set. 
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }

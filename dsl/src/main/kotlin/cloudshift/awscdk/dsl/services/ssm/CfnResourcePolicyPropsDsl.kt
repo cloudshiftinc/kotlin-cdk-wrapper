@@ -13,16 +13,26 @@ import software.amazon.awscdk.services.ssm.CfnResourcePolicyProps
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policy A policy you want to associate with a resource. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * @param policy A policy you want to associate with a resource. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * @param resourceArn Amazon Resource Name (ARN) of the resource to which you want to attach a
+   * policy. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

@@ -11,6 +11,9 @@ public class CfnReplicationGroupKinesisFirehoseDestinationDetailsPropertyDsl {
   private val cdkBuilder: CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty.Builder =
       CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty.builder()
 
+  /**
+   * @param deliveryStream The name of the Kinesis Data Firehose delivery stream. 
+   */
   public fun deliveryStream(deliveryStream: String) {
     cdkBuilder.deliveryStream(deliveryStream)
   }

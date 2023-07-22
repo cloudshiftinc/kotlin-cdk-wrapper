@@ -13,22 +13,37 @@ public class CfnTransitGatewayRoutePropsDsl {
   private val cdkBuilder: CfnTransitGatewayRouteProps.Builder =
       CfnTransitGatewayRouteProps.builder()
 
+  /**
+   * @param blackhole Indicates whether to drop traffic that matches this route.
+   */
   public fun blackhole(blackhole: Boolean) {
     cdkBuilder.blackhole(blackhole)
   }
 
+  /**
+   * @param blackhole Indicates whether to drop traffic that matches this route.
+   */
   public fun blackhole(blackhole: IResolvable) {
     cdkBuilder.blackhole(blackhole)
   }
 
+  /**
+   * @param destinationCidrBlock The CIDR block used for destination matches.
+   */
   public fun destinationCidrBlock(destinationCidrBlock: String) {
     cdkBuilder.destinationCidrBlock(destinationCidrBlock)
   }
 
+  /**
+   * @param transitGatewayAttachmentId The ID of the attachment.
+   */
   public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
     cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
   }
 
+  /**
+   * @param transitGatewayRouteTableId The ID of the transit gateway route table. 
+   */
   public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
     cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
   }

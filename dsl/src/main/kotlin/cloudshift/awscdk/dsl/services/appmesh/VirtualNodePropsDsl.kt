@@ -23,44 +23,76 @@ public class VirtualNodePropsDsl {
 
   private val _listeners: MutableList<VirtualNodeListener> = mutableListOf()
 
+  /**
+   * @param accessLog Access Logging Configuration for the virtual node.
+   */
   public fun accessLog(accessLog: AccessLog) {
     cdkBuilder.accessLog(accessLog)
   }
 
-  public fun backendDefaults(block: BackendDefaultsDsl.() -> Unit = {}) {
+  /**
+   * @param backendDefaults Default Configuration Virtual Node uses to communicate with Virtual
+   * Service.
+   */
+  public fun backendDefaults(backendDefaults: BackendDefaultsDsl.() -> Unit = {}) {
     val builder = BackendDefaultsDsl()
-    builder.apply(block)
+    builder.apply(backendDefaults)
     cdkBuilder.backendDefaults(builder.build())
   }
 
+  /**
+   * @param backendDefaults Default Configuration Virtual Node uses to communicate with Virtual
+   * Service.
+   */
   public fun backendDefaults(backendDefaults: BackendDefaults) {
     cdkBuilder.backendDefaults(backendDefaults)
   }
 
+  /**
+   * @param backends Virtual Services that this is node expected to send outbound traffic to.
+   */
   public fun backends(vararg backends: Backend) {
     _backends.addAll(listOf(*backends))
   }
 
+  /**
+   * @param backends Virtual Services that this is node expected to send outbound traffic to.
+   */
   public fun backends(backends: Collection<Backend>) {
     _backends.addAll(backends)
   }
 
+  /**
+   * @param listeners Initial listener for the virtual node.
+   */
   public fun listeners(vararg listeners: VirtualNodeListener) {
     _listeners.addAll(listOf(*listeners))
   }
 
+  /**
+   * @param listeners Initial listener for the virtual node.
+   */
   public fun listeners(listeners: Collection<VirtualNodeListener>) {
     _listeners.addAll(listeners)
   }
 
+  /**
+   * @param mesh The Mesh which the VirtualNode belongs to. 
+   */
   public fun mesh(mesh: IMesh) {
     cdkBuilder.mesh(mesh)
   }
 
+  /**
+   * @param serviceDiscovery Defines how upstream clients will discover this VirtualNode.
+   */
   public fun serviceDiscovery(serviceDiscovery: ServiceDiscovery) {
     cdkBuilder.serviceDiscovery(serviceDiscovery)
   }
 
+  /**
+   * @param virtualNodeName The name of the VirtualNode.
+   */
   public fun virtualNodeName(virtualNodeName: String) {
     cdkBuilder.virtualNodeName(virtualNodeName)
   }

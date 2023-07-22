@@ -23,26 +23,60 @@ public class CfnServiceNetworkServiceAssociationDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-dnsentry)
+   * @param dnsEntry 
+   */
   public fun dnsEntry(dnsEntry: IResolvable) {
     cdkBuilder.dnsEntry(dnsEntry)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-dnsentry)
+   * @param dnsEntry 
+   */
   public fun dnsEntry(dnsEntry: CfnServiceNetworkServiceAssociation.DnsEntryProperty) {
     cdkBuilder.dnsEntry(dnsEntry)
   }
 
+  /**
+   * The ID or Amazon Resource Name (ARN) of the service.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier)
+   * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service. 
+   */
   public fun serviceIdentifier(serviceIdentifier: String) {
     cdkBuilder.serviceIdentifier(serviceIdentifier)
   }
 
+  /**
+   * The ID or Amazon Resource Name (ARN) of the service network.
+   *
+   * You must use the ARN if the resources specified in the operation are in different accounts.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier)
+   * @param serviceNetworkIdentifier The ID or Amazon Resource Name (ARN) of the service network. 
+   */
   public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
     cdkBuilder.serviceNetworkIdentifier(serviceNetworkIdentifier)
   }
 
+  /**
+   * The tags for the association.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-tags)
+   * @param tags The tags for the association. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags for the association.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-tags)
+   * @param tags The tags for the association. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

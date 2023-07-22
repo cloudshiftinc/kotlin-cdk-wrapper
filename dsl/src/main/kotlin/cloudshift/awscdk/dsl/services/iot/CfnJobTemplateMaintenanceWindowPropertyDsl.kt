@@ -12,10 +12,16 @@ public class CfnJobTemplateMaintenanceWindowPropertyDsl {
   private val cdkBuilder: CfnJobTemplate.MaintenanceWindowProperty.Builder =
       CfnJobTemplate.MaintenanceWindowProperty.builder()
 
+  /**
+   * @param durationInMinutes Displays the duration of the next maintenance window.
+   */
   public fun durationInMinutes(durationInMinutes: Number) {
     cdkBuilder.durationInMinutes(durationInMinutes)
   }
 
+  /**
+   * @param startTime Displays the start time of the next maintenance window.
+   */
   public fun startTime(startTime: String) {
     cdkBuilder.startTime(startTime)
   }

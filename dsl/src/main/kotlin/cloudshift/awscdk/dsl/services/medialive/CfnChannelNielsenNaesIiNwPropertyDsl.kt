@@ -12,14 +12,23 @@ public class CfnChannelNielsenNaesIiNwPropertyDsl {
   private val cdkBuilder: CfnChannel.NielsenNaesIiNwProperty.Builder =
       CfnChannel.NielsenNaesIiNwProperty.builder()
 
+  /**
+   * @param checkDigitString Enter the check digit string for the watermark.
+   */
   public fun checkDigitString(checkDigitString: String) {
     cdkBuilder.checkDigitString(checkDigitString)
   }
 
+  /**
+   * @param sid Enter the Nielsen Source ID (SID) to include in the watermark.
+   */
   public fun sid(sid: Number) {
     cdkBuilder.sid(sid)
   }
 
+  /**
+   * @param timezone the value to be set.
+   */
   public fun timezone(timezone: String) {
     cdkBuilder.timezone(timezone)
   }

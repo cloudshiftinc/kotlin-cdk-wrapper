@@ -11,10 +11,16 @@ public class CfnTemplatePivotTableFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.PivotTableFieldWellsProperty.Builder =
       CfnTemplate.PivotTableFieldWellsProperty.builder()
 
+  /**
+   * @param pivotTableAggregatedFieldWells The aggregated field well for the pivot table.
+   */
   public fun pivotTableAggregatedFieldWells(pivotTableAggregatedFieldWells: IResolvable) {
     cdkBuilder.pivotTableAggregatedFieldWells(pivotTableAggregatedFieldWells)
   }
 
+  /**
+   * @param pivotTableAggregatedFieldWells The aggregated field well for the pivot table.
+   */
   public
       fun pivotTableAggregatedFieldWells(pivotTableAggregatedFieldWells: CfnTemplate.PivotTableAggregatedFieldWellsProperty) {
     cdkBuilder.pivotTableAggregatedFieldWells(pivotTableAggregatedFieldWells)

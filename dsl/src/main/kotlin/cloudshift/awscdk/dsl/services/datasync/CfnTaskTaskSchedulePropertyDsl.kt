@@ -11,6 +11,10 @@ public class CfnTaskTaskSchedulePropertyDsl {
   private val cdkBuilder: CfnTask.TaskScheduleProperty.Builder =
       CfnTask.TaskScheduleProperty.builder()
 
+  /**
+   * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a
+   * scheduled transfer from a source to a destination location. 
+   */
   public fun scheduleExpression(scheduleExpression: String) {
     cdkBuilder.scheduleExpression(scheduleExpression)
   }

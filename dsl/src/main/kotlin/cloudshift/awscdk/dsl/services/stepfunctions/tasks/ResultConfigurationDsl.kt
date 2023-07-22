@@ -13,22 +13,37 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration
 public class ResultConfigurationDsl {
   private val cdkBuilder: ResultConfiguration.Builder = ResultConfiguration.builder()
 
-  public fun encryptionConfiguration(block: EncryptionConfigurationDsl.() -> Unit = {}) {
+  /**
+   * @param encryptionConfiguration Encryption option used if enabled in S3.
+   */
+  public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationDsl.() -> Unit
+      = {}) {
     val builder = EncryptionConfigurationDsl()
-    builder.apply(block)
+    builder.apply(encryptionConfiguration)
     cdkBuilder.encryptionConfiguration(builder.build())
   }
 
+  /**
+   * @param encryptionConfiguration Encryption option used if enabled in S3.
+   */
   public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
     cdkBuilder.encryptionConfiguration(encryptionConfiguration)
   }
 
-  public fun outputLocation(block: LocationDsl.() -> Unit = {}) {
+  /**
+   * @param outputLocation S3 path of query results.
+   * Example value: `s3://query-results-bucket/folder/`
+   */
+  public fun outputLocation(outputLocation: LocationDsl.() -> Unit = {}) {
     val builder = LocationDsl()
-    builder.apply(block)
+    builder.apply(outputLocation)
     cdkBuilder.outputLocation(builder.build())
   }
 
+  /**
+   * @param outputLocation S3 path of query results.
+   * Example value: `s3://query-results-bucket/folder/`
+   */
   public fun outputLocation(outputLocation: Location) {
     cdkBuilder.outputLocation(outputLocation)
   }

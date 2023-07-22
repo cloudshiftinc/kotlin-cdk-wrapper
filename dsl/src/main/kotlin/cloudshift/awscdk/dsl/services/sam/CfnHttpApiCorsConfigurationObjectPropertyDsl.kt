@@ -24,46 +24,79 @@ public class CfnHttpApiCorsConfigurationObjectPropertyDsl {
 
   private val _exposeHeaders: MutableList<String> = mutableListOf()
 
+  /**
+   * @param allowCredentials the value to be set.
+   */
   public fun allowCredentials(allowCredentials: Boolean) {
     cdkBuilder.allowCredentials(allowCredentials)
   }
 
+  /**
+   * @param allowCredentials the value to be set.
+   */
   public fun allowCredentials(allowCredentials: IResolvable) {
     cdkBuilder.allowCredentials(allowCredentials)
   }
 
+  /**
+   * @param allowHeaders the value to be set.
+   */
   public fun allowHeaders(vararg allowHeaders: String) {
     _allowHeaders.addAll(listOf(*allowHeaders))
   }
 
+  /**
+   * @param allowHeaders the value to be set.
+   */
   public fun allowHeaders(allowHeaders: Collection<String>) {
     _allowHeaders.addAll(allowHeaders)
   }
 
+  /**
+   * @param allowMethods the value to be set.
+   */
   public fun allowMethods(vararg allowMethods: String) {
     _allowMethods.addAll(listOf(*allowMethods))
   }
 
+  /**
+   * @param allowMethods the value to be set.
+   */
   public fun allowMethods(allowMethods: Collection<String>) {
     _allowMethods.addAll(allowMethods)
   }
 
+  /**
+   * @param allowOrigins the value to be set.
+   */
   public fun allowOrigins(vararg allowOrigins: String) {
     _allowOrigins.addAll(listOf(*allowOrigins))
   }
 
+  /**
+   * @param allowOrigins the value to be set.
+   */
   public fun allowOrigins(allowOrigins: Collection<String>) {
     _allowOrigins.addAll(allowOrigins)
   }
 
+  /**
+   * @param exposeHeaders the value to be set.
+   */
   public fun exposeHeaders(vararg exposeHeaders: String) {
     _exposeHeaders.addAll(listOf(*exposeHeaders))
   }
 
+  /**
+   * @param exposeHeaders the value to be set.
+   */
   public fun exposeHeaders(exposeHeaders: Collection<String>) {
     _exposeHeaders.addAll(exposeHeaders)
   }
 
+  /**
+   * @param maxAge the value to be set.
+   */
   public fun maxAge(maxAge: Number) {
     cdkBuilder.maxAge(maxAge)
   }

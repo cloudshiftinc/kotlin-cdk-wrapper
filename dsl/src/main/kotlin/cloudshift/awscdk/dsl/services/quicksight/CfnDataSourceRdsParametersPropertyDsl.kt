@@ -11,10 +11,16 @@ public class CfnDataSourceRdsParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.RdsParametersProperty.Builder =
       CfnDataSource.RdsParametersProperty.builder()
 
+  /**
+   * @param database Database. 
+   */
   public fun database(database: String) {
     cdkBuilder.database(database)
   }
 
+  /**
+   * @param instanceId Instance ID. 
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }

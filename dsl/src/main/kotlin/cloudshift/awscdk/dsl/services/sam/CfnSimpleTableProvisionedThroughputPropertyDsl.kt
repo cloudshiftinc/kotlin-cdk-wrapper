@@ -11,10 +11,16 @@ public class CfnSimpleTableProvisionedThroughputPropertyDsl {
   private val cdkBuilder: CfnSimpleTable.ProvisionedThroughputProperty.Builder =
       CfnSimpleTable.ProvisionedThroughputProperty.builder()
 
+  /**
+   * @param readCapacityUnits the value to be set.
+   */
   public fun readCapacityUnits(readCapacityUnits: Number) {
     cdkBuilder.readCapacityUnits(readCapacityUnits)
   }
 
+  /**
+   * @param writeCapacityUnits the value to be set. 
+   */
   public fun writeCapacityUnits(writeCapacityUnits: Number) {
     cdkBuilder.writeCapacityUnits(writeCapacityUnits)
   }

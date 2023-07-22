@@ -1,14 +1,20 @@
 package cloudshift.awscdkdsl.build.dsl
 
 import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader
+import com.github.javaparser.ParserConfiguration
+import com.github.javaparser.ast.CompilationUnit
+import com.github.javaparser.utils.SourceRoot
+import com.github.javaparser.utils.SourceRoot.Callback
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.TypeSpec
 import org.gradle.api.DefaultTask
+import org.gradle.api.file.ArchiveOperations
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.file.FileSystemOperations
 import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.model.ObjectFactory
 import org.gradle.api.provider.SetProperty
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.InputFile
@@ -16,8 +22,9 @@ import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
 import javax.inject.Inject
+import kotlin.jvm.optionals.getOrNull
 
-abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOperations) : DefaultTask() {
+abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOperations, private val archiveOps: ArchiveOperations, private val objects: ObjectFactory) : DefaultTask() {
 
     init {
         outputs.upToDateWhen { false }
@@ -26,25 +33,46 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
     @get:Input
     abstract val classpath: SetProperty<File>
 
+    @get:Input
+    abstract val sources: SetProperty<File>
+
     @get:InputFile
-    abstract val cloudFormationSpecificationZip : RegularFileProperty
+    abstract val cloudFormationSpecificationZip: RegularFileProperty
 
     @get:OutputDirectory
     abstract val dslDir: DirectoryProperty
 
     @TaskAction
     fun action() {
+        val sourcesDir = temporaryDir.resolve("cdk-sources")
+        sourcesDir.mkdir()
 
-        logger.lifecycle("${cloudFormationSpecificationZip.get()}")
+        fs.sync {
+            into(sourcesDir)
+            from(sources.get().map {
+                archiveOps.zipTree(it).matching {
+                    include("**/*.java")
+                    exclude("**/package-info.java")
+                }
+            })
+            includeEmptyDirs = false
+        }
 
-        logger.lifecycle("Removing old DSL from ${dslDir.get()}")
+
+        val cdkSourceModel = SourceParser.parse(sourcesDir)
+
         fs.delete {
             delete(dslDir)
         }
+
         val outDir = dslDir.get().asFile
 
+        logger.lifecycle("Sources: ${sources.get().map { it.name }}")
+
+
+
         logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
-        val cdkClasses = AsmClassLoader.loadClasses(classpath.get())
+        val cdkClasses = AsmClassLoader.loadClasses(classpath.get(), cdkSourceModel.builderMap)
         val cdkModel = CdkModelFactory.createModel(cdkClasses)
 
         logger.lifecycle("Generating builders...")
@@ -107,9 +135,7 @@ internal fun FileSpec.Builder.suppressWarningTypes(types: Collection<String>): F
 
     val format = "%S,".repeat(types.count()).trimEnd(',')
     addAnnotation(
-        AnnotationSpec.builder(ClassName("", "Suppress"))
-            .addMember(format, *types.toTypedArray())
-            .build(),
+        AnnotationSpec.builder(ClassName("", "Suppress")).addMember(format, *types.toTypedArray()).build(),
     )
     return this
 }

@@ -26,54 +26,161 @@ public class CfnApiKeyDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * An AWS Marketplace customer identifier, when integrating with the AWS SaaS Marketplace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid)
+   * @param customerId An AWS Marketplace customer identifier, when integrating with the AWS SaaS
+   * Marketplace. 
+   */
   public fun customerId(customerId: String) {
     cdkBuilder.customerId(customerId)
   }
 
+  /**
+   * The description of the ApiKey.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description)
+   * @param description The description of the ApiKey. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * Specifies whether the ApiKey can be used by callers.
+   *
+   * Default: - false
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled)
+   * @param enabled Specifies whether the ApiKey can be used by callers. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * Specifies whether the ApiKey can be used by callers.
+   *
+   * Default: - false
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled)
+   * @param enabled Specifies whether the ApiKey can be used by callers. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * Specifies whether ( `true` ) or not ( `false` ) the key identifier is distinct from the created
+   * API key value.
+   *
+   * This parameter is deprecated and should not be used.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid)
+   * @param generateDistinctId Specifies whether ( `true` ) or not ( `false` ) the key identifier is
+   * distinct from the created API key value. 
+   */
   public fun generateDistinctId(generateDistinctId: Boolean) {
     cdkBuilder.generateDistinctId(generateDistinctId)
   }
 
+  /**
+   * Specifies whether ( `true` ) or not ( `false` ) the key identifier is distinct from the created
+   * API key value.
+   *
+   * This parameter is deprecated and should not be used.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid)
+   * @param generateDistinctId Specifies whether ( `true` ) or not ( `false` ) the key identifier is
+   * distinct from the created API key value. 
+   */
   public fun generateDistinctId(generateDistinctId: IResolvable) {
     cdkBuilder.generateDistinctId(generateDistinctId)
   }
 
+  /**
+   * A name for the API key.
+   *
+   * If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID
+   * for the API key name. For more information, see [Name
+   * Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
+   *
+   *
+   * If you specify a name, you cannot perform updates that require replacement of this resource.
+   * You can perform updates that require no or some interruption. If you must replace the resource,
+   * specify a new name.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name)
+   * @param name A name for the API key. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys)
+   * @param stageKeys DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key. 
+   */
   public fun stageKeys(vararg stageKeys: Any) {
     _stageKeys.addAll(listOf(*stageKeys))
   }
 
+  /**
+   * DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys)
+   * @param stageKeys DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key. 
+   */
   public fun stageKeys(stageKeys: Collection<Any>) {
     _stageKeys.addAll(stageKeys)
   }
 
+  /**
+   * DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys)
+   * @param stageKeys DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key. 
+   */
   public fun stageKeys(stageKeys: IResolvable) {
     cdkBuilder.stageKeys(stageKeys)
   }
 
+  /**
+   * The key-value map of strings.
+   *
+   * The valid character set is [a-zA-Z+-=._:/]. The tag key can be up to 128 characters and must
+   * not start with `aws:` . The tag value can be up to 256 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-tags)
+   * @param tags The key-value map of strings. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The key-value map of strings.
+   *
+   * The valid character set is [a-zA-Z+-=._:/]. The tag key can be up to 128 characters and must
+   * not start with `aws:` . The tag value can be up to 256 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-tags)
+   * @param tags The key-value map of strings. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * Specifies a value of the API key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-value)
+   * @param value Specifies a value of the API key. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

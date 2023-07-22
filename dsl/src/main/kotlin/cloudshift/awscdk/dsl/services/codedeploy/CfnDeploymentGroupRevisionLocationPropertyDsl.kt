@@ -12,22 +12,43 @@ public class CfnDeploymentGroupRevisionLocationPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.RevisionLocationProperty.Builder =
       CfnDeploymentGroup.RevisionLocationProperty.builder()
 
+  /**
+   * @param gitHubLocation Information about the location of application artifacts stored in GitHub.
+   */
   public fun gitHubLocation(gitHubLocation: IResolvable) {
     cdkBuilder.gitHubLocation(gitHubLocation)
   }
 
+  /**
+   * @param gitHubLocation Information about the location of application artifacts stored in GitHub.
+   */
   public fun gitHubLocation(gitHubLocation: CfnDeploymentGroup.GitHubLocationProperty) {
     cdkBuilder.gitHubLocation(gitHubLocation)
   }
 
+  /**
+   * @param revisionType The type of application revision:.
+   * * S3: An application revision stored in Amazon S3.
+   * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
+   * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
+   * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file for
+   * an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as a
+   * RawString.
+   */
   public fun revisionType(revisionType: String) {
     cdkBuilder.revisionType(revisionType)
   }
 
+  /**
+   * @param s3Location Information about the location of a revision stored in Amazon S3.
+   */
   public fun s3Location(s3Location: IResolvable) {
     cdkBuilder.s3Location(s3Location)
   }
 
+  /**
+   * @param s3Location Information about the location of a revision stored in Amazon S3.
+   */
   public fun s3Location(s3Location: CfnDeploymentGroup.S3LocationProperty) {
     cdkBuilder.s3Location(s3Location)
   }

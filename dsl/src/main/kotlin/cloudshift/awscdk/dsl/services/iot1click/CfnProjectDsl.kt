@@ -15,18 +15,42 @@ public class CfnProjectDsl(
 ) {
   private val cdkBuilder: CfnProject.Builder = CfnProject.Builder.create(scope, id)
 
+  /**
+   * The description of the project.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-project.html#cfn-iot1click-project-description)
+   * @param description The description of the project. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * An object describing the project's placement specifications.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-project.html#cfn-iot1click-project-placementtemplate)
+   * @param placementTemplate An object describing the project's placement specifications. 
+   */
   public fun placementTemplate(placementTemplate: IResolvable) {
     cdkBuilder.placementTemplate(placementTemplate)
   }
 
+  /**
+   * An object describing the project's placement specifications.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-project.html#cfn-iot1click-project-placementtemplate)
+   * @param placementTemplate An object describing the project's placement specifications. 
+   */
   public fun placementTemplate(placementTemplate: CfnProject.PlacementTemplateProperty) {
     cdkBuilder.placementTemplate(placementTemplate)
   }
 
+  /**
+   * The name of the project from which to obtain information.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-project.html#cfn-iot1click-project-projectname)
+   * @param projectName The name of the project from which to obtain information. 
+   */
   public fun projectName(projectName: String) {
     cdkBuilder.projectName(projectName)
   }

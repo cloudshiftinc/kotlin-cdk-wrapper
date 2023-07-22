@@ -11,12 +11,20 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 public class BackendConfigDsl {
   private val cdkBuilder: BackendConfig.Builder = BackendConfig.builder()
 
-  public fun virtualServiceBackend(block: CfnVirtualNodeBackendPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param virtualServiceBackend Config for a Virtual Service backend. 
+   */
+  public
+      fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNodeBackendPropertyDsl.() -> Unit =
+      {}) {
     val builder = CfnVirtualNodeBackendPropertyDsl()
-    builder.apply(block)
+    builder.apply(virtualServiceBackend)
     cdkBuilder.virtualServiceBackend(builder.build())
   }
 
+  /**
+   * @param virtualServiceBackend Config for a Virtual Service backend. 
+   */
   public fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty) {
     cdkBuilder.virtualServiceBackend(virtualServiceBackend)
   }

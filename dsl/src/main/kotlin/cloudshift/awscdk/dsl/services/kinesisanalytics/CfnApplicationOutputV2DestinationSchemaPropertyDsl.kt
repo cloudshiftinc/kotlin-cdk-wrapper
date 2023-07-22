@@ -11,6 +11,9 @@ public class CfnApplicationOutputV2DestinationSchemaPropertyDsl {
   private val cdkBuilder: CfnApplicationOutputV2.DestinationSchemaProperty.Builder =
       CfnApplicationOutputV2.DestinationSchemaProperty.builder()
 
+  /**
+   * @param recordFormatType Specifies the format of the records on the output stream.
+   */
   public fun recordFormatType(recordFormatType: String) {
     cdkBuilder.recordFormatType(recordFormatType)
   }

@@ -11,10 +11,16 @@ public class CfnChannelAvailConfigurationPropertyDsl {
   private val cdkBuilder: CfnChannel.AvailConfigurationProperty.Builder =
       CfnChannel.AvailConfigurationProperty.builder()
 
+  /**
+   * @param availSettings The setup of ad avail handling in the output.
+   */
   public fun availSettings(availSettings: IResolvable) {
     cdkBuilder.availSettings(availSettings)
   }
 
+  /**
+   * @param availSettings The setup of ad avail handling in the output.
+   */
   public fun availSettings(availSettings: CfnChannel.AvailSettingsProperty) {
     cdkBuilder.availSettings(availSettings)
   }

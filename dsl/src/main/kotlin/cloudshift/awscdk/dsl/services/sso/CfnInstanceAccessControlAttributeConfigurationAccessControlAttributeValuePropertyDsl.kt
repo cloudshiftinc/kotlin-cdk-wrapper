@@ -16,10 +16,18 @@ public class CfnInstanceAccessControlAttributeConfigurationAccessControlAttribut
 
   private val _source: MutableList<String> = mutableListOf()
 
+  /**
+   * @param source The identity source to use when mapping a specified attribute to IAM Identity
+   * Center . 
+   */
   public fun source(vararg source: String) {
     _source.addAll(listOf(*source))
   }
 
+  /**
+   * @param source The identity source to use when mapping a specified attribute to IAM Identity
+   * Center . 
+   */
   public fun source(source: Collection<String>) {
     _source.addAll(source)
   }

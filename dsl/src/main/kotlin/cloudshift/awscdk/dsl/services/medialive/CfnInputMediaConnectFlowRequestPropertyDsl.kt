@@ -11,6 +11,10 @@ public class CfnInputMediaConnectFlowRequestPropertyDsl {
   private val cdkBuilder: CfnInput.MediaConnectFlowRequestProperty.Builder =
       CfnInput.MediaConnectFlowRequestProperty.builder()
 
+  /**
+   * @param flowArn The ARN of one or two MediaConnect flows that are the sources for this
+   * MediaConnect input.
+   */
   public fun flowArn(flowArn: String) {
     cdkBuilder.flowArn(flowArn)
   }

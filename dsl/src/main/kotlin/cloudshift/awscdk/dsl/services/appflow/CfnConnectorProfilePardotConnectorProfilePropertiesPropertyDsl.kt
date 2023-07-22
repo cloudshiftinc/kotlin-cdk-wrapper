@@ -13,18 +13,32 @@ public class CfnConnectorProfilePardotConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param businessUnitId the value to be set. 
+   */
   public fun businessUnitId(businessUnitId: String) {
     cdkBuilder.businessUnitId(businessUnitId)
   }
 
+  /**
+   * @param instanceUrl the value to be set.
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }
 
+  /**
+   * @param isSandboxEnvironment Indicates whether the connector profile applies to a demo or
+   * production environment.
+   */
   public fun isSandboxEnvironment(isSandboxEnvironment: Boolean) {
     cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
   }
 
+  /**
+   * @param isSandboxEnvironment Indicates whether the connector profile applies to a demo or
+   * production environment.
+   */
   public fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
     cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
   }

@@ -11,6 +11,10 @@ public class CfnCampaignCampaignCustomMessagePropertyDsl {
   private val cdkBuilder: CfnCampaign.CampaignCustomMessageProperty.Builder =
       CfnCampaign.CampaignCustomMessageProperty.builder()
 
+  /**
+   * @param data The raw, JSON-formatted string to use as the payload for the message.
+   * The maximum size is 5 KB.
+   */
   public fun `data`(`data`: String) {
     cdkBuilder.`data`(`data`)
   }

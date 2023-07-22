@@ -11,10 +11,18 @@ public class CfnModelExplainabilityJobDefinitionMonitoringOutputPropertyDsl {
   private val cdkBuilder: CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.Builder =
       CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.builder()
 
+  /**
+   * @param s3Output The Amazon S3 storage location where the results of a monitoring job are saved.
+   * 
+   */
   public fun s3Output(s3Output: IResolvable) {
     cdkBuilder.s3Output(s3Output)
   }
 
+  /**
+   * @param s3Output The Amazon S3 storage location where the results of a monitoring job are saved.
+   * 
+   */
   public fun s3Output(s3Output: CfnModelExplainabilityJobDefinition.S3OutputProperty) {
     cdkBuilder.s3Output(s3Output)
   }

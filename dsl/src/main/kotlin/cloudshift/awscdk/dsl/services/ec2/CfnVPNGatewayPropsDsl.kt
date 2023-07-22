@@ -18,18 +18,31 @@ public class CfnVPNGatewayPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param amazonSideAsn The private Autonomous System Number (ASN) for the Amazon side of a BGP
+   * session.
+   */
   public fun amazonSideAsn(amazonSideAsn: Number) {
     cdkBuilder.amazonSideAsn(amazonSideAsn)
   }
 
+  /**
+   * @param tags Any tags assigned to the virtual private gateway.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Any tags assigned to the virtual private gateway.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param type The type of VPN connection the virtual private gateway supports. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

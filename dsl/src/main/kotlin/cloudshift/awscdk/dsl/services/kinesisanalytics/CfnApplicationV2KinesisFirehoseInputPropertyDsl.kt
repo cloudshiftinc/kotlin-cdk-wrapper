@@ -11,6 +11,9 @@ public class CfnApplicationV2KinesisFirehoseInputPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.KinesisFirehoseInputProperty.Builder =
       CfnApplicationV2.KinesisFirehoseInputProperty.builder()
 
+  /**
+   * @param resourceArn The Amazon Resource Name (ARN) of the delivery stream. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

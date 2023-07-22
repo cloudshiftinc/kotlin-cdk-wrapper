@@ -16,23 +16,40 @@ public class CfnTemplateTreeMapSortConfigurationPropertyDsl {
 
   private val _treeMapSort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param treeMapGroupItemsLimitConfiguration The limit on the number of groups that are
+   * displayed.
+   */
   public fun treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration: IResolvable) {
     cdkBuilder.treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration)
   }
 
+  /**
+   * @param treeMapGroupItemsLimitConfiguration The limit on the number of groups that are
+   * displayed.
+   */
   public
       fun treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration: CfnTemplate.ItemsLimitConfigurationProperty) {
     cdkBuilder.treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration)
   }
 
+  /**
+   * @param treeMapSort The sort configuration of group by fields.
+   */
   public fun treeMapSort(vararg treeMapSort: Any) {
     _treeMapSort.addAll(listOf(*treeMapSort))
   }
 
+  /**
+   * @param treeMapSort The sort configuration of group by fields.
+   */
   public fun treeMapSort(treeMapSort: Collection<Any>) {
     _treeMapSort.addAll(treeMapSort)
   }
 
+  /**
+   * @param treeMapSort The sort configuration of group by fields.
+   */
   public fun treeMapSort(treeMapSort: IResolvable) {
     cdkBuilder.treeMapSort(treeMapSort)
   }

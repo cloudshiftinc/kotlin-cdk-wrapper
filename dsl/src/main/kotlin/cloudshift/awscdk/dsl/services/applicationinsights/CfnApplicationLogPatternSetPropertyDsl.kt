@@ -17,18 +17,35 @@ public class CfnApplicationLogPatternSetPropertyDsl {
 
   private val _logPatterns: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param logPatterns A list of objects that define the log patterns that belong to
+   * `LogPatternSet` . 
+   */
   public fun logPatterns(vararg logPatterns: Any) {
     _logPatterns.addAll(listOf(*logPatterns))
   }
 
+  /**
+   * @param logPatterns A list of objects that define the log patterns that belong to
+   * `LogPatternSet` . 
+   */
   public fun logPatterns(logPatterns: Collection<Any>) {
     _logPatterns.addAll(logPatterns)
   }
 
+  /**
+   * @param logPatterns A list of objects that define the log patterns that belong to
+   * `LogPatternSet` . 
+   */
   public fun logPatterns(logPatterns: IResolvable) {
     cdkBuilder.logPatterns(logPatterns)
   }
 
+  /**
+   * @param patternSetName The name of the log pattern. 
+   * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters can
+   * be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+   */
   public fun patternSetName(patternSetName: String) {
     cdkBuilder.patternSetName(patternSetName)
   }

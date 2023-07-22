@@ -16,10 +16,22 @@ public class ServerDeploymentConfigDsl(
   private val cdkBuilder: ServerDeploymentConfig.Builder =
       ServerDeploymentConfig.Builder.create(scope, id)
 
+  /**
+   * The physical, human-readable name of the Deployment Configuration.
+   *
+   * Default: - automatically generated name
+   *
+   * @param deploymentConfigName The physical, human-readable name of the Deployment Configuration. 
+   */
   public fun deploymentConfigName(deploymentConfigName: String) {
     cdkBuilder.deploymentConfigName(deploymentConfigName)
   }
 
+  /**
+   * Minimum number of healthy hosts.
+   *
+   * @param minimumHealthyHosts Minimum number of healthy hosts. 
+   */
   public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
     cdkBuilder.minimumHealthyHosts(minimumHealthyHosts)
   }

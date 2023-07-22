@@ -11,6 +11,9 @@ public class CfnVirtualServiceVirtualRouterServiceProviderPropertyDsl {
   private val cdkBuilder: CfnVirtualService.VirtualRouterServiceProviderProperty.Builder =
       CfnVirtualService.VirtualRouterServiceProviderProperty.builder()
 
+  /**
+   * @param virtualRouterName The name of the virtual router that is acting as a service provider. 
+   */
   public fun virtualRouterName(virtualRouterName: String) {
     cdkBuilder.virtualRouterName(virtualRouterName)
   }

@@ -17,22 +17,37 @@ public class CfnDetectorFeatureConfigurationsPropertyDsl {
 
   private val _additionalConfiguration: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param additionalConfiguration Additional configuration of the feature.
+   */
   public fun additionalConfiguration(vararg additionalConfiguration: Any) {
     _additionalConfiguration.addAll(listOf(*additionalConfiguration))
   }
 
+  /**
+   * @param additionalConfiguration Additional configuration of the feature.
+   */
   public fun additionalConfiguration(additionalConfiguration: Collection<Any>) {
     _additionalConfiguration.addAll(additionalConfiguration)
   }
 
+  /**
+   * @param additionalConfiguration Additional configuration of the feature.
+   */
   public fun additionalConfiguration(additionalConfiguration: IResolvable) {
     cdkBuilder.additionalConfiguration(additionalConfiguration)
   }
 
+  /**
+   * @param name Name of the feature.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param status Status of the feature.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

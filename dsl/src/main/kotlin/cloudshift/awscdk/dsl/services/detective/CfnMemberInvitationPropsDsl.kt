@@ -12,26 +12,48 @@ import software.amazon.awscdk.services.detective.CfnMemberInvitationProps
 public class CfnMemberInvitationPropsDsl {
   private val cdkBuilder: CfnMemberInvitationProps.Builder = CfnMemberInvitationProps.builder()
 
+  /**
+   * @param disableEmailNotification Whether to send an invitation email to the member account.
+   * If set to true, the member account does not receive an invitation email.
+   */
   public fun disableEmailNotification(disableEmailNotification: Boolean) {
     cdkBuilder.disableEmailNotification(disableEmailNotification)
   }
 
+  /**
+   * @param disableEmailNotification Whether to send an invitation email to the member account.
+   * If set to true, the member account does not receive an invitation email.
+   */
   public fun disableEmailNotification(disableEmailNotification: IResolvable) {
     cdkBuilder.disableEmailNotification(disableEmailNotification)
   }
 
+  /**
+   * @param graphArn The ARN of the behavior graph to invite the account to contribute data to. 
+   */
   public fun graphArn(graphArn: String) {
     cdkBuilder.graphArn(graphArn)
   }
 
+  /**
+   * @param memberEmailAddress The root user email address of the invited account. 
+   * If the email address provided is not the root user email address for the provided account, the
+   * invitation creation fails.
+   */
   public fun memberEmailAddress(memberEmailAddress: String) {
     cdkBuilder.memberEmailAddress(memberEmailAddress)
   }
 
+  /**
+   * @param memberId The AWS account identifier of the invited account. 
+   */
   public fun memberId(memberId: String) {
     cdkBuilder.memberId(memberId)
   }
 
+  /**
+   * @param message Customized text to include in the invitation email message.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }

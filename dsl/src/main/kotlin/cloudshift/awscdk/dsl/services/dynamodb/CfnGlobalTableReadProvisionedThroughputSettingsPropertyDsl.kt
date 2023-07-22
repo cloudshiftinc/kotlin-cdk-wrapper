@@ -12,15 +12,27 @@ public class CfnGlobalTableReadProvisionedThroughputSettingsPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.Builder =
       CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.builder()
 
+  /**
+   * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica table or
+   * global secondary index.
+   */
   public fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: IResolvable) {
     cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings)
   }
 
+  /**
+   * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica table or
+   * global secondary index.
+   */
   public
       fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CfnGlobalTable.CapacityAutoScalingSettingsProperty) {
     cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings)
   }
 
+  /**
+   * @param readCapacityUnits Specifies a fixed read capacity for the replica table or global
+   * secondary index.
+   */
   public fun readCapacityUnits(readCapacityUnits: Number) {
     cdkBuilder.readCapacityUnits(readCapacityUnits)
   }

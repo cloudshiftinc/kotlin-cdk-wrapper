@@ -11,6 +11,9 @@ public class CfnTemplateTemplateSourceTemplatePropertyDsl {
   private val cdkBuilder: CfnTemplate.TemplateSourceTemplateProperty.Builder =
       CfnTemplate.TemplateSourceTemplateProperty.builder()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the resource. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

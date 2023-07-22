@@ -11,6 +11,9 @@ public class CfnTemplateSectionAfterPageBreakPropertyDsl {
   private val cdkBuilder: CfnTemplate.SectionAfterPageBreakProperty.Builder =
       CfnTemplate.SectionAfterPageBreakProperty.builder()
 
+  /**
+   * @param status The option that enables or disables a page break at the end of a section.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

@@ -11,14 +11,26 @@ public class CfnSchemaVersionSchemaPropertyDsl {
   private val cdkBuilder: CfnSchemaVersion.SchemaProperty.Builder =
       CfnSchemaVersion.SchemaProperty.builder()
 
+  /**
+   * @param registryName The name of the registry where the schema is stored.
+   * Either `SchemaArn` , or `SchemaName` and `RegistryName` has to be provided.
+   */
   public fun registryName(registryName: String) {
     cdkBuilder.registryName(registryName)
   }
 
+  /**
+   * @param schemaArn The Amazon Resource Name (ARN) of the schema.
+   * Either `SchemaArn` , or `SchemaName` and `RegistryName` has to be provided.
+   */
   public fun schemaArn(schemaArn: String) {
     cdkBuilder.schemaArn(schemaArn)
   }
 
+  /**
+   * @param schemaName The name of the schema.
+   * Either `SchemaArn` , or `SchemaName` and `RegistryName` has to be provided.
+   */
   public fun schemaName(schemaName: String) {
     cdkBuilder.schemaName(schemaName)
   }

@@ -15,10 +15,32 @@ public class CfnDataRepositoryAssociationAutoImportPolicyPropertyDsl {
 
   private val _events: MutableList<String> = mutableListOf()
 
+  /**
+   * @param events The `AutoImportPolicy` can have the following event values:. 
+   * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket that
+   * do not currently exist in the FSx file system.
+   * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+   * content on the file system as files change in the data repository.
+   * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding files
+   * are deleted in the data repository.
+   *
+   * You can define any combination of event types for your `AutoImportPolicy` .
+   */
   public fun events(vararg events: String) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * @param events The `AutoImportPolicy` can have the following event values:. 
+   * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket that
+   * do not currently exist in the FSx file system.
+   * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+   * content on the file system as files change in the data repository.
+   * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding files
+   * are deleted in the data repository.
+   *
+   * You can define any combination of event types for your `AutoImportPolicy` .
+   */
   public fun events(events: Collection<String>) {
     _events.addAll(events)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.cloudwatch.VariableValue
 public class VariableValueDsl {
   private val cdkBuilder: VariableValue.Builder = VariableValue.builder()
 
+  /**
+   * @param label Optional label for the selected item.
+   */
   public fun label(label: String) {
     cdkBuilder.label(label)
   }
 
+  /**
+   * @param value Value of the selected item. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

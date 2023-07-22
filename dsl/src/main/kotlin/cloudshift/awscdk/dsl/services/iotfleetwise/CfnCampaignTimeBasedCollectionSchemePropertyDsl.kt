@@ -11,6 +11,11 @@ public class CfnCampaignTimeBasedCollectionSchemePropertyDsl {
   private val cdkBuilder: CfnCampaign.TimeBasedCollectionSchemeProperty.Builder =
       CfnCampaign.TimeBasedCollectionSchemeProperty.builder()
 
+  /**
+   * @param periodMs The time period (in milliseconds) to decide how often to collect data. 
+   * For example, if the time period is `60000` , the Edge Agent software collects data once every
+   * minute.
+   */
   public fun periodMs(periodMs: Number) {
     cdkBuilder.periodMs(periodMs)
   }

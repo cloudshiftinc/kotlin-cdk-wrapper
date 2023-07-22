@@ -21,34 +21,74 @@ public class CfnLocationFSxOpenZFSPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param fsxFilesystemArn The Amazon Resource Name (ARN) of the FSx for OpenZFS file system.
+   */
   public fun fsxFilesystemArn(fsxFilesystemArn: String) {
     cdkBuilder.fsxFilesystemArn(fsxFilesystemArn)
   }
 
+  /**
+   * @param protocol The type of protocol that AWS DataSync uses to access your file system. 
+   */
   public fun protocol(protocol: IResolvable) {
     cdkBuilder.protocol(protocol)
   }
 
+  /**
+   * @param protocol The type of protocol that AWS DataSync uses to access your file system. 
+   */
   public fun protocol(protocol: CfnLocationFSxOpenZFS.ProtocolProperty) {
     cdkBuilder.protocol(protocol)
   }
 
+  /**
+   * @param securityGroupArns The ARNs of the security groups that are used to configure the FSx for
+   * OpenZFS file system. 
+   * *Pattern* :
+   * `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`
+   *
+   * *Length constraints* : Maximum length of 128.
+   */
   public fun securityGroupArns(vararg securityGroupArns: String) {
     _securityGroupArns.addAll(listOf(*securityGroupArns))
   }
 
+  /**
+   * @param securityGroupArns The ARNs of the security groups that are used to configure the FSx for
+   * OpenZFS file system. 
+   * *Pattern* :
+   * `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`
+   *
+   * *Length constraints* : Maximum length of 128.
+   */
   public fun securityGroupArns(securityGroupArns: Collection<String>) {
     _securityGroupArns.addAll(securityGroupArns)
   }
 
+  /**
+   * @param subdirectory A subdirectory in the location's path that must begin with `/fsx` .
+   * DataSync uses this subdirectory to read or write data (depending on whether the file system is
+   * a source or destination location).
+   */
   public fun subdirectory(subdirectory: String) {
     cdkBuilder.subdirectory(subdirectory)
   }
 
+  /**
+   * @param tags The key-value pair that represents a tag that you want to add to the resource.
+   * The value can be an empty string. This value helps you manage, filter, and search for your
+   * resources. We recommend that you create a name tag for your location.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The key-value pair that represents a tag that you want to add to the resource.
+   * The value can be an empty string. This value helps you manage, filter, and search for your
+   * resources. We recommend that you create a name tag for your location.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

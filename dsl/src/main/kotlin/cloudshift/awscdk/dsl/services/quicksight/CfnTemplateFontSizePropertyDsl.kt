@@ -11,6 +11,9 @@ public class CfnTemplateFontSizePropertyDsl {
   private val cdkBuilder: CfnTemplate.FontSizeProperty.Builder =
       CfnTemplate.FontSizeProperty.builder()
 
+  /**
+   * @param relative The lexical name for the text size, proportional to its surrounding context.
+   */
   public fun relative(relative: String) {
     cdkBuilder.relative(relative)
   }

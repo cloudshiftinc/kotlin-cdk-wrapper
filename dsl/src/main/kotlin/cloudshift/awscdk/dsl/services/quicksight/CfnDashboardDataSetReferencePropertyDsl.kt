@@ -11,10 +11,16 @@ public class CfnDashboardDataSetReferencePropertyDsl {
   private val cdkBuilder: CfnDashboard.DataSetReferenceProperty.Builder =
       CfnDashboard.DataSetReferenceProperty.builder()
 
+  /**
+   * @param dataSetArn Dataset Amazon Resource Name (ARN). 
+   */
   public fun dataSetArn(dataSetArn: String) {
     cdkBuilder.dataSetArn(dataSetArn)
   }
 
+  /**
+   * @param dataSetPlaceholder Dataset placeholder. 
+   */
   public fun dataSetPlaceholder(dataSetPlaceholder: String) {
     cdkBuilder.dataSetPlaceholder(dataSetPlaceholder)
   }

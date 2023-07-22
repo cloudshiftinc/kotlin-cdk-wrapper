@@ -12,22 +12,37 @@ public class CfnDashboardLineChartDefaultSeriesSettingsPropertyDsl {
   private val cdkBuilder: CfnDashboard.LineChartDefaultSeriesSettingsProperty.Builder =
       CfnDashboard.LineChartDefaultSeriesSettingsProperty.builder()
 
+  /**
+   * @param axisBinding The axis to which you are binding all line series to.
+   */
   public fun axisBinding(axisBinding: String) {
     cdkBuilder.axisBinding(axisBinding)
   }
 
+  /**
+   * @param lineStyleSettings Line styles options for all line series in the visual.
+   */
   public fun lineStyleSettings(lineStyleSettings: IResolvable) {
     cdkBuilder.lineStyleSettings(lineStyleSettings)
   }
 
+  /**
+   * @param lineStyleSettings Line styles options for all line series in the visual.
+   */
   public fun lineStyleSettings(lineStyleSettings: CfnDashboard.LineChartLineStyleSettingsProperty) {
     cdkBuilder.lineStyleSettings(lineStyleSettings)
   }
 
+  /**
+   * @param markerStyleSettings Marker styles options for all line series in the visual.
+   */
   public fun markerStyleSettings(markerStyleSettings: IResolvable) {
     cdkBuilder.markerStyleSettings(markerStyleSettings)
   }
 
+  /**
+   * @param markerStyleSettings Marker styles options for all line series in the visual.
+   */
   public
       fun markerStyleSettings(markerStyleSettings: CfnDashboard.LineChartMarkerStyleSettingsProperty) {
     cdkBuilder.markerStyleSettings(markerStyleSettings)

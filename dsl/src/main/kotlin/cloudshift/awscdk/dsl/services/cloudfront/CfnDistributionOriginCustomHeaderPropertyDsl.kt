@@ -11,10 +11,19 @@ public class CfnDistributionOriginCustomHeaderPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginCustomHeaderProperty.Builder =
       CfnDistribution.OriginCustomHeaderProperty.builder()
 
+  /**
+   * @param headerName The name of a header that you want CloudFront to send to your origin. 
+   * For more information, see [Adding Custom Headers to Origin
+   * Requests](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/forward-custom-headers.html)
+   * in the *Amazon CloudFront Developer Guide* .
+   */
   public fun headerName(headerName: String) {
     cdkBuilder.headerName(headerName)
   }
 
+  /**
+   * @param headerValue The value for the header that you specified in the `HeaderName` field. 
+   */
   public fun headerValue(headerValue: String) {
     cdkBuilder.headerValue(headerValue)
   }

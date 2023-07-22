@@ -17,14 +17,31 @@ public class SubscriptionFilterDsl(
 ) {
   private val cdkBuilder: SubscriptionFilter.Builder = SubscriptionFilter.Builder.create(scope, id)
 
+  /**
+   * The destination to send the filtered events to.
+   *
+   * For example, a Kinesis stream or a Lambda function.
+   *
+   * @param destination The destination to send the filtered events to. 
+   */
   public fun destination(destination: ILogSubscriptionDestination) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * Log events matching this pattern will be sent to the destination.
+   *
+   * @param filterPattern Log events matching this pattern will be sent to the destination. 
+   */
   public fun filterPattern(filterPattern: IFilterPattern) {
     cdkBuilder.filterPattern(filterPattern)
   }
 
+  /**
+   * The log group to create the subscription on.
+   *
+   * @param logGroup The log group to create the subscription on. 
+   */
   public fun logGroup(logGroup: ILogGroup) {
     cdkBuilder.logGroup(logGroup)
   }

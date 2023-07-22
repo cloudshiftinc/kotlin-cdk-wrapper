@@ -11,14 +11,23 @@ public class CfnDataSetOutputColumnPropertyDsl {
   private val cdkBuilder: CfnDataSet.OutputColumnProperty.Builder =
       CfnDataSet.OutputColumnProperty.builder()
 
+  /**
+   * @param description A description for a column.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name A display name for the dataset.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param type The type.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

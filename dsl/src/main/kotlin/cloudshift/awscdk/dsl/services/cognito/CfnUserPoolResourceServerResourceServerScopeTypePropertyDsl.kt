@@ -11,10 +11,16 @@ public class CfnUserPoolResourceServerResourceServerScopeTypePropertyDsl {
   private val cdkBuilder: CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.Builder =
       CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.builder()
 
+  /**
+   * @param scopeDescription A description of the scope. 
+   */
   public fun scopeDescription(scopeDescription: String) {
     cdkBuilder.scopeDescription(scopeDescription)
   }
 
+  /**
+   * @param scopeName The name of the scope. 
+   */
   public fun scopeName(scopeName: String) {
     cdkBuilder.scopeName(scopeName)
   }

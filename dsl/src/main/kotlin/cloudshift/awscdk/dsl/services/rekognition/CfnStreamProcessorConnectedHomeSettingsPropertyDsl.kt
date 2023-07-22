@@ -16,14 +16,29 @@ public class CfnStreamProcessorConnectedHomeSettingsPropertyDsl {
 
   private val _labels: MutableList<String> = mutableListOf()
 
+  /**
+   * @param labels Specifies what you want to detect in the video, such as people, packages, or
+   * pets. 
+   * The current valid labels you can include in this list are: "PERSON", "PET", "PACKAGE", and
+   * "ALL".
+   */
   public fun labels(vararg labels: String) {
     _labels.addAll(listOf(*labels))
   }
 
+  /**
+   * @param labels Specifies what you want to detect in the video, such as people, packages, or
+   * pets. 
+   * The current valid labels you can include in this list are: "PERSON", "PET", "PACKAGE", and
+   * "ALL".
+   */
   public fun labels(labels: Collection<String>) {
     _labels.addAll(labels)
   }
 
+  /**
+   * @param minConfidence The minimum confidence required to label an object in the video.
+   */
   public fun minConfidence(minConfidence: Number) {
     cdkBuilder.minConfidence(minConfidence)
   }

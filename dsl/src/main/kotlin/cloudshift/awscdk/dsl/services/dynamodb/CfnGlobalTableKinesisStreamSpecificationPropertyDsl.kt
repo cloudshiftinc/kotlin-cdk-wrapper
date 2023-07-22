@@ -11,6 +11,9 @@ public class CfnGlobalTableKinesisStreamSpecificationPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.KinesisStreamSpecificationProperty.Builder =
       CfnGlobalTable.KinesisStreamSpecificationProperty.builder()
 
+  /**
+   * @param streamArn The ARN for a specific Kinesis data stream. 
+   */
   public fun streamArn(streamArn: String) {
     cdkBuilder.streamArn(streamArn)
   }

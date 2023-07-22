@@ -16,18 +16,32 @@ public class CfnClusterEncryptionConfigPropertyDsl {
 
   private val _resources: MutableList<String> = mutableListOf()
 
+  /**
+   * @param provider The encryption provider for the cluster.
+   */
   public fun provider(provider: IResolvable) {
     cdkBuilder.provider(provider)
   }
 
+  /**
+   * @param provider The encryption provider for the cluster.
+   */
   public fun provider(provider: CfnCluster.ProviderProperty) {
     cdkBuilder.provider(provider)
   }
 
+  /**
+   * @param resources Specifies the resources to be encrypted.
+   * The only supported value is "secrets".
+   */
   public fun resources(vararg resources: String) {
     _resources.addAll(listOf(*resources))
   }
 
+  /**
+   * @param resources Specifies the resources to be encrypted.
+   * The only supported value is "secrets".
+   */
   public fun resources(resources: Collection<String>) {
     _resources.addAll(resources)
   }

@@ -16,18 +16,30 @@ public class CfnPolicyIEMapPropertyDsl {
 
   private val _orgunit: MutableList<String> = mutableListOf()
 
+  /**
+   * @param account The account list for the map.
+   */
   public fun account(vararg account: String) {
     _account.addAll(listOf(*account))
   }
 
+  /**
+   * @param account The account list for the map.
+   */
   public fun account(account: Collection<String>) {
     _account.addAll(account)
   }
 
+  /**
+   * @param orgunit The organizational unit list for the map.
+   */
   public fun orgunit(vararg orgunit: String) {
     _orgunit.addAll(listOf(*orgunit))
   }
 
+  /**
+   * @param orgunit The organizational unit list for the map.
+   */
   public fun orgunit(orgunit: Collection<String>) {
     _orgunit.addAll(orgunit)
   }

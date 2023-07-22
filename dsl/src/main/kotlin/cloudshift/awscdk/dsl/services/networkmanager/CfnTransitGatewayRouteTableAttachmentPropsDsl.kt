@@ -20,27 +20,51 @@ public class CfnTransitGatewayRouteTableAttachmentPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param peeringId The ID of the transit gateway peering. 
+   */
   public fun peeringId(peeringId: String) {
     cdkBuilder.peeringId(peeringId)
   }
 
+  /**
+   * @param proposedSegmentChange This property is read-only.
+   * Values can't be assigned to it.
+   */
   public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * @param proposedSegmentChange This property is read-only.
+   * Values can't be assigned to it.
+   */
   public
       fun proposedSegmentChange(proposedSegmentChange: CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * @param tags The list of key-value pairs associated with the transit gateway route table
+   * attachment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The list of key-value pairs associated with the transit gateway route table
+   * attachment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param transitGatewayRouteTableArn The ARN of the transit gateway attachment route table. 
+   * For example, `"TransitGatewayRouteTableArn":
+   * "arn:aws:ec2:us-west-2:123456789012:transit-gateway-route-table/tgw-rtb-9876543210123456"` .
+   */
   public fun transitGatewayRouteTableArn(transitGatewayRouteTableArn: String) {
     cdkBuilder.transitGatewayRouteTableArn(transitGatewayRouteTableArn)
   }

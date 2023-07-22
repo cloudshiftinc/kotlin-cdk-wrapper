@@ -11,6 +11,9 @@ public class BaseDeploymentConfigOptionsDsl {
   private val cdkBuilder: BaseDeploymentConfigOptions.Builder =
       BaseDeploymentConfigOptions.builder()
 
+  /**
+   * @param deploymentConfigName The physical, human-readable name of the Deployment Configuration.
+   */
   public fun deploymentConfigName(deploymentConfigName: String) {
     cdkBuilder.deploymentConfigName(deploymentConfigName)
   }

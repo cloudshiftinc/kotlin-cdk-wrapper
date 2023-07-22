@@ -20,42 +20,72 @@ public class CfnModelCardEvaluationDetailPropertyDsl {
 
   private val _metricGroups: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param datasets The location of the datasets used to evaluate the model.
+   */
   public fun datasets(vararg datasets: String) {
     _datasets.addAll(listOf(*datasets))
   }
 
+  /**
+   * @param datasets The location of the datasets used to evaluate the model.
+   */
   public fun datasets(datasets: Collection<String>) {
     _datasets.addAll(datasets)
   }
 
+  /**
+   * @param evaluationJobArn The Amazon Resource Name (ARN) of the evaluation job.
+   */
   public fun evaluationJobArn(evaluationJobArn: String) {
     cdkBuilder.evaluationJobArn(evaluationJobArn)
   }
 
+  /**
+   * @param evaluationObservation Any observations made during the model evaluation.
+   */
   public fun evaluationObservation(evaluationObservation: String) {
     cdkBuilder.evaluationObservation(evaluationObservation)
   }
 
+  /**
+   * @param metadata Additional attributes associated with the evaluation results.
+   */
   public fun metadata(metadata: Map<String, String>) {
     cdkBuilder.metadata(metadata)
   }
 
+  /**
+   * @param metadata Additional attributes associated with the evaluation results.
+   */
   public fun metadata(metadata: IResolvable) {
     cdkBuilder.metadata(metadata)
   }
 
+  /**
+   * @param metricGroups An evaluation Metric Group object.
+   */
   public fun metricGroups(vararg metricGroups: Any) {
     _metricGroups.addAll(listOf(*metricGroups))
   }
 
+  /**
+   * @param metricGroups An evaluation Metric Group object.
+   */
   public fun metricGroups(metricGroups: Collection<Any>) {
     _metricGroups.addAll(metricGroups)
   }
 
+  /**
+   * @param metricGroups An evaluation Metric Group object.
+   */
   public fun metricGroups(metricGroups: IResolvable) {
     cdkBuilder.metricGroups(metricGroups)
   }
 
+  /**
+   * @param name The evaluation job name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

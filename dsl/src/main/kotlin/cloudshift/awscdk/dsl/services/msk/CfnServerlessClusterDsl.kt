@@ -22,31 +22,61 @@ public class CfnServerlessClusterDsl(
 
   private val _vpcConfigs: MutableList<Any> = mutableListOf()
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
+   * @param clientAuthentication 
+   */
   public fun clientAuthentication(clientAuthentication: IResolvable) {
     cdkBuilder.clientAuthentication(clientAuthentication)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
+   * @param clientAuthentication 
+   */
   public
       fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty) {
     cdkBuilder.clientAuthentication(clientAuthentication)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clustername)
+   * @param clusterName 
+   */
   public fun clusterName(clusterName: String) {
     cdkBuilder.clusterName(clusterName)
   }
 
+  /**
+   * A key-value pair to associate with a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-tags)
+   * @param tags A key-value pair to associate with a resource. 
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-vpcconfigs)
+   * @param vpcConfigs 
+   */
   public fun vpcConfigs(vararg vpcConfigs: Any) {
     _vpcConfigs.addAll(listOf(*vpcConfigs))
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-vpcconfigs)
+   * @param vpcConfigs 
+   */
   public fun vpcConfigs(vpcConfigs: Collection<Any>) {
     _vpcConfigs.addAll(vpcConfigs)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-vpcconfigs)
+   * @param vpcConfigs 
+   */
   public fun vpcConfigs(vpcConfigs: IResolvable) {
     cdkBuilder.vpcConfigs(vpcConfigs)
   }

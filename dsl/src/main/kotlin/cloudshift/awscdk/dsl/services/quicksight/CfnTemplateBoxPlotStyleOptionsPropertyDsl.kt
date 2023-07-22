@@ -11,6 +11,9 @@ public class CfnTemplateBoxPlotStyleOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.BoxPlotStyleOptionsProperty.Builder =
       CfnTemplate.BoxPlotStyleOptionsProperty.builder()
 
+  /**
+   * @param fillStyle The fill styles (solid, transparent) of the box plot.
+   */
   public fun fillStyle(fillStyle: String) {
     cdkBuilder.fillStyle(fillStyle)
   }

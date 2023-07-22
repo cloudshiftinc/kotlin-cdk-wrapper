@@ -18,26 +18,50 @@ public class CfnAnalysisFilledMapAggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param geospatial The aggregated location field well of the filled map.
+   * Values are grouped by location fields.
+   */
   public fun geospatial(vararg geospatial: Any) {
     _geospatial.addAll(listOf(*geospatial))
   }
 
+  /**
+   * @param geospatial The aggregated location field well of the filled map.
+   * Values are grouped by location fields.
+   */
   public fun geospatial(geospatial: Collection<Any>) {
     _geospatial.addAll(geospatial)
   }
 
+  /**
+   * @param geospatial The aggregated location field well of the filled map.
+   * Values are grouped by location fields.
+   */
   public fun geospatial(geospatial: IResolvable) {
     cdkBuilder.geospatial(geospatial)
   }
 
+  /**
+   * @param values The aggregated color field well of a filled map.
+   * Values are aggregated based on location fields.
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The aggregated color field well of a filled map.
+   * Values are aggregated based on location fields.
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The aggregated color field well of a filled map.
+   * Values are aggregated based on location fields.
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

@@ -12,14 +12,23 @@ public class CfnWirelessDeviceAbpV10xPropertyDsl {
   private val cdkBuilder: CfnWirelessDevice.AbpV10xProperty.Builder =
       CfnWirelessDevice.AbpV10xProperty.builder()
 
+  /**
+   * @param devAddr The DevAddr value. 
+   */
   public fun devAddr(devAddr: String) {
     cdkBuilder.devAddr(devAddr)
   }
 
+  /**
+   * @param sessionKeys Session keys for ABP v1.0.x. 
+   */
   public fun sessionKeys(sessionKeys: IResolvable) {
     cdkBuilder.sessionKeys(sessionKeys)
   }
 
+  /**
+   * @param sessionKeys Session keys for ABP v1.0.x. 
+   */
   public fun sessionKeys(sessionKeys: CfnWirelessDevice.SessionKeysAbpV10xProperty) {
     cdkBuilder.sessionKeys(sessionKeys)
   }

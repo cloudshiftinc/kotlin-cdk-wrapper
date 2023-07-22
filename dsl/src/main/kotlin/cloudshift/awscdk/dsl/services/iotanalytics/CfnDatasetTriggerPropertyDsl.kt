@@ -10,18 +10,32 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
 public class CfnDatasetTriggerPropertyDsl {
   private val cdkBuilder: CfnDataset.TriggerProperty.Builder = CfnDataset.TriggerProperty.builder()
 
+  /**
+   * @param schedule The "Schedule" when the trigger is initiated.
+   */
   public fun schedule(schedule: IResolvable) {
     cdkBuilder.schedule(schedule)
   }
 
+  /**
+   * @param schedule The "Schedule" when the trigger is initiated.
+   */
   public fun schedule(schedule: CfnDataset.ScheduleProperty) {
     cdkBuilder.schedule(schedule)
   }
 
+  /**
+   * @param triggeringDataset Information about the data set whose content generation triggers the
+   * new data set content generation.
+   */
   public fun triggeringDataset(triggeringDataset: IResolvable) {
     cdkBuilder.triggeringDataset(triggeringDataset)
   }
 
+  /**
+   * @param triggeringDataset Information about the data set whose content generation triggers the
+   * new data set content generation.
+   */
   public fun triggeringDataset(triggeringDataset: CfnDataset.TriggeringDatasetProperty) {
     cdkBuilder.triggeringDataset(triggeringDataset)
   }

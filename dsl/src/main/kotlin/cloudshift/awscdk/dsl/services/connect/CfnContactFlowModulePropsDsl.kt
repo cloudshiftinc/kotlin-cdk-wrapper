@@ -17,30 +17,57 @@ public class CfnContactFlowModulePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param content The content of the flow module. 
+   */
   public fun content(content: String) {
     cdkBuilder.content(content)
   }
 
+  /**
+   * @param description The description of the flow module.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param instanceArn The Amazon Resource Name (ARN) of the Amazon Connect instance. 
+   */
   public fun instanceArn(instanceArn: String) {
     cdkBuilder.instanceArn(instanceArn)
   }
 
+  /**
+   * @param name The name of the flow module. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param state The state of the flow module.
+   */
   public fun state(state: String) {
     cdkBuilder.state(state)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

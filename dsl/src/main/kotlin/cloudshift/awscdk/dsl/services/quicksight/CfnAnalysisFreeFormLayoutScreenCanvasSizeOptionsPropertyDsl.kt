@@ -11,6 +11,10 @@ public class CfnAnalysisFreeFormLayoutScreenCanvasSizeOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FreeFormLayoutScreenCanvasSizeOptionsProperty.Builder =
       CfnAnalysis.FreeFormLayoutScreenCanvasSizeOptionsProperty.builder()
 
+  /**
+   * @param optimizedViewPortWidth The width that the view port will be optimized for when the
+   * layout renders. 
+   */
   public fun optimizedViewPortWidth(optimizedViewPortWidth: String) {
     cdkBuilder.optimizedViewPortWidth(optimizedViewPortWidth)
   }

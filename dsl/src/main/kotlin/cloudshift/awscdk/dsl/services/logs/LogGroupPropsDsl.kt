@@ -15,28 +15,51 @@ import software.amazon.awscdk.services.logs.RetentionDays
 public class LogGroupPropsDsl {
   private val cdkBuilder: LogGroupProps.Builder = LogGroupProps.builder()
 
-  public fun dataProtectionPolicy(block: DataProtectionPolicyDsl.() -> Unit = {}) {
+  /**
+   * @param dataProtectionPolicy Data Protection Policy for this log group.
+   */
+  public fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicyDsl.() -> Unit = {}) {
     val builder = DataProtectionPolicyDsl()
-    builder.apply(block)
+    builder.apply(dataProtectionPolicy)
     cdkBuilder.dataProtectionPolicy(builder.build())
   }
 
+  /**
+   * @param dataProtectionPolicy Data Protection Policy for this log group.
+   */
   public fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy) {
     cdkBuilder.dataProtectionPolicy(dataProtectionPolicy)
   }
 
+  /**
+   * @param encryptionKey The KMS customer managed key to encrypt the log group with.
+   */
   public fun encryptionKey(encryptionKey: IKey) {
     cdkBuilder.encryptionKey(encryptionKey)
   }
 
+  /**
+   * @param logGroupName Name of the log group.
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }
 
+  /**
+   * @param removalPolicy Determine the removal policy of this log group.
+   * Normally you want to retain the log group so you can diagnose issues
+   * from logs even after a deployment that no longer includes the log group.
+   * In that case, use the normal date-based retention policy to age out your
+   * logs.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }
 
+  /**
+   * @param retention How long, in days, the log contents will be retained.
+   * To retain all logs, set this value to RetentionDays.INFINITE.
+   */
   public fun retention(retention: RetentionDays) {
     cdkBuilder.retention(retention)
   }

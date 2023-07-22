@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.iam.UserAttributes
 public class UserAttributesDsl {
   private val cdkBuilder: UserAttributes.Builder = UserAttributes.builder()
 
+  /**
+   * @param userArn The ARN of the user. 
+   * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+   */
   public fun userArn(userArn: String) {
     cdkBuilder.userArn(userArn)
   }

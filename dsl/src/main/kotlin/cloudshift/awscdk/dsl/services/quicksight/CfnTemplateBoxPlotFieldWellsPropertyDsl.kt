@@ -11,10 +11,16 @@ public class CfnTemplateBoxPlotFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.BoxPlotFieldWellsProperty.Builder =
       CfnTemplate.BoxPlotFieldWellsProperty.builder()
 
+  /**
+   * @param boxPlotAggregatedFieldWells The aggregated field wells of a box plot.
+   */
   public fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: IResolvable) {
     cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)
   }
 
+  /**
+   * @param boxPlotAggregatedFieldWells The aggregated field wells of a box plot.
+   */
   public
       fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: CfnTemplate.BoxPlotAggregatedFieldWellsProperty) {
     cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)

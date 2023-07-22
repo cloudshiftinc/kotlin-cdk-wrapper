@@ -15,14 +15,35 @@ public class CfnResourceGroupPropsDsl {
 
   private val _resourceGroupTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param resourceGroupTags The tags (key and value pairs) that will be associated with the
+   * resource group. 
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun resourceGroupTags(vararg resourceGroupTags: Any) {
     _resourceGroupTags.addAll(listOf(*resourceGroupTags))
   }
 
+  /**
+   * @param resourceGroupTags The tags (key and value pairs) that will be associated with the
+   * resource group. 
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun resourceGroupTags(resourceGroupTags: Collection<Any>) {
     _resourceGroupTags.addAll(resourceGroupTags)
   }
 
+  /**
+   * @param resourceGroupTags The tags (key and value pairs) that will be associated with the
+   * resource group. 
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun resourceGroupTags(resourceGroupTags: IResolvable) {
     cdkBuilder.resourceGroupTags(resourceGroupTags)
   }

@@ -16,18 +16,30 @@ public class CfnCidrCollectionPropsDsl {
 
   private val _locations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param locations A complex type that contains information about the list of CIDR locations.
+   */
   public fun locations(vararg locations: Any) {
     _locations.addAll(listOf(*locations))
   }
 
+  /**
+   * @param locations A complex type that contains information about the list of CIDR locations.
+   */
   public fun locations(locations: Collection<Any>) {
     _locations.addAll(locations)
   }
 
+  /**
+   * @param locations A complex type that contains information about the list of CIDR locations.
+   */
   public fun locations(locations: IResolvable) {
     cdkBuilder.locations(locations)
   }
 
+  /**
+   * @param name The name of a CIDR collection. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

@@ -11,10 +11,17 @@ public class CfnChannelInputChannelLevelPropertyDsl {
   private val cdkBuilder: CfnChannel.InputChannelLevelProperty.Builder =
       CfnChannel.InputChannelLevelProperty.builder()
 
+  /**
+   * @param gain The remixing value.
+   * Units are in dB, and acceptable values are within the range from -60 (mute) to 6 dB.
+   */
   public fun gain(gain: Number) {
     cdkBuilder.gain(gain)
   }
 
+  /**
+   * @param inputChannel The index of the input channel that is used as a source.
+   */
   public fun inputChannel(inputChannel: Number) {
     cdkBuilder.inputChannel(inputChannel)
   }

@@ -28,42 +28,117 @@ public class CfnDHCPOptionsDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * This value is used to complete unqualified DNS hostnames.
+   *
+   * If you're using AmazonProvidedDNS in `us-east-1` , specify `ec2.internal` . If you're using
+   * AmazonProvidedDNS in another Region, specify *region* . `compute.internal` (for example,
+   * `ap-northeast-1.compute.internal` ). Otherwise, specify a domain name (for example,
+   * *MyCompany.com* ).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-domainname)
+   * @param domainName This value is used to complete unqualified DNS hostnames. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * The IPv4 addresses of up to four domain name servers, or `AmazonProvidedDNS` .
+   *
+   * The default is `AmazonProvidedDNS` . To have your instance receive a custom DNS hostname as
+   * specified in `DomainName` , you must set this property to a custom DNS server.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-domainnameservers)
+   * @param domainNameServers The IPv4 addresses of up to four domain name servers, or
+   * `AmazonProvidedDNS` . 
+   */
   public fun domainNameServers(vararg domainNameServers: String) {
     _domainNameServers.addAll(listOf(*domainNameServers))
   }
 
+  /**
+   * The IPv4 addresses of up to four domain name servers, or `AmazonProvidedDNS` .
+   *
+   * The default is `AmazonProvidedDNS` . To have your instance receive a custom DNS hostname as
+   * specified in `DomainName` , you must set this property to a custom DNS server.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-domainnameservers)
+   * @param domainNameServers The IPv4 addresses of up to four domain name servers, or
+   * `AmazonProvidedDNS` . 
+   */
   public fun domainNameServers(domainNameServers: Collection<String>) {
     _domainNameServers.addAll(domainNameServers)
   }
 
+  /**
+   * The IPv4 addresses of up to four NetBIOS name servers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnameservers)
+   * @param netbiosNameServers The IPv4 addresses of up to four NetBIOS name servers. 
+   */
   public fun netbiosNameServers(vararg netbiosNameServers: String) {
     _netbiosNameServers.addAll(listOf(*netbiosNameServers))
   }
 
+  /**
+   * The IPv4 addresses of up to four NetBIOS name servers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnameservers)
+   * @param netbiosNameServers The IPv4 addresses of up to four NetBIOS name servers. 
+   */
   public fun netbiosNameServers(netbiosNameServers: Collection<String>) {
     _netbiosNameServers.addAll(netbiosNameServers)
   }
 
+  /**
+   * The NetBIOS node type (1, 2, 4, or 8).
+   *
+   * We recommend that you specify 2 (broadcast and multicast are not currently supported).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnodetype)
+   * @param netbiosNodeType The NetBIOS node type (1, 2, 4, or 8). 
+   */
   public fun netbiosNodeType(netbiosNodeType: Number) {
     cdkBuilder.netbiosNodeType(netbiosNodeType)
   }
 
+  /**
+   * The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-ntpservers)
+   * @param ntpServers The IPv4 addresses of up to four Network Time Protocol (NTP) servers. 
+   */
   public fun ntpServers(vararg ntpServers: String) {
     _ntpServers.addAll(listOf(*ntpServers))
   }
 
+  /**
+   * The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-ntpservers)
+   * @param ntpServers The IPv4 addresses of up to four Network Time Protocol (NTP) servers. 
+   */
   public fun ntpServers(ntpServers: Collection<String>) {
     _ntpServers.addAll(ntpServers)
   }
 
+  /**
+   * Any tags assigned to the DHCP options set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-tags)
+   * @param tags Any tags assigned to the DHCP options set. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Any tags assigned to the DHCP options set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-tags)
+   * @param tags Any tags assigned to the DHCP options set. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

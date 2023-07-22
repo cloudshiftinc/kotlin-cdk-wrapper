@@ -26,62 +26,203 @@ public class CfnFirewallDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A flag indicating whether it is possible to delete the firewall.
+   *
+   * A setting of `TRUE` indicates that the firewall is protected against deletion. Use this setting
+   * to protect against accidentally deleting a firewall that is in use. When you create a firewall,
+   * the operation initializes this flag to `TRUE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-deleteprotection)
+   * @param deleteProtection A flag indicating whether it is possible to delete the firewall. 
+   */
   public fun deleteProtection(deleteProtection: Boolean) {
     cdkBuilder.deleteProtection(deleteProtection)
   }
 
+  /**
+   * A flag indicating whether it is possible to delete the firewall.
+   *
+   * A setting of `TRUE` indicates that the firewall is protected against deletion. Use this setting
+   * to protect against accidentally deleting a firewall that is in use. When you create a firewall,
+   * the operation initializes this flag to `TRUE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-deleteprotection)
+   * @param deleteProtection A flag indicating whether it is possible to delete the firewall. 
+   */
   public fun deleteProtection(deleteProtection: IResolvable) {
     cdkBuilder.deleteProtection(deleteProtection)
   }
 
+  /**
+   * A description of the firewall.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-description)
+   * @param description A description of the firewall. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The descriptive name of the firewall.
+   *
+   * You can't change the name of a firewall after you create it.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallname)
+   * @param firewallName The descriptive name of the firewall. 
+   */
   public fun firewallName(firewallName: String) {
     cdkBuilder.firewallName(firewallName)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the firewall policy.
+   *
+   * The relationship of firewall to firewall policy is many to one. Each firewall requires one
+   * firewall policy association, and you can use the same firewall policy for multiple firewalls.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallpolicyarn)
+   * @param firewallPolicyArn The Amazon Resource Name (ARN) of the firewall policy. 
+   */
   public fun firewallPolicyArn(firewallPolicyArn: String) {
     cdkBuilder.firewallPolicyArn(firewallPolicyArn)
   }
 
+  /**
+   * A setting indicating whether the firewall is protected against a change to the firewall policy
+   * association.
+   *
+   * Use this setting to protect against accidentally modifying the firewall policy for a firewall
+   * that is in use. When you create a firewall, the operation initializes this setting to `TRUE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallpolicychangeprotection)
+   * @param firewallPolicyChangeProtection A setting indicating whether the firewall is protected
+   * against a change to the firewall policy association. 
+   */
   public fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: Boolean) {
     cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection)
   }
 
+  /**
+   * A setting indicating whether the firewall is protected against a change to the firewall policy
+   * association.
+   *
+   * Use this setting to protect against accidentally modifying the firewall policy for a firewall
+   * that is in use. When you create a firewall, the operation initializes this setting to `TRUE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallpolicychangeprotection)
+   * @param firewallPolicyChangeProtection A setting indicating whether the firewall is protected
+   * against a change to the firewall policy association. 
+   */
   public fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: IResolvable) {
     cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection)
   }
 
+  /**
+   * A setting indicating whether the firewall is protected against changes to the subnet
+   * associations.
+   *
+   * Use this setting to protect against accidentally modifying the subnet associations for a
+   * firewall that is in use. When you create a firewall, the operation initializes this setting to
+   * `TRUE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetchangeprotection)
+   * @param subnetChangeProtection A setting indicating whether the firewall is protected against
+   * changes to the subnet associations. 
+   */
   public fun subnetChangeProtection(subnetChangeProtection: Boolean) {
     cdkBuilder.subnetChangeProtection(subnetChangeProtection)
   }
 
+  /**
+   * A setting indicating whether the firewall is protected against changes to the subnet
+   * associations.
+   *
+   * Use this setting to protect against accidentally modifying the subnet associations for a
+   * firewall that is in use. When you create a firewall, the operation initializes this setting to
+   * `TRUE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetchangeprotection)
+   * @param subnetChangeProtection A setting indicating whether the firewall is protected against
+   * changes to the subnet associations. 
+   */
   public fun subnetChangeProtection(subnetChangeProtection: IResolvable) {
     cdkBuilder.subnetChangeProtection(subnetChangeProtection)
   }
 
+  /**
+   * The public subnets that Network Firewall is using for the firewall.
+   *
+   * Each subnet must belong to a different Availability Zone.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
+   * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+   */
   public fun subnetMappings(vararg subnetMappings: Any) {
     _subnetMappings.addAll(listOf(*subnetMappings))
   }
 
+  /**
+   * The public subnets that Network Firewall is using for the firewall.
+   *
+   * Each subnet must belong to a different Availability Zone.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
+   * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+   */
   public fun subnetMappings(subnetMappings: Collection<Any>) {
     _subnetMappings.addAll(subnetMappings)
   }
 
+  /**
+   * The public subnets that Network Firewall is using for the firewall.
+   *
+   * Each subnet must belong to a different Availability Zone.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
+   * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+   */
   public fun subnetMappings(subnetMappings: IResolvable) {
     cdkBuilder.subnetMappings(subnetMappings)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The unique identifier of the VPC where the firewall is in use.
+   *
+   * You can't change the VPC of a firewall after you create the firewall.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-vpcid)
+   * @param vpcId The unique identifier of the VPC where the firewall is in use. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

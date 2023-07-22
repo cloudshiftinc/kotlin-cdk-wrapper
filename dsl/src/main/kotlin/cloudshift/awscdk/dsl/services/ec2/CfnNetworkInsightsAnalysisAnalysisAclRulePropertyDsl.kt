@@ -14,34 +14,58 @@ public class CfnNetworkInsightsAnalysisAnalysisAclRulePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty.Builder =
       CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty.builder()
 
+  /**
+   * @param cidr The IPv4 address range, in CIDR notation.
+   */
   public fun cidr(cidr: String) {
     cdkBuilder.cidr(cidr)
   }
 
+  /**
+   * @param egress Indicates whether the rule is an outbound rule.
+   */
   public fun egress(egress: Boolean) {
     cdkBuilder.egress(egress)
   }
 
+  /**
+   * @param egress Indicates whether the rule is an outbound rule.
+   */
   public fun egress(egress: IResolvable) {
     cdkBuilder.egress(egress)
   }
 
+  /**
+   * @param portRange The range of ports.
+   */
   public fun portRange(portRange: IResolvable) {
     cdkBuilder.portRange(portRange)
   }
 
+  /**
+   * @param portRange The range of ports.
+   */
   public fun portRange(portRange: CfnNetworkInsightsAnalysis.PortRangeProperty) {
     cdkBuilder.portRange(portRange)
   }
 
+  /**
+   * @param protocol The protocol.
+   */
   public fun protocol(protocol: String) {
     cdkBuilder.protocol(protocol)
   }
 
+  /**
+   * @param ruleAction Indicates whether to allow or deny traffic that matches the rule.
+   */
   public fun ruleAction(ruleAction: String) {
     cdkBuilder.ruleAction(ruleAction)
   }
 
+  /**
+   * @param ruleNumber The rule number.
+   */
   public fun ruleNumber(ruleNumber: Number) {
     cdkBuilder.ruleNumber(ruleNumber)
   }

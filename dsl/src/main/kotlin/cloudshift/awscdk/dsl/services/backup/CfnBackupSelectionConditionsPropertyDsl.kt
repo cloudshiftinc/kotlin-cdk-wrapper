@@ -22,50 +22,107 @@ public class CfnBackupSelectionConditionsPropertyDsl {
 
   private val _stringNotLike: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param stringEquals Filters the values of your tagged resources for only those resources that
+   * you tagged with the same value.
+   * Also called "exact matching."
+   */
   public fun stringEquals(vararg stringEquals: Any) {
     _stringEquals.addAll(listOf(*stringEquals))
   }
 
+  /**
+   * @param stringEquals Filters the values of your tagged resources for only those resources that
+   * you tagged with the same value.
+   * Also called "exact matching."
+   */
   public fun stringEquals(stringEquals: Collection<Any>) {
     _stringEquals.addAll(stringEquals)
   }
 
+  /**
+   * @param stringEquals Filters the values of your tagged resources for only those resources that
+   * you tagged with the same value.
+   * Also called "exact matching."
+   */
   public fun stringEquals(stringEquals: IResolvable) {
     cdkBuilder.stringEquals(stringEquals)
   }
 
+  /**
+   * @param stringLike Filters the values of your tagged resources for matching tag values with the
+   * use of a wildcard character (*) anywhere in the string.
+   * For example, "prod*" or "*rod*" matches the tag value "production".
+   */
   public fun stringLike(vararg stringLike: Any) {
     _stringLike.addAll(listOf(*stringLike))
   }
 
+  /**
+   * @param stringLike Filters the values of your tagged resources for matching tag values with the
+   * use of a wildcard character (*) anywhere in the string.
+   * For example, "prod*" or "*rod*" matches the tag value "production".
+   */
   public fun stringLike(stringLike: Collection<Any>) {
     _stringLike.addAll(stringLike)
   }
 
+  /**
+   * @param stringLike Filters the values of your tagged resources for matching tag values with the
+   * use of a wildcard character (*) anywhere in the string.
+   * For example, "prod*" or "*rod*" matches the tag value "production".
+   */
   public fun stringLike(stringLike: IResolvable) {
     cdkBuilder.stringLike(stringLike)
   }
 
+  /**
+   * @param stringNotEquals Filters the values of your tagged resources for only those resources
+   * that you tagged that do not have the same value.
+   * Also called "negated matching."
+   */
   public fun stringNotEquals(vararg stringNotEquals: Any) {
     _stringNotEquals.addAll(listOf(*stringNotEquals))
   }
 
+  /**
+   * @param stringNotEquals Filters the values of your tagged resources for only those resources
+   * that you tagged that do not have the same value.
+   * Also called "negated matching."
+   */
   public fun stringNotEquals(stringNotEquals: Collection<Any>) {
     _stringNotEquals.addAll(stringNotEquals)
   }
 
+  /**
+   * @param stringNotEquals Filters the values of your tagged resources for only those resources
+   * that you tagged that do not have the same value.
+   * Also called "negated matching."
+   */
   public fun stringNotEquals(stringNotEquals: IResolvable) {
     cdkBuilder.stringNotEquals(stringNotEquals)
   }
 
+  /**
+   * @param stringNotLike Filters the values of your tagged resources for non-matching tag values
+   * with the use of a wildcard character (*) anywhere in the string.
+   */
   public fun stringNotLike(vararg stringNotLike: Any) {
     _stringNotLike.addAll(listOf(*stringNotLike))
   }
 
+  /**
+   * @param stringNotLike Filters the values of your tagged resources for non-matching tag values
+   * with the use of a wildcard character (*) anywhere in the string.
+   */
   public fun stringNotLike(stringNotLike: Collection<Any>) {
     _stringNotLike.addAll(stringNotLike)
   }
 
+  /**
+   * @param stringNotLike Filters the values of your tagged resources for non-matching tag values
+   * with the use of a wildcard character (*) anywhere in the string.
+   */
   public fun stringNotLike(stringNotLike: IResolvable) {
     cdkBuilder.stringNotLike(stringNotLike)
   }

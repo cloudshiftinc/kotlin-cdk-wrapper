@@ -11,10 +11,16 @@ public class CfnConformancePackConformancePackInputParameterPropertyDsl {
   private val cdkBuilder: CfnConformancePack.ConformancePackInputParameterProperty.Builder =
       CfnConformancePack.ConformancePackInputParameterProperty.builder()
 
+  /**
+   * @param parameterName One part of a key-value pair. 
+   */
   public fun parameterName(parameterName: String) {
     cdkBuilder.parameterName(parameterName)
   }
 
+  /**
+   * @param parameterValue Another part of the key-value pair. 
+   */
   public fun parameterValue(parameterValue: String) {
     cdkBuilder.parameterValue(parameterValue)
   }

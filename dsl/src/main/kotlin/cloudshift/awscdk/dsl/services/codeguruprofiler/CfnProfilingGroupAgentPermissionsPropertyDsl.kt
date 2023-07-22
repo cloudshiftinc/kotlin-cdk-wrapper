@@ -15,10 +15,16 @@ public class CfnProfilingGroupAgentPermissionsPropertyDsl {
 
   private val _principals: MutableList<String> = mutableListOf()
 
+  /**
+   * @param principals The principals for the agent permissions. 
+   */
   public fun principals(vararg principals: String) {
     _principals.addAll(listOf(*principals))
   }
 
+  /**
+   * @param principals The principals for the agent permissions. 
+   */
   public fun principals(principals: Collection<String>) {
     _principals.addAll(principals)
   }

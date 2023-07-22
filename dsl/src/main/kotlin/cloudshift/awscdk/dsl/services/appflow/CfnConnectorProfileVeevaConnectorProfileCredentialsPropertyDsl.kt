@@ -11,10 +11,16 @@ public class CfnConnectorProfileVeevaConnectorProfileCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty.Builder =
       CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty.builder()
 
+  /**
+   * @param password The password that corresponds to the user name. 
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * @param username The name of the user. 
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

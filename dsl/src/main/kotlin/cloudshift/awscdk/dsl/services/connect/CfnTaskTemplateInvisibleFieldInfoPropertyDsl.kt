@@ -11,10 +11,16 @@ public class CfnTaskTemplateInvisibleFieldInfoPropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.InvisibleFieldInfoProperty.Builder =
       CfnTaskTemplate.InvisibleFieldInfoProperty.builder()
 
+  /**
+   * @param id Identifier of the invisible field. 
+   */
   public fun id(id: IResolvable) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param id Identifier of the invisible field. 
+   */
   public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
     cdkBuilder.id(id)
   }

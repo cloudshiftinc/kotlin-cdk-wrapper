@@ -15,6 +15,13 @@ public class AwsAuthDsl(
 ) {
   private val cdkBuilder: AwsAuth.Builder = AwsAuth.Builder.create(scope, id)
 
+  /**
+   * The EKS cluster to apply this configuration to.
+   *
+   * [disable-awslint:ref-via-interface]
+   *
+   * @param cluster The EKS cluster to apply this configuration to. 
+   */
   public fun cluster(cluster: Cluster) {
     cdkBuilder.cluster(cluster)
   }

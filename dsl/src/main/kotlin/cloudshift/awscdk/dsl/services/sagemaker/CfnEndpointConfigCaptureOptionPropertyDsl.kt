@@ -11,6 +11,9 @@ public class CfnEndpointConfigCaptureOptionPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.CaptureOptionProperty.Builder =
       CfnEndpointConfig.CaptureOptionProperty.builder()
 
+  /**
+   * @param captureMode Specifies whether the endpoint captures input data or output data. 
+   */
   public fun captureMode(captureMode: String) {
     cdkBuilder.captureMode(captureMode)
   }

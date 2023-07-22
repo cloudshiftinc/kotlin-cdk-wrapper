@@ -11,10 +11,16 @@ public class CfnOptionGroupOptionSettingPropertyDsl {
   private val cdkBuilder: CfnOptionGroup.OptionSettingProperty.Builder =
       CfnOptionGroup.OptionSettingProperty.builder()
 
+  /**
+   * @param name The name of the option that has settings that you can set.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The current value of the option setting.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

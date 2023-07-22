@@ -20,30 +20,77 @@ public class CfnAnomalyMonitorDsl(
 
   private val _resourceTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * The dimensions to evaluate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-monitordimension)
+   * @param monitorDimension The dimensions to evaluate. 
+   */
   public fun monitorDimension(monitorDimension: String) {
     cdkBuilder.monitorDimension(monitorDimension)
   }
 
+  /**
+   * The name of the monitor.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-monitorname)
+   * @param monitorName The name of the monitor. 
+   */
   public fun monitorName(monitorName: String) {
     cdkBuilder.monitorName(monitorName)
   }
 
+  /**
+   * The array of `MonitorSpecification` in JSON array format.
+   *
+   * For instance, you can use `MonitorSpecification` to specify a tag, Cost Category, or linked
+   * account for your custom anomaly monitor. For further information, see the
+   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#aws-resource-ce-anomalymonitor--examples)
+   * section of this page.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-monitorspecification)
+   * @param monitorSpecification The array of `MonitorSpecification` in JSON array format. 
+   */
   public fun monitorSpecification(monitorSpecification: String) {
     cdkBuilder.monitorSpecification(monitorSpecification)
   }
 
+  /**
+   * The possible type values.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-monitortype)
+   * @param monitorType The possible type values. 
+   */
   public fun monitorType(monitorType: String) {
     cdkBuilder.monitorType(monitorType)
   }
 
+  /**
+   * Tags to assign to monitor.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-resourcetags)
+   * @param resourceTags Tags to assign to monitor. 
+   */
   public fun resourceTags(vararg resourceTags: Any) {
     _resourceTags.addAll(listOf(*resourceTags))
   }
 
+  /**
+   * Tags to assign to monitor.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-resourcetags)
+   * @param resourceTags Tags to assign to monitor. 
+   */
   public fun resourceTags(resourceTags: Collection<Any>) {
     _resourceTags.addAll(resourceTags)
   }
 
+  /**
+   * Tags to assign to monitor.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-resourcetags)
+   * @param resourceTags Tags to assign to monitor. 
+   */
   public fun resourceTags(resourceTags: IResolvable) {
     cdkBuilder.resourceTags(resourceTags)
   }

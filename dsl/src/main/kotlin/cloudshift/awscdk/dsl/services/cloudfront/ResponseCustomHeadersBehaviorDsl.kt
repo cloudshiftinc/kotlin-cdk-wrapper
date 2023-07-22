@@ -16,10 +16,16 @@ public class ResponseCustomHeadersBehaviorDsl {
 
   private val _customHeaders: MutableList<ResponseCustomHeader> = mutableListOf()
 
+  /**
+   * @param customHeaders The list of HTTP response headers and their values. 
+   */
   public fun customHeaders(customHeaders: ResponseCustomHeaderDsl.() -> Unit) {
     _customHeaders.add(ResponseCustomHeaderDsl().apply(customHeaders).build())
   }
 
+  /**
+   * @param customHeaders The list of HTTP response headers and their values. 
+   */
   public fun customHeaders(customHeaders: Collection<ResponseCustomHeader>) {
     _customHeaders.addAll(customHeaders)
   }

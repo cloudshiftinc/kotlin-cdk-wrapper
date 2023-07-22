@@ -19,34 +19,61 @@ public class CfnModelManifestPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description (Optional) A brief description of the vehicle model.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name of the vehicle model. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param nodes (Optional) A list of nodes, which are a general abstraction of signals.
+   */
   public fun nodes(vararg nodes: String) {
     _nodes.addAll(listOf(*nodes))
   }
 
+  /**
+   * @param nodes (Optional) A list of nodes, which are a general abstraction of signals.
+   */
   public fun nodes(nodes: Collection<String>) {
     _nodes.addAll(nodes)
   }
 
+  /**
+   * @param signalCatalogArn The Amazon Resource Name (ARN) of the signal catalog associated with
+   * the vehicle model. 
+   */
   public fun signalCatalogArn(signalCatalogArn: String) {
     cdkBuilder.signalCatalogArn(signalCatalogArn)
   }
 
+  /**
+   * @param status (Optional) The state of the vehicle model.
+   * If the status is `ACTIVE` , the vehicle model can't be edited. If the status is `DRAFT` , you
+   * can edit the vehicle model.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
+  /**
+   * @param tags (Optional) Metadata that can be used to manage the vehicle model.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags (Optional) Metadata that can be used to manage the vehicle model.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

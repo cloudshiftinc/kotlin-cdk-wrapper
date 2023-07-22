@@ -11,6 +11,9 @@ public class CfnDataSourceAmazonOpenSearchParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.AmazonOpenSearchParametersProperty.Builder =
       CfnDataSource.AmazonOpenSearchParametersProperty.builder()
 
+  /**
+   * @param domain The OpenSearch domain. 
+   */
   public fun domain(domain: String) {
     cdkBuilder.domain(domain)
   }

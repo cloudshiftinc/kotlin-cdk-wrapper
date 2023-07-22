@@ -12,6 +12,10 @@ public class CfnVirtualGatewayVirtualGatewayTlsValidationContextSdsTrustProperty
       CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty.Builder =
       CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
 
+  /**
+   * @param secretName A reference to an object that represents the name of the secret for a virtual
+   * gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust. 
+   */
   public fun secretName(secretName: String) {
     cdkBuilder.secretName(secretName)
   }

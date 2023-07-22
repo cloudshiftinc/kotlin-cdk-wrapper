@@ -12,19 +12,33 @@ public class CfnInferenceExperimentModelVariantConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.ModelVariantConfigProperty.Builder =
       CfnInferenceExperiment.ModelVariantConfigProperty.builder()
 
+  /**
+   * @param infrastructureConfig The configuration for the infrastructure that the model will be
+   * deployed to. 
+   */
   public fun infrastructureConfig(infrastructureConfig: IResolvable) {
     cdkBuilder.infrastructureConfig(infrastructureConfig)
   }
 
+  /**
+   * @param infrastructureConfig The configuration for the infrastructure that the model will be
+   * deployed to. 
+   */
   public
       fun infrastructureConfig(infrastructureConfig: CfnInferenceExperiment.ModelInfrastructureConfigProperty) {
     cdkBuilder.infrastructureConfig(infrastructureConfig)
   }
 
+  /**
+   * @param modelName The name of the Amazon SageMaker Model entity. 
+   */
   public fun modelName(modelName: String) {
     cdkBuilder.modelName(modelName)
   }
 
+  /**
+   * @param variantName The name of the variant. 
+   */
   public fun variantName(variantName: String) {
     cdkBuilder.variantName(variantName)
   }

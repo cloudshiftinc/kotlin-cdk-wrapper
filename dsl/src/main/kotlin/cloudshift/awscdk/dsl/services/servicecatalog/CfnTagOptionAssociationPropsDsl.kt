@@ -11,10 +11,16 @@ public class CfnTagOptionAssociationPropsDsl {
   private val cdkBuilder: CfnTagOptionAssociationProps.Builder =
       CfnTagOptionAssociationProps.builder()
 
+  /**
+   * @param resourceId The resource identifier. 
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }
 
+  /**
+   * @param tagOptionId The TagOption identifier. 
+   */
   public fun tagOptionId(tagOptionId: String) {
     cdkBuilder.tagOptionId(tagOptionId)
   }

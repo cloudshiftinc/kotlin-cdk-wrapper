@@ -19,30 +19,57 @@ public class CfnProjectPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param assetIds A list that contains the IDs of each asset associated with the project.
+   */
   public fun assetIds(vararg assetIds: String) {
     _assetIds.addAll(listOf(*assetIds))
   }
 
+  /**
+   * @param assetIds A list that contains the IDs of each asset associated with the project.
+   */
   public fun assetIds(assetIds: Collection<String>) {
     _assetIds.addAll(assetIds)
   }
 
+  /**
+   * @param portalId The ID of the portal in which to create the project. 
+   */
   public fun portalId(portalId: String) {
     cdkBuilder.portalId(portalId)
   }
 
+  /**
+   * @param projectDescription A description for the project.
+   */
   public fun projectDescription(projectDescription: String) {
     cdkBuilder.projectDescription(projectDescription)
   }
 
+  /**
+   * @param projectName A friendly name for the project. 
+   */
   public fun projectName(projectName: String) {
     cdkBuilder.projectName(projectName)
   }
 
+  /**
+   * @param tags A list of key-value pairs that contain metadata for the project.
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of key-value pairs that contain metadata for the project.
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

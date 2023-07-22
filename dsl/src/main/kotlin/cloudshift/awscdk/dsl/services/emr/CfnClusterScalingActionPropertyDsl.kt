@@ -12,14 +12,26 @@ public class CfnClusterScalingActionPropertyDsl {
   private val cdkBuilder: CfnCluster.ScalingActionProperty.Builder =
       CfnCluster.ScalingActionProperty.builder()
 
+  /**
+   * @param market Not available for instance groups.
+   * Instance groups use the market type specified for the group.
+   */
   public fun market(market: String) {
     cdkBuilder.market(market)
   }
 
+  /**
+   * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling activity
+   * makes when triggered, and the periodicity of the adjustment. 
+   */
   public fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
     cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration)
   }
 
+  /**
+   * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling activity
+   * makes when triggered, and the periodicity of the adjustment. 
+   */
   public
       fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: CfnCluster.SimpleScalingPolicyConfigurationProperty) {
     cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration)

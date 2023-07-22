@@ -16,6 +16,14 @@ public class TagOptionsDsl(
 ) {
   private val cdkBuilder: TagOptions.Builder = TagOptions.Builder.create(scope, id)
 
+  /**
+   * The values that are allowed to be set for specific tags.
+   *
+   * The keys of the map represent the tag keys,
+   * and the values of the map are a list of allowed values for that particular tag key.
+   *
+   * @param allowedValuesForTags The values that are allowed to be set for specific tags. 
+   */
   public fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
     cdkBuilder.allowedValuesForTags(allowedValuesForTags)
   }

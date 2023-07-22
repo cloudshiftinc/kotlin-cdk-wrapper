@@ -11,6 +11,9 @@ public class CfnFunctionQueueSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.QueueSAMPTProperty.Builder =
       CfnFunction.QueueSAMPTProperty.builder()
 
+  /**
+   * @param queueName the value to be set. 
+   */
   public fun queueName(queueName: String) {
     cdkBuilder.queueName(queueName)
   }

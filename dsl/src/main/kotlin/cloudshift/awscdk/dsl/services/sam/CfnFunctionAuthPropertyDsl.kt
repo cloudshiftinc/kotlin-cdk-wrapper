@@ -16,30 +16,51 @@ public class CfnFunctionAuthPropertyDsl {
 
   private val _authorizationScopes: MutableList<String> = mutableListOf()
 
+  /**
+   * @param apiKeyRequired the value to be set.
+   */
   public fun apiKeyRequired(apiKeyRequired: Boolean) {
     cdkBuilder.apiKeyRequired(apiKeyRequired)
   }
 
+  /**
+   * @param apiKeyRequired the value to be set.
+   */
   public fun apiKeyRequired(apiKeyRequired: IResolvable) {
     cdkBuilder.apiKeyRequired(apiKeyRequired)
   }
 
+  /**
+   * @param authorizationScopes the value to be set.
+   */
   public fun authorizationScopes(vararg authorizationScopes: String) {
     _authorizationScopes.addAll(listOf(*authorizationScopes))
   }
 
+  /**
+   * @param authorizationScopes the value to be set.
+   */
   public fun authorizationScopes(authorizationScopes: Collection<String>) {
     _authorizationScopes.addAll(authorizationScopes)
   }
 
+  /**
+   * @param authorizer the value to be set.
+   */
   public fun authorizer(authorizer: String) {
     cdkBuilder.authorizer(authorizer)
   }
 
+  /**
+   * @param resourcePolicy the value to be set.
+   */
   public fun resourcePolicy(resourcePolicy: IResolvable) {
     cdkBuilder.resourcePolicy(resourcePolicy)
   }
 
+  /**
+   * @param resourcePolicy the value to be set.
+   */
   public fun resourcePolicy(resourcePolicy: CfnFunction.AuthResourcePolicyProperty) {
     cdkBuilder.resourcePolicy(resourcePolicy)
   }

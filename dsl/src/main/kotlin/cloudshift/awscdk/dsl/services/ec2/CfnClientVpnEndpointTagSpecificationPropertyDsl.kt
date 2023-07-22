@@ -18,14 +18,23 @@ public class CfnClientVpnEndpointTagSpecificationPropertyDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param resourceType The type of resource to tag. 
+   */
   public fun resourceType(resourceType: String) {
     cdkBuilder.resourceType(resourceType)
   }
 
+  /**
+   * @param tags The tags to apply to the resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to apply to the resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

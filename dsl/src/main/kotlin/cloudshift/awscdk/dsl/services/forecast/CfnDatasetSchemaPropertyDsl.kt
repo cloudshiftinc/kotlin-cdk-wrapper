@@ -15,14 +15,26 @@ public class CfnDatasetSchemaPropertyDsl {
 
   private val _attributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param attributes An array of attributes specifying the name and type of each field in a
+   * dataset.
+   */
   public fun attributes(vararg attributes: Any) {
     _attributes.addAll(listOf(*attributes))
   }
 
+  /**
+   * @param attributes An array of attributes specifying the name and type of each field in a
+   * dataset.
+   */
   public fun attributes(attributes: Collection<Any>) {
     _attributes.addAll(attributes)
   }
 
+  /**
+   * @param attributes An array of attributes specifying the name and type of each field in a
+   * dataset.
+   */
   public fun attributes(attributes: IResolvable) {
     cdkBuilder.attributes(attributes)
   }

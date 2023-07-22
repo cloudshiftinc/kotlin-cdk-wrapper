@@ -11,6 +11,10 @@ public class CfnLoggingConfigurationFirehoseDestinationConfigurationPropertyDsl 
   private val cdkBuilder: CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.Builder =
       CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.builder()
 
+  /**
+   * @param deliveryStreamName Name of the Amazon Kinesis Firehose delivery stream where chat
+   * activity will be logged. 
+   */
   public fun deliveryStreamName(deliveryStreamName: String) {
     cdkBuilder.deliveryStreamName(deliveryStreamName)
   }

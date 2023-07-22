@@ -18,30 +18,61 @@ public class BatchContainerOverridesDsl {
 
   private val _command: MutableList<String> = mutableListOf()
 
+  /**
+   * @param command The command to send to the container that overrides the default command from the
+   * Docker image or the job definition.
+   */
   public fun command(vararg command: String) {
     _command.addAll(listOf(*command))
   }
 
+  /**
+   * @param command The command to send to the container that overrides the default command from the
+   * Docker image or the job definition.
+   */
   public fun command(command: Collection<String>) {
     _command.addAll(command)
   }
 
+  /**
+   * @param environment The environment variables to send to the container.
+   * You can add new environment variables, which are added to the container
+   * at launch, or you can override the existing environment variables from
+   * the Docker image or the job definition.
+   */
   public fun environment(environment: Map<String, String>) {
     cdkBuilder.environment(environment)
   }
 
+  /**
+   * @param gpuCount The number of physical GPUs to reserve for the container.
+   * The number of GPUs reserved for all containers in a job
+   * should not exceed the number of available GPUs on the compute
+   * resource that the job is launched on.
+   */
   public fun gpuCount(gpuCount: Number) {
     cdkBuilder.gpuCount(gpuCount)
   }
 
+  /**
+   * @param instanceType The instance type to use for a multi-node parallel job.
+   * This parameter is not valid for single-node container jobs.
+   */
   public fun instanceType(instanceType: InstanceType) {
     cdkBuilder.instanceType(instanceType)
   }
 
+  /**
+   * @param memory Memory reserved for the job.
+   */
   public fun memory(memory: Size) {
     cdkBuilder.memory(memory)
   }
 
+  /**
+   * @param vcpus The number of vCPUs to reserve for the container.
+   * This value overrides the value set in the job definition.
+   */
   public fun vcpus(vcpus: Number) {
     cdkBuilder.vcpus(vcpus)
   }

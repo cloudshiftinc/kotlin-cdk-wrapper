@@ -15,14 +15,23 @@ public class CfnSolutionAutoMLConfigPropertyDsl {
 
   private val _recipeList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param metricName The metric to optimize.
+   */
   public fun metricName(metricName: String) {
     cdkBuilder.metricName(metricName)
   }
 
+  /**
+   * @param recipeList The list of candidate recipes.
+   */
   public fun recipeList(vararg recipeList: String) {
     _recipeList.addAll(listOf(*recipeList))
   }
 
+  /**
+   * @param recipeList The list of candidate recipes.
+   */
   public fun recipeList(recipeList: Collection<String>) {
     _recipeList.addAll(recipeList)
   }

@@ -17,10 +17,20 @@ public class SecretTargetAttachmentDsl(
   private val cdkBuilder: SecretTargetAttachment.Builder =
       SecretTargetAttachment.Builder.create(scope, id)
 
+  /**
+   * The secret to attach to the target.
+   *
+   * @param secret The secret to attach to the target. 
+   */
   public fun secret(secret: ISecret) {
     cdkBuilder.secret(secret)
   }
 
+  /**
+   * The target to attach the secret to.
+   *
+   * @param target The target to attach the secret to. 
+   */
   public fun target(target: ISecretAttachmentTarget) {
     cdkBuilder.target(target)
   }

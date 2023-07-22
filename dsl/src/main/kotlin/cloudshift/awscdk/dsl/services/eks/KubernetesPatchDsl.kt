@@ -20,38 +20,88 @@ public class KubernetesPatchDsl(
 ) {
   private val cdkBuilder: KubernetesPatch.Builder = KubernetesPatch.Builder.create(scope, id)
 
-  public fun applyPatch(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The JSON object to pass to `kubectl patch` when the resource is created/updated.
+   *
+   * @param applyPatch The JSON object to pass to `kubectl patch` when the resource is
+   * created/updated. 
+   */
+  public fun applyPatch(applyPatch: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(applyPatch)
     cdkBuilder.applyPatch(builder.map)
   }
 
+  /**
+   * The JSON object to pass to `kubectl patch` when the resource is created/updated.
+   *
+   * @param applyPatch The JSON object to pass to `kubectl patch` when the resource is
+   * created/updated. 
+   */
   public fun applyPatch(applyPatch: Map<String, Any>) {
     cdkBuilder.applyPatch(applyPatch)
   }
 
+  /**
+   * The cluster to apply the patch to.
+   *
+   * [disable-awslint:ref-via-interface]
+   *
+   * @param cluster The cluster to apply the patch to. 
+   */
   public fun cluster(cluster: ICluster) {
     cdkBuilder.cluster(cluster)
   }
 
+  /**
+   * The patch type to pass to `kubectl patch`.
+   *
+   * The default type used by `kubectl patch` is "strategic".
+   *
+   * Default: PatchType.STRATEGIC
+   *
+   * @param patchType The patch type to pass to `kubectl patch`. 
+   */
   public fun patchType(patchType: PatchType) {
     cdkBuilder.patchType(patchType)
   }
 
+  /**
+   * The full name of the resource to patch (e.g. `deployment/coredns`).
+   *
+   * @param resourceName The full name of the resource to patch (e.g. `deployment/coredns`). 
+   */
   public fun resourceName(resourceName: String) {
     cdkBuilder.resourceName(resourceName)
   }
 
+  /**
+   * The kubernetes API namespace.
+   *
+   * Default: "default"
+   *
+   * @param resourceNamespace The kubernetes API namespace. 
+   */
   public fun resourceNamespace(resourceNamespace: String) {
     cdkBuilder.resourceNamespace(resourceNamespace)
   }
 
-  public fun restorePatch(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The JSON object to pass to `kubectl patch` when the resource is removed.
+   *
+   * @param restorePatch The JSON object to pass to `kubectl patch` when the resource is removed. 
+   */
+  public fun restorePatch(restorePatch: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(restorePatch)
     cdkBuilder.restorePatch(builder.map)
   }
 
+  /**
+   * The JSON object to pass to `kubectl patch` when the resource is removed.
+   *
+   * @param restorePatch The JSON object to pass to `kubectl patch` when the resource is removed. 
+   */
   public fun restorePatch(restorePatch: Map<String, Any>) {
     cdkBuilder.restorePatch(restorePatch)
   }

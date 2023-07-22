@@ -11,10 +11,18 @@ public class CfnDashboardDefaultPaginatedLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.DefaultPaginatedLayoutConfigurationProperty.Builder =
       CfnDashboard.DefaultPaginatedLayoutConfigurationProperty.builder()
 
+  /**
+   * @param sectionBased The options that determine the default settings for a section-based layout
+   * configuration.
+   */
   public fun sectionBased(sectionBased: IResolvable) {
     cdkBuilder.sectionBased(sectionBased)
   }
 
+  /**
+   * @param sectionBased The options that determine the default settings for a section-based layout
+   * configuration.
+   */
   public
       fun sectionBased(sectionBased: CfnDashboard.DefaultSectionBasedLayoutConfigurationProperty) {
     cdkBuilder.sectionBased(sectionBased)

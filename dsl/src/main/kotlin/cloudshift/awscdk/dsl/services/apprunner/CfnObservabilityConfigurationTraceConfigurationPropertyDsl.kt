@@ -11,6 +11,9 @@ public class CfnObservabilityConfigurationTraceConfigurationPropertyDsl {
   private val cdkBuilder: CfnObservabilityConfiguration.TraceConfigurationProperty.Builder =
       CfnObservabilityConfiguration.TraceConfigurationProperty.builder()
 
+  /**
+   * @param vendor The implementation provider chosen for tracing App Runner services. 
+   */
   public fun vendor(vendor: String) {
     cdkBuilder.vendor(vendor)
   }

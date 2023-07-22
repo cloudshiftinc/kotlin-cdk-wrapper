@@ -12,10 +12,16 @@ public class CfnClusterNodeExporterPropertyDsl {
   private val cdkBuilder: CfnCluster.NodeExporterProperty.Builder =
       CfnCluster.NodeExporterProperty.builder()
 
+  /**
+   * @param enabledInBroker Indicates whether you want to enable or disable the Node Exporter. 
+   */
   public fun enabledInBroker(enabledInBroker: Boolean) {
     cdkBuilder.enabledInBroker(enabledInBroker)
   }
 
+  /**
+   * @param enabledInBroker Indicates whether you want to enable or disable the Node Exporter. 
+   */
   public fun enabledInBroker(enabledInBroker: IResolvable) {
     cdkBuilder.enabledInBroker(enabledInBroker)
   }

@@ -11,10 +11,16 @@ public class CfnFlowTemplateDefinitionDocumentPropertyDsl {
   private val cdkBuilder: CfnFlowTemplate.DefinitionDocumentProperty.Builder =
       CfnFlowTemplate.DefinitionDocumentProperty.builder()
 
+  /**
+   * @param language the value to be set. 
+   */
   public fun language(language: String) {
     cdkBuilder.language(language)
   }
 
+  /**
+   * @param text the value to be set. 
+   */
   public fun text(text: String) {
     cdkBuilder.text(text)
   }

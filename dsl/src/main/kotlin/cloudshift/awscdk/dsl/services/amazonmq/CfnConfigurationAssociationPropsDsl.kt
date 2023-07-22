@@ -13,14 +13,23 @@ public class CfnConfigurationAssociationPropsDsl {
   private val cdkBuilder: CfnConfigurationAssociationProps.Builder =
       CfnConfigurationAssociationProps.builder()
 
+  /**
+   * @param broker The broker to associate with a configuration. 
+   */
   public fun broker(broker: String) {
     cdkBuilder.broker(broker)
   }
 
+  /**
+   * @param configuration The configuration to associate with a broker. 
+   */
   public fun configuration(configuration: IResolvable) {
     cdkBuilder.configuration(configuration)
   }
 
+  /**
+   * @param configuration The configuration to associate with a broker. 
+   */
   public fun configuration(configuration: CfnConfigurationAssociation.ConfigurationIdProperty) {
     cdkBuilder.configuration(configuration)
   }

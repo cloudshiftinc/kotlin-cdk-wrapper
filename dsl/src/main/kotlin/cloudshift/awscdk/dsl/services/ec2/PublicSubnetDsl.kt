@@ -15,18 +15,40 @@ public class PublicSubnetDsl(
 ) {
   private val cdkBuilder: PublicSubnet.Builder = PublicSubnet.Builder.create(scope, id)
 
+  /**
+   * The availability zone for the subnet.
+   *
+   * @param availabilityZone The availability zone for the subnet. 
+   */
   public fun availabilityZone(availabilityZone: String) {
     cdkBuilder.availabilityZone(availabilityZone)
   }
 
+  /**
+   * The CIDR notation for this subnet.
+   *
+   * @param cidrBlock The CIDR notation for this subnet. 
+   */
   public fun cidrBlock(cidrBlock: String) {
     cdkBuilder.cidrBlock(cidrBlock)
   }
 
+  /**
+   * Controls if a public IP is associated to an instance at launch.
+   *
+   * Default: true in Subnet.Public, false in Subnet.Private or Subnet.Isolated.
+   *
+   * @param mapPublicIpOnLaunch Controls if a public IP is associated to an instance at launch. 
+   */
   public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
     cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
   }
 
+  /**
+   * The VPC which this subnet is part of.
+   *
+   * @param vpcId The VPC which this subnet is part of. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

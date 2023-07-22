@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.msk.CfnCluster
 public class CfnClusterScramPropertyDsl {
   private val cdkBuilder: CfnCluster.ScramProperty.Builder = CfnCluster.ScramProperty.builder()
 
+  /**
+   * @param enabled SASL/SCRAM authentication is enabled or not. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled SASL/SCRAM authentication is enabled or not. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

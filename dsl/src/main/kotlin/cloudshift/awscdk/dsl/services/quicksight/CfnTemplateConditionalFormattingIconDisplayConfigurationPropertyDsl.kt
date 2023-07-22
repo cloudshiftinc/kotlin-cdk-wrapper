@@ -11,6 +11,9 @@ public class CfnTemplateConditionalFormattingIconDisplayConfigurationPropertyDsl
   private val cdkBuilder: CfnTemplate.ConditionalFormattingIconDisplayConfigurationProperty.Builder
       = CfnTemplate.ConditionalFormattingIconDisplayConfigurationProperty.builder()
 
+  /**
+   * @param iconDisplayOption Determines the icon display configuration.
+   */
   public fun iconDisplayOption(iconDisplayOption: String) {
     cdkBuilder.iconDisplayOption(iconDisplayOption)
   }

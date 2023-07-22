@@ -11,6 +11,9 @@ public class CfnDataSourceLambdaConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.LambdaConfigProperty.Builder =
       CfnDataSource.LambdaConfigProperty.builder()
 
+  /**
+   * @param lambdaFunctionArn The ARN for the Lambda function. 
+   */
   public fun lambdaFunctionArn(lambdaFunctionArn: String) {
     cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
   }

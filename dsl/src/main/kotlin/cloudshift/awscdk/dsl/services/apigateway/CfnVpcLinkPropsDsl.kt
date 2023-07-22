@@ -19,26 +19,46 @@ public class CfnVpcLinkPropsDsl {
 
   private val _targetArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param description The description of the VPC link.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name used to label and identify the VPC link. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags An array of arbitrary tags (key-value pairs) to associate with the VPC link.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of arbitrary tags (key-value pairs) to associate with the VPC link.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param targetArns The ARN of the network load balancer of the VPC targeted by the VPC link. 
+   * The network load balancer must be owned by the same AWS account of the API owner.
+   */
   public fun targetArns(vararg targetArns: String) {
     _targetArns.addAll(listOf(*targetArns))
   }
 
+  /**
+   * @param targetArns The ARN of the network load balancer of the VPC targeted by the VPC link. 
+   * The network load balancer must be owned by the same AWS account of the API owner.
+   */
   public fun targetArns(targetArns: Collection<String>) {
     _targetArns.addAll(targetArns)
   }

@@ -11,6 +11,9 @@ public class CfnChannelLogConfigurationPropertyDsl {
   private val cdkBuilder: CfnChannel.LogConfigurationProperty.Builder =
       CfnChannel.LogConfigurationProperty.builder()
 
+  /**
+   * @param logGroupName Sets a custom Amazon CloudWatch log group name.
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }

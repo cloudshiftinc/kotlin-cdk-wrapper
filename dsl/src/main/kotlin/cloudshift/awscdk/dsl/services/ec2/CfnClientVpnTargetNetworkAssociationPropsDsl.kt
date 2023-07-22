@@ -11,10 +11,16 @@ public class CfnClientVpnTargetNetworkAssociationPropsDsl {
   private val cdkBuilder: CfnClientVpnTargetNetworkAssociationProps.Builder =
       CfnClientVpnTargetNetworkAssociationProps.builder()
 
+  /**
+   * @param clientVpnEndpointId The ID of the Client VPN endpoint. 
+   */
   public fun clientVpnEndpointId(clientVpnEndpointId: String) {
     cdkBuilder.clientVpnEndpointId(clientVpnEndpointId)
   }
 
+  /**
+   * @param subnetId The ID of the subnet to associate with the Client VPN endpoint. 
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

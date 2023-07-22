@@ -17,25 +17,47 @@ public class MixedInstancesPolicyDsl {
 
   private val _launchTemplateOverrides: MutableList<LaunchTemplateOverrides> = mutableListOf()
 
-  public fun instancesDistribution(block: InstancesDistributionDsl.() -> Unit = {}) {
+  /**
+   * @param instancesDistribution InstancesDistribution to use.
+   */
+  public fun instancesDistribution(instancesDistribution: InstancesDistributionDsl.() -> Unit =
+      {}) {
     val builder = InstancesDistributionDsl()
-    builder.apply(block)
+    builder.apply(instancesDistribution)
     cdkBuilder.instancesDistribution(builder.build())
   }
 
+  /**
+   * @param instancesDistribution InstancesDistribution to use.
+   */
   public fun instancesDistribution(instancesDistribution: InstancesDistribution) {
     cdkBuilder.instancesDistribution(instancesDistribution)
   }
 
+  /**
+   * @param launchTemplate Launch template to use. 
+   */
   public fun launchTemplate(launchTemplate: ILaunchTemplate) {
     cdkBuilder.launchTemplate(launchTemplate)
   }
 
+  /**
+   * @param launchTemplateOverrides Launch template overrides.
+   * The maximum number of instance types that can be associated with an Auto Scaling group is 40.
+   *
+   * The maximum number of distinct launch templates you can define for an Auto Scaling group is 20.
+   */
   public
       fun launchTemplateOverrides(launchTemplateOverrides: LaunchTemplateOverridesDsl.() -> Unit) {
     _launchTemplateOverrides.add(LaunchTemplateOverridesDsl().apply(launchTemplateOverrides).build())
   }
 
+  /**
+   * @param launchTemplateOverrides Launch template overrides.
+   * The maximum number of instance types that can be associated with an Auto Scaling group is 40.
+   *
+   * The maximum number of distinct launch templates you can define for an Auto Scaling group is 20.
+   */
   public fun launchTemplateOverrides(launchTemplateOverrides: Collection<LaunchTemplateOverrides>) {
     _launchTemplateOverrides.addAll(launchTemplateOverrides)
   }

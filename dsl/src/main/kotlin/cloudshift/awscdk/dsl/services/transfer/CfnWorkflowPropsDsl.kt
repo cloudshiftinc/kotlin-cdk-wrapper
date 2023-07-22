@@ -23,38 +23,70 @@ public class CfnWorkflowPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description Specifies the text description for the workflow.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered during
+   * execution of the workflow.
+   */
   public fun onExceptionSteps(vararg onExceptionSteps: Any) {
     _onExceptionSteps.addAll(listOf(*onExceptionSteps))
   }
 
+  /**
+   * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered during
+   * execution of the workflow.
+   */
   public fun onExceptionSteps(onExceptionSteps: Collection<Any>) {
     _onExceptionSteps.addAll(onExceptionSteps)
   }
 
+  /**
+   * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered during
+   * execution of the workflow.
+   */
   public fun onExceptionSteps(onExceptionSteps: IResolvable) {
     cdkBuilder.onExceptionSteps(onExceptionSteps)
   }
 
+  /**
+   * @param steps Specifies the details for the steps that are in the specified workflow. 
+   */
   public fun steps(vararg steps: Any) {
     _steps.addAll(listOf(*steps))
   }
 
+  /**
+   * @param steps Specifies the details for the steps that are in the specified workflow. 
+   */
   public fun steps(steps: Collection<Any>) {
     _steps.addAll(steps)
   }
 
+  /**
+   * @param steps Specifies the details for the steps that are in the specified workflow. 
+   */
   public fun steps(steps: IResolvable) {
     cdkBuilder.steps(steps)
   }
 
+  /**
+   * @param tags Key-value pairs that can be used to group and search for workflows.
+   * Tags are metadata attached to workflows for any purpose.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Key-value pairs that can be used to group and search for workflows.
+   * Tags are metadata attached to workflows for any purpose.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

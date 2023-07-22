@@ -11,19 +11,35 @@ public class CfnDatasetDatasetContentDeliveryRuleDestinationPropertyDsl {
   private val cdkBuilder: CfnDataset.DatasetContentDeliveryRuleDestinationProperty.Builder =
       CfnDataset.DatasetContentDeliveryRuleDestinationProperty.builder()
 
+  /**
+   * @param iotEventsDestinationConfiguration Configuration information for delivery of dataset
+   * contents to AWS IoT Events .
+   */
   public fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IResolvable) {
     cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration)
   }
 
+  /**
+   * @param iotEventsDestinationConfiguration Configuration information for delivery of dataset
+   * contents to AWS IoT Events .
+   */
   public
       fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: CfnDataset.IotEventsDestinationConfigurationProperty) {
     cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration)
   }
 
+  /**
+   * @param s3DestinationConfiguration Configuration information for delivery of dataset contents to
+   * Amazon S3.
+   */
   public fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
     cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration)
   }
 
+  /**
+   * @param s3DestinationConfiguration Configuration information for delivery of dataset contents to
+   * Amazon S3.
+   */
   public
       fun s3DestinationConfiguration(s3DestinationConfiguration: CfnDataset.S3DestinationConfigurationProperty) {
     cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration)

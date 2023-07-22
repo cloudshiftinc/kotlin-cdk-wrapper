@@ -12,12 +12,19 @@ public class VirtualGatewayListenerConfigDsl {
   private val cdkBuilder: VirtualGatewayListenerConfig.Builder =
       VirtualGatewayListenerConfig.builder()
 
-  public fun listener(block: CfnVirtualGatewayVirtualGatewayListenerPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param listener Single listener config for a VirtualGateway. 
+   */
+  public fun listener(listener: CfnVirtualGatewayVirtualGatewayListenerPropertyDsl.() -> Unit =
+      {}) {
     val builder = CfnVirtualGatewayVirtualGatewayListenerPropertyDsl()
-    builder.apply(block)
+    builder.apply(listener)
     cdkBuilder.listener(builder.build())
   }
 
+  /**
+   * @param listener Single listener config for a VirtualGateway. 
+   */
   public fun listener(listener: CfnVirtualGateway.VirtualGatewayListenerProperty) {
     cdkBuilder.listener(listener)
   }

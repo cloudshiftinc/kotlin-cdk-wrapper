@@ -20,38 +20,65 @@ public class CfnAnalysisSankeyDiagramAggregatedFieldWellsPropertyDsl {
 
   private val _weight: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param destination The destination field wells of a sankey diagram.
+   */
   public fun destination(vararg destination: Any) {
     _destination.addAll(listOf(*destination))
   }
 
+  /**
+   * @param destination The destination field wells of a sankey diagram.
+   */
   public fun destination(destination: Collection<Any>) {
     _destination.addAll(destination)
   }
 
+  /**
+   * @param destination The destination field wells of a sankey diagram.
+   */
   public fun destination(destination: IResolvable) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param source The source field wells of a sankey diagram.
+   */
   public fun source(vararg source: Any) {
     _source.addAll(listOf(*source))
   }
 
+  /**
+   * @param source The source field wells of a sankey diagram.
+   */
   public fun source(source: Collection<Any>) {
     _source.addAll(source)
   }
 
+  /**
+   * @param source The source field wells of a sankey diagram.
+   */
   public fun source(source: IResolvable) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param weight The weight field wells of a sankey diagram.
+   */
   public fun weight(vararg weight: Any) {
     _weight.addAll(listOf(*weight))
   }
 
+  /**
+   * @param weight The weight field wells of a sankey diagram.
+   */
   public fun weight(weight: Collection<Any>) {
     _weight.addAll(weight)
   }
 
+  /**
+   * @param weight The weight field wells of a sankey diagram.
+   */
   public fun weight(weight: IResolvable) {
     cdkBuilder.weight(weight)
   }

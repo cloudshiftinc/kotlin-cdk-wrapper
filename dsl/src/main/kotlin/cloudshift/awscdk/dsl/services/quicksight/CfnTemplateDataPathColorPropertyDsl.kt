@@ -12,18 +12,30 @@ public class CfnTemplateDataPathColorPropertyDsl {
   private val cdkBuilder: CfnTemplate.DataPathColorProperty.Builder =
       CfnTemplate.DataPathColorProperty.builder()
 
+  /**
+   * @param color The color that needs to be applied to the element. 
+   */
   public fun color(color: String) {
     cdkBuilder.color(color)
   }
 
+  /**
+   * @param element The element that the color needs to be applied to. 
+   */
   public fun element(element: IResolvable) {
     cdkBuilder.element(element)
   }
 
+  /**
+   * @param element The element that the color needs to be applied to. 
+   */
   public fun element(element: CfnTemplate.DataPathValueProperty) {
     cdkBuilder.element(element)
   }
 
+  /**
+   * @param timeGranularity The time granularity of the field that the color needs to be applied to.
+   */
   public fun timeGranularity(timeGranularity: String) {
     cdkBuilder.timeGranularity(timeGranularity)
   }

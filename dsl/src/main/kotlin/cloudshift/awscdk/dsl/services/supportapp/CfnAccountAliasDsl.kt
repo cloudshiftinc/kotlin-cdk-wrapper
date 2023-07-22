@@ -14,6 +14,12 @@ public class CfnAccountAliasDsl(
 ) {
   private val cdkBuilder: CfnAccountAlias.Builder = CfnAccountAlias.Builder.create(scope, id)
 
+  /**
+   * An alias or short name for an AWS account .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html#cfn-supportapp-accountalias-accountalias)
+   * @param accountAlias An alias or short name for an AWS account . 
+   */
   public fun accountAlias(accountAlias: String) {
     cdkBuilder.accountAlias(accountAlias)
   }

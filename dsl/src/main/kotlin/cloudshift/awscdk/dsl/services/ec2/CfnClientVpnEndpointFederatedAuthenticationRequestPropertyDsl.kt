@@ -11,10 +11,17 @@ public class CfnClientVpnEndpointFederatedAuthenticationRequestPropertyDsl {
   private val cdkBuilder: CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty.Builder =
       CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty.builder()
 
+  /**
+   * @param samlProviderArn The Amazon Resource Name (ARN) of the IAM SAML identity provider. 
+   */
   public fun samlProviderArn(samlProviderArn: String) {
     cdkBuilder.samlProviderArn(samlProviderArn)
   }
 
+  /**
+   * @param selfServiceSamlProviderArn The Amazon Resource Name (ARN) of the IAM SAML identity
+   * provider for the self-service portal.
+   */
   public fun selfServiceSamlProviderArn(selfServiceSamlProviderArn: String) {
     cdkBuilder.selfServiceSamlProviderArn(selfServiceSamlProviderArn)
   }

@@ -11,10 +11,16 @@ public class CfnRulePathMatchTypePropertyDsl {
   private val cdkBuilder: CfnRule.PathMatchTypeProperty.Builder =
       CfnRule.PathMatchTypeProperty.builder()
 
+  /**
+   * @param exact An exact match of the path.
+   */
   public fun exact(exact: String) {
     cdkBuilder.exact(exact)
   }
 
+  /**
+   * @param prefix A prefix match of the path.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

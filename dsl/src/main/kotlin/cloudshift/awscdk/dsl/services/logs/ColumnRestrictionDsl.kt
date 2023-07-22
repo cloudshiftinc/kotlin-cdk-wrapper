@@ -11,14 +11,25 @@ import software.amazon.awscdk.services.logs.ColumnRestriction
 public class ColumnRestrictionDsl {
   private val cdkBuilder: ColumnRestriction.Builder = ColumnRestriction.builder()
 
+  /**
+   * @param comparison Comparison operator to use. 
+   */
   public fun comparison(comparison: String) {
     cdkBuilder.comparison(comparison)
   }
 
+  /**
+   * @param numberValue Number value to compare to.
+   * Exactly one of 'stringValue' and 'numberValue' must be set.
+   */
   public fun numberValue(numberValue: Number) {
     cdkBuilder.numberValue(numberValue)
   }
 
+  /**
+   * @param stringValue String value to compare to.
+   * Exactly one of 'stringValue' and 'numberValue' must be set.
+   */
   public fun stringValue(stringValue: String) {
     cdkBuilder.stringValue(stringValue)
   }

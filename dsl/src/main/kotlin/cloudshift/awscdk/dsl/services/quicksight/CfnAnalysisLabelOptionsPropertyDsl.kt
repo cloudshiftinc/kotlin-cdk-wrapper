@@ -12,18 +12,30 @@ public class CfnAnalysisLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LabelOptionsProperty.Builder =
       CfnAnalysis.LabelOptionsProperty.builder()
 
+  /**
+   * @param customLabel The text for the label.
+   */
   public fun customLabel(customLabel: String) {
     cdkBuilder.customLabel(customLabel)
   }
 
+  /**
+   * @param fontConfiguration The font configuration of the label.
+   */
   public fun fontConfiguration(fontConfiguration: IResolvable) {
     cdkBuilder.fontConfiguration(fontConfiguration)
   }
 
+  /**
+   * @param fontConfiguration The font configuration of the label.
+   */
   public fun fontConfiguration(fontConfiguration: CfnAnalysis.FontConfigurationProperty) {
     cdkBuilder.fontConfiguration(fontConfiguration)
   }
 
+  /**
+   * @param visibility Determines whether or not the label is visible.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

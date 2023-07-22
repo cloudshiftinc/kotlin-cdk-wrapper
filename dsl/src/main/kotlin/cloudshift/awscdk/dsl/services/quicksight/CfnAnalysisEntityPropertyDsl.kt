@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
 public class CfnAnalysisEntityPropertyDsl {
   private val cdkBuilder: CfnAnalysis.EntityProperty.Builder = CfnAnalysis.EntityProperty.builder()
 
+  /**
+   * @param path The hierarchical path of the entity within the analysis, template, or dashboard
+   * definition tree.
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.lambda.DestinationType
 public class DestinationOptionsDsl {
   private val cdkBuilder: DestinationOptions.Builder = DestinationOptions.builder()
 
+  /**
+   * @param type The destination type. 
+   */
   public fun type(type: DestinationType) {
     cdkBuilder.type(type)
   }

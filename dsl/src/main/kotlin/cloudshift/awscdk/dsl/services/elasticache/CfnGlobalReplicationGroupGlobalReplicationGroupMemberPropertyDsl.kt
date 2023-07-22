@@ -11,14 +11,23 @@ public class CfnGlobalReplicationGroupGlobalReplicationGroupMemberPropertyDsl {
   private val cdkBuilder: CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty.Builder =
       CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty.builder()
 
+  /**
+   * @param replicationGroupId The replication group id of the Global datastore member.
+   */
   public fun replicationGroupId(replicationGroupId: String) {
     cdkBuilder.replicationGroupId(replicationGroupId)
   }
 
+  /**
+   * @param replicationGroupRegion The Amazon region of the Global datastore member.
+   */
   public fun replicationGroupRegion(replicationGroupRegion: String) {
     cdkBuilder.replicationGroupRegion(replicationGroupRegion)
   }
 
+  /**
+   * @param role Indicates the role of the replication group, `PRIMARY` or `SECONDARY` .
+   */
   public fun role(role: String) {
     cdkBuilder.role(role)
   }

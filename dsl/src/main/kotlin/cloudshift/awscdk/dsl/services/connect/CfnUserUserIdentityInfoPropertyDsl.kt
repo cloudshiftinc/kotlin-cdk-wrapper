@@ -11,22 +11,44 @@ public class CfnUserUserIdentityInfoPropertyDsl {
   private val cdkBuilder: CfnUser.UserIdentityInfoProperty.Builder =
       CfnUser.UserIdentityInfoProperty.builder()
 
+  /**
+   * @param email The email address.
+   * If you are using SAML for identity management and include this parameter, an error is returned.
+   */
   public fun email(email: String) {
     cdkBuilder.email(email)
   }
 
+  /**
+   * @param firstName The first name.
+   * This is required if you are using Amazon Connect or SAML for identity management.
+   */
   public fun firstName(firstName: String) {
     cdkBuilder.firstName(firstName)
   }
 
+  /**
+   * @param lastName The last name.
+   * This is required if you are using Amazon Connect or SAML for identity management.
+   */
   public fun lastName(lastName: String) {
     cdkBuilder.lastName(lastName)
   }
 
+  /**
+   * @param mobile The user's mobile number.
+   */
   public fun mobile(mobile: String) {
     cdkBuilder.mobile(mobile)
   }
 
+  /**
+   * @param secondaryEmail The user's secondary email address.
+   * If you provide a secondary email, the user receives email notifications -- other than password
+   * reset notifications -- to this email address instead of to their primary email address.
+   *
+   * *Pattern* : `(?=^.{0,265}$)[a-zA-Z0-9._%+-]+&#64;[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}`
+   */
   public fun secondaryEmail(secondaryEmail: String) {
     cdkBuilder.secondaryEmail(secondaryEmail)
   }

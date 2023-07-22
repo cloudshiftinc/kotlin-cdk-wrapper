@@ -21,36 +21,60 @@ public class OAuthSettingsDsl {
 
   private val _scopes: MutableList<OAuthScope> = mutableListOf()
 
+  /**
+   * @param callbackUrls List of allowed redirect URLs for the identity providers.
+   */
   public fun callbackUrls(vararg callbackUrls: String) {
     _callbackUrls.addAll(listOf(*callbackUrls))
   }
 
+  /**
+   * @param callbackUrls List of allowed redirect URLs for the identity providers.
+   */
   public fun callbackUrls(callbackUrls: Collection<String>) {
     _callbackUrls.addAll(callbackUrls)
   }
 
-  public fun flows(block: OAuthFlowsDsl.() -> Unit = {}) {
+  /**
+   * @param flows OAuth flows that are allowed with this client.
+   */
+  public fun flows(flows: OAuthFlowsDsl.() -> Unit = {}) {
     val builder = OAuthFlowsDsl()
-    builder.apply(block)
+    builder.apply(flows)
     cdkBuilder.flows(builder.build())
   }
 
+  /**
+   * @param flows OAuth flows that are allowed with this client.
+   */
   public fun flows(flows: OAuthFlows) {
     cdkBuilder.flows(flows)
   }
 
+  /**
+   * @param logoutUrls List of allowed logout URLs for the identity providers.
+   */
   public fun logoutUrls(vararg logoutUrls: String) {
     _logoutUrls.addAll(listOf(*logoutUrls))
   }
 
+  /**
+   * @param logoutUrls List of allowed logout URLs for the identity providers.
+   */
   public fun logoutUrls(logoutUrls: Collection<String>) {
     _logoutUrls.addAll(logoutUrls)
   }
 
+  /**
+   * @param scopes OAuth scopes that are allowed with this client.
+   */
   public fun scopes(vararg scopes: OAuthScope) {
     _scopes.addAll(listOf(*scopes))
   }
 
+  /**
+   * @param scopes OAuth scopes that are allowed with this client.
+   */
   public fun scopes(scopes: Collection<OAuthScope>) {
     _scopes.addAll(scopes)
   }

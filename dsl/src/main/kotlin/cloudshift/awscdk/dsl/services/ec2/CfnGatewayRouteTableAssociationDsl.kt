@@ -15,10 +15,22 @@ public class CfnGatewayRouteTableAssociationDsl(
   private val cdkBuilder: CfnGatewayRouteTableAssociation.Builder =
       CfnGatewayRouteTableAssociation.Builder.create(scope, id)
 
+  /**
+   * The ID of the gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-gatewayid)
+   * @param gatewayId The ID of the gateway. 
+   */
   public fun gatewayId(gatewayId: String) {
     cdkBuilder.gatewayId(gatewayId)
   }
 
+  /**
+   * The ID of the route table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-routetableid)
+   * @param routeTableId The ID of the route table. 
+   */
   public fun routeTableId(routeTableId: String) {
     cdkBuilder.routeTableId(routeTableId)
   }

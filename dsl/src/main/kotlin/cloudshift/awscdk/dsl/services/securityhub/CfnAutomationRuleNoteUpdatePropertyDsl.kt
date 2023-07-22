@@ -14,16 +14,25 @@ public class CfnAutomationRuleNoteUpdatePropertyDsl {
   private val cdkBuilder: CfnAutomationRule.NoteUpdateProperty.Builder =
       CfnAutomationRule.NoteUpdateProperty.builder()
 
+  /**
+   * @param text The updated note text. 
+   */
   public fun text(text: String) {
     cdkBuilder.text(text)
   }
 
-  public fun updatedBy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param updatedBy The principal that updated the note. 
+   */
+  public fun updatedBy(updatedBy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(updatedBy)
     cdkBuilder.updatedBy(builder.map)
   }
 
+  /**
+   * @param updatedBy The principal that updated the note. 
+   */
   public fun updatedBy(updatedBy: Any) {
     cdkBuilder.updatedBy(updatedBy)
   }

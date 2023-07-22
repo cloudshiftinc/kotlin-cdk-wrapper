@@ -13,18 +13,32 @@ public class CfnClientVpnEndpointConnectionLogOptionsPropertyDsl {
   private val cdkBuilder: CfnClientVpnEndpoint.ConnectionLogOptionsProperty.Builder =
       CfnClientVpnEndpoint.ConnectionLogOptionsProperty.builder()
 
+  /**
+   * @param cloudwatchLogGroup The name of the CloudWatch Logs log group.
+   * Required if connection logging is enabled.
+   */
   public fun cloudwatchLogGroup(cloudwatchLogGroup: String) {
     cdkBuilder.cloudwatchLogGroup(cloudwatchLogGroup)
   }
 
+  /**
+   * @param cloudwatchLogStream The name of the CloudWatch Logs log stream to which the connection
+   * data is published.
+   */
   public fun cloudwatchLogStream(cloudwatchLogStream: String) {
     cdkBuilder.cloudwatchLogStream(cloudwatchLogStream)
   }
 
+  /**
+   * @param enabled Indicates whether connection logging is enabled. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether connection logging is enabled. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

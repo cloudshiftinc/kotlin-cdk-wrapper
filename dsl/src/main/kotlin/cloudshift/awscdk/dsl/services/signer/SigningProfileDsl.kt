@@ -16,14 +16,35 @@ public class SigningProfileDsl(
 ) {
   private val cdkBuilder: SigningProfile.Builder = SigningProfile.Builder.create(scope, id)
 
+  /**
+   * The Signing Platform available for signing profile.
+   *
+   * [Documentation](https://docs.aws.amazon.com/signer/latest/developerguide/gs-platform.html)
+   * @param platform The Signing Platform available for signing profile. 
+   */
   public fun platform(platform: Platform) {
     cdkBuilder.platform(platform)
   }
 
+  /**
+   * The validity period for signatures generated using this signing profile.
+   *
+   * Default: - 135 months
+   *
+   * @param signatureValidity The validity period for signatures generated using this signing
+   * profile. 
+   */
   public fun signatureValidity(signatureValidity: Duration) {
     cdkBuilder.signatureValidity(signatureValidity)
   }
 
+  /**
+   * Physical name of this Signing Profile.
+   *
+   * Default: - Assigned by CloudFormation (recommended).
+   *
+   * @param signingProfileName Physical name of this Signing Profile. 
+   */
   public fun signingProfileName(signingProfileName: String) {
     cdkBuilder.signingProfileName(signingProfileName)
   }

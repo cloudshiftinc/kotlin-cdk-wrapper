@@ -16,23 +16,41 @@ public class CfnAutoScalingGroupLaunchTemplatePropertyDsl {
 
   private val _overrides: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param launchTemplateSpecification The launch template. 
+   */
   public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
     cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
   }
 
+  /**
+   * @param launchTemplateSpecification The launch template. 
+   */
   public
       fun launchTemplateSpecification(launchTemplateSpecification: CfnAutoScalingGroup.LaunchTemplateSpecificationProperty) {
     cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
   }
 
+  /**
+   * @param overrides Any properties that you specify override the same properties in the launch
+   * template.
+   */
   public fun overrides(vararg overrides: Any) {
     _overrides.addAll(listOf(*overrides))
   }
 
+  /**
+   * @param overrides Any properties that you specify override the same properties in the launch
+   * template.
+   */
   public fun overrides(overrides: Collection<Any>) {
     _overrides.addAll(overrides)
   }
 
+  /**
+   * @param overrides Any properties that you specify override the same properties in the launch
+   * template.
+   */
   public fun overrides(overrides: IResolvable) {
     cdkBuilder.overrides(overrides)
   }

@@ -12,14 +12,24 @@ import software.amazon.awscdk.services.signer.SigningProfileProps
 public class SigningProfilePropsDsl {
   private val cdkBuilder: SigningProfileProps.Builder = SigningProfileProps.builder()
 
+  /**
+   * @param platform The Signing Platform available for signing profile. 
+   */
   public fun platform(platform: Platform) {
     cdkBuilder.platform(platform)
   }
 
+  /**
+   * @param signatureValidity The validity period for signatures generated using this signing
+   * profile.
+   */
   public fun signatureValidity(signatureValidity: Duration) {
     cdkBuilder.signatureValidity(signatureValidity)
   }
 
+  /**
+   * @param signingProfileName Physical name of this Signing Profile.
+   */
   public fun signingProfileName(signingProfileName: String) {
     cdkBuilder.signingProfileName(signingProfileName)
   }

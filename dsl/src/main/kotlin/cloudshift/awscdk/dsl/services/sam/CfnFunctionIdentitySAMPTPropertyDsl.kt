@@ -11,6 +11,9 @@ public class CfnFunctionIdentitySAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.IdentitySAMPTProperty.Builder =
       CfnFunction.IdentitySAMPTProperty.builder()
 
+  /**
+   * @param identityName the value to be set. 
+   */
   public fun identityName(identityName: String) {
     cdkBuilder.identityName(identityName)
   }

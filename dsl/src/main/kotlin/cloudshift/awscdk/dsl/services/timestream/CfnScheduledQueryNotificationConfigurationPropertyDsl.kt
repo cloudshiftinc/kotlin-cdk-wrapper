@@ -11,10 +11,16 @@ public class CfnScheduledQueryNotificationConfigurationPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.NotificationConfigurationProperty.Builder =
       CfnScheduledQuery.NotificationConfigurationProperty.builder()
 
+  /**
+   * @param snsConfiguration Details on SNS configuration. 
+   */
   public fun snsConfiguration(snsConfiguration: IResolvable) {
     cdkBuilder.snsConfiguration(snsConfiguration)
   }
 
+  /**
+   * @param snsConfiguration Details on SNS configuration. 
+   */
   public fun snsConfiguration(snsConfiguration: CfnScheduledQuery.SnsConfigurationProperty) {
     cdkBuilder.snsConfiguration(snsConfiguration)
   }

@@ -11,10 +11,16 @@ public class CfnLifecyclePolicyArchiveRetainRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.ArchiveRetainRuleProperty.Builder =
       CfnLifecyclePolicy.ArchiveRetainRuleProperty.builder()
 
+  /**
+   * @param retentionArchiveTier the value to be set. 
+   */
   public fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
     cdkBuilder.retentionArchiveTier(retentionArchiveTier)
   }
 
+  /**
+   * @param retentionArchiveTier the value to be set. 
+   */
   public
       fun retentionArchiveTier(retentionArchiveTier: CfnLifecyclePolicy.RetentionArchiveTierProperty) {
     cdkBuilder.retentionArchiveTier(retentionArchiveTier)

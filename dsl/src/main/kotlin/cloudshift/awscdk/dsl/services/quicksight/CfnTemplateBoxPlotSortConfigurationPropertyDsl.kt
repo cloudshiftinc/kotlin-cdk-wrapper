@@ -16,22 +16,37 @@ public class CfnTemplateBoxPlotSortConfigurationPropertyDsl {
 
   private val _categorySort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param categorySort The sort configuration of a group by fields.
+   */
   public fun categorySort(vararg categorySort: Any) {
     _categorySort.addAll(listOf(*categorySort))
   }
 
+  /**
+   * @param categorySort The sort configuration of a group by fields.
+   */
   public fun categorySort(categorySort: Collection<Any>) {
     _categorySort.addAll(categorySort)
   }
 
+  /**
+   * @param categorySort The sort configuration of a group by fields.
+   */
   public fun categorySort(categorySort: IResolvable) {
     cdkBuilder.categorySort(categorySort)
   }
 
+  /**
+   * @param paginationConfiguration The pagination configuration of a table visual or box plot.
+   */
   public fun paginationConfiguration(paginationConfiguration: IResolvable) {
     cdkBuilder.paginationConfiguration(paginationConfiguration)
   }
 
+  /**
+   * @param paginationConfiguration The pagination configuration of a table visual or box plot.
+   */
   public
       fun paginationConfiguration(paginationConfiguration: CfnTemplate.PaginationConfigurationProperty) {
     cdkBuilder.paginationConfiguration(paginationConfiguration)

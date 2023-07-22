@@ -15,10 +15,20 @@ public class CfnCodeSigningConfigAllowedPublishersPropertyDsl {
 
   private val _signingProfileVersionArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param signingProfileVersionArns The Amazon Resource Name (ARN) for each of the signing
+   * profiles. 
+   * A signing profile defines a trusted user who can sign a code package.
+   */
   public fun signingProfileVersionArns(vararg signingProfileVersionArns: String) {
     _signingProfileVersionArns.addAll(listOf(*signingProfileVersionArns))
   }
 
+  /**
+   * @param signingProfileVersionArns The Amazon Resource Name (ARN) for each of the signing
+   * profiles. 
+   * A signing profile defines a trusted user who can sign a code package.
+   */
   public fun signingProfileVersionArns(signingProfileVersionArns: Collection<String>) {
     _signingProfileVersionArns.addAll(signingProfileVersionArns)
   }

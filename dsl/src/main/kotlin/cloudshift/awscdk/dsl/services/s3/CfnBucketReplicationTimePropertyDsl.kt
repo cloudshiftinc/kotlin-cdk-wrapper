@@ -12,14 +12,25 @@ public class CfnBucketReplicationTimePropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicationTimeProperty.Builder =
       CfnBucket.ReplicationTimeProperty.builder()
 
+  /**
+   * @param status Specifies whether the replication time is enabled. 
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
+  /**
+   * @param time A container specifying the time by which replication should be complete for all
+   * objects and operations on objects. 
+   */
   public fun time(time: IResolvable) {
     cdkBuilder.time(time)
   }
 
+  /**
+   * @param time A container specifying the time by which replication should be complete for all
+   * objects and operations on objects. 
+   */
   public fun time(time: CfnBucket.ReplicationTimeValueProperty) {
     cdkBuilder.time(time)
   }

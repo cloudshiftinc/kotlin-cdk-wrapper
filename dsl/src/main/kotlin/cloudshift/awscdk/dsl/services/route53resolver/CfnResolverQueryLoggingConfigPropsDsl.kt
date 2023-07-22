@@ -11,10 +11,17 @@ public class CfnResolverQueryLoggingConfigPropsDsl {
   private val cdkBuilder: CfnResolverQueryLoggingConfigProps.Builder =
       CfnResolverQueryLoggingConfigProps.builder()
 
+  /**
+   * @param destinationArn The ARN of the resource that you want Resolver to send query logs: an
+   * Amazon S3 bucket, a CloudWatch Logs log group, or a Kinesis Data Firehose delivery stream.
+   */
   public fun destinationArn(destinationArn: String) {
     cdkBuilder.destinationArn(destinationArn)
   }
 
+  /**
+   * @param name The name of the query logging configuration.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

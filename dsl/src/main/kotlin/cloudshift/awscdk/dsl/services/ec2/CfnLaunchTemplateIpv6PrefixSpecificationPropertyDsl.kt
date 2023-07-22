@@ -11,6 +11,9 @@ public class CfnLaunchTemplateIpv6PrefixSpecificationPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.Ipv6PrefixSpecificationProperty.Builder =
       CfnLaunchTemplate.Ipv6PrefixSpecificationProperty.builder()
 
+  /**
+   * @param ipv6Prefix The IPv6 prefix.
+   */
   public fun ipv6Prefix(ipv6Prefix: String) {
     cdkBuilder.ipv6Prefix(ipv6Prefix)
   }

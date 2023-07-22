@@ -16,14 +16,23 @@ public class CfnSpotFleetTargetGroupsConfigPropertyDsl {
 
   private val _targetGroups: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param targetGroups One or more target groups. 
+   */
   public fun targetGroups(vararg targetGroups: Any) {
     _targetGroups.addAll(listOf(*targetGroups))
   }
 
+  /**
+   * @param targetGroups One or more target groups. 
+   */
   public fun targetGroups(targetGroups: Collection<Any>) {
     _targetGroups.addAll(targetGroups)
   }
 
+  /**
+   * @param targetGroups One or more target groups. 
+   */
   public fun targetGroups(targetGroups: IResolvable) {
     cdkBuilder.targetGroups(targetGroups)
   }

@@ -14,6 +14,12 @@ public class CfnAccountDsl(
 ) {
   private val cdkBuilder: CfnAccount.Builder = CfnAccount.Builder.create(scope, id)
 
+  /**
+   * The ARN of an Amazon CloudWatch role for the current Account.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html#cfn-apigateway-account-cloudwatchrolearn)
+   * @param cloudWatchRoleArn The ARN of an Amazon CloudWatch role for the current Account. 
+   */
   public fun cloudWatchRoleArn(cloudWatchRoleArn: String) {
     cdkBuilder.cloudWatchRoleArn(cloudWatchRoleArn)
   }

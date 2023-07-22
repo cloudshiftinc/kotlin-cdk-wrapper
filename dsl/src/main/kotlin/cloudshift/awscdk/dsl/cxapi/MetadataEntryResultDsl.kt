@@ -21,38 +21,65 @@ public class MetadataEntryResultDsl {
 
   private val _trace: MutableList<String> = mutableListOf()
 
+  /**
+   * @param data The data.
+   */
   public fun `data`(`data`: String) {
     cdkBuilder.`data`(`data`)
   }
 
+  /**
+   * @param data The data.
+   */
   public fun `data`(`data`: TagDsl.() -> Unit) {
     _data.add(TagDsl().apply(`data`).build())
   }
 
+  /**
+   * @param data The data.
+   */
   public fun `data`(`data`: Collection<Tag>) {
     _data.addAll(`data`)
   }
 
+  /**
+   * @param data The data.
+   */
   public fun `data`(`data`: ContainerImageAssetMetadataEntry) {
     cdkBuilder.`data`(`data`)
   }
 
+  /**
+   * @param data The data.
+   */
   public fun `data`(`data`: FileAssetMetadataEntry) {
     cdkBuilder.`data`(`data`)
   }
 
+  /**
+   * @param path The path in which this entry was defined. 
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param trace A stack trace for when the entry was created.
+   */
   public fun trace(vararg trace: String) {
     _trace.addAll(listOf(*trace))
   }
 
+  /**
+   * @param trace A stack trace for when the entry was created.
+   */
   public fun trace(trace: Collection<String>) {
     _trace.addAll(trace)
   }
 
+  /**
+   * @param type The type of the metadata entry. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

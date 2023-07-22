@@ -19,46 +19,78 @@ public class CfnPipelinePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun parallelismConfiguration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param parallelismConfiguration the value to be set.
+   */
+  public fun parallelismConfiguration(parallelismConfiguration: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(parallelismConfiguration)
     cdkBuilder.parallelismConfiguration(builder.map)
   }
 
+  /**
+   * @param parallelismConfiguration the value to be set.
+   */
   public fun parallelismConfiguration(parallelismConfiguration: Any) {
     cdkBuilder.parallelismConfiguration(parallelismConfiguration)
   }
 
-  public fun pipelineDefinition(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param pipelineDefinition The definition of the pipeline. 
+   * This can be either a JSON string or an Amazon S3 location.
+   */
+  public fun pipelineDefinition(pipelineDefinition: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(pipelineDefinition)
     cdkBuilder.pipelineDefinition(builder.map)
   }
 
+  /**
+   * @param pipelineDefinition The definition of the pipeline. 
+   * This can be either a JSON string or an Amazon S3 location.
+   */
   public fun pipelineDefinition(pipelineDefinition: Any) {
     cdkBuilder.pipelineDefinition(pipelineDefinition)
   }
 
+  /**
+   * @param pipelineDescription The description of the pipeline.
+   */
   public fun pipelineDescription(pipelineDescription: String) {
     cdkBuilder.pipelineDescription(pipelineDescription)
   }
 
+  /**
+   * @param pipelineDisplayName The display name of the pipeline.
+   */
   public fun pipelineDisplayName(pipelineDisplayName: String) {
     cdkBuilder.pipelineDisplayName(pipelineDisplayName)
   }
 
+  /**
+   * @param pipelineName The name of the pipeline. 
+   */
   public fun pipelineName(pipelineName: String) {
     cdkBuilder.pipelineName(pipelineName)
   }
 
+  /**
+   * @param roleArn The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param tags The tags of the pipeline.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags of the pipeline.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

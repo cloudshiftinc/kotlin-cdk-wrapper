@@ -12,14 +12,23 @@ public class CfnSolutionContinuousHyperParameterRangePropertyDsl {
   private val cdkBuilder: CfnSolution.ContinuousHyperParameterRangeProperty.Builder =
       CfnSolution.ContinuousHyperParameterRangeProperty.builder()
 
+  /**
+   * @param maxValue The maximum allowable value for the hyperparameter.
+   */
   public fun maxValue(maxValue: Number) {
     cdkBuilder.maxValue(maxValue)
   }
 
+  /**
+   * @param minValue The minimum allowable value for the hyperparameter.
+   */
   public fun minValue(minValue: Number) {
     cdkBuilder.minValue(minValue)
   }
 
+  /**
+   * @param name The name of the hyperparameter.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

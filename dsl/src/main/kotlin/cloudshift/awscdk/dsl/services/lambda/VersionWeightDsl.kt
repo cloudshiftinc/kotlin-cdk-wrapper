@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.lambda.VersionWeight
 public class VersionWeightDsl {
   private val cdkBuilder: VersionWeight.Builder = VersionWeight.builder()
 
+  /**
+   * @param version The version to route traffic to. 
+   */
   public fun version(version: IVersion) {
     cdkBuilder.version(version)
   }
 
+  /**
+   * @param weight How much weight to assign to this version (0..1). 
+   */
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)
   }

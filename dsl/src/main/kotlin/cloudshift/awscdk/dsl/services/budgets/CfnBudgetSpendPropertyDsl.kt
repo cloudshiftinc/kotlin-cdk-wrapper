@@ -11,10 +11,18 @@ import software.amazon.awscdk.services.budgets.CfnBudget
 public class CfnBudgetSpendPropertyDsl {
   private val cdkBuilder: CfnBudget.SpendProperty.Builder = CfnBudget.SpendProperty.builder()
 
+  /**
+   * @param amount The cost or usage amount that's associated with a budget forecast, actual spend,
+   * or budget threshold. 
+   */
   public fun amount(amount: Number) {
     cdkBuilder.amount(amount)
   }
 
+  /**
+   * @param unit The unit of measurement that's used for the budget forecast, actual spend, or
+   * budget threshold, such as USD or GBP. 
+   */
   public fun unit(unit: String) {
     cdkBuilder.unit(unit)
   }

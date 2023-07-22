@@ -11,6 +11,9 @@ public class CfnDistributionOriginGroupMemberPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginGroupMemberProperty.Builder =
       CfnDistribution.OriginGroupMemberProperty.builder()
 
+  /**
+   * @param originId The ID for an origin in an origin group. 
+   */
   public fun originId(originId: String) {
     cdkBuilder.originId(originId)
   }

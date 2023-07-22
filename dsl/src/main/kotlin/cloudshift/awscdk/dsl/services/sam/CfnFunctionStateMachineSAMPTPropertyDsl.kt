@@ -11,6 +11,9 @@ public class CfnFunctionStateMachineSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.StateMachineSAMPTProperty.Builder =
       CfnFunction.StateMachineSAMPTProperty.builder()
 
+  /**
+   * @param stateMachineName the value to be set. 
+   */
   public fun stateMachineName(stateMachineName: String) {
     cdkBuilder.stateMachineName(stateMachineName)
   }

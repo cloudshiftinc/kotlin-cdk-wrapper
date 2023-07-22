@@ -17,26 +17,47 @@ public class CfnDataSetLogicalTablePropertyDsl {
 
   private val _dataTransforms: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param alias A display name for the logical table. 
+   */
   public fun alias(alias: String) {
     cdkBuilder.alias(alias)
   }
 
+  /**
+   * @param dataTransforms Transform operations that act on this logical table.
+   * For this structure to be valid, only one of the attributes can be non-null.
+   */
   public fun dataTransforms(vararg dataTransforms: Any) {
     _dataTransforms.addAll(listOf(*dataTransforms))
   }
 
+  /**
+   * @param dataTransforms Transform operations that act on this logical table.
+   * For this structure to be valid, only one of the attributes can be non-null.
+   */
   public fun dataTransforms(dataTransforms: Collection<Any>) {
     _dataTransforms.addAll(dataTransforms)
   }
 
+  /**
+   * @param dataTransforms Transform operations that act on this logical table.
+   * For this structure to be valid, only one of the attributes can be non-null.
+   */
   public fun dataTransforms(dataTransforms: IResolvable) {
     cdkBuilder.dataTransforms(dataTransforms)
   }
 
+  /**
+   * @param source Source of this logical table. 
+   */
   public fun source(source: IResolvable) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param source Source of this logical table. 
+   */
   public fun source(source: CfnDataSet.LogicalTableSourceProperty) {
     cdkBuilder.source(source)
   }

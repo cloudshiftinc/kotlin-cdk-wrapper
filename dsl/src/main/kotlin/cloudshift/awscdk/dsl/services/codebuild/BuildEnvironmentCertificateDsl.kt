@@ -12,10 +12,16 @@ public class BuildEnvironmentCertificateDsl {
   private val cdkBuilder: BuildEnvironmentCertificate.Builder =
       BuildEnvironmentCertificate.builder()
 
+  /**
+   * @param bucket The bucket where the certificate is. 
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param objectKey The full path and name of the key file. 
+   */
   public fun objectKey(objectKey: String) {
     cdkBuilder.objectKey(objectKey)
   }

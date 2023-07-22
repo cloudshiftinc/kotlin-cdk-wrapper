@@ -11,6 +11,10 @@ public class CfnDatasetTriggeringDatasetPropertyDsl {
   private val cdkBuilder: CfnDataset.TriggeringDatasetProperty.Builder =
       CfnDataset.TriggeringDatasetProperty.builder()
 
+  /**
+   * @param datasetName The name of the data set whose content generation triggers the new data set
+   * content generation. 
+   */
   public fun datasetName(datasetName: String) {
     cdkBuilder.datasetName(datasetName)
   }

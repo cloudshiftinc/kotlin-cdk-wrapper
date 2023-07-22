@@ -22,18 +22,42 @@ public class CfnDistributionDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The distribution's configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-distributionconfig)
+   * @param distributionConfig The distribution's configuration. 
+   */
   public fun distributionConfig(distributionConfig: IResolvable) {
     cdkBuilder.distributionConfig(distributionConfig)
   }
 
+  /**
+   * The distribution's configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-distributionconfig)
+   * @param distributionConfig The distribution's configuration. 
+   */
   public fun distributionConfig(distributionConfig: CfnDistribution.DistributionConfigProperty) {
     cdkBuilder.distributionConfig(distributionConfig)
   }
 
+  /**
+   * A complex type that contains zero or more `Tag` elements.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-tags)
+   * @param tags A complex type that contains zero or more `Tag` elements. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A complex type that contains zero or more `Tag` elements.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-tags)
+   * @param tags A complex type that contains zero or more `Tag` elements. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

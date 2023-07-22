@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.frauddetector.CfnDetector
 public class CfnDetectorModelPropertyDsl {
   private val cdkBuilder: CfnDetector.ModelProperty.Builder = CfnDetector.ModelProperty.builder()
 
+  /**
+   * @param arn the value to be set.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

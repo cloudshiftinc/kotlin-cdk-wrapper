@@ -17,35 +17,149 @@ public class CfnRotationScheduleDsl(
   private val cdkBuilder: CfnRotationSchedule.Builder = CfnRotationSchedule.Builder.create(scope,
       id)
 
+  /**
+   * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
+   * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+   * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+   *
+   * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
+   * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
+   * @param hostedRotationLambda Creates a new Lambda rotation function based on one of the [Secrets
+   * Manager rotation function
+   * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+   * . To use a rotation function that already exists, specify `RotationLambdaARN` instead. 
+   */
   public fun hostedRotationLambda(hostedRotationLambda: IResolvable) {
     cdkBuilder.hostedRotationLambda(hostedRotationLambda)
   }
 
+  /**
+   * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
+   * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+   * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+   *
+   * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
+   * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
+   * @param hostedRotationLambda Creates a new Lambda rotation function based on one of the [Secrets
+   * Manager rotation function
+   * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+   * . To use a rotation function that already exists, specify `RotationLambdaARN` instead. 
+   */
   public
       fun hostedRotationLambda(hostedRotationLambda: CfnRotationSchedule.HostedRotationLambdaProperty) {
     cdkBuilder.hostedRotationLambda(hostedRotationLambda)
   }
 
+  /**
+   * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
+   * window.
+   *
+   * The rotation schedule is defined in `RotationRules` .
+   *
+   * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by
+   * running the [`testSecret`
+   * step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of the
+   * Lambda rotation function. The test creates an `AWSPENDING` version of the secret and then removes
+   * it.
+   *
+   * If you don't specify this value, then by default, Secrets Manager rotates the secret
+   * immediately.
+   *
+   * Rotation is an asynchronous process. For more information, see [How rotation
+   * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate)
+   * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
+   * until the next scheduled rotation window. 
+   */
   public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
     cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
   }
 
+  /**
+   * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
+   * window.
+   *
+   * The rotation schedule is defined in `RotationRules` .
+   *
+   * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by
+   * running the [`testSecret`
+   * step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of the
+   * Lambda rotation function. The test creates an `AWSPENDING` version of the secret and then removes
+   * it.
+   *
+   * If you don't specify this value, then by default, Secrets Manager rotates the secret
+   * immediately.
+   *
+   * Rotation is an asynchronous process. For more information, see [How rotation
+   * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate)
+   * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
+   * until the next scheduled rotation window. 
+   */
   public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable) {
     cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
   }
 
+  /**
+   * The ARN of an existing Lambda rotation function.
+   *
+   * To specify a rotation function that is also defined in this template, use the
+   * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
+   * function.
+   *
+   * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
+   * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+   * .
+   *
+   * To create a new rotation function based on one of the [Secrets Manager rotation function
+   * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+   * , specify `HostedRotationLambda` instead.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotationlambdaarn)
+   * @param rotationLambdaArn The ARN of an existing Lambda rotation function. 
+   */
   public fun rotationLambdaArn(rotationLambdaArn: String) {
     cdkBuilder.rotationLambdaArn(rotationLambdaArn)
   }
 
+  /**
+   * A structure that defines the rotation configuration for this secret.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotationrules)
+   * @param rotationRules A structure that defines the rotation configuration for this secret. 
+   */
   public fun rotationRules(rotationRules: IResolvable) {
     cdkBuilder.rotationRules(rotationRules)
   }
 
+  /**
+   * A structure that defines the rotation configuration for this secret.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotationrules)
+   * @param rotationRules A structure that defines the rotation configuration for this secret. 
+   */
   public fun rotationRules(rotationRules: CfnRotationSchedule.RotationRulesProperty) {
     cdkBuilder.rotationRules(rotationRules)
   }
 
+  /**
+   * The ARN or name of the secret to rotate.
+   *
+   * To reference a secret also created in this template, use the
+   * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
+   * function with the secret's logical ID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-secretid)
+   * @param secretId The ARN or name of the secret to rotate. 
+   */
   public fun secretId(secretId: String) {
     cdkBuilder.secretId(secretId)
   }

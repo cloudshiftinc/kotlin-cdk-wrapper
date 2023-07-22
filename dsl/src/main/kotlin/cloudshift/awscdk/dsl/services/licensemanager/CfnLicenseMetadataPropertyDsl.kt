@@ -11,10 +11,16 @@ public class CfnLicenseMetadataPropertyDsl {
   private val cdkBuilder: CfnLicense.MetadataProperty.Builder =
       CfnLicense.MetadataProperty.builder()
 
+  /**
+   * @param name The key name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

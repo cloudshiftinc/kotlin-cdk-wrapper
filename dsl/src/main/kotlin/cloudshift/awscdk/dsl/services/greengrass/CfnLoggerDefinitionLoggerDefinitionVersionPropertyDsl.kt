@@ -16,14 +16,23 @@ public class CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl {
 
   private val _loggers: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(vararg loggers: Any) {
     _loggers.addAll(listOf(*loggers))
   }
 
+  /**
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(loggers: Collection<Any>) {
     _loggers.addAll(loggers)
   }
 
+  /**
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(loggers: IResolvable) {
     cdkBuilder.loggers(loggers)
   }

@@ -11,14 +11,23 @@ public class CfnDataSourceSnowflakeParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.SnowflakeParametersProperty.Builder =
       CfnDataSource.SnowflakeParametersProperty.builder()
 
+  /**
+   * @param database Database. 
+   */
   public fun database(database: String) {
     cdkBuilder.database(database)
   }
 
+  /**
+   * @param host Host. 
+   */
   public fun host(host: String) {
     cdkBuilder.host(host)
   }
 
+  /**
+   * @param warehouse Warehouse. 
+   */
   public fun warehouse(warehouse: String) {
     cdkBuilder.warehouse(warehouse)
   }

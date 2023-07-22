@@ -24,26 +24,65 @@ public class CfnReplicationSubnetGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The description for the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription)
+   * @param replicationSubnetGroupDescription The description for the subnet group. 
+   */
   public fun replicationSubnetGroupDescription(replicationSubnetGroupDescription: String) {
     cdkBuilder.replicationSubnetGroupDescription(replicationSubnetGroupDescription)
   }
 
+  /**
+   * The identifier for the replication subnet group.
+   *
+   * If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the
+   * identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier)
+   * @param replicationSubnetGroupIdentifier The identifier for the replication subnet group. 
+   */
   public fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
     cdkBuilder.replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier)
   }
 
+  /**
+   * One or more subnet IDs to be assigned to the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-subnetids)
+   * @param subnetIds One or more subnet IDs to be assigned to the subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * One or more subnet IDs to be assigned to the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-subnetids)
+   * @param subnetIds One or more subnet IDs to be assigned to the subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * One or more tags to be assigned to the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-tags)
+   * @param tags One or more tags to be assigned to the subnet group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * One or more tags to be assigned to the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-tags)
+   * @param tags One or more tags to be assigned to the subnet group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

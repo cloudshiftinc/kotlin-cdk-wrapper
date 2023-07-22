@@ -17,18 +17,36 @@ public class CfnPipeSelfManagedKafkaAccessConfigurationVpcPropertyDsl {
 
   private val _subnets: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroup Specifies the security groups associated with the stream.
+   * These security groups must all be in the same VPC. You can specify as many as five security
+   * groups. If you do not specify a security group, the default security group for the VPC is used.
+   */
   public fun securityGroup(vararg securityGroup: String) {
     _securityGroup.addAll(listOf(*securityGroup))
   }
 
+  /**
+   * @param securityGroup Specifies the security groups associated with the stream.
+   * These security groups must all be in the same VPC. You can specify as many as five security
+   * groups. If you do not specify a security group, the default security group for the VPC is used.
+   */
   public fun securityGroup(securityGroup: Collection<String>) {
     _securityGroup.addAll(securityGroup)
   }
 
+  /**
+   * @param subnets Specifies the subnets associated with the stream.
+   * These subnets must all be in the same VPC. You can specify as many as 16 subnets.
+   */
   public fun subnets(vararg subnets: String) {
     _subnets.addAll(listOf(*subnets))
   }
 
+  /**
+   * @param subnets Specifies the subnets associated with the stream.
+   * These subnets must all be in the same VPC. You can specify as many as 16 subnets.
+   */
   public fun subnets(subnets: Collection<String>) {
     _subnets.addAll(subnets)
   }

@@ -12,14 +12,23 @@ public class CfnModelQualityJobDefinitionModelQualityBaselineConfigPropertyDsl {
   private val cdkBuilder: CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.Builder =
       CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.builder()
 
+  /**
+   * @param baseliningJobName The name of the job that performs baselining for the monitoring job.
+   */
   public fun baseliningJobName(baseliningJobName: String) {
     cdkBuilder.baseliningJobName(baseliningJobName)
   }
 
+  /**
+   * @param constraintsResource The constraints resource for a monitoring job.
+   */
   public fun constraintsResource(constraintsResource: IResolvable) {
     cdkBuilder.constraintsResource(constraintsResource)
   }
 
+  /**
+   * @param constraintsResource The constraints resource for a monitoring job.
+   */
   public
       fun constraintsResource(constraintsResource: CfnModelQualityJobDefinition.ConstraintsResourceProperty) {
     cdkBuilder.constraintsResource(constraintsResource)

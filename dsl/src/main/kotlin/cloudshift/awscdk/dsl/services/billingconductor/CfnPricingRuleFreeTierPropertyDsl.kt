@@ -12,10 +12,16 @@ public class CfnPricingRuleFreeTierPropertyDsl {
   private val cdkBuilder: CfnPricingRule.FreeTierProperty.Builder =
       CfnPricingRule.FreeTierProperty.builder()
 
+  /**
+   * @param activated Activate or deactivate AWS Free Tier. 
+   */
   public fun activated(activated: Boolean) {
     cdkBuilder.activated(activated)
   }
 
+  /**
+   * @param activated Activate or deactivate AWS Free Tier. 
+   */
   public fun activated(activated: IResolvable) {
     cdkBuilder.activated(activated)
   }

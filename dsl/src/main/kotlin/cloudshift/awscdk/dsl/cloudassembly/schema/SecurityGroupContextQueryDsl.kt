@@ -10,26 +10,44 @@ import software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery
 public class SecurityGroupContextQueryDsl {
   private val cdkBuilder: SecurityGroupContextQuery.Builder = SecurityGroupContextQuery.builder()
 
+  /**
+   * @param account Query account. 
+   */
   public fun account(account: String) {
     cdkBuilder.account(account)
   }
 
+  /**
+   * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
+   */
   public fun lookupRoleArn(lookupRoleArn: String) {
     cdkBuilder.lookupRoleArn(lookupRoleArn)
   }
 
+  /**
+   * @param region Query region. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * @param securityGroupId Security group id.
+   */
   public fun securityGroupId(securityGroupId: String) {
     cdkBuilder.securityGroupId(securityGroupId)
   }
 
+  /**
+   * @param securityGroupName Security group name.
+   */
   public fun securityGroupName(securityGroupName: String) {
     cdkBuilder.securityGroupName(securityGroupName)
   }
 
+  /**
+   * @param vpcId VPC ID.
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

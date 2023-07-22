@@ -15,22 +15,44 @@ public class CfnApplicationWindowsEventPropertyDsl {
 
   private val _eventLevels: MutableList<String> = mutableListOf()
 
+  /**
+   * @param eventLevels The levels of event to log. 
+   * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` , `ERROR`
+   * , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event to log.
+   */
   public fun eventLevels(vararg eventLevels: String) {
     _eventLevels.addAll(listOf(*eventLevels))
   }
 
+  /**
+   * @param eventLevels The levels of event to log. 
+   * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` , `ERROR`
+   * , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event to log.
+   */
   public fun eventLevels(eventLevels: Collection<String>) {
     _eventLevels.addAll(eventLevels)
   }
 
+  /**
+   * @param eventName The type of Windows Events to log, equivalent to the Windows Event log channel
+   * name. 
+   * For example, System, Security, CustomEventName, and so on. This field is required for each type
+   * of Windows event to log.
+   */
   public fun eventName(eventName: String) {
     cdkBuilder.eventName(eventName)
   }
 
+  /**
+   * @param logGroupName The CloudWatch log group name to be associated with the monitored log. 
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }
 
+  /**
+   * @param patternSet The log pattern set.
+   */
   public fun patternSet(patternSet: String) {
     cdkBuilder.patternSet(patternSet)
   }

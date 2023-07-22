@@ -17,34 +17,58 @@ public class CfnDashboardPivotTableCellConditionalFormattingPropertyDsl {
 
   private val _scopes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param fieldId The field ID of the cell for conditional formatting. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param scope The scope of the cell for conditional formatting.
+   */
   public fun scope(scope: IResolvable) {
     cdkBuilder.scope(scope)
   }
 
+  /**
+   * @param scope The scope of the cell for conditional formatting.
+   */
   public fun scope(scope: CfnDashboard.PivotTableConditionalFormattingScopeProperty) {
     cdkBuilder.scope(scope)
   }
 
+  /**
+   * @param scopes A list of cell scopes for conditional formatting.
+   */
   public fun scopes(vararg scopes: Any) {
     _scopes.addAll(listOf(*scopes))
   }
 
+  /**
+   * @param scopes A list of cell scopes for conditional formatting.
+   */
   public fun scopes(scopes: Collection<Any>) {
     _scopes.addAll(scopes)
   }
 
+  /**
+   * @param scopes A list of cell scopes for conditional formatting.
+   */
   public fun scopes(scopes: IResolvable) {
     cdkBuilder.scopes(scopes)
   }
 
+  /**
+   * @param textFormat The text format of the cell for conditional formatting.
+   */
   public fun textFormat(textFormat: IResolvable) {
     cdkBuilder.textFormat(textFormat)
   }
 
+  /**
+   * @param textFormat The text format of the cell for conditional formatting.
+   */
   public fun textFormat(textFormat: CfnDashboard.TextConditionalFormatProperty) {
     cdkBuilder.textFormat(textFormat)
   }

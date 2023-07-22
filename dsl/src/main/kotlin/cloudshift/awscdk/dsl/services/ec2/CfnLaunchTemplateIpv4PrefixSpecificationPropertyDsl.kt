@@ -11,6 +11,12 @@ public class CfnLaunchTemplateIpv4PrefixSpecificationPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.Ipv4PrefixSpecificationProperty.Builder =
       CfnLaunchTemplate.Ipv4PrefixSpecificationProperty.builder()
 
+  /**
+   * @param ipv4Prefix The IPv4 prefix.
+   * For information, see [Assigning prefixes to Amazon EC2 network
+   * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+   * *Amazon Elastic Compute Cloud User Guide* .
+   */
   public fun ipv4Prefix(ipv4Prefix: String) {
     cdkBuilder.ipv4Prefix(ipv4Prefix)
   }

@@ -17,18 +17,34 @@ public class ApplicationConfigurationDsl {
 
   private val _nestedConfig: MutableList<ApplicationConfiguration> = mutableListOf()
 
+  /**
+   * @param classification The classification within a configuration. 
+   * Length Constraints: Minimum length of 1. Maximum length of 1024.
+   */
   public fun classification(classification: Classification) {
     cdkBuilder.classification(classification)
   }
 
+  /**
+   * @param nestedConfig A list of additional configurations to apply within a configuration object.
+   * Array Members: Maximum number of 100 items.
+   */
   public fun nestedConfig(nestedConfig: ApplicationConfigurationDsl.() -> Unit) {
     _nestedConfig.add(ApplicationConfigurationDsl().apply(nestedConfig).build())
   }
 
+  /**
+   * @param nestedConfig A list of additional configurations to apply within a configuration object.
+   * Array Members: Maximum number of 100 items.
+   */
   public fun nestedConfig(nestedConfig: Collection<ApplicationConfiguration>) {
     _nestedConfig.addAll(nestedConfig)
   }
 
+  /**
+   * @param properties A set of properties specified within a configuration classification.
+   * Map Entries: Maximum number of 100 items.
+   */
   public fun properties(properties: Map<String, String>) {
     cdkBuilder.properties(properties)
   }

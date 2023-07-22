@@ -17,18 +17,33 @@ public class CfnTemplateTemplateSourceAnalysisPropertyDsl {
 
   private val _dataSetReferences: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the resource. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param dataSetReferences A structure containing information about the dataset references used
+   * as placeholders in the template. 
+   */
   public fun dataSetReferences(vararg dataSetReferences: Any) {
     _dataSetReferences.addAll(listOf(*dataSetReferences))
   }
 
+  /**
+   * @param dataSetReferences A structure containing information about the dataset references used
+   * as placeholders in the template. 
+   */
   public fun dataSetReferences(dataSetReferences: Collection<Any>) {
     _dataSetReferences.addAll(dataSetReferences)
   }
 
+  /**
+   * @param dataSetReferences A structure containing information about the dataset references used
+   * as placeholders in the template. 
+   */
   public fun dataSetReferences(dataSetReferences: IResolvable) {
     cdkBuilder.dataSetReferences(dataSetReferences)
   }

@@ -19,26 +19,57 @@ public class CfnSitePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description of your site.
+   * Constraints: Maximum length of 256 characters.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param globalNetworkId The ID of the global network. 
+   */
   public fun globalNetworkId(globalNetworkId: String) {
     cdkBuilder.globalNetworkId(globalNetworkId)
   }
 
+  /**
+   * @param location The site location.
+   * This information is used for visualization in the Network Manager console. If you specify the
+   * address, the latitude and longitude are automatically calculated.
+   *
+   * * `Address` : The physical address of the site.
+   * * `Latitude` : The latitude of the site.
+   * * `Longitude` : The longitude of the site.
+   */
   public fun location(location: IResolvable) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * @param location The site location.
+   * This information is used for visualization in the Network Manager console. If you specify the
+   * address, the latitude and longitude are automatically calculated.
+   *
+   * * `Address` : The physical address of the site.
+   * * `Latitude` : The latitude of the site.
+   * * `Longitude` : The longitude of the site.
+   */
   public fun location(location: CfnSite.LocationProperty) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * @param tags The tags for the site.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the site.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

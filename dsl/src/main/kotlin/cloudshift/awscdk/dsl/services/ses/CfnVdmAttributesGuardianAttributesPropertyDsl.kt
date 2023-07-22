@@ -11,6 +11,12 @@ public class CfnVdmAttributesGuardianAttributesPropertyDsl {
   private val cdkBuilder: CfnVdmAttributes.GuardianAttributesProperty.Builder =
       CfnVdmAttributes.GuardianAttributesProperty.builder()
 
+  /**
+   * @param optimizedSharedDelivery Specifies the status of your VDM optimized shared delivery. Can
+   * be one of the following:.
+   * * `ENABLED` – Amazon SES enables optimized shared delivery for your account.
+   * * `DISABLED` – Amazon SES disables optimized shared delivery for your account.
+   */
   public fun optimizedSharedDelivery(optimizedSharedDelivery: String) {
     cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
   }

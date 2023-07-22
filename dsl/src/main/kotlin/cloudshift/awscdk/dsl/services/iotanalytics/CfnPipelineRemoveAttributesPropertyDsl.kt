@@ -15,18 +15,30 @@ public class CfnPipelineRemoveAttributesPropertyDsl {
 
   private val _attributes: MutableList<String> = mutableListOf()
 
+  /**
+   * @param attributes A list of 1-50 attributes to remove from the message. 
+   */
   public fun attributes(vararg attributes: String) {
     _attributes.addAll(listOf(*attributes))
   }
 
+  /**
+   * @param attributes A list of 1-50 attributes to remove from the message. 
+   */
   public fun attributes(attributes: Collection<String>) {
     _attributes.addAll(attributes)
   }
 
+  /**
+   * @param name The name of the 'removeAttributes' activity. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param next The next activity in the pipeline.
+   */
   public fun next(next: String) {
     cdkBuilder.next(next)
   }

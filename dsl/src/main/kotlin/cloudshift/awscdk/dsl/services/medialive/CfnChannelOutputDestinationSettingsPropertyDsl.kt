@@ -11,18 +11,34 @@ public class CfnChannelOutputDestinationSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.OutputDestinationSettingsProperty.Builder =
       CfnChannel.OutputDestinationSettingsProperty.builder()
 
+  /**
+   * @param passwordParam The password parameter that holds the password for accessing the
+   * downstream system.
+   * This password parameter applies only if the downstream system requires credentials.
+   */
   public fun passwordParam(passwordParam: String) {
     cdkBuilder.passwordParam(passwordParam)
   }
 
+  /**
+   * @param streamName The stream name for the content.
+   * This applies only to RTMP outputs.
+   */
   public fun streamName(streamName: String) {
     cdkBuilder.streamName(streamName)
   }
 
+  /**
+   * @param url The URL for the destination.
+   */
   public fun url(url: String) {
     cdkBuilder.url(url)
   }
 
+  /**
+   * @param username The user name to connect to the downstream system.
+   * This applies only if the downstream system requires credentials.
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

@@ -11,18 +11,30 @@ import software.amazon.awscdk.cloudassembly.schema.BootstrapRole
 public class BootstrapRoleDsl {
   private val cdkBuilder: BootstrapRole.Builder = BootstrapRole.builder()
 
+  /**
+   * @param arn The ARN of the IAM role created as part of bootrapping e.g. lookupRoleArn. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param assumeRoleExternalId External ID to use when assuming the bootstrap role.
+   */
   public fun assumeRoleExternalId(assumeRoleExternalId: String) {
     cdkBuilder.assumeRoleExternalId(assumeRoleExternalId)
   }
 
+  /**
+   * @param bootstrapStackVersionSsmParameter Name of SSM parameter with bootstrap stack version.
+   */
   public fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
     cdkBuilder.bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter)
   }
 
+  /**
+   * @param requiresBootstrapStackVersion Version of bootstrap stack required to use this role.
+   */
   public fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
     cdkBuilder.requiresBootstrapStackVersion(requiresBootstrapStackVersion)
   }

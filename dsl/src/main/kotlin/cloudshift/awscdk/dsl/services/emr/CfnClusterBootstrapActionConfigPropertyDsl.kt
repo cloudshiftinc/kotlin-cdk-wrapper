@@ -12,14 +12,23 @@ public class CfnClusterBootstrapActionConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.BootstrapActionConfigProperty.Builder =
       CfnCluster.BootstrapActionConfigProperty.builder()
 
+  /**
+   * @param name The name of the bootstrap action. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param scriptBootstrapAction The script run by the bootstrap action. 
+   */
   public fun scriptBootstrapAction(scriptBootstrapAction: IResolvable) {
     cdkBuilder.scriptBootstrapAction(scriptBootstrapAction)
   }
 
+  /**
+   * @param scriptBootstrapAction The script run by the bootstrap action. 
+   */
   public
       fun scriptBootstrapAction(scriptBootstrapAction: CfnCluster.ScriptBootstrapActionConfigProperty) {
     cdkBuilder.scriptBootstrapAction(scriptBootstrapAction)

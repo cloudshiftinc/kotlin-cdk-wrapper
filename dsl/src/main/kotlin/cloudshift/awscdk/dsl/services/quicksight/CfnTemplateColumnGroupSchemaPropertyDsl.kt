@@ -17,18 +17,33 @@ public class CfnTemplateColumnGroupSchemaPropertyDsl {
 
   private val _columnGroupColumnSchemaList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param columnGroupColumnSchemaList A structure containing the list of schemas for column group
+   * columns.
+   */
   public fun columnGroupColumnSchemaList(vararg columnGroupColumnSchemaList: Any) {
     _columnGroupColumnSchemaList.addAll(listOf(*columnGroupColumnSchemaList))
   }
 
+  /**
+   * @param columnGroupColumnSchemaList A structure containing the list of schemas for column group
+   * columns.
+   */
   public fun columnGroupColumnSchemaList(columnGroupColumnSchemaList: Collection<Any>) {
     _columnGroupColumnSchemaList.addAll(columnGroupColumnSchemaList)
   }
 
+  /**
+   * @param columnGroupColumnSchemaList A structure containing the list of schemas for column group
+   * columns.
+   */
   public fun columnGroupColumnSchemaList(columnGroupColumnSchemaList: IResolvable) {
     cdkBuilder.columnGroupColumnSchemaList(columnGroupColumnSchemaList)
   }
 
+  /**
+   * @param name The name of the column group schema.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

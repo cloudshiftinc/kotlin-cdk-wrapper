@@ -14,14 +14,32 @@ public class CfnDeploymentDsl(
 ) {
   private val cdkBuilder: CfnDeployment.Builder = CfnDeployment.Builder.create(scope, id)
 
+  /**
+   * The API identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html#cfn-apigatewayv2-deployment-apiid)
+   * @param apiId The API identifier. 
+   */
   public fun apiId(apiId: String) {
     cdkBuilder.apiId(apiId)
   }
 
+  /**
+   * The description for the deployment resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html#cfn-apigatewayv2-deployment-description)
+   * @param description The description for the deployment resource. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of an existing stage to associate with the deployment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html#cfn-apigatewayv2-deployment-stagename)
+   * @param stageName The name of an existing stage to associate with the deployment. 
+   */
   public fun stageName(stageName: String) {
     cdkBuilder.stageName(stageName)
   }

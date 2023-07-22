@@ -16,18 +16,30 @@ public class CfnConnectorVpcPropertyDsl {
 
   private val _subnets: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroups The security groups for the connector. 
+   */
   public fun securityGroups(vararg securityGroups: String) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The security groups for the connector. 
+   */
   public fun securityGroups(securityGroups: Collection<String>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  /**
+   * @param subnets The subnets for the connector. 
+   */
   public fun subnets(vararg subnets: String) {
     _subnets.addAll(listOf(*subnets))
   }
 
+  /**
+   * @param subnets The subnets for the connector. 
+   */
   public fun subnets(subnets: Collection<String>) {
     _subnets.addAll(subnets)
   }

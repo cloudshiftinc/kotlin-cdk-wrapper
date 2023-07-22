@@ -13,14 +13,25 @@ public class CfnDomainEncryptionAtRestOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.EncryptionAtRestOptionsProperty.Builder =
       CfnDomain.EncryptionAtRestOptionsProperty.builder()
 
+  /**
+   * @param enabled Specify `true` to enable encryption at rest.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Specify `true` to enable encryption at rest.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param kmsKeyId The KMS key ID.
+   * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
+   * rest.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }

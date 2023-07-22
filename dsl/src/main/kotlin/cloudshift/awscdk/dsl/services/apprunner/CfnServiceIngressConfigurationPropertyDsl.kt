@@ -12,10 +12,20 @@ public class CfnServiceIngressConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.IngressConfigurationProperty.Builder =
       CfnService.IngressConfigurationProperty.builder()
 
+  /**
+   * @param isPubliclyAccessible Specifies whether your App Runner service is publicly accessible. 
+   * To make the service publicly accessible set it to `True` . To make the service privately
+   * accessible, from only within an Amazon VPC set it to `False` .
+   */
   public fun isPubliclyAccessible(isPubliclyAccessible: Boolean) {
     cdkBuilder.isPubliclyAccessible(isPubliclyAccessible)
   }
 
+  /**
+   * @param isPubliclyAccessible Specifies whether your App Runner service is publicly accessible. 
+   * To make the service publicly accessible set it to `True` . To make the service privately
+   * accessible, from only within an Amazon VPC set it to `False` .
+   */
   public fun isPubliclyAccessible(isPubliclyAccessible: IResolvable) {
     cdkBuilder.isPubliclyAccessible(isPubliclyAccessible)
   }

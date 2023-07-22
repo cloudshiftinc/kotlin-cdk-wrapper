@@ -11,6 +11,9 @@ public class CfnPartnerAccountSidewalkUpdateAccountPropertyDsl {
   private val cdkBuilder: CfnPartnerAccount.SidewalkUpdateAccountProperty.Builder =
       CfnPartnerAccount.SidewalkUpdateAccountProperty.builder()
 
+  /**
+   * @param appServerPrivateKey The new Sidewalk application server private key.
+   */
   public fun appServerPrivateKey(appServerPrivateKey: String) {
     cdkBuilder.appServerPrivateKey(appServerPrivateKey)
   }

@@ -11,6 +11,10 @@ public class CfnVirtualNodeVirtualNodeTcpConnectionPoolPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty.Builder =
       CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty.builder()
 
+  /**
+   * @param maxConnections Maximum number of outbound TCP connections Envoy can establish
+   * concurrently with all hosts in upstream cluster. 
+   */
   public fun maxConnections(maxConnections: Number) {
     cdkBuilder.maxConnections(maxConnections)
   }

@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig
 public class CanaryTrafficRoutingConfigDsl {
   private val cdkBuilder: CanaryTrafficRoutingConfig.Builder = CanaryTrafficRoutingConfig.builder()
 
+  /**
+   * @param canaryInterval The number of minutes between the first and second traffic shifts of a
+   * `TimeBasedCanary` deployment. 
+   */
   public fun canaryInterval(canaryInterval: Number) {
     cdkBuilder.canaryInterval(canaryInterval)
   }
 
+  /**
+   * @param canaryPercentage The percentage of traffic to shift in the first increment of a
+   * `TimeBasedCanary` deployment. 
+   */
   public fun canaryPercentage(canaryPercentage: Number) {
     cdkBuilder.canaryPercentage(canaryPercentage)
   }

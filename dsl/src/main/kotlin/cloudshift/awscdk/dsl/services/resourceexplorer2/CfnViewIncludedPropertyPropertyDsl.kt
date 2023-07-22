@@ -11,6 +11,9 @@ public class CfnViewIncludedPropertyPropertyDsl {
   private val cdkBuilder: CfnView.IncludedPropertyProperty.Builder =
       CfnView.IncludedPropertyProperty.builder()
 
+  /**
+   * @param name The name of the property that is included in this view. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

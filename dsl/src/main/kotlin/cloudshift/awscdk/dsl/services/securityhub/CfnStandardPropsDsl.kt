@@ -16,18 +16,33 @@ public class CfnStandardPropsDsl {
 
   private val _disabledStandardsControls: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
+   */
   public fun disabledStandardsControls(vararg disabledStandardsControls: Any) {
     _disabledStandardsControls.addAll(listOf(*disabledStandardsControls))
   }
 
+  /**
+   * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
+   */
   public fun disabledStandardsControls(disabledStandardsControls: Collection<Any>) {
     _disabledStandardsControls.addAll(disabledStandardsControls)
   }
 
+  /**
+   * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
+   */
   public fun disabledStandardsControls(disabledStandardsControls: IResolvable) {
     cdkBuilder.disabledStandardsControls(disabledStandardsControls)
   }
 
+  /**
+   * @param standardsArn The ARN of the standard that you want to enable. 
+   * To view a list of available Security Hub standards and their ARNs, use the
+   * [`DescribeStandards`](https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html)
+   * API operation.
+   */
   public fun standardsArn(standardsArn: String) {
     cdkBuilder.standardsArn(standardsArn)
   }

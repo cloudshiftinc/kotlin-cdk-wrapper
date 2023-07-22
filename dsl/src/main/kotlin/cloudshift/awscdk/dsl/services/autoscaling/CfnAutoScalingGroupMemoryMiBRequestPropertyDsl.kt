@@ -11,10 +11,16 @@ public class CfnAutoScalingGroupMemoryMiBRequestPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.MemoryMiBRequestProperty.Builder =
       CfnAutoScalingGroup.MemoryMiBRequestProperty.builder()
 
+  /**
+   * @param max The memory maximum in MiB.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The memory minimum in MiB.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

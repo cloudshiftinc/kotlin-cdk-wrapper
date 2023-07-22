@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.detective.CfnOrganizationAdminProps
 public class CfnOrganizationAdminPropsDsl {
   private val cdkBuilder: CfnOrganizationAdminProps.Builder = CfnOrganizationAdminProps.builder()
 
+  /**
+   * @param accountId The AWS account identifier of the account to designate as the Detective
+   * administrator account for the organization. 
+   */
   public fun accountId(accountId: String) {
     cdkBuilder.accountId(accountId)
   }

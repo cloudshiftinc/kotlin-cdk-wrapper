@@ -13,6 +13,15 @@ public class CfnEipEndpointDsl(
 ) {
   private val cdkBuilder: CfnEipEndpoint.Builder = CfnEipEndpoint.Builder.create(eip)
 
+  /**
+   * Endpoint weight across all endpoints in the group.
+   *
+   * Must be a value between 0 and 255.
+   *
+   * Default: 128
+   *
+   * @param weight Endpoint weight across all endpoints in the group. 
+   */
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)
   }

@@ -11,10 +11,16 @@ import software.constructs.IDependable
 public class AddToPrincipalPolicyResultDsl {
   private val cdkBuilder: AddToPrincipalPolicyResult.Builder = AddToPrincipalPolicyResult.builder()
 
+  /**
+   * @param policyDependable Dependable which allows depending on the policy change being applied.
+   */
   public fun policyDependable(policyDependable: IDependable) {
     cdkBuilder.policyDependable(policyDependable)
   }
 
+  /**
+   * @param statementAdded Whether the statement was added to the identity's policies. 
+   */
   public fun statementAdded(statementAdded: Boolean) {
     cdkBuilder.statementAdded(statementAdded)
   }

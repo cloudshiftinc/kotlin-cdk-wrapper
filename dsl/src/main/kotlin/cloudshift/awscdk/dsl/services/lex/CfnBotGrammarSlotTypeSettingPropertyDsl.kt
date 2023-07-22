@@ -11,10 +11,16 @@ public class CfnBotGrammarSlotTypeSettingPropertyDsl {
   private val cdkBuilder: CfnBot.GrammarSlotTypeSettingProperty.Builder =
       CfnBot.GrammarSlotTypeSettingProperty.builder()
 
+  /**
+   * @param source The source of the grammar used to create the slot type.
+   */
   public fun source(source: IResolvable) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param source The source of the grammar used to create the slot type.
+   */
   public fun source(source: CfnBot.GrammarSlotTypeSourceProperty) {
     cdkBuilder.source(source)
   }

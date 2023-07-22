@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.cloudfront.CfnKeyGroupProps
 public class CfnKeyGroupPropsDsl {
   private val cdkBuilder: CfnKeyGroupProps.Builder = CfnKeyGroupProps.builder()
 
+  /**
+   * @param keyGroupConfig The key group configuration. 
+   */
   public fun keyGroupConfig(keyGroupConfig: IResolvable) {
     cdkBuilder.keyGroupConfig(keyGroupConfig)
   }
 
+  /**
+   * @param keyGroupConfig The key group configuration. 
+   */
   public fun keyGroupConfig(keyGroupConfig: CfnKeyGroup.KeyGroupConfigProperty) {
     cdkBuilder.keyGroupConfig(keyGroupConfig)
   }

@@ -21,26 +21,71 @@ public class CfnUserPoolResourceServerDsl(
 
   private val _scopes: MutableList<Any> = mutableListOf()
 
+  /**
+   * A unique resource server identifier for the resource server.
+   *
+   * This could be an HTTPS endpoint where the resource server is located. For example:
+   * `https://my-weather-api.example.com` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-identifier)
+   * @param identifier A unique resource server identifier for the resource server. 
+   */
   public fun identifier(identifier: String) {
     cdkBuilder.identifier(identifier)
   }
 
+  /**
+   * A friendly name for the resource server.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-name)
+   * @param name A friendly name for the resource server. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * A list of scopes.
+   *
+   * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-scopes)
+   * @param scopes A list of scopes. 
+   */
   public fun scopes(vararg scopes: Any) {
     _scopes.addAll(listOf(*scopes))
   }
 
+  /**
+   * A list of scopes.
+   *
+   * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-scopes)
+   * @param scopes A list of scopes. 
+   */
   public fun scopes(scopes: Collection<Any>) {
     _scopes.addAll(scopes)
   }
 
+  /**
+   * A list of scopes.
+   *
+   * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-scopes)
+   * @param scopes A list of scopes. 
+   */
   public fun scopes(scopes: IResolvable) {
     cdkBuilder.scopes(scopes)
   }
 
+  /**
+   * The user pool ID for the user pool.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-userpoolid)
+   * @param userPoolId The user pool ID for the user pool. 
+   */
   public fun userPoolId(userPoolId: String) {
     cdkBuilder.userPoolId(userPoolId)
   }

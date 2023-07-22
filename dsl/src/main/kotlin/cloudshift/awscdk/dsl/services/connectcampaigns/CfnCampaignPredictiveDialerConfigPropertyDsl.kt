@@ -11,6 +11,9 @@ public class CfnCampaignPredictiveDialerConfigPropertyDsl {
   private val cdkBuilder: CfnCampaign.PredictiveDialerConfigProperty.Builder =
       CfnCampaign.PredictiveDialerConfigProperty.builder()
 
+  /**
+   * @param bandwidthAllocation Bandwidth allocation for the predictive dialer. 
+   */
   public fun bandwidthAllocation(bandwidthAllocation: Number) {
     cdkBuilder.bandwidthAllocation(bandwidthAllocation)
   }

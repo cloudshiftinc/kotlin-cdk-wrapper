@@ -10,18 +10,30 @@ import software.amazon.awscdk.services.ssmcontacts.CfnPlan
 public class CfnPlanTargetsPropertyDsl {
   private val cdkBuilder: CfnPlan.TargetsProperty.Builder = CfnPlan.TargetsProperty.builder()
 
+  /**
+   * @param channelTargetInfo Information about the contact channel that Incident Manager engages.
+   */
   public fun channelTargetInfo(channelTargetInfo: IResolvable) {
     cdkBuilder.channelTargetInfo(channelTargetInfo)
   }
 
+  /**
+   * @param channelTargetInfo Information about the contact channel that Incident Manager engages.
+   */
   public fun channelTargetInfo(channelTargetInfo: CfnPlan.ChannelTargetInfoProperty) {
     cdkBuilder.channelTargetInfo(channelTargetInfo)
   }
 
+  /**
+   * @param contactTargetInfo Information about the contact that Incident Manager engages.
+   */
   public fun contactTargetInfo(contactTargetInfo: IResolvable) {
     cdkBuilder.contactTargetInfo(contactTargetInfo)
   }
 
+  /**
+   * @param contactTargetInfo Information about the contact that Incident Manager engages.
+   */
   public fun contactTargetInfo(contactTargetInfo: CfnPlan.ContactTargetInfoProperty) {
     cdkBuilder.contactTargetInfo(contactTargetInfo)
   }

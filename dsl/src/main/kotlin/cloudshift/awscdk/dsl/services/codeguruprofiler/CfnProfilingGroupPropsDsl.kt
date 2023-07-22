@@ -22,43 +22,104 @@ public class CfnProfilingGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun agentPermissions(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param agentPermissions The agent permissions attached to this profiling group.
+   * This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform actions
+   * required by the profiling agent. The Json consists of key `Principals` .
+   *
+   * *Principals* : A list of string ARNs for the roles and users you want to grant access to the
+   * profiling group. Wildcards are not supported in the ARNs. You are allowed to provide up to 50
+   * ARNs. An empty list is not permitted. This is a required key.
+   *
+   * For more information, see [Resource-based policies in CodeGuru
+   * Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in
+   * the *Amazon CodeGuru Profiler user guide* ,
+   * [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html)
+   * , and
+   * [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)
+   * .
+   */
+  public fun agentPermissions(agentPermissions: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(agentPermissions)
     cdkBuilder.agentPermissions(builder.map)
   }
 
+  /**
+   * @param agentPermissions The agent permissions attached to this profiling group.
+   * This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform actions
+   * required by the profiling agent. The Json consists of key `Principals` .
+   *
+   * *Principals* : A list of string ARNs for the roles and users you want to grant access to the
+   * profiling group. Wildcards are not supported in the ARNs. You are allowed to provide up to 50
+   * ARNs. An empty list is not permitted. This is a required key.
+   *
+   * For more information, see [Resource-based policies in CodeGuru
+   * Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in
+   * the *Amazon CodeGuru Profiler user guide* ,
+   * [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html)
+   * , and
+   * [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)
+   * .
+   */
   public fun agentPermissions(agentPermissions: Any) {
     cdkBuilder.agentPermissions(agentPermissions)
   }
 
+  /**
+   * @param anomalyDetectionNotificationConfiguration Adds anomaly notifications for a profiling
+   * group.
+   */
   public fun anomalyDetectionNotificationConfiguration(vararg
       anomalyDetectionNotificationConfiguration: Any) {
     _anomalyDetectionNotificationConfiguration.addAll(listOf(*anomalyDetectionNotificationConfiguration))
   }
 
+  /**
+   * @param anomalyDetectionNotificationConfiguration Adds anomaly notifications for a profiling
+   * group.
+   */
   public
       fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: Collection<Any>) {
     _anomalyDetectionNotificationConfiguration.addAll(anomalyDetectionNotificationConfiguration)
   }
 
+  /**
+   * @param anomalyDetectionNotificationConfiguration Adds anomaly notifications for a profiling
+   * group.
+   */
   public
       fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
     cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
   }
 
+  /**
+   * @param computePlatform The compute platform of the profiling group.
+   * Use `AWSLambda` if your application runs on AWS Lambda. Use `Default` if your application runs
+   * on a compute platform that is not AWS Lambda , such an Amazon EC2 instance, an on-premises server,
+   * or a different platform. If not specified, `Default` is used. This property is immutable.
+   */
   public fun computePlatform(computePlatform: String) {
     cdkBuilder.computePlatform(computePlatform)
   }
 
+  /**
+   * @param profilingGroupName The name of the profiling group. 
+   */
   public fun profilingGroupName(profilingGroupName: String) {
     cdkBuilder.profilingGroupName(profilingGroupName)
   }
 
+  /**
+   * @param tags A list of tags to add to the created profiling group.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of tags to add to the created profiling group.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

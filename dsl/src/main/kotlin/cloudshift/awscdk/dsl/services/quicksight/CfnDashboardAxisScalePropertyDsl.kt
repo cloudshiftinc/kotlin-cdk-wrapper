@@ -11,18 +11,30 @@ public class CfnDashboardAxisScalePropertyDsl {
   private val cdkBuilder: CfnDashboard.AxisScaleProperty.Builder =
       CfnDashboard.AxisScaleProperty.builder()
 
+  /**
+   * @param linear The linear axis scale setup.
+   */
   public fun linear(linear: IResolvable) {
     cdkBuilder.linear(linear)
   }
 
+  /**
+   * @param linear The linear axis scale setup.
+   */
   public fun linear(linear: CfnDashboard.AxisLinearScaleProperty) {
     cdkBuilder.linear(linear)
   }
 
+  /**
+   * @param logarithmic The logarithmic axis scale setup.
+   */
   public fun logarithmic(logarithmic: IResolvable) {
     cdkBuilder.logarithmic(logarithmic)
   }
 
+  /**
+   * @param logarithmic The logarithmic axis scale setup.
+   */
   public fun logarithmic(logarithmic: CfnDashboard.AxisLogarithmicScaleProperty) {
     cdkBuilder.logarithmic(logarithmic)
   }

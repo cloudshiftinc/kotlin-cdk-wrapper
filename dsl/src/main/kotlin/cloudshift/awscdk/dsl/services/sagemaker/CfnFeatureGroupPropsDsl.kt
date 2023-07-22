@@ -22,62 +22,131 @@ public class CfnFeatureGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A free form description of a `FeatureGroup` .
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param eventTimeFeatureName The name of the feature that stores the `EventTime` of a Record in
+   * a `FeatureGroup` . 
+   * A `EventTime` is point in time when a new event occurs that corresponds to the creation or
+   * update of a `Record` in `FeatureGroup` . All `Records` in the `FeatureGroup` must have a
+   * corresponding `EventTime` .
+   */
   public fun eventTimeFeatureName(eventTimeFeatureName: String) {
     cdkBuilder.eventTimeFeatureName(eventTimeFeatureName)
   }
 
+  /**
+   * @param featureDefinitions A list of `Feature` s. Each `Feature` must include a `FeatureName`
+   * and a `FeatureType` . 
+   * Valid `FeatureType` s are `Integral` , `Fractional` and `String` .
+   *
+   * `FeatureName` s cannot be any of the following: `is_deleted` , `write_time` ,
+   * `api_invocation_time` .
+   *
+   * You can create up to 2,500 `FeatureDefinition` s per `FeatureGroup` .
+   */
   public fun featureDefinitions(vararg featureDefinitions: Any) {
     _featureDefinitions.addAll(listOf(*featureDefinitions))
   }
 
+  /**
+   * @param featureDefinitions A list of `Feature` s. Each `Feature` must include a `FeatureName`
+   * and a `FeatureType` . 
+   * Valid `FeatureType` s are `Integral` , `Fractional` and `String` .
+   *
+   * `FeatureName` s cannot be any of the following: `is_deleted` , `write_time` ,
+   * `api_invocation_time` .
+   *
+   * You can create up to 2,500 `FeatureDefinition` s per `FeatureGroup` .
+   */
   public fun featureDefinitions(featureDefinitions: Collection<Any>) {
     _featureDefinitions.addAll(featureDefinitions)
   }
 
+  /**
+   * @param featureDefinitions A list of `Feature` s. Each `Feature` must include a `FeatureName`
+   * and a `FeatureType` . 
+   * Valid `FeatureType` s are `Integral` , `Fractional` and `String` .
+   *
+   * `FeatureName` s cannot be any of the following: `is_deleted` , `write_time` ,
+   * `api_invocation_time` .
+   *
+   * You can create up to 2,500 `FeatureDefinition` s per `FeatureGroup` .
+   */
   public fun featureDefinitions(featureDefinitions: IResolvable) {
     cdkBuilder.featureDefinitions(featureDefinitions)
   }
 
+  /**
+   * @param featureGroupName The name of the `FeatureGroup` . 
+   */
   public fun featureGroupName(featureGroupName: String) {
     cdkBuilder.featureGroupName(featureGroupName)
   }
 
-  public fun offlineStoreConfig(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param offlineStoreConfig The configuration of an `OfflineStore` .
+   */
+  public fun offlineStoreConfig(offlineStoreConfig: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(offlineStoreConfig)
     cdkBuilder.offlineStoreConfig(builder.map)
   }
 
+  /**
+   * @param offlineStoreConfig The configuration of an `OfflineStore` .
+   */
   public fun offlineStoreConfig(offlineStoreConfig: Any) {
     cdkBuilder.offlineStoreConfig(offlineStoreConfig)
   }
 
-  public fun onlineStoreConfig(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param onlineStoreConfig The configuration of an `OnlineStore` .
+   */
+  public fun onlineStoreConfig(onlineStoreConfig: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(onlineStoreConfig)
     cdkBuilder.onlineStoreConfig(builder.map)
   }
 
+  /**
+   * @param onlineStoreConfig The configuration of an `OnlineStore` .
+   */
   public fun onlineStoreConfig(onlineStoreConfig: Any) {
     cdkBuilder.onlineStoreConfig(onlineStoreConfig)
   }
 
+  /**
+   * @param recordIdentifierFeatureName The name of the `Feature` whose value uniquely identifies a
+   * `Record` defined in the `FeatureGroup` `FeatureDefinitions` . 
+   */
   public fun recordIdentifierFeatureName(recordIdentifierFeatureName: String) {
     cdkBuilder.recordIdentifierFeatureName(recordIdentifierFeatureName)
   }
 
+  /**
+   * @param roleArn The Amazon Resource Name (ARN) of the IAM execution role used to create the
+   * feature group.
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param tags Tags used to define a `FeatureGroup` .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Tags used to define a `FeatureGroup` .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

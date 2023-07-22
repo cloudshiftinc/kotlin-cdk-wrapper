@@ -11,6 +11,10 @@ public class CfnIndexServerSideEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnIndex.ServerSideEncryptionConfigurationProperty.Builder =
       CfnIndex.ServerSideEncryptionConfigurationProperty.builder()
 
+  /**
+   * @param kmsKeyId The identifier of the AWS KMS key .
+   * Amazon Kendra doesn't support asymmetric keys.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }

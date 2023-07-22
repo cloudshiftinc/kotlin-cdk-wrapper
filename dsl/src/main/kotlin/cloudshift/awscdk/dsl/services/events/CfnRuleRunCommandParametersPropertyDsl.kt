@@ -16,14 +16,26 @@ public class CfnRuleRunCommandParametersPropertyDsl {
 
   private val _runCommandTargets: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param runCommandTargets Currently, we support including only one RunCommandTarget block, which
+   * specifies either an array of InstanceIds or a tag. 
+   */
   public fun runCommandTargets(vararg runCommandTargets: Any) {
     _runCommandTargets.addAll(listOf(*runCommandTargets))
   }
 
+  /**
+   * @param runCommandTargets Currently, we support including only one RunCommandTarget block, which
+   * specifies either an array of InstanceIds or a tag. 
+   */
   public fun runCommandTargets(runCommandTargets: Collection<Any>) {
     _runCommandTargets.addAll(runCommandTargets)
   }
 
+  /**
+   * @param runCommandTargets Currently, we support including only one RunCommandTarget block, which
+   * specifies either an array of InstanceIds or a tag. 
+   */
   public fun runCommandTargets(runCommandTargets: IResolvable) {
     cdkBuilder.runCommandTargets(runCommandTargets)
   }

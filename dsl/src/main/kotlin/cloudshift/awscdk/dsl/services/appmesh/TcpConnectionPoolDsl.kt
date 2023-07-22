@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.appmesh.TcpConnectionPool
 public class TcpConnectionPoolDsl {
   private val cdkBuilder: TcpConnectionPool.Builder = TcpConnectionPool.builder()
 
+  /**
+   * @param maxConnections The maximum connections in the pool. 
+   */
   public fun maxConnections(maxConnections: Number) {
     cdkBuilder.maxConnections(maxConnections)
   }

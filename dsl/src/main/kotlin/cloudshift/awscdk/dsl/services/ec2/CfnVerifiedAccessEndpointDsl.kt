@@ -26,76 +26,193 @@ public class CfnVerifiedAccessEndpointDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The DNS name for users to reach your application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-applicationdomain)
+   * @param applicationDomain The DNS name for users to reach your application. 
+   */
   public fun applicationDomain(applicationDomain: String) {
     cdkBuilder.applicationDomain(applicationDomain)
   }
 
+  /**
+   * The type of attachment used to provide connectivity between the AWS Verified Access endpoint
+   * and the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-attachmenttype)
+   * @param attachmentType The type of attachment used to provide connectivity between the AWS
+   * Verified Access endpoint and the application. 
+   */
   public fun attachmentType(attachmentType: String) {
     cdkBuilder.attachmentType(attachmentType)
   }
 
+  /**
+   * A description for the AWS Verified Access endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-description)
+   * @param description A description for the AWS Verified Access endpoint. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The ARN of a public TLS/SSL certificate imported into or created with ACM.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-domaincertificatearn)
+   * @param domainCertificateArn The ARN of a public TLS/SSL certificate imported into or created
+   * with ACM. 
+   */
   public fun domainCertificateArn(domainCertificateArn: String) {
     cdkBuilder.domainCertificateArn(domainCertificateArn)
   }
 
+  /**
+   * A custom identifier that is prepended to the DNS name that is generated for the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-endpointdomainprefix)
+   * @param endpointDomainPrefix A custom identifier that is prepended to the DNS name that is
+   * generated for the endpoint. 
+   */
   public fun endpointDomainPrefix(endpointDomainPrefix: String) {
     cdkBuilder.endpointDomainPrefix(endpointDomainPrefix)
   }
 
+  /**
+   * The type of AWS Verified Access endpoint.
+   *
+   * Incoming application requests will be sent to an IP address, load balancer or a network
+   * interface depending on the endpoint type specified.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-endpointtype)
+   * @param endpointType The type of AWS Verified Access endpoint. 
+   */
   public fun endpointType(endpointType: String) {
     cdkBuilder.endpointType(endpointType)
   }
 
+  /**
+   * The load balancer details if creating the AWS Verified Access endpoint as `load-balancer` type.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions)
+   * @param loadBalancerOptions The load balancer details if creating the AWS Verified Access
+   * endpoint as `load-balancer` type. 
+   */
   public fun loadBalancerOptions(loadBalancerOptions: IResolvable) {
     cdkBuilder.loadBalancerOptions(loadBalancerOptions)
   }
 
+  /**
+   * The load balancer details if creating the AWS Verified Access endpoint as `load-balancer` type.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions)
+   * @param loadBalancerOptions The load balancer details if creating the AWS Verified Access
+   * endpoint as `load-balancer` type. 
+   */
   public
       fun loadBalancerOptions(loadBalancerOptions: CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty) {
     cdkBuilder.loadBalancerOptions(loadBalancerOptions)
   }
 
+  /**
+   * The options for network-interface type endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-networkinterfaceoptions)
+   * @param networkInterfaceOptions The options for network-interface type endpoint. 
+   */
   public fun networkInterfaceOptions(networkInterfaceOptions: IResolvable) {
     cdkBuilder.networkInterfaceOptions(networkInterfaceOptions)
   }
 
+  /**
+   * The options for network-interface type endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-networkinterfaceoptions)
+   * @param networkInterfaceOptions The options for network-interface type endpoint. 
+   */
   public
       fun networkInterfaceOptions(networkInterfaceOptions: CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty) {
     cdkBuilder.networkInterfaceOptions(networkInterfaceOptions)
   }
 
+  /**
+   * The Verified Access policy document.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-policydocument)
+   * @param policyDocument The Verified Access policy document. 
+   */
   public fun policyDocument(policyDocument: String) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * The status of the Verified Access policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-policyenabled)
+   * @param policyEnabled The status of the Verified Access policy. 
+   */
   public fun policyEnabled(policyEnabled: Boolean) {
     cdkBuilder.policyEnabled(policyEnabled)
   }
 
+  /**
+   * The status of the Verified Access policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-policyenabled)
+   * @param policyEnabled The status of the Verified Access policy. 
+   */
   public fun policyEnabled(policyEnabled: IResolvable) {
     cdkBuilder.policyEnabled(policyEnabled)
   }
 
+  /**
+   * The IDs of the security groups for the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-securitygroupids)
+   * @param securityGroupIds The IDs of the security groups for the endpoint. 
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * The IDs of the security groups for the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-securitygroupids)
+   * @param securityGroupIds The IDs of the security groups for the endpoint. 
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ID of the AWS Verified Access group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-verifiedaccessgroupid)
+   * @param verifiedAccessGroupId The ID of the AWS Verified Access group. 
+   */
   public fun verifiedAccessGroupId(verifiedAccessGroupId: String) {
     cdkBuilder.verifiedAccessGroupId(verifiedAccessGroupId)
   }

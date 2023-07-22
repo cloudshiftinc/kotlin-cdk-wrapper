@@ -11,10 +11,16 @@ public class CfnConnectorProfileBasicAuthCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.BasicAuthCredentialsProperty.Builder =
       CfnConnectorProfile.BasicAuthCredentialsProperty.builder()
 
+  /**
+   * @param password The password to use to connect to a resource. 
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * @param username The username to use to connect to a resource. 
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

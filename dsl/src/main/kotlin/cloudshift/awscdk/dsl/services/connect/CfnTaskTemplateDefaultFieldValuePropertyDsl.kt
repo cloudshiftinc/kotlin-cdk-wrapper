@@ -12,14 +12,23 @@ public class CfnTaskTemplateDefaultFieldValuePropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.DefaultFieldValueProperty.Builder =
       CfnTaskTemplate.DefaultFieldValueProperty.builder()
 
+  /**
+   * @param defaultValue Default value for the field. 
+   */
   public fun defaultValue(defaultValue: String) {
     cdkBuilder.defaultValue(defaultValue)
   }
 
+  /**
+   * @param id Identifier of a field. 
+   */
   public fun id(id: IResolvable) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param id Identifier of a field. 
+   */
   public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
     cdkBuilder.id(id)
   }

@@ -11,6 +11,9 @@ public class CfnAnalysisPivotTableConditionalFormattingScopePropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotTableConditionalFormattingScopeProperty.Builder =
       CfnAnalysis.PivotTableConditionalFormattingScopeProperty.builder()
 
+  /**
+   * @param role The role (field, field total, grand total) of the cell for conditional formatting.
+   */
   public fun role(role: String) {
     cdkBuilder.role(role)
   }

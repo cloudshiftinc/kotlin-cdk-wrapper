@@ -11,6 +11,9 @@ public class CfnSpotFleetTargetGroupPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.TargetGroupProperty.Builder =
       CfnSpotFleet.TargetGroupProperty.builder()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the target group. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

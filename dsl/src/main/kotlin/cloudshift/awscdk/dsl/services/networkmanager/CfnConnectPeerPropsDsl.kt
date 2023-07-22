@@ -21,38 +21,65 @@ public class CfnConnectPeerPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param bgpOptions Bgp options.
+   */
   public fun bgpOptions(bgpOptions: IResolvable) {
     cdkBuilder.bgpOptions(bgpOptions)
   }
 
+  /**
+   * @param bgpOptions Bgp options.
+   */
   public fun bgpOptions(bgpOptions: CfnConnectPeer.BgpOptionsProperty) {
     cdkBuilder.bgpOptions(bgpOptions)
   }
 
+  /**
+   * @param connectAttachmentId The ID of the attachment to connect. 
+   */
   public fun connectAttachmentId(connectAttachmentId: String) {
     cdkBuilder.connectAttachmentId(connectAttachmentId)
   }
 
+  /**
+   * @param coreNetworkAddress The IP address of a core network.
+   */
   public fun coreNetworkAddress(coreNetworkAddress: String) {
     cdkBuilder.coreNetworkAddress(coreNetworkAddress)
   }
 
+  /**
+   * @param insideCidrBlocks The inside IP addresses used for a Connect peer configuration.
+   */
   public fun insideCidrBlocks(vararg insideCidrBlocks: String) {
     _insideCidrBlocks.addAll(listOf(*insideCidrBlocks))
   }
 
+  /**
+   * @param insideCidrBlocks The inside IP addresses used for a Connect peer configuration.
+   */
   public fun insideCidrBlocks(insideCidrBlocks: Collection<String>) {
     _insideCidrBlocks.addAll(insideCidrBlocks)
   }
 
+  /**
+   * @param peerAddress The IP address of the Connect peer. 
+   */
   public fun peerAddress(peerAddress: String) {
     cdkBuilder.peerAddress(peerAddress)
   }
 
+  /**
+   * @param tags The list of key-value tags associated with the Connect peer.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The list of key-value tags associated with the Connect peer.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

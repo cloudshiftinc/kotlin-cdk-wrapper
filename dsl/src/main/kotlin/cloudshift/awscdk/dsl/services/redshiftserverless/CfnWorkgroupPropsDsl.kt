@@ -27,70 +27,133 @@ public class CfnWorkgroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param baseCapacity The base compute capacity of the workgroup in Redshift Processing Units
+   * (RPUs).
+   */
   public fun baseCapacity(baseCapacity: Number) {
     cdkBuilder.baseCapacity(baseCapacity)
   }
 
+  /**
+   * @param configParameters A list of parameters to set for finer control over a database.
+   * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
+   * `search_path` , and `max_query_execution_time` .
+   */
   public fun configParameters(vararg configParameters: Any) {
     _configParameters.addAll(listOf(*configParameters))
   }
 
+  /**
+   * @param configParameters A list of parameters to set for finer control over a database.
+   * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
+   * `search_path` , and `max_query_execution_time` .
+   */
   public fun configParameters(configParameters: Collection<Any>) {
     _configParameters.addAll(configParameters)
   }
 
+  /**
+   * @param configParameters A list of parameters to set for finer control over a database.
+   * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
+   * `search_path` , and `max_query_execution_time` .
+   */
   public fun configParameters(configParameters: IResolvable) {
     cdkBuilder.configParameters(configParameters)
   }
 
+  /**
+   * @param enhancedVpcRouting The value that specifies whether to enable enhanced virtual private
+   * cloud (VPC) routing, which forces Amazon Redshift Serverless to route traffic through your VPC.
+   */
   public fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
     cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
   }
 
+  /**
+   * @param enhancedVpcRouting The value that specifies whether to enable enhanced virtual private
+   * cloud (VPC) routing, which forces Amazon Redshift Serverless to route traffic through your VPC.
+   */
   public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
     cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
   }
 
+  /**
+   * @param namespaceName The namespace the workgroup is associated with.
+   */
   public fun namespaceName(namespaceName: String) {
     cdkBuilder.namespaceName(namespaceName)
   }
 
+  /**
+   * @param port The custom port to use when connecting to a workgroup.
+   * Valid port ranges are 5431-5455 and 8191-8215. The default is 5439.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param publiclyAccessible A value that specifies whether the workgroup can be accessible from a
+   * public network.
+   */
   public fun publiclyAccessible(publiclyAccessible: Boolean) {
     cdkBuilder.publiclyAccessible(publiclyAccessible)
   }
 
+  /**
+   * @param publiclyAccessible A value that specifies whether the workgroup can be accessible from a
+   * public network.
+   */
   public fun publiclyAccessible(publiclyAccessible: IResolvable) {
     cdkBuilder.publiclyAccessible(publiclyAccessible)
   }
 
+  /**
+   * @param securityGroupIds A list of security group IDs to associate with the workgroup.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds A list of security group IDs to associate with the workgroup.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds A list of subnet IDs the workgroup is associated with.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds A list of subnet IDs the workgroup is associated with.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param tags The map of the key-value pairs used to tag the workgroup.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The map of the key-value pairs used to tag the workgroup.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param workgroupName The name of the workgroup. 
+   */
   public fun workgroupName(workgroupName: String) {
     cdkBuilder.workgroupName(workgroupName)
   }

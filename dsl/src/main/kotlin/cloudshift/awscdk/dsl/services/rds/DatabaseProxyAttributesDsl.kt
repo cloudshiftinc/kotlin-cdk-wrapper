@@ -15,22 +15,37 @@ public class DatabaseProxyAttributesDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
+  /**
+   * @param dbProxyArn DB Proxy ARN. 
+   */
   public fun dbProxyArn(dbProxyArn: String) {
     cdkBuilder.dbProxyArn(dbProxyArn)
   }
 
+  /**
+   * @param dbProxyName DB Proxy Name. 
+   */
   public fun dbProxyName(dbProxyName: String) {
     cdkBuilder.dbProxyName(dbProxyName)
   }
 
+  /**
+   * @param endpoint Endpoint. 
+   */
   public fun endpoint(endpoint: String) {
     cdkBuilder.endpoint(endpoint)
   }
 
+  /**
+   * @param securityGroups The security groups of the instance. 
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The security groups of the instance. 
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }

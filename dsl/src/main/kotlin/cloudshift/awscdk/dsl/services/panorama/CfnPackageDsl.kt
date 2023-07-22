@@ -22,22 +22,48 @@ public class CfnPackageDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A name for the package.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html#cfn-panorama-package-packagename)
+   * @param packageName A name for the package. 
+   */
   public fun packageName(packageName: String) {
     cdkBuilder.packageName(packageName)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html#cfn-panorama-package-storagelocation)
+   * @param storageLocation 
+   */
   public fun storageLocation(storageLocation: IResolvable) {
     cdkBuilder.storageLocation(storageLocation)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html#cfn-panorama-package-storagelocation)
+   * @param storageLocation 
+   */
   public fun storageLocation(storageLocation: CfnPackage.StorageLocationProperty) {
     cdkBuilder.storageLocation(storageLocation)
   }
 
+  /**
+   * Tags for the package.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html#cfn-panorama-package-tags)
+   * @param tags Tags for the package. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Tags for the package.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html#cfn-panorama-package-tags)
+   * @param tags Tags for the package. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

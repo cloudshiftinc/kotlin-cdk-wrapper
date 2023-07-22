@@ -13,14 +13,25 @@ public class CfnListenerTargetGroupStickinessConfigPropertyDsl {
   private val cdkBuilder: CfnListener.TargetGroupStickinessConfigProperty.Builder =
       CfnListener.TargetGroupStickinessConfigProperty.builder()
 
+  /**
+   * @param durationSeconds The time period, in seconds, during which requests from a client should
+   * be routed to the same target group.
+   * The range is 1-604800 seconds (7 days).
+   */
   public fun durationSeconds(durationSeconds: Number) {
     cdkBuilder.durationSeconds(durationSeconds)
   }
 
+  /**
+   * @param enabled Indicates whether target group stickiness is enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether target group stickiness is enabled.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

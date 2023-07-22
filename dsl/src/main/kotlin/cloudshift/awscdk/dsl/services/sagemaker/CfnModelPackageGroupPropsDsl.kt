@@ -19,28 +19,58 @@ public class CfnModelPackageGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param modelPackageGroupDescription The description for the model group.
+   */
   public fun modelPackageGroupDescription(modelPackageGroupDescription: String) {
     cdkBuilder.modelPackageGroupDescription(modelPackageGroupDescription)
   }
 
+  /**
+   * @param modelPackageGroupName The name of the model group. 
+   */
   public fun modelPackageGroupName(modelPackageGroupName: String) {
     cdkBuilder.modelPackageGroupName(modelPackageGroupName)
   }
 
-  public fun modelPackageGroupPolicy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param modelPackageGroupPolicy A resouce policy to control access to a model group.
+   * For information about resoure policies, see [Identity-based policies and resource-based
+   * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+   * in the *AWS Identity and Access Management User Guide.* .
+   */
+  public fun modelPackageGroupPolicy(modelPackageGroupPolicy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(modelPackageGroupPolicy)
     cdkBuilder.modelPackageGroupPolicy(builder.map)
   }
 
+  /**
+   * @param modelPackageGroupPolicy A resouce policy to control access to a model group.
+   * For information about resoure policies, see [Identity-based policies and resource-based
+   * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+   * in the *AWS Identity and Access Management User Guide.* .
+   */
   public fun modelPackageGroupPolicy(modelPackageGroupPolicy: Any) {
     cdkBuilder.modelPackageGroupPolicy(modelPackageGroupPolicy)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

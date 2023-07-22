@@ -11,18 +11,32 @@ public class CfnGatewayRouteHttpGatewayRouteActionPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.HttpGatewayRouteActionProperty.Builder =
       CfnGatewayRoute.HttpGatewayRouteActionProperty.builder()
 
+  /**
+   * @param rewrite The gateway route action to rewrite.
+   */
   public fun rewrite(rewrite: IResolvable) {
     cdkBuilder.rewrite(rewrite)
   }
 
+  /**
+   * @param rewrite The gateway route action to rewrite.
+   */
   public fun rewrite(rewrite: CfnGatewayRoute.HttpGatewayRouteRewriteProperty) {
     cdkBuilder.rewrite(rewrite)
   }
 
+  /**
+   * @param target An object that represents the target that traffic is routed to when a request
+   * matches the gateway route. 
+   */
   public fun target(target: IResolvable) {
     cdkBuilder.target(target)
   }
 
+  /**
+   * @param target An object that represents the target that traffic is routed to when a request
+   * matches the gateway route. 
+   */
   public fun target(target: CfnGatewayRoute.GatewayRouteTargetProperty) {
     cdkBuilder.target(target)
   }

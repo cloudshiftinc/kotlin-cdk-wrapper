@@ -22,38 +22,86 @@ public class SubnetSelectionDsl {
 
   private val _subnets: MutableList<ISubnet> = mutableListOf()
 
+  /**
+   * @param availabilityZones Select subnets only in the given AZs.
+   */
   public fun availabilityZones(vararg availabilityZones: String) {
     _availabilityZones.addAll(listOf(*availabilityZones))
   }
 
+  /**
+   * @param availabilityZones Select subnets only in the given AZs.
+   */
   public fun availabilityZones(availabilityZones: Collection<String>) {
     _availabilityZones.addAll(availabilityZones)
   }
 
+  /**
+   * @param onePerAz If true, return at most one subnet per AZ.
+   */
   public fun onePerAz(onePerAz: Boolean) {
     cdkBuilder.onePerAz(onePerAz)
   }
 
+  /**
+   * @param subnetFilters List of provided subnet filters.
+   */
   public fun subnetFilters(vararg subnetFilters: SubnetFilter) {
     _subnetFilters.addAll(listOf(*subnetFilters))
   }
 
+  /**
+   * @param subnetFilters List of provided subnet filters.
+   */
   public fun subnetFilters(subnetFilters: Collection<SubnetFilter>) {
     _subnetFilters.addAll(subnetFilters)
   }
 
+  /**
+   * @param subnetGroupName Select the subnet group with the given name.
+   * Select the subnet group with the given name. This only needs
+   * to be used if you have multiple subnet groups of the same type
+   * and you need to distinguish between them. Otherwise, prefer
+   * `subnetType`.
+   *
+   * This field does not select individual subnets, it selects all subnets that
+   * share the given subnet group name. This is the name supplied in
+   * `subnetConfiguration`.
+   *
+   * At most one of `subnetType` and `subnetGroupName` can be supplied.
+   */
   public fun subnetGroupName(subnetGroupName: String) {
     cdkBuilder.subnetGroupName(subnetGroupName)
   }
 
+  /**
+   * @param subnetType Select all subnets of the given type.
+   * At most one of `subnetType` and `subnetGroupName` can be supplied.
+   */
   public fun subnetType(subnetType: SubnetType) {
     cdkBuilder.subnetType(subnetType)
   }
 
+  /**
+   * @param subnets Explicitly select individual subnets.
+   * Use this if you don't want to automatically use all subnets in
+   * a group, but have a need to control selection down to
+   * individual subnets.
+   *
+   * Cannot be specified together with `subnetType` or `subnetGroupName`.
+   */
   public fun subnets(vararg subnets: ISubnet) {
     _subnets.addAll(listOf(*subnets))
   }
 
+  /**
+   * @param subnets Explicitly select individual subnets.
+   * Use this if you don't want to automatically use all subnets in
+   * a group, but have a need to control selection down to
+   * individual subnets.
+   *
+   * Cannot be specified together with `subnetType` or `subnetGroupName`.
+   */
   public fun subnets(subnets: Collection<ISubnet>) {
     _subnets.addAll(subnets)
   }

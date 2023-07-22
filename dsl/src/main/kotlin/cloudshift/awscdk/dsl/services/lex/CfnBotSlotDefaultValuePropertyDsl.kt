@@ -11,6 +11,9 @@ public class CfnBotSlotDefaultValuePropertyDsl {
   private val cdkBuilder: CfnBot.SlotDefaultValueProperty.Builder =
       CfnBot.SlotDefaultValueProperty.builder()
 
+  /**
+   * @param defaultValue The default value to use when a user doesn't provide a value for a slot. 
+   */
   public fun defaultValue(defaultValue: String) {
     cdkBuilder.defaultValue(defaultValue)
   }

@@ -12,14 +12,23 @@ public class CfnFlowEventBridgeDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.EventBridgeDestinationPropertiesProperty.Builder =
       CfnFlow.EventBridgeDestinationPropertiesProperty.builder()
 
+  /**
+   * @param errorHandlingConfig The object specified in the Amplitude flow source.
+   */
   public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
     cdkBuilder.errorHandlingConfig(errorHandlingConfig)
   }
 
+  /**
+   * @param errorHandlingConfig The object specified in the Amplitude flow source.
+   */
   public fun errorHandlingConfig(errorHandlingConfig: CfnFlow.ErrorHandlingConfigProperty) {
     cdkBuilder.errorHandlingConfig(errorHandlingConfig)
   }
 
+  /**
+   * @param object The object specified in the Amazon EventBridge flow destination. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

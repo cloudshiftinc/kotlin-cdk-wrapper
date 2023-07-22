@@ -13,18 +13,32 @@ public class AwsCloudFormationStackPropertiesDsl {
   private val cdkBuilder: AwsCloudFormationStackProperties.Builder =
       AwsCloudFormationStackProperties.builder()
 
+  /**
+   * @param parameters Values for CloudFormation stack parameters that should be passed when the
+   * stack is deployed.
+   */
   public fun parameters(parameters: Map<String, String>) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param stackName The name to use for the CloudFormation stack.
+   */
   public fun stackName(stackName: String) {
     cdkBuilder.stackName(stackName)
   }
 
+  /**
+   * @param templateFile A file relative to the assembly root which contains the CloudFormation
+   * template for this stack. 
+   */
   public fun templateFile(templateFile: String) {
     cdkBuilder.templateFile(templateFile)
   }
 
+  /**
+   * @param terminationProtection Whether to enable termination protection for this stack.
+   */
   public fun terminationProtection(terminationProtection: Boolean) {
     cdkBuilder.terminationProtection(terminationProtection)
   }

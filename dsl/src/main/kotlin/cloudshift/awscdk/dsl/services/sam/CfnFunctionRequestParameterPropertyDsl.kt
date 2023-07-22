@@ -12,18 +12,30 @@ public class CfnFunctionRequestParameterPropertyDsl {
   private val cdkBuilder: CfnFunction.RequestParameterProperty.Builder =
       CfnFunction.RequestParameterProperty.builder()
 
+  /**
+   * @param caching the value to be set.
+   */
   public fun caching(caching: Boolean) {
     cdkBuilder.caching(caching)
   }
 
+  /**
+   * @param caching the value to be set.
+   */
   public fun caching(caching: IResolvable) {
     cdkBuilder.caching(caching)
   }
 
+  /**
+   * @param required the value to be set.
+   */
   public fun required(required: Boolean) {
     cdkBuilder.required(required)
   }
 
+  /**
+   * @param required the value to be set.
+   */
   public fun required(required: IResolvable) {
     cdkBuilder.required(required)
   }

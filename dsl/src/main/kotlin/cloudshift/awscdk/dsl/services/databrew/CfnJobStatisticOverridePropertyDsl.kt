@@ -13,14 +13,23 @@ public class CfnJobStatisticOverridePropertyDsl {
   private val cdkBuilder: CfnJob.StatisticOverrideProperty.Builder =
       CfnJob.StatisticOverrideProperty.builder()
 
+  /**
+   * @param parameters A map that includes overrides of an evaluation’s parameters. 
+   */
   public fun parameters(parameters: Map<String, String>) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param parameters A map that includes overrides of an evaluation’s parameters. 
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param statistic The name of an evaluation. 
+   */
   public fun statistic(statistic: String) {
     cdkBuilder.statistic(statistic)
   }

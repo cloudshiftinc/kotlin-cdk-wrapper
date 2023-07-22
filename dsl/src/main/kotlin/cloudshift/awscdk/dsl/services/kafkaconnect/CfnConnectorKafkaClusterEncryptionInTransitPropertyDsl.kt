@@ -11,6 +11,9 @@ public class CfnConnectorKafkaClusterEncryptionInTransitPropertyDsl {
   private val cdkBuilder: CfnConnector.KafkaClusterEncryptionInTransitProperty.Builder =
       CfnConnector.KafkaClusterEncryptionInTransitProperty.builder()
 
+  /**
+   * @param encryptionType The type of encryption in transit to the Apache Kafka cluster. 
+   */
   public fun encryptionType(encryptionType: String) {
     cdkBuilder.encryptionType(encryptionType)
   }

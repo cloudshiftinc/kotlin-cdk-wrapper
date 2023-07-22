@@ -13,18 +13,32 @@ import software.amazon.awscdk.services.servicediscovery.NamespaceType
 public class CloudMapNamespaceOptionsDsl {
   private val cdkBuilder: CloudMapNamespaceOptions.Builder = CloudMapNamespaceOptions.builder()
 
+  /**
+   * @param name The name of the namespace, such as example.com. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param type The type of CloudMap Namespace to create.
+   */
   public fun type(type: NamespaceType) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param useForServiceConnect This property specifies whether to set the provided namespace as
+   * the service connect default in the cluster properties.
+   */
   public fun useForServiceConnect(useForServiceConnect: Boolean) {
     cdkBuilder.useForServiceConnect(useForServiceConnect)
   }
 
+  /**
+   * @param vpc The VPC to associate the namespace with.
+   * This property is required for private DNS namespaces.
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

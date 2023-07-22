@@ -11,6 +11,9 @@ public class OracleEeInstanceEnginePropsDsl {
   private val cdkBuilder: OracleEeInstanceEngineProps.Builder =
       OracleEeInstanceEngineProps.builder()
 
+  /**
+   * @param version The exact version of the engine to use. 
+   */
   public fun version(version: OracleEngineVersion) {
     cdkBuilder.version(version)
   }

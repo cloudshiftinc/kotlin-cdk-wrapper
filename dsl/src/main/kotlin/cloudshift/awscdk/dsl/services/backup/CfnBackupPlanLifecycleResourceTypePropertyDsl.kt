@@ -11,10 +11,19 @@ public class CfnBackupPlanLifecycleResourceTypePropertyDsl {
   private val cdkBuilder: CfnBackupPlan.LifecycleResourceTypeProperty.Builder =
       CfnBackupPlan.LifecycleResourceTypeProperty.builder()
 
+  /**
+   * @param deleteAfterDays Specifies the number of days after creation that a recovery point is
+   * deleted.
+   * Must be greater than `MoveToColdStorageAfterDays` .
+   */
   public fun deleteAfterDays(deleteAfterDays: Number) {
     cdkBuilder.deleteAfterDays(deleteAfterDays)
   }
 
+  /**
+   * @param moveToColdStorageAfterDays Specifies the number of days after creation that a recovery
+   * point is moved to cold storage.
+   */
   public fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number) {
     cdkBuilder.moveToColdStorageAfterDays(moveToColdStorageAfterDays)
   }

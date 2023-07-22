@@ -12,18 +12,56 @@ import software.amazon.awscdk.services.globalaccelerator.RawEndpoint
 public class RawEndpointDsl {
   private val cdkBuilder: RawEndpoint.Builder = RawEndpoint.Builder.create()
 
+  /**
+   * Identifier of the endpoint.
+   *
+   * Load balancer ARN, instance ID or EIP allocation ID.
+   *
+   * @param endpointId Identifier of the endpoint. 
+   */
   public fun endpointId(endpointId: String) {
     cdkBuilder.endpointId(endpointId)
   }
 
+  /**
+   * Forward the client IP address.
+   *
+   * GlobalAccelerator will create Network Interfaces in your VPC in order
+   * to preserve the client IP address.
+   *
+   * Only applies to Application Load Balancers and EC2 instances.
+   *
+   * Client IP address preservation is supported only in specific AWS Regions.
+   * See the GlobalAccelerator Developer Guide for a list.
+   *
+   * Default: true if possible and available
+   *
+   * @param preserveClientIp Forward the client IP address. 
+   */
   public fun preserveClientIp(preserveClientIp: Boolean) {
     cdkBuilder.preserveClientIp(preserveClientIp)
   }
 
+  /**
+   * The region where this endpoint is located.
+   *
+   * Default: - Unknown what region this endpoint is located
+   *
+   * @param region The region where this endpoint is located. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * Endpoint weight across all endpoints in the group.
+   *
+   * Must be a value between 0 and 255.
+   *
+   * Default: 128
+   *
+   * @param weight Endpoint weight across all endpoints in the group. 
+   */
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)
   }

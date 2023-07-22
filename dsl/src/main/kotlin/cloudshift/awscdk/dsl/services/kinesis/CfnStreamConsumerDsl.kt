@@ -14,10 +14,23 @@ public class CfnStreamConsumerDsl(
 ) {
   private val cdkBuilder: CfnStreamConsumer.Builder = CfnStreamConsumer.Builder.create(scope, id)
 
+  /**
+   * The name of the consumer is something you choose when you register the consumer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-consumername)
+   * @param consumerName The name of the consumer is something you choose when you register the
+   * consumer. 
+   */
   public fun consumerName(consumerName: String) {
     cdkBuilder.consumerName(consumerName)
   }
 
+  /**
+   * The ARN of the stream with which you registered the consumer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-streamarn)
+   * @param streamArn The ARN of the stream with which you registered the consumer. 
+   */
   public fun streamArn(streamArn: String) {
     cdkBuilder.streamArn(streamArn)
   }

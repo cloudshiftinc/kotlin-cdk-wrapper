@@ -17,18 +17,34 @@ public class GatewayVpcEndpointPropsDsl {
 
   private val _subnets: MutableList<SubnetSelection> = mutableListOf()
 
+  /**
+   * @param service The service to use for this gateway VPC endpoint. 
+   */
   public fun service(service: IGatewayVpcEndpointService) {
     cdkBuilder.service(service)
   }
 
+  /**
+   * @param subnets Where to add endpoint routing.
+   * By default, this endpoint will be routable from all subnets in the VPC.
+   * Specify a list of subnet selection objects here to be more specific.
+   */
   public fun subnets(subnets: SubnetSelectionDsl.() -> Unit) {
     _subnets.add(SubnetSelectionDsl().apply(subnets).build())
   }
 
+  /**
+   * @param subnets Where to add endpoint routing.
+   * By default, this endpoint will be routable from all subnets in the VPC.
+   * Specify a list of subnet selection objects here to be more specific.
+   */
   public fun subnets(subnets: Collection<SubnetSelection>) {
     _subnets.addAll(subnets)
   }
 
+  /**
+   * @param vpc The VPC network in which the gateway endpoint will be used. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

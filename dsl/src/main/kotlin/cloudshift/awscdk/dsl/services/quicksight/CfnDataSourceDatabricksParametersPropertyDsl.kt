@@ -12,14 +12,23 @@ public class CfnDataSourceDatabricksParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.DatabricksParametersProperty.Builder =
       CfnDataSource.DatabricksParametersProperty.builder()
 
+  /**
+   * @param host The host name of the Databricks data source. 
+   */
   public fun host(host: String) {
     cdkBuilder.host(host)
   }
 
+  /**
+   * @param port The port for the Databricks data source. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param sqlEndpointPath The HTTP path of the Databricks data source. 
+   */
   public fun sqlEndpointPath(sqlEndpointPath: String) {
     cdkBuilder.sqlEndpointPath(sqlEndpointPath)
   }

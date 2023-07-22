@@ -17,22 +17,41 @@ public class CfnProjectVpcConfigPropertyDsl {
 
   private val _subnets: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+   * The maximum count is 5.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+   * The maximum count is 5.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+   * The maximum count is 16.
+   */
   public fun subnets(vararg subnets: String) {
     _subnets.addAll(listOf(*subnets))
   }
 
+  /**
+   * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+   * The maximum count is 16.
+   */
   public fun subnets(subnets: Collection<String>) {
     _subnets.addAll(subnets)
   }
 
+  /**
+   * @param vpcId The ID of the Amazon VPC.
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

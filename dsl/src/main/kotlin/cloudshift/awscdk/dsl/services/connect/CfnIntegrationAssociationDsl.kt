@@ -15,14 +15,42 @@ public class CfnIntegrationAssociationDsl(
   private val cdkBuilder: CfnIntegrationAssociation.Builder =
       CfnIntegrationAssociation.Builder.create(scope, id)
 
+  /**
+   * The Amazon Resource Name (ARN) of the instance.
+   *
+   * *Minimum* : `1`
+   *
+   * *Maximum* : `100`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-integrationassociation.html#cfn-connect-integrationassociation-instanceid)
+   * @param instanceId The Amazon Resource Name (ARN) of the instance. 
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }
 
+  /**
+   * ARN of the integration being associated with the instance.
+   *
+   * *Minimum* : `1`
+   *
+   * *Maximum* : `140`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-integrationassociation.html#cfn-connect-integrationassociation-integrationarn)
+   * @param integrationArn ARN of the integration being associated with the instance. 
+   */
   public fun integrationArn(integrationArn: String) {
     cdkBuilder.integrationArn(integrationArn)
   }
 
+  /**
+   * Specifies the integration type to be associated with the instance.
+   *
+   * *Allowed Values* : `LEX_BOT` | `LAMBDA_FUNCTION`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-integrationassociation.html#cfn-connect-integrationassociation-integrationtype)
+   * @param integrationType Specifies the integration type to be associated with the instance. 
+   */
   public fun integrationType(integrationType: String) {
     cdkBuilder.integrationType(integrationType)
   }

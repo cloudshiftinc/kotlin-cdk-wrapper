@@ -10,14 +10,29 @@ import software.amazon.awscdk.services.ec2.MultipartBodyOptions
 public class MultipartBodyOptionsDsl {
   private val cdkBuilder: MultipartBodyOptions.Builder = MultipartBodyOptions.builder()
 
+  /**
+   * @param body The body of message.
+   */
   public fun body(body: String) {
     cdkBuilder.body(body)
   }
 
+  /**
+   * @param contentType `Content-Type` header of this part. 
+   * Some examples of content types:
+   *
+   * * `text/x-shellscript; charset="utf-8"` (shell script)
+   * * `text/cloud-boothook; charset="utf-8"` (shell script executed during boot phase)
+   *
+   * For Linux shell scripts use `text/x-shellscript`.
+   */
   public fun contentType(contentType: String) {
     cdkBuilder.contentType(contentType)
   }
 
+  /**
+   * @param transferEncoding `Content-Transfer-Encoding` header specifying part encoding.
+   */
   public fun transferEncoding(transferEncoding: String) {
     cdkBuilder.transferEncoding(transferEncoding)
   }

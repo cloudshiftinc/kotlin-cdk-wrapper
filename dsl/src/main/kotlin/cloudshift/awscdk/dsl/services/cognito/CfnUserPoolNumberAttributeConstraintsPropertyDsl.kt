@@ -11,10 +11,16 @@ public class CfnUserPoolNumberAttributeConstraintsPropertyDsl {
   private val cdkBuilder: CfnUserPool.NumberAttributeConstraintsProperty.Builder =
       CfnUserPool.NumberAttributeConstraintsProperty.builder()
 
+  /**
+   * @param maxValue The maximum value of an attribute that is of the number data type.
+   */
   public fun maxValue(maxValue: String) {
     cdkBuilder.maxValue(maxValue)
   }
 
+  /**
+   * @param minValue The minimum value of an attribute that is of the number data type.
+   */
   public fun minValue(minValue: String) {
     cdkBuilder.minValue(minValue)
   }

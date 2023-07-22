@@ -14,14 +14,35 @@ public class FailDsl(
 ) {
   private val cdkBuilder: Fail.Builder = Fail.Builder.create(scope, id)
 
+  /**
+   * A description for the cause of the failure.
+   *
+   * Default: No description
+   *
+   * @param cause A description for the cause of the failure. 
+   */
   public fun cause(cause: String) {
     cdkBuilder.cause(cause)
   }
 
+  /**
+   * An optional description for this state.
+   *
+   * Default: No comment
+   *
+   * @param comment An optional description for this state. 
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * Error code used to represent this failure.
+   *
+   * Default: No error code
+   *
+   * @param error Error code used to represent this failure. 
+   */
   public fun error(error: String) {
     cdkBuilder.error(error)
   }

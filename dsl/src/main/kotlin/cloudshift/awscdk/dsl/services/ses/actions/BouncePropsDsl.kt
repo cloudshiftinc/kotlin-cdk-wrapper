@@ -13,20 +13,34 @@ import software.amazon.awscdk.services.sns.ITopic
 public class BouncePropsDsl {
   private val cdkBuilder: BounceProps.Builder = BounceProps.builder()
 
+  /**
+   * @param sender The email address of the sender of the bounced email. 
+   * This is the address
+   * from which the bounce message will be sent.
+   */
   public fun sender(sender: String) {
     cdkBuilder.sender(sender)
   }
 
-  public fun template(block: BounceTemplateDsl.() -> Unit = {}) {
+  /**
+   * @param template The template containing the message, reply code and status code. 
+   */
+  public fun template(template: BounceTemplateDsl.() -> Unit = {}) {
     val builder = BounceTemplateDsl()
-    builder.apply(block)
+    builder.apply(template)
     cdkBuilder.template(builder.build())
   }
 
+  /**
+   * @param template The template containing the message, reply code and status code. 
+   */
   public fun template(template: BounceTemplate) {
     cdkBuilder.template(template)
   }
 
+  /**
+   * @param topic The SNS topic to notify when the bounce action is taken.
+   */
   public fun topic(topic: ITopic) {
     cdkBuilder.topic(topic)
   }

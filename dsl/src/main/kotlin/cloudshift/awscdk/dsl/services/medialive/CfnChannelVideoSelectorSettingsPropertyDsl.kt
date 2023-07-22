@@ -11,18 +11,30 @@ public class CfnChannelVideoSelectorSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorSettingsProperty.Builder =
       CfnChannel.VideoSelectorSettingsProperty.builder()
 
+  /**
+   * @param videoSelectorPid Used to extract video by PID.
+   */
   public fun videoSelectorPid(videoSelectorPid: IResolvable) {
     cdkBuilder.videoSelectorPid(videoSelectorPid)
   }
 
+  /**
+   * @param videoSelectorPid Used to extract video by PID.
+   */
   public fun videoSelectorPid(videoSelectorPid: CfnChannel.VideoSelectorPidProperty) {
     cdkBuilder.videoSelectorPid(videoSelectorPid)
   }
 
+  /**
+   * @param videoSelectorProgramId Used to extract video by program ID.
+   */
   public fun videoSelectorProgramId(videoSelectorProgramId: IResolvable) {
     cdkBuilder.videoSelectorProgramId(videoSelectorProgramId)
   }
 
+  /**
+   * @param videoSelectorProgramId Used to extract video by program ID.
+   */
   public
       fun videoSelectorProgramId(videoSelectorProgramId: CfnChannel.VideoSelectorProgramIdProperty) {
     cdkBuilder.videoSelectorProgramId(videoSelectorProgramId)

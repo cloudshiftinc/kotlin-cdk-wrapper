@@ -10,6 +10,9 @@ import software.amazon.awscdk.cloudassembly.schema.PluginContextQuery
 public class PluginContextQueryDsl {
   private val cdkBuilder: PluginContextQuery.Builder = PluginContextQuery.builder()
 
+  /**
+   * @param pluginName The name of the plugin. 
+   */
   public fun pluginName(pluginName: String) {
     cdkBuilder.pluginName(pluginName)
   }

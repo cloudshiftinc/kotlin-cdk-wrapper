@@ -11,6 +11,9 @@ public class CfnPipeBatchArrayPropertiesPropertyDsl {
   private val cdkBuilder: CfnPipe.BatchArrayPropertiesProperty.Builder =
       CfnPipe.BatchArrayPropertiesProperty.builder()
 
+  /**
+   * @param size The size of the array, if this is an array batch job.
+   */
   public fun size(size: Number) {
     cdkBuilder.size(size)
   }

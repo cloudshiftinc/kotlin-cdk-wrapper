@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 public class CfnRuleGroupBlockPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.BlockProperty.Builder = CfnRuleGroup.BlockProperty.builder()
 
+  /**
+   * @param customResponse Custom response.
+   */
   public fun customResponse(customResponse: IResolvable) {
     cdkBuilder.customResponse(customResponse)
   }
 
+  /**
+   * @param customResponse Custom response.
+   */
   public fun customResponse(customResponse: CfnRuleGroup.CustomResponseProperty) {
     cdkBuilder.customResponse(customResponse)
   }

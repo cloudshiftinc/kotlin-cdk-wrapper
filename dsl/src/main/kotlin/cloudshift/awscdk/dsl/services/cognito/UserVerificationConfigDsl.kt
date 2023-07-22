@@ -11,18 +11,46 @@ import software.amazon.awscdk.services.cognito.VerificationEmailStyle
 public class UserVerificationConfigDsl {
   private val cdkBuilder: UserVerificationConfig.Builder = UserVerificationConfig.builder()
 
+  /**
+   * @param emailBody The email body template for the verification email sent to the user upon sign
+   * up.
+   * See
+   * https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-templates.html
+   * to
+   * learn more about message templates.
+   */
   public fun emailBody(emailBody: String) {
     cdkBuilder.emailBody(emailBody)
   }
 
+  /**
+   * @param emailStyle Emails can be verified either using a code or a link.
+   * Learn more at
+   * https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-email-verification-message-customization.html
+   */
   public fun emailStyle(emailStyle: VerificationEmailStyle) {
     cdkBuilder.emailStyle(emailStyle)
   }
 
+  /**
+   * @param emailSubject The email subject template for the verification email sent to the user upon
+   * sign up.
+   * See
+   * https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-templates.html
+   * to
+   * learn more about message templates.
+   */
   public fun emailSubject(emailSubject: String) {
     cdkBuilder.emailSubject(emailSubject)
   }
 
+  /**
+   * @param smsMessage The message template for the verification SMS sent to the user upon sign up.
+   * See
+   * https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-templates.html
+   * to
+   * learn more about message templates.
+   */
   public fun smsMessage(smsMessage: String) {
     cdkBuilder.smsMessage(smsMessage)
   }

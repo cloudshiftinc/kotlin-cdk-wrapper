@@ -19,30 +19,60 @@ public class CfnInstanceAccessControlAttributeConfigurationPropsDsl {
 
   private val _accessControlAttributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param accessControlAttributes Lists the attributes that are configured for ABAC in the
+   * specified IAM Identity Center instance.
+   */
   public fun accessControlAttributes(vararg accessControlAttributes: Any) {
     _accessControlAttributes.addAll(listOf(*accessControlAttributes))
   }
 
+  /**
+   * @param accessControlAttributes Lists the attributes that are configured for ABAC in the
+   * specified IAM Identity Center instance.
+   */
   public fun accessControlAttributes(accessControlAttributes: Collection<Any>) {
     _accessControlAttributes.addAll(accessControlAttributes)
   }
 
+  /**
+   * @param accessControlAttributes Lists the attributes that are configured for ABAC in the
+   * specified IAM Identity Center instance.
+   */
   public fun accessControlAttributes(accessControlAttributes: IResolvable) {
     cdkBuilder.accessControlAttributes(accessControlAttributes)
   }
 
+  /**
+   * @param instanceAccessControlAttributeConfiguration The
+   * InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported
+   * for backwards compatibility purposes.
+   * We recomend that you use  AccessControlAttributes property instead.
+   * @deprecated this property has been deprecated
+   */
   @Deprecated(message = "deprecated in CDK")
   public
       fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: IResolvable) {
     cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration)
   }
 
+  /**
+   * @param instanceAccessControlAttributeConfiguration The
+   * InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported
+   * for backwards compatibility purposes.
+   * We recomend that you use  AccessControlAttributes property instead.
+   * @deprecated this property has been deprecated
+   */
   @Deprecated(message = "deprecated in CDK")
   public
       fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty) {
     cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration)
   }
 
+  /**
+   * @param instanceArn The ARN of the IAM Identity Center instance under which the operation will
+   * be executed. 
+   */
   public fun instanceArn(instanceArn: String) {
     cdkBuilder.instanceArn(instanceArn)
   }

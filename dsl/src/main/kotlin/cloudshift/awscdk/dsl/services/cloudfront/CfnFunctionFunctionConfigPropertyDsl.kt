@@ -11,10 +11,17 @@ public class CfnFunctionFunctionConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.FunctionConfigProperty.Builder =
       CfnFunction.FunctionConfigProperty.builder()
 
+  /**
+   * @param comment A comment to describe the function. 
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * @param runtime The function's runtime environment. 
+   * The only valid value is `cloudfront-js-1.0` .
+   */
   public fun runtime(runtime: String) {
     cdkBuilder.runtime(runtime)
   }

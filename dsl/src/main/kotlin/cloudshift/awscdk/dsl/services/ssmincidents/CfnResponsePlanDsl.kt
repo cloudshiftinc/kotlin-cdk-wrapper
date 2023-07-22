@@ -29,66 +29,174 @@ public class CfnResponsePlanDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The actions that the response plan starts at the beginning of an incident.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-actions)
+   * @param actions The actions that the response plan starts at the beginning of an incident. 
+   */
   public fun actions(vararg actions: Any) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * The actions that the response plan starts at the beginning of an incident.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-actions)
+   * @param actions The actions that the response plan starts at the beginning of an incident. 
+   */
   public fun actions(actions: Collection<Any>) {
     _actions.addAll(actions)
   }
 
+  /**
+   * The actions that the response plan starts at the beginning of an incident.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-actions)
+   * @param actions The actions that the response plan starts at the beginning of an incident. 
+   */
   public fun actions(actions: IResolvable) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * The AWS Chatbot chat channel used for collaboration during an incident.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
+   * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+   */
   public fun chatChannel(chatChannel: IResolvable) {
     cdkBuilder.chatChannel(chatChannel)
   }
 
+  /**
+   * The AWS Chatbot chat channel used for collaboration during an incident.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
+   * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+   */
   public fun chatChannel(chatChannel: CfnResponsePlan.ChatChannelProperty) {
     cdkBuilder.chatChannel(chatChannel)
   }
 
+  /**
+   * The human readable name of the response plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-displayname)
+   * @param displayName The human readable name of the response plan. 
+   */
   public fun displayName(displayName: String) {
     cdkBuilder.displayName(displayName)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) for the contacts and escalation plans that the response plan
+   * engages during an incident.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-engagements)
+   * @param engagements The Amazon Resource Name (ARN) for the contacts and escalation plans that
+   * the response plan engages during an incident. 
+   */
   public fun engagements(vararg engagements: String) {
     _engagements.addAll(listOf(*engagements))
   }
 
+  /**
+   * The Amazon Resource Name (ARN) for the contacts and escalation plans that the response plan
+   * engages during an incident.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-engagements)
+   * @param engagements The Amazon Resource Name (ARN) for the contacts and escalation plans that
+   * the response plan engages during an incident. 
+   */
   public fun engagements(engagements: Collection<String>) {
     _engagements.addAll(engagements)
   }
 
+  /**
+   * Details used to create an incident when using this response plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-incidenttemplate)
+   * @param incidentTemplate Details used to create an incident when using this response plan. 
+   */
   public fun incidentTemplate(incidentTemplate: IResolvable) {
     cdkBuilder.incidentTemplate(incidentTemplate)
   }
 
+  /**
+   * Details used to create an incident when using this response plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-incidenttemplate)
+   * @param incidentTemplate Details used to create an incident when using this response plan. 
+   */
   public fun incidentTemplate(incidentTemplate: CfnResponsePlan.IncidentTemplateProperty) {
     cdkBuilder.incidentTemplate(incidentTemplate)
   }
 
+  /**
+   * Information about third-party services integrated into the response plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-integrations)
+   * @param integrations Information about third-party services integrated into the response plan. 
+   */
   public fun integrations(vararg integrations: Any) {
     _integrations.addAll(listOf(*integrations))
   }
 
+  /**
+   * Information about third-party services integrated into the response plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-integrations)
+   * @param integrations Information about third-party services integrated into the response plan. 
+   */
   public fun integrations(integrations: Collection<Any>) {
     _integrations.addAll(integrations)
   }
 
+  /**
+   * Information about third-party services integrated into the response plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-integrations)
+   * @param integrations Information about third-party services integrated into the response plan. 
+   */
   public fun integrations(integrations: IResolvable) {
     cdkBuilder.integrations(integrations)
   }
 
+  /**
+   * The name of the response plan.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-name)
+   * @param name The name of the response plan. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

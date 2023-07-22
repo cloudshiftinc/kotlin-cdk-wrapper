@@ -14,20 +14,32 @@ public class CfnDashboardAxisDisplayRangePropertyDsl {
   private val cdkBuilder: CfnDashboard.AxisDisplayRangeProperty.Builder =
       CfnDashboard.AxisDisplayRangeProperty.builder()
 
-  public fun dataDriven(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param dataDriven The data-driven setup of an axis display range.
+   */
+  public fun dataDriven(dataDriven: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(dataDriven)
     cdkBuilder.dataDriven(builder.map)
   }
 
+  /**
+   * @param dataDriven The data-driven setup of an axis display range.
+   */
   public fun dataDriven(dataDriven: Any) {
     cdkBuilder.dataDriven(dataDriven)
   }
 
+  /**
+   * @param minMax The minimum and maximum setup of an axis display range.
+   */
   public fun minMax(minMax: IResolvable) {
     cdkBuilder.minMax(minMax)
   }
 
+  /**
+   * @param minMax The minimum and maximum setup of an axis display range.
+   */
   public fun minMax(minMax: CfnDashboard.AxisDisplayMinMaxRangeProperty) {
     cdkBuilder.minMax(minMax)
   }

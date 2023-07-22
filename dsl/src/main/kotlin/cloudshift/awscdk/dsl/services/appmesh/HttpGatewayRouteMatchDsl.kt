@@ -22,38 +22,73 @@ public class HttpGatewayRouteMatchDsl {
 
   private val _queryParameters: MutableList<QueryParameterMatch> = mutableListOf()
 
+  /**
+   * @param headers Specifies the client request headers to match on.
+   * All specified headers
+   * must match for the gateway route to match.
+   */
   public fun headers(vararg headers: HeaderMatch) {
     _headers.addAll(listOf(*headers))
   }
 
+  /**
+   * @param headers Specifies the client request headers to match on.
+   * All specified headers
+   * must match for the gateway route to match.
+   */
   public fun headers(headers: Collection<HeaderMatch>) {
     _headers.addAll(headers)
   }
 
+  /**
+   * @param hostname The gateway route host name to be matched on.
+   */
   public fun hostname(hostname: GatewayRouteHostnameMatch) {
     cdkBuilder.hostname(hostname)
   }
 
+  /**
+   * @param method The method to match on.
+   */
   public fun method(method: HttpRouteMethod) {
     cdkBuilder.method(method)
   }
 
+  /**
+   * @param path Specify how to match requests based on the 'path' part of their URL.
+   */
   public fun path(path: HttpGatewayRoutePathMatch) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param port The port number to match on.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param queryParameters The query parameters to match on.
+   * All specified query parameters must match for the route to match.
+   */
   public fun queryParameters(vararg queryParameters: QueryParameterMatch) {
     _queryParameters.addAll(listOf(*queryParameters))
   }
 
+  /**
+   * @param queryParameters The query parameters to match on.
+   * All specified query parameters must match for the route to match.
+   */
   public fun queryParameters(queryParameters: Collection<QueryParameterMatch>) {
     _queryParameters.addAll(queryParameters)
   }
 
+  /**
+   * @param rewriteRequestHostname When `true`, rewrites the original request received at the
+   * Virtual Gateway to the destination Virtual Service name.
+   * When `false`, retains the original hostname from the request.
+   */
   public fun rewriteRequestHostname(rewriteRequestHostname: Boolean) {
     cdkBuilder.rewriteRequestHostname(rewriteRequestHostname)
   }

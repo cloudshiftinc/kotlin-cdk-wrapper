@@ -16,18 +16,30 @@ public class CfnClusterTlsPropertyDsl {
 
   private val _certificateAuthorityArnList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param certificateAuthorityArnList List of AWS Private CA ARNs.
+   */
   public fun certificateAuthorityArnList(vararg certificateAuthorityArnList: String) {
     _certificateAuthorityArnList.addAll(listOf(*certificateAuthorityArnList))
   }
 
+  /**
+   * @param certificateAuthorityArnList List of AWS Private CA ARNs.
+   */
   public fun certificateAuthorityArnList(certificateAuthorityArnList: Collection<String>) {
     _certificateAuthorityArnList.addAll(certificateAuthorityArnList)
   }
 
+  /**
+   * @param enabled TLS authentication is enabled or not.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled TLS authentication is enabled or not.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

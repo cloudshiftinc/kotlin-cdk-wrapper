@@ -11,10 +11,18 @@ public class CfnIntegrationTriggerPropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.TriggerPropertiesProperty.Builder =
       CfnIntegration.TriggerPropertiesProperty.builder()
 
+  /**
+   * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+   * define.
+   */
   public fun scheduled(scheduled: IResolvable) {
     cdkBuilder.scheduled(scheduled)
   }
 
+  /**
+   * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+   * define.
+   */
   public fun scheduled(scheduled: CfnIntegration.ScheduledTriggerPropertiesProperty) {
     cdkBuilder.scheduled(scheduled)
   }

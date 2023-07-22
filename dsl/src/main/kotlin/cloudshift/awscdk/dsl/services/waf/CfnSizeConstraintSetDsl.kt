@@ -21,18 +21,42 @@ public class CfnSizeConstraintSetDsl(
 
   private val _sizeConstraints: MutableList<Any> = mutableListOf()
 
+  /**
+   * The name, if any, of the `SizeConstraintSet` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-name)
+   * @param name The name, if any, of the `SizeConstraintSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The size constraint and the part of the web request to check.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-sizeconstraints)
+   * @param sizeConstraints The size constraint and the part of the web request to check. 
+   */
   public fun sizeConstraints(vararg sizeConstraints: Any) {
     _sizeConstraints.addAll(listOf(*sizeConstraints))
   }
 
+  /**
+   * The size constraint and the part of the web request to check.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-sizeconstraints)
+   * @param sizeConstraints The size constraint and the part of the web request to check. 
+   */
   public fun sizeConstraints(sizeConstraints: Collection<Any>) {
     _sizeConstraints.addAll(sizeConstraints)
   }
 
+  /**
+   * The size constraint and the part of the web request to check.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-sizeconstraints)
+   * @param sizeConstraints The size constraint and the part of the web request to check. 
+   */
   public fun sizeConstraints(sizeConstraints: IResolvable) {
     cdkBuilder.sizeConstraints(sizeConstraints)
   }

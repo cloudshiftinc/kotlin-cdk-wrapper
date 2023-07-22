@@ -17,22 +17,43 @@ public class CognitoUserPoolsAuthorizerPropsDsl {
 
   private val _cognitoUserPools: MutableList<IUserPool> = mutableListOf()
 
+  /**
+   * @param authorizerName An optional human friendly name for the authorizer.
+   * Note that, this is not the primary identifier of the authorizer.
+   */
   public fun authorizerName(authorizerName: String) {
     cdkBuilder.authorizerName(authorizerName)
   }
 
+  /**
+   * @param cognitoUserPools The user pools to associate with this authorizer. 
+   */
   public fun cognitoUserPools(vararg cognitoUserPools: IUserPool) {
     _cognitoUserPools.addAll(listOf(*cognitoUserPools))
   }
 
+  /**
+   * @param cognitoUserPools The user pools to associate with this authorizer. 
+   */
   public fun cognitoUserPools(cognitoUserPools: Collection<IUserPool>) {
     _cognitoUserPools.addAll(cognitoUserPools)
   }
 
+  /**
+   * @param identitySource The request header mapping expression for the bearer token.
+   * This is typically passed as part of the header, in which case
+   * this should be `method.request.header.Authorizer` where Authorizer is the header containing the
+   * bearer token.
+   */
   public fun identitySource(identitySource: String) {
     cdkBuilder.identitySource(identitySource)
   }
 
+  /**
+   * @param resultsCacheTtl How long APIGateway should cache the results.
+   * Max 1 hour.
+   * Disable caching by setting this to 0.
+   */
   public fun resultsCacheTtl(resultsCacheTtl: Duration) {
     cdkBuilder.resultsCacheTtl(resultsCacheTtl)
   }

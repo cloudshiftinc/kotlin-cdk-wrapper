@@ -22,18 +22,46 @@ public class S3EventSourceDsl(
 
   private val _filters: MutableList<NotificationKeyFilter> = mutableListOf()
 
+  /**
+   * The s3 event types that will trigger the notification.
+   *
+   * @param events The s3 event types that will trigger the notification. 
+   */
   public fun events(vararg events: EventType) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * The s3 event types that will trigger the notification.
+   *
+   * @param events The s3 event types that will trigger the notification. 
+   */
   public fun events(events: Collection<EventType>) {
     _events.addAll(events)
   }
 
+  /**
+   * S3 object key filter rules to determine which objects trigger this event.
+   *
+   * Each filter must include a `prefix` and/or `suffix` that will be matched
+   * against the s3 object key. Refer to the S3 Developer Guide for details
+   * about allowed filter rules.
+   *
+   * @param filters S3 object key filter rules to determine which objects trigger this event. 
+   */
   public fun filters(filters: NotificationKeyFilterDsl.() -> Unit) {
     _filters.add(NotificationKeyFilterDsl().apply(filters).build())
   }
 
+  /**
+   * S3 object key filter rules to determine which objects trigger this event.
+   *
+   * Each filter must include a `prefix` and/or `suffix` that will be matched
+   * against the s3 object key. Refer to the S3 Developer Guide for details
+   * about allowed filter rules.
+   *
+   * @param filters S3 object key filter rules to determine which objects trigger this event. 
+   */
   public fun filters(filters: Collection<NotificationKeyFilter>) {
     _filters.addAll(filters)
   }

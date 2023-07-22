@@ -23,26 +23,82 @@ public class CfnCertificateDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The name of the certificate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html#cfn-lightsail-certificate-certificatename)
+   * @param certificateName The name of the certificate. 
+   */
   public fun certificateName(certificateName: String) {
     cdkBuilder.certificateName(certificateName)
   }
 
+  /**
+   * The domain name of the certificate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html#cfn-lightsail-certificate-domainname)
+   * @param domainName The domain name of the certificate. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * An array of strings that specify the alternate domains (such as `example.org` ) and subdomains
+   * (such as `blog.example.com` ) of the certificate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html#cfn-lightsail-certificate-subjectalternativenames)
+   * @param subjectAlternativeNames An array of strings that specify the alternate domains (such as
+   * `example.org` ) and subdomains (such as `blog.example.com` ) of the certificate. 
+   */
   public fun subjectAlternativeNames(vararg subjectAlternativeNames: String) {
     _subjectAlternativeNames.addAll(listOf(*subjectAlternativeNames))
   }
 
+  /**
+   * An array of strings that specify the alternate domains (such as `example.org` ) and subdomains
+   * (such as `blog.example.com` ) of the certificate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html#cfn-lightsail-certificate-subjectalternativenames)
+   * @param subjectAlternativeNames An array of strings that specify the alternate domains (such as
+   * `example.org` ) and subdomains (such as `blog.example.com` ) of the certificate. 
+   */
   public fun subjectAlternativeNames(subjectAlternativeNames: Collection<String>) {
     _subjectAlternativeNames.addAll(subjectAlternativeNames)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *AWS CloudFormation User Guide* .
+   *
+   *
+   * The `Value` of `Tags` is optional for Lightsail resources.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html#cfn-lightsail-certificate-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *AWS CloudFormation User Guide* .
+   *
+   *
+   * The `Value` of `Tags` is optional for Lightsail resources.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html#cfn-lightsail-certificate-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

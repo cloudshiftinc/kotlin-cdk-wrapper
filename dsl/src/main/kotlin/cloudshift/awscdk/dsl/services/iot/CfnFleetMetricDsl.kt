@@ -23,50 +23,126 @@ public class CfnFleetMetricDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The field to aggregate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-aggregationfield)
+   * @param aggregationField The field to aggregate. 
+   */
   public fun aggregationField(aggregationField: String) {
     cdkBuilder.aggregationField(aggregationField)
   }
 
+  /**
+   * The type of the aggregation query.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-aggregationtype)
+   * @param aggregationType The type of the aggregation query. 
+   */
   public fun aggregationType(aggregationType: IResolvable) {
     cdkBuilder.aggregationType(aggregationType)
   }
 
+  /**
+   * The type of the aggregation query.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-aggregationtype)
+   * @param aggregationType The type of the aggregation query. 
+   */
   public fun aggregationType(aggregationType: CfnFleetMetric.AggregationTypeProperty) {
     cdkBuilder.aggregationType(aggregationType)
   }
 
+  /**
+   * The fleet metric description.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-description)
+   * @param description The fleet metric description. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the index to search.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-indexname)
+   * @param indexName The name of the index to search. 
+   */
   public fun indexName(indexName: String) {
     cdkBuilder.indexName(indexName)
   }
 
+  /**
+   * The name of the fleet metric to create.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-metricname)
+   * @param metricName The name of the fleet metric to create. 
+   */
   public fun metricName(metricName: String) {
     cdkBuilder.metricName(metricName)
   }
 
+  /**
+   * The time in seconds between fleet metric emissions.
+   *
+   * Range [60(1 min), 86400(1 day)] and must be multiple of 60.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-period)
+   * @param period The time in seconds between fleet metric emissions. 
+   */
   public fun period(period: Number) {
     cdkBuilder.period(period)
   }
 
+  /**
+   * The search query string.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-querystring)
+   * @param queryString The search query string. 
+   */
   public fun queryString(queryString: String) {
     cdkBuilder.queryString(queryString)
   }
 
+  /**
+   * The query version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-queryversion)
+   * @param queryVersion The query version. 
+   */
   public fun queryVersion(queryVersion: String) {
     cdkBuilder.queryVersion(queryVersion)
   }
 
+  /**
+   * Metadata which can be used to manage the fleet metric.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-tags)
+   * @param tags Metadata which can be used to manage the fleet metric. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Metadata which can be used to manage the fleet metric.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-tags)
+   * @param tags Metadata which can be used to manage the fleet metric. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * Used to support unit transformation such as milliseconds to seconds.
+   *
+   * Must be a unit supported by CW metric. Default to null.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html#cfn-iot-fleetmetric-unit)
+   * @param unit Used to support unit transformation such as milliseconds to seconds. 
+   */
   public fun unit(unit: String) {
     cdkBuilder.unit(unit)
   }

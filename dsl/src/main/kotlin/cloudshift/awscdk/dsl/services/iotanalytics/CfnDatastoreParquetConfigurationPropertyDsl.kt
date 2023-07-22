@@ -11,10 +11,16 @@ public class CfnDatastoreParquetConfigurationPropertyDsl {
   private val cdkBuilder: CfnDatastore.ParquetConfigurationProperty.Builder =
       CfnDatastore.ParquetConfigurationProperty.builder()
 
+  /**
+   * @param schemaDefinition Information needed to define a schema.
+   */
   public fun schemaDefinition(schemaDefinition: IResolvable) {
     cdkBuilder.schemaDefinition(schemaDefinition)
   }
 
+  /**
+   * @param schemaDefinition Information needed to define a schema.
+   */
   public fun schemaDefinition(schemaDefinition: CfnDatastore.SchemaDefinitionProperty) {
     cdkBuilder.schemaDefinition(schemaDefinition)
   }

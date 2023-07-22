@@ -11,10 +11,18 @@ public class AuroraPostgresEngineFeaturesDsl {
   private val cdkBuilder: AuroraPostgresEngineFeatures.Builder =
       AuroraPostgresEngineFeatures.builder()
 
+  /**
+   * @param s3Export Whether this version of the Aurora Postgres cluster engine supports the S3 data
+   * export feature.
+   */
   public fun s3Export(s3Export: Boolean) {
     cdkBuilder.s3Export(s3Export)
   }
 
+  /**
+   * @param s3Import Whether this version of the Aurora Postgres cluster engine supports the S3 data
+   * import feature.
+   */
   public fun s3Import(s3Import: Boolean) {
     cdkBuilder.s3Import(s3Import)
   }

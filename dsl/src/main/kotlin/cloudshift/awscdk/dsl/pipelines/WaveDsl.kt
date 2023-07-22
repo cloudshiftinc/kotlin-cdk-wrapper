@@ -19,18 +19,46 @@ public class WaveDsl(
 
   private val _pre: MutableList<Step> = mutableListOf()
 
+  /**
+   * Additional steps to run after all of the stages in the wave.
+   *
+   * Default: - No additional steps
+   *
+   * @param post Additional steps to run after all of the stages in the wave. 
+   */
   public fun post(vararg post: Step) {
     _post.addAll(listOf(*post))
   }
 
+  /**
+   * Additional steps to run after all of the stages in the wave.
+   *
+   * Default: - No additional steps
+   *
+   * @param post Additional steps to run after all of the stages in the wave. 
+   */
   public fun post(post: Collection<Step>) {
     _post.addAll(post)
   }
 
+  /**
+   * Additional steps to run before any of the stages in the wave.
+   *
+   * Default: - No additional steps
+   *
+   * @param pre Additional steps to run before any of the stages in the wave. 
+   */
   public fun pre(vararg pre: Step) {
     _pre.addAll(listOf(*pre))
   }
 
+  /**
+   * Additional steps to run before any of the stages in the wave.
+   *
+   * Default: - No additional steps
+   *
+   * @param pre Additional steps to run before any of the stages in the wave. 
+   */
   public fun pre(pre: Collection<Step>) {
     _pre.addAll(pre)
   }

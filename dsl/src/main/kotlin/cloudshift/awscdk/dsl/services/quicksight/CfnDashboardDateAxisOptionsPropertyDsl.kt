@@ -11,6 +11,9 @@ public class CfnDashboardDateAxisOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.DateAxisOptionsProperty.Builder =
       CfnDashboard.DateAxisOptionsProperty.builder()
 
+  /**
+   * @param missingDateVisibility Determines whether or not missing dates are displayed.
+   */
   public fun missingDateVisibility(missingDateVisibility: String) {
     cdkBuilder.missingDateVisibility(missingDateVisibility)
   }

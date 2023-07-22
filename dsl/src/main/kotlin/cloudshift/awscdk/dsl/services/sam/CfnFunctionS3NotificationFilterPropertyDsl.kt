@@ -11,10 +11,16 @@ public class CfnFunctionS3NotificationFilterPropertyDsl {
   private val cdkBuilder: CfnFunction.S3NotificationFilterProperty.Builder =
       CfnFunction.S3NotificationFilterProperty.builder()
 
+  /**
+   * @param s3Key the value to be set. 
+   */
   public fun s3Key(s3Key: IResolvable) {
     cdkBuilder.s3Key(s3Key)
   }
 
+  /**
+   * @param s3Key the value to be set. 
+   */
   public fun s3Key(s3Key: CfnFunction.S3KeyFilterProperty) {
     cdkBuilder.s3Key(s3Key)
   }

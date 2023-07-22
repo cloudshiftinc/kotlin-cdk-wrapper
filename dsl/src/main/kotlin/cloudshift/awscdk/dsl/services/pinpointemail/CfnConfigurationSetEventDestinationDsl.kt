@@ -16,19 +16,44 @@ public class CfnConfigurationSetEventDestinationDsl(
   private val cdkBuilder: CfnConfigurationSetEventDestination.Builder =
       CfnConfigurationSetEventDestination.Builder.create(scope, id)
 
+  /**
+   * The name of the configuration set that contains the event destination that you want to modify.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html#cfn-pinpointemail-configurationseteventdestination-configurationsetname)
+   * @param configurationSetName The name of the configuration set that contains the event
+   * destination that you want to modify. 
+   */
   public fun configurationSetName(configurationSetName: String) {
     cdkBuilder.configurationSetName(configurationSetName)
   }
 
+  /**
+   * An object that defines the event destination.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html#cfn-pinpointemail-configurationseteventdestination-eventdestination)
+   * @param eventDestination An object that defines the event destination. 
+   */
   public fun eventDestination(eventDestination: IResolvable) {
     cdkBuilder.eventDestination(eventDestination)
   }
 
+  /**
+   * An object that defines the event destination.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html#cfn-pinpointemail-configurationseteventdestination-eventdestination)
+   * @param eventDestination An object that defines the event destination. 
+   */
   public
       fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty) {
     cdkBuilder.eventDestination(eventDestination)
   }
 
+  /**
+   * The name of the event destination that you want to modify.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html#cfn-pinpointemail-configurationseteventdestination-eventdestinationname)
+   * @param eventDestinationName The name of the event destination that you want to modify. 
+   */
   public fun eventDestinationName(eventDestinationName: String) {
     cdkBuilder.eventDestinationName(eventDestinationName)
   }

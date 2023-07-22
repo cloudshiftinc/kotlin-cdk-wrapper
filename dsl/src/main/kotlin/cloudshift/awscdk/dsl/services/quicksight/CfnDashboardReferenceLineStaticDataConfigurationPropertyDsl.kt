@@ -11,6 +11,9 @@ public class CfnDashboardReferenceLineStaticDataConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.ReferenceLineStaticDataConfigurationProperty.Builder =
       CfnDashboard.ReferenceLineStaticDataConfigurationProperty.builder()
 
+  /**
+   * @param value The double input of the static data. 
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

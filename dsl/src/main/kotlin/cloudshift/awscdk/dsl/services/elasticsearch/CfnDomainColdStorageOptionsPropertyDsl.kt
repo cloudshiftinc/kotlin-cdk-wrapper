@@ -12,10 +12,18 @@ public class CfnDomainColdStorageOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.ColdStorageOptionsProperty.Builder =
       CfnDomain.ColdStorageOptionsProperty.builder()
 
+  /**
+   * @param enabled Whether to enable or disable cold storage on the domain.
+   * You must enable UltraWarm storage in order to enable cold storage.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Whether to enable or disable cold storage on the domain.
+   * You must enable UltraWarm storage in order to enable cold storage.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

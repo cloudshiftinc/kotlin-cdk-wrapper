@@ -16,30 +16,51 @@ public class CfnDeploymentGroupTargetGroupPairInfoPropertyDsl {
 
   private val _targetGroups: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param prodTrafficRoute the value to be set.
+   */
   public fun prodTrafficRoute(prodTrafficRoute: IResolvable) {
     cdkBuilder.prodTrafficRoute(prodTrafficRoute)
   }
 
+  /**
+   * @param prodTrafficRoute the value to be set.
+   */
   public fun prodTrafficRoute(prodTrafficRoute: CfnDeploymentGroup.TrafficRouteProperty) {
     cdkBuilder.prodTrafficRoute(prodTrafficRoute)
   }
 
+  /**
+   * @param targetGroups the value to be set.
+   */
   public fun targetGroups(vararg targetGroups: Any) {
     _targetGroups.addAll(listOf(*targetGroups))
   }
 
+  /**
+   * @param targetGroups the value to be set.
+   */
   public fun targetGroups(targetGroups: Collection<Any>) {
     _targetGroups.addAll(targetGroups)
   }
 
+  /**
+   * @param targetGroups the value to be set.
+   */
   public fun targetGroups(targetGroups: IResolvable) {
     cdkBuilder.targetGroups(targetGroups)
   }
 
+  /**
+   * @param testTrafficRoute the value to be set.
+   */
   public fun testTrafficRoute(testTrafficRoute: IResolvable) {
     cdkBuilder.testTrafficRoute(testTrafficRoute)
   }
 
+  /**
+   * @param testTrafficRoute the value to be set.
+   */
   public fun testTrafficRoute(testTrafficRoute: CfnDeploymentGroup.TrafficRouteProperty) {
     cdkBuilder.testTrafficRoute(testTrafficRoute)
   }

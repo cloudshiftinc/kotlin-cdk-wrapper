@@ -11,14 +11,23 @@ public class CfnAnalysisPivotTableFieldOptionPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotTableFieldOptionProperty.Builder =
       CfnAnalysis.PivotTableFieldOptionProperty.builder()
 
+  /**
+   * @param customLabel The custom label of the pivot table field.
+   */
   public fun customLabel(customLabel: String) {
     cdkBuilder.customLabel(customLabel)
   }
 
+  /**
+   * @param fieldId The field ID of the pivot table field. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param visibility The visibility of the pivot table field.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

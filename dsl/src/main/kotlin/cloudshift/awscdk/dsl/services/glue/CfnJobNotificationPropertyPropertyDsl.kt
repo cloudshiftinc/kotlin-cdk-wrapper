@@ -11,6 +11,10 @@ public class CfnJobNotificationPropertyPropertyDsl {
   private val cdkBuilder: CfnJob.NotificationPropertyProperty.Builder =
       CfnJob.NotificationPropertyProperty.builder()
 
+  /**
+   * @param notifyDelayAfter After a job run starts, the number of minutes to wait before sending a
+   * job run delay notification.
+   */
   public fun notifyDelayAfter(notifyDelayAfter: Number) {
     cdkBuilder.notifyDelayAfter(notifyDelayAfter)
   }

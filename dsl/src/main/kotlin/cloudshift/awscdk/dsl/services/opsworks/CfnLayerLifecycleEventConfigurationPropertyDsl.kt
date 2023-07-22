@@ -11,10 +11,16 @@ public class CfnLayerLifecycleEventConfigurationPropertyDsl {
   private val cdkBuilder: CfnLayer.LifecycleEventConfigurationProperty.Builder =
       CfnLayer.LifecycleEventConfigurationProperty.builder()
 
+  /**
+   * @param shutdownEventConfiguration The Shutdown event configuration.
+   */
   public fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable) {
     cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration)
   }
 
+  /**
+   * @param shutdownEventConfiguration The Shutdown event configuration.
+   */
   public
       fun shutdownEventConfiguration(shutdownEventConfiguration: CfnLayer.ShutdownEventConfigurationProperty) {
     cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration)

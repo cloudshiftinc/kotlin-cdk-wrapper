@@ -15,10 +15,18 @@ public class CfnPrincipalPermissionsColumnWildcardPropertyDsl {
 
   private val _excludedColumnNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param excludedColumnNames Excludes column names.
+   * Any column with this name will be excluded.
+   */
   public fun excludedColumnNames(vararg excludedColumnNames: String) {
     _excludedColumnNames.addAll(listOf(*excludedColumnNames))
   }
 
+  /**
+   * @param excludedColumnNames Excludes column names.
+   * Any column with this name will be excluded.
+   */
   public fun excludedColumnNames(excludedColumnNames: Collection<String>) {
     _excludedColumnNames.addAll(excludedColumnNames)
   }

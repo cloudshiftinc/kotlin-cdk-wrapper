@@ -11,10 +11,18 @@ public class CfnAnomalyDetectorRangePropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.RangeProperty.Builder =
       CfnAnomalyDetector.RangeProperty.builder()
 
+  /**
+   * @param endTime The end time of the range to exclude. 
+   * The format is `yyyy-MM-dd'T'HH:mm:ss` . For example, `2019-07-01T23:59:59` .
+   */
   public fun endTime(endTime: String) {
     cdkBuilder.endTime(endTime)
   }
 
+  /**
+   * @param startTime The start time of the range to exclude. 
+   * The format is `yyyy-MM-dd'T'HH:mm:ss` . For example, `2019-07-01T23:59:59` .
+   */
   public fun startTime(startTime: String) {
     cdkBuilder.startTime(startTime)
   }

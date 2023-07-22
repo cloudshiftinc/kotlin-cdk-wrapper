@@ -11,10 +11,20 @@ import software.amazon.awscdk.services.rds.BackupProps
 public class BackupPropsDsl {
   private val cdkBuilder: BackupProps.Builder = BackupProps.builder()
 
+  /**
+   * @param preferredWindow A daily time range in 24-hours UTC format in which backups preferably
+   * execute.
+   * Must be at least 30 minutes long.
+   *
+   * Example: '01:00-02:00'
+   */
   public fun preferredWindow(preferredWindow: String) {
     cdkBuilder.preferredWindow(preferredWindow)
   }
 
+  /**
+   * @param retention How many days to retain the backup. 
+   */
   public fun retention(retention: Duration) {
     cdkBuilder.retention(retention)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.sns.BetweenCondition
 public class BetweenConditionDsl {
   private val cdkBuilder: BetweenCondition.Builder = BetweenCondition.builder()
 
+  /**
+   * @param start The start value. 
+   */
   public fun start(start: Number) {
     cdkBuilder.start(start)
   }
 
+  /**
+   * @param stop The stop value. 
+   */
   public fun stop(stop: Number) {
     cdkBuilder.stop(stop)
   }

@@ -11,10 +11,16 @@ public class CfnDashboardTableFieldImageConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.TableFieldImageConfigurationProperty.Builder =
       CfnDashboard.TableFieldImageConfigurationProperty.builder()
 
+  /**
+   * @param sizingOptions The sizing options for the table image configuration.
+   */
   public fun sizingOptions(sizingOptions: IResolvable) {
     cdkBuilder.sizingOptions(sizingOptions)
   }
 
+  /**
+   * @param sizingOptions The sizing options for the table image configuration.
+   */
   public fun sizingOptions(sizingOptions: CfnDashboard.TableCellImageSizingConfigurationProperty) {
     cdkBuilder.sizingOptions(sizingOptions)
   }

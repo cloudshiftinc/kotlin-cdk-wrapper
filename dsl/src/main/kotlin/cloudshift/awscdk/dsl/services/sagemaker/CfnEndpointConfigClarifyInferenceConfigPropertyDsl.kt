@@ -20,58 +20,100 @@ public class CfnEndpointConfigClarifyInferenceConfigPropertyDsl {
 
   private val _labelHeaders: MutableList<String> = mutableListOf()
 
+  /**
+   * @param contentTemplate the value to be set.
+   */
   public fun contentTemplate(contentTemplate: String) {
     cdkBuilder.contentTemplate(contentTemplate)
   }
 
+  /**
+   * @param featureHeaders the value to be set.
+   */
   public fun featureHeaders(vararg featureHeaders: String) {
     _featureHeaders.addAll(listOf(*featureHeaders))
   }
 
+  /**
+   * @param featureHeaders the value to be set.
+   */
   public fun featureHeaders(featureHeaders: Collection<String>) {
     _featureHeaders.addAll(featureHeaders)
   }
 
+  /**
+   * @param featureTypes the value to be set.
+   */
   public fun featureTypes(vararg featureTypes: String) {
     _featureTypes.addAll(listOf(*featureTypes))
   }
 
+  /**
+   * @param featureTypes the value to be set.
+   */
   public fun featureTypes(featureTypes: Collection<String>) {
     _featureTypes.addAll(featureTypes)
   }
 
+  /**
+   * @param featuresAttribute the value to be set.
+   */
   public fun featuresAttribute(featuresAttribute: String) {
     cdkBuilder.featuresAttribute(featuresAttribute)
   }
 
+  /**
+   * @param labelAttribute the value to be set.
+   */
   public fun labelAttribute(labelAttribute: String) {
     cdkBuilder.labelAttribute(labelAttribute)
   }
 
+  /**
+   * @param labelHeaders the value to be set.
+   */
   public fun labelHeaders(vararg labelHeaders: String) {
     _labelHeaders.addAll(listOf(*labelHeaders))
   }
 
+  /**
+   * @param labelHeaders the value to be set.
+   */
   public fun labelHeaders(labelHeaders: Collection<String>) {
     _labelHeaders.addAll(labelHeaders)
   }
 
+  /**
+   * @param labelIndex the value to be set.
+   */
   public fun labelIndex(labelIndex: Number) {
     cdkBuilder.labelIndex(labelIndex)
   }
 
+  /**
+   * @param maxPayloadInMb the value to be set.
+   */
   public fun maxPayloadInMb(maxPayloadInMb: Number) {
     cdkBuilder.maxPayloadInMb(maxPayloadInMb)
   }
 
+  /**
+   * @param maxRecordCount the value to be set.
+   */
   public fun maxRecordCount(maxRecordCount: Number) {
     cdkBuilder.maxRecordCount(maxRecordCount)
   }
 
+  /**
+   * @param probabilityAttribute the value to be set.
+   */
   public fun probabilityAttribute(probabilityAttribute: String) {
     cdkBuilder.probabilityAttribute(probabilityAttribute)
   }
 
+  /**
+   * @param probabilityIndex the value to be set.
+   */
   public fun probabilityIndex(probabilityIndex: Number) {
     cdkBuilder.probabilityIndex(probabilityIndex)
   }

@@ -12,10 +12,16 @@ public class BaseTrafficShiftingConfigPropsDsl {
   private val cdkBuilder: BaseTrafficShiftingConfigProps.Builder =
       BaseTrafficShiftingConfigProps.builder()
 
+  /**
+   * @param interval The amount of time between traffic shifts. 
+   */
   public fun interval(interval: Duration) {
     cdkBuilder.interval(interval)
   }
 
+  /**
+   * @param percentage The percentage to increase traffic on each traffic shift. 
+   */
   public fun percentage(percentage: Number) {
     cdkBuilder.percentage(percentage)
   }

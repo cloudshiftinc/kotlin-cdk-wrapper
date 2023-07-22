@@ -11,10 +11,16 @@ public class CfnIntegrationTaskPropertiesMapPropertyDsl {
   private val cdkBuilder: CfnIntegration.TaskPropertiesMapProperty.Builder =
       CfnIntegration.TaskPropertiesMapProperty.builder()
 
+  /**
+   * @param operatorPropertyKey The task property key. 
+   */
   public fun operatorPropertyKey(operatorPropertyKey: String) {
     cdkBuilder.operatorPropertyKey(operatorPropertyKey)
   }
 
+  /**
+   * @param property The task property value. 
+   */
   public fun `property`(`property`: String) {
     cdkBuilder.`property`(`property`)
   }

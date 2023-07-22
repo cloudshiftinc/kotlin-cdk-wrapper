@@ -12,14 +12,27 @@ public class CfnDetectorModelIotTopicPublishPropertyDsl {
   private val cdkBuilder: CfnDetectorModel.IotTopicPublishProperty.Builder =
       CfnDetectorModel.IotTopicPublishProperty.builder()
 
+  /**
+   * @param mqttTopic The MQTT topic of the message. 
+   * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;` )
+   * and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
+   */
   public fun mqttTopic(mqttTopic: String) {
     cdkBuilder.mqttTopic(mqttTopic)
   }
 
+  /**
+   * @param payload You can configure the action payload when you publish a message to an AWS IoT
+   * Core topic.
+   */
   public fun payload(payload: IResolvable) {
     cdkBuilder.payload(payload)
   }
 
+  /**
+   * @param payload You can configure the action payload when you publish a message to an AWS IoT
+   * Core topic.
+   */
   public fun payload(payload: CfnDetectorModel.PayloadProperty) {
     cdkBuilder.payload(payload)
   }

@@ -11,10 +11,18 @@ public class CfnAnalysisSheetControlLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SheetControlLayoutConfigurationProperty.Builder =
       CfnAnalysis.SheetControlLayoutConfigurationProperty.builder()
 
+  /**
+   * @param gridLayout The configuration that determines the elements and canvas size options of
+   * sheet control.
+   */
   public fun gridLayout(gridLayout: IResolvable) {
     cdkBuilder.gridLayout(gridLayout)
   }
 
+  /**
+   * @param gridLayout The configuration that determines the elements and canvas size options of
+   * sheet control.
+   */
   public fun gridLayout(gridLayout: CfnAnalysis.GridLayoutConfigurationProperty) {
     cdkBuilder.gridLayout(gridLayout)
   }

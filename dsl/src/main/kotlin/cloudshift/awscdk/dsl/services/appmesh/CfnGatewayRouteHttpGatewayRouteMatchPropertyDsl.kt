@@ -20,54 +20,97 @@ public class CfnGatewayRouteHttpGatewayRouteMatchPropertyDsl {
 
   private val _queryParameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param headers The client request headers to match on.
+   */
   public fun headers(vararg headers: Any) {
     _headers.addAll(listOf(*headers))
   }
 
+  /**
+   * @param headers The client request headers to match on.
+   */
   public fun headers(headers: Collection<Any>) {
     _headers.addAll(headers)
   }
 
+  /**
+   * @param headers The client request headers to match on.
+   */
   public fun headers(headers: IResolvable) {
     cdkBuilder.headers(headers)
   }
 
+  /**
+   * @param hostname The host name to match on.
+   */
   public fun hostname(hostname: IResolvable) {
     cdkBuilder.hostname(hostname)
   }
 
+  /**
+   * @param hostname The host name to match on.
+   */
   public fun hostname(hostname: CfnGatewayRoute.GatewayRouteHostnameMatchProperty) {
     cdkBuilder.hostname(hostname)
   }
 
+  /**
+   * @param method The method to match on.
+   */
   public fun method(method: String) {
     cdkBuilder.method(method)
   }
 
+  /**
+   * @param path The path to match on.
+   */
   public fun path(path: IResolvable) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param path The path to match on.
+   */
   public fun path(path: CfnGatewayRoute.HttpPathMatchProperty) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param port The port number to match on.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param prefix Specifies the path to match requests with.
+   * This parameter must always start with `/` , which by itself matches all requests to the virtual
+   * service name. You can also match for path-based routing of requests. For example, if your virtual
+   * service name is `my-service.local` and you want the route to match requests to
+   * `my-service.local/metrics` , your prefix should be `/metrics` .
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }
 
+  /**
+   * @param queryParameters The query parameter to match on.
+   */
   public fun queryParameters(vararg queryParameters: Any) {
     _queryParameters.addAll(listOf(*queryParameters))
   }
 
+  /**
+   * @param queryParameters The query parameter to match on.
+   */
   public fun queryParameters(queryParameters: Collection<Any>) {
     _queryParameters.addAll(queryParameters)
   }
 
+  /**
+   * @param queryParameters The query parameter to match on.
+   */
   public fun queryParameters(queryParameters: IResolvable) {
     cdkBuilder.queryParameters(queryParameters)
   }

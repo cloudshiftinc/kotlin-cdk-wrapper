@@ -11,10 +11,16 @@ public class CfnAnalysisGaugeChartArcConditionalFormattingPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GaugeChartArcConditionalFormattingProperty.Builder =
       CfnAnalysis.GaugeChartArcConditionalFormattingProperty.builder()
 
+  /**
+   * @param foregroundColor The conditional formatting of the arc foreground color.
+   */
   public fun foregroundColor(foregroundColor: IResolvable) {
     cdkBuilder.foregroundColor(foregroundColor)
   }
 
+  /**
+   * @param foregroundColor The conditional formatting of the arc foreground color.
+   */
   public fun foregroundColor(foregroundColor: CfnAnalysis.ConditionalFormattingColorProperty) {
     cdkBuilder.foregroundColor(foregroundColor)
   }

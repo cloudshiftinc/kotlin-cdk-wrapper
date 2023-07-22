@@ -15,28 +15,55 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 public class BaseTargetGroupPropsDsl {
   private val cdkBuilder: BaseTargetGroupProps.Builder = BaseTargetGroupProps.builder()
 
+  /**
+   * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
+   * deregistering a target.
+   * The range is 0-3600 seconds.
+   */
   public fun deregistrationDelay(deregistrationDelay: Duration) {
     cdkBuilder.deregistrationDelay(deregistrationDelay)
   }
 
-  public fun healthCheck(block: HealthCheckDsl.() -> Unit = {}) {
+  /**
+   * @param healthCheck Health check configuration.
+   */
+  public fun healthCheck(healthCheck: HealthCheckDsl.() -> Unit = {}) {
     val builder = HealthCheckDsl()
-    builder.apply(block)
+    builder.apply(healthCheck)
     cdkBuilder.healthCheck(builder.build())
   }
 
+  /**
+   * @param healthCheck Health check configuration.
+   */
   public fun healthCheck(healthCheck: HealthCheck) {
     cdkBuilder.healthCheck(healthCheck)
   }
 
+  /**
+   * @param targetGroupName The name of the target group.
+   * This name must be unique per region per account, can have a maximum of
+   * 32 characters, must contain only alphanumeric characters or hyphens, and
+   * must not begin or end with a hyphen.
+   */
   public fun targetGroupName(targetGroupName: String) {
     cdkBuilder.targetGroupName(targetGroupName)
   }
 
+  /**
+   * @param targetType The type of targets registered to this TargetGroup, either IP or Instance.
+   * All targets registered into the group must be of this type. If you
+   * register targets to the TargetGroup in the CDK app, the TargetType is
+   * determined automatically.
+   */
   public fun targetType(targetType: TargetType) {
     cdkBuilder.targetType(targetType)
   }
 
+  /**
+   * @param vpc The virtual private cloud (VPC).
+   * only if `TargetType` is `Ip` or `InstanceId`
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

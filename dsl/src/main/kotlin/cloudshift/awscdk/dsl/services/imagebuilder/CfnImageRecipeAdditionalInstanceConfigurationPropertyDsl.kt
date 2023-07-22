@@ -12,14 +12,40 @@ public class CfnImageRecipeAdditionalInstanceConfigurationPropertyDsl {
   private val cdkBuilder: CfnImageRecipe.AdditionalInstanceConfigurationProperty.Builder =
       CfnImageRecipe.AdditionalInstanceConfigurationProperty.builder()
 
+  /**
+   * @param systemsManagerAgent Contains settings for the Systems Manager agent on your build
+   * instance.
+   */
   public fun systemsManagerAgent(systemsManagerAgent: IResolvable) {
     cdkBuilder.systemsManagerAgent(systemsManagerAgent)
   }
 
+  /**
+   * @param systemsManagerAgent Contains settings for the Systems Manager agent on your build
+   * instance.
+   */
   public fun systemsManagerAgent(systemsManagerAgent: CfnImageRecipe.SystemsManagerAgentProperty) {
     cdkBuilder.systemsManagerAgent(systemsManagerAgent)
   }
 
+  /**
+   * @param userDataOverride Use this property to provide commands or a command script to run when
+   * you launch your build instance.
+   * The userDataOverride property replaces any commands that Image Builder might have added to
+   * ensure that Systems Manager is installed on your Linux build instance. If you override the user
+   * data, make sure that you add commands to install Systems Manager, if it is not pre-installed on
+   * your base image.
+   *
+   *
+   * The user data is always base 64 encoded. For example, the following commands are encoded as
+   * `IyEvYmluL2Jhc2gKbWtkaXIgLXAgL3Zhci9iYi8KdG91Y2ggL3Zhci$` :
+   *
+   * *#!/bin/bash*
+   *
+   * mkdir -p /var/bb/
+   *
+   * touch /var
+   */
   public fun userDataOverride(userDataOverride: String) {
     cdkBuilder.userDataOverride(userDataOverride)
   }

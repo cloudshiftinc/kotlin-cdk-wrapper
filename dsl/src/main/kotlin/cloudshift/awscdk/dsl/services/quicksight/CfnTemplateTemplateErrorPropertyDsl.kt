@@ -17,22 +17,37 @@ public class CfnTemplateTemplateErrorPropertyDsl {
 
   private val _violatedEntities: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param message Description of the error type.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * @param type Type of error.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param violatedEntities An error path that shows which entities caused the template error.
+   */
   public fun violatedEntities(vararg violatedEntities: Any) {
     _violatedEntities.addAll(listOf(*violatedEntities))
   }
 
+  /**
+   * @param violatedEntities An error path that shows which entities caused the template error.
+   */
   public fun violatedEntities(violatedEntities: Collection<Any>) {
     _violatedEntities.addAll(violatedEntities)
   }
 
+  /**
+   * @param violatedEntities An error path that shows which entities caused the template error.
+   */
   public fun violatedEntities(violatedEntities: IResolvable) {
     cdkBuilder.violatedEntities(violatedEntities)
   }

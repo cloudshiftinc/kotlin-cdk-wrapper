@@ -20,38 +20,71 @@ public class CfnDashboardGeospatialMapAggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param colors The color field wells of a geospatial map.
+   */
   public fun colors(vararg colors: Any) {
     _colors.addAll(listOf(*colors))
   }
 
+  /**
+   * @param colors The color field wells of a geospatial map.
+   */
   public fun colors(colors: Collection<Any>) {
     _colors.addAll(colors)
   }
 
+  /**
+   * @param colors The color field wells of a geospatial map.
+   */
   public fun colors(colors: IResolvable) {
     cdkBuilder.colors(colors)
   }
 
+  /**
+   * @param geospatial The geospatial field wells of a geospatial map.
+   * Values are grouped by geospatial fields.
+   */
   public fun geospatial(vararg geospatial: Any) {
     _geospatial.addAll(listOf(*geospatial))
   }
 
+  /**
+   * @param geospatial The geospatial field wells of a geospatial map.
+   * Values are grouped by geospatial fields.
+   */
   public fun geospatial(geospatial: Collection<Any>) {
     _geospatial.addAll(geospatial)
   }
 
+  /**
+   * @param geospatial The geospatial field wells of a geospatial map.
+   * Values are grouped by geospatial fields.
+   */
   public fun geospatial(geospatial: IResolvable) {
     cdkBuilder.geospatial(geospatial)
   }
 
+  /**
+   * @param values The size field wells of a geospatial map.
+   * Values are aggregated based on geospatial fields.
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The size field wells of a geospatial map.
+   * Values are aggregated based on geospatial fields.
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The size field wells of a geospatial map.
+   * Values are aggregated based on geospatial fields.
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

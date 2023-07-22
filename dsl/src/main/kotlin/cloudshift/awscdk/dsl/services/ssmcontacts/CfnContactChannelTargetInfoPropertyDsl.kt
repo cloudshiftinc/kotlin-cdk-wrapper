@@ -12,10 +12,17 @@ public class CfnContactChannelTargetInfoPropertyDsl {
   private val cdkBuilder: CfnContact.ChannelTargetInfoProperty.Builder =
       CfnContact.ChannelTargetInfoProperty.builder()
 
+  /**
+   * @param channelId The Amazon Resource Name (ARN) of the contact channel. 
+   */
   public fun channelId(channelId: String) {
     cdkBuilder.channelId(channelId)
   }
 
+  /**
+   * @param retryIntervalInMinutes The number of minutes to wait before retrying to send engagement
+   * if the engagement initially failed. 
+   */
   public fun retryIntervalInMinutes(retryIntervalInMinutes: Number) {
     cdkBuilder.retryIntervalInMinutes(retryIntervalInMinutes)
   }

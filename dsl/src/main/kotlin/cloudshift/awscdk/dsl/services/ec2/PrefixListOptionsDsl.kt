@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ec2.PrefixListOptions
 public class PrefixListOptionsDsl {
   private val cdkBuilder: PrefixListOptions.Builder = PrefixListOptions.builder()
 
+  /**
+   * @param maxEntries The maximum number of entries for the prefix list.
+   */
   public fun maxEntries(maxEntries: Number) {
     cdkBuilder.maxEntries(maxEntries)
   }

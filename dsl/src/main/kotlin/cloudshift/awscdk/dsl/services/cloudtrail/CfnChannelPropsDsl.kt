@@ -21,30 +21,62 @@ public class CfnChannelPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param destinations One or more event data stores to which events arriving through a channel
+   * will be logged.
+   */
   public fun destinations(vararg destinations: Any) {
     _destinations.addAll(listOf(*destinations))
   }
 
+  /**
+   * @param destinations One or more event data stores to which events arriving through a channel
+   * will be logged.
+   */
   public fun destinations(destinations: Collection<Any>) {
     _destinations.addAll(destinations)
   }
 
+  /**
+   * @param destinations One or more event data stores to which events arriving through a channel
+   * will be logged.
+   */
   public fun destinations(destinations: IResolvable) {
     cdkBuilder.destinations(destinations)
   }
 
+  /**
+   * @param name The name of the channel.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param source The name of the partner or external event source.
+   * You cannot change this name after you create the channel. A maximum of one channel is allowed
+   * per source.
+   *
+   * A source can be either `Custom` for all valid non- AWS events, or the name of a partner event
+   * source. For information about the source names for available partners, see [Additional information
+   * about integration
+   * partners](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store-integration.html#cloudtrail-lake-partner-information)
+   * in the CloudTrail User Guide.
+   */
   public fun source(source: String) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param tags A list of tags.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of tags.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

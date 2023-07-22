@@ -11,10 +11,17 @@ public class CfnAssetEgressEndpointPropertyDsl {
   private val cdkBuilder: CfnAsset.EgressEndpointProperty.Builder =
       CfnAsset.EgressEndpointProperty.builder()
 
+  /**
+   * @param packagingConfigurationId The ID of a packaging configuration that's applied to this
+   * asset. 
+   */
   public fun packagingConfigurationId(packagingConfigurationId: String) {
     cdkBuilder.packagingConfigurationId(packagingConfigurationId)
   }
 
+  /**
+   * @param url The URL that's used to request content from this endpoint. 
+   */
   public fun url(url: String) {
     cdkBuilder.url(url)
   }

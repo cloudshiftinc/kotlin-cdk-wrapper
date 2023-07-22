@@ -10,6 +10,9 @@ import software.amazon.awscdk.cxapi.KeyContextResponse
 public class KeyContextResponseDsl {
   private val cdkBuilder: KeyContextResponse.Builder = KeyContextResponse.builder()
 
+  /**
+   * @param keyId Id of the key. 
+   */
   public fun keyId(keyId: String) {
     cdkBuilder.keyId(keyId)
   }

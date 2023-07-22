@@ -17,18 +17,31 @@ public class CfnTriggerPredicatePropertyDsl {
 
   private val _conditions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param conditions A list of the conditions that determine when the trigger will fire.
+   */
   public fun conditions(vararg conditions: Any) {
     _conditions.addAll(listOf(*conditions))
   }
 
+  /**
+   * @param conditions A list of the conditions that determine when the trigger will fire.
+   */
   public fun conditions(conditions: Collection<Any>) {
     _conditions.addAll(conditions)
   }
 
+  /**
+   * @param conditions A list of the conditions that determine when the trigger will fire.
+   */
   public fun conditions(conditions: IResolvable) {
     cdkBuilder.conditions(conditions)
   }
 
+  /**
+   * @param logical An optional field if only one condition is listed.
+   * If multiple conditions are listed, then this field is required.
+   */
   public fun logical(logical: String) {
     cdkBuilder.logical(logical)
   }

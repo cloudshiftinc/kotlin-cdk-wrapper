@@ -11,6 +11,9 @@ public class CfnFormFormInputValuePropertyPropertyDsl {
   private val cdkBuilder: CfnForm.FormInputValuePropertyProperty.Builder =
       CfnForm.FormInputValuePropertyProperty.builder()
 
+  /**
+   * @param value The value to assign to the input field.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

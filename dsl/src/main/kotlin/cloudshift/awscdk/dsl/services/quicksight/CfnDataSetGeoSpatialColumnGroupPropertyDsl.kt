@@ -15,18 +15,30 @@ public class CfnDataSetGeoSpatialColumnGroupPropertyDsl {
 
   private val _columns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param columns Columns in this hierarchy. 
+   */
   public fun columns(vararg columns: String) {
     _columns.addAll(listOf(*columns))
   }
 
+  /**
+   * @param columns Columns in this hierarchy. 
+   */
   public fun columns(columns: Collection<String>) {
     _columns.addAll(columns)
   }
 
+  /**
+   * @param countryCode Country code.
+   */
   public fun countryCode(countryCode: String) {
     cdkBuilder.countryCode(countryCode)
   }
 
+  /**
+   * @param name A display name for the hierarchy. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

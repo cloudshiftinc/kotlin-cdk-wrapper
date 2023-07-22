@@ -11,14 +11,25 @@ import software.amazon.awscdk.services.ses.ByoDkimOptions
 public class ByoDkimOptionsDsl {
   private val cdkBuilder: ByoDkimOptions.Builder = ByoDkimOptions.builder()
 
+  /**
+   * @param privateKey The private key that's used to generate a DKIM signature. 
+   */
   public fun privateKey(privateKey: SecretValue) {
     cdkBuilder.privateKey(privateKey)
   }
 
+  /**
+   * @param publicKey The public key.
+   * If specified, a TXT record with the public key is created.
+   */
   public fun publicKey(publicKey: String) {
     cdkBuilder.publicKey(publicKey)
   }
 
+  /**
+   * @param selector A string that's used to identify a public key in the DNS configuration for a
+   * domain. 
+   */
   public fun selector(selector: String) {
     cdkBuilder.selector(selector)
   }

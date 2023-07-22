@@ -11,10 +11,16 @@ public class CfnCertificateOtherNamePropertyDsl {
   private val cdkBuilder: CfnCertificate.OtherNameProperty.Builder =
       CfnCertificate.OtherNameProperty.builder()
 
+  /**
+   * @param typeId Specifies an OID. 
+   */
   public fun typeId(typeId: String) {
     cdkBuilder.typeId(typeId)
   }
 
+  /**
+   * @param value Specifies an OID value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

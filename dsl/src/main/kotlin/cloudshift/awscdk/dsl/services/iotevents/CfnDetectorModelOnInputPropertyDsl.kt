@@ -18,26 +18,47 @@ public class CfnDetectorModelOnInputPropertyDsl {
 
   private val _transitionEvents: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+   */
   public fun events(vararg events: Any) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+   */
   public fun events(events: Collection<Any>) {
     _events.addAll(events)
   }
 
+  /**
+   * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
+   */
   public fun events(events: IResolvable) {
     cdkBuilder.events(events)
   }
 
+  /**
+   * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+   * `condition` evaluates to TRUE.
+   */
   public fun transitionEvents(vararg transitionEvents: Any) {
     _transitionEvents.addAll(listOf(*transitionEvents))
   }
 
+  /**
+   * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+   * `condition` evaluates to TRUE.
+   */
   public fun transitionEvents(transitionEvents: Collection<Any>) {
     _transitionEvents.addAll(transitionEvents)
   }
 
+  /**
+   * @param transitionEvents Specifies the actions performed, and the next state entered, when a
+   * `condition` evaluates to TRUE.
+   */
   public fun transitionEvents(transitionEvents: IResolvable) {
     cdkBuilder.transitionEvents(transitionEvents)
   }

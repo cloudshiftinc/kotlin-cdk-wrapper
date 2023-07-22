@@ -13,34 +13,67 @@ import software.amazon.awscdk.services.m2.CfnApplicationProps
 public class CfnApplicationPropsDsl {
   private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()
 
+  /**
+   * @param definition The application definition for a particular application. You can specify
+   * either inline JSON or an Amazon S3 bucket location. 
+   * For information about application definitions, see the [AWS Mainframe Modernization User
+   * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
+   */
   public fun definition(definition: IResolvable) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * @param definition The application definition for a particular application. You can specify
+   * either inline JSON or an Amazon S3 bucket location. 
+   * For information about application definitions, see the [AWS Mainframe Modernization User
+   * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
+   */
   public fun definition(definition: CfnApplication.DefinitionProperty) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * @param description The description of the application.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param engineType The type of the target platform for this application. 
+   */
   public fun engineType(engineType: String) {
     cdkBuilder.engineType(engineType)
   }
 
+  /**
+   * @param kmsKeyId The identifier of a customer managed key.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param name The name of the application. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param roleArn the value to be set.
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }

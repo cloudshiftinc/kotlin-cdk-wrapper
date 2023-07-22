@@ -10,18 +10,30 @@ import software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps
 public class CfnApiMappingPropsDsl {
   private val cdkBuilder: CfnApiMappingProps.Builder = CfnApiMappingProps.builder()
 
+  /**
+   * @param apiId The identifier of the API. 
+   */
   public fun apiId(apiId: String) {
     cdkBuilder.apiId(apiId)
   }
 
+  /**
+   * @param apiMappingKey The API mapping key.
+   */
   public fun apiMappingKey(apiMappingKey: String) {
     cdkBuilder.apiMappingKey(apiMappingKey)
   }
 
+  /**
+   * @param domainName The domain name. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param stage The API stage. 
+   */
   public fun stage(stage: String) {
     cdkBuilder.stage(stage)
   }

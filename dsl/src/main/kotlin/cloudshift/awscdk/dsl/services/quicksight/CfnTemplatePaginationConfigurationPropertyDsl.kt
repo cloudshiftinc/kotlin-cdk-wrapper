@@ -11,10 +11,16 @@ public class CfnTemplatePaginationConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.PaginationConfigurationProperty.Builder =
       CfnTemplate.PaginationConfigurationProperty.builder()
 
+  /**
+   * @param pageNumber Indicates the page number. 
+   */
   public fun pageNumber(pageNumber: Number) {
     cdkBuilder.pageNumber(pageNumber)
   }
 
+  /**
+   * @param pageSize Indicates how many items render in one page. 
+   */
   public fun pageSize(pageSize: Number) {
     cdkBuilder.pageSize(pageSize)
   }

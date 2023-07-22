@@ -20,35 +20,80 @@ public class CfnStorageVirtualMachinePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param activeDirectoryConfiguration Describes the Microsoft Active Directory configuration to
+   * which the SVM is joined, if applicable.
+   */
   public fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
     cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration)
   }
 
+  /**
+   * @param activeDirectoryConfiguration Describes the Microsoft Active Directory configuration to
+   * which the SVM is joined, if applicable.
+   */
   public
       fun activeDirectoryConfiguration(activeDirectoryConfiguration: CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty) {
     cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration)
   }
 
+  /**
+   * @param fileSystemId Specifies the FSx for ONTAP file system on which to create the SVM. 
+   */
   public fun fileSystemId(fileSystemId: String) {
     cdkBuilder.fileSystemId(fileSystemId)
   }
 
+  /**
+   * @param name The name of the SVM. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param rootVolumeSecurityStyle The security style of the root volume of the SVM. Specify one of
+   * the following values:.
+   * * `UNIX` if the file system is managed by a UNIX administrator, the majority of users are NFS
+   * clients, and an application accessing the data uses a UNIX user as the service account.
+   * * `NTFS` if the file system is managed by a Windows administrator, the majority of users are
+   * SMB clients, and an application accessing the data uses a Windows user as the service account.
+   * * `MIXED` if the file system is managed by both UNIX and Windows administrators and users
+   * consist of both NFS and SMB clients.
+   */
   public fun rootVolumeSecurityStyle(rootVolumeSecurityStyle: String) {
     cdkBuilder.rootVolumeSecurityStyle(rootVolumeSecurityStyle)
   }
 
+  /**
+   * @param svmAdminPassword Specifies the password to use when logging on to the SVM using a secure
+   * shell (SSH) connection to the SVM's management endpoint.
+   * Doing so enables you to manage the SVM using the NetApp ONTAP CLI or REST API. If you do not
+   * specify a password, you can still use the file system's `fsxadmin` user to manage the SVM. For
+   * more information, see [Managing SVMs using the NetApp ONTAP
+   * CLI](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-resources-ontap-apps.html#vsadmin-ontap-cli)
+   * in the *FSx for ONTAP User Guide* .
+   */
   public fun svmAdminPassword(svmAdminPassword: String) {
     cdkBuilder.svmAdminPassword(svmAdminPassword)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

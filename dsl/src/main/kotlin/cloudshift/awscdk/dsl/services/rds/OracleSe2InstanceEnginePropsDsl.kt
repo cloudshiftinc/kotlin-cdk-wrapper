@@ -11,6 +11,9 @@ public class OracleSe2InstanceEnginePropsDsl {
   private val cdkBuilder: OracleSe2InstanceEngineProps.Builder =
       OracleSe2InstanceEngineProps.builder()
 
+  /**
+   * @param version The exact version of the engine to use. 
+   */
   public fun version(version: OracleEngineVersion) {
     cdkBuilder.version(version)
   }

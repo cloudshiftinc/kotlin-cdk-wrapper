@@ -11,6 +11,9 @@ public class CfnDashboardWaterfallChartOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.WaterfallChartOptionsProperty.Builder =
       CfnDashboard.WaterfallChartOptionsProperty.builder()
 
+  /**
+   * @param totalBarLabel This option determines the total bar label of a waterfall visual.
+   */
   public fun totalBarLabel(totalBarLabel: String) {
     cdkBuilder.totalBarLabel(totalBarLabel)
   }

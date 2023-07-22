@@ -11,10 +11,18 @@ public class CfnRuleGroupNotStatementPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.NotStatementProperty.Builder =
       CfnRuleGroup.NotStatementProperty.builder()
 
+  /**
+   * @param statement The statement to negate. 
+   * You can use any statement that can be nested.
+   */
   public fun statement(statement: IResolvable) {
     cdkBuilder.statement(statement)
   }
 
+  /**
+   * @param statement The statement to negate. 
+   * You can use any statement that can be nested.
+   */
   public fun statement(statement: CfnRuleGroup.StatementProperty) {
     cdkBuilder.statement(statement)
   }

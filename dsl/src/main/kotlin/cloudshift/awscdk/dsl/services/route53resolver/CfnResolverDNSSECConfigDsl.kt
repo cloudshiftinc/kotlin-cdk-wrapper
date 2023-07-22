@@ -15,6 +15,14 @@ public class CfnResolverDNSSECConfigDsl(
   private val cdkBuilder: CfnResolverDNSSECConfig.Builder =
       CfnResolverDNSSECConfig.Builder.create(scope, id)
 
+  /**
+   * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation status
+   * for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html#cfn-route53resolver-resolverdnssecconfig-resourceid)
+   * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC
+   * validation status for. 
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }

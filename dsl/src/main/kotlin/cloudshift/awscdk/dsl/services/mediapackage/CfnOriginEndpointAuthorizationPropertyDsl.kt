@@ -11,10 +11,18 @@ public class CfnOriginEndpointAuthorizationPropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.AuthorizationProperty.Builder =
       CfnOriginEndpoint.AuthorizationProperty.builder()
 
+  /**
+   * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager
+   * that your Content Delivery Network (CDN) uses for authorization to access your endpoint. 
+   */
   public fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
     cdkBuilder.cdnIdentifierSecret(cdnIdentifierSecret)
   }
 
+  /**
+   * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows AWS Elemental
+   * MediaPackage to communicate with AWS Secrets Manager . 
+   */
   public fun secretsRoleArn(secretsRoleArn: String) {
     cdkBuilder.secretsRoleArn(secretsRoleArn)
   }

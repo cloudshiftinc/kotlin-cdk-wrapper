@@ -13,34 +13,58 @@ public class CfnDashboardParameterSliderControlPropertyDsl {
   private val cdkBuilder: CfnDashboard.ParameterSliderControlProperty.Builder =
       CfnDashboard.ParameterSliderControlProperty.builder()
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: IResolvable) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: CfnDashboard.SliderControlDisplayOptionsProperty) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param maximumValue The smaller value that is displayed at the left of the slider. 
+   */
   public fun maximumValue(maximumValue: Number) {
     cdkBuilder.maximumValue(maximumValue)
   }
 
+  /**
+   * @param minimumValue The larger value that is displayed at the right of the slider. 
+   */
   public fun minimumValue(minimumValue: Number) {
     cdkBuilder.minimumValue(minimumValue)
   }
 
+  /**
+   * @param parameterControlId The ID of the `ParameterSliderControl` . 
+   */
   public fun parameterControlId(parameterControlId: String) {
     cdkBuilder.parameterControlId(parameterControlId)
   }
 
+  /**
+   * @param sourceParameterName The source parameter name of the `ParameterSliderControl` . 
+   */
   public fun sourceParameterName(sourceParameterName: String) {
     cdkBuilder.sourceParameterName(sourceParameterName)
   }
 
+  /**
+   * @param stepSize The number of increments that the slider bar is divided into. 
+   */
   public fun stepSize(stepSize: Number) {
     cdkBuilder.stepSize(stepSize)
   }
 
+  /**
+   * @param title The title of the `ParameterSliderControl` . 
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }

@@ -19,30 +19,54 @@ public class CfnBackupPlanBackupPlanResourceTypePropertyDsl {
 
   private val _backupPlanRule: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param advancedBackupSettings A list of backup options for each resource type.
+   */
   public fun advancedBackupSettings(vararg advancedBackupSettings: Any) {
     _advancedBackupSettings.addAll(listOf(*advancedBackupSettings))
   }
 
+  /**
+   * @param advancedBackupSettings A list of backup options for each resource type.
+   */
   public fun advancedBackupSettings(advancedBackupSettings: Collection<Any>) {
     _advancedBackupSettings.addAll(advancedBackupSettings)
   }
 
+  /**
+   * @param advancedBackupSettings A list of backup options for each resource type.
+   */
   public fun advancedBackupSettings(advancedBackupSettings: IResolvable) {
     cdkBuilder.advancedBackupSettings(advancedBackupSettings)
   }
 
+  /**
+   * @param backupPlanName The display name of a backup plan. 
+   */
   public fun backupPlanName(backupPlanName: String) {
     cdkBuilder.backupPlanName(backupPlanName)
   }
 
+  /**
+   * @param backupPlanRule An array of `BackupRule` objects, each of which specifies a scheduled
+   * task that is used to back up a selection of resources. 
+   */
   public fun backupPlanRule(vararg backupPlanRule: Any) {
     _backupPlanRule.addAll(listOf(*backupPlanRule))
   }
 
+  /**
+   * @param backupPlanRule An array of `BackupRule` objects, each of which specifies a scheduled
+   * task that is used to back up a selection of resources. 
+   */
   public fun backupPlanRule(backupPlanRule: Collection<Any>) {
     _backupPlanRule.addAll(backupPlanRule)
   }
 
+  /**
+   * @param backupPlanRule An array of `BackupRule` objects, each of which specifies a scheduled
+   * task that is used to back up a selection of resources. 
+   */
   public fun backupPlanRule(backupPlanRule: IResolvable) {
     cdkBuilder.backupPlanRule(backupPlanRule)
   }

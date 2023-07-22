@@ -19,38 +19,69 @@ public class CfnIntegrationTaskPropertyDsl {
 
   private val _taskProperties: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param connectorOperator The operation to be performed on the provided source fields.
+   */
   public fun connectorOperator(connectorOperator: IResolvable) {
     cdkBuilder.connectorOperator(connectorOperator)
   }
 
+  /**
+   * @param connectorOperator The operation to be performed on the provided source fields.
+   */
   public fun connectorOperator(connectorOperator: CfnIntegration.ConnectorOperatorProperty) {
     cdkBuilder.connectorOperator(connectorOperator)
   }
 
+  /**
+   * @param destinationField A field in a destination connector, or a field value against which
+   * Amazon AppFlow validates a source field.
+   */
   public fun destinationField(destinationField: String) {
     cdkBuilder.destinationField(destinationField)
   }
 
+  /**
+   * @param sourceFields The source fields to which a particular task is applied. 
+   */
   public fun sourceFields(vararg sourceFields: String) {
     _sourceFields.addAll(listOf(*sourceFields))
   }
 
+  /**
+   * @param sourceFields The source fields to which a particular task is applied. 
+   */
   public fun sourceFields(sourceFields: Collection<String>) {
     _sourceFields.addAll(sourceFields)
   }
 
+  /**
+   * @param taskProperties A map used to store task-related information.
+   * The service looks for particular information based on the TaskType.
+   */
   public fun taskProperties(vararg taskProperties: Any) {
     _taskProperties.addAll(listOf(*taskProperties))
   }
 
+  /**
+   * @param taskProperties A map used to store task-related information.
+   * The service looks for particular information based on the TaskType.
+   */
   public fun taskProperties(taskProperties: Collection<Any>) {
     _taskProperties.addAll(taskProperties)
   }
 
+  /**
+   * @param taskProperties A map used to store task-related information.
+   * The service looks for particular information based on the TaskType.
+   */
   public fun taskProperties(taskProperties: IResolvable) {
     cdkBuilder.taskProperties(taskProperties)
   }
 
+  /**
+   * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
+   */
   public fun taskType(taskType: String) {
     cdkBuilder.taskType(taskType)
   }

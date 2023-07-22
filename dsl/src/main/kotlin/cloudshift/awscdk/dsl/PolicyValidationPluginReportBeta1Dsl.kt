@@ -19,22 +19,37 @@ public class PolicyValidationPluginReportBeta1Dsl {
 
   private val _violations: MutableList<PolicyViolationBeta1> = mutableListOf()
 
+  /**
+   * @param metadata Arbitrary information about the report.
+   */
   public fun metadata(metadata: Map<String, String>) {
     cdkBuilder.metadata(metadata)
   }
 
+  /**
+   * @param pluginVersion The version of the plugin that created the report.
+   */
   public fun pluginVersion(pluginVersion: String) {
     cdkBuilder.pluginVersion(pluginVersion)
   }
 
+  /**
+   * @param success Whether or not the report was successful. 
+   */
   public fun success(success: Boolean) {
     cdkBuilder.success(success)
   }
 
+  /**
+   * @param violations List of violations in the report. 
+   */
   public fun violations(violations: PolicyViolationBeta1Dsl.() -> Unit) {
     _violations.add(PolicyViolationBeta1Dsl().apply(violations).build())
   }
 
+  /**
+   * @param violations List of violations in the report. 
+   */
   public fun violations(violations: Collection<PolicyViolationBeta1>) {
     _violations.addAll(violations)
   }

@@ -11,10 +11,16 @@ public class CfnAnalysisHistogramFieldWellsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.HistogramFieldWellsProperty.Builder =
       CfnAnalysis.HistogramFieldWellsProperty.builder()
 
+  /**
+   * @param histogramAggregatedFieldWells The field well configuration of a histogram.
+   */
   public fun histogramAggregatedFieldWells(histogramAggregatedFieldWells: IResolvable) {
     cdkBuilder.histogramAggregatedFieldWells(histogramAggregatedFieldWells)
   }
 
+  /**
+   * @param histogramAggregatedFieldWells The field well configuration of a histogram.
+   */
   public
       fun histogramAggregatedFieldWells(histogramAggregatedFieldWells: CfnAnalysis.HistogramAggregatedFieldWellsProperty) {
     cdkBuilder.histogramAggregatedFieldWells(histogramAggregatedFieldWells)

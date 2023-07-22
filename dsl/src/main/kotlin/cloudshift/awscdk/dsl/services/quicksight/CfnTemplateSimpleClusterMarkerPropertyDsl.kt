@@ -11,6 +11,9 @@ public class CfnTemplateSimpleClusterMarkerPropertyDsl {
   private val cdkBuilder: CfnTemplate.SimpleClusterMarkerProperty.Builder =
       CfnTemplate.SimpleClusterMarkerProperty.builder()
 
+  /**
+   * @param color The color of the simple cluster marker.
+   */
   public fun color(color: String) {
     cdkBuilder.color(color)
   }

@@ -12,10 +12,18 @@ public class CfnTableContributorInsightsSpecificationPropertyDsl {
   private val cdkBuilder: CfnTable.ContributorInsightsSpecificationProperty.Builder =
       CfnTable.ContributorInsightsSpecificationProperty.builder()
 
+  /**
+   * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true) or
+   * disabled (false). 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true) or
+   * disabled (false). 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

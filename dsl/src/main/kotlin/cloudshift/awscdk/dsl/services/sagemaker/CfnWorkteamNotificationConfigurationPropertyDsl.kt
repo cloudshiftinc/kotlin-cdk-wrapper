@@ -11,6 +11,10 @@ public class CfnWorkteamNotificationConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkteam.NotificationConfigurationProperty.Builder =
       CfnWorkteam.NotificationConfigurationProperty.builder()
 
+  /**
+   * @param notificationTopicArn The ARN for the Amazon SNS topic to which notifications should be
+   * published. 
+   */
   public fun notificationTopicArn(notificationTopicArn: String) {
     cdkBuilder.notificationTopicArn(notificationTopicArn)
   }

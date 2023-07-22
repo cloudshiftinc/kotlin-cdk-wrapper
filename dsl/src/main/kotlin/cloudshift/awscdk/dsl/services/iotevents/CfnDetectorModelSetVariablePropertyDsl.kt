@@ -11,10 +11,16 @@ public class CfnDetectorModelSetVariablePropertyDsl {
   private val cdkBuilder: CfnDetectorModel.SetVariableProperty.Builder =
       CfnDetectorModel.SetVariableProperty.builder()
 
+  /**
+   * @param value The new value of the variable. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param variableName The name of the variable. 
+   */
   public fun variableName(variableName: String) {
     cdkBuilder.variableName(variableName)
   }

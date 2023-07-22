@@ -17,18 +17,30 @@ public class CfnDistributionOriginGroupMembersPropertyDsl {
 
   private val _items: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param items Items (origins) in an origin group. 
+   */
   public fun items(vararg items: Any) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * @param items Items (origins) in an origin group. 
+   */
   public fun items(items: Collection<Any>) {
     _items.addAll(items)
   }
 
+  /**
+   * @param items Items (origins) in an origin group. 
+   */
   public fun items(items: IResolvable) {
     cdkBuilder.items(items)
   }
 
+  /**
+   * @param quantity The number of origins in an origin group. 
+   */
   public fun quantity(quantity: Number) {
     cdkBuilder.quantity(quantity)
   }

@@ -11,10 +11,16 @@ public class CfnStorageSystemServerCredentialsPropertyDsl {
   private val cdkBuilder: CfnStorageSystem.ServerCredentialsProperty.Builder =
       CfnStorageSystem.ServerCredentialsProperty.builder()
 
+  /**
+   * @param password Specifies the password for your storage system's management interface. 
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * @param username Specifies the user name for your storage system's management interface. 
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

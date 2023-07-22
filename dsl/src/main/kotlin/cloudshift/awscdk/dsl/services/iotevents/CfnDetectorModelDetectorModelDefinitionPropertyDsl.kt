@@ -17,18 +17,30 @@ public class CfnDetectorModelDetectorModelDefinitionPropertyDsl {
 
   private val _states: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param initialStateName The state that is entered at the creation of each detector (instance). 
+   */
   public fun initialStateName(initialStateName: String) {
     cdkBuilder.initialStateName(initialStateName)
   }
 
+  /**
+   * @param states Information about the states of the detector. 
+   */
   public fun states(vararg states: Any) {
     _states.addAll(listOf(*states))
   }
 
+  /**
+   * @param states Information about the states of the detector. 
+   */
   public fun states(states: Collection<Any>) {
     _states.addAll(states)
   }
 
+  /**
+   * @param states Information about the states of the detector. 
+   */
   public fun states(states: IResolvable) {
     cdkBuilder.states(states)
   }

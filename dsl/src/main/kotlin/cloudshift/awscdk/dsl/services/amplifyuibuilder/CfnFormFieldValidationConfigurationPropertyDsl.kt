@@ -19,30 +19,52 @@ public class CfnFormFieldValidationConfigurationPropertyDsl {
 
   private val _strValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param numValues The validation to perform on a number value.
+   */
   public fun numValues(vararg numValues: Number) {
     _numValues.addAll(listOf(*numValues))
   }
 
+  /**
+   * @param numValues The validation to perform on a number value.
+   */
   public fun numValues(numValues: Collection<Number>) {
     _numValues.addAll(numValues)
   }
 
+  /**
+   * @param numValues The validation to perform on a number value.
+   */
   public fun numValues(numValues: IResolvable) {
     cdkBuilder.numValues(numValues)
   }
 
+  /**
+   * @param strValues The validation to perform on a string value.
+   */
   public fun strValues(vararg strValues: String) {
     _strValues.addAll(listOf(*strValues))
   }
 
+  /**
+   * @param strValues The validation to perform on a string value.
+   */
   public fun strValues(strValues: Collection<String>) {
     _strValues.addAll(strValues)
   }
 
+  /**
+   * @param type The validation to perform on an object type. 
+   * ``
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param validationMessage The validation message to display.
+   */
   public fun validationMessage(validationMessage: String) {
     cdkBuilder.validationMessage(validationMessage)
   }

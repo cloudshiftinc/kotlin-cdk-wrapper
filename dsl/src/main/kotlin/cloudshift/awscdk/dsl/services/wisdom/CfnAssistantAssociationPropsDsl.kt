@@ -20,26 +20,44 @@ public class CfnAssistantAssociationPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param assistantId The identifier of the Wisdom assistant. 
+   */
   public fun assistantId(assistantId: String) {
     cdkBuilder.assistantId(assistantId)
   }
 
+  /**
+   * @param association The identifier of the associated resource. 
+   */
   public fun association(association: IResolvable) {
     cdkBuilder.association(association)
   }
 
+  /**
+   * @param association The identifier of the associated resource. 
+   */
   public fun association(association: CfnAssistantAssociation.AssociationDataProperty) {
     cdkBuilder.association(association)
   }
 
+  /**
+   * @param associationType The type of association. 
+   */
   public fun associationType(associationType: String) {
     cdkBuilder.associationType(associationType)
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

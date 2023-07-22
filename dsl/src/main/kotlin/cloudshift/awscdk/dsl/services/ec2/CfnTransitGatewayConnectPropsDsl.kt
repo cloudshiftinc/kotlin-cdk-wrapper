@@ -20,22 +20,40 @@ public class CfnTransitGatewayConnectPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param options The Connect attachment options. 
+   * * protocol (gre)
+   */
   public fun options(options: IResolvable) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * @param options The Connect attachment options. 
+   * * protocol (gre)
+   */
   public fun options(options: CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * @param tags The tags for the attachment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the attachment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect
+   * attachment was created. 
+   */
   public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
     cdkBuilder.transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId)
   }

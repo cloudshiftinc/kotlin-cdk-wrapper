@@ -16,14 +16,26 @@ public class CfnDashboardTableUnaggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param values The values field well for a pivot table.
+   * Values are unaggregated for an unaggregated table.
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values field well for a pivot table.
+   * Values are unaggregated for an unaggregated table.
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The values field well for a pivot table.
+   * Values are unaggregated for an unaggregated table.
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

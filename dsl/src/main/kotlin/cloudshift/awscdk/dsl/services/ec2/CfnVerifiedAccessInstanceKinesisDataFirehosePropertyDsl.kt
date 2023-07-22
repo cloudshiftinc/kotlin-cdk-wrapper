@@ -13,14 +13,23 @@ public class CfnVerifiedAccessInstanceKinesisDataFirehosePropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.Builder =
       CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.builder()
 
+  /**
+   * @param deliveryStream The ID of the delivery stream.
+   */
   public fun deliveryStream(deliveryStream: String) {
     cdkBuilder.deliveryStream(deliveryStream)
   }
 
+  /**
+   * @param enabled Indicates whether logging is enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether logging is enabled.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

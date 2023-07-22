@@ -23,50 +23,131 @@ public class CfnWorkspaceDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The identifier of the bundle for the WorkSpace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-bundleid)
+   * @param bundleId The identifier of the bundle for the WorkSpace. 
+   */
   public fun bundleId(bundleId: String) {
     cdkBuilder.bundleId(bundleId)
   }
 
+  /**
+   * The identifier of the AWS Directory Service directory for the WorkSpace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-directoryid)
+   * @param directoryId The identifier of the AWS Directory Service directory for the WorkSpace. 
+   */
   public fun directoryId(directoryId: String) {
     cdkBuilder.directoryId(directoryId)
   }
 
+  /**
+   * Indicates whether the data stored on the root volume is encrypted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-rootvolumeencryptionenabled)
+   * @param rootVolumeEncryptionEnabled Indicates whether the data stored on the root volume is
+   * encrypted. 
+   */
   public fun rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled: Boolean) {
     cdkBuilder.rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled)
   }
 
+  /**
+   * Indicates whether the data stored on the root volume is encrypted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-rootvolumeencryptionenabled)
+   * @param rootVolumeEncryptionEnabled Indicates whether the data stored on the root volume is
+   * encrypted. 
+   */
   public fun rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled: IResolvable) {
     cdkBuilder.rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled)
   }
 
+  /**
+   * The tags for the WorkSpace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-tags)
+   * @param tags The tags for the WorkSpace. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags for the WorkSpace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-tags)
+   * @param tags The tags for the WorkSpace. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The user name of the user for the WorkSpace.
+   *
+   * This user name must exist in the AWS Directory Service directory for the WorkSpace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username)
+   * @param userName The user name of the user for the WorkSpace. 
+   */
   public fun userName(userName: String) {
     cdkBuilder.userName(userName)
   }
 
+  /**
+   * Indicates whether the data stored on the user volume is encrypted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-uservolumeencryptionenabled)
+   * @param userVolumeEncryptionEnabled Indicates whether the data stored on the user volume is
+   * encrypted. 
+   */
   public fun userVolumeEncryptionEnabled(userVolumeEncryptionEnabled: Boolean) {
     cdkBuilder.userVolumeEncryptionEnabled(userVolumeEncryptionEnabled)
   }
 
+  /**
+   * Indicates whether the data stored on the user volume is encrypted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-uservolumeencryptionenabled)
+   * @param userVolumeEncryptionEnabled Indicates whether the data stored on the user volume is
+   * encrypted. 
+   */
   public fun userVolumeEncryptionEnabled(userVolumeEncryptionEnabled: IResolvable) {
     cdkBuilder.userVolumeEncryptionEnabled(userVolumeEncryptionEnabled)
   }
 
+  /**
+   * The symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
+   *
+   * Amazon WorkSpaces does not support asymmetric KMS keys.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-volumeencryptionkey)
+   * @param volumeEncryptionKey The symmetric AWS KMS key used to encrypt data stored on your
+   * WorkSpace. 
+   */
   public fun volumeEncryptionKey(volumeEncryptionKey: String) {
     cdkBuilder.volumeEncryptionKey(volumeEncryptionKey)
   }
 
+  /**
+   * The WorkSpace properties.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-workspaceproperties)
+   * @param workspaceProperties The WorkSpace properties. 
+   */
   public fun workspaceProperties(workspaceProperties: IResolvable) {
     cdkBuilder.workspaceProperties(workspaceProperties)
   }
 
+  /**
+   * The WorkSpace properties.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-workspaceproperties)
+   * @param workspaceProperties The WorkSpace properties. 
+   */
   public fun workspaceProperties(workspaceProperties: CfnWorkspace.WorkspacePropertiesProperty) {
     cdkBuilder.workspaceProperties(workspaceProperties)
   }

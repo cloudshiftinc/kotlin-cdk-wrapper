@@ -11,10 +11,18 @@ public class CfnSpotFleetVCpuCountRangeRequestPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.VCpuCountRangeRequestProperty.Builder =
       CfnSpotFleet.VCpuCountRangeRequestProperty.builder()
 
+  /**
+   * @param max The maximum number of vCPUs.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum number of vCPUs.
+   * To specify no minimum limit, specify `0` .
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

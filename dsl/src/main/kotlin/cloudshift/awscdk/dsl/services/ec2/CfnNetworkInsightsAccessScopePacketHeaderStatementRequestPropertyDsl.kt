@@ -27,58 +27,100 @@ public class CfnNetworkInsightsAccessScopePacketHeaderStatementRequestPropertyDs
 
   private val _sourcePrefixLists: MutableList<String> = mutableListOf()
 
+  /**
+   * @param destinationAddresses The destination addresses.
+   */
   public fun destinationAddresses(vararg destinationAddresses: String) {
     _destinationAddresses.addAll(listOf(*destinationAddresses))
   }
 
+  /**
+   * @param destinationAddresses The destination addresses.
+   */
   public fun destinationAddresses(destinationAddresses: Collection<String>) {
     _destinationAddresses.addAll(destinationAddresses)
   }
 
+  /**
+   * @param destinationPorts The destination ports.
+   */
   public fun destinationPorts(vararg destinationPorts: String) {
     _destinationPorts.addAll(listOf(*destinationPorts))
   }
 
+  /**
+   * @param destinationPorts The destination ports.
+   */
   public fun destinationPorts(destinationPorts: Collection<String>) {
     _destinationPorts.addAll(destinationPorts)
   }
 
+  /**
+   * @param destinationPrefixLists The destination prefix lists.
+   */
   public fun destinationPrefixLists(vararg destinationPrefixLists: String) {
     _destinationPrefixLists.addAll(listOf(*destinationPrefixLists))
   }
 
+  /**
+   * @param destinationPrefixLists The destination prefix lists.
+   */
   public fun destinationPrefixLists(destinationPrefixLists: Collection<String>) {
     _destinationPrefixLists.addAll(destinationPrefixLists)
   }
 
+  /**
+   * @param protocols The protocols.
+   */
   public fun protocols(vararg protocols: String) {
     _protocols.addAll(listOf(*protocols))
   }
 
+  /**
+   * @param protocols The protocols.
+   */
   public fun protocols(protocols: Collection<String>) {
     _protocols.addAll(protocols)
   }
 
+  /**
+   * @param sourceAddresses The source addresses.
+   */
   public fun sourceAddresses(vararg sourceAddresses: String) {
     _sourceAddresses.addAll(listOf(*sourceAddresses))
   }
 
+  /**
+   * @param sourceAddresses The source addresses.
+   */
   public fun sourceAddresses(sourceAddresses: Collection<String>) {
     _sourceAddresses.addAll(sourceAddresses)
   }
 
+  /**
+   * @param sourcePorts The source ports.
+   */
   public fun sourcePorts(vararg sourcePorts: String) {
     _sourcePorts.addAll(listOf(*sourcePorts))
   }
 
+  /**
+   * @param sourcePorts The source ports.
+   */
   public fun sourcePorts(sourcePorts: Collection<String>) {
     _sourcePorts.addAll(sourcePorts)
   }
 
+  /**
+   * @param sourcePrefixLists The source prefix lists.
+   */
   public fun sourcePrefixLists(vararg sourcePrefixLists: String) {
     _sourcePrefixLists.addAll(listOf(*sourcePrefixLists))
   }
 
+  /**
+   * @param sourcePrefixLists The source prefix lists.
+   */
   public fun sourcePrefixLists(sourcePrefixLists: Collection<String>) {
     _sourcePrefixLists.addAll(sourcePrefixLists)
   }

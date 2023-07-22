@@ -12,18 +12,30 @@ public class CfnTemplateCustomValuesConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.CustomValuesConfigurationProperty.Builder =
       CfnTemplate.CustomValuesConfigurationProperty.builder()
 
+  /**
+   * @param customValues the value to be set. 
+   */
   public fun customValues(customValues: IResolvable) {
     cdkBuilder.customValues(customValues)
   }
 
+  /**
+   * @param customValues the value to be set. 
+   */
   public fun customValues(customValues: CfnTemplate.CustomParameterValuesProperty) {
     cdkBuilder.customValues(customValues)
   }
 
+  /**
+   * @param includeNullValue Includes the null value in custom action parameter values.
+   */
   public fun includeNullValue(includeNullValue: Boolean) {
     cdkBuilder.includeNullValue(includeNullValue)
   }
 
+  /**
+   * @param includeNullValue Includes the null value in custom action parameter values.
+   */
   public fun includeNullValue(includeNullValue: IResolvable) {
     cdkBuilder.includeNullValue(includeNullValue)
   }

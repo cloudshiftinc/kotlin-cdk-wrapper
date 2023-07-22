@@ -19,28 +19,50 @@ public class AssemblyManifestDsl {
 
   private val _missing: MutableList<MissingContext> = mutableListOf()
 
+  /**
+   * @param artifacts The set of artifacts in this assembly.
+   */
   public fun artifacts(artifacts: Map<String, ArtifactManifest>) {
     cdkBuilder.artifacts(artifacts)
   }
 
+  /**
+   * @param missing Missing context information.
+   * If this field has values, it means that the
+   * cloud assembly is not complete and should not be deployed.
+   */
   public fun missing(missing: MissingContextDsl.() -> Unit) {
     _missing.add(MissingContextDsl().apply(missing).build())
   }
 
+  /**
+   * @param missing Missing context information.
+   * If this field has values, it means that the
+   * cloud assembly is not complete and should not be deployed.
+   */
   public fun missing(missing: Collection<MissingContext>) {
     _missing.addAll(missing)
   }
 
-  public fun runtime(block: RuntimeInfoDsl.() -> Unit = {}) {
+  /**
+   * @param runtime Runtime information.
+   */
+  public fun runtime(runtime: RuntimeInfoDsl.() -> Unit = {}) {
     val builder = RuntimeInfoDsl()
-    builder.apply(block)
+    builder.apply(runtime)
     cdkBuilder.runtime(builder.build())
   }
 
+  /**
+   * @param runtime Runtime information.
+   */
   public fun runtime(runtime: RuntimeInfo) {
     cdkBuilder.runtime(runtime)
   }
 
+  /**
+   * @param version Protocol version. 
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

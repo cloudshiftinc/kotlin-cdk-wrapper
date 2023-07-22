@@ -18,42 +18,74 @@ public class CfnDashboardComboChartSortConfigurationPropertyDsl {
 
   private val _colorSort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param categoryItemsLimit The item limit configuration for the category field well of a combo
+   * chart.
+   */
   public fun categoryItemsLimit(categoryItemsLimit: IResolvable) {
     cdkBuilder.categoryItemsLimit(categoryItemsLimit)
   }
 
+  /**
+   * @param categoryItemsLimit The item limit configuration for the category field well of a combo
+   * chart.
+   */
   public fun categoryItemsLimit(categoryItemsLimit: CfnDashboard.ItemsLimitConfigurationProperty) {
     cdkBuilder.categoryItemsLimit(categoryItemsLimit)
   }
 
+  /**
+   * @param categorySort The sort configuration of the category field well in a combo chart.
+   */
   public fun categorySort(vararg categorySort: Any) {
     _categorySort.addAll(listOf(*categorySort))
   }
 
+  /**
+   * @param categorySort The sort configuration of the category field well in a combo chart.
+   */
   public fun categorySort(categorySort: Collection<Any>) {
     _categorySort.addAll(categorySort)
   }
 
+  /**
+   * @param categorySort The sort configuration of the category field well in a combo chart.
+   */
   public fun categorySort(categorySort: IResolvable) {
     cdkBuilder.categorySort(categorySort)
   }
 
+  /**
+   * @param colorItemsLimit The item limit configuration of the color field well in a combo chart.
+   */
   public fun colorItemsLimit(colorItemsLimit: IResolvable) {
     cdkBuilder.colorItemsLimit(colorItemsLimit)
   }
 
+  /**
+   * @param colorItemsLimit The item limit configuration of the color field well in a combo chart.
+   */
   public fun colorItemsLimit(colorItemsLimit: CfnDashboard.ItemsLimitConfigurationProperty) {
     cdkBuilder.colorItemsLimit(colorItemsLimit)
   }
 
+  /**
+   * @param colorSort The sort configuration of the color field well in a combo chart.
+   */
   public fun colorSort(vararg colorSort: Any) {
     _colorSort.addAll(listOf(*colorSort))
   }
 
+  /**
+   * @param colorSort The sort configuration of the color field well in a combo chart.
+   */
   public fun colorSort(colorSort: Collection<Any>) {
     _colorSort.addAll(colorSort)
   }
 
+  /**
+   * @param colorSort The sort configuration of the color field well in a combo chart.
+   */
   public fun colorSort(colorSort: IResolvable) {
     cdkBuilder.colorSort(colorSort)
   }

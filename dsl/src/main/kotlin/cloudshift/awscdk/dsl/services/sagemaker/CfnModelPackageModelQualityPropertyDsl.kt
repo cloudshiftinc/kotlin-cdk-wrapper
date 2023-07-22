@@ -11,18 +11,30 @@ public class CfnModelPackageModelQualityPropertyDsl {
   private val cdkBuilder: CfnModelPackage.ModelQualityProperty.Builder =
       CfnModelPackage.ModelQualityProperty.builder()
 
+  /**
+   * @param constraints Model quality constraints.
+   */
   public fun constraints(constraints: IResolvable) {
     cdkBuilder.constraints(constraints)
   }
 
+  /**
+   * @param constraints Model quality constraints.
+   */
   public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
     cdkBuilder.constraints(constraints)
   }
 
+  /**
+   * @param statistics Model quality statistics.
+   */
   public fun statistics(statistics: IResolvable) {
     cdkBuilder.statistics(statistics)
   }
 
+  /**
+   * @param statistics Model quality statistics.
+   */
   public fun statistics(statistics: CfnModelPackage.MetricsSourceProperty) {
     cdkBuilder.statistics(statistics)
   }

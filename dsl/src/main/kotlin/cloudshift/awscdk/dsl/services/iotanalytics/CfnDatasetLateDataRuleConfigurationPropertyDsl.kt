@@ -11,10 +11,18 @@ public class CfnDatasetLateDataRuleConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataset.LateDataRuleConfigurationProperty.Builder =
       CfnDataset.LateDataRuleConfigurationProperty.builder()
 
+  /**
+   * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+   * session window.
+   */
   public fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable) {
     cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration)
   }
 
+  /**
+   * @param deltaTimeSessionWindowConfiguration The information needed to configure a delta time
+   * session window.
+   */
   public
       fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: CfnDataset.DeltaTimeSessionWindowConfigurationProperty) {
     cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration)

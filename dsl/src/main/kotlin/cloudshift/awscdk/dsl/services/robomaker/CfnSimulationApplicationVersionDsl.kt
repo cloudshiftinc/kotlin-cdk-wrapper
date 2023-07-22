@@ -15,10 +15,24 @@ public class CfnSimulationApplicationVersionDsl(
   private val cdkBuilder: CfnSimulationApplicationVersion.Builder =
       CfnSimulationApplicationVersion.Builder.create(scope, id)
 
+  /**
+   * The application information for the simulation application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html#cfn-robomaker-simulationapplicationversion-application)
+   * @param application The application information for the simulation application. 
+   */
   public fun application(application: String) {
     cdkBuilder.application(application)
   }
 
+  /**
+   * The current revision id for the simulation application.
+   *
+   * If you provide a value and it matches the latest revision ID, a new version will be created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html#cfn-robomaker-simulationapplicationversion-currentrevisionid)
+   * @param currentRevisionId The current revision id for the simulation application. 
+   */
   public fun currentRevisionId(currentRevisionId: String) {
     cdkBuilder.currentRevisionId(currentRevisionId)
   }

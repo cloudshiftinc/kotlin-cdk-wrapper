@@ -11,26 +11,44 @@ public class CfnDashboardTextConditionalFormatPropertyDsl {
   private val cdkBuilder: CfnDashboard.TextConditionalFormatProperty.Builder =
       CfnDashboard.TextConditionalFormatProperty.builder()
 
+  /**
+   * @param backgroundColor The conditional formatting for the text background color.
+   */
   public fun backgroundColor(backgroundColor: IResolvable) {
     cdkBuilder.backgroundColor(backgroundColor)
   }
 
+  /**
+   * @param backgroundColor The conditional formatting for the text background color.
+   */
   public fun backgroundColor(backgroundColor: CfnDashboard.ConditionalFormattingColorProperty) {
     cdkBuilder.backgroundColor(backgroundColor)
   }
 
+  /**
+   * @param icon The conditional formatting for the icon.
+   */
   public fun icon(icon: IResolvable) {
     cdkBuilder.icon(icon)
   }
 
+  /**
+   * @param icon The conditional formatting for the icon.
+   */
   public fun icon(icon: CfnDashboard.ConditionalFormattingIconProperty) {
     cdkBuilder.icon(icon)
   }
 
+  /**
+   * @param textColor The conditional formatting for the text color.
+   */
   public fun textColor(textColor: IResolvable) {
     cdkBuilder.textColor(textColor)
   }
 
+  /**
+   * @param textColor The conditional formatting for the text color.
+   */
   public fun textColor(textColor: CfnDashboard.ConditionalFormattingColorProperty) {
     cdkBuilder.textColor(textColor)
   }

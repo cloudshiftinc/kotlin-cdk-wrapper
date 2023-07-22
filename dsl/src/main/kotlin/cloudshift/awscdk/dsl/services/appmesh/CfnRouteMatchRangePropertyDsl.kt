@@ -11,10 +11,16 @@ public class CfnRouteMatchRangePropertyDsl {
   private val cdkBuilder: CfnRoute.MatchRangeProperty.Builder =
       CfnRoute.MatchRangeProperty.builder()
 
+  /**
+   * @param end The end of the range. 
+   */
   public fun end(end: Number) {
     cdkBuilder.end(end)
   }
 
+  /**
+   * @param start The start of the range. 
+   */
   public fun start(start: Number) {
     cdkBuilder.start(start)
   }

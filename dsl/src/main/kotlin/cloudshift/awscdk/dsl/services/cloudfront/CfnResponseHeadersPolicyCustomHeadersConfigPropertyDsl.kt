@@ -16,14 +16,23 @@ public class CfnResponseHeadersPolicyCustomHeadersConfigPropertyDsl {
 
   private val _items: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param items The list of HTTP response headers and their values. 
+   */
   public fun items(vararg items: Any) {
     _items.addAll(listOf(*items))
   }
 
+  /**
+   * @param items The list of HTTP response headers and their values. 
+   */
   public fun items(items: Collection<Any>) {
     _items.addAll(items)
   }
 
+  /**
+   * @param items The list of HTTP response headers and their values. 
+   */
   public fun items(items: IResolvable) {
     cdkBuilder.items(items)
   }

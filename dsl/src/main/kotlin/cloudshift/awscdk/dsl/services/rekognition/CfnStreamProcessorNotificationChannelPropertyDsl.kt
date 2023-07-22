@@ -11,6 +11,9 @@ public class CfnStreamProcessorNotificationChannelPropertyDsl {
   private val cdkBuilder: CfnStreamProcessor.NotificationChannelProperty.Builder =
       CfnStreamProcessor.NotificationChannelProperty.builder()
 
+  /**
+   * @param arn The ARN of the SNS topic that receives notifications. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

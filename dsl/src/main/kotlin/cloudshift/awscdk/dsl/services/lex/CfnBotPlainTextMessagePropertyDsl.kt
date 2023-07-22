@@ -11,6 +11,9 @@ public class CfnBotPlainTextMessagePropertyDsl {
   private val cdkBuilder: CfnBot.PlainTextMessageProperty.Builder =
       CfnBot.PlainTextMessageProperty.builder()
 
+  /**
+   * @param value The message to send to the user. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

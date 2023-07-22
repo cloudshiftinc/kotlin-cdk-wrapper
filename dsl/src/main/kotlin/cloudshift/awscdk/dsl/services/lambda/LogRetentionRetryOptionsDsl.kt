@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.lambda.LogRetentionRetryOptions
 public class LogRetentionRetryOptionsDsl {
   private val cdkBuilder: LogRetentionRetryOptions.Builder = LogRetentionRetryOptions.builder()
 
+  /**
+   * @param base The base duration to use in the exponential backoff for operation retries.
+   */
   public fun base(base: Duration) {
     cdkBuilder.base(base)
   }
 
+  /**
+   * @param maxRetries The maximum amount of retries.
+   */
   public fun maxRetries(maxRetries: Number) {
     cdkBuilder.maxRetries(maxRetries)
   }

@@ -11,6 +11,9 @@ public class CfnEndpointNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnEndpoint.NetworkInterfaceProperty.Builder =
       CfnEndpoint.NetworkInterfaceProperty.builder()
 
+  /**
+   * @param networkInterfaceId The ID for the network interface. 
+   */
   public fun networkInterfaceId(networkInterfaceId: String) {
     cdkBuilder.networkInterfaceId(networkInterfaceId)
   }

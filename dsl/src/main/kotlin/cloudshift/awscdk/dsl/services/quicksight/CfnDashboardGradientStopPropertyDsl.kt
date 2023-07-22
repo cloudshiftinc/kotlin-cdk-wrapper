@@ -12,14 +12,23 @@ public class CfnDashboardGradientStopPropertyDsl {
   private val cdkBuilder: CfnDashboard.GradientStopProperty.Builder =
       CfnDashboard.GradientStopProperty.builder()
 
+  /**
+   * @param color Determines the color.
+   */
   public fun color(color: String) {
     cdkBuilder.color(color)
   }
 
+  /**
+   * @param dataValue Determines the data value.
+   */
   public fun dataValue(dataValue: Number) {
     cdkBuilder.dataValue(dataValue)
   }
 
+  /**
+   * @param gradientOffset Determines gradient offset value. 
+   */
   public fun gradientOffset(gradientOffset: Number) {
     cdkBuilder.gradientOffset(gradientOffset)
   }

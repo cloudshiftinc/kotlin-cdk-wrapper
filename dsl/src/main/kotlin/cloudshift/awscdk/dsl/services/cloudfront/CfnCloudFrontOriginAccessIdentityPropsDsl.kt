@@ -12,11 +12,19 @@ public class CfnCloudFrontOriginAccessIdentityPropsDsl {
   private val cdkBuilder: CfnCloudFrontOriginAccessIdentityProps.Builder =
       CfnCloudFrontOriginAccessIdentityProps.builder()
 
+  /**
+   * @param cloudFrontOriginAccessIdentityConfig The current configuration information for the
+   * identity. 
+   */
   public
       fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
     cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)
   }
 
+  /**
+   * @param cloudFrontOriginAccessIdentityConfig The current configuration information for the
+   * identity. 
+   */
   public
       fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty) {
     cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)

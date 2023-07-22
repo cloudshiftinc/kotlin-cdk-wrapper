@@ -11,6 +11,12 @@ public class CfnConfigurationSetGuardianOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.GuardianOptionsProperty.Builder =
       CfnConfigurationSet.GuardianOptionsProperty.builder()
 
+  /**
+   * @param optimizedSharedDelivery Specifies the status of your VDM optimized shared delivery. Can
+   * be one of the following:. 
+   * * `ENABLED` – Amazon SES enables optimized shared delivery for the configuration set.
+   * * `DISABLED` – Amazon SES disables optimized shared delivery for the configuration set.
+   */
   public fun optimizedSharedDelivery(optimizedSharedDelivery: String) {
     cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
   }

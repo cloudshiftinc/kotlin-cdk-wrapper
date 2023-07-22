@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.controltower.CfnEnabledControlProps
 public class CfnEnabledControlPropsDsl {
   private val cdkBuilder: CfnEnabledControlProps.Builder = CfnEnabledControlProps.builder()
 
+  /**
+   * @param controlIdentifier The ARN of the control. 
+   * Only *Strongly recommended* and *Elective* controls are permitted, with the exception of the
+   * *Region deny* guardrail.
+   */
   public fun controlIdentifier(controlIdentifier: String) {
     cdkBuilder.controlIdentifier(controlIdentifier)
   }
 
+  /**
+   * @param targetIdentifier The ARN of the organizational unit. 
+   */
   public fun targetIdentifier(targetIdentifier: String) {
     cdkBuilder.targetIdentifier(targetIdentifier)
   }

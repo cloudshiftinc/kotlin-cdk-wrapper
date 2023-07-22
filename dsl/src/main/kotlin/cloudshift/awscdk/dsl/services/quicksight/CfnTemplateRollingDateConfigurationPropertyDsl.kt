@@ -11,10 +11,16 @@ public class CfnTemplateRollingDateConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.RollingDateConfigurationProperty.Builder =
       CfnTemplate.RollingDateConfigurationProperty.builder()
 
+  /**
+   * @param dataSetIdentifier The data set that is used in the rolling date configuration.
+   */
   public fun dataSetIdentifier(dataSetIdentifier: String) {
     cdkBuilder.dataSetIdentifier(dataSetIdentifier)
   }
 
+  /**
+   * @param expression The expression of the rolling date configuration. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }

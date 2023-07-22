@@ -24,42 +24,83 @@ public class CfnDHCPOptionsPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param domainName This value is used to complete unqualified DNS hostnames.
+   * If you're using AmazonProvidedDNS in `us-east-1` , specify `ec2.internal` . If you're using
+   * AmazonProvidedDNS in another Region, specify *region* . `compute.internal` (for example,
+   * `ap-northeast-1.compute.internal` ). Otherwise, specify a domain name (for example,
+   * *MyCompany.com* ).
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param domainNameServers The IPv4 addresses of up to four domain name servers, or
+   * `AmazonProvidedDNS` .
+   * The default is `AmazonProvidedDNS` . To have your instance receive a custom DNS hostname as
+   * specified in `DomainName` , you must set this property to a custom DNS server.
+   */
   public fun domainNameServers(vararg domainNameServers: String) {
     _domainNameServers.addAll(listOf(*domainNameServers))
   }
 
+  /**
+   * @param domainNameServers The IPv4 addresses of up to four domain name servers, or
+   * `AmazonProvidedDNS` .
+   * The default is `AmazonProvidedDNS` . To have your instance receive a custom DNS hostname as
+   * specified in `DomainName` , you must set this property to a custom DNS server.
+   */
   public fun domainNameServers(domainNameServers: Collection<String>) {
     _domainNameServers.addAll(domainNameServers)
   }
 
+  /**
+   * @param netbiosNameServers The IPv4 addresses of up to four NetBIOS name servers.
+   */
   public fun netbiosNameServers(vararg netbiosNameServers: String) {
     _netbiosNameServers.addAll(listOf(*netbiosNameServers))
   }
 
+  /**
+   * @param netbiosNameServers The IPv4 addresses of up to four NetBIOS name servers.
+   */
   public fun netbiosNameServers(netbiosNameServers: Collection<String>) {
     _netbiosNameServers.addAll(netbiosNameServers)
   }
 
+  /**
+   * @param netbiosNodeType The NetBIOS node type (1, 2, 4, or 8).
+   * We recommend that you specify 2 (broadcast and multicast are not currently supported).
+   */
   public fun netbiosNodeType(netbiosNodeType: Number) {
     cdkBuilder.netbiosNodeType(netbiosNodeType)
   }
 
+  /**
+   * @param ntpServers The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+   */
   public fun ntpServers(vararg ntpServers: String) {
     _ntpServers.addAll(listOf(*ntpServers))
   }
 
+  /**
+   * @param ntpServers The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+   */
   public fun ntpServers(ntpServers: Collection<String>) {
     _ntpServers.addAll(ntpServers)
   }
 
+  /**
+   * @param tags Any tags assigned to the DHCP options set.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Any tags assigned to the DHCP options set.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

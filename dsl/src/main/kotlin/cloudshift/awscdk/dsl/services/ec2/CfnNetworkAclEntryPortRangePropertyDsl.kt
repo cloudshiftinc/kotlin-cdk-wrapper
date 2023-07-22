@@ -11,10 +11,18 @@ public class CfnNetworkAclEntryPortRangePropertyDsl {
   private val cdkBuilder: CfnNetworkAclEntry.PortRangeProperty.Builder =
       CfnNetworkAclEntry.PortRangeProperty.builder()
 
+  /**
+   * @param from The first port in the range.
+   * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+   */
   public fun from(from: Number) {
     cdkBuilder.from(from)
   }
 
+  /**
+   * @param to The last port in the range.
+   * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+   */
   public fun to(to: Number) {
     cdkBuilder.to(to)
   }

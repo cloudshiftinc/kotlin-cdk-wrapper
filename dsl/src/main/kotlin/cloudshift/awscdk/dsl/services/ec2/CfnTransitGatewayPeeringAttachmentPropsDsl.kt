@@ -18,26 +18,44 @@ public class CfnTransitGatewayPeeringAttachmentPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param peerAccountId The ID of the AWS account that owns the transit gateway. 
+   */
   public fun peerAccountId(peerAccountId: String) {
     cdkBuilder.peerAccountId(peerAccountId)
   }
 
+  /**
+   * @param peerRegion The Region of the transit gateway. 
+   */
   public fun peerRegion(peerRegion: String) {
     cdkBuilder.peerRegion(peerRegion)
   }
 
+  /**
+   * @param peerTransitGatewayId The ID of the transit gateway. 
+   */
   public fun peerTransitGatewayId(peerTransitGatewayId: String) {
     cdkBuilder.peerTransitGatewayId(peerTransitGatewayId)
   }
 
+  /**
+   * @param tags The tags for the transit gateway peering attachment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the transit gateway peering attachment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param transitGatewayId The ID of the transit gateway peering attachment. 
+   */
   public fun transitGatewayId(transitGatewayId: String) {
     cdkBuilder.transitGatewayId(transitGatewayId)
   }

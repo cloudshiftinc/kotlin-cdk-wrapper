@@ -16,14 +16,23 @@ public class CfnTemplateDataSetSchemaPropertyDsl {
 
   private val _columnSchemaList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param columnSchemaList A structure containing the list of column schemas.
+   */
   public fun columnSchemaList(vararg columnSchemaList: Any) {
     _columnSchemaList.addAll(listOf(*columnSchemaList))
   }
 
+  /**
+   * @param columnSchemaList A structure containing the list of column schemas.
+   */
   public fun columnSchemaList(columnSchemaList: Collection<Any>) {
     _columnSchemaList.addAll(columnSchemaList)
   }
 
+  /**
+   * @param columnSchemaList A structure containing the list of column schemas.
+   */
   public fun columnSchemaList(columnSchemaList: IResolvable) {
     cdkBuilder.columnSchemaList(columnSchemaList)
   }

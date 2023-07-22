@@ -11,6 +11,9 @@ public class CfnFunctionTopicSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.TopicSAMPTProperty.Builder =
       CfnFunction.TopicSAMPTProperty.builder()
 
+  /**
+   * @param topicName the value to be set. 
+   */
   public fun topicName(topicName: String) {
     cdkBuilder.topicName(topicName)
   }

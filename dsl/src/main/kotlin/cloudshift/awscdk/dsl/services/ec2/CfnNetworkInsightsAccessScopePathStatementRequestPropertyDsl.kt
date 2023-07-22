@@ -11,19 +11,31 @@ public class CfnNetworkInsightsAccessScopePathStatementRequestPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAccessScope.PathStatementRequestProperty.Builder =
       CfnNetworkInsightsAccessScope.PathStatementRequestProperty.builder()
 
+  /**
+   * @param packetHeaderStatement The packet header statement.
+   */
   public fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
     cdkBuilder.packetHeaderStatement(packetHeaderStatement)
   }
 
+  /**
+   * @param packetHeaderStatement The packet header statement.
+   */
   public
       fun packetHeaderStatement(packetHeaderStatement: CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty) {
     cdkBuilder.packetHeaderStatement(packetHeaderStatement)
   }
 
+  /**
+   * @param resourceStatement The resource statement.
+   */
   public fun resourceStatement(resourceStatement: IResolvable) {
     cdkBuilder.resourceStatement(resourceStatement)
   }
 
+  /**
+   * @param resourceStatement The resource statement.
+   */
   public
       fun resourceStatement(resourceStatement: CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty) {
     cdkBuilder.resourceStatement(resourceStatement)

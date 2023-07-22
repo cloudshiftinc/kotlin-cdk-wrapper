@@ -11,18 +11,30 @@ public class CfnVirtualServiceVirtualServiceProviderPropertyDsl {
   private val cdkBuilder: CfnVirtualService.VirtualServiceProviderProperty.Builder =
       CfnVirtualService.VirtualServiceProviderProperty.builder()
 
+  /**
+   * @param virtualNode The virtual node associated with a virtual service.
+   */
   public fun virtualNode(virtualNode: IResolvable) {
     cdkBuilder.virtualNode(virtualNode)
   }
 
+  /**
+   * @param virtualNode The virtual node associated with a virtual service.
+   */
   public fun virtualNode(virtualNode: CfnVirtualService.VirtualNodeServiceProviderProperty) {
     cdkBuilder.virtualNode(virtualNode)
   }
 
+  /**
+   * @param virtualRouter The virtual router associated with a virtual service.
+   */
   public fun virtualRouter(virtualRouter: IResolvable) {
     cdkBuilder.virtualRouter(virtualRouter)
   }
 
+  /**
+   * @param virtualRouter The virtual router associated with a virtual service.
+   */
   public fun virtualRouter(virtualRouter: CfnVirtualService.VirtualRouterServiceProviderProperty) {
     cdkBuilder.virtualRouter(virtualRouter)
   }

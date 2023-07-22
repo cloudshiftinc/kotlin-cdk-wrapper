@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.resourceexplorer2.CfnView
 public class CfnViewFiltersPropertyDsl {
   private val cdkBuilder: CfnView.FiltersProperty.Builder = CfnView.FiltersProperty.builder()
 
+  /**
+   * @param filterString the value to be set. 
+   */
   public fun filterString(filterString: String) {
     cdkBuilder.filterString(filterString)
   }

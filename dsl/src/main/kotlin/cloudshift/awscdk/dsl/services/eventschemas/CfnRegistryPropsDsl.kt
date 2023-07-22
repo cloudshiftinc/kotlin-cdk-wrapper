@@ -16,18 +16,30 @@ public class CfnRegistryPropsDsl {
 
   private val _tags: MutableList<CfnRegistry.TagsEntryProperty> = mutableListOf()
 
+  /**
+   * @param description A description of the registry to be created.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param registryName The name of the schema registry.
+   */
   public fun registryName(registryName: String) {
     cdkBuilder.registryName(registryName)
   }
 
+  /**
+   * @param tags Tags to associate with the registry.
+   */
   public fun tags(tags: CfnRegistryTagsEntryPropertyDsl.() -> Unit) {
     _tags.add(CfnRegistryTagsEntryPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Tags to associate with the registry.
+   */
   public fun tags(tags: Collection<CfnRegistry.TagsEntryProperty>) {
     _tags.addAll(tags)
   }

@@ -11,10 +11,16 @@ public class CfnAnalysisArcAxisDisplayRangePropertyDsl {
   private val cdkBuilder: CfnAnalysis.ArcAxisDisplayRangeProperty.Builder =
       CfnAnalysis.ArcAxisDisplayRangeProperty.builder()
 
+  /**
+   * @param max The maximum value of the arc axis range.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum value of the arc axis range.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.networkmanager.CfnLink
 public class CfnLinkBandwidthPropertyDsl {
   private val cdkBuilder: CfnLink.BandwidthProperty.Builder = CfnLink.BandwidthProperty.builder()
 
+  /**
+   * @param downloadSpeed Download speed in Mbps.
+   */
   public fun downloadSpeed(downloadSpeed: Number) {
     cdkBuilder.downloadSpeed(downloadSpeed)
   }
 
+  /**
+   * @param uploadSpeed Upload speed in Mbps.
+   */
   public fun uploadSpeed(uploadSpeed: Number) {
     cdkBuilder.uploadSpeed(uploadSpeed)
   }

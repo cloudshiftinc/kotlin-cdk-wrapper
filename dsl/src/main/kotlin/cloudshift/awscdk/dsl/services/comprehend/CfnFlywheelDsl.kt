@@ -22,46 +22,120 @@ public class CfnFlywheelDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The Amazon Resource Number (ARN) of the active model version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-activemodelarn)
+   * @param activeModelArn The Amazon Resource Number (ARN) of the active model version. 
+   */
   public fun activeModelArn(activeModelArn: String) {
     cdkBuilder.activeModelArn(activeModelArn)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to
+   * access the flywheel data.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-dataaccessrolearn)
+   * @param dataAccessRoleArn The Amazon Resource Name (ARN) of the IAM role that grants Amazon
+   * Comprehend permission to access the flywheel data. 
+   */
   public fun dataAccessRoleArn(dataAccessRoleArn: String) {
     cdkBuilder.dataAccessRoleArn(dataAccessRoleArn)
   }
 
+  /**
+   * Amazon S3 URI of the data lake location.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-datalakes3uri)
+   * @param dataLakeS3Uri Amazon S3 URI of the data lake location. 
+   */
   public fun dataLakeS3Uri(dataLakeS3Uri: String) {
     cdkBuilder.dataLakeS3Uri(dataLakeS3Uri)
   }
 
+  /**
+   * Data security configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-datasecurityconfig)
+   * @param dataSecurityConfig Data security configuration. 
+   */
   public fun dataSecurityConfig(dataSecurityConfig: IResolvable) {
     cdkBuilder.dataSecurityConfig(dataSecurityConfig)
   }
 
+  /**
+   * Data security configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-datasecurityconfig)
+   * @param dataSecurityConfig Data security configuration. 
+   */
   public fun dataSecurityConfig(dataSecurityConfig: CfnFlywheel.DataSecurityConfigProperty) {
     cdkBuilder.dataSecurityConfig(dataSecurityConfig)
   }
 
+  /**
+   * Name for the flywheel.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-flywheelname)
+   * @param flywheelName Name for the flywheel. 
+   */
   public fun flywheelName(flywheelName: String) {
     cdkBuilder.flywheelName(flywheelName)
   }
 
+  /**
+   * Model type of the flywheel's model.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-modeltype)
+   * @param modelType Model type of the flywheel's model. 
+   */
   public fun modelType(modelType: String) {
     cdkBuilder.modelType(modelType)
   }
 
+  /**
+   * Tags associated with the endpoint being created.
+   *
+   * A tag is a key-value pair that adds metadata to the endpoint. For example, a tag with "Sales"
+   * as the key might be added to an endpoint to indicate its use by the sales department.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-tags)
+   * @param tags Tags associated with the endpoint being created. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Tags associated with the endpoint being created.
+   *
+   * A tag is a key-value pair that adds metadata to the endpoint. For example, a tag with "Sales"
+   * as the key might be added to an endpoint to indicate its use by the sales department.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-tags)
+   * @param tags Tags associated with the endpoint being created. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * Configuration about the model associated with a flywheel.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-taskconfig)
+   * @param taskConfig Configuration about the model associated with a flywheel. 
+   */
   public fun taskConfig(taskConfig: IResolvable) {
     cdkBuilder.taskConfig(taskConfig)
   }
 
+  /**
+   * Configuration about the model associated with a flywheel.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html#cfn-comprehend-flywheel-taskconfig)
+   * @param taskConfig Configuration about the model associated with a flywheel. 
+   */
   public fun taskConfig(taskConfig: CfnFlywheel.TaskConfigProperty) {
     cdkBuilder.taskConfig(taskConfig)
   }

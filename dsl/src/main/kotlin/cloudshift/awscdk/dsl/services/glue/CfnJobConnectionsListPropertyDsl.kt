@@ -15,10 +15,16 @@ public class CfnJobConnectionsListPropertyDsl {
 
   private val _connections: MutableList<String> = mutableListOf()
 
+  /**
+   * @param connections A list of connections used by the job.
+   */
   public fun connections(vararg connections: String) {
     _connections.addAll(listOf(*connections))
   }
 
+  /**
+   * @param connections A list of connections used by the job.
+   */
   public fun connections(connections: Collection<String>) {
     _connections.addAll(connections)
   }

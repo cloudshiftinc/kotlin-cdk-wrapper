@@ -11,6 +11,10 @@ public class CfnDatasetMetadataPropertyDsl {
   private val cdkBuilder: CfnDataset.MetadataProperty.Builder =
       CfnDataset.MetadataProperty.builder()
 
+  /**
+   * @param sourceArn The Amazon Resource Name (ARN) associated with the dataset.
+   * Currently, DataBrew only supports ARNs from Amazon AppFlow.
+   */
   public fun sourceArn(sourceArn: String) {
     cdkBuilder.sourceArn(sourceArn)
   }

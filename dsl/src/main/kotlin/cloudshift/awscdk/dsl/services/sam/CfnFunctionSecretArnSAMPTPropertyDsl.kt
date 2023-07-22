@@ -11,6 +11,9 @@ public class CfnFunctionSecretArnSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.SecretArnSAMPTProperty.Builder =
       CfnFunction.SecretArnSAMPTProperty.builder()
 
+  /**
+   * @param secretArn the value to be set. 
+   */
   public fun secretArn(secretArn: String) {
     cdkBuilder.secretArn(secretArn)
   }

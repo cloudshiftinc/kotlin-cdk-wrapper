@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.opensearchservice.DomainAttributes
 public class DomainAttributesDsl {
   private val cdkBuilder: DomainAttributes.Builder = DomainAttributes.builder()
 
+  /**
+   * @param domainArn The ARN of the Amazon OpenSearch Service domain. 
+   */
   public fun domainArn(domainArn: String) {
     cdkBuilder.domainArn(domainArn)
   }
 
+  /**
+   * @param domainEndpoint The domain endpoint of the Amazon OpenSearch Service domain. 
+   */
   public fun domainEndpoint(domainEndpoint: String) {
     cdkBuilder.domainEndpoint(domainEndpoint)
   }

@@ -15,26 +15,44 @@ public class CfnApiCanarySettingPropertyDsl {
   private val cdkBuilder: CfnApi.CanarySettingProperty.Builder =
       CfnApi.CanarySettingProperty.builder()
 
+  /**
+   * @param deploymentId the value to be set.
+   */
   public fun deploymentId(deploymentId: String) {
     cdkBuilder.deploymentId(deploymentId)
   }
 
+  /**
+   * @param percentTraffic the value to be set.
+   */
   public fun percentTraffic(percentTraffic: Number) {
     cdkBuilder.percentTraffic(percentTraffic)
   }
 
+  /**
+   * @param stageVariableOverrides the value to be set.
+   */
   public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
     cdkBuilder.stageVariableOverrides(stageVariableOverrides)
   }
 
+  /**
+   * @param stageVariableOverrides the value to be set.
+   */
   public fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
     cdkBuilder.stageVariableOverrides(stageVariableOverrides)
   }
 
+  /**
+   * @param useStageCache the value to be set.
+   */
   public fun useStageCache(useStageCache: Boolean) {
     cdkBuilder.useStageCache(useStageCache)
   }
 
+  /**
+   * @param useStageCache the value to be set.
+   */
   public fun useStageCache(useStageCache: IResolvable) {
     cdkBuilder.useStageCache(useStageCache)
   }

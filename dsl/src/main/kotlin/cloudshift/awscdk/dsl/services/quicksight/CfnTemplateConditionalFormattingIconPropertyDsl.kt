@@ -11,19 +11,31 @@ public class CfnTemplateConditionalFormattingIconPropertyDsl {
   private val cdkBuilder: CfnTemplate.ConditionalFormattingIconProperty.Builder =
       CfnTemplate.ConditionalFormattingIconProperty.builder()
 
+  /**
+   * @param customCondition Determines the custom condition for an icon set.
+   */
   public fun customCondition(customCondition: IResolvable) {
     cdkBuilder.customCondition(customCondition)
   }
 
+  /**
+   * @param customCondition Determines the custom condition for an icon set.
+   */
   public
       fun customCondition(customCondition: CfnTemplate.ConditionalFormattingCustomIconConditionProperty) {
     cdkBuilder.customCondition(customCondition)
   }
 
+  /**
+   * @param iconSet Formatting configuration for icon set.
+   */
   public fun iconSet(iconSet: IResolvable) {
     cdkBuilder.iconSet(iconSet)
   }
 
+  /**
+   * @param iconSet Formatting configuration for icon set.
+   */
   public fun iconSet(iconSet: CfnTemplate.ConditionalFormattingIconSetProperty) {
     cdkBuilder.iconSet(iconSet)
   }

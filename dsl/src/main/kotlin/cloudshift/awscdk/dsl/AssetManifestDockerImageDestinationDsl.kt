@@ -13,20 +13,32 @@ public class AssetManifestDockerImageDestinationDsl {
   private val cdkBuilder: AssetManifestDockerImageDestination.Builder =
       AssetManifestDockerImageDestination.builder()
 
+  /**
+   * @param dockerTagPrefix Prefix to add to the asset hash to make the Docker image tag.
+   */
   public fun dockerTagPrefix(dockerTagPrefix: String) {
     cdkBuilder.dockerTagPrefix(dockerTagPrefix)
   }
 
+  /**
+   * @param repositoryName Repository name where the docker image asset should be written. 
+   */
   public fun repositoryName(repositoryName: String) {
     cdkBuilder.repositoryName(repositoryName)
   }
 
-  public fun role(block: RoleOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param role Role to use to perform the upload.
+   */
+  public fun role(role: RoleOptionsDsl.() -> Unit = {}) {
     val builder = RoleOptionsDsl()
-    builder.apply(block)
+    builder.apply(role)
     cdkBuilder.role(builder.build())
   }
 
+  /**
+   * @param role Role to use to perform the upload.
+   */
   public fun role(role: RoleOptions) {
     cdkBuilder.role(role)
   }

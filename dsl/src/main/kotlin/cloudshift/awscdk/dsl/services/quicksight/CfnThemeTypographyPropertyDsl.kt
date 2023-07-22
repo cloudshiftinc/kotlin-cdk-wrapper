@@ -16,14 +16,23 @@ public class CfnThemeTypographyPropertyDsl {
 
   private val _fontFamilies: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param fontFamilies the value to be set.
+   */
   public fun fontFamilies(vararg fontFamilies: Any) {
     _fontFamilies.addAll(listOf(*fontFamilies))
   }
 
+  /**
+   * @param fontFamilies the value to be set.
+   */
   public fun fontFamilies(fontFamilies: Collection<Any>) {
     _fontFamilies.addAll(fontFamilies)
   }
 
+  /**
+   * @param fontFamilies the value to be set.
+   */
   public fun fontFamilies(fontFamilies: IResolvable) {
     cdkBuilder.fontFamilies(fontFamilies)
   }

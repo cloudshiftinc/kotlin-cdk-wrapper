@@ -11,10 +11,19 @@ import software.amazon.awscdk.services.s3.IBucket
 public class CrossRegionSupportDsl {
   private val cdkBuilder: CrossRegionSupport.Builder = CrossRegionSupport.builder()
 
+  /**
+   * @param replicationBucket The replication Bucket used by CodePipeline to operate in this region.
+   * 
+   * Belongs to `stack`.
+   */
   public fun replicationBucket(replicationBucket: IBucket) {
     cdkBuilder.replicationBucket(replicationBucket)
   }
 
+  /**
+   * @param stack The Stack that has been created to house the replication Bucket required for this 
+   * region. 
+   */
   public fun stack(stack: Stack) {
     cdkBuilder.stack(stack)
   }

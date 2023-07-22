@@ -21,58 +21,108 @@ public class CfnDetectorRulePropertyDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param arn The rule ARN.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param createdTime Timestamp for when the rule was created.
+   */
   public fun createdTime(createdTime: String) {
     cdkBuilder.createdTime(createdTime)
   }
 
+  /**
+   * @param description The rule description.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param detectorId The detector for which the rule is associated.
+   */
   public fun detectorId(detectorId: String) {
     cdkBuilder.detectorId(detectorId)
   }
 
+  /**
+   * @param expression The rule expression.
+   * A rule expression captures the business logic. For more information, see [Rule language
+   * reference](https://docs.aws.amazon.com/frauddetector/latest/ug/rule-language-reference.html) .
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }
 
+  /**
+   * @param language The rule language.
+   */
   public fun language(language: String) {
     cdkBuilder.language(language)
   }
 
+  /**
+   * @param lastUpdatedTime Timestamp for when the rule was last updated.
+   */
   public fun lastUpdatedTime(lastUpdatedTime: String) {
     cdkBuilder.lastUpdatedTime(lastUpdatedTime)
   }
 
+  /**
+   * @param outcomes The rule outcome.
+   */
   public fun outcomes(vararg outcomes: Any) {
     _outcomes.addAll(listOf(*outcomes))
   }
 
+  /**
+   * @param outcomes The rule outcome.
+   */
   public fun outcomes(outcomes: Collection<Any>) {
     _outcomes.addAll(outcomes)
   }
 
+  /**
+   * @param outcomes The rule outcome.
+   */
   public fun outcomes(outcomes: IResolvable) {
     cdkBuilder.outcomes(outcomes)
   }
 
+  /**
+   * @param ruleId The rule ID.
+   */
   public fun ruleId(ruleId: String) {
     cdkBuilder.ruleId(ruleId)
   }
 
+  /**
+   * @param ruleVersion The rule version.
+   */
   public fun ruleVersion(ruleVersion: String) {
     cdkBuilder.ruleVersion(ruleVersion)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

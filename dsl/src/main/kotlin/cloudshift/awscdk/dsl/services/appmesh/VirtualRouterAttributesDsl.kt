@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.VirtualRouterAttributes
 public class VirtualRouterAttributesDsl {
   private val cdkBuilder: VirtualRouterAttributes.Builder = VirtualRouterAttributes.builder()
 
+  /**
+   * @param mesh The Mesh which the VirtualRouter belongs to. 
+   */
   public fun mesh(mesh: IMesh) {
     cdkBuilder.mesh(mesh)
   }
 
+  /**
+   * @param virtualRouterName The name of the VirtualRouter. 
+   */
   public fun virtualRouterName(virtualRouterName: String) {
     cdkBuilder.virtualRouterName(virtualRouterName)
   }

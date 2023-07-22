@@ -13,6 +13,14 @@ public class RepositoryImageDsl(
 ) {
   private val cdkBuilder: RepositoryImage.Builder = RepositoryImage.Builder.create(imageName)
 
+  /**
+   * The secret to expose to the container that contains the credentials for the image repository.
+   *
+   * The supported value is the full ARN of an AWS Secrets Manager secret.
+   *
+   * @param credentials The secret to expose to the container that contains the credentials for the
+   * image repository. 
+   */
   public fun credentials(credentials: ISecret) {
     cdkBuilder.credentials(credentials)
   }

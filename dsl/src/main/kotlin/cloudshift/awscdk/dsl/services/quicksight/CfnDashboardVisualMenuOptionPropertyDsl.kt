@@ -11,6 +11,9 @@ public class CfnDashboardVisualMenuOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.VisualMenuOptionProperty.Builder =
       CfnDashboard.VisualMenuOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus The availaiblity status of a visual's menu options.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

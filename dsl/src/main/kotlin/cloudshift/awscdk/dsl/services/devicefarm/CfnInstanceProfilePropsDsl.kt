@@ -21,42 +21,86 @@ public class CfnInstanceProfilePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of the instance profile.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param excludeAppPackagesFromCleanup An array of strings containing the list of app packages
+   * that should not be cleaned up from the device after a test run completes.
+   * The list of packages is considered only if you set `packageCleanup` to `true` .
+   */
   public fun excludeAppPackagesFromCleanup(vararg excludeAppPackagesFromCleanup: String) {
     _excludeAppPackagesFromCleanup.addAll(listOf(*excludeAppPackagesFromCleanup))
   }
 
+  /**
+   * @param excludeAppPackagesFromCleanup An array of strings containing the list of app packages
+   * that should not be cleaned up from the device after a test run completes.
+   * The list of packages is considered only if you set `packageCleanup` to `true` .
+   */
   public fun excludeAppPackagesFromCleanup(excludeAppPackagesFromCleanup: Collection<String>) {
     _excludeAppPackagesFromCleanup.addAll(excludeAppPackagesFromCleanup)
   }
 
+  /**
+   * @param name The name of the instance profile. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param packageCleanup When set to `true` , Device Farm removes app packages after a test run.
+   * The default value is `false` for private devices.
+   */
   public fun packageCleanup(packageCleanup: Boolean) {
     cdkBuilder.packageCleanup(packageCleanup)
   }
 
+  /**
+   * @param packageCleanup When set to `true` , Device Farm removes app packages after a test run.
+   * The default value is `false` for private devices.
+   */
   public fun packageCleanup(packageCleanup: IResolvable) {
     cdkBuilder.packageCleanup(packageCleanup)
   }
 
+  /**
+   * @param rebootAfterUse When set to `true` , Device Farm reboots the instance after a test run.
+   * The default value is `true` .
+   */
   public fun rebootAfterUse(rebootAfterUse: Boolean) {
     cdkBuilder.rebootAfterUse(rebootAfterUse)
   }
 
+  /**
+   * @param rebootAfterUse When set to `true` , Device Farm reboots the instance after a test run.
+   * The default value is `true` .
+   */
   public fun rebootAfterUse(rebootAfterUse: IResolvable) {
     cdkBuilder.rebootAfterUse(rebootAfterUse)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *guide* .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *guide* .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

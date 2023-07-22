@@ -16,14 +16,33 @@ public class CfnConfigurationSetEventDestinationDsl(
   private val cdkBuilder: CfnConfigurationSetEventDestination.Builder =
       CfnConfigurationSetEventDestination.Builder.create(scope, id)
 
+  /**
+   * The name of the configuration set that contains the event destination.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-configurationsetname)
+   * @param configurationSetName The name of the configuration set that contains the event
+   * destination. 
+   */
   public fun configurationSetName(configurationSetName: String) {
     cdkBuilder.configurationSetName(configurationSetName)
   }
 
+  /**
+   * The event destination object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
+   * @param eventDestination The event destination object. 
+   */
   public fun eventDestination(eventDestination: IResolvable) {
     cdkBuilder.eventDestination(eventDestination)
   }
 
+  /**
+   * The event destination object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
+   * @param eventDestination The event destination object. 
+   */
   public
       fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty) {
     cdkBuilder.eventDestination(eventDestination)

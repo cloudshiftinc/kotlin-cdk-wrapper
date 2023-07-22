@@ -15,14 +15,34 @@ public class CfnLocationEFSEc2ConfigPropertyDsl {
 
   private val _securityGroupArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupArns Specifies the Amazon Resource Names (ARNs) of the security groups
+   * associated with an Amazon EFS file system's mount target. 
+   */
   public fun securityGroupArns(vararg securityGroupArns: String) {
     _securityGroupArns.addAll(listOf(*securityGroupArns))
   }
 
+  /**
+   * @param securityGroupArns Specifies the Amazon Resource Names (ARNs) of the security groups
+   * associated with an Amazon EFS file system's mount target. 
+   */
   public fun securityGroupArns(securityGroupArns: Collection<String>) {
     _securityGroupArns.addAll(securityGroupArns)
   }
 
+  /**
+   * @param subnetArn Specifies the ARN of a subnet where DataSync creates the [network
+   * interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
+   * for managing traffic during your transfer. 
+   * The subnet must be located:
+   *
+   * * In the same virtual private cloud (VPC) as the Amazon EFS file system.
+   * * In the same Availability Zone as at least one mount target for the Amazon EFS file system.
+   *
+   *
+   * You don't need to specify a subnet that includes a file system mount target.
+   */
   public fun subnetArn(subnetArn: String) {
     cdkBuilder.subnetArn(subnetArn)
   }

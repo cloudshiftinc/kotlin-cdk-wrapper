@@ -16,14 +16,26 @@ public class CfnAnalysisCascadingControlConfigurationPropertyDsl {
 
   private val _sourceControls: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param sourceControls A list of source controls that determine the values that are used in the
+   * current control.
+   */
   public fun sourceControls(vararg sourceControls: Any) {
     _sourceControls.addAll(listOf(*sourceControls))
   }
 
+  /**
+   * @param sourceControls A list of source controls that determine the values that are used in the
+   * current control.
+   */
   public fun sourceControls(sourceControls: Collection<Any>) {
     _sourceControls.addAll(sourceControls)
   }
 
+  /**
+   * @param sourceControls A list of source controls that determine the values that are used in the
+   * current control.
+   */
   public fun sourceControls(sourceControls: IResolvable) {
     cdkBuilder.sourceControls(sourceControls)
   }

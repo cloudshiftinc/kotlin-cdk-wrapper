@@ -12,14 +12,23 @@ public class CfnTemplateNumericEqualityDrillDownFilterPropertyDsl {
   private val cdkBuilder: CfnTemplate.NumericEqualityDrillDownFilterProperty.Builder =
       CfnTemplate.NumericEqualityDrillDownFilterProperty.builder()
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: IResolvable) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param column The column that the filter is applied to. 
+   */
   public fun column(column: CfnTemplate.ColumnIdentifierProperty) {
     cdkBuilder.column(column)
   }
 
+  /**
+   * @param value The value of the double input numeric drill down filter. 
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

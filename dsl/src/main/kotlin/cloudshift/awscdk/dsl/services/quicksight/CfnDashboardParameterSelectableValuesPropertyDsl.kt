@@ -16,18 +16,30 @@ public class CfnDashboardParameterSelectableValuesPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param linkToDataSetColumn The column identifier that fetches values from the data set.
+   */
   public fun linkToDataSetColumn(linkToDataSetColumn: IResolvable) {
     cdkBuilder.linkToDataSetColumn(linkToDataSetColumn)
   }
 
+  /**
+   * @param linkToDataSetColumn The column identifier that fetches values from the data set.
+   */
   public fun linkToDataSetColumn(linkToDataSetColumn: CfnDashboard.ColumnIdentifierProperty) {
     cdkBuilder.linkToDataSetColumn(linkToDataSetColumn)
   }
 
+  /**
+   * @param values The values that are used in `ParameterSelectableValues` .
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values that are used in `ParameterSelectableValues` .
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

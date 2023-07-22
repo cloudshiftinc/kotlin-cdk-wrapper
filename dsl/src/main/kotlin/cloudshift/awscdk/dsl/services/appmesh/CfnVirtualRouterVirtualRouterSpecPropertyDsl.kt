@@ -16,14 +16,26 @@ public class CfnVirtualRouterVirtualRouterSpecPropertyDsl {
 
   private val _listeners: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param listeners The listeners that the virtual router is expected to receive inbound traffic
+   * from. 
+   */
   public fun listeners(vararg listeners: Any) {
     _listeners.addAll(listOf(*listeners))
   }
 
+  /**
+   * @param listeners The listeners that the virtual router is expected to receive inbound traffic
+   * from. 
+   */
   public fun listeners(listeners: Collection<Any>) {
     _listeners.addAll(listeners)
   }
 
+  /**
+   * @param listeners The listeners that the virtual router is expected to receive inbound traffic
+   * from. 
+   */
   public fun listeners(listeners: IResolvable) {
     cdkBuilder.listeners(listeners)
   }

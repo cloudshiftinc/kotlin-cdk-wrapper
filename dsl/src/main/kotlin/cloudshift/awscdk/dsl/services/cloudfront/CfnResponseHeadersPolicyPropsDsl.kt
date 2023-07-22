@@ -12,10 +12,16 @@ public class CfnResponseHeadersPolicyPropsDsl {
   private val cdkBuilder: CfnResponseHeadersPolicyProps.Builder =
       CfnResponseHeadersPolicyProps.builder()
 
+  /**
+   * @param responseHeadersPolicyConfig A response headers policy configuration. 
+   */
   public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
     cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
   }
 
+  /**
+   * @param responseHeadersPolicyConfig A response headers policy configuration. 
+   */
   public
       fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty) {
     cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)

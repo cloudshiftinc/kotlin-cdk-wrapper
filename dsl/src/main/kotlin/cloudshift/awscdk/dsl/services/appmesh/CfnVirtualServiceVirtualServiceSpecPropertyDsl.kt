@@ -11,10 +11,18 @@ public class CfnVirtualServiceVirtualServiceSpecPropertyDsl {
   private val cdkBuilder: CfnVirtualService.VirtualServiceSpecProperty.Builder =
       CfnVirtualService.VirtualServiceSpecProperty.builder()
 
+  /**
+   * @param provider The App Mesh object that is acting as the provider for a virtual service.
+   * You can specify a single virtual node or virtual router.
+   */
   public fun provider(provider: IResolvable) {
     cdkBuilder.provider(provider)
   }
 
+  /**
+   * @param provider The App Mesh object that is acting as the provider for a virtual service.
+   * You can specify a single virtual node or virtual router.
+   */
   public fun provider(provider: CfnVirtualService.VirtualServiceProviderProperty) {
     cdkBuilder.provider(provider)
   }

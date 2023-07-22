@@ -11,6 +11,10 @@ public class CfnCodeDeployBlueGreenAdditionalOptionsDsl {
   private val cdkBuilder: CfnCodeDeployBlueGreenAdditionalOptions.Builder =
       CfnCodeDeployBlueGreenAdditionalOptions.builder()
 
+  /**
+   * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating the
+   * blue resources.
+   */
   public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
     cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
   }

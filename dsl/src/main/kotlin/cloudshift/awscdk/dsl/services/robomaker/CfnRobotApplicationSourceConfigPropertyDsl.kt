@@ -11,14 +11,23 @@ public class CfnRobotApplicationSourceConfigPropertyDsl {
   private val cdkBuilder: CfnRobotApplication.SourceConfigProperty.Builder =
       CfnRobotApplication.SourceConfigProperty.builder()
 
+  /**
+   * @param architecture The target processor architecture for the application. 
+   */
   public fun architecture(architecture: String) {
     cdkBuilder.architecture(architecture)
   }
 
+  /**
+   * @param s3Bucket The Amazon S3 bucket name. 
+   */
   public fun s3Bucket(s3Bucket: String) {
     cdkBuilder.s3Bucket(s3Bucket)
   }
 
+  /**
+   * @param s3Key The s3 object key. 
+   */
   public fun s3Key(s3Key: String) {
     cdkBuilder.s3Key(s3Key)
   }

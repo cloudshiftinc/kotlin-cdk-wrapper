@@ -13,14 +13,24 @@ public class CfnDatastoreRetentionPeriodPropertyDsl {
   private val cdkBuilder: CfnDatastore.RetentionPeriodProperty.Builder =
       CfnDatastore.RetentionPeriodProperty.builder()
 
+  /**
+   * @param numberOfDays The number of days that message data is kept.
+   * The `unlimited` parameter must be false.
+   */
   public fun numberOfDays(numberOfDays: Number) {
     cdkBuilder.numberOfDays(numberOfDays)
   }
 
+  /**
+   * @param unlimited If true, message data is kept indefinitely.
+   */
   public fun unlimited(unlimited: Boolean) {
     cdkBuilder.unlimited(unlimited)
   }
 
+  /**
+   * @param unlimited If true, message data is kept indefinitely.
+   */
   public fun unlimited(unlimited: IResolvable) {
     cdkBuilder.unlimited(unlimited)
   }

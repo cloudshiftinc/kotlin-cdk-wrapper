@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.sdb.CfnDomainProps
 public class CfnDomainPropsDsl {
   private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()
 
+  /**
+   * @param description Information about the SimpleDB domain.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }

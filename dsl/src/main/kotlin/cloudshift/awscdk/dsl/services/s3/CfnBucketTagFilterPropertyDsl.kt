@@ -11,10 +11,16 @@ public class CfnBucketTagFilterPropertyDsl {
   private val cdkBuilder: CfnBucket.TagFilterProperty.Builder =
       CfnBucket.TagFilterProperty.builder()
 
+  /**
+   * @param key The tag key. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The tag value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

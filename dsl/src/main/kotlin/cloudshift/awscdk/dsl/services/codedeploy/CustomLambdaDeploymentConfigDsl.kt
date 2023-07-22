@@ -20,21 +20,56 @@ public class CustomLambdaDeploymentConfigDsl(
   private val cdkBuilder: CustomLambdaDeploymentConfig.Builder =
       CustomLambdaDeploymentConfig.Builder.create(scope, id)
 
+  /**
+   * (deprecated) The verbatim name of the deployment config.
+   *
+   * Must be unique per account/region.
+   * Other parameters cannot be updated if this name is provided.
+   *
+   * Default: - automatically generated name
+   *
+   * @deprecated Use `LambdaDeploymentConfig`
+   * @param deploymentConfigName The verbatim name of the deployment config. 
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun deploymentConfigName(deploymentConfigName: String) {
     cdkBuilder.deploymentConfigName(deploymentConfigName)
   }
 
+  /**
+   * (deprecated) The interval, in number of minutes: - For LINEAR, how frequently additional
+   * traffic is shifted - For CANARY, how long to shift traffic before the full deployment.
+   *
+   * @deprecated Use `LambdaDeploymentConfig`
+   * @param interval The interval, in number of minutes: - For LINEAR, how frequently additional
+   * traffic is shifted - For CANARY, how long to shift traffic before the full deployment. 
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun interval(interval: Duration) {
     cdkBuilder.interval(interval)
   }
 
+  /**
+   * (deprecated) The integer percentage of traffic to shift: - For LINEAR, the percentage to shift
+   * every interval - For CANARY, the percentage to shift until the interval passes, before the full
+   * deployment.
+   *
+   * @deprecated Use `LambdaDeploymentConfig`
+   * @param percentage The integer percentage of traffic to shift: - For LINEAR, the percentage to
+   * shift every interval - For CANARY, the percentage to shift until the interval passes, before the
+   * full deployment. 
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun percentage(percentage: Number) {
     cdkBuilder.percentage(percentage)
   }
 
+  /**
+   * (deprecated) The type of deployment config, either CANARY or LINEAR.
+   *
+   * @deprecated Use `LambdaDeploymentConfig`
+   * @param type The type of deployment config, either CANARY or LINEAR. 
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun type(type: CustomLambdaDeploymentConfigType) {
     cdkBuilder.type(type)

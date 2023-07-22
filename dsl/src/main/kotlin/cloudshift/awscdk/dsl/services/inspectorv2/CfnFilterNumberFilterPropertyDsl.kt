@@ -11,10 +11,16 @@ public class CfnFilterNumberFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.NumberFilterProperty.Builder =
       CfnFilter.NumberFilterProperty.builder()
 
+  /**
+   * @param lowerInclusive The lowest number to be included in the filter.
+   */
   public fun lowerInclusive(lowerInclusive: Number) {
     cdkBuilder.lowerInclusive(lowerInclusive)
   }
 
+  /**
+   * @param upperInclusive The highest number to be included in the filter.
+   */
   public fun upperInclusive(upperInclusive: Number) {
     cdkBuilder.upperInclusive(upperInclusive)
   }

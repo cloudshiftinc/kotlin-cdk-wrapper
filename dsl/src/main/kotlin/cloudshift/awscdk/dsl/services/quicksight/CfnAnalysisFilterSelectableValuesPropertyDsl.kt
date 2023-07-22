@@ -15,10 +15,16 @@ public class CfnAnalysisFilterSelectableValuesPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param values The values that are used in the `FilterSelectableValues` .
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values that are used in the `FilterSelectableValues` .
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

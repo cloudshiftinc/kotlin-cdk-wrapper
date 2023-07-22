@@ -11,6 +11,9 @@ public class CfnStorageLensAwsOrgPropertyDsl {
   private val cdkBuilder: CfnStorageLens.AwsOrgProperty.Builder =
       CfnStorageLens.AwsOrgProperty.builder()
 
+  /**
+   * @param arn This resource contains the ARN of the AWS Organization. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

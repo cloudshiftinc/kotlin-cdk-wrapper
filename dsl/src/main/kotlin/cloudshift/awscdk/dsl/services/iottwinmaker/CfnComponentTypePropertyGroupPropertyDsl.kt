@@ -15,14 +15,23 @@ public class CfnComponentTypePropertyGroupPropertyDsl {
 
   private val _propertyNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param groupType The group type.
+   */
   public fun groupType(groupType: String) {
     cdkBuilder.groupType(groupType)
   }
 
+  /**
+   * @param propertyNames The property names.
+   */
   public fun propertyNames(vararg propertyNames: String) {
     _propertyNames.addAll(listOf(*propertyNames))
   }
 
+  /**
+   * @param propertyNames The property names.
+   */
   public fun propertyNames(propertyNames: Collection<String>) {
     _propertyNames.addAll(propertyNames)
   }

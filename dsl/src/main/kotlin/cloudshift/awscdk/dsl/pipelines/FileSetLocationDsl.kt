@@ -11,10 +11,16 @@ import software.amazon.awscdk.pipelines.FileSetLocation
 public class FileSetLocationDsl {
   private val cdkBuilder: FileSetLocation.Builder = FileSetLocation.builder()
 
+  /**
+   * @param directory The (relative) directory where the FileSet is found. 
+   */
   public fun directory(directory: String) {
     cdkBuilder.directory(directory)
   }
 
+  /**
+   * @param fileSet The FileSet object. 
+   */
   public fun fileSet(fileSet: FileSet) {
     cdkBuilder.fileSet(fileSet)
   }

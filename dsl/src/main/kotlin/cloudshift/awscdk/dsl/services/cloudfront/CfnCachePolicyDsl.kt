@@ -15,10 +15,22 @@ public class CfnCachePolicyDsl(
 ) {
   private val cdkBuilder: CfnCachePolicy.Builder = CfnCachePolicy.Builder.create(scope, id)
 
+  /**
+   * The cache policy configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html#cfn-cloudfront-cachepolicy-cachepolicyconfig)
+   * @param cachePolicyConfig The cache policy configuration. 
+   */
   public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
     cdkBuilder.cachePolicyConfig(cachePolicyConfig)
   }
 
+  /**
+   * The cache policy configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html#cfn-cloudfront-cachepolicy-cachepolicyconfig)
+   * @param cachePolicyConfig The cache policy configuration. 
+   */
   public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
     cdkBuilder.cachePolicyConfig(cachePolicyConfig)
   }

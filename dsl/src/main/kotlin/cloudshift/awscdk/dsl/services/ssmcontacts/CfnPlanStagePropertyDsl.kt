@@ -16,18 +16,34 @@ public class CfnPlanStagePropertyDsl {
 
   private val _targets: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param durationInMinutes The time to wait until beginning the next stage. 
+   * The duration can only be set to 0 if a target is specified.
+   */
   public fun durationInMinutes(durationInMinutes: Number) {
     cdkBuilder.durationInMinutes(durationInMinutes)
   }
 
+  /**
+   * @param targets The contacts or contact methods that the escalation plan or engagement plan is
+   * engaging.
+   */
   public fun targets(vararg targets: Any) {
     _targets.addAll(listOf(*targets))
   }
 
+  /**
+   * @param targets The contacts or contact methods that the escalation plan or engagement plan is
+   * engaging.
+   */
   public fun targets(targets: Collection<Any>) {
     _targets.addAll(targets)
   }
 
+  /**
+   * @param targets The contacts or contact methods that the escalation plan or engagement plan is
+   * engaging.
+   */
   public fun targets(targets: IResolvable) {
     cdkBuilder.targets(targets)
   }

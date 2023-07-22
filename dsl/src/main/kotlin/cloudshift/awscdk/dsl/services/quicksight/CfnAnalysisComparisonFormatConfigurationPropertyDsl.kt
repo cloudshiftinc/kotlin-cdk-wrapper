@@ -11,20 +11,32 @@ public class CfnAnalysisComparisonFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ComparisonFormatConfigurationProperty.Builder =
       CfnAnalysis.ComparisonFormatConfigurationProperty.builder()
 
+  /**
+   * @param numberDisplayFormatConfiguration The number display format.
+   */
   public fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: IResolvable) {
     cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
   }
 
+  /**
+   * @param numberDisplayFormatConfiguration The number display format.
+   */
   public
       fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: CfnAnalysis.NumberDisplayFormatConfigurationProperty) {
     cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
   }
 
+  /**
+   * @param percentageDisplayFormatConfiguration The percentage display format.
+   */
   public
       fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: IResolvable) {
     cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
   }
 
+  /**
+   * @param percentageDisplayFormatConfiguration The percentage display format.
+   */
   public
       fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: CfnAnalysis.PercentageDisplayFormatConfigurationProperty) {
     cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)

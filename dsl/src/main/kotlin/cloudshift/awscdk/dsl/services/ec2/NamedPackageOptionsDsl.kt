@@ -17,18 +17,30 @@ public class NamedPackageOptionsDsl {
 
   private val _version: MutableList<String> = mutableListOf()
 
+  /**
+   * @param serviceRestartHandles Restart the given services after this command has run.
+   */
   public fun serviceRestartHandles(vararg serviceRestartHandles: InitServiceRestartHandle) {
     _serviceRestartHandles.addAll(listOf(*serviceRestartHandles))
   }
 
+  /**
+   * @param serviceRestartHandles Restart the given services after this command has run.
+   */
   public fun serviceRestartHandles(serviceRestartHandles: Collection<InitServiceRestartHandle>) {
     _serviceRestartHandles.addAll(serviceRestartHandles)
   }
 
+  /**
+   * @param version Specify the versions to install.
+   */
   public fun version(vararg version: String) {
     _version.addAll(listOf(*version))
   }
 
+  /**
+   * @param version Specify the versions to install.
+   */
   public fun version(version: Collection<String>) {
     _version.addAll(version)
   }

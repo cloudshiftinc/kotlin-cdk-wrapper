@@ -13,20 +13,34 @@ import software.amazon.awscdk.services.appmesh.TlsMode
 public class ListenerTlsOptionsDsl {
   private val cdkBuilder: ListenerTlsOptions.Builder = ListenerTlsOptions.builder()
 
+  /**
+   * @param certificate Represents TLS certificate. 
+   */
   public fun certificate(certificate: TlsCertificate) {
     cdkBuilder.certificate(certificate)
   }
 
+  /**
+   * @param mode The TLS mode. 
+   */
   public fun mode(mode: TlsMode) {
     cdkBuilder.mode(mode)
   }
 
-  public fun mutualTlsValidation(block: MutualTlsValidationDsl.() -> Unit = {}) {
+  /**
+   * @param mutualTlsValidation Represents a listener's TLS validation context.
+   * The client certificate will only be validated if the client provides it, enabling mutual TLS.
+   */
+  public fun mutualTlsValidation(mutualTlsValidation: MutualTlsValidationDsl.() -> Unit = {}) {
     val builder = MutualTlsValidationDsl()
-    builder.apply(block)
+    builder.apply(mutualTlsValidation)
     cdkBuilder.mutualTlsValidation(builder.build())
   }
 
+  /**
+   * @param mutualTlsValidation Represents a listener's TLS validation context.
+   * The client certificate will only be validated if the client provides it, enabling mutual TLS.
+   */
   public fun mutualTlsValidation(mutualTlsValidation: MutualTlsValidation) {
     cdkBuilder.mutualTlsValidation(mutualTlsValidation)
   }

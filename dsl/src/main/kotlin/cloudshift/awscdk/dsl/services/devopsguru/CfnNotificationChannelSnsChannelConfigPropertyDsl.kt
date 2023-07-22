@@ -11,6 +11,9 @@ public class CfnNotificationChannelSnsChannelConfigPropertyDsl {
   private val cdkBuilder: CfnNotificationChannel.SnsChannelConfigProperty.Builder =
       CfnNotificationChannel.SnsChannelConfigProperty.builder()
 
+  /**
+   * @param topicArn The Amazon Resource Name (ARN) of an Amazon Simple Notification Service topic.
+   */
   public fun topicArn(topicArn: String) {
     cdkBuilder.topicArn(topicArn)
   }

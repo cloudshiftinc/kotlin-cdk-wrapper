@@ -11,14 +11,24 @@ public class CfnRuleHeaderMatchTypePropertyDsl {
   private val cdkBuilder: CfnRule.HeaderMatchTypeProperty.Builder =
       CfnRule.HeaderMatchTypeProperty.builder()
 
+  /**
+   * @param contains Specifies a contains type match.
+   */
   public fun contains(contains: String) {
     cdkBuilder.contains(contains)
   }
 
+  /**
+   * @param exact Specifies an exact type match.
+   */
   public fun exact(exact: String) {
     cdkBuilder.exact(exact)
   }
 
+  /**
+   * @param prefix Specifies a prefix type match.
+   * Matches the value with the prefix.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

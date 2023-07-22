@@ -11,6 +11,9 @@ public class CfnAnalysisDecimalPlacesConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.DecimalPlacesConfigurationProperty.Builder =
       CfnAnalysis.DecimalPlacesConfigurationProperty.builder()
 
+  /**
+   * @param decimalPlaces The values of the decimal places. 
+   */
   public fun decimalPlaces(decimalPlaces: Number) {
     cdkBuilder.decimalPlaces(decimalPlaces)
   }

@@ -12,18 +12,32 @@ public class CfnTableMagneticStoreWritePropertiesPropertyDsl {
   private val cdkBuilder: CfnTable.MagneticStoreWritePropertiesProperty.Builder =
       CfnTable.MagneticStoreWritePropertiesProperty.builder()
 
+  /**
+   * @param enableMagneticStoreWrites A flag to enable magnetic store writes. 
+   */
   public fun enableMagneticStoreWrites(enableMagneticStoreWrites: Boolean) {
     cdkBuilder.enableMagneticStoreWrites(enableMagneticStoreWrites)
   }
 
+  /**
+   * @param enableMagneticStoreWrites A flag to enable magnetic store writes. 
+   */
   public fun enableMagneticStoreWrites(enableMagneticStoreWrites: IResolvable) {
     cdkBuilder.enableMagneticStoreWrites(enableMagneticStoreWrites)
   }
 
+  /**
+   * @param magneticStoreRejectedDataLocation The location to write error reports for records
+   * rejected asynchronously during magnetic store writes.
+   */
   public fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: IResolvable) {
     cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation)
   }
 
+  /**
+   * @param magneticStoreRejectedDataLocation The location to write error reports for records
+   * rejected asynchronously during magnetic store writes.
+   */
   public
       fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: CfnTable.MagneticStoreRejectedDataLocationProperty) {
     cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation)

@@ -21,18 +21,40 @@ public class OptionGroupDsl(
 
   private val _configurations: MutableList<OptionConfiguration> = mutableListOf()
 
+  /**
+   * The configurations for this option group.
+   *
+   * @param configurations The configurations for this option group. 
+   */
   public fun configurations(configurations: OptionConfigurationDsl.() -> Unit) {
     _configurations.add(OptionConfigurationDsl().apply(configurations).build())
   }
 
+  /**
+   * The configurations for this option group.
+   *
+   * @param configurations The configurations for this option group. 
+   */
   public fun configurations(configurations: Collection<OptionConfiguration>) {
     _configurations.addAll(configurations)
   }
 
+  /**
+   * A description of the option group.
+   *
+   * Default: a CDK generated description
+   *
+   * @param description A description of the option group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The database engine that this option group is associated with.
+   *
+   * @param engine The database engine that this option group is associated with. 
+   */
   public fun engine(engine: IInstanceEngine) {
     cdkBuilder.engine(engine)
   }

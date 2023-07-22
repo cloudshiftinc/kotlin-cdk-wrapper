@@ -11,6 +11,10 @@ public class CfnTableKinesisStreamSpecificationPropertyDsl {
   private val cdkBuilder: CfnTable.KinesisStreamSpecificationProperty.Builder =
       CfnTable.KinesisStreamSpecificationProperty.builder()
 
+  /**
+   * @param streamArn The ARN for a specific Kinesis data stream. 
+   * Length Constraints: Minimum length of 37. Maximum length of 1024.
+   */
   public fun streamArn(streamArn: String) {
     cdkBuilder.streamArn(streamArn)
   }

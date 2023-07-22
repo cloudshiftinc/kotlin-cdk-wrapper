@@ -11,10 +11,23 @@ public class CfnStageAccessLogSettingPropertyDsl {
   private val cdkBuilder: CfnStage.AccessLogSettingProperty.Builder =
       CfnStage.AccessLogSettingProperty.builder()
 
+  /**
+   * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or
+   * Kinesis Data Firehose delivery stream to receive access logs.
+   * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
+   * `amazon-apigateway-` . This parameter is required to enable access logging.
+   */
   public fun destinationArn(destinationArn: String) {
     cdkBuilder.destinationArn(destinationArn)
   }
 
+  /**
+   * @param format A single line format of the access logs of data, as specified by selected
+   * [$context
+   * variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference)
+   * . The format must include at least `$context.requestId` . This parameter is required to enable
+   * access logging.
+   */
   public fun format(format: String) {
     cdkBuilder.format(format)
   }

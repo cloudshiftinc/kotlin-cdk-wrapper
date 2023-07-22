@@ -22,58 +22,146 @@ public class CfnCertificateExtensionsPropertyDsl {
 
   private val _subjectAlternativeNames: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param certificatePolicies Contains a sequence of one or more policy information terms, each of
+   * which consists of an object identifier (OID) and optional qualifiers.
+   * For more information, see NIST's definition of [Object Identifier
+   * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+   *
+   * In an end-entity certificate, these terms indicate the policy under which the certificate was
+   * issued and the purposes for which it may be used. In a CA certificate, these terms limit the set
+   * of policies for certification paths that include this certificate.
+   */
   public fun certificatePolicies(vararg certificatePolicies: Any) {
     _certificatePolicies.addAll(listOf(*certificatePolicies))
   }
 
+  /**
+   * @param certificatePolicies Contains a sequence of one or more policy information terms, each of
+   * which consists of an object identifier (OID) and optional qualifiers.
+   * For more information, see NIST's definition of [Object Identifier
+   * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+   *
+   * In an end-entity certificate, these terms indicate the policy under which the certificate was
+   * issued and the purposes for which it may be used. In a CA certificate, these terms limit the set
+   * of policies for certification paths that include this certificate.
+   */
   public fun certificatePolicies(certificatePolicies: Collection<Any>) {
     _certificatePolicies.addAll(certificatePolicies)
   }
 
+  /**
+   * @param certificatePolicies Contains a sequence of one or more policy information terms, each of
+   * which consists of an object identifier (OID) and optional qualifiers.
+   * For more information, see NIST's definition of [Object Identifier
+   * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+   *
+   * In an end-entity certificate, these terms indicate the policy under which the certificate was
+   * issued and the purposes for which it may be used. In a CA certificate, these terms limit the set
+   * of policies for certification paths that include this certificate.
+   */
   public fun certificatePolicies(certificatePolicies: IResolvable) {
     cdkBuilder.certificatePolicies(certificatePolicies)
   }
 
+  /**
+   * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+   * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more
+   * information, see the [Global OID reference
+   * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+   */
   public fun customExtensions(vararg customExtensions: Any) {
     _customExtensions.addAll(listOf(*customExtensions))
   }
 
+  /**
+   * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+   * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more
+   * information, see the [Global OID reference
+   * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+   */
   public fun customExtensions(customExtensions: Collection<Any>) {
     _customExtensions.addAll(customExtensions)
   }
 
+  /**
+   * @param customExtensions Contains a sequence of one or more X.509 extensions, each of which
+   * consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more
+   * information, see the [Global OID reference
+   * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
+   */
   public fun customExtensions(customExtensions: IResolvable) {
     cdkBuilder.customExtensions(customExtensions)
   }
 
+  /**
+   * @param extendedKeyUsage Specifies additional purposes for which the certified public key may be
+   * used other than basic purposes indicated in the `KeyUsage` extension.
+   */
   public fun extendedKeyUsage(vararg extendedKeyUsage: Any) {
     _extendedKeyUsage.addAll(listOf(*extendedKeyUsage))
   }
 
+  /**
+   * @param extendedKeyUsage Specifies additional purposes for which the certified public key may be
+   * used other than basic purposes indicated in the `KeyUsage` extension.
+   */
   public fun extendedKeyUsage(extendedKeyUsage: Collection<Any>) {
     _extendedKeyUsage.addAll(extendedKeyUsage)
   }
 
+  /**
+   * @param extendedKeyUsage Specifies additional purposes for which the certified public key may be
+   * used other than basic purposes indicated in the `KeyUsage` extension.
+   */
   public fun extendedKeyUsage(extendedKeyUsage: IResolvable) {
     cdkBuilder.extendedKeyUsage(extendedKeyUsage)
   }
 
+  /**
+   * @param keyUsage Defines one or more purposes for which the key contained in the certificate can
+   * be used.
+   * Default value for each option is false.
+   */
   public fun keyUsage(keyUsage: IResolvable) {
     cdkBuilder.keyUsage(keyUsage)
   }
 
+  /**
+   * @param keyUsage Defines one or more purposes for which the key contained in the certificate can
+   * be used.
+   * Default value for each option is false.
+   */
   public fun keyUsage(keyUsage: CfnCertificate.KeyUsageProperty) {
     cdkBuilder.keyUsage(keyUsage)
   }
 
+  /**
+   * @param subjectAlternativeNames The subject alternative name extension allows identities to be
+   * bound to the subject of the certificate.
+   * These identities may be included in addition to or in place of the identity in the subject
+   * field of the certificate.
+   */
   public fun subjectAlternativeNames(vararg subjectAlternativeNames: Any) {
     _subjectAlternativeNames.addAll(listOf(*subjectAlternativeNames))
   }
 
+  /**
+   * @param subjectAlternativeNames The subject alternative name extension allows identities to be
+   * bound to the subject of the certificate.
+   * These identities may be included in addition to or in place of the identity in the subject
+   * field of the certificate.
+   */
   public fun subjectAlternativeNames(subjectAlternativeNames: Collection<Any>) {
     _subjectAlternativeNames.addAll(subjectAlternativeNames)
   }
 
+  /**
+   * @param subjectAlternativeNames The subject alternative name extension allows identities to be
+   * bound to the subject of the certificate.
+   * These identities may be included in addition to or in place of the identity in the subject
+   * field of the certificate.
+   */
   public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
     cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
   }

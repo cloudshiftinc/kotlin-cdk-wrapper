@@ -12,10 +12,19 @@ public class ResponseHeadersContentSecurityPolicyDsl {
   private val cdkBuilder: ResponseHeadersContentSecurityPolicy.Builder =
       ResponseHeadersContentSecurityPolicy.builder()
 
+  /**
+   * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as
+   * values for the Content-Security-Policy HTTP response header. 
+   */
   public fun contentSecurityPolicy(contentSecurityPolicy: String) {
     cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
   }
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides the
+   * Content-Security-Policy HTTP response header received from the origin with the one specified in
+   * this response headers policy. 
+   */
   public fun `override`(`override`: Boolean) {
     cdkBuilder.`override`(`override`)
   }

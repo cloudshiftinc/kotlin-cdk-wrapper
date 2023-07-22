@@ -21,18 +21,50 @@ public class CfnCoreDefinitionVersionDsl(
 
   private val _cores: MutableList<Any> = mutableListOf()
 
+  /**
+   * The ID of the core definition associated with this version.
+   *
+   * This value is a GUID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html#cfn-greengrass-coredefinitionversion-coredefinitionid)
+   * @param coreDefinitionId The ID of the core definition associated with this version. 
+   */
   public fun coreDefinitionId(coreDefinitionId: String) {
     cdkBuilder.coreDefinitionId(coreDefinitionId)
   }
 
+  /**
+   * The Greengrass core in this version.
+   *
+   * Currently, the `Cores` property for a core definition version can contain only one core.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html#cfn-greengrass-coredefinitionversion-cores)
+   * @param cores The Greengrass core in this version. 
+   */
   public fun cores(vararg cores: Any) {
     _cores.addAll(listOf(*cores))
   }
 
+  /**
+   * The Greengrass core in this version.
+   *
+   * Currently, the `Cores` property for a core definition version can contain only one core.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html#cfn-greengrass-coredefinitionversion-cores)
+   * @param cores The Greengrass core in this version. 
+   */
   public fun cores(cores: Collection<Any>) {
     _cores.addAll(cores)
   }
 
+  /**
+   * The Greengrass core in this version.
+   *
+   * Currently, the `Cores` property for a core definition version can contain only one core.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html#cfn-greengrass-coredefinitionversion-cores)
+   * @param cores The Greengrass core in this version. 
+   */
   public fun cores(cores: IResolvable) {
     cdkBuilder.cores(cores)
   }

@@ -10,6 +10,10 @@ import software.amazon.awscdk.ReverseOptions
 public class ReverseOptionsDsl {
   private val cdkBuilder: ReverseOptions.Builder = ReverseOptions.builder()
 
+  /**
+   * @param failConcat Fail if the given string is a concatenation.
+   * If `false`, just return `undefined`.
+   */
   public fun failConcat(failConcat: Boolean) {
     cdkBuilder.failConcat(failConcat)
   }

@@ -11,6 +11,9 @@ public class CfnRuleDeadLetterConfigPropertyDsl {
   private val cdkBuilder: CfnRule.DeadLetterConfigProperty.Builder =
       CfnRule.DeadLetterConfigProperty.builder()
 
+  /**
+   * @param arn The ARN of the SQS queue specified as the target for the dead-letter queue.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

@@ -11,10 +11,16 @@ public class CfnEvaluationFormEvaluationFormBaseItemPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.EvaluationFormBaseItemProperty.Builder =
       CfnEvaluationForm.EvaluationFormBaseItemProperty.builder()
 
+  /**
+   * @param section A subsection or inner section of an item. 
+   */
   public fun section(section: IResolvable) {
     cdkBuilder.section(section)
   }
 
+  /**
+   * @param section A subsection or inner section of an item. 
+   */
   public fun section(section: CfnEvaluationForm.EvaluationFormSectionProperty) {
     cdkBuilder.section(section)
   }

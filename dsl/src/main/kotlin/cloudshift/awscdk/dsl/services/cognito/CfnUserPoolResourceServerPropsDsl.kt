@@ -17,26 +17,49 @@ public class CfnUserPoolResourceServerPropsDsl {
 
   private val _scopes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param identifier A unique resource server identifier for the resource server. 
+   * This could be an HTTPS endpoint where the resource server is located. For example:
+   * `https://my-weather-api.example.com` .
+   */
   public fun identifier(identifier: String) {
     cdkBuilder.identifier(identifier)
   }
 
+  /**
+   * @param name A friendly name for the resource server. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param scopes A list of scopes.
+   * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
+   */
   public fun scopes(vararg scopes: Any) {
     _scopes.addAll(listOf(*scopes))
   }
 
+  /**
+   * @param scopes A list of scopes.
+   * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
+   */
   public fun scopes(scopes: Collection<Any>) {
     _scopes.addAll(scopes)
   }
 
+  /**
+   * @param scopes A list of scopes.
+   * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
+   */
   public fun scopes(scopes: IResolvable) {
     cdkBuilder.scopes(scopes)
   }
 
+  /**
+   * @param userPoolId The user pool ID for the user pool. 
+   */
   public fun userPoolId(userPoolId: String) {
     cdkBuilder.userPoolId(userPoolId)
   }

@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.s3.RedirectTarget
 public class RedirectTargetDsl {
   private val cdkBuilder: RedirectTarget.Builder = RedirectTarget.builder()
 
+  /**
+   * @param hostName Name of the host where requests are redirected. 
+   */
   public fun hostName(hostName: String) {
     cdkBuilder.hostName(hostName)
   }
 
+  /**
+   * @param protocol Protocol to use when redirecting requests.
+   */
   public fun protocol(protocol: RedirectProtocol) {
     cdkBuilder.protocol(protocol)
   }

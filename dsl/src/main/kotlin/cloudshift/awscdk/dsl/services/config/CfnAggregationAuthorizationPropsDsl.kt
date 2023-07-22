@@ -18,18 +18,31 @@ public class CfnAggregationAuthorizationPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param authorizedAccountId The 12-digit account ID of the account authorized to aggregate data.
+   * 
+   */
   public fun authorizedAccountId(authorizedAccountId: String) {
     cdkBuilder.authorizedAccountId(authorizedAccountId)
   }
 
+  /**
+   * @param authorizedAwsRegion The region authorized to collect aggregated data. 
+   */
   public fun authorizedAwsRegion(authorizedAwsRegion: String) {
     cdkBuilder.authorizedAwsRegion(authorizedAwsRegion)
   }
 
+  /**
+   * @param tags An array of tag object.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of tag object.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

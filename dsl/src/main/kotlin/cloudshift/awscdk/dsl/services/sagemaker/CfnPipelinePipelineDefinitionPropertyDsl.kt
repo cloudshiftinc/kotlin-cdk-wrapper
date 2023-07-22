@@ -11,6 +11,9 @@ public class CfnPipelinePipelineDefinitionPropertyDsl {
   private val cdkBuilder: CfnPipeline.PipelineDefinitionProperty.Builder =
       CfnPipeline.PipelineDefinitionProperty.builder()
 
+  /**
+   * @param pipelineDefinitionBody A specification that defines the pipeline in JSON format. 
+   */
   public fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
     cdkBuilder.pipelineDefinitionBody(pipelineDefinitionBody)
   }

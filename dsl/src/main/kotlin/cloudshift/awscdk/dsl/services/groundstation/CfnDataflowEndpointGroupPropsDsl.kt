@@ -22,30 +22,60 @@ public class CfnDataflowEndpointGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param contactPostPassDurationSeconds Amount of time, in seconds, after a contact ends that the
+   * Ground Station Dataflow Endpoint Group will be in a `POSTPASS` state.
+   * A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow
+   * Endpoint Group enters and exits the `POSTPASS` state.
+   */
   public fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number) {
     cdkBuilder.contactPostPassDurationSeconds(contactPostPassDurationSeconds)
   }
 
+  /**
+   * @param contactPrePassDurationSeconds Amount of time, in seconds, before a contact starts that
+   * the Ground Station Dataflow Endpoint Group will be in a `PREPASS` state.
+   * A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow
+   * Endpoint Group enters and exits the `PREPASS` state.
+   */
   public fun contactPrePassDurationSeconds(contactPrePassDurationSeconds: Number) {
     cdkBuilder.contactPrePassDurationSeconds(contactPrePassDurationSeconds)
   }
 
+  /**
+   * @param endpointDetails List of Endpoint Details, containing address and port for each endpoint.
+   * 
+   */
   public fun endpointDetails(vararg endpointDetails: Any) {
     _endpointDetails.addAll(listOf(*endpointDetails))
   }
 
+  /**
+   * @param endpointDetails List of Endpoint Details, containing address and port for each endpoint.
+   * 
+   */
   public fun endpointDetails(endpointDetails: Collection<Any>) {
     _endpointDetails.addAll(endpointDetails)
   }
 
+  /**
+   * @param endpointDetails List of Endpoint Details, containing address and port for each endpoint.
+   * 
+   */
   public fun endpointDetails(endpointDetails: IResolvable) {
     cdkBuilder.endpointDetails(endpointDetails)
   }
 
+  /**
+   * @param tags Tags assigned to a resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Tags assigned to a resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -16,14 +16,26 @@ public class CfnFlowTemplateDsl(
 ) {
   private val cdkBuilder: CfnFlowTemplate.Builder = CfnFlowTemplate.Builder.create(scope, id)
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion)
+   * @param compatibleNamespaceVersion 
+   */
   public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
     cdkBuilder.compatibleNamespaceVersion(compatibleNamespaceVersion)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-definition)
+   * @param definition 
+   */
   public fun definition(definition: IResolvable) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-definition)
+   * @param definition 
+   */
   public fun definition(definition: CfnFlowTemplate.DefinitionDocumentProperty) {
     cdkBuilder.definition(definition)
   }

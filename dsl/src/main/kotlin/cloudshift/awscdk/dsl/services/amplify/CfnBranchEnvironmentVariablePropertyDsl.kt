@@ -11,10 +11,22 @@ public class CfnBranchEnvironmentVariablePropertyDsl {
   private val cdkBuilder: CfnBranch.EnvironmentVariableProperty.Builder =
       CfnBranch.EnvironmentVariableProperty.builder()
 
+  /**
+   * @param name The environment variable name. 
+   * *Length Constraints:* Maximum length of 255.
+   *
+   * *Pattern:* (?s).*
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The environment variable value. 
+   * *Length Constraints:* Maximum length of 5500.
+   *
+   * *Pattern:* (?s).*
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

@@ -22,62 +22,112 @@ public class CfnDashboardDashboardVersionPropertyDsl {
 
   private val _sheets: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the resource.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param createdTime The time that this dashboard version was created.
+   */
   public fun createdTime(createdTime: String) {
     cdkBuilder.createdTime(createdTime)
   }
 
+  /**
+   * @param dataSetArns The Amazon Resource Numbers (ARNs) for the datasets that are associated with
+   * this version of the dashboard.
+   */
   public fun dataSetArns(vararg dataSetArns: String) {
     _dataSetArns.addAll(listOf(*dataSetArns))
   }
 
+  /**
+   * @param dataSetArns The Amazon Resource Numbers (ARNs) for the datasets that are associated with
+   * this version of the dashboard.
+   */
   public fun dataSetArns(dataSetArns: Collection<String>) {
     _dataSetArns.addAll(dataSetArns)
   }
 
+  /**
+   * @param description Description.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param errors Errors associated with this dashboard version.
+   */
   public fun errors(vararg errors: Any) {
     _errors.addAll(listOf(*errors))
   }
 
+  /**
+   * @param errors Errors associated with this dashboard version.
+   */
   public fun errors(errors: Collection<Any>) {
     _errors.addAll(errors)
   }
 
+  /**
+   * @param errors Errors associated with this dashboard version.
+   */
   public fun errors(errors: IResolvable) {
     cdkBuilder.errors(errors)
   }
 
+  /**
+   * @param sheets A list of the associated sheets with the unique identifier and name of each
+   * sheet.
+   */
   public fun sheets(vararg sheets: Any) {
     _sheets.addAll(listOf(*sheets))
   }
 
+  /**
+   * @param sheets A list of the associated sheets with the unique identifier and name of each
+   * sheet.
+   */
   public fun sheets(sheets: Collection<Any>) {
     _sheets.addAll(sheets)
   }
 
+  /**
+   * @param sheets A list of the associated sheets with the unique identifier and name of each
+   * sheet.
+   */
   public fun sheets(sheets: IResolvable) {
     cdkBuilder.sheets(sheets)
   }
 
+  /**
+   * @param sourceEntityArn Source entity ARN.
+   */
   public fun sourceEntityArn(sourceEntityArn: String) {
     cdkBuilder.sourceEntityArn(sourceEntityArn)
   }
 
+  /**
+   * @param status The HTTP status of the request.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }
 
+  /**
+   * @param themeArn The ARN of the theme associated with a version of the dashboard.
+   */
   public fun themeArn(themeArn: String) {
     cdkBuilder.themeArn(themeArn)
   }
 
+  /**
+   * @param versionNumber Version number for this version of the dashboard.
+   */
   public fun versionNumber(versionNumber: Number) {
     cdkBuilder.versionNumber(versionNumber)
   }

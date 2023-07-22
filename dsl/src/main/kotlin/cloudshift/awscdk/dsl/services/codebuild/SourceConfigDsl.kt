@@ -12,26 +12,41 @@ import software.amazon.awscdk.services.codebuild.SourceConfig
 public class SourceConfigDsl {
   private val cdkBuilder: SourceConfig.Builder = SourceConfig.builder()
 
-  public fun buildTriggers(block: CfnProjectProjectTriggersPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param buildTriggers the value to be set.
+   */
+  public fun buildTriggers(buildTriggers: CfnProjectProjectTriggersPropertyDsl.() -> Unit = {}) {
     val builder = CfnProjectProjectTriggersPropertyDsl()
-    builder.apply(block)
+    builder.apply(buildTriggers)
     cdkBuilder.buildTriggers(builder.build())
   }
 
+  /**
+   * @param buildTriggers the value to be set.
+   */
   public fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty) {
     cdkBuilder.buildTriggers(buildTriggers)
   }
 
-  public fun sourceProperty(block: CfnProjectSourcePropertyDsl.() -> Unit = {}) {
+  /**
+   * @param sourceProperty the value to be set. 
+   */
+  public fun sourceProperty(sourceProperty: CfnProjectSourcePropertyDsl.() -> Unit = {}) {
     val builder = CfnProjectSourcePropertyDsl()
-    builder.apply(block)
+    builder.apply(sourceProperty)
     cdkBuilder.sourceProperty(builder.build())
   }
 
+  /**
+   * @param sourceProperty the value to be set. 
+   */
   public fun sourceProperty(sourceProperty: CfnProject.SourceProperty) {
     cdkBuilder.sourceProperty(sourceProperty)
   }
 
+  /**
+   * @param sourceVersion `AWS::CodeBuild::Project.SourceVersion`.
+   */
   public fun sourceVersion(sourceVersion: String) {
     cdkBuilder.sourceVersion(sourceVersion)
   }

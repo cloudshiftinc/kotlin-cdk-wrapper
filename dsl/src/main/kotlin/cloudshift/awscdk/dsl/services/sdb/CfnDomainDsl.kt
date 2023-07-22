@@ -14,6 +14,12 @@ public class CfnDomainDsl(
 ) {
   private val cdkBuilder: CfnDomain.Builder = CfnDomain.Builder.create(scope, id)
 
+  /**
+   * Information about the SimpleDB domain.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sdb-domain.html#cfn-sdb-domain-description)
+   * @param description Information about the SimpleDB domain. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }

@@ -104,12 +104,12 @@ internal object BuilderGenerator {
         builderClassBuilder.addFunction(
             dslFunctionSpec(prop) {
                 addParameter(
-                    ParameterSpec.builder("block", lambdaTypeName)
+                    ParameterSpec.builder(prop.name, lambdaTypeName)
                         .defaultValue("{}")
                         .build(),
                 )
                 addStatement("val builder = %T()", mapBuilderClass)
-                addStatement("builder.apply(block)")
+                addStatement("builder.apply(%N)", prop.name)
                 addStatement("cdkBuilder.%N(builder.map)", prop.name)
             },
         )
@@ -137,12 +137,12 @@ internal object BuilderGenerator {
             builderClassBuilder.addFunction(
                 dslFunctionSpec(prop) {
                     addParameter(
-                        ParameterSpec.builder("block", lambdaTypeName)
+                        ParameterSpec.builder(prop.name, lambdaTypeName)
                             .defaultValue("{}")
                             .build(),
                     )
                     addStatement("val builder = %T()", dslBuilderClass)
-                    addStatement("builder.apply(block)")
+                    addStatement("builder.apply(%N)", prop.name)
                     addStatement("cdkBuilder.%N(builder.build())", prop.name)
                 },
             )

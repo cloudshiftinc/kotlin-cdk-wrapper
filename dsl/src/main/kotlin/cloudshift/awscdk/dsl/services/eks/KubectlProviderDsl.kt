@@ -15,6 +15,11 @@ public class KubectlProviderDsl(
 ) {
   private val cdkBuilder: KubectlProvider.Builder = KubectlProvider.Builder.create(scope, id)
 
+  /**
+   * The cluster to control.
+   *
+   * @param cluster The cluster to control. 
+   */
   public fun cluster(cluster: ICluster) {
     cdkBuilder.cluster(cluster)
   }

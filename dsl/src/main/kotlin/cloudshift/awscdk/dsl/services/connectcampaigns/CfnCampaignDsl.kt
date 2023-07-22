@@ -22,34 +22,86 @@ public class CfnCampaignDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The Amazon Resource Name (ARN) of the Amazon Connect instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-connectinstancearn)
+   * @param connectInstanceArn The Amazon Resource Name (ARN) of the Amazon Connect instance. 
+   */
   public fun connectInstanceArn(connectInstanceArn: String) {
     cdkBuilder.connectInstanceArn(connectInstanceArn)
   }
 
+  /**
+   * Contains information about the dialer configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-dialerconfig)
+   * @param dialerConfig Contains information about the dialer configuration. 
+   */
   public fun dialerConfig(dialerConfig: IResolvable) {
     cdkBuilder.dialerConfig(dialerConfig)
   }
 
+  /**
+   * Contains information about the dialer configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-dialerconfig)
+   * @param dialerConfig Contains information about the dialer configuration. 
+   */
   public fun dialerConfig(dialerConfig: CfnCampaign.DialerConfigProperty) {
     cdkBuilder.dialerConfig(dialerConfig)
   }
 
+  /**
+   * The name of the campaign.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-name)
+   * @param name The name of the campaign. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Contains information about the outbound call configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-outboundcallconfig)
+   * @param outboundCallConfig Contains information about the outbound call configuration. 
+   */
   public fun outboundCallConfig(outboundCallConfig: IResolvable) {
     cdkBuilder.outboundCallConfig(outboundCallConfig)
   }
 
+  /**
+   * Contains information about the outbound call configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-outboundcallconfig)
+   * @param outboundCallConfig Contains information about the outbound call configuration. 
+   */
   public fun outboundCallConfig(outboundCallConfig: CfnCampaign.OutboundCallConfigProperty) {
     cdkBuilder.outboundCallConfig(outboundCallConfig)
   }
 
+  /**
+   * The tags used to organize, track, or control access for this resource.
+   *
+   * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-tags)
+   * @param tags The tags used to organize, track, or control access for this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags used to organize, track, or control access for this resource.
+   *
+   * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html#cfn-connectcampaigns-campaign-tags)
+   * @param tags The tags used to organize, track, or control access for this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

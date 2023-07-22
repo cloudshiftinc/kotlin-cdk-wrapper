@@ -15,18 +15,33 @@ public class CfnEndpointConfigAsyncInferenceNotificationConfigPropertyDsl {
 
   private val _includeInferenceResponseIn: MutableList<String> = mutableListOf()
 
+  /**
+   * @param errorTopic Amazon SNS topic to post a notification to when an inference fails.
+   * If no topic is provided, no notification is sent on failure.
+   */
   public fun errorTopic(errorTopic: String) {
     cdkBuilder.errorTopic(errorTopic)
   }
 
+  /**
+   * @param includeInferenceResponseIn the value to be set.
+   */
   public fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String) {
     _includeInferenceResponseIn.addAll(listOf(*includeInferenceResponseIn))
   }
 
+  /**
+   * @param includeInferenceResponseIn the value to be set.
+   */
   public fun includeInferenceResponseIn(includeInferenceResponseIn: Collection<String>) {
     _includeInferenceResponseIn.addAll(includeInferenceResponseIn)
   }
 
+  /**
+   * @param successTopic Amazon SNS topic to post a notification to when an inference completes
+   * successfully.
+   * If no topic is provided, no notification is sent on success.
+   */
   public fun successTopic(successTopic: String) {
     cdkBuilder.successTopic(successTopic)
   }

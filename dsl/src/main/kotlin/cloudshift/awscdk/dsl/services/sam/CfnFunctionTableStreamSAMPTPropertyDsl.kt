@@ -11,10 +11,16 @@ public class CfnFunctionTableStreamSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.TableStreamSAMPTProperty.Builder =
       CfnFunction.TableStreamSAMPTProperty.builder()
 
+  /**
+   * @param streamName the value to be set. 
+   */
   public fun streamName(streamName: String) {
     cdkBuilder.streamName(streamName)
   }
 
+  /**
+   * @param tableName the value to be set. 
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }

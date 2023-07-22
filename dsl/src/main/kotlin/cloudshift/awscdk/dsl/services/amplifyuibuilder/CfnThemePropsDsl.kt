@@ -19,42 +19,72 @@ public class CfnThemePropsDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param appId The unique ID for the Amplify app associated with the theme.
+   */
   public fun appId(appId: String) {
     cdkBuilder.appId(appId)
   }
 
+  /**
+   * @param environmentName The name of the backend environment that is a part of the Amplify app.
+   */
   public fun environmentName(environmentName: String) {
     cdkBuilder.environmentName(environmentName)
   }
 
+  /**
+   * @param name The name of the theme. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param overrides Describes the properties that can be overriden to customize a theme.
+   */
   public fun overrides(vararg overrides: Any) {
     _overrides.addAll(listOf(*overrides))
   }
 
+  /**
+   * @param overrides Describes the properties that can be overriden to customize a theme.
+   */
   public fun overrides(overrides: Collection<Any>) {
     _overrides.addAll(overrides)
   }
 
+  /**
+   * @param overrides Describes the properties that can be overriden to customize a theme.
+   */
   public fun overrides(overrides: IResolvable) {
     cdkBuilder.overrides(overrides)
   }
 
+  /**
+   * @param tags One or more key-value pairs to use when tagging the theme.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * @param values A list of key-value pairs that defines the properties of the theme. 
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values A list of key-value pairs that defines the properties of the theme. 
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values A list of key-value pairs that defines the properties of the theme. 
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

@@ -11,6 +11,10 @@ public class CfnBucketSseKmsEncryptedObjectsPropertyDsl {
   private val cdkBuilder: CfnBucket.SseKmsEncryptedObjectsProperty.Builder =
       CfnBucket.SseKmsEncryptedObjectsProperty.builder()
 
+  /**
+   * @param status Specifies whether Amazon S3 replicates objects created with server-side
+   * encryption using an AWS KMS key stored in AWS Key Management Service. 
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

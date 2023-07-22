@@ -19,26 +19,46 @@ public class CfnUserGroupPropsDsl {
 
   private val _userIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param engine The current supported value is redis. 
+   */
   public fun engine(engine: String) {
     cdkBuilder.engine(engine)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this user.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this user.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param userGroupId The ID of the user group. 
+   */
   public fun userGroupId(userGroupId: String) {
     cdkBuilder.userGroupId(userGroupId)
   }
 
+  /**
+   * @param userIds The list of user IDs that belong to the user group. 
+   * A user named `default` must be included.
+   */
   public fun userIds(vararg userIds: String) {
     _userIds.addAll(listOf(*userIds))
   }
 
+  /**
+   * @param userIds The list of user IDs that belong to the user group. 
+   * A user named `default` must be included.
+   */
   public fun userIds(userIds: Collection<String>) {
     _userIds.addAll(userIds)
   }

@@ -25,48 +25,92 @@ public class CfnModelPackageInferenceSpecificationPropertyDsl {
 
   private val _supportedTransformInstanceTypes: MutableList<String> = mutableListOf()
 
+  /**
+   * @param containers The Amazon ECR registry path of the Docker image that contains the inference
+   * code. 
+   */
   public fun containers(vararg containers: Any) {
     _containers.addAll(listOf(*containers))
   }
 
+  /**
+   * @param containers The Amazon ECR registry path of the Docker image that contains the inference
+   * code. 
+   */
   public fun containers(containers: Collection<Any>) {
     _containers.addAll(containers)
   }
 
+  /**
+   * @param containers The Amazon ECR registry path of the Docker image that contains the inference
+   * code. 
+   */
   public fun containers(containers: IResolvable) {
     cdkBuilder.containers(containers)
   }
 
+  /**
+   * @param supportedContentTypes The supported MIME types for the input data. 
+   */
   public fun supportedContentTypes(vararg supportedContentTypes: String) {
     _supportedContentTypes.addAll(listOf(*supportedContentTypes))
   }
 
+  /**
+   * @param supportedContentTypes The supported MIME types for the input data. 
+   */
   public fun supportedContentTypes(supportedContentTypes: Collection<String>) {
     _supportedContentTypes.addAll(supportedContentTypes)
   }
 
+  /**
+   * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used to
+   * generate inferences in real-time.
+   * This parameter is required for unversioned models, and optional for versioned models.
+   */
   public fun supportedRealtimeInferenceInstanceTypes(vararg
       supportedRealtimeInferenceInstanceTypes: String) {
     _supportedRealtimeInferenceInstanceTypes.addAll(listOf(*supportedRealtimeInferenceInstanceTypes))
   }
 
+  /**
+   * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used to
+   * generate inferences in real-time.
+   * This parameter is required for unversioned models, and optional for versioned models.
+   */
   public
       fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: Collection<String>) {
     _supportedRealtimeInferenceInstanceTypes.addAll(supportedRealtimeInferenceInstanceTypes)
   }
 
+  /**
+   * @param supportedResponseMimeTypes The supported MIME types for the output data. 
+   */
   public fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String) {
     _supportedResponseMimeTypes.addAll(listOf(*supportedResponseMimeTypes))
   }
 
+  /**
+   * @param supportedResponseMimeTypes The supported MIME types for the output data. 
+   */
   public fun supportedResponseMimeTypes(supportedResponseMimeTypes: Collection<String>) {
     _supportedResponseMimeTypes.addAll(supportedResponseMimeTypes)
   }
 
+  /**
+   * @param supportedTransformInstanceTypes A list of the instance types on which a transformation
+   * job can be run or on which an endpoint can be deployed.
+   * This parameter is required for unversioned models, and optional for versioned models.
+   */
   public fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String) {
     _supportedTransformInstanceTypes.addAll(listOf(*supportedTransformInstanceTypes))
   }
 
+  /**
+   * @param supportedTransformInstanceTypes A list of the instance types on which a transformation
+   * job can be run or on which an endpoint can be deployed.
+   * This parameter is required for unversioned models, and optional for versioned models.
+   */
   public fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: Collection<String>) {
     _supportedTransformInstanceTypes.addAll(supportedTransformInstanceTypes)
   }

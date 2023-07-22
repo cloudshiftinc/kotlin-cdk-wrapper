@@ -11,14 +11,23 @@ public class CfnCACertificateRegistrationConfigPropertyDsl {
   private val cdkBuilder: CfnCACertificate.RegistrationConfigProperty.Builder =
       CfnCACertificate.RegistrationConfigProperty.builder()
 
+  /**
+   * @param roleArn The ARN of the role.
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param templateBody The template body.
+   */
   public fun templateBody(templateBody: String) {
     cdkBuilder.templateBody(templateBody)
   }
 
+  /**
+   * @param templateName The name of the provisioning template.
+   */
   public fun templateName(templateName: String) {
     cdkBuilder.templateName(templateName)
   }

@@ -15,10 +15,16 @@ public class CfnDataSetStringDatasetParameterDefaultValuesPropertyDsl {
 
   private val _staticValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param staticValues the value to be set.
+   */
   public fun staticValues(vararg staticValues: String) {
     _staticValues.addAll(listOf(*staticValues))
   }
 
+  /**
+   * @param staticValues the value to be set.
+   */
   public fun staticValues(staticValues: Collection<String>) {
     _staticValues.addAll(staticValues)
   }

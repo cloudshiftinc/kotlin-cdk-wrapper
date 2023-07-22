@@ -17,18 +17,33 @@ public class CfnInstanceSsmAssociationPropertyDsl {
 
   private val _associationParameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param associationParameters The input parameter values to use with the associated SSM
+   * document.
+   */
   public fun associationParameters(vararg associationParameters: Any) {
     _associationParameters.addAll(listOf(*associationParameters))
   }
 
+  /**
+   * @param associationParameters The input parameter values to use with the associated SSM
+   * document.
+   */
   public fun associationParameters(associationParameters: Collection<Any>) {
     _associationParameters.addAll(associationParameters)
   }
 
+  /**
+   * @param associationParameters The input parameter values to use with the associated SSM
+   * document.
+   */
   public fun associationParameters(associationParameters: IResolvable) {
     cdkBuilder.associationParameters(associationParameters)
   }
 
+  /**
+   * @param documentName The name of an SSM document to associate with the instance. 
+   */
   public fun documentName(documentName: String) {
     cdkBuilder.documentName(documentName)
   }

@@ -11,6 +11,9 @@ public class CfnNetworkInterfaceInstanceIpv6AddressPropertyDsl {
   private val cdkBuilder: CfnNetworkInterface.InstanceIpv6AddressProperty.Builder =
       CfnNetworkInterface.InstanceIpv6AddressProperty.builder()
 
+  /**
+   * @param ipv6Address An IPv6 address to associate with the network interface. 
+   */
   public fun ipv6Address(ipv6Address: String) {
     cdkBuilder.ipv6Address(ipv6Address)
   }

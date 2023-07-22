@@ -11,18 +11,32 @@ public class CfnEndpointFailoverConfigPropertyDsl {
   private val cdkBuilder: CfnEndpoint.FailoverConfigProperty.Builder =
       CfnEndpoint.FailoverConfigProperty.builder()
 
+  /**
+   * @param primary The main Region of the endpoint. 
+   */
   public fun primary(primary: IResolvable) {
     cdkBuilder.primary(primary)
   }
 
+  /**
+   * @param primary The main Region of the endpoint. 
+   */
   public fun primary(primary: CfnEndpoint.PrimaryProperty) {
     cdkBuilder.primary(primary)
   }
 
+  /**
+   * @param secondary The Region that events are routed to when failover is triggered or event
+   * replication is enabled. 
+   */
   public fun secondary(secondary: IResolvable) {
     cdkBuilder.secondary(secondary)
   }
 
+  /**
+   * @param secondary The Region that events are routed to when failover is triggered or event
+   * replication is enabled. 
+   */
   public fun secondary(secondary: CfnEndpoint.SecondaryProperty) {
     cdkBuilder.secondary(secondary)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.LazyStringValueOptions
 public class LazyStringValueOptionsDsl {
   private val cdkBuilder: LazyStringValueOptions.Builder = LazyStringValueOptions.builder()
 
+  /**
+   * @param displayHint Use the given name as a display hint.
+   */
   public fun displayHint(displayHint: String) {
     cdkBuilder.displayHint(displayHint)
   }

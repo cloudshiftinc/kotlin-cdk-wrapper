@@ -11,10 +11,17 @@ public class CfnServerWorkflowDetailPropertyDsl {
   private val cdkBuilder: CfnServer.WorkflowDetailProperty.Builder =
       CfnServer.WorkflowDetailProperty.builder()
 
+  /**
+   * @param executionRole Includes the necessary permissions for S3, EFS, and Lambda operations that
+   * Transfer can assume, so that all workflow steps can operate on the required resources. 
+   */
   public fun executionRole(executionRole: String) {
     cdkBuilder.executionRole(executionRole)
   }
 
+  /**
+   * @param workflowId A unique identifier for the workflow. 
+   */
   public fun workflowId(workflowId: String) {
     cdkBuilder.workflowId(workflowId)
   }

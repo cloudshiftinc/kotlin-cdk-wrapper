@@ -11,14 +11,23 @@ public class CfnResourceAssociationPropsDsl {
   private val cdkBuilder: CfnResourceAssociationProps.Builder =
       CfnResourceAssociationProps.builder()
 
+  /**
+   * @param application The name or ID of the application. 
+   */
   public fun application(application: String) {
     cdkBuilder.application(application)
   }
 
+  /**
+   * @param resource The name or ID of the resource of which the application will be associated. 
+   */
   public fun resource(resource: String) {
     cdkBuilder.resource(resource)
   }
 
+  /**
+   * @param resourceType The type of resource of which the application will be associated. 
+   */
   public fun resourceType(resourceType: String) {
     cdkBuilder.resourceType(resourceType)
   }

@@ -12,66 +12,114 @@ public class CfnFunctionEventSourcePropertyDsl {
   private val cdkBuilder: CfnFunction.EventSourceProperty.Builder =
       CfnFunction.EventSourceProperty.builder()
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: IResolvable) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.AlexaSkillEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.ApiEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.CloudWatchEventEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.CloudWatchLogsEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.CognitoEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.DynamoDBEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.EventBridgeRuleEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.HttpApiEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.IoTRuleEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.KinesisEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.S3EventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.SNSEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.SQSEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param properties the value to be set. 
+   */
   public fun properties(properties: CfnFunction.ScheduleEventProperty) {
     cdkBuilder.properties(properties)
   }
 
+  /**
+   * @param type the value to be set. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

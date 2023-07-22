@@ -11,18 +11,30 @@ import software.amazon.awscdk.services.cloudwatch.MetricWidgetProps
 public class MetricWidgetPropsDsl {
   private val cdkBuilder: MetricWidgetProps.Builder = MetricWidgetProps.builder()
 
+  /**
+   * @param height Height of the widget.
+   */
   public fun height(height: Number) {
     cdkBuilder.height(height)
   }
 
+  /**
+   * @param region The region the metrics of this graph should be taken from.
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * @param title Title for the graph.
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }
 
+  /**
+   * @param width Width of the widget, in a grid of 24 units wide.
+   */
   public fun width(width: Number) {
     cdkBuilder.width(width)
   }

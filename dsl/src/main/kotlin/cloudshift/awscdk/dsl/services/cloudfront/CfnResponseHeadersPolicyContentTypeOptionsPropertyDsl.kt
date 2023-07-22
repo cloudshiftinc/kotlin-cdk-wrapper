@@ -12,10 +12,20 @@ public class CfnResponseHeadersPolicyContentTypeOptionsPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.ContentTypeOptionsProperty.Builder =
       CfnResponseHeadersPolicy.ContentTypeOptionsProperty.builder()
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides the
+   * `X-Content-Type-Options` HTTP response header received from the origin with the one specified in
+   * this response headers policy. 
+   */
   public fun `override`(`override`: Boolean) {
     cdkBuilder.`override`(`override`)
   }
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides the
+   * `X-Content-Type-Options` HTTP response header received from the origin with the one specified in
+   * this response headers policy. 
+   */
   public fun `override`(`override`: IResolvable) {
     cdkBuilder.`override`(`override`)
   }

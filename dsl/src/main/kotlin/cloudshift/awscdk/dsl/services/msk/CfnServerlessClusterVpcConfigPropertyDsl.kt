@@ -17,18 +17,30 @@ public class CfnServerlessClusterVpcConfigPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroups the value to be set.
+   */
   public fun securityGroups(vararg securityGroups: String) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups the value to be set.
+   */
   public fun securityGroups(securityGroups: Collection<String>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  /**
+   * @param subnetIds the value to be set. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds the value to be set. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

@@ -16,14 +16,26 @@ public class CfnBucketBucketEncryptionPropertyDsl {
 
   private val _serverSideEncryptionConfiguration: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption
+   * configuration. 
+   */
   public fun serverSideEncryptionConfiguration(vararg serverSideEncryptionConfiguration: Any) {
     _serverSideEncryptionConfiguration.addAll(listOf(*serverSideEncryptionConfiguration))
   }
 
+  /**
+   * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption
+   * configuration. 
+   */
   public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: Collection<Any>) {
     _serverSideEncryptionConfiguration.addAll(serverSideEncryptionConfiguration)
   }
 
+  /**
+   * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption
+   * configuration. 
+   */
   public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
     cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration)
   }

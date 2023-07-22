@@ -12,27 +12,53 @@ public class CfnChannelVideoSelectorPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorProperty.Builder =
       CfnChannel.VideoSelectorProperty.builder()
 
+  /**
+   * @param colorSpace Specifies the color space of an input.
+   * This setting works in tandem with colorSpaceConversion to determine if MediaLive will perform
+   * any conversion.
+   */
   public fun colorSpace(colorSpace: String) {
     cdkBuilder.colorSpace(colorSpace)
   }
 
+  /**
+   * @param colorSpaceSettings Settings to configure color space settings in the incoming video.
+   */
   public fun colorSpaceSettings(colorSpaceSettings: IResolvable) {
     cdkBuilder.colorSpaceSettings(colorSpaceSettings)
   }
 
+  /**
+   * @param colorSpaceSettings Settings to configure color space settings in the incoming video.
+   */
   public
       fun colorSpaceSettings(colorSpaceSettings: CfnChannel.VideoSelectorColorSpaceSettingsProperty) {
     cdkBuilder.colorSpaceSettings(colorSpaceSettings)
   }
 
+  /**
+   * @param colorSpaceUsage Applies only if colorSpace is a value other than Follow.
+   * This field controls how the value in the colorSpace field is used. Fallback means that when the
+   * input does include color space data, that data is used, but when the input has no color space
+   * data, the value in colorSpace is used. Choose fallback if your input is sometimes missing color
+   * space data, but when it does have color space data, that data is correct. Force means to always
+   * use the value in colorSpace. Choose force if your input usually has no color space data or might
+   * have unreliable color space data.
+   */
   public fun colorSpaceUsage(colorSpaceUsage: String) {
     cdkBuilder.colorSpaceUsage(colorSpaceUsage)
   }
 
+  /**
+   * @param selectorSettings Information about the video to select from the content.
+   */
   public fun selectorSettings(selectorSettings: IResolvable) {
     cdkBuilder.selectorSettings(selectorSettings)
   }
 
+  /**
+   * @param selectorSettings Information about the video to select from the content.
+   */
   public fun selectorSettings(selectorSettings: CfnChannel.VideoSelectorSettingsProperty) {
     cdkBuilder.selectorSettings(selectorSettings)
   }

@@ -11,6 +11,10 @@ public class CfnClusterPublicAccessPropertyDsl {
   private val cdkBuilder: CfnCluster.PublicAccessProperty.Builder =
       CfnCluster.PublicAccessProperty.builder()
 
+  /**
+   * @param type DISABLED means that public access is turned off.
+   * SERVICE_PROVIDED_EIPS means that public access is turned on.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

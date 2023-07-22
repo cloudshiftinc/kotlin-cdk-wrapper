@@ -11,10 +11,16 @@ public class CfnVirtualGatewayVirtualGatewayAccessLogPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayAccessLogProperty.Builder =
       CfnVirtualGateway.VirtualGatewayAccessLogProperty.builder()
 
+  /**
+   * @param file The file object to send virtual gateway access logs to.
+   */
   public fun `file`(`file`: IResolvable) {
     cdkBuilder.`file`(`file`)
   }
 
+  /**
+   * @param file The file object to send virtual gateway access logs to.
+   */
   public fun `file`(`file`: CfnVirtualGateway.VirtualGatewayFileAccessLogProperty) {
     cdkBuilder.`file`(`file`)
   }

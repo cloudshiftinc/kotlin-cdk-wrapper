@@ -11,6 +11,9 @@ public class AuroraMysqlClusterEnginePropsDsl {
   private val cdkBuilder: AuroraMysqlClusterEngineProps.Builder =
       AuroraMysqlClusterEngineProps.builder()
 
+  /**
+   * @param version The version of the Aurora MySQL cluster engine. 
+   */
   public fun version(version: AuroraMysqlEngineVersion) {
     cdkBuilder.version(version)
   }

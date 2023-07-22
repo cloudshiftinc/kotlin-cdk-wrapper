@@ -11,10 +11,16 @@ public class CfnTopicRangeConstantPropertyDsl {
   private val cdkBuilder: CfnTopic.RangeConstantProperty.Builder =
       CfnTopic.RangeConstantProperty.builder()
 
+  /**
+   * @param maximum The maximum value for a range constant.
+   */
   public fun maximum(maximum: String) {
     cdkBuilder.maximum(maximum)
   }
 
+  /**
+   * @param minimum The minimum value for a range constant.
+   */
   public fun minimum(minimum: String) {
     cdkBuilder.minimum(minimum)
   }

@@ -11,6 +11,9 @@ public class CfnFlowLookoutMetricsDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.LookoutMetricsDestinationPropertiesProperty.Builder =
       CfnFlow.LookoutMetricsDestinationPropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Amazon Lookout for Metrics flow destination.
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

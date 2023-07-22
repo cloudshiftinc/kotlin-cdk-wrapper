@@ -19,28 +19,55 @@ public class CfnFrameworkFrameworkControlPropertyDsl {
 
   private val _controlInputParameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+   */
   public fun controlInputParameters(vararg controlInputParameters: Any) {
     _controlInputParameters.addAll(listOf(*controlInputParameters))
   }
 
+  /**
+   * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+   */
   public fun controlInputParameters(controlInputParameters: Collection<Any>) {
     _controlInputParameters.addAll(controlInputParameters)
   }
 
+  /**
+   * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+   */
   public fun controlInputParameters(controlInputParameters: IResolvable) {
     cdkBuilder.controlInputParameters(controlInputParameters)
   }
 
+  /**
+   * @param controlName The name of a control. 
+   * This name is between 1 and 256 characters.
+   */
   public fun controlName(controlName: String) {
     cdkBuilder.controlName(controlName)
   }
 
-  public fun controlScope(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param controlScope The scope of a control.
+   * The control scope defines what the control will evaluate. Three examples of control scopes are:
+   * a specific backup plan, all backup plans with a specific tag, or all backup plans. For more
+   * information, see [`ControlScope`
+   * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+   */
+  public fun controlScope(controlScope: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(controlScope)
     cdkBuilder.controlScope(builder.map)
   }
 
+  /**
+   * @param controlScope The scope of a control.
+   * The control scope defines what the control will evaluate. Three examples of control scopes are:
+   * a specific backup plan, all backup plans with a specific tag, or all backup plans. For more
+   * information, see [`ControlScope`
+   * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+   */
   public fun controlScope(controlScope: Any) {
     cdkBuilder.controlScope(controlScope)
   }

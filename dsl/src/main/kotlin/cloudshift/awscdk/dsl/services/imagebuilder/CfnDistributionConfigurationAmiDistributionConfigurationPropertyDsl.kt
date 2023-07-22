@@ -17,39 +17,69 @@ public class CfnDistributionConfigurationAmiDistributionConfigurationPropertyDsl
 
   private val _targetAccountIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param amiTags The tags to apply to AMIs distributed to this Region.
+   */
   public fun amiTags(amiTags: Map<String, String>) {
     cdkBuilder.amiTags(amiTags)
   }
 
+  /**
+   * @param amiTags The tags to apply to AMIs distributed to this Region.
+   */
   public fun amiTags(amiTags: IResolvable) {
     cdkBuilder.amiTags(amiTags)
   }
 
+  /**
+   * @param description The description of the AMI distribution configuration.
+   * Minimum and maximum length are in characters.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param kmsKeyId The KMS key identifier used to encrypt the distributed image.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+   * account s can use the AMI to launch instances.
+   */
   public fun launchPermissionConfiguration(launchPermissionConfiguration: IResolvable) {
     cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration)
   }
 
+  /**
+   * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS
+   * account s can use the AMI to launch instances.
+   */
   public
       fun launchPermissionConfiguration(launchPermissionConfiguration: CfnDistributionConfiguration.LaunchPermissionConfigurationProperty) {
     cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration)
   }
 
+  /**
+   * @param name The name of the output AMI.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param targetAccountIds The ID of an account to which you want to distribute an image.
+   */
   public fun targetAccountIds(vararg targetAccountIds: String) {
     _targetAccountIds.addAll(listOf(*targetAccountIds))
   }
 
+  /**
+   * @param targetAccountIds The ID of an account to which you want to distribute an image.
+   */
   public fun targetAccountIds(targetAccountIds: Collection<String>) {
     _targetAccountIds.addAll(targetAccountIds)
   }

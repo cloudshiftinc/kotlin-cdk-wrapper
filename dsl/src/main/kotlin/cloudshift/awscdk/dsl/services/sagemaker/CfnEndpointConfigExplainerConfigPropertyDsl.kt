@@ -11,10 +11,16 @@ public class CfnEndpointConfigExplainerConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ExplainerConfigProperty.Builder =
       CfnEndpointConfig.ExplainerConfigProperty.builder()
 
+  /**
+   * @param clarifyExplainerConfig the value to be set.
+   */
   public fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
     cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig)
   }
 
+  /**
+   * @param clarifyExplainerConfig the value to be set.
+   */
   public
       fun clarifyExplainerConfig(clarifyExplainerConfig: CfnEndpointConfig.ClarifyExplainerConfigProperty) {
     cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig)

@@ -14,26 +14,48 @@ import software.amazon.awscdk.services.lambda.IFunction
 public class EventInvokeConfigPropsDsl {
   private val cdkBuilder: EventInvokeConfigProps.Builder = EventInvokeConfigProps.builder()
 
+  /**
+   * @param function The Lambda function. 
+   */
   public fun function(function: IFunction) {
     cdkBuilder.function(function)
   }
 
+  /**
+   * @param maxEventAge The maximum age of a request that Lambda sends to a function for processing.
+   * Minimum: 60 seconds
+   * Maximum: 6 hours
+   */
   public fun maxEventAge(maxEventAge: Duration) {
     cdkBuilder.maxEventAge(maxEventAge)
   }
 
+  /**
+   * @param onFailure The destination for failed invocations.
+   */
   public fun onFailure(onFailure: IDestination) {
     cdkBuilder.onFailure(onFailure)
   }
 
+  /**
+   * @param onSuccess The destination for successful invocations.
+   */
   public fun onSuccess(onSuccess: IDestination) {
     cdkBuilder.onSuccess(onSuccess)
   }
 
+  /**
+   * @param qualifier The qualifier.
+   */
   public fun qualifier(qualifier: String) {
     cdkBuilder.qualifier(qualifier)
   }
 
+  /**
+   * @param retryAttempts The maximum number of times to retry when the function returns an error.
+   * Minimum: 0
+   * Maximum: 2
+   */
   public fun retryAttempts(retryAttempts: Number) {
     cdkBuilder.retryAttempts(retryAttempts)
   }

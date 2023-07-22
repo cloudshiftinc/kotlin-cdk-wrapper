@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion
 public class TemplateRuleAssertionDsl {
   private val cdkBuilder: TemplateRuleAssertion.Builder = TemplateRuleAssertion.builder()
 
+  /**
+   * @param assertValue The assertion condition. 
+   */
   public fun assertValue(assertValue: ICfnRuleConditionExpression) {
     cdkBuilder.assertValue(assertValue)
   }
 
+  /**
+   * @param description The description for the asssertion.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }

@@ -11,6 +11,9 @@ public class CfnDatabaseDataLakePrincipalPropertyDsl {
   private val cdkBuilder: CfnDatabase.DataLakePrincipalProperty.Builder =
       CfnDatabase.DataLakePrincipalProperty.builder()
 
+  /**
+   * @param dataLakePrincipalIdentifier An identifier for the AWS Lake Formation principal.
+   */
   public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
     cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
   }

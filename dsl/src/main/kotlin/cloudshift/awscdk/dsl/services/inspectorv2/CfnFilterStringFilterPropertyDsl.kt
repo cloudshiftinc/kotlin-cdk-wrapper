@@ -11,10 +11,16 @@ public class CfnFilterStringFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.StringFilterProperty.Builder =
       CfnFilter.StringFilterProperty.builder()
 
+  /**
+   * @param comparison The operator to use when comparing values in the filter. 
+   */
   public fun comparison(comparison: String) {
     cdkBuilder.comparison(comparison)
   }
 
+  /**
+   * @param value The value to filter on. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

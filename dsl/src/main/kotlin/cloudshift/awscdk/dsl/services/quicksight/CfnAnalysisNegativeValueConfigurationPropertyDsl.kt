@@ -11,6 +11,9 @@ public class CfnAnalysisNegativeValueConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.NegativeValueConfigurationProperty.Builder =
       CfnAnalysis.NegativeValueConfigurationProperty.builder()
 
+  /**
+   * @param displayMode Determines the display mode of the negative value configuration. 
+   */
   public fun displayMode(displayMode: String) {
     cdkBuilder.displayMode(displayMode)
   }

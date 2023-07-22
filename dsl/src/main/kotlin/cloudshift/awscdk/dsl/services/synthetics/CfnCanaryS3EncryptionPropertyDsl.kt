@@ -11,10 +11,21 @@ public class CfnCanaryS3EncryptionPropertyDsl {
   private val cdkBuilder: CfnCanary.S3EncryptionProperty.Builder =
       CfnCanary.S3EncryptionProperty.builder()
 
+  /**
+   * @param encryptionMode The encryption method to use for artifacts created by this canary.
+   * Specify `SSE_S3` to use server-side encryption (SSE) with an Amazon S3-managed key. Specify
+   * `SSE-KMS` to use server-side encryption with a customer-managed AWS KMS key.
+   *
+   * If you omit this parameter, an AWS -managed AWS KMS key is used.
+   */
   public fun encryptionMode(encryptionMode: String) {
     cdkBuilder.encryptionMode(encryptionMode)
   }
 
+  /**
+   * @param kmsKeyArn The ARN of the customer-managed AWS KMS key to use, if you specify `SSE-KMS`
+   * for `EncryptionMode`.
+   */
   public fun kmsKeyArn(kmsKeyArn: String) {
     cdkBuilder.kmsKeyArn(kmsKeyArn)
   }

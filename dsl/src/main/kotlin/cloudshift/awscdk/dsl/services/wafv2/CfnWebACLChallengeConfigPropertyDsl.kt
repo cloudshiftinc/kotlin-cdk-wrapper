@@ -11,10 +11,18 @@ public class CfnWebACLChallengeConfigPropertyDsl {
   private val cdkBuilder: CfnWebACL.ChallengeConfigProperty.Builder =
       CfnWebACL.ChallengeConfigProperty.builder()
 
+  /**
+   * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
+   * valid after the client successfully responds to a challenge.
+   */
   public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
     cdkBuilder.immunityTimeProperty(immunityTimeProperty)
   }
 
+  /**
+   * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
+   * valid after the client successfully responds to a challenge.
+   */
   public fun immunityTimeProperty(immunityTimeProperty: CfnWebACL.ImmunityTimePropertyProperty) {
     cdkBuilder.immunityTimeProperty(immunityTimeProperty)
   }

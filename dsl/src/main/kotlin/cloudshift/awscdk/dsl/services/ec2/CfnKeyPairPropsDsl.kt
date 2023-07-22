@@ -17,26 +17,53 @@ public class CfnKeyPairPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param keyFormat The format of the key pair.
+   * Default: `pem`
+   */
   public fun keyFormat(keyFormat: String) {
     cdkBuilder.keyFormat(keyFormat)
   }
 
+  /**
+   * @param keyName A unique name for the key pair. 
+   * Constraints: Up to 255 ASCII characters
+   */
   public fun keyName(keyName: String) {
     cdkBuilder.keyName(keyName)
   }
 
+  /**
+   * @param keyType The type of key pair. Note that ED25519 keys are not supported for Windows
+   * instances.
+   * If the `PublicKeyMaterial` property is specified, the `KeyType` property is ignored, and the
+   * key type is inferred from the `PublicKeyMaterial` value.
+   *
+   * Default: `rsa`
+   */
   public fun keyType(keyType: String) {
     cdkBuilder.keyType(keyType)
   }
 
+  /**
+   * @param publicKeyMaterial The public key material.
+   * The `PublicKeyMaterial` property is used to import a key pair. If this property is not
+   * specified, then a new key pair will be created.
+   */
   public fun publicKeyMaterial(publicKeyMaterial: String) {
     cdkBuilder.publicKeyMaterial(publicKeyMaterial)
   }
 
+  /**
+   * @param tags The tags to apply to the key pair.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to apply to the key pair.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

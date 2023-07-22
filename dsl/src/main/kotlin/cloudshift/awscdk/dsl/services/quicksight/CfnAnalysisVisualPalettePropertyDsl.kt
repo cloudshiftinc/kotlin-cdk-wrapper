@@ -17,18 +17,30 @@ public class CfnAnalysisVisualPalettePropertyDsl {
 
   private val _colorMap: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param chartColor The chart color options for the visual palette.
+   */
   public fun chartColor(chartColor: String) {
     cdkBuilder.chartColor(chartColor)
   }
 
+  /**
+   * @param colorMap The color map options for the visual palette.
+   */
   public fun colorMap(vararg colorMap: Any) {
     _colorMap.addAll(listOf(*colorMap))
   }
 
+  /**
+   * @param colorMap The color map options for the visual palette.
+   */
   public fun colorMap(colorMap: Collection<Any>) {
     _colorMap.addAll(colorMap)
   }
 
+  /**
+   * @param colorMap The color map options for the visual palette.
+   */
   public fun colorMap(colorMap: IResolvable) {
     cdkBuilder.colorMap(colorMap)
   }

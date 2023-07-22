@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.ec2.RuleScope
 public class RuleScopeDsl {
   private val cdkBuilder: RuleScope.Builder = RuleScope.builder()
 
+  /**
+   * @param id The construct ID to use for the rule. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param scope The SecurityGroup in which a rule should be scoped. 
+   */
   public fun scope(scope: ISecurityGroup) {
     cdkBuilder.scope(scope)
   }

@@ -12,19 +12,33 @@ public class CfnMemberMemberConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.MemberConfigurationProperty.Builder =
       CfnMember.MemberConfigurationProperty.builder()
 
+  /**
+   * @param description An optional description of the member.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param memberFrameworkConfiguration Configuration properties of the blockchain framework
+   * relevant to the member.
+   */
   public fun memberFrameworkConfiguration(memberFrameworkConfiguration: IResolvable) {
     cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration)
   }
 
+  /**
+   * @param memberFrameworkConfiguration Configuration properties of the blockchain framework
+   * relevant to the member.
+   */
   public
       fun memberFrameworkConfiguration(memberFrameworkConfiguration: CfnMember.MemberFrameworkConfigurationProperty) {
     cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration)
   }
 
+  /**
+   * @param name The name of the member. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

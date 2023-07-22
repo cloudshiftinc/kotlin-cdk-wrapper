@@ -13,6 +13,13 @@ public class LambdaDestinationDsl(
 ) {
   private val cdkBuilder: LambdaDestination.Builder = LambdaDestination.Builder.create(fn)
 
+  /**
+   * Whether or not to add Lambda Permissions.
+   *
+   * Default: true
+   *
+   * @param addPermissions Whether or not to add Lambda Permissions. 
+   */
   public fun addPermissions(addPermissions: Boolean) {
     cdkBuilder.addPermissions(addPermissions)
   }

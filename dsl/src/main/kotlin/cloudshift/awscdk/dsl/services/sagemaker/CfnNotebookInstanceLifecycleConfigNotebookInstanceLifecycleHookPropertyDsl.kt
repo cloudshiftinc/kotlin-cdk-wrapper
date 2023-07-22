@@ -12,6 +12,10 @@ public class CfnNotebookInstanceLifecycleConfigNotebookInstanceLifecycleHookProp
       CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty.Builder =
       CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty.builder()
 
+  /**
+   * @param content A base64-encoded string that contains a shell script for a notebook instance
+   * lifecycle configuration.
+   */
   public fun content(content: String) {
     cdkBuilder.content(content)
   }

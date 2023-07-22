@@ -13,6 +13,13 @@ public class KinesisDestinationDsl(
 ) {
   private val cdkBuilder: KinesisDestination.Builder = KinesisDestination.Builder.create(stream)
 
+  /**
+   * The role to assume to write log events to the destination.
+   *
+   * Default: - A new Role is created
+   *
+   * @param role The role to assume to write log events to the destination. 
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

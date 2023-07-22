@@ -26,34 +26,112 @@ public class CfnClusterParameterGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The description of the parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-description)
+   * @param description The description of the parameter group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the cluster parameter group family that this cluster parameter group is compatible
+   * with.
+   *
+   * You can create a custom parameter group and then associate your cluster with it. For more
+   * information, see [Amazon Redshift parameter
+   * groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-parametergroupfamily)
+   * @param parameterGroupFamily The name of the cluster parameter group family that this cluster
+   * parameter group is compatible with. 
+   */
   public fun parameterGroupFamily(parameterGroupFamily: String) {
     cdkBuilder.parameterGroupFamily(parameterGroupFamily)
   }
 
+  /**
+   * The name of the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-parametergroupname)
+   * @param parameterGroupName The name of the cluster parameter group. 
+   */
   public fun parameterGroupName(parameterGroupName: String) {
     cdkBuilder.parameterGroupName(parameterGroupName)
   }
 
+  /**
+   * An array of parameters to be modified. A maximum of 20 parameters can be modified in a single
+   * request.
+   *
+   * For each parameter to be modified, you must supply at least the parameter name and parameter
+   * value; other name-value pairs of the parameter are optional.
+   *
+   * For the workload management (WLM) configuration, you must supply all the name-value pairs in
+   * the wlm_json_configuration parameter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-parameters)
+   * @param parameters An array of parameters to be modified. A maximum of 20 parameters can be
+   * modified in a single request. 
+   */
   public fun parameters(vararg parameters: Any) {
     _parameters.addAll(listOf(*parameters))
   }
 
+  /**
+   * An array of parameters to be modified. A maximum of 20 parameters can be modified in a single
+   * request.
+   *
+   * For each parameter to be modified, you must supply at least the parameter name and parameter
+   * value; other name-value pairs of the parameter are optional.
+   *
+   * For the workload management (WLM) configuration, you must supply all the name-value pairs in
+   * the wlm_json_configuration parameter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-parameters)
+   * @param parameters An array of parameters to be modified. A maximum of 20 parameters can be
+   * modified in a single request. 
+   */
   public fun parameters(parameters: Collection<Any>) {
     _parameters.addAll(parameters)
   }
 
+  /**
+   * An array of parameters to be modified. A maximum of 20 parameters can be modified in a single
+   * request.
+   *
+   * For each parameter to be modified, you must supply at least the parameter name and parameter
+   * value; other name-value pairs of the parameter are optional.
+   *
+   * For the workload management (WLM) configuration, you must supply all the name-value pairs in
+   * the wlm_json_configuration parameter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-parameters)
+   * @param parameters An array of parameters to be modified. A maximum of 20 parameters can be
+   * modified in a single request. 
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * The list of tags for the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-tags)
+   * @param tags The list of tags for the cluster parameter group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The list of tags for the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html#cfn-redshift-clusterparametergroup-tags)
+   * @param tags The list of tags for the cluster parameter group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

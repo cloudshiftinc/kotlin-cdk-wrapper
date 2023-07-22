@@ -11,10 +11,17 @@ public class CfnVirtualNodeListenerTlsFileCertificatePropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ListenerTlsFileCertificateProperty.Builder =
       CfnVirtualNode.ListenerTlsFileCertificateProperty.builder()
 
+  /**
+   * @param certificateChain The certificate chain for the certificate. 
+   */
   public fun certificateChain(certificateChain: String) {
     cdkBuilder.certificateChain(certificateChain)
   }
 
+  /**
+   * @param privateKey The private key for a certificate stored on the file system of the virtual
+   * node that the proxy is running on. 
+   */
   public fun privateKey(privateKey: String) {
     cdkBuilder.privateKey(privateKey)
   }

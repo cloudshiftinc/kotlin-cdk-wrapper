@@ -15,10 +15,16 @@ public class SubnetIpamOptionsDsl {
 
   private val _allocatedSubnets: MutableList<AllocatedSubnet> = mutableListOf()
 
+  /**
+   * @param allocatedSubnets Cidr Allocations for Subnets. 
+   */
   public fun allocatedSubnets(allocatedSubnets: AllocatedSubnetDsl.() -> Unit) {
     _allocatedSubnets.add(AllocatedSubnetDsl().apply(allocatedSubnets).build())
   }
 
+  /**
+   * @param allocatedSubnets Cidr Allocations for Subnets. 
+   */
   public fun allocatedSubnets(allocatedSubnets: Collection<AllocatedSubnet>) {
     _allocatedSubnets.addAll(allocatedSubnets)
   }

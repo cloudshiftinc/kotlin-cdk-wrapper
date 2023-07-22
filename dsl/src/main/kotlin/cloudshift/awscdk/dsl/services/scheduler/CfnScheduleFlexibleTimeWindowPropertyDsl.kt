@@ -12,10 +12,20 @@ public class CfnScheduleFlexibleTimeWindowPropertyDsl {
   private val cdkBuilder: CfnSchedule.FlexibleTimeWindowProperty.Builder =
       CfnSchedule.FlexibleTimeWindowProperty.builder()
 
+  /**
+   * @param maximumWindowInMinutes The maximum time window during which a schedule can be invoked.
+   * *Minimum* : `1`
+   *
+   * *Maximum* : `1440`
+   */
   public fun maximumWindowInMinutes(maximumWindowInMinutes: Number) {
     cdkBuilder.maximumWindowInMinutes(maximumWindowInMinutes)
   }
 
+  /**
+   * @param mode Determines whether the schedule is invoked within a flexible time window. 
+   * *Allowed Values* : `OFF` | `FLEXIBLE`
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }

@@ -22,34 +22,82 @@ public class CfnGatewayPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param gatewayCapabilitySummaries A list of gateway capability summaries that each contain a
+   * namespace and status.
+   * Each gateway capability defines data sources for the gateway. To retrieve a capability
+   * configuration's definition, use
+   * [DescribeGatewayCapabilityConfiguration](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGatewayCapabilityConfiguration.html)
+   * .
+   */
   public fun gatewayCapabilitySummaries(vararg gatewayCapabilitySummaries: Any) {
     _gatewayCapabilitySummaries.addAll(listOf(*gatewayCapabilitySummaries))
   }
 
+  /**
+   * @param gatewayCapabilitySummaries A list of gateway capability summaries that each contain a
+   * namespace and status.
+   * Each gateway capability defines data sources for the gateway. To retrieve a capability
+   * configuration's definition, use
+   * [DescribeGatewayCapabilityConfiguration](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGatewayCapabilityConfiguration.html)
+   * .
+   */
   public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: Collection<Any>) {
     _gatewayCapabilitySummaries.addAll(gatewayCapabilitySummaries)
   }
 
+  /**
+   * @param gatewayCapabilitySummaries A list of gateway capability summaries that each contain a
+   * namespace and status.
+   * Each gateway capability defines data sources for the gateway. To retrieve a capability
+   * configuration's definition, use
+   * [DescribeGatewayCapabilityConfiguration](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGatewayCapabilityConfiguration.html)
+   * .
+   */
   public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable) {
     cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries)
   }
 
+  /**
+   * @param gatewayName A unique, friendly name for the gateway. 
+   * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+   */
   public fun gatewayName(gatewayName: String) {
     cdkBuilder.gatewayName(gatewayName)
   }
 
+  /**
+   * @param gatewayPlatform The gateway's platform. 
+   * You can only specify one platform in a gateway.
+   */
   public fun gatewayPlatform(gatewayPlatform: IResolvable) {
     cdkBuilder.gatewayPlatform(gatewayPlatform)
   }
 
+  /**
+   * @param gatewayPlatform The gateway's platform. 
+   * You can only specify one platform in a gateway.
+   */
   public fun gatewayPlatform(gatewayPlatform: CfnGateway.GatewayPlatformProperty) {
     cdkBuilder.gatewayPlatform(gatewayPlatform)
   }
 
+  /**
+   * @param tags A list of key-value pairs that contain metadata for the gateway.
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of key-value pairs that contain metadata for the gateway.
+   * For more information, see [Tagging your AWS IoT SiteWise
+   * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
+   * *AWS IoT SiteWise User Guide* .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

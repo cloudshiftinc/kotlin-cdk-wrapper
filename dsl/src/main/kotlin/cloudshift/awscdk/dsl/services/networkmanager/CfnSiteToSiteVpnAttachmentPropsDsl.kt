@@ -20,27 +20,46 @@ public class CfnSiteToSiteVpnAttachmentPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param coreNetworkId The ID of a core network where you're creating a site-to-site VPN
+   * attachment. 
+   */
   public fun coreNetworkId(coreNetworkId: String) {
     cdkBuilder.coreNetworkId(coreNetworkId)
   }
 
+  /**
+   * @param proposedSegmentChange The attachment to move from one segment to another.
+   */
   public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * @param proposedSegmentChange The attachment to move from one segment to another.
+   */
   public
       fun proposedSegmentChange(proposedSegmentChange: CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty) {
     cdkBuilder.proposedSegmentChange(proposedSegmentChange)
   }
 
+  /**
+   * @param tags Tags for the attachment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Tags for the attachment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param vpnConnectionArn The ARN of the site-to-site VPN attachment. 
+   */
   public fun vpnConnectionArn(vpnConnectionArn: String) {
     cdkBuilder.vpnConnectionArn(vpnConnectionArn)
   }

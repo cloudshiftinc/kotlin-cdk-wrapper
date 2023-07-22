@@ -16,24 +16,39 @@ public class CfnAnnotationStoreTsvStoreOptionsPropertyDsl {
   private val cdkBuilder: CfnAnnotationStore.TsvStoreOptionsProperty.Builder =
       CfnAnnotationStore.TsvStoreOptionsProperty.builder()
 
+  /**
+   * @param annotationType The store's annotation type.
+   */
   public fun annotationType(annotationType: String) {
     cdkBuilder.annotationType(annotationType)
   }
 
+  /**
+   * @param formatToHeader The store's header key to column name mapping.
+   */
   public fun formatToHeader(formatToHeader: Map<String, String>) {
     cdkBuilder.formatToHeader(formatToHeader)
   }
 
+  /**
+   * @param formatToHeader The store's header key to column name mapping.
+   */
   public fun formatToHeader(formatToHeader: IResolvable) {
     cdkBuilder.formatToHeader(formatToHeader)
   }
 
-  public fun schema(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param schema The schema of an annotation store.
+   */
+  public fun schema(schema: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(schema)
     cdkBuilder.schema(builder.map)
   }
 
+  /**
+   * @param schema The schema of an annotation store.
+   */
   public fun schema(schema: Any) {
     cdkBuilder.schema(schema)
   }

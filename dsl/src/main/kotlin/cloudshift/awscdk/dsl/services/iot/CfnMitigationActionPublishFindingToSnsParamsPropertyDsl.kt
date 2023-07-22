@@ -11,6 +11,9 @@ public class CfnMitigationActionPublishFindingToSnsParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.PublishFindingToSnsParamsProperty.Builder =
       CfnMitigationAction.PublishFindingToSnsParamsProperty.builder()
 
+  /**
+   * @param topicArn The ARN of the topic to which you want to publish the findings. 
+   */
   public fun topicArn(topicArn: String) {
     cdkBuilder.topicArn(topicArn)
   }

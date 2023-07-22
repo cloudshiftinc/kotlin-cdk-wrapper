@@ -16,14 +16,23 @@ public class CfnFormValueMappingsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param values The value and display value pairs. 
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The value and display value pairs. 
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The value and display value pairs. 
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

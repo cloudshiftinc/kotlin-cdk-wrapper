@@ -11,6 +11,9 @@ public class CfnDashboardLocalNavigationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.LocalNavigationConfigurationProperty.Builder =
       CfnDashboard.LocalNavigationConfigurationProperty.builder()
 
+  /**
+   * @param targetSheetId The sheet that is targeted for navigation in the same analysis. 
+   */
   public fun targetSheetId(targetSheetId: String) {
     cdkBuilder.targetSheetId(targetSheetId)
   }

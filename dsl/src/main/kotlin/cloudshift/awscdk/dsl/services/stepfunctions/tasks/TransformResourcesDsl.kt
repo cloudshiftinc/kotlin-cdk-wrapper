@@ -12,14 +12,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.TransformResources
 public class TransformResourcesDsl {
   private val cdkBuilder: TransformResources.Builder = TransformResources.builder()
 
+  /**
+   * @param instanceCount Number of ML compute instances to use in the transform job. 
+   */
   public fun instanceCount(instanceCount: Number) {
     cdkBuilder.instanceCount(instanceCount)
   }
 
+  /**
+   * @param instanceType ML compute instance type for the transform job. 
+   */
   public fun instanceType(instanceType: InstanceType) {
     cdkBuilder.instanceType(instanceType)
   }
 
+  /**
+   * @param volumeEncryptionKey AWS KMS key that Amazon SageMaker uses to encrypt data on the
+   * storage volume attached to the ML compute instance(s).
+   */
   public fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
     cdkBuilder.volumeEncryptionKey(volumeEncryptionKey)
   }

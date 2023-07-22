@@ -11,10 +11,17 @@ import software.amazon.awscdk.LazyAnyValueOptions
 public class LazyAnyValueOptionsDsl {
   private val cdkBuilder: LazyAnyValueOptions.Builder = LazyAnyValueOptions.builder()
 
+  /**
+   * @param displayHint Use the given name as a display hint.
+   */
   public fun displayHint(displayHint: String) {
     cdkBuilder.displayHint(displayHint)
   }
 
+  /**
+   * @param omitEmptyArray If the produced value is an array and it is empty, return 'undefined'
+   * instead.
+   */
   public fun omitEmptyArray(omitEmptyArray: Boolean) {
     cdkBuilder.omitEmptyArray(omitEmptyArray)
   }

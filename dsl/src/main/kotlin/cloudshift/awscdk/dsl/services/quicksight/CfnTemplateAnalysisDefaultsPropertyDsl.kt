@@ -11,10 +11,16 @@ public class CfnTemplateAnalysisDefaultsPropertyDsl {
   private val cdkBuilder: CfnTemplate.AnalysisDefaultsProperty.Builder =
       CfnTemplate.AnalysisDefaultsProperty.builder()
 
+  /**
+   * @param defaultNewSheetConfiguration The configuration for default new sheet settings. 
+   */
   public fun defaultNewSheetConfiguration(defaultNewSheetConfiguration: IResolvable) {
     cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)
   }
 
+  /**
+   * @param defaultNewSheetConfiguration The configuration for default new sheet settings. 
+   */
   public
       fun defaultNewSheetConfiguration(defaultNewSheetConfiguration: CfnTemplate.DefaultNewSheetConfigurationProperty) {
     cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)

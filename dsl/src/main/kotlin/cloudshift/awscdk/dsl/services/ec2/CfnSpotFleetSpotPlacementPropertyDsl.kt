@@ -11,14 +11,27 @@ public class CfnSpotFleetSpotPlacementPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.SpotPlacementProperty.Builder =
       CfnSpotFleet.SpotPlacementProperty.builder()
 
+  /**
+   * @param availabilityZone The Availability Zone.
+   * To specify multiple Availability Zones, separate them using commas; for example, "us-west-2a,
+   * us-west-2b".
+   */
   public fun availabilityZone(availabilityZone: String) {
     cdkBuilder.availabilityZone(availabilityZone)
   }
 
+  /**
+   * @param groupName The name of the placement group.
+   */
   public fun groupName(groupName: String) {
     cdkBuilder.groupName(groupName)
   }
 
+  /**
+   * @param tenancy The tenancy of the instance (if the instance is running in a VPC).
+   * An instance with a tenancy of `dedicated` runs on single-tenant hardware. The `host` tenancy is
+   * not supported for Spot Instances.
+   */
   public fun tenancy(tenancy: String) {
     cdkBuilder.tenancy(tenancy)
   }

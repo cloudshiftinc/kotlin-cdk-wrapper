@@ -19,26 +19,49 @@ public class CfnDimensionPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param name A unique identifier for the dimension.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param stringValues Specifies the value or list of values for the dimension. 
+   * For `TOPIC_FILTER` dimensions, this is a pattern used to match the MQTT topic (for example,
+   * "admin/#").
+   */
   public fun stringValues(vararg stringValues: String) {
     _stringValues.addAll(listOf(*stringValues))
   }
 
+  /**
+   * @param stringValues Specifies the value or list of values for the dimension. 
+   * For `TOPIC_FILTER` dimensions, this is a pattern used to match the MQTT topic (for example,
+   * "admin/#").
+   */
   public fun stringValues(stringValues: Collection<String>) {
     _stringValues.addAll(stringValues)
   }
 
+  /**
+   * @param tags Metadata that can be used to manage the dimension.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Metadata that can be used to manage the dimension.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param type Specifies the type of dimension. 
+   * Supported types: `TOPIC_FILTER.`
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

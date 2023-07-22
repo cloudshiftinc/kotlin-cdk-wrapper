@@ -21,30 +21,54 @@ public class CfnContactListPropsDsl {
 
   private val _topics: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param contactListName The name of the contact list.
+   */
   public fun contactListName(contactListName: String) {
     cdkBuilder.contactListName(contactListName)
   }
 
+  /**
+   * @param description A description of what the contact list is about.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param tags The tags associated with a contact list.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags associated with a contact list.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param topics An interest group, theme, or label within a list.
+   * A contact list can have multiple topics.
+   */
   public fun topics(vararg topics: Any) {
     _topics.addAll(listOf(*topics))
   }
 
+  /**
+   * @param topics An interest group, theme, or label within a list.
+   * A contact list can have multiple topics.
+   */
   public fun topics(topics: Collection<Any>) {
     _topics.addAll(topics)
   }
 
+  /**
+   * @param topics An interest group, theme, or label within a list.
+   * A contact list can have multiple topics.
+   */
   public fun topics(topics: IResolvable) {
     cdkBuilder.topics(topics)
   }

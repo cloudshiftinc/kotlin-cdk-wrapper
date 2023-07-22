@@ -16,22 +16,43 @@ public class MatchFailureDsl {
 
   private val _path: MutableList<String> = mutableListOf()
 
+  /**
+   * @param cost The cost of this particular mismatch.
+   */
   public fun cost(cost: Number) {
     cdkBuilder.cost(cost)
   }
 
+  /**
+   * @param matcher The matcher that had the failure. 
+   */
   public fun matcher(matcher: Matcher) {
     cdkBuilder.matcher(matcher)
   }
 
+  /**
+   * @param message Failure message. 
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * @param path The relative path in the target where the failure occurred. 
+   * If the failure occurred at root of the match tree, set the path to an empty list.
+   * If it occurs in the 5th index of an array nested within the 'foo' key of an object,
+   * set the path as `['/foo', '[5]']`.
+   */
   public fun path(vararg path: String) {
     _path.addAll(listOf(*path))
   }
 
+  /**
+   * @param path The relative path in the target where the failure occurred. 
+   * If the failure occurred at root of the match tree, set the path to an empty list.
+   * If it occurs in the 5th index of an array nested within the 'foo' key of an object,
+   * set the path as `['/foo', '[5]']`.
+   */
   public fun path(path: Collection<String>) {
     _path.addAll(path)
   }

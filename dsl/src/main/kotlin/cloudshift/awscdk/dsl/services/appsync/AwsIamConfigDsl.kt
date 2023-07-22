@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.appsync.AwsIamConfig
 public class AwsIamConfigDsl {
   private val cdkBuilder: AwsIamConfig.Builder = AwsIamConfig.builder()
 
+  /**
+   * @param signingRegion The signing region for AWS IAM authorization. 
+   */
   public fun signingRegion(signingRegion: String) {
     cdkBuilder.signingRegion(signingRegion)
   }
 
+  /**
+   * @param signingServiceName The signing service name for AWS IAM authorization. 
+   */
   public fun signingServiceName(signingServiceName: String) {
     cdkBuilder.signingServiceName(signingServiceName)
   }

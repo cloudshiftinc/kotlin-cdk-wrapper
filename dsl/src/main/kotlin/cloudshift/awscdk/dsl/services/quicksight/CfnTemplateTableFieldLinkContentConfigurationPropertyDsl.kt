@@ -11,18 +11,32 @@ public class CfnTemplateTableFieldLinkContentConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.TableFieldLinkContentConfigurationProperty.Builder =
       CfnTemplate.TableFieldLinkContentConfigurationProperty.builder()
 
+  /**
+   * @param customIconContent The custom icon content for the table link content configuration.
+   */
   public fun customIconContent(customIconContent: IResolvable) {
     cdkBuilder.customIconContent(customIconContent)
   }
 
+  /**
+   * @param customIconContent The custom icon content for the table link content configuration.
+   */
   public fun customIconContent(customIconContent: CfnTemplate.TableFieldCustomIconContentProperty) {
     cdkBuilder.customIconContent(customIconContent)
   }
 
+  /**
+   * @param customTextContent The custom text content (value, font configuration) for the table link
+   * content configuration.
+   */
   public fun customTextContent(customTextContent: IResolvable) {
     cdkBuilder.customTextContent(customTextContent)
   }
 
+  /**
+   * @param customTextContent The custom text content (value, font configuration) for the table link
+   * content configuration.
+   */
   public fun customTextContent(customTextContent: CfnTemplate.TableFieldCustomTextContentProperty) {
     cdkBuilder.customTextContent(customTextContent)
   }

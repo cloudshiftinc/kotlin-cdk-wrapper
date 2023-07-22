@@ -11,10 +11,16 @@ public class CfnDataSetColumnGroupPropertyDsl {
   private val cdkBuilder: CfnDataSet.ColumnGroupProperty.Builder =
       CfnDataSet.ColumnGroupProperty.builder()
 
+  /**
+   * @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy.
+   */
   public fun geoSpatialColumnGroup(geoSpatialColumnGroup: IResolvable) {
     cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup)
   }
 
+  /**
+   * @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy.
+   */
   public
       fun geoSpatialColumnGroup(geoSpatialColumnGroup: CfnDataSet.GeoSpatialColumnGroupProperty) {
     cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup)

@@ -11,6 +11,9 @@ public class CfnBillingGroupBillingGroupPropertiesPropertyDsl {
   private val cdkBuilder: CfnBillingGroup.BillingGroupPropertiesProperty.Builder =
       CfnBillingGroup.BillingGroupPropertiesProperty.builder()
 
+  /**
+   * @param billingGroupDescription The description of the billing group.
+   */
   public fun billingGroupDescription(billingGroupDescription: String) {
     cdkBuilder.billingGroupDescription(billingGroupDescription)
   }

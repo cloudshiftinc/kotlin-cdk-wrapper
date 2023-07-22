@@ -21,34 +21,96 @@ public class CfnMaintenanceWindowTargetDsl(
 
   private val _targets: MutableList<Any> = mutableListOf()
 
+  /**
+   * A description for the target.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-description)
+   * @param description A description for the target. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name for the maintenance window target.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-name)
+   * @param name The name for the maintenance window target. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * A user-provided value that will be included in any Amazon CloudWatch Events events that are
+   * raised while running tasks for these targets in this maintenance window.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-ownerinformation)
+   * @param ownerInformation A user-provided value that will be included in any Amazon CloudWatch
+   * Events events that are raised while running tasks for these targets in this maintenance window. 
+   */
   public fun ownerInformation(ownerInformation: String) {
     cdkBuilder.ownerInformation(ownerInformation)
   }
 
+  /**
+   * The type of target that is being registered with the maintenance window.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-resourcetype)
+   * @param resourceType The type of target that is being registered with the maintenance window. 
+   */
   public fun resourceType(resourceType: String) {
     cdkBuilder.resourceType(resourceType)
   }
 
+  /**
+   * The targets to register with the maintenance window.
+   *
+   * In other words, the instances to run commands on when the maintenance window runs.
+   *
+   * You must specify targets by using the `WindowTargetIds` parameter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-targets)
+   * @param targets The targets to register with the maintenance window. 
+   */
   public fun targets(vararg targets: Any) {
     _targets.addAll(listOf(*targets))
   }
 
+  /**
+   * The targets to register with the maintenance window.
+   *
+   * In other words, the instances to run commands on when the maintenance window runs.
+   *
+   * You must specify targets by using the `WindowTargetIds` parameter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-targets)
+   * @param targets The targets to register with the maintenance window. 
+   */
   public fun targets(targets: Collection<Any>) {
     _targets.addAll(targets)
   }
 
+  /**
+   * The targets to register with the maintenance window.
+   *
+   * In other words, the instances to run commands on when the maintenance window runs.
+   *
+   * You must specify targets by using the `WindowTargetIds` parameter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-targets)
+   * @param targets The targets to register with the maintenance window. 
+   */
   public fun targets(targets: IResolvable) {
     cdkBuilder.targets(targets)
   }
 
+  /**
+   * The ID of the maintenance window to register the target with.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-windowid)
+   * @param windowId The ID of the maintenance window to register the target with. 
+   */
   public fun windowId(windowId: String) {
     cdkBuilder.windowId(windowId)
   }

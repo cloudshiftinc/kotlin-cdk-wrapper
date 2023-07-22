@@ -12,18 +12,30 @@ public class CfnTemplateUniqueValuesComputationPropertyDsl {
   private val cdkBuilder: CfnTemplate.UniqueValuesComputationProperty.Builder =
       CfnTemplate.UniqueValuesComputationProperty.builder()
 
+  /**
+   * @param category The category field that is used in a computation. 
+   */
   public fun category(category: IResolvable) {
     cdkBuilder.category(category)
   }
 
+  /**
+   * @param category The category field that is used in a computation. 
+   */
   public fun category(category: CfnTemplate.DimensionFieldProperty) {
     cdkBuilder.category(category)
   }
 
+  /**
+   * @param computationId The ID for a computation. 
+   */
   public fun computationId(computationId: String) {
     cdkBuilder.computationId(computationId)
   }
 
+  /**
+   * @param name The name of a computation.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

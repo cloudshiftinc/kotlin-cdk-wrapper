@@ -11,10 +11,18 @@ public class CfnPermissionsDataLocationResourcePropertyDsl {
   private val cdkBuilder: CfnPermissions.DataLocationResourceProperty.Builder =
       CfnPermissions.DataLocationResourceProperty.builder()
 
+  /**
+   * @param catalogId The identifier for the Data Catalog .
+   * By default, it is the account ID of the caller.
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * @param s3Resource The Amazon Resource Name (ARN) that uniquely identifies the data location
+   * resource.
+   */
   public fun s3Resource(s3Resource: String) {
     cdkBuilder.s3Resource(s3Resource)
   }

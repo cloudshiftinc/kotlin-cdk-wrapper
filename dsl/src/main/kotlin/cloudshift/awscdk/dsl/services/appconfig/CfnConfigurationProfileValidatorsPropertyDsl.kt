@@ -11,10 +11,17 @@ public class CfnConfigurationProfileValidatorsPropertyDsl {
   private val cdkBuilder: CfnConfigurationProfile.ValidatorsProperty.Builder =
       CfnConfigurationProfile.ValidatorsProperty.builder()
 
+  /**
+   * @param content Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda
+   * function.
+   */
   public fun content(content: String) {
     cdkBuilder.content(content)
   }
 
+  /**
+   * @param type AWS AppConfig supports validators of type `JSON_SCHEMA` and `LAMBDA`.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

@@ -12,10 +12,17 @@ public class CfnFileSystemDiskIopsConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.DiskIopsConfigurationProperty.Builder =
       CfnFileSystem.DiskIopsConfigurationProperty.builder()
 
+  /**
+   * @param iops The total number of SSD IOPS provisioned for the file system.
+   */
   public fun iops(iops: Number) {
     cdkBuilder.iops(iops)
   }
 
+  /**
+   * @param mode Specifies whether the file system is using the `AUTOMATIC` setting of SSD IOPS of 3
+   * IOPS per GB of storage capacity, , or if it using a `USER_PROVISIONED` value.
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }

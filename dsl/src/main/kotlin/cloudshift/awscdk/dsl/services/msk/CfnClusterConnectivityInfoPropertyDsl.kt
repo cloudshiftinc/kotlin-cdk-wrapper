@@ -11,18 +11,30 @@ public class CfnClusterConnectivityInfoPropertyDsl {
   private val cdkBuilder: CfnCluster.ConnectivityInfoProperty.Builder =
       CfnCluster.ConnectivityInfoProperty.builder()
 
+  /**
+   * @param publicAccess Access control settings for the cluster's brokers.
+   */
   public fun publicAccess(publicAccess: IResolvable) {
     cdkBuilder.publicAccess(publicAccess)
   }
 
+  /**
+   * @param publicAccess Access control settings for the cluster's brokers.
+   */
   public fun publicAccess(publicAccess: CfnCluster.PublicAccessProperty) {
     cdkBuilder.publicAccess(publicAccess)
   }
 
+  /**
+   * @param vpcConnectivity VPC connection control settings for brokers.
+   */
   public fun vpcConnectivity(vpcConnectivity: IResolvable) {
     cdkBuilder.vpcConnectivity(vpcConnectivity)
   }
 
+  /**
+   * @param vpcConnectivity VPC connection control settings for brokers.
+   */
   public fun vpcConnectivity(vpcConnectivity: CfnCluster.VpcConnectivityProperty) {
     cdkBuilder.vpcConnectivity(vpcConnectivity)
   }

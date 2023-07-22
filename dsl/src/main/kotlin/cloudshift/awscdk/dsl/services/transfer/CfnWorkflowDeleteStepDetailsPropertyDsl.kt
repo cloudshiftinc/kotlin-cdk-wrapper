@@ -11,10 +11,21 @@ public class CfnWorkflowDeleteStepDetailsPropertyDsl {
   private val cdkBuilder: CfnWorkflow.DeleteStepDetailsProperty.Builder =
       CfnWorkflow.DeleteStepDetailsProperty.builder()
 
+  /**
+   * @param name The name of the step, used as an identifier.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param sourceFileLocation Specifies which file to use as input to the workflow step: either the
+   * output from the previous step, or the originally uploaded file for the workflow.
+   * * To use the previous file as the input, enter `${previous.file}` . In this case, this workflow
+   * step uses the output file from the previous workflow step as input. This is the default value.
+   * * To use the originally uploaded file location as input for this step, enter `${original.file}`
+   * .
+   */
   public fun sourceFileLocation(sourceFileLocation: String) {
     cdkBuilder.sourceFileLocation(sourceFileLocation)
   }

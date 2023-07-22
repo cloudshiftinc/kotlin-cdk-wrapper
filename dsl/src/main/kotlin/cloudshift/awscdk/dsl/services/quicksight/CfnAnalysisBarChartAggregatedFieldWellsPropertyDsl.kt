@@ -22,50 +22,89 @@ public class CfnAnalysisBarChartAggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param category The category (y-axis) field well of a bar chart.
+   */
   public fun category(vararg category: Any) {
     _category.addAll(listOf(*category))
   }
 
+  /**
+   * @param category The category (y-axis) field well of a bar chart.
+   */
   public fun category(category: Collection<Any>) {
     _category.addAll(category)
   }
 
+  /**
+   * @param category The category (y-axis) field well of a bar chart.
+   */
   public fun category(category: IResolvable) {
     cdkBuilder.category(category)
   }
 
+  /**
+   * @param colors The color (group/color) field well of a bar chart.
+   */
   public fun colors(vararg colors: Any) {
     _colors.addAll(listOf(*colors))
   }
 
+  /**
+   * @param colors The color (group/color) field well of a bar chart.
+   */
   public fun colors(colors: Collection<Any>) {
     _colors.addAll(colors)
   }
 
+  /**
+   * @param colors The color (group/color) field well of a bar chart.
+   */
   public fun colors(colors: IResolvable) {
     cdkBuilder.colors(colors)
   }
 
+  /**
+   * @param smallMultiples The small multiples field well of a bar chart.
+   */
   public fun smallMultiples(vararg smallMultiples: Any) {
     _smallMultiples.addAll(listOf(*smallMultiples))
   }
 
+  /**
+   * @param smallMultiples The small multiples field well of a bar chart.
+   */
   public fun smallMultiples(smallMultiples: Collection<Any>) {
     _smallMultiples.addAll(smallMultiples)
   }
 
+  /**
+   * @param smallMultiples The small multiples field well of a bar chart.
+   */
   public fun smallMultiples(smallMultiples: IResolvable) {
     cdkBuilder.smallMultiples(smallMultiples)
   }
 
+  /**
+   * @param values The value field wells of a bar chart.
+   * Values are aggregated by category.
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The value field wells of a bar chart.
+   * Values are aggregated by category.
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The value field wells of a bar chart.
+   * Values are aggregated by category.
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

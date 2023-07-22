@@ -15,18 +15,30 @@ public class CfnStackStorageConnectorPropertyDsl {
 
   private val _domains: MutableList<String> = mutableListOf()
 
+  /**
+   * @param connectorType The type of storage connector. 
+   */
   public fun connectorType(connectorType: String) {
     cdkBuilder.connectorType(connectorType)
   }
 
+  /**
+   * @param domains The names of the domains for the account.
+   */
   public fun domains(vararg domains: String) {
     _domains.addAll(listOf(*domains))
   }
 
+  /**
+   * @param domains The names of the domains for the account.
+   */
   public fun domains(domains: Collection<String>) {
     _domains.addAll(domains)
   }
 
+  /**
+   * @param resourceIdentifier The ARN of the storage connector.
+   */
   public fun resourceIdentifier(resourceIdentifier: String) {
     cdkBuilder.resourceIdentifier(resourceIdentifier)
   }

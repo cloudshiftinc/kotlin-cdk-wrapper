@@ -11,6 +11,9 @@ public class CfnDashboardSheetControlsOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetControlsOptionProperty.Builder =
       CfnDashboard.SheetControlsOptionProperty.builder()
 
+  /**
+   * @param visibilityState Visibility state.
+   */
   public fun visibilityState(visibilityState: String) {
     cdkBuilder.visibilityState(visibilityState)
   }

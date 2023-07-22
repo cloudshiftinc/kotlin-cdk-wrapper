@@ -11,26 +11,44 @@ import software.amazon.awscdk.services.medialive.CfnChannel
 public class CfnChannelEsamPropertyDsl {
   private val cdkBuilder: CfnChannel.EsamProperty.Builder = CfnChannel.EsamProperty.builder()
 
+  /**
+   * @param acquisitionPointId the value to be set.
+   */
   public fun acquisitionPointId(acquisitionPointId: String) {
     cdkBuilder.acquisitionPointId(acquisitionPointId)
   }
 
+  /**
+   * @param adAvailOffset the value to be set.
+   */
   public fun adAvailOffset(adAvailOffset: Number) {
     cdkBuilder.adAvailOffset(adAvailOffset)
   }
 
+  /**
+   * @param passwordParam the value to be set.
+   */
   public fun passwordParam(passwordParam: String) {
     cdkBuilder.passwordParam(passwordParam)
   }
 
+  /**
+   * @param poisEndpoint the value to be set.
+   */
   public fun poisEndpoint(poisEndpoint: String) {
     cdkBuilder.poisEndpoint(poisEndpoint)
   }
 
+  /**
+   * @param username the value to be set.
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }
 
+  /**
+   * @param zoneIdentity the value to be set.
+   */
   public fun zoneIdentity(zoneIdentity: String) {
     cdkBuilder.zoneIdentity(zoneIdentity)
   }

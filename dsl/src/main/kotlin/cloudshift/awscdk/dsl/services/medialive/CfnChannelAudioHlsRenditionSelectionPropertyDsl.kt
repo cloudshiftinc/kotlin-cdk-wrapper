@@ -11,10 +11,17 @@ public class CfnChannelAudioHlsRenditionSelectionPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioHlsRenditionSelectionProperty.Builder =
       CfnChannel.AudioHlsRenditionSelectionProperty.builder()
 
+  /**
+   * @param groupId Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio
+   * rendition.
+   */
   public fun groupId(groupId: String) {
     cdkBuilder.groupId(groupId)
   }
 
+  /**
+   * @param name Specifies the NAME in the #EXT-X-MEDIA tag of the target HLS audio rendition.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

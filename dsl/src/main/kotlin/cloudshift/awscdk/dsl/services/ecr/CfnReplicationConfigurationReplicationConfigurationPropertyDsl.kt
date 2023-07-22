@@ -16,14 +16,26 @@ public class CfnReplicationConfigurationReplicationConfigurationPropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param rules An array of objects representing the replication destinations and repository
+   * filters for a replication configuration. 
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules An array of objects representing the replication destinations and repository
+   * filters for a replication configuration. 
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules An array of objects representing the replication destinations and repository
+   * filters for a replication configuration. 
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

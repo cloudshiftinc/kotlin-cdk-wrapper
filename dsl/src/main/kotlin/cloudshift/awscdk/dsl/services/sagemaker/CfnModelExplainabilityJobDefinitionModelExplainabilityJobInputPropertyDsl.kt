@@ -12,19 +12,31 @@ public class CfnModelExplainabilityJobDefinitionModelExplainabilityJobInputPrope
       CfnModelExplainabilityJobDefinition.ModelExplainabilityJobInputProperty.Builder =
       CfnModelExplainabilityJobDefinition.ModelExplainabilityJobInputProperty.builder()
 
+  /**
+   * @param batchTransformInput The batch transform input for a monitoring job.
+   */
   public fun batchTransformInput(batchTransformInput: IResolvable) {
     cdkBuilder.batchTransformInput(batchTransformInput)
   }
 
+  /**
+   * @param batchTransformInput The batch transform input for a monitoring job.
+   */
   public
       fun batchTransformInput(batchTransformInput: CfnModelExplainabilityJobDefinition.BatchTransformInputProperty) {
     cdkBuilder.batchTransformInput(batchTransformInput)
   }
 
+  /**
+   * @param endpointInput The endpoint for a monitoring job.
+   */
   public fun endpointInput(endpointInput: IResolvable) {
     cdkBuilder.endpointInput(endpointInput)
   }
 
+  /**
+   * @param endpointInput The endpoint for a monitoring job.
+   */
   public
       fun endpointInput(endpointInput: CfnModelExplainabilityJobDefinition.EndpointInputProperty) {
     cdkBuilder.endpointInput(endpointInput)

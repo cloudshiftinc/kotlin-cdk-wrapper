@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions
 public class PortfolioShareOptionsDsl {
   private val cdkBuilder: PortfolioShareOptions.Builder = PortfolioShareOptions.builder()
 
+  /**
+   * @param messageLanguage The message language of the share.
+   * Controls status and error message language for share.
+   */
   public fun messageLanguage(messageLanguage: MessageLanguage) {
     cdkBuilder.messageLanguage(messageLanguage)
   }
 
+  /**
+   * @param shareTagOptions Whether to share tagOptions as a part of the portfolio share.
+   */
   public fun shareTagOptions(shareTagOptions: Boolean) {
     cdkBuilder.shareTagOptions(shareTagOptions)
   }

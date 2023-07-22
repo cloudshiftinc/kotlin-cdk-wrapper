@@ -17,18 +17,46 @@ public class CfnGroupConfigurationItemPropertyDsl {
 
   private val _parameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param parameters A collection of parameters for this configuration item.
+   * For the list of parameters that you can use with each configuration item `Type` , see
+   * [Supported resource types and
+   * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types) in
+   * the *AWS Resource Groups User Guide* .
+   */
   public fun parameters(vararg parameters: Any) {
     _parameters.addAll(listOf(*parameters))
   }
 
+  /**
+   * @param parameters A collection of parameters for this configuration item.
+   * For the list of parameters that you can use with each configuration item `Type` , see
+   * [Supported resource types and
+   * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types) in
+   * the *AWS Resource Groups User Guide* .
+   */
   public fun parameters(parameters: Collection<Any>) {
     _parameters.addAll(parameters)
   }
 
+  /**
+   * @param parameters A collection of parameters for this configuration item.
+   * For the list of parameters that you can use with each configuration item `Type` , see
+   * [Supported resource types and
+   * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types) in
+   * the *AWS Resource Groups User Guide* .
+   */
   public fun parameters(parameters: IResolvable) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * @param type Specifies the type of configuration item.
+   * Each item must have a unique value for type. For the list of the types that you can specify for
+   * a configuration item, see [Supported resource types and
+   * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types) in
+   * the *AWS Resource Groups User Guide* .
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

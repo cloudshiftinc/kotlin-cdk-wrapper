@@ -11,6 +11,13 @@ public class CfnRuleGroupImmunityTimePropertyPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.ImmunityTimePropertyProperty.Builder =
       CfnRuleGroup.ImmunityTimePropertyProperty.builder()
 
+  /**
+   * @param immunityTime The amount of time, in seconds, that a `CAPTCHA` or challenge timestamp is
+   * considered valid by AWS WAF . 
+   * The default setting is 300.
+   *
+   * For the Challenge action, the minimum setting is 300.
+   */
   public fun immunityTime(immunityTime: Number) {
     cdkBuilder.immunityTime(immunityTime)
   }

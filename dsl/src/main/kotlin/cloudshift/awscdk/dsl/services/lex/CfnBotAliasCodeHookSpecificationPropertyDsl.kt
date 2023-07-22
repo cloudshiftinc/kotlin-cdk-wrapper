@@ -11,10 +11,18 @@ public class CfnBotAliasCodeHookSpecificationPropertyDsl {
   private val cdkBuilder: CfnBotAlias.CodeHookSpecificationProperty.Builder =
       CfnBotAlias.CodeHookSpecificationProperty.builder()
 
+  /**
+   * @param lambdaCodeHook Specifies a Lambda function that verifies requests to a bot or fulfills
+   * the user's request to a bot. 
+   */
   public fun lambdaCodeHook(lambdaCodeHook: IResolvable) {
     cdkBuilder.lambdaCodeHook(lambdaCodeHook)
   }
 
+  /**
+   * @param lambdaCodeHook Specifies a Lambda function that verifies requests to a bot or fulfills
+   * the user's request to a bot. 
+   */
   public fun lambdaCodeHook(lambdaCodeHook: CfnBotAlias.LambdaCodeHookProperty) {
     cdkBuilder.lambdaCodeHook(lambdaCodeHook)
   }

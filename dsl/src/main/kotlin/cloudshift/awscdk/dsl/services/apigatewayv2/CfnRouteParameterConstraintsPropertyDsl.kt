@@ -12,10 +12,16 @@ public class CfnRouteParameterConstraintsPropertyDsl {
   private val cdkBuilder: CfnRoute.ParameterConstraintsProperty.Builder =
       CfnRoute.ParameterConstraintsProperty.builder()
 
+  /**
+   * @param required the value to be set. 
+   */
   public fun required(required: Boolean) {
     cdkBuilder.required(required)
   }
 
+  /**
+   * @param required the value to be set. 
+   */
   public fun required(required: IResolvable) {
     cdkBuilder.required(required)
   }

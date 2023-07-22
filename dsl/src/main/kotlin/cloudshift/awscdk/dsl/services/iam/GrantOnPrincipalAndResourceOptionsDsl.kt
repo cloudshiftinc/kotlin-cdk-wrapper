@@ -24,42 +24,75 @@ public class GrantOnPrincipalAndResourceOptionsDsl {
 
   private val _resourceSelfArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param actions The actions to grant. 
+   */
   public fun actions(vararg actions: String) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * @param actions The actions to grant. 
+   */
   public fun actions(actions: Collection<String>) {
     _actions.addAll(actions)
   }
 
+  /**
+   * @param conditions Any conditions to attach to the grant.
+   */
   public fun conditions(conditions: Map<String, Map<String, Any>>) {
     cdkBuilder.conditions(conditions)
   }
 
+  /**
+   * @param grantee The principal to grant to. 
+   */
   public fun grantee(grantee: IGrantable) {
     cdkBuilder.grantee(grantee)
   }
 
+  /**
+   * @param resource The resource with a resource policy. 
+   * The statement will always be added to the resource policy.
+   */
   public fun resource(resource: IResourceWithPolicy) {
     cdkBuilder.resource(resource)
   }
 
+  /**
+   * @param resourceArns The resource ARNs to grant to. 
+   */
   public fun resourceArns(vararg resourceArns: String) {
     _resourceArns.addAll(listOf(*resourceArns))
   }
 
+  /**
+   * @param resourceArns The resource ARNs to grant to. 
+   */
   public fun resourceArns(resourceArns: Collection<String>) {
     _resourceArns.addAll(resourceArns)
   }
 
+  /**
+   * @param resourcePolicyPrincipal The principal to use in the statement for the resource policy.
+   */
   public fun resourcePolicyPrincipal(resourcePolicyPrincipal: IPrincipal) {
     cdkBuilder.resourcePolicyPrincipal(resourcePolicyPrincipal)
   }
 
+  /**
+   * @param resourceSelfArns When referring to the resource in a resource policy, use this as ARN.
+   * (Depending on the resource type, this needs to be '*' in a resource policy).
+   */
   public fun resourceSelfArns(vararg resourceSelfArns: String) {
     _resourceSelfArns.addAll(listOf(*resourceSelfArns))
   }
 
+  /**
+   * @param resourceSelfArns When referring to the resource in a resource policy, use this as ARN.
+   * (Depending on the resource type, this needs to be '*' in a resource policy).
+   */
   public fun resourceSelfArns(resourceSelfArns: Collection<String>) {
     _resourceSelfArns.addAll(resourceSelfArns)
   }

@@ -11,6 +11,10 @@ public class CfnConnectorProfileSingularConnectorProfileCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.SingularConnectorProfileCredentialsProperty.Builder =
       CfnConnectorProfile.SingularConnectorProfileCredentialsProperty.builder()
 
+  /**
+   * @param apiKey A unique alphanumeric identifier used to authenticate a user, developer, or
+   * calling program to your API. 
+   */
   public fun apiKey(apiKey: String) {
     cdkBuilder.apiKey(apiKey)
   }

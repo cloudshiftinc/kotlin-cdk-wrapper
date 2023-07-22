@@ -19,23 +19,47 @@ public class VpcEndpointServicePropsDsl {
   private val _vpcEndpointServiceLoadBalancers: MutableList<IVpcEndpointServiceLoadBalancer> =
       mutableListOf()
 
+  /**
+   * @param acceptanceRequired Whether requests from service consumers to connect to the service
+   * through an endpoint must be accepted.
+   */
   public fun acceptanceRequired(acceptanceRequired: Boolean) {
     cdkBuilder.acceptanceRequired(acceptanceRequired)
   }
 
+  /**
+   * @param allowedPrincipals IAM users, IAM roles, or AWS accounts to allow inbound connections
+   * from.
+   * These principals can connect to your service using VPC endpoints. Takes a
+   * list of one or more ArnPrincipal.
+   */
   public fun allowedPrincipals(vararg allowedPrincipals: ArnPrincipal) {
     _allowedPrincipals.addAll(listOf(*allowedPrincipals))
   }
 
+  /**
+   * @param allowedPrincipals IAM users, IAM roles, or AWS accounts to allow inbound connections
+   * from.
+   * These principals can connect to your service using VPC endpoints. Takes a
+   * list of one or more ArnPrincipal.
+   */
   public fun allowedPrincipals(allowedPrincipals: Collection<ArnPrincipal>) {
     _allowedPrincipals.addAll(allowedPrincipals)
   }
 
+  /**
+   * @param vpcEndpointServiceLoadBalancers One or more load balancers to host the VPC Endpoint
+   * Service. 
+   */
   public fun vpcEndpointServiceLoadBalancers(vararg
       vpcEndpointServiceLoadBalancers: IVpcEndpointServiceLoadBalancer) {
     _vpcEndpointServiceLoadBalancers.addAll(listOf(*vpcEndpointServiceLoadBalancers))
   }
 
+  /**
+   * @param vpcEndpointServiceLoadBalancers One or more load balancers to host the VPC Endpoint
+   * Service. 
+   */
   public
       fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: Collection<IVpcEndpointServiceLoadBalancer>) {
     _vpcEndpointServiceLoadBalancers.addAll(vpcEndpointServiceLoadBalancers)

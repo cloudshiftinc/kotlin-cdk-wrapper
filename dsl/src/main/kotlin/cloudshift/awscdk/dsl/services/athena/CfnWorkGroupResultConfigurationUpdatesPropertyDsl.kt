@@ -13,59 +13,110 @@ public class CfnWorkGroupResultConfigurationUpdatesPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.ResultConfigurationUpdatesProperty.Builder =
       CfnWorkGroup.ResultConfigurationUpdatesProperty.builder()
 
+  /**
+   * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+   * ownership of stored query results.
+   */
   public fun aclConfiguration(aclConfiguration: IResolvable) {
     cdkBuilder.aclConfiguration(aclConfiguration)
   }
 
+  /**
+   * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control
+   * ownership of stored query results.
+   */
   public fun aclConfiguration(aclConfiguration: CfnWorkGroup.AclConfigurationProperty) {
     cdkBuilder.aclConfiguration(aclConfiguration)
   }
 
+  /**
+   * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+   * encryption option used (for example, SSE-KMS or CSE-KMS) and key information.
+   */
   public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
     cdkBuilder.encryptionConfiguration(encryptionConfiguration)
   }
 
+  /**
+   * @param encryptionConfiguration If query results are encrypted in Amazon S3, indicates the
+   * encryption option used (for example, SSE-KMS or CSE-KMS) and key information.
+   */
   public
       fun encryptionConfiguration(encryptionConfiguration: CfnWorkGroup.EncryptionConfigurationProperty) {
     cdkBuilder.encryptionConfiguration(encryptionConfiguration)
   }
 
+  /**
+   * @param expectedBucketOwner The AWS account ID of the owner of S3 bucket where query results are
+   * stored.
+   */
   public fun expectedBucketOwner(expectedBucketOwner: String) {
     cdkBuilder.expectedBucketOwner(expectedBucketOwner)
   }
 
+  /**
+   * @param outputLocation The location in Amazon S3 where your query results are stored, such as
+   * s3://path/to/query/bucket/.
+   * To run the query, you must specify the query results location using one of the ways: either for
+   * individual queries using either this setting (client-side), or in the workgroup, using
+   * WorkGroupConfiguration
+   */
   public fun outputLocation(outputLocation: String) {
     cdkBuilder.outputLocation(outputLocation)
   }
 
+  /**
+   * @param removeAclConfiguration the value to be set.
+   */
   public fun removeAclConfiguration(removeAclConfiguration: Boolean) {
     cdkBuilder.removeAclConfiguration(removeAclConfiguration)
   }
 
+  /**
+   * @param removeAclConfiguration the value to be set.
+   */
   public fun removeAclConfiguration(removeAclConfiguration: IResolvable) {
     cdkBuilder.removeAclConfiguration(removeAclConfiguration)
   }
 
+  /**
+   * @param removeEncryptionConfiguration the value to be set.
+   */
   public fun removeEncryptionConfiguration(removeEncryptionConfiguration: Boolean) {
     cdkBuilder.removeEncryptionConfiguration(removeEncryptionConfiguration)
   }
 
+  /**
+   * @param removeEncryptionConfiguration the value to be set.
+   */
   public fun removeEncryptionConfiguration(removeEncryptionConfiguration: IResolvable) {
     cdkBuilder.removeEncryptionConfiguration(removeEncryptionConfiguration)
   }
 
+  /**
+   * @param removeExpectedBucketOwner the value to be set.
+   */
   public fun removeExpectedBucketOwner(removeExpectedBucketOwner: Boolean) {
     cdkBuilder.removeExpectedBucketOwner(removeExpectedBucketOwner)
   }
 
+  /**
+   * @param removeExpectedBucketOwner the value to be set.
+   */
   public fun removeExpectedBucketOwner(removeExpectedBucketOwner: IResolvable) {
     cdkBuilder.removeExpectedBucketOwner(removeExpectedBucketOwner)
   }
 
+  /**
+   * @param removeOutputLocation the value to be set.
+   */
   public fun removeOutputLocation(removeOutputLocation: Boolean) {
     cdkBuilder.removeOutputLocation(removeOutputLocation)
   }
 
+  /**
+   * @param removeOutputLocation the value to be set.
+   */
   public fun removeOutputLocation(removeOutputLocation: IResolvable) {
     cdkBuilder.removeOutputLocation(removeOutputLocation)
   }

@@ -11,10 +11,18 @@ import software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps
 public class CfnResourceCollectionPropsDsl {
   private val cdkBuilder: CfnResourceCollectionProps.Builder = CfnResourceCollectionProps.builder()
 
+  /**
+   * @param resourceCollectionFilter Information about a filter used to specify which AWS resources
+   * are analyzed for anomalous behavior by DevOps Guru. 
+   */
   public fun resourceCollectionFilter(resourceCollectionFilter: IResolvable) {
     cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)
   }
 
+  /**
+   * @param resourceCollectionFilter Information about a filter used to specify which AWS resources
+   * are analyzed for anomalous behavior by DevOps Guru. 
+   */
   public
       fun resourceCollectionFilter(resourceCollectionFilter: CfnResourceCollection.ResourceCollectionFilterProperty) {
     cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)

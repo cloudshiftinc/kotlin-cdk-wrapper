@@ -29,54 +29,142 @@ public class CfnEventTypeDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The event type description.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-description)
+   * @param description The event type description. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The event type entity types.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-entitytypes)
+   * @param entityTypes The event type entity types. 
+   */
   public fun entityTypes(vararg entityTypes: Any) {
     _entityTypes.addAll(listOf(*entityTypes))
   }
 
+  /**
+   * The event type entity types.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-entitytypes)
+   * @param entityTypes The event type entity types. 
+   */
   public fun entityTypes(entityTypes: Collection<Any>) {
     _entityTypes.addAll(entityTypes)
   }
 
+  /**
+   * The event type entity types.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-entitytypes)
+   * @param entityTypes The event type entity types. 
+   */
   public fun entityTypes(entityTypes: IResolvable) {
     cdkBuilder.entityTypes(entityTypes)
   }
 
+  /**
+   * The event type event variables.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-eventvariables)
+   * @param eventVariables The event type event variables. 
+   */
   public fun eventVariables(vararg eventVariables: Any) {
     _eventVariables.addAll(listOf(*eventVariables))
   }
 
+  /**
+   * The event type event variables.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-eventvariables)
+   * @param eventVariables The event type event variables. 
+   */
   public fun eventVariables(eventVariables: Collection<Any>) {
     _eventVariables.addAll(eventVariables)
   }
 
+  /**
+   * The event type event variables.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-eventvariables)
+   * @param eventVariables The event type event variables. 
+   */
   public fun eventVariables(eventVariables: IResolvable) {
     cdkBuilder.eventVariables(eventVariables)
   }
 
+  /**
+   * The event type labels.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-labels)
+   * @param labels The event type labels. 
+   */
   public fun labels(vararg labels: Any) {
     _labels.addAll(listOf(*labels))
   }
 
+  /**
+   * The event type labels.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-labels)
+   * @param labels The event type labels. 
+   */
   public fun labels(labels: Collection<Any>) {
     _labels.addAll(labels)
   }
 
+  /**
+   * The event type labels.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-labels)
+   * @param labels The event type labels. 
+   */
   public fun labels(labels: IResolvable) {
     cdkBuilder.labels(labels)
   }
 
+  /**
+   * The event type name.
+   *
+   * Pattern : `^[0-9a-z_-]+$`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-name)
+   * @param name The event type name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -11,6 +11,9 @@ public class CfnDetectorModelClearTimerPropertyDsl {
   private val cdkBuilder: CfnDetectorModel.ClearTimerProperty.Builder =
       CfnDetectorModel.ClearTimerProperty.builder()
 
+  /**
+   * @param timerName The name of the timer to clear. 
+   */
   public fun timerName(timerName: String) {
     cdkBuilder.timerName(timerName)
   }

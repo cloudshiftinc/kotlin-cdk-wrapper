@@ -12,10 +12,20 @@ public class CfnConfigurationSetReputationOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.ReputationOptionsProperty.Builder =
       CfnConfigurationSet.ReputationOptionsProperty.builder()
 
+  /**
+   * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for the
+   * configuration set.
+   * If `false` , tracking of reputation metrics is disabled for the configuration set.
+   */
   public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
     cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
   }
 
+  /**
+   * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for the
+   * configuration set.
+   * If `false` , tracking of reputation metrics is disabled for the configuration set.
+   */
   public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
     cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
   }

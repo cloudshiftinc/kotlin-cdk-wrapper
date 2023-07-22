@@ -12,18 +12,30 @@ public class CfnConnectPeerConnectPeerBgpConfigurationPropertyDsl {
   private val cdkBuilder: CfnConnectPeer.ConnectPeerBgpConfigurationProperty.Builder =
       CfnConnectPeer.ConnectPeerBgpConfigurationProperty.builder()
 
+  /**
+   * @param coreNetworkAddress The address of a core network.
+   */
   public fun coreNetworkAddress(coreNetworkAddress: String) {
     cdkBuilder.coreNetworkAddress(coreNetworkAddress)
   }
 
+  /**
+   * @param coreNetworkAsn The ASN of the Coret Network.
+   */
   public fun coreNetworkAsn(coreNetworkAsn: Number) {
     cdkBuilder.coreNetworkAsn(coreNetworkAsn)
   }
 
+  /**
+   * @param peerAddress The address of a core network Connect peer.
+   */
   public fun peerAddress(peerAddress: String) {
     cdkBuilder.peerAddress(peerAddress)
   }
 
+  /**
+   * @param peerAsn The ASN of the Connect peer.
+   */
   public fun peerAsn(peerAsn: Number) {
     cdkBuilder.peerAsn(peerAsn)
   }

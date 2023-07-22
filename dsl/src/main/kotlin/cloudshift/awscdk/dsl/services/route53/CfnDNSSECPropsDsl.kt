@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.route53.CfnDNSSECProps
 public class CfnDNSSECPropsDsl {
   private val cdkBuilder: CfnDNSSECProps.Builder = CfnDNSSECProps.builder()
 
+  /**
+   * @param hostedZoneId A unique string (ID) that is used to identify a hosted zone. 
+   * For example: `Z00001111A1ABCaaABC11` .
+   */
   public fun hostedZoneId(hostedZoneId: String) {
     cdkBuilder.hostedZoneId(hostedZoneId)
   }

@@ -16,14 +16,23 @@ public class CfnTemplateFilledMapSortConfigurationPropertyDsl {
 
   private val _categorySort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param categorySort The sort configuration of the location fields.
+   */
   public fun categorySort(vararg categorySort: Any) {
     _categorySort.addAll(listOf(*categorySort))
   }
 
+  /**
+   * @param categorySort The sort configuration of the location fields.
+   */
   public fun categorySort(categorySort: Collection<Any>) {
     _categorySort.addAll(categorySort)
   }
 
+  /**
+   * @param categorySort The sort configuration of the location fields.
+   */
   public fun categorySort(categorySort: IResolvable) {
     cdkBuilder.categorySort(categorySort)
   }

@@ -14,30 +14,66 @@ public class CfnCampaignEventDimensionsPropertyDsl {
   private val cdkBuilder: CfnCampaign.EventDimensionsProperty.Builder =
       CfnCampaign.EventDimensionsProperty.builder()
 
-  public fun attributes(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param attributes One or more custom attributes that your application reports to Amazon
+   * Pinpoint.
+   * You can use these attributes as selection criteria when you create an event filter.
+   */
+  public fun attributes(attributes: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(attributes)
     cdkBuilder.attributes(builder.map)
   }
 
+  /**
+   * @param attributes One or more custom attributes that your application reports to Amazon
+   * Pinpoint.
+   * You can use these attributes as selection criteria when you create an event filter.
+   */
   public fun attributes(attributes: Any) {
     cdkBuilder.attributes(attributes)
   }
 
+  /**
+   * @param eventType The name of the event that causes the campaign to be sent or the journey
+   * activity to be performed.
+   * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+   * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+   * application. For information about standard events, see [Streaming Amazon Pinpoint
+   * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+   * *Amazon Pinpoint Developer Guide* .
+   */
   public fun eventType(eventType: IResolvable) {
     cdkBuilder.eventType(eventType)
   }
 
+  /**
+   * @param eventType The name of the event that causes the campaign to be sent or the journey
+   * activity to be performed.
+   * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+   * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+   * application. For information about standard events, see [Streaming Amazon Pinpoint
+   * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+   * *Amazon Pinpoint Developer Guide* .
+   */
   public fun eventType(eventType: CfnCampaign.SetDimensionProperty) {
     cdkBuilder.eventType(eventType)
   }
 
-  public fun metrics(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param metrics One or more custom metrics that your application reports to Amazon Pinpoint .
+   * You can use these metrics as selection criteria when you create an event filter.
+   */
+  public fun metrics(metrics: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(metrics)
     cdkBuilder.metrics(builder.map)
   }
 
+  /**
+   * @param metrics One or more custom metrics that your application reports to Amazon Pinpoint .
+   * You can use these metrics as selection criteria when you create an event filter.
+   */
   public fun metrics(metrics: Any) {
     cdkBuilder.metrics(metrics)
   }

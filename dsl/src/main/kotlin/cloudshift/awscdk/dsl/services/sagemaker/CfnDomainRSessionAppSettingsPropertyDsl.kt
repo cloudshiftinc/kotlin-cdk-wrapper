@@ -16,22 +16,42 @@ public class CfnDomainRSessionAppSettingsPropertyDsl {
 
   private val _customImages: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param customImages A list of custom SageMaker images that are configured to run as a RSession
+   * app.
+   */
   public fun customImages(vararg customImages: Any) {
     _customImages.addAll(listOf(*customImages))
   }
 
+  /**
+   * @param customImages A list of custom SageMaker images that are configured to run as a RSession
+   * app.
+   */
   public fun customImages(customImages: Collection<Any>) {
     _customImages.addAll(customImages)
   }
 
+  /**
+   * @param customImages A list of custom SageMaker images that are configured to run as a RSession
+   * app.
+   */
   public fun customImages(customImages: IResolvable) {
     cdkBuilder.customImages(customImages)
   }
 
+  /**
+   * @param defaultResourceSpec Specifies the ARNs of a SageMaker image and SageMaker image version,
+   * and the instance type that the version runs on.
+   */
   public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
     cdkBuilder.defaultResourceSpec(defaultResourceSpec)
   }
 
+  /**
+   * @param defaultResourceSpec Specifies the ARNs of a SageMaker image and SageMaker image version,
+   * and the instance type that the version runs on.
+   */
   public fun defaultResourceSpec(defaultResourceSpec: CfnDomain.ResourceSpecProperty) {
     cdkBuilder.defaultResourceSpec(defaultResourceSpec)
   }

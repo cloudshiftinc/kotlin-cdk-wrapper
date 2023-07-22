@@ -39,150 +39,299 @@ public class DomainPropsDsl {
 
   private val _vpcSubnets: MutableList<SubnetSelection> = mutableListOf()
 
+  /**
+   * @param accessPolicies Domain access policies.
+   */
   public fun accessPolicies(accessPolicies: PolicyStatementDsl.() -> Unit) {
     _accessPolicies.add(PolicyStatementDsl().apply(accessPolicies).build())
   }
 
+  /**
+   * @param accessPolicies Domain access policies.
+   */
   public fun accessPolicies(accessPolicies: Collection<PolicyStatement>) {
     _accessPolicies.addAll(accessPolicies)
   }
 
+  /**
+   * @param advancedOptions Additional options to specify for the Amazon OpenSearch Service domain.
+   */
   public fun advancedOptions(advancedOptions: Map<String, String>) {
     cdkBuilder.advancedOptions(advancedOptions)
   }
 
+  /**
+   * @param automatedSnapshotStartHour The hour in UTC during which the service takes an automated
+   * daily snapshot of the indices in the Amazon OpenSearch Service domain.
+   * Only applies for Elasticsearch versions
+   * below 5.3.
+   */
   public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
     cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
   }
 
-  public fun capacity(block: CapacityConfigDsl.() -> Unit = {}) {
+  /**
+   * @param capacity The cluster capacity configuration for the Amazon OpenSearch Service domain.
+   */
+  public fun capacity(capacity: CapacityConfigDsl.() -> Unit = {}) {
     val builder = CapacityConfigDsl()
-    builder.apply(block)
+    builder.apply(capacity)
     cdkBuilder.capacity(builder.build())
   }
 
+  /**
+   * @param capacity The cluster capacity configuration for the Amazon OpenSearch Service domain.
+   */
   public fun capacity(capacity: CapacityConfig) {
     cdkBuilder.capacity(capacity)
   }
 
-  public fun cognitoDashboardsAuth(block: CognitoOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param cognitoDashboardsAuth Configures Amazon OpenSearch Service to use Amazon Cognito
+   * authentication for OpenSearch Dashboards.
+   */
+  public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptionsDsl.() -> Unit = {}) {
     val builder = CognitoOptionsDsl()
-    builder.apply(block)
+    builder.apply(cognitoDashboardsAuth)
     cdkBuilder.cognitoDashboardsAuth(builder.build())
   }
 
+  /**
+   * @param cognitoDashboardsAuth Configures Amazon OpenSearch Service to use Amazon Cognito
+   * authentication for OpenSearch Dashboards.
+   */
   public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions) {
     cdkBuilder.cognitoDashboardsAuth(cognitoDashboardsAuth)
   }
 
-  public fun customEndpoint(block: CustomEndpointOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param customEndpoint To configure a custom domain configure these options.
+   * If you specify a Route53 hosted zone it will create a CNAME record and use DNS validation for
+   * the certificate
+   */
+  public fun customEndpoint(customEndpoint: CustomEndpointOptionsDsl.() -> Unit = {}) {
     val builder = CustomEndpointOptionsDsl()
-    builder.apply(block)
+    builder.apply(customEndpoint)
     cdkBuilder.customEndpoint(builder.build())
   }
 
+  /**
+   * @param customEndpoint To configure a custom domain configure these options.
+   * If you specify a Route53 hosted zone it will create a CNAME record and use DNS validation for
+   * the certificate
+   */
   public fun customEndpoint(customEndpoint: CustomEndpointOptions) {
     cdkBuilder.customEndpoint(customEndpoint)
   }
 
+  /**
+   * @param domainName Enforces a particular physical domain name.
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
-  public fun ebs(block: EbsOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param ebs The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are
+   * attached to data nodes in the Amazon OpenSearch Service domain.
+   */
+  public fun ebs(ebs: EbsOptionsDsl.() -> Unit = {}) {
     val builder = EbsOptionsDsl()
-    builder.apply(block)
+    builder.apply(ebs)
     cdkBuilder.ebs(builder.build())
   }
 
+  /**
+   * @param ebs The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are
+   * attached to data nodes in the Amazon OpenSearch Service domain.
+   */
   public fun ebs(ebs: EbsOptions) {
     cdkBuilder.ebs(ebs)
   }
 
+  /**
+   * @param enableVersionUpgrade To upgrade an Amazon OpenSearch Service domain to a new version,
+   * rather than replacing the entire domain resource, use the EnableVersionUpgrade update policy.
+   */
   public fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
     cdkBuilder.enableVersionUpgrade(enableVersionUpgrade)
   }
 
-  public fun encryptionAtRest(block: EncryptionAtRestOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param encryptionAtRest Encryption at rest options for the cluster.
+   */
+  public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptionsDsl.() -> Unit = {}) {
     val builder = EncryptionAtRestOptionsDsl()
-    builder.apply(block)
+    builder.apply(encryptionAtRest)
     cdkBuilder.encryptionAtRest(builder.build())
   }
 
+  /**
+   * @param encryptionAtRest Encryption at rest options for the cluster.
+   */
   public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
     cdkBuilder.encryptionAtRest(encryptionAtRest)
   }
 
+  /**
+   * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
+   */
   public fun enforceHttps(enforceHttps: Boolean) {
     cdkBuilder.enforceHttps(enforceHttps)
   }
 
-  public fun fineGrainedAccessControl(block: AdvancedSecurityOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param fineGrainedAccessControl Specifies options for fine-grained access control.
+   * Requires Elasticsearch version 6.7 or later or OpenSearch version 1.0 or later. Enabling
+   * fine-grained access control
+   * also requires encryption of data at rest and node-to-node encryption, along with
+   * enforced HTTPS.
+   */
+  public
+      fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptionsDsl.() -> Unit =
+      {}) {
     val builder = AdvancedSecurityOptionsDsl()
-    builder.apply(block)
+    builder.apply(fineGrainedAccessControl)
     cdkBuilder.fineGrainedAccessControl(builder.build())
   }
 
+  /**
+   * @param fineGrainedAccessControl Specifies options for fine-grained access control.
+   * Requires Elasticsearch version 6.7 or later or OpenSearch version 1.0 or later. Enabling
+   * fine-grained access control
+   * also requires encryption of data at rest and node-to-node encryption, along with
+   * enforced HTTPS.
+   */
   public fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
     cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl)
   }
 
-  public fun logging(block: LoggingOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param logging Configuration log publishing configuration options.
+   */
+  public fun logging(logging: LoggingOptionsDsl.() -> Unit = {}) {
     val builder = LoggingOptionsDsl()
-    builder.apply(block)
+    builder.apply(logging)
     cdkBuilder.logging(builder.build())
   }
 
+  /**
+   * @param logging Configuration log publishing configuration options.
+   */
   public fun logging(logging: LoggingOptions) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * @param nodeToNodeEncryption Specify true to enable node to node encryption.
+   * Requires Elasticsearch version 6.0 or later or OpenSearch version 1.0 or later.
+   */
   public fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
     cdkBuilder.nodeToNodeEncryption(nodeToNodeEncryption)
   }
 
+  /**
+   * @param removalPolicy Policy to apply when the domain is removed from the stack.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }
 
+  /**
+   * @param securityGroups The list of security groups that are associated with the VPC endpoints
+   * for the domain.
+   * Only used if `vpc` is specified.
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The list of security groups that are associated with the VPC endpoints
+   * for the domain.
+   * Only used if `vpc` is specified.
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  /**
+   * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain.
+   */
   public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
     cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy)
   }
 
+  /**
+   * @param useUnsignedBasicAuth Configures the domain so that unsigned basic auth is enabled.
+   * If no master user is provided a default master user
+   * with username `admin` and a dynamically generated password stored in KMS is created. The
+   * password can be retrieved
+   * by getting `masterUserPassword` from the domain instance.
+   *
+   * Setting this to true will also add an access policy that allows unsigned
+   * access, enable node to node encryption, encryption at rest. If conflicting
+   * settings are encountered (like disabling encryption at rest) enabling this
+   * setting will cause a failure.
+   */
   public fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
     cdkBuilder.useUnsignedBasicAuth(useUnsignedBasicAuth)
   }
 
+  /**
+   * @param version The Elasticsearch/OpenSearch version that your domain will leverage. 
+   */
   public fun version(version: EngineVersion) {
     cdkBuilder.version(version)
   }
 
+  /**
+   * @param vpc Place the domain inside this VPC.
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }
 
+  /**
+   * @param vpcSubnets The specific vpc subnets the domain will be placed in.
+   * You must provide one subnet for each Availability Zone
+   * that your domain uses. For example, you must specify three subnet IDs for a three Availability
+   * Zone
+   * domain.
+   *
+   * Only used if `vpc` is specified.
+   */
   public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit) {
     _vpcSubnets.add(SubnetSelectionDsl().apply(vpcSubnets).build())
   }
 
+  /**
+   * @param vpcSubnets The specific vpc subnets the domain will be placed in.
+   * You must provide one subnet for each Availability Zone
+   * that your domain uses. For example, you must specify three subnet IDs for a three Availability
+   * Zone
+   * domain.
+   *
+   * Only used if `vpc` is specified.
+   */
   public fun vpcSubnets(vpcSubnets: Collection<SubnetSelection>) {
     _vpcSubnets.addAll(vpcSubnets)
   }
 
-  public fun zoneAwareness(block: ZoneAwarenessConfigDsl.() -> Unit = {}) {
+  /**
+   * @param zoneAwareness The cluster zone awareness configuration for the Amazon OpenSearch Service
+   * domain.
+   */
+  public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfigDsl.() -> Unit = {}) {
     val builder = ZoneAwarenessConfigDsl()
-    builder.apply(block)
+    builder.apply(zoneAwareness)
     cdkBuilder.zoneAwareness(builder.build())
   }
 
+  /**
+   * @param zoneAwareness The cluster zone awareness configuration for the Amazon OpenSearch Service
+   * domain.
+   */
   public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
     cdkBuilder.zoneAwareness(zoneAwareness)
   }

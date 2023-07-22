@@ -14,20 +14,32 @@ import software.amazon.awscdk.cxapi.SynthesisMessageLevel
 public class SynthesisMessageDsl {
   private val cdkBuilder: SynthesisMessage.Builder = SynthesisMessage.builder()
 
-  public fun entry(block: MetadataEntryDsl.() -> Unit = {}) {
+  /**
+   * @param entry the value to be set. 
+   */
+  public fun entry(entry: MetadataEntryDsl.() -> Unit = {}) {
     val builder = MetadataEntryDsl()
-    builder.apply(block)
+    builder.apply(entry)
     cdkBuilder.entry(builder.build())
   }
 
+  /**
+   * @param entry the value to be set. 
+   */
   public fun entry(entry: MetadataEntry) {
     cdkBuilder.entry(entry)
   }
 
+  /**
+   * @param id the value to be set. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param level the value to be set. 
+   */
   public fun level(level: SynthesisMessageLevel) {
     cdkBuilder.level(level)
   }

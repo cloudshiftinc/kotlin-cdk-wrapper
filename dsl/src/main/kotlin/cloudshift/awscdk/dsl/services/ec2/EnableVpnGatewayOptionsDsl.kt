@@ -17,18 +17,32 @@ public class EnableVpnGatewayOptionsDsl {
 
   private val _vpnRoutePropagation: MutableList<SubnetSelection> = mutableListOf()
 
+  /**
+   * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you.
+   */
   public fun amazonSideAsn(amazonSideAsn: Number) {
     cdkBuilder.amazonSideAsn(amazonSideAsn)
   }
 
+  /**
+   * @param type Default type ipsec.1. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param vpnRoutePropagation Provide an array of subnets where the route propagation should be
+   * added.
+   */
   public fun vpnRoutePropagation(vpnRoutePropagation: SubnetSelectionDsl.() -> Unit) {
     _vpnRoutePropagation.add(SubnetSelectionDsl().apply(vpnRoutePropagation).build())
   }
 
+  /**
+   * @param vpnRoutePropagation Provide an array of subnets where the route propagation should be
+   * added.
+   */
   public fun vpnRoutePropagation(vpnRoutePropagation: Collection<SubnetSelection>) {
     _vpnRoutePropagation.addAll(vpnRoutePropagation)
   }

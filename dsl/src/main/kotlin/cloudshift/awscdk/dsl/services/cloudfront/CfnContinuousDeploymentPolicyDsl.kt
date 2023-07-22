@@ -16,10 +16,24 @@ public class CfnContinuousDeploymentPolicyDsl(
   private val cdkBuilder: CfnContinuousDeploymentPolicy.Builder =
       CfnContinuousDeploymentPolicy.Builder.create(scope, id)
 
+  /**
+   * Contains the configuration for a continuous deployment policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html#cfn-cloudfront-continuousdeploymentpolicy-continuousdeploymentpolicyconfig)
+   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
+   * policy. 
+   */
   public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
     cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
   }
 
+  /**
+   * Contains the configuration for a continuous deployment policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html#cfn-cloudfront-continuousdeploymentpolicy-continuousdeploymentpolicyconfig)
+   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
+   * policy. 
+   */
   public
       fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty) {
     cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)

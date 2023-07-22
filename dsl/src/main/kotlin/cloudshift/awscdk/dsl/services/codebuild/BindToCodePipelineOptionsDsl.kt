@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.s3.IBucket
 public class BindToCodePipelineOptionsDsl {
   private val cdkBuilder: BindToCodePipelineOptions.Builder = BindToCodePipelineOptions.builder()
 
+  /**
+   * @param artifactBucket The artifact bucket that will be used by the action that invokes this
+   * project. 
+   */
   public fun artifactBucket(artifactBucket: IBucket) {
     cdkBuilder.artifactBucket(artifactBucket)
   }

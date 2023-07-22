@@ -11,6 +11,9 @@ public class CfnRouteTcpRouteMatchPropertyDsl {
   private val cdkBuilder: CfnRoute.TcpRouteMatchProperty.Builder =
       CfnRoute.TcpRouteMatchProperty.builder()
 
+  /**
+   * @param port The port number to match on.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

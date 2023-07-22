@@ -11,10 +11,18 @@ public class CfnVirtualNodeAwsCloudMapInstanceAttributePropertyDsl {
   private val cdkBuilder: CfnVirtualNode.AwsCloudMapInstanceAttributeProperty.Builder =
       CfnVirtualNode.AwsCloudMapInstanceAttributeProperty.builder()
 
+  /**
+   * @param key The name of an AWS Cloud Map service instance attribute key. 
+   * Any AWS Cloud Map service instance that contains the specified key and value is returned.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The value of an AWS Cloud Map service instance attribute key. 
+   * Any AWS Cloud Map service instance that contains the specified key and value is returned.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

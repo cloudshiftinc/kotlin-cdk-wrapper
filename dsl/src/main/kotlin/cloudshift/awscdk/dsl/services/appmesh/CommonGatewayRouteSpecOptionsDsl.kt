@@ -11,6 +11,12 @@ public class CommonGatewayRouteSpecOptionsDsl {
   private val cdkBuilder: CommonGatewayRouteSpecOptions.Builder =
       CommonGatewayRouteSpecOptions.builder()
 
+  /**
+   * @param priority The priority for the gateway route.
+   * When a Virtual Gateway has multiple gateway routes, gateway route match
+   * is performed in the order of specified value, where 0 is the highest priority,
+   * and first matched gateway route is selected.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }

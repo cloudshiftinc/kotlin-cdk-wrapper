@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.cloudfront.OriginBindOptions
 public class OriginBindOptionsDsl {
   private val cdkBuilder: OriginBindOptions.Builder = OriginBindOptions.builder()
 
+  /**
+   * @param originId The identifier of this Origin, as assigned by the Distribution this Origin has
+   * been used added to. 
+   */
   public fun originId(originId: String) {
     cdkBuilder.originId(originId)
   }

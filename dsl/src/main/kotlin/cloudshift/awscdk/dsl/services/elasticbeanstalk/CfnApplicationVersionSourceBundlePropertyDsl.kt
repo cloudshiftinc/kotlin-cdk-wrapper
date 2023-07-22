@@ -11,10 +11,16 @@ public class CfnApplicationVersionSourceBundlePropertyDsl {
   private val cdkBuilder: CfnApplicationVersion.SourceBundleProperty.Builder =
       CfnApplicationVersion.SourceBundleProperty.builder()
 
+  /**
+   * @param s3Bucket The Amazon S3 bucket where the data is located. 
+   */
   public fun s3Bucket(s3Bucket: String) {
     cdkBuilder.s3Bucket(s3Bucket)
   }
 
+  /**
+   * @param s3Key The Amazon S3 key where the data is located. 
+   */
   public fun s3Key(s3Key: String) {
     cdkBuilder.s3Key(s3Key)
   }

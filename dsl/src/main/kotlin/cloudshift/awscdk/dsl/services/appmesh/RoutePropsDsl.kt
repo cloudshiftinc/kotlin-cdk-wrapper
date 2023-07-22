@@ -13,18 +13,30 @@ import software.amazon.awscdk.services.appmesh.RouteSpec
 public class RoutePropsDsl {
   private val cdkBuilder: RouteProps.Builder = RouteProps.builder()
 
+  /**
+   * @param mesh The service mesh to define the route in. 
+   */
   public fun mesh(mesh: IMesh) {
     cdkBuilder.mesh(mesh)
   }
 
+  /**
+   * @param routeName The name of the route.
+   */
   public fun routeName(routeName: String) {
     cdkBuilder.routeName(routeName)
   }
 
+  /**
+   * @param routeSpec Protocol specific spec. 
+   */
   public fun routeSpec(routeSpec: RouteSpec) {
     cdkBuilder.routeSpec(routeSpec)
   }
 
+  /**
+   * @param virtualRouter The VirtualRouter the Route belongs to. 
+   */
   public fun virtualRouter(virtualRouter: IVirtualRouter) {
     cdkBuilder.virtualRouter(virtualRouter)
   }

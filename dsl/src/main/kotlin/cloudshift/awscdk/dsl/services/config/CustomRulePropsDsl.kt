@@ -18,40 +18,68 @@ import software.amazon.awscdk.services.lambda.IFunction
 public class CustomRulePropsDsl {
   private val cdkBuilder: CustomRuleProps.Builder = CustomRuleProps.builder()
 
+  /**
+   * @param configRuleName A name for the AWS Config rule.
+   */
   public fun configRuleName(configRuleName: String) {
     cdkBuilder.configRuleName(configRuleName)
   }
 
+  /**
+   * @param configurationChanges Whether to run the rule on configuration changes.
+   */
   public fun configurationChanges(configurationChanges: Boolean) {
     cdkBuilder.configurationChanges(configurationChanges)
   }
 
+  /**
+   * @param description A description about this AWS Config rule.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
-  public fun inputParameters(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param inputParameters Input parameter values that are passed to the AWS Config rule.
+   */
+  public fun inputParameters(inputParameters: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(inputParameters)
     cdkBuilder.inputParameters(builder.map)
   }
 
+  /**
+   * @param inputParameters Input parameter values that are passed to the AWS Config rule.
+   */
   public fun inputParameters(inputParameters: Map<String, Any>) {
     cdkBuilder.inputParameters(inputParameters)
   }
 
+  /**
+   * @param lambdaFunction The Lambda function to run. 
+   */
   public fun lambdaFunction(lambdaFunction: IFunction) {
     cdkBuilder.lambdaFunction(lambdaFunction)
   }
 
+  /**
+   * @param maximumExecutionFrequency The maximum frequency at which the AWS Config rule runs
+   * evaluations.
+   */
   public fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
     cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
   }
 
+  /**
+   * @param periodic Whether to run the rule on a fixed frequency.
+   */
   public fun periodic(periodic: Boolean) {
     cdkBuilder.periodic(periodic)
   }
 
+  /**
+   * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule.
+   */
   public fun ruleScope(ruleScope: RuleScope) {
     cdkBuilder.ruleScope(ruleScope)
   }

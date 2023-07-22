@@ -11,14 +11,23 @@ public class CfnFlowGlueDataCatalogPropertyDsl {
   private val cdkBuilder: CfnFlow.GlueDataCatalogProperty.Builder =
       CfnFlow.GlueDataCatalogProperty.builder()
 
+  /**
+   * @param databaseName A string containing the value for the tag. 
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * @param roleArn A string containing the value for the tag. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param tablePrefix A string containing the value for the tag. 
+   */
   public fun tablePrefix(tablePrefix: String) {
     cdkBuilder.tablePrefix(tablePrefix)
   }

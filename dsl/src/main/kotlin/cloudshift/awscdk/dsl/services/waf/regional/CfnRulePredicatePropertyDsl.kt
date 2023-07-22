@@ -12,18 +12,52 @@ import software.amazon.awscdk.services.waf.regional.CfnRule
 public class CfnRulePredicatePropertyDsl {
   private val cdkBuilder: CfnRule.PredicateProperty.Builder = CfnRule.PredicateProperty.builder()
 
+  /**
+   * @param dataId A unique identifier for a predicate in a `Rule` , such as `ByteMatchSetId` or
+   * `IPSetId` . 
+   * The ID is returned by the corresponding `Create` or `List` command.
+   */
   public fun dataId(dataId: String) {
     cdkBuilder.dataId(dataId)
   }
 
+  /**
+   * @param negated Set `Negated` to `False` if you want AWS WAF to allow, block, or count requests
+   * based on the settings in the specified `ByteMatchSet` , `IPSet` , `SqlInjectionMatchSet` ,
+   * `XssMatchSet` , `RegexMatchSet` , `GeoMatchSet` , or `SizeConstraintSet` . 
+   * For example, if an `IPSet` includes the IP address `192.0.2.44` , AWS WAF will allow or block
+   * requests based on that IP address.
+   *
+   * Set `Negated` to `True` if you want AWS WAF to allow or block a request based on the negation
+   * of the settings in the `ByteMatchSet` , `IPSet` , `SqlInjectionMatchSet` , `XssMatchSet` ,
+   * `RegexMatchSet` , `GeoMatchSet` , or `SizeConstraintSet` . For example, if an `IPSet` includes the
+   * IP address `192.0.2.44` , AWS WAF will allow, block, or count requests based on all IP addresses
+   * *except* `192.0.2.44` .
+   */
   public fun negated(negated: Boolean) {
     cdkBuilder.negated(negated)
   }
 
+  /**
+   * @param negated Set `Negated` to `False` if you want AWS WAF to allow, block, or count requests
+   * based on the settings in the specified `ByteMatchSet` , `IPSet` , `SqlInjectionMatchSet` ,
+   * `XssMatchSet` , `RegexMatchSet` , `GeoMatchSet` , or `SizeConstraintSet` . 
+   * For example, if an `IPSet` includes the IP address `192.0.2.44` , AWS WAF will allow or block
+   * requests based on that IP address.
+   *
+   * Set `Negated` to `True` if you want AWS WAF to allow or block a request based on the negation
+   * of the settings in the `ByteMatchSet` , `IPSet` , `SqlInjectionMatchSet` , `XssMatchSet` ,
+   * `RegexMatchSet` , `GeoMatchSet` , or `SizeConstraintSet` . For example, if an `IPSet` includes the
+   * IP address `192.0.2.44` , AWS WAF will allow, block, or count requests based on all IP addresses
+   * *except* `192.0.2.44` .
+   */
   public fun negated(negated: IResolvable) {
     cdkBuilder.negated(negated)
   }
 
+  /**
+   * @param type The type of predicate in a `Rule` , such as `ByteMatch` or `IPSet` . 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

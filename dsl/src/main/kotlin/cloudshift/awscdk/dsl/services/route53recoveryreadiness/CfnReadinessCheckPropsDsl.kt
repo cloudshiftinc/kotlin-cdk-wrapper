@@ -17,18 +17,30 @@ public class CfnReadinessCheckPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param readinessCheckName The name of the readiness check to create.
+   */
   public fun readinessCheckName(readinessCheckName: String) {
     cdkBuilder.readinessCheckName(readinessCheckName)
   }
 
+  /**
+   * @param resourceSetName The name of the resource set to check.
+   */
   public fun resourceSetName(resourceSetName: String) {
     cdkBuilder.resourceSetName(resourceSetName)
   }
 
+  /**
+   * @param tags A collection of tags associated with a resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A collection of tags associated with a resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

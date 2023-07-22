@@ -11,6 +11,10 @@ public class CfnChannelDvbTdtSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.DvbTdtSettingsProperty.Builder =
       CfnChannel.DvbTdtSettingsProperty.builder()
 
+  /**
+   * @param repInterval The number of milliseconds between instances of this table in the output
+   * transport stream.
+   */
   public fun repInterval(repInterval: Number) {
     cdkBuilder.repInterval(repInterval)
   }

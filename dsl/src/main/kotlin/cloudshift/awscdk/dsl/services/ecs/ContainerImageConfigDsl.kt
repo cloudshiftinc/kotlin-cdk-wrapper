@@ -12,18 +12,27 @@ import software.amazon.awscdk.services.ecs.ContainerImageConfig
 public class ContainerImageConfigDsl {
   private val cdkBuilder: ContainerImageConfig.Builder = ContainerImageConfig.builder()
 
+  /**
+   * @param imageName Specifies the name of the container image. 
+   */
   public fun imageName(imageName: String) {
     cdkBuilder.imageName(imageName)
   }
 
+  /**
+   * @param repositoryCredentials Specifies the credentials used to access the image repository.
+   */
   public
-      fun repositoryCredentials(block: CfnTaskDefinitionRepositoryCredentialsPropertyDsl.() -> Unit
+      fun repositoryCredentials(repositoryCredentials: CfnTaskDefinitionRepositoryCredentialsPropertyDsl.() -> Unit
       = {}) {
     val builder = CfnTaskDefinitionRepositoryCredentialsPropertyDsl()
-    builder.apply(block)
+    builder.apply(repositoryCredentials)
     cdkBuilder.repositoryCredentials(builder.build())
   }
 
+  /**
+   * @param repositoryCredentials Specifies the credentials used to access the image repository.
+   */
   public
       fun repositoryCredentials(repositoryCredentials: CfnTaskDefinition.RepositoryCredentialsProperty) {
     cdkBuilder.repositoryCredentials(repositoryCredentials)

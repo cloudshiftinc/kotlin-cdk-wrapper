@@ -12,14 +12,23 @@ public class CfnDataflowEndpointGroupRangedSocketAddressPropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.RangedSocketAddressProperty.Builder =
       CfnDataflowEndpointGroup.RangedSocketAddressProperty.builder()
 
+  /**
+   * @param name the value to be set.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param portRange the value to be set.
+   */
   public fun portRange(portRange: IResolvable) {
     cdkBuilder.portRange(portRange)
   }
 
+  /**
+   * @param portRange the value to be set.
+   */
   public fun portRange(portRange: CfnDataflowEndpointGroup.IntegerRangeProperty) {
     cdkBuilder.portRange(portRange)
   }

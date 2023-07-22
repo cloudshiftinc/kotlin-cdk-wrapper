@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes
 public class AcceleratorAttributesDsl {
   private val cdkBuilder: AcceleratorAttributes.Builder = AcceleratorAttributes.builder()
 
+  /**
+   * @param acceleratorArn The ARN of the accelerator. 
+   */
   public fun acceleratorArn(acceleratorArn: String) {
     cdkBuilder.acceleratorArn(acceleratorArn)
   }
 
+  /**
+   * @param dnsName The DNS name of the accelerator. 
+   */
   public fun dnsName(dnsName: String) {
     cdkBuilder.dnsName(dnsName)
   }

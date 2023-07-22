@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ses.DedicatedIpPoolProps
 public class DedicatedIpPoolPropsDsl {
   private val cdkBuilder: DedicatedIpPoolProps.Builder = DedicatedIpPoolProps.builder()
 
+  /**
+   * @param dedicatedIpPoolName A name for the dedicated IP pool.
+   */
   public fun dedicatedIpPoolName(dedicatedIpPoolName: String) {
     cdkBuilder.dedicatedIpPoolName(dedicatedIpPoolName)
   }

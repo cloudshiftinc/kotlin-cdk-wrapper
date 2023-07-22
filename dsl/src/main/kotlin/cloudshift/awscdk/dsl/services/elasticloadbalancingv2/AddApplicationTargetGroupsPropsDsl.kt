@@ -19,22 +19,42 @@ public class AddApplicationTargetGroupsPropsDsl {
 
   private val _targetGroups: MutableList<IApplicationTargetGroup> = mutableListOf()
 
+  /**
+   * @param conditions Rule applies if matches the conditions.
+   */
   public fun conditions(vararg conditions: ListenerCondition) {
     _conditions.addAll(listOf(*conditions))
   }
 
+  /**
+   * @param conditions Rule applies if matches the conditions.
+   */
   public fun conditions(conditions: Collection<ListenerCondition>) {
     _conditions.addAll(conditions)
   }
 
+  /**
+   * @param priority Priority of this target group.
+   * The rule with the lowest priority will be used for every request.
+   * If priority is not given, these target groups will be added as
+   * defaults, and must not have conditions.
+   *
+   * Priorities must be unique.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }
 
+  /**
+   * @param targetGroups Target groups to forward requests to. 
+   */
   public fun targetGroups(vararg targetGroups: IApplicationTargetGroup) {
     _targetGroups.addAll(listOf(*targetGroups))
   }
 
+  /**
+   * @param targetGroups Target groups to forward requests to. 
+   */
   public fun targetGroups(targetGroups: Collection<IApplicationTargetGroup>) {
     _targetGroups.addAll(targetGroups)
   }

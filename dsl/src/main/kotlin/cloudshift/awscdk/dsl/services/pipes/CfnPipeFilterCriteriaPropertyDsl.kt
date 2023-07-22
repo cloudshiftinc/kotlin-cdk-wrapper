@@ -16,14 +16,23 @@ public class CfnPipeFilterCriteriaPropertyDsl {
 
   private val _filters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param filters The event patterns.
+   */
   public fun filters(vararg filters: Any) {
     _filters.addAll(listOf(*filters))
   }
 
+  /**
+   * @param filters The event patterns.
+   */
   public fun filters(filters: Collection<Any>) {
     _filters.addAll(filters)
   }
 
+  /**
+   * @param filters The event patterns.
+   */
   public fun filters(filters: IResolvable) {
     cdkBuilder.filters(filters)
   }

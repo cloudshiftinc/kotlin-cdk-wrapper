@@ -11,6 +11,9 @@ public class CfnMonitoringScheduleStatisticsResourcePropertyDsl {
   private val cdkBuilder: CfnMonitoringSchedule.StatisticsResourceProperty.Builder =
       CfnMonitoringSchedule.StatisticsResourceProperty.builder()
 
+  /**
+   * @param s3Uri The S3 URI for the statistics resource.
+   */
   public fun s3Uri(s3Uri: String) {
     cdkBuilder.s3Uri(s3Uri)
   }

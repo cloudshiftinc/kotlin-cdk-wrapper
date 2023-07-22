@@ -12,12 +12,18 @@ public class VirtualServiceBackendOptionsDsl {
   private val cdkBuilder: VirtualServiceBackendOptions.Builder =
       VirtualServiceBackendOptions.builder()
 
-  public fun tlsClientPolicy(block: TlsClientPolicyDsl.() -> Unit = {}) {
+  /**
+   * @param tlsClientPolicy TLS properties for  Client policy for the backend.
+   */
+  public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicyDsl.() -> Unit = {}) {
     val builder = TlsClientPolicyDsl()
-    builder.apply(block)
+    builder.apply(tlsClientPolicy)
     cdkBuilder.tlsClientPolicy(builder.build())
   }
 
+  /**
+   * @param tlsClientPolicy TLS properties for  Client policy for the backend.
+   */
   public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
     cdkBuilder.tlsClientPolicy(tlsClientPolicy)
   }

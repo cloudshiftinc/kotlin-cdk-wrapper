@@ -13,35 +13,59 @@ public class CfnEndpointConfigClarifyShapConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ClarifyShapConfigProperty.Builder =
       CfnEndpointConfig.ClarifyShapConfigProperty.builder()
 
+  /**
+   * @param numberOfSamples the value to be set.
+   */
   public fun numberOfSamples(numberOfSamples: Number) {
     cdkBuilder.numberOfSamples(numberOfSamples)
   }
 
+  /**
+   * @param seed the value to be set.
+   */
   public fun seed(seed: Number) {
     cdkBuilder.seed(seed)
   }
 
+  /**
+   * @param shapBaselineConfig the value to be set. 
+   */
   public fun shapBaselineConfig(shapBaselineConfig: IResolvable) {
     cdkBuilder.shapBaselineConfig(shapBaselineConfig)
   }
 
+  /**
+   * @param shapBaselineConfig the value to be set. 
+   */
   public
       fun shapBaselineConfig(shapBaselineConfig: CfnEndpointConfig.ClarifyShapBaselineConfigProperty) {
     cdkBuilder.shapBaselineConfig(shapBaselineConfig)
   }
 
+  /**
+   * @param textConfig the value to be set.
+   */
   public fun textConfig(textConfig: IResolvable) {
     cdkBuilder.textConfig(textConfig)
   }
 
+  /**
+   * @param textConfig the value to be set.
+   */
   public fun textConfig(textConfig: CfnEndpointConfig.ClarifyTextConfigProperty) {
     cdkBuilder.textConfig(textConfig)
   }
 
+  /**
+   * @param useLogit the value to be set.
+   */
   public fun useLogit(useLogit: Boolean) {
     cdkBuilder.useLogit(useLogit)
   }
 
+  /**
+   * @param useLogit the value to be set.
+   */
   public fun useLogit(useLogit: IResolvable) {
     cdkBuilder.useLogit(useLogit)
   }

@@ -15,22 +15,34 @@ public class AuthorizationConfigDsl {
 
   private val _additionalAuthorizationModes: MutableList<AuthorizationMode> = mutableListOf()
 
+  /**
+   * @param additionalAuthorizationModes Additional authorization modes.
+   */
   public
       fun additionalAuthorizationModes(additionalAuthorizationModes: AuthorizationModeDsl.() -> Unit) {
     _additionalAuthorizationModes.add(AuthorizationModeDsl().apply(additionalAuthorizationModes).build())
   }
 
+  /**
+   * @param additionalAuthorizationModes Additional authorization modes.
+   */
   public
       fun additionalAuthorizationModes(additionalAuthorizationModes: Collection<AuthorizationMode>) {
     _additionalAuthorizationModes.addAll(additionalAuthorizationModes)
   }
 
-  public fun defaultAuthorization(block: AuthorizationModeDsl.() -> Unit = {}) {
+  /**
+   * @param defaultAuthorization Optional authorization configuration.
+   */
+  public fun defaultAuthorization(defaultAuthorization: AuthorizationModeDsl.() -> Unit = {}) {
     val builder = AuthorizationModeDsl()
-    builder.apply(block)
+    builder.apply(defaultAuthorization)
     cdkBuilder.defaultAuthorization(builder.build())
   }
 
+  /**
+   * @param defaultAuthorization Optional authorization configuration.
+   */
   public fun defaultAuthorization(defaultAuthorization: AuthorizationMode) {
     cdkBuilder.defaultAuthorization(defaultAuthorization)
   }

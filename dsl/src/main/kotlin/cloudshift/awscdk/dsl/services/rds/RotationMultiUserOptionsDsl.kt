@@ -18,36 +18,80 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 public class RotationMultiUserOptionsDsl {
   private val cdkBuilder: RotationMultiUserOptions.Builder = RotationMultiUserOptions.builder()
 
+  /**
+   * @param automaticallyAfter Specifies the number of days after the previous rotation before
+   * Secrets Manager triggers the next automatic rotation.
+   */
   public fun automaticallyAfter(automaticallyAfter: Duration) {
     cdkBuilder.automaticallyAfter(automaticallyAfter)
   }
 
+  /**
+   * @param endpoint The VPC interface endpoint to use for the Secrets Manager API.
+   * If you enable private DNS hostnames for your VPC private endpoint (the default), you don't
+   * need to specify an endpoint. The standard Secrets Manager DNS hostname the Secrets Manager
+   * CLI and SDKs use by default (https://secretsmanager.<region>.amazonaws.com) automatically
+   * resolves to your VPC endpoint.
+   */
   public fun endpoint(endpoint: IInterfaceVpcEndpoint) {
     cdkBuilder.endpoint(endpoint)
   }
 
+  /**
+   * @param excludeCharacters Specifies characters to not include in generated passwords.
+   */
   public fun excludeCharacters(excludeCharacters: String) {
     cdkBuilder.excludeCharacters(excludeCharacters)
   }
 
+  /**
+   * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
+   * until the next scheduled rotation window.
+   */
   public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
     cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
   }
 
+  /**
+   * @param secret The secret to rotate. 
+   * It must be a JSON string with the following format:
+   *
+   * ```
+   * {
+   * "engine": &lt;required: database engine&gt;,
+   * "host": &lt;required: instance host name&gt;,
+   * "username": &lt;required: username&gt;,
+   * "password": &lt;required: password&gt;,
+   * "dbname": &lt;optional: database name&gt;,
+   * "port": &lt;optional: if not specified, default port will be used&gt;,
+   * "masterarn": &lt;required: the arn of the master secret which will be used to create
+   * users/change passwords&gt;
+   * }
+   * ```
+   */
   public fun secret(secret: ISecret) {
     cdkBuilder.secret(secret)
   }
 
+  /**
+   * @param securityGroup The security group for the Lambda rotation function.
+   */
   public fun securityGroup(securityGroup: ISecurityGroup) {
     cdkBuilder.securityGroup(securityGroup)
   }
 
-  public fun vpcSubnets(block: SubnetSelectionDsl.() -> Unit = {}) {
+  /**
+   * @param vpcSubnets Where to place the rotation Lambda function.
+   */
+  public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
     val builder = SubnetSelectionDsl()
-    builder.apply(block)
+    builder.apply(vpcSubnets)
     cdkBuilder.vpcSubnets(builder.build())
   }
 
+  /**
+   * @param vpcSubnets Where to place the rotation Lambda function.
+   */
   public fun vpcSubnets(vpcSubnets: SubnetSelection) {
     cdkBuilder.vpcSubnets(vpcSubnets)
   }

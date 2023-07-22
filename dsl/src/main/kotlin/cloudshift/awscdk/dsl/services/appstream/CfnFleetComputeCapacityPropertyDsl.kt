@@ -11,6 +11,9 @@ public class CfnFleetComputeCapacityPropertyDsl {
   private val cdkBuilder: CfnFleet.ComputeCapacityProperty.Builder =
       CfnFleet.ComputeCapacityProperty.builder()
 
+  /**
+   * @param desiredInstances The desired number of streaming instances. 
+   */
   public fun desiredInstances(desiredInstances: Number) {
     cdkBuilder.desiredInstances(desiredInstances)
   }

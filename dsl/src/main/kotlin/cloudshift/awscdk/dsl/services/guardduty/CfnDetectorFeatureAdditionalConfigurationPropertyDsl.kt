@@ -11,10 +11,16 @@ public class CfnDetectorFeatureAdditionalConfigurationPropertyDsl {
   private val cdkBuilder: CfnDetector.FeatureAdditionalConfigurationProperty.Builder =
       CfnDetector.FeatureAdditionalConfigurationProperty.builder()
 
+  /**
+   * @param name Name of the additional configuration of a feature.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param status Status of the additional configuration of a feature.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

@@ -11,10 +11,16 @@ public class CfnVirtualNodeBackendDefaultsPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.BackendDefaultsProperty.Builder =
       CfnVirtualNode.BackendDefaultsProperty.builder()
 
+  /**
+   * @param clientPolicy A reference to an object that represents a client policy.
+   */
   public fun clientPolicy(clientPolicy: IResolvable) {
     cdkBuilder.clientPolicy(clientPolicy)
   }
 
+  /**
+   * @param clientPolicy A reference to an object that represents a client policy.
+   */
   public fun clientPolicy(clientPolicy: CfnVirtualNode.ClientPolicyProperty) {
     cdkBuilder.clientPolicy(clientPolicy)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.appmesh.MeshServiceDiscovery
 public class MeshServiceDiscoveryDsl {
   private val cdkBuilder: MeshServiceDiscovery.Builder = MeshServiceDiscovery.builder()
 
+  /**
+   * @param ipPreference IP preference applied to all Virtual Nodes in the Mesh.
+   */
   public fun ipPreference(ipPreference: IpPreference) {
     cdkBuilder.ipPreference(ipPreference)
   }

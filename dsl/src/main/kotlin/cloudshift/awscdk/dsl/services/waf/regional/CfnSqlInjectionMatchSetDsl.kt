@@ -21,18 +21,48 @@ public class CfnSqlInjectionMatchSetDsl(
 
   private val _sqlInjectionMatchTuples: MutableList<Any> = mutableListOf()
 
+  /**
+   * The name, if any, of the `SqlInjectionMatchSet` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-name)
+   * @param name The name, if any, of the `SqlInjectionMatchSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Specifies the parts of web requests that you want to inspect for snippets of malicious SQL
+   * code.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples)
+   * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect for
+   * snippets of malicious SQL code. 
+   */
   public fun sqlInjectionMatchTuples(vararg sqlInjectionMatchTuples: Any) {
     _sqlInjectionMatchTuples.addAll(listOf(*sqlInjectionMatchTuples))
   }
 
+  /**
+   * Specifies the parts of web requests that you want to inspect for snippets of malicious SQL
+   * code.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples)
+   * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect for
+   * snippets of malicious SQL code. 
+   */
   public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: Collection<Any>) {
     _sqlInjectionMatchTuples.addAll(sqlInjectionMatchTuples)
   }
 
+  /**
+   * Specifies the parts of web requests that you want to inspect for snippets of malicious SQL
+   * code.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples)
+   * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect for
+   * snippets of malicious SQL code. 
+   */
   public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable) {
     cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples)
   }

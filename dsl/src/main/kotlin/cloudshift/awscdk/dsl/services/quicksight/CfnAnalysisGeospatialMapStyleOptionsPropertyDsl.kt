@@ -11,6 +11,9 @@ public class CfnAnalysisGeospatialMapStyleOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GeospatialMapStyleOptionsProperty.Builder =
       CfnAnalysis.GeospatialMapStyleOptionsProperty.builder()
 
+  /**
+   * @param baseMapStyle The base map style of the geospatial map.
+   */
   public fun baseMapStyle(baseMapStyle: String) {
     cdkBuilder.baseMapStyle(baseMapStyle)
   }

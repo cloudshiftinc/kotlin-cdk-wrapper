@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker
 public class DeploymentCircuitBreakerDsl {
   private val cdkBuilder: DeploymentCircuitBreaker.Builder = DeploymentCircuitBreaker.builder()
 
+  /**
+   * @param rollback Whether to enable rollback on deployment failure.
+   */
   public fun rollback(rollback: Boolean) {
     cdkBuilder.rollback(rollback)
   }

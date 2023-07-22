@@ -18,34 +18,58 @@ public class CfnSuiteDefinitionSuiteDefinitionConfigurationPropertyDsl {
 
   private val _devices: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param devicePermissionRoleArn The device permission role arn of the test suite. 
+   */
   public fun devicePermissionRoleArn(devicePermissionRoleArn: String) {
     cdkBuilder.devicePermissionRoleArn(devicePermissionRoleArn)
   }
 
+  /**
+   * @param devices The devices being tested in the test suite.
+   */
   public fun devices(vararg devices: Any) {
     _devices.addAll(listOf(*devices))
   }
 
+  /**
+   * @param devices The devices being tested in the test suite.
+   */
   public fun devices(devices: Collection<Any>) {
     _devices.addAll(devices)
   }
 
+  /**
+   * @param devices The devices being tested in the test suite.
+   */
   public fun devices(devices: IResolvable) {
     cdkBuilder.devices(devices)
   }
 
+  /**
+   * @param intendedForQualification Whether the tests are intended for qualification in a suite.
+   */
   public fun intendedForQualification(intendedForQualification: Boolean) {
     cdkBuilder.intendedForQualification(intendedForQualification)
   }
 
+  /**
+   * @param intendedForQualification Whether the tests are intended for qualification in a suite.
+   */
   public fun intendedForQualification(intendedForQualification: IResolvable) {
     cdkBuilder.intendedForQualification(intendedForQualification)
   }
 
+  /**
+   * @param rootGroup The root group of the test suite. 
+   */
   public fun rootGroup(rootGroup: String) {
     cdkBuilder.rootGroup(rootGroup)
   }
 
+  /**
+   * @param suiteDefinitionName The Name of the suite definition.
+   */
   public fun suiteDefinitionName(suiteDefinitionName: String) {
     cdkBuilder.suiteDefinitionName(suiteDefinitionName)
   }

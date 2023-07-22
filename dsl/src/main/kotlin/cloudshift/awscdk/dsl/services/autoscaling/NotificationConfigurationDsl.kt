@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.sns.ITopic
 public class NotificationConfigurationDsl {
   private val cdkBuilder: NotificationConfiguration.Builder = NotificationConfiguration.builder()
 
+  /**
+   * @param scalingEvents Which fleet scaling events triggers a notification.
+   */
   public fun scalingEvents(scalingEvents: ScalingEvents) {
     cdkBuilder.scalingEvents(scalingEvents)
   }
 
+  /**
+   * @param topic SNS topic to send notifications about fleet scaling events. 
+   */
   public fun topic(topic: ITopic) {
     cdkBuilder.topic(topic)
   }

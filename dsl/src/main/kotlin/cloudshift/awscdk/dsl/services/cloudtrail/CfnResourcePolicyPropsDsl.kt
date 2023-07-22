@@ -13,16 +13,40 @@ import software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()
 
+  /**
+   * @param resourceArn The Amazon Resource Name (ARN) of the CloudTrail channel attached to the
+   * resource-based policy. 
+   * The following is the format of a resource ARN:
+   * `arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel` .
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }
 
-  public fun resourcePolicy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param resourcePolicy A JSON-formatted string for an AWS resource-based policy. 
+   * The following are requirements for the resource policy:
+   *
+   * * Contains only one action: cloudtrail-data:PutAuditEvents
+   * * Contains at least one statement. The policy can have a maximum of 20 statements.
+   * * Each statement contains at least one principal. A statement can have a maximum of 50
+   * principals.
+   */
+  public fun resourcePolicy(resourcePolicy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(resourcePolicy)
     cdkBuilder.resourcePolicy(builder.map)
   }
 
+  /**
+   * @param resourcePolicy A JSON-formatted string for an AWS resource-based policy. 
+   * The following are requirements for the resource policy:
+   *
+   * * Contains only one action: cloudtrail-data:PutAuditEvents
+   * * Contains at least one statement. The policy can have a maximum of 20 statements.
+   * * Each statement contains at least one principal. A statement can have a maximum of 50
+   * principals.
+   */
   public fun resourcePolicy(resourcePolicy: Any) {
     cdkBuilder.resourcePolicy(resourcePolicy)
   }

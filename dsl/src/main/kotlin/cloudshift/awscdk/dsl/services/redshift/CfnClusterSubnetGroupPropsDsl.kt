@@ -19,22 +19,43 @@ public class CfnClusterSubnetGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description for the subnet group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param subnetIds An array of VPC subnet IDs. 
+   * A maximum of 20 subnets can be modified in a single request.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds An array of VPC subnet IDs. 
+   * A maximum of 20 subnets can be modified in a single request.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this subnet
+   * group.
+   * Use tags to manage your resources.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this subnet
+   * group.
+   * Use tags to manage your resources.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

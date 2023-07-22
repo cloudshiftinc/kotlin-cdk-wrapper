@@ -11,10 +11,18 @@ public class CfnClusterEndpointPropertyDsl {
   private val cdkBuilder: CfnCluster.EndpointProperty.Builder =
       CfnCluster.EndpointProperty.builder()
 
+  /**
+   * @param address The DNS address of the cluster.
+   * This property is read only.
+   */
   public fun address(address: String) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param port The port that the database engine is listening on.
+   * This property is read only.
+   */
   public fun port(port: String) {
     cdkBuilder.port(port)
   }

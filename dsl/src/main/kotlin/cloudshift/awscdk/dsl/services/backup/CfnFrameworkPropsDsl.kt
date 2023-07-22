@@ -18,34 +18,67 @@ public class CfnFrameworkPropsDsl {
 
   private val _frameworkTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param frameworkControls Contains detailed information about all of the controls of a
+   * framework. 
+   * Each framework must contain at least one control.
+   */
   public fun frameworkControls(vararg frameworkControls: Any) {
     _frameworkControls.addAll(listOf(*frameworkControls))
   }
 
+  /**
+   * @param frameworkControls Contains detailed information about all of the controls of a
+   * framework. 
+   * Each framework must contain at least one control.
+   */
   public fun frameworkControls(frameworkControls: Collection<Any>) {
     _frameworkControls.addAll(frameworkControls)
   }
 
+  /**
+   * @param frameworkControls Contains detailed information about all of the controls of a
+   * framework. 
+   * Each framework must contain at least one control.
+   */
   public fun frameworkControls(frameworkControls: IResolvable) {
     cdkBuilder.frameworkControls(frameworkControls)
   }
 
+  /**
+   * @param frameworkDescription An optional description of the framework with a maximum 1,024
+   * characters.
+   */
   public fun frameworkDescription(frameworkDescription: String) {
     cdkBuilder.frameworkDescription(frameworkDescription)
   }
 
+  /**
+   * @param frameworkName The unique name of a framework.
+   * This name is between 1 and 256 characters, starting with a letter, and consisting of letters
+   * (a-z, A-Z), numbers (0-9), and underscores (_).
+   */
   public fun frameworkName(frameworkName: String) {
     cdkBuilder.frameworkName(frameworkName)
   }
 
+  /**
+   * @param frameworkTags A list of tags with which to tag your framework.
+   */
   public fun frameworkTags(vararg frameworkTags: Any) {
     _frameworkTags.addAll(listOf(*frameworkTags))
   }
 
+  /**
+   * @param frameworkTags A list of tags with which to tag your framework.
+   */
   public fun frameworkTags(frameworkTags: Collection<Any>) {
     _frameworkTags.addAll(frameworkTags)
   }
 
+  /**
+   * @param frameworkTags A list of tags with which to tag your framework.
+   */
   public fun frameworkTags(frameworkTags: IResolvable) {
     cdkBuilder.frameworkTags(frameworkTags)
   }

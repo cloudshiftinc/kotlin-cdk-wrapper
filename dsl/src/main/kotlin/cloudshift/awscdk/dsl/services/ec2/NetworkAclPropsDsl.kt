@@ -13,20 +13,37 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 public class NetworkAclPropsDsl {
   private val cdkBuilder: NetworkAclProps.Builder = NetworkAclProps.builder()
 
+  /**
+   * @param networkAclName The name of the NetworkAcl.
+   * It is not recommended to use an explicit name.
+   */
   public fun networkAclName(networkAclName: String) {
     cdkBuilder.networkAclName(networkAclName)
   }
 
-  public fun subnetSelection(block: SubnetSelectionDsl.() -> Unit = {}) {
+  /**
+   * @param subnetSelection Subnets in the given VPC to associate the ACL with.
+   * More subnets can always be added later by calling
+   * `associateWithSubnets()`.
+   */
+  public fun subnetSelection(subnetSelection: SubnetSelectionDsl.() -> Unit = {}) {
     val builder = SubnetSelectionDsl()
-    builder.apply(block)
+    builder.apply(subnetSelection)
     cdkBuilder.subnetSelection(builder.build())
   }
 
+  /**
+   * @param subnetSelection Subnets in the given VPC to associate the ACL with.
+   * More subnets can always be added later by calling
+   * `associateWithSubnets()`.
+   */
   public fun subnetSelection(subnetSelection: SubnetSelection) {
     cdkBuilder.subnetSelection(subnetSelection)
   }
 
+  /**
+   * @param vpc The VPC in which to create the NetworkACL. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

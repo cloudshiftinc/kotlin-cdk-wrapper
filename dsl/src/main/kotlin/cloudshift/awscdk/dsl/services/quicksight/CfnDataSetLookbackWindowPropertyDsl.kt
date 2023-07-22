@@ -12,14 +12,23 @@ public class CfnDataSetLookbackWindowPropertyDsl {
   private val cdkBuilder: CfnDataSet.LookbackWindowProperty.Builder =
       CfnDataSet.LookbackWindowProperty.builder()
 
+  /**
+   * @param columnName Column Name</p>.
+   */
   public fun columnName(columnName: String) {
     cdkBuilder.columnName(columnName)
   }
 
+  /**
+   * @param size Size</p>.
+   */
   public fun size(size: Number) {
     cdkBuilder.size(size)
   }
 
+  /**
+   * @param sizeUnit the value to be set.
+   */
   public fun sizeUnit(sizeUnit: String) {
     cdkBuilder.sizeUnit(sizeUnit)
   }

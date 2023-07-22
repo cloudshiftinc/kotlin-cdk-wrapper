@@ -12,27 +12,45 @@ public class CfnNetworkInsightsPathPathFilterPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsPath.PathFilterProperty.Builder =
       CfnNetworkInsightsPath.PathFilterProperty.builder()
 
+  /**
+   * @param destinationAddress The destination IPv4 address.
+   */
   public fun destinationAddress(destinationAddress: String) {
     cdkBuilder.destinationAddress(destinationAddress)
   }
 
+  /**
+   * @param destinationPortRange The destination port range.
+   */
   public fun destinationPortRange(destinationPortRange: IResolvable) {
     cdkBuilder.destinationPortRange(destinationPortRange)
   }
 
+  /**
+   * @param destinationPortRange The destination port range.
+   */
   public
       fun destinationPortRange(destinationPortRange: CfnNetworkInsightsPath.FilterPortRangeProperty) {
     cdkBuilder.destinationPortRange(destinationPortRange)
   }
 
+  /**
+   * @param sourceAddress The source IPv4 address.
+   */
   public fun sourceAddress(sourceAddress: String) {
     cdkBuilder.sourceAddress(sourceAddress)
   }
 
+  /**
+   * @param sourcePortRange The source port range.
+   */
   public fun sourcePortRange(sourcePortRange: IResolvable) {
     cdkBuilder.sourcePortRange(sourcePortRange)
   }
 
+  /**
+   * @param sourcePortRange The source port range.
+   */
   public fun sourcePortRange(sourcePortRange: CfnNetworkInsightsPath.FilterPortRangeProperty) {
     cdkBuilder.sourcePortRange(sourcePortRange)
   }

@@ -23,42 +23,72 @@ public class CfnDataSetNewDefaultValuesPropertyDsl {
 
   private val _stringStaticValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param dateTimeStaticValues the value to be set.
+   */
   public fun dateTimeStaticValues(vararg dateTimeStaticValues: String) {
     _dateTimeStaticValues.addAll(listOf(*dateTimeStaticValues))
   }
 
+  /**
+   * @param dateTimeStaticValues the value to be set.
+   */
   public fun dateTimeStaticValues(dateTimeStaticValues: Collection<String>) {
     _dateTimeStaticValues.addAll(dateTimeStaticValues)
   }
 
+  /**
+   * @param decimalStaticValues the value to be set.
+   */
   public fun decimalStaticValues(vararg decimalStaticValues: Number) {
     _decimalStaticValues.addAll(listOf(*decimalStaticValues))
   }
 
+  /**
+   * @param decimalStaticValues the value to be set.
+   */
   public fun decimalStaticValues(decimalStaticValues: Collection<Number>) {
     _decimalStaticValues.addAll(decimalStaticValues)
   }
 
+  /**
+   * @param decimalStaticValues the value to be set.
+   */
   public fun decimalStaticValues(decimalStaticValues: IResolvable) {
     cdkBuilder.decimalStaticValues(decimalStaticValues)
   }
 
+  /**
+   * @param integerStaticValues the value to be set.
+   */
   public fun integerStaticValues(vararg integerStaticValues: Number) {
     _integerStaticValues.addAll(listOf(*integerStaticValues))
   }
 
+  /**
+   * @param integerStaticValues the value to be set.
+   */
   public fun integerStaticValues(integerStaticValues: Collection<Number>) {
     _integerStaticValues.addAll(integerStaticValues)
   }
 
+  /**
+   * @param integerStaticValues the value to be set.
+   */
   public fun integerStaticValues(integerStaticValues: IResolvable) {
     cdkBuilder.integerStaticValues(integerStaticValues)
   }
 
+  /**
+   * @param stringStaticValues the value to be set.
+   */
   public fun stringStaticValues(vararg stringStaticValues: String) {
     _stringStaticValues.addAll(listOf(*stringStaticValues))
   }
 
+  /**
+   * @param stringStaticValues the value to be set.
+   */
   public fun stringStaticValues(stringStaticValues: Collection<String>) {
     _stringStaticValues.addAll(stringStaticValues)
   }

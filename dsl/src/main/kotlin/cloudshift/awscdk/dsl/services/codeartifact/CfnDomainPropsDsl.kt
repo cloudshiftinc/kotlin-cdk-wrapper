@@ -19,28 +19,48 @@ public class CfnDomainPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param domainName A string that specifies the name of the requested domain. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param encryptionKey The key used to encrypt the domain.
+   */
   public fun encryptionKey(encryptionKey: String) {
     cdkBuilder.encryptionKey(encryptionKey)
   }
 
-  public fun permissionsPolicyDocument(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param permissionsPolicyDocument The document that defines the resource policy that is set on a
+   * domain.
+   */
+  public fun permissionsPolicyDocument(permissionsPolicyDocument: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(permissionsPolicyDocument)
     cdkBuilder.permissionsPolicyDocument(builder.map)
   }
 
+  /**
+   * @param permissionsPolicyDocument The document that defines the resource policy that is set on a
+   * domain.
+   */
   public fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
     cdkBuilder.permissionsPolicyDocument(permissionsPolicyDocument)
   }
 
+  /**
+   * @param tags A list of tags to be applied to the domain.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags A list of tags to be applied to the domain.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

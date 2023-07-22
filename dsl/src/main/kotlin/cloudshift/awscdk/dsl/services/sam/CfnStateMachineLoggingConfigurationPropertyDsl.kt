@@ -18,26 +18,44 @@ public class CfnStateMachineLoggingConfigurationPropertyDsl {
 
   private val _destinations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param destinations the value to be set. 
+   */
   public fun destinations(vararg destinations: Any) {
     _destinations.addAll(listOf(*destinations))
   }
 
+  /**
+   * @param destinations the value to be set. 
+   */
   public fun destinations(destinations: Collection<Any>) {
     _destinations.addAll(destinations)
   }
 
+  /**
+   * @param destinations the value to be set. 
+   */
   public fun destinations(destinations: IResolvable) {
     cdkBuilder.destinations(destinations)
   }
 
+  /**
+   * @param includeExecutionData the value to be set. 
+   */
   public fun includeExecutionData(includeExecutionData: Boolean) {
     cdkBuilder.includeExecutionData(includeExecutionData)
   }
 
+  /**
+   * @param includeExecutionData the value to be set. 
+   */
   public fun includeExecutionData(includeExecutionData: IResolvable) {
     cdkBuilder.includeExecutionData(includeExecutionData)
   }
 
+  /**
+   * @param level the value to be set. 
+   */
   public fun level(level: String) {
     cdkBuilder.level(level)
   }

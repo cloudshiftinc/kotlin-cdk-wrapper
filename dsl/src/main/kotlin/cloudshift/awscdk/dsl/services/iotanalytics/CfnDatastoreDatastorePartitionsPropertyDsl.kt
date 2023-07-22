@@ -16,14 +16,23 @@ public class CfnDatastoreDatastorePartitionsPropertyDsl {
 
   private val _partitions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param partitions A list of partition dimensions in a data store.
+   */
   public fun partitions(vararg partitions: Any) {
     _partitions.addAll(listOf(*partitions))
   }
 
+  /**
+   * @param partitions A list of partition dimensions in a data store.
+   */
   public fun partitions(partitions: Collection<Any>) {
     _partitions.addAll(partitions)
   }
 
+  /**
+   * @param partitions A list of partition dimensions in a data store.
+   */
   public fun partitions(partitions: IResolvable) {
     cdkBuilder.partitions(partitions)
   }

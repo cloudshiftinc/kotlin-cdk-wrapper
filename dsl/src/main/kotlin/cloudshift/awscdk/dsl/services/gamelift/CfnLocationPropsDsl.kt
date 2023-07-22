@@ -17,14 +17,23 @@ public class CfnLocationPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param locationName The location's name. 
+   */
   public fun locationName(locationName: String) {
     cdkBuilder.locationName(locationName)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

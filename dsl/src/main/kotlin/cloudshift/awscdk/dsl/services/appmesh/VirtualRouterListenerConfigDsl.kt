@@ -12,12 +12,18 @@ public class VirtualRouterListenerConfigDsl {
   private val cdkBuilder: VirtualRouterListenerConfig.Builder =
       VirtualRouterListenerConfig.builder()
 
-  public fun listener(block: CfnVirtualRouterVirtualRouterListenerPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param listener Single listener config for a VirtualRouter. 
+   */
+  public fun listener(listener: CfnVirtualRouterVirtualRouterListenerPropertyDsl.() -> Unit = {}) {
     val builder = CfnVirtualRouterVirtualRouterListenerPropertyDsl()
-    builder.apply(block)
+    builder.apply(listener)
     cdkBuilder.listener(builder.build())
   }
 
+  /**
+   * @param listener Single listener config for a VirtualRouter. 
+   */
   public fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty) {
     cdkBuilder.listener(listener)
   }

@@ -11,6 +11,10 @@ public class CfnRuleGroupIPSetReferencePropertyDsl {
   private val cdkBuilder: CfnRuleGroup.IPSetReferenceProperty.Builder =
       CfnRuleGroup.IPSetReferenceProperty.builder()
 
+  /**
+   * @param referenceArn The Amazon Resource Name (ARN) of the resource to include in the
+   * `RuleGroup.IPSetReference` .
+   */
   public fun referenceArn(referenceArn: String) {
     cdkBuilder.referenceArn(referenceArn)
   }

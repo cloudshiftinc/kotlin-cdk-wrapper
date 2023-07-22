@@ -14,22 +14,49 @@ public class CfnApplicationV2ParallelismConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.ParallelismConfigurationProperty.Builder =
       CfnApplicationV2.ParallelismConfigurationProperty.builder()
 
+  /**
+   * @param autoScalingEnabled Describes whether the Kinesis Data Analytics service can increase the
+   * parallelism of the application in response to increased throughput.
+   */
   public fun autoScalingEnabled(autoScalingEnabled: Boolean) {
     cdkBuilder.autoScalingEnabled(autoScalingEnabled)
   }
 
+  /**
+   * @param autoScalingEnabled Describes whether the Kinesis Data Analytics service can increase the
+   * parallelism of the application in response to increased throughput.
+   */
   public fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
     cdkBuilder.autoScalingEnabled(autoScalingEnabled)
   }
 
+  /**
+   * @param configurationType Describes whether the application uses the default parallelism for the
+   * Kinesis Data Analytics service. 
+   * You must set this property to `CUSTOM` in order to change your application's
+   * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
+   */
   public fun configurationType(configurationType: String) {
     cdkBuilder.configurationType(configurationType)
   }
 
+  /**
+   * @param parallelism Describes the initial number of parallel tasks that a Java-based Kinesis
+   * Data Analytics application can perform.
+   * The Kinesis Data Analytics service can increase this number automatically if
+   * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
+   * is set to `true` .
+   */
   public fun parallelism(parallelism: Number) {
     cdkBuilder.parallelism(parallelism)
   }
 
+  /**
+   * @param parallelismPerKpu Describes the number of parallel tasks that a Java-based Kinesis Data
+   * Analytics application can perform per Kinesis Processing Unit (KPU) used by the application.
+   * For more information about KPUs, see [Amazon Kinesis Data Analytics
+   * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
+   */
   public fun parallelismPerKpu(parallelismPerKpu: Number) {
     cdkBuilder.parallelismPerKpu(parallelismPerKpu)
   }

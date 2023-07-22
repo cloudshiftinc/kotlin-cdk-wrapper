@@ -11,14 +11,23 @@ public class CfnModelPackageFileSourcePropertyDsl {
   private val cdkBuilder: CfnModelPackage.FileSourceProperty.Builder =
       CfnModelPackage.FileSourceProperty.builder()
 
+  /**
+   * @param contentDigest The digest of the file source.
+   */
   public fun contentDigest(contentDigest: String) {
     cdkBuilder.contentDigest(contentDigest)
   }
 
+  /**
+   * @param contentType The type of content stored in the file source.
+   */
   public fun contentType(contentType: String) {
     cdkBuilder.contentType(contentType)
   }
 
+  /**
+   * @param s3Uri The Amazon S3 URI for the file source. 
+   */
   public fun s3Uri(s3Uri: String) {
     cdkBuilder.s3Uri(s3Uri)
   }

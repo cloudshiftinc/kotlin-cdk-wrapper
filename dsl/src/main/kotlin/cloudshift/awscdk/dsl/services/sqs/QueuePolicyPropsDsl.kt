@@ -14,10 +14,16 @@ public class QueuePolicyPropsDsl {
 
   private val _queues: MutableList<IQueue> = mutableListOf()
 
+  /**
+   * @param queues The set of queues this policy applies to. 
+   */
   public fun queues(vararg queues: IQueue) {
     _queues.addAll(listOf(*queues))
   }
 
+  /**
+   * @param queues The set of queues this policy applies to. 
+   */
   public fun queues(queues: Collection<IQueue>) {
     _queues.addAll(queues)
   }

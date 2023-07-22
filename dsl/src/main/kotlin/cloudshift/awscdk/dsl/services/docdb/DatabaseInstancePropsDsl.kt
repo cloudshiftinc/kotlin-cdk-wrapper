@@ -14,34 +14,67 @@ import software.amazon.awscdk.services.ec2.InstanceType
 public class DatabaseInstancePropsDsl {
   private val cdkBuilder: DatabaseInstanceProps.Builder = DatabaseInstanceProps.builder()
 
+  /**
+   * @param autoMinorVersionUpgrade Indicates that minor engine upgrades are applied automatically
+   * to the DB instance during the maintenance window.
+   */
   public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
     cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
   }
 
+  /**
+   * @param availabilityZone The name of the Availability Zone where the DB instance will be
+   * located.
+   */
   public fun availabilityZone(availabilityZone: String) {
     cdkBuilder.availabilityZone(availabilityZone)
   }
 
+  /**
+   * @param cluster The DocumentDB database cluster the instance should launch into. 
+   */
   public fun cluster(cluster: IDatabaseCluster) {
     cdkBuilder.cluster(cluster)
   }
 
+  /**
+   * @param dbInstanceName A name for the DB instance.
+   * If you specify a name, AWS CloudFormation
+   * converts it to lowercase.
+   */
   public fun dbInstanceName(dbInstanceName: String) {
     cdkBuilder.dbInstanceName(dbInstanceName)
   }
 
+  /**
+   * @param enablePerformanceInsights A value that indicates whether to enable Performance Insights
+   * for the DB Instance.
+   */
   public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
     cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
   }
 
+  /**
+   * @param instanceType The name of the compute and memory capacity classes. 
+   */
   public fun instanceType(instanceType: InstanceType) {
     cdkBuilder.instanceType(instanceType)
   }
 
+  /**
+   * @param preferredMaintenanceWindow The weekly time range (in UTC) during which system
+   * maintenance can occur.
+   * Format: `ddd:hh24:mi-ddd:hh24:mi`
+   * Constraint: Minimum 30-minute window
+   */
   public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
     cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
   }
 
+  /**
+   * @param removalPolicy The CloudFormation policy to apply when the instance is removed from the
+   * stack or replaced during an update.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }

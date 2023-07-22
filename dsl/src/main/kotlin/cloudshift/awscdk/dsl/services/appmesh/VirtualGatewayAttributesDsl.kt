@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes
 public class VirtualGatewayAttributesDsl {
   private val cdkBuilder: VirtualGatewayAttributes.Builder = VirtualGatewayAttributes.builder()
 
+  /**
+   * @param mesh The Mesh that the VirtualGateway belongs to. 
+   */
   public fun mesh(mesh: IMesh) {
     cdkBuilder.mesh(mesh)
   }
 
+  /**
+   * @param virtualGatewayName The name of the VirtualGateway. 
+   */
   public fun virtualGatewayName(virtualGatewayName: String) {
     cdkBuilder.virtualGatewayName(virtualGatewayName)
   }

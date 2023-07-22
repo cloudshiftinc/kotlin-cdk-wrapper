@@ -12,22 +12,38 @@ import software.amazon.awscdk.services.cognito.UserPoolDomainOptions
 public class UserPoolDomainOptionsDsl {
   private val cdkBuilder: UserPoolDomainOptions.Builder = UserPoolDomainOptions.builder()
 
-  public fun cognitoDomain(block: CognitoDomainOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param cognitoDomain Associate a cognito prefix domain with your user pool Either
+   * `customDomain` or `cognitoDomain` must be specified.
+   */
+  public fun cognitoDomain(cognitoDomain: CognitoDomainOptionsDsl.() -> Unit = {}) {
     val builder = CognitoDomainOptionsDsl()
-    builder.apply(block)
+    builder.apply(cognitoDomain)
     cdkBuilder.cognitoDomain(builder.build())
   }
 
+  /**
+   * @param cognitoDomain Associate a cognito prefix domain with your user pool Either
+   * `customDomain` or `cognitoDomain` must be specified.
+   */
   public fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
     cdkBuilder.cognitoDomain(cognitoDomain)
   }
 
-  public fun customDomain(block: CustomDomainOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param customDomain Associate a custom domain with your user pool Either `customDomain` or
+   * `cognitoDomain` must be specified.
+   */
+  public fun customDomain(customDomain: CustomDomainOptionsDsl.() -> Unit = {}) {
     val builder = CustomDomainOptionsDsl()
-    builder.apply(block)
+    builder.apply(customDomain)
     cdkBuilder.customDomain(builder.build())
   }
 
+  /**
+   * @param customDomain Associate a custom domain with your user pool Either `customDomain` or
+   * `cognitoDomain` must be specified.
+   */
   public fun customDomain(customDomain: CustomDomainOptions) {
     cdkBuilder.customDomain(customDomain)
   }

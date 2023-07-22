@@ -11,6 +11,9 @@ public class CfnDeliveryStreamDocumentIdOptionsPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.DocumentIdOptionsProperty.Builder =
       CfnDeliveryStream.DocumentIdOptionsProperty.builder()
 
+  /**
+   * @param defaultDocumentIdFormat the value to be set. 
+   */
   public fun defaultDocumentIdFormat(defaultDocumentIdFormat: String) {
     cdkBuilder.defaultDocumentIdFormat(defaultDocumentIdFormat)
   }

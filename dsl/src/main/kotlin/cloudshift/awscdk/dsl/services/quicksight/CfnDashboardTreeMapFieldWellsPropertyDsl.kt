@@ -11,10 +11,16 @@ public class CfnDashboardTreeMapFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.TreeMapFieldWellsProperty.Builder =
       CfnDashboard.TreeMapFieldWellsProperty.builder()
 
+  /**
+   * @param treeMapAggregatedFieldWells The aggregated field wells of a tree map.
+   */
   public fun treeMapAggregatedFieldWells(treeMapAggregatedFieldWells: IResolvable) {
     cdkBuilder.treeMapAggregatedFieldWells(treeMapAggregatedFieldWells)
   }
 
+  /**
+   * @param treeMapAggregatedFieldWells The aggregated field wells of a tree map.
+   */
   public
       fun treeMapAggregatedFieldWells(treeMapAggregatedFieldWells: CfnDashboard.TreeMapAggregatedFieldWellsProperty) {
     cdkBuilder.treeMapAggregatedFieldWells(treeMapAggregatedFieldWells)

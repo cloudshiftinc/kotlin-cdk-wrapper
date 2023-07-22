@@ -13,16 +13,27 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 public class LoadBalancerTargetPropsDsl {
   private val cdkBuilder: LoadBalancerTargetProps.Builder = LoadBalancerTargetProps.builder()
 
-  public fun targetJson(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param targetJson JSON representing the target's direct addition to the TargetGroup list.
+   * May be omitted if the target is going to register itself later.
+   */
+  public fun targetJson(targetJson: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(targetJson)
     cdkBuilder.targetJson(builder.map)
   }
 
+  /**
+   * @param targetJson JSON representing the target's direct addition to the TargetGroup list.
+   * May be omitted if the target is going to register itself later.
+   */
   public fun targetJson(targetJson: Any) {
     cdkBuilder.targetJson(targetJson)
   }
 
+  /**
+   * @param targetType What kind of target this is. 
+   */
   public fun targetType(targetType: TargetType) {
     cdkBuilder.targetType(targetType)
   }

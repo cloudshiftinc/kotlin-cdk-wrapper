@@ -24,62 +24,210 @@ public class CfnUserPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param homeDirectory The landing directory (folder) for a user when they log in to the server
+   * using the client.
+   * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
+   */
   public fun homeDirectory(homeDirectory: String) {
     cdkBuilder.homeDirectory(homeDirectory)
   }
 
+  /**
+   * @param homeDirectoryMappings Logical directory mappings that specify what Amazon S3 paths and
+   * keys should be visible to your user and how you want to make them visible.
+   * You will need to specify the " `Entry` " and " `Target` " pair, where `Entry` shows how the
+   * path is made visible and `Target` is the actual Amazon S3 path. If you only specify a target, it
+   * will be displayed as is. You will need to also make sure that your IAM role provides access to
+   * paths in `Target` . The following is an example.
+   *
+   * `'[ { "Entry": "/", "Target": "/bucket3/customized-reports/" } ]'`
+   *
+   * In most cases, you can use this value instead of the session policy to lock your user down to
+   * the designated home directory ("chroot"). To do this, you can set `Entry` to '/' and set `Target`
+   * to the HomeDirectory parameter value.
+   *
+   *
+   * If the target of a logical directory entry does not exist in Amazon S3, the entry will be
+   * ignored. As a workaround, you can use the Amazon S3 API to create 0 byte objects as place holders
+   * for your directory. If using the CLI, use the `s3api` call instead of `s3` so you can use the
+   * put-object operation. For example, you use the following: `AWS s3api put-object --bucket
+   * bucketname --key path/to/folder/` . Make sure that the end of the key name ends in a '/' for it to
+   * be considered a folder.
+   */
   public fun homeDirectoryMappings(vararg homeDirectoryMappings: Any) {
     _homeDirectoryMappings.addAll(listOf(*homeDirectoryMappings))
   }
 
+  /**
+   * @param homeDirectoryMappings Logical directory mappings that specify what Amazon S3 paths and
+   * keys should be visible to your user and how you want to make them visible.
+   * You will need to specify the " `Entry` " and " `Target` " pair, where `Entry` shows how the
+   * path is made visible and `Target` is the actual Amazon S3 path. If you only specify a target, it
+   * will be displayed as is. You will need to also make sure that your IAM role provides access to
+   * paths in `Target` . The following is an example.
+   *
+   * `'[ { "Entry": "/", "Target": "/bucket3/customized-reports/" } ]'`
+   *
+   * In most cases, you can use this value instead of the session policy to lock your user down to
+   * the designated home directory ("chroot"). To do this, you can set `Entry` to '/' and set `Target`
+   * to the HomeDirectory parameter value.
+   *
+   *
+   * If the target of a logical directory entry does not exist in Amazon S3, the entry will be
+   * ignored. As a workaround, you can use the Amazon S3 API to create 0 byte objects as place holders
+   * for your directory. If using the CLI, use the `s3api` call instead of `s3` so you can use the
+   * put-object operation. For example, you use the following: `AWS s3api put-object --bucket
+   * bucketname --key path/to/folder/` . Make sure that the end of the key name ends in a '/' for it to
+   * be considered a folder.
+   */
   public fun homeDirectoryMappings(homeDirectoryMappings: Collection<Any>) {
     _homeDirectoryMappings.addAll(homeDirectoryMappings)
   }
 
+  /**
+   * @param homeDirectoryMappings Logical directory mappings that specify what Amazon S3 paths and
+   * keys should be visible to your user and how you want to make them visible.
+   * You will need to specify the " `Entry` " and " `Target` " pair, where `Entry` shows how the
+   * path is made visible and `Target` is the actual Amazon S3 path. If you only specify a target, it
+   * will be displayed as is. You will need to also make sure that your IAM role provides access to
+   * paths in `Target` . The following is an example.
+   *
+   * `'[ { "Entry": "/", "Target": "/bucket3/customized-reports/" } ]'`
+   *
+   * In most cases, you can use this value instead of the session policy to lock your user down to
+   * the designated home directory ("chroot"). To do this, you can set `Entry` to '/' and set `Target`
+   * to the HomeDirectory parameter value.
+   *
+   *
+   * If the target of a logical directory entry does not exist in Amazon S3, the entry will be
+   * ignored. As a workaround, you can use the Amazon S3 API to create 0 byte objects as place holders
+   * for your directory. If using the CLI, use the `s3api` call instead of `s3` so you can use the
+   * put-object operation. For example, you use the following: `AWS s3api put-object --bucket
+   * bucketname --key path/to/folder/` . Make sure that the end of the key name ends in a '/' for it to
+   * be considered a folder.
+   */
   public fun homeDirectoryMappings(homeDirectoryMappings: IResolvable) {
     cdkBuilder.homeDirectoryMappings(homeDirectoryMappings)
   }
 
+  /**
+   * @param homeDirectoryType The type of landing directory (folder) that you want your users' home
+   * directory to be when they log in to the server.
+   * If you set it to `PATH` , the user will see the absolute Amazon S3 bucket or EFS paths as is in
+   * their file transfer protocol clients. If you set it `LOGICAL` , you need to provide mappings in
+   * the `HomeDirectoryMappings` for how you want to make Amazon S3 or Amazon EFS paths visible to your
+   * users.
+   */
   public fun homeDirectoryType(homeDirectoryType: String) {
     cdkBuilder.homeDirectoryType(homeDirectoryType)
   }
 
+  /**
+   * @param policy A session policy for your user so you can use the same IAM role across multiple
+   * users.
+   * This policy restricts user access to portions of their Amazon S3 bucket. Variables that you can
+   * use inside this policy include `${Transfer:UserName}` , `${Transfer:HomeDirectory}` , and
+   * `${Transfer:HomeBucket}` .
+   *
+   *
+   * For session policies, AWS Transfer Family stores the policy as a JSON blob, instead of the
+   * Amazon Resource Name (ARN) of the policy. You save the policy as a JSON blob and pass it in the
+   * `Policy` argument.
+   *
+   * For an example of a session policy, see [Example session
+   * policy](https://docs.aws.amazon.com/transfer/latest/userguide/session-policy.html) .
+   *
+   * For more information, see
+   * [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) in the *AWS
+   * Security Token Service API Reference* .
+   */
   public fun policy(policy: String) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * @param posixProfile Specifies the full POSIX identity, including user ID ( `Uid` ), group ID (
+   * `Gid` ), and any secondary groups IDs ( `SecondaryGids` ), that controls your users' access to
+   * your Amazon Elastic File System (Amazon EFS) file systems.
+   * The POSIX permissions that are set on files and directories in your file system determine the
+   * level of access your users get when transferring files into and out of your Amazon EFS file
+   * systems.
+   */
   public fun posixProfile(posixProfile: IResolvable) {
     cdkBuilder.posixProfile(posixProfile)
   }
 
+  /**
+   * @param posixProfile Specifies the full POSIX identity, including user ID ( `Uid` ), group ID (
+   * `Gid` ), and any secondary groups IDs ( `SecondaryGids` ), that controls your users' access to
+   * your Amazon Elastic File System (Amazon EFS) file systems.
+   * The POSIX permissions that are set on files and directories in your file system determine the
+   * level of access your users get when transferring files into and out of your Amazon EFS file
+   * systems.
+   */
   public fun posixProfile(posixProfile: CfnUser.PosixProfileProperty) {
     cdkBuilder.posixProfile(posixProfile)
   }
 
+  /**
+   * @param role The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
+   * that controls your users' access to your Amazon S3 bucket or Amazon EFS file system. 
+   * The policies attached to this role determine the level of access that you want to provide your
+   * users when transferring files into and out of your Amazon S3 bucket or Amazon EFS file system. The
+   * IAM role should also contain a trust relationship that allows the server to access your resources
+   * when servicing your users' transfer requests.
+   */
   public fun role(role: String) {
     cdkBuilder.role(role)
   }
 
+  /**
+   * @param serverId A system-assigned unique identifier for a server instance. 
+   * This is the specific server that you added your user to.
+   */
   public fun serverId(serverId: String) {
     cdkBuilder.serverId(serverId)
   }
 
+  /**
+   * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored for
+   * the described user.
+   */
   public fun sshPublicKeys(vararg sshPublicKeys: String) {
     _sshPublicKeys.addAll(listOf(*sshPublicKeys))
   }
 
+  /**
+   * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored for
+   * the described user.
+   */
   public fun sshPublicKeys(sshPublicKeys: Collection<String>) {
     _sshPublicKeys.addAll(sshPublicKeys)
   }
 
+  /**
+   * @param tags Key-value pairs that can be used to group and search for users.
+   * Tags are metadata attached to users for any purpose.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Key-value pairs that can be used to group and search for users.
+   * Tags are metadata attached to users for any purpose.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param userName A unique string that identifies a user and is associated with a `ServerId` . 
+   * This user name must be a minimum of 3 and a maximum of 100 characters long. The following are
+   * valid characters: a-z, A-Z, 0-9, underscore '_', hyphen '-', period '.', and at sign '&#64;'. The
+   * user name can't start with a hyphen, period, or at sign.
+   */
   public fun userName(userName: String) {
     cdkBuilder.userName(userName)
   }

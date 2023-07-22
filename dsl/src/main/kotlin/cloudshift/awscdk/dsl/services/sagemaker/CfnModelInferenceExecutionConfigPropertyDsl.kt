@@ -11,6 +11,11 @@ public class CfnModelInferenceExecutionConfigPropertyDsl {
   private val cdkBuilder: CfnModel.InferenceExecutionConfigProperty.Builder =
       CfnModel.InferenceExecutionConfigProperty.builder()
 
+  /**
+   * @param mode How containers in a multi-container are run. The following values are valid. 
+   * * `Serial` - Containers run as a serial pipeline.
+   * * `Direct` - Only the individual container that you specify is run.
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }

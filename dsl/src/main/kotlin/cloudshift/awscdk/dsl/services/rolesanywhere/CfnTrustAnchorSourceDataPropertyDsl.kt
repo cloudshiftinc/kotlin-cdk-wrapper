@@ -11,10 +11,22 @@ public class CfnTrustAnchorSourceDataPropertyDsl {
   private val cdkBuilder: CfnTrustAnchor.SourceDataProperty.Builder =
       CfnTrustAnchor.SourceDataProperty.builder()
 
+  /**
+   * @param acmPcaArn The root certificate of the AWS Private Certificate Authority specified by
+   * this ARN is used in trust validation for temporary credential requests.
+   * Included for trust anchors of type `AWS_ACM_PCA` .
+   *
+   *
+   * This field is not supported in your region.
+   */
   public fun acmPcaArn(acmPcaArn: String) {
     cdkBuilder.acmPcaArn(acmPcaArn)
   }
 
+  /**
+   * @param x509CertificateData The PEM-encoded data for the certificate anchor.
+   * Included for trust anchors of type `CERTIFICATE_BUNDLE` .
+   */
   public fun x509CertificateData(x509CertificateData: String) {
     cdkBuilder.x509CertificateData(x509CertificateData)
   }

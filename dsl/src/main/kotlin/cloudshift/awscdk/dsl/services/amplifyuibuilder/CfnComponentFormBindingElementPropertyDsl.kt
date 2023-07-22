@@ -11,10 +11,16 @@ public class CfnComponentFormBindingElementPropertyDsl {
   private val cdkBuilder: CfnComponent.FormBindingElementProperty.Builder =
       CfnComponent.FormBindingElementProperty.builder()
 
+  /**
+   * @param element The name of the component to retrieve a value from. 
+   */
   public fun element(element: String) {
     cdkBuilder.element(element)
   }
 
+  /**
+   * @param property The property to retrieve a value from. 
+   */
   public fun `property`(`property`: String) {
     cdkBuilder.`property`(`property`)
   }

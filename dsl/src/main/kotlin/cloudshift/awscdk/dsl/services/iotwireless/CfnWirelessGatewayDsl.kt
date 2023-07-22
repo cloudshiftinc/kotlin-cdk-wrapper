@@ -22,38 +22,100 @@ public class CfnWirelessGatewayDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The description of the new resource.
+   *
+   * The maximum length is 2048 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-description)
+   * @param description The description of the new resource. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The date and time when the most recent uplink was received.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lastuplinkreceivedat)
+   * @param lastUplinkReceivedAt The date and time when the most recent uplink was received. 
+   */
   public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
     cdkBuilder.lastUplinkReceivedAt(lastUplinkReceivedAt)
   }
 
+  /**
+   * The gateway configuration information to use to create the wireless gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lorawan)
+   * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
+   */
   public fun loRaWan(loRaWan: IResolvable) {
     cdkBuilder.loRaWan(loRaWan)
   }
 
+  /**
+   * The gateway configuration information to use to create the wireless gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lorawan)
+   * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
+   */
   public fun loRaWan(loRaWan: CfnWirelessGateway.LoRaWANGatewayProperty) {
     cdkBuilder.loRaWan(loRaWan)
   }
 
+  /**
+   * The name of the new resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-name)
+   * @param name The name of the new resource. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The tags are an array of key-value pairs to attach to the specified resource.
+   *
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-tags)
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags are an array of key-value pairs to attach to the specified resource.
+   *
+   * Tags can have a minimum of 0 and a maximum of 50 items.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-tags)
+   * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ARN of the thing to associate with the wireless gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-thingarn)
+   * @param thingArn The ARN of the thing to associate with the wireless gateway. 
+   */
   public fun thingArn(thingArn: String) {
     cdkBuilder.thingArn(thingArn)
   }
 
+  /**
+   * The name of the thing associated with the wireless gateway.
+   *
+   * The value is empty if a thing isn't associated with the gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-thingname)
+   * @param thingName The name of the thing associated with the wireless gateway. 
+   */
   public fun thingName(thingName: String) {
     cdkBuilder.thingName(thingName)
   }

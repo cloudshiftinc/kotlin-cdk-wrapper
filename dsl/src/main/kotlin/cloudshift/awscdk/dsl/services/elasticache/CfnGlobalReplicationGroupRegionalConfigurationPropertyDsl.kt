@@ -17,22 +17,40 @@ public class CfnGlobalReplicationGroupRegionalConfigurationPropertyDsl {
 
   private val _reshardingConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param replicationGroupId The name of the secondary cluster.
+   */
   public fun replicationGroupId(replicationGroupId: String) {
     cdkBuilder.replicationGroupId(replicationGroupId)
   }
 
+  /**
+   * @param replicationGroupRegion The Amazon region where the cluster is stored.
+   */
   public fun replicationGroupRegion(replicationGroupRegion: String) {
     cdkBuilder.replicationGroupRegion(replicationGroupRegion)
   }
 
+  /**
+   * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the
+   * configuration of a node group in the resharded cluster.
+   */
   public fun reshardingConfigurations(vararg reshardingConfigurations: Any) {
     _reshardingConfigurations.addAll(listOf(*reshardingConfigurations))
   }
 
+  /**
+   * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the
+   * configuration of a node group in the resharded cluster.
+   */
   public fun reshardingConfigurations(reshardingConfigurations: Collection<Any>) {
     _reshardingConfigurations.addAll(reshardingConfigurations)
   }
 
+  /**
+   * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the
+   * configuration of a node group in the resharded cluster.
+   */
   public fun reshardingConfigurations(reshardingConfigurations: IResolvable) {
     cdkBuilder.reshardingConfigurations(reshardingConfigurations)
   }

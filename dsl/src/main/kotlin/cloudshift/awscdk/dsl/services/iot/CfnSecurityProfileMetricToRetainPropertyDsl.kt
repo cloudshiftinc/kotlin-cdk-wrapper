@@ -12,14 +12,23 @@ public class CfnSecurityProfileMetricToRetainPropertyDsl {
   private val cdkBuilder: CfnSecurityProfile.MetricToRetainProperty.Builder =
       CfnSecurityProfile.MetricToRetainProperty.builder()
 
+  /**
+   * @param metric A standard of measurement. 
+   */
   public fun metric(metric: String) {
     cdkBuilder.metric(metric)
   }
 
+  /**
+   * @param metricDimension The dimension of the metric.
+   */
   public fun metricDimension(metricDimension: IResolvable) {
     cdkBuilder.metricDimension(metricDimension)
   }
 
+  /**
+   * @param metricDimension The dimension of the metric.
+   */
   public fun metricDimension(metricDimension: CfnSecurityProfile.MetricDimensionProperty) {
     cdkBuilder.metricDimension(metricDimension)
   }

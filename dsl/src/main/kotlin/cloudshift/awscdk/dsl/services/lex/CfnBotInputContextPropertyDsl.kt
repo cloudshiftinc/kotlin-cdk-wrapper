@@ -11,6 +11,9 @@ public class CfnBotInputContextPropertyDsl {
   private val cdkBuilder: CfnBot.InputContextProperty.Builder =
       CfnBot.InputContextProperty.builder()
 
+  /**
+   * @param name The name of the context. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

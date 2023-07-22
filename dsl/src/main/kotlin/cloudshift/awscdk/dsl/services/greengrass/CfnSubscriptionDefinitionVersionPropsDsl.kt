@@ -17,18 +17,32 @@ public class CfnSubscriptionDefinitionVersionPropsDsl {
 
   private val _subscriptions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param subscriptionDefinitionId The ID of the subscription definition associated with this
+   * version. 
+   * This value is a GUID.
+   */
   public fun subscriptionDefinitionId(subscriptionDefinitionId: String) {
     cdkBuilder.subscriptionDefinitionId(subscriptionDefinitionId)
   }
 
+  /**
+   * @param subscriptions The subscriptions in this version. 
+   */
   public fun subscriptions(vararg subscriptions: Any) {
     _subscriptions.addAll(listOf(*subscriptions))
   }
 
+  /**
+   * @param subscriptions The subscriptions in this version. 
+   */
   public fun subscriptions(subscriptions: Collection<Any>) {
     _subscriptions.addAll(subscriptions)
   }
 
+  /**
+   * @param subscriptions The subscriptions in this version. 
+   */
   public fun subscriptions(subscriptions: IResolvable) {
     cdkBuilder.subscriptions(subscriptions)
   }

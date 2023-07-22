@@ -13,14 +13,25 @@ public class EcsDeploymentGroupAttributesDsl {
   private val cdkBuilder: EcsDeploymentGroupAttributes.Builder =
       EcsDeploymentGroupAttributes.builder()
 
+  /**
+   * @param application The reference to the CodeDeploy ECS Application that this Deployment Group
+   * belongs to. 
+   */
   public fun application(application: IEcsApplication) {
     cdkBuilder.application(application)
   }
 
+  /**
+   * @param deploymentConfig The Deployment Configuration this Deployment Group uses.
+   */
   public fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
     cdkBuilder.deploymentConfig(deploymentConfig)
   }
 
+  /**
+   * @param deploymentGroupName The physical, human-readable name of the CodeDeploy ECS Deployment
+   * Group that we are referencing. 
+   */
   public fun deploymentGroupName(deploymentGroupName: String) {
     cdkBuilder.deploymentGroupName(deploymentGroupName)
   }

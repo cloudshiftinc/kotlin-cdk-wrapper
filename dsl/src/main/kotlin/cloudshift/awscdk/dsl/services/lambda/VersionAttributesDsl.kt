@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.lambda.VersionAttributes
 public class VersionAttributesDsl {
   private val cdkBuilder: VersionAttributes.Builder = VersionAttributes.builder()
 
+  /**
+   * @param lambda The lambda function. 
+   */
   public fun lambda(lambda: IFunction) {
     cdkBuilder.lambda(lambda)
   }
 
+  /**
+   * @param version The version. 
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

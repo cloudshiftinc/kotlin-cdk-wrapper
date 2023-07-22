@@ -25,38 +25,97 @@ public class CfnSignalCatalogDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * (Optional) A brief description of the signal catalog.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-description)
+   * @param description (Optional) A brief description of the signal catalog. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * (Optional) The name of the signal catalog.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-name)
+   * @param name (Optional) The name of the signal catalog. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * (Optional) Information about the number of nodes and node types in a vehicle network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
+   * @param nodeCounts (Optional) Information about the number of nodes and node types in a vehicle
+   * network. 
+   */
   public fun nodeCounts(nodeCounts: IResolvable) {
     cdkBuilder.nodeCounts(nodeCounts)
   }
 
+  /**
+   * (Optional) Information about the number of nodes and node types in a vehicle network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
+   * @param nodeCounts (Optional) Information about the number of nodes and node types in a vehicle
+   * network. 
+   */
   public fun nodeCounts(nodeCounts: CfnSignalCatalog.NodeCountsProperty) {
     cdkBuilder.nodeCounts(nodeCounts)
   }
 
+  /**
+   * (Optional) A list of information about nodes, which are a general abstraction of signals.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
+   * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
+   * signals. 
+   */
   public fun nodes(vararg nodes: Any) {
     _nodes.addAll(listOf(*nodes))
   }
 
+  /**
+   * (Optional) A list of information about nodes, which are a general abstraction of signals.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
+   * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
+   * signals. 
+   */
   public fun nodes(nodes: Collection<Any>) {
     _nodes.addAll(nodes)
   }
 
+  /**
+   * (Optional) A list of information about nodes, which are a general abstraction of signals.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
+   * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
+   * signals. 
+   */
   public fun nodes(nodes: IResolvable) {
     cdkBuilder.nodes(nodes)
   }
 
+  /**
+   * (Optional) Metadata that can be used to manage the signal catalog.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-tags)
+   * @param tags (Optional) Metadata that can be used to manage the signal catalog. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * (Optional) Metadata that can be used to manage the signal catalog.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-tags)
+   * @param tags (Optional) Metadata that can be used to manage the signal catalog. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

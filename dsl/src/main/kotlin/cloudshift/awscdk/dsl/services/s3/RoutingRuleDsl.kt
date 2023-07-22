@@ -14,28 +14,46 @@ import software.amazon.awscdk.services.s3.RoutingRuleCondition
 public class RoutingRuleDsl {
   private val cdkBuilder: RoutingRule.Builder = RoutingRule.builder()
 
-  public fun condition(block: RoutingRuleConditionDsl.() -> Unit = {}) {
+  /**
+   * @param condition Specifies a condition that must be met for the specified redirect to apply.
+   */
+  public fun condition(condition: RoutingRuleConditionDsl.() -> Unit = {}) {
     val builder = RoutingRuleConditionDsl()
-    builder.apply(block)
+    builder.apply(condition)
     cdkBuilder.condition(builder.build())
   }
 
+  /**
+   * @param condition Specifies a condition that must be met for the specified redirect to apply.
+   */
   public fun condition(condition: RoutingRuleCondition) {
     cdkBuilder.condition(condition)
   }
 
+  /**
+   * @param hostName The host name to use in the redirect request.
+   */
   public fun hostName(hostName: String) {
     cdkBuilder.hostName(hostName)
   }
 
+  /**
+   * @param httpRedirectCode The HTTP redirect code to use on the response.
+   */
   public fun httpRedirectCode(httpRedirectCode: String) {
     cdkBuilder.httpRedirectCode(httpRedirectCode)
   }
 
+  /**
+   * @param protocol Protocol to use when redirecting requests.
+   */
   public fun protocol(protocol: RedirectProtocol) {
     cdkBuilder.protocol(protocol)
   }
 
+  /**
+   * @param replaceKey Specifies the object key prefix to use in the redirect request.
+   */
   public fun replaceKey(replaceKey: ReplaceKey) {
     cdkBuilder.replaceKey(replaceKey)
   }

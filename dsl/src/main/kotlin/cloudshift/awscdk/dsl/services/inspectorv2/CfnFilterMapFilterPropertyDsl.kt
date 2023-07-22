@@ -11,14 +11,23 @@ public class CfnFilterMapFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.MapFilterProperty.Builder =
       CfnFilter.MapFilterProperty.builder()
 
+  /**
+   * @param comparison The operator to use when comparing values in the filter. 
+   */
   public fun comparison(comparison: String) {
     cdkBuilder.comparison(comparison)
   }
 
+  /**
+   * @param key The tag key used in the filter.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The tag value used in the filter.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

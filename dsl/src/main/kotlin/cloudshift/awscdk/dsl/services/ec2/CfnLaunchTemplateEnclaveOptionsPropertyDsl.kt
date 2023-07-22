@@ -12,10 +12,20 @@ public class CfnLaunchTemplateEnclaveOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.EnclaveOptionsProperty.Builder =
       CfnLaunchTemplate.EnclaveOptionsProperty.builder()
 
+  /**
+   * @param enabled If this parameter is set to `true` , the instance is enabled for AWS Nitro
+   * Enclaves;.
+   * otherwise, it is not enabled for AWS Nitro Enclaves.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled If this parameter is set to `true` , the instance is enabled for AWS Nitro
+   * Enclaves;.
+   * otherwise, it is not enabled for AWS Nitro Enclaves.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

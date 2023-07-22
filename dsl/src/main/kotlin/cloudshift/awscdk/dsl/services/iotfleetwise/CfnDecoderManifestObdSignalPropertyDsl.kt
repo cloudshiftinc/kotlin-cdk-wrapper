@@ -11,38 +11,66 @@ public class CfnDecoderManifestObdSignalPropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.ObdSignalProperty.Builder =
       CfnDecoderManifest.ObdSignalProperty.builder()
 
+  /**
+   * @param bitMaskLength (Optional) The number of bits to mask in a message.
+   */
   public fun bitMaskLength(bitMaskLength: String) {
     cdkBuilder.bitMaskLength(bitMaskLength)
   }
 
+  /**
+   * @param bitRightShift (Optional) The number of positions to shift bits in the message.
+   */
   public fun bitRightShift(bitRightShift: String) {
     cdkBuilder.bitRightShift(bitRightShift)
   }
 
+  /**
+   * @param byteLength The length of a message. 
+   */
   public fun byteLength(byteLength: String) {
     cdkBuilder.byteLength(byteLength)
   }
 
+  /**
+   * @param offset The offset used to calculate the signal value. 
+   * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
+   */
   public fun offset(offset: String) {
     cdkBuilder.offset(offset)
   }
 
+  /**
+   * @param pid The diagnostic code used to request data from a vehicle for this signal. 
+   */
   public fun pid(pid: String) {
     cdkBuilder.pid(pid)
   }
 
+  /**
+   * @param pidResponseLength The length of the requested data. 
+   */
   public fun pidResponseLength(pidResponseLength: String) {
     cdkBuilder.pidResponseLength(pidResponseLength)
   }
 
+  /**
+   * @param scaling A multiplier used to decode the message. 
+   */
   public fun scaling(scaling: String) {
     cdkBuilder.scaling(scaling)
   }
 
+  /**
+   * @param serviceMode The mode of operation (diagnostic service) in a message. 
+   */
   public fun serviceMode(serviceMode: String) {
     cdkBuilder.serviceMode(serviceMode)
   }
 
+  /**
+   * @param startByte Indicates the beginning of the message. 
+   */
   public fun startByte(startByte: String) {
     cdkBuilder.startByte(startByte)
   }

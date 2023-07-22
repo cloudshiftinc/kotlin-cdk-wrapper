@@ -12,14 +12,26 @@ public class CfnTopicTopicRangeFilterConstantPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicRangeFilterConstantProperty.Builder =
       CfnTopic.TopicRangeFilterConstantProperty.builder()
 
+  /**
+   * @param constantType The data type of the constant value that is used in a range filter.
+   * Valid values for this structure are `RANGE` .
+   */
   public fun constantType(constantType: String) {
     cdkBuilder.constantType(constantType)
   }
 
+  /**
+   * @param rangeConstant The value of the constant that is used to specify the endpoints of a range
+   * filter.
+   */
   public fun rangeConstant(rangeConstant: IResolvable) {
     cdkBuilder.rangeConstant(rangeConstant)
   }
 
+  /**
+   * @param rangeConstant The value of the constant that is used to specify the endpoints of a range
+   * filter.
+   */
   public fun rangeConstant(rangeConstant: CfnTopic.RangeConstantProperty) {
     cdkBuilder.rangeConstant(rangeConstant)
   }

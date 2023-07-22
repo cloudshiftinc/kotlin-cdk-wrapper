@@ -11,10 +11,16 @@ public class CfnComponentTypeErrorPropertyDsl {
   private val cdkBuilder: CfnComponentType.ErrorProperty.Builder =
       CfnComponentType.ErrorProperty.builder()
 
+  /**
+   * @param code The component type error code.
+   */
   public fun code(code: String) {
     cdkBuilder.code(code)
   }
 
+  /**
+   * @param message The component type error message.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }

@@ -14,26 +14,43 @@ import software.amazon.awscdk.services.stepfunctions.DefinitionConfig
 public class DefinitionConfigDsl {
   private val cdkBuilder: DefinitionConfig.Builder = DefinitionConfig.builder()
 
-  public fun definition(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param definition the value to be set.
+   */
+  public fun definition(definition: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(definition)
     cdkBuilder.definition(builder.map)
   }
 
+  /**
+   * @param definition the value to be set.
+   */
   public fun definition(definition: Any) {
     cdkBuilder.definition(definition)
   }
 
-  public fun definitionS3Location(block: CfnStateMachineS3LocationPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param definitionS3Location the value to be set.
+   */
+  public
+      fun definitionS3Location(definitionS3Location: CfnStateMachineS3LocationPropertyDsl.() -> Unit
+      = {}) {
     val builder = CfnStateMachineS3LocationPropertyDsl()
-    builder.apply(block)
+    builder.apply(definitionS3Location)
     cdkBuilder.definitionS3Location(builder.build())
   }
 
+  /**
+   * @param definitionS3Location the value to be set.
+   */
   public fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
     cdkBuilder.definitionS3Location(definitionS3Location)
   }
 
+  /**
+   * @param definitionString the value to be set.
+   */
   public fun definitionString(definitionString: String) {
     cdkBuilder.definitionString(definitionString)
   }

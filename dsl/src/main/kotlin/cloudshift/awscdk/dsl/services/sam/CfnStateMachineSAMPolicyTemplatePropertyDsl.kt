@@ -11,18 +11,30 @@ public class CfnStateMachineSAMPolicyTemplatePropertyDsl {
   private val cdkBuilder: CfnStateMachine.SAMPolicyTemplateProperty.Builder =
       CfnStateMachine.SAMPolicyTemplateProperty.builder()
 
+  /**
+   * @param lambdaInvokePolicy the value to be set.
+   */
   public fun lambdaInvokePolicy(lambdaInvokePolicy: IResolvable) {
     cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy)
   }
 
+  /**
+   * @param lambdaInvokePolicy the value to be set.
+   */
   public fun lambdaInvokePolicy(lambdaInvokePolicy: CfnStateMachine.FunctionSAMPTProperty) {
     cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy)
   }
 
+  /**
+   * @param stepFunctionsExecutionPolicy the value to be set.
+   */
   public fun stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy: IResolvable) {
     cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy)
   }
 
+  /**
+   * @param stepFunctionsExecutionPolicy the value to be set.
+   */
   public
       fun stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy: CfnStateMachine.StateMachineSAMPTProperty) {
     cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy)

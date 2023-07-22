@@ -17,18 +17,31 @@ public class CfnInferenceExperimentShadowModeConfigPropertyDsl {
 
   private val _shadowModelVariants: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param shadowModelVariants List of shadow variant configurations. 
+   */
   public fun shadowModelVariants(vararg shadowModelVariants: Any) {
     _shadowModelVariants.addAll(listOf(*shadowModelVariants))
   }
 
+  /**
+   * @param shadowModelVariants List of shadow variant configurations. 
+   */
   public fun shadowModelVariants(shadowModelVariants: Collection<Any>) {
     _shadowModelVariants.addAll(shadowModelVariants)
   }
 
+  /**
+   * @param shadowModelVariants List of shadow variant configurations. 
+   */
   public fun shadowModelVariants(shadowModelVariants: IResolvable) {
     cdkBuilder.shadowModelVariants(shadowModelVariants)
   }
 
+  /**
+   * @param sourceModelVariantName The name of the production variant, which takes all the inference
+   * requests. 
+   */
   public fun sourceModelVariantName(sourceModelVariantName: String) {
     cdkBuilder.sourceModelVariantName(sourceModelVariantName)
   }

@@ -17,18 +17,32 @@ public class EmrCreateClusterConfigurationPropertyDsl {
 
   private val _configurations: MutableList<EmrCreateCluster.ConfigurationProperty> = mutableListOf()
 
+  /**
+   * @param classification The classification within a configuration.
+   */
   public fun classification(classification: String) {
     cdkBuilder.classification(classification)
   }
 
+  /**
+   * @param configurations A list of additional configurations to apply within a configuration
+   * object.
+   */
   public fun configurations(configurations: EmrCreateClusterConfigurationPropertyDsl.() -> Unit) {
     _configurations.add(EmrCreateClusterConfigurationPropertyDsl().apply(configurations).build())
   }
 
+  /**
+   * @param configurations A list of additional configurations to apply within a configuration
+   * object.
+   */
   public fun configurations(configurations: Collection<EmrCreateCluster.ConfigurationProperty>) {
     _configurations.addAll(configurations)
   }
 
+  /**
+   * @param properties A set of properties specified within a configuration classification.
+   */
   public fun properties(properties: Map<String, String>) {
     cdkBuilder.properties(properties)
   }

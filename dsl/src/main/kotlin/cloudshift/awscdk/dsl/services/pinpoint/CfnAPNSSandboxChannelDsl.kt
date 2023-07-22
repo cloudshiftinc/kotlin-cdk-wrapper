@@ -17,42 +17,121 @@ public class CfnAPNSSandboxChannelDsl(
   private val cdkBuilder: CfnAPNSSandboxChannel.Builder =
       CfnAPNSSandboxChannel.Builder.create(scope, id)
 
+  /**
+   * The unique identifier for the Amazon Pinpoint application that the APNs sandbox channel applies
+   * to.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-applicationid)
+   * @param applicationId The unique identifier for the Amazon Pinpoint application that the APNs
+   * sandbox channel applies to. 
+   */
   public fun applicationId(applicationId: String) {
     cdkBuilder.applicationId(applicationId)
   }
 
+  /**
+   * The bundle identifier that's assigned to your iOS app.
+   *
+   * This identifier is used for APNs tokens.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-bundleid)
+   * @param bundleId The bundle identifier that's assigned to your iOS app. 
+   */
   public fun bundleId(bundleId: String) {
     cdkBuilder.bundleId(bundleId)
   }
 
+  /**
+   * The APNs client certificate that you received from Apple.
+   *
+   * Specify this value if you want Amazon Pinpoint to communicate with APNs by using an APNs
+   * certificate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-certificate)
+   * @param certificate The APNs client certificate that you received from Apple. 
+   */
   public fun certificate(certificate: String) {
     cdkBuilder.certificate(certificate)
   }
 
+  /**
+   * The default authentication method that you want Amazon Pinpoint to use when authenticating with
+   * APNs.
+   *
+   * Valid options are `key` or `certificate` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-defaultauthenticationmethod)
+   * @param defaultAuthenticationMethod The default authentication method that you want Amazon
+   * Pinpoint to use when authenticating with APNs. 
+   */
   public fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
     cdkBuilder.defaultAuthenticationMethod(defaultAuthenticationMethod)
   }
 
+  /**
+   * Specifies whether to enable the APNs Sandbox channel for the Amazon Pinpoint application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-enabled)
+   * @param enabled Specifies whether to enable the APNs Sandbox channel for the Amazon Pinpoint
+   * application. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * Specifies whether to enable the APNs Sandbox channel for the Amazon Pinpoint application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-enabled)
+   * @param enabled Specifies whether to enable the APNs Sandbox channel for the Amazon Pinpoint
+   * application. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * The private key for the APNs client certificate that you want Amazon Pinpoint to use to
+   * communicate with APNs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-privatekey)
+   * @param privateKey The private key for the APNs client certificate that you want Amazon Pinpoint
+   * to use to communicate with APNs. 
+   */
   public fun privateKey(privateKey: String) {
     cdkBuilder.privateKey(privateKey)
   }
 
+  /**
+   * The identifier that's assigned to your Apple Developer Account team.
+   *
+   * This identifier is used for APNs tokens.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-teamid)
+   * @param teamId The identifier that's assigned to your Apple Developer Account team. 
+   */
   public fun teamId(teamId: String) {
     cdkBuilder.teamId(teamId)
   }
 
+  /**
+   * The authentication key to use for APNs tokens.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-tokenkey)
+   * @param tokenKey The authentication key to use for APNs tokens. 
+   */
   public fun tokenKey(tokenKey: String) {
     cdkBuilder.tokenKey(tokenKey)
   }
 
+  /**
+   * The key identifier that's assigned to your APNs signing key.
+   *
+   * Specify this value if you want Amazon Pinpoint to communicate with APNs by using APNs tokens.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html#cfn-pinpoint-apnssandboxchannel-tokenkeyid)
+   * @param tokenKeyId The key identifier that's assigned to your APNs signing key. 
+   */
   public fun tokenKeyId(tokenKeyId: String) {
     cdkBuilder.tokenKeyId(tokenKeyId)
   }

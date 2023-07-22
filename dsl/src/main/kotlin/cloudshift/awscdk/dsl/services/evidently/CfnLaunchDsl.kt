@@ -29,70 +29,233 @@ public class CfnLaunchDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * An optional description for the launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-description)
+   * @param description An optional description for the launch. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * A structure that you can use to start and stop the launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-executionstatus)
+   * @param executionStatus A structure that you can use to start and stop the launch. 
+   */
   public fun executionStatus(executionStatus: IResolvable) {
     cdkBuilder.executionStatus(executionStatus)
   }
 
+  /**
+   * A structure that you can use to start and stop the launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-executionstatus)
+   * @param executionStatus A structure that you can use to start and stop the launch. 
+   */
   public fun executionStatus(executionStatus: CfnLaunch.ExecutionStatusObjectProperty) {
     cdkBuilder.executionStatus(executionStatus)
   }
 
+  /**
+   * An array of structures that contains the feature and variations that are to be used for the
+   * launch.
+   *
+   * You can up to five launch groups in a launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-groups)
+   * @param groups An array of structures that contains the feature and variations that are to be
+   * used for the launch. 
+   */
   public fun groups(vararg groups: Any) {
     _groups.addAll(listOf(*groups))
   }
 
+  /**
+   * An array of structures that contains the feature and variations that are to be used for the
+   * launch.
+   *
+   * You can up to five launch groups in a launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-groups)
+   * @param groups An array of structures that contains the feature and variations that are to be
+   * used for the launch. 
+   */
   public fun groups(groups: Collection<Any>) {
     _groups.addAll(groups)
   }
 
+  /**
+   * An array of structures that contains the feature and variations that are to be used for the
+   * launch.
+   *
+   * You can up to five launch groups in a launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-groups)
+   * @param groups An array of structures that contains the feature and variations that are to be
+   * used for the launch. 
+   */
   public fun groups(groups: IResolvable) {
     cdkBuilder.groups(groups)
   }
 
+  /**
+   * An array of structures that define the metrics that will be used to monitor the launch
+   * performance.
+   *
+   * You can have up to three metric monitors in the array.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-metricmonitors)
+   * @param metricMonitors An array of structures that define the metrics that will be used to
+   * monitor the launch performance. 
+   */
   public fun metricMonitors(vararg metricMonitors: Any) {
     _metricMonitors.addAll(listOf(*metricMonitors))
   }
 
+  /**
+   * An array of structures that define the metrics that will be used to monitor the launch
+   * performance.
+   *
+   * You can have up to three metric monitors in the array.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-metricmonitors)
+   * @param metricMonitors An array of structures that define the metrics that will be used to
+   * monitor the launch performance. 
+   */
   public fun metricMonitors(metricMonitors: Collection<Any>) {
     _metricMonitors.addAll(metricMonitors)
   }
 
+  /**
+   * An array of structures that define the metrics that will be used to monitor the launch
+   * performance.
+   *
+   * You can have up to three metric monitors in the array.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-metricmonitors)
+   * @param metricMonitors An array of structures that define the metrics that will be used to
+   * monitor the launch performance. 
+   */
   public fun metricMonitors(metricMonitors: IResolvable) {
     cdkBuilder.metricMonitors(metricMonitors)
   }
 
+  /**
+   * The name for the launch.
+   *
+   * It can include up to 127 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-name)
+   * @param name The name for the launch. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The name or ARN of the project that you want to create the launch in.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-project)
+   * @param project The name or ARN of the project that you want to create the launch in. 
+   */
   public fun project(project: String) {
     cdkBuilder.project(project)
   }
 
+  /**
+   * When Evidently assigns a particular user session to a launch, it must use a randomization ID to
+   * determine which variation the user session is served.
+   *
+   * This randomization ID is a combination of the entity ID and `randomizationSalt` . If you omit
+   * `randomizationSalt` , Evidently uses the launch name as the `randomizationsSalt` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-randomizationsalt)
+   * @param randomizationSalt When Evidently assigns a particular user session to a launch, it must
+   * use a randomization ID to determine which variation the user session is served. 
+   */
   public fun randomizationSalt(randomizationSalt: String) {
     cdkBuilder.randomizationSalt(randomizationSalt)
   }
 
+  /**
+   * An array of structures that define the traffic allocation percentages among the feature
+   * variations during each step of the launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-scheduledsplitsconfig)
+   * @param scheduledSplitsConfig An array of structures that define the traffic allocation
+   * percentages among the feature variations during each step of the launch. 
+   */
   public fun scheduledSplitsConfig(vararg scheduledSplitsConfig: Any) {
     _scheduledSplitsConfig.addAll(listOf(*scheduledSplitsConfig))
   }
 
+  /**
+   * An array of structures that define the traffic allocation percentages among the feature
+   * variations during each step of the launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-scheduledsplitsconfig)
+   * @param scheduledSplitsConfig An array of structures that define the traffic allocation
+   * percentages among the feature variations during each step of the launch. 
+   */
   public fun scheduledSplitsConfig(scheduledSplitsConfig: Collection<Any>) {
     _scheduledSplitsConfig.addAll(scheduledSplitsConfig)
   }
 
+  /**
+   * An array of structures that define the traffic allocation percentages among the feature
+   * variations during each step of the launch.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-scheduledsplitsconfig)
+   * @param scheduledSplitsConfig An array of structures that define the traffic allocation
+   * percentages among the feature variations during each step of the launch. 
+   */
   public fun scheduledSplitsConfig(scheduledSplitsConfig: IResolvable) {
     cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig)
   }
 
+  /**
+   * Assigns one or more tags (key-value pairs) to the launch.
+   *
+   * Tags can help you organize and categorize your resources. You can also use them to scope user
+   * permissions by granting a user permission to access or change only resources with certain tag
+   * values.
+   *
+   * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of
+   * characters.
+   *
+   * You can associate as many as 50 tags with a launch.
+   *
+   * For more information, see [Tagging AWS
+   * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-tags)
+   * @param tags Assigns one or more tags (key-value pairs) to the launch. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Assigns one or more tags (key-value pairs) to the launch.
+   *
+   * Tags can help you organize and categorize your resources. You can also use them to scope user
+   * permissions by granting a user permission to access or change only resources with certain tag
+   * values.
+   *
+   * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of
+   * characters.
+   *
+   * You can associate as many as 50 tags with a launch.
+   *
+   * For more information, see [Tagging AWS
+   * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html#cfn-evidently-launch-tags)
+   * @param tags Assigns one or more tags (key-value pairs) to the launch. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

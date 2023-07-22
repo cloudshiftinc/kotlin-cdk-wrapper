@@ -11,6 +11,13 @@ public class CfnVirtualNodeListenerTlsAcmCertificatePropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ListenerTlsAcmCertificateProperty.Builder =
       CfnVirtualNode.ListenerTlsAcmCertificateProperty.builder()
 
+  /**
+   * @param certificateArn The Amazon Resource Name (ARN) for the certificate. 
+   * The certificate must meet specific requirements and you must have proxy authorization enabled.
+   * For more information, see [Transport Layer Security
+   * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
+   * .
+   */
   public fun certificateArn(certificateArn: String) {
     cdkBuilder.certificateArn(certificateArn)
   }

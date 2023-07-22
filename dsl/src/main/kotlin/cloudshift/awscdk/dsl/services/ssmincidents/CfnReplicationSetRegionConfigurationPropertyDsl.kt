@@ -11,6 +11,9 @@ public class CfnReplicationSetRegionConfigurationPropertyDsl {
   private val cdkBuilder: CfnReplicationSet.RegionConfigurationProperty.Builder =
       CfnReplicationSet.RegionConfigurationProperty.builder()
 
+  /**
+   * @param sseKmsKeyId The KMS key ID to use to encrypt your replication set. 
+   */
   public fun sseKmsKeyId(sseKmsKeyId: String) {
     cdkBuilder.sseKmsKeyId(sseKmsKeyId)
   }

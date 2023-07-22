@@ -11,6 +11,9 @@ public class CfnScheduledActionPauseClusterMessagePropertyDsl {
   private val cdkBuilder: CfnScheduledAction.PauseClusterMessageProperty.Builder =
       CfnScheduledAction.PauseClusterMessageProperty.builder()
 
+  /**
+   * @param clusterIdentifier The identifier of the cluster to be paused. 
+   */
   public fun clusterIdentifier(clusterIdentifier: String) {
     cdkBuilder.clusterIdentifier(clusterIdentifier)
   }

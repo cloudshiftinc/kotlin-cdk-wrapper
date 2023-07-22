@@ -17,22 +17,39 @@ public class CfnStudioComponentActiveDirectoryConfigurationPropertyDsl {
 
   private val _computerAttributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param computerAttributes A collection of custom attributes for an Active Directory computer.
+   */
   public fun computerAttributes(vararg computerAttributes: Any) {
     _computerAttributes.addAll(listOf(*computerAttributes))
   }
 
+  /**
+   * @param computerAttributes A collection of custom attributes for an Active Directory computer.
+   */
   public fun computerAttributes(computerAttributes: Collection<Any>) {
     _computerAttributes.addAll(computerAttributes)
   }
 
+  /**
+   * @param computerAttributes A collection of custom attributes for an Active Directory computer.
+   */
   public fun computerAttributes(computerAttributes: IResolvable) {
     cdkBuilder.computerAttributes(computerAttributes)
   }
 
+  /**
+   * @param directoryId The directory ID of the AWS Directory Service for Microsoft Active Directory
+   * to access using this studio component.
+   */
   public fun directoryId(directoryId: String) {
     cdkBuilder.directoryId(directoryId)
   }
 
+  /**
+   * @param organizationalUnitDistinguishedName The distinguished name (DN) and organizational unit
+   * (OU) of an Active Directory computer.
+   */
   public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
     cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
   }

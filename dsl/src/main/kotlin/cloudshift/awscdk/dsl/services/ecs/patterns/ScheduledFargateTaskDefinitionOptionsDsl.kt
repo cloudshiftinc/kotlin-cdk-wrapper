@@ -11,6 +11,11 @@ public class ScheduledFargateTaskDefinitionOptionsDsl {
   private val cdkBuilder: ScheduledFargateTaskDefinitionOptions.Builder =
       ScheduledFargateTaskDefinitionOptions.builder()
 
+  /**
+   * @param taskDefinition The task definition to use for tasks in the service. Image or
+   * taskDefinition must be specified, but not both. 
+   * [disable-awslint:ref-via-interface]
+   */
   public fun taskDefinition(taskDefinition: FargateTaskDefinition) {
     cdkBuilder.taskDefinition(taskDefinition)
   }

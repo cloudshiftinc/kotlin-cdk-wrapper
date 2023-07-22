@@ -19,24 +19,70 @@ public class AlbControllerDsl(
 ) {
   private val cdkBuilder: AlbController.Builder = AlbController.Builder.create(scope, id)
 
+  /**
+   * [disable-awslint:ref-via-interface] Cluster to install the controller onto.
+   *
+   * @param cluster [disable-awslint:ref-via-interface] Cluster to install the controller onto. 
+   */
   public fun cluster(cluster: Cluster) {
     cdkBuilder.cluster(cluster)
   }
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The IAM policy to apply to the service account.
+   *
+   * If you're using one of the built-in versions, this is not required since
+   * CDK ships with the appropriate policies for those versions.
+   *
+   * However, if you are using a custom version, this is required (and validated).
+   *
+   * Default: - Corresponds to the predefined version.
+   *
+   * @param policy The IAM policy to apply to the service account. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * The IAM policy to apply to the service account.
+   *
+   * If you're using one of the built-in versions, this is not required since
+   * CDK ships with the appropriate policies for those versions.
+   *
+   * However, if you are using a custom version, this is required (and validated).
+   *
+   * Default: - Corresponds to the predefined version.
+   *
+   * @param policy The IAM policy to apply to the service account. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * The repository to pull the controller image from.
+   *
+   * Note that the default repository works for most regions, but not all.
+   * If the repository is not applicable to your region, use a custom repository
+   * according to the information here:
+   * https://github.com/kubernetes-sigs/aws-load-balancer-controller/releases.
+   *
+   * Default: '602401143452.dkr.ecr.us-west-2.amazonaws.com/amazon/aws-load-balancer-controller'
+   *
+   * @param repository The repository to pull the controller image from. 
+   */
   public fun repository(repository: String) {
     cdkBuilder.repository(repository)
   }
 
+  /**
+   * Version of the controller.
+   *
+   * @param version Version of the controller. 
+   */
   public fun version(version: AlbControllerVersion) {
     cdkBuilder.version(version)
   }

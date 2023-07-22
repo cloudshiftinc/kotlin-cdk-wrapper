@@ -11,10 +11,17 @@ public class CloudFrontWebDistributionAttributesDsl {
   private val cdkBuilder: CloudFrontWebDistributionAttributes.Builder =
       CloudFrontWebDistributionAttributes.builder()
 
+  /**
+   * @param distributionId The distribution ID for this distribution. 
+   */
   public fun distributionId(distributionId: String) {
     cdkBuilder.distributionId(distributionId)
   }
 
+  /**
+   * @param domainName The generated domain name of the Distribution, such as
+   * d111111abcdef8.cloudfront.net. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }

@@ -11,6 +11,9 @@ public class CfnRecordingConfigurationS3DestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnRecordingConfiguration.S3DestinationConfigurationProperty.Builder =
       CfnRecordingConfiguration.S3DestinationConfigurationProperty.builder()
 
+  /**
+   * @param bucketName Location (S3 bucket name) where recorded videos will be stored. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }

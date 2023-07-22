@@ -1,14 +1,15 @@
 package cloudshift.awscdkdsl.build.dsl.asm
 
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
+import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceClass
 import com.squareup.kotlinpoet.ClassName
 import org.gradle.kotlin.dsl.provideDelegate
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 
-internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass {
-    override val className: ClassName by lazy(LazyThreadSafetyMode.NONE) { ClassName.fromAsmClassName(delegate.name) }
+internal class AsmClassAdapter(className : ClassName, private val delegate: ClassNode, private val sourceClass : CdkSourceClass?) : CdkClass {
+    override val className: ClassName = className
 
     private val annotations: List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
         delegate.allAnnotations.map { Type.getType(it.desc).toTypeName() }
@@ -21,7 +22,7 @@ internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass {
                 it.accessFlags.isPublic() &&
                 !it.accessFlags.isGenerated() &&
                 !it.accessFlags.isStatic()
-        }.map { AsmMethodAdapter(it) }
+        }.map { AsmMethodAdapter(it, sourceClass?.methodFor(it.name)) }
     }
 
     override val publicStaticFunctions: List<CdkClass.Method> by lazy(LazyThreadSafetyMode.NONE) {

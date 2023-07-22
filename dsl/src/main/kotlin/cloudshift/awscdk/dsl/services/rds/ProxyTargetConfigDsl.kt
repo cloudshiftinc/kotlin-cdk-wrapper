@@ -18,22 +18,42 @@ public class ProxyTargetConfigDsl {
 
   private val _dbInstances: MutableList<IDatabaseInstance> = mutableListOf()
 
+  /**
+   * @param dbClusters The database clusters to which this proxy connects.
+   * Either this or `dbInstances` will be set and the other `undefined`.
+   */
   public fun dbClusters(vararg dbClusters: IDatabaseCluster) {
     _dbClusters.addAll(listOf(*dbClusters))
   }
 
+  /**
+   * @param dbClusters The database clusters to which this proxy connects.
+   * Either this or `dbInstances` will be set and the other `undefined`.
+   */
   public fun dbClusters(dbClusters: Collection<IDatabaseCluster>) {
     _dbClusters.addAll(dbClusters)
   }
 
+  /**
+   * @param dbInstances The database instances to which this proxy connects.
+   * Either this or `dbClusters` will be set and the other `undefined`.
+   */
   public fun dbInstances(vararg dbInstances: IDatabaseInstance) {
     _dbInstances.addAll(listOf(*dbInstances))
   }
 
+  /**
+   * @param dbInstances The database instances to which this proxy connects.
+   * Either this or `dbClusters` will be set and the other `undefined`.
+   */
   public fun dbInstances(dbInstances: Collection<IDatabaseInstance>) {
     _dbInstances.addAll(dbInstances)
   }
 
+  /**
+   * @param engineFamily The engine family of the database instance or cluster this proxy connects
+   * with. 
+   */
   public fun engineFamily(engineFamily: String) {
     cdkBuilder.engineFamily(engineFamily)
   }

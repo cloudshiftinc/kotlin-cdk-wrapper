@@ -11,10 +11,16 @@ public class CfnNetworkInsightsAnalysisAlternatePathHintPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AlternatePathHintProperty.Builder =
       CfnNetworkInsightsAnalysis.AlternatePathHintProperty.builder()
 
+  /**
+   * @param componentArn The Amazon Resource Name (ARN) of the component.
+   */
   public fun componentArn(componentArn: String) {
     cdkBuilder.componentArn(componentArn)
   }
 
+  /**
+   * @param componentId The ID of the component.
+   */
   public fun componentId(componentId: String) {
     cdkBuilder.componentId(componentId)
   }

@@ -15,26 +15,46 @@ public class CfnLaunchNotificationConstraintPropsDsl {
 
   private val _notificationArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param acceptLanguage The language code.
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   */
   public fun acceptLanguage(acceptLanguage: String) {
     cdkBuilder.acceptLanguage(acceptLanguage)
   }
 
+  /**
+   * @param description The description of the constraint.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param notificationArns The notification ARNs. 
+   */
   public fun notificationArns(vararg notificationArns: String) {
     _notificationArns.addAll(listOf(*notificationArns))
   }
 
+  /**
+   * @param notificationArns The notification ARNs. 
+   */
   public fun notificationArns(notificationArns: Collection<String>) {
     _notificationArns.addAll(notificationArns)
   }
 
+  /**
+   * @param portfolioId The portfolio identifier. 
+   */
   public fun portfolioId(portfolioId: String) {
     cdkBuilder.portfolioId(portfolioId)
   }
 
+  /**
+   * @param productId The product identifier. 
+   */
   public fun productId(productId: String) {
     cdkBuilder.productId(productId)
   }

@@ -16,26 +16,48 @@ public class CfnTemplateDateTimeDefaultValuesPropertyDsl {
 
   private val _staticValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param dynamicValue The dynamic value of the `DataTimeDefaultValues` .
+   * Different defaults are displayed according to users, groups, and values mapping.
+   */
   public fun dynamicValue(dynamicValue: IResolvable) {
     cdkBuilder.dynamicValue(dynamicValue)
   }
 
+  /**
+   * @param dynamicValue The dynamic value of the `DataTimeDefaultValues` .
+   * Different defaults are displayed according to users, groups, and values mapping.
+   */
   public fun dynamicValue(dynamicValue: CfnTemplate.DynamicDefaultValueProperty) {
     cdkBuilder.dynamicValue(dynamicValue)
   }
 
+  /**
+   * @param rollingDate The rolling date of the `DataTimeDefaultValues` .
+   * The date is determined from the dataset based on input expression.
+   */
   public fun rollingDate(rollingDate: IResolvable) {
     cdkBuilder.rollingDate(rollingDate)
   }
 
+  /**
+   * @param rollingDate The rolling date of the `DataTimeDefaultValues` .
+   * The date is determined from the dataset based on input expression.
+   */
   public fun rollingDate(rollingDate: CfnTemplate.RollingDateConfigurationProperty) {
     cdkBuilder.rollingDate(rollingDate)
   }
 
+  /**
+   * @param staticValues The static values of the `DataTimeDefaultValues` .
+   */
   public fun staticValues(vararg staticValues: String) {
     _staticValues.addAll(listOf(*staticValues))
   }
 
+  /**
+   * @param staticValues The static values of the `DataTimeDefaultValues` .
+   */
   public fun staticValues(staticValues: Collection<String>) {
     _staticValues.addAll(staticValues)
   }

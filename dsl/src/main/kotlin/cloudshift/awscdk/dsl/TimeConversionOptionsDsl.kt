@@ -10,6 +10,10 @@ import software.amazon.awscdk.TimeConversionOptions
 public class TimeConversionOptionsDsl {
   private val cdkBuilder: TimeConversionOptions.Builder = TimeConversionOptions.builder()
 
+  /**
+   * @param integral If `true`, conversions into a larger time unit (e.g. `Seconds` to `Minutes`)
+   * will fail if the result is not an integer.
+   */
   public fun integral(integral: Boolean) {
     cdkBuilder.integral(integral)
   }

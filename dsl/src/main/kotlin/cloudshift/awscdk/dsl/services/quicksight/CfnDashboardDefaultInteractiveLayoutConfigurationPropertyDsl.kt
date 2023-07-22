@@ -11,18 +11,32 @@ public class CfnDashboardDefaultInteractiveLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.DefaultInteractiveLayoutConfigurationProperty.Builder =
       CfnDashboard.DefaultInteractiveLayoutConfigurationProperty.builder()
 
+  /**
+   * @param freeForm The options that determine the default settings of a free-form layout
+   * configuration.
+   */
   public fun freeForm(freeForm: IResolvable) {
     cdkBuilder.freeForm(freeForm)
   }
 
+  /**
+   * @param freeForm The options that determine the default settings of a free-form layout
+   * configuration.
+   */
   public fun freeForm(freeForm: CfnDashboard.DefaultFreeFormLayoutConfigurationProperty) {
     cdkBuilder.freeForm(freeForm)
   }
 
+  /**
+   * @param grid The options that determine the default settings for a grid layout configuration.
+   */
   public fun grid(grid: IResolvable) {
     cdkBuilder.grid(grid)
   }
 
+  /**
+   * @param grid The options that determine the default settings for a grid layout configuration.
+   */
   public fun grid(grid: CfnDashboard.DefaultGridLayoutConfigurationProperty) {
     cdkBuilder.grid(grid)
   }

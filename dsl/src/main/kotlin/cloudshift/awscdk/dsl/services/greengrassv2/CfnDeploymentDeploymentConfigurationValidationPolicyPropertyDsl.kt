@@ -11,6 +11,13 @@ public class CfnDeploymentDeploymentConfigurationValidationPolicyPropertyDsl {
   private val cdkBuilder: CfnDeployment.DeploymentConfigurationValidationPolicyProperty.Builder =
       CfnDeployment.DeploymentConfigurationValidationPolicyProperty.builder()
 
+  /**
+   * @param timeoutInSeconds The amount of time in seconds that a component can validate its
+   * configuration updates.
+   * If the validation time exceeds this timeout, then the deployment proceeds for the device.
+   *
+   * Default: `30`
+   */
   public fun timeoutInSeconds(timeoutInSeconds: Number) {
     cdkBuilder.timeoutInSeconds(timeoutInSeconds)
   }

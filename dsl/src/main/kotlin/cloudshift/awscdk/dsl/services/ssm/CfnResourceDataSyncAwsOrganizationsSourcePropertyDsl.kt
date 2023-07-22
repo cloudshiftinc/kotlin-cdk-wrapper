@@ -15,14 +15,26 @@ public class CfnResourceDataSyncAwsOrganizationsSourcePropertyDsl {
 
   private val _organizationalUnits: MutableList<String> = mutableListOf()
 
+  /**
+   * @param organizationSourceType If an AWS organization is present, this is either
+   * `OrganizationalUnits` or `EntireOrganization` . 
+   * For `OrganizationalUnits` , the data is aggregated from a set of organization units. For
+   * `EntireOrganization` , the data is aggregated from the entire AWS organization.
+   */
   public fun organizationSourceType(organizationSourceType: String) {
     cdkBuilder.organizationSourceType(organizationSourceType)
   }
 
+  /**
+   * @param organizationalUnits The AWS Organizations organization units included in the sync.
+   */
   public fun organizationalUnits(vararg organizationalUnits: String) {
     _organizationalUnits.addAll(listOf(*organizationalUnits))
   }
 
+  /**
+   * @param organizationalUnits The AWS Organizations organization units included in the sync.
+   */
   public fun organizationalUnits(organizationalUnits: Collection<String>) {
     _organizationalUnits.addAll(organizationalUnits)
   }

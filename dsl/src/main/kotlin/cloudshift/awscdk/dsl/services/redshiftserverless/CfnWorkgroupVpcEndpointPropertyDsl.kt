@@ -17,22 +17,40 @@ public class CfnWorkgroupVpcEndpointPropertyDsl {
 
   private val _networkInterfaces: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param networkInterfaces One or more network interfaces of the endpoint.
+   * Also known as an interface endpoint.
+   */
   public fun networkInterfaces(vararg networkInterfaces: Any) {
     _networkInterfaces.addAll(listOf(*networkInterfaces))
   }
 
+  /**
+   * @param networkInterfaces One or more network interfaces of the endpoint.
+   * Also known as an interface endpoint.
+   */
   public fun networkInterfaces(networkInterfaces: Collection<Any>) {
     _networkInterfaces.addAll(networkInterfaces)
   }
 
+  /**
+   * @param networkInterfaces One or more network interfaces of the endpoint.
+   * Also known as an interface endpoint.
+   */
   public fun networkInterfaces(networkInterfaces: IResolvable) {
     cdkBuilder.networkInterfaces(networkInterfaces)
   }
 
+  /**
+   * @param vpcEndpointId The connection endpoint ID for connecting to Amazon Redshift Serverless.
+   */
   public fun vpcEndpointId(vpcEndpointId: String) {
     cdkBuilder.vpcEndpointId(vpcEndpointId)
   }
 
+  /**
+   * @param vpcId The VPC identifier that the endpoint is associated with.
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

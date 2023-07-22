@@ -11,10 +11,18 @@ public class CfnChannelFrameCaptureCdnSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.FrameCaptureCdnSettingsProperty.Builder =
       CfnChannel.FrameCaptureCdnSettingsProperty.builder()
 
+  /**
+   * @param frameCaptureS3Settings Sets up Amazon S3 as the destination for this Frame Capture
+   * output.
+   */
   public fun frameCaptureS3Settings(frameCaptureS3Settings: IResolvable) {
     cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings)
   }
 
+  /**
+   * @param frameCaptureS3Settings Sets up Amazon S3 as the destination for this Frame Capture
+   * output.
+   */
   public
       fun frameCaptureS3Settings(frameCaptureS3Settings: CfnChannel.FrameCaptureS3SettingsProperty) {
     cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings)

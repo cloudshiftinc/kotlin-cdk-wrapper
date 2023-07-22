@@ -16,14 +16,26 @@ public class CfnIdentityPoolRoleAttachmentRulesConfigurationTypePropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param rules The rules. 
+   * You can specify up to 25 rules per identity provider.
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules The rules. 
+   * You can specify up to 25 rules per identity provider.
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules The rules. 
+   * You can specify up to 25 rules per identity provider.
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

@@ -11,10 +11,16 @@ public class CfnChannelArchiveCdnSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.ArchiveCdnSettingsProperty.Builder =
       CfnChannel.ArchiveCdnSettingsProperty.builder()
 
+  /**
+   * @param archiveS3Settings Sets up Amazon S3 as the destination for this Archive output.
+   */
   public fun archiveS3Settings(archiveS3Settings: IResolvable) {
     cdkBuilder.archiveS3Settings(archiveS3Settings)
   }
 
+  /**
+   * @param archiveS3Settings Sets up Amazon S3 as the destination for this Archive output.
+   */
   public fun archiveS3Settings(archiveS3Settings: CfnChannel.ArchiveS3SettingsProperty) {
     cdkBuilder.archiveS3Settings(archiveS3Settings)
   }

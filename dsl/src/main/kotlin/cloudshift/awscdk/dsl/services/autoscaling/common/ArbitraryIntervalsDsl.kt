@@ -16,14 +16,23 @@ public class ArbitraryIntervalsDsl {
 
   private val _intervals: MutableList<ScalingInterval> = mutableListOf()
 
+  /**
+   * @param absolute the value to be set. 
+   */
   public fun absolute(absolute: Boolean) {
     cdkBuilder.absolute(absolute)
   }
 
+  /**
+   * @param intervals the value to be set. 
+   */
   public fun intervals(intervals: ScalingIntervalDsl.() -> Unit) {
     _intervals.add(ScalingIntervalDsl().apply(intervals).build())
   }
 
+  /**
+   * @param intervals the value to be set. 
+   */
   public fun intervals(intervals: Collection<ScalingInterval>) {
     _intervals.addAll(intervals)
   }

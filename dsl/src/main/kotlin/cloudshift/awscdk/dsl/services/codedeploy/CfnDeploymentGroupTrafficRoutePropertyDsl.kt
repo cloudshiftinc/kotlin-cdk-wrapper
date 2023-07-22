@@ -15,10 +15,16 @@ public class CfnDeploymentGroupTrafficRoutePropertyDsl {
 
   private val _listenerArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param listenerArns the value to be set.
+   */
   public fun listenerArns(vararg listenerArns: String) {
     _listenerArns.addAll(listOf(*listenerArns))
   }
 
+  /**
+   * @param listenerArns the value to be set.
+   */
   public fun listenerArns(listenerArns: Collection<String>) {
     _listenerArns.addAll(listenerArns)
   }

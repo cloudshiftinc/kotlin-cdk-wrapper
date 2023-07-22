@@ -11,6 +11,13 @@ public class CfnInstanceElasticGpuSpecificationPropertyDsl {
   private val cdkBuilder: CfnInstance.ElasticGpuSpecificationProperty.Builder =
       CfnInstance.ElasticGpuSpecificationProperty.builder()
 
+  /**
+   * @param type The type of Elastic Graphics accelerator. 
+   * For more information about the values to specify for `Type` , see [Elastic Graphics
+   * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+   * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud User
+   * Guide for Windows Instances* .
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

@@ -22,18 +22,70 @@ public class GatewayVpcEndpointDsl(
 
   private val _subnets: MutableList<SubnetSelection> = mutableListOf()
 
+  /**
+   * The service to use for this gateway VPC endpoint.
+   *
+   * @param service The service to use for this gateway VPC endpoint. 
+   */
   public fun service(service: IGatewayVpcEndpointService) {
     cdkBuilder.service(service)
   }
 
+  /**
+   * Where to add endpoint routing.
+   *
+   * By default, this endpoint will be routable from all subnets in the VPC.
+   * Specify a list of subnet selection objects here to be more specific.
+   *
+   * Default: - All subnets in the VPC
+   *
+   * Example:
+   *
+   * ```
+   * Vpc vpc;
+   * vpc.addGatewayEndpoint("DynamoDbEndpoint", GatewayVpcEndpointOptions.builder()
+   * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+   * // Add only to ISOLATED subnets
+   * .subnets(List.of(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_ISOLATED).build()))
+   * .build());
+   * ```
+   *
+   * @param subnets Where to add endpoint routing. 
+   */
   public fun subnets(subnets: SubnetSelectionDsl.() -> Unit) {
     _subnets.add(SubnetSelectionDsl().apply(subnets).build())
   }
 
+  /**
+   * Where to add endpoint routing.
+   *
+   * By default, this endpoint will be routable from all subnets in the VPC.
+   * Specify a list of subnet selection objects here to be more specific.
+   *
+   * Default: - All subnets in the VPC
+   *
+   * Example:
+   *
+   * ```
+   * Vpc vpc;
+   * vpc.addGatewayEndpoint("DynamoDbEndpoint", GatewayVpcEndpointOptions.builder()
+   * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+   * // Add only to ISOLATED subnets
+   * .subnets(List.of(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_ISOLATED).build()))
+   * .build());
+   * ```
+   *
+   * @param subnets Where to add endpoint routing. 
+   */
   public fun subnets(subnets: Collection<SubnetSelection>) {
     _subnets.addAll(subnets)
   }
 
+  /**
+   * The VPC network in which the gateway endpoint will be used.
+   *
+   * @param vpc The VPC network in which the gateway endpoint will be used. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

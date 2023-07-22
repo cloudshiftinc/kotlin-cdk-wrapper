@@ -11,6 +11,9 @@ public class CfnConnectPeerBgpOptionsPropertyDsl {
   private val cdkBuilder: CfnConnectPeer.BgpOptionsProperty.Builder =
       CfnConnectPeer.BgpOptionsProperty.builder()
 
+  /**
+   * @param peerAsn The Peer ASN of the BGP.
+   */
   public fun peerAsn(peerAsn: Number) {
     cdkBuilder.peerAsn(peerAsn)
   }

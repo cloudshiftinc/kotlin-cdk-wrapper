@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.certificatemanager.ICertificate
 public class DomainOptionsDsl {
   private val cdkBuilder: DomainOptions.Builder = DomainOptions.builder()
 
+  /**
+   * @param certificate The certificate to use with the domain name. 
+   */
   public fun certificate(certificate: ICertificate) {
     cdkBuilder.certificate(certificate)
   }
 
+  /**
+   * @param domainName The actual domain name. 
+   * For example, `api.example.com`.
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }

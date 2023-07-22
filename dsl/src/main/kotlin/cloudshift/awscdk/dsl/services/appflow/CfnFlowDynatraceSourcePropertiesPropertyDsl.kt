@@ -11,6 +11,9 @@ public class CfnFlowDynatraceSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.DynatraceSourcePropertiesProperty.Builder =
       CfnFlow.DynatraceSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Dynatrace flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

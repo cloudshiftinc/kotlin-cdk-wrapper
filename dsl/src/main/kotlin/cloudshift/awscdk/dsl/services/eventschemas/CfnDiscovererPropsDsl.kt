@@ -18,26 +18,46 @@ public class CfnDiscovererPropsDsl {
 
   private val _tags: MutableList<CfnDiscoverer.TagsEntryProperty> = mutableListOf()
 
+  /**
+   * @param crossAccount Allows for the discovery of the event schemas that are sent to the event
+   * bus from another account.
+   */
   public fun crossAccount(crossAccount: Boolean) {
     cdkBuilder.crossAccount(crossAccount)
   }
 
+  /**
+   * @param crossAccount Allows for the discovery of the event schemas that are sent to the event
+   * bus from another account.
+   */
   public fun crossAccount(crossAccount: IResolvable) {
     cdkBuilder.crossAccount(crossAccount)
   }
 
+  /**
+   * @param description A description for the discoverer.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param sourceArn The ARN of the event bus. 
+   */
   public fun sourceArn(sourceArn: String) {
     cdkBuilder.sourceArn(sourceArn)
   }
 
+  /**
+   * @param tags Tags associated with the resource.
+   */
   public fun tags(tags: CfnDiscovererTagsEntryPropertyDsl.() -> Unit) {
     _tags.add(CfnDiscovererTagsEntryPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Tags associated with the resource.
+   */
   public fun tags(tags: Collection<CfnDiscoverer.TagsEntryProperty>) {
     _tags.addAll(tags)
   }

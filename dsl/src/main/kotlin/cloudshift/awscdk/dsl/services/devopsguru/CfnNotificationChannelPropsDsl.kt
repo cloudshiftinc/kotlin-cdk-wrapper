@@ -12,10 +12,18 @@ public class CfnNotificationChannelPropsDsl {
   private val cdkBuilder: CfnNotificationChannelProps.Builder =
       CfnNotificationChannelProps.builder()
 
+  /**
+   * @param config A `NotificationChannelConfig` object that contains information about configured
+   * notification channels. 
+   */
   public fun config(config: IResolvable) {
     cdkBuilder.config(config)
   }
 
+  /**
+   * @param config A `NotificationChannelConfig` object that contains information about configured
+   * notification channels. 
+   */
   public fun config(config: CfnNotificationChannel.NotificationChannelConfigProperty) {
     cdkBuilder.config(config)
   }

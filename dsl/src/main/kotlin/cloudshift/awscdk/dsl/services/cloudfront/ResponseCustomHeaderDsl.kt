@@ -11,14 +11,24 @@ import software.amazon.awscdk.services.cloudfront.ResponseCustomHeader
 public class ResponseCustomHeaderDsl {
   private val cdkBuilder: ResponseCustomHeader.Builder = ResponseCustomHeader.builder()
 
+  /**
+   * @param header The HTTP response header name. 
+   */
   public fun `header`(`header`: String) {
     cdkBuilder.`header`(`header`)
   }
 
+  /**
+   * @param override A Boolean that determines whether CloudFront overrides a response header with
+   * the same name received from the origin with the header specified here. 
+   */
   public fun `override`(`override`: Boolean) {
     cdkBuilder.`override`(`override`)
   }
 
+  /**
+   * @param value The value for the HTTP response header. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

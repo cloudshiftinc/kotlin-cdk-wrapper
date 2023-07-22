@@ -11,6 +11,9 @@ public class CfnDataSetColumnDescriptionPropertyDsl {
   private val cdkBuilder: CfnDataSet.ColumnDescriptionProperty.Builder =
       CfnDataSet.ColumnDescriptionProperty.builder()
 
+  /**
+   * @param text The text of a description for a column.
+   */
   public fun text(text: String) {
     cdkBuilder.text(text)
   }

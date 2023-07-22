@@ -14,16 +14,25 @@ import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
 public class DockerImageAssetDsl {
   private val cdkBuilder: DockerImageAsset.Builder = DockerImageAsset.builder()
 
+  /**
+   * @param destinations Destinations for this file asset. 
+   */
   public fun destinations(destinations: Map<String, DockerImageDestination>) {
     cdkBuilder.destinations(destinations)
   }
 
-  public fun source(block: DockerImageSourceDsl.() -> Unit = {}) {
+  /**
+   * @param source Source description for file assets. 
+   */
+  public fun source(source: DockerImageSourceDsl.() -> Unit = {}) {
     val builder = DockerImageSourceDsl()
-    builder.apply(block)
+    builder.apply(source)
     cdkBuilder.source(builder.build())
   }
 
+  /**
+   * @param source Source description for file assets. 
+   */
   public fun source(source: DockerImageSource) {
     cdkBuilder.source(source)
   }

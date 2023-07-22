@@ -11,10 +11,16 @@ public class CfnNetworkInsightsAnalysisPortRangePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.PortRangeProperty.Builder =
       CfnNetworkInsightsAnalysis.PortRangeProperty.builder()
 
+  /**
+   * @param from The first port in the range.
+   */
   public fun from(from: Number) {
     cdkBuilder.from(from)
   }
 
+  /**
+   * @param to The last port in the range.
+   */
   public fun to(to: Number) {
     cdkBuilder.to(to)
   }

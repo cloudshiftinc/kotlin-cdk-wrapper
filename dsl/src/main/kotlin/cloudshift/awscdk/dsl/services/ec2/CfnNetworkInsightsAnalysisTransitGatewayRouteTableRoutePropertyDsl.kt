@@ -11,30 +11,53 @@ public class CfnNetworkInsightsAnalysisTransitGatewayRouteTableRoutePropertyDsl 
   private val cdkBuilder: CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty.Builder =
       CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty.builder()
 
+  /**
+   * @param attachmentId The ID of the route attachment.
+   */
   public fun attachmentId(attachmentId: String) {
     cdkBuilder.attachmentId(attachmentId)
   }
 
+  /**
+   * @param destinationCidr The CIDR block used for destination matches.
+   */
   public fun destinationCidr(destinationCidr: String) {
     cdkBuilder.destinationCidr(destinationCidr)
   }
 
+  /**
+   * @param prefixListId The ID of the prefix list.
+   */
   public fun prefixListId(prefixListId: String) {
     cdkBuilder.prefixListId(prefixListId)
   }
 
+  /**
+   * @param resourceId The ID of the resource for the route attachment.
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }
 
+  /**
+   * @param resourceType The resource type for the route attachment.
+   */
   public fun resourceType(resourceType: String) {
     cdkBuilder.resourceType(resourceType)
   }
 
+  /**
+   * @param routeOrigin The route origin. The following are the possible values:.
+   * * static
+   * * propagated
+   */
   public fun routeOrigin(routeOrigin: String) {
     cdkBuilder.routeOrigin(routeOrigin)
   }
 
+  /**
+   * @param state The state of the route.
+   */
   public fun state(state: String) {
     cdkBuilder.state(state)
   }

@@ -11,6 +11,9 @@ public class CfnDashboardGeospatialHeatmapDataColorPropertyDsl {
   private val cdkBuilder: CfnDashboard.GeospatialHeatmapDataColorProperty.Builder =
       CfnDashboard.GeospatialHeatmapDataColorProperty.builder()
 
+  /**
+   * @param color The hex color to be used in the heatmap point style. 
+   */
   public fun color(color: String) {
     cdkBuilder.color(color)
   }

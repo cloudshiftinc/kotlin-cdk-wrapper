@@ -19,28 +19,50 @@ public class CfnCodeDeployBlueGreenEcsAttributesDsl {
 
   private val _taskSets: MutableList<String> = mutableListOf()
 
+  /**
+   * @param taskDefinitions The logical IDs of the blue and green, respectively,
+   * AWS::ECS::TaskDefinition task definitions. 
+   */
   public fun taskDefinitions(vararg taskDefinitions: String) {
     _taskDefinitions.addAll(listOf(*taskDefinitions))
   }
 
+  /**
+   * @param taskDefinitions The logical IDs of the blue and green, respectively,
+   * AWS::ECS::TaskDefinition task definitions. 
+   */
   public fun taskDefinitions(taskDefinitions: Collection<String>) {
     _taskDefinitions.addAll(taskDefinitions)
   }
 
+  /**
+   * @param taskSets The logical IDs of the blue and green, respectively, AWS::ECS::TaskSet task
+   * sets. 
+   */
   public fun taskSets(vararg taskSets: String) {
     _taskSets.addAll(listOf(*taskSets))
   }
 
+  /**
+   * @param taskSets The logical IDs of the blue and green, respectively, AWS::ECS::TaskSet task
+   * sets. 
+   */
   public fun taskSets(taskSets: Collection<String>) {
     _taskSets.addAll(taskSets)
   }
 
-  public fun trafficRouting(block: CfnTrafficRoutingDsl.() -> Unit = {}) {
+  /**
+   * @param trafficRouting The traffic routing configuration. 
+   */
+  public fun trafficRouting(trafficRouting: CfnTrafficRoutingDsl.() -> Unit = {}) {
     val builder = CfnTrafficRoutingDsl()
-    builder.apply(block)
+    builder.apply(trafficRouting)
     cdkBuilder.trafficRouting(builder.build())
   }
 
+  /**
+   * @param trafficRouting The traffic routing configuration. 
+   */
   public fun trafficRouting(trafficRouting: CfnTrafficRouting) {
     cdkBuilder.trafficRouting(trafficRouting)
   }

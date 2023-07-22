@@ -11,18 +11,31 @@ public class CfnCertificateAuthorityActivationPropsDsl {
   private val cdkBuilder: CfnCertificateAuthorityActivationProps.Builder =
       CfnCertificateAuthorityActivationProps.builder()
 
+  /**
+   * @param certificate The Base64 PEM-encoded certificate authority certificate. 
+   */
   public fun certificate(certificate: String) {
     cdkBuilder.certificate(certificate)
   }
 
+  /**
+   * @param certificateAuthorityArn The Amazon Resource Name (ARN) of your private CA. 
+   */
   public fun certificateAuthorityArn(certificateAuthorityArn: String) {
     cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
   }
 
+  /**
+   * @param certificateChain The Base64 PEM-encoded certificate chain that chains up to the root CA
+   * certificate that you used to sign your private CA certificate.
+   */
   public fun certificateChain(certificateChain: String) {
     cdkBuilder.certificateChain(certificateChain)
   }
 
+  /**
+   * @param status Status of your private CA.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

@@ -11,10 +11,18 @@ public class CfnModelExplainabilityJobDefinitionMonitoringResourcesPropertyDsl {
   private val cdkBuilder: CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty.Builder =
       CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty.builder()
 
+  /**
+   * @param clusterConfig The configuration for the cluster resources used to run the processing
+   * job. 
+   */
   public fun clusterConfig(clusterConfig: IResolvable) {
     cdkBuilder.clusterConfig(clusterConfig)
   }
 
+  /**
+   * @param clusterConfig The configuration for the cluster resources used to run the processing
+   * job. 
+   */
   public
       fun clusterConfig(clusterConfig: CfnModelExplainabilityJobDefinition.ClusterConfigProperty) {
     cdkBuilder.clusterConfig(clusterConfig)

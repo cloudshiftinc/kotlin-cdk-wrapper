@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig
 public class VirtualNodeListenerConfigDsl {
   private val cdkBuilder: VirtualNodeListenerConfig.Builder = VirtualNodeListenerConfig.builder()
 
-  public fun listener(block: CfnVirtualNodeListenerPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param listener Single listener config for a VirtualNode. 
+   */
+  public fun listener(listener: CfnVirtualNodeListenerPropertyDsl.() -> Unit = {}) {
     val builder = CfnVirtualNodeListenerPropertyDsl()
-    builder.apply(block)
+    builder.apply(listener)
     cdkBuilder.listener(builder.build())
   }
 
+  /**
+   * @param listener Single listener config for a VirtualNode. 
+   */
   public fun listener(listener: CfnVirtualNode.ListenerProperty) {
     cdkBuilder.listener(listener)
   }

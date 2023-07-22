@@ -16,22 +16,37 @@ public class CfnVerifiedAccessEndpointLoadBalancerOptionsPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param loadBalancerArn The ARN of the load balancer.
+   */
   public fun loadBalancerArn(loadBalancerArn: String) {
     cdkBuilder.loadBalancerArn(loadBalancerArn)
   }
 
+  /**
+   * @param port The IP port number.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param protocol The IP protocol.
+   */
   public fun protocol(protocol: String) {
     cdkBuilder.protocol(protocol)
   }
 
+  /**
+   * @param subnetIds The IDs of the subnets.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The IDs of the subnets.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

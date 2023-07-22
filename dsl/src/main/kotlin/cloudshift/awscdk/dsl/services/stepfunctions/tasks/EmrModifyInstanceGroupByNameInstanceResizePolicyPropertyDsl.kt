@@ -18,22 +18,42 @@ public class EmrModifyInstanceGroupByNameInstanceResizePolicyPropertyDsl {
 
   private val _instancesToTerminate: MutableList<String> = mutableListOf()
 
+  /**
+   * @param instanceTerminationTimeout Decommissioning timeout override for the specific list of
+   * instances to be terminated.
+   */
   public fun instanceTerminationTimeout(instanceTerminationTimeout: Duration) {
     cdkBuilder.instanceTerminationTimeout(instanceTerminationTimeout)
   }
 
+  /**
+   * @param instancesToProtect Specific list of instances to be protected when shrinking an instance
+   * group.
+   */
   public fun instancesToProtect(vararg instancesToProtect: String) {
     _instancesToProtect.addAll(listOf(*instancesToProtect))
   }
 
+  /**
+   * @param instancesToProtect Specific list of instances to be protected when shrinking an instance
+   * group.
+   */
   public fun instancesToProtect(instancesToProtect: Collection<String>) {
     _instancesToProtect.addAll(instancesToProtect)
   }
 
+  /**
+   * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
+   * instance group.
+   */
   public fun instancesToTerminate(vararg instancesToTerminate: String) {
     _instancesToTerminate.addAll(listOf(*instancesToTerminate))
   }
 
+  /**
+   * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
+   * instance group.
+   */
   public fun instancesToTerminate(instancesToTerminate: Collection<String>) {
     _instancesToTerminate.addAll(instancesToTerminate)
   }

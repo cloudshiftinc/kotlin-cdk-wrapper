@@ -11,10 +11,16 @@ public class CfnTaskDefinitionHostEntryPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.HostEntryProperty.Builder =
       CfnTaskDefinition.HostEntryProperty.builder()
 
+  /**
+   * @param hostname The hostname to use in the `/etc/hosts` entry.
+   */
   public fun hostname(hostname: String) {
     cdkBuilder.hostname(hostname)
   }
 
+  /**
+   * @param ipAddress The IP address to use in the `/etc/hosts` entry.
+   */
   public fun ipAddress(ipAddress: String) {
     cdkBuilder.ipAddress(ipAddress)
   }

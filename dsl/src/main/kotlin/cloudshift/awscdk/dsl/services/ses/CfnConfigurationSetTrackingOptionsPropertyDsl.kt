@@ -11,6 +11,10 @@ public class CfnConfigurationSetTrackingOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.TrackingOptionsProperty.Builder =
       CfnConfigurationSet.TrackingOptionsProperty.builder()
 
+  /**
+   * @param customRedirectDomain The custom subdomain that is used to redirect email recipients to
+   * the Amazon SES event tracking domain.
+   */
   public fun customRedirectDomain(customRedirectDomain: String) {
     cdkBuilder.customRedirectDomain(customRedirectDomain)
   }

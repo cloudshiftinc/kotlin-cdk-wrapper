@@ -13,18 +13,32 @@ public class CfnTopicRuleCloudwatchLogsActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.CloudwatchLogsActionProperty.Builder =
       CfnTopicRule.CloudwatchLogsActionProperty.builder()
 
+  /**
+   * @param batchMode Indicates whether batches of log records will be extracted and uploaded into
+   * CloudWatch.
+   */
   public fun batchMode(batchMode: Boolean) {
     cdkBuilder.batchMode(batchMode)
   }
 
+  /**
+   * @param batchMode Indicates whether batches of log records will be extracted and uploaded into
+   * CloudWatch.
+   */
   public fun batchMode(batchMode: IResolvable) {
     cdkBuilder.batchMode(batchMode)
   }
 
+  /**
+   * @param logGroupName The CloudWatch log name. 
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }
 
+  /**
+   * @param roleArn The IAM role that allows access to the CloudWatch log. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

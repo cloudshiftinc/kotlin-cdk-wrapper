@@ -12,12 +12,22 @@ import software.amazon.awscdk.CfnJsonProps
 public class CfnJsonPropsDsl {
   private val cdkBuilder: CfnJsonProps.Builder = CfnJsonProps.builder()
 
-  public fun `value`(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param value The value to resolve. 
+   * Can be any JavaScript object, including tokens and
+   * references in keys or values.
+   */
+  public fun `value`(`value`: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(`value`)
     cdkBuilder.`value`(builder.map)
   }
 
+  /**
+   * @param value The value to resolve. 
+   * Can be any JavaScript object, including tokens and
+   * references in keys or values.
+   */
   public fun `value`(`value`: Any) {
     cdkBuilder.`value`(`value`)
   }

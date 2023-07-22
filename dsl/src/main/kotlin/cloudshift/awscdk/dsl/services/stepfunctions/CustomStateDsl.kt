@@ -18,12 +18,24 @@ public class CustomStateDsl(
 ) {
   private val cdkBuilder: CustomState.Builder = CustomState.Builder.create(scope, id)
 
-  public fun stateJson(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * Amazon States Language (JSON-based) definition of the state.
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)
+   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
+   */
+  public fun stateJson(stateJson: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(stateJson)
     cdkBuilder.stateJson(builder.map)
   }
 
+  /**
+   * Amazon States Language (JSON-based) definition of the state.
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)
+   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
+   */
   public fun stateJson(stateJson: Map<String, Any>) {
     cdkBuilder.stateJson(stateJson)
   }

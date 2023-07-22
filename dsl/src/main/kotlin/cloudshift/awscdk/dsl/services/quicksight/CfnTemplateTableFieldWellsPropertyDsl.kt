@@ -11,19 +11,31 @@ public class CfnTemplateTableFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.TableFieldWellsProperty.Builder =
       CfnTemplate.TableFieldWellsProperty.builder()
 
+  /**
+   * @param tableAggregatedFieldWells The aggregated field well for the table.
+   */
   public fun tableAggregatedFieldWells(tableAggregatedFieldWells: IResolvable) {
     cdkBuilder.tableAggregatedFieldWells(tableAggregatedFieldWells)
   }
 
+  /**
+   * @param tableAggregatedFieldWells The aggregated field well for the table.
+   */
   public
       fun tableAggregatedFieldWells(tableAggregatedFieldWells: CfnTemplate.TableAggregatedFieldWellsProperty) {
     cdkBuilder.tableAggregatedFieldWells(tableAggregatedFieldWells)
   }
 
+  /**
+   * @param tableUnaggregatedFieldWells The unaggregated field well for the table.
+   */
   public fun tableUnaggregatedFieldWells(tableUnaggregatedFieldWells: IResolvable) {
     cdkBuilder.tableUnaggregatedFieldWells(tableUnaggregatedFieldWells)
   }
 
+  /**
+   * @param tableUnaggregatedFieldWells The unaggregated field well for the table.
+   */
   public
       fun tableUnaggregatedFieldWells(tableUnaggregatedFieldWells: CfnTemplate.TableUnaggregatedFieldWellsProperty) {
     cdkBuilder.tableUnaggregatedFieldWells(tableUnaggregatedFieldWells)

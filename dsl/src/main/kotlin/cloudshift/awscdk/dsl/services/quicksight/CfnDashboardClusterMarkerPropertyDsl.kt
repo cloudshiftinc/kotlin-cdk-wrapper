@@ -11,10 +11,16 @@ public class CfnDashboardClusterMarkerPropertyDsl {
   private val cdkBuilder: CfnDashboard.ClusterMarkerProperty.Builder =
       CfnDashboard.ClusterMarkerProperty.builder()
 
+  /**
+   * @param simpleClusterMarker The simple cluster marker of the cluster marker.
+   */
   public fun simpleClusterMarker(simpleClusterMarker: IResolvable) {
     cdkBuilder.simpleClusterMarker(simpleClusterMarker)
   }
 
+  /**
+   * @param simpleClusterMarker The simple cluster marker of the cluster marker.
+   */
   public fun simpleClusterMarker(simpleClusterMarker: CfnDashboard.SimpleClusterMarkerProperty) {
     cdkBuilder.simpleClusterMarker(simpleClusterMarker)
   }

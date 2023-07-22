@@ -22,38 +22,70 @@ public class CfnSignalCatalogPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description (Optional) A brief description of the signal catalog.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name (Optional) The name of the signal catalog.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param nodeCounts (Optional) Information about the number of nodes and node types in a vehicle
+   * network.
+   */
   public fun nodeCounts(nodeCounts: IResolvable) {
     cdkBuilder.nodeCounts(nodeCounts)
   }
 
+  /**
+   * @param nodeCounts (Optional) Information about the number of nodes and node types in a vehicle
+   * network.
+   */
   public fun nodeCounts(nodeCounts: CfnSignalCatalog.NodeCountsProperty) {
     cdkBuilder.nodeCounts(nodeCounts)
   }
 
+  /**
+   * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
+   * signals.
+   */
   public fun nodes(vararg nodes: Any) {
     _nodes.addAll(listOf(*nodes))
   }
 
+  /**
+   * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
+   * signals.
+   */
   public fun nodes(nodes: Collection<Any>) {
     _nodes.addAll(nodes)
   }
 
+  /**
+   * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
+   * signals.
+   */
   public fun nodes(nodes: IResolvable) {
     cdkBuilder.nodes(nodes)
   }
 
+  /**
+   * @param tags (Optional) Metadata that can be used to manage the signal catalog.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags (Optional) Metadata that can be used to manage the signal catalog.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

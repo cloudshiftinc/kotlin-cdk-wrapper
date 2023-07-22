@@ -11,6 +11,9 @@ public class CfnAccessPolicyProjectPropertyDsl {
   private val cdkBuilder: CfnAccessPolicy.ProjectProperty.Builder =
       CfnAccessPolicy.ProjectProperty.builder()
 
+  /**
+   * @param id The ID of the project.
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }

@@ -11,10 +11,16 @@ public class CfnConnectorPluginPropertyDsl {
   private val cdkBuilder: CfnConnector.PluginProperty.Builder =
       CfnConnector.PluginProperty.builder()
 
+  /**
+   * @param customPlugin Details about a custom plugin. 
+   */
   public fun customPlugin(customPlugin: IResolvable) {
     cdkBuilder.customPlugin(customPlugin)
   }
 
+  /**
+   * @param customPlugin Details about a custom plugin. 
+   */
   public fun customPlugin(customPlugin: CfnConnector.CustomPluginProperty) {
     cdkBuilder.customPlugin(customPlugin)
   }

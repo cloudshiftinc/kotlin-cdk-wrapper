@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 public class DockerImageOptionsDsl {
   private val cdkBuilder: DockerImageOptions.Builder = DockerImageOptions.builder()
 
+  /**
+   * @param secretsManagerCredentials The credentials, stored in Secrets Manager, used for accessing
+   * the repository holding the image, if the repository is private.
+   */
   public fun secretsManagerCredentials(secretsManagerCredentials: ISecret) {
     cdkBuilder.secretsManagerCredentials(secretsManagerCredentials)
   }

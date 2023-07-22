@@ -19,39 +19,70 @@ public class CfnBillingGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param accountGrouping The set of accounts that will be under the billing group. 
+   * The set of accounts resemble the linked accounts in a consolidated family.
+   */
   public fun accountGrouping(accountGrouping: IResolvable) {
     cdkBuilder.accountGrouping(accountGrouping)
   }
 
+  /**
+   * @param accountGrouping The set of accounts that will be under the billing group. 
+   * The set of accounts resemble the linked accounts in a consolidated family.
+   */
   public fun accountGrouping(accountGrouping: CfnBillingGroup.AccountGroupingProperty) {
     cdkBuilder.accountGrouping(accountGrouping)
   }
 
+  /**
+   * @param computationPreference The preferences and settings that will be used to compute the AWS
+   * charges for a billing group. 
+   */
   public fun computationPreference(computationPreference: IResolvable) {
     cdkBuilder.computationPreference(computationPreference)
   }
 
+  /**
+   * @param computationPreference The preferences and settings that will be used to compute the AWS
+   * charges for a billing group. 
+   */
   public
       fun computationPreference(computationPreference: CfnBillingGroup.ComputationPreferenceProperty) {
     cdkBuilder.computationPreference(computationPreference)
   }
 
+  /**
+   * @param description The description of the billing group.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The billing group's name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param primaryAccountId The account ID that serves as the main account in a billing group. 
+   */
   public fun primaryAccountId(primaryAccountId: String) {
     cdkBuilder.primaryAccountId(primaryAccountId)
   }
 
+  /**
+   * @param tags the value to be set.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags the value to be set.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -11,10 +11,16 @@ public class CfnGatewayRouteGrpcGatewayRouteRewritePropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.GrpcGatewayRouteRewriteProperty.Builder =
       CfnGatewayRoute.GrpcGatewayRouteRewriteProperty.builder()
 
+  /**
+   * @param hostname The host name of the gateway route to rewrite.
+   */
   public fun hostname(hostname: IResolvable) {
     cdkBuilder.hostname(hostname)
   }
 
+  /**
+   * @param hostname The host name of the gateway route to rewrite.
+   */
   public fun hostname(hostname: CfnGatewayRoute.GatewayRouteHostnameRewriteProperty) {
     cdkBuilder.hostname(hostname)
   }

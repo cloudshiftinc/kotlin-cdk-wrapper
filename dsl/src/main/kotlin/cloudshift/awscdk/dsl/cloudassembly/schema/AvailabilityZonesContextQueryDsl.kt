@@ -11,14 +11,23 @@ public class AvailabilityZonesContextQueryDsl {
   private val cdkBuilder: AvailabilityZonesContextQuery.Builder =
       AvailabilityZonesContextQuery.builder()
 
+  /**
+   * @param account Query account. 
+   */
   public fun account(account: String) {
     cdkBuilder.account(account)
   }
 
+  /**
+   * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
+   */
   public fun lookupRoleArn(lookupRoleArn: String) {
     cdkBuilder.lookupRoleArn(lookupRoleArn)
   }
 
+  /**
+   * @param region Query region. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }

@@ -21,44 +21,78 @@ public class ClusterAttributesDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
+  /**
+   * @param autoscalingGroup Autoscaling group added to the cluster if capacity is added.
+   */
   public fun autoscalingGroup(autoscalingGroup: IAutoScalingGroup) {
     cdkBuilder.autoscalingGroup(autoscalingGroup)
   }
 
+  /**
+   * @param clusterArn The Amazon Resource Name (ARN) that identifies the cluster.
+   */
   public fun clusterArn(clusterArn: String) {
     cdkBuilder.clusterArn(clusterArn)
   }
 
+  /**
+   * @param clusterName The name of the cluster. 
+   */
   public fun clusterName(clusterName: String) {
     cdkBuilder.clusterName(clusterName)
   }
 
+  /**
+   * @param defaultCloudMapNamespace The AWS Cloud Map namespace to associate with the cluster.
+   */
   public fun defaultCloudMapNamespace(defaultCloudMapNamespace: INamespace) {
     cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace)
   }
 
-  public fun executeCommandConfiguration(block: ExecuteCommandConfigurationDsl.() -> Unit = {}) {
+  /**
+   * @param executeCommandConfiguration The execute command configuration for the cluster.
+   */
+  public
+      fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationDsl.() -> Unit
+      = {}) {
     val builder = ExecuteCommandConfigurationDsl()
-    builder.apply(block)
+    builder.apply(executeCommandConfiguration)
     cdkBuilder.executeCommandConfiguration(builder.build())
   }
 
+  /**
+   * @param executeCommandConfiguration The execute command configuration for the cluster.
+   */
   public fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration) {
     cdkBuilder.executeCommandConfiguration(executeCommandConfiguration)
   }
 
+  /**
+   * @param hasEc2Capacity Specifies whether the cluster has EC2 instance capacity.
+   */
   public fun hasEc2Capacity(hasEc2Capacity: Boolean) {
     cdkBuilder.hasEc2Capacity(hasEc2Capacity)
   }
 
+  /**
+   * @param securityGroups The security groups associated with the container instances registered to
+   * the cluster.
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The security groups associated with the container instances registered to
+   * the cluster.
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  /**
+   * @param vpc The VPC associated with the cluster. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

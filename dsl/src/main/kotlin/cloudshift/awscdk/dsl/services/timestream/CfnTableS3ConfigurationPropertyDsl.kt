@@ -11,18 +11,32 @@ public class CfnTableS3ConfigurationPropertyDsl {
   private val cdkBuilder: CfnTable.S3ConfigurationProperty.Builder =
       CfnTable.S3ConfigurationProperty.builder()
 
+  /**
+   * @param bucketName The bucket name of the customer S3 bucket. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param encryptionOption The encryption option for the customer S3 location. 
+   * Options are S3 server-side encryption with an S3 managed key or AWS managed key.
+   */
   public fun encryptionOption(encryptionOption: String) {
     cdkBuilder.encryptionOption(encryptionOption)
   }
 
+  /**
+   * @param kmsKeyId The AWS KMS key ID for the customer S3 location when encrypting with an AWS
+   * managed key.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param objectKeyPrefix The object key preview for the customer S3 location.
+   */
   public fun objectKeyPrefix(objectKeyPrefix: String) {
     cdkBuilder.objectKeyPrefix(objectKeyPrefix)
   }

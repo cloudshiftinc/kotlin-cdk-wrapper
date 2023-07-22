@@ -11,10 +11,16 @@ public class CfnDatabaseFederatedDatabasePropertyDsl {
   private val cdkBuilder: CfnDatabase.FederatedDatabaseProperty.Builder =
       CfnDatabase.FederatedDatabaseProperty.builder()
 
+  /**
+   * @param connectionName The name of the connection to the external metastore.
+   */
   public fun connectionName(connectionName: String) {
     cdkBuilder.connectionName(connectionName)
   }
 
+  /**
+   * @param identifier A unique identifier for the federated database.
+   */
   public fun identifier(identifier: String) {
     cdkBuilder.identifier(identifier)
   }

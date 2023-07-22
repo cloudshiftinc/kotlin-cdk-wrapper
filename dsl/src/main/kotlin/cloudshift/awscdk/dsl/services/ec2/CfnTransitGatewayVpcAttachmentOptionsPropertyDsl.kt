@@ -11,14 +11,26 @@ public class CfnTransitGatewayVpcAttachmentOptionsPropertyDsl {
   private val cdkBuilder: CfnTransitGatewayVpcAttachment.OptionsProperty.Builder =
       CfnTransitGatewayVpcAttachment.OptionsProperty.builder()
 
+  /**
+   * @param applianceModeSupport Enable or disable appliance mode support.
+   * The default is `disable` .
+   */
   public fun applianceModeSupport(applianceModeSupport: String) {
     cdkBuilder.applianceModeSupport(applianceModeSupport)
   }
 
+  /**
+   * @param dnsSupport Enable or disable DNS support.
+   * The default is `disable` .
+   */
   public fun dnsSupport(dnsSupport: String) {
     cdkBuilder.dnsSupport(dnsSupport)
   }
 
+  /**
+   * @param ipv6Support Enable or disable IPv6 support.
+   * The default is `disable` .
+   */
   public fun ipv6Support(ipv6Support: String) {
     cdkBuilder.ipv6Support(ipv6Support)
   }

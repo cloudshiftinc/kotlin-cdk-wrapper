@@ -12,14 +12,23 @@ public class CfnStateMachineS3LocationPropertyDsl {
   private val cdkBuilder: CfnStateMachine.S3LocationProperty.Builder =
       CfnStateMachine.S3LocationProperty.builder()
 
+  /**
+   * @param bucket the value to be set. 
+   */
   public fun bucket(bucket: String) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param key the value to be set. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param version the value to be set.
+   */
   public fun version(version: Number) {
     cdkBuilder.version(version)
   }

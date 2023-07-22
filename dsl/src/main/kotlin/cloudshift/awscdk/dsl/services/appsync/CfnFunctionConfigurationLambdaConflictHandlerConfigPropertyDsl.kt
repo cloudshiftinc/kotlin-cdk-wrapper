@@ -11,6 +11,10 @@ public class CfnFunctionConfigurationLambdaConflictHandlerConfigPropertyDsl {
   private val cdkBuilder: CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.Builder =
       CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.builder()
 
+  /**
+   * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to use
+   * as the Conflict Handler.
+   */
   public fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
     cdkBuilder.lambdaConflictHandlerArn(lambdaConflictHandlerArn)
   }

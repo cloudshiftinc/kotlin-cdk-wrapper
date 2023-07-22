@@ -16,18 +16,37 @@ public class CodeSigningConfigPropsDsl {
 
   private val _signingProfiles: MutableList<ISigningProfile> = mutableListOf()
 
+  /**
+   * @param description Code signing configuration description.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param signingProfiles List of signing profiles that defines a trusted user who can sign a code
+   * package. 
+   */
   public fun signingProfiles(vararg signingProfiles: ISigningProfile) {
     _signingProfiles.addAll(listOf(*signingProfiles))
   }
 
+  /**
+   * @param signingProfiles List of signing profiles that defines a trusted user who can sign a code
+   * package. 
+   */
   public fun signingProfiles(signingProfiles: Collection<ISigningProfile>) {
     _signingProfiles.addAll(signingProfiles)
   }
 
+  /**
+   * @param untrustedArtifactOnDeployment Code signing configuration policy for deployment
+   * validation failure.
+   * If you set the policy to Enforce, Lambda blocks the deployment request
+   * if signature validation checks fail.
+   * If you set the policy to Warn, Lambda allows the deployment and
+   * creates a CloudWatch log.
+   */
   public
       fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment) {
     cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment)

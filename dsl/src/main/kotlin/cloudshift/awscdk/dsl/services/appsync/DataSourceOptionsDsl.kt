@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.appsync.DataSourceOptions
 public class DataSourceOptionsDsl {
   private val cdkBuilder: DataSourceOptions.Builder = DataSourceOptions.builder()
 
+  /**
+   * @param description The description of the data source.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name of the data source, overrides the id given by cdk.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

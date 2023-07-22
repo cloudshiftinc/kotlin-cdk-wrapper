@@ -13,14 +13,23 @@ public class CfnVerifiedAccessInstanceCloudWatchLogsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.CloudWatchLogsProperty.Builder =
       CfnVerifiedAccessInstance.CloudWatchLogsProperty.builder()
 
+  /**
+   * @param enabled Indicates whether logging is enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether logging is enabled.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param logGroup The ID of the CloudWatch Logs log group.
+   */
   public fun logGroup(logGroup: String) {
     cdkBuilder.logGroup(logGroup)
   }

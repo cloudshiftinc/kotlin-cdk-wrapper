@@ -11,6 +11,9 @@ public class CfnConnectorProfileDynatraceConnectorProfileCredentialsPropertyDsl 
   private val cdkBuilder: CfnConnectorProfile.DynatraceConnectorProfileCredentialsProperty.Builder =
       CfnConnectorProfile.DynatraceConnectorProfileCredentialsProperty.builder()
 
+  /**
+   * @param apiToken The API tokens used by Dynatrace API to authenticate various API calls. 
+   */
   public fun apiToken(apiToken: String) {
     cdkBuilder.apiToken(apiToken)
   }

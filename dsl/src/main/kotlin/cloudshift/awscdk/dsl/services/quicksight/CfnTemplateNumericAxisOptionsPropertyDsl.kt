@@ -11,18 +11,30 @@ public class CfnTemplateNumericAxisOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.NumericAxisOptionsProperty.Builder =
       CfnTemplate.NumericAxisOptionsProperty.builder()
 
+  /**
+   * @param range The range setup of a numeric axis.
+   */
   public fun range(range: IResolvable) {
     cdkBuilder.range(range)
   }
 
+  /**
+   * @param range The range setup of a numeric axis.
+   */
   public fun range(range: CfnTemplate.AxisDisplayRangeProperty) {
     cdkBuilder.range(range)
   }
 
+  /**
+   * @param scale The scale setup of a numeric axis.
+   */
   public fun scale(scale: IResolvable) {
     cdkBuilder.scale(scale)
   }
 
+  /**
+   * @param scale The scale setup of a numeric axis.
+   */
   public fun scale(scale: CfnTemplate.AxisScaleProperty) {
     cdkBuilder.scale(scale)
   }

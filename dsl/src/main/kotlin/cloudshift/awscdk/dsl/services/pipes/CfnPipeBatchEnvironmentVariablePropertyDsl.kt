@@ -11,10 +11,18 @@ public class CfnPipeBatchEnvironmentVariablePropertyDsl {
   private val cdkBuilder: CfnPipe.BatchEnvironmentVariableProperty.Builder =
       CfnPipe.BatchEnvironmentVariableProperty.builder()
 
+  /**
+   * @param name The name of the key-value pair.
+   * For environment variables, this is the name of the environment variable.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value of the key-value pair.
+   * For environment variables, this is the value of the environment variable.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

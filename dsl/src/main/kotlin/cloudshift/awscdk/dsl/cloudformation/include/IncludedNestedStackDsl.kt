@@ -11,10 +11,17 @@ import software.amazon.awscdk.cloudformation.include.IncludedNestedStack
 public class IncludedNestedStackDsl {
   private val cdkBuilder: IncludedNestedStack.Builder = IncludedNestedStack.builder()
 
+  /**
+   * @param includedTemplate The CfnInclude that represents the template, which can be used to
+   * access Resources and other template elements. 
+   */
   public fun includedTemplate(includedTemplate: CfnInclude) {
     cdkBuilder.includedTemplate(includedTemplate)
   }
 
+  /**
+   * @param stack The NestedStack object which represents the scope of the template. 
+   */
   public fun stack(stack: NestedStack) {
     cdkBuilder.stack(stack)
   }

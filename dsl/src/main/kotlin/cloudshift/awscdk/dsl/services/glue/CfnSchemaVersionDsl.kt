@@ -15,14 +15,32 @@ public class CfnSchemaVersionDsl(
 ) {
   private val cdkBuilder: CfnSchemaVersion.Builder = CfnSchemaVersion.Builder.create(scope, id)
 
+  /**
+   * The schema that includes the schema version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schema)
+   * @param schema The schema that includes the schema version. 
+   */
   public fun schema(schema: IResolvable) {
     cdkBuilder.schema(schema)
   }
 
+  /**
+   * The schema that includes the schema version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schema)
+   * @param schema The schema that includes the schema version. 
+   */
   public fun schema(schema: CfnSchemaVersion.SchemaProperty) {
     cdkBuilder.schema(schema)
   }
 
+  /**
+   * The schema definition for the schema version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schemadefinition)
+   * @param schemaDefinition The schema definition for the schema version. 
+   */
   public fun schemaDefinition(schemaDefinition: String) {
     cdkBuilder.schemaDefinition(schemaDefinition)
   }

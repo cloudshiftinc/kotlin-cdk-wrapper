@@ -11,6 +11,9 @@ public class CfnDBClusterReadEndpointPropertyDsl {
   private val cdkBuilder: CfnDBCluster.ReadEndpointProperty.Builder =
       CfnDBCluster.ReadEndpointProperty.builder()
 
+  /**
+   * @param address The host address of the reader endpoint.
+   */
   public fun address(address: String) {
     cdkBuilder.address(address)
   }

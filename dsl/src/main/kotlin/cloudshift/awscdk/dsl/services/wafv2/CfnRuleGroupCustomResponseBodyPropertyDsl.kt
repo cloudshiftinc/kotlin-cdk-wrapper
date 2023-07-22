@@ -11,10 +11,23 @@ public class CfnRuleGroupCustomResponseBodyPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.CustomResponseBodyProperty.Builder =
       CfnRuleGroup.CustomResponseBodyProperty.builder()
 
+  /**
+   * @param content The payload of the custom response. 
+   * You can use JSON escape strings in JSON content. To do this, you must specify JSON content in
+   * the `ContentType` setting.
+   *
+   * For information about the limits on count and size for custom request and response settings,
+   * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
+   * *AWS WAF Developer Guide* .
+   */
   public fun content(content: String) {
     cdkBuilder.content(content)
   }
 
+  /**
+   * @param contentType The type of content in the payload that you are defining in the `Content`
+   * string. 
+   */
   public fun contentType(contentType: String) {
     cdkBuilder.contentType(contentType)
   }

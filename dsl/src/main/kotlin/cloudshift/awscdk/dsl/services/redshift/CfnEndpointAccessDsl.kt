@@ -18,26 +18,67 @@ public class CfnEndpointAccessDsl(
 
   private val _vpcSecurityGroupIds: MutableList<String> = mutableListOf()
 
+  /**
+   * The cluster identifier of the cluster associated with the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-clusteridentifier)
+   * @param clusterIdentifier The cluster identifier of the cluster associated with the endpoint. 
+   */
   public fun clusterIdentifier(clusterIdentifier: String) {
     cdkBuilder.clusterIdentifier(clusterIdentifier)
   }
 
+  /**
+   * The name of the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-endpointname)
+   * @param endpointName The name of the endpoint. 
+   */
   public fun endpointName(endpointName: String) {
     cdkBuilder.endpointName(endpointName)
   }
 
+  /**
+   * The AWS account ID of the owner of the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-resourceowner)
+   * @param resourceOwner The AWS account ID of the owner of the cluster. 
+   */
   public fun resourceOwner(resourceOwner: String) {
     cdkBuilder.resourceOwner(resourceOwner)
   }
 
+  /**
+   * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-subnetgroupname)
+   * @param subnetGroupName The subnet group name where Amazon Redshift chooses to deploy the
+   * endpoint. 
+   */
   public fun subnetGroupName(subnetGroupName: String) {
     cdkBuilder.subnetGroupName(subnetGroupName)
   }
 
+  /**
+   * The security group that defines the ports, protocols, and sources for inbound traffic that you
+   * are authorizing into your endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-vpcsecuritygroupids)
+   * @param vpcSecurityGroupIds The security group that defines the ports, protocols, and sources
+   * for inbound traffic that you are authorizing into your endpoint. 
+   */
   public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String) {
     _vpcSecurityGroupIds.addAll(listOf(*vpcSecurityGroupIds))
   }
 
+  /**
+   * The security group that defines the ports, protocols, and sources for inbound traffic that you
+   * are authorizing into your endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-vpcsecuritygroupids)
+   * @param vpcSecurityGroupIds The security group that defines the ports, protocols, and sources
+   * for inbound traffic that you are authorizing into your endpoint. 
+   */
   public fun vpcSecurityGroupIds(vpcSecurityGroupIds: Collection<String>) {
     _vpcSecurityGroupIds.addAll(vpcSecurityGroupIds)
   }

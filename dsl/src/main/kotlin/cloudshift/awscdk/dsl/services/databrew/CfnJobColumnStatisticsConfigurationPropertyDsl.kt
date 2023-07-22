@@ -16,22 +16,45 @@ public class CfnJobColumnStatisticsConfigurationPropertyDsl {
 
   private val _selectors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param selectors List of column selectors.
+   * Selectors can be used to select columns from the dataset. When selectors are undefined,
+   * configuration will be applied to all supported columns.
+   */
   public fun selectors(vararg selectors: Any) {
     _selectors.addAll(listOf(*selectors))
   }
 
+  /**
+   * @param selectors List of column selectors.
+   * Selectors can be used to select columns from the dataset. When selectors are undefined,
+   * configuration will be applied to all supported columns.
+   */
   public fun selectors(selectors: Collection<Any>) {
     _selectors.addAll(selectors)
   }
 
+  /**
+   * @param selectors List of column selectors.
+   * Selectors can be used to select columns from the dataset. When selectors are undefined,
+   * configuration will be applied to all supported columns.
+   */
   public fun selectors(selectors: IResolvable) {
     cdkBuilder.selectors(selectors)
   }
 
+  /**
+   * @param statistics Configuration for evaluations. 
+   * Statistics can be used to select evaluations and override parameters of evaluations.
+   */
   public fun statistics(statistics: IResolvable) {
     cdkBuilder.statistics(statistics)
   }
 
+  /**
+   * @param statistics Configuration for evaluations. 
+   * Statistics can be used to select evaluations and override parameters of evaluations.
+   */
   public fun statistics(statistics: CfnJob.StatisticsConfigurationProperty) {
     cdkBuilder.statistics(statistics)
   }

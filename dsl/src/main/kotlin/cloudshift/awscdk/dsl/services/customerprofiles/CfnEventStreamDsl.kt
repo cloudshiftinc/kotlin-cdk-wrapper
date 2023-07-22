@@ -21,22 +21,54 @@ public class CfnEventStreamDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The unique name of the domain.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html#cfn-customerprofiles-eventstream-domainname)
+   * @param domainName The unique name of the domain. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * The name of the event stream.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html#cfn-customerprofiles-eventstream-eventstreamname)
+   * @param eventStreamName The name of the event stream. 
+   */
   public fun eventStreamName(eventStreamName: String) {
     cdkBuilder.eventStreamName(eventStreamName)
   }
 
+  /**
+   * The tags used to organize, track, or control access for this resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html#cfn-customerprofiles-eventstream-tags)
+   * @param tags The tags used to organize, track, or control access for this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags used to organize, track, or control access for this resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html#cfn-customerprofiles-eventstream-tags)
+   * @param tags The tags used to organize, track, or control access for this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The StreamARN of the destination to deliver profile events to.
+   *
+   * For example, arn:aws:kinesis:region:account-id:stream/stream-name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html#cfn-customerprofiles-eventstream-uri)
+   * @param uri The StreamARN of the destination to deliver profile events to. 
+   */
   public fun uri(uri: String) {
     cdkBuilder.uri(uri)
   }

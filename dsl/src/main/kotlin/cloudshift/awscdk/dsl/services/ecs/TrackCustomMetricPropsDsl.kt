@@ -14,26 +14,54 @@ import software.amazon.awscdk.services.ecs.TrackCustomMetricProps
 public class TrackCustomMetricPropsDsl {
   private val cdkBuilder: TrackCustomMetricProps.Builder = TrackCustomMetricProps.builder()
 
+  /**
+   * @param disableScaleIn Indicates whether scale in by the target tracking policy is disabled.
+   * If the value is true, scale in is disabled and the target tracking policy
+   * won't remove capacity from the scalable resource. Otherwise, scale in is
+   * enabled and the target tracking policy can remove capacity from the
+   * scalable resource.
+   */
   public fun disableScaleIn(disableScaleIn: Boolean) {
     cdkBuilder.disableScaleIn(disableScaleIn)
   }
 
+  /**
+   * @param metric The custom CloudWatch metric to track. 
+   * The metric must represent utilization; that is, you will always get the following behavior:
+   *
+   * * metric &gt; targetValue =&gt; scale out
+   * * metric &lt; targetValue =&gt; scale in
+   */
   public fun metric(metric: IMetric) {
     cdkBuilder.metric(metric)
   }
 
+  /**
+   * @param policyName A name for the scaling policy.
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }
 
+  /**
+   * @param scaleInCooldown Period after a scale in activity completes before another scale in
+   * activity can start.
+   */
   public fun scaleInCooldown(scaleInCooldown: Duration) {
     cdkBuilder.scaleInCooldown(scaleInCooldown)
   }
 
+  /**
+   * @param scaleOutCooldown Period after a scale out activity completes before another scale out
+   * activity can start.
+   */
   public fun scaleOutCooldown(scaleOutCooldown: Duration) {
     cdkBuilder.scaleOutCooldown(scaleOutCooldown)
   }
 
+  /**
+   * @param targetValue The target value for the custom CloudWatch metric. 
+   */
   public fun targetValue(targetValue: Number) {
     cdkBuilder.targetValue(targetValue)
   }

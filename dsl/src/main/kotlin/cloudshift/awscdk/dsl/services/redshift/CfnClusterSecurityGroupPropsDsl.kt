@@ -18,14 +18,27 @@ public class CfnClusterSecurityGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description for the security group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+   * security group.
+   * Use tags to manage your resources.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+   * security group.
+   * Use tags to manage your resources.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

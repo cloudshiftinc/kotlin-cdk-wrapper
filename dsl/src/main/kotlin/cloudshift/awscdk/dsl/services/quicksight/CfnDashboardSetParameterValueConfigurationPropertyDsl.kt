@@ -12,14 +12,24 @@ public class CfnDashboardSetParameterValueConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.SetParameterValueConfigurationProperty.Builder =
       CfnDashboard.SetParameterValueConfigurationProperty.builder()
 
+  /**
+   * @param destinationParameterName The destination parameter name of the
+   * `SetParameterValueConfiguration` . 
+   */
   public fun destinationParameterName(destinationParameterName: String) {
     cdkBuilder.destinationParameterName(destinationParameterName)
   }
 
+  /**
+   * @param value the value to be set. 
+   */
   public fun `value`(`value`: IResolvable) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param value the value to be set. 
+   */
   public fun `value`(`value`: CfnDashboard.DestinationParameterValueConfigurationProperty) {
     cdkBuilder.`value`(`value`)
   }

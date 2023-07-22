@@ -11,10 +11,17 @@ public class CfnWorkflowS3InputFileLocationPropertyDsl {
   private val cdkBuilder: CfnWorkflow.S3InputFileLocationProperty.Builder =
       CfnWorkflow.S3InputFileLocationProperty.builder()
 
+  /**
+   * @param bucket Specifies the S3 bucket for the customer input file.
+   */
   public fun bucket(bucket: String) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param key The name assigned to the file when it was created in Amazon S3.
+   * You use the object key to retrieve the object.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }

@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver
 public class JobDriverDsl {
   private val cdkBuilder: JobDriver.Builder = JobDriver.builder()
 
-  public fun sparkSubmitJobDriver(block: SparkSubmitJobDriverDsl.() -> Unit = {}) {
+  /**
+   * @param sparkSubmitJobDriver The job driver parameters specified for spark submit. 
+   */
+  public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriverDsl.() -> Unit = {}) {
     val builder = SparkSubmitJobDriverDsl()
-    builder.apply(block)
+    builder.apply(sparkSubmitJobDriver)
     cdkBuilder.sparkSubmitJobDriver(builder.build())
   }
 
+  /**
+   * @param sparkSubmitJobDriver The job driver parameters specified for spark submit. 
+   */
   public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver) {
     cdkBuilder.sparkSubmitJobDriver(sparkSubmitJobDriver)
   }

@@ -11,10 +11,16 @@ public class CfnNetworkInsightsPathFilterPortRangePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsPath.FilterPortRangeProperty.Builder =
       CfnNetworkInsightsPath.FilterPortRangeProperty.builder()
 
+  /**
+   * @param fromPort The first port in the range.
+   */
   public fun fromPort(fromPort: Number) {
     cdkBuilder.fromPort(fromPort)
   }
 
+  /**
+   * @param toPort The last port in the range.
+   */
   public fun toPort(toPort: Number) {
     cdkBuilder.toPort(toPort)
   }

@@ -11,10 +11,18 @@ public class CfnContainerRecipeTargetContainerRepositoryPropertyDsl {
   private val cdkBuilder: CfnContainerRecipe.TargetContainerRepositoryProperty.Builder =
       CfnContainerRecipe.TargetContainerRepositoryProperty.builder()
 
+  /**
+   * @param repositoryName The name of the container repository where the output container image is
+   * stored.
+   * This name is prefixed by the repository location.
+   */
   public fun repositoryName(repositoryName: String) {
     cdkBuilder.repositoryName(repositoryName)
   }
 
+  /**
+   * @param service Specifies the service in which this image was registered.
+   */
   public fun service(service: String) {
     cdkBuilder.service(service)
   }

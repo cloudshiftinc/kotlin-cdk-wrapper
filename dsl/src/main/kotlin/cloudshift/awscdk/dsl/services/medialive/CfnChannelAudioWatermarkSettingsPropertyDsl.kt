@@ -11,10 +11,16 @@ public class CfnChannelAudioWatermarkSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioWatermarkSettingsProperty.Builder =
       CfnChannel.AudioWatermarkSettingsProperty.builder()
 
+  /**
+   * @param nielsenWatermarksSettings Settings to configure Nielsen Watermarks in the audio encode.
+   */
   public fun nielsenWatermarksSettings(nielsenWatermarksSettings: IResolvable) {
     cdkBuilder.nielsenWatermarksSettings(nielsenWatermarksSettings)
   }
 
+  /**
+   * @param nielsenWatermarksSettings Settings to configure Nielsen Watermarks in the audio encode.
+   */
   public
       fun nielsenWatermarksSettings(nielsenWatermarksSettings: CfnChannel.NielsenWatermarksSettingsProperty) {
     cdkBuilder.nielsenWatermarksSettings(nielsenWatermarksSettings)

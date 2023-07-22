@@ -18,45 +18,82 @@ public class CfnDashboardHeatMapSortConfigurationPropertyDsl {
 
   private val _heatMapRowSort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param heatMapColumnItemsLimitConfiguration The limit on the number of columns that are
+   * displayed in a heat map.
+   */
   public
       fun heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration: IResolvable) {
     cdkBuilder.heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration)
   }
 
+  /**
+   * @param heatMapColumnItemsLimitConfiguration The limit on the number of columns that are
+   * displayed in a heat map.
+   */
   public
       fun heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration: CfnDashboard.ItemsLimitConfigurationProperty) {
     cdkBuilder.heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration)
   }
 
+  /**
+   * @param heatMapColumnSort The column sort configuration for heat map for columns that aren't a
+   * part of a field well.
+   */
   public fun heatMapColumnSort(vararg heatMapColumnSort: Any) {
     _heatMapColumnSort.addAll(listOf(*heatMapColumnSort))
   }
 
+  /**
+   * @param heatMapColumnSort The column sort configuration for heat map for columns that aren't a
+   * part of a field well.
+   */
   public fun heatMapColumnSort(heatMapColumnSort: Collection<Any>) {
     _heatMapColumnSort.addAll(heatMapColumnSort)
   }
 
+  /**
+   * @param heatMapColumnSort The column sort configuration for heat map for columns that aren't a
+   * part of a field well.
+   */
   public fun heatMapColumnSort(heatMapColumnSort: IResolvable) {
     cdkBuilder.heatMapColumnSort(heatMapColumnSort)
   }
 
+  /**
+   * @param heatMapRowItemsLimitConfiguration The limit on the number of rows that are displayed in
+   * a heat map.
+   */
   public fun heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration: IResolvable) {
     cdkBuilder.heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration)
   }
 
+  /**
+   * @param heatMapRowItemsLimitConfiguration The limit on the number of rows that are displayed in
+   * a heat map.
+   */
   public
       fun heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration: CfnDashboard.ItemsLimitConfigurationProperty) {
     cdkBuilder.heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration)
   }
 
+  /**
+   * @param heatMapRowSort The field sort configuration of the rows fields.
+   */
   public fun heatMapRowSort(vararg heatMapRowSort: Any) {
     _heatMapRowSort.addAll(listOf(*heatMapRowSort))
   }
 
+  /**
+   * @param heatMapRowSort The field sort configuration of the rows fields.
+   */
   public fun heatMapRowSort(heatMapRowSort: Collection<Any>) {
     _heatMapRowSort.addAll(heatMapRowSort)
   }
 
+  /**
+   * @param heatMapRowSort The field sort configuration of the rows fields.
+   */
   public fun heatMapRowSort(heatMapRowSort: IResolvable) {
     cdkBuilder.heatMapRowSort(heatMapRowSort)
   }

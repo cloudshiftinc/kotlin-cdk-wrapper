@@ -21,22 +21,52 @@ public class CfnFleetDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * (Optional) A brief description of the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-description)
+   * @param description (Optional) A brief description of the fleet. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The unique ID of the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-id)
+   * @param id The unique ID of the fleet. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * The ARN of the signal catalog associated with the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-signalcatalogarn)
+   * @param signalCatalogArn The ARN of the signal catalog associated with the fleet. 
+   */
   public fun signalCatalogArn(signalCatalogArn: String) {
     cdkBuilder.signalCatalogArn(signalCatalogArn)
   }
 
+  /**
+   * (Optional) Metadata that can be used to manage the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-tags)
+   * @param tags (Optional) Metadata that can be used to manage the fleet. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * (Optional) Metadata that can be used to manage the fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-tags)
+   * @param tags (Optional) Metadata that can be used to manage the fleet. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

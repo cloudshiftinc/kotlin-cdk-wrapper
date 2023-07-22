@@ -11,10 +11,18 @@ public class CfnGlobalTableWriteProvisionedThroughputSettingsPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.WriteProvisionedThroughputSettingsProperty.Builder =
       CfnGlobalTable.WriteProvisionedThroughputSettingsProperty.builder()
 
+  /**
+   * @param writeCapacityAutoScalingSettings Specifies auto scaling settings for the replica table
+   * or global secondary index.
+   */
   public fun writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings: IResolvable) {
     cdkBuilder.writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings)
   }
 
+  /**
+   * @param writeCapacityAutoScalingSettings Specifies auto scaling settings for the replica table
+   * or global secondary index.
+   */
   public
       fun writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings: CfnGlobalTable.CapacityAutoScalingSettingsProperty) {
     cdkBuilder.writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings)

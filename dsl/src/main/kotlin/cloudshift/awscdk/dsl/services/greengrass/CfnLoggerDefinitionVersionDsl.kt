@@ -21,18 +21,44 @@ public class CfnLoggerDefinitionVersionDsl(
 
   private val _loggers: MutableList<Any> = mutableListOf()
 
+  /**
+   * The ID of the logger definition associated with this version.
+   *
+   * This value is a GUID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html#cfn-greengrass-loggerdefinitionversion-loggerdefinitionid)
+   * @param loggerDefinitionId The ID of the logger definition associated with this version. 
+   */
   public fun loggerDefinitionId(loggerDefinitionId: String) {
     cdkBuilder.loggerDefinitionId(loggerDefinitionId)
   }
 
+  /**
+   * The loggers in this version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html#cfn-greengrass-loggerdefinitionversion-loggers)
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(vararg loggers: Any) {
     _loggers.addAll(listOf(*loggers))
   }
 
+  /**
+   * The loggers in this version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html#cfn-greengrass-loggerdefinitionversion-loggers)
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(loggers: Collection<Any>) {
     _loggers.addAll(loggers)
   }
 
+  /**
+   * The loggers in this version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html#cfn-greengrass-loggerdefinitionversion-loggers)
+   * @param loggers The loggers in this version. 
+   */
   public fun loggers(loggers: IResolvable) {
     cdkBuilder.loggers(loggers)
   }

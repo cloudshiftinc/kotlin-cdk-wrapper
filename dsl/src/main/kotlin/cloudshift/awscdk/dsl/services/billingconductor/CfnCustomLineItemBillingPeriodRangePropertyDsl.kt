@@ -11,10 +11,18 @@ public class CfnCustomLineItemBillingPeriodRangePropertyDsl {
   private val cdkBuilder: CfnCustomLineItem.BillingPeriodRangeProperty.Builder =
       CfnCustomLineItem.BillingPeriodRangeProperty.builder()
 
+  /**
+   * @param exclusiveEndBillingPeriod The exclusive end billing period that defines a billing period
+   * range where a custom line is applied.
+   */
   public fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String) {
     cdkBuilder.exclusiveEndBillingPeriod(exclusiveEndBillingPeriod)
   }
 
+  /**
+   * @param inclusiveStartBillingPeriod The inclusive start billing period that defines a billing
+   * period range where a custom line is applied.
+   */
   public fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String) {
     cdkBuilder.inclusiveStartBillingPeriod(inclusiveStartBillingPeriod)
   }

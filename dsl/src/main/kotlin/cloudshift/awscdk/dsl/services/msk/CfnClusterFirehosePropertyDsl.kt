@@ -13,14 +13,26 @@ public class CfnClusterFirehosePropertyDsl {
   private val cdkBuilder: CfnCluster.FirehoseProperty.Builder =
       CfnCluster.FirehoseProperty.builder()
 
+  /**
+   * @param deliveryStream The Kinesis Data Firehose delivery stream that is the destination for
+   * broker logs.
+   */
   public fun deliveryStream(deliveryStream: String) {
     cdkBuilder.deliveryStream(deliveryStream)
   }
 
+  /**
+   * @param enabled Specifies whether broker logs get send to the specified Kinesis Data Firehose
+   * delivery stream. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Specifies whether broker logs get send to the specified Kinesis Data Firehose
+   * delivery stream. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

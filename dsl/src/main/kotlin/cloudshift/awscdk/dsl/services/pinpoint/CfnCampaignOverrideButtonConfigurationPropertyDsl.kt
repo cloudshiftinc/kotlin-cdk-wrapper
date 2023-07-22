@@ -11,10 +11,22 @@ public class CfnCampaignOverrideButtonConfigurationPropertyDsl {
   private val cdkBuilder: CfnCampaign.OverrideButtonConfigurationProperty.Builder =
       CfnCampaign.OverrideButtonConfigurationProperty.builder()
 
+  /**
+   * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
+   * message.
+   * You can specify one of the following:
+   *
+   * * `LINK` – A link to a web destination.
+   * * `DEEP_LINK` – A link to a specific page in an application.
+   * * `CLOSE` – Dismisses the message.
+   */
   public fun buttonAction(buttonAction: String) {
     cdkBuilder.buttonAction(buttonAction)
   }
 
+  /**
+   * @param link The destination (such as a URL) for a button.
+   */
   public fun link(link: String) {
     cdkBuilder.link(link)
   }

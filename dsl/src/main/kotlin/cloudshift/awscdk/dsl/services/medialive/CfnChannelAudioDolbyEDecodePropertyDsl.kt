@@ -11,6 +11,9 @@ public class CfnChannelAudioDolbyEDecodePropertyDsl {
   private val cdkBuilder: CfnChannel.AudioDolbyEDecodeProperty.Builder =
       CfnChannel.AudioDolbyEDecodeProperty.builder()
 
+  /**
+   * @param programSelection the value to be set.
+   */
   public fun programSelection(programSelection: String) {
     cdkBuilder.programSelection(programSelection)
   }

@@ -16,10 +16,26 @@ public class CfnResourceCollectionDsl(
   private val cdkBuilder: CfnResourceCollection.Builder =
       CfnResourceCollection.Builder.create(scope, id)
 
+  /**
+   * Information about a filter used to specify which AWS resources are analyzed for anomalous
+   * behavior by DevOps Guru.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-resourcecollection.html#cfn-devopsguru-resourcecollection-resourcecollectionfilter)
+   * @param resourceCollectionFilter Information about a filter used to specify which AWS resources
+   * are analyzed for anomalous behavior by DevOps Guru. 
+   */
   public fun resourceCollectionFilter(resourceCollectionFilter: IResolvable) {
     cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)
   }
 
+  /**
+   * Information about a filter used to specify which AWS resources are analyzed for anomalous
+   * behavior by DevOps Guru.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-resourcecollection.html#cfn-devopsguru-resourcecollection-resourcecollectionfilter)
+   * @param resourceCollectionFilter Information about a filter used to specify which AWS resources
+   * are analyzed for anomalous behavior by DevOps Guru. 
+   */
   public
       fun resourceCollectionFilter(resourceCollectionFilter: CfnResourceCollection.ResourceCollectionFilterProperty) {
     cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)

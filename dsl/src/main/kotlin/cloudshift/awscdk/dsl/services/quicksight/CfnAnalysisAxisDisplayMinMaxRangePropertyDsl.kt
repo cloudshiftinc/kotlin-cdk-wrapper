@@ -11,10 +11,16 @@ public class CfnAnalysisAxisDisplayMinMaxRangePropertyDsl {
   private val cdkBuilder: CfnAnalysis.AxisDisplayMinMaxRangeProperty.Builder =
       CfnAnalysis.AxisDisplayMinMaxRangeProperty.builder()
 
+  /**
+   * @param maximum The maximum setup for an axis display range.
+   */
   public fun maximum(maximum: Number) {
     cdkBuilder.maximum(maximum)
   }
 
+  /**
+   * @param minimum The minimum setup for an axis display range.
+   */
   public fun minimum(minimum: Number) {
     cdkBuilder.minimum(minimum)
   }

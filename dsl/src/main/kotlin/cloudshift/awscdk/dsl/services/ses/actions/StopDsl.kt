@@ -10,6 +10,11 @@ import software.amazon.awscdk.services.sns.ITopic
 public class StopDsl {
   private val cdkBuilder: Stop.Builder = Stop.Builder.create()
 
+  /**
+   * The SNS topic to notify when the stop action is taken.
+   *
+   * @param topic The SNS topic to notify when the stop action is taken. 
+   */
   public fun topic(topic: ITopic) {
     cdkBuilder.topic(topic)
   }

@@ -16,22 +16,60 @@ public class CfnUserProfileDsl(
 ) {
   private val cdkBuilder: CfnUserProfile.Builder = CfnUserProfile.Builder.create(scope, id)
 
+  /**
+   * Whether users can specify their own SSH public key through the My Settings page.
+   *
+   * For more information, see [Managing User
+   * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-allowselfmanagement)
+   * @param allowSelfManagement Whether users can specify their own SSH public key through the My
+   * Settings page. 
+   */
   public fun allowSelfManagement(allowSelfManagement: Boolean) {
     cdkBuilder.allowSelfManagement(allowSelfManagement)
   }
 
+  /**
+   * Whether users can specify their own SSH public key through the My Settings page.
+   *
+   * For more information, see [Managing User
+   * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-allowselfmanagement)
+   * @param allowSelfManagement Whether users can specify their own SSH public key through the My
+   * Settings page. 
+   */
   public fun allowSelfManagement(allowSelfManagement: IResolvable) {
     cdkBuilder.allowSelfManagement(allowSelfManagement)
   }
 
+  /**
+   * The user's IAM ARN.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-iamuserarn)
+   * @param iamUserArn The user's IAM ARN. 
+   */
   public fun iamUserArn(iamUserArn: String) {
     cdkBuilder.iamUserArn(iamUserArn)
   }
 
+  /**
+   * The user's SSH public key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshpublickey)
+   * @param sshPublicKey The user's SSH public key. 
+   */
   public fun sshPublicKey(sshPublicKey: String) {
     cdkBuilder.sshPublicKey(sshPublicKey)
   }
 
+  /**
+   * The user's SSH user name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshusername)
+   * @param sshUsername The user's SSH user name. 
+   */
   public fun sshUsername(sshUsername: String) {
     cdkBuilder.sshUsername(sshUsername)
   }

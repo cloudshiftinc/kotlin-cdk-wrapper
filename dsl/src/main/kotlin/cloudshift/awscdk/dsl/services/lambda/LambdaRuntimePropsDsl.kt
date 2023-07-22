@@ -11,14 +11,25 @@ import software.amazon.awscdk.services.lambda.LambdaRuntimeProps
 public class LambdaRuntimePropsDsl {
   private val cdkBuilder: LambdaRuntimeProps.Builder = LambdaRuntimeProps.builder()
 
+  /**
+   * @param bundlingDockerImage The Docker image name to be used for bundling in this runtime.
+   */
   public fun bundlingDockerImage(bundlingDockerImage: String) {
     cdkBuilder.bundlingDockerImage(bundlingDockerImage)
   }
 
+  /**
+   * @param supportsCodeGuruProfiling Whether this runtime is integrated with and supported for
+   * profiling using Amazon CodeGuru Profiler.
+   */
   public fun supportsCodeGuruProfiling(supportsCodeGuruProfiling: Boolean) {
     cdkBuilder.supportsCodeGuruProfiling(supportsCodeGuruProfiling)
   }
 
+  /**
+   * @param supportsInlineCode Whether the `ZipFile` (aka inline code) property can be used with
+   * this runtime.
+   */
   public fun supportsInlineCode(supportsInlineCode: Boolean) {
     cdkBuilder.supportsInlineCode(supportsInlineCode)
   }

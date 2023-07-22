@@ -14,26 +14,47 @@ public class CfnEndpointAccessPropsDsl {
 
   private val _vpcSecurityGroupIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param clusterIdentifier The cluster identifier of the cluster associated with the endpoint. 
+   */
   public fun clusterIdentifier(clusterIdentifier: String) {
     cdkBuilder.clusterIdentifier(clusterIdentifier)
   }
 
+  /**
+   * @param endpointName The name of the endpoint. 
+   */
   public fun endpointName(endpointName: String) {
     cdkBuilder.endpointName(endpointName)
   }
 
+  /**
+   * @param resourceOwner The AWS account ID of the owner of the cluster.
+   */
   public fun resourceOwner(resourceOwner: String) {
     cdkBuilder.resourceOwner(resourceOwner)
   }
 
+  /**
+   * @param subnetGroupName The subnet group name where Amazon Redshift chooses to deploy the
+   * endpoint. 
+   */
   public fun subnetGroupName(subnetGroupName: String) {
     cdkBuilder.subnetGroupName(subnetGroupName)
   }
 
+  /**
+   * @param vpcSecurityGroupIds The security group that defines the ports, protocols, and sources
+   * for inbound traffic that you are authorizing into your endpoint. 
+   */
   public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String) {
     _vpcSecurityGroupIds.addAll(listOf(*vpcSecurityGroupIds))
   }
 
+  /**
+   * @param vpcSecurityGroupIds The security group that defines the ports, protocols, and sources
+   * for inbound traffic that you are authorizing into your endpoint. 
+   */
   public fun vpcSecurityGroupIds(vpcSecurityGroupIds: Collection<String>) {
     _vpcSecurityGroupIds.addAll(vpcSecurityGroupIds)
   }

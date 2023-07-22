@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.apigateway.AddApiKeyOptions
 public class AddApiKeyOptionsDsl {
   private val cdkBuilder: AddApiKeyOptions.Builder = AddApiKeyOptions.builder()
 
+  /**
+   * @param overrideLogicalId Override the CloudFormation logical id of the
+   * AWS::ApiGateway::UsagePlanKey resource.
+   */
   public fun overrideLogicalId(overrideLogicalId: String) {
     cdkBuilder.overrideLogicalId(overrideLogicalId)
   }

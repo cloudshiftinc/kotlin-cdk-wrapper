@@ -17,18 +17,40 @@ public class CfnModelQualityJobDefinitionVpcConfigPropertyDsl {
 
   private val _subnets: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds The VPC security group IDs, in the form sg-xxxxxxxx. 
+   * Specify the security groups for the VPC that is specified in the `Subnets` field.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The VPC security group IDs, in the form sg-xxxxxxxx. 
+   * Specify the security groups for the VPC that is specified in the `Subnets` field.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnets The ID of the subnets in the VPC to which you want to connect your training job
+   * or model. 
+   * For information about the availability of specific instance types, see [Supported Instance
+   * Types and Availability
+   * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+   */
   public fun subnets(vararg subnets: String) {
     _subnets.addAll(listOf(*subnets))
   }
 
+  /**
+   * @param subnets The ID of the subnets in the VPC to which you want to connect your training job
+   * or model. 
+   * For information about the availability of specific instance types, see [Supported Instance
+   * Types and Availability
+   * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+   */
   public fun subnets(subnets: Collection<String>) {
     _subnets.addAll(subnets)
   }

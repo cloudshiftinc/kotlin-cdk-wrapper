@@ -11,10 +11,16 @@ public class CfnTaskTemplateReadOnlyFieldInfoPropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.ReadOnlyFieldInfoProperty.Builder =
       CfnTaskTemplate.ReadOnlyFieldInfoProperty.builder()
 
+  /**
+   * @param id Identifier of the read-only field. 
+   */
   public fun id(id: IResolvable) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param id Identifier of the read-only field. 
+   */
   public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
     cdkBuilder.id(id)
   }

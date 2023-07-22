@@ -12,10 +12,16 @@ public class IngressLoadBalancerAddressOptionsDsl {
   private val cdkBuilder: IngressLoadBalancerAddressOptions.Builder =
       IngressLoadBalancerAddressOptions.builder()
 
+  /**
+   * @param namespace The namespace the service belongs to.
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }
 
+  /**
+   * @param timeout Timeout for waiting on the load balancer address.
+   */
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }

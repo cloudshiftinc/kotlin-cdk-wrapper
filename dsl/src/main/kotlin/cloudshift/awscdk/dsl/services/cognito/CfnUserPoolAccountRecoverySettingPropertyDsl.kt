@@ -16,14 +16,23 @@ public class CfnUserPoolAccountRecoverySettingPropertyDsl {
 
   private val _recoveryMechanisms: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
+   */
   public fun recoveryMechanisms(vararg recoveryMechanisms: Any) {
     _recoveryMechanisms.addAll(listOf(*recoveryMechanisms))
   }
 
+  /**
+   * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
+   */
   public fun recoveryMechanisms(recoveryMechanisms: Collection<Any>) {
     _recoveryMechanisms.addAll(recoveryMechanisms)
   }
 
+  /**
+   * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
+   */
   public fun recoveryMechanisms(recoveryMechanisms: IResolvable) {
     cdkBuilder.recoveryMechanisms(recoveryMechanisms)
   }

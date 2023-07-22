@@ -14,18 +14,42 @@ public class CfnApiMappingDsl(
 ) {
   private val cdkBuilder: CfnApiMapping.Builder = CfnApiMapping.Builder.create(scope, id)
 
+  /**
+   * The identifier of the API.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-apiid)
+   * @param apiId The identifier of the API. 
+   */
   public fun apiId(apiId: String) {
     cdkBuilder.apiId(apiId)
   }
 
+  /**
+   * The API mapping key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-apimappingkey)
+   * @param apiMappingKey The API mapping key. 
+   */
   public fun apiMappingKey(apiMappingKey: String) {
     cdkBuilder.apiMappingKey(apiMappingKey)
   }
 
+  /**
+   * The domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-domainname)
+   * @param domainName The domain name. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * The API stage.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-stage)
+   * @param stage The API stage. 
+   */
   public fun stage(stage: String) {
     cdkBuilder.stage(stage)
   }

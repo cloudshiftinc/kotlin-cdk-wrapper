@@ -11,10 +11,18 @@ public class CfnAlarmModelAssetPropertyTimestampPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.AssetPropertyTimestampProperty.Builder =
       CfnAlarmModel.AssetPropertyTimestampProperty.builder()
 
+  /**
+   * @param offsetInNanos The nanosecond offset converted from `timeInSeconds` .
+   * The valid range is between 0-999999999.
+   */
   public fun offsetInNanos(offsetInNanos: String) {
     cdkBuilder.offsetInNanos(offsetInNanos)
   }
 
+  /**
+   * @param timeInSeconds The timestamp, in seconds, in the Unix epoch format. 
+   * The valid range is between 1-31556889864403199.
+   */
   public fun timeInSeconds(timeInSeconds: String) {
     cdkBuilder.timeInSeconds(timeInSeconds)
   }

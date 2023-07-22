@@ -11,10 +11,18 @@ public class CfnLaunchTemplateBaselineEbsBandwidthMbpsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.Builder =
       CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.builder()
 
+  /**
+   * @param max The maximum baseline bandwidth, in Mbps.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum baseline bandwidth, in Mbps.
+   * To specify no minimum limit, omit this parameter.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

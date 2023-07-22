@@ -20,38 +20,93 @@ public class CfnSceneDsl(
 
   private val _capabilities: MutableList<String> = mutableListOf()
 
+  /**
+   * A list of capabilities that the scene uses to render.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-capabilities)
+   * @param capabilities A list of capabilities that the scene uses to render. 
+   */
   public fun capabilities(vararg capabilities: String) {
     _capabilities.addAll(listOf(*capabilities))
   }
 
+  /**
+   * A list of capabilities that the scene uses to render.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-capabilities)
+   * @param capabilities A list of capabilities that the scene uses to render. 
+   */
   public fun capabilities(capabilities: Collection<String>) {
     _capabilities.addAll(capabilities)
   }
 
+  /**
+   * The relative path that specifies the location of the content definition file.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-contentlocation)
+   * @param contentLocation The relative path that specifies the location of the content definition
+   * file. 
+   */
   public fun contentLocation(contentLocation: String) {
     cdkBuilder.contentLocation(contentLocation)
   }
 
+  /**
+   * The description of this scene.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-description)
+   * @param description The description of this scene. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The scene ID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-sceneid)
+   * @param sceneId The scene ID. 
+   */
   public fun sceneId(sceneId: String) {
     cdkBuilder.sceneId(sceneId)
   }
 
+  /**
+   * The scene metadata.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-scenemetadata)
+   * @param sceneMetadata The scene metadata. 
+   */
   public fun sceneMetadata(sceneMetadata: Map<String, String>) {
     cdkBuilder.sceneMetadata(sceneMetadata)
   }
 
+  /**
+   * The scene metadata.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-scenemetadata)
+   * @param sceneMetadata The scene metadata. 
+   */
   public fun sceneMetadata(sceneMetadata: IResolvable) {
     cdkBuilder.sceneMetadata(sceneMetadata)
   }
 
+  /**
+   * The ComponentType tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-tags)
+   * @param tags The ComponentType tags. 
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * The ID of the workspace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-workspaceid)
+   * @param workspaceId The ID of the workspace. 
+   */
   public fun workspaceId(workspaceId: String) {
     cdkBuilder.workspaceId(workspaceId)
   }

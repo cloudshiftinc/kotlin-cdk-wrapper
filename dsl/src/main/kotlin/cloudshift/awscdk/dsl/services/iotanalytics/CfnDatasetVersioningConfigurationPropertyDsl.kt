@@ -13,14 +13,24 @@ public class CfnDatasetVersioningConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataset.VersioningConfigurationProperty.Builder =
       CfnDataset.VersioningConfigurationProperty.builder()
 
+  /**
+   * @param maxVersions How many versions of dataset contents are kept.
+   * The `unlimited` parameter must be `false` .
+   */
   public fun maxVersions(maxVersions: Number) {
     cdkBuilder.maxVersions(maxVersions)
   }
 
+  /**
+   * @param unlimited If true, unlimited versions of dataset contents are kept.
+   */
   public fun unlimited(unlimited: Boolean) {
     cdkBuilder.unlimited(unlimited)
   }
 
+  /**
+   * @param unlimited If true, unlimited versions of dataset contents are kept.
+   */
   public fun unlimited(unlimited: IResolvable) {
     cdkBuilder.unlimited(unlimited)
   }

@@ -11,6 +11,9 @@ public class CfnSpotFleetClassicLoadBalancerPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.ClassicLoadBalancerProperty.Builder =
       CfnSpotFleet.ClassicLoadBalancerProperty.builder()
 
+  /**
+   * @param name The name of the load balancer. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

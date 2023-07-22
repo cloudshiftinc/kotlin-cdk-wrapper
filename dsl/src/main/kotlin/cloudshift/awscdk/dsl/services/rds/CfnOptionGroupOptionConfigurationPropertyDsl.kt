@@ -22,42 +22,76 @@ public class CfnOptionGroupOptionConfigurationPropertyDsl {
 
   private val _vpcSecurityGroupMemberships: MutableList<String> = mutableListOf()
 
+  /**
+   * @param dbSecurityGroupMemberships A list of DBSecurityGroupMembership name strings used for
+   * this option.
+   */
   public fun dbSecurityGroupMemberships(vararg dbSecurityGroupMemberships: String) {
     _dbSecurityGroupMemberships.addAll(listOf(*dbSecurityGroupMemberships))
   }
 
+  /**
+   * @param dbSecurityGroupMemberships A list of DBSecurityGroupMembership name strings used for
+   * this option.
+   */
   public fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: Collection<String>) {
     _dbSecurityGroupMemberships.addAll(dbSecurityGroupMemberships)
   }
 
+  /**
+   * @param optionName The configuration of options to include in a group. 
+   */
   public fun optionName(optionName: String) {
     cdkBuilder.optionName(optionName)
   }
 
+  /**
+   * @param optionSettings The option settings to include in an option group.
+   */
   public fun optionSettings(vararg optionSettings: Any) {
     _optionSettings.addAll(listOf(*optionSettings))
   }
 
+  /**
+   * @param optionSettings The option settings to include in an option group.
+   */
   public fun optionSettings(optionSettings: Collection<Any>) {
     _optionSettings.addAll(optionSettings)
   }
 
+  /**
+   * @param optionSettings The option settings to include in an option group.
+   */
   public fun optionSettings(optionSettings: IResolvable) {
     cdkBuilder.optionSettings(optionSettings)
   }
 
+  /**
+   * @param optionVersion The version for the option.
+   */
   public fun optionVersion(optionVersion: String) {
     cdkBuilder.optionVersion(optionVersion)
   }
 
+  /**
+   * @param port The optional port for the option.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param vpcSecurityGroupMemberships A list of VpcSecurityGroupMembership name strings used for
+   * this option.
+   */
   public fun vpcSecurityGroupMemberships(vararg vpcSecurityGroupMemberships: String) {
     _vpcSecurityGroupMemberships.addAll(listOf(*vpcSecurityGroupMemberships))
   }
 
+  /**
+   * @param vpcSecurityGroupMemberships A list of VpcSecurityGroupMembership name strings used for
+   * this option.
+   */
   public fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: Collection<String>) {
     _vpcSecurityGroupMemberships.addAll(vpcSecurityGroupMemberships)
   }

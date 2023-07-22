@@ -17,18 +17,34 @@ public class CfnContainerRecipeInstanceConfigurationPropertyDsl {
 
   private val _blockDeviceMappings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param blockDeviceMappings Defines the block devices to attach for building an instance from
+   * this Image Builder AMI.
+   */
   public fun blockDeviceMappings(vararg blockDeviceMappings: Any) {
     _blockDeviceMappings.addAll(listOf(*blockDeviceMappings))
   }
 
+  /**
+   * @param blockDeviceMappings Defines the block devices to attach for building an instance from
+   * this Image Builder AMI.
+   */
   public fun blockDeviceMappings(blockDeviceMappings: Collection<Any>) {
     _blockDeviceMappings.addAll(blockDeviceMappings)
   }
 
+  /**
+   * @param blockDeviceMappings Defines the block devices to attach for building an instance from
+   * this Image Builder AMI.
+   */
   public fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
     cdkBuilder.blockDeviceMappings(blockDeviceMappings)
   }
 
+  /**
+   * @param image The AMI ID to use as the base image for a container build and test instance.
+   * If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+   */
   public fun image(image: String) {
     cdkBuilder.image(image)
   }

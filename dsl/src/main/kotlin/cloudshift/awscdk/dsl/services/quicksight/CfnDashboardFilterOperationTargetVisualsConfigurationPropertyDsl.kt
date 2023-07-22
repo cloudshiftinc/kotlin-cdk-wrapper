@@ -11,10 +11,18 @@ public class CfnDashboardFilterOperationTargetVisualsConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.FilterOperationTargetVisualsConfigurationProperty.Builder =
       CfnDashboard.FilterOperationTargetVisualsConfigurationProperty.builder()
 
+  /**
+   * @param sameSheetTargetVisualConfiguration The configuration of the same-sheet target visuals
+   * that you want to be filtered.
+   */
   public fun sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration: IResolvable) {
     cdkBuilder.sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration)
   }
 
+  /**
+   * @param sameSheetTargetVisualConfiguration The configuration of the same-sheet target visuals
+   * that you want to be filtered.
+   */
   public
       fun sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration: CfnDashboard.SameSheetTargetVisualConfigurationProperty) {
     cdkBuilder.sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration)

@@ -22,22 +22,53 @@ public class UserPoolResourceServerDsl(
 
   private val _scopes: MutableList<ResourceServerScope> = mutableListOf()
 
+  /**
+   * A unique resource server identifier for the resource server.
+   *
+   * @param identifier A unique resource server identifier for the resource server. 
+   */
   public fun identifier(identifier: String) {
     cdkBuilder.identifier(identifier)
   }
 
+  /**
+   * Oauth scopes.
+   *
+   * Default: - No scopes will be added
+   *
+   * @param scopes Oauth scopes. 
+   */
   public fun scopes(scopes: ResourceServerScopeDsl.() -> Unit) {
     _scopes.add(ResourceServerScopeDsl().apply(scopes).build())
   }
 
+  /**
+   * Oauth scopes.
+   *
+   * Default: - No scopes will be added
+   *
+   * @param scopes Oauth scopes. 
+   */
   public fun scopes(scopes: Collection<ResourceServerScope>) {
     _scopes.addAll(scopes)
   }
 
+  /**
+   * The user pool to add this resource server to.
+   *
+   * @param userPool The user pool to add this resource server to. 
+   */
   public fun userPool(userPool: IUserPool) {
     cdkBuilder.userPool(userPool)
   }
 
+  /**
+   * A friendly name for the resource server.
+   *
+   * Default: - same as `identifier`
+   *
+   * @param userPoolResourceServerName A friendly name for the resource server. 
+   */
   public fun userPoolResourceServerName(userPoolResourceServerName: String) {
     cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)
   }

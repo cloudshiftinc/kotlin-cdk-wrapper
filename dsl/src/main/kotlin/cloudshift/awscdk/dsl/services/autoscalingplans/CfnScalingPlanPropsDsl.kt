@@ -16,22 +16,41 @@ public class CfnScalingPlanPropsDsl {
 
   private val _scalingInstructions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param applicationSource A CloudFormation stack or a set of tags. 
+   * You can create one scaling plan per application source. The `ApplicationSource` property must
+   * be present to ensure interoperability with the AWS Auto Scaling console.
+   */
   public fun applicationSource(applicationSource: IResolvable) {
     cdkBuilder.applicationSource(applicationSource)
   }
 
+  /**
+   * @param applicationSource A CloudFormation stack or a set of tags. 
+   * You can create one scaling plan per application source. The `ApplicationSource` property must
+   * be present to ensure interoperability with the AWS Auto Scaling console.
+   */
   public fun applicationSource(applicationSource: CfnScalingPlan.ApplicationSourceProperty) {
     cdkBuilder.applicationSource(applicationSource)
   }
 
+  /**
+   * @param scalingInstructions The scaling instructions. 
+   */
   public fun scalingInstructions(vararg scalingInstructions: Any) {
     _scalingInstructions.addAll(listOf(*scalingInstructions))
   }
 
+  /**
+   * @param scalingInstructions The scaling instructions. 
+   */
   public fun scalingInstructions(scalingInstructions: Collection<Any>) {
     _scalingInstructions.addAll(scalingInstructions)
   }
 
+  /**
+   * @param scalingInstructions The scaling instructions. 
+   */
   public fun scalingInstructions(scalingInstructions: IResolvable) {
     cdkBuilder.scalingInstructions(scalingInstructions)
   }

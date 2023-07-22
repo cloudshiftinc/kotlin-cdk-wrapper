@@ -11,10 +11,16 @@ public class CfnTransitGatewayRouteTableAssociationPropsDsl {
   private val cdkBuilder: CfnTransitGatewayRouteTableAssociationProps.Builder =
       CfnTransitGatewayRouteTableAssociationProps.builder()
 
+  /**
+   * @param transitGatewayAttachmentId The ID of the attachment. 
+   */
   public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
     cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
   }
 
+  /**
+   * @param transitGatewayRouteTableId The ID of the route table for the transit gateway. 
+   */
   public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
     cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
   }

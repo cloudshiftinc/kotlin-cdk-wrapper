@@ -18,22 +18,40 @@ public class CfnPlacementGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param partitionCount The number of partitions.
+   * Valid only when *Strategy* is set to `partition` .
+   */
   public fun partitionCount(partitionCount: Number) {
     cdkBuilder.partitionCount(partitionCount)
   }
 
+  /**
+   * @param spreadLevel Determines how placement groups spread instances.
+   * * Host – You can use `host` only with Outpost placement groups.
+   * * Rack – No usage restrictions.
+   */
   public fun spreadLevel(spreadLevel: String) {
     cdkBuilder.spreadLevel(spreadLevel)
   }
 
+  /**
+   * @param strategy The placement strategy.
+   */
   public fun strategy(strategy: String) {
     cdkBuilder.strategy(strategy)
   }
 
+  /**
+   * @param tags The tags to apply to the new placement group.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to apply to the new placement group.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

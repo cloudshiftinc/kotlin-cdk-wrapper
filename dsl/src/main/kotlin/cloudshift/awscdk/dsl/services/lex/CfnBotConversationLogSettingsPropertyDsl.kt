@@ -18,26 +18,44 @@ public class CfnBotConversationLogSettingsPropertyDsl {
 
   private val _textLogSettings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+   */
   public fun audioLogSettings(vararg audioLogSettings: Any) {
     _audioLogSettings.addAll(listOf(*audioLogSettings))
   }
 
+  /**
+   * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+   */
   public fun audioLogSettings(audioLogSettings: Collection<Any>) {
     _audioLogSettings.addAll(audioLogSettings)
   }
 
+  /**
+   * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
+   */
   public fun audioLogSettings(audioLogSettings: IResolvable) {
     cdkBuilder.audioLogSettings(audioLogSettings)
   }
 
+  /**
+   * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+   */
   public fun textLogSettings(vararg textLogSettings: Any) {
     _textLogSettings.addAll(listOf(*textLogSettings))
   }
 
+  /**
+   * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+   */
   public fun textLogSettings(textLogSettings: Collection<Any>) {
     _textLogSettings.addAll(textLogSettings)
   }
 
+  /**
+   * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
+   */
   public fun textLogSettings(textLogSettings: IResolvable) {
     cdkBuilder.textLogSettings(textLogSettings)
   }

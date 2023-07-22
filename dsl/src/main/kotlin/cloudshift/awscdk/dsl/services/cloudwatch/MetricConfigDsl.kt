@@ -16,32 +16,58 @@ import software.amazon.awscdk.services.cloudwatch.MetricStatConfig
 public class MetricConfigDsl {
   private val cdkBuilder: MetricConfig.Builder = MetricConfig.builder()
 
-  public fun mathExpression(block: MetricExpressionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param mathExpression In case the metric is a math expression, the details of the math
+   * expression.
+   */
+  public fun mathExpression(mathExpression: MetricExpressionConfigDsl.() -> Unit = {}) {
     val builder = MetricExpressionConfigDsl()
-    builder.apply(block)
+    builder.apply(mathExpression)
     cdkBuilder.mathExpression(builder.build())
   }
 
+  /**
+   * @param mathExpression In case the metric is a math expression, the details of the math
+   * expression.
+   */
   public fun mathExpression(mathExpression: MetricExpressionConfig) {
     cdkBuilder.mathExpression(mathExpression)
   }
 
-  public fun metricStat(block: MetricStatConfigDsl.() -> Unit = {}) {
+  /**
+   * @param metricStat In case the metric represents a query, the details of the query.
+   */
+  public fun metricStat(metricStat: MetricStatConfigDsl.() -> Unit = {}) {
     val builder = MetricStatConfigDsl()
-    builder.apply(block)
+    builder.apply(metricStat)
     cdkBuilder.metricStat(builder.build())
   }
 
+  /**
+   * @param metricStat In case the metric represents a query, the details of the query.
+   */
   public fun metricStat(metricStat: MetricStatConfig) {
     cdkBuilder.metricStat(metricStat)
   }
 
-  public fun renderingProperties(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param renderingProperties Additional properties which will be rendered if the metric is used
+   * in a dashboard.
+   * Examples are 'label' and 'color', but any key in here will be
+   * added to dashboard graphs.
+   */
+  public fun renderingProperties(renderingProperties: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(renderingProperties)
     cdkBuilder.renderingProperties(builder.map)
   }
 
+  /**
+   * @param renderingProperties Additional properties which will be rendered if the metric is used
+   * in a dashboard.
+   * Examples are 'label' and 'color', but any key in here will be
+   * added to dashboard graphs.
+   */
   public fun renderingProperties(renderingProperties: Map<String, Any>) {
     cdkBuilder.renderingProperties(renderingProperties)
   }

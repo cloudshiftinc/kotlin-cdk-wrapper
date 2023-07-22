@@ -11,10 +11,16 @@ public class CfnStudioComponentActiveDirectoryComputerAttributePropertyDsl {
   private val cdkBuilder: CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.Builder =
       CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.builder()
 
+  /**
+   * @param name The name for the LDAP attribute.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value for the LDAP attribute.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

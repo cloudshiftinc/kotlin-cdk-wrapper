@@ -11,10 +11,16 @@ public class CfnAnalysisThousandSeparatorOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ThousandSeparatorOptionsProperty.Builder =
       CfnAnalysis.ThousandSeparatorOptionsProperty.builder()
 
+  /**
+   * @param symbol Determines the thousands separator symbol.
+   */
   public fun symbol(symbol: String) {
     cdkBuilder.symbol(symbol)
   }
 
+  /**
+   * @param visibility Determines the visibility of the thousands separator.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

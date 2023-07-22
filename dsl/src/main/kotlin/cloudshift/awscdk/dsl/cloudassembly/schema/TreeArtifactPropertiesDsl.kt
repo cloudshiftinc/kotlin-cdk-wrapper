@@ -10,6 +10,9 @@ import software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties
 public class TreeArtifactPropertiesDsl {
   private val cdkBuilder: TreeArtifactProperties.Builder = TreeArtifactProperties.builder()
 
+  /**
+   * @param file Filename of the tree artifact. 
+   */
   public fun `file`(`file`: String) {
     cdkBuilder.`file`(`file`)
   }

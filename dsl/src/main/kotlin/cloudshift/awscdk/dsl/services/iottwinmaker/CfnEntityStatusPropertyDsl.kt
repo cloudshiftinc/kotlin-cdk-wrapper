@@ -13,16 +13,26 @@ import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 public class CfnEntityStatusPropertyDsl {
   private val cdkBuilder: CfnEntity.StatusProperty.Builder = CfnEntity.StatusProperty.builder()
 
-  public fun error(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param error The error message.
+   */
+  public fun error(error: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(error)
     cdkBuilder.error(builder.map)
   }
 
+  /**
+   * @param error The error message.
+   */
   public fun error(error: Any) {
     cdkBuilder.error(error)
   }
 
+  /**
+   * @param state The current state of the entity, component, component type, or workspace.
+   * Valid Values: `CREATING | UPDATING | DELETING | ACTIVE | ERROR`
+   */
   public fun state(state: String) {
     cdkBuilder.state(state)
   }

@@ -11,10 +11,16 @@ public class CfnAnalysisNumberFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.NumberFormatConfigurationProperty.Builder =
       CfnAnalysis.NumberFormatConfigurationProperty.builder()
 
+  /**
+   * @param formatConfiguration The options that determine the numeric format configuration.
+   */
   public fun formatConfiguration(formatConfiguration: IResolvable) {
     cdkBuilder.formatConfiguration(formatConfiguration)
   }
 
+  /**
+   * @param formatConfiguration The options that determine the numeric format configuration.
+   */
   public
       fun formatConfiguration(formatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty) {
     cdkBuilder.formatConfiguration(formatConfiguration)

@@ -11,6 +11,9 @@ public class CfnFunctionDomainSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.DomainSAMPTProperty.Builder =
       CfnFunction.DomainSAMPTProperty.builder()
 
+  /**
+   * @param domainName the value to be set. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }

@@ -26,42 +26,134 @@ public class CfnDiskDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * An array of add-ons for the disk.
+   *
+   *
+   * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+   * automatically disabled before the disk is deleted.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+   * @param addOns An array of add-ons for the disk. 
+   */
   public fun addOns(vararg addOns: Any) {
     _addOns.addAll(listOf(*addOns))
   }
 
+  /**
+   * An array of add-ons for the disk.
+   *
+   *
+   * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+   * automatically disabled before the disk is deleted.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+   * @param addOns An array of add-ons for the disk. 
+   */
   public fun addOns(addOns: Collection<Any>) {
     _addOns.addAll(addOns)
   }
 
+  /**
+   * An array of add-ons for the disk.
+   *
+   *
+   * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+   * automatically disabled before the disk is deleted.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+   * @param addOns An array of add-ons for the disk. 
+   */
   public fun addOns(addOns: IResolvable) {
     cdkBuilder.addOns(addOns)
   }
 
+  /**
+   * The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-availabilityzone)
+   * @param availabilityZone The AWS Region and Availability Zone location for the disk (for
+   * example, `us-east-1a` ). 
+   */
   public fun availabilityZone(availabilityZone: String) {
     cdkBuilder.availabilityZone(availabilityZone)
   }
 
+  /**
+   * The name of the disk.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-diskname)
+   * @param diskName The name of the disk. 
+   */
   public fun diskName(diskName: String) {
     cdkBuilder.diskName(diskName)
   }
 
+  /**
+   * Location of a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+   * @param location Location of a resource. 
+   */
   public fun location(location: IResolvable) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * Location of a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+   * @param location Location of a resource. 
+   */
   public fun location(location: CfnDisk.LocationProperty) {
     cdkBuilder.location(location)
   }
 
+  /**
+   * The size of the disk in GB.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-sizeingb)
+   * @param sizeInGb The size of the disk in GB. 
+   */
   public fun sizeInGb(sizeInGb: Number) {
     cdkBuilder.sizeInGb(sizeInGb)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *AWS CloudFormation User Guide* .
+   *
+   *
+   * The `Value` of `Tags` is optional for Lightsail resources.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *AWS CloudFormation User Guide* .
+   *
+   *
+   * The `Value` of `Tags` is optional for Lightsail resources.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

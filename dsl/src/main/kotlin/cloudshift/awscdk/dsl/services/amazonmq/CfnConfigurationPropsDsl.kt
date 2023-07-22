@@ -16,34 +16,65 @@ public class CfnConfigurationPropsDsl {
 
   private val _tags: MutableList<CfnConfiguration.TagsEntryProperty> = mutableListOf()
 
+  /**
+   * @param authenticationStrategy Optional.
+   * The authentication strategy associated with the configuration. The default is `SIMPLE` .
+   */
   public fun authenticationStrategy(authenticationStrategy: String) {
     cdkBuilder.authenticationStrategy(authenticationStrategy)
   }
 
+  /**
+   * @param data The base64-encoded XML configuration. 
+   */
   public fun `data`(`data`: String) {
     cdkBuilder.`data`(`data`)
   }
 
+  /**
+   * @param description The description of the configuration.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param engineType The type of broker engine. 
+   * Note: Currently, Amazon MQ only supports ACTIVEMQ for creating and editing broker
+   * configurations.
+   */
   public fun engineType(engineType: String) {
     cdkBuilder.engineType(engineType)
   }
 
+  /**
+   * @param engineVersion The version of the broker engine. 
+   * For a list of supported engine versions, see
+   * [](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)
+   */
   public fun engineVersion(engineVersion: String) {
     cdkBuilder.engineVersion(engineVersion)
   }
 
+  /**
+   * @param name The name of the configuration. 
+   * This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes
+   * (- . _ ~). This value must be 1-150 characters long.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags Create tags when creating the configuration.
+   */
   public fun tags(tags: CfnConfigurationTagsEntryPropertyDsl.() -> Unit) {
     _tags.add(CfnConfigurationTagsEntryPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Create tags when creating the configuration.
+   */
   public fun tags(tags: Collection<CfnConfiguration.TagsEntryProperty>) {
     _tags.addAll(tags)
   }

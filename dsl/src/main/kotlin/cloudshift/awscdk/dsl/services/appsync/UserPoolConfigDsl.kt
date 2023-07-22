@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.cognito.IUserPool
 public class UserPoolConfigDsl {
   private val cdkBuilder: UserPoolConfig.Builder = UserPoolConfig.builder()
 
+  /**
+   * @param appIdClientRegex the optional app id regex.
+   */
   public fun appIdClientRegex(appIdClientRegex: String) {
     cdkBuilder.appIdClientRegex(appIdClientRegex)
   }
 
+  /**
+   * @param defaultAction Default auth action.
+   */
   public fun defaultAction(defaultAction: UserPoolDefaultAction) {
     cdkBuilder.defaultAction(defaultAction)
   }
 
+  /**
+   * @param userPool The Cognito user pool to use as identity source. 
+   */
   public fun userPool(userPool: IUserPool) {
     cdkBuilder.userPool(userPool)
   }

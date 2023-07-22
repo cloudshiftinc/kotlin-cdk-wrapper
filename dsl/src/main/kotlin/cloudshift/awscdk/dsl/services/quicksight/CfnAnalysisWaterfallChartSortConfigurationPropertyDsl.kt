@@ -16,22 +16,37 @@ public class CfnAnalysisWaterfallChartSortConfigurationPropertyDsl {
 
   private val _categorySort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param breakdownItemsLimit The limit on the number of bar groups that are displayed.
+   */
   public fun breakdownItemsLimit(breakdownItemsLimit: IResolvable) {
     cdkBuilder.breakdownItemsLimit(breakdownItemsLimit)
   }
 
+  /**
+   * @param breakdownItemsLimit The limit on the number of bar groups that are displayed.
+   */
   public fun breakdownItemsLimit(breakdownItemsLimit: CfnAnalysis.ItemsLimitConfigurationProperty) {
     cdkBuilder.breakdownItemsLimit(breakdownItemsLimit)
   }
 
+  /**
+   * @param categorySort The sort configuration of the category fields.
+   */
   public fun categorySort(vararg categorySort: Any) {
     _categorySort.addAll(listOf(*categorySort))
   }
 
+  /**
+   * @param categorySort The sort configuration of the category fields.
+   */
   public fun categorySort(categorySort: Collection<Any>) {
     _categorySort.addAll(categorySort)
   }
 
+  /**
+   * @param categorySort The sort configuration of the category fields.
+   */
   public fun categorySort(categorySort: IResolvable) {
     cdkBuilder.categorySort(categorySort)
   }

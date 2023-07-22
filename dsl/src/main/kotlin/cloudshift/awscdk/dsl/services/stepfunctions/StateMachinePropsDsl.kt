@@ -21,49 +21,83 @@ import software.amazon.awscdk.services.stepfunctions.StateMachineType
 public class StateMachinePropsDsl {
   private val cdkBuilder: StateMachineProps.Builder = StateMachineProps.builder()
 
+  /**
+   * @param definition Definition for this state machine.
+   * @deprecated use definitionBody: DefinitionBody.fromChainable()
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun definition(definition: IChainable) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * @param definitionBody Definition for this state machine.
+   */
   public fun definitionBody(definitionBody: DefinitionBody) {
     cdkBuilder.definitionBody(definitionBody)
   }
 
+  /**
+   * @param definitionSubstitutions substitutions for the definition body aas a key-value map.
+   */
   public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
     cdkBuilder.definitionSubstitutions(definitionSubstitutions)
   }
 
-  public fun logs(block: LogOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param logs Defines what execution history events are logged and where they are logged.
+   */
+  public fun logs(logs: LogOptionsDsl.() -> Unit = {}) {
     val builder = LogOptionsDsl()
-    builder.apply(block)
+    builder.apply(logs)
     cdkBuilder.logs(builder.build())
   }
 
+  /**
+   * @param logs Defines what execution history events are logged and where they are logged.
+   */
   public fun logs(logs: LogOptions) {
     cdkBuilder.logs(logs)
   }
 
+  /**
+   * @param removalPolicy The removal policy to apply to state machine.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }
 
+  /**
+   * @param role The execution role for the state machine service.
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }
 
+  /**
+   * @param stateMachineName A name for the state machine.
+   */
   public fun stateMachineName(stateMachineName: String) {
     cdkBuilder.stateMachineName(stateMachineName)
   }
 
+  /**
+   * @param stateMachineType Type of the state machine.
+   */
   public fun stateMachineType(stateMachineType: StateMachineType) {
     cdkBuilder.stateMachineType(stateMachineType)
   }
 
+  /**
+   * @param timeout Maximum run time for this state machine.
+   */
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }
 
+  /**
+   * @param tracingEnabled Specifies whether Amazon X-Ray tracing is enabled for this state machine.
+   */
   public fun tracingEnabled(tracingEnabled: Boolean) {
     cdkBuilder.tracingEnabled(tracingEnabled)
   }

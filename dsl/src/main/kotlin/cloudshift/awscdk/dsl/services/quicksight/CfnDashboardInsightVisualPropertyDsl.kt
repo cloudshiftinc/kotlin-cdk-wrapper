@@ -17,46 +17,81 @@ public class CfnDashboardInsightVisualPropertyDsl {
 
   private val _actions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param actions The list of custom actions that are configured for a visual.
+   */
   public fun actions(vararg actions: Any) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * @param actions The list of custom actions that are configured for a visual.
+   */
   public fun actions(actions: Collection<Any>) {
     _actions.addAll(actions)
   }
 
+  /**
+   * @param actions The list of custom actions that are configured for a visual.
+   */
   public fun actions(actions: IResolvable) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * @param dataSetIdentifier The dataset that is used in the insight visual. 
+   */
   public fun dataSetIdentifier(dataSetIdentifier: String) {
     cdkBuilder.dataSetIdentifier(dataSetIdentifier)
   }
 
+  /**
+   * @param insightConfiguration The configuration of an insight visual.
+   */
   public fun insightConfiguration(insightConfiguration: IResolvable) {
     cdkBuilder.insightConfiguration(insightConfiguration)
   }
 
+  /**
+   * @param insightConfiguration The configuration of an insight visual.
+   */
   public fun insightConfiguration(insightConfiguration: CfnDashboard.InsightConfigurationProperty) {
     cdkBuilder.insightConfiguration(insightConfiguration)
   }
 
+  /**
+   * @param subtitle The subtitle that is displayed on the visual.
+   */
   public fun subtitle(subtitle: IResolvable) {
     cdkBuilder.subtitle(subtitle)
   }
 
+  /**
+   * @param subtitle The subtitle that is displayed on the visual.
+   */
   public fun subtitle(subtitle: CfnDashboard.VisualSubtitleLabelOptionsProperty) {
     cdkBuilder.subtitle(subtitle)
   }
 
+  /**
+   * @param title The title that is displayed on the visual.
+   */
   public fun title(title: IResolvable) {
     cdkBuilder.title(title)
   }
 
+  /**
+   * @param title The title that is displayed on the visual.
+   */
   public fun title(title: CfnDashboard.VisualTitleLabelOptionsProperty) {
     cdkBuilder.title(title)
   }
 
+  /**
+   * @param visualId The unique identifier of a visual. 
+   * This identifier must be unique within the context of a dashboard, template, or analysis. Two
+   * dashboards, analyses, or templates can have visuals with the same identifiers.
+   */
   public fun visualId(visualId: String) {
     cdkBuilder.visualId(visualId)
   }

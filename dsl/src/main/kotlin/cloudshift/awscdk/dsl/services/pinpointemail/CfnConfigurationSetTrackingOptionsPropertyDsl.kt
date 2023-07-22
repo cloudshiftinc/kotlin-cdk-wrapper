@@ -11,6 +11,9 @@ public class CfnConfigurationSetTrackingOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.TrackingOptionsProperty.Builder =
       CfnConfigurationSet.TrackingOptionsProperty.builder()
 
+  /**
+   * @param customRedirectDomain The domain that you want to use for tracking open and click events.
+   */
   public fun customRedirectDomain(customRedirectDomain: String) {
     cdkBuilder.customRedirectDomain(customRedirectDomain)
   }

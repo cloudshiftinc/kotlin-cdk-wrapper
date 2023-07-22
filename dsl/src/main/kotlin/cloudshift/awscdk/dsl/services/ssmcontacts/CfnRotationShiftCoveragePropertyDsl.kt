@@ -17,18 +17,30 @@ public class CfnRotationShiftCoveragePropertyDsl {
 
   private val _coverageTimes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param coverageTimes The start and end times of the shift. 
+   */
   public fun coverageTimes(vararg coverageTimes: Any) {
     _coverageTimes.addAll(listOf(*coverageTimes))
   }
 
+  /**
+   * @param coverageTimes The start and end times of the shift. 
+   */
   public fun coverageTimes(coverageTimes: Collection<Any>) {
     _coverageTimes.addAll(coverageTimes)
   }
 
+  /**
+   * @param coverageTimes The start and end times of the shift. 
+   */
   public fun coverageTimes(coverageTimes: IResolvable) {
     cdkBuilder.coverageTimes(coverageTimes)
   }
 
+  /**
+   * @param dayOfWeek A list of days on which the schedule is active. 
+   */
   public fun dayOfWeek(dayOfWeek: String) {
     cdkBuilder.dayOfWeek(dayOfWeek)
   }

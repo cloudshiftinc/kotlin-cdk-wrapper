@@ -17,18 +17,35 @@ public class CfnSegmentSegmentGroupsPropertyDsl {
 
   private val _groups: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param groups Specifies the set of segment criteria to evaluate when handling segment groups
+   * for the segment.
+   */
   public fun groups(vararg groups: Any) {
     _groups.addAll(listOf(*groups))
   }
 
+  /**
+   * @param groups Specifies the set of segment criteria to evaluate when handling segment groups
+   * for the segment.
+   */
   public fun groups(groups: Collection<Any>) {
     _groups.addAll(groups)
   }
 
+  /**
+   * @param groups Specifies the set of segment criteria to evaluate when handling segment groups
+   * for the segment.
+   */
   public fun groups(groups: IResolvable) {
     cdkBuilder.groups(groups)
   }
 
+  /**
+   * @param include Specifies how to handle multiple segment groups for the segment.
+   * For example, if the segment includes three segment groups, whether the resulting segment
+   * includes endpoints that match all, any, or none of the segment groups.
+   */
   public fun include(include: String) {
     cdkBuilder.include(include)
   }

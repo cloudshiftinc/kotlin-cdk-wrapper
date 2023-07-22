@@ -15,10 +15,18 @@ public class CfnDataSourceWebCrawlerSiteMapsConfigurationPropertyDsl {
 
   private val _siteMaps: MutableList<String> = mutableListOf()
 
+  /**
+   * @param siteMaps The list of sitemap URLs of the websites you want to crawl. 
+   * The list can include a maximum of three sitemap URLs.
+   */
   public fun siteMaps(vararg siteMaps: String) {
     _siteMaps.addAll(listOf(*siteMaps))
   }
 
+  /**
+   * @param siteMaps The list of sitemap URLs of the websites you want to crawl. 
+   * The list can include a maximum of three sitemap URLs.
+   */
   public fun siteMaps(siteMaps: Collection<String>) {
     _siteMaps.addAll(siteMaps)
   }

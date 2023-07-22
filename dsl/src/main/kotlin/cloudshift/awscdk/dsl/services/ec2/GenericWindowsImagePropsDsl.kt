@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ec2.UserData
 public class GenericWindowsImagePropsDsl {
   private val cdkBuilder: GenericWindowsImageProps.Builder = GenericWindowsImageProps.builder()
 
+  /**
+   * @param userData Initial user data.
+   */
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)
   }

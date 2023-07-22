@@ -11,6 +11,9 @@ public class CfnEgressOnlyInternetGatewayPropsDsl {
   private val cdkBuilder: CfnEgressOnlyInternetGatewayProps.Builder =
       CfnEgressOnlyInternetGatewayProps.builder()
 
+  /**
+   * @param vpcId The ID of the VPC for which to create the egress-only internet gateway. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

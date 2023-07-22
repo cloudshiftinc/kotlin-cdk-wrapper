@@ -17,14 +17,25 @@ public class CfnConnectionAliasPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param connectionString The connection string specified for the connection alias. 
+   * The connection string must be in the form of a fully qualified domain name (FQDN), such as
+   * `www.example.com` .
+   */
   public fun connectionString(connectionString: String) {
     cdkBuilder.connectionString(connectionString)
   }
 
+  /**
+   * @param tags The tags to associate with the connection alias.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to associate with the connection alias.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

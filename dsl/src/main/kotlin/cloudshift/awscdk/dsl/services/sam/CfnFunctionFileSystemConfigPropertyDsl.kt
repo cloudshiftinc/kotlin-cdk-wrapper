@@ -11,10 +11,16 @@ public class CfnFunctionFileSystemConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.FileSystemConfigProperty.Builder =
       CfnFunction.FileSystemConfigProperty.builder()
 
+  /**
+   * @param arn the value to be set.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param localMountPath the value to be set.
+   */
   public fun localMountPath(localMountPath: String) {
     cdkBuilder.localMountPath(localMountPath)
   }

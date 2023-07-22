@@ -17,18 +17,31 @@ public class CfnLoggingConfigurationLoggingFilterPropertyDsl {
 
   private val _filters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param defaultBehavior Default handling for logs that don't match any of the specified
+   * filtering conditions. 
+   */
   public fun defaultBehavior(defaultBehavior: String) {
     cdkBuilder.defaultBehavior(defaultBehavior)
   }
 
+  /**
+   * @param filters The filters that you want to apply to the logs. 
+   */
   public fun filters(vararg filters: Any) {
     _filters.addAll(listOf(*filters))
   }
 
+  /**
+   * @param filters The filters that you want to apply to the logs. 
+   */
   public fun filters(filters: Collection<Any>) {
     _filters.addAll(filters)
   }
 
+  /**
+   * @param filters The filters that you want to apply to the logs. 
+   */
   public fun filters(filters: IResolvable) {
     cdkBuilder.filters(filters)
   }

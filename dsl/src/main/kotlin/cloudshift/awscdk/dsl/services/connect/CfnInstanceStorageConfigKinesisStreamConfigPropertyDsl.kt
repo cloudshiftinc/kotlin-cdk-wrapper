@@ -11,6 +11,9 @@ public class CfnInstanceStorageConfigKinesisStreamConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceStorageConfig.KinesisStreamConfigProperty.Builder =
       CfnInstanceStorageConfig.KinesisStreamConfigProperty.builder()
 
+  /**
+   * @param streamArn The Amazon Resource Name (ARN) of the data stream. 
+   */
   public fun streamArn(streamArn: String) {
     cdkBuilder.streamArn(streamArn)
   }

@@ -11,10 +11,18 @@ public class CfnGitHubRepositoryCodePropertyDsl {
   private val cdkBuilder: CfnGitHubRepository.CodeProperty.Builder =
       CfnGitHubRepository.CodeProperty.builder()
 
+  /**
+   * @param s3 Information about the Amazon S3 bucket that contains a ZIP file of code to be
+   * committed to the repository. 
+   */
   public fun s3(s3: IResolvable) {
     cdkBuilder.s3(s3)
   }
 
+  /**
+   * @param s3 Information about the Amazon S3 bucket that contains a ZIP file of code to be
+   * committed to the repository. 
+   */
   public fun s3(s3: CfnGitHubRepository.S3Property) {
     cdkBuilder.s3(s3)
   }

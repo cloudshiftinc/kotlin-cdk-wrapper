@@ -11,10 +11,18 @@ public class CfnJobOutputFormatOptionsPropertyDsl {
   private val cdkBuilder: CfnJob.OutputFormatOptionsProperty.Builder =
       CfnJob.OutputFormatOptionsProperty.builder()
 
+  /**
+   * @param csv Represents a set of options that define the structure of comma-separated value (CSV)
+   * job output.
+   */
   public fun csv(csv: IResolvable) {
     cdkBuilder.csv(csv)
   }
 
+  /**
+   * @param csv Represents a set of options that define the structure of comma-separated value (CSV)
+   * job output.
+   */
   public fun csv(csv: CfnJob.CsvOutputOptionsProperty) {
     cdkBuilder.csv(csv)
   }

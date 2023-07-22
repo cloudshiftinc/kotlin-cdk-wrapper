@@ -11,6 +11,10 @@ public class CfnFunctionSnapStartPropertyDsl {
   private val cdkBuilder: CfnFunction.SnapStartProperty.Builder =
       CfnFunction.SnapStartProperty.builder()
 
+  /**
+   * @param applyOn Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized
+   * execution environment when you publish a function version. 
+   */
   public fun applyOn(applyOn: String) {
     cdkBuilder.applyOn(applyOn)
   }

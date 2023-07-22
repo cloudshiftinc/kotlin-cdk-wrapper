@@ -15,14 +15,23 @@ public class CfnTopicCellValueSynonymPropertyDsl {
 
   private val _synonyms: MutableList<String> = mutableListOf()
 
+  /**
+   * @param cellValue The cell value.
+   */
   public fun cellValue(cellValue: String) {
     cdkBuilder.cellValue(cellValue)
   }
 
+  /**
+   * @param synonyms Other names or aliases for the cell value.
+   */
   public fun synonyms(vararg synonyms: String) {
     _synonyms.addAll(listOf(*synonyms))
   }
 
+  /**
+   * @param synonyms Other names or aliases for the cell value.
+   */
   public fun synonyms(synonyms: Collection<String>) {
     _synonyms.addAll(synonyms)
   }

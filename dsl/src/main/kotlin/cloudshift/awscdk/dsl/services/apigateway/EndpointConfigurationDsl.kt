@@ -17,18 +17,30 @@ public class EndpointConfigurationDsl {
 
   private val _vpcEndpoints: MutableList<IVpcEndpoint> = mutableListOf()
 
+  /**
+   * @param types A list of endpoint types of an API or its custom domain name. 
+   */
   public fun types(vararg types: EndpointType) {
     _types.addAll(listOf(*types))
   }
 
+  /**
+   * @param types A list of endpoint types of an API or its custom domain name. 
+   */
   public fun types(types: Collection<EndpointType>) {
     _types.addAll(types)
   }
 
+  /**
+   * @param vpcEndpoints A list of VPC Endpoints against which to create Route53 ALIASes.
+   */
   public fun vpcEndpoints(vararg vpcEndpoints: IVpcEndpoint) {
     _vpcEndpoints.addAll(listOf(*vpcEndpoints))
   }
 
+  /**
+   * @param vpcEndpoints A list of VPC Endpoints against which to create Route53 ALIASes.
+   */
   public fun vpcEndpoints(vpcEndpoints: Collection<IVpcEndpoint>) {
     _vpcEndpoints.addAll(vpcEndpoints)
   }

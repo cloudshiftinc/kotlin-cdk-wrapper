@@ -19,30 +19,60 @@ public class CfnNotebookInstanceLifecycleConfigPropsDsl {
 
   private val _onStart: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param notebookInstanceLifecycleConfigName The name of the lifecycle configuration.
+   */
   public fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String) {
     cdkBuilder.notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName)
   }
 
+  /**
+   * @param onCreate A shell script that runs only once, when you create a notebook instance.
+   * The shell script must be a base64-encoded string.
+   */
   public fun onCreate(vararg onCreate: Any) {
     _onCreate.addAll(listOf(*onCreate))
   }
 
+  /**
+   * @param onCreate A shell script that runs only once, when you create a notebook instance.
+   * The shell script must be a base64-encoded string.
+   */
   public fun onCreate(onCreate: Collection<Any>) {
     _onCreate.addAll(onCreate)
   }
 
+  /**
+   * @param onCreate A shell script that runs only once, when you create a notebook instance.
+   * The shell script must be a base64-encoded string.
+   */
   public fun onCreate(onCreate: IResolvable) {
     cdkBuilder.onCreate(onCreate)
   }
 
+  /**
+   * @param onStart A shell script that runs every time you start a notebook instance, including
+   * when you create the notebook instance.
+   * The shell script must be a base64-encoded string.
+   */
   public fun onStart(vararg onStart: Any) {
     _onStart.addAll(listOf(*onStart))
   }
 
+  /**
+   * @param onStart A shell script that runs every time you start a notebook instance, including
+   * when you create the notebook instance.
+   * The shell script must be a base64-encoded string.
+   */
   public fun onStart(onStart: Collection<Any>) {
     _onStart.addAll(onStart)
   }
 
+  /**
+   * @param onStart A shell script that runs every time you start a notebook instance, including
+   * when you create the notebook instance.
+   * The shell script must be a base64-encoded string.
+   */
   public fun onStart(onStart: IResolvable) {
     cdkBuilder.onStart(onStart)
   }

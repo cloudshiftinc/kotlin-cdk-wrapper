@@ -10,18 +10,30 @@ import software.amazon.awscdk.services.s3.BlockPublicAccessOptions
 public class BlockPublicAccessOptionsDsl {
   private val cdkBuilder: BlockPublicAccessOptions.Builder = BlockPublicAccessOptions.builder()
 
+  /**
+   * @param blockPublicAcls Whether to block public ACLs.
+   */
   public fun blockPublicAcls(blockPublicAcls: Boolean) {
     cdkBuilder.blockPublicAcls(blockPublicAcls)
   }
 
+  /**
+   * @param blockPublicPolicy Whether to block public policy.
+   */
   public fun blockPublicPolicy(blockPublicPolicy: Boolean) {
     cdkBuilder.blockPublicPolicy(blockPublicPolicy)
   }
 
+  /**
+   * @param ignorePublicAcls Whether to ignore public ACLs.
+   */
   public fun ignorePublicAcls(ignorePublicAcls: Boolean) {
     cdkBuilder.ignorePublicAcls(ignorePublicAcls)
   }
 
+  /**
+   * @param restrictPublicBuckets Whether to restrict public access.
+   */
   public fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
     cdkBuilder.restrictPublicBuckets(restrictPublicBuckets)
   }

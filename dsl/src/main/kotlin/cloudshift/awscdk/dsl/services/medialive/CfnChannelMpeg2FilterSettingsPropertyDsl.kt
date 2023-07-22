@@ -11,10 +11,16 @@ public class CfnChannelMpeg2FilterSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Mpeg2FilterSettingsProperty.Builder =
       CfnChannel.Mpeg2FilterSettingsProperty.builder()
 
+  /**
+   * @param temporalFilterSettings Settings for applying the temporal filter to the video.
+   */
   public fun temporalFilterSettings(temporalFilterSettings: IResolvable) {
     cdkBuilder.temporalFilterSettings(temporalFilterSettings)
   }
 
+  /**
+   * @param temporalFilterSettings Settings for applying the temporal filter to the video.
+   */
   public
       fun temporalFilterSettings(temporalFilterSettings: CfnChannel.TemporalFilterSettingsProperty) {
     cdkBuilder.temporalFilterSettings(temporalFilterSettings)

@@ -12,14 +12,23 @@ public class CfnThingGroupThingGroupPropertiesPropertyDsl {
   private val cdkBuilder: CfnThingGroup.ThingGroupPropertiesProperty.Builder =
       CfnThingGroup.ThingGroupPropertiesProperty.builder()
 
+  /**
+   * @param attributePayload The thing group attributes in JSON format.
+   */
   public fun attributePayload(attributePayload: IResolvable) {
     cdkBuilder.attributePayload(attributePayload)
   }
 
+  /**
+   * @param attributePayload The thing group attributes in JSON format.
+   */
   public fun attributePayload(attributePayload: CfnThingGroup.AttributePayloadProperty) {
     cdkBuilder.attributePayload(attributePayload)
   }
 
+  /**
+   * @param thingGroupDescription The thing group description.
+   */
   public fun thingGroupDescription(thingGroupDescription: String) {
     cdkBuilder.thingGroupDescription(thingGroupDescription)
   }

@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.codebuild.CfnProject
 public class ArtifactsConfigDsl {
   private val cdkBuilder: ArtifactsConfig.Builder = ArtifactsConfig.builder()
 
-  public fun artifactsProperty(block: CfnProjectArtifactsPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param artifactsProperty The low-level CloudFormation artifacts property. 
+   */
+  public fun artifactsProperty(artifactsProperty: CfnProjectArtifactsPropertyDsl.() -> Unit = {}) {
     val builder = CfnProjectArtifactsPropertyDsl()
-    builder.apply(block)
+    builder.apply(artifactsProperty)
     cdkBuilder.artifactsProperty(builder.build())
   }
 
+  /**
+   * @param artifactsProperty The low-level CloudFormation artifacts property. 
+   */
   public fun artifactsProperty(artifactsProperty: CfnProject.ArtifactsProperty) {
     cdkBuilder.artifactsProperty(artifactsProperty)
   }

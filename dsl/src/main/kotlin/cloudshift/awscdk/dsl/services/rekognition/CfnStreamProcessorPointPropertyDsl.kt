@@ -11,10 +11,16 @@ public class CfnStreamProcessorPointPropertyDsl {
   private val cdkBuilder: CfnStreamProcessor.PointProperty.Builder =
       CfnStreamProcessor.PointProperty.builder()
 
+  /**
+   * @param x The X coordinate of the point. 
+   */
   public fun x(x: Number) {
     cdkBuilder.x(x)
   }
 
+  /**
+   * @param y The Y coordinate of the point. 
+   */
   public fun y(y: Number) {
     cdkBuilder.y(y)
   }

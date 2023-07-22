@@ -12,18 +12,36 @@ public class CfnGroupInsightsConfigurationPropertyDsl {
   private val cdkBuilder: CfnGroup.InsightsConfigurationProperty.Builder =
       CfnGroup.InsightsConfigurationProperty.builder()
 
+  /**
+   * @param insightsEnabled Set the InsightsEnabled value to true to enable insights or false to
+   * disable insights.
+   */
   public fun insightsEnabled(insightsEnabled: Boolean) {
     cdkBuilder.insightsEnabled(insightsEnabled)
   }
 
+  /**
+   * @param insightsEnabled Set the InsightsEnabled value to true to enable insights or false to
+   * disable insights.
+   */
   public fun insightsEnabled(insightsEnabled: IResolvable) {
     cdkBuilder.insightsEnabled(insightsEnabled)
   }
 
+  /**
+   * @param notificationsEnabled Set the NotificationsEnabled value to true to enable insights
+   * notifications.
+   * Notifications can only be enabled on a group with InsightsEnabled set to true.
+   */
   public fun notificationsEnabled(notificationsEnabled: Boolean) {
     cdkBuilder.notificationsEnabled(notificationsEnabled)
   }
 
+  /**
+   * @param notificationsEnabled Set the NotificationsEnabled value to true to enable insights
+   * notifications.
+   * Notifications can only be enabled on a group with InsightsEnabled set to true.
+   */
   public fun notificationsEnabled(notificationsEnabled: IResolvable) {
     cdkBuilder.notificationsEnabled(notificationsEnabled)
   }

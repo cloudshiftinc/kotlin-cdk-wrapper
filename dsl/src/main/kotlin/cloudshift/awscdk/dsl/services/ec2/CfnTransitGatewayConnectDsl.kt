@@ -23,22 +23,57 @@ public class CfnTransitGatewayConnectDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The Connect attachment options.
+   *
+   * * protocol (gre)
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+   * @param options The Connect attachment options. 
+   */
   public fun options(options: IResolvable) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * The Connect attachment options.
+   *
+   * * protocol (gre)
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+   * @param options The Connect attachment options. 
+   */
   public fun options(options: CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * The tags for the attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-tags)
+   * @param tags The tags for the attachment. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags for the attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-tags)
+   * @param tags The tags for the attachment. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ID of the attachment from which the Connect attachment was created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-transporttransitgatewayattachmentid)
+   * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect
+   * attachment was created. 
+   */
   public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
     cdkBuilder.transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId)
   }

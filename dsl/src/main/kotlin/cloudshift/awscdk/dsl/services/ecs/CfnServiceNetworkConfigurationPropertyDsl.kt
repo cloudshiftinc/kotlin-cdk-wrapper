@@ -11,10 +11,20 @@ public class CfnServiceNetworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.NetworkConfigurationProperty.Builder =
       CfnService.NetworkConfigurationProperty.builder()
 
+  /**
+   * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a task.
+   *
+   * All specified subnets and security groups must be from the same VPC.
+   */
   public fun awsvpcConfiguration(awsvpcConfiguration: IResolvable) {
     cdkBuilder.awsvpcConfiguration(awsvpcConfiguration)
   }
 
+  /**
+   * @param awsvpcConfiguration The VPC subnets and security groups that are associated with a task.
+   *
+   * All specified subnets and security groups must be from the same VPC.
+   */
   public fun awsvpcConfiguration(awsvpcConfiguration: CfnService.AwsVpcConfigurationProperty) {
     cdkBuilder.awsvpcConfiguration(awsvpcConfiguration)
   }

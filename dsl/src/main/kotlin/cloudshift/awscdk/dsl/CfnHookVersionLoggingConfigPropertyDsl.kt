@@ -11,10 +11,18 @@ public class CfnHookVersionLoggingConfigPropertyDsl {
   private val cdkBuilder: CfnHookVersion.LoggingConfigProperty.Builder =
       CfnHookVersion.LoggingConfigProperty.builder()
 
+  /**
+   * @param logGroupName The Amazon CloudWatch Logs group to which CloudFormation sends error
+   * logging information when invoking the extension's handlers.
+   */
   public fun logGroupName(logGroupName: String) {
     cdkBuilder.logGroupName(logGroupName)
   }
 
+  /**
+   * @param logRoleArn The Amazon Resource Name (ARN) of the role that CloudFormation should assume
+   * when sending log entries to CloudWatch Logs.
+   */
   public fun logRoleArn(logRoleArn: String) {
     cdkBuilder.logRoleArn(logRoleArn)
   }

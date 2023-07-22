@@ -13,26 +13,44 @@ public class CfnPipePipeSourceRabbitMQBrokerParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceRabbitMQBrokerParametersProperty.Builder =
       CfnPipe.PipeSourceRabbitMQBrokerParametersProperty.builder()
 
+  /**
+   * @param batchSize The maximum number of records to include in each batch.
+   */
   public fun batchSize(batchSize: Number) {
     cdkBuilder.batchSize(batchSize)
   }
 
+  /**
+   * @param credentials The credentials needed to access the resource. 
+   */
   public fun credentials(credentials: IResolvable) {
     cdkBuilder.credentials(credentials)
   }
 
+  /**
+   * @param credentials The credentials needed to access the resource. 
+   */
   public fun credentials(credentials: CfnPipe.MQBrokerAccessCredentialsProperty) {
     cdkBuilder.credentials(credentials)
   }
 
+  /**
+   * @param maximumBatchingWindowInSeconds The maximum length of a time to wait for events.
+   */
   public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number) {
     cdkBuilder.maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds)
   }
 
+  /**
+   * @param queueName The name of the destination queue to consume. 
+   */
   public fun queueName(queueName: String) {
     cdkBuilder.queueName(queueName)
   }
 
+  /**
+   * @param virtualHost The name of the virtual host associated with the source broker.
+   */
   public fun virtualHost(virtualHost: String) {
     cdkBuilder.virtualHost(virtualHost)
   }

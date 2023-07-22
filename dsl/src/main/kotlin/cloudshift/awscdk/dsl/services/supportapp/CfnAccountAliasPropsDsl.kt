@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.supportapp.CfnAccountAliasProps
 public class CfnAccountAliasPropsDsl {
   private val cdkBuilder: CfnAccountAliasProps.Builder = CfnAccountAliasProps.builder()
 
+  /**
+   * @param accountAlias An alias or short name for an AWS account . 
+   */
   public fun accountAlias(accountAlias: String) {
     cdkBuilder.accountAlias(accountAlias)
   }

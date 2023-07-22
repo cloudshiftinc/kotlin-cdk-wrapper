@@ -11,6 +11,10 @@ public class CfnGatewayGreengrassV2PropertyDsl {
   private val cdkBuilder: CfnGateway.GreengrassV2Property.Builder =
       CfnGateway.GreengrassV2Property.builder()
 
+  /**
+   * @param coreDeviceThingName The name of the AWS IoT thing for your AWS IoT Greengrass V2 core
+   * device. 
+   */
   public fun coreDeviceThingName(coreDeviceThingName: String) {
     cdkBuilder.coreDeviceThingName(coreDeviceThingName)
   }

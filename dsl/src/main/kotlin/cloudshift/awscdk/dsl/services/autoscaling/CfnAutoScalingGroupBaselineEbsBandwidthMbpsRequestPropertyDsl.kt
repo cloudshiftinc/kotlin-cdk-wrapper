@@ -11,10 +11,16 @@ public class CfnAutoScalingGroupBaselineEbsBandwidthMbpsRequestPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty.Builder =
       CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty.builder()
 
+  /**
+   * @param max The maximum value in Mbps.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum value in Mbps.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

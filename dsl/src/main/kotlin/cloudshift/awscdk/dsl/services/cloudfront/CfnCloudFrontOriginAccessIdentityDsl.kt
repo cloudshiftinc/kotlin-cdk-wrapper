@@ -16,11 +16,25 @@ public class CfnCloudFrontOriginAccessIdentityDsl(
   private val cdkBuilder: CfnCloudFrontOriginAccessIdentity.Builder =
       CfnCloudFrontOriginAccessIdentity.Builder.create(scope, id)
 
+  /**
+   * The current configuration information for the identity.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)
+   * @param cloudFrontOriginAccessIdentityConfig The current configuration information for the
+   * identity. 
+   */
   public
       fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
     cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)
   }
 
+  /**
+   * The current configuration information for the identity.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)
+   * @param cloudFrontOriginAccessIdentityConfig The current configuration information for the
+   * identity. 
+   */
   public
       fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty) {
     cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)

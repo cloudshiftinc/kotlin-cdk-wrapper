@@ -11,6 +11,12 @@ public class CfnConfigurationSetEventDestinationSnsDestinationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.SnsDestinationProperty.Builder =
       CfnConfigurationSetEventDestination.SnsDestinationProperty.builder()
 
+  /**
+   * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic that you want to publish
+   * email events to. 
+   * For more information about Amazon SNS topics, see the [Amazon SNS Developer
+   * Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) .
+   */
   public fun topicArn(topicArn: String) {
     cdkBuilder.topicArn(topicArn)
   }

@@ -11,6 +11,9 @@ public class CfnScheduleSqsParametersPropertyDsl {
   private val cdkBuilder: CfnSchedule.SqsParametersProperty.Builder =
       CfnSchedule.SqsParametersProperty.builder()
 
+  /**
+   * @param messageGroupId The FIFO message group ID to use as the target.
+   */
   public fun messageGroupId(messageGroupId: String) {
     cdkBuilder.messageGroupId(messageGroupId)
   }

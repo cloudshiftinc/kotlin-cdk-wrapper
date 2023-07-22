@@ -14,20 +14,43 @@ import software.amazon.awscdk.services.oam.CfnSinkProps
 public class CfnSinkPropsDsl {
   private val cdkBuilder: CfnSinkProps.Builder = CfnSinkProps.builder()
 
+  /**
+   * @param name A name for the sink. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policy The IAM policy that grants permissions to source accounts to link to this sink.
+   * The policy can grant permission in the following ways:
+   *
+   * * Include organization IDs or organization paths to permit all accounts in an organization
+   * * Include account IDs to permit the specified accounts
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * @param policy The IAM policy that grants permissions to source accounts to link to this sink.
+   * The policy can grant permission in the following ways:
+   *
+   * * Include organization IDs or organization paths to permit all accounts in an organization
+   * * Include account IDs to permit the specified accounts
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to the sink.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }

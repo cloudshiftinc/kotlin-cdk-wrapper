@@ -12,10 +12,16 @@ public class CfnDetectorCFNS3LogsConfigurationPropertyDsl {
   private val cdkBuilder: CfnDetector.CFNS3LogsConfigurationProperty.Builder =
       CfnDetector.CFNS3LogsConfigurationProperty.builder()
 
+  /**
+   * @param enable The status of S3 data event logs as a data source.
+   */
   public fun enable(enable: Boolean) {
     cdkBuilder.enable(enable)
   }
 
+  /**
+   * @param enable The status of S3 data event logs as a data source.
+   */
   public fun enable(enable: IResolvable) {
     cdkBuilder.enable(enable)
   }

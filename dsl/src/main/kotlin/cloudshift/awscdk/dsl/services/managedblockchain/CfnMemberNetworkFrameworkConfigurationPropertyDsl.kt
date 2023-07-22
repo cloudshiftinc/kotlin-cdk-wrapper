@@ -11,10 +11,18 @@ public class CfnMemberNetworkFrameworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.NetworkFrameworkConfigurationProperty.Builder =
       CfnMember.NetworkFrameworkConfigurationProperty.builder()
 
+  /**
+   * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a member
+   * in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+   */
   public fun networkFabricConfiguration(networkFabricConfiguration: IResolvable) {
     cdkBuilder.networkFabricConfiguration(networkFabricConfiguration)
   }
 
+  /**
+   * @param networkFabricConfiguration Configuration properties for Hyperledger Fabric for a member
+   * in a Managed Blockchain network that is using the Hyperledger Fabric framework.
+   */
   public
       fun networkFabricConfiguration(networkFabricConfiguration: CfnMember.NetworkFabricConfigurationProperty) {
     cdkBuilder.networkFabricConfiguration(networkFabricConfiguration)

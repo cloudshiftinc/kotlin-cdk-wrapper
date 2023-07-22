@@ -11,10 +11,17 @@ public class CfnDBInstanceProcessorFeaturePropertyDsl {
   private val cdkBuilder: CfnDBInstance.ProcessorFeatureProperty.Builder =
       CfnDBInstance.ProcessorFeatureProperty.builder()
 
+  /**
+   * @param name The name of the processor feature.
+   * Valid names are `coreCount` and `threadsPerCore` .
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param value The value of a processor feature name.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

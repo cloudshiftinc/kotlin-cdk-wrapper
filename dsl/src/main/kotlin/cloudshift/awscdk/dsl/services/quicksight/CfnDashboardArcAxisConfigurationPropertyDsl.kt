@@ -12,14 +12,23 @@ public class CfnDashboardArcAxisConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.ArcAxisConfigurationProperty.Builder =
       CfnDashboard.ArcAxisConfigurationProperty.builder()
 
+  /**
+   * @param range The arc axis range of a `GaugeChartVisual` .
+   */
   public fun range(range: IResolvable) {
     cdkBuilder.range(range)
   }
 
+  /**
+   * @param range The arc axis range of a `GaugeChartVisual` .
+   */
   public fun range(range: CfnDashboard.ArcAxisDisplayRangeProperty) {
     cdkBuilder.range(range)
   }
 
+  /**
+   * @param reserveRange The reserved range of the arc axis.
+   */
   public fun reserveRange(reserveRange: Number) {
     cdkBuilder.reserveRange(reserveRange)
   }

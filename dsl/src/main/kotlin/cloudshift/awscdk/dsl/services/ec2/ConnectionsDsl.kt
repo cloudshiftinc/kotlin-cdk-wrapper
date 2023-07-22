@@ -17,24 +17,61 @@ public class ConnectionsDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
-  public fun defaultPort(block: PortDsl.() -> Unit = {}) {
+  /**
+   * Default port range for initiating connections to and from this object.
+   *
+   * Default: - No default port
+   *
+   * @param defaultPort Default port range for initiating connections to and from this object. 
+   */
+  public fun defaultPort(defaultPort: PortDsl.() -> Unit = {}) {
     val builder = PortDsl()
-    builder.apply(block)
+    builder.apply(defaultPort)
     cdkBuilder.defaultPort(builder.build())
   }
 
+  /**
+   * Default port range for initiating connections to and from this object.
+   *
+   * Default: - No default port
+   *
+   * @param defaultPort Default port range for initiating connections to and from this object. 
+   */
   public fun defaultPort(defaultPort: Port) {
     cdkBuilder.defaultPort(defaultPort)
   }
 
+  /**
+   * Class that represents the rule by which others can connect to this connectable.
+   *
+   * This object is required, but will be derived from securityGroup if that is passed.
+   *
+   * Default: Derived from securityGroup if set.
+   *
+   * @param peer Class that represents the rule by which others can connect to this connectable. 
+   */
   public fun peer(peer: IPeer) {
     cdkBuilder.peer(peer)
   }
 
+  /**
+   * What securityGroup(s) this object is managing connections for.
+   *
+   * Default: No security groups
+   *
+   * @param securityGroups What securityGroup(s) this object is managing connections for. 
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * What securityGroup(s) this object is managing connections for.
+   *
+   * Default: No security groups
+   *
+   * @param securityGroups What securityGroup(s) this object is managing connections for. 
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }

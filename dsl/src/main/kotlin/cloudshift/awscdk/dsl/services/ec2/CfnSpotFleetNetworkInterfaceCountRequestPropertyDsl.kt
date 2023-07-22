@@ -11,10 +11,18 @@ public class CfnSpotFleetNetworkInterfaceCountRequestPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.NetworkInterfaceCountRequestProperty.Builder =
       CfnSpotFleet.NetworkInterfaceCountRequestProperty.builder()
 
+  /**
+   * @param max The maximum number of network interfaces.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum number of network interfaces.
+   * To specify no minimum limit, omit this parameter.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

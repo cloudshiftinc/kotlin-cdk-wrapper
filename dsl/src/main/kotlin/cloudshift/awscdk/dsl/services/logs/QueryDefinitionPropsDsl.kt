@@ -17,24 +17,39 @@ public class QueryDefinitionPropsDsl {
 
   private val _logGroups: MutableList<ILogGroup> = mutableListOf()
 
+  /**
+   * @param logGroups Specify certain log groups for the query definition.
+   */
   public fun logGroups(vararg logGroups: ILogGroup) {
     _logGroups.addAll(listOf(*logGroups))
   }
 
+  /**
+   * @param logGroups Specify certain log groups for the query definition.
+   */
   public fun logGroups(logGroups: Collection<ILogGroup>) {
     _logGroups.addAll(logGroups)
   }
 
+  /**
+   * @param queryDefinitionName Name of the query definition. 
+   */
   public fun queryDefinitionName(queryDefinitionName: String) {
     cdkBuilder.queryDefinitionName(queryDefinitionName)
   }
 
-  public fun queryString(block: QueryStringDsl.() -> Unit = {}) {
+  /**
+   * @param queryString The query string to use for this query definition. 
+   */
+  public fun queryString(queryString: QueryStringDsl.() -> Unit = {}) {
     val builder = QueryStringDsl()
-    builder.apply(block)
+    builder.apply(queryString)
     cdkBuilder.queryString(builder.build())
   }
 
+  /**
+   * @param queryString The query string to use for this query definition. 
+   */
   public fun queryString(queryString: QueryString) {
     cdkBuilder.queryString(queryString)
   }

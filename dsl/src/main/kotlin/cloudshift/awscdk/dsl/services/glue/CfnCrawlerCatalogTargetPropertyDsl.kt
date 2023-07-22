@@ -15,26 +15,48 @@ public class CfnCrawlerCatalogTargetPropertyDsl {
 
   private val _tables: MutableList<String> = mutableListOf()
 
+  /**
+   * @param connectionName The name of the connection for an Amazon S3-backed Data Catalog table to
+   * be a target of the crawl when using a `Catalog` connection type paired with a `NETWORK` Connection
+   * type.
+   */
   public fun connectionName(connectionName: String) {
     cdkBuilder.connectionName(connectionName)
   }
 
+  /**
+   * @param databaseName The name of the database to be synchronized.
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * @param dlqEventQueueArn A valid Amazon dead-letter SQS ARN.
+   * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
+   */
   public fun dlqEventQueueArn(dlqEventQueueArn: String) {
     cdkBuilder.dlqEventQueueArn(dlqEventQueueArn)
   }
 
+  /**
+   * @param eventQueueArn A valid Amazon SQS ARN.
+   * For example, `arn:aws:sqs:region:account:sqs` .
+   */
   public fun eventQueueArn(eventQueueArn: String) {
     cdkBuilder.eventQueueArn(eventQueueArn)
   }
 
+  /**
+   * @param tables A list of the tables to be synchronized.
+   */
   public fun tables(vararg tables: String) {
     _tables.addAll(listOf(*tables))
   }
 
+  /**
+   * @param tables A list of the tables to be synchronized.
+   */
   public fun tables(tables: Collection<String>) {
     _tables.addAll(tables)
   }

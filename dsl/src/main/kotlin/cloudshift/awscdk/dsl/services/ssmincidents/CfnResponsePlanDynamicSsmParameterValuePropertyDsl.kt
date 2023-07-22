@@ -11,6 +11,10 @@ public class CfnResponsePlanDynamicSsmParameterValuePropertyDsl {
   private val cdkBuilder: CfnResponsePlan.DynamicSsmParameterValueProperty.Builder =
       CfnResponsePlan.DynamicSsmParameterValueProperty.builder()
 
+  /**
+   * @param variable Variable dynamic parameters.
+   * A parameter value is determined when an incident is created.
+   */
   public fun variable(variable: String) {
     cdkBuilder.variable(variable)
   }

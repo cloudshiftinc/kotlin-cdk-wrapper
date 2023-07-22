@@ -11,10 +11,18 @@ public class CfnResponsePlanActionPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.ActionProperty.Builder =
       CfnResponsePlan.ActionProperty.builder()
 
+  /**
+   * @param ssmAutomation Details about the Systems Manager automation document that will be used as
+   * a runbook during an incident.
+   */
   public fun ssmAutomation(ssmAutomation: IResolvable) {
     cdkBuilder.ssmAutomation(ssmAutomation)
   }
 
+  /**
+   * @param ssmAutomation Details about the Systems Manager automation document that will be used as
+   * a runbook during an incident.
+   */
   public fun ssmAutomation(ssmAutomation: CfnResponsePlan.SsmAutomationProperty) {
     cdkBuilder.ssmAutomation(ssmAutomation)
   }

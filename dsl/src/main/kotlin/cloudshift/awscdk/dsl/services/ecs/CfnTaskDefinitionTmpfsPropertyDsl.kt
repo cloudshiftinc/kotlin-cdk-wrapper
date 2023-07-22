@@ -16,18 +16,40 @@ public class CfnTaskDefinitionTmpfsPropertyDsl {
 
   private val _mountOptions: MutableList<String> = mutableListOf()
 
+  /**
+   * @param containerPath The absolute file path where the tmpfs volume is to be mounted.
+   */
   public fun containerPath(containerPath: String) {
     cdkBuilder.containerPath(containerPath)
   }
 
+  /**
+   * @param mountOptions The list of tmpfs volume mount options.
+   * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+   * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime" |
+   * "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+   * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" | "strictatime"
+   * | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+   */
   public fun mountOptions(vararg mountOptions: String) {
     _mountOptions.addAll(listOf(*mountOptions))
   }
 
+  /**
+   * @param mountOptions The list of tmpfs volume mount options.
+   * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+   * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime" |
+   * "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+   * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" | "strictatime"
+   * | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+   */
   public fun mountOptions(mountOptions: Collection<String>) {
     _mountOptions.addAll(mountOptions)
   }
 
+  /**
+   * @param size The maximum size (in MiB) of the tmpfs volume. 
+   */
   public fun size(size: Number) {
     cdkBuilder.size(size)
   }

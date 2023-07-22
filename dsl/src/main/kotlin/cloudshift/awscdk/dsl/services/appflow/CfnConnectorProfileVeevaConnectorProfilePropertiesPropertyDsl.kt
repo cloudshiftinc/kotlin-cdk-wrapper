@@ -11,6 +11,9 @@ public class CfnConnectorProfileVeevaConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param instanceUrl The location of the Veeva resource. 
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }

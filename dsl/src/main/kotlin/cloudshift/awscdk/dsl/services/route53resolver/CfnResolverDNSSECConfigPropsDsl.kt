@@ -11,6 +11,10 @@ public class CfnResolverDNSSECConfigPropsDsl {
   private val cdkBuilder: CfnResolverDNSSECConfigProps.Builder =
       CfnResolverDNSSECConfigProps.builder()
 
+  /**
+   * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC
+   * validation status for.
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }

@@ -19,26 +19,50 @@ public class CfnTestGridProjectPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A human-readable description for the project.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name A human-readable name for the project. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *guide* .
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * in the *guide* .
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param vpcConfig The VPC security groups and subnets that are attached to a project.
+   */
   public fun vpcConfig(vpcConfig: IResolvable) {
     cdkBuilder.vpcConfig(vpcConfig)
   }
 
+  /**
+   * @param vpcConfig The VPC security groups and subnets that are attached to a project.
+   */
   public fun vpcConfig(vpcConfig: CfnTestGridProject.VpcConfigProperty) {
     cdkBuilder.vpcConfig(vpcConfig)
   }

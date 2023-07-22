@@ -18,20 +18,32 @@ public class CfnDataIntegrationFileConfigurationPropertyDsl {
 
   private val _folders: MutableList<String> = mutableListOf()
 
-  public fun filters(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param filters Restrictions for what files should be pulled from the source.
+   */
+  public fun filters(filters: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(filters)
     cdkBuilder.filters(builder.map)
   }
 
+  /**
+   * @param filters Restrictions for what files should be pulled from the source.
+   */
   public fun filters(filters: Any) {
     cdkBuilder.filters(filters)
   }
 
+  /**
+   * @param folders Identifiers for the source folders to pull all files from recursively. 
+   */
   public fun folders(vararg folders: String) {
     _folders.addAll(listOf(*folders))
   }
 
+  /**
+   * @param folders Identifiers for the source folders to pull all files from recursively. 
+   */
   public fun folders(folders: Collection<String>) {
     _folders.addAll(folders)
   }

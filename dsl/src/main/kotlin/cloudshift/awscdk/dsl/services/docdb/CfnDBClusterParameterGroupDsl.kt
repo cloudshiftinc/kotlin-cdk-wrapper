@@ -24,32 +24,82 @@ public class CfnDBClusterParameterGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The description for the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html#cfn-docdb-dbclusterparametergroup-description)
+   * @param description The description for the cluster parameter group. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The cluster parameter group family name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html#cfn-docdb-dbclusterparametergroup-family)
+   * @param family The cluster parameter group family name. 
+   */
   public fun family(family: String) {
     cdkBuilder.family(family)
   }
 
+  /**
+   * The name of the DB cluster parameter group.
+   *
+   * Constraints:
+   *
+   * * Must not match the name of an existing `DBClusterParameterGroup` .
+   *
+   *
+   * This value is stored as a lowercase string.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html#cfn-docdb-dbclusterparametergroup-name)
+   * @param name The name of the DB cluster parameter group. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
-  public fun parameters(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * Provides a list of parameters for the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html#cfn-docdb-dbclusterparametergroup-parameters)
+   * @param parameters Provides a list of parameters for the cluster parameter group. 
+   */
+  public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(parameters)
     cdkBuilder.parameters(builder.map)
   }
 
+  /**
+   * Provides a list of parameters for the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html#cfn-docdb-dbclusterparametergroup-parameters)
+   * @param parameters Provides a list of parameters for the cluster parameter group. 
+   */
   public fun parameters(parameters: Any) {
     cdkBuilder.parameters(parameters)
   }
 
+  /**
+   * The tags to be assigned to the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html#cfn-docdb-dbclusterparametergroup-tags)
+   * @param tags The tags to be assigned to the cluster parameter group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags to be assigned to the cluster parameter group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html#cfn-docdb-dbclusterparametergroup-tags)
+   * @param tags The tags to be assigned to the cluster parameter group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

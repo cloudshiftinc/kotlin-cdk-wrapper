@@ -17,16 +17,34 @@ public class CfnPolicyDsl(
 ) {
   private val cdkBuilder: CfnPolicy.Builder = CfnPolicy.Builder.create(scope, id)
 
-  public fun policyDocument(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The JSON document that describes the policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-policydocument)
+   * @param policyDocument The JSON document that describes the policy. 
+   */
+  public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policyDocument)
     cdkBuilder.policyDocument(builder.map)
   }
 
+  /**
+   * The JSON document that describes the policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-policydocument)
+   * @param policyDocument The JSON document that describes the policy. 
+   */
   public fun policyDocument(policyDocument: Any) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * The policy name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-policyname)
+   * @param policyName The policy name. 
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }

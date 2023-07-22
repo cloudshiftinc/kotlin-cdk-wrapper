@@ -11,10 +11,16 @@ public class CfnVirtualNodeSubjectAlternativeNamesPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.SubjectAlternativeNamesProperty.Builder =
       CfnVirtualNode.SubjectAlternativeNamesProperty.builder()
 
+  /**
+   * @param match An object that represents the criteria for determining a SANs match. 
+   */
   public fun match(match: IResolvable) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param match An object that represents the criteria for determining a SANs match. 
+   */
   public fun match(match: CfnVirtualNode.SubjectAlternativeNameMatchersProperty) {
     cdkBuilder.match(match)
   }

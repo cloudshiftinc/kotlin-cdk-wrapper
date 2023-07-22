@@ -15,10 +15,18 @@ public class CfnEventSourceMappingEndpointsPropertyDsl {
 
   private val _kafkaBootstrapServers: MutableList<String> = mutableListOf()
 
+  /**
+   * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
+   * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+   */
   public fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String) {
     _kafkaBootstrapServers.addAll(listOf(*kafkaBootstrapServers))
   }
 
+  /**
+   * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
+   * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+   */
   public fun kafkaBootstrapServers(kafkaBootstrapServers: Collection<String>) {
     _kafkaBootstrapServers.addAll(kafkaBootstrapServers)
   }

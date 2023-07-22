@@ -15,14 +15,26 @@ public class CfnIdentityPoolPushSyncPropertyDsl {
 
   private val _applicationArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param applicationArns The ARNs of the Amazon SNS platform applications that could be used by
+   * clients.
+   */
   public fun applicationArns(vararg applicationArns: String) {
     _applicationArns.addAll(listOf(*applicationArns))
   }
 
+  /**
+   * @param applicationArns The ARNs of the Amazon SNS platform applications that could be used by
+   * clients.
+   */
   public fun applicationArns(applicationArns: Collection<String>) {
     _applicationArns.addAll(applicationArns)
   }
 
+  /**
+   * @param roleArn An IAM role configured to allow Amazon Cognito to call Amazon SNS on behalf of
+   * the developer.
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

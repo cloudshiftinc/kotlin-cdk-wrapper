@@ -17,26 +17,46 @@ public class CfnPortfolioPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param acceptLanguage The language code.
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   */
   public fun acceptLanguage(acceptLanguage: String) {
     cdkBuilder.acceptLanguage(acceptLanguage)
   }
 
+  /**
+   * @param description The description of the portfolio.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param displayName The name to use for display purposes. 
+   */
   public fun displayName(displayName: String) {
     cdkBuilder.displayName(displayName)
   }
 
+  /**
+   * @param providerName The name of the portfolio provider. 
+   */
   public fun providerName(providerName: String) {
     cdkBuilder.providerName(providerName)
   }
 
+  /**
+   * @param tags One or more tags.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags One or more tags.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

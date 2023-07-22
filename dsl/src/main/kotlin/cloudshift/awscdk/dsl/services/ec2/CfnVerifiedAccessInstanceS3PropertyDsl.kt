@@ -13,22 +13,37 @@ public class CfnVerifiedAccessInstanceS3PropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.S3Property.Builder =
       CfnVerifiedAccessInstance.S3Property.builder()
 
+  /**
+   * @param bucketName The bucket name.
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param bucketOwner The AWS account number that owns the bucket.
+   */
   public fun bucketOwner(bucketOwner: String) {
     cdkBuilder.bucketOwner(bucketOwner)
   }
 
+  /**
+   * @param enabled Indicates whether logging is enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether logging is enabled.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param prefix The bucket prefix.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

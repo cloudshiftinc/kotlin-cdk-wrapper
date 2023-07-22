@@ -20,34 +20,62 @@ public class CfnEnvironmentPropsDsl {
 
   private val _tags: MutableList<CfnEnvironment.TagsProperty> = mutableListOf()
 
+  /**
+   * @param applicationId The application ID. 
+   */
   public fun applicationId(applicationId: String) {
     cdkBuilder.applicationId(applicationId)
   }
 
+  /**
+   * @param description A description of the environment.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param monitors Amazon CloudWatch alarms to monitor during the deployment process.
+   */
   public fun monitors(vararg monitors: Any) {
     _monitors.addAll(listOf(*monitors))
   }
 
+  /**
+   * @param monitors Amazon CloudWatch alarms to monitor during the deployment process.
+   */
   public fun monitors(monitors: Collection<Any>) {
     _monitors.addAll(monitors)
   }
 
+  /**
+   * @param monitors Amazon CloudWatch alarms to monitor during the deployment process.
+   */
   public fun monitors(monitors: IResolvable) {
     cdkBuilder.monitors(monitors)
   }
 
+  /**
+   * @param name A name for the environment. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags Metadata to assign to the environment.
+   * Tags help organize and categorize your AWS AppConfig resources. Each tag consists of a key and
+   * an optional value, both of which you define.
+   */
   public fun tags(tags: CfnEnvironmentTagsPropertyDsl.() -> Unit) {
     _tags.add(CfnEnvironmentTagsPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Metadata to assign to the environment.
+   * Tags help organize and categorize your AWS AppConfig resources. Each tag consists of a key and
+   * an optional value, both of which you define.
+   */
   public fun tags(tags: Collection<CfnEnvironment.TagsProperty>) {
     _tags.addAll(tags)
   }

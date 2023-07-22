@@ -16,14 +16,35 @@ public class CfnInputInputDefinitionPropertyDsl {
 
   private val _attributes: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param attributes The attributes from the JSON payload that are made available by the input. 
+   * Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage` .
+   * Each such message contains a JSON payload, and those attributes (and their paired values)
+   * specified here are available for use in the `condition` expressions used by detectors that monitor
+   * this input.
+   */
   public fun attributes(vararg attributes: Any) {
     _attributes.addAll(listOf(*attributes))
   }
 
+  /**
+   * @param attributes The attributes from the JSON payload that are made available by the input. 
+   * Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage` .
+   * Each such message contains a JSON payload, and those attributes (and their paired values)
+   * specified here are available for use in the `condition` expressions used by detectors that monitor
+   * this input.
+   */
   public fun attributes(attributes: Collection<Any>) {
     _attributes.addAll(attributes)
   }
 
+  /**
+   * @param attributes The attributes from the JSON payload that are made available by the input. 
+   * Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage` .
+   * Each such message contains a JSON payload, and those attributes (and their paired values)
+   * specified here are available for use in the `condition` expressions used by detectors that monitor
+   * this input.
+   */
   public fun attributes(attributes: IResolvable) {
     cdkBuilder.attributes(attributes)
   }

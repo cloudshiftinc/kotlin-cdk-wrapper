@@ -11,10 +11,16 @@ public class CfnApplicationAlarmPropertyDsl {
   private val cdkBuilder: CfnApplication.AlarmProperty.Builder =
       CfnApplication.AlarmProperty.builder()
 
+  /**
+   * @param alarmName The name of the CloudWatch alarm to be monitored for the component. 
+   */
   public fun alarmName(alarmName: String) {
     cdkBuilder.alarmName(alarmName)
   }
 
+  /**
+   * @param severity Indicates the degree of outage when the alarm goes off.
+   */
   public fun severity(severity: String) {
     cdkBuilder.severity(severity)
   }

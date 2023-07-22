@@ -11,6 +11,9 @@ public class CfnConnectorProfileTrendmicroConnectorProfileCredentialsPropertyDsl
   private val cdkBuilder: CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty.Builder
       = CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty.builder()
 
+  /**
+   * @param apiSecretKey The Secret Access Key portion of the credentials. 
+   */
   public fun apiSecretKey(apiSecretKey: String) {
     cdkBuilder.apiSecretKey(apiSecretKey)
   }

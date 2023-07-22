@@ -17,14 +17,25 @@ public class CfnClusterPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param name Name of the cluster. 
+   * You can use any non-white space character in the name except the following: &amp; &gt; &lt; '
+   * (single quote) " (double quote) ; (semicolon).
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags The value for a tag.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The value for a tag.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

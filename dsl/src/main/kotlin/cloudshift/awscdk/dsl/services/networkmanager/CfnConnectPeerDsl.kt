@@ -24,38 +24,92 @@ public class CfnConnectPeerDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Bgp options.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-bgpoptions)
+   * @param bgpOptions Bgp options. 
+   */
   public fun bgpOptions(bgpOptions: IResolvable) {
     cdkBuilder.bgpOptions(bgpOptions)
   }
 
+  /**
+   * Bgp options.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-bgpoptions)
+   * @param bgpOptions Bgp options. 
+   */
   public fun bgpOptions(bgpOptions: CfnConnectPeer.BgpOptionsProperty) {
     cdkBuilder.bgpOptions(bgpOptions)
   }
 
+  /**
+   * The ID of the attachment to connect.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-connectattachmentid)
+   * @param connectAttachmentId The ID of the attachment to connect. 
+   */
   public fun connectAttachmentId(connectAttachmentId: String) {
     cdkBuilder.connectAttachmentId(connectAttachmentId)
   }
 
+  /**
+   * The IP address of a core network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-corenetworkaddress)
+   * @param coreNetworkAddress The IP address of a core network. 
+   */
   public fun coreNetworkAddress(coreNetworkAddress: String) {
     cdkBuilder.coreNetworkAddress(coreNetworkAddress)
   }
 
+  /**
+   * The inside IP addresses used for a Connect peer configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-insidecidrblocks)
+   * @param insideCidrBlocks The inside IP addresses used for a Connect peer configuration. 
+   */
   public fun insideCidrBlocks(vararg insideCidrBlocks: String) {
     _insideCidrBlocks.addAll(listOf(*insideCidrBlocks))
   }
 
+  /**
+   * The inside IP addresses used for a Connect peer configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-insidecidrblocks)
+   * @param insideCidrBlocks The inside IP addresses used for a Connect peer configuration. 
+   */
   public fun insideCidrBlocks(insideCidrBlocks: Collection<String>) {
     _insideCidrBlocks.addAll(insideCidrBlocks)
   }
 
+  /**
+   * The IP address of the Connect peer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-peeraddress)
+   * @param peerAddress The IP address of the Connect peer. 
+   */
   public fun peerAddress(peerAddress: String) {
     cdkBuilder.peerAddress(peerAddress)
   }
 
+  /**
+   * The list of key-value tags associated with the Connect peer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-tags)
+   * @param tags The list of key-value tags associated with the Connect peer. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The list of key-value tags associated with the Connect peer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html#cfn-networkmanager-connectpeer-tags)
+   * @param tags The list of key-value tags associated with the Connect peer. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

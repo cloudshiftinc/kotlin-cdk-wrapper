@@ -11,13 +11,20 @@ import software.amazon.awscdk.services.appmesh.TlsCertificateConfig
 public class TlsCertificateConfigDsl {
   private val cdkBuilder: TlsCertificateConfig.Builder = TlsCertificateConfig.builder()
 
-  public fun tlsCertificate(block: CfnVirtualNodeListenerTlsCertificatePropertyDsl.() -> Unit =
-      {}) {
+  /**
+   * @param tlsCertificate The CFN shape for a TLS certificate. 
+   */
+  public
+      fun tlsCertificate(tlsCertificate: CfnVirtualNodeListenerTlsCertificatePropertyDsl.() -> Unit
+      = {}) {
     val builder = CfnVirtualNodeListenerTlsCertificatePropertyDsl()
-    builder.apply(block)
+    builder.apply(tlsCertificate)
     cdkBuilder.tlsCertificate(builder.build())
   }
 
+  /**
+   * @param tlsCertificate The CFN shape for a TLS certificate. 
+   */
   public fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
     cdkBuilder.tlsCertificate(tlsCertificate)
   }

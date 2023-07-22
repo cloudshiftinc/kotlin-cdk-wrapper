@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.autoscaling.RenderSignalsOptions
 public class RenderSignalsOptionsDsl {
   private val cdkBuilder: RenderSignalsOptions.Builder = RenderSignalsOptions.builder()
 
+  /**
+   * @param desiredCapacity The desiredCapacity of the ASG.
+   */
   public fun desiredCapacity(desiredCapacity: Number) {
     cdkBuilder.desiredCapacity(desiredCapacity)
   }
 
+  /**
+   * @param minCapacity The minSize of the ASG.
+   */
   public fun minCapacity(minCapacity: Number) {
     cdkBuilder.minCapacity(minCapacity)
   }

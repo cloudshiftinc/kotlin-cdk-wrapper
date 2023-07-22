@@ -14,26 +14,48 @@ import software.amazon.awscdk.services.autoscaling.StepScalingActionProps
 public class StepScalingActionPropsDsl {
   private val cdkBuilder: StepScalingActionProps.Builder = StepScalingActionProps.builder()
 
+  /**
+   * @param adjustmentType How the adjustment numbers are interpreted.
+   */
   public fun adjustmentType(adjustmentType: AdjustmentType) {
     cdkBuilder.adjustmentType(adjustmentType)
   }
 
+  /**
+   * @param autoScalingGroup The auto scaling group. 
+   */
   public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
     cdkBuilder.autoScalingGroup(autoScalingGroup)
   }
 
+  /**
+   * @param cooldown Period after a scaling completes before another scaling activity can start.
+   */
   public fun cooldown(cooldown: Duration) {
     cdkBuilder.cooldown(cooldown)
   }
 
+  /**
+   * @param estimatedInstanceWarmup Estimated time until a newly launched instance can send metrics
+   * to CloudWatch.
+   */
   public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
     cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
   }
 
+  /**
+   * @param metricAggregationType The aggregation type for the CloudWatch metrics.
+   */
   public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
     cdkBuilder.metricAggregationType(metricAggregationType)
   }
 
+  /**
+   * @param minAdjustmentMagnitude Minimum absolute number to adjust capacity with as result of
+   * percentage scaling.
+   * Only when using AdjustmentType = PercentChangeInCapacity, this number controls
+   * the minimum absolute effect size.
+   */
   public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
     cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
   }

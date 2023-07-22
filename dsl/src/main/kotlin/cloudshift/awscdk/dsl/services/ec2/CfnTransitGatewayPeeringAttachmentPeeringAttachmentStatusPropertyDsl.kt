@@ -11,10 +11,16 @@ public class CfnTransitGatewayPeeringAttachmentPeeringAttachmentStatusPropertyDs
   private val cdkBuilder: CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty.Builder
       = CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty.builder()
 
+  /**
+   * @param code The status code.
+   */
   public fun code(code: String) {
     cdkBuilder.code(code)
   }
 
+  /**
+   * @param message The status message, if applicable.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }

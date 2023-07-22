@@ -25,30 +25,72 @@ public class CfnRecipeDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The description of the recipe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html#cfn-databrew-recipe-description)
+   * @param description The description of the recipe. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The unique name for the recipe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html#cfn-databrew-recipe-name)
+   * @param name The unique name for the recipe. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * A list of steps that are defined by the recipe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html#cfn-databrew-recipe-steps)
+   * @param steps A list of steps that are defined by the recipe. 
+   */
   public fun steps(vararg steps: Any) {
     _steps.addAll(listOf(*steps))
   }
 
+  /**
+   * A list of steps that are defined by the recipe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html#cfn-databrew-recipe-steps)
+   * @param steps A list of steps that are defined by the recipe. 
+   */
   public fun steps(steps: Collection<Any>) {
     _steps.addAll(steps)
   }
 
+  /**
+   * A list of steps that are defined by the recipe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html#cfn-databrew-recipe-steps)
+   * @param steps A list of steps that are defined by the recipe. 
+   */
   public fun steps(steps: IResolvable) {
     cdkBuilder.steps(steps)
   }
 
+  /**
+   * Metadata tags that have been applied to the recipe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html#cfn-databrew-recipe-tags)
+   * @param tags Metadata tags that have been applied to the recipe. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Metadata tags that have been applied to the recipe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html#cfn-databrew-recipe-tags)
+   * @param tags Metadata tags that have been applied to the recipe. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -17,18 +17,33 @@ public class CfnChannelAudioChannelMappingPropertyDsl {
 
   private val _inputChannelLevels: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param inputChannelLevels The indices and gain values for each input channel that should be
+   * remixed into this output channel.
+   */
   public fun inputChannelLevels(vararg inputChannelLevels: Any) {
     _inputChannelLevels.addAll(listOf(*inputChannelLevels))
   }
 
+  /**
+   * @param inputChannelLevels The indices and gain values for each input channel that should be
+   * remixed into this output channel.
+   */
   public fun inputChannelLevels(inputChannelLevels: Collection<Any>) {
     _inputChannelLevels.addAll(inputChannelLevels)
   }
 
+  /**
+   * @param inputChannelLevels The indices and gain values for each input channel that should be
+   * remixed into this output channel.
+   */
   public fun inputChannelLevels(inputChannelLevels: IResolvable) {
     cdkBuilder.inputChannelLevels(inputChannelLevels)
   }
 
+  /**
+   * @param outputChannel The index of the output channel that is being produced.
+   */
   public fun outputChannel(outputChannel: Number) {
     cdkBuilder.outputChannel(outputChannel)
   }

@@ -11,6 +11,9 @@ public class CfnLicenseProvisionalConfigurationPropertyDsl {
   private val cdkBuilder: CfnLicense.ProvisionalConfigurationProperty.Builder =
       CfnLicense.ProvisionalConfigurationProperty.builder()
 
+  /**
+   * @param maxTimeToLiveInMinutes Maximum time for the provisional configuration, in minutes. 
+   */
   public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
     cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
   }

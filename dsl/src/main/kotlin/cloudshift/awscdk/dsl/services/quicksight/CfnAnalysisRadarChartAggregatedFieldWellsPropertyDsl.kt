@@ -20,38 +20,65 @@ public class CfnAnalysisRadarChartAggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param category The aggregated field well categories of a radar chart.
+   */
   public fun category(vararg category: Any) {
     _category.addAll(listOf(*category))
   }
 
+  /**
+   * @param category The aggregated field well categories of a radar chart.
+   */
   public fun category(category: Collection<Any>) {
     _category.addAll(category)
   }
 
+  /**
+   * @param category The aggregated field well categories of a radar chart.
+   */
   public fun category(category: IResolvable) {
     cdkBuilder.category(category)
   }
 
+  /**
+   * @param color The color that are assigned to the aggregated field wells of a radar chart.
+   */
   public fun color(vararg color: Any) {
     _color.addAll(listOf(*color))
   }
 
+  /**
+   * @param color The color that are assigned to the aggregated field wells of a radar chart.
+   */
   public fun color(color: Collection<Any>) {
     _color.addAll(color)
   }
 
+  /**
+   * @param color The color that are assigned to the aggregated field wells of a radar chart.
+   */
   public fun color(color: IResolvable) {
     cdkBuilder.color(color)
   }
 
+  /**
+   * @param values The values that are assigned to the aggregated field wells of a radar chart.
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values that are assigned to the aggregated field wells of a radar chart.
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The values that are assigned to the aggregated field wells of a radar chart.
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

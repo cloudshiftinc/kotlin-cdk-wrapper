@@ -11,6 +11,9 @@ public class CfnAnalysisLocalNavigationConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LocalNavigationConfigurationProperty.Builder =
       CfnAnalysis.LocalNavigationConfigurationProperty.builder()
 
+  /**
+   * @param targetSheetId The sheet that is targeted for navigation in the same analysis. 
+   */
   public fun targetSheetId(targetSheetId: String) {
     cdkBuilder.targetSheetId(targetSheetId)
   }

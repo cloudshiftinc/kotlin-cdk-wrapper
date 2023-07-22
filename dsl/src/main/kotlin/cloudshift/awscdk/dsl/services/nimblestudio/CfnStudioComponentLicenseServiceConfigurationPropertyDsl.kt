@@ -11,6 +11,10 @@ public class CfnStudioComponentLicenseServiceConfigurationPropertyDsl {
   private val cdkBuilder: CfnStudioComponent.LicenseServiceConfigurationProperty.Builder =
       CfnStudioComponent.LicenseServiceConfigurationProperty.builder()
 
+  /**
+   * @param endpoint The endpoint of the license service that is accessed by the studio component
+   * resource.
+   */
   public fun endpoint(endpoint: String) {
     cdkBuilder.endpoint(endpoint)
   }

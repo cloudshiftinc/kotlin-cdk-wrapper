@@ -12,16 +12,25 @@ import software.amazon.awscdk.services.ecs.FirelensOptions
 public class FirelensConfigDsl {
   private val cdkBuilder: FirelensConfig.Builder = FirelensConfig.builder()
 
-  public fun options(block: FirelensOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param options Firelens options.
+   */
+  public fun options(options: FirelensOptionsDsl.() -> Unit = {}) {
     val builder = FirelensOptionsDsl()
-    builder.apply(block)
+    builder.apply(options)
     cdkBuilder.options(builder.build())
   }
 
+  /**
+   * @param options Firelens options.
+   */
   public fun options(options: FirelensOptions) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * @param type The log router to use. 
+   */
   public fun type(type: FirelensLogRouterType) {
     cdkBuilder.type(type)
   }

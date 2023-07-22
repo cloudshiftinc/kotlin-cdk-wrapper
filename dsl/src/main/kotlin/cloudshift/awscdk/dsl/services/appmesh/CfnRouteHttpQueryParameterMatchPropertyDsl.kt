@@ -11,6 +11,9 @@ public class CfnRouteHttpQueryParameterMatchPropertyDsl {
   private val cdkBuilder: CfnRoute.HttpQueryParameterMatchProperty.Builder =
       CfnRoute.HttpQueryParameterMatchProperty.builder()
 
+  /**
+   * @param exact The exact query parameter to match on.
+   */
   public fun exact(exact: String) {
     cdkBuilder.exact(exact)
   }

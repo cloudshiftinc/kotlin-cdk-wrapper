@@ -18,26 +18,50 @@ public class CfnReplicationConfigurationReplicationRulePropertyDsl {
 
   private val _repositoryFilters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param destinations An array of objects representing the destination for a replication rule. 
+   */
   public fun destinations(vararg destinations: Any) {
     _destinations.addAll(listOf(*destinations))
   }
 
+  /**
+   * @param destinations An array of objects representing the destination for a replication rule. 
+   */
   public fun destinations(destinations: Collection<Any>) {
     _destinations.addAll(destinations)
   }
 
+  /**
+   * @param destinations An array of objects representing the destination for a replication rule. 
+   */
   public fun destinations(destinations: IResolvable) {
     cdkBuilder.destinations(destinations)
   }
 
+  /**
+   * @param repositoryFilters An array of objects representing the filters for a replication rule.
+   * Specifying a repository filter for a replication rule provides a method for controlling which
+   * repositories in a private registry are replicated.
+   */
   public fun repositoryFilters(vararg repositoryFilters: Any) {
     _repositoryFilters.addAll(listOf(*repositoryFilters))
   }
 
+  /**
+   * @param repositoryFilters An array of objects representing the filters for a replication rule.
+   * Specifying a repository filter for a replication rule provides a method for controlling which
+   * repositories in a private registry are replicated.
+   */
   public fun repositoryFilters(repositoryFilters: Collection<Any>) {
     _repositoryFilters.addAll(repositoryFilters)
   }
 
+  /**
+   * @param repositoryFilters An array of objects representing the filters for a replication rule.
+   * Specifying a repository filter for a replication rule provides a method for controlling which
+   * repositories in a private registry are replicated.
+   */
   public fun repositoryFilters(repositoryFilters: IResolvable) {
     cdkBuilder.repositoryFilters(repositoryFilters)
   }

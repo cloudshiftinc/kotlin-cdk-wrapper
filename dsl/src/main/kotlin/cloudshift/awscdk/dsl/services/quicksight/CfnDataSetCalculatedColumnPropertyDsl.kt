@@ -11,14 +11,25 @@ public class CfnDataSetCalculatedColumnPropertyDsl {
   private val cdkBuilder: CfnDataSet.CalculatedColumnProperty.Builder =
       CfnDataSet.CalculatedColumnProperty.builder()
 
+  /**
+   * @param columnId A unique ID to identify a calculated column. 
+   * During a dataset update, if the column ID of a calculated column matches that of an existing
+   * calculated column, Amazon QuickSight preserves the existing calculated column.
+   */
   public fun columnId(columnId: String) {
     cdkBuilder.columnId(columnId)
   }
 
+  /**
+   * @param columnName Column name. 
+   */
   public fun columnName(columnName: String) {
     cdkBuilder.columnName(columnName)
   }
 
+  /**
+   * @param expression An expression that defines the calculated column. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }

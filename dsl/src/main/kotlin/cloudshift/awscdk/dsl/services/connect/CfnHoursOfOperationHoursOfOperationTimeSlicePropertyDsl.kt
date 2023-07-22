@@ -11,10 +11,16 @@ public class CfnHoursOfOperationHoursOfOperationTimeSlicePropertyDsl {
   private val cdkBuilder: CfnHoursOfOperation.HoursOfOperationTimeSliceProperty.Builder =
       CfnHoursOfOperation.HoursOfOperationTimeSliceProperty.builder()
 
+  /**
+   * @param hours The hours. 
+   */
   public fun hours(hours: Number) {
     cdkBuilder.hours(hours)
   }
 
+  /**
+   * @param minutes The minutes. 
+   */
   public fun minutes(minutes: Number) {
     cdkBuilder.minutes(minutes)
   }

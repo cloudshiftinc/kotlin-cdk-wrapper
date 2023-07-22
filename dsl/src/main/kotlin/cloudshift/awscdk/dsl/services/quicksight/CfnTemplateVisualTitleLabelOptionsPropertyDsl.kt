@@ -12,14 +12,23 @@ public class CfnTemplateVisualTitleLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.VisualTitleLabelOptionsProperty.Builder =
       CfnTemplate.VisualTitleLabelOptionsProperty.builder()
 
+  /**
+   * @param formatText The short text format of the title label, such as plain text or rich text.
+   */
   public fun formatText(formatText: IResolvable) {
     cdkBuilder.formatText(formatText)
   }
 
+  /**
+   * @param formatText The short text format of the title label, such as plain text or rich text.
+   */
   public fun formatText(formatText: CfnTemplate.ShortFormatTextProperty) {
     cdkBuilder.formatText(formatText)
   }
 
+  /**
+   * @param visibility The visibility of the title label.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

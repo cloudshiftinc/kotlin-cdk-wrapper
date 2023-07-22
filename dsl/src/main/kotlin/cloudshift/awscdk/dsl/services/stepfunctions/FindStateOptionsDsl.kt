@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.stepfunctions.FindStateOptions
 public class FindStateOptionsDsl {
   private val cdkBuilder: FindStateOptions.Builder = FindStateOptions.builder()
 
+  /**
+   * @param includeErrorHandlers Whether or not to follow error-handling transitions.
+   */
   public fun includeErrorHandlers(includeErrorHandlers: Boolean) {
     cdkBuilder.includeErrorHandlers(includeErrorHandlers)
   }

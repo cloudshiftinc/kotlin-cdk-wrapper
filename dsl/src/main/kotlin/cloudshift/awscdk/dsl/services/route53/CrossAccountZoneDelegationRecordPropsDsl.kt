@@ -15,26 +15,44 @@ public class CrossAccountZoneDelegationRecordPropsDsl {
   private val cdkBuilder: CrossAccountZoneDelegationRecordProps.Builder =
       CrossAccountZoneDelegationRecordProps.builder()
 
+  /**
+   * @param delegatedZone The zone to be delegated. 
+   */
   public fun delegatedZone(delegatedZone: IHostedZone) {
     cdkBuilder.delegatedZone(delegatedZone)
   }
 
+  /**
+   * @param delegationRole The delegation role in the parent account. 
+   */
   public fun delegationRole(delegationRole: IRole) {
     cdkBuilder.delegationRole(delegationRole)
   }
 
+  /**
+   * @param parentHostedZoneId The hosted zone id in the parent account.
+   */
   public fun parentHostedZoneId(parentHostedZoneId: String) {
     cdkBuilder.parentHostedZoneId(parentHostedZoneId)
   }
 
+  /**
+   * @param parentHostedZoneName The hosted zone name in the parent account.
+   */
   public fun parentHostedZoneName(parentHostedZoneName: String) {
     cdkBuilder.parentHostedZoneName(parentHostedZoneName)
   }
 
+  /**
+   * @param removalPolicy The removal policy to apply to the record set.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }
 
+  /**
+   * @param ttl The resource record cache time to live (TTL).
+   */
   public fun ttl(ttl: Duration) {
     cdkBuilder.ttl(ttl)
   }

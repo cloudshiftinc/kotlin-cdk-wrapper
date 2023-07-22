@@ -11,6 +11,10 @@ public class CfnInstanceMonthlyTransferPropertyDsl {
   private val cdkBuilder: CfnInstance.MonthlyTransferProperty.Builder =
       CfnInstance.MonthlyTransferProperty.builder()
 
+  /**
+   * @param gbPerMonthAllocated The amount of allocated monthly data transfer (in GB) for an
+   * instance.
+   */
   public fun gbPerMonthAllocated(gbPerMonthAllocated: String) {
     cdkBuilder.gbPerMonthAllocated(gbPerMonthAllocated)
   }

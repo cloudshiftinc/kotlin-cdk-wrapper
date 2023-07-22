@@ -12,10 +12,16 @@ public class CfnClusterConfigurationInfoPropertyDsl {
   private val cdkBuilder: CfnCluster.ConfigurationInfoProperty.Builder =
       CfnCluster.ConfigurationInfoProperty.builder()
 
+  /**
+   * @param arn ARN of the configuration to use. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param revision The revision of the configuration to use. 
+   */
   public fun revision(revision: Number) {
     cdkBuilder.revision(revision)
   }

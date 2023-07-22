@@ -15,18 +15,44 @@ public class CfnBridgeOutputDsl(
 ) {
   private val cdkBuilder: CfnBridgeOutput.Builder = CfnBridgeOutput.Builder.create(scope, id)
 
+  /**
+   * The ARN of the bridge that you want to describe.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-bridgearn)
+   * @param bridgeArn The ARN of the bridge that you want to describe. 
+   */
   public fun bridgeArn(bridgeArn: String) {
     cdkBuilder.bridgeArn(bridgeArn)
   }
 
+  /**
+   * The network output name.
+   *
+   * This name is used to reference the output and must be unique among outputs in this bridge.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-name)
+   * @param name The network output name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Add a network output to an existing bridge.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
+   * @param networkOutput Add a network output to an existing bridge. 
+   */
   public fun networkOutput(networkOutput: IResolvable) {
     cdkBuilder.networkOutput(networkOutput)
   }
 
+  /**
+   * Add a network output to an existing bridge.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
+   * @param networkOutput Add a network output to an existing bridge. 
+   */
   public fun networkOutput(networkOutput: CfnBridgeOutput.BridgeNetworkOutputProperty) {
     cdkBuilder.networkOutput(networkOutput)
   }

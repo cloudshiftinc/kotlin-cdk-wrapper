@@ -16,22 +16,43 @@ public class CfnClusterAutoScalingPolicyPropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+   * policy. 
+   * Automatic scaling activity will not cause an instance group to grow above or below these
+   * limits.
+   */
   public fun constraints(constraints: IResolvable) {
     cdkBuilder.constraints(constraints)
   }
 
+  /**
+   * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+   * policy. 
+   * Automatic scaling activity will not cause an instance group to grow above or below these
+   * limits.
+   */
   public fun constraints(constraints: CfnCluster.ScalingConstraintsProperty) {
     cdkBuilder.constraints(constraints)
   }
 
+  /**
+   * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

@@ -10,6 +10,11 @@ import software.amazon.awscdk.services.lambda.EnvironmentOptions
 public class EnvironmentOptionsDsl {
   private val cdkBuilder: EnvironmentOptions.Builder = EnvironmentOptions.builder()
 
+  /**
+   * @param removeInEdge When used in Lambda&#64;Edge via edgeArn() API, these environment variables
+   * will be removed.
+   * If not set, an error will be thrown.
+   */
   public fun removeInEdge(removeInEdge: Boolean) {
     cdkBuilder.removeInEdge(removeInEdge)
   }

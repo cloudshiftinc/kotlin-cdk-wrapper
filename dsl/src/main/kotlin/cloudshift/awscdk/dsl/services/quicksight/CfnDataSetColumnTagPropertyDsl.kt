@@ -12,14 +12,23 @@ public class CfnDataSetColumnTagPropertyDsl {
   private val cdkBuilder: CfnDataSet.ColumnTagProperty.Builder =
       CfnDataSet.ColumnTagProperty.builder()
 
+  /**
+   * @param columnDescription A description for a column.
+   */
   public fun columnDescription(columnDescription: IResolvable) {
     cdkBuilder.columnDescription(columnDescription)
   }
 
+  /**
+   * @param columnDescription A description for a column.
+   */
   public fun columnDescription(columnDescription: CfnDataSet.ColumnDescriptionProperty) {
     cdkBuilder.columnDescription(columnDescription)
   }
 
+  /**
+   * @param columnGeographicRole A geospatial role for a column.
+   */
   public fun columnGeographicRole(columnGeographicRole: String) {
     cdkBuilder.columnGeographicRole(columnGeographicRole)
   }

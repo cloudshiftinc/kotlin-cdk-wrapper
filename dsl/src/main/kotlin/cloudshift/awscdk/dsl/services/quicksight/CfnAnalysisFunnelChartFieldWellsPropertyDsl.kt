@@ -11,10 +11,16 @@ public class CfnAnalysisFunnelChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FunnelChartFieldWellsProperty.Builder =
       CfnAnalysis.FunnelChartFieldWellsProperty.builder()
 
+  /**
+   * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual` .
+   */
   public fun funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells: IResolvable) {
     cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)
   }
 
+  /**
+   * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual` .
+   */
   public
       fun funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells: CfnAnalysis.FunnelChartAggregatedFieldWellsProperty) {
     cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)

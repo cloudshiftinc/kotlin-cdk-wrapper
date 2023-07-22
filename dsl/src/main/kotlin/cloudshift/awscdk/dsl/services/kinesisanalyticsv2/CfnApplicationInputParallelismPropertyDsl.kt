@@ -11,6 +11,9 @@ public class CfnApplicationInputParallelismPropertyDsl {
   private val cdkBuilder: CfnApplication.InputParallelismProperty.Builder =
       CfnApplication.InputParallelismProperty.builder()
 
+  /**
+   * @param count The number of in-application streams to create.
+   */
   public fun count(count: Number) {
     cdkBuilder.count(count)
   }

@@ -12,10 +12,16 @@ public class CfnStorageLensDetailedStatusCodesMetricsPropertyDsl {
   private val cdkBuilder: CfnStorageLens.DetailedStatusCodesMetricsProperty.Builder =
       CfnStorageLens.DetailedStatusCodesMetricsProperty.builder()
 
+  /**
+   * @param isEnabled Indicates whether detailed status code metrics are enabled.
+   */
   public fun isEnabled(isEnabled: Boolean) {
     cdkBuilder.isEnabled(isEnabled)
   }
 
+  /**
+   * @param isEnabled Indicates whether detailed status code metrics are enabled.
+   */
   public fun isEnabled(isEnabled: IResolvable) {
     cdkBuilder.isEnabled(isEnabled)
   }

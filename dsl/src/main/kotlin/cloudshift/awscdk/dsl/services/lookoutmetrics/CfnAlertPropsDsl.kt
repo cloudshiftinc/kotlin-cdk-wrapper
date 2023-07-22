@@ -13,26 +13,45 @@ import software.amazon.awscdk.services.lookoutmetrics.CfnAlertProps
 public class CfnAlertPropsDsl {
   private val cdkBuilder: CfnAlertProps.Builder = CfnAlertProps.builder()
 
+  /**
+   * @param action Action that will be triggered when there is an alert. 
+   */
   public fun action(action: IResolvable) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param action Action that will be triggered when there is an alert. 
+   */
   public fun action(action: CfnAlert.ActionProperty) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param alertDescription A description of the alert.
+   */
   public fun alertDescription(alertDescription: String) {
     cdkBuilder.alertDescription(alertDescription)
   }
 
+  /**
+   * @param alertName The name of the alert.
+   */
   public fun alertName(alertName: String) {
     cdkBuilder.alertName(alertName)
   }
 
+  /**
+   * @param alertSensitivityThreshold An integer from 0 to 100 specifying the alert sensitivity
+   * threshold. 
+   */
   public fun alertSensitivityThreshold(alertSensitivityThreshold: Number) {
     cdkBuilder.alertSensitivityThreshold(alertSensitivityThreshold)
   }
 
+  /**
+   * @param anomalyDetectorArn The ARN of the detector to which the alert is attached. 
+   */
   public fun anomalyDetectorArn(anomalyDetectorArn: String) {
     cdkBuilder.anomalyDetectorArn(anomalyDetectorArn)
   }

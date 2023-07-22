@@ -12,14 +12,23 @@ public class CfnAnalysisNumericSeparatorConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.NumericSeparatorConfigurationProperty.Builder =
       CfnAnalysis.NumericSeparatorConfigurationProperty.builder()
 
+  /**
+   * @param decimalSeparator Determines the decimal separator.
+   */
   public fun decimalSeparator(decimalSeparator: String) {
     cdkBuilder.decimalSeparator(decimalSeparator)
   }
 
+  /**
+   * @param thousandsSeparator The options that determine the thousands separator configuration.
+   */
   public fun thousandsSeparator(thousandsSeparator: IResolvable) {
     cdkBuilder.thousandsSeparator(thousandsSeparator)
   }
 
+  /**
+   * @param thousandsSeparator The options that determine the thousands separator configuration.
+   */
   public fun thousandsSeparator(thousandsSeparator: CfnAnalysis.ThousandSeparatorOptionsProperty) {
     cdkBuilder.thousandsSeparator(thousandsSeparator)
   }

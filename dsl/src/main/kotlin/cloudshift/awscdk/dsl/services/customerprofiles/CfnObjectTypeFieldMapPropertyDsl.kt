@@ -12,14 +12,23 @@ public class CfnObjectTypeFieldMapPropertyDsl {
   private val cdkBuilder: CfnObjectType.FieldMapProperty.Builder =
       CfnObjectType.FieldMapProperty.builder()
 
+  /**
+   * @param name Name of the field.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param objectTypeField Represents a field in a ProfileObjectType.
+   */
   public fun objectTypeField(objectTypeField: IResolvable) {
     cdkBuilder.objectTypeField(objectTypeField)
   }
 
+  /**
+   * @param objectTypeField Represents a field in a ProfileObjectType.
+   */
   public fun objectTypeField(objectTypeField: CfnObjectType.ObjectTypeFieldProperty) {
     cdkBuilder.objectTypeField(objectTypeField)
   }

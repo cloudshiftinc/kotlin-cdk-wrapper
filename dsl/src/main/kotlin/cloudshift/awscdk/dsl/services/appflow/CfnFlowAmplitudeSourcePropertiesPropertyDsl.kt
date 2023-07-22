@@ -11,6 +11,9 @@ public class CfnFlowAmplitudeSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.AmplitudeSourcePropertiesProperty.Builder =
       CfnFlow.AmplitudeSourcePropertiesProperty.builder()
 
+  /**
+   * @param object The object specified in the Amplitude flow source. 
+   */
   public fun `object`(`object`: String) {
     cdkBuilder.`object`(`object`)
   }

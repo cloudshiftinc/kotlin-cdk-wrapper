@@ -11,18 +11,34 @@ public class CfnStorageLensDataExportPropertyDsl {
   private val cdkBuilder: CfnStorageLens.DataExportProperty.Builder =
       CfnStorageLens.DataExportProperty.builder()
 
+  /**
+   * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for S3
+   * Storage Lens metrics.
+   */
   public fun cloudWatchMetrics(cloudWatchMetrics: IResolvable) {
     cdkBuilder.cloudWatchMetrics(cloudWatchMetrics)
   }
 
+  /**
+   * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for S3
+   * Storage Lens metrics.
+   */
   public fun cloudWatchMetrics(cloudWatchMetrics: CfnStorageLens.CloudWatchMetricsProperty) {
     cdkBuilder.cloudWatchMetrics(cloudWatchMetrics)
   }
 
+  /**
+   * @param s3BucketDestination This property contains the details of the bucket where the S3
+   * Storage Lens metrics export will be placed.
+   */
   public fun s3BucketDestination(s3BucketDestination: IResolvable) {
     cdkBuilder.s3BucketDestination(s3BucketDestination)
   }
 
+  /**
+   * @param s3BucketDestination This property contains the details of the bucket where the S3
+   * Storage Lens metrics export will be placed.
+   */
   public fun s3BucketDestination(s3BucketDestination: CfnStorageLens.S3BucketDestinationProperty) {
     cdkBuilder.s3BucketDestination(s3BucketDestination)
   }

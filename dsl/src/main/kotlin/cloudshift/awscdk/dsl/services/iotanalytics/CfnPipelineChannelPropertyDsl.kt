@@ -11,14 +11,23 @@ public class CfnPipelineChannelPropertyDsl {
   private val cdkBuilder: CfnPipeline.ChannelProperty.Builder =
       CfnPipeline.ChannelProperty.builder()
 
+  /**
+   * @param channelName The name of the channel from which the messages are processed. 
+   */
   public fun channelName(channelName: String) {
     cdkBuilder.channelName(channelName)
   }
 
+  /**
+   * @param name The name of the 'channel' activity. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param next The next activity in the pipeline.
+   */
   public fun next(next: String) {
     cdkBuilder.next(next)
   }

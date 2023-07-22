@@ -16,18 +16,36 @@ public class ViewerCertificateOptionsDsl {
 
   private val _aliases: MutableList<String> = mutableListOf()
 
+  /**
+   * @param aliases Domain names on the certificate (both main domain name and Subject Alternative
+   * names).
+   */
   public fun aliases(vararg aliases: String) {
     _aliases.addAll(listOf(*aliases))
   }
 
+  /**
+   * @param aliases Domain names on the certificate (both main domain name and Subject Alternative
+   * names).
+   */
   public fun aliases(aliases: Collection<String>) {
     _aliases.addAll(aliases)
   }
 
+  /**
+   * @param securityPolicy The minimum version of the SSL protocol that you want CloudFront to use
+   * for HTTPS connections.
+   * CloudFront serves your objects only to browsers or devices that support at
+   * least the SSL version that you specify.
+   */
   public fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
     cdkBuilder.securityPolicy(securityPolicy)
   }
 
+  /**
+   * @param sslMethod How CloudFront should serve HTTPS requests.
+   * See the notes on SSLMethod if you wish to use other SSL termination types.
+   */
   public fun sslMethod(sslMethod: SSLMethod) {
     cdkBuilder.sslMethod(sslMethod)
   }

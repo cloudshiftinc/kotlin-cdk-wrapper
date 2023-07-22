@@ -16,30 +16,48 @@ public class CfnRuleGroupRuleVariablesPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.RuleVariablesProperty.Builder =
       CfnRuleGroup.RuleVariablesProperty.builder()
 
-  public fun ipSets(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
+   */
+  public fun ipSets(ipSets: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(ipSets)
     cdkBuilder.ipSets(builder.map)
   }
 
+  /**
+   * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
+   */
   public fun ipSets(ipSets: Map<String, Any>) {
     cdkBuilder.ipSets(ipSets)
   }
 
+  /**
+   * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
+   */
   public fun ipSets(ipSets: IResolvable) {
     cdkBuilder.ipSets(ipSets)
   }
 
-  public fun portSets(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param portSets A list of port ranges.
+   */
+  public fun portSets(portSets: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(portSets)
     cdkBuilder.portSets(builder.map)
   }
 
+  /**
+   * @param portSets A list of port ranges.
+   */
   public fun portSets(portSets: Map<String, Any>) {
     cdkBuilder.portSets(portSets)
   }
 
+  /**
+   * @param portSets A list of port ranges.
+   */
   public fun portSets(portSets: IResolvable) {
     cdkBuilder.portSets(portSets)
   }

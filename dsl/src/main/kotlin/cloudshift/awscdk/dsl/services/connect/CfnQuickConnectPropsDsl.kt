@@ -19,30 +19,53 @@ public class CfnQuickConnectPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of the quick connect.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param instanceArn The Amazon Resource Name (ARN) of the instance. 
+   */
   public fun instanceArn(instanceArn: String) {
     cdkBuilder.instanceArn(instanceArn)
   }
 
+  /**
+   * @param name The name of the quick connect. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param quickConnectConfig Contains information about the quick connect. 
+   */
   public fun quickConnectConfig(quickConnectConfig: IResolvable) {
     cdkBuilder.quickConnectConfig(quickConnectConfig)
   }
 
+  /**
+   * @param quickConnectConfig Contains information about the quick connect. 
+   */
   public fun quickConnectConfig(quickConnectConfig: CfnQuickConnect.QuickConnectConfigProperty) {
     cdkBuilder.quickConnectConfig(quickConnectConfig)
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

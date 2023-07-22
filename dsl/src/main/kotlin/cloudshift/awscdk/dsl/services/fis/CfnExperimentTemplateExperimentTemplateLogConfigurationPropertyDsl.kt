@@ -14,26 +14,43 @@ public class CfnExperimentTemplateExperimentTemplateLogConfigurationPropertyDsl 
   private val cdkBuilder: CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.Builder =
       CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.builder()
 
-  public fun cloudWatchLogsConfiguration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param cloudWatchLogsConfiguration The configuration for experiment logging to CloudWatch Logs
+   * .
+   */
+  public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(cloudWatchLogsConfiguration)
     cdkBuilder.cloudWatchLogsConfiguration(builder.map)
   }
 
+  /**
+   * @param cloudWatchLogsConfiguration The configuration for experiment logging to CloudWatch Logs
+   * .
+   */
   public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any) {
     cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
   }
 
+  /**
+   * @param logSchemaVersion The schema version. 
+   */
   public fun logSchemaVersion(logSchemaVersion: Number) {
     cdkBuilder.logSchemaVersion(logSchemaVersion)
   }
 
-  public fun s3Configuration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param s3Configuration The configuration for experiment logging to Amazon S3 .
+   */
+  public fun s3Configuration(s3Configuration: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(s3Configuration)
     cdkBuilder.s3Configuration(builder.map)
   }
 
+  /**
+   * @param s3Configuration The configuration for experiment logging to Amazon S3 .
+   */
   public fun s3Configuration(s3Configuration: Any) {
     cdkBuilder.s3Configuration(s3Configuration)
   }

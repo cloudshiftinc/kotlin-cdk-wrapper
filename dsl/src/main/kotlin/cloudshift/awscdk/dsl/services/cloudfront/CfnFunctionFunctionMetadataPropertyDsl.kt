@@ -11,6 +11,10 @@ public class CfnFunctionFunctionMetadataPropertyDsl {
   private val cdkBuilder: CfnFunction.FunctionMetadataProperty.Builder =
       CfnFunction.FunctionMetadataProperty.builder()
 
+  /**
+   * @param functionArn The Amazon Resource Name (ARN) of the function.
+   * The ARN uniquely identifies the function.
+   */
   public fun functionArn(functionArn: String) {
     cdkBuilder.functionArn(functionArn)
   }

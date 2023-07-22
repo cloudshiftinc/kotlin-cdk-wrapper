@@ -11,6 +11,10 @@ public class CfnVirtualNodeVirtualNodeHttp2ConnectionPoolPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty.Builder =
       CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty.builder()
 
+  /**
+   * @param maxRequests Maximum number of inflight requests Envoy can concurrently support across
+   * hosts in upstream cluster. 
+   */
   public fun maxRequests(maxRequests: Number) {
     cdkBuilder.maxRequests(maxRequests)
   }

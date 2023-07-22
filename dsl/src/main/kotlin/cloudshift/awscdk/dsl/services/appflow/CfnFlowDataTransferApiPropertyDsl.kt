@@ -11,10 +11,16 @@ public class CfnFlowDataTransferApiPropertyDsl {
   private val cdkBuilder: CfnFlow.DataTransferApiProperty.Builder =
       CfnFlow.DataTransferApiProperty.builder()
 
+  /**
+   * @param name the value to be set. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param type the value to be set. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

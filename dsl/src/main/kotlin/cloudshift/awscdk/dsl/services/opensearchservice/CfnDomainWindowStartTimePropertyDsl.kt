@@ -11,10 +11,19 @@ public class CfnDomainWindowStartTimePropertyDsl {
   private val cdkBuilder: CfnDomain.WindowStartTimeProperty.Builder =
       CfnDomain.WindowStartTimeProperty.builder()
 
+  /**
+   * @param hours The start hour of the window in Coordinated Universal Time (UTC), using 24-hour
+   * time. 
+   * For example, 17 refers to 5:00 P.M. UTC. The minimum value is 0 and the maximum value is 23.
+   */
   public fun hours(hours: Number) {
     cdkBuilder.hours(hours)
   }
 
+  /**
+   * @param minutes The start minute of the window, in UTC. 
+   * The minimum value is 0 and the maximum value is 59.
+   */
   public fun minutes(minutes: Number) {
     cdkBuilder.minutes(minutes)
   }

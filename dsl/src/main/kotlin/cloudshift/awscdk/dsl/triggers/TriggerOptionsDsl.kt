@@ -17,22 +17,52 @@ public class TriggerOptionsDsl {
 
   private val _executeBefore: MutableList<Construct> = mutableListOf()
 
+  /**
+   * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
+   * scopes have been provisioned.
+   * You can also use `trigger.executeAfter()` to add additional dependencies.
+   */
   public fun executeAfter(vararg executeAfter: Construct) {
     _executeAfter.addAll(listOf(*executeAfter))
   }
 
+  /**
+   * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
+   * scopes have been provisioned.
+   * You can also use `trigger.executeAfter()` to add additional dependencies.
+   */
   public fun executeAfter(executeAfter: Collection<Construct>) {
     _executeAfter.addAll(executeAfter)
   }
 
+  /**
+   * @param executeBefore Adds this trigger as a dependency on other constructs.
+   * This means that this
+   * trigger will get executed *before* the given construct(s).
+   *
+   * You can also use `trigger.executeBefore()` to add additional dependants.
+   */
   public fun executeBefore(vararg executeBefore: Construct) {
     _executeBefore.addAll(listOf(*executeBefore))
   }
 
+  /**
+   * @param executeBefore Adds this trigger as a dependency on other constructs.
+   * This means that this
+   * trigger will get executed *before* the given construct(s).
+   *
+   * You can also use `trigger.executeBefore()` to add additional dependants.
+   */
   public fun executeBefore(executeBefore: Collection<Construct>) {
     _executeBefore.addAll(executeBefore)
   }
 
+  /**
+   * @param executeOnHandlerChange Re-executes the trigger every time the handler changes.
+   * This implies that the trigger is associated with the `currentVersion` of
+   * the handler, which gets recreated every time the handler or its
+   * configuration is updated.
+   */
   public fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
     cdkBuilder.executeOnHandlerChange(executeOnHandlerChange)
   }

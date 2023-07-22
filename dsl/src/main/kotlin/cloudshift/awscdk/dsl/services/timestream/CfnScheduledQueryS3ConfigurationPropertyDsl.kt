@@ -11,14 +11,25 @@ public class CfnScheduledQueryS3ConfigurationPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.S3ConfigurationProperty.Builder =
       CfnScheduledQuery.S3ConfigurationProperty.builder()
 
+  /**
+   * @param bucketName Name of the S3 bucket under which error reports will be created. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param encryptionOption Encryption at rest options for the error reports.
+   * If no encryption option is specified, Timestream will choose SSE_S3 as default.
+   */
   public fun encryptionOption(encryptionOption: String) {
     cdkBuilder.encryptionOption(encryptionOption)
   }
 
+  /**
+   * @param objectKeyPrefix Prefix for the error report key.
+   * Timestream by default adds the following prefix to the error report path.
+   */
   public fun objectKeyPrefix(objectKeyPrefix: String) {
     cdkBuilder.objectKeyPrefix(objectKeyPrefix)
   }

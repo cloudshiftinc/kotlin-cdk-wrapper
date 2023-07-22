@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.RouteSpec
 public class RouteBasePropsDsl {
   private val cdkBuilder: RouteBaseProps.Builder = RouteBaseProps.builder()
 
+  /**
+   * @param routeName The name of the route.
+   */
   public fun routeName(routeName: String) {
     cdkBuilder.routeName(routeName)
   }
 
+  /**
+   * @param routeSpec Protocol specific spec. 
+   */
   public fun routeSpec(routeSpec: RouteSpec) {
     cdkBuilder.routeSpec(routeSpec)
   }

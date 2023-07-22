@@ -17,18 +17,32 @@ public class CfnDataSetColumnLevelPermissionRulePropertyDsl {
 
   private val _principals: MutableList<String> = mutableListOf()
 
+  /**
+   * @param columnNames An array of column names.
+   */
   public fun columnNames(vararg columnNames: String) {
     _columnNames.addAll(listOf(*columnNames))
   }
 
+  /**
+   * @param columnNames An array of column names.
+   */
   public fun columnNames(columnNames: Collection<String>) {
     _columnNames.addAll(columnNames)
   }
 
+  /**
+   * @param principals An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or
+   * groups.
+   */
   public fun principals(vararg principals: String) {
     _principals.addAll(listOf(*principals))
   }
 
+  /**
+   * @param principals An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or
+   * groups.
+   */
   public fun principals(principals: Collection<String>) {
     _principals.addAll(principals)
   }

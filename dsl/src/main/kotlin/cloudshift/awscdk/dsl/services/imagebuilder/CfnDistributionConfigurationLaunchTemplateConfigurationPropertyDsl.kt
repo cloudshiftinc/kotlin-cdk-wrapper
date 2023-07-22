@@ -13,18 +13,32 @@ public class CfnDistributionConfigurationLaunchTemplateConfigurationPropertyDsl 
   private val cdkBuilder: CfnDistributionConfiguration.LaunchTemplateConfigurationProperty.Builder =
       CfnDistributionConfiguration.LaunchTemplateConfigurationProperty.builder()
 
+  /**
+   * @param accountId The account ID that this configuration applies to.
+   */
   public fun accountId(accountId: String) {
     cdkBuilder.accountId(accountId)
   }
 
+  /**
+   * @param launchTemplateId Identifies the Amazon EC2 launch template to use.
+   */
   public fun launchTemplateId(launchTemplateId: String) {
     cdkBuilder.launchTemplateId(launchTemplateId)
   }
 
+  /**
+   * @param setDefaultVersion Set the specified Amazon EC2 launch template as the default launch
+   * template for the specified account.
+   */
   public fun setDefaultVersion(setDefaultVersion: Boolean) {
     cdkBuilder.setDefaultVersion(setDefaultVersion)
   }
 
+  /**
+   * @param setDefaultVersion Set the specified Amazon EC2 launch template as the default launch
+   * template for the specified account.
+   */
   public fun setDefaultVersion(setDefaultVersion: IResolvable) {
     cdkBuilder.setDefaultVersion(setDefaultVersion)
   }

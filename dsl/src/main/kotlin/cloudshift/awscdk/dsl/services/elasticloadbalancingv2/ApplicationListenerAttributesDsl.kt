@@ -13,14 +13,23 @@ public class ApplicationListenerAttributesDsl {
   private val cdkBuilder: ApplicationListenerAttributes.Builder =
       ApplicationListenerAttributes.builder()
 
+  /**
+   * @param defaultPort The default port on which this listener is listening.
+   */
   public fun defaultPort(defaultPort: Number) {
     cdkBuilder.defaultPort(defaultPort)
   }
 
+  /**
+   * @param listenerArn ARN of the listener. 
+   */
   public fun listenerArn(listenerArn: String) {
     cdkBuilder.listenerArn(listenerArn)
   }
 
+  /**
+   * @param securityGroup Security group of the load balancer this listener is associated with. 
+   */
   public fun securityGroup(securityGroup: ISecurityGroup) {
     cdkBuilder.securityGroup(securityGroup)
   }

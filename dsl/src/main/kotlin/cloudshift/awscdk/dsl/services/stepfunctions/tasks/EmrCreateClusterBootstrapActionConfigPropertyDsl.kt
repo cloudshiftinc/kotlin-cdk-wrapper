@@ -12,18 +12,27 @@ public class EmrCreateClusterBootstrapActionConfigPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.BootstrapActionConfigProperty.Builder =
       EmrCreateCluster.BootstrapActionConfigProperty.builder()
 
+  /**
+   * @param name The name of the bootstrap action. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param scriptBootstrapAction The script run by the bootstrap action. 
+   */
   public
-      fun scriptBootstrapAction(block: EmrCreateClusterScriptBootstrapActionConfigPropertyDsl.() -> Unit
+      fun scriptBootstrapAction(scriptBootstrapAction: EmrCreateClusterScriptBootstrapActionConfigPropertyDsl.() -> Unit
       = {}) {
     val builder = EmrCreateClusterScriptBootstrapActionConfigPropertyDsl()
-    builder.apply(block)
+    builder.apply(scriptBootstrapAction)
     cdkBuilder.scriptBootstrapAction(builder.build())
   }
 
+  /**
+   * @param scriptBootstrapAction The script run by the bootstrap action. 
+   */
   public
       fun scriptBootstrapAction(scriptBootstrapAction: EmrCreateCluster.ScriptBootstrapActionConfigProperty) {
     cdkBuilder.scriptBootstrapAction(scriptBootstrapAction)

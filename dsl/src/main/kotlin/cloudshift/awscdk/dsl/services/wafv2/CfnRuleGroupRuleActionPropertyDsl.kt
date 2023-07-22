@@ -13,52 +13,116 @@ public class CfnRuleGroupRuleActionPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.RuleActionProperty.Builder =
       CfnRuleGroup.RuleActionProperty.builder()
 
-  public fun allow(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param allow Instructs AWS WAF to allow the web request.
+   */
+  public fun allow(allow: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(allow)
     cdkBuilder.allow(builder.map)
   }
 
+  /**
+   * @param allow Instructs AWS WAF to allow the web request.
+   */
   public fun allow(allow: Any) {
     cdkBuilder.allow(allow)
   }
 
+  /**
+   * @param block Instructs AWS WAF to block the web request.
+   */
   public fun block(block: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
     builder.apply(block)
     cdkBuilder.block(builder.map)
   }
 
+  /**
+   * @param block Instructs AWS WAF to block the web request.
+   */
   public fun block(block: Any) {
     cdkBuilder.block(block)
   }
 
-  public fun captcha(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param captcha Specifies that AWS WAF should run a `CAPTCHA` check against the request:.
+   * * If the request includes a valid, unexpired `CAPTCHA` token, AWS WAF allows the web request
+   * inspection to proceed to the next rule, similar to a `CountAction` .
+   * * If the request doesn't include a valid, unexpired `CAPTCHA` token, AWS WAF discontinues the
+   * web ACL evaluation of the request and blocks it from going to its intended destination.
+   *
+   * AWS WAF generates a response that it sends back to the client, which includes the following:
+   *
+   * * The header `x-amzn-waf-action` with a value of `captcha` .
+   * * The HTTP status code `405 Method Not Allowed` .
+   * * If the request contains an `Accept` header with a value of `text/html` , the response
+   * includes a `CAPTCHA` challenge.
+   *
+   * You can configure the expiration time in the `CaptchaConfig` `ImmunityTimeProperty` setting at
+   * the rule and web ACL level. The rule setting overrides the web ACL setting.
+   *
+   * This action option is available for rules. It isn't available for web ACL default actions.
+   */
+  public fun captcha(captcha: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(captcha)
     cdkBuilder.captcha(builder.map)
   }
 
+  /**
+   * @param captcha Specifies that AWS WAF should run a `CAPTCHA` check against the request:.
+   * * If the request includes a valid, unexpired `CAPTCHA` token, AWS WAF allows the web request
+   * inspection to proceed to the next rule, similar to a `CountAction` .
+   * * If the request doesn't include a valid, unexpired `CAPTCHA` token, AWS WAF discontinues the
+   * web ACL evaluation of the request and blocks it from going to its intended destination.
+   *
+   * AWS WAF generates a response that it sends back to the client, which includes the following:
+   *
+   * * The header `x-amzn-waf-action` with a value of `captcha` .
+   * * The HTTP status code `405 Method Not Allowed` .
+   * * If the request contains an `Accept` header with a value of `text/html` , the response
+   * includes a `CAPTCHA` challenge.
+   *
+   * You can configure the expiration time in the `CaptchaConfig` `ImmunityTimeProperty` setting at
+   * the rule and web ACL level. The rule setting overrides the web ACL setting.
+   *
+   * This action option is available for rules. It isn't available for web ACL default actions.
+   */
   public fun captcha(captcha: Any) {
     cdkBuilder.captcha(captcha)
   }
 
-  public fun challenge(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param challenge Instructs AWS WAF to run a `Challenge` check against the web request.
+   */
+  public fun challenge(challenge: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(challenge)
     cdkBuilder.challenge(builder.map)
   }
 
+  /**
+   * @param challenge Instructs AWS WAF to run a `Challenge` check against the web request.
+   */
   public fun challenge(challenge: Any) {
     cdkBuilder.challenge(challenge)
   }
 
-  public fun count(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param count Instructs AWS WAF to count the web request and then continue evaluating the
+   * request using the remaining rules in the web ACL.
+   */
+  public fun count(count: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(count)
     cdkBuilder.count(builder.map)
   }
 
+  /**
+   * @param count Instructs AWS WAF to count the web request and then continue evaluating the
+   * request using the remaining rules in the web ACL.
+   */
   public fun count(count: Any) {
     cdkBuilder.count(count)
   }

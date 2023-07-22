@@ -21,18 +21,53 @@ public class CfnConnectorDefinitionVersionDsl(
 
   private val _connectors: MutableList<Any> = mutableListOf()
 
+  /**
+   * The ID of the connector definition associated with this version.
+   *
+   * This value is a GUID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html#cfn-greengrass-connectordefinitionversion-connectordefinitionid)
+   * @param connectorDefinitionId The ID of the connector definition associated with this version. 
+   */
   public fun connectorDefinitionId(connectorDefinitionId: String) {
     cdkBuilder.connectorDefinitionId(connectorDefinitionId)
   }
 
+  /**
+   * The connectors in this version.
+   *
+   * Only one instance of a given connector can be added to the connector definition version at a
+   * time.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html#cfn-greengrass-connectordefinitionversion-connectors)
+   * @param connectors The connectors in this version. 
+   */
   public fun connectors(vararg connectors: Any) {
     _connectors.addAll(listOf(*connectors))
   }
 
+  /**
+   * The connectors in this version.
+   *
+   * Only one instance of a given connector can be added to the connector definition version at a
+   * time.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html#cfn-greengrass-connectordefinitionversion-connectors)
+   * @param connectors The connectors in this version. 
+   */
   public fun connectors(connectors: Collection<Any>) {
     _connectors.addAll(connectors)
   }
 
+  /**
+   * The connectors in this version.
+   *
+   * Only one instance of a given connector can be added to the connector definition version at a
+   * time.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html#cfn-greengrass-connectordefinitionversion-connectors)
+   * @param connectors The connectors in this version. 
+   */
   public fun connectors(connectors: IResolvable) {
     cdkBuilder.connectors(connectors)
   }

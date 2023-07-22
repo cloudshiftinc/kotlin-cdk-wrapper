@@ -12,14 +12,23 @@ public class CfnGatewayRouteGatewayRouteTargetPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.GatewayRouteTargetProperty.Builder =
       CfnGatewayRoute.GatewayRouteTargetProperty.builder()
 
+  /**
+   * @param port The port number of the gateway route target.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param virtualService An object that represents a virtual service gateway route target. 
+   */
   public fun virtualService(virtualService: IResolvable) {
     cdkBuilder.virtualService(virtualService)
   }
 
+  /**
+   * @param virtualService An object that represents a virtual service gateway route target. 
+   */
   public fun virtualService(virtualService: CfnGatewayRoute.GatewayRouteVirtualServiceProperty) {
     cdkBuilder.virtualService(virtualService)
   }

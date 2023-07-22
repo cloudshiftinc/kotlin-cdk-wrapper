@@ -25,38 +25,123 @@ public class CfnOptionGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Specifies the name of the engine that this option group should be associated with.
+   *
+   * Valid Values:
+   *
+   * * `mariadb`
+   * * `mysql`
+   * * `oracle-ee`
+   * * `oracle-ee-cdb`
+   * * `oracle-se2`
+   * * `oracle-se2-cdb`
+   * * `postgres`
+   * * `sqlserver-ee`
+   * * `sqlserver-se`
+   * * `sqlserver-ex`
+   * * `sqlserver-web`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-enginename)
+   * @param engineName Specifies the name of the engine that this option group should be associated
+   * with. 
+   */
   public fun engineName(engineName: String) {
     cdkBuilder.engineName(engineName)
   }
 
+  /**
+   * Specifies the major version of the engine that this option group should be associated with.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-majorengineversion)
+   * @param majorEngineVersion Specifies the major version of the engine that this option group
+   * should be associated with. 
+   */
   public fun majorEngineVersion(majorEngineVersion: String) {
     cdkBuilder.majorEngineVersion(majorEngineVersion)
   }
 
+  /**
+   * A list of options and the settings for each option.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
+   * @param optionConfigurations A list of options and the settings for each option. 
+   */
   public fun optionConfigurations(vararg optionConfigurations: Any) {
     _optionConfigurations.addAll(listOf(*optionConfigurations))
   }
 
+  /**
+   * A list of options and the settings for each option.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
+   * @param optionConfigurations A list of options and the settings for each option. 
+   */
   public fun optionConfigurations(optionConfigurations: Collection<Any>) {
     _optionConfigurations.addAll(optionConfigurations)
   }
 
+  /**
+   * A list of options and the settings for each option.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
+   * @param optionConfigurations A list of options and the settings for each option. 
+   */
   public fun optionConfigurations(optionConfigurations: IResolvable) {
     cdkBuilder.optionConfigurations(optionConfigurations)
   }
 
+  /**
+   * The description of the option group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optiongroupdescription)
+   * @param optionGroupDescription The description of the option group. 
+   */
   public fun optionGroupDescription(optionGroupDescription: String) {
     cdkBuilder.optionGroupDescription(optionGroupDescription)
   }
 
+  /**
+   * The name of the option group to be created.
+   *
+   * Constraints:
+   *
+   * * Must be 1 to 255 letters, numbers, or hyphens
+   * * First character must be a letter
+   * * Can't end with a hyphen or contain two consecutive hyphens
+   *
+   * Example: `myoptiongroup`
+   *
+   * If you don't specify a value for `OptionGroupName` property, a name is automatically created
+   * for the option group.
+   *
+   *
+   * This value is stored as a lowercase string.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optiongroupname)
+   * @param optionGroupName The name of the option group to be created. 
+   */
   public fun optionGroupName(optionGroupName: String) {
     cdkBuilder.optionGroupName(optionGroupName)
   }
 
+  /**
+   * An optional array of key-value pairs to apply to this option group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
+   * @param tags An optional array of key-value pairs to apply to this option group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An optional array of key-value pairs to apply to this option group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
+   * @param tags An optional array of key-value pairs to apply to this option group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

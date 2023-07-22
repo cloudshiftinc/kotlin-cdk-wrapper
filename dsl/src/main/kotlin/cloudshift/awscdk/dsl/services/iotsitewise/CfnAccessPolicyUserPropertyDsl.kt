@@ -11,6 +11,9 @@ public class CfnAccessPolicyUserPropertyDsl {
   private val cdkBuilder: CfnAccessPolicy.UserProperty.Builder =
       CfnAccessPolicy.UserProperty.builder()
 
+  /**
+   * @param id The ID of the user.
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }

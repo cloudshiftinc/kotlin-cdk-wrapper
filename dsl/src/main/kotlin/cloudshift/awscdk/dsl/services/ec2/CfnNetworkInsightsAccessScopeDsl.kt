@@ -28,34 +28,82 @@ public class CfnNetworkInsightsAccessScopeDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The paths to exclude.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+   * @param excludePaths The paths to exclude. 
+   */
   public fun excludePaths(vararg excludePaths: Any) {
     _excludePaths.addAll(listOf(*excludePaths))
   }
 
+  /**
+   * The paths to exclude.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+   * @param excludePaths The paths to exclude. 
+   */
   public fun excludePaths(excludePaths: Collection<Any>) {
     _excludePaths.addAll(excludePaths)
   }
 
+  /**
+   * The paths to exclude.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+   * @param excludePaths The paths to exclude. 
+   */
   public fun excludePaths(excludePaths: IResolvable) {
     cdkBuilder.excludePaths(excludePaths)
   }
 
+  /**
+   * The paths to match.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+   * @param matchPaths The paths to match. 
+   */
   public fun matchPaths(vararg matchPaths: Any) {
     _matchPaths.addAll(listOf(*matchPaths))
   }
 
+  /**
+   * The paths to match.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+   * @param matchPaths The paths to match. 
+   */
   public fun matchPaths(matchPaths: Collection<Any>) {
     _matchPaths.addAll(matchPaths)
   }
 
+  /**
+   * The paths to match.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+   * @param matchPaths The paths to match. 
+   */
   public fun matchPaths(matchPaths: IResolvable) {
     cdkBuilder.matchPaths(matchPaths)
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-tags)
+   * @param tags The tags. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

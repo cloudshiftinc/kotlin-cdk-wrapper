@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext
 public class DeploymentSourceContextDsl {
   private val cdkBuilder: DeploymentSourceContext.Builder = DeploymentSourceContext.builder()
 
+  /**
+   * @param handlerRole The role for the handler. 
+   */
   public fun handlerRole(handlerRole: IRole) {
     cdkBuilder.handlerRole(handlerRole)
   }

@@ -17,18 +17,32 @@ public class CfnRemediationConfigurationStaticValuePropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param value the value to be set.
+   */
   public fun `value`(vararg `value`: String) {
     _value.addAll(listOf(*`value`))
   }
 
+  /**
+   * @param value the value to be set.
+   */
   public fun `value`(`value`: Collection<String>) {
     _value.addAll(`value`)
   }
 
+  /**
+   * @param values A list of values.
+   * For example, the ARN of the assumed role.
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values A list of values.
+   * For example, the ARN of the assumed role.
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

@@ -16,14 +16,23 @@ public class CfnBucketLifecycleConfigurationPropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

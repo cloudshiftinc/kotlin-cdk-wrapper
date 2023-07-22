@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps
 public class OriginAccessIdentityPropsDsl {
   private val cdkBuilder: OriginAccessIdentityProps.Builder = OriginAccessIdentityProps.builder()
 
+  /**
+   * @param comment Any comments you want to include about the origin access identity.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }

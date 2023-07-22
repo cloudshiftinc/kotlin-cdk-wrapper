@@ -12,10 +12,17 @@ public class CodePipelineActionFactoryResultDsl {
   private val cdkBuilder: CodePipelineActionFactoryResult.Builder =
       CodePipelineActionFactoryResult.builder()
 
+  /**
+   * @param project If a CodeBuild project got created, the project.
+   */
   public fun project(project: IProject) {
     cdkBuilder.project(project)
   }
 
+  /**
+   * @param runOrdersConsumed How many RunOrders were consumed. 
+   * If you add 1 action, return the value 1 here.
+   */
   public fun runOrdersConsumed(runOrdersConsumed: Number) {
     cdkBuilder.runOrdersConsumed(runOrdersConsumed)
   }

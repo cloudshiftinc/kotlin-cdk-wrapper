@@ -11,6 +11,11 @@ public class CfnDomainZoneAwarenessConfigPropertyDsl {
   private val cdkBuilder: CfnDomain.ZoneAwarenessConfigProperty.Builder =
       CfnDomain.ZoneAwarenessConfigProperty.builder()
 
+  /**
+   * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number of
+   * AZs that you want the domain to use.
+   * Valid values are `2` and `3` . Default is 2.
+   */
   public fun availabilityZoneCount(availabilityZoneCount: Number) {
     cdkBuilder.availabilityZoneCount(availabilityZoneCount)
   }

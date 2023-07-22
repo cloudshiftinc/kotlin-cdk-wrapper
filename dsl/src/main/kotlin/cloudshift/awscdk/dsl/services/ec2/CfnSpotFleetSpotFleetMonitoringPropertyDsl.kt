@@ -12,10 +12,18 @@ public class CfnSpotFleetSpotFleetMonitoringPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.SpotFleetMonitoringProperty.Builder =
       CfnSpotFleet.SpotFleetMonitoringProperty.builder()
 
+  /**
+   * @param enabled Enables monitoring for the instance.
+   * Default: `false`
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Enables monitoring for the instance.
+   * Default: `false`
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

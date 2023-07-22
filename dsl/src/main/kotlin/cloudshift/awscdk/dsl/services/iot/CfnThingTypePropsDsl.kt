@@ -20,30 +20,65 @@ public class CfnThingTypePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+   * deprecated thing type.
+   * Requires permission to access the
+   * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
+   * action.
+   */
   public fun deprecateThingType(deprecateThingType: Boolean) {
     cdkBuilder.deprecateThingType(deprecateThingType)
   }
 
+  /**
+   * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+   * deprecated thing type.
+   * Requires permission to access the
+   * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
+   * action.
+   */
   public fun deprecateThingType(deprecateThingType: IResolvable) {
     cdkBuilder.deprecateThingType(deprecateThingType)
   }
 
+  /**
+   * @param tags Metadata which can be used to manage the thing type.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Metadata which can be used to manage the thing type.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param thingTypeName The name of the thing type.
+   */
   public fun thingTypeName(thingTypeName: String) {
     cdkBuilder.thingTypeName(thingTypeName)
   }
 
+  /**
+   * @param thingTypeProperties The thing type properties for the thing type to create.
+   * It contains information about the new thing type including a description, and a list of
+   * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
+   * creation of the `ThingType` .
+   */
   public fun thingTypeProperties(thingTypeProperties: IResolvable) {
     cdkBuilder.thingTypeProperties(thingTypeProperties)
   }
 
+  /**
+   * @param thingTypeProperties The thing type properties for the thing type to create.
+   * It contains information about the new thing type including a description, and a list of
+   * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
+   * creation of the `ThingType` .
+   */
   public fun thingTypeProperties(thingTypeProperties: CfnThingType.ThingTypePropertiesProperty) {
     cdkBuilder.thingTypeProperties(thingTypeProperties)
   }

@@ -17,22 +17,48 @@ public class ProjectNotifyOnOptionsDsl {
 
   private val _events: MutableList<ProjectNotificationEvents> = mutableListOf()
 
+  /**
+   * @param detailType The level of detail to include in the notifications for this resource.
+   * BASIC will include only the contents of the event as it would appear in AWS CloudWatch.
+   * FULL will include any supplemental information provided by AWS CodeStar Notifications and/or
+   * the service for the resource for which the notification is created.
+   */
   public fun detailType(detailType: DetailType) {
     cdkBuilder.detailType(detailType)
   }
 
+  /**
+   * @param enabled The status of the notification rule.
+   * If the enabled is set to DISABLED, notifications aren't sent for the notification rule.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param events A list of event types associated with this notification rule for CodeBuild
+   * Project. 
+   * For a complete list of event types and IDs, see Notification concepts in the Developer Tools
+   * Console User Guide.
+   */
   public fun events(vararg events: ProjectNotificationEvents) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * @param events A list of event types associated with this notification rule for CodeBuild
+   * Project. 
+   * For a complete list of event types and IDs, see Notification concepts in the Developer Tools
+   * Console User Guide.
+   */
   public fun events(events: Collection<ProjectNotificationEvents>) {
     _events.addAll(events)
   }
 
+  /**
+   * @param notificationRuleName The name for the notification rule.
+   * Notification rule names must be unique in your AWS account.
+   */
   public fun notificationRuleName(notificationRuleName: String) {
     cdkBuilder.notificationRuleName(notificationRuleName)
   }

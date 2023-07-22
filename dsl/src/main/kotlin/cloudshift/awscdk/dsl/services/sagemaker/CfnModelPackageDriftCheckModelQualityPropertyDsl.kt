@@ -11,18 +11,30 @@ public class CfnModelPackageDriftCheckModelQualityPropertyDsl {
   private val cdkBuilder: CfnModelPackage.DriftCheckModelQualityProperty.Builder =
       CfnModelPackage.DriftCheckModelQualityProperty.builder()
 
+  /**
+   * @param constraints The drift check model quality constraints.
+   */
   public fun constraints(constraints: IResolvable) {
     cdkBuilder.constraints(constraints)
   }
 
+  /**
+   * @param constraints The drift check model quality constraints.
+   */
   public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
     cdkBuilder.constraints(constraints)
   }
 
+  /**
+   * @param statistics The drift check model quality statistics.
+   */
   public fun statistics(statistics: IResolvable) {
     cdkBuilder.statistics(statistics)
   }
 
+  /**
+   * @param statistics The drift check model quality statistics.
+   */
   public fun statistics(statistics: CfnModelPackage.MetricsSourceProperty) {
     cdkBuilder.statistics(statistics)
   }

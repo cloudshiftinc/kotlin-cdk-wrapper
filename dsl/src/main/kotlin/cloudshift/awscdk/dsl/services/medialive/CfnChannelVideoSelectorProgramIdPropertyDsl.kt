@@ -11,6 +11,11 @@ public class CfnChannelVideoSelectorProgramIdPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorProgramIdProperty.Builder =
       CfnChannel.VideoSelectorProgramIdProperty.builder()
 
+  /**
+   * @param programId Selects a specific program from within a multi-program transport stream.
+   * If the program doesn't exist, MediaLive selects the first program within the transport stream
+   * by default.
+   */
   public fun programId(programId: Number) {
     cdkBuilder.programId(programId)
   }

@@ -12,14 +12,23 @@ public class CfnDashboardPivotFieldSortOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.PivotFieldSortOptionsProperty.Builder =
       CfnDashboard.PivotFieldSortOptionsProperty.builder()
 
+  /**
+   * @param fieldId The field ID for the field sort options. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param sortBy The sort by field for the field sort options. 
+   */
   public fun sortBy(sortBy: IResolvable) {
     cdkBuilder.sortBy(sortBy)
   }
 
+  /**
+   * @param sortBy The sort by field for the field sort options. 
+   */
   public fun sortBy(sortBy: CfnDashboard.PivotTableSortByProperty) {
     cdkBuilder.sortBy(sortBy)
   }

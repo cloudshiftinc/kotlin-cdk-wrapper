@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps
 public class CfnFlowTemplatePropsDsl {
   private val cdkBuilder: CfnFlowTemplateProps.Builder = CfnFlowTemplateProps.builder()
 
+  /**
+   * @param compatibleNamespaceVersion the value to be set.
+   */
   public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
     cdkBuilder.compatibleNamespaceVersion(compatibleNamespaceVersion)
   }
 
+  /**
+   * @param definition the value to be set. 
+   */
   public fun definition(definition: IResolvable) {
     cdkBuilder.definition(definition)
   }
 
+  /**
+   * @param definition the value to be set. 
+   */
   public fun definition(definition: CfnFlowTemplate.DefinitionDocumentProperty) {
     cdkBuilder.definition(definition)
   }

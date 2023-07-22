@@ -12,14 +12,23 @@ public class CfnGatewayRouteQueryParameterPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.QueryParameterProperty.Builder =
       CfnGatewayRoute.QueryParameterProperty.builder()
 
+  /**
+   * @param match The query parameter to match on.
+   */
   public fun match(match: IResolvable) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param match The query parameter to match on.
+   */
   public fun match(match: CfnGatewayRoute.HttpQueryParameterMatchProperty) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param name A name for the query parameter that will be matched on. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

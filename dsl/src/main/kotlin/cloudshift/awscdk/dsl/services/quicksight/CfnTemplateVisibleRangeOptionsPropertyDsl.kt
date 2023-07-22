@@ -11,10 +11,16 @@ public class CfnTemplateVisibleRangeOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.VisibleRangeOptionsProperty.Builder =
       CfnTemplate.VisibleRangeOptionsProperty.builder()
 
+  /**
+   * @param percentRange The percent range in the visible range.
+   */
   public fun percentRange(percentRange: IResolvable) {
     cdkBuilder.percentRange(percentRange)
   }
 
+  /**
+   * @param percentRange The percent range in the visible range.
+   */
   public fun percentRange(percentRange: CfnTemplate.PercentVisibleRangeProperty) {
     cdkBuilder.percentRange(percentRange)
   }

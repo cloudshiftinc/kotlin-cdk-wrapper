@@ -15,14 +15,32 @@ public class CfnTransitGatewayMulticastDomainAssociationDsl(
   private val cdkBuilder: CfnTransitGatewayMulticastDomainAssociation.Builder =
       CfnTransitGatewayMulticastDomainAssociation.Builder.create(scope, id)
 
+  /**
+   * The IDs of the subnets to associate with the transit gateway multicast domain.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html#cfn-ec2-transitgatewaymulticastdomainassociation-subnetid)
+   * @param subnetId The IDs of the subnets to associate with the transit gateway multicast domain. 
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }
 
+  /**
+   * The ID of the transit gateway attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewayattachmentid)
+   * @param transitGatewayAttachmentId The ID of the transit gateway attachment. 
+   */
   public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
     cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
   }
 
+  /**
+   * The ID of the transit gateway multicast domain.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewaymulticastdomainid)
+   * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain. 
+   */
   public fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String) {
     cdkBuilder.transitGatewayMulticastDomainId(transitGatewayMulticastDomainId)
   }

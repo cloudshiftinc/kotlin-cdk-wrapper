@@ -12,14 +12,27 @@ import software.amazon.awscdk.services.iot.CfnThingProps
 public class CfnThingPropsDsl {
   private val cdkBuilder: CfnThingProps.Builder = CfnThingProps.builder()
 
+  /**
+   * @param attributePayload A string that contains up to three key value pairs.
+   * Maximum length of 800. Duplicates not allowed.
+   */
   public fun attributePayload(attributePayload: IResolvable) {
     cdkBuilder.attributePayload(attributePayload)
   }
 
+  /**
+   * @param attributePayload A string that contains up to three key value pairs.
+   * Maximum length of 800. Duplicates not allowed.
+   */
   public fun attributePayload(attributePayload: CfnThing.AttributePayloadProperty) {
     cdkBuilder.attributePayload(attributePayload)
   }
 
+  /**
+   * @param thingName The name of the thing to update.
+   * You can't change a thing's name. To change a thing's name, you must create a new thing, give it
+   * the new name, and then delete the old thing.
+   */
   public fun thingName(thingName: String) {
     cdkBuilder.thingName(thingName)
   }

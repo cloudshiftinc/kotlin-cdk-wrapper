@@ -15,23 +15,73 @@ public class CfnSkillDsl(
 ) {
   private val cdkBuilder: CfnSkill.Builder = CfnSkill.Builder.create(scope, id)
 
+  /**
+   * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+   *
+   * Only Login with Amazon clients created through the  are supported. The client ID, client
+   * secret, and refresh token are required.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+   * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+   * with the Alexa service. 
+   */
   public fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
     cdkBuilder.authenticationConfiguration(authenticationConfiguration)
   }
 
+  /**
+   * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+   *
+   * Only Login with Amazon clients created through the  are supported. The client ID, client
+   * secret, and refresh token are required.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+   * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+   * with the Alexa service. 
+   */
   public
       fun authenticationConfiguration(authenticationConfiguration: CfnSkill.AuthenticationConfigurationProperty) {
     cdkBuilder.authenticationConfiguration(authenticationConfiguration)
   }
 
+  /**
+   * Configuration for the skill package that contains the components of the Alexa skill.
+   *
+   * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update the
+   * skill. For more information about the skill package format, see the  .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+   * @param skillPackage Configuration for the skill package that contains the components of the
+   * Alexa skill. 
+   */
   public fun skillPackage(skillPackage: IResolvable) {
     cdkBuilder.skillPackage(skillPackage)
   }
 
+  /**
+   * Configuration for the skill package that contains the components of the Alexa skill.
+   *
+   * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update the
+   * skill. For more information about the skill package format, see the  .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+   * @param skillPackage Configuration for the skill package that contains the components of the
+   * Alexa skill. 
+   */
   public fun skillPackage(skillPackage: CfnSkill.SkillPackageProperty) {
     cdkBuilder.skillPackage(skillPackage)
   }
 
+  /**
+   * The vendor ID associated with the Amazon developer account that will host the skill.
+   *
+   * Details for retrieving the vendor ID are in  . The provided LWA credentials must be linked to
+   * the developer account associated with this vendor ID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-vendorid)
+   * @param vendorId The vendor ID associated with the Amazon developer account that will host the
+   * skill. 
+   */
   public fun vendorId(vendorId: String) {
     cdkBuilder.vendorId(vendorId)
   }

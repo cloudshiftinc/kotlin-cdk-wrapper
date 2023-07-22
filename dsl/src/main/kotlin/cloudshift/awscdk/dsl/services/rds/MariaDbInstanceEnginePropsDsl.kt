@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps
 public class MariaDbInstanceEnginePropsDsl {
   private val cdkBuilder: MariaDbInstanceEngineProps.Builder = MariaDbInstanceEngineProps.builder()
 
+  /**
+   * @param version The exact version of the engine to use. 
+   */
   public fun version(version: MariaDbEngineVersion) {
     cdkBuilder.version(version)
   }

@@ -16,14 +16,23 @@ public class CfnBucketOwnershipControlsPropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param rules Specifies the container element for Object Ownership rules. 
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules Specifies the container element for Object Ownership rules. 
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules Specifies the container element for Object Ownership rules. 
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

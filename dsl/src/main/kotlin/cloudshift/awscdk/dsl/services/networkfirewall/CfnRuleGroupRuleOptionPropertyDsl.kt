@@ -15,14 +15,38 @@ public class CfnRuleGroupRuleOptionPropertyDsl {
 
   private val _settings: MutableList<String> = mutableListOf()
 
+  /**
+   * @param keyword The Suricata rule option keywords. 
+   * For Network Firewall , the keyword signature ID (sid) is required in the format `sid: 112233` .
+   * The sid must be unique within the rule group. For information about Suricata rule option keywords,
+   * see [Rule
+   * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+   * .
+   */
   public fun keyword(keyword: String) {
     cdkBuilder.keyword(keyword)
   }
 
+  /**
+   * @param settings The Suricata rule option settings.
+   * Settings have zero or more values, and the number of possible settings and required settings
+   * depends on the keyword. The format for Settings is `number` . For information about Suricata rule
+   * option settings, see [Rule
+   * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+   * .
+   */
   public fun settings(vararg settings: String) {
     _settings.addAll(listOf(*settings))
   }
 
+  /**
+   * @param settings The Suricata rule option settings.
+   * Settings have zero or more values, and the number of possible settings and required settings
+   * depends on the keyword. The format for Settings is `number` . For information about Suricata rule
+   * option settings, see [Rule
+   * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
+   * .
+   */
   public fun settings(settings: Collection<String>) {
     _settings.addAll(settings)
   }

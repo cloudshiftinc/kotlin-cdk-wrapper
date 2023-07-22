@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.codecommit.CodeConfig
 public class CodeConfigDsl {
   private val cdkBuilder: CodeConfig.Builder = CodeConfig.builder()
 
-  public fun code(block: CfnRepositoryCodePropertyDsl.() -> Unit = {}) {
+  /**
+   * @param code represents the underlying code structure. 
+   */
+  public fun code(code: CfnRepositoryCodePropertyDsl.() -> Unit = {}) {
     val builder = CfnRepositoryCodePropertyDsl()
-    builder.apply(block)
+    builder.apply(code)
     cdkBuilder.code(builder.build())
   }
 
+  /**
+   * @param code represents the underlying code structure. 
+   */
   public fun code(code: CfnRepository.CodeProperty) {
     cdkBuilder.code(code)
   }

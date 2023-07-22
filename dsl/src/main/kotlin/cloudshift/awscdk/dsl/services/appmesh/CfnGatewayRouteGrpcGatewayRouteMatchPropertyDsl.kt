@@ -18,30 +18,51 @@ public class CfnGatewayRouteGrpcGatewayRouteMatchPropertyDsl {
 
   private val _metadata: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param hostname The gateway route host name to be matched on.
+   */
   public fun hostname(hostname: IResolvable) {
     cdkBuilder.hostname(hostname)
   }
 
+  /**
+   * @param hostname The gateway route host name to be matched on.
+   */
   public fun hostname(hostname: CfnGatewayRoute.GatewayRouteHostnameMatchProperty) {
     cdkBuilder.hostname(hostname)
   }
 
+  /**
+   * @param metadata The gateway route metadata to be matched on.
+   */
   public fun metadata(vararg metadata: Any) {
     _metadata.addAll(listOf(*metadata))
   }
 
+  /**
+   * @param metadata The gateway route metadata to be matched on.
+   */
   public fun metadata(metadata: Collection<Any>) {
     _metadata.addAll(metadata)
   }
 
+  /**
+   * @param metadata The gateway route metadata to be matched on.
+   */
   public fun metadata(metadata: IResolvable) {
     cdkBuilder.metadata(metadata)
   }
 
+  /**
+   * @param port The gateway route port to be matched on.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param serviceName The fully qualified domain name for the service to match from the request.
+   */
   public fun serviceName(serviceName: String) {
     cdkBuilder.serviceName(serviceName)
   }

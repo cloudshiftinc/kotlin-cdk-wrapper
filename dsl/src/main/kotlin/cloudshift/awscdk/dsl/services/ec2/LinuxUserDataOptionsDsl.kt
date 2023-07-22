@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ec2.LinuxUserDataOptions
 public class LinuxUserDataOptionsDsl {
   private val cdkBuilder: LinuxUserDataOptions.Builder = LinuxUserDataOptions.builder()
 
+  /**
+   * @param shebang Shebang for the UserData script.
+   */
   public fun shebang(shebang: String) {
     cdkBuilder.shebang(shebang)
   }

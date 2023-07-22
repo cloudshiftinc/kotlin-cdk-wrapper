@@ -17,18 +17,30 @@ public class CfnInstanceNetworkingPropertyDsl {
 
   private val _ports: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the instance.
+   */
   public fun monthlyTransfer(monthlyTransfer: Number) {
     cdkBuilder.monthlyTransfer(monthlyTransfer)
   }
 
+  /**
+   * @param ports An array of ports to open on the instance. 
+   */
   public fun ports(vararg ports: Any) {
     _ports.addAll(listOf(*ports))
   }
 
+  /**
+   * @param ports An array of ports to open on the instance. 
+   */
   public fun ports(ports: Collection<Any>) {
     _ports.addAll(ports)
   }
 
+  /**
+   * @param ports An array of ports to open on the instance. 
+   */
   public fun ports(ports: IResolvable) {
     cdkBuilder.ports(ports)
   }

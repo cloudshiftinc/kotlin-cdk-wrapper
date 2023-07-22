@@ -11,19 +11,33 @@ public class CfnTemplateStringFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.StringFormatConfigurationProperty.Builder =
       CfnTemplate.StringFormatConfigurationProperty.builder()
 
+  /**
+   * @param nullValueFormatConfiguration The options that determine the null value format
+   * configuration.
+   */
   public fun nullValueFormatConfiguration(nullValueFormatConfiguration: IResolvable) {
     cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
   }
 
+  /**
+   * @param nullValueFormatConfiguration The options that determine the null value format
+   * configuration.
+   */
   public
       fun nullValueFormatConfiguration(nullValueFormatConfiguration: CfnTemplate.NullValueFormatConfigurationProperty) {
     cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
   }
 
+  /**
+   * @param numericFormatConfiguration The formatting configuration for numeric strings.
+   */
   public fun numericFormatConfiguration(numericFormatConfiguration: IResolvable) {
     cdkBuilder.numericFormatConfiguration(numericFormatConfiguration)
   }
 
+  /**
+   * @param numericFormatConfiguration The formatting configuration for numeric strings.
+   */
   public
       fun numericFormatConfiguration(numericFormatConfiguration: CfnTemplate.NumericFormatConfigurationProperty) {
     cdkBuilder.numericFormatConfiguration(numericFormatConfiguration)

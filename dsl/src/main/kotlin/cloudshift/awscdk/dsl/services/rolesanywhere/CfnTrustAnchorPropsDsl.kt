@@ -20,30 +20,51 @@ public class CfnTrustAnchorPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param enabled Indicates whether the trust anchor is enabled.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether the trust anchor is enabled.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param name The name of the trust anchor. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param source The trust anchor type and its related certificate data. 
+   */
   public fun source(source: IResolvable) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param source The trust anchor type and its related certificate data. 
+   */
   public fun source(source: CfnTrustAnchor.SourceProperty) {
     cdkBuilder.source(source)
   }
 
+  /**
+   * @param tags The tags to attach to the trust anchor.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to attach to the trust anchor.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

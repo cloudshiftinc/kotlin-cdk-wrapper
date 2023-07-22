@@ -13,10 +13,16 @@ public class CfnFunctionFunctionEnvironmentPropertyDsl {
   private val cdkBuilder: CfnFunction.FunctionEnvironmentProperty.Builder =
       CfnFunction.FunctionEnvironmentProperty.builder()
 
+  /**
+   * @param variables the value to be set. 
+   */
   public fun variables(variables: Map<String, String>) {
     cdkBuilder.variables(variables)
   }
 
+  /**
+   * @param variables the value to be set. 
+   */
   public fun variables(variables: IResolvable) {
     cdkBuilder.variables(variables)
   }

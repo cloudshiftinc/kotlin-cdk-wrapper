@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.lex.CfnBot
 public class CfnBotSampleValuePropertyDsl {
   private val cdkBuilder: CfnBot.SampleValueProperty.Builder = CfnBot.SampleValueProperty.builder()
 
+  /**
+   * @param value The value that can be used for a slot type. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

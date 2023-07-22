@@ -12,43 +12,75 @@ public class CfnAnalysisParameterDropDownControlPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ParameterDropDownControlProperty.Builder =
       CfnAnalysis.ParameterDropDownControlProperty.builder()
 
+  /**
+   * @param cascadingControlConfiguration The values that are displayed in a control can be
+   * configured to only show values that are valid based on what's selected in other controls.
+   */
   public fun cascadingControlConfiguration(cascadingControlConfiguration: IResolvable) {
     cdkBuilder.cascadingControlConfiguration(cascadingControlConfiguration)
   }
 
+  /**
+   * @param cascadingControlConfiguration The values that are displayed in a control can be
+   * configured to only show values that are valid based on what's selected in other controls.
+   */
   public
       fun cascadingControlConfiguration(cascadingControlConfiguration: CfnAnalysis.CascadingControlConfigurationProperty) {
     cdkBuilder.cascadingControlConfiguration(cascadingControlConfiguration)
   }
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: IResolvable) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: CfnAnalysis.DropDownControlDisplayOptionsProperty) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param parameterControlId The ID of the `ParameterDropDownControl` . 
+   */
   public fun parameterControlId(parameterControlId: String) {
     cdkBuilder.parameterControlId(parameterControlId)
   }
 
+  /**
+   * @param selectableValues A list of selectable values that are used in a control.
+   */
   public fun selectableValues(selectableValues: IResolvable) {
     cdkBuilder.selectableValues(selectableValues)
   }
 
+  /**
+   * @param selectableValues A list of selectable values that are used in a control.
+   */
   public fun selectableValues(selectableValues: CfnAnalysis.ParameterSelectableValuesProperty) {
     cdkBuilder.selectableValues(selectableValues)
   }
 
+  /**
+   * @param sourceParameterName The source parameter name of the `ParameterDropDownControl` . 
+   */
   public fun sourceParameterName(sourceParameterName: String) {
     cdkBuilder.sourceParameterName(sourceParameterName)
   }
 
+  /**
+   * @param title The title of the `ParameterDropDownControl` . 
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }
 
+  /**
+   * @param type The type parameter name of the `ParameterDropDownControl` .
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

@@ -15,10 +15,22 @@ public class CfnSpotFleetDsl(
 ) {
   private val cdkBuilder: CfnSpotFleet.Builder = CfnSpotFleet.Builder.create(scope, id)
 
+  /**
+   * Describes the configuration of a Spot Fleet request.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata)
+   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
+   */
   public fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
     cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
   }
 
+  /**
+   * Describes the configuration of a Spot Fleet request.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata)
+   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
+   */
   public
       fun spotFleetRequestConfigData(spotFleetRequestConfigData: CfnSpotFleet.SpotFleetRequestConfigDataProperty) {
     cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)

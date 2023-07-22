@@ -17,26 +17,45 @@ public class CfnApplicationReferenceDataSourceReferenceSchemaPropertyDsl {
 
   private val _recordColumns: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param recordColumns A list of RecordColumn objects. 
+   */
   public fun recordColumns(vararg recordColumns: Any) {
     _recordColumns.addAll(listOf(*recordColumns))
   }
 
+  /**
+   * @param recordColumns A list of RecordColumn objects. 
+   */
   public fun recordColumns(recordColumns: Collection<Any>) {
     _recordColumns.addAll(recordColumns)
   }
 
+  /**
+   * @param recordColumns A list of RecordColumn objects. 
+   */
   public fun recordColumns(recordColumns: IResolvable) {
     cdkBuilder.recordColumns(recordColumns)
   }
 
+  /**
+   * @param recordEncoding Specifies the encoding of the records in the reference source.
+   * For example, UTF-8.
+   */
   public fun recordEncoding(recordEncoding: String) {
     cdkBuilder.recordEncoding(recordEncoding)
   }
 
+  /**
+   * @param recordFormat Specifies the format of the records on the reference source. 
+   */
   public fun recordFormat(recordFormat: IResolvable) {
     cdkBuilder.recordFormat(recordFormat)
   }
 
+  /**
+   * @param recordFormat Specifies the format of the records on the reference source. 
+   */
   public fun recordFormat(recordFormat: CfnApplicationReferenceDataSource.RecordFormatProperty) {
     cdkBuilder.recordFormat(recordFormat)
   }

@@ -13,16 +13,25 @@ import software.amazon.awscdk.services.iam.CfnGroup
 public class CfnGroupPolicyPropertyDsl {
   private val cdkBuilder: CfnGroup.PolicyProperty.Builder = CfnGroup.PolicyProperty.builder()
 
-  public fun policyDocument(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policyDocument The policy document. 
+   */
+  public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policyDocument)
     cdkBuilder.policyDocument(builder.map)
   }
 
+  /**
+   * @param policyDocument The policy document. 
+   */
   public fun policyDocument(policyDocument: Any) {
     cdkBuilder.policyDocument(policyDocument)
   }
 
+  /**
+   * @param policyName The friendly name (not ARN) identifying the policy. 
+   */
   public fun policyName(policyName: String) {
     cdkBuilder.policyName(policyName)
   }

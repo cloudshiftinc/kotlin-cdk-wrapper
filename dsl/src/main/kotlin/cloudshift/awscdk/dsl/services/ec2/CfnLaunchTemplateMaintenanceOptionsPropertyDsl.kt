@@ -11,6 +11,10 @@ public class CfnLaunchTemplateMaintenanceOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.MaintenanceOptionsProperty.Builder =
       CfnLaunchTemplate.MaintenanceOptionsProperty.builder()
 
+  /**
+   * @param autoRecovery Disables the automatic recovery behavior of your instance or sets it to
+   * default.
+   */
   public fun autoRecovery(autoRecovery: String) {
     cdkBuilder.autoRecovery(autoRecovery)
   }

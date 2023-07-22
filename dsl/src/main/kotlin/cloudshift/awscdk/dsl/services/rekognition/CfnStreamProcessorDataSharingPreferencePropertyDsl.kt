@@ -12,10 +12,16 @@ public class CfnStreamProcessorDataSharingPreferencePropertyDsl {
   private val cdkBuilder: CfnStreamProcessor.DataSharingPreferenceProperty.Builder =
       CfnStreamProcessor.DataSharingPreferenceProperty.builder()
 
+  /**
+   * @param optIn Describes the opt-in status applied to a stream processor's data sharing policy. 
+   */
   public fun optIn(optIn: Boolean) {
     cdkBuilder.optIn(optIn)
   }
 
+  /**
+   * @param optIn Describes the opt-in status applied to a stream processor's data sharing policy. 
+   */
   public fun optIn(optIn: IResolvable) {
     cdkBuilder.optIn(optIn)
   }

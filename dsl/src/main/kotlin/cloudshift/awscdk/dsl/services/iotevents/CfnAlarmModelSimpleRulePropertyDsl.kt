@@ -11,14 +11,25 @@ public class CfnAlarmModelSimpleRulePropertyDsl {
   private val cdkBuilder: CfnAlarmModel.SimpleRuleProperty.Builder =
       CfnAlarmModel.SimpleRuleProperty.builder()
 
+  /**
+   * @param comparisonOperator The comparison operator. 
+   */
   public fun comparisonOperator(comparisonOperator: String) {
     cdkBuilder.comparisonOperator(comparisonOperator)
   }
 
+  /**
+   * @param inputProperty The value on the left side of the comparison operator. 
+   * You can specify an AWS IoT Events input attribute as an input property.
+   */
   public fun inputProperty(inputProperty: String) {
     cdkBuilder.inputProperty(inputProperty)
   }
 
+  /**
+   * @param threshold The value on the right side of the comparison operator. 
+   * You can enter a number or specify an AWS IoT Events input attribute.
+   */
   public fun threshold(threshold: String) {
     cdkBuilder.threshold(threshold)
   }

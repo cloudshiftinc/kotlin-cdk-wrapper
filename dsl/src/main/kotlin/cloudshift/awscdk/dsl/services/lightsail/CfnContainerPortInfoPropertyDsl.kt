@@ -11,10 +11,17 @@ public class CfnContainerPortInfoPropertyDsl {
   private val cdkBuilder: CfnContainer.PortInfoProperty.Builder =
       CfnContainer.PortInfoProperty.builder()
 
+  /**
+   * @param port The open firewall ports of the container.
+   */
   public fun port(port: String) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param protocol The protocol name for the open ports.
+   * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
+   */
   public fun protocol(protocol: String) {
     cdkBuilder.protocol(protocol)
   }

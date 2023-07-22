@@ -19,30 +19,51 @@ public class CfnPipelineStageDeclarationPropertyDsl {
 
   private val _blockers: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param actions The actions included in a stage. 
+   */
   public fun actions(vararg actions: Any) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * @param actions The actions included in a stage. 
+   */
   public fun actions(actions: Collection<Any>) {
     _actions.addAll(actions)
   }
 
+  /**
+   * @param actions The actions included in a stage. 
+   */
   public fun actions(actions: IResolvable) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * @param blockers Reserved for future use.
+   */
   public fun blockers(vararg blockers: Any) {
     _blockers.addAll(listOf(*blockers))
   }
 
+  /**
+   * @param blockers Reserved for future use.
+   */
   public fun blockers(blockers: Collection<Any>) {
     _blockers.addAll(blockers)
   }
 
+  /**
+   * @param blockers Reserved for future use.
+   */
   public fun blockers(blockers: IResolvable) {
     cdkBuilder.blockers(blockers)
   }
 
+  /**
+   * @param name The name of the stage. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

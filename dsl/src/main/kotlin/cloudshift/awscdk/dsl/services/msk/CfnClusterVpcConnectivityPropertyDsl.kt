@@ -11,10 +11,16 @@ public class CfnClusterVpcConnectivityPropertyDsl {
   private val cdkBuilder: CfnCluster.VpcConnectivityProperty.Builder =
       CfnCluster.VpcConnectivityProperty.builder()
 
+  /**
+   * @param clientAuthentication VPC connection control settings for brokers.
+   */
   public fun clientAuthentication(clientAuthentication: IResolvable) {
     cdkBuilder.clientAuthentication(clientAuthentication)
   }
 
+  /**
+   * @param clientAuthentication VPC connection control settings for brokers.
+   */
   public
       fun clientAuthentication(clientAuthentication: CfnCluster.VpcConnectivityClientAuthenticationProperty) {
     cdkBuilder.clientAuthentication(clientAuthentication)

@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.s3.IBucket
 public class ActionBindOptionsDsl {
   private val cdkBuilder: ActionBindOptions.Builder = ActionBindOptions.builder()
 
+  /**
+   * @param bucket the value to be set. 
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param role the value to be set. 
+   */
   public fun role(role: IRole) {
     cdkBuilder.role(role)
   }

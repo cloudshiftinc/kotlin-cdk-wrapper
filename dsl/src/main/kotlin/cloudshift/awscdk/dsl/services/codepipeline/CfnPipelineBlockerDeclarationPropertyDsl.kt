@@ -11,10 +11,16 @@ public class CfnPipelineBlockerDeclarationPropertyDsl {
   private val cdkBuilder: CfnPipeline.BlockerDeclarationProperty.Builder =
       CfnPipeline.BlockerDeclarationProperty.builder()
 
+  /**
+   * @param name Reserved for future use. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param type Reserved for future use. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

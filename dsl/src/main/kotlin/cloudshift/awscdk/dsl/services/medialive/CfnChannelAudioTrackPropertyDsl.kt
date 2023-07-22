@@ -11,6 +11,9 @@ public class CfnChannelAudioTrackPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioTrackProperty.Builder =
       CfnChannel.AudioTrackProperty.builder()
 
+  /**
+   * @param track 1-based integer value that maps to a specific audio track.
+   */
   public fun track(track: Number) {
     cdkBuilder.track(track)
   }

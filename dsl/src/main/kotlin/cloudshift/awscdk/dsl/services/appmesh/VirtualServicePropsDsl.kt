@@ -11,10 +11,21 @@ import software.amazon.awscdk.services.appmesh.VirtualServiceProvider
 public class VirtualServicePropsDsl {
   private val cdkBuilder: VirtualServiceProps.Builder = VirtualServiceProps.builder()
 
+  /**
+   * @param virtualServiceName The name of the VirtualService.
+   * It is recommended this follows the fully-qualified domain name format,
+   * such as "my-service.default.svc.cluster.local".
+   *
+   * Example value: `service.domain.local`
+   */
   public fun virtualServiceName(virtualServiceName: String) {
     cdkBuilder.virtualServiceName(virtualServiceName)
   }
 
+  /**
+   * @param virtualServiceProvider The VirtualNode or VirtualRouter which the VirtualService uses as
+   * its provider. 
+   */
   public fun virtualServiceProvider(virtualServiceProvider: VirtualServiceProvider) {
     cdkBuilder.virtualServiceProvider(virtualServiceProvider)
   }

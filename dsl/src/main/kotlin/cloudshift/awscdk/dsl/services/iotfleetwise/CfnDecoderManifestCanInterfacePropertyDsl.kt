@@ -11,14 +11,23 @@ public class CfnDecoderManifestCanInterfacePropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.CanInterfaceProperty.Builder =
       CfnDecoderManifest.CanInterfaceProperty.builder()
 
+  /**
+   * @param name The unique name of the interface. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param protocolName (Optional) The name of the communication protocol for the interface.
+   */
   public fun protocolName(protocolName: String) {
     cdkBuilder.protocolName(protocolName)
   }
 
+  /**
+   * @param protocolVersion (Optional) The version of the communication protocol for the interface.
+   */
   public fun protocolVersion(protocolVersion: String) {
     cdkBuilder.protocolVersion(protocolVersion)
   }

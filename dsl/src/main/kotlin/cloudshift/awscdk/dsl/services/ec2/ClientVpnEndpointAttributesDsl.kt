@@ -16,14 +16,23 @@ public class ClientVpnEndpointAttributesDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
+  /**
+   * @param endpointId The endpoint ID. 
+   */
   public fun endpointId(endpointId: String) {
     cdkBuilder.endpointId(endpointId)
   }
 
+  /**
+   * @param securityGroups The security groups associated with the endpoint. 
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The security groups associated with the endpoint. 
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }

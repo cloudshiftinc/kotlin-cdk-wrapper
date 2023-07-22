@@ -11,6 +11,9 @@ public class AuroraPostgresClusterEnginePropsDsl {
   private val cdkBuilder: AuroraPostgresClusterEngineProps.Builder =
       AuroraPostgresClusterEngineProps.builder()
 
+  /**
+   * @param version The version of the Aurora PostgreSQL cluster engine. 
+   */
   public fun version(version: AuroraPostgresEngineVersion) {
     cdkBuilder.version(version)
   }

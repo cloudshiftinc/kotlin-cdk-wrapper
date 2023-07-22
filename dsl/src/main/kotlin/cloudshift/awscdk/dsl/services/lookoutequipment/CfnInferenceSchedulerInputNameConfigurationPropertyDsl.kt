@@ -11,10 +11,18 @@ public class CfnInferenceSchedulerInputNameConfigurationPropertyDsl {
   private val cdkBuilder: CfnInferenceScheduler.InputNameConfigurationProperty.Builder =
       CfnInferenceScheduler.InputNameConfigurationProperty.builder()
 
+  /**
+   * @param componentTimestampDelimiter Indicates the delimiter character used between items in the
+   * data.
+   */
   public fun componentTimestampDelimiter(componentTimestampDelimiter: String) {
     cdkBuilder.componentTimestampDelimiter(componentTimestampDelimiter)
   }
 
+  /**
+   * @param timestampFormat The format of the timestamp, whether Epoch time, or standard, with or
+   * without hyphens (-).
+   */
   public fun timestampFormat(timestampFormat: String) {
     cdkBuilder.timestampFormat(timestampFormat)
   }

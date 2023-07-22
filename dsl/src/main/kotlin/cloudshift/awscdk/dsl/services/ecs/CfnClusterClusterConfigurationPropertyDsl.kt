@@ -11,10 +11,16 @@ public class CfnClusterClusterConfigurationPropertyDsl {
   private val cdkBuilder: CfnCluster.ClusterConfigurationProperty.Builder =
       CfnCluster.ClusterConfigurationProperty.builder()
 
+  /**
+   * @param executeCommandConfiguration The details of the execute command configuration.
+   */
   public fun executeCommandConfiguration(executeCommandConfiguration: IResolvable) {
     cdkBuilder.executeCommandConfiguration(executeCommandConfiguration)
   }
 
+  /**
+   * @param executeCommandConfiguration The details of the execute command configuration.
+   */
   public
       fun executeCommandConfiguration(executeCommandConfiguration: CfnCluster.ExecuteCommandConfigurationProperty) {
     cdkBuilder.executeCommandConfiguration(executeCommandConfiguration)

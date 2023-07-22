@@ -15,10 +15,20 @@ public class CfnBillingGroupAccountGroupingPropertyDsl {
 
   private val _linkedAccountIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param linkedAccountIds The account IDs that make up the billing group. 
+   * Account IDs must be a part of the consolidated billing family, and not associated with another
+   * billing group.
+   */
   public fun linkedAccountIds(vararg linkedAccountIds: String) {
     _linkedAccountIds.addAll(listOf(*linkedAccountIds))
   }
 
+  /**
+   * @param linkedAccountIds The account IDs that make up the billing group. 
+   * Account IDs must be a part of the consolidated billing family, and not associated with another
+   * billing group.
+   */
   public fun linkedAccountIds(linkedAccountIds: Collection<String>) {
     _linkedAccountIds.addAll(linkedAccountIds)
   }

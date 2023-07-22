@@ -11,10 +11,19 @@ public class CfnFunctionDefinitionVersionResourceAccessPolicyPropertyDsl {
   private val cdkBuilder: CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty.Builder =
       CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty.builder()
 
+  /**
+   * @param permission The read-only or read-write access that the Lambda function has to the
+   * resource.
+   * Valid values are `ro` or `rw` .
+   */
   public fun permission(permission: String) {
     cdkBuilder.permission(permission)
   }
 
+  /**
+   * @param resourceId The ID of the resource. 
+   * This ID is assigned to the resource when you create the resource definition.
+   */
   public fun resourceId(resourceId: String) {
     cdkBuilder.resourceId(resourceId)
   }

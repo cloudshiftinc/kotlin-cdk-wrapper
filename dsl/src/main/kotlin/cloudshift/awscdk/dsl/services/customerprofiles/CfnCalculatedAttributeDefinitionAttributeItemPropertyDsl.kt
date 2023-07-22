@@ -11,6 +11,9 @@ public class CfnCalculatedAttributeDefinitionAttributeItemPropertyDsl {
   private val cdkBuilder: CfnCalculatedAttributeDefinition.AttributeItemProperty.Builder =
       CfnCalculatedAttributeDefinition.AttributeItemProperty.builder()
 
+  /**
+   * @param name The unique name of the calculated attribute. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

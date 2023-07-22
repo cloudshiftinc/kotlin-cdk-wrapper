@@ -11,6 +11,9 @@ public class CfnAutoScalingScheduledActionDsl {
   private val cdkBuilder: CfnAutoScalingScheduledAction.Builder =
       CfnAutoScalingScheduledAction.builder()
 
+  /**
+   * @param ignoreUnmodifiedGroupSizeProperties the value to be set.
+   */
   public fun ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties: Boolean) {
     cdkBuilder.ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties)
   }

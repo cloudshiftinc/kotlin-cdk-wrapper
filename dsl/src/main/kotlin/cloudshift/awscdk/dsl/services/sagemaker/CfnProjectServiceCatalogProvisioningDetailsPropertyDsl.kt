@@ -17,26 +17,49 @@ public class CfnProjectServiceCatalogProvisioningDetailsPropertyDsl {
 
   private val _provisioningParameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param pathId The path identifier of the product.
+   * This value is optional if the product has a default path, and required if the product has more
+   * than one path.
+   */
   public fun pathId(pathId: String) {
     cdkBuilder.pathId(pathId)
   }
 
+  /**
+   * @param productId The ID of the product to provision. 
+   */
   public fun productId(productId: String) {
     cdkBuilder.productId(productId)
   }
 
+  /**
+   * @param provisioningArtifactId The ID of the provisioning artifact.
+   */
   public fun provisioningArtifactId(provisioningArtifactId: String) {
     cdkBuilder.provisioningArtifactId(provisioningArtifactId)
   }
 
+  /**
+   * @param provisioningParameters A list of key value pairs that you specify when you provision a
+   * product.
+   */
   public fun provisioningParameters(vararg provisioningParameters: Any) {
     _provisioningParameters.addAll(listOf(*provisioningParameters))
   }
 
+  /**
+   * @param provisioningParameters A list of key value pairs that you specify when you provision a
+   * product.
+   */
   public fun provisioningParameters(provisioningParameters: Collection<Any>) {
     _provisioningParameters.addAll(provisioningParameters)
   }
 
+  /**
+   * @param provisioningParameters A list of key value pairs that you specify when you provision a
+   * product.
+   */
   public fun provisioningParameters(provisioningParameters: IResolvable) {
     cdkBuilder.provisioningParameters(provisioningParameters)
   }

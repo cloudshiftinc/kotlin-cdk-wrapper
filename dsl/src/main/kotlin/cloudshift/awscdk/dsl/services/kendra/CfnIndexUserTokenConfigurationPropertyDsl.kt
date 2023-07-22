@@ -11,19 +11,31 @@ public class CfnIndexUserTokenConfigurationPropertyDsl {
   private val cdkBuilder: CfnIndex.UserTokenConfigurationProperty.Builder =
       CfnIndex.UserTokenConfigurationProperty.builder()
 
+  /**
+   * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+   */
   public fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable) {
     cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration)
   }
 
+  /**
+   * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
+   */
   public
       fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: CfnIndex.JsonTokenTypeConfigurationProperty) {
     cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration)
   }
 
+  /**
+   * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+   */
   public fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable) {
     cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration)
   }
 
+  /**
+   * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
+   */
   public
       fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: CfnIndex.JwtTokenTypeConfigurationProperty) {
     cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration)

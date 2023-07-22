@@ -11,18 +11,34 @@ public class CfnBucketSourceSelectionCriteriaPropertyDsl {
   private val cdkBuilder: CfnBucket.SourceSelectionCriteriaProperty.Builder =
       CfnBucket.SourceSelectionCriteriaProperty.builder()
 
+  /**
+   * @param replicaModifications A filter that you can specify for selection for modifications on
+   * replicas.
+   */
   public fun replicaModifications(replicaModifications: IResolvable) {
     cdkBuilder.replicaModifications(replicaModifications)
   }
 
+  /**
+   * @param replicaModifications A filter that you can specify for selection for modifications on
+   * replicas.
+   */
   public fun replicaModifications(replicaModifications: CfnBucket.ReplicaModificationsProperty) {
     cdkBuilder.replicaModifications(replicaModifications)
   }
 
+  /**
+   * @param sseKmsEncryptedObjects A container for filter information for the selection of Amazon S3
+   * objects encrypted with AWS KMS.
+   */
   public fun sseKmsEncryptedObjects(sseKmsEncryptedObjects: IResolvable) {
     cdkBuilder.sseKmsEncryptedObjects(sseKmsEncryptedObjects)
   }
 
+  /**
+   * @param sseKmsEncryptedObjects A container for filter information for the selection of Amazon S3
+   * objects encrypted with AWS KMS.
+   */
   public
       fun sseKmsEncryptedObjects(sseKmsEncryptedObjects: CfnBucket.SseKmsEncryptedObjectsProperty) {
     cdkBuilder.sseKmsEncryptedObjects(sseKmsEncryptedObjects)

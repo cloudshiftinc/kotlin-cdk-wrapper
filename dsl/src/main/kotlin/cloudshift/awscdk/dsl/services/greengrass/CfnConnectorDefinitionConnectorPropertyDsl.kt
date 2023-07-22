@@ -14,20 +14,40 @@ public class CfnConnectorDefinitionConnectorPropertyDsl {
   private val cdkBuilder: CfnConnectorDefinition.ConnectorProperty.Builder =
       CfnConnectorDefinition.ConnectorProperty.builder()
 
+  /**
+   * @param connectorArn The Amazon Resource Name (ARN) of the connector. 
+   * For more information about connectors provided by AWS , see [Greengrass Connectors Provided by
+   * AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html) .
+   */
   public fun connectorArn(connectorArn: String) {
     cdkBuilder.connectorArn(connectorArn)
   }
 
+  /**
+   * @param id A descriptive or arbitrary ID for the connector. 
+   * This value must be unique within the connector definition version. Maximum length is 128
+   * characters with pattern `[a-zA-Z0-9:_-]+` .
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
-  public fun parameters(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param parameters The parameters or configuration used by the connector.
+   * For more information about connectors provided by AWS , see [Greengrass Connectors Provided by
+   * AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html) .
+   */
+  public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(parameters)
     cdkBuilder.parameters(builder.map)
   }
 
+  /**
+   * @param parameters The parameters or configuration used by the connector.
+   * For more information about connectors provided by AWS , see [Greengrass Connectors Provided by
+   * AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html) .
+   */
   public fun parameters(parameters: Any) {
     cdkBuilder.parameters(parameters)
   }

@@ -11,10 +11,16 @@ public class CfnSegmentCoordinatesPropertyDsl {
   private val cdkBuilder: CfnSegment.CoordinatesProperty.Builder =
       CfnSegment.CoordinatesProperty.builder()
 
+  /**
+   * @param latitude The latitude coordinate of the location. 
+   */
   public fun latitude(latitude: Number) {
     cdkBuilder.latitude(latitude)
   }
 
+  /**
+   * @param longitude The longitude coordinate of the location. 
+   */
   public fun longitude(longitude: Number) {
     cdkBuilder.longitude(longitude)
   }

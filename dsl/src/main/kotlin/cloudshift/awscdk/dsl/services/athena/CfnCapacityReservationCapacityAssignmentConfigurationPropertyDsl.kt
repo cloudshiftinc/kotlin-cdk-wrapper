@@ -16,14 +16,26 @@ public class CfnCapacityReservationCapacityAssignmentConfigurationPropertyDsl {
 
   private val _capacityAssignments: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param capacityAssignments The list of assignments that make up the capacity assignment
+   * configuration. 
+   */
   public fun capacityAssignments(vararg capacityAssignments: Any) {
     _capacityAssignments.addAll(listOf(*capacityAssignments))
   }
 
+  /**
+   * @param capacityAssignments The list of assignments that make up the capacity assignment
+   * configuration. 
+   */
   public fun capacityAssignments(capacityAssignments: Collection<Any>) {
     _capacityAssignments.addAll(capacityAssignments)
   }
 
+  /**
+   * @param capacityAssignments The list of assignments that make up the capacity assignment
+   * configuration. 
+   */
   public fun capacityAssignments(capacityAssignments: IResolvable) {
     cdkBuilder.capacityAssignments(capacityAssignments)
   }

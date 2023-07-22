@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.iam.IRole
 public class LifecycleHookTargetConfigDsl {
   private val cdkBuilder: LifecycleHookTargetConfig.Builder = LifecycleHookTargetConfig.builder()
 
+  /**
+   * @param createdRole The IRole that was used to bind the lifecycle hook to the target. 
+   */
   public fun createdRole(createdRole: IRole) {
     cdkBuilder.createdRole(createdRole)
   }
 
+  /**
+   * @param notificationTargetArn The targetArn that the lifecycle hook was bound to. 
+   */
   public fun notificationTargetArn(notificationTargetArn: String) {
     cdkBuilder.notificationTargetArn(notificationTargetArn)
   }

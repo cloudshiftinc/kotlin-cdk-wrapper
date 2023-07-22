@@ -15,14 +15,23 @@ public class CfnFleetMetricAggregationTypePropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param name The name of the aggregation type. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param values A list of the values of aggregation types. 
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values A list of the values of aggregation types. 
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

@@ -17,18 +17,34 @@ public class CfnAppBlockBuilderVpcConfigPropertyDsl {
 
   private val _subnetIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param securityGroupIds The identifiers of the security groups for the fleet or image builder.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The identifiers of the security groups for the fleet or image builder.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param subnetIds The identifiers of the subnets to which a network interface is attached from
+   * the fleet instance or image builder instance.
+   * Fleet instances use one or more subnets. Image builder instances use one subnet.
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The identifiers of the subnets to which a network interface is attached from
+   * the fleet instance or image builder instance.
+   * Fleet instances use one or more subnets. Image builder instances use one subnet.
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }

@@ -11,6 +11,9 @@ public class CfnBudgetHistoricalOptionsPropertyDsl {
   private val cdkBuilder: CfnBudget.HistoricalOptionsProperty.Builder =
       CfnBudget.HistoricalOptionsProperty.builder()
 
+  /**
+   * @param budgetAdjustmentPeriod the value to be set. 
+   */
   public fun budgetAdjustmentPeriod(budgetAdjustmentPeriod: Number) {
     cdkBuilder.budgetAdjustmentPeriod(budgetAdjustmentPeriod)
   }

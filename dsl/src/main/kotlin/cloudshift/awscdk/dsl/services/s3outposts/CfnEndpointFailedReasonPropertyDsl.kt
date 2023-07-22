@@ -11,10 +11,16 @@ public class CfnEndpointFailedReasonPropertyDsl {
   private val cdkBuilder: CfnEndpoint.FailedReasonProperty.Builder =
       CfnEndpoint.FailedReasonProperty.builder()
 
+  /**
+   * @param errorCode the value to be set.
+   */
   public fun errorCode(errorCode: String) {
     cdkBuilder.errorCode(errorCode)
   }
 
+  /**
+   * @param message the value to be set.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }

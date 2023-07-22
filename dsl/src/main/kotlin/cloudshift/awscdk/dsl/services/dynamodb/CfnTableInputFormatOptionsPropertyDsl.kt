@@ -11,10 +11,18 @@ public class CfnTableInputFormatOptionsPropertyDsl {
   private val cdkBuilder: CfnTable.InputFormatOptionsProperty.Builder =
       CfnTable.InputFormatOptionsProperty.builder()
 
+  /**
+   * @param csv The options for imported source files in CSV format.
+   * The values are Delimiter and HeaderList.
+   */
   public fun csv(csv: IResolvable) {
     cdkBuilder.csv(csv)
   }
 
+  /**
+   * @param csv The options for imported source files in CSV format.
+   * The values are Delimiter and HeaderList.
+   */
   public fun csv(csv: CfnTable.CsvProperty) {
     cdkBuilder.csv(csv)
   }

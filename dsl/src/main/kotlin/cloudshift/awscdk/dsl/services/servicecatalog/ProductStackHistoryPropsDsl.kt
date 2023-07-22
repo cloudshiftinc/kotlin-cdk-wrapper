@@ -12,26 +12,47 @@ import software.amazon.awscdk.services.servicecatalog.ProductStackHistoryProps
 public class ProductStackHistoryPropsDsl {
   private val cdkBuilder: ProductStackHistoryProps.Builder = ProductStackHistoryProps.builder()
 
+  /**
+   * @param currentVersionLocked If this is set to true, the ProductStack will not be overwritten if
+   * a snapshot is found for the currentVersionName. 
+   */
   public fun currentVersionLocked(currentVersionLocked: Boolean) {
     cdkBuilder.currentVersionLocked(currentVersionLocked)
   }
 
+  /**
+   * @param currentVersionName The current version name of the ProductStack. 
+   */
   public fun currentVersionName(currentVersionName: String) {
     cdkBuilder.currentVersionName(currentVersionName)
   }
 
+  /**
+   * @param description The description of the product version.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param directory The directory where template snapshots will be stored.
+   */
   public fun directory(directory: String) {
     cdkBuilder.directory(directory)
   }
 
+  /**
+   * @param productStack The ProductStack whose history will be retained as a snapshot. 
+   */
   public fun productStack(productStack: ProductStack) {
     cdkBuilder.productStack(productStack)
   }
 
+  /**
+   * @param validateTemplate Whether the specified product template will be validated by
+   * CloudFormation.
+   * If turned off, an invalid template configuration can be stored.
+   */
   public fun validateTemplate(validateTemplate: Boolean) {
     cdkBuilder.validateTemplate(validateTemplate)
   }

@@ -11,10 +11,16 @@ public class CfnDatabaseDatabaseIdentifierPropertyDsl {
   private val cdkBuilder: CfnDatabase.DatabaseIdentifierProperty.Builder =
       CfnDatabase.DatabaseIdentifierProperty.builder()
 
+  /**
+   * @param catalogId The ID of the Data Catalog in which the database resides.
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * @param databaseName The name of the catalog database.
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }

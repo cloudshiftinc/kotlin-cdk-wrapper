@@ -24,28 +24,80 @@ public class CfnModelPackageGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The description for the model group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html#cfn-sagemaker-modelpackagegroup-modelpackagegroupdescription)
+   * @param modelPackageGroupDescription The description for the model group. 
+   */
   public fun modelPackageGroupDescription(modelPackageGroupDescription: String) {
     cdkBuilder.modelPackageGroupDescription(modelPackageGroupDescription)
   }
 
+  /**
+   * The name of the model group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html#cfn-sagemaker-modelpackagegroup-modelpackagegroupname)
+   * @param modelPackageGroupName The name of the model group. 
+   */
   public fun modelPackageGroupName(modelPackageGroupName: String) {
     cdkBuilder.modelPackageGroupName(modelPackageGroupName)
   }
 
-  public fun modelPackageGroupPolicy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * A resouce policy to control access to a model group.
+   *
+   * For information about resoure policies, see [Identity-based policies and resource-based
+   * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+   * in the *AWS Identity and Access Management User Guide.* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html#cfn-sagemaker-modelpackagegroup-modelpackagegrouppolicy)
+   * @param modelPackageGroupPolicy A resouce policy to control access to a model group. 
+   */
+  public fun modelPackageGroupPolicy(modelPackageGroupPolicy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(modelPackageGroupPolicy)
     cdkBuilder.modelPackageGroupPolicy(builder.map)
   }
 
+  /**
+   * A resouce policy to control access to a model group.
+   *
+   * For information about resoure policies, see [Identity-based policies and resource-based
+   * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+   * in the *AWS Identity and Access Management User Guide.* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html#cfn-sagemaker-modelpackagegroup-modelpackagegrouppolicy)
+   * @param modelPackageGroupPolicy A resouce policy to control access to a model group. 
+   */
   public fun modelPackageGroupPolicy(modelPackageGroupPolicy: Any) {
     cdkBuilder.modelPackageGroupPolicy(modelPackageGroupPolicy)
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html#cfn-sagemaker-modelpackagegroup-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html#cfn-sagemaker-modelpackagegroup-tags)
+   * @param tags An array of key-value pairs to apply to this resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

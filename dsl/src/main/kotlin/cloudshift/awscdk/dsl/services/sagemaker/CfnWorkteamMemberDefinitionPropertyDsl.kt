@@ -11,19 +11,39 @@ public class CfnWorkteamMemberDefinitionPropertyDsl {
   private val cdkBuilder: CfnWorkteam.MemberDefinitionProperty.Builder =
       CfnWorkteam.MemberDefinitionProperty.builder()
 
+  /**
+   * @param cognitoMemberDefinition The Amazon Cognito user group that is part of the work team.
+   */
   public fun cognitoMemberDefinition(cognitoMemberDefinition: IResolvable) {
     cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition)
   }
 
+  /**
+   * @param cognitoMemberDefinition The Amazon Cognito user group that is part of the work team.
+   */
   public
       fun cognitoMemberDefinition(cognitoMemberDefinition: CfnWorkteam.CognitoMemberDefinitionProperty) {
     cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition)
   }
 
+  /**
+   * @param oidcMemberDefinition A list user groups that exist in your OIDC Identity Provider (IdP).
+   * One to ten groups can be used to create a single private work team. When you add a user group
+   * to the list of `Groups` , you can add that user group to one or more private work teams. If you
+   * add a user group to a private work team, all workers in that user group are added to the work
+   * team.
+   */
   public fun oidcMemberDefinition(oidcMemberDefinition: IResolvable) {
     cdkBuilder.oidcMemberDefinition(oidcMemberDefinition)
   }
 
+  /**
+   * @param oidcMemberDefinition A list user groups that exist in your OIDC Identity Provider (IdP).
+   * One to ten groups can be used to create a single private work team. When you add a user group
+   * to the list of `Groups` , you can add that user group to one or more private work teams. If you
+   * add a user group to a private work team, all workers in that user group are added to the work
+   * team.
+   */
   public fun oidcMemberDefinition(oidcMemberDefinition: CfnWorkteam.OidcMemberDefinitionProperty) {
     cdkBuilder.oidcMemberDefinition(oidcMemberDefinition)
   }

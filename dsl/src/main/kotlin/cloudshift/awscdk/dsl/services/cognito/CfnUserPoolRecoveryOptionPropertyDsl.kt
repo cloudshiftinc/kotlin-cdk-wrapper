@@ -12,10 +12,17 @@ public class CfnUserPoolRecoveryOptionPropertyDsl {
   private val cdkBuilder: CfnUserPool.RecoveryOptionProperty.Builder =
       CfnUserPool.RecoveryOptionProperty.builder()
 
+  /**
+   * @param name Specifies the recovery method for a user.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param priority A positive integer specifying priority of a method with 1 being the highest
+   * priority.
+   */
   public fun priority(priority: Number) {
     cdkBuilder.priority(priority)
   }

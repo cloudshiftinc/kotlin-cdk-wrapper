@@ -11,6 +11,9 @@ public class CfnApplicationOutputV2KinesisFirehoseOutputPropertyDsl {
   private val cdkBuilder: CfnApplicationOutputV2.KinesisFirehoseOutputProperty.Builder =
       CfnApplicationOutputV2.KinesisFirehoseOutputProperty.builder()
 
+  /**
+   * @param resourceArn The ARN of the destination delivery stream to write to. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

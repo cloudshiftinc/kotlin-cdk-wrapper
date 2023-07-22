@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
 public class CfnRouteDurationPropertyDsl {
   private val cdkBuilder: CfnRoute.DurationProperty.Builder = CfnRoute.DurationProperty.builder()
 
+  /**
+   * @param unit A unit of time. 
+   */
   public fun unit(unit: String) {
     cdkBuilder.unit(unit)
   }
 
+  /**
+   * @param value A number of time units. 
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

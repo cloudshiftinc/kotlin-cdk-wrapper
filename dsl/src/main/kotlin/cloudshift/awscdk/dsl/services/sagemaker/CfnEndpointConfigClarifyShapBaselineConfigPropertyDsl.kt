@@ -11,14 +11,23 @@ public class CfnEndpointConfigClarifyShapBaselineConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ClarifyShapBaselineConfigProperty.Builder =
       CfnEndpointConfig.ClarifyShapBaselineConfigProperty.builder()
 
+  /**
+   * @param mimeType the value to be set.
+   */
   public fun mimeType(mimeType: String) {
     cdkBuilder.mimeType(mimeType)
   }
 
+  /**
+   * @param shapBaseline the value to be set.
+   */
   public fun shapBaseline(shapBaseline: String) {
     cdkBuilder.shapBaseline(shapBaseline)
   }
 
+  /**
+   * @param shapBaselineUri the value to be set.
+   */
   public fun shapBaselineUri(shapBaselineUri: String) {
     cdkBuilder.shapBaselineUri(shapBaselineUri)
   }

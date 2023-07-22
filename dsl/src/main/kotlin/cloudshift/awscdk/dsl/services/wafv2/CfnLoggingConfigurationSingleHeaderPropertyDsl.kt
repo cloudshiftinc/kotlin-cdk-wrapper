@@ -11,6 +11,9 @@ public class CfnLoggingConfigurationSingleHeaderPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.SingleHeaderProperty.Builder =
       CfnLoggingConfiguration.SingleHeaderProperty.builder()
 
+  /**
+   * @param name The name of the query header to inspect. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

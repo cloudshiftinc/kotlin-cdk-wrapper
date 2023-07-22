@@ -19,30 +19,53 @@ public class CfnLifecyclePolicyPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description A description of the lifecycle policy.
+   * The characters ^[0-9A-Za-z _-]+$ are supported.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM role used to run the
+   * operations specified by the lifecycle policy.
+   */
   public fun executionRoleArn(executionRoleArn: String) {
     cdkBuilder.executionRoleArn(executionRoleArn)
   }
 
+  /**
+   * @param policyDetails The configuration details of the lifecycle policy.
+   */
   public fun policyDetails(policyDetails: IResolvable) {
     cdkBuilder.policyDetails(policyDetails)
   }
 
+  /**
+   * @param policyDetails The configuration details of the lifecycle policy.
+   */
   public fun policyDetails(policyDetails: CfnLifecyclePolicy.PolicyDetailsProperty) {
     cdkBuilder.policyDetails(policyDetails)
   }
 
+  /**
+   * @param state The activation state of the lifecycle policy.
+   */
   public fun state(state: String) {
     cdkBuilder.state(state)
   }
 
+  /**
+   * @param tags The tags to apply to the lifecycle policy during creation.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to apply to the lifecycle policy during creation.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

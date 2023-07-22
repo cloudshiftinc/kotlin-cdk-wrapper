@@ -11,6 +11,10 @@ public class CfnWorkspaceLoggingConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkspace.LoggingConfigurationProperty.Builder =
       CfnWorkspace.LoggingConfigurationProperty.builder()
 
+  /**
+   * @param logGroupArn The Amazon Resource Name (ARN) of the CloudWatch log group the logs are
+   * emitted to.
+   */
   public fun logGroupArn(logGroupArn: String) {
     cdkBuilder.logGroupArn(logGroupArn)
   }

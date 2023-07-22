@@ -13,16 +13,33 @@ import software.amazon.awscdk.services.elasticsearch.AdvancedSecurityOptions
 public class AdvancedSecurityOptionsDsl {
   private val cdkBuilder: AdvancedSecurityOptions.Builder = AdvancedSecurityOptions.builder()
 
+  /**
+   * @param masterUserArn ARN for the master user.
+   * Only specify this or masterUserName, but not both.
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun masterUserArn(masterUserArn: String) {
     cdkBuilder.masterUserArn(masterUserArn)
   }
 
+  /**
+   * @param masterUserName Username for the master user.
+   * Only specify this or masterUserArn, but not both.
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun masterUserName(masterUserName: String) {
     cdkBuilder.masterUserName(masterUserName)
   }
 
+  /**
+   * @param masterUserPassword Password for the master user.
+   * You can use `SecretValue.unsafePlainText` to specify a password in plain text or
+   * use `secretsmanager.Secret.fromSecretAttributes` to reference a secret in
+   * Secrets Manager.
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun masterUserPassword(masterUserPassword: SecretValue) {
     cdkBuilder.masterUserPassword(masterUserPassword)

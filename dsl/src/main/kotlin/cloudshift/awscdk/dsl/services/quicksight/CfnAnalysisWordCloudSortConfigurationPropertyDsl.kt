@@ -16,22 +16,37 @@ public class CfnAnalysisWordCloudSortConfigurationPropertyDsl {
 
   private val _categorySort: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param categoryItemsLimit The limit on the number of groups that are displayed in a word cloud.
+   */
   public fun categoryItemsLimit(categoryItemsLimit: IResolvable) {
     cdkBuilder.categoryItemsLimit(categoryItemsLimit)
   }
 
+  /**
+   * @param categoryItemsLimit The limit on the number of groups that are displayed in a word cloud.
+   */
   public fun categoryItemsLimit(categoryItemsLimit: CfnAnalysis.ItemsLimitConfigurationProperty) {
     cdkBuilder.categoryItemsLimit(categoryItemsLimit)
   }
 
+  /**
+   * @param categorySort The sort configuration of group by fields.
+   */
   public fun categorySort(vararg categorySort: Any) {
     _categorySort.addAll(listOf(*categorySort))
   }
 
+  /**
+   * @param categorySort The sort configuration of group by fields.
+   */
   public fun categorySort(categorySort: Collection<Any>) {
     _categorySort.addAll(categorySort)
   }
 
+  /**
+   * @param categorySort The sort configuration of group by fields.
+   */
   public fun categorySort(categorySort: IResolvable) {
     cdkBuilder.categorySort(categorySort)
   }

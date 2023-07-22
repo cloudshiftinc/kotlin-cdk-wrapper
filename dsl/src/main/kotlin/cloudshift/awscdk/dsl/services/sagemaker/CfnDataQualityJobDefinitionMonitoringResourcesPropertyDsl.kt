@@ -11,10 +11,18 @@ public class CfnDataQualityJobDefinitionMonitoringResourcesPropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.MonitoringResourcesProperty.Builder =
       CfnDataQualityJobDefinition.MonitoringResourcesProperty.builder()
 
+  /**
+   * @param clusterConfig The configuration for the cluster resources used to run the processing
+   * job. 
+   */
   public fun clusterConfig(clusterConfig: IResolvable) {
     cdkBuilder.clusterConfig(clusterConfig)
   }
 
+  /**
+   * @param clusterConfig The configuration for the cluster resources used to run the processing
+   * job. 
+   */
   public fun clusterConfig(clusterConfig: CfnDataQualityJobDefinition.ClusterConfigProperty) {
     cdkBuilder.clusterConfig(clusterConfig)
   }

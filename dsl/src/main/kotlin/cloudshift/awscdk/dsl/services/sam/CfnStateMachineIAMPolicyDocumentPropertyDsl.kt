@@ -14,16 +14,25 @@ public class CfnStateMachineIAMPolicyDocumentPropertyDsl {
   private val cdkBuilder: CfnStateMachine.IAMPolicyDocumentProperty.Builder =
       CfnStateMachine.IAMPolicyDocumentProperty.builder()
 
-  public fun statement(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param statement the value to be set. 
+   */
+  public fun statement(statement: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(statement)
     cdkBuilder.statement(builder.map)
   }
 
+  /**
+   * @param statement the value to be set. 
+   */
   public fun statement(statement: Any) {
     cdkBuilder.statement(statement)
   }
 
+  /**
+   * @param version the value to be set. 
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

@@ -12,14 +12,23 @@ public class CfnDatasetDatasetContentDeliveryRulePropertyDsl {
   private val cdkBuilder: CfnDataset.DatasetContentDeliveryRuleProperty.Builder =
       CfnDataset.DatasetContentDeliveryRuleProperty.builder()
 
+  /**
+   * @param destination The destination to which dataset contents are delivered. 
+   */
   public fun destination(destination: IResolvable) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param destination The destination to which dataset contents are delivered. 
+   */
   public fun destination(destination: CfnDataset.DatasetContentDeliveryRuleDestinationProperty) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param entryName The name of the dataset content delivery rules entry.
+   */
   public fun entryName(entryName: String) {
     cdkBuilder.entryName(entryName)
   }

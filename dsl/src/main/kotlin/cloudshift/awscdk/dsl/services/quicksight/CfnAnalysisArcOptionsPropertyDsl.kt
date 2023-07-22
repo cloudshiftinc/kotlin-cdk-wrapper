@@ -11,6 +11,9 @@ public class CfnAnalysisArcOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ArcOptionsProperty.Builder =
       CfnAnalysis.ArcOptionsProperty.builder()
 
+  /**
+   * @param arcThickness The arc thickness of a `GaugeChartVisual` .
+   */
   public fun arcThickness(arcThickness: String) {
     cdkBuilder.arcThickness(arcThickness)
   }

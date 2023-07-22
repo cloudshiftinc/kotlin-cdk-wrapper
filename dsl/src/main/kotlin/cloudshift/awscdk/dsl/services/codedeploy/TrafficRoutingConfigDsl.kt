@@ -13,26 +13,48 @@ import software.amazon.awscdk.services.codedeploy.TrafficRoutingConfig
 public class TrafficRoutingConfigDsl {
   private val cdkBuilder: TrafficRoutingConfig.Builder = TrafficRoutingConfig.builder()
 
-  public fun timeBasedCanary(block: CanaryTrafficRoutingConfigDsl.() -> Unit = {}) {
+  /**
+   * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+   * function or ECS task set to another in two increments.
+   */
+  public fun timeBasedCanary(timeBasedCanary: CanaryTrafficRoutingConfigDsl.() -> Unit = {}) {
     val builder = CanaryTrafficRoutingConfigDsl()
-    builder.apply(block)
+    builder.apply(timeBasedCanary)
     cdkBuilder.timeBasedCanary(builder.build())
   }
 
+  /**
+   * @param timeBasedCanary A configuration that shifts traffic from one version of a Lambda
+   * function or ECS task set to another in two increments.
+   */
   public fun timeBasedCanary(timeBasedCanary: CanaryTrafficRoutingConfig) {
     cdkBuilder.timeBasedCanary(timeBasedCanary)
   }
 
-  public fun timeBasedLinear(block: LinearTrafficRoutingConfigDsl.() -> Unit = {}) {
+  /**
+   * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+   * function or Amazon ECS task set to another in equal increments, with an equal number of minutes
+   * between each increment.
+   */
+  public fun timeBasedLinear(timeBasedLinear: LinearTrafficRoutingConfigDsl.() -> Unit = {}) {
     val builder = LinearTrafficRoutingConfigDsl()
-    builder.apply(block)
+    builder.apply(timeBasedLinear)
     cdkBuilder.timeBasedLinear(builder.build())
   }
 
+  /**
+   * @param timeBasedLinear A configuration that shifts traffic from one version of a Lambda
+   * function or Amazon ECS task set to another in equal increments, with an equal number of minutes
+   * between each increment.
+   */
   public fun timeBasedLinear(timeBasedLinear: LinearTrafficRoutingConfig) {
     cdkBuilder.timeBasedLinear(timeBasedLinear)
   }
 
+  /**
+   * @param type The type of traffic shifting ( `TimeBasedCanary` or `TimeBasedLinear` ) used by a
+   * deployment configuration. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

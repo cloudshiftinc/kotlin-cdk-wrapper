@@ -12,10 +12,17 @@ public class CfnFlowAggregationConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.AggregationConfigProperty.Builder =
       CfnFlow.AggregationConfigProperty.builder()
 
+  /**
+   * @param aggregationType Specifies whether Amazon AppFlow aggregates the flow records into a
+   * single file, or leave them unaggregated.
+   */
   public fun aggregationType(aggregationType: String) {
     cdkBuilder.aggregationType(aggregationType)
   }
 
+  /**
+   * @param targetFileSize the value to be set.
+   */
   public fun targetFileSize(targetFileSize: Number) {
     cdkBuilder.targetFileSize(targetFileSize)
   }

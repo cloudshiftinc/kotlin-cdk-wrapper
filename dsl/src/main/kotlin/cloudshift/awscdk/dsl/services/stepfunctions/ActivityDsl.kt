@@ -14,6 +14,13 @@ public class ActivityDsl(
 ) {
   private val cdkBuilder: Activity.Builder = Activity.Builder.create(scope, id)
 
+  /**
+   * The name for this activity.
+   *
+   * Default: - If not supplied, a name is generated
+   *
+   * @param activityName The name for this activity. 
+   */
   public fun activityName(activityName: String) {
     cdkBuilder.activityName(activityName)
   }

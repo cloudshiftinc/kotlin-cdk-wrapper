@@ -11,10 +11,18 @@ public class CfnFunctionDefinitionVersionDefaultConfigPropertyDsl {
   private val cdkBuilder: CfnFunctionDefinitionVersion.DefaultConfigProperty.Builder =
       CfnFunctionDefinitionVersion.DefaultConfigProperty.builder()
 
+  /**
+   * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+   * Greengrass core. 
+   */
   public fun execution(execution: IResolvable) {
     cdkBuilder.execution(execution)
   }
 
+  /**
+   * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+   * Greengrass core. 
+   */
   public fun execution(execution: CfnFunctionDefinitionVersion.ExecutionProperty) {
     cdkBuilder.execution(execution)
   }

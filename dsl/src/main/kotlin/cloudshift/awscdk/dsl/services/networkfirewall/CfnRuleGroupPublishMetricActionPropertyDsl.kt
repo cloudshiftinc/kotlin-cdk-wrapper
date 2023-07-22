@@ -16,14 +16,23 @@ public class CfnRuleGroupPublishMetricActionPropertyDsl {
 
   private val _dimensions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dimensions the value to be set. 
+   */
   public fun dimensions(vararg dimensions: Any) {
     _dimensions.addAll(listOf(*dimensions))
   }
 
+  /**
+   * @param dimensions the value to be set. 
+   */
   public fun dimensions(dimensions: Collection<Any>) {
     _dimensions.addAll(dimensions)
   }
 
+  /**
+   * @param dimensions the value to be set. 
+   */
   public fun dimensions(dimensions: IResolvable) {
     cdkBuilder.dimensions(dimensions)
   }

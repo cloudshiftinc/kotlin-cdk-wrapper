@@ -27,54 +27,158 @@ public class EndpointGroupDsl(
 
   private val _portOverrides: MutableList<PortOverride> = mutableListOf()
 
+  /**
+   * Name of the endpoint group.
+   *
+   * Default: - logical ID of the resource
+   *
+   * @param endpointGroupName Name of the endpoint group. 
+   */
   public fun endpointGroupName(endpointGroupName: String) {
     cdkBuilder.endpointGroupName(endpointGroupName)
   }
 
+  /**
+   * Initial list of endpoints for this group.
+   *
+   * Default: - Group is initially empty
+   *
+   * @param endpoints Initial list of endpoints for this group. 
+   */
   public fun endpoints(vararg endpoints: IEndpoint) {
     _endpoints.addAll(listOf(*endpoints))
   }
 
+  /**
+   * Initial list of endpoints for this group.
+   *
+   * Default: - Group is initially empty
+   *
+   * @param endpoints Initial list of endpoints for this group. 
+   */
   public fun endpoints(endpoints: Collection<IEndpoint>) {
     _endpoints.addAll(endpoints)
   }
 
+  /**
+   * The time between health checks for each endpoint.
+   *
+   * Must be either 10 or 30 seconds.
+   *
+   * Default: Duration.seconds(30)
+   *
+   * @param healthCheckInterval The time between health checks for each endpoint. 
+   */
   public fun healthCheckInterval(healthCheckInterval: Duration) {
     cdkBuilder.healthCheckInterval(healthCheckInterval)
   }
 
+  /**
+   * The ping path for health checks (if the protocol is HTTP(S)).
+   *
+   * Default: '/'
+   *
+   * @param healthCheckPath The ping path for health checks (if the protocol is HTTP(S)). 
+   */
   public fun healthCheckPath(healthCheckPath: String) {
     cdkBuilder.healthCheckPath(healthCheckPath)
   }
 
+  /**
+   * The port used to perform health checks.
+   *
+   * Default: - The listener's port
+   *
+   * @param healthCheckPort The port used to perform health checks. 
+   */
   public fun healthCheckPort(healthCheckPort: Number) {
     cdkBuilder.healthCheckPort(healthCheckPort)
   }
 
+  /**
+   * The protocol used to perform health checks.
+   *
+   * Default: HealthCheckProtocol.TCP
+   *
+   * @param healthCheckProtocol The protocol used to perform health checks. 
+   */
   public fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol) {
     cdkBuilder.healthCheckProtocol(healthCheckProtocol)
   }
 
+  /**
+   * The number of consecutive health checks required to set the state of a healthy endpoint to
+   * unhealthy, or to set an unhealthy endpoint to healthy.
+   *
+   * Default: 3
+   *
+   * @param healthCheckThreshold The number of consecutive health checks required to set the state
+   * of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. 
+   */
   public fun healthCheckThreshold(healthCheckThreshold: Number) {
     cdkBuilder.healthCheckThreshold(healthCheckThreshold)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the listener.
+   *
+   * @param listener The Amazon Resource Name (ARN) of the listener. 
+   */
   public fun listener(listener: IListener) {
     cdkBuilder.listener(listener)
   }
 
+  /**
+   * Override the destination ports used to route traffic to an endpoint.
+   *
+   * Unless overridden, the port used to hit the endpoint will be the same as the port
+   * that traffic arrives on at the listener.
+   *
+   * Default: - No overrides
+   *
+   * @param portOverrides Override the destination ports used to route traffic to an endpoint. 
+   */
   public fun portOverrides(portOverrides: PortOverrideDsl.() -> Unit) {
     _portOverrides.add(PortOverrideDsl().apply(portOverrides).build())
   }
 
+  /**
+   * Override the destination ports used to route traffic to an endpoint.
+   *
+   * Unless overridden, the port used to hit the endpoint will be the same as the port
+   * that traffic arrives on at the listener.
+   *
+   * Default: - No overrides
+   *
+   * @param portOverrides Override the destination ports used to route traffic to an endpoint. 
+   */
   public fun portOverrides(portOverrides: Collection<PortOverride>) {
     _portOverrides.addAll(portOverrides)
   }
 
+  /**
+   * The AWS Region where the endpoint group is located.
+   *
+   * Default: - region of the first endpoint in this group, or the stack region if that region can't
+   * be determined
+   *
+   * @param region The AWS Region where the endpoint group is located. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * The percentage of traffic to send to this AWS Region.
+   *
+   * The percentage is applied to the traffic that would otherwise have been
+   * routed to the Region based on optimal routing. Additional traffic is
+   * distributed to other endpoint groups for this listener.
+   *
+   * Default: 100
+   *
+   * @param trafficDialPercentage The percentage of traffic to send to this AWS Region. 
+   */
   public fun trafficDialPercentage(trafficDialPercentage: Number) {
     cdkBuilder.trafficDialPercentage(trafficDialPercentage)
   }

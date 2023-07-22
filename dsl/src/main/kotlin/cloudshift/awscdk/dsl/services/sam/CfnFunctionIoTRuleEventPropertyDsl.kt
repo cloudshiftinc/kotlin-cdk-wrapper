@@ -11,10 +11,16 @@ public class CfnFunctionIoTRuleEventPropertyDsl {
   private val cdkBuilder: CfnFunction.IoTRuleEventProperty.Builder =
       CfnFunction.IoTRuleEventProperty.builder()
 
+  /**
+   * @param awsIotSqlVersion the value to be set.
+   */
   public fun awsIotSqlVersion(awsIotSqlVersion: String) {
     cdkBuilder.awsIotSqlVersion(awsIotSqlVersion)
   }
 
+  /**
+   * @param sql the value to be set. 
+   */
   public fun sql(sql: String) {
     cdkBuilder.sql(sql)
   }

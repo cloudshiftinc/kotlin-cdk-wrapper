@@ -11,6 +11,9 @@ public class CfnPublicDnsNamespaceSOAPropertyDsl {
   private val cdkBuilder: CfnPublicDnsNamespace.SOAProperty.Builder =
       CfnPublicDnsNamespace.SOAProperty.builder()
 
+  /**
+   * @param ttl The time to live (TTL) for purposes of negative caching.
+   */
   public fun ttl(ttl: Number) {
     cdkBuilder.ttl(ttl)
   }

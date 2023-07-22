@@ -16,10 +16,22 @@ public class CfnResponseHeadersPolicyDsl(
   private val cdkBuilder: CfnResponseHeadersPolicy.Builder =
       CfnResponseHeadersPolicy.Builder.create(scope, id)
 
+  /**
+   * A response headers policy configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig)
+   * @param responseHeadersPolicyConfig A response headers policy configuration. 
+   */
   public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
     cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
   }
 
+  /**
+   * A response headers policy configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig)
+   * @param responseHeadersPolicyConfig A response headers policy configuration. 
+   */
   public
       fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty) {
     cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)

@@ -23,58 +23,123 @@ public class CfnDistributionConfigurationDistributionPropertyDsl {
 
   private val _licenseConfigurationArns: MutableList<String> = mutableListOf()
 
-  public fun amiDistributionConfiguration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param amiDistributionConfiguration The specific AMI settings, such as launch permissions and
+   * AMI tags.
+   * For details, see example schema below.
+   */
+  public fun amiDistributionConfiguration(amiDistributionConfiguration: MapBuilder.() -> Unit =
+      {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(amiDistributionConfiguration)
     cdkBuilder.amiDistributionConfiguration(builder.map)
   }
 
+  /**
+   * @param amiDistributionConfiguration The specific AMI settings, such as launch permissions and
+   * AMI tags.
+   * For details, see example schema below.
+   */
   public fun amiDistributionConfiguration(amiDistributionConfiguration: Any) {
     cdkBuilder.amiDistributionConfiguration(amiDistributionConfiguration)
   }
 
-  public fun containerDistributionConfiguration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param containerDistributionConfiguration Container distribution settings for encryption,
+   * licensing, and sharing in a specific Region.
+   * For details, see example schema below.
+   */
+  public
+      fun containerDistributionConfiguration(containerDistributionConfiguration: MapBuilder.() -> Unit
+      = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(containerDistributionConfiguration)
     cdkBuilder.containerDistributionConfiguration(builder.map)
   }
 
+  /**
+   * @param containerDistributionConfiguration Container distribution settings for encryption,
+   * licensing, and sharing in a specific Region.
+   * For details, see example schema below.
+   */
   public fun containerDistributionConfiguration(containerDistributionConfiguration: Any) {
     cdkBuilder.containerDistributionConfiguration(containerDistributionConfiguration)
   }
 
+  /**
+   * @param fastLaunchConfigurations The Windows faster-launching configurations to use for AMI
+   * distribution.
+   */
   public fun fastLaunchConfigurations(vararg fastLaunchConfigurations: Any) {
     _fastLaunchConfigurations.addAll(listOf(*fastLaunchConfigurations))
   }
 
+  /**
+   * @param fastLaunchConfigurations The Windows faster-launching configurations to use for AMI
+   * distribution.
+   */
   public fun fastLaunchConfigurations(fastLaunchConfigurations: Collection<Any>) {
     _fastLaunchConfigurations.addAll(fastLaunchConfigurations)
   }
 
+  /**
+   * @param fastLaunchConfigurations The Windows faster-launching configurations to use for AMI
+   * distribution.
+   */
   public fun fastLaunchConfigurations(fastLaunchConfigurations: IResolvable) {
     cdkBuilder.fastLaunchConfigurations(fastLaunchConfigurations)
   }
 
+  /**
+   * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply
+   * to image distribution for specified accounts.
+   */
   public fun launchTemplateConfigurations(vararg launchTemplateConfigurations: Any) {
     _launchTemplateConfigurations.addAll(listOf(*launchTemplateConfigurations))
   }
 
+  /**
+   * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply
+   * to image distribution for specified accounts.
+   */
   public fun launchTemplateConfigurations(launchTemplateConfigurations: Collection<Any>) {
     _launchTemplateConfigurations.addAll(launchTemplateConfigurations)
   }
 
+  /**
+   * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply
+   * to image distribution for specified accounts.
+   */
   public fun launchTemplateConfigurations(launchTemplateConfigurations: IResolvable) {
     cdkBuilder.launchTemplateConfigurations(launchTemplateConfigurations)
   }
 
+  /**
+   * @param licenseConfigurationArns The License Manager Configuration to associate with the AMI in
+   * the specified Region.
+   * For more information, see the [LicenseConfiguration
+   * API](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_LicenseConfiguration.html)
+   * .
+   */
   public fun licenseConfigurationArns(vararg licenseConfigurationArns: String) {
     _licenseConfigurationArns.addAll(listOf(*licenseConfigurationArns))
   }
 
+  /**
+   * @param licenseConfigurationArns The License Manager Configuration to associate with the AMI in
+   * the specified Region.
+   * For more information, see the [LicenseConfiguration
+   * API](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_LicenseConfiguration.html)
+   * .
+   */
   public fun licenseConfigurationArns(licenseConfigurationArns: Collection<String>) {
     _licenseConfigurationArns.addAll(licenseConfigurationArns)
   }
 
+  /**
+   * @param region The target Region for the Distribution Configuration. 
+   * For example, `eu-west-1` .
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }

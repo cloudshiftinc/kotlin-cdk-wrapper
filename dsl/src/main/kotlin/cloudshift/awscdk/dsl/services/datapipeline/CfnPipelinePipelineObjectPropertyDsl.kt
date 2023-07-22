@@ -17,22 +17,37 @@ public class CfnPipelinePipelineObjectPropertyDsl {
 
   private val _fields: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param fields Key-value pairs that define the properties of the object. 
+   */
   public fun fields(vararg fields: Any) {
     _fields.addAll(listOf(*fields))
   }
 
+  /**
+   * @param fields Key-value pairs that define the properties of the object. 
+   */
   public fun fields(fields: Collection<Any>) {
     _fields.addAll(fields)
   }
 
+  /**
+   * @param fields Key-value pairs that define the properties of the object. 
+   */
   public fun fields(fields: IResolvable) {
     cdkBuilder.fields(fields)
   }
 
+  /**
+   * @param id The ID of the object. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param name The name of the object. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

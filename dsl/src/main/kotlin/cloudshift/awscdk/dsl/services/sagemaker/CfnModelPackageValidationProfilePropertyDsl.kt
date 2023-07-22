@@ -12,14 +12,25 @@ public class CfnModelPackageValidationProfilePropertyDsl {
   private val cdkBuilder: CfnModelPackage.ValidationProfileProperty.Builder =
       CfnModelPackage.ValidationProfileProperty.builder()
 
+  /**
+   * @param profileName The name of the profile for the model package. 
+   */
   public fun profileName(profileName: String) {
     cdkBuilder.profileName(profileName)
   }
 
+  /**
+   * @param transformJobDefinition The `TransformJobDefinition` object that describes the transform
+   * job used for the validation of the model package. 
+   */
   public fun transformJobDefinition(transformJobDefinition: IResolvable) {
     cdkBuilder.transformJobDefinition(transformJobDefinition)
   }
 
+  /**
+   * @param transformJobDefinition The `TransformJobDefinition` object that describes the transform
+   * job used for the validation of the model package. 
+   */
   public
       fun transformJobDefinition(transformJobDefinition: CfnModelPackage.TransformJobDefinitionProperty) {
     cdkBuilder.transformJobDefinition(transformJobDefinition)

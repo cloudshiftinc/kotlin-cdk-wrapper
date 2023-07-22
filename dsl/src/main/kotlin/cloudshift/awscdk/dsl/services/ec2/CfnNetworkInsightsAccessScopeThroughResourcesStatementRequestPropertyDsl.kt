@@ -12,10 +12,16 @@ public class CfnNetworkInsightsAccessScopeThroughResourcesStatementRequestProper
       CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.Builder =
       CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.builder()
 
+  /**
+   * @param resourceStatement The resource statement.
+   */
   public fun resourceStatement(resourceStatement: IResolvable) {
     cdkBuilder.resourceStatement(resourceStatement)
   }
 
+  /**
+   * @param resourceStatement The resource statement.
+   */
   public
       fun resourceStatement(resourceStatement: CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty) {
     cdkBuilder.resourceStatement(resourceStatement)

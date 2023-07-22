@@ -12,10 +12,16 @@ public class CfnReplicationConfigurationPropsDsl {
   private val cdkBuilder: CfnReplicationConfigurationProps.Builder =
       CfnReplicationConfigurationProps.builder()
 
+  /**
+   * @param replicationConfiguration The replication configuration for a registry. 
+   */
   public fun replicationConfiguration(replicationConfiguration: IResolvable) {
     cdkBuilder.replicationConfiguration(replicationConfiguration)
   }
 
+  /**
+   * @param replicationConfiguration The replication configuration for a registry. 
+   */
   public
       fun replicationConfiguration(replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty) {
     cdkBuilder.replicationConfiguration(replicationConfiguration)

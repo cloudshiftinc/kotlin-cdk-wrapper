@@ -16,14 +16,26 @@ public class CfnBucketLifecycleConfigurationPropertyDsl {
 
   private val _rules: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param rules The container for the lifecycle configuration rules for the objects stored in the
+   * S3 on Outposts bucket. 
+   */
   public fun rules(vararg rules: Any) {
     _rules.addAll(listOf(*rules))
   }
 
+  /**
+   * @param rules The container for the lifecycle configuration rules for the objects stored in the
+   * S3 on Outposts bucket. 
+   */
   public fun rules(rules: Collection<Any>) {
     _rules.addAll(rules)
   }
 
+  /**
+   * @param rules The container for the lifecycle configuration rules for the objects stored in the
+   * S3 on Outposts bucket. 
+   */
   public fun rules(rules: IResolvable) {
     cdkBuilder.rules(rules)
   }

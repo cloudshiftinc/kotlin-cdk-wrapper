@@ -11,6 +11,9 @@ public class CfnVirtualServiceVirtualNodeServiceProviderPropertyDsl {
   private val cdkBuilder: CfnVirtualService.VirtualNodeServiceProviderProperty.Builder =
       CfnVirtualService.VirtualNodeServiceProviderProperty.builder()
 
+  /**
+   * @param virtualNodeName The name of the virtual node that is acting as a service provider. 
+   */
   public fun virtualNodeName(virtualNodeName: String) {
     cdkBuilder.virtualNodeName(virtualNodeName)
   }

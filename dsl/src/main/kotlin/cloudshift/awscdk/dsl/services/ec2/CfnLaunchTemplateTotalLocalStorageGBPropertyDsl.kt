@@ -11,10 +11,18 @@ public class CfnLaunchTemplateTotalLocalStorageGBPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.TotalLocalStorageGBProperty.Builder =
       CfnLaunchTemplate.TotalLocalStorageGBProperty.builder()
 
+  /**
+   * @param max The maximum amount of total local storage, in GB.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum amount of total local storage, in GB.
+   * To specify no minimum limit, omit this parameter.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

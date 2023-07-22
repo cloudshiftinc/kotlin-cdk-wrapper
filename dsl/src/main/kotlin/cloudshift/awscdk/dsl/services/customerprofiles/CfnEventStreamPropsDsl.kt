@@ -17,22 +17,38 @@ public class CfnEventStreamPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param domainName The unique name of the domain. 
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param eventStreamName The name of the event stream. 
+   */
   public fun eventStreamName(eventStreamName: String) {
     cdkBuilder.eventStreamName(eventStreamName)
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param uri The StreamARN of the destination to deliver profile events to. 
+   * For example, arn:aws:kinesis:region:account-id:stream/stream-name.
+   */
   public fun uri(uri: String) {
     cdkBuilder.uri(uri)
   }

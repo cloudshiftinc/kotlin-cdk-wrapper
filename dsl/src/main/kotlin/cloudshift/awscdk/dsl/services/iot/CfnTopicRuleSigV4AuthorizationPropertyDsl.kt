@@ -11,14 +11,23 @@ public class CfnTopicRuleSigV4AuthorizationPropertyDsl {
   private val cdkBuilder: CfnTopicRule.SigV4AuthorizationProperty.Builder =
       CfnTopicRule.SigV4AuthorizationProperty.builder()
 
+  /**
+   * @param roleArn The ARN of the signing role. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param serviceName The service name to use while signing with Sig V4. 
+   */
   public fun serviceName(serviceName: String) {
     cdkBuilder.serviceName(serviceName)
   }
 
+  /**
+   * @param signingRegion The signing region. 
+   */
   public fun signingRegion(signingRegion: String) {
     cdkBuilder.signingRegion(signingRegion)
   }

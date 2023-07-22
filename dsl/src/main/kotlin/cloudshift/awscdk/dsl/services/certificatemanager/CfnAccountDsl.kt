@@ -15,10 +15,32 @@ public class CfnAccountDsl(
 ) {
   private val cdkBuilder: CfnAccount.Builder = CfnAccount.Builder.create(scope, id)
 
+  /**
+   * Object containing expiration events options associated with an AWS account .
+   *
+   * For more information, see
+   * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+   * in the API reference.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html#cfn-certificatemanager-account-expiryeventsconfiguration)
+   * @param expiryEventsConfiguration Object containing expiration events options associated with an
+   * AWS account . 
+   */
   public fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
     cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration)
   }
 
+  /**
+   * Object containing expiration events options associated with an AWS account .
+   *
+   * For more information, see
+   * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+   * in the API reference.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html#cfn-certificatemanager-account-expiryeventsconfiguration)
+   * @param expiryEventsConfiguration Object containing expiration events options associated with an
+   * AWS account . 
+   */
   public
       fun expiryEventsConfiguration(expiryEventsConfiguration: CfnAccount.ExpiryEventsConfigurationProperty) {
     cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration)

@@ -20,6 +20,7 @@ internal interface CdkClass {
         val parameters: List<Parameter>
         val deprecated : Boolean
         val returnType: TypeName
+        val comment: String?
 
         interface Parameter {
             val name: String

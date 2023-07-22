@@ -12,14 +12,23 @@ public class CfnDatasetLateDataRulePropertyDsl {
   private val cdkBuilder: CfnDataset.LateDataRuleProperty.Builder =
       CfnDataset.LateDataRuleProperty.builder()
 
+  /**
+   * @param ruleConfiguration The information needed to configure the late data rule. 
+   */
   public fun ruleConfiguration(ruleConfiguration: IResolvable) {
     cdkBuilder.ruleConfiguration(ruleConfiguration)
   }
 
+  /**
+   * @param ruleConfiguration The information needed to configure the late data rule. 
+   */
   public fun ruleConfiguration(ruleConfiguration: CfnDataset.LateDataRuleConfigurationProperty) {
     cdkBuilder.ruleConfiguration(ruleConfiguration)
   }
 
+  /**
+   * @param ruleName The name of the late data rule.
+   */
   public fun ruleName(ruleName: String) {
     cdkBuilder.ruleName(ruleName)
   }

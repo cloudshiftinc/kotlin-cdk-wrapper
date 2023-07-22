@@ -11,6 +11,9 @@ public class CfnWebACLSingleHeaderPropertyDsl {
   private val cdkBuilder: CfnWebACL.SingleHeaderProperty.Builder =
       CfnWebACL.SingleHeaderProperty.builder()
 
+  /**
+   * @param name The name of the query header to inspect. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

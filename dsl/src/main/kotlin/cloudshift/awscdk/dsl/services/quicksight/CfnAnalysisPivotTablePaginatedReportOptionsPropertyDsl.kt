@@ -11,10 +11,16 @@ public class CfnAnalysisPivotTablePaginatedReportOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotTablePaginatedReportOptionsProperty.Builder =
       CfnAnalysis.PivotTablePaginatedReportOptionsProperty.builder()
 
+  /**
+   * @param overflowColumnHeaderVisibility The visibility of the repeating header rows on each page.
+   */
   public fun overflowColumnHeaderVisibility(overflowColumnHeaderVisibility: String) {
     cdkBuilder.overflowColumnHeaderVisibility(overflowColumnHeaderVisibility)
   }
 
+  /**
+   * @param verticalOverflowVisibility The visibility of the printing table overflow across pages.
+   */
   public fun verticalOverflowVisibility(verticalOverflowVisibility: String) {
     cdkBuilder.verticalOverflowVisibility(verticalOverflowVisibility)
   }

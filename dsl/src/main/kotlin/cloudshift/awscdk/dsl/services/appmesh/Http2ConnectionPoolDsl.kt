@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.appmesh.Http2ConnectionPool
 public class Http2ConnectionPoolDsl {
   private val cdkBuilder: Http2ConnectionPool.Builder = Http2ConnectionPool.builder()
 
+  /**
+   * @param maxRequests The maximum requests in the pool. 
+   */
   public fun maxRequests(maxRequests: Number) {
     cdkBuilder.maxRequests(maxRequests)
   }

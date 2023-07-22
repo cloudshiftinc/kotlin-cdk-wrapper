@@ -22,18 +22,61 @@ public class CfnMatchmakingRuleSetDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * A unique identifier for the matchmaking rule set.
+   *
+   * A matchmaking configuration identifies the rule set it uses by this name value. Note that the
+   * rule set name is different from the optional `name` field in the rule set body.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html#cfn-gamelift-matchmakingruleset-name)
+   * @param name A unique identifier for the matchmaking rule set. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * A collection of matchmaking rules, formatted as a JSON string.
+   *
+   * Comments are not allowed in JSON, but most elements support a description field.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html#cfn-gamelift-matchmakingruleset-rulesetbody)
+   * @param ruleSetBody A collection of matchmaking rules, formatted as a JSON string. 
+   */
   public fun ruleSetBody(ruleSetBody: String) {
     cdkBuilder.ruleSetBody(ruleSetBody)
   }
 
+  /**
+   * A list of labels to assign to the new matchmaking rule set resource.
+   *
+   * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
+   * management, access management and cost allocation. For more information, see [Tagging AWS
+   * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
+   * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
+   * ListTagsForResource to add, remove, and view tags. The maximum tag limit may be lower than stated.
+   * See the AWS General Reference for actual tagging limits.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html#cfn-gamelift-matchmakingruleset-tags)
+   * @param tags A list of labels to assign to the new matchmaking rule set resource. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * A list of labels to assign to the new matchmaking rule set resource.
+   *
+   * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
+   * management, access management and cost allocation. For more information, see [Tagging AWS
+   * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
+   * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
+   * ListTagsForResource to add, remove, and view tags. The maximum tag limit may be lower than stated.
+   * See the AWS General Reference for actual tagging limits.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html#cfn-gamelift-matchmakingruleset-tags)
+   * @param tags A list of labels to assign to the new matchmaking rule set resource. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

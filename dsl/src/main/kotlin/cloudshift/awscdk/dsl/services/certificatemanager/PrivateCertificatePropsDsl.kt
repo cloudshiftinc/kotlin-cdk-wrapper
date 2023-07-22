@@ -15,18 +15,34 @@ public class PrivateCertificatePropsDsl {
 
   private val _subjectAlternativeNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param certificateAuthority Private certificate authority (CA) that will be used to issue the
+   * certificate. 
+   */
   public fun certificateAuthority(certificateAuthority: ICertificateAuthority) {
     cdkBuilder.certificateAuthority(certificateAuthority)
   }
 
+  /**
+   * @param domainName Fully-qualified domain name to request a private certificate for. 
+   * May contain wildcards, such as `*.domain.com`.
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param subjectAlternativeNames Alternative domain names on your private certificate.
+   * Use this to register alternative domain names that represent the same site.
+   */
   public fun subjectAlternativeNames(vararg subjectAlternativeNames: String) {
     _subjectAlternativeNames.addAll(listOf(*subjectAlternativeNames))
   }
 
+  /**
+   * @param subjectAlternativeNames Alternative domain names on your private certificate.
+   * Use this to register alternative domain names that represent the same site.
+   */
   public fun subjectAlternativeNames(subjectAlternativeNames: Collection<String>) {
     _subjectAlternativeNames.addAll(subjectAlternativeNames)
   }

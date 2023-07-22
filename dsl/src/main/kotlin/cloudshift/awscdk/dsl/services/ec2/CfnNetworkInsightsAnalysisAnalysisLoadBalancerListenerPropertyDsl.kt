@@ -11,10 +11,16 @@ public class CfnNetworkInsightsAnalysisAnalysisLoadBalancerListenerPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty.Builder =
       CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty.builder()
 
+  /**
+   * @param instancePort [Classic Load Balancers] The back-end port for the listener.
+   */
   public fun instancePort(instancePort: Number) {
     cdkBuilder.instancePort(instancePort)
   }
 
+  /**
+   * @param loadBalancerPort The port on which the load balancer is listening.
+   */
   public fun loadBalancerPort(loadBalancerPort: Number) {
     cdkBuilder.loadBalancerPort(loadBalancerPort)
   }

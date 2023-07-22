@@ -16,18 +16,32 @@ public class CfnDashboardStringDefaultValuesPropertyDsl {
 
   private val _staticValues: MutableList<String> = mutableListOf()
 
+  /**
+   * @param dynamicValue The dynamic value of the `StringDefaultValues` .
+   * Different defaults displayed according to users, groups, and values mapping.
+   */
   public fun dynamicValue(dynamicValue: IResolvable) {
     cdkBuilder.dynamicValue(dynamicValue)
   }
 
+  /**
+   * @param dynamicValue The dynamic value of the `StringDefaultValues` .
+   * Different defaults displayed according to users, groups, and values mapping.
+   */
   public fun dynamicValue(dynamicValue: CfnDashboard.DynamicDefaultValueProperty) {
     cdkBuilder.dynamicValue(dynamicValue)
   }
 
+  /**
+   * @param staticValues The static values of the `DecimalDefaultValues` .
+   */
   public fun staticValues(vararg staticValues: String) {
     _staticValues.addAll(listOf(*staticValues))
   }
 
+  /**
+   * @param staticValues The static values of the `DecimalDefaultValues` .
+   */
   public fun staticValues(staticValues: Collection<String>) {
     _staticValues.addAll(staticValues)
   }

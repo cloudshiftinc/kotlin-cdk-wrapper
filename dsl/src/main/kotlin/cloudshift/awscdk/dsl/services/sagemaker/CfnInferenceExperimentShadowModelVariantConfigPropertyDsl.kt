@@ -12,10 +12,17 @@ public class CfnInferenceExperimentShadowModelVariantConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.ShadowModelVariantConfigProperty.Builder =
       CfnInferenceExperiment.ShadowModelVariantConfigProperty.builder()
 
+  /**
+   * @param samplingPercentage The percentage of inference requests that Amazon SageMaker replicates
+   * from the production variant to the shadow variant. 
+   */
   public fun samplingPercentage(samplingPercentage: Number) {
     cdkBuilder.samplingPercentage(samplingPercentage)
   }
 
+  /**
+   * @param shadowModelVariantName The name of the shadow variant. 
+   */
   public fun shadowModelVariantName(shadowModelVariantName: String) {
     cdkBuilder.shadowModelVariantName(shadowModelVariantName)
   }

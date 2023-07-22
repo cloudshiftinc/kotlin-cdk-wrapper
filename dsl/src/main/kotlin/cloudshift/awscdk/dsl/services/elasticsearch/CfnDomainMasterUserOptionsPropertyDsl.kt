@@ -11,14 +11,26 @@ public class CfnDomainMasterUserOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.MasterUserOptionsProperty.Builder =
       CfnDomain.MasterUserOptionsProperty.builder()
 
+  /**
+   * @param masterUserArn ARN for the master user.
+   * Only specify if `InternalUserDatabaseEnabled` is false in `AdvancedSecurityOptions` .
+   */
   public fun masterUserArn(masterUserArn: String) {
     cdkBuilder.masterUserArn(masterUserArn)
   }
 
+  /**
+   * @param masterUserName Username for the master user.
+   * Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions` .
+   */
   public fun masterUserName(masterUserName: String) {
     cdkBuilder.masterUserName(masterUserName)
   }
 
+  /**
+   * @param masterUserPassword Password for the master user.
+   * Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions` .
+   */
   public fun masterUserPassword(masterUserPassword: String) {
     cdkBuilder.masterUserPassword(masterUserPassword)
   }

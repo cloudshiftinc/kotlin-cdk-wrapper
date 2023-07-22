@@ -12,10 +12,18 @@ public class CfnApplicationAutoStartConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.AutoStartConfigurationProperty.Builder =
       CfnApplication.AutoStartConfigurationProperty.builder()
 
+  /**
+   * @param enabled Enables the application to automatically start on job submission.
+   * Defaults to true.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Enables the application to automatically start on job submission.
+   * Defaults to true.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }

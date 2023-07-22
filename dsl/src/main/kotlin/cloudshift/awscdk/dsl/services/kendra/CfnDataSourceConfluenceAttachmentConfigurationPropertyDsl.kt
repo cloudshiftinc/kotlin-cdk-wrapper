@@ -17,22 +17,61 @@ public class CfnDataSourceConfluenceAttachmentConfigurationPropertyDsl {
 
   private val _attachmentFieldMappings: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param attachmentFieldMappings Maps attributes or field names of Confluence attachments to
+   * Amazon Kendra index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Confluence fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Confluence data
+   * source field names must exist in your Confluence custom metadata.
+   *
+   * If you specify the `AttachentFieldMappings` parameter, you must specify at least one field
+   * mapping.
+   */
   public fun attachmentFieldMappings(vararg attachmentFieldMappings: Any) {
     _attachmentFieldMappings.addAll(listOf(*attachmentFieldMappings))
   }
 
+  /**
+   * @param attachmentFieldMappings Maps attributes or field names of Confluence attachments to
+   * Amazon Kendra index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Confluence fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Confluence data
+   * source field names must exist in your Confluence custom metadata.
+   *
+   * If you specify the `AttachentFieldMappings` parameter, you must specify at least one field
+   * mapping.
+   */
   public fun attachmentFieldMappings(attachmentFieldMappings: Collection<Any>) {
     _attachmentFieldMappings.addAll(attachmentFieldMappings)
   }
 
+  /**
+   * @param attachmentFieldMappings Maps attributes or field names of Confluence attachments to
+   * Amazon Kendra index field names.
+   * To create custom fields, use the `UpdateIndex` API before you map to Confluence fields. For
+   * more information, see [Mapping data source
+   * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Confluence data
+   * source field names must exist in your Confluence custom metadata.
+   *
+   * If you specify the `AttachentFieldMappings` parameter, you must specify at least one field
+   * mapping.
+   */
   public fun attachmentFieldMappings(attachmentFieldMappings: IResolvable) {
     cdkBuilder.attachmentFieldMappings(attachmentFieldMappings)
   }
 
+  /**
+   * @param crawlAttachments `TRUE` to index attachments of pages and blogs in Confluence.
+   */
   public fun crawlAttachments(crawlAttachments: Boolean) {
     cdkBuilder.crawlAttachments(crawlAttachments)
   }
 
+  /**
+   * @param crawlAttachments `TRUE` to index attachments of pages and blogs in Confluence.
+   */
   public fun crawlAttachments(crawlAttachments: IResolvable) {
     cdkBuilder.crawlAttachments(crawlAttachments)
   }

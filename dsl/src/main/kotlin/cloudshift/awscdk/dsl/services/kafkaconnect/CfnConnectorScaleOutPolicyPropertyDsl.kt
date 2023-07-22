@@ -11,6 +11,10 @@ public class CfnConnectorScaleOutPolicyPropertyDsl {
   private val cdkBuilder: CfnConnector.ScaleOutPolicyProperty.Builder =
       CfnConnector.ScaleOutPolicyProperty.builder()
 
+  /**
+   * @param cpuUtilizationPercentage The CPU utilization percentage threshold at which you want
+   * connector scale out to be triggered. 
+   */
   public fun cpuUtilizationPercentage(cpuUtilizationPercentage: Number) {
     cdkBuilder.cpuUtilizationPercentage(cpuUtilizationPercentage)
   }

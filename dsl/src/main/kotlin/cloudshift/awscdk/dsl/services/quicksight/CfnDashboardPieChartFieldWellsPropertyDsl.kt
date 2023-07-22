@@ -11,10 +11,16 @@ public class CfnDashboardPieChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.PieChartFieldWellsProperty.Builder =
       CfnDashboard.PieChartFieldWellsProperty.builder()
 
+  /**
+   * @param pieChartAggregatedFieldWells The field well configuration of a pie chart.
+   */
   public fun pieChartAggregatedFieldWells(pieChartAggregatedFieldWells: IResolvable) {
     cdkBuilder.pieChartAggregatedFieldWells(pieChartAggregatedFieldWells)
   }
 
+  /**
+   * @param pieChartAggregatedFieldWells The field well configuration of a pie chart.
+   */
   public
       fun pieChartAggregatedFieldWells(pieChartAggregatedFieldWells: CfnDashboard.PieChartAggregatedFieldWellsProperty) {
     cdkBuilder.pieChartAggregatedFieldWells(pieChartAggregatedFieldWells)

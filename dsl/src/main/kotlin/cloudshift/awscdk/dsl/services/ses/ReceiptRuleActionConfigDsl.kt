@@ -17,72 +17,124 @@ import software.amazon.awscdk.services.ses.WorkmailActionConfig
 public class ReceiptRuleActionConfigDsl {
   private val cdkBuilder: ReceiptRuleActionConfig.Builder = ReceiptRuleActionConfig.builder()
 
-  public fun addHeaderAction(block: AddHeaderActionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param addHeaderAction Adds a header to the received email.
+   */
+  public fun addHeaderAction(addHeaderAction: AddHeaderActionConfigDsl.() -> Unit = {}) {
     val builder = AddHeaderActionConfigDsl()
-    builder.apply(block)
+    builder.apply(addHeaderAction)
     cdkBuilder.addHeaderAction(builder.build())
   }
 
+  /**
+   * @param addHeaderAction Adds a header to the received email.
+   */
   public fun addHeaderAction(addHeaderAction: AddHeaderActionConfig) {
     cdkBuilder.addHeaderAction(addHeaderAction)
   }
 
-  public fun bounceAction(block: BounceActionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param bounceAction Rejects the received email by returning a bounce response to the sender
+   * and, optionally, publishes a notification to Amazon SNS.
+   */
+  public fun bounceAction(bounceAction: BounceActionConfigDsl.() -> Unit = {}) {
     val builder = BounceActionConfigDsl()
-    builder.apply(block)
+    builder.apply(bounceAction)
     cdkBuilder.bounceAction(builder.build())
   }
 
+  /**
+   * @param bounceAction Rejects the received email by returning a bounce response to the sender
+   * and, optionally, publishes a notification to Amazon SNS.
+   */
   public fun bounceAction(bounceAction: BounceActionConfig) {
     cdkBuilder.bounceAction(bounceAction)
   }
 
-  public fun lambdaAction(block: LambdaActionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param lambdaAction Calls an AWS Lambda function, and optionally, publishes a notification to
+   * Amazon SNS.
+   */
+  public fun lambdaAction(lambdaAction: LambdaActionConfigDsl.() -> Unit = {}) {
     val builder = LambdaActionConfigDsl()
-    builder.apply(block)
+    builder.apply(lambdaAction)
     cdkBuilder.lambdaAction(builder.build())
   }
 
+  /**
+   * @param lambdaAction Calls an AWS Lambda function, and optionally, publishes a notification to
+   * Amazon SNS.
+   */
   public fun lambdaAction(lambdaAction: LambdaActionConfig) {
     cdkBuilder.lambdaAction(lambdaAction)
   }
 
-  public fun s3Action(block: S3ActionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param s3Action Saves the received message to an Amazon S3 bucket and, optionally, publishes a
+   * notification to Amazon SNS.
+   */
+  public fun s3Action(s3Action: S3ActionConfigDsl.() -> Unit = {}) {
     val builder = S3ActionConfigDsl()
-    builder.apply(block)
+    builder.apply(s3Action)
     cdkBuilder.s3Action(builder.build())
   }
 
+  /**
+   * @param s3Action Saves the received message to an Amazon S3 bucket and, optionally, publishes a
+   * notification to Amazon SNS.
+   */
   public fun s3Action(s3Action: S3ActionConfig) {
     cdkBuilder.s3Action(s3Action)
   }
 
-  public fun snsAction(block: SNSActionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param snsAction Publishes the email content within a notification to Amazon SNS.
+   */
+  public fun snsAction(snsAction: SNSActionConfigDsl.() -> Unit = {}) {
     val builder = SNSActionConfigDsl()
-    builder.apply(block)
+    builder.apply(snsAction)
     cdkBuilder.snsAction(builder.build())
   }
 
+  /**
+   * @param snsAction Publishes the email content within a notification to Amazon SNS.
+   */
   public fun snsAction(snsAction: SNSActionConfig) {
     cdkBuilder.snsAction(snsAction)
   }
 
-  public fun stopAction(block: StopActionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param stopAction Terminates the evaluation of the receipt rule set and optionally publishes a
+   * notification to Amazon SNS.
+   */
+  public fun stopAction(stopAction: StopActionConfigDsl.() -> Unit = {}) {
     val builder = StopActionConfigDsl()
-    builder.apply(block)
+    builder.apply(stopAction)
     cdkBuilder.stopAction(builder.build())
   }
 
+  /**
+   * @param stopAction Terminates the evaluation of the receipt rule set and optionally publishes a
+   * notification to Amazon SNS.
+   */
   public fun stopAction(stopAction: StopActionConfig) {
     cdkBuilder.stopAction(stopAction)
   }
 
-  public fun workmailAction(block: WorkmailActionConfigDsl.() -> Unit = {}) {
+  /**
+   * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to Amazon
+   * SNS.
+   */
+  public fun workmailAction(workmailAction: WorkmailActionConfigDsl.() -> Unit = {}) {
     val builder = WorkmailActionConfigDsl()
-    builder.apply(block)
+    builder.apply(workmailAction)
     cdkBuilder.workmailAction(builder.build())
   }
 
+  /**
+   * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to Amazon
+   * SNS.
+   */
   public fun workmailAction(workmailAction: WorkmailActionConfig) {
     cdkBuilder.workmailAction(workmailAction)
   }

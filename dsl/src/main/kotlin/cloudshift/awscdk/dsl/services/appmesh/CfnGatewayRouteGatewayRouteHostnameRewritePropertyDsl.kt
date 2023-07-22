@@ -11,6 +11,9 @@ public class CfnGatewayRouteGatewayRouteHostnameRewritePropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.GatewayRouteHostnameRewriteProperty.Builder =
       CfnGatewayRoute.GatewayRouteHostnameRewriteProperty.builder()
 
+  /**
+   * @param defaultTargetHostname The default target host name to write to.
+   */
   public fun defaultTargetHostname(defaultTargetHostname: String) {
     cdkBuilder.defaultTargetHostname(defaultTargetHostname)
   }

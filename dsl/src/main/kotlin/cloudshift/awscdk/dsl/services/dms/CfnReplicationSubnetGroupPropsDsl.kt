@@ -20,26 +20,46 @@ public class CfnReplicationSubnetGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param replicationSubnetGroupDescription The description for the subnet group. 
+   */
   public fun replicationSubnetGroupDescription(replicationSubnetGroupDescription: String) {
     cdkBuilder.replicationSubnetGroupDescription(replicationSubnetGroupDescription)
   }
 
+  /**
+   * @param replicationSubnetGroupIdentifier The identifier for the replication subnet group.
+   * If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the
+   * identifier.
+   */
   public fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
     cdkBuilder.replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier)
   }
 
+  /**
+   * @param subnetIds One or more subnet IDs to be assigned to the subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds One or more subnet IDs to be assigned to the subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param tags One or more tags to be assigned to the subnet group.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags One or more tags to be assigned to the subnet group.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

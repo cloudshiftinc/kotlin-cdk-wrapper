@@ -12,18 +12,36 @@ public class CfnDashboardSmallMultiplesOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.SmallMultiplesOptionsProperty.Builder =
       CfnDashboard.SmallMultiplesOptionsProperty.builder()
 
+  /**
+   * @param maxVisibleColumns Sets the maximum number of visible columns to display in the grid of
+   * small multiples panels.
+   * The default is `Auto` , which automatically adjusts the columns in the grid to fit the overall
+   * layout and size of the given chart.
+   */
   public fun maxVisibleColumns(maxVisibleColumns: Number) {
     cdkBuilder.maxVisibleColumns(maxVisibleColumns)
   }
 
+  /**
+   * @param maxVisibleRows Sets the maximum number of visible rows to display in the grid of small
+   * multiples panels.
+   * The default value is `Auto` , which automatically adjusts the rows in the grid to fit the
+   * overall layout and size of the given chart.
+   */
   public fun maxVisibleRows(maxVisibleRows: Number) {
     cdkBuilder.maxVisibleRows(maxVisibleRows)
   }
 
+  /**
+   * @param panelConfiguration Configures the display options for each small multiples panel.
+   */
   public fun panelConfiguration(panelConfiguration: IResolvable) {
     cdkBuilder.panelConfiguration(panelConfiguration)
   }
 
+  /**
+   * @param panelConfiguration Configures the display options for each small multiples panel.
+   */
   public fun panelConfiguration(panelConfiguration: CfnDashboard.PanelConfigurationProperty) {
     cdkBuilder.panelConfiguration(panelConfiguration)
   }

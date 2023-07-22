@@ -12,18 +12,30 @@ public class CfnSamplingRuleSamplingRuleRecordPropertyDsl {
   private val cdkBuilder: CfnSamplingRule.SamplingRuleRecordProperty.Builder =
       CfnSamplingRule.SamplingRuleRecordProperty.builder()
 
+  /**
+   * @param createdAt When the rule was created, in Unix time seconds.
+   */
   public fun createdAt(createdAt: String) {
     cdkBuilder.createdAt(createdAt)
   }
 
+  /**
+   * @param modifiedAt When the rule was modified, in Unix time seconds.
+   */
   public fun modifiedAt(modifiedAt: String) {
     cdkBuilder.modifiedAt(modifiedAt)
   }
 
+  /**
+   * @param samplingRule the value to be set.
+   */
   public fun samplingRule(samplingRule: IResolvable) {
     cdkBuilder.samplingRule(samplingRule)
   }
 
+  /**
+   * @param samplingRule the value to be set.
+   */
   public fun samplingRule(samplingRule: CfnSamplingRule.SamplingRuleProperty) {
     cdkBuilder.samplingRule(samplingRule)
   }

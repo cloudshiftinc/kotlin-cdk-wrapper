@@ -15,14 +15,23 @@ public class CfnExperimentTemplateExperimentTemplateTargetFilterPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param path The attribute path for the filter. 
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param values The attribute values for the filter. 
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The attribute values for the filter. 
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

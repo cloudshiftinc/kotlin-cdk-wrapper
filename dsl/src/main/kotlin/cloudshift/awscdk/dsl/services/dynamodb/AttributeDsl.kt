@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.dynamodb.AttributeType
 public class AttributeDsl {
   private val cdkBuilder: Attribute.Builder = Attribute.builder()
 
+  /**
+   * @param name The name of an attribute. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param type The data type of an attribute. 
+   */
   public fun type(type: AttributeType) {
     cdkBuilder.type(type)
   }

@@ -11,14 +11,23 @@ public class CfnChannelTimecodeBurninSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.TimecodeBurninSettingsProperty.Builder =
       CfnChannel.TimecodeBurninSettingsProperty.builder()
 
+  /**
+   * @param fontSize the value to be set.
+   */
   public fun fontSize(fontSize: String) {
     cdkBuilder.fontSize(fontSize)
   }
 
+  /**
+   * @param position the value to be set.
+   */
   public fun position(position: String) {
     cdkBuilder.position(position)
   }
 
+  /**
+   * @param prefix the value to be set.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }

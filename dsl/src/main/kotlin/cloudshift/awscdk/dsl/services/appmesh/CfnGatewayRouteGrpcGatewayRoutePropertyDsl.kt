@@ -11,18 +11,30 @@ public class CfnGatewayRouteGrpcGatewayRoutePropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.GrpcGatewayRouteProperty.Builder =
       CfnGatewayRoute.GrpcGatewayRouteProperty.builder()
 
+  /**
+   * @param action An object that represents the action to take if a match is determined. 
+   */
   public fun action(action: IResolvable) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param action An object that represents the action to take if a match is determined. 
+   */
   public fun action(action: CfnGatewayRoute.GrpcGatewayRouteActionProperty) {
     cdkBuilder.action(action)
   }
 
+  /**
+   * @param match An object that represents the criteria for determining a request match. 
+   */
   public fun match(match: IResolvable) {
     cdkBuilder.match(match)
   }
 
+  /**
+   * @param match An object that represents the criteria for determining a request match. 
+   */
   public fun match(match: CfnGatewayRoute.GrpcGatewayRouteMatchProperty) {
     cdkBuilder.match(match)
   }

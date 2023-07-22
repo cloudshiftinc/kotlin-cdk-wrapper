@@ -20,30 +20,51 @@ public class GrantOnPrincipalOptionsDsl {
 
   private val _resourceArns: MutableList<String> = mutableListOf()
 
+  /**
+   * @param actions The actions to grant. 
+   */
   public fun actions(vararg actions: String) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * @param actions The actions to grant. 
+   */
   public fun actions(actions: Collection<String>) {
     _actions.addAll(actions)
   }
 
+  /**
+   * @param conditions Any conditions to attach to the grant.
+   */
   public fun conditions(conditions: Map<String, Map<String, Any>>) {
     cdkBuilder.conditions(conditions)
   }
 
+  /**
+   * @param grantee The principal to grant to. 
+   */
   public fun grantee(grantee: IGrantable) {
     cdkBuilder.grantee(grantee)
   }
 
+  /**
+   * @param resourceArns The resource ARNs to grant to. 
+   */
   public fun resourceArns(vararg resourceArns: String) {
     _resourceArns.addAll(listOf(*resourceArns))
   }
 
+  /**
+   * @param resourceArns The resource ARNs to grant to. 
+   */
   public fun resourceArns(resourceArns: Collection<String>) {
     _resourceArns.addAll(resourceArns)
   }
 
+  /**
+   * @param scope Construct to report warnings on in case grant could not be registered.
+   */
   public fun scope(scope: IConstruct) {
     cdkBuilder.scope(scope)
   }

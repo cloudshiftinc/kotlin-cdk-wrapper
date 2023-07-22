@@ -11,10 +11,17 @@ public class CfnDBInstanceCertificateDetailsPropertyDsl {
   private val cdkBuilder: CfnDBInstance.CertificateDetailsProperty.Builder =
       CfnDBInstance.CertificateDetailsProperty.builder()
 
+  /**
+   * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's server
+   * certificate.
+   */
   public fun caIdentifier(caIdentifier: String) {
     cdkBuilder.caIdentifier(caIdentifier)
   }
 
+  /**
+   * @param validTill The expiration date of the DB instance’s server certificate.
+   */
   public fun validTill(validTill: String) {
     cdkBuilder.validTill(validTill)
   }

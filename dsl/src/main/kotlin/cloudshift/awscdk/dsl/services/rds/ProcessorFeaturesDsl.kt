@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.rds.ProcessorFeatures
 public class ProcessorFeaturesDsl {
   private val cdkBuilder: ProcessorFeatures.Builder = ProcessorFeatures.builder()
 
+  /**
+   * @param coreCount The number of CPU core.
+   */
   public fun coreCount(coreCount: Number) {
     cdkBuilder.coreCount(coreCount)
   }
 
+  /**
+   * @param threadsPerCore The number of threads per core.
+   */
   public fun threadsPerCore(threadsPerCore: Number) {
     cdkBuilder.threadsPerCore(threadsPerCore)
   }

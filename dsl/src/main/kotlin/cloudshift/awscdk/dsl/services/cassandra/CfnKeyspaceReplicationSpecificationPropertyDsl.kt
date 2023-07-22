@@ -15,14 +15,32 @@ public class CfnKeyspaceReplicationSpecificationPropertyDsl {
 
   private val _regionList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param regionList Specifies the AWS Regions that the keyspace is replicated in.
+   * You must specify at least two and up to six Regions, including the Region that the keyspace is
+   * being created in.
+   */
   public fun regionList(vararg regionList: String) {
     _regionList.addAll(listOf(*regionList))
   }
 
+  /**
+   * @param regionList Specifies the AWS Regions that the keyspace is replicated in.
+   * You must specify at least two and up to six Regions, including the Region that the keyspace is
+   * being created in.
+   */
   public fun regionList(regionList: Collection<String>) {
     _regionList.addAll(regionList)
   }
 
+  /**
+   * @param replicationStrategy The options are:.
+   * * `SINGLE_REGION` (optional)
+   * * `MULTI_REGION`
+   *
+   * If no value is specified, the default is `SINGLE_REGION` . If `MULTI_REGION` is specified,
+   * `RegionList` is required.
+   */
   public fun replicationStrategy(replicationStrategy: String) {
     cdkBuilder.replicationStrategy(replicationStrategy)
   }

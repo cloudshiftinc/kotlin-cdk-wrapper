@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.logs.SubscriptionFilterOptions
 public class SubscriptionFilterOptionsDsl {
   private val cdkBuilder: SubscriptionFilterOptions.Builder = SubscriptionFilterOptions.builder()
 
+  /**
+   * @param destination The destination to send the filtered events to. 
+   * For example, a Kinesis stream or a Lambda function.
+   */
   public fun destination(destination: ILogSubscriptionDestination) {
     cdkBuilder.destination(destination)
   }
 
+  /**
+   * @param filterPattern Log events matching this pattern will be sent to the destination. 
+   */
   public fun filterPattern(filterPattern: IFilterPattern) {
     cdkBuilder.filterPattern(filterPattern)
   }

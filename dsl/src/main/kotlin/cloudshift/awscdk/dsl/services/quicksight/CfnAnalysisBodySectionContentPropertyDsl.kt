@@ -11,10 +11,16 @@ public class CfnAnalysisBodySectionContentPropertyDsl {
   private val cdkBuilder: CfnAnalysis.BodySectionContentProperty.Builder =
       CfnAnalysis.BodySectionContentProperty.builder()
 
+  /**
+   * @param layout The layout configuration of a body section.
+   */
   public fun layout(layout: IResolvable) {
     cdkBuilder.layout(layout)
   }
 
+  /**
+   * @param layout The layout configuration of a body section.
+   */
   public fun layout(layout: CfnAnalysis.SectionLayoutConfigurationProperty) {
     cdkBuilder.layout(layout)
   }

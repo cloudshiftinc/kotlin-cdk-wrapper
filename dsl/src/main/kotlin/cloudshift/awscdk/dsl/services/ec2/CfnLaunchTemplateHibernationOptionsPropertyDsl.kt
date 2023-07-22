@@ -12,10 +12,20 @@ public class CfnLaunchTemplateHibernationOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.HibernationOptionsProperty.Builder =
       CfnLaunchTemplate.HibernationOptionsProperty.builder()
 
+  /**
+   * @param configured If you set this parameter to `true` , the instance is enabled for
+   * hibernation.
+   * Default: `false`
+   */
   public fun configured(configured: Boolean) {
     cdkBuilder.configured(configured)
   }
 
+  /**
+   * @param configured If you set this parameter to `true` , the instance is enabled for
+   * hibernation.
+   * Default: `false`
+   */
   public fun configured(configured: IResolvable) {
     cdkBuilder.configured(configured)
   }

@@ -11,10 +11,16 @@ public class CfnConnectionBasicAuthParametersPropertyDsl {
   private val cdkBuilder: CfnConnection.BasicAuthParametersProperty.Builder =
       CfnConnection.BasicAuthParametersProperty.builder()
 
+  /**
+   * @param password The password associated with the user name to use for Basic authorization. 
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * @param username The user name to use for Basic authorization. 
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

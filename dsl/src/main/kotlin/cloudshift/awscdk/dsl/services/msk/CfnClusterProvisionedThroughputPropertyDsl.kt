@@ -13,14 +13,24 @@ public class CfnClusterProvisionedThroughputPropertyDsl {
   private val cdkBuilder: CfnCluster.ProvisionedThroughputProperty.Builder =
       CfnCluster.ProvisionedThroughputProperty.builder()
 
+  /**
+   * @param enabled Provisioned throughput is enabled or not.
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Provisioned throughput is enabled or not.
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param volumeThroughput Throughput value of the EBS volumes for the data drive on each kafka
+   * broker node in MiB per second.
+   */
   public fun volumeThroughput(volumeThroughput: Number) {
     cdkBuilder.volumeThroughput(volumeThroughput)
   }

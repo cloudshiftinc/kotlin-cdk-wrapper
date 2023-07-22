@@ -12,24 +12,41 @@ public class CfnAnalysisGeospatialPointStyleOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GeospatialPointStyleOptionsProperty.Builder =
       CfnAnalysis.GeospatialPointStyleOptionsProperty.builder()
 
+  /**
+   * @param clusterMarkerConfiguration The cluster marker configuration of the geospatial point
+   * style.
+   */
   public fun clusterMarkerConfiguration(clusterMarkerConfiguration: IResolvable) {
     cdkBuilder.clusterMarkerConfiguration(clusterMarkerConfiguration)
   }
 
+  /**
+   * @param clusterMarkerConfiguration The cluster marker configuration of the geospatial point
+   * style.
+   */
   public
       fun clusterMarkerConfiguration(clusterMarkerConfiguration: CfnAnalysis.ClusterMarkerConfigurationProperty) {
     cdkBuilder.clusterMarkerConfiguration(clusterMarkerConfiguration)
   }
 
+  /**
+   * @param heatmapConfiguration The heatmap configuration of the geospatial point style.
+   */
   public fun heatmapConfiguration(heatmapConfiguration: IResolvable) {
     cdkBuilder.heatmapConfiguration(heatmapConfiguration)
   }
 
+  /**
+   * @param heatmapConfiguration The heatmap configuration of the geospatial point style.
+   */
   public
       fun heatmapConfiguration(heatmapConfiguration: CfnAnalysis.GeospatialHeatmapConfigurationProperty) {
     cdkBuilder.heatmapConfiguration(heatmapConfiguration)
   }
 
+  /**
+   * @param selectedPointStyle The selected point styles (point, cluster) of the geospatial map.
+   */
   public fun selectedPointStyle(selectedPointStyle: String) {
     cdkBuilder.selectedPointStyle(selectedPointStyle)
   }

@@ -12,14 +12,27 @@ public class CfnComponentVersionLambdaLinuxProcessParamsPropertyDsl {
   private val cdkBuilder: CfnComponentVersion.LambdaLinuxProcessParamsProperty.Builder =
       CfnComponentVersion.LambdaLinuxProcessParamsProperty.builder()
 
+  /**
+   * @param containerParams The parameters for the container in which the Lambda function runs.
+   */
   public fun containerParams(containerParams: IResolvable) {
     cdkBuilder.containerParams(containerParams)
   }
 
+  /**
+   * @param containerParams The parameters for the container in which the Lambda function runs.
+   */
   public fun containerParams(containerParams: CfnComponentVersion.LambdaContainerParamsProperty) {
     cdkBuilder.containerParams(containerParams)
   }
 
+  /**
+   * @param isolationMode The isolation mode for the process that contains the Lambda function.
+   * The process can run in an isolated runtime environment inside the AWS IoT Greengrass container,
+   * or as a regular process outside any container.
+   *
+   * Default: `GreengrassContainer`
+   */
   public fun isolationMode(isolationMode: String) {
     cdkBuilder.isolationMode(isolationMode)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.codedeploy.ServerApplicationProps
 public class ServerApplicationPropsDsl {
   private val cdkBuilder: ServerApplicationProps.Builder = ServerApplicationProps.builder()
 
+  /**
+   * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+   */
   public fun applicationName(applicationName: String) {
     cdkBuilder.applicationName(applicationName)
   }

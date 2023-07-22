@@ -15,6 +15,13 @@ public class OriginAccessIdentityDsl(
   private val cdkBuilder: OriginAccessIdentity.Builder = OriginAccessIdentity.Builder.create(scope,
       id)
 
+  /**
+   * Any comments you want to include about the origin access identity.
+   *
+   * Default: "Allows CloudFront to reach the bucket"
+   *
+   * @param comment Any comments you want to include about the origin access identity. 
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }

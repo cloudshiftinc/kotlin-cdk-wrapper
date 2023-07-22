@@ -26,52 +26,90 @@ public class CfnTransitGatewayVpcAttachmentPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param addSubnetIds The IDs of one or more subnets to add.
+   * You can specify at most one subnet per Availability Zone.
+   */
   public fun addSubnetIds(vararg addSubnetIds: String) {
     _addSubnetIds.addAll(listOf(*addSubnetIds))
   }
 
+  /**
+   * @param addSubnetIds The IDs of one or more subnets to add.
+   * You can specify at most one subnet per Availability Zone.
+   */
   public fun addSubnetIds(addSubnetIds: Collection<String>) {
     _addSubnetIds.addAll(addSubnetIds)
   }
 
-  public fun options(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param options The VPC attachment options.
+   */
+  public fun options(options: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(options)
     cdkBuilder.options(builder.map)
   }
 
+  /**
+   * @param options The VPC attachment options.
+   */
   public fun options(options: Any) {
     cdkBuilder.options(options)
   }
 
+  /**
+   * @param removeSubnetIds The IDs of one or more subnets to remove.
+   */
   public fun removeSubnetIds(vararg removeSubnetIds: String) {
     _removeSubnetIds.addAll(listOf(*removeSubnetIds))
   }
 
+  /**
+   * @param removeSubnetIds The IDs of one or more subnets to remove.
+   */
   public fun removeSubnetIds(removeSubnetIds: Collection<String>) {
     _removeSubnetIds.addAll(removeSubnetIds)
   }
 
+  /**
+   * @param subnetIds The IDs of the subnets. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The IDs of the subnets. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param tags The tags for the VPC attachment.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the VPC attachment.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param transitGatewayId The ID of the transit gateway. 
+   */
   public fun transitGatewayId(transitGatewayId: String) {
     cdkBuilder.transitGatewayId(transitGatewayId)
   }
 
+  /**
+   * @param vpcId The ID of the VPC. 
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

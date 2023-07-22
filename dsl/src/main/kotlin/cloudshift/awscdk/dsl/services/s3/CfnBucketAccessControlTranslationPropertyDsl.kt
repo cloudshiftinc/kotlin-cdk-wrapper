@@ -11,6 +11,12 @@ public class CfnBucketAccessControlTranslationPropertyDsl {
   private val cdkBuilder: CfnBucket.AccessControlTranslationProperty.Builder =
       CfnBucket.AccessControlTranslationProperty.builder()
 
+  /**
+   * @param owner Specifies the replica ownership. 
+   * For default and valid values, see [PUT bucket
+   * replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) in the
+   * *Amazon S3 API Reference* .
+   */
   public fun owner(owner: String) {
     cdkBuilder.owner(owner)
   }

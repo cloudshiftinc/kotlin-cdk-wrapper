@@ -11,10 +11,16 @@ public class CfnLaunchTemplateIamInstanceProfilePropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.IamInstanceProfileProperty.Builder =
       CfnLaunchTemplate.IamInstanceProfileProperty.builder()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the instance profile.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param name The name of the instance profile.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

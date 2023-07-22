@@ -15,14 +15,23 @@ public class CfnApiEndpointConfigurationPropertyDsl {
 
   private val _vpcEndpointIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param type the value to be set.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param vpcEndpointIds the value to be set.
+   */
   public fun vpcEndpointIds(vararg vpcEndpointIds: String) {
     _vpcEndpointIds.addAll(listOf(*vpcEndpointIds))
   }
 
+  /**
+   * @param vpcEndpointIds the value to be set.
+   */
   public fun vpcEndpointIds(vpcEndpointIds: Collection<String>) {
     _vpcEndpointIds.addAll(vpcEndpointIds)
   }

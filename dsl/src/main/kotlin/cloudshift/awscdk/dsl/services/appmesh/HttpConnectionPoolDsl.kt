@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.appmesh.HttpConnectionPool
 public class HttpConnectionPoolDsl {
   private val cdkBuilder: HttpConnectionPool.Builder = HttpConnectionPool.builder()
 
+  /**
+   * @param maxConnections The maximum connections in the pool. 
+   */
   public fun maxConnections(maxConnections: Number) {
     cdkBuilder.maxConnections(maxConnections)
   }
 
+  /**
+   * @param maxPendingRequests The maximum pending requests in the pool. 
+   */
   public fun maxPendingRequests(maxPendingRequests: Number) {
     cdkBuilder.maxPendingRequests(maxPendingRequests)
   }

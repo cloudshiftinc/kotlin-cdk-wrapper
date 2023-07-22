@@ -12,12 +12,18 @@ import software.amazon.awscdk.services.ecr.CfnRegistryPolicyProps
 public class CfnRegistryPolicyPropsDsl {
   private val cdkBuilder: CfnRegistryPolicyProps.Builder = CfnRegistryPolicyProps.builder()
 
-  public fun policyText(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policyText The JSON policy text for your registry. 
+   */
+  public fun policyText(policyText: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policyText)
     cdkBuilder.policyText(builder.map)
   }
 
+  /**
+   * @param policyText The JSON policy text for your registry. 
+   */
   public fun policyText(policyText: Any) {
     cdkBuilder.policyText(policyText)
   }

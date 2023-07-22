@@ -11,6 +11,9 @@ public class CfnDashboardSheetLayoutElementMaximizationOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetLayoutElementMaximizationOptionProperty.Builder =
       CfnDashboard.SheetLayoutElementMaximizationOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus The status of the sheet layout maximization options of a dashbaord.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

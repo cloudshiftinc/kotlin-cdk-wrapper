@@ -16,14 +16,26 @@ public class CfnDetectorModelOnEnterPropertyDsl {
 
   private val _events: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param events Specifies the actions that are performed when the state is entered and the
+   * `condition` is `TRUE` .
+   */
   public fun events(vararg events: Any) {
     _events.addAll(listOf(*events))
   }
 
+  /**
+   * @param events Specifies the actions that are performed when the state is entered and the
+   * `condition` is `TRUE` .
+   */
   public fun events(events: Collection<Any>) {
     _events.addAll(events)
   }
 
+  /**
+   * @param events Specifies the actions that are performed when the state is entered and the
+   * `condition` is `TRUE` .
+   */
   public fun events(events: IResolvable) {
     cdkBuilder.events(events)
   }

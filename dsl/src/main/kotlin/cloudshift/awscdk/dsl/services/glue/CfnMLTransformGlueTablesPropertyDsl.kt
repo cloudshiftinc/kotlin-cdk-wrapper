@@ -11,18 +11,30 @@ public class CfnMLTransformGlueTablesPropertyDsl {
   private val cdkBuilder: CfnMLTransform.GlueTablesProperty.Builder =
       CfnMLTransform.GlueTablesProperty.builder()
 
+  /**
+   * @param catalogId A unique identifier for the AWS Glue Data Catalog .
+   */
   public fun catalogId(catalogId: String) {
     cdkBuilder.catalogId(catalogId)
   }
 
+  /**
+   * @param connectionName The name of the connection to the AWS Glue Data Catalog .
+   */
   public fun connectionName(connectionName: String) {
     cdkBuilder.connectionName(connectionName)
   }
 
+  /**
+   * @param databaseName A database name in the AWS Glue Data Catalog . 
+   */
   public fun databaseName(databaseName: String) {
     cdkBuilder.databaseName(databaseName)
   }
 
+  /**
+   * @param tableName A table name in the AWS Glue Data Catalog . 
+   */
   public fun tableName(tableName: String) {
     cdkBuilder.tableName(tableName)
   }

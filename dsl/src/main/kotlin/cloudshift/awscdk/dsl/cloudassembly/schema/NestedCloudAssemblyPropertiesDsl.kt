@@ -11,10 +11,16 @@ public class NestedCloudAssemblyPropertiesDsl {
   private val cdkBuilder: NestedCloudAssemblyProperties.Builder =
       NestedCloudAssemblyProperties.builder()
 
+  /**
+   * @param directoryName Relative path to the nested cloud assembly. 
+   */
   public fun directoryName(directoryName: String) {
     cdkBuilder.directoryName(directoryName)
   }
 
+  /**
+   * @param displayName Display name for the cloud assembly.
+   */
   public fun displayName(displayName: String) {
     cdkBuilder.displayName(displayName)
   }

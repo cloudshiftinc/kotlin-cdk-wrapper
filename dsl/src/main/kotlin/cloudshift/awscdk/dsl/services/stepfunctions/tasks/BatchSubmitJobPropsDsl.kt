@@ -28,101 +28,206 @@ public class BatchSubmitJobPropsDsl {
 
   private val _dependsOn: MutableList<BatchJobDependency> = mutableListOf()
 
+  /**
+   * @param arraySize The array size can be between 2 and 10,000.
+   * If you specify array properties for a job, it becomes an array job.
+   * For more information, see Array Jobs in the AWS Batch User Guide.
+   */
   public fun arraySize(arraySize: Number) {
     cdkBuilder.arraySize(arraySize)
   }
 
+  /**
+   * @param attempts The number of times to move a job to the RUNNABLE status.
+   * You may specify between 1 and 10 attempts.
+   * If the value of attempts is greater than one,
+   * the job is retried on failure the same number of attempts as the value.
+   */
   public fun attempts(attempts: Number) {
     cdkBuilder.attempts(attempts)
   }
 
+  /**
+   * @param comment An optional description for this state.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
-  public fun containerOverrides(block: BatchContainerOverridesDsl.() -> Unit = {}) {
+  /**
+   * @param containerOverrides A list of container overrides in JSON format that specify the name of
+   * a container in the specified job definition and the overrides it should receive.
+   */
+  public fun containerOverrides(containerOverrides: BatchContainerOverridesDsl.() -> Unit = {}) {
     val builder = BatchContainerOverridesDsl()
-    builder.apply(block)
+    builder.apply(containerOverrides)
     cdkBuilder.containerOverrides(builder.build())
   }
 
+  /**
+   * @param containerOverrides A list of container overrides in JSON format that specify the name of
+   * a container in the specified job definition and the overrides it should receive.
+   */
   public fun containerOverrides(containerOverrides: BatchContainerOverrides) {
     cdkBuilder.containerOverrides(containerOverrides)
   }
 
-  public fun credentials(block: CredentialsDsl.() -> Unit = {}) {
+  /**
+   * @param credentials Credentials for an IAM Role that the State Machine assumes for executing the
+   * task.
+   * This enables cross-account resource invocations.
+   */
+  public fun credentials(credentials: CredentialsDsl.() -> Unit = {}) {
     val builder = CredentialsDsl()
-    builder.apply(block)
+    builder.apply(credentials)
     cdkBuilder.credentials(builder.build())
   }
 
+  /**
+   * @param credentials Credentials for an IAM Role that the State Machine assumes for executing the
+   * task.
+   * This enables cross-account resource invocations.
+   */
   public fun credentials(credentials: Credentials) {
     cdkBuilder.credentials(credentials)
   }
 
+  /**
+   * @param dependsOn A list of dependencies for the job.
+   * A job can depend upon a maximum of 20 jobs.
+   */
   public fun dependsOn(dependsOn: BatchJobDependencyDsl.() -> Unit) {
     _dependsOn.add(BatchJobDependencyDsl().apply(dependsOn).build())
   }
 
+  /**
+   * @param dependsOn A list of dependencies for the job.
+   * A job can depend upon a maximum of 20 jobs.
+   */
   public fun dependsOn(dependsOn: Collection<BatchJobDependency>) {
     _dependsOn.addAll(dependsOn)
   }
 
+  /**
+   * @param heartbeat Timeout for the heartbeat.
+   * @deprecated use `heartbeatTimeout`
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun heartbeat(heartbeat: Duration) {
     cdkBuilder.heartbeat(heartbeat)
   }
 
+  /**
+   * @param heartbeatTimeout Timeout for the heartbeat.
+   * [disable-awslint:duration-prop-type] is needed because all props interface in
+   * aws-stepfunctions-tasks extend this interface
+   */
   public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
     cdkBuilder.heartbeatTimeout(heartbeatTimeout)
   }
 
+  /**
+   * @param inputPath JSONPath expression to select part of the state to be the input to this state.
+   * May also be the special value JsonPath.DISCARD, which will cause the effective
+   * input to be the empty object {}.
+   */
   public fun inputPath(inputPath: String) {
     cdkBuilder.inputPath(inputPath)
   }
 
+  /**
+   * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
+   * States Language.
+   * You can control these AWS services using service integration patterns
+   */
   public fun integrationPattern(integrationPattern: IntegrationPattern) {
     cdkBuilder.integrationPattern(integrationPattern)
   }
 
+  /**
+   * @param jobDefinitionArn The arn of the job definition used by this job. 
+   */
   public fun jobDefinitionArn(jobDefinitionArn: String) {
     cdkBuilder.jobDefinitionArn(jobDefinitionArn)
   }
 
+  /**
+   * @param jobName The name of the job. 
+   * The first character must be alphanumeric, and up to 128 letters (uppercase and lowercase),
+   * numbers, hyphens, and underscores are allowed.
+   */
   public fun jobName(jobName: String) {
     cdkBuilder.jobName(jobName)
   }
 
+  /**
+   * @param jobQueueArn The arn of the job queue into which the job is submitted. 
+   */
   public fun jobQueueArn(jobQueueArn: String) {
     cdkBuilder.jobQueueArn(jobQueueArn)
   }
 
+  /**
+   * @param outputPath JSONPath expression to select select a portion of the state output to pass to
+   * the next state.
+   * May also be the special value JsonPath.DISCARD, which will cause the effective
+   * output to be the empty object {}.
+   */
   public fun outputPath(outputPath: String) {
     cdkBuilder.outputPath(outputPath)
   }
 
+  /**
+   * @param payload The payload to be passed as parameters to the batch job.
+   */
   public fun payload(payload: TaskInput) {
     cdkBuilder.payload(payload)
   }
 
+  /**
+   * @param resultPath JSONPath expression to indicate where to inject the state's output.
+   * May also be the special value JsonPath.DISCARD, which will cause the state's
+   * input to become its output.
+   */
   public fun resultPath(resultPath: String) {
     cdkBuilder.resultPath(resultPath)
   }
 
-  public fun resultSelector(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param resultSelector The JSON that will replace the state's raw result and become the
+   * effective result before ResultPath is applied.
+   * You can use ResultSelector to create a payload with values that are static
+   * or selected from the state's raw result.
+   */
+  public fun resultSelector(resultSelector: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(resultSelector)
     cdkBuilder.resultSelector(builder.map)
   }
 
+  /**
+   * @param resultSelector The JSON that will replace the state's raw result and become the
+   * effective result before ResultPath is applied.
+   * You can use ResultSelector to create a payload with values that are static
+   * or selected from the state's raw result.
+   */
   public fun resultSelector(resultSelector: Map<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 
+  /**
+   * @param taskTimeout Timeout for the task.
+   * [disable-awslint:duration-prop-type] is needed because all props interface in
+   * aws-stepfunctions-tasks extend this interface
+   */
   public fun taskTimeout(taskTimeout: Timeout) {
     cdkBuilder.taskTimeout(taskTimeout)
   }
 
+  /**
+   * @param timeout Timeout for the task.
+   * @deprecated use `taskTimeout`
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)

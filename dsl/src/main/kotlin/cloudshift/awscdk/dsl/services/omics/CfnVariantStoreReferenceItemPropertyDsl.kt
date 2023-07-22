@@ -11,6 +11,9 @@ public class CfnVariantStoreReferenceItemPropertyDsl {
   private val cdkBuilder: CfnVariantStore.ReferenceItemProperty.Builder =
       CfnVariantStore.ReferenceItemProperty.builder()
 
+  /**
+   * @param referenceArn The reference's ARN. 
+   */
   public fun referenceArn(referenceArn: String) {
     cdkBuilder.referenceArn(referenceArn)
   }

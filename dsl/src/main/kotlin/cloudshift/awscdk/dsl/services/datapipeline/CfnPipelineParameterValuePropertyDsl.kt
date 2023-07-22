@@ -11,10 +11,16 @@ public class CfnPipelineParameterValuePropertyDsl {
   private val cdkBuilder: CfnPipeline.ParameterValueProperty.Builder =
       CfnPipeline.ParameterValueProperty.builder()
 
+  /**
+   * @param id The ID of the parameter value. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param stringValue The field value, expressed as a String. 
+   */
   public fun stringValue(stringValue: String) {
     cdkBuilder.stringValue(stringValue)
   }

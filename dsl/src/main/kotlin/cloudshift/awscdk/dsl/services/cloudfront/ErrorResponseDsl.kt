@@ -12,18 +12,36 @@ import software.amazon.awscdk.services.cloudfront.ErrorResponse
 public class ErrorResponseDsl {
   private val cdkBuilder: ErrorResponse.Builder = ErrorResponse.builder()
 
+  /**
+   * @param httpStatus The HTTP status code for which you want to specify a custom error page and/or
+   * a caching duration. 
+   */
   public fun httpStatus(httpStatus: Number) {
     cdkBuilder.httpStatus(httpStatus)
   }
 
+  /**
+   * @param responseHttpStatus The HTTP status code that you want CloudFront to return to the viewer
+   * along with the custom error page.
+   * If you specify a value for `responseHttpStatus`, you must also specify a value for
+   * `responsePagePath`.
+   */
   public fun responseHttpStatus(responseHttpStatus: Number) {
     cdkBuilder.responseHttpStatus(responseHttpStatus)
   }
 
+  /**
+   * @param responsePagePath The path to the custom error page that you want CloudFront to return to
+   * a viewer when your origin returns the `httpStatus`, for example, /4xx-errors/403-forbidden.html.
+   */
   public fun responsePagePath(responsePagePath: String) {
     cdkBuilder.responsePagePath(responsePagePath)
   }
 
+  /**
+   * @param ttl The minimum amount of time, in seconds, that you want CloudFront to cache the HTTP
+   * status code specified in ErrorCode.
+   */
   public fun ttl(ttl: Duration) {
     cdkBuilder.ttl(ttl)
   }

@@ -20,18 +20,44 @@ public class VirtualRouterDsl(
 
   private val _listeners: MutableList<VirtualRouterListener> = mutableListOf()
 
+  /**
+   * Listener specification for the VirtualRouter.
+   *
+   * Default: - A listener on HTTP port 8080
+   *
+   * @param listeners Listener specification for the VirtualRouter. 
+   */
   public fun listeners(vararg listeners: VirtualRouterListener) {
     _listeners.addAll(listOf(*listeners))
   }
 
+  /**
+   * Listener specification for the VirtualRouter.
+   *
+   * Default: - A listener on HTTP port 8080
+   *
+   * @param listeners Listener specification for the VirtualRouter. 
+   */
   public fun listeners(listeners: Collection<VirtualRouterListener>) {
     _listeners.addAll(listeners)
   }
 
+  /**
+   * The Mesh which the VirtualRouter belongs to.
+   *
+   * @param mesh The Mesh which the VirtualRouter belongs to. 
+   */
   public fun mesh(mesh: IMesh) {
     cdkBuilder.mesh(mesh)
   }
 
+  /**
+   * The name of the VirtualRouter.
+   *
+   * Default: - A name is automatically determined
+   *
+   * @param virtualRouterName The name of the VirtualRouter. 
+   */
   public fun virtualRouterName(virtualRouterName: String) {
     cdkBuilder.virtualRouterName(virtualRouterName)
   }

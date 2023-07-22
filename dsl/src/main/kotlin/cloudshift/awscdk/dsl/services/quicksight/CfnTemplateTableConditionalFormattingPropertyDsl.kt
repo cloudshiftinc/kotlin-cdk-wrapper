@@ -16,14 +16,23 @@ public class CfnTemplateTableConditionalFormattingPropertyDsl {
 
   private val _conditionalFormattingOptions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
+   */
   public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any) {
     _conditionalFormattingOptions.addAll(listOf(*conditionalFormattingOptions))
   }
 
+  /**
+   * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
+   */
   public fun conditionalFormattingOptions(conditionalFormattingOptions: Collection<Any>) {
     _conditionalFormattingOptions.addAll(conditionalFormattingOptions)
   }
 
+  /**
+   * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
+   */
   public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable) {
     cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
   }

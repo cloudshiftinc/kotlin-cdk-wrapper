@@ -11,6 +11,9 @@ public class CfnCampaignProgressiveDialerConfigPropertyDsl {
   private val cdkBuilder: CfnCampaign.ProgressiveDialerConfigProperty.Builder =
       CfnCampaign.ProgressiveDialerConfigProperty.builder()
 
+  /**
+   * @param bandwidthAllocation Bandwidth allocation for the progressive dialer. 
+   */
   public fun bandwidthAllocation(bandwidthAllocation: Number) {
     cdkBuilder.bandwidthAllocation(bandwidthAllocation)
   }

@@ -11,14 +11,23 @@ public class CfnModelCardUserContextPropertyDsl {
   private val cdkBuilder: CfnModelCard.UserContextProperty.Builder =
       CfnModelCard.UserContextProperty.builder()
 
+  /**
+   * @param domainId The domain associated with the user.
+   */
   public fun domainId(domainId: String) {
     cdkBuilder.domainId(domainId)
   }
 
+  /**
+   * @param userProfileArn The Amazon Resource Name (ARN) of the user's profile.
+   */
   public fun userProfileArn(userProfileArn: String) {
     cdkBuilder.userProfileArn(userProfileArn)
   }
 
+  /**
+   * @param userProfileName The name of the user's profile.
+   */
   public fun userProfileName(userProfileName: String) {
     cdkBuilder.userProfileName(userProfileName)
   }

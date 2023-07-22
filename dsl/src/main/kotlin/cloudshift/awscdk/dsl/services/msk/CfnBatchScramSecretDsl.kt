@@ -19,14 +19,26 @@ public class CfnBatchScramSecretDsl(
 
   private val _secretArnList: MutableList<String> = mutableListOf()
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-clusterarn)
+   * @param clusterArn 
+   */
   public fun clusterArn(clusterArn: String) {
     cdkBuilder.clusterArn(clusterArn)
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
+   * @param secretArnList 
+   */
   public fun secretArnList(vararg secretArnList: String) {
     _secretArnList.addAll(listOf(*secretArnList))
   }
 
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
+   * @param secretArnList 
+   */
   public fun secretArnList(secretArnList: Collection<String>) {
     _secretArnList.addAll(secretArnList)
   }

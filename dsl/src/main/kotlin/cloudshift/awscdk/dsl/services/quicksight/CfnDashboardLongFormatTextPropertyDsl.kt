@@ -11,10 +11,17 @@ public class CfnDashboardLongFormatTextPropertyDsl {
   private val cdkBuilder: CfnDashboard.LongFormatTextProperty.Builder =
       CfnDashboard.LongFormatTextProperty.builder()
 
+  /**
+   * @param plainText Plain text format.
+   */
   public fun plainText(plainText: String) {
     cdkBuilder.plainText(plainText)
   }
 
+  /**
+   * @param richText Rich text.
+   * Examples of rich text include bold, underline, and italics.
+   */
   public fun richText(richText: String) {
     cdkBuilder.richText(richText)
   }

@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.lambda.AutoScalingOptions
 public class AutoScalingOptionsDsl {
   private val cdkBuilder: AutoScalingOptions.Builder = AutoScalingOptions.builder()
 
+  /**
+   * @param maxCapacity Maximum capacity to scale to. 
+   */
   public fun maxCapacity(maxCapacity: Number) {
     cdkBuilder.maxCapacity(maxCapacity)
   }
 
+  /**
+   * @param minCapacity Minimum capacity to scale to.
+   */
   public fun minCapacity(minCapacity: Number) {
     cdkBuilder.minCapacity(minCapacity)
   }

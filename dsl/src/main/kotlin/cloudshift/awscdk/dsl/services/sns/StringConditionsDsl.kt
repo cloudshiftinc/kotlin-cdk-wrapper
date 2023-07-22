@@ -18,26 +18,44 @@ public class StringConditionsDsl {
 
   private val _matchPrefixes: MutableList<String> = mutableListOf()
 
+  /**
+   * @param allowlist Match one or more values.
+   */
   public fun allowlist(vararg allowlist: String) {
     _allowlist.addAll(listOf(*allowlist))
   }
 
+  /**
+   * @param allowlist Match one or more values.
+   */
   public fun allowlist(allowlist: Collection<String>) {
     _allowlist.addAll(allowlist)
   }
 
+  /**
+   * @param denylist Match any value that doesn't include any of the specified values.
+   */
   public fun denylist(vararg denylist: String) {
     _denylist.addAll(listOf(*denylist))
   }
 
+  /**
+   * @param denylist Match any value that doesn't include any of the specified values.
+   */
   public fun denylist(denylist: Collection<String>) {
     _denylist.addAll(denylist)
   }
 
+  /**
+   * @param matchPrefixes Matches values that begins with the specified prefixes.
+   */
   public fun matchPrefixes(vararg matchPrefixes: String) {
     _matchPrefixes.addAll(listOf(*matchPrefixes))
   }
 
+  /**
+   * @param matchPrefixes Matches values that begins with the specified prefixes.
+   */
   public fun matchPrefixes(matchPrefixes: Collection<String>) {
     _matchPrefixes.addAll(matchPrefixes)
   }

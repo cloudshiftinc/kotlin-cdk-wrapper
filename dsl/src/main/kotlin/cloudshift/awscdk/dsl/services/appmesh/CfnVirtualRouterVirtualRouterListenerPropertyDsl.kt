@@ -11,10 +11,16 @@ public class CfnVirtualRouterVirtualRouterListenerPropertyDsl {
   private val cdkBuilder: CfnVirtualRouter.VirtualRouterListenerProperty.Builder =
       CfnVirtualRouter.VirtualRouterListenerProperty.builder()
 
+  /**
+   * @param portMapping The port mapping information for the listener. 
+   */
   public fun portMapping(portMapping: IResolvable) {
     cdkBuilder.portMapping(portMapping)
   }
 
+  /**
+   * @param portMapping The port mapping information for the listener. 
+   */
   public fun portMapping(portMapping: CfnVirtualRouter.PortMappingProperty) {
     cdkBuilder.portMapping(portMapping)
   }

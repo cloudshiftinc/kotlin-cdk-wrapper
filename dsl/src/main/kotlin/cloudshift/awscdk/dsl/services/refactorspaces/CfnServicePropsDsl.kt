@@ -19,50 +19,86 @@ public class CfnServicePropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param applicationIdentifier The unique identifier of the application. 
+   */
   public fun applicationIdentifier(applicationIdentifier: String) {
     cdkBuilder.applicationIdentifier(applicationIdentifier)
   }
 
+  /**
+   * @param description A description of the service.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param endpointType The endpoint type of the service. 
+   */
   public fun endpointType(endpointType: String) {
     cdkBuilder.endpointType(endpointType)
   }
 
+  /**
+   * @param environmentIdentifier The unique identifier of the environment. 
+   */
   public fun environmentIdentifier(environmentIdentifier: String) {
     cdkBuilder.environmentIdentifier(environmentIdentifier)
   }
 
+  /**
+   * @param lambdaEndpoint A summary of the configuration for the AWS Lambda endpoint type.
+   */
   public fun lambdaEndpoint(lambdaEndpoint: IResolvable) {
     cdkBuilder.lambdaEndpoint(lambdaEndpoint)
   }
 
+  /**
+   * @param lambdaEndpoint A summary of the configuration for the AWS Lambda endpoint type.
+   */
   public fun lambdaEndpoint(lambdaEndpoint: CfnService.LambdaEndpointInputProperty) {
     cdkBuilder.lambdaEndpoint(lambdaEndpoint)
   }
 
+  /**
+   * @param name The name of the service. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags The tags assigned to the service.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags assigned to the service.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param urlEndpoint The summary of the configuration for the URL endpoint type.
+   */
   public fun urlEndpoint(urlEndpoint: IResolvable) {
     cdkBuilder.urlEndpoint(urlEndpoint)
   }
 
+  /**
+   * @param urlEndpoint The summary of the configuration for the URL endpoint type.
+   */
   public fun urlEndpoint(urlEndpoint: CfnService.UrlEndpointInputProperty) {
     cdkBuilder.urlEndpoint(urlEndpoint)
   }
 
+  /**
+   * @param vpcId The ID of the virtual private cloud (VPC).
+   */
   public fun vpcId(vpcId: String) {
     cdkBuilder.vpcId(vpcId)
   }

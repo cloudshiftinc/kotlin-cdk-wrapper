@@ -11,10 +11,24 @@ public class CfnDeliveryStreamBufferingHintsPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.BufferingHintsProperty.Builder =
       CfnDeliveryStream.BufferingHintsProperty.builder()
 
+  /**
+   * @param intervalInSeconds The length of time, in seconds, that Kinesis Data Firehose buffers
+   * incoming data before delivering it to the destination.
+   * For valid values, see the `IntervalInSeconds` content for the
+   * [BufferingHints](https://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html)
+   * data type in the *Amazon Kinesis Data Firehose API Reference* .
+   */
   public fun intervalInSeconds(intervalInSeconds: Number) {
     cdkBuilder.intervalInSeconds(intervalInSeconds)
   }
 
+  /**
+   * @param sizeInMBs The size of the buffer, in MBs, that Kinesis Data Firehose uses for incoming
+   * data before delivering it to the destination.
+   * For valid values, see the `SizeInMBs` content for the
+   * [BufferingHints](https://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html)
+   * data type in the *Amazon Kinesis Data Firehose API Reference* .
+   */
   public fun sizeInMBs(sizeInMBs: Number) {
     cdkBuilder.sizeInMBs(sizeInMBs)
   }

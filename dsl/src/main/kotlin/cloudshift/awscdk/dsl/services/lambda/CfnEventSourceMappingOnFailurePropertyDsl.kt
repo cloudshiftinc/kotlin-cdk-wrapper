@@ -11,6 +11,9 @@ public class CfnEventSourceMappingOnFailurePropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.OnFailureProperty.Builder =
       CfnEventSourceMapping.OnFailureProperty.builder()
 
+  /**
+   * @param destination The Amazon Resource Name (ARN) of the destination resource.
+   */
   public fun destination(destination: String) {
     cdkBuilder.destination(destination)
   }

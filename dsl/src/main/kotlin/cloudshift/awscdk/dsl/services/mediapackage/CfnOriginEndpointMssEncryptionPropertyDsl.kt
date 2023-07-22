@@ -11,10 +11,16 @@ public class CfnOriginEndpointMssEncryptionPropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.MssEncryptionProperty.Builder =
       CfnOriginEndpoint.MssEncryptionProperty.builder()
 
+  /**
+   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+   */
   public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
     cdkBuilder.spekeKeyProvider(spekeKeyProvider)
   }
 
+  /**
+   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+   */
   public fun spekeKeyProvider(spekeKeyProvider: CfnOriginEndpoint.SpekeKeyProviderProperty) {
     cdkBuilder.spekeKeyProvider(spekeKeyProvider)
   }

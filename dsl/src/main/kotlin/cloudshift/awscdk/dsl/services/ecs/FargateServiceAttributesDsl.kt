@@ -11,14 +11,23 @@ import software.amazon.awscdk.services.ecs.ICluster
 public class FargateServiceAttributesDsl {
   private val cdkBuilder: FargateServiceAttributes.Builder = FargateServiceAttributes.builder()
 
+  /**
+   * @param cluster The cluster that hosts the service. 
+   */
   public fun cluster(cluster: ICluster) {
     cdkBuilder.cluster(cluster)
   }
 
+  /**
+   * @param serviceArn The service ARN.
+   */
   public fun serviceArn(serviceArn: String) {
     cdkBuilder.serviceArn(serviceArn)
   }
 
+  /**
+   * @param serviceName The name of the service.
+   */
   public fun serviceName(serviceName: String) {
     cdkBuilder.serviceName(serviceName)
   }

@@ -19,22 +19,37 @@ public class CfnTemplateTableFieldOptionsPropertyDsl {
 
   private val _selectedFieldOptions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param order The order of field IDs of the field options for a table visual.
+   */
   public fun order(vararg order: String) {
     _order.addAll(listOf(*order))
   }
 
+  /**
+   * @param order The order of field IDs of the field options for a table visual.
+   */
   public fun order(order: Collection<String>) {
     _order.addAll(order)
   }
 
+  /**
+   * @param selectedFieldOptions The selected field options for the table field options.
+   */
   public fun selectedFieldOptions(vararg selectedFieldOptions: Any) {
     _selectedFieldOptions.addAll(listOf(*selectedFieldOptions))
   }
 
+  /**
+   * @param selectedFieldOptions The selected field options for the table field options.
+   */
   public fun selectedFieldOptions(selectedFieldOptions: Collection<Any>) {
     _selectedFieldOptions.addAll(selectedFieldOptions)
   }
 
+  /**
+   * @param selectedFieldOptions The selected field options for the table field options.
+   */
   public fun selectedFieldOptions(selectedFieldOptions: IResolvable) {
     cdkBuilder.selectedFieldOptions(selectedFieldOptions)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.ecs.DeploymentAlarmOptions
 public class DeploymentAlarmOptionsDsl {
   private val cdkBuilder: DeploymentAlarmOptions.Builder = DeploymentAlarmOptions.builder()
 
+  /**
+   * @param behavior Default rollback on alarm.
+   */
   public fun behavior(behavior: AlarmBehavior) {
     cdkBuilder.behavior(behavior)
   }

@@ -16,14 +16,26 @@ public class CfnRouteGrpcRouteActionPropertyDsl {
 
   private val _weightedTargets: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param weightedTargets An object that represents the targets that traffic is routed to when a
+   * request matches the route. 
+   */
   public fun weightedTargets(vararg weightedTargets: Any) {
     _weightedTargets.addAll(listOf(*weightedTargets))
   }
 
+  /**
+   * @param weightedTargets An object that represents the targets that traffic is routed to when a
+   * request matches the route. 
+   */
   public fun weightedTargets(weightedTargets: Collection<Any>) {
     _weightedTargets.addAll(weightedTargets)
   }
 
+  /**
+   * @param weightedTargets An object that represents the targets that traffic is routed to when a
+   * request matches the route. 
+   */
   public fun weightedTargets(weightedTargets: IResolvable) {
     cdkBuilder.weightedTargets(weightedTargets)
   }

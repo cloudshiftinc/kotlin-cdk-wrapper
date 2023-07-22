@@ -11,6 +11,9 @@ public class CfnApplicationInstanceManifestPayloadPropertyDsl {
   private val cdkBuilder: CfnApplicationInstance.ManifestPayloadProperty.Builder =
       CfnApplicationInstance.ManifestPayloadProperty.builder()
 
+  /**
+   * @param payloadData The application manifest.
+   */
   public fun payloadData(payloadData: String) {
     cdkBuilder.payloadData(payloadData)
   }

@@ -12,14 +12,23 @@ public class CfnComponentTypeStatusPropertyDsl {
   private val cdkBuilder: CfnComponentType.StatusProperty.Builder =
       CfnComponentType.StatusProperty.builder()
 
+  /**
+   * @param error The component type error.
+   */
   public fun error(error: IResolvable) {
     cdkBuilder.error(error)
   }
 
+  /**
+   * @param error The component type error.
+   */
   public fun error(error: CfnComponentType.ErrorProperty) {
     cdkBuilder.error(error)
   }
 
+  /**
+   * @param state The component type status state.
+   */
   public fun state(state: String) {
     cdkBuilder.state(state)
   }

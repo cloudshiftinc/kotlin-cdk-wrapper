@@ -11,10 +11,16 @@ import software.amazon.awscdk.ICfnConditionExpression
 public class CfnRuleAssertionDsl {
   private val cdkBuilder: CfnRuleAssertion.Builder = CfnRuleAssertion.builder()
 
+  /**
+   * @param assertDescription The assertion description. 
+   */
   public fun assertDescription(assertDescription: String) {
     cdkBuilder.assertDescription(assertDescription)
   }
 
+  /**
+   * @param assertValue The assertion. 
+   */
   public fun assertValue(assertValue: ICfnConditionExpression) {
     cdkBuilder.assertValue(assertValue)
   }

@@ -20,52 +20,91 @@ public class ApplicationLoadBalancerPropsDsl {
   private val cdkBuilder: ApplicationLoadBalancerProps.Builder =
       ApplicationLoadBalancerProps.builder()
 
+  /**
+   * @param deletionProtection Indicates whether deletion protection is enabled.
+   */
   public fun deletionProtection(deletionProtection: Boolean) {
     cdkBuilder.deletionProtection(deletionProtection)
   }
 
+  /**
+   * @param desyncMitigationMode Determines how the load balancer handles requests that might pose a
+   * security risk to your application.
+   */
   public fun desyncMitigationMode(desyncMitigationMode: DesyncMitigationMode) {
     cdkBuilder.desyncMitigationMode(desyncMitigationMode)
   }
 
+  /**
+   * @param dropInvalidHeaderFields Indicates whether HTTP headers with invalid header fields are
+   * removed by the load balancer (true) or routed to targets (false).
+   */
   public fun dropInvalidHeaderFields(dropInvalidHeaderFields: Boolean) {
     cdkBuilder.dropInvalidHeaderFields(dropInvalidHeaderFields)
   }
 
+  /**
+   * @param http2Enabled Indicates whether HTTP/2 is enabled.
+   */
   public fun http2Enabled(http2Enabled: Boolean) {
     cdkBuilder.http2Enabled(http2Enabled)
   }
 
+  /**
+   * @param idleTimeout The load balancer idle timeout, in seconds.
+   */
   public fun idleTimeout(idleTimeout: Duration) {
     cdkBuilder.idleTimeout(idleTimeout)
   }
 
+  /**
+   * @param internetFacing Whether the load balancer has an internet-routable address.
+   */
   public fun internetFacing(internetFacing: Boolean) {
     cdkBuilder.internetFacing(internetFacing)
   }
 
+  /**
+   * @param ipAddressType The type of IP addresses to use.
+   * Only applies to application load balancers.
+   */
   public fun ipAddressType(ipAddressType: IpAddressType) {
     cdkBuilder.ipAddressType(ipAddressType)
   }
 
+  /**
+   * @param loadBalancerName Name of the load balancer.
+   */
   public fun loadBalancerName(loadBalancerName: String) {
     cdkBuilder.loadBalancerName(loadBalancerName)
   }
 
+  /**
+   * @param securityGroup Security group to associate with this load balancer.
+   */
   public fun securityGroup(securityGroup: ISecurityGroup) {
     cdkBuilder.securityGroup(securityGroup)
   }
 
+  /**
+   * @param vpc The VPC network to place the load balancer in. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }
 
-  public fun vpcSubnets(block: SubnetSelectionDsl.() -> Unit = {}) {
+  /**
+   * @param vpcSubnets Which subnets place the load balancer in.
+   */
+  public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
     val builder = SubnetSelectionDsl()
-    builder.apply(block)
+    builder.apply(vpcSubnets)
     cdkBuilder.vpcSubnets(builder.build())
   }
 
+  /**
+   * @param vpcSubnets Which subnets place the load balancer in.
+   */
   public fun vpcSubnets(vpcSubnets: SubnetSelection) {
     cdkBuilder.vpcSubnets(vpcSubnets)
   }

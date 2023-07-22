@@ -11,6 +11,9 @@ public class CfnComponentTypeLambdaFunctionPropertyDsl {
   private val cdkBuilder: CfnComponentType.LambdaFunctionProperty.Builder =
       CfnComponentType.LambdaFunctionProperty.builder()
 
+  /**
+   * @param arn The Lambda function ARN. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

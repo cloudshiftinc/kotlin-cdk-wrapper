@@ -23,26 +23,66 @@ public class CfnScheduleDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The dates and times when the job is to run.
+   *
+   * For more information, see [Working with cron expressions for recipe
+   * jobs](https://docs.aws.amazon.com/databrew/latest/dg/jobs.recipe.html#jobs.cron) in the *AWS Glue
+   * DataBrew Developer Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-cronexpression)
+   * @param cronExpression The dates and times when the job is to run. 
+   */
   public fun cronExpression(cronExpression: String) {
     cdkBuilder.cronExpression(cronExpression)
   }
 
+  /**
+   * A list of jobs to be run, according to the schedule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-jobnames)
+   * @param jobNames A list of jobs to be run, according to the schedule. 
+   */
   public fun jobNames(vararg jobNames: String) {
     _jobNames.addAll(listOf(*jobNames))
   }
 
+  /**
+   * A list of jobs to be run, according to the schedule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-jobnames)
+   * @param jobNames A list of jobs to be run, according to the schedule. 
+   */
   public fun jobNames(jobNames: Collection<String>) {
     _jobNames.addAll(jobNames)
   }
 
+  /**
+   * The name of the schedule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-name)
+   * @param name The name of the schedule. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * Metadata tags that have been applied to the schedule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-tags)
+   * @param tags Metadata tags that have been applied to the schedule. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Metadata tags that have been applied to the schedule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-tags)
+   * @param tags Metadata tags that have been applied to the schedule. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

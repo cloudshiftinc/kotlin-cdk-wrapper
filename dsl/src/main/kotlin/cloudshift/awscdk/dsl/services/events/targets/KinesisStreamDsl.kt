@@ -14,10 +14,26 @@ public class KinesisStreamDsl(
 ) {
   private val cdkBuilder: KinesisStream.Builder = KinesisStream.Builder.create(stream)
 
+  /**
+   * The message to send to the stream.
+   *
+   * Must be a valid JSON text passed to the target stream.
+   *
+   * Default: - the entire CloudWatch event
+   *
+   * @param message The message to send to the stream. 
+   */
   public fun message(message: RuleTargetInput) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * Partition Key Path for records sent to this stream.
+   *
+   * Default: - eventId as the partition key
+   *
+   * @param partitionKeyPath Partition Key Path for records sent to this stream. 
+   */
   public fun partitionKeyPath(partitionKeyPath: String) {
     cdkBuilder.partitionKeyPath(partitionKeyPath)
   }

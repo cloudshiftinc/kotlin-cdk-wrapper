@@ -12,12 +12,18 @@ import software.amazon.awscdk.services.codepipeline.ActionConfig
 public class ActionConfigDsl {
   private val cdkBuilder: ActionConfig.Builder = ActionConfig.builder()
 
-  public fun configuration(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param configuration the value to be set.
+   */
+  public fun configuration(configuration: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(configuration)
     cdkBuilder.configuration(builder.map)
   }
 
+  /**
+   * @param configuration the value to be set.
+   */
   public fun configuration(configuration: Any) {
     cdkBuilder.configuration(configuration)
   }

@@ -14,42 +14,72 @@ public class CfnImageRecipeEbsInstanceBlockDeviceSpecificationPropertyDsl {
   private val cdkBuilder: CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty.Builder =
       CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty.builder()
 
+  /**
+   * @param deleteOnTermination Configures delete on termination of the associated device.
+   */
   public fun deleteOnTermination(deleteOnTermination: Boolean) {
     cdkBuilder.deleteOnTermination(deleteOnTermination)
   }
 
+  /**
+   * @param deleteOnTermination Configures delete on termination of the associated device.
+   */
   public fun deleteOnTermination(deleteOnTermination: IResolvable) {
     cdkBuilder.deleteOnTermination(deleteOnTermination)
   }
 
+  /**
+   * @param encrypted Use to configure device encryption.
+   */
   public fun encrypted(encrypted: Boolean) {
     cdkBuilder.encrypted(encrypted)
   }
 
+  /**
+   * @param encrypted Use to configure device encryption.
+   */
   public fun encrypted(encrypted: IResolvable) {
     cdkBuilder.encrypted(encrypted)
   }
 
+  /**
+   * @param iops Use to configure device IOPS.
+   */
   public fun iops(iops: Number) {
     cdkBuilder.iops(iops)
   }
 
+  /**
+   * @param kmsKeyId Use to configure the KMS key to use when encrypting the device.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param snapshotId The snapshot that defines the device contents.
+   */
   public fun snapshotId(snapshotId: String) {
     cdkBuilder.snapshotId(snapshotId)
   }
 
+  /**
+   * @param throughput *For GP3 volumes only* – The throughput in MiB/s that the volume supports.
+   */
   public fun throughput(throughput: Number) {
     cdkBuilder.throughput(throughput)
   }
 
+  /**
+   * @param volumeSize Overrides the volume size of the device.
+   */
   public fun volumeSize(volumeSize: Number) {
     cdkBuilder.volumeSize(volumeSize)
   }
 
+  /**
+   * @param volumeType Overrides the volume type of the device.
+   */
   public fun volumeType(volumeType: String) {
     cdkBuilder.volumeType(volumeType)
   }

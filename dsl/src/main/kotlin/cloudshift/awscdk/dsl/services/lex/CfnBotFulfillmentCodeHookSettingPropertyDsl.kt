@@ -12,35 +12,71 @@ public class CfnBotFulfillmentCodeHookSettingPropertyDsl {
   private val cdkBuilder: CfnBot.FulfillmentCodeHookSettingProperty.Builder =
       CfnBot.FulfillmentCodeHookSettingProperty.builder()
 
+  /**
+   * @param enabled Indicates whether a Lambda function should be invoked to fulfill a specific
+   * intent. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether a Lambda function should be invoked to fulfill a specific
+   * intent. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param fulfillmentUpdatesSpecification Provides settings for update messages sent to the user
+   * for long-running Lambda fulfillment functions.
+   * Fulfillment updates can be used only with streaming conversations.
+   */
   public fun fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification: IResolvable) {
     cdkBuilder.fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification)
   }
 
+  /**
+   * @param fulfillmentUpdatesSpecification Provides settings for update messages sent to the user
+   * for long-running Lambda fulfillment functions.
+   * Fulfillment updates can be used only with streaming conversations.
+   */
   public
       fun fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification: CfnBot.FulfillmentUpdatesSpecificationProperty) {
     cdkBuilder.fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification)
   }
 
+  /**
+   * @param isActive Determines whether the fulfillment code hook is used.
+   * When `active` is false, the code hook doesn't run.
+   */
   public fun isActive(isActive: Boolean) {
     cdkBuilder.isActive(isActive)
   }
 
+  /**
+   * @param isActive Determines whether the fulfillment code hook is used.
+   * When `active` is false, the code hook doesn't run.
+   */
   public fun isActive(isActive: IResolvable) {
     cdkBuilder.isActive(isActive)
   }
 
+  /**
+   * @param postFulfillmentStatusSpecification Provides settings for messages sent to the user for
+   * after the Lambda fulfillment function completes.
+   * Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+   */
   public fun postFulfillmentStatusSpecification(postFulfillmentStatusSpecification: IResolvable) {
     cdkBuilder.postFulfillmentStatusSpecification(postFulfillmentStatusSpecification)
   }
 
+  /**
+   * @param postFulfillmentStatusSpecification Provides settings for messages sent to the user for
+   * after the Lambda fulfillment function completes.
+   * Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+   */
   public
       fun postFulfillmentStatusSpecification(postFulfillmentStatusSpecification: CfnBot.PostFulfillmentStatusSpecificationProperty) {
     cdkBuilder.postFulfillmentStatusSpecification(postFulfillmentStatusSpecification)

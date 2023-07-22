@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.ecr.RepositoryAttributes
 public class RepositoryAttributesDsl {
   private val cdkBuilder: RepositoryAttributes.Builder = RepositoryAttributes.builder()
 
+  /**
+   * @param repositoryArn the value to be set. 
+   */
   public fun repositoryArn(repositoryArn: String) {
     cdkBuilder.repositoryArn(repositoryArn)
   }
 
+  /**
+   * @param repositoryName the value to be set. 
+   */
   public fun repositoryName(repositoryName: String) {
     cdkBuilder.repositoryName(repositoryName)
   }

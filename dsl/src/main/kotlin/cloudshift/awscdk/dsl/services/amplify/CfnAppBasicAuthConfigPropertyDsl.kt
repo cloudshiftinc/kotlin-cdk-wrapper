@@ -13,18 +13,32 @@ public class CfnAppBasicAuthConfigPropertyDsl {
   private val cdkBuilder: CfnApp.BasicAuthConfigProperty.Builder =
       CfnApp.BasicAuthConfigProperty.builder()
 
+  /**
+   * @param enableBasicAuth Enables basic authorization for the Amplify app's branches.
+   */
   public fun enableBasicAuth(enableBasicAuth: Boolean) {
     cdkBuilder.enableBasicAuth(enableBasicAuth)
   }
 
+  /**
+   * @param enableBasicAuth Enables basic authorization for the Amplify app's branches.
+   */
   public fun enableBasicAuth(enableBasicAuth: IResolvable) {
     cdkBuilder.enableBasicAuth(enableBasicAuth)
   }
 
+  /**
+   * @param password The password for basic authorization.
+   * *Length Constraints:* Minimum length of 1. Maximum length of 255.
+   */
   public fun password(password: String) {
     cdkBuilder.password(password)
   }
 
+  /**
+   * @param username The user name for basic authorization.
+   * *Length Constraints:* Minimum length of 1. Maximum length of 255.
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

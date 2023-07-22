@@ -14,32 +14,53 @@ import software.amazon.awscdk.services.cloudwatch.YAxisProps
 public class AlarmWidgetPropsDsl {
   private val cdkBuilder: AlarmWidgetProps.Builder = AlarmWidgetProps.builder()
 
+  /**
+   * @param alarm The alarm to show. 
+   */
   public fun alarm(alarm: IAlarm) {
     cdkBuilder.alarm(alarm)
   }
 
+  /**
+   * @param height Height of the widget.
+   */
   public fun height(height: Number) {
     cdkBuilder.height(height)
   }
 
-  public fun leftYAxis(block: YAxisPropsDsl.() -> Unit = {}) {
+  /**
+   * @param leftYAxis Left Y axis.
+   */
+  public fun leftYAxis(leftYAxis: YAxisPropsDsl.() -> Unit = {}) {
     val builder = YAxisPropsDsl()
-    builder.apply(block)
+    builder.apply(leftYAxis)
     cdkBuilder.leftYAxis(builder.build())
   }
 
+  /**
+   * @param leftYAxis Left Y axis.
+   */
   public fun leftYAxis(leftYAxis: YAxisProps) {
     cdkBuilder.leftYAxis(leftYAxis)
   }
 
+  /**
+   * @param region The region the metrics of this graph should be taken from.
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * @param title Title for the graph.
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }
 
+  /**
+   * @param width Width of the widget, in a grid of 24 units wide.
+   */
   public fun width(width: Number) {
     cdkBuilder.width(width)
   }

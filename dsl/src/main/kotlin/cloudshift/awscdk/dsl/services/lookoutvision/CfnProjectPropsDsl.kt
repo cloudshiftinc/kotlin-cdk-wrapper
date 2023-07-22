@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.lookoutvision.CfnProjectProps
 public class CfnProjectPropsDsl {
   private val cdkBuilder: CfnProjectProps.Builder = CfnProjectProps.builder()
 
+  /**
+   * @param projectName The name of the project. 
+   */
   public fun projectName(projectName: String) {
     cdkBuilder.projectName(projectName)
   }

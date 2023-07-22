@@ -12,15 +12,24 @@ public class CfnAnalysisSheetElementRenderingRulePropertyDsl {
   private val cdkBuilder: CfnAnalysis.SheetElementRenderingRuleProperty.Builder =
       CfnAnalysis.SheetElementRenderingRuleProperty.builder()
 
+  /**
+   * @param configurationOverrides The override configuration of the rendering rules of a sheet. 
+   */
   public fun configurationOverrides(configurationOverrides: IResolvable) {
     cdkBuilder.configurationOverrides(configurationOverrides)
   }
 
+  /**
+   * @param configurationOverrides The override configuration of the rendering rules of a sheet. 
+   */
   public
       fun configurationOverrides(configurationOverrides: CfnAnalysis.SheetElementConfigurationOverridesProperty) {
     cdkBuilder.configurationOverrides(configurationOverrides)
   }
 
+  /**
+   * @param expression The expression of the rendering rules of a sheet. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }

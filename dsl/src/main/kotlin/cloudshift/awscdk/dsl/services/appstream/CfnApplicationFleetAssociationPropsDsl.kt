@@ -11,10 +11,16 @@ public class CfnApplicationFleetAssociationPropsDsl {
   private val cdkBuilder: CfnApplicationFleetAssociationProps.Builder =
       CfnApplicationFleetAssociationProps.builder()
 
+  /**
+   * @param applicationArn The ARN of the application. 
+   */
   public fun applicationArn(applicationArn: String) {
     cdkBuilder.applicationArn(applicationArn)
   }
 
+  /**
+   * @param fleetName The name of the fleet. 
+   */
   public fun fleetName(fleetName: String) {
     cdkBuilder.fleetName(fleetName)
   }

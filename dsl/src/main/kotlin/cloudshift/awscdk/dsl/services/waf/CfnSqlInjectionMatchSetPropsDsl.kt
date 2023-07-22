@@ -17,18 +17,33 @@ public class CfnSqlInjectionMatchSetPropsDsl {
 
   private val _sqlInjectionMatchTuples: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param name The name, if any, of the `SqlInjectionMatchSet` . 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect for
+   * snippets of malicious SQL code.
+   */
   public fun sqlInjectionMatchTuples(vararg sqlInjectionMatchTuples: Any) {
     _sqlInjectionMatchTuples.addAll(listOf(*sqlInjectionMatchTuples))
   }
 
+  /**
+   * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect for
+   * snippets of malicious SQL code.
+   */
   public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: Collection<Any>) {
     _sqlInjectionMatchTuples.addAll(sqlInjectionMatchTuples)
   }
 
+  /**
+   * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect for
+   * snippets of malicious SQL code.
+   */
   public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable) {
     cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples)
   }

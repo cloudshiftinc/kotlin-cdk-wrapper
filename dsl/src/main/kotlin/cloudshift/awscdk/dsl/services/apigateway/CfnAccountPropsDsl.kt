@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.apigateway.CfnAccountProps
 public class CfnAccountPropsDsl {
   private val cdkBuilder: CfnAccountProps.Builder = CfnAccountProps.builder()
 
+  /**
+   * @param cloudWatchRoleArn The ARN of an Amazon CloudWatch role for the current Account.
+   */
   public fun cloudWatchRoleArn(cloudWatchRoleArn: String) {
     cdkBuilder.cloudWatchRoleArn(cloudWatchRoleArn)
   }

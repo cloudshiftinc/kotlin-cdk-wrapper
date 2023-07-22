@@ -23,50 +23,91 @@ public class BackupVaultPropsDsl {
 
   private val _notificationEvents: MutableList<BackupVaultEvents> = mutableListOf()
 
-  public fun accessPolicy(block: PolicyDocumentDsl.() -> Unit = {}) {
+  /**
+   * @param accessPolicy A resource-based policy that is used to manage access permissions on the
+   * backup vault.
+   */
+  public fun accessPolicy(accessPolicy: PolicyDocumentDsl.() -> Unit = {}) {
     val builder = PolicyDocumentDsl()
-    builder.apply(block)
+    builder.apply(accessPolicy)
     cdkBuilder.accessPolicy(builder.build())
   }
 
+  /**
+   * @param accessPolicy A resource-based policy that is used to manage access permissions on the
+   * backup vault.
+   */
   public fun accessPolicy(accessPolicy: PolicyDocument) {
     cdkBuilder.accessPolicy(accessPolicy)
   }
 
+  /**
+   * @param backupVaultName The name of a logical container where backups are stored.
+   * Backup vaults
+   * are identified by names that are unique to the account used to create
+   * them and the AWS Region where they are created.
+   */
   public fun backupVaultName(backupVaultName: String) {
     cdkBuilder.backupVaultName(backupVaultName)
   }
 
+  /**
+   * @param blockRecoveryPointDeletion Whether to add statements to the vault access policy that
+   * prevents anyone from deleting a recovery point.
+   */
   public fun blockRecoveryPointDeletion(blockRecoveryPointDeletion: Boolean) {
     cdkBuilder.blockRecoveryPointDeletion(blockRecoveryPointDeletion)
   }
 
+  /**
+   * @param encryptionKey The server-side encryption key to use to protect your backups.
+   */
   public fun encryptionKey(encryptionKey: IKey) {
     cdkBuilder.encryptionKey(encryptionKey)
   }
 
-  public fun lockConfiguration(block: LockConfigurationDsl.() -> Unit = {}) {
+  /**
+   * @param lockConfiguration Configuration for AWS Backup Vault Lock.
+   */
+  public fun lockConfiguration(lockConfiguration: LockConfigurationDsl.() -> Unit = {}) {
     val builder = LockConfigurationDsl()
-    builder.apply(block)
+    builder.apply(lockConfiguration)
     cdkBuilder.lockConfiguration(builder.build())
   }
 
+  /**
+   * @param lockConfiguration Configuration for AWS Backup Vault Lock.
+   */
   public fun lockConfiguration(lockConfiguration: LockConfiguration) {
     cdkBuilder.lockConfiguration(lockConfiguration)
   }
 
+  /**
+   * @param notificationEvents The vault events to send.
+   */
   public fun notificationEvents(vararg notificationEvents: BackupVaultEvents) {
     _notificationEvents.addAll(listOf(*notificationEvents))
   }
 
+  /**
+   * @param notificationEvents The vault events to send.
+   */
   public fun notificationEvents(notificationEvents: Collection<BackupVaultEvents>) {
     _notificationEvents.addAll(notificationEvents)
   }
 
+  /**
+   * @param notificationTopic A SNS topic to send vault events to.
+   */
   public fun notificationTopic(notificationTopic: ITopic) {
     cdkBuilder.notificationTopic(notificationTopic)
   }
 
+  /**
+   * @param removalPolicy The removal policy to apply to the vault.
+   * Note that removing a vault
+   * that contains recovery points will fail.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }

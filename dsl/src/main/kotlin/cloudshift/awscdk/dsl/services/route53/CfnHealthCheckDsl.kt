@@ -20,22 +20,66 @@ public class CfnHealthCheckDsl(
 
   private val _healthCheckTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * A complex type that contains detailed information about one health check.
+   *
+   * For the values to enter for `HealthCheckConfig` , see
+   * [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html)
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthcheckconfig)
+   * @param healthCheckConfig A complex type that contains detailed information about one health
+   * check. 
+   */
   public fun healthCheckConfig(healthCheckConfig: IResolvable) {
     cdkBuilder.healthCheckConfig(healthCheckConfig)
   }
 
+  /**
+   * A complex type that contains detailed information about one health check.
+   *
+   * For the values to enter for `HealthCheckConfig` , see
+   * [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html)
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthcheckconfig)
+   * @param healthCheckConfig A complex type that contains detailed information about one health
+   * check. 
+   */
   public fun healthCheckConfig(healthCheckConfig: CfnHealthCheck.HealthCheckConfigProperty) {
     cdkBuilder.healthCheckConfig(healthCheckConfig)
   }
 
+  /**
+   * The `HealthCheckTags` property describes key-value pairs that are associated with an
+   * `AWS::Route53::HealthCheck` resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthchecktags)
+   * @param healthCheckTags The `HealthCheckTags` property describes key-value pairs that are
+   * associated with an `AWS::Route53::HealthCheck` resource. 
+   */
   public fun healthCheckTags(vararg healthCheckTags: Any) {
     _healthCheckTags.addAll(listOf(*healthCheckTags))
   }
 
+  /**
+   * The `HealthCheckTags` property describes key-value pairs that are associated with an
+   * `AWS::Route53::HealthCheck` resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthchecktags)
+   * @param healthCheckTags The `HealthCheckTags` property describes key-value pairs that are
+   * associated with an `AWS::Route53::HealthCheck` resource. 
+   */
   public fun healthCheckTags(healthCheckTags: Collection<Any>) {
     _healthCheckTags.addAll(healthCheckTags)
   }
 
+  /**
+   * The `HealthCheckTags` property describes key-value pairs that are associated with an
+   * `AWS::Route53::HealthCheck` resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthchecktags)
+   * @param healthCheckTags The `HealthCheckTags` property describes key-value pairs that are
+   * associated with an `AWS::Route53::HealthCheck` resource. 
+   */
   public fun healthCheckTags(healthCheckTags: IResolvable) {
     cdkBuilder.healthCheckTags(healthCheckTags)
   }

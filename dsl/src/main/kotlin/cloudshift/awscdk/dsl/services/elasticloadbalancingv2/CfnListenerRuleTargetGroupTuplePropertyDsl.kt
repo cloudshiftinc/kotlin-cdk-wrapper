@@ -12,10 +12,17 @@ public class CfnListenerRuleTargetGroupTuplePropertyDsl {
   private val cdkBuilder: CfnListenerRule.TargetGroupTupleProperty.Builder =
       CfnListenerRule.TargetGroupTupleProperty.builder()
 
+  /**
+   * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
+   */
   public fun targetGroupArn(targetGroupArn: String) {
     cdkBuilder.targetGroupArn(targetGroupArn)
   }
 
+  /**
+   * @param weight The weight.
+   * The range is 0 to 999.
+   */
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)
   }

@@ -13,14 +13,25 @@ public class CfnTopicNamedEntityDefinitionMetricPropertyDsl {
   private val cdkBuilder: CfnTopic.NamedEntityDefinitionMetricProperty.Builder =
       CfnTopic.NamedEntityDefinitionMetricProperty.builder()
 
+  /**
+   * @param aggregation The aggregation of a named entity.
+   * Valid values for this structure are `SUM` , `MIN` , `MAX` , `COUNT` , `AVERAGE` ,
+   * `DISTINCT_COUNT` , `STDEV` , `STDEVP` , `VAR` , `VARP` , `PERCENTILE` , `MEDIAN` , and `CUSTOM` .
+   */
   public fun aggregation(aggregation: String) {
     cdkBuilder.aggregation(aggregation)
   }
 
+  /**
+   * @param aggregationFunctionParameters The additional parameters for an aggregation function.
+   */
   public fun aggregationFunctionParameters(aggregationFunctionParameters: Map<String, String>) {
     cdkBuilder.aggregationFunctionParameters(aggregationFunctionParameters)
   }
 
+  /**
+   * @param aggregationFunctionParameters The additional parameters for an aggregation function.
+   */
   public fun aggregationFunctionParameters(aggregationFunctionParameters: IResolvable) {
     cdkBuilder.aggregationFunctionParameters(aggregationFunctionParameters)
   }

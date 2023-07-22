@@ -18,26 +18,45 @@ public class CfnTrafficMirrorTargetPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of the Traffic Mirror target.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param gatewayLoadBalancerEndpointId The ID of the Gateway Load Balancer endpoint.
+   */
   public fun gatewayLoadBalancerEndpointId(gatewayLoadBalancerEndpointId: String) {
     cdkBuilder.gatewayLoadBalancerEndpointId(gatewayLoadBalancerEndpointId)
   }
 
+  /**
+   * @param networkInterfaceId The network interface ID that is associated with the target.
+   */
   public fun networkInterfaceId(networkInterfaceId: String) {
     cdkBuilder.networkInterfaceId(networkInterfaceId)
   }
 
+  /**
+   * @param networkLoadBalancerArn The Amazon Resource Name (ARN) of the Network Load Balancer that
+   * is associated with the target.
+   */
   public fun networkLoadBalancerArn(networkLoadBalancerArn: String) {
     cdkBuilder.networkLoadBalancerArn(networkLoadBalancerArn)
   }
 
+  /**
+   * @param tags The tags to assign to the Traffic Mirror target.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to assign to the Traffic Mirror target.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

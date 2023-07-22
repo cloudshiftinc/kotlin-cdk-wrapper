@@ -20,38 +20,65 @@ public class CfnTaskTemplateConstraintsPropertyDsl {
 
   private val _requiredFields: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param invisibleFields Lists the fields that are invisible to agents.
+   */
   public fun invisibleFields(vararg invisibleFields: Any) {
     _invisibleFields.addAll(listOf(*invisibleFields))
   }
 
+  /**
+   * @param invisibleFields Lists the fields that are invisible to agents.
+   */
   public fun invisibleFields(invisibleFields: Collection<Any>) {
     _invisibleFields.addAll(invisibleFields)
   }
 
+  /**
+   * @param invisibleFields Lists the fields that are invisible to agents.
+   */
   public fun invisibleFields(invisibleFields: IResolvable) {
     cdkBuilder.invisibleFields(invisibleFields)
   }
 
+  /**
+   * @param readOnlyFields Lists the fields that are read-only to agents, and cannot be edited.
+   */
   public fun readOnlyFields(vararg readOnlyFields: Any) {
     _readOnlyFields.addAll(listOf(*readOnlyFields))
   }
 
+  /**
+   * @param readOnlyFields Lists the fields that are read-only to agents, and cannot be edited.
+   */
   public fun readOnlyFields(readOnlyFields: Collection<Any>) {
     _readOnlyFields.addAll(readOnlyFields)
   }
 
+  /**
+   * @param readOnlyFields Lists the fields that are read-only to agents, and cannot be edited.
+   */
   public fun readOnlyFields(readOnlyFields: IResolvable) {
     cdkBuilder.readOnlyFields(readOnlyFields)
   }
 
+  /**
+   * @param requiredFields Lists the fields that are required to be filled by agents.
+   */
   public fun requiredFields(vararg requiredFields: Any) {
     _requiredFields.addAll(listOf(*requiredFields))
   }
 
+  /**
+   * @param requiredFields Lists the fields that are required to be filled by agents.
+   */
   public fun requiredFields(requiredFields: Collection<Any>) {
     _requiredFields.addAll(requiredFields)
   }
 
+  /**
+   * @param requiredFields Lists the fields that are required to be filled by agents.
+   */
   public fun requiredFields(requiredFields: IResolvable) {
     cdkBuilder.requiredFields(requiredFields)
   }

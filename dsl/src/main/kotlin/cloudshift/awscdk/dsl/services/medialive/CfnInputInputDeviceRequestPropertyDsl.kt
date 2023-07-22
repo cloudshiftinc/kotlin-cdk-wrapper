@@ -11,6 +11,10 @@ public class CfnInputInputDeviceRequestPropertyDsl {
   private val cdkBuilder: CfnInput.InputDeviceRequestProperty.Builder =
       CfnInput.InputDeviceRequestProperty.builder()
 
+  /**
+   * @param id This property is not used.
+   * Ignore it.
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }

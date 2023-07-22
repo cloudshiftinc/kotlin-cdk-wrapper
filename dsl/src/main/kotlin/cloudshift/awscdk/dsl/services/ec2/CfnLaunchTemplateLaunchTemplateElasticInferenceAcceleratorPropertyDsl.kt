@@ -13,10 +13,18 @@ public class CfnLaunchTemplateLaunchTemplateElasticInferenceAcceleratorPropertyD
       CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty.Builder =
       CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty.builder()
 
+  /**
+   * @param count The number of elastic inference accelerators to attach to the instance.
+   * Default: 1
+   */
   public fun count(count: Number) {
     cdkBuilder.count(count)
   }
 
+  /**
+   * @param type The type of elastic inference accelerator.
+   * The possible values are eia1.medium, eia1.large, and eia1.xlarge.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

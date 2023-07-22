@@ -11,10 +11,17 @@ public class CfnLaunchTemplateCapacityReservationTargetPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.CapacityReservationTargetProperty.Builder =
       CfnLaunchTemplate.CapacityReservationTargetProperty.builder()
 
+  /**
+   * @param capacityReservationId The ID of the Capacity Reservation in which to run the instance.
+   */
   public fun capacityReservationId(capacityReservationId: String) {
     cdkBuilder.capacityReservationId(capacityReservationId)
   }
 
+  /**
+   * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource group
+   * in which to run the instance.
+   */
   public fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String) {
     cdkBuilder.capacityReservationResourceGroupArn(capacityReservationResourceGroupArn)
   }

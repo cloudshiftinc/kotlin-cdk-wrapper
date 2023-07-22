@@ -16,22 +16,37 @@ public class CfnBudgetNotificationWithSubscribersPropertyDsl {
 
   private val _subscribers: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param notification The notification that's associated with a budget. 
+   */
   public fun notification(notification: IResolvable) {
     cdkBuilder.notification(notification)
   }
 
+  /**
+   * @param notification The notification that's associated with a budget. 
+   */
   public fun notification(notification: CfnBudget.NotificationProperty) {
     cdkBuilder.notification(notification)
   }
 
+  /**
+   * @param subscribers A list of subscribers who are subscribed to this notification. 
+   */
   public fun subscribers(vararg subscribers: Any) {
     _subscribers.addAll(listOf(*subscribers))
   }
 
+  /**
+   * @param subscribers A list of subscribers who are subscribed to this notification. 
+   */
   public fun subscribers(subscribers: Collection<Any>) {
     _subscribers.addAll(subscribers)
   }
 
+  /**
+   * @param subscribers A list of subscribers who are subscribed to this notification. 
+   */
   public fun subscribers(subscribers: IResolvable) {
     cdkBuilder.subscribers(subscribers)
   }

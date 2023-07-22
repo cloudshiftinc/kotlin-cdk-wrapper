@@ -12,10 +12,20 @@ public class CfnEmailIdentityDkimAttributesPropertyDsl {
   private val cdkBuilder: CfnEmailIdentity.DkimAttributesProperty.Builder =
       CfnEmailIdentity.DkimAttributesProperty.builder()
 
+  /**
+   * @param signingEnabled Sets the DKIM signing configuration for the identity.
+   * When you set this value `true` , then the messages that are sent from the identity are signed
+   * using DKIM. If you set this value to `false` , your messages are sent without DKIM signing.
+   */
   public fun signingEnabled(signingEnabled: Boolean) {
     cdkBuilder.signingEnabled(signingEnabled)
   }
 
+  /**
+   * @param signingEnabled Sets the DKIM signing configuration for the identity.
+   * When you set this value `true` , then the messages that are sent from the identity are signed
+   * using DKIM. If you set this value to `false` , your messages are sent without DKIM signing.
+   */
   public fun signingEnabled(signingEnabled: IResolvable) {
     cdkBuilder.signingEnabled(signingEnabled)
   }

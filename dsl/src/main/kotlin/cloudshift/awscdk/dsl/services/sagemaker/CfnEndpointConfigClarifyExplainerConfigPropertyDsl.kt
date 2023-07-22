@@ -12,22 +12,37 @@ public class CfnEndpointConfigClarifyExplainerConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ClarifyExplainerConfigProperty.Builder =
       CfnEndpointConfig.ClarifyExplainerConfigProperty.builder()
 
+  /**
+   * @param enableExplanations the value to be set.
+   */
   public fun enableExplanations(enableExplanations: String) {
     cdkBuilder.enableExplanations(enableExplanations)
   }
 
+  /**
+   * @param inferenceConfig the value to be set.
+   */
   public fun inferenceConfig(inferenceConfig: IResolvable) {
     cdkBuilder.inferenceConfig(inferenceConfig)
   }
 
+  /**
+   * @param inferenceConfig the value to be set.
+   */
   public fun inferenceConfig(inferenceConfig: CfnEndpointConfig.ClarifyInferenceConfigProperty) {
     cdkBuilder.inferenceConfig(inferenceConfig)
   }
 
+  /**
+   * @param shapConfig the value to be set. 
+   */
   public fun shapConfig(shapConfig: IResolvable) {
     cdkBuilder.shapConfig(shapConfig)
   }
 
+  /**
+   * @param shapConfig the value to be set. 
+   */
   public fun shapConfig(shapConfig: CfnEndpointConfig.ClarifyShapConfigProperty) {
     cdkBuilder.shapConfig(shapConfig)
   }

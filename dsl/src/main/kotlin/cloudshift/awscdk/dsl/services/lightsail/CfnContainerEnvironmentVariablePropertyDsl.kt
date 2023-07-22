@@ -11,10 +11,16 @@ public class CfnContainerEnvironmentVariablePropertyDsl {
   private val cdkBuilder: CfnContainer.EnvironmentVariableProperty.Builder =
       CfnContainer.EnvironmentVariableProperty.builder()
 
+  /**
+   * @param value The environment variable value.
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }
 
+  /**
+   * @param variable The environment variable key.
+   */
   public fun variable(variable: String) {
     cdkBuilder.variable(variable)
   }

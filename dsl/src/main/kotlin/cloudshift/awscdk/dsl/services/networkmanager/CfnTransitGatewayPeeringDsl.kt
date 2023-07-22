@@ -22,18 +22,42 @@ public class CfnTransitGatewayPeeringDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The ID of the core network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-corenetworkid)
+   * @param coreNetworkId The ID of the core network. 
+   */
   public fun coreNetworkId(coreNetworkId: String) {
     cdkBuilder.coreNetworkId(coreNetworkId)
   }
 
+  /**
+   * The list of key-value tags associated with the peering.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
+   * @param tags The list of key-value tags associated with the peering. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The list of key-value tags associated with the peering.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
+   * @param tags The list of key-value tags associated with the peering. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ARN of the transit gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-transitgatewayarn)
+   * @param transitGatewayArn The ARN of the transit gateway. 
+   */
   public fun transitGatewayArn(transitGatewayArn: String) {
     cdkBuilder.transitGatewayArn(transitGatewayArn)
   }

@@ -12,14 +12,26 @@ public class CfnStorageLensSelectionCriteriaPropertyDsl {
   private val cdkBuilder: CfnStorageLens.SelectionCriteriaProperty.Builder =
       CfnStorageLens.SelectionCriteriaProperty.builder()
 
+  /**
+   * @param delimiter This property contains the details of the S3 Storage Lens delimiter being
+   * used.
+   */
   public fun delimiter(delimiter: String) {
     cdkBuilder.delimiter(delimiter)
   }
 
+  /**
+   * @param maxDepth This property contains the details of the max depth that S3 Storage Lens will
+   * collect metrics up to.
+   */
   public fun maxDepth(maxDepth: Number) {
     cdkBuilder.maxDepth(maxDepth)
   }
 
+  /**
+   * @param minStorageBytesPercentage This property contains the details of the minimum storage
+   * bytes percentage threshold that S3 Storage Lens will collect metrics up to.
+   */
   public fun minStorageBytesPercentage(minStorageBytesPercentage: Number) {
     cdkBuilder.minStorageBytesPercentage(minStorageBytesPercentage)
   }

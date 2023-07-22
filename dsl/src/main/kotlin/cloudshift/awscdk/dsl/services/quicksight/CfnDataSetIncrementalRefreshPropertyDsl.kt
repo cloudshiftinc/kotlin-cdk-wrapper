@@ -11,10 +11,16 @@ public class CfnDataSetIncrementalRefreshPropertyDsl {
   private val cdkBuilder: CfnDataSet.IncrementalRefreshProperty.Builder =
       CfnDataSet.IncrementalRefreshProperty.builder()
 
+  /**
+   * @param lookbackWindow the value to be set.
+   */
   public fun lookbackWindow(lookbackWindow: IResolvable) {
     cdkBuilder.lookbackWindow(lookbackWindow)
   }
 
+  /**
+   * @param lookbackWindow the value to be set.
+   */
   public fun lookbackWindow(lookbackWindow: CfnDataSet.LookbackWindowProperty) {
     cdkBuilder.lookbackWindow(lookbackWindow)
   }

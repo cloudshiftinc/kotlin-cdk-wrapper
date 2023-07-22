@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.s3.IBucket
 public class BucketPolicyPropsDsl {
   private val cdkBuilder: BucketPolicyProps.Builder = BucketPolicyProps.builder()
 
+  /**
+   * @param bucket The Amazon S3 bucket that the policy applies to. 
+   */
   public fun bucket(bucket: IBucket) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param removalPolicy Policy to apply when the policy is removed from this stack.
+   */
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }

@@ -11,6 +11,9 @@ public class CfnDashboardRangeEndsLabelTypePropertyDsl {
   private val cdkBuilder: CfnDashboard.RangeEndsLabelTypeProperty.Builder =
       CfnDashboard.RangeEndsLabelTypeProperty.builder()
 
+  /**
+   * @param visibility The visibility of the range ends label.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

@@ -14,6 +14,12 @@ public class CfnProjectDsl(
 ) {
   private val cdkBuilder: CfnProject.Builder = CfnProject.Builder.create(scope, id)
 
+  /**
+   * The name of the project.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutvision-project.html#cfn-lookoutvision-project-projectname)
+   * @param projectName The name of the project. 
+   */
   public fun projectName(projectName: String) {
     cdkBuilder.projectName(projectName)
   }

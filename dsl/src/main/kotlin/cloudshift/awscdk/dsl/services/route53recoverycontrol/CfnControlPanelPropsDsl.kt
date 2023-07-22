@@ -17,18 +17,31 @@ public class CfnControlPanelPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param clusterArn The Amazon Resource Name (ARN) of the cluster for the control panel.
+   */
   public fun clusterArn(clusterArn: String) {
     cdkBuilder.clusterArn(clusterArn)
   }
 
+  /**
+   * @param name The name of the control panel. 
+   * You can use any non-white space character in the name.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param tags The value for a tag.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The value for a tag.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

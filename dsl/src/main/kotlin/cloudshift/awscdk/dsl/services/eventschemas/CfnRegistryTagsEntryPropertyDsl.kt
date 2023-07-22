@@ -11,10 +11,16 @@ public class CfnRegistryTagsEntryPropertyDsl {
   private val cdkBuilder: CfnRegistry.TagsEntryProperty.Builder =
       CfnRegistry.TagsEntryProperty.builder()
 
+  /**
+   * @param key They key of a key-value pair. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value They value of a key-value pair. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

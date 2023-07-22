@@ -17,12 +17,24 @@ public class CfnRegistryPolicyDsl(
 ) {
   private val cdkBuilder: CfnRegistryPolicy.Builder = CfnRegistryPolicy.Builder.create(scope, id)
 
-  public fun policyText(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * The JSON policy text for your registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-registrypolicy.html#cfn-ecr-registrypolicy-policytext)
+   * @param policyText The JSON policy text for your registry. 
+   */
+  public fun policyText(policyText: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policyText)
     cdkBuilder.policyText(builder.map)
   }
 
+  /**
+   * The JSON policy text for your registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-registrypolicy.html#cfn-ecr-registrypolicy-policytext)
+   * @param policyText The JSON policy text for your registry. 
+   */
   public fun policyText(policyText: Any) {
     cdkBuilder.policyText(policyText)
   }

@@ -17,22 +17,37 @@ public class CfnDashboardDashboardErrorPropertyDsl {
 
   private val _violatedEntities: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param message Message.
+   */
   public fun message(message: String) {
     cdkBuilder.message(message)
   }
 
+  /**
+   * @param type Type.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param violatedEntities Lists the violated entities that caused the dashboard error.
+   */
   public fun violatedEntities(vararg violatedEntities: Any) {
     _violatedEntities.addAll(listOf(*violatedEntities))
   }
 
+  /**
+   * @param violatedEntities Lists the violated entities that caused the dashboard error.
+   */
   public fun violatedEntities(violatedEntities: Collection<Any>) {
     _violatedEntities.addAll(violatedEntities)
   }
 
+  /**
+   * @param violatedEntities Lists the violated entities that caused the dashboard error.
+   */
   public fun violatedEntities(violatedEntities: IResolvable) {
     cdkBuilder.violatedEntities(violatedEntities)
   }

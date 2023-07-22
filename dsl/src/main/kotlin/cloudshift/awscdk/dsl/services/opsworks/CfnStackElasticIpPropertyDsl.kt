@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.opsworks.CfnStack
 public class CfnStackElasticIpPropertyDsl {
   private val cdkBuilder: CfnStack.ElasticIpProperty.Builder = CfnStack.ElasticIpProperty.builder()
 
+  /**
+   * @param ip The IP address. 
+   */
   public fun ip(ip: String) {
     cdkBuilder.ip(ip)
   }
 
+  /**
+   * @param name The name, which can be a maximum of 32 characters.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

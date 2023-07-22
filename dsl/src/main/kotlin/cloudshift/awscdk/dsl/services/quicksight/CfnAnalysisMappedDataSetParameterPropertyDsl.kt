@@ -11,10 +11,17 @@ public class CfnAnalysisMappedDataSetParameterPropertyDsl {
   private val cdkBuilder: CfnAnalysis.MappedDataSetParameterProperty.Builder =
       CfnAnalysis.MappedDataSetParameterProperty.builder()
 
+  /**
+   * @param dataSetIdentifier A unique name that identifies a dataset within the analysis or
+   * dashboard. 
+   */
   public fun dataSetIdentifier(dataSetIdentifier: String) {
     cdkBuilder.dataSetIdentifier(dataSetIdentifier)
   }
 
+  /**
+   * @param dataSetParameterName The name of the dataset parameter. 
+   */
   public fun dataSetParameterName(dataSetParameterName: String) {
     cdkBuilder.dataSetParameterName(dataSetParameterName)
   }

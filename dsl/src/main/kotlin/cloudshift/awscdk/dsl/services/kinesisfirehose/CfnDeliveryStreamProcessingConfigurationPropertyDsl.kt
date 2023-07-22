@@ -17,22 +17,37 @@ public class CfnDeliveryStreamProcessingConfigurationPropertyDsl {
 
   private val _processors: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param enabled Indicates whether data processing is enabled (true) or disabled (false).
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Indicates whether data processing is enabled (true) or disabled (false).
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param processors The data processors.
+   */
   public fun processors(vararg processors: Any) {
     _processors.addAll(listOf(*processors))
   }
 
+  /**
+   * @param processors The data processors.
+   */
   public fun processors(processors: Collection<Any>) {
     _processors.addAll(processors)
   }
 
+  /**
+   * @param processors The data processors.
+   */
   public fun processors(processors: IResolvable) {
     cdkBuilder.processors(processors)
   }

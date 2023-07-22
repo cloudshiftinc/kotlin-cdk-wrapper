@@ -20,45 +20,86 @@ public class CfnCodeDeployBlueGreenHookPropsDsl {
 
   private val _applications: MutableList<CfnCodeDeployBlueGreenApplication> = mutableListOf()
 
-  public fun additionalOptions(block: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param additionalOptions Additional options for the blue/green deployment.
+   */
+  public
+      fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
+      = {}) {
     val builder = CfnCodeDeployBlueGreenAdditionalOptionsDsl()
-    builder.apply(block)
+    builder.apply(additionalOptions)
     cdkBuilder.additionalOptions(builder.build())
   }
 
+  /**
+   * @param additionalOptions Additional options for the blue/green deployment.
+   */
   public fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions) {
     cdkBuilder.additionalOptions(additionalOptions)
   }
 
+  /**
+   * @param applications Properties of the Amazon ECS applications being deployed. 
+   */
   public fun applications(applications: CfnCodeDeployBlueGreenApplicationDsl.() -> Unit) {
     _applications.add(CfnCodeDeployBlueGreenApplicationDsl().apply(applications).build())
   }
 
+  /**
+   * @param applications Properties of the Amazon ECS applications being deployed. 
+   */
   public fun applications(applications: Collection<CfnCodeDeployBlueGreenApplication>) {
     _applications.addAll(applications)
   }
 
-  public fun lifecycleEventHooks(block: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit =
-      {}) {
+  /**
+   * @param lifecycleEventHooks Use lifecycle event hooks to specify a Lambda function that
+   * CodeDeploy can call to validate a deployment.
+   * You can use the same function or a different one for deployment lifecycle events.
+   * Following completion of the validation tests,
+   * the Lambda `CfnCodeDeployBlueGreenLifecycleEventHooks.afterAllowTraffic`
+   * function calls back CodeDeploy and delivers a result of 'Succeeded' or 'Failed'.
+   */
+  public
+      fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
+      = {}) {
     val builder = CfnCodeDeployBlueGreenLifecycleEventHooksDsl()
-    builder.apply(block)
+    builder.apply(lifecycleEventHooks)
     cdkBuilder.lifecycleEventHooks(builder.build())
   }
 
+  /**
+   * @param lifecycleEventHooks Use lifecycle event hooks to specify a Lambda function that
+   * CodeDeploy can call to validate a deployment.
+   * You can use the same function or a different one for deployment lifecycle events.
+   * Following completion of the validation tests,
+   * the Lambda `CfnCodeDeployBlueGreenLifecycleEventHooks.afterAllowTraffic`
+   * function calls back CodeDeploy and delivers a result of 'Succeeded' or 'Failed'.
+   */
   public fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks) {
     cdkBuilder.lifecycleEventHooks(lifecycleEventHooks)
   }
 
+  /**
+   * @param serviceRole The IAM Role for CloudFormation to use to perform blue-green deployments. 
+   */
   public fun serviceRole(serviceRole: String) {
     cdkBuilder.serviceRole(serviceRole)
   }
 
-  public fun trafficRoutingConfig(block: CfnTrafficRoutingConfigDsl.() -> Unit = {}) {
+  /**
+   * @param trafficRoutingConfig Traffic routing configuration settings.
+   */
+  public fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfigDsl.() -> Unit =
+      {}) {
     val builder = CfnTrafficRoutingConfigDsl()
-    builder.apply(block)
+    builder.apply(trafficRoutingConfig)
     cdkBuilder.trafficRoutingConfig(builder.build())
   }
 
+  /**
+   * @param trafficRoutingConfig Traffic routing configuration settings.
+   */
   public fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig) {
     cdkBuilder.trafficRoutingConfig(trafficRoutingConfig)
   }

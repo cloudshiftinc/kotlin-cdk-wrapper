@@ -11,6 +11,9 @@ public class CfnResponsePlanNotificationTargetItemPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.NotificationTargetItemProperty.Builder =
       CfnResponsePlan.NotificationTargetItemProperty.builder()
 
+  /**
+   * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic.
+   */
   public fun snsTopicArn(snsTopicArn: String) {
     cdkBuilder.snsTopicArn(snsTopicArn)
   }

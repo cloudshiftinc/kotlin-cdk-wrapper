@@ -11,10 +11,20 @@ public class CfnTopicRuleHttpAuthorizationPropertyDsl {
   private val cdkBuilder: CfnTopicRule.HttpAuthorizationProperty.Builder =
       CfnTopicRule.HttpAuthorizationProperty.builder()
 
+  /**
+   * @param sigv4 Use Sig V4 authorization.
+   * For more information, see [Signature Version 4 Signing
+   * Process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) .
+   */
   public fun sigv4(sigv4: IResolvable) {
     cdkBuilder.sigv4(sigv4)
   }
 
+  /**
+   * @param sigv4 Use Sig V4 authorization.
+   * For more information, see [Signature Version 4 Signing
+   * Process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) .
+   */
   public fun sigv4(sigv4: CfnTopicRule.SigV4AuthorizationProperty) {
     cdkBuilder.sigv4(sigv4)
   }

@@ -11,18 +11,34 @@ public class CfnProjectLogsConfigPropertyDsl {
   private val cdkBuilder: CfnProject.LogsConfigProperty.Builder =
       CfnProject.LogsConfigProperty.builder()
 
+  /**
+   * @param cloudWatchLogs Information about CloudWatch Logs for a build project.
+   * CloudWatch Logs are enabled by default.
+   */
   public fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
     cdkBuilder.cloudWatchLogs(cloudWatchLogs)
   }
 
+  /**
+   * @param cloudWatchLogs Information about CloudWatch Logs for a build project.
+   * CloudWatch Logs are enabled by default.
+   */
   public fun cloudWatchLogs(cloudWatchLogs: CfnProject.CloudWatchLogsConfigProperty) {
     cdkBuilder.cloudWatchLogs(cloudWatchLogs)
   }
 
+  /**
+   * @param s3Logs Information about logs built to an S3 bucket for a build project.
+   * S3 logs are not enabled by default.
+   */
   public fun s3Logs(s3Logs: IResolvable) {
     cdkBuilder.s3Logs(s3Logs)
   }
 
+  /**
+   * @param s3Logs Information about logs built to an S3 bucket for a build project.
+   * S3 logs are not enabled by default.
+   */
   public fun s3Logs(s3Logs: CfnProject.S3LogsConfigProperty) {
     cdkBuilder.s3Logs(s3Logs)
   }

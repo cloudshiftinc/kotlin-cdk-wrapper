@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.eks.KubectlProviderProps
 public class KubectlProviderPropsDsl {
   private val cdkBuilder: KubectlProviderProps.Builder = KubectlProviderProps.builder()
 
+  /**
+   * @param cluster The cluster to control. 
+   */
   public fun cluster(cluster: ICluster) {
     cdkBuilder.cluster(cluster)
   }

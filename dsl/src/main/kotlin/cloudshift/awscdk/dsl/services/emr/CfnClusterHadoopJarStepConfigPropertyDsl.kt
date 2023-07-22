@@ -19,30 +19,57 @@ public class CfnClusterHadoopJarStepConfigPropertyDsl {
 
   private val _stepProperties: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param args A list of command line arguments passed to the JAR file's main function when
+   * executed.
+   */
   public fun args(vararg args: String) {
     _args.addAll(listOf(*args))
   }
 
+  /**
+   * @param args A list of command line arguments passed to the JAR file's main function when
+   * executed.
+   */
   public fun args(args: Collection<String>) {
     _args.addAll(args)
   }
 
+  /**
+   * @param jar A path to a JAR file run during the step. 
+   */
   public fun jar(jar: String) {
     cdkBuilder.jar(jar)
   }
 
+  /**
+   * @param mainClass The name of the main class in the specified Java file.
+   * If not specified, the JAR file should specify a Main-Class in its manifest file.
+   */
   public fun mainClass(mainClass: String) {
     cdkBuilder.mainClass(mainClass)
   }
 
+  /**
+   * @param stepProperties A list of Java properties that are set when the step runs.
+   * You can use these properties to pass key-value pairs to your main function.
+   */
   public fun stepProperties(vararg stepProperties: Any) {
     _stepProperties.addAll(listOf(*stepProperties))
   }
 
+  /**
+   * @param stepProperties A list of Java properties that are set when the step runs.
+   * You can use these properties to pass key-value pairs to your main function.
+   */
   public fun stepProperties(stepProperties: Collection<Any>) {
     _stepProperties.addAll(stepProperties)
   }
 
+  /**
+   * @param stepProperties A list of Java properties that are set when the step runs.
+   * You can use these properties to pass key-value pairs to your main function.
+   */
   public fun stepProperties(stepProperties: IResolvable) {
     cdkBuilder.stepProperties(stepProperties)
   }

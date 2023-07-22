@@ -11,6 +11,9 @@ public class CfnConnectorProfileServiceNowConnectorProfilePropertiesPropertyDsl 
   private val cdkBuilder: CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param instanceUrl The location of the ServiceNow resource. 
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }

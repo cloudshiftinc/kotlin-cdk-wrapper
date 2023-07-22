@@ -11,10 +11,16 @@ public class CfnPackagingConfigurationDashEncryptionPropertyDsl {
   private val cdkBuilder: CfnPackagingConfiguration.DashEncryptionProperty.Builder =
       CfnPackagingConfiguration.DashEncryptionProperty.builder()
 
+  /**
+   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+   */
   public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
     cdkBuilder.spekeKeyProvider(spekeKeyProvider)
   }
 
+  /**
+   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+   */
   public
       fun spekeKeyProvider(spekeKeyProvider: CfnPackagingConfiguration.SpekeKeyProviderProperty) {
     cdkBuilder.spekeKeyProvider(spekeKeyProvider)

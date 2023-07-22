@@ -12,15 +12,26 @@ public class CfnMLTransformTransformEncryptionPropertyDsl {
   private val cdkBuilder: CfnMLTransform.TransformEncryptionProperty.Builder =
       CfnMLTransform.TransformEncryptionProperty.builder()
 
+  /**
+   * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+   * accessing user data.
+   */
   public fun mlUserDataEncryption(mlUserDataEncryption: IResolvable) {
     cdkBuilder.mlUserDataEncryption(mlUserDataEncryption)
   }
 
+  /**
+   * @param mlUserDataEncryption The encryption-at-rest settings of the transform that apply to
+   * accessing user data.
+   */
   public
       fun mlUserDataEncryption(mlUserDataEncryption: CfnMLTransform.MLUserDataEncryptionProperty) {
     cdkBuilder.mlUserDataEncryption(mlUserDataEncryption)
   }
 
+  /**
+   * @param taskRunSecurityConfigurationName The name of the security configuration.
+   */
   public fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String) {
     cdkBuilder.taskRunSecurityConfigurationName(taskRunSecurityConfigurationName)
   }

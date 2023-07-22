@@ -11,10 +11,16 @@ public class CfnAnalysisKPIProgressBarConditionalFormattingPropertyDsl {
   private val cdkBuilder: CfnAnalysis.KPIProgressBarConditionalFormattingProperty.Builder =
       CfnAnalysis.KPIProgressBarConditionalFormattingProperty.builder()
 
+  /**
+   * @param foregroundColor The conditional formatting of the progress bar's foreground color.
+   */
   public fun foregroundColor(foregroundColor: IResolvable) {
     cdkBuilder.foregroundColor(foregroundColor)
   }
 
+  /**
+   * @param foregroundColor The conditional formatting of the progress bar's foreground color.
+   */
   public fun foregroundColor(foregroundColor: CfnAnalysis.ConditionalFormattingColorProperty) {
     cdkBuilder.foregroundColor(foregroundColor)
   }

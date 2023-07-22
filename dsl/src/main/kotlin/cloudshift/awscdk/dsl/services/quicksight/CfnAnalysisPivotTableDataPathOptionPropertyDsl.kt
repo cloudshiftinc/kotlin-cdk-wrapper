@@ -17,18 +17,30 @@ public class CfnAnalysisPivotTableDataPathOptionPropertyDsl {
 
   private val _dataPathList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param dataPathList The list of data path values for the data path options. 
+   */
   public fun dataPathList(vararg dataPathList: Any) {
     _dataPathList.addAll(listOf(*dataPathList))
   }
 
+  /**
+   * @param dataPathList The list of data path values for the data path options. 
+   */
   public fun dataPathList(dataPathList: Collection<Any>) {
     _dataPathList.addAll(dataPathList)
   }
 
+  /**
+   * @param dataPathList The list of data path values for the data path options. 
+   */
   public fun dataPathList(dataPathList: IResolvable) {
     cdkBuilder.dataPathList(dataPathList)
   }
 
+  /**
+   * @param width The width of the data path option.
+   */
   public fun width(width: String) {
     cdkBuilder.width(width)
   }

@@ -11,6 +11,9 @@ public class CfnDashboardNullValueFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.NullValueFormatConfigurationProperty.Builder =
       CfnDashboard.NullValueFormatConfigurationProperty.builder()
 
+  /**
+   * @param nullString Determines the null string of null values. 
+   */
   public fun nullString(nullString: String) {
     cdkBuilder.nullString(nullString)
   }

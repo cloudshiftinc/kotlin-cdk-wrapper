@@ -11,10 +11,16 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleetProps
 public class CfnSpotFleetPropsDsl {
   private val cdkBuilder: CfnSpotFleetProps.Builder = CfnSpotFleetProps.builder()
 
+  /**
+   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
+   */
   public fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
     cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
   }
 
+  /**
+   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
+   */
   public
       fun spotFleetRequestConfigData(spotFleetRequestConfigData: CfnSpotFleet.SpotFleetRequestConfigDataProperty) {
     cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)

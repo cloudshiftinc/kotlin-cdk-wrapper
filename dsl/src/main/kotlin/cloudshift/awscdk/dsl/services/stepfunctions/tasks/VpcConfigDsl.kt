@@ -13,16 +13,25 @@ import software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig
 public class VpcConfigDsl {
   private val cdkBuilder: VpcConfig.Builder = VpcConfig.builder()
 
-  public fun subnets(block: SubnetSelectionDsl.() -> Unit = {}) {
+  /**
+   * @param subnets VPC subnets.
+   */
+  public fun subnets(subnets: SubnetSelectionDsl.() -> Unit = {}) {
     val builder = SubnetSelectionDsl()
-    builder.apply(block)
+    builder.apply(subnets)
     cdkBuilder.subnets(builder.build())
   }
 
+  /**
+   * @param subnets VPC subnets.
+   */
   public fun subnets(subnets: SubnetSelection) {
     cdkBuilder.subnets(subnets)
   }
 
+  /**
+   * @param vpc VPC. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

@@ -12,18 +12,32 @@ public class CfnChannelArchiveOutputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.ArchiveOutputSettingsProperty.Builder =
       CfnChannel.ArchiveOutputSettingsProperty.builder()
 
+  /**
+   * @param containerSettings The settings that are specific to the container type of the file.
+   */
   public fun containerSettings(containerSettings: IResolvable) {
     cdkBuilder.containerSettings(containerSettings)
   }
 
+  /**
+   * @param containerSettings The settings that are specific to the container type of the file.
+   */
   public fun containerSettings(containerSettings: CfnChannel.ArchiveContainerSettingsProperty) {
     cdkBuilder.containerSettings(containerSettings)
   }
 
+  /**
+   * @param extension The output file extension.
+   * If excluded, this is auto-selected from the container type.
+   */
   public fun extension(extension: String) {
     cdkBuilder.extension(extension)
   }
 
+  /**
+   * @param nameModifier A string that is concatenated to the end of the destination file name.
+   * The string is required for multiple outputs of the same type.
+   */
   public fun nameModifier(nameModifier: String) {
     cdkBuilder.nameModifier(nameModifier)
   }

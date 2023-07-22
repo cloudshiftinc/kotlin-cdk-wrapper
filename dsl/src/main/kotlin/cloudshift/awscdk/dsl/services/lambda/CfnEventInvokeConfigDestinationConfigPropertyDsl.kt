@@ -11,18 +11,30 @@ public class CfnEventInvokeConfigDestinationConfigPropertyDsl {
   private val cdkBuilder: CfnEventInvokeConfig.DestinationConfigProperty.Builder =
       CfnEventInvokeConfig.DestinationConfigProperty.builder()
 
+  /**
+   * @param onFailure The destination configuration for failed invocations.
+   */
   public fun onFailure(onFailure: IResolvable) {
     cdkBuilder.onFailure(onFailure)
   }
 
+  /**
+   * @param onFailure The destination configuration for failed invocations.
+   */
   public fun onFailure(onFailure: CfnEventInvokeConfig.OnFailureProperty) {
     cdkBuilder.onFailure(onFailure)
   }
 
+  /**
+   * @param onSuccess The destination configuration for successful invocations.
+   */
   public fun onSuccess(onSuccess: IResolvable) {
     cdkBuilder.onSuccess(onSuccess)
   }
 
+  /**
+   * @param onSuccess The destination configuration for successful invocations.
+   */
   public fun onSuccess(onSuccess: CfnEventInvokeConfig.OnSuccessProperty) {
     cdkBuilder.onSuccess(onSuccess)
   }

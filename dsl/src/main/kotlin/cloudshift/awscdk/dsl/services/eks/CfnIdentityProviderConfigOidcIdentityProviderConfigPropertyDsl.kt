@@ -17,38 +17,76 @@ public class CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl {
 
   private val _requiredClaims: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param clientId This is also known as *audience* . 
+   * The ID of the client application that makes authentication requests to the OIDC identity
+   * provider.
+   */
   public fun clientId(clientId: String) {
     cdkBuilder.clientId(clientId)
   }
 
+  /**
+   * @param groupsClaim The JSON web token (JWT) claim that the provider uses to return your groups.
+   */
   public fun groupsClaim(groupsClaim: String) {
     cdkBuilder.groupsClaim(groupsClaim)
   }
 
+  /**
+   * @param groupsPrefix The prefix that is prepended to group claims to prevent clashes with
+   * existing names (such as `system:` groups).
+   * For example, the value `oidc:` creates group names like `oidc:engineering` and `oidc:infra` .
+   * The prefix can't contain `system:`
+   */
   public fun groupsPrefix(groupsPrefix: String) {
     cdkBuilder.groupsPrefix(groupsPrefix)
   }
 
+  /**
+   * @param issuerUrl The URL of the OIDC identity provider that allows the API server to discover
+   * public signing keys for verifying tokens. 
+   */
   public fun issuerUrl(issuerUrl: String) {
     cdkBuilder.issuerUrl(issuerUrl)
   }
 
+  /**
+   * @param requiredClaims The key-value pairs that describe required claims in the identity token.
+   * If set, each claim is verified to be present in the token with a matching value.
+   */
   public fun requiredClaims(vararg requiredClaims: Any) {
     _requiredClaims.addAll(listOf(*requiredClaims))
   }
 
+  /**
+   * @param requiredClaims The key-value pairs that describe required claims in the identity token.
+   * If set, each claim is verified to be present in the token with a matching value.
+   */
   public fun requiredClaims(requiredClaims: Collection<Any>) {
     _requiredClaims.addAll(requiredClaims)
   }
 
+  /**
+   * @param requiredClaims The key-value pairs that describe required claims in the identity token.
+   * If set, each claim is verified to be present in the token with a matching value.
+   */
   public fun requiredClaims(requiredClaims: IResolvable) {
     cdkBuilder.requiredClaims(requiredClaims)
   }
 
+  /**
+   * @param usernameClaim The JSON Web token (JWT) claim that is used as the username.
+   */
   public fun usernameClaim(usernameClaim: String) {
     cdkBuilder.usernameClaim(usernameClaim)
   }
 
+  /**
+   * @param usernamePrefix The prefix that is prepended to username claims to prevent clashes with
+   * existing names.
+   * The prefix can't contain `system:`
+   */
   public fun usernamePrefix(usernamePrefix: String) {
     cdkBuilder.usernamePrefix(usernamePrefix)
   }

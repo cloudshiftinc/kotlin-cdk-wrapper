@@ -11,10 +11,17 @@ public class CfnConnectorProvisionedCapacityPropertyDsl {
   private val cdkBuilder: CfnConnector.ProvisionedCapacityProperty.Builder =
       CfnConnector.ProvisionedCapacityProperty.builder()
 
+  /**
+   * @param mcuCount The number of microcontroller units (MCUs) allocated to each connector worker.
+   * The valid values are 1,2,4,8.
+   */
   public fun mcuCount(mcuCount: Number) {
     cdkBuilder.mcuCount(mcuCount)
   }
 
+  /**
+   * @param workerCount The number of workers that are allocated to the connector. 
+   */
   public fun workerCount(workerCount: Number) {
     cdkBuilder.workerCount(workerCount)
   }

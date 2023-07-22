@@ -11,6 +11,9 @@ public class CfnClientVpnEndpointDirectoryServiceAuthenticationRequestPropertyDs
   private val cdkBuilder: CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.Builder
       = CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.builder()
 
+  /**
+   * @param directoryId The ID of the Active Directory to be used for authentication. 
+   */
   public fun directoryId(directoryId: String) {
     cdkBuilder.directoryId(directoryId)
   }

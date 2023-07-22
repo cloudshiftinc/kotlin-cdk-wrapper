@@ -18,42 +18,115 @@ public class LogQueryWidgetDsl {
 
   private val _queryLines: MutableList<String> = mutableListOf()
 
+  /**
+   * Height of the widget.
+   *
+   * Default: 6
+   *
+   * @param height Height of the widget. 
+   */
   public fun height(height: Number) {
     cdkBuilder.height(height)
   }
 
+  /**
+   * Names of log groups to query.
+   *
+   * @param logGroupNames Names of log groups to query. 
+   */
   public fun logGroupNames(vararg logGroupNames: String) {
     _logGroupNames.addAll(listOf(*logGroupNames))
   }
 
+  /**
+   * Names of log groups to query.
+   *
+   * @param logGroupNames Names of log groups to query. 
+   */
   public fun logGroupNames(logGroupNames: Collection<String>) {
     _logGroupNames.addAll(logGroupNames)
   }
 
+  /**
+   * A sequence of lines to use to build the query.
+   *
+   * The query will be built by joining the lines together using `\n|`.
+   *
+   * Default: - Exactly one of `queryString`, `queryLines` is required.
+   *
+   * @param queryLines A sequence of lines to use to build the query. 
+   */
   public fun queryLines(vararg queryLines: String) {
     _queryLines.addAll(listOf(*queryLines))
   }
 
+  /**
+   * A sequence of lines to use to build the query.
+   *
+   * The query will be built by joining the lines together using `\n|`.
+   *
+   * Default: - Exactly one of `queryString`, `queryLines` is required.
+   *
+   * @param queryLines A sequence of lines to use to build the query. 
+   */
   public fun queryLines(queryLines: Collection<String>) {
     _queryLines.addAll(queryLines)
   }
 
+  /**
+   * Full query string for log insights.
+   *
+   * Be sure to prepend every new line with a newline and pipe character
+   * (`\n|`).
+   *
+   * Default: - Exactly one of `queryString`, `queryLines` is required.
+   *
+   * @param queryString Full query string for log insights. 
+   */
   public fun queryString(queryString: String) {
     cdkBuilder.queryString(queryString)
   }
 
+  /**
+   * The region the metrics of this widget should be taken from.
+   *
+   * Default: Current region
+   *
+   * @param region The region the metrics of this widget should be taken from. 
+   */
   public fun region(region: String) {
     cdkBuilder.region(region)
   }
 
+  /**
+   * Title for the widget.
+   *
+   * Default: No title
+   *
+   * @param title Title for the widget. 
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }
 
+  /**
+   * The type of view to use.
+   *
+   * Default: LogQueryVisualizationType.TABLE
+   *
+   * @param view The type of view to use. 
+   */
   public fun view(view: LogQueryVisualizationType) {
     cdkBuilder.view(view)
   }
 
+  /**
+   * Width of the widget, in a grid of 24 units wide.
+   *
+   * Default: 6
+   *
+   * @param width Width of the widget, in a grid of 24 units wide. 
+   */
   public fun width(width: Number) {
     cdkBuilder.width(width)
   }

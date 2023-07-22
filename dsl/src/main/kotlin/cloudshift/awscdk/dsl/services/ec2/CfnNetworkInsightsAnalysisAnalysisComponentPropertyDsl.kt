@@ -11,10 +11,16 @@ public class CfnNetworkInsightsAnalysisAnalysisComponentPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisComponentProperty.Builder =
       CfnNetworkInsightsAnalysis.AnalysisComponentProperty.builder()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the component.
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }
 
+  /**
+   * @param id The ID of the component.
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }

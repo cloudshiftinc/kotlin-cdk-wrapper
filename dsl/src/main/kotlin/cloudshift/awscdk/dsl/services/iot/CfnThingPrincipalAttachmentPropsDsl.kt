@@ -11,10 +11,17 @@ public class CfnThingPrincipalAttachmentPropsDsl {
   private val cdkBuilder: CfnThingPrincipalAttachmentProps.Builder =
       CfnThingPrincipalAttachmentProps.builder()
 
+  /**
+   * @param principal The principal, which can be a certificate ARN (as returned from the
+   * `CreateCertificate` operation) or an Amazon Cognito ID. 
+   */
   public fun principal(principal: String) {
     cdkBuilder.principal(principal)
   }
 
+  /**
+   * @param thingName The name of the AWS IoT thing. 
+   */
   public fun thingName(thingName: String) {
     cdkBuilder.thingName(thingName)
   }

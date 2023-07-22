@@ -11,26 +11,44 @@ public class CfnChannelAvailSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.AvailSettingsProperty.Builder =
       CfnChannel.AvailSettingsProperty.builder()
 
+  /**
+   * @param esam the value to be set.
+   */
   public fun esam(esam: IResolvable) {
     cdkBuilder.esam(esam)
   }
 
+  /**
+   * @param esam the value to be set.
+   */
   public fun esam(esam: CfnChannel.EsamProperty) {
     cdkBuilder.esam(esam)
   }
 
+  /**
+   * @param scte35SpliceInsert The setup for SCTE-35 splice insert handling.
+   */
   public fun scte35SpliceInsert(scte35SpliceInsert: IResolvable) {
     cdkBuilder.scte35SpliceInsert(scte35SpliceInsert)
   }
 
+  /**
+   * @param scte35SpliceInsert The setup for SCTE-35 splice insert handling.
+   */
   public fun scte35SpliceInsert(scte35SpliceInsert: CfnChannel.Scte35SpliceInsertProperty) {
     cdkBuilder.scte35SpliceInsert(scte35SpliceInsert)
   }
 
+  /**
+   * @param scte35TimeSignalApos The setup for SCTE-35 time signal APOS handling.
+   */
   public fun scte35TimeSignalApos(scte35TimeSignalApos: IResolvable) {
     cdkBuilder.scte35TimeSignalApos(scte35TimeSignalApos)
   }
 
+  /**
+   * @param scte35TimeSignalApos The setup for SCTE-35 time signal APOS handling.
+   */
   public fun scte35TimeSignalApos(scte35TimeSignalApos: CfnChannel.Scte35TimeSignalAposProperty) {
     cdkBuilder.scte35TimeSignalApos(scte35TimeSignalApos)
   }

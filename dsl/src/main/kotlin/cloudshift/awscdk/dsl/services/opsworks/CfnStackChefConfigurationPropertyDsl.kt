@@ -13,14 +13,23 @@ public class CfnStackChefConfigurationPropertyDsl {
   private val cdkBuilder: CfnStack.ChefConfigurationProperty.Builder =
       CfnStack.ChefConfigurationProperty.builder()
 
+  /**
+   * @param berkshelfVersion The Berkshelf version.
+   */
   public fun berkshelfVersion(berkshelfVersion: String) {
     cdkBuilder.berkshelfVersion(berkshelfVersion)
   }
 
+  /**
+   * @param manageBerkshelf Whether to enable Berkshelf.
+   */
   public fun manageBerkshelf(manageBerkshelf: Boolean) {
     cdkBuilder.manageBerkshelf(manageBerkshelf)
   }
 
+  /**
+   * @param manageBerkshelf Whether to enable Berkshelf.
+   */
   public fun manageBerkshelf(manageBerkshelf: IResolvable) {
     cdkBuilder.manageBerkshelf(manageBerkshelf)
   }

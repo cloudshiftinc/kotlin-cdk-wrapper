@@ -11,10 +11,18 @@ public class CfnSimulationApplicationSimulationSoftwareSuitePropertyDsl {
   private val cdkBuilder: CfnSimulationApplication.SimulationSoftwareSuiteProperty.Builder =
       CfnSimulationApplication.SimulationSoftwareSuiteProperty.builder()
 
+  /**
+   * @param name The name of the simulation software suite. 
+   * `SimulationRuntime` is the only supported value.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param version The version of the simulation software suite.
+   * Not applicable for `SimulationRuntime` .
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

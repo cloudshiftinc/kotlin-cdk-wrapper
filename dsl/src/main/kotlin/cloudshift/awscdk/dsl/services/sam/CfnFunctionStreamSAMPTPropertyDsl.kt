@@ -11,6 +11,9 @@ public class CfnFunctionStreamSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.StreamSAMPTProperty.Builder =
       CfnFunction.StreamSAMPTProperty.builder()
 
+  /**
+   * @param streamName the value to be set. 
+   */
   public fun streamName(streamName: String) {
     cdkBuilder.streamName(streamName)
   }

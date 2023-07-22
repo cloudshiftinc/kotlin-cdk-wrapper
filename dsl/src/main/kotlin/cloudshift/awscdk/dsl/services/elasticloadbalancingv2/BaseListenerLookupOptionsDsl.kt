@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.BaseListenerLookup
 public class BaseListenerLookupOptionsDsl {
   private val cdkBuilder: BaseListenerLookupOptions.Builder = BaseListenerLookupOptions.builder()
 
+  /**
+   * @param listenerPort Filter listeners by listener port.
+   */
   public fun listenerPort(listenerPort: Number) {
     cdkBuilder.listenerPort(listenerPort)
   }
 
+  /**
+   * @param loadBalancerArn Filter listeners by associated load balancer arn.
+   */
   public fun loadBalancerArn(loadBalancerArn: String) {
     cdkBuilder.loadBalancerArn(loadBalancerArn)
   }
 
+  /**
+   * @param loadBalancerTags Filter listeners by associated load balancer tags.
+   */
   public fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
     cdkBuilder.loadBalancerTags(loadBalancerTags)
   }

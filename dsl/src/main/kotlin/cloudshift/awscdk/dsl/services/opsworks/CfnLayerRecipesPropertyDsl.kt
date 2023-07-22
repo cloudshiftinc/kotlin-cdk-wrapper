@@ -22,42 +22,72 @@ public class CfnLayerRecipesPropertyDsl {
 
   private val _undeploy: MutableList<String> = mutableListOf()
 
+  /**
+   * @param configure An array of custom recipe names to be run following a `configure` event.
+   */
   public fun configure(vararg configure: String) {
     _configure.addAll(listOf(*configure))
   }
 
+  /**
+   * @param configure An array of custom recipe names to be run following a `configure` event.
+   */
   public fun configure(configure: Collection<String>) {
     _configure.addAll(configure)
   }
 
+  /**
+   * @param deploy An array of custom recipe names to be run following a `deploy` event.
+   */
   public fun deploy(vararg deploy: String) {
     _deploy.addAll(listOf(*deploy))
   }
 
+  /**
+   * @param deploy An array of custom recipe names to be run following a `deploy` event.
+   */
   public fun deploy(deploy: Collection<String>) {
     _deploy.addAll(deploy)
   }
 
+  /**
+   * @param setup An array of custom recipe names to be run following a `setup` event.
+   */
   public fun setup(vararg setup: String) {
     _setup.addAll(listOf(*setup))
   }
 
+  /**
+   * @param setup An array of custom recipe names to be run following a `setup` event.
+   */
   public fun setup(setup: Collection<String>) {
     _setup.addAll(setup)
   }
 
+  /**
+   * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
+   */
   public fun shutdown(vararg shutdown: String) {
     _shutdown.addAll(listOf(*shutdown))
   }
 
+  /**
+   * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
+   */
   public fun shutdown(shutdown: Collection<String>) {
     _shutdown.addAll(shutdown)
   }
 
+  /**
+   * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
+   */
   public fun undeploy(vararg undeploy: String) {
     _undeploy.addAll(listOf(*undeploy))
   }
 
+  /**
+   * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
+   */
   public fun undeploy(undeploy: Collection<String>) {
     _undeploy.addAll(undeploy)
   }

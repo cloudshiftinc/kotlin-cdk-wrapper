@@ -11,6 +11,11 @@ public class CfnClusterPlacementTypePropertyDsl {
   private val cdkBuilder: CfnCluster.PlacementTypeProperty.Builder =
       CfnCluster.PlacementTypeProperty.builder()
 
+  /**
+   * @param availabilityZone The Amazon EC2 Availability Zone for the cluster. 
+   * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural) is
+   * used for instance fleets.
+   */
   public fun availabilityZone(availabilityZone: String) {
     cdkBuilder.availabilityZone(availabilityZone)
   }

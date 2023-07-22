@@ -11,6 +11,9 @@ public class CfnDashboardAxisLogarithmicScalePropertyDsl {
   private val cdkBuilder: CfnDashboard.AxisLogarithmicScaleProperty.Builder =
       CfnDashboard.AxisLogarithmicScaleProperty.builder()
 
+  /**
+   * @param base The base setup of a logarithmic axis scale.
+   */
   public fun base(base: Number) {
     cdkBuilder.base(base)
   }

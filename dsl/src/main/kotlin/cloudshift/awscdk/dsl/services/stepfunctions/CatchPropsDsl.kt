@@ -14,14 +14,29 @@ public class CatchPropsDsl {
 
   private val _errors: MutableList<String> = mutableListOf()
 
+  /**
+   * @param errors Errors to recover from by going to the given state.
+   * A list of error strings to retry, which can be either predefined errors
+   * (for example Errors.NoChoiceMatched) or a self-defined error.
+   */
   public fun errors(vararg errors: String) {
     _errors.addAll(listOf(*errors))
   }
 
+  /**
+   * @param errors Errors to recover from by going to the given state.
+   * A list of error strings to retry, which can be either predefined errors
+   * (for example Errors.NoChoiceMatched) or a self-defined error.
+   */
   public fun errors(errors: Collection<String>) {
     _errors.addAll(errors)
   }
 
+  /**
+   * @param resultPath JSONPath expression to indicate where to inject the error data.
+   * May also be the special value DISCARD, which will cause the error
+   * data to be discarded.
+   */
   public fun resultPath(resultPath: String) {
     cdkBuilder.resultPath(resultPath)
   }

@@ -21,38 +21,69 @@ public class SelectedSubnetsDsl {
 
   private val _subnets: MutableList<ISubnet> = mutableListOf()
 
+  /**
+   * @param availabilityZones The respective AZs of each subnet. 
+   */
   public fun availabilityZones(vararg availabilityZones: String) {
     _availabilityZones.addAll(listOf(*availabilityZones))
   }
 
+  /**
+   * @param availabilityZones The respective AZs of each subnet. 
+   */
   public fun availabilityZones(availabilityZones: Collection<String>) {
     _availabilityZones.addAll(availabilityZones)
   }
 
+  /**
+   * @param hasPublic Whether any of the given subnets are from the VPC's public subnets. 
+   */
   public fun hasPublic(hasPublic: Boolean) {
     cdkBuilder.hasPublic(hasPublic)
   }
 
+  /**
+   * @param internetConnectivityEstablished Dependency representing internet connectivity for these
+   * subnets. 
+   */
   public fun internetConnectivityEstablished(internetConnectivityEstablished: IDependable) {
     cdkBuilder.internetConnectivityEstablished(internetConnectivityEstablished)
   }
 
+  /**
+   * @param isPendingLookup The subnet selection is not actually real yet.
+   * If this value is true, don't validate anything about the subnets. The count
+   * or identities are not known yet, and the validation will most likely fail
+   * which will prevent a successful lookup.
+   */
   public fun isPendingLookup(isPendingLookup: Boolean) {
     cdkBuilder.isPendingLookup(isPendingLookup)
   }
 
+  /**
+   * @param subnetIds The subnet IDs. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * @param subnetIds The subnet IDs. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * @param subnets Selected subnet objects. 
+   */
   public fun subnets(vararg subnets: ISubnet) {
     _subnets.addAll(listOf(*subnets))
   }
 
+  /**
+   * @param subnets Selected subnet objects. 
+   */
   public fun subnets(subnets: Collection<ISubnet>) {
     _subnets.addAll(subnets)
   }

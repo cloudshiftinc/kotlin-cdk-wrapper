@@ -10,6 +10,9 @@ import software.amazon.awscdk.ExportValueOptions
 public class ExportValueOptionsDsl {
   private val cdkBuilder: ExportValueOptions.Builder = ExportValueOptions.builder()
 
+  /**
+   * @param name The name of the export to create.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

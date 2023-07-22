@@ -11,18 +11,30 @@ public class CfnConnectorCapacityPropertyDsl {
   private val cdkBuilder: CfnConnector.CapacityProperty.Builder =
       CfnConnector.CapacityProperty.builder()
 
+  /**
+   * @param autoScaling Information about the auto scaling parameters for the connector.
+   */
   public fun autoScaling(autoScaling: IResolvable) {
     cdkBuilder.autoScaling(autoScaling)
   }
 
+  /**
+   * @param autoScaling Information about the auto scaling parameters for the connector.
+   */
   public fun autoScaling(autoScaling: CfnConnector.AutoScalingProperty) {
     cdkBuilder.autoScaling(autoScaling)
   }
 
+  /**
+   * @param provisionedCapacity Details about a fixed capacity allocated to a connector.
+   */
   public fun provisionedCapacity(provisionedCapacity: IResolvable) {
     cdkBuilder.provisionedCapacity(provisionedCapacity)
   }
 
+  /**
+   * @param provisionedCapacity Details about a fixed capacity allocated to a connector.
+   */
   public fun provisionedCapacity(provisionedCapacity: CfnConnector.ProvisionedCapacityProperty) {
     cdkBuilder.provisionedCapacity(provisionedCapacity)
   }

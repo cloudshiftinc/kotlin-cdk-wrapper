@@ -12,10 +12,16 @@ public class CfnCertificateValidityPropertyDsl {
   private val cdkBuilder: CfnCertificate.ValidityProperty.Builder =
       CfnCertificate.ValidityProperty.builder()
 
+  /**
+   * @param type Specifies whether the `Value` parameter represents days, months, or years. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }
 
+  /**
+   * @param value A long integer interpreted according to the value of `Type` , below. 
+   */
   public fun `value`(`value`: Number) {
     cdkBuilder.`value`(`value`)
   }

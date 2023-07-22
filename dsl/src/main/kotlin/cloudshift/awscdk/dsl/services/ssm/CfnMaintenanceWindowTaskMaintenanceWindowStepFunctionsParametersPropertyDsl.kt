@@ -12,10 +12,16 @@ public class CfnMaintenanceWindowTaskMaintenanceWindowStepFunctionsParametersPro
       CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.Builder =
       CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.builder()
 
+  /**
+   * @param input The inputs for the `STEP_FUNCTIONS` task.
+   */
   public fun input(input: String) {
     cdkBuilder.input(input)
   }
 
+  /**
+   * @param name The name of the `STEP_FUNCTIONS` task.
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

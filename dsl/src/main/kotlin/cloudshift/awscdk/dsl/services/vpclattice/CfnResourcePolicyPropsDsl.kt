@@ -13,16 +13,25 @@ import software.amazon.awscdk.services.vpclattice.CfnResourcePolicyProps
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policy The Amazon Resource Name (ARN) of the service network or service. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * @param policy The Amazon Resource Name (ARN) of the service network or service. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * @param resourceArn An IAM policy. 
+   */
   public fun resourceArn(resourceArn: String) {
     cdkBuilder.resourceArn(resourceArn)
   }

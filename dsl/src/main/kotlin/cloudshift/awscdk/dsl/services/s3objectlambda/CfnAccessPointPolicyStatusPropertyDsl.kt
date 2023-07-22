@@ -12,10 +12,18 @@ public class CfnAccessPointPolicyStatusPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.PolicyStatusProperty.Builder =
       CfnAccessPoint.PolicyStatusProperty.builder()
 
+  /**
+   * @param isPublic Specifies whether the Object lambda Access Point Policy is Public or not.
+   * Object lambda Access Points are private by default.
+   */
   public fun isPublic(isPublic: Boolean) {
     cdkBuilder.isPublic(isPublic)
   }
 
+  /**
+   * @param isPublic Specifies whether the Object lambda Access Point Policy is Public or not.
+   * Object lambda Access Points are private by default.
+   */
   public fun isPublic(isPublic: IResolvable) {
     cdkBuilder.isPublic(isPublic)
   }

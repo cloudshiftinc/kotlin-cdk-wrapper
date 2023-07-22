@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.logs.StreamOptions
 public class StreamOptionsDsl {
   private val cdkBuilder: StreamOptions.Builder = StreamOptions.builder()
 
+  /**
+   * @param logStreamName The name of the log stream to create.
+   * The name must be unique within the log group.
+   */
   public fun logStreamName(logStreamName: String) {
     cdkBuilder.logStreamName(logStreamName)
   }

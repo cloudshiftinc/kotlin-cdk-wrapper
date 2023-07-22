@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
 public class CfnRuleMatchPropertyDsl {
   private val cdkBuilder: CfnRule.MatchProperty.Builder = CfnRule.MatchProperty.builder()
 
+  /**
+   * @param httpMatch The HTTP criteria that a rule must match. 
+   */
   public fun httpMatch(httpMatch: IResolvable) {
     cdkBuilder.httpMatch(httpMatch)
   }
 
+  /**
+   * @param httpMatch The HTTP criteria that a rule must match. 
+   */
   public fun httpMatch(httpMatch: CfnRule.HttpMatchProperty) {
     cdkBuilder.httpMatch(httpMatch)
   }

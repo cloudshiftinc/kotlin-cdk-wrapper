@@ -11,10 +11,16 @@ public class CfnFilterPortRangeFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.PortRangeFilterProperty.Builder =
       CfnFilter.PortRangeFilterProperty.builder()
 
+  /**
+   * @param beginInclusive The port number the port range begins at.
+   */
   public fun beginInclusive(beginInclusive: Number) {
     cdkBuilder.beginInclusive(beginInclusive)
   }
 
+  /**
+   * @param endInclusive The port number the port range ends at.
+   */
   public fun endInclusive(endInclusive: Number) {
     cdkBuilder.endInclusive(endInclusive)
   }

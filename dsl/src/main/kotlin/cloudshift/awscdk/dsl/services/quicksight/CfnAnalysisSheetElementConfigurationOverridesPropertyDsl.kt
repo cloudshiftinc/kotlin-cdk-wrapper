@@ -11,6 +11,12 @@ public class CfnAnalysisSheetElementConfigurationOverridesPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SheetElementConfigurationOverridesProperty.Builder =
       CfnAnalysis.SheetElementConfigurationOverridesProperty.builder()
 
+  /**
+   * @param visibility Determines whether or not the overrides are visible. Choose one of the
+   * following options:.
+   * * `VISIBLE`
+   * * `HIDDEN`
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

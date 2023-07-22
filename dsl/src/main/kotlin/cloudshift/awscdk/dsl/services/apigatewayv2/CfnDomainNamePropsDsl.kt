@@ -19,37 +19,64 @@ public class CfnDomainNamePropsDsl {
 
   private val _domainNameConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param domainName The custom domain name for your API in Amazon API Gateway. 
+   * Uppercase letters are not supported.
+   */
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  /**
+   * @param domainNameConfigurations The domain name configurations.
+   */
   public fun domainNameConfigurations(vararg domainNameConfigurations: Any) {
     _domainNameConfigurations.addAll(listOf(*domainNameConfigurations))
   }
 
+  /**
+   * @param domainNameConfigurations The domain name configurations.
+   */
   public fun domainNameConfigurations(domainNameConfigurations: Collection<Any>) {
     _domainNameConfigurations.addAll(domainNameConfigurations)
   }
 
+  /**
+   * @param domainNameConfigurations The domain name configurations.
+   */
   public fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
     cdkBuilder.domainNameConfigurations(domainNameConfigurations)
   }
 
+  /**
+   * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom domain
+   * name.
+   */
   public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
     cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
   }
 
+  /**
+   * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom domain
+   * name.
+   */
   public
       fun mutualTlsAuthentication(mutualTlsAuthentication: CfnDomainName.MutualTlsAuthenticationProperty) {
     cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
   }
 
-  public fun tags(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param tags The collection of tags associated with a domain name.
+   */
+  public fun tags(tags: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(tags)
     cdkBuilder.tags(builder.map)
   }
 
+  /**
+   * @param tags The collection of tags associated with a domain name.
+   */
   public fun tags(tags: Any) {
     cdkBuilder.tags(tags)
   }

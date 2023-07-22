@@ -17,18 +17,30 @@ public class UsagePlanPerApiStageDsl {
 
   private val _throttle: MutableList<ThrottlingPerMethod> = mutableListOf()
 
+  /**
+   * @param api the value to be set.
+   */
   public fun api(api: IRestApi) {
     cdkBuilder.api(api)
   }
 
+  /**
+   * @param stage [disable-awslint:ref-via-interface].
+   */
   public fun stage(stage: Stage) {
     cdkBuilder.stage(stage)
   }
 
+  /**
+   * @param throttle the value to be set.
+   */
   public fun throttle(throttle: ThrottlingPerMethodDsl.() -> Unit) {
     _throttle.add(ThrottlingPerMethodDsl().apply(throttle).build())
   }
 
+  /**
+   * @param throttle the value to be set.
+   */
   public fun throttle(throttle: Collection<ThrottlingPerMethod>) {
     _throttle.addAll(throttle)
   }

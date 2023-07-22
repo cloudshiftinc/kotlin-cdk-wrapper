@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.codedeploy.EcsApplicationProps
 public class EcsApplicationPropsDsl {
   private val cdkBuilder: EcsApplicationProps.Builder = EcsApplicationProps.builder()
 
+  /**
+   * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+   */
   public fun applicationName(applicationName: String) {
     cdkBuilder.applicationName(applicationName)
   }

@@ -13,14 +13,27 @@ public class CfnBrokerEncryptionOptionsPropertyDsl {
   private val cdkBuilder: CfnBroker.EncryptionOptionsProperty.Builder =
       CfnBroker.EncryptionOptionsProperty.builder()
 
+  /**
+   * @param kmsKeyId The customer master key (CMK) to use for the A AWS KMS (KMS).
+   * This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a default
+   * CMK to encrypt your data.
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
+  /**
+   * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
+   * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+   */
   public fun useAwsOwnedKey(useAwsOwnedKey: Boolean) {
     cdkBuilder.useAwsOwnedKey(useAwsOwnedKey)
   }
 
+  /**
+   * @param useAwsOwnedKey Enables the use of an AWS owned CMK using AWS KMS (KMS). 
+   * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
+   */
   public fun useAwsOwnedKey(useAwsOwnedKey: IResolvable) {
     cdkBuilder.useAwsOwnedKey(useAwsOwnedKey)
   }

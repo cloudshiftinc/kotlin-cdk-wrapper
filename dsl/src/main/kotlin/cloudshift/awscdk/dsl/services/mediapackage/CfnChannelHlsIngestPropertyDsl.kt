@@ -16,14 +16,23 @@ public class CfnChannelHlsIngestPropertyDsl {
 
   private val _ingestEndpoints: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param ingestEndpoints The input URL where the source stream should be sent.
+   */
   public fun ingestEndpoints(vararg ingestEndpoints: Any) {
     _ingestEndpoints.addAll(listOf(*ingestEndpoints))
   }
 
+  /**
+   * @param ingestEndpoints The input URL where the source stream should be sent.
+   */
   public fun ingestEndpoints(ingestEndpoints: Collection<Any>) {
     _ingestEndpoints.addAll(ingestEndpoints)
   }
 
+  /**
+   * @param ingestEndpoints The input URL where the source stream should be sent.
+   */
   public fun ingestEndpoints(ingestEndpoints: IResolvable) {
     cdkBuilder.ingestEndpoints(ingestEndpoints)
   }

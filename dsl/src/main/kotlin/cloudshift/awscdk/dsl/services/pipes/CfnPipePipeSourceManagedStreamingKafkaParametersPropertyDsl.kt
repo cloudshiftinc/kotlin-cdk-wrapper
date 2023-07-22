@@ -13,30 +13,51 @@ public class CfnPipePipeSourceManagedStreamingKafkaParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty.Builder =
       CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty.builder()
 
+  /**
+   * @param batchSize The maximum number of records to include in each batch.
+   */
   public fun batchSize(batchSize: Number) {
     cdkBuilder.batchSize(batchSize)
   }
 
+  /**
+   * @param consumerGroupId The name of the destination queue to consume.
+   */
   public fun consumerGroupId(consumerGroupId: String) {
     cdkBuilder.consumerGroupId(consumerGroupId)
   }
 
+  /**
+   * @param credentials The credentials needed to access the resource.
+   */
   public fun credentials(credentials: IResolvable) {
     cdkBuilder.credentials(credentials)
   }
 
+  /**
+   * @param credentials The credentials needed to access the resource.
+   */
   public fun credentials(credentials: CfnPipe.MSKAccessCredentialsProperty) {
     cdkBuilder.credentials(credentials)
   }
 
+  /**
+   * @param maximumBatchingWindowInSeconds The maximum length of a time to wait for events.
+   */
   public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number) {
     cdkBuilder.maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds)
   }
 
+  /**
+   * @param startingPosition (Streams only) The position in a stream from which to start reading.
+   */
   public fun startingPosition(startingPosition: String) {
     cdkBuilder.startingPosition(startingPosition)
   }
 
+  /**
+   * @param topicName The name of the topic that the pipe will read from. 
+   */
   public fun topicName(topicName: String) {
     cdkBuilder.topicName(topicName)
   }

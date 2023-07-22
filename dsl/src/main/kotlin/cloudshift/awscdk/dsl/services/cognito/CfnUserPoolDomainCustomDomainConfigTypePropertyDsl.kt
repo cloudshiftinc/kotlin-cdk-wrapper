@@ -11,6 +11,11 @@ public class CfnUserPoolDomainCustomDomainConfigTypePropertyDsl {
   private val cdkBuilder: CfnUserPoolDomain.CustomDomainConfigTypeProperty.Builder =
       CfnUserPoolDomain.CustomDomainConfigTypeProperty.builder()
 
+  /**
+   * @param certificateArn The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL
+   * certificate.
+   * You use this certificate for the subdomain of your custom domain.
+   */
   public fun certificateArn(certificateArn: String) {
     cdkBuilder.certificateArn(certificateArn)
   }

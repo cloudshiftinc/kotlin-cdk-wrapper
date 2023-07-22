@@ -11,6 +11,9 @@ public class CfnEndpointEndpointEventBusPropertyDsl {
   private val cdkBuilder: CfnEndpoint.EndpointEventBusProperty.Builder =
       CfnEndpoint.EndpointEventBusProperty.builder()
 
+  /**
+   * @param eventBusArn The ARN of the event bus the endpoint is associated with. 
+   */
   public fun eventBusArn(eventBusArn: String) {
     cdkBuilder.eventBusArn(eventBusArn)
   }

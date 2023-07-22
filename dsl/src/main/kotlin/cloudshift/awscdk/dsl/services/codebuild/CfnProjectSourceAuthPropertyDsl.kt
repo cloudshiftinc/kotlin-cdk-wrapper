@@ -11,10 +11,21 @@ public class CfnProjectSourceAuthPropertyDsl {
   private val cdkBuilder: CfnProject.SourceAuthProperty.Builder =
       CfnProject.SourceAuthProperty.builder()
 
+  /**
+   * @param resource The resource value that applies to the specified authorization type.
+   *
+   * This data type is used by the AWS CodeBuild console only.
+   */
   public fun resource(resource: String) {
     cdkBuilder.resource(resource)
   }
 
+  /**
+   * @param type The authorization type to use. The only valid value is `OAUTH` , which represents
+   * the OAuth authorization type. 
+   *
+   * This data type is used by the AWS CodeBuild console only.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

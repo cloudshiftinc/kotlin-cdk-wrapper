@@ -11,10 +11,20 @@ public class CfnScheduleRetryPolicyPropertyDsl {
   private val cdkBuilder: CfnSchedule.RetryPolicyProperty.Builder =
       CfnSchedule.RetryPolicyProperty.builder()
 
+  /**
+   * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
+   * retry attempts.
+   */
   public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
     cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
   }
 
+  /**
+   * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
+   * fails.
+   * Retry attempts with exponential backoff continue until either the maximum number of attempts is
+   * made or until the duration of the `MaximumEventAgeInSeconds` is reached.
+   */
   public fun maximumRetryAttempts(maximumRetryAttempts: Number) {
     cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
   }

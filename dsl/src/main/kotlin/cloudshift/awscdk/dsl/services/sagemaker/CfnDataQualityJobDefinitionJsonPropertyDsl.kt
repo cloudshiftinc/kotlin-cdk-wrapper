@@ -12,10 +12,16 @@ public class CfnDataQualityJobDefinitionJsonPropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.JsonProperty.Builder =
       CfnDataQualityJobDefinition.JsonProperty.builder()
 
+  /**
+   * @param line A boolean flag indicating if it is JSON line format.
+   */
   public fun line(line: Boolean) {
     cdkBuilder.line(line)
   }
 
+  /**
+   * @param line A boolean flag indicating if it is JSON line format.
+   */
   public fun line(line: IResolvable) {
     cdkBuilder.line(line)
   }

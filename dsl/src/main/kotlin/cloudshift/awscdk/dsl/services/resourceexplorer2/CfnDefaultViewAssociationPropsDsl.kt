@@ -11,6 +11,11 @@ public class CfnDefaultViewAssociationPropsDsl {
   private val cdkBuilder: CfnDefaultViewAssociationProps.Builder =
       CfnDefaultViewAssociationProps.builder()
 
+  /**
+   * @param viewArn The ARN of the view to set as the default for the AWS Region and AWS account in
+   * which you call this operation. 
+   * The specified view must already exist in the specified Region.
+   */
   public fun viewArn(viewArn: String) {
     cdkBuilder.viewArn(viewArn)
   }

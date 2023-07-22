@@ -11,6 +11,9 @@ public class CfnConnectorProfileDatadogConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.DatadogConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.DatadogConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param instanceUrl The location of the Datadog resource. 
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }

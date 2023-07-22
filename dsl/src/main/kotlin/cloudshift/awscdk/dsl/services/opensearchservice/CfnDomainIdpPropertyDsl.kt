@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
 public class CfnDomainIdpPropertyDsl {
   private val cdkBuilder: CfnDomain.IdpProperty.Builder = CfnDomain.IdpProperty.builder()
 
+  /**
+   * @param entityId The unique entity ID of the application in the SAML identity provider. 
+   */
   public fun entityId(entityId: String) {
     cdkBuilder.entityId(entityId)
   }
 
+  /**
+   * @param metadataContent The metadata of the SAML application, in XML format. 
+   */
   public fun metadataContent(metadataContent: String) {
     cdkBuilder.metadataContent(metadataContent)
   }

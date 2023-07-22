@@ -11,6 +11,9 @@ public class CfnDeliveryStreamAmazonOpenSearchServerlessRetryOptionsPropertyDsl 
   private val cdkBuilder: CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.Builder =
       CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.builder()
 
+  /**
+   * @param durationInSeconds the value to be set.
+   */
   public fun durationInSeconds(durationInSeconds: Number) {
     cdkBuilder.durationInSeconds(durationInSeconds)
   }

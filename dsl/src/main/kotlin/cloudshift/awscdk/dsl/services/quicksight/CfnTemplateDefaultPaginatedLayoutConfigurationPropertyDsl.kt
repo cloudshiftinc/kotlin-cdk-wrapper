@@ -11,10 +11,18 @@ public class CfnTemplateDefaultPaginatedLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.DefaultPaginatedLayoutConfigurationProperty.Builder =
       CfnTemplate.DefaultPaginatedLayoutConfigurationProperty.builder()
 
+  /**
+   * @param sectionBased The options that determine the default settings for a section-based layout
+   * configuration.
+   */
   public fun sectionBased(sectionBased: IResolvable) {
     cdkBuilder.sectionBased(sectionBased)
   }
 
+  /**
+   * @param sectionBased The options that determine the default settings for a section-based layout
+   * configuration.
+   */
   public
       fun sectionBased(sectionBased: CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty) {
     cdkBuilder.sectionBased(sectionBased)

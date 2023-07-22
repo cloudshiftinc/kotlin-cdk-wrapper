@@ -11,6 +11,9 @@ public class CfnVerifiedAccessTrustProviderDeviceOptionsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.Builder =
       CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.builder()
 
+  /**
+   * @param tenantId The ID of the tenant application with the device-identity provider.
+   */
   public fun tenantId(tenantId: String) {
     cdkBuilder.tenantId(tenantId)
   }

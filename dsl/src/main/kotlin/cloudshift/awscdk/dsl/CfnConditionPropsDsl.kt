@@ -10,6 +10,9 @@ import software.amazon.awscdk.ICfnConditionExpression
 public class CfnConditionPropsDsl {
   private val cdkBuilder: CfnConditionProps.Builder = CfnConditionProps.builder()
 
+  /**
+   * @param expression The expression that the condition will evaluate.
+   */
   public fun expression(expression: ICfnConditionExpression) {
     cdkBuilder.expression(expression)
   }

@@ -12,13 +12,20 @@ public class GatewayRouteHostnameMatchConfigDsl {
   private val cdkBuilder: GatewayRouteHostnameMatchConfig.Builder =
       GatewayRouteHostnameMatchConfig.builder()
 
-  public fun hostnameMatch(block: CfnGatewayRouteGatewayRouteHostnameMatchPropertyDsl.() -> Unit =
-      {}) {
+  /**
+   * @param hostnameMatch GatewayRoute CFN configuration for host name match. 
+   */
+  public
+      fun hostnameMatch(hostnameMatch: CfnGatewayRouteGatewayRouteHostnameMatchPropertyDsl.() -> Unit
+      = {}) {
     val builder = CfnGatewayRouteGatewayRouteHostnameMatchPropertyDsl()
-    builder.apply(block)
+    builder.apply(hostnameMatch)
     cdkBuilder.hostnameMatch(builder.build())
   }
 
+  /**
+   * @param hostnameMatch GatewayRoute CFN configuration for host name match. 
+   */
   public fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty) {
     cdkBuilder.hostnameMatch(hostnameMatch)
   }

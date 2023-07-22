@@ -17,22 +17,42 @@ public class CfnBotResponseSpecificationPropertyDsl {
 
   private val _messageGroupsList: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param allowInterrupt Indicates whether the user can interrupt a speech response from Amazon
+   * Lex.
+   */
   public fun allowInterrupt(allowInterrupt: Boolean) {
     cdkBuilder.allowInterrupt(allowInterrupt)
   }
 
+  /**
+   * @param allowInterrupt Indicates whether the user can interrupt a speech response from Amazon
+   * Lex.
+   */
   public fun allowInterrupt(allowInterrupt: IResolvable) {
     cdkBuilder.allowInterrupt(allowInterrupt)
   }
 
+  /**
+   * @param messageGroupsList A collection of responses that Amazon Lex can send to the user. 
+   * Amazon Lex chooses the actual response to send at runtime.
+   */
   public fun messageGroupsList(vararg messageGroupsList: Any) {
     _messageGroupsList.addAll(listOf(*messageGroupsList))
   }
 
+  /**
+   * @param messageGroupsList A collection of responses that Amazon Lex can send to the user. 
+   * Amazon Lex chooses the actual response to send at runtime.
+   */
   public fun messageGroupsList(messageGroupsList: Collection<Any>) {
     _messageGroupsList.addAll(messageGroupsList)
   }
 
+  /**
+   * @param messageGroupsList A collection of responses that Amazon Lex can send to the user. 
+   * Amazon Lex chooses the actual response to send at runtime.
+   */
   public fun messageGroupsList(messageGroupsList: IResolvable) {
     cdkBuilder.messageGroupsList(messageGroupsList)
   }

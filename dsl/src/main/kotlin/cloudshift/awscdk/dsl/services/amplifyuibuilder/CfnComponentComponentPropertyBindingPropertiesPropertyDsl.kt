@@ -11,10 +11,16 @@ public class CfnComponentComponentPropertyBindingPropertiesPropertyDsl {
   private val cdkBuilder: CfnComponent.ComponentPropertyBindingPropertiesProperty.Builder =
       CfnComponent.ComponentPropertyBindingPropertiesProperty.builder()
 
+  /**
+   * @param field The data field to bind the property to.
+   */
   public fun `field`(`field`: String) {
     cdkBuilder.`field`(`field`)
   }
 
+  /**
+   * @param property The component property to bind to the data field. 
+   */
   public fun `property`(`property`: String) {
     cdkBuilder.`property`(`property`)
   }

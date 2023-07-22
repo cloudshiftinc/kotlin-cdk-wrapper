@@ -18,26 +18,68 @@ public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
 
   private val _successCodes: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param failureCodes Status codes in the response that indicate a failed login attempt. 
+   * To be counted as a failed login, the response status code must match one of these. Each code
+   * must be unique among the success and failure status codes.
+   *
+   * JSON example: `"FailureCodes": [ 400, 404 ]`
+   */
   public fun failureCodes(vararg failureCodes: Number) {
     _failureCodes.addAll(listOf(*failureCodes))
   }
 
+  /**
+   * @param failureCodes Status codes in the response that indicate a failed login attempt. 
+   * To be counted as a failed login, the response status code must match one of these. Each code
+   * must be unique among the success and failure status codes.
+   *
+   * JSON example: `"FailureCodes": [ 400, 404 ]`
+   */
   public fun failureCodes(failureCodes: Collection<Number>) {
     _failureCodes.addAll(failureCodes)
   }
 
+  /**
+   * @param failureCodes Status codes in the response that indicate a failed login attempt. 
+   * To be counted as a failed login, the response status code must match one of these. Each code
+   * must be unique among the success and failure status codes.
+   *
+   * JSON example: `"FailureCodes": [ 400, 404 ]`
+   */
   public fun failureCodes(failureCodes: IResolvable) {
     cdkBuilder.failureCodes(failureCodes)
   }
 
+  /**
+   * @param successCodes Status codes in the response that indicate a successful login attempt. 
+   * To be counted as a successful login, the response status code must match one of these. Each
+   * code must be unique among the success and failure status codes.
+   *
+   * JSON example: `"SuccessCodes": [ 200, 201 ]`
+   */
   public fun successCodes(vararg successCodes: Number) {
     _successCodes.addAll(listOf(*successCodes))
   }
 
+  /**
+   * @param successCodes Status codes in the response that indicate a successful login attempt. 
+   * To be counted as a successful login, the response status code must match one of these. Each
+   * code must be unique among the success and failure status codes.
+   *
+   * JSON example: `"SuccessCodes": [ 200, 201 ]`
+   */
   public fun successCodes(successCodes: Collection<Number>) {
     _successCodes.addAll(successCodes)
   }
 
+  /**
+   * @param successCodes Status codes in the response that indicate a successful login attempt. 
+   * To be counted as a successful login, the response status code must match one of these. Each
+   * code must be unique among the success and failure status codes.
+   *
+   * JSON example: `"SuccessCodes": [ 200, 201 ]`
+   */
   public fun successCodes(successCodes: IResolvable) {
     cdkBuilder.successCodes(successCodes)
   }

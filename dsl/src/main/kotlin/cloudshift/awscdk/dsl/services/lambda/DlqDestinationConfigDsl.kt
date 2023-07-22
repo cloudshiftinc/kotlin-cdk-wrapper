@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.lambda.DlqDestinationConfig
 public class DlqDestinationConfigDsl {
   private val cdkBuilder: DlqDestinationConfig.Builder = DlqDestinationConfig.builder()
 
+  /**
+   * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+   */
   public fun destination(destination: String) {
     cdkBuilder.destination(destination)
   }

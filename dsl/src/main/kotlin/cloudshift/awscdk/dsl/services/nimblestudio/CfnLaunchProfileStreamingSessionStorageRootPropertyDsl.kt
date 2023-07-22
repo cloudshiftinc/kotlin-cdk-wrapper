@@ -11,10 +11,16 @@ public class CfnLaunchProfileStreamingSessionStorageRootPropertyDsl {
   private val cdkBuilder: CfnLaunchProfile.StreamingSessionStorageRootProperty.Builder =
       CfnLaunchProfile.StreamingSessionStorageRootProperty.builder()
 
+  /**
+   * @param linux The folder path in Linux workstations where files are uploaded.
+   */
   public fun linux(linux: String) {
     cdkBuilder.linux(linux)
   }
 
+  /**
+   * @param windows The folder path in Windows workstations where files are uploaded.
+   */
   public fun windows(windows: String) {
     cdkBuilder.windows(windows)
   }

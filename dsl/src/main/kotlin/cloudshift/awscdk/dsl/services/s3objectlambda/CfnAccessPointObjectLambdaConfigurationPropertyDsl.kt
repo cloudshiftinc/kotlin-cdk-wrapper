@@ -20,34 +20,68 @@ public class CfnAccessPointObjectLambdaConfigurationPropertyDsl {
 
   private val _transformationConfigurations: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param allowedFeatures A container for allowed features.
+   * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+   * `HeadObject-PartNumber` .
+   */
   public fun allowedFeatures(vararg allowedFeatures: String) {
     _allowedFeatures.addAll(listOf(*allowedFeatures))
   }
 
+  /**
+   * @param allowedFeatures A container for allowed features.
+   * Valid inputs are `GetObject-Range` , `GetObject-PartNumber` , `HeadObject-Range` , and
+   * `HeadObject-PartNumber` .
+   */
   public fun allowedFeatures(allowedFeatures: Collection<String>) {
     _allowedFeatures.addAll(allowedFeatures)
   }
 
+  /**
+   * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics configuration is
+   * enabled.
+   */
   public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
     cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
   }
 
+  /**
+   * @param cloudWatchMetricsEnabled A container for whether the CloudWatch metrics configuration is
+   * enabled.
+   */
   public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
     cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
   }
 
+  /**
+   * @param supportingAccessPoint Standard access point associated with the Object Lambda Access
+   * Point. 
+   */
   public fun supportingAccessPoint(supportingAccessPoint: String) {
     cdkBuilder.supportingAccessPoint(supportingAccessPoint)
   }
 
+  /**
+   * @param transformationConfigurations A container for transformation configurations for an Object
+   * Lambda Access Point. 
+   */
   public fun transformationConfigurations(vararg transformationConfigurations: Any) {
     _transformationConfigurations.addAll(listOf(*transformationConfigurations))
   }
 
+  /**
+   * @param transformationConfigurations A container for transformation configurations for an Object
+   * Lambda Access Point. 
+   */
   public fun transformationConfigurations(transformationConfigurations: Collection<Any>) {
     _transformationConfigurations.addAll(transformationConfigurations)
   }
 
+  /**
+   * @param transformationConfigurations A container for transformation configurations for an Object
+   * Lambda Access Point. 
+   */
   public fun transformationConfigurations(transformationConfigurations: IResolvable) {
     cdkBuilder.transformationConfigurations(transformationConfigurations)
   }

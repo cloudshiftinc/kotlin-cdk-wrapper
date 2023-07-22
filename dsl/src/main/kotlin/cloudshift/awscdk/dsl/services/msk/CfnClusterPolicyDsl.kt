@@ -17,16 +17,34 @@ public class CfnClusterPolicyDsl(
 ) {
   private val cdkBuilder: CfnClusterPolicy.Builder = CfnClusterPolicy.Builder.create(scope, id)
 
+  /**
+   * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html#cfn-msk-clusterpolicy-clusterarn)
+   * @param clusterArn The Amazon Resource Name (ARN) that uniquely identifies the cluster. 
+   */
   public fun clusterArn(clusterArn: String) {
     cdkBuilder.clusterArn(clusterArn)
   }
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * Resource policy for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html#cfn-msk-clusterpolicy-policy)
+   * @param policy Resource policy for the cluster. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * Resource policy for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html#cfn-msk-clusterpolicy-policy)
+   * @param policy Resource policy for the cluster. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }

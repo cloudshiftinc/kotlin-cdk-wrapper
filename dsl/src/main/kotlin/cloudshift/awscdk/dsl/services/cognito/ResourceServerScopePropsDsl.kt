@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.cognito.ResourceServerScopeProps
 public class ResourceServerScopePropsDsl {
   private val cdkBuilder: ResourceServerScopeProps.Builder = ResourceServerScopeProps.builder()
 
+  /**
+   * @param scopeDescription A description of the scope. 
+   */
   public fun scopeDescription(scopeDescription: String) {
     cdkBuilder.scopeDescription(scopeDescription)
   }
 
+  /**
+   * @param scopeName The name of the scope. 
+   */
   public fun scopeName(scopeName: String) {
     cdkBuilder.scopeName(scopeName)
   }

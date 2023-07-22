@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.signer.SigningProfileAttributes
 public class SigningProfileAttributesDsl {
   private val cdkBuilder: SigningProfileAttributes.Builder = SigningProfileAttributes.builder()
 
+  /**
+   * @param signingProfileName The name of signing profile. 
+   */
   public fun signingProfileName(signingProfileName: String) {
     cdkBuilder.signingProfileName(signingProfileName)
   }
 
+  /**
+   * @param signingProfileVersion The version of signing profile. 
+   */
   public fun signingProfileVersion(signingProfileVersion: String) {
     cdkBuilder.signingProfileVersion(signingProfileVersion)
   }

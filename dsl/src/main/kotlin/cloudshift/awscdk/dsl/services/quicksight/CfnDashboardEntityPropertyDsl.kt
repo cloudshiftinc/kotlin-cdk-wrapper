@@ -11,6 +11,10 @@ public class CfnDashboardEntityPropertyDsl {
   private val cdkBuilder: CfnDashboard.EntityProperty.Builder =
       CfnDashboard.EntityProperty.builder()
 
+  /**
+   * @param path The hierarchical path of the entity within the analysis, template, or dashboard
+   * definition tree.
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }

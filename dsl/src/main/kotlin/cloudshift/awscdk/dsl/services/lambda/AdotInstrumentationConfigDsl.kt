@@ -11,10 +11,17 @@ import software.amazon.awscdk.services.lambda.AdotLayerVersion
 public class AdotInstrumentationConfigDsl {
   private val cdkBuilder: AdotInstrumentationConfig.Builder = AdotInstrumentationConfig.builder()
 
+  /**
+   * @param execWrapper The startup script to run, see ADOT documentation to pick the right script
+   * for your use case: https://aws-otel.github.io/docs/getting-started/lambda. 
+   */
   public fun execWrapper(execWrapper: AdotLambdaExecWrapper) {
     cdkBuilder.execWrapper(execWrapper)
   }
 
+  /**
+   * @param layerVersion The ADOT Lambda layer. 
+   */
   public fun layerVersion(layerVersion: AdotLayerVersion) {
     cdkBuilder.layerVersion(layerVersion)
   }

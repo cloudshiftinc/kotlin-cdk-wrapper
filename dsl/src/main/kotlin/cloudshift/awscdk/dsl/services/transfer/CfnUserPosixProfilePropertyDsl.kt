@@ -16,22 +16,37 @@ public class CfnUserPosixProfilePropertyDsl {
 
   private val _secondaryGids: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param gid The POSIX group ID used for all EFS operations by this user. 
+   */
   public fun gid(gid: Number) {
     cdkBuilder.gid(gid)
   }
 
+  /**
+   * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this user.
+   */
   public fun secondaryGids(vararg secondaryGids: Number) {
     _secondaryGids.addAll(listOf(*secondaryGids))
   }
 
+  /**
+   * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this user.
+   */
   public fun secondaryGids(secondaryGids: Collection<Number>) {
     _secondaryGids.addAll(secondaryGids)
   }
 
+  /**
+   * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this user.
+   */
   public fun secondaryGids(secondaryGids: IResolvable) {
     cdkBuilder.secondaryGids(secondaryGids)
   }
 
+  /**
+   * @param uid The POSIX user ID used for all EFS operations by this user. 
+   */
   public fun uid(uid: Number) {
     cdkBuilder.uid(uid)
   }

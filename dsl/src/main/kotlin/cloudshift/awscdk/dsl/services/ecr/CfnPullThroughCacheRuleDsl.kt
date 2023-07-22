@@ -15,10 +15,24 @@ public class CfnPullThroughCacheRuleDsl(
   private val cdkBuilder: CfnPullThroughCacheRule.Builder =
       CfnPullThroughCacheRule.Builder.create(scope, id)
 
+  /**
+   * The Amazon ECR repository prefix associated with the pull through cache rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-ecrrepositoryprefix)
+   * @param ecrRepositoryPrefix The Amazon ECR repository prefix associated with the pull through
+   * cache rule. 
+   */
   public fun ecrRepositoryPrefix(ecrRepositoryPrefix: String) {
     cdkBuilder.ecrRepositoryPrefix(ecrRepositoryPrefix)
   }
 
+  /**
+   * The upstream registry URL associated with the pull through cache rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-upstreamregistryurl)
+   * @param upstreamRegistryUrl The upstream registry URL associated with the pull through cache
+   * rule. 
+   */
   public fun upstreamRegistryUrl(upstreamRegistryUrl: String) {
     cdkBuilder.upstreamRegistryUrl(upstreamRegistryUrl)
   }

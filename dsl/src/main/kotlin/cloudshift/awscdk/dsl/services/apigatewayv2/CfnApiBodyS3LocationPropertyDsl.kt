@@ -11,18 +11,32 @@ public class CfnApiBodyS3LocationPropertyDsl {
   private val cdkBuilder: CfnApi.BodyS3LocationProperty.Builder =
       CfnApi.BodyS3LocationProperty.builder()
 
+  /**
+   * @param bucket The S3 bucket that contains the OpenAPI definition to import.
+   * Required if you specify a `BodyS3Location` for an API.
+   */
   public fun bucket(bucket: String) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param etag The Etag of the S3 object.
+   */
   public fun etag(etag: String) {
     cdkBuilder.etag(etag)
   }
 
+  /**
+   * @param key The key of the S3 object.
+   * Required if you specify a `BodyS3Location` for an API.
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param version The version of the S3 object.
+   */
   public fun version(version: String) {
     cdkBuilder.version(version)
   }

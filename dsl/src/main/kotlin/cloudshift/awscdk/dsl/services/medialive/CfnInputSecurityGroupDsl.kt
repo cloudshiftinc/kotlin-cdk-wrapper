@@ -23,24 +23,61 @@ public class CfnInputSecurityGroupDsl(
 
   private val _whitelistRules: MutableList<Any> = mutableListOf()
 
-  public fun tags(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * A collection of tags for this input security group.
+   *
+   * Each tag is a key-value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-tags)
+   * @param tags A collection of tags for this input security group. 
+   */
+  public fun tags(tags: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(tags)
     cdkBuilder.tags(builder.map)
   }
 
+  /**
+   * A collection of tags for this input security group.
+   *
+   * Each tag is a key-value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-tags)
+   * @param tags A collection of tags for this input security group. 
+   */
   public fun tags(tags: Any) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+   * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group as
+   * "allowed" addresses. 
+   */
   public fun whitelistRules(vararg whitelistRules: Any) {
     _whitelistRules.addAll(listOf(*whitelistRules))
   }
 
+  /**
+   * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+   * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group as
+   * "allowed" addresses. 
+   */
   public fun whitelistRules(whitelistRules: Collection<Any>) {
     _whitelistRules.addAll(whitelistRules)
   }
 
+  /**
+   * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+   * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group as
+   * "allowed" addresses. 
+   */
   public fun whitelistRules(whitelistRules: IResolvable) {
     cdkBuilder.whitelistRules(whitelistRules)
   }

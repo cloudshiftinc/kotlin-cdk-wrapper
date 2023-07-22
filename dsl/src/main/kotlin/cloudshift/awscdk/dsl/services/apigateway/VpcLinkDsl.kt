@@ -19,18 +19,50 @@ public class VpcLinkDsl(
 
   private val _targets: MutableList<INetworkLoadBalancer> = mutableListOf()
 
+  /**
+   * The description of the VPC link.
+   *
+   * Default: no description
+   *
+   * @param description The description of the VPC link. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The network load balancers of the VPC targeted by the VPC link.
+   *
+   * The network load balancers must be owned by the same AWS account of the API owner.
+   *
+   * Default: - no targets. Use `addTargets` to add targets
+   *
+   * @param targets The network load balancers of the VPC targeted by the VPC link. 
+   */
   public fun targets(vararg targets: INetworkLoadBalancer) {
     _targets.addAll(listOf(*targets))
   }
 
+  /**
+   * The network load balancers of the VPC targeted by the VPC link.
+   *
+   * The network load balancers must be owned by the same AWS account of the API owner.
+   *
+   * Default: - no targets. Use `addTargets` to add targets
+   *
+   * @param targets The network load balancers of the VPC targeted by the VPC link. 
+   */
   public fun targets(targets: Collection<INetworkLoadBalancer>) {
     _targets.addAll(targets)
   }
 
+  /**
+   * The name used to label and identify the VPC link.
+   *
+   * Default: - automatically generated name
+   *
+   * @param vpcLinkName The name used to label and identify the VPC link. 
+   */
   public fun vpcLinkName(vpcLinkName: String) {
     cdkBuilder.vpcLinkName(vpcLinkName)
   }

@@ -11,10 +11,16 @@ public class CfnTemplateAxisLinearScalePropertyDsl {
   private val cdkBuilder: CfnTemplate.AxisLinearScaleProperty.Builder =
       CfnTemplate.AxisLinearScaleProperty.builder()
 
+  /**
+   * @param stepCount The step count setup of a linear axis.
+   */
   public fun stepCount(stepCount: Number) {
     cdkBuilder.stepCount(stepCount)
   }
 
+  /**
+   * @param stepSize The step size setup of a linear axis.
+   */
   public fun stepSize(stepSize: Number) {
     cdkBuilder.stepSize(stepSize)
   }

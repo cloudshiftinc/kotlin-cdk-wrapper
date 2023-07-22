@@ -17,18 +17,34 @@ public class InterfaceVpcEndpointAttributesDsl {
 
   private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
+  /**
+   * @param port The port of the service of the interface VPC endpoint. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param securityGroups The security groups associated with the interface VPC endpoint.
+   * If you wish to manage the network connections associated with this endpoint,
+   * you will need to specify its security groups.
+   */
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  /**
+   * @param securityGroups The security groups associated with the interface VPC endpoint.
+   * If you wish to manage the network connections associated with this endpoint,
+   * you will need to specify its security groups.
+   */
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  /**
+   * @param vpcEndpointId The interface VPC endpoint identifier. 
+   */
   public fun vpcEndpointId(vpcEndpointId: String) {
     cdkBuilder.vpcEndpointId(vpcEndpointId)
   }

@@ -11,12 +11,18 @@ import software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource
 public class DataSourceDsl {
   private val cdkBuilder: DataSource.Builder = DataSource.builder()
 
-  public fun s3DataSource(block: S3DataSourceDsl.() -> Unit = {}) {
+  /**
+   * @param s3DataSource S3 location of the data source that is associated with a channel. 
+   */
+  public fun s3DataSource(s3DataSource: S3DataSourceDsl.() -> Unit = {}) {
     val builder = S3DataSourceDsl()
-    builder.apply(block)
+    builder.apply(s3DataSource)
     cdkBuilder.s3DataSource(builder.build())
   }
 
+  /**
+   * @param s3DataSource S3 location of the data source that is associated with a channel. 
+   */
   public fun s3DataSource(s3DataSource: S3DataSource) {
     cdkBuilder.s3DataSource(s3DataSource)
   }

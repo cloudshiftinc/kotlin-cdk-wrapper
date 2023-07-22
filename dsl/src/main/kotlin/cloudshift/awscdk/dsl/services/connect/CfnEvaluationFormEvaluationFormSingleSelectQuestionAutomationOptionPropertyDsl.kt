@@ -12,10 +12,18 @@ public class CfnEvaluationFormEvaluationFormSingleSelectQuestionAutomationOption
       CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty.Builder =
       CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
 
+  /**
+   * @param ruleCategory The automation option based on a rule category for the single select
+   * question. 
+   */
   public fun ruleCategory(ruleCategory: IResolvable) {
     cdkBuilder.ruleCategory(ruleCategory)
   }
 
+  /**
+   * @param ruleCategory The automation option based on a rule category for the single select
+   * question. 
+   */
   public
       fun ruleCategory(ruleCategory: CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty) {
     cdkBuilder.ruleCategory(ruleCategory)

@@ -15,10 +15,28 @@ public class CfnListenerRuleHostHeaderConfigPropertyDsl {
 
   private val _values: MutableList<String> = mutableListOf()
 
+  /**
+   * @param values The host names.
+   * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+   * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+   * exactly 1 character).
+   *
+   * If you specify multiple strings, the condition is satisfied if one of the strings matches the
+   * host name.
+   */
   public fun values(vararg values: String) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The host names.
+   * The maximum size of each name is 128 characters. The comparison is case insensitive. The
+   * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
+   * exactly 1 character).
+   *
+   * If you specify multiple strings, the condition is satisfied if one of the strings matches the
+   * host name.
+   */
   public fun values(values: Collection<String>) {
     _values.addAll(values)
   }

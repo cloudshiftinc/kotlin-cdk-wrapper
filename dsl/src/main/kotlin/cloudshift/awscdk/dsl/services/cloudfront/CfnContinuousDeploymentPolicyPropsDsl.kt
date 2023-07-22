@@ -12,10 +12,18 @@ public class CfnContinuousDeploymentPolicyPropsDsl {
   private val cdkBuilder: CfnContinuousDeploymentPolicyProps.Builder =
       CfnContinuousDeploymentPolicyProps.builder()
 
+  /**
+   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
+   * policy. 
+   */
   public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
     cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
   }
 
+  /**
+   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
+   * policy. 
+   */
   public
       fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty) {
     cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)

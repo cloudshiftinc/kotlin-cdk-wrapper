@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.appsync.RuntimeConfig
 public class RuntimeConfigDsl {
   private val cdkBuilder: RuntimeConfig.Builder = RuntimeConfig.builder()
 
+  /**
+   * @param name The name of the runtime. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param runtimeVersion The version string of the runtime. 
+   */
   public fun runtimeVersion(runtimeVersion: String) {
     cdkBuilder.runtimeVersion(runtimeVersion)
   }

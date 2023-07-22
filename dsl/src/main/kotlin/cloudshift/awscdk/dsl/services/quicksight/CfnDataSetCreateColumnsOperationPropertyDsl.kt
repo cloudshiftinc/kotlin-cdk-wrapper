@@ -16,14 +16,23 @@ public class CfnDataSetCreateColumnsOperationPropertyDsl {
 
   private val _columns: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param columns Calculated columns to create. 
+   */
   public fun columns(vararg columns: Any) {
     _columns.addAll(listOf(*columns))
   }
 
+  /**
+   * @param columns Calculated columns to create. 
+   */
   public fun columns(columns: Collection<Any>) {
     _columns.addAll(columns)
   }
 
+  /**
+   * @param columns Calculated columns to create. 
+   */
   public fun columns(columns: IResolvable) {
     cdkBuilder.columns(columns)
   }

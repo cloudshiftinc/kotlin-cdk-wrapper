@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.appmesh.GrpcConnectionPool
 public class GrpcConnectionPoolDsl {
   private val cdkBuilder: GrpcConnectionPool.Builder = GrpcConnectionPool.builder()
 
+  /**
+   * @param maxRequests The maximum requests in the pool. 
+   */
   public fun maxRequests(maxRequests: Number) {
     cdkBuilder.maxRequests(maxRequests)
   }

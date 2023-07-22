@@ -11,6 +11,9 @@ public class CfnConnectorLambdaConnectorProvisioningConfigPropertyDsl {
   private val cdkBuilder: CfnConnector.LambdaConnectorProvisioningConfigProperty.Builder =
       CfnConnector.LambdaConnectorProvisioningConfigProperty.builder()
 
+  /**
+   * @param lambdaArn Lambda ARN of the connector being registered. 
+   */
   public fun lambdaArn(lambdaArn: String) {
     cdkBuilder.lambdaArn(lambdaArn)
   }

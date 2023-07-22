@@ -17,18 +17,35 @@ public class VpcSubnetGroupDsl {
 
   private val _subnets: MutableList<VpcSubnet> = mutableListOf()
 
+  /**
+   * @param name The name of the subnet group, determined by looking at the tags of of the subnets
+   * that belong to it. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param subnets The subnets that are part of this group. 
+   * There is no condition that the subnets have to be symmetric
+   * in the group.
+   */
   public fun subnets(subnets: VpcSubnetDsl.() -> Unit) {
     _subnets.add(VpcSubnetDsl().apply(subnets).build())
   }
 
+  /**
+   * @param subnets The subnets that are part of this group. 
+   * There is no condition that the subnets have to be symmetric
+   * in the group.
+   */
   public fun subnets(subnets: Collection<VpcSubnet>) {
     _subnets.addAll(subnets)
   }
 
+  /**
+   * @param type The type of the subnet group. 
+   */
   public fun type(type: VpcSubnetGroupType) {
     cdkBuilder.type(type)
   }

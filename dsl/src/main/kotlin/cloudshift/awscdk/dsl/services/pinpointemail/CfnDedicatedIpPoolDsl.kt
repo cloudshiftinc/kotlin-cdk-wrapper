@@ -19,14 +19,36 @@ public class CfnDedicatedIpPoolDsl(
 
   private val _tags: MutableList<CfnDedicatedIpPool.TagsProperty> = mutableListOf()
 
+  /**
+   * The name of the dedicated IP pool.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html#cfn-pinpointemail-dedicatedippool-poolname)
+   * @param poolName The name of the dedicated IP pool. 
+   */
   public fun poolName(poolName: String) {
     cdkBuilder.poolName(poolName)
   }
 
+  /**
+   * An object that defines the tags (keys and values) that you want to associate with the dedicated
+   * IP pool.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html#cfn-pinpointemail-dedicatedippool-tags)
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the dedicated IP pool. 
+   */
   public fun tags(tags: CfnDedicatedIpPoolTagsPropertyDsl.() -> Unit) {
     _tags.add(CfnDedicatedIpPoolTagsPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * An object that defines the tags (keys and values) that you want to associate with the dedicated
+   * IP pool.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html#cfn-pinpointemail-dedicatedippool-tags)
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the dedicated IP pool. 
+   */
   public fun tags(tags: Collection<CfnDedicatedIpPool.TagsProperty>) {
     _tags.addAll(tags)
   }

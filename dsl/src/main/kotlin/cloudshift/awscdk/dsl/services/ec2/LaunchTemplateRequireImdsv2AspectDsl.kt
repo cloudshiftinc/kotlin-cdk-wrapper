@@ -11,6 +11,14 @@ public class LaunchTemplateRequireImdsv2AspectDsl {
   private val cdkBuilder: LaunchTemplateRequireImdsv2Aspect.Builder =
       LaunchTemplateRequireImdsv2Aspect.Builder.create()
 
+  /**
+   * Whether warning annotations from this Aspect should be suppressed or not.
+   *
+   * Default: - false
+   *
+   * @param suppressWarnings Whether warning annotations from this Aspect should be suppressed or
+   * not. 
+   */
   public fun suppressWarnings(suppressWarnings: Boolean) {
     cdkBuilder.suppressWarnings(suppressWarnings)
   }

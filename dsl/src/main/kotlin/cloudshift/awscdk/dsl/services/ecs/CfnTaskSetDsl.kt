@@ -22,66 +22,208 @@ public class CfnTaskSetDsl(
 
   private val _serviceRegistries: MutableList<Any> = mutableListOf()
 
+  /**
+   * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to
+   * create the task set in.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-cluster)
+   * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts the
+   * service to create the task set in. 
+   */
   public fun cluster(cluster: String) {
     cdkBuilder.cluster(cluster)
   }
 
+  /**
+   * An optional non-unique tag that identifies this task set in external systems.
+   *
+   * If the task set is associated with a service discovery registry, the tasks in this task set
+   * will have the `ECS_TASK_SET_EXTERNAL_ID` AWS Cloud Map attribute set to the provided value.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-externalid)
+   * @param externalId An optional non-unique tag that identifies this task set in external systems.
+   * 
+   */
   public fun externalId(externalId: String) {
     cdkBuilder.externalId(externalId)
   }
 
+  /**
+   * The launch type that new tasks in the task set uses.
+   *
+   * For more information, see [Amazon ECS launch
+   * types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
+   * If a `launchType` is specified, the `capacityProviderStrategy` parameter must be omitted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-launchtype)
+   * @param launchType The launch type that new tasks in the task set uses. 
+   */
   public fun launchType(launchType: String) {
     cdkBuilder.launchType(launchType)
   }
 
+  /**
+   * A load balancer object representing the load balancer to use with the task set.
+   *
+   * The supported load balancer types are either an Application Load Balancer or a Network Load
+   * Balancer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-loadbalancers)
+   * @param loadBalancers A load balancer object representing the load balancer to use with the task
+   * set. 
+   */
   public fun loadBalancers(vararg loadBalancers: Any) {
     _loadBalancers.addAll(listOf(*loadBalancers))
   }
 
+  /**
+   * A load balancer object representing the load balancer to use with the task set.
+   *
+   * The supported load balancer types are either an Application Load Balancer or a Network Load
+   * Balancer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-loadbalancers)
+   * @param loadBalancers A load balancer object representing the load balancer to use with the task
+   * set. 
+   */
   public fun loadBalancers(loadBalancers: Collection<Any>) {
     _loadBalancers.addAll(loadBalancers)
   }
 
+  /**
+   * A load balancer object representing the load balancer to use with the task set.
+   *
+   * The supported load balancer types are either an Application Load Balancer or a Network Load
+   * Balancer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-loadbalancers)
+   * @param loadBalancers A load balancer object representing the load balancer to use with the task
+   * set. 
+   */
   public fun loadBalancers(loadBalancers: IResolvable) {
     cdkBuilder.loadBalancers(loadBalancers)
   }
 
+  /**
+   * The network configuration for the task set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-networkconfiguration)
+   * @param networkConfiguration The network configuration for the task set. 
+   */
   public fun networkConfiguration(networkConfiguration: IResolvable) {
     cdkBuilder.networkConfiguration(networkConfiguration)
   }
 
+  /**
+   * The network configuration for the task set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-networkconfiguration)
+   * @param networkConfiguration The network configuration for the task set. 
+   */
   public fun networkConfiguration(networkConfiguration: CfnTaskSet.NetworkConfigurationProperty) {
     cdkBuilder.networkConfiguration(networkConfiguration)
   }
 
+  /**
+   * The platform version that the tasks in the task set uses.
+   *
+   * A platform version is specified only for tasks using the Fargate launch type. If one isn't
+   * specified, the `LATEST` platform version is used.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-platformversion)
+   * @param platformVersion The platform version that the tasks in the task set uses. 
+   */
   public fun platformVersion(platformVersion: String) {
     cdkBuilder.platformVersion(platformVersion)
   }
 
+  /**
+   * A floating-point percentage of your desired number of tasks to place and keep running in the
+   * task set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-scale)
+   * @param scale A floating-point percentage of your desired number of tasks to place and keep
+   * running in the task set. 
+   */
   public fun scale(scale: IResolvable) {
     cdkBuilder.scale(scale)
   }
 
+  /**
+   * A floating-point percentage of your desired number of tasks to place and keep running in the
+   * task set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-scale)
+   * @param scale A floating-point percentage of your desired number of tasks to place and keep
+   * running in the task set. 
+   */
   public fun scale(scale: CfnTaskSet.ScaleProperty) {
     cdkBuilder.scale(scale)
   }
 
+  /**
+   * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-service)
+   * @param service The short name or full Amazon Resource Name (ARN) of the service to create the
+   * task set in. 
+   */
   public fun service(service: String) {
     cdkBuilder.service(service)
   }
 
+  /**
+   * The details of the service discovery registries to assign to this task set.
+   *
+   * For more information, see [Service
+   * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-serviceregistries)
+   * @param serviceRegistries The details of the service discovery registries to assign to this task
+   * set. 
+   */
   public fun serviceRegistries(vararg serviceRegistries: Any) {
     _serviceRegistries.addAll(listOf(*serviceRegistries))
   }
 
+  /**
+   * The details of the service discovery registries to assign to this task set.
+   *
+   * For more information, see [Service
+   * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-serviceregistries)
+   * @param serviceRegistries The details of the service discovery registries to assign to this task
+   * set. 
+   */
   public fun serviceRegistries(serviceRegistries: Collection<Any>) {
     _serviceRegistries.addAll(serviceRegistries)
   }
 
+  /**
+   * The details of the service discovery registries to assign to this task set.
+   *
+   * For more information, see [Service
+   * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-serviceregistries)
+   * @param serviceRegistries The details of the service discovery registries to assign to this task
+   * set. 
+   */
   public fun serviceRegistries(serviceRegistries: IResolvable) {
     cdkBuilder.serviceRegistries(serviceRegistries)
   }
 
+  /**
+   * The task definition for the tasks in the task set to use.
+   *
+   * If a revision isn't specified, the latest `ACTIVE` revision is used.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-taskdefinition)
+   * @param taskDefinition The task definition for the tasks in the task set to use. 
+   */
   public fun taskDefinition(taskDefinition: String) {
     cdkBuilder.taskDefinition(taskDefinition)
   }

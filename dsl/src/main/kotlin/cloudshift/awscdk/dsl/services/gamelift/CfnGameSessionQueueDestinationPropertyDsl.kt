@@ -11,6 +11,11 @@ public class CfnGameSessionQueueDestinationPropertyDsl {
   private val cdkBuilder: CfnGameSessionQueue.DestinationProperty.Builder =
       CfnGameSessionQueue.DestinationProperty.builder()
 
+  /**
+   * @param destinationArn The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
+   * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
+   * across all Regions.
+   */
   public fun destinationArn(destinationArn: String) {
     cdkBuilder.destinationArn(destinationArn)
   }

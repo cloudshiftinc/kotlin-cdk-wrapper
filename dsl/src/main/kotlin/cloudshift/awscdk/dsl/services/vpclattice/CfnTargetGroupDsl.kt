@@ -25,38 +25,102 @@ public class CfnTargetGroupDsl(
 
   private val _targets: MutableList<Any> = mutableListOf()
 
+  /**
+   * The target group configuration.
+   *
+   * If `type` is set to `LAMBDA` , this parameter doesn't apply.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-config)
+   * @param config The target group configuration. 
+   */
   public fun config(config: IResolvable) {
     cdkBuilder.config(config)
   }
 
+  /**
+   * The target group configuration.
+   *
+   * If `type` is set to `LAMBDA` , this parameter doesn't apply.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-config)
+   * @param config The target group configuration. 
+   */
   public fun config(config: CfnTargetGroup.TargetGroupConfigProperty) {
     cdkBuilder.config(config)
   }
 
+  /**
+   * The name of the target group.
+   *
+   * The name must be unique within the account. The valid characters are a-z, 0-9, and hyphens (-).
+   * You can't use a hyphen as the first or last character, or immediately after another hyphen.
+   *
+   * If you don't specify a name, CloudFormation generates one. However, if you specify a name, and
+   * later want to replace the resource, you must specify a new name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-name)
+   * @param name The name of the target group. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * The tags for the target group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-tags)
+   * @param tags The tags for the target group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags for the target group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-tags)
+   * @param tags The tags for the target group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * Describes a target.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-targets)
+   * @param targets Describes a target. 
+   */
   public fun targets(vararg targets: Any) {
     _targets.addAll(listOf(*targets))
   }
 
+  /**
+   * Describes a target.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-targets)
+   * @param targets Describes a target. 
+   */
   public fun targets(targets: Collection<Any>) {
     _targets.addAll(targets)
   }
 
+  /**
+   * Describes a target.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-targets)
+   * @param targets Describes a target. 
+   */
   public fun targets(targets: IResolvable) {
     cdkBuilder.targets(targets)
   }
 
+  /**
+   * The type of target group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-type)
+   * @param type The type of target group. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

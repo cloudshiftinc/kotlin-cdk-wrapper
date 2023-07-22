@@ -21,79 +21,141 @@ public class CfnInfrastructureConfigurationPropsDsl {
 
   private val _securityGroupIds: MutableList<String> = mutableListOf()
 
+  /**
+   * @param description The description of the infrastructure configuration.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
+   * configuration.
+   */
   public fun instanceMetadataOptions(instanceMetadataOptions: IResolvable) {
     cdkBuilder.instanceMetadataOptions(instanceMetadataOptions)
   }
 
+  /**
+   * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
+   * configuration.
+   */
   public
       fun instanceMetadataOptions(instanceMetadataOptions: CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty) {
     cdkBuilder.instanceMetadataOptions(instanceMetadataOptions)
   }
 
+  /**
+   * @param instanceProfileName The instance profile of the infrastructure configuration. 
+   */
   public fun instanceProfileName(instanceProfileName: String) {
     cdkBuilder.instanceProfileName(instanceProfileName)
   }
 
+  /**
+   * @param instanceTypes The instance types of the infrastructure configuration.
+   */
   public fun instanceTypes(vararg instanceTypes: String) {
     _instanceTypes.addAll(listOf(*instanceTypes))
   }
 
+  /**
+   * @param instanceTypes The instance types of the infrastructure configuration.
+   */
   public fun instanceTypes(instanceTypes: Collection<String>) {
     _instanceTypes.addAll(instanceTypes)
   }
 
+  /**
+   * @param keyPair The Amazon EC2 key pair of the infrastructure configuration.
+   */
   public fun keyPair(keyPair: String) {
     cdkBuilder.keyPair(keyPair)
   }
 
+  /**
+   * @param logging The logging configuration defines where Image Builder uploads your logs.
+   */
   public fun logging(logging: IResolvable) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * @param logging The logging configuration defines where Image Builder uploads your logs.
+   */
   public fun logging(logging: CfnInfrastructureConfiguration.LoggingProperty) {
     cdkBuilder.logging(logging)
   }
 
+  /**
+   * @param name The name of the infrastructure configuration. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param resourceTags The tags attached to the resource created by Image Builder.
+   */
   public fun resourceTags(resourceTags: Map<String, String>) {
     cdkBuilder.resourceTags(resourceTags)
   }
 
+  /**
+   * @param resourceTags The tags attached to the resource created by Image Builder.
+   */
   public fun resourceTags(resourceTags: IResolvable) {
     cdkBuilder.resourceTags(resourceTags)
   }
 
+  /**
+   * @param securityGroupIds The security group IDs of the infrastructure configuration.
+   */
   public fun securityGroupIds(vararg securityGroupIds: String) {
     _securityGroupIds.addAll(listOf(*securityGroupIds))
   }
 
+  /**
+   * @param securityGroupIds The security group IDs of the infrastructure configuration.
+   */
   public fun securityGroupIds(securityGroupIds: Collection<String>) {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  /**
+   * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic for the infrastructure
+   * configuration.
+   */
   public fun snsTopicArn(snsTopicArn: String) {
     cdkBuilder.snsTopicArn(snsTopicArn)
   }
 
+  /**
+   * @param subnetId The subnet ID of the infrastructure configuration.
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }
 
+  /**
+   * @param tags The tags of the infrastructure configuration.
+   */
   public fun tags(tags: Map<String, String>) {
     cdkBuilder.tags(tags)
   }
 
+  /**
+   * @param terminateInstanceOnFailure The terminate instance on failure configuration of the
+   * infrastructure configuration.
+   */
   public fun terminateInstanceOnFailure(terminateInstanceOnFailure: Boolean) {
     cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure)
   }
 
+  /**
+   * @param terminateInstanceOnFailure The terminate instance on failure configuration of the
+   * infrastructure configuration.
+   */
   public fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable) {
     cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure)
   }

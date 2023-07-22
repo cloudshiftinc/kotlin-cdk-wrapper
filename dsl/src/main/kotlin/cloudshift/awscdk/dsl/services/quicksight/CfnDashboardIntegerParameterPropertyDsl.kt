@@ -17,18 +17,30 @@ public class CfnDashboardIntegerParameterPropertyDsl {
 
   private val _values: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param name The name of the integer parameter. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param values The values for the integer parameter. 
+   */
   public fun values(vararg values: Number) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The values for the integer parameter. 
+   */
   public fun values(values: Collection<Number>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The values for the integer parameter. 
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

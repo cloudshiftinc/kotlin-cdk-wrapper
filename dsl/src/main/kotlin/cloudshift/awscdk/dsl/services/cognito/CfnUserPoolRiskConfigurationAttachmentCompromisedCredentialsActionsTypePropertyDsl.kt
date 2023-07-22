@@ -12,6 +12,9 @@ public class CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsActions
       CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.Builder =
       CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.builder()
 
+  /**
+   * @param eventAction The event action. 
+   */
   public fun eventAction(eventAction: String) {
     cdkBuilder.eventAction(eventAction)
   }

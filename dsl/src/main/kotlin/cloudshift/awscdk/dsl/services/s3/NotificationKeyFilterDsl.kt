@@ -10,10 +10,16 @@ import software.amazon.awscdk.services.s3.NotificationKeyFilter
 public class NotificationKeyFilterDsl {
   private val cdkBuilder: NotificationKeyFilter.Builder = NotificationKeyFilter.builder()
 
+  /**
+   * @param prefix S3 keys must have the specified prefix.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }
 
+  /**
+   * @param suffix S3 keys must have the specified suffix.
+   */
   public fun suffix(suffix: String) {
     cdkBuilder.suffix(suffix)
   }

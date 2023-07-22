@@ -12,14 +12,23 @@ public class CfnTemplateDateTimePickerControlDisplayOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.DateTimePickerControlDisplayOptionsProperty.Builder =
       CfnTemplate.DateTimePickerControlDisplayOptionsProperty.builder()
 
+  /**
+   * @param dateTimeFormat Customize how dates are formatted in controls.
+   */
   public fun dateTimeFormat(dateTimeFormat: String) {
     cdkBuilder.dateTimeFormat(dateTimeFormat)
   }
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: IResolvable) {
     cdkBuilder.titleOptions(titleOptions)
   }
 
+  /**
+   * @param titleOptions The options to configure the title visibility, name, and font size.
+   */
   public fun titleOptions(titleOptions: CfnTemplate.LabelOptionsProperty) {
     cdkBuilder.titleOptions(titleOptions)
   }

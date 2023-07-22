@@ -17,18 +17,33 @@ public class CfnAnalysisContributionAnalysisDefaultPropertyDsl {
 
   private val _contributorDimensions: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param contributorDimensions The dimensions columns that are used in the contribution analysis,
+   * usually a list of `ColumnIdentifiers` . 
+   */
   public fun contributorDimensions(vararg contributorDimensions: Any) {
     _contributorDimensions.addAll(listOf(*contributorDimensions))
   }
 
+  /**
+   * @param contributorDimensions The dimensions columns that are used in the contribution analysis,
+   * usually a list of `ColumnIdentifiers` . 
+   */
   public fun contributorDimensions(contributorDimensions: Collection<Any>) {
     _contributorDimensions.addAll(contributorDimensions)
   }
 
+  /**
+   * @param contributorDimensions The dimensions columns that are used in the contribution analysis,
+   * usually a list of `ColumnIdentifiers` . 
+   */
   public fun contributorDimensions(contributorDimensions: IResolvable) {
     cdkBuilder.contributorDimensions(contributorDimensions)
   }
 
+  /**
+   * @param measureFieldId The measure field that is used in the contribution analysis. 
+   */
   public fun measureFieldId(measureFieldId: String) {
     cdkBuilder.measureFieldId(measureFieldId)
   }

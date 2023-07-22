@@ -11,10 +11,16 @@ public class CfnPlaybackConfigurationBumperPropertyDsl {
   private val cdkBuilder: CfnPlaybackConfiguration.BumperProperty.Builder =
       CfnPlaybackConfiguration.BumperProperty.builder()
 
+  /**
+   * @param endUrl The URL for the end bumper asset.
+   */
   public fun endUrl(endUrl: String) {
     cdkBuilder.endUrl(endUrl)
   }
 
+  /**
+   * @param startUrl The URL for the start bumper asset.
+   */
   public fun startUrl(startUrl: String) {
     cdkBuilder.startUrl(startUrl)
   }

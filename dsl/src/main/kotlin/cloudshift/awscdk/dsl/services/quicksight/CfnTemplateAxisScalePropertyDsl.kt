@@ -11,18 +11,30 @@ public class CfnTemplateAxisScalePropertyDsl {
   private val cdkBuilder: CfnTemplate.AxisScaleProperty.Builder =
       CfnTemplate.AxisScaleProperty.builder()
 
+  /**
+   * @param linear The linear axis scale setup.
+   */
   public fun linear(linear: IResolvable) {
     cdkBuilder.linear(linear)
   }
 
+  /**
+   * @param linear The linear axis scale setup.
+   */
   public fun linear(linear: CfnTemplate.AxisLinearScaleProperty) {
     cdkBuilder.linear(linear)
   }
 
+  /**
+   * @param logarithmic The logarithmic axis scale setup.
+   */
   public fun logarithmic(logarithmic: IResolvable) {
     cdkBuilder.logarithmic(logarithmic)
   }
 
+  /**
+   * @param logarithmic The logarithmic axis scale setup.
+   */
   public fun logarithmic(logarithmic: CfnTemplate.AxisLogarithmicScaleProperty) {
     cdkBuilder.logarithmic(logarithmic)
   }

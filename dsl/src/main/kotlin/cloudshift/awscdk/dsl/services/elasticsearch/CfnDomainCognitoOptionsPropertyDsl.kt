@@ -13,22 +13,51 @@ public class CfnDomainCognitoOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.CognitoOptionsProperty.Builder =
       CfnDomain.CognitoOptionsProperty.builder()
 
+  /**
+   * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+   * Dashboards.
+   * See [Amazon Cognito authentication for OpenSearch
+   * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+   * .
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+   * Dashboards.
+   * See [Amazon Cognito authentication for OpenSearch
+   * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+   * .
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service to
+   * use for OpenSearch Dashboards authentication.
+   * Required if you enable Cognito authentication.
+   */
   public fun identityPoolId(identityPoolId: String) {
     cdkBuilder.identityPoolId(identityPoolId)
   }
 
+  /**
+   * @param roleArn The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure
+   * your user pool and identity pool.
+   * Required if you enable Cognito authentication.
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }
 
+  /**
+   * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use for
+   * OpenSearch Dashboards authentication.
+   * Required if you enable Cognito authentication.
+   */
   public fun userPoolId(userPoolId: String) {
     cdkBuilder.userPoolId(userPoolId)
   }

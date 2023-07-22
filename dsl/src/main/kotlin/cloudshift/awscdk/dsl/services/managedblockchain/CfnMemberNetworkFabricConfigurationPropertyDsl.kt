@@ -11,6 +11,11 @@ public class CfnMemberNetworkFabricConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.NetworkFabricConfigurationProperty.Builder =
       CfnMember.NetworkFabricConfigurationProperty.builder()
 
+  /**
+   * @param edition The edition of Amazon Managed Blockchain that the network uses. 
+   * Valid values are `standard` and `starter` . For more information, see [Amazon Managed
+   * Blockchain Pricing](https://docs.aws.amazon.com/managed-blockchain/pricing/)
+   */
   public fun edition(edition: String) {
     cdkBuilder.edition(edition)
   }

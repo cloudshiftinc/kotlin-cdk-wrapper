@@ -18,26 +18,46 @@ public class IntelligentTieringConfigurationDsl {
 
   private val _tags: MutableList<Tag> = mutableListOf()
 
+  /**
+   * @param archiveAccessTierTime When enabled, Intelligent-Tiering will automatically move objects
+   * that haven’t been accessed for a minimum of 90 days to the Archive Access tier.
+   */
   public fun archiveAccessTierTime(archiveAccessTierTime: Duration) {
     cdkBuilder.archiveAccessTierTime(archiveAccessTierTime)
   }
 
+  /**
+   * @param deepArchiveAccessTierTime When enabled, Intelligent-Tiering will automatically move
+   * objects that haven’t been accessed for a minimum of 180 days to the Deep Archive Access tier.
+   */
   public fun deepArchiveAccessTierTime(deepArchiveAccessTierTime: Duration) {
     cdkBuilder.deepArchiveAccessTierTime(deepArchiveAccessTierTime)
   }
 
+  /**
+   * @param name Configuration name. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param prefix Add a filter to limit the scope of this configuration to a single prefix.
+   */
   public fun prefix(prefix: String) {
     cdkBuilder.prefix(prefix)
   }
 
+  /**
+   * @param tags You can limit the scope of this rule to the key value pairs added below.
+   */
   public fun tags(tags: TagDsl.() -> Unit) {
     _tags.add(TagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags You can limit the scope of this rule to the key value pairs added below.
+   */
   public fun tags(tags: Collection<Tag>) {
     _tags.addAll(tags)
   }

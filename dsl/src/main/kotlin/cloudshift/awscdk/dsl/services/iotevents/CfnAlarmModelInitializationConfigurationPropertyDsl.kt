@@ -12,10 +12,20 @@ public class CfnAlarmModelInitializationConfigurationPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.InitializationConfigurationProperty.Builder =
       CfnAlarmModel.InitializationConfigurationProperty.builder()
 
+  /**
+   * @param disabledOnInitialization The value must be `TRUE` or `FALSE` . 
+   * If `FALSE` , all alarm instances created based on the alarm model are activated. The default
+   * value is `TRUE` .
+   */
   public fun disabledOnInitialization(disabledOnInitialization: Boolean) {
     cdkBuilder.disabledOnInitialization(disabledOnInitialization)
   }
 
+  /**
+   * @param disabledOnInitialization The value must be `TRUE` or `FALSE` . 
+   * If `FALSE` , all alarm instances created based on the alarm model are activated. The default
+   * value is `TRUE` .
+   */
   public fun disabledOnInitialization(disabledOnInitialization: IResolvable) {
     cdkBuilder.disabledOnInitialization(disabledOnInitialization)
   }

@@ -11,6 +11,9 @@ public class CfnAssistantAssociationAssociationDataPropertyDsl {
   private val cdkBuilder: CfnAssistantAssociation.AssociationDataProperty.Builder =
       CfnAssistantAssociation.AssociationDataProperty.builder()
 
+  /**
+   * @param knowledgeBaseId The identifier of the knowledge base. 
+   */
   public fun knowledgeBaseId(knowledgeBaseId: String) {
     cdkBuilder.knowledgeBaseId(knowledgeBaseId)
   }

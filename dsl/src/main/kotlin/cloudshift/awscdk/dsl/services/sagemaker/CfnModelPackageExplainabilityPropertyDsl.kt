@@ -11,10 +11,16 @@ public class CfnModelPackageExplainabilityPropertyDsl {
   private val cdkBuilder: CfnModelPackage.ExplainabilityProperty.Builder =
       CfnModelPackage.ExplainabilityProperty.builder()
 
+  /**
+   * @param report The explainability report for a model.
+   */
   public fun report(report: IResolvable) {
     cdkBuilder.report(report)
   }
 
+  /**
+   * @param report The explainability report for a model.
+   */
   public fun report(report: CfnModelPackage.MetricsSourceProperty) {
     cdkBuilder.report(report)
   }

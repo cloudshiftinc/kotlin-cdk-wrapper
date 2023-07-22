@@ -11,6 +11,9 @@ public class CfnGroupMembershipMemberIdPropertyDsl {
   private val cdkBuilder: CfnGroupMembership.MemberIdProperty.Builder =
       CfnGroupMembership.MemberIdProperty.builder()
 
+  /**
+   * @param userId The identifier for a user in the identity store. 
+   */
   public fun userId(userId: String) {
     cdkBuilder.userId(userId)
   }

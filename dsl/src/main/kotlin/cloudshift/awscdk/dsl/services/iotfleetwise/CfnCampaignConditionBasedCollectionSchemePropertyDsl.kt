@@ -12,18 +12,38 @@ public class CfnCampaignConditionBasedCollectionSchemePropertyDsl {
   private val cdkBuilder: CfnCampaign.ConditionBasedCollectionSchemeProperty.Builder =
       CfnCampaign.ConditionBasedCollectionSchemeProperty.builder()
 
+  /**
+   * @param conditionLanguageVersion (Optional) Specifies the version of the conditional expression
+   * language.
+   */
   public fun conditionLanguageVersion(conditionLanguageVersion: Number) {
     cdkBuilder.conditionLanguageVersion(conditionLanguageVersion)
   }
 
+  /**
+   * @param expression The logical expression used to recognize what data to collect. 
+   * For example, `$variable.Vehicle.OutsideAirTemperature &gt;= 105.0` .
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }
 
+  /**
+   * @param minimumTriggerIntervalMs (Optional) The minimum duration of time between two triggering
+   * events to collect data, in milliseconds.
+   *
+   * If a signal changes often, you might want to collect data at a slower rate.
+   */
   public fun minimumTriggerIntervalMs(minimumTriggerIntervalMs: Number) {
     cdkBuilder.minimumTriggerIntervalMs(minimumTriggerIntervalMs)
   }
 
+  /**
+   * @param triggerMode (Optional) Whether to collect data for all triggering events ( `ALWAYS` ).
+   * Specify ( `RISING_EDGE` ), or specify only when the condition first evaluates to false. For
+   * example, triggering on "AirbagDeployed"; Users aren't interested on triggering when the airbag is
+   * already exploded; they only care about the change from not deployed =&gt; deployed.
+   */
   public fun triggerMode(triggerMode: String) {
     cdkBuilder.triggerMode(triggerMode)
   }

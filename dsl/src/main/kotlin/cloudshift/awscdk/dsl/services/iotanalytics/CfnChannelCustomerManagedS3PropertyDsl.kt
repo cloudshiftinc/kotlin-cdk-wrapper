@@ -11,14 +11,26 @@ public class CfnChannelCustomerManagedS3PropertyDsl {
   private val cdkBuilder: CfnChannel.CustomerManagedS3Property.Builder =
       CfnChannel.CustomerManagedS3Property.builder()
 
+  /**
+   * @param bucket The name of the S3 bucket in which channel data is stored. 
+   */
   public fun bucket(bucket: String) {
     cdkBuilder.bucket(bucket)
   }
 
+  /**
+   * @param keyPrefix (Optional) The prefix used to create the keys of the channel data objects.
+   * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
+   * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
+   */
   public fun keyPrefix(keyPrefix: String) {
     cdkBuilder.keyPrefix(keyPrefix)
   }
 
+  /**
+   * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact with
+   * your Amazon S3 resources. 
+   */
   public fun roleArn(roleArn: String) {
     cdkBuilder.roleArn(roleArn)
   }

@@ -14,12 +14,18 @@ import software.amazon.awscdk.services.stepfunctions.CustomStateProps
 public class CustomStatePropsDsl {
   private val cdkBuilder: CustomStateProps.Builder = CustomStateProps.builder()
 
-  public fun stateJson(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
+   */
+  public fun stateJson(stateJson: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(stateJson)
     cdkBuilder.stateJson(builder.map)
   }
 
+  /**
+   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
+   */
   public fun stateJson(stateJson: Map<String, Any>) {
     cdkBuilder.stateJson(stateJson)
   }

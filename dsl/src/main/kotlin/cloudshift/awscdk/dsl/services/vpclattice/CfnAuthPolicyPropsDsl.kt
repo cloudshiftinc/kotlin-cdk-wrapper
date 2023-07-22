@@ -13,16 +13,26 @@ import software.amazon.awscdk.services.vpclattice.CfnAuthPolicyProps
 public class CfnAuthPolicyPropsDsl {
   private val cdkBuilder: CfnAuthPolicyProps.Builder = CfnAuthPolicyProps.builder()
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policy The auth policy. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * @param policy The auth policy. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
+   * service for which the policy is created. 
+   */
   public fun resourceIdentifier(resourceIdentifier: String) {
     cdkBuilder.resourceIdentifier(resourceIdentifier)
   }

@@ -11,6 +11,9 @@ public class CfnDashboardDataPointMenuLabelOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.DataPointMenuLabelOptionProperty.Builder =
       CfnDashboard.DataPointMenuLabelOptionProperty.builder()
 
+  /**
+   * @param availabilityStatus The status of the data point menu options.
+   */
   public fun availabilityStatus(availabilityStatus: String) {
     cdkBuilder.availabilityStatus(availabilityStatus)
   }

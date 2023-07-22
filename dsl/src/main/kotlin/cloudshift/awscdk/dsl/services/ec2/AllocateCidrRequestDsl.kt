@@ -16,14 +16,23 @@ public class AllocateCidrRequestDsl {
 
   private val _requestedSubnets: MutableList<RequestedSubnet> = mutableListOf()
 
+  /**
+   * @param requestedSubnets The Subnets to be allocated. 
+   */
   public fun requestedSubnets(requestedSubnets: RequestedSubnetDsl.() -> Unit) {
     _requestedSubnets.add(RequestedSubnetDsl().apply(requestedSubnets).build())
   }
 
+  /**
+   * @param requestedSubnets The Subnets to be allocated. 
+   */
   public fun requestedSubnets(requestedSubnets: Collection<RequestedSubnet>) {
     _requestedSubnets.addAll(requestedSubnets)
   }
 
+  /**
+   * @param vpcCidr The IPv4 CIDR block for this Vpc. 
+   */
   public fun vpcCidr(vpcCidr: String) {
     cdkBuilder.vpcCidr(vpcCidr)
   }

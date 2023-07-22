@@ -11,10 +11,16 @@ public class CfnSubnetNetworkAclAssociationPropsDsl {
   private val cdkBuilder: CfnSubnetNetworkAclAssociationProps.Builder =
       CfnSubnetNetworkAclAssociationProps.builder()
 
+  /**
+   * @param networkAclId The ID of the network ACL. 
+   */
   public fun networkAclId(networkAclId: String) {
     cdkBuilder.networkAclId(networkAclId)
   }
 
+  /**
+   * @param subnetId The ID of the subnet. 
+   */
   public fun subnetId(subnetId: String) {
     cdkBuilder.subnetId(subnetId)
   }

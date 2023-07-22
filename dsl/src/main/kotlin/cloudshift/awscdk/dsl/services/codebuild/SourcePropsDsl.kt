@@ -10,6 +10,10 @@ import software.amazon.awscdk.services.codebuild.SourceProps
 public class SourcePropsDsl {
   private val cdkBuilder: SourceProps.Builder = SourceProps.builder()
 
+  /**
+   * @param identifier The source identifier.
+   * This property is required on secondary sources.
+   */
   public fun identifier(identifier: String) {
     cdkBuilder.identifier(identifier)
   }

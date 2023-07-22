@@ -11,6 +11,10 @@ public class CfnVirtualNodeTlsValidationContextFileTrustPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.TlsValidationContextFileTrustProperty.Builder =
       CfnVirtualNode.TlsValidationContextFileTrustProperty.builder()
 
+  /**
+   * @param certificateChain The certificate trust chain for a certificate stored on the file system
+   * of the virtual node that the proxy is running on. 
+   */
   public fun certificateChain(certificateChain: String) {
     cdkBuilder.certificateChain(certificateChain)
   }

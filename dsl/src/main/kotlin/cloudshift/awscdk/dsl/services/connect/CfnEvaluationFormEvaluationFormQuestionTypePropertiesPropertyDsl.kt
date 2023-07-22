@@ -11,18 +11,30 @@ public class CfnEvaluationFormEvaluationFormQuestionTypePropertiesPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.EvaluationFormQuestionTypePropertiesProperty.Builder =
       CfnEvaluationForm.EvaluationFormQuestionTypePropertiesProperty.builder()
 
+  /**
+   * @param numeric The properties of the numeric question.
+   */
   public fun numeric(numeric: IResolvable) {
     cdkBuilder.numeric(numeric)
   }
 
+  /**
+   * @param numeric The properties of the numeric question.
+   */
   public fun numeric(numeric: CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty) {
     cdkBuilder.numeric(numeric)
   }
 
+  /**
+   * @param singleSelect The properties of the numeric question.
+   */
   public fun singleSelect(singleSelect: IResolvable) {
     cdkBuilder.singleSelect(singleSelect)
   }
 
+  /**
+   * @param singleSelect The properties of the numeric question.
+   */
   public
       fun singleSelect(singleSelect: CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty) {
     cdkBuilder.singleSelect(singleSelect)

@@ -11,6 +11,9 @@ public class CfnConnectorProfileZendeskConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty.Builder =
       CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty.builder()
 
+  /**
+   * @param instanceUrl The location of the Zendesk resource. 
+   */
   public fun instanceUrl(instanceUrl: String) {
     cdkBuilder.instanceUrl(instanceUrl)
   }

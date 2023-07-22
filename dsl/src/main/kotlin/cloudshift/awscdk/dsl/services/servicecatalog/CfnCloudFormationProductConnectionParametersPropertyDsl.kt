@@ -11,10 +11,16 @@ public class CfnCloudFormationProductConnectionParametersPropertyDsl {
   private val cdkBuilder: CfnCloudFormationProduct.ConnectionParametersProperty.Builder =
       CfnCloudFormationProduct.ConnectionParametersProperty.builder()
 
+  /**
+   * @param codeStar Provides `ConnectionType` details.
+   */
   public fun codeStar(codeStar: IResolvable) {
     cdkBuilder.codeStar(codeStar)
   }
 
+  /**
+   * @param codeStar Provides `ConnectionType` details.
+   */
   public fun codeStar(codeStar: CfnCloudFormationProduct.CodeStarParametersProperty) {
     cdkBuilder.codeStar(codeStar)
   }

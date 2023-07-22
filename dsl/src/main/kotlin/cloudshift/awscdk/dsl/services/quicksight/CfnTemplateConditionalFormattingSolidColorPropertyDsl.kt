@@ -11,10 +11,16 @@ public class CfnTemplateConditionalFormattingSolidColorPropertyDsl {
   private val cdkBuilder: CfnTemplate.ConditionalFormattingSolidColorProperty.Builder =
       CfnTemplate.ConditionalFormattingSolidColorProperty.builder()
 
+  /**
+   * @param color Determines the color.
+   */
   public fun color(color: String) {
     cdkBuilder.color(color)
   }
 
+  /**
+   * @param expression The expression that determines the formatting configuration for solid color. 
+   */
   public fun expression(expression: String) {
     cdkBuilder.expression(expression)
   }

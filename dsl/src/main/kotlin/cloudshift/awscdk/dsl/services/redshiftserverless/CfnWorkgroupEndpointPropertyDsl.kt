@@ -18,22 +18,37 @@ public class CfnWorkgroupEndpointPropertyDsl {
 
   private val _vpcEndpoints: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param address The DNS address of the VPC endpoint.
+   */
   public fun address(address: String) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param port The port that Amazon Redshift Serverless listens on.
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }
 
+  /**
+   * @param vpcEndpoints An array of `VpcEndpoint` objects.
+   */
   public fun vpcEndpoints(vararg vpcEndpoints: Any) {
     _vpcEndpoints.addAll(listOf(*vpcEndpoints))
   }
 
+  /**
+   * @param vpcEndpoints An array of `VpcEndpoint` objects.
+   */
   public fun vpcEndpoints(vpcEndpoints: Collection<Any>) {
     _vpcEndpoints.addAll(vpcEndpoints)
   }
 
+  /**
+   * @param vpcEndpoints An array of `VpcEndpoint` objects.
+   */
   public fun vpcEndpoints(vpcEndpoints: IResolvable) {
     cdkBuilder.vpcEndpoints(vpcEndpoints)
   }

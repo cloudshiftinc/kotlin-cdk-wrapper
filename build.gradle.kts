@@ -17,9 +17,16 @@ nexusPublishing {
 }
 
 val awscdk: Configuration by configurations.creating
+val awscdkSource : Configuration by configurations.creating
 
 dependencies {
     awscdk(project.libs.awscdk)
+    awscdkSource(project.libs.awscdk) {
+        artifact {
+            classifier = "sources"
+        }
+        isTransitive = false
+    }
 }
 
 tasks {
@@ -32,6 +39,7 @@ tasks {
     register<GenerateDslTask>("generateDsl") {
         dslDir = file("dsl/src/main/kotlin")
         classpath = awscdk
+        sources = awscdkSource
         cloudFormationSpecificationZip = downloadCloudformationSpecZip.map { it.dest }
     }
 

@@ -15,10 +15,22 @@ public class WaitDsl(
 ) {
   private val cdkBuilder: Wait.Builder = Wait.Builder.create(scope, id)
 
+  /**
+   * An optional description for this state.
+   *
+   * Default: No comment
+   *
+   * @param comment An optional description for this state. 
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }
 
+  /**
+   * Wait duration.
+   *
+   * @param time Wait duration. 
+   */
   public fun time(time: WaitTime) {
     cdkBuilder.time(time)
   }

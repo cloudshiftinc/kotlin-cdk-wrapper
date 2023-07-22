@@ -11,6 +11,9 @@ public class CfnFunctionFunctionSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.FunctionSAMPTProperty.Builder =
       CfnFunction.FunctionSAMPTProperty.builder()
 
+  /**
+   * @param functionName the value to be set. 
+   */
   public fun functionName(functionName: String) {
     cdkBuilder.functionName(functionName)
   }

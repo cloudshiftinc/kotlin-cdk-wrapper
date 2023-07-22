@@ -12,18 +12,36 @@ import software.amazon.awscdk.services.managedblockchain.CfnNodeProps
 public class CfnNodePropsDsl {
   private val cdkBuilder: CfnNodeProps.Builder = CfnNodeProps.builder()
 
+  /**
+   * @param memberId The unique identifier of the member to which the node belongs.
+   * Applies only to Hyperledger Fabric.
+   */
   public fun memberId(memberId: String) {
     cdkBuilder.memberId(memberId)
   }
 
+  /**
+   * @param networkId The unique identifier of the network for the node. 
+   * Ethereum public networks have the following `NetworkId` s:
+   *
+   * * `n-ethereum-mainnet`
+   * * `n-ethereum-goerli`
+   * * `n-ethereum-rinkeby`
+   */
   public fun networkId(networkId: String) {
     cdkBuilder.networkId(networkId)
   }
 
+  /**
+   * @param nodeConfiguration Configuration properties of a peer node. 
+   */
   public fun nodeConfiguration(nodeConfiguration: IResolvable) {
     cdkBuilder.nodeConfiguration(nodeConfiguration)
   }
 
+  /**
+   * @param nodeConfiguration Configuration properties of a peer node. 
+   */
   public fun nodeConfiguration(nodeConfiguration: CfnNode.NodeConfigurationProperty) {
     cdkBuilder.nodeConfiguration(nodeConfiguration)
   }

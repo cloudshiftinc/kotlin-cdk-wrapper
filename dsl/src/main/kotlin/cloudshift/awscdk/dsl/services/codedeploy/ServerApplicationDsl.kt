@@ -14,6 +14,13 @@ public class ServerApplicationDsl(
 ) {
   private val cdkBuilder: ServerApplication.Builder = ServerApplication.Builder.create(scope, id)
 
+  /**
+   * The physical, human-readable name of the CodeDeploy Application.
+   *
+   * Default: an auto-generated name will be used
+   *
+   * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
+   */
   public fun applicationName(applicationName: String) {
     cdkBuilder.applicationName(applicationName)
   }

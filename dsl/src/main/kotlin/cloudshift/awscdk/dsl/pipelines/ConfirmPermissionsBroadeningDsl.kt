@@ -15,10 +15,25 @@ public class ConfirmPermissionsBroadeningDsl(
   private val cdkBuilder: ConfirmPermissionsBroadening.Builder =
       ConfirmPermissionsBroadening.Builder.create(id)
 
+  /**
+   * Topic to send notifications when a human needs to give manual confirmation.
+   *
+   * Default: - no notification
+   *
+   * @param notificationTopic Topic to send notifications when a human needs to give manual
+   * confirmation. 
+   */
   public fun notificationTopic(notificationTopic: ITopic) {
     cdkBuilder.notificationTopic(notificationTopic)
   }
 
+  /**
+   * The CDK Stage object to check the stacks of.
+   *
+   * This should be the same Stage object you are passing to `addStage()`.
+   *
+   * @param stage The CDK Stage object to check the stacks of. 
+   */
   public fun stage(stage: Stage) {
     cdkBuilder.stage(stage)
   }

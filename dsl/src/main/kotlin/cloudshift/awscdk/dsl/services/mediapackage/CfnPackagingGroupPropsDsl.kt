@@ -19,30 +19,51 @@ public class CfnPackagingGroupPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param authorization Parameters for CDN authorization.
+   */
   public fun authorization(authorization: IResolvable) {
     cdkBuilder.authorization(authorization)
   }
 
+  /**
+   * @param authorization Parameters for CDN authorization.
+   */
   public fun authorization(authorization: CfnPackagingGroup.AuthorizationProperty) {
     cdkBuilder.authorization(authorization)
   }
 
+  /**
+   * @param egressAccessLogs The configuration parameters for egress access logging.
+   */
   public fun egressAccessLogs(egressAccessLogs: IResolvable) {
     cdkBuilder.egressAccessLogs(egressAccessLogs)
   }
 
+  /**
+   * @param egressAccessLogs The configuration parameters for egress access logging.
+   */
   public fun egressAccessLogs(egressAccessLogs: CfnPackagingGroup.LogConfigurationProperty) {
     cdkBuilder.egressAccessLogs(egressAccessLogs)
   }
 
+  /**
+   * @param id Unique identifier that you assign to the packaging group. 
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }
 
+  /**
+   * @param tags The tags to assign to the packaging group.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags to assign to the packaging group.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

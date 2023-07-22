@@ -11,10 +11,16 @@ public class CfnApplicationReferenceDataSourceV2S3ReferenceDataSourcePropertyDsl
   private val cdkBuilder: CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.Builder
       = CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.builder()
 
+  /**
+   * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
+   */
   public fun bucketArn(bucketArn: String) {
     cdkBuilder.bucketArn(bucketArn)
   }
 
+  /**
+   * @param fileKey The object key name containing the reference data. 
+   */
   public fun fileKey(fileKey: String) {
     cdkBuilder.fileKey(fileKey)
   }

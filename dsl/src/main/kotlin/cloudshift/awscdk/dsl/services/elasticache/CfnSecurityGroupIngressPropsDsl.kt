@@ -11,14 +11,25 @@ public class CfnSecurityGroupIngressPropsDsl {
   private val cdkBuilder: CfnSecurityGroupIngressProps.Builder =
       CfnSecurityGroupIngressProps.builder()
 
+  /**
+   * @param cacheSecurityGroupName The name of the Cache Security Group to authorize. 
+   */
   public fun cacheSecurityGroupName(cacheSecurityGroupName: String) {
     cdkBuilder.cacheSecurityGroupName(cacheSecurityGroupName)
   }
 
+  /**
+   * @param ec2SecurityGroupName Name of the EC2 Security Group to include in the authorization. 
+   */
   public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
     cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
   }
 
+  /**
+   * @param ec2SecurityGroupOwnerId Specifies the Amazon Account ID of the owner of the EC2 security
+   * group specified in the EC2SecurityGroupName property.
+   * The Amazon access key ID is not an acceptable value.
+   */
   public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
     cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
   }

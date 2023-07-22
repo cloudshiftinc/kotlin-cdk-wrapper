@@ -11,10 +11,16 @@ public class CfnRemediationConfigurationExecutionControlsPropertyDsl {
   private val cdkBuilder: CfnRemediationConfiguration.ExecutionControlsProperty.Builder =
       CfnRemediationConfiguration.ExecutionControlsProperty.builder()
 
+  /**
+   * @param ssmControls A SsmControls object.
+   */
   public fun ssmControls(ssmControls: IResolvable) {
     cdkBuilder.ssmControls(ssmControls)
   }
 
+  /**
+   * @param ssmControls A SsmControls object.
+   */
   public fun ssmControls(ssmControls: CfnRemediationConfiguration.SsmControlsProperty) {
     cdkBuilder.ssmControls(ssmControls)
   }

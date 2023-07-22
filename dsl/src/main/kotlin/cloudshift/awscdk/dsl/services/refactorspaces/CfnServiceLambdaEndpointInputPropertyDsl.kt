@@ -11,6 +11,9 @@ public class CfnServiceLambdaEndpointInputPropertyDsl {
   private val cdkBuilder: CfnService.LambdaEndpointInputProperty.Builder =
       CfnService.LambdaEndpointInputProperty.builder()
 
+  /**
+   * @param arn The Amazon Resource Name (ARN) of the Lambda function or alias. 
+   */
   public fun arn(arn: String) {
     cdkBuilder.arn(arn)
   }

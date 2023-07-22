@@ -14,14 +14,23 @@ public class CfnBatchScramSecretPropsDsl {
 
   private val _secretArnList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param clusterArn the value to be set. 
+   */
   public fun clusterArn(clusterArn: String) {
     cdkBuilder.clusterArn(clusterArn)
   }
 
+  /**
+   * @param secretArnList the value to be set.
+   */
   public fun secretArnList(vararg secretArnList: String) {
     _secretArnList.addAll(listOf(*secretArnList))
   }
 
+  /**
+   * @param secretArnList the value to be set.
+   */
   public fun secretArnList(secretArnList: Collection<String>) {
     _secretArnList.addAll(secretArnList)
   }

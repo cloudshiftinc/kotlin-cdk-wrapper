@@ -11,6 +11,9 @@ public class CfnTemplateMaximumLabelTypePropertyDsl {
   private val cdkBuilder: CfnTemplate.MaximumLabelTypeProperty.Builder =
       CfnTemplate.MaximumLabelTypeProperty.builder()
 
+  /**
+   * @param visibility The visibility of the maximum label.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

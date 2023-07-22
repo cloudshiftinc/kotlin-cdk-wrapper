@@ -12,14 +12,26 @@ public class CfnChannelMotionGraphicsConfigurationPropertyDsl {
   private val cdkBuilder: CfnChannel.MotionGraphicsConfigurationProperty.Builder =
       CfnChannel.MotionGraphicsConfigurationProperty.builder()
 
+  /**
+   * @param motionGraphicsInsertion Enables or disables the motion graphics overlay feature in the
+   * channel.
+   */
   public fun motionGraphicsInsertion(motionGraphicsInsertion: String) {
     cdkBuilder.motionGraphicsInsertion(motionGraphicsInsertion)
   }
 
+  /**
+   * @param motionGraphicsSettings Settings to enable and configure the motion graphics overlay
+   * feature in the channel.
+   */
   public fun motionGraphicsSettings(motionGraphicsSettings: IResolvable) {
     cdkBuilder.motionGraphicsSettings(motionGraphicsSettings)
   }
 
+  /**
+   * @param motionGraphicsSettings Settings to enable and configure the motion graphics overlay
+   * feature in the channel.
+   */
   public
       fun motionGraphicsSettings(motionGraphicsSettings: CfnChannel.MotionGraphicsSettingsProperty) {
     cdkBuilder.motionGraphicsSettings(motionGraphicsSettings)

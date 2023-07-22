@@ -11,10 +11,16 @@ public class CfnFlowSuccessResponseHandlingConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.SuccessResponseHandlingConfigProperty.Builder =
       CfnFlow.SuccessResponseHandlingConfigProperty.builder()
 
+  /**
+   * @param bucketName The name of the Amazon S3 bucket.
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param bucketPrefix The Amazon S3 bucket prefix.
+   */
   public fun bucketPrefix(bucketPrefix: String) {
     cdkBuilder.bucketPrefix(bucketPrefix)
   }

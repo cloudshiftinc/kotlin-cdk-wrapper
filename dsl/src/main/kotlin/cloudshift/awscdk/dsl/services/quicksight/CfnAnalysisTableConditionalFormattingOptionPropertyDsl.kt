@@ -11,18 +11,30 @@ public class CfnAnalysisTableConditionalFormattingOptionPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableConditionalFormattingOptionProperty.Builder =
       CfnAnalysis.TableConditionalFormattingOptionProperty.builder()
 
+  /**
+   * @param cell The cell conditional formatting option for a table.
+   */
   public fun cell(cell: IResolvable) {
     cdkBuilder.cell(cell)
   }
 
+  /**
+   * @param cell The cell conditional formatting option for a table.
+   */
   public fun cell(cell: CfnAnalysis.TableCellConditionalFormattingProperty) {
     cdkBuilder.cell(cell)
   }
 
+  /**
+   * @param row The row conditional formatting option for a table.
+   */
   public fun row(row: IResolvable) {
     cdkBuilder.row(row)
   }
 
+  /**
+   * @param row The row conditional formatting option for a table.
+   */
   public fun row(row: CfnAnalysis.TableRowConditionalFormattingProperty) {
     cdkBuilder.row(row)
   }

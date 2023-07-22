@@ -11,10 +11,18 @@ public class CfnEC2FleetMemoryMiBRequestPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.MemoryMiBRequestProperty.Builder =
       CfnEC2Fleet.MemoryMiBRequestProperty.builder()
 
+  /**
+   * @param max The maximum amount of memory, in MiB.
+   * To specify no maximum limit, omit this parameter.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum amount of memory, in MiB.
+   * To specify no minimum limit, specify `0` .
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

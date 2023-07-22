@@ -14,6 +14,13 @@ public class DedicatedIpPoolDsl(
 ) {
   private val cdkBuilder: DedicatedIpPool.Builder = DedicatedIpPool.Builder.create(scope, id)
 
+  /**
+   * A name for the dedicated IP pool.
+   *
+   * Default: - a CloudFormation generated name
+   *
+   * @param dedicatedIpPoolName A name for the dedicated IP pool. 
+   */
   public fun dedicatedIpPoolName(dedicatedIpPoolName: String) {
     cdkBuilder.dedicatedIpPoolName(dedicatedIpPoolName)
   }

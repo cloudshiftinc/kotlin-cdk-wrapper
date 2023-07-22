@@ -11,6 +11,10 @@ public class CfnChannelArchiveS3SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.ArchiveS3SettingsProperty.Builder =
       CfnChannel.ArchiveS3SettingsProperty.builder()
 
+  /**
+   * @param cannedAcl Specify the canned ACL to apply to each S3 request.
+   * Defaults to none.
+   */
   public fun cannedAcl(cannedAcl: String) {
     cdkBuilder.cannedAcl(cannedAcl)
   }

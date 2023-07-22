@@ -23,26 +23,66 @@ public class CfnUserGroupDsl(
 
   private val _userIds: MutableList<String> = mutableListOf()
 
+  /**
+   * The current supported value is redis.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine)
+   * @param engine The current supported value is redis. 
+   */
   public fun engine(engine: String) {
     cdkBuilder.engine(engine)
   }
 
+  /**
+   * An array of key-value pairs to apply to this user.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
+   * @param tags An array of key-value pairs to apply to this user. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of key-value pairs to apply to this user.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
+   * @param tags An array of key-value pairs to apply to this user. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The ID of the user group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-usergroupid)
+   * @param userGroupId The ID of the user group. 
+   */
   public fun userGroupId(userGroupId: String) {
     cdkBuilder.userGroupId(userGroupId)
   }
 
+  /**
+   * The list of user IDs that belong to the user group.
+   *
+   * A user named `default` must be included.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-userids)
+   * @param userIds The list of user IDs that belong to the user group. 
+   */
   public fun userIds(vararg userIds: String) {
     _userIds.addAll(listOf(*userIds))
   }
 
+  /**
+   * The list of user IDs that belong to the user group.
+   *
+   * A user named `default` must be included.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-userids)
+   * @param userIds The list of user IDs that belong to the user group. 
+   */
   public fun userIds(userIds: Collection<String>) {
     _userIds.addAll(userIds)
   }

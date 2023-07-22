@@ -23,35 +23,64 @@ public class CfnConfigurationAggregatorPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param accountAggregationSources Provides a list of source accounts and regions to be
+   * aggregated.
+   */
   public fun accountAggregationSources(vararg accountAggregationSources: Any) {
     _accountAggregationSources.addAll(listOf(*accountAggregationSources))
   }
 
+  /**
+   * @param accountAggregationSources Provides a list of source accounts and regions to be
+   * aggregated.
+   */
   public fun accountAggregationSources(accountAggregationSources: Collection<Any>) {
     _accountAggregationSources.addAll(accountAggregationSources)
   }
 
+  /**
+   * @param accountAggregationSources Provides a list of source accounts and regions to be
+   * aggregated.
+   */
   public fun accountAggregationSources(accountAggregationSources: IResolvable) {
     cdkBuilder.accountAggregationSources(accountAggregationSources)
   }
 
+  /**
+   * @param configurationAggregatorName The name of the aggregator.
+   */
   public fun configurationAggregatorName(configurationAggregatorName: String) {
     cdkBuilder.configurationAggregatorName(configurationAggregatorName)
   }
 
+  /**
+   * @param organizationAggregationSource Provides an organization and list of regions to be
+   * aggregated.
+   */
   public fun organizationAggregationSource(organizationAggregationSource: IResolvable) {
     cdkBuilder.organizationAggregationSource(organizationAggregationSource)
   }
 
+  /**
+   * @param organizationAggregationSource Provides an organization and list of regions to be
+   * aggregated.
+   */
   public
       fun organizationAggregationSource(organizationAggregationSource: CfnConfigurationAggregator.OrganizationAggregationSourceProperty) {
     cdkBuilder.organizationAggregationSource(organizationAggregationSource)
   }
 
+  /**
+   * @param tags An array of tag object.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of tag object.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

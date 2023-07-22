@@ -17,22 +17,39 @@ public class S3DataSourceDsl {
 
   private val _attributeNames: MutableList<String> = mutableListOf()
 
+  /**
+   * @param attributeNames List of one or more attribute names to use that are found in a specified
+   * augmented manifest file.
+   */
   public fun attributeNames(vararg attributeNames: String) {
     _attributeNames.addAll(listOf(*attributeNames))
   }
 
+  /**
+   * @param attributeNames List of one or more attribute names to use that are found in a specified
+   * augmented manifest file.
+   */
   public fun attributeNames(attributeNames: Collection<String>) {
     _attributeNames.addAll(attributeNames)
   }
 
+  /**
+   * @param s3DataDistributionType S3 Data Distribution Type.
+   */
   public fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType) {
     cdkBuilder.s3DataDistributionType(s3DataDistributionType)
   }
 
+  /**
+   * @param s3DataType S3 Data Type.
+   */
   public fun s3DataType(s3DataType: S3DataType) {
     cdkBuilder.s3DataType(s3DataType)
   }
 
+  /**
+   * @param s3Location S3 Uri. 
+   */
   public fun s3Location(s3Location: S3Location) {
     cdkBuilder.s3Location(s3Location)
   }

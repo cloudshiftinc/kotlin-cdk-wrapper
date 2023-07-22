@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.quicksight.CfnTheme
 public class CfnThemeFontPropertyDsl {
   private val cdkBuilder: CfnTheme.FontProperty.Builder = CfnTheme.FontProperty.builder()
 
+  /**
+   * @param fontFamily the value to be set.
+   */
   public fun fontFamily(fontFamily: String) {
     cdkBuilder.fontFamily(fontFamily)
   }

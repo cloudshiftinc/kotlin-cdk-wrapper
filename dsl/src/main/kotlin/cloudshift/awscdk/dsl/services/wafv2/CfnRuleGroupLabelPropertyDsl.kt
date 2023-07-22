@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 public class CfnRuleGroupLabelPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.LabelProperty.Builder = CfnRuleGroup.LabelProperty.builder()
 
+  /**
+   * @param name The label string. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

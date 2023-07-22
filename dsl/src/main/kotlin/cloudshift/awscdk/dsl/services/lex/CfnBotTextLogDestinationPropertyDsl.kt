@@ -11,10 +11,18 @@ public class CfnBotTextLogDestinationPropertyDsl {
   private val cdkBuilder: CfnBot.TextLogDestinationProperty.Builder =
       CfnBot.TextLogDestinationProperty.builder()
 
+  /**
+   * @param cloudWatch Defines the Amazon CloudWatch Logs log group where text and metadata logs are
+   * delivered. 
+   */
   public fun cloudWatch(cloudWatch: IResolvable) {
     cdkBuilder.cloudWatch(cloudWatch)
   }
 
+  /**
+   * @param cloudWatch Defines the Amazon CloudWatch Logs log group where text and metadata logs are
+   * delivered. 
+   */
   public fun cloudWatch(cloudWatch: CfnBot.CloudWatchLogGroupLogDestinationProperty) {
     cdkBuilder.cloudWatch(cloudWatch)
   }

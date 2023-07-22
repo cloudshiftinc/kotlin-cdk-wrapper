@@ -11,10 +11,16 @@ public class CfnFargateProfileLabelPropertyDsl {
   private val cdkBuilder: CfnFargateProfile.LabelProperty.Builder =
       CfnFargateProfile.LabelProperty.builder()
 
+  /**
+   * @param key Enter a key. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value Enter a value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

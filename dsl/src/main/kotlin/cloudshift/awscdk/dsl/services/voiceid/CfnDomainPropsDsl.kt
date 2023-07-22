@@ -19,27 +19,47 @@ public class CfnDomainPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param description The description of the domain.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param name The name for the domain. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param serverSideEncryptionConfiguration The server-side encryption configuration containing
+   * the KMS key identifier you want Voice ID to use to encrypt your data. 
+   */
   public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
     cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration)
   }
 
+  /**
+   * @param serverSideEncryptionConfiguration The server-side encryption configuration containing
+   * the KMS key identifier you want Voice ID to use to encrypt your data. 
+   */
   public
       fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: CfnDomain.ServerSideEncryptionConfigurationProperty) {
     cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration)
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags used to organize, track, or control access for this resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

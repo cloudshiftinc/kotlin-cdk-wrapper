@@ -17,20 +17,55 @@ public class NetworkAclDsl(
 ) {
   private val cdkBuilder: NetworkAcl.Builder = NetworkAcl.Builder.create(scope, id)
 
+  /**
+   * The name of the NetworkAcl.
+   *
+   * It is not recommended to use an explicit name.
+   *
+   * Default: If you don't specify a networkAclName, AWS CloudFormation generates a
+   * unique physical ID and uses that ID for the group name.
+   *
+   * @param networkAclName The name of the NetworkAcl. 
+   */
   public fun networkAclName(networkAclName: String) {
     cdkBuilder.networkAclName(networkAclName)
   }
 
-  public fun subnetSelection(block: SubnetSelectionDsl.() -> Unit = {}) {
+  /**
+   * Subnets in the given VPC to associate the ACL with.
+   *
+   * More subnets can always be added later by calling
+   * `associateWithSubnets()`.
+   *
+   * Default: - No subnets associated
+   *
+   * @param subnetSelection Subnets in the given VPC to associate the ACL with. 
+   */
+  public fun subnetSelection(subnetSelection: SubnetSelectionDsl.() -> Unit = {}) {
     val builder = SubnetSelectionDsl()
-    builder.apply(block)
+    builder.apply(subnetSelection)
     cdkBuilder.subnetSelection(builder.build())
   }
 
+  /**
+   * Subnets in the given VPC to associate the ACL with.
+   *
+   * More subnets can always be added later by calling
+   * `associateWithSubnets()`.
+   *
+   * Default: - No subnets associated
+   *
+   * @param subnetSelection Subnets in the given VPC to associate the ACL with. 
+   */
   public fun subnetSelection(subnetSelection: SubnetSelection) {
     cdkBuilder.subnetSelection(subnetSelection)
   }
 
+  /**
+   * The VPC in which to create the NetworkACL.
+   *
+   * @param vpc The VPC in which to create the NetworkACL. 
+   */
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }

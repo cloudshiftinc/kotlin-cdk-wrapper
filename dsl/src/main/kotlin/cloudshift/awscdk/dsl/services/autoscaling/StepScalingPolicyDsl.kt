@@ -26,42 +26,120 @@ public class StepScalingPolicyDsl(
 
   private val _scalingSteps: MutableList<ScalingInterval> = mutableListOf()
 
+  /**
+   * How the adjustment numbers inside 'intervals' are interpreted.
+   *
+   * Default: ChangeInCapacity
+   *
+   * @param adjustmentType How the adjustment numbers inside 'intervals' are interpreted. 
+   */
   public fun adjustmentType(adjustmentType: AdjustmentType) {
     cdkBuilder.adjustmentType(adjustmentType)
   }
 
+  /**
+   * The auto scaling group.
+   *
+   * @param autoScalingGroup The auto scaling group. 
+   */
   public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
     cdkBuilder.autoScalingGroup(autoScalingGroup)
   }
 
+  /**
+   * Grace period after scaling activity.
+   *
+   * Default: Default cooldown period on your AutoScalingGroup
+   *
+   * @param cooldown Grace period after scaling activity. 
+   */
   public fun cooldown(cooldown: Duration) {
     cdkBuilder.cooldown(cooldown)
   }
 
+  /**
+   * Estimated time until a newly launched instance can send metrics to CloudWatch.
+   *
+   * Default: Same as the cooldown
+   *
+   * @param estimatedInstanceWarmup Estimated time until a newly launched instance can send metrics
+   * to CloudWatch. 
+   */
   public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
     cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
   }
 
+  /**
+   * How many evaluation periods of the metric to wait before triggering a scaling action.
+   *
+   * Raising this value can be used to smooth out the metric, at the expense
+   * of slower response times.
+   *
+   * Default: 1
+   *
+   * @param evaluationPeriods How many evaluation periods of the metric to wait before triggering a
+   * scaling action. 
+   */
   public fun evaluationPeriods(evaluationPeriods: Number) {
     cdkBuilder.evaluationPeriods(evaluationPeriods)
   }
 
+  /**
+   * Metric to scale on.
+   *
+   * @param metric Metric to scale on. 
+   */
   public fun metric(metric: IMetric) {
     cdkBuilder.metric(metric)
   }
 
+  /**
+   * Aggregation to apply to all data points over the evaluation periods.
+   *
+   * Only has meaning if `evaluationPeriods != 1`.
+   *
+   * Default: - The statistic from the metric if applicable (MIN, MAX, AVERAGE), otherwise AVERAGE.
+   *
+   * @param metricAggregationType Aggregation to apply to all data points over the evaluation
+   * periods. 
+   */
   public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
     cdkBuilder.metricAggregationType(metricAggregationType)
   }
 
+  /**
+   * Minimum absolute number to adjust capacity with as result of percentage scaling.
+   *
+   * Only when using AdjustmentType = PercentChangeInCapacity, this number controls
+   * the minimum absolute effect size.
+   *
+   * Default: No minimum scaling effect
+   *
+   * @param minAdjustmentMagnitude Minimum absolute number to adjust capacity with as result of
+   * percentage scaling. 
+   */
   public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
     cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
   }
 
+  /**
+   * The intervals for scaling.
+   *
+   * Maps a range of metric values to a particular scaling behavior.
+   *
+   * @param scalingSteps The intervals for scaling. 
+   */
   public fun scalingSteps(scalingSteps: ScalingIntervalDsl.() -> Unit) {
     _scalingSteps.add(ScalingIntervalDsl().apply(scalingSteps).build())
   }
 
+  /**
+   * The intervals for scaling.
+   *
+   * Maps a range of metric values to a particular scaling behavior.
+   *
+   * @param scalingSteps The intervals for scaling. 
+   */
   public fun scalingSteps(scalingSteps: Collection<ScalingInterval>) {
     _scalingSteps.addAll(scalingSteps)
   }

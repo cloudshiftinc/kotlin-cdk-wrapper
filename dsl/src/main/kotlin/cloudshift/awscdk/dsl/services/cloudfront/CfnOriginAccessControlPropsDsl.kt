@@ -12,10 +12,16 @@ public class CfnOriginAccessControlPropsDsl {
   private val cdkBuilder: CfnOriginAccessControlProps.Builder =
       CfnOriginAccessControlProps.builder()
 
+  /**
+   * @param originAccessControlConfig The origin access control. 
+   */
   public fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
     cdkBuilder.originAccessControlConfig(originAccessControlConfig)
   }
 
+  /**
+   * @param originAccessControlConfig The origin access control. 
+   */
   public
       fun originAccessControlConfig(originAccessControlConfig: CfnOriginAccessControl.OriginAccessControlConfigProperty) {
     cdkBuilder.originAccessControlConfig(originAccessControlConfig)

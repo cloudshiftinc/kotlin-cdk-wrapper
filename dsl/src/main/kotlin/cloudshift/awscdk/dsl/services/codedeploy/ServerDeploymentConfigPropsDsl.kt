@@ -12,10 +12,16 @@ public class ServerDeploymentConfigPropsDsl {
   private val cdkBuilder: ServerDeploymentConfigProps.Builder =
       ServerDeploymentConfigProps.builder()
 
+  /**
+   * @param deploymentConfigName The physical, human-readable name of the Deployment Configuration.
+   */
   public fun deploymentConfigName(deploymentConfigName: String) {
     cdkBuilder.deploymentConfigName(deploymentConfigName)
   }
 
+  /**
+   * @param minimumHealthyHosts Minimum number of healthy hosts. 
+   */
   public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
     cdkBuilder.minimumHealthyHosts(minimumHealthyHosts)
   }

@@ -10,6 +10,9 @@ import software.amazon.awscdk.pipelines.ManualApprovalStepProps
 public class ManualApprovalStepPropsDsl {
   private val cdkBuilder: ManualApprovalStepProps.Builder = ManualApprovalStepProps.builder()
 
+  /**
+   * @param comment The comment to display with this manual approval.
+   */
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)
   }

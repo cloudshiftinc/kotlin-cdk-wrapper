@@ -11,10 +11,16 @@ public class CfnAnalysisClusterMarkerConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ClusterMarkerConfigurationProperty.Builder =
       CfnAnalysis.ClusterMarkerConfigurationProperty.builder()
 
+  /**
+   * @param clusterMarker The cluster marker that is a part of the cluster marker configuration.
+   */
   public fun clusterMarker(clusterMarker: IResolvable) {
     cdkBuilder.clusterMarker(clusterMarker)
   }
 
+  /**
+   * @param clusterMarker The cluster marker that is a part of the cluster marker configuration.
+   */
   public fun clusterMarker(clusterMarker: CfnAnalysis.ClusterMarkerProperty) {
     cdkBuilder.clusterMarker(clusterMarker)
   }

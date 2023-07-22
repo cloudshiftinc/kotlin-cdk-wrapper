@@ -11,6 +11,9 @@ public class CfnJobDefinitionHostPathPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.HostPathProperty.Builder =
       CfnJobDefinition.HostPathProperty.builder()
 
+  /**
+   * @param path the value to be set.
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }

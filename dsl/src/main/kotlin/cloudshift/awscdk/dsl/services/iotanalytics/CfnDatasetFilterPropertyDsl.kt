@@ -10,10 +10,18 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
 public class CfnDatasetFilterPropertyDsl {
   private val cdkBuilder: CfnDataset.FilterProperty.Builder = CfnDataset.FilterProperty.builder()
 
+  /**
+   * @param deltaTime Used to limit data to that which has arrived since the last execution of the
+   * action.
+   */
   public fun deltaTime(deltaTime: IResolvable) {
     cdkBuilder.deltaTime(deltaTime)
   }
 
+  /**
+   * @param deltaTime Used to limit data to that which has arrived since the last execution of the
+   * action.
+   */
   public fun deltaTime(deltaTime: CfnDataset.DeltaTimeProperty) {
     cdkBuilder.deltaTime(deltaTime)
   }

@@ -11,10 +11,20 @@ public class CfnContinuousDeploymentPolicySessionStickinessConfigPropertyDsl {
   private val cdkBuilder: CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty.Builder =
       CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty.builder()
 
+  /**
+   * @param idleTtl The amount of time after which you want sessions to cease if no requests are
+   * received. 
+   * Allowed values are 300–3600 seconds (5–60 minutes).
+   */
   public fun idleTtl(idleTtl: Number) {
     cdkBuilder.idleTtl(idleTtl)
   }
 
+  /**
+   * @param maximumTtl The maximum amount of time to consider requests from the viewer as being part
+   * of the same session. 
+   * Allowed values are 300–3600 seconds (5–60 minutes).
+   */
   public fun maximumTtl(maximumTtl: Number) {
     cdkBuilder.maximumTtl(maximumTtl)
   }

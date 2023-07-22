@@ -21,30 +21,51 @@ public class StageDeploymentPropsDsl {
 
   private val _stackSteps: MutableList<StackSteps> = mutableListOf()
 
+  /**
+   * @param post Additional steps to run after all of the stacks in the stage.
+   */
   public fun post(vararg post: Step) {
     _post.addAll(listOf(*post))
   }
 
+  /**
+   * @param post Additional steps to run after all of the stacks in the stage.
+   */
   public fun post(post: Collection<Step>) {
     _post.addAll(post)
   }
 
+  /**
+   * @param pre Additional steps to run before any of the stacks in the stage.
+   */
   public fun pre(vararg pre: Step) {
     _pre.addAll(listOf(*pre))
   }
 
+  /**
+   * @param pre Additional steps to run before any of the stacks in the stage.
+   */
   public fun pre(pre: Collection<Step>) {
     _pre.addAll(pre)
   }
 
+  /**
+   * @param stackSteps Instructions for additional steps that are run at the stack level.
+   */
   public fun stackSteps(stackSteps: StackStepsDsl.() -> Unit) {
     _stackSteps.add(StackStepsDsl().apply(stackSteps).build())
   }
 
+  /**
+   * @param stackSteps Instructions for additional steps that are run at the stack level.
+   */
   public fun stackSteps(stackSteps: Collection<StackSteps>) {
     _stackSteps.addAll(stackSteps)
   }
 
+  /**
+   * @param stageName Stage name to use in the pipeline.
+   */
   public fun stageName(stageName: String) {
     cdkBuilder.stageName(stageName)
   }

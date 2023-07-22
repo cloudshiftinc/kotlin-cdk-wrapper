@@ -12,22 +12,37 @@ public class CfnAnalysisFilterTextFieldControlPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FilterTextFieldControlProperty.Builder =
       CfnAnalysis.FilterTextFieldControlProperty.builder()
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: IResolvable) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: CfnAnalysis.TextFieldControlDisplayOptionsProperty) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param filterControlId The ID of the `FilterTextFieldControl` . 
+   */
   public fun filterControlId(filterControlId: String) {
     cdkBuilder.filterControlId(filterControlId)
   }
 
+  /**
+   * @param sourceFilterId The source filter ID of the `FilterTextFieldControl` . 
+   */
   public fun sourceFilterId(sourceFilterId: String) {
     cdkBuilder.sourceFilterId(sourceFilterId)
   }
 
+  /**
+   * @param title The title of the `FilterTextFieldControl` . 
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }

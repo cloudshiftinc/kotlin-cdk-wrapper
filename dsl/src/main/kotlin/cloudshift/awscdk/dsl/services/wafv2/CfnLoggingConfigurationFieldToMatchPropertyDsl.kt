@@ -13,52 +13,98 @@ public class CfnLoggingConfigurationFieldToMatchPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.FieldToMatchProperty.Builder =
       CfnLoggingConfiguration.FieldToMatchProperty.builder()
 
-  public fun jsonBody(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param jsonBody Redact the request body JSON.
+   */
+  public fun jsonBody(jsonBody: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(jsonBody)
     cdkBuilder.jsonBody(builder.map)
   }
 
+  /**
+   * @param jsonBody Redact the request body JSON.
+   */
   public fun jsonBody(jsonBody: Any) {
     cdkBuilder.jsonBody(jsonBody)
   }
 
-  public fun method(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param method Redact the indicated HTTP method.
+   * The method indicates the type of operation that the request is asking the origin to perform.
+   */
+  public fun method(method: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(method)
     cdkBuilder.method(builder.map)
   }
 
+  /**
+   * @param method Redact the indicated HTTP method.
+   * The method indicates the type of operation that the request is asking the origin to perform.
+   */
   public fun method(method: Any) {
     cdkBuilder.method(method)
   }
 
-  public fun queryString(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param queryString Redact the query string.
+   * This is the part of a URL that appears after a `?` character, if any.
+   */
+  public fun queryString(queryString: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(queryString)
     cdkBuilder.queryString(builder.map)
   }
 
+  /**
+   * @param queryString Redact the query string.
+   * This is the part of a URL that appears after a `?` character, if any.
+   */
   public fun queryString(queryString: Any) {
     cdkBuilder.queryString(queryString)
   }
 
-  public fun singleHeader(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param singleHeader Redact a single header.
+   * Provide the name of the header to inspect, for example, `User-Agent` or `Referer` . This
+   * setting isn't case sensitive.
+   *
+   * Example JSON: `"SingleHeader": { "Name": "haystack" }`
+   */
+  public fun singleHeader(singleHeader: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(singleHeader)
     cdkBuilder.singleHeader(builder.map)
   }
 
+  /**
+   * @param singleHeader Redact a single header.
+   * Provide the name of the header to inspect, for example, `User-Agent` or `Referer` . This
+   * setting isn't case sensitive.
+   *
+   * Example JSON: `"SingleHeader": { "Name": "haystack" }`
+   */
   public fun singleHeader(singleHeader: Any) {
     cdkBuilder.singleHeader(singleHeader)
   }
 
-  public fun uriPath(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param uriPath Redact the request URI path.
+   * This is the part of the web request that identifies a resource, for example,
+   * `/images/daily-ad.jpg` .
+   */
+  public fun uriPath(uriPath: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(uriPath)
     cdkBuilder.uriPath(builder.map)
   }
 
+  /**
+   * @param uriPath Redact the request URI path.
+   * This is the part of the web request that identifies a resource, for example,
+   * `/images/daily-ad.jpg` .
+   */
   public fun uriPath(uriPath: Any) {
     cdkBuilder.uriPath(uriPath)
   }

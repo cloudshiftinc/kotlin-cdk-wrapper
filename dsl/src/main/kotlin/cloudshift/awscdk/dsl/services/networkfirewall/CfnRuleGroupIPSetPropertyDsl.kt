@@ -14,10 +14,16 @@ public class CfnRuleGroupIPSetPropertyDsl {
 
   private val _definition: MutableList<String> = mutableListOf()
 
+  /**
+   * @param definition The list of IP addresses and address ranges, in CIDR notation.
+   */
   public fun definition(vararg definition: String) {
     _definition.addAll(listOf(*definition))
   }
 
+  /**
+   * @param definition The list of IP addresses and address ranges, in CIDR notation.
+   */
   public fun definition(definition: Collection<String>) {
     _definition.addAll(definition)
   }

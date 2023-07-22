@@ -12,16 +12,26 @@ import software.amazon.awscdk.services.appmesh.HttpRoutePathMatchConfig
 public class HttpRoutePathMatchConfigDsl {
   private val cdkBuilder: HttpRoutePathMatchConfig.Builder = HttpRoutePathMatchConfig.builder()
 
+  /**
+   * @param prefixPathMatch Route configuration for matching on the prefix of the URL path of the
+   * request.
+   */
   public fun prefixPathMatch(prefixPathMatch: String) {
     cdkBuilder.prefixPathMatch(prefixPathMatch)
   }
 
-  public fun wholePathMatch(block: CfnRouteHttpPathMatchPropertyDsl.() -> Unit = {}) {
+  /**
+   * @param wholePathMatch Route configuration for matching on the complete URL path of the request.
+   */
+  public fun wholePathMatch(wholePathMatch: CfnRouteHttpPathMatchPropertyDsl.() -> Unit = {}) {
     val builder = CfnRouteHttpPathMatchPropertyDsl()
-    builder.apply(block)
+    builder.apply(wholePathMatch)
     cdkBuilder.wholePathMatch(builder.build())
   }
 
+  /**
+   * @param wholePathMatch Route configuration for matching on the complete URL path of the request.
+   */
   public fun wholePathMatch(wholePathMatch: CfnRoute.HttpPathMatchProperty) {
     cdkBuilder.wholePathMatch(wholePathMatch)
   }

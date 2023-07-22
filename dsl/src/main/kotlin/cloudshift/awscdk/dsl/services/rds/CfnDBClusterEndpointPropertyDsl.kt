@@ -11,10 +11,16 @@ public class CfnDBClusterEndpointPropertyDsl {
   private val cdkBuilder: CfnDBCluster.EndpointProperty.Builder =
       CfnDBCluster.EndpointProperty.builder()
 
+  /**
+   * @param address Specifies the connection endpoint for the primary instance of the DB cluster.
+   */
   public fun address(address: String) {
     cdkBuilder.address(address)
   }
 
+  /**
+   * @param port Specifies the port that the database engine is listening on.
+   */
   public fun port(port: String) {
     cdkBuilder.port(port)
   }

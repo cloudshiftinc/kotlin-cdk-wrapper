@@ -17,18 +17,30 @@ public class CfnNetworkInsightsAccessScopeResourceStatementRequestPropertyDsl {
 
   private val _resources: MutableList<String> = mutableListOf()
 
+  /**
+   * @param resourceTypes The resource types.
+   */
   public fun resourceTypes(vararg resourceTypes: String) {
     _resourceTypes.addAll(listOf(*resourceTypes))
   }
 
+  /**
+   * @param resourceTypes The resource types.
+   */
   public fun resourceTypes(resourceTypes: Collection<String>) {
     _resourceTypes.addAll(resourceTypes)
   }
 
+  /**
+   * @param resources The resources.
+   */
   public fun resources(vararg resources: String) {
     _resources.addAll(listOf(*resources))
   }
 
+  /**
+   * @param resources The resources.
+   */
   public fun resources(resources: Collection<String>) {
     _resources.addAll(resources)
   }

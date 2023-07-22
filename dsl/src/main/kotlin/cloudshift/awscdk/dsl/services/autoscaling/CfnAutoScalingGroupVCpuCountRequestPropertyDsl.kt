@@ -11,10 +11,16 @@ public class CfnAutoScalingGroupVCpuCountRequestPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.VCpuCountRequestProperty.Builder =
       CfnAutoScalingGroup.VCpuCountRequestProperty.builder()
 
+  /**
+   * @param max The maximum number of vCPUs.
+   */
   public fun max(max: Number) {
     cdkBuilder.max(max)
   }
 
+  /**
+   * @param min The minimum number of vCPUs.
+   */
   public fun min(min: Number) {
     cdkBuilder.min(min)
   }

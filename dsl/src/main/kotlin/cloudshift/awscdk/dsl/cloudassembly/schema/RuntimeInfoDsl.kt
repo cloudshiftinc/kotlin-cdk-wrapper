@@ -11,6 +11,10 @@ import software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
 public class RuntimeInfoDsl {
   private val cdkBuilder: RuntimeInfo.Builder = RuntimeInfo.builder()
 
+  /**
+   * @param libraries The list of libraries loaded in the application, associated with their
+   * versions. 
+   */
   public fun libraries(libraries: Map<String, String>) {
     cdkBuilder.libraries(libraries)
   }

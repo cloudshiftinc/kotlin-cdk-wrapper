@@ -19,38 +19,68 @@ public class CfnLinkPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param bandwidth The bandwidth for the link. 
+   */
   public fun bandwidth(bandwidth: IResolvable) {
     cdkBuilder.bandwidth(bandwidth)
   }
 
+  /**
+   * @param bandwidth The bandwidth for the link. 
+   */
   public fun bandwidth(bandwidth: CfnLink.BandwidthProperty) {
     cdkBuilder.bandwidth(bandwidth)
   }
 
+  /**
+   * @param description A description of the link.
+   * Constraints: Maximum length of 256 characters.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param globalNetworkId The ID of the global network. 
+   */
   public fun globalNetworkId(globalNetworkId: String) {
     cdkBuilder.globalNetworkId(globalNetworkId)
   }
 
+  /**
+   * @param provider The provider of the link.
+   * Constraints: Maximum length of 128 characters. Cannot include the following characters: | \ ^
+   */
   public fun provider(provider: String) {
     cdkBuilder.provider(provider)
   }
 
+  /**
+   * @param siteId The ID of the site. 
+   */
   public fun siteId(siteId: String) {
     cdkBuilder.siteId(siteId)
   }
 
+  /**
+   * @param tags The tags for the link.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags The tags for the link.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * @param type The type of the link.
+   * Constraints: Maximum length of 128 characters. Cannot include the following characters: | \ ^
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

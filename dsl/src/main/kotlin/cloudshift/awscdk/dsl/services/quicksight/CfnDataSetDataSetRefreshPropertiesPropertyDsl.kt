@@ -11,10 +11,16 @@ public class CfnDataSetDataSetRefreshPropertiesPropertyDsl {
   private val cdkBuilder: CfnDataSet.DataSetRefreshPropertiesProperty.Builder =
       CfnDataSet.DataSetRefreshPropertiesProperty.builder()
 
+  /**
+   * @param refreshConfiguration  Refresh Configuration.</p>.
+   */
   public fun refreshConfiguration(refreshConfiguration: IResolvable) {
     cdkBuilder.refreshConfiguration(refreshConfiguration)
   }
 
+  /**
+   * @param refreshConfiguration  Refresh Configuration.</p>.
+   */
   public fun refreshConfiguration(refreshConfiguration: CfnDataSet.RefreshConfigurationProperty) {
     cdkBuilder.refreshConfiguration(refreshConfiguration)
   }

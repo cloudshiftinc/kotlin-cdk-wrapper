@@ -11,6 +11,9 @@ public class CfnFunctionCollectionSAMPTPropertyDsl {
   private val cdkBuilder: CfnFunction.CollectionSAMPTProperty.Builder =
       CfnFunction.CollectionSAMPTProperty.builder()
 
+  /**
+   * @param collectionId the value to be set. 
+   */
   public fun collectionId(collectionId: String) {
     cdkBuilder.collectionId(collectionId)
   }

@@ -11,10 +11,16 @@ public class CfnDashboardPivotTableConditionalFormattingOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.PivotTableConditionalFormattingOptionProperty.Builder =
       CfnDashboard.PivotTableConditionalFormattingOptionProperty.builder()
 
+  /**
+   * @param cell The cell conditional formatting option for a pivot table.
+   */
   public fun cell(cell: IResolvable) {
     cdkBuilder.cell(cell)
   }
 
+  /**
+   * @param cell The cell conditional formatting option for a pivot table.
+   */
   public fun cell(cell: CfnDashboard.PivotTableCellConditionalFormattingProperty) {
     cdkBuilder.cell(cell)
   }

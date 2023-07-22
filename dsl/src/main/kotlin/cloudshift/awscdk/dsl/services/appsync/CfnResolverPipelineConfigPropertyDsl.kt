@@ -15,10 +15,16 @@ public class CfnResolverPipelineConfigPropertyDsl {
 
   private val _functions: MutableList<String> = mutableListOf()
 
+  /**
+   * @param functions A list of `Function` objects.
+   */
   public fun functions(vararg functions: String) {
     _functions.addAll(listOf(*functions))
   }
 
+  /**
+   * @param functions A list of `Function` objects.
+   */
   public fun functions(functions: Collection<String>) {
     _functions.addAll(functions)
   }

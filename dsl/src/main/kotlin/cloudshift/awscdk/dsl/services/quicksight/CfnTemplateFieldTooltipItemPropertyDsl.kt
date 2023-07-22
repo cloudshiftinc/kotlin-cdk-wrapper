@@ -11,14 +11,23 @@ public class CfnTemplateFieldTooltipItemPropertyDsl {
   private val cdkBuilder: CfnTemplate.FieldTooltipItemProperty.Builder =
       CfnTemplate.FieldTooltipItemProperty.builder()
 
+  /**
+   * @param fieldId The unique ID of the field that is targeted by the tooltip. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param label The label of the tooltip item.
+   */
   public fun label(label: String) {
     cdkBuilder.label(label)
   }
 
+  /**
+   * @param visibility The visibility of the tooltip item.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

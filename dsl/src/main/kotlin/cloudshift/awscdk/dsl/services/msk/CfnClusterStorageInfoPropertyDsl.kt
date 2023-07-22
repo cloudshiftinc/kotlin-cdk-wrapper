@@ -11,10 +11,16 @@ public class CfnClusterStorageInfoPropertyDsl {
   private val cdkBuilder: CfnCluster.StorageInfoProperty.Builder =
       CfnCluster.StorageInfoProperty.builder()
 
+  /**
+   * @param ebsStorageInfo EBS volume information.
+   */
   public fun ebsStorageInfo(ebsStorageInfo: IResolvable) {
     cdkBuilder.ebsStorageInfo(ebsStorageInfo)
   }
 
+  /**
+   * @param ebsStorageInfo EBS volume information.
+   */
   public fun ebsStorageInfo(ebsStorageInfo: CfnCluster.EBSStorageInfoProperty) {
     cdkBuilder.ebsStorageInfo(ebsStorageInfo)
   }

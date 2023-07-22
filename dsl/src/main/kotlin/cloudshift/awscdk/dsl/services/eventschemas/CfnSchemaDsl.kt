@@ -19,30 +19,74 @@ public class CfnSchemaDsl(
 
   private val _tags: MutableList<CfnSchema.TagsEntryProperty> = mutableListOf()
 
+  /**
+   * The source of the schema definition.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html#cfn-eventschemas-schema-content)
+   * @param content The source of the schema definition. 
+   */
   public fun content(content: String) {
     cdkBuilder.content(content)
   }
 
+  /**
+   * A description of the schema.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html#cfn-eventschemas-schema-description)
+   * @param description A description of the schema. 
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * The name of the schema registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html#cfn-eventschemas-schema-registryname)
+   * @param registryName The name of the schema registry. 
+   */
   public fun registryName(registryName: String) {
     cdkBuilder.registryName(registryName)
   }
 
+  /**
+   * The name of the schema.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html#cfn-eventschemas-schema-schemaname)
+   * @param schemaName The name of the schema. 
+   */
   public fun schemaName(schemaName: String) {
     cdkBuilder.schemaName(schemaName)
   }
 
+  /**
+   * Tags associated with the schema.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html#cfn-eventschemas-schema-tags)
+   * @param tags Tags associated with the schema. 
+   */
   public fun tags(tags: CfnSchemaTagsEntryPropertyDsl.() -> Unit) {
     _tags.add(CfnSchemaTagsEntryPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * Tags associated with the schema.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html#cfn-eventschemas-schema-tags)
+   * @param tags Tags associated with the schema. 
+   */
   public fun tags(tags: Collection<CfnSchema.TagsEntryProperty>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The type of schema.
+   *
+   * Valid types include `OpenApi3` and `JSONSchemaDraft4` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html#cfn-eventschemas-schema-type)
+   * @param type The type of schema. 
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

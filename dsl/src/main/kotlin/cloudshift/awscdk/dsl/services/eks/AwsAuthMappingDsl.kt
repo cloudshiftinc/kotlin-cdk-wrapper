@@ -14,14 +14,23 @@ public class AwsAuthMappingDsl {
 
   private val _groups: MutableList<String> = mutableListOf()
 
+  /**
+   * @param groups A list of groups within Kubernetes to which the role is mapped. 
+   */
   public fun groups(vararg groups: String) {
     _groups.addAll(listOf(*groups))
   }
 
+  /**
+   * @param groups A list of groups within Kubernetes to which the role is mapped. 
+   */
   public fun groups(groups: Collection<String>) {
     _groups.addAll(groups)
   }
 
+  /**
+   * @param username The user name within Kubernetes to map to the IAM role.
+   */
   public fun username(username: String) {
     cdkBuilder.username(username)
   }

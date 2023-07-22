@@ -17,26 +17,44 @@ public class CfnDataSetCustomSqlPropertyDsl {
 
   private val _columns: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param columns The column schema from the SQL query result set. 
+   */
   public fun columns(vararg columns: Any) {
     _columns.addAll(listOf(*columns))
   }
 
+  /**
+   * @param columns The column schema from the SQL query result set. 
+   */
   public fun columns(columns: Collection<Any>) {
     _columns.addAll(columns)
   }
 
+  /**
+   * @param columns The column schema from the SQL query result set. 
+   */
   public fun columns(columns: IResolvable) {
     cdkBuilder.columns(columns)
   }
 
+  /**
+   * @param dataSourceArn The Amazon Resource Name (ARN) of the data source. 
+   */
   public fun dataSourceArn(dataSourceArn: String) {
     cdkBuilder.dataSourceArn(dataSourceArn)
   }
 
+  /**
+   * @param name A display name for the SQL query result. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param sqlQuery The SQL query. 
+   */
   public fun sqlQuery(sqlQuery: String) {
     cdkBuilder.sqlQuery(sqlQuery)
   }

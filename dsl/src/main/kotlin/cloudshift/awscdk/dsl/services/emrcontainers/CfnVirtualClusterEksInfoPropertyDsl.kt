@@ -11,6 +11,14 @@ public class CfnVirtualClusterEksInfoPropertyDsl {
   private val cdkBuilder: CfnVirtualCluster.EksInfoProperty.Builder =
       CfnVirtualCluster.EksInfoProperty.builder()
 
+  /**
+   * @param namespace The namespaces of the EKS cluster. 
+   * *Minimum* : 1
+   *
+   * *Maximum* : 63
+   *
+   * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
+   */
   public fun namespace(namespace: String) {
     cdkBuilder.namespace(namespace)
   }

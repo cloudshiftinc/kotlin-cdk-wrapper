@@ -11,6 +11,12 @@ public class CfnAssistantServerSideEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnAssistant.ServerSideEncryptionConfigurationProperty.Builder =
       CfnAssistant.ServerSideEncryptionConfigurationProperty.builder()
 
+  /**
+   * @param kmsKeyId The KMS key .
+   * For information about valid ID values, see [Key identifiers
+   * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) in the *AWS
+   * Key Management Service Developer Guide* .
+   */
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }

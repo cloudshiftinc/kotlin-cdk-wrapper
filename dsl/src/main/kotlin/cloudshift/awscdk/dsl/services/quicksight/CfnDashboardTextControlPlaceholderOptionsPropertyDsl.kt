@@ -11,6 +11,9 @@ public class CfnDashboardTextControlPlaceholderOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.TextControlPlaceholderOptionsProperty.Builder =
       CfnDashboard.TextControlPlaceholderOptionsProperty.builder()
 
+  /**
+   * @param visibility The visibility configuration of the placeholder options in a text control.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

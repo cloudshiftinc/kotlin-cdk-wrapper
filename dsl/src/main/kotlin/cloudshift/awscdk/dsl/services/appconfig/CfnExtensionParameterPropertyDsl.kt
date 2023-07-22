@@ -13,14 +13,23 @@ public class CfnExtensionParameterPropertyDsl {
   private val cdkBuilder: CfnExtension.ParameterProperty.Builder =
       CfnExtension.ParameterProperty.builder()
 
+  /**
+   * @param description Information about the parameter.
+   */
   public fun description(description: String) {
     cdkBuilder.description(description)
   }
 
+  /**
+   * @param required A parameter value must be specified in the extension association. 
+   */
   public fun required(required: Boolean) {
     cdkBuilder.required(required)
   }
 
+  /**
+   * @param required A parameter value must be specified in the extension association. 
+   */
   public fun required(required: IResolvable) {
     cdkBuilder.required(required)
   }

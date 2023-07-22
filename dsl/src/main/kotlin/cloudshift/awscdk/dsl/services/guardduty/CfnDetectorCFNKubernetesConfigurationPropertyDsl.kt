@@ -11,10 +11,18 @@ public class CfnDetectorCFNKubernetesConfigurationPropertyDsl {
   private val cdkBuilder: CfnDetector.CFNKubernetesConfigurationProperty.Builder =
       CfnDetector.CFNKubernetesConfigurationProperty.builder()
 
+  /**
+   * @param auditLogs Describes whether Kubernetes audit logs are enabled as a data source for the
+   * detector.
+   */
   public fun auditLogs(auditLogs: IResolvable) {
     cdkBuilder.auditLogs(auditLogs)
   }
 
+  /**
+   * @param auditLogs Describes whether Kubernetes audit logs are enabled as a data source for the
+   * detector.
+   */
   public fun auditLogs(auditLogs: CfnDetector.CFNKubernetesAuditLogsConfigurationProperty) {
     cdkBuilder.auditLogs(auditLogs)
   }

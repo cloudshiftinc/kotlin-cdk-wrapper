@@ -11,10 +11,16 @@ public class CfnClusterMetricDimensionPropertyDsl {
   private val cdkBuilder: CfnCluster.MetricDimensionProperty.Builder =
       CfnCluster.MetricDimensionProperty.builder()
 
+  /**
+   * @param key The dimension name. 
+   */
   public fun key(key: String) {
     cdkBuilder.key(key)
   }
 
+  /**
+   * @param value The dimension value. 
+   */
   public fun `value`(`value`: String) {
     cdkBuilder.`value`(`value`)
   }

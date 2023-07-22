@@ -31,78 +31,239 @@ public class CfnDatasetDsl(
 
   private val _triggers: MutableList<Any> = mutableListOf()
 
+  /**
+   * The `DatasetAction` objects that automatically create the dataset contents.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-actions)
+   * @param actions The `DatasetAction` objects that automatically create the dataset contents. 
+   */
   public fun actions(vararg actions: Any) {
     _actions.addAll(listOf(*actions))
   }
 
+  /**
+   * The `DatasetAction` objects that automatically create the dataset contents.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-actions)
+   * @param actions The `DatasetAction` objects that automatically create the dataset contents. 
+   */
   public fun actions(actions: Collection<Any>) {
     _actions.addAll(actions)
   }
 
+  /**
+   * The `DatasetAction` objects that automatically create the dataset contents.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-actions)
+   * @param actions The `DatasetAction` objects that automatically create the dataset contents. 
+   */
   public fun actions(actions: IResolvable) {
     cdkBuilder.actions(actions)
   }
 
+  /**
+   * When dataset contents are created they are delivered to destinations specified here.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-contentdeliveryrules)
+   * @param contentDeliveryRules When dataset contents are created they are delivered to
+   * destinations specified here. 
+   */
   public fun contentDeliveryRules(vararg contentDeliveryRules: Any) {
     _contentDeliveryRules.addAll(listOf(*contentDeliveryRules))
   }
 
+  /**
+   * When dataset contents are created they are delivered to destinations specified here.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-contentdeliveryrules)
+   * @param contentDeliveryRules When dataset contents are created they are delivered to
+   * destinations specified here. 
+   */
   public fun contentDeliveryRules(contentDeliveryRules: Collection<Any>) {
     _contentDeliveryRules.addAll(contentDeliveryRules)
   }
 
+  /**
+   * When dataset contents are created they are delivered to destinations specified here.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-contentdeliveryrules)
+   * @param contentDeliveryRules When dataset contents are created they are delivered to
+   * destinations specified here. 
+   */
   public fun contentDeliveryRules(contentDeliveryRules: IResolvable) {
     cdkBuilder.contentDeliveryRules(contentDeliveryRules)
   }
 
+  /**
+   * The name of the dataset.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-datasetname)
+   * @param datasetName The name of the dataset. 
+   */
   public fun datasetName(datasetName: String) {
     cdkBuilder.datasetName(datasetName)
   }
 
+  /**
+   * A list of data rules that send notifications to CloudWatch, when data arrives late.
+   *
+   * To specify `lateDataRules` , the dataset must use a
+   * [DeltaTimer](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_DeltaTime.html)
+   * filter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-latedatarules)
+   * @param lateDataRules A list of data rules that send notifications to CloudWatch, when data
+   * arrives late. 
+   */
   public fun lateDataRules(vararg lateDataRules: Any) {
     _lateDataRules.addAll(listOf(*lateDataRules))
   }
 
+  /**
+   * A list of data rules that send notifications to CloudWatch, when data arrives late.
+   *
+   * To specify `lateDataRules` , the dataset must use a
+   * [DeltaTimer](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_DeltaTime.html)
+   * filter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-latedatarules)
+   * @param lateDataRules A list of data rules that send notifications to CloudWatch, when data
+   * arrives late. 
+   */
   public fun lateDataRules(lateDataRules: Collection<Any>) {
     _lateDataRules.addAll(lateDataRules)
   }
 
+  /**
+   * A list of data rules that send notifications to CloudWatch, when data arrives late.
+   *
+   * To specify `lateDataRules` , the dataset must use a
+   * [DeltaTimer](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_DeltaTime.html)
+   * filter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-latedatarules)
+   * @param lateDataRules A list of data rules that send notifications to CloudWatch, when data
+   * arrives late. 
+   */
   public fun lateDataRules(lateDataRules: IResolvable) {
     cdkBuilder.lateDataRules(lateDataRules)
   }
 
+  /**
+   * Optional.
+   *
+   * How long, in days, message data is kept for the dataset.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-retentionperiod)
+   * @param retentionPeriod Optional. 
+   */
   public fun retentionPeriod(retentionPeriod: IResolvable) {
     cdkBuilder.retentionPeriod(retentionPeriod)
   }
 
+  /**
+   * Optional.
+   *
+   * How long, in days, message data is kept for the dataset.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-retentionperiod)
+   * @param retentionPeriod Optional. 
+   */
   public fun retentionPeriod(retentionPeriod: CfnDataset.RetentionPeriodProperty) {
     cdkBuilder.retentionPeriod(retentionPeriod)
   }
 
+  /**
+   * Metadata which can be used to manage the data set.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-tags)
+   * @param tags Metadata which can be used to manage the data set. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * Metadata which can be used to manage the data set.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-tags)
+   * @param tags Metadata which can be used to manage the data set. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }
 
+  /**
+   * The `DatasetTrigger` objects that specify when the dataset is automatically updated.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-triggers)
+   * @param triggers The `DatasetTrigger` objects that specify when the dataset is automatically
+   * updated. 
+   */
   public fun triggers(vararg triggers: Any) {
     _triggers.addAll(listOf(*triggers))
   }
 
+  /**
+   * The `DatasetTrigger` objects that specify when the dataset is automatically updated.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-triggers)
+   * @param triggers The `DatasetTrigger` objects that specify when the dataset is automatically
+   * updated. 
+   */
   public fun triggers(triggers: Collection<Any>) {
     _triggers.addAll(triggers)
   }
 
+  /**
+   * The `DatasetTrigger` objects that specify when the dataset is automatically updated.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-triggers)
+   * @param triggers The `DatasetTrigger` objects that specify when the dataset is automatically
+   * updated. 
+   */
   public fun triggers(triggers: IResolvable) {
     cdkBuilder.triggers(triggers)
   }
 
+  /**
+   * Optional.
+   *
+   * How many versions of dataset contents are kept. If not specified or set to null, only the
+   * latest version plus the latest succeeded version (if they are different) are kept for the time
+   * period specified by the `retentionPeriod` parameter. For more information, see [Keeping Multiple
+   * Versions of AWS IoT Analytics
+   * datasets](https://docs.aws.amazon.com/iotanalytics/latest/userguide/getting-started.html#aws-iot-analytics-dataset-versions)
+   * in the *AWS IoT Analytics User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-versioningconfiguration)
+   * @param versioningConfiguration Optional. 
+   */
   public fun versioningConfiguration(versioningConfiguration: IResolvable) {
     cdkBuilder.versioningConfiguration(versioningConfiguration)
   }
 
+  /**
+   * Optional.
+   *
+   * How many versions of dataset contents are kept. If not specified or set to null, only the
+   * latest version plus the latest succeeded version (if they are different) are kept for the time
+   * period specified by the `retentionPeriod` parameter. For more information, see [Keeping Multiple
+   * Versions of AWS IoT Analytics
+   * datasets](https://docs.aws.amazon.com/iotanalytics/latest/userguide/getting-started.html#aws-iot-analytics-dataset-versions)
+   * in the *AWS IoT Analytics User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-versioningconfiguration)
+   * @param versioningConfiguration Optional. 
+   */
   public
       fun versioningConfiguration(versioningConfiguration: CfnDataset.VersioningConfigurationProperty) {
     cdkBuilder.versioningConfiguration(versioningConfiguration)

@@ -12,10 +12,18 @@ public class CfnProjectGitSubmodulesConfigPropertyDsl {
   private val cdkBuilder: CfnProject.GitSubmodulesConfigProperty.Builder =
       CfnProject.GitSubmodulesConfigProperty.builder()
 
+  /**
+   * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
+   * project. 
+   */
   public fun fetchSubmodules(fetchSubmodules: Boolean) {
     cdkBuilder.fetchSubmodules(fetchSubmodules)
   }
 
+  /**
+   * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
+   * project. 
+   */
   public fun fetchSubmodules(fetchSubmodules: IResolvable) {
     cdkBuilder.fetchSubmodules(fetchSubmodules)
   }

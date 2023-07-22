@@ -11,10 +11,17 @@ public class CfnDataSourceAwsIamConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.AwsIamConfigProperty.Builder =
       CfnDataSource.AwsIamConfigProperty.builder()
 
+  /**
+   * @param signingRegion The signing Region for AWS Identity and Access Management authorization.
+   */
   public fun signingRegion(signingRegion: String) {
     cdkBuilder.signingRegion(signingRegion)
   }
 
+  /**
+   * @param signingServiceName The signing service name for AWS Identity and Access Management
+   * authorization.
+   */
   public fun signingServiceName(signingServiceName: String) {
     cdkBuilder.signingServiceName(signingServiceName)
   }

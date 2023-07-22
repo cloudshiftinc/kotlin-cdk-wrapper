@@ -12,14 +12,23 @@ import software.amazon.awscdk.services.servicediscovery.NonIpInstanceProps
 public class NonIpInstancePropsDsl {
   private val cdkBuilder: NonIpInstanceProps.Builder = NonIpInstanceProps.builder()
 
+  /**
+   * @param customAttributes Custom attributes of the instance.
+   */
   public fun customAttributes(customAttributes: Map<String, String>) {
     cdkBuilder.customAttributes(customAttributes)
   }
 
+  /**
+   * @param instanceId The id of the instance resource.
+   */
   public fun instanceId(instanceId: String) {
     cdkBuilder.instanceId(instanceId)
   }
 
+  /**
+   * @param service The Cloudmap service this resource is registered to. 
+   */
   public fun service(service: IService) {
     cdkBuilder.service(service)
   }

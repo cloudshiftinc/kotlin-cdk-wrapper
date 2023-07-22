@@ -11,10 +11,16 @@ public class CfnChannelUdpContainerSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.UdpContainerSettingsProperty.Builder =
       CfnChannel.UdpContainerSettingsProperty.builder()
 
+  /**
+   * @param m2TsSettings The M2TS configuration for this UDP output.
+   */
   public fun m2TsSettings(m2TsSettings: IResolvable) {
     cdkBuilder.m2TsSettings(m2TsSettings)
   }
 
+  /**
+   * @param m2TsSettings The M2TS configuration for this UDP output.
+   */
   public fun m2TsSettings(m2TsSettings: CfnChannel.M2tsSettingsProperty) {
     cdkBuilder.m2TsSettings(m2TsSettings)
   }

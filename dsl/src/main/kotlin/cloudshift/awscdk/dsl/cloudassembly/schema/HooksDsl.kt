@@ -20,34 +20,58 @@ public class HooksDsl {
 
   private val _preDestroy: MutableList<String> = mutableListOf()
 
+  /**
+   * @param postDeploy Commands to run prior after deploying the cdk stacks in the integration test.
+   */
   public fun postDeploy(vararg postDeploy: String) {
     _postDeploy.addAll(listOf(*postDeploy))
   }
 
+  /**
+   * @param postDeploy Commands to run prior after deploying the cdk stacks in the integration test.
+   */
   public fun postDeploy(postDeploy: Collection<String>) {
     _postDeploy.addAll(postDeploy)
   }
 
+  /**
+   * @param postDestroy Commands to run after destroying the cdk stacks in the integration test.
+   */
   public fun postDestroy(vararg postDestroy: String) {
     _postDestroy.addAll(listOf(*postDestroy))
   }
 
+  /**
+   * @param postDestroy Commands to run after destroying the cdk stacks in the integration test.
+   */
   public fun postDestroy(postDestroy: Collection<String>) {
     _postDestroy.addAll(postDestroy)
   }
 
+  /**
+   * @param preDeploy Commands to run prior to deploying the cdk stacks in the integration test.
+   */
   public fun preDeploy(vararg preDeploy: String) {
     _preDeploy.addAll(listOf(*preDeploy))
   }
 
+  /**
+   * @param preDeploy Commands to run prior to deploying the cdk stacks in the integration test.
+   */
   public fun preDeploy(preDeploy: Collection<String>) {
     _preDeploy.addAll(preDeploy)
   }
 
+  /**
+   * @param preDestroy Commands to run prior to destroying the cdk stacks in the integration test.
+   */
   public fun preDestroy(vararg preDestroy: String) {
     _preDestroy.addAll(listOf(*preDestroy))
   }
 
+  /**
+   * @param preDestroy Commands to run prior to destroying the cdk stacks in the integration test.
+   */
   public fun preDestroy(preDestroy: Collection<String>) {
     _preDestroy.addAll(preDestroy)
   }

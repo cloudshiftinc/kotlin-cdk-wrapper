@@ -14,14 +14,32 @@ public class CfnLinkAssociationDsl(
 ) {
   private val cdkBuilder: CfnLinkAssociation.Builder = CfnLinkAssociation.Builder.create(scope, id)
 
+  /**
+   * The device ID for the link association.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-deviceid)
+   * @param deviceId The device ID for the link association. 
+   */
   public fun deviceId(deviceId: String) {
     cdkBuilder.deviceId(deviceId)
   }
 
+  /**
+   * The ID of the global network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-globalnetworkid)
+   * @param globalNetworkId The ID of the global network. 
+   */
   public fun globalNetworkId(globalNetworkId: String) {
     cdkBuilder.globalNetworkId(globalNetworkId)
   }
 
+  /**
+   * The ID of the link.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-linkid)
+   * @param linkId The ID of the link. 
+   */
   public fun linkId(linkId: String) {
     cdkBuilder.linkId(linkId)
   }

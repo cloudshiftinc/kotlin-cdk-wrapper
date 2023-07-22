@@ -22,34 +22,95 @@ public class CfnFrameworkDsl(
 
   private val _frameworkTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * Contains detailed information about all of the controls of a framework.
+   *
+   * Each framework must contain at least one control.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+   * @param frameworkControls Contains detailed information about all of the controls of a
+   * framework. 
+   */
   public fun frameworkControls(vararg frameworkControls: Any) {
     _frameworkControls.addAll(listOf(*frameworkControls))
   }
 
+  /**
+   * Contains detailed information about all of the controls of a framework.
+   *
+   * Each framework must contain at least one control.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+   * @param frameworkControls Contains detailed information about all of the controls of a
+   * framework. 
+   */
   public fun frameworkControls(frameworkControls: Collection<Any>) {
     _frameworkControls.addAll(frameworkControls)
   }
 
+  /**
+   * Contains detailed information about all of the controls of a framework.
+   *
+   * Each framework must contain at least one control.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+   * @param frameworkControls Contains detailed information about all of the controls of a
+   * framework. 
+   */
   public fun frameworkControls(frameworkControls: IResolvable) {
     cdkBuilder.frameworkControls(frameworkControls)
   }
 
+  /**
+   * An optional description of the framework with a maximum 1,024 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkdescription)
+   * @param frameworkDescription An optional description of the framework with a maximum 1,024
+   * characters. 
+   */
   public fun frameworkDescription(frameworkDescription: String) {
     cdkBuilder.frameworkDescription(frameworkDescription)
   }
 
+  /**
+   * The unique name of a framework.
+   *
+   * This name is between 1 and 256 characters, starting with a letter, and consisting of letters
+   * (a-z, A-Z), numbers (0-9), and underscores (_).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkname)
+   * @param frameworkName The unique name of a framework. 
+   */
   public fun frameworkName(frameworkName: String) {
     cdkBuilder.frameworkName(frameworkName)
   }
 
+  /**
+   * A list of tags with which to tag your framework.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
+   * @param frameworkTags A list of tags with which to tag your framework. 
+   */
   public fun frameworkTags(vararg frameworkTags: Any) {
     _frameworkTags.addAll(listOf(*frameworkTags))
   }
 
+  /**
+   * A list of tags with which to tag your framework.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
+   * @param frameworkTags A list of tags with which to tag your framework. 
+   */
   public fun frameworkTags(frameworkTags: Collection<Any>) {
     _frameworkTags.addAll(frameworkTags)
   }
 
+  /**
+   * A list of tags with which to tag your framework.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
+   * @param frameworkTags A list of tags with which to tag your framework. 
+   */
   public fun frameworkTags(frameworkTags: IResolvable) {
     cdkBuilder.frameworkTags(frameworkTags)
   }

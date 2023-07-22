@@ -20,14 +20,47 @@ public class CfnResourceGroupDsl(
 
   private val _resourceGroupTags: MutableList<Any> = mutableListOf()
 
+  /**
+   * The tags (key and value pairs) that will be associated with the resource group.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html#cfn-inspector-resourcegroup-resourcegrouptags)
+   * @param resourceGroupTags The tags (key and value pairs) that will be associated with the
+   * resource group. 
+   */
   public fun resourceGroupTags(vararg resourceGroupTags: Any) {
     _resourceGroupTags.addAll(listOf(*resourceGroupTags))
   }
 
+  /**
+   * The tags (key and value pairs) that will be associated with the resource group.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html#cfn-inspector-resourcegroup-resourcegrouptags)
+   * @param resourceGroupTags The tags (key and value pairs) that will be associated with the
+   * resource group. 
+   */
   public fun resourceGroupTags(resourceGroupTags: Collection<Any>) {
     _resourceGroupTags.addAll(resourceGroupTags)
   }
 
+  /**
+   * The tags (key and value pairs) that will be associated with the resource group.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html#cfn-inspector-resourcegroup-resourcegrouptags)
+   * @param resourceGroupTags The tags (key and value pairs) that will be associated with the
+   * resource group. 
+   */
   public fun resourceGroupTags(resourceGroupTags: IResolvable) {
     cdkBuilder.resourceGroupTags(resourceGroupTags)
   }

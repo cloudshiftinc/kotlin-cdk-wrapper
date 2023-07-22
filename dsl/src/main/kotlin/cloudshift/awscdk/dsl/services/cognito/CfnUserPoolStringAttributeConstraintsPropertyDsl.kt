@@ -11,10 +11,16 @@ public class CfnUserPoolStringAttributeConstraintsPropertyDsl {
   private val cdkBuilder: CfnUserPool.StringAttributeConstraintsProperty.Builder =
       CfnUserPool.StringAttributeConstraintsProperty.builder()
 
+  /**
+   * @param maxLength The maximum length.
+   */
   public fun maxLength(maxLength: String) {
     cdkBuilder.maxLength(maxLength)
   }
 
+  /**
+   * @param minLength The minimum length.
+   */
   public fun minLength(minLength: String) {
     cdkBuilder.minLength(minLength)
   }

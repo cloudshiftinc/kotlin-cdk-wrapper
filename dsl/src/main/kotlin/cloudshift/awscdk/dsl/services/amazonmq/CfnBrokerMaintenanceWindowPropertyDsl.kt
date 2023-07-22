@@ -11,14 +11,24 @@ public class CfnBrokerMaintenanceWindowPropertyDsl {
   private val cdkBuilder: CfnBroker.MaintenanceWindowProperty.Builder =
       CfnBroker.MaintenanceWindowProperty.builder()
 
+  /**
+   * @param dayOfWeek The day of the week. 
+   */
   public fun dayOfWeek(dayOfWeek: String) {
     cdkBuilder.dayOfWeek(dayOfWeek)
   }
 
+  /**
+   * @param timeOfDay The time, in 24-hour format. 
+   */
   public fun timeOfDay(timeOfDay: String) {
     cdkBuilder.timeOfDay(timeOfDay)
   }
 
+  /**
+   * @param timeZone The time zone, UTC by default, in either the Country/City format, or the UTC
+   * offset format. 
+   */
   public fun timeZone(timeZone: String) {
     cdkBuilder.timeZone(timeZone)
   }

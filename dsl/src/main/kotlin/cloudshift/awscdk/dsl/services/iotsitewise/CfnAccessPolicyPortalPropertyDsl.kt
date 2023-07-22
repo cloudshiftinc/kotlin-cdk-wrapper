@@ -11,6 +11,9 @@ public class CfnAccessPolicyPortalPropertyDsl {
   private val cdkBuilder: CfnAccessPolicy.PortalProperty.Builder =
       CfnAccessPolicy.PortalProperty.builder()
 
+  /**
+   * @param id The ID of the portal.
+   */
   public fun id(id: String) {
     cdkBuilder.id(id)
   }

@@ -11,10 +11,16 @@ public class CfnPackagingConfigurationCmafEncryptionPropertyDsl {
   private val cdkBuilder: CfnPackagingConfiguration.CmafEncryptionProperty.Builder =
       CfnPackagingConfiguration.CmafEncryptionProperty.builder()
 
+  /**
+   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+   */
   public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
     cdkBuilder.spekeKeyProvider(spekeKeyProvider)
   }
 
+  /**
+   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+   */
   public
       fun spekeKeyProvider(spekeKeyProvider: CfnPackagingConfiguration.SpekeKeyProviderProperty) {
     cdkBuilder.spekeKeyProvider(spekeKeyProvider)

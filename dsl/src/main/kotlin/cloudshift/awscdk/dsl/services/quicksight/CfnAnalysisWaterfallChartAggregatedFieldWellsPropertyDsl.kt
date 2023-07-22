@@ -20,38 +20,65 @@ public class CfnAnalysisWaterfallChartAggregatedFieldWellsPropertyDsl {
 
   private val _values: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param breakdowns The breakdown field wells of a waterfall visual.
+   */
   public fun breakdowns(vararg breakdowns: Any) {
     _breakdowns.addAll(listOf(*breakdowns))
   }
 
+  /**
+   * @param breakdowns The breakdown field wells of a waterfall visual.
+   */
   public fun breakdowns(breakdowns: Collection<Any>) {
     _breakdowns.addAll(breakdowns)
   }
 
+  /**
+   * @param breakdowns The breakdown field wells of a waterfall visual.
+   */
   public fun breakdowns(breakdowns: IResolvable) {
     cdkBuilder.breakdowns(breakdowns)
   }
 
+  /**
+   * @param categories The category field wells of a waterfall visual.
+   */
   public fun categories(vararg categories: Any) {
     _categories.addAll(listOf(*categories))
   }
 
+  /**
+   * @param categories The category field wells of a waterfall visual.
+   */
   public fun categories(categories: Collection<Any>) {
     _categories.addAll(categories)
   }
 
+  /**
+   * @param categories The category field wells of a waterfall visual.
+   */
   public fun categories(categories: IResolvable) {
     cdkBuilder.categories(categories)
   }
 
+  /**
+   * @param values The value field wells of a waterfall visual.
+   */
   public fun values(vararg values: Any) {
     _values.addAll(listOf(*values))
   }
 
+  /**
+   * @param values The value field wells of a waterfall visual.
+   */
   public fun values(values: Collection<Any>) {
     _values.addAll(values)
   }
 
+  /**
+   * @param values The value field wells of a waterfall visual.
+   */
   public fun values(values: IResolvable) {
     cdkBuilder.values(values)
   }

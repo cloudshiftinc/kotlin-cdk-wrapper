@@ -17,42 +17,72 @@ public class CfnFunctionApiEventPropertyDsl {
 
   private val _requestParameters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param auth the value to be set.
+   */
   public fun auth(auth: IResolvable) {
     cdkBuilder.auth(auth)
   }
 
+  /**
+   * @param auth the value to be set.
+   */
   public fun auth(auth: CfnFunction.AuthProperty) {
     cdkBuilder.auth(auth)
   }
 
+  /**
+   * @param method the value to be set. 
+   */
   public fun method(method: String) {
     cdkBuilder.method(method)
   }
 
+  /**
+   * @param path the value to be set. 
+   */
   public fun path(path: String) {
     cdkBuilder.path(path)
   }
 
+  /**
+   * @param requestModel the value to be set.
+   */
   public fun requestModel(requestModel: IResolvable) {
     cdkBuilder.requestModel(requestModel)
   }
 
+  /**
+   * @param requestModel the value to be set.
+   */
   public fun requestModel(requestModel: CfnFunction.RequestModelProperty) {
     cdkBuilder.requestModel(requestModel)
   }
 
+  /**
+   * @param requestParameters the value to be set.
+   */
   public fun requestParameters(vararg requestParameters: Any) {
     _requestParameters.addAll(listOf(*requestParameters))
   }
 
+  /**
+   * @param requestParameters the value to be set.
+   */
   public fun requestParameters(requestParameters: Collection<Any>) {
     _requestParameters.addAll(requestParameters)
   }
 
+  /**
+   * @param requestParameters the value to be set.
+   */
   public fun requestParameters(requestParameters: IResolvable) {
     cdkBuilder.requestParameters(requestParameters)
   }
 
+  /**
+   * @param restApiId the value to be set.
+   */
   public fun restApiId(restApiId: String) {
     cdkBuilder.restApiId(restApiId)
   }

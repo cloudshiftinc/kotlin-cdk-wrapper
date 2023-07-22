@@ -11,6 +11,11 @@ public class CfnClientVpnEndpointCertificateAuthenticationRequestPropertyDsl {
   private val cdkBuilder: CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty.Builder =
       CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty.builder()
 
+  /**
+   * @param clientRootCertificateChainArn The ARN of the client certificate. 
+   * The certificate must be signed by a certificate authority (CA) and it must be provisioned in
+   * AWS Certificate Manager (ACM).
+   */
   public fun clientRootCertificateChainArn(clientRootCertificateChainArn: String) {
     cdkBuilder.clientRootCertificateChainArn(clientRootCertificateChainArn)
   }

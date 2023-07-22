@@ -11,10 +11,16 @@ public class CfnFunctionCognitoEventPropertyDsl {
   private val cdkBuilder: CfnFunction.CognitoEventProperty.Builder =
       CfnFunction.CognitoEventProperty.builder()
 
+  /**
+   * @param trigger the value to be set. 
+   */
   public fun trigger(trigger: String) {
     cdkBuilder.trigger(trigger)
   }
 
+  /**
+   * @param userPool the value to be set. 
+   */
   public fun userPool(userPool: String) {
     cdkBuilder.userPool(userPool)
   }

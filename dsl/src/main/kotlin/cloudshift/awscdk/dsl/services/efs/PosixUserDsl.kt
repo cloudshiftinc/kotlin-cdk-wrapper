@@ -14,18 +14,32 @@ public class PosixUserDsl {
 
   private val _secondaryGids: MutableList<String> = mutableListOf()
 
+  /**
+   * @param gid The POSIX group ID used for all file system operations using this access point. 
+   */
   public fun gid(gid: String) {
     cdkBuilder.gid(gid)
   }
 
+  /**
+   * @param secondaryGids Secondary POSIX group IDs used for all file system operations using this
+   * access point.
+   */
   public fun secondaryGids(vararg secondaryGids: String) {
     _secondaryGids.addAll(listOf(*secondaryGids))
   }
 
+  /**
+   * @param secondaryGids Secondary POSIX group IDs used for all file system operations using this
+   * access point.
+   */
   public fun secondaryGids(secondaryGids: Collection<String>) {
     _secondaryGids.addAll(secondaryGids)
   }
 
+  /**
+   * @param uid The POSIX user ID used for all file system operations using this access point. 
+   */
   public fun uid(uid: String) {
     cdkBuilder.uid(uid)
   }

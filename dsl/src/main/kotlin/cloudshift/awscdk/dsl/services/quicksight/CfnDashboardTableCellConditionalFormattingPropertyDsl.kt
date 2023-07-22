@@ -12,14 +12,23 @@ public class CfnDashboardTableCellConditionalFormattingPropertyDsl {
   private val cdkBuilder: CfnDashboard.TableCellConditionalFormattingProperty.Builder =
       CfnDashboard.TableCellConditionalFormattingProperty.builder()
 
+  /**
+   * @param fieldId The field ID of the cell for conditional formatting. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }
 
+  /**
+   * @param textFormat The text format of the cell for conditional formatting.
+   */
   public fun textFormat(textFormat: IResolvable) {
     cdkBuilder.textFormat(textFormat)
   }
 
+  /**
+   * @param textFormat The text format of the cell for conditional formatting.
+   */
   public fun textFormat(textFormat: CfnDashboard.TextConditionalFormatProperty) {
     cdkBuilder.textFormat(textFormat)
   }

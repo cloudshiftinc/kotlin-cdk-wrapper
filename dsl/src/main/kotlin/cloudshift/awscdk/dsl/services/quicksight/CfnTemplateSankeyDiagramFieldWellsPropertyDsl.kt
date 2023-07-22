@@ -11,10 +11,16 @@ public class CfnTemplateSankeyDiagramFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.SankeyDiagramFieldWellsProperty.Builder =
       CfnTemplate.SankeyDiagramFieldWellsProperty.builder()
 
+  /**
+   * @param sankeyDiagramAggregatedFieldWells The field well configuration of a sankey diagram.
+   */
   public fun sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells: IResolvable) {
     cdkBuilder.sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells)
   }
 
+  /**
+   * @param sankeyDiagramAggregatedFieldWells The field well configuration of a sankey diagram.
+   */
   public
       fun sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells: CfnTemplate.SankeyDiagramAggregatedFieldWellsProperty) {
     cdkBuilder.sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells)

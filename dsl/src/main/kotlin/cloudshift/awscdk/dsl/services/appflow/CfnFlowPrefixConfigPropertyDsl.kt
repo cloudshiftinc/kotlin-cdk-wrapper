@@ -15,18 +15,32 @@ public class CfnFlowPrefixConfigPropertyDsl {
 
   private val _pathPrefixHierarchy: MutableList<String> = mutableListOf()
 
+  /**
+   * @param pathPrefixHierarchy the value to be set.
+   */
   public fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String) {
     _pathPrefixHierarchy.addAll(listOf(*pathPrefixHierarchy))
   }
 
+  /**
+   * @param pathPrefixHierarchy the value to be set.
+   */
   public fun pathPrefixHierarchy(pathPrefixHierarchy: Collection<String>) {
     _pathPrefixHierarchy.addAll(pathPrefixHierarchy)
   }
 
+  /**
+   * @param prefixFormat Determines the level of granularity for the date and time that's included
+   * in the prefix.
+   */
   public fun prefixFormat(prefixFormat: String) {
     cdkBuilder.prefixFormat(prefixFormat)
   }
 
+  /**
+   * @param prefixType Determines the format of the prefix, and whether it applies to the file name,
+   * file path, or both.
+   */
   public fun prefixType(prefixType: String) {
     cdkBuilder.prefixType(prefixType)
   }

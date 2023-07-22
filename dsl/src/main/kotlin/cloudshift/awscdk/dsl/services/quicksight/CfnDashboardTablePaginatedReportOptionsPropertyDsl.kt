@@ -11,10 +11,16 @@ public class CfnDashboardTablePaginatedReportOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.TablePaginatedReportOptionsProperty.Builder =
       CfnDashboard.TablePaginatedReportOptionsProperty.builder()
 
+  /**
+   * @param overflowColumnHeaderVisibility The visibility of repeating header rows on each page.
+   */
   public fun overflowColumnHeaderVisibility(overflowColumnHeaderVisibility: String) {
     cdkBuilder.overflowColumnHeaderVisibility(overflowColumnHeaderVisibility)
   }
 
+  /**
+   * @param verticalOverflowVisibility The visibility of printing table overflow across pages.
+   */
   public fun verticalOverflowVisibility(verticalOverflowVisibility: String) {
     cdkBuilder.verticalOverflowVisibility(verticalOverflowVisibility)
   }

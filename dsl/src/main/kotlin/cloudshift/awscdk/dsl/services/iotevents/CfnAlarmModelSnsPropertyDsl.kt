@@ -11,14 +11,25 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 public class CfnAlarmModelSnsPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.SnsProperty.Builder = CfnAlarmModel.SnsProperty.builder()
 
+  /**
+   * @param payload You can configure the action payload when you send a message as an Amazon SNS
+   * push notification.
+   */
   public fun payload(payload: IResolvable) {
     cdkBuilder.payload(payload)
   }
 
+  /**
+   * @param payload You can configure the action payload when you send a message as an Amazon SNS
+   * push notification.
+   */
   public fun payload(payload: CfnAlarmModel.PayloadProperty) {
     cdkBuilder.payload(payload)
   }
 
+  /**
+   * @param targetArn The ARN of the Amazon SNS target where the message is sent. 
+   */
   public fun targetArn(targetArn: String) {
     cdkBuilder.targetArn(targetArn)
   }

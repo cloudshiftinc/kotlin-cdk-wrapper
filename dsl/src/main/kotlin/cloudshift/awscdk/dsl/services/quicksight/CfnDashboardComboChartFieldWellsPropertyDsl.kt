@@ -11,10 +11,20 @@ public class CfnDashboardComboChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.ComboChartFieldWellsProperty.Builder =
       CfnDashboard.ComboChartFieldWellsProperty.builder()
 
+  /**
+   * @param comboChartAggregatedFieldWells The aggregated field wells of a combo chart.
+   * Combo charts only have aggregated field wells. Columns in a combo chart are aggregated by
+   * category.
+   */
   public fun comboChartAggregatedFieldWells(comboChartAggregatedFieldWells: IResolvable) {
     cdkBuilder.comboChartAggregatedFieldWells(comboChartAggregatedFieldWells)
   }
 
+  /**
+   * @param comboChartAggregatedFieldWells The aggregated field wells of a combo chart.
+   * Combo charts only have aggregated field wells. Columns in a combo chart are aggregated by
+   * category.
+   */
   public
       fun comboChartAggregatedFieldWells(comboChartAggregatedFieldWells: CfnDashboard.ComboChartAggregatedFieldWellsProperty) {
     cdkBuilder.comboChartAggregatedFieldWells(comboChartAggregatedFieldWells)

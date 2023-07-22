@@ -12,14 +12,23 @@ public class CfnDataSourceAuroraPostgreSqlParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.AuroraPostgreSqlParametersProperty.Builder =
       CfnDataSource.AuroraPostgreSqlParametersProperty.builder()
 
+  /**
+   * @param database The Amazon Aurora PostgreSQL database to connect to. 
+   */
   public fun database(database: String) {
     cdkBuilder.database(database)
   }
 
+  /**
+   * @param host The Amazon Aurora PostgreSQL-Compatible host to connect to. 
+   */
   public fun host(host: String) {
     cdkBuilder.host(host)
   }
 
+  /**
+   * @param port The port that Amazon Aurora PostgreSQL is listening on. 
+   */
   public fun port(port: Number) {
     cdkBuilder.port(port)
   }

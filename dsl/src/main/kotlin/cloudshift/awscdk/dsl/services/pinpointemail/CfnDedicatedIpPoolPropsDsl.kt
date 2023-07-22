@@ -16,14 +16,25 @@ public class CfnDedicatedIpPoolPropsDsl {
 
   private val _tags: MutableList<CfnDedicatedIpPool.TagsProperty> = mutableListOf()
 
+  /**
+   * @param poolName The name of the dedicated IP pool.
+   */
   public fun poolName(poolName: String) {
     cdkBuilder.poolName(poolName)
   }
 
+  /**
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the dedicated IP pool.
+   */
   public fun tags(tags: CfnDedicatedIpPoolTagsPropertyDsl.() -> Unit) {
     _tags.add(CfnDedicatedIpPoolTagsPropertyDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An object that defines the tags (keys and values) that you want to associate with
+   * the dedicated IP pool.
+   */
   public fun tags(tags: Collection<CfnDedicatedIpPool.TagsProperty>) {
     _tags.addAll(tags)
   }

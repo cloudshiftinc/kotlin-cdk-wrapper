@@ -11,10 +11,22 @@ public class CfnLocationHDFSQopConfigurationPropertyDsl {
   private val cdkBuilder: CfnLocationHDFS.QopConfigurationProperty.Builder =
       CfnLocationHDFS.QopConfigurationProperty.builder()
 
+  /**
+   * @param dataTransferProtection The data transfer protection setting configured on the HDFS
+   * cluster.
+   * This setting corresponds to your `dfs.data.transfer.protection` setting in the `hdfs-site.xml`
+   * file on your Hadoop cluster.
+   */
   public fun dataTransferProtection(dataTransferProtection: String) {
     cdkBuilder.dataTransferProtection(dataTransferProtection)
   }
 
+  /**
+   * @param rpcProtection The Remote Procedure Call (RPC) protection setting configured on the HDFS
+   * cluster.
+   * This setting corresponds to your `hadoop.rpc.protection` setting in your `core-site.xml` file
+   * on your Hadoop cluster.
+   */
   public fun rpcProtection(rpcProtection: String) {
     cdkBuilder.rpcProtection(rpcProtection)
   }

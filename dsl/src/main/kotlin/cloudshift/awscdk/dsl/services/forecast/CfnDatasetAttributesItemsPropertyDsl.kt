@@ -11,10 +11,16 @@ public class CfnDatasetAttributesItemsPropertyDsl {
   private val cdkBuilder: CfnDataset.AttributesItemsProperty.Builder =
       CfnDataset.AttributesItemsProperty.builder()
 
+  /**
+   * @param attributeName Name of the dataset field.
+   */
   public fun attributeName(attributeName: String) {
     cdkBuilder.attributeName(attributeName)
   }
 
+  /**
+   * @param attributeType Data type of the field.
+   */
   public fun attributeType(attributeType: String) {
     cdkBuilder.attributeType(attributeType)
   }

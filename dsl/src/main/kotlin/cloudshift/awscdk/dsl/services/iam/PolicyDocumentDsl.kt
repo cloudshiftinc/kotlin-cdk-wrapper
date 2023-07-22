@@ -16,18 +16,57 @@ public class PolicyDocumentDsl {
 
   private val _statements: MutableList<PolicyStatement> = mutableListOf()
 
+  /**
+   * Automatically assign Statement Ids to all statements.
+   *
+   * Default: false
+   *
+   * @param assignSids Automatically assign Statement Ids to all statements. 
+   */
   public fun assignSids(assignSids: Boolean) {
     cdkBuilder.assignSids(assignSids)
   }
 
+  /**
+   * Try to minimize the policy by merging statements.
+   *
+   * To avoid overrunning the maximum policy size, combine statements if they produce
+   * the same result. Merging happens according to the following rules:
+   *
+   * * The Effect of both statements is the same
+   * * Neither of the statements have a 'Sid'
+   * * Combine Principals if the rest of the statement is exactly the same.
+   * * Combine Resources if the rest of the statement is exactly the same.
+   * * Combine Actions if the rest of the statement is exactly the same.
+   * * We will never combine NotPrincipals, NotResources or NotActions, because doing
+   * so would change the meaning of the policy document.
+   *
+   * Default: - false, unless the feature flag `@aws-cdk/aws-iam:minimizePolicies` is set
+   *
+   * @param minimize Try to minimize the policy by merging statements. 
+   */
   public fun minimize(minimize: Boolean) {
     cdkBuilder.minimize(minimize)
   }
 
+  /**
+   * Initial statements to add to the policy document.
+   *
+   * Default: - No statements
+   *
+   * @param statements Initial statements to add to the policy document. 
+   */
   public fun statements(statements: PolicyStatementDsl.() -> Unit) {
     _statements.add(PolicyStatementDsl().apply(statements).build())
   }
 
+  /**
+   * Initial statements to add to the policy document.
+   *
+   * Default: - No statements
+   *
+   * @param statements Initial statements to add to the policy document. 
+   */
   public fun statements(statements: Collection<PolicyStatement>) {
     _statements.addAll(statements)
   }

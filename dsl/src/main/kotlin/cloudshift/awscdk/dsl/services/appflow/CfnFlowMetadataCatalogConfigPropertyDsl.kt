@@ -11,10 +11,16 @@ public class CfnFlowMetadataCatalogConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.MetadataCatalogConfigProperty.Builder =
       CfnFlow.MetadataCatalogConfigProperty.builder()
 
+  /**
+   * @param glueDataCatalog Trigger settings of the flow.
+   */
   public fun glueDataCatalog(glueDataCatalog: IResolvable) {
     cdkBuilder.glueDataCatalog(glueDataCatalog)
   }
 
+  /**
+   * @param glueDataCatalog Trigger settings of the flow.
+   */
   public fun glueDataCatalog(glueDataCatalog: CfnFlow.GlueDataCatalogProperty) {
     cdkBuilder.glueDataCatalog(glueDataCatalog)
   }

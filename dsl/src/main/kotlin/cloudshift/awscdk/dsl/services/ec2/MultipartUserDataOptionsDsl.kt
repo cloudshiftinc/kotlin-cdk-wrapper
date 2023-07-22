@@ -10,6 +10,12 @@ import software.amazon.awscdk.services.ec2.MultipartUserDataOptions
 public class MultipartUserDataOptionsDsl {
   private val cdkBuilder: MultipartUserDataOptions.Builder = MultipartUserDataOptions.builder()
 
+  /**
+   * @param partsSeparator The string used to separate parts in multipart user data archive (it's
+   * like MIME boundary).
+   * This string should contain [a-zA-Z0-9()+,-./:=?] characters only, and should not be present in
+   * any part, or in text content of archive.
+   */
   public fun partsSeparator(partsSeparator: String) {
     cdkBuilder.partsSeparator(partsSeparator)
   }

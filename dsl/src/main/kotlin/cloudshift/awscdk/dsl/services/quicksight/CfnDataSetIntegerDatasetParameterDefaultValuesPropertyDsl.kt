@@ -16,14 +16,23 @@ public class CfnDataSetIntegerDatasetParameterDefaultValuesPropertyDsl {
 
   private val _staticValues: MutableList<Number> = mutableListOf()
 
+  /**
+   * @param staticValues the value to be set.
+   */
   public fun staticValues(vararg staticValues: Number) {
     _staticValues.addAll(listOf(*staticValues))
   }
 
+  /**
+   * @param staticValues the value to be set.
+   */
   public fun staticValues(staticValues: Collection<Number>) {
     _staticValues.addAll(staticValues)
   }
 
+  /**
+   * @param staticValues the value to be set.
+   */
   public fun staticValues(staticValues: IResolvable) {
     cdkBuilder.staticValues(staticValues)
   }

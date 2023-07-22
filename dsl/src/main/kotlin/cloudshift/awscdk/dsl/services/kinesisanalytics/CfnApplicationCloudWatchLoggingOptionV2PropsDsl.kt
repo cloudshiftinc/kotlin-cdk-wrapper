@@ -13,14 +13,25 @@ public class CfnApplicationCloudWatchLoggingOptionV2PropsDsl {
   private val cdkBuilder: CfnApplicationCloudWatchLoggingOptionV2Props.Builder =
       CfnApplicationCloudWatchLoggingOptionV2Props.builder()
 
+  /**
+   * @param applicationName The name of the application. 
+   */
   public fun applicationName(applicationName: String) {
     cdkBuilder.applicationName(applicationName)
   }
 
+  /**
+   * @param cloudWatchLoggingOption Provides a description of Amazon CloudWatch logging options,
+   * including the log stream Amazon Resource Name (ARN). 
+   */
   public fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
     cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption)
   }
 
+  /**
+   * @param cloudWatchLoggingOption Provides a description of Amazon CloudWatch logging options,
+   * including the log stream Amazon Resource Name (ARN). 
+   */
   public
       fun cloudWatchLoggingOption(cloudWatchLoggingOption: CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty) {
     cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption)

@@ -11,6 +11,10 @@ public class CfnDataSetFilterOperationPropertyDsl {
   private val cdkBuilder: CfnDataSet.FilterOperationProperty.Builder =
       CfnDataSet.FilterOperationProperty.builder()
 
+  /**
+   * @param conditionExpression An expression that must evaluate to a Boolean value. 
+   * Rows for which the expression evaluates to true are kept in the dataset.
+   */
   public fun conditionExpression(conditionExpression: String) {
     cdkBuilder.conditionExpression(conditionExpression)
   }

@@ -16,22 +16,59 @@ public class CfnPortfolioShareDsl(
 ) {
   private val cdkBuilder: CfnPortfolioShare.Builder = CfnPortfolioShare.Builder.create(scope, id)
 
+  /**
+   * The language code.
+   *
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-acceptlanguage)
+   * @param acceptLanguage The language code. 
+   */
   public fun acceptLanguage(acceptLanguage: String) {
     cdkBuilder.acceptLanguage(acceptLanguage)
   }
 
+  /**
+   * The AWS account ID.
+   *
+   * For example, `123456789012` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-accountid)
+   * @param accountId The AWS account ID. 
+   */
   public fun accountId(accountId: String) {
     cdkBuilder.accountId(accountId)
   }
 
+  /**
+   * The portfolio identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-portfolioid)
+   * @param portfolioId The portfolio identifier. 
+   */
   public fun portfolioId(portfolioId: String) {
     cdkBuilder.portfolioId(portfolioId)
   }
 
+  /**
+   * Indicates whether TagOptions sharing is enabled or disabled for the portfolio share.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-sharetagoptions)
+   * @param shareTagOptions Indicates whether TagOptions sharing is enabled or disabled for the
+   * portfolio share. 
+   */
   public fun shareTagOptions(shareTagOptions: Boolean) {
     cdkBuilder.shareTagOptions(shareTagOptions)
   }
 
+  /**
+   * Indicates whether TagOptions sharing is enabled or disabled for the portfolio share.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-sharetagoptions)
+   * @param shareTagOptions Indicates whether TagOptions sharing is enabled or disabled for the
+   * portfolio share. 
+   */
   public fun shareTagOptions(shareTagOptions: IResolvable) {
     cdkBuilder.shareTagOptions(shareTagOptions)
   }

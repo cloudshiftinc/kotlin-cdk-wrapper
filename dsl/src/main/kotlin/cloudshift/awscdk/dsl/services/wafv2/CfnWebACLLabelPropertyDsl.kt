@@ -10,6 +10,9 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
 public class CfnWebACLLabelPropertyDsl {
   private val cdkBuilder: CfnWebACL.LabelProperty.Builder = CfnWebACL.LabelProperty.builder()
 
+  /**
+   * @param name The label string. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }

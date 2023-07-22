@@ -13,20 +13,32 @@ public class AssetManifestFileDestinationDsl {
   private val cdkBuilder: AssetManifestFileDestination.Builder =
       AssetManifestFileDestination.builder()
 
+  /**
+   * @param bucketName Bucket name where the file asset should be written. 
+   */
   public fun bucketName(bucketName: String) {
     cdkBuilder.bucketName(bucketName)
   }
 
+  /**
+   * @param bucketPrefix Prefix to prepend to the asset hash.
+   */
   public fun bucketPrefix(bucketPrefix: String) {
     cdkBuilder.bucketPrefix(bucketPrefix)
   }
 
-  public fun role(block: RoleOptionsDsl.() -> Unit = {}) {
+  /**
+   * @param role Role to use for uploading.
+   */
+  public fun role(role: RoleOptionsDsl.() -> Unit = {}) {
     val builder = RoleOptionsDsl()
-    builder.apply(block)
+    builder.apply(role)
     cdkBuilder.role(builder.build())
   }
 
+  /**
+   * @param role Role to use for uploading.
+   */
   public fun role(role: RoleOptions) {
     cdkBuilder.role(role)
   }

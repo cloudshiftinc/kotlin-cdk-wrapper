@@ -11,18 +11,30 @@ public class CfnTemplateSeriesItemPropertyDsl {
   private val cdkBuilder: CfnTemplate.SeriesItemProperty.Builder =
       CfnTemplate.SeriesItemProperty.builder()
 
+  /**
+   * @param dataFieldSeriesItem The data field series item configuration of a line chart.
+   */
   public fun dataFieldSeriesItem(dataFieldSeriesItem: IResolvable) {
     cdkBuilder.dataFieldSeriesItem(dataFieldSeriesItem)
   }
 
+  /**
+   * @param dataFieldSeriesItem The data field series item configuration of a line chart.
+   */
   public fun dataFieldSeriesItem(dataFieldSeriesItem: CfnTemplate.DataFieldSeriesItemProperty) {
     cdkBuilder.dataFieldSeriesItem(dataFieldSeriesItem)
   }
 
+  /**
+   * @param fieldSeriesItem The field series item configuration of a line chart.
+   */
   public fun fieldSeriesItem(fieldSeriesItem: IResolvable) {
     cdkBuilder.fieldSeriesItem(fieldSeriesItem)
   }
 
+  /**
+   * @param fieldSeriesItem The field series item configuration of a line chart.
+   */
   public fun fieldSeriesItem(fieldSeriesItem: CfnTemplate.FieldSeriesItemProperty) {
     cdkBuilder.fieldSeriesItem(fieldSeriesItem)
   }

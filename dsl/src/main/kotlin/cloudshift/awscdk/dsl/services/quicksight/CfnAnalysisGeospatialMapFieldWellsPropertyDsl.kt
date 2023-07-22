@@ -11,10 +11,16 @@ public class CfnAnalysisGeospatialMapFieldWellsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GeospatialMapFieldWellsProperty.Builder =
       CfnAnalysis.GeospatialMapFieldWellsProperty.builder()
 
+  /**
+   * @param geospatialMapAggregatedFieldWells The aggregated field well for a geospatial map.
+   */
   public fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: IResolvable) {
     cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)
   }
 
+  /**
+   * @param geospatialMapAggregatedFieldWells The aggregated field well for a geospatial map.
+   */
   public
       fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: CfnAnalysis.GeospatialMapAggregatedFieldWellsProperty) {
     cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)

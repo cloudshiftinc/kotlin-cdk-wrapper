@@ -12,14 +12,27 @@ public class CfnBucketDefaultRetentionPropertyDsl {
   private val cdkBuilder: CfnBucket.DefaultRetentionProperty.Builder =
       CfnBucket.DefaultRetentionProperty.builder()
 
+  /**
+   * @param days The number of days that you want to specify for the default retention period.
+   * If Object Lock is turned on, you must specify `Mode` and specify either `Days` or `Years` .
+   */
   public fun days(days: Number) {
     cdkBuilder.days(days)
   }
 
+  /**
+   * @param mode The default Object Lock retention mode you want to apply to new objects placed in
+   * the specified bucket.
+   * If Object Lock is turned on, you must specify `Mode` and specify either `Days` or `Years` .
+   */
   public fun mode(mode: String) {
     cdkBuilder.mode(mode)
   }
 
+  /**
+   * @param years The number of years that you want to specify for the default retention period.
+   * If Object Lock is turned on, you must specify `Mode` and specify either `Days` or `Years` .
+   */
   public fun years(years: Number) {
     cdkBuilder.years(years)
   }

@@ -23,26 +23,62 @@ public class CfnDBSubnetGroupDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * Provides the description of the DB subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-dbsubnetgroupdescription)
+   * @param dbSubnetGroupDescription Provides the description of the DB subnet group. 
+   */
   public fun dbSubnetGroupDescription(dbSubnetGroupDescription: String) {
     cdkBuilder.dbSubnetGroupDescription(dbSubnetGroupDescription)
   }
 
+  /**
+   * The name of the DB subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-dbsubnetgroupname)
+   * @param dbSubnetGroupName The name of the DB subnet group. 
+   */
   public fun dbSubnetGroupName(dbSubnetGroupName: String) {
     cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
   }
 
+  /**
+   * The Amazon EC2 subnet IDs for the DB subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-subnetids)
+   * @param subnetIds The Amazon EC2 subnet IDs for the DB subnet group. 
+   */
   public fun subnetIds(vararg subnetIds: String) {
     _subnetIds.addAll(listOf(*subnetIds))
   }
 
+  /**
+   * The Amazon EC2 subnet IDs for the DB subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-subnetids)
+   * @param subnetIds The Amazon EC2 subnet IDs for the DB subnet group. 
+   */
   public fun subnetIds(subnetIds: Collection<String>) {
     _subnetIds.addAll(subnetIds)
   }
 
+  /**
+   * The tags that you want to attach to the DB subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-tags)
+   * @param tags The tags that you want to attach to the DB subnet group. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * The tags that you want to attach to the DB subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-tags)
+   * @param tags The tags that you want to attach to the DB subnet group. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

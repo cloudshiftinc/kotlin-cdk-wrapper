@@ -17,18 +17,40 @@ public class CfnDistributionQueryStringObjectPropertyDsl {
 
   private val _queryStringsAllowList: MutableList<String> = mutableListOf()
 
+  /**
+   * @param option Indicates whether the distribution forwards and caches based on query strings.
+   */
   public fun option(option: Boolean) {
     cdkBuilder.option(option)
   }
 
+  /**
+   * @param option Indicates whether the distribution forwards and caches based on query strings.
+   */
   public fun option(option: IResolvable) {
     cdkBuilder.option(option)
   }
 
+  /**
+   * @param queryStringsAllowList The specific query strings that the distribution forwards to the
+   * origin.
+   * Your distribution caches content based on the specified query strings.
+   *
+   * If the `option` parameter is true, then your distribution forwards all query strings,
+   * regardless of what you specify using the `QueryStringsAllowList` parameter.
+   */
   public fun queryStringsAllowList(vararg queryStringsAllowList: String) {
     _queryStringsAllowList.addAll(listOf(*queryStringsAllowList))
   }
 
+  /**
+   * @param queryStringsAllowList The specific query strings that the distribution forwards to the
+   * origin.
+   * Your distribution caches content based on the specified query strings.
+   *
+   * If the `option` parameter is true, then your distribution forwards all query strings,
+   * regardless of what you specify using the `QueryStringsAllowList` parameter.
+   */
   public fun queryStringsAllowList(queryStringsAllowList: Collection<String>) {
     _queryStringsAllowList.addAll(queryStringsAllowList)
   }

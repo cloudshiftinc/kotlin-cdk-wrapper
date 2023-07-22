@@ -13,14 +13,23 @@ public class CfnConnectorCloudWatchLogsLogDeliveryPropertyDsl {
   private val cdkBuilder: CfnConnector.CloudWatchLogsLogDeliveryProperty.Builder =
       CfnConnector.CloudWatchLogsLogDeliveryProperty.builder()
 
+  /**
+   * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
+   */
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
+   */
   public fun enabled(enabled: IResolvable) {
     cdkBuilder.enabled(enabled)
   }
 
+  /**
+   * @param logGroup The name of the CloudWatch log group that is the destination for log delivery.
+   */
   public fun logGroup(logGroup: String) {
     cdkBuilder.logGroup(logGroup)
   }

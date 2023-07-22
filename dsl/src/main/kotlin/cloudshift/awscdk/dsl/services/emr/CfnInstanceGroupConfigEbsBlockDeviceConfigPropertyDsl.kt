@@ -12,15 +12,29 @@ public class CfnInstanceGroupConfigEbsBlockDeviceConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.Builder =
       CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.builder()
 
+  /**
+   * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB) and
+   * throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2 instance in the
+   * cluster. 
+   */
   public fun volumeSpecification(volumeSpecification: IResolvable) {
     cdkBuilder.volumeSpecification(volumeSpecification)
   }
 
+  /**
+   * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB) and
+   * throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2 instance in the
+   * cluster. 
+   */
   public
       fun volumeSpecification(volumeSpecification: CfnInstanceGroupConfig.VolumeSpecificationProperty) {
     cdkBuilder.volumeSpecification(volumeSpecification)
   }
 
+  /**
+   * @param volumesPerInstance Number of EBS volumes with a specific volume configuration that are
+   * associated with every instance in the instance group.
+   */
   public fun volumesPerInstance(volumesPerInstance: Number) {
     cdkBuilder.volumesPerInstance(volumesPerInstance)
   }

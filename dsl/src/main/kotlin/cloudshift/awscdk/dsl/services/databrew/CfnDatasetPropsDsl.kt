@@ -19,42 +19,78 @@ public class CfnDatasetPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param format The file format of a dataset that is created from an Amazon S3 file or folder.
+   */
   public fun format(format: String) {
     cdkBuilder.format(format)
   }
 
+  /**
+   * @param formatOptions A set of options that define how DataBrew interprets the data in the
+   * dataset.
+   */
   public fun formatOptions(formatOptions: IResolvable) {
     cdkBuilder.formatOptions(formatOptions)
   }
 
+  /**
+   * @param formatOptions A set of options that define how DataBrew interprets the data in the
+   * dataset.
+   */
   public fun formatOptions(formatOptions: CfnDataset.FormatOptionsProperty) {
     cdkBuilder.formatOptions(formatOptions)
   }
 
+  /**
+   * @param input Information on how DataBrew can find the dataset, in either the AWS Glue Data
+   * Catalog or Amazon S3 . 
+   */
   public fun input(input: IResolvable) {
     cdkBuilder.input(input)
   }
 
+  /**
+   * @param input Information on how DataBrew can find the dataset, in either the AWS Glue Data
+   * Catalog or Amazon S3 . 
+   */
   public fun input(input: CfnDataset.InputProperty) {
     cdkBuilder.input(input)
   }
 
+  /**
+   * @param name The unique name of the dataset. 
+   */
   public fun name(name: String) {
     cdkBuilder.name(name)
   }
 
+  /**
+   * @param pathOptions A set of options that defines how DataBrew interprets an Amazon S3 path of
+   * the dataset.
+   */
   public fun pathOptions(pathOptions: IResolvable) {
     cdkBuilder.pathOptions(pathOptions)
   }
 
+  /**
+   * @param pathOptions A set of options that defines how DataBrew interprets an Amazon S3 path of
+   * the dataset.
+   */
   public fun pathOptions(pathOptions: CfnDataset.PathOptionsProperty) {
     cdkBuilder.pathOptions(pathOptions)
   }
 
+  /**
+   * @param tags Metadata tags that have been applied to the dataset.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags Metadata tags that have been applied to the dataset.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

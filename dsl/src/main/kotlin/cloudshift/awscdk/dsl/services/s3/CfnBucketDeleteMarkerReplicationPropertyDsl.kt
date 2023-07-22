@@ -11,6 +11,10 @@ public class CfnBucketDeleteMarkerReplicationPropertyDsl {
   private val cdkBuilder: CfnBucket.DeleteMarkerReplicationProperty.Builder =
       CfnBucket.DeleteMarkerReplicationProperty.builder()
 
+  /**
+   * @param status Indicates whether to replicate delete markers.
+   * Disabled by default.
+   */
   public fun status(status: String) {
     cdkBuilder.status(status)
   }

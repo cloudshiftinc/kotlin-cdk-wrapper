@@ -17,18 +17,34 @@ public class CfnWorkspaceRoleValuesPropertyDsl {
 
   private val _editor: MutableList<String> = mutableListOf()
 
+  /**
+   * @param admin A list of groups from the SAML assertion attribute to grant the Grafana `Admin`
+   * role to.
+   */
   public fun admin(vararg admin: String) {
     _admin.addAll(listOf(*admin))
   }
 
+  /**
+   * @param admin A list of groups from the SAML assertion attribute to grant the Grafana `Admin`
+   * role to.
+   */
   public fun admin(admin: Collection<String>) {
     _admin.addAll(admin)
   }
 
+  /**
+   * @param editor A list of groups from the SAML assertion attribute to grant the Grafana `Editor`
+   * role to.
+   */
   public fun editor(vararg editor: String) {
     _editor.addAll(listOf(*editor))
   }
 
+  /**
+   * @param editor A list of groups from the SAML assertion attribute to grant the Grafana `Editor`
+   * role to.
+   */
   public fun editor(editor: Collection<String>) {
     _editor.addAll(editor)
   }

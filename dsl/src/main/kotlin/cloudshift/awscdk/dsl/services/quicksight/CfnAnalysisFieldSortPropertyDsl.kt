@@ -11,10 +11,18 @@ public class CfnAnalysisFieldSortPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FieldSortProperty.Builder =
       CfnAnalysis.FieldSortProperty.builder()
 
+  /**
+   * @param direction The sort direction. Choose one of the following options:. 
+   * * `ASC` : Ascending
+   * * `DESC` : Descending
+   */
   public fun direction(direction: String) {
     cdkBuilder.direction(direction)
   }
 
+  /**
+   * @param fieldId The sort configuration target field. 
+   */
   public fun fieldId(fieldId: String) {
     cdkBuilder.fieldId(fieldId)
   }

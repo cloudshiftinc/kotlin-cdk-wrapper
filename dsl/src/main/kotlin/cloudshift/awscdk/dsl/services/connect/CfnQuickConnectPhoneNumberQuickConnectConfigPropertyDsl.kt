@@ -11,6 +11,9 @@ public class CfnQuickConnectPhoneNumberQuickConnectConfigPropertyDsl {
   private val cdkBuilder: CfnQuickConnect.PhoneNumberQuickConnectConfigProperty.Builder =
       CfnQuickConnect.PhoneNumberQuickConnectConfigProperty.builder()
 
+  /**
+   * @param phoneNumber The phone number in E.164 format. 
+   */
   public fun phoneNumber(phoneNumber: String) {
     cdkBuilder.phoneNumber(phoneNumber)
   }

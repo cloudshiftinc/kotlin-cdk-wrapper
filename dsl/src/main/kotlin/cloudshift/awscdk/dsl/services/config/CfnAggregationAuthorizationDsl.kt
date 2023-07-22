@@ -22,18 +22,43 @@ public class CfnAggregationAuthorizationDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * The 12-digit account ID of the account authorized to aggregate data.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-authorizedaccountid)
+   * @param authorizedAccountId The 12-digit account ID of the account authorized to aggregate data.
+   * 
+   */
   public fun authorizedAccountId(authorizedAccountId: String) {
     cdkBuilder.authorizedAccountId(authorizedAccountId)
   }
 
+  /**
+   * The region authorized to collect aggregated data.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-authorizedawsregion)
+   * @param authorizedAwsRegion The region authorized to collect aggregated data. 
+   */
   public fun authorizedAwsRegion(authorizedAwsRegion: String) {
     cdkBuilder.authorizedAwsRegion(authorizedAwsRegion)
   }
 
+  /**
+   * An array of tag object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-tags)
+   * @param tags An array of tag object. 
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * An array of tag object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-tags)
+   * @param tags An array of tag object. 
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

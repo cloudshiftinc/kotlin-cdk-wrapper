@@ -17,22 +17,40 @@ public class CfnStoredQueryPropsDsl {
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  /**
+   * @param queryDescription A unique description for the query.
+   */
   public fun queryDescription(queryDescription: String) {
     cdkBuilder.queryDescription(queryDescription)
   }
 
+  /**
+   * @param queryExpression The expression of the query. 
+   * For example, `SELECT resourceId, resourceType,
+   * supplementaryConfiguration.BucketVersioningConfiguration.status WHERE resourceType =
+   * 'AWS::S3::Bucket' AND supplementaryConfiguration.BucketVersioningConfiguration.status = 'Off'.`
+   */
   public fun queryExpression(queryExpression: String) {
     cdkBuilder.queryExpression(queryExpression)
   }
 
+  /**
+   * @param queryName The name of the query. 
+   */
   public fun queryName(queryName: String) {
     cdkBuilder.queryName(queryName)
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   */
   public fun tags(tags: CfnTagDsl.() -> Unit) {
     _tags.add(CfnTagDsl().apply(tags).build())
   }
 
+  /**
+   * @param tags An array of key-value pairs to apply to this resource.
+   */
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
   }

@@ -11,6 +11,9 @@ public class CfnAnalysisListControlSearchOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ListControlSearchOptionsProperty.Builder =
       CfnAnalysis.ListControlSearchOptionsProperty.builder()
 
+  /**
+   * @param visibility The visibility configuration of the search options in a list control.
+   */
   public fun visibility(visibility: String) {
     cdkBuilder.visibility(visibility)
   }

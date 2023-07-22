@@ -13,38 +13,67 @@ public class CfnTemplateFilterSliderControlPropertyDsl {
   private val cdkBuilder: CfnTemplate.FilterSliderControlProperty.Builder =
       CfnTemplate.FilterSliderControlProperty.builder()
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: IResolvable) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param displayOptions The display options of a control.
+   */
   public fun displayOptions(displayOptions: CfnTemplate.SliderControlDisplayOptionsProperty) {
     cdkBuilder.displayOptions(displayOptions)
   }
 
+  /**
+   * @param filterControlId The ID of the `FilterSliderControl` . 
+   */
   public fun filterControlId(filterControlId: String) {
     cdkBuilder.filterControlId(filterControlId)
   }
 
+  /**
+   * @param maximumValue The smaller value that is displayed at the left of the slider. 
+   */
   public fun maximumValue(maximumValue: Number) {
     cdkBuilder.maximumValue(maximumValue)
   }
 
+  /**
+   * @param minimumValue The larger value that is displayed at the right of the slider. 
+   */
   public fun minimumValue(minimumValue: Number) {
     cdkBuilder.minimumValue(minimumValue)
   }
 
+  /**
+   * @param sourceFilterId The source filter ID of the `FilterSliderControl` . 
+   */
   public fun sourceFilterId(sourceFilterId: String) {
     cdkBuilder.sourceFilterId(sourceFilterId)
   }
 
+  /**
+   * @param stepSize The number of increments that the slider bar is divided into. 
+   */
   public fun stepSize(stepSize: Number) {
     cdkBuilder.stepSize(stepSize)
   }
 
+  /**
+   * @param title The title of the `FilterSliderControl` . 
+   */
   public fun title(title: String) {
     cdkBuilder.title(title)
   }
 
+  /**
+   * @param type The type of `FilterSliderControl` . Choose one of the following options:.
+   * * `SINGLE_POINT` : Filter against(equals) a single data point.
+   * * `RANGE` : Filter data that is in a specified range.
+   */
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

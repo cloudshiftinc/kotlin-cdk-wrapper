@@ -13,20 +13,32 @@ import software.amazon.awscdk.services.eventschemas.CfnRegistryPolicyProps
 public class CfnRegistryPolicyPropsDsl {
   private val cdkBuilder: CfnRegistryPolicyProps.Builder = CfnRegistryPolicyProps.builder()
 
-  public fun policy(block: MapBuilder.() -> Unit = {}) {
+  /**
+   * @param policy A resource-based policy. 
+   */
+  public fun policy(policy: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
-    builder.apply(block)
+    builder.apply(policy)
     cdkBuilder.policy(builder.map)
   }
 
+  /**
+   * @param policy A resource-based policy. 
+   */
   public fun policy(policy: Any) {
     cdkBuilder.policy(policy)
   }
 
+  /**
+   * @param registryName The name of the registry. 
+   */
   public fun registryName(registryName: String) {
     cdkBuilder.registryName(registryName)
   }
 
+  /**
+   * @param revisionId The revision ID of the policy.
+   */
   public fun revisionId(revisionId: String) {
     cdkBuilder.revisionId(revisionId)
   }

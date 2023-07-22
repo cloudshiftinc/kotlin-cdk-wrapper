@@ -11,10 +11,16 @@ public class CfnVirtualGatewayVirtualGatewayLoggingPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayLoggingProperty.Builder =
       CfnVirtualGateway.VirtualGatewayLoggingProperty.builder()
 
+  /**
+   * @param accessLog The access log configuration.
+   */
   public fun accessLog(accessLog: IResolvable) {
     cdkBuilder.accessLog(accessLog)
   }
 
+  /**
+   * @param accessLog The access log configuration.
+   */
   public fun accessLog(accessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty) {
     cdkBuilder.accessLog(accessLog)
   }

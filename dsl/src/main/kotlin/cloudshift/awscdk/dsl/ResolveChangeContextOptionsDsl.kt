@@ -11,10 +11,16 @@ public class ResolveChangeContextOptionsDsl {
   private val cdkBuilder: ResolveChangeContextOptions.Builder =
       ResolveChangeContextOptions.builder()
 
+  /**
+   * @param allowIntrinsicKeys Change the 'allowIntrinsicKeys' option.
+   */
   public fun allowIntrinsicKeys(allowIntrinsicKeys: Boolean) {
     cdkBuilder.allowIntrinsicKeys(allowIntrinsicKeys)
   }
 
+  /**
+   * @param removeEmpty Whether to remove undefined elements from arrays and objects when resolving.
+   */
   public fun removeEmpty(removeEmpty: Boolean) {
     cdkBuilder.removeEmpty(removeEmpty)
   }

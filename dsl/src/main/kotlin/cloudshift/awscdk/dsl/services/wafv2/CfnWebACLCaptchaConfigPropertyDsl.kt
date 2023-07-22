@@ -11,10 +11,18 @@ public class CfnWebACLCaptchaConfigPropertyDsl {
   private val cdkBuilder: CfnWebACL.CaptchaConfigProperty.Builder =
       CfnWebACL.CaptchaConfigProperty.builder()
 
+  /**
+   * @param immunityTimeProperty Determines how long a `CAPTCHA` timestamp in the token remains
+   * valid after the client successfully solves a `CAPTCHA` puzzle.
+   */
   public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
     cdkBuilder.immunityTimeProperty(immunityTimeProperty)
   }
 
+  /**
+   * @param immunityTimeProperty Determines how long a `CAPTCHA` timestamp in the token remains
+   * valid after the client successfully solves a `CAPTCHA` puzzle.
+   */
   public fun immunityTimeProperty(immunityTimeProperty: CfnWebACL.ImmunityTimePropertyProperty) {
     cdkBuilder.immunityTimeProperty(immunityTimeProperty)
   }

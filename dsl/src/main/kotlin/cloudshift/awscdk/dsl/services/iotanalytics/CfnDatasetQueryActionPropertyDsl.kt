@@ -17,18 +17,31 @@ public class CfnDatasetQueryActionPropertyDsl {
 
   private val _filters: MutableList<Any> = mutableListOf()
 
+  /**
+   * @param filters Pre-filters applied to message data.
+   */
   public fun filters(vararg filters: Any) {
     _filters.addAll(listOf(*filters))
   }
 
+  /**
+   * @param filters Pre-filters applied to message data.
+   */
   public fun filters(filters: Collection<Any>) {
     _filters.addAll(filters)
   }
 
+  /**
+   * @param filters Pre-filters applied to message data.
+   */
   public fun filters(filters: IResolvable) {
     cdkBuilder.filters(filters)
   }
 
+  /**
+   * @param sqlQuery An "SqlQueryDatasetAction" object that uses an SQL query to automatically
+   * create data set contents. 
+   */
   public fun sqlQuery(sqlQuery: String) {
     cdkBuilder.sqlQuery(sqlQuery)
   }
