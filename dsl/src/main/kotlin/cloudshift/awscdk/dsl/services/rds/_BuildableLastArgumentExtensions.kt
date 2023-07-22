@@ -297,6 +297,13 @@ public inline fun DatabaseClusterBase.metricVolumeWriteIOPs(block: MetricOptions
   return metricVolumeWriteIOPs(builder.build())
 }
 
+/**
+ * Create the database instance within the provided cluster.
+ *
+ * @param scope 
+ * @param cluster 
+ * @param options 
+ */
 public inline fun IClusterInstance.bind(
   arg0: Construct,
   arg1: IDatabaseCluster,
@@ -307,6 +314,12 @@ public inline fun IClusterInstance.bind(
   return bind(arg0, arg1, builder.build())
 }
 
+/**
+ * Add a new db proxy to this cluster.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun IDatabaseCluster.addProxy(arg0: String, block: DatabaseProxyOptionsDsl.() -> Unit
     = {}): DatabaseProxy {
   val builder = DatabaseProxyOptionsDsl()
@@ -314,6 +327,12 @@ public inline fun IDatabaseCluster.addProxy(arg0: String, block: DatabaseProxyOp
   return addProxy(arg0, builder.build())
 }
 
+/**
+ * Return the given named metric for this DBCluster.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun IDatabaseCluster.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -321,6 +340,13 @@ public inline fun IDatabaseCluster.metric(arg0: String, block: MetricOptionsDsl.
   return metric(arg0, builder.build())
 }
 
+/**
+ * The percentage of CPU utilization.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -328,6 +354,13 @@ public inline fun IDatabaseCluster.metricCPUUtilization(block: MetricOptionsDsl.
   return metricCPUUtilization(builder.build())
 }
 
+/**
+ * The number of database connections in use.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricDatabaseConnections(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -335,6 +368,13 @@ public inline fun IDatabaseCluster.metricDatabaseConnections(block: MetricOption
   return metricDatabaseConnections(builder.build())
 }
 
+/**
+ * The average number of deadlocks in the database per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricDeadlocks(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -342,6 +382,13 @@ public inline fun IDatabaseCluster.metricDeadlocks(block: MetricOptionsDsl.() ->
   return metricDeadlocks(builder.build())
 }
 
+/**
+ * The amount of time that the instance has been running, in seconds.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricEngineUptime(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -349,6 +396,13 @@ public inline fun IDatabaseCluster.metricEngineUptime(block: MetricOptionsDsl.()
   return metricEngineUptime(builder.build())
 }
 
+/**
+ * The amount of available random access memory, in bytes.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricFreeableMemory(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -356,6 +410,13 @@ public inline fun IDatabaseCluster.metricFreeableMemory(block: MetricOptionsDsl.
   return metricFreeableMemory(builder.build())
 }
 
+/**
+ * The amount of local storage available, in bytes.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricFreeLocalStorage(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -363,6 +424,13 @@ public inline fun IDatabaseCluster.metricFreeLocalStorage(block: MetricOptionsDs
   return metricFreeLocalStorage(builder.build())
 }
 
+/**
+ * The amount of network throughput received from clients by each instance, in bytes per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricNetworkReceiveThroughput(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -370,6 +438,14 @@ public inline fun IDatabaseCluster.metricNetworkReceiveThroughput(block: MetricO
   return metricNetworkReceiveThroughput(builder.build())
 }
 
+/**
+ * The amount of network throughput both received from and transmitted to clients by each instance,
+ * in bytes per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricNetworkThroughput(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -377,6 +453,13 @@ public inline fun IDatabaseCluster.metricNetworkThroughput(block: MetricOptionsD
   return metricNetworkThroughput(builder.build())
 }
 
+/**
+ * The amount of network throughput sent to clients by each instance, in bytes per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline
     fun IDatabaseCluster.metricNetworkTransmitThroughput(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -385,6 +468,14 @@ public inline
   return metricNetworkTransmitThroughput(builder.build())
 }
 
+/**
+ * The total amount of backup storage in bytes consumed by all Aurora snapshots outside its backup
+ * retention window.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricSnapshotStorageUsed(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -392,6 +483,13 @@ public inline fun IDatabaseCluster.metricSnapshotStorageUsed(block: MetricOption
   return metricSnapshotStorageUsed(builder.build())
 }
 
+/**
+ * The total amount of backup storage in bytes for which you are billed.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricTotalBackupStorageBilled(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -399,6 +497,13 @@ public inline fun IDatabaseCluster.metricTotalBackupStorageBilled(block: MetricO
   return metricTotalBackupStorageBilled(builder.build())
 }
 
+/**
+ * The amount of storage used by your Aurora DB instance, in bytes.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricVolumeBytesUsed(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -406,6 +511,13 @@ public inline fun IDatabaseCluster.metricVolumeBytesUsed(block: MetricOptionsDsl
   return metricVolumeBytesUsed(builder.build())
 }
 
+/**
+ * The number of billed read I/O operations from a cluster volume, reported at 5-minute intervals.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricVolumeReadIOPs(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -413,6 +525,13 @@ public inline fun IDatabaseCluster.metricVolumeReadIOPs(block: MetricOptionsDsl.
   return metricVolumeReadIOPs(builder.build())
 }
 
+/**
+ * The number of write disk I/O operations to the cluster volume, reported at 5-minute intervals.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseCluster.metricVolumeWriteIOPs(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -420,6 +539,12 @@ public inline fun IDatabaseCluster.metricVolumeWriteIOPs(block: MetricOptionsDsl
   return metricVolumeWriteIOPs(builder.build())
 }
 
+/**
+ * Method called when the engine is used to create a new instance.
+ *
+ * @param scope 
+ * @param options 
+ */
 public inline fun IInstanceEngine.bindToInstance(arg0: Construct,
     block: InstanceEngineBindOptionsDsl.() -> Unit = {}): InstanceEngineConfig {
   val builder = InstanceEngineBindOptionsDsl()
@@ -453,6 +578,12 @@ public inline
   return addRotationSingleUser(builder.build())
 }
 
+/**
+ * Add a new db proxy to this instance.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun IDatabaseInstance.addProxy(arg0: String, block: DatabaseProxyOptionsDsl.() -> Unit
     = {}): DatabaseProxy {
   val builder = DatabaseProxyOptionsDsl()
@@ -460,6 +591,12 @@ public inline fun IDatabaseInstance.addProxy(arg0: String, block: DatabaseProxyO
   return addProxy(arg0, builder.build())
 }
 
+/**
+ * Return the given named metric for this DBInstance.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun IDatabaseInstance.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -467,6 +604,13 @@ public inline fun IDatabaseInstance.metric(arg0: String, block: MetricOptionsDsl
   return metric(arg0, builder.build())
 }
 
+/**
+ * The percentage of CPU utilization.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseInstance.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -474,6 +618,13 @@ public inline fun IDatabaseInstance.metricCPUUtilization(block: MetricOptionsDsl
   return metricCPUUtilization(builder.build())
 }
 
+/**
+ * The number of database connections in use.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseInstance.metricDatabaseConnections(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -481,6 +632,13 @@ public inline fun IDatabaseInstance.metricDatabaseConnections(block: MetricOptio
   return metricDatabaseConnections(builder.build())
 }
 
+/**
+ * The amount of available random access memory.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseInstance.metricFreeableMemory(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -488,6 +646,13 @@ public inline fun IDatabaseInstance.metricFreeableMemory(block: MetricOptionsDsl
   return metricFreeableMemory(builder.build())
 }
 
+/**
+ * The amount of available storage space.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseInstance.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -495,6 +660,13 @@ public inline fun IDatabaseInstance.metricFreeStorageSpace(block: MetricOptionsD
   return metricFreeStorageSpace(builder.build())
 }
 
+/**
+ * The average number of disk write I/O operations per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseInstance.metricReadIOPS(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -502,6 +674,13 @@ public inline fun IDatabaseInstance.metricReadIOPS(block: MetricOptionsDsl.() ->
   return metricReadIOPS(builder.build())
 }
 
+/**
+ * The average number of disk read I/O operations per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDatabaseInstance.metricWriteIOPS(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -509,6 +688,15 @@ public inline fun IDatabaseInstance.metricWriteIOPS(block: MetricOptionsDsl.() -
   return metricWriteIOPS(builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers for instance events.
+ *
+ * Use
+ * `rule.addEventPattern(pattern)` to specify a filter.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IDatabaseInstance.onEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -565,6 +753,14 @@ public inline fun OptionGroup.addConfiguration(block: OptionConfigurationDsl.() 
   return addConfiguration(builder.build())
 }
 
+/**
+ * Adds a configuration to this OptionGroup.
+ *
+ * This method is a no-op for an imported OptionGroup.
+ *
+ * @return true if the OptionConfiguration was successfully added.
+ * @param configuration 
+ */
 public inline fun IOptionGroup.addConfiguration(block: OptionConfigurationDsl.() -> Unit = {}):
     Boolean {
   val builder = OptionConfigurationDsl()
@@ -718,6 +914,11 @@ public inline fun ClusterInstance.bind(
   return bind(scope, cluster, builder.build())
 }
 
+/**
+ * Method called when this Parameter Group is used when defining a database cluster.
+ *
+ * @param options 
+ */
 public inline
     fun IParameterGroup.bindToCluster(block: ParameterGroupClusterBindOptionsDsl.() -> Unit = {}):
     ParameterGroupClusterConfig {
@@ -726,6 +927,11 @@ public inline
   return bindToCluster(builder.build())
 }
 
+/**
+ * Method called when this Parameter Group is used when defining a database instance.
+ *
+ * @param options 
+ */
 public inline
     fun IParameterGroup.bindToInstance(block: ParameterGroupInstanceBindOptionsDsl.() -> Unit = {}):
     ParameterGroupInstanceConfig {
@@ -759,6 +965,12 @@ public inline
   return bindToInstance(builder.build())
 }
 
+/**
+ * Method called when the engine is used to create a new cluster.
+ *
+ * @param scope 
+ * @param options 
+ */
 public inline fun IClusterEngine.bindToCluster(arg0: Construct,
     block: ClusterEngineBindOptionsDsl.() -> Unit = {}): ClusterEngineConfig {
   val builder = ClusterEngineBindOptionsDsl()

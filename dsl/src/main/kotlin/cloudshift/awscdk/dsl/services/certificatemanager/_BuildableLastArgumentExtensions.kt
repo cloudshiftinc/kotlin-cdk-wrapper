@@ -38,6 +38,16 @@ public inline fun Certificate.metricDaysToExpiry(block: MetricOptionsDsl.() -> U
   return metricDaysToExpiry(builder.build())
 }
 
+/**
+ * Return the DaysToExpiry metric for this AWS Certificate Manager Certificate. By default, this is
+ * the minimum value over 1 day.
+ *
+ * This metric is no longer emitted once the certificate has effectively
+ * expired, so alarms configured on this metric should probably treat missing
+ * data as "breaching".
+ *
+ * @param props
+ */
 public inline fun ICertificate.metricDaysToExpiry(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)

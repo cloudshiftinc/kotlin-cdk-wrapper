@@ -11,12 +11,25 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
 import software.amazon.awscdk.services.opensearchservice.Domain
 import software.amazon.awscdk.services.opensearchservice.IDomain
 
+/**
+ * Return the given named metric for this domain.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun IDomain.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metric(arg0, builder.build())
 }
 
+/**
+ * Metric for automated snapshot failures.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricAutomatedSnapshotFailure(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -24,6 +37,13 @@ public inline fun IDomain.metricAutomatedSnapshotFailure(block: MetricOptionsDsl
   return metricAutomatedSnapshotFailure(builder.build())
 }
 
+/**
+ * Metric for the cluster blocking index writes.
+ *
+ * Default: maximum over 1 minute
+ *
+ * @param props
+ */
 public inline fun IDomain.metricClusterIndexWritesBlocked(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -31,12 +51,26 @@ public inline fun IDomain.metricClusterIndexWritesBlocked(block: MetricOptionsDs
   return metricClusterIndexWritesBlocked(builder.build())
 }
 
+/**
+ * Metric for the time the cluster status is red.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricClusterStatusRed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricClusterStatusRed(builder.build())
 }
 
+/**
+ * Metric for the time the cluster status is yellow.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricClusterStatusYellow(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -44,36 +78,78 @@ public inline fun IDomain.metricClusterStatusYellow(block: MetricOptionsDsl.() -
   return metricClusterStatusYellow(builder.build())
 }
 
+/**
+ * Metric for CPU utilization.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricCPUUtilization(builder.build())
 }
 
+/**
+ * Metric for the storage space of nodes in the cluster.
+ *
+ * Default: minimum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricFreeStorageSpace(builder.build())
 }
 
+/**
+ * Metric for indexing latency.
+ *
+ * Default: p99 over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricIndexingLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricIndexingLatency(builder.build())
 }
 
+/**
+ * Metric for JVM memory pressure.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricJVMMemoryPressure(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricJVMMemoryPressure(builder.build())
 }
 
+/**
+ * Metric for KMS key errors.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricKMSKeyError(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricKMSKeyError(builder.build())
 }
 
+/**
+ * Metric for KMS key being inaccessible.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricKMSKeyInaccessible(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -81,6 +157,13 @@ public inline fun IDomain.metricKMSKeyInaccessible(block: MetricOptionsDsl.() ->
   return metricKMSKeyInaccessible(builder.build())
 }
 
+/**
+ * Metric for master CPU utilization.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricMasterCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -88,6 +171,13 @@ public inline fun IDomain.metricMasterCPUUtilization(block: MetricOptionsDsl.() 
   return metricMasterCPUUtilization(builder.build())
 }
 
+/**
+ * Metric for master JVM memory pressure.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricMasterJVMMemoryPressure(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -95,12 +185,26 @@ public inline fun IDomain.metricMasterJVMMemoryPressure(block: MetricOptionsDsl.
   return metricMasterJVMMemoryPressure(builder.build())
 }
 
+/**
+ * Metric for the number of nodes.
+ *
+ * Default: minimum over 1 hour
+ *
+ * @param props
+ */
 public inline fun IDomain.metricNodes(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricNodes(builder.build())
 }
 
+/**
+ * Metric for number of searchable documents.
+ *
+ * Default: maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricSearchableDocuments(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -108,6 +212,13 @@ public inline fun IDomain.metricSearchableDocuments(block: MetricOptionsDsl.() -
   return metricSearchableDocuments(builder.build())
 }
 
+/**
+ * Metric for search latency.
+ *
+ * Default: p99 over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IDomain.metricSearchLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)

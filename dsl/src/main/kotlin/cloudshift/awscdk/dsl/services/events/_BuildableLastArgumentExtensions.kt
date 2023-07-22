@@ -77,6 +77,16 @@ public inline fun Rule.addEventPattern(block: EventPatternDsl.() -> Unit = {}) {
   return addEventPattern(builder.build())
 }
 
+/**
+ * Create an EventBridge archive to send events to.
+ *
+ * When you create an archive, incoming events might not immediately start being sent to the
+ * archive.
+ * Allow a short period of time for changes to take effect.
+ *
+ * @param id 
+ * @param props Properties of the archive. 
+ */
 public inline fun IEventBus.archive(arg0: String, block: BaseArchivePropsDsl.() -> Unit = {}):
     Archive {
   val builder = BaseArchivePropsDsl()

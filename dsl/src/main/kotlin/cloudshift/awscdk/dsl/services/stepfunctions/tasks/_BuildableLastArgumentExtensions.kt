@@ -12,6 +12,12 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ISageMakerTask
 import software.amazon.awscdk.services.stepfunctions.tasks.S3Location
 import software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig
 
+/**
+ * called when the ECS launch target is configured on RunTask.
+ *
+ * @param task 
+ * @param launchTargetOptions 
+ */
 public inline fun IEcsLaunchTarget.bind(arg0: EcsRunTask,
     block: LaunchTargetBindOptionsDsl.() -> Unit = {}): EcsLaunchTargetConfig {
   val builder = LaunchTargetBindOptionsDsl()

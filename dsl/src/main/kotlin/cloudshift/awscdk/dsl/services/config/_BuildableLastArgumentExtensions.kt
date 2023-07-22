@@ -40,6 +40,12 @@ public inline
   return setRecordingGroup(builder.build())
 }
 
+/**
+ * Defines a EventBridge event rule which triggers for rule compliance events.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IRule.onComplianceChange(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -47,12 +53,27 @@ public inline fun IRule.onComplianceChange(arg0: String, block: OnEventOptionsDs
   return onComplianceChange(arg0, builder.build())
 }
 
+/**
+ * Defines an EventBridge event rule which triggers for rule events.
+ *
+ * Use
+ * `rule.addEventPattern(pattern)` to specify a filter.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IRule.onEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnEventOptionsDsl()
   builder.apply(block)
   return onEvent(arg0, builder.build())
 }
 
+/**
+ * Defines a EventBridge event rule which triggers for rule re-evaluation status events.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IRule.onReEvaluationStatus(arg0: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()

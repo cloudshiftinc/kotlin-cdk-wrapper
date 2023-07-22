@@ -9,7 +9,7 @@ import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 
 internal class AsmClassAdapter(override val className: ClassName, private val delegate: ClassNode, private val sourceClass: CdkSourceClass) : CdkClass {
-    override val comment: String? = sourceClass?.comment
+    override val comment: String? = sourceClass.comment
 
     private val annotations: List<ClassName> by lazy(
         LazyThreadSafetyMode.NONE
@@ -31,7 +31,7 @@ internal class AsmClassAdapter(override val className: ClassName, private val de
                 !it.accessFlags.isStatic()
         }.map {
             val method = sourceClass.methodFor(it.name)
-            if(method == null) println("No source method found for ${sourceClass.className} ${it.name}")
+            if (method == null) println("No source method found for ${sourceClass.className} ${it.name}")
             AsmMethodAdapter(it, method)
         }
     }

@@ -26,6 +26,13 @@ import software.amazon.awscdk.services.codestarnotifications.INotificationRuleTa
 import software.amazon.awscdk.services.events.Rule
 import software.constructs.Construct
 
+/**
+ * Function that allows the build image access to the construct tree.
+ *
+ * @param scope 
+ * @param project 
+ * @param options 
+ */
 public inline fun IBindableBuildImage.bind(
   arg0: Construct,
   arg1: IProject,
@@ -305,6 +312,11 @@ public inline fun Project.onStateChange(id: String, block: OnEventOptionsDsl.() 
   return onStateChange(id, builder.build())
 }
 
+/**
+ * Allows the image a chance to validate whether the passed configuration is correct.
+ *
+ * @param buildEnvironment the current build environment. 
+ */
 public inline fun IBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}): List<String> {
   val builder = BuildEnvironmentDsl()
   builder.apply(block)
@@ -440,42 +452,106 @@ public inline fun LinuxArmBuildImage.validate(block: BuildEnvironmentDsl.() -> U
   return validate(builder.build())
 }
 
+/**
+ * @param policyStatement 
+ */
 public inline fun IProject.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToRolePolicy(builder.build())
 }
 
+/**
+ * @return a CloudWatch metric associated with this build project.
+ * @param metricName The name of the metric. 
+ * @param props Customization properties.
+ */
 public inline fun IProject.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metric(arg0, builder.build())
 }
 
+/**
+ * Measures the number of builds triggered.
+ *
+ * Units: Count
+ *
+ * Valid CloudWatch statistics: Sum
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IProject.metricBuilds(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricBuilds(builder.build())
 }
 
+/**
+ * Measures the duration of all builds over time.
+ *
+ * Units: Seconds
+ *
+ * Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
+ *
+ * Default: average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IProject.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricDuration(builder.build())
 }
 
+/**
+ * Measures the number of builds that failed because of client error or because of a timeout.
+ *
+ * Units: Count
+ *
+ * Valid CloudWatch statistics: Sum
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IProject.metricFailedBuilds(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricFailedBuilds(builder.build())
 }
 
+/**
+ * Measures the number of successful builds.
+ *
+ * Units: Count
+ *
+ * Valid CloudWatch statistics: Sum
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IProject.metricSucceededBuilds(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricSucceededBuilds(builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule triggered when the project events emitted by you specified,
+ * it very similar to `onEvent` API.
+ *
+ * You can also use the methods `notifyOnBuildSucceeded` and
+ * `notifyOnBuildFailed` to define rules for these specific event emitted.
+ *
+ * @return CodeStar Notifications rule associated with this build project.
+ * @param id The logical identifier of the CodeStar Notifications rule that will be created. 
+ * @param target The target to register for the CodeStar Notifications destination. 
+ * @param options Customization options for CodeStar Notifications rule. 
+ */
 public inline fun IProject.notifyOn(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -486,6 +562,13 @@ public inline fun IProject.notifyOn(
   return notifyOn(arg0, arg1, builder.build())
 }
 
+/**
+ * Defines a CodeStar notification rule which triggers when a build fails.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun IProject.notifyOnBuildFailed(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -496,6 +579,13 @@ public inline fun IProject.notifyOnBuildFailed(
   return notifyOnBuildFailed(arg0, arg1, builder.build())
 }
 
+/**
+ * Defines a CodeStar notification rule which triggers when a build completes successfully.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun IProject.notifyOnBuildSucceeded(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -506,6 +596,12 @@ public inline fun IProject.notifyOnBuildSucceeded(
   return notifyOnBuildSucceeded(arg0, arg1, builder.build())
 }
 
+/**
+ * Defines an event rule which triggers when a build fails.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IProject.onBuildFailed(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -513,6 +609,12 @@ public inline fun IProject.onBuildFailed(arg0: String, block: OnEventOptionsDsl.
   return onBuildFailed(arg0, builder.build())
 }
 
+/**
+ * Defines an event rule which triggers when a build starts.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IProject.onBuildStarted(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -520,6 +622,12 @@ public inline fun IProject.onBuildStarted(arg0: String, block: OnEventOptionsDsl
   return onBuildStarted(arg0, builder.build())
 }
 
+/**
+ * Defines an event rule which triggers when a build completes successfully.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IProject.onBuildSucceeded(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -527,12 +635,26 @@ public inline fun IProject.onBuildSucceeded(arg0: String, block: OnEventOptionsD
   return onBuildSucceeded(arg0, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule triggered when something happens with this project.
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html)
+ * @param id 
+ * @param options
+ */
 public inline fun IProject.onEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnEventOptionsDsl()
   builder.apply(block)
   return onEvent(arg0, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule that triggers upon phase change of this build project.
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html)
+ * @param id 
+ * @param options
+ */
 public inline fun IProject.onPhaseChange(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -540,6 +662,34 @@ public inline fun IProject.onPhaseChange(arg0: String, block: OnEventOptionsDsl.
   return onPhaseChange(arg0, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule triggered when the build project state changes.
+ *
+ * You can filter specific build status events using an event
+ * pattern filter on the `build-status` detail field:
+ *
+ * const rule = project.onStateChange('OnBuildStarted', { target });
+ * rule.addEventPattern({
+ * detail: {
+ * 'build-status': [
+ * "IN_PROGRESS",
+ * "SUCCEEDED",
+ * "FAILED",
+ * "STOPPED"
+ * ]
+ * }
+ * });
+ *
+ * You can also use the methods `onBuildFailed` and `onBuildSucceeded` to define rules for
+ * these specific state changes.
+ *
+ * To access fields from the event in the event target input,
+ * use the static fields on the `StateChangeEvent` class.
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html)
+ * @param id 
+ * @param options
+ */
 public inline fun IProject.onStateChange(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()

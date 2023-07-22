@@ -1,6 +1,5 @@
 import cloudshift.awscdkdsl.build.NoLocalChanges
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
-import de.undercouch.gradle.tasks.download.Download
 
 plugins {
     java

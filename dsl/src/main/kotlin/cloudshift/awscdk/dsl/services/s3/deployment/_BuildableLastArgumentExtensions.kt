@@ -7,6 +7,12 @@ import software.amazon.awscdk.services.s3.deployment.ISource
 import software.amazon.awscdk.services.s3.deployment.SourceConfig
 import software.constructs.Construct
 
+/**
+ * Binds the source to a bucket deployment.
+ *
+ * @param scope The construct tree context. 
+ * @param context
+ */
 public inline fun ISource.bind(arg0: Construct, block: DeploymentSourceContextDsl.() -> Unit = {}):
     SourceConfig {
   val builder = DeploymentSourceContextDsl()

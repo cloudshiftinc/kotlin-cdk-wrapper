@@ -47,6 +47,16 @@ import software.amazon.awscdk.cloudassembly.schema.FileDestination
 import software.amazon.awscdk.cloudassembly.schema.FileSource
 import software.amazon.awscdk.cxapi.CloudAssembly
 
+/**
+ * This method is called before attempting docker bundling to allow the bundler to be executed
+ * locally.
+ *
+ * If the local bundler exists, and bundling
+ * was performed locally, return `true`. Otherwise, return `false`.
+ *
+ * @param outputDir the directory where the bundled asset should be output. 
+ * @param options bundling options for this asset. 
+ */
 public inline fun ILocalBundling.tryBundle(arg0: String, block: BundlingOptionsDsl.() -> Unit = {}):
     Boolean {
   val builder = BundlingOptionsDsl()
@@ -681,6 +691,12 @@ public inline fun Stage.synth(block: StageSynthesisOptionsDsl.() -> Unit = {}): 
   return synth(builder.build())
 }
 
+/**
+ * Resolve an inner object.
+ *
+ * @param x 
+ * @param options
+ */
 public inline fun IResolveContext.resolve(arg0: Any,
     block: ResolveChangeContextOptionsDsl.() -> Unit = {}): Any {
   val builder = ResolveChangeContextOptionsDsl()
@@ -776,6 +792,13 @@ public inline fun CfnResource.applyRemovalPolicy(policy: RemovalPolicy?,
   return applyRemovalPolicy(policy, builder.build())
 }
 
+/**
+ * Register a Docker Image Asset.
+ *
+ * Returns the parameters that can be used to refer to the asset inside the template.
+ *
+ * @param asset 
+ */
 public inline fun IStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit
     = {}): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
@@ -783,6 +806,13 @@ public inline fun IStackSynthesizer.addDockerImageAsset(block: DockerImageAssetS
   return addDockerImageAsset(builder.build())
 }
 
+/**
+ * Register a File Asset.
+ *
+ * Returns the parameters that can be used to refer to the asset inside the template.
+ *
+ * @param asset 
+ */
 public inline fun IStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
     FileAssetLocation {
   val builder = FileAssetSourceDsl()

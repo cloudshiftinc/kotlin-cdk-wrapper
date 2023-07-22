@@ -23,6 +23,14 @@ import software.amazon.awscdk.services.events.IRuleTarget
 import software.amazon.awscdk.services.events.Rule
 import software.constructs.Construct
 
+/**
+ * The callback invoked when this Action is added to a Pipeline.
+ *
+ * @param scope the Construct tree scope the Action can use if it needs to create any resources. 
+ * @param stage the `IStage` this Action is being added to. 
+ * @param options additional options the Action can use, like the artifact Bucket of the pipeline
+ * it's being added to. 
+ */
 public inline fun IAction.bind(
   arg0: Construct,
   arg1: IStage,
@@ -33,6 +41,13 @@ public inline fun IAction.bind(
   return bind(arg0, arg1, builder.build())
 }
 
+/**
+ * Creates an Event that will be triggered whenever the state of this Action changes.
+ *
+ * @param name the name to use for the new Event. 
+ * @param target the optional target for the Event.
+ * @param options additional options that can be used to customize the created Event.
+ */
 public inline fun IAction.onStateChange(
   arg0: String,
   arg1: IRuleTarget?,
@@ -43,6 +58,19 @@ public inline fun IAction.onStateChange(
   return onStateChange(arg0, arg1, builder.build())
 }
 
+/**
+ * Defines a CodeStar notification rule triggered when the pipeline events emitted by you specified,
+ * it very similar to `onEvent` API.
+ *
+ * You can also use the methods `notifyOnExecutionStateChange`, `notifyOnAnyStageStateChange`,
+ * `notifyOnAnyActionStateChange` and `notifyOnAnyManualApprovalStateChange`
+ * to define rules for these specific event emitted.
+ *
+ * @return CodeStar notification rule associated with this build project.
+ * @param id The id of the CodeStar notification rule. 
+ * @param target The target to register for the CodeStar Notifications destination. 
+ * @param options Customization options for CodeStar notification rule. 
+ */
 public inline fun IPipeline.notifyOn(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -53,6 +81,15 @@ public inline fun IPipeline.notifyOn(
   return notifyOn(arg0, arg1, builder.build())
 }
 
+/**
+ * Define an notification rule triggered by the set of the "Action execution" events emitted from
+ * this pipeline.
+ *
+ * [Documentation](https://docs.aws.amazon.com/dtconsole/latest/userguide/concepts.html#events-ref-pipeline)
+ * @param id Identifier for this notification handler. 
+ * @param target The target to register for the CodeStar Notifications destination. 
+ * @param options Additional options to pass to the notification rule.
+ */
 public inline fun IPipeline.notifyOnAnyActionStateChange(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -63,6 +100,15 @@ public inline fun IPipeline.notifyOnAnyActionStateChange(
   return notifyOnAnyActionStateChange(arg0, arg1, builder.build())
 }
 
+/**
+ * Define an notification rule triggered by the set of the "Manual approval" events emitted from
+ * this pipeline.
+ *
+ * [Documentation](https://docs.aws.amazon.com/dtconsole/latest/userguide/concepts.html#events-ref-pipeline)
+ * @param id Identifier for this notification handler. 
+ * @param target The target to register for the CodeStar Notifications destination. 
+ * @param options Additional options to pass to the notification rule.
+ */
 public inline fun IPipeline.notifyOnAnyManualApprovalStateChange(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -73,6 +119,15 @@ public inline fun IPipeline.notifyOnAnyManualApprovalStateChange(
   return notifyOnAnyManualApprovalStateChange(arg0, arg1, builder.build())
 }
 
+/**
+ * Define an notification rule triggered by the set of the "Stage execution" events emitted from
+ * this pipeline.
+ *
+ * [Documentation](https://docs.aws.amazon.com/dtconsole/latest/userguide/concepts.html#events-ref-pipeline)
+ * @param id Identifier for this notification handler. 
+ * @param target The target to register for the CodeStar Notifications destination. 
+ * @param options Additional options to pass to the notification rule.
+ */
 public inline fun IPipeline.notifyOnAnyStageStateChange(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -83,6 +138,15 @@ public inline fun IPipeline.notifyOnAnyStageStateChange(
   return notifyOnAnyStageStateChange(arg0, arg1, builder.build())
 }
 
+/**
+ * Define an notification rule triggered by the set of the "Pipeline execution" events emitted from
+ * this pipeline.
+ *
+ * [Documentation](https://docs.aws.amazon.com/dtconsole/latest/userguide/concepts.html#events-ref-pipeline)
+ * @param id Identifier for this notification handler. 
+ * @param target The target to register for the CodeStar Notifications destination. 
+ * @param options Additional options to pass to the notification rule.
+ */
 public inline fun IPipeline.notifyOnExecutionStateChange(
   arg0: String,
   arg1: INotificationRuleTarget,
@@ -93,12 +157,25 @@ public inline fun IPipeline.notifyOnExecutionStateChange(
   return notifyOnExecutionStateChange(arg0, arg1, builder.build())
 }
 
+/**
+ * Define an event rule triggered by this CodePipeline.
+ *
+ * @param id Identifier for this event handler. 
+ * @param options Additional options to pass to the event rule.
+ */
 public inline fun IPipeline.onEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnEventOptionsDsl()
   builder.apply(block)
   return onEvent(arg0, builder.build())
 }
 
+/**
+ * Define an event rule triggered by the "CodePipeline Pipeline Execution State Change" event
+ * emitted from this pipeline.
+ *
+ * @param id Identifier for this event handler. 
+ * @param options Additional options to pass to the event rule.
+ */
 public inline fun IPipeline.onStateChange(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -116,6 +193,11 @@ public inline fun CfnPipeline.setArtifactStore(block: CfnPipelineArtifactStorePr
   return setArtifactStore(builder.build())
 }
 
+/**
+ * @param name 
+ * @param target
+ * @param options
+ */
 public inline fun IStage.onStateChange(
   arg0: String,
   arg1: IRuleTarget?,

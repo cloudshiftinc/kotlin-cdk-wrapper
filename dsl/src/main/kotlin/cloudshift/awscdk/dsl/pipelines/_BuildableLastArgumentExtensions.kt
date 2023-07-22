@@ -30,6 +30,12 @@ public inline fun Wave.addStage(stage: Stage, block: AddStageOptsDsl.() -> Unit 
   return addStage(stage, builder.build())
 }
 
+/**
+ * Create the desired Action and add it to the pipeline.
+ *
+ * @param stage 
+ * @param options 
+ */
 public inline fun ICodePipelineActionFactory.produceAction(arg0: IStage,
     block: ProduceActionOptionsDsl.() -> Unit = {}): CodePipelineActionFactoryResult {
   val builder = ProduceActionOptionsDsl()

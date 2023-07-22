@@ -10,24 +10,72 @@ import software.amazon.awscdk.services.kinesis.CfnStream
 import software.amazon.awscdk.services.kinesis.IStream
 import software.amazon.awscdk.services.kinesis.Stream
 
+/**
+ * Return stream metric based from its metric name.
+ *
+ * @param metricName name of the stream metric. 
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metric(arg0, builder.build())
 }
 
+/**
+ * The number of records retrieved from the shard, measured over the specified time period.
+ *
+ * Minimum, Maximum, and
+ * Average statistics represent the records in a single GetRecords operation for the stream in the
+ * specified time
+ * period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricGetRecords(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricGetRecords(builder.build())
 }
 
+/**
+ * The number of bytes retrieved from the Kinesis stream, measured over the specified time period.
+ *
+ * Minimum, Maximum,
+ * and Average statistics represent the bytes in a single GetRecords operation for the stream in the
+ * specified time
+ * period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricGetRecordsBytes(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricGetRecordsBytes(builder.build())
 }
 
+/**
+ * The age of the last record in all GetRecords calls made against a Kinesis stream, measured over
+ * the specified time period.
+ *
+ * Age is the difference between the current time and when the last record of the GetRecords call
+ * was written
+ * to the stream. The Minimum and Maximum statistics can be used to track the progress of Kinesis
+ * consumer
+ * applications. A value of zero indicates that the records being read are completely caught up with
+ * the stream.
+ *
+ * The metric defaults to maximum over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricGetRecordsIteratorAgeMilliseconds(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -35,48 +83,128 @@ public inline fun IStream.metricGetRecordsIteratorAgeMilliseconds(block: MetricO
   return metricGetRecordsIteratorAgeMilliseconds(builder.build())
 }
 
+/**
+ * The time taken per GetRecords operation, measured over the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricGetRecordsLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricGetRecordsLatency(builder.build())
 }
 
+/**
+ * The number of successful GetRecords operations per stream, measured over the specified time
+ * period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricGetRecordsSuccess(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricGetRecordsSuccess(builder.build())
 }
 
+/**
+ * The number of bytes successfully put to the Kinesis stream over the specified time period.
+ *
+ * This metric includes
+ * bytes from PutRecord and PutRecords operations. Minimum, Maximum, and Average statistics
+ * represent the bytes in a
+ * single put operation for the stream in the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricIncomingBytes(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricIncomingBytes(builder.build())
 }
 
+/**
+ * The number of records successfully put to the Kinesis stream over the specified time period.
+ *
+ * This metric includes
+ * record counts from PutRecord and PutRecords operations. Minimum, Maximum, and Average statistics
+ * represent the
+ * records in a single put operation for the stream in the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricIncomingRecords(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricIncomingRecords(builder.build())
 }
 
+/**
+ * The number of bytes put to the Kinesis stream using the PutRecord operation over the specified
+ * time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordBytes(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricPutRecordBytes(builder.build())
 }
 
+/**
+ * The time taken per PutRecord operation, measured over the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricPutRecordLatency(builder.build())
 }
 
+/**
+ * The number of bytes put to the Kinesis stream using the PutRecords operation over the specified
+ * time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordsBytes(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricPutRecordsBytes(builder.build())
 }
 
+/**
+ * The number of records rejected due to internal failures in a PutRecords operation per Kinesis
+ * data stream, measured over the specified time period.
+ *
+ * Occasional internal failures are to be expected and should be retried.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordsFailedRecords(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -84,18 +212,44 @@ public inline fun IStream.metricPutRecordsFailedRecords(block: MetricOptionsDsl.
   return metricPutRecordsFailedRecords(builder.build())
 }
 
+/**
+ * The time taken per PutRecords operation, measured over the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordsLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricPutRecordsLatency(builder.build())
 }
 
+/**
+ * The number of PutRecords operations where at least one record succeeded, per Kinesis stream,
+ * measured over the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordsSuccess(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricPutRecordsSuccess(builder.build())
 }
 
+/**
+ * The number of successful records in a PutRecords operation per Kinesis data stream, measured over
+ * the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordsSuccessfulRecords(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -103,6 +257,15 @@ public inline fun IStream.metricPutRecordsSuccessfulRecords(block: MetricOptions
   return metricPutRecordsSuccessfulRecords(builder.build())
 }
 
+/**
+ * The number of records rejected due to throttling in a PutRecords operation per Kinesis data
+ * stream, measured over the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordsThrottledRecords(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -110,6 +273,15 @@ public inline fun IStream.metricPutRecordsThrottledRecords(block: MetricOptionsD
   return metricPutRecordsThrottledRecords(builder.build())
 }
 
+/**
+ * The total number of records sent in a PutRecords operation per Kinesis data stream, measured over
+ * the specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordsTotalRecords(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -117,12 +289,43 @@ public inline fun IStream.metricPutRecordsTotalRecords(block: MetricOptionsDsl.(
   return metricPutRecordsTotalRecords(builder.build())
 }
 
+/**
+ * The number of successful PutRecord operations per Kinesis stream, measured over the specified
+ * time period.
+ *
+ * Average
+ * reflects the percentage of successful writes to a stream.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricPutRecordSuccess(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricPutRecordSuccess(builder.build())
 }
 
+/**
+ * The number of GetRecords calls throttled for the stream over the specified time period.
+ *
+ * The most commonly used
+ * statistic for this metric is Average.
+ *
+ * When the Minimum statistic has a value of 1, all records were throttled for the stream during the
+ * specified time
+ * period.
+ *
+ * When the Maximum statistic has a value of 0 (zero), no records were throttled for the stream
+ * during the specified
+ * time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties
+ *
+ * @param props properties of the metric.
+ */
 public inline fun IStream.metricReadProvisionedThroughputExceeded(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -130,6 +333,25 @@ public inline fun IStream.metricReadProvisionedThroughputExceeded(block: MetricO
   return metricReadProvisionedThroughputExceeded(builder.build())
 }
 
+/**
+ * The number of records rejected due to throttling for the stream over the specified time period.
+ *
+ * This metric
+ * includes throttling from PutRecord and PutRecords operations.
+ *
+ * When the Minimum statistic has a non-zero value, records were being throttled for the stream
+ * during the specified
+ * time period.
+ *
+ * When the Maximum statistic has a value of 0 (zero), no records were being throttled for the
+ * stream during the
+ * specified time period.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
 public inline
     fun IStream.metricWriteProvisionedThroughputExceeded(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {

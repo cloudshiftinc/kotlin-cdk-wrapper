@@ -10,6 +10,11 @@ import software.amazon.awscdk.services.chatbot.ISlackChannelConfiguration
 import software.amazon.awscdk.services.chatbot.SlackChannelConfiguration
 import software.amazon.awscdk.services.cloudwatch.Metric
 
+/**
+ * Adds a statement to the IAM role.
+ *
+ * @param statement 
+ */
 public inline fun ISlackChannelConfiguration.addToRolePolicy(block: PolicyStatementDsl.() -> Unit =
     {}) {
   val builder = PolicyStatementDsl()
@@ -17,6 +22,12 @@ public inline fun ISlackChannelConfiguration.addToRolePolicy(block: PolicyStatem
   return addToRolePolicy(builder.build())
 }
 
+/**
+ * Return the given named metric for this SlackChannelConfiguration.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun ISlackChannelConfiguration.metric(arg0: String, block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()

@@ -24,6 +24,13 @@ import software.amazon.awscdk.services.autoscaling.WarmPool
 import software.amazon.awscdk.services.ec2.CloudFormationInit
 import software.constructs.Construct
 
+/**
+ * Called when this object is used as the target of a lifecycle hook.
+ *
+ * @param scope 
+ * @param options [disable-awslint:ref-via-interface] The lifecycle hook to attach to and a role to
+ * use. 
+ */
 public inline fun ILifecycleHookTarget.bind(arg0: Construct,
     block: BindHookTargetOptionsDsl.() -> Unit = {}): LifecycleHookTargetConfig {
   val builder = BindHookTargetOptionsDsl()
@@ -31,6 +38,12 @@ public inline fun ILifecycleHookTarget.bind(arg0: Construct,
   return bind(arg0, builder.build())
 }
 
+/**
+ * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IAutoScalingGroup.addLifecycleHook(arg0: String,
     block: BasicLifecycleHookPropsDsl.() -> Unit = {}): LifecycleHook {
   val builder = BasicLifecycleHookPropsDsl()
@@ -38,6 +51,11 @@ public inline fun IAutoScalingGroup.addLifecycleHook(arg0: String,
   return addLifecycleHook(arg0, builder.build())
 }
 
+/**
+ * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
+ *
+ * @param options
+ */
 public inline fun IAutoScalingGroup.addWarmPool(block: WarmPoolOptionsDsl.() -> Unit = {}):
     WarmPool {
   val builder = WarmPoolOptionsDsl()
@@ -45,6 +63,12 @@ public inline fun IAutoScalingGroup.addWarmPool(block: WarmPoolOptionsDsl.() -> 
   return addWarmPool(builder.build())
 }
 
+/**
+ * Scale out or in to achieve a target CPU utilization.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IAutoScalingGroup.scaleOnCpuUtilization(arg0: String,
     block: CpuUtilizationScalingPropsDsl.() -> Unit = {}): TargetTrackingScalingPolicy {
   val builder = CpuUtilizationScalingPropsDsl()
@@ -52,6 +76,12 @@ public inline fun IAutoScalingGroup.scaleOnCpuUtilization(arg0: String,
   return scaleOnCpuUtilization(arg0, builder.build())
 }
 
+/**
+ * Scale out or in to achieve a target network ingress rate.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IAutoScalingGroup.scaleOnIncomingBytes(arg0: String,
     block: NetworkUtilizationScalingPropsDsl.() -> Unit = {}): TargetTrackingScalingPolicy {
   val builder = NetworkUtilizationScalingPropsDsl()
@@ -59,6 +89,12 @@ public inline fun IAutoScalingGroup.scaleOnIncomingBytes(arg0: String,
   return scaleOnIncomingBytes(arg0, builder.build())
 }
 
+/**
+ * Scale out or in, in response to a metric.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IAutoScalingGroup.scaleOnMetric(arg0: String,
     block: BasicStepScalingPolicyPropsDsl.() -> Unit = {}): StepScalingPolicy {
   val builder = BasicStepScalingPolicyPropsDsl()
@@ -66,6 +102,12 @@ public inline fun IAutoScalingGroup.scaleOnMetric(arg0: String,
   return scaleOnMetric(arg0, builder.build())
 }
 
+/**
+ * Scale out or in to achieve a target network egress rate.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IAutoScalingGroup.scaleOnOutgoingBytes(arg0: String,
     block: NetworkUtilizationScalingPropsDsl.() -> Unit = {}): TargetTrackingScalingPolicy {
   val builder = NetworkUtilizationScalingPropsDsl()
@@ -73,6 +115,12 @@ public inline fun IAutoScalingGroup.scaleOnOutgoingBytes(arg0: String,
   return scaleOnOutgoingBytes(arg0, builder.build())
 }
 
+/**
+ * Scale out or in based on time.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IAutoScalingGroup.scaleOnSchedule(arg0: String,
     block: BasicScheduledActionPropsDsl.() -> Unit = {}): ScheduledAction {
   val builder = BasicScheduledActionPropsDsl()
@@ -80,6 +128,12 @@ public inline fun IAutoScalingGroup.scaleOnSchedule(arg0: String,
   return scaleOnSchedule(arg0, builder.build())
 }
 
+/**
+ * Scale out or in in order to keep a metric around a target value.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IAutoScalingGroup.scaleToTrackMetric(arg0: String,
     block: MetricTargetTrackingPropsDsl.() -> Unit = {}): TargetTrackingScalingPolicy {
   val builder = MetricTargetTrackingPropsDsl()

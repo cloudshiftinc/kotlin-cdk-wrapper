@@ -79,7 +79,9 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, private val so
             }
 
             AsmParameterAdapter(
-                name = parameterName, type = theType, nullable = nullable
+                name = parameterName,
+                type = theType,
+                nullable = nullable
             )
         }
     }

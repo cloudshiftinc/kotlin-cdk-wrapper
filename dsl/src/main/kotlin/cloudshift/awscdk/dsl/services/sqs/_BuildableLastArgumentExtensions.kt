@@ -11,6 +11,15 @@ import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
 import software.amazon.awscdk.services.sqs.IQueue
 import software.amazon.awscdk.services.sqs.QueueBase
 
+/**
+ * Adds a statement to the IAM resource policy associated with this queue.
+ *
+ * If this queue was created in this stack (`new Queue`), a queue policy
+ * will be automatically created upon the first call to `addToPolicy`. If
+ * the queue is imported (`Queue.import`), then this is a no-op.
+ *
+ * @param statement 
+ */
 public inline fun IQueue.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -18,12 +27,25 @@ public inline fun IQueue.addToResourcePolicy(block: PolicyStatementDsl.() -> Uni
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * Return the given named metric for this Queue.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun IQueue.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metric(arg0, builder.build())
 }
 
+/**
+ * The approximate age of the oldest non-deleted message in the queue.
+ *
+ * Maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricApproximateAgeOfOldestMessage(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -31,6 +53,13 @@ public inline fun IQueue.metricApproximateAgeOfOldestMessage(block: MetricOption
   return metricApproximateAgeOfOldestMessage(builder.build())
 }
 
+/**
+ * The number of messages in the queue that are delayed and not available for reading immediately.
+ *
+ * Maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricApproximateNumberOfMessagesDelayed(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -38,6 +67,13 @@ public inline fun IQueue.metricApproximateNumberOfMessagesDelayed(block: MetricO
   return metricApproximateNumberOfMessagesDelayed(builder.build())
 }
 
+/**
+ * The number of messages that are in flight.
+ *
+ * Maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline
     fun IQueue.metricApproximateNumberOfMessagesNotVisible(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -46,6 +82,13 @@ public inline
   return metricApproximateNumberOfMessagesNotVisible(builder.build())
 }
 
+/**
+ * The number of messages available for retrieval from the queue.
+ *
+ * Maximum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricApproximateNumberOfMessagesVisible(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -53,6 +96,13 @@ public inline fun IQueue.metricApproximateNumberOfMessagesVisible(block: MetricO
   return metricApproximateNumberOfMessagesVisible(builder.build())
 }
 
+/**
+ * The number of ReceiveMessage API calls that did not return a message.
+ *
+ * Sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricNumberOfEmptyReceives(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -60,6 +110,13 @@ public inline fun IQueue.metricNumberOfEmptyReceives(block: MetricOptionsDsl.() 
   return metricNumberOfEmptyReceives(builder.build())
 }
 
+/**
+ * The number of messages deleted from the queue.
+ *
+ * Sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricNumberOfMessagesDeleted(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -67,6 +124,13 @@ public inline fun IQueue.metricNumberOfMessagesDeleted(block: MetricOptionsDsl.(
   return metricNumberOfMessagesDeleted(builder.build())
 }
 
+/**
+ * The number of messages returned by calls to the ReceiveMessage action.
+ *
+ * Sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricNumberOfMessagesReceived(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -74,6 +138,13 @@ public inline fun IQueue.metricNumberOfMessagesReceived(block: MetricOptionsDsl.
   return metricNumberOfMessagesReceived(builder.build())
 }
 
+/**
+ * The number of messages added to a queue.
+ *
+ * Sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricNumberOfMessagesSent(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -81,6 +152,13 @@ public inline fun IQueue.metricNumberOfMessagesSent(block: MetricOptionsDsl.() -
   return metricNumberOfMessagesSent(builder.build())
 }
 
+/**
+ * The size of messages added to a queue.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IQueue.metricSentMessageSize(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)

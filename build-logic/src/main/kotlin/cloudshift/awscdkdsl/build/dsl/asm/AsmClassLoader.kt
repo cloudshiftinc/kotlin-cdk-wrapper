@@ -34,7 +34,10 @@ internal object AsmClassLoader : CdkClassLoader {
                         jarStream.asSequence()
                             .mapNotNull { entry ->
                                 maybeLoadJarEntry(
-                                    entry, cdkClassPredicate, jar, toTrace
+                                    entry,
+                                    cdkClassPredicate,
+                                    jar,
+                                    toTrace
                                 )
                             }
                             .toList()
@@ -44,7 +47,10 @@ internal object AsmClassLoader : CdkClassLoader {
     }
 
     private fun maybeLoadJarEntry(
-        entry: JarEntry, cdkClassPredicate: (String) -> Boolean, jar: JarFile, toTrace: Set<String>
+        entry: JarEntry,
+        cdkClassPredicate: (String) -> Boolean,
+        jar: JarFile,
+        toTrace: Set<String>
     ): ClassNode? {
         val name = entry.name
         return when {
@@ -61,10 +67,13 @@ internal object AsmClassLoader : CdkClassLoader {
                     if (toTrace.any { name.contains(it) }) {
                         val textifier = Textifier()
                         val traceClassVisitor = TraceClassVisitor(
-                            null, textifier, PrintWriter(System.out)
+                            null,
+                            textifier,
+                            PrintWriter(System.out)
                         )
                         classReader.accept(
-                            traceClassVisitor, ClassReader.SKIP_FRAMES
+                            traceClassVisitor,
+                            ClassReader.SKIP_FRAMES
                         )
                     }
                     classNode

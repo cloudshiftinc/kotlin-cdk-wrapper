@@ -62,6 +62,19 @@ public inline fun CfnLayerVersion.setContent(block: CfnLayerVersionContentProper
   return setContent(builder.build())
 }
 
+/**
+ * Add permission for this layer version to specific entities.
+ *
+ * Usage within
+ * the same account where the layer is defined is always allowed and does not
+ * require calling this method. Note that the principal that creates the
+ * Lambda function using the layer (for example, a CloudFormation changeset
+ * execution role) also needs to have the `lambda:GetLayerVersion`
+ * permission on the layer version.
+ *
+ * @param id the ID of the grant in the construct tree. 
+ * @param permission the identification of the grantee. 
+ */
 public inline fun ILayerVersion.addPermission(arg0: String,
     block: LayerVersionPermissionDsl.() -> Unit = {}) {
   val builder = LayerVersionPermissionDsl()
@@ -82,6 +95,12 @@ public inline
   return configureAsyncInvoke(builder.build())
 }
 
+/**
+ * Adds an event source that maps to this AWS Lambda function.
+ *
+ * @param id construct ID. 
+ * @param options mapping options. 
+ */
 public inline fun IFunction.addEventSourceMapping(arg0: String,
     block: EventSourceMappingOptionsDsl.() -> Unit = {}): EventSourceMapping {
   val builder = EventSourceMappingOptionsDsl()
@@ -89,6 +108,11 @@ public inline fun IFunction.addEventSourceMapping(arg0: String,
   return addEventSourceMapping(arg0, builder.build())
 }
 
+/**
+ * Adds a url to this lambda function.
+ *
+ * @param options
+ */
 public inline fun IFunction.addFunctionUrl(block: FunctionUrlOptionsDsl.() -> Unit = {}):
     FunctionUrl {
   val builder = FunctionUrlOptionsDsl()
@@ -96,18 +120,35 @@ public inline fun IFunction.addFunctionUrl(block: FunctionUrlOptionsDsl.() -> Un
   return addFunctionUrl(builder.build())
 }
 
+/**
+ * Adds a permission to the Lambda resource policy.
+ *
+ * [Documentation](Permission for details.)
+ * @param id The id for the permission construct. 
+ * @param permission The permission to grant to this Lambda function. 
+ */
 public inline fun IFunction.addPermission(arg0: String, block: PermissionDsl.() -> Unit = {}) {
   val builder = PermissionDsl()
   builder.apply(block)
   return addPermission(arg0, builder.build())
 }
 
+/**
+ * Adds a statement to the IAM role assumed by the instance.
+ *
+ * @param statement 
+ */
 public inline fun IFunction.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToRolePolicy(builder.build())
 }
 
+/**
+ * Configures options for asynchronous invocation.
+ *
+ * @param options 
+ */
 public inline fun IFunction.configureAsyncInvoke(block: EventInvokeConfigOptionsDsl.() -> Unit =
     {}) {
   val builder = EventInvokeConfigOptionsDsl()
@@ -115,30 +156,70 @@ public inline fun IFunction.configureAsyncInvoke(block: EventInvokeConfigOptions
   return configureAsyncInvoke(builder.build())
 }
 
+/**
+ * Return the given named metric for this Lambda Return the given named metric for this Function.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun IFunction.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metric(arg0, builder.build())
 }
 
+/**
+ * Metric for the Duration of this Lambda How long execution of this Lambda takes.
+ *
+ * Average over 5 minutes
+ *
+ * Default: average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IFunction.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricDuration(builder.build())
 }
 
+/**
+ * How many invocations of this Lambda fail.
+ *
+ * Sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IFunction.metricErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricErrors(builder.build())
 }
 
+/**
+ * Metric for the number of invocations of this Lambda How often this Lambda is invoked.
+ *
+ * Sum over 5 minutes
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IFunction.metricInvocations(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricInvocations(builder.build())
 }
 
+/**
+ * Metric for the number of throttled invocations of this Lambda How often this Lambda is throttled.
+ *
+ * Sum over 5 minutes
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IFunction.metricThrottles(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
@@ -186,6 +267,12 @@ public inline
   return setCodeSigningPolicies(builder.build())
 }
 
+/**
+ * Scale out or in based on schedule.
+ *
+ * @param id 
+ * @param actions 
+ */
 public inline fun IScalableFunctionAttribute.scaleOnSchedule(arg0: String,
     block: ScalingScheduleDsl.() -> Unit = {}) {
   val builder = ScalingScheduleDsl()
@@ -193,6 +280,15 @@ public inline fun IScalableFunctionAttribute.scaleOnSchedule(arg0: String,
   return scaleOnSchedule(arg0, builder.build())
 }
 
+/**
+ * Scale out or in to keep utilization at a given level.
+ *
+ * The utilization is tracked by the
+ * LambdaProvisionedConcurrencyUtilization metric, emitted by lambda. See:
+ * https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics.html#monitoring-metrics-concurrency
+ *
+ * @param options 
+ */
 public inline
     fun IScalableFunctionAttribute.scaleOnUtilization(block: UtilizationScalingOptionsDsl.() -> Unit
     = {}) {
@@ -290,6 +386,14 @@ public inline fun Function.addEnvironment(
   return addEnvironment(key, value, builder.build())
 }
 
+/**
+ * (deprecated) Defines an alias for this version.
+ *
+ * @deprecated Calling `addAlias` on a `Version` object will cause the Alias to be replaced on every
+ * function update. Call `function.addAlias()` or `new Alias()` instead.
+ * @param aliasName The name of the alias. 
+ * @param options Alias options.
+ */
 public inline fun IVersion.addAlias(arg0: String, block: AliasOptionsDsl.() -> Unit = {}): Alias {
   val builder = AliasOptionsDsl()
   builder.apply(block)
@@ -477,6 +581,13 @@ public inline fun CfnUrl.setCors(block: CfnUrlCorsPropertyDsl.() -> Unit = {}) {
   return setCors(builder.build())
 }
 
+/**
+ * Binds this destination to the Lambda function.
+ *
+ * @param scope 
+ * @param fn 
+ * @param options
+ */
 public inline fun IDestination.bind(
   arg0: Construct,
   arg1: IFunction,

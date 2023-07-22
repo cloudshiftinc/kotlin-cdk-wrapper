@@ -93,6 +93,12 @@ public inline fun MetricFilter.metric(block: MetricOptionsDsl.() -> Unit = {}): 
   return metric(builder.build())
 }
 
+/**
+ * Create a new Metric Filter on this Log Group.
+ *
+ * @param id Unique identifier for the construct in its parent. 
+ * @param props Properties for creating the MetricFilter. 
+ */
 public inline fun ILogGroup.addMetricFilter(arg0: String, block: MetricFilterOptionsDsl.() -> Unit =
     {}): MetricFilter {
   val builder = MetricFilterOptionsDsl()
@@ -100,6 +106,12 @@ public inline fun ILogGroup.addMetricFilter(arg0: String, block: MetricFilterOpt
   return addMetricFilter(arg0, builder.build())
 }
 
+/**
+ * Create a new Log Stream for this Log Group.
+ *
+ * @param id Unique identifier for the construct in its parent. 
+ * @param props Properties for creating the LogStream.
+ */
 public inline fun ILogGroup.addStream(arg0: String, block: StreamOptionsDsl.() -> Unit = {}):
     LogStream {
   val builder = StreamOptionsDsl()
@@ -107,6 +119,12 @@ public inline fun ILogGroup.addStream(arg0: String, block: StreamOptionsDsl.() -
   return addStream(arg0, builder.build())
 }
 
+/**
+ * Create a new Subscription Filter on this Log Group.
+ *
+ * @param id Unique identifier for the construct in its parent. 
+ * @param props Properties for creating the SubscriptionFilter. 
+ */
 public inline fun ILogGroup.addSubscriptionFilter(arg0: String,
     block: SubscriptionFilterOptionsDsl.() -> Unit = {}): SubscriptionFilter {
   val builder = SubscriptionFilterOptionsDsl()

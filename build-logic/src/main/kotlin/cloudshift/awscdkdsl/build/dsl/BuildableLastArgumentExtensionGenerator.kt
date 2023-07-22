@@ -88,7 +88,7 @@ internal class BuildableLastArgumentExtensionGenerator {
             .receiver(receiverClass.className)
             .returns(method.returnType)
 
-        method.comment?.let { builder.addKdoc("%L", it)}
+        method.comment?.let { builder.addKdoc("%L", it) }
 
         val args = mutableListOf<String>()
         method.parameters.dropLast(1)

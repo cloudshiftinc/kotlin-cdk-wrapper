@@ -58,6 +58,12 @@ public inline
   return setWriteProvisionedThroughputSettings(builder.build())
 }
 
+/**
+ * Add scheduled scaling for this scaling attribute.
+ *
+ * @param id 
+ * @param actions 
+ */
 public inline fun IScalableTableAttribute.scaleOnSchedule(arg0: String,
     block: ScalingScheduleDsl.() -> Unit = {}) {
   val builder = ScalingScheduleDsl()
@@ -65,6 +71,11 @@ public inline fun IScalableTableAttribute.scaleOnSchedule(arg0: String,
   return scaleOnSchedule(arg0, builder.build())
 }
 
+/**
+ * Scale out or in to keep utilization at a given level.
+ *
+ * @param props 
+ */
 public inline
     fun IScalableTableAttribute.scaleOnUtilization(block: UtilizationScalingPropsDsl.() -> Unit =
     {}) {
@@ -397,12 +408,23 @@ public inline
   return setTimeToLiveSpecification(builder.build())
 }
 
+/**
+ * Metric for the number of Errors executing all Lambdas.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun ITable.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metric(arg0, builder.build())
 }
 
+/**
+ * Metric for the conditional check failed requests.
+ *
+ * @param props properties of a metric.
+ */
 public inline fun ITable.metricConditionalCheckFailedRequests(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -410,6 +432,11 @@ public inline fun ITable.metricConditionalCheckFailedRequests(block: MetricOptio
   return metricConditionalCheckFailedRequests(builder.build())
 }
 
+/**
+ * Metric for the consumed read capacity units.
+ *
+ * @param props properties of a metric.
+ */
 public inline fun ITable.metricConsumedReadCapacityUnits(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -417,6 +444,11 @@ public inline fun ITable.metricConsumedReadCapacityUnits(block: MetricOptionsDsl
   return metricConsumedReadCapacityUnits(builder.build())
 }
 
+/**
+ * Metric for the consumed write capacity units.
+ *
+ * @param props properties of a metric.
+ */
 public inline fun ITable.metricConsumedWriteCapacityUnits(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -424,6 +456,11 @@ public inline fun ITable.metricConsumedWriteCapacityUnits(block: MetricOptionsDs
   return metricConsumedWriteCapacityUnits(builder.build())
 }
 
+/**
+ * Metric for the successful request latency.
+ *
+ * @param props properties of a metric.
+ */
 public inline fun ITable.metricSuccessfulRequestLatency(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -431,6 +468,11 @@ public inline fun ITable.metricSuccessfulRequestLatency(block: MetricOptionsDsl.
   return metricSuccessfulRequestLatency(builder.build())
 }
 
+/**
+ * Metric for the system errors this table.
+ *
+ * @param props properties of a metric.
+ */
 public inline
     fun ITable.metricSystemErrorsForOperations(block: SystemErrorsForOperationsMetricOptionsDsl.() -> Unit
     = {}): IMetric {
@@ -439,12 +481,23 @@ public inline
   return metricSystemErrorsForOperations(builder.build())
 }
 
+/**
+ * (deprecated) Metric for throttled requests.
+ *
+ * @deprecated use `metricThrottledRequestsForOperations`
+ * @param props properties of a metric.
+ */
 public inline fun ITable.metricThrottledRequests(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricThrottledRequests(builder.build())
 }
 
+/**
+ * Metric for throttled requests.
+ *
+ * @param props properties of a metric.
+ */
 public inline
     fun ITable.metricThrottledRequestsForOperations(block: OperationsMetricOptionsDsl.() -> Unit =
     {}): IMetric {
@@ -453,6 +506,11 @@ public inline
   return metricThrottledRequestsForOperations(builder.build())
 }
 
+/**
+ * Metric for the user errors.
+ *
+ * @param props properties of a metric.
+ */
 public inline fun ITable.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)

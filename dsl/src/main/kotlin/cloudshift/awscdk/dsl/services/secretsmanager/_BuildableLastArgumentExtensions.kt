@@ -13,6 +13,12 @@ import software.amazon.awscdk.services.secretsmanager.RotationSchedule
 import software.amazon.awscdk.services.secretsmanager.Secret
 import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment
 
+/**
+ * Adds a rotation schedule to the secret.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun ISecret.addRotationSchedule(arg0: String,
     block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
   val builder = RotationScheduleOptionsDsl()
@@ -20,6 +26,15 @@ public inline fun ISecret.addRotationSchedule(arg0: String,
   return addRotationSchedule(arg0, builder.build())
 }
 
+/**
+ * Adds a statement to the IAM resource policy associated with this secret.
+ *
+ * If this secret was created in this stack, a resource policy will be
+ * automatically created upon the first call to `addToResourcePolicy`. If
+ * the secret is imported, then this is a no-op.
+ *
+ * @param statement 
+ */
 public inline fun ISecret.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()

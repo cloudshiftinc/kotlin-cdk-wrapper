@@ -205,6 +205,23 @@ public inline
   return setWebsiteConfiguration(builder.build())
 }
 
+/**
+ * Adds a bucket notification event destination.
+ *
+ * Example:
+ *
+ * ```
+ * Function myLambda;
+ * Bucket bucket = new Bucket(this, "MyBucket");
+ * bucket.addEventNotification(EventType.OBJECT_CREATED, new LambdaDestination(myLambda),
+ * NotificationKeyFilter.builder().prefix("home/myusername/ *").build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html)
+ * @param event The event to trigger the notification. 
+ * @param dest The notification destination (Lambda, SNS Topic or SQS Queue). 
+ * @param filters S3 object key filter rules to determine which objects trigger this event. 
+ */
 public inline fun IBucket.addEventNotification(
   arg0: EventType,
   arg1: IBucketNotificationDestination,
@@ -215,6 +232,15 @@ public inline fun IBucket.addEventNotification(
   return addEventNotification(arg0, arg1, builder.build())
 }
 
+/**
+ * Subscribes a destination to receive notifications when an object is created in the bucket.
+ *
+ * This is identical to calling
+ * `onEvent(s3.EventType.OBJECT_CREATED)`.
+ *
+ * @param dest The notification destination (see onEvent). 
+ * @param filters Filters (see onEvent). 
+ */
 public inline fun IBucket.addObjectCreatedNotification(arg0: IBucketNotificationDestination,
     block: NotificationKeyFilterDsl.() -> Unit = {}) {
   val builder = NotificationKeyFilterDsl()
@@ -222,6 +248,15 @@ public inline fun IBucket.addObjectCreatedNotification(arg0: IBucketNotification
   return addObjectCreatedNotification(arg0, builder.build())
 }
 
+/**
+ * Subscribes a destination to receive notifications when an object is removed from the bucket.
+ *
+ * This is identical to calling
+ * `onEvent(EventType.OBJECT_REMOVED)`.
+ *
+ * @param dest The notification destination (see onEvent). 
+ * @param filters Filters (see onEvent). 
+ */
 public inline fun IBucket.addObjectRemovedNotification(arg0: IBucketNotificationDestination,
     block: NotificationKeyFilterDsl.() -> Unit = {}) {
   val builder = NotificationKeyFilterDsl()
@@ -229,6 +264,24 @@ public inline fun IBucket.addObjectRemovedNotification(arg0: IBucketNotification
   return addObjectRemovedNotification(arg0, builder.build())
 }
 
+/**
+ * Adds a statement to the resource policy for a principal (i.e. account/role/service) to perform
+ * actions on this bucket and/or its contents. Use `bucketArn` and `arnForObjects(keys)` to obtain ARNs
+ * for this bucket or objects.
+ *
+ * Note that the policy statement may or may not be added to the policy.
+ * For example, when an `IBucket` is created from an existing bucket,
+ * it's not possible to tell whether the bucket already has a policy
+ * attached, let alone to re-use that policy to add more statements to it.
+ * So it's safest to do nothing in these cases.
+ *
+ * @return metadata about the execution of this method. If the policy
+ * was not added, the value of `statementAdded` will be `false`. You
+ * should always check this value to make sure that the operation was
+ * actually carried out. Otherwise, synthesis and deploy will terminate
+ * silently, which may be confusing.
+ * @param permission the policy statement to be added to the bucket's policy. 
+ */
 public inline fun IBucket.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -236,6 +289,15 @@ public inline fun IBucket.addToResourcePolicy(block: PolicyStatementDsl.() -> Un
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * Defines a CloudWatch event that triggers when something happens to this bucket.
+ *
+ * Requires that there exists at least one CloudTrail Trail in your account
+ * that captures the event. This method will not create the Trail.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun IBucket.onCloudTrailEvent(arg0: String,
     block: OnCloudTrailBucketEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnCloudTrailBucketEventOptionsDsl()
@@ -243,6 +305,20 @@ public inline fun IBucket.onCloudTrailEvent(arg0: String,
   return onCloudTrailEvent(arg0, builder.build())
 }
 
+/**
+ * Defines an AWS CloudWatch event that triggers when an object is uploaded to the specified paths
+ * (keys) in this bucket using the PutObject API call.
+ *
+ * Note that some tools like `aws s3 cp` will automatically use either
+ * PutObject or the multipart upload API depending on the file size,
+ * so using `onCloudTrailWriteObject` may be preferable.
+ *
+ * Requires that there exists at least one CloudTrail Trail in your account
+ * that captures the event. This method will not create the Trail.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun IBucket.onCloudTrailPutObject(arg0: String,
     block: OnCloudTrailBucketEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnCloudTrailBucketEventOptionsDsl()
@@ -250,6 +326,23 @@ public inline fun IBucket.onCloudTrailPutObject(arg0: String,
   return onCloudTrailPutObject(arg0, builder.build())
 }
 
+/**
+ * Defines an AWS CloudWatch event that triggers when an object at the specified paths (keys) in
+ * this bucket are written to.
+ *
+ * This includes
+ * the events PutObject, CopyObject, and CompleteMultipartUpload.
+ *
+ * Note that some tools like `aws s3 cp` will automatically use either
+ * PutObject or the multipart upload API depending on the file size,
+ * so using this method may be preferable to `onCloudTrailPutObject`.
+ *
+ * Requires that there exists at least one CloudTrail Trail in your account
+ * that captures the event. This method will not create the Trail.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun IBucket.onCloudTrailWriteObject(arg0: String,
     block: OnCloudTrailBucketEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnCloudTrailBucketEventOptionsDsl()
@@ -257,6 +350,19 @@ public inline fun IBucket.onCloudTrailWriteObject(arg0: String,
   return onCloudTrailWriteObject(arg0, builder.build())
 }
 
+/**
+ * The https Transfer Acceleration URL of an S3 object.
+ *
+ * Specify `dualStack: true` at the options
+ * for dual-stack endpoint (connect to the bucket over IPv6). For example:
+ *
+ * * `https://bucket.s3-accelerate.amazonaws.com`
+ * * `https://bucket.s3-accelerate.amazonaws.com/key`
+ *
+ * @return an TransferAccelerationUrl token
+ * @param key The S3 key of the object.
+ * @param options Options for generating URL.
+ */
 public inline fun IBucket.transferAccelerationUrlForObject(arg0: String?,
     block: TransferAccelerationUrlOptionsDsl.() -> Unit = {}): String {
   val builder = TransferAccelerationUrlOptionsDsl()
@@ -264,6 +370,19 @@ public inline fun IBucket.transferAccelerationUrlForObject(arg0: String?,
   return transferAccelerationUrlForObject(arg0, builder.build())
 }
 
+/**
+ * The virtual hosted-style URL of an S3 object. Specify `regional: false` at the options for
+ * non-regional URL. For example:.
+ *
+ * * `https://only-bucket.s3.us-west-1.amazonaws.com`
+ * * `https://bucket.s3.us-west-1.amazonaws.com/key`
+ * * `https://bucket.s3.amazonaws.com/key`
+ * * `https://china-bucket.s3.cn-north-1.amazonaws.com.cn/mykey`
+ *
+ * @return an ObjectS3Url token
+ * @param key The S3 key of the object.
+ * @param options Options for generating URL.
+ */
 public inline fun IBucket.virtualHostedUrlForObject(arg0: String?,
     block: VirtualHostedStyleUrlOptionsDsl.() -> Unit = {}): String {
   val builder = VirtualHostedStyleUrlOptionsDsl()

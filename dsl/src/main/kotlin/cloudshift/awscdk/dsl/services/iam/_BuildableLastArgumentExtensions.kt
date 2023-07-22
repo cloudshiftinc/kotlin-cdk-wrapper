@@ -127,6 +127,14 @@ public inline fun PolicyDocument.addStatements(block: PolicyStatementDsl.() -> U
   return addStatements(builder.build())
 }
 
+/**
+ * Add the principal to the AssumeRolePolicyDocument.
+ *
+ * Add the statements to the AssumeRolePolicyDocument necessary to give this principal
+ * permissions to assume the given role.
+ *
+ * @param document 
+ */
 public inline fun IAssumeRolePrincipal.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit =
     {}) {
   val builder = PolicyDocumentDsl()
@@ -134,6 +142,11 @@ public inline fun IAssumeRolePrincipal.addToAssumeRolePolicy(block: PolicyDocume
   return addToAssumeRolePolicy(builder.build())
 }
 
+/**
+ * Add a statement to the resource's resource policy.
+ *
+ * @param statement 
+ */
 public inline fun IResourceWithPolicy.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit =
     {}): AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -304,6 +317,11 @@ public inline fun PrincipalBase.addToPrincipalPolicy(block: PolicyStatementDsl.(
   return addToPrincipalPolicy(builder.build())
 }
 
+/**
+ * Add to the policy of this principal.
+ *
+ * @param statement 
+ */
 public inline fun IPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToPrincipalPolicyResult {
   val builder = PolicyStatementDsl()

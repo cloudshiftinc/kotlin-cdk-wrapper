@@ -113,6 +113,13 @@ public inline
   return setCustomDomainConfig(builder.build())
 }
 
+/**
+ * Add a new app client to this user pool.
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html)
+ * @param id 
+ * @param options
+ */
 public inline fun IUserPool.addClient(arg0: String, block: UserPoolClientOptionsDsl.() -> Unit =
     {}): UserPoolClient {
   val builder = UserPoolClientOptionsDsl()
@@ -120,6 +127,13 @@ public inline fun IUserPool.addClient(arg0: String, block: UserPoolClientOptions
   return addClient(arg0, builder.build())
 }
 
+/**
+ * Associate a domain to this user pool.
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-assign-domain.html)
+ * @param id 
+ * @param options 
+ */
 public inline fun IUserPool.addDomain(arg0: String, block: UserPoolDomainOptionsDsl.() -> Unit =
     {}): UserPoolDomain {
   val builder = UserPoolDomainOptionsDsl()
@@ -127,6 +141,13 @@ public inline fun IUserPool.addDomain(arg0: String, block: UserPoolDomainOptions
   return addDomain(arg0, builder.build())
 }
 
+/**
+ * Add a new resource server to this user pool.
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-resource-servers.html)
+ * @param id 
+ * @param options 
+ */
 public inline fun IUserPool.addResourceServer(arg0: String,
     block: UserPoolResourceServerOptionsDsl.() -> Unit = {}): UserPoolResourceServer {
   val builder = UserPoolResourceServerOptionsDsl()

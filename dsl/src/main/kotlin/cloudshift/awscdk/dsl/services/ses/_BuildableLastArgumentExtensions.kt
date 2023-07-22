@@ -157,6 +157,15 @@ public inline
   return setMailFromAttributes(builder.build())
 }
 
+/**
+ * Adds a new receipt rule in this rule set.
+ *
+ * The new rule is added after
+ * the last added rule unless `after` is specified.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IReceiptRuleSet.addRule(arg0: String, block: ReceiptRuleOptionsDsl.() -> Unit =
     {}): ReceiptRule {
   val builder = ReceiptRuleOptionsDsl()

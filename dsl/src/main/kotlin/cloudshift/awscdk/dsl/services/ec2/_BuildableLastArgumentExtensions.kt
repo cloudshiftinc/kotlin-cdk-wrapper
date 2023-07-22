@@ -128,6 +128,12 @@ public inline
   return setSpotOptions(builder.build())
 }
 
+/**
+ * Return the given named metric for this VPNConnection.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun IVpnConnection.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -135,6 +141,13 @@ public inline fun IVpnConnection.metric(arg0: String, block: MetricOptionsDsl.()
   return metric(arg0, builder.build())
 }
 
+/**
+ * The bytes received through the VPN tunnel.
+ *
+ * Sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IVpnConnection.metricTunnelDataIn(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -142,6 +155,13 @@ public inline fun IVpnConnection.metricTunnelDataIn(block: MetricOptionsDsl.() -
   return metricTunnelDataIn(builder.build())
 }
 
+/**
+ * The bytes sent through the VPN tunnel.
+ *
+ * Sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IVpnConnection.metricTunnelDataOut(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -149,6 +169,13 @@ public inline fun IVpnConnection.metricTunnelDataOut(block: MetricOptionsDsl.() 
   return metricTunnelDataOut(builder.build())
 }
 
+/**
+ * The state of the tunnel. 0 indicates DOWN and 1 indicates UP.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IVpnConnection.metricTunnelState(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -429,12 +456,40 @@ public inline
   return setOptions(builder.build())
 }
 
+/**
+ * Add an egress rule for the current security group.
+ *
+ * `remoteRule` controls where the Rule object is created if the peer is also a
+ * securityGroup and they are in different stack. If false (default) the
+ * rule object is created under the current SecurityGroup object. If true and the
+ * peer is also a SecurityGroup, the rule object is created under the remote
+ * SecurityGroup object.
+ *
+ * @param peer 
+ * @param connection 
+ * @param description
+ * @param remoteRule
+ */
 public inline fun ISecurityGroup.addEgressRule(arg0: IPeer, block: PortDsl.() -> Unit = {}) {
   val builder = PortDsl()
   builder.apply(block)
   return addEgressRule(arg0, builder.build())
 }
 
+/**
+ * Add an ingress rule for the current security group.
+ *
+ * `remoteRule` controls where the Rule object is created if the peer is also a
+ * securityGroup and they are in different stack. If false (default) the
+ * rule object is created under the current SecurityGroup object. If true and the
+ * peer is also a SecurityGroup, the rule object is created under the remote
+ * SecurityGroup object.
+ *
+ * @param peer 
+ * @param connection 
+ * @param description
+ * @param remoteRule
+ */
 public inline fun ISecurityGroup.addIngressRule(arg0: IPeer, block: PortDsl.() -> Unit = {}) {
   val builder = PortDsl()
   builder.apply(block)
@@ -486,6 +541,12 @@ public inline
   return setClientLoginBannerOptions(builder.build())
 }
 
+/**
+ * Add a new entry to the ACL.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun INetworkAcl.addEntry(arg0: String,
     block: CommonNetworkAclEntryOptionsDsl.() -> Unit = {}): NetworkAclEntry {
   val builder = CommonNetworkAclEntryOptionsDsl()
@@ -793,6 +854,13 @@ public inline fun NetworkAcl.associateWithSubnet(id: String, block: SubnetSelect
   return associateWithSubnet(id, builder.build())
 }
 
+/**
+ * Called by the VPC to retrieve Subnet options from the Ipam.
+ *
+ * Don't call this directly, the VPC will call it automatically.
+ *
+ * @param input 
+ */
 public inline fun IIpAddresses.allocateSubnetsCidr(block: AllocateCidrRequestDsl.() -> Unit = {}):
     SubnetIpamOptions {
   val builder = AllocateCidrRequestDsl()
@@ -821,6 +889,12 @@ public inline
   return setPortRange(builder.build())
 }
 
+/**
+ * Adds a new client VPN endpoint to this VPC.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun IVpc.addClientVpnEndpoint(arg0: String,
     block: ClientVpnEndpointOptionsDsl.() -> Unit = {}): ClientVpnEndpoint {
   val builder = ClientVpnEndpointOptionsDsl()
@@ -828,12 +902,24 @@ public inline fun IVpc.addClientVpnEndpoint(arg0: String,
   return addClientVpnEndpoint(arg0, builder.build())
 }
 
+/**
+ * Adds a new Flow Log to this VPC.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IVpc.addFlowLog(arg0: String, block: FlowLogOptionsDsl.() -> Unit = {}): FlowLog {
   val builder = FlowLogOptionsDsl()
   builder.apply(block)
   return addFlowLog(arg0, builder.build())
 }
 
+/**
+ * Adds a new gateway endpoint to this VPC.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun IVpc.addGatewayEndpoint(arg0: String,
     block: GatewayVpcEndpointOptionsDsl.() -> Unit = {}): GatewayVpcEndpoint {
   val builder = GatewayVpcEndpointOptionsDsl()
@@ -841,6 +927,12 @@ public inline fun IVpc.addGatewayEndpoint(arg0: String,
   return addGatewayEndpoint(arg0, builder.build())
 }
 
+/**
+ * Adds a new interface endpoint to this VPC.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun IVpc.addInterfaceEndpoint(arg0: String,
     block: InterfaceVpcEndpointOptionsDsl.() -> Unit = {}): InterfaceVpcEndpoint {
   val builder = InterfaceVpcEndpointOptionsDsl()
@@ -848,6 +940,12 @@ public inline fun IVpc.addInterfaceEndpoint(arg0: String,
   return addInterfaceEndpoint(arg0, builder.build())
 }
 
+/**
+ * Adds a new VPN connection to this VPC.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun IVpc.addVpnConnection(arg0: String, block: VpnConnectionOptionsDsl.() -> Unit =
     {}): VpnConnection {
   val builder = VpnConnectionOptionsDsl()
@@ -855,12 +953,25 @@ public inline fun IVpc.addVpnConnection(arg0: String, block: VpnConnectionOption
   return addVpnConnection(arg0, builder.build())
 }
 
+/**
+ * Adds a VPN Gateway to this VPC.
+ *
+ * @param options 
+ */
 public inline fun IVpc.enableVpnGateway(block: EnableVpnGatewayOptionsDsl.() -> Unit = {}) {
   val builder = EnableVpnGatewayOptionsDsl()
   builder.apply(block)
   return enableVpnGateway(builder.build())
 }
 
+/**
+ * Return information on the subnets appropriate for the given selection strategy.
+ *
+ * Requires that at least one subnet is matched, throws a descriptive
+ * error message otherwise.
+ *
+ * @param selection
+ */
 public inline fun IVpc.selectSubnets(block: SubnetSelectionDsl.() -> Unit = {}): SelectedSubnets {
   val builder = SubnetSelectionDsl()
   builder.apply(block)

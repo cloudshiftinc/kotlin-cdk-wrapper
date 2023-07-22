@@ -140,6 +140,14 @@ public inline fun CfnCluster.setOutpostConfig(block: CfnClusterOutpostConfigProp
   return setOutpostConfig(builder.build())
 }
 
+/**
+ * Defines a CDK8s chart in this cluster.
+ *
+ * @return a `KubernetesManifest` construct representing the chart.
+ * @param id logical id of this chart. 
+ * @param chart the cdk8s chart. 
+ * @param options
+ */
 public inline fun ICluster.addCdk8sChart(
   arg0: String,
   arg1: Construct,
@@ -150,6 +158,13 @@ public inline fun ICluster.addCdk8sChart(
   return addCdk8sChart(arg0, arg1, builder.build())
 }
 
+/**
+ * Defines a Helm chart in this cluster.
+ *
+ * @return a `HelmChart` construct
+ * @param id logical id of this chart. 
+ * @param options options of this chart. 
+ */
 public inline fun ICluster.addHelmChart(arg0: String, block: HelmChartOptionsDsl.() -> Unit = {}):
     HelmChart {
   val builder = HelmChartOptionsDsl()
@@ -157,6 +172,12 @@ public inline fun ICluster.addHelmChart(arg0: String, block: HelmChartOptionsDsl
   return addHelmChart(arg0, builder.build())
 }
 
+/**
+ * Creates a new service account with corresponding IAM Role (IRSA).
+ *
+ * @param id logical id of service account. 
+ * @param options service account options.
+ */
 public inline fun ICluster.addServiceAccount(arg0: String,
     block: ServiceAccountOptionsDsl.() -> Unit = {}): ServiceAccount {
   val builder = ServiceAccountOptionsDsl()
@@ -164,6 +185,28 @@ public inline fun ICluster.addServiceAccount(arg0: String,
   return addServiceAccount(arg0, builder.build())
 }
 
+/**
+ * Connect capacity in the form of an existing AutoScalingGroup to the EKS cluster.
+ *
+ * The AutoScalingGroup must be running an EKS-optimized AMI containing the
+ * /etc/eks/bootstrap.sh script. This method will configure Security Groups,
+ * add the right policies to the instance role, apply the right tags, and add
+ * the required user data to the instance's launch configuration.
+ *
+ * Spot instances will be labeled `lifecycle=Ec2Spot` and tainted with `PreferNoSchedule`.
+ * If kubectl is enabled, the
+ * [spot interrupt
+ * handler](https://github.com/awslabs/ec2-spot-labs/tree/master/ec2-spot-eks-solution/spot-termination-handler)
+ * daemon will be installed on all spot instances to handle
+ * [EC2 Spot Instance Termination
+ * Notices](https://aws.amazon.com/blogs/aws/new-ec2-spot-instance-termination-notices/).
+ *
+ * Prefer to use `addAutoScalingGroupCapacity` if possible.
+ *
+ * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html)
+ * @param autoScalingGroup [disable-awslint:ref-via-interface]. 
+ * @param options options for adding auto scaling groups, like customizing the bootstrap script. 
+ */
 public inline fun ICluster.connectAutoScalingGroupCapacity(arg0: AutoScalingGroup,
     block: AutoScalingGroupOptionsDsl.() -> Unit = {}) {
   val builder = AutoScalingGroupOptionsDsl()

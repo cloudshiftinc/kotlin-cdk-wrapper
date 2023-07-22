@@ -33,6 +33,15 @@ public inline fun CfnRoute.setSpec(block: CfnRouteRouteSpecPropertyDsl.() -> Uni
   return setSpec(builder.build())
 }
 
+/**
+ * Creates a new VirtualGateway in this Mesh.
+ *
+ * Note that the Gateway is created in the same Stack that this Mesh belongs to,
+ * which might be different than the current stack.
+ *
+ * @param id 
+ * @param props
+ */
 public inline fun IMesh.addVirtualGateway(arg0: String, block: VirtualGatewayBasePropsDsl.() -> Unit
     = {}): VirtualGateway {
   val builder = VirtualGatewayBasePropsDsl()
@@ -40,6 +49,15 @@ public inline fun IMesh.addVirtualGateway(arg0: String, block: VirtualGatewayBas
   return addVirtualGateway(arg0, builder.build())
 }
 
+/**
+ * Creates a new VirtualNode in this Mesh.
+ *
+ * Note that the Node is created in the same Stack that this Mesh belongs to,
+ * which might be different than the current stack.
+ *
+ * @param id 
+ * @param props
+ */
 public inline fun IMesh.addVirtualNode(arg0: String, block: VirtualNodeBasePropsDsl.() -> Unit =
     {}): VirtualNode {
   val builder = VirtualNodeBasePropsDsl()
@@ -47,6 +65,15 @@ public inline fun IMesh.addVirtualNode(arg0: String, block: VirtualNodeBaseProps
   return addVirtualNode(arg0, builder.build())
 }
 
+/**
+ * Creates a new VirtualRouter in this Mesh.
+ *
+ * Note that the Router is created in the same Stack that this Mesh belongs to,
+ * which might be different than the current stack.
+ *
+ * @param id 
+ * @param props
+ */
 public inline fun IMesh.addVirtualRouter(arg0: String, block: VirtualRouterBasePropsDsl.() -> Unit =
     {}): VirtualRouter {
   val builder = VirtualRouterBasePropsDsl()
@@ -77,6 +104,12 @@ public inline fun VirtualRouter.addRoute(id: String, block: RouteBasePropsDsl.()
   return addRoute(id, builder.build())
 }
 
+/**
+ * Utility method to add a new GatewayRoute to the VirtualGateway.
+ *
+ * @param id 
+ * @param route 
+ */
 public inline fun IVirtualGateway.addGatewayRoute(arg0: String,
     block: GatewayRouteBasePropsDsl.() -> Unit = {}): GatewayRoute {
   val builder = GatewayRouteBasePropsDsl()
@@ -100,6 +133,12 @@ public inline fun HealthCheck.bind(arg0: Construct, block: HealthCheckBindOption
   return bind(arg0, builder.build())
 }
 
+/**
+ * Add a single route to the router.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IVirtualRouter.addRoute(arg0: String, block: RouteBasePropsDsl.() -> Unit = {}):
     Route {
   val builder = RouteBasePropsDsl()

@@ -14,6 +14,11 @@ import software.amazon.awscdk.services.ecr.RepositoryBase
 import software.amazon.awscdk.services.events.Rule
 import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
 
+/**
+ * Add a policy statement to the repository's resource policy.
+ *
+ * @param statement 
+ */
 public inline fun IRepository.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -21,6 +26,15 @@ public inline fun IRepository.addToResourcePolicy(block: PolicyStatementDsl.() -
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * Define a CloudWatch event that triggers when something happens to this repository.
+ *
+ * Requires that there exists at least one CloudTrail Trail in your account
+ * that captures the event. This method will not create the Trail.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun IRepository.onCloudTrailEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -28,6 +42,16 @@ public inline fun IRepository.onCloudTrailEvent(arg0: String, block: OnEventOpti
   return onCloudTrailEvent(arg0, builder.build())
 }
 
+/**
+ * Defines an AWS CloudWatch event rule that can trigger a target when an image is pushed to this
+ * repository.
+ *
+ * Requires that there exists at least one CloudTrail Trail in your account
+ * that captures the event. This method will not create the Trail.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun IRepository.onCloudTrailImagePushed(arg0: String,
     block: OnCloudTrailImagePushedOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnCloudTrailImagePushedOptionsDsl()
@@ -35,6 +59,15 @@ public inline fun IRepository.onCloudTrailImagePushed(arg0: String,
   return onCloudTrailImagePushed(arg0, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers for repository events.
+ *
+ * Use
+ * `rule.addEventPattern(pattern)` to specify a filter.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IRepository.onEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -42,6 +75,12 @@ public inline fun IRepository.onEvent(arg0: String, block: OnEventOptionsDsl.() 
   return onEvent(arg0, builder.build())
 }
 
+/**
+ * Defines an AWS CloudWatch event rule that can trigger a target when the image scan is completed.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun IRepository.onImageScanCompleted(arg0: String,
     block: OnImageScanCompletedOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnImageScanCompletedOptionsDsl()

@@ -156,12 +156,35 @@ public inline fun StageBase.metricServerError(block: MetricOptionsDsl.() -> Unit
   return metricServerError(builder.build())
 }
 
+/**
+ * Adds an OPTIONS method to this resource which responds to Cross-Origin Resource Sharing (CORS)
+ * preflight requests.
+ *
+ * Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional
+ * HTTP headers to tell browsers to give a web application running at one
+ * origin, access to selected resources from a different origin. A web
+ * application executes a cross-origin HTTP request when it requests a
+ * resource that has a different origin (domain, protocol, or port) from its
+ * own.
+ *
+ * @return a `Method` object
+ * [Documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+ * @param options CORS options. 
+ */
 public inline fun IResource.addCorsPreflight(block: CorsOptionsDsl.() -> Unit = {}): Method {
   val builder = CorsOptionsDsl()
   builder.apply(block)
   return addCorsPreflight(builder.build())
 }
 
+/**
+ * Defines a new method for this resource.
+ *
+ * @return The newly created `Method` object.
+ * @param httpMethod The HTTP method. 
+ * @param target The target backend integration for this method.
+ * @param options Method options, such as authentication.
+ */
 public inline fun IResource.addMethod(
   arg0: String,
   arg1: Integration?,
@@ -172,12 +195,25 @@ public inline fun IResource.addMethod(
   return addMethod(arg0, arg1, builder.build())
 }
 
+/**
+ * Defines a new method for this resource.
+ *
+ * @return The newly created `Method` object.
+ * @param httpMethod The HTTP method. 
+ * @param target The target backend integration for this method.
+ * @param options Method options, such as authentication.
+ */
 public inline fun IResource.addMethod(arg0: String, block: IntegrationDsl.() -> Unit = {}): Method {
   val builder = IntegrationDsl()
   builder.apply(block)
   return addMethod(arg0, builder.build())
 }
 
+/**
+ * Adds a greedy proxy resource ("{proxy+}") and an ANY method to this route.
+ *
+ * @param options Default integration and method options.
+ */
 public inline fun IResource.addProxy(block: ProxyResourceOptionsDsl.() -> Unit = {}):
     ProxyResource {
   val builder = ProxyResourceOptionsDsl()
@@ -185,6 +221,13 @@ public inline fun IResource.addProxy(block: ProxyResourceOptionsDsl.() -> Unit =
   return addProxy(builder.build())
 }
 
+/**
+ * Defines a new child resource where this resource is the parent.
+ *
+ * @return A Resource object
+ * @param pathPart The path part for the child resource. 
+ * @param options Resource options.
+ */
 public inline fun IResource.addResource(arg0: String, block: ResourceOptionsDsl.() -> Unit = {}):
     Resource {
   val builder = ResourceOptionsDsl()
@@ -386,6 +429,12 @@ public inline fun CfnStage.setCanarySetting(block: CfnStageCanarySettingProperty
   return setCanarySetting(builder.build())
 }
 
+/**
+ * Add an ApiKey to this Stage.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun IStage.addApiKey(arg0: String, block: ApiKeyOptionsDsl.() -> Unit = {}): IApiKey {
   val builder = ApiKeyOptionsDsl()
   builder.apply(block)
@@ -482,6 +531,12 @@ public inline
   return setEndpointConfiguration(builder.build())
 }
 
+/**
+ * Adds an ApiKey.
+ *
+ * @param apiKey the api key to associate with this usage plan. 
+ * @param options options that control the behaviour of this method.
+ */
 public inline fun IUsagePlan.addApiKey(arg0: IApiKey, block: AddApiKeyOptionsDsl.() -> Unit = {}) {
   val builder = AddApiKeyOptionsDsl()
   builder.apply(block)

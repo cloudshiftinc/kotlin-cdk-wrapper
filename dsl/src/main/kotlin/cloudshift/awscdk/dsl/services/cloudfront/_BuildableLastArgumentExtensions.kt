@@ -55,6 +55,12 @@ public inline
   return setContinuousDeploymentPolicyConfig(builder.build())
 }
 
+/**
+ * The method called when a given Origin is added (for the first time) to a Distribution.
+ *
+ * @param scope 
+ * @param options 
+ */
 public inline fun IOrigin.bind(arg0: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
     OriginBindConfig {
   val builder = OriginBindOptionsDsl()

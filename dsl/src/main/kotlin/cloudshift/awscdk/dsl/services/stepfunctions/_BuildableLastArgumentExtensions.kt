@@ -227,6 +227,14 @@ public inline fun StateMachineFragment.toSingleState(block: SingleStateOptionsDs
   return toSingleState(builder.build())
 }
 
+/**
+ * Return the given named metric for this State Machine's executions.
+ *
+ * Default: - sum over 5 minutes
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun IStateMachine.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -234,42 +242,92 @@ public inline fun IStateMachine.metric(arg0: String, block: MetricOptionsDsl.() 
   return metric(arg0, builder.build())
 }
 
+/**
+ * Metric for the number of executions that were aborted.
+ *
+ * Default: - sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IStateMachine.metricAborted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricAborted(builder.build())
 }
 
+/**
+ * Metric for the number of executions that failed.
+ *
+ * Default: - sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IStateMachine.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricFailed(builder.build())
 }
 
+/**
+ * Metric for the number of executions that were started.
+ *
+ * Default: - sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IStateMachine.metricStarted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricStarted(builder.build())
 }
 
+/**
+ * Metric for the number of executions that succeeded.
+ *
+ * Default: - sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IStateMachine.metricSucceeded(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricSucceeded(builder.build())
 }
 
+/**
+ * Metric for the number of executions that were throttled.
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IStateMachine.metricThrottled(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricThrottled(builder.build())
 }
 
+/**
+ * Metric for the interval, in milliseconds, between the time the execution starts and the time it
+ * closes.
+ *
+ * Default: - sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IStateMachine.metricTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricTime(builder.build())
 }
 
+/**
+ * Metric for the number of executions that timed out.
+ *
+ * Default: - sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun IStateMachine.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)

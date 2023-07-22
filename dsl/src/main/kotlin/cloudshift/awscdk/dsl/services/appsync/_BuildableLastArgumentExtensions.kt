@@ -321,6 +321,13 @@ public inline
   return setSourceApiAssociationConfig(builder.build())
 }
 
+/**
+ * add a new DynamoDB data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param table The DynamoDB table backing this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addDynamoDbDataSource(
   arg0: String,
   arg1: ITable,
@@ -331,6 +338,14 @@ public inline fun IGraphqlApi.addDynamoDbDataSource(
   return addDynamoDbDataSource(arg0, arg1, builder.build())
 }
 
+/**
+ * (deprecated) add a new elasticsearch data source to this API.
+ *
+ * * use `addOpenSearchDataSource`
+ * @param id The data source's id. 
+ * @param domain The elasticsearch domain for this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addElasticsearchDataSource(
   arg0: String,
   arg1: ElasticsearchIDomain,
@@ -341,6 +356,13 @@ public inline fun IGraphqlApi.addElasticsearchDataSource(
   return addElasticsearchDataSource(arg0, arg1, builder.build())
 }
 
+/**
+ * Add an EventBridge data source to this api.
+ *
+ * @param id The data source's id. 
+ * @param eventBus The EventBridge EventBus on which to put events. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addEventBridgeDataSource(
   arg0: String,
   arg1: IEventBus,
@@ -351,6 +373,13 @@ public inline fun IGraphqlApi.addEventBridgeDataSource(
   return addEventBridgeDataSource(arg0, arg1, builder.build())
 }
 
+/**
+ * add a new http data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param endpoint The http endpoint. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addHttpDataSource(
   arg0: String,
   arg1: String,
@@ -361,6 +390,13 @@ public inline fun IGraphqlApi.addHttpDataSource(
   return addHttpDataSource(arg0, arg1, builder.build())
 }
 
+/**
+ * add a new Lambda data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param lambdaFunction The Lambda function to call to interact with this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addLambdaDataSource(
   arg0: String,
   arg1: IFunction,
@@ -371,6 +407,15 @@ public inline fun IGraphqlApi.addLambdaDataSource(
   return addLambdaDataSource(arg0, arg1, builder.build())
 }
 
+/**
+ * add a new dummy data source to this API.
+ *
+ * Useful for pipeline resolvers
+ * and for backend changes that don't require a data source.
+ *
+ * @param id The data source's id. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addNoneDataSource(arg0: String, block: DataSourceOptionsDsl.() -> Unit
     = {}): NoneDataSource {
   val builder = DataSourceOptionsDsl()
@@ -378,6 +423,13 @@ public inline fun IGraphqlApi.addNoneDataSource(arg0: String, block: DataSourceO
   return addNoneDataSource(arg0, builder.build())
 }
 
+/**
+ * Add a new OpenSearch data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param domain The OpenSearch domain for this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addOpenSearchDataSource(
   arg0: String,
   arg1: OpensearchserviceIDomain,
@@ -388,6 +440,16 @@ public inline fun IGraphqlApi.addOpenSearchDataSource(
   return addOpenSearchDataSource(arg0, arg1, builder.build())
 }
 
+/**
+ * add a new Rds data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param serverlessCluster The serverless cluster to interact with this data source. 
+ * @param secretStore The secret store that contains the username and password for the serverless
+ * cluster. 
+ * @param databaseName The optional name of the database to use within the cluster.
+ * @param options The optional configuration for this data source.
+ */
 public inline fun IGraphqlApi.addRdsDataSource(
   arg0: String,
   arg1: IServerlessCluster,
@@ -400,6 +462,12 @@ public inline fun IGraphqlApi.addRdsDataSource(
   return addRdsDataSource(arg0, arg1, arg2, arg3, builder.build())
 }
 
+/**
+ * creates a new resolver for this datasource and API using the given properties.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun IGraphqlApi.createResolver(arg0: String,
     block: ExtendedResolverPropsDsl.() -> Unit = {}): Resolver {
   val builder = ExtendedResolverPropsDsl()
@@ -465,6 +533,13 @@ public inline fun SchemaFile.bind(api: IGraphqlApi, block: SchemaBindOptionsDsl.
   return bind(api, builder.build())
 }
 
+/**
+ * Binds a schema string to a GraphQlApi.
+ *
+ * @return ISchemaConfig with apiId and schema definition string
+ * @param api the api to bind the schema to. 
+ * @param options configuration for bind behavior.
+ */
 public inline fun ISchema.bind(arg0: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
     ISchemaConfig {
   val builder = SchemaBindOptionsDsl()
