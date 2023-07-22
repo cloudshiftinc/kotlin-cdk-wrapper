@@ -21,7 +21,7 @@ internal object SourceParser {
         parserConfiguration.setLexicalPreservationEnabled(false)
         parserConfiguration.languageLevel = ParserConfiguration.LanguageLevel.JAVA_11
         val sourceClasses = mutableListOf<CdkSourceClass>()
-        sourceRoot.parse("software.amazon.awscdk", parserConfiguration) { localPath, absolutePath, result ->
+        sourceRoot.parse("software.amazon.awscdk", parserConfiguration) { _, _, result ->
             val cu = result.result.get()
 
             val classes = processCompilationUnit(cu)
@@ -61,13 +61,13 @@ internal object SourceParser {
             "Builder" -> type.methods.filter {
                 it.isPublic && it.parameters.size == 1 && !it.isStatic && !it.isConstructorDeclaration
             }
-                .map {
-                    val type = it.parameters.first().type.asString()
-                    val comment = it.comment.getOrNull()
+                .map { method ->
+                    val parameterType = method.parameters.first().type.asString()
+                    val comment = method.comment.getOrNull()
                         ?.let { convertJavadocComment(it.content) }
                     CdkSourceMethod(
-                        name = it.name.identifier,
-                        type = type,
+                        name = method.name.identifier,
+                        type = parameterType,
                         comment = comment
                     )
                 }
@@ -107,17 +107,17 @@ internal object SourceParser {
             .map { it.trim() }
             .filter { it !in javaDocLinesToRemove }
             .map { replaceMap.entries.fold(it) { acc, entry -> acc.replace(entry.key, entry.value) } }
-            .map {
-                it.replace(seeAlsoRegex) {
-                    val (url, label) = it.destructured
+            .map { line ->
+                line.replace(seeAlsoRegex) {
+                    val (url, _) = it.destructured
                     "[Documentation]($url)"
                 }
             }
-            .map {
-                it.replace(aHrefRegex) { "[${it.groupValues[2]}](${it.groupValues[1]})" }
+            .map { line ->
+                line.replace(aHrefRegex) { "[${it.groupValues[2]}](${it.groupValues[1]})" }
             }
-            .map {
-                it.replace(linkRegex) { "[${it.groupValues[1]}]" }
+            .map { line ->
+                line.replace(linkRegex) { "[${it.groupValues[1]}]" }
             }
             .filter { !it.startsWith("Sets the value of ") }
             .joinToString("\n")
