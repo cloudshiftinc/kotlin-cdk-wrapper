@@ -26,12 +26,13 @@ dependencies {
 
     implementation("com.github.javaparser:javaparser-core:3.25.4")
 
-    implementation(plugin(libs.plugins.gradle.ktlint))
-    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+    implementation(
+        files(libs.javaClass.superclass.protectionDomain.codeSource.location)
+    )
 }
 
 // https://kotlinlang.org/docs/whatsnew19.html#try-the-k2-compiler-in-your-project
-if( GradleVersion.current() < GradleVersion.version("8.3")) {
+if (GradleVersion.current() < GradleVersion.version("8.3")) {
     tasks.withType<KotlinCompile>().configureEach {
         compilerOptions {
             languageVersion.set(KotlinVersion.KOTLIN_1_9)
@@ -41,6 +42,5 @@ if( GradleVersion.current() < GradleVersion.version("8.3")) {
 }
 
 fun DependencyHandlerScope.plugin(id: String, version: String) = "$id:$id.gradle.plugin:$version"
-fun DependencyHandlerScope.plugin(plugin: Provider<PluginDependency>): Provider<String> =
-    plugin.map { "${it.pluginId}:${it.pluginId}.gradle.plugin:${it.version}" }
 
+fun DependencyHandlerScope.plugin(plugin: Provider<PluginDependency>): Provider<String> = plugin.map { "${it.pluginId}:${it.pluginId}.gradle.plugin:${it.version}" }

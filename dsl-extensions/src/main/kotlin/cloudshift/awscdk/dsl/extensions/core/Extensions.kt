@@ -21,7 +21,11 @@ public fun Construct.addComment(comment: String) {
         .forEach { it.addComment(comment) }
 }
 
-public fun <T : CfnResource> Construct.addPropertyOverride(clazz: KClass<T>, property: String, value: String) {
+public fun <T : CfnResource> Construct.addPropertyOverride(
+    clazz: KClass<T>,
+    property: String,
+    value: String
+) {
     val resource = node.children.filterIsInstance(clazz.java).first()
     resource.addPropertyOverride(property, value)
 }
@@ -58,8 +62,7 @@ public inline fun arn(scope: IConstruct, block: (ArnComponentsDsl).() -> Unit): 
     return Arn.format(builder.build(), Stack.of(scope))
 }
 
-public fun String.toArnComponents(format: ArnFormat = ArnFormat.SLASH_RESOURCE_NAME): ArnComponents =
-    Arn.split(this, format)
+public fun String.toArnComponents(format: ArnFormat = ArnFormat.SLASH_RESOURCE_NAME): ArnComponents = Arn.split(this, format)
 
 public inline fun <reified T : Construct> Construct.withSingleton(id: String, block: (String) -> T): T {
     return allChildren().filterIsInstance<T>().firstOrNull { it.node.id == id } ?: block(id)

@@ -22,11 +22,9 @@ dependencyResolutionManagement {
     }
 }
 
-
 include(":common")
 include(":dsl")
 include(":dsl-extensions")
-
 
 gradleEnterprise {
     if (System.getenv("CI") != null) {

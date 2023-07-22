@@ -8,15 +8,22 @@ import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 
-internal class AsmClassAdapter(className : ClassName, private val delegate: ClassNode, private val sourceClass : CdkSourceClass?) : CdkClass {
+internal class AsmClassAdapter(className: ClassName, private val delegate: ClassNode, private val sourceClass: CdkSourceClass?) : CdkClass {
     override val className: ClassName = className
 
-    private val annotations: List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
+    private val annotations: List<ClassName> by lazy(
+        LazyThreadSafetyMode.NONE
+    ) {
         delegate.allAnnotations.map { Type.getType(it.desc).toTypeName() }
     }
-    override val deprecated: Boolean = annotations.any { it.toString().contains("Deprecated") }
+    override val deprecated: Boolean =
+        annotations.any {
+            it.toString().contains("Deprecated")
+        }
 
-    override val publicMemberFunctions: List<CdkClass.Method> by lazy(LazyThreadSafetyMode.NONE) {
+    override val publicMemberFunctions: List<CdkClass.Method> by lazy(
+        LazyThreadSafetyMode.NONE
+    ) {
         delegate.methods.filter {
             !it.isConstructor() &&
                 it.accessFlags.isPublic() &&
@@ -25,7 +32,9 @@ internal class AsmClassAdapter(className : ClassName, private val delegate: Clas
         }.map { AsmMethodAdapter(it, sourceClass?.methodFor(it.name)) }
     }
 
-    override val publicStaticFunctions: List<CdkClass.Method> by lazy(LazyThreadSafetyMode.NONE) {
+    override val publicStaticFunctions: List<CdkClass.Method> by lazy(
+        LazyThreadSafetyMode.NONE
+    ) {
         delegate.methods.filter {
             it.accessFlags.isPublic() &&
                 !it.accessFlags.isGenerated() &&
@@ -33,7 +42,9 @@ internal class AsmClassAdapter(className : ClassName, private val delegate: Clas
         }.map { AsmMethodAdapter(it) }
     }
 
-    private val allConstructors: List<CdkClass.Method> by lazy(LazyThreadSafetyMode.NONE) {
+    private val allConstructors: List<CdkClass.Method> by lazy(
+        LazyThreadSafetyMode.NONE
+    ) {
         delegate.methods.filter {
             it.isConstructor() && !it.accessFlags.isGenerated()
         }.map { AsmMethodAdapter(it) }

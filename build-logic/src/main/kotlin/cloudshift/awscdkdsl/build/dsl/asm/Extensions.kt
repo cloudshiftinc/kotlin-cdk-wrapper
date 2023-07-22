@@ -3,13 +3,12 @@ package cloudshift.awscdkdsl.build.dsl.asm
 import com.github.benmanes.caffeine.cache.Caffeine
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.UNIT
-import org.gradle.kotlin.dsl.accessors.AccessorFormats.internal
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Opcodes.ACC_PUBLIC
 import org.objectweb.asm.Type
-import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap
+import kotlin.reflect.jvm.internal.impl.name.FqName
 
 internal object Asm {
     const val ConstructorMethodName = "<init>"
@@ -17,18 +16,22 @@ internal object Asm {
 
 internal fun MethodNode.isConstructor() = name == Asm.ConstructorMethodName
 
-internal val MethodNode.accessFlags : AccessFlags
+internal val MethodNode.accessFlags: AccessFlags
     get() = AccessFlags(access)
 
 @JvmInline
-internal value class AccessFlags(private val value : Int) {
-    fun isPublic()  = flagSet(ACC_PUBLIC)
-    fun isSynthetic()  = flagSet(Opcodes.ACC_SYNTHETIC)
-    fun isBridge()  = flagSet(Opcodes.ACC_BRIDGE)
-    fun isStatic()  = flagSet(Opcodes.ACC_STATIC)
+internal value class AccessFlags(private val value: Int) {
+    fun isPublic() = flagSet(ACC_PUBLIC)
+
+    fun isSynthetic() = flagSet(Opcodes.ACC_SYNTHETIC)
+
+    fun isBridge() = flagSet(Opcodes.ACC_BRIDGE)
+
+    fun isStatic() = flagSet(Opcodes.ACC_STATIC)
+
     fun isGenerated() = isSynthetic() || isBridge()
 
-    private fun flagSet(flag : Int) : Boolean = (value and flag) != 0
+    private fun flagSet(flag: Int): Boolean = (value and flag) != 0
 }
 
 internal fun Type.toTypeName(): ClassName {
@@ -41,10 +44,12 @@ internal fun ClassName.Companion.fromAsmClassName(name: String): ClassName {
             "V" -> UNIT
             else -> {
                 val fqClassName = normalizeBinaryClassName(name)
-                if (fqClassName.toString().startsWith("V")) {
+                if (fqClassName.toString()
+                        .startsWith("V")
+                ) {
                     println("$name -> $fqClassName")
                 }
-                val fqName = kotlin.reflect.jvm.internal.impl.name.FqName(fqClassName.toString())
+                val fqName = FqName(fqClassName.toString())
                 when (val classId = JavaToKotlinClassMap.INSTANCE.mapJavaToKotlin(fqName)) {
                     null -> normalizeBinaryClassName(name)
                     else -> normalizeBinaryClassName(classId.asString())
@@ -54,11 +59,20 @@ internal fun ClassName.Companion.fromAsmClassName(name: String): ClassName {
     }
 }
 
-private val classNameCache = Caffeine.newBuilder().build<String, ClassName>()
+private val classNameCache = Caffeine.newBuilder()
+    .build<String, ClassName>()
 
 private fun normalizeBinaryClassName(binaryClassName: String): ClassName {
     val className = binaryClassName.substringAfterLast("/")
-    val packageName = binaryClassName.removeSuffix(className).dropLast(1).removePrefix("[L")
-    check(!packageName.startsWith("[") && !packageName.startsWith("L")) { "Unable to normalize classname: $binaryClassName (package: $packageName; class: $className" }
-    return ClassName(packageName.replace('/', '.'), className.removeSuffix(";").split("$"))
+    val packageName = binaryClassName.removeSuffix(className)
+        .dropLast(1)
+        .removePrefix("[L")
+    check(!packageName.startsWith("[") && !packageName.startsWith("L")) {
+        "Unable to normalize classname: $binaryClassName (package: $packageName; class: $className"
+    }
+    return ClassName(
+        packageName.replace('/', '.'),
+        className.removeSuffix(";")
+            .split("$")
+    )
 }

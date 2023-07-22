@@ -54,13 +54,15 @@ internal object BuilderGenerator {
             PropertySpec.builder(
                 "cdkBuilder",
                 builder.cdkBuilderClass.className,
-                KModifier.PRIVATE,
-            ).initializer(
-                "%T.%N(%L)",
-                builder.builderFactoryFunction.className,
-                builder.builderFactoryFunction.functionName,
-                builder.builderFactoryFunction.parameters.joinToString(", ") { it.name },
-            ).build(),
+                KModifier.PRIVATE
+            )
+                .initializer(
+                    "%T.%N(%L)",
+                    builder.builderFactoryFunction.className,
+                    builder.builderFactoryFunction.functionName,
+                    builder.builderFactoryFunction.parameters.joinToString(", ") { it.name }
+                )
+                .build()
         )
 
         // the main build() function of the builder dsl
@@ -68,20 +70,27 @@ internal object BuilderGenerator {
             .returns(builder.buildableClass.className)
 
         // add properties into the builder dsl
-        val overloadedProps = builder.properties.groupBy { it.name }.filter { it.value.size > 1 }.map { it.key }
+        val overloadedProps = builder.properties.groupBy { it.name }
+            .filter { it.value.size > 1 }
+            .map { it.key }
         builder.properties.forEach { property ->
             when {
                 // list of objects (possibly buildable)
-                property.isList() -> handleListProperty(property, builderClassBuilder, buildFnBuilder)
+                property.isList() -> handleListProperty(
+                    property,
+                    builderClassBuilder,
+                    buildFnBuilder
+                )
+
                 property.builderClass?.canInstantiate() ?: false -> handleBuildable(
                     property,
                     builderClassBuilder,
-                    property.name in overloadedProps,
+                    property.name in overloadedProps
                 )
 
                 property.isObject() || property.isObjectMap() -> handleObjectProperty(
                     property,
-                    builderClassBuilder,
+                    builderClassBuilder
                 )
 
                 else -> handleOtherProperty(property, builderClassBuilder)
@@ -97,7 +106,7 @@ internal object BuilderGenerator {
         val mapBuilderClass = ClassName("cloudshift.awscdk.common", "MapBuilder")
         val lambdaTypeName = LambdaTypeName.get(
             mapBuilderClass,
-            returnType = UNIT,
+            returnType = UNIT
         )
 
         // DSL setter
@@ -106,12 +115,12 @@ internal object BuilderGenerator {
                 addParameter(
                     ParameterSpec.builder(prop.name, lambdaTypeName)
                         .defaultValue("{}")
-                        .build(),
+                        .build()
                 )
                 addStatement("val builder = %T()", mapBuilderClass)
                 addStatement("builder.apply(%N)", prop.name)
                 addStatement("cdkBuilder.%N(builder.map)", prop.name)
-            },
+            }
         )
 
         // existing setter
@@ -119,18 +128,21 @@ internal object BuilderGenerator {
             dslFunctionSpec(prop) {
                 addParameter(prop.name, prop.typeName())
                 addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
-            },
+            }
         )
     }
 
     private fun handleBuildable(
         prop: BuilderProperty,
         builderClassBuilder: TypeSpec.Builder,
-        overloaded: Boolean,
+        overloaded: Boolean
     ) {
         val builderClass = prop.builderClass ?: error("Expected builder class")
         val dslBuilderClass = builderClass.className.dslClassName()
-        val lambdaTypeName = LambdaTypeName.get(receiver = dslBuilderClass, returnType = UNIT)
+        val lambdaTypeName = LambdaTypeName.get(
+            receiver = dslBuilderClass,
+            returnType = UNIT
+        )
 
         // DSL setter
         if (!overloaded) {
@@ -139,12 +151,12 @@ internal object BuilderGenerator {
                     addParameter(
                         ParameterSpec.builder(prop.name, lambdaTypeName)
                             .defaultValue("{}")
-                            .build(),
+                            .build()
                     )
                     addStatement("val builder = %T()", dslBuilderClass)
                     addStatement("builder.apply(%N)", prop.name)
                     addStatement("cdkBuilder.%N(builder.build())", prop.name)
-                },
+                }
             )
         }
         // TODO - handle overloaded methods
@@ -154,65 +166,52 @@ internal object BuilderGenerator {
             dslFunctionSpec(prop) {
                 addParameter(prop.name, prop.typeName())
                 addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
-            },
+            }
         )
     }
 
-    private fun handleOtherProperty(
-        prop: BuilderProperty,
-        builderClassBuilder: TypeSpec.Builder,
-    ) {
+    private fun handleOtherProperty(prop: BuilderProperty, builderClassBuilder: TypeSpec.Builder) {
         // setter as specified in the CDK builder
         builderClassBuilder.addFunction(
             dslFunctionSpec(prop) {
                 addParameter(prop.name, prop.typeName())
                 addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
-            },
+            }
         )
     }
 
     private fun handleListProperty(
         prop: BuilderProperty,
         builderClassBuilder: TypeSpec.Builder,
-        buildFnBuilder: FunSpec.Builder,
+        buildFnBuilder: FunSpec.Builder
     ) {
         val type = prop.type as ParameterizedTypeName
         val collectionName = "_${prop.name}"
-        builderClassBuilder
-            .addProperty(
-                PropertySpec.builder(
-                    collectionName,
-                    MUTABLE_LIST.parameterizedBy(type.typeArguments),
-                    KModifier.PRIVATE,
-                )
-                    //.addKdoc("Signature: ${prop.methodSignature}")
-                    .initializer("mutableListOf()")
-                    .build(),
-            )
+        builderClassBuilder.addProperty(
+            PropertySpec.builder(collectionName, MUTABLE_LIST.parameterizedBy(type.typeArguments), KModifier.PRIVATE)
+                // .addKdoc("Signature: ${prop.methodSignature}")
+                .initializer("mutableListOf()")
+                .build()
+        )
 
         if (prop.isList() && prop.builderClass?.canInstantiate() == true) {
             val builderClass = prop.builderClass.className.dslClassName()
-            val lambdaTypeName = LambdaTypeName.get(
-                builderClass,
-                returnType = UNIT,
-            )
+            val lambdaTypeName = LambdaTypeName.get(builderClass, returnType = UNIT)
             builderClassBuilder.addFunction(
                 dslFunctionSpec(prop) {
-                    addParameter(ParameterSpec.builder(prop.name, lambdaTypeName).build())
-                    addStatement(
-                        "%N.add(%T().apply(%N).build())",
-                        collectionName,
-                        builderClass,
-                        prop.name,
+                    addParameter(
+                        ParameterSpec.builder(prop.name, lambdaTypeName)
+                            .build()
                     )
-                },
+                    addStatement("%N.add(%T().apply(%N).build())", collectionName, builderClass, prop.name)
+                }
             )
         } else {
             builderClassBuilder.addFunction(
                 dslFunctionSpec(prop) {
                     addParameter(prop.name, type.typeArguments[0], KModifier.VARARG)
                     addStatement("%N.addAll(listOf(*%N))", collectionName, prop.name)
-                },
+                }
             )
         }
 
@@ -220,14 +219,10 @@ internal object BuilderGenerator {
             dslFunctionSpec(prop) {
                 addParameter(prop.name, COLLECTION.parameterizedBy(type.typeArguments))
                 addStatement("%N.addAll(%N)", collectionName, prop.name)
-            },
+            }
         )
 
         // delegate to CDK builder
-        buildFnBuilder
-            .addStatement("if(%N.isNotEmpty()) cdkBuilder.%N(%N)", collectionName, prop.name, collectionName)
+        buildFnBuilder.addStatement("if(%N.isNotEmpty()) cdkBuilder.%N(%N)", collectionName, prop.name, collectionName)
     }
-
 }
-
-

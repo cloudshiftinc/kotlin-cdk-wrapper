@@ -9,7 +9,11 @@ import software.amazon.awscdk.services.ec2.PublicSubnet
 import software.amazon.awscdk.services.ec2.Vpc
 import software.constructs.Construct
 
-public fun ec2.securityGroupNoOutbound(scope: Construct, id: String, block: (SecurityGroupDsl).() -> Unit) {
+public fun ec2.securityGroupNoOutbound(
+    scope: Construct,
+    id: String,
+    block: (SecurityGroupDsl).() -> Unit
+) {
     securityGroup(scope, id) {
         allowAllOutbound(false)
         apply(block)

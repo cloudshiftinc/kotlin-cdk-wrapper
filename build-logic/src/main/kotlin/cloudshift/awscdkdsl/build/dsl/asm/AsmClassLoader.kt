@@ -16,11 +16,12 @@ import java.util.jar.JarFile
 import kotlin.streams.asSequence
 
 internal object AsmClassLoader : CdkClassLoader {
-    override fun loadClasses(classpath: Set<File>, builderSourceClasses : Map<ClassName,CdkSourceClass>): List<CdkClass> = loadCdkClasses(classpath).map {
+    override fun loadClasses(classpath: Set<File>, builderSourceClasses: Map<ClassName, CdkSourceClass>): List<CdkClass> = loadCdkClasses(classpath).map {
         val className = ClassName.fromAsmClassName(it.name)
         val builderSourceClass = builderSourceClasses[className]
-        builderSourceClass ?: if(className.toString().endsWith(".Builder")) println("Missing: $className") else {
-
+        builderSourceClass ?: if (className.toString().endsWith(".Builder")) {
+            println("Missing: $className")
+        } else {
         }
         AsmClassAdapter(className, it, builderSourceClass)
     }
@@ -38,7 +39,12 @@ internal object AsmClassLoader : CdkClassLoader {
             JarFile(file).use { jar ->
                 jar.stream().use { jarStream ->
                     jarStream.asSequence().mapNotNull { entry ->
-                        maybeLoadJarEntry(entry, cdkClassPredicate, jar, toTrace)
+                        maybeLoadJarEntry(
+                            entry,
+                            cdkClassPredicate,
+                            jar,
+                            toTrace
+                        )
                     }.toList()
                 }
             }
@@ -55,7 +61,10 @@ internal object AsmClassLoader : CdkClassLoader {
         return when {
             !name.endsWith(".class") -> null
             cdkClassPredicate(name.removeSuffix(".class")) -> {
-                val classBytes = jar.getInputStream(entry).use { it.readAllBytes() }
+                val classBytes =
+                    jar.getInputStream(
+                        entry
+                    ).use { it.readAllBytes() }
                 val classReader = ClassReader(classBytes)
                 val classNode = ClassNode()
                 classReader.accept(classNode, ClassReader.SKIP_FRAMES)
@@ -63,8 +72,15 @@ internal object AsmClassLoader : CdkClassLoader {
                     if (toTrace.any { name.contains(it) }) {
                         val textifier = Textifier()
                         val traceClassVisitor =
-                            TraceClassVisitor(null, textifier, PrintWriter(System.out))
-                        classReader.accept(traceClassVisitor, ClassReader.SKIP_FRAMES)
+                            TraceClassVisitor(
+                                null,
+                                textifier,
+                                PrintWriter(System.out)
+                            )
+                        classReader.accept(
+                            traceClassVisitor,
+                            ClassReader.SKIP_FRAMES
+                        )
                     }
                     classNode
                 } else {
@@ -76,4 +92,3 @@ internal object AsmClassLoader : CdkClassLoader {
         }
     }
 }
-

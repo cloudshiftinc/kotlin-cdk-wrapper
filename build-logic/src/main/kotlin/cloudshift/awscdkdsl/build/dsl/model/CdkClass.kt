@@ -7,10 +7,11 @@ internal interface CdkClass {
     val className: ClassName
     val publicMemberFunctions: List<Method>
     val publicStaticFunctions: List<Method>
-    val deprecated : Boolean
+    val deprecated: Boolean
 
     fun implementsInterface(name: ClassName): Boolean
-    fun canInstantiate() : Boolean
+
+    fun canInstantiate(): Boolean
 
     fun isBuilder() = implementsInterface(BuilderInterface)
 
@@ -18,7 +19,7 @@ internal interface CdkClass {
         val name: String
         val signature: String
         val parameters: List<Parameter>
-        val deprecated : Boolean
+        val deprecated: Boolean
         val returnType: TypeName
         val comment: String?
 
@@ -29,6 +30,5 @@ internal interface CdkClass {
     }
 }
 
-private val BuilderInterface = ClassName("software.amazon.jsii", listOf("Builder"))
-
-
+private val BuilderInterface =
+    ClassName("software.amazon.jsii", listOf("Builder"))

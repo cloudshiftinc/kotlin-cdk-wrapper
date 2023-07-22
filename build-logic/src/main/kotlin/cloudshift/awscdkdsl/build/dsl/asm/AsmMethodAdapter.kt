@@ -1,7 +1,6 @@
 package cloudshift.awscdkdsl.build.dsl.asm
 
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
-import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceClass
 import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceMethod
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
@@ -18,14 +17,20 @@ import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
 
-internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod : CdkSourceMethod? = null) : CdkClass.Method {
+internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod: CdkSourceMethod? = null) : CdkClass.Method {
     override val name: String = delegate.name
     override val signature: String = delegate.signature ?: delegate.desc
     private val annotations: List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
-        delegate.allAnnotations.map { Type.getType(it.desc).toTypeName() }
+        delegate.allAnnotations.map {
+            Type.getType(it.desc)
+                .toTypeName()
+        }
     }
 
-    override val deprecated: Boolean = annotations.any { it.toString().contains("Deprecated") }
+    override val deprecated: Boolean = annotations.any {
+        it.toString()
+            .contains("Deprecated")
+    }
 
     override val parameters: List<CdkClass.Method.Parameter> by lazy(LazyThreadSafetyMode.NONE) {
 
@@ -34,10 +39,11 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod :
         val argumentTypes = Type.getMethodType(delegate.desc).argumentTypes
 
         if (delegate.signature != null) {
-            val params = GenericSignatureParser().parseAsMethodSignature(delegate.signature)
-                .parameters.asList()
+            val params = GenericSignatureParser().parseAsMethodSignature(delegate.signature).parameters.asList()
             genericParams = params.map { it.toTypeName() }
-            check(genericParams.size == argumentTypes.size) { "Mismatch generic params size <> argument types size; method = ${delegate.name} arg types = ${argumentTypes.map { it.toTypeName() }}; params = ${params.map { it.javaClass }}; generic params = $genericParams}; desc = ${delegate.desc}; signature = ${delegate.signature}" }
+            check(genericParams.size == argumentTypes.size) {
+                "Mismatch generic params size <> argument types size; method = ${delegate.name} " + "arg types = ${argumentTypes.map { it.toTypeName() }}; params = ${params.map { it.javaClass }}; " + "generic params = $genericParams}; desc = ${delegate.desc}; signature = ${delegate.signature}"
+            }
         }
 
         argumentTypes.mapIndexed { index: Int, type: Type ->
@@ -50,7 +56,7 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod :
                     else -> delegate.localVariables[index + 1].name
                 }
 
-                else -> "arg${index}"
+                else -> "arg$index"
             }
             var theType: TypeName = type.toTypeName()
             if (genericParams.isNotEmpty()) {
@@ -66,14 +72,18 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod :
 
     override val returnType: TypeName by lazy(LazyThreadSafetyMode.NONE) {
         when (delegate.signature) {
-            null -> Type.getReturnType(delegate.desc).toTypeName()
-            else -> GenericSignatureParser().parseAsMethodSignature(delegate.signature).returnType.toTypeName()
+            null -> Type.getReturnType(delegate.desc)
+                .toTypeName()
+
+            else -> GenericSignatureParser().parseAsMethodSignature(
+                delegate.signature
+            ).returnType.toTypeName()
         }
     }
     override val comment: String? = sourceMethod?.comment
 
     override fun toString(): String {
-        return "AsmMethodAdapter(name=${name}; desc=${delegate.desc})"
+        return "AsmMethodAdapter(name=$name; desc=${delegate.desc})"
     }
 
     private fun TypeSignature.toTypeName(): TypeName {
@@ -101,4 +111,3 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod :
     private val MethodNode.allAnnotations: List<AnnotationNode>
         get() = (visibleAnnotations ?: emptyList()) + (invisibleAnnotations ?: emptyList())
 }
-

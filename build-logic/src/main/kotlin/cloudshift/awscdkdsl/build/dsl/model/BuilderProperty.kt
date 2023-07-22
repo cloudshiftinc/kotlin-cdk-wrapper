@@ -1,6 +1,12 @@
 package cloudshift.awscdkdsl.build.dsl.model
 
-import com.squareup.kotlinpoet.*
+import com.squareup.kotlinpoet.ANY
+import com.squareup.kotlinpoet.ClassName
+import com.squareup.kotlinpoet.LIST
+import com.squareup.kotlinpoet.MAP
+import com.squareup.kotlinpoet.ParameterizedTypeName
+import com.squareup.kotlinpoet.STRING
+import com.squareup.kotlinpoet.TypeName
 
 internal data class BuilderProperty(
     val name: String,
@@ -8,7 +14,7 @@ internal data class BuilderProperty(
     val deprecated: Boolean,
     val builderClass: CdkClass?,
     val methodSignature: String,
-    val comment: String?,
+    val comment: String?
 ) {
     fun typeName(): TypeName = type
 

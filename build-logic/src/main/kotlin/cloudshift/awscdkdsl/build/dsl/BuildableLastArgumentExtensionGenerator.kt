@@ -10,25 +10,28 @@ import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.UNIT
 
 internal class BuildableLastArgumentExtensionGenerator {
-
     fun generate(cdkModel: CdkModel): Map<String, List<ExtensionFunctionSpec>> {
         // add extension function to allow DSL builder
-        val extensions = cdkModel.classes.asSequence().filterNot { it.isBuilder() }
+        val extensions = cdkModel.classes.asSequence()
+            .filterNot { it.isBuilder() }
             .flatMap { cdkClass ->
                 cdkClass.publicMemberFunctions.filter { method ->
                     method.parameters.isNotEmpty()
-                }.mapNotNull {
-                    val lastParam = it.parameters.last()
-                    val builderClass = cdkModel.builderClassFor(lastParam.type) ?: return@mapNotNull null
-                    if( !builderClass.canInstantiate()) return@mapNotNull null
-                    val funSpec = generateExtensionForBuildableArg(builderClass, cdkClass, it)
-                    ExtensionFunctionSpec(
-                        packageName = cdkClass.className.dslClassName().packageName,
-                        funSpec = funSpec,
-                        builderClass = builderClass
-                    )
                 }
-            }.sorted().groupBy { it.packageName }
+                    .mapNotNull {
+                        val lastParam = it.parameters.last()
+                        val builderClass = cdkModel.builderClassFor(lastParam.type) ?: return@mapNotNull null
+                        if (!builderClass.canInstantiate()) return@mapNotNull null
+                        val funSpec = generateExtensionForBuildableArg(builderClass, cdkClass, it)
+                        ExtensionFunctionSpec(
+                            packageName = cdkClass.className.dslClassName().packageName,
+                            funSpec = funSpec,
+                            builderClass = builderClass
+                        )
+                    }
+            }
+            .sorted()
+            .groupBy { it.packageName }
 
         // adjust overrides that now class as the sole argument is always the configuration lambda
         return fixOverrides(extensions)
@@ -47,63 +50,67 @@ internal class BuildableLastArgumentExtensionGenerator {
         }
 
         val newList = mutableListOf<ExtensionFunctionSpec>()
-        val groupedSpecs =
-            funSpecs.groupBy { "${it.qualifiedName()}.${it.funSpec.parameters.size}" }
+        val groupedSpecs = funSpecs.groupBy { "${it.qualifiedName()}.${it.funSpec.parameters.size}" }
 
         // functions with only a single instance are not a problem, retain these
-        groupedSpecs.filter { it.value.size == 1 }.forEach { (_, u) -> newList.addAll(u) }
+        groupedSpecs.filter { it.value.size == 1 }
+            .forEach { (_, u) ->
+                newList.addAll(u)
+            }
 
-        groupedSpecs.filter { it.value.size > 1 }.forEach { (_, u) ->
-            // rename each of these
-            u.forEach { spec ->
-                val builderClass = spec.builderClass
-                val newName =
-                    spec.funSpec.name + when (builderClass.className.simpleNames.size) {
+        groupedSpecs.filter { it.value.size > 1 }
+            .forEach { (_, u) ->
+                // rename each of these
+                u.forEach { spec ->
+                    val builderClass = spec.builderClass
+                    val newName = spec.funSpec.name + when (builderClass.className.simpleNames.size) {
                         1 -> builderClass.className.simpleName
                         else -> builderClass.className.simpleNames.filter {
                             it != "Builder" && !it.startsWith("Cfn")
-                        }.joinToString("")
+                        }
+                            .joinToString("")
                     }
-                val newSpec = spec.funSpec.toBuilder(name = newName).build()
-                newList.add(spec.copy(funSpec = newSpec))
+                    val newSpec = spec.funSpec.toBuilder(name = newName)
+                        .build()
+                    newList.add(spec.copy(funSpec = newSpec))
+                }
             }
-        }
         return newList
     }
 
     private fun generateExtensionForBuildableArg(
         builderClass: CdkClass,
         receiverClass: CdkClass,
-        method: CdkClass.Method,
+        method: CdkClass.Method
     ): FunSpec {
-
         val builder = FunSpec.builder(method.name)
             .addModifiers(KModifier.INLINE)
             .receiver(receiverClass.className)
             .returns(method.returnType)
 
         val args = mutableListOf<String>()
-        method.parameters.dropLast(1).forEach {
-            builder.addParameter(it.name, it.type)
-            args.add(it.name)
-        }
+        method.parameters.dropLast(1)
+            .forEach {
+                builder.addParameter(it.name, it.type)
+                args.add(it.name)
+            }
         args.add("builder.build()")
 
         // enable builder DSL
         val lambdaTypeName = LambdaTypeName.get(
             builderClass.className.dslClassName(),
-            returnType = UNIT,
+            returnType = UNIT
         )
         builder.addParameter(
             ParameterSpec.builder("block", lambdaTypeName)
                 .defaultValue("{}")
-                .build(),
+                .build()
         )
 
         val codeBlockBuilder = CodeBlock.builder()
         builder.addStatement(
             "val builder = %T()",
-            builderClass.className.dslClassName(),
+            builderClass.className.dslClassName()
         )
         codeBlockBuilder.addStatement("builder.apply(block)")
             .addStatement("return %L(%L)", method.name, args.joinToString(", "))
@@ -116,9 +123,8 @@ internal class BuildableLastArgumentExtensionGenerator {
 internal data class ExtensionFunctionSpec(
     val packageName: String,
     val funSpec: FunSpec,
-    val builderClass : CdkClass
+    val builderClass: CdkClass
 ) : Comparable<ExtensionFunctionSpec> {
-
     fun qualifiedName(): String {
         return "${funSpec.receiverType}.${funSpec.name}"
     }

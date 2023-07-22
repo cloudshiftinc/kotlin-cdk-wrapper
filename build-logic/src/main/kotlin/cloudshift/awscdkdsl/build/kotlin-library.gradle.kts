@@ -3,14 +3,11 @@ package cloudshift.awscdkdsl.build
 import org.gradle.accessors.dm.LibrariesForLibs
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
-import org.gradle.internal.jvm.inspection.JvmVendor
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jlleitschuh.gradle.ktlint.KtlintExtension
 
 plugins {
     `java-library`
     kotlin("jvm")
-    id("org.jlleitschuh.gradle.ktlint")
     id("cloudshift.awscdkdsl.build.base")
 }
 
@@ -38,13 +35,14 @@ tasks.withType<Test>().configureEach {
             .availableProcessors() / 2
         ).takeIf { it > 0 } ?: 1
     testLogging {
-        events = setOf(
-            TestLogEvent.FAILED,
-            TestLogEvent.PASSED,
-            TestLogEvent.SKIPPED,
-            TestLogEvent.STANDARD_OUT,
-            TestLogEvent.STANDARD_ERROR
-        )
+        events =
+            setOf(
+                TestLogEvent.FAILED,
+                TestLogEvent.PASSED,
+                TestLogEvent.SKIPPED,
+                TestLogEvent.STANDARD_OUT,
+                TestLogEvent.STANDARD_ERROR
+            )
         exceptionFormat = TestExceptionFormat.FULL
         showExceptions = true
         showCauses = true
@@ -57,7 +55,6 @@ tasks.withType<KotlinCompile>().configureEach {
         freeCompilerArgs += listOf("-Xjsr305=strict", "-Xcontext-receivers")
     }
     compilerOptions {
-
     }
 }
 
@@ -87,27 +84,21 @@ configurations {
         extendsFrom(named(JavaPlugin.COMPILE_ONLY_CONFIGURATION_NAME).get())
     }
     named(JavaPlugin.TEST_ANNOTATION_PROCESSOR_CONFIGURATION_NAME) {
-        extendsFrom(named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get())
+        extendsFrom(
+            named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get()
+        )
     }
     named(JavaPlugin.COMPILE_ONLY_CONFIGURATION_NAME) {
-        extendsFrom(named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get())
+        extendsFrom(
+            named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get()
+        )
     }
 }
 
 kotlin {
     explicitApi()
-    jvmToolchain{
+    jvmToolchain {
         languageVersion = JavaLanguageVersion.of(17)
         vendor = JvmVendorSpec.AMAZON
     }
-}
-
-configure<KtlintExtension> {
-    version = "0.50.0"
-    verbose = true
-    debug = true
-}
-
-tasks.named("precommit") {
-    dependsOn("ktlintFormat", "ktlintCheck")
 }

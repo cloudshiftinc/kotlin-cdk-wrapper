@@ -18,14 +18,22 @@ publishing {
                 licenses {
                     license {
                         name.set("Apache License, version 2.0")
-                        url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+                        url.set(
+                            "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                        )
                     }
                 }
 
                 scm {
-                    connection.set("scm:git:git://github.com/cloudshiftinc/awscdk-dsl-kotlin.git/")
-                    developerConnection.set("scm:git:ssh://github.com:cloudshiftinc/awscdk-dsl-kotlin.git")
-                    url.set("https://github.com/cloudshiftinc/awscdk-dsl-kotlin")
+                    connection.set(
+                        "scm:git:git://github.com/cloudshiftinc/awscdk-dsl-kotlin.git/"
+                    )
+                    developerConnection.set(
+                        "scm:git:ssh://github.com:cloudshiftinc/awscdk-dsl-kotlin.git"
+                    )
+                    url.set(
+                        "https://github.com/cloudshiftinc/awscdk-dsl-kotlin"
+                    )
                 }
 
                 developers {
@@ -47,25 +55,26 @@ signing {
     sign(publishing.publications["mavenJava"])
 }
 
-val publishingPredicate = provider {
-    val ci = System.getenv()["CI"] == "true"
-    System.getenv().filter {
-        it.key.startsWith("GITHUB_") &&
-            (it.key.contains("REF") || it.key.contains("EVENT"))
-    }.forEach {
-        println("Publishing env: ${it.key} -> ${it.value}")
-    }
+val publishingPredicate =
+    provider {
+        val ci = System.getenv()["CI"] == "true"
+        System.getenv().filter {
+            it.key.startsWith("GITHUB_") &&
+                (it.key.contains("REF") || it.key.contains("EVENT"))
+        }.forEach {
+            println("Publishing env: ${it.key} -> ${it.value}")
+        }
 
-    val eventName = System.getenv()["GITHUB_EVENT_NAME"]
-    val refName = System.getenv()["GITHUB_REF_NAME"]
+        val eventName = System.getenv()["GITHUB_EVENT_NAME"]
+        val refName = System.getenv()["GITHUB_REF_NAME"]
 
-    when {
-        !ci -> false
-        eventName == "push" && refName == "main" -> true
-        // TODO - handle PR merges
-        else -> false
+        when {
+            !ci -> false
+            eventName == "push" && refName == "main" -> true
+            // TODO - handle PR merges
+            else -> false
+        }
     }
-}
 
 tasks.withType<PublishToMavenRepository>().configureEach {
     onlyIf("Publishing only allowed on CI") {
@@ -91,4 +100,3 @@ Publishing env: GITHUB_REF_NAME -> main
 Publishing env: GITHUB_HEAD_REF ->
 
  */
-

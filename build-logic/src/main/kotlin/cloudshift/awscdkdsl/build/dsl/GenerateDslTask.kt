@@ -1,10 +1,6 @@
 package cloudshift.awscdkdsl.build.dsl
 
 import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader
-import com.github.javaparser.ParserConfiguration
-import com.github.javaparser.ast.CompilationUnit
-import com.github.javaparser.utils.SourceRoot
-import com.github.javaparser.utils.SourceRoot.Callback
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
@@ -22,111 +18,119 @@ import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
 import javax.inject.Inject
-import kotlin.jvm.optionals.getOrNull
 
-abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOperations, private val archiveOps: ArchiveOperations, private val objects: ObjectFactory) : DefaultTask() {
+abstract class GenerateDslTask
+    @Inject
+    constructor(
+        private val fs: FileSystemOperations,
+        private val archiveOps: ArchiveOperations,
+        private val objects: ObjectFactory
+    ) : DefaultTask() {
+        init {
+            outputs.upToDateWhen { false }
+        }
 
-    init {
-        outputs.upToDateWhen { false }
-    }
+        @get:Input
+        abstract val classpath: SetProperty<File>
 
-    @get:Input
-    abstract val classpath: SetProperty<File>
+        @get:Input
+        abstract val sources: SetProperty<File>
 
-    @get:Input
-    abstract val sources: SetProperty<File>
+        @get:InputFile
+        abstract val cloudFormationSpecificationZip: RegularFileProperty
 
-    @get:InputFile
-    abstract val cloudFormationSpecificationZip: RegularFileProperty
+        @get:OutputDirectory
+        abstract val dslDir: DirectoryProperty
 
-    @get:OutputDirectory
-    abstract val dslDir: DirectoryProperty
+        @TaskAction
+        fun action() {
+            val sourcesDir = temporaryDir.resolve("cdk-sources")
+            sourcesDir.mkdir()
 
-    @TaskAction
-    fun action() {
-        val sourcesDir = temporaryDir.resolve("cdk-sources")
-        sourcesDir.mkdir()
+            fs.sync {
+                into(sourcesDir)
+                from(
+                    sources.get().map {
+                        archiveOps.zipTree(it).matching {
+                            include("**/*.java")
+                            exclude("**/package-info.java")
+                        }
+                    }
+                )
+                includeEmptyDirs = false
+            }
 
-        fs.sync {
-            into(sourcesDir)
-            from(sources.get().map {
-                archiveOps.zipTree(it).matching {
-                    include("**/*.java")
-                    exclude("**/package-info.java")
+            val cdkSourceModel = SourceParser.parse(sourcesDir)
+
+            fs.delete {
+                delete(dslDir)
+            }
+
+            val outDir = dslDir.get().asFile
+
+            logger.lifecycle("Sources: ${sources.get().map { it.name }}")
+
+            logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
+            val cdkClasses =
+                AsmClassLoader.loadClasses(
+                    classpath.get(),
+                    cdkSourceModel.builderMap
+                )
+            val cdkModel = CdkModelFactory.createModel(cdkClasses)
+
+            logger.lifecycle("Generating builders...")
+            BuilderGenerator.generate(cdkModel.builders).forEach { it.writeTo(outDir) }
+
+            logger.lifecycle("Generating namespace objects...")
+            writeObjects(NamespaceObjectGenerator().generate(cdkModel.builders))
+
+            logger.lifecycle("Generating extension functions...")
+            writeExtensionFunctions(
+                BuildableLastArgumentExtensionGenerator().generate(cdkModel),
+                "_BuildableLastArgumentExtensions"
+            )
+        }
+
+        private fun writeObjects(functionMap: Map<ClassName, List<NamespaceObjectGenerator.NamespacedBuilderFunction>>) {
+            functionMap.forEach { (objectName, builderFunctions) ->
+                val builder =
+                    FileSpec.builder(
+                        objectName.packageName,
+                        "_${objectName.simpleName}"
+                    )
+                builder.suppressWarningTypes(SUPPRESSIONS)
+                val objectBuilder = TypeSpec.objectBuilder(objectName)
+                builderFunctions.forEach { builderFn ->
+                    objectBuilder.addFunction(builderFn.funSpec)
                 }
-            })
-            includeEmptyDirs = false
-        }
-
-
-        val cdkSourceModel = SourceParser.parse(sourcesDir)
-
-        fs.delete {
-            delete(dslDir)
-        }
-
-        val outDir = dslDir.get().asFile
-
-        logger.lifecycle("Sources: ${sources.get().map { it.name }}")
-
-
-
-        logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
-        val cdkClasses = AsmClassLoader.loadClasses(classpath.get(), cdkSourceModel.builderMap)
-        val cdkModel = CdkModelFactory.createModel(cdkClasses)
-
-        logger.lifecycle("Generating builders...")
-        BuilderGenerator.generate(cdkModel.builders).forEach { it.writeTo(outDir) }
-
-        logger.lifecycle("Generating namespace objects...")
-        writeObjects(NamespaceObjectGenerator().generate(cdkModel.builders))
-
-        logger.lifecycle("Generating extension functions...")
-        writeExtensionFunctions(
-            BuildableLastArgumentExtensionGenerator().generate(cdkModel),
-            "_BuildableLastArgumentExtensions",
-        )
-    }
-
-    private fun writeObjects(functionMap: Map<ClassName, List<NamespaceObjectGenerator.NamespacedBuilderFunction>>) {
-        functionMap.forEach { (objectName, builderFunctions) ->
-            val builder = FileSpec.builder(objectName.packageName, "_${objectName.simpleName}")
-            builder.suppressWarningTypes(SUPPRESSIONS)
-            val objectBuilder = TypeSpec.objectBuilder(objectName)
-            builderFunctions.forEach { builderFn ->
-                objectBuilder.addFunction(builderFn.funSpec)
+                builder.addType(objectBuilder.build())
+                builder.build().writeTo(dslDir.get().asFile)
             }
-            builder.addType(objectBuilder.build())
-            builder.build().writeTo(dslDir.get().asFile)
         }
-    }
 
-    private fun writeExtensionFunctions(
-        extensionFunctions: Map<String, List<ExtensionFunctionSpec>>,
-        targetFile: String,
-    ) {
-        extensionFunctions.forEach { (packageName, funSpecs) ->
-            val builder = FileSpec.builder(packageName, targetFile)
-            builder.suppressWarningTypes(SUPPRESSIONS)
-            funSpecs.forEach { funSpec ->
-                builder.addFunction(funSpec.funSpec)
+        private fun writeExtensionFunctions(extensionFunctions: Map<String, List<ExtensionFunctionSpec>>, targetFile: String) {
+            extensionFunctions.forEach { (packageName, funSpecs) ->
+                val builder = FileSpec.builder(packageName, targetFile)
+                builder.suppressWarningTypes(SUPPRESSIONS)
+                funSpecs.forEach { funSpec ->
+                    builder.addFunction(funSpec.funSpec)
+                }
+                builder.build().writeTo(dslDir.get().asFile)
             }
-            builder.build().writeTo(dslDir.get().asFile)
         }
     }
-}
 
-internal val SUPPRESSIONS = setOf(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
-
+internal val SUPPRESSIONS =
+    setOf(
+        "RedundantVisibilityModifier",
+        "RedundantUnitReturnType",
+        "RemoveRedundantQualifierName",
+        "unused",
+        "UnusedImport",
+        "ClassName",
+        "REDUNDANT_PROJECTION",
+        "DEPRECATION"
+    )
 
 internal fun FileSpec.Builder.suppressWarningTypes(types: Collection<String>): FileSpec.Builder {
     if (types.isEmpty()) {
@@ -135,7 +139,9 @@ internal fun FileSpec.Builder.suppressWarningTypes(types: Collection<String>): F
 
     val format = "%S,".repeat(types.count()).trimEnd(',')
     addAnnotation(
-        AnnotationSpec.builder(ClassName("", "Suppress")).addMember(format, *types.toTypedArray()).build(),
+        AnnotationSpec.builder(
+            ClassName("", "Suppress")
+        ).addMember(format, *types.toTypedArray()).build()
     )
     return this
 }
