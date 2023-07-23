@@ -59,7 +59,7 @@ abstract class ExecuteRelease : AbstractReleaseTask() {
             // bump to next pre-release version
             val postReleaseVersions = incrementVersion {
                 // TODO - configuration for which to increment
-                it.nextPreRelease()
+                it.nextPreRelease("SNAPSHOT")
             }
 
             git.commit("${newVersionCommitMessage.get()} ${postReleaseVersions.previousVersion} -> ${postReleaseVersions.version}")
