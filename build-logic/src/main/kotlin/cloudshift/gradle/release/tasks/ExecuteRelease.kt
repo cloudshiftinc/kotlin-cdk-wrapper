@@ -61,7 +61,7 @@ abstract class ExecuteRelease : AbstractReleaseTask() {
                 // TODO - configuration for which to increment
                 it.nextPreRelease("SNAPSHOT")
             }
-
+            git.addUnstagedFiles()
             git.commit("${newVersionCommitMessage.get()} ${postReleaseVersions.previousVersion} -> ${postReleaseVersions.version}")
             git.push()
         }

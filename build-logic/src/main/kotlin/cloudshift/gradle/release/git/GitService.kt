@@ -73,8 +73,8 @@ abstract class GitService @Inject constructor(private val execOps: ExecOperation
                 val standardOutput = String(stdOutput.toByteArray())
                 val errorOutput = String(stdError.toByteArray())
                 var msg = "Error executing $commandLine; exit code ${execResult.exitValue}"
-                if(standardOutput.isNotBlank()) msg = msg + "\nstdout> $standardOutput"
-                if(errorOutput.isNotBlank()) msg = msg + "\nstderr> $errorOutput"
+                if(standardOutput.isNotBlank()) msg = "$msg\n$standardOutput"
+                if(errorOutput.isNotBlank()) msg = "$msg\n$errorOutput"
 
                 throw GradleException(msg)
             }
