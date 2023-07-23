@@ -5,7 +5,6 @@ import cloudshift.awscdkdsl.build.task.CopyTemplates
 plugins {
 }
 
-
 val templatePropertyMap = mapOf("version" to "$version")
 
 val copyTemplates by tasks.registering(CopyTemplates::class) {
@@ -13,5 +12,3 @@ val copyTemplates by tasks.registering(CopyTemplates::class) {
     from("gradle/templates")
     into(layout.projectDirectory)
 }
-
-

@@ -17,7 +17,6 @@ dependencies {
     // for convention plugins
     implementation(plugin(libs.plugins.kotlin.jvm))
 
-
     // for generating Kotlin DSL
     implementation(libs.guava)
     implementation(libs.squareup.kotlinpoet)
@@ -30,7 +29,7 @@ dependencies {
     implementation(libs.javaparser.core)
 
     // release management
-    //implementation(plugin("org.ajoberstar.grgit.service", "5.2.0"))
+    // implementation(plugin("org.ajoberstar.grgit.service", "5.2.0"))
 
     // workaround for using version catalog in precompiled script plugins
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))

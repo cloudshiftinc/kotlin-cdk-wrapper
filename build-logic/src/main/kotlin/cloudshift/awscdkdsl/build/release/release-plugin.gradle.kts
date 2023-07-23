@@ -1,9 +1,9 @@
 package cloudshift.awscdkdsl.build.release
 
-//import org.ajoberstar.grgit.gradle.GrgitServiceExtension
+// import org.ajoberstar.grgit.gradle.GrgitServiceExtension
 
 plugins {
-  //  id("org.ajoberstar.grgit.service")
+    //  id("org.ajoberstar.grgit.service")
 }
 
 val ext = extensions.create<ReleaseExtension>("release")
@@ -21,8 +21,7 @@ ext.apply {
     incrementAfterRelease.convention(true)
 }
 
-//val grGit = extensions.findByType<GrgitServiceExtension>()
-
+// val grGit = extensions.findByType<GrgitServiceExtension>()
 
 /*
 Release:
@@ -37,4 +36,3 @@ Release:
 *
 
  */
-

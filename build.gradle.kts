@@ -1,6 +1,5 @@
 import cloudshift.awscdkdsl.build.NoLocalChanges
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
-import org.gradle.tooling.GradleConnector
 
 plugins {
     java
@@ -101,7 +100,7 @@ tasks.named("check") {
 }
 
 // hack-around for https://github.com/researchgate/gradle-release/issues/304
-//configure(listOf(tasks.release, tasks.runBuildTasks)) {
+// configure(listOf(tasks.release, tasks.runBuildTasks)) {
 //    configure {
 //        actions.clear()
 //        doLast {
@@ -123,8 +122,8 @@ tasks.named("check") {
 //                }
 //        }
 //    }
-//}
+// }
 //
-//tasks.preTagCommit {
+// tasks.preTagCommit {
 //    dependsOn(tasks.named("updateReadme"))
-//}
+// }
