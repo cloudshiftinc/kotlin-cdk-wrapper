@@ -7,6 +7,7 @@ import cloudshift.gradle.release.tasks.CheckLocalStagedFiles
 import cloudshift.gradle.release.tasks.CheckLocalUnstagedFiles
 import cloudshift.gradle.release.tasks.CheckRemoteOutstandingCommits
 import cloudshift.gradle.release.tasks.ExecuteRelease
+import io.github.z4kn4fein.semver.toVersion
 
 // import org.ajoberstar.grgit.gradle.GrgitServiceExtension
 
@@ -35,7 +36,6 @@ ext.apply {
     incrementAfterRelease.convention(true)
     newVersionCommitMessage.convention("[Release] - new version commit: ")
 }
-
 
 val checkRelease by tasks.registering {
 }
