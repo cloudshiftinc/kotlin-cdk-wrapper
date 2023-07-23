@@ -6,7 +6,7 @@ plugins {
     id("cloudshift.awscdkdsl.build.base")
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0-rc-1" // only on root project
     id("de.undercouch.download") version "5.4.0"
-//    id("cloudshift.awscdkdsl.build.release")
+    id("cloudshift.gradle.release.release-plugin")
 }
 
 nexusPublishing {
@@ -127,3 +127,11 @@ tasks.named("check") {
 // tasks.preTagCommit {
 //    dependsOn(tasks.named("updateReadme"))
 // }
+
+
+release {
+    failOnPushNeeded = false
+    failOnPullNeeded = false
+    failOnStagedFiles = false
+    failOnUnstagedFiles = false
+}

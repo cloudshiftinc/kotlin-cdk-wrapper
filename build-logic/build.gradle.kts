@@ -29,6 +29,7 @@ dependencies {
     implementation(libs.javaparser.core)
 
     // release management
+    implementation("io.github.z4kn4fein:semver:1.4.2")
     // implementation(plugin("org.ajoberstar.grgit.service", "5.2.0"))
 
     // workaround for using version catalog in precompiled script plugins
