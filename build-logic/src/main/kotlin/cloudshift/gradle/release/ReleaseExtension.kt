@@ -1,4 +1,4 @@
-package cloudshift.awscdkdsl.build.release
+package cloudshift.gradle.release
 
 import org.gradle.api.provider.Property
 
