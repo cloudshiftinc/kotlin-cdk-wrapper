@@ -13,22 +13,27 @@ dependencies {
 }
 
 dependencies {
-    implementation(libs.guava)
-    implementation(libs.squareup.kotlinpoet)
+
+    // for convention plugins
     implementation(plugin(libs.plugins.kotlin.jvm))
 
+
+    // for generating Kotlin DSL
+    implementation(libs.guava)
+    implementation(libs.squareup.kotlinpoet)
     implementation(platform(libs.asm.bom))
     implementation(libs.asm.core)
     implementation(libs.asm.tree)
     implementation(libs.asm.util)
     implementation(libs.caffeine)
     implementation(libs.aspectj.tools)
+    implementation(libs.javaparser.core)
 
-    implementation("com.github.javaparser:javaparser-core:3.25.4")
+    // release management
+    //implementation(plugin("org.ajoberstar.grgit.service", "5.2.0"))
 
-    implementation(
-        files(libs.javaClass.superclass.protectionDomain.codeSource.location)
-    )
+    // workaround for using version catalog in precompiled script plugins
+    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
 
 // https://kotlinlang.org/docs/whatsnew19.html#try-the-k2-compiler-in-your-project
