@@ -10,7 +10,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import javax.inject.Inject
 
-abstract class GitServiceImpl
+internal abstract class GitServiceImpl
 @Inject
 constructor(private val execOps: ExecOperations) : BuildService<BuildServiceParameters.None>, GitService {
     private val logger = Logging.getLogger(GitServiceImpl::class.java)

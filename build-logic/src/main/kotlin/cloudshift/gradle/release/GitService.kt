@@ -2,7 +2,7 @@ package cloudshift.gradle.release
 
 import java.io.File
 
-interface GitService {
+internal interface GitService {
     fun localUnstagedFiles(): GitOutput
     fun localStagedFiles(): GitOutput
     fun localOutstandingCommits(): GitOutput

@@ -1,7 +1,6 @@
 package cloudshift.gradle.release.tasks
 
 import cloudshift.gradle.release.GitService
-import cloudshift.gradle.release.GitServiceImpl
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
@@ -27,5 +26,5 @@ abstract class AbstractCheckTask : AbstractReleaseTask() {
         }
     }
 
-    protected abstract fun executeCheckCommand(): GitService.GitOutput
+    internal abstract fun executeCheckCommand(): GitService.GitOutput
 }

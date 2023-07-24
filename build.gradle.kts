@@ -1,11 +1,12 @@
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
+import cloudshift.gradle.release.preProcessFiles
 
 plugins {
     java
     id("cloudshift.awscdkdsl.build.base")
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0-rc-1" // only on root project
     id("de.undercouch.download") version "5.4.0"
-    id("cloudshift.gradle.release.release-plugin")
+    id("cloudshift.release-plugin")
 }
 
 nexusPublishing {
@@ -105,5 +106,11 @@ release {
         failOnPullNeeded = false
         failOnStagedFiles = false
         failOnUnstagedFiles = false
+    }
+    preProcessFiles {
+        templates(sourceDir = "gradle/templates", destinationDir = layout.projectDirectory)
+        replacements {
+            includes("README.MD")
+        }
     }
 }

@@ -5,6 +5,15 @@ plugins {
     `kotlin-dsl`
 }
 
+gradlePlugin {
+    plugins {
+        create("cloudshiftRelease") {
+            id = "cloudshift.release-plugin"
+            implementationClass = "cloudshift.gradle.release.ReleasePlugin"
+        }
+    }
+}
+
 dependencies {
     repositories {
         maven("https://cache-redirector.jetbrains.com/repo1.maven.org/maven2")
