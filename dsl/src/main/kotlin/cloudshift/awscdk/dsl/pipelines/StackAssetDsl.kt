@@ -1,12 +1,12 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Boolean
-import kotlin.String
 import software.amazon.awscdk.pipelines.AssetType
 import software.amazon.awscdk.pipelines.StackAsset
+import kotlin.Boolean
+import kotlin.String
 
 /**
  * An asset used by a Stack.
@@ -30,51 +30,51 @@ import software.amazon.awscdk.pipelines.StackAsset
  */
 @CdkDslMarker
 public class StackAssetDsl {
-  private val cdkBuilder: StackAsset.Builder = StackAsset.builder()
+    private val cdkBuilder: StackAsset.Builder = StackAsset.builder()
 
-  /**
-   * @param assetId Asset identifier. 
-   */
-  public fun assetId(assetId: String) {
-    cdkBuilder.assetId(assetId)
-  }
+    /**
+     * @param assetId Asset identifier.
+     */
+    public fun assetId(assetId: String) {
+        cdkBuilder.assetId(assetId)
+    }
 
-  /**
-   * @param assetManifestPath Absolute asset manifest path. 
-   * This needs to be made relative at a later point in time, but when this
-   * information is parsed we don't know about the root cloud assembly yet.
-   */
-  public fun assetManifestPath(assetManifestPath: String) {
-    cdkBuilder.assetManifestPath(assetManifestPath)
-  }
+    /**
+     * @param assetManifestPath Absolute asset manifest path.
+     * This needs to be made relative at a later point in time, but when this
+     * information is parsed we don't know about the root cloud assembly yet.
+     */
+    public fun assetManifestPath(assetManifestPath: String) {
+        cdkBuilder.assetManifestPath(assetManifestPath)
+    }
 
-  /**
-   * @param assetPublishingRoleArn Role ARN to assume to publish.
-   */
-  public fun assetPublishingRoleArn(assetPublishingRoleArn: String) {
-    cdkBuilder.assetPublishingRoleArn(assetPublishingRoleArn)
-  }
+    /**
+     * @param assetPublishingRoleArn Role ARN to assume to publish.
+     */
+    public fun assetPublishingRoleArn(assetPublishingRoleArn: String) {
+        cdkBuilder.assetPublishingRoleArn(assetPublishingRoleArn)
+    }
 
-  /**
-   * @param assetSelector Asset selector to pass to `cdk-assets`. 
-   */
-  public fun assetSelector(assetSelector: String) {
-    cdkBuilder.assetSelector(assetSelector)
-  }
+    /**
+     * @param assetSelector Asset selector to pass to `cdk-assets`.
+     */
+    public fun assetSelector(assetSelector: String) {
+        cdkBuilder.assetSelector(assetSelector)
+    }
 
-  /**
-   * @param assetType Type of asset to publish. 
-   */
-  public fun assetType(assetType: AssetType) {
-    cdkBuilder.assetType(assetType)
-  }
+    /**
+     * @param assetType Type of asset to publish.
+     */
+    public fun assetType(assetType: AssetType) {
+        cdkBuilder.assetType(assetType)
+    }
 
-  /**
-   * @param isTemplate Does this asset represent the CloudFormation template for the stack. 
-   */
-  public fun isTemplate(isTemplate: Boolean) {
-    cdkBuilder.isTemplate(isTemplate)
-  }
+    /**
+     * @param isTemplate Does this asset represent the CloudFormation template for the stack.
+     */
+    public fun isTemplate(isTemplate: Boolean) {
+        cdkBuilder.isTemplate(isTemplate)
+    }
 
-  public fun build(): StackAsset = cdkBuilder.build()
+    public fun build(): StackAsset = cdkBuilder.build()
 }

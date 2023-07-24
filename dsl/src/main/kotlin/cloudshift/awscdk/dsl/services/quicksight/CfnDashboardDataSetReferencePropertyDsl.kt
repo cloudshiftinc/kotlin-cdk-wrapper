@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
+import kotlin.String
 
 /**
  * Dataset reference.
@@ -25,22 +25,22 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardDataSetReferencePropertyDsl {
-  private val cdkBuilder: CfnDashboard.DataSetReferenceProperty.Builder =
-      CfnDashboard.DataSetReferenceProperty.builder()
+    private val cdkBuilder: CfnDashboard.DataSetReferenceProperty.Builder =
+        CfnDashboard.DataSetReferenceProperty.builder()
 
-  /**
-   * @param dataSetArn Dataset Amazon Resource Name (ARN). 
-   */
-  public fun dataSetArn(dataSetArn: String) {
-    cdkBuilder.dataSetArn(dataSetArn)
-  }
+    /**
+     * @param dataSetArn Dataset Amazon Resource Name (ARN).
+     */
+    public fun dataSetArn(dataSetArn: String) {
+        cdkBuilder.dataSetArn(dataSetArn)
+    }
 
-  /**
-   * @param dataSetPlaceholder Dataset placeholder. 
-   */
-  public fun dataSetPlaceholder(dataSetPlaceholder: String) {
-    cdkBuilder.dataSetPlaceholder(dataSetPlaceholder)
-  }
+    /**
+     * @param dataSetPlaceholder Dataset placeholder.
+     */
+    public fun dataSetPlaceholder(dataSetPlaceholder: String) {
+        cdkBuilder.dataSetPlaceholder(dataSetPlaceholder)
+    }
 
-  public fun build(): CfnDashboard.DataSetReferenceProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.DataSetReferenceProperty = cdkBuilder.build()
 }

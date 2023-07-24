@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The tooltip item for the fields.
@@ -27,29 +27,29 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateFieldTooltipItemPropertyDsl {
-  private val cdkBuilder: CfnTemplate.FieldTooltipItemProperty.Builder =
-      CfnTemplate.FieldTooltipItemProperty.builder()
+    private val cdkBuilder: CfnTemplate.FieldTooltipItemProperty.Builder =
+        CfnTemplate.FieldTooltipItemProperty.builder()
 
-  /**
-   * @param fieldId The unique ID of the field that is targeted by the tooltip. 
-   */
-  public fun fieldId(fieldId: String) {
-    cdkBuilder.fieldId(fieldId)
-  }
+    /**
+     * @param fieldId The unique ID of the field that is targeted by the tooltip.
+     */
+    public fun fieldId(fieldId: String) {
+        cdkBuilder.fieldId(fieldId)
+    }
 
-  /**
-   * @param label The label of the tooltip item.
-   */
-  public fun label(label: String) {
-    cdkBuilder.label(label)
-  }
+    /**
+     * @param label The label of the tooltip item.
+     */
+    public fun label(label: String) {
+        cdkBuilder.label(label)
+    }
 
-  /**
-   * @param visibility The visibility of the tooltip item.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility of the tooltip item.
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnTemplate.FieldTooltipItemProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.FieldTooltipItemProperty = cdkBuilder.build()
 }

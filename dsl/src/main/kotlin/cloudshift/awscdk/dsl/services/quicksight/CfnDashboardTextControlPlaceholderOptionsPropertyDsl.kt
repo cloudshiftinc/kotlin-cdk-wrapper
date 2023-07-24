@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
+import kotlin.String
 
 /**
  * The configuration of the placeholder options in a text control.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardTextControlPlaceholderOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.TextControlPlaceholderOptionsProperty.Builder =
-      CfnDashboard.TextControlPlaceholderOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.TextControlPlaceholderOptionsProperty.Builder =
+        CfnDashboard.TextControlPlaceholderOptionsProperty.builder()
 
-  /**
-   * @param visibility The visibility configuration of the placeholder options in a text control.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility configuration of the placeholder options in a text control.
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnDashboard.TextControlPlaceholderOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.TextControlPlaceholderOptionsProperty = cdkBuilder.build()
 }

@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.licensemanager.CfnLicense
+import kotlin.String
 
 /**
  * Date and time range during which the license is valid, in ISO8601-UTC format.
@@ -25,22 +25,22 @@ import software.amazon.awscdk.services.licensemanager.CfnLicense
  */
 @CdkDslMarker
 public class CfnLicenseValidityDateFormatPropertyDsl {
-  private val cdkBuilder: CfnLicense.ValidityDateFormatProperty.Builder =
-      CfnLicense.ValidityDateFormatProperty.builder()
+    private val cdkBuilder: CfnLicense.ValidityDateFormatProperty.Builder =
+        CfnLicense.ValidityDateFormatProperty.builder()
 
-  /**
-   * @param begin Start of the time range. 
-   */
-  public fun begin(begin: String) {
-    cdkBuilder.begin(begin)
-  }
+    /**
+     * @param begin Start of the time range.
+     */
+    public fun begin(begin: String) {
+        cdkBuilder.begin(begin)
+    }
 
-  /**
-   * @param end End of the time range. 
-   */
-  public fun end(end: String) {
-    cdkBuilder.end(end)
-  }
+    /**
+     * @param end End of the time range.
+     */
+    public fun end(end: String) {
+        cdkBuilder.end(end)
+    }
 
-  public fun build(): CfnLicense.ValidityDateFormatProperty = cdkBuilder.build()
+    public fun build(): CfnLicense.ValidityDateFormatProperty = cdkBuilder.build()
 }

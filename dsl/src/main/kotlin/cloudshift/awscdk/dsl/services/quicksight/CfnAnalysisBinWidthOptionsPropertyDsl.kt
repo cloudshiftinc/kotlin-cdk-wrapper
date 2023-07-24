@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.Number
 
 /**
  * The options that determine the bin width of a histogram.
@@ -25,22 +25,22 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisBinWidthOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.BinWidthOptionsProperty.Builder =
-      CfnAnalysis.BinWidthOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.BinWidthOptionsProperty.Builder =
+        CfnAnalysis.BinWidthOptionsProperty.builder()
 
-  /**
-   * @param binCountLimit The options that determine the bin count limit.
-   */
-  public fun binCountLimit(binCountLimit: Number) {
-    cdkBuilder.binCountLimit(binCountLimit)
-  }
+    /**
+     * @param binCountLimit The options that determine the bin count limit.
+     */
+    public fun binCountLimit(binCountLimit: Number) {
+        cdkBuilder.binCountLimit(binCountLimit)
+    }
 
-  /**
-   * @param value The options that determine the bin width value.
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value The options that determine the bin width value.
+     */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnAnalysis.BinWidthOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.BinWidthOptionsProperty = cdkBuilder.build()
 }

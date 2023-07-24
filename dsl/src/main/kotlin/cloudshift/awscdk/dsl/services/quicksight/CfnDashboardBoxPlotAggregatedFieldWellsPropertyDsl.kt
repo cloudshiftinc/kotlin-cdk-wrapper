@@ -1,13 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The aggregated field well for a box plot.
@@ -511,64 +511,64 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardBoxPlotAggregatedFieldWellsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.BoxPlotAggregatedFieldWellsProperty.Builder =
-      CfnDashboard.BoxPlotAggregatedFieldWellsProperty.builder()
+    private val cdkBuilder: CfnDashboard.BoxPlotAggregatedFieldWellsProperty.Builder =
+        CfnDashboard.BoxPlotAggregatedFieldWellsProperty.builder()
 
-  private val _groupBy: MutableList<Any> = mutableListOf()
+    private val _groupBy: MutableList<Any> = mutableListOf()
 
-  private val _values: MutableList<Any> = mutableListOf()
+    private val _values: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param groupBy The group by field well of a box plot chart.
-   * Values are grouped based on group by fields.
-   */
-  public fun groupBy(vararg groupBy: Any) {
-    _groupBy.addAll(listOf(*groupBy))
-  }
+    /**
+     * @param groupBy The group by field well of a box plot chart.
+     * Values are grouped based on group by fields.
+     */
+    public fun groupBy(vararg groupBy: Any) {
+        _groupBy.addAll(listOf(*groupBy))
+    }
 
-  /**
-   * @param groupBy The group by field well of a box plot chart.
-   * Values are grouped based on group by fields.
-   */
-  public fun groupBy(groupBy: Collection<Any>) {
-    _groupBy.addAll(groupBy)
-  }
+    /**
+     * @param groupBy The group by field well of a box plot chart.
+     * Values are grouped based on group by fields.
+     */
+    public fun groupBy(groupBy: Collection<Any>) {
+        _groupBy.addAll(groupBy)
+    }
 
-  /**
-   * @param groupBy The group by field well of a box plot chart.
-   * Values are grouped based on group by fields.
-   */
-  public fun groupBy(groupBy: IResolvable) {
-    cdkBuilder.groupBy(groupBy)
-  }
+    /**
+     * @param groupBy The group by field well of a box plot chart.
+     * Values are grouped based on group by fields.
+     */
+    public fun groupBy(groupBy: IResolvable) {
+        cdkBuilder.groupBy(groupBy)
+    }
 
-  /**
-   * @param values The value field well of a box plot chart.
-   * Values are aggregated based on group by fields.
-   */
-  public fun values(vararg values: Any) {
-    _values.addAll(listOf(*values))
-  }
+    /**
+     * @param values The value field well of a box plot chart.
+     * Values are aggregated based on group by fields.
+     */
+    public fun values(vararg values: Any) {
+        _values.addAll(listOf(*values))
+    }
 
-  /**
-   * @param values The value field well of a box plot chart.
-   * Values are aggregated based on group by fields.
-   */
-  public fun values(values: Collection<Any>) {
-    _values.addAll(values)
-  }
+    /**
+     * @param values The value field well of a box plot chart.
+     * Values are aggregated based on group by fields.
+     */
+    public fun values(values: Collection<Any>) {
+        _values.addAll(values)
+    }
 
-  /**
-   * @param values The value field well of a box plot chart.
-   * Values are aggregated based on group by fields.
-   */
-  public fun values(values: IResolvable) {
-    cdkBuilder.values(values)
-  }
+    /**
+     * @param values The value field well of a box plot chart.
+     * Values are aggregated based on group by fields.
+     */
+    public fun values(values: IResolvable) {
+        cdkBuilder.values(values)
+    }
 
-  public fun build(): CfnDashboard.BoxPlotAggregatedFieldWellsProperty {
-    if(_groupBy.isNotEmpty()) cdkBuilder.groupBy(_groupBy)
-    if(_values.isNotEmpty()) cdkBuilder.values(_values)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDashboard.BoxPlotAggregatedFieldWellsProperty {
+        if (_groupBy.isNotEmpty()) cdkBuilder.groupBy(_groupBy)
+        if (_values.isNotEmpty()) cdkBuilder.values(_values)
+        return cdkBuilder.build()
+    }
 }

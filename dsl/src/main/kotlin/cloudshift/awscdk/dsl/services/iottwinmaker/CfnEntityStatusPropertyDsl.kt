@@ -1,13 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
 /**
  * The current status of the entity.
@@ -29,31 +29,31 @@ import software.amazon.awscdk.services.iottwinmaker.CfnEntity
  */
 @CdkDslMarker
 public class CfnEntityStatusPropertyDsl {
-  private val cdkBuilder: CfnEntity.StatusProperty.Builder = CfnEntity.StatusProperty.builder()
+    private val cdkBuilder: CfnEntity.StatusProperty.Builder = CfnEntity.StatusProperty.builder()
 
-  /**
-   * @param error The error message.
-   */
-  public fun error(error: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(error)
-    cdkBuilder.error(builder.map)
-  }
+    /**
+     * @param error The error message.
+     */
+    public fun error(error: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(error)
+        cdkBuilder.error(builder.map)
+    }
 
-  /**
-   * @param error The error message.
-   */
-  public fun error(error: Any) {
-    cdkBuilder.error(error)
-  }
+    /**
+     * @param error The error message.
+     */
+    public fun error(error: Any) {
+        cdkBuilder.error(error)
+    }
 
-  /**
-   * @param state The current state of the entity, component, component type, or workspace.
-   * Valid Values: `CREATING | UPDATING | DELETING | ACTIVE | ERROR`
-   */
-  public fun state(state: String) {
-    cdkBuilder.state(state)
-  }
+    /**
+     * @param state The current state of the entity, component, component type, or workspace.
+     * Valid Values: `CREATING | UPDATING | DELETING | ACTIVE | ERROR`
+     */
+    public fun state(state: String) {
+        cdkBuilder.state(state)
+    }
 
-  public fun build(): CfnEntity.StatusProperty = cdkBuilder.build()
+    public fun build(): CfnEntity.StatusProperty = cdkBuilder.build()
 }

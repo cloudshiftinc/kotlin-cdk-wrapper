@@ -65,8 +65,10 @@ public class CfnUpdatePolicyDsl {
    * can roll back to the old Auto Scaling group and delete the new Auto Scaling group.
    */
   public
-      fun autoScalingReplacingUpdate(autoScalingReplacingUpdate: CfnAutoScalingReplacingUpdateDsl.() -> Unit
-      = {}) {
+      fun autoScalingReplacingUpdate(
+      autoScalingReplacingUpdate: CfnAutoScalingReplacingUpdateDsl.() -> Unit
+      = {}
+  ) {
     val builder = CfnAutoScalingReplacingUpdateDsl()
     builder.apply(autoScalingReplacingUpdate)
     cdkBuilder.autoScalingReplacingUpdate(builder.build())
@@ -92,8 +94,10 @@ public class CfnUpdatePolicyDsl {
    * group in batches or all at once.
    */
   public
-      fun autoScalingRollingUpdate(autoScalingRollingUpdate: CfnAutoScalingRollingUpdateDsl.() -> Unit
-      = {}) {
+      fun autoScalingRollingUpdate(
+      autoScalingRollingUpdate: CfnAutoScalingRollingUpdateDsl.() -> Unit
+      = {}
+  ) {
     val builder = CfnAutoScalingRollingUpdateDsl()
     builder.apply(autoScalingRollingUpdate)
     cdkBuilder.autoScalingRollingUpdate(builder.build())
@@ -116,8 +120,10 @@ public class CfnUpdatePolicyDsl {
    * resource has an associated scheduled action, use the AutoScalingScheduledAction policy.
    */
   public
-      fun autoScalingScheduledAction(autoScalingScheduledAction: CfnAutoScalingScheduledActionDsl.() -> Unit
-      = {}) {
+      fun autoScalingScheduledAction(
+      autoScalingScheduledAction: CfnAutoScalingScheduledActionDsl.() -> Unit
+      = {}
+  ) {
     val builder = CfnAutoScalingScheduledActionDsl()
     builder.apply(autoScalingScheduledAction)
     cdkBuilder.autoScalingScheduledAction(builder.build())
@@ -137,8 +143,10 @@ public class CfnUpdatePolicyDsl {
    * changes on an AWS::Lambda::Alias resource, use the CodeDeployLambdaAliasUpdate update policy.
    */
   public
-      fun codeDeployLambdaAliasUpdate(codeDeployLambdaAliasUpdate: CfnCodeDeployLambdaAliasUpdateDsl.() -> Unit
-      = {}) {
+      fun codeDeployLambdaAliasUpdate(
+      codeDeployLambdaAliasUpdate: CfnCodeDeployLambdaAliasUpdateDsl.() -> Unit
+      = {}
+  ) {
     val builder = CfnCodeDeployLambdaAliasUpdateDsl()
     builder.apply(codeDeployLambdaAliasUpdate)
     cdkBuilder.codeDeployLambdaAliasUpdate(builder.build())

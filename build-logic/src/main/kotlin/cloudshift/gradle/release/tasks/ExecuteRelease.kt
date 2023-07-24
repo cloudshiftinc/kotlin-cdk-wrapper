@@ -1,36 +1,49 @@
 package cloudshift.gradle.release.tasks
 
+import cloudshift.gradle.release.PreReleaseHookSpec
 import io.github.z4kn4fein.semver.Version
 import io.github.z4kn4fein.semver.nextPatch
 import io.github.z4kn4fein.semver.nextPreRelease
 import io.github.z4kn4fein.semver.toVersion
+import org.gradle.api.file.FileSystemOperations
 import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.model.ObjectFactory
+import org.gradle.api.provider.ListProperty
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
+import org.gradle.kotlin.dsl.newInstance
+import java.util.UUID
+import javax.inject.Inject
 
-abstract class ExecuteRelease : AbstractReleaseTask() {
+abstract class ExecuteRelease
+@Inject
+constructor(private val objects: ObjectFactory, private val fs: FileSystemOperations) : AbstractReleaseTask() {
+    @get:Internal
+    internal abstract val preReleaseHooks: ListProperty<PreReleaseHookSpec<*>>
+
     @get:InputFile
-    abstract val versionPropertiesFile: RegularFileProperty
+    internal abstract val versionPropertiesFile: RegularFileProperty
 
     @get:Input
-    abstract val versionPropertyName: Property<String>
+    internal abstract val versionPropertyName: Property<String>
 
     @get:Input
-    abstract val versionTagTemplate : Property<String>
+    internal abstract val versionTagTemplate: Property<String>
 
     @get:Input
-    abstract val versionTagCommitMessage : Property<String>
+    internal abstract val versionTagCommitMessage: Property<String>
 
     @get:Input
-    abstract val releaseCommitMessage : Property<String>
+    internal abstract val releaseCommitMessage: Property<String>
 
     @get:Input
-    abstract val incrementAfterRelease: Property<Boolean>
+    internal abstract val incrementAfterRelease: Property<Boolean>
 
     @get:Input
-    abstract val newVersionCommitMessage: Property<String>
+    internal abstract val newVersionCommitMessage: Property<String>
 
     @TaskAction
     fun action() {
@@ -41,21 +54,24 @@ abstract class ExecuteRelease : AbstractReleaseTask() {
 
         val git = gitService.get()
 
-        // add any files that may have been created by pre-release tasks
+        executePreReleaseHooks(versions)
+
+        // add any files that may have been created/modified by pre-release tasks
         git.addUnstagedFiles()
 
         // commit anything from pre-release tasks + version bump
         git.commit("${releaseCommitMessage.get()} ${versions.previousVersion} -> ${versions.version}")
 
         // tag with incremented version
-        val versionTag = versionTagTemplate.get().replace("\$version", versions.version.toString())
+        val versionTag = versionTagTemplate.get()
+            .replace("\$version", versions.version.toString())
         git.tag(versionTag, "${versionTagCommitMessage.get()} ${versions.previousVersion} -> ${versions.version}")
 
         // push everything; this finalizes the release
         git.push()
 
         // commit and push properties files update
-        if(incrementAfterRelease.get()) {
+        if (incrementAfterRelease.get()) {
             // bump to next pre-release version
             val postReleaseVersions = incrementVersion {
                 // TODO - configuration for which to increment
@@ -67,7 +83,34 @@ abstract class ExecuteRelease : AbstractReleaseTask() {
         }
     }
 
-    private fun incrementVersion(versionIncrementer : (Version) -> Version) : Versions {
+    private fun executePreReleaseHooks(versions: Versions) {
+        try {
+            preReleaseHooks.get()
+                .forEach {
+                    val hook = objects.newInstance(it.klass, *it.parameters)
+                    val workingDirectory = temporaryDir.resolve(
+                        UUID.randomUUID()
+                            .toString()
+                    )
+                    workingDirectory.mkdirs()
+                    try {
+                        hook.execute(PreReleaseHook.HookContext(versions.previousVersion, versions.version, workingDirectory = workingDirectory))
+                    } finally {
+                        fs.delete {
+                            delete(workingDirectory)
+                        }
+                    }
+                }
+        } catch (t: Throwable) {
+            // rollback version change if any exceptions from pre-release hooks
+            logger.warn("Rolling back changes to ${versionPropertiesFile.get()} on exception")
+            gitService.get()
+                .restore(versionPropertiesFile.get().asFile)
+            throw t
+        }
+    }
+
+    private fun incrementVersion(versionIncrementer: (Version) -> Version): Versions {
         val propertiesFile = versionPropertiesFile.get().asFile
 
         val propertyLines = propertiesFile.readLines()
@@ -88,12 +131,13 @@ abstract class ExecuteRelease : AbstractReleaseTask() {
             val pieces = it.split("=", limit = 2)
             if (pieces.size != 2) return@map it
             if (pieces[0].trim() != versionPropertyName.get()) return@map it
-            "${versionPropertyName.get()}=${nextVersion}"
+            "${versionPropertyName.get()}=$nextVersion"
         }
 
         propertiesFile.writeText(updatedProperties.joinToString("\n"))
         return Versions(previousVersion = currentVersion, version = nextVersion)
     }
 
-    private data class Versions(val previousVersion : Version, val version : Version)
+    private data class Versions(val previousVersion: Version, val version: Version)
 }
+

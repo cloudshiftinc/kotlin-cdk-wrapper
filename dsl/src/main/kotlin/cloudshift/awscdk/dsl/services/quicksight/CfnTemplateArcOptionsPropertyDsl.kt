@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The options that determine the arc thickness of a `GaugeChartVisual` .
@@ -24,15 +24,15 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateArcOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.ArcOptionsProperty.Builder =
-      CfnTemplate.ArcOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.ArcOptionsProperty.Builder =
+        CfnTemplate.ArcOptionsProperty.builder()
 
-  /**
-   * @param arcThickness The arc thickness of a `GaugeChartVisual` .
-   */
-  public fun arcThickness(arcThickness: String) {
-    cdkBuilder.arcThickness(arcThickness)
-  }
+    /**
+     * @param arcThickness The arc thickness of a `GaugeChartVisual` .
+     */
+    public fun arcThickness(arcThickness: String) {
+        cdkBuilder.arcThickness(arcThickness)
+    }
 
-  public fun build(): CfnTemplate.ArcOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.ArcOptionsProperty = cdkBuilder.build()
 }

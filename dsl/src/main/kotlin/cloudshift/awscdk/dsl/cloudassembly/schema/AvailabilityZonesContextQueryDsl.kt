@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery
+import kotlin.String
 
 /**
  * Query to availability zone context provider.
@@ -26,29 +26,29 @@ import software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery
  */
 @CdkDslMarker
 public class AvailabilityZonesContextQueryDsl {
-  private val cdkBuilder: AvailabilityZonesContextQuery.Builder =
-      AvailabilityZonesContextQuery.builder()
+    private val cdkBuilder: AvailabilityZonesContextQuery.Builder =
+        AvailabilityZonesContextQuery.builder()
 
-  /**
-   * @param account Query account. 
-   */
-  public fun account(account: String) {
-    cdkBuilder.account(account)
-  }
+    /**
+     * @param account Query account.
+     */
+    public fun account(account: String) {
+        cdkBuilder.account(account)
+    }
 
-  /**
-   * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
-   */
-  public fun lookupRoleArn(lookupRoleArn: String) {
-    cdkBuilder.lookupRoleArn(lookupRoleArn)
-  }
+    /**
+     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
+     */
+    public fun lookupRoleArn(lookupRoleArn: String) {
+        cdkBuilder.lookupRoleArn(lookupRoleArn)
+    }
 
-  /**
-   * @param region Query region. 
-   */
-  public fun region(region: String) {
-    cdkBuilder.region(region)
-  }
+    /**
+     * @param region Query region.
+     */
+    public fun region(region: String) {
+        cdkBuilder.region(region)
+    }
 
-  public fun build(): AvailabilityZonesContextQuery = cdkBuilder.build()
+    public fun build(): AvailabilityZonesContextQuery = cdkBuilder.build()
 }

@@ -1,14 +1,14 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTopic
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTopic
 
 /**
  * A structure that represents a dataset.
@@ -221,141 +221,141 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  */
 @CdkDslMarker
 public class CfnTopicDatasetMetadataPropertyDsl {
-  private val cdkBuilder: CfnTopic.DatasetMetadataProperty.Builder =
-      CfnTopic.DatasetMetadataProperty.builder()
+    private val cdkBuilder: CfnTopic.DatasetMetadataProperty.Builder =
+        CfnTopic.DatasetMetadataProperty.builder()
 
-  private val _calculatedFields: MutableList<Any> = mutableListOf()
+    private val _calculatedFields: MutableList<Any> = mutableListOf()
 
-  private val _columns: MutableList<Any> = mutableListOf()
+    private val _columns: MutableList<Any> = mutableListOf()
 
-  private val _filters: MutableList<Any> = mutableListOf()
+    private val _filters: MutableList<Any> = mutableListOf()
 
-  private val _namedEntities: MutableList<Any> = mutableListOf()
+    private val _namedEntities: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param calculatedFields The list of calculated field definitions.
-   */
-  public fun calculatedFields(vararg calculatedFields: Any) {
-    _calculatedFields.addAll(listOf(*calculatedFields))
-  }
+    /**
+     * @param calculatedFields The list of calculated field definitions.
+     */
+    public fun calculatedFields(vararg calculatedFields: Any) {
+        _calculatedFields.addAll(listOf(*calculatedFields))
+    }
 
-  /**
-   * @param calculatedFields The list of calculated field definitions.
-   */
-  public fun calculatedFields(calculatedFields: Collection<Any>) {
-    _calculatedFields.addAll(calculatedFields)
-  }
+    /**
+     * @param calculatedFields The list of calculated field definitions.
+     */
+    public fun calculatedFields(calculatedFields: Collection<Any>) {
+        _calculatedFields.addAll(calculatedFields)
+    }
 
-  /**
-   * @param calculatedFields The list of calculated field definitions.
-   */
-  public fun calculatedFields(calculatedFields: IResolvable) {
-    cdkBuilder.calculatedFields(calculatedFields)
-  }
+    /**
+     * @param calculatedFields The list of calculated field definitions.
+     */
+    public fun calculatedFields(calculatedFields: IResolvable) {
+        cdkBuilder.calculatedFields(calculatedFields)
+    }
 
-  /**
-   * @param columns The list of column definitions.
-   */
-  public fun columns(vararg columns: Any) {
-    _columns.addAll(listOf(*columns))
-  }
+    /**
+     * @param columns The list of column definitions.
+     */
+    public fun columns(vararg columns: Any) {
+        _columns.addAll(listOf(*columns))
+    }
 
-  /**
-   * @param columns The list of column definitions.
-   */
-  public fun columns(columns: Collection<Any>) {
-    _columns.addAll(columns)
-  }
+    /**
+     * @param columns The list of column definitions.
+     */
+    public fun columns(columns: Collection<Any>) {
+        _columns.addAll(columns)
+    }
 
-  /**
-   * @param columns The list of column definitions.
-   */
-  public fun columns(columns: IResolvable) {
-    cdkBuilder.columns(columns)
-  }
+    /**
+     * @param columns The list of column definitions.
+     */
+    public fun columns(columns: IResolvable) {
+        cdkBuilder.columns(columns)
+    }
 
-  /**
-   * @param dataAggregation The definition of a data aggregation.
-   */
-  public fun dataAggregation(dataAggregation: IResolvable) {
-    cdkBuilder.dataAggregation(dataAggregation)
-  }
+    /**
+     * @param dataAggregation The definition of a data aggregation.
+     */
+    public fun dataAggregation(dataAggregation: IResolvable) {
+        cdkBuilder.dataAggregation(dataAggregation)
+    }
 
-  /**
-   * @param dataAggregation The definition of a data aggregation.
-   */
-  public fun dataAggregation(dataAggregation: CfnTopic.DataAggregationProperty) {
-    cdkBuilder.dataAggregation(dataAggregation)
-  }
+    /**
+     * @param dataAggregation The definition of a data aggregation.
+     */
+    public fun dataAggregation(dataAggregation: CfnTopic.DataAggregationProperty) {
+        cdkBuilder.dataAggregation(dataAggregation)
+    }
 
-  /**
-   * @param datasetArn The Amazon Resource Name (ARN) of the dataset. 
-   */
-  public fun datasetArn(datasetArn: String) {
-    cdkBuilder.datasetArn(datasetArn)
-  }
+    /**
+     * @param datasetArn The Amazon Resource Name (ARN) of the dataset.
+     */
+    public fun datasetArn(datasetArn: String) {
+        cdkBuilder.datasetArn(datasetArn)
+    }
 
-  /**
-   * @param datasetDescription The description of the dataset.
-   */
-  public fun datasetDescription(datasetDescription: String) {
-    cdkBuilder.datasetDescription(datasetDescription)
-  }
+    /**
+     * @param datasetDescription The description of the dataset.
+     */
+    public fun datasetDescription(datasetDescription: String) {
+        cdkBuilder.datasetDescription(datasetDescription)
+    }
 
-  /**
-   * @param datasetName The name of the dataset.
-   */
-  public fun datasetName(datasetName: String) {
-    cdkBuilder.datasetName(datasetName)
-  }
+    /**
+     * @param datasetName The name of the dataset.
+     */
+    public fun datasetName(datasetName: String) {
+        cdkBuilder.datasetName(datasetName)
+    }
 
-  /**
-   * @param filters The list of filter definitions.
-   */
-  public fun filters(vararg filters: Any) {
-    _filters.addAll(listOf(*filters))
-  }
+    /**
+     * @param filters The list of filter definitions.
+     */
+    public fun filters(vararg filters: Any) {
+        _filters.addAll(listOf(*filters))
+    }
 
-  /**
-   * @param filters The list of filter definitions.
-   */
-  public fun filters(filters: Collection<Any>) {
-    _filters.addAll(filters)
-  }
+    /**
+     * @param filters The list of filter definitions.
+     */
+    public fun filters(filters: Collection<Any>) {
+        _filters.addAll(filters)
+    }
 
-  /**
-   * @param filters The list of filter definitions.
-   */
-  public fun filters(filters: IResolvable) {
-    cdkBuilder.filters(filters)
-  }
+    /**
+     * @param filters The list of filter definitions.
+     */
+    public fun filters(filters: IResolvable) {
+        cdkBuilder.filters(filters)
+    }
 
-  /**
-   * @param namedEntities The list of named entities definitions.
-   */
-  public fun namedEntities(vararg namedEntities: Any) {
-    _namedEntities.addAll(listOf(*namedEntities))
-  }
+    /**
+     * @param namedEntities The list of named entities definitions.
+     */
+    public fun namedEntities(vararg namedEntities: Any) {
+        _namedEntities.addAll(listOf(*namedEntities))
+    }
 
-  /**
-   * @param namedEntities The list of named entities definitions.
-   */
-  public fun namedEntities(namedEntities: Collection<Any>) {
-    _namedEntities.addAll(namedEntities)
-  }
+    /**
+     * @param namedEntities The list of named entities definitions.
+     */
+    public fun namedEntities(namedEntities: Collection<Any>) {
+        _namedEntities.addAll(namedEntities)
+    }
 
-  /**
-   * @param namedEntities The list of named entities definitions.
-   */
-  public fun namedEntities(namedEntities: IResolvable) {
-    cdkBuilder.namedEntities(namedEntities)
-  }
+    /**
+     * @param namedEntities The list of named entities definitions.
+     */
+    public fun namedEntities(namedEntities: IResolvable) {
+        cdkBuilder.namedEntities(namedEntities)
+    }
 
-  public fun build(): CfnTopic.DatasetMetadataProperty {
-    if(_calculatedFields.isNotEmpty()) cdkBuilder.calculatedFields(_calculatedFields)
-    if(_columns.isNotEmpty()) cdkBuilder.columns(_columns)
-    if(_filters.isNotEmpty()) cdkBuilder.filters(_filters)
-    if(_namedEntities.isNotEmpty()) cdkBuilder.namedEntities(_namedEntities)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTopic.DatasetMetadataProperty {
+        if (_calculatedFields.isNotEmpty()) cdkBuilder.calculatedFields(_calculatedFields)
+        if (_columns.isNotEmpty()) cdkBuilder.columns(_columns)
+        if (_filters.isNotEmpty()) cdkBuilder.filters(_filters)
+        if (_namedEntities.isNotEmpty()) cdkBuilder.namedEntities(_namedEntities)
+        return cdkBuilder.build()
+    }
 }

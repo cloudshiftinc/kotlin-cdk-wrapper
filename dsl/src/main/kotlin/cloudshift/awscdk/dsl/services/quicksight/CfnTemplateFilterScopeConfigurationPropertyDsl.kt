@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -35,23 +35,22 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateFilterScopeConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.FilterScopeConfigurationProperty.Builder =
-      CfnTemplate.FilterScopeConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.FilterScopeConfigurationProperty.Builder =
+        CfnTemplate.FilterScopeConfigurationProperty.builder()
 
-  /**
-   * @param selectedSheets The configuration for applying a filter to specific sheets.
-   */
-  public fun selectedSheets(selectedSheets: IResolvable) {
-    cdkBuilder.selectedSheets(selectedSheets)
-  }
+    /**
+     * @param selectedSheets The configuration for applying a filter to specific sheets.
+     */
+    public fun selectedSheets(selectedSheets: IResolvable) {
+        cdkBuilder.selectedSheets(selectedSheets)
+    }
 
-  /**
-   * @param selectedSheets The configuration for applying a filter to specific sheets.
-   */
-  public
-      fun selectedSheets(selectedSheets: CfnTemplate.SelectedSheetsFilterScopeConfigurationProperty) {
-    cdkBuilder.selectedSheets(selectedSheets)
-  }
+    /**
+     * @param selectedSheets The configuration for applying a filter to specific sheets.
+     */
+    public fun selectedSheets(selectedSheets: CfnTemplate.SelectedSheetsFilterScopeConfigurationProperty) {
+        cdkBuilder.selectedSheets(selectedSheets)
+    }
 
-  public fun build(): CfnTemplate.FilterScopeConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.FilterScopeConfigurationProperty = cdkBuilder.build()
 }

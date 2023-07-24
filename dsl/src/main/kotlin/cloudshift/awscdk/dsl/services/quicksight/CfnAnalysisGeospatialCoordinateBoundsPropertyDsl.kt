@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.Number
 
 /**
  * The bound options (north, south, west, east) of the geospatial window options.
@@ -28,36 +28,36 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisGeospatialCoordinateBoundsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.GeospatialCoordinateBoundsProperty.Builder =
-      CfnAnalysis.GeospatialCoordinateBoundsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.GeospatialCoordinateBoundsProperty.Builder =
+        CfnAnalysis.GeospatialCoordinateBoundsProperty.builder()
 
-  /**
-   * @param east The longitude of the east bound of the geospatial coordinate bounds. 
-   */
-  public fun east(east: Number) {
-    cdkBuilder.east(east)
-  }
+    /**
+     * @param east The longitude of the east bound of the geospatial coordinate bounds.
+     */
+    public fun east(east: Number) {
+        cdkBuilder.east(east)
+    }
 
-  /**
-   * @param north The latitude of the north bound of the geospatial coordinate bounds. 
-   */
-  public fun north(north: Number) {
-    cdkBuilder.north(north)
-  }
+    /**
+     * @param north The latitude of the north bound of the geospatial coordinate bounds.
+     */
+    public fun north(north: Number) {
+        cdkBuilder.north(north)
+    }
 
-  /**
-   * @param south The latitude of the south bound of the geospatial coordinate bounds. 
-   */
-  public fun south(south: Number) {
-    cdkBuilder.south(south)
-  }
+    /**
+     * @param south The latitude of the south bound of the geospatial coordinate bounds.
+     */
+    public fun south(south: Number) {
+        cdkBuilder.south(south)
+    }
 
-  /**
-   * @param west The longitude of the west bound of the geospatial coordinate bounds. 
-   */
-  public fun west(west: Number) {
-    cdkBuilder.west(west)
-  }
+    /**
+     * @param west The longitude of the west bound of the geospatial coordinate bounds.
+     */
+    public fun west(west: Number) {
+        cdkBuilder.west(west)
+    }
 
-  public fun build(): CfnAnalysis.GeospatialCoordinateBoundsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.GeospatialCoordinateBoundsProperty = cdkBuilder.build()
 }

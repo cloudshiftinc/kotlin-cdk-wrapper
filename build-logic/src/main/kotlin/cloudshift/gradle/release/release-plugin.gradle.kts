@@ -1,44 +1,40 @@
 package cloudshift.gradle.release
 
-import cloudshift.gradle.release.git.GitService
+import cloudshift.gradle.release.hooks.PreProcessFilesHook
 import cloudshift.gradle.release.tasks.AbstractReleaseTask
 import cloudshift.gradle.release.tasks.CheckLocalOutstandingCommits
 import cloudshift.gradle.release.tasks.CheckLocalStagedFiles
 import cloudshift.gradle.release.tasks.CheckLocalUnstagedFiles
 import cloudshift.gradle.release.tasks.CheckRemoteOutstandingCommits
 import cloudshift.gradle.release.tasks.ExecuteRelease
-import io.github.z4kn4fein.semver.toVersion
 
-// import org.ajoberstar.grgit.gradle.GrgitServiceExtension
+val gitServiceProvider = gradle.sharedServices.registerIfAbsent("gitService", GitServiceImpl::class) {}
 
-plugins {
-    //  id("org.ajoberstar.grgit.service")
-}
+val releaseExtension = extensions.create<ReleaseExtension>("release")
 
-val gitServiceProvider = gradle.sharedServices.registerIfAbsent("gitService", GitService::class) {}
+releaseExtension.apply {
+    checks {
+        failOnUnstagedFiles.convention(true)
+        failOnStagedFiles.convention(true)
+        failOnPushNeeded.convention(true)
+        failOnPullNeeded.convention(true)
+    }
 
-val ext = extensions.create<ReleaseExtension>("release")
+    versionProperties {
+        propertiesFile.convention(layout.projectDirectory.file("gradle.properties"))
+        propertyName.convention("version")
+    }
 
-ext.apply {
-    failOnUnstagedFiles.convention(true)
-    failOnStagedFiles.convention(true)
-    failOnPushNeeded.convention(true)
-    failOnPullNeeded.convention(true)
-
-    versionPropertiesFile.convention(layout.projectDirectory.file("gradle.properties"))
-    versionPropertyName.convention("version")
-
-    releaseCommitMessage.convention("[Release] - release commit: ")
+    releaseCommitMessage.convention("[Release] - release commit:")
 
     versionTagTemplate.convention("v\$version")
-    versionTagCommitMessage.convention("[Release] - creating tag: ")
+    versionTagCommitMessage.convention("[Release] - creating tag:")
 
     incrementAfterRelease.convention(true)
-    newVersionCommitMessage.convention("[Release] - new version commit: ")
+    newVersionCommitMessage.convention("[Release] - new version commit:")
 }
 
-val checkRelease by tasks.registering {
-}
+val checkRelease by tasks.registering
 
 val preRelease by tasks.registering {
     dependsOn(checkRelease)
@@ -49,47 +45,52 @@ val executeRelease by tasks.registering(ExecuteRelease::class) {
 
     gitService = gitServiceProvider
 
-    versionPropertiesFile = ext.versionPropertiesFile
-    versionPropertyName = ext.versionPropertyName
+    versionPropertiesFile = releaseExtension.versionProperties.propertiesFile
+    versionPropertyName = releaseExtension.versionProperties.propertyName
 
-    releaseCommitMessage = ext.releaseCommitMessage
+    releaseCommitMessage = releaseExtension.releaseCommitMessage
 
-    versionTagTemplate = ext.versionTagTemplate
-    versionTagCommitMessage = ext.versionTagCommitMessage
+    versionTagTemplate = releaseExtension.versionTagTemplate
+    versionTagCommitMessage = releaseExtension.versionTagCommitMessage
 
-    incrementAfterRelease = ext.incrementAfterRelease
-    newVersionCommitMessage = ext.newVersionCommitMessage
+    incrementAfterRelease = releaseExtension.incrementAfterRelease
+    newVersionCommitMessage = releaseExtension.newVersionCommitMessage
+
+    preReleaseHooks = releaseExtension.preReleaseHooks
+}
+
+configure<ReleaseExtension> {
+    checks {
+        failOnPullNeeded = false
+    }
+    preReleaseHook<PreProcessFilesHook>()
+    preProcessFiles {
+        templates(sourceDir = "gradle/templates", destinationDir = layout.projectDirectory)
+        replacements {
+            includes("README.MD")
+        }
+    }
 }
 
 val release by tasks.registering {
     dependsOn(preRelease)
     dependsOn(executeRelease)
-//    dependsOn(postRelease)
 }
 
-//val postRelease by tasks.registering {
-//    group = "release"
-//    mustRunAfter(executeRelease)
-//}
-
 val checkLocalUnstagedFiles by tasks.registering(CheckLocalUnstagedFiles::class) {
-    configureReleaseTask()
-    fail = ext.failOnUnstagedFiles
+    fail = releaseExtension.checks.failOnUnstagedFiles
 }
 
 val checkLocalStagedFiles by tasks.registering(CheckLocalStagedFiles::class) {
-    configureReleaseTask()
-    fail = ext.failOnStagedFiles
+    fail = releaseExtension.checks.failOnStagedFiles
 }
 
 val checkLocalOutstandingCommits by tasks.registering(CheckLocalOutstandingCommits::class) {
-    configureReleaseTask()
-    fail = ext.failOnPushNeeded
+    fail = releaseExtension.checks.failOnPushNeeded
 }
 
 val checkRemoteOutstandingCommits by tasks.registering(CheckRemoteOutstandingCommits::class) {
-    configureReleaseTask()
-    fail = ext.failOnPullNeeded
+    fail = releaseExtension.checks.failOnPullNeeded
 }
 
 checkRelease {
@@ -99,24 +100,7 @@ checkRelease {
     dependsOn(checkLocalStagedFiles)
 }
 
-fun AbstractReleaseTask.configureReleaseTask() {
+tasks.withType<AbstractReleaseTask>().configureEach {
     gitService = gitServiceProvider
+    group = "release"
 }
-// val grGit = extensions.findByType<GrgitServiceExtension>()
-
-/*
-Every Gradle execution:
-    * determine current version (from gradle.properties or Git)
-
-On release:
-    * checkRelease
-        * check for unstaged, staged files
-        * check for incoming or outgoing changes
-    * pre-release tasks (update readme etc)
-        * update readme
-    * bump version and commit/tag/push
-    * post-release tasks (later; these are problematic and possibly best as a separate Gradle run)
-    * bump to next snapshot version and commit/push
-
-
- */

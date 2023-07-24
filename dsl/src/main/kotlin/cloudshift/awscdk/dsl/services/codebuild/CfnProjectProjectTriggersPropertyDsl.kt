@@ -1,15 +1,15 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.codebuild.CfnProject
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.codebuild.CfnProject
 
 /**
  * `ProjectTriggers` is a property of the [AWS CodeBuild
@@ -43,65 +43,65 @@ import software.amazon.awscdk.services.codebuild.CfnProject
  */
 @CdkDslMarker
 public class CfnProjectProjectTriggersPropertyDsl {
-  private val cdkBuilder: CfnProject.ProjectTriggersProperty.Builder =
-      CfnProject.ProjectTriggersProperty.builder()
+    private val cdkBuilder: CfnProject.ProjectTriggersProperty.Builder =
+        CfnProject.ProjectTriggersProperty.builder()
 
-  private val _filterGroups: MutableList<Any> = mutableListOf()
+    private val _filterGroups: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param buildType Specifies the type of build this webhook will trigger. Allowed values are:.
-   * * **BUILD** - A single build
-   * * **BUILD_BATCH** - A batch build
-   */
-  public fun buildType(buildType: String) {
-    cdkBuilder.buildType(buildType)
-  }
+    /**
+     * @param buildType Specifies the type of build this webhook will trigger. Allowed values are:.
+     * * **BUILD** - A single build
+     * * **BUILD_BATCH** - A batch build
+     */
+    public fun buildType(buildType: String) {
+        cdkBuilder.buildType(buildType)
+    }
 
-  /**
-   * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
-   * events are triggered.
-   * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-   */
-  public fun filterGroups(vararg filterGroups: Any) {
-    _filterGroups.addAll(listOf(*filterGroups))
-  }
+    /**
+     * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
+     * events are triggered.
+     * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
+     */
+    public fun filterGroups(vararg filterGroups: Any) {
+        _filterGroups.addAll(listOf(*filterGroups))
+    }
 
-  /**
-   * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
-   * events are triggered.
-   * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-   */
-  public fun filterGroups(filterGroups: Collection<Any>) {
-    _filterGroups.addAll(filterGroups)
-  }
+    /**
+     * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
+     * events are triggered.
+     * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
+     */
+    public fun filterGroups(filterGroups: Collection<Any>) {
+        _filterGroups.addAll(filterGroups)
+    }
 
-  /**
-   * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
-   * events are triggered.
-   * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
-   */
-  public fun filterGroups(filterGroups: IResolvable) {
-    cdkBuilder.filterGroups(filterGroups)
-  }
+    /**
+     * @param filterGroups A list of lists of `WebhookFilter` objects used to determine which webhook
+     * events are triggered.
+     * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
+     */
+    public fun filterGroups(filterGroups: IResolvable) {
+        cdkBuilder.filterGroups(filterGroups)
+    }
 
-  /**
-   * @param webhook Specifies whether or not to begin automatically rebuilding the source code every
-   * time a code change is pushed to the repository.
-   */
-  public fun webhook(webhook: Boolean) {
-    cdkBuilder.webhook(webhook)
-  }
+    /**
+     * @param webhook Specifies whether or not to begin automatically rebuilding the source code every
+     * time a code change is pushed to the repository.
+     */
+    public fun webhook(webhook: Boolean) {
+        cdkBuilder.webhook(webhook)
+    }
 
-  /**
-   * @param webhook Specifies whether or not to begin automatically rebuilding the source code every
-   * time a code change is pushed to the repository.
-   */
-  public fun webhook(webhook: IResolvable) {
-    cdkBuilder.webhook(webhook)
-  }
+    /**
+     * @param webhook Specifies whether or not to begin automatically rebuilding the source code every
+     * time a code change is pushed to the repository.
+     */
+    public fun webhook(webhook: IResolvable) {
+        cdkBuilder.webhook(webhook)
+    }
 
-  public fun build(): CfnProject.ProjectTriggersProperty {
-    if(_filterGroups.isNotEmpty()) cdkBuilder.filterGroups(_filterGroups)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnProject.ProjectTriggersProperty {
+        if (_filterGroups.isNotEmpty()) cdkBuilder.filterGroups(_filterGroups)
+        return cdkBuilder.build()
+    }
 }

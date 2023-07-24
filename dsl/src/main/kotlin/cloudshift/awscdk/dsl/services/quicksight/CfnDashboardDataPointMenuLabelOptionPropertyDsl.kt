@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
+import kotlin.String
 
 /**
  * The data point menu options of a dashboard.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardDataPointMenuLabelOptionPropertyDsl {
-  private val cdkBuilder: CfnDashboard.DataPointMenuLabelOptionProperty.Builder =
-      CfnDashboard.DataPointMenuLabelOptionProperty.builder()
+    private val cdkBuilder: CfnDashboard.DataPointMenuLabelOptionProperty.Builder =
+        CfnDashboard.DataPointMenuLabelOptionProperty.builder()
 
-  /**
-   * @param availabilityStatus The status of the data point menu options.
-   */
-  public fun availabilityStatus(availabilityStatus: String) {
-    cdkBuilder.availabilityStatus(availabilityStatus)
-  }
+    /**
+     * @param availabilityStatus The status of the data point menu options.
+     */
+    public fun availabilityStatus(availabilityStatus: String) {
+        cdkBuilder.availabilityStatus(availabilityStatus)
+    }
 
-  public fun build(): CfnDashboard.DataPointMenuLabelOptionProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.DataPointMenuLabelOptionProperty = cdkBuilder.build()
 }

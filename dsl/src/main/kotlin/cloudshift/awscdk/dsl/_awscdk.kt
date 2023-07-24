@@ -267,8 +267,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun assetManifestDockerImageDestination(block: AssetManifestDockerImageDestinationDsl.() -> Unit
-      = {}): AssetManifestDockerImageDestination {
+      fun assetManifestDockerImageDestination(
+      block: AssetManifestDockerImageDestinationDsl.() -> Unit
+      = {}
+  ): AssetManifestDockerImageDestination {
     val builder = AssetManifestDockerImageDestinationDsl()
     builder.apply(block)
     return builder.build()
@@ -296,8 +298,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun assetManifestFileDestination(block: AssetManifestFileDestinationDsl.() -> Unit =
-      {}): AssetManifestFileDestination {
+  public inline fun assetManifestFileDestination(
+      block: AssetManifestFileDestinationDsl.() -> Unit =
+      {}
+  ): AssetManifestFileDestination {
     val builder = AssetManifestFileDestinationDsl()
     builder.apply(block)
     return builder.build()
@@ -410,9 +414,9 @@ public object awscdk {
    * ```
    */
   public inline fun assetStaging(
-    scope: Construct,
-    id: String,
-    block: AssetStagingDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: AssetStagingDsl.() -> Unit = {},
   ): AssetStaging {
     val builder = AssetStagingDsl(scope, id)
     builder.apply(block)
@@ -525,8 +529,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun bootstraplessSynthesizerProps(block: BootstraplessSynthesizerPropsDsl.() -> Unit
-      = {}): BootstraplessSynthesizerProps {
+  public inline fun bootstraplessSynthesizerProps(
+      block: BootstraplessSynthesizerPropsDsl.() -> Unit
+      = {}
+  ): BootstraplessSynthesizerProps {
     val builder = BootstraplessSynthesizerPropsDsl()
     builder.apply(block)
     return builder.build()
@@ -589,8 +595,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun cfnAutoScalingReplacingUpdate(block: CfnAutoScalingReplacingUpdateDsl.() -> Unit
-      = {}): CfnAutoScalingReplacingUpdate {
+  public inline fun cfnAutoScalingReplacingUpdate(
+      block: CfnAutoScalingReplacingUpdateDsl.() -> Unit
+      = {}
+  ): CfnAutoScalingReplacingUpdate {
     val builder = CfnAutoScalingReplacingUpdateDsl()
     builder.apply(block)
     return builder.build()
@@ -620,8 +628,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun cfnAutoScalingRollingUpdate(block: CfnAutoScalingRollingUpdateDsl.() -> Unit =
-      {}): CfnAutoScalingRollingUpdate {
+  public inline fun cfnAutoScalingRollingUpdate(
+      block: CfnAutoScalingRollingUpdateDsl.() -> Unit =
+      {}
+  ): CfnAutoScalingRollingUpdate {
     val builder = CfnAutoScalingRollingUpdateDsl()
     builder.apply(block)
     return builder.build()
@@ -656,8 +666,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun cfnAutoScalingScheduledAction(block: CfnAutoScalingScheduledActionDsl.() -> Unit
-      = {}): CfnAutoScalingScheduledAction {
+  public inline fun cfnAutoScalingScheduledAction(
+      block: CfnAutoScalingScheduledActionDsl.() -> Unit
+      = {}
+  ): CfnAutoScalingScheduledAction {
     val builder = CfnAutoScalingScheduledActionDsl()
     builder.apply(block)
     return builder.build()
@@ -681,8 +693,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnCodeDeployBlueGreenAdditionalOptions(block: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
-      = {}): CfnCodeDeployBlueGreenAdditionalOptions {
+      fun cfnCodeDeployBlueGreenAdditionalOptions(
+      block: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
+      = {}
+  ): CfnCodeDeployBlueGreenAdditionalOptions {
     val builder = CfnCodeDeployBlueGreenAdditionalOptionsDsl()
     builder.apply(block)
     return builder.build()
@@ -724,8 +738,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnCodeDeployBlueGreenApplication(block: CfnCodeDeployBlueGreenApplicationDsl.() -> Unit =
-      {}): CfnCodeDeployBlueGreenApplication {
+      fun cfnCodeDeployBlueGreenApplication(
+      block: CfnCodeDeployBlueGreenApplicationDsl.() -> Unit =
+      {}
+  ): CfnCodeDeployBlueGreenApplication {
     val builder = CfnCodeDeployBlueGreenApplicationDsl()
     builder.apply(block)
     return builder.build()
@@ -748,8 +764,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnCodeDeployBlueGreenApplicationTarget(block: CfnCodeDeployBlueGreenApplicationTargetDsl.() -> Unit
-      = {}): CfnCodeDeployBlueGreenApplicationTarget {
+      fun cfnCodeDeployBlueGreenApplicationTarget(
+      block: CfnCodeDeployBlueGreenApplicationTargetDsl.() -> Unit
+      = {}
+  ): CfnCodeDeployBlueGreenApplicationTarget {
     val builder = CfnCodeDeployBlueGreenApplicationTargetDsl()
     builder.apply(block)
     return builder.build()
@@ -785,8 +803,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnCodeDeployBlueGreenEcsAttributes(block: CfnCodeDeployBlueGreenEcsAttributesDsl.() -> Unit
-      = {}): CfnCodeDeployBlueGreenEcsAttributes {
+      fun cfnCodeDeployBlueGreenEcsAttributes(
+      block: CfnCodeDeployBlueGreenEcsAttributesDsl.() -> Unit
+      = {}
+  ): CfnCodeDeployBlueGreenEcsAttributes {
     val builder = CfnCodeDeployBlueGreenEcsAttributesDsl()
     builder.apply(block)
     return builder.build()
@@ -809,9 +829,9 @@ public object awscdk {
    * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-template-reference)
    */
   public inline fun cfnCodeDeployBlueGreenHook(
-    scope: Construct,
-    id: String,
-    block: CfnCodeDeployBlueGreenHookDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnCodeDeployBlueGreenHookDsl.() -> Unit = {},
   ): CfnCodeDeployBlueGreenHook {
     val builder = CfnCodeDeployBlueGreenHookDsl(scope, id)
     builder.apply(block)
@@ -878,8 +898,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnCodeDeployBlueGreenHookProps(block: CfnCodeDeployBlueGreenHookPropsDsl.() -> Unit =
-      {}): CfnCodeDeployBlueGreenHookProps {
+      fun cfnCodeDeployBlueGreenHookProps(
+      block: CfnCodeDeployBlueGreenHookPropsDsl.() -> Unit =
+      {}
+  ): CfnCodeDeployBlueGreenHookProps {
     val builder = CfnCodeDeployBlueGreenHookPropsDsl()
     builder.apply(block)
     return builder.build()
@@ -907,8 +929,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnCodeDeployBlueGreenLifecycleEventHooks(block: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
-      = {}): CfnCodeDeployBlueGreenLifecycleEventHooks {
+      fun cfnCodeDeployBlueGreenLifecycleEventHooks(
+      block: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
+      = {}
+  ): CfnCodeDeployBlueGreenLifecycleEventHooks {
     val builder = CfnCodeDeployBlueGreenLifecycleEventHooksDsl()
     builder.apply(block)
     return builder.build()
@@ -960,9 +984,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnCondition(
-    scope: Construct,
-    id: String,
-    block: CfnConditionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnConditionDsl.() -> Unit = {},
   ): CfnCondition {
     val builder = CfnConditionDsl(scope, id)
     builder.apply(block)
@@ -1077,9 +1101,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html)
    */
   public inline fun cfnCustomResource(
-    scope: Construct,
-    id: String,
-    block: CfnCustomResourceDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnCustomResourceDsl.() -> Unit = {},
   ): CfnCustomResource {
     val builder = CfnCustomResourceDsl(scope, id)
     builder.apply(block)
@@ -1146,9 +1170,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnHook(
-    scope: Construct,
-    id: String,
-    block: CfnHookDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnHookDsl.() -> Unit = {},
   ): CfnHook {
     val builder = CfnHookDsl(scope, id)
     builder.apply(block)
@@ -1178,9 +1202,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)
    */
   public inline fun cfnHookDefaultVersion(
-    scope: Construct,
-    id: String,
-    block: CfnHookDefaultVersionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnHookDefaultVersionDsl.() -> Unit = {},
   ): CfnHookDefaultVersion {
     val builder = CfnHookDefaultVersionDsl(scope, id)
     builder.apply(block)
@@ -1205,8 +1229,10 @@ public object awscdk {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)
    */
-  public inline fun cfnHookDefaultVersionProps(block: CfnHookDefaultVersionPropsDsl.() -> Unit =
-      {}): CfnHookDefaultVersionProps {
+  public inline fun cfnHookDefaultVersionProps(
+      block: CfnHookDefaultVersionPropsDsl.() -> Unit =
+      {}
+  ): CfnHookDefaultVersionProps {
     val builder = CfnHookDefaultVersionPropsDsl()
     builder.apply(block)
     return builder.build()
@@ -1258,9 +1284,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html)
    */
   public inline fun cfnHookTypeConfig(
-    scope: Construct,
-    id: String,
-    block: CfnHookTypeConfigDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnHookTypeConfigDsl.() -> Unit = {},
   ): CfnHookTypeConfig {
     val builder = CfnHookTypeConfigDsl(scope, id)
     builder.apply(block)
@@ -1319,9 +1345,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html)
    */
   public inline fun cfnHookVersion(
-    scope: Construct,
-    id: String,
-    block: CfnHookVersionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnHookVersionDsl.() -> Unit = {},
   ): CfnHookVersion {
     val builder = CfnHookVersionDsl(scope, id)
     builder.apply(block)
@@ -1346,8 +1372,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-hookversion-loggingconfig.html)
    */
   public inline
-      fun cfnHookVersionLoggingConfigProperty(block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit
-      = {}): CfnHookVersion.LoggingConfigProperty {
+      fun cfnHookVersionLoggingConfigProperty(
+      block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit
+      = {}
+  ): CfnHookVersion.LoggingConfigProperty {
     val builder = CfnHookVersionLoggingConfigPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -1411,9 +1439,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnJson(
-    scope: Construct,
-    id: String,
-    block: CfnJsonDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnJsonDsl.() -> Unit = {},
   ): CfnJson {
     val builder = CfnJsonDsl(scope, id)
     builder.apply(block)
@@ -1466,9 +1494,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)
    */
   public inline fun cfnMacro(
-    scope: Construct,
-    id: String,
-    block: CfnMacroDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnMacroDsl.() -> Unit = {},
   ): CfnMacro {
     val builder = CfnMacroDsl(scope, id)
     builder.apply(block)
@@ -1519,9 +1547,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnMapping(
-    scope: Construct,
-    id: String,
-    block: CfnMappingDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnMappingDsl.() -> Unit = {},
   ): CfnMapping {
     val builder = CfnMappingDsl(scope, id)
     builder.apply(block)
@@ -1583,9 +1611,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)
    */
   public inline fun cfnModuleDefaultVersion(
-    scope: Construct,
-    id: String,
-    block: CfnModuleDefaultVersionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnModuleDefaultVersionDsl.() -> Unit = {},
   ): CfnModuleDefaultVersion {
     val builder = CfnModuleDefaultVersionDsl(scope, id)
     builder.apply(block)
@@ -1611,8 +1639,10 @@ public object awscdk {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)
    */
-  public inline fun cfnModuleDefaultVersionProps(block: CfnModuleDefaultVersionPropsDsl.() -> Unit =
-      {}): CfnModuleDefaultVersionProps {
+  public inline fun cfnModuleDefaultVersionProps(
+      block: CfnModuleDefaultVersionPropsDsl.() -> Unit =
+      {}
+  ): CfnModuleDefaultVersionProps {
     val builder = CfnModuleDefaultVersionPropsDsl()
     builder.apply(block)
     return builder.build()
@@ -1651,9 +1681,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)
    */
   public inline fun cfnModuleVersion(
-    scope: Construct,
-    id: String,
-    block: CfnModuleVersionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnModuleVersionDsl.() -> Unit = {},
   ): CfnModuleVersion {
     val builder = CfnModuleVersionDsl(scope, id)
     builder.apply(block)
@@ -1712,9 +1742,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnOutput(
-    scope: Construct,
-    id: String,
-    block: CfnOutputDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnOutputDsl.() -> Unit = {},
   ): CfnOutput {
     val builder = CfnOutputDsl(scope, id)
     builder.apply(block)
@@ -1770,9 +1800,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnParameter(
-    scope: Construct,
-    id: String,
-    block: CfnParameterDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnParameterDsl.() -> Unit = {},
   ): CfnParameter {
     val builder = CfnParameterDsl(scope, id)
     builder.apply(block)
@@ -1842,9 +1872,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html)
    */
   public inline fun cfnPublicTypeVersion(
-    scope: Construct,
-    id: String,
-    block: CfnPublicTypeVersionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnPublicTypeVersionDsl.() -> Unit = {},
   ): CfnPublicTypeVersion {
     val builder = CfnPublicTypeVersionDsl(scope, id)
     builder.apply(block)
@@ -1904,9 +1934,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html)
    */
   public inline fun cfnPublisher(
-    scope: Construct,
-    id: String,
-    block: CfnPublisherDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnPublisherDsl.() -> Unit = {},
   ): CfnPublisher {
     val builder = CfnPublisherDsl(scope, id)
     builder.apply(block)
@@ -1959,9 +1989,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnResource(
-    scope: Construct,
-    id: String,
-    block: CfnResourceDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnResourceDsl.() -> Unit = {},
   ): CfnResource {
     val builder = CfnResourceDsl(scope, id)
     builder.apply(block)
@@ -1985,8 +2015,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnResourceAutoScalingCreationPolicy(block: CfnResourceAutoScalingCreationPolicyDsl.() -> Unit
-      = {}): CfnResourceAutoScalingCreationPolicy {
+      fun cfnResourceAutoScalingCreationPolicy(
+      block: CfnResourceAutoScalingCreationPolicyDsl.() -> Unit
+      = {}
+  ): CfnResourceAutoScalingCreationPolicy {
     val builder = CfnResourceAutoScalingCreationPolicyDsl()
     builder.apply(block)
     return builder.build()
@@ -2014,9 +2046,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html)
    */
   public inline fun cfnResourceDefaultVersion(
-    scope: Construct,
-    id: String,
-    block: CfnResourceDefaultVersionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnResourceDefaultVersionDsl.() -> Unit = {},
   ): CfnResourceDefaultVersion {
     val builder = CfnResourceDefaultVersionDsl(scope, id)
     builder.apply(block)
@@ -2137,9 +2169,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html)
    */
   public inline fun cfnResourceVersion(
-    scope: Construct,
-    id: String,
-    block: CfnResourceVersionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnResourceVersionDsl.() -> Unit = {},
   ): CfnResourceVersion {
     val builder = CfnResourceVersionDsl(scope, id)
     builder.apply(block)
@@ -2164,8 +2196,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-resourceversion-loggingconfig.html)
    */
   public inline
-      fun cfnResourceVersionLoggingConfigProperty(block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
-      = {}): CfnResourceVersion.LoggingConfigProperty {
+      fun cfnResourceVersionLoggingConfigProperty(
+      block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
+      = {}
+  ): CfnResourceVersion.LoggingConfigProperty {
     val builder = CfnResourceVersionLoggingConfigPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -2229,9 +2263,9 @@ public object awscdk {
    * ```
    */
   public inline fun cfnRule(
-    scope: Construct,
-    id: String,
-    block: CfnRuleDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnRuleDsl.() -> Unit = {},
   ): CfnRule {
     val builder = CfnRuleDsl(scope, id)
     builder.apply(block)
@@ -2357,9 +2391,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html)
    */
   public inline fun cfnStack(
-    scope: Construct,
-    id: String,
-    block: CfnStackDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnStackDsl.() -> Unit = {},
   ): CfnStack {
     val builder = CfnStackDsl(scope, id)
     builder.apply(block)
@@ -2462,9 +2496,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)
    */
   public inline fun cfnStackSet(
-    scope: Construct,
-    id: String,
-    block: CfnStackSetDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnStackSetDsl.() -> Unit = {},
   ): CfnStackSet {
     val builder = CfnStackSetDsl(scope, id)
     builder.apply(block)
@@ -2490,8 +2524,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-autodeployment.html)
    */
   public inline
-      fun cfnStackSetAutoDeploymentProperty(block: CfnStackSetAutoDeploymentPropertyDsl.() -> Unit =
-      {}): CfnStackSet.AutoDeploymentProperty {
+      fun cfnStackSetAutoDeploymentProperty(
+      block: CfnStackSetAutoDeploymentPropertyDsl.() -> Unit =
+      {}
+  ): CfnStackSet.AutoDeploymentProperty {
     val builder = CfnStackSetAutoDeploymentPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -2517,8 +2553,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html)
    */
   public inline
-      fun cfnStackSetDeploymentTargetsProperty(block: CfnStackSetDeploymentTargetsPropertyDsl.() -> Unit
-      = {}): CfnStackSet.DeploymentTargetsProperty {
+      fun cfnStackSetDeploymentTargetsProperty(
+      block: CfnStackSetDeploymentTargetsPropertyDsl.() -> Unit
+      = {}
+  ): CfnStackSet.DeploymentTargetsProperty {
     val builder = CfnStackSetDeploymentTargetsPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -2542,8 +2580,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html)
    */
   public inline
-      fun cfnStackSetManagedExecutionProperty(block: CfnStackSetManagedExecutionPropertyDsl.() -> Unit
-      = {}): CfnStackSet.ManagedExecutionProperty {
+      fun cfnStackSetManagedExecutionProperty(
+      block: CfnStackSetManagedExecutionPropertyDsl.() -> Unit
+      = {}
+  ): CfnStackSet.ManagedExecutionProperty {
     val builder = CfnStackSetManagedExecutionPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -2577,8 +2617,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html)
    */
   public inline
-      fun cfnStackSetOperationPreferencesProperty(block: CfnStackSetOperationPreferencesPropertyDsl.() -> Unit
-      = {}): CfnStackSet.OperationPreferencesProperty {
+      fun cfnStackSetOperationPreferencesProperty(
+      block: CfnStackSetOperationPreferencesPropertyDsl.() -> Unit
+      = {}
+  ): CfnStackSet.OperationPreferencesProperty {
     val builder = CfnStackSetOperationPreferencesPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -2601,8 +2643,10 @@ public object awscdk {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html)
    */
-  public inline fun cfnStackSetParameterProperty(block: CfnStackSetParameterPropertyDsl.() -> Unit =
-      {}): CfnStackSet.ParameterProperty {
+  public inline fun cfnStackSetParameterProperty(
+      block: CfnStackSetParameterPropertyDsl.() -> Unit =
+      {}
+  ): CfnStackSet.ParameterProperty {
     val builder = CfnStackSetParameterPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -2701,8 +2745,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-stackinstances.html)
    */
   public inline
-      fun cfnStackSetStackInstancesProperty(block: CfnStackSetStackInstancesPropertyDsl.() -> Unit =
-      {}): CfnStackSet.StackInstancesProperty {
+      fun cfnStackSetStackInstancesProperty(
+      block: CfnStackSetStackInstancesPropertyDsl.() -> Unit =
+      {}
+  ): CfnStackSet.StackInstancesProperty {
     val builder = CfnStackSetStackInstancesPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -2827,8 +2873,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnTrafficRoutingTimeBasedCanary(block: CfnTrafficRoutingTimeBasedCanaryDsl.() -> Unit =
-      {}): CfnTrafficRoutingTimeBasedCanary {
+      fun cfnTrafficRoutingTimeBasedCanary(
+      block: CfnTrafficRoutingTimeBasedCanaryDsl.() -> Unit =
+      {}
+  ): CfnTrafficRoutingTimeBasedCanary {
     val builder = CfnTrafficRoutingTimeBasedCanaryDsl()
     builder.apply(block)
     return builder.build()
@@ -2852,8 +2900,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cfnTrafficRoutingTimeBasedLinear(block: CfnTrafficRoutingTimeBasedLinearDsl.() -> Unit =
-      {}): CfnTrafficRoutingTimeBasedLinear {
+      fun cfnTrafficRoutingTimeBasedLinear(
+      block: CfnTrafficRoutingTimeBasedLinearDsl.() -> Unit =
+      {}
+  ): CfnTrafficRoutingTimeBasedLinear {
     val builder = CfnTrafficRoutingTimeBasedLinearDsl()
     builder.apply(block)
     return builder.build()
@@ -2900,9 +2950,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html)
    */
   public inline fun cfnTypeActivation(
-    scope: Construct,
-    id: String,
-    block: CfnTypeActivationDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnTypeActivationDsl.() -> Unit = {},
   ): CfnTypeActivation {
     val builder = CfnTypeActivationDsl(scope, id)
     builder.apply(block)
@@ -2927,8 +2977,10 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-typeactivation-loggingconfig.html)
    */
   public inline
-      fun cfnTypeActivationLoggingConfigProperty(block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
-      = {}): CfnTypeActivation.LoggingConfigProperty {
+      fun cfnTypeActivationLoggingConfigProperty(
+      block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
+      = {}
+  ): CfnTypeActivation.LoggingConfigProperty {
     val builder = CfnTypeActivationLoggingConfigPropertyDsl()
     builder.apply(block)
     return builder.build()
@@ -3065,9 +3117,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-waitcondition.html)
    */
   public inline fun cfnWaitCondition(
-    scope: Construct,
-    id: String,
-    block: CfnWaitConditionDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnWaitConditionDsl.() -> Unit = {},
   ): CfnWaitCondition {
     val builder = CfnWaitConditionDsl(scope, id)
     builder.apply(block)
@@ -3114,9 +3166,9 @@ public object awscdk {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-waitconditionhandle.html)
    */
   public inline fun cfnWaitConditionHandle(
-    scope: Construct,
-    id: String,
-    block: CfnWaitConditionHandleDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CfnWaitConditionHandleDsl.() -> Unit = {},
   ): CfnWaitConditionHandle {
     val builder = CfnWaitConditionHandleDsl(scope, id)
     builder.apply(block)
@@ -3138,8 +3190,10 @@ public object awscdk {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-waitconditionhandle.html)
    */
-  public inline fun cfnWaitConditionHandleProps(block: CfnWaitConditionHandlePropsDsl.() -> Unit =
-      {}): CfnWaitConditionHandleProps {
+  public inline fun cfnWaitConditionHandleProps(
+      block: CfnWaitConditionHandlePropsDsl.() -> Unit =
+      {}
+  ): CfnWaitConditionHandleProps {
     val builder = CfnWaitConditionHandlePropsDsl()
     builder.apply(block)
     return builder.build()
@@ -3234,8 +3288,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun cliCredentialsStackSynthesizerProps(block: CliCredentialsStackSynthesizerPropsDsl.() -> Unit
-      = {}): CliCredentialsStackSynthesizerProps {
+      fun cliCredentialsStackSynthesizerProps(
+      block: CliCredentialsStackSynthesizerPropsDsl.() -> Unit
+      = {}
+  ): CliCredentialsStackSynthesizerProps {
     val builder = CliCredentialsStackSynthesizerPropsDsl()
     builder.apply(block)
     return builder.build()
@@ -3300,9 +3356,9 @@ public object awscdk {
    * ```
    */
   public inline fun customResource(
-    scope: Construct,
-    id: String,
-    block: CustomResourceDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: CustomResourceDsl.() -> Unit = {},
   ): CustomResource {
     val builder = CustomResourceDsl(scope, id)
     builder.apply(block)
@@ -3351,8 +3407,10 @@ public object awscdk {
    * "Resource", "*"));
    * ```
    */
-  public inline fun customResourceProviderProps(block: CustomResourceProviderPropsDsl.() -> Unit =
-      {}): CustomResourceProviderProps {
+  public inline fun customResourceProviderProps(
+      block: CustomResourceProviderPropsDsl.() -> Unit =
+      {}
+  ): CustomResourceProviderProps {
     val builder = CustomResourceProviderPropsDsl()
     builder.apply(block)
     return builder.build()
@@ -3403,8 +3461,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun defaultStackSynthesizerProps(block: DefaultStackSynthesizerPropsDsl.() -> Unit =
-      {}): DefaultStackSynthesizerProps {
+  public inline fun defaultStackSynthesizerProps(
+      block: DefaultStackSynthesizerPropsDsl.() -> Unit =
+      {}
+  ): DefaultStackSynthesizerProps {
     val builder = DefaultStackSynthesizerPropsDsl()
     builder.apply(block)
     return builder.build()
@@ -4162,9 +4222,9 @@ public object awscdk {
    * ```
    */
   public inline fun nestedStack(
-    scope: Construct,
-    id: String,
-    block: NestedStackDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: NestedStackDsl.() -> Unit = {},
   ): NestedStack {
     val builder = NestedStackDsl(scope, id)
     builder.apply(block)
@@ -4385,8 +4445,10 @@ public object awscdk {
    * ```
    */
   public inline
-      fun policyValidationPluginReportBeta1(block: PolicyValidationPluginReportBeta1Dsl.() -> Unit =
-      {}): PolicyValidationPluginReportBeta1 {
+      fun policyValidationPluginReportBeta1(
+      block: PolicyValidationPluginReportBeta1Dsl.() -> Unit =
+      {}
+  ): PolicyValidationPluginReportBeta1 {
     val builder = PolicyValidationPluginReportBeta1Dsl()
     builder.apply(block)
     return builder.build()
@@ -4409,8 +4471,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun policyViolatingResourceBeta1(block: PolicyViolatingResourceBeta1Dsl.() -> Unit =
-      {}): PolicyViolatingResourceBeta1 {
+  public inline fun policyViolatingResourceBeta1(
+      block: PolicyViolatingResourceBeta1Dsl.() -> Unit =
+      {}
+  ): PolicyViolatingResourceBeta1 {
     val builder = PolicyViolatingResourceBeta1Dsl()
     builder.apply(block)
     return builder.build()
@@ -4506,8 +4570,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun resolveChangeContextOptions(block: ResolveChangeContextOptionsDsl.() -> Unit =
-      {}): ResolveChangeContextOptions {
+  public inline fun resolveChangeContextOptions(
+      block: ResolveChangeContextOptionsDsl.() -> Unit =
+      {}
+  ): ResolveChangeContextOptions {
     val builder = ResolveChangeContextOptionsDsl()
     builder.apply(block)
     return builder.build()
@@ -4699,8 +4765,10 @@ public object awscdk {
    * .build();
    * ```
    */
-  public inline fun secretsManagerSecretOptions(block: SecretsManagerSecretOptionsDsl.() -> Unit =
-      {}): SecretsManagerSecretOptions {
+  public inline fun secretsManagerSecretOptions(
+      block: SecretsManagerSecretOptionsDsl.() -> Unit =
+      {}
+  ): SecretsManagerSecretOptions {
     val builder = SecretsManagerSecretOptionsDsl()
     builder.apply(block)
     return builder.build()
@@ -4748,9 +4816,9 @@ public object awscdk {
    * ```
    */
   public inline fun stack(
-    scope: Construct,
-    id: String,
-    block: StackDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: StackDsl.() -> Unit = {},
   ): Stack {
     val builder = StackDsl(scope, id)
     builder.apply(block)
@@ -4822,9 +4890,9 @@ public object awscdk {
    * ```
    */
   public inline fun stage(
-    scope: Construct,
-    id: String,
-    block: StageDsl.() -> Unit = {},
+      scope: Construct,
+      id: String,
+      block: StageDsl.() -> Unit = {},
   ): Stage {
     val builder = StageDsl(scope, id)
     builder.apply(block)
@@ -4938,9 +5006,9 @@ public object awscdk {
    * ```
    */
   public inline fun tag(
-    key: String,
-    `value`: String,
-    block: TagDsl.() -> Unit = {},
+      key: String,
+      `value`: String,
+      block: TagDsl.() -> Unit = {},
   ): Tag {
     val builder = TagDsl(key, value)
     builder.apply(block)
@@ -4973,10 +5041,10 @@ public object awscdk {
    * ```
    */
   public inline fun tagManager(
-    tagType: TagType,
-    resourceTypeName: String,
-    initialTags: Any,
-    block: TagManagerDsl.() -> Unit = {},
+      tagType: TagType,
+      resourceTypeName: String,
+      initialTags: Any,
+      block: TagManagerDsl.() -> Unit = {},
   ): TagManager {
     val builder = TagManagerDsl(tagType, resourceTypeName, initialTags)
     builder.apply(block)

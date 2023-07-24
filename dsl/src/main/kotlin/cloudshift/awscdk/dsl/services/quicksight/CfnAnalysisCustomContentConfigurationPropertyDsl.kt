@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.String
 
 /**
  * The configuration of a `CustomContentVisual` .
@@ -27,32 +27,32 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisCustomContentConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.CustomContentConfigurationProperty.Builder =
-      CfnAnalysis.CustomContentConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.CustomContentConfigurationProperty.Builder =
+        CfnAnalysis.CustomContentConfigurationProperty.builder()
 
-  /**
-   * @param contentType The content type of the custom content visual.
-   * You can use this to have the visual render as an image.
-   */
-  public fun contentType(contentType: String) {
-    cdkBuilder.contentType(contentType)
-  }
+    /**
+     * @param contentType The content type of the custom content visual.
+     * You can use this to have the visual render as an image.
+     */
+    public fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+    }
 
-  /**
-   * @param contentUrl The input URL that links to the custom content that you want in the custom
-   * visual.
-   */
-  public fun contentUrl(contentUrl: String) {
-    cdkBuilder.contentUrl(contentUrl)
-  }
+    /**
+     * @param contentUrl The input URL that links to the custom content that you want in the custom
+     * visual.
+     */
+    public fun contentUrl(contentUrl: String) {
+        cdkBuilder.contentUrl(contentUrl)
+    }
 
-  /**
-   * @param imageScaling The sizing options for the size of the custom content visual.
-   * This structure is required when the `ContentType` of the visual is `'IMAGE'` .
-   */
-  public fun imageScaling(imageScaling: String) {
-    cdkBuilder.imageScaling(imageScaling)
-  }
+    /**
+     * @param imageScaling The sizing options for the size of the custom content visual.
+     * This structure is required when the `ContentType` of the visual is `'IMAGE'` .
+     */
+    public fun imageScaling(imageScaling: String) {
+        cdkBuilder.imageScaling(imageScaling)
+    }
 
-  public fun build(): CfnAnalysis.CustomContentConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.CustomContentConfigurationProperty = cdkBuilder.build()
 }

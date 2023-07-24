@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnDashboard
+import kotlin.Number
 
 /**
  * The arc axis range of a `GaugeChartVisual` .
@@ -25,22 +25,22 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardArcAxisDisplayRangePropertyDsl {
-  private val cdkBuilder: CfnDashboard.ArcAxisDisplayRangeProperty.Builder =
-      CfnDashboard.ArcAxisDisplayRangeProperty.builder()
+    private val cdkBuilder: CfnDashboard.ArcAxisDisplayRangeProperty.Builder =
+        CfnDashboard.ArcAxisDisplayRangeProperty.builder()
 
-  /**
-   * @param max The maximum value of the arc axis range.
-   */
-  public fun max(max: Number) {
-    cdkBuilder.max(max)
-  }
+    /**
+     * @param max The maximum value of the arc axis range.
+     */
+    public fun max(max: Number) {
+        cdkBuilder.max(max)
+    }
 
-  /**
-   * @param min The minimum value of the arc axis range.
-   */
-  public fun min(min: Number) {
-    cdkBuilder.min(min)
-  }
+    /**
+     * @param min The minimum value of the arc axis range.
+     */
+    public fun min(min: Number) {
+        cdkBuilder.min(min)
+    }
 
-  public fun build(): CfnDashboard.ArcAxisDisplayRangeProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ArcAxisDisplayRangeProperty = cdkBuilder.build()
 }

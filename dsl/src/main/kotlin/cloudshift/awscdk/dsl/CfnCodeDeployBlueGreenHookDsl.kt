@@ -48,8 +48,10 @@ public class CfnCodeDeployBlueGreenHookDsl(
    * @param additionalOptions Additional options for the blue/green deployment. 
    */
   public
-      fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
-      = {}) {
+      fun additionalOptions(
+      additionalOptions: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
+      = {}
+  ) {
     val builder = CfnCodeDeployBlueGreenAdditionalOptionsDsl()
     builder.apply(additionalOptions)
     cdkBuilder.additionalOptions(builder.build())
@@ -99,8 +101,10 @@ public class CfnCodeDeployBlueGreenHookDsl(
    * CodeDeploy can call to validate a deployment. 
    */
   public
-      fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
-      = {}) {
+      fun lifecycleEventHooks(
+      lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
+      = {}
+  ) {
     val builder = CfnCodeDeployBlueGreenLifecycleEventHooksDsl()
     builder.apply(lifecycleEventHooks)
     cdkBuilder.lifecycleEventHooks(builder.build())
@@ -141,8 +145,10 @@ public class CfnCodeDeployBlueGreenHookDsl(
    *
    * @param trafficRoutingConfig Traffic routing configuration settings. 
    */
-  public fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfigDsl.() -> Unit =
-      {}) {
+  public fun trafficRoutingConfig(
+      trafficRoutingConfig: CfnTrafficRoutingConfigDsl.() -> Unit =
+      {}
+  ) {
     val builder = CfnTrafficRoutingConfigDsl()
     builder.apply(trafficRoutingConfig)
     cdkBuilder.trafficRoutingConfig(builder.build())

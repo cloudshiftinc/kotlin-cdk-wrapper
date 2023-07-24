@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The options that determine how a date axis is displayed.
@@ -24,15 +24,15 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateDateAxisOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.DateAxisOptionsProperty.Builder =
-      CfnTemplate.DateAxisOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.DateAxisOptionsProperty.Builder =
+        CfnTemplate.DateAxisOptionsProperty.builder()
 
-  /**
-   * @param missingDateVisibility Determines whether or not missing dates are displayed.
-   */
-  public fun missingDateVisibility(missingDateVisibility: String) {
-    cdkBuilder.missingDateVisibility(missingDateVisibility)
-  }
+    /**
+     * @param missingDateVisibility Determines whether or not missing dates are displayed.
+     */
+    public fun missingDateVisibility(missingDateVisibility: String) {
+        cdkBuilder.missingDateVisibility(missingDateVisibility)
+    }
 
-  public fun build(): CfnTemplate.DateAxisOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.DateAxisOptionsProperty = cdkBuilder.build()
 }

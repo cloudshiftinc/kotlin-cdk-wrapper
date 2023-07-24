@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -27,25 +27,24 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardFreeFormLayoutCanvasSizeOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.FreeFormLayoutCanvasSizeOptionsProperty.Builder =
-      CfnDashboard.FreeFormLayoutCanvasSizeOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.FreeFormLayoutCanvasSizeOptionsProperty.Builder =
+        CfnDashboard.FreeFormLayoutCanvasSizeOptionsProperty.builder()
 
-  /**
-   * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
-   * free-form layout.
-   */
-  public fun screenCanvasSizeOptions(screenCanvasSizeOptions: IResolvable) {
-    cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
-  }
+    /**
+     * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
+     * free-form layout.
+     */
+    public fun screenCanvasSizeOptions(screenCanvasSizeOptions: IResolvable) {
+        cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
+    }
 
-  /**
-   * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
-   * free-form layout.
-   */
-  public
-      fun screenCanvasSizeOptions(screenCanvasSizeOptions: CfnDashboard.FreeFormLayoutScreenCanvasSizeOptionsProperty) {
-    cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
-  }
+    /**
+     * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
+     * free-form layout.
+     */
+    public fun screenCanvasSizeOptions(screenCanvasSizeOptions: CfnDashboard.FreeFormLayoutScreenCanvasSizeOptionsProperty) {
+        cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
+    }
 
-  public fun build(): CfnDashboard.FreeFormLayoutCanvasSizeOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.FreeFormLayoutCanvasSizeOptionsProperty = cdkBuilder.build()
 }

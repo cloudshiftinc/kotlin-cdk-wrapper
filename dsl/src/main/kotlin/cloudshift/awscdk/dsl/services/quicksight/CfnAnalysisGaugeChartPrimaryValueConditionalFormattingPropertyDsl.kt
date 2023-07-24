@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -62,37 +62,36 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisGaugeChartPrimaryValueConditionalFormattingPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.GaugeChartPrimaryValueConditionalFormattingProperty.Builder =
-      CfnAnalysis.GaugeChartPrimaryValueConditionalFormattingProperty.builder()
+    private val cdkBuilder: CfnAnalysis.GaugeChartPrimaryValueConditionalFormattingProperty.Builder =
+        CfnAnalysis.GaugeChartPrimaryValueConditionalFormattingProperty.builder()
 
-  /**
-   * @param icon The conditional formatting of the primary value icon.
-   */
-  public fun icon(icon: IResolvable) {
-    cdkBuilder.icon(icon)
-  }
+    /**
+     * @param icon The conditional formatting of the primary value icon.
+     */
+    public fun icon(icon: IResolvable) {
+        cdkBuilder.icon(icon)
+    }
 
-  /**
-   * @param icon The conditional formatting of the primary value icon.
-   */
-  public fun icon(icon: CfnAnalysis.ConditionalFormattingIconProperty) {
-    cdkBuilder.icon(icon)
-  }
+    /**
+     * @param icon The conditional formatting of the primary value icon.
+     */
+    public fun icon(icon: CfnAnalysis.ConditionalFormattingIconProperty) {
+        cdkBuilder.icon(icon)
+    }
 
-  /**
-   * @param textColor The conditional formatting of the primary value text color.
-   */
-  public fun textColor(textColor: IResolvable) {
-    cdkBuilder.textColor(textColor)
-  }
+    /**
+     * @param textColor The conditional formatting of the primary value text color.
+     */
+    public fun textColor(textColor: IResolvable) {
+        cdkBuilder.textColor(textColor)
+    }
 
-  /**
-   * @param textColor The conditional formatting of the primary value text color.
-   */
-  public fun textColor(textColor: CfnAnalysis.ConditionalFormattingColorProperty) {
-    cdkBuilder.textColor(textColor)
-  }
+    /**
+     * @param textColor The conditional formatting of the primary value text color.
+     */
+    public fun textColor(textColor: CfnAnalysis.ConditionalFormattingColorProperty) {
+        cdkBuilder.textColor(textColor)
+    }
 
-  public fun build(): CfnAnalysis.GaugeChartPrimaryValueConditionalFormattingProperty =
-      cdkBuilder.build()
+    public fun build(): CfnAnalysis.GaugeChartPrimaryValueConditionalFormattingProperty = cdkBuilder.build()
 }

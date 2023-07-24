@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.String
 
 /**
  * The range ends label type of a data path label.
@@ -24,15 +24,15 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisRangeEndsLabelTypePropertyDsl {
-  private val cdkBuilder: CfnAnalysis.RangeEndsLabelTypeProperty.Builder =
-      CfnAnalysis.RangeEndsLabelTypeProperty.builder()
+    private val cdkBuilder: CfnAnalysis.RangeEndsLabelTypeProperty.Builder =
+        CfnAnalysis.RangeEndsLabelTypeProperty.builder()
 
-  /**
-   * @param visibility The visibility of the range ends label.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility of the range ends label.
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnAnalysis.RangeEndsLabelTypeProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.RangeEndsLabelTypeProperty = cdkBuilder.build()
 }

@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The style options of the box plot.
@@ -24,15 +24,15 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateBoxPlotStyleOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.BoxPlotStyleOptionsProperty.Builder =
-      CfnTemplate.BoxPlotStyleOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.BoxPlotStyleOptionsProperty.Builder =
+        CfnTemplate.BoxPlotStyleOptionsProperty.builder()
 
-  /**
-   * @param fillStyle The fill styles (solid, transparent) of the box plot.
-   */
-  public fun fillStyle(fillStyle: String) {
-    cdkBuilder.fillStyle(fillStyle)
-  }
+    /**
+     * @param fillStyle The fill styles (solid, transparent) of the box plot.
+     */
+    public fun fillStyle(fillStyle: String) {
+        cdkBuilder.fillStyle(fillStyle)
+    }
 
-  public fun build(): CfnTemplate.BoxPlotStyleOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.BoxPlotStyleOptionsProperty = cdkBuilder.build()
 }

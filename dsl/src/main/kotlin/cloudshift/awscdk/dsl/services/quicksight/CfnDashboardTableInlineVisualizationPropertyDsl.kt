@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -30,22 +30,22 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardTableInlineVisualizationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.TableInlineVisualizationProperty.Builder =
-      CfnDashboard.TableInlineVisualizationProperty.builder()
+    private val cdkBuilder: CfnDashboard.TableInlineVisualizationProperty.Builder =
+        CfnDashboard.TableInlineVisualizationProperty.builder()
 
-  /**
-   * @param dataBars The configuration of the inline visualization of the data bars within a chart.
-   */
-  public fun dataBars(dataBars: IResolvable) {
-    cdkBuilder.dataBars(dataBars)
-  }
+    /**
+     * @param dataBars The configuration of the inline visualization of the data bars within a chart.
+     */
+    public fun dataBars(dataBars: IResolvable) {
+        cdkBuilder.dataBars(dataBars)
+    }
 
-  /**
-   * @param dataBars The configuration of the inline visualization of the data bars within a chart.
-   */
-  public fun dataBars(dataBars: CfnDashboard.DataBarsOptionsProperty) {
-    cdkBuilder.dataBars(dataBars)
-  }
+    /**
+     * @param dataBars The configuration of the inline visualization of the data bars within a chart.
+     */
+    public fun dataBars(dataBars: CfnDashboard.DataBarsOptionsProperty) {
+        cdkBuilder.dataBars(dataBars)
+    }
 
-  public fun build(): CfnDashboard.TableInlineVisualizationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.TableInlineVisualizationProperty = cdkBuilder.build()
 }

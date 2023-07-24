@@ -1,14 +1,19 @@
-package cloudshift.gradle.release.git
+package cloudshift.gradle.release
 
+import cloudshift.gradle.release.GitService.GitOutput
 import org.gradle.api.GradleException
 import org.gradle.api.logging.Logging
 import org.gradle.api.services.BuildService
 import org.gradle.api.services.BuildServiceParameters
 import org.gradle.process.ExecOperations
 import java.io.ByteArrayOutputStream
+import java.io.File
 import javax.inject.Inject
 
-abstract class GitService @Inject constructor(private val execOps: ExecOperations) : BuildService<BuildServiceParameters.None> {
+abstract class GitServiceImpl
+@Inject
+constructor(private val execOps: ExecOperations) : BuildService<BuildServiceParameters.None>, GitService {
+    private val logger = Logging.getLogger(GitServiceImpl::class.java)
 
     private object GitCommands {
         // Unstaged files: git diff --name-status
@@ -24,27 +29,26 @@ abstract class GitService @Inject constructor(private val execOps: ExecOperation
         val RemoteOutstandingCommits = listOf("log", "..@{u}")
     }
 
-    fun localUnstagedFiles(): GitOutput = git(GitCommands.LocalUnstagedFiles)
+    override fun localUnstagedFiles(): GitOutput = git(GitCommands.LocalUnstagedFiles)
 
-    fun localStagedFiles(): GitOutput = git(GitCommands.LocalStagedFiles)
+    override fun localStagedFiles(): GitOutput = git(GitCommands.LocalStagedFiles)
 
-    fun localOutstandingCommits(): GitOutput = git(GitCommands.LocalOutstandingCommits)
+    override fun localOutstandingCommits(): GitOutput = git(GitCommands.LocalOutstandingCommits)
 
-    fun remoteOutstandingCommits(): GitOutput = git(GitCommands.RemoteOutstandingCommits)
+    override fun remoteOutstandingCommits(): GitOutput = git(GitCommands.RemoteOutstandingCommits)
 
-    fun addUnstagedFiles() {
+    override fun addUnstagedFiles() {
         git("add", ".")
     }
 
-    fun commit(commitMessage: String) {
+    override fun commit(commitMessage: String) {
         git("commit", "-m", commitMessage)
     }
 
-    fun push() {
+    override fun push() {
         git("push", "--porcelain")
     }
 
-    private val logger = Logging.getLogger(GitService::class.java)
 
     private fun git(vararg args: String, block: (GitDsl).() -> Unit = {}) = git(args.toList(), block)
 
@@ -73,16 +77,20 @@ abstract class GitService @Inject constructor(private val execOps: ExecOperation
                 val standardOutput = String(stdOutput.toByteArray())
                 val errorOutput = String(stdError.toByteArray())
                 var msg = "Error executing $commandLine; exit code ${execResult.exitValue}"
-                if(standardOutput.isNotBlank()) msg = "$msg\n$standardOutput"
-                if(errorOutput.isNotBlank()) msg = "$msg\n$errorOutput"
+                if (standardOutput.isNotBlank()) msg = "$msg\n$standardOutput"
+                if (errorOutput.isNotBlank()) msg = "$msg\n$errorOutput"
 
                 throw GradleException(msg)
             }
         }
     }
 
-    fun tag(tagName: String, tagMessage : String) {
+    override fun tag(tagName: String, tagMessage: String) {
         git("tag", "-a", tagName, "-m", tagMessage)
+    }
+
+    override fun restore(file: File) {
+        git("restore", file.absolutePath)
     }
 
     private class GitDsl {
@@ -92,9 +100,4 @@ abstract class GitService @Inject constructor(private val execOps: ExecOperation
         }
     }
 
-    data class GitOutput(val output: String) {
-        val outputLines = output.split("\r\n")
-            .dropWhile { it.isBlank() }
-    }
 }
-

@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.String
 
 /**
  * The configuration of the search options in a list control.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisListControlSearchOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.ListControlSearchOptionsProperty.Builder =
-      CfnAnalysis.ListControlSearchOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.ListControlSearchOptionsProperty.Builder =
+        CfnAnalysis.ListControlSearchOptionsProperty.builder()
 
-  /**
-   * @param visibility The visibility configuration of the search options in a list control.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility configuration of the search options in a list control.
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnAnalysis.ListControlSearchOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.ListControlSearchOptionsProperty = cdkBuilder.build()
 }

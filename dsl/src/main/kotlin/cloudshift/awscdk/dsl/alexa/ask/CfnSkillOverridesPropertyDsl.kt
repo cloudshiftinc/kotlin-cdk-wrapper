@@ -1,12 +1,12 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.alexa.ask
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import software.amazon.awscdk.alexa.ask.CfnSkill
 import kotlin.Any
 import kotlin.Unit
-import software.amazon.awscdk.alexa.ask.CfnSkill
 
 /**
  * The `Overrides` property type provides overrides to the skill package to apply when creating or
@@ -33,25 +33,25 @@ import software.amazon.awscdk.alexa.ask.CfnSkill
  */
 @CdkDslMarker
 public class CfnSkillOverridesPropertyDsl {
-  private val cdkBuilder: CfnSkill.OverridesProperty.Builder = CfnSkill.OverridesProperty.builder()
+    private val cdkBuilder: CfnSkill.OverridesProperty.Builder = CfnSkill.OverridesProperty.builder()
 
-  /**
-   * @param manifest Overrides to apply to the skill manifest inside of the skill package.
-   * The skill manifest contains metadata about the skill. For more information, see  .
-   */
-  public fun manifest(manifest: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(manifest)
-    cdkBuilder.manifest(builder.map)
-  }
+    /**
+     * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+     * The skill manifest contains metadata about the skill. For more information, see  .
+     */
+    public fun manifest(manifest: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(manifest)
+        cdkBuilder.manifest(builder.map)
+    }
 
-  /**
-   * @param manifest Overrides to apply to the skill manifest inside of the skill package.
-   * The skill manifest contains metadata about the skill. For more information, see  .
-   */
-  public fun manifest(manifest: Any) {
-    cdkBuilder.manifest(manifest)
-  }
+    /**
+     * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+     * The skill manifest contains metadata about the skill. For more information, see  .
+     */
+    public fun manifest(manifest: Any) {
+        cdkBuilder.manifest(manifest)
+    }
 
-  public fun build(): CfnSkill.OverridesProperty = cdkBuilder.build()
+    public fun build(): CfnSkill.OverridesProperty = cdkBuilder.build()
 }

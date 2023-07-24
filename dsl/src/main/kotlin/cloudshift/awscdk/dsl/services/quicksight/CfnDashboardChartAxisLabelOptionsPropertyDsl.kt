@@ -1,14 +1,14 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The label options for an axis on a chart.
@@ -51,52 +51,52 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardChartAxisLabelOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ChartAxisLabelOptionsProperty.Builder =
-      CfnDashboard.ChartAxisLabelOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.ChartAxisLabelOptionsProperty.Builder =
+        CfnDashboard.ChartAxisLabelOptionsProperty.builder()
 
-  private val _axisLabelOptions: MutableList<Any> = mutableListOf()
+    private val _axisLabelOptions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param axisLabelOptions The label options for a chart axis.
-   */
-  public fun axisLabelOptions(vararg axisLabelOptions: Any) {
-    _axisLabelOptions.addAll(listOf(*axisLabelOptions))
-  }
+    /**
+     * @param axisLabelOptions The label options for a chart axis.
+     */
+    public fun axisLabelOptions(vararg axisLabelOptions: Any) {
+        _axisLabelOptions.addAll(listOf(*axisLabelOptions))
+    }
 
-  /**
-   * @param axisLabelOptions The label options for a chart axis.
-   */
-  public fun axisLabelOptions(axisLabelOptions: Collection<Any>) {
-    _axisLabelOptions.addAll(axisLabelOptions)
-  }
+    /**
+     * @param axisLabelOptions The label options for a chart axis.
+     */
+    public fun axisLabelOptions(axisLabelOptions: Collection<Any>) {
+        _axisLabelOptions.addAll(axisLabelOptions)
+    }
 
-  /**
-   * @param axisLabelOptions The label options for a chart axis.
-   */
-  public fun axisLabelOptions(axisLabelOptions: IResolvable) {
-    cdkBuilder.axisLabelOptions(axisLabelOptions)
-  }
+    /**
+     * @param axisLabelOptions The label options for a chart axis.
+     */
+    public fun axisLabelOptions(axisLabelOptions: IResolvable) {
+        cdkBuilder.axisLabelOptions(axisLabelOptions)
+    }
 
-  /**
-   * @param sortIconVisibility The visibility configuration of the sort icon on a chart's axis
-   * label.
-   */
-  public fun sortIconVisibility(sortIconVisibility: String) {
-    cdkBuilder.sortIconVisibility(sortIconVisibility)
-  }
+    /**
+     * @param sortIconVisibility The visibility configuration of the sort icon on a chart's axis
+     * label.
+     */
+    public fun sortIconVisibility(sortIconVisibility: String) {
+        cdkBuilder.sortIconVisibility(sortIconVisibility)
+    }
 
-  /**
-   * @param visibility The visibility of an axis label on a chart. Choose one of the following
-   * options:.
-   * * `VISIBLE` : Shows the axis.
-   * * `HIDDEN` : Hides the axis.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility of an axis label on a chart. Choose one of the following
+     * options:.
+     * * `VISIBLE` : Shows the axis.
+     * * `HIDDEN` : Hides the axis.
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnDashboard.ChartAxisLabelOptionsProperty {
-    if(_axisLabelOptions.isNotEmpty()) cdkBuilder.axisLabelOptions(_axisLabelOptions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDashboard.ChartAxisLabelOptionsProperty {
+        if (_axisLabelOptions.isNotEmpty()) cdkBuilder.axisLabelOptions(_axisLabelOptions)
+        return cdkBuilder.build()
+    }
 }

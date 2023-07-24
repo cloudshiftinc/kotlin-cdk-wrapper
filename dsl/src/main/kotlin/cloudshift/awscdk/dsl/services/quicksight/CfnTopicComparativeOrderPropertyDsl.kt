@@ -1,12 +1,12 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.quicksight.CfnTopic
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.services.quicksight.CfnTopic
 
 /**
  * The order in which data is displayed for the column when it's used in a comparative context.
@@ -28,43 +28,43 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  */
 @CdkDslMarker
 public class CfnTopicComparativeOrderPropertyDsl {
-  private val cdkBuilder: CfnTopic.ComparativeOrderProperty.Builder =
-      CfnTopic.ComparativeOrderProperty.builder()
+    private val cdkBuilder: CfnTopic.ComparativeOrderProperty.Builder =
+        CfnTopic.ComparativeOrderProperty.builder()
 
-  private val _specifedOrder: MutableList<String> = mutableListOf()
+    private val _specifedOrder: MutableList<String> = mutableListOf()
 
-  /**
-   * @param specifedOrder The list of columns to be used in the ordering.
-   */
-  public fun specifedOrder(vararg specifedOrder: String) {
-    _specifedOrder.addAll(listOf(*specifedOrder))
-  }
+    /**
+     * @param specifedOrder The list of columns to be used in the ordering.
+     */
+    public fun specifedOrder(vararg specifedOrder: String) {
+        _specifedOrder.addAll(listOf(*specifedOrder))
+    }
 
-  /**
-   * @param specifedOrder The list of columns to be used in the ordering.
-   */
-  public fun specifedOrder(specifedOrder: Collection<String>) {
-    _specifedOrder.addAll(specifedOrder)
-  }
+    /**
+     * @param specifedOrder The list of columns to be used in the ordering.
+     */
+    public fun specifedOrder(specifedOrder: Collection<String>) {
+        _specifedOrder.addAll(specifedOrder)
+    }
 
-  /**
-   * @param treatUndefinedSpecifiedValues The treat of undefined specified values.
-   * Valid values for this structure are `LEAST` and `MOST` .
-   */
-  public fun treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues: String) {
-    cdkBuilder.treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues)
-  }
+    /**
+     * @param treatUndefinedSpecifiedValues The treat of undefined specified values.
+     * Valid values for this structure are `LEAST` and `MOST` .
+     */
+    public fun treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues: String) {
+        cdkBuilder.treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues)
+    }
 
-  /**
-   * @param useOrdering The ordering type for a column.
-   * Valid values for this structure are `GREATER_IS_BETTER` , `LESSER_IS_BETTER` and `SPECIFIED` .
-   */
-  public fun useOrdering(useOrdering: String) {
-    cdkBuilder.useOrdering(useOrdering)
-  }
+    /**
+     * @param useOrdering The ordering type for a column.
+     * Valid values for this structure are `GREATER_IS_BETTER` , `LESSER_IS_BETTER` and `SPECIFIED` .
+     */
+    public fun useOrdering(useOrdering: String) {
+        cdkBuilder.useOrdering(useOrdering)
+    }
 
-  public fun build(): CfnTopic.ComparativeOrderProperty {
-    if(_specifedOrder.isNotEmpty()) cdkBuilder.specifedOrder(_specifedOrder)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTopic.ComparativeOrderProperty {
+        if (_specifedOrder.isNotEmpty()) cdkBuilder.specifedOrder(_specifedOrder)
+        return cdkBuilder.build()
+    }
 }

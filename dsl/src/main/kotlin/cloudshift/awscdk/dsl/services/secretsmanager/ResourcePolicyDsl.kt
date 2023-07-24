@@ -1,12 +1,12 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.ResourcePolicy
 import software.constructs.Construct
+import kotlin.String
 
 /**
  * Resource Policy for SecretsManager Secrets.
@@ -36,19 +36,19 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class ResourcePolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String
 ) {
-  private val cdkBuilder: ResourcePolicy.Builder = ResourcePolicy.Builder.create(scope, id)
+    private val cdkBuilder: ResourcePolicy.Builder = ResourcePolicy.Builder.create(scope, id)
 
-  /**
-   * The secret to attach a resource-based permissions policy.
-   *
-   * @param secret The secret to attach a resource-based permissions policy. 
-   */
-  public fun secret(secret: ISecret) {
-    cdkBuilder.secret(secret)
-  }
+    /**
+     * The secret to attach a resource-based permissions policy.
+     *
+     * @param secret The secret to attach a resource-based permissions policy.
+     */
+    public fun secret(secret: ISecret) {
+        cdkBuilder.secret(secret)
+    }
 
-  public fun build(): ResourcePolicy = cdkBuilder.build()
+    public fun build(): ResourcePolicy = cdkBuilder.build()
 }

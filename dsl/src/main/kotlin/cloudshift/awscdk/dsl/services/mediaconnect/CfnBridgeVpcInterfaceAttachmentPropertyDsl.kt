@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.mediaconnect.CfnBridge
+import kotlin.String
 
 /**
  * The VPC interface that you want to send your output to.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.mediaconnect.CfnBridge
  */
 @CdkDslMarker
 public class CfnBridgeVpcInterfaceAttachmentPropertyDsl {
-  private val cdkBuilder: CfnBridge.VpcInterfaceAttachmentProperty.Builder =
-      CfnBridge.VpcInterfaceAttachmentProperty.builder()
+    private val cdkBuilder: CfnBridge.VpcInterfaceAttachmentProperty.Builder =
+        CfnBridge.VpcInterfaceAttachmentProperty.builder()
 
-  /**
-   * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
-   */
-  public fun vpcInterfaceName(vpcInterfaceName: String) {
-    cdkBuilder.vpcInterfaceName(vpcInterfaceName)
-  }
+    /**
+     * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+     */
+    public fun vpcInterfaceName(vpcInterfaceName: String) {
+        cdkBuilder.vpcInterfaceName(vpcInterfaceName)
+    }
 
-  public fun build(): CfnBridge.VpcInterfaceAttachmentProperty = cdkBuilder.build()
+    public fun build(): CfnBridge.VpcInterfaceAttachmentProperty = cdkBuilder.build()
 }

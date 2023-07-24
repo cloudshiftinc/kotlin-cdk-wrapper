@@ -1,11 +1,11 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.String
 
 /**
  * The reference that specifies where the axis label is applied to.
@@ -30,29 +30,29 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisAxisLabelReferenceOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.AxisLabelReferenceOptionsProperty.Builder =
-      CfnAnalysis.AxisLabelReferenceOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.AxisLabelReferenceOptionsProperty.Builder =
+        CfnAnalysis.AxisLabelReferenceOptionsProperty.builder()
 
-  /**
-   * @param column The column that the axis label is targeted to. 
-   */
-  public fun column(column: IResolvable) {
-    cdkBuilder.column(column)
-  }
+    /**
+     * @param column The column that the axis label is targeted to.
+     */
+    public fun column(column: IResolvable) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param column The column that the axis label is targeted to. 
-   */
-  public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
-    cdkBuilder.column(column)
-  }
+    /**
+     * @param column The column that the axis label is targeted to.
+     */
+    public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param fieldId The field that the axis label is targeted to. 
-   */
-  public fun fieldId(fieldId: String) {
-    cdkBuilder.fieldId(fieldId)
-  }
+    /**
+     * @param fieldId The field that the axis label is targeted to.
+     */
+    public fun fieldId(fieldId: String) {
+        cdkBuilder.fieldId(fieldId)
+    }
 
-  public fun build(): CfnAnalysis.AxisLabelReferenceOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.AxisLabelReferenceOptionsProperty = cdkBuilder.build()
 }

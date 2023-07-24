@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -27,23 +27,22 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardRadarChartSeriesSettingsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.RadarChartSeriesSettingsProperty.Builder =
-      CfnDashboard.RadarChartSeriesSettingsProperty.builder()
+    private val cdkBuilder: CfnDashboard.RadarChartSeriesSettingsProperty.Builder =
+        CfnDashboard.RadarChartSeriesSettingsProperty.builder()
 
-  /**
-   * @param areaStyleSettings The area style settings of a radar chart.
-   */
-  public fun areaStyleSettings(areaStyleSettings: IResolvable) {
-    cdkBuilder.areaStyleSettings(areaStyleSettings)
-  }
+    /**
+     * @param areaStyleSettings The area style settings of a radar chart.
+     */
+    public fun areaStyleSettings(areaStyleSettings: IResolvable) {
+        cdkBuilder.areaStyleSettings(areaStyleSettings)
+    }
 
-  /**
-   * @param areaStyleSettings The area style settings of a radar chart.
-   */
-  public
-      fun areaStyleSettings(areaStyleSettings: CfnDashboard.RadarChartAreaStyleSettingsProperty) {
-    cdkBuilder.areaStyleSettings(areaStyleSettings)
-  }
+    /**
+     * @param areaStyleSettings The area style settings of a radar chart.
+     */
+    public fun areaStyleSettings(areaStyleSettings: CfnDashboard.RadarChartAreaStyleSettingsProperty) {
+        cdkBuilder.areaStyleSettings(areaStyleSettings)
+    }
 
-  public fun build(): CfnDashboard.RadarChartSeriesSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.RadarChartSeriesSettingsProperty = cdkBuilder.build()
 }

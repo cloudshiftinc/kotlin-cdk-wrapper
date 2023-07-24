@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSet
+import kotlin.String
 
 /**
  * A transform operation that renames a column.
@@ -26,22 +26,22 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  */
 @CdkDslMarker
 public class CfnDataSetRenameColumnOperationPropertyDsl {
-  private val cdkBuilder: CfnDataSet.RenameColumnOperationProperty.Builder =
-      CfnDataSet.RenameColumnOperationProperty.builder()
+    private val cdkBuilder: CfnDataSet.RenameColumnOperationProperty.Builder =
+        CfnDataSet.RenameColumnOperationProperty.builder()
 
-  /**
-   * @param columnName The name of the column to be renamed. 
-   */
-  public fun columnName(columnName: String) {
-    cdkBuilder.columnName(columnName)
-  }
+    /**
+     * @param columnName The name of the column to be renamed.
+     */
+    public fun columnName(columnName: String) {
+        cdkBuilder.columnName(columnName)
+    }
 
-  /**
-   * @param newColumnName The new name for the column. 
-   */
-  public fun newColumnName(newColumnName: String) {
-    cdkBuilder.newColumnName(newColumnName)
-  }
+    /**
+     * @param newColumnName The new name for the column.
+     */
+    public fun newColumnName(newColumnName: String) {
+        cdkBuilder.newColumnName(newColumnName)
+    }
 
-  public fun build(): CfnDataSet.RenameColumnOperationProperty = cdkBuilder.build()
+    public fun build(): CfnDataSet.RenameColumnOperationProperty = cdkBuilder.build()
 }

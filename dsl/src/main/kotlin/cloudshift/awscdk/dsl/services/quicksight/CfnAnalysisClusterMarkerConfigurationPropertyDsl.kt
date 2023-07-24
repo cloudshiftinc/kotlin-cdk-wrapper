@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -29,22 +29,22 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisClusterMarkerConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.ClusterMarkerConfigurationProperty.Builder =
-      CfnAnalysis.ClusterMarkerConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.ClusterMarkerConfigurationProperty.Builder =
+        CfnAnalysis.ClusterMarkerConfigurationProperty.builder()
 
-  /**
-   * @param clusterMarker The cluster marker that is a part of the cluster marker configuration.
-   */
-  public fun clusterMarker(clusterMarker: IResolvable) {
-    cdkBuilder.clusterMarker(clusterMarker)
-  }
+    /**
+     * @param clusterMarker The cluster marker that is a part of the cluster marker configuration.
+     */
+    public fun clusterMarker(clusterMarker: IResolvable) {
+        cdkBuilder.clusterMarker(clusterMarker)
+    }
 
-  /**
-   * @param clusterMarker The cluster marker that is a part of the cluster marker configuration.
-   */
-  public fun clusterMarker(clusterMarker: CfnAnalysis.ClusterMarkerProperty) {
-    cdkBuilder.clusterMarker(clusterMarker)
-  }
+    /**
+     * @param clusterMarker The cluster marker that is a part of the cluster marker configuration.
+     */
+    public fun clusterMarker(clusterMarker: CfnAnalysis.ClusterMarkerProperty) {
+        cdkBuilder.clusterMarker(clusterMarker)
+    }
 
-  public fun build(): CfnAnalysis.ClusterMarkerConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.ClusterMarkerConfigurationProperty = cdkBuilder.build()
 }

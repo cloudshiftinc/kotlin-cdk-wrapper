@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -42,22 +42,22 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisGaugeChartArcConditionalFormattingPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.GaugeChartArcConditionalFormattingProperty.Builder =
-      CfnAnalysis.GaugeChartArcConditionalFormattingProperty.builder()
+    private val cdkBuilder: CfnAnalysis.GaugeChartArcConditionalFormattingProperty.Builder =
+        CfnAnalysis.GaugeChartArcConditionalFormattingProperty.builder()
 
-  /**
-   * @param foregroundColor The conditional formatting of the arc foreground color.
-   */
-  public fun foregroundColor(foregroundColor: IResolvable) {
-    cdkBuilder.foregroundColor(foregroundColor)
-  }
+    /**
+     * @param foregroundColor The conditional formatting of the arc foreground color.
+     */
+    public fun foregroundColor(foregroundColor: IResolvable) {
+        cdkBuilder.foregroundColor(foregroundColor)
+    }
 
-  /**
-   * @param foregroundColor The conditional formatting of the arc foreground color.
-   */
-  public fun foregroundColor(foregroundColor: CfnAnalysis.ConditionalFormattingColorProperty) {
-    cdkBuilder.foregroundColor(foregroundColor)
-  }
+    /**
+     * @param foregroundColor The conditional formatting of the arc foreground color.
+     */
+    public fun foregroundColor(foregroundColor: CfnAnalysis.ConditionalFormattingColorProperty) {
+        cdkBuilder.foregroundColor(foregroundColor)
+    }
 
-  public fun build(): CfnAnalysis.GaugeChartArcConditionalFormattingProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.GaugeChartArcConditionalFormattingProperty = cdkBuilder.build()
 }

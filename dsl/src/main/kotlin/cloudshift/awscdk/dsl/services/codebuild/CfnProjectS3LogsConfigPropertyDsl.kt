@@ -1,12 +1,12 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Boolean
-import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnProject
+import kotlin.Boolean
+import kotlin.String
 
 /**
  * `S3Logs` is a property of the [AWS CodeBuild Project
@@ -31,42 +31,42 @@ import software.amazon.awscdk.services.codebuild.CfnProject
  */
 @CdkDslMarker
 public class CfnProjectS3LogsConfigPropertyDsl {
-  private val cdkBuilder: CfnProject.S3LogsConfigProperty.Builder =
-      CfnProject.S3LogsConfigProperty.builder()
+    private val cdkBuilder: CfnProject.S3LogsConfigProperty.Builder =
+        CfnProject.S3LogsConfigProperty.builder()
 
-  /**
-   * @param encryptionDisabled Set to true if you do not want your S3 build log output encrypted.
-   * By default S3 build logs are encrypted.
-   */
-  public fun encryptionDisabled(encryptionDisabled: Boolean) {
-    cdkBuilder.encryptionDisabled(encryptionDisabled)
-  }
+    /**
+     * @param encryptionDisabled Set to true if you do not want your S3 build log output encrypted.
+     * By default S3 build logs are encrypted.
+     */
+    public fun encryptionDisabled(encryptionDisabled: Boolean) {
+        cdkBuilder.encryptionDisabled(encryptionDisabled)
+    }
 
-  /**
-   * @param encryptionDisabled Set to true if you do not want your S3 build log output encrypted.
-   * By default S3 build logs are encrypted.
-   */
-  public fun encryptionDisabled(encryptionDisabled: IResolvable) {
-    cdkBuilder.encryptionDisabled(encryptionDisabled)
-  }
+    /**
+     * @param encryptionDisabled Set to true if you do not want your S3 build log output encrypted.
+     * By default S3 build logs are encrypted.
+     */
+    public fun encryptionDisabled(encryptionDisabled: IResolvable) {
+        cdkBuilder.encryptionDisabled(encryptionDisabled)
+    }
 
-  /**
-   * @param location The ARN of an S3 bucket and the path prefix for S3 logs.
-   * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
-   * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
-   */
-  public fun location(location: String) {
-    cdkBuilder.location(location)
-  }
+    /**
+     * @param location The ARN of an S3 bucket and the path prefix for S3 logs.
+     * If your Amazon S3 bucket name is `my-bucket` , and your path prefix is `build-log` , then
+     * acceptable formats are `my-bucket/build-log` or `arn:aws:s3:::my-bucket/build-log` .
+     */
+    public fun location(location: String) {
+        cdkBuilder.location(location)
+    }
 
-  /**
-   * @param status The current status of the S3 build logs. Valid values are:. 
-   * * `ENABLED` : S3 build logs are enabled for this build project.
-   * * `DISABLED` : S3 build logs are not enabled for this build project.
-   */
-  public fun status(status: String) {
-    cdkBuilder.status(status)
-  }
+    /**
+     * @param status The current status of the S3 build logs. Valid values are:.
+     * * `ENABLED` : S3 build logs are enabled for this build project.
+     * * `DISABLED` : S3 build logs are not enabled for this build project.
+     */
+    public fun status(status: String) {
+        cdkBuilder.status(status)
+    }
 
-  public fun build(): CfnProject.S3LogsConfigProperty = cdkBuilder.build()
+    public fun build(): CfnProject.S3LogsConfigProperty = cdkBuilder.build()
 }

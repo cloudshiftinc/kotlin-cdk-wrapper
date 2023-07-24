@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The field label type.
@@ -25,22 +25,22 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateFieldLabelTypePropertyDsl {
-  private val cdkBuilder: CfnTemplate.FieldLabelTypeProperty.Builder =
-      CfnTemplate.FieldLabelTypeProperty.builder()
+    private val cdkBuilder: CfnTemplate.FieldLabelTypeProperty.Builder =
+        CfnTemplate.FieldLabelTypeProperty.builder()
 
-  /**
-   * @param fieldId Indicates the field that is targeted by the field label.
-   */
-  public fun fieldId(fieldId: String) {
-    cdkBuilder.fieldId(fieldId)
-  }
+    /**
+     * @param fieldId Indicates the field that is targeted by the field label.
+     */
+    public fun fieldId(fieldId: String) {
+        cdkBuilder.fieldId(fieldId)
+    }
 
-  /**
-   * @param visibility The visibility of the field label.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility of the field label.
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnTemplate.FieldLabelTypeProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.FieldLabelTypeProperty = cdkBuilder.build()
 }

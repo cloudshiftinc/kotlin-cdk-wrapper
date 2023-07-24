@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -43,37 +43,36 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardForecastConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ForecastConfigurationProperty.Builder =
-      CfnDashboard.ForecastConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.ForecastConfigurationProperty.Builder =
+        CfnDashboard.ForecastConfigurationProperty.builder()
 
-  /**
-   * @param forecastProperties The forecast properties setup of a forecast in the line chart.
-   */
-  public fun forecastProperties(forecastProperties: IResolvable) {
-    cdkBuilder.forecastProperties(forecastProperties)
-  }
+    /**
+     * @param forecastProperties The forecast properties setup of a forecast in the line chart.
+     */
+    public fun forecastProperties(forecastProperties: IResolvable) {
+        cdkBuilder.forecastProperties(forecastProperties)
+    }
 
-  /**
-   * @param forecastProperties The forecast properties setup of a forecast in the line chart.
-   */
-  public
-      fun forecastProperties(forecastProperties: CfnDashboard.TimeBasedForecastPropertiesProperty) {
-    cdkBuilder.forecastProperties(forecastProperties)
-  }
+    /**
+     * @param forecastProperties The forecast properties setup of a forecast in the line chart.
+     */
+    public fun forecastProperties(forecastProperties: CfnDashboard.TimeBasedForecastPropertiesProperty) {
+        cdkBuilder.forecastProperties(forecastProperties)
+    }
 
-  /**
-   * @param scenario The forecast scenario of a forecast in the line chart.
-   */
-  public fun scenario(scenario: IResolvable) {
-    cdkBuilder.scenario(scenario)
-  }
+    /**
+     * @param scenario The forecast scenario of a forecast in the line chart.
+     */
+    public fun scenario(scenario: IResolvable) {
+        cdkBuilder.scenario(scenario)
+    }
 
-  /**
-   * @param scenario The forecast scenario of a forecast in the line chart.
-   */
-  public fun scenario(scenario: CfnDashboard.ForecastScenarioProperty) {
-    cdkBuilder.scenario(scenario)
-  }
+    /**
+     * @param scenario The forecast scenario of a forecast in the line chart.
+     */
+    public fun scenario(scenario: CfnDashboard.ForecastScenarioProperty) {
+        cdkBuilder.scenario(scenario)
+    }
 
-  public fun build(): CfnDashboard.ForecastConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ForecastConfigurationProperty = cdkBuilder.build()
 }

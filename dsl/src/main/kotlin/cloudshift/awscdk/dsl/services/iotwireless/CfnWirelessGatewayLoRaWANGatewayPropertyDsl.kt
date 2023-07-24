@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
+import kotlin.String
 
 /**
  * LoRaWAN wireless gateway object.
@@ -25,22 +25,22 @@ import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
  */
 @CdkDslMarker
 public class CfnWirelessGatewayLoRaWANGatewayPropertyDsl {
-  private val cdkBuilder: CfnWirelessGateway.LoRaWANGatewayProperty.Builder =
-      CfnWirelessGateway.LoRaWANGatewayProperty.builder()
+    private val cdkBuilder: CfnWirelessGateway.LoRaWANGatewayProperty.Builder =
+        CfnWirelessGateway.LoRaWANGatewayProperty.builder()
 
-  /**
-   * @param gatewayEui The gateway's EUI value. 
-   */
-  public fun gatewayEui(gatewayEui: String) {
-    cdkBuilder.gatewayEui(gatewayEui)
-  }
+    /**
+     * @param gatewayEui The gateway's EUI value.
+     */
+    public fun gatewayEui(gatewayEui: String) {
+        cdkBuilder.gatewayEui(gatewayEui)
+    }
 
-  /**
-   * @param rfRegion The frequency band (RFRegion) value. 
-   */
-  public fun rfRegion(rfRegion: String) {
-    cdkBuilder.rfRegion(rfRegion)
-  }
+    /**
+     * @param rfRegion The frequency band (RFRegion) value.
+     */
+    public fun rfRegion(rfRegion: String) {
+        cdkBuilder.rfRegion(rfRegion)
+    }
 
-  public fun build(): CfnWirelessGateway.LoRaWANGatewayProperty = cdkBuilder.build()
+    public fun build(): CfnWirelessGateway.LoRaWANGatewayProperty = cdkBuilder.build()
 }

@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.String
 
 /**
  * The scope of the cell for conditional formatting.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisPivotTableConditionalFormattingScopePropertyDsl {
-  private val cdkBuilder: CfnAnalysis.PivotTableConditionalFormattingScopeProperty.Builder =
-      CfnAnalysis.PivotTableConditionalFormattingScopeProperty.builder()
+    private val cdkBuilder: CfnAnalysis.PivotTableConditionalFormattingScopeProperty.Builder =
+        CfnAnalysis.PivotTableConditionalFormattingScopeProperty.builder()
 
-  /**
-   * @param role The role (field, field total, grand total) of the cell for conditional formatting.
-   */
-  public fun role(role: String) {
-    cdkBuilder.role(role)
-  }
+    /**
+     * @param role The role (field, field total, grand total) of the cell for conditional formatting.
+     */
+    public fun role(role: String) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): CfnAnalysis.PivotTableConditionalFormattingScopeProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.PivotTableConditionalFormattingScopeProperty = cdkBuilder.build()
 }

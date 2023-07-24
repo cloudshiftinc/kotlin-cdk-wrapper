@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codebuild
 
@@ -25,16 +25,16 @@ import software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentia
  */
 @CdkDslMarker
 public class GitHubEnterpriseSourceCredentialsPropsDsl {
-  private val cdkBuilder: GitHubEnterpriseSourceCredentialsProps.Builder =
-      GitHubEnterpriseSourceCredentialsProps.builder()
+    private val cdkBuilder: GitHubEnterpriseSourceCredentialsProps.Builder =
+        GitHubEnterpriseSourceCredentialsProps.builder()
 
-  /**
-   * @param accessToken The personal access token to use when contacting the instance of the GitHub
-   * Enterprise API. 
-   */
-  public fun accessToken(accessToken: SecretValue) {
-    cdkBuilder.accessToken(accessToken)
-  }
+    /**
+     * @param accessToken The personal access token to use when contacting the instance of the GitHub
+     * Enterprise API.
+     */
+    public fun accessToken(accessToken: SecretValue) {
+        cdkBuilder.accessToken(accessToken)
+    }
 
-  public fun build(): GitHubEnterpriseSourceCredentialsProps = cdkBuilder.build()
+    public fun build(): GitHubEnterpriseSourceCredentialsProps = cdkBuilder.build()
 }

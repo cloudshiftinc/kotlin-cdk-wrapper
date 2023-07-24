@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -21,23 +21,22 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisHeatMapFieldWellsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.HeatMapFieldWellsProperty.Builder =
-      CfnAnalysis.HeatMapFieldWellsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.HeatMapFieldWellsProperty.Builder =
+        CfnAnalysis.HeatMapFieldWellsProperty.builder()
 
-  /**
-   * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
-   */
-  public fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: IResolvable) {
-    cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
-  }
+    /**
+     * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
+     */
+    public fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: IResolvable) {
+        cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
+    }
 
-  /**
-   * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
-   */
-  public
-      fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: CfnAnalysis.HeatMapAggregatedFieldWellsProperty) {
-    cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
-  }
+    /**
+     * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
+     */
+    public fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: CfnAnalysis.HeatMapAggregatedFieldWellsProperty) {
+        cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
+    }
 
-  public fun build(): CfnAnalysis.HeatMapFieldWellsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.HeatMapFieldWellsProperty = cdkBuilder.build()
 }

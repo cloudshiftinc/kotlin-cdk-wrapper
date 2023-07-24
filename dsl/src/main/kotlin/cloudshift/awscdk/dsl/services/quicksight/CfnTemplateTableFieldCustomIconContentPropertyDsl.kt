@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The custom icon content for the table link content configuration.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateTableFieldCustomIconContentPropertyDsl {
-  private val cdkBuilder: CfnTemplate.TableFieldCustomIconContentProperty.Builder =
-      CfnTemplate.TableFieldCustomIconContentProperty.builder()
+    private val cdkBuilder: CfnTemplate.TableFieldCustomIconContentProperty.Builder =
+        CfnTemplate.TableFieldCustomIconContentProperty.builder()
 
-  /**
-   * @param icon The icon set type (link) of the custom icon content for table URL link content.
-   */
-  public fun icon(icon: String) {
-    cdkBuilder.icon(icon)
-  }
+    /**
+     * @param icon The icon set type (link) of the custom icon content for table URL link content.
+     */
+    public fun icon(icon: String) {
+        cdkBuilder.icon(icon)
+    }
 
-  public fun build(): CfnTemplate.TableFieldCustomIconContentProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.TableFieldCustomIconContentProperty = cdkBuilder.build()
 }

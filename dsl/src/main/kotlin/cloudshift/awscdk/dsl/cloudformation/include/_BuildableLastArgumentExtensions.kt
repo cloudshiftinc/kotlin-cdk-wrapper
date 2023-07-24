@@ -1,11 +1,11 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.cloudformation.include
 
-import kotlin.String
-import kotlin.Unit
 import software.amazon.awscdk.cloudformation.include.CfnInclude
 import software.amazon.awscdk.cloudformation.include.IncludedNestedStack
+import kotlin.String
+import kotlin.Unit
 
 /**
  * Includes a template for a child stack inside of this parent template.
@@ -16,12 +16,15 @@ import software.amazon.awscdk.cloudformation.include.IncludedNestedStack
  * property on object construction.
  *
  * @return the same `IncludedNestedStack` object that `getNestedStack` returns for this logical ID
- * @param logicalId the ID of the stack to retrieve, as it appears in the template. 
- * @param nestedStackProps the properties of the included child Stack. 
+ * @param logicalId the ID of the stack to retrieve, as it appears in the template.
+ * @param nestedStackProps the properties of the included child Stack.
  */
-public inline fun CfnInclude.loadNestedStack(logicalId: String, block: CfnIncludePropsDsl.() -> Unit
-    = {}): IncludedNestedStack {
-  val builder = CfnIncludePropsDsl()
-  builder.apply(block)
-  return loadNestedStack(logicalId, builder.build())
+public inline fun CfnInclude.loadNestedStack(
+    logicalId: String,
+    block: CfnIncludePropsDsl.() -> Unit =
+        {}
+): IncludedNestedStack {
+    val builder = CfnIncludePropsDsl()
+    builder.apply(block)
+    return loadNestedStack(logicalId, builder.build())
 }

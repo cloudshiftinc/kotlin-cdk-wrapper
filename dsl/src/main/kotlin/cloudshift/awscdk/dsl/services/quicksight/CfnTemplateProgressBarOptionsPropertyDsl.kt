@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The options that determine the presentation of the progress bar of a KPI visual.
@@ -24,15 +24,15 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateProgressBarOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.ProgressBarOptionsProperty.Builder =
-      CfnTemplate.ProgressBarOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.ProgressBarOptionsProperty.Builder =
+        CfnTemplate.ProgressBarOptionsProperty.builder()
 
-  /**
-   * @param visibility The visibility of the progress bar.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility of the progress bar.
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnTemplate.ProgressBarOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.ProgressBarOptionsProperty = cdkBuilder.build()
 }

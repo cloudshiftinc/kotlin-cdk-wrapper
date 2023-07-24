@@ -1,12 +1,12 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions
 import software.amazon.awscdk.services.codebuild.LoggingOptions
 import software.amazon.awscdk.services.codebuild.S3LoggingOptions
+import kotlin.Unit
 
 /**
  * Information about logs for the build project.
@@ -27,39 +27,39 @@ import software.amazon.awscdk.services.codebuild.S3LoggingOptions
  */
 @CdkDslMarker
 public class LoggingOptionsDsl {
-  private val cdkBuilder: LoggingOptions.Builder = LoggingOptions.builder()
+    private val cdkBuilder: LoggingOptions.Builder = LoggingOptions.builder()
 
-  /**
-   * @param cloudWatch Information about Amazon CloudWatch Logs for a build project.
-   */
-  public fun cloudWatch(cloudWatch: CloudWatchLoggingOptionsDsl.() -> Unit = {}) {
-    val builder = CloudWatchLoggingOptionsDsl()
-    builder.apply(cloudWatch)
-    cdkBuilder.cloudWatch(builder.build())
-  }
+    /**
+     * @param cloudWatch Information about Amazon CloudWatch Logs for a build project.
+     */
+    public fun cloudWatch(cloudWatch: CloudWatchLoggingOptionsDsl.() -> Unit = {}) {
+        val builder = CloudWatchLoggingOptionsDsl()
+        builder.apply(cloudWatch)
+        cdkBuilder.cloudWatch(builder.build())
+    }
 
-  /**
-   * @param cloudWatch Information about Amazon CloudWatch Logs for a build project.
-   */
-  public fun cloudWatch(cloudWatch: CloudWatchLoggingOptions) {
-    cdkBuilder.cloudWatch(cloudWatch)
-  }
+    /**
+     * @param cloudWatch Information about Amazon CloudWatch Logs for a build project.
+     */
+    public fun cloudWatch(cloudWatch: CloudWatchLoggingOptions) {
+        cdkBuilder.cloudWatch(cloudWatch)
+    }
 
-  /**
-   * @param s3 Information about logs built to an S3 bucket for a build project.
-   */
-  public fun s3(s3: S3LoggingOptionsDsl.() -> Unit = {}) {
-    val builder = S3LoggingOptionsDsl()
-    builder.apply(s3)
-    cdkBuilder.s3(builder.build())
-  }
+    /**
+     * @param s3 Information about logs built to an S3 bucket for a build project.
+     */
+    public fun s3(s3: S3LoggingOptionsDsl.() -> Unit = {}) {
+        val builder = S3LoggingOptionsDsl()
+        builder.apply(s3)
+        cdkBuilder.s3(builder.build())
+    }
 
-  /**
-   * @param s3 Information about logs built to an S3 bucket for a build project.
-   */
-  public fun s3(s3: S3LoggingOptions) {
-    cdkBuilder.s3(s3)
-  }
+    /**
+     * @param s3 Information about logs built to an S3 bucket for a build project.
+     */
+    public fun s3(s3: S3LoggingOptions) {
+        cdkBuilder.s3(s3)
+    }
 
-  public fun build(): LoggingOptions = cdkBuilder.build()
+    public fun build(): LoggingOptions = cdkBuilder.build()
 }

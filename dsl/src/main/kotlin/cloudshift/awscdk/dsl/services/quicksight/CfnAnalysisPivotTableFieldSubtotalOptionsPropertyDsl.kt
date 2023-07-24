@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.String
 
 /**
  * The optional configuration of subtotals cells.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisPivotTableFieldSubtotalOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.PivotTableFieldSubtotalOptionsProperty.Builder =
-      CfnAnalysis.PivotTableFieldSubtotalOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.PivotTableFieldSubtotalOptionsProperty.Builder =
+        CfnAnalysis.PivotTableFieldSubtotalOptionsProperty.builder()
 
-  /**
-   * @param fieldId The field ID of the subtotal options.
-   */
-  public fun fieldId(fieldId: String) {
-    cdkBuilder.fieldId(fieldId)
-  }
+    /**
+     * @param fieldId The field ID of the subtotal options.
+     */
+    public fun fieldId(fieldId: String) {
+        cdkBuilder.fieldId(fieldId)
+    }
 
-  public fun build(): CfnAnalysis.PivotTableFieldSubtotalOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.PivotTableFieldSubtotalOptionsProperty = cdkBuilder.build()
 }

@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Number
 import software.amazon.awscdk.services.licensemanager.CfnLicense
+import kotlin.Number
 
 /**
  * Details about a provisional configuration.
@@ -25,15 +25,15 @@ import software.amazon.awscdk.services.licensemanager.CfnLicense
  */
 @CdkDslMarker
 public class CfnLicenseProvisionalConfigurationPropertyDsl {
-  private val cdkBuilder: CfnLicense.ProvisionalConfigurationProperty.Builder =
-      CfnLicense.ProvisionalConfigurationProperty.builder()
+    private val cdkBuilder: CfnLicense.ProvisionalConfigurationProperty.Builder =
+        CfnLicense.ProvisionalConfigurationProperty.builder()
 
-  /**
-   * @param maxTimeToLiveInMinutes Maximum time for the provisional configuration, in minutes. 
-   */
-  public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
-    cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
-  }
+    /**
+     * @param maxTimeToLiveInMinutes Maximum time for the provisional configuration, in minutes.
+     */
+    public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
+        cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
+    }
 
-  public fun build(): CfnLicense.ProvisionalConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnLicense.ProvisionalConfigurationProperty = cdkBuilder.build()
 }

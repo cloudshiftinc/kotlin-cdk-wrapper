@@ -1,4 +1,4 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -42,36 +42,36 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisDropDownControlDisplayOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.DropDownControlDisplayOptionsProperty.Builder =
-      CfnAnalysis.DropDownControlDisplayOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.DropDownControlDisplayOptionsProperty.Builder =
+        CfnAnalysis.DropDownControlDisplayOptionsProperty.builder()
 
-  /**
-   * @param selectAllOptions The configuration of the `Select all` options in a dropdown control.
-   */
-  public fun selectAllOptions(selectAllOptions: IResolvable) {
-    cdkBuilder.selectAllOptions(selectAllOptions)
-  }
+    /**
+     * @param selectAllOptions The configuration of the `Select all` options in a dropdown control.
+     */
+    public fun selectAllOptions(selectAllOptions: IResolvable) {
+        cdkBuilder.selectAllOptions(selectAllOptions)
+    }
 
-  /**
-   * @param selectAllOptions The configuration of the `Select all` options in a dropdown control.
-   */
-  public fun selectAllOptions(selectAllOptions: CfnAnalysis.ListControlSelectAllOptionsProperty) {
-    cdkBuilder.selectAllOptions(selectAllOptions)
-  }
+    /**
+     * @param selectAllOptions The configuration of the `Select all` options in a dropdown control.
+     */
+    public fun selectAllOptions(selectAllOptions: CfnAnalysis.ListControlSelectAllOptionsProperty) {
+        cdkBuilder.selectAllOptions(selectAllOptions)
+    }
 
-  /**
-   * @param titleOptions The options to configure the title visibility, name, and font size.
-   */
-  public fun titleOptions(titleOptions: IResolvable) {
-    cdkBuilder.titleOptions(titleOptions)
-  }
+    /**
+     * @param titleOptions The options to configure the title visibility, name, and font size.
+     */
+    public fun titleOptions(titleOptions: IResolvable) {
+        cdkBuilder.titleOptions(titleOptions)
+    }
 
-  /**
-   * @param titleOptions The options to configure the title visibility, name, and font size.
-   */
-  public fun titleOptions(titleOptions: CfnAnalysis.LabelOptionsProperty) {
-    cdkBuilder.titleOptions(titleOptions)
-  }
+    /**
+     * @param titleOptions The options to configure the title visibility, name, and font size.
+     */
+    public fun titleOptions(titleOptions: CfnAnalysis.LabelOptionsProperty) {
+        cdkBuilder.titleOptions(titleOptions)
+    }
 
-  public fun build(): CfnAnalysis.DropDownControlDisplayOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.DropDownControlDisplayOptionsProperty = cdkBuilder.build()
 }

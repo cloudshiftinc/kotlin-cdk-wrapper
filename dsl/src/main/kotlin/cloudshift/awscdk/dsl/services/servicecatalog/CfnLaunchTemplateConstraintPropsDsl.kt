@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps
+import kotlin.String
 
 /**
  * Properties for defining a `CfnLaunchTemplateConstraint`.
@@ -30,45 +30,45 @@ import software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstrain
  */
 @CdkDslMarker
 public class CfnLaunchTemplateConstraintPropsDsl {
-  private val cdkBuilder: CfnLaunchTemplateConstraintProps.Builder =
-      CfnLaunchTemplateConstraintProps.builder()
+    private val cdkBuilder: CfnLaunchTemplateConstraintProps.Builder =
+        CfnLaunchTemplateConstraintProps.builder()
 
-  /**
-   * @param acceptLanguage The language code.
-   * * `jp` - Japanese
-   * * `zh` - Chinese
-   */
-  public fun acceptLanguage(acceptLanguage: String) {
-    cdkBuilder.acceptLanguage(acceptLanguage)
-  }
+    /**
+     * @param acceptLanguage The language code.
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     */
+    public fun acceptLanguage(acceptLanguage: String) {
+        cdkBuilder.acceptLanguage(acceptLanguage)
+    }
 
-  /**
-   * @param description The description of the constraint.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * @param description The description of the constraint.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param portfolioId The portfolio identifier. 
-   */
-  public fun portfolioId(portfolioId: String) {
-    cdkBuilder.portfolioId(portfolioId)
-  }
+    /**
+     * @param portfolioId The portfolio identifier.
+     */
+    public fun portfolioId(portfolioId: String) {
+        cdkBuilder.portfolioId(portfolioId)
+    }
 
-  /**
-   * @param productId The product identifier. 
-   */
-  public fun productId(productId: String) {
-    cdkBuilder.productId(productId)
-  }
+    /**
+     * @param productId The product identifier.
+     */
+    public fun productId(productId: String) {
+        cdkBuilder.productId(productId)
+    }
 
-  /**
-   * @param rules The constraint rules. 
-   */
-  public fun rules(rules: String) {
-    cdkBuilder.rules(rules)
-  }
+    /**
+     * @param rules The constraint rules.
+     */
+    public fun rules(rules: String) {
+        cdkBuilder.rules(rules)
+    }
 
-  public fun build(): CfnLaunchTemplateConstraintProps = cdkBuilder.build()
+    public fun build(): CfnLaunchTemplateConstraintProps = cdkBuilder.build()
 }

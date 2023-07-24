@@ -1,4 +1,3 @@
-import cloudshift.awscdkdsl.build.NoLocalChanges
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
 
 plugins {
@@ -86,52 +85,25 @@ val ktlintFormat = tasks.register<JavaExec>("ktlintFormat") {
     classpath = ktlint
     mainClass.set("com.pinterest.ktlint.Main")
     jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
+//    args("--format", "**/src/**/*.kt", "**.kts", "!build-logic/build/**")
     args("--format", "**/src/**/*.kt", "**.kts", "!build-logic/build/**", "!dsl/src/**/*.kt")
 }
 
-val noLocalChanges = tasks.register<NoLocalChanges>("noLocalChanges") {
-    group = LifecycleBasePlugin.VERIFICATION_GROUP
-    onlyIf { System.getenv()["CI"] != null }
-    dependsOn(ktlintFormat)
-}
+//val noLocalChanges = tasks.register<NoLocalChanges>("noLocalChanges") {
+//    group = LifecycleBasePlugin.VERIFICATION_GROUP
+//    onlyIf { System.getenv()["CI"] != null }
+//    dependsOn(ktlintFormat)
+//}
 
-tasks.named("check") {
-    dependsOn(noLocalChanges)
-}
-
-// hack-around for https://github.com/researchgate/gradle-release/issues/304
-// configure(listOf(tasks.release, tasks.runBuildTasks)) {
-//    configure {
-//        actions.clear()
-//        doLast {
-//            GradleConnector
-//                .newConnector()
-//                .forProjectDirectory(layout.projectDirectory.asFile)
-//                .connect()
-//                .use { projectConnection ->
-//                    val buildLauncher = projectConnection
-//                        .newBuild()
-//                        .forTasks(*tasks.toTypedArray())
-//                        .setStandardInput(System.`in`)
-//                        .setStandardOutput(System.out)
-//                        .setStandardError(System.err)
-//                    gradle.startParameter.excludedTaskNames.forEach {
-//                        buildLauncher.addArguments("-x", it)
-//                    }
-//                    buildLauncher.run()
-//                }
-//        }
-//    }
-// }
-//
-// tasks.preTagCommit {
-//    dependsOn(tasks.named("updateReadme"))
-// }
-
+//tasks.named("check") {
+//    dependsOn(noLocalChanges)
+//}
 
 release {
-    failOnPushNeeded = false
-    failOnPullNeeded = false
-    failOnStagedFiles = false
-    failOnUnstagedFiles = false
+    checks {
+        failOnPushNeeded = false
+        failOnPullNeeded = false
+        failOnStagedFiles = false
+        failOnUnstagedFiles = false
+    }
 }

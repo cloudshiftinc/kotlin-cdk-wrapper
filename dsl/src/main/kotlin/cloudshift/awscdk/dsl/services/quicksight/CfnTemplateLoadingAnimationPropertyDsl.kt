@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 /**
  * The configuration of loading animation in free-form layout.
@@ -24,15 +24,15 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateLoadingAnimationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.LoadingAnimationProperty.Builder =
-      CfnTemplate.LoadingAnimationProperty.builder()
+    private val cdkBuilder: CfnTemplate.LoadingAnimationProperty.Builder =
+        CfnTemplate.LoadingAnimationProperty.builder()
 
-  /**
-   * @param visibility The visibility configuration of `LoadingAnimation` .
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility The visibility configuration of `LoadingAnimation` .
+     */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnTemplate.LoadingAnimationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.LoadingAnimationProperty = cdkBuilder.build()
 }

@@ -78,8 +78,10 @@ public inline fun ILocalBundling.tryBundle(arg0: String, block: BundlingOptionsD
  * @param asset 
  */
 public inline
-    fun DefaultStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
-    {}): DockerImageAssetLocation {
+    fun DefaultStackSynthesizer.addDockerImageAsset(
+    block: DockerImageAssetSourceDsl.() -> Unit =
+    {}
+): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
@@ -181,8 +183,10 @@ public inline fun Size.toTebibytes(block: SizeConversionOptionsDsl.() -> Unit = 
  * Specifies logging configuration information for an extension.
  */
 public inline
-    fun CfnTypeActivation.setLoggingConfig(block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
-    = {}) {
+    fun CfnTypeActivation.setLoggingConfig(
+    block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
+    = {}
+) {
   val builder = CfnTypeActivationLoggingConfigPropertyDsl()
   builder.apply(block)
   return setLoggingConfig(builder.build())
@@ -203,8 +207,10 @@ public inline
  * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
  */
 public inline
-    fun CfnStackSet.setOperationPreferences(block: CfnStackSetOperationPreferencesPropertyDsl.() -> Unit
-    = {}) {
+    fun CfnStackSet.setOperationPreferences(
+    block: CfnStackSetOperationPreferencesPropertyDsl.() -> Unit
+    = {}
+) {
   val builder = CfnStackSetOperationPreferencesPropertyDsl()
   builder.apply(block)
   return setOperationPreferences(builder.build())
@@ -216,8 +222,10 @@ public inline
  * Default: - no additional options
  */
 public inline
-    fun CfnCodeDeployBlueGreenHook.setAdditionalOptions(block: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
-    = {}) {
+    fun CfnCodeDeployBlueGreenHook.setAdditionalOptions(
+    block: CfnCodeDeployBlueGreenAdditionalOptionsDsl.() -> Unit
+    = {}
+) {
   val builder = CfnCodeDeployBlueGreenAdditionalOptionsDsl()
   builder.apply(block)
   return setAdditionalOptions(builder.build())
@@ -235,8 +243,10 @@ public inline
  * Default: - no lifecycle event hooks
  */
 public inline
-    fun CfnCodeDeployBlueGreenHook.setLifecycleEventHooks(block: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
-    = {}) {
+    fun CfnCodeDeployBlueGreenHook.setLifecycleEventHooks(
+    block: CfnCodeDeployBlueGreenLifecycleEventHooksDsl.() -> Unit
+    = {}
+) {
   val builder = CfnCodeDeployBlueGreenLifecycleEventHooksDsl()
   builder.apply(block)
   return setLifecycleEventHooks(builder.build())
@@ -249,8 +259,10 @@ public inline
  * time
  */
 public inline
-    fun CfnCodeDeployBlueGreenHook.setTrafficRoutingConfig(block: CfnTrafficRoutingConfigDsl.() -> Unit
-    = {}) {
+    fun CfnCodeDeployBlueGreenHook.setTrafficRoutingConfig(
+    block: CfnTrafficRoutingConfigDsl.() -> Unit
+    = {}
+) {
   val builder = CfnTrafficRoutingConfigDsl()
   builder.apply(block)
   return setTrafficRoutingConfig(builder.build())
@@ -270,8 +282,10 @@ public inline
  * @param asset 
  */
 public inline
-    fun LegacyStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
-    {}): DockerImageAssetLocation {
+    fun LegacyStackSynthesizer.addDockerImageAsset(
+    block: DockerImageAssetSourceDsl.() -> Unit =
+    {}
+): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
@@ -321,8 +335,7 @@ public inline fun LegacyStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.
  * @param exportedValue 
  * @param options
  */
-public inline fun Stack.exportStringListValue(exportedValue: Any,
-    block: ExportValueOptionsDsl.() -> Unit = {}): List<String> {
+public inline fun Stack.exportStringListValue(exportedValue: Any, block: ExportValueOptionsDsl.() -> Unit = {}): List<String> {
   val builder = ExportValueOptionsDsl()
   builder.apply(block)
   return exportStringListValue(exportedValue, builder.build())
@@ -378,8 +391,11 @@ public inline fun Stack.exportStringListValue(exportedValue: Any,
  * @param exportedValue 
  * @param options
  */
-public inline fun Stack.exportValue(exportedValue: Any, block: ExportValueOptionsDsl.() -> Unit =
-    {}): String {
+public inline fun Stack.exportValue(
+    exportedValue: Any,
+    block: ExportValueOptionsDsl.() -> Unit =
+    {}
+): String {
   val builder = ExportValueOptionsDsl()
   builder.apply(block)
   return exportValue(exportedValue, builder.build())
@@ -437,8 +453,10 @@ public inline fun Stack.reportMissingContextKey(block: MissingContextDsl.() -> U
  *
  * @param asset 
  */
-public inline fun StackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
-    {}): DockerImageAssetLocation {
+public inline fun StackSynthesizer.addDockerImageAsset(
+    block: DockerImageAssetSourceDsl.() -> Unit =
+    {}
+): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
@@ -478,8 +496,10 @@ public inline fun StackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> 
  * @param asset 
  */
 public inline
-    fun CliCredentialsStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit
-    = {}): DockerImageAssetLocation {
+    fun CliCredentialsStackSynthesizer.addDockerImageAsset(
+    block: DockerImageAssetSourceDsl.() -> Unit
+    = {}
+): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
@@ -498,8 +518,10 @@ public inline
  *
  * @param asset 
  */
-public inline fun CliCredentialsStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit =
-    {}): FileAssetLocation {
+public inline fun CliCredentialsStackSynthesizer.addFileAsset(
+    block: FileAssetSourceDsl.() -> Unit =
+    {}
+): FileAssetLocation {
   val builder = FileAssetSourceDsl()
   builder.apply(block)
   return addFileAsset(builder.build())
@@ -524,9 +546,9 @@ public inline fun DockerImage.run(block: DockerRunOptionsDsl.() -> Unit = {}) {
  * @param props
  */
 public inline fun Tags.add(
-  key: String,
-  `value`: String,
-  block: TagPropsDsl.() -> Unit = {},
+    key: String,
+    `value`: String,
+    block: TagPropsDsl.() -> Unit = {},
 ) {
   val builder = TagPropsDsl()
   builder.apply(block)
@@ -559,8 +581,10 @@ public inline fun Tags.remove(key: String, block: TagPropsDsl.() -> Unit = {}) {
  * @param asset 
  */
 public inline
-    fun NestedStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
-    {}): DockerImageAssetLocation {
+    fun NestedStackSynthesizer.addDockerImageAsset(
+    block: DockerImageAssetSourceDsl.() -> Unit =
+    {}
+): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
@@ -596,8 +620,10 @@ public inline fun NestedStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.
  * publishes valid signals
  * to the stack events so that you track the number of signals sent.
  */
-public inline fun ICfnResourceOptions.setCreationPolicy(block: CfnCreationPolicyDsl.() -> Unit =
-    {}) {
+public inline fun ICfnResourceOptions.setCreationPolicy(
+    block: CfnCreationPolicyDsl.() -> Unit =
+    {}
+) {
   val builder = CfnCreationPolicyDsl()
   builder.apply(block)
   return setCreationPolicy(builder.build())
@@ -697,8 +723,7 @@ public inline fun Stage.synth(block: StageSynthesisOptionsDsl.() -> Unit = {}): 
  * @param x 
  * @param options
  */
-public inline fun IResolveContext.resolve(arg0: Any,
-    block: ResolveChangeContextOptionsDsl.() -> Unit = {}): Any {
+public inline fun IResolveContext.resolve(arg0: Any, block: ResolveChangeContextOptionsDsl.() -> Unit = {}): Any {
   val builder = ResolveChangeContextOptionsDsl()
   builder.apply(block)
   return resolve(arg0, builder.build())
@@ -718,8 +743,10 @@ public inline fun IResolveContext.resolve(arg0: Any,
  * @param _asset 
  */
 public inline
-    fun BootstraplessSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
-    {}): DockerImageAssetLocation {
+    fun BootstraplessSynthesizer.addDockerImageAsset(
+    block: DockerImageAssetSourceDsl.() -> Unit =
+    {}
+): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
@@ -749,8 +776,10 @@ public inline fun BootstraplessSynthesizer.addFileAsset(block: FileAssetSourceDs
  * Logging configuration information for a resource.
  */
 public inline
-    fun CfnResourceVersion.setLoggingConfig(block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
-    = {}) {
+    fun CfnResourceVersion.setLoggingConfig(
+    block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
+    = {}
+) {
   val builder = CfnResourceVersionLoggingConfigPropertyDsl()
   builder.apply(block)
   return setLoggingConfig(builder.build())
@@ -760,8 +789,10 @@ public inline
  * Contains logging configuration information for an extension.
  */
 public inline
-    fun CfnHookVersion.setLoggingConfig(block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit =
-    {}) {
+    fun CfnHookVersion.setLoggingConfig(
+    block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit =
+    {}
+) {
   val builder = CfnHookVersionLoggingConfigPropertyDsl()
   builder.apply(block)
   return setLoggingConfig(builder.build())
@@ -785,8 +816,7 @@ public inline
  * @param policy
  * @param options
  */
-public inline fun CfnResource.applyRemovalPolicy(policy: RemovalPolicy?,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
+public inline fun CfnResource.applyRemovalPolicy(policy: RemovalPolicy?, block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
   val builder = RemovalPolicyOptionsDsl()
   builder.apply(block)
   return applyRemovalPolicy(policy, builder.build())
@@ -799,8 +829,10 @@ public inline fun CfnResource.applyRemovalPolicy(policy: RemovalPolicy?,
  *
  * @param asset 
  */
-public inline fun IStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit
-    = {}): DockerImageAssetLocation {
+public inline fun IStackSynthesizer.addDockerImageAsset(
+    block: DockerImageAssetSourceDsl.() -> Unit
+    = {}
+): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
@@ -831,10 +863,10 @@ public inline fun IStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() ->
  * @param dest 
  */
 public inline fun AssetManifestBuilder.addDockerImageAsset(
-  stack: Stack,
-  sourceHash: String,
-  source: DockerImageSource,
-  block: DockerImageDestinationDsl.() -> Unit = {},
+    stack: Stack,
+    sourceHash: String,
+    source: DockerImageSource,
+    block: DockerImageDestinationDsl.() -> Unit = {},
 ): DockerImageDestination {
   val builder = DockerImageDestinationDsl()
   builder.apply(block)
@@ -852,10 +884,10 @@ public inline fun AssetManifestBuilder.addDockerImageAsset(
  * @param dest 
  */
 public inline fun AssetManifestBuilder.addFileAsset(
-  stack: Stack,
-  sourceHash: String,
-  source: FileSource,
-  block: FileDestinationDsl.() -> Unit = {},
+    stack: Stack,
+    sourceHash: String,
+    source: FileSource,
+    block: FileDestinationDsl.() -> Unit = {},
 ): FileDestination {
   val builder = FileDestinationDsl()
   builder.apply(block)
@@ -872,9 +904,9 @@ public inline fun AssetManifestBuilder.addFileAsset(
  * @param target 
  */
 public inline fun AssetManifestBuilder.defaultAddDockerImageAsset(
-  stack: Stack,
-  asset: DockerImageAssetSource,
-  block: AssetManifestDockerImageDestinationDsl.() -> Unit = {},
+    stack: Stack,
+    asset: DockerImageAssetSource,
+    block: AssetManifestDockerImageDestinationDsl.() -> Unit = {},
 ): DockerImageDestination {
   val builder = AssetManifestDockerImageDestinationDsl()
   builder.apply(block)
@@ -892,9 +924,9 @@ public inline fun AssetManifestBuilder.defaultAddDockerImageAsset(
  * @param target 
  */
 public inline fun AssetManifestBuilder.defaultAddFileAsset(
-  stack: Stack,
-  asset: FileAssetSource,
-  block: AssetManifestFileDestinationDsl.() -> Unit = {},
+    stack: Stack,
+    asset: FileAssetSource,
+    block: AssetManifestFileDestinationDsl.() -> Unit = {},
 ): FileDestination {
   val builder = AssetManifestFileDestinationDsl()
   builder.apply(block)
@@ -913,9 +945,9 @@ public inline fun AssetManifestBuilder.defaultAddFileAsset(
  * @param dependencies
  */
 public inline fun AssetManifestBuilder.emitManifest(
-  stack: Stack,
-  session: ISynthesisSession,
-  block: AssetManifestOptionsDsl.() -> Unit = {},
+    stack: Stack,
+    session: ISynthesisSession,
+    block: AssetManifestOptionsDsl.() -> Unit = {},
 ): String {
   val builder = AssetManifestOptionsDsl()
   builder.apply(block)

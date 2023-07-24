@@ -62,8 +62,10 @@ public class CfnCreationPolicyDsl {
    * many instances must signal success for the update to succeed.
    */
   public
-      fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicyDsl.() -> Unit
-      = {}) {
+      fun autoScalingCreationPolicy(
+      autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicyDsl.() -> Unit
+      = {}
+  ) {
     val builder = CfnResourceAutoScalingCreationPolicyDsl()
     builder.apply(autoScalingCreationPolicy)
     cdkBuilder.autoScalingCreationPolicy(builder.build())

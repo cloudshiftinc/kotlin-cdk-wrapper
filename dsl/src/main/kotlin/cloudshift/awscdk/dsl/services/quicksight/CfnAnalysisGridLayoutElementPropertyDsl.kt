@@ -1,11 +1,11 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Number
 import kotlin.String
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * An element within a grid layout.
@@ -31,50 +31,50 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisGridLayoutElementPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.GridLayoutElementProperty.Builder =
-      CfnAnalysis.GridLayoutElementProperty.builder()
+    private val cdkBuilder: CfnAnalysis.GridLayoutElementProperty.Builder =
+        CfnAnalysis.GridLayoutElementProperty.builder()
 
-  /**
-   * @param columnIndex The column index for the upper left corner of an element.
-   */
-  public fun columnIndex(columnIndex: Number) {
-    cdkBuilder.columnIndex(columnIndex)
-  }
+    /**
+     * @param columnIndex The column index for the upper left corner of an element.
+     */
+    public fun columnIndex(columnIndex: Number) {
+        cdkBuilder.columnIndex(columnIndex)
+    }
 
-  /**
-   * @param columnSpan The width of a grid element expressed as a number of grid columns. 
-   */
-  public fun columnSpan(columnSpan: Number) {
-    cdkBuilder.columnSpan(columnSpan)
-  }
+    /**
+     * @param columnSpan The width of a grid element expressed as a number of grid columns.
+     */
+    public fun columnSpan(columnSpan: Number) {
+        cdkBuilder.columnSpan(columnSpan)
+    }
 
-  /**
-   * @param elementId A unique identifier for an element within a grid layout. 
-   */
-  public fun elementId(elementId: String) {
-    cdkBuilder.elementId(elementId)
-  }
+    /**
+     * @param elementId A unique identifier for an element within a grid layout.
+     */
+    public fun elementId(elementId: String) {
+        cdkBuilder.elementId(elementId)
+    }
 
-  /**
-   * @param elementType The type of element. 
-   */
-  public fun elementType(elementType: String) {
-    cdkBuilder.elementType(elementType)
-  }
+    /**
+     * @param elementType The type of element.
+     */
+    public fun elementType(elementType: String) {
+        cdkBuilder.elementType(elementType)
+    }
 
-  /**
-   * @param rowIndex The row index for the upper left corner of an element.
-   */
-  public fun rowIndex(rowIndex: Number) {
-    cdkBuilder.rowIndex(rowIndex)
-  }
+    /**
+     * @param rowIndex The row index for the upper left corner of an element.
+     */
+    public fun rowIndex(rowIndex: Number) {
+        cdkBuilder.rowIndex(rowIndex)
+    }
 
-  /**
-   * @param rowSpan The height of a grid element expressed as a number of grid rows. 
-   */
-  public fun rowSpan(rowSpan: Number) {
-    cdkBuilder.rowSpan(rowSpan)
-  }
+    /**
+     * @param rowSpan The height of a grid element expressed as a number of grid rows.
+     */
+    public fun rowSpan(rowSpan: Number) {
+        cdkBuilder.rowSpan(rowSpan)
+    }
 
-  public fun build(): CfnAnalysis.GridLayoutElementProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.GridLayoutElementProperty = cdkBuilder.build()
 }

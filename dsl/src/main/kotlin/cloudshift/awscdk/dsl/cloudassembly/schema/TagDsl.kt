@@ -1,10 +1,10 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.Tag
+import kotlin.String
 
 /**
  * Metadata Entry spec for stack tag.
@@ -23,27 +23,27 @@ import software.amazon.awscdk.cloudassembly.schema.Tag
  */
 @CdkDslMarker
 public class TagDsl {
-  private val cdkBuilder: Tag.Builder = Tag.builder()
+    private val cdkBuilder: Tag.Builder = Tag.builder()
 
-  /**
-   * @param key Tag key. 
-   * (In the actual file on disk this will be cased as "Key", and the structure is
-   * patched to match this structure upon loading:
-   * https://github.com/aws/aws-cdk/blob/4aadaa779b48f35838cccd4e25107b2338f05547/packages/%40aws-cdk/cloud-assembly-schema/lib/manifest.ts#L137)
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /**
+     * @param key Tag key.
+     * (In the actual file on disk this will be cased as "Key", and the structure is
+     * patched to match this structure upon loading:
+     * https://github.com/aws/aws-cdk/blob/4aadaa779b48f35838cccd4e25107b2338f05547/packages/%40aws-cdk/cloud-assembly-schema/lib/manifest.ts#L137)
+     */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value Tag value. 
-   * (In the actual file on disk this will be cased as "Value", and the structure is
-   * patched to match this structure upon loading:
-   * https://github.com/aws/aws-cdk/blob/4aadaa779b48f35838cccd4e25107b2338f05547/packages/%40aws-cdk/cloud-assembly-schema/lib/manifest.ts#L137)
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value Tag value.
+     * (In the actual file on disk this will be cased as "Value", and the structure is
+     * patched to match this structure upon loading:
+     * https://github.com/aws/aws-cdk/blob/4aadaa779b48f35838cccd4e25107b2338f05547/packages/%40aws-cdk/cloud-assembly-schema/lib/manifest.ts#L137)
+     */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): Tag = cdkBuilder.build()
+    public fun build(): Tag = cdkBuilder.build()
 }

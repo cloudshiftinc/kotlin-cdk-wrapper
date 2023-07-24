@@ -1,11 +1,11 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.quicksight.CfnDataSource
 import kotlin.Number
 import kotlin.String
-import software.amazon.awscdk.services.quicksight.CfnDataSource
 
 /**
  * The parameters for MariaDB.
@@ -27,29 +27,29 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceMariaDbParametersPropertyDsl {
-  private val cdkBuilder: CfnDataSource.MariaDbParametersProperty.Builder =
-      CfnDataSource.MariaDbParametersProperty.builder()
+    private val cdkBuilder: CfnDataSource.MariaDbParametersProperty.Builder =
+        CfnDataSource.MariaDbParametersProperty.builder()
 
-  /**
-   * @param database Database. 
-   */
-  public fun database(database: String) {
-    cdkBuilder.database(database)
-  }
+    /**
+     * @param database Database.
+     */
+    public fun database(database: String) {
+        cdkBuilder.database(database)
+    }
 
-  /**
-   * @param host Host. 
-   */
-  public fun host(host: String) {
-    cdkBuilder.host(host)
-  }
+    /**
+     * @param host Host.
+     */
+    public fun host(host: String) {
+        cdkBuilder.host(host)
+    }
 
-  /**
-   * @param port Port. 
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /**
+     * @param port Port.
+     */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  public fun build(): CfnDataSource.MariaDbParametersProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.MariaDbParametersProperty = cdkBuilder.build()
 }

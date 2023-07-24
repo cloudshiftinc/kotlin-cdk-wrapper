@@ -1,11 +1,11 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.pinpoint.CfnCampaign
 import kotlin.Number
 import kotlin.String
-import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
 /**
  * Specifies metric-based criteria for including or excluding endpoints from a segment.
@@ -28,24 +28,24 @@ import software.amazon.awscdk.services.pinpoint.CfnCampaign
  */
 @CdkDslMarker
 public class CfnCampaignMetricDimensionPropertyDsl {
-  private val cdkBuilder: CfnCampaign.MetricDimensionProperty.Builder =
-      CfnCampaign.MetricDimensionProperty.builder()
+    private val cdkBuilder: CfnCampaign.MetricDimensionProperty.Builder =
+        CfnCampaign.MetricDimensionProperty.builder()
 
-  /**
-   * @param comparisonOperator The operator to use when comparing metric values.
-   * Valid values are: `GREATER_THAN` , `LESS_THAN` , `GREATER_THAN_OR_EQUAL` , `LESS_THAN_OR_EQUAL`
-   * , and `EQUAL` .
-   */
-  public fun comparisonOperator(comparisonOperator: String) {
-    cdkBuilder.comparisonOperator(comparisonOperator)
-  }
+    /**
+     * @param comparisonOperator The operator to use when comparing metric values.
+     * Valid values are: `GREATER_THAN` , `LESS_THAN` , `GREATER_THAN_OR_EQUAL` , `LESS_THAN_OR_EQUAL`
+     * , and `EQUAL` .
+     */
+    public fun comparisonOperator(comparisonOperator: String) {
+        cdkBuilder.comparisonOperator(comparisonOperator)
+    }
 
-  /**
-   * @param value The value to compare.
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value The value to compare.
+     */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnCampaign.MetricDimensionProperty = cdkBuilder.build()
+    public fun build(): CfnCampaign.MetricDimensionProperty = cdkBuilder.build()
 }

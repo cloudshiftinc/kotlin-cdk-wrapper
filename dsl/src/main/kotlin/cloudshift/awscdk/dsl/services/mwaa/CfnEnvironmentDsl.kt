@@ -1,16 +1,16 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.mwaa
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.mwaa.CfnEnvironment
+import software.constructs.Construct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.mwaa.CfnEnvironment
-import software.constructs.Construct
 
 /**
  * The `AWS::MWAA::Environment` resource creates an Amazon Managed Workflows for Apache Airflow
@@ -84,389 +84,387 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnEnvironmentDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String
 ) {
-  private val cdkBuilder: CfnEnvironment.Builder = CfnEnvironment.Builder.create(scope, id)
+    private val cdkBuilder: CfnEnvironment.Builder = CfnEnvironment.Builder.create(scope, id)
 
-  /**
-   * A list of key-value pairs containing the Airflow configuration options for your environment.
-   *
-   * For example, `core.default_timezone: utc` . To learn more, see [Apache Airflow configuration
+    /**
+     * A list of key-value pairs containing the Airflow configuration options for your environment.
+     *
+     * For example, `core.default_timezone: utc` . To learn more, see [Apache Airflow configuration
    * options](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowconfigurationoptions)
-   * @param airflowConfigurationOptions A list of key-value pairs containing the Airflow
-   * configuration options for your environment. 
-   */
-  public fun airflowConfigurationOptions(airflowConfigurationOptions: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(airflowConfigurationOptions)
-    cdkBuilder.airflowConfigurationOptions(builder.map)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowconfigurationoptions)
+     * @param airflowConfigurationOptions A list of key-value pairs containing the Airflow
+     * configuration options for your environment.
+     */
+    public fun airflowConfigurationOptions(airflowConfigurationOptions: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(airflowConfigurationOptions)
+        cdkBuilder.airflowConfigurationOptions(builder.map)
+    }
 
-  /**
-   * A list of key-value pairs containing the Airflow configuration options for your environment.
-   *
-   * For example, `core.default_timezone: utc` . To learn more, see [Apache Airflow configuration
+    /**
+     * A list of key-value pairs containing the Airflow configuration options for your environment.
+     *
+     * For example, `core.default_timezone: utc` . To learn more, see [Apache Airflow configuration
    * options](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowconfigurationoptions)
-   * @param airflowConfigurationOptions A list of key-value pairs containing the Airflow
-   * configuration options for your environment. 
-   */
-  public fun airflowConfigurationOptions(airflowConfigurationOptions: Any) {
-    cdkBuilder.airflowConfigurationOptions(airflowConfigurationOptions)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowconfigurationoptions)
+     * @param airflowConfigurationOptions A list of key-value pairs containing the Airflow
+     * configuration options for your environment.
+     */
+    public fun airflowConfigurationOptions(airflowConfigurationOptions: Any) {
+        cdkBuilder.airflowConfigurationOptions(airflowConfigurationOptions)
+    }
 
-  /**
-   * The version of Apache Airflow to use for the environment.
-   *
-   * If no value is specified, defaults to the latest version.
-   *
-   * *Allowed Values* : `2.0.2` | `1.10.12` | `2.2.2` | `2.4.3` | `2.5.1` (latest)
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
-   * @param airflowVersion The version of Apache Airflow to use for the environment. 
-   */
-  public fun airflowVersion(airflowVersion: String) {
-    cdkBuilder.airflowVersion(airflowVersion)
-  }
+    /**
+     * The version of Apache Airflow to use for the environment.
+     *
+     * If no value is specified, defaults to the latest version.
+     *
+     * *Allowed Values* : `2.0.2` | `1.10.12` | `2.2.2` | `2.4.3` | `2.5.1` (latest)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
+     * @param airflowVersion The version of Apache Airflow to use for the environment.
+     */
+    public fun airflowVersion(airflowVersion: String) {
+        cdkBuilder.airflowVersion(airflowVersion)
+    }
 
-  /**
-   * The relative path to the DAGs folder on your Amazon S3 bucket.
-   *
-   * For example, `dags` . To learn more, see [Adding or updating
+    /**
+     * The relative path to the DAGs folder on your Amazon S3 bucket.
+     *
+     * For example, `dags` . To learn more, see [Adding or updating
    * DAGs](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-dags3path)
-   * @param dagS3Path The relative path to the DAGs folder on your Amazon S3 bucket. 
-   */
-  public fun dagS3Path(dagS3Path: String) {
-    cdkBuilder.dagS3Path(dagS3Path)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-dags3path)
+     * @param dagS3Path The relative path to the DAGs folder on your Amazon S3 bucket.
+     */
+    public fun dagS3Path(dagS3Path: String) {
+        cdkBuilder.dagS3Path(dagS3Path)
+    }
 
-  /**
-   * The environment class type.
-   *
-   * Valid values: `mw1.small` , `mw1.medium` , `mw1.large` . To learn more, see [Amazon MWAA
+    /**
+     * The environment class type.
+     *
+     * Valid values: `mw1.small` , `mw1.medium` , `mw1.large` . To learn more, see [Amazon MWAA
    * environment class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-environmentclass)
-   * @param environmentClass The environment class type. 
-   */
-  public fun environmentClass(environmentClass: String) {
-    cdkBuilder.environmentClass(environmentClass)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-environmentclass)
+     * @param environmentClass The environment class type.
+     */
+    public fun environmentClass(environmentClass: String) {
+        cdkBuilder.environmentClass(environmentClass)
+    }
 
-  /**
-   * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS
-   * resources in your environment.
-   *
-   * For example, `arn:aws:iam::123456789:role/my-execution-role` . To learn more, see [Amazon MWAA
+    /**
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS
+     * resources in your environment.
+     *
+     * For example, `arn:aws:iam::123456789:role/my-execution-role` . To learn more, see [Amazon MWAA
    * Execution role](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-executionrolearn)
-   * @param executionRoleArn The Amazon Resource Name (ARN) of the execution role in IAM that allows
-   * MWAA to access AWS resources in your environment. 
-   */
-  public fun executionRoleArn(executionRoleArn: String) {
-    cdkBuilder.executionRoleArn(executionRoleArn)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-executionrolearn)
+     * @param executionRoleArn The Amazon Resource Name (ARN) of the execution role in IAM that allows
+     * MWAA to access AWS resources in your environment.
+     */
+    public fun executionRoleArn(executionRoleArn: String) {
+        cdkBuilder.executionRoleArn(executionRoleArn)
+    }
 
-  /**
-   * The AWS Key Management Service (KMS) key to encrypt and decrypt the data in your environment.
-   *
-   * You can use an AWS KMS key managed by MWAA, or a customer-managed KMS key (advanced).
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-kmskey)
-   * @param kmsKey The AWS Key Management Service (KMS) key to encrypt and decrypt the data in your
-   * environment. 
-   */
-  public fun kmsKey(kmsKey: String) {
-    cdkBuilder.kmsKey(kmsKey)
-  }
+    /**
+     * The AWS Key Management Service (KMS) key to encrypt and decrypt the data in your environment.
+     *
+     * You can use an AWS KMS key managed by MWAA, or a customer-managed KMS key (advanced).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-kmskey)
+     * @param kmsKey The AWS Key Management Service (KMS) key to encrypt and decrypt the data in your
+     * environment.
+     */
+    public fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
+    }
 
-  /**
-   * The Apache Airflow logs being sent to CloudWatch Logs: `DagProcessingLogs` , `SchedulerLogs` ,
-   * `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-loggingconfiguration)
-   * @param loggingConfiguration The Apache Airflow logs being sent to CloudWatch Logs:
-   * `DagProcessingLogs` , `SchedulerLogs` , `TaskLogs` , `WebserverLogs` , `WorkerLogs` . 
-   */
-  public fun loggingConfiguration(loggingConfiguration: IResolvable) {
-    cdkBuilder.loggingConfiguration(loggingConfiguration)
-  }
+    /**
+     * The Apache Airflow logs being sent to CloudWatch Logs: `DagProcessingLogs` , `SchedulerLogs` ,
+     * `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-loggingconfiguration)
+     * @param loggingConfiguration The Apache Airflow logs being sent to CloudWatch Logs:
+     * `DagProcessingLogs` , `SchedulerLogs` , `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
+     */
+    public fun loggingConfiguration(loggingConfiguration: IResolvable) {
+        cdkBuilder.loggingConfiguration(loggingConfiguration)
+    }
 
-  /**
-   * The Apache Airflow logs being sent to CloudWatch Logs: `DagProcessingLogs` , `SchedulerLogs` ,
-   * `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-loggingconfiguration)
-   * @param loggingConfiguration The Apache Airflow logs being sent to CloudWatch Logs:
-   * `DagProcessingLogs` , `SchedulerLogs` , `TaskLogs` , `WebserverLogs` , `WorkerLogs` . 
-   */
-  public
-      fun loggingConfiguration(loggingConfiguration: CfnEnvironment.LoggingConfigurationProperty) {
-    cdkBuilder.loggingConfiguration(loggingConfiguration)
-  }
+    /**
+     * The Apache Airflow logs being sent to CloudWatch Logs: `DagProcessingLogs` , `SchedulerLogs` ,
+     * `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-loggingconfiguration)
+     * @param loggingConfiguration The Apache Airflow logs being sent to CloudWatch Logs:
+     * `DagProcessingLogs` , `SchedulerLogs` , `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
+     */
+    public fun loggingConfiguration(loggingConfiguration: CfnEnvironment.LoggingConfigurationProperty) {
+        cdkBuilder.loggingConfiguration(loggingConfiguration)
+    }
 
-  /**
-   * The maximum number of workers that you want to run in your environment.
-   *
-   * MWAA scales the number of Apache Airflow workers up to the number you specify in the
-   * `MaxWorkers` field. For example, `20` . When there are no more tasks running, and no more in the
-   * queue, MWAA disposes of the extra workers leaving the one worker that is included with your
-   * environment, or the number you specify in `MinWorkers` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxworkers)
-   * @param maxWorkers The maximum number of workers that you want to run in your environment. 
-   */
-  public fun maxWorkers(maxWorkers: Number) {
-    cdkBuilder.maxWorkers(maxWorkers)
-  }
+    /**
+     * The maximum number of workers that you want to run in your environment.
+     *
+     * MWAA scales the number of Apache Airflow workers up to the number you specify in the
+     * `MaxWorkers` field. For example, `20` . When there are no more tasks running, and no more in the
+     * queue, MWAA disposes of the extra workers leaving the one worker that is included with your
+     * environment, or the number you specify in `MinWorkers` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxworkers)
+     * @param maxWorkers The maximum number of workers that you want to run in your environment.
+     */
+    public fun maxWorkers(maxWorkers: Number) {
+        cdkBuilder.maxWorkers(maxWorkers)
+    }
 
-  /**
-   * The minimum number of workers that you want to run in your environment.
-   *
-   * MWAA scales the number of Apache Airflow workers up to the number you specify in the
-   * `MaxWorkers` field. When there are no more tasks running, and no more in the queue, MWAA disposes
-   * of the extra workers leaving the worker count you specify in the `MinWorkers` field. For example,
-   * `2` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minworkers)
-   * @param minWorkers The minimum number of workers that you want to run in your environment. 
-   */
-  public fun minWorkers(minWorkers: Number) {
-    cdkBuilder.minWorkers(minWorkers)
-  }
+    /**
+     * The minimum number of workers that you want to run in your environment.
+     *
+     * MWAA scales the number of Apache Airflow workers up to the number you specify in the
+     * `MaxWorkers` field. When there are no more tasks running, and no more in the queue, MWAA disposes
+     * of the extra workers leaving the worker count you specify in the `MinWorkers` field. For example,
+     * `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minworkers)
+     * @param minWorkers The minimum number of workers that you want to run in your environment.
+     */
+    public fun minWorkers(minWorkers: Number) {
+        cdkBuilder.minWorkers(minWorkers)
+    }
 
-  /**
-   * The name of your Amazon MWAA environment.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-name)
-   * @param name The name of your Amazon MWAA environment. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of your Amazon MWAA environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-name)
+     * @param name The name of your Amazon MWAA environment.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * The VPC networking components used to secure and enable network traffic between the AWS
-   * resources for your environment.
-   *
-   * To learn more, see [About networking on Amazon
+    /**
+     * The VPC networking components used to secure and enable network traffic between the AWS
+     * resources for your environment.
+     *
+     * To learn more, see [About networking on Amazon
    * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-networkconfiguration)
-   * @param networkConfiguration The VPC networking components used to secure and enable network
-   * traffic between the AWS resources for your environment. 
-   */
-  public fun networkConfiguration(networkConfiguration: IResolvable) {
-    cdkBuilder.networkConfiguration(networkConfiguration)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-networkconfiguration)
+     * @param networkConfiguration The VPC networking components used to secure and enable network
+     * traffic between the AWS resources for your environment.
+     */
+    public fun networkConfiguration(networkConfiguration: IResolvable) {
+        cdkBuilder.networkConfiguration(networkConfiguration)
+    }
 
-  /**
-   * The VPC networking components used to secure and enable network traffic between the AWS
-   * resources for your environment.
-   *
-   * To learn more, see [About networking on Amazon
+    /**
+     * The VPC networking components used to secure and enable network traffic between the AWS
+     * resources for your environment.
+     *
+     * To learn more, see [About networking on Amazon
    * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-networkconfiguration)
-   * @param networkConfiguration The VPC networking components used to secure and enable network
-   * traffic between the AWS resources for your environment. 
-   */
-  public
-      fun networkConfiguration(networkConfiguration: CfnEnvironment.NetworkConfigurationProperty) {
-    cdkBuilder.networkConfiguration(networkConfiguration)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-networkconfiguration)
+     * @param networkConfiguration The VPC networking components used to secure and enable network
+     * traffic between the AWS resources for your environment.
+     */
+    public fun networkConfiguration(networkConfiguration: CfnEnvironment.NetworkConfigurationProperty) {
+        cdkBuilder.networkConfiguration(networkConfiguration)
+    }
 
-  /**
-   * The version of the plugins.zip file on your Amazon S3 bucket. To learn more, see [Installing
+    /**
+     * The version of the plugins.zip file on your Amazon S3 bucket. To learn more, see [Installing
    * custom
    * plugins](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-pluginss3objectversion)
-   * @param pluginsS3ObjectVersion The version of the plugins.zip file on your Amazon S3 bucket. To
-   * learn more, see [Installing custom
-   * plugins](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html) . 
-   */
-  public fun pluginsS3ObjectVersion(pluginsS3ObjectVersion: String) {
-    cdkBuilder.pluginsS3ObjectVersion(pluginsS3ObjectVersion)
-  }
-
-  /**
-   * The relative path to the `plugins.zip` file on your Amazon S3 bucket. For example,
-   * `plugins.zip` . To learn more, see [Installing custom
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-pluginss3objectversion)
+     * @param pluginsS3ObjectVersion The version of the plugins.zip file on your Amazon S3 bucket. To
+     * learn more, see [Installing custom
    * plugins](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-pluginss3path)
-   * @param pluginsS3Path The relative path to the `plugins.zip` file on your Amazon S3 bucket. For
-   * example, `plugins.zip` . To learn more, see [Installing custom
-   * plugins](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html) . 
-   */
-  public fun pluginsS3Path(pluginsS3Path: String) {
-    cdkBuilder.pluginsS3Path(pluginsS3Path)
-  }
+     */
+    public fun pluginsS3ObjectVersion(pluginsS3ObjectVersion: String) {
+        cdkBuilder.pluginsS3ObjectVersion(pluginsS3ObjectVersion)
+    }
 
-  /**
-   * The version of the requirements.txt file on your Amazon S3 bucket. To learn more, see
-   * [Installing Python
+    /**
+     * The relative path to the `plugins.zip` file on your Amazon S3 bucket. For example,
+     * `plugins.zip` . To learn more, see [Installing custom
+   * plugins](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-pluginss3path)
+     * @param pluginsS3Path The relative path to the `plugins.zip` file on your Amazon S3 bucket. For
+     * example, `plugins.zip` . To learn more, see [Installing custom
+   * plugins](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html) .
+     */
+    public fun pluginsS3Path(pluginsS3Path: String) {
+        cdkBuilder.pluginsS3Path(pluginsS3Path)
+    }
+
+    /**
+     * The version of the requirements.txt file on your Amazon S3 bucket. To learn more, see
+     * [Installing Python
    * dependencies](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-requirementss3objectversion)
-   * @param requirementsS3ObjectVersion The version of the requirements.txt file on your Amazon S3
-   * bucket. To learn more, see [Installing Python
-   * dependencies](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html) . 
-   */
-  public fun requirementsS3ObjectVersion(requirementsS3ObjectVersion: String) {
-    cdkBuilder.requirementsS3ObjectVersion(requirementsS3ObjectVersion)
-  }
-
-  /**
-   * The relative path to the `requirements.txt` file on your Amazon S3 bucket. For example,
-   * `requirements.txt` . To learn more, see [Installing Python
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-requirementss3objectversion)
+     * @param requirementsS3ObjectVersion The version of the requirements.txt file on your Amazon S3
+     * bucket. To learn more, see [Installing Python
    * dependencies](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-requirementss3path)
-   * @param requirementsS3Path The relative path to the `requirements.txt` file on your Amazon S3
-   * bucket. For example, `requirements.txt` . To learn more, see [Installing Python
-   * dependencies](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html) . 
-   */
-  public fun requirementsS3Path(requirementsS3Path: String) {
-    cdkBuilder.requirementsS3Path(requirementsS3Path)
-  }
+     */
+    public fun requirementsS3ObjectVersion(requirementsS3ObjectVersion: String) {
+        cdkBuilder.requirementsS3ObjectVersion(requirementsS3ObjectVersion)
+    }
 
-  /**
-   * The number of schedulers that you want to run in your environment. Valid values:.
-   *
-   * * *v2* - Accepts between 2 to 5. Defaults to 2.
-   * * *v1* - Accepts 1.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-schedulers)
-   * @param schedulers The number of schedulers that you want to run in your environment. Valid
-   * values:. 
-   */
-  public fun schedulers(schedulers: Number) {
-    cdkBuilder.schedulers(schedulers)
-  }
+    /**
+     * The relative path to the `requirements.txt` file on your Amazon S3 bucket. For example,
+     * `requirements.txt` . To learn more, see [Installing Python
+   * dependencies](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-requirementss3path)
+     * @param requirementsS3Path The relative path to the `requirements.txt` file on your Amazon S3
+     * bucket. For example, `requirements.txt` . To learn more, see [Installing Python
+   * dependencies](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html) .
+     */
+    public fun requirementsS3Path(requirementsS3Path: String) {
+        cdkBuilder.requirementsS3Path(requirementsS3Path)
+    }
 
-  /**
-   * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files
-   * are stored.
-   *
-   * For example, `arn:aws:s3:::my-airflow-bucket-unique-name` . To learn more, see [Create an
+    /**
+     * The number of schedulers that you want to run in your environment. Valid values:.
+     *
+     * * *v2* - Accepts between 2 to 5. Defaults to 2.
+     * * *v1* - Accepts 1.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-schedulers)
+     * @param schedulers The number of schedulers that you want to run in your environment. Valid
+     * values:.
+     */
+    public fun schedulers(schedulers: Number) {
+        cdkBuilder.schedulers(schedulers)
+    }
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files
+     * are stored.
+     *
+     * For example, `arn:aws:s3:::my-airflow-bucket-unique-name` . To learn more, see [Create an
    * Amazon S3 bucket for Amazon
    * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-sourcebucketarn)
-   * @param sourceBucketArn The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG
-   * code and supporting files are stored. 
-   */
-  public fun sourceBucketArn(sourceBucketArn: String) {
-    cdkBuilder.sourceBucketArn(sourceBucketArn)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-sourcebucketarn)
+     * @param sourceBucketArn The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG
+     * code and supporting files are stored.
+     */
+    public fun sourceBucketArn(sourceBucketArn: String) {
+        cdkBuilder.sourceBucketArn(sourceBucketArn)
+    }
 
-  /**
-   * The version of the startup shell script in your Amazon S3 bucket.
-   *
-   * You must specify the [version
+    /**
+     * The version of the startup shell script in your Amazon S3 bucket.
+     *
+     * You must specify the [version
    * ID](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html) that Amazon
-   * S3 assigns to the file every time you update the script.
-   *
-   * Version IDs are Unicode, UTF-8 encoded, URL-ready, opaque strings that are no more than 1,024
-   * bytes long. The following is an example:
-   *
-   * `3sL4kqtJlcpXroDTDmJ+rmSpXd3dIbrHY+MTRCxf3vjVBH40Nr8X8gdRQBpUMLUo`
-   *
-   * For more information, see [Using a startup
+     * S3 assigns to the file every time you update the script.
+     *
+     * Version IDs are Unicode, UTF-8 encoded, URL-ready, opaque strings that are no more than 1,024
+     * bytes long. The following is an example:
+     *
+     * `3sL4kqtJlcpXroDTDmJ+rmSpXd3dIbrHY+MTRCxf3vjVBH40Nr8X8gdRQBpUMLUo`
+     *
+     * For more information, see [Using a startup
    * script](https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion)
-   * @param startupScriptS3ObjectVersion The version of the startup shell script in your Amazon S3
-   * bucket. 
-   */
-  public fun startupScriptS3ObjectVersion(startupScriptS3ObjectVersion: String) {
-    cdkBuilder.startupScriptS3ObjectVersion(startupScriptS3ObjectVersion)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion)
+     * @param startupScriptS3ObjectVersion The version of the startup shell script in your Amazon S3
+     * bucket.
+     */
+    public fun startupScriptS3ObjectVersion(startupScriptS3ObjectVersion: String) {
+        cdkBuilder.startupScriptS3ObjectVersion(startupScriptS3ObjectVersion)
+    }
 
-  /**
-   * The relative path to the startup shell script in your Amazon S3 bucket. For example,
-   * `s3://mwaa-environment/startup.sh` .
-   *
-   * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow
-   * process. You can use this script to install dependencies, modify Apache Airflow configuration
-   * options, and set environment variables. For more information, see [Using a startup
+    /**
+     * The relative path to the startup shell script in your Amazon S3 bucket. For example,
+     * `s3://mwaa-environment/startup.sh` .
+     *
+     * Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow
+     * process. You can use this script to install dependencies, modify Apache Airflow configuration
+     * options, and set environment variables. For more information, see [Using a startup
    * script](https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path)
-   * @param startupScriptS3Path The relative path to the startup shell script in your Amazon S3
-   * bucket. For example, `s3://mwaa-environment/startup.sh` . 
-   */
-  public fun startupScriptS3Path(startupScriptS3Path: String) {
-    cdkBuilder.startupScriptS3Path(startupScriptS3Path)
-  }
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path)
+     * @param startupScriptS3Path The relative path to the startup shell script in your Amazon S3
+     * bucket. For example, `s3://mwaa-environment/startup.sh` .
+     */
+    public fun startupScriptS3Path(startupScriptS3Path: String) {
+        cdkBuilder.startupScriptS3Path(startupScriptS3Path)
+    }
 
-  /**
-   * The key-value tag pairs associated to your environment.
-   *
-   * For example, `"Environment": "Staging"` . To learn more, see
-   * [Tagging](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-tags)
-   * @param tags The key-value tag pairs associated to your environment. 
-   */
-  public fun tags(tags: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(tags)
-    cdkBuilder.tags(builder.map)
-  }
+    /**
+     * The key-value tag pairs associated to your environment.
+     *
+     * For example, `"Environment": "Staging"` . To learn more, see
+     * [Tagging](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-tags)
+     * @param tags The key-value tag pairs associated to your environment.
+     */
+    public fun tags(tags: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(tags)
+        cdkBuilder.tags(builder.map)
+    }
 
-  /**
-   * The key-value tag pairs associated to your environment.
-   *
-   * For example, `"Environment": "Staging"` . To learn more, see
-   * [Tagging](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-tags)
-   * @param tags The key-value tag pairs associated to your environment. 
-   */
-  public fun tags(tags: Any) {
-    cdkBuilder.tags(tags)
-  }
+    /**
+     * The key-value tag pairs associated to your environment.
+     *
+     * For example, `"Environment": "Staging"` . To learn more, see
+     * [Tagging](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-tags)
+     * @param tags The key-value tag pairs associated to your environment.
+     */
+    public fun tags(tags: Any) {
+        cdkBuilder.tags(tags)
+    }
 
-  /**
-   * The Apache Airflow *Web server* access mode.
-   *
-   * To learn more, see [Apache Airflow access
+    /**
+     * The Apache Airflow *Web server* access mode.
+     *
+     * To learn more, see [Apache Airflow access
    * modes](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html) . Valid
-   * values: `PRIVATE_ONLY` or `PUBLIC_ONLY` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-webserveraccessmode)
-   * @param webserverAccessMode The Apache Airflow *Web server* access mode. 
-   */
-  public fun webserverAccessMode(webserverAccessMode: String) {
-    cdkBuilder.webserverAccessMode(webserverAccessMode)
-  }
+     * values: `PRIVATE_ONLY` or `PUBLIC_ONLY` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-webserveraccessmode)
+     * @param webserverAccessMode The Apache Airflow *Web server* access mode.
+     */
+    public fun webserverAccessMode(webserverAccessMode: String) {
+        cdkBuilder.webserverAccessMode(webserverAccessMode)
+    }
 
-  /**
-   * The day and time of the week to start weekly maintenance updates of your environment in the
-   * following format: `DAY:HH:MM` .
-   *
-   * For example: `TUE:03:30` . You can specify a start time in 30 minute increments only. Supported
-   * input includes the following:
-   *
-   * * MON|TUE|WED|THU|FRI|SAT|SUN:([01]\d|2[0-3]):(00|30)
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-weeklymaintenancewindowstart)
-   * @param weeklyMaintenanceWindowStart The day and time of the week to start weekly maintenance
-   * updates of your environment in the following format: `DAY:HH:MM` . 
-   */
-  public fun weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart: String) {
-    cdkBuilder.weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart)
-  }
+    /**
+     * The day and time of the week to start weekly maintenance updates of your environment in the
+     * following format: `DAY:HH:MM` .
+     *
+     * For example: `TUE:03:30` . You can specify a start time in 30 minute increments only. Supported
+     * input includes the following:
+     *
+     * * MON|TUE|WED|THU|FRI|SAT|SUN:([01]\d|2[0-3]):(00|30)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-weeklymaintenancewindowstart)
+     * @param weeklyMaintenanceWindowStart The day and time of the week to start weekly maintenance
+     * updates of your environment in the following format: `DAY:HH:MM` .
+     */
+    public fun weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart: String) {
+        cdkBuilder.weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart)
+    }
 
-  public fun build(): CfnEnvironment = cdkBuilder.build()
+    public fun build(): CfnEnvironment = cdkBuilder.build()
 }

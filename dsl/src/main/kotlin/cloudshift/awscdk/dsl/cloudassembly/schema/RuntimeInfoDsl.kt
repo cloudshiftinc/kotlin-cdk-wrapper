@@ -1,11 +1,11 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
 import kotlin.String
 import kotlin.collections.Map
-import software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
 
 /**
  * Information about the application's runtime components.
@@ -24,15 +24,15 @@ import software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
  */
 @CdkDslMarker
 public class RuntimeInfoDsl {
-  private val cdkBuilder: RuntimeInfo.Builder = RuntimeInfo.builder()
+    private val cdkBuilder: RuntimeInfo.Builder = RuntimeInfo.builder()
 
-  /**
-   * @param libraries The list of libraries loaded in the application, associated with their
-   * versions. 
-   */
-  public fun libraries(libraries: Map<String, String>) {
-    cdkBuilder.libraries(libraries)
-  }
+    /**
+     * @param libraries The list of libraries loaded in the application, associated with their
+     * versions.
+     */
+    public fun libraries(libraries: Map<String, String>) {
+        cdkBuilder.libraries(libraries)
+    }
 
-  public fun build(): RuntimeInfo = cdkBuilder.build()
+    public fun build(): RuntimeInfo = cdkBuilder.build()
 }
