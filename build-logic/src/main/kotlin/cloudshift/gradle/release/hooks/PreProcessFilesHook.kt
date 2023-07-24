@@ -11,7 +11,7 @@ import org.gradle.api.file.ProjectLayout
 import org.gradle.api.logging.Logging
 import org.gradle.api.model.ObjectFactory
 import java.io.File
-import java.util.UUID
+import java.util.*
 import javax.inject.Inject
 
 internal abstract class PreProcessFilesHook @Inject constructor(
@@ -19,9 +19,8 @@ internal abstract class PreProcessFilesHook @Inject constructor(
     private val replacementSpecs: List<ReplacementSpec>,
     private val fs: FileSystemOperations,
     private val layout: ProjectLayout,
-    private val objects: ObjectFactory,
-
-    ) : PreReleaseHook {
+    private val objects: ObjectFactory
+) : PreReleaseHook {
 
     private val logger = Logging.getLogger(PreProcessFilesHook::class.java)
 
@@ -82,6 +81,9 @@ internal abstract class PreProcessFilesHook @Inject constructor(
 
                 val properties = mapOf("version" to currentVersion.toString()) + templateSpec.properties
                 expand(properties)
+                eachFile {
+                    logger.info("Processing template $path")
+                }
             }
 
             // put sha256 of expanded content in .sha256 file alongside template, for validation on subsequent releases
@@ -92,7 +94,7 @@ internal abstract class PreProcessFilesHook @Inject constructor(
     private fun writeTamperChecksum(
         preventTampering: Boolean,
         sourceFiles: FileTree,
-        sourceDir : File,
+        sourceDir: File,
         destDir: File
     ) {
         if (!preventTampering) return
