@@ -5,25 +5,25 @@ package cloudshift.gradle.release.hooks
 import cloudshift.gradle.release.tasks.PreReleaseHook
 import com.google.common.hash.Hashing
 import io.github.z4kn4fein.semver.Version
-import org.gradle.api.file.ConfigurableFileTree
+import org.aspectj.weaver.tools.cache.SimpleCacheFactory.path
 import org.gradle.api.file.FileSystemOperations
 import org.gradle.api.file.ProjectLayout
+import org.gradle.api.internal.file.copy.DefaultCopySpec
 import org.gradle.api.logging.Logging
 import org.gradle.api.model.ObjectFactory
-import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
-import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.include
+import org.gradle.kotlin.dsl.newInstance
 import java.io.File
-import java.util.UUID
+import java.util.*
 import javax.inject.Inject
 
 internal abstract class PreProcessFilesHook @Inject constructor(
     private val templateSpecs: List<TemplateSpec>,
     private val replacementSpecs: List<ReplacementSpec>,
     private val fs: FileSystemOperations,
-    private val layout : ProjectLayout,
+    private val layout: ProjectLayout,
     private val objects: ObjectFactory,
 
-) : PreReleaseHook {
+    ) : PreReleaseHook {
 
     private val logger = Logging.getLogger(PreProcessFilesHook::class.java)
 
@@ -32,10 +32,13 @@ internal abstract class PreProcessFilesHook @Inject constructor(
         processReplacementSpecs(context.workingDirectory)
     }
 
-    private fun processReplacementSpecs(workingDir : File) {
-        replacementSpecs.forEach {replacementSpec ->
-            if(replacementSpec.includes.isEmpty()) return@forEach
-            val tempDir = workingDir.resolve(UUID.randomUUID().toString())
+    private fun processReplacementSpecs(workingDir: File) {
+        replacementSpecs.forEach { replacementSpec ->
+            if (replacementSpec.includes.isEmpty()) return@forEach
+            val tempDir = workingDir.resolve(
+                UUID.randomUUID()
+                    .toString()
+            )
             fs.copy {
                 from(layout.projectDirectory) {
                     include(replacementSpec.includes)
@@ -58,38 +61,42 @@ internal abstract class PreProcessFilesHook @Inject constructor(
         }
     }
 
-    private fun processTemplateSpecs(currentVersion : Version) {
+    private fun processTemplateSpecs(currentVersion: Version) {
         templateSpecs.forEach { templateSpec ->
-            val sourceFiles = objects.fileTree()
+
+            val sourceFileTree = objects.fileTree()
                 .from(templateSpec.templateDir)
-                .
-                .matching {
-                    include(templateSpec.includes)
-                    exclude(templateSpec.excludes)
-                    if (templateSpec.preventTampering) {
-                        exclude("**/*.sha256")
-                    }
-                }
             val destDir = objects.fileTree()
                 .from(templateSpec.destinationDir).dir
+
+            val sourceFiles = sourceFileTree.matching {
+                include(templateSpec.includes)
+                exclude(templateSpec.excludes)
+                if (templateSpec.preventTampering) {
+                    exclude("**/*.sha256")
+                }
+            }
+
+            if(templateSpec.preventTampering) {
+                sourceFiles.forEach { file ->
+                    logger.info("Checking tampering $path")
+                    // if .sha256 file exists validate that to see if generated content has been tampered with
+                    val srcSha256File = file.parentFile.resolve("${file.name}.sha256")
+                    val destFile = destDir.resolve(path)
+                    when {
+                        !srcSha256File.exists() -> return@forEach
+                        !destFile.exists() -> return@forEach
+                        destFile.sha256() != srcSha256File.readText() -> error("$path tampered with; please delete and do edits in $file")
+                    }
+                }
+            }
+
             fs.copy {
                 from(sourceFiles)
                 into(destDir)
 
                 val properties = mapOf("version" to currentVersion.toString()) + templateSpec.properties
                 expand(properties)
-
-                eachFile {
-                    logger.info("Processing template $path")
-                    // if .sha256 file exists validate that to see if generated content has been tampered with
-                    val srcSha256File = file.parentFile.resolve("${file.name}.sha256")
-                    val destFile = destDir.resolve(path)
-                    when {
-                        !srcSha256File.exists() -> return@eachFile
-                        !destFile.exists() -> return@eachFile
-                        destFile.sha256() != srcSha256File.readText() -> error("$path tampered with; please delete and do edits in $file")
-                    }
-                }
             }
 
             // put sha256 of expanded content in .sha256 file alongside template, for validation on subsequent releases
@@ -97,7 +104,7 @@ internal abstract class PreProcessFilesHook @Inject constructor(
                 sourceFiles.forEach { file ->
                     val srcSha256File = file.parentFile.resolve("${file.name}.sha256")
 
-                    val relative = file.relativeTo(sourceFiles.dir)
+                    val relative = file.relativeTo(sourceFileTree.dir)
                     val destFile = destDir.resolve(relative)
                     srcSha256File.writeText(destFile.sha256())
                 }
