@@ -79,14 +79,17 @@ internal abstract class PreProcessFilesHook @Inject constructor(
 
             if(templateSpec.preventTampering) {
                 sourceFiles.forEach { file ->
-                    logger.info("Checking tampering $path")
+                    val srcRelative = file.relativeTo(sourceFileTree.dir)
+                    val destFile = destDir.resolve(srcRelative)
+
+                    logger.info("Checking tampering $srcRelative")
                     // if .sha256 file exists validate that to see if generated content has been tampered with
                     val srcSha256File = file.parentFile.resolve("${file.name}.sha256")
-                    val destFile = destDir.resolve(path)
+
                     when {
                         !srcSha256File.exists() -> return@forEach
                         !destFile.exists() -> return@forEach
-                        destFile.sha256() != srcSha256File.readText() -> error("$path tampered with; please delete and do edits in $file")
+                        destFile.sha256() != srcSha256File.readText() -> error("$destFile tampered with; please delete and do edits in $file")
                     }
                 }
             }
