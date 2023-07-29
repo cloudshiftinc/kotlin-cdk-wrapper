@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkmanager
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.networkmanager.CfnDevice
  * The Amazon Web Services location of the device, if applicable.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,23 +33,23 @@ import software.amazon.awscdk.services.networkmanager.CfnDevice
  */
 @CdkDslMarker
 public class CfnDeviceAWSLocationPropertyDsl {
-  private val cdkBuilder: CfnDevice.AWSLocationProperty.Builder =
-      CfnDevice.AWSLocationProperty.builder()
+    private val cdkBuilder: CfnDevice.AWSLocationProperty.Builder =
+        CfnDevice.AWSLocationProperty.builder()
 
-  /**
-   * @param subnetArn The Amazon Resource Name (ARN) of the subnet that the device is located in.
-   */
-  public fun subnetArn(subnetArn: String) {
-    cdkBuilder.subnetArn(subnetArn)
-  }
+    /**
+     * @param subnetArn The Amazon Resource Name (ARN) of the subnet that the device is located in.
+     */
+    public fun subnetArn(subnetArn: String) {
+        cdkBuilder.subnetArn(subnetArn)
+    }
 
-  /**
-   * @param zone The Zone that the device is located in.
-   * Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or an Outpost.
-   */
-  public fun zone(zone: String) {
-    cdkBuilder.zone(zone)
-  }
+    /**
+     * @param zone The Zone that the device is located in. Specify the ID of an Availability Zone,
+     *   Local Zone, Wavelength Zone, or an Outpost.
+     */
+    public fun zone(zone: String) {
+        cdkBuilder.zone(zone)
+    }
 
-  public fun build(): CfnDevice.AWSLocationProperty = cdkBuilder.build()
+    public fun build(): CfnDevice.AWSLocationProperty = cdkBuilder.build()
 }

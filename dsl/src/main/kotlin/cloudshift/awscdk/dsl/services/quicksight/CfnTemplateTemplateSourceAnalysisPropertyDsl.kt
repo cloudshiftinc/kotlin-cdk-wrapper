@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The source analysis of the template.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,16 +46,14 @@ public class CfnTemplateTemplateSourceAnalysisPropertyDsl {
 
     private val _dataSetReferences: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param arn The Amazon Resource Name (ARN) of the resource.
-     */
+    /** @param arn The Amazon Resource Name (ARN) of the resource. */
     public fun arn(arn: String) {
         cdkBuilder.arn(arn)
     }
 
     /**
      * @param dataSetReferences A structure containing information about the dataset references used
-     * as placeholders in the template.
+     *   as placeholders in the template.
      */
     public fun dataSetReferences(vararg dataSetReferences: Any) {
         _dataSetReferences.addAll(listOf(*dataSetReferences))
@@ -55,7 +61,7 @@ public class CfnTemplateTemplateSourceAnalysisPropertyDsl {
 
     /**
      * @param dataSetReferences A structure containing information about the dataset references used
-     * as placeholders in the template.
+     *   as placeholders in the template.
      */
     public fun dataSetReferences(dataSetReferences: Collection<Any>) {
         _dataSetReferences.addAll(dataSetReferences)
@@ -63,7 +69,7 @@ public class CfnTemplateTemplateSourceAnalysisPropertyDsl {
 
     /**
      * @param dataSetReferences A structure containing information about the dataset references used
-     * as placeholders in the template.
+     *   as placeholders in the template.
      */
     public fun dataSetReferences(dataSetReferences: IResolvable) {
         cdkBuilder.dataSetReferences(dataSetReferences)

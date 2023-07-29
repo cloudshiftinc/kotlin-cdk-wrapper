@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions
  * Options for fetching a ServiceLoadBalancerAddress.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions
  */
 @CdkDslMarker
 public class ServiceLoadBalancerAddressOptionsDsl {
-  private val cdkBuilder: ServiceLoadBalancerAddressOptions.Builder =
-      ServiceLoadBalancerAddressOptions.builder()
+    private val cdkBuilder: ServiceLoadBalancerAddressOptions.Builder =
+        ServiceLoadBalancerAddressOptions.builder()
 
-  /**
-   * @param namespace The namespace the service belongs to.
-   */
-  public fun namespace(namespace: String) {
-    cdkBuilder.namespace(namespace)
-  }
+    /** @param namespace The namespace the service belongs to. */
+    public fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+    }
 
-  /**
-   * @param timeout Timeout for waiting on the load balancer address.
-   */
-  public fun timeout(timeout: Duration) {
-    cdkBuilder.timeout(timeout)
-  }
+    /** @param timeout Timeout for waiting on the load balancer address. */
+    public fun timeout(timeout: Duration) {
+        cdkBuilder.timeout(timeout)
+    }
 
-  public fun build(): ServiceLoadBalancerAddressOptions = cdkBuilder.build()
+    public fun build(): ServiceLoadBalancerAddressOptions = cdkBuilder.build()
 }

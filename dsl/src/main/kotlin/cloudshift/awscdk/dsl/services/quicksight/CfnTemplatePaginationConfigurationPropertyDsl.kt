@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The pagination configuration for a table visual or boxplot.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplatePaginationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.PaginationConfigurationProperty.Builder =
-      CfnTemplate.PaginationConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.PaginationConfigurationProperty.Builder =
+        CfnTemplate.PaginationConfigurationProperty.builder()
 
-  /**
-   * @param pageNumber Indicates the page number. 
-   */
-  public fun pageNumber(pageNumber: Number) {
-    cdkBuilder.pageNumber(pageNumber)
-  }
+    /** @param pageNumber Indicates the page number. */
+    public fun pageNumber(pageNumber: Number) {
+        cdkBuilder.pageNumber(pageNumber)
+    }
 
-  /**
-   * @param pageSize Indicates how many items render in one page. 
-   */
-  public fun pageSize(pageSize: Number) {
-    cdkBuilder.pageSize(pageSize)
-  }
+    /** @param pageSize Indicates how many items render in one page. */
+    public fun pageSize(pageSize: Number) {
+        cdkBuilder.pageSize(pageSize)
+    }
 
-  public fun build(): CfnTemplate.PaginationConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.PaginationConfigurationProperty = cdkBuilder.build()
 }

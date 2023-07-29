@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * The default value to use when a user doesn't provide a value for a slot.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,37 +38,37 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotSlotDefaultValueSpecificationPropertyDsl {
-  private val cdkBuilder: CfnBot.SlotDefaultValueSpecificationProperty.Builder =
-      CfnBot.SlotDefaultValueSpecificationProperty.builder()
+    private val cdkBuilder: CfnBot.SlotDefaultValueSpecificationProperty.Builder =
+        CfnBot.SlotDefaultValueSpecificationProperty.builder()
 
-  private val _defaultValueList: MutableList<Any> = mutableListOf()
+    private val _defaultValueList: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param defaultValueList A list of default values. 
-   * Amazon Lex chooses the default value to use in the order that they are presented in the list.
-   */
-  public fun defaultValueList(vararg defaultValueList: Any) {
-    _defaultValueList.addAll(listOf(*defaultValueList))
-  }
+    /**
+     * @param defaultValueList A list of default values. Amazon Lex chooses the default value to use
+     *   in the order that they are presented in the list.
+     */
+    public fun defaultValueList(vararg defaultValueList: Any) {
+        _defaultValueList.addAll(listOf(*defaultValueList))
+    }
 
-  /**
-   * @param defaultValueList A list of default values. 
-   * Amazon Lex chooses the default value to use in the order that they are presented in the list.
-   */
-  public fun defaultValueList(defaultValueList: Collection<Any>) {
-    _defaultValueList.addAll(defaultValueList)
-  }
+    /**
+     * @param defaultValueList A list of default values. Amazon Lex chooses the default value to use
+     *   in the order that they are presented in the list.
+     */
+    public fun defaultValueList(defaultValueList: Collection<Any>) {
+        _defaultValueList.addAll(defaultValueList)
+    }
 
-  /**
-   * @param defaultValueList A list of default values. 
-   * Amazon Lex chooses the default value to use in the order that they are presented in the list.
-   */
-  public fun defaultValueList(defaultValueList: IResolvable) {
-    cdkBuilder.defaultValueList(defaultValueList)
-  }
+    /**
+     * @param defaultValueList A list of default values. Amazon Lex chooses the default value to use
+     *   in the order that they are presented in the list.
+     */
+    public fun defaultValueList(defaultValueList: IResolvable) {
+        cdkBuilder.defaultValueList(defaultValueList)
+    }
 
-  public fun build(): CfnBot.SlotDefaultValueSpecificationProperty {
-    if(_defaultValueList.isNotEmpty()) cdkBuilder.defaultValueList(_defaultValueList)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBot.SlotDefaultValueSpecificationProperty {
+        if (_defaultValueList.isNotEmpty()) cdkBuilder.defaultValueList(_defaultValueList)
+        return cdkBuilder.build()
+    }
 }

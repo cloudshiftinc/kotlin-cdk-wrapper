@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigatewayv2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.apigatewayv2.CfnDeploymentProps
  * Properties for defining a `CfnDeployment`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,28 +35,22 @@ import software.amazon.awscdk.services.apigatewayv2.CfnDeploymentProps
  */
 @CdkDslMarker
 public class CfnDeploymentPropsDsl {
-  private val cdkBuilder: CfnDeploymentProps.Builder = CfnDeploymentProps.builder()
+    private val cdkBuilder: CfnDeploymentProps.Builder = CfnDeploymentProps.builder()
 
-  /**
-   * @param apiId The API identifier. 
-   */
-  public fun apiId(apiId: String) {
-    cdkBuilder.apiId(apiId)
-  }
+    /** @param apiId The API identifier. */
+    public fun apiId(apiId: String) {
+        cdkBuilder.apiId(apiId)
+    }
 
-  /**
-   * @param description The description for the deployment resource.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description for the deployment resource. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param stageName The name of an existing stage to associate with the deployment.
-   */
-  public fun stageName(stageName: String) {
-    cdkBuilder.stageName(stageName)
-  }
+    /** @param stageName The name of an existing stage to associate with the deployment. */
+    public fun stageName(stageName: String) {
+        cdkBuilder.stageName(stageName)
+    }
 
-  public fun build(): CfnDeploymentProps = cdkBuilder.build()
+    public fun build(): CfnDeploymentProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lambda.CfnEventInvokeConfig
  * A destination for events that were processed successfully.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.lambda.CfnEventInvokeConfig
  */
 @CdkDslMarker
 public class CfnEventInvokeConfigOnSuccessPropertyDsl {
-  private val cdkBuilder: CfnEventInvokeConfig.OnSuccessProperty.Builder =
-      CfnEventInvokeConfig.OnSuccessProperty.builder()
+    private val cdkBuilder: CfnEventInvokeConfig.OnSuccessProperty.Builder =
+        CfnEventInvokeConfig.OnSuccessProperty.builder()
 
-  /**
-   * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-   */
-  public fun destination(destination: String) {
-    cdkBuilder.destination(destination)
-  }
+    /** @param destination The Amazon Resource Name (ARN) of the destination resource. */
+    public fun destination(destination: String) {
+        cdkBuilder.destination(destination)
+    }
 
-  public fun build(): CfnEventInvokeConfig.OnSuccessProperty = cdkBuilder.build()
+    public fun build(): CfnEventInvokeConfig.OnSuccessProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.iam.IRole
  * The type returned from `IProject#enableBatchBuilds`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,9 +34,7 @@ import software.amazon.awscdk.services.iam.IRole
 public class BatchBuildConfigDsl {
     private val cdkBuilder: BatchBuildConfig.Builder = BatchBuildConfig.builder()
 
-    /**
-     * @param role The IAM batch service Role of this Project.
-     */
+    /** @param role The IAM batch service Role of this Project. */
     public fun role(role: IRole) {
         cdkBuilder.role(role)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -253,36 +261,36 @@ public class CfnTemplateLayoutConfigurationPropertyDsl {
         CfnTemplate.LayoutConfigurationProperty.builder()
 
     /**
-     * @param freeFormLayout A free-form is optimized for a fixed width and has more control over the
-     * exact placement of layout elements.
+     * @param freeFormLayout A free-form is optimized for a fixed width and has more control over
+     *   the exact placement of layout elements.
      */
     public fun freeFormLayout(freeFormLayout: IResolvable) {
         cdkBuilder.freeFormLayout(freeFormLayout)
     }
 
     /**
-     * @param freeFormLayout A free-form is optimized for a fixed width and has more control over the
-     * exact placement of layout elements.
+     * @param freeFormLayout A free-form is optimized for a fixed width and has more control over
+     *   the exact placement of layout elements.
      */
     public fun freeFormLayout(freeFormLayout: CfnTemplate.FreeFormLayoutConfigurationProperty) {
         cdkBuilder.freeFormLayout(freeFormLayout)
     }
 
     /**
-     * @param gridLayout A type of layout that can be used on a sheet.
-     * In a grid layout, visuals snap to a grid with standard spacing and alignment. Dashboards are
-     * displayed as designed, with options to fit to screen or view at actual size. A grid layout can be
-     * configured to behave in one of two ways when the viewport is resized: `FIXED` or `RESPONSIVE` .
+     * @param gridLayout A type of layout that can be used on a sheet. In a grid layout, visuals
+     *   snap to a grid with standard spacing and alignment. Dashboards are displayed as designed,
+     *   with options to fit to screen or view at actual size. A grid layout can be configured to
+     *   behave in one of two ways when the viewport is resized: `FIXED` or `RESPONSIVE` .
      */
     public fun gridLayout(gridLayout: IResolvable) {
         cdkBuilder.gridLayout(gridLayout)
     }
 
     /**
-     * @param gridLayout A type of layout that can be used on a sheet.
-     * In a grid layout, visuals snap to a grid with standard spacing and alignment. Dashboards are
-     * displayed as designed, with options to fit to screen or view at actual size. A grid layout can be
-     * configured to behave in one of two ways when the viewport is resized: `FIXED` or `RESPONSIVE` .
+     * @param gridLayout A type of layout that can be used on a sheet. In a grid layout, visuals
+     *   snap to a grid with standard spacing and alignment. Dashboards are displayed as designed,
+     *   with options to fit to screen or view at actual size. A grid layout can be configured to
+     *   behave in one of two ways when the viewport is resized: `FIXED` or `RESPONSIVE` .
      */
     public fun gridLayout(gridLayout: CfnTemplate.GridLayoutConfigurationProperty) {
         cdkBuilder.gridLayout(gridLayout)
@@ -290,7 +298,7 @@ public class CfnTemplateLayoutConfigurationPropertyDsl {
 
     /**
      * @param sectionBasedLayout A section based layout organizes visuals into multiple sections and
-     * has customized header, footer and page break.
+     *   has customized header, footer and page break.
      */
     public fun sectionBasedLayout(sectionBasedLayout: IResolvable) {
         cdkBuilder.sectionBasedLayout(sectionBasedLayout)
@@ -298,9 +306,11 @@ public class CfnTemplateLayoutConfigurationPropertyDsl {
 
     /**
      * @param sectionBasedLayout A section based layout organizes visuals into multiple sections and
-     * has customized header, footer and page break.
+     *   has customized header, footer and page break.
      */
-    public fun sectionBasedLayout(sectionBasedLayout: CfnTemplate.SectionBasedLayoutConfigurationProperty) {
+    public fun sectionBasedLayout(
+        sectionBasedLayout: CfnTemplate.SectionBasedLayoutConfigurationProperty
+    ) {
         cdkBuilder.sectionBasedLayout(sectionBasedLayout)
     }
 

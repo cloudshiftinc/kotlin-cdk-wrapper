@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings
  * data filtering.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,5 +34,6 @@ public class CfnDataLakeSettingsExternalDataFilteringAllowListPropertyDsl {
     private val cdkBuilder: CfnDataLakeSettings.ExternalDataFilteringAllowListProperty.Builder =
         CfnDataLakeSettings.ExternalDataFilteringAllowListProperty.builder()
 
-    public fun build(): CfnDataLakeSettings.ExternalDataFilteringAllowListProperty = cdkBuilder.build()
+    public fun build(): CfnDataLakeSettings.ExternalDataFilteringAllowListProperty =
+        cdkBuilder.build()
 }

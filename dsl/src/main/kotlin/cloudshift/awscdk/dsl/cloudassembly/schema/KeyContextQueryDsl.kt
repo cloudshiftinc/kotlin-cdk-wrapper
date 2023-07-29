@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.KeyContextQuery
 import kotlin.String
+import software.amazon.awscdk.cloudassembly.schema.KeyContextQuery
 
 /**
  * Query input for looking up a KMS Key.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,12 @@ import kotlin.String
 public class KeyContextQueryDsl {
     private val cdkBuilder: KeyContextQuery.Builder = KeyContextQuery.builder()
 
-    /**
-     * @param account Query account.
-     */
+    /** @param account Query account. */
     public fun account(account: String) {
         cdkBuilder.account(account)
     }
 
-    /**
-     * @param aliasName Alias name used to search the Key.
-     */
+    /** @param aliasName Alias name used to search the Key. */
     public fun aliasName(aliasName: String) {
         cdkBuilder.aliasName(aliasName)
     }
@@ -49,9 +53,7 @@ public class KeyContextQueryDsl {
         cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    /**
-     * @param region Query region.
-     */
+    /** @param region Query region. */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }

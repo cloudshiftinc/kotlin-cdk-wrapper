@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnAPNSChannelProps
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnAPNSChannelProps
 
 /**
  * Properties for defining a `CfnAPNSChannel`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,24 +47,23 @@ public class CfnAPNSChannelPropsDsl {
 
     /**
      * @param applicationId The unique identifier for the Amazon Pinpoint application that the APNs
-     * channel applies to.
+     *   channel applies to.
      */
     public fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
     }
 
     /**
-     * @param bundleId The bundle identifier that's assigned to your iOS app.
-     * This identifier is used for APNs tokens.
+     * @param bundleId The bundle identifier that's assigned to your iOS app. This identifier is
+     *   used for APNs tokens.
      */
     public fun bundleId(bundleId: String) {
         cdkBuilder.bundleId(bundleId)
     }
 
     /**
-     * @param certificate The APNs client certificate that you received from Apple.
-     * Specify this value if you want Amazon Pinpoint to communicate with APNs by using an APNs
-     * certificate.
+     * @param certificate The APNs client certificate that you received from Apple. Specify this
+     *   value if you want Amazon Pinpoint to communicate with APNs by using an APNs certificate.
      */
     public fun certificate(certificate: String) {
         cdkBuilder.certificate(certificate)
@@ -64,53 +71,46 @@ public class CfnAPNSChannelPropsDsl {
 
     /**
      * @param defaultAuthenticationMethod The default authentication method that you want Amazon
-     * Pinpoint to use when authenticating with APNs.
-     * Valid options are `key` or `certificate` .
+     *   Pinpoint to use when authenticating with APNs. Valid options are `key` or `certificate` .
      */
     public fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
         cdkBuilder.defaultAuthenticationMethod(defaultAuthenticationMethod)
     }
 
-    /**
-     * @param enabled Specifies whether to enable the APNs channel for the application.
-     */
+    /** @param enabled Specifies whether to enable the APNs channel for the application. */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
-    /**
-     * @param enabled Specifies whether to enable the APNs channel for the application.
-     */
+    /** @param enabled Specifies whether to enable the APNs channel for the application. */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * @param privateKey The private key for the APNs client certificate that you want Amazon Pinpoint
-     * to use to communicate with APNs.
+     * @param privateKey The private key for the APNs client certificate that you want Amazon
+     *   Pinpoint to use to communicate with APNs.
      */
     public fun privateKey(privateKey: String) {
         cdkBuilder.privateKey(privateKey)
     }
 
     /**
-     * @param teamId The identifier that's assigned to your Apple Developer Account team.
-     * This identifier is used for APNs tokens.
+     * @param teamId The identifier that's assigned to your Apple Developer Account team. This
+     *   identifier is used for APNs tokens.
      */
     public fun teamId(teamId: String) {
         cdkBuilder.teamId(teamId)
     }
 
-    /**
-     * @param tokenKey The authentication key to use for APNs tokens.
-     */
+    /** @param tokenKey The authentication key to use for APNs tokens. */
     public fun tokenKey(tokenKey: String) {
         cdkBuilder.tokenKey(tokenKey)
     }
 
     /**
-     * @param tokenKeyId The key identifier that's assigned to your APNs signing key.
-     * Specify this value if you want Amazon Pinpoint to communicate with APNs by using APNs tokens.
+     * @param tokenKeyId The key identifier that's assigned to your APNs signing key. Specify this
+     *   value if you want Amazon Pinpoint to communicate with APNs by using APNs tokens.
      */
     public fun tokenKeyId(tokenKeyId: String) {
         cdkBuilder.tokenKeyId(tokenKeyId)

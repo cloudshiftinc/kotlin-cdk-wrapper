@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.ExecuteFileOptions
  * Options when executing a file.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.s3.assets.Asset;
  * Instance instance;
@@ -31,21 +39,17 @@ import software.amazon.awscdk.services.ec2.ExecuteFileOptions
  */
 @CdkDslMarker
 public class ExecuteFileOptionsDsl {
-  private val cdkBuilder: ExecuteFileOptions.Builder = ExecuteFileOptions.builder()
+    private val cdkBuilder: ExecuteFileOptions.Builder = ExecuteFileOptions.builder()
 
-  /**
-   * @param arguments The arguments to be passed to the file.
-   */
-  public fun arguments(arguments: String) {
-    cdkBuilder.arguments(arguments)
-  }
+    /** @param arguments The arguments to be passed to the file. */
+    public fun arguments(arguments: String) {
+        cdkBuilder.arguments(arguments)
+    }
 
-  /**
-   * @param filePath The path to the file. 
-   */
-  public fun filePath(filePath: String) {
-    cdkBuilder.filePath(filePath)
-  }
+    /** @param filePath The path to the file. */
+    public fun filePath(filePath: String) {
+        cdkBuilder.filePath(filePath)
+    }
 
-  public fun build(): ExecuteFileOptions = cdkBuilder.build()
+    public fun build(): ExecuteFileOptions = cdkBuilder.build()
 }

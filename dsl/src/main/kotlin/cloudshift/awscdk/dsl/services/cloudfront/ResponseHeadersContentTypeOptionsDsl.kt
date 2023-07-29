@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOpti
  * value set to nosniff.
  *
  * Example:
- *
  * ```
  * // Using an existing managed response headers policy
  * S3Origin bucketOrigin;
@@ -61,17 +69,17 @@ import software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOpti
  */
 @CdkDslMarker
 public class ResponseHeadersContentTypeOptionsDsl {
-  private val cdkBuilder: ResponseHeadersContentTypeOptions.Builder =
-      ResponseHeadersContentTypeOptions.builder()
+    private val cdkBuilder: ResponseHeadersContentTypeOptions.Builder =
+        ResponseHeadersContentTypeOptions.builder()
 
-  /**
-   * @param override A Boolean that determines whether CloudFront overrides the
-   * X-Content-Type-Options HTTP response header received from the origin with the one specified in
-   * this response headers policy. 
-   */
-  public fun `override`(`override`: Boolean) {
-    cdkBuilder.`override`(`override`)
-  }
+    /**
+     * @param override A Boolean that determines whether CloudFront overrides the
+     *   X-Content-Type-Options HTTP response header received from the origin with the one specified
+     *   in this response headers policy.
+     */
+    public fun `override`(`override`: Boolean) {
+        cdkBuilder.`override`(`override`)
+    }
 
-  public fun build(): ResponseHeadersContentTypeOptions = cdkBuilder.build()
+    public fun build(): ResponseHeadersContentTypeOptions = cdkBuilder.build()
 }

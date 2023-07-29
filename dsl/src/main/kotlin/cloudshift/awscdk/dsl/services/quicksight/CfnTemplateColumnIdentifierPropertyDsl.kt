@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * A column of a data set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,12 @@ public class CfnTemplateColumnIdentifierPropertyDsl {
     private val cdkBuilder: CfnTemplate.ColumnIdentifierProperty.Builder =
         CfnTemplate.ColumnIdentifierProperty.builder()
 
-    /**
-     * @param columnName The name of the column.
-     */
+    /** @param columnName The name of the column. */
     public fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
     }
 
-    /**
-     * @param dataSetIdentifier The data set that the column belongs to.
-     */
+    /** @param dataSetIdentifier The data set that the column belongs to. */
     public fun dataSetIdentifier(dataSetIdentifier: String) {
         cdkBuilder.dataSetIdentifier(dataSetIdentifier)
     }

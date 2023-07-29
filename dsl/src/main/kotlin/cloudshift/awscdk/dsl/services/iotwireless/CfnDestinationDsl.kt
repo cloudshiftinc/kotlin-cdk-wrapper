@@ -1,22 +1,30 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.services.iotwireless.CfnDestination
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.services.iotwireless.CfnDestination
+import software.constructs.Construct
 
 /**
  * Creates a new destination that maps a device message to an AWS IoT rule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,7 +48,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnDestinationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnDestination.Builder = CfnDestination.Builder.create(scope, id)
 
@@ -52,6 +60,7 @@ public class CfnDestinationDsl(
      * Maximum length is 2048 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-description)
+     *
      * @param description The description of the new resource.
      */
     public fun description(description: String) {
@@ -62,6 +71,7 @@ public class CfnDestinationDsl(
      * The rule name to send messages to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-expression)
+     *
      * @param expression The rule name to send messages to.
      */
     public fun expression(expression: String) {
@@ -72,6 +82,7 @@ public class CfnDestinationDsl(
      * The type of value in `Expression` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-expressiontype)
+     *
      * @param expressionType The type of value in `Expression` .
      */
     public fun expressionType(expressionType: String) {
@@ -82,6 +93,7 @@ public class CfnDestinationDsl(
      * The name of the new resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-name)
+     *
      * @param name The name of the new resource.
      */
     public fun name(name: String) {
@@ -92,6 +104,7 @@ public class CfnDestinationDsl(
      * The ARN of the IAM Role that authorizes the destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-rolearn)
+     *
      * @param roleArn The ARN of the IAM Role that authorizes the destination.
      */
     public fun roleArn(roleArn: String) {
@@ -104,6 +117,7 @@ public class CfnDestinationDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -116,6 +130,7 @@ public class CfnDestinationDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: Collection<CfnTag>) {

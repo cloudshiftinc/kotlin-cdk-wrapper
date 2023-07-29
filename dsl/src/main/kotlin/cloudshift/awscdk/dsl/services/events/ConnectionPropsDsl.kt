@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.events.HttpParameter
  * destination HTTP endpoint.
  *
  * Example:
- *
  * ```
  * Connection connection = Connection.Builder.create(this, "Connection")
  * .authorization(Authorization.apiKey("x-api-key", SecretValue.secretsManager("ApiSecretName")))
@@ -35,50 +43,40 @@ import software.amazon.awscdk.services.events.HttpParameter
  */
 @CdkDslMarker
 public class ConnectionPropsDsl {
-  private val cdkBuilder: ConnectionProps.Builder = ConnectionProps.builder()
+    private val cdkBuilder: ConnectionProps.Builder = ConnectionProps.builder()
 
-  /**
-   * @param authorization The authorization type for the connection. 
-   */
-  public fun authorization(authorization: Authorization) {
-    cdkBuilder.authorization(authorization)
-  }
+    /** @param authorization The authorization type for the connection. */
+    public fun authorization(authorization: Authorization) {
+        cdkBuilder.authorization(authorization)
+    }
 
-  /**
-   * @param bodyParameters Additional string parameters to add to the invocation bodies.
-   */
-  public fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
-    cdkBuilder.bodyParameters(bodyParameters)
-  }
+    /** @param bodyParameters Additional string parameters to add to the invocation bodies. */
+    public fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
+        cdkBuilder.bodyParameters(bodyParameters)
+    }
 
-  /**
-   * @param connectionName The name of the connection.
-   */
-  public fun connectionName(connectionName: String) {
-    cdkBuilder.connectionName(connectionName)
-  }
+    /** @param connectionName The name of the connection. */
+    public fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+    }
 
-  /**
-   * @param description The name of the connection.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The name of the connection. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param headerParameters Additional string parameters to add to the invocation headers.
-   */
-  public fun headerParameters(headerParameters: Map<String, HttpParameter>) {
-    cdkBuilder.headerParameters(headerParameters)
-  }
+    /** @param headerParameters Additional string parameters to add to the invocation headers. */
+    public fun headerParameters(headerParameters: Map<String, HttpParameter>) {
+        cdkBuilder.headerParameters(headerParameters)
+    }
 
-  /**
-   * @param queryStringParameters Additional string parameters to add to the invocation query
-   * strings.
-   */
-  public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
-    cdkBuilder.queryStringParameters(queryStringParameters)
-  }
+    /**
+     * @param queryStringParameters Additional string parameters to add to the invocation query
+     *   strings.
+     */
+    public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
+    }
 
-  public fun build(): ConnectionProps = cdkBuilder.build()
+    public fun build(): ConnectionProps = cdkBuilder.build()
 }

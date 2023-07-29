@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.iot.CfnJobTemplate
  * The criteria that determines how many retries are allowed for each failure type for a job.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.iot.CfnJobTemplate
  */
 @CdkDslMarker
 public class CfnJobTemplateRetryCriteriaPropertyDsl {
-  private val cdkBuilder: CfnJobTemplate.RetryCriteriaProperty.Builder =
-      CfnJobTemplate.RetryCriteriaProperty.builder()
+    private val cdkBuilder: CfnJobTemplate.RetryCriteriaProperty.Builder =
+        CfnJobTemplate.RetryCriteriaProperty.builder()
 
-  /**
-   * @param failureType The type of job execution failures that can initiate a job retry.
-   */
-  public fun failureType(failureType: String) {
-    cdkBuilder.failureType(failureType)
-  }
+    /** @param failureType The type of job execution failures that can initiate a job retry. */
+    public fun failureType(failureType: String) {
+        cdkBuilder.failureType(failureType)
+    }
 
-  /**
-   * @param numberOfRetries The number of retries allowed for a failure type for the job.
-   */
-  public fun numberOfRetries(numberOfRetries: Number) {
-    cdkBuilder.numberOfRetries(numberOfRetries)
-  }
+    /** @param numberOfRetries The number of retries allowed for a failure type for the job. */
+    public fun numberOfRetries(numberOfRetries: Number) {
+        cdkBuilder.numberOfRetries(numberOfRetries)
+    }
 
-  public fun build(): CfnJobTemplate.RetryCriteriaProperty = cdkBuilder.build()
+    public fun build(): CfnJobTemplate.RetryCriteriaProperty = cdkBuilder.build()
 }

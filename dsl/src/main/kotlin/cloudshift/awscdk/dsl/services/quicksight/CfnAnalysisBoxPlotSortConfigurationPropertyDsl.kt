@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The sort configuration of a `BoxPlotVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,49 +63,44 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisBoxPlotSortConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.BoxPlotSortConfigurationProperty.Builder =
-      CfnAnalysis.BoxPlotSortConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.BoxPlotSortConfigurationProperty.Builder =
+        CfnAnalysis.BoxPlotSortConfigurationProperty.builder()
 
-  private val _categorySort: MutableList<Any> = mutableListOf()
+    private val _categorySort: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param categorySort The sort configuration of a group by fields.
-   */
-  public fun categorySort(vararg categorySort: Any) {
-    _categorySort.addAll(listOf(*categorySort))
-  }
+    /** @param categorySort The sort configuration of a group by fields. */
+    public fun categorySort(vararg categorySort: Any) {
+        _categorySort.addAll(listOf(*categorySort))
+    }
 
-  /**
-   * @param categorySort The sort configuration of a group by fields.
-   */
-  public fun categorySort(categorySort: Collection<Any>) {
-    _categorySort.addAll(categorySort)
-  }
+    /** @param categorySort The sort configuration of a group by fields. */
+    public fun categorySort(categorySort: Collection<Any>) {
+        _categorySort.addAll(categorySort)
+    }
 
-  /**
-   * @param categorySort The sort configuration of a group by fields.
-   */
-  public fun categorySort(categorySort: IResolvable) {
-    cdkBuilder.categorySort(categorySort)
-  }
+    /** @param categorySort The sort configuration of a group by fields. */
+    public fun categorySort(categorySort: IResolvable) {
+        cdkBuilder.categorySort(categorySort)
+    }
 
-  /**
-   * @param paginationConfiguration The pagination configuration of a table visual or box plot.
-   */
-  public fun paginationConfiguration(paginationConfiguration: IResolvable) {
-    cdkBuilder.paginationConfiguration(paginationConfiguration)
-  }
+    /**
+     * @param paginationConfiguration The pagination configuration of a table visual or box plot.
+     */
+    public fun paginationConfiguration(paginationConfiguration: IResolvable) {
+        cdkBuilder.paginationConfiguration(paginationConfiguration)
+    }
 
-  /**
-   * @param paginationConfiguration The pagination configuration of a table visual or box plot.
-   */
-  public
-      fun paginationConfiguration(paginationConfiguration: CfnAnalysis.PaginationConfigurationProperty) {
-    cdkBuilder.paginationConfiguration(paginationConfiguration)
-  }
+    /**
+     * @param paginationConfiguration The pagination configuration of a table visual or box plot.
+     */
+    public fun paginationConfiguration(
+        paginationConfiguration: CfnAnalysis.PaginationConfigurationProperty
+    ) {
+        cdkBuilder.paginationConfiguration(paginationConfiguration)
+    }
 
-  public fun build(): CfnAnalysis.BoxPlotSortConfigurationProperty {
-    if(_categorySort.isNotEmpty()) cdkBuilder.categorySort(_categorySort)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalysis.BoxPlotSortConfigurationProperty {
+        if (_categorySort.isNotEmpty()) cdkBuilder.categorySort(_categorySort)
+        return cdkBuilder.build()
+    }
 }

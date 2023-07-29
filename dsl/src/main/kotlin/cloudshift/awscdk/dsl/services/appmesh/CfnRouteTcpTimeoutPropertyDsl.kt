@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  * An object that represents types of timeouts.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,26 +35,24 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  */
 @CdkDslMarker
 public class CfnRouteTcpTimeoutPropertyDsl {
-  private val cdkBuilder: CfnRoute.TcpTimeoutProperty.Builder =
-      CfnRoute.TcpTimeoutProperty.builder()
+    private val cdkBuilder: CfnRoute.TcpTimeoutProperty.Builder =
+        CfnRoute.TcpTimeoutProperty.builder()
 
-  /**
-   * @param idle An object that represents an idle timeout.
-   * An idle timeout bounds the amount of time that a connection may be idle. The default value is
-   * none.
-   */
-  public fun idle(idle: IResolvable) {
-    cdkBuilder.idle(idle)
-  }
+    /**
+     * @param idle An object that represents an idle timeout. An idle timeout bounds the amount of
+     *   time that a connection may be idle. The default value is none.
+     */
+    public fun idle(idle: IResolvable) {
+        cdkBuilder.idle(idle)
+    }
 
-  /**
-   * @param idle An object that represents an idle timeout.
-   * An idle timeout bounds the amount of time that a connection may be idle. The default value is
-   * none.
-   */
-  public fun idle(idle: CfnRoute.DurationProperty) {
-    cdkBuilder.idle(idle)
-  }
+    /**
+     * @param idle An object that represents an idle timeout. An idle timeout bounds the amount of
+     *   time that a connection may be idle. The default value is none.
+     */
+    public fun idle(idle: CfnRoute.DurationProperty) {
+        cdkBuilder.idle(idle)
+    }
 
-  public fun build(): CfnRoute.TcpTimeoutProperty = cdkBuilder.build()
+    public fun build(): CfnRoute.TcpTimeoutProperty = cdkBuilder.build()
 }

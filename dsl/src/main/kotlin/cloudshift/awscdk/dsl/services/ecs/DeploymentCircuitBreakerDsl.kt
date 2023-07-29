@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker
  * The deployment circuit breaker to use for the service.
  *
  * Example:
- *
  * ```
  * Cluster cluster;
  * TaskDefinition taskDefinition;
@@ -23,14 +31,12 @@ import software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker
  */
 @CdkDslMarker
 public class DeploymentCircuitBreakerDsl {
-  private val cdkBuilder: DeploymentCircuitBreaker.Builder = DeploymentCircuitBreaker.builder()
+    private val cdkBuilder: DeploymentCircuitBreaker.Builder = DeploymentCircuitBreaker.builder()
 
-  /**
-   * @param rollback Whether to enable rollback on deployment failure.
-   */
-  public fun rollback(rollback: Boolean) {
-    cdkBuilder.rollback(rollback)
-  }
+    /** @param rollback Whether to enable rollback on deployment failure. */
+    public fun rollback(rollback: Boolean) {
+        cdkBuilder.rollback(rollback)
+    }
 
-  public fun build(): DeploymentCircuitBreaker = cdkBuilder.build()
+    public fun build(): DeploymentCircuitBreaker = cdkBuilder.build()
 }

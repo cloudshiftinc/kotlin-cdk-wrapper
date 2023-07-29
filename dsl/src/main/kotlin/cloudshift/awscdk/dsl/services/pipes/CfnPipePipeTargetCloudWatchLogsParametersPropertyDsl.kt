@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  * The parameters for using an CloudWatch Logs log stream as a target.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,21 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  */
 @CdkDslMarker
 public class CfnPipePipeTargetCloudWatchLogsParametersPropertyDsl {
-  private val cdkBuilder: CfnPipe.PipeTargetCloudWatchLogsParametersProperty.Builder =
-      CfnPipe.PipeTargetCloudWatchLogsParametersProperty.builder()
+    private val cdkBuilder: CfnPipe.PipeTargetCloudWatchLogsParametersProperty.Builder =
+        CfnPipe.PipeTargetCloudWatchLogsParametersProperty.builder()
 
-  /**
-   * @param logStreamName The name of the log stream.
-   */
-  public fun logStreamName(logStreamName: String) {
-    cdkBuilder.logStreamName(logStreamName)
-  }
+    /** @param logStreamName The name of the log stream. */
+    public fun logStreamName(logStreamName: String) {
+        cdkBuilder.logStreamName(logStreamName)
+    }
 
-  /**
-   * @param timestamp The time the event occurred, expressed as the number of milliseconds after Jan
-   * 1, 1970 00:00:00 UTC.
-   */
-  public fun timestamp(timestamp: String) {
-    cdkBuilder.timestamp(timestamp)
-  }
+    /**
+     * @param timestamp The time the event occurred, expressed as the number of milliseconds after
+     *   Jan 1, 1970 00:00:00 UTC.
+     */
+    public fun timestamp(timestamp: String) {
+        cdkBuilder.timestamp(timestamp)
+    }
 
-  public fun build(): CfnPipe.PipeTargetCloudWatchLogsParametersProperty = cdkBuilder.build()
+    public fun build(): CfnPipe.PipeTargetCloudWatchLogsParametersProperty = cdkBuilder.build()
 }

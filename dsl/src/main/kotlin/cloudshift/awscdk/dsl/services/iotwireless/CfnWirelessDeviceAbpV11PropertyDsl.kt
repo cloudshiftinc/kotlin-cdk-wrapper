@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
-import kotlin.String
 
 /**
  * ABP device object for create APIs for v1.1.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,23 +42,17 @@ public class CfnWirelessDeviceAbpV11PropertyDsl {
     private val cdkBuilder: CfnWirelessDevice.AbpV11Property.Builder =
         CfnWirelessDevice.AbpV11Property.builder()
 
-    /**
-     * @param devAddr The DevAddr value.
-     */
+    /** @param devAddr The DevAddr value. */
     public fun devAddr(devAddr: String) {
         cdkBuilder.devAddr(devAddr)
     }
 
-    /**
-     * @param sessionKeys Session keys for ABP v1.1.
-     */
+    /** @param sessionKeys Session keys for ABP v1.1. */
     public fun sessionKeys(sessionKeys: IResolvable) {
         cdkBuilder.sessionKeys(sessionKeys)
     }
 
-    /**
-     * @param sessionKeys Session keys for ABP v1.1.
-     */
+    /** @param sessionKeys Session keys for ABP v1.1. */
     public fun sessionKeys(sessionKeys: CfnWirelessDevice.SessionKeysAbpV11Property) {
         cdkBuilder.sessionKeys(sessionKeys)
     }

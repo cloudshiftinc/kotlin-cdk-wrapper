@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalogappregistry
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * hierarchy of related cloud resource abstractions.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,42 +39,45 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnApplicationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnApplication.Builder = CfnApplication.Builder.create(scope, id)
+    private val cdkBuilder: CfnApplication.Builder = CfnApplication.Builder.create(scope, id)
 
-  /**
-   * The description of the application.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description)
-   * @param description The description of the application. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * The description of the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description)
+     *
+     * @param description The description of the application.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * The name of the application.
-   *
-   * The name must be unique in the region in which you are creating the application.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name)
-   * @param name The name of the application. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the application.
+     *
+     * The name must be unique in the region in which you are creating the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name)
+     *
+     * @param name The name of the application.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * Key-value pairs you can use to associate with the application.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags)
-   * @param tags Key-value pairs you can use to associate with the application. 
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /**
+     * Key-value pairs you can use to associate with the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags)
+     *
+     * @param tags Key-value pairs you can use to associate with the application.
+     */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnApplication = cdkBuilder.build()
+    public fun build(): CfnApplication = cdkBuilder.build()
 }

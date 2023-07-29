@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.databrew.CfnJob
  * When undefined, no statistics will be computed on columns that contain detected entities.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,29 +36,29 @@ import software.amazon.awscdk.services.databrew.CfnJob
  */
 @CdkDslMarker
 public class CfnJobAllowedStatisticsPropertyDsl {
-  private val cdkBuilder: CfnJob.AllowedStatisticsProperty.Builder =
-      CfnJob.AllowedStatisticsProperty.builder()
+    private val cdkBuilder: CfnJob.AllowedStatisticsProperty.Builder =
+        CfnJob.AllowedStatisticsProperty.builder()
 
-  private val _statistics: MutableList<String> = mutableListOf()
+    private val _statistics: MutableList<String> = mutableListOf()
 
-  /**
-   * @param statistics One or more column statistics to allow for columns that contain detected
-   * entities. 
-   */
-  public fun statistics(vararg statistics: String) {
-    _statistics.addAll(listOf(*statistics))
-  }
+    /**
+     * @param statistics One or more column statistics to allow for columns that contain detected
+     *   entities.
+     */
+    public fun statistics(vararg statistics: String) {
+        _statistics.addAll(listOf(*statistics))
+    }
 
-  /**
-   * @param statistics One or more column statistics to allow for columns that contain detected
-   * entities. 
-   */
-  public fun statistics(statistics: Collection<String>) {
-    _statistics.addAll(statistics)
-  }
+    /**
+     * @param statistics One or more column statistics to allow for columns that contain detected
+     *   entities.
+     */
+    public fun statistics(statistics: Collection<String>) {
+        _statistics.addAll(statistics)
+    }
 
-  public fun build(): CfnJob.AllowedStatisticsProperty {
-    if(_statistics.isNotEmpty()) cdkBuilder.statistics(_statistics)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnJob.AllowedStatisticsProperty {
+        if (_statistics.isNotEmpty()) cdkBuilder.statistics(_statistics)
+        return cdkBuilder.build()
+    }
 }

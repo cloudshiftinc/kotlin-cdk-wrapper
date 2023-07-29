@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * The label configuration of a reference line.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -115,7 +123,7 @@ public class CfnAnalysisReferenceLineLabelConfigurationPropertyDsl {
 
     /**
      * @param customLabelConfiguration The custom label configuration of the label in a reference
-     * line.
+     *   line.
      */
     public fun customLabelConfiguration(customLabelConfiguration: IResolvable) {
         cdkBuilder.customLabelConfiguration(customLabelConfiguration)
@@ -123,36 +131,32 @@ public class CfnAnalysisReferenceLineLabelConfigurationPropertyDsl {
 
     /**
      * @param customLabelConfiguration The custom label configuration of the label in a reference
-     * line.
+     *   line.
      */
-    public fun customLabelConfiguration(customLabelConfiguration: CfnAnalysis.ReferenceLineCustomLabelConfigurationProperty) {
+    public fun customLabelConfiguration(
+        customLabelConfiguration: CfnAnalysis.ReferenceLineCustomLabelConfigurationProperty
+    ) {
         cdkBuilder.customLabelConfiguration(customLabelConfiguration)
     }
 
-    /**
-     * @param fontColor The font color configuration of the label in a reference line.
-     */
+    /** @param fontColor The font color configuration of the label in a reference line. */
     public fun fontColor(fontColor: String) {
         cdkBuilder.fontColor(fontColor)
     }
 
-    /**
-     * @param fontConfiguration The font configuration of the label in a reference line.
-     */
+    /** @param fontConfiguration The font configuration of the label in a reference line. */
     public fun fontConfiguration(fontConfiguration: IResolvable) {
         cdkBuilder.fontConfiguration(fontConfiguration)
     }
 
-    /**
-     * @param fontConfiguration The font configuration of the label in a reference line.
-     */
+    /** @param fontConfiguration The font configuration of the label in a reference line. */
     public fun fontConfiguration(fontConfiguration: CfnAnalysis.FontConfigurationProperty) {
         cdkBuilder.fontConfiguration(fontConfiguration)
     }
 
     /**
      * @param horizontalPosition The horizontal position configuration of the label in a reference
-     * line. Choose one of the following options:.
+     *   line. Choose one of the following options:.
      * * `LEFT`
      * * `CENTER`
      * * `RIGHT`
@@ -162,22 +166,26 @@ public class CfnAnalysisReferenceLineLabelConfigurationPropertyDsl {
     }
 
     /**
-     * @param valueLabelConfiguration The value label configuration of the label in a reference line.
+     * @param valueLabelConfiguration The value label configuration of the label in a reference
+     *   line.
      */
     public fun valueLabelConfiguration(valueLabelConfiguration: IResolvable) {
         cdkBuilder.valueLabelConfiguration(valueLabelConfiguration)
     }
 
     /**
-     * @param valueLabelConfiguration The value label configuration of the label in a reference line.
+     * @param valueLabelConfiguration The value label configuration of the label in a reference
+     *   line.
      */
-    public fun valueLabelConfiguration(valueLabelConfiguration: CfnAnalysis.ReferenceLineValueLabelConfigurationProperty) {
+    public fun valueLabelConfiguration(
+        valueLabelConfiguration: CfnAnalysis.ReferenceLineValueLabelConfigurationProperty
+    ) {
         cdkBuilder.valueLabelConfiguration(valueLabelConfiguration)
     }
 
     /**
      * @param verticalPosition The vertical position configuration of the label in a reference line.
-     * Choose one of the following options:.
+     *   Choose one of the following options:.
      * * `ABOVE`
      * * `BELOW`
      */

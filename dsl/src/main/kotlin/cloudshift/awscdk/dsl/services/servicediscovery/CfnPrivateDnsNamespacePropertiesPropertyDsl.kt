@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicediscovery
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
  * Properties for the private DNS namespace.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,20 @@ import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
  */
 @CdkDslMarker
 public class CfnPrivateDnsNamespacePropertiesPropertyDsl {
-  private val cdkBuilder: CfnPrivateDnsNamespace.PropertiesProperty.Builder =
-      CfnPrivateDnsNamespace.PropertiesProperty.builder()
+    private val cdkBuilder: CfnPrivateDnsNamespace.PropertiesProperty.Builder =
+        CfnPrivateDnsNamespace.PropertiesProperty.builder()
 
-  /**
-   * @param dnsProperties DNS properties for the private DNS namespace.
-   */
-  public fun dnsProperties(dnsProperties: IResolvable) {
-    cdkBuilder.dnsProperties(dnsProperties)
-  }
+    /** @param dnsProperties DNS properties for the private DNS namespace. */
+    public fun dnsProperties(dnsProperties: IResolvable) {
+        cdkBuilder.dnsProperties(dnsProperties)
+    }
 
-  /**
-   * @param dnsProperties DNS properties for the private DNS namespace.
-   */
-  public
-      fun dnsProperties(dnsProperties: CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty) {
-    cdkBuilder.dnsProperties(dnsProperties)
-  }
+    /** @param dnsProperties DNS properties for the private DNS namespace. */
+    public fun dnsProperties(
+        dnsProperties: CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
+    ) {
+        cdkBuilder.dnsProperties(dnsProperties)
+    }
 
-  public fun build(): CfnPrivateDnsNamespace.PropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnPrivateDnsNamespace.PropertiesProperty = cdkBuilder.build()
 }

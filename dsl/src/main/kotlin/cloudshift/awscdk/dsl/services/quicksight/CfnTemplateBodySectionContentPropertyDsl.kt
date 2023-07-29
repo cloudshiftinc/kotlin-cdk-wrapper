@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The configuration of content in a body section.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -61,16 +69,12 @@ public class CfnTemplateBodySectionContentPropertyDsl {
     private val cdkBuilder: CfnTemplate.BodySectionContentProperty.Builder =
         CfnTemplate.BodySectionContentProperty.builder()
 
-    /**
-     * @param layout The layout configuration of a body section.
-     */
+    /** @param layout The layout configuration of a body section. */
     public fun layout(layout: IResolvable) {
         cdkBuilder.layout(layout)
     }
 
-    /**
-     * @param layout The layout configuration of a body section.
-     */
+    /** @param layout The layout configuration of a body section. */
     public fun layout(layout: CfnTemplate.SectionLayoutConfigurationProperty) {
         cdkBuilder.layout(layout)
     }

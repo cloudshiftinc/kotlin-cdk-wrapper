@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * The unaggregated field for a table.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -243,37 +251,27 @@ public class CfnAnalysisUnaggregatedFieldPropertyDsl {
     private val cdkBuilder: CfnAnalysis.UnaggregatedFieldProperty.Builder =
         CfnAnalysis.UnaggregatedFieldProperty.builder()
 
-    /**
-     * @param column The column that is used in the `UnaggregatedField` .
-     */
+    /** @param column The column that is used in the `UnaggregatedField` . */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column that is used in the `UnaggregatedField` .
-     */
+    /** @param column The column that is used in the `UnaggregatedField` . */
     public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param fieldId The custom field ID.
-     */
+    /** @param fieldId The custom field ID. */
     public fun fieldId(fieldId: String) {
         cdkBuilder.fieldId(fieldId)
     }
 
-    /**
-     * @param formatConfiguration The format configuration of the field.
-     */
+    /** @param formatConfiguration The format configuration of the field. */
     public fun formatConfiguration(formatConfiguration: IResolvable) {
         cdkBuilder.formatConfiguration(formatConfiguration)
     }
 
-    /**
-     * @param formatConfiguration The format configuration of the field.
-     */
+    /** @param formatConfiguration The format configuration of the field. */
     public fun formatConfiguration(formatConfiguration: CfnAnalysis.FormatConfigurationProperty) {
         cdkBuilder.formatConfiguration(formatConfiguration)
     }

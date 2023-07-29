@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.ec2.SubnetIpamOptions
  * Cidr Allocated Subnets.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,26 +35,22 @@ import software.amazon.awscdk.services.ec2.SubnetIpamOptions
  */
 @CdkDslMarker
 public class SubnetIpamOptionsDsl {
-  private val cdkBuilder: SubnetIpamOptions.Builder = SubnetIpamOptions.builder()
+    private val cdkBuilder: SubnetIpamOptions.Builder = SubnetIpamOptions.builder()
 
-  private val _allocatedSubnets: MutableList<AllocatedSubnet> = mutableListOf()
+    private val _allocatedSubnets: MutableList<AllocatedSubnet> = mutableListOf()
 
-  /**
-   * @param allocatedSubnets Cidr Allocations for Subnets. 
-   */
-  public fun allocatedSubnets(allocatedSubnets: AllocatedSubnetDsl.() -> Unit) {
-    _allocatedSubnets.add(AllocatedSubnetDsl().apply(allocatedSubnets).build())
-  }
+    /** @param allocatedSubnets Cidr Allocations for Subnets. */
+    public fun allocatedSubnets(allocatedSubnets: AllocatedSubnetDsl.() -> Unit) {
+        _allocatedSubnets.add(AllocatedSubnetDsl().apply(allocatedSubnets).build())
+    }
 
-  /**
-   * @param allocatedSubnets Cidr Allocations for Subnets. 
-   */
-  public fun allocatedSubnets(allocatedSubnets: Collection<AllocatedSubnet>) {
-    _allocatedSubnets.addAll(allocatedSubnets)
-  }
+    /** @param allocatedSubnets Cidr Allocations for Subnets. */
+    public fun allocatedSubnets(allocatedSubnets: Collection<AllocatedSubnet>) {
+        _allocatedSubnets.addAll(allocatedSubnets)
+    }
 
-  public fun build(): SubnetIpamOptions {
-    if(_allocatedSubnets.isNotEmpty()) cdkBuilder.allocatedSubnets(_allocatedSubnets)
-    return cdkBuilder.build()
-  }
+    public fun build(): SubnetIpamOptions {
+        if (_allocatedSubnets.isNotEmpty()) cdkBuilder.allocatedSubnets(_allocatedSubnets)
+        return cdkBuilder.build()
+    }
 }

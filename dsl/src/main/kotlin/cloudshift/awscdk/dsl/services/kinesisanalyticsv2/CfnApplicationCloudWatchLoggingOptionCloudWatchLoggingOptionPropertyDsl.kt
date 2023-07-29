@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWat
  * Resource Name (ARN).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,17 +34,15 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWat
  */
 @CdkDslMarker
 public class CfnApplicationCloudWatchLoggingOptionCloudWatchLoggingOptionPropertyDsl {
-  private val cdkBuilder:
-      CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty.Builder =
-      CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty.builder()
+    private val cdkBuilder:
+        CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty.Builder =
+        CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty.builder()
 
-  /**
-   * @param logStreamArn The ARN of the CloudWatch log to receive application messages. 
-   */
-  public fun logStreamArn(logStreamArn: String) {
-    cdkBuilder.logStreamArn(logStreamArn)
-  }
+    /** @param logStreamArn The ARN of the CloudWatch log to receive application messages. */
+    public fun logStreamArn(logStreamArn: String) {
+        cdkBuilder.logStreamArn(logStreamArn)
+    }
 
-  public fun build(): CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty =
-      cdkBuilder.build()
+    public fun build(): CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty =
+        cdkBuilder.build()
 }

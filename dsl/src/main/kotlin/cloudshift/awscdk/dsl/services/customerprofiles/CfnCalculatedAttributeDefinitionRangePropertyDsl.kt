@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDe
  * The relative time period over which data is included in the aggregation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDe
  */
 @CdkDslMarker
 public class CfnCalculatedAttributeDefinitionRangePropertyDsl {
-  private val cdkBuilder: CfnCalculatedAttributeDefinition.RangeProperty.Builder =
-      CfnCalculatedAttributeDefinition.RangeProperty.builder()
+    private val cdkBuilder: CfnCalculatedAttributeDefinition.RangeProperty.Builder =
+        CfnCalculatedAttributeDefinition.RangeProperty.builder()
 
-  /**
-   * @param unit The unit of time. 
-   */
-  public fun unit(unit: String) {
-    cdkBuilder.unit(unit)
-  }
+    /** @param unit The unit of time. */
+    public fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+    }
 
-  /**
-   * @param value The amount of time of the specified unit. 
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The amount of time of the specified unit. */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnCalculatedAttributeDefinition.RangeProperty = cdkBuilder.build()
+    public fun build(): CfnCalculatedAttributeDefinition.RangeProperty = cdkBuilder.build()
 }

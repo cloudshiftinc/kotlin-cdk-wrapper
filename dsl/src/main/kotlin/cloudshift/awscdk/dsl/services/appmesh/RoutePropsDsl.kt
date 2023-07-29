@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.appmesh.RouteSpec
  * Properties to define new Routes.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,35 +40,27 @@ import software.amazon.awscdk.services.appmesh.RouteSpec
  */
 @CdkDslMarker
 public class RoutePropsDsl {
-  private val cdkBuilder: RouteProps.Builder = RouteProps.builder()
+    private val cdkBuilder: RouteProps.Builder = RouteProps.builder()
 
-  /**
-   * @param mesh The service mesh to define the route in. 
-   */
-  public fun mesh(mesh: IMesh) {
-    cdkBuilder.mesh(mesh)
-  }
+    /** @param mesh The service mesh to define the route in. */
+    public fun mesh(mesh: IMesh) {
+        cdkBuilder.mesh(mesh)
+    }
 
-  /**
-   * @param routeName The name of the route.
-   */
-  public fun routeName(routeName: String) {
-    cdkBuilder.routeName(routeName)
-  }
+    /** @param routeName The name of the route. */
+    public fun routeName(routeName: String) {
+        cdkBuilder.routeName(routeName)
+    }
 
-  /**
-   * @param routeSpec Protocol specific spec. 
-   */
-  public fun routeSpec(routeSpec: RouteSpec) {
-    cdkBuilder.routeSpec(routeSpec)
-  }
+    /** @param routeSpec Protocol specific spec. */
+    public fun routeSpec(routeSpec: RouteSpec) {
+        cdkBuilder.routeSpec(routeSpec)
+    }
 
-  /**
-   * @param virtualRouter The VirtualRouter the Route belongs to. 
-   */
-  public fun virtualRouter(virtualRouter: IVirtualRouter) {
-    cdkBuilder.virtualRouter(virtualRouter)
-  }
+    /** @param virtualRouter The VirtualRouter the Route belongs to. */
+    public fun virtualRouter(virtualRouter: IVirtualRouter) {
+        cdkBuilder.virtualRouter(virtualRouter)
+    }
 
-  public fun build(): RouteProps = cdkBuilder.build()
+    public fun build(): RouteProps = cdkBuilder.build()
 }

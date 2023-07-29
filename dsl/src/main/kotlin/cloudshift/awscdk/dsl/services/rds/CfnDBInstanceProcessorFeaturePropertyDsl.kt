@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.rds.CfnDBInstance
  * status.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,21 @@ import software.amazon.awscdk.services.rds.CfnDBInstance
  */
 @CdkDslMarker
 public class CfnDBInstanceProcessorFeaturePropertyDsl {
-  private val cdkBuilder: CfnDBInstance.ProcessorFeatureProperty.Builder =
-      CfnDBInstance.ProcessorFeatureProperty.builder()
+    private val cdkBuilder: CfnDBInstance.ProcessorFeatureProperty.Builder =
+        CfnDBInstance.ProcessorFeatureProperty.builder()
 
-  /**
-   * @param name The name of the processor feature.
-   * Valid names are `coreCount` and `threadsPerCore` .
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name The name of the processor feature. Valid names are `coreCount` and
+     *   `threadsPerCore` .
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param value The value of a processor feature name.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value of a processor feature name. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnDBInstance.ProcessorFeatureProperty = cdkBuilder.build()
+    public fun build(): CfnDBInstance.ProcessorFeatureProperty = cdkBuilder.build()
 }

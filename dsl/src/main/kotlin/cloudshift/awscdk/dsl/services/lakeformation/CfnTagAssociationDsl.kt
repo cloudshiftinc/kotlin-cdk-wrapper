@@ -1,15 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
+import software.constructs.Construct
 
 /**
  * The `AWS::LakeFormation::TagAssociation` resource represents an assignment of an LF-tag to a Data
@@ -19,7 +28,6 @@ import kotlin.collections.MutableList
  * create a `TagAssociation` resource and calls the `RemoveLFTagsToResource` API to delete it.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -61,7 +69,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnTagAssociationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnTagAssociation.Builder = CfnTagAssociation.Builder.create(scope, id)
 
@@ -71,6 +79,7 @@ public class CfnTagAssociationDsl(
      * A structure containing an LF-tag key-value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-lftags)
+     *
      * @param lfTags A structure containing an LF-tag key-value pair.
      */
     public fun lfTags(vararg lfTags: Any) {
@@ -81,6 +90,7 @@ public class CfnTagAssociationDsl(
      * A structure containing an LF-tag key-value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-lftags)
+     *
      * @param lfTags A structure containing an LF-tag key-value pair.
      */
     public fun lfTags(lfTags: Collection<Any>) {
@@ -91,6 +101,7 @@ public class CfnTagAssociationDsl(
      * A structure containing an LF-tag key-value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-lftags)
+     *
      * @param lfTags A structure containing an LF-tag key-value pair.
      */
     public fun lfTags(lfTags: IResolvable) {
@@ -103,6 +114,7 @@ public class CfnTagAssociationDsl(
      * The resource for which the LF-tag policy applies.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-resource)
+     *
      * @param resource UTF-8 string (valid values: `DATABASE | TABLE` ).
      */
     public fun resource(resource: IResolvable) {
@@ -115,6 +127,7 @@ public class CfnTagAssociationDsl(
      * The resource for which the LF-tag policy applies.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html#cfn-lakeformation-tagassociation-resource)
+     *
      * @param resource UTF-8 string (valid values: `DATABASE | TABLE` ).
      */
     public fun resource(resource: CfnTagAssociation.ResourceProperty) {

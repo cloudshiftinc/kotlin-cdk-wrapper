@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.pipes.CfnPipeProps
  * Properties for defining a `CfnPipe`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -283,113 +291,89 @@ import software.amazon.awscdk.services.pipes.CfnPipeProps
  */
 @CdkDslMarker
 public class CfnPipePropsDsl {
-  private val cdkBuilder: CfnPipeProps.Builder = CfnPipeProps.builder()
+    private val cdkBuilder: CfnPipeProps.Builder = CfnPipeProps.builder()
 
-  /**
-   * @param description A description of the pipe.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description of the pipe. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param desiredState The state the pipe should be in.
-   */
-  public fun desiredState(desiredState: String) {
-    cdkBuilder.desiredState(desiredState)
-  }
+    /** @param desiredState The state the pipe should be in. */
+    public fun desiredState(desiredState: String) {
+        cdkBuilder.desiredState(desiredState)
+    }
 
-  /**
-   * @param enrichment The ARN of the enrichment resource.
-   */
-  public fun enrichment(enrichment: String) {
-    cdkBuilder.enrichment(enrichment)
-  }
+    /** @param enrichment The ARN of the enrichment resource. */
+    public fun enrichment(enrichment: String) {
+        cdkBuilder.enrichment(enrichment)
+    }
 
-  /**
-   * @param enrichmentParameters The parameters required to set up enrichment on your pipe.
-   */
-  public fun enrichmentParameters(enrichmentParameters: IResolvable) {
-    cdkBuilder.enrichmentParameters(enrichmentParameters)
-  }
+    /** @param enrichmentParameters The parameters required to set up enrichment on your pipe. */
+    public fun enrichmentParameters(enrichmentParameters: IResolvable) {
+        cdkBuilder.enrichmentParameters(enrichmentParameters)
+    }
 
-  /**
-   * @param enrichmentParameters The parameters required to set up enrichment on your pipe.
-   */
-  public fun enrichmentParameters(enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty) {
-    cdkBuilder.enrichmentParameters(enrichmentParameters)
-  }
+    /** @param enrichmentParameters The parameters required to set up enrichment on your pipe. */
+    public fun enrichmentParameters(
+        enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty
+    ) {
+        cdkBuilder.enrichmentParameters(enrichmentParameters)
+    }
 
-  /**
-   * @param name The name of the pipe.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the pipe. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param roleArn The ARN of the role that allows the pipe to send data to the target. 
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /** @param roleArn The ARN of the role that allows the pipe to send data to the target. */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  /**
-   * @param source The ARN of the source resource. 
-   */
-  public fun source(source: String) {
-    cdkBuilder.source(source)
-  }
+    /** @param source The ARN of the source resource. */
+    public fun source(source: String) {
+        cdkBuilder.source(source)
+    }
 
-  /**
-   * @param sourceParameters The parameters required to set up a source for your pipe.
-   */
-  public fun sourceParameters(sourceParameters: IResolvable) {
-    cdkBuilder.sourceParameters(sourceParameters)
-  }
+    /** @param sourceParameters The parameters required to set up a source for your pipe. */
+    public fun sourceParameters(sourceParameters: IResolvable) {
+        cdkBuilder.sourceParameters(sourceParameters)
+    }
 
-  /**
-   * @param sourceParameters The parameters required to set up a source for your pipe.
-   */
-  public fun sourceParameters(sourceParameters: CfnPipe.PipeSourceParametersProperty) {
-    cdkBuilder.sourceParameters(sourceParameters)
-  }
+    /** @param sourceParameters The parameters required to set up a source for your pipe. */
+    public fun sourceParameters(sourceParameters: CfnPipe.PipeSourceParametersProperty) {
+        cdkBuilder.sourceParameters(sourceParameters)
+    }
 
-  /**
-   * @param tags The list of key-value pairs to associate with the pipe.
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags The list of key-value pairs to associate with the pipe. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  /**
-   * @param target The ARN of the target resource. 
-   */
-  public fun target(target: String) {
-    cdkBuilder.target(target)
-  }
+    /** @param target The ARN of the target resource. */
+    public fun target(target: String) {
+        cdkBuilder.target(target)
+    }
 
-  /**
-   * @param targetParameters The parameters required to set up a target for your pipe.
-   * For more information about pipe target parameters, including how to use dynamic path
-   * parameters, see [Target
-   * parameters](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
-   * in the *Amazon EventBridge User Guide* .
-   */
-  public fun targetParameters(targetParameters: IResolvable) {
-    cdkBuilder.targetParameters(targetParameters)
-  }
+    /**
+     * @param targetParameters The parameters required to set up a target for your pipe. For more
+     *   information about pipe target parameters, including how to use dynamic path parameters, see
+     *   [Target parameters](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
+     *   in the *Amazon EventBridge User Guide* .
+     */
+    public fun targetParameters(targetParameters: IResolvable) {
+        cdkBuilder.targetParameters(targetParameters)
+    }
 
-  /**
-   * @param targetParameters The parameters required to set up a target for your pipe.
-   * For more information about pipe target parameters, including how to use dynamic path
-   * parameters, see [Target
-   * parameters](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
-   * in the *Amazon EventBridge User Guide* .
-   */
-  public fun targetParameters(targetParameters: CfnPipe.PipeTargetParametersProperty) {
-    cdkBuilder.targetParameters(targetParameters)
-  }
+    /**
+     * @param targetParameters The parameters required to set up a target for your pipe. For more
+     *   information about pipe target parameters, including how to use dynamic path parameters, see
+     *   [Target parameters](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
+     *   in the *Amazon EventBridge User Guide* .
+     */
+    public fun targetParameters(targetParameters: CfnPipe.PipeTargetParametersProperty) {
+        cdkBuilder.targetParameters(targetParameters)
+    }
 
-  public fun build(): CfnPipeProps = cdkBuilder.build()
+    public fun build(): CfnPipeProps = cdkBuilder.build()
 }

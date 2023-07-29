@@ -21,68 +21,73 @@ import org.gradle.kotlin.dsl.withType
 import org.gradle.kotlin.dsl.assign
 
 abstract class ReleasePlugin : Plugin<Project> {
-    override fun apply(project: Project) : Unit = project.run {
+    override fun apply(project: Project): Unit =
+        project.run {
+            val gitServiceProvider =
+                gradle.sharedServices.registerIfAbsent("gitService", GitServiceImpl::class) {}
 
-        val gitServiceProvider = gradle.sharedServices.registerIfAbsent("gitService", GitServiceImpl::class) {}
+            // configure all release tasks (this catches tasks added later)
+            tasks.withType<AbstractReleaseTask>().configureEach {
+                gitService = gitServiceProvider
+                group = "release"
+            }
 
-        // configure all release tasks (this catches tasks added later)
-        tasks.withType<AbstractReleaseTask>().configureEach {
-            gitService = gitServiceProvider
-            group = "release"
+            val releaseExtension = createReleaseExtension()
+
+            val checkRelease by tasks.registering
+
+            val preRelease by tasks.registering { dependsOn(checkRelease) }
+
+            val executeRelease by
+                tasks.registering(ExecuteRelease::class) {
+                    mustRunAfter(preRelease)
+
+                    versionPropertiesFile = releaseExtension.versionProperties.propertiesFile
+                    versionPropertyName = releaseExtension.versionProperties.propertyName
+
+                    releaseCommitMessage = releaseExtension.releaseCommitMessage
+
+                    versionTagTemplate = releaseExtension.versionTagTemplate
+                    versionTagCommitMessage = releaseExtension.versionTagCommitMessage
+
+                    incrementAfterRelease = releaseExtension.incrementAfterRelease
+                    newVersionCommitMessage = releaseExtension.newVersionCommitMessage
+
+                    preReleaseHooks = releaseExtension.preReleaseHooks
+                }
+
+            val release by
+                tasks.registering {
+                    dependsOn(preRelease)
+                    dependsOn(executeRelease)
+                }
+
+            registerPreReleaseChecks(releaseExtension, checkRelease)
         }
-
-        val releaseExtension = createReleaseExtension()
-
-        val checkRelease by tasks.registering
-
-        val preRelease by tasks.registering {
-            dependsOn(checkRelease)
-        }
-
-        val executeRelease by tasks.registering(ExecuteRelease::class) {
-            mustRunAfter(preRelease)
-
-            versionPropertiesFile = releaseExtension.versionProperties.propertiesFile
-            versionPropertyName = releaseExtension.versionProperties.propertyName
-
-            releaseCommitMessage = releaseExtension.releaseCommitMessage
-
-            versionTagTemplate = releaseExtension.versionTagTemplate
-            versionTagCommitMessage = releaseExtension.versionTagCommitMessage
-
-            incrementAfterRelease = releaseExtension.incrementAfterRelease
-            newVersionCommitMessage = releaseExtension.newVersionCommitMessage
-
-            preReleaseHooks = releaseExtension.preReleaseHooks
-        }
-
-        val release by tasks.registering {
-            dependsOn(preRelease)
-            dependsOn(executeRelease)
-        }
-
-        registerPreReleaseChecks(releaseExtension, checkRelease)
-    }
 
     private fun Project.registerPreReleaseChecks(
         releaseExtension: ReleaseExtension,
         checkRelease: TaskProvider<Task>
     ) {
-        val checkLocalUnstagedFiles by tasks.registering(CheckLocalUnstagedFiles::class) {
-            fail = releaseExtension.checks.failOnUnstagedFiles
-        }
+        val checkLocalUnstagedFiles by
+            tasks.registering(CheckLocalUnstagedFiles::class) {
+                fail = releaseExtension.checks.failOnUnstagedFiles
+            }
 
-        val checkLocalStagedFiles by tasks.registering(CheckLocalStagedFiles::class) {
-            fail = releaseExtension.checks.failOnStagedFiles
-        }
+        val checkLocalStagedFiles by
+            tasks.registering(CheckLocalStagedFiles::class) {
+                fail = releaseExtension.checks.failOnStagedFiles
+            }
 
-        val checkLocalOutstandingCommits by tasks.registering(CheckLocalOutstandingCommits::class) {
-            fail = releaseExtension.checks.failOnPushNeeded
-        }
+        val checkLocalOutstandingCommits by
+            tasks.registering(CheckLocalOutstandingCommits::class) {
+                fail = releaseExtension.checks.failOnPushNeeded
+            }
 
-        val checkRemoteOutstandingCommits by tasks.registering(CheckRemoteOutstandingCommits::class) {
-            fail = releaseExtension.checks.failOnPullNeeded
-        }
+        val checkRemoteOutstandingCommits by
+            tasks.registering(CheckRemoteOutstandingCommits::class) {
+                fail = releaseExtension.checks.failOnPullNeeded
+            }
 
         checkRelease.configure {
             dependsOn(checkLocalUnstagedFiles)

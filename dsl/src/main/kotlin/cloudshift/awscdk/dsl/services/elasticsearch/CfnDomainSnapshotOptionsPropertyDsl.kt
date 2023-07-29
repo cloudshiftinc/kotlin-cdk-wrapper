@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticsearch
 
@@ -10,10 +19,10 @@ import software.amazon.awscdk.services.elasticsearch.CfnDomain
  * The `AWS::Elasticsearch::Domain` resource is being replaced by the
  * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
  * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
- * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
- * supports both OpenSearch and Elasticsearch. For more information about the service rename, see [New
- * resource
- * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+ * modifying your existing Cloudformation templates to use the new OpenSearch Service resource,
+ * which supports both OpenSearch and Elasticsearch. For more information about the service rename,
+ * see
+ * [New resource types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
  * in the *Amazon OpenSearch Service Developer Guide* .
  *
  * *DEPRECATED* . For domains running Elasticsearch 5.3 and later, OpenSearch Service takes hourly
@@ -23,7 +32,6 @@ import software.amazon.awscdk.services.elasticsearch.CfnDomain
  * The automated snapshot configuration for the OpenSearch Service domain indices.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,18 +45,18 @@ import software.amazon.awscdk.services.elasticsearch.CfnDomain
  */
 @CdkDslMarker
 public class CfnDomainSnapshotOptionsPropertyDsl {
-  private val cdkBuilder: CfnDomain.SnapshotOptionsProperty.Builder =
-      CfnDomain.SnapshotOptionsProperty.builder()
+    private val cdkBuilder: CfnDomain.SnapshotOptionsProperty.Builder =
+        CfnDomain.SnapshotOptionsProperty.builder()
 
-  /**
-   * @param automatedSnapshotStartHour The hour in UTC during which the service takes an automated
-   * daily snapshot of the indices in the OpenSearch Service domain.
-   * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday between
-   * midnight and 1 am. You can specify a value between 0 and 23.
-   */
-  public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
-    cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
-  }
+    /**
+     * @param automatedSnapshotStartHour The hour in UTC during which the service takes an automated
+     *   daily snapshot of the indices in the OpenSearch Service domain. For example, if you specify
+     *   0, OpenSearch Service takes an automated snapshot everyday between midnight and 1 am. You
+     *   can specify a value between 0 and 23.
+     */
+    public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
+        cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
+    }
 
-  public fun build(): CfnDomain.SnapshotOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDomain.SnapshotOptionsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sso
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConf
  * The value used for mapping a specified attribute to an identity source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,31 +35,31 @@ import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConf
  */
 @CdkDslMarker
 public class CfnInstanceAccessControlAttributeConfigurationAccessControlAttributeValuePropertyDsl {
-  private val cdkBuilder:
-      CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty.Builder =
-      CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty.builder()
+    private val cdkBuilder:
+        CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty.Builder =
+        CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty.builder()
 
-  private val _source: MutableList<String> = mutableListOf()
+    private val _source: MutableList<String> = mutableListOf()
 
-  /**
-   * @param source The identity source to use when mapping a specified attribute to IAM Identity
-   * Center . 
-   */
-  public fun source(vararg source: String) {
-    _source.addAll(listOf(*source))
-  }
+    /**
+     * @param source The identity source to use when mapping a specified attribute to IAM Identity
+     *   Center .
+     */
+    public fun source(vararg source: String) {
+        _source.addAll(listOf(*source))
+    }
 
-  /**
-   * @param source The identity source to use when mapping a specified attribute to IAM Identity
-   * Center . 
-   */
-  public fun source(source: Collection<String>) {
-    _source.addAll(source)
-  }
+    /**
+     * @param source The identity source to use when mapping a specified attribute to IAM Identity
+     *   Center .
+     */
+    public fun source(source: Collection<String>) {
+        _source.addAll(source)
+    }
 
-  public fun build():
-      CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty {
-    if(_source.isNotEmpty()) cdkBuilder.source(_source)
-    return cdkBuilder.build()
-  }
+    public fun build():
+        CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty {
+        if (_source.isNotEmpty()) cdkBuilder.source(_source)
+        return cdkBuilder.build()
+    }
 }

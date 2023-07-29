@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
  * deployment's AppSpec file.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,24 +37,24 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
  */
 @CdkDslMarker
 public class CfnDeploymentConfigTimeBasedLinearPropertyDsl {
-  private val cdkBuilder: CfnDeploymentConfig.TimeBasedLinearProperty.Builder =
-      CfnDeploymentConfig.TimeBasedLinearProperty.builder()
+    private val cdkBuilder: CfnDeploymentConfig.TimeBasedLinearProperty.Builder =
+        CfnDeploymentConfig.TimeBasedLinearProperty.builder()
 
-  /**
-   * @param linearInterval The number of minutes between each incremental traffic shift of a
-   * `TimeBasedLinear` deployment. 
-   */
-  public fun linearInterval(linearInterval: Number) {
-    cdkBuilder.linearInterval(linearInterval)
-  }
+    /**
+     * @param linearInterval The number of minutes between each incremental traffic shift of a
+     *   `TimeBasedLinear` deployment.
+     */
+    public fun linearInterval(linearInterval: Number) {
+        cdkBuilder.linearInterval(linearInterval)
+    }
 
-  /**
-   * @param linearPercentage The percentage of traffic that is shifted at the start of each
-   * increment of a `TimeBasedLinear` deployment. 
-   */
-  public fun linearPercentage(linearPercentage: Number) {
-    cdkBuilder.linearPercentage(linearPercentage)
-  }
+    /**
+     * @param linearPercentage The percentage of traffic that is shifted at the start of each
+     *   increment of a `TimeBasedLinear` deployment.
+     */
+    public fun linearPercentage(linearPercentage: Number) {
+        cdkBuilder.linearPercentage(linearPercentage)
+    }
 
-  public fun build(): CfnDeploymentConfig.TimeBasedLinearProperty = cdkBuilder.build()
+    public fun build(): CfnDeploymentConfig.TimeBasedLinearProperty = cdkBuilder.build()
 }

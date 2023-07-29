@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions
-import software.amazon.awscdk.services.logs.ILogGroup
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions
+import software.amazon.awscdk.services.logs.ILogGroup
 
 /**
  * Information about logs built to a CloudWatch Log Group for a build project.
  *
  * Example:
- *
  * ```
  * Project.Builder.create(this, "Project")
  * .logging(LoggingOptions.builder()
@@ -34,16 +42,12 @@ public class CloudWatchLoggingOptionsDsl {
         cdkBuilder.enabled(enabled)
     }
 
-    /**
-     * @param logGroup The Log Group to send logs to.
-     */
+    /** @param logGroup The Log Group to send logs to. */
     public fun logGroup(logGroup: ILogGroup) {
         cdkBuilder.logGroup(logGroup)
     }
 
-    /**
-     * @param prefix The prefix of the stream name of the Amazon CloudWatch Logs.
-     */
+    /** @param prefix The prefix of the stream name of the Amazon CloudWatch Logs. */
     public fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
     }

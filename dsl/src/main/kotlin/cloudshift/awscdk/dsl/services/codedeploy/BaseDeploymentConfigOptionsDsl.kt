@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions
  * Construction properties of `BaseDeploymentConfig`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,16 @@ import software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions
  */
 @CdkDslMarker
 public class BaseDeploymentConfigOptionsDsl {
-  private val cdkBuilder: BaseDeploymentConfigOptions.Builder =
-      BaseDeploymentConfigOptions.builder()
+    private val cdkBuilder: BaseDeploymentConfigOptions.Builder =
+        BaseDeploymentConfigOptions.builder()
 
-  /**
-   * @param deploymentConfigName The physical, human-readable name of the Deployment Configuration.
-   */
-  public fun deploymentConfigName(deploymentConfigName: String) {
-    cdkBuilder.deploymentConfigName(deploymentConfigName)
-  }
+    /**
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     *   Configuration.
+     */
+    public fun deploymentConfigName(deploymentConfigName: String) {
+        cdkBuilder.deploymentConfigName(deploymentConfigName)
+    }
 
-  public fun build(): BaseDeploymentConfigOptions = cdkBuilder.build()
+    public fun build(): BaseDeploymentConfigOptions = cdkBuilder.build()
 }

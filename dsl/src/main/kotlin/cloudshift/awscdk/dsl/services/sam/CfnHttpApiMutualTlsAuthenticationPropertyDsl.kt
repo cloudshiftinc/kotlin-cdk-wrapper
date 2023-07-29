@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,29 +34,23 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
  */
 @CdkDslMarker
 public class CfnHttpApiMutualTlsAuthenticationPropertyDsl {
-  private val cdkBuilder: CfnHttpApi.MutualTlsAuthenticationProperty.Builder =
-      CfnHttpApi.MutualTlsAuthenticationProperty.builder()
+    private val cdkBuilder: CfnHttpApi.MutualTlsAuthenticationProperty.Builder =
+        CfnHttpApi.MutualTlsAuthenticationProperty.builder()
 
-  /**
-   * @param truststoreUri the value to be set.
-   */
-  public fun truststoreUri(truststoreUri: String) {
-    cdkBuilder.truststoreUri(truststoreUri)
-  }
+    /** @param truststoreUri the value to be set. */
+    public fun truststoreUri(truststoreUri: String) {
+        cdkBuilder.truststoreUri(truststoreUri)
+    }
 
-  /**
-   * @param truststoreVersion the value to be set.
-   */
-  public fun truststoreVersion(truststoreVersion: Boolean) {
-    cdkBuilder.truststoreVersion(truststoreVersion)
-  }
+    /** @param truststoreVersion the value to be set. */
+    public fun truststoreVersion(truststoreVersion: Boolean) {
+        cdkBuilder.truststoreVersion(truststoreVersion)
+    }
 
-  /**
-   * @param truststoreVersion the value to be set.
-   */
-  public fun truststoreVersion(truststoreVersion: IResolvable) {
-    cdkBuilder.truststoreVersion(truststoreVersion)
-  }
+    /** @param truststoreVersion the value to be set. */
+    public fun truststoreVersion(truststoreVersion: IResolvable) {
+        cdkBuilder.truststoreVersion(truststoreVersion)
+    }
 
-  public fun build(): CfnHttpApi.MutualTlsAuthenticationProperty = cdkBuilder.build()
+    public fun build(): CfnHttpApi.MutualTlsAuthenticationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.accessanalyzer
 
@@ -21,7 +30,6 @@ import software.constructs.Construct
  * required for Access Analyzer to become operational.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,90 +60,97 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnAnalyzerDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnAnalyzer.Builder = CfnAnalyzer.Builder.create(scope, id)
+    private val cdkBuilder: CfnAnalyzer.Builder = CfnAnalyzer.Builder.create(scope, id)
 
-  private val _archiveRules: MutableList<Any> = mutableListOf()
+    private val _archiveRules: MutableList<Any> = mutableListOf()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * The name of the analyzer.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzername)
-   * @param analyzerName The name of the analyzer. 
-   */
-  public fun analyzerName(analyzerName: String) {
-    cdkBuilder.analyzerName(analyzerName)
-  }
+    /**
+     * The name of the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzername)
+     *
+     * @param analyzerName The name of the analyzer.
+     */
+    public fun analyzerName(analyzerName: String) {
+        cdkBuilder.analyzerName(analyzerName)
+    }
 
-  /**
-   * Specifies the archive rules to add for the analyzer.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
-   * @param archiveRules Specifies the archive rules to add for the analyzer. 
-   */
-  public fun archiveRules(vararg archiveRules: Any) {
-    _archiveRules.addAll(listOf(*archiveRules))
-  }
+    /**
+     * Specifies the archive rules to add for the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
+     *
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     */
+    public fun archiveRules(vararg archiveRules: Any) {
+        _archiveRules.addAll(listOf(*archiveRules))
+    }
 
-  /**
-   * Specifies the archive rules to add for the analyzer.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
-   * @param archiveRules Specifies the archive rules to add for the analyzer. 
-   */
-  public fun archiveRules(archiveRules: Collection<Any>) {
-    _archiveRules.addAll(archiveRules)
-  }
+    /**
+     * Specifies the archive rules to add for the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
+     *
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     */
+    public fun archiveRules(archiveRules: Collection<Any>) {
+        _archiveRules.addAll(archiveRules)
+    }
 
-  /**
-   * Specifies the archive rules to add for the analyzer.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
-   * @param archiveRules Specifies the archive rules to add for the analyzer. 
-   */
-  public fun archiveRules(archiveRules: IResolvable) {
-    cdkBuilder.archiveRules(archiveRules)
-  }
+    /**
+     * Specifies the archive rules to add for the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
+     *
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     */
+    public fun archiveRules(archiveRules: IResolvable) {
+        cdkBuilder.archiveRules(archiveRules)
+    }
 
-  /**
-   * The tags to apply to the analyzer.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
-   * @param tags The tags to apply to the analyzer. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * The tags to apply to the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
+     *
+     * @param tags The tags to apply to the analyzer.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * The tags to apply to the analyzer.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
-   * @param tags The tags to apply to the analyzer. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * The tags to apply to the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
+     *
+     * @param tags The tags to apply to the analyzer.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * The type represents the zone of trust for the analyzer.
-   *
-   * *Allowed Values* : ACCOUNT | ORGANIZATION
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
-   * @param type The type represents the zone of trust for the analyzer. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * The type represents the zone of trust for the analyzer.
+     *
+     * *Allowed Values* : ACCOUNT | ORGANIZATION
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
+     *
+     * @param type The type represents the zone of trust for the analyzer.
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnAnalyzer {
-    if(_archiveRules.isNotEmpty()) cdkBuilder.archiveRules(_archiveRules)
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalyzer {
+        if (_archiveRules.isNotEmpty()) cdkBuilder.archiveRules(_archiveRules)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -20,7 +29,6 @@ import software.constructs.Construct
  * The transit gateway must be in the available state before you create a domain.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,76 +50,79 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastDomainDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnTransitGatewayMulticastDomain.Builder =
-      CfnTransitGatewayMulticastDomain.Builder.create(scope, id)
+    private val cdkBuilder: CfnTransitGatewayMulticastDomain.Builder =
+        CfnTransitGatewayMulticastDomain.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * The options for the transit gateway multicast domain.
-   *
-   * * AutoAcceptSharedAssociations (enable | disable)
-   * * Igmpv2Support (enable | disable)
-   * * StaticSourcesSupport (enable | disable)
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-options)
-   * @param options The options for the transit gateway multicast domain. 
-   */
-  public fun options(options: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(options)
-    cdkBuilder.options(builder.map)
-  }
+    /**
+     * The options for the transit gateway multicast domain.
+     * * AutoAcceptSharedAssociations (enable | disable)
+     * * Igmpv2Support (enable | disable)
+     * * StaticSourcesSupport (enable | disable)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-options)
+     *
+     * @param options The options for the transit gateway multicast domain.
+     */
+    public fun options(options: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(options)
+        cdkBuilder.options(builder.map)
+    }
 
-  /**
-   * The options for the transit gateway multicast domain.
-   *
-   * * AutoAcceptSharedAssociations (enable | disable)
-   * * Igmpv2Support (enable | disable)
-   * * StaticSourcesSupport (enable | disable)
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-options)
-   * @param options The options for the transit gateway multicast domain. 
-   */
-  public fun options(options: Any) {
-    cdkBuilder.options(options)
-  }
+    /**
+     * The options for the transit gateway multicast domain.
+     * * AutoAcceptSharedAssociations (enable | disable)
+     * * Igmpv2Support (enable | disable)
+     * * StaticSourcesSupport (enable | disable)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-options)
+     *
+     * @param options The options for the transit gateway multicast domain.
+     */
+    public fun options(options: Any) {
+        cdkBuilder.options(options)
+    }
 
-  /**
-   * The tags for the transit gateway multicast domain.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-tags)
-   * @param tags The tags for the transit gateway multicast domain. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * The tags for the transit gateway multicast domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-tags)
+     *
+     * @param tags The tags for the transit gateway multicast domain.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * The tags for the transit gateway multicast domain.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-tags)
-   * @param tags The tags for the transit gateway multicast domain. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * The tags for the transit gateway multicast domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-tags)
+     *
+     * @param tags The tags for the transit gateway multicast domain.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * The ID of the transit gateway.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-transitgatewayid)
-   * @param transitGatewayId The ID of the transit gateway. 
-   */
-  public fun transitGatewayId(transitGatewayId: String) {
-    cdkBuilder.transitGatewayId(transitGatewayId)
-  }
+    /**
+     * The ID of the transit gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-transitgatewayid)
+     *
+     * @param transitGatewayId The ID of the transit gateway.
+     */
+    public fun transitGatewayId(transitGatewayId: String) {
+        cdkBuilder.transitGatewayId(transitGatewayId)
+    }
 
-  public fun build(): CfnTransitGatewayMulticastDomain {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTransitGatewayMulticastDomain {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

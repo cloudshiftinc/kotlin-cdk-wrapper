@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
  * `datasetContentVersionValue` , or `outputFileUriValue` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,62 +46,57 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
  */
 @CdkDslMarker
 public class CfnDatasetVariablePropertyDsl {
-  private val cdkBuilder: CfnDataset.VariableProperty.Builder =
-      CfnDataset.VariableProperty.builder()
+    private val cdkBuilder: CfnDataset.VariableProperty.Builder =
+        CfnDataset.VariableProperty.builder()
 
-  /**
-   * @param datasetContentVersionValue The value of the variable as a structure that specifies a
-   * dataset content version.
-   */
-  public fun datasetContentVersionValue(datasetContentVersionValue: IResolvable) {
-    cdkBuilder.datasetContentVersionValue(datasetContentVersionValue)
-  }
+    /**
+     * @param datasetContentVersionValue The value of the variable as a structure that specifies a
+     *   dataset content version.
+     */
+    public fun datasetContentVersionValue(datasetContentVersionValue: IResolvable) {
+        cdkBuilder.datasetContentVersionValue(datasetContentVersionValue)
+    }
 
-  /**
-   * @param datasetContentVersionValue The value of the variable as a structure that specifies a
-   * dataset content version.
-   */
-  public
-      fun datasetContentVersionValue(datasetContentVersionValue: CfnDataset.DatasetContentVersionValueProperty) {
-    cdkBuilder.datasetContentVersionValue(datasetContentVersionValue)
-  }
+    /**
+     * @param datasetContentVersionValue The value of the variable as a structure that specifies a
+     *   dataset content version.
+     */
+    public fun datasetContentVersionValue(
+        datasetContentVersionValue: CfnDataset.DatasetContentVersionValueProperty
+    ) {
+        cdkBuilder.datasetContentVersionValue(datasetContentVersionValue)
+    }
 
-  /**
-   * @param doubleValue The value of the variable as a double (numeric).
-   */
-  public fun doubleValue(doubleValue: Number) {
-    cdkBuilder.doubleValue(doubleValue)
-  }
+    /** @param doubleValue The value of the variable as a double (numeric). */
+    public fun doubleValue(doubleValue: Number) {
+        cdkBuilder.doubleValue(doubleValue)
+    }
 
-  /**
-   * @param outputFileUriValue The value of the variable as a structure that specifies an output
-   * file URI.
-   */
-  public fun outputFileUriValue(outputFileUriValue: IResolvable) {
-    cdkBuilder.outputFileUriValue(outputFileUriValue)
-  }
+    /**
+     * @param outputFileUriValue The value of the variable as a structure that specifies an output
+     *   file URI.
+     */
+    public fun outputFileUriValue(outputFileUriValue: IResolvable) {
+        cdkBuilder.outputFileUriValue(outputFileUriValue)
+    }
 
-  /**
-   * @param outputFileUriValue The value of the variable as a structure that specifies an output
-   * file URI.
-   */
-  public fun outputFileUriValue(outputFileUriValue: CfnDataset.OutputFileUriValueProperty) {
-    cdkBuilder.outputFileUriValue(outputFileUriValue)
-  }
+    /**
+     * @param outputFileUriValue The value of the variable as a structure that specifies an output
+     *   file URI.
+     */
+    public fun outputFileUriValue(outputFileUriValue: CfnDataset.OutputFileUriValueProperty) {
+        cdkBuilder.outputFileUriValue(outputFileUriValue)
+    }
 
-  /**
-   * @param stringValue The value of the variable as a string.
-   */
-  public fun stringValue(stringValue: String) {
-    cdkBuilder.stringValue(stringValue)
-  }
+    /** @param stringValue The value of the variable as a string. */
+    public fun stringValue(stringValue: String) {
+        cdkBuilder.stringValue(stringValue)
+    }
 
-  /**
-   * @param variableName The name of the variable. 
-   */
-  public fun variableName(variableName: String) {
-    cdkBuilder.variableName(variableName)
-  }
+    /** @param variableName The name of the variable. */
+    public fun variableName(variableName: String) {
+        cdkBuilder.variableName(variableName)
+    }
 
-  public fun build(): CfnDataset.VariableProperty = cdkBuilder.build()
+    public fun build(): CfnDataset.VariableProperty = cdkBuilder.build()
 }

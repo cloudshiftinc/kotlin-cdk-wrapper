@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.internetmonitor
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,18 @@ import software.amazon.awscdk.services.internetmonitor.CfnMonitor
  */
 @CdkDslMarker
 public class CfnMonitorHealthEventsConfigPropertyDsl {
-  private val cdkBuilder: CfnMonitor.HealthEventsConfigProperty.Builder =
-      CfnMonitor.HealthEventsConfigProperty.builder()
+    private val cdkBuilder: CfnMonitor.HealthEventsConfigProperty.Builder =
+        CfnMonitor.HealthEventsConfigProperty.builder()
 
-  /**
-   * @param availabilityScoreThreshold the value to be set.
-   */
-  public fun availabilityScoreThreshold(availabilityScoreThreshold: Number) {
-    cdkBuilder.availabilityScoreThreshold(availabilityScoreThreshold)
-  }
+    /** @param availabilityScoreThreshold the value to be set. */
+    public fun availabilityScoreThreshold(availabilityScoreThreshold: Number) {
+        cdkBuilder.availabilityScoreThreshold(availabilityScoreThreshold)
+    }
 
-  /**
-   * @param performanceScoreThreshold the value to be set.
-   */
-  public fun performanceScoreThreshold(performanceScoreThreshold: Number) {
-    cdkBuilder.performanceScoreThreshold(performanceScoreThreshold)
-  }
+    /** @param performanceScoreThreshold the value to be set. */
+    public fun performanceScoreThreshold(performanceScoreThreshold: Number) {
+        cdkBuilder.performanceScoreThreshold(performanceScoreThreshold)
+    }
 
-  public fun build(): CfnMonitor.HealthEventsConfigProperty = cdkBuilder.build()
+    public fun build(): CfnMonitor.HealthEventsConfigProperty = cdkBuilder.build()
 }

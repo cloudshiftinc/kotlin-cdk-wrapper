@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.sagemaker.CfnDeviceProps
  * Properties for defining a `CfnDevice`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,51 +50,43 @@ import software.amazon.awscdk.services.sagemaker.CfnDeviceProps
  */
 @CdkDslMarker
 public class CfnDevicePropsDsl {
-  private val cdkBuilder: CfnDeviceProps.Builder = CfnDeviceProps.builder()
+    private val cdkBuilder: CfnDeviceProps.Builder = CfnDeviceProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param device Edge device you want to create.
-   */
-  public fun device(device: IResolvable) {
-    cdkBuilder.device(device)
-  }
+    /** @param device Edge device you want to create. */
+    public fun device(device: IResolvable) {
+        cdkBuilder.device(device)
+    }
 
-  /**
-   * @param device Edge device you want to create.
-   */
-  public fun device(device: CfnDevice.DeviceProperty) {
-    cdkBuilder.device(device)
-  }
+    /** @param device Edge device you want to create. */
+    public fun device(device: CfnDevice.DeviceProperty) {
+        cdkBuilder.device(device)
+    }
 
-  /**
-   * @param deviceFleetName The name of the fleet the device belongs to. 
-   */
-  public fun deviceFleetName(deviceFleetName: String) {
-    cdkBuilder.deviceFleetName(deviceFleetName)
-  }
+    /** @param deviceFleetName The name of the fleet the device belongs to. */
+    public fun deviceFleetName(deviceFleetName: String) {
+        cdkBuilder.deviceFleetName(deviceFleetName)
+    }
 
-  /**
-   * @param tags An array of key-value pairs that contain metadata to help you categorize and
-   * organize your devices.
-   * Each tag consists of a key and a value, both of which you define.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags An array of key-value pairs that contain metadata to help you categorize and
+     *   organize your devices. Each tag consists of a key and a value, both of which you define.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags An array of key-value pairs that contain metadata to help you categorize and
-   * organize your devices.
-   * Each tag consists of a key and a value, both of which you define.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags An array of key-value pairs that contain metadata to help you categorize and
+     *   organize your devices. Each tag consists of a key and a value, both of which you define.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnDeviceProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDeviceProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

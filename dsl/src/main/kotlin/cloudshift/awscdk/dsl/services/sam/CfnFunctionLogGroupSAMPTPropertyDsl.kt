@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sam.CfnFunction
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,13 @@ import software.amazon.awscdk.services.sam.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionLogGroupSAMPTPropertyDsl {
-  private val cdkBuilder: CfnFunction.LogGroupSAMPTProperty.Builder =
-      CfnFunction.LogGroupSAMPTProperty.builder()
+    private val cdkBuilder: CfnFunction.LogGroupSAMPTProperty.Builder =
+        CfnFunction.LogGroupSAMPTProperty.builder()
 
-  /**
-   * @param logGroupName the value to be set. 
-   */
-  public fun logGroupName(logGroupName: String) {
-    cdkBuilder.logGroupName(logGroupName)
-  }
+    /** @param logGroupName the value to be set. */
+    public fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+    }
 
-  public fun build(): CfnFunction.LogGroupSAMPTProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.LogGroupSAMPTProperty = cdkBuilder.build()
 }

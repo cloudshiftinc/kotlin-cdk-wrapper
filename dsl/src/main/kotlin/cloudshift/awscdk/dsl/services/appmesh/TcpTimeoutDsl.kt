@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.TcpTimeout
  * Represents timeouts for TCP protocols.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,15 +31,12 @@ import software.amazon.awscdk.services.appmesh.TcpTimeout
  */
 @CdkDslMarker
 public class TcpTimeoutDsl {
-  private val cdkBuilder: TcpTimeout.Builder = TcpTimeout.builder()
+    private val cdkBuilder: TcpTimeout.Builder = TcpTimeout.builder()
 
-  /**
-   * @param idle Represents an idle timeout.
-   * The amount of time that a connection may be idle.
-   */
-  public fun idle(idle: Duration) {
-    cdkBuilder.idle(idle)
-  }
+    /** @param idle Represents an idle timeout. The amount of time that a connection may be idle. */
+    public fun idle(idle: Duration) {
+        cdkBuilder.idle(idle)
+    }
 
-  public fun build(): TcpTimeout = cdkBuilder.build()
+    public fun build(): TcpTimeout = cdkBuilder.build()
 }

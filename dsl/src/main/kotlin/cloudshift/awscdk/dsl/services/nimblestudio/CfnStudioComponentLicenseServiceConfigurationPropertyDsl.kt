@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.nimblestudio
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
  * The configuration for a license service that is associated with a studio resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
  */
 @CdkDslMarker
 public class CfnStudioComponentLicenseServiceConfigurationPropertyDsl {
-  private val cdkBuilder: CfnStudioComponent.LicenseServiceConfigurationProperty.Builder =
-      CfnStudioComponent.LicenseServiceConfigurationProperty.builder()
+    private val cdkBuilder: CfnStudioComponent.LicenseServiceConfigurationProperty.Builder =
+        CfnStudioComponent.LicenseServiceConfigurationProperty.builder()
 
-  /**
-   * @param endpoint The endpoint of the license service that is accessed by the studio component
-   * resource.
-   */
-  public fun endpoint(endpoint: String) {
-    cdkBuilder.endpoint(endpoint)
-  }
+    /**
+     * @param endpoint The endpoint of the license service that is accessed by the studio component
+     *   resource.
+     */
+    public fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+    }
 
-  public fun build(): CfnStudioComponent.LicenseServiceConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnStudioComponent.LicenseServiceConfigurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2AspectProp
  * Properties for `LaunchTemplateRequireImdsv2Aspect`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,16 +31,16 @@ import software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2AspectProp
  */
 @CdkDslMarker
 public class LaunchTemplateRequireImdsv2AspectPropsDsl {
-  private val cdkBuilder: LaunchTemplateRequireImdsv2AspectProps.Builder =
-      LaunchTemplateRequireImdsv2AspectProps.builder()
+    private val cdkBuilder: LaunchTemplateRequireImdsv2AspectProps.Builder =
+        LaunchTemplateRequireImdsv2AspectProps.builder()
 
-  /**
-   * @param suppressWarnings Whether warning annotations from this Aspect should be suppressed or
-   * not.
-   */
-  public fun suppressWarnings(suppressWarnings: Boolean) {
-    cdkBuilder.suppressWarnings(suppressWarnings)
-  }
+    /**
+     * @param suppressWarnings Whether warning annotations from this Aspect should be suppressed or
+     *   not.
+     */
+    public fun suppressWarnings(suppressWarnings: Boolean) {
+        cdkBuilder.suppressWarnings(suppressWarnings)
+    }
 
-  public fun build(): LaunchTemplateRequireImdsv2AspectProps = cdkBuilder.build()
+    public fun build(): LaunchTemplateRequireImdsv2AspectProps = cdkBuilder.build()
 }

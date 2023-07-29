@@ -1,11 +1,20 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociation
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Associates the specified product with the specified portfolio.
@@ -13,7 +22,6 @@ import kotlin.String
  * A delegated admin is authorized to invoke this command.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,18 +41,18 @@ import kotlin.String
 @CdkDslMarker
 public class CfnPortfolioProductAssociationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnPortfolioProductAssociation.Builder =
         CfnPortfolioProductAssociation.Builder.create(scope, id)
 
     /**
      * The language code.
-     *
      * * `jp` - Japanese
      * * `zh` - Chinese
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-acceptlanguage)
+     *
      * @param acceptLanguage The language code.
      */
     public fun acceptLanguage(acceptLanguage: String) {
@@ -55,6 +63,7 @@ public class CfnPortfolioProductAssociationDsl(
      * The portfolio identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-portfolioid)
+     *
      * @param portfolioId The portfolio identifier.
      */
     public fun portfolioId(portfolioId: String) {
@@ -65,6 +74,7 @@ public class CfnPortfolioProductAssociationDsl(
      * The product identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-productid)
+     *
      * @param productId The product identifier.
      */
     public fun productId(productId: String) {
@@ -75,6 +85,7 @@ public class CfnPortfolioProductAssociationDsl(
      * The identifier of the source portfolio.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-sourceportfolioid)
+     *
      * @param sourcePortfolioId The identifier of the source portfolio.
      */
     public fun sourcePortfolioId(sourcePortfolioId: String) {

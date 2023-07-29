@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.Number
 
 /**
  * Options that determine the layout and display options of a chart's small multiples.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -57,9 +65,8 @@ public class CfnTemplateSmallMultiplesOptionsPropertyDsl {
 
     /**
      * @param maxVisibleColumns Sets the maximum number of visible columns to display in the grid of
-     * small multiples panels.
-     * The default is `Auto` , which automatically adjusts the columns in the grid to fit the overall
-     * layout and size of the given chart.
+     *   small multiples panels. The default is `Auto` , which automatically adjusts the columns in
+     *   the grid to fit the overall layout and size of the given chart.
      */
     public fun maxVisibleColumns(maxVisibleColumns: Number) {
         cdkBuilder.maxVisibleColumns(maxVisibleColumns)
@@ -67,24 +74,19 @@ public class CfnTemplateSmallMultiplesOptionsPropertyDsl {
 
     /**
      * @param maxVisibleRows Sets the maximum number of visible rows to display in the grid of small
-     * multiples panels.
-     * The default value is `Auto` , which automatically adjusts the rows in the grid to fit the
-     * overall layout and size of the given chart.
+     *   multiples panels. The default value is `Auto` , which automatically adjusts the rows in the
+     *   grid to fit the overall layout and size of the given chart.
      */
     public fun maxVisibleRows(maxVisibleRows: Number) {
         cdkBuilder.maxVisibleRows(maxVisibleRows)
     }
 
-    /**
-     * @param panelConfiguration Configures the display options for each small multiples panel.
-     */
+    /** @param panelConfiguration Configures the display options for each small multiples panel. */
     public fun panelConfiguration(panelConfiguration: IResolvable) {
         cdkBuilder.panelConfiguration(panelConfiguration)
     }
 
-    /**
-     * @param panelConfiguration Configures the display options for each small multiples panel.
-     */
+    /** @param panelConfiguration Configures the display options for each small multiples panel. */
     public fun panelConfiguration(panelConfiguration: CfnTemplate.PanelConfigurationProperty) {
         cdkBuilder.panelConfiguration(panelConfiguration)
     }

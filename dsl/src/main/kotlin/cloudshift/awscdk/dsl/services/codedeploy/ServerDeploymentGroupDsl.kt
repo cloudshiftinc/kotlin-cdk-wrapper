@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -23,7 +32,6 @@ import software.constructs.Construct
  * A CodeDeploy Deployment Group that deploys to EC2/on-premise instances.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.elasticloadbalancing.*;
  * LoadBalancer lb;
@@ -38,224 +46,228 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class ServerDeploymentGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: ServerDeploymentGroup.Builder =
-      ServerDeploymentGroup.Builder.create(scope, id)
+    private val cdkBuilder: ServerDeploymentGroup.Builder =
+        ServerDeploymentGroup.Builder.create(scope, id)
 
-  private val _alarms: MutableList<IAlarm> = mutableListOf()
+    private val _alarms: MutableList<IAlarm> = mutableListOf()
 
-  private val _autoScalingGroups: MutableList<IAutoScalingGroup> = mutableListOf()
+    private val _autoScalingGroups: MutableList<IAutoScalingGroup> = mutableListOf()
 
-  /**
-   * The CloudWatch alarms associated with this Deployment Group.
-   *
-   * CodeDeploy will stop (and optionally roll back)
-   * a deployment if during it any of the alarms trigger.
-   *
-   * Alarms can also be added after the Deployment Group is created using the `#addAlarm` method.
-   *
-   * Default: []
-   *
-   * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-create-alarms.html)
-   * @param alarms The CloudWatch alarms associated with this Deployment Group. 
-   */
-  public fun alarms(vararg alarms: IAlarm) {
-    _alarms.addAll(listOf(*alarms))
-  }
+    /**
+     * The CloudWatch alarms associated with this Deployment Group.
+     *
+     * CodeDeploy will stop (and optionally roll back) a deployment if during it any of the alarms
+     * trigger.
+     *
+     * Alarms can also be added after the Deployment Group is created using the `#addAlarm` method.
+     *
+     * Default: []
+     *
+     * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-create-alarms.html)
+     *
+     * @param alarms The CloudWatch alarms associated with this Deployment Group.
+     */
+    public fun alarms(vararg alarms: IAlarm) {
+        _alarms.addAll(listOf(*alarms))
+    }
 
-  /**
-   * The CloudWatch alarms associated with this Deployment Group.
-   *
-   * CodeDeploy will stop (and optionally roll back)
-   * a deployment if during it any of the alarms trigger.
-   *
-   * Alarms can also be added after the Deployment Group is created using the `#addAlarm` method.
-   *
-   * Default: []
-   *
-   * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-create-alarms.html)
-   * @param alarms The CloudWatch alarms associated with this Deployment Group. 
-   */
-  public fun alarms(alarms: Collection<IAlarm>) {
-    _alarms.addAll(alarms)
-  }
+    /**
+     * The CloudWatch alarms associated with this Deployment Group.
+     *
+     * CodeDeploy will stop (and optionally roll back) a deployment if during it any of the alarms
+     * trigger.
+     *
+     * Alarms can also be added after the Deployment Group is created using the `#addAlarm` method.
+     *
+     * Default: []
+     *
+     * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-create-alarms.html)
+     *
+     * @param alarms The CloudWatch alarms associated with this Deployment Group.
+     */
+    public fun alarms(alarms: Collection<IAlarm>) {
+        _alarms.addAll(alarms)
+    }
 
-  /**
-   * The CodeDeploy EC2/on-premise Application this Deployment Group belongs to.
-   *
-   * Default: - A new Application will be created.
-   *
-   * @param application The CodeDeploy EC2/on-premise Application this Deployment Group belongs to. 
-   */
-  public fun application(application: IServerApplication) {
-    cdkBuilder.application(application)
-  }
+    /**
+     * The CodeDeploy EC2/on-premise Application this Deployment Group belongs to.
+     *
+     * Default: - A new Application will be created.
+     *
+     * @param application The CodeDeploy EC2/on-premise Application this Deployment Group belongs
+     *   to.
+     */
+    public fun application(application: IServerApplication) {
+        cdkBuilder.application(application)
+    }
 
-  /**
-   * The auto-rollback configuration for this Deployment Group.
-   *
-   * Default: - default AutoRollbackConfig.
-   *
-   * @param autoRollback The auto-rollback configuration for this Deployment Group. 
-   */
-  public fun autoRollback(autoRollback: AutoRollbackConfigDsl.() -> Unit = {}) {
-    val builder = AutoRollbackConfigDsl()
-    builder.apply(autoRollback)
-    cdkBuilder.autoRollback(builder.build())
-  }
+    /**
+     * The auto-rollback configuration for this Deployment Group.
+     *
+     * Default: - default AutoRollbackConfig.
+     *
+     * @param autoRollback The auto-rollback configuration for this Deployment Group.
+     */
+    public fun autoRollback(autoRollback: AutoRollbackConfigDsl.() -> Unit = {}) {
+        val builder = AutoRollbackConfigDsl()
+        builder.apply(autoRollback)
+        cdkBuilder.autoRollback(builder.build())
+    }
 
-  /**
-   * The auto-rollback configuration for this Deployment Group.
-   *
-   * Default: - default AutoRollbackConfig.
-   *
-   * @param autoRollback The auto-rollback configuration for this Deployment Group. 
-   */
-  public fun autoRollback(autoRollback: AutoRollbackConfig) {
-    cdkBuilder.autoRollback(autoRollback)
-  }
+    /**
+     * The auto-rollback configuration for this Deployment Group.
+     *
+     * Default: - default AutoRollbackConfig.
+     *
+     * @param autoRollback The auto-rollback configuration for this Deployment Group.
+     */
+    public fun autoRollback(autoRollback: AutoRollbackConfig) {
+        cdkBuilder.autoRollback(autoRollback)
+    }
 
-  /**
-   * The auto-scaling groups belonging to this Deployment Group.
-   *
-   * Auto-scaling groups can also be added after the Deployment Group is created
-   * using the `#addAutoScalingGroup` method.
-   *
-   * [disable-awslint:ref-via-interface] is needed because we update userdata
-   * for ASGs to install the codedeploy agent.
-   *
-   * Default: []
-   *
-   * @param autoScalingGroups The auto-scaling groups belonging to this Deployment Group. 
-   */
-  public fun autoScalingGroups(vararg autoScalingGroups: IAutoScalingGroup) {
-    _autoScalingGroups.addAll(listOf(*autoScalingGroups))
-  }
+    /**
+     * The auto-scaling groups belonging to this Deployment Group.
+     *
+     * Auto-scaling groups can also be added after the Deployment Group is created using the
+     * `#addAutoScalingGroup` method.
+     *
+     * [disable-awslint:ref-via-interface] is needed because we update userdata for ASGs to install
+     * the codedeploy agent.
+     *
+     * Default: []
+     *
+     * @param autoScalingGroups The auto-scaling groups belonging to this Deployment Group.
+     */
+    public fun autoScalingGroups(vararg autoScalingGroups: IAutoScalingGroup) {
+        _autoScalingGroups.addAll(listOf(*autoScalingGroups))
+    }
 
-  /**
-   * The auto-scaling groups belonging to this Deployment Group.
-   *
-   * Auto-scaling groups can also be added after the Deployment Group is created
-   * using the `#addAutoScalingGroup` method.
-   *
-   * [disable-awslint:ref-via-interface] is needed because we update userdata
-   * for ASGs to install the codedeploy agent.
-   *
-   * Default: []
-   *
-   * @param autoScalingGroups The auto-scaling groups belonging to this Deployment Group. 
-   */
-  public fun autoScalingGroups(autoScalingGroups: Collection<IAutoScalingGroup>) {
-    _autoScalingGroups.addAll(autoScalingGroups)
-  }
+    /**
+     * The auto-scaling groups belonging to this Deployment Group.
+     *
+     * Auto-scaling groups can also be added after the Deployment Group is created using the
+     * `#addAutoScalingGroup` method.
+     *
+     * [disable-awslint:ref-via-interface] is needed because we update userdata for ASGs to install
+     * the codedeploy agent.
+     *
+     * Default: []
+     *
+     * @param autoScalingGroups The auto-scaling groups belonging to this Deployment Group.
+     */
+    public fun autoScalingGroups(autoScalingGroups: Collection<IAutoScalingGroup>) {
+        _autoScalingGroups.addAll(autoScalingGroups)
+    }
 
-  /**
-   * The EC2/on-premise Deployment Configuration to use for this Deployment Group.
-   *
-   * Default: ServerDeploymentConfig#OneAtATime
-   *
-   * @param deploymentConfig The EC2/on-premise Deployment Configuration to use for this Deployment
-   * Group. 
-   */
-  public fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
-    cdkBuilder.deploymentConfig(deploymentConfig)
-  }
+    /**
+     * The EC2/on-premise Deployment Configuration to use for this Deployment Group.
+     *
+     * Default: ServerDeploymentConfig#OneAtATime
+     *
+     * @param deploymentConfig The EC2/on-premise Deployment Configuration to use for this
+     *   Deployment Group.
+     */
+    public fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
+        cdkBuilder.deploymentConfig(deploymentConfig)
+    }
 
-  /**
-   * The physical, human-readable name of the CodeDeploy Deployment Group.
-   *
-   * Default: - An auto-generated name will be used.
-   *
-   * @param deploymentGroupName The physical, human-readable name of the CodeDeploy Deployment
-   * Group. 
-   */
-  public fun deploymentGroupName(deploymentGroupName: String) {
-    cdkBuilder.deploymentGroupName(deploymentGroupName)
-  }
+    /**
+     * The physical, human-readable name of the CodeDeploy Deployment Group.
+     *
+     * Default: - An auto-generated name will be used.
+     *
+     * @param deploymentGroupName The physical, human-readable name of the CodeDeploy Deployment
+     *   Group.
+     */
+    public fun deploymentGroupName(deploymentGroupName: String) {
+        cdkBuilder.deploymentGroupName(deploymentGroupName)
+    }
 
-  /**
-   * All EC2 instances matching the given set of tags when a deployment occurs will be added to this
-   * Deployment Group.
-   *
-   * Default: - No additional EC2 instances will be added to the Deployment Group.
-   *
-   * @param ec2InstanceTags All EC2 instances matching the given set of tags when a deployment
-   * occurs will be added to this Deployment Group. 
-   */
-  public fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet) {
-    cdkBuilder.ec2InstanceTags(ec2InstanceTags)
-  }
+    /**
+     * All EC2 instances matching the given set of tags when a deployment occurs will be added to
+     * this Deployment Group.
+     *
+     * Default: - No additional EC2 instances will be added to the Deployment Group.
+     *
+     * @param ec2InstanceTags All EC2 instances matching the given set of tags when a deployment
+     *   occurs will be added to this Deployment Group.
+     */
+    public fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet) {
+        cdkBuilder.ec2InstanceTags(ec2InstanceTags)
+    }
 
-  /**
-   * Whether to continue a deployment even if fetching the alarm status from CloudWatch failed.
-   *
-   * Default: false
-   *
-   * @param ignorePollAlarmsFailure Whether to continue a deployment even if fetching the alarm
-   * status from CloudWatch failed. 
-   */
-  public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
-    cdkBuilder.ignorePollAlarmsFailure(ignorePollAlarmsFailure)
-  }
+    /**
+     * Whether to continue a deployment even if fetching the alarm status from CloudWatch failed.
+     *
+     * Default: false
+     *
+     * @param ignorePollAlarmsFailure Whether to continue a deployment even if fetching the alarm
+     *   status from CloudWatch failed.
+     */
+    public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
+        cdkBuilder.ignorePollAlarmsFailure(ignorePollAlarmsFailure)
+    }
 
-  /**
-   * If you've provided any auto-scaling groups with the `#autoScalingGroups` property, you can set
-   * this property to add User Data that installs the CodeDeploy agent on the instances.
-   *
-   * Default: true
-   *
-   * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html)
-   * @param installAgent If you've provided any auto-scaling groups with the `#autoScalingGroups`
-   * property, you can set this property to add User Data that installs the CodeDeploy agent on the
-   * instances. 
-   */
-  public fun installAgent(installAgent: Boolean) {
-    cdkBuilder.installAgent(installAgent)
-  }
+    /**
+     * If you've provided any auto-scaling groups with the `#autoScalingGroups` property, you can
+     * set this property to add User Data that installs the CodeDeploy agent on the instances.
+     *
+     * Default: true
+     *
+     * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html)
+     *
+     * @param installAgent If you've provided any auto-scaling groups with the `#autoScalingGroups`
+     *   property, you can set this property to add User Data that installs the CodeDeploy agent on
+     *   the instances.
+     */
+    public fun installAgent(installAgent: Boolean) {
+        cdkBuilder.installAgent(installAgent)
+    }
 
-  /**
-   * The load balancer to place in front of this Deployment Group.
-   *
-   * Can be created from either a classic Elastic Load Balancer,
-   * or an Application Load Balancer / Network Load Balancer Target Group.
-   *
-   * Default: - Deployment Group will not have a load balancer defined.
-   *
-   * @param loadBalancer The load balancer to place in front of this Deployment Group. 
-   */
-  public fun loadBalancer(loadBalancer: LoadBalancer) {
-    cdkBuilder.loadBalancer(loadBalancer)
-  }
+    /**
+     * The load balancer to place in front of this Deployment Group.
+     *
+     * Can be created from either a classic Elastic Load Balancer, or an Application Load Balancer /
+     * Network Load Balancer Target Group.
+     *
+     * Default: - Deployment Group will not have a load balancer defined.
+     *
+     * @param loadBalancer The load balancer to place in front of this Deployment Group.
+     */
+    public fun loadBalancer(loadBalancer: LoadBalancer) {
+        cdkBuilder.loadBalancer(loadBalancer)
+    }
 
-  /**
-   * All on-premise instances matching the given set of tags when a deployment occurs will be added
-   * to this Deployment Group.
-   *
-   * Default: - No additional on-premise instances will be added to the Deployment Group.
-   *
-   * @param onPremiseInstanceTags All on-premise instances matching the given set of tags when a
-   * deployment occurs will be added to this Deployment Group. 
-   */
-  public fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
-    cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags)
-  }
+    /**
+     * All on-premise instances matching the given set of tags when a deployment occurs will be
+     * added to this Deployment Group.
+     *
+     * Default: - No additional on-premise instances will be added to the Deployment Group.
+     *
+     * @param onPremiseInstanceTags All on-premise instances matching the given set of tags when a
+     *   deployment occurs will be added to this Deployment Group.
+     */
+    public fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
+        cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags)
+    }
 
-  /**
-   * The service Role of this Deployment Group.
-   *
-   * Default: - A new Role will be created.
-   *
-   * @param role The service Role of this Deployment Group. 
-   */
-  public fun role(role: IRole) {
-    cdkBuilder.role(role)
-  }
+    /**
+     * The service Role of this Deployment Group.
+     *
+     * Default: - A new Role will be created.
+     *
+     * @param role The service Role of this Deployment Group.
+     */
+    public fun role(role: IRole) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): ServerDeploymentGroup {
-    if(_alarms.isNotEmpty()) cdkBuilder.alarms(_alarms)
-    if(_autoScalingGroups.isNotEmpty()) cdkBuilder.autoScalingGroups(_autoScalingGroups)
-    return cdkBuilder.build()
-  }
+    public fun build(): ServerDeploymentGroup {
+        if (_alarms.isNotEmpty()) cdkBuilder.alarms(_alarms)
+        if (_autoScalingGroups.isNotEmpty()) cdkBuilder.autoScalingGroups(_autoScalingGroups)
+        return cdkBuilder.build()
+    }
 }

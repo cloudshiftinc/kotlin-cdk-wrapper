@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  * Describes the location of the channel data.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  */
 @CdkDslMarker
 public class CfnModelPackageDataSourcePropertyDsl {
-  private val cdkBuilder: CfnModelPackage.DataSourceProperty.Builder =
-      CfnModelPackage.DataSourceProperty.builder()
+    private val cdkBuilder: CfnModelPackage.DataSourceProperty.Builder =
+        CfnModelPackage.DataSourceProperty.builder()
 
-  /**
-   * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-   */
-  public fun s3DataSource(s3DataSource: IResolvable) {
-    cdkBuilder.s3DataSource(s3DataSource)
-  }
+    /** @param s3DataSource The S3 location of the data source that is associated with a channel. */
+    public fun s3DataSource(s3DataSource: IResolvable) {
+        cdkBuilder.s3DataSource(s3DataSource)
+    }
 
-  /**
-   * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-   */
-  public fun s3DataSource(s3DataSource: CfnModelPackage.S3DataSourceProperty) {
-    cdkBuilder.s3DataSource(s3DataSource)
-  }
+    /** @param s3DataSource The S3 location of the data source that is associated with a channel. */
+    public fun s3DataSource(s3DataSource: CfnModelPackage.S3DataSourceProperty) {
+        cdkBuilder.s3DataSource(s3DataSource)
+    }
 
-  public fun build(): CfnModelPackage.DataSourceProperty = cdkBuilder.build()
+    public fun build(): CfnModelPackage.DataSourceProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appflow.CfnConnector
  * connector.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.appflow.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorLambdaConnectorProvisioningConfigPropertyDsl {
-  private val cdkBuilder: CfnConnector.LambdaConnectorProvisioningConfigProperty.Builder =
-      CfnConnector.LambdaConnectorProvisioningConfigProperty.builder()
+    private val cdkBuilder: CfnConnector.LambdaConnectorProvisioningConfigProperty.Builder =
+        CfnConnector.LambdaConnectorProvisioningConfigProperty.builder()
 
-  /**
-   * @param lambdaArn Lambda ARN of the connector being registered. 
-   */
-  public fun lambdaArn(lambdaArn: String) {
-    cdkBuilder.lambdaArn(lambdaArn)
-  }
+    /** @param lambdaArn Lambda ARN of the connector being registered. */
+    public fun lambdaArn(lambdaArn: String) {
+        cdkBuilder.lambdaArn(lambdaArn)
+    }
 
-  public fun build(): CfnConnector.LambdaConnectorProvisioningConfigProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.LambdaConnectorProvisioningConfigProperty = cdkBuilder.build()
 }

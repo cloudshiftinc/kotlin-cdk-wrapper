@@ -1,11 +1,20 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDataSource
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDataSource
 
 /**
  * The parameters for Amazon Redshift.
@@ -14,7 +23,6 @@ import kotlin.String
  * fields can be blank if the `ClusterId` field is set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,32 +44,23 @@ public class CfnDataSourceRedshiftParametersPropertyDsl {
         CfnDataSource.RedshiftParametersProperty.builder()
 
     /**
-     * @param clusterId Cluster ID.
-     * This field can be blank if the `Host` and `Port` are provided.
+     * @param clusterId Cluster ID. This field can be blank if the `Host` and `Port` are provided.
      */
     public fun clusterId(clusterId: String) {
         cdkBuilder.clusterId(clusterId)
     }
 
-    /**
-     * @param database Database.
-     */
+    /** @param database Database. */
     public fun database(database: String) {
         cdkBuilder.database(database)
     }
 
-    /**
-     * @param host Host.
-     * This field can be blank if `ClusterId` is provided.
-     */
+    /** @param host Host. This field can be blank if `ClusterId` is provided. */
     public fun host(host: String) {
         cdkBuilder.host(host)
     }
 
-    /**
-     * @param port Port.
-     * This field can be blank if the `ClusterId` is provided.
-     */
+    /** @param port Port. This field can be blank if the `ClusterId` is provided. */
     public fun port(port: Number) {
         cdkBuilder.port(port)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,57 +57,58 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardDrillDownFilterPropertyDsl {
-  private val cdkBuilder: CfnDashboard.DrillDownFilterProperty.Builder =
-      CfnDashboard.DrillDownFilterProperty.builder()
+    private val cdkBuilder: CfnDashboard.DrillDownFilterProperty.Builder =
+        CfnDashboard.DrillDownFilterProperty.builder()
 
-  /**
-   * @param categoryFilter The category type drill down filter.
-   * This filter is used for string type columns.
-   */
-  public fun categoryFilter(categoryFilter: IResolvable) {
-    cdkBuilder.categoryFilter(categoryFilter)
-  }
+    /**
+     * @param categoryFilter The category type drill down filter. This filter is used for string
+     *   type columns.
+     */
+    public fun categoryFilter(categoryFilter: IResolvable) {
+        cdkBuilder.categoryFilter(categoryFilter)
+    }
 
-  /**
-   * @param categoryFilter The category type drill down filter.
-   * This filter is used for string type columns.
-   */
-  public fun categoryFilter(categoryFilter: CfnDashboard.CategoryDrillDownFilterProperty) {
-    cdkBuilder.categoryFilter(categoryFilter)
-  }
+    /**
+     * @param categoryFilter The category type drill down filter. This filter is used for string
+     *   type columns.
+     */
+    public fun categoryFilter(categoryFilter: CfnDashboard.CategoryDrillDownFilterProperty) {
+        cdkBuilder.categoryFilter(categoryFilter)
+    }
 
-  /**
-   * @param numericEqualityFilter The numeric equality type drill down filter.
-   * This filter is used for number type columns.
-   */
-  public fun numericEqualityFilter(numericEqualityFilter: IResolvable) {
-    cdkBuilder.numericEqualityFilter(numericEqualityFilter)
-  }
+    /**
+     * @param numericEqualityFilter The numeric equality type drill down filter. This filter is used
+     *   for number type columns.
+     */
+    public fun numericEqualityFilter(numericEqualityFilter: IResolvable) {
+        cdkBuilder.numericEqualityFilter(numericEqualityFilter)
+    }
 
-  /**
-   * @param numericEqualityFilter The numeric equality type drill down filter.
-   * This filter is used for number type columns.
-   */
-  public
-      fun numericEqualityFilter(numericEqualityFilter: CfnDashboard.NumericEqualityDrillDownFilterProperty) {
-    cdkBuilder.numericEqualityFilter(numericEqualityFilter)
-  }
+    /**
+     * @param numericEqualityFilter The numeric equality type drill down filter. This filter is used
+     *   for number type columns.
+     */
+    public fun numericEqualityFilter(
+        numericEqualityFilter: CfnDashboard.NumericEqualityDrillDownFilterProperty
+    ) {
+        cdkBuilder.numericEqualityFilter(numericEqualityFilter)
+    }
 
-  /**
-   * @param timeRangeFilter The time range drill down filter.
-   * This filter is used for date time columns.
-   */
-  public fun timeRangeFilter(timeRangeFilter: IResolvable) {
-    cdkBuilder.timeRangeFilter(timeRangeFilter)
-  }
+    /**
+     * @param timeRangeFilter The time range drill down filter. This filter is used for date time
+     *   columns.
+     */
+    public fun timeRangeFilter(timeRangeFilter: IResolvable) {
+        cdkBuilder.timeRangeFilter(timeRangeFilter)
+    }
 
-  /**
-   * @param timeRangeFilter The time range drill down filter.
-   * This filter is used for date time columns.
-   */
-  public fun timeRangeFilter(timeRangeFilter: CfnDashboard.TimeRangeDrillDownFilterProperty) {
-    cdkBuilder.timeRangeFilter(timeRangeFilter)
-  }
+    /**
+     * @param timeRangeFilter The time range drill down filter. This filter is used for date time
+     *   columns.
+     */
+    public fun timeRangeFilter(timeRangeFilter: CfnDashboard.TimeRangeDrillDownFilterProperty) {
+        cdkBuilder.timeRangeFilter(timeRangeFilter)
+    }
 
-  public fun build(): CfnDashboard.DrillDownFilterProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.DrillDownFilterProperty = cdkBuilder.build()
 }

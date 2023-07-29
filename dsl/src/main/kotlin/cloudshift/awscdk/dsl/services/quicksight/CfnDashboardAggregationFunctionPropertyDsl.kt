@@ -1,11 +1,20 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
-import kotlin.String
 
 /**
  * An aggregation function aggregates values from a dimension or measure.
@@ -14,7 +23,6 @@ import kotlin.String
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -58,17 +66,15 @@ public class CfnDashboardAggregationFunctionPropertyDsl {
         cdkBuilder.dateAggregationFunction(dateAggregationFunction)
     }
 
-    /**
-     * @param numericalAggregationFunction Aggregation for numerical values.
-     */
+    /** @param numericalAggregationFunction Aggregation for numerical values. */
     public fun numericalAggregationFunction(numericalAggregationFunction: IResolvable) {
         cdkBuilder.numericalAggregationFunction(numericalAggregationFunction)
     }
 
-    /**
-     * @param numericalAggregationFunction Aggregation for numerical values.
-     */
-    public fun numericalAggregationFunction(numericalAggregationFunction: CfnDashboard.NumericalAggregationFunctionProperty) {
+    /** @param numericalAggregationFunction Aggregation for numerical values. */
+    public fun numericalAggregationFunction(
+        numericalAggregationFunction: CfnDashboard.NumericalAggregationFunctionProperty
+    ) {
         cdkBuilder.numericalAggregationFunction(numericalAggregationFunction)
     }
 

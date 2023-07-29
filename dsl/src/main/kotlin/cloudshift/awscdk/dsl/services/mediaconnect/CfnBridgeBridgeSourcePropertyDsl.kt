@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.mediaconnect.CfnBridge
  * The bridge's source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,32 +50,30 @@ public class CfnBridgeBridgeSourcePropertyDsl {
         CfnBridge.BridgeSourceProperty.builder()
 
     /**
-     * @param flowSource The source of the bridge.
-     * A flow source originates in MediaConnect as an existing cloud flow.
+     * @param flowSource The source of the bridge. A flow source originates in MediaConnect as an
+     *   existing cloud flow.
      */
     public fun flowSource(flowSource: IResolvable) {
         cdkBuilder.flowSource(flowSource)
     }
 
     /**
-     * @param flowSource The source of the bridge.
-     * A flow source originates in MediaConnect as an existing cloud flow.
+     * @param flowSource The source of the bridge. A flow source originates in MediaConnect as an
+     *   existing cloud flow.
      */
     public fun flowSource(flowSource: CfnBridge.BridgeFlowSourceProperty) {
         cdkBuilder.flowSource(flowSource)
     }
 
     /**
-     * @param networkSource The source of the bridge.
-     * A network source originates at your premises.
+     * @param networkSource The source of the bridge. A network source originates at your premises.
      */
     public fun networkSource(networkSource: IResolvable) {
         cdkBuilder.networkSource(networkSource)
     }
 
     /**
-     * @param networkSource The source of the bridge.
-     * A network source originates at your premises.
+     * @param networkSource The source of the bridge. A network source originates at your premises.
      */
     public fun networkSource(networkSource: CfnBridge.BridgeNetworkSourceProperty) {
         cdkBuilder.networkSource(networkSource)

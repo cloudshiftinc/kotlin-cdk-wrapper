@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  * using the model package.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,36 +45,28 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  */
 @CdkDslMarker
 public class CfnModelPackageDriftCheckModelDataQualityPropertyDsl {
-  private val cdkBuilder: CfnModelPackage.DriftCheckModelDataQualityProperty.Builder =
-      CfnModelPackage.DriftCheckModelDataQualityProperty.builder()
+    private val cdkBuilder: CfnModelPackage.DriftCheckModelDataQualityProperty.Builder =
+        CfnModelPackage.DriftCheckModelDataQualityProperty.builder()
 
-  /**
-   * @param constraints The drift check model data quality constraints.
-   */
-  public fun constraints(constraints: IResolvable) {
-    cdkBuilder.constraints(constraints)
-  }
+    /** @param constraints The drift check model data quality constraints. */
+    public fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  /**
-   * @param constraints The drift check model data quality constraints.
-   */
-  public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
-    cdkBuilder.constraints(constraints)
-  }
+    /** @param constraints The drift check model data quality constraints. */
+    public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  /**
-   * @param statistics The drift check model data quality statistics.
-   */
-  public fun statistics(statistics: IResolvable) {
-    cdkBuilder.statistics(statistics)
-  }
+    /** @param statistics The drift check model data quality statistics. */
+    public fun statistics(statistics: IResolvable) {
+        cdkBuilder.statistics(statistics)
+    }
 
-  /**
-   * @param statistics The drift check model data quality statistics.
-   */
-  public fun statistics(statistics: CfnModelPackage.MetricsSourceProperty) {
-    cdkBuilder.statistics(statistics)
-  }
+    /** @param statistics The drift check model data quality statistics. */
+    public fun statistics(statistics: CfnModelPackage.MetricsSourceProperty) {
+        cdkBuilder.statistics(statistics)
+    }
 
-  public fun build(): CfnModelPackage.DriftCheckModelDataQualityProperty = cdkBuilder.build()
+    public fun build(): CfnModelPackage.DriftCheckModelDataQualityProperty = cdkBuilder.build()
 }

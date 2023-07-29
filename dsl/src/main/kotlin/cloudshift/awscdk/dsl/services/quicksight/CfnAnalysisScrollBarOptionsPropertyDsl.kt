@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * The visual display options for a data zoom scroll bar.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,23 +42,17 @@ public class CfnAnalysisScrollBarOptionsPropertyDsl {
     private val cdkBuilder: CfnAnalysis.ScrollBarOptionsProperty.Builder =
         CfnAnalysis.ScrollBarOptionsProperty.builder()
 
-    /**
-     * @param visibility The visibility of the data zoom scroll bar.
-     */
+    /** @param visibility The visibility of the data zoom scroll bar. */
     public fun visibility(visibility: String) {
         cdkBuilder.visibility(visibility)
     }
 
-    /**
-     * @param visibleRange The visibility range for the data zoom scroll bar.
-     */
+    /** @param visibleRange The visibility range for the data zoom scroll bar. */
     public fun visibleRange(visibleRange: IResolvable) {
         cdkBuilder.visibleRange(visibleRange)
     }
 
-    /**
-     * @param visibleRange The visibility range for the data zoom scroll bar.
-     */
+    /** @param visibleRange The visibility range for the data zoom scroll bar. */
     public fun visibleRange(visibleRange: CfnAnalysis.VisibleRangeOptionsProperty) {
         cdkBuilder.visibleRange(visibleRange)
     }

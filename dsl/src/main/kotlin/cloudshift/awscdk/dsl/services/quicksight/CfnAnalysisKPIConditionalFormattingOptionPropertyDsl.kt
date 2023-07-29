@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The conditional formatting options of a KPI visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -86,30 +94,24 @@ public class CfnAnalysisKPIConditionalFormattingOptionPropertyDsl {
     private val cdkBuilder: CfnAnalysis.KPIConditionalFormattingOptionProperty.Builder =
         CfnAnalysis.KPIConditionalFormattingOptionProperty.builder()
 
-    /**
-     * @param primaryValue The conditional formatting for the primary value of a KPI visual.
-     */
+    /** @param primaryValue The conditional formatting for the primary value of a KPI visual. */
     public fun primaryValue(primaryValue: IResolvable) {
         cdkBuilder.primaryValue(primaryValue)
     }
 
-    /**
-     * @param primaryValue The conditional formatting for the primary value of a KPI visual.
-     */
-    public fun primaryValue(primaryValue: CfnAnalysis.KPIPrimaryValueConditionalFormattingProperty) {
+    /** @param primaryValue The conditional formatting for the primary value of a KPI visual. */
+    public fun primaryValue(
+        primaryValue: CfnAnalysis.KPIPrimaryValueConditionalFormattingProperty
+    ) {
         cdkBuilder.primaryValue(primaryValue)
     }
 
-    /**
-     * @param progressBar The conditional formatting for the progress bar of a KPI visual.
-     */
+    /** @param progressBar The conditional formatting for the progress bar of a KPI visual. */
     public fun progressBar(progressBar: IResolvable) {
         cdkBuilder.progressBar(progressBar)
     }
 
-    /**
-     * @param progressBar The conditional formatting for the progress bar of a KPI visual.
-     */
+    /** @param progressBar The conditional formatting for the progress bar of a KPI visual. */
     public fun progressBar(progressBar: CfnAnalysis.KPIProgressBarConditionalFormattingProperty) {
         cdkBuilder.progressBar(progressBar)
     }

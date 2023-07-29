@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -19,7 +28,6 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,44 +46,43 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  */
 @CdkDslMarker
 public class CfnInstanceSsmAssociationPropertyDsl {
-  private val cdkBuilder: CfnInstance.SsmAssociationProperty.Builder =
-      CfnInstance.SsmAssociationProperty.builder()
+    private val cdkBuilder: CfnInstance.SsmAssociationProperty.Builder =
+        CfnInstance.SsmAssociationProperty.builder()
 
-  private val _associationParameters: MutableList<Any> = mutableListOf()
+    private val _associationParameters: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param associationParameters The input parameter values to use with the associated SSM
-   * document.
-   */
-  public fun associationParameters(vararg associationParameters: Any) {
-    _associationParameters.addAll(listOf(*associationParameters))
-  }
+    /**
+     * @param associationParameters The input parameter values to use with the associated SSM
+     *   document.
+     */
+    public fun associationParameters(vararg associationParameters: Any) {
+        _associationParameters.addAll(listOf(*associationParameters))
+    }
 
-  /**
-   * @param associationParameters The input parameter values to use with the associated SSM
-   * document.
-   */
-  public fun associationParameters(associationParameters: Collection<Any>) {
-    _associationParameters.addAll(associationParameters)
-  }
+    /**
+     * @param associationParameters The input parameter values to use with the associated SSM
+     *   document.
+     */
+    public fun associationParameters(associationParameters: Collection<Any>) {
+        _associationParameters.addAll(associationParameters)
+    }
 
-  /**
-   * @param associationParameters The input parameter values to use with the associated SSM
-   * document.
-   */
-  public fun associationParameters(associationParameters: IResolvable) {
-    cdkBuilder.associationParameters(associationParameters)
-  }
+    /**
+     * @param associationParameters The input parameter values to use with the associated SSM
+     *   document.
+     */
+    public fun associationParameters(associationParameters: IResolvable) {
+        cdkBuilder.associationParameters(associationParameters)
+    }
 
-  /**
-   * @param documentName The name of an SSM document to associate with the instance. 
-   */
-  public fun documentName(documentName: String) {
-    cdkBuilder.documentName(documentName)
-  }
+    /** @param documentName The name of an SSM document to associate with the instance. */
+    public fun documentName(documentName: String) {
+        cdkBuilder.documentName(documentName)
+    }
 
-  public fun build(): CfnInstance.SsmAssociationProperty {
-    if(_associationParameters.isNotEmpty()) cdkBuilder.associationParameters(_associationParameters)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnInstance.SsmAssociationProperty {
+        if (_associationParameters.isNotEmpty())
+            cdkBuilder.associationParameters(_associationParameters)
+        return cdkBuilder.build()
+    }
 }

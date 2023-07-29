@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * Line styles options for a line series in `LineChartVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,15 +61,13 @@ public class CfnDashboardLineChartLineStyleSettingsPropertyDsl {
 
     /**
      * @param lineVisibility Configuration option that determines whether to show the line for the
-     * series.
+     *   series.
      */
     public fun lineVisibility(lineVisibility: String) {
         cdkBuilder.lineVisibility(lineVisibility)
     }
 
-    /**
-     * @param lineWidth Width that determines the line thickness.
-     */
+    /** @param lineWidth Width that determines the line thickness. */
     public fun lineWidth(lineWidth: String) {
         cdkBuilder.lineWidth(lineWidth)
     }

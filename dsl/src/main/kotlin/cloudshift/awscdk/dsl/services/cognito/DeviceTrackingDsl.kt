@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.DeviceTracking
  * Device tracking settings.
  *
  * Example:
- *
  * ```
  * UserPool.Builder.create(this, "myuserpool")
  * // ...
@@ -25,22 +33,22 @@ import software.amazon.awscdk.services.cognito.DeviceTracking
  */
 @CdkDslMarker
 public class DeviceTrackingDsl {
-  private val cdkBuilder: DeviceTracking.Builder = DeviceTracking.builder()
+    private val cdkBuilder: DeviceTracking.Builder = DeviceTracking.builder()
 
-  /**
-   * @param challengeRequiredOnNewDevice Indicates whether a challenge is required on a new device. 
-   * Only applicable to a new device.
-   */
-  public fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: Boolean) {
-    cdkBuilder.challengeRequiredOnNewDevice(challengeRequiredOnNewDevice)
-  }
+    /**
+     * @param challengeRequiredOnNewDevice Indicates whether a challenge is required on a new
+     *   device. Only applicable to a new device.
+     */
+    public fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: Boolean) {
+        cdkBuilder.challengeRequiredOnNewDevice(challengeRequiredOnNewDevice)
+    }
 
-  /**
-   * @param deviceOnlyRememberedOnUserPrompt If true, a device is only remembered on user prompt. 
-   */
-  public fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: Boolean) {
-    cdkBuilder.deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt)
-  }
+    /**
+     * @param deviceOnlyRememberedOnUserPrompt If true, a device is only remembered on user prompt.
+     */
+    public fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: Boolean) {
+        cdkBuilder.deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt)
+    }
 
-  public fun build(): DeviceTracking = cdkBuilder.build()
+    public fun build(): DeviceTracking = cdkBuilder.build()
 }

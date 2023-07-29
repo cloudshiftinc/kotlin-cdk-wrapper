@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * Provides the forecast to meet the target for a particular date.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,12 @@ public class CfnAnalysisWhatIfPointScenarioPropertyDsl {
     private val cdkBuilder: CfnAnalysis.WhatIfPointScenarioProperty.Builder =
         CfnAnalysis.WhatIfPointScenarioProperty.builder()
 
-    /**
-     * @param date The date that you need the forecast results for.
-     */
+    /** @param date The date that you need the forecast results for. */
     public fun date(date: String) {
         cdkBuilder.date(date)
     }
 
-    /**
-     * @param value The target value that you want to meet for the provided date.
-     */
+    /** @param value The target value that you want to meet for the provided date. */
     public fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
     }

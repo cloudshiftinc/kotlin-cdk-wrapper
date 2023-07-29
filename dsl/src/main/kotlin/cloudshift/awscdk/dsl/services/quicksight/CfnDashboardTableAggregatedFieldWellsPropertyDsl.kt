@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The aggregated field well for the table.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -519,48 +527,48 @@ public class CfnDashboardTableAggregatedFieldWellsPropertyDsl {
     private val _values: MutableList<Any> = mutableListOf()
 
     /**
-     * @param groupBy The group by field well for a pivot table.
-     * Values are grouped by group by fields.
+     * @param groupBy The group by field well for a pivot table. Values are grouped by group by
+     *   fields.
      */
     public fun groupBy(vararg groupBy: Any) {
         _groupBy.addAll(listOf(*groupBy))
     }
 
     /**
-     * @param groupBy The group by field well for a pivot table.
-     * Values are grouped by group by fields.
+     * @param groupBy The group by field well for a pivot table. Values are grouped by group by
+     *   fields.
      */
     public fun groupBy(groupBy: Collection<Any>) {
         _groupBy.addAll(groupBy)
     }
 
     /**
-     * @param groupBy The group by field well for a pivot table.
-     * Values are grouped by group by fields.
+     * @param groupBy The group by field well for a pivot table. Values are grouped by group by
+     *   fields.
      */
     public fun groupBy(groupBy: IResolvable) {
         cdkBuilder.groupBy(groupBy)
     }
 
     /**
-     * @param values The values field well for a pivot table.
-     * Values are aggregated based on group by fields.
+     * @param values The values field well for a pivot table. Values are aggregated based on group
+     *   by fields.
      */
     public fun values(vararg values: Any) {
         _values.addAll(listOf(*values))
     }
 
     /**
-     * @param values The values field well for a pivot table.
-     * Values are aggregated based on group by fields.
+     * @param values The values field well for a pivot table. Values are aggregated based on group
+     *   by fields.
      */
     public fun values(values: Collection<Any>) {
         _values.addAll(values)
     }
 
     /**
-     * @param values The values field well for a pivot table.
-     * Values are aggregated based on group by fields.
+     * @param values The values field well for a pivot table. Values are aggregated based on group
+     *   by fields.
      */
     public fun values(values: IResolvable) {
         cdkBuilder.values(values)

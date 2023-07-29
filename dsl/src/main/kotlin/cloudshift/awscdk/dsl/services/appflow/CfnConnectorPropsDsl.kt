@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProps
  * Properties for defining a `CfnConnector`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,43 +42,38 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProps
  */
 @CdkDslMarker
 public class CfnConnectorPropsDsl {
-  private val cdkBuilder: CfnConnectorProps.Builder = CfnConnectorProps.builder()
+    private val cdkBuilder: CfnConnectorProps.Builder = CfnConnectorProps.builder()
 
-  /**
-   * @param connectorLabel The label used for registering the connector.
-   */
-  public fun connectorLabel(connectorLabel: String) {
-    cdkBuilder.connectorLabel(connectorLabel)
-  }
+    /** @param connectorLabel The label used for registering the connector. */
+    public fun connectorLabel(connectorLabel: String) {
+        cdkBuilder.connectorLabel(connectorLabel)
+    }
 
-  /**
-   * @param connectorProvisioningConfig The configuration required for registering the connector. 
-   */
-  public fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
-    cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
-  }
+    /**
+     * @param connectorProvisioningConfig The configuration required for registering the connector.
+     */
+    public fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
+        cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
+    }
 
-  /**
-   * @param connectorProvisioningConfig The configuration required for registering the connector. 
-   */
-  public
-      fun connectorProvisioningConfig(connectorProvisioningConfig: CfnConnector.ConnectorProvisioningConfigProperty) {
-    cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
-  }
+    /**
+     * @param connectorProvisioningConfig The configuration required for registering the connector.
+     */
+    public fun connectorProvisioningConfig(
+        connectorProvisioningConfig: CfnConnector.ConnectorProvisioningConfigProperty
+    ) {
+        cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
+    }
 
-  /**
-   * @param connectorProvisioningType The provisioning type used to register the connector. 
-   */
-  public fun connectorProvisioningType(connectorProvisioningType: String) {
-    cdkBuilder.connectorProvisioningType(connectorProvisioningType)
-  }
+    /** @param connectorProvisioningType The provisioning type used to register the connector. */
+    public fun connectorProvisioningType(connectorProvisioningType: String) {
+        cdkBuilder.connectorProvisioningType(connectorProvisioningType)
+    }
 
-  /**
-   * @param description A description about the connector runtime setting.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description about the connector runtime setting. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  public fun build(): CfnConnectorProps = cdkBuilder.build()
+    public fun build(): CfnConnectorProps = cdkBuilder.build()
 }

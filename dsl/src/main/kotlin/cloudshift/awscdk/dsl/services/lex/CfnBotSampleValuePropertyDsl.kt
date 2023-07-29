@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * Defines one of the values for a slot type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,14 +32,13 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotSampleValuePropertyDsl {
-  private val cdkBuilder: CfnBot.SampleValueProperty.Builder = CfnBot.SampleValueProperty.builder()
+    private val cdkBuilder: CfnBot.SampleValueProperty.Builder =
+        CfnBot.SampleValueProperty.builder()
 
-  /**
-   * @param value The value that can be used for a slot type. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value that can be used for a slot type. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnBot.SampleValueProperty = cdkBuilder.build()
+    public fun build(): CfnBot.SampleValueProperty = cdkBuilder.build()
 }

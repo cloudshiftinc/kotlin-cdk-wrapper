@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,24 +37,18 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  */
 @CdkDslMarker
 public class CfnInstanceHibernationOptionsPropertyDsl {
-  private val cdkBuilder: CfnInstance.HibernationOptionsProperty.Builder =
-      CfnInstance.HibernationOptionsProperty.builder()
+    private val cdkBuilder: CfnInstance.HibernationOptionsProperty.Builder =
+        CfnInstance.HibernationOptionsProperty.builder()
 
-  /**
-   * @param configured Set to `true` to enable your instance for hibernation.
-   * Default: `false`
-   */
-  public fun configured(configured: Boolean) {
-    cdkBuilder.configured(configured)
-  }
+    /** @param configured Set to `true` to enable your instance for hibernation. Default: `false` */
+    public fun configured(configured: Boolean) {
+        cdkBuilder.configured(configured)
+    }
 
-  /**
-   * @param configured Set to `true` to enable your instance for hibernation.
-   * Default: `false`
-   */
-  public fun configured(configured: IResolvable) {
-    cdkBuilder.configured(configured)
-  }
+    /** @param configured Set to `true` to enable your instance for hibernation. Default: `false` */
+    public fun configured(configured: IResolvable) {
+        cdkBuilder.configured(configured)
+    }
 
-  public fun build(): CfnInstance.HibernationOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnInstance.HibernationOptionsProperty = cdkBuilder.build()
 }

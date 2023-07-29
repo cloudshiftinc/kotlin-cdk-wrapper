@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.eks.LaunchTemplateSpec
  * Launch template property specification.
  *
  * Example:
- *
  * ```
  * Cluster cluster;
  * String userData = "MIME-Version: 1.0\nContent-Type: multipart/mixed;
@@ -33,21 +41,17 @@ import software.amazon.awscdk.services.eks.LaunchTemplateSpec
  */
 @CdkDslMarker
 public class LaunchTemplateSpecDsl {
-  private val cdkBuilder: LaunchTemplateSpec.Builder = LaunchTemplateSpec.builder()
+    private val cdkBuilder: LaunchTemplateSpec.Builder = LaunchTemplateSpec.builder()
 
-  /**
-   * @param id The Launch template ID. 
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The Launch template ID. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param version The launch template version to be used (optional).
-   */
-  public fun version(version: String) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The launch template version to be used (optional). */
+    public fun version(version: String) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): LaunchTemplateSpec = cdkBuilder.build()
+    public fun build(): LaunchTemplateSpec = cdkBuilder.build()
 }

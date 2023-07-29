@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * An AppSync dummy datasource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,41 +36,41 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class NoneDataSourceDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: NoneDataSource.Builder = NoneDataSource.Builder.create(scope, id)
+    private val cdkBuilder: NoneDataSource.Builder = NoneDataSource.Builder.create(scope, id)
 
-  /**
-   * The API to attach this data source to.
-   *
-   * @param api The API to attach this data source to. 
-   */
-  public fun api(api: IGraphqlApi) {
-    cdkBuilder.api(api)
-  }
+    /**
+     * The API to attach this data source to.
+     *
+     * @param api The API to attach this data source to.
+     */
+    public fun api(api: IGraphqlApi) {
+        cdkBuilder.api(api)
+    }
 
-  /**
-   * the description of the data source.
-   *
-   * Default: - None
-   *
-   * @param description the description of the data source. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * the description of the data source.
+     *
+     * Default: - None
+     *
+     * @param description the description of the data source.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * The name of the data source.
-   *
-   * Default: - id of data source
-   *
-   * @param name The name of the data source. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the data source.
+     *
+     * Default: - id of data source
+     *
+     * @param name The name of the data source.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): NoneDataSource = cdkBuilder.build()
+    public fun build(): NoneDataSource = cdkBuilder.build()
 }

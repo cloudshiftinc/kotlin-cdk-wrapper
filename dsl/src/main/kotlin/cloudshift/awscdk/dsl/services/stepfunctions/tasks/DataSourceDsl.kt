@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource
  * Location of the channel data.
  *
  * Example:
- *
  * ```
  * SageMakerCreateTrainingJob.Builder.create(this, "TrainSagemaker")
  * .trainingJobName(JsonPath.stringAt("$.JobName"))
@@ -45,23 +53,19 @@ import software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource
  */
 @CdkDslMarker
 public class DataSourceDsl {
-  private val cdkBuilder: DataSource.Builder = DataSource.builder()
+    private val cdkBuilder: DataSource.Builder = DataSource.builder()
 
-  /**
-   * @param s3DataSource S3 location of the data source that is associated with a channel. 
-   */
-  public fun s3DataSource(s3DataSource: S3DataSourceDsl.() -> Unit = {}) {
-    val builder = S3DataSourceDsl()
-    builder.apply(s3DataSource)
-    cdkBuilder.s3DataSource(builder.build())
-  }
+    /** @param s3DataSource S3 location of the data source that is associated with a channel. */
+    public fun s3DataSource(s3DataSource: S3DataSourceDsl.() -> Unit = {}) {
+        val builder = S3DataSourceDsl()
+        builder.apply(s3DataSource)
+        cdkBuilder.s3DataSource(builder.build())
+    }
 
-  /**
-   * @param s3DataSource S3 location of the data source that is associated with a channel. 
-   */
-  public fun s3DataSource(s3DataSource: S3DataSource) {
-    cdkBuilder.s3DataSource(s3DataSource)
-  }
+    /** @param s3DataSource S3 location of the data source that is associated with a channel. */
+    public fun s3DataSource(s3DataSource: S3DataSource) {
+        cdkBuilder.s3DataSource(s3DataSource)
+    }
 
-  public fun build(): DataSource = cdkBuilder.build()
+    public fun build(): DataSource = cdkBuilder.build()
 }

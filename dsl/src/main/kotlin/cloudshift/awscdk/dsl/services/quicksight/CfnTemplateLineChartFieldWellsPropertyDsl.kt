@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The field well configuration of a line chart.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -21,17 +29,15 @@ public class CfnTemplateLineChartFieldWellsPropertyDsl {
     private val cdkBuilder: CfnTemplate.LineChartFieldWellsProperty.Builder =
         CfnTemplate.LineChartFieldWellsProperty.builder()
 
-    /**
-     * @param lineChartAggregatedFieldWells The field well configuration of a line chart.
-     */
+    /** @param lineChartAggregatedFieldWells The field well configuration of a line chart. */
     public fun lineChartAggregatedFieldWells(lineChartAggregatedFieldWells: IResolvable) {
         cdkBuilder.lineChartAggregatedFieldWells(lineChartAggregatedFieldWells)
     }
 
-    /**
-     * @param lineChartAggregatedFieldWells The field well configuration of a line chart.
-     */
-    public fun lineChartAggregatedFieldWells(lineChartAggregatedFieldWells: CfnTemplate.LineChartAggregatedFieldWellsProperty) {
+    /** @param lineChartAggregatedFieldWells The field well configuration of a line chart. */
+    public fun lineChartAggregatedFieldWells(
+        lineChartAggregatedFieldWells: CfnTemplate.LineChartAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.lineChartAggregatedFieldWells(lineChartAggregatedFieldWells)
     }
 

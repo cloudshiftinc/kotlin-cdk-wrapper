@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * stream.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,40 +39,36 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class CfnDeliveryStreamCloudWatchLoggingOptionsPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.CloudWatchLoggingOptionsProperty.Builder =
-      CfnDeliveryStream.CloudWatchLoggingOptionsProperty.builder()
+    private val cdkBuilder: CfnDeliveryStream.CloudWatchLoggingOptionsProperty.Builder =
+        CfnDeliveryStream.CloudWatchLoggingOptionsProperty.builder()
 
-  /**
-   * @param enabled Indicates whether CloudWatch Logs logging is enabled.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether CloudWatch Logs logging is enabled. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Indicates whether CloudWatch Logs logging is enabled.
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether CloudWatch Logs logging is enabled. */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param logGroupName The name of the CloudWatch Logs log group that contains the log stream that
-   * Kinesis Data Firehose will use.
-   * Conditional. If you enable logging, you must specify this property.
-   */
-  public fun logGroupName(logGroupName: String) {
-    cdkBuilder.logGroupName(logGroupName)
-  }
+    /**
+     * @param logGroupName The name of the CloudWatch Logs log group that contains the log stream
+     *   that Kinesis Data Firehose will use. Conditional. If you enable logging, you must specify
+     *   this property.
+     */
+    public fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+    }
 
-  /**
-   * @param logStreamName The name of the CloudWatch Logs log stream that Kinesis Data Firehose uses
-   * to send logs about data delivery.
-   * Conditional. If you enable logging, you must specify this property.
-   */
-  public fun logStreamName(logStreamName: String) {
-    cdkBuilder.logStreamName(logStreamName)
-  }
+    /**
+     * @param logStreamName The name of the CloudWatch Logs log stream that Kinesis Data Firehose
+     *   uses to send logs about data delivery. Conditional. If you enable logging, you must specify
+     *   this property.
+     */
+    public fun logStreamName(logStreamName: String) {
+        cdkBuilder.logStreamName(logStreamName)
+    }
 
-  public fun build(): CfnDeliveryStream.CloudWatchLoggingOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.CloudWatchLoggingOptionsProperty = cdkBuilder.build()
 }

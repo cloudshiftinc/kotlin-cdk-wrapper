@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The comparison display configuration of a KPI or gauge chart.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -69,33 +77,30 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardComparisonConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ComparisonConfigurationProperty.Builder =
-      CfnDashboard.ComparisonConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.ComparisonConfigurationProperty.Builder =
+        CfnDashboard.ComparisonConfigurationProperty.builder()
 
-  /**
-   * @param comparisonFormat The format of the comparison.
-   */
-  public fun comparisonFormat(comparisonFormat: IResolvable) {
-    cdkBuilder.comparisonFormat(comparisonFormat)
-  }
+    /** @param comparisonFormat The format of the comparison. */
+    public fun comparisonFormat(comparisonFormat: IResolvable) {
+        cdkBuilder.comparisonFormat(comparisonFormat)
+    }
 
-  /**
-   * @param comparisonFormat The format of the comparison.
-   */
-  public
-      fun comparisonFormat(comparisonFormat: CfnDashboard.ComparisonFormatConfigurationProperty) {
-    cdkBuilder.comparisonFormat(comparisonFormat)
-  }
+    /** @param comparisonFormat The format of the comparison. */
+    public fun comparisonFormat(
+        comparisonFormat: CfnDashboard.ComparisonFormatConfigurationProperty
+    ) {
+        cdkBuilder.comparisonFormat(comparisonFormat)
+    }
 
-  /**
-   * @param comparisonMethod The method of the comparison. Choose from the following options:.
-   * * `DIFFERENCE`
-   * * `PERCENT_DIFFERENCE`
-   * * `PERCENT`
-   */
-  public fun comparisonMethod(comparisonMethod: String) {
-    cdkBuilder.comparisonMethod(comparisonMethod)
-  }
+    /**
+     * @param comparisonMethod The method of the comparison. Choose from the following options:.
+     * * `DIFFERENCE`
+     * * `PERCENT_DIFFERENCE`
+     * * `PERCENT`
+     */
+    public fun comparisonMethod(comparisonMethod: String) {
+        cdkBuilder.comparisonMethod(comparisonMethod)
+    }
 
-  public fun build(): CfnDashboard.ComparisonConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ComparisonConfigurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Configuration options for the canvas of a grid layout.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,7 +42,7 @@ public class CfnAnalysisGridLayoutCanvasSizeOptionsPropertyDsl {
 
     /**
      * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
-     * grid layout.
+     *   grid layout.
      */
     public fun screenCanvasSizeOptions(screenCanvasSizeOptions: IResolvable) {
         cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
@@ -42,9 +50,11 @@ public class CfnAnalysisGridLayoutCanvasSizeOptionsPropertyDsl {
 
     /**
      * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
-     * grid layout.
+     *   grid layout.
      */
-    public fun screenCanvasSizeOptions(screenCanvasSizeOptions: CfnAnalysis.GridLayoutScreenCanvasSizeOptionsProperty) {
+    public fun screenCanvasSizeOptions(
+        screenCanvasSizeOptions: CfnAnalysis.GridLayoutScreenCanvasSizeOptionsProperty
+    ) {
         cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
     }
 

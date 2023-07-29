@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opsworks
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.opsworks.CfnVolumeProps
  * Properties for defining a `CfnVolume`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,37 +36,27 @@ import software.amazon.awscdk.services.opsworks.CfnVolumeProps
  */
 @CdkDslMarker
 public class CfnVolumePropsDsl {
-  private val cdkBuilder: CfnVolumeProps.Builder = CfnVolumeProps.builder()
+    private val cdkBuilder: CfnVolumeProps.Builder = CfnVolumeProps.builder()
 
-  /**
-   * @param ec2VolumeId The Amazon EC2 volume ID. 
-   */
-  public fun ec2VolumeId(ec2VolumeId: String) {
-    cdkBuilder.ec2VolumeId(ec2VolumeId)
-  }
+    /** @param ec2VolumeId The Amazon EC2 volume ID. */
+    public fun ec2VolumeId(ec2VolumeId: String) {
+        cdkBuilder.ec2VolumeId(ec2VolumeId)
+    }
 
-  /**
-   * @param mountPoint The volume mount point.
-   * For example, "/mnt/disk1".
-   */
-  public fun mountPoint(mountPoint: String) {
-    cdkBuilder.mountPoint(mountPoint)
-  }
+    /** @param mountPoint The volume mount point. For example, "/mnt/disk1". */
+    public fun mountPoint(mountPoint: String) {
+        cdkBuilder.mountPoint(mountPoint)
+    }
 
-  /**
-   * @param name The volume name.
-   * Volume names are a maximum of 128 characters.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The volume name. Volume names are a maximum of 128 characters. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param stackId The stack ID. 
-   */
-  public fun stackId(stackId: String) {
-    cdkBuilder.stackId(stackId)
-  }
+    /** @param stackId The stack ID. */
+    public fun stackId(stackId: String) {
+        cdkBuilder.stackId(stackId)
+    }
 
-  public fun build(): CfnVolumeProps = cdkBuilder.build()
+    public fun build(): CfnVolumeProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.redshift
 
@@ -16,21 +25,21 @@ import software.constructs.Construct
  * ingress rules to an Amazon Redshift security group.
  *
  * If you authorize access to an Amazon EC2 security group, specify *EC2SecurityGroupName* and
- * *EC2SecurityGroupOwnerId* . The Amazon EC2 security group and Amazon Redshift cluster must be in the
- * same AWS Region .
+ * *EC2SecurityGroupOwnerId* . The Amazon EC2 security group and Amazon Redshift cluster must be in
+ * the same AWS Region .
  *
  * If you authorize access to a CIDR/IP address range, specify *CIDRIP* . For an overview of CIDR
- * blocks, see the Wikipedia article on [Classless Inter-Domain
- * Routing](https://docs.aws.amazon.com/http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) .
+ * blocks, see the Wikipedia article on
+ * [Classless Inter-Domain Routing](https://docs.aws.amazon.com/http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+ * .
  *
  * You must also associate the security group with a cluster so that clients running on these IP
  * addresses or the EC2 instance are authorized to connect to the cluster. For information about
- * managing security groups, go to [Working with Security
- * Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html) in the
- * *Amazon Redshift Cluster Management Guide* .
+ * managing security groups, go to
+ * [Working with Security Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html)
+ * in the *Amazon Redshift Cluster Management Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,62 +58,66 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnClusterSecurityGroupIngressDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnClusterSecurityGroupIngress.Builder =
-      CfnClusterSecurityGroupIngress.Builder.create(scope, id)
+    private val cdkBuilder: CfnClusterSecurityGroupIngress.Builder =
+        CfnClusterSecurityGroupIngress.Builder.create(scope, id)
 
-  /**
-   * The IP range to be added the Amazon Redshift security group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-cidrip)
-   * @param cidrip The IP range to be added the Amazon Redshift security group. 
-   */
-  public fun cidrip(cidrip: String) {
-    cdkBuilder.cidrip(cidrip)
-  }
+    /**
+     * The IP range to be added the Amazon Redshift security group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-cidrip)
+     *
+     * @param cidrip The IP range to be added the Amazon Redshift security group.
+     */
+    public fun cidrip(cidrip: String) {
+        cdkBuilder.cidrip(cidrip)
+    }
 
-  /**
-   * The name of the security group to which the ingress rule is added.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname)
-   * @param clusterSecurityGroupName The name of the security group to which the ingress rule is
-   * added. 
-   */
-  public fun clusterSecurityGroupName(clusterSecurityGroupName: String) {
-    cdkBuilder.clusterSecurityGroupName(clusterSecurityGroupName)
-  }
+    /**
+     * The name of the security group to which the ingress rule is added.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname)
+     *
+     * @param clusterSecurityGroupName The name of the security group to which the ingress rule is
+     *   added.
+     */
+    public fun clusterSecurityGroupName(clusterSecurityGroupName: String) {
+        cdkBuilder.clusterSecurityGroupName(clusterSecurityGroupName)
+    }
 
-  /**
-   * The EC2 security group to be added the Amazon Redshift security group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname)
-   * @param ec2SecurityGroupName The EC2 security group to be added the Amazon Redshift security
-   * group. 
-   */
-  public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
-    cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
-  }
+    /**
+     * The EC2 security group to be added the Amazon Redshift security group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname)
+     *
+     * @param ec2SecurityGroupName The EC2 security group to be added the Amazon Redshift security
+     *   group.
+     */
+    public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
+        cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
+    }
 
-  /**
-   * The AWS account number of the owner of the security group specified by the
-   * *EC2SecurityGroupName* parameter.
-   *
-   * The AWS Access Key ID is not an acceptable value.
-   *
-   * Example: `111122223333`
-   *
-   * Conditional. If you specify the `EC2SecurityGroupName` property, you must specify this
-   * property.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid)
-   * @param ec2SecurityGroupOwnerId The AWS account number of the owner of the security group
-   * specified by the *EC2SecurityGroupName* parameter. 
-   */
-  public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
-    cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
-  }
+    /**
+     * The AWS account number of the owner of the security group specified by the
+     * *EC2SecurityGroupName* parameter.
+     *
+     * The AWS Access Key ID is not an acceptable value.
+     *
+     * Example: `111122223333`
+     *
+     * Conditional. If you specify the `EC2SecurityGroupName` property, you must specify this
+     * property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid)
+     *
+     * @param ec2SecurityGroupOwnerId The AWS account number of the owner of the security group
+     *   specified by the *EC2SecurityGroupName* parameter.
+     */
+    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
+        cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
+    }
 
-  public fun build(): CfnClusterSecurityGroupIngress = cdkBuilder.build()
+    public fun build(): CfnClusterSecurityGroupIngress = cdkBuilder.build()
 }

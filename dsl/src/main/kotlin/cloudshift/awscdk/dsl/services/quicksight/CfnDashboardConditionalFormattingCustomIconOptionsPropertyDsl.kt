@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * Custom icon options for an icon set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,19 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardConditionalFormattingCustomIconOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ConditionalFormattingCustomIconOptionsProperty.Builder =
-      CfnDashboard.ConditionalFormattingCustomIconOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.ConditionalFormattingCustomIconOptionsProperty.Builder =
+        CfnDashboard.ConditionalFormattingCustomIconOptionsProperty.builder()
 
-  /**
-   * @param icon Determines the type of icon.
-   */
-  public fun icon(icon: String) {
-    cdkBuilder.icon(icon)
-  }
+    /** @param icon Determines the type of icon. */
+    public fun icon(icon: String) {
+        cdkBuilder.icon(icon)
+    }
 
-  /**
-   * @param unicodeIcon Determines the Unicode icon type.
-   */
-  public fun unicodeIcon(unicodeIcon: String) {
-    cdkBuilder.unicodeIcon(unicodeIcon)
-  }
+    /** @param unicodeIcon Determines the Unicode icon type. */
+    public fun unicodeIcon(unicodeIcon: String) {
+        cdkBuilder.unicodeIcon(unicodeIcon)
+    }
 
-  public fun build(): CfnDashboard.ConditionalFormattingCustomIconOptionsProperty =
-      cdkBuilder.build()
+    public fun build(): CfnDashboard.ConditionalFormattingCustomIconOptionsProperty =
+        cdkBuilder.build()
 }

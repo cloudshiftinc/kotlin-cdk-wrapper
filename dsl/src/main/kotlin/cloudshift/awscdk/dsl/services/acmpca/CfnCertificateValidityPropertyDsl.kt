@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.acmpca
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.acmpca.CfnCertificate
  * You can issue a certificate by calling the `IssueCertificate` operation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,22 +37,18 @@ import software.amazon.awscdk.services.acmpca.CfnCertificate
  */
 @CdkDslMarker
 public class CfnCertificateValidityPropertyDsl {
-  private val cdkBuilder: CfnCertificate.ValidityProperty.Builder =
-      CfnCertificate.ValidityProperty.builder()
+    private val cdkBuilder: CfnCertificate.ValidityProperty.Builder =
+        CfnCertificate.ValidityProperty.builder()
 
-  /**
-   * @param type Specifies whether the `Value` parameter represents days, months, or years. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type Specifies whether the `Value` parameter represents days, months, or years. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  /**
-   * @param value A long integer interpreted according to the value of `Type` , below. 
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value A long integer interpreted according to the value of `Type` , below. */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnCertificate.ValidityProperty = cdkBuilder.build()
+    public fun build(): CfnCertificate.ValidityProperty = cdkBuilder.build()
 }

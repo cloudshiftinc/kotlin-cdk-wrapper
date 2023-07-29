@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.stepfunctions.DefinitionConfig
  * Partial object from the StateMachine L1 construct properties containing definition information.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,48 +42,38 @@ import software.amazon.awscdk.services.stepfunctions.DefinitionConfig
  */
 @CdkDslMarker
 public class DefinitionConfigDsl {
-  private val cdkBuilder: DefinitionConfig.Builder = DefinitionConfig.builder()
+    private val cdkBuilder: DefinitionConfig.Builder = DefinitionConfig.builder()
 
-  /**
-   * @param definition the value to be set.
-   */
-  public fun definition(definition: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(definition)
-    cdkBuilder.definition(builder.map)
-  }
+    /** @param definition the value to be set. */
+    public fun definition(definition: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(definition)
+        cdkBuilder.definition(builder.map)
+    }
 
-  /**
-   * @param definition the value to be set.
-   */
-  public fun definition(definition: Any) {
-    cdkBuilder.definition(definition)
-  }
+    /** @param definition the value to be set. */
+    public fun definition(definition: Any) {
+        cdkBuilder.definition(definition)
+    }
 
-  /**
-   * @param definitionS3Location the value to be set.
-   */
-  public
-      fun definitionS3Location(definitionS3Location: CfnStateMachineS3LocationPropertyDsl.() -> Unit
-      = {}) {
-    val builder = CfnStateMachineS3LocationPropertyDsl()
-    builder.apply(definitionS3Location)
-    cdkBuilder.definitionS3Location(builder.build())
-  }
+    /** @param definitionS3Location the value to be set. */
+    public fun definitionS3Location(
+        definitionS3Location: CfnStateMachineS3LocationPropertyDsl.() -> Unit = {}
+    ) {
+        val builder = CfnStateMachineS3LocationPropertyDsl()
+        builder.apply(definitionS3Location)
+        cdkBuilder.definitionS3Location(builder.build())
+    }
 
-  /**
-   * @param definitionS3Location the value to be set.
-   */
-  public fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
-    cdkBuilder.definitionS3Location(definitionS3Location)
-  }
+    /** @param definitionS3Location the value to be set. */
+    public fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
+        cdkBuilder.definitionS3Location(definitionS3Location)
+    }
 
-  /**
-   * @param definitionString the value to be set.
-   */
-  public fun definitionString(definitionString: String) {
-    cdkBuilder.definitionString(definitionString)
-  }
+    /** @param definitionString the value to be set. */
+    public fun definitionString(definitionString: String) {
+        cdkBuilder.definitionString(definitionString)
+    }
 
-  public fun build(): DefinitionConfig = cdkBuilder.build()
+    public fun build(): DefinitionConfig = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,12 +22,11 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 /**
  * A histogram.
  *
- * For more information, see [Using
- * histograms](https://docs.aws.amazon.com/quicksight/latest/user/histogram-charts.html) in the *Amazon
- * QuickSight User Guide* .
+ * For more information, see
+ * [Using histograms](https://docs.aws.amazon.com/quicksight/latest/user/histogram-charts.html) in
+ * the *Amazon QuickSight User Guide* .
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -26,85 +34,67 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateHistogramVisualPropertyDsl {
-  private val cdkBuilder: CfnTemplate.HistogramVisualProperty.Builder =
-      CfnTemplate.HistogramVisualProperty.builder()
+    private val cdkBuilder: CfnTemplate.HistogramVisualProperty.Builder =
+        CfnTemplate.HistogramVisualProperty.builder()
 
-  private val _actions: MutableList<Any> = mutableListOf()
+    private val _actions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param actions The list of custom actions that are configured for a visual.
-   */
-  public fun actions(vararg actions: Any) {
-    _actions.addAll(listOf(*actions))
-  }
+    /** @param actions The list of custom actions that are configured for a visual. */
+    public fun actions(vararg actions: Any) {
+        _actions.addAll(listOf(*actions))
+    }
 
-  /**
-   * @param actions The list of custom actions that are configured for a visual.
-   */
-  public fun actions(actions: Collection<Any>) {
-    _actions.addAll(actions)
-  }
+    /** @param actions The list of custom actions that are configured for a visual. */
+    public fun actions(actions: Collection<Any>) {
+        _actions.addAll(actions)
+    }
 
-  /**
-   * @param actions The list of custom actions that are configured for a visual.
-   */
-  public fun actions(actions: IResolvable) {
-    cdkBuilder.actions(actions)
-  }
+    /** @param actions The list of custom actions that are configured for a visual. */
+    public fun actions(actions: IResolvable) {
+        cdkBuilder.actions(actions)
+    }
 
-  /**
-   * @param chartConfiguration The configuration for a `HistogramVisual` .
-   */
-  public fun chartConfiguration(chartConfiguration: IResolvable) {
-    cdkBuilder.chartConfiguration(chartConfiguration)
-  }
+    /** @param chartConfiguration The configuration for a `HistogramVisual` . */
+    public fun chartConfiguration(chartConfiguration: IResolvable) {
+        cdkBuilder.chartConfiguration(chartConfiguration)
+    }
 
-  /**
-   * @param chartConfiguration The configuration for a `HistogramVisual` .
-   */
-  public fun chartConfiguration(chartConfiguration: CfnTemplate.HistogramConfigurationProperty) {
-    cdkBuilder.chartConfiguration(chartConfiguration)
-  }
+    /** @param chartConfiguration The configuration for a `HistogramVisual` . */
+    public fun chartConfiguration(chartConfiguration: CfnTemplate.HistogramConfigurationProperty) {
+        cdkBuilder.chartConfiguration(chartConfiguration)
+    }
 
-  /**
-   * @param subtitle The subtitle that is displayed on the visual.
-   */
-  public fun subtitle(subtitle: IResolvable) {
-    cdkBuilder.subtitle(subtitle)
-  }
+    /** @param subtitle The subtitle that is displayed on the visual. */
+    public fun subtitle(subtitle: IResolvable) {
+        cdkBuilder.subtitle(subtitle)
+    }
 
-  /**
-   * @param subtitle The subtitle that is displayed on the visual.
-   */
-  public fun subtitle(subtitle: CfnTemplate.VisualSubtitleLabelOptionsProperty) {
-    cdkBuilder.subtitle(subtitle)
-  }
+    /** @param subtitle The subtitle that is displayed on the visual. */
+    public fun subtitle(subtitle: CfnTemplate.VisualSubtitleLabelOptionsProperty) {
+        cdkBuilder.subtitle(subtitle)
+    }
 
-  /**
-   * @param title The title that is displayed on the visual.
-   */
-  public fun title(title: IResolvable) {
-    cdkBuilder.title(title)
-  }
+    /** @param title The title that is displayed on the visual. */
+    public fun title(title: IResolvable) {
+        cdkBuilder.title(title)
+    }
 
-  /**
-   * @param title The title that is displayed on the visual.
-   */
-  public fun title(title: CfnTemplate.VisualTitleLabelOptionsProperty) {
-    cdkBuilder.title(title)
-  }
+    /** @param title The title that is displayed on the visual. */
+    public fun title(title: CfnTemplate.VisualTitleLabelOptionsProperty) {
+        cdkBuilder.title(title)
+    }
 
-  /**
-   * @param visualId The unique identifier of a visual. 
-   * This identifier must be unique within the context of a dashboard, template, or analysis. Two
-   * dashboards, analyses, or templates can have visuals with the same identifiers.
-   */
-  public fun visualId(visualId: String) {
-    cdkBuilder.visualId(visualId)
-  }
+    /**
+     * @param visualId The unique identifier of a visual. This identifier must be unique within the
+     *   context of a dashboard, template, or analysis. Two dashboards, analyses, or templates can
+     *   have visuals with the same identifiers.
+     */
+    public fun visualId(visualId: String) {
+        cdkBuilder.visualId(visualId)
+    }
 
-  public fun build(): CfnTemplate.HistogramVisualProperty {
-    if(_actions.isNotEmpty()) cdkBuilder.actions(_actions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTemplate.HistogramVisualProperty {
+        if (_actions.isNotEmpty()) cdkBuilder.actions(_actions)
+        return cdkBuilder.build()
+    }
 }

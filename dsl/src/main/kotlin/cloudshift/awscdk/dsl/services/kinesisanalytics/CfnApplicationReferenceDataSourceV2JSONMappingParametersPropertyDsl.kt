@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  * JSON is the record format on the streaming source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,16 +34,15 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceV2JSONMappingParametersPropertyDsl {
-  private val cdkBuilder: CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty.Builder
-      = CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty.builder()
+    private val cdkBuilder:
+        CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty.Builder =
+        CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty.builder()
 
-  /**
-   * @param recordRowPath The path to the top-level parent that contains the records. 
-   */
-  public fun recordRowPath(recordRowPath: String) {
-    cdkBuilder.recordRowPath(recordRowPath)
-  }
+    /** @param recordRowPath The path to the top-level parent that contains the records. */
+    public fun recordRowPath(recordRowPath: String) {
+        cdkBuilder.recordRowPath(recordRowPath)
+    }
 
-  public fun build(): CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty =
-      cdkBuilder.build()
+    public fun build(): CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty =
+        cdkBuilder.build()
 }

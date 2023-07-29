@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The configuration of a sankey diagram.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -18,51 +26,40 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateSankeyDiagramChartConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.SankeyDiagramChartConfigurationProperty.Builder =
-      CfnTemplate.SankeyDiagramChartConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.SankeyDiagramChartConfigurationProperty.Builder =
+        CfnTemplate.SankeyDiagramChartConfigurationProperty.builder()
 
-  /**
-   * @param dataLabels The data label configuration of a sankey diagram.
-   */
-  public fun dataLabels(dataLabels: IResolvable) {
-    cdkBuilder.dataLabels(dataLabels)
-  }
+    /** @param dataLabels The data label configuration of a sankey diagram. */
+    public fun dataLabels(dataLabels: IResolvable) {
+        cdkBuilder.dataLabels(dataLabels)
+    }
 
-  /**
-   * @param dataLabels The data label configuration of a sankey diagram.
-   */
-  public fun dataLabels(dataLabels: CfnTemplate.DataLabelOptionsProperty) {
-    cdkBuilder.dataLabels(dataLabels)
-  }
+    /** @param dataLabels The data label configuration of a sankey diagram. */
+    public fun dataLabels(dataLabels: CfnTemplate.DataLabelOptionsProperty) {
+        cdkBuilder.dataLabels(dataLabels)
+    }
 
-  /**
-   * @param fieldWells The field well configuration of a sankey diagram.
-   */
-  public fun fieldWells(fieldWells: IResolvable) {
-    cdkBuilder.fieldWells(fieldWells)
-  }
+    /** @param fieldWells The field well configuration of a sankey diagram. */
+    public fun fieldWells(fieldWells: IResolvable) {
+        cdkBuilder.fieldWells(fieldWells)
+    }
 
-  /**
-   * @param fieldWells The field well configuration of a sankey diagram.
-   */
-  public fun fieldWells(fieldWells: CfnTemplate.SankeyDiagramFieldWellsProperty) {
-    cdkBuilder.fieldWells(fieldWells)
-  }
+    /** @param fieldWells The field well configuration of a sankey diagram. */
+    public fun fieldWells(fieldWells: CfnTemplate.SankeyDiagramFieldWellsProperty) {
+        cdkBuilder.fieldWells(fieldWells)
+    }
 
-  /**
-   * @param sortConfiguration The sort configuration of a sankey diagram.
-   */
-  public fun sortConfiguration(sortConfiguration: IResolvable) {
-    cdkBuilder.sortConfiguration(sortConfiguration)
-  }
+    /** @param sortConfiguration The sort configuration of a sankey diagram. */
+    public fun sortConfiguration(sortConfiguration: IResolvable) {
+        cdkBuilder.sortConfiguration(sortConfiguration)
+    }
 
-  /**
-   * @param sortConfiguration The sort configuration of a sankey diagram.
-   */
-  public
-      fun sortConfiguration(sortConfiguration: CfnTemplate.SankeyDiagramSortConfigurationProperty) {
-    cdkBuilder.sortConfiguration(sortConfiguration)
-  }
+    /** @param sortConfiguration The sort configuration of a sankey diagram. */
+    public fun sortConfiguration(
+        sortConfiguration: CfnTemplate.SankeyDiagramSortConfigurationProperty
+    ) {
+        cdkBuilder.sortConfiguration(sortConfiguration)
+    }
 
-  public fun build(): CfnTemplate.SankeyDiagramChartConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.SankeyDiagramChartConfigurationProperty = cdkBuilder.build()
 }

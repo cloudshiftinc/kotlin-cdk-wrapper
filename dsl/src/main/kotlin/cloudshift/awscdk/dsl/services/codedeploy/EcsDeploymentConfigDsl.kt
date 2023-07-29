@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * A custom Deployment Configuration for an ECS Deployment Group.
  *
  * Example:
- *
  * ```
  * FargateService service;
  * ITargetGroup blueTargetGroup;
@@ -40,35 +48,36 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class EcsDeploymentConfigDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: EcsDeploymentConfig.Builder = EcsDeploymentConfig.Builder.create(scope,
-      id)
+    private val cdkBuilder: EcsDeploymentConfig.Builder =
+        EcsDeploymentConfig.Builder.create(scope, id)
 
-  /**
-   * The physical, human-readable name of the Deployment Configuration.
-   *
-   * Default: - automatically generated name
-   *
-   * @param deploymentConfigName The physical, human-readable name of the Deployment Configuration. 
-   */
-  public fun deploymentConfigName(deploymentConfigName: String) {
-    cdkBuilder.deploymentConfigName(deploymentConfigName)
-  }
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     *
+     * Default: - automatically generated name
+     *
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     *   Configuration.
+     */
+    public fun deploymentConfigName(deploymentConfigName: String) {
+        cdkBuilder.deploymentConfigName(deploymentConfigName)
+    }
 
-  /**
-   * The configuration that specifies how traffic is shifted from the 'blue' target group to the
-   * 'green' target group during a deployment.
-   *
-   * Default: AllAtOnce
-   *
-   * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
-   * target group to the 'green' target group during a deployment. 
-   */
-  public fun trafficRouting(trafficRouting: TrafficRouting) {
-    cdkBuilder.trafficRouting(trafficRouting)
-  }
+    /**
+     * The configuration that specifies how traffic is shifted from the 'blue' target group to the
+     * 'green' target group during a deployment.
+     *
+     * Default: AllAtOnce
+     *
+     * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
+     *   target group to the 'green' target group during a deployment.
+     */
+    public fun trafficRouting(trafficRouting: TrafficRouting) {
+        cdkBuilder.trafficRouting(trafficRouting)
+    }
 
-  public fun build(): EcsDeploymentConfig = cdkBuilder.build()
+    public fun build(): EcsDeploymentConfig = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  * An object that represents the default properties for a backend.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -58,22 +66,18 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  */
 @CdkDslMarker
 public class CfnVirtualNodeBackendDefaultsPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.BackendDefaultsProperty.Builder =
-      CfnVirtualNode.BackendDefaultsProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.BackendDefaultsProperty.Builder =
+        CfnVirtualNode.BackendDefaultsProperty.builder()
 
-  /**
-   * @param clientPolicy A reference to an object that represents a client policy.
-   */
-  public fun clientPolicy(clientPolicy: IResolvable) {
-    cdkBuilder.clientPolicy(clientPolicy)
-  }
+    /** @param clientPolicy A reference to an object that represents a client policy. */
+    public fun clientPolicy(clientPolicy: IResolvable) {
+        cdkBuilder.clientPolicy(clientPolicy)
+    }
 
-  /**
-   * @param clientPolicy A reference to an object that represents a client policy.
-   */
-  public fun clientPolicy(clientPolicy: CfnVirtualNode.ClientPolicyProperty) {
-    cdkBuilder.clientPolicy(clientPolicy)
-  }
+    /** @param clientPolicy A reference to an object that represents a client policy. */
+    public fun clientPolicy(clientPolicy: CfnVirtualNode.ClientPolicyProperty) {
+        cdkBuilder.clientPolicy(clientPolicy)
+    }
 
-  public fun build(): CfnVirtualNode.BackendDefaultsProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.BackendDefaultsProperty = cdkBuilder.build()
 }

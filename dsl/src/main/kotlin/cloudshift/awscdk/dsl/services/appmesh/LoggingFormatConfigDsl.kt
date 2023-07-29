@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.LoggingFormatConfig
  * All Properties for Envoy Access Logging Format for mesh endpoints.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,23 +37,19 @@ import software.amazon.awscdk.services.appmesh.LoggingFormatConfig
  */
 @CdkDslMarker
 public class LoggingFormatConfigDsl {
-  private val cdkBuilder: LoggingFormatConfig.Builder = LoggingFormatConfig.builder()
+    private val cdkBuilder: LoggingFormatConfig.Builder = LoggingFormatConfig.builder()
 
-  /**
-   * @param formatConfig CFN configuration for Access Logging Format.
-   */
-  public fun formatConfig(formatConfig: CfnVirtualNodeLoggingFormatPropertyDsl.() -> Unit = {}) {
-    val builder = CfnVirtualNodeLoggingFormatPropertyDsl()
-    builder.apply(formatConfig)
-    cdkBuilder.formatConfig(builder.build())
-  }
+    /** @param formatConfig CFN configuration for Access Logging Format. */
+    public fun formatConfig(formatConfig: CfnVirtualNodeLoggingFormatPropertyDsl.() -> Unit = {}) {
+        val builder = CfnVirtualNodeLoggingFormatPropertyDsl()
+        builder.apply(formatConfig)
+        cdkBuilder.formatConfig(builder.build())
+    }
 
-  /**
-   * @param formatConfig CFN configuration for Access Logging Format.
-   */
-  public fun formatConfig(formatConfig: CfnVirtualNode.LoggingFormatProperty) {
-    cdkBuilder.formatConfig(formatConfig)
-  }
+    /** @param formatConfig CFN configuration for Access Logging Format. */
+    public fun formatConfig(formatConfig: CfnVirtualNode.LoggingFormatProperty) {
+        cdkBuilder.formatConfig(formatConfig)
+    }
 
-  public fun build(): LoggingFormatConfig = cdkBuilder.build()
+    public fun build(): LoggingFormatConfig = cdkBuilder.build()
 }

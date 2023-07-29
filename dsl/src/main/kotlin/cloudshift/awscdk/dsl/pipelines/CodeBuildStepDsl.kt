@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
@@ -7,6 +16,11 @@ import cloudshift.awscdk.dsl.services.codebuild.BuildEnvironmentDsl
 import cloudshift.awscdk.dsl.services.codebuild.LoggingOptionsDsl
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
 import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnOutput
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.pipelines.CodeBuildStep
@@ -21,20 +35,13 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.iam.PolicyStatement
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.Map
-import kotlin.collections.MutableList
 
 /**
  * Run a script as a CodeBuild Project.
  *
- * The BuildSpec must be available inline--it cannot reference a file
- * on disk. If your current build instructions are in a file like
- * `buildspec.yml` in your repository, extract them to a script
+ * The BuildSpec must be available inline--it cannot reference a file on disk. If your current build
+ * instructions are in a file like `buildspec.yml` in your repository, extract them to a script
  * (say, `build.sh`) and invoke that script as part of the build:
- *
  * ```
  * CodeBuildStep.Builder.create("Synth")
  * .commands(List.of("./build.sh"))
@@ -42,7 +49,6 @@ import kotlin.collections.MutableList
  * ```
  *
  * Example:
- *
  * ```
  * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
  * .synth(ShellStep.Builder.create("Synth")
@@ -71,7 +77,7 @@ import kotlin.collections.MutableList
  */
 @CdkDslMarker
 public class CodeBuildStepDsl(
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CodeBuildStep.Builder = CodeBuildStep.Builder.create(id)
 
@@ -99,14 +105,11 @@ public class CodeBuildStepDsl(
     /**
      * Additional FileSets to put in other directories.
      *
-     * Specifies a mapping from directory name to FileSets. During the
-     * script execution, the FileSets will be available in the directories
-     * indicated.
+     * Specifies a mapping from directory name to FileSets. During the script execution, the
+     * FileSets will be available in the directories indicated.
      *
-     * The directory names may be relative. For example, you can put
-     * the main input and an additional input side-by-side with the
-     * following configuration:
-     *
+     * The directory names may be relative. For example, you can put the main input and an
+     * additional input side-by-side with the following configuration:
      * ```
      * ShellStep script = ShellStep.Builder.create("MainScript")
      * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
@@ -127,8 +130,7 @@ public class CodeBuildStepDsl(
     /**
      * Changes to environment.
      *
-     * This environment will be combined with the pipeline's default
-     * environment.
+     * This environment will be combined with the pipeline's default environment.
      *
      * Default: - Use the pipeline's default build environment
      *
@@ -143,8 +145,7 @@ public class CodeBuildStepDsl(
     /**
      * Changes to environment.
      *
-     * This environment will be combined with the pipeline's default
-     * environment.
+     * This environment will be combined with the pipeline's default environment.
      *
      * Default: - Use the pipeline's default build environment
      *
@@ -197,10 +198,8 @@ public class CodeBuildStepDsl(
     /**
      * Set environment variables based on Stack Outputs.
      *
-     * `ShellStep`s following stack or stage deployments may
-     * access the `CfnOutput`s of those stacks to get access to
-     * --for example--automatically generated resource names or
-     * endpoint URLs.
+     * `ShellStep`s following stack or stage deployments may access the `CfnOutput`s of those stacks
+     * to get access to --for example--automatically generated resource names or endpoint URLs.
      *
      * Default: - No environment variables created from stack outputs
      *
@@ -214,8 +213,7 @@ public class CodeBuildStepDsl(
      * ProjectFileSystemLocation objects for CodeBuild build projects.
      *
      * A ProjectFileSystemLocation object specifies the identifier, location, mountOptions,
-     * mountPoint,
-     * and type of a file system created using Amazon Elastic File System.
+     * mountPoint, and type of a file system created using Amazon Elastic File System.
      *
      * Default: - no file system locations
      *
@@ -229,8 +227,7 @@ public class CodeBuildStepDsl(
      * ProjectFileSystemLocation objects for CodeBuild build projects.
      *
      * A ProjectFileSystemLocation object specifies the identifier, location, mountOptions,
-     * mountPoint,
-     * and type of a file system created using Amazon Elastic File System.
+     * mountPoint, and type of a file system created using Amazon Elastic File System.
      *
      * Default: - no file system locations
      *
@@ -243,9 +240,8 @@ public class CodeBuildStepDsl(
     /**
      * FileSet to run these scripts on.
      *
-     * The files in the FileSet will be placed in the working directory when
-     * the script is executed. Use `additionalInputs` to download file sets
-     * to other directories as well.
+     * The files in the FileSet will be placed in the working directory when the script is executed.
+     * Use `additionalInputs` to download file sets to other directories as well.
      *
      * Default: - No input specified
      *
@@ -258,8 +254,8 @@ public class CodeBuildStepDsl(
     /**
      * Installation commands to run before the regular commands.
      *
-     * For deployment engines that support it, install commands will be classified
-     * differently in the job history from the regular `commands`.
+     * For deployment engines that support it, install commands will be classified differently in
+     * the job history from the regular `commands`.
      *
      * Default: - No installation commands
      *
@@ -272,8 +268,8 @@ public class CodeBuildStepDsl(
     /**
      * Installation commands to run before the regular commands.
      *
-     * For deployment engines that support it, install commands will be classified
-     * differently in the job history from the regular `commands`.
+     * For deployment engines that support it, install commands will be classified differently in
+     * the job history from the regular `commands`.
      *
      * Default: - No installation commands
      *
@@ -314,15 +310,13 @@ public class CodeBuildStepDsl(
     /**
      * Additional configuration that can only be configured via BuildSpec.
      *
-     * You should not use this to specify output artifacts; those
-     * should be supplied via the other properties of this class, otherwise
-     * CDK Pipelines won't be able to inspect the artifacts.
+     * You should not use this to specify output artifacts; those should be supplied via the other
+     * properties of this class, otherwise CDK Pipelines won't be able to inspect the artifacts.
      *
-     * Set the `commands` to an empty array if you want to fully specify
-     * the BuildSpec using this field.
+     * Set the `commands` to an empty array if you want to fully specify the BuildSpec using this
+     * field.
      *
-     * The BuildSpec must be available inline--it cannot reference a file
-     * on disk.
+     * The BuildSpec must be available inline--it cannot reference a file on disk.
      *
      * Default: - BuildSpec completely derived from other properties
      *
@@ -335,8 +329,8 @@ public class CodeBuildStepDsl(
     /**
      * The directory that will contain the primary output fileset.
      *
-     * After running the script, the contents of the given directory
-     * will be treated as the primary output of this Step.
+     * After running the script, the contents of the given directory will be treated as the primary
+     * output of this Step.
      *
      * Default: - No primary output
      *
@@ -404,7 +398,7 @@ public class CodeBuildStepDsl(
      * Default: - Security group will be automatically created.
      *
      * @param securityGroups Which security group to associate with the script's project network
-     * interfaces.
+     *   interfaces.
      */
     public fun securityGroups(vararg securityGroups: ISecurityGroup) {
         _securityGroups.addAll(listOf(*securityGroups))
@@ -420,7 +414,7 @@ public class CodeBuildStepDsl(
      * Default: - Security group will be automatically created.
      *
      * @param securityGroups Which security group to associate with the script's project network
-     * interfaces.
+     *   interfaces.
      */
     public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
         _securityGroups.addAll(securityGroups)
@@ -457,13 +451,12 @@ public class CodeBuildStepDsl(
     /**
      * The number of minutes after which AWS CodeBuild stops the build if it's not complete.
      *
-     * For valid values, see the timeoutInMinutes field in the AWS
-     * CodeBuild User Guide.
+     * For valid values, see the timeoutInMinutes field in the AWS CodeBuild User Guide.
      *
      * Default: Duration.hours(1)
      *
      * @param timeout The number of minutes after which AWS CodeBuild stops the build if it's not
-     * complete.
+     *   complete.
      */
     public fun timeout(timeout: Duration) {
         cdkBuilder.timeout(timeout)
@@ -484,7 +477,8 @@ public class CodeBuildStepDsl(
         if (_commands.isNotEmpty()) cdkBuilder.commands(_commands)
         if (_fileSystemLocations.isNotEmpty()) cdkBuilder.fileSystemLocations(_fileSystemLocations)
         if (_installCommands.isNotEmpty()) cdkBuilder.installCommands(_installCommands)
-        if (_rolePolicyStatements.isNotEmpty()) cdkBuilder.rolePolicyStatements(_rolePolicyStatements)
+        if (_rolePolicyStatements.isNotEmpty())
+            cdkBuilder.rolePolicyStatements(_rolePolicyStatements)
         if (_securityGroups.isNotEmpty()) cdkBuilder.securityGroups(_securityGroups)
         return cdkBuilder.build()
     }

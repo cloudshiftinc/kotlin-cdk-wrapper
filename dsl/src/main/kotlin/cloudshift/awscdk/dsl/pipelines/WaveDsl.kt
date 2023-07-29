@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.pipelines.Step
-import software.amazon.awscdk.pipelines.Wave
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.pipelines.Step
+import software.amazon.awscdk.pipelines.Wave
 
 /**
  * Multiple stages that are deployed in parallel.
  *
  * Example:
- *
  * ```
  * CodePipeline pipeline;
  * Wave europeWave = pipeline.addWave("Europe");
@@ -27,7 +35,7 @@ import kotlin.collections.MutableList
  */
 @CdkDslMarker
 public class WaveDsl(
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: Wave.Builder = Wave.Builder.create(id)
 

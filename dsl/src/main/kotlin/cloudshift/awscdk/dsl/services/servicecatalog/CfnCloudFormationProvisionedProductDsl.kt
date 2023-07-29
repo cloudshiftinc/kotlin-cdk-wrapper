@@ -1,18 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct
+import software.constructs.Construct
 
 /**
  * Provisions the specified product.
@@ -23,11 +32,10 @@ import kotlin.collections.MutableList
  * [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html) .
  *
  * If the request contains a tag key with an empty list of values, there is a tag conflict for that
- * key. Do not include conflicted keys as tags, or this causes the error "Parameter validation failed:
- * Missing required parameter in Tags[ *N* ]: *Value* ".
+ * key. Do not include conflicted keys as tags, or this causes the error "Parameter validation
+ * failed: Missing required parameter in Tags[ *N* ]: *Value* ".
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -68,7 +76,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnCloudFormationProvisionedProductDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnCloudFormationProvisionedProduct.Builder =
         CfnCloudFormationProvisionedProduct.Builder.create(scope, id)
@@ -81,11 +89,11 @@ public class CfnCloudFormationProvisionedProductDsl(
 
     /**
      * The language code.
-     *
      * * `jp` - Japanese
      * * `zh` - Chinese
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-acceptlanguage)
+     *
      * @param acceptLanguage The language code.
      */
     public fun acceptLanguage(acceptLanguage: String) {
@@ -98,6 +106,7 @@ public class CfnCloudFormationProvisionedProductDsl(
      * The SNS topic ARNs to which to publish stack-related events.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns)
+     *
      * @param notificationArns Passed to AWS CloudFormation .
      */
     public fun notificationArns(vararg notificationArns: String) {
@@ -110,6 +119,7 @@ public class CfnCloudFormationProvisionedProductDsl(
      * The SNS topic ARNs to which to publish stack-related events.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns)
+     *
      * @param notificationArns Passed to AWS CloudFormation .
      */
     public fun notificationArns(notificationArns: Collection<String>) {
@@ -119,15 +129,15 @@ public class CfnCloudFormationProvisionedProductDsl(
     /**
      * The path identifier of the product.
      *
-     * This value is optional if the product has a default path, and required if the product has more
-     * than one path. To list the paths for a product, use
-     * [ListLaunchPaths](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListLaunchPaths.html) .
-     *
+     * This value is optional if the product has a default path, and required if the product has
+     * more than one path. To list the paths for a product, use
+     * [ListLaunchPaths](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListLaunchPaths.html)
+     * .
      *
      * You must provide the name or ID, but not both.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-pathid)
+     *
      * @param pathId The path identifier of the product.
      */
     public fun pathId(pathId: String) {
@@ -137,15 +147,15 @@ public class CfnCloudFormationProvisionedProductDsl(
     /**
      * The name of the path.
      *
-     * This value is optional if the product has a default path, and required if the product has more
-     * than one path. To list the paths for a product, use
-     * [ListLaunchPaths](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListLaunchPaths.html) .
-     *
+     * This value is optional if the product has a default path, and required if the product has
+     * more than one path. To list the paths for a product, use
+     * [ListLaunchPaths](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListLaunchPaths.html)
+     * .
      *
      * You must provide the name or ID, but not both.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-pathname)
+     *
      * @param pathName The name of the path.
      */
     public fun pathName(pathName: String) {
@@ -155,11 +165,10 @@ public class CfnCloudFormationProvisionedProductDsl(
     /**
      * The product identifier.
      *
-     *
      * You must specify either the ID or the name of the product, but not both.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-productid)
+     *
      * @param productId The product identifier.
      */
     public fun productId(productId: String) {
@@ -173,11 +182,10 @@ public class CfnCloudFormationProvisionedProductDsl(
      * resolve to `ProductId` as long as only one product exists in the account or Region with that
      * `ProductName` .
      *
-     *
      * You must specify either the name or the ID of the product, but not both.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-productname)
+     *
      * @param productName The name of the Service Catalog product.
      */
     public fun productName(productName: String) {
@@ -191,6 +199,7 @@ public class CfnCloudFormationProvisionedProductDsl(
      * provisioned.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname)
+     *
      * @param provisionedProductName A user-friendly name for the provisioned product.
      */
     public fun provisionedProductName(provisionedProductName: String) {
@@ -200,13 +209,12 @@ public class CfnCloudFormationProvisionedProductDsl(
     /**
      * The identifier of the provisioning artifact (also known as a version).
      *
-     *
      * You must specify either the ID or the name of the provisioning artifact, but not both.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid)
+     *
      * @param provisioningArtifactId The identifier of the provisioning artifact (also known as a
-     * version).
+     *   version).
      */
     public fun provisioningArtifactId(provisioningArtifactId: String) {
         cdkBuilder.provisioningArtifactId(provisioningArtifactId)
@@ -217,14 +225,13 @@ public class CfnCloudFormationProvisionedProductDsl(
      *
      * This name must be unique for the product.
      *
-     *
-     * You must specify either the name or the ID of the provisioning artifact, but not both. You must
-     * also specify either the name or the ID of the product, but not both.
-     *
+     * You must specify either the name or the ID of the provisioning artifact, but not both. You
+     * must also specify either the name or the ID of the product, but not both.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname)
-     * @param provisioningArtifactName The name of the provisioning artifact (also known as a version)
-     * for the product.
+     *
+     * @param provisioningArtifactName The name of the provisioning artifact (also known as a
+     *   version) for the product.
      */
     public fun provisioningArtifactName(provisioningArtifactName: String) {
         cdkBuilder.provisioningArtifactName(provisioningArtifactName)
@@ -234,8 +241,9 @@ public class CfnCloudFormationProvisionedProductDsl(
      * Parameters specified by the administrator that are required for provisioning the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)
+     *
      * @param provisioningParameters Parameters specified by the administrator that are required for
-     * provisioning the product.
+     *   provisioning the product.
      */
     public fun provisioningParameters(vararg provisioningParameters: Any) {
         _provisioningParameters.addAll(listOf(*provisioningParameters))
@@ -245,8 +253,9 @@ public class CfnCloudFormationProvisionedProductDsl(
      * Parameters specified by the administrator that are required for provisioning the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)
+     *
      * @param provisioningParameters Parameters specified by the administrator that are required for
-     * provisioning the product.
+     *   provisioning the product.
      */
     public fun provisioningParameters(provisioningParameters: Collection<Any>) {
         _provisioningParameters.addAll(provisioningParameters)
@@ -256,8 +265,9 @@ public class CfnCloudFormationProvisionedProductDsl(
      * Parameters specified by the administrator that are required for provisioning the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)
+     *
      * @param provisioningParameters Parameters specified by the administrator that are required for
-     * provisioning the product.
+     *   provisioning the product.
      */
     public fun provisioningParameters(provisioningParameters: IResolvable) {
         cdkBuilder.provisioningParameters(provisioningParameters)
@@ -268,8 +278,9 @@ public class CfnCloudFormationProvisionedProductDsl(
      * product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences)
+     *
      * @param provisioningPreferences StackSet preferences that are required for provisioning the
-     * product or updating a provisioned product.
+     *   product or updating a provisioned product.
      */
     public fun provisioningPreferences(provisioningPreferences: IResolvable) {
         cdkBuilder.provisioningPreferences(provisioningPreferences)
@@ -280,24 +291,26 @@ public class CfnCloudFormationProvisionedProductDsl(
      * product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences)
+     *
      * @param provisioningPreferences StackSet preferences that are required for provisioning the
-     * product or updating a provisioned product.
+     *   product or updating a provisioned product.
      */
-    public fun provisioningPreferences(provisioningPreferences: CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty) {
+    public fun provisioningPreferences(
+        provisioningPreferences: CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty
+    ) {
         cdkBuilder.provisioningPreferences(provisioningPreferences)
     }
 
     /**
      * One or more tags.
      *
-     *
      * Requires the provisioned product to have an
      * [ResourceUpdateConstraint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html)
      * resource with `TagUpdatesOnProvisionedProduct` set to `ALLOWED` to allow tag updates. If
      * `RESOURCE_UPDATE` constraint is not present, tags updates are ignored.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-tags)
+     *
      * @param tags One or more tags.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -307,14 +320,13 @@ public class CfnCloudFormationProvisionedProductDsl(
     /**
      * One or more tags.
      *
-     *
      * Requires the provisioned product to have an
      * [ResourceUpdateConstraint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html)
      * resource with `TagUpdatesOnProvisionedProduct` set to `ALLOWED` to allow tag updates. If
      * `RESOURCE_UPDATE` constraint is not present, tags updates are ignored.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html#cfn-servicecatalog-cloudformationprovisionedproduct-tags)
+     *
      * @param tags One or more tags.
      */
     public fun tags(tags: Collection<CfnTag>) {
@@ -323,9 +335,8 @@ public class CfnCloudFormationProvisionedProductDsl(
 
     public fun build(): CfnCloudFormationProvisionedProduct {
         if (_notificationArns.isNotEmpty()) cdkBuilder.notificationArns(_notificationArns)
-        if (_provisioningParameters.isNotEmpty()) {
+        if (_provisioningParameters.isNotEmpty())
             cdkBuilder.provisioningParameters(_provisioningParameters)
-        }
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The sort configuration of a waterfall visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -60,37 +68,29 @@ public class CfnTemplateWaterfallChartSortConfigurationPropertyDsl {
 
     private val _categorySort: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param breakdownItemsLimit The limit on the number of bar groups that are displayed.
-     */
+    /** @param breakdownItemsLimit The limit on the number of bar groups that are displayed. */
     public fun breakdownItemsLimit(breakdownItemsLimit: IResolvable) {
         cdkBuilder.breakdownItemsLimit(breakdownItemsLimit)
     }
 
-    /**
-     * @param breakdownItemsLimit The limit on the number of bar groups that are displayed.
-     */
-    public fun breakdownItemsLimit(breakdownItemsLimit: CfnTemplate.ItemsLimitConfigurationProperty) {
+    /** @param breakdownItemsLimit The limit on the number of bar groups that are displayed. */
+    public fun breakdownItemsLimit(
+        breakdownItemsLimit: CfnTemplate.ItemsLimitConfigurationProperty
+    ) {
         cdkBuilder.breakdownItemsLimit(breakdownItemsLimit)
     }
 
-    /**
-     * @param categorySort The sort configuration of the category fields.
-     */
+    /** @param categorySort The sort configuration of the category fields. */
     public fun categorySort(vararg categorySort: Any) {
         _categorySort.addAll(listOf(*categorySort))
     }
 
-    /**
-     * @param categorySort The sort configuration of the category fields.
-     */
+    /** @param categorySort The sort configuration of the category fields. */
     public fun categorySort(categorySort: Collection<Any>) {
         _categorySort.addAll(categorySort)
     }
 
-    /**
-     * @param categorySort The sort configuration of the category fields.
-     */
+    /** @param categorySort The sort configuration of the category fields. */
     public fun categorySort(categorySort: IResolvable) {
         cdkBuilder.categorySort(categorySort)
     }

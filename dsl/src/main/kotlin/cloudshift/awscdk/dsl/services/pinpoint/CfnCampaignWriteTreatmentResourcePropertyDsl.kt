@@ -1,12 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnCampaign
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
 /**
  * Specifies the settings for a campaign treatment.
@@ -14,7 +23,6 @@ import kotlin.String
  * A *treatment* is a variation of a campaign that's used for A/B testing of a campaign.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -234,9 +242,8 @@ public class CfnCampaignWriteTreatmentResourcePropertyDsl {
 
     /**
      * @param customDeliveryConfiguration The delivery configuration settings for sending the
-     * treatment through a custom channel.
-     * This object is required if the `MessageConfiguration` object for the treatment specifies a
-     * `CustomMessage` object.
+     *   treatment through a custom channel. This object is required if the `MessageConfiguration`
+     *   object for the treatment specifies a `CustomMessage` object.
      */
     public fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable) {
         cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration)
@@ -244,74 +251,63 @@ public class CfnCampaignWriteTreatmentResourcePropertyDsl {
 
     /**
      * @param customDeliveryConfiguration The delivery configuration settings for sending the
-     * treatment through a custom channel.
-     * This object is required if the `MessageConfiguration` object for the treatment specifies a
-     * `CustomMessage` object.
+     *   treatment through a custom channel. This object is required if the `MessageConfiguration`
+     *   object for the treatment specifies a `CustomMessage` object.
      */
-    public fun customDeliveryConfiguration(customDeliveryConfiguration: CfnCampaign.CustomDeliveryConfigurationProperty) {
+    public fun customDeliveryConfiguration(
+        customDeliveryConfiguration: CfnCampaign.CustomDeliveryConfigurationProperty
+    ) {
         cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration)
     }
 
-    /**
-     * @param messageConfiguration The message configuration settings for the treatment.
-     */
+    /** @param messageConfiguration The message configuration settings for the treatment. */
     public fun messageConfiguration(messageConfiguration: IResolvable) {
         cdkBuilder.messageConfiguration(messageConfiguration)
     }
 
-    /**
-     * @param messageConfiguration The message configuration settings for the treatment.
-     */
-    public fun messageConfiguration(messageConfiguration: CfnCampaign.MessageConfigurationProperty) {
+    /** @param messageConfiguration The message configuration settings for the treatment. */
+    public fun messageConfiguration(
+        messageConfiguration: CfnCampaign.MessageConfigurationProperty
+    ) {
         cdkBuilder.messageConfiguration(messageConfiguration)
     }
 
-    /**
-     * @param schedule The schedule settings for the treatment.
-     */
+    /** @param schedule The schedule settings for the treatment. */
     public fun schedule(schedule: IResolvable) {
         cdkBuilder.schedule(schedule)
     }
 
-    /**
-     * @param schedule The schedule settings for the treatment.
-     */
+    /** @param schedule The schedule settings for the treatment. */
     public fun schedule(schedule: CfnCampaign.ScheduleProperty) {
         cdkBuilder.schedule(schedule)
     }
 
     /**
      * @param sizePercent The allocated percentage of users (segment members) to send the treatment
-     * to.
+     *   to.
      */
     public fun sizePercent(sizePercent: Number) {
         cdkBuilder.sizePercent(sizePercent)
     }
 
-    /**
-     * @param templateConfiguration The message template to use for the treatment.
-     */
+    /** @param templateConfiguration The message template to use for the treatment. */
     public fun templateConfiguration(templateConfiguration: IResolvable) {
         cdkBuilder.templateConfiguration(templateConfiguration)
     }
 
-    /**
-     * @param templateConfiguration The message template to use for the treatment.
-     */
-    public fun templateConfiguration(templateConfiguration: CfnCampaign.TemplateConfigurationProperty) {
+    /** @param templateConfiguration The message template to use for the treatment. */
+    public fun templateConfiguration(
+        templateConfiguration: CfnCampaign.TemplateConfigurationProperty
+    ) {
         cdkBuilder.templateConfiguration(templateConfiguration)
     }
 
-    /**
-     * @param treatmentDescription A custom description of the treatment.
-     */
+    /** @param treatmentDescription A custom description of the treatment. */
     public fun treatmentDescription(treatmentDescription: String) {
         cdkBuilder.treatmentDescription(treatmentDescription)
     }
 
-    /**
-     * @param treatmentName A custom name for the treatment.
-     */
+    /** @param treatmentName A custom name for the treatment. */
     public fun treatmentName(treatmentName: String) {
         cdkBuilder.treatmentName(treatmentName)
     }

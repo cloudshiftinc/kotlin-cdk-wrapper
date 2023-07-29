@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkmanager
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTabl
  * In some cases, the segment change must first be evaluated and accepted.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,43 +46,37 @@ import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTabl
  */
 @CdkDslMarker
 public class CfnTransitGatewayRouteTableAttachmentProposedSegmentChangePropertyDsl {
-  private val cdkBuilder:
-      CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty.Builder =
-      CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty.builder()
+    private val cdkBuilder:
+        CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty.Builder =
+        CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param attachmentPolicyRuleNumber The rule number in the policy document that applies to this
-   * change.
-   */
-  public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
-    cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
-  }
+    /**
+     * @param attachmentPolicyRuleNumber The rule number in the policy document that applies to this
+     *   change.
+     */
+    public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
+        cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
+    }
 
-  /**
-   * @param segmentName The name of the segment to change.
-   */
-  public fun segmentName(segmentName: String) {
-    cdkBuilder.segmentName(segmentName)
-  }
+    /** @param segmentName The name of the segment to change. */
+    public fun segmentName(segmentName: String) {
+        cdkBuilder.segmentName(segmentName)
+    }
 
-  /**
-   * @param tags The list of key-value tags that changed for the segment.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The list of key-value tags that changed for the segment. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The list of key-value tags that changed for the segment.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The list of key-value tags that changed for the segment. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.redshift
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.redshift.CfnScheduledAction
  * For example, a scheduled action to run the `ResumeCluster` API operation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,15 +35,13 @@ import software.amazon.awscdk.services.redshift.CfnScheduledAction
  */
 @CdkDslMarker
 public class CfnScheduledActionResumeClusterMessagePropertyDsl {
-  private val cdkBuilder: CfnScheduledAction.ResumeClusterMessageProperty.Builder =
-      CfnScheduledAction.ResumeClusterMessageProperty.builder()
+    private val cdkBuilder: CfnScheduledAction.ResumeClusterMessageProperty.Builder =
+        CfnScheduledAction.ResumeClusterMessageProperty.builder()
 
-  /**
-   * @param clusterIdentifier The identifier of the cluster to be resumed. 
-   */
-  public fun clusterIdentifier(clusterIdentifier: String) {
-    cdkBuilder.clusterIdentifier(clusterIdentifier)
-  }
+    /** @param clusterIdentifier The identifier of the cluster to be resumed. */
+    public fun clusterIdentifier(clusterIdentifier: String) {
+        cdkBuilder.clusterIdentifier(clusterIdentifier)
+    }
 
-  public fun build(): CfnScheduledAction.ResumeClusterMessageProperty = cdkBuilder.build()
+    public fun build(): CfnScheduledAction.ResumeClusterMessageProperty = cdkBuilder.build()
 }

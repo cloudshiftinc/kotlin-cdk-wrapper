@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticbeanstalk
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,18 @@ import software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate
  */
 @CdkDslMarker
 public class CfnConfigurationTemplateSourceConfigurationPropertyDsl {
-  private val cdkBuilder: CfnConfigurationTemplate.SourceConfigurationProperty.Builder =
-      CfnConfigurationTemplate.SourceConfigurationProperty.builder()
+    private val cdkBuilder: CfnConfigurationTemplate.SourceConfigurationProperty.Builder =
+        CfnConfigurationTemplate.SourceConfigurationProperty.builder()
 
-  /**
-   * @param applicationName The name of the application associated with the configuration. 
-   */
-  public fun applicationName(applicationName: String) {
-    cdkBuilder.applicationName(applicationName)
-  }
+    /** @param applicationName The name of the application associated with the configuration. */
+    public fun applicationName(applicationName: String) {
+        cdkBuilder.applicationName(applicationName)
+    }
 
-  /**
-   * @param templateName The name of the configuration template. 
-   */
-  public fun templateName(templateName: String) {
-    cdkBuilder.templateName(templateName)
-  }
+    /** @param templateName The name of the configuration template. */
+    public fun templateName(templateName: String) {
+        cdkBuilder.templateName(templateName)
+    }
 
-  public fun build(): CfnConfigurationTemplate.SourceConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnConfigurationTemplate.SourceConfigurationProperty = cdkBuilder.build()
 }

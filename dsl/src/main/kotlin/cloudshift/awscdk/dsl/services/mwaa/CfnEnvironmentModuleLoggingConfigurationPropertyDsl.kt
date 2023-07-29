@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mwaa
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.mwaa.CfnEnvironment
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.mwaa.CfnEnvironment
 
 /**
  * Defines the type of logs to send for the Apache Airflow log type (e.g. `DagProcessingLogs` ).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,12 +42,13 @@ public class CfnEnvironmentModuleLoggingConfigurationPropertyDsl {
 
     /**
      * @param cloudWatchLogGroupArn The ARN of the CloudWatch Logs log group for each type of Apache
-     * Airflow log type that you have enabled.
+     *   Airflow log type that you have enabled.
      *
      * `CloudWatchLogGroupArn` is available only as a return value, accessible when specified as an
      * attribute in the
      * [`Fn:GetAtt`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#aws-resource-mwaa-environment-return-values)
-     * intrinsic function. Any value you provide for `CloudWatchLogGroupArn` is discarded by Amazon MWAA.
+     * intrinsic function. Any value you provide for `CloudWatchLogGroupArn` is discarded by Amazon
+     * MWAA.
      */
     public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
         cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
@@ -47,7 +56,7 @@ public class CfnEnvironmentModuleLoggingConfigurationPropertyDsl {
 
     /**
      * @param enabled Indicates whether to enable the Apache Airflow log type (e.g.
-     * `DagProcessingLogs` ) in CloudWatch Logs.
+     *   `DagProcessingLogs` ) in CloudWatch Logs.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -55,7 +64,7 @@ public class CfnEnvironmentModuleLoggingConfigurationPropertyDsl {
 
     /**
      * @param enabled Indicates whether to enable the Apache Airflow log type (e.g.
-     * `DagProcessingLogs` ) in CloudWatch Logs.
+     *   `DagProcessingLogs` ) in CloudWatch Logs.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
@@ -63,8 +72,8 @@ public class CfnEnvironmentModuleLoggingConfigurationPropertyDsl {
 
     /**
      * @param logLevel Defines the Apache Airflow logs to send for the log type (e.g.
-     * `DagProcessingLogs` ) to CloudWatch Logs. Valid values: `CRITICAL` , `ERROR` , `WARNING` , `INFO`
-     * .
+     *   `DagProcessingLogs` ) to CloudWatch Logs. Valid values: `CRITICAL` , `ERROR` , `WARNING` ,
+     *   `INFO` .
      */
     public fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)

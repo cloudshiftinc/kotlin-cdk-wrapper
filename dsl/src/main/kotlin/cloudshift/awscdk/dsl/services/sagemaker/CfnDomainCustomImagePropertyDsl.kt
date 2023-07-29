@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,11 +19,11 @@ import software.amazon.awscdk.services.sagemaker.CfnDomain
 /**
  * A custom SageMaker image.
  *
- * For more information, see [Bring your own SageMaker
- * image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html) .
+ * For more information, see
+ * [Bring your own SageMaker image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,30 +40,23 @@ import software.amazon.awscdk.services.sagemaker.CfnDomain
  */
 @CdkDslMarker
 public class CfnDomainCustomImagePropertyDsl {
-  private val cdkBuilder: CfnDomain.CustomImageProperty.Builder =
-      CfnDomain.CustomImageProperty.builder()
+    private val cdkBuilder: CfnDomain.CustomImageProperty.Builder =
+        CfnDomain.CustomImageProperty.builder()
 
-  /**
-   * @param appImageConfigName The name of the AppImageConfig. 
-   */
-  public fun appImageConfigName(appImageConfigName: String) {
-    cdkBuilder.appImageConfigName(appImageConfigName)
-  }
+    /** @param appImageConfigName The name of the AppImageConfig. */
+    public fun appImageConfigName(appImageConfigName: String) {
+        cdkBuilder.appImageConfigName(appImageConfigName)
+    }
 
-  /**
-   * @param imageName The name of the CustomImage. 
-   * Must be unique to your account.
-   */
-  public fun imageName(imageName: String) {
-    cdkBuilder.imageName(imageName)
-  }
+    /** @param imageName The name of the CustomImage. Must be unique to your account. */
+    public fun imageName(imageName: String) {
+        cdkBuilder.imageName(imageName)
+    }
 
-  /**
-   * @param imageVersionNumber The version number of the CustomImage.
-   */
-  public fun imageVersionNumber(imageVersionNumber: Number) {
-    cdkBuilder.imageVersionNumber(imageVersionNumber)
-  }
+    /** @param imageVersionNumber The version number of the CustomImage. */
+    public fun imageVersionNumber(imageVersionNumber: Number) {
+        cdkBuilder.imageVersionNumber(imageVersionNumber)
+    }
 
-  public fun build(): CfnDomain.CustomImageProperty = cdkBuilder.build()
+    public fun build(): CfnDomain.CustomImageProperty = cdkBuilder.build()
 }

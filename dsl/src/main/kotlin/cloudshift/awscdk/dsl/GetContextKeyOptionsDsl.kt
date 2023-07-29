@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.GetContextKeyOptions
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,37 +38,31 @@ import software.amazon.awscdk.GetContextKeyOptions
  */
 @CdkDslMarker
 public class GetContextKeyOptionsDsl {
-  private val cdkBuilder: GetContextKeyOptions.Builder = GetContextKeyOptions.builder()
+    private val cdkBuilder: GetContextKeyOptions.Builder = GetContextKeyOptions.builder()
 
-  /**
-   * @param includeEnvironment Whether to include the stack's account and region automatically.
-   */
-  public fun includeEnvironment(includeEnvironment: Boolean) {
-    cdkBuilder.includeEnvironment(includeEnvironment)
-  }
+    /**
+     * @param includeEnvironment Whether to include the stack's account and region automatically.
+     */
+    public fun includeEnvironment(includeEnvironment: Boolean) {
+        cdkBuilder.includeEnvironment(includeEnvironment)
+    }
 
-  /**
-   * @param props Provider-specific properties.
-   */
-  public fun props(props: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(props)
-    cdkBuilder.props(builder.map)
-  }
+    /** @param props Provider-specific properties. */
+    public fun props(props: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(props)
+        cdkBuilder.props(builder.map)
+    }
 
-  /**
-   * @param props Provider-specific properties.
-   */
-  public fun props(props: Map<String, Any>) {
-    cdkBuilder.props(props)
-  }
+    /** @param props Provider-specific properties. */
+    public fun props(props: Map<String, Any>) {
+        cdkBuilder.props(props)
+    }
 
-  /**
-   * @param provider The context provider to query. 
-   */
-  public fun provider(provider: String) {
-    cdkBuilder.provider(provider)
-  }
+    /** @param provider The context provider to query. */
+    public fun provider(provider: String) {
+        cdkBuilder.provider(provider)
+    }
 
-  public fun build(): GetContextKeyOptions = cdkBuilder.build()
+    public fun build(): GetContextKeyOptions = cdkBuilder.build()
 }

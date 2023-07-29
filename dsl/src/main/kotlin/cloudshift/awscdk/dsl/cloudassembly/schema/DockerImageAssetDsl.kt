@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.DockerImageAsset
-import software.amazon.awscdk.cloudassembly.schema.DockerImageDestination
-import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import software.amazon.awscdk.cloudassembly.schema.DockerImageAsset
+import software.amazon.awscdk.cloudassembly.schema.DockerImageDestination
+import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
 
 /**
  * A file asset.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -61,25 +69,19 @@ import kotlin.collections.Map
 public class DockerImageAssetDsl {
     private val cdkBuilder: DockerImageAsset.Builder = DockerImageAsset.builder()
 
-    /**
-     * @param destinations Destinations for this file asset.
-     */
+    /** @param destinations Destinations for this file asset. */
     public fun destinations(destinations: Map<String, DockerImageDestination>) {
         cdkBuilder.destinations(destinations)
     }
 
-    /**
-     * @param source Source description for file assets.
-     */
+    /** @param source Source description for file assets. */
     public fun source(source: DockerImageSourceDsl.() -> Unit = {}) {
         val builder = DockerImageSourceDsl()
         builder.apply(source)
         cdkBuilder.source(builder.build())
     }
 
-    /**
-     * @param source Source description for file assets.
-     */
+    /** @param source Source description for file assets. */
     public fun source(source: DockerImageSource) {
         cdkBuilder.source(source)
     }

@@ -1,24 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.CfnOutput
-import software.amazon.awscdk.pipelines.IFileSetProducer
-import software.amazon.awscdk.pipelines.ShellStep
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnOutput
+import software.amazon.awscdk.pipelines.IFileSetProducer
+import software.amazon.awscdk.pipelines.ShellStep
 
 /**
  * Run shell script commands in the pipeline.
  *
- * This is a generic step designed
- * to be deployment engine agnostic.
+ * This is a generic step designed to be deployment engine agnostic.
  *
  * Example:
- *
  * ```
  * Pipeline codePipeline;
  * Artifact sourceArtifact = new Artifact("MySourceArtifact");
@@ -33,7 +40,7 @@ import kotlin.collections.MutableList
  */
 @CdkDslMarker
 public class ShellStepDsl(
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: ShellStep.Builder = ShellStep.Builder.create(id)
 
@@ -44,14 +51,11 @@ public class ShellStepDsl(
     /**
      * Additional FileSets to put in other directories.
      *
-     * Specifies a mapping from directory name to FileSets. During the
-     * script execution, the FileSets will be available in the directories
-     * indicated.
+     * Specifies a mapping from directory name to FileSets. During the script execution, the
+     * FileSets will be available in the directories indicated.
      *
-     * The directory names may be relative. For example, you can put
-     * the main input and an additional input side-by-side with the
-     * following configuration:
-     *
+     * The directory names may be relative. For example, you can put the main input and an
+     * additional input side-by-side with the following configuration:
      * ```
      * ShellStep script = ShellStep.Builder.create("MainScript")
      * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
@@ -101,10 +105,8 @@ public class ShellStepDsl(
     /**
      * Set environment variables based on Stack Outputs.
      *
-     * `ShellStep`s following stack or stage deployments may
-     * access the `CfnOutput`s of those stacks to get access to
-     * --for example--automatically generated resource names or
-     * endpoint URLs.
+     * `ShellStep`s following stack or stage deployments may access the `CfnOutput`s of those stacks
+     * to get access to --for example--automatically generated resource names or endpoint URLs.
      *
      * Default: - No environment variables created from stack outputs
      *
@@ -117,9 +119,8 @@ public class ShellStepDsl(
     /**
      * FileSet to run these scripts on.
      *
-     * The files in the FileSet will be placed in the working directory when
-     * the script is executed. Use `additionalInputs` to download file sets
-     * to other directories as well.
+     * The files in the FileSet will be placed in the working directory when the script is executed.
+     * Use `additionalInputs` to download file sets to other directories as well.
      *
      * Default: - No input specified
      *
@@ -132,8 +133,8 @@ public class ShellStepDsl(
     /**
      * Installation commands to run before the regular commands.
      *
-     * For deployment engines that support it, install commands will be classified
-     * differently in the job history from the regular `commands`.
+     * For deployment engines that support it, install commands will be classified differently in
+     * the job history from the regular `commands`.
      *
      * Default: - No installation commands
      *
@@ -146,8 +147,8 @@ public class ShellStepDsl(
     /**
      * Installation commands to run before the regular commands.
      *
-     * For deployment engines that support it, install commands will be classified
-     * differently in the job history from the regular `commands`.
+     * For deployment engines that support it, install commands will be classified differently in
+     * the job history from the regular `commands`.
      *
      * Default: - No installation commands
      *
@@ -160,8 +161,8 @@ public class ShellStepDsl(
     /**
      * The directory that will contain the primary output fileset.
      *
-     * After running the script, the contents of the given directory
-     * will be treated as the primary output of this Step.
+     * After running the script, the contents of the given directory will be treated as the primary
+     * output of this Step.
      *
      * Default: - No primary output
      *

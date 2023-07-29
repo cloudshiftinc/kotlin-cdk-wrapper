@@ -1,12 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlow
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * The AWS::MediaConnect::Flow resource defines a connection between one or more video sources and
@@ -15,11 +24,10 @@ import kotlin.String
  * For each flow, you specify the transport protocol to use, encryption information, and details for
  * any outputs or entitlements that you want. AWS Elemental MediaConnect returns an ingest endpoint
  * where you can send your live video as a single unicast stream. The service replicates and
- * distributes the video to every output that you specify, whether inside or outside the AWS Cloud. You
- * can also set up entitlements on a flow to allow other AWS accounts to access your content.
+ * distributes the video to every output that you specify, whether inside or outside the AWS Cloud.
+ * You can also set up entitlements on a flow to allow other AWS accounts to access your content.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -83,7 +91,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnFlowDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnFlow.Builder = CfnFlow.Builder.create(scope, id)
 
@@ -93,6 +101,7 @@ public class CfnFlowDsl(
      * These options are limited to the Availability Zones within the current AWS Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-availabilityzone)
+     *
      * @param availabilityZone The Availability Zone that you want to create the flow in.
      */
     public fun availabilityZone(availabilityZone: String) {
@@ -103,6 +112,7 @@ public class CfnFlowDsl(
      * The name of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-name)
+     *
      * @param name The name of the flow.
      */
     public fun name(name: String) {
@@ -113,6 +123,7 @@ public class CfnFlowDsl(
      * The settings for the source that you want to use for the new flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-source)
+     *
      * @param source The settings for the source that you want to use for the new flow.
      */
     public fun source(source: IResolvable) {
@@ -123,6 +134,7 @@ public class CfnFlowDsl(
      * The settings for the source that you want to use for the new flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-source)
+     *
      * @param source The settings for the source that you want to use for the new flow.
      */
     public fun source(source: CfnFlow.SourceProperty) {
@@ -133,6 +145,7 @@ public class CfnFlowDsl(
      * The settings for source failover.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-sourcefailoverconfig)
+     *
      * @param sourceFailoverConfig The settings for source failover.
      */
     public fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
@@ -143,6 +156,7 @@ public class CfnFlowDsl(
      * The settings for source failover.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-sourcefailoverconfig)
+     *
      * @param sourceFailoverConfig The settings for source failover.
      */
     public fun sourceFailoverConfig(sourceFailoverConfig: CfnFlow.FailoverConfigProperty) {

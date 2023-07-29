@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  * Customer Profiles supports Salesforce, Zendesk, Marketo, ServiceNow and Amazon S3.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,78 +54,70 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  */
 @CdkDslMarker
 public class CfnIntegrationSourceConnectorPropertiesPropertyDsl {
-  private val cdkBuilder: CfnIntegration.SourceConnectorPropertiesProperty.Builder =
-      CfnIntegration.SourceConnectorPropertiesProperty.builder()
+    private val cdkBuilder: CfnIntegration.SourceConnectorPropertiesProperty.Builder =
+        CfnIntegration.SourceConnectorPropertiesProperty.builder()
 
-  /**
-   * @param marketo The properties that are applied when Marketo is being used as a source.
-   */
-  public fun marketo(marketo: IResolvable) {
-    cdkBuilder.marketo(marketo)
-  }
+    /** @param marketo The properties that are applied when Marketo is being used as a source. */
+    public fun marketo(marketo: IResolvable) {
+        cdkBuilder.marketo(marketo)
+    }
 
-  /**
-   * @param marketo The properties that are applied when Marketo is being used as a source.
-   */
-  public fun marketo(marketo: CfnIntegration.MarketoSourcePropertiesProperty) {
-    cdkBuilder.marketo(marketo)
-  }
+    /** @param marketo The properties that are applied when Marketo is being used as a source. */
+    public fun marketo(marketo: CfnIntegration.MarketoSourcePropertiesProperty) {
+        cdkBuilder.marketo(marketo)
+    }
 
-  /**
-   * @param s3 The properties that are applied when Amazon S3 is being used as the flow source.
-   */
-  public fun s3(s3: IResolvable) {
-    cdkBuilder.s3(s3)
-  }
+    /**
+     * @param s3 The properties that are applied when Amazon S3 is being used as the flow source.
+     */
+    public fun s3(s3: IResolvable) {
+        cdkBuilder.s3(s3)
+    }
 
-  /**
-   * @param s3 The properties that are applied when Amazon S3 is being used as the flow source.
-   */
-  public fun s3(s3: CfnIntegration.S3SourcePropertiesProperty) {
-    cdkBuilder.s3(s3)
-  }
+    /**
+     * @param s3 The properties that are applied when Amazon S3 is being used as the flow source.
+     */
+    public fun s3(s3: CfnIntegration.S3SourcePropertiesProperty) {
+        cdkBuilder.s3(s3)
+    }
 
-  /**
-   * @param salesforce The properties that are applied when Salesforce is being used as a source.
-   */
-  public fun salesforce(salesforce: IResolvable) {
-    cdkBuilder.salesforce(salesforce)
-  }
+    /**
+     * @param salesforce The properties that are applied when Salesforce is being used as a source.
+     */
+    public fun salesforce(salesforce: IResolvable) {
+        cdkBuilder.salesforce(salesforce)
+    }
 
-  /**
-   * @param salesforce The properties that are applied when Salesforce is being used as a source.
-   */
-  public fun salesforce(salesforce: CfnIntegration.SalesforceSourcePropertiesProperty) {
-    cdkBuilder.salesforce(salesforce)
-  }
+    /**
+     * @param salesforce The properties that are applied when Salesforce is being used as a source.
+     */
+    public fun salesforce(salesforce: CfnIntegration.SalesforceSourcePropertiesProperty) {
+        cdkBuilder.salesforce(salesforce)
+    }
 
-  /**
-   * @param serviceNow The properties that are applied when ServiceNow is being used as a source.
-   */
-  public fun serviceNow(serviceNow: IResolvable) {
-    cdkBuilder.serviceNow(serviceNow)
-  }
+    /**
+     * @param serviceNow The properties that are applied when ServiceNow is being used as a source.
+     */
+    public fun serviceNow(serviceNow: IResolvable) {
+        cdkBuilder.serviceNow(serviceNow)
+    }
 
-  /**
-   * @param serviceNow The properties that are applied when ServiceNow is being used as a source.
-   */
-  public fun serviceNow(serviceNow: CfnIntegration.ServiceNowSourcePropertiesProperty) {
-    cdkBuilder.serviceNow(serviceNow)
-  }
+    /**
+     * @param serviceNow The properties that are applied when ServiceNow is being used as a source.
+     */
+    public fun serviceNow(serviceNow: CfnIntegration.ServiceNowSourcePropertiesProperty) {
+        cdkBuilder.serviceNow(serviceNow)
+    }
 
-  /**
-   * @param zendesk The properties that are applied when using Zendesk as a flow source.
-   */
-  public fun zendesk(zendesk: IResolvable) {
-    cdkBuilder.zendesk(zendesk)
-  }
+    /** @param zendesk The properties that are applied when using Zendesk as a flow source. */
+    public fun zendesk(zendesk: IResolvable) {
+        cdkBuilder.zendesk(zendesk)
+    }
 
-  /**
-   * @param zendesk The properties that are applied when using Zendesk as a flow source.
-   */
-  public fun zendesk(zendesk: CfnIntegration.ZendeskSourcePropertiesProperty) {
-    cdkBuilder.zendesk(zendesk)
-  }
+    /** @param zendesk The properties that are applied when using Zendesk as a flow source. */
+    public fun zendesk(zendesk: CfnIntegration.ZendeskSourcePropertiesProperty) {
+        cdkBuilder.zendesk(zendesk)
+    }
 
-  public fun build(): CfnIntegration.SourceConnectorPropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnIntegration.SourceConnectorPropertiesProperty = cdkBuilder.build()
 }

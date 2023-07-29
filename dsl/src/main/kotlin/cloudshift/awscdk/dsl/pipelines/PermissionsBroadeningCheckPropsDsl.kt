@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sns.ITopic
  * Properties for a `PermissionsBroadeningCheck`.
  *
  * Example:
- *
  * ```
  * CodePipeline pipeline;
  * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
@@ -28,15 +36,15 @@ public class PermissionsBroadeningCheckPropsDsl {
 
     /**
      * @param notificationTopic Topic to send notifications when a human needs to give manual
-     * confirmation.
+     *   confirmation.
      */
     public fun notificationTopic(notificationTopic: ITopic) {
         cdkBuilder.notificationTopic(notificationTopic)
     }
 
     /**
-     * @param stage The CDK Stage object to check the stacks of.
-     * This should be the same Stage object you are passing to `addStage()`.
+     * @param stage The CDK Stage object to check the stacks of. This should be the same Stage
+     *   object you are passing to `addStage()`.
      */
     public fun stage(stage: Stage) {
         cdkBuilder.stage(stage)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is Mpeg2FilterSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,23 +37,20 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelMpeg2FilterSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.Mpeg2FilterSettingsProperty.Builder =
-      CfnChannel.Mpeg2FilterSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.Mpeg2FilterSettingsProperty.Builder =
+        CfnChannel.Mpeg2FilterSettingsProperty.builder()
 
-  /**
-   * @param temporalFilterSettings Settings for applying the temporal filter to the video.
-   */
-  public fun temporalFilterSettings(temporalFilterSettings: IResolvable) {
-    cdkBuilder.temporalFilterSettings(temporalFilterSettings)
-  }
+    /** @param temporalFilterSettings Settings for applying the temporal filter to the video. */
+    public fun temporalFilterSettings(temporalFilterSettings: IResolvable) {
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings)
+    }
 
-  /**
-   * @param temporalFilterSettings Settings for applying the temporal filter to the video.
-   */
-  public
-      fun temporalFilterSettings(temporalFilterSettings: CfnChannel.TemporalFilterSettingsProperty) {
-    cdkBuilder.temporalFilterSettings(temporalFilterSettings)
-  }
+    /** @param temporalFilterSettings Settings for applying the temporal filter to the video. */
+    public fun temporalFilterSettings(
+        temporalFilterSettings: CfnChannel.TemporalFilterSettingsProperty
+    ) {
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings)
+    }
 
-  public fun build(): CfnChannel.Mpeg2FilterSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.Mpeg2FilterSettingsProperty = cdkBuilder.build()
 }

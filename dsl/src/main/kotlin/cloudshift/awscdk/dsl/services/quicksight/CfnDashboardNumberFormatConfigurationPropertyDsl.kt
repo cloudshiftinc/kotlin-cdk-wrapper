@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * Formatting configuration for number fields.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -89,23 +97,20 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardNumberFormatConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.NumberFormatConfigurationProperty.Builder =
-      CfnDashboard.NumberFormatConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.NumberFormatConfigurationProperty.Builder =
+        CfnDashboard.NumberFormatConfigurationProperty.builder()
 
-  /**
-   * @param formatConfiguration The options that determine the numeric format configuration.
-   */
-  public fun formatConfiguration(formatConfiguration: IResolvable) {
-    cdkBuilder.formatConfiguration(formatConfiguration)
-  }
+    /** @param formatConfiguration The options that determine the numeric format configuration. */
+    public fun formatConfiguration(formatConfiguration: IResolvable) {
+        cdkBuilder.formatConfiguration(formatConfiguration)
+    }
 
-  /**
-   * @param formatConfiguration The options that determine the numeric format configuration.
-   */
-  public
-      fun formatConfiguration(formatConfiguration: CfnDashboard.NumericFormatConfigurationProperty) {
-    cdkBuilder.formatConfiguration(formatConfiguration)
-  }
+    /** @param formatConfiguration The options that determine the numeric format configuration. */
+    public fun formatConfiguration(
+        formatConfiguration: CfnDashboard.NumericFormatConfigurationProperty
+    ) {
+        cdkBuilder.formatConfiguration(formatConfiguration)
+    }
 
-  public fun build(): CfnDashboard.NumberFormatConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.NumberFormatConfigurationProperty = cdkBuilder.build()
 }

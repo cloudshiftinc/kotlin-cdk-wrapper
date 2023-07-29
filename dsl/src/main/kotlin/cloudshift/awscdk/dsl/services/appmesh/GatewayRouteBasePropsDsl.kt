@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.GatewayRouteSpec
  * Basic configuration properties for a GatewayRoute.
  *
  * Example:
- *
  * ```
  * VirtualGateway gateway;
  * VirtualService virtualService;
@@ -29,21 +37,17 @@ import software.amazon.awscdk.services.appmesh.GatewayRouteSpec
  */
 @CdkDslMarker
 public class GatewayRouteBasePropsDsl {
-  private val cdkBuilder: GatewayRouteBaseProps.Builder = GatewayRouteBaseProps.builder()
+    private val cdkBuilder: GatewayRouteBaseProps.Builder = GatewayRouteBaseProps.builder()
 
-  /**
-   * @param gatewayRouteName The name of the GatewayRoute.
-   */
-  public fun gatewayRouteName(gatewayRouteName: String) {
-    cdkBuilder.gatewayRouteName(gatewayRouteName)
-  }
+    /** @param gatewayRouteName The name of the GatewayRoute. */
+    public fun gatewayRouteName(gatewayRouteName: String) {
+        cdkBuilder.gatewayRouteName(gatewayRouteName)
+    }
 
-  /**
-   * @param routeSpec What protocol the route uses. 
-   */
-  public fun routeSpec(routeSpec: GatewayRouteSpec) {
-    cdkBuilder.routeSpec(routeSpec)
-  }
+    /** @param routeSpec What protocol the route uses. */
+    public fun routeSpec(routeSpec: GatewayRouteSpec) {
+        cdkBuilder.routeSpec(routeSpec)
+    }
 
-  public fun build(): GatewayRouteBaseProps = cdkBuilder.build()
+    public fun build(): GatewayRouteBaseProps = cdkBuilder.build()
 }

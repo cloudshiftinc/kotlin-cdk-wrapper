@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling
 
@@ -11,12 +20,11 @@ import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
 /**
  * Contains capacity metric information for the `CustomizedCapacityMetricSpecification` property of
- * the [AWS::AutoScaling::ScalingPolicy
- * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
+ * the
+ * [AWS::AutoScaling::ScalingPolicy PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,40 +60,41 @@ import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
  */
 @CdkDslMarker
 public class CfnScalingPolicyPredictiveScalingCustomizedCapacityMetricPropertyDsl {
-  private val cdkBuilder: CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty.Builder
-      = CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty.builder()
+    private val cdkBuilder:
+        CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty.Builder =
+        CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty.builder()
 
-  private val _metricDataQueries: MutableList<Any> = mutableListOf()
+    private val _metricDataQueries: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param metricDataQueries One or more metric data queries to provide the data points for a
-   * capacity metric. 
-   * Use multiple metric data queries only if you are performing a math expression on returned data.
-   */
-  public fun metricDataQueries(vararg metricDataQueries: Any) {
-    _metricDataQueries.addAll(listOf(*metricDataQueries))
-  }
+    /**
+     * @param metricDataQueries One or more metric data queries to provide the data points for a
+     *   capacity metric. Use multiple metric data queries only if you are performing a math
+     *   expression on returned data.
+     */
+    public fun metricDataQueries(vararg metricDataQueries: Any) {
+        _metricDataQueries.addAll(listOf(*metricDataQueries))
+    }
 
-  /**
-   * @param metricDataQueries One or more metric data queries to provide the data points for a
-   * capacity metric. 
-   * Use multiple metric data queries only if you are performing a math expression on returned data.
-   */
-  public fun metricDataQueries(metricDataQueries: Collection<Any>) {
-    _metricDataQueries.addAll(metricDataQueries)
-  }
+    /**
+     * @param metricDataQueries One or more metric data queries to provide the data points for a
+     *   capacity metric. Use multiple metric data queries only if you are performing a math
+     *   expression on returned data.
+     */
+    public fun metricDataQueries(metricDataQueries: Collection<Any>) {
+        _metricDataQueries.addAll(metricDataQueries)
+    }
 
-  /**
-   * @param metricDataQueries One or more metric data queries to provide the data points for a
-   * capacity metric. 
-   * Use multiple metric data queries only if you are performing a math expression on returned data.
-   */
-  public fun metricDataQueries(metricDataQueries: IResolvable) {
-    cdkBuilder.metricDataQueries(metricDataQueries)
-  }
+    /**
+     * @param metricDataQueries One or more metric data queries to provide the data points for a
+     *   capacity metric. Use multiple metric data queries only if you are performing a math
+     *   expression on returned data.
+     */
+    public fun metricDataQueries(metricDataQueries: IResolvable) {
+        cdkBuilder.metricDataQueries(metricDataQueries)
+    }
 
-  public fun build(): CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty {
-    if(_metricDataQueries.isNotEmpty()) cdkBuilder.metricDataQueries(_metricDataQueries)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty {
+        if (_metricDataQueries.isNotEmpty()) cdkBuilder.metricDataQueries(_metricDataQueries)
+        return cdkBuilder.build()
+    }
 }

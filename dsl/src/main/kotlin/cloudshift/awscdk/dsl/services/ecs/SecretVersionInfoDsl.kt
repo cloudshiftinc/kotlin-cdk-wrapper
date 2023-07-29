@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ecs.SecretVersionInfo
  * Specify the secret's version id or version stage.
  *
  * Example:
- *
  * ```
  * Secret secret;
  * Secret dbSecret;
@@ -43,21 +51,17 @@ import software.amazon.awscdk.services.ecs.SecretVersionInfo
  */
 @CdkDslMarker
 public class SecretVersionInfoDsl {
-  private val cdkBuilder: SecretVersionInfo.Builder = SecretVersionInfo.builder()
+    private val cdkBuilder: SecretVersionInfo.Builder = SecretVersionInfo.builder()
 
-  /**
-   * @param versionId version id of the secret.
-   */
-  public fun versionId(versionId: String) {
-    cdkBuilder.versionId(versionId)
-  }
+    /** @param versionId version id of the secret. */
+    public fun versionId(versionId: String) {
+        cdkBuilder.versionId(versionId)
+    }
 
-  /**
-   * @param versionStage version stage of the secret.
-   */
-  public fun versionStage(versionStage: String) {
-    cdkBuilder.versionStage(versionStage)
-  }
+    /** @param versionStage version stage of the secret. */
+    public fun versionStage(versionStage: String) {
+        cdkBuilder.versionStage(versionStage)
+    }
 
-  public fun build(): SecretVersionInfo = cdkBuilder.build()
+    public fun build(): SecretVersionInfo = cdkBuilder.build()
 }

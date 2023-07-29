@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  * streams to create for a given streaming source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  */
 @CdkDslMarker
 public class CfnApplicationV2InputParallelismPropertyDsl {
-  private val cdkBuilder: CfnApplicationV2.InputParallelismProperty.Builder =
-      CfnApplicationV2.InputParallelismProperty.builder()
+    private val cdkBuilder: CfnApplicationV2.InputParallelismProperty.Builder =
+        CfnApplicationV2.InputParallelismProperty.builder()
 
-  /**
-   * @param count The number of in-application streams to create.
-   */
-  public fun count(count: Number) {
-    cdkBuilder.count(count)
-  }
+    /** @param count The number of in-application streams to create. */
+    public fun count(count: Number) {
+        cdkBuilder.count(count)
+    }
 
-  public fun build(): CfnApplicationV2.InputParallelismProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationV2.InputParallelismProperty = cdkBuilder.build()
 }

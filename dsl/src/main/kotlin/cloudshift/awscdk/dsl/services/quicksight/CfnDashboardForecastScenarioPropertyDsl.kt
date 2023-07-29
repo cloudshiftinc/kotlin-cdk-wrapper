@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The forecast scenario of a forecast in the line chart.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,30 +43,22 @@ public class CfnDashboardForecastScenarioPropertyDsl {
     private val cdkBuilder: CfnDashboard.ForecastScenarioProperty.Builder =
         CfnDashboard.ForecastScenarioProperty.builder()
 
-    /**
-     * @param whatIfPointScenario The what-if analysis forecast setup with the target date.
-     */
+    /** @param whatIfPointScenario The what-if analysis forecast setup with the target date. */
     public fun whatIfPointScenario(whatIfPointScenario: IResolvable) {
         cdkBuilder.whatIfPointScenario(whatIfPointScenario)
     }
 
-    /**
-     * @param whatIfPointScenario The what-if analysis forecast setup with the target date.
-     */
+    /** @param whatIfPointScenario The what-if analysis forecast setup with the target date. */
     public fun whatIfPointScenario(whatIfPointScenario: CfnDashboard.WhatIfPointScenarioProperty) {
         cdkBuilder.whatIfPointScenario(whatIfPointScenario)
     }
 
-    /**
-     * @param whatIfRangeScenario The what-if analysis forecast setup with the date range.
-     */
+    /** @param whatIfRangeScenario The what-if analysis forecast setup with the date range. */
     public fun whatIfRangeScenario(whatIfRangeScenario: IResolvable) {
         cdkBuilder.whatIfRangeScenario(whatIfRangeScenario)
     }
 
-    /**
-     * @param whatIfRangeScenario The what-if analysis forecast setup with the date range.
-     */
+    /** @param whatIfRangeScenario The what-if analysis forecast setup with the date range. */
     public fun whatIfRangeScenario(whatIfRangeScenario: CfnDashboard.WhatIfRangeScenarioProperty) {
         cdkBuilder.whatIfRangeScenario(whatIfRangeScenario)
     }

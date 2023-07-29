@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.apigateway.CfnDeployment
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,27 +37,25 @@ import software.amazon.awscdk.services.apigateway.CfnDeployment
  */
 @CdkDslMarker
 public class CfnDeploymentAccessLogSettingPropertyDsl {
-  private val cdkBuilder: CfnDeployment.AccessLogSettingProperty.Builder =
-      CfnDeployment.AccessLogSettingProperty.builder()
+    private val cdkBuilder: CfnDeployment.AccessLogSettingProperty.Builder =
+        CfnDeployment.AccessLogSettingProperty.builder()
 
-  /**
-   * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or
-   * Kinesis Data Firehose delivery stream to receive access logs.
-   * If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with
-   * `amazon-apigateway-` .
-   */
-  public fun destinationArn(destinationArn: String) {
-    cdkBuilder.destinationArn(destinationArn)
-  }
+    /**
+     * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or
+     *   Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data
+     *   Firehose delivery stream, the stream name must begin with `amazon-apigateway-` .
+     */
+    public fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+    }
 
-  /**
-   * @param format A single line format of the access logs of data, as specified by selected
-   * $context variables.
-   * The format must include at least `$context.requestId` .
-   */
-  public fun format(format: String) {
-    cdkBuilder.format(format)
-  }
+    /**
+     * @param format A single line format of the access logs of data, as specified by selected
+     *   $context variables. The format must include at least `$context.requestId` .
+     */
+    public fun format(format: String) {
+        cdkBuilder.format(format)
+    }
 
-  public fun build(): CfnDeployment.AccessLogSettingProperty = cdkBuilder.build()
+    public fun build(): CfnDeployment.AccessLogSettingProperty = cdkBuilder.build()
 }

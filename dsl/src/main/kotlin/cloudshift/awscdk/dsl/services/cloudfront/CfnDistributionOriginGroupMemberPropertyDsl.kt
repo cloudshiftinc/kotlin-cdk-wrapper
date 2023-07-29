@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
  * An origin in an origin group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
  */
 @CdkDslMarker
 public class CfnDistributionOriginGroupMemberPropertyDsl {
-  private val cdkBuilder: CfnDistribution.OriginGroupMemberProperty.Builder =
-      CfnDistribution.OriginGroupMemberProperty.builder()
+    private val cdkBuilder: CfnDistribution.OriginGroupMemberProperty.Builder =
+        CfnDistribution.OriginGroupMemberProperty.builder()
 
-  /**
-   * @param originId The ID for an origin in an origin group. 
-   */
-  public fun originId(originId: String) {
-    cdkBuilder.originId(originId)
-  }
+    /** @param originId The ID for an origin in an origin group. */
+    public fun originId(originId: String) {
+        cdkBuilder.originId(originId)
+    }
 
-  public fun build(): CfnDistribution.OriginGroupMemberProperty = cdkBuilder.build()
+    public fun build(): CfnDistribution.OriginGroupMemberProperty = cdkBuilder.build()
 }

@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The field well configuration of a KPI visual.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -30,65 +38,47 @@ public class CfnTemplateKPIFieldWellsPropertyDsl {
 
     private val _values: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param targetValues The target value field wells of a KPI visual.
-     */
+    /** @param targetValues The target value field wells of a KPI visual. */
     public fun targetValues(vararg targetValues: Any) {
         _targetValues.addAll(listOf(*targetValues))
     }
 
-    /**
-     * @param targetValues The target value field wells of a KPI visual.
-     */
+    /** @param targetValues The target value field wells of a KPI visual. */
     public fun targetValues(targetValues: Collection<Any>) {
         _targetValues.addAll(targetValues)
     }
 
-    /**
-     * @param targetValues The target value field wells of a KPI visual.
-     */
+    /** @param targetValues The target value field wells of a KPI visual. */
     public fun targetValues(targetValues: IResolvable) {
         cdkBuilder.targetValues(targetValues)
     }
 
-    /**
-     * @param trendGroups The trend group field wells of a KPI visual.
-     */
+    /** @param trendGroups The trend group field wells of a KPI visual. */
     public fun trendGroups(vararg trendGroups: Any) {
         _trendGroups.addAll(listOf(*trendGroups))
     }
 
-    /**
-     * @param trendGroups The trend group field wells of a KPI visual.
-     */
+    /** @param trendGroups The trend group field wells of a KPI visual. */
     public fun trendGroups(trendGroups: Collection<Any>) {
         _trendGroups.addAll(trendGroups)
     }
 
-    /**
-     * @param trendGroups The trend group field wells of a KPI visual.
-     */
+    /** @param trendGroups The trend group field wells of a KPI visual. */
     public fun trendGroups(trendGroups: IResolvable) {
         cdkBuilder.trendGroups(trendGroups)
     }
 
-    /**
-     * @param values The value field wells of a KPI visual.
-     */
+    /** @param values The value field wells of a KPI visual. */
     public fun values(vararg values: Any) {
         _values.addAll(listOf(*values))
     }
 
-    /**
-     * @param values The value field wells of a KPI visual.
-     */
+    /** @param values The value field wells of a KPI visual. */
     public fun values(values: Collection<Any>) {
         _values.addAll(values)
     }
 
-    /**
-     * @param values The value field wells of a KPI visual.
-     */
+    /** @param values The value field wells of a KPI visual. */
     public fun values(values: IResolvable) {
         cdkBuilder.values(values)
     }

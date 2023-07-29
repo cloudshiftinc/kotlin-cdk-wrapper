@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediapackage
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
  * packaging.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -56,82 +64,81 @@ import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
  */
 @CdkDslMarker
 public class CfnPackagingConfigurationCmafPackagePropertyDsl {
-  private val cdkBuilder: CfnPackagingConfiguration.CmafPackageProperty.Builder =
-      CfnPackagingConfiguration.CmafPackageProperty.builder()
+    private val cdkBuilder: CfnPackagingConfiguration.CmafPackageProperty.Builder =
+        CfnPackagingConfiguration.CmafPackageProperty.builder()
 
-  private val _hlsManifests: MutableList<Any> = mutableListOf()
+    private val _hlsManifests: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param encryption Parameters for encrypting content.
-   */
-  public fun encryption(encryption: IResolvable) {
-    cdkBuilder.encryption(encryption)
-  }
+    /** @param encryption Parameters for encrypting content. */
+    public fun encryption(encryption: IResolvable) {
+        cdkBuilder.encryption(encryption)
+    }
 
-  /**
-   * @param encryption Parameters for encrypting content.
-   */
-  public fun encryption(encryption: CfnPackagingConfiguration.CmafEncryptionProperty) {
-    cdkBuilder.encryption(encryption)
-  }
+    /** @param encryption Parameters for encrypting content. */
+    public fun encryption(encryption: CfnPackagingConfiguration.CmafEncryptionProperty) {
+        cdkBuilder.encryption(encryption)
+    }
 
-  /**
-   * @param hlsManifests A list of HLS manifest configurations that are available from this
-   * endpoint. 
-   */
-  public fun hlsManifests(vararg hlsManifests: Any) {
-    _hlsManifests.addAll(listOf(*hlsManifests))
-  }
+    /**
+     * @param hlsManifests A list of HLS manifest configurations that are available from this
+     *   endpoint.
+     */
+    public fun hlsManifests(vararg hlsManifests: Any) {
+        _hlsManifests.addAll(listOf(*hlsManifests))
+    }
 
-  /**
-   * @param hlsManifests A list of HLS manifest configurations that are available from this
-   * endpoint. 
-   */
-  public fun hlsManifests(hlsManifests: Collection<Any>) {
-    _hlsManifests.addAll(hlsManifests)
-  }
+    /**
+     * @param hlsManifests A list of HLS manifest configurations that are available from this
+     *   endpoint.
+     */
+    public fun hlsManifests(hlsManifests: Collection<Any>) {
+        _hlsManifests.addAll(hlsManifests)
+    }
 
-  /**
-   * @param hlsManifests A list of HLS manifest configurations that are available from this
-   * endpoint. 
-   */
-  public fun hlsManifests(hlsManifests: IResolvable) {
-    cdkBuilder.hlsManifests(hlsManifests)
-  }
+    /**
+     * @param hlsManifests A list of HLS manifest configurations that are available from this
+     *   endpoint.
+     */
+    public fun hlsManifests(hlsManifests: IResolvable) {
+        cdkBuilder.hlsManifests(hlsManifests)
+    }
 
-  /**
-   * @param includeEncoderConfigurationInSegments When includeEncoderConfigurationInSegments is set
-   * to true, AWS Elemental MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture
-   * Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in
-   * the init fragment.
-   * This lets you use different SPS/PPS/VPS settings for your assets during content playback.
-   */
-  public fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean) {
-    cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments)
-  }
+    /**
+     * @param includeEncoderConfigurationInSegments When includeEncoderConfigurationInSegments is
+     *   set to true, AWS Elemental MediaPackage places your encoder's Sequence Parameter Set (SPS),
+     *   Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment
+     *   instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your
+     *   assets during content playback.
+     */
+    public fun includeEncoderConfigurationInSegments(
+        includeEncoderConfigurationInSegments: Boolean
+    ) {
+        cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments)
+    }
 
-  /**
-   * @param includeEncoderConfigurationInSegments When includeEncoderConfigurationInSegments is set
-   * to true, AWS Elemental MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture
-   * Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in
-   * the init fragment.
-   * This lets you use different SPS/PPS/VPS settings for your assets during content playback.
-   */
-  public
-      fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: IResolvable) {
-    cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments)
-  }
+    /**
+     * @param includeEncoderConfigurationInSegments When includeEncoderConfigurationInSegments is
+     *   set to true, AWS Elemental MediaPackage places your encoder's Sequence Parameter Set (SPS),
+     *   Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment
+     *   instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your
+     *   assets during content playback.
+     */
+    public fun includeEncoderConfigurationInSegments(
+        includeEncoderConfigurationInSegments: IResolvable
+    ) {
+        cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments)
+    }
 
-  /**
-   * @param segmentDurationSeconds Duration (in seconds) of each segment.
-   * Actual segments are rounded to the nearest multiple of the source fragment duration.
-   */
-  public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-    cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
-  }
+    /**
+     * @param segmentDurationSeconds Duration (in seconds) of each segment. Actual segments are
+     *   rounded to the nearest multiple of the source fragment duration.
+     */
+    public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+        cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
+    }
 
-  public fun build(): CfnPackagingConfiguration.CmafPackageProperty {
-    if(_hlsManifests.isNotEmpty()) cdkBuilder.hlsManifests(_hlsManifests)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnPackagingConfiguration.CmafPackageProperty {
+        if (_hlsManifests.isNotEmpty()) cdkBuilder.hlsManifests(_hlsManifests)
+        return cdkBuilder.build()
+    }
 }

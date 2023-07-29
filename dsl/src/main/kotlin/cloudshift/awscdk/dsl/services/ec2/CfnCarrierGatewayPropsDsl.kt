@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.ec2.CfnCarrierGatewayProps
  * Properties for defining a `CfnCarrierGateway`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,33 +42,27 @@ import software.amazon.awscdk.services.ec2.CfnCarrierGatewayProps
  */
 @CdkDslMarker
 public class CfnCarrierGatewayPropsDsl {
-  private val cdkBuilder: CfnCarrierGatewayProps.Builder = CfnCarrierGatewayProps.builder()
+    private val cdkBuilder: CfnCarrierGatewayProps.Builder = CfnCarrierGatewayProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param tags The tags assigned to the carrier gateway.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags assigned to the carrier gateway. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags assigned to the carrier gateway.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags assigned to the carrier gateway. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * @param vpcId The ID of the VPC associated with the carrier gateway. 
-   */
-  public fun vpcId(vpcId: String) {
-    cdkBuilder.vpcId(vpcId)
-  }
+    /** @param vpcId The ID of the VPC associated with the carrier gateway. */
+    public fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+    }
 
-  public fun build(): CfnCarrierGatewayProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnCarrierGatewayProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

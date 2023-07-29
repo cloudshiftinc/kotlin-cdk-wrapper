@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Defines different defaults to the users or groups based on mapping.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,30 +61,22 @@ public class CfnAnalysisDynamicDefaultValuePropertyDsl {
         cdkBuilder.defaultValueColumn(defaultValueColumn)
     }
 
-    /**
-     * @param groupNameColumn The column that contains the group name.
-     */
+    /** @param groupNameColumn The column that contains the group name. */
     public fun groupNameColumn(groupNameColumn: IResolvable) {
         cdkBuilder.groupNameColumn(groupNameColumn)
     }
 
-    /**
-     * @param groupNameColumn The column that contains the group name.
-     */
+    /** @param groupNameColumn The column that contains the group name. */
     public fun groupNameColumn(groupNameColumn: CfnAnalysis.ColumnIdentifierProperty) {
         cdkBuilder.groupNameColumn(groupNameColumn)
     }
 
-    /**
-     * @param userNameColumn The column that contains the username.
-     */
+    /** @param userNameColumn The column that contains the username. */
     public fun userNameColumn(userNameColumn: IResolvable) {
         cdkBuilder.userNameColumn(userNameColumn)
     }
 
-    /**
-     * @param userNameColumn The column that contains the username.
-     */
+    /** @param userNameColumn The column that contains the username. */
     public fun userNameColumn(userNameColumn: CfnAnalysis.ColumnIdentifierProperty) {
         cdkBuilder.userNameColumn(userNameColumn)
     }

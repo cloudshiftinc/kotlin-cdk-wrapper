@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * The sort configuration for a column that is not used in a field well.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,37 +51,27 @@ public class CfnTemplateColumnSortPropertyDsl {
     private val cdkBuilder: CfnTemplate.ColumnSortProperty.Builder =
         CfnTemplate.ColumnSortProperty.builder()
 
-    /**
-     * @param aggregationFunction The aggregation function that is defined in the column sort.
-     */
+    /** @param aggregationFunction The aggregation function that is defined in the column sort. */
     public fun aggregationFunction(aggregationFunction: IResolvable) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param aggregationFunction The aggregation function that is defined in the column sort.
-     */
+    /** @param aggregationFunction The aggregation function that is defined in the column sort. */
     public fun aggregationFunction(aggregationFunction: CfnTemplate.AggregationFunctionProperty) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param direction The sort direction.
-     */
+    /** @param direction The sort direction. */
     public fun direction(direction: String) {
         cdkBuilder.direction(direction)
     }
 
-    /**
-     * @param sortBy the value to be set.
-     */
+    /** @param sortBy the value to be set. */
     public fun sortBy(sortBy: IResolvable) {
         cdkBuilder.sortBy(sortBy)
     }
 
-    /**
-     * @param sortBy the value to be set.
-     */
+    /** @param sortBy the value to be set. */
     public fun sortBy(sortBy: CfnTemplate.ColumnIdentifierProperty) {
         cdkBuilder.sortBy(sortBy)
     }

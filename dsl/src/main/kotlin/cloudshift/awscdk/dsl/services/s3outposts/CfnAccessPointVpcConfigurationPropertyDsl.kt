@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3outposts
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.s3outposts.CfnAccessPoint
  * Contains the virtual private cloud (VPC) configuration for the specified access point.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.s3outposts.CfnAccessPoint
  */
 @CdkDslMarker
 public class CfnAccessPointVpcConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAccessPoint.VpcConfigurationProperty.Builder =
-      CfnAccessPoint.VpcConfigurationProperty.builder()
+    private val cdkBuilder: CfnAccessPoint.VpcConfigurationProperty.Builder =
+        CfnAccessPoint.VpcConfigurationProperty.builder()
 
-  /**
-   * @param vpcId The ID of the VPC configuration.
-   */
-  public fun vpcId(vpcId: String) {
-    cdkBuilder.vpcId(vpcId)
-  }
+    /** @param vpcId The ID of the VPC configuration. */
+    public fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+    }
 
-  public fun build(): CfnAccessPoint.VpcConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAccessPoint.VpcConfigurationProperty = cdkBuilder.build()
 }

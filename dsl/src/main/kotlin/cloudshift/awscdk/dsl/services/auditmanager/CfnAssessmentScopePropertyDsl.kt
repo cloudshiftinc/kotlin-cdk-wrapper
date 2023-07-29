@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.auditmanager
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.auditmanager.CfnAssessment
  * are in scope for the assessment.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,58 +43,46 @@ import software.amazon.awscdk.services.auditmanager.CfnAssessment
  */
 @CdkDslMarker
 public class CfnAssessmentScopePropertyDsl {
-  private val cdkBuilder: CfnAssessment.ScopeProperty.Builder =
-      CfnAssessment.ScopeProperty.builder()
+    private val cdkBuilder: CfnAssessment.ScopeProperty.Builder =
+        CfnAssessment.ScopeProperty.builder()
 
-  private val _awsAccounts: MutableList<Any> = mutableListOf()
+    private val _awsAccounts: MutableList<Any> = mutableListOf()
 
-  private val _awsServices: MutableList<Any> = mutableListOf()
+    private val _awsServices: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-   */
-  public fun awsAccounts(vararg awsAccounts: Any) {
-    _awsAccounts.addAll(listOf(*awsAccounts))
-  }
+    /** @param awsAccounts The AWS accounts that are included in the scope of the assessment. */
+    public fun awsAccounts(vararg awsAccounts: Any) {
+        _awsAccounts.addAll(listOf(*awsAccounts))
+    }
 
-  /**
-   * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-   */
-  public fun awsAccounts(awsAccounts: Collection<Any>) {
-    _awsAccounts.addAll(awsAccounts)
-  }
+    /** @param awsAccounts The AWS accounts that are included in the scope of the assessment. */
+    public fun awsAccounts(awsAccounts: Collection<Any>) {
+        _awsAccounts.addAll(awsAccounts)
+    }
 
-  /**
-   * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-   */
-  public fun awsAccounts(awsAccounts: IResolvable) {
-    cdkBuilder.awsAccounts(awsAccounts)
-  }
+    /** @param awsAccounts The AWS accounts that are included in the scope of the assessment. */
+    public fun awsAccounts(awsAccounts: IResolvable) {
+        cdkBuilder.awsAccounts(awsAccounts)
+    }
 
-  /**
-   * @param awsServices The AWS services that are included in the scope of the assessment.
-   */
-  public fun awsServices(vararg awsServices: Any) {
-    _awsServices.addAll(listOf(*awsServices))
-  }
+    /** @param awsServices The AWS services that are included in the scope of the assessment. */
+    public fun awsServices(vararg awsServices: Any) {
+        _awsServices.addAll(listOf(*awsServices))
+    }
 
-  /**
-   * @param awsServices The AWS services that are included in the scope of the assessment.
-   */
-  public fun awsServices(awsServices: Collection<Any>) {
-    _awsServices.addAll(awsServices)
-  }
+    /** @param awsServices The AWS services that are included in the scope of the assessment. */
+    public fun awsServices(awsServices: Collection<Any>) {
+        _awsServices.addAll(awsServices)
+    }
 
-  /**
-   * @param awsServices The AWS services that are included in the scope of the assessment.
-   */
-  public fun awsServices(awsServices: IResolvable) {
-    cdkBuilder.awsServices(awsServices)
-  }
+    /** @param awsServices The AWS services that are included in the scope of the assessment. */
+    public fun awsServices(awsServices: IResolvable) {
+        cdkBuilder.awsServices(awsServices)
+    }
 
-  public fun build(): CfnAssessment.ScopeProperty {
-    if(_awsAccounts.isNotEmpty()) cdkBuilder.awsAccounts(_awsAccounts)
-    if(_awsServices.isNotEmpty()) cdkBuilder.awsServices(_awsServices)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAssessment.ScopeProperty {
+        if (_awsAccounts.isNotEmpty()) cdkBuilder.awsAccounts(_awsAccounts)
+        if (_awsServices.isNotEmpty()) cdkBuilder.awsServices(_awsServices)
+        return cdkBuilder.build()
+    }
 }

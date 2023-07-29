@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The aggregated field wells of a heat map.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -30,65 +38,47 @@ public class CfnAnalysisHeatMapAggregatedFieldWellsPropertyDsl {
 
     private val _values: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param columns The columns field well of a heat map.
-     */
+    /** @param columns The columns field well of a heat map. */
     public fun columns(vararg columns: Any) {
         _columns.addAll(listOf(*columns))
     }
 
-    /**
-     * @param columns The columns field well of a heat map.
-     */
+    /** @param columns The columns field well of a heat map. */
     public fun columns(columns: Collection<Any>) {
         _columns.addAll(columns)
     }
 
-    /**
-     * @param columns The columns field well of a heat map.
-     */
+    /** @param columns The columns field well of a heat map. */
     public fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns)
     }
 
-    /**
-     * @param rows The rows field well of a heat map.
-     */
+    /** @param rows The rows field well of a heat map. */
     public fun rows(vararg rows: Any) {
         _rows.addAll(listOf(*rows))
     }
 
-    /**
-     * @param rows The rows field well of a heat map.
-     */
+    /** @param rows The rows field well of a heat map. */
     public fun rows(rows: Collection<Any>) {
         _rows.addAll(rows)
     }
 
-    /**
-     * @param rows The rows field well of a heat map.
-     */
+    /** @param rows The rows field well of a heat map. */
     public fun rows(rows: IResolvable) {
         cdkBuilder.rows(rows)
     }
 
-    /**
-     * @param values The values field well of a heat map.
-     */
+    /** @param values The values field well of a heat map. */
     public fun values(vararg values: Any) {
         _values.addAll(listOf(*values))
     }
 
-    /**
-     * @param values The values field well of a heat map.
-     */
+    /** @param values The values field well of a heat map. */
     public fun values(values: Collection<Any>) {
         _values.addAll(values)
     }
 
-    /**
-     * @param values The values field well of a heat map.
-     */
+    /** @param values The values field well of a heat map. */
     public fun values(values: IResolvable) {
         cdkBuilder.values(values)
     }

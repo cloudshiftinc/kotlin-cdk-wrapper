@@ -1,4 +1,3 @@
 package cloudshift.awscdk.common
 
-@DslMarker
-public annotation class CdkDslMarker
+@DslMarker public annotation class CdkDslMarker

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sso
 
@@ -13,10 +22,9 @@ import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConf
  * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still
  * supported for backwards compatibility purposes.
  *
- * We recomend that you use  AccessControlAttributes property instead.
+ * We recomend that you use AccessControlAttributes property instead.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,41 +44,34 @@ import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConf
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration.html)
  */
 @CdkDslMarker
-public class
-    CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl
-    {
-  private val cdkBuilder:
-      CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty.Builder
-      =
-      CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty.builder()
+public class CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl {
+    private val cdkBuilder:
+        CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty.Builder =
+        CfnInstanceAccessControlAttributeConfiguration
+            .InstanceAccessControlAttributeConfigurationProperty
+            .builder()
 
-  private val _accessControlAttributes: MutableList<Any> = mutableListOf()
+    private val _accessControlAttributes: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param accessControlAttributes the value to be set. 
-   */
-  public fun accessControlAttributes(vararg accessControlAttributes: Any) {
-    _accessControlAttributes.addAll(listOf(*accessControlAttributes))
-  }
+    /** @param accessControlAttributes the value to be set. */
+    public fun accessControlAttributes(vararg accessControlAttributes: Any) {
+        _accessControlAttributes.addAll(listOf(*accessControlAttributes))
+    }
 
-  /**
-   * @param accessControlAttributes the value to be set. 
-   */
-  public fun accessControlAttributes(accessControlAttributes: Collection<Any>) {
-    _accessControlAttributes.addAll(accessControlAttributes)
-  }
+    /** @param accessControlAttributes the value to be set. */
+    public fun accessControlAttributes(accessControlAttributes: Collection<Any>) {
+        _accessControlAttributes.addAll(accessControlAttributes)
+    }
 
-  /**
-   * @param accessControlAttributes the value to be set. 
-   */
-  public fun accessControlAttributes(accessControlAttributes: IResolvable) {
-    cdkBuilder.accessControlAttributes(accessControlAttributes)
-  }
+    /** @param accessControlAttributes the value to be set. */
+    public fun accessControlAttributes(accessControlAttributes: IResolvable) {
+        cdkBuilder.accessControlAttributes(accessControlAttributes)
+    }
 
-  public fun build():
-      CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty {
-    if(_accessControlAttributes.isNotEmpty())
-        cdkBuilder.accessControlAttributes(_accessControlAttributes)
-    return cdkBuilder.build()
-  }
+    public fun build():
+        CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty {
+        if (_accessControlAttributes.isNotEmpty())
+            cdkBuilder.accessControlAttributes(_accessControlAttributes)
+        return cdkBuilder.build()
+    }
 }

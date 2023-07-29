@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -11,11 +20,10 @@ import software.amazon.awscdk.services.ec2.UserData
 /**
  * Construct a Linux machine image from an AMI map.
  *
- * Linux images IDs are not published to SSM parameter store yet, so you'll have to
- * manually specify an AMI map.
+ * Linux images IDs are not published to SSM parameter store yet, so you'll have to manually specify
+ * an AMI map.
  *
  * Example:
- *
  * ```
  * // Pick a Windows edition to use
  * WindowsImage windows = new WindowsImage(WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE);
@@ -36,20 +44,20 @@ import software.amazon.awscdk.services.ec2.UserData
  */
 @CdkDslMarker
 public class GenericLinuxImageDsl(
-  amiMap: Map<String, String>,
+    amiMap: Map<String, String>,
 ) {
-  private val cdkBuilder: GenericLinuxImage.Builder = GenericLinuxImage.Builder.create(amiMap)
+    private val cdkBuilder: GenericLinuxImage.Builder = GenericLinuxImage.Builder.create(amiMap)
 
-  /**
-   * Initial user data.
-   *
-   * Default: - Empty UserData for Linux machines
-   *
-   * @param userData Initial user data. 
-   */
-  public fun userData(userData: UserData) {
-    cdkBuilder.userData(userData)
-  }
+    /**
+     * Initial user data.
+     *
+     * Default: - Empty UserData for Linux machines
+     *
+     * @param userData Initial user data.
+     */
+    public fun userData(userData: UserData) {
+        cdkBuilder.userData(userData)
+    }
 
-  public fun build(): GenericLinuxImage = cdkBuilder.build()
+    public fun build(): GenericLinuxImage = cdkBuilder.build()
 }

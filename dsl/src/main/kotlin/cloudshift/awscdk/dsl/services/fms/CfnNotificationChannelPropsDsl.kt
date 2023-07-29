@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fms
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.fms.CfnNotificationChannelProps
  * Properties for defining a `CfnNotificationChannel`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,24 +33,24 @@ import software.amazon.awscdk.services.fms.CfnNotificationChannelProps
  */
 @CdkDslMarker
 public class CfnNotificationChannelPropsDsl {
-  private val cdkBuilder: CfnNotificationChannelProps.Builder =
-      CfnNotificationChannelProps.builder()
+    private val cdkBuilder: CfnNotificationChannelProps.Builder =
+        CfnNotificationChannelProps.builder()
 
-  /**
-   * @param snsRoleName The Amazon Resource Name (ARN) of the IAM role that allows Amazon SNS to
-   * record AWS Firewall Manager activity. 
-   */
-  public fun snsRoleName(snsRoleName: String) {
-    cdkBuilder.snsRoleName(snsRoleName)
-  }
+    /**
+     * @param snsRoleName The Amazon Resource Name (ARN) of the IAM role that allows Amazon SNS to
+     *   record AWS Firewall Manager activity.
+     */
+    public fun snsRoleName(snsRoleName: String) {
+        cdkBuilder.snsRoleName(snsRoleName)
+    }
 
-  /**
-   * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic that collects notifications
-   * from AWS Firewall Manager . 
-   */
-  public fun snsTopicArn(snsTopicArn: String) {
-    cdkBuilder.snsTopicArn(snsTopicArn)
-  }
+    /**
+     * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic that collects
+     *   notifications from AWS Firewall Manager .
+     */
+    public fun snsTopicArn(snsTopicArn: String) {
+        cdkBuilder.snsTopicArn(snsTopicArn)
+    }
 
-  public fun build(): CfnNotificationChannelProps = cdkBuilder.build()
+    public fun build(): CfnNotificationChannelProps = cdkBuilder.build()
 }

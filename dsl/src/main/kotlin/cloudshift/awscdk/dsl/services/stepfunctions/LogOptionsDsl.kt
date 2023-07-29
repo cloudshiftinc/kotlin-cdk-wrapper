@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.stepfunctions.LogOptions
  * Defines what execution history events are logged and where they are logged.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.logs.*;
  * LogGroup logGroup = new LogGroup(this, "MyLogGroup");
@@ -27,28 +35,22 @@ import software.amazon.awscdk.services.stepfunctions.LogOptions
  */
 @CdkDslMarker
 public class LogOptionsDsl {
-  private val cdkBuilder: LogOptions.Builder = LogOptions.builder()
+    private val cdkBuilder: LogOptions.Builder = LogOptions.builder()
 
-  /**
-   * @param destination The log group where the execution history events will be logged. 
-   */
-  public fun destination(destination: ILogGroup) {
-    cdkBuilder.destination(destination)
-  }
+    /** @param destination The log group where the execution history events will be logged. */
+    public fun destination(destination: ILogGroup) {
+        cdkBuilder.destination(destination)
+    }
 
-  /**
-   * @param includeExecutionData Determines whether execution data is included in your log.
-   */
-  public fun includeExecutionData(includeExecutionData: Boolean) {
-    cdkBuilder.includeExecutionData(includeExecutionData)
-  }
+    /** @param includeExecutionData Determines whether execution data is included in your log. */
+    public fun includeExecutionData(includeExecutionData: Boolean) {
+        cdkBuilder.includeExecutionData(includeExecutionData)
+    }
 
-  /**
-   * @param level Defines which category of execution history events are logged.
-   */
-  public fun level(level: LogLevel) {
-    cdkBuilder.level(level)
-  }
+    /** @param level Defines which category of execution history events are logged. */
+    public fun level(level: LogLevel) {
+        cdkBuilder.level(level)
+    }
 
-  public fun build(): LogOptions = cdkBuilder.build()
+    public fun build(): LogOptions = cdkBuilder.build()
 }

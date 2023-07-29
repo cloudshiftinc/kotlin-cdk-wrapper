@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscalingplans
 
@@ -17,18 +26,17 @@ import software.constructs.Construct
  * A scaling plan is used to scale application resources to size them appropriately to ensure that
  * enough resource is available in the application at peak times and to reduce allocated resource
  * during periods of low utilization. The following resources can be added to a scaling plan:
- *
  * * Amazon EC2 Auto Scaling groups
  * * Amazon EC2 Spot Fleet requests
  * * Amazon ECS services
  * * Amazon DynamoDB tables and global secondary indexes
  * * Amazon Aurora Replicas
  *
- * For more information, see the [AWS Auto Scaling User
- * Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html) .
+ * For more information, see the
+ * [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -103,71 +111,76 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnScalingPlanDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnScalingPlan.Builder = CfnScalingPlan.Builder.create(scope, id)
+    private val cdkBuilder: CfnScalingPlan.Builder = CfnScalingPlan.Builder.create(scope, id)
 
-  private val _scalingInstructions: MutableList<Any> = mutableListOf()
+    private val _scalingInstructions: MutableList<Any> = mutableListOf()
 
-  /**
-   * A CloudFormation stack or a set of tags.
-   *
-   * You can create one scaling plan per application source. The `ApplicationSource` property must
-   * be present to ensure interoperability with the AWS Auto Scaling console.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-applicationsource)
-   * @param applicationSource A CloudFormation stack or a set of tags. 
-   */
-  public fun applicationSource(applicationSource: IResolvable) {
-    cdkBuilder.applicationSource(applicationSource)
-  }
+    /**
+     * A CloudFormation stack or a set of tags.
+     *
+     * You can create one scaling plan per application source. The `ApplicationSource` property must
+     * be present to ensure interoperability with the AWS Auto Scaling console.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-applicationsource)
+     *
+     * @param applicationSource A CloudFormation stack or a set of tags.
+     */
+    public fun applicationSource(applicationSource: IResolvable) {
+        cdkBuilder.applicationSource(applicationSource)
+    }
 
-  /**
-   * A CloudFormation stack or a set of tags.
-   *
-   * You can create one scaling plan per application source. The `ApplicationSource` property must
-   * be present to ensure interoperability with the AWS Auto Scaling console.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-applicationsource)
-   * @param applicationSource A CloudFormation stack or a set of tags. 
-   */
-  public fun applicationSource(applicationSource: CfnScalingPlan.ApplicationSourceProperty) {
-    cdkBuilder.applicationSource(applicationSource)
-  }
+    /**
+     * A CloudFormation stack or a set of tags.
+     *
+     * You can create one scaling plan per application source. The `ApplicationSource` property must
+     * be present to ensure interoperability with the AWS Auto Scaling console.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-applicationsource)
+     *
+     * @param applicationSource A CloudFormation stack or a set of tags.
+     */
+    public fun applicationSource(applicationSource: CfnScalingPlan.ApplicationSourceProperty) {
+        cdkBuilder.applicationSource(applicationSource)
+    }
 
-  /**
-   * The scaling instructions.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions)
-   * @param scalingInstructions The scaling instructions. 
-   */
-  public fun scalingInstructions(vararg scalingInstructions: Any) {
-    _scalingInstructions.addAll(listOf(*scalingInstructions))
-  }
+    /**
+     * The scaling instructions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions)
+     *
+     * @param scalingInstructions The scaling instructions.
+     */
+    public fun scalingInstructions(vararg scalingInstructions: Any) {
+        _scalingInstructions.addAll(listOf(*scalingInstructions))
+    }
 
-  /**
-   * The scaling instructions.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions)
-   * @param scalingInstructions The scaling instructions. 
-   */
-  public fun scalingInstructions(scalingInstructions: Collection<Any>) {
-    _scalingInstructions.addAll(scalingInstructions)
-  }
+    /**
+     * The scaling instructions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions)
+     *
+     * @param scalingInstructions The scaling instructions.
+     */
+    public fun scalingInstructions(scalingInstructions: Collection<Any>) {
+        _scalingInstructions.addAll(scalingInstructions)
+    }
 
-  /**
-   * The scaling instructions.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions)
-   * @param scalingInstructions The scaling instructions. 
-   */
-  public fun scalingInstructions(scalingInstructions: IResolvable) {
-    cdkBuilder.scalingInstructions(scalingInstructions)
-  }
+    /**
+     * The scaling instructions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions)
+     *
+     * @param scalingInstructions The scaling instructions.
+     */
+    public fun scalingInstructions(scalingInstructions: IResolvable) {
+        cdkBuilder.scalingInstructions(scalingInstructions)
+    }
 
-  public fun build(): CfnScalingPlan {
-    if(_scalingInstructions.isNotEmpty()) cdkBuilder.scalingInstructions(_scalingInstructions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnScalingPlan {
+        if (_scalingInstructions.isNotEmpty()) cdkBuilder.scalingInstructions(_scalingInstructions)
+        return cdkBuilder.build()
+    }
 }

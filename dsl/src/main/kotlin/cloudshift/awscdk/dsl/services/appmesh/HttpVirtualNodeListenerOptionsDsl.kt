@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.appmesh.OutlierDetection
  * Represent the HTTP Node Listener property.
  *
  * Example:
- *
  * ```
  * Mesh mesh;
  * Vpc vpc = new Vpc(this, "vpc");
@@ -43,86 +51,66 @@ import software.amazon.awscdk.services.appmesh.OutlierDetection
  */
 @CdkDslMarker
 public class HttpVirtualNodeListenerOptionsDsl {
-  private val cdkBuilder: HttpVirtualNodeListenerOptions.Builder =
-      HttpVirtualNodeListenerOptions.builder()
+    private val cdkBuilder: HttpVirtualNodeListenerOptions.Builder =
+        HttpVirtualNodeListenerOptions.builder()
 
-  /**
-   * @param connectionPool Connection pool for http listeners.
-   */
-  public fun connectionPool(connectionPool: HttpConnectionPoolDsl.() -> Unit = {}) {
-    val builder = HttpConnectionPoolDsl()
-    builder.apply(connectionPool)
-    cdkBuilder.connectionPool(builder.build())
-  }
+    /** @param connectionPool Connection pool for http listeners. */
+    public fun connectionPool(connectionPool: HttpConnectionPoolDsl.() -> Unit = {}) {
+        val builder = HttpConnectionPoolDsl()
+        builder.apply(connectionPool)
+        cdkBuilder.connectionPool(builder.build())
+    }
 
-  /**
-   * @param connectionPool Connection pool for http listeners.
-   */
-  public fun connectionPool(connectionPool: HttpConnectionPool) {
-    cdkBuilder.connectionPool(connectionPool)
-  }
+    /** @param connectionPool Connection pool for http listeners. */
+    public fun connectionPool(connectionPool: HttpConnectionPool) {
+        cdkBuilder.connectionPool(connectionPool)
+    }
 
-  /**
-   * @param healthCheck The health check information for the listener.
-   */
-  public fun healthCheck(healthCheck: HealthCheck) {
-    cdkBuilder.healthCheck(healthCheck)
-  }
+    /** @param healthCheck The health check information for the listener. */
+    public fun healthCheck(healthCheck: HealthCheck) {
+        cdkBuilder.healthCheck(healthCheck)
+    }
 
-  /**
-   * @param outlierDetection Represents the configuration for enabling outlier detection.
-   */
-  public fun outlierDetection(outlierDetection: OutlierDetectionDsl.() -> Unit = {}) {
-    val builder = OutlierDetectionDsl()
-    builder.apply(outlierDetection)
-    cdkBuilder.outlierDetection(builder.build())
-  }
+    /** @param outlierDetection Represents the configuration for enabling outlier detection. */
+    public fun outlierDetection(outlierDetection: OutlierDetectionDsl.() -> Unit = {}) {
+        val builder = OutlierDetectionDsl()
+        builder.apply(outlierDetection)
+        cdkBuilder.outlierDetection(builder.build())
+    }
 
-  /**
-   * @param outlierDetection Represents the configuration for enabling outlier detection.
-   */
-  public fun outlierDetection(outlierDetection: OutlierDetection) {
-    cdkBuilder.outlierDetection(outlierDetection)
-  }
+    /** @param outlierDetection Represents the configuration for enabling outlier detection. */
+    public fun outlierDetection(outlierDetection: OutlierDetection) {
+        cdkBuilder.outlierDetection(outlierDetection)
+    }
 
-  /**
-   * @param port Port to listen for connections on.
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port Port to listen for connections on. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  /**
-   * @param timeout Timeout for HTTP protocol.
-   */
-  public fun timeout(timeout: HttpTimeoutDsl.() -> Unit = {}) {
-    val builder = HttpTimeoutDsl()
-    builder.apply(timeout)
-    cdkBuilder.timeout(builder.build())
-  }
+    /** @param timeout Timeout for HTTP protocol. */
+    public fun timeout(timeout: HttpTimeoutDsl.() -> Unit = {}) {
+        val builder = HttpTimeoutDsl()
+        builder.apply(timeout)
+        cdkBuilder.timeout(builder.build())
+    }
 
-  /**
-   * @param timeout Timeout for HTTP protocol.
-   */
-  public fun timeout(timeout: HttpTimeout) {
-    cdkBuilder.timeout(timeout)
-  }
+    /** @param timeout Timeout for HTTP protocol. */
+    public fun timeout(timeout: HttpTimeout) {
+        cdkBuilder.timeout(timeout)
+    }
 
-  /**
-   * @param tls Represents the configuration for enabling TLS on a listener.
-   */
-  public fun tls(tls: ListenerTlsOptionsDsl.() -> Unit = {}) {
-    val builder = ListenerTlsOptionsDsl()
-    builder.apply(tls)
-    cdkBuilder.tls(builder.build())
-  }
+    /** @param tls Represents the configuration for enabling TLS on a listener. */
+    public fun tls(tls: ListenerTlsOptionsDsl.() -> Unit = {}) {
+        val builder = ListenerTlsOptionsDsl()
+        builder.apply(tls)
+        cdkBuilder.tls(builder.build())
+    }
 
-  /**
-   * @param tls Represents the configuration for enabling TLS on a listener.
-   */
-  public fun tls(tls: ListenerTlsOptions) {
-    cdkBuilder.tls(tls)
-  }
+    /** @param tls Represents the configuration for enabling TLS on a listener. */
+    public fun tls(tls: ListenerTlsOptions) {
+        cdkBuilder.tls(tls)
+    }
 
-  public fun build(): HttpVirtualNodeListenerOptions = cdkBuilder.build()
+    public fun build(): HttpVirtualNodeListenerOptions = cdkBuilder.build()
 }

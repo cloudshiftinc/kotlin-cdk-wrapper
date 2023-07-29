@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The configuration of a `FunnelChartVisual` .
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -23,7 +31,7 @@ public class CfnAnalysisFunnelChartConfigurationPropertyDsl {
 
     /**
      * @param categoryLabelOptions The label options of the categories that are displayed in a
-     * `FunnelChartVisual` .
+     *   `FunnelChartVisual` .
      */
     public fun categoryLabelOptions(categoryLabelOptions: IResolvable) {
         cdkBuilder.categoryLabelOptions(categoryLabelOptions)
@@ -31,71 +39,59 @@ public class CfnAnalysisFunnelChartConfigurationPropertyDsl {
 
     /**
      * @param categoryLabelOptions The label options of the categories that are displayed in a
-     * `FunnelChartVisual` .
+     *   `FunnelChartVisual` .
      */
-    public fun categoryLabelOptions(categoryLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty) {
+    public fun categoryLabelOptions(
+        categoryLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty
+    ) {
         cdkBuilder.categoryLabelOptions(categoryLabelOptions)
     }
 
-    /**
-     * @param dataLabelOptions The options that determine the presentation of the data labels.
-     */
+    /** @param dataLabelOptions The options that determine the presentation of the data labels. */
     public fun dataLabelOptions(dataLabelOptions: IResolvable) {
         cdkBuilder.dataLabelOptions(dataLabelOptions)
     }
 
-    /**
-     * @param dataLabelOptions The options that determine the presentation of the data labels.
-     */
+    /** @param dataLabelOptions The options that determine the presentation of the data labels. */
     public fun dataLabelOptions(dataLabelOptions: CfnAnalysis.FunnelChartDataLabelOptionsProperty) {
         cdkBuilder.dataLabelOptions(dataLabelOptions)
     }
 
-    /**
-     * @param fieldWells The field well configuration of a `FunnelChartVisual` .
-     */
+    /** @param fieldWells The field well configuration of a `FunnelChartVisual` . */
     public fun fieldWells(fieldWells: IResolvable) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
-    /**
-     * @param fieldWells The field well configuration of a `FunnelChartVisual` .
-     */
+    /** @param fieldWells The field well configuration of a `FunnelChartVisual` . */
     public fun fieldWells(fieldWells: CfnAnalysis.FunnelChartFieldWellsProperty) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a `FunnelChartVisual` .
-     */
+    /** @param sortConfiguration The sort configuration of a `FunnelChartVisual` . */
     public fun sortConfiguration(sortConfiguration: IResolvable) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a `FunnelChartVisual` .
-     */
-    public fun sortConfiguration(sortConfiguration: CfnAnalysis.FunnelChartSortConfigurationProperty) {
+    /** @param sortConfiguration The sort configuration of a `FunnelChartVisual` . */
+    public fun sortConfiguration(
+        sortConfiguration: CfnAnalysis.FunnelChartSortConfigurationProperty
+    ) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param tooltip The tooltip configuration of a `FunnelChartVisual` .
-     */
+    /** @param tooltip The tooltip configuration of a `FunnelChartVisual` . */
     public fun tooltip(tooltip: IResolvable) {
         cdkBuilder.tooltip(tooltip)
     }
 
-    /**
-     * @param tooltip The tooltip configuration of a `FunnelChartVisual` .
-     */
+    /** @param tooltip The tooltip configuration of a `FunnelChartVisual` . */
     public fun tooltip(tooltip: CfnAnalysis.TooltipOptionsProperty) {
         cdkBuilder.tooltip(tooltip)
     }
 
     /**
      * @param valueLabelOptions The label options for the values that are displayed in a
-     * `FunnelChartVisual` .
+     *   `FunnelChartVisual` .
      */
     public fun valueLabelOptions(valueLabelOptions: IResolvable) {
         cdkBuilder.valueLabelOptions(valueLabelOptions)
@@ -103,22 +99,18 @@ public class CfnAnalysisFunnelChartConfigurationPropertyDsl {
 
     /**
      * @param valueLabelOptions The label options for the values that are displayed in a
-     * `FunnelChartVisual` .
+     *   `FunnelChartVisual` .
      */
     public fun valueLabelOptions(valueLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty) {
         cdkBuilder.valueLabelOptions(valueLabelOptions)
     }
 
-    /**
-     * @param visualPalette The visual palette configuration of a `FunnelChartVisual` .
-     */
+    /** @param visualPalette The visual palette configuration of a `FunnelChartVisual` . */
     public fun visualPalette(visualPalette: IResolvable) {
         cdkBuilder.visualPalette(visualPalette)
     }
 
-    /**
-     * @param visualPalette The visual palette configuration of a `FunnelChartVisual` .
-     */
+    /** @param visualPalette The visual palette configuration of a `FunnelChartVisual` . */
     public fun visualPalette(visualPalette: CfnAnalysis.VisualPaletteProperty) {
         cdkBuilder.visualPalette(visualPalette)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -14,14 +23,13 @@ import software.constructs.Construct
  *
  * When `AWS::EC2::SubnetNetworkAclAssociation` resources are created during create or update
  * operations, AWS CloudFormation adopts existing resources that share the same key properties (the
- * properties that contribute to uniquely identify the resource). However, if the operation fails and
- * rolls back, AWS CloudFormation deletes the previously out-of-band resources. You can protect against
- * this behavior by using `Retain` deletion policies. For more information, see [DeletionPolicy
- * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+ * properties that contribute to uniquely identify the resource). However, if the operation fails
+ * and rolls back, AWS CloudFormation deletes the previously out-of-band resources. You can protect
+ * against this behavior by using `Retain` deletion policies. For more information, see
+ * [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,31 +45,33 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnSubnetNetworkAclAssociationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnSubnetNetworkAclAssociation.Builder =
-      CfnSubnetNetworkAclAssociation.Builder.create(scope, id)
+    private val cdkBuilder: CfnSubnetNetworkAclAssociation.Builder =
+        CfnSubnetNetworkAclAssociation.Builder.create(scope, id)
 
-  /**
-   * The ID of the network ACL.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetnetworkaclassociation.html#cfn-ec2-subnetnetworkaclassociation-networkaclid)
-   * @param networkAclId The ID of the network ACL. 
-   */
-  public fun networkAclId(networkAclId: String) {
-    cdkBuilder.networkAclId(networkAclId)
-  }
+    /**
+     * The ID of the network ACL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetnetworkaclassociation.html#cfn-ec2-subnetnetworkaclassociation-networkaclid)
+     *
+     * @param networkAclId The ID of the network ACL.
+     */
+    public fun networkAclId(networkAclId: String) {
+        cdkBuilder.networkAclId(networkAclId)
+    }
 
-  /**
-   * The ID of the subnet.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetnetworkaclassociation.html#cfn-ec2-subnetnetworkaclassociation-subnetid)
-   * @param subnetId The ID of the subnet. 
-   */
-  public fun subnetId(subnetId: String) {
-    cdkBuilder.subnetId(subnetId)
-  }
+    /**
+     * The ID of the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetnetworkaclassociation.html#cfn-ec2-subnetnetworkaclassociation-subnetid)
+     *
+     * @param subnetId The ID of the subnet.
+     */
+    public fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+    }
 
-  public fun build(): CfnSubnetNetworkAclAssociation = cdkBuilder.build()
+    public fun build(): CfnSubnetNetworkAclAssociation = cdkBuilder.build()
 }

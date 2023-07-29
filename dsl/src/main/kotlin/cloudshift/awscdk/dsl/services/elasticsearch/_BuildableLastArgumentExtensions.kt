@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticsearch
 
@@ -14,14 +23,14 @@ import software.amazon.awscdk.services.elasticsearch.IDomain
 /**
  * (deprecated) Return the given named metric for this Domain.
  *
- * @deprecated use opensearchservice module instead
- * @param metricName 
+ * @param metricName
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(arg0, builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(arg0, builder.build())
 }
 
 /**
@@ -29,14 +38,15 @@ public inline fun IDomain.metric(arg0: String, block: MetricOptionsDsl.() -> Uni
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun IDomain.metricAutomatedSnapshotFailure(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricAutomatedSnapshotFailure(builder.build())
+public inline fun IDomain.metricAutomatedSnapshotFailure(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricAutomatedSnapshotFailure(builder.build())
 }
 
 /**
@@ -44,14 +54,15 @@ public inline fun IDomain.metricAutomatedSnapshotFailure(block: MetricOptionsDsl
  *
  * Default: maximum over 1 minute
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun IDomain.metricClusterIndexWritesBlocked(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricClusterIndexWritesBlocked(builder.build())
+public inline fun IDomain.metricClusterIndexWritesBlocked(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricClusterIndexWritesBlocked(builder.build())
 }
 
 /**
@@ -59,13 +70,13 @@ public inline fun IDomain.metricClusterIndexWritesBlocked(block: MetricOptionsDs
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricClusterStatusRed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricClusterStatusRed(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricClusterStatusRed(builder.build())
 }
 
 /**
@@ -73,14 +84,15 @@ public inline fun IDomain.metricClusterStatusRed(block: MetricOptionsDsl.() -> U
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun IDomain.metricClusterStatusYellow(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricClusterStatusYellow(builder.build())
+public inline fun IDomain.metricClusterStatusYellow(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricClusterStatusYellow(builder.build())
 }
 
 /**
@@ -88,13 +100,13 @@ public inline fun IDomain.metricClusterStatusYellow(block: MetricOptionsDsl.() -
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricCPUUtilization(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricCPUUtilization(builder.build())
 }
 
 /**
@@ -102,13 +114,13 @@ public inline fun IDomain.metricCPUUtilization(block: MetricOptionsDsl.() -> Uni
  *
  * Default: minimum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFreeStorageSpace(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricFreeStorageSpace(builder.build())
 }
 
 /**
@@ -116,13 +128,13 @@ public inline fun IDomain.metricFreeStorageSpace(block: MetricOptionsDsl.() -> U
  *
  * Default: p99 over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricIndexingLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricIndexingLatency(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricIndexingLatency(builder.build())
 }
 
 /**
@@ -130,13 +142,13 @@ public inline fun IDomain.metricIndexingLatency(block: MetricOptionsDsl.() -> Un
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricJVMMemoryPressure(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricJVMMemoryPressure(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricJVMMemoryPressure(builder.build())
 }
 
 /**
@@ -144,13 +156,13 @@ public inline fun IDomain.metricJVMMemoryPressure(block: MetricOptionsDsl.() -> 
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricKMSKeyError(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricKMSKeyError(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricKMSKeyError(builder.build())
 }
 
 /**
@@ -158,14 +170,15 @@ public inline fun IDomain.metricKMSKeyError(block: MetricOptionsDsl.() -> Unit =
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun IDomain.metricKMSKeyInaccessible(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricKMSKeyInaccessible(builder.build())
+public inline fun IDomain.metricKMSKeyInaccessible(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricKMSKeyInaccessible(builder.build())
 }
 
 /**
@@ -173,14 +186,15 @@ public inline fun IDomain.metricKMSKeyInaccessible(block: MetricOptionsDsl.() ->
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun IDomain.metricMasterCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricMasterCPUUtilization(builder.build())
+public inline fun IDomain.metricMasterCPUUtilization(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricMasterCPUUtilization(builder.build())
 }
 
 /**
@@ -188,14 +202,15 @@ public inline fun IDomain.metricMasterCPUUtilization(block: MetricOptionsDsl.() 
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun IDomain.metricMasterJVMMemoryPressure(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricMasterJVMMemoryPressure(builder.build())
+public inline fun IDomain.metricMasterJVMMemoryPressure(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricMasterJVMMemoryPressure(builder.build())
 }
 
 /**
@@ -203,13 +218,13 @@ public inline fun IDomain.metricMasterJVMMemoryPressure(block: MetricOptionsDsl.
  *
  * Default: minimum over 1 hour
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricNodes(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNodes(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNodes(builder.build())
 }
 
 /**
@@ -217,14 +232,15 @@ public inline fun IDomain.metricNodes(block: MetricOptionsDsl.() -> Unit = {}): 
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun IDomain.metricSearchableDocuments(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSearchableDocuments(builder.build())
+public inline fun IDomain.metricSearchableDocuments(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSearchableDocuments(builder.build())
 }
 
 /**
@@ -232,39 +248,41 @@ public inline fun IDomain.metricSearchableDocuments(block: MetricOptionsDsl.() -
  *
  * Default: p99 over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun IDomain.metricSearchLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSearchLatency(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSearchLatency(builder.build())
 }
 
 /**
  * (deprecated) Add policy statements to the domain access policy.
  *
+ * @param accessPolicyStatements
  * @deprecated use opensearchservice module instead
- * @param accessPolicyStatements 
  */
 public inline fun Domain.addAccessPolicies(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addAccessPolicies(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addAccessPolicies(builder.build())
 }
 
 /**
  * (deprecated) Return the given named metric for this Domain.
  *
- * @deprecated use opensearchservice module instead
- * @param metricName 
+ * @param metricName
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun Domain.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun Domain.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -272,14 +290,15 @@ public inline fun Domain.metric(metricName: String, block: MetricOptionsDsl.() -
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun Domain.metricAutomatedSnapshotFailure(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricAutomatedSnapshotFailure(builder.build())
+public inline fun Domain.metricAutomatedSnapshotFailure(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricAutomatedSnapshotFailure(builder.build())
 }
 
 /**
@@ -287,14 +306,15 @@ public inline fun Domain.metricAutomatedSnapshotFailure(block: MetricOptionsDsl.
  *
  * Default: maximum over 1 minute
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun Domain.metricClusterIndexWritesBlocked(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricClusterIndexWritesBlocked(builder.build())
+public inline fun Domain.metricClusterIndexWritesBlocked(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricClusterIndexWritesBlocked(builder.build())
 }
 
 /**
@@ -302,13 +322,13 @@ public inline fun Domain.metricClusterIndexWritesBlocked(block: MetricOptionsDsl
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricClusterStatusRed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricClusterStatusRed(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricClusterStatusRed(builder.build())
 }
 
 /**
@@ -316,14 +336,15 @@ public inline fun Domain.metricClusterStatusRed(block: MetricOptionsDsl.() -> Un
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun Domain.metricClusterStatusYellow(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricClusterStatusYellow(builder.build())
+public inline fun Domain.metricClusterStatusYellow(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricClusterStatusYellow(builder.build())
 }
 
 /**
@@ -331,13 +352,13 @@ public inline fun Domain.metricClusterStatusYellow(block: MetricOptionsDsl.() ->
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricCPUUtilization(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricCPUUtilization(builder.build())
 }
 
 /**
@@ -345,13 +366,13 @@ public inline fun Domain.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit
  *
  * Default: minimum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFreeStorageSpace(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricFreeStorageSpace(builder.build())
 }
 
 /**
@@ -359,13 +380,13 @@ public inline fun Domain.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Un
  *
  * Default: p99 over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricIndexingLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricIndexingLatency(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricIndexingLatency(builder.build())
 }
 
 /**
@@ -373,13 +394,13 @@ public inline fun Domain.metricIndexingLatency(block: MetricOptionsDsl.() -> Uni
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricJVMMemoryPressure(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricJVMMemoryPressure(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricJVMMemoryPressure(builder.build())
 }
 
 /**
@@ -387,13 +408,13 @@ public inline fun Domain.metricJVMMemoryPressure(block: MetricOptionsDsl.() -> U
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricKMSKeyError(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricKMSKeyError(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricKMSKeyError(builder.build())
 }
 
 /**
@@ -401,13 +422,13 @@ public inline fun Domain.metricKMSKeyError(block: MetricOptionsDsl.() -> Unit = 
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricKMSKeyInaccessible(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricKMSKeyInaccessible(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricKMSKeyInaccessible(builder.build())
 }
 
 /**
@@ -415,14 +436,15 @@ public inline fun Domain.metricKMSKeyInaccessible(block: MetricOptionsDsl.() -> 
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun Domain.metricMasterCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricMasterCPUUtilization(builder.build())
+public inline fun Domain.metricMasterCPUUtilization(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricMasterCPUUtilization(builder.build())
 }
 
 /**
@@ -430,14 +452,15 @@ public inline fun Domain.metricMasterCPUUtilization(block: MetricOptionsDsl.() -
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun Domain.metricMasterJVMMemoryPressure(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricMasterJVMMemoryPressure(builder.build())
+public inline fun Domain.metricMasterJVMMemoryPressure(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricMasterJVMMemoryPressure(builder.build())
 }
 
 /**
@@ -445,13 +468,13 @@ public inline fun Domain.metricMasterJVMMemoryPressure(block: MetricOptionsDsl.(
  *
  * Default: minimum over 1 hour
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricNodes(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNodes(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNodes(builder.build())
 }
 
 /**
@@ -459,14 +482,15 @@ public inline fun Domain.metricNodes(block: MetricOptionsDsl.() -> Unit = {}): M
  *
  * Default: maximum over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
-public inline fun Domain.metricSearchableDocuments(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSearchableDocuments(builder.build())
+public inline fun Domain.metricSearchableDocuments(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSearchableDocuments(builder.build())
 }
 
 /**
@@ -474,46 +498,43 @@ public inline fun Domain.metricSearchableDocuments(block: MetricOptionsDsl.() ->
  *
  * Default: p99 over 5 minutes
  *
- * @deprecated use opensearchservice module instead
  * @param props
+ * @deprecated use opensearchservice module instead
  */
 public inline fun Domain.metricSearchLatency(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSearchLatency(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSearchLatency(builder.build())
 }
 
-/**
- * Specifies options for fine-grained access control.
- */
-public inline
-    fun CfnDomain.setAdvancedSecurityOptions(block: CfnDomainAdvancedSecurityOptionsInputPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDomainAdvancedSecurityOptionsInputPropertyDsl()
-  builder.apply(block)
-  return setAdvancedSecurityOptions(builder.build())
+/** Specifies options for fine-grained access control. */
+public inline fun CfnDomain.setAdvancedSecurityOptions(
+    block: CfnDomainAdvancedSecurityOptionsInputPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainAdvancedSecurityOptionsInputPropertyDsl()
+    builder.apply(block)
+    return setAdvancedSecurityOptions(builder.build())
 }
 
-/**
- * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
- */
-public inline fun CfnDomain.setCognitoOptions(block: CfnDomainCognitoOptionsPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnDomainCognitoOptionsPropertyDsl()
-  builder.apply(block)
-  return setCognitoOptions(builder.build())
+/** Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards. */
+public inline fun CfnDomain.setCognitoOptions(
+    block: CfnDomainCognitoOptionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainCognitoOptionsPropertyDsl()
+    builder.apply(block)
+    return setCognitoOptions(builder.build())
 }
 
 /**
  * Specifies additional options for the domain endpoint, such as whether to require HTTPS for all
  * traffic or whether to use a custom endpoint rather than the default endpoint.
  */
-public inline
-    fun CfnDomain.setDomainEndpointOptions(block: CfnDomainDomainEndpointOptionsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDomainDomainEndpointOptionsPropertyDsl()
-  builder.apply(block)
-  return setDomainEndpointOptions(builder.build())
+public inline fun CfnDomain.setDomainEndpointOptions(
+    block: CfnDomainDomainEndpointOptionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainDomainEndpointOptionsPropertyDsl()
+    builder.apply(block)
+    return setDomainEndpointOptions(builder.build())
 }
 
 /**
@@ -521,61 +542,56 @@ public inline
  * nodes in the OpenSearch Service domain.
  */
 public inline fun CfnDomain.setEbsOptions(block: CfnDomainEBSOptionsPropertyDsl.() -> Unit = {}) {
-  val builder = CfnDomainEBSOptionsPropertyDsl()
-  builder.apply(block)
-  return setEbsOptions(builder.build())
+    val builder = CfnDomainEBSOptionsPropertyDsl()
+    builder.apply(block)
+    return setEbsOptions(builder.build())
 }
 
 /**
  * ElasticsearchClusterConfig is a property of the AWS::Elasticsearch::Domain resource that
  * configures the cluster of an Amazon OpenSearch Service domain.
  */
-public inline
-    fun CfnDomain.setElasticsearchClusterConfig(block: CfnDomainElasticsearchClusterConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDomainElasticsearchClusterConfigPropertyDsl()
-  builder.apply(block)
-  return setElasticsearchClusterConfig(builder.build())
+public inline fun CfnDomain.setElasticsearchClusterConfig(
+    block: CfnDomainElasticsearchClusterConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainElasticsearchClusterConfigPropertyDsl()
+    builder.apply(block)
+    return setElasticsearchClusterConfig(builder.build())
 }
 
 /**
  * Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key to
  * use.
  */
-public inline
-    fun CfnDomain.setEncryptionAtRestOptions(block: CfnDomainEncryptionAtRestOptionsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDomainEncryptionAtRestOptionsPropertyDsl()
-  builder.apply(block)
-  return setEncryptionAtRestOptions(builder.build())
+public inline fun CfnDomain.setEncryptionAtRestOptions(
+    block: CfnDomainEncryptionAtRestOptionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainEncryptionAtRestOptionsPropertyDsl()
+    builder.apply(block)
+    return setEncryptionAtRestOptions(builder.build())
 }
 
-/**
- * Specifies whether node-to-node encryption is enabled.
- */
-public inline
-    fun CfnDomain.setNodeToNodeEncryptionOptions(block: CfnDomainNodeToNodeEncryptionOptionsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDomainNodeToNodeEncryptionOptionsPropertyDsl()
-  builder.apply(block)
-  return setNodeToNodeEncryptionOptions(builder.build())
+/** Specifies whether node-to-node encryption is enabled. */
+public inline fun CfnDomain.setNodeToNodeEncryptionOptions(
+    block: CfnDomainNodeToNodeEncryptionOptionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainNodeToNodeEncryptionOptionsPropertyDsl()
+    builder.apply(block)
+    return setNodeToNodeEncryptionOptions(builder.build())
 }
 
-/**
- * *DEPRECATED* .
- */
-public inline fun CfnDomain.setSnapshotOptions(block: CfnDomainSnapshotOptionsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDomainSnapshotOptionsPropertyDsl()
-  builder.apply(block)
-  return setSnapshotOptions(builder.build())
+/** *DEPRECATED* . */
+public inline fun CfnDomain.setSnapshotOptions(
+    block: CfnDomainSnapshotOptionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainSnapshotOptionsPropertyDsl()
+    builder.apply(block)
+    return setSnapshotOptions(builder.build())
 }
 
-/**
- * The virtual private cloud (VPC) configuration for the OpenSearch Service domain.
- */
+/** The virtual private cloud (VPC) configuration for the OpenSearch Service domain. */
 public inline fun CfnDomain.setVpcOptions(block: CfnDomainVPCOptionsPropertyDsl.() -> Unit = {}) {
-  val builder = CfnDomainVPCOptionsPropertyDsl()
-  builder.apply(block)
-  return setVpcOptions(builder.build())
+    val builder = CfnDomainVPCOptionsPropertyDsl()
+    builder.apply(block)
+    return setVpcOptions(builder.build())
 }

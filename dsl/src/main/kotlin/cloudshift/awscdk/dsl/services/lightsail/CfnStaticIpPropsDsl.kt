@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lightsail
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lightsail.CfnStaticIpProps
  * Properties for defining a `CfnStaticIp`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,21 +34,17 @@ import software.amazon.awscdk.services.lightsail.CfnStaticIpProps
  */
 @CdkDslMarker
 public class CfnStaticIpPropsDsl {
-  private val cdkBuilder: CfnStaticIpProps.Builder = CfnStaticIpProps.builder()
+    private val cdkBuilder: CfnStaticIpProps.Builder = CfnStaticIpProps.builder()
 
-  /**
-   * @param attachedTo The instance that the static IP is attached to.
-   */
-  public fun attachedTo(attachedTo: String) {
-    cdkBuilder.attachedTo(attachedTo)
-  }
+    /** @param attachedTo The instance that the static IP is attached to. */
+    public fun attachedTo(attachedTo: String) {
+        cdkBuilder.attachedTo(attachedTo)
+    }
 
-  /**
-   * @param staticIpName The name of the static IP. 
-   */
-  public fun staticIpName(staticIpName: String) {
-    cdkBuilder.staticIpName(staticIpName)
-  }
+    /** @param staticIpName The name of the static IP. */
+    public fun staticIpName(staticIpName: String) {
+        cdkBuilder.staticIpName(staticIpName)
+    }
 
-  public fun build(): CfnStaticIpProps = cdkBuilder.build()
+    public fun build(): CfnStaticIpProps = cdkBuilder.build()
 }

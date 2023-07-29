@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.systemsmanagersap
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.systemsmanagersap.CfnApplication
 import software.amazon.awscdk.services.systemsmanagersap.CfnApplicationProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object systemsmanagersap {
     /**
      * An SAP application registered with AWS Systems Manager for SAP.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -42,7 +50,7 @@ public object systemsmanagersap {
     public inline fun cfnApplication(
         scope: Construct,
         id: String,
-        block: CfnApplicationDsl.() -> Unit = {}
+        block: CfnApplicationDsl.() -> Unit = {},
     ): CfnApplication {
         val builder = CfnApplicationDsl(scope, id)
         builder.apply(block)
@@ -53,7 +61,6 @@ public object systemsmanagersap {
      * The credentials of your SAP application.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -68,8 +75,7 @@ public object systemsmanagersap {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-credential.html)
      */
     public inline fun cfnApplicationCredentialProperty(
-        block: CfnApplicationCredentialPropertyDsl.() -> Unit =
-            {}
+        block: CfnApplicationCredentialPropertyDsl.() -> Unit = {}
     ): CfnApplication.CredentialProperty {
         val builder = CfnApplicationCredentialPropertyDsl()
         builder.apply(block)
@@ -80,7 +86,6 @@ public object systemsmanagersap {
      * Properties for defining a `CfnApplication`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -106,7 +111,9 @@ public object systemsmanagersap {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html)
      */
-    public inline fun cfnApplicationProps(block: CfnApplicationPropsDsl.() -> Unit = {}): CfnApplicationProps {
+    public inline fun cfnApplicationProps(
+        block: CfnApplicationPropsDsl.() -> Unit = {}
+    ): CfnApplicationProps {
         val builder = CfnApplicationPropsDsl()
         builder.apply(block)
         return builder.build()

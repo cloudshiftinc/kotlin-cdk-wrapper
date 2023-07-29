@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sdb
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sdb.CfnDomainProps
  * Properties for defining a `CfnDomain`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,14 +32,12 @@ import software.amazon.awscdk.services.sdb.CfnDomainProps
  */
 @CdkDslMarker
 public class CfnDomainPropsDsl {
-  private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()
+    private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()
 
-  /**
-   * @param description Information about the SimpleDB domain.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description Information about the SimpleDB domain. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  public fun build(): CfnDomainProps = cdkBuilder.build()
+    public fun build(): CfnDomainProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * schemas in the AWS Glue Schema Registry.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,40 +40,43 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnSchemaVersionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnSchemaVersion.Builder = CfnSchemaVersion.Builder.create(scope, id)
+    private val cdkBuilder: CfnSchemaVersion.Builder = CfnSchemaVersion.Builder.create(scope, id)
 
-  /**
-   * The schema that includes the schema version.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schema)
-   * @param schema The schema that includes the schema version. 
-   */
-  public fun schema(schema: IResolvable) {
-    cdkBuilder.schema(schema)
-  }
+    /**
+     * The schema that includes the schema version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schema)
+     *
+     * @param schema The schema that includes the schema version.
+     */
+    public fun schema(schema: IResolvable) {
+        cdkBuilder.schema(schema)
+    }
 
-  /**
-   * The schema that includes the schema version.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schema)
-   * @param schema The schema that includes the schema version. 
-   */
-  public fun schema(schema: CfnSchemaVersion.SchemaProperty) {
-    cdkBuilder.schema(schema)
-  }
+    /**
+     * The schema that includes the schema version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schema)
+     *
+     * @param schema The schema that includes the schema version.
+     */
+    public fun schema(schema: CfnSchemaVersion.SchemaProperty) {
+        cdkBuilder.schema(schema)
+    }
 
-  /**
-   * The schema definition for the schema version.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schemadefinition)
-   * @param schemaDefinition The schema definition for the schema version. 
-   */
-  public fun schemaDefinition(schemaDefinition: String) {
-    cdkBuilder.schemaDefinition(schemaDefinition)
-  }
+    /**
+     * The schema definition for the schema version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schemadefinition)
+     *
+     * @param schemaDefinition The schema definition for the schema version.
+     */
+    public fun schemaDefinition(schemaDefinition: String) {
+        cdkBuilder.schemaDefinition(schemaDefinition)
+    }
 
-  public fun build(): CfnSchemaVersion = cdkBuilder.build()
+    public fun build(): CfnSchemaVersion = cdkBuilder.build()
 }

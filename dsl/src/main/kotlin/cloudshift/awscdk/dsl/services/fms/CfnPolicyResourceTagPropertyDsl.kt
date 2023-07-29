@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fms
 
@@ -11,13 +20,13 @@ import software.amazon.awscdk.services.fms.CfnPolicy
  * included or excluded from the AWS Firewall Manager policy.
  *
  * Tags enable you to categorize your AWS resources in different ways, for example, by purpose,
- * owner, or environment. Each tag consists of a key and an optional value. Firewall Manager combines
- * the tags with "AND" so that, if you add more than one tag to a policy scope, a resource must have
- * all the specified tags to be included or excluded. For more information, see [Working with Tag
- * Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html) .
+ * owner, or environment. Each tag consists of a key and an optional value. Firewall Manager
+ * combines the tags with "AND" so that, if you add more than one tag to a policy scope, a resource
+ * must have all the specified tags to be included or excluded. For more information, see
+ * [Working with Tag Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,22 +42,18 @@ import software.amazon.awscdk.services.fms.CfnPolicy
  */
 @CdkDslMarker
 public class CfnPolicyResourceTagPropertyDsl {
-  private val cdkBuilder: CfnPolicy.ResourceTagProperty.Builder =
-      CfnPolicy.ResourceTagProperty.builder()
+    private val cdkBuilder: CfnPolicy.ResourceTagProperty.Builder =
+        CfnPolicy.ResourceTagProperty.builder()
 
-  /**
-   * @param key The resource tag key. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The resource tag key. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The resource tag value.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The resource tag value. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnPolicy.ResourceTagProperty = cdkBuilder.build()
+    public fun build(): CfnPolicy.ResourceTagProperty = cdkBuilder.build()
 }

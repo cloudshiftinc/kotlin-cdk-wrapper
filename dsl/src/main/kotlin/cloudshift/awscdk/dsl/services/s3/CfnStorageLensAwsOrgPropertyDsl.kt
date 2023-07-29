@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.s3.CfnStorageLens
  * This resource contains the details of the AWS Organization for Amazon S3 Storage Lens.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.s3.CfnStorageLens
  */
 @CdkDslMarker
 public class CfnStorageLensAwsOrgPropertyDsl {
-  private val cdkBuilder: CfnStorageLens.AwsOrgProperty.Builder =
-      CfnStorageLens.AwsOrgProperty.builder()
+    private val cdkBuilder: CfnStorageLens.AwsOrgProperty.Builder =
+        CfnStorageLens.AwsOrgProperty.builder()
 
-  /**
-   * @param arn This resource contains the ARN of the AWS Organization. 
-   */
-  public fun arn(arn: String) {
-    cdkBuilder.arn(arn)
-  }
+    /** @param arn This resource contains the ARN of the AWS Organization. */
+    public fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+    }
 
-  public fun build(): CfnStorageLens.AwsOrgProperty = cdkBuilder.build()
+    public fun build(): CfnStorageLens.AwsOrgProperty = cdkBuilder.build()
 }

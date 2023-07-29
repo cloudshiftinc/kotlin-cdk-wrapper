@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.acmpca
 
@@ -9,11 +18,10 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 /**
  * Defines a custom ASN.1 X.400 `GeneralName` using an object identifier (OID) and value. The OID
  * must satisfy the regular expression shown below. For more information, see NIST's definition of
- * [Object Identifier
- * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+ * [Object Identifier (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,22 +36,18 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
  */
 @CdkDslMarker
 public class CfnCertificateAuthorityOtherNamePropertyDsl {
-  private val cdkBuilder: CfnCertificateAuthority.OtherNameProperty.Builder =
-      CfnCertificateAuthority.OtherNameProperty.builder()
+    private val cdkBuilder: CfnCertificateAuthority.OtherNameProperty.Builder =
+        CfnCertificateAuthority.OtherNameProperty.builder()
 
-  /**
-   * @param typeId Specifies an OID. 
-   */
-  public fun typeId(typeId: String) {
-    cdkBuilder.typeId(typeId)
-  }
+    /** @param typeId Specifies an OID. */
+    public fun typeId(typeId: String) {
+        cdkBuilder.typeId(typeId)
+    }
 
-  /**
-   * @param value Specifies an OID value. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value Specifies an OID value. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnCertificateAuthority.OtherNameProperty = cdkBuilder.build()
+    public fun build(): CfnCertificateAuthority.OtherNameProperty = cdkBuilder.build()
 }

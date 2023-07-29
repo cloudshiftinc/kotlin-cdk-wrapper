@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rekognition
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
  * [S3Destination](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_S3Destination) .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,24 +40,24 @@ import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
  */
 @CdkDslMarker
 public class CfnStreamProcessorS3DestinationPropertyDsl {
-  private val cdkBuilder: CfnStreamProcessor.S3DestinationProperty.Builder =
-      CfnStreamProcessor.S3DestinationProperty.builder()
+    private val cdkBuilder: CfnStreamProcessor.S3DestinationProperty.Builder =
+        CfnStreamProcessor.S3DestinationProperty.builder()
 
-  /**
-   * @param bucketName Describes the destination Amazon Simple Storage Service (Amazon S3) bucket
-   * name of a stream processor's exports. 
-   */
-  public fun bucketName(bucketName: String) {
-    cdkBuilder.bucketName(bucketName)
-  }
+    /**
+     * @param bucketName Describes the destination Amazon Simple Storage Service (Amazon S3) bucket
+     *   name of a stream processor's exports.
+     */
+    public fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+    }
 
-  /**
-   * @param objectKeyPrefix Describes the destination Amazon Simple Storage Service (Amazon S3)
-   * object keys of a stream processor's exports.
-   */
-  public fun objectKeyPrefix(objectKeyPrefix: String) {
-    cdkBuilder.objectKeyPrefix(objectKeyPrefix)
-  }
+    /**
+     * @param objectKeyPrefix Describes the destination Amazon Simple Storage Service (Amazon S3)
+     *   object keys of a stream processor's exports.
+     */
+    public fun objectKeyPrefix(objectKeyPrefix: String) {
+        cdkBuilder.objectKeyPrefix(objectKeyPrefix)
+    }
 
-  public fun build(): CfnStreamProcessor.S3DestinationProperty = cdkBuilder.build()
+    public fun build(): CfnStreamProcessor.S3DestinationProperty = cdkBuilder.build()
 }

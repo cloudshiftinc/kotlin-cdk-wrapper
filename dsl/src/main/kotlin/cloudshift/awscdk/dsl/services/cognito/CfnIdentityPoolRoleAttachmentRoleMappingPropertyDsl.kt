@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
  * resource that defines the role-mapping attributes of an Amazon Cognito identity pool.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,63 +46,63 @@ import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
  */
 @CdkDslMarker
 public class CfnIdentityPoolRoleAttachmentRoleMappingPropertyDsl {
-  private val cdkBuilder: CfnIdentityPoolRoleAttachment.RoleMappingProperty.Builder =
-      CfnIdentityPoolRoleAttachment.RoleMappingProperty.builder()
+    private val cdkBuilder: CfnIdentityPoolRoleAttachment.RoleMappingProperty.Builder =
+        CfnIdentityPoolRoleAttachment.RoleMappingProperty.builder()
 
-  /**
-   * @param ambiguousRoleResolution Specifies the action to be taken if either no rules match the
-   * claim value for the Rules type, or there is no `cognito:preferred_role` claim and there are
-   * multiple `cognito:roles` matches for the Token type.
-   * If you specify Token or Rules as the Type, AmbiguousRoleResolution is required.
-   *
-   * Valid values are `AuthenticatedRole` or `Deny` .
-   */
-  public fun ambiguousRoleResolution(ambiguousRoleResolution: String) {
-    cdkBuilder.ambiguousRoleResolution(ambiguousRoleResolution)
-  }
+    /**
+     * @param ambiguousRoleResolution Specifies the action to be taken if either no rules match the
+     *   claim value for the Rules type, or there is no `cognito:preferred_role` claim and there are
+     *   multiple `cognito:roles` matches for the Token type. If you specify Token or Rules as the
+     *   Type, AmbiguousRoleResolution is required.
+     *
+     * Valid values are `AuthenticatedRole` or `Deny` .
+     */
+    public fun ambiguousRoleResolution(ambiguousRoleResolution: String) {
+        cdkBuilder.ambiguousRoleResolution(ambiguousRoleResolution)
+    }
 
-  /**
-   * @param identityProvider Identifier for the identity provider for which the role is mapped.
-   * For example: `graph.facebook.com` or
-   * `cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id
-   * (http://cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id)` . This is the
-   * identity provider that is used by the user for authentication.
-   *
-   * If the identity provider property isn't provided, the key of the entry in the `RoleMappings`
-   * map is used as the identity provider.
-   */
-  public fun identityProvider(identityProvider: String) {
-    cdkBuilder.identityProvider(identityProvider)
-  }
+    /**
+     * @param identityProvider Identifier for the identity provider for which the role is mapped.
+     *   For example: `graph.facebook.com` or
+     *   `cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id
+     *   (http://cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id)` . This is
+     *   the identity provider that is used by the user for authentication.
+     *
+     * If the identity provider property isn't provided, the key of the entry in the `RoleMappings`
+     * map is used as the identity provider.
+     */
+    public fun identityProvider(identityProvider: String) {
+        cdkBuilder.identityProvider(identityProvider)
+    }
 
-  /**
-   * @param rulesConfiguration The rules to be used for mapping users to roles.
-   * If you specify "Rules" as the role-mapping type, RulesConfiguration is required.
-   */
-  public fun rulesConfiguration(rulesConfiguration: IResolvable) {
-    cdkBuilder.rulesConfiguration(rulesConfiguration)
-  }
+    /**
+     * @param rulesConfiguration The rules to be used for mapping users to roles. If you specify
+     *   "Rules" as the role-mapping type, RulesConfiguration is required.
+     */
+    public fun rulesConfiguration(rulesConfiguration: IResolvable) {
+        cdkBuilder.rulesConfiguration(rulesConfiguration)
+    }
 
-  /**
-   * @param rulesConfiguration The rules to be used for mapping users to roles.
-   * If you specify "Rules" as the role-mapping type, RulesConfiguration is required.
-   */
-  public
-      fun rulesConfiguration(rulesConfiguration: CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty) {
-    cdkBuilder.rulesConfiguration(rulesConfiguration)
-  }
+    /**
+     * @param rulesConfiguration The rules to be used for mapping users to roles. If you specify
+     *   "Rules" as the role-mapping type, RulesConfiguration is required.
+     */
+    public fun rulesConfiguration(
+        rulesConfiguration: CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
+    ) {
+        cdkBuilder.rulesConfiguration(rulesConfiguration)
+    }
 
-  /**
-   * @param type The role-mapping type. 
-   * `Token` uses `cognito:roles` and `cognito:preferred_role` claims from the Amazon Cognito
-   * identity provider token to map groups to roles. `Rules` attempts to match claims from the token to
-   * map to a role.
-   *
-   * Valid values are `Token` or `Rules` .
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * @param type The role-mapping type. `Token` uses `cognito:roles` and `cognito:preferred_role`
+     *   claims from the Amazon Cognito identity provider token to map groups to roles. `Rules`
+     *   attempts to match claims from the token to map to a role.
+     *
+     * Valid values are `Token` or `Rules` .
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnIdentityPoolRoleAttachment.RoleMappingProperty = cdkBuilder.build()
+    public fun build(): CfnIdentityPoolRoleAttachment.RoleMappingProperty = cdkBuilder.build()
 }

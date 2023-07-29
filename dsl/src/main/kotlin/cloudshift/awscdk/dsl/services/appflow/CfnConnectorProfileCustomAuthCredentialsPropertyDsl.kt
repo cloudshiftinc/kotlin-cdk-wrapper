@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  * The custom credentials required for custom authentication.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,29 +38,23 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  */
 @CdkDslMarker
 public class CfnConnectorProfileCustomAuthCredentialsPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.CustomAuthCredentialsProperty.Builder =
-      CfnConnectorProfile.CustomAuthCredentialsProperty.builder()
+    private val cdkBuilder: CfnConnectorProfile.CustomAuthCredentialsProperty.Builder =
+        CfnConnectorProfile.CustomAuthCredentialsProperty.builder()
 
-  /**
-   * @param credentialsMap A map that holds custom authentication credentials.
-   */
-  public fun credentialsMap(credentialsMap: Map<String, String>) {
-    cdkBuilder.credentialsMap(credentialsMap)
-  }
+    /** @param credentialsMap A map that holds custom authentication credentials. */
+    public fun credentialsMap(credentialsMap: Map<String, String>) {
+        cdkBuilder.credentialsMap(credentialsMap)
+    }
 
-  /**
-   * @param credentialsMap A map that holds custom authentication credentials.
-   */
-  public fun credentialsMap(credentialsMap: IResolvable) {
-    cdkBuilder.credentialsMap(credentialsMap)
-  }
+    /** @param credentialsMap A map that holds custom authentication credentials. */
+    public fun credentialsMap(credentialsMap: IResolvable) {
+        cdkBuilder.credentialsMap(credentialsMap)
+    }
 
-  /**
-   * @param customAuthenticationType The custom authentication type that the connector uses. 
-   */
-  public fun customAuthenticationType(customAuthenticationType: String) {
-    cdkBuilder.customAuthenticationType(customAuthenticationType)
-  }
+    /** @param customAuthenticationType The custom authentication type that the connector uses. */
+    public fun customAuthenticationType(customAuthenticationType: String) {
+        cdkBuilder.customAuthenticationType(customAuthenticationType)
+    }
 
-  public fun build(): CfnConnectorProfile.CustomAuthCredentialsProperty = cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.CustomAuthCredentialsProperty = cdkBuilder.build()
 }

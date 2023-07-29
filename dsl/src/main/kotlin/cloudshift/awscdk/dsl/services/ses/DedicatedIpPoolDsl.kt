@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -11,28 +20,27 @@ import software.constructs.Construct
  * A dedicated IP pool.
  *
  * Example:
- *
  * ```
  * new DedicatedIpPool(this, "Pool");
  * ```
  */
 @CdkDslMarker
 public class DedicatedIpPoolDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: DedicatedIpPool.Builder = DedicatedIpPool.Builder.create(scope, id)
+    private val cdkBuilder: DedicatedIpPool.Builder = DedicatedIpPool.Builder.create(scope, id)
 
-  /**
-   * A name for the dedicated IP pool.
-   *
-   * Default: - a CloudFormation generated name
-   *
-   * @param dedicatedIpPoolName A name for the dedicated IP pool. 
-   */
-  public fun dedicatedIpPoolName(dedicatedIpPoolName: String) {
-    cdkBuilder.dedicatedIpPoolName(dedicatedIpPoolName)
-  }
+    /**
+     * A name for the dedicated IP pool.
+     *
+     * Default: - a CloudFormation generated name
+     *
+     * @param dedicatedIpPoolName A name for the dedicated IP pool.
+     */
+    public fun dedicatedIpPoolName(dedicatedIpPoolName: String) {
+        cdkBuilder.dedicatedIpPoolName(dedicatedIpPoolName)
+    }
 
-  public fun build(): DedicatedIpPool = cdkBuilder.build()
+    public fun build(): DedicatedIpPool = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3objectlambda
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * access a bucket.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,43 +47,47 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnAccessPointDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnAccessPoint.Builder = CfnAccessPoint.Builder.create(scope, id)
+    private val cdkBuilder: CfnAccessPoint.Builder = CfnAccessPoint.Builder.create(scope, id)
 
-  /**
-   * The name of this access point.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-name)
-   * @param name The name of this access point. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of this access point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-name)
+     *
+     * @param name The name of this access point.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * A configuration used when creating an Object Lambda Access Point.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration)
-   * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
-   * Point. 
-   */
-  public fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
-    cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
-  }
+    /**
+     * A configuration used when creating an Object Lambda Access Point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration)
+     *
+     * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
+     *   Point.
+     */
+    public fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
+        cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
+    }
 
-  /**
-   * A configuration used when creating an Object Lambda Access Point.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration)
-   * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
-   * Point. 
-   */
-  public
-      fun objectLambdaConfiguration(objectLambdaConfiguration: CfnAccessPoint.ObjectLambdaConfigurationProperty) {
-    cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
-  }
+    /**
+     * A configuration used when creating an Object Lambda Access Point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration)
+     *
+     * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
+     *   Point.
+     */
+    public fun objectLambdaConfiguration(
+        objectLambdaConfiguration: CfnAccessPoint.ObjectLambdaConfigurationProperty
+    ) {
+        cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
+    }
 
-  public fun build(): CfnAccessPoint = cdkBuilder.build()
+    public fun build(): CfnAccessPoint = cdkBuilder.build()
 }

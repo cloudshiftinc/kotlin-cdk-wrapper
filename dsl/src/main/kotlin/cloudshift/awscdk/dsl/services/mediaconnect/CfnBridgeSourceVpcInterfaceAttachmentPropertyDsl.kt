@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.mediaconnect.CfnBridgeSource
 import kotlin.String
+import software.amazon.awscdk.services.mediaconnect.CfnBridgeSource
 
 /**
  * The VPC interface that you want to send your output to.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.

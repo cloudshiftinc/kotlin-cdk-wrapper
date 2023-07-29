@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotfleetwise
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,36 +38,28 @@ import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
  */
 @CdkDslMarker
 public class CfnDecoderManifestCanNetworkInterfacePropertyDsl {
-  private val cdkBuilder: CfnDecoderManifest.CanNetworkInterfaceProperty.Builder =
-      CfnDecoderManifest.CanNetworkInterfaceProperty.builder()
+    private val cdkBuilder: CfnDecoderManifest.CanNetworkInterfaceProperty.Builder =
+        CfnDecoderManifest.CanNetworkInterfaceProperty.builder()
 
-  /**
-   * @param canInterface the value to be set. 
-   */
-  public fun canInterface(canInterface: IResolvable) {
-    cdkBuilder.canInterface(canInterface)
-  }
+    /** @param canInterface the value to be set. */
+    public fun canInterface(canInterface: IResolvable) {
+        cdkBuilder.canInterface(canInterface)
+    }
 
-  /**
-   * @param canInterface the value to be set. 
-   */
-  public fun canInterface(canInterface: CfnDecoderManifest.CanInterfaceProperty) {
-    cdkBuilder.canInterface(canInterface)
-  }
+    /** @param canInterface the value to be set. */
+    public fun canInterface(canInterface: CfnDecoderManifest.CanInterfaceProperty) {
+        cdkBuilder.canInterface(canInterface)
+    }
 
-  /**
-   * @param interfaceId the value to be set. 
-   */
-  public fun interfaceId(interfaceId: String) {
-    cdkBuilder.interfaceId(interfaceId)
-  }
+    /** @param interfaceId the value to be set. */
+    public fun interfaceId(interfaceId: String) {
+        cdkBuilder.interfaceId(interfaceId)
+    }
 
-  /**
-   * @param type the value to be set. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type the value to be set. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnDecoderManifest.CanNetworkInterfaceProperty = cdkBuilder.build()
+    public fun build(): CfnDecoderManifest.CanNetworkInterfaceProperty = cdkBuilder.build()
 }

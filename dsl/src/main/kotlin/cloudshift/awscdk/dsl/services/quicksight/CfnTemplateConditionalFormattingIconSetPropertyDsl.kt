@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * Formatting configuration for icon set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,16 +39,14 @@ public class CfnTemplateConditionalFormattingIconSetPropertyDsl {
         CfnTemplate.ConditionalFormattingIconSetProperty.builder()
 
     /**
-     * @param expression The expression that determines the formatting configuration for the icon set.
-     *
+     * @param expression The expression that determines the formatting configuration for the icon
+     *   set.
      */
     public fun expression(expression: String) {
         cdkBuilder.expression(expression)
     }
 
-    /**
-     * @param iconSetType Determines the icon set type.
-     */
+    /** @param iconSetType Determines the icon set type. */
     public fun iconSetType(iconSetType: String) {
         cdkBuilder.iconSetType(iconSetType)
     }

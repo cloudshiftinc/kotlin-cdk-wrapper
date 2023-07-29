@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.logs
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.logs.RetentionDays
  * Construction properties for a LogRetention.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,60 +47,46 @@ import software.amazon.awscdk.services.logs.RetentionDays
  */
 @CdkDslMarker
 public class LogRetentionPropsDsl {
-  private val cdkBuilder: LogRetentionProps.Builder = LogRetentionProps.builder()
+    private val cdkBuilder: LogRetentionProps.Builder = LogRetentionProps.builder()
 
-  /**
-   * @param logGroupName The log group name. 
-   */
-  public fun logGroupName(logGroupName: String) {
-    cdkBuilder.logGroupName(logGroupName)
-  }
+    /** @param logGroupName The log group name. */
+    public fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+    }
 
-  /**
-   * @param logGroupRegion The region where the log group should be created.
-   */
-  public fun logGroupRegion(logGroupRegion: String) {
-    cdkBuilder.logGroupRegion(logGroupRegion)
-  }
+    /** @param logGroupRegion The region where the log group should be created. */
+    public fun logGroupRegion(logGroupRegion: String) {
+        cdkBuilder.logGroupRegion(logGroupRegion)
+    }
 
-  /**
-   * @param logRetentionRetryOptions Retry options for all AWS API calls.
-   */
-  public
-      fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptionsDsl.() -> Unit
-      = {}) {
-    val builder = LogRetentionRetryOptionsDsl()
-    builder.apply(logRetentionRetryOptions)
-    cdkBuilder.logRetentionRetryOptions(builder.build())
-  }
+    /** @param logRetentionRetryOptions Retry options for all AWS API calls. */
+    public fun logRetentionRetryOptions(
+        logRetentionRetryOptions: LogRetentionRetryOptionsDsl.() -> Unit = {}
+    ) {
+        val builder = LogRetentionRetryOptionsDsl()
+        builder.apply(logRetentionRetryOptions)
+        cdkBuilder.logRetentionRetryOptions(builder.build())
+    }
 
-  /**
-   * @param logRetentionRetryOptions Retry options for all AWS API calls.
-   */
-  public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-    cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
-  }
+    /** @param logRetentionRetryOptions Retry options for all AWS API calls. */
+    public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
+        cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
+    }
 
-  /**
-   * @param removalPolicy The removalPolicy for the log group when the stack is deleted.
-   */
-  public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    cdkBuilder.removalPolicy(removalPolicy)
-  }
+    /** @param removalPolicy The removalPolicy for the log group when the stack is deleted. */
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
+    }
 
-  /**
-   * @param retention The number of days log events are kept in CloudWatch Logs. 
-   */
-  public fun retention(retention: RetentionDays) {
-    cdkBuilder.retention(retention)
-  }
+    /** @param retention The number of days log events are kept in CloudWatch Logs. */
+    public fun retention(retention: RetentionDays) {
+        cdkBuilder.retention(retention)
+    }
 
-  /**
-   * @param role The IAM role for the Lambda function associated with the custom resource.
-   */
-  public fun role(role: IRole) {
-    cdkBuilder.role(role)
-  }
+    /** @param role The IAM role for the Lambda function associated with the custom resource. */
+    public fun role(role: IRole) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): LogRetentionProps = cdkBuilder.build()
+    public fun build(): LogRetentionProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.gamelift
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps
  * Properties for defining a `CfnMatchmakingRuleSet`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,55 +43,56 @@ import software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps
  */
 @CdkDslMarker
 public class CfnMatchmakingRuleSetPropsDsl {
-  private val cdkBuilder: CfnMatchmakingRuleSetProps.Builder = CfnMatchmakingRuleSetProps.builder()
+    private val cdkBuilder: CfnMatchmakingRuleSetProps.Builder =
+        CfnMatchmakingRuleSetProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param name A unique identifier for the matchmaking rule set. 
-   * A matchmaking configuration identifies the rule set it uses by this name value. Note that the
-   * rule set name is different from the optional `name` field in the rule set body.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name A unique identifier for the matchmaking rule set. A matchmaking configuration
+     *   identifies the rule set it uses by this name value. Note that the rule set name is
+     *   different from the optional `name` field in the rule set body.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param ruleSetBody A collection of matchmaking rules, formatted as a JSON string. 
-   * Comments are not allowed in JSON, but most elements support a description field.
-   */
-  public fun ruleSetBody(ruleSetBody: String) {
-    cdkBuilder.ruleSetBody(ruleSetBody)
-  }
+    /**
+     * @param ruleSetBody A collection of matchmaking rules, formatted as a JSON string. Comments
+     *   are not allowed in JSON, but most elements support a description field.
+     */
+    public fun ruleSetBody(ruleSetBody: String) {
+        cdkBuilder.ruleSetBody(ruleSetBody)
+    }
 
-  /**
-   * @param tags A list of labels to assign to the new matchmaking rule set resource.
-   * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-   * management, access management and cost allocation. For more information, see [Tagging AWS
-   * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
-   * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
-   * ListTagsForResource to add, remove, and view tags. The maximum tag limit may be lower than stated.
-   * See the AWS General Reference for actual tagging limits.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags A list of labels to assign to the new matchmaking rule set resource. Tags are
+     *   developer-defined key-value pairs. Tagging AWS resources are useful for resource
+     *   management, access management and cost allocation. For more information, see
+     *   [Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in
+     *   the *AWS General Reference* . Once the resource is created, you can use TagResource,
+     *   UntagResource, and ListTagsForResource to add, remove, and view tags. The maximum tag limit
+     *   may be lower than stated. See the AWS General Reference for actual tagging limits.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags A list of labels to assign to the new matchmaking rule set resource.
-   * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-   * management, access management and cost allocation. For more information, see [Tagging AWS
-   * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
-   * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
-   * ListTagsForResource to add, remove, and view tags. The maximum tag limit may be lower than stated.
-   * See the AWS General Reference for actual tagging limits.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags A list of labels to assign to the new matchmaking rule set resource. Tags are
+     *   developer-defined key-value pairs. Tagging AWS resources are useful for resource
+     *   management, access management and cost allocation. For more information, see
+     *   [Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in
+     *   the *AWS General Reference* . Once the resource is created, you can use TagResource,
+     *   UntagResource, and ListTagsForResource to add, remove, and view tags. The maximum tag limit
+     *   may be lower than stated. See the AWS General Reference for actual tagging limits.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnMatchmakingRuleSetProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnMatchmakingRuleSetProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

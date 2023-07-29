@@ -1,9 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-plugins {
-    `kotlin-dsl`
-}
+plugins { `kotlin-dsl` }
 
 gradlePlugin {
     plugins {
@@ -57,4 +55,5 @@ if (GradleVersion.current() < GradleVersion.version("8.3")) {
 
 fun DependencyHandlerScope.plugin(id: String, version: String) = "$id:$id.gradle.plugin:$version"
 
-fun DependencyHandlerScope.plugin(plugin: Provider<PluginDependency>): Provider<String> = plugin.map { "${it.pluginId}:${it.pluginId}.gradle.plugin:${it.version}" }
+fun DependencyHandlerScope.plugin(plugin: Provider<PluginDependency>): Provider<String> =
+    plugin.map { "${it.pluginId}:${it.pluginId}.gradle.plugin:${it.version}" }

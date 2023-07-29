@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.pipelines.ManualApprovalStepProps
 import kotlin.String
+import software.amazon.awscdk.pipelines.ManualApprovalStepProps
 
 /**
  * Construction properties for a `ManualApprovalStep`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,9 +32,7 @@ import kotlin.String
 public class ManualApprovalStepPropsDsl {
     private val cdkBuilder: ManualApprovalStepProps.Builder = ManualApprovalStepProps.builder()
 
-    /**
-     * @param comment The comment to display with this manual approval.
-     */
+    /** @param comment The comment to display with this manual approval. */
     public fun comment(comment: String) {
         cdkBuilder.comment(comment)
     }

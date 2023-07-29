@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
  * jobs scheduled to collect data periodically.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,31 +40,29 @@ import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
  */
 @CdkDslMarker
 public class CfnModelQualityJobDefinitionModelQualityBaselineConfigPropertyDsl {
-  private val cdkBuilder: CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.Builder =
-      CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.builder()
+    private val cdkBuilder:
+        CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.Builder =
+        CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.builder()
 
-  /**
-   * @param baseliningJobName The name of the job that performs baselining for the monitoring job.
-   */
-  public fun baseliningJobName(baseliningJobName: String) {
-    cdkBuilder.baseliningJobName(baseliningJobName)
-  }
+    /**
+     * @param baseliningJobName The name of the job that performs baselining for the monitoring job.
+     */
+    public fun baseliningJobName(baseliningJobName: String) {
+        cdkBuilder.baseliningJobName(baseliningJobName)
+    }
 
-  /**
-   * @param constraintsResource The constraints resource for a monitoring job.
-   */
-  public fun constraintsResource(constraintsResource: IResolvable) {
-    cdkBuilder.constraintsResource(constraintsResource)
-  }
+    /** @param constraintsResource The constraints resource for a monitoring job. */
+    public fun constraintsResource(constraintsResource: IResolvable) {
+        cdkBuilder.constraintsResource(constraintsResource)
+    }
 
-  /**
-   * @param constraintsResource The constraints resource for a monitoring job.
-   */
-  public
-      fun constraintsResource(constraintsResource: CfnModelQualityJobDefinition.ConstraintsResourceProperty) {
-    cdkBuilder.constraintsResource(constraintsResource)
-  }
+    /** @param constraintsResource The constraints resource for a monitoring job. */
+    public fun constraintsResource(
+        constraintsResource: CfnModelQualityJobDefinition.ConstraintsResourceProperty
+    ) {
+        cdkBuilder.constraintsResource(constraintsResource)
+    }
 
-  public fun build(): CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty =
-      cdkBuilder.build()
+    public fun build(): CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty =
+        cdkBuilder.build()
 }

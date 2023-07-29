@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct
@@ -9,16 +20,13 @@ import software.amazon.awscdk.services.servicecatalog.IPortfolio
 import software.amazon.awscdk.services.servicecatalog.IProduct
 import software.amazon.awscdk.services.servicecatalog.Portfolio
 import software.amazon.awscdk.services.sns.ITopic
-import kotlin.String
-import kotlin.Unit
 
 /**
  * StackSet preferences that are required for provisioning the product or updating a provisioned
  * product.
  */
 public inline fun CfnCloudFormationProvisionedProduct.setProvisioningPreferences(
-    block: CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl.() -> Unit =
-        {}
+    block: CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl()
     builder.apply(block)
@@ -31,7 +39,10 @@ public inline fun CfnCloudFormationProvisionedProduct.setProvisioningPreferences
  * @param product
  * @param options
  */
-public inline fun Portfolio.constrainCloudFormationParameters(product: IProduct, block: CloudFormationRuleConstraintOptionsDsl.() -> Unit = {}) {
+public inline fun Portfolio.constrainCloudFormationParameters(
+    product: IProduct,
+    block: CloudFormationRuleConstraintOptionsDsl.() -> Unit = {}
+) {
     val builder = CloudFormationRuleConstraintOptionsDsl()
     builder.apply(block)
     return constrainCloudFormationParameters(product, builder.build())
@@ -43,7 +54,10 @@ public inline fun Portfolio.constrainCloudFormationParameters(product: IProduct,
  * @param product
  * @param options
  */
-public inline fun Portfolio.constrainTagUpdates(product: IProduct, block: TagUpdateConstraintOptionsDsl.() -> Unit = {}) {
+public inline fun Portfolio.constrainTagUpdates(
+    product: IProduct,
+    block: TagUpdateConstraintOptionsDsl.() -> Unit = {}
+) {
     val builder = TagUpdateConstraintOptionsDsl()
     builder.apply(block)
     return constrainTagUpdates(product, builder.build())
@@ -55,7 +69,10 @@ public inline fun Portfolio.constrainTagUpdates(product: IProduct, block: TagUpd
  * @param product
  * @param options
  */
-public inline fun Portfolio.deployWithStackSets(product: IProduct, block: StackSetsConstraintOptionsDsl.() -> Unit = {}) {
+public inline fun Portfolio.deployWithStackSets(
+    product: IProduct,
+    block: StackSetsConstraintOptionsDsl.() -> Unit = {}
+) {
     val builder = StackSetsConstraintOptionsDsl()
     builder.apply(block)
     return deployWithStackSets(product, builder.build())
@@ -71,7 +88,7 @@ public inline fun Portfolio.deployWithStackSets(product: IProduct, block: StackS
 public inline fun Portfolio.notifyOnStackEvents(
     product: IProduct,
     topic: ITopic,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ) {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -82,8 +99,8 @@ public inline fun Portfolio.notifyOnStackEvents(
  * Force users to assume a certain role when launching a product.
  *
  * This sets the launch role using the role arn which is tied to the account this role exists in.
- * This is useful if you will be provisioning products from the account where this role exists.
- * If you intend to share the portfolio across accounts, use a local launch role.
+ * This is useful if you will be provisioning products from the account where this role exists. If
+ * you intend to share the portfolio across accounts, use a local launch role.
  *
  * @param product
  * @param launchRole
@@ -92,7 +109,7 @@ public inline fun Portfolio.notifyOnStackEvents(
 public inline fun Portfolio.setLaunchRole(
     product: IProduct,
     launchRole: IRole,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ) {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -102,8 +119,8 @@ public inline fun Portfolio.setLaunchRole(
 /**
  * Force users to assume a certain role when launching a product.
  *
- * The role name will be referenced by in the local account and must be set explicitly.
- * This is useful when sharing the portfolio with multiple accounts.
+ * The role name will be referenced by in the local account and must be set explicitly. This is
+ * useful when sharing the portfolio with multiple accounts.
  *
  * @param product
  * @param launchRole
@@ -112,7 +129,7 @@ public inline fun Portfolio.setLaunchRole(
 public inline fun Portfolio.setLocalLaunchRole(
     product: IProduct,
     launchRole: IRole,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ) {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -122,9 +139,8 @@ public inline fun Portfolio.setLocalLaunchRole(
 /**
  * Force users to assume a certain role when launching a product.
  *
- * The role will be referenced by name in the local account instead of a static role arn.
- * A role with this name will automatically be created and assumable by Service Catalog in this
- * account.
+ * The role will be referenced by name in the local account instead of a static role arn. A role
+ * with this name will automatically be created and assumable by Service Catalog in this account.
  * This is useful when sharing the portfolio with multiple accounts.
  *
  * @param product
@@ -134,7 +150,7 @@ public inline fun Portfolio.setLocalLaunchRole(
 public inline fun Portfolio.setLocalLaunchRoleName(
     product: IProduct,
     launchRoleName: String,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ): IRole {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -147,18 +163,18 @@ public inline fun Portfolio.setLocalLaunchRoleName(
  * @param accountId
  * @param options
  */
-public inline fun Portfolio.shareWithAccount(accountId: String, block: PortfolioShareOptionsDsl.() -> Unit = {}) {
+public inline fun Portfolio.shareWithAccount(
+    accountId: String,
+    block: PortfolioShareOptionsDsl.() -> Unit = {}
+) {
     val builder = PortfolioShareOptionsDsl()
     builder.apply(block)
     return shareWithAccount(accountId, builder.build())
 }
 
-/**
- * A top level `ProductViewDetail` response containing details about the product’s connection.
- */
+/** A top level `ProductViewDetail` response containing details about the product’s connection. */
 public inline fun CfnCloudFormationProduct.setSourceConnection(
-    block: CfnCloudFormationProductSourceConnectionPropertyDsl.() -> Unit =
-        {}
+    block: CfnCloudFormationProductSourceConnectionPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnCloudFormationProductSourceConnectionPropertyDsl()
     builder.apply(block)
@@ -171,7 +187,10 @@ public inline fun CfnCloudFormationProduct.setSourceConnection(
  * @param product A service catalog product.
  * @param options options for the constraint.
  */
-public inline fun IPortfolio.constrainCloudFormationParameters(arg0: IProduct, block: CloudFormationRuleConstraintOptionsDsl.() -> Unit = {}) {
+public inline fun IPortfolio.constrainCloudFormationParameters(
+    arg0: IProduct,
+    block: CloudFormationRuleConstraintOptionsDsl.() -> Unit = {}
+) {
     val builder = CloudFormationRuleConstraintOptionsDsl()
     builder.apply(block)
     return constrainCloudFormationParameters(arg0, builder.build())
@@ -183,7 +202,10 @@ public inline fun IPortfolio.constrainCloudFormationParameters(arg0: IProduct, b
  * @param product
  * @param options
  */
-public inline fun IPortfolio.constrainTagUpdates(arg0: IProduct, block: TagUpdateConstraintOptionsDsl.() -> Unit = {}) {
+public inline fun IPortfolio.constrainTagUpdates(
+    arg0: IProduct,
+    block: TagUpdateConstraintOptionsDsl.() -> Unit = {}
+) {
     val builder = TagUpdateConstraintOptionsDsl()
     builder.apply(block)
     return constrainTagUpdates(arg0, builder.build())
@@ -195,7 +217,10 @@ public inline fun IPortfolio.constrainTagUpdates(arg0: IProduct, block: TagUpdat
  * @param product A service catalog product.
  * @param options Configuration options for the constraint.
  */
-public inline fun IPortfolio.deployWithStackSets(arg0: IProduct, block: StackSetsConstraintOptionsDsl.() -> Unit = {}) {
+public inline fun IPortfolio.deployWithStackSets(
+    arg0: IProduct,
+    block: StackSetsConstraintOptionsDsl.() -> Unit = {}
+) {
     val builder = StackSetsConstraintOptionsDsl()
     builder.apply(block)
     return deployWithStackSets(arg0, builder.build())
@@ -211,7 +236,7 @@ public inline fun IPortfolio.deployWithStackSets(arg0: IProduct, block: StackSet
 public inline fun IPortfolio.notifyOnStackEvents(
     arg0: IProduct,
     arg1: ITopic,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ) {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -222,8 +247,8 @@ public inline fun IPortfolio.notifyOnStackEvents(
  * Force users to assume a certain role when launching a product.
  *
  * This sets the launch role using the role arn which is tied to the account this role exists in.
- * This is useful if you will be provisioning products from the account where this role exists.
- * If you intend to share the portfolio across accounts, use a local launch role.
+ * This is useful if you will be provisioning products from the account where this role exists. If
+ * you intend to share the portfolio across accounts, use a local launch role.
  *
  * @param product A service catalog product.
  * @param launchRole The IAM role a user must assume when provisioning the product.
@@ -232,7 +257,7 @@ public inline fun IPortfolio.notifyOnStackEvents(
 public inline fun IPortfolio.setLaunchRole(
     arg0: IProduct,
     arg1: IRole,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ) {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -242,8 +267,8 @@ public inline fun IPortfolio.setLaunchRole(
 /**
  * Force users to assume a certain role when launching a product.
  *
- * The role name will be referenced by in the local account and must be set explicitly.
- * This is useful when sharing the portfolio with multiple accounts.
+ * The role name will be referenced by in the local account and must be set explicitly. This is
+ * useful when sharing the portfolio with multiple accounts.
  *
  * @param product A service catalog product.
  * @param launchRole The IAM role a user must assume when provisioning the product.
@@ -252,7 +277,7 @@ public inline fun IPortfolio.setLaunchRole(
 public inline fun IPortfolio.setLocalLaunchRole(
     arg0: IProduct,
     arg1: IRole,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ) {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -262,9 +287,8 @@ public inline fun IPortfolio.setLocalLaunchRole(
 /**
  * Force users to assume a certain role when launching a product.
  *
- * The role will be referenced by name in the local account instead of a static role arn.
- * A role with this name will automatically be created and assumable by Service Catalog in this
- * account.
+ * The role will be referenced by name in the local account instead of a static role arn. A role
+ * with this name will automatically be created and assumable by Service Catalog in this account.
  * This is useful when sharing the portfolio with multiple accounts.
  *
  * @param product A service catalog product.
@@ -274,7 +298,7 @@ public inline fun IPortfolio.setLocalLaunchRole(
 public inline fun IPortfolio.setLocalLaunchRoleName(
     arg0: IProduct,
     arg1: String,
-    block: CommonConstraintOptionsDsl.() -> Unit = {}
+    block: CommonConstraintOptionsDsl.() -> Unit = {},
 ): IRole {
     val builder = CommonConstraintOptionsDsl()
     builder.apply(block)
@@ -287,7 +311,10 @@ public inline fun IPortfolio.setLocalLaunchRoleName(
  * @param accountId AWS account to share portfolio with.
  * @param options Options for the initiate share.
  */
-public inline fun IPortfolio.shareWithAccount(arg0: String, block: PortfolioShareOptionsDsl.() -> Unit = {}) {
+public inline fun IPortfolio.shareWithAccount(
+    arg0: String,
+    block: PortfolioShareOptionsDsl.() -> Unit = {}
+) {
     val builder = PortfolioShareOptionsDsl()
     builder.apply(block)
     return shareWithAccount(arg0, builder.build())

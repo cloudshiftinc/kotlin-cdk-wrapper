@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
  * policy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,16 +34,16 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
  */
 @CdkDslMarker
 public class CfnFirewallPolicyStatefulRuleGroupOverridePropertyDsl {
-  private val cdkBuilder: CfnFirewallPolicy.StatefulRuleGroupOverrideProperty.Builder =
-      CfnFirewallPolicy.StatefulRuleGroupOverrideProperty.builder()
+    private val cdkBuilder: CfnFirewallPolicy.StatefulRuleGroupOverrideProperty.Builder =
+        CfnFirewallPolicy.StatefulRuleGroupOverrideProperty.builder()
 
-  /**
-   * @param action The action that changes the rule group from `DROP` to `ALERT` .
-   * This only applies to managed rule groups.
-   */
-  public fun action(action: String) {
-    cdkBuilder.action(action)
-  }
+    /**
+     * @param action The action that changes the rule group from `DROP` to `ALERT` . This only
+     *   applies to managed rule groups.
+     */
+    public fun action(action: String) {
+        cdkBuilder.action(action)
+    }
 
-  public fun build(): CfnFirewallPolicy.StatefulRuleGroupOverrideProperty = cdkBuilder.build()
+    public fun build(): CfnFirewallPolicy.StatefulRuleGroupOverrideProperty = cdkBuilder.build()
 }

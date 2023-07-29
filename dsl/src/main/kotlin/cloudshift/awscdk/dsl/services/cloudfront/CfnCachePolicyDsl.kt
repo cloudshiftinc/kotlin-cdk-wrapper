@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -12,20 +21,18 @@ import software.constructs.Construct
  * A cache policy.
  *
  * When it's attached to a cache behavior, the cache policy determines the following:
- *
  * * The values that CloudFront includes in the cache key. These values can include HTTP headers,
- * cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it
- * can return to the viewer.
+ *   cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache
+ *   that it can return to the viewer.
  * * The default, minimum, and maximum time to live (TTL) values that you want objects to stay in
- * the CloudFront cache.
+ *   the CloudFront cache.
  *
  * The headers, cookies, and query strings that are included in the cache key are also included in
- * requests that CloudFront sends to the origin. CloudFront sends a request when it can't find a valid
- * object in its cache that matches the request's cache key. If you want to send values to the origin
- * but *not* include them in the cache key, use `OriginRequestPolicy` .
+ * requests that CloudFront sends to the origin. CloudFront sends a request when it can't find a
+ * valid object in its cache that matches the request's cache key. If you want to send values to the
+ * origin but *not* include them in the cache key, use `OriginRequestPolicy` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -66,30 +73,32 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnCachePolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnCachePolicy.Builder = CfnCachePolicy.Builder.create(scope, id)
+    private val cdkBuilder: CfnCachePolicy.Builder = CfnCachePolicy.Builder.create(scope, id)
 
-  /**
-   * The cache policy configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html#cfn-cloudfront-cachepolicy-cachepolicyconfig)
-   * @param cachePolicyConfig The cache policy configuration. 
-   */
-  public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
-    cdkBuilder.cachePolicyConfig(cachePolicyConfig)
-  }
+    /**
+     * The cache policy configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html#cfn-cloudfront-cachepolicy-cachepolicyconfig)
+     *
+     * @param cachePolicyConfig The cache policy configuration.
+     */
+    public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
+        cdkBuilder.cachePolicyConfig(cachePolicyConfig)
+    }
 
-  /**
-   * The cache policy configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html#cfn-cloudfront-cachepolicy-cachepolicyconfig)
-   * @param cachePolicyConfig The cache policy configuration. 
-   */
-  public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
-    cdkBuilder.cachePolicyConfig(cachePolicyConfig)
-  }
+    /**
+     * The cache policy configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html#cfn-cloudfront-cachepolicy-cachepolicyconfig)
+     *
+     * @param cachePolicyConfig The cache policy configuration.
+     */
+    public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
+        cdkBuilder.cachePolicyConfig(cachePolicyConfig)
+    }
 
-  public fun build(): CfnCachePolicy = cdkBuilder.build()
+    public fun build(): CfnCachePolicy = cdkBuilder.build()
 }

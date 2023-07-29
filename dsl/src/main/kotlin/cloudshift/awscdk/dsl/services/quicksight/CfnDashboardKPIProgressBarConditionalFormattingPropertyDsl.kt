@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The conditional formatting for the progress bar of a KPI visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,19 +53,16 @@ public class CfnDashboardKPIProgressBarConditionalFormattingPropertyDsl {
     private val cdkBuilder: CfnDashboard.KPIProgressBarConditionalFormattingProperty.Builder =
         CfnDashboard.KPIProgressBarConditionalFormattingProperty.builder()
 
-    /**
-     * @param foregroundColor The conditional formatting of the progress bar's foreground color.
-     */
+    /** @param foregroundColor The conditional formatting of the progress bar's foreground color. */
     public fun foregroundColor(foregroundColor: IResolvable) {
         cdkBuilder.foregroundColor(foregroundColor)
     }
 
-    /**
-     * @param foregroundColor The conditional formatting of the progress bar's foreground color.
-     */
+    /** @param foregroundColor The conditional formatting of the progress bar's foreground color. */
     public fun foregroundColor(foregroundColor: CfnDashboard.ConditionalFormattingColorProperty) {
         cdkBuilder.foregroundColor(foregroundColor)
     }
 
-    public fun build(): CfnDashboard.KPIProgressBarConditionalFormattingProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.KPIProgressBarConditionalFormattingProperty =
+        cdkBuilder.build()
 }

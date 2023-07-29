@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  * Information about an action that returns a custom HTTP response.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleFixedResponsePropertyDsl {
-  private val cdkBuilder: CfnRule.FixedResponseProperty.Builder =
-      CfnRule.FixedResponseProperty.builder()
+    private val cdkBuilder: CfnRule.FixedResponseProperty.Builder =
+        CfnRule.FixedResponseProperty.builder()
 
-  /**
-   * @param statusCode The HTTP response code. 
-   */
-  public fun statusCode(statusCode: Number) {
-    cdkBuilder.statusCode(statusCode)
-  }
+    /** @param statusCode The HTTP response code. */
+    public fun statusCode(statusCode: Number) {
+        cdkBuilder.statusCode(statusCode)
+    }
 
-  public fun build(): CfnRule.FixedResponseProperty = cdkBuilder.build()
+    public fun build(): CfnRule.FixedResponseProperty = cdkBuilder.build()
 }

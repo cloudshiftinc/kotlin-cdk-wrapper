@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sagemaker.CfnUserProfile
  * The JupyterServer app settings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,24 +37,24 @@ import software.amazon.awscdk.services.sagemaker.CfnUserProfile
  */
 @CdkDslMarker
 public class CfnUserProfileJupyterServerAppSettingsPropertyDsl {
-  private val cdkBuilder: CfnUserProfile.JupyterServerAppSettingsProperty.Builder =
-      CfnUserProfile.JupyterServerAppSettingsProperty.builder()
+    private val cdkBuilder: CfnUserProfile.JupyterServerAppSettingsProperty.Builder =
+        CfnUserProfile.JupyterServerAppSettingsProperty.builder()
 
-  /**
-   * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the
-   * default SageMaker image used by the JupyterServer app.
-   */
-  public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-    cdkBuilder.defaultResourceSpec(defaultResourceSpec)
-  }
+    /**
+     * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+     *   the default SageMaker image used by the JupyterServer app.
+     */
+    public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec)
+    }
 
-  /**
-   * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the
-   * default SageMaker image used by the JupyterServer app.
-   */
-  public fun defaultResourceSpec(defaultResourceSpec: CfnUserProfile.ResourceSpecProperty) {
-    cdkBuilder.defaultResourceSpec(defaultResourceSpec)
-  }
+    /**
+     * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+     *   the default SageMaker image used by the JupyterServer app.
+     */
+    public fun defaultResourceSpec(defaultResourceSpec: CfnUserProfile.ResourceSpecProperty) {
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec)
+    }
 
-  public fun build(): CfnUserProfile.JupyterServerAppSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnUserProfile.JupyterServerAppSettingsProperty = cdkBuilder.build()
 }

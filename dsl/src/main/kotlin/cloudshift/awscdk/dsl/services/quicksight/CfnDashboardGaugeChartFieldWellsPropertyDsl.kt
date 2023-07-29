@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The field well configuration of a `GaugeChartVisual` .
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -28,44 +36,32 @@ public class CfnDashboardGaugeChartFieldWellsPropertyDsl {
 
     private val _values: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param targetValues The target value field wells of a `GaugeChartVisual` .
-     */
+    /** @param targetValues The target value field wells of a `GaugeChartVisual` . */
     public fun targetValues(vararg targetValues: Any) {
         _targetValues.addAll(listOf(*targetValues))
     }
 
-    /**
-     * @param targetValues The target value field wells of a `GaugeChartVisual` .
-     */
+    /** @param targetValues The target value field wells of a `GaugeChartVisual` . */
     public fun targetValues(targetValues: Collection<Any>) {
         _targetValues.addAll(targetValues)
     }
 
-    /**
-     * @param targetValues The target value field wells of a `GaugeChartVisual` .
-     */
+    /** @param targetValues The target value field wells of a `GaugeChartVisual` . */
     public fun targetValues(targetValues: IResolvable) {
         cdkBuilder.targetValues(targetValues)
     }
 
-    /**
-     * @param values The value field wells of a `GaugeChartVisual` .
-     */
+    /** @param values The value field wells of a `GaugeChartVisual` . */
     public fun values(vararg values: Any) {
         _values.addAll(listOf(*values))
     }
 
-    /**
-     * @param values The value field wells of a `GaugeChartVisual` .
-     */
+    /** @param values The value field wells of a `GaugeChartVisual` . */
     public fun values(values: Collection<Any>) {
         _values.addAll(values)
     }
 
-    /**
-     * @param values The value field wells of a `GaugeChartVisual` .
-     */
+    /** @param values The value field wells of a `GaugeChartVisual` . */
     public fun values(values: IResolvable) {
         cdkBuilder.values(values)
     }

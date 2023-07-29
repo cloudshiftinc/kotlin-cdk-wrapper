@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  * cluster.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,17 +34,16 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorKafkaClusterClientAuthenticationPropertyDsl {
-  private val cdkBuilder: CfnConnector.KafkaClusterClientAuthenticationProperty.Builder =
-      CfnConnector.KafkaClusterClientAuthenticationProperty.builder()
+    private val cdkBuilder: CfnConnector.KafkaClusterClientAuthenticationProperty.Builder =
+        CfnConnector.KafkaClusterClientAuthenticationProperty.builder()
 
-  /**
-   * @param authenticationType The type of client authentication used to connect to the Apache Kafka
-   * cluster. 
-   * Value NONE means that no client authentication is used.
-   */
-  public fun authenticationType(authenticationType: String) {
-    cdkBuilder.authenticationType(authenticationType)
-  }
+    /**
+     * @param authenticationType The type of client authentication used to connect to the Apache
+     *   Kafka cluster. Value NONE means that no client authentication is used.
+     */
+    public fun authenticationType(authenticationType: String) {
+        cdkBuilder.authenticationType(authenticationType)
+    }
 
-  public fun build(): CfnConnector.KafkaClusterClientAuthenticationProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.KafkaClusterClientAuthenticationProperty = cdkBuilder.build()
 }

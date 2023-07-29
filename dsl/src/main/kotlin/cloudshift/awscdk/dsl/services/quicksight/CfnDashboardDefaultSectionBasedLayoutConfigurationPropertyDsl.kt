@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The options that determine the default settings for a section-based layout configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,18 +48,23 @@ public class CfnDashboardDefaultSectionBasedLayoutConfigurationPropertyDsl {
         CfnDashboard.DefaultSectionBasedLayoutConfigurationProperty.builder()
 
     /**
-     * @param canvasSizeOptions Determines the screen canvas size options for a section-based layout.
+     * @param canvasSizeOptions Determines the screen canvas size options for a section-based
+     *   layout.
      */
     public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
         cdkBuilder.canvasSizeOptions(canvasSizeOptions)
     }
 
     /**
-     * @param canvasSizeOptions Determines the screen canvas size options for a section-based layout.
+     * @param canvasSizeOptions Determines the screen canvas size options for a section-based
+     *   layout.
      */
-    public fun canvasSizeOptions(canvasSizeOptions: CfnDashboard.SectionBasedLayoutCanvasSizeOptionsProperty) {
+    public fun canvasSizeOptions(
+        canvasSizeOptions: CfnDashboard.SectionBasedLayoutCanvasSizeOptionsProperty
+    ) {
         cdkBuilder.canvasSizeOptions(canvasSizeOptions)
     }
 
-    public fun build(): CfnDashboard.DefaultSectionBasedLayoutConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.DefaultSectionBasedLayoutConfigurationProperty =
+        cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecr
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.ecr.RepositoryAttributes
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -21,21 +29,17 @@ import software.amazon.awscdk.services.ecr.RepositoryAttributes
  */
 @CdkDslMarker
 public class RepositoryAttributesDsl {
-  private val cdkBuilder: RepositoryAttributes.Builder = RepositoryAttributes.builder()
+    private val cdkBuilder: RepositoryAttributes.Builder = RepositoryAttributes.builder()
 
-  /**
-   * @param repositoryArn the value to be set. 
-   */
-  public fun repositoryArn(repositoryArn: String) {
-    cdkBuilder.repositoryArn(repositoryArn)
-  }
+    /** @param repositoryArn the value to be set. */
+    public fun repositoryArn(repositoryArn: String) {
+        cdkBuilder.repositoryArn(repositoryArn)
+    }
 
-  /**
-   * @param repositoryName the value to be set. 
-   */
-  public fun repositoryName(repositoryName: String) {
-    cdkBuilder.repositoryName(repositoryName)
-  }
+    /** @param repositoryName the value to be set. */
+    public fun repositoryName(repositoryName: String) {
+        cdkBuilder.repositoryName(repositoryName)
+    }
 
-  public fun build(): RepositoryAttributes = cdkBuilder.build()
+    public fun build(): RepositoryAttributes = cdkBuilder.build()
 }

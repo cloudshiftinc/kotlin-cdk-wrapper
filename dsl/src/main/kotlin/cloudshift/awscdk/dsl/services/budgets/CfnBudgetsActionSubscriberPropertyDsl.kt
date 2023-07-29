@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.budgets
 
@@ -13,12 +22,10 @@ import software.amazon.awscdk.services.budgets.CfnBudgetsAction
  * address.
  *
  * For example, an email subscriber has the following parameters:
- *
  * * A `subscriptionType` of `EMAIL`
  * * An `address` of `example&#64;example.com`
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,24 +40,21 @@ import software.amazon.awscdk.services.budgets.CfnBudgetsAction
  */
 @CdkDslMarker
 public class CfnBudgetsActionSubscriberPropertyDsl {
-  private val cdkBuilder: CfnBudgetsAction.SubscriberProperty.Builder =
-      CfnBudgetsAction.SubscriberProperty.builder()
+    private val cdkBuilder: CfnBudgetsAction.SubscriberProperty.Builder =
+        CfnBudgetsAction.SubscriberProperty.builder()
 
-  /**
-   * @param address The address that AWS sends budget notifications to, either an SNS topic or an
-   * email. 
-   * When you create a subscriber, the value of `Address` can't contain line breaks.
-   */
-  public fun address(address: String) {
-    cdkBuilder.address(address)
-  }
+    /**
+     * @param address The address that AWS sends budget notifications to, either an SNS topic or an
+     *   email. When you create a subscriber, the value of `Address` can't contain line breaks.
+     */
+    public fun address(address: String) {
+        cdkBuilder.address(address)
+    }
 
-  /**
-   * @param type The type of notification that AWS sends to a subscriber. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The type of notification that AWS sends to a subscriber. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnBudgetsAction.SubscriberProperty = cdkBuilder.build()
+    public fun build(): CfnBudgetsAction.SubscriberProperty = cdkBuilder.build()
 }

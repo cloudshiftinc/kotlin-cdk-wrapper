@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  * Describes whether monitoring is enabled.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,24 +33,18 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  */
 @CdkDslMarker
 public class CfnSpotFleetSpotFleetMonitoringPropertyDsl {
-  private val cdkBuilder: CfnSpotFleet.SpotFleetMonitoringProperty.Builder =
-      CfnSpotFleet.SpotFleetMonitoringProperty.builder()
+    private val cdkBuilder: CfnSpotFleet.SpotFleetMonitoringProperty.Builder =
+        CfnSpotFleet.SpotFleetMonitoringProperty.builder()
 
-  /**
-   * @param enabled Enables monitoring for the instance.
-   * Default: `false`
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Enables monitoring for the instance. Default: `false` */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Enables monitoring for the instance.
-   * Default: `false`
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Enables monitoring for the instance. Default: `false` */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  public fun build(): CfnSpotFleet.SpotFleetMonitoringProperty = cdkBuilder.build()
+    public fun build(): CfnSpotFleet.SpotFleetMonitoringProperty = cdkBuilder.build()
 }

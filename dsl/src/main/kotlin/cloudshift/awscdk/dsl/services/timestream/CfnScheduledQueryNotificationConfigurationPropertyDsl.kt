@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.timestream
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.timestream.CfnScheduledQuery
  * when it is deleted.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,22 +38,18 @@ import software.amazon.awscdk.services.timestream.CfnScheduledQuery
  */
 @CdkDslMarker
 public class CfnScheduledQueryNotificationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnScheduledQuery.NotificationConfigurationProperty.Builder =
-      CfnScheduledQuery.NotificationConfigurationProperty.builder()
+    private val cdkBuilder: CfnScheduledQuery.NotificationConfigurationProperty.Builder =
+        CfnScheduledQuery.NotificationConfigurationProperty.builder()
 
-  /**
-   * @param snsConfiguration Details on SNS configuration. 
-   */
-  public fun snsConfiguration(snsConfiguration: IResolvable) {
-    cdkBuilder.snsConfiguration(snsConfiguration)
-  }
+    /** @param snsConfiguration Details on SNS configuration. */
+    public fun snsConfiguration(snsConfiguration: IResolvable) {
+        cdkBuilder.snsConfiguration(snsConfiguration)
+    }
 
-  /**
-   * @param snsConfiguration Details on SNS configuration. 
-   */
-  public fun snsConfiguration(snsConfiguration: CfnScheduledQuery.SnsConfigurationProperty) {
-    cdkBuilder.snsConfiguration(snsConfiguration)
-  }
+    /** @param snsConfiguration Details on SNS configuration. */
+    public fun snsConfiguration(snsConfiguration: CfnScheduledQuery.SnsConfigurationProperty) {
+        cdkBuilder.snsConfiguration(snsConfiguration)
+    }
 
-  public fun build(): CfnScheduledQuery.NotificationConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnScheduledQuery.NotificationConfigurationProperty = cdkBuilder.build()
 }

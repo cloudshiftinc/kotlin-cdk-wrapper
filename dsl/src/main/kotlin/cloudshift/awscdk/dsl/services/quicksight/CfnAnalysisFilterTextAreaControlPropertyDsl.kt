@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * A control to display a text box that is used to enter multiple entries.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,50 +58,38 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisFilterTextAreaControlPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.FilterTextAreaControlProperty.Builder =
-      CfnAnalysis.FilterTextAreaControlProperty.builder()
+    private val cdkBuilder: CfnAnalysis.FilterTextAreaControlProperty.Builder =
+        CfnAnalysis.FilterTextAreaControlProperty.builder()
 
-  /**
-   * @param delimiter The delimiter that is used to separate the lines in text.
-   */
-  public fun delimiter(delimiter: String) {
-    cdkBuilder.delimiter(delimiter)
-  }
+    /** @param delimiter The delimiter that is used to separate the lines in text. */
+    public fun delimiter(delimiter: String) {
+        cdkBuilder.delimiter(delimiter)
+    }
 
-  /**
-   * @param displayOptions The display options of a control.
-   */
-  public fun displayOptions(displayOptions: IResolvable) {
-    cdkBuilder.displayOptions(displayOptions)
-  }
+    /** @param displayOptions The display options of a control. */
+    public fun displayOptions(displayOptions: IResolvable) {
+        cdkBuilder.displayOptions(displayOptions)
+    }
 
-  /**
-   * @param displayOptions The display options of a control.
-   */
-  public fun displayOptions(displayOptions: CfnAnalysis.TextAreaControlDisplayOptionsProperty) {
-    cdkBuilder.displayOptions(displayOptions)
-  }
+    /** @param displayOptions The display options of a control. */
+    public fun displayOptions(displayOptions: CfnAnalysis.TextAreaControlDisplayOptionsProperty) {
+        cdkBuilder.displayOptions(displayOptions)
+    }
 
-  /**
-   * @param filterControlId The ID of the `FilterTextAreaControl` . 
-   */
-  public fun filterControlId(filterControlId: String) {
-    cdkBuilder.filterControlId(filterControlId)
-  }
+    /** @param filterControlId The ID of the `FilterTextAreaControl` . */
+    public fun filterControlId(filterControlId: String) {
+        cdkBuilder.filterControlId(filterControlId)
+    }
 
-  /**
-   * @param sourceFilterId The source filter ID of the `FilterTextAreaControl` . 
-   */
-  public fun sourceFilterId(sourceFilterId: String) {
-    cdkBuilder.sourceFilterId(sourceFilterId)
-  }
+    /** @param sourceFilterId The source filter ID of the `FilterTextAreaControl` . */
+    public fun sourceFilterId(sourceFilterId: String) {
+        cdkBuilder.sourceFilterId(sourceFilterId)
+    }
 
-  /**
-   * @param title The title of the `FilterTextAreaControl` . 
-   */
-  public fun title(title: String) {
-    cdkBuilder.title(title)
-  }
+    /** @param title The title of the `FilterTextAreaControl` . */
+    public fun title(title: String) {
+        cdkBuilder.title(title)
+    }
 
-  public fun build(): CfnAnalysis.FilterTextAreaControlProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.FilterTextAreaControlProperty = cdkBuilder.build()
 }

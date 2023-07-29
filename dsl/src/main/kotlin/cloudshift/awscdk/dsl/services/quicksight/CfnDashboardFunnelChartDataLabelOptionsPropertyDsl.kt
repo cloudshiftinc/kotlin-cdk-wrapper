@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
-import kotlin.String
 
 /**
  * The options that determine the presentation of the data labels.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,32 +60,30 @@ public class CfnDashboardFunnelChartDataLabelOptionsPropertyDsl {
         cdkBuilder.categoryLabelVisibility(categoryLabelVisibility)
     }
 
-    /**
-     * @param labelColor The color of the data label text.
-     */
+    /** @param labelColor The color of the data label text. */
     public fun labelColor(labelColor: String) {
         cdkBuilder.labelColor(labelColor)
     }
 
     /**
-     * @param labelFontConfiguration The font configuration for the data labels.
-     * Only the `FontSize` attribute of the font configuration is used for data labels.
+     * @param labelFontConfiguration The font configuration for the data labels. Only the `FontSize`
+     *   attribute of the font configuration is used for data labels.
      */
     public fun labelFontConfiguration(labelFontConfiguration: IResolvable) {
         cdkBuilder.labelFontConfiguration(labelFontConfiguration)
     }
 
     /**
-     * @param labelFontConfiguration The font configuration for the data labels.
-     * Only the `FontSize` attribute of the font configuration is used for data labels.
+     * @param labelFontConfiguration The font configuration for the data labels. Only the `FontSize`
+     *   attribute of the font configuration is used for data labels.
      */
-    public fun labelFontConfiguration(labelFontConfiguration: CfnDashboard.FontConfigurationProperty) {
+    public fun labelFontConfiguration(
+        labelFontConfiguration: CfnDashboard.FontConfigurationProperty
+    ) {
         cdkBuilder.labelFontConfiguration(labelFontConfiguration)
     }
 
-    /**
-     * @param measureDataLabelStyle Determines the style of the metric labels.
-     */
+    /** @param measureDataLabelStyle Determines the style of the metric labels. */
     public fun measureDataLabelStyle(measureDataLabelStyle: String) {
         cdkBuilder.measureDataLabelStyle(measureDataLabelStyle)
     }
@@ -91,15 +97,13 @@ public class CfnDashboardFunnelChartDataLabelOptionsPropertyDsl {
 
     /**
      * @param position Determines the positioning of the data label relative to a section of the
-     * funnel.
+     *   funnel.
      */
     public fun position(position: String) {
         cdkBuilder.position(position)
     }
 
-    /**
-     * @param visibility The visibility option that determines if data labels are displayed.
-     */
+    /** @param visibility The visibility option that determines if data labels are displayed. */
     public fun visibility(visibility: String) {
         cdkBuilder.visibility(visibility)
     }

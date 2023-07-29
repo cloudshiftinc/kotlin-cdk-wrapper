@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.forecast
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.forecast.CfnDataset
 import kotlin.String
+import software.amazon.awscdk.services.forecast.CfnDataset
 
 /**
  * A key-value pair to associate with a resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,20 +37,18 @@ public class CfnDatasetTagsItemsPropertyDsl {
         CfnDataset.TagsItemsProperty.builder()
 
     /**
-     * @param key The key name of the tag.
-     * You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed
-     * with aws:. You can use any of the following characters: the set of Unicode letters, digits,
-     * whitespace, _, ., /, =, +, and -.
+     * @param key The key name of the tag. You can specify a value that is 1 to 128 Unicode
+     *   characters in length and cannot be prefixed with aws:. You can use any of the following
+     *   characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
      */
     public fun key(key: String) {
         cdkBuilder.key(key)
     }
 
     /**
-     * @param value The value for the tag.
-     * You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed
-     * with aws:. You can use any of the following characters: the set of Unicode letters, digits,
-     * whitespace, _, ., /, =, +, and -.
+     * @param value The value for the tag. You can specify a value that is 0 to 256 Unicode
+     *   characters in length and cannot be prefixed with aws:. You can use any of the following
+     *   characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
      */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssoci
  * DNS information about the service.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssoci
  */
 @CdkDslMarker
 public class CfnServiceNetworkServiceAssociationDnsEntryPropertyDsl {
-  private val cdkBuilder: CfnServiceNetworkServiceAssociation.DnsEntryProperty.Builder =
-      CfnServiceNetworkServiceAssociation.DnsEntryProperty.builder()
+    private val cdkBuilder: CfnServiceNetworkServiceAssociation.DnsEntryProperty.Builder =
+        CfnServiceNetworkServiceAssociation.DnsEntryProperty.builder()
 
-  /**
-   * @param domainName The domain name of the service.
-   */
-  public fun domainName(domainName: String) {
-    cdkBuilder.domainName(domainName)
-  }
+    /** @param domainName The domain name of the service. */
+    public fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+    }
 
-  /**
-   * @param hostedZoneId The ID of the hosted zone.
-   */
-  public fun hostedZoneId(hostedZoneId: String) {
-    cdkBuilder.hostedZoneId(hostedZoneId)
-  }
+    /** @param hostedZoneId The ID of the hosted zone. */
+    public fun hostedZoneId(hostedZoneId: String) {
+        cdkBuilder.hostedZoneId(hostedZoneId)
+    }
 
-  public fun build(): CfnServiceNetworkServiceAssociation.DnsEntryProperty = cdkBuilder.build()
+    public fun build(): CfnServiceNetworkServiceAssociation.DnsEntryProperty = cdkBuilder.build()
 }

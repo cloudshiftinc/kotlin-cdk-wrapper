@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -68,16 +76,12 @@ public class CfnTemplateTooltipItemPropertyDsl {
         cdkBuilder.columnTooltipItem(columnTooltipItem)
     }
 
-    /**
-     * @param fieldTooltipItem The tooltip item for the fields.
-     */
+    /** @param fieldTooltipItem The tooltip item for the fields. */
     public fun fieldTooltipItem(fieldTooltipItem: IResolvable) {
         cdkBuilder.fieldTooltipItem(fieldTooltipItem)
     }
 
-    /**
-     * @param fieldTooltipItem The tooltip item for the fields.
-     */
+    /** @param fieldTooltipItem The tooltip item for the fields. */
     public fun fieldTooltipItem(fieldTooltipItem: CfnTemplate.FieldTooltipItemProperty) {
         cdkBuilder.fieldTooltipItem(fieldTooltipItem)
     }

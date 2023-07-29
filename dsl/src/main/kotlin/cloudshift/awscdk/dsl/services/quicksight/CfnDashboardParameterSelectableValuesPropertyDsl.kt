@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * A list of selectable values that are used in a control.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,41 +40,33 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardParameterSelectableValuesPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ParameterSelectableValuesProperty.Builder =
-      CfnDashboard.ParameterSelectableValuesProperty.builder()
+    private val cdkBuilder: CfnDashboard.ParameterSelectableValuesProperty.Builder =
+        CfnDashboard.ParameterSelectableValuesProperty.builder()
 
-  private val _values: MutableList<String> = mutableListOf()
+    private val _values: MutableList<String> = mutableListOf()
 
-  /**
-   * @param linkToDataSetColumn The column identifier that fetches values from the data set.
-   */
-  public fun linkToDataSetColumn(linkToDataSetColumn: IResolvable) {
-    cdkBuilder.linkToDataSetColumn(linkToDataSetColumn)
-  }
+    /** @param linkToDataSetColumn The column identifier that fetches values from the data set. */
+    public fun linkToDataSetColumn(linkToDataSetColumn: IResolvable) {
+        cdkBuilder.linkToDataSetColumn(linkToDataSetColumn)
+    }
 
-  /**
-   * @param linkToDataSetColumn The column identifier that fetches values from the data set.
-   */
-  public fun linkToDataSetColumn(linkToDataSetColumn: CfnDashboard.ColumnIdentifierProperty) {
-    cdkBuilder.linkToDataSetColumn(linkToDataSetColumn)
-  }
+    /** @param linkToDataSetColumn The column identifier that fetches values from the data set. */
+    public fun linkToDataSetColumn(linkToDataSetColumn: CfnDashboard.ColumnIdentifierProperty) {
+        cdkBuilder.linkToDataSetColumn(linkToDataSetColumn)
+    }
 
-  /**
-   * @param values The values that are used in `ParameterSelectableValues` .
-   */
-  public fun values(vararg values: String) {
-    _values.addAll(listOf(*values))
-  }
+    /** @param values The values that are used in `ParameterSelectableValues` . */
+    public fun values(vararg values: String) {
+        _values.addAll(listOf(*values))
+    }
 
-  /**
-   * @param values The values that are used in `ParameterSelectableValues` .
-   */
-  public fun values(values: Collection<String>) {
-    _values.addAll(values)
-  }
+    /** @param values The values that are used in `ParameterSelectableValues` . */
+    public fun values(values: Collection<String>) {
+        _values.addAll(values)
+    }
 
-  public fun build(): CfnDashboard.ParameterSelectableValuesProperty {
-    if(_values.isNotEmpty()) cdkBuilder.values(_values)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDashboard.ParameterSelectableValuesProperty {
+        if (_values.isNotEmpty()) cdkBuilder.values(_values)
+        return cdkBuilder.build()
+    }
 }

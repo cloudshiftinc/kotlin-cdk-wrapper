@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -515,17 +523,15 @@ public class CfnTemplateWordCloudFieldWellsPropertyDsl {
     private val cdkBuilder: CfnTemplate.WordCloudFieldWellsProperty.Builder =
         CfnTemplate.WordCloudFieldWellsProperty.builder()
 
-    /**
-     * @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud.
-     */
+    /** @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud. */
     public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: IResolvable) {
         cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
     }
 
-    /**
-     * @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud.
-     */
-    public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: CfnTemplate.WordCloudAggregatedFieldWellsProperty) {
+    /** @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud. */
+    public fun wordCloudAggregatedFieldWells(
+        wordCloudAggregatedFieldWells: CfnTemplate.WordCloudAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
     }
 

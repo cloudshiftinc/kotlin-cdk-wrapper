@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
  * You can only use these for stateful rule groups.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,20 +34,20 @@ import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupStatefulRuleOptionsPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.StatefulRuleOptionsProperty.Builder =
-      CfnRuleGroup.StatefulRuleOptionsProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.StatefulRuleOptionsProperty.Builder =
+        CfnRuleGroup.StatefulRuleOptionsProperty.builder()
 
-  /**
-   * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule group.
-   * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule engine
-   * as Suricata compatible strings, and Suricata evaluates them based on certain settings. For more
-   * information, see [Evaluation order for stateful
-   * rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
-   * in the *AWS Network Firewall Developer Guide* .
-   */
-  public fun ruleOrder(ruleOrder: String) {
-    cdkBuilder.ruleOrder(ruleOrder)
-  }
+    /**
+     * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule group.
+     *   `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
+     *   engine as Suricata compatible strings, and Suricata evaluates them based on certain
+     *   settings. For more information, see
+     *   [Evaluation order for stateful rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html)
+     *   in the *AWS Network Firewall Developer Guide* .
+     */
+    public fun ruleOrder(ruleOrder: String) {
+        cdkBuilder.ruleOrder(ruleOrder)
+    }
 
-  public fun build(): CfnRuleGroup.StatefulRuleOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnRuleGroup.StatefulRuleOptionsProperty = cdkBuilder.build()
 }

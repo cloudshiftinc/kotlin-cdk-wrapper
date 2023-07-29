@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
  * asset properties.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -51,45 +59,38 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
  */
 @CdkDslMarker
 public class CfnTopicRuleIotSiteWiseActionPropertyDsl {
-  private val cdkBuilder: CfnTopicRule.IotSiteWiseActionProperty.Builder =
-      CfnTopicRule.IotSiteWiseActionProperty.builder()
+    private val cdkBuilder: CfnTopicRule.IotSiteWiseActionProperty.Builder =
+        CfnTopicRule.IotSiteWiseActionProperty.builder()
 
-  private val _putAssetPropertyValueEntries: MutableList<Any> = mutableListOf()
+    private val _putAssetPropertyValueEntries: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param putAssetPropertyValueEntries A list of asset property value entries. 
-   */
-  public fun putAssetPropertyValueEntries(vararg putAssetPropertyValueEntries: Any) {
-    _putAssetPropertyValueEntries.addAll(listOf(*putAssetPropertyValueEntries))
-  }
+    /** @param putAssetPropertyValueEntries A list of asset property value entries. */
+    public fun putAssetPropertyValueEntries(vararg putAssetPropertyValueEntries: Any) {
+        _putAssetPropertyValueEntries.addAll(listOf(*putAssetPropertyValueEntries))
+    }
 
-  /**
-   * @param putAssetPropertyValueEntries A list of asset property value entries. 
-   */
-  public fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: Collection<Any>) {
-    _putAssetPropertyValueEntries.addAll(putAssetPropertyValueEntries)
-  }
+    /** @param putAssetPropertyValueEntries A list of asset property value entries. */
+    public fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: Collection<Any>) {
+        _putAssetPropertyValueEntries.addAll(putAssetPropertyValueEntries)
+    }
 
-  /**
-   * @param putAssetPropertyValueEntries A list of asset property value entries. 
-   */
-  public fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: IResolvable) {
-    cdkBuilder.putAssetPropertyValueEntries(putAssetPropertyValueEntries)
-  }
+    /** @param putAssetPropertyValueEntries A list of asset property value entries. */
+    public fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: IResolvable) {
+        cdkBuilder.putAssetPropertyValueEntries(putAssetPropertyValueEntries)
+    }
 
-  /**
-   * @param roleArn The ARN of the role that grants AWS IoT permission to send an asset property
-   * value to AWS IoT SiteWise. 
-   * ( `"Action": "iotsitewise:BatchPutAssetPropertyValue"` ). The trust policy can restrict access
-   * to specific asset hierarchy paths.
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /**
+     * @param roleArn The ARN of the role that grants AWS IoT permission to send an asset property
+     *   value to AWS IoT SiteWise. ( `"Action": "iotsitewise:BatchPutAssetPropertyValue"` ). The
+     *   trust policy can restrict access to specific asset hierarchy paths.
+     */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  public fun build(): CfnTopicRule.IotSiteWiseActionProperty {
-    if(_putAssetPropertyValueEntries.isNotEmpty())
-        cdkBuilder.putAssetPropertyValueEntries(_putAssetPropertyValueEntries)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTopicRule.IotSiteWiseActionProperty {
+        if (_putAssetPropertyValueEntries.isNotEmpty())
+            cdkBuilder.putAssetPropertyValueEntries(_putAssetPropertyValueEntries)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.databrew.CfnJob
  * recipe jobs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,24 +39,24 @@ import software.amazon.awscdk.services.databrew.CfnJob
  */
 @CdkDslMarker
 public class CfnJobS3TableOutputOptionsPropertyDsl {
-  private val cdkBuilder: CfnJob.S3TableOutputOptionsProperty.Builder =
-      CfnJob.S3TableOutputOptionsProperty.builder()
+    private val cdkBuilder: CfnJob.S3TableOutputOptionsProperty.Builder =
+        CfnJob.S3TableOutputOptionsProperty.builder()
 
-  /**
-   * @param location Represents an Amazon S3 location (bucket name and object key) where DataBrew
-   * can write output from a job. 
-   */
-  public fun location(location: IResolvable) {
-    cdkBuilder.location(location)
-  }
+    /**
+     * @param location Represents an Amazon S3 location (bucket name and object key) where DataBrew
+     *   can write output from a job.
+     */
+    public fun location(location: IResolvable) {
+        cdkBuilder.location(location)
+    }
 
-  /**
-   * @param location Represents an Amazon S3 location (bucket name and object key) where DataBrew
-   * can write output from a job. 
-   */
-  public fun location(location: CfnJob.S3LocationProperty) {
-    cdkBuilder.location(location)
-  }
+    /**
+     * @param location Represents an Amazon S3 location (bucket name and object key) where DataBrew
+     *   can write output from a job.
+     */
+    public fun location(location: CfnJob.S3LocationProperty) {
+        cdkBuilder.location(location)
+    }
 
-  public fun build(): CfnJob.S3TableOutputOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnJob.S3TableOutputOptionsProperty = cdkBuilder.build()
 }

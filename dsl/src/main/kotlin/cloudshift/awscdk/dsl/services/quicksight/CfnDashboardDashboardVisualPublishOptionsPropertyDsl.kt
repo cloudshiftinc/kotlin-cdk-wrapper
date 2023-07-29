@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The visual publish options of a visual in a dashboard.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,7 +40,7 @@ public class CfnDashboardDashboardVisualPublishOptionsPropertyDsl {
 
     /**
      * @param exportHiddenFieldsOption Determines if hidden fields are included in an exported
-     * dashboard.
+     *   dashboard.
      */
     public fun exportHiddenFieldsOption(exportHiddenFieldsOption: IResolvable) {
         cdkBuilder.exportHiddenFieldsOption(exportHiddenFieldsOption)
@@ -40,9 +48,11 @@ public class CfnDashboardDashboardVisualPublishOptionsPropertyDsl {
 
     /**
      * @param exportHiddenFieldsOption Determines if hidden fields are included in an exported
-     * dashboard.
+     *   dashboard.
      */
-    public fun exportHiddenFieldsOption(exportHiddenFieldsOption: CfnDashboard.ExportHiddenFieldsOptionProperty) {
+    public fun exportHiddenFieldsOption(
+        exportHiddenFieldsOption: CfnDashboard.ExportHiddenFieldsOptionProperty
+    ) {
         cdkBuilder.exportHiddenFieldsOption(exportHiddenFieldsOption)
     }
 

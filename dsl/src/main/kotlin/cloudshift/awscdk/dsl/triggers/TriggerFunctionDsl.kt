@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.triggers
 
@@ -8,6 +17,13 @@ import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
 import cloudshift.awscdk.dsl.services.lambda.AdotInstrumentationConfigDsl
 import cloudshift.awscdk.dsl.services.lambda.LogRetentionRetryOptionsDsl
 import cloudshift.awscdk.dsl.services.lambda.VersionOptionsDsl
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.codeguruprofiler.IProfilingGroup
@@ -37,19 +53,11 @@ import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 import software.amazon.awscdk.triggers.TriggerFunction
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.Number
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.Map
-import kotlin.collections.MutableList
 
 /**
  * Invokes an AWS Lambda function during deployment.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.triggers.*;
  * TriggerFunction.Builder.create(this, "MyTrigger")
@@ -62,7 +70,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class TriggerFunctionDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: TriggerFunction.Builder = TriggerFunction.Builder.create(scope, id)
 
@@ -84,12 +92,12 @@ public class TriggerFunctionDsl(
      * Default: - No ADOT instrumentation
      *
      * [Documentation](https://aws-otel.github.io/docs/getting-started/lambda)
+     *
      * @param adotInstrumentation Specify the configuration of AWS Distro for OpenTelemetry (ADOT)
-     * instrumentation.
+     *   instrumentation.
      */
     public fun adotInstrumentation(
-        adotInstrumentation: AdotInstrumentationConfigDsl.() -> Unit =
-            {}
+        adotInstrumentation: AdotInstrumentationConfigDsl.() -> Unit = {}
     ) {
         val builder = AdotInstrumentationConfigDsl()
         builder.apply(adotInstrumentation)
@@ -102,8 +110,9 @@ public class TriggerFunctionDsl(
      * Default: - No ADOT instrumentation
      *
      * [Documentation](https://aws-otel.github.io/docs/getting-started/lambda)
+     *
      * @param adotInstrumentation Specify the configuration of AWS Distro for OpenTelemetry (ADOT)
-     * instrumentation.
+     *   instrumentation.
      */
     public fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig) {
         cdkBuilder.adotInstrumentation(adotInstrumentation)
@@ -112,8 +121,8 @@ public class TriggerFunctionDsl(
     /**
      * Whether to allow the Lambda to send all network traffic.
      *
-     * If set to false, you must individually add traffic rules to allow the
-     * Lambda to connect to network targets.
+     * If set to false, you must individually add traffic rules to allow the Lambda to connect to
+     * network targets.
      *
      * Default: true
      *
@@ -132,6 +141,7 @@ public class TriggerFunctionDsl(
      * Default: false
      *
      * [Documentation](https://stackoverflow.com/questions/52992085/why-cant-an-aws-lambda-function-inside-a-public-subnet-in-a-vpc-connect-to-the/52994841#52994841)
+     *
      * @param allowPublicSubnet Lambda Functions in a public subnet can NOT access the internet.
      */
     public fun allowPublicSubnet(allowPublicSubnet: Boolean) {
@@ -152,9 +162,8 @@ public class TriggerFunctionDsl(
     /**
      * The source code of your Lambda function.
      *
-     * You can point to a file in an
-     * Amazon Simple Storage Service (Amazon S3) bucket or specify your source
-     * code as inline text.
+     * You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify
+     * your source code as inline text.
      *
      * @param code The source code of your Lambda function.
      */
@@ -179,8 +188,8 @@ public class TriggerFunctionDsl(
      *
      * Default: - default options as described in `VersionOptions`
      *
-     * @param currentVersionOptions Options for the `lambda.Version` resource automatically created by
-     * the `fn.currentVersion` method.
+     * @param currentVersionOptions Options for the `lambda.Version` resource automatically created
+     *   by the `fn.currentVersion` method.
      */
     public fun currentVersionOptions(currentVersionOptions: VersionOptionsDsl.() -> Unit = {}) {
         val builder = VersionOptionsDsl()
@@ -194,8 +203,8 @@ public class TriggerFunctionDsl(
      *
      * Default: - default options as described in `VersionOptions`
      *
-     * @param currentVersionOptions Options for the `lambda.Version` resource automatically created by
-     * the `fn.currentVersion` method.
+     * @param currentVersionOptions Options for the `lambda.Version` resource automatically created
+     *   by the `fn.currentVersion` method.
      */
     public fun currentVersionOptions(currentVersionOptions: VersionOptions) {
         cdkBuilder.currentVersionOptions(currentVersionOptions)
@@ -217,8 +226,8 @@ public class TriggerFunctionDsl(
     /**
      * Enabled DLQ.
      *
-     * If `deadLetterQueue` is undefined,
-     * an SQS queue with default options will be defined for your Function.
+     * If `deadLetterQueue` is undefined, an SQS queue with default options will be defined for your
+     * Function.
      *
      * Default: - false unless `deadLetterQueue` is set, which implies DLQ is enabled.
      *
@@ -231,9 +240,8 @@ public class TriggerFunctionDsl(
     /**
      * The SNS topic to use as a DLQ.
      *
-     * Note that if `deadLetterQueueEnabled` is set to `true`, an SQS queue will be created
-     * rather than an SNS topic. Using an SNS topic as a DLQ requires this property to be set
-     * explicitly.
+     * Note that if `deadLetterQueueEnabled` is set to `true`, an SQS queue will be created rather
+     * than an SNS topic. Using an SNS topic as a DLQ requires this property to be set explicitly.
      *
      * Default: - no SNS topic
      *
@@ -257,14 +265,13 @@ public class TriggerFunctionDsl(
     /**
      * Key-value pairs that Lambda caches and makes available for your Lambda functions.
      *
-     * Use environment variables to apply configuration changes, such
-     * as test and production environment configurations, without changing your
-     * Lambda function source code.
+     * Use environment variables to apply configuration changes, such as test and production
+     * environment configurations, without changing your Lambda function source code.
      *
      * Default: - No environment variables.
      *
      * @param environment Key-value pairs that Lambda caches and makes available for your Lambda
-     * functions.
+     *   functions.
      */
     public fun environment(environment: Map<String, String>) {
         cdkBuilder.environment(environment)
@@ -275,8 +282,8 @@ public class TriggerFunctionDsl(
      *
      * Default: - AWS Lambda creates and uses an AWS managed customer master key (CMK).
      *
-     * @param environmentEncryption The AWS KMS key that's used to encrypt your function's environment
-     * variables.
+     * @param environmentEncryption The AWS KMS key that's used to encrypt your function's
+     *   environment variables.
      */
     public fun environmentEncryption(environmentEncryption: IKey) {
         cdkBuilder.environmentEncryption(environmentEncryption)
@@ -327,8 +334,8 @@ public class TriggerFunctionDsl(
      *
      * Default: []
      *
-     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
-     * scopes have been provisioned.
+     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these
+     *   construct scopes have been provisioned.
      */
     public fun executeAfter(vararg executeAfter: Construct) {
         _executeAfter.addAll(listOf(*executeAfter))
@@ -342,8 +349,8 @@ public class TriggerFunctionDsl(
      *
      * Default: []
      *
-     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
-     * scopes have been provisioned.
+     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these
+     *   construct scopes have been provisioned.
      */
     public fun executeAfter(executeAfter: Collection<Construct>) {
         _executeAfter.addAll(executeAfter)
@@ -352,8 +359,7 @@ public class TriggerFunctionDsl(
     /**
      * Adds this trigger as a dependency on other constructs.
      *
-     * This means that this
-     * trigger will get executed *before* the given construct(s).
+     * This means that this trigger will get executed *before* the given construct(s).
      *
      * You can also use `trigger.executeBefore()` to add additional dependants.
      *
@@ -368,8 +374,7 @@ public class TriggerFunctionDsl(
     /**
      * Adds this trigger as a dependency on other constructs.
      *
-     * This means that this
-     * trigger will get executed *before* the given construct(s).
+     * This means that this trigger will get executed *before* the given construct(s).
      *
      * You can also use `trigger.executeBefore()` to add additional dependants.
      *
@@ -384,9 +389,8 @@ public class TriggerFunctionDsl(
     /**
      * Re-executes the trigger every time the handler changes.
      *
-     * This implies that the trigger is associated with the `currentVersion` of
-     * the handler, which gets recreated every time the handler or its
-     * configuration is updated.
+     * This implies that the trigger is associated with the `currentVersion` of the handler, which
+     * gets recreated every time the handler or its configuration is updated.
      *
      * Default: true
      *
@@ -410,8 +414,8 @@ public class TriggerFunctionDsl(
     /**
      * A name for the function.
      *
-     * Default: - AWS CloudFormation generates a unique physical ID and uses that
-     * ID for the function's name. For more information, see Name Type.
+     * Default: - AWS CloudFormation generates a unique physical ID and uses that ID for the
+     * function's name. For more information, see Name Type.
      *
      * @param functionName A name for the function.
      */
@@ -422,19 +426,17 @@ public class TriggerFunctionDsl(
     /**
      * The name of the method within your code that Lambda calls to execute your function.
      *
-     * The format includes the file name. It can also include
-     * namespaces and other qualifiers, depending on the runtime.
-     * For more information, see
+     * The format includes the file name. It can also include namespaces and other qualifiers,
+     * depending on the runtime. For more information, see
      * https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html.
      *
      * Use `Handler.FROM_IMAGE` when defining a function from a Docker image.
      *
-     * NOTE: If you specify your source code as inline text by specifying the
-     * ZipFile property within the Code property, specify index.function_name as
-     * the handler.
+     * NOTE: If you specify your source code as inline text by specifying the ZipFile property
+     * within the Code property, specify index.function_name as the handler.
      *
      * @param handler The name of the method within your code that Lambda calls to execute your
-     * function.
+     *   function.
      */
     public fun handler(handler: String) {
         cdkBuilder.handler(handler)
@@ -472,8 +474,9 @@ public class TriggerFunctionDsl(
      * Default: - No Lambda Insights
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Lambda-Insights-Getting-Started-docker.html)
-     * @param insightsVersion Specify the version of CloudWatch Lambda insights to use for monitoring.
      *
+     * @param insightsVersion Specify the version of CloudWatch Lambda insights to use for
+     *   monitoring.
      */
     public fun insightsVersion(insightsVersion: LambdaInsightsVersion) {
         cdkBuilder.insightsVersion(insightsVersion)
@@ -482,10 +485,9 @@ public class TriggerFunctionDsl(
     /**
      * A list of layers to add to the function's execution environment.
      *
-     * You can configure your Lambda function to pull in
-     * additional code during initialization in the form of layers. Layers are packages of libraries
-     * or other dependencies
-     * that can be used by multiple functions.
+     * You can configure your Lambda function to pull in additional code during initialization in
+     * the form of layers. Layers are packages of libraries or other dependencies that can be used
+     * by multiple functions.
      *
      * Default: - No layers.
      *
@@ -498,10 +500,9 @@ public class TriggerFunctionDsl(
     /**
      * A list of layers to add to the function's execution environment.
      *
-     * You can configure your Lambda function to pull in
-     * additional code during initialization in the form of layers. Layers are packages of libraries
-     * or other dependencies
-     * that can be used by multiple functions.
+     * You can configure your Lambda function to pull in additional code during initialization in
+     * the form of layers. Layers are packages of libraries or other dependencies that can be used
+     * by multiple functions.
      *
      * Default: - No layers.
      *
@@ -514,9 +515,8 @@ public class TriggerFunctionDsl(
     /**
      * The number of days log events are kept in CloudWatch Logs.
      *
-     * When updating
-     * this property, unsetting it doesn't remove the log retention policy. To
-     * remove the retention policy, set the value to `INFINITE`.
+     * When updating this property, unsetting it doesn't remove the log retention policy. To remove
+     * the retention policy, set the value to `INFINITE`.
      *
      * Default: logs.RetentionDays.INFINITE
      *
@@ -527,18 +527,18 @@ public class TriggerFunctionDsl(
     }
 
     /**
-     * When log retention is specified, a custom resource attempts to create the CloudWatch log group.
+     * When log retention is specified, a custom resource attempts to create the CloudWatch log
+     * group.
      *
      * These options control the retry policy when interacting with CloudWatch APIs.
      *
      * Default: - Default AWS SDK retry options.
      *
-     * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts to
-     * create the CloudWatch log group.
+     * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts
+     *   to create the CloudWatch log group.
      */
     public fun logRetentionRetryOptions(
-        logRetentionRetryOptions: LogRetentionRetryOptionsDsl.() -> Unit =
-            {}
+        logRetentionRetryOptions: LogRetentionRetryOptionsDsl.() -> Unit = {}
     ) {
         val builder = LogRetentionRetryOptionsDsl()
         builder.apply(logRetentionRetryOptions)
@@ -546,14 +546,15 @@ public class TriggerFunctionDsl(
     }
 
     /**
-     * When log retention is specified, a custom resource attempts to create the CloudWatch log group.
+     * When log retention is specified, a custom resource attempts to create the CloudWatch log
+     * group.
      *
      * These options control the retry policy when interacting with CloudWatch APIs.
      *
      * Default: - Default AWS SDK retry options.
      *
-     * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts to
-     * create the CloudWatch log group.
+     * @param logRetentionRetryOptions When log retention is specified, a custom resource attempts
+     *   to create the CloudWatch log group.
      */
     public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
         cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
@@ -566,7 +567,7 @@ public class TriggerFunctionDsl(
      * Default: - A new role is created.
      *
      * @param logRetentionRole The IAM role for the Lambda function associated with the custom
-     * resource that sets the retention policy.
+     *   resource that sets the retention policy.
      */
     public fun logRetentionRole(logRetentionRole: IRole) {
         cdkBuilder.logRetentionRole(logRetentionRole)
@@ -575,13 +576,12 @@ public class TriggerFunctionDsl(
     /**
      * The maximum age of a request that Lambda sends to a function for processing.
      *
-     * Minimum: 60 seconds
-     * Maximum: 6 hours
+     * Minimum: 60 seconds Maximum: 6 hours
      *
      * Default: Duration.hours(6)
      *
-     * @param maxEventAge The maximum age of a request that Lambda sends to a function for processing.
-     *
+     * @param maxEventAge The maximum age of a request that Lambda sends to a function for
+     *   processing.
      */
     public fun maxEventAge(maxEventAge: Duration) {
         cdkBuilder.maxEventAge(maxEventAge)
@@ -590,9 +590,8 @@ public class TriggerFunctionDsl(
     /**
      * The amount of memory, in MB, that is allocated to your Lambda function.
      *
-     * Lambda uses this value to proportionally allocate the amount of CPU
-     * power. For more information, see Resource Model in the AWS Lambda
-     * Developer Guide.
+     * Lambda uses this value to proportionally allocate the amount of CPU power. For more
+     * information, see Resource Model in the AWS Lambda Developer Guide.
      *
      * Default: 128
      *
@@ -630,6 +629,7 @@ public class TriggerFunctionDsl(
      * Default: - No Parameters and Secrets Extension
      *
      * [Documentation](https://docs.aws.amazon.com/systems-manager/latest/userguide/ps-integration-lambda-extensions.html)
+     *
      * @param paramsAndSecrets Specify the configuration of Parameters and Secrets Extension.
      */
     public fun paramsAndSecrets(paramsAndSecrets: ParamsAndSecretsLayerVersion) {
@@ -642,6 +642,7 @@ public class TriggerFunctionDsl(
      * Default: - No profiling.
      *
      * [Documentation](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/setting-up-lambda.html)
+     *
      * @param profiling Enable profiling.
      */
     public fun profiling(profiling: Boolean) {
@@ -654,6 +655,7 @@ public class TriggerFunctionDsl(
      * Default: - A new profiling group will be created if `profiling` is set.
      *
      * [Documentation](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/setting-up-lambda.html)
+     *
      * @param profilingGroup Profiling Group.
      */
     public fun profilingGroup(profilingGroup: IProfilingGroup) {
@@ -666,8 +668,9 @@ public class TriggerFunctionDsl(
      * Default: - No specific limit - account limit.
      *
      * [Documentation](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+     *
      * @param reservedConcurrentExecutions The maximum of concurrent executions you want to reserve
-     * for the function.
+     *   for the function.
      */
     public fun reservedConcurrentExecutions(reservedConcurrentExecutions: Number) {
         cdkBuilder.reservedConcurrentExecutions(reservedConcurrentExecutions)
@@ -676,8 +679,7 @@ public class TriggerFunctionDsl(
     /**
      * The maximum number of times to retry when the function returns an error.
      *
-     * Minimum: 0
-     * Maximum: 2
+     * Minimum: 0 Maximum: 2
      *
      * Default: 2
      *
@@ -690,18 +692,18 @@ public class TriggerFunctionDsl(
     /**
      * Lambda execution role.
      *
-     * This is the role that will be assumed by the function upon execution.
-     * It controls the permissions that the function will have. The Role must
-     * be assumable by the 'lambda.amazonaws.com' service principal.
+     * This is the role that will be assumed by the function upon execution. It controls the
+     * permissions that the function will have. The Role must be assumable by the
+     * 'lambda.amazonaws.com' service principal.
      *
-     * The default Role automatically has permissions granted for Lambda execution. If you
-     * provide a Role, you must add the relevant AWS managed policies yourself.
+     * The default Role automatically has permissions granted for Lambda execution. If you provide a
+     * Role, you must add the relevant AWS managed policies yourself.
      *
      * The relevant managed policies are "service-role/AWSLambdaBasicExecutionRole" and
      * "service-role/AWSLambdaVPCAccessExecutionRole".
      *
-     * Default: - A unique role will be generated for this lambda function.
-     * Both supplied and generated roles can always be changed by calling `addToRolePolicy`.
+     * Default: - A unique role will be generated for this lambda function. Both supplied and
+     * generated roles can always be changed by calling `addToRolePolicy`.
      *
      * @param role Lambda execution role.
      */
@@ -712,8 +714,7 @@ public class TriggerFunctionDsl(
     /**
      * The runtime environment for the Lambda function that you are uploading.
      *
-     * For valid values, see the Runtime property in the AWS Lambda Developer
-     * Guide.
+     * For valid values, see the Runtime property in the AWS Lambda Developer Guide.
      *
      * Use `Runtime.FROM_IMAGE` when defining a function from a Docker image.
      *
@@ -729,7 +730,7 @@ public class TriggerFunctionDsl(
      * Default: Auto
      *
      * @param runtimeManagementMode Sets the runtime management configuration for a function's
-     * version.
+     *   version.
      */
     public fun runtimeManagementMode(runtimeManagementMode: RuntimeManagementMode) {
         cdkBuilder.runtimeManagementMode(runtimeManagementMode)
@@ -740,12 +741,12 @@ public class TriggerFunctionDsl(
      *
      * Only used if 'vpc' is supplied.
      *
-     * Default: - If the function is placed within a VPC and a security group is
-     * not specified, either by this or securityGroup prop, a dedicated security
-     * group will be created for this function.
+     * Default: - If the function is placed within a VPC and a security group is not specified,
+     * either by this or securityGroup prop, a dedicated security group will be created for this
+     * function.
      *
      * @param securityGroups The list of security groups to associate with the Lambda's network
-     * interfaces.
+     *   interfaces.
      */
     public fun securityGroups(vararg securityGroups: ISecurityGroup) {
         _securityGroups.addAll(listOf(*securityGroups))
@@ -756,12 +757,12 @@ public class TriggerFunctionDsl(
      *
      * Only used if 'vpc' is supplied.
      *
-     * Default: - If the function is placed within a VPC and a security group is
-     * not specified, either by this or securityGroup prop, a dedicated security
-     * group will be created for this function.
+     * Default: - If the function is placed within a VPC and a security group is not specified,
+     * either by this or securityGroup prop, a dedicated security group will be created for this
+     * function.
      *
      * @param securityGroups The list of security groups to associate with the Lambda's network
-     * interfaces.
+     *   interfaces.
      */
     public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
         _securityGroups.addAll(securityGroups)
@@ -770,13 +771,13 @@ public class TriggerFunctionDsl(
     /**
      * The function execution time (in seconds) after which Lambda terminates the function.
      *
-     * Because the execution time affects cost, set this value
-     * based on the function's expected execution time.
+     * Because the execution time affects cost, set this value based on the function's expected
+     * execution time.
      *
      * Default: Duration.seconds(3)
      *
      * @param timeout The function execution time (in seconds) after which Lambda terminates the
-     * function.
+     *   function.
      */
     public fun timeout(timeout: Duration) {
         cdkBuilder.timeout(timeout)
@@ -796,8 +797,8 @@ public class TriggerFunctionDsl(
     /**
      * VPC network to place Lambda network interfaces.
      *
-     * Specify this if the Lambda function needs to access resources in a VPC.
-     * This is required when `vpcSubnets` is specified.
+     * Specify this if the Lambda function needs to access resources in a VPC. This is required when
+     * `vpcSubnets` is specified.
      *
      * Default: - Function is not placed within a VPC.
      *
@@ -810,11 +811,11 @@ public class TriggerFunctionDsl(
     /**
      * Where to place the network interfaces within the VPC.
      *
-     * This requires `vpc` to be specified in order for interfaces to actually be
-     * placed in the subnets. If `vpc` is not specify, this will raise an error.
+     * This requires `vpc` to be specified in order for interfaces to actually be placed in the
+     * subnets. If `vpc` is not specify, this will raise an error.
      *
-     * Note: Internet access for Lambda Functions requires a NAT Gateway, so picking
-     * public subnets is not allowed (unless `allowPublicSubnet` is set to `true`).
+     * Note: Internet access for Lambda Functions requires a NAT Gateway, so picking public subnets
+     * is not allowed (unless `allowPublicSubnet` is set to `true`).
      *
      * Default: - the Vpc default strategy if not specified
      *
@@ -829,11 +830,11 @@ public class TriggerFunctionDsl(
     /**
      * Where to place the network interfaces within the VPC.
      *
-     * This requires `vpc` to be specified in order for interfaces to actually be
-     * placed in the subnets. If `vpc` is not specify, this will raise an error.
+     * This requires `vpc` to be specified in order for interfaces to actually be placed in the
+     * subnets. If `vpc` is not specify, this will raise an error.
      *
-     * Note: Internet access for Lambda Functions requires a NAT Gateway, so picking
-     * public subnets is not allowed (unless `allowPublicSubnet` is set to `true`).
+     * Note: Internet access for Lambda Functions requires a NAT Gateway, so picking public subnets
+     * is not allowed (unless `allowPublicSubnet` is set to `true`).
      *
      * Default: - the Vpc default strategy if not specified
      *

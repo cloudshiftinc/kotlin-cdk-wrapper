@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The exclude period of `TimeRangeFilter` or `RelativeDatesFilter` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,16 +40,12 @@ public class CfnDashboardExcludePeriodConfigurationPropertyDsl {
     private val cdkBuilder: CfnDashboard.ExcludePeriodConfigurationProperty.Builder =
         CfnDashboard.ExcludePeriodConfigurationProperty.builder()
 
-    /**
-     * @param amount The amount or number of the exclude period.
-     */
+    /** @param amount The amount or number of the exclude period. */
     public fun amount(amount: Number) {
         cdkBuilder.amount(amount)
     }
 
-    /**
-     * @param granularity The granularity or unit (day, month, year) of the exclude period.
-     */
+    /** @param granularity The granularity or unit (day, month, year) of the exclude period. */
     public fun granularity(granularity: String) {
         cdkBuilder.granularity(granularity)
     }

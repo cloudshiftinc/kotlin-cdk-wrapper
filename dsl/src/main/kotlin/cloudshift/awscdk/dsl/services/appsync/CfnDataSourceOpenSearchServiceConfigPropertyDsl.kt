@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.appsync.CfnDataSource
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,18 @@ import software.amazon.awscdk.services.appsync.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceOpenSearchServiceConfigPropertyDsl {
-  private val cdkBuilder: CfnDataSource.OpenSearchServiceConfigProperty.Builder =
-      CfnDataSource.OpenSearchServiceConfigProperty.builder()
+    private val cdkBuilder: CfnDataSource.OpenSearchServiceConfigProperty.Builder =
+        CfnDataSource.OpenSearchServiceConfigProperty.builder()
 
-  /**
-   * @param awsRegion The AWS Region. 
-   */
-  public fun awsRegion(awsRegion: String) {
-    cdkBuilder.awsRegion(awsRegion)
-  }
+    /** @param awsRegion The AWS Region. */
+    public fun awsRegion(awsRegion: String) {
+        cdkBuilder.awsRegion(awsRegion)
+    }
 
-  /**
-   * @param endpoint The endpoint. 
-   */
-  public fun endpoint(endpoint: String) {
-    cdkBuilder.endpoint(endpoint)
-  }
+    /** @param endpoint The endpoint. */
+    public fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+    }
 
-  public fun build(): CfnDataSource.OpenSearchServiceConfigProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.OpenSearchServiceConfigProperty = cdkBuilder.build()
 }

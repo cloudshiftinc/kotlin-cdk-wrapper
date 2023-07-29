@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleetProps
  * Properties for defining a `CfnSpotFleet`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -257,22 +265,19 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleetProps
  */
 @CdkDslMarker
 public class CfnSpotFleetPropsDsl {
-  private val cdkBuilder: CfnSpotFleetProps.Builder = CfnSpotFleetProps.builder()
+    private val cdkBuilder: CfnSpotFleetProps.Builder = CfnSpotFleetProps.builder()
 
-  /**
-   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
-   */
-  public fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
-    cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
-  }
+    /** @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. */
+    public fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
+        cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
+    }
 
-  /**
-   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
-   */
-  public
-      fun spotFleetRequestConfigData(spotFleetRequestConfigData: CfnSpotFleet.SpotFleetRequestConfigDataProperty) {
-    cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
-  }
+    /** @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. */
+    public fun spotFleetRequestConfigData(
+        spotFleetRequestConfigData: CfnSpotFleet.SpotFleetRequestConfigDataProperty
+    ) {
+        cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
+    }
 
-  public fun build(): CfnSpotFleetProps = cdkBuilder.build()
+    public fun build(): CfnSpotFleetProps = cdkBuilder.build()
 }

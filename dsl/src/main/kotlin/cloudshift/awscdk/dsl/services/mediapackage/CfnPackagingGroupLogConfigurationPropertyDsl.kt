@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediapackage
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
  * /aws/MediaPackage/EgressAccessLogs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,17 +35,16 @@ import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
  */
 @CdkDslMarker
 public class CfnPackagingGroupLogConfigurationPropertyDsl {
-  private val cdkBuilder: CfnPackagingGroup.LogConfigurationProperty.Builder =
-      CfnPackagingGroup.LogConfigurationProperty.builder()
+    private val cdkBuilder: CfnPackagingGroup.LogConfigurationProperty.Builder =
+        CfnPackagingGroup.LogConfigurationProperty.builder()
 
-  /**
-   * @param logGroupName Sets a custom Amazon CloudWatch log group name for egress logs.
-   * If a log group name isn't specified, the default name is used:
-   * /aws/MediaPackage/EgressAccessLogs.
-   */
-  public fun logGroupName(logGroupName: String) {
-    cdkBuilder.logGroupName(logGroupName)
-  }
+    /**
+     * @param logGroupName Sets a custom Amazon CloudWatch log group name for egress logs. If a log
+     *   group name isn't specified, the default name is used: /aws/MediaPackage/EgressAccessLogs.
+     */
+    public fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+    }
 
-  public fun build(): CfnPackagingGroup.LogConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnPackagingGroup.LogConfigurationProperty = cdkBuilder.build()
 }

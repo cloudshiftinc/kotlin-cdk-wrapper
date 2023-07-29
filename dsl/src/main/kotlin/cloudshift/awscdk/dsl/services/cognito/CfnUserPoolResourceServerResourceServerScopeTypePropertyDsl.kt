@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer
  * A resource server scope.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,19 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer
  */
 @CdkDslMarker
 public class CfnUserPoolResourceServerResourceServerScopeTypePropertyDsl {
-  private val cdkBuilder: CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.Builder =
-      CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.builder()
+    private val cdkBuilder: CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.Builder =
+        CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.builder()
 
-  /**
-   * @param scopeDescription A description of the scope. 
-   */
-  public fun scopeDescription(scopeDescription: String) {
-    cdkBuilder.scopeDescription(scopeDescription)
-  }
+    /** @param scopeDescription A description of the scope. */
+    public fun scopeDescription(scopeDescription: String) {
+        cdkBuilder.scopeDescription(scopeDescription)
+    }
 
-  /**
-   * @param scopeName The name of the scope. 
-   */
-  public fun scopeName(scopeName: String) {
-    cdkBuilder.scopeName(scopeName)
-  }
+    /** @param scopeName The name of the scope. */
+    public fun scopeName(scopeName: String) {
+        cdkBuilder.scopeName(scopeName)
+    }
 
-  public fun build(): CfnUserPoolResourceServer.ResourceServerScopeTypeProperty = cdkBuilder.build()
+    public fun build(): CfnUserPoolResourceServer.ResourceServerScopeTypeProperty =
+        cdkBuilder.build()
 }

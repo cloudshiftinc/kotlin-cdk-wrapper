@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.HttpConnectionPool
  * Connection pool properties for HTTP listeners.
  *
  * Example:
- *
  * ```
  * // A Virtual Node with a gRPC listener with a connection pool set
  * Mesh mesh;
@@ -45,21 +53,17 @@ import software.amazon.awscdk.services.appmesh.HttpConnectionPool
  */
 @CdkDslMarker
 public class HttpConnectionPoolDsl {
-  private val cdkBuilder: HttpConnectionPool.Builder = HttpConnectionPool.builder()
+    private val cdkBuilder: HttpConnectionPool.Builder = HttpConnectionPool.builder()
 
-  /**
-   * @param maxConnections The maximum connections in the pool. 
-   */
-  public fun maxConnections(maxConnections: Number) {
-    cdkBuilder.maxConnections(maxConnections)
-  }
+    /** @param maxConnections The maximum connections in the pool. */
+    public fun maxConnections(maxConnections: Number) {
+        cdkBuilder.maxConnections(maxConnections)
+    }
 
-  /**
-   * @param maxPendingRequests The maximum pending requests in the pool. 
-   */
-  public fun maxPendingRequests(maxPendingRequests: Number) {
-    cdkBuilder.maxPendingRequests(maxPendingRequests)
-  }
+    /** @param maxPendingRequests The maximum pending requests in the pool. */
+    public fun maxPendingRequests(maxPendingRequests: Number) {
+        cdkBuilder.maxPendingRequests(maxPendingRequests)
+    }
 
-  public fun build(): HttpConnectionPool = cdkBuilder.build()
+    public fun build(): HttpConnectionPool = cdkBuilder.build()
 }

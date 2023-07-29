@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.inspectorv2
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 import software.amazon.awscdk.services.inspectorv2.CfnFilterProps
-import kotlin.String
 
 /**
  * Properties for defining a `CfnFilter`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -181,9 +189,7 @@ import kotlin.String
 public class CfnFilterPropsDsl {
     private val cdkBuilder: CfnFilterProps.Builder = CfnFilterProps.builder()
 
-    /**
-     * @param description A description of the filter.
-     */
+    /** @param description A description of the filter. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
@@ -195,23 +201,17 @@ public class CfnFilterPropsDsl {
         cdkBuilder.filterAction(filterAction)
     }
 
-    /**
-     * @param filterCriteria Details on the filter criteria associated with this filter.
-     */
+    /** @param filterCriteria Details on the filter criteria associated with this filter. */
     public fun filterCriteria(filterCriteria: IResolvable) {
         cdkBuilder.filterCriteria(filterCriteria)
     }
 
-    /**
-     * @param filterCriteria Details on the filter criteria associated with this filter.
-     */
+    /** @param filterCriteria Details on the filter criteria associated with this filter. */
     public fun filterCriteria(filterCriteria: CfnFilter.FilterCriteriaProperty) {
         cdkBuilder.filterCriteria(filterCriteria)
     }
 
-    /**
-     * @param name The name of the filter.
-     */
+    /** @param name The name of the filter. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

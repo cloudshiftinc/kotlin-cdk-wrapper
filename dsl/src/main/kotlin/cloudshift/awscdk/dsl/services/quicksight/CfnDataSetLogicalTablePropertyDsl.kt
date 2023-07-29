@@ -1,24 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDataSet
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
  * A *logical table* is a unit that joins and that data transformations operate on.
  *
  * A logical table has a source, which can be either a physical table or result of a join. When a
- * logical table points to a physical table, the logical table acts as a mutable copy of that physical
- * table through transform operations.
+ * logical table points to a physical table, the logical table acts as a mutable copy of that
+ * physical table through transform operations.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -100,47 +108,41 @@ public class CfnDataSetLogicalTablePropertyDsl {
 
     private val _dataTransforms: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param alias A display name for the logical table.
-     */
+    /** @param alias A display name for the logical table. */
     public fun alias(alias: String) {
         cdkBuilder.alias(alias)
     }
 
     /**
-     * @param dataTransforms Transform operations that act on this logical table.
-     * For this structure to be valid, only one of the attributes can be non-null.
+     * @param dataTransforms Transform operations that act on this logical table. For this structure
+     *   to be valid, only one of the attributes can be non-null.
      */
     public fun dataTransforms(vararg dataTransforms: Any) {
         _dataTransforms.addAll(listOf(*dataTransforms))
     }
 
     /**
-     * @param dataTransforms Transform operations that act on this logical table.
-     * For this structure to be valid, only one of the attributes can be non-null.
+     * @param dataTransforms Transform operations that act on this logical table. For this structure
+     *   to be valid, only one of the attributes can be non-null.
      */
     public fun dataTransforms(dataTransforms: Collection<Any>) {
         _dataTransforms.addAll(dataTransforms)
     }
 
     /**
-     * @param dataTransforms Transform operations that act on this logical table.
-     * For this structure to be valid, only one of the attributes can be non-null.
+     * @param dataTransforms Transform operations that act on this logical table. For this structure
+     *   to be valid, only one of the attributes can be non-null.
      */
     public fun dataTransforms(dataTransforms: IResolvable) {
         cdkBuilder.dataTransforms(dataTransforms)
     }
 
-    /**
-     * @param source Source of this logical table.
-     */
+    /** @param source Source of this logical table. */
     public fun source(source: IResolvable) {
         cdkBuilder.source(source)
     }
 
-    /**
-     * @param source Source of this logical table.
-     */
+    /** @param source Source of this logical table. */
     public fun source(source: CfnDataSet.LogicalTableSourceProperty) {
         cdkBuilder.source(source)
     }

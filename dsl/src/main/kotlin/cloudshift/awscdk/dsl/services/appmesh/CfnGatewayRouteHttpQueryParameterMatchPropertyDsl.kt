@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * An object representing the query parameter to match.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteHttpQueryParameterMatchPropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.HttpQueryParameterMatchProperty.Builder =
-      CfnGatewayRoute.HttpQueryParameterMatchProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.HttpQueryParameterMatchProperty.Builder =
+        CfnGatewayRoute.HttpQueryParameterMatchProperty.builder()
 
-  /**
-   * @param exact The exact query parameter to match on.
-   */
-  public fun exact(exact: String) {
-    cdkBuilder.exact(exact)
-  }
+    /** @param exact The exact query parameter to match on. */
+    public fun exact(exact: String) {
+        cdkBuilder.exact(exact)
+    }
 
-  public fun build(): CfnGatewayRoute.HttpQueryParameterMatchProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.HttpQueryParameterMatchProperty = cdkBuilder.build()
 }

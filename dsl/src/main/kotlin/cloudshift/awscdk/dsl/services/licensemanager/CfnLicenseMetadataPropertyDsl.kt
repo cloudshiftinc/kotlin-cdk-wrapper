@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.licensemanager.CfnLicense
 import kotlin.String
+import software.amazon.awscdk.services.licensemanager.CfnLicense
 
 /**
  * Describes key/value pairs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,12 @@ public class CfnLicenseMetadataPropertyDsl {
     private val cdkBuilder: CfnLicense.MetadataProperty.Builder =
         CfnLicense.MetadataProperty.builder()
 
-    /**
-     * @param name The key name.
-     */
+    /** @param name The key name. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param value The value.
-     */
+    /** @param value The value. */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
     }

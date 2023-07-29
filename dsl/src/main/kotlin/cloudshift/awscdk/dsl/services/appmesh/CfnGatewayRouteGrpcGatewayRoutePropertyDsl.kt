@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * An object that represents a gRPC gateway route.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -61,36 +69,28 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteGrpcGatewayRoutePropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.GrpcGatewayRouteProperty.Builder =
-      CfnGatewayRoute.GrpcGatewayRouteProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.GrpcGatewayRouteProperty.Builder =
+        CfnGatewayRoute.GrpcGatewayRouteProperty.builder()
 
-  /**
-   * @param action An object that represents the action to take if a match is determined. 
-   */
-  public fun action(action: IResolvable) {
-    cdkBuilder.action(action)
-  }
+    /** @param action An object that represents the action to take if a match is determined. */
+    public fun action(action: IResolvable) {
+        cdkBuilder.action(action)
+    }
 
-  /**
-   * @param action An object that represents the action to take if a match is determined. 
-   */
-  public fun action(action: CfnGatewayRoute.GrpcGatewayRouteActionProperty) {
-    cdkBuilder.action(action)
-  }
+    /** @param action An object that represents the action to take if a match is determined. */
+    public fun action(action: CfnGatewayRoute.GrpcGatewayRouteActionProperty) {
+        cdkBuilder.action(action)
+    }
 
-  /**
-   * @param match An object that represents the criteria for determining a request match. 
-   */
-  public fun match(match: IResolvable) {
-    cdkBuilder.match(match)
-  }
+    /** @param match An object that represents the criteria for determining a request match. */
+    public fun match(match: IResolvable) {
+        cdkBuilder.match(match)
+    }
 
-  /**
-   * @param match An object that represents the criteria for determining a request match. 
-   */
-  public fun match(match: CfnGatewayRoute.GrpcGatewayRouteMatchProperty) {
-    cdkBuilder.match(match)
-  }
+    /** @param match An object that represents the criteria for determining a request match. */
+    public fun match(match: CfnGatewayRoute.GrpcGatewayRouteMatchProperty) {
+        cdkBuilder.match(match)
+    }
 
-  public fun build(): CfnGatewayRoute.GrpcGatewayRouteProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.GrpcGatewayRouteProperty = cdkBuilder.build()
 }

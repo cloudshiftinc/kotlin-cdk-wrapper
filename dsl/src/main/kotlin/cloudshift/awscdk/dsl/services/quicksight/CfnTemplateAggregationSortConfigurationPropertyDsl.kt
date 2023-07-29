@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * The configuration options to sort aggregated values.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,30 +52,22 @@ public class CfnTemplateAggregationSortConfigurationPropertyDsl {
     private val cdkBuilder: CfnTemplate.AggregationSortConfigurationProperty.Builder =
         CfnTemplate.AggregationSortConfigurationProperty.builder()
 
-    /**
-     * @param aggregationFunction The function that aggregates the values in `Column` .
-     */
+    /** @param aggregationFunction The function that aggregates the values in `Column` . */
     public fun aggregationFunction(aggregationFunction: IResolvable) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param aggregationFunction The function that aggregates the values in `Column` .
-     */
+    /** @param aggregationFunction The function that aggregates the values in `Column` . */
     public fun aggregationFunction(aggregationFunction: CfnTemplate.AggregationFunctionProperty) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param column The column that determines the sort order of aggregated values.
-     */
+    /** @param column The column that determines the sort order of aggregated values. */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column that determines the sort order of aggregated values.
-     */
+    /** @param column The column that determines the sort order of aggregated values. */
     public fun column(column: CfnTemplate.ColumnIdentifierProperty) {
         cdkBuilder.column(column)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnEC2Fleet
  * The minimum and maximum amount of total local storage, in GB.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,24 +34,24 @@ import software.amazon.awscdk.services.ec2.CfnEC2Fleet
  */
 @CdkDslMarker
 public class CfnEC2FleetTotalLocalStorageGBRequestPropertyDsl {
-  private val cdkBuilder: CfnEC2Fleet.TotalLocalStorageGBRequestProperty.Builder =
-      CfnEC2Fleet.TotalLocalStorageGBRequestProperty.builder()
+    private val cdkBuilder: CfnEC2Fleet.TotalLocalStorageGBRequestProperty.Builder =
+        CfnEC2Fleet.TotalLocalStorageGBRequestProperty.builder()
 
-  /**
-   * @param max The maximum amount of total local storage, in GB.
-   * To specify no maximum limit, omit this parameter.
-   */
-  public fun max(max: Number) {
-    cdkBuilder.max(max)
-  }
+    /**
+     * @param max The maximum amount of total local storage, in GB. To specify no maximum limit,
+     *   omit this parameter.
+     */
+    public fun max(max: Number) {
+        cdkBuilder.max(max)
+    }
 
-  /**
-   * @param min The minimum amount of total local storage, in GB.
-   * To specify no minimum limit, omit this parameter.
-   */
-  public fun min(min: Number) {
-    cdkBuilder.min(min)
-  }
+    /**
+     * @param min The minimum amount of total local storage, in GB. To specify no minimum limit,
+     *   omit this parameter.
+     */
+    public fun min(min: Number) {
+        cdkBuilder.min(min)
+    }
 
-  public fun build(): CfnEC2Fleet.TotalLocalStorageGBRequestProperty = cdkBuilder.build()
+    public fun build(): CfnEC2Fleet.TotalLocalStorageGBRequestProperty = cdkBuilder.build()
 }

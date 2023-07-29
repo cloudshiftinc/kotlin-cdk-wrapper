@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.timestream
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.timestream.CfnScheduledQuery
  * Configuration used for writing the output of a query.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -57,25 +65,26 @@ import software.amazon.awscdk.services.timestream.CfnScheduledQuery
  */
 @CdkDslMarker
 public class CfnScheduledQueryTargetConfigurationPropertyDsl {
-  private val cdkBuilder: CfnScheduledQuery.TargetConfigurationProperty.Builder =
-      CfnScheduledQuery.TargetConfigurationProperty.builder()
+    private val cdkBuilder: CfnScheduledQuery.TargetConfigurationProperty.Builder =
+        CfnScheduledQuery.TargetConfigurationProperty.builder()
 
-  /**
-   * @param timestreamConfiguration Configuration needed to write data into the Timestream database
-   * and table. 
-   */
-  public fun timestreamConfiguration(timestreamConfiguration: IResolvable) {
-    cdkBuilder.timestreamConfiguration(timestreamConfiguration)
-  }
+    /**
+     * @param timestreamConfiguration Configuration needed to write data into the Timestream
+     *   database and table.
+     */
+    public fun timestreamConfiguration(timestreamConfiguration: IResolvable) {
+        cdkBuilder.timestreamConfiguration(timestreamConfiguration)
+    }
 
-  /**
-   * @param timestreamConfiguration Configuration needed to write data into the Timestream database
-   * and table. 
-   */
-  public
-      fun timestreamConfiguration(timestreamConfiguration: CfnScheduledQuery.TimestreamConfigurationProperty) {
-    cdkBuilder.timestreamConfiguration(timestreamConfiguration)
-  }
+    /**
+     * @param timestreamConfiguration Configuration needed to write data into the Timestream
+     *   database and table.
+     */
+    public fun timestreamConfiguration(
+        timestreamConfiguration: CfnScheduledQuery.TimestreamConfigurationProperty
+    ) {
+        cdkBuilder.timestreamConfiguration(timestreamConfiguration)
+    }
 
-  public fun build(): CfnScheduledQuery.TargetConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnScheduledQuery.TargetConfigurationProperty = cdkBuilder.build()
 }

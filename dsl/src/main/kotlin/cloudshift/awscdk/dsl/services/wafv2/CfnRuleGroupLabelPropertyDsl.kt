@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * This is used as an element of a label array in `RuleLabels` inside a rule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,14 +34,13 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupLabelPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.LabelProperty.Builder = CfnRuleGroup.LabelProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.LabelProperty.Builder =
+        CfnRuleGroup.LabelProperty.builder()
 
-  /**
-   * @param name The label string. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The label string. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnRuleGroup.LabelProperty = cdkBuilder.build()
+    public fun build(): CfnRuleGroup.LabelProperty = cdkBuilder.build()
 }

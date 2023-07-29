@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
  * `Fractional` and `String` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,25 +36,24 @@ import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
  */
 @CdkDslMarker
 public class CfnFeatureGroupFeatureDefinitionPropertyDsl {
-  private val cdkBuilder: CfnFeatureGroup.FeatureDefinitionProperty.Builder =
-      CfnFeatureGroup.FeatureDefinitionProperty.builder()
+    private val cdkBuilder: CfnFeatureGroup.FeatureDefinitionProperty.Builder =
+        CfnFeatureGroup.FeatureDefinitionProperty.builder()
 
-  /**
-   * @param featureName The name of a feature. 
-   * The type must be a string. `FeatureName` cannot be any of the following: `is_deleted` ,
-   * `write_time` , `api_invocation_time` .
-   */
-  public fun featureName(featureName: String) {
-    cdkBuilder.featureName(featureName)
-  }
+    /**
+     * @param featureName The name of a feature. The type must be a string. `FeatureName` cannot be
+     *   any of the following: `is_deleted` , `write_time` , `api_invocation_time` .
+     */
+    public fun featureName(featureName: String) {
+        cdkBuilder.featureName(featureName)
+    }
 
-  /**
-   * @param featureType The value type of a feature. 
-   * Valid values are Integral, Fractional, or String.
-   */
-  public fun featureType(featureType: String) {
-    cdkBuilder.featureType(featureType)
-  }
+    /**
+     * @param featureType The value type of a feature. Valid values are Integral, Fractional, or
+     *   String.
+     */
+    public fun featureType(featureType: String) {
+        cdkBuilder.featureType(featureType)
+    }
 
-  public fun build(): CfnFeatureGroup.FeatureDefinitionProperty = cdkBuilder.build()
+    public fun build(): CfnFeatureGroup.FeatureDefinitionProperty = cdkBuilder.build()
 }

@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.inspectorv2
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Details about a filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -180,7 +188,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnFilterDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnFilter.Builder = CfnFilter.Builder.create(scope, id)
 
@@ -188,6 +196,7 @@ public class CfnFilterDsl(
      * A description of the filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-description)
+     *
      * @param description A description of the filter.
      */
     public fun description(description: String) {
@@ -198,6 +207,7 @@ public class CfnFilterDsl(
      * The action that is to be applied to the findings that match the filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-filteraction)
+     *
      * @param filterAction The action that is to be applied to the findings that match the filter.
      */
     public fun filterAction(filterAction: String) {
@@ -208,6 +218,7 @@ public class CfnFilterDsl(
      * Details on the filter criteria associated with this filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-filtercriteria)
+     *
      * @param filterCriteria Details on the filter criteria associated with this filter.
      */
     public fun filterCriteria(filterCriteria: IResolvable) {
@@ -218,6 +229,7 @@ public class CfnFilterDsl(
      * Details on the filter criteria associated with this filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-filtercriteria)
+     *
      * @param filterCriteria Details on the filter criteria associated with this filter.
      */
     public fun filterCriteria(filterCriteria: CfnFilter.FilterCriteriaProperty) {
@@ -228,6 +240,7 @@ public class CfnFilterDsl(
      * The name of the filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-name)
+     *
      * @param name The name of the filter.
      */
     public fun name(name: String) {

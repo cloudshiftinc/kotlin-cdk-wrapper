@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.iot.CfnMitigationActionProps
  * Properties for defining a `CfnMitigationAction`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -60,56 +68,48 @@ import software.amazon.awscdk.services.iot.CfnMitigationActionProps
  */
 @CdkDslMarker
 public class CfnMitigationActionPropsDsl {
-  private val cdkBuilder: CfnMitigationActionProps.Builder = CfnMitigationActionProps.builder()
+    private val cdkBuilder: CfnMitigationActionProps.Builder = CfnMitigationActionProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param actionName The friendly name of the mitigation action.
-   */
-  public fun actionName(actionName: String) {
-    cdkBuilder.actionName(actionName)
-  }
+    /** @param actionName The friendly name of the mitigation action. */
+    public fun actionName(actionName: String) {
+        cdkBuilder.actionName(actionName)
+    }
 
-  /**
-   * @param actionParams The set of parameters for this mitigation action. 
-   * The parameters vary, depending on the kind of action you apply.
-   */
-  public fun actionParams(actionParams: IResolvable) {
-    cdkBuilder.actionParams(actionParams)
-  }
+    /**
+     * @param actionParams The set of parameters for this mitigation action. The parameters vary,
+     *   depending on the kind of action you apply.
+     */
+    public fun actionParams(actionParams: IResolvable) {
+        cdkBuilder.actionParams(actionParams)
+    }
 
-  /**
-   * @param actionParams The set of parameters for this mitigation action. 
-   * The parameters vary, depending on the kind of action you apply.
-   */
-  public fun actionParams(actionParams: CfnMitigationAction.ActionParamsProperty) {
-    cdkBuilder.actionParams(actionParams)
-  }
+    /**
+     * @param actionParams The set of parameters for this mitigation action. The parameters vary,
+     *   depending on the kind of action you apply.
+     */
+    public fun actionParams(actionParams: CfnMitigationAction.ActionParamsProperty) {
+        cdkBuilder.actionParams(actionParams)
+    }
 
-  /**
-   * @param roleArn The IAM role ARN used to apply this mitigation action. 
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /** @param roleArn The IAM role ARN used to apply this mitigation action. */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  /**
-   * @param tags Metadata that can be used to manage the mitigation action.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags Metadata that can be used to manage the mitigation action. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Metadata that can be used to manage the mitigation action.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags Metadata that can be used to manage the mitigation action. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnMitigationActionProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnMitigationActionProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

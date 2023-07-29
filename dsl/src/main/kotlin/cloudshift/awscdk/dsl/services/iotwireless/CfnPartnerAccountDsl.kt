@@ -1,18 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
-import software.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
+import software.constructs.Construct
 
 /**
  * A partner account.
@@ -20,7 +29,6 @@ import kotlin.collections.MutableList
  * If `PartnerAccountId` and `PartnerType` are `null` , returns all partner accounts.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,7 +61,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnPartnerAccountDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnPartnerAccount.Builder = CfnPartnerAccount.Builder.create(scope, id)
 
@@ -63,6 +71,7 @@ public class CfnPartnerAccountDsl(
      * Whether the partner account is linked to the AWS account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-accountlinked)
+     *
      * @param accountLinked Whether the partner account is linked to the AWS account.
      */
     public fun accountLinked(accountLinked: Boolean) {
@@ -73,6 +82,7 @@ public class CfnPartnerAccountDsl(
      * Whether the partner account is linked to the AWS account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-accountlinked)
+     *
      * @param accountLinked Whether the partner account is linked to the AWS account.
      */
     public fun accountLinked(accountLinked: IResolvable) {
@@ -83,6 +93,7 @@ public class CfnPartnerAccountDsl(
      * The ID of the partner account to update.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-partneraccountid)
+     *
      * @param partnerAccountId The ID of the partner account to update.
      */
     public fun partnerAccountId(partnerAccountId: String) {
@@ -93,6 +104,7 @@ public class CfnPartnerAccountDsl(
      * The partner type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-partnertype)
+     *
      * @param partnerType The partner type.
      */
     public fun partnerType(partnerType: String) {
@@ -103,6 +115,7 @@ public class CfnPartnerAccountDsl(
      * The Sidewalk account credentials.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalk)
+     *
      * @param sidewalk The Sidewalk account credentials.
      */
     public fun sidewalk(sidewalk: IResolvable) {
@@ -113,6 +126,7 @@ public class CfnPartnerAccountDsl(
      * The Sidewalk account credentials.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalk)
+     *
      * @param sidewalk The Sidewalk account credentials.
      */
     public fun sidewalk(sidewalk: CfnPartnerAccount.SidewalkAccountInfoProperty) {
@@ -121,6 +135,7 @@ public class CfnPartnerAccountDsl(
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkresponse)
+     *
      * @param sidewalkResponse
      */
     public fun sidewalkResponse(sidewalkResponse: IResolvable) {
@@ -129,14 +144,18 @@ public class CfnPartnerAccountDsl(
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkresponse)
+     *
      * @param sidewalkResponse
      */
-    public fun sidewalkResponse(sidewalkResponse: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty) {
+    public fun sidewalkResponse(
+        sidewalkResponse: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty
+    ) {
         cdkBuilder.sidewalkResponse(sidewalkResponse)
     }
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkupdate)
+     *
      * @param sidewalkUpdate
      */
     public fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
@@ -145,6 +164,7 @@ public class CfnPartnerAccountDsl(
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkupdate)
+     *
      * @param sidewalkUpdate
      */
     public fun sidewalkUpdate(sidewalkUpdate: CfnPartnerAccount.SidewalkUpdateAccountProperty) {
@@ -157,6 +177,7 @@ public class CfnPartnerAccountDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -169,6 +190,7 @@ public class CfnPartnerAccountDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: Collection<CfnTag>) {

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53recoverycontrol
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanelPro
  * Properties for defining a `CfnControlPanel`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,41 +43,35 @@ import software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanelPro
  */
 @CdkDslMarker
 public class CfnControlPanelPropsDsl {
-  private val cdkBuilder: CfnControlPanelProps.Builder = CfnControlPanelProps.builder()
+    private val cdkBuilder: CfnControlPanelProps.Builder = CfnControlPanelProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param clusterArn The Amazon Resource Name (ARN) of the cluster for the control panel.
-   */
-  public fun clusterArn(clusterArn: String) {
-    cdkBuilder.clusterArn(clusterArn)
-  }
+    /** @param clusterArn The Amazon Resource Name (ARN) of the cluster for the control panel. */
+    public fun clusterArn(clusterArn: String) {
+        cdkBuilder.clusterArn(clusterArn)
+    }
 
-  /**
-   * @param name The name of the control panel. 
-   * You can use any non-white space character in the name.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name The name of the control panel. You can use any non-white space character in the
+     *   name.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param tags The value for a tag.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The value for a tag. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The value for a tag.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The value for a tag. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnControlPanelProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnControlPanelProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,14 +1,23 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.services.pinpoint.CfnSmsTemplate
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.pinpoint.CfnSmsTemplate
+import software.constructs.Construct
 
 /**
  * Creates a message template that you can use in messages that are sent through the SMS channel.
@@ -17,7 +26,6 @@ import kotlin.Unit
  * messages for any of your Amazon Pinpoint applications.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,7 +46,7 @@ import kotlin.Unit
 @CdkDslMarker
 public class CfnSmsTemplateDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnSmsTemplate.Builder = CfnSmsTemplate.Builder.create(scope, id)
 
@@ -46,6 +54,7 @@ public class CfnSmsTemplateDsl(
      * The message body to use in text messages that are based on the message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-body)
+     *
      * @param body The message body to use in text messages that are based on the message template.
      */
     public fun body(body: String) {
@@ -57,13 +66,14 @@ public class CfnSmsTemplateDsl(
      * template.
      *
      * This object is a set of key-value pairs. Each key defines a message variable in the template.
-     * The corresponding value defines the default value for that variable. When you create a message
-     * that's based on the template, you can override these defaults with message-specific and
-     * address-specific variables and values.
+     * The corresponding value defines the default value for that variable. When you create a
+     * message that's based on the template, you can override these defaults with message-specific
+     * and address-specific variables and values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-defaultsubstitutions)
-     * @param defaultSubstitutions A JSON object that specifies the default values to use for message
-     * variables in the message template.
+     *
+     * @param defaultSubstitutions A JSON object that specifies the default values to use for
+     *   message variables in the message template.
      */
     public fun defaultSubstitutions(defaultSubstitutions: String) {
         cdkBuilder.defaultSubstitutions(defaultSubstitutions)
@@ -77,6 +87,7 @@ public class CfnSmsTemplateDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: MapBuilder.() -> Unit = {}) {
@@ -93,6 +104,7 @@ public class CfnSmsTemplateDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: Any) {
@@ -103,6 +115,7 @@ public class CfnSmsTemplateDsl(
      * A custom description of the message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-templatedescription)
+     *
      * @param templateDescription A custom description of the message template.
      */
     public fun templateDescription(templateDescription: String) {
@@ -113,6 +126,7 @@ public class CfnSmsTemplateDsl(
      * The name of the message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-templatename)
+     *
      * @param templateName The name of the message template.
      */
     public fun templateName(templateName: String) {

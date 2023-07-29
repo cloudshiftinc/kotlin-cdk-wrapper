@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
  * The default value is `False` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,46 +42,46 @@ import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
  */
 @CdkDslMarker
 public class CfnFeatureGroupOnlineStoreConfigPropertyDsl {
-  private val cdkBuilder: CfnFeatureGroup.OnlineStoreConfigProperty.Builder =
-      CfnFeatureGroup.OnlineStoreConfigProperty.builder()
+    private val cdkBuilder: CfnFeatureGroup.OnlineStoreConfigProperty.Builder =
+        CfnFeatureGroup.OnlineStoreConfigProperty.builder()
 
-  /**
-   * @param enableOnlineStore Turn `OnlineStore` off by specifying `False` for the
-   * `EnableOnlineStore` flag.
-   * Turn `OnlineStore` on by specifying `True` for the `EnableOnlineStore` flag.
-   *
-   * The default value is `False` .
-   */
-  public fun enableOnlineStore(enableOnlineStore: Boolean) {
-    cdkBuilder.enableOnlineStore(enableOnlineStore)
-  }
+    /**
+     * @param enableOnlineStore Turn `OnlineStore` off by specifying `False` for the
+     *   `EnableOnlineStore` flag. Turn `OnlineStore` on by specifying `True` for the
+     *   `EnableOnlineStore` flag.
+     *
+     * The default value is `False` .
+     */
+    public fun enableOnlineStore(enableOnlineStore: Boolean) {
+        cdkBuilder.enableOnlineStore(enableOnlineStore)
+    }
 
-  /**
-   * @param enableOnlineStore Turn `OnlineStore` off by specifying `False` for the
-   * `EnableOnlineStore` flag.
-   * Turn `OnlineStore` on by specifying `True` for the `EnableOnlineStore` flag.
-   *
-   * The default value is `False` .
-   */
-  public fun enableOnlineStore(enableOnlineStore: IResolvable) {
-    cdkBuilder.enableOnlineStore(enableOnlineStore)
-  }
+    /**
+     * @param enableOnlineStore Turn `OnlineStore` off by specifying `False` for the
+     *   `EnableOnlineStore` flag. Turn `OnlineStore` on by specifying `True` for the
+     *   `EnableOnlineStore` flag.
+     *
+     * The default value is `False` .
+     */
+    public fun enableOnlineStore(enableOnlineStore: IResolvable) {
+        cdkBuilder.enableOnlineStore(enableOnlineStore)
+    }
 
-  /**
-   * @param securityConfig Use to specify KMS Key ID ( `KMSKeyId` ) for at-rest encryption of your
-   * `OnlineStore` .
-   */
-  public fun securityConfig(securityConfig: IResolvable) {
-    cdkBuilder.securityConfig(securityConfig)
-  }
+    /**
+     * @param securityConfig Use to specify KMS Key ID ( `KMSKeyId` ) for at-rest encryption of your
+     *   `OnlineStore` .
+     */
+    public fun securityConfig(securityConfig: IResolvable) {
+        cdkBuilder.securityConfig(securityConfig)
+    }
 
-  /**
-   * @param securityConfig Use to specify KMS Key ID ( `KMSKeyId` ) for at-rest encryption of your
-   * `OnlineStore` .
-   */
-  public fun securityConfig(securityConfig: CfnFeatureGroup.OnlineStoreSecurityConfigProperty) {
-    cdkBuilder.securityConfig(securityConfig)
-  }
+    /**
+     * @param securityConfig Use to specify KMS Key ID ( `KMSKeyId` ) for at-rest encryption of your
+     *   `OnlineStore` .
+     */
+    public fun securityConfig(securityConfig: CfnFeatureGroup.OnlineStoreSecurityConfigProperty) {
+        cdkBuilder.securityConfig(securityConfig)
+    }
 
-  public fun build(): CfnFeatureGroup.OnlineStoreConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFeatureGroup.OnlineStoreConfigProperty = cdkBuilder.build()
 }

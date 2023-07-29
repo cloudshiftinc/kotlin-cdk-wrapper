@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
  * The codes to use when checking for a successful response from a target for health checks.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,15 @@ import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
  */
 @CdkDslMarker
 public class CfnTargetGroupMatcherPropertyDsl {
-  private val cdkBuilder: CfnTargetGroup.MatcherProperty.Builder =
-      CfnTargetGroup.MatcherProperty.builder()
+    private val cdkBuilder: CfnTargetGroup.MatcherProperty.Builder =
+        CfnTargetGroup.MatcherProperty.builder()
 
-  /**
-   * @param httpCode The HTTP code to use when checking for a successful response from a target. 
-   */
-  public fun httpCode(httpCode: String) {
-    cdkBuilder.httpCode(httpCode)
-  }
+    /**
+     * @param httpCode The HTTP code to use when checking for a successful response from a target.
+     */
+    public fun httpCode(httpCode: String) {
+        cdkBuilder.httpCode(httpCode)
+    }
 
-  public fun build(): CfnTargetGroup.MatcherProperty = cdkBuilder.build()
+    public fun build(): CfnTargetGroup.MatcherProperty = cdkBuilder.build()
 }

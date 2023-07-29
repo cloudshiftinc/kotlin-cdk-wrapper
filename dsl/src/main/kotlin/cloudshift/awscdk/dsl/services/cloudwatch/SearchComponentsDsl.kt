@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudwatch
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.cloudwatch.SearchComponents
  * Search components for use with [Values.fromSearchComponents].
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.cloudwatch.*;
  * Dashboard dashboard = Dashboard.Builder.create(this, "Dash")
@@ -39,48 +47,40 @@ import software.amazon.awscdk.services.cloudwatch.SearchComponents
  */
 @CdkDslMarker
 public class SearchComponentsDsl {
-  private val cdkBuilder: SearchComponents.Builder = SearchComponents.builder()
+    private val cdkBuilder: SearchComponents.Builder = SearchComponents.builder()
 
-  private val _dimensions: MutableList<String> = mutableListOf()
+    private val _dimensions: MutableList<String> = mutableListOf()
 
-  /**
-   * @param dimensions The list of dimensions to be used in the search expression. 
-   */
-  public fun dimensions(vararg dimensions: String) {
-    _dimensions.addAll(listOf(*dimensions))
-  }
+    /** @param dimensions The list of dimensions to be used in the search expression. */
+    public fun dimensions(vararg dimensions: String) {
+        _dimensions.addAll(listOf(*dimensions))
+    }
 
-  /**
-   * @param dimensions The list of dimensions to be used in the search expression. 
-   */
-  public fun dimensions(dimensions: Collection<String>) {
-    _dimensions.addAll(dimensions)
-  }
+    /** @param dimensions The list of dimensions to be used in the search expression. */
+    public fun dimensions(dimensions: Collection<String>) {
+        _dimensions.addAll(dimensions)
+    }
 
-  /**
-   * @param metricName The metric name to be used in the search expression. 
-   */
-  public fun metricName(metricName: String) {
-    cdkBuilder.metricName(metricName)
-  }
+    /** @param metricName The metric name to be used in the search expression. */
+    public fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+    }
 
-  /**
-   * @param namespace The namespace to be used in the search expression. 
-   */
-  public fun namespace(namespace: String) {
-    cdkBuilder.namespace(namespace)
-  }
+    /** @param namespace The namespace to be used in the search expression. */
+    public fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+    }
 
-  /**
-   * @param populateFrom The dimension name, that the search expression retrieves, whose values will
-   * be used to populate the values to choose from. 
-   */
-  public fun populateFrom(populateFrom: String) {
-    cdkBuilder.populateFrom(populateFrom)
-  }
+    /**
+     * @param populateFrom The dimension name, that the search expression retrieves, whose values
+     *   will be used to populate the values to choose from.
+     */
+    public fun populateFrom(populateFrom: String) {
+        cdkBuilder.populateFrom(populateFrom)
+    }
 
-  public fun build(): SearchComponents {
-    if(_dimensions.isNotEmpty()) cdkBuilder.dimensions(_dimensions)
-    return cdkBuilder.build()
-  }
+    public fun build(): SearchComponents {
+        if (_dimensions.isNotEmpty()) cdkBuilder.dimensions(_dimensions)
+        return cdkBuilder.build()
+    }
 }

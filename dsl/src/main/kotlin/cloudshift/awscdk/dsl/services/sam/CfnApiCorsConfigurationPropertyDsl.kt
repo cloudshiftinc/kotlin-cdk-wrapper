@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sam.CfnApi
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,50 +37,38 @@ import software.amazon.awscdk.services.sam.CfnApi
  */
 @CdkDslMarker
 public class CfnApiCorsConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApi.CorsConfigurationProperty.Builder =
-      CfnApi.CorsConfigurationProperty.builder()
+    private val cdkBuilder: CfnApi.CorsConfigurationProperty.Builder =
+        CfnApi.CorsConfigurationProperty.builder()
 
-  /**
-   * @param allowCredentials the value to be set.
-   */
-  public fun allowCredentials(allowCredentials: Boolean) {
-    cdkBuilder.allowCredentials(allowCredentials)
-  }
+    /** @param allowCredentials the value to be set. */
+    public fun allowCredentials(allowCredentials: Boolean) {
+        cdkBuilder.allowCredentials(allowCredentials)
+    }
 
-  /**
-   * @param allowCredentials the value to be set.
-   */
-  public fun allowCredentials(allowCredentials: IResolvable) {
-    cdkBuilder.allowCredentials(allowCredentials)
-  }
+    /** @param allowCredentials the value to be set. */
+    public fun allowCredentials(allowCredentials: IResolvable) {
+        cdkBuilder.allowCredentials(allowCredentials)
+    }
 
-  /**
-   * @param allowHeaders the value to be set.
-   */
-  public fun allowHeaders(allowHeaders: String) {
-    cdkBuilder.allowHeaders(allowHeaders)
-  }
+    /** @param allowHeaders the value to be set. */
+    public fun allowHeaders(allowHeaders: String) {
+        cdkBuilder.allowHeaders(allowHeaders)
+    }
 
-  /**
-   * @param allowMethods the value to be set.
-   */
-  public fun allowMethods(allowMethods: String) {
-    cdkBuilder.allowMethods(allowMethods)
-  }
+    /** @param allowMethods the value to be set. */
+    public fun allowMethods(allowMethods: String) {
+        cdkBuilder.allowMethods(allowMethods)
+    }
 
-  /**
-   * @param allowOrigin the value to be set. 
-   */
-  public fun allowOrigin(allowOrigin: String) {
-    cdkBuilder.allowOrigin(allowOrigin)
-  }
+    /** @param allowOrigin the value to be set. */
+    public fun allowOrigin(allowOrigin: String) {
+        cdkBuilder.allowOrigin(allowOrigin)
+    }
 
-  /**
-   * @param maxAge the value to be set.
-   */
-  public fun maxAge(maxAge: String) {
-    cdkBuilder.maxAge(maxAge)
-  }
+    /** @param maxAge the value to be set. */
+    public fun maxAge(maxAge: String) {
+        cdkBuilder.maxAge(maxAge)
+    }
 
-  public fun build(): CfnApi.CorsConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnApi.CorsConfigurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dlm
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,29 +34,23 @@ import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
  */
 @CdkDslMarker
 public class CfnLifecyclePolicyRetentionArchiveTierPropertyDsl {
-  private val cdkBuilder: CfnLifecyclePolicy.RetentionArchiveTierProperty.Builder =
-      CfnLifecyclePolicy.RetentionArchiveTierProperty.builder()
+    private val cdkBuilder: CfnLifecyclePolicy.RetentionArchiveTierProperty.Builder =
+        CfnLifecyclePolicy.RetentionArchiveTierProperty.builder()
 
-  /**
-   * @param count the value to be set.
-   */
-  public fun count(count: Number) {
-    cdkBuilder.count(count)
-  }
+    /** @param count the value to be set. */
+    public fun count(count: Number) {
+        cdkBuilder.count(count)
+    }
 
-  /**
-   * @param interval the value to be set.
-   */
-  public fun interval(interval: Number) {
-    cdkBuilder.interval(interval)
-  }
+    /** @param interval the value to be set. */
+    public fun interval(interval: Number) {
+        cdkBuilder.interval(interval)
+    }
 
-  /**
-   * @param intervalUnit the value to be set.
-   */
-  public fun intervalUnit(intervalUnit: String) {
-    cdkBuilder.intervalUnit(intervalUnit)
-  }
+    /** @param intervalUnit the value to be set. */
+    public fun intervalUnit(intervalUnit: String) {
+        cdkBuilder.intervalUnit(intervalUnit)
+    }
 
-  public fun build(): CfnLifecyclePolicy.RetentionArchiveTierProperty = cdkBuilder.build()
+    public fun build(): CfnLifecyclePolicy.RetentionArchiveTierProperty = cdkBuilder.build()
 }

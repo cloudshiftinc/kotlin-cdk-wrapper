@@ -1,26 +1,35 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement
-import software.constructs.Construct
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement
+import software.constructs.Construct
 
 /**
  * The AWS::MediaConnect::FlowEntitlement resource defines the permission that an AWS account grants
- * to another AWS account to allow access to the content in a specific AWS Elemental MediaConnect flow.
+ * to another AWS account to allow access to the content in a specific AWS Elemental MediaConnect
+ * flow.
  *
  * The content originator grants an entitlement to a specific AWS account (the subscriber). When an
- * entitlement is granted, the subscriber can create a flow using the originator's flow as the source.
- * Each flow can have up to 50 entitlements.
+ * entitlement is granted, the subscriber can create a flow using the originator's flow as the
+ * source. Each flow can have up to 50 entitlements.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -54,9 +63,10 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnFlowEntitlementDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
-    private val cdkBuilder: CfnFlowEntitlement.Builder = CfnFlowEntitlement.Builder.create(scope, id)
+    private val cdkBuilder: CfnFlowEntitlement.Builder =
+        CfnFlowEntitlement.Builder.create(scope, id)
 
     private val _subscribers: MutableList<String> = mutableListOf()
 
@@ -67,8 +77,9 @@ public class CfnFlowEntitlementDsl(
      * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-datatransfersubscriberfeepercent)
+     *
      * @param dataTransferSubscriberFeePercent The percentage of the entitlement data transfer fee
-     * that you want the subscriber to be responsible for.
+     *   that you want the subscriber to be responsible for.
      */
     public fun dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent: Number) {
         cdkBuilder.dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent)
@@ -81,6 +92,7 @@ public class CfnFlowEntitlementDsl(
      * current AWS account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-description)
+     *
      * @param description A description of the entitlement.
      */
     public fun description(description: String) {
@@ -92,8 +104,9 @@ public class CfnFlowEntitlementDsl(
      * entitlement.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
+     *
      * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     *   associated with the entitlement.
      */
     public fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption)
@@ -104,8 +117,9 @@ public class CfnFlowEntitlementDsl(
      * entitlement.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
+     *
      * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     *   associated with the entitlement.
      */
     public fun encryption(encryption: CfnFlowEntitlement.EncryptionProperty) {
         cdkBuilder.encryption(encryption)
@@ -119,8 +133,9 @@ public class CfnFlowEntitlementDsl(
      * ENABLED.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-entitlementstatus)
+     *
      * @param entitlementStatus An indication of whether the new entitlement should be enabled or
-     * disabled as soon as it is created.
+     *   disabled as soon as it is created.
      */
     public fun entitlementStatus(entitlementStatus: String) {
         cdkBuilder.entitlementStatus(entitlementStatus)
@@ -130,6 +145,7 @@ public class CfnFlowEntitlementDsl(
      * The Amazon Resource Name (ARN) of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-flowarn)
+     *
      * @param flowArn The Amazon Resource Name (ARN) of the flow.
      */
     public fun flowArn(flowArn: String) {
@@ -142,6 +158,7 @@ public class CfnFlowEntitlementDsl(
      * This value must be unique within the current flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-name)
+     *
      * @param name The name of the entitlement.
      */
     public fun name(name: String) {
@@ -155,6 +172,7 @@ public class CfnFlowEntitlementDsl(
      * content as the source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-subscribers)
+     *
      * @param subscribers The AWS account IDs that you want to share your content with.
      */
     public fun subscribers(vararg subscribers: String) {
@@ -168,6 +186,7 @@ public class CfnFlowEntitlementDsl(
      * content as the source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-subscribers)
+     *
      * @param subscribers The AWS account IDs that you want to share your content with.
      */
     public fun subscribers(subscribers: Collection<String>) {

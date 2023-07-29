@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudformation.include
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.cloudformation.include.IncludedNestedStack
  * CfnInclude representations of the child stack.
  *
  * Example:
- *
  * ```
  * CfnInclude parentTemplate;
  * IncludedNestedStack includedChildStack = parentTemplate.getNestedStack("ChildStack");
@@ -26,15 +34,13 @@ public class IncludedNestedStackDsl {
 
     /**
      * @param includedTemplate The CfnInclude that represents the template, which can be used to
-     * access Resources and other template elements.
+     *   access Resources and other template elements.
      */
     public fun includedTemplate(includedTemplate: CfnInclude) {
         cdkBuilder.includedTemplate(includedTemplate)
     }
 
-    /**
-     * @param stack The NestedStack object which represents the scope of the template.
-     */
+    /** @param stack The NestedStack object which represents the scope of the template. */
     public fun stack(stack: NestedStack) {
         cdkBuilder.stack(stack)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ses.CfnTemplateProps
  * Properties for defining a `CfnTemplate`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,23 +39,23 @@ import software.amazon.awscdk.services.ses.CfnTemplateProps
  */
 @CdkDslMarker
 public class CfnTemplatePropsDsl {
-  private val cdkBuilder: CfnTemplateProps.Builder = CfnTemplateProps.builder()
+    private val cdkBuilder: CfnTemplateProps.Builder = CfnTemplateProps.builder()
 
-  /**
-   * @param template The content of the email, composed of a subject line and either an HTML part or
-   * a text-only part.
-   */
-  public fun template(template: IResolvable) {
-    cdkBuilder.template(template)
-  }
+    /**
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     *   or a text-only part.
+     */
+    public fun template(template: IResolvable) {
+        cdkBuilder.template(template)
+    }
 
-  /**
-   * @param template The content of the email, composed of a subject line and either an HTML part or
-   * a text-only part.
-   */
-  public fun template(template: CfnTemplate.TemplateProperty) {
-    cdkBuilder.template(template)
-  }
+    /**
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     *   or a text-only part.
+     */
+    public fun template(template: CfnTemplate.TemplateProperty) {
+        cdkBuilder.template(template)
+    }
 
-  public fun build(): CfnTemplateProps = cdkBuilder.build()
+    public fun build(): CfnTemplateProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDe
  * The threshold for the calculated attribute.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDe
  */
 @CdkDslMarker
 public class CfnCalculatedAttributeDefinitionThresholdPropertyDsl {
-  private val cdkBuilder: CfnCalculatedAttributeDefinition.ThresholdProperty.Builder =
-      CfnCalculatedAttributeDefinition.ThresholdProperty.builder()
+    private val cdkBuilder: CfnCalculatedAttributeDefinition.ThresholdProperty.Builder =
+        CfnCalculatedAttributeDefinition.ThresholdProperty.builder()
 
-  /**
-   * @param operator The operator of the threshold. 
-   */
-  public fun `operator`(`operator`: String) {
-    cdkBuilder.`operator`(`operator`)
-  }
+    /** @param operator The operator of the threshold. */
+    public fun `operator`(`operator`: String) {
+        cdkBuilder.`operator`(`operator`)
+    }
 
-  /**
-   * @param value The value of the threshold. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value of the threshold. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnCalculatedAttributeDefinition.ThresholdProperty = cdkBuilder.build()
+    public fun build(): CfnCalculatedAttributeDefinition.ThresholdProperty = cdkBuilder.build()
 }

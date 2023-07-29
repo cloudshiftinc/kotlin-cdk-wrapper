@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 import kotlin.String
+import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
 /**
  * The entity error.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,12 @@ import kotlin.String
 public class CfnEntityErrorPropertyDsl {
     private val cdkBuilder: CfnEntity.ErrorProperty.Builder = CfnEntity.ErrorProperty.builder()
 
-    /**
-     * @param code The entity error code.
-     */
+    /** @param code The entity error code. */
     public fun code(code: String) {
         cdkBuilder.code(code)
     }
 
-    /**
-     * @param message The entity error message.
-     */
+    /** @param message The entity error message. */
     public fun message(message: String) {
         cdkBuilder.message(message)
     }

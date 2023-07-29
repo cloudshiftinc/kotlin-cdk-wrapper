@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
  * Options for creating Credentials from a username.
  *
  * Example:
- *
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
@@ -35,57 +43,46 @@ import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
  */
 @CdkDslMarker
 public class CredentialsFromUsernameOptionsDsl {
-  private val cdkBuilder: CredentialsFromUsernameOptions.Builder =
-      CredentialsFromUsernameOptions.builder()
+    private val cdkBuilder: CredentialsFromUsernameOptions.Builder =
+        CredentialsFromUsernameOptions.builder()
 
-  private val _replicaRegions: MutableList<ReplicaRegion> = mutableListOf()
+    private val _replicaRegions: MutableList<ReplicaRegion> = mutableListOf()
 
-  /**
-   * @param encryptionKey KMS encryption key to encrypt the generated secret.
-   */
-  public fun encryptionKey(encryptionKey: IKey) {
-    cdkBuilder.encryptionKey(encryptionKey)
-  }
+    /** @param encryptionKey KMS encryption key to encrypt the generated secret. */
+    public fun encryptionKey(encryptionKey: IKey) {
+        cdkBuilder.encryptionKey(encryptionKey)
+    }
 
-  /**
-   * @param excludeCharacters The characters to exclude from the generated password.
-   * Has no effect if `password` has been provided.
-   */
-  public fun excludeCharacters(excludeCharacters: String) {
-    cdkBuilder.excludeCharacters(excludeCharacters)
-  }
+    /**
+     * @param excludeCharacters The characters to exclude from the generated password. Has no effect
+     *   if `password` has been provided.
+     */
+    public fun excludeCharacters(excludeCharacters: String) {
+        cdkBuilder.excludeCharacters(excludeCharacters)
+    }
 
-  /**
-   * @param password Password.
-   * Do not put passwords in your CDK code directly.
-   */
-  public fun password(password: SecretValue) {
-    cdkBuilder.password(password)
-  }
+    /** @param password Password. Do not put passwords in your CDK code directly. */
+    public fun password(password: SecretValue) {
+        cdkBuilder.password(password)
+    }
 
-  /**
-   * @param replicaRegions A list of regions where to replicate this secret.
-   */
-  public fun replicaRegions(replicaRegions: ReplicaRegionDsl.() -> Unit) {
-    _replicaRegions.add(ReplicaRegionDsl().apply(replicaRegions).build())
-  }
+    /** @param replicaRegions A list of regions where to replicate this secret. */
+    public fun replicaRegions(replicaRegions: ReplicaRegionDsl.() -> Unit) {
+        _replicaRegions.add(ReplicaRegionDsl().apply(replicaRegions).build())
+    }
 
-  /**
-   * @param replicaRegions A list of regions where to replicate this secret.
-   */
-  public fun replicaRegions(replicaRegions: Collection<ReplicaRegion>) {
-    _replicaRegions.addAll(replicaRegions)
-  }
+    /** @param replicaRegions A list of regions where to replicate this secret. */
+    public fun replicaRegions(replicaRegions: Collection<ReplicaRegion>) {
+        _replicaRegions.addAll(replicaRegions)
+    }
 
-  /**
-   * @param secretName The name of the secret.
-   */
-  public fun secretName(secretName: String) {
-    cdkBuilder.secretName(secretName)
-  }
+    /** @param secretName The name of the secret. */
+    public fun secretName(secretName: String) {
+        cdkBuilder.secretName(secretName)
+    }
 
-  public fun build(): CredentialsFromUsernameOptions {
-    if(_replicaRegions.isNotEmpty()) cdkBuilder.replicaRegions(_replicaRegions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CredentialsFromUsernameOptions {
+        if (_replicaRegions.isNotEmpty()) cdkBuilder.replicaRegions(_replicaRegions)
+        return cdkBuilder.build()
+    }
 }

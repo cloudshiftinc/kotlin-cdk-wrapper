@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
  * Configures contributor insights settings for a replica or one of its indexes.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,24 +34,24 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
  */
 @CdkDslMarker
 public class CfnGlobalTableContributorInsightsSpecificationPropertyDsl {
-  private val cdkBuilder: CfnGlobalTable.ContributorInsightsSpecificationProperty.Builder =
-      CfnGlobalTable.ContributorInsightsSpecificationProperty.builder()
+    private val cdkBuilder: CfnGlobalTable.ContributorInsightsSpecificationProperty.Builder =
+        CfnGlobalTable.ContributorInsightsSpecificationProperty.builder()
 
-  /**
-   * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true) or
-   * disabled (false). 
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /**
+     * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true) or
+     *   disabled (false).
+     */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true) or
-   * disabled (false). 
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /**
+     * @param enabled Indicates whether CloudWatch Contributor Insights are to be enabled (true) or
+     *   disabled (false).
+     */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  public fun build(): CfnGlobalTable.ContributorInsightsSpecificationProperty = cdkBuilder.build()
+    public fun build(): CfnGlobalTable.ContributorInsightsSpecificationProperty = cdkBuilder.build()
 }

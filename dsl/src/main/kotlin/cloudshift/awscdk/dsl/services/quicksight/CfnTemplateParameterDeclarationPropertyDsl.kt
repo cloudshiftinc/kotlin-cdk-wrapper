@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -9,15 +18,14 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 /**
  * The declaration definition of a parameter.
  *
- * For more information, see [Parameters in Amazon
- * QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/parameters-in-quicksight.html) in the
- * *Amazon QuickSight User Guide* .
+ * For more information, see
+ * [Parameters in Amazon QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/parameters-in-quicksight.html)
+ * in the *Amazon QuickSight User Guide* .
  *
  * This is a union type structure. For this structure to be valid, only one of the attributes can be
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -163,59 +171,51 @@ public class CfnTemplateParameterDeclarationPropertyDsl {
     private val cdkBuilder: CfnTemplate.ParameterDeclarationProperty.Builder =
         CfnTemplate.ParameterDeclarationProperty.builder()
 
-    /**
-     * @param dateTimeParameterDeclaration A parameter declaration for the `DateTime` data type.
-     */
+    /** @param dateTimeParameterDeclaration A parameter declaration for the `DateTime` data type. */
     public fun dateTimeParameterDeclaration(dateTimeParameterDeclaration: IResolvable) {
         cdkBuilder.dateTimeParameterDeclaration(dateTimeParameterDeclaration)
     }
 
-    /**
-     * @param dateTimeParameterDeclaration A parameter declaration for the `DateTime` data type.
-     */
-    public fun dateTimeParameterDeclaration(dateTimeParameterDeclaration: CfnTemplate.DateTimeParameterDeclarationProperty) {
+    /** @param dateTimeParameterDeclaration A parameter declaration for the `DateTime` data type. */
+    public fun dateTimeParameterDeclaration(
+        dateTimeParameterDeclaration: CfnTemplate.DateTimeParameterDeclarationProperty
+    ) {
         cdkBuilder.dateTimeParameterDeclaration(dateTimeParameterDeclaration)
     }
 
-    /**
-     * @param decimalParameterDeclaration A parameter declaration for the `Decimal` data type.
-     */
+    /** @param decimalParameterDeclaration A parameter declaration for the `Decimal` data type. */
     public fun decimalParameterDeclaration(decimalParameterDeclaration: IResolvable) {
         cdkBuilder.decimalParameterDeclaration(decimalParameterDeclaration)
     }
 
-    /**
-     * @param decimalParameterDeclaration A parameter declaration for the `Decimal` data type.
-     */
-    public fun decimalParameterDeclaration(decimalParameterDeclaration: CfnTemplate.DecimalParameterDeclarationProperty) {
+    /** @param decimalParameterDeclaration A parameter declaration for the `Decimal` data type. */
+    public fun decimalParameterDeclaration(
+        decimalParameterDeclaration: CfnTemplate.DecimalParameterDeclarationProperty
+    ) {
         cdkBuilder.decimalParameterDeclaration(decimalParameterDeclaration)
     }
 
-    /**
-     * @param integerParameterDeclaration A parameter declaration for the `Integer` data type.
-     */
+    /** @param integerParameterDeclaration A parameter declaration for the `Integer` data type. */
     public fun integerParameterDeclaration(integerParameterDeclaration: IResolvable) {
         cdkBuilder.integerParameterDeclaration(integerParameterDeclaration)
     }
 
-    /**
-     * @param integerParameterDeclaration A parameter declaration for the `Integer` data type.
-     */
-    public fun integerParameterDeclaration(integerParameterDeclaration: CfnTemplate.IntegerParameterDeclarationProperty) {
+    /** @param integerParameterDeclaration A parameter declaration for the `Integer` data type. */
+    public fun integerParameterDeclaration(
+        integerParameterDeclaration: CfnTemplate.IntegerParameterDeclarationProperty
+    ) {
         cdkBuilder.integerParameterDeclaration(integerParameterDeclaration)
     }
 
-    /**
-     * @param stringParameterDeclaration A parameter declaration for the `String` data type.
-     */
+    /** @param stringParameterDeclaration A parameter declaration for the `String` data type. */
     public fun stringParameterDeclaration(stringParameterDeclaration: IResolvable) {
         cdkBuilder.stringParameterDeclaration(stringParameterDeclaration)
     }
 
-    /**
-     * @param stringParameterDeclaration A parameter declaration for the `String` data type.
-     */
-    public fun stringParameterDeclaration(stringParameterDeclaration: CfnTemplate.StringParameterDeclarationProperty) {
+    /** @param stringParameterDeclaration A parameter declaration for the `String` data type. */
+    public fun stringParameterDeclaration(
+        stringParameterDeclaration: CfnTemplate.StringParameterDeclarationProperty
+    ) {
         cdkBuilder.stringParameterDeclaration(stringParameterDeclaration)
     }
 

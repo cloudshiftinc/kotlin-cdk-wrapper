@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -17,7 +26,6 @@ import software.constructs.Construct
  * A configuration set event destination.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,79 +45,79 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class ConfigurationSetEventDestinationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: ConfigurationSetEventDestination.Builder =
-      ConfigurationSetEventDestination.Builder.create(scope, id)
+    private val cdkBuilder: ConfigurationSetEventDestination.Builder =
+        ConfigurationSetEventDestination.Builder.create(scope, id)
 
-  private val _events: MutableList<EmailSendingEvent> = mutableListOf()
+    private val _events: MutableList<EmailSendingEvent> = mutableListOf()
 
-  /**
-   * The configuration set that contains the event destination.
-   *
-   * @param configurationSet The configuration set that contains the event destination. 
-   */
-  public fun configurationSet(configurationSet: IConfigurationSet) {
-    cdkBuilder.configurationSet(configurationSet)
-  }
+    /**
+     * The configuration set that contains the event destination.
+     *
+     * @param configurationSet The configuration set that contains the event destination.
+     */
+    public fun configurationSet(configurationSet: IConfigurationSet) {
+        cdkBuilder.configurationSet(configurationSet)
+    }
 
-  /**
-   * A name for the configuration set event destination.
-   *
-   * Default: - a CloudFormation generated name
-   *
-   * @param configurationSetEventDestinationName A name for the configuration set event destination.
-   * 
-   */
-  public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
-    cdkBuilder.configurationSetEventDestinationName(configurationSetEventDestinationName)
-  }
+    /**
+     * A name for the configuration set event destination.
+     *
+     * Default: - a CloudFormation generated name
+     *
+     * @param configurationSetEventDestinationName A name for the configuration set event
+     *   destination.
+     */
+    public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
+        cdkBuilder.configurationSetEventDestinationName(configurationSetEventDestinationName)
+    }
 
-  /**
-   * The event destination.
-   *
-   * @param destination The event destination. 
-   */
-  public fun destination(destination: EventDestination) {
-    cdkBuilder.destination(destination)
-  }
+    /**
+     * The event destination.
+     *
+     * @param destination The event destination.
+     */
+    public fun destination(destination: EventDestination) {
+        cdkBuilder.destination(destination)
+    }
 
-  /**
-   * Whether Amazon SES publishes events to this destination.
-   *
-   * Default: true
-   *
-   * @param enabled Whether Amazon SES publishes events to this destination. 
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /**
+     * Whether Amazon SES publishes events to this destination.
+     *
+     * Default: true
+     *
+     * @param enabled Whether Amazon SES publishes events to this destination.
+     */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * The type of email sending events to publish to the event destination.
-   *
-   * Default: - send all event types
-   *
-   * @param events The type of email sending events to publish to the event destination. 
-   */
-  public fun events(vararg events: EmailSendingEvent) {
-    _events.addAll(listOf(*events))
-  }
+    /**
+     * The type of email sending events to publish to the event destination.
+     *
+     * Default: - send all event types
+     *
+     * @param events The type of email sending events to publish to the event destination.
+     */
+    public fun events(vararg events: EmailSendingEvent) {
+        _events.addAll(listOf(*events))
+    }
 
-  /**
-   * The type of email sending events to publish to the event destination.
-   *
-   * Default: - send all event types
-   *
-   * @param events The type of email sending events to publish to the event destination. 
-   */
-  public fun events(events: Collection<EmailSendingEvent>) {
-    _events.addAll(events)
-  }
+    /**
+     * The type of email sending events to publish to the event destination.
+     *
+     * Default: - send all event types
+     *
+     * @param events The type of email sending events to publish to the event destination.
+     */
+    public fun events(events: Collection<EmailSendingEvent>) {
+        _events.addAll(events)
+    }
 
-  public fun build(): ConfigurationSetEventDestination {
-    if(_events.isNotEmpty()) cdkBuilder.events(_events)
-    return cdkBuilder.build()
-  }
+    public fun build(): ConfigurationSetEventDestination {
+        if (_events.isNotEmpty()) cdkBuilder.events(_events)
+        return cdkBuilder.build()
+    }
 }

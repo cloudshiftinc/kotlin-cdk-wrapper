@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions
  * Options for creating a Transfer Acceleration URL.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,15 +31,13 @@ import software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions
  */
 @CdkDslMarker
 public class TransferAccelerationUrlOptionsDsl {
-  private val cdkBuilder: TransferAccelerationUrlOptions.Builder =
-      TransferAccelerationUrlOptions.builder()
+    private val cdkBuilder: TransferAccelerationUrlOptions.Builder =
+        TransferAccelerationUrlOptions.builder()
 
-  /**
-   * @param dualStack Dual-stack support to connect to the bucket over IPv6.
-   */
-  public fun dualStack(dualStack: Boolean) {
-    cdkBuilder.dualStack(dualStack)
-  }
+    /** @param dualStack Dual-stack support to connect to the bucket over IPv6. */
+    public fun dualStack(dualStack: Boolean) {
+        cdkBuilder.dualStack(dualStack)
+    }
 
-  public fun build(): TransferAccelerationUrlOptions = cdkBuilder.build()
+    public fun build(): TransferAccelerationUrlOptions = cdkBuilder.build()
 }

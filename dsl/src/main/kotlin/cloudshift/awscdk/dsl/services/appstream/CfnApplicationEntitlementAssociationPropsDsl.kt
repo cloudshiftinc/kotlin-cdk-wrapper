@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appstream
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssoci
  * Properties for defining a `CfnApplicationEntitlementAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssoci
  */
 @CdkDslMarker
 public class CfnApplicationEntitlementAssociationPropsDsl {
-  private val cdkBuilder: CfnApplicationEntitlementAssociationProps.Builder =
-      CfnApplicationEntitlementAssociationProps.builder()
+    private val cdkBuilder: CfnApplicationEntitlementAssociationProps.Builder =
+        CfnApplicationEntitlementAssociationProps.builder()
 
-  /**
-   * @param applicationIdentifier The identifier of the application. 
-   */
-  public fun applicationIdentifier(applicationIdentifier: String) {
-    cdkBuilder.applicationIdentifier(applicationIdentifier)
-  }
+    /** @param applicationIdentifier The identifier of the application. */
+    public fun applicationIdentifier(applicationIdentifier: String) {
+        cdkBuilder.applicationIdentifier(applicationIdentifier)
+    }
 
-  /**
-   * @param entitlementName The name of the entitlement. 
-   */
-  public fun entitlementName(entitlementName: String) {
-    cdkBuilder.entitlementName(entitlementName)
-  }
+    /** @param entitlementName The name of the entitlement. */
+    public fun entitlementName(entitlementName: String) {
+        cdkBuilder.entitlementName(entitlementName)
+    }
 
-  /**
-   * @param stackName The name of the stack. 
-   */
-  public fun stackName(stackName: String) {
-    cdkBuilder.stackName(stackName)
-  }
+    /** @param stackName The name of the stack. */
+    public fun stackName(stackName: String) {
+        cdkBuilder.stackName(stackName)
+    }
 
-  public fun build(): CfnApplicationEntitlementAssociationProps = cdkBuilder.build()
+    public fun build(): CfnApplicationEntitlementAssociationProps = cdkBuilder.build()
 }

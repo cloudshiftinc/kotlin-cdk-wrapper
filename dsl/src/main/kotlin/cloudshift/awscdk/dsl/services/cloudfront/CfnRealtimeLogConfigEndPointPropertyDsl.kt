@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig
  * data in a real-time log configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,33 +38,34 @@ import software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig
  */
 @CdkDslMarker
 public class CfnRealtimeLogConfigEndPointPropertyDsl {
-  private val cdkBuilder: CfnRealtimeLogConfig.EndPointProperty.Builder =
-      CfnRealtimeLogConfig.EndPointProperty.builder()
+    private val cdkBuilder: CfnRealtimeLogConfig.EndPointProperty.Builder =
+        CfnRealtimeLogConfig.EndPointProperty.builder()
 
-  /**
-   * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where you
-   * are sending real-time log data. 
-   */
-  public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
-    cdkBuilder.kinesisStreamConfig(kinesisStreamConfig)
-  }
+    /**
+     * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
+     *   you are sending real-time log data.
+     */
+    public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
+        cdkBuilder.kinesisStreamConfig(kinesisStreamConfig)
+    }
 
-  /**
-   * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where you
-   * are sending real-time log data. 
-   */
-  public
-      fun kinesisStreamConfig(kinesisStreamConfig: CfnRealtimeLogConfig.KinesisStreamConfigProperty) {
-    cdkBuilder.kinesisStreamConfig(kinesisStreamConfig)
-  }
+    /**
+     * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
+     *   you are sending real-time log data.
+     */
+    public fun kinesisStreamConfig(
+        kinesisStreamConfig: CfnRealtimeLogConfig.KinesisStreamConfigProperty
+    ) {
+        cdkBuilder.kinesisStreamConfig(kinesisStreamConfig)
+    }
 
-  /**
-   * @param streamType The type of data stream where you are sending real-time log data. 
-   * The only valid value is `Kinesis` .
-   */
-  public fun streamType(streamType: String) {
-    cdkBuilder.streamType(streamType)
-  }
+    /**
+     * @param streamType The type of data stream where you are sending real-time log data. The only
+     *   valid value is `Kinesis` .
+     */
+    public fun streamType(streamType: String) {
+        cdkBuilder.streamType(streamType)
+    }
 
-  public fun build(): CfnRealtimeLogConfig.EndPointProperty = cdkBuilder.build()
+    public fun build(): CfnRealtimeLogConfig.EndPointProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.cognito.OAuthSettings
  * OAuth settings to configure the interaction between the app and this client.
  *
  * Example:
- *
  * ```
  * UserPool pool = new UserPool(this, "Pool");
  * ResourceServerScope readOnlyScope =
@@ -47,76 +55,60 @@ import software.amazon.awscdk.services.cognito.OAuthSettings
  */
 @CdkDslMarker
 public class OAuthSettingsDsl {
-  private val cdkBuilder: OAuthSettings.Builder = OAuthSettings.builder()
+    private val cdkBuilder: OAuthSettings.Builder = OAuthSettings.builder()
 
-  private val _callbackUrls: MutableList<String> = mutableListOf()
+    private val _callbackUrls: MutableList<String> = mutableListOf()
 
-  private val _logoutUrls: MutableList<String> = mutableListOf()
+    private val _logoutUrls: MutableList<String> = mutableListOf()
 
-  private val _scopes: MutableList<OAuthScope> = mutableListOf()
+    private val _scopes: MutableList<OAuthScope> = mutableListOf()
 
-  /**
-   * @param callbackUrls List of allowed redirect URLs for the identity providers.
-   */
-  public fun callbackUrls(vararg callbackUrls: String) {
-    _callbackUrls.addAll(listOf(*callbackUrls))
-  }
+    /** @param callbackUrls List of allowed redirect URLs for the identity providers. */
+    public fun callbackUrls(vararg callbackUrls: String) {
+        _callbackUrls.addAll(listOf(*callbackUrls))
+    }
 
-  /**
-   * @param callbackUrls List of allowed redirect URLs for the identity providers.
-   */
-  public fun callbackUrls(callbackUrls: Collection<String>) {
-    _callbackUrls.addAll(callbackUrls)
-  }
+    /** @param callbackUrls List of allowed redirect URLs for the identity providers. */
+    public fun callbackUrls(callbackUrls: Collection<String>) {
+        _callbackUrls.addAll(callbackUrls)
+    }
 
-  /**
-   * @param flows OAuth flows that are allowed with this client.
-   */
-  public fun flows(flows: OAuthFlowsDsl.() -> Unit = {}) {
-    val builder = OAuthFlowsDsl()
-    builder.apply(flows)
-    cdkBuilder.flows(builder.build())
-  }
+    /** @param flows OAuth flows that are allowed with this client. */
+    public fun flows(flows: OAuthFlowsDsl.() -> Unit = {}) {
+        val builder = OAuthFlowsDsl()
+        builder.apply(flows)
+        cdkBuilder.flows(builder.build())
+    }
 
-  /**
-   * @param flows OAuth flows that are allowed with this client.
-   */
-  public fun flows(flows: OAuthFlows) {
-    cdkBuilder.flows(flows)
-  }
+    /** @param flows OAuth flows that are allowed with this client. */
+    public fun flows(flows: OAuthFlows) {
+        cdkBuilder.flows(flows)
+    }
 
-  /**
-   * @param logoutUrls List of allowed logout URLs for the identity providers.
-   */
-  public fun logoutUrls(vararg logoutUrls: String) {
-    _logoutUrls.addAll(listOf(*logoutUrls))
-  }
+    /** @param logoutUrls List of allowed logout URLs for the identity providers. */
+    public fun logoutUrls(vararg logoutUrls: String) {
+        _logoutUrls.addAll(listOf(*logoutUrls))
+    }
 
-  /**
-   * @param logoutUrls List of allowed logout URLs for the identity providers.
-   */
-  public fun logoutUrls(logoutUrls: Collection<String>) {
-    _logoutUrls.addAll(logoutUrls)
-  }
+    /** @param logoutUrls List of allowed logout URLs for the identity providers. */
+    public fun logoutUrls(logoutUrls: Collection<String>) {
+        _logoutUrls.addAll(logoutUrls)
+    }
 
-  /**
-   * @param scopes OAuth scopes that are allowed with this client.
-   */
-  public fun scopes(vararg scopes: OAuthScope) {
-    _scopes.addAll(listOf(*scopes))
-  }
+    /** @param scopes OAuth scopes that are allowed with this client. */
+    public fun scopes(vararg scopes: OAuthScope) {
+        _scopes.addAll(listOf(*scopes))
+    }
 
-  /**
-   * @param scopes OAuth scopes that are allowed with this client.
-   */
-  public fun scopes(scopes: Collection<OAuthScope>) {
-    _scopes.addAll(scopes)
-  }
+    /** @param scopes OAuth scopes that are allowed with this client. */
+    public fun scopes(scopes: Collection<OAuthScope>) {
+        _scopes.addAll(scopes)
+    }
 
-  public fun build(): OAuthSettings {
-    if(_callbackUrls.isNotEmpty()) cdkBuilder.callbackUrls(_callbackUrls)
-    if(_logoutUrls.isNotEmpty()) cdkBuilder.logoutUrls(_logoutUrls)
-    if(_scopes.isNotEmpty()) cdkBuilder.scopes(_scopes)
-    return cdkBuilder.build()
-  }
+    public fun build(): OAuthSettings {
+        if (_callbackUrls.isNotEmpty()) cdkBuilder.callbackUrls(_callbackUrls)
+        if (_logoutUrls.isNotEmpty()) cdkBuilder.logoutUrls(_logoutUrls)
+        if (_scopes.isNotEmpty()) cdkBuilder.scopes(_scopes)
+        return cdkBuilder.build()
+    }
 }

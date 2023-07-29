@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.ICfnConditionExpression
 
 /**
  * Example:
- *
  * ```
  * CfnBucket rawBucket = CfnBucket.Builder.create(this, "Bucket").build();
  * // -or-
@@ -22,14 +30,12 @@ import software.amazon.awscdk.ICfnConditionExpression
  */
 @CdkDslMarker
 public class CfnConditionPropsDsl {
-  private val cdkBuilder: CfnConditionProps.Builder = CfnConditionProps.builder()
+    private val cdkBuilder: CfnConditionProps.Builder = CfnConditionProps.builder()
 
-  /**
-   * @param expression The expression that the condition will evaluate.
-   */
-  public fun expression(expression: ICfnConditionExpression) {
-    cdkBuilder.expression(expression)
-  }
+    /** @param expression The expression that the condition will evaluate. */
+    public fun expression(expression: ICfnConditionExpression) {
+        cdkBuilder.expression(expression)
+    }
 
-  public fun build(): CfnConditionProps = cdkBuilder.build()
+    public fun build(): CfnConditionProps = cdkBuilder.build()
 }

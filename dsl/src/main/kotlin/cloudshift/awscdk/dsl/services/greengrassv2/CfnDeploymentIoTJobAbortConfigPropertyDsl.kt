@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrassv2
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.greengrassv2.CfnDeployment
  * Contains a list of criteria that define when and how to cancel a configuration deployment.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,37 +40,37 @@ import software.amazon.awscdk.services.greengrassv2.CfnDeployment
  */
 @CdkDslMarker
 public class CfnDeploymentIoTJobAbortConfigPropertyDsl {
-  private val cdkBuilder: CfnDeployment.IoTJobAbortConfigProperty.Builder =
-      CfnDeployment.IoTJobAbortConfigProperty.builder()
+    private val cdkBuilder: CfnDeployment.IoTJobAbortConfigProperty.Builder =
+        CfnDeployment.IoTJobAbortConfigProperty.builder()
 
-  private val _criteriaList: MutableList<Any> = mutableListOf()
+    private val _criteriaList: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param criteriaList The list of criteria that define when and how to cancel the configuration
-   * deployment. 
-   */
-  public fun criteriaList(vararg criteriaList: Any) {
-    _criteriaList.addAll(listOf(*criteriaList))
-  }
+    /**
+     * @param criteriaList The list of criteria that define when and how to cancel the configuration
+     *   deployment.
+     */
+    public fun criteriaList(vararg criteriaList: Any) {
+        _criteriaList.addAll(listOf(*criteriaList))
+    }
 
-  /**
-   * @param criteriaList The list of criteria that define when and how to cancel the configuration
-   * deployment. 
-   */
-  public fun criteriaList(criteriaList: Collection<Any>) {
-    _criteriaList.addAll(criteriaList)
-  }
+    /**
+     * @param criteriaList The list of criteria that define when and how to cancel the configuration
+     *   deployment.
+     */
+    public fun criteriaList(criteriaList: Collection<Any>) {
+        _criteriaList.addAll(criteriaList)
+    }
 
-  /**
-   * @param criteriaList The list of criteria that define when and how to cancel the configuration
-   * deployment. 
-   */
-  public fun criteriaList(criteriaList: IResolvable) {
-    cdkBuilder.criteriaList(criteriaList)
-  }
+    /**
+     * @param criteriaList The list of criteria that define when and how to cancel the configuration
+     *   deployment.
+     */
+    public fun criteriaList(criteriaList: IResolvable) {
+        cdkBuilder.criteriaList(criteriaList)
+    }
 
-  public fun build(): CfnDeployment.IoTJobAbortConfigProperty {
-    if(_criteriaList.isNotEmpty()) cdkBuilder.criteriaList(_criteriaList)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDeployment.IoTJobAbortConfigProperty {
+        if (_criteriaList.isNotEmpty()) cdkBuilder.criteriaList(_criteriaList)
+        return cdkBuilder.build()
+    }
 }

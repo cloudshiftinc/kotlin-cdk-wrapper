@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -17,16 +26,14 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  *
  * **Examples** - For literal values, the expressions must contain single quotes. For example, the
  * value for the `quality` parameter can be `'GOOD'` .
- *
  * * For references, you must specify either variables or input values. For example, the value for
- * the `quality` parameter can be `$input.TemperatureInput.sensorData.quality` .
+ *   the `quality` parameter can be `$input.TemperatureInput.sensorData.quality` .
  *
  * For more information, see
  * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
  * in the *AWS IoT Events Developer Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,46 +59,42 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  */
 @CdkDslMarker
 public class CfnDetectorModelAssetPropertyValuePropertyDsl {
-  private val cdkBuilder: CfnDetectorModel.AssetPropertyValueProperty.Builder =
-      CfnDetectorModel.AssetPropertyValueProperty.builder()
+    private val cdkBuilder: CfnDetectorModel.AssetPropertyValueProperty.Builder =
+        CfnDetectorModel.AssetPropertyValueProperty.builder()
 
-  /**
-   * @param quality The quality of the asset property value.
-   * The value must be `'GOOD'` , `'BAD'` , or `'UNCERTAIN'` .
-   */
-  public fun quality(quality: String) {
-    cdkBuilder.quality(quality)
-  }
+    /**
+     * @param quality The quality of the asset property value. The value must be `'GOOD'` , `'BAD'`
+     *   , or `'UNCERTAIN'` .
+     */
+    public fun quality(quality: String) {
+        cdkBuilder.quality(quality)
+    }
 
-  /**
-   * @param timestamp The timestamp associated with the asset property value.
-   * The default is the current event time.
-   */
-  public fun timestamp(timestamp: IResolvable) {
-    cdkBuilder.timestamp(timestamp)
-  }
+    /**
+     * @param timestamp The timestamp associated with the asset property value. The default is the
+     *   current event time.
+     */
+    public fun timestamp(timestamp: IResolvable) {
+        cdkBuilder.timestamp(timestamp)
+    }
 
-  /**
-   * @param timestamp The timestamp associated with the asset property value.
-   * The default is the current event time.
-   */
-  public fun timestamp(timestamp: CfnDetectorModel.AssetPropertyTimestampProperty) {
-    cdkBuilder.timestamp(timestamp)
-  }
+    /**
+     * @param timestamp The timestamp associated with the asset property value. The default is the
+     *   current event time.
+     */
+    public fun timestamp(timestamp: CfnDetectorModel.AssetPropertyTimestampProperty) {
+        cdkBuilder.timestamp(timestamp)
+    }
 
-  /**
-   * @param value The value to send to an asset property. 
-   */
-  public fun `value`(`value`: IResolvable) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value to send to an asset property. */
+    public fun `value`(`value`: IResolvable) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  /**
-   * @param value The value to send to an asset property. 
-   */
-  public fun `value`(`value`: CfnDetectorModel.AssetPropertyVariantProperty) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value to send to an asset property. */
+    public fun `value`(`value`: CfnDetectorModel.AssetPropertyVariantProperty) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnDetectorModel.AssetPropertyValueProperty = cdkBuilder.build()
+    public fun build(): CfnDetectorModel.AssetPropertyValueProperty = cdkBuilder.build()
 }

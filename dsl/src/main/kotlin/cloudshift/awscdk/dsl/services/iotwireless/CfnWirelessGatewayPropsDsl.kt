@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
-import software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
+import software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps
 
 /**
  * Properties for defining a `CfnWirelessGateway`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,16 +57,14 @@ public class CfnWirelessGatewayPropsDsl {
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * @param description The description of the new resource.
-     * The maximum length is 2048 characters.
+     * @param description The description of the new resource. The maximum length is 2048
+     *   characters.
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /**
-     * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
-     */
+    /** @param lastUplinkReceivedAt The date and time when the most recent uplink was received. */
     public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
         cdkBuilder.lastUplinkReceivedAt(lastUplinkReceivedAt)
     }
@@ -77,16 +83,14 @@ public class CfnWirelessGatewayPropsDsl {
         cdkBuilder.loRaWan(loRaWan)
     }
 
-    /**
-     * @param name The name of the new resource.
-     */
+    /** @param name The name of the new resource. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
     /**
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
-     * Tags can have a minimum of 0 and a maximum of 50 items.
+     *   Tags can have a minimum of 0 and a maximum of 50 items.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
@@ -94,22 +98,20 @@ public class CfnWirelessGatewayPropsDsl {
 
     /**
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
-     * Tags can have a minimum of 0 and a maximum of 50 items.
+     *   Tags can have a minimum of 0 and a maximum of 50 items.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }
 
-    /**
-     * @param thingArn The ARN of the thing to associate with the wireless gateway.
-     */
+    /** @param thingArn The ARN of the thing to associate with the wireless gateway. */
     public fun thingArn(thingArn: String) {
         cdkBuilder.thingArn(thingArn)
     }
 
     /**
-     * @param thingName The name of the thing associated with the wireless gateway.
-     * The value is empty if a thing isn't associated with the gateway.
+     * @param thingName The name of the thing associated with the wireless gateway. The value is
+     *   empty if a thing isn't associated with the gateway.
      */
     public fun thingName(thingName: String) {
         cdkBuilder.thingName(thingName)

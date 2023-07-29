@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.secretsmanager.SecretRotationApplicationOptions
 import kotlin.Boolean
+import software.amazon.awscdk.services.secretsmanager.SecretRotationApplicationOptions
 
 /**
  * Options for a SecretRotationApplication.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,9 +34,7 @@ public class SecretRotationApplicationOptionsDsl {
     private val cdkBuilder: SecretRotationApplicationOptions.Builder =
         SecretRotationApplicationOptions.builder()
 
-    /**
-     * @param isMultiUser Whether the rotation application uses the mutli user scheme.
-     */
+    /** @param isMultiUser Whether the rotation application uses the mutli user scheme. */
     public fun isMultiUser(isMultiUser: Boolean) {
         cdkBuilder.isMultiUser(isMultiUser)
     }

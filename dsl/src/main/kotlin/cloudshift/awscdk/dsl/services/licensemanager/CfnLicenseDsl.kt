@@ -1,27 +1,35 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.licensemanager.CfnLicense
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.licensemanager.CfnLicense
+import software.constructs.Construct
 
 /**
  * Specifies a granted license.
  *
  * Granted licenses are licenses for products that your organization purchased from AWS Marketplace
  * or directly from a seller who integrated their software with managed entitlements. For more
- * information, see [Granted
- * licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html) in the
- * *AWS License Manager User Guide* .
+ * information, see
+ * [Granted licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html)
+ * in the *AWS License Manager User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -74,7 +82,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnLicenseDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnLicense.Builder = CfnLicense.Builder.create(scope, id)
 
@@ -86,6 +94,7 @@ public class CfnLicenseDsl(
      * License beneficiary.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-beneficiary)
+     *
      * @param beneficiary License beneficiary.
      */
     public fun beneficiary(beneficiary: String) {
@@ -96,6 +105,7 @@ public class CfnLicenseDsl(
      * Configuration for consumption of the license.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-consumptionconfiguration)
+     *
      * @param consumptionConfiguration Configuration for consumption of the license.
      */
     public fun consumptionConfiguration(consumptionConfiguration: IResolvable) {
@@ -106,9 +116,12 @@ public class CfnLicenseDsl(
      * Configuration for consumption of the license.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-consumptionconfiguration)
+     *
      * @param consumptionConfiguration Configuration for consumption of the license.
      */
-    public fun consumptionConfiguration(consumptionConfiguration: CfnLicense.ConsumptionConfigurationProperty) {
+    public fun consumptionConfiguration(
+        consumptionConfiguration: CfnLicense.ConsumptionConfigurationProperty
+    ) {
         cdkBuilder.consumptionConfiguration(consumptionConfiguration)
     }
 
@@ -116,6 +129,7 @@ public class CfnLicenseDsl(
      * License entitlements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-entitlements)
+     *
      * @param entitlements License entitlements.
      */
     public fun entitlements(vararg entitlements: Any) {
@@ -126,6 +140,7 @@ public class CfnLicenseDsl(
      * License entitlements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-entitlements)
+     *
      * @param entitlements License entitlements.
      */
     public fun entitlements(entitlements: Collection<Any>) {
@@ -136,6 +151,7 @@ public class CfnLicenseDsl(
      * License entitlements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-entitlements)
+     *
      * @param entitlements License entitlements.
      */
     public fun entitlements(entitlements: IResolvable) {
@@ -146,6 +162,7 @@ public class CfnLicenseDsl(
      * Home Region of the license.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-homeregion)
+     *
      * @param homeRegion Home Region of the license.
      */
     public fun homeRegion(homeRegion: String) {
@@ -156,6 +173,7 @@ public class CfnLicenseDsl(
      * License issuer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-issuer)
+     *
      * @param issuer License issuer.
      */
     public fun issuer(issuer: IResolvable) {
@@ -166,6 +184,7 @@ public class CfnLicenseDsl(
      * License issuer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-issuer)
+     *
      * @param issuer License issuer.
      */
     public fun issuer(issuer: CfnLicense.IssuerDataProperty) {
@@ -176,6 +195,7 @@ public class CfnLicenseDsl(
      * License metadata.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-licensemetadata)
+     *
      * @param licenseMetadata License metadata.
      */
     public fun licenseMetadata(vararg licenseMetadata: Any) {
@@ -186,6 +206,7 @@ public class CfnLicenseDsl(
      * License metadata.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-licensemetadata)
+     *
      * @param licenseMetadata License metadata.
      */
     public fun licenseMetadata(licenseMetadata: Collection<Any>) {
@@ -196,6 +217,7 @@ public class CfnLicenseDsl(
      * License metadata.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-licensemetadata)
+     *
      * @param licenseMetadata License metadata.
      */
     public fun licenseMetadata(licenseMetadata: IResolvable) {
@@ -206,6 +228,7 @@ public class CfnLicenseDsl(
      * License name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-licensename)
+     *
      * @param licenseName License name.
      */
     public fun licenseName(licenseName: String) {
@@ -216,6 +239,7 @@ public class CfnLicenseDsl(
      * Product name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-productname)
+     *
      * @param productName Product name.
      */
     public fun productName(productName: String) {
@@ -226,6 +250,7 @@ public class CfnLicenseDsl(
      * Product SKU.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-productsku)
+     *
      * @param productSku Product SKU.
      */
     public fun productSku(productSku: String) {
@@ -236,6 +261,7 @@ public class CfnLicenseDsl(
      * License status.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-status)
+     *
      * @param status License status.
      */
     public fun status(status: String) {
@@ -246,6 +272,7 @@ public class CfnLicenseDsl(
      * Date and time range during which the license is valid, in ISO8601-UTC format.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-validity)
+     *
      * @param validity Date and time range during which the license is valid, in ISO8601-UTC format.
      */
     public fun validity(validity: IResolvable) {
@@ -256,6 +283,7 @@ public class CfnLicenseDsl(
      * Date and time range during which the license is valid, in ISO8601-UTC format.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-validity)
+     *
      * @param validity Date and time range during which the license is valid, in ISO8601-UTC format.
      */
     public fun validity(validity: CfnLicense.ValidityDateFormatProperty) {

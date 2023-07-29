@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefini
  * The CSV format.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefini
  */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionCsvPropertyDsl {
-  private val cdkBuilder: CfnModelExplainabilityJobDefinition.CsvProperty.Builder =
-      CfnModelExplainabilityJobDefinition.CsvProperty.builder()
+    private val cdkBuilder: CfnModelExplainabilityJobDefinition.CsvProperty.Builder =
+        CfnModelExplainabilityJobDefinition.CsvProperty.builder()
 
-  /**
-   * @param header A boolean flag indicating if given CSV has header.
-   */
-  public fun `header`(`header`: Boolean) {
-    cdkBuilder.`header`(`header`)
-  }
+    /** @param header A boolean flag indicating if given CSV has header. */
+    public fun `header`(`header`: Boolean) {
+        cdkBuilder.`header`(`header`)
+    }
 
-  /**
-   * @param header A boolean flag indicating if given CSV has header.
-   */
-  public fun `header`(`header`: IResolvable) {
-    cdkBuilder.`header`(`header`)
-  }
+    /** @param header A boolean flag indicating if given CSV has header. */
+    public fun `header`(`header`: IResolvable) {
+        cdkBuilder.`header`(`header`)
+    }
 
-  public fun build(): CfnModelExplainabilityJobDefinition.CsvProperty = cdkBuilder.build()
+    public fun build(): CfnModelExplainabilityJobDefinition.CsvProperty = cdkBuilder.build()
 }

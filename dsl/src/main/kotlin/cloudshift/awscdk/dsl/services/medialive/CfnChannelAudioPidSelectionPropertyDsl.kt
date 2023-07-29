@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is AudioSelectorSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelAudioPidSelectionPropertyDsl {
-  private val cdkBuilder: CfnChannel.AudioPidSelectionProperty.Builder =
-      CfnChannel.AudioPidSelectionProperty.builder()
+    private val cdkBuilder: CfnChannel.AudioPidSelectionProperty.Builder =
+        CfnChannel.AudioPidSelectionProperty.builder()
 
-  /**
-   * @param pid Select the audio by this PID.
-   */
-  public fun pid(pid: Number) {
-    cdkBuilder.pid(pid)
-  }
+    /** @param pid Select the audio by this PID. */
+    public fun pid(pid: Number) {
+        cdkBuilder.pid(pid)
+    }
 
-  public fun build(): CfnChannel.AudioPidSelectionProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.AudioPidSelectionProperty = cdkBuilder.build()
 }

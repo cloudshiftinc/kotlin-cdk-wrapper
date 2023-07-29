@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -13,12 +22,11 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * You specify one override for each rule whose action you want to change.
  *
  * You can use overrides for testing, for example you can override all of rule actions to `Count`
- * and then monitor the resulting count metrics to understand how the rule group would handle your web
- * traffic. You can also permanently override some or all actions, to modify how the rule group manages
- * your web traffic.
+ * and then monitor the resulting count metrics to understand how the rule group would handle your
+ * web traffic. You can also permanently override some or all actions, to modify how the rule group
+ * manages your web traffic.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -77,31 +85,29 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLRuleActionOverridePropertyDsl {
-  private val cdkBuilder: CfnWebACL.RuleActionOverrideProperty.Builder =
-      CfnWebACL.RuleActionOverrideProperty.builder()
+    private val cdkBuilder: CfnWebACL.RuleActionOverrideProperty.Builder =
+        CfnWebACL.RuleActionOverrideProperty.builder()
 
-  /**
-   * @param actionToUse The override action to use, in place of the configured action of the rule in
-   * the rule group. 
-   */
-  public fun actionToUse(actionToUse: IResolvable) {
-    cdkBuilder.actionToUse(actionToUse)
-  }
+    /**
+     * @param actionToUse The override action to use, in place of the configured action of the rule
+     *   in the rule group.
+     */
+    public fun actionToUse(actionToUse: IResolvable) {
+        cdkBuilder.actionToUse(actionToUse)
+    }
 
-  /**
-   * @param actionToUse The override action to use, in place of the configured action of the rule in
-   * the rule group. 
-   */
-  public fun actionToUse(actionToUse: CfnWebACL.RuleActionProperty) {
-    cdkBuilder.actionToUse(actionToUse)
-  }
+    /**
+     * @param actionToUse The override action to use, in place of the configured action of the rule
+     *   in the rule group.
+     */
+    public fun actionToUse(actionToUse: CfnWebACL.RuleActionProperty) {
+        cdkBuilder.actionToUse(actionToUse)
+    }
 
-  /**
-   * @param name The name of the rule to override. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the rule to override. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnWebACL.RuleActionOverrideProperty = cdkBuilder.build()
+    public fun build(): CfnWebACL.RuleActionOverrideProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.dynamodb.CfnTable
  * There is one value, CsvOption.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,24 +37,24 @@ import software.amazon.awscdk.services.dynamodb.CfnTable
  */
 @CdkDslMarker
 public class CfnTableInputFormatOptionsPropertyDsl {
-  private val cdkBuilder: CfnTable.InputFormatOptionsProperty.Builder =
-      CfnTable.InputFormatOptionsProperty.builder()
+    private val cdkBuilder: CfnTable.InputFormatOptionsProperty.Builder =
+        CfnTable.InputFormatOptionsProperty.builder()
 
-  /**
-   * @param csv The options for imported source files in CSV format.
-   * The values are Delimiter and HeaderList.
-   */
-  public fun csv(csv: IResolvable) {
-    cdkBuilder.csv(csv)
-  }
+    /**
+     * @param csv The options for imported source files in CSV format. The values are Delimiter and
+     *   HeaderList.
+     */
+    public fun csv(csv: IResolvable) {
+        cdkBuilder.csv(csv)
+    }
 
-  /**
-   * @param csv The options for imported source files in CSV format.
-   * The values are Delimiter and HeaderList.
-   */
-  public fun csv(csv: CfnTable.CsvProperty) {
-    cdkBuilder.csv(csv)
-  }
+    /**
+     * @param csv The options for imported source files in CSV format. The values are Delimiter and
+     *   HeaderList.
+     */
+    public fun csv(csv: CfnTable.CsvProperty) {
+        cdkBuilder.csv(csv)
+    }
 
-  public fun build(): CfnTable.InputFormatOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTable.InputFormatOptionsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.eks.CfnFargateProfile
  * A key-value pair.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.eks.CfnFargateProfile
  */
 @CdkDslMarker
 public class CfnFargateProfileLabelPropertyDsl {
-  private val cdkBuilder: CfnFargateProfile.LabelProperty.Builder =
-      CfnFargateProfile.LabelProperty.builder()
+    private val cdkBuilder: CfnFargateProfile.LabelProperty.Builder =
+        CfnFargateProfile.LabelProperty.builder()
 
-  /**
-   * @param key Enter a key. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key Enter a key. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value Enter a value. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value Enter a value. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnFargateProfile.LabelProperty = cdkBuilder.build()
+    public fun build(): CfnFargateProfile.LabelProperty = cdkBuilder.build()
 }

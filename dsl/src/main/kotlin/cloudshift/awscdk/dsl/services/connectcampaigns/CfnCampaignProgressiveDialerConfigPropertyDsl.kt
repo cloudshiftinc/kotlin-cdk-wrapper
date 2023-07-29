@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connectcampaigns
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  * Contains progressive dialer configuration for an outbound campaign.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  */
 @CdkDslMarker
 public class CfnCampaignProgressiveDialerConfigPropertyDsl {
-  private val cdkBuilder: CfnCampaign.ProgressiveDialerConfigProperty.Builder =
-      CfnCampaign.ProgressiveDialerConfigProperty.builder()
+    private val cdkBuilder: CfnCampaign.ProgressiveDialerConfigProperty.Builder =
+        CfnCampaign.ProgressiveDialerConfigProperty.builder()
 
-  /**
-   * @param bandwidthAllocation Bandwidth allocation for the progressive dialer. 
-   */
-  public fun bandwidthAllocation(bandwidthAllocation: Number) {
-    cdkBuilder.bandwidthAllocation(bandwidthAllocation)
-  }
+    /** @param bandwidthAllocation Bandwidth allocation for the progressive dialer. */
+    public fun bandwidthAllocation(bandwidthAllocation: Number) {
+        cdkBuilder.bandwidthAllocation(bandwidthAllocation)
+    }
 
-  public fun build(): CfnCampaign.ProgressiveDialerConfigProperty = cdkBuilder.build()
+    public fun build(): CfnCampaign.ProgressiveDialerConfigProperty = cdkBuilder.build()
 }

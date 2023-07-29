@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.appsync.Visibility
  * Properties for an AppSync GraphQL API.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.events.*;
  * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
@@ -36,90 +44,80 @@ import software.amazon.awscdk.services.appsync.Visibility
  */
 @CdkDslMarker
 public class GraphqlApiPropsDsl {
-  private val cdkBuilder: GraphqlApiProps.Builder = GraphqlApiProps.builder()
+    private val cdkBuilder: GraphqlApiProps.Builder = GraphqlApiProps.builder()
 
-  /**
-   * @param authorizationConfig Optional authorization configuration.
-   */
-  public fun authorizationConfig(authorizationConfig: AuthorizationConfigDsl.() -> Unit = {}) {
-    val builder = AuthorizationConfigDsl()
-    builder.apply(authorizationConfig)
-    cdkBuilder.authorizationConfig(builder.build())
-  }
+    /** @param authorizationConfig Optional authorization configuration. */
+    public fun authorizationConfig(authorizationConfig: AuthorizationConfigDsl.() -> Unit = {}) {
+        val builder = AuthorizationConfigDsl()
+        builder.apply(authorizationConfig)
+        cdkBuilder.authorizationConfig(builder.build())
+    }
 
-  /**
-   * @param authorizationConfig Optional authorization configuration.
-   */
-  public fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
-    cdkBuilder.authorizationConfig(authorizationConfig)
-  }
+    /** @param authorizationConfig Optional authorization configuration. */
+    public fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
+        cdkBuilder.authorizationConfig(authorizationConfig)
+    }
 
-  /**
-   * @param domainName The domain name configuration for the GraphQL API.
-   * The Route 53 hosted zone and CName DNS record must be configured in addition to this setting to
-   * enable custom domain URL
-   */
-  public fun domainName(domainName: DomainOptionsDsl.() -> Unit = {}) {
-    val builder = DomainOptionsDsl()
-    builder.apply(domainName)
-    cdkBuilder.domainName(builder.build())
-  }
+    /**
+     * @param domainName The domain name configuration for the GraphQL API. The Route 53 hosted zone
+     *   and CName DNS record must be configured in addition to this setting to enable custom domain
+     *   URL
+     */
+    public fun domainName(domainName: DomainOptionsDsl.() -> Unit = {}) {
+        val builder = DomainOptionsDsl()
+        builder.apply(domainName)
+        cdkBuilder.domainName(builder.build())
+    }
 
-  /**
-   * @param domainName The domain name configuration for the GraphQL API.
-   * The Route 53 hosted zone and CName DNS record must be configured in addition to this setting to
-   * enable custom domain URL
-   */
-  public fun domainName(domainName: DomainOptions) {
-    cdkBuilder.domainName(domainName)
-  }
+    /**
+     * @param domainName The domain name configuration for the GraphQL API. The Route 53 hosted zone
+     *   and CName DNS record must be configured in addition to this setting to enable custom domain
+     *   URL
+     */
+    public fun domainName(domainName: DomainOptions) {
+        cdkBuilder.domainName(domainName)
+    }
 
-  /**
-   * @param logConfig Logging configuration for this api.
-   */
-  public fun logConfig(logConfig: LogConfigDsl.() -> Unit = {}) {
-    val builder = LogConfigDsl()
-    builder.apply(logConfig)
-    cdkBuilder.logConfig(builder.build())
-  }
+    /** @param logConfig Logging configuration for this api. */
+    public fun logConfig(logConfig: LogConfigDsl.() -> Unit = {}) {
+        val builder = LogConfigDsl()
+        builder.apply(logConfig)
+        cdkBuilder.logConfig(builder.build())
+    }
 
-  /**
-   * @param logConfig Logging configuration for this api.
-   */
-  public fun logConfig(logConfig: LogConfig) {
-    cdkBuilder.logConfig(logConfig)
-  }
+    /** @param logConfig Logging configuration for this api. */
+    public fun logConfig(logConfig: LogConfig) {
+        cdkBuilder.logConfig(logConfig)
+    }
 
-  /**
-   * @param name the name of the GraphQL API. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name the name of the GraphQL API. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param schema GraphQL schema definition. Specify how you want to define your schema. 
-   * Schema.fromFile(filePath: string) allows schema definition through schema.graphql file
-   */
-  public fun schema(schema: ISchema) {
-    cdkBuilder.schema(schema)
-  }
+    /**
+     * @param schema GraphQL schema definition. Specify how you want to define your schema.
+     *   Schema.fromFile(filePath: string) allows schema definition through schema.graphql file
+     */
+    public fun schema(schema: ISchema) {
+        cdkBuilder.schema(schema)
+    }
 
-  /**
-   * @param visibility A value indicating whether the API is accessible from anywhere (GLOBAL) or
-   * can only be access from a VPC (PRIVATE).
-   */
-  public fun visibility(visibility: Visibility) {
-    cdkBuilder.visibility(visibility)
-  }
+    /**
+     * @param visibility A value indicating whether the API is accessible from anywhere (GLOBAL) or
+     *   can only be access from a VPC (PRIVATE).
+     */
+    public fun visibility(visibility: Visibility) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  /**
-   * @param xrayEnabled A flag indicating whether or not X-Ray tracing is enabled for the GraphQL
-   * API.
-   */
-  public fun xrayEnabled(xrayEnabled: Boolean) {
-    cdkBuilder.xrayEnabled(xrayEnabled)
-  }
+    /**
+     * @param xrayEnabled A flag indicating whether or not X-Ray tracing is enabled for the GraphQL
+     *   API.
+     */
+    public fun xrayEnabled(xrayEnabled: Boolean) {
+        cdkBuilder.xrayEnabled(xrayEnabled)
+    }
 
-  public fun build(): GraphqlApiProps = cdkBuilder.build()
+    public fun build(): GraphqlApiProps = cdkBuilder.build()
 }

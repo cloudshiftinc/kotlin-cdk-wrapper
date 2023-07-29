@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.resourceexplorer2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.resourceexplorer2.CfnView
  * queries made using this view.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,14 +33,12 @@ import software.amazon.awscdk.services.resourceexplorer2.CfnView
  */
 @CdkDslMarker
 public class CfnViewFiltersPropertyDsl {
-  private val cdkBuilder: CfnView.FiltersProperty.Builder = CfnView.FiltersProperty.builder()
+    private val cdkBuilder: CfnView.FiltersProperty.Builder = CfnView.FiltersProperty.builder()
 
-  /**
-   * @param filterString the value to be set. 
-   */
-  public fun filterString(filterString: String) {
-    cdkBuilder.filterString(filterString)
-  }
+    /** @param filterString the value to be set. */
+    public fun filterString(filterString: String) {
+        cdkBuilder.filterString(filterString)
+    }
 
-  public fun build(): CfnView.FiltersProperty = cdkBuilder.build()
+    public fun build(): CfnView.FiltersProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotfleetwise
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifestProps
  * Properties for defining a `CfnDecoderManifest`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -89,105 +97,91 @@ import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifestProps
  */
 @CdkDslMarker
 public class CfnDecoderManifestPropsDsl {
-  private val cdkBuilder: CfnDecoderManifestProps.Builder = CfnDecoderManifestProps.builder()
+    private val cdkBuilder: CfnDecoderManifestProps.Builder = CfnDecoderManifestProps.builder()
 
-  private val _networkInterfaces: MutableList<Any> = mutableListOf()
+    private val _networkInterfaces: MutableList<Any> = mutableListOf()
 
-  private val _signalDecoders: MutableList<Any> = mutableListOf()
+    private val _signalDecoders: MutableList<Any> = mutableListOf()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description (Optional) A brief description of the decoder manifest.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description (Optional) A brief description of the decoder manifest. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param modelManifestArn The Amazon Resource Name (ARN) of a vehicle model (model manifest)
-   * associated with the decoder manifest. 
-   */
-  public fun modelManifestArn(modelManifestArn: String) {
-    cdkBuilder.modelManifestArn(modelManifestArn)
-  }
+    /**
+     * @param modelManifestArn The Amazon Resource Name (ARN) of a vehicle model (model manifest)
+     *   associated with the decoder manifest.
+     */
+    public fun modelManifestArn(modelManifestArn: String) {
+        cdkBuilder.modelManifestArn(modelManifestArn)
+    }
 
-  /**
-   * @param name The name of the decoder manifest. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the decoder manifest. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param networkInterfaces (Optional) A list of information about available network interfaces.
-   */
-  public fun networkInterfaces(vararg networkInterfaces: Any) {
-    _networkInterfaces.addAll(listOf(*networkInterfaces))
-  }
+    /**
+     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     */
+    public fun networkInterfaces(vararg networkInterfaces: Any) {
+        _networkInterfaces.addAll(listOf(*networkInterfaces))
+    }
 
-  /**
-   * @param networkInterfaces (Optional) A list of information about available network interfaces.
-   */
-  public fun networkInterfaces(networkInterfaces: Collection<Any>) {
-    _networkInterfaces.addAll(networkInterfaces)
-  }
+    /**
+     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     */
+    public fun networkInterfaces(networkInterfaces: Collection<Any>) {
+        _networkInterfaces.addAll(networkInterfaces)
+    }
 
-  /**
-   * @param networkInterfaces (Optional) A list of information about available network interfaces.
-   */
-  public fun networkInterfaces(networkInterfaces: IResolvable) {
-    cdkBuilder.networkInterfaces(networkInterfaces)
-  }
+    /**
+     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     */
+    public fun networkInterfaces(networkInterfaces: IResolvable) {
+        cdkBuilder.networkInterfaces(networkInterfaces)
+    }
 
-  /**
-   * @param signalDecoders (Optional) A list of information about signal decoders.
-   */
-  public fun signalDecoders(vararg signalDecoders: Any) {
-    _signalDecoders.addAll(listOf(*signalDecoders))
-  }
+    /** @param signalDecoders (Optional) A list of information about signal decoders. */
+    public fun signalDecoders(vararg signalDecoders: Any) {
+        _signalDecoders.addAll(listOf(*signalDecoders))
+    }
 
-  /**
-   * @param signalDecoders (Optional) A list of information about signal decoders.
-   */
-  public fun signalDecoders(signalDecoders: Collection<Any>) {
-    _signalDecoders.addAll(signalDecoders)
-  }
+    /** @param signalDecoders (Optional) A list of information about signal decoders. */
+    public fun signalDecoders(signalDecoders: Collection<Any>) {
+        _signalDecoders.addAll(signalDecoders)
+    }
 
-  /**
-   * @param signalDecoders (Optional) A list of information about signal decoders.
-   */
-  public fun signalDecoders(signalDecoders: IResolvable) {
-    cdkBuilder.signalDecoders(signalDecoders)
-  }
+    /** @param signalDecoders (Optional) A list of information about signal decoders. */
+    public fun signalDecoders(signalDecoders: IResolvable) {
+        cdkBuilder.signalDecoders(signalDecoders)
+    }
 
-  /**
-   * @param status (Optional) The state of the decoder manifest.
-   * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
-   * `DRAFT` , you can edit the decoder manifest.
-   */
-  public fun status(status: String) {
-    cdkBuilder.status(status)
-  }
+    /**
+     * @param status (Optional) The state of the decoder manifest. If the status is `ACTIVE` , the
+     *   decoder manifest can't be edited. If the status is marked `DRAFT` , you can edit the
+     *   decoder manifest.
+     */
+    public fun status(status: String) {
+        cdkBuilder.status(status)
+    }
 
-  /**
-   * @param tags (Optional) Metadata that can be used to manage the decoder manifest.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags (Optional) Metadata that can be used to manage the decoder manifest. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags (Optional) Metadata that can be used to manage the decoder manifest.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags (Optional) Metadata that can be used to manage the decoder manifest. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnDecoderManifestProps {
-    if(_networkInterfaces.isNotEmpty()) cdkBuilder.networkInterfaces(_networkInterfaces)
-    if(_signalDecoders.isNotEmpty()) cdkBuilder.signalDecoders(_signalDecoders)
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDecoderManifestProps {
+        if (_networkInterfaces.isNotEmpty()) cdkBuilder.networkInterfaces(_networkInterfaces)
+        if (_signalDecoders.isNotEmpty()) cdkBuilder.signalDecoders(_signalDecoders)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

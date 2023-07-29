@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emrserverless
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.emrserverless.CfnApplication
  * The specifications for a worker type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,23 +35,20 @@ import software.amazon.awscdk.services.emrserverless.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationWorkerTypeSpecificationInputPropertyDsl {
-  private val cdkBuilder: CfnApplication.WorkerTypeSpecificationInputProperty.Builder =
-      CfnApplication.WorkerTypeSpecificationInputProperty.builder()
+    private val cdkBuilder: CfnApplication.WorkerTypeSpecificationInputProperty.Builder =
+        CfnApplication.WorkerTypeSpecificationInputProperty.builder()
 
-  /**
-   * @param imageConfiguration The image configuration.
-   */
-  public fun imageConfiguration(imageConfiguration: IResolvable) {
-    cdkBuilder.imageConfiguration(imageConfiguration)
-  }
+    /** @param imageConfiguration The image configuration. */
+    public fun imageConfiguration(imageConfiguration: IResolvable) {
+        cdkBuilder.imageConfiguration(imageConfiguration)
+    }
 
-  /**
-   * @param imageConfiguration The image configuration.
-   */
-  public
-      fun imageConfiguration(imageConfiguration: CfnApplication.ImageConfigurationInputProperty) {
-    cdkBuilder.imageConfiguration(imageConfiguration)
-  }
+    /** @param imageConfiguration The image configuration. */
+    public fun imageConfiguration(
+        imageConfiguration: CfnApplication.ImageConfigurationInputProperty
+    ) {
+        cdkBuilder.imageConfiguration(imageConfiguration)
+    }
 
-  public fun build(): CfnApplication.WorkerTypeSpecificationInputProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.WorkerTypeSpecificationInputProperty = cdkBuilder.build()
 }

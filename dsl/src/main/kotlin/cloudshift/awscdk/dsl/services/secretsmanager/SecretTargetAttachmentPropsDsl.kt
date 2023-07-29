@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachmentProp
  * Construction properties for an AttachedSecret.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,12 @@ public class SecretTargetAttachmentPropsDsl {
     private val cdkBuilder: SecretTargetAttachmentProps.Builder =
         SecretTargetAttachmentProps.builder()
 
-    /**
-     * @param secret The secret to attach to the target.
-     */
+    /** @param secret The secret to attach to the target. */
     public fun secret(secret: ISecret) {
         cdkBuilder.secret(secret)
     }
 
-    /**
-     * @param target The target to attach the secret to.
-     */
+    /** @param target The target to attach the secret to. */
     public fun target(target: ISecretAttachmentTarget) {
         cdkBuilder.target(target)
     }

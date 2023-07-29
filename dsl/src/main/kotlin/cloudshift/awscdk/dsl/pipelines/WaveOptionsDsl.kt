@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.pipelines.Step
-import software.amazon.awscdk.pipelines.WaveOptions
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.pipelines.Step
+import software.amazon.awscdk.pipelines.WaveOptions
 
 /**
  * Options to pass to `addWave`.
  *
  * Example:
- *
  * ```
  * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
  * .synth(ShellStep.Builder.create("Synth")
@@ -47,30 +55,22 @@ public class WaveOptionsDsl {
 
     private val _pre: MutableList<Step> = mutableListOf()
 
-    /**
-     * @param post Additional steps to run after all of the stages in the wave.
-     */
+    /** @param post Additional steps to run after all of the stages in the wave. */
     public fun post(vararg post: Step) {
         _post.addAll(listOf(*post))
     }
 
-    /**
-     * @param post Additional steps to run after all of the stages in the wave.
-     */
+    /** @param post Additional steps to run after all of the stages in the wave. */
     public fun post(post: Collection<Step>) {
         _post.addAll(post)
     }
 
-    /**
-     * @param pre Additional steps to run before any of the stages in the wave.
-     */
+    /** @param pre Additional steps to run before any of the stages in the wave. */
     public fun pre(vararg pre: Step) {
         _pre.addAll(listOf(*pre))
     }
 
-    /**
-     * @param pre Additional steps to run before any of the stages in the wave.
-     */
+    /** @param pre Additional steps to run before any of the stages in the wave. */
     public fun pre(pre: Collection<Step>) {
         _pre.addAll(pre)
     }

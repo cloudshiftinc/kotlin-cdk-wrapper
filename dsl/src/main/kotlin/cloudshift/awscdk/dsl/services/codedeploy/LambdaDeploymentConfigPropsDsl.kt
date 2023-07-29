@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.codedeploy.TrafficRouting
  * Construction properties of `LambdaDeploymentConfig`.
  *
  * Example:
- *
  * ```
  * LambdaApplication application;
  * Alias alias;
@@ -31,23 +39,24 @@ import software.amazon.awscdk.services.codedeploy.TrafficRouting
  */
 @CdkDslMarker
 public class LambdaDeploymentConfigPropsDsl {
-  private val cdkBuilder: LambdaDeploymentConfigProps.Builder =
-      LambdaDeploymentConfigProps.builder()
+    private val cdkBuilder: LambdaDeploymentConfigProps.Builder =
+        LambdaDeploymentConfigProps.builder()
 
-  /**
-   * @param deploymentConfigName The physical, human-readable name of the Deployment Configuration.
-   */
-  public fun deploymentConfigName(deploymentConfigName: String) {
-    cdkBuilder.deploymentConfigName(deploymentConfigName)
-  }
+    /**
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     *   Configuration.
+     */
+    public fun deploymentConfigName(deploymentConfigName: String) {
+        cdkBuilder.deploymentConfigName(deploymentConfigName)
+    }
 
-  /**
-   * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
-   * target group to the 'green' target group during a deployment.
-   */
-  public fun trafficRouting(trafficRouting: TrafficRouting) {
-    cdkBuilder.trafficRouting(trafficRouting)
-  }
+    /**
+     * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
+     *   target group to the 'green' target group during a deployment.
+     */
+    public fun trafficRouting(trafficRouting: TrafficRouting) {
+        cdkBuilder.trafficRouting(trafficRouting)
+    }
 
-  public fun build(): LambdaDeploymentConfigProps = cdkBuilder.build()
+    public fun build(): LambdaDeploymentConfigProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.datasync
 
@@ -10,12 +19,11 @@ import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
  * Specifies the Network File System (NFS) protocol configuration that AWS DataSync uses to access a
  * storage virtual machine (SVM) on your Amazon FSx for NetApp ONTAP file system.
  *
- * For more information, see [Accessing FSx for ONTAP file
- * systems](https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html#create-ontap-location-access)
+ * For more information, see
+ * [Accessing FSx for ONTAP file systems](https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html#create-ontap-location-access)
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,18 @@ import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
  */
 @CdkDslMarker
 public class CfnLocationFSxONTAPNFSPropertyDsl {
-  private val cdkBuilder: CfnLocationFSxONTAP.NFSProperty.Builder =
-      CfnLocationFSxONTAP.NFSProperty.builder()
+    private val cdkBuilder: CfnLocationFSxONTAP.NFSProperty.Builder =
+        CfnLocationFSxONTAP.NFSProperty.builder()
 
-  /**
-   * @param mountOptions Specifies how DataSync can access a location using the NFS protocol. 
-   */
-  public fun mountOptions(mountOptions: IResolvable) {
-    cdkBuilder.mountOptions(mountOptions)
-  }
+    /** @param mountOptions Specifies how DataSync can access a location using the NFS protocol. */
+    public fun mountOptions(mountOptions: IResolvable) {
+        cdkBuilder.mountOptions(mountOptions)
+    }
 
-  /**
-   * @param mountOptions Specifies how DataSync can access a location using the NFS protocol. 
-   */
-  public fun mountOptions(mountOptions: CfnLocationFSxONTAP.NfsMountOptionsProperty) {
-    cdkBuilder.mountOptions(mountOptions)
-  }
+    /** @param mountOptions Specifies how DataSync can access a location using the NFS protocol. */
+    public fun mountOptions(mountOptions: CfnLocationFSxONTAP.NfsMountOptionsProperty) {
+        cdkBuilder.mountOptions(mountOptions)
+    }
 
-  public fun build(): CfnLocationFSxONTAP.NFSProperty = cdkBuilder.build()
+    public fun build(): CfnLocationFSxONTAP.NFSProperty = cdkBuilder.build()
 }

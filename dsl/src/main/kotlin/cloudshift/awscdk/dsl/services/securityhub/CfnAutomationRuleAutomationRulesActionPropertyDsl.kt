@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.securityhub
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.securityhub.CfnAutomationRule
  * rule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,36 +61,37 @@ import software.amazon.awscdk.services.securityhub.CfnAutomationRule
  */
 @CdkDslMarker
 public class CfnAutomationRuleAutomationRulesActionPropertyDsl {
-  private val cdkBuilder: CfnAutomationRule.AutomationRulesActionProperty.Builder =
-      CfnAutomationRule.AutomationRulesActionProperty.builder()
+    private val cdkBuilder: CfnAutomationRule.AutomationRulesActionProperty.Builder =
+        CfnAutomationRule.AutomationRulesActionProperty.builder()
 
-  /**
-   * @param findingFieldsUpdate Specifies that the automation rule action is an update to a finding
-   * field. 
-   */
-  public fun findingFieldsUpdate(findingFieldsUpdate: IResolvable) {
-    cdkBuilder.findingFieldsUpdate(findingFieldsUpdate)
-  }
+    /**
+     * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+     *   finding field.
+     */
+    public fun findingFieldsUpdate(findingFieldsUpdate: IResolvable) {
+        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate)
+    }
 
-  /**
-   * @param findingFieldsUpdate Specifies that the automation rule action is an update to a finding
-   * field. 
-   */
-  public
-      fun findingFieldsUpdate(findingFieldsUpdate: CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty) {
-    cdkBuilder.findingFieldsUpdate(findingFieldsUpdate)
-  }
+    /**
+     * @param findingFieldsUpdate Specifies that the automation rule action is an update to a
+     *   finding field.
+     */
+    public fun findingFieldsUpdate(
+        findingFieldsUpdate: CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
+    ) {
+        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate)
+    }
 
-  /**
-   * @param type Specifies that the rule action should update the `Types` finding field. 
-   * The `Types` finding field classifies findings in the format of namespace/category/classifier.
-   * For more information, see [Types taxonomy for
-   * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-   * in the *AWS Security Hub User Guide* .
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * @param type Specifies that the rule action should update the `Types` finding field. The
+     *   `Types` finding field classifies findings in the format of namespace/category/classifier.
+     *   For more information, see
+     *   [Types taxonomy for ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
+     *   in the *AWS Security Hub User Guide* .
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnAutomationRule.AutomationRulesActionProperty = cdkBuilder.build()
+    public fun build(): CfnAutomationRule.AutomationRulesActionProperty = cdkBuilder.build()
 }

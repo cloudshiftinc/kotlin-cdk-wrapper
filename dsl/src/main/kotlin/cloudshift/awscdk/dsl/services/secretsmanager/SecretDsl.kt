@@ -1,8 +1,23 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.kms.IKey
@@ -11,18 +26,11 @@ import software.amazon.awscdk.services.secretsmanager.Secret
 import software.amazon.awscdk.services.secretsmanager.SecretStringGenerator
 import software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1
 import software.constructs.Construct
-import kotlin.Deprecated
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.Map
-import kotlin.collections.MutableList
 
 /**
  * Creates a new secret in AWS SecretsManager.
  *
  * Example:
- *
  * ```
  * Stack stack;
  * User user = new User(this, "User");
@@ -38,7 +46,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class SecretDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: Secret.Builder = Secret.Builder.create(scope, id)
 
@@ -61,7 +69,7 @@ public class SecretDsl(
      * Default: - A default KMS key for the account and region is used.
      *
      * @param encryptionKey The customer-managed encryption key to use for encrypting the secret
-     * value.
+     *   value.
      */
     public fun encryptionKey(encryptionKey: IKey) {
         cdkBuilder.encryptionKey(encryptionKey)
@@ -73,12 +81,13 @@ public class SecretDsl(
      * Only one of `secretString` and `generateSecretString` can be provided.
      *
      * Default: - 32 characters with upper-case letters, lower-case letters, punctuation and numbers
-     * (at least one from each
-     * category), per the default values of ``SecretStringGenerator``.
+     * (at least one from each category), per the default values of ``SecretStringGenerator``.
      *
      * @param generateSecretString Configuration for how to generate a secret value.
      */
-    public fun generateSecretString(generateSecretString: SecretStringGeneratorDsl.() -> Unit = {}) {
+    public fun generateSecretString(
+        generateSecretString: SecretStringGeneratorDsl.() -> Unit = {}
+    ) {
         val builder = SecretStringGeneratorDsl()
         builder.apply(generateSecretString)
         cdkBuilder.generateSecretString(builder.build())
@@ -90,8 +99,7 @@ public class SecretDsl(
      * Only one of `secretString` and `generateSecretString` can be provided.
      *
      * Default: - 32 characters with upper-case letters, lower-case letters, punctuation and numbers
-     * (at least one from each
-     * category), per the default values of ``SecretStringGenerator``.
+     * (at least one from each category), per the default values of ``SecretStringGenerator``.
      *
      * @param generateSecretString Configuration for how to generate a secret value.
      */
@@ -151,14 +159,11 @@ public class SecretDsl(
      * Initial value for a JSON secret.
      *
      * **NOTE:** *It is **highly** encouraged to leave this field undefined and allow SecretsManager
-     * to create the secret value.
-     * The secret object -- if provided -- will be included in the output of the cdk as part of
-     * synthesis,
-     * and will appear in the CloudFormation template in the console. This can be secure(-ish) if that
-     * value is merely reference to
-     * another resource (or one of its attributes), but if the value is a plaintext string, it will be
-     * visible to anyone with access
-     * to the CloudFormation template (via the AWS Console, SDKs, or CLI).
+     * to create the secret value. The secret object -- if provided -- will be included in the
+     * output of the cdk as part of synthesis, and will appear in the CloudFormation template in the
+     * console. This can be secure(-ish) if that value is merely reference to another resource (or
+     * one of its attributes), but if the value is a plaintext string, it will be visible to anyone
+     * with access to the CloudFormation template (via the AWS Console, SDKs, or CLI).
      *
      * Specifies a JSON object that you want to encrypt and store in this new version of the secret.
      * To specify a simple string value instead, use `SecretProps.secretStringValue`
@@ -169,7 +174,6 @@ public class SecretDsl(
      * Default: - SecretsManager generates a new secret value.
      *
      * Example:
-     *
      * ```
      * User user;
      * AccessKey accessKey;
@@ -193,25 +197,22 @@ public class SecretDsl(
      * (deprecated) Initial value for the secret.
      *
      * **NOTE:** *It is **highly** encouraged to leave this field undefined and allow SecretsManager
-     * to create the secret value.
-     * The secret string -- if provided -- will be included in the output of the cdk as part of
-     * synthesis,
-     * and will appear in the CloudFormation template in the console. This can be secure(-ish) if that
-     * value is merely reference to
-     * another resource (or one of its attributes), but if the value is a plaintext string, it will be
-     * visible to anyone with access
-     * to the CloudFormation template (via the AWS Console, SDKs, or CLI).
+     * to create the secret value. The secret string -- if provided -- will be included in the
+     * output of the cdk as part of synthesis, and will appear in the CloudFormation template in the
+     * console. This can be secure(-ish) if that value is merely reference to another resource (or
+     * one of its attributes), but if the value is a plaintext string, it will be visible to anyone
+     * with access to the CloudFormation template (via the AWS Console, SDKs, or CLI).
      *
-     * Specifies text data that you want to encrypt and store in this new version of the secret.
-     * May be a simple string value, or a string representation of a JSON structure.
+     * Specifies text data that you want to encrypt and store in this new version of the secret. May
+     * be a simple string value, or a string representation of a JSON structure.
      *
      * Only one of `secretStringBeta1`, `secretStringValue`, and `generateSecretString` can be
      * provided.
      *
      * Default: - SecretsManager generates a new secret value.
      *
-     * @deprecated Use `secretStringValue` instead.
      * @param secretStringBeta1 Initial value for the secret.
+     * @deprecated Use `secretStringValue` instead.
      */
     @Deprecated(message = "deprecated in CDK")
     public fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1) {
@@ -222,17 +223,14 @@ public class SecretDsl(
      * Initial value for the secret.
      *
      * **NOTE:** *It is **highly** encouraged to leave this field undefined and allow SecretsManager
-     * to create the secret value.
-     * The secret string -- if provided -- will be included in the output of the cdk as part of
-     * synthesis,
-     * and will appear in the CloudFormation template in the console. This can be secure(-ish) if that
-     * value is merely reference to
-     * another resource (or one of its attributes), but if the value is a plaintext string, it will be
-     * visible to anyone with access
-     * to the CloudFormation template (via the AWS Console, SDKs, or CLI).
+     * to create the secret value. The secret string -- if provided -- will be included in the
+     * output of the cdk as part of synthesis, and will appear in the CloudFormation template in the
+     * console. This can be secure(-ish) if that value is merely reference to another resource (or
+     * one of its attributes), but if the value is a plaintext string, it will be visible to anyone
+     * with access to the CloudFormation template (via the AWS Console, SDKs, or CLI).
      *
-     * Specifies text data that you want to encrypt and store in this new version of the secret.
-     * May be a simple string value. To provide a string representation of JSON structure, use
+     * Specifies text data that you want to encrypt and store in this new version of the secret. May
+     * be a simple string value. To provide a string representation of JSON structure, use
      * `SecretProps.secretObjectValue` instead.
      *
      * Only one of `secretStringBeta1`, `secretStringValue`, 'secretObjectValue', and

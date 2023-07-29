@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The style options of the box plot.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisBoxPlotStyleOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.BoxPlotStyleOptionsProperty.Builder =
-      CfnAnalysis.BoxPlotStyleOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.BoxPlotStyleOptionsProperty.Builder =
+        CfnAnalysis.BoxPlotStyleOptionsProperty.builder()
 
-  /**
-   * @param fillStyle The fill styles (solid, transparent) of the box plot.
-   */
-  public fun fillStyle(fillStyle: String) {
-    cdkBuilder.fillStyle(fillStyle)
-  }
+    /** @param fillStyle The fill styles (solid, transparent) of the box plot. */
+    public fun fillStyle(fillStyle: String) {
+        cdkBuilder.fillStyle(fillStyle)
+    }
 
-  public fun build(): CfnAnalysis.BoxPlotStyleOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.BoxPlotStyleOptionsProperty = cdkBuilder.build()
 }

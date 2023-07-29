@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion
  * Used in `DatabaseClusterEngine.auroraPostgres`.
  *
  * Example:
- *
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
@@ -30,15 +38,13 @@ import software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion
  */
 @CdkDslMarker
 public class AuroraPostgresClusterEnginePropsDsl {
-  private val cdkBuilder: AuroraPostgresClusterEngineProps.Builder =
-      AuroraPostgresClusterEngineProps.builder()
+    private val cdkBuilder: AuroraPostgresClusterEngineProps.Builder =
+        AuroraPostgresClusterEngineProps.builder()
 
-  /**
-   * @param version The version of the Aurora PostgreSQL cluster engine. 
-   */
-  public fun version(version: AuroraPostgresEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The version of the Aurora PostgreSQL cluster engine. */
+    public fun version(version: AuroraPostgresEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): AuroraPostgresClusterEngineProps = cdkBuilder.build()
+    public fun build(): AuroraPostgresClusterEngineProps = cdkBuilder.build()
 }

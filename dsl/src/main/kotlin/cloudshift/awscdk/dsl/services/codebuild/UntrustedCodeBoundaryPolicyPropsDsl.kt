@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
-import software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps
-import software.amazon.awscdk.services.iam.PolicyStatement
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps
+import software.amazon.awscdk.services.iam.PolicyStatement
 
 /**
  * Construction properties for UntrustedCodeBoundaryPolicy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,15 +58,14 @@ public class UntrustedCodeBoundaryPolicyPropsDsl {
         _additionalStatements.addAll(additionalStatements)
     }
 
-    /**
-     * @param managedPolicyName The name of the managed policy.
-     */
+    /** @param managedPolicyName The name of the managed policy. */
     public fun managedPolicyName(managedPolicyName: String) {
         cdkBuilder.managedPolicyName(managedPolicyName)
     }
 
     public fun build(): UntrustedCodeBoundaryPolicyProps {
-        if (_additionalStatements.isNotEmpty()) cdkBuilder.additionalStatements(_additionalStatements)
+        if (_additionalStatements.isNotEmpty())
+            cdkBuilder.additionalStatements(_additionalStatements)
         return cdkBuilder.build()
     }
 }

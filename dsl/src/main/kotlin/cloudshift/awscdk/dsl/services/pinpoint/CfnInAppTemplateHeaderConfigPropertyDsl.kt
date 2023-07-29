@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
 import kotlin.String
+import software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
 
 /**
  * Specifies the configuration and content of the header or title text of the in-app message.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,23 +38,21 @@ public class CfnInAppTemplateHeaderConfigPropertyDsl {
         CfnInAppTemplate.HeaderConfigProperty.builder()
 
     /**
-     * @param alignment The text alignment of the title of the message.
-     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+     * @param alignment The text alignment of the title of the message. Acceptable values: `LEFT` ,
+     *   `CENTER` , `RIGHT` .
      */
     public fun alignment(alignment: String) {
         cdkBuilder.alignment(alignment)
     }
 
-    /**
-     * @param header The title text of the in-app message.
-     */
+    /** @param header The title text of the in-app message. */
     public fun `header`(`header`: String) {
         cdkBuilder.`header`(`header`)
     }
 
     /**
      * @param textColor The color of the title text, expressed as a hex color code (such as #000000
-     * for black).
+     *   for black).
      */
     public fun textColor(textColor: String) {
         cdkBuilder.textColor(textColor)

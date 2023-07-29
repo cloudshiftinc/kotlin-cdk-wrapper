@@ -1,22 +1,30 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps
 
 /**
  * Properties for defining a `CfnInAppTemplate`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -101,7 +109,8 @@ public class CfnInAppTemplatePropsDsl {
 
     /**
      * @param content An object that contains information about the content of an in-app message,
-     * including its title and body text, text colors, background colors, images, buttons, and behaviors.
+     *   including its title and body text, text colors, background colors, images, buttons, and
+     *   behaviors.
      */
     public fun content(vararg content: Any) {
         _content.addAll(listOf(*content))
@@ -109,7 +118,8 @@ public class CfnInAppTemplatePropsDsl {
 
     /**
      * @param content An object that contains information about the content of an in-app message,
-     * including its title and body text, text colors, background colors, images, buttons, and behaviors.
+     *   including its title and body text, text colors, background colors, images, buttons, and
+     *   behaviors.
      */
     public fun content(content: Collection<Any>) {
         _content.addAll(content)
@@ -117,15 +127,16 @@ public class CfnInAppTemplatePropsDsl {
 
     /**
      * @param content An object that contains information about the content of an in-app message,
-     * including its title and body text, text colors, background colors, images, buttons, and behaviors.
+     *   including its title and body text, text colors, background colors, images, buttons, and
+     *   behaviors.
      */
     public fun content(content: IResolvable) {
         cdkBuilder.content(content)
     }
 
     /**
-     * @param customConfig Custom data, in the form of key-value pairs, that is included in an in-app
-     * messaging payload.
+     * @param customConfig Custom data, in the form of key-value pairs, that is included in an
+     *   in-app messaging payload.
      */
     public fun customConfig(customConfig: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -134,8 +145,8 @@ public class CfnInAppTemplatePropsDsl {
     }
 
     /**
-     * @param customConfig Custom data, in the form of key-value pairs, that is included in an in-app
-     * messaging payload.
+     * @param customConfig Custom data, in the form of key-value pairs, that is included in an
+     *   in-app messaging payload.
      */
     public fun customConfig(customConfig: Any) {
         cdkBuilder.customConfig(customConfig)
@@ -143,7 +154,7 @@ public class CfnInAppTemplatePropsDsl {
 
     /**
      * @param layout A string that determines the appearance of the in-app message. You can specify
-     * one of the following:.
+     *   one of the following:.
      * * `BOTTOM_BANNER` – a message that appears as a banner at the bottom of the page.
      * * `TOP_BANNER` – a message that appears as a banner at the top of the page.
      * * `OVERLAYS` – a message that covers entire screen.
@@ -156,10 +167,9 @@ public class CfnInAppTemplatePropsDsl {
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
      */
     public fun tags(tags: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -168,25 +178,20 @@ public class CfnInAppTemplatePropsDsl {
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
      */
     public fun tags(tags: Any) {
         cdkBuilder.tags(tags)
     }
 
-    /**
-     * @param templateDescription An optional description of the in-app template.
-     */
+    /** @param templateDescription An optional description of the in-app template. */
     public fun templateDescription(templateDescription: String) {
         cdkBuilder.templateDescription(templateDescription)
     }
 
-    /**
-     * @param templateName The name of the in-app message template.
-     */
+    /** @param templateName The name of the in-app message template. */
     public fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
     }

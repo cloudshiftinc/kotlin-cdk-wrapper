@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The sort configuration of a tree map.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -62,37 +70,35 @@ public class CfnAnalysisTreeMapSortConfigurationPropertyDsl {
 
     /**
      * @param treeMapGroupItemsLimitConfiguration The limit on the number of groups that are
-     * displayed.
+     *   displayed.
      */
-    public fun treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration: IResolvable) {
+    public fun treeMapGroupItemsLimitConfiguration(
+        treeMapGroupItemsLimitConfiguration: IResolvable
+    ) {
         cdkBuilder.treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration)
     }
 
     /**
      * @param treeMapGroupItemsLimitConfiguration The limit on the number of groups that are
-     * displayed.
+     *   displayed.
      */
-    public fun treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration: CfnAnalysis.ItemsLimitConfigurationProperty) {
+    public fun treeMapGroupItemsLimitConfiguration(
+        treeMapGroupItemsLimitConfiguration: CfnAnalysis.ItemsLimitConfigurationProperty
+    ) {
         cdkBuilder.treeMapGroupItemsLimitConfiguration(treeMapGroupItemsLimitConfiguration)
     }
 
-    /**
-     * @param treeMapSort The sort configuration of group by fields.
-     */
+    /** @param treeMapSort The sort configuration of group by fields. */
     public fun treeMapSort(vararg treeMapSort: Any) {
         _treeMapSort.addAll(listOf(*treeMapSort))
     }
 
-    /**
-     * @param treeMapSort The sort configuration of group by fields.
-     */
+    /** @param treeMapSort The sort configuration of group by fields. */
     public fun treeMapSort(treeMapSort: Collection<Any>) {
         _treeMapSort.addAll(treeMapSort)
     }
 
-    /**
-     * @param treeMapSort The sort configuration of group by fields.
-     */
+    /** @param treeMapSort The sort configuration of group by fields. */
     public fun treeMapSort(treeMapSort: IResolvable) {
         cdkBuilder.treeMapSort(treeMapSort)
     }

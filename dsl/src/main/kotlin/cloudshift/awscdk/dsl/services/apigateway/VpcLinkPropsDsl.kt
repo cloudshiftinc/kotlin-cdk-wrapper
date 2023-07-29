@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalanc
  * Properties for a VpcLink.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
  * Vpc vpc = new Vpc(this, "VPC");
@@ -34,42 +42,38 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalanc
  */
 @CdkDslMarker
 public class VpcLinkPropsDsl {
-  private val cdkBuilder: VpcLinkProps.Builder = VpcLinkProps.builder()
+    private val cdkBuilder: VpcLinkProps.Builder = VpcLinkProps.builder()
 
-  private val _targets: MutableList<INetworkLoadBalancer> = mutableListOf()
+    private val _targets: MutableList<INetworkLoadBalancer> = mutableListOf()
 
-  /**
-   * @param description The description of the VPC link.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the VPC link. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param targets The network load balancers of the VPC targeted by the VPC link.
-   * The network load balancers must be owned by the same AWS account of the API owner.
-   */
-  public fun targets(vararg targets: INetworkLoadBalancer) {
-    _targets.addAll(listOf(*targets))
-  }
+    /**
+     * @param targets The network load balancers of the VPC targeted by the VPC link. The network
+     *   load balancers must be owned by the same AWS account of the API owner.
+     */
+    public fun targets(vararg targets: INetworkLoadBalancer) {
+        _targets.addAll(listOf(*targets))
+    }
 
-  /**
-   * @param targets The network load balancers of the VPC targeted by the VPC link.
-   * The network load balancers must be owned by the same AWS account of the API owner.
-   */
-  public fun targets(targets: Collection<INetworkLoadBalancer>) {
-    _targets.addAll(targets)
-  }
+    /**
+     * @param targets The network load balancers of the VPC targeted by the VPC link. The network
+     *   load balancers must be owned by the same AWS account of the API owner.
+     */
+    public fun targets(targets: Collection<INetworkLoadBalancer>) {
+        _targets.addAll(targets)
+    }
 
-  /**
-   * @param vpcLinkName The name used to label and identify the VPC link.
-   */
-  public fun vpcLinkName(vpcLinkName: String) {
-    cdkBuilder.vpcLinkName(vpcLinkName)
-  }
+    /** @param vpcLinkName The name used to label and identify the VPC link. */
+    public fun vpcLinkName(vpcLinkName: String) {
+        cdkBuilder.vpcLinkName(vpcLinkName)
+    }
 
-  public fun build(): VpcLinkProps {
-    if(_targets.isNotEmpty()) cdkBuilder.targets(_targets)
-    return cdkBuilder.build()
-  }
+    public fun build(): VpcLinkProps {
+        if (_targets.isNotEmpty()) cdkBuilder.targets(_targets)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The configuration of adding parameters in action.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,30 +53,26 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisSetParameterValueConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.SetParameterValueConfigurationProperty.Builder =
-      CfnAnalysis.SetParameterValueConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.SetParameterValueConfigurationProperty.Builder =
+        CfnAnalysis.SetParameterValueConfigurationProperty.builder()
 
-  /**
-   * @param destinationParameterName The destination parameter name of the
-   * `SetParameterValueConfiguration` . 
-   */
-  public fun destinationParameterName(destinationParameterName: String) {
-    cdkBuilder.destinationParameterName(destinationParameterName)
-  }
+    /**
+     * @param destinationParameterName The destination parameter name of the
+     *   `SetParameterValueConfiguration` .
+     */
+    public fun destinationParameterName(destinationParameterName: String) {
+        cdkBuilder.destinationParameterName(destinationParameterName)
+    }
 
-  /**
-   * @param value the value to be set. 
-   */
-  public fun `value`(`value`: IResolvable) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value the value to be set. */
+    public fun `value`(`value`: IResolvable) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  /**
-   * @param value the value to be set. 
-   */
-  public fun `value`(`value`: CfnAnalysis.DestinationParameterValueConfigurationProperty) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value the value to be set. */
+    public fun `value`(`value`: CfnAnalysis.DestinationParameterValueConfigurationProperty) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnAnalysis.SetParameterValueConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.SetParameterValueConfigurationProperty = cdkBuilder.build()
 }

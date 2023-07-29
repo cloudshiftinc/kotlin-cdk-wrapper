@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.devopsguru
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps
  * Properties for defining a `CfnResourceCollection`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,24 +41,26 @@ import software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps
  */
 @CdkDslMarker
 public class CfnResourceCollectionPropsDsl {
-  private val cdkBuilder: CfnResourceCollectionProps.Builder = CfnResourceCollectionProps.builder()
+    private val cdkBuilder: CfnResourceCollectionProps.Builder =
+        CfnResourceCollectionProps.builder()
 
-  /**
-   * @param resourceCollectionFilter Information about a filter used to specify which AWS resources
-   * are analyzed for anomalous behavior by DevOps Guru. 
-   */
-  public fun resourceCollectionFilter(resourceCollectionFilter: IResolvable) {
-    cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)
-  }
+    /**
+     * @param resourceCollectionFilter Information about a filter used to specify which AWS
+     *   resources are analyzed for anomalous behavior by DevOps Guru.
+     */
+    public fun resourceCollectionFilter(resourceCollectionFilter: IResolvable) {
+        cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)
+    }
 
-  /**
-   * @param resourceCollectionFilter Information about a filter used to specify which AWS resources
-   * are analyzed for anomalous behavior by DevOps Guru. 
-   */
-  public
-      fun resourceCollectionFilter(resourceCollectionFilter: CfnResourceCollection.ResourceCollectionFilterProperty) {
-    cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)
-  }
+    /**
+     * @param resourceCollectionFilter Information about a filter used to specify which AWS
+     *   resources are analyzed for anomalous behavior by DevOps Guru.
+     */
+    public fun resourceCollectionFilter(
+        resourceCollectionFilter: CfnResourceCollection.ResourceCollectionFilterProperty
+    ) {
+        cdkBuilder.resourceCollectionFilter(resourceCollectionFilter)
+    }
 
-  public fun build(): CfnResourceCollectionProps = cdkBuilder.build()
+    public fun build(): CfnResourceCollectionProps = cdkBuilder.build()
 }

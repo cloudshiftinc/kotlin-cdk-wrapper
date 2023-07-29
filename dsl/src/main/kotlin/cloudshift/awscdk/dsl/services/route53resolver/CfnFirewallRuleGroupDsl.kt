@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53resolver
 
@@ -23,7 +32,6 @@ import software.constructs.Construct
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,79 +60,85 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnFirewallRuleGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnFirewallRuleGroup.Builder = CfnFirewallRuleGroup.Builder.create(scope,
-      id)
+    private val cdkBuilder: CfnFirewallRuleGroup.Builder =
+        CfnFirewallRuleGroup.Builder.create(scope, id)
 
-  private val _firewallRules: MutableList<Any> = mutableListOf()
+    private val _firewallRules: MutableList<Any> = mutableListOf()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * A list of the rules that you have defined.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-firewallrules)
-   * @param firewallRules A list of the rules that you have defined. 
-   */
-  public fun firewallRules(vararg firewallRules: Any) {
-    _firewallRules.addAll(listOf(*firewallRules))
-  }
+    /**
+     * A list of the rules that you have defined.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-firewallrules)
+     *
+     * @param firewallRules A list of the rules that you have defined.
+     */
+    public fun firewallRules(vararg firewallRules: Any) {
+        _firewallRules.addAll(listOf(*firewallRules))
+    }
 
-  /**
-   * A list of the rules that you have defined.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-firewallrules)
-   * @param firewallRules A list of the rules that you have defined. 
-   */
-  public fun firewallRules(firewallRules: Collection<Any>) {
-    _firewallRules.addAll(firewallRules)
-  }
+    /**
+     * A list of the rules that you have defined.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-firewallrules)
+     *
+     * @param firewallRules A list of the rules that you have defined.
+     */
+    public fun firewallRules(firewallRules: Collection<Any>) {
+        _firewallRules.addAll(firewallRules)
+    }
 
-  /**
-   * A list of the rules that you have defined.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-firewallrules)
-   * @param firewallRules A list of the rules that you have defined. 
-   */
-  public fun firewallRules(firewallRules: IResolvable) {
-    cdkBuilder.firewallRules(firewallRules)
-  }
+    /**
+     * A list of the rules that you have defined.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-firewallrules)
+     *
+     * @param firewallRules A list of the rules that you have defined.
+     */
+    public fun firewallRules(firewallRules: IResolvable) {
+        cdkBuilder.firewallRules(firewallRules)
+    }
 
-  /**
-   * The name of the rule group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-name)
-   * @param name The name of the rule group. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the rule group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-name)
+     *
+     * @param name The name of the rule group.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * A list of the tag keys and values that you want to associate with the rule group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-tags)
-   * @param tags A list of the tag keys and values that you want to associate with the rule group. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * A list of the tag keys and values that you want to associate with the rule group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-tags)
+     *
+     * @param tags A list of the tag keys and values that you want to associate with the rule group.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * A list of the tag keys and values that you want to associate with the rule group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-tags)
-   * @param tags A list of the tag keys and values that you want to associate with the rule group. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * A list of the tag keys and values that you want to associate with the rule group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-tags)
+     *
+     * @param tags A list of the tag keys and values that you want to associate with the rule group.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnFirewallRuleGroup {
-    if(_firewallRules.isNotEmpty()) cdkBuilder.firewallRules(_firewallRules)
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFirewallRuleGroup {
+        if (_firewallRules.isNotEmpty()) cdkBuilder.firewallRules(_firewallRules)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

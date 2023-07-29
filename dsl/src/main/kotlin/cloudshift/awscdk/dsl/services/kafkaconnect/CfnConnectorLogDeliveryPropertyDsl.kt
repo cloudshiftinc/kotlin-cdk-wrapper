@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  * Details about log delivery.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,24 +49,24 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorLogDeliveryPropertyDsl {
-  private val cdkBuilder: CfnConnector.LogDeliveryProperty.Builder =
-      CfnConnector.LogDeliveryProperty.builder()
+    private val cdkBuilder: CfnConnector.LogDeliveryProperty.Builder =
+        CfnConnector.LogDeliveryProperty.builder()
 
-  /**
-   * @param workerLogDelivery The workers can send worker logs to different destination types. 
-   * This configuration specifies the details of these destinations.
-   */
-  public fun workerLogDelivery(workerLogDelivery: IResolvable) {
-    cdkBuilder.workerLogDelivery(workerLogDelivery)
-  }
+    /**
+     * @param workerLogDelivery The workers can send worker logs to different destination types.
+     *   This configuration specifies the details of these destinations.
+     */
+    public fun workerLogDelivery(workerLogDelivery: IResolvable) {
+        cdkBuilder.workerLogDelivery(workerLogDelivery)
+    }
 
-  /**
-   * @param workerLogDelivery The workers can send worker logs to different destination types. 
-   * This configuration specifies the details of these destinations.
-   */
-  public fun workerLogDelivery(workerLogDelivery: CfnConnector.WorkerLogDeliveryProperty) {
-    cdkBuilder.workerLogDelivery(workerLogDelivery)
-  }
+    /**
+     * @param workerLogDelivery The workers can send worker logs to different destination types.
+     *   This configuration specifies the details of these destinations.
+     */
+    public fun workerLogDelivery(workerLogDelivery: CfnConnector.WorkerLogDeliveryProperty) {
+        cdkBuilder.workerLogDelivery(workerLogDelivery)
+    }
 
-  public fun build(): CfnConnector.LogDeliveryProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.LogDeliveryProperty = cdkBuilder.build()
 }

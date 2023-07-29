@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.databrew.CfnJob
  * evaluations.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,53 +45,47 @@ import software.amazon.awscdk.services.databrew.CfnJob
  */
 @CdkDslMarker
 public class CfnJobStatisticsConfigurationPropertyDsl {
-  private val cdkBuilder: CfnJob.StatisticsConfigurationProperty.Builder =
-      CfnJob.StatisticsConfigurationProperty.builder()
+    private val cdkBuilder: CfnJob.StatisticsConfigurationProperty.Builder =
+        CfnJob.StatisticsConfigurationProperty.builder()
 
-  private val _includedStatistics: MutableList<String> = mutableListOf()
+    private val _includedStatistics: MutableList<String> = mutableListOf()
 
-  private val _overrides: MutableList<Any> = mutableListOf()
+    private val _overrides: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param includedStatistics List of included evaluations.
-   * When the list is undefined, all supported evaluations will be included.
-   */
-  public fun includedStatistics(vararg includedStatistics: String) {
-    _includedStatistics.addAll(listOf(*includedStatistics))
-  }
+    /**
+     * @param includedStatistics List of included evaluations. When the list is undefined, all
+     *   supported evaluations will be included.
+     */
+    public fun includedStatistics(vararg includedStatistics: String) {
+        _includedStatistics.addAll(listOf(*includedStatistics))
+    }
 
-  /**
-   * @param includedStatistics List of included evaluations.
-   * When the list is undefined, all supported evaluations will be included.
-   */
-  public fun includedStatistics(includedStatistics: Collection<String>) {
-    _includedStatistics.addAll(includedStatistics)
-  }
+    /**
+     * @param includedStatistics List of included evaluations. When the list is undefined, all
+     *   supported evaluations will be included.
+     */
+    public fun includedStatistics(includedStatistics: Collection<String>) {
+        _includedStatistics.addAll(includedStatistics)
+    }
 
-  /**
-   * @param overrides List of overrides for evaluations.
-   */
-  public fun overrides(vararg overrides: Any) {
-    _overrides.addAll(listOf(*overrides))
-  }
+    /** @param overrides List of overrides for evaluations. */
+    public fun overrides(vararg overrides: Any) {
+        _overrides.addAll(listOf(*overrides))
+    }
 
-  /**
-   * @param overrides List of overrides for evaluations.
-   */
-  public fun overrides(overrides: Collection<Any>) {
-    _overrides.addAll(overrides)
-  }
+    /** @param overrides List of overrides for evaluations. */
+    public fun overrides(overrides: Collection<Any>) {
+        _overrides.addAll(overrides)
+    }
 
-  /**
-   * @param overrides List of overrides for evaluations.
-   */
-  public fun overrides(overrides: IResolvable) {
-    cdkBuilder.overrides(overrides)
-  }
+    /** @param overrides List of overrides for evaluations. */
+    public fun overrides(overrides: IResolvable) {
+        cdkBuilder.overrides(overrides)
+    }
 
-  public fun build(): CfnJob.StatisticsConfigurationProperty {
-    if(_includedStatistics.isNotEmpty()) cdkBuilder.includedStatistics(_includedStatistics)
-    if(_overrides.isNotEmpty()) cdkBuilder.overrides(_overrides)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnJob.StatisticsConfigurationProperty {
+        if (_includedStatistics.isNotEmpty()) cdkBuilder.includedStatistics(_includedStatistics)
+        if (_overrides.isNotEmpty()) cdkBuilder.overrides(_overrides)
+        return cdkBuilder.build()
+    }
 }

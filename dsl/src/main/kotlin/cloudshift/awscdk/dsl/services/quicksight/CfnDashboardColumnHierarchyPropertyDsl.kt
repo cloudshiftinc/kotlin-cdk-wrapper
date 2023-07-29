@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The option that determines the hierarchy of the fields for a visual element.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -136,18 +144,16 @@ public class CfnDashboardColumnHierarchyPropertyDsl {
     }
 
     /**
-     * @param explicitHierarchy The option that determines the hierarchy of the fields that are built
-     * within a visual's field wells.
-     * These fields can't be duplicated to other visuals.
+     * @param explicitHierarchy The option that determines the hierarchy of the fields that are
+     *   built within a visual's field wells. These fields can't be duplicated to other visuals.
      */
     public fun explicitHierarchy(explicitHierarchy: IResolvable) {
         cdkBuilder.explicitHierarchy(explicitHierarchy)
     }
 
     /**
-     * @param explicitHierarchy The option that determines the hierarchy of the fields that are built
-     * within a visual's field wells.
-     * These fields can't be duplicated to other visuals.
+     * @param explicitHierarchy The option that determines the hierarchy of the fields that are
+     *   built within a visual's field wells. These fields can't be duplicated to other visuals.
      */
     public fun explicitHierarchy(explicitHierarchy: CfnDashboard.ExplicitHierarchyProperty) {
         cdkBuilder.explicitHierarchy(explicitHierarchy)
@@ -155,8 +161,8 @@ public class CfnDashboardColumnHierarchyPropertyDsl {
 
     /**
      * @param predefinedHierarchy The option that determines the hierarchy of the fields that are
-     * defined during data preparation.
-     * These fields are available to use in any analysis that uses the data source.
+     *   defined during data preparation. These fields are available to use in any analysis that
+     *   uses the data source.
      */
     public fun predefinedHierarchy(predefinedHierarchy: IResolvable) {
         cdkBuilder.predefinedHierarchy(predefinedHierarchy)
@@ -164,8 +170,8 @@ public class CfnDashboardColumnHierarchyPropertyDsl {
 
     /**
      * @param predefinedHierarchy The option that determines the hierarchy of the fields that are
-     * defined during data preparation.
-     * These fields are available to use in any analysis that uses the data source.
+     *   defined during data preparation. These fields are available to use in any analysis that
+     *   uses the data source.
      */
     public fun predefinedHierarchy(predefinedHierarchy: CfnDashboard.PredefinedHierarchyProperty) {
         cdkBuilder.predefinedHierarchy(predefinedHierarchy)

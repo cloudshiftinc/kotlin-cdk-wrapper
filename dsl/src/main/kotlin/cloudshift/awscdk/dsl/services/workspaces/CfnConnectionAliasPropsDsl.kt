@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.workspaces
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.workspaces.CfnConnectionAliasProps
  * Properties for defining a `CfnConnectionAlias`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,35 +42,31 @@ import software.amazon.awscdk.services.workspaces.CfnConnectionAliasProps
  */
 @CdkDslMarker
 public class CfnConnectionAliasPropsDsl {
-  private val cdkBuilder: CfnConnectionAliasProps.Builder = CfnConnectionAliasProps.builder()
+    private val cdkBuilder: CfnConnectionAliasProps.Builder = CfnConnectionAliasProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param connectionString The connection string specified for the connection alias. 
-   * The connection string must be in the form of a fully qualified domain name (FQDN), such as
-   * `www.example.com` .
-   */
-  public fun connectionString(connectionString: String) {
-    cdkBuilder.connectionString(connectionString)
-  }
+    /**
+     * @param connectionString The connection string specified for the connection alias. The
+     *   connection string must be in the form of a fully qualified domain name (FQDN), such as
+     *   `www.example.com` .
+     */
+    public fun connectionString(connectionString: String) {
+        cdkBuilder.connectionString(connectionString)
+    }
 
-  /**
-   * @param tags The tags to associate with the connection alias.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags to associate with the connection alias. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags to associate with the connection alias.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags to associate with the connection alias. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnConnectionAliasProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnConnectionAliasProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

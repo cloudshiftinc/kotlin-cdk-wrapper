@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * Details for your use of the Bot Control managed rule group, used in `ManagedRuleGroupConfig` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,18 +33,19 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLAWSManagedRulesBotControlRuleSetPropertyDsl {
-  private val cdkBuilder: CfnWebACL.AWSManagedRulesBotControlRuleSetProperty.Builder =
-      CfnWebACL.AWSManagedRulesBotControlRuleSetProperty.builder()
+    private val cdkBuilder: CfnWebACL.AWSManagedRulesBotControlRuleSetProperty.Builder =
+        CfnWebACL.AWSManagedRulesBotControlRuleSetProperty.builder()
 
-  /**
-   * @param inspectionLevel The inspection level to use for the Bot Control rule group. 
-   * The common level is the least expensive. The targeted level includes all common level rules and
-   * adds rules with more advanced inspection criteria. For details, see [AWS WAF Bot Control rule
-   * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html) .
-   */
-  public fun inspectionLevel(inspectionLevel: String) {
-    cdkBuilder.inspectionLevel(inspectionLevel)
-  }
+    /**
+     * @param inspectionLevel The inspection level to use for the Bot Control rule group. The common
+     *   level is the least expensive. The targeted level includes all common level rules and adds
+     *   rules with more advanced inspection criteria. For details, see
+     *   [AWS WAF Bot Control rule group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html)
+     *   .
+     */
+    public fun inspectionLevel(inspectionLevel: String) {
+        cdkBuilder.inspectionLevel(inspectionLevel)
+    }
 
-  public fun build(): CfnWebACL.AWSManagedRulesBotControlRuleSetProperty = cdkBuilder.build()
+    public fun build(): CfnWebACL.AWSManagedRulesBotControlRuleSetProperty = cdkBuilder.build()
 }

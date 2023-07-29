@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -14,8 +23,8 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
  * The `AutoRollbackConfiguration` property type configures automatic rollback for an AWS CodeDeploy
  * deployment group when a deployment is not completed successfully.
  *
- * For more information, see [Automatic
- * Rollbacks](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html#deployments-rollback-and-redeploy-automatic-rollbacks)
+ * For more information, see
+ * [Automatic Rollbacks](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html#deployments-rollback-and-redeploy-automatic-rollbacks)
  * in the *AWS CodeDeploy User Guide* .
  *
  * `AutoRollbackConfiguration` is a property of the
@@ -23,7 +32,6 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,47 +47,45 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
  */
 @CdkDslMarker
 public class CfnDeploymentGroupAutoRollbackConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDeploymentGroup.AutoRollbackConfigurationProperty.Builder =
-      CfnDeploymentGroup.AutoRollbackConfigurationProperty.builder()
+    private val cdkBuilder: CfnDeploymentGroup.AutoRollbackConfigurationProperty.Builder =
+        CfnDeploymentGroup.AutoRollbackConfigurationProperty.builder()
 
-  private val _events: MutableList<String> = mutableListOf()
+    private val _events: MutableList<String> = mutableListOf()
 
-  /**
-   * @param enabled Indicates whether a defined automatic rollback configuration is currently
-   * enabled.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /**
+     * @param enabled Indicates whether a defined automatic rollback configuration is currently
+     *   enabled.
+     */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Indicates whether a defined automatic rollback configuration is currently
-   * enabled.
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /**
+     * @param enabled Indicates whether a defined automatic rollback configuration is currently
+     *   enabled.
+     */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param events The event type or types that trigger a rollback.
-   * Valid values are `DEPLOYMENT_FAILURE` , `DEPLOYMENT_STOP_ON_ALARM` , or
-   * `DEPLOYMENT_STOP_ON_REQUEST` .
-   */
-  public fun events(vararg events: String) {
-    _events.addAll(listOf(*events))
-  }
+    /**
+     * @param events The event type or types that trigger a rollback. Valid values are
+     *   `DEPLOYMENT_FAILURE` , `DEPLOYMENT_STOP_ON_ALARM` , or `DEPLOYMENT_STOP_ON_REQUEST` .
+     */
+    public fun events(vararg events: String) {
+        _events.addAll(listOf(*events))
+    }
 
-  /**
-   * @param events The event type or types that trigger a rollback.
-   * Valid values are `DEPLOYMENT_FAILURE` , `DEPLOYMENT_STOP_ON_ALARM` , or
-   * `DEPLOYMENT_STOP_ON_REQUEST` .
-   */
-  public fun events(events: Collection<String>) {
-    _events.addAll(events)
-  }
+    /**
+     * @param events The event type or types that trigger a rollback. Valid values are
+     *   `DEPLOYMENT_FAILURE` , `DEPLOYMENT_STOP_ON_ALARM` , or `DEPLOYMENT_STOP_ON_REQUEST` .
+     */
+    public fun events(events: Collection<String>) {
+        _events.addAll(events)
+    }
 
-  public fun build(): CfnDeploymentGroup.AutoRollbackConfigurationProperty {
-    if(_events.isNotEmpty()) cdkBuilder.events(_events)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDeploymentGroup.AutoRollbackConfigurationProperty {
+        if (_events.isNotEmpty()) cdkBuilder.events(_events)
+        return cdkBuilder.build()
+    }
 }

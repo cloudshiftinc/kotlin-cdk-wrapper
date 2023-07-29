@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling
 
@@ -11,19 +20,17 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * within a single Auto Scaling group.
  *
  * A mixed instances policy contains information that Amazon EC2 Auto Scaling can use to launch
- * instances and help optimize your costs. For more information, see [Auto Scaling groups with multiple
- * instance types and purchase
- * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html)
+ * instances and help optimize your costs. For more information, see
+ * [Auto Scaling groups with multiple instance types and purchase options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html)
  * in the *Amazon EC2 Auto Scaling User Guide* .
  *
  * You can create a mixed instances policy for new and existing Auto Scaling groups. You must use a
  * launch template to configure the policy. You cannot use a launch configuration.
  *
  * There are key differences between Spot Instances and On-Demand Instances:
- *
  * * The price for Spot Instances varies based on demand
  * * Amazon EC2 can terminate an individual Spot Instance as the availability of, or price for, Spot
- * Instances changes
+ *   Instances changes
  *
  * When a Spot Instance is terminated, Amazon EC2 Auto Scaling group attempts to launch a
  * replacement instance to maintain the desired capacity for the group.
@@ -33,7 +40,6 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -127,39 +133,36 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  */
 @CdkDslMarker
 public class CfnAutoScalingGroupMixedInstancesPolicyPropertyDsl {
-  private val cdkBuilder: CfnAutoScalingGroup.MixedInstancesPolicyProperty.Builder =
-      CfnAutoScalingGroup.MixedInstancesPolicyProperty.builder()
+    private val cdkBuilder: CfnAutoScalingGroup.MixedInstancesPolicyProperty.Builder =
+        CfnAutoScalingGroup.MixedInstancesPolicyProperty.builder()
 
-  /**
-   * @param instancesDistribution The instances distribution.
-   */
-  public fun instancesDistribution(instancesDistribution: IResolvable) {
-    cdkBuilder.instancesDistribution(instancesDistribution)
-  }
+    /** @param instancesDistribution The instances distribution. */
+    public fun instancesDistribution(instancesDistribution: IResolvable) {
+        cdkBuilder.instancesDistribution(instancesDistribution)
+    }
 
-  /**
-   * @param instancesDistribution The instances distribution.
-   */
-  public
-      fun instancesDistribution(instancesDistribution: CfnAutoScalingGroup.InstancesDistributionProperty) {
-    cdkBuilder.instancesDistribution(instancesDistribution)
-  }
+    /** @param instancesDistribution The instances distribution. */
+    public fun instancesDistribution(
+        instancesDistribution: CfnAutoScalingGroup.InstancesDistributionProperty
+    ) {
+        cdkBuilder.instancesDistribution(instancesDistribution)
+    }
 
-  /**
-   * @param launchTemplate One or more launch templates and the instance types (overrides) that are
-   * used to launch EC2 instances to fulfill On-Demand and Spot capacities. 
-   */
-  public fun launchTemplate(launchTemplate: IResolvable) {
-    cdkBuilder.launchTemplate(launchTemplate)
-  }
+    /**
+     * @param launchTemplate One or more launch templates and the instance types (overrides) that
+     *   are used to launch EC2 instances to fulfill On-Demand and Spot capacities.
+     */
+    public fun launchTemplate(launchTemplate: IResolvable) {
+        cdkBuilder.launchTemplate(launchTemplate)
+    }
 
-  /**
-   * @param launchTemplate One or more launch templates and the instance types (overrides) that are
-   * used to launch EC2 instances to fulfill On-Demand and Spot capacities. 
-   */
-  public fun launchTemplate(launchTemplate: CfnAutoScalingGroup.LaunchTemplateProperty) {
-    cdkBuilder.launchTemplate(launchTemplate)
-  }
+    /**
+     * @param launchTemplate One or more launch templates and the instance types (overrides) that
+     *   are used to launch EC2 instances to fulfill On-Demand and Spot capacities.
+     */
+    public fun launchTemplate(launchTemplate: CfnAutoScalingGroup.LaunchTemplateProperty) {
+        cdkBuilder.launchTemplate(launchTemplate)
+    }
 
-  public fun build(): CfnAutoScalingGroup.MixedInstancesPolicyProperty = cdkBuilder.build()
+    public fun build(): CfnAutoScalingGroup.MixedInstancesPolicyProperty = cdkBuilder.build()
 }

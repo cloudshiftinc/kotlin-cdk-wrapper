@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociationProps
 import kotlin.String
+import software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociationProps
 
 /**
  * Properties for defining a `CfnPortfolioProductAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,23 +49,17 @@ public class CfnPortfolioProductAssociationPropsDsl {
         cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    /**
-     * @param portfolioId The portfolio identifier.
-     */
+    /** @param portfolioId The portfolio identifier. */
     public fun portfolioId(portfolioId: String) {
         cdkBuilder.portfolioId(portfolioId)
     }
 
-    /**
-     * @param productId The product identifier.
-     */
+    /** @param productId The product identifier. */
     public fun productId(productId: String) {
         cdkBuilder.productId(productId)
     }
 
-    /**
-     * @param sourcePortfolioId The identifier of the source portfolio.
-     */
+    /** @param sourcePortfolioId The identifier of the source portfolio. */
     public fun sourcePortfolioId(sourcePortfolioId: String) {
         cdkBuilder.sourcePortfolioId(sourcePortfolioId)
     }

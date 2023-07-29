@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * This parameter is required if `Enabled` is set to true.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,70 +40,67 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class CfnDeliveryStreamSchemaConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.SchemaConfigurationProperty.Builder =
-      CfnDeliveryStream.SchemaConfigurationProperty.builder()
+    private val cdkBuilder: CfnDeliveryStream.SchemaConfigurationProperty.Builder =
+        CfnDeliveryStream.SchemaConfigurationProperty.builder()
 
-  /**
-   * @param catalogId The ID of the AWS Glue Data Catalog.
-   * If you don't supply this, the AWS account ID is used by default.
-   */
-  public fun catalogId(catalogId: String) {
-    cdkBuilder.catalogId(catalogId)
-  }
+    /**
+     * @param catalogId The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS
+     *   account ID is used by default.
+     */
+    public fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+    }
 
-  /**
-   * @param databaseName Specifies the name of the AWS Glue database that contains the schema for
-   * the output data.
-   *
-   * If the `SchemaConfiguration` request parameter is used as part of invoking the
-   * `CreateDeliveryStream` API, then the `DatabaseName` property is required and its value must be
-   * specified.
-   */
-  public fun databaseName(databaseName: String) {
-    cdkBuilder.databaseName(databaseName)
-  }
+    /**
+     * @param databaseName Specifies the name of the AWS Glue database that contains the schema for
+     *   the output data.
+     *
+     * If the `SchemaConfiguration` request parameter is used as part of invoking the
+     * `CreateDeliveryStream` API, then the `DatabaseName` property is required and its value must
+     * be specified.
+     */
+    public fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+    }
 
-  /**
-   * @param region If you don't specify an AWS Region, the default is the current Region.
-   */
-  public fun region(region: String) {
-    cdkBuilder.region(region)
-  }
+    /** @param region If you don't specify an AWS Region, the default is the current Region. */
+    public fun region(region: String) {
+        cdkBuilder.region(region)
+    }
 
-  /**
-   * @param roleArn The role that Kinesis Data Firehose can use to access AWS Glue.
-   * This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles
-   * aren't allowed.
-   *
-   *
-   * If the `SchemaConfiguration` request parameter is used as part of invoking the
-   * `CreateDeliveryStream` API, then the `RoleARN` property is required and its value must be
-   * specified.
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /**
+     * @param roleArn The role that Kinesis Data Firehose can use to access AWS Glue. This role must
+     *   be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't
+     *   allowed.
+     *
+     * If the `SchemaConfiguration` request parameter is used as part of invoking the
+     * `CreateDeliveryStream` API, then the `RoleARN` property is required and its value must be
+     * specified.
+     */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  /**
-   * @param tableName Specifies the AWS Glue table that contains the column information that
-   * constitutes your data schema.
-   *
-   * If the `SchemaConfiguration` request parameter is used as part of invoking the
-   * `CreateDeliveryStream` API, then the `TableName` property is required and its value must be
-   * specified.
-   */
-  public fun tableName(tableName: String) {
-    cdkBuilder.tableName(tableName)
-  }
+    /**
+     * @param tableName Specifies the AWS Glue table that contains the column information that
+     *   constitutes your data schema.
+     *
+     * If the `SchemaConfiguration` request parameter is used as part of invoking the
+     * `CreateDeliveryStream` API, then the `TableName` property is required and its value must be
+     * specified.
+     */
+    public fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+    }
 
-  /**
-   * @param versionId Specifies the table version for the output data schema.
-   * If you don't specify this version ID, or if you set it to `LATEST` , Kinesis Data Firehose uses
-   * the most recent version. This means that any updates to the table are automatically picked up.
-   */
-  public fun versionId(versionId: String) {
-    cdkBuilder.versionId(versionId)
-  }
+    /**
+     * @param versionId Specifies the table version for the output data schema. If you don't specify
+     *   this version ID, or if you set it to `LATEST` , Kinesis Data Firehose uses the most recent
+     *   version. This means that any updates to the table are automatically picked up.
+     */
+    public fun versionId(versionId: String) {
+        cdkBuilder.versionId(versionId)
+    }
 
-  public fun build(): CfnDeliveryStream.SchemaConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.SchemaConfigurationProperty = cdkBuilder.build()
 }

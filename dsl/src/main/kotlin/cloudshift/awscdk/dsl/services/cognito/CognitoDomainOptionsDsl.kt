@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.CognitoDomainOptions
  * Options while specifying a cognito prefix domain.
  *
  * Example:
- *
  * ```
  * UserPool pool = new UserPool(this, "Pool");
  * pool.addDomain("CognitoDomain", UserPoolDomainOptions.builder()
@@ -33,15 +41,15 @@ import software.amazon.awscdk.services.cognito.CognitoDomainOptions
  */
 @CdkDslMarker
 public class CognitoDomainOptionsDsl {
-  private val cdkBuilder: CognitoDomainOptions.Builder = CognitoDomainOptions.builder()
+    private val cdkBuilder: CognitoDomainOptions.Builder = CognitoDomainOptions.builder()
 
-  /**
-   * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated with
-   * the user pool. 
-   */
-  public fun domainPrefix(domainPrefix: String) {
-    cdkBuilder.domainPrefix(domainPrefix)
-  }
+    /**
+     * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated with
+     *   the user pool.
+     */
+    public fun domainPrefix(domainPrefix: String) {
+        cdkBuilder.domainPrefix(domainPrefix)
+    }
 
-  public fun build(): CognitoDomainOptions = cdkBuilder.build()
+    public fun build(): CognitoDomainOptions = cdkBuilder.build()
 }

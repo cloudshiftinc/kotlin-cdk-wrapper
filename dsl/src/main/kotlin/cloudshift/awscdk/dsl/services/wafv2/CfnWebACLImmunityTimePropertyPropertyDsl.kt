@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * a successful `CAPTCHA` or challenge response.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,19 +36,18 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLImmunityTimePropertyPropertyDsl {
-  private val cdkBuilder: CfnWebACL.ImmunityTimePropertyProperty.Builder =
-      CfnWebACL.ImmunityTimePropertyProperty.builder()
+    private val cdkBuilder: CfnWebACL.ImmunityTimePropertyProperty.Builder =
+        CfnWebACL.ImmunityTimePropertyProperty.builder()
 
-  /**
-   * @param immunityTime The amount of time, in seconds, that a `CAPTCHA` or challenge timestamp is
-   * considered valid by AWS WAF . 
-   * The default setting is 300.
-   *
-   * For the Challenge action, the minimum setting is 300.
-   */
-  public fun immunityTime(immunityTime: Number) {
-    cdkBuilder.immunityTime(immunityTime)
-  }
+    /**
+     * @param immunityTime The amount of time, in seconds, that a `CAPTCHA` or challenge timestamp
+     *   is considered valid by AWS WAF . The default setting is 300.
+     *
+     * For the Challenge action, the minimum setting is 300.
+     */
+    public fun immunityTime(immunityTime: Number) {
+        cdkBuilder.immunityTime(immunityTime)
+    }
 
-  public fun build(): CfnWebACL.ImmunityTimePropertyProperty = cdkBuilder.build()
+    public fun build(): CfnWebACL.ImmunityTimePropertyProperty = cdkBuilder.build()
 }

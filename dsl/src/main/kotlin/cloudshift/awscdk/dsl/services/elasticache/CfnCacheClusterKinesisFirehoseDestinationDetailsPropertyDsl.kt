@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticache
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.elasticache.CfnCacheCluster
  * destination.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,14 @@ import software.amazon.awscdk.services.elasticache.CfnCacheCluster
  */
 @CdkDslMarker
 public class CfnCacheClusterKinesisFirehoseDestinationDetailsPropertyDsl {
-  private val cdkBuilder: CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.Builder =
-      CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.builder()
+    private val cdkBuilder: CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.Builder =
+        CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.builder()
 
-  /**
-   * @param deliveryStream The name of the Kinesis Data Firehose delivery stream. 
-   */
-  public fun deliveryStream(deliveryStream: String) {
-    cdkBuilder.deliveryStream(deliveryStream)
-  }
+    /** @param deliveryStream The name of the Kinesis Data Firehose delivery stream. */
+    public fun deliveryStream(deliveryStream: String) {
+        cdkBuilder.deliveryStream(deliveryStream)
+    }
 
-  public fun build(): CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty = cdkBuilder.build()
+    public fun build(): CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty =
+        cdkBuilder.build()
 }

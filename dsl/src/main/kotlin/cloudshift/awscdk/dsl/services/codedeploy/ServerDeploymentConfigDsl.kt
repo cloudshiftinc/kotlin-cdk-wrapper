@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * A custom Deployment Configuration for an EC2/on-premise Deployment Group.
  *
  * Example:
- *
  * ```
  * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
  * "CodeDeployDeploymentGroup")
@@ -22,31 +30,32 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class ServerDeploymentConfigDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: ServerDeploymentConfig.Builder =
-      ServerDeploymentConfig.Builder.create(scope, id)
+    private val cdkBuilder: ServerDeploymentConfig.Builder =
+        ServerDeploymentConfig.Builder.create(scope, id)
 
-  /**
-   * The physical, human-readable name of the Deployment Configuration.
-   *
-   * Default: - automatically generated name
-   *
-   * @param deploymentConfigName The physical, human-readable name of the Deployment Configuration. 
-   */
-  public fun deploymentConfigName(deploymentConfigName: String) {
-    cdkBuilder.deploymentConfigName(deploymentConfigName)
-  }
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     *
+     * Default: - automatically generated name
+     *
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     *   Configuration.
+     */
+    public fun deploymentConfigName(deploymentConfigName: String) {
+        cdkBuilder.deploymentConfigName(deploymentConfigName)
+    }
 
-  /**
-   * Minimum number of healthy hosts.
-   *
-   * @param minimumHealthyHosts Minimum number of healthy hosts. 
-   */
-  public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
-    cdkBuilder.minimumHealthyHosts(minimumHealthyHosts)
-  }
+    /**
+     * Minimum number of healthy hosts.
+     *
+     * @param minimumHealthyHosts Minimum number of healthy hosts.
+     */
+    public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
+        cdkBuilder.minimumHealthyHosts(minimumHealthyHosts)
+    }
 
-  public fun build(): ServerDeploymentConfig = cdkBuilder.build()
+    public fun build(): ServerDeploymentConfig = cdkBuilder.build()
 }

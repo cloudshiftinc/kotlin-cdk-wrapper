@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
  * the cache behavior that this response headers policy is attached to.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,34 +38,28 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
  */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyRemoveHeadersConfigPropertyDsl {
-  private val cdkBuilder: CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.Builder =
-      CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.builder()
+    private val cdkBuilder: CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.Builder =
+        CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.builder()
 
-  private val _items: MutableList<Any> = mutableListOf()
+    private val _items: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param items The list of HTTP header names. 
-   */
-  public fun items(vararg items: Any) {
-    _items.addAll(listOf(*items))
-  }
+    /** @param items The list of HTTP header names. */
+    public fun items(vararg items: Any) {
+        _items.addAll(listOf(*items))
+    }
 
-  /**
-   * @param items The list of HTTP header names. 
-   */
-  public fun items(items: Collection<Any>) {
-    _items.addAll(items)
-  }
+    /** @param items The list of HTTP header names. */
+    public fun items(items: Collection<Any>) {
+        _items.addAll(items)
+    }
 
-  /**
-   * @param items The list of HTTP header names. 
-   */
-  public fun items(items: IResolvable) {
-    cdkBuilder.items(items)
-  }
+    /** @param items The list of HTTP header names. */
+    public fun items(items: IResolvable) {
+        cdkBuilder.items(items)
+    }
 
-  public fun build(): CfnResponseHeadersPolicy.RemoveHeadersConfigProperty {
-    if(_items.isNotEmpty()) cdkBuilder.items(_items)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnResponseHeadersPolicy.RemoveHeadersConfigProperty {
+        if (_items.isNotEmpty()) cdkBuilder.items(_items)
+        return cdkBuilder.build()
+    }
 }

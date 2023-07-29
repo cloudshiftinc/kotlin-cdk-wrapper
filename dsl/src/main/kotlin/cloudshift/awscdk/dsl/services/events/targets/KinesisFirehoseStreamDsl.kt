@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events.targets
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * Customize the Firehose Stream Event Target.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,23 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class KinesisFirehoseStreamDsl(
-  stream: CfnDeliveryStream,
+    stream: CfnDeliveryStream,
 ) {
-  private val cdkBuilder: KinesisFirehoseStream.Builder =
-      KinesisFirehoseStream.Builder.create(stream)
+    private val cdkBuilder: KinesisFirehoseStream.Builder =
+        KinesisFirehoseStream.Builder.create(stream)
 
-  /**
-   * The message to send to the stream.
-   *
-   * Must be a valid JSON text passed to the target stream.
-   *
-   * Default: - the entire Event Bridge event
-   *
-   * @param message The message to send to the stream. 
-   */
-  public fun message(message: RuleTargetInput) {
-    cdkBuilder.message(message)
-  }
+    /**
+     * The message to send to the stream.
+     *
+     * Must be a valid JSON text passed to the target stream.
+     *
+     * Default: - the entire Event Bridge event
+     *
+     * @param message The message to send to the stream.
+     */
+    public fun message(message: RuleTargetInput) {
+        cdkBuilder.message(message)
+    }
 
-  public fun build(): KinesisFirehoseStream = cdkBuilder.build()
+    public fun build(): KinesisFirehoseStream = cdkBuilder.build()
 }

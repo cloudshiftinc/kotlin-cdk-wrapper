@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The options that determine the presentation of the data labels.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -66,105 +74,80 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardDataLabelOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.DataLabelOptionsProperty.Builder =
-      CfnDashboard.DataLabelOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.DataLabelOptionsProperty.Builder =
+        CfnDashboard.DataLabelOptionsProperty.builder()
 
-  private val _dataLabelTypes: MutableList<Any> = mutableListOf()
+    private val _dataLabelTypes: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param categoryLabelVisibility Determines the visibility of the category field labels.
-   */
-  public fun categoryLabelVisibility(categoryLabelVisibility: String) {
-    cdkBuilder.categoryLabelVisibility(categoryLabelVisibility)
-  }
+    /** @param categoryLabelVisibility Determines the visibility of the category field labels. */
+    public fun categoryLabelVisibility(categoryLabelVisibility: String) {
+        cdkBuilder.categoryLabelVisibility(categoryLabelVisibility)
+    }
 
-  /**
-   * @param dataLabelTypes The option that determines the data label type.
-   */
-  public fun dataLabelTypes(vararg dataLabelTypes: Any) {
-    _dataLabelTypes.addAll(listOf(*dataLabelTypes))
-  }
+    /** @param dataLabelTypes The option that determines the data label type. */
+    public fun dataLabelTypes(vararg dataLabelTypes: Any) {
+        _dataLabelTypes.addAll(listOf(*dataLabelTypes))
+    }
 
-  /**
-   * @param dataLabelTypes The option that determines the data label type.
-   */
-  public fun dataLabelTypes(dataLabelTypes: Collection<Any>) {
-    _dataLabelTypes.addAll(dataLabelTypes)
-  }
+    /** @param dataLabelTypes The option that determines the data label type. */
+    public fun dataLabelTypes(dataLabelTypes: Collection<Any>) {
+        _dataLabelTypes.addAll(dataLabelTypes)
+    }
 
-  /**
-   * @param dataLabelTypes The option that determines the data label type.
-   */
-  public fun dataLabelTypes(dataLabelTypes: IResolvable) {
-    cdkBuilder.dataLabelTypes(dataLabelTypes)
-  }
+    /** @param dataLabelTypes The option that determines the data label type. */
+    public fun dataLabelTypes(dataLabelTypes: IResolvable) {
+        cdkBuilder.dataLabelTypes(dataLabelTypes)
+    }
 
-  /**
-   * @param labelColor Determines the color of the data labels.
-   */
-  public fun labelColor(labelColor: String) {
-    cdkBuilder.labelColor(labelColor)
-  }
+    /** @param labelColor Determines the color of the data labels. */
+    public fun labelColor(labelColor: String) {
+        cdkBuilder.labelColor(labelColor)
+    }
 
-  /**
-   * @param labelContent Determines the content of the data labels.
-   */
-  public fun labelContent(labelContent: String) {
-    cdkBuilder.labelContent(labelContent)
-  }
+    /** @param labelContent Determines the content of the data labels. */
+    public fun labelContent(labelContent: String) {
+        cdkBuilder.labelContent(labelContent)
+    }
 
-  /**
-   * @param labelFontConfiguration Determines the font configuration of the data labels.
-   */
-  public fun labelFontConfiguration(labelFontConfiguration: IResolvable) {
-    cdkBuilder.labelFontConfiguration(labelFontConfiguration)
-  }
+    /** @param labelFontConfiguration Determines the font configuration of the data labels. */
+    public fun labelFontConfiguration(labelFontConfiguration: IResolvable) {
+        cdkBuilder.labelFontConfiguration(labelFontConfiguration)
+    }
 
-  /**
-   * @param labelFontConfiguration Determines the font configuration of the data labels.
-   */
-  public
-      fun labelFontConfiguration(labelFontConfiguration: CfnDashboard.FontConfigurationProperty) {
-    cdkBuilder.labelFontConfiguration(labelFontConfiguration)
-  }
+    /** @param labelFontConfiguration Determines the font configuration of the data labels. */
+    public fun labelFontConfiguration(
+        labelFontConfiguration: CfnDashboard.FontConfigurationProperty
+    ) {
+        cdkBuilder.labelFontConfiguration(labelFontConfiguration)
+    }
 
-  /**
-   * @param measureLabelVisibility Determines the visibility of the measure field labels.
-   */
-  public fun measureLabelVisibility(measureLabelVisibility: String) {
-    cdkBuilder.measureLabelVisibility(measureLabelVisibility)
-  }
+    /** @param measureLabelVisibility Determines the visibility of the measure field labels. */
+    public fun measureLabelVisibility(measureLabelVisibility: String) {
+        cdkBuilder.measureLabelVisibility(measureLabelVisibility)
+    }
 
-  /**
-   * @param overlap Determines whether overlap is enabled or disabled for the data labels.
-   */
-  public fun overlap(overlap: String) {
-    cdkBuilder.overlap(overlap)
-  }
+    /** @param overlap Determines whether overlap is enabled or disabled for the data labels. */
+    public fun overlap(overlap: String) {
+        cdkBuilder.overlap(overlap)
+    }
 
-  /**
-   * @param position Determines the position of the data labels.
-   */
-  public fun position(position: String) {
-    cdkBuilder.position(position)
-  }
+    /** @param position Determines the position of the data labels. */
+    public fun position(position: String) {
+        cdkBuilder.position(position)
+    }
 
-  /**
-   * @param totalsVisibility Determines the visibility of the total.
-   */
-  public fun totalsVisibility(totalsVisibility: String) {
-    cdkBuilder.totalsVisibility(totalsVisibility)
-  }
+    /** @param totalsVisibility Determines the visibility of the total. */
+    public fun totalsVisibility(totalsVisibility: String) {
+        cdkBuilder.totalsVisibility(totalsVisibility)
+    }
 
-  /**
-   * @param visibility Determines the visibility of the data labels.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /** @param visibility Determines the visibility of the data labels. */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnDashboard.DataLabelOptionsProperty {
-    if(_dataLabelTypes.isNotEmpty()) cdkBuilder.dataLabelTypes(_dataLabelTypes)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDashboard.DataLabelOptionsProperty {
+        if (_dataLabelTypes.isNotEmpty()) cdkBuilder.dataLabelTypes(_dataLabelTypes)
+        return cdkBuilder.build()
+    }
 }

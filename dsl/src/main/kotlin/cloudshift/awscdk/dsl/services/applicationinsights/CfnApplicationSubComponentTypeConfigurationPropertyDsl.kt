@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.applicationinsights
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.applicationinsights.CfnApplication
  * the sub-component configurations for a component.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,30 +55,25 @@ import software.amazon.awscdk.services.applicationinsights.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationSubComponentTypeConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApplication.SubComponentTypeConfigurationProperty.Builder =
-      CfnApplication.SubComponentTypeConfigurationProperty.builder()
+    private val cdkBuilder: CfnApplication.SubComponentTypeConfigurationProperty.Builder =
+        CfnApplication.SubComponentTypeConfigurationProperty.builder()
 
-  /**
-   * @param subComponentConfigurationDetails The configuration settings of the sub-components. 
-   */
-  public fun subComponentConfigurationDetails(subComponentConfigurationDetails: IResolvable) {
-    cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails)
-  }
+    /** @param subComponentConfigurationDetails The configuration settings of the sub-components. */
+    public fun subComponentConfigurationDetails(subComponentConfigurationDetails: IResolvable) {
+        cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails)
+    }
 
-  /**
-   * @param subComponentConfigurationDetails The configuration settings of the sub-components. 
-   */
-  public
-      fun subComponentConfigurationDetails(subComponentConfigurationDetails: CfnApplication.SubComponentConfigurationDetailsProperty) {
-    cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails)
-  }
+    /** @param subComponentConfigurationDetails The configuration settings of the sub-components. */
+    public fun subComponentConfigurationDetails(
+        subComponentConfigurationDetails: CfnApplication.SubComponentConfigurationDetailsProperty
+    ) {
+        cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails)
+    }
 
-  /**
-   * @param subComponentType The sub-component type. 
-   */
-  public fun subComponentType(subComponentType: String) {
-    cdkBuilder.subComponentType(subComponentType)
-  }
+    /** @param subComponentType The sub-component type. */
+    public fun subComponentType(subComponentType: String) {
+        cdkBuilder.subComponentType(subComponentType)
+    }
 
-  public fun build(): CfnApplication.SubComponentTypeConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.SubComponentTypeConfigurationProperty = cdkBuilder.build()
 }

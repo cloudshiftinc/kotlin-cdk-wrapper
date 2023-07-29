@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.Stage
 import software.amazon.awscdk.pipelines.CodePipelineActionFactoryResult
 import software.amazon.awscdk.pipelines.CodePipelineSource
@@ -11,19 +22,19 @@ import software.amazon.awscdk.pipelines.PipelineBase
 import software.amazon.awscdk.pipelines.StageDeployment
 import software.amazon.awscdk.pipelines.Wave
 import software.amazon.awscdk.services.codepipeline.IStage
-import kotlin.String
-import kotlin.Unit
 
 /**
  * Add a Stage to this wave.
  *
- * It will be deployed in parallel with all other stages in this
- * wave.
+ * It will be deployed in parallel with all other stages in this wave.
  *
  * @param stage
  * @param options
  */
-public inline fun Wave.addStage(stage: Stage, block: AddStageOptsDsl.() -> Unit = {}): StageDeployment {
+public inline fun Wave.addStage(
+    stage: Stage,
+    block: AddStageOptsDsl.() -> Unit = {}
+): StageDeployment {
     val builder = AddStageOptsDsl()
     builder.apply(block)
     return addStage(stage, builder.build())
@@ -35,7 +46,10 @@ public inline fun Wave.addStage(stage: Stage, block: AddStageOptsDsl.() -> Unit 
  * @param stage
  * @param options
  */
-public inline fun ICodePipelineActionFactory.produceAction(arg0: IStage, block: ProduceActionOptionsDsl.() -> Unit = {}): CodePipelineActionFactoryResult {
+public inline fun ICodePipelineActionFactory.produceAction(
+    arg0: IStage,
+    block: ProduceActionOptionsDsl.() -> Unit = {}
+): CodePipelineActionFactoryResult {
     val builder = ProduceActionOptionsDsl()
     builder.apply(block)
     return produceAction(arg0, builder.build())
@@ -44,14 +58,17 @@ public inline fun ICodePipelineActionFactory.produceAction(arg0: IStage, block: 
 /**
  * Deploy a single Stage by itself.
  *
- * Add a Stage to the pipeline, to be deployed in sequence with other
- * Stages added to the pipeline. All Stacks in the stage will be deployed
- * in an order automatically determined by their relative dependencies.
+ * Add a Stage to the pipeline, to be deployed in sequence with other Stages added to the pipeline.
+ * All Stacks in the stage will be deployed in an order automatically determined by their relative
+ * dependencies.
  *
  * @param stage
  * @param options
  */
-public inline fun PipelineBase.addStage(stage: Stage, block: AddStageOptsDsl.() -> Unit = {}): StageDeployment {
+public inline fun PipelineBase.addStage(
+    stage: Stage,
+    block: AddStageOptsDsl.() -> Unit = {}
+): StageDeployment {
     val builder = AddStageOptsDsl()
     builder.apply(block)
     return addStage(stage, builder.build())
@@ -63,7 +80,6 @@ public inline fun PipelineBase.addStage(stage: Stage, block: AddStageOptsDsl.() 
  * Use the return object of this method to deploy multiple stages in parallel.
  *
  * Example:
- *
  * ```
  * CodePipeline pipeline;
  * Wave wave = pipeline.addWave("MyWave");
@@ -86,7 +102,10 @@ public inline fun PipelineBase.addWave(id: String, block: WaveOptionsDsl.() -> U
  * @param stage
  * @param options
  */
-public inline fun CodePipelineSource.produceAction(stage: IStage, block: ProduceActionOptionsDsl.() -> Unit = {}): CodePipelineActionFactoryResult {
+public inline fun CodePipelineSource.produceAction(
+    stage: IStage,
+    block: ProduceActionOptionsDsl.() -> Unit = {}
+): CodePipelineActionFactoryResult {
     val builder = ProduceActionOptionsDsl()
     builder.apply(block)
     return produceAction(stage, builder.build())
@@ -98,7 +117,10 @@ public inline fun CodePipelineSource.produceAction(stage: IStage, block: Produce
  * @param stage
  * @param options
  */
-public inline fun ConfirmPermissionsBroadening.produceAction(stage: IStage, block: ProduceActionOptionsDsl.() -> Unit = {}): CodePipelineActionFactoryResult {
+public inline fun ConfirmPermissionsBroadening.produceAction(
+    stage: IStage,
+    block: ProduceActionOptionsDsl.() -> Unit = {}
+): CodePipelineActionFactoryResult {
     val builder = ProduceActionOptionsDsl()
     builder.apply(block)
     return produceAction(stage, builder.build())

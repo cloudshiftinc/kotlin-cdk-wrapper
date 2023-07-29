@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.healthlake
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
  * Currently, the only supported preloaded data is synthetic data generated from Synthea.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,16 +34,15 @@ import software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
  */
 @CdkDslMarker
 public class CfnFHIRDatastorePreloadDataConfigPropertyDsl {
-  private val cdkBuilder: CfnFHIRDatastore.PreloadDataConfigProperty.Builder =
-      CfnFHIRDatastore.PreloadDataConfigProperty.builder()
+    private val cdkBuilder: CfnFHIRDatastore.PreloadDataConfigProperty.Builder =
+        CfnFHIRDatastore.PreloadDataConfigProperty.builder()
 
-  /**
-   * @param preloadDataType The type of preloaded data. 
-   * Only Synthea preloaded data is supported.
-   */
-  public fun preloadDataType(preloadDataType: String) {
-    cdkBuilder.preloadDataType(preloadDataType)
-  }
+    /**
+     * @param preloadDataType The type of preloaded data. Only Synthea preloaded data is supported.
+     */
+    public fun preloadDataType(preloadDataType: String) {
+        cdkBuilder.preloadDataType(preloadDataType)
+    }
 
-  public fun build(): CfnFHIRDatastore.PreloadDataConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFHIRDatastore.PreloadDataConfigProperty = cdkBuilder.build()
 }

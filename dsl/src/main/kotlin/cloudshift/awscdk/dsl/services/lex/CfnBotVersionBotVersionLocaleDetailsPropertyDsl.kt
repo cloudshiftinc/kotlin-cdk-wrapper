@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lex.CfnBotVersion
  * The version of a bot used for a bot locale.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.lex.CfnBotVersion
  */
 @CdkDslMarker
 public class CfnBotVersionBotVersionLocaleDetailsPropertyDsl {
-  private val cdkBuilder: CfnBotVersion.BotVersionLocaleDetailsProperty.Builder =
-      CfnBotVersion.BotVersionLocaleDetailsProperty.builder()
+    private val cdkBuilder: CfnBotVersion.BotVersionLocaleDetailsProperty.Builder =
+        CfnBotVersion.BotVersionLocaleDetailsProperty.builder()
 
-  /**
-   * @param sourceBotVersion The version of a bot used for a bot locale. 
-   */
-  public fun sourceBotVersion(sourceBotVersion: String) {
-    cdkBuilder.sourceBotVersion(sourceBotVersion)
-  }
+    /** @param sourceBotVersion The version of a bot used for a bot locale. */
+    public fun sourceBotVersion(sourceBotVersion: String) {
+        cdkBuilder.sourceBotVersion(sourceBotVersion)
+    }
 
-  public fun build(): CfnBotVersion.BotVersionLocaleDetailsProperty = cdkBuilder.build()
+    public fun build(): CfnBotVersion.BotVersionLocaleDetailsProperty = cdkBuilder.build()
 }

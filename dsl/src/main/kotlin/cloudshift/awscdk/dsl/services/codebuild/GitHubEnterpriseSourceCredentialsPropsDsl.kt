@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentia
  * Creation properties for `GitHubEnterpriseSourceCredentials`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,8 +37,8 @@ public class GitHubEnterpriseSourceCredentialsPropsDsl {
         GitHubEnterpriseSourceCredentialsProps.builder()
 
     /**
-     * @param accessToken The personal access token to use when contacting the instance of the GitHub
-     * Enterprise API.
+     * @param accessToken The personal access token to use when contacting the instance of the
+     *   GitHub Enterprise API.
      */
     public fun accessToken(accessToken: SecretValue) {
         cdkBuilder.accessToken(accessToken)

@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTopic
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTopic
 
 /**
  * The definition of a data aggregation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,15 +38,13 @@ public class CfnTopicDataAggregationPropertyDsl {
 
     /**
      * @param datasetRowDateGranularity The level of time precision that is used to aggregate
-     * `DateTime` values.
+     *   `DateTime` values.
      */
     public fun datasetRowDateGranularity(datasetRowDateGranularity: String) {
         cdkBuilder.datasetRowDateGranularity(datasetRowDateGranularity)
     }
 
-    /**
-     * @param defaultDateColumnName The column name for the default date.
-     */
+    /** @param defaultDateColumnName The column name for the default date. */
     public fun defaultDateColumnName(defaultDateColumnName: String) {
         cdkBuilder.defaultDateColumnName(defaultDateColumnName)
     }

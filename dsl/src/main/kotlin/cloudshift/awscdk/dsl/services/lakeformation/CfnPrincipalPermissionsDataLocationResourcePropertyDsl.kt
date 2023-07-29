@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 import kotlin.String
+import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 
 /**
  * A structure for a data location object where permissions are granted or revoked.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,8 +38,8 @@ public class CfnPrincipalPermissionsDataLocationResourcePropertyDsl {
         CfnPrincipalPermissions.DataLocationResourceProperty.builder()
 
     /**
-     * @param catalogId The identifier for the Data Catalog where the location is registered with AWS
-     * Lake Formation .
+     * @param catalogId The identifier for the Data Catalog where the location is registered with
+     *   AWS Lake Formation .
      */
     public fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
@@ -39,7 +47,7 @@ public class CfnPrincipalPermissionsDataLocationResourcePropertyDsl {
 
     /**
      * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies the data location
-     * resource.
+     *   resource.
      */
     public fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)

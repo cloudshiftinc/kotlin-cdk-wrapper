@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  * Also used to describe the format of the reference data source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,33 +38,32 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceRecordColumnPropertyDsl {
-  private val cdkBuilder: CfnApplicationReferenceDataSource.RecordColumnProperty.Builder =
-      CfnApplicationReferenceDataSource.RecordColumnProperty.builder()
+    private val cdkBuilder: CfnApplicationReferenceDataSource.RecordColumnProperty.Builder =
+        CfnApplicationReferenceDataSource.RecordColumnProperty.builder()
 
-  /**
-   * @param mapping Reference to the data element in the streaming input or the reference data
-   * source.
-   * This element is required if the
-   * [RecordFormatType](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_RecordFormat.html#analytics-Type-RecordFormat-RecordFormatTypel)
-   * is `JSON` .
-   */
-  public fun mapping(mapping: String) {
-    cdkBuilder.mapping(mapping)
-  }
+    /**
+     * @param mapping Reference to the data element in the streaming input or the reference data
+     *   source. This element is required if the
+     *   [RecordFormatType](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_RecordFormat.html#analytics-Type-RecordFormat-RecordFormatTypel)
+     *   is `JSON` .
+     */
+    public fun mapping(mapping: String) {
+        cdkBuilder.mapping(mapping)
+    }
 
-  /**
-   * @param name Name of the column created in the in-application input stream or reference table. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name Name of the column created in the in-application input stream or reference table.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param sqlType Type of column created in the in-application input stream or reference table. 
-   */
-  public fun sqlType(sqlType: String) {
-    cdkBuilder.sqlType(sqlType)
-  }
+    /**
+     * @param sqlType Type of column created in the in-application input stream or reference table.
+     */
+    public fun sqlType(sqlType: String) {
+        cdkBuilder.sqlType(sqlType)
+    }
 
-  public fun build(): CfnApplicationReferenceDataSource.RecordColumnProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationReferenceDataSource.RecordColumnProperty = cdkBuilder.build()
 }

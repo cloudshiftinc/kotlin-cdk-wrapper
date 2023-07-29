@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
@@ -7,13 +16,12 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnProject
 
 /**
- * `LogsConfig` is a property of the [AWS CodeBuild
- * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+ * `LogsConfig` is a property of the
+ * [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
  * resource that specifies information about logs for a build project. These can be logs in Amazon
  * CloudWatch Logs, built in a specified S3 bucket, or both.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,32 +50,32 @@ public class CfnProjectLogsConfigPropertyDsl {
         CfnProject.LogsConfigProperty.builder()
 
     /**
-     * @param cloudWatchLogs Information about CloudWatch Logs for a build project.
-     * CloudWatch Logs are enabled by default.
+     * @param cloudWatchLogs Information about CloudWatch Logs for a build project. CloudWatch Logs
+     *   are enabled by default.
      */
     public fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs)
     }
 
     /**
-     * @param cloudWatchLogs Information about CloudWatch Logs for a build project.
-     * CloudWatch Logs are enabled by default.
+     * @param cloudWatchLogs Information about CloudWatch Logs for a build project. CloudWatch Logs
+     *   are enabled by default.
      */
     public fun cloudWatchLogs(cloudWatchLogs: CfnProject.CloudWatchLogsConfigProperty) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs)
     }
 
     /**
-     * @param s3Logs Information about logs built to an S3 bucket for a build project.
-     * S3 logs are not enabled by default.
+     * @param s3Logs Information about logs built to an S3 bucket for a build project. S3 logs are
+     *   not enabled by default.
      */
     public fun s3Logs(s3Logs: IResolvable) {
         cdkBuilder.s3Logs(s3Logs)
     }
 
     /**
-     * @param s3Logs Information about logs built to an S3 bucket for a build project.
-     * S3 logs are not enabled by default.
+     * @param s3Logs Information about logs built to an S3 bucket for a build project. S3 logs are
+     *   not enabled by default.
      */
     public fun s3Logs(s3Logs: CfnProject.S3LogsConfigProperty) {
         cdkBuilder.s3Logs(s3Logs)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.appsync.CfnDataSource
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,29 +46,23 @@ import software.amazon.awscdk.services.appsync.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceHttpConfigPropertyDsl {
-  private val cdkBuilder: CfnDataSource.HttpConfigProperty.Builder =
-      CfnDataSource.HttpConfigProperty.builder()
+    private val cdkBuilder: CfnDataSource.HttpConfigProperty.Builder =
+        CfnDataSource.HttpConfigProperty.builder()
 
-  /**
-   * @param authorizationConfig The authorization configuration.
-   */
-  public fun authorizationConfig(authorizationConfig: IResolvable) {
-    cdkBuilder.authorizationConfig(authorizationConfig)
-  }
+    /** @param authorizationConfig The authorization configuration. */
+    public fun authorizationConfig(authorizationConfig: IResolvable) {
+        cdkBuilder.authorizationConfig(authorizationConfig)
+    }
 
-  /**
-   * @param authorizationConfig The authorization configuration.
-   */
-  public fun authorizationConfig(authorizationConfig: CfnDataSource.AuthorizationConfigProperty) {
-    cdkBuilder.authorizationConfig(authorizationConfig)
-  }
+    /** @param authorizationConfig The authorization configuration. */
+    public fun authorizationConfig(authorizationConfig: CfnDataSource.AuthorizationConfigProperty) {
+        cdkBuilder.authorizationConfig(authorizationConfig)
+    }
 
-  /**
-   * @param endpoint The endpoint. 
-   */
-  public fun endpoint(endpoint: String) {
-    cdkBuilder.endpoint(endpoint)
-  }
+    /** @param endpoint The endpoint. */
+    public fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+    }
 
-  public fun build(): CfnDataSource.HttpConfigProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.HttpConfigProperty = cdkBuilder.build()
 }

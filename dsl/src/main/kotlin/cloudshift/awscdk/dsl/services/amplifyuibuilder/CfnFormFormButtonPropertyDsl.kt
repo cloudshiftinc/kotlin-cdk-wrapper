@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  * form.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,42 +41,33 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  */
 @CdkDslMarker
 public class CfnFormFormButtonPropertyDsl {
-  private val cdkBuilder: CfnForm.FormButtonProperty.Builder = CfnForm.FormButtonProperty.builder()
+    private val cdkBuilder: CfnForm.FormButtonProperty.Builder =
+        CfnForm.FormButtonProperty.builder()
 
-  /**
-   * @param children Describes the button's properties.
-   */
-  public fun children(children: String) {
-    cdkBuilder.children(children)
-  }
+    /** @param children Describes the button's properties. */
+    public fun children(children: String) {
+        cdkBuilder.children(children)
+    }
 
-  /**
-   * @param excluded Specifies whether the button is visible on the form.
-   */
-  public fun excluded(excluded: Boolean) {
-    cdkBuilder.excluded(excluded)
-  }
+    /** @param excluded Specifies whether the button is visible on the form. */
+    public fun excluded(excluded: Boolean) {
+        cdkBuilder.excluded(excluded)
+    }
 
-  /**
-   * @param excluded Specifies whether the button is visible on the form.
-   */
-  public fun excluded(excluded: IResolvable) {
-    cdkBuilder.excluded(excluded)
-  }
+    /** @param excluded Specifies whether the button is visible on the form. */
+    public fun excluded(excluded: IResolvable) {
+        cdkBuilder.excluded(excluded)
+    }
 
-  /**
-   * @param position The position of the button.
-   */
-  public fun position(position: IResolvable) {
-    cdkBuilder.position(position)
-  }
+    /** @param position The position of the button. */
+    public fun position(position: IResolvable) {
+        cdkBuilder.position(position)
+    }
 
-  /**
-   * @param position The position of the button.
-   */
-  public fun position(position: CfnForm.FieldPositionProperty) {
-    cdkBuilder.position(position)
-  }
+    /** @param position The position of the button. */
+    public fun position(position: CfnForm.FieldPositionProperty) {
+        cdkBuilder.position(position)
+    }
 
-  public fun build(): CfnForm.FormButtonProperty = cdkBuilder.build()
+    public fun build(): CfnForm.FormButtonProperty = cdkBuilder.build()
 }

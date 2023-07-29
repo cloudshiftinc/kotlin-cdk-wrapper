@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * An object that represents the virtual service that traffic is routed to.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteGatewayRouteVirtualServicePropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.GatewayRouteVirtualServiceProperty.Builder =
-      CfnGatewayRoute.GatewayRouteVirtualServiceProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.GatewayRouteVirtualServiceProperty.Builder =
+        CfnGatewayRoute.GatewayRouteVirtualServiceProperty.builder()
 
-  /**
-   * @param virtualServiceName The name of the virtual service that traffic is routed to. 
-   */
-  public fun virtualServiceName(virtualServiceName: String) {
-    cdkBuilder.virtualServiceName(virtualServiceName)
-  }
+    /** @param virtualServiceName The name of the virtual service that traffic is routed to. */
+    public fun virtualServiceName(virtualServiceName: String) {
+        cdkBuilder.virtualServiceName(virtualServiceName)
+    }
 
-  public fun build(): CfnGatewayRoute.GatewayRouteVirtualServiceProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.GatewayRouteVirtualServiceProperty = cdkBuilder.build()
 }

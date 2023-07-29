@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
  * Specifies the behavior of buttons that appear in an in-app message template.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,8 +56,7 @@ public class CfnInAppTemplateButtonConfigPropertyDsl {
 
     /**
      * @param android Optional button configuration to use for in-app messages sent to Android
-     * devices.
-     * This button configuration overrides the default button configuration.
+     *   devices. This button configuration overrides the default button configuration.
      */
     public fun android(android: IResolvable) {
         cdkBuilder.android(android)
@@ -57,8 +64,7 @@ public class CfnInAppTemplateButtonConfigPropertyDsl {
 
     /**
      * @param android Optional button configuration to use for in-app messages sent to Android
-     * devices.
-     * This button configuration overrides the default button configuration.
+     *   devices. This button configuration overrides the default button configuration.
      */
     public fun android(android: CfnInAppTemplate.OverrideButtonConfigurationProperty) {
         cdkBuilder.android(android)
@@ -66,9 +72,8 @@ public class CfnInAppTemplateButtonConfigPropertyDsl {
 
     /**
      * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-     * message.
-     * You can optionally add button configurations that specifically apply to iOS, Android, or web
-     * browser users.
+     *   message. You can optionally add button configurations that specifically apply to iOS,
+     *   Android, or web browser users.
      */
     public fun defaultConfig(defaultConfig: IResolvable) {
         cdkBuilder.defaultConfig(defaultConfig)
@@ -76,25 +81,24 @@ public class CfnInAppTemplateButtonConfigPropertyDsl {
 
     /**
      * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-     * message.
-     * You can optionally add button configurations that specifically apply to iOS, Android, or web
-     * browser users.
+     *   message. You can optionally add button configurations that specifically apply to iOS,
+     *   Android, or web browser users.
      */
     public fun defaultConfig(defaultConfig: CfnInAppTemplate.DefaultButtonConfigurationProperty) {
         cdkBuilder.defaultConfig(defaultConfig)
     }
 
     /**
-     * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-     * This button configuration overrides the default button configuration.
+     * @param ios Optional button configuration to use for in-app messages sent to iOS devices. This
+     *   button configuration overrides the default button configuration.
      */
     public fun ios(ios: IResolvable) {
         cdkBuilder.ios(ios)
     }
 
     /**
-     * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-     * This button configuration overrides the default button configuration.
+     * @param ios Optional button configuration to use for in-app messages sent to iOS devices. This
+     *   button configuration overrides the default button configuration.
      */
     public fun ios(ios: CfnInAppTemplate.OverrideButtonConfigurationProperty) {
         cdkBuilder.ios(ios)
@@ -102,7 +106,7 @@ public class CfnInAppTemplateButtonConfigPropertyDsl {
 
     /**
      * @param web Optional button configuration to use for in-app messages sent to web applications.
-     * This button configuration overrides the default button configuration.
+     *   This button configuration overrides the default button configuration.
      */
     public fun web(web: IResolvable) {
         cdkBuilder.web(web)
@@ -110,7 +114,7 @@ public class CfnInAppTemplateButtonConfigPropertyDsl {
 
     /**
      * @param web Optional button configuration to use for in-app messages sent to web applications.
-     * This button configuration overrides the default button configuration.
+     *   This button configuration overrides the default button configuration.
      */
     public fun web(web: CfnInAppTemplate.OverrideButtonConfigurationProperty) {
         cdkBuilder.web(web)

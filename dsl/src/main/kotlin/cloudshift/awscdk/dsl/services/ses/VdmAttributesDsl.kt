@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * Virtual Deliverablity Manager (VDM) attributes.
  *
  * Example:
- *
  * ```
  * // Enables engagement tracking and optimized shared delivery by default
  * // Enables engagement tracking and optimized shared delivery by default
@@ -21,32 +29,32 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class VdmAttributesDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: VdmAttributes.Builder = VdmAttributes.Builder.create(scope, id)
+    private val cdkBuilder: VdmAttributes.Builder = VdmAttributes.Builder.create(scope, id)
 
-  /**
-   * Whether engagement metrics are enabled for your account.
-   *
-   * Default: true
-   *
-   * @param engagementMetrics Whether engagement metrics are enabled for your account. 
-   */
-  public fun engagementMetrics(engagementMetrics: Boolean) {
-    cdkBuilder.engagementMetrics(engagementMetrics)
-  }
+    /**
+     * Whether engagement metrics are enabled for your account.
+     *
+     * Default: true
+     *
+     * @param engagementMetrics Whether engagement metrics are enabled for your account.
+     */
+    public fun engagementMetrics(engagementMetrics: Boolean) {
+        cdkBuilder.engagementMetrics(engagementMetrics)
+    }
 
-  /**
-   * Whether optimized shared delivery is enabled for your account.
-   *
-   * Default: true
-   *
-   * @param optimizedSharedDelivery Whether optimized shared delivery is enabled for your account. 
-   */
-  public fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean) {
-    cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
-  }
+    /**
+     * Whether optimized shared delivery is enabled for your account.
+     *
+     * Default: true
+     *
+     * @param optimizedSharedDelivery Whether optimized shared delivery is enabled for your account.
+     */
+    public fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean) {
+        cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
+    }
 
-  public fun build(): VdmAttributes = cdkBuilder.build()
+    public fun build(): VdmAttributes = cdkBuilder.build()
 }

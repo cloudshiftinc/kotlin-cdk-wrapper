@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The configuration for default analysis settings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -63,17 +71,15 @@ public class CfnDashboardAnalysisDefaultsPropertyDsl {
     private val cdkBuilder: CfnDashboard.AnalysisDefaultsProperty.Builder =
         CfnDashboard.AnalysisDefaultsProperty.builder()
 
-    /**
-     * @param defaultNewSheetConfiguration The configuration for default new sheet settings.
-     */
+    /** @param defaultNewSheetConfiguration The configuration for default new sheet settings. */
     public fun defaultNewSheetConfiguration(defaultNewSheetConfiguration: IResolvable) {
         cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)
     }
 
-    /**
-     * @param defaultNewSheetConfiguration The configuration for default new sheet settings.
-     */
-    public fun defaultNewSheetConfiguration(defaultNewSheetConfiguration: CfnDashboard.DefaultNewSheetConfigurationProperty) {
+    /** @param defaultNewSheetConfiguration The configuration for default new sheet settings. */
+    public fun defaultNewSheetConfiguration(
+        defaultNewSheetConfiguration: CfnDashboard.DefaultNewSheetConfigurationProperty
+    ) {
         cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)
     }
 

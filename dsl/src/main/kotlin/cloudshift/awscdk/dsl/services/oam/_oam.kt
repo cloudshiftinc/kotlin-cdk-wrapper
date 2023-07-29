@@ -1,24 +1,33 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.oam
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.oam.CfnLink
 import software.amazon.awscdk.services.oam.CfnLinkProps
 import software.amazon.awscdk.services.oam.CfnSink
 import software.amazon.awscdk.services.oam.CfnSinkProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object oam {
     /**
      * Creates a link between a source account and a sink that you have created in a monitoring
      * account.
      *
-     * Before you create a link, you must create a sink in the monitoring account. The sink must have
-     * a sink policy that permits the source account to link to it. You can grant permission to source
-     * accounts by granting permission to an entire organization, an organizational unit, or to
-     * individual accounts.
+     * Before you create a link, you must create a sink in the monitoring account. The sink must
+     * have a sink policy that permits the source account to link to it. You can grant permission to
+     * source accounts by granting permission to an entire organization, an organizational unit, or
+     * to individual accounts.
      *
      * For more information, see
      * [CreateSink](https://docs.aws.amazon.com/OAM/latest/APIReference/API_CreateSink.html) and
@@ -29,7 +38,6 @@ public object oam {
      * Each source account can be linked to as many as five monitoring accounts.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -49,7 +57,7 @@ public object oam {
     public inline fun cfnLink(
         scope: Construct,
         id: String,
-        block: CfnLinkDsl.() -> Unit = {}
+        block: CfnLinkDsl.() -> Unit = {},
     ): CfnLink {
         val builder = CfnLinkDsl(scope, id)
         builder.apply(block)
@@ -60,7 +68,6 @@ public object oam {
      * Properties for defining a `CfnLink`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -87,17 +94,16 @@ public object oam {
      * Creates or updates a *sink* in the current account, so that it can be used as a monitoring
      * account in CloudWatch cross-account observability.
      *
-     * A sink is a resource that represents an attachment point in a monitoring account, which source
-     * accounts can link to to be able to send observability data.
+     * A sink is a resource that represents an attachment point in a monitoring account, which
+     * source accounts can link to to be able to send observability data.
      *
-     * After you create a sink, you must create a sink policy that allows source accounts to attach to
-     * it. For more information, see
+     * After you create a sink, you must create a sink policy that allows source accounts to attach
+     * to it. For more information, see
      * [PutSinkPolicy](https://docs.aws.amazon.com/OAM/latest/APIReference/API_PutSinkPolicy.html) .
      *
      * An account can have one sink.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -117,7 +123,7 @@ public object oam {
     public inline fun cfnSink(
         scope: Construct,
         id: String,
-        block: CfnSinkDsl.() -> Unit = {}
+        block: CfnSinkDsl.() -> Unit = {},
     ): CfnSink {
         val builder = CfnSinkDsl(scope, id)
         builder.apply(block)
@@ -128,7 +134,6 @@ public object oam {
      * Properties for defining a `CfnSink`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.

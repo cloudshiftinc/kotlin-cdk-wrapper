@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  * SageMaker training image.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,27 +34,23 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  */
 @CdkDslMarker
 public class CfnModelCardTrainingEnvironmentPropertyDsl {
-  private val cdkBuilder: CfnModelCard.TrainingEnvironmentProperty.Builder =
-      CfnModelCard.TrainingEnvironmentProperty.builder()
+    private val cdkBuilder: CfnModelCard.TrainingEnvironmentProperty.Builder =
+        CfnModelCard.TrainingEnvironmentProperty.builder()
 
-  private val _containerImage: MutableList<String> = mutableListOf()
+    private val _containerImage: MutableList<String> = mutableListOf()
 
-  /**
-   * @param containerImage SageMaker inference image URI.
-   */
-  public fun containerImage(vararg containerImage: String) {
-    _containerImage.addAll(listOf(*containerImage))
-  }
+    /** @param containerImage SageMaker inference image URI. */
+    public fun containerImage(vararg containerImage: String) {
+        _containerImage.addAll(listOf(*containerImage))
+    }
 
-  /**
-   * @param containerImage SageMaker inference image URI.
-   */
-  public fun containerImage(containerImage: Collection<String>) {
-    _containerImage.addAll(containerImage)
-  }
+    /** @param containerImage SageMaker inference image URI. */
+    public fun containerImage(containerImage: Collection<String>) {
+        _containerImage.addAll(containerImage)
+    }
 
-  public fun build(): CfnModelCard.TrainingEnvironmentProperty {
-    if(_containerImage.isNotEmpty()) cdkBuilder.containerImage(_containerImage)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnModelCard.TrainingEnvironmentProperty {
+        if (_containerImage.isNotEmpty()) cdkBuilder.containerImage(_containerImage)
+        return cdkBuilder.build()
+    }
 }

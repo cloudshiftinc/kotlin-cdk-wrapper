@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnDatastore
  * Information about the partition dimensions in a data store.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,34 +44,28 @@ import software.amazon.awscdk.services.iotanalytics.CfnDatastore
  */
 @CdkDslMarker
 public class CfnDatastoreDatastorePartitionsPropertyDsl {
-  private val cdkBuilder: CfnDatastore.DatastorePartitionsProperty.Builder =
-      CfnDatastore.DatastorePartitionsProperty.builder()
+    private val cdkBuilder: CfnDatastore.DatastorePartitionsProperty.Builder =
+        CfnDatastore.DatastorePartitionsProperty.builder()
 
-  private val _partitions: MutableList<Any> = mutableListOf()
+    private val _partitions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param partitions A list of partition dimensions in a data store.
-   */
-  public fun partitions(vararg partitions: Any) {
-    _partitions.addAll(listOf(*partitions))
-  }
+    /** @param partitions A list of partition dimensions in a data store. */
+    public fun partitions(vararg partitions: Any) {
+        _partitions.addAll(listOf(*partitions))
+    }
 
-  /**
-   * @param partitions A list of partition dimensions in a data store.
-   */
-  public fun partitions(partitions: Collection<Any>) {
-    _partitions.addAll(partitions)
-  }
+    /** @param partitions A list of partition dimensions in a data store. */
+    public fun partitions(partitions: Collection<Any>) {
+        _partitions.addAll(partitions)
+    }
 
-  /**
-   * @param partitions A list of partition dimensions in a data store.
-   */
-  public fun partitions(partitions: IResolvable) {
-    cdkBuilder.partitions(partitions)
-  }
+    /** @param partitions A list of partition dimensions in a data store. */
+    public fun partitions(partitions: IResolvable) {
+        cdkBuilder.partitions(partitions)
+    }
 
-  public fun build(): CfnDatastore.DatastorePartitionsProperty {
-    if(_partitions.isNotEmpty()) cdkBuilder.partitions(_partitions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDatastore.DatastorePartitionsProperty {
+        if (_partitions.isNotEmpty()) cdkBuilder.partitions(_partitions)
+        return cdkBuilder.build()
+    }
 }

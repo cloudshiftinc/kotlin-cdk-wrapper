@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fis
 
@@ -11,12 +20,11 @@ import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 /**
  * Specifies a filter used for the target resource input in an experiment template.
  *
- * For more information, see [Resource
- * filters](https://docs.aws.amazon.com/fis/latest/userguide/targets.html#target-filters) in the *AWS
- * Fault Injection Simulator User Guide* .
+ * For more information, see
+ * [Resource filters](https://docs.aws.amazon.com/fis/latest/userguide/targets.html#target-filters)
+ * in the *AWS Fault Injection Simulator User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,34 +40,28 @@ import software.amazon.awscdk.services.fis.CfnExperimentTemplate
  */
 @CdkDslMarker
 public class CfnExperimentTemplateExperimentTemplateTargetFilterPropertyDsl {
-  private val cdkBuilder: CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty.Builder =
-      CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty.builder()
+    private val cdkBuilder: CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty.Builder =
+        CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty.builder()
 
-  private val _values: MutableList<String> = mutableListOf()
+    private val _values: MutableList<String> = mutableListOf()
 
-  /**
-   * @param path The attribute path for the filter. 
-   */
-  public fun path(path: String) {
-    cdkBuilder.path(path)
-  }
+    /** @param path The attribute path for the filter. */
+    public fun path(path: String) {
+        cdkBuilder.path(path)
+    }
 
-  /**
-   * @param values The attribute values for the filter. 
-   */
-  public fun values(vararg values: String) {
-    _values.addAll(listOf(*values))
-  }
+    /** @param values The attribute values for the filter. */
+    public fun values(vararg values: String) {
+        _values.addAll(listOf(*values))
+    }
 
-  /**
-   * @param values The attribute values for the filter. 
-   */
-  public fun values(values: Collection<String>) {
-    _values.addAll(values)
-  }
+    /** @param values The attribute values for the filter. */
+    public fun values(values: Collection<String>) {
+        _values.addAll(values)
+    }
 
-  public fun build(): CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty {
-    if(_values.isNotEmpty()) cdkBuilder.values(_values)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty {
+        if (_values.isNotEmpty()) cdkBuilder.values(_values)
+        return cdkBuilder.build()
+    }
 }

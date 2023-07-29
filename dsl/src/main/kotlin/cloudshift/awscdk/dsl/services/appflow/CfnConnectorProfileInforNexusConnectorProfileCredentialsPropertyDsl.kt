@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  * The connector-specific profile credentials required by Infor Nexus.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,37 +36,30 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  */
 @CdkDslMarker
 public class CfnConnectorProfileInforNexusConnectorProfileCredentialsPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.Builder
-      = CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.builder()
+    private val cdkBuilder:
+        CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.Builder =
+        CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty.builder()
 
-  /**
-   * @param accessKeyId The Access Key portion of the credentials. 
-   */
-  public fun accessKeyId(accessKeyId: String) {
-    cdkBuilder.accessKeyId(accessKeyId)
-  }
+    /** @param accessKeyId The Access Key portion of the credentials. */
+    public fun accessKeyId(accessKeyId: String) {
+        cdkBuilder.accessKeyId(accessKeyId)
+    }
 
-  /**
-   * @param datakey The encryption keys used to encrypt data. 
-   */
-  public fun datakey(datakey: String) {
-    cdkBuilder.datakey(datakey)
-  }
+    /** @param datakey The encryption keys used to encrypt data. */
+    public fun datakey(datakey: String) {
+        cdkBuilder.datakey(datakey)
+    }
 
-  /**
-   * @param secretAccessKey The secret key used to sign requests. 
-   */
-  public fun secretAccessKey(secretAccessKey: String) {
-    cdkBuilder.secretAccessKey(secretAccessKey)
-  }
+    /** @param secretAccessKey The secret key used to sign requests. */
+    public fun secretAccessKey(secretAccessKey: String) {
+        cdkBuilder.secretAccessKey(secretAccessKey)
+    }
 
-  /**
-   * @param userId The identifier for the user. 
-   */
-  public fun userId(userId: String) {
-    cdkBuilder.userId(userId)
-  }
+    /** @param userId The identifier for the user. */
+    public fun userId(userId: String) {
+        cdkBuilder.userId(userId)
+    }
 
-  public fun build(): CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty =
-      cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty =
+        cdkBuilder.build()
 }

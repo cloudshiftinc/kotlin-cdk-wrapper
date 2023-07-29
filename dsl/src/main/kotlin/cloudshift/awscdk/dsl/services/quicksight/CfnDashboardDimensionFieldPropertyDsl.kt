@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The dimension type field.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -259,52 +267,42 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardDimensionFieldPropertyDsl {
-  private val cdkBuilder: CfnDashboard.DimensionFieldProperty.Builder =
-      CfnDashboard.DimensionFieldProperty.builder()
+    private val cdkBuilder: CfnDashboard.DimensionFieldProperty.Builder =
+        CfnDashboard.DimensionFieldProperty.builder()
 
-  /**
-   * @param categoricalDimensionField The dimension type field with categorical type columns.
-   */
-  public fun categoricalDimensionField(categoricalDimensionField: IResolvable) {
-    cdkBuilder.categoricalDimensionField(categoricalDimensionField)
-  }
+    /** @param categoricalDimensionField The dimension type field with categorical type columns. */
+    public fun categoricalDimensionField(categoricalDimensionField: IResolvable) {
+        cdkBuilder.categoricalDimensionField(categoricalDimensionField)
+    }
 
-  /**
-   * @param categoricalDimensionField The dimension type field with categorical type columns.
-   */
-  public
-      fun categoricalDimensionField(categoricalDimensionField: CfnDashboard.CategoricalDimensionFieldProperty) {
-    cdkBuilder.categoricalDimensionField(categoricalDimensionField)
-  }
+    /** @param categoricalDimensionField The dimension type field with categorical type columns. */
+    public fun categoricalDimensionField(
+        categoricalDimensionField: CfnDashboard.CategoricalDimensionFieldProperty
+    ) {
+        cdkBuilder.categoricalDimensionField(categoricalDimensionField)
+    }
 
-  /**
-   * @param dateDimensionField The dimension type field with date type columns.
-   */
-  public fun dateDimensionField(dateDimensionField: IResolvable) {
-    cdkBuilder.dateDimensionField(dateDimensionField)
-  }
+    /** @param dateDimensionField The dimension type field with date type columns. */
+    public fun dateDimensionField(dateDimensionField: IResolvable) {
+        cdkBuilder.dateDimensionField(dateDimensionField)
+    }
 
-  /**
-   * @param dateDimensionField The dimension type field with date type columns.
-   */
-  public fun dateDimensionField(dateDimensionField: CfnDashboard.DateDimensionFieldProperty) {
-    cdkBuilder.dateDimensionField(dateDimensionField)
-  }
+    /** @param dateDimensionField The dimension type field with date type columns. */
+    public fun dateDimensionField(dateDimensionField: CfnDashboard.DateDimensionFieldProperty) {
+        cdkBuilder.dateDimensionField(dateDimensionField)
+    }
 
-  /**
-   * @param numericalDimensionField The dimension type field with numerical type columns.
-   */
-  public fun numericalDimensionField(numericalDimensionField: IResolvable) {
-    cdkBuilder.numericalDimensionField(numericalDimensionField)
-  }
+    /** @param numericalDimensionField The dimension type field with numerical type columns. */
+    public fun numericalDimensionField(numericalDimensionField: IResolvable) {
+        cdkBuilder.numericalDimensionField(numericalDimensionField)
+    }
 
-  /**
-   * @param numericalDimensionField The dimension type field with numerical type columns.
-   */
-  public
-      fun numericalDimensionField(numericalDimensionField: CfnDashboard.NumericalDimensionFieldProperty) {
-    cdkBuilder.numericalDimensionField(numericalDimensionField)
-  }
+    /** @param numericalDimensionField The dimension type field with numerical type columns. */
+    public fun numericalDimensionField(
+        numericalDimensionField: CfnDashboard.NumericalDimensionFieldProperty
+    ) {
+        cdkBuilder.numericalDimensionField(numericalDimensionField)
+    }
 
-  public fun build(): CfnDashboard.DimensionFieldProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.DimensionFieldProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * Redshift.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,19 +34,19 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class CfnDeliveryStreamRedshiftRetryOptionsPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.RedshiftRetryOptionsProperty.Builder =
-      CfnDeliveryStream.RedshiftRetryOptionsProperty.builder()
+    private val cdkBuilder: CfnDeliveryStream.RedshiftRetryOptionsProperty.Builder =
+        CfnDeliveryStream.RedshiftRetryOptionsProperty.builder()
 
-  /**
-   * @param durationInSeconds The length of time during which Kinesis Data Firehose retries delivery
-   * after a failure, starting from the initial request and including the first attempt.
-   * The default value is 3600 seconds (60 minutes). Kinesis Data Firehose does not retry if the
-   * value of `DurationInSeconds` is 0 (zero) or if the first delivery attempt takes longer than the
-   * current value.
-   */
-  public fun durationInSeconds(durationInSeconds: Number) {
-    cdkBuilder.durationInSeconds(durationInSeconds)
-  }
+    /**
+     * @param durationInSeconds The length of time during which Kinesis Data Firehose retries
+     *   delivery after a failure, starting from the initial request and including the first
+     *   attempt. The default value is 3600 seconds (60 minutes). Kinesis Data Firehose does not
+     *   retry if the value of `DurationInSeconds` is 0 (zero) or if the first delivery attempt
+     *   takes longer than the current value.
+     */
+    public fun durationInSeconds(durationInSeconds: Number) {
+        cdkBuilder.durationInSeconds(durationInSeconds)
+    }
 
-  public fun build(): CfnDeliveryStream.RedshiftRetryOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.RedshiftRetryOptionsProperty = cdkBuilder.build()
 }

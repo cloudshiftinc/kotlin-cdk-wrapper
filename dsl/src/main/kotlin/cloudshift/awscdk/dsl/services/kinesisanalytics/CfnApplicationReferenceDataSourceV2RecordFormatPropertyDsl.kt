@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  * mapping information that should be applied to schematize the records on the stream.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,34 +44,36 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceV2RecordFormatPropertyDsl {
-  private val cdkBuilder: CfnApplicationReferenceDataSourceV2.RecordFormatProperty.Builder =
-      CfnApplicationReferenceDataSourceV2.RecordFormatProperty.builder()
+    private val cdkBuilder: CfnApplicationReferenceDataSourceV2.RecordFormatProperty.Builder =
+        CfnApplicationReferenceDataSourceV2.RecordFormatProperty.builder()
 
-  /**
-   * @param mappingParameters When you configure application input at the time of creating or
-   * updating an application, provides additional mapping information specific to the record format
-   * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-   */
-  public fun mappingParameters(mappingParameters: IResolvable) {
-    cdkBuilder.mappingParameters(mappingParameters)
-  }
+    /**
+     * @param mappingParameters When you configure application input at the time of creating or
+     *   updating an application, provides additional mapping information specific to the record
+     *   format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming
+     *   source.
+     */
+    public fun mappingParameters(mappingParameters: IResolvable) {
+        cdkBuilder.mappingParameters(mappingParameters)
+    }
 
-  /**
-   * @param mappingParameters When you configure application input at the time of creating or
-   * updating an application, provides additional mapping information specific to the record format
-   * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-   */
-  public
-      fun mappingParameters(mappingParameters: CfnApplicationReferenceDataSourceV2.MappingParametersProperty) {
-    cdkBuilder.mappingParameters(mappingParameters)
-  }
+    /**
+     * @param mappingParameters When you configure application input at the time of creating or
+     *   updating an application, provides additional mapping information specific to the record
+     *   format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming
+     *   source.
+     */
+    public fun mappingParameters(
+        mappingParameters: CfnApplicationReferenceDataSourceV2.MappingParametersProperty
+    ) {
+        cdkBuilder.mappingParameters(mappingParameters)
+    }
 
-  /**
-   * @param recordFormatType The type of record format. 
-   */
-  public fun recordFormatType(recordFormatType: String) {
-    cdkBuilder.recordFormatType(recordFormatType)
-  }
+    /** @param recordFormatType The type of record format. */
+    public fun recordFormatType(recordFormatType: String) {
+        cdkBuilder.recordFormatType(recordFormatType)
+    }
 
-  public fun build(): CfnApplicationReferenceDataSourceV2.RecordFormatProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationReferenceDataSourceV2.RecordFormatProperty =
+        cdkBuilder.build()
 }

@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.forecast
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.forecast.CfnDataset
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.forecast.CfnDataset
 
 /**
  * Defines the fields of a dataset.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,7 +44,7 @@ public class CfnDatasetSchemaPropertyDsl {
 
     /**
      * @param attributes An array of attributes specifying the name and type of each field in a
-     * dataset.
+     *   dataset.
      */
     public fun attributes(vararg attributes: Any) {
         _attributes.addAll(listOf(*attributes))
@@ -44,7 +52,7 @@ public class CfnDatasetSchemaPropertyDsl {
 
     /**
      * @param attributes An array of attributes specifying the name and type of each field in a
-     * dataset.
+     *   dataset.
      */
     public fun attributes(attributes: Collection<Any>) {
         _attributes.addAll(attributes)
@@ -52,7 +60,7 @@ public class CfnDatasetSchemaPropertyDsl {
 
     /**
      * @param attributes An array of attributes specifying the name and type of each field in a
-     * dataset.
+     *   dataset.
      */
     public fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes)

@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * The options for a paper canvas of a section-based layout.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,7 +46,7 @@ public class CfnTemplateSectionBasedLayoutPaperCanvasSizeOptionsPropertyDsl {
 
     /**
      * @param paperMargin Defines the spacing between the canvas content and the top, bottom, left,
-     * and right edges.
+     *   and right edges.
      */
     public fun paperMargin(paperMargin: IResolvable) {
         cdkBuilder.paperMargin(paperMargin)
@@ -46,15 +54,15 @@ public class CfnTemplateSectionBasedLayoutPaperCanvasSizeOptionsPropertyDsl {
 
     /**
      * @param paperMargin Defines the spacing between the canvas content and the top, bottom, left,
-     * and right edges.
+     *   and right edges.
      */
     public fun paperMargin(paperMargin: CfnTemplate.SpacingProperty) {
         cdkBuilder.paperMargin(paperMargin)
     }
 
     /**
-     * @param paperOrientation The paper orientation that is used to define canvas dimensions. Choose
-     * one of the following options:.
+     * @param paperOrientation The paper orientation that is used to define canvas dimensions.
+     *   Choose one of the following options:.
      * * PORTRAIT
      * * LANDSCAPE
      */
@@ -62,12 +70,11 @@ public class CfnTemplateSectionBasedLayoutPaperCanvasSizeOptionsPropertyDsl {
         cdkBuilder.paperOrientation(paperOrientation)
     }
 
-    /**
-     * @param paperSize The paper size that is used to define canvas dimensions.
-     */
+    /** @param paperSize The paper size that is used to define canvas dimensions. */
     public fun paperSize(paperSize: String) {
         cdkBuilder.paperSize(paperSize)
     }
 
-    public fun build(): CfnTemplate.SectionBasedLayoutPaperCanvasSizeOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.SectionBasedLayoutPaperCanvasSizeOptionsProperty =
+        cdkBuilder.build()
 }

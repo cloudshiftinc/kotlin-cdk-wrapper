@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.HttpTimeout
  * Represents timeouts for HTTP protocols.
  *
  * Example:
- *
  * ```
  * Mesh mesh;
  * Service service;
@@ -44,22 +52,17 @@ import software.amazon.awscdk.services.appmesh.HttpTimeout
  */
 @CdkDslMarker
 public class HttpTimeoutDsl {
-  private val cdkBuilder: HttpTimeout.Builder = HttpTimeout.builder()
+    private val cdkBuilder: HttpTimeout.Builder = HttpTimeout.builder()
 
-  /**
-   * @param idle Represents an idle timeout.
-   * The amount of time that a connection may be idle.
-   */
-  public fun idle(idle: Duration) {
-    cdkBuilder.idle(idle)
-  }
+    /** @param idle Represents an idle timeout. The amount of time that a connection may be idle. */
+    public fun idle(idle: Duration) {
+        cdkBuilder.idle(idle)
+    }
 
-  /**
-   * @param perRequest Represents per request timeout.
-   */
-  public fun perRequest(perRequest: Duration) {
-    cdkBuilder.perRequest(perRequest)
-  }
+    /** @param perRequest Represents per request timeout. */
+    public fun perRequest(perRequest: Duration) {
+        cdkBuilder.perRequest(perRequest)
+    }
 
-  public fun build(): HttpTimeout = cdkBuilder.build()
+    public fun build(): HttpTimeout = cdkBuilder.build()
 }

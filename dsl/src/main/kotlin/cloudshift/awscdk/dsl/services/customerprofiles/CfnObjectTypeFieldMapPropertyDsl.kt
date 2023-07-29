@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnObjectType
  * A map of the name and ObjectType field.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,29 +38,23 @@ import software.amazon.awscdk.services.customerprofiles.CfnObjectType
  */
 @CdkDslMarker
 public class CfnObjectTypeFieldMapPropertyDsl {
-  private val cdkBuilder: CfnObjectType.FieldMapProperty.Builder =
-      CfnObjectType.FieldMapProperty.builder()
+    private val cdkBuilder: CfnObjectType.FieldMapProperty.Builder =
+        CfnObjectType.FieldMapProperty.builder()
 
-  /**
-   * @param name Name of the field.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name Name of the field. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param objectTypeField Represents a field in a ProfileObjectType.
-   */
-  public fun objectTypeField(objectTypeField: IResolvable) {
-    cdkBuilder.objectTypeField(objectTypeField)
-  }
+    /** @param objectTypeField Represents a field in a ProfileObjectType. */
+    public fun objectTypeField(objectTypeField: IResolvable) {
+        cdkBuilder.objectTypeField(objectTypeField)
+    }
 
-  /**
-   * @param objectTypeField Represents a field in a ProfileObjectType.
-   */
-  public fun objectTypeField(objectTypeField: CfnObjectType.ObjectTypeFieldProperty) {
-    cdkBuilder.objectTypeField(objectTypeField)
-  }
+    /** @param objectTypeField Represents a field in a ProfileObjectType. */
+    public fun objectTypeField(objectTypeField: CfnObjectType.ObjectTypeFieldProperty) {
+        cdkBuilder.objectTypeField(objectTypeField)
+    }
 
-  public fun build(): CfnObjectType.FieldMapProperty = cdkBuilder.build()
+    public fun build(): CfnObjectType.FieldMapProperty = cdkBuilder.build()
 }

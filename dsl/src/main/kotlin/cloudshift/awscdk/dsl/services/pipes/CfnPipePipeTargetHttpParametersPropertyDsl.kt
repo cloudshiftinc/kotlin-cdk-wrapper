@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  * ApiDestinations.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,61 +42,61 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  */
 @CdkDslMarker
 public class CfnPipePipeTargetHttpParametersPropertyDsl {
-  private val cdkBuilder: CfnPipe.PipeTargetHttpParametersProperty.Builder =
-      CfnPipe.PipeTargetHttpParametersProperty.builder()
+    private val cdkBuilder: CfnPipe.PipeTargetHttpParametersProperty.Builder =
+        CfnPipe.PipeTargetHttpParametersProperty.builder()
 
-  private val _pathParameterValues: MutableList<String> = mutableListOf()
+    private val _pathParameterValues: MutableList<String> = mutableListOf()
 
-  /**
-   * @param headerParameters The headers that need to be sent as part of request invoking the API
-   * Gateway REST API or EventBridge ApiDestination.
-   */
-  public fun headerParameters(headerParameters: Map<String, String>) {
-    cdkBuilder.headerParameters(headerParameters)
-  }
+    /**
+     * @param headerParameters The headers that need to be sent as part of request invoking the API
+     *   Gateway REST API or EventBridge ApiDestination.
+     */
+    public fun headerParameters(headerParameters: Map<String, String>) {
+        cdkBuilder.headerParameters(headerParameters)
+    }
 
-  /**
-   * @param headerParameters The headers that need to be sent as part of request invoking the API
-   * Gateway REST API or EventBridge ApiDestination.
-   */
-  public fun headerParameters(headerParameters: IResolvable) {
-    cdkBuilder.headerParameters(headerParameters)
-  }
+    /**
+     * @param headerParameters The headers that need to be sent as part of request invoking the API
+     *   Gateway REST API or EventBridge ApiDestination.
+     */
+    public fun headerParameters(headerParameters: IResolvable) {
+        cdkBuilder.headerParameters(headerParameters)
+    }
 
-  /**
-   * @param pathParameterValues The path parameter values to be used to populate API Gateway REST
-   * API or EventBridge ApiDestination path wildcards ("*").
-   */
-  public fun pathParameterValues(vararg pathParameterValues: String) {
-    _pathParameterValues.addAll(listOf(*pathParameterValues))
-  }
+    /**
+     * @param pathParameterValues The path parameter values to be used to populate API Gateway REST
+     *   API or EventBridge ApiDestination path wildcards ("*").
+     */
+    public fun pathParameterValues(vararg pathParameterValues: String) {
+        _pathParameterValues.addAll(listOf(*pathParameterValues))
+    }
 
-  /**
-   * @param pathParameterValues The path parameter values to be used to populate API Gateway REST
-   * API or EventBridge ApiDestination path wildcards ("*").
-   */
-  public fun pathParameterValues(pathParameterValues: Collection<String>) {
-    _pathParameterValues.addAll(pathParameterValues)
-  }
+    /**
+     * @param pathParameterValues The path parameter values to be used to populate API Gateway REST
+     *   API or EventBridge ApiDestination path wildcards ("*").
+     */
+    public fun pathParameterValues(pathParameterValues: Collection<String>) {
+        _pathParameterValues.addAll(pathParameterValues)
+    }
 
-  /**
-   * @param queryStringParameters The query string keys/values that need to be sent as part of
-   * request invoking the API Gateway REST API or EventBridge ApiDestination.
-   */
-  public fun queryStringParameters(queryStringParameters: Map<String, String>) {
-    cdkBuilder.queryStringParameters(queryStringParameters)
-  }
+    /**
+     * @param queryStringParameters The query string keys/values that need to be sent as part of
+     *   request invoking the API Gateway REST API or EventBridge ApiDestination.
+     */
+    public fun queryStringParameters(queryStringParameters: Map<String, String>) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
+    }
 
-  /**
-   * @param queryStringParameters The query string keys/values that need to be sent as part of
-   * request invoking the API Gateway REST API or EventBridge ApiDestination.
-   */
-  public fun queryStringParameters(queryStringParameters: IResolvable) {
-    cdkBuilder.queryStringParameters(queryStringParameters)
-  }
+    /**
+     * @param queryStringParameters The query string keys/values that need to be sent as part of
+     *   request invoking the API Gateway REST API or EventBridge ApiDestination.
+     */
+    public fun queryStringParameters(queryStringParameters: IResolvable) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
+    }
 
-  public fun build(): CfnPipe.PipeTargetHttpParametersProperty {
-    if(_pathParameterValues.isNotEmpty()) cdkBuilder.pathParameterValues(_pathParameterValues)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnPipe.PipeTargetHttpParametersProperty {
+        if (_pathParameterValues.isNotEmpty()) cdkBuilder.pathParameterValues(_pathParameterValues)
+        return cdkBuilder.build()
+    }
 }

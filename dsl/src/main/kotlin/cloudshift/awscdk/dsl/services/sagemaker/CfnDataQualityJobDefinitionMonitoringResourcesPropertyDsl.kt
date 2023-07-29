@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
  * Identifies the resources to deploy for a monitoring job.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,24 +38,24 @@ import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
  */
 @CdkDslMarker
 public class CfnDataQualityJobDefinitionMonitoringResourcesPropertyDsl {
-  private val cdkBuilder: CfnDataQualityJobDefinition.MonitoringResourcesProperty.Builder =
-      CfnDataQualityJobDefinition.MonitoringResourcesProperty.builder()
+    private val cdkBuilder: CfnDataQualityJobDefinition.MonitoringResourcesProperty.Builder =
+        CfnDataQualityJobDefinition.MonitoringResourcesProperty.builder()
 
-  /**
-   * @param clusterConfig The configuration for the cluster resources used to run the processing
-   * job. 
-   */
-  public fun clusterConfig(clusterConfig: IResolvable) {
-    cdkBuilder.clusterConfig(clusterConfig)
-  }
+    /**
+     * @param clusterConfig The configuration for the cluster resources used to run the processing
+     *   job.
+     */
+    public fun clusterConfig(clusterConfig: IResolvable) {
+        cdkBuilder.clusterConfig(clusterConfig)
+    }
 
-  /**
-   * @param clusterConfig The configuration for the cluster resources used to run the processing
-   * job. 
-   */
-  public fun clusterConfig(clusterConfig: CfnDataQualityJobDefinition.ClusterConfigProperty) {
-    cdkBuilder.clusterConfig(clusterConfig)
-  }
+    /**
+     * @param clusterConfig The configuration for the cluster resources used to run the processing
+     *   job.
+     */
+    public fun clusterConfig(clusterConfig: CfnDataQualityJobDefinition.ClusterConfigProperty) {
+        cdkBuilder.clusterConfig(clusterConfig)
+    }
 
-  public fun build(): CfnDataQualityJobDefinition.MonitoringResourcesProperty = cdkBuilder.build()
+    public fun build(): CfnDataQualityJobDefinition.MonitoringResourcesProperty = cdkBuilder.build()
 }

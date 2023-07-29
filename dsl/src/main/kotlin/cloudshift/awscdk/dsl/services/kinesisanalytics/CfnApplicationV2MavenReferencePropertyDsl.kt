@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  * You can use Maven references to specify dependency JAR files.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,29 +36,23 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  */
 @CdkDslMarker
 public class CfnApplicationV2MavenReferencePropertyDsl {
-  private val cdkBuilder: CfnApplicationV2.MavenReferenceProperty.Builder =
-      CfnApplicationV2.MavenReferenceProperty.builder()
+    private val cdkBuilder: CfnApplicationV2.MavenReferenceProperty.Builder =
+        CfnApplicationV2.MavenReferenceProperty.builder()
 
-  /**
-   * @param artifactId The artifact ID of the Maven reference. 
-   */
-  public fun artifactId(artifactId: String) {
-    cdkBuilder.artifactId(artifactId)
-  }
+    /** @param artifactId The artifact ID of the Maven reference. */
+    public fun artifactId(artifactId: String) {
+        cdkBuilder.artifactId(artifactId)
+    }
 
-  /**
-   * @param groupId The group ID of the Maven reference. 
-   */
-  public fun groupId(groupId: String) {
-    cdkBuilder.groupId(groupId)
-  }
+    /** @param groupId The group ID of the Maven reference. */
+    public fun groupId(groupId: String) {
+        cdkBuilder.groupId(groupId)
+    }
 
-  /**
-   * @param version The version of the Maven reference. 
-   */
-  public fun version(version: String) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The version of the Maven reference. */
+    public fun version(version: String) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): CfnApplicationV2.MavenReferenceProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationV2.MavenReferenceProperty = cdkBuilder.build()
 }

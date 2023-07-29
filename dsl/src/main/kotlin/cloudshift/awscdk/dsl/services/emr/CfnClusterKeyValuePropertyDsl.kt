@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emr
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.emr.CfnCluster
  * `KeyValue` is used to pass parameters to a step.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.emr.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterKeyValuePropertyDsl {
-  private val cdkBuilder: CfnCluster.KeyValueProperty.Builder =
-      CfnCluster.KeyValueProperty.builder()
+    private val cdkBuilder: CfnCluster.KeyValueProperty.Builder =
+        CfnCluster.KeyValueProperty.builder()
 
-  /**
-   * @param key The unique identifier of a key-value pair.
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The unique identifier of a key-value pair. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The value part of the identified key.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value part of the identified key. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnCluster.KeyValueProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.KeyValueProperty = cdkBuilder.build()
 }

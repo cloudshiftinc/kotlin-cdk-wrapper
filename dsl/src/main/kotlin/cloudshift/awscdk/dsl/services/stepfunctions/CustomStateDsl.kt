@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * State defined by supplying Amazon States Language (ASL) in the state machine.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.dynamodb.*;
  * // create a table
@@ -53,32 +61,34 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CustomStateDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CustomState.Builder = CustomState.Builder.create(scope, id)
+    private val cdkBuilder: CustomState.Builder = CustomState.Builder.create(scope, id)
 
-  /**
-   * Amazon States Language (JSON-based) definition of the state.
-   *
-   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)
-   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
-   */
-  public fun stateJson(stateJson: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(stateJson)
-    cdkBuilder.stateJson(builder.map)
-  }
+    /**
+     * Amazon States Language (JSON-based) definition of the state.
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)
+     *
+     * @param stateJson Amazon States Language (JSON-based) definition of the state.
+     */
+    public fun stateJson(stateJson: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(stateJson)
+        cdkBuilder.stateJson(builder.map)
+    }
 
-  /**
-   * Amazon States Language (JSON-based) definition of the state.
-   *
-   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)
-   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
-   */
-  public fun stateJson(stateJson: Map<String, Any>) {
-    cdkBuilder.stateJson(stateJson)
-  }
+    /**
+     * Amazon States Language (JSON-based) definition of the state.
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)
+     *
+     * @param stateJson Amazon States Language (JSON-based) definition of the state.
+     */
+    public fun stateJson(stateJson: Map<String, Any>) {
+        cdkBuilder.stateJson(stateJson)
+    }
 
-  public fun build(): CustomState = cdkBuilder.build()
+    public fun build(): CustomState = cdkBuilder.build()
 }

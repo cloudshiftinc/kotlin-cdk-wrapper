@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rolesanywhere
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps
  * Properties for defining a `CfnTrustAnchor`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,61 +53,47 @@ import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps
  */
 @CdkDslMarker
 public class CfnTrustAnchorPropsDsl {
-  private val cdkBuilder: CfnTrustAnchorProps.Builder = CfnTrustAnchorProps.builder()
+    private val cdkBuilder: CfnTrustAnchorProps.Builder = CfnTrustAnchorProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param enabled Indicates whether the trust anchor is enabled.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether the trust anchor is enabled. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Indicates whether the trust anchor is enabled.
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether the trust anchor is enabled. */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param name The name of the trust anchor. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the trust anchor. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param source The trust anchor type and its related certificate data. 
-   */
-  public fun source(source: IResolvable) {
-    cdkBuilder.source(source)
-  }
+    /** @param source The trust anchor type and its related certificate data. */
+    public fun source(source: IResolvable) {
+        cdkBuilder.source(source)
+    }
 
-  /**
-   * @param source The trust anchor type and its related certificate data. 
-   */
-  public fun source(source: CfnTrustAnchor.SourceProperty) {
-    cdkBuilder.source(source)
-  }
+    /** @param source The trust anchor type and its related certificate data. */
+    public fun source(source: CfnTrustAnchor.SourceProperty) {
+        cdkBuilder.source(source)
+    }
 
-  /**
-   * @param tags The tags to attach to the trust anchor.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags to attach to the trust anchor. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags to attach to the trust anchor.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags to attach to the trust anchor. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnTrustAnchorProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTrustAnchorProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

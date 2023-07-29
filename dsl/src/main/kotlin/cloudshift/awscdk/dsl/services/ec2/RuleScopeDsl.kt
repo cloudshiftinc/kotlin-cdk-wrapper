@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ec2.RuleScope
  * The scope and id in which a given SecurityGroup rule should be defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,21 +33,17 @@ import software.amazon.awscdk.services.ec2.RuleScope
  */
 @CdkDslMarker
 public class RuleScopeDsl {
-  private val cdkBuilder: RuleScope.Builder = RuleScope.builder()
+    private val cdkBuilder: RuleScope.Builder = RuleScope.builder()
 
-  /**
-   * @param id The construct ID to use for the rule. 
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The construct ID to use for the rule. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param scope The SecurityGroup in which a rule should be scoped. 
-   */
-  public fun scope(scope: ISecurityGroup) {
-    cdkBuilder.scope(scope)
-  }
+    /** @param scope The SecurityGroup in which a rule should be scoped. */
+    public fun scope(scope: ISecurityGroup) {
+        cdkBuilder.scope(scope)
+    }
 
-  public fun build(): RuleScope = cdkBuilder.build()
+    public fun build(): RuleScope = cdkBuilder.build()
 }

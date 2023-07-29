@@ -1,14 +1,23 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The configuration of selected fields in the `CustomActionFilterOperation` .
@@ -17,7 +26,6 @@ import kotlin.collections.MutableList
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,39 +46,32 @@ import kotlin.collections.MutableList
  */
 @CdkDslMarker
 public class CfnDashboardFilterOperationSelectedFieldsConfigurationPropertyDsl {
-    private val cdkBuilder: CfnDashboard.FilterOperationSelectedFieldsConfigurationProperty.Builder =
+    private val cdkBuilder:
+        CfnDashboard.FilterOperationSelectedFieldsConfigurationProperty.Builder =
         CfnDashboard.FilterOperationSelectedFieldsConfigurationProperty.builder()
 
     private val _selectedColumns: MutableList<Any> = mutableListOf()
 
     private val _selectedFields: MutableList<String> = mutableListOf()
 
-    /**
-     * @param selectedColumns The selected columns of a dataset.
-     */
+    /** @param selectedColumns The selected columns of a dataset. */
     public fun selectedColumns(vararg selectedColumns: Any) {
         _selectedColumns.addAll(listOf(*selectedColumns))
     }
 
-    /**
-     * @param selectedColumns The selected columns of a dataset.
-     */
+    /** @param selectedColumns The selected columns of a dataset. */
     public fun selectedColumns(selectedColumns: Collection<Any>) {
         _selectedColumns.addAll(selectedColumns)
     }
 
-    /**
-     * @param selectedColumns The selected columns of a dataset.
-     */
+    /** @param selectedColumns The selected columns of a dataset. */
     public fun selectedColumns(selectedColumns: IResolvable) {
         cdkBuilder.selectedColumns(selectedColumns)
     }
 
     /**
-     * @param selectedFieldOptions A structure that contains the options that choose which fields are
-     * filtered in the `CustomActionFilterOperation` .
-     * Valid values are defined as follows:
-     *
+     * @param selectedFieldOptions A structure that contains the options that choose which fields
+     *   are filtered in the `CustomActionFilterOperation` . Valid values are defined as follows:
      * * `ALL_FIELDS` : Applies the filter operation to all fields.
      */
     public fun selectedFieldOptions(selectedFieldOptions: String) {

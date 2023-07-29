@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.nimblestudio
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.nimblestudio.CfnStreamingImage
  * TODO</p>.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,23 +35,20 @@ import software.amazon.awscdk.services.nimblestudio.CfnStreamingImage
  */
 @CdkDslMarker
 public class CfnStreamingImageStreamingImageEncryptionConfigurationPropertyDsl {
-  private val cdkBuilder: CfnStreamingImage.StreamingImageEncryptionConfigurationProperty.Builder =
-      CfnStreamingImage.StreamingImageEncryptionConfigurationProperty.builder()
+    private val cdkBuilder:
+        CfnStreamingImage.StreamingImageEncryptionConfigurationProperty.Builder =
+        CfnStreamingImage.StreamingImageEncryptionConfigurationProperty.builder()
 
-  /**
-   * @param keyArn The ARN for a KMS key that is used to encrypt studio data.</p>.
-   */
-  public fun keyArn(keyArn: String) {
-    cdkBuilder.keyArn(keyArn)
-  }
+    /** @param keyArn The ARN for a KMS key that is used to encrypt studio data.</p>. */
+    public fun keyArn(keyArn: String) {
+        cdkBuilder.keyArn(keyArn)
+    }
 
-  /**
-   * @param keyType <p/>. 
-   */
-  public fun keyType(keyType: String) {
-    cdkBuilder.keyType(keyType)
-  }
+    /** @param keyType <p/>. */
+    public fun keyType(keyType: String) {
+        cdkBuilder.keyType(keyType)
+    }
 
-  public fun build(): CfnStreamingImage.StreamingImageEncryptionConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnStreamingImage.StreamingImageEncryptionConfigurationProperty =
+        cdkBuilder.build()
 }

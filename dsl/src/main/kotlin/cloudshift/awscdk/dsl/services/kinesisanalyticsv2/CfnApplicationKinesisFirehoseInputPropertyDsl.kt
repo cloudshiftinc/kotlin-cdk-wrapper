@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  * You provide the delivery stream's Amazon Resource Name (ARN).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,13 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationKinesisFirehoseInputPropertyDsl {
-  private val cdkBuilder: CfnApplication.KinesisFirehoseInputProperty.Builder =
-      CfnApplication.KinesisFirehoseInputProperty.builder()
+    private val cdkBuilder: CfnApplication.KinesisFirehoseInputProperty.Builder =
+        CfnApplication.KinesisFirehoseInputProperty.builder()
 
-  /**
-   * @param resourceArn The Amazon Resource Name (ARN) of the delivery stream. 
-   */
-  public fun resourceArn(resourceArn: String) {
-    cdkBuilder.resourceArn(resourceArn)
-  }
+    /** @param resourceArn The Amazon Resource Name (ARN) of the delivery stream. */
+    public fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+    }
 
-  public fun build(): CfnApplication.KinesisFirehoseInputProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.KinesisFirehoseInputProperty = cdkBuilder.build()
 }

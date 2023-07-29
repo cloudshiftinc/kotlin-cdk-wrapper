@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * You define the content and structure the string.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotCustomPayloadPropertyDsl {
-  private val cdkBuilder: CfnBot.CustomPayloadProperty.Builder =
-      CfnBot.CustomPayloadProperty.builder()
+    private val cdkBuilder: CfnBot.CustomPayloadProperty.Builder =
+        CfnBot.CustomPayloadProperty.builder()
 
-  /**
-   * @param value The string that is sent to your application. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The string that is sent to your application. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnBot.CustomPayloadProperty = cdkBuilder.build()
+    public fun build(): CfnBot.CustomPayloadProperty = cdkBuilder.build()
 }

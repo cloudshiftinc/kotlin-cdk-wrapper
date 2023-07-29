@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
 
 /**
  * Specifies the settings for an Amazon Pinpoint application.
@@ -17,7 +26,6 @@ import kotlin.String
  * Pinpoint resources.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,7 +58,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnApplicationSettingsDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnApplicationSettings.Builder =
         CfnApplicationSettings.Builder.create(scope, id)
@@ -59,6 +67,7 @@ public class CfnApplicationSettingsDsl(
      * The unique identifier for the Amazon Pinpoint application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-applicationid)
+     *
      * @param applicationId The unique identifier for the Amazon Pinpoint application.
      */
     public fun applicationId(applicationId: String) {
@@ -69,12 +78,13 @@ public class CfnApplicationSettingsDsl(
      * The settings for the Lambda function to use by default as a code hook for campaigns in the
      * application.
      *
-     * To override these settings for a specific campaign, use the Campaign resource to define custom
-     * Lambda function settings for the campaign.
+     * To override these settings for a specific campaign, use the Campaign resource to define
+     * custom Lambda function settings for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-campaignhook)
+     *
      * @param campaignHook The settings for the Lambda function to use by default as a code hook for
-     * campaigns in the application.
+     *   campaigns in the application.
      */
     public fun campaignHook(campaignHook: IResolvable) {
         cdkBuilder.campaignHook(campaignHook)
@@ -84,12 +94,13 @@ public class CfnApplicationSettingsDsl(
      * The settings for the Lambda function to use by default as a code hook for campaigns in the
      * application.
      *
-     * To override these settings for a specific campaign, use the Campaign resource to define custom
-     * Lambda function settings for the campaign.
+     * To override these settings for a specific campaign, use the Campaign resource to define
+     * custom Lambda function settings for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-campaignhook)
+     *
      * @param campaignHook The settings for the Lambda function to use by default as a code hook for
-     * campaigns in the application.
+     *   campaigns in the application.
      */
     public fun campaignHook(campaignHook: CfnApplicationSettings.CampaignHookProperty) {
         cdkBuilder.campaignHook(campaignHook)
@@ -99,8 +110,9 @@ public class CfnApplicationSettingsDsl(
      * Specifies whether to enable application-related alarms in Amazon CloudWatch.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-cloudwatchmetricsenabled)
+     *
      * @param cloudWatchMetricsEnabled Specifies whether to enable application-related alarms in
-     * Amazon CloudWatch.
+     *   Amazon CloudWatch.
      */
     public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
@@ -110,8 +122,9 @@ public class CfnApplicationSettingsDsl(
      * Specifies whether to enable application-related alarms in Amazon CloudWatch.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-cloudwatchmetricsenabled)
+     *
      * @param cloudWatchMetricsEnabled Specifies whether to enable application-related alarms in
-     * Amazon CloudWatch.
+     *   Amazon CloudWatch.
      */
     public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
@@ -124,6 +137,7 @@ public class CfnApplicationSettingsDsl(
      * limits for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-limits)
+     *
      * @param limits The default sending limits for campaigns in the application.
      */
     public fun limits(limits: IResolvable) {
@@ -137,6 +151,7 @@ public class CfnApplicationSettingsDsl(
      * limits for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-limits)
+     *
      * @param limits The default sending limits for campaigns in the application.
      */
     public fun limits(limits: CfnApplicationSettings.LimitsProperty) {
@@ -146,24 +161,24 @@ public class CfnApplicationSettingsDsl(
     /**
      * The default quiet time for campaigns in the application.
      *
-     * Quiet time is a specific time range when campaigns don't send messages to endpoints, if all the
-     * following conditions are met:
-     *
+     * Quiet time is a specific time range when campaigns don't send messages to endpoints, if all
+     * the following conditions are met:
      * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-     * * The current time in the endpoint's time zone is later than or equal to the time specified by
-     * the `QuietTime.Start` property for the application (or a campaign that has custom quiet time
-     * settings).
+     * * The current time in the endpoint's time zone is later than or equal to the time specified
+     *   by the `QuietTime.Start` property for the application (or a campaign that has custom quiet
+     *   time settings).
      * * The current time in the endpoint's time zone is earlier than or equal to the time specified
-     * by the `QuietTime.End` property for the application (or a campaign that has custom quiet time
-     * settings).
+     *   by the `QuietTime.End` property for the application (or a campaign that has custom quiet
+     *   time settings).
      *
      * If any of the preceding conditions isn't met, the endpoint will receive messages from a
      * campaign, even if quiet time is enabled.
      *
-     * To override the default quiet time settings for a specific campaign, use the Campaign resource
-     * to define a custom quiet time for the campaign.
+     * To override the default quiet time settings for a specific campaign, use the Campaign
+     * resource to define a custom quiet time for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-quiettime)
+     *
      * @param quietTime The default quiet time for campaigns in the application.
      */
     public fun quietTime(quietTime: IResolvable) {
@@ -173,24 +188,24 @@ public class CfnApplicationSettingsDsl(
     /**
      * The default quiet time for campaigns in the application.
      *
-     * Quiet time is a specific time range when campaigns don't send messages to endpoints, if all the
-     * following conditions are met:
-     *
+     * Quiet time is a specific time range when campaigns don't send messages to endpoints, if all
+     * the following conditions are met:
      * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-     * * The current time in the endpoint's time zone is later than or equal to the time specified by
-     * the `QuietTime.Start` property for the application (or a campaign that has custom quiet time
-     * settings).
+     * * The current time in the endpoint's time zone is later than or equal to the time specified
+     *   by the `QuietTime.Start` property for the application (or a campaign that has custom quiet
+     *   time settings).
      * * The current time in the endpoint's time zone is earlier than or equal to the time specified
-     * by the `QuietTime.End` property for the application (or a campaign that has custom quiet time
-     * settings).
+     *   by the `QuietTime.End` property for the application (or a campaign that has custom quiet
+     *   time settings).
      *
      * If any of the preceding conditions isn't met, the endpoint will receive messages from a
      * campaign, even if quiet time is enabled.
      *
-     * To override the default quiet time settings for a specific campaign, use the Campaign resource
-     * to define a custom quiet time for the campaign.
+     * To override the default quiet time settings for a specific campaign, use the Campaign
+     * resource to define a custom quiet time for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html#cfn-pinpoint-applicationsettings-quiettime)
+     *
      * @param quietTime The default quiet time for campaigns in the application.
      */
     public fun quietTime(quietTime: CfnApplicationSettings.QuietTimeProperty) {

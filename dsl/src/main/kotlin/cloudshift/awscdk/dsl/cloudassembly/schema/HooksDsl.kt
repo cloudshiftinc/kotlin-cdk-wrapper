@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.Hooks
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.cloudassembly.schema.Hooks
 
 /**
  * Commands to run at predefined points during the integration test workflow.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,14 +46,16 @@ public class HooksDsl {
     private val _preDestroy: MutableList<String> = mutableListOf()
 
     /**
-     * @param postDeploy Commands to run prior after deploying the cdk stacks in the integration test.
+     * @param postDeploy Commands to run prior after deploying the cdk stacks in the integration
+     *   test.
      */
     public fun postDeploy(vararg postDeploy: String) {
         _postDeploy.addAll(listOf(*postDeploy))
     }
 
     /**
-     * @param postDeploy Commands to run prior after deploying the cdk stacks in the integration test.
+     * @param postDeploy Commands to run prior after deploying the cdk stacks in the integration
+     *   test.
      */
     public fun postDeploy(postDeploy: Collection<String>) {
         _postDeploy.addAll(postDeploy)

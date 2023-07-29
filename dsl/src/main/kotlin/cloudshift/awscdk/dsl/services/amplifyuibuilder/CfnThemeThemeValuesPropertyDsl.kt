@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnTheme
  * The `ThemeValues` property specifies key-value pair that defines a property of a theme.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,29 +38,23 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnTheme
  */
 @CdkDslMarker
 public class CfnThemeThemeValuesPropertyDsl {
-  private val cdkBuilder: CfnTheme.ThemeValuesProperty.Builder =
-      CfnTheme.ThemeValuesProperty.builder()
+    private val cdkBuilder: CfnTheme.ThemeValuesProperty.Builder =
+        CfnTheme.ThemeValuesProperty.builder()
 
-  /**
-   * @param key The name of the property.
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The name of the property. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The value of the property.
-   */
-  public fun `value`(`value`: IResolvable) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value of the property. */
+    public fun `value`(`value`: IResolvable) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  /**
-   * @param value The value of the property.
-   */
-  public fun `value`(`value`: CfnTheme.ThemeValueProperty) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value of the property. */
+    public fun `value`(`value`: CfnTheme.ThemeValueProperty) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnTheme.ThemeValuesProperty = cdkBuilder.build()
+    public fun build(): CfnTheme.ThemeValuesProperty = cdkBuilder.build()
 }

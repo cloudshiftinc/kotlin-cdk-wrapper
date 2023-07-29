@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmincidents
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  * The SNS topic that's used by AWS Chatbot to notify the incidents chat channel.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  */
 @CdkDslMarker
 public class CfnResponsePlanNotificationTargetItemPropertyDsl {
-  private val cdkBuilder: CfnResponsePlan.NotificationTargetItemProperty.Builder =
-      CfnResponsePlan.NotificationTargetItemProperty.builder()
+    private val cdkBuilder: CfnResponsePlan.NotificationTargetItemProperty.Builder =
+        CfnResponsePlan.NotificationTargetItemProperty.builder()
 
-  /**
-   * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic.
-   */
-  public fun snsTopicArn(snsTopicArn: String) {
-    cdkBuilder.snsTopicArn(snsTopicArn)
-  }
+    /** @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic. */
+    public fun snsTopicArn(snsTopicArn: String) {
+        cdkBuilder.snsTopicArn(snsTopicArn)
+    }
 
-  public fun build(): CfnResponsePlan.NotificationTargetItemProperty = cdkBuilder.build()
+    public fun build(): CfnResponsePlan.NotificationTargetItemProperty = cdkBuilder.build()
 }

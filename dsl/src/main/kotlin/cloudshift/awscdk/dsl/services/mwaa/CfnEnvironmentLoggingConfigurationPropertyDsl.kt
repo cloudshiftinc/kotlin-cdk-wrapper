@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mwaa
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.mwaa.CfnEnvironment
  * The type of Apache Airflow logs to send to CloudWatch Logs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -54,7 +62,7 @@ public class CfnEnvironmentLoggingConfigurationPropertyDsl {
 
     /**
      * @param dagProcessingLogs Defines the processing logs sent to CloudWatch Logs and the logging
-     * level to send.
+     *   level to send.
      */
     public fun dagProcessingLogs(dagProcessingLogs: IResolvable) {
         cdkBuilder.dagProcessingLogs(dagProcessingLogs)
@@ -62,15 +70,17 @@ public class CfnEnvironmentLoggingConfigurationPropertyDsl {
 
     /**
      * @param dagProcessingLogs Defines the processing logs sent to CloudWatch Logs and the logging
-     * level to send.
+     *   level to send.
      */
-    public fun dagProcessingLogs(dagProcessingLogs: CfnEnvironment.ModuleLoggingConfigurationProperty) {
+    public fun dagProcessingLogs(
+        dagProcessingLogs: CfnEnvironment.ModuleLoggingConfigurationProperty
+    ) {
         cdkBuilder.dagProcessingLogs(dagProcessingLogs)
     }
 
     /**
      * @param schedulerLogs Defines the scheduler logs sent to CloudWatch Logs and the logging level
-     * to send.
+     *   to send.
      */
     public fun schedulerLogs(schedulerLogs: IResolvable) {
         cdkBuilder.schedulerLogs(schedulerLogs)
@@ -78,7 +88,7 @@ public class CfnEnvironmentLoggingConfigurationPropertyDsl {
 
     /**
      * @param schedulerLogs Defines the scheduler logs sent to CloudWatch Logs and the logging level
-     * to send.
+     *   to send.
      */
     public fun schedulerLogs(schedulerLogs: CfnEnvironment.ModuleLoggingConfigurationProperty) {
         cdkBuilder.schedulerLogs(schedulerLogs)
@@ -99,16 +109,16 @@ public class CfnEnvironmentLoggingConfigurationPropertyDsl {
     }
 
     /**
-     * @param webserverLogs Defines the web server logs sent to CloudWatch Logs and the logging level
-     * to send.
+     * @param webserverLogs Defines the web server logs sent to CloudWatch Logs and the logging
+     *   level to send.
      */
     public fun webserverLogs(webserverLogs: IResolvable) {
         cdkBuilder.webserverLogs(webserverLogs)
     }
 
     /**
-     * @param webserverLogs Defines the web server logs sent to CloudWatch Logs and the logging level
-     * to send.
+     * @param webserverLogs Defines the web server logs sent to CloudWatch Logs and the logging
+     *   level to send.
      */
     public fun webserverLogs(webserverLogs: CfnEnvironment.ModuleLoggingConfigurationProperty) {
         cdkBuilder.webserverLogs(webserverLogs)
@@ -116,7 +126,7 @@ public class CfnEnvironmentLoggingConfigurationPropertyDsl {
 
     /**
      * @param workerLogs Defines the worker logs sent to CloudWatch Logs and the logging level to
-     * send.
+     *   send.
      */
     public fun workerLogs(workerLogs: IResolvable) {
         cdkBuilder.workerLogs(workerLogs)
@@ -124,7 +134,7 @@ public class CfnEnvironmentLoggingConfigurationPropertyDsl {
 
     /**
      * @param workerLogs Defines the worker logs sent to CloudWatch Logs and the logging level to
-     * send.
+     *   send.
      */
     public fun workerLogs(workerLogs: CfnEnvironment.ModuleLoggingConfigurationProperty) {
         cdkBuilder.workerLogs(workerLogs)

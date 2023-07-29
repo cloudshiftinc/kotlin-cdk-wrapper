@@ -1,22 +1,30 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iottwinmaker.CfnEntity
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iottwinmaker.CfnEntity
+import software.constructs.Construct
 
 /**
  * Use the `AWS::IoTTwinMaker::Entity` resource to declare an entity.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -74,7 +82,7 @@ import kotlin.collections.Map
 @CdkDslMarker
 public class CfnEntityDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnEntity.Builder = CfnEntity.Builder.create(scope, id)
 
@@ -88,6 +96,7 @@ public class CfnEntityDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-components)
+     *
      * @param components An object that maps strings to the components in the entity.
      */
     public fun components(components: MapBuilder.() -> Unit = {}) {
@@ -106,6 +115,7 @@ public class CfnEntityDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-components)
+     *
      * @param components An object that maps strings to the components in the entity.
      */
     public fun components(components: Map<String, Any>) {
@@ -122,6 +132,7 @@ public class CfnEntityDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-components)
+     *
      * @param components An object that maps strings to the components in the entity.
      */
     public fun components(components: IResolvable) {
@@ -132,6 +143,7 @@ public class CfnEntityDsl(
      * The description of the entity.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-description)
+     *
      * @param description The description of the entity.
      */
     public fun description(description: String) {
@@ -142,6 +154,7 @@ public class CfnEntityDsl(
      * The entity ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-entityid)
+     *
      * @param entityId The entity ID.
      */
     public fun entityId(entityId: String) {
@@ -152,6 +165,7 @@ public class CfnEntityDsl(
      * The entity name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-entityname)
+     *
      * @param entityName The entity name.
      */
     public fun entityName(entityName: String) {
@@ -162,6 +176,7 @@ public class CfnEntityDsl(
      * The ID of the parent entity.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-parententityid)
+     *
      * @param parentEntityId The ID of the parent entity.
      */
     public fun parentEntityId(parentEntityId: String) {
@@ -172,6 +187,7 @@ public class CfnEntityDsl(
      * Metadata that you can use to manage the entity.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-tags)
+     *
      * @param tags Metadata that you can use to manage the entity.
      */
     public fun tags(tags: Map<String, String>) {
@@ -182,6 +198,7 @@ public class CfnEntityDsl(
      * The ID of the workspace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html#cfn-iottwinmaker-entity-workspaceid)
+     *
      * @param workspaceId The ID of the workspace.
      */
     public fun workspaceId(workspaceId: String) {

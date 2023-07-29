@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.DockerCacheOption
  * Options for configuring the Docker cache backend.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,23 @@ import software.amazon.awscdk.DockerCacheOption
  */
 @CdkDslMarker
 public class DockerCacheOptionDsl {
-  private val cdkBuilder: DockerCacheOption.Builder = DockerCacheOption.builder()
+    private val cdkBuilder: DockerCacheOption.Builder = DockerCacheOption.builder()
 
-  /**
-   * @param params Any parameters to pass into the docker cache backend configuration.
-   * Refer to https://docs.docker.com/build/cache/backends/ for cache backend configuration.
-   */
-  public fun params(params: Map<String, String>) {
-    cdkBuilder.params(params)
-  }
+    /**
+     * @param params Any parameters to pass into the docker cache backend configuration. Refer to
+     *   https://docs.docker.com/build/cache/backends/ for cache backend configuration.
+     */
+    public fun params(params: Map<String, String>) {
+        cdkBuilder.params(params)
+    }
 
-  /**
-   * @param type The type of cache to use. 
-   * Refer to https://docs.docker.com/build/cache/backends/ for full list of backends.
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * @param type The type of cache to use. Refer to https://docs.docker.com/build/cache/backends/
+     *   for full list of backends.
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): DockerCacheOption = cdkBuilder.build()
+    public fun build(): DockerCacheOption = cdkBuilder.build()
 }

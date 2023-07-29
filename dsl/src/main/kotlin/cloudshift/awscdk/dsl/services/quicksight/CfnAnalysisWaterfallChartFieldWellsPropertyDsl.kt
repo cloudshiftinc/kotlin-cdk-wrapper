@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The field well configuration of a waterfall visual.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -31,7 +39,9 @@ public class CfnAnalysisWaterfallChartFieldWellsPropertyDsl {
     /**
      * @param waterfallChartAggregatedFieldWells The field well configuration of a waterfall visual.
      */
-    public fun waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells: CfnAnalysis.WaterfallChartAggregatedFieldWellsProperty) {
+    public fun waterfallChartAggregatedFieldWells(
+        waterfallChartAggregatedFieldWells: CfnAnalysis.WaterfallChartAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells)
     }
 

@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Number
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The bound options (north, south, west, east) of the geospatial window options.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,30 +39,22 @@ public class CfnAnalysisGeospatialCoordinateBoundsPropertyDsl {
     private val cdkBuilder: CfnAnalysis.GeospatialCoordinateBoundsProperty.Builder =
         CfnAnalysis.GeospatialCoordinateBoundsProperty.builder()
 
-    /**
-     * @param east The longitude of the east bound of the geospatial coordinate bounds.
-     */
+    /** @param east The longitude of the east bound of the geospatial coordinate bounds. */
     public fun east(east: Number) {
         cdkBuilder.east(east)
     }
 
-    /**
-     * @param north The latitude of the north bound of the geospatial coordinate bounds.
-     */
+    /** @param north The latitude of the north bound of the geospatial coordinate bounds. */
     public fun north(north: Number) {
         cdkBuilder.north(north)
     }
 
-    /**
-     * @param south The latitude of the south bound of the geospatial coordinate bounds.
-     */
+    /** @param south The latitude of the south bound of the geospatial coordinate bounds. */
     public fun south(south: Number) {
         cdkBuilder.south(south)
     }
 
-    /**
-     * @param west The longitude of the west bound of the geospatial coordinate bounds.
-     */
+    /** @param west The longitude of the west bound of the geospatial coordinate bounds. */
     public fun west(west: Number) {
         cdkBuilder.west(west)
     }

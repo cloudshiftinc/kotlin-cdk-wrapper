@@ -22,18 +22,13 @@ val libs = the<LibrariesForLibs>()
 java {
     withJavadocJar()
     withSourcesJar()
-    consistentResolution {
-        useCompileClasspathVersions()
-    }
+    consistentResolution { useCompileClasspathVersions() }
 }
 
 tasks.withType<Test>().configureEach {
     systemProperty("kotest.framework.dump.config", "true")
     useJUnitPlatform()
-    maxParallelForks = (
-        Runtime.getRuntime()
-            .availableProcessors() / 2
-        ).takeIf { it > 0 } ?: 1
+    maxParallelForks = (Runtime.getRuntime().availableProcessors() / 2).takeIf { it > 0 } ?: 1
     testLogging {
         events =
             setOf(
@@ -51,16 +46,13 @@ tasks.withType<Test>().configureEach {
 }
 
 tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions {
-        freeCompilerArgs += listOf("-Xjsr305=strict", "-Xcontext-receivers")
-    }
-    compilerOptions {
-    }
+    kotlinOptions { freeCompilerArgs += listOf("-Xjsr305=strict", "-Xcontext-receivers") }
+    compilerOptions {}
 }
 
 dependencies {
     implementation(libs.guava)
-//    implementation(libs.pearx.kasechange)
+    //    implementation(libs.pearx.kasechange)
 
     // Kotest
     testImplementation(platform(libs.kotest.bom))
@@ -84,14 +76,10 @@ configurations {
         extendsFrom(named(JavaPlugin.COMPILE_ONLY_CONFIGURATION_NAME).get())
     }
     named(JavaPlugin.TEST_ANNOTATION_PROCESSOR_CONFIGURATION_NAME) {
-        extendsFrom(
-            named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get()
-        )
+        extendsFrom(named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get())
     }
     named(JavaPlugin.COMPILE_ONLY_CONFIGURATION_NAME) {
-        extendsFrom(
-            named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get()
-        )
+        extendsFrom(named(JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME).get())
     }
 }
 

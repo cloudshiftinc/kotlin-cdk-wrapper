@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is FrameCaptureCdnSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelFrameCaptureS3SettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.FrameCaptureS3SettingsProperty.Builder =
-      CfnChannel.FrameCaptureS3SettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.FrameCaptureS3SettingsProperty.Builder =
+        CfnChannel.FrameCaptureS3SettingsProperty.builder()
 
-  /**
-   * @param cannedAcl Specify the canned ACL to apply to each S3 request.
-   * Defaults to none.
-   */
-  public fun cannedAcl(cannedAcl: String) {
-    cdkBuilder.cannedAcl(cannedAcl)
-  }
+    /** @param cannedAcl Specify the canned ACL to apply to each S3 request. Defaults to none. */
+    public fun cannedAcl(cannedAcl: String) {
+        cdkBuilder.cannedAcl(cannedAcl)
+    }
 
-  public fun build(): CfnChannel.FrameCaptureS3SettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.FrameCaptureS3SettingsProperty = cdkBuilder.build()
 }

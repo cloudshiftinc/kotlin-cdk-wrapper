@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * thereafter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,44 +48,49 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnDataCatalogEncryptionSettingsDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnDataCatalogEncryptionSettings.Builder =
-      CfnDataCatalogEncryptionSettings.Builder.create(scope, id)
+    private val cdkBuilder: CfnDataCatalogEncryptionSettings.Builder =
+        CfnDataCatalogEncryptionSettings.Builder.create(scope, id)
 
-  /**
-   * The ID of the Data Catalog in which the settings are created.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-catalogid)
-   * @param catalogId The ID of the Data Catalog in which the settings are created. 
-   */
-  public fun catalogId(catalogId: String) {
-    cdkBuilder.catalogId(catalogId)
-  }
+    /**
+     * The ID of the Data Catalog in which the settings are created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-catalogid)
+     *
+     * @param catalogId The ID of the Data Catalog in which the settings are created.
+     */
+    public fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+    }
 
-  /**
-   * Contains configuration information for maintaining Data Catalog security.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)
-   * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
-   * Catalog security. 
-   */
-  public fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
-    cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)
-  }
+    /**
+     * Contains configuration information for maintaining Data Catalog security.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)
+     *
+     * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
+     *   Catalog security.
+     */
+    public fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
+        cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)
+    }
 
-  /**
-   * Contains configuration information for maintaining Data Catalog security.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)
-   * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
-   * Catalog security. 
-   */
-  public
-      fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty) {
-    cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)
-  }
+    /**
+     * Contains configuration information for maintaining Data Catalog security.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)
+     *
+     * @param dataCatalogEncryptionSettings Contains configuration information for maintaining Data
+     *   Catalog security.
+     */
+    public fun dataCatalogEncryptionSettings(
+        dataCatalogEncryptionSettings:
+            CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty
+    ) {
+        cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings)
+    }
 
-  public fun build(): CfnDataCatalogEncryptionSettings = cdkBuilder.build()
+    public fun build(): CfnDataCatalogEncryptionSettings = cdkBuilder.build()
 }

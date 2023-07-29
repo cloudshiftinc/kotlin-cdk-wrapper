@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.ICfnRuleConditionExpression
 import software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion
-import kotlin.String
 
 /**
  * An assertion within a template rule, defined by intrinsic functions.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,12 @@ import kotlin.String
 public class TemplateRuleAssertionDsl {
     private val cdkBuilder: TemplateRuleAssertion.Builder = TemplateRuleAssertion.builder()
 
-    /**
-     * @param assertValue The assertion condition.
-     */
+    /** @param assertValue The assertion condition. */
     public fun assertValue(assertValue: ICfnRuleConditionExpression) {
         cdkBuilder.assertValue(assertValue)
     }
 
-    /**
-     * @param description The description for the asssertion.
-     */
+    /** @param description The description for the asssertion. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }

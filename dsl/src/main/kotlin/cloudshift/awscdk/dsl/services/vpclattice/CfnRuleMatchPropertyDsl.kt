@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  * Describes a rule match.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,21 +52,17 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleMatchPropertyDsl {
-  private val cdkBuilder: CfnRule.MatchProperty.Builder = CfnRule.MatchProperty.builder()
+    private val cdkBuilder: CfnRule.MatchProperty.Builder = CfnRule.MatchProperty.builder()
 
-  /**
-   * @param httpMatch The HTTP criteria that a rule must match. 
-   */
-  public fun httpMatch(httpMatch: IResolvable) {
-    cdkBuilder.httpMatch(httpMatch)
-  }
+    /** @param httpMatch The HTTP criteria that a rule must match. */
+    public fun httpMatch(httpMatch: IResolvable) {
+        cdkBuilder.httpMatch(httpMatch)
+    }
 
-  /**
-   * @param httpMatch The HTTP criteria that a rule must match. 
-   */
-  public fun httpMatch(httpMatch: CfnRule.HttpMatchProperty) {
-    cdkBuilder.httpMatch(httpMatch)
-  }
+    /** @param httpMatch The HTTP criteria that a rule must match. */
+    public fun httpMatch(httpMatch: CfnRule.HttpMatchProperty) {
+        cdkBuilder.httpMatch(httpMatch)
+    }
 
-  public fun build(): CfnRule.MatchProperty = cdkBuilder.build()
+    public fun build(): CfnRule.MatchProperty = cdkBuilder.build()
 }

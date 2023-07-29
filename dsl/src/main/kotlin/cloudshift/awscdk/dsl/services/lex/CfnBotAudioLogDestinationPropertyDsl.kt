@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * The location of audio log files collected when conversation logging is enabled for a bot.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,22 +37,18 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotAudioLogDestinationPropertyDsl {
-  private val cdkBuilder: CfnBot.AudioLogDestinationProperty.Builder =
-      CfnBot.AudioLogDestinationProperty.builder()
+    private val cdkBuilder: CfnBot.AudioLogDestinationProperty.Builder =
+        CfnBot.AudioLogDestinationProperty.builder()
 
-  /**
-   * @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. 
-   */
-  public fun s3Bucket(s3Bucket: IResolvable) {
-    cdkBuilder.s3Bucket(s3Bucket)
-  }
+    /** @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. */
+    public fun s3Bucket(s3Bucket: IResolvable) {
+        cdkBuilder.s3Bucket(s3Bucket)
+    }
 
-  /**
-   * @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. 
-   */
-  public fun s3Bucket(s3Bucket: CfnBot.S3BucketLogDestinationProperty) {
-    cdkBuilder.s3Bucket(s3Bucket)
-  }
+    /** @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. */
+    public fun s3Bucket(s3Bucket: CfnBot.S3BucketLogDestinationProperty) {
+        cdkBuilder.s3Bucket(s3Bucket)
+    }
 
-  public fun build(): CfnBot.AudioLogDestinationProperty = cdkBuilder.build()
+    public fun build(): CfnBot.AudioLogDestinationProperty = cdkBuilder.build()
 }

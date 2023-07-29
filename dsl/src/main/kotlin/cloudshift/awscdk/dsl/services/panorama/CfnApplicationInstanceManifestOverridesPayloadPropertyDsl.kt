@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.panorama
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.panorama.CfnApplicationInstance
  * string representation of the overrides document.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,13 @@ import software.amazon.awscdk.services.panorama.CfnApplicationInstance
  */
 @CdkDslMarker
 public class CfnApplicationInstanceManifestOverridesPayloadPropertyDsl {
-  private val cdkBuilder: CfnApplicationInstance.ManifestOverridesPayloadProperty.Builder =
-      CfnApplicationInstance.ManifestOverridesPayloadProperty.builder()
+    private val cdkBuilder: CfnApplicationInstance.ManifestOverridesPayloadProperty.Builder =
+        CfnApplicationInstance.ManifestOverridesPayloadProperty.builder()
 
-  /**
-   * @param payloadData The overrides document.
-   */
-  public fun payloadData(payloadData: String) {
-    cdkBuilder.payloadData(payloadData)
-  }
+    /** @param payloadData The overrides document. */
+    public fun payloadData(payloadData: String) {
+        cdkBuilder.payloadData(payloadData)
+    }
 
-  public fun build(): CfnApplicationInstance.ManifestOverridesPayloadProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationInstance.ManifestOverridesPayloadProperty = cdkBuilder.build()
 }

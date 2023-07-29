@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.ExportValueOptions
  * Options for the `stack.exportValue()` method.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,14 +30,12 @@ import software.amazon.awscdk.ExportValueOptions
  */
 @CdkDslMarker
 public class ExportValueOptionsDsl {
-  private val cdkBuilder: ExportValueOptions.Builder = ExportValueOptions.builder()
+    private val cdkBuilder: ExportValueOptions.Builder = ExportValueOptions.builder()
 
-  /**
-   * @param name The name of the export to create.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the export to create. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): ExportValueOptions = cdkBuilder.build()
+    public fun build(): ExportValueOptions = cdkBuilder.build()
 }

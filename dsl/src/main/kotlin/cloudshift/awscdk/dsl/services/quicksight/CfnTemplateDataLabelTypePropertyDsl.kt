@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,30 +55,22 @@ public class CfnTemplateDataLabelTypePropertyDsl {
     private val cdkBuilder: CfnTemplate.DataLabelTypeProperty.Builder =
         CfnTemplate.DataLabelTypeProperty.builder()
 
-    /**
-     * @param dataPathLabelType The option that specifies individual data values for labels.
-     */
+    /** @param dataPathLabelType The option that specifies individual data values for labels. */
     public fun dataPathLabelType(dataPathLabelType: IResolvable) {
         cdkBuilder.dataPathLabelType(dataPathLabelType)
     }
 
-    /**
-     * @param dataPathLabelType The option that specifies individual data values for labels.
-     */
+    /** @param dataPathLabelType The option that specifies individual data values for labels. */
     public fun dataPathLabelType(dataPathLabelType: CfnTemplate.DataPathLabelTypeProperty) {
         cdkBuilder.dataPathLabelType(dataPathLabelType)
     }
 
-    /**
-     * @param fieldLabelType Determines the label configuration for the entire field.
-     */
+    /** @param fieldLabelType Determines the label configuration for the entire field. */
     public fun fieldLabelType(fieldLabelType: IResolvable) {
         cdkBuilder.fieldLabelType(fieldLabelType)
     }
 
-    /**
-     * @param fieldLabelType Determines the label configuration for the entire field.
-     */
+    /** @param fieldLabelType Determines the label configuration for the entire field. */
     public fun fieldLabelType(fieldLabelType: CfnTemplate.FieldLabelTypeProperty) {
         cdkBuilder.fieldLabelType(fieldLabelType)
     }

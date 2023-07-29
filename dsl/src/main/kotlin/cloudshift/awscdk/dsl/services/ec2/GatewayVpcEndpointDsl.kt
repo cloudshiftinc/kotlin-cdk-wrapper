@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,7 +26,6 @@ import software.constructs.Construct
  * A gateway VPC endpoint.
  *
  * Example:
- *
  * ```
  * // Add gateway endpoints when creating the VPC
  * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
@@ -45,83 +53,82 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class GatewayVpcEndpointDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: GatewayVpcEndpoint.Builder = GatewayVpcEndpoint.Builder.create(scope, id)
+    private val cdkBuilder: GatewayVpcEndpoint.Builder =
+        GatewayVpcEndpoint.Builder.create(scope, id)
 
-  private val _subnets: MutableList<SubnetSelection> = mutableListOf()
+    private val _subnets: MutableList<SubnetSelection> = mutableListOf()
 
-  /**
-   * The service to use for this gateway VPC endpoint.
-   *
-   * @param service The service to use for this gateway VPC endpoint. 
-   */
-  public fun service(service: IGatewayVpcEndpointService) {
-    cdkBuilder.service(service)
-  }
+    /**
+     * The service to use for this gateway VPC endpoint.
+     *
+     * @param service The service to use for this gateway VPC endpoint.
+     */
+    public fun service(service: IGatewayVpcEndpointService) {
+        cdkBuilder.service(service)
+    }
 
-  /**
-   * Where to add endpoint routing.
-   *
-   * By default, this endpoint will be routable from all subnets in the VPC.
-   * Specify a list of subnet selection objects here to be more specific.
-   *
-   * Default: - All subnets in the VPC
-   *
-   * Example:
-   *
-   * ```
-   * Vpc vpc;
-   * vpc.addGatewayEndpoint("DynamoDbEndpoint", GatewayVpcEndpointOptions.builder()
-   * .service(GatewayVpcEndpointAwsService.DYNAMODB)
-   * // Add only to ISOLATED subnets
-   * .subnets(List.of(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_ISOLATED).build()))
-   * .build());
-   * ```
-   *
-   * @param subnets Where to add endpoint routing. 
-   */
-  public fun subnets(subnets: SubnetSelectionDsl.() -> Unit) {
-    _subnets.add(SubnetSelectionDsl().apply(subnets).build())
-  }
+    /**
+     * Where to add endpoint routing.
+     *
+     * By default, this endpoint will be routable from all subnets in the VPC. Specify a list of
+     * subnet selection objects here to be more specific.
+     *
+     * Default: - All subnets in the VPC
+     *
+     * Example:
+     * ```
+     * Vpc vpc;
+     * vpc.addGatewayEndpoint("DynamoDbEndpoint", GatewayVpcEndpointOptions.builder()
+     * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+     * // Add only to ISOLATED subnets
+     * .subnets(List.of(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_ISOLATED).build()))
+     * .build());
+     * ```
+     *
+     * @param subnets Where to add endpoint routing.
+     */
+    public fun subnets(subnets: SubnetSelectionDsl.() -> Unit) {
+        _subnets.add(SubnetSelectionDsl().apply(subnets).build())
+    }
 
-  /**
-   * Where to add endpoint routing.
-   *
-   * By default, this endpoint will be routable from all subnets in the VPC.
-   * Specify a list of subnet selection objects here to be more specific.
-   *
-   * Default: - All subnets in the VPC
-   *
-   * Example:
-   *
-   * ```
-   * Vpc vpc;
-   * vpc.addGatewayEndpoint("DynamoDbEndpoint", GatewayVpcEndpointOptions.builder()
-   * .service(GatewayVpcEndpointAwsService.DYNAMODB)
-   * // Add only to ISOLATED subnets
-   * .subnets(List.of(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_ISOLATED).build()))
-   * .build());
-   * ```
-   *
-   * @param subnets Where to add endpoint routing. 
-   */
-  public fun subnets(subnets: Collection<SubnetSelection>) {
-    _subnets.addAll(subnets)
-  }
+    /**
+     * Where to add endpoint routing.
+     *
+     * By default, this endpoint will be routable from all subnets in the VPC. Specify a list of
+     * subnet selection objects here to be more specific.
+     *
+     * Default: - All subnets in the VPC
+     *
+     * Example:
+     * ```
+     * Vpc vpc;
+     * vpc.addGatewayEndpoint("DynamoDbEndpoint", GatewayVpcEndpointOptions.builder()
+     * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+     * // Add only to ISOLATED subnets
+     * .subnets(List.of(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_ISOLATED).build()))
+     * .build());
+     * ```
+     *
+     * @param subnets Where to add endpoint routing.
+     */
+    public fun subnets(subnets: Collection<SubnetSelection>) {
+        _subnets.addAll(subnets)
+    }
 
-  /**
-   * The VPC network in which the gateway endpoint will be used.
-   *
-   * @param vpc The VPC network in which the gateway endpoint will be used. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /**
+     * The VPC network in which the gateway endpoint will be used.
+     *
+     * @param vpc The VPC network in which the gateway endpoint will be used.
+     */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  public fun build(): GatewayVpcEndpoint {
-    if(_subnets.isNotEmpty()) cdkBuilder.subnets(_subnets)
-    return cdkBuilder.build()
-  }
+    public fun build(): GatewayVpcEndpoint {
+        if (_subnets.isNotEmpty()) cdkBuilder.subnets(_subnets)
+        return cdkBuilder.build()
+    }
 }

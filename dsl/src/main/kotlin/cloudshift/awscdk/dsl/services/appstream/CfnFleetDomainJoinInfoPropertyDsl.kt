@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appstream
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appstream.CfnFleet
  * Active Directory domain.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,24 @@ import software.amazon.awscdk.services.appstream.CfnFleet
  */
 @CdkDslMarker
 public class CfnFleetDomainJoinInfoPropertyDsl {
-  private val cdkBuilder: CfnFleet.DomainJoinInfoProperty.Builder =
-      CfnFleet.DomainJoinInfoProperty.builder()
+    private val cdkBuilder: CfnFleet.DomainJoinInfoProperty.Builder =
+        CfnFleet.DomainJoinInfoProperty.builder()
 
-  /**
-   * @param directoryName The fully qualified name of the directory (for example, corp.example.com).
-   */
-  public fun directoryName(directoryName: String) {
-    cdkBuilder.directoryName(directoryName)
-  }
+    /**
+     * @param directoryName The fully qualified name of the directory (for example,
+     *   corp.example.com).
+     */
+    public fun directoryName(directoryName: String) {
+        cdkBuilder.directoryName(directoryName)
+    }
 
-  /**
-   * @param organizationalUnitDistinguishedName The distinguished name of the organizational unit
-   * for computer accounts.
-   */
-  public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-    cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
-  }
+    /**
+     * @param organizationalUnitDistinguishedName The distinguished name of the organizational unit
+     *   for computer accounts.
+     */
+    public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
+        cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
+    }
 
-  public fun build(): CfnFleet.DomainJoinInfoProperty = cdkBuilder.build()
+    public fun build(): CfnFleet.DomainJoinInfoProperty = cdkBuilder.build()
 }

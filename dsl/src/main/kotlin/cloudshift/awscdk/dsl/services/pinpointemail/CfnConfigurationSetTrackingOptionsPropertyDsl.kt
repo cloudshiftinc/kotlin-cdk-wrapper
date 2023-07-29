@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpointemail
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
  * configure Amazon Pinpoint to use a domain that you operate for these images and links.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,15 +39,16 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
  */
 @CdkDslMarker
 public class CfnConfigurationSetTrackingOptionsPropertyDsl {
-  private val cdkBuilder: CfnConfigurationSet.TrackingOptionsProperty.Builder =
-      CfnConfigurationSet.TrackingOptionsProperty.builder()
+    private val cdkBuilder: CfnConfigurationSet.TrackingOptionsProperty.Builder =
+        CfnConfigurationSet.TrackingOptionsProperty.builder()
 
-  /**
-   * @param customRedirectDomain The domain that you want to use for tracking open and click events.
-   */
-  public fun customRedirectDomain(customRedirectDomain: String) {
-    cdkBuilder.customRedirectDomain(customRedirectDomain)
-  }
+    /**
+     * @param customRedirectDomain The domain that you want to use for tracking open and click
+     *   events.
+     */
+    public fun customRedirectDomain(customRedirectDomain: String) {
+        cdkBuilder.customRedirectDomain(customRedirectDomain)
+    }
 
-  public fun build(): CfnConfigurationSet.TrackingOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnConfigurationSet.TrackingOptionsProperty = cdkBuilder.build()
 }

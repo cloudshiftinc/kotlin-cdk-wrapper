@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.budgets
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.budgets.CfnBudget
  * subscribers.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,48 +49,38 @@ import software.amazon.awscdk.services.budgets.CfnBudget
  */
 @CdkDslMarker
 public class CfnBudgetNotificationWithSubscribersPropertyDsl {
-  private val cdkBuilder: CfnBudget.NotificationWithSubscribersProperty.Builder =
-      CfnBudget.NotificationWithSubscribersProperty.builder()
+    private val cdkBuilder: CfnBudget.NotificationWithSubscribersProperty.Builder =
+        CfnBudget.NotificationWithSubscribersProperty.builder()
 
-  private val _subscribers: MutableList<Any> = mutableListOf()
+    private val _subscribers: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param notification The notification that's associated with a budget. 
-   */
-  public fun notification(notification: IResolvable) {
-    cdkBuilder.notification(notification)
-  }
+    /** @param notification The notification that's associated with a budget. */
+    public fun notification(notification: IResolvable) {
+        cdkBuilder.notification(notification)
+    }
 
-  /**
-   * @param notification The notification that's associated with a budget. 
-   */
-  public fun notification(notification: CfnBudget.NotificationProperty) {
-    cdkBuilder.notification(notification)
-  }
+    /** @param notification The notification that's associated with a budget. */
+    public fun notification(notification: CfnBudget.NotificationProperty) {
+        cdkBuilder.notification(notification)
+    }
 
-  /**
-   * @param subscribers A list of subscribers who are subscribed to this notification. 
-   */
-  public fun subscribers(vararg subscribers: Any) {
-    _subscribers.addAll(listOf(*subscribers))
-  }
+    /** @param subscribers A list of subscribers who are subscribed to this notification. */
+    public fun subscribers(vararg subscribers: Any) {
+        _subscribers.addAll(listOf(*subscribers))
+    }
 
-  /**
-   * @param subscribers A list of subscribers who are subscribed to this notification. 
-   */
-  public fun subscribers(subscribers: Collection<Any>) {
-    _subscribers.addAll(subscribers)
-  }
+    /** @param subscribers A list of subscribers who are subscribed to this notification. */
+    public fun subscribers(subscribers: Collection<Any>) {
+        _subscribers.addAll(subscribers)
+    }
 
-  /**
-   * @param subscribers A list of subscribers who are subscribed to this notification. 
-   */
-  public fun subscribers(subscribers: IResolvable) {
-    cdkBuilder.subscribers(subscribers)
-  }
+    /** @param subscribers A list of subscribers who are subscribed to this notification. */
+    public fun subscribers(subscribers: IResolvable) {
+        cdkBuilder.subscribers(subscribers)
+    }
 
-  public fun build(): CfnBudget.NotificationWithSubscribersProperty {
-    if(_subscribers.isNotEmpty()) cdkBuilder.subscribers(_subscribers)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBudget.NotificationWithSubscribersProperty {
+        if (_subscribers.isNotEmpty()) cdkBuilder.subscribers(_subscribers)
+        return cdkBuilder.build()
+    }
 }

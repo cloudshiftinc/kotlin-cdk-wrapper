@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.backup
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.backup.CfnFramework
  * year` ". The first parameter is `daily` . The second parameter is `1 year` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,22 +38,18 @@ import software.amazon.awscdk.services.backup.CfnFramework
  */
 @CdkDslMarker
 public class CfnFrameworkControlInputParameterPropertyDsl {
-  private val cdkBuilder: CfnFramework.ControlInputParameterProperty.Builder =
-      CfnFramework.ControlInputParameterProperty.builder()
+    private val cdkBuilder: CfnFramework.ControlInputParameterProperty.Builder =
+        CfnFramework.ControlInputParameterProperty.builder()
 
-  /**
-   * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . 
-   */
-  public fun parameterName(parameterName: String) {
-    cdkBuilder.parameterName(parameterName)
-  }
+    /** @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . */
+    public fun parameterName(parameterName: String) {
+        cdkBuilder.parameterName(parameterName)
+    }
 
-  /**
-   * @param parameterValue The value of parameter, for example, `hourly` . 
-   */
-  public fun parameterValue(parameterValue: String) {
-    cdkBuilder.parameterValue(parameterValue)
-  }
+    /** @param parameterValue The value of parameter, for example, `hourly` . */
+    public fun parameterValue(parameterValue: String) {
+        cdkBuilder.parameterValue(parameterValue)
+    }
 
-  public fun build(): CfnFramework.ControlInputParameterProperty = cdkBuilder.build()
+    public fun build(): CfnFramework.ControlInputParameterProperty = cdkBuilder.build()
 }

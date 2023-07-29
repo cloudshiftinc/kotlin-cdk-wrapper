@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps
  * Properties for defining a `CfnDomainNameApiAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps
  */
 @CdkDslMarker
 public class CfnDomainNameApiAssociationPropsDsl {
-  private val cdkBuilder: CfnDomainNameApiAssociationProps.Builder =
-      CfnDomainNameApiAssociationProps.builder()
+    private val cdkBuilder: CfnDomainNameApiAssociationProps.Builder =
+        CfnDomainNameApiAssociationProps.builder()
 
-  /**
-   * @param apiId The API ID. 
-   */
-  public fun apiId(apiId: String) {
-    cdkBuilder.apiId(apiId)
-  }
+    /** @param apiId The API ID. */
+    public fun apiId(apiId: String) {
+        cdkBuilder.apiId(apiId)
+    }
 
-  /**
-   * @param domainName The domain name. 
-   */
-  public fun domainName(domainName: String) {
-    cdkBuilder.domainName(domainName)
-  }
+    /** @param domainName The domain name. */
+    public fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+    }
 
-  public fun build(): CfnDomainNameApiAssociationProps = cdkBuilder.build()
+    public fun build(): CfnDomainNameApiAssociationProps = cdkBuilder.build()
 }

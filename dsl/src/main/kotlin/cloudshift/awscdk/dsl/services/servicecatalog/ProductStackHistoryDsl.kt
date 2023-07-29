@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.ProductStack
 import software.amazon.awscdk.services.servicecatalog.ProductStackHistory
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
 
 /**
  * A Construct that contains a Service Catalog product stack with its previous deployments
  * maintained.
  *
  * Example:
- *
  * ```
  * public class S3BucketProduct extends ProductStack {
  * public S3BucketProduct(Construct scope, String id) {
@@ -38,19 +46,17 @@ import kotlin.String
 @CdkDslMarker
 public class ProductStackHistoryDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
-    private val cdkBuilder: ProductStackHistory.Builder = ProductStackHistory.Builder.create(
-        scope,
-        id
-    )
+    private val cdkBuilder: ProductStackHistory.Builder =
+        ProductStackHistory.Builder.create(scope, id)
 
     /**
-     * If this is set to true, the ProductStack will not be overwritten if a snapshot is found for the
-     * currentVersionName.
+     * If this is set to true, the ProductStack will not be overwritten if a snapshot is found for
+     * the currentVersionName.
      *
-     * @param currentVersionLocked If this is set to true, the ProductStack will not be overwritten if
-     * a snapshot is found for the currentVersionName.
+     * @param currentVersionLocked If this is set to true, the ProductStack will not be overwritten
+     *   if a snapshot is found for the currentVersionName.
      */
     public fun currentVersionLocked(currentVersionLocked: Boolean) {
         cdkBuilder.currentVersionLocked(currentVersionLocked)
@@ -104,7 +110,7 @@ public class ProductStackHistoryDsl(
      * Default: true
      *
      * @param validateTemplate Whether the specified product template will be validated by
-     * CloudFormation.
+     *   CloudFormation.
      */
     public fun validateTemplate(validateTemplate: Boolean) {
         cdkBuilder.validateTemplate(validateTemplate)

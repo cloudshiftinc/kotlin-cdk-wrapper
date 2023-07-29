@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.backup
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.iam.IRole
  * Options for a BackupSelection.
  *
  * Example:
- *
  * ```
  * BackupPlan plan;
  * Vpc vpc;
@@ -50,55 +58,51 @@ import software.amazon.awscdk.services.iam.IRole
  */
 @CdkDslMarker
 public class BackupSelectionOptionsDsl {
-  private val cdkBuilder: BackupSelectionOptions.Builder = BackupSelectionOptions.builder()
+    private val cdkBuilder: BackupSelectionOptions.Builder = BackupSelectionOptions.builder()
 
-  private val _resources: MutableList<BackupResource> = mutableListOf()
+    private val _resources: MutableList<BackupResource> = mutableListOf()
 
-  /**
-   * @param allowRestores Whether to automatically give restores permissions to the role that AWS
-   * Backup uses.
-   * If `true`, the `AWSBackupServiceRolePolicyForRestores` managed
-   * policy will be attached to the role.
-   */
-  public fun allowRestores(allowRestores: Boolean) {
-    cdkBuilder.allowRestores(allowRestores)
-  }
+    /**
+     * @param allowRestores Whether to automatically give restores permissions to the role that AWS
+     *   Backup uses. If `true`, the `AWSBackupServiceRolePolicyForRestores` managed policy will be
+     *   attached to the role.
+     */
+    public fun allowRestores(allowRestores: Boolean) {
+        cdkBuilder.allowRestores(allowRestores)
+    }
 
-  /**
-   * @param backupSelectionName The name for this selection.
-   */
-  public fun backupSelectionName(backupSelectionName: String) {
-    cdkBuilder.backupSelectionName(backupSelectionName)
-  }
+    /** @param backupSelectionName The name for this selection. */
+    public fun backupSelectionName(backupSelectionName: String) {
+        cdkBuilder.backupSelectionName(backupSelectionName)
+    }
 
-  /**
-   * @param resources The resources to backup. 
-   * Use the helper static methods defined on `BackupResource`.
-   */
-  public fun resources(vararg resources: BackupResource) {
-    _resources.addAll(listOf(*resources))
-  }
+    /**
+     * @param resources The resources to backup. Use the helper static methods defined on
+     *   `BackupResource`.
+     */
+    public fun resources(vararg resources: BackupResource) {
+        _resources.addAll(listOf(*resources))
+    }
 
-  /**
-   * @param resources The resources to backup. 
-   * Use the helper static methods defined on `BackupResource`.
-   */
-  public fun resources(resources: Collection<BackupResource>) {
-    _resources.addAll(resources)
-  }
+    /**
+     * @param resources The resources to backup. Use the helper static methods defined on
+     *   `BackupResource`.
+     */
+    public fun resources(resources: Collection<BackupResource>) {
+        _resources.addAll(resources)
+    }
 
-  /**
-   * @param role The role that AWS Backup uses to authenticate when backuping or restoring the
-   * resources.
-   * The `AWSBackupServiceRolePolicyForBackup` managed policy
-   * will be attached to this role.
-   */
-  public fun role(role: IRole) {
-    cdkBuilder.role(role)
-  }
+    /**
+     * @param role The role that AWS Backup uses to authenticate when backuping or restoring the
+     *   resources. The `AWSBackupServiceRolePolicyForBackup` managed policy will be attached to
+     *   this role.
+     */
+    public fun role(role: IRole) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): BackupSelectionOptions {
-    if(_resources.isNotEmpty()) cdkBuilder.resources(_resources)
-    return cdkBuilder.build()
-  }
+    public fun build(): BackupSelectionOptions {
+        if (_resources.isNotEmpty()) cdkBuilder.resources(_resources)
+        return cdkBuilder.build()
+    }
 }

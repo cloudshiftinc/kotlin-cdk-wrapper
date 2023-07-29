@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -16,7 +25,6 @@ import software.constructs.Construct
  * Defines a User Pool OAuth2.0 Resource Server.
  *
  * Example:
- *
  * ```
  * UserPool pool = new UserPool(this, "Pool");
  * ResourceServerScope readOnlyScope =
@@ -48,67 +56,67 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class UserPoolResourceServerDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: UserPoolResourceServer.Builder =
-      UserPoolResourceServer.Builder.create(scope, id)
+    private val cdkBuilder: UserPoolResourceServer.Builder =
+        UserPoolResourceServer.Builder.create(scope, id)
 
-  private val _scopes: MutableList<ResourceServerScope> = mutableListOf()
+    private val _scopes: MutableList<ResourceServerScope> = mutableListOf()
 
-  /**
-   * A unique resource server identifier for the resource server.
-   *
-   * @param identifier A unique resource server identifier for the resource server. 
-   */
-  public fun identifier(identifier: String) {
-    cdkBuilder.identifier(identifier)
-  }
+    /**
+     * A unique resource server identifier for the resource server.
+     *
+     * @param identifier A unique resource server identifier for the resource server.
+     */
+    public fun identifier(identifier: String) {
+        cdkBuilder.identifier(identifier)
+    }
 
-  /**
-   * Oauth scopes.
-   *
-   * Default: - No scopes will be added
-   *
-   * @param scopes Oauth scopes. 
-   */
-  public fun scopes(scopes: ResourceServerScopeDsl.() -> Unit) {
-    _scopes.add(ResourceServerScopeDsl().apply(scopes).build())
-  }
+    /**
+     * Oauth scopes.
+     *
+     * Default: - No scopes will be added
+     *
+     * @param scopes Oauth scopes.
+     */
+    public fun scopes(scopes: ResourceServerScopeDsl.() -> Unit) {
+        _scopes.add(ResourceServerScopeDsl().apply(scopes).build())
+    }
 
-  /**
-   * Oauth scopes.
-   *
-   * Default: - No scopes will be added
-   *
-   * @param scopes Oauth scopes. 
-   */
-  public fun scopes(scopes: Collection<ResourceServerScope>) {
-    _scopes.addAll(scopes)
-  }
+    /**
+     * Oauth scopes.
+     *
+     * Default: - No scopes will be added
+     *
+     * @param scopes Oauth scopes.
+     */
+    public fun scopes(scopes: Collection<ResourceServerScope>) {
+        _scopes.addAll(scopes)
+    }
 
-  /**
-   * The user pool to add this resource server to.
-   *
-   * @param userPool The user pool to add this resource server to. 
-   */
-  public fun userPool(userPool: IUserPool) {
-    cdkBuilder.userPool(userPool)
-  }
+    /**
+     * The user pool to add this resource server to.
+     *
+     * @param userPool The user pool to add this resource server to.
+     */
+    public fun userPool(userPool: IUserPool) {
+        cdkBuilder.userPool(userPool)
+    }
 
-  /**
-   * A friendly name for the resource server.
-   *
-   * Default: - same as `identifier`
-   *
-   * @param userPoolResourceServerName A friendly name for the resource server. 
-   */
-  public fun userPoolResourceServerName(userPoolResourceServerName: String) {
-    cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)
-  }
+    /**
+     * A friendly name for the resource server.
+     *
+     * Default: - same as `identifier`
+     *
+     * @param userPoolResourceServerName A friendly name for the resource server.
+     */
+    public fun userPoolResourceServerName(userPoolResourceServerName: String) {
+        cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)
+    }
 
-  public fun build(): UserPoolResourceServer {
-    if(_scopes.isNotEmpty()) cdkBuilder.scopes(_scopes)
-    return cdkBuilder.build()
-  }
+    public fun build(): UserPoolResourceServer {
+        if (_scopes.isNotEmpty()) cdkBuilder.scopes(_scopes)
+        return cdkBuilder.build()
+    }
 }

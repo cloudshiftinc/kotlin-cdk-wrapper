@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fms
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.fms.CfnPolicy
  * model and third-party firewall policy settings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,37 +38,36 @@ import software.amazon.awscdk.services.fms.CfnPolicy
  */
 @CdkDslMarker
 public class CfnPolicyPolicyOptionPropertyDsl {
-  private val cdkBuilder: CfnPolicy.PolicyOptionProperty.Builder =
-      CfnPolicy.PolicyOptionProperty.builder()
+    private val cdkBuilder: CfnPolicy.PolicyOptionProperty.Builder =
+        CfnPolicy.PolicyOptionProperty.builder()
 
-  /**
-   * @param networkFirewallPolicy Defines the deployment model to use for the firewall policy.
-   */
-  public fun networkFirewallPolicy(networkFirewallPolicy: IResolvable) {
-    cdkBuilder.networkFirewallPolicy(networkFirewallPolicy)
-  }
+    /** @param networkFirewallPolicy Defines the deployment model to use for the firewall policy. */
+    public fun networkFirewallPolicy(networkFirewallPolicy: IResolvable) {
+        cdkBuilder.networkFirewallPolicy(networkFirewallPolicy)
+    }
 
-  /**
-   * @param networkFirewallPolicy Defines the deployment model to use for the firewall policy.
-   */
-  public fun networkFirewallPolicy(networkFirewallPolicy: CfnPolicy.NetworkFirewallPolicyProperty) {
-    cdkBuilder.networkFirewallPolicy(networkFirewallPolicy)
-  }
+    /** @param networkFirewallPolicy Defines the deployment model to use for the firewall policy. */
+    public fun networkFirewallPolicy(
+        networkFirewallPolicy: CfnPolicy.NetworkFirewallPolicyProperty
+    ) {
+        cdkBuilder.networkFirewallPolicy(networkFirewallPolicy)
+    }
 
-  /**
-   * @param thirdPartyFirewallPolicy Defines the policy options for a third-party firewall policy.
-   */
-  public fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: IResolvable) {
-    cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy)
-  }
+    /**
+     * @param thirdPartyFirewallPolicy Defines the policy options for a third-party firewall policy.
+     */
+    public fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: IResolvable) {
+        cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy)
+    }
 
-  /**
-   * @param thirdPartyFirewallPolicy Defines the policy options for a third-party firewall policy.
-   */
-  public
-      fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: CfnPolicy.ThirdPartyFirewallPolicyProperty) {
-    cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy)
-  }
+    /**
+     * @param thirdPartyFirewallPolicy Defines the policy options for a third-party firewall policy.
+     */
+    public fun thirdPartyFirewallPolicy(
+        thirdPartyFirewallPolicy: CfnPolicy.ThirdPartyFirewallPolicyProperty
+    ) {
+        cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy)
+    }
 
-  public fun build(): CfnPolicy.PolicyOptionProperty = cdkBuilder.build()
+    public fun build(): CfnPolicy.PolicyOptionProperty = cdkBuilder.build()
 }

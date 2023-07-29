@@ -6,9 +6,10 @@ import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.asTypeName
 
 internal object Annotations {
-    val Deprecated = AnnotationSpec.builder(Deprecated::class.asTypeName())
-        .addMember("message = %S", "deprecated in CDK")
-        .build()
+    val Deprecated =
+        AnnotationSpec.builder(Deprecated::class.asTypeName())
+            .addMember("message = %S", "deprecated in CDK")
+            .build()
 }
 
 internal fun dslFunctionSpec(prop: BuilderProperty, block: FunSpec.Builder.() -> Unit): FunSpec {

@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The sort configuration of a heat map.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -92,23 +100,27 @@ public class CfnAnalysisHeatMapSortConfigurationPropertyDsl {
 
     /**
      * @param heatMapColumnItemsLimitConfiguration The limit on the number of columns that are
-     * displayed in a heat map.
+     *   displayed in a heat map.
      */
-    public fun heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration: IResolvable) {
+    public fun heatMapColumnItemsLimitConfiguration(
+        heatMapColumnItemsLimitConfiguration: IResolvable
+    ) {
         cdkBuilder.heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration)
     }
 
     /**
      * @param heatMapColumnItemsLimitConfiguration The limit on the number of columns that are
-     * displayed in a heat map.
+     *   displayed in a heat map.
      */
-    public fun heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration: CfnAnalysis.ItemsLimitConfigurationProperty) {
+    public fun heatMapColumnItemsLimitConfiguration(
+        heatMapColumnItemsLimitConfiguration: CfnAnalysis.ItemsLimitConfigurationProperty
+    ) {
         cdkBuilder.heatMapColumnItemsLimitConfiguration(heatMapColumnItemsLimitConfiguration)
     }
 
     /**
      * @param heatMapColumnSort The column sort configuration for heat map for columns that aren't a
-     * part of a field well.
+     *   part of a field well.
      */
     public fun heatMapColumnSort(vararg heatMapColumnSort: Any) {
         _heatMapColumnSort.addAll(listOf(*heatMapColumnSort))
@@ -116,7 +128,7 @@ public class CfnAnalysisHeatMapSortConfigurationPropertyDsl {
 
     /**
      * @param heatMapColumnSort The column sort configuration for heat map for columns that aren't a
-     * part of a field well.
+     *   part of a field well.
      */
     public fun heatMapColumnSort(heatMapColumnSort: Collection<Any>) {
         _heatMapColumnSort.addAll(heatMapColumnSort)
@@ -124,45 +136,41 @@ public class CfnAnalysisHeatMapSortConfigurationPropertyDsl {
 
     /**
      * @param heatMapColumnSort The column sort configuration for heat map for columns that aren't a
-     * part of a field well.
+     *   part of a field well.
      */
     public fun heatMapColumnSort(heatMapColumnSort: IResolvable) {
         cdkBuilder.heatMapColumnSort(heatMapColumnSort)
     }
 
     /**
-     * @param heatMapRowItemsLimitConfiguration The limit on the number of rows that are displayed in
-     * a heat map.
+     * @param heatMapRowItemsLimitConfiguration The limit on the number of rows that are displayed
+     *   in a heat map.
      */
     public fun heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration: IResolvable) {
         cdkBuilder.heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration)
     }
 
     /**
-     * @param heatMapRowItemsLimitConfiguration The limit on the number of rows that are displayed in
-     * a heat map.
+     * @param heatMapRowItemsLimitConfiguration The limit on the number of rows that are displayed
+     *   in a heat map.
      */
-    public fun heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration: CfnAnalysis.ItemsLimitConfigurationProperty) {
+    public fun heatMapRowItemsLimitConfiguration(
+        heatMapRowItemsLimitConfiguration: CfnAnalysis.ItemsLimitConfigurationProperty
+    ) {
         cdkBuilder.heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration)
     }
 
-    /**
-     * @param heatMapRowSort The field sort configuration of the rows fields.
-     */
+    /** @param heatMapRowSort The field sort configuration of the rows fields. */
     public fun heatMapRowSort(vararg heatMapRowSort: Any) {
         _heatMapRowSort.addAll(listOf(*heatMapRowSort))
     }
 
-    /**
-     * @param heatMapRowSort The field sort configuration of the rows fields.
-     */
+    /** @param heatMapRowSort The field sort configuration of the rows fields. */
     public fun heatMapRowSort(heatMapRowSort: Collection<Any>) {
         _heatMapRowSort.addAll(heatMapRowSort)
     }
 
-    /**
-     * @param heatMapRowSort The field sort configuration of the rows fields.
-     */
+    /** @param heatMapRowSort The field sort configuration of the rows fields. */
     public fun heatMapRowSort(heatMapRowSort: IResolvable) {
         cdkBuilder.heatMapRowSort(heatMapRowSort)
     }

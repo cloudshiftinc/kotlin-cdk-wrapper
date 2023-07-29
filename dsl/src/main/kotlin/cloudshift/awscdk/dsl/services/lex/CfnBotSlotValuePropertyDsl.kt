@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * The value to set in a slot.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,17 +32,17 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotSlotValuePropertyDsl {
-  private val cdkBuilder: CfnBot.SlotValueProperty.Builder = CfnBot.SlotValueProperty.builder()
+    private val cdkBuilder: CfnBot.SlotValueProperty.Builder = CfnBot.SlotValueProperty.builder()
 
-  /**
-   * @param interpretedValue The value that Amazon Lex determines for the slot.
-   * The actual value depends on the setting of the value selection strategy for the bot. You can
-   * choose to use the value entered by the user, or you can have Amazon Lex choose the first value in
-   * the `resolvedValues` list.
-   */
-  public fun interpretedValue(interpretedValue: String) {
-    cdkBuilder.interpretedValue(interpretedValue)
-  }
+    /**
+     * @param interpretedValue The value that Amazon Lex determines for the slot. The actual value
+     *   depends on the setting of the value selection strategy for the bot. You can choose to use
+     *   the value entered by the user, or you can have Amazon Lex choose the first value in the
+     *   `resolvedValues` list.
+     */
+    public fun interpretedValue(interpretedValue: String) {
+        cdkBuilder.interpretedValue(interpretedValue)
+    }
 
-  public fun build(): CfnBot.SlotValueProperty = cdkBuilder.build()
+    public fun build(): CfnBot.SlotValueProperty = cdkBuilder.build()
 }

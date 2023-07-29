@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codeguruprofiler
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
 import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroupProps
 import software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup
 import software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object codeguruprofiler {
     /**
      * Creates a profiling group.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -44,7 +52,7 @@ public object codeguruprofiler {
     public inline fun cfnProfilingGroup(
         scope: Construct,
         id: String,
-        block: CfnProfilingGroupDsl.() -> Unit = {}
+        block: CfnProfilingGroupDsl.() -> Unit = {},
     ): CfnProfilingGroup {
         val builder = CfnProfilingGroupDsl(scope, id)
         builder.apply(block)
@@ -55,7 +63,6 @@ public object codeguruprofiler {
      * The agent permissions attached to this profiling group.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -68,8 +75,7 @@ public object codeguruprofiler {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeguruprofiler-profilinggroup-agentpermissions.html)
      */
     public inline fun cfnProfilingGroupAgentPermissionsProperty(
-        block: CfnProfilingGroupAgentPermissionsPropertyDsl.() -> Unit =
-            {}
+        block: CfnProfilingGroupAgentPermissionsPropertyDsl.() -> Unit = {}
     ): CfnProfilingGroup.AgentPermissionsProperty {
         val builder = CfnProfilingGroupAgentPermissionsPropertyDsl()
         builder.apply(block)
@@ -82,7 +88,6 @@ public object codeguruprofiler {
      * We support SNS topic as a notification channel.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -97,8 +102,7 @@ public object codeguruprofiler {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeguruprofiler-profilinggroup-channel.html)
      */
     public inline fun cfnProfilingGroupChannelProperty(
-        block: CfnProfilingGroupChannelPropertyDsl.() -> Unit =
-            {}
+        block: CfnProfilingGroupChannelPropertyDsl.() -> Unit = {}
     ): CfnProfilingGroup.ChannelProperty {
         val builder = CfnProfilingGroupChannelPropertyDsl()
         builder.apply(block)
@@ -109,7 +113,6 @@ public object codeguruprofiler {
      * Properties for defining a `CfnProfilingGroup`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -134,7 +137,9 @@ public object codeguruprofiler {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html)
      */
-    public inline fun cfnProfilingGroupProps(block: CfnProfilingGroupPropsDsl.() -> Unit = {}): CfnProfilingGroupProps {
+    public inline fun cfnProfilingGroupProps(
+        block: CfnProfilingGroupPropsDsl.() -> Unit = {}
+    ): CfnProfilingGroupProps {
         val builder = CfnProfilingGroupPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -144,7 +149,6 @@ public object codeguruprofiler {
      * A new Profiling Group.
      *
      * Example:
-     *
      * ```
      * // The execution role of your application that publishes to the ProfilingGroup via CodeGuru
      * Profiler Profiling Agent. (the following is merely an example)
@@ -158,7 +162,7 @@ public object codeguruprofiler {
     public inline fun profilingGroup(
         scope: Construct,
         id: String,
-        block: ProfilingGroupDsl.() -> Unit = {}
+        block: ProfilingGroupDsl.() -> Unit = {},
     ): ProfilingGroup {
         val builder = ProfilingGroupDsl(scope, id)
         builder.apply(block)
@@ -169,14 +173,15 @@ public object codeguruprofiler {
      * Properties for creating a new Profiling Group.
      *
      * Example:
-     *
      * ```
      * ProfilingGroup profilingGroup = ProfilingGroup.Builder.create(this, "MyProfilingGroup")
      * .computePlatform(ComputePlatform.AWS_LAMBDA)
      * .build();
      * ```
      */
-    public inline fun profilingGroupProps(block: ProfilingGroupPropsDsl.() -> Unit = {}): ProfilingGroupProps {
+    public inline fun profilingGroupProps(
+        block: ProfilingGroupPropsDsl.() -> Unit = {}
+    ): ProfilingGroupProps {
         val builder = ProfilingGroupPropsDsl()
         builder.apply(block)
         return builder.build()

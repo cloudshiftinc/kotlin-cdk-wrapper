@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * Dashboard source entity.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,18 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardDashboardSourceEntityPropertyDsl {
-  private val cdkBuilder: CfnDashboard.DashboardSourceEntityProperty.Builder =
-      CfnDashboard.DashboardSourceEntityProperty.builder()
+    private val cdkBuilder: CfnDashboard.DashboardSourceEntityProperty.Builder =
+        CfnDashboard.DashboardSourceEntityProperty.builder()
 
-  /**
-   * @param sourceTemplate Source template.
-   */
-  public fun sourceTemplate(sourceTemplate: IResolvable) {
-    cdkBuilder.sourceTemplate(sourceTemplate)
-  }
+    /** @param sourceTemplate Source template. */
+    public fun sourceTemplate(sourceTemplate: IResolvable) {
+        cdkBuilder.sourceTemplate(sourceTemplate)
+    }
 
-  /**
-   * @param sourceTemplate Source template.
-   */
-  public fun sourceTemplate(sourceTemplate: CfnDashboard.DashboardSourceTemplateProperty) {
-    cdkBuilder.sourceTemplate(sourceTemplate)
-  }
+    /** @param sourceTemplate Source template. */
+    public fun sourceTemplate(sourceTemplate: CfnDashboard.DashboardSourceTemplateProperty) {
+        cdkBuilder.sourceTemplate(sourceTemplate)
+    }
 
-  public fun build(): CfnDashboard.DashboardSourceEntityProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.DashboardSourceEntityProperty = cdkBuilder.build()
 }

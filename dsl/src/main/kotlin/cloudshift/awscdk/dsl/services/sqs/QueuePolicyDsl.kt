@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sqs
 
@@ -17,15 +26,13 @@ import software.constructs.Construct
  *
  * You almost never need to define this construct directly.
  *
- * All AWS resources that support resource policies have a method called
- * `addToResourcePolicy()`, which will automatically create a new resource
- * policy if one doesn't exist yet, otherwise it will add to the existing
- * policy.
+ * All AWS resources that support resource policies have a method called `addToResourcePolicy()`,
+ * which will automatically create a new resource policy if one doesn't exist yet, otherwise it will
+ * add to the existing policy.
  *
  * Prefer to use `addToResourcePolicy()` instead.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,33 +45,33 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class QueuePolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: QueuePolicy.Builder = QueuePolicy.Builder.create(scope, id)
+    private val cdkBuilder: QueuePolicy.Builder = QueuePolicy.Builder.create(scope, id)
 
-  private val _queues: MutableList<IQueue> = mutableListOf()
+    private val _queues: MutableList<IQueue> = mutableListOf()
 
-  /**
-   * The set of queues this policy applies to.
-   *
-   * @param queues The set of queues this policy applies to. 
-   */
-  public fun queues(vararg queues: IQueue) {
-    _queues.addAll(listOf(*queues))
-  }
+    /**
+     * The set of queues this policy applies to.
+     *
+     * @param queues The set of queues this policy applies to.
+     */
+    public fun queues(vararg queues: IQueue) {
+        _queues.addAll(listOf(*queues))
+    }
 
-  /**
-   * The set of queues this policy applies to.
-   *
-   * @param queues The set of queues this policy applies to. 
-   */
-  public fun queues(queues: Collection<IQueue>) {
-    _queues.addAll(queues)
-  }
+    /**
+     * The set of queues this policy applies to.
+     *
+     * @param queues The set of queues this policy applies to.
+     */
+    public fun queues(queues: Collection<IQueue>) {
+        _queues.addAll(queues)
+    }
 
-  public fun build(): QueuePolicy {
-    if(_queues.isNotEmpty()) cdkBuilder.queues(_queues)
-    return cdkBuilder.build()
-  }
+    public fun build(): QueuePolicy {
+        if (_queues.isNotEmpty()) cdkBuilder.queues(_queues)
+        return cdkBuilder.build()
+    }
 }

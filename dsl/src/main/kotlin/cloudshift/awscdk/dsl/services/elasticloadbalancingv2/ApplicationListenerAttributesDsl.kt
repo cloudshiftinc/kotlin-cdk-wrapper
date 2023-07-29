@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListene
  * Properties to reference an existing listener.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,29 +38,25 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListene
  */
 @CdkDslMarker
 public class ApplicationListenerAttributesDsl {
-  private val cdkBuilder: ApplicationListenerAttributes.Builder =
-      ApplicationListenerAttributes.builder()
+    private val cdkBuilder: ApplicationListenerAttributes.Builder =
+        ApplicationListenerAttributes.builder()
 
-  /**
-   * @param defaultPort The default port on which this listener is listening.
-   */
-  public fun defaultPort(defaultPort: Number) {
-    cdkBuilder.defaultPort(defaultPort)
-  }
+    /** @param defaultPort The default port on which this listener is listening. */
+    public fun defaultPort(defaultPort: Number) {
+        cdkBuilder.defaultPort(defaultPort)
+    }
 
-  /**
-   * @param listenerArn ARN of the listener. 
-   */
-  public fun listenerArn(listenerArn: String) {
-    cdkBuilder.listenerArn(listenerArn)
-  }
+    /** @param listenerArn ARN of the listener. */
+    public fun listenerArn(listenerArn: String) {
+        cdkBuilder.listenerArn(listenerArn)
+    }
 
-  /**
-   * @param securityGroup Security group of the load balancer this listener is associated with. 
-   */
-  public fun securityGroup(securityGroup: ISecurityGroup) {
-    cdkBuilder.securityGroup(securityGroup)
-  }
+    /**
+     * @param securityGroup Security group of the load balancer this listener is associated with.
+     */
+    public fun securityGroup(securityGroup: ISecurityGroup) {
+        cdkBuilder.securityGroup(securityGroup)
+    }
 
-  public fun build(): ApplicationListenerAttributes = cdkBuilder.build()
+    public fun build(): ApplicationListenerAttributes = cdkBuilder.build()
 }

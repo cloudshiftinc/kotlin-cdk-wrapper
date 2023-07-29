@@ -1,12 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDataSet
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
  * A transform operation that projects columns.
@@ -14,7 +23,6 @@ import kotlin.collections.MutableList
  * Operations that come after a projection can only refer to projected columns.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,16 +41,12 @@ public class CfnDataSetProjectOperationPropertyDsl {
 
     private val _projectedColumns: MutableList<String> = mutableListOf()
 
-    /**
-     * @param projectedColumns Projected columns.
-     */
+    /** @param projectedColumns Projected columns. */
     public fun projectedColumns(vararg projectedColumns: String) {
         _projectedColumns.addAll(listOf(*projectedColumns))
     }
 
-    /**
-     * @param projectedColumns Projected columns.
-     */
+    /** @param projectedColumns Projected columns. */
     public fun projectedColumns(projectedColumns: Collection<String>) {
         _projectedColumns.addAll(projectedColumns)
     }

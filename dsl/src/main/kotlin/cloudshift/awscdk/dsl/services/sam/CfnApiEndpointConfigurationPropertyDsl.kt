@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sam.CfnApi
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,34 +34,28 @@ import software.amazon.awscdk.services.sam.CfnApi
  */
 @CdkDslMarker
 public class CfnApiEndpointConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApi.EndpointConfigurationProperty.Builder =
-      CfnApi.EndpointConfigurationProperty.builder()
+    private val cdkBuilder: CfnApi.EndpointConfigurationProperty.Builder =
+        CfnApi.EndpointConfigurationProperty.builder()
 
-  private val _vpcEndpointIds: MutableList<String> = mutableListOf()
+    private val _vpcEndpointIds: MutableList<String> = mutableListOf()
 
-  /**
-   * @param type the value to be set.
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type the value to be set. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  /**
-   * @param vpcEndpointIds the value to be set.
-   */
-  public fun vpcEndpointIds(vararg vpcEndpointIds: String) {
-    _vpcEndpointIds.addAll(listOf(*vpcEndpointIds))
-  }
+    /** @param vpcEndpointIds the value to be set. */
+    public fun vpcEndpointIds(vararg vpcEndpointIds: String) {
+        _vpcEndpointIds.addAll(listOf(*vpcEndpointIds))
+    }
 
-  /**
-   * @param vpcEndpointIds the value to be set.
-   */
-  public fun vpcEndpointIds(vpcEndpointIds: Collection<String>) {
-    _vpcEndpointIds.addAll(vpcEndpointIds)
-  }
+    /** @param vpcEndpointIds the value to be set. */
+    public fun vpcEndpointIds(vpcEndpointIds: Collection<String>) {
+        _vpcEndpointIds.addAll(vpcEndpointIds)
+    }
 
-  public fun build(): CfnApi.EndpointConfigurationProperty {
-    if(_vpcEndpointIds.isNotEmpty()) cdkBuilder.vpcEndpointIds(_vpcEndpointIds)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnApi.EndpointConfigurationProperty {
+        if (_vpcEndpointIds.isNotEmpty()) cdkBuilder.vpcEndpointIds(_vpcEndpointIds)
+        return cdkBuilder.build()
+    }
 }

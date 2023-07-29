@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -16,12 +25,11 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
  * In order for an instance to be included in the deployment group, it must be identified by all the
  * tag groups in the list.
  *
- * `OnPremisesTagSetListObject` is a property of the [CodeDeploy DeploymentGroup
- * OnPremisesTagSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagset.html)
+ * `OnPremisesTagSetListObject` is a property of the
+ * [CodeDeploy DeploymentGroup OnPremisesTagSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagset.html)
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,34 +48,28 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
  */
 @CdkDslMarker
 public class CfnDeploymentGroupOnPremisesTagSetListObjectPropertyDsl {
-  private val cdkBuilder: CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.Builder =
-      CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.builder()
+    private val cdkBuilder: CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.Builder =
+        CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.builder()
 
-  private val _onPremisesTagGroup: MutableList<Any> = mutableListOf()
+    private val _onPremisesTagGroup: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-   */
-  public fun onPremisesTagGroup(vararg onPremisesTagGroup: Any) {
-    _onPremisesTagGroup.addAll(listOf(*onPremisesTagGroup))
-  }
+    /** @param onPremisesTagGroup Information about groups of on-premises instance tags. */
+    public fun onPremisesTagGroup(vararg onPremisesTagGroup: Any) {
+        _onPremisesTagGroup.addAll(listOf(*onPremisesTagGroup))
+    }
 
-  /**
-   * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-   */
-  public fun onPremisesTagGroup(onPremisesTagGroup: Collection<Any>) {
-    _onPremisesTagGroup.addAll(onPremisesTagGroup)
-  }
+    /** @param onPremisesTagGroup Information about groups of on-premises instance tags. */
+    public fun onPremisesTagGroup(onPremisesTagGroup: Collection<Any>) {
+        _onPremisesTagGroup.addAll(onPremisesTagGroup)
+    }
 
-  /**
-   * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-   */
-  public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
-    cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
-  }
+    /** @param onPremisesTagGroup Information about groups of on-premises instance tags. */
+    public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
+        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
+    }
 
-  public fun build(): CfnDeploymentGroup.OnPremisesTagSetListObjectProperty {
-    if(_onPremisesTagGroup.isNotEmpty()) cdkBuilder.onPremisesTagGroup(_onPremisesTagGroup)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDeploymentGroup.OnPremisesTagSetListObjectProperty {
+        if (_onPremisesTagGroup.isNotEmpty()) cdkBuilder.onPremisesTagGroup(_onPremisesTagGroup)
+        return cdkBuilder.build()
+    }
 }

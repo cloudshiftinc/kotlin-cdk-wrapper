@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.events.IConnection
  * The event API Destination properties.
  *
  * Example:
- *
  * ```
  * Connection connection = Connection.Builder.create(this, "Connection")
  * .authorization(Authorization.apiKey("x-api-key", SecretValue.secretsManager("ApiSecretName")))
@@ -32,50 +40,40 @@ import software.amazon.awscdk.services.events.IConnection
  */
 @CdkDslMarker
 public class ApiDestinationPropsDsl {
-  private val cdkBuilder: ApiDestinationProps.Builder = ApiDestinationProps.builder()
+    private val cdkBuilder: ApiDestinationProps.Builder = ApiDestinationProps.builder()
 
-  /**
-   * @param apiDestinationName The name for the API destination.
-   */
-  public fun apiDestinationName(apiDestinationName: String) {
-    cdkBuilder.apiDestinationName(apiDestinationName)
-  }
+    /** @param apiDestinationName The name for the API destination. */
+    public fun apiDestinationName(apiDestinationName: String) {
+        cdkBuilder.apiDestinationName(apiDestinationName)
+    }
 
-  /**
-   * @param connection The ARN of the connection to use for the API destination. 
-   */
-  public fun connection(connection: IConnection) {
-    cdkBuilder.connection(connection)
-  }
+    /** @param connection The ARN of the connection to use for the API destination. */
+    public fun connection(connection: IConnection) {
+        cdkBuilder.connection(connection)
+    }
 
-  /**
-   * @param description A description for the API destination.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description for the API destination. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param endpoint The URL to the HTTP invocation endpoint for the API destination.. 
-   */
-  public fun endpoint(endpoint: String) {
-    cdkBuilder.endpoint(endpoint)
-  }
+    /** @param endpoint The URL to the HTTP invocation endpoint for the API destination.. */
+    public fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+    }
 
-  /**
-   * @param httpMethod The method to use for the request to the HTTP invocation endpoint.
-   */
-  public fun httpMethod(httpMethod: HttpMethod) {
-    cdkBuilder.httpMethod(httpMethod)
-  }
+    /** @param httpMethod The method to use for the request to the HTTP invocation endpoint. */
+    public fun httpMethod(httpMethod: HttpMethod) {
+        cdkBuilder.httpMethod(httpMethod)
+    }
 
-  /**
-   * @param rateLimitPerSecond The maximum number of requests per second to send to the HTTP
-   * invocation endpoint.
-   */
-  public fun rateLimitPerSecond(rateLimitPerSecond: Number) {
-    cdkBuilder.rateLimitPerSecond(rateLimitPerSecond)
-  }
+    /**
+     * @param rateLimitPerSecond The maximum number of requests per second to send to the HTTP
+     *   invocation endpoint.
+     */
+    public fun rateLimitPerSecond(rateLimitPerSecond: Number) {
+        cdkBuilder.rateLimitPerSecond(rateLimitPerSecond)
+    }
 
-  public fun build(): ApiDestinationProps = cdkBuilder.build()
+    public fun build(): ApiDestinationProps = cdkBuilder.build()
 }

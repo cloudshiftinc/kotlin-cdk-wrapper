@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lambda.CfnEventInvokeConfig
  * A configuration object that specifies the destination of an event after Lambda processes it.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,36 +37,28 @@ import software.amazon.awscdk.services.lambda.CfnEventInvokeConfig
  */
 @CdkDslMarker
 public class CfnEventInvokeConfigDestinationConfigPropertyDsl {
-  private val cdkBuilder: CfnEventInvokeConfig.DestinationConfigProperty.Builder =
-      CfnEventInvokeConfig.DestinationConfigProperty.builder()
+    private val cdkBuilder: CfnEventInvokeConfig.DestinationConfigProperty.Builder =
+        CfnEventInvokeConfig.DestinationConfigProperty.builder()
 
-  /**
-   * @param onFailure The destination configuration for failed invocations.
-   */
-  public fun onFailure(onFailure: IResolvable) {
-    cdkBuilder.onFailure(onFailure)
-  }
+    /** @param onFailure The destination configuration for failed invocations. */
+    public fun onFailure(onFailure: IResolvable) {
+        cdkBuilder.onFailure(onFailure)
+    }
 
-  /**
-   * @param onFailure The destination configuration for failed invocations.
-   */
-  public fun onFailure(onFailure: CfnEventInvokeConfig.OnFailureProperty) {
-    cdkBuilder.onFailure(onFailure)
-  }
+    /** @param onFailure The destination configuration for failed invocations. */
+    public fun onFailure(onFailure: CfnEventInvokeConfig.OnFailureProperty) {
+        cdkBuilder.onFailure(onFailure)
+    }
 
-  /**
-   * @param onSuccess The destination configuration for successful invocations.
-   */
-  public fun onSuccess(onSuccess: IResolvable) {
-    cdkBuilder.onSuccess(onSuccess)
-  }
+    /** @param onSuccess The destination configuration for successful invocations. */
+    public fun onSuccess(onSuccess: IResolvable) {
+        cdkBuilder.onSuccess(onSuccess)
+    }
 
-  /**
-   * @param onSuccess The destination configuration for successful invocations.
-   */
-  public fun onSuccess(onSuccess: CfnEventInvokeConfig.OnSuccessProperty) {
-    cdkBuilder.onSuccess(onSuccess)
-  }
+    /** @param onSuccess The destination configuration for successful invocations. */
+    public fun onSuccess(onSuccess: CfnEventInvokeConfig.OnSuccessProperty) {
+        cdkBuilder.onSuccess(onSuccess)
+    }
 
-  public fun build(): CfnEventInvokeConfig.DestinationConfigProperty = cdkBuilder.build()
+    public fun build(): CfnEventInvokeConfig.DestinationConfigProperty = cdkBuilder.build()
 }

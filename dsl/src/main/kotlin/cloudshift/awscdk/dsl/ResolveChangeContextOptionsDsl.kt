@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.ResolveChangeContextOptions
  * Options that can be changed while doing a recursive resolve.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,21 @@ import software.amazon.awscdk.ResolveChangeContextOptions
  */
 @CdkDslMarker
 public class ResolveChangeContextOptionsDsl {
-  private val cdkBuilder: ResolveChangeContextOptions.Builder =
-      ResolveChangeContextOptions.builder()
+    private val cdkBuilder: ResolveChangeContextOptions.Builder =
+        ResolveChangeContextOptions.builder()
 
-  /**
-   * @param allowIntrinsicKeys Change the 'allowIntrinsicKeys' option.
-   */
-  public fun allowIntrinsicKeys(allowIntrinsicKeys: Boolean) {
-    cdkBuilder.allowIntrinsicKeys(allowIntrinsicKeys)
-  }
+    /** @param allowIntrinsicKeys Change the 'allowIntrinsicKeys' option. */
+    public fun allowIntrinsicKeys(allowIntrinsicKeys: Boolean) {
+        cdkBuilder.allowIntrinsicKeys(allowIntrinsicKeys)
+    }
 
-  /**
-   * @param removeEmpty Whether to remove undefined elements from arrays and objects when resolving.
-   */
-  public fun removeEmpty(removeEmpty: Boolean) {
-    cdkBuilder.removeEmpty(removeEmpty)
-  }
+    /**
+     * @param removeEmpty Whether to remove undefined elements from arrays and objects when
+     *   resolving.
+     */
+    public fun removeEmpty(removeEmpty: Boolean) {
+        cdkBuilder.removeEmpty(removeEmpty)
+    }
 
-  public fun build(): ResolveChangeContextOptions = cdkBuilder.build()
+    public fun build(): ResolveChangeContextOptions = cdkBuilder.build()
 }

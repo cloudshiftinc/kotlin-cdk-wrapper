@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * Allow traffic towards application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,22 +37,20 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupAllowPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.AllowProperty.Builder = CfnRuleGroup.AllowProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.AllowProperty.Builder =
+        CfnRuleGroup.AllowProperty.builder()
 
-  /**
-   * @param customRequestHandling Custom request handling.
-   */
-  public fun customRequestHandling(customRequestHandling: IResolvable) {
-    cdkBuilder.customRequestHandling(customRequestHandling)
-  }
+    /** @param customRequestHandling Custom request handling. */
+    public fun customRequestHandling(customRequestHandling: IResolvable) {
+        cdkBuilder.customRequestHandling(customRequestHandling)
+    }
 
-  /**
-   * @param customRequestHandling Custom request handling.
-   */
-  public
-      fun customRequestHandling(customRequestHandling: CfnRuleGroup.CustomRequestHandlingProperty) {
-    cdkBuilder.customRequestHandling(customRequestHandling)
-  }
+    /** @param customRequestHandling Custom request handling. */
+    public fun customRequestHandling(
+        customRequestHandling: CfnRuleGroup.CustomRequestHandlingProperty
+    ) {
+        cdkBuilder.customRequestHandling(customRequestHandling)
+    }
 
-  public fun build(): CfnRuleGroup.AllowProperty = cdkBuilder.build()
+    public fun build(): CfnRuleGroup.AllowProperty = cdkBuilder.build()
 }

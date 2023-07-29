@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.databrew.CfnRecipeProps
  * Properties for defining a `CfnRecipe`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,64 +60,50 @@ import software.amazon.awscdk.services.databrew.CfnRecipeProps
  */
 @CdkDslMarker
 public class CfnRecipePropsDsl {
-  private val cdkBuilder: CfnRecipeProps.Builder = CfnRecipeProps.builder()
+    private val cdkBuilder: CfnRecipeProps.Builder = CfnRecipeProps.builder()
 
-  private val _steps: MutableList<Any> = mutableListOf()
+    private val _steps: MutableList<Any> = mutableListOf()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description The description of the recipe.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the recipe. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name The unique name for the recipe. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The unique name for the recipe. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param steps A list of steps that are defined by the recipe. 
-   */
-  public fun steps(vararg steps: Any) {
-    _steps.addAll(listOf(*steps))
-  }
+    /** @param steps A list of steps that are defined by the recipe. */
+    public fun steps(vararg steps: Any) {
+        _steps.addAll(listOf(*steps))
+    }
 
-  /**
-   * @param steps A list of steps that are defined by the recipe. 
-   */
-  public fun steps(steps: Collection<Any>) {
-    _steps.addAll(steps)
-  }
+    /** @param steps A list of steps that are defined by the recipe. */
+    public fun steps(steps: Collection<Any>) {
+        _steps.addAll(steps)
+    }
 
-  /**
-   * @param steps A list of steps that are defined by the recipe. 
-   */
-  public fun steps(steps: IResolvable) {
-    cdkBuilder.steps(steps)
-  }
+    /** @param steps A list of steps that are defined by the recipe. */
+    public fun steps(steps: IResolvable) {
+        cdkBuilder.steps(steps)
+    }
 
-  /**
-   * @param tags Metadata tags that have been applied to the recipe.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags Metadata tags that have been applied to the recipe. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Metadata tags that have been applied to the recipe.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags Metadata tags that have been applied to the recipe. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnRecipeProps {
-    if(_steps.isNotEmpty()) cdkBuilder.steps(_steps)
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnRecipeProps {
+        if (_steps.isNotEmpty()) cdkBuilder.steps(_steps)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -13,19 +22,18 @@ import software.constructs.Construct
  * the configuration profile for an instance of a connector.
  *
  * This includes the provided name, credentials ARN, connection-mode, and so on. The fields that are
- * common to all types of connector profiles are explicitly specified under the `Properties` field. The
- * rest of the connector-specific properties are specified under `Properties/ConnectorProfileConfig` .
- *
+ * common to all types of connector profiles are explicitly specified under the `Properties` field.
+ * The rest of the connector-specific properties are specified under
+ * `Properties/ConnectorProfileConfig` .
  *
  * If you want to use AWS CloudFormation to create a connector profile for connectors that implement
  * OAuth (such as Salesforce, Slack, Zendesk, and Google Analytics), you must fetch the access and
- * refresh tokens. You can do this by implementing your own UI for OAuth, or by retrieving the tokens
- * from elsewhere. Alternatively, you can use the Amazon AppFlow console to create the connector
- * profile, and then use that connector profile in the flow creation CloudFormation template.
- *
+ * refresh tokens. You can do this by implementing your own UI for OAuth, or by retrieving the
+ * tokens from elsewhere. Alternatively, you can use the Amazon AppFlow console to create the
+ * connector profile, and then use that connector profile in the flow creation CloudFormation
+ * template.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -277,89 +285,97 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnConnectorProfileDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnConnectorProfile.Builder = CfnConnectorProfile.Builder.create(scope,
-      id)
+    private val cdkBuilder: CfnConnectorProfile.Builder =
+        CfnConnectorProfile.Builder.create(scope, id)
 
-  /**
-   * Indicates the connection mode and if it is public or private.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectionmode)
-   * @param connectionMode Indicates the connection mode and if it is public or private. 
-   */
-  public fun connectionMode(connectionMode: String) {
-    cdkBuilder.connectionMode(connectionMode)
-  }
+    /**
+     * Indicates the connection mode and if it is public or private.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectionmode)
+     *
+     * @param connectionMode Indicates the connection mode and if it is public or private.
+     */
+    public fun connectionMode(connectionMode: String) {
+        cdkBuilder.connectionMode(connectionMode)
+    }
 
-  /**
-   * The label for the connector profile being created.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorlabel)
-   * @param connectorLabel The label for the connector profile being created. 
-   */
-  public fun connectorLabel(connectorLabel: String) {
-    cdkBuilder.connectorLabel(connectorLabel)
-  }
+    /**
+     * The label for the connector profile being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorlabel)
+     *
+     * @param connectorLabel The label for the connector profile being created.
+     */
+    public fun connectorLabel(connectorLabel: String) {
+        cdkBuilder.connectorLabel(connectorLabel)
+    }
 
-  /**
-   * Defines the connector-specific configuration and credentials.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofileconfig)
-   * @param connectorProfileConfig Defines the connector-specific configuration and credentials. 
-   */
-  public fun connectorProfileConfig(connectorProfileConfig: IResolvable) {
-    cdkBuilder.connectorProfileConfig(connectorProfileConfig)
-  }
+    /**
+     * Defines the connector-specific configuration and credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofileconfig)
+     *
+     * @param connectorProfileConfig Defines the connector-specific configuration and credentials.
+     */
+    public fun connectorProfileConfig(connectorProfileConfig: IResolvable) {
+        cdkBuilder.connectorProfileConfig(connectorProfileConfig)
+    }
 
-  /**
-   * Defines the connector-specific configuration and credentials.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofileconfig)
-   * @param connectorProfileConfig Defines the connector-specific configuration and credentials. 
-   */
-  public
-      fun connectorProfileConfig(connectorProfileConfig: CfnConnectorProfile.ConnectorProfileConfigProperty) {
-    cdkBuilder.connectorProfileConfig(connectorProfileConfig)
-  }
+    /**
+     * Defines the connector-specific configuration and credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofileconfig)
+     *
+     * @param connectorProfileConfig Defines the connector-specific configuration and credentials.
+     */
+    public fun connectorProfileConfig(
+        connectorProfileConfig: CfnConnectorProfile.ConnectorProfileConfigProperty
+    ) {
+        cdkBuilder.connectorProfileConfig(connectorProfileConfig)
+    }
 
-  /**
-   * The name of the connector profile.
-   *
-   * The name is unique for each `ConnectorProfile` in the AWS account .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofilename)
-   * @param connectorProfileName The name of the connector profile. 
-   */
-  public fun connectorProfileName(connectorProfileName: String) {
-    cdkBuilder.connectorProfileName(connectorProfileName)
-  }
+    /**
+     * The name of the connector profile.
+     *
+     * The name is unique for each `ConnectorProfile` in the AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofilename)
+     *
+     * @param connectorProfileName The name of the connector profile.
+     */
+    public fun connectorProfileName(connectorProfileName: String) {
+        cdkBuilder.connectorProfileName(connectorProfileName)
+    }
 
-  /**
-   * The type of connector, such as Salesforce, Amplitude, and so on.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectortype)
-   * @param connectorType The type of connector, such as Salesforce, Amplitude, and so on. 
-   */
-  public fun connectorType(connectorType: String) {
-    cdkBuilder.connectorType(connectorType)
-  }
+    /**
+     * The type of connector, such as Salesforce, Amplitude, and so on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectortype)
+     *
+     * @param connectorType The type of connector, such as Salesforce, Amplitude, and so on.
+     */
+    public fun connectorType(connectorType: String) {
+        cdkBuilder.connectorType(connectorType)
+    }
 
-  /**
-   * The ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for
-   * encryption.
-   *
-   * This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't
-   * provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-kmsarn)
-   * @param kmsArn The ARN (Amazon Resource Name) of the Key Management Service (KMS) key you
-   * provide for encryption. 
-   */
-  public fun kmsArn(kmsArn: String) {
-    cdkBuilder.kmsArn(kmsArn)
-  }
+    /**
+     * The ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for
+     * encryption.
+     *
+     * This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't
+     * provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-kmsarn)
+     *
+     * @param kmsArn The ARN (Amazon Resource Name) of the Key Management Service (KMS) key you
+     *   provide for encryption.
+     */
+    public fun kmsArn(kmsArn: String) {
+        cdkBuilder.kmsArn(kmsArn)
+    }
 
-  public fun build(): CfnConnectorProfile = cdkBuilder.build()
+    public fun build(): CfnConnectorProfile = cdkBuilder.build()
 }

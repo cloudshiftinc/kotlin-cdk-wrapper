@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -18,15 +27,13 @@ import software.constructs.Construct
  *
  * You almost never need to define this construct directly.
  *
- * All AWS resources that support resource policies have a method called
- * `addToResourcePolicy()`, which will automatically create a new resource
- * policy if one doesn't exist yet, otherwise it will add to the existing
- * policy.
+ * All AWS resources that support resource policies have a method called `addToResourcePolicy()`,
+ * which will automatically create a new resource policy if one doesn't exist yet, otherwise it will
+ * add to the existing policy.
  *
  * Prefer to use `addToResourcePolicy()` instead.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,49 +50,49 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class EventBusPolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: EventBusPolicy.Builder = EventBusPolicy.Builder.create(scope, id)
+    private val cdkBuilder: EventBusPolicy.Builder = EventBusPolicy.Builder.create(scope, id)
 
-  /**
-   * The event bus to which the policy applies.
-   *
-   * @param eventBus The event bus to which the policy applies. 
-   */
-  public fun eventBus(eventBus: IEventBus) {
-    cdkBuilder.eventBus(eventBus)
-  }
+    /**
+     * The event bus to which the policy applies.
+     *
+     * @param eventBus The event bus to which the policy applies.
+     */
+    public fun eventBus(eventBus: IEventBus) {
+        cdkBuilder.eventBus(eventBus)
+    }
 
-  /**
-   * An IAM Policy Statement to apply to the Event Bus.
-   *
-   * @param statement An IAM Policy Statement to apply to the Event Bus. 
-   */
-  public fun statement(statement: PolicyStatementDsl.() -> Unit = {}) {
-    val builder = PolicyStatementDsl()
-    builder.apply(statement)
-    cdkBuilder.statement(builder.build())
-  }
+    /**
+     * An IAM Policy Statement to apply to the Event Bus.
+     *
+     * @param statement An IAM Policy Statement to apply to the Event Bus.
+     */
+    public fun statement(statement: PolicyStatementDsl.() -> Unit = {}) {
+        val builder = PolicyStatementDsl()
+        builder.apply(statement)
+        cdkBuilder.statement(builder.build())
+    }
 
-  /**
-   * An IAM Policy Statement to apply to the Event Bus.
-   *
-   * @param statement An IAM Policy Statement to apply to the Event Bus. 
-   */
-  public fun statement(statement: PolicyStatement) {
-    cdkBuilder.statement(statement)
-  }
+    /**
+     * An IAM Policy Statement to apply to the Event Bus.
+     *
+     * @param statement An IAM Policy Statement to apply to the Event Bus.
+     */
+    public fun statement(statement: PolicyStatement) {
+        cdkBuilder.statement(statement)
+    }
 
-  /**
-   * An identifier string for the external account that you are granting permissions to.
-   *
-   * @param statementId An identifier string for the external account that you are granting
-   * permissions to. 
-   */
-  public fun statementId(statementId: String) {
-    cdkBuilder.statementId(statementId)
-  }
+    /**
+     * An identifier string for the external account that you are granting permissions to.
+     *
+     * @param statementId An identifier string for the external account that you are granting
+     *   permissions to.
+     */
+    public fun statementId(statementId: String) {
+        cdkBuilder.statementId(statementId)
+    }
 
-  public fun build(): EventBusPolicy = cdkBuilder.build()
+    public fun build(): EventBusPolicy = cdkBuilder.build()
 }

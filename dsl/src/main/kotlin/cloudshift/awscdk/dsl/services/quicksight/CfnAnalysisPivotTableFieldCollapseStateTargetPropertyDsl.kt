@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The target of a pivot table field collapse state.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,24 +47,24 @@ public class CfnAnalysisPivotTableFieldCollapseStateTargetPropertyDsl {
     private val _fieldDataPathValues: MutableList<Any> = mutableListOf()
 
     /**
-     * @param fieldDataPathValues The data path of the pivot table's header.
-     * Used to set the collapse state.
+     * @param fieldDataPathValues The data path of the pivot table's header. Used to set the
+     *   collapse state.
      */
     public fun fieldDataPathValues(vararg fieldDataPathValues: Any) {
         _fieldDataPathValues.addAll(listOf(*fieldDataPathValues))
     }
 
     /**
-     * @param fieldDataPathValues The data path of the pivot table's header.
-     * Used to set the collapse state.
+     * @param fieldDataPathValues The data path of the pivot table's header. Used to set the
+     *   collapse state.
      */
     public fun fieldDataPathValues(fieldDataPathValues: Collection<Any>) {
         _fieldDataPathValues.addAll(fieldDataPathValues)
     }
 
     /**
-     * @param fieldDataPathValues The data path of the pivot table's header.
-     * Used to set the collapse state.
+     * @param fieldDataPathValues The data path of the pivot table's header. Used to set the
+     *   collapse state.
      */
     public fun fieldDataPathValues(fieldDataPathValues: IResolvable) {
         cdkBuilder.fieldDataPathValues(fieldDataPathValues)

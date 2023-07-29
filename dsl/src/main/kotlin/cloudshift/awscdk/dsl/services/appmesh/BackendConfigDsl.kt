@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  * Properties for a backend.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -63,25 +71,21 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  */
 @CdkDslMarker
 public class BackendConfigDsl {
-  private val cdkBuilder: BackendConfig.Builder = BackendConfig.builder()
+    private val cdkBuilder: BackendConfig.Builder = BackendConfig.builder()
 
-  /**
-   * @param virtualServiceBackend Config for a Virtual Service backend. 
-   */
-  public
-      fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNodeBackendPropertyDsl.() -> Unit =
-      {}) {
-    val builder = CfnVirtualNodeBackendPropertyDsl()
-    builder.apply(virtualServiceBackend)
-    cdkBuilder.virtualServiceBackend(builder.build())
-  }
+    /** @param virtualServiceBackend Config for a Virtual Service backend. */
+    public fun virtualServiceBackend(
+        virtualServiceBackend: CfnVirtualNodeBackendPropertyDsl.() -> Unit = {}
+    ) {
+        val builder = CfnVirtualNodeBackendPropertyDsl()
+        builder.apply(virtualServiceBackend)
+        cdkBuilder.virtualServiceBackend(builder.build())
+    }
 
-  /**
-   * @param virtualServiceBackend Config for a Virtual Service backend. 
-   */
-  public fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty) {
-    cdkBuilder.virtualServiceBackend(virtualServiceBackend)
-  }
+    /** @param virtualServiceBackend Config for a Virtual Service backend. */
+    public fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty) {
+        cdkBuilder.virtualServiceBackend(virtualServiceBackend)
+    }
 
-  public fun build(): BackendConfig = cdkBuilder.build()
+    public fun build(): BackendConfig = cdkBuilder.build()
 }

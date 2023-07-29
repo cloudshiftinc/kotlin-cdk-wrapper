@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * unable to deliver documents to Splunk or if it doesn't receive an acknowledgment from Splunk.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,18 +33,18 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class CfnDeliveryStreamSplunkRetryOptionsPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.SplunkRetryOptionsProperty.Builder =
-      CfnDeliveryStream.SplunkRetryOptionsProperty.builder()
+    private val cdkBuilder: CfnDeliveryStream.SplunkRetryOptionsProperty.Builder =
+        CfnDeliveryStream.SplunkRetryOptionsProperty.builder()
 
-  /**
-   * @param durationInSeconds The total amount of time that Kinesis Data Firehose spends on retries.
-   * This duration starts after the initial attempt to send data to Splunk fails. It doesn't include
-   * the periods during which Kinesis Data Firehose waits for acknowledgment from Splunk after each
-   * attempt.
-   */
-  public fun durationInSeconds(durationInSeconds: Number) {
-    cdkBuilder.durationInSeconds(durationInSeconds)
-  }
+    /**
+     * @param durationInSeconds The total amount of time that Kinesis Data Firehose spends on
+     *   retries. This duration starts after the initial attempt to send data to Splunk fails. It
+     *   doesn't include the periods during which Kinesis Data Firehose waits for acknowledgment
+     *   from Splunk after each attempt.
+     */
+    public fun durationInSeconds(durationInSeconds: Number) {
+        cdkBuilder.durationInSeconds(durationInSeconds)
+    }
 
-  public fun build(): CfnDeliveryStream.SplunkRetryOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.SplunkRetryOptionsProperty = cdkBuilder.build()
 }

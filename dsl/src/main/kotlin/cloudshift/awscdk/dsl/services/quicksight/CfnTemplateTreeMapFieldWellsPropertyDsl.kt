@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -24,17 +32,15 @@ public class CfnTemplateTreeMapFieldWellsPropertyDsl {
     private val cdkBuilder: CfnTemplate.TreeMapFieldWellsProperty.Builder =
         CfnTemplate.TreeMapFieldWellsProperty.builder()
 
-    /**
-     * @param treeMapAggregatedFieldWells The aggregated field wells of a tree map.
-     */
+    /** @param treeMapAggregatedFieldWells The aggregated field wells of a tree map. */
     public fun treeMapAggregatedFieldWells(treeMapAggregatedFieldWells: IResolvable) {
         cdkBuilder.treeMapAggregatedFieldWells(treeMapAggregatedFieldWells)
     }
 
-    /**
-     * @param treeMapAggregatedFieldWells The aggregated field wells of a tree map.
-     */
-    public fun treeMapAggregatedFieldWells(treeMapAggregatedFieldWells: CfnTemplate.TreeMapAggregatedFieldWellsProperty) {
+    /** @param treeMapAggregatedFieldWells The aggregated field wells of a tree map. */
+    public fun treeMapAggregatedFieldWells(
+        treeMapAggregatedFieldWells: CfnTemplate.TreeMapAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.treeMapAggregatedFieldWells(treeMapAggregatedFieldWells)
     }
 

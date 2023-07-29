@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.rds.RotationSingleUserOptions
  * Options to add the multi user rotation.
  *
  * Example:
- *
  * ```
  * DatabaseInstance instance;
  * SecurityGroup mySecurityGroup;
@@ -32,64 +40,56 @@ import software.amazon.awscdk.services.rds.RotationSingleUserOptions
  */
 @CdkDslMarker
 public class RotationSingleUserOptionsDsl {
-  private val cdkBuilder: RotationSingleUserOptions.Builder = RotationSingleUserOptions.builder()
+    private val cdkBuilder: RotationSingleUserOptions.Builder = RotationSingleUserOptions.builder()
 
-  /**
-   * @param automaticallyAfter Specifies the number of days after the previous rotation before
-   * Secrets Manager triggers the next automatic rotation.
-   */
-  public fun automaticallyAfter(automaticallyAfter: Duration) {
-    cdkBuilder.automaticallyAfter(automaticallyAfter)
-  }
+    /**
+     * @param automaticallyAfter Specifies the number of days after the previous rotation before
+     *   Secrets Manager triggers the next automatic rotation.
+     */
+    public fun automaticallyAfter(automaticallyAfter: Duration) {
+        cdkBuilder.automaticallyAfter(automaticallyAfter)
+    }
 
-  /**
-   * @param endpoint The VPC interface endpoint to use for the Secrets Manager API.
-   * If you enable private DNS hostnames for your VPC private endpoint (the default), you don't
-   * need to specify an endpoint. The standard Secrets Manager DNS hostname the Secrets Manager
-   * CLI and SDKs use by default (https://secretsmanager.<region>.amazonaws.com) automatically
-   * resolves to your VPC endpoint.
-   */
-  public fun endpoint(endpoint: IInterfaceVpcEndpoint) {
-    cdkBuilder.endpoint(endpoint)
-  }
+    /**
+     * @param endpoint The VPC interface endpoint to use for the Secrets Manager API. If you enable
+     *   private DNS hostnames for your VPC private endpoint (the default), you don't need to
+     *   specify an endpoint. The standard Secrets Manager DNS hostname the Secrets Manager CLI and
+     *   SDKs use by default (https://secretsmanager.<region>.amazonaws.com) automatically resolves
+     *   to your VPC endpoint.
+     */
+    public fun endpoint(endpoint: IInterfaceVpcEndpoint) {
+        cdkBuilder.endpoint(endpoint)
+    }
 
-  /**
-   * @param excludeCharacters Specifies characters to not include in generated passwords.
-   */
-  public fun excludeCharacters(excludeCharacters: String) {
-    cdkBuilder.excludeCharacters(excludeCharacters)
-  }
+    /** @param excludeCharacters Specifies characters to not include in generated passwords. */
+    public fun excludeCharacters(excludeCharacters: String) {
+        cdkBuilder.excludeCharacters(excludeCharacters)
+    }
 
-  /**
-   * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
-   * until the next scheduled rotation window.
-   */
-  public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
-    cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
-  }
+    /**
+     * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
+     *   until the next scheduled rotation window.
+     */
+    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
+        cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
+    }
 
-  /**
-   * @param securityGroup The security group for the Lambda rotation function.
-   */
-  public fun securityGroup(securityGroup: ISecurityGroup) {
-    cdkBuilder.securityGroup(securityGroup)
-  }
+    /** @param securityGroup The security group for the Lambda rotation function. */
+    public fun securityGroup(securityGroup: ISecurityGroup) {
+        cdkBuilder.securityGroup(securityGroup)
+    }
 
-  /**
-   * @param vpcSubnets Where to place the rotation Lambda function.
-   */
-  public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
-    val builder = SubnetSelectionDsl()
-    builder.apply(vpcSubnets)
-    cdkBuilder.vpcSubnets(builder.build())
-  }
+    /** @param vpcSubnets Where to place the rotation Lambda function. */
+    public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
+        val builder = SubnetSelectionDsl()
+        builder.apply(vpcSubnets)
+        cdkBuilder.vpcSubnets(builder.build())
+    }
 
-  /**
-   * @param vpcSubnets Where to place the rotation Lambda function.
-   */
-  public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    cdkBuilder.vpcSubnets(vpcSubnets)
-  }
+    /** @param vpcSubnets Where to place the rotation Lambda function. */
+    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
+        cdkBuilder.vpcSubnets(vpcSubnets)
+    }
 
-  public fun build(): RotationSingleUserOptions = cdkBuilder.build()
+    public fun build(): RotationSingleUserOptions = cdkBuilder.build()
 }

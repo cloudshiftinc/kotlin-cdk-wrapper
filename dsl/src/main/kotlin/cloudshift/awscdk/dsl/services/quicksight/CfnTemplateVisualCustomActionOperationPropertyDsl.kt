@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -81,7 +89,7 @@ public class CfnTemplateVisualCustomActionOperationPropertyDsl {
 
     /**
      * @param filterOperation The filter operation that filters data included in a visual or in an
-     * entire sheet.
+     *   entire sheet.
      */
     public fun filterOperation(filterOperation: IResolvable) {
         cdkBuilder.filterOperation(filterOperation)
@@ -89,31 +97,33 @@ public class CfnTemplateVisualCustomActionOperationPropertyDsl {
 
     /**
      * @param filterOperation The filter operation that filters data included in a visual or in an
-     * entire sheet.
+     *   entire sheet.
      */
     public fun filterOperation(filterOperation: CfnTemplate.CustomActionFilterOperationProperty) {
         cdkBuilder.filterOperation(filterOperation)
     }
 
     /**
-     * @param navigationOperation The navigation operation that navigates between different sheets in
-     * the same analysis.
+     * @param navigationOperation The navigation operation that navigates between different sheets
+     *   in the same analysis.
      */
     public fun navigationOperation(navigationOperation: IResolvable) {
         cdkBuilder.navigationOperation(navigationOperation)
     }
 
     /**
-     * @param navigationOperation The navigation operation that navigates between different sheets in
-     * the same analysis.
+     * @param navigationOperation The navigation operation that navigates between different sheets
+     *   in the same analysis.
      */
-    public fun navigationOperation(navigationOperation: CfnTemplate.CustomActionNavigationOperationProperty) {
+    public fun navigationOperation(
+        navigationOperation: CfnTemplate.CustomActionNavigationOperationProperty
+    ) {
         cdkBuilder.navigationOperation(navigationOperation)
     }
 
     /**
      * @param setParametersOperation The set parameter operation that sets parameters in custom
-     * action.
+     *   action.
      */
     public fun setParametersOperation(setParametersOperation: IResolvable) {
         cdkBuilder.setParametersOperation(setParametersOperation)
@@ -121,22 +131,20 @@ public class CfnTemplateVisualCustomActionOperationPropertyDsl {
 
     /**
      * @param setParametersOperation The set parameter operation that sets parameters in custom
-     * action.
+     *   action.
      */
-    public fun setParametersOperation(setParametersOperation: CfnTemplate.CustomActionSetParametersOperationProperty) {
+    public fun setParametersOperation(
+        setParametersOperation: CfnTemplate.CustomActionSetParametersOperationProperty
+    ) {
         cdkBuilder.setParametersOperation(setParametersOperation)
     }
 
-    /**
-     * @param urlOperation The URL operation that opens a link to another webpage.
-     */
+    /** @param urlOperation The URL operation that opens a link to another webpage. */
     public fun urlOperation(urlOperation: IResolvable) {
         cdkBuilder.urlOperation(urlOperation)
     }
 
-    /**
-     * @param urlOperation The URL operation that opens a link to another webpage.
-     */
+    /** @param urlOperation The URL operation that opens a link to another webpage. */
     public fun urlOperation(urlOperation: CfnTemplate.CustomActionURLOperationProperty) {
         cdkBuilder.urlOperation(urlOperation)
     }

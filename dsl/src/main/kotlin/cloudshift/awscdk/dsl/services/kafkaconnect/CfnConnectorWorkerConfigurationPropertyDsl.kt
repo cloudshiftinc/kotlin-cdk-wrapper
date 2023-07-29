@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  * The configuration of the workers, which are the processes that run the connector logic.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorWorkerConfigurationPropertyDsl {
-  private val cdkBuilder: CfnConnector.WorkerConfigurationProperty.Builder =
-      CfnConnector.WorkerConfigurationProperty.builder()
+    private val cdkBuilder: CfnConnector.WorkerConfigurationProperty.Builder =
+        CfnConnector.WorkerConfigurationProperty.builder()
 
-  /**
-   * @param revision The revision of the worker configuration. 
-   */
-  public fun revision(revision: Number) {
-    cdkBuilder.revision(revision)
-  }
+    /** @param revision The revision of the worker configuration. */
+    public fun revision(revision: Number) {
+        cdkBuilder.revision(revision)
+    }
 
-  /**
-   * @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration. 
-   */
-  public fun workerConfigurationArn(workerConfigurationArn: String) {
-    cdkBuilder.workerConfigurationArn(workerConfigurationArn)
-  }
+    /** @param workerConfigurationArn The Amazon Resource Name (ARN) of the worker configuration. */
+    public fun workerConfigurationArn(workerConfigurationArn: String) {
+        cdkBuilder.workerConfigurationArn(workerConfigurationArn)
+    }
 
-  public fun build(): CfnConnector.WorkerConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.WorkerConfigurationProperty = cdkBuilder.build()
 }

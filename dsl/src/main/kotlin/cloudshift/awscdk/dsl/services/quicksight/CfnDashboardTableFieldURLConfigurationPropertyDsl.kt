@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The URL configuration for a table field.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,31 +63,27 @@ public class CfnDashboardTableFieldURLConfigurationPropertyDsl {
     private val cdkBuilder: CfnDashboard.TableFieldURLConfigurationProperty.Builder =
         CfnDashboard.TableFieldURLConfigurationProperty.builder()
 
-    /**
-     * @param imageConfiguration The image configuration of a table field URL.
-     */
+    /** @param imageConfiguration The image configuration of a table field URL. */
     public fun imageConfiguration(imageConfiguration: IResolvable) {
         cdkBuilder.imageConfiguration(imageConfiguration)
     }
 
-    /**
-     * @param imageConfiguration The image configuration of a table field URL.
-     */
-    public fun imageConfiguration(imageConfiguration: CfnDashboard.TableFieldImageConfigurationProperty) {
+    /** @param imageConfiguration The image configuration of a table field URL. */
+    public fun imageConfiguration(
+        imageConfiguration: CfnDashboard.TableFieldImageConfigurationProperty
+    ) {
         cdkBuilder.imageConfiguration(imageConfiguration)
     }
 
-    /**
-     * @param linkConfiguration The link configuration of a table field URL.
-     */
+    /** @param linkConfiguration The link configuration of a table field URL. */
     public fun linkConfiguration(linkConfiguration: IResolvable) {
         cdkBuilder.linkConfiguration(linkConfiguration)
     }
 
-    /**
-     * @param linkConfiguration The link configuration of a table field URL.
-     */
-    public fun linkConfiguration(linkConfiguration: CfnDashboard.TableFieldLinkConfigurationProperty) {
+    /** @param linkConfiguration The link configuration of a table field URL. */
+    public fun linkConfiguration(
+        linkConfiguration: CfnDashboard.TableFieldLinkConfigurationProperty
+    ) {
         cdkBuilder.linkConfiguration(linkConfiguration)
     }
 

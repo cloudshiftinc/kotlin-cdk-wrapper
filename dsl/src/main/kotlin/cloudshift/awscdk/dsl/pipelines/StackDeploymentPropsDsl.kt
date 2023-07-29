@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.pipelines.StackAsset
-import software.amazon.awscdk.pipelines.StackDeploymentProps
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.pipelines.StackAsset
+import software.amazon.awscdk.pipelines.StackDeploymentProps
 
 /**
  * Properties for a `StackDeployment`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -51,86 +59,64 @@ public class StackDeploymentPropsDsl {
 
     private val _assets: MutableList<StackAsset> = mutableListOf()
 
-    /**
-     * @param absoluteTemplatePath Template path on disk to cloud assembly (cdk.out).
-     */
+    /** @param absoluteTemplatePath Template path on disk to cloud assembly (cdk.out). */
     public fun absoluteTemplatePath(absoluteTemplatePath: String) {
         cdkBuilder.absoluteTemplatePath(absoluteTemplatePath)
     }
 
-    /**
-     * @param account Account where the stack should be deployed.
-     */
+    /** @param account Account where the stack should be deployed. */
     public fun account(account: String) {
         cdkBuilder.account(account)
     }
 
-    /**
-     * @param assets Assets referenced by this stack.
-     */
+    /** @param assets Assets referenced by this stack. */
     public fun assets(assets: StackAssetDsl.() -> Unit) {
         _assets.add(StackAssetDsl().apply(assets).build())
     }
 
-    /**
-     * @param assets Assets referenced by this stack.
-     */
+    /** @param assets Assets referenced by this stack. */
     public fun assets(assets: Collection<StackAsset>) {
         _assets.addAll(assets)
     }
 
-    /**
-     * @param assumeRoleArn Role to assume before deploying this stack.
-     */
+    /** @param assumeRoleArn Role to assume before deploying this stack. */
     public fun assumeRoleArn(assumeRoleArn: String) {
         cdkBuilder.assumeRoleArn(assumeRoleArn)
     }
 
-    /**
-     * @param constructPath Construct path for this stack.
-     */
+    /** @param constructPath Construct path for this stack. */
     public fun constructPath(constructPath: String) {
         cdkBuilder.constructPath(constructPath)
     }
 
-    /**
-     * @param executionRoleArn Execution role to pass to CloudFormation.
-     */
+    /** @param executionRoleArn Execution role to pass to CloudFormation. */
     public fun executionRoleArn(executionRoleArn: String) {
         cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    /**
-     * @param region Region where the stack should be deployed.
-     */
+    /** @param region Region where the stack should be deployed. */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }
 
-    /**
-     * @param stackArtifactId Artifact ID for this stack.
-     */
+    /** @param stackArtifactId Artifact ID for this stack. */
     public fun stackArtifactId(stackArtifactId: String) {
         cdkBuilder.stackArtifactId(stackArtifactId)
     }
 
-    /**
-     * @param stackName Name for this stack.
-     */
+    /** @param stackName Name for this stack. */
     public fun stackName(stackName: String) {
         cdkBuilder.stackName(stackName)
     }
 
-    /**
-     * @param tags Tags to apply to the stack.
-     */
+    /** @param tags Tags to apply to the stack. */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)
     }
 
     /**
      * @param templateS3Uri The S3 URL which points to the template asset location in the publishing
-     * bucket.
+     *   bucket.
      */
     public fun templateS3Uri(templateS3Uri: String) {
         cdkBuilder.templateS3Uri(templateS3Uri)

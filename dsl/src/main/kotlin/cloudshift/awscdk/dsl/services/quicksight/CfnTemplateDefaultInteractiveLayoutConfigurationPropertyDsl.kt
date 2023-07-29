@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The options that determine the default settings for interactive layout configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,7 +53,7 @@ public class CfnTemplateDefaultInteractiveLayoutConfigurationPropertyDsl {
 
     /**
      * @param freeForm The options that determine the default settings of a free-form layout
-     * configuration.
+     *   configuration.
      */
     public fun freeForm(freeForm: IResolvable) {
         cdkBuilder.freeForm(freeForm)
@@ -53,7 +61,7 @@ public class CfnTemplateDefaultInteractiveLayoutConfigurationPropertyDsl {
 
     /**
      * @param freeForm The options that determine the default settings of a free-form layout
-     * configuration.
+     *   configuration.
      */
     public fun freeForm(freeForm: CfnTemplate.DefaultFreeFormLayoutConfigurationProperty) {
         cdkBuilder.freeForm(freeForm)
@@ -73,5 +81,6 @@ public class CfnTemplateDefaultInteractiveLayoutConfigurationPropertyDsl {
         cdkBuilder.grid(grid)
     }
 
-    public fun build(): CfnTemplate.DefaultInteractiveLayoutConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.DefaultInteractiveLayoutConfigurationProperty =
+        cdkBuilder.build()
 }

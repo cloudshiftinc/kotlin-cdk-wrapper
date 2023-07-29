@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rekognition
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,15 +37,13 @@ import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
  */
 @CdkDslMarker
 public class CfnStreamProcessorKinesisVideoStreamPropertyDsl {
-  private val cdkBuilder: CfnStreamProcessor.KinesisVideoStreamProperty.Builder =
-      CfnStreamProcessor.KinesisVideoStreamProperty.builder()
+    private val cdkBuilder: CfnStreamProcessor.KinesisVideoStreamProperty.Builder =
+        CfnStreamProcessor.KinesisVideoStreamProperty.builder()
 
-  /**
-   * @param arn ARN of the Kinesis video stream stream that streams the source video. 
-   */
-  public fun arn(arn: String) {
-    cdkBuilder.arn(arn)
-  }
+    /** @param arn ARN of the Kinesis video stream stream that streams the source video. */
+    public fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+    }
 
-  public fun build(): CfnStreamProcessor.KinesisVideoStreamProperty = cdkBuilder.build()
+    public fun build(): CfnStreamProcessor.KinesisVideoStreamProperty = cdkBuilder.build()
 }

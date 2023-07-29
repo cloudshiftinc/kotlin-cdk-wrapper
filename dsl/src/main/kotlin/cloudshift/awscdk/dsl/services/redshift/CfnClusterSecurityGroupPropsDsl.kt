@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.redshift
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupProps
  * Properties for defining a `CfnClusterSecurityGroup`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,38 +43,34 @@ import software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupProps
  */
 @CdkDslMarker
 public class CfnClusterSecurityGroupPropsDsl {
-  private val cdkBuilder: CfnClusterSecurityGroupProps.Builder =
-      CfnClusterSecurityGroupProps.builder()
+    private val cdkBuilder: CfnClusterSecurityGroupProps.Builder =
+        CfnClusterSecurityGroupProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description A description for the security group. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description for the security group. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
-   * security group.
-   * Use tags to manage your resources.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     *   security group. Use tags to manage your resources.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
-   * security group.
-   * Use tags to manage your resources.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     *   security group. Use tags to manage your resources.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnClusterSecurityGroupProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnClusterSecurityGroupProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

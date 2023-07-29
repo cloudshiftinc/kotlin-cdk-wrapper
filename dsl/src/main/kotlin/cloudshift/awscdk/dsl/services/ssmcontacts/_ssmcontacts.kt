@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmcontacts
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.ssmcontacts.CfnContact
 import software.amazon.awscdk.services.ssmcontacts.CfnContactChannel
 import software.amazon.awscdk.services.ssmcontacts.CfnContactChannelProps
@@ -11,18 +22,15 @@ import software.amazon.awscdk.services.ssmcontacts.CfnPlanProps
 import software.amazon.awscdk.services.ssmcontacts.CfnRotation
 import software.amazon.awscdk.services.ssmcontacts.CfnRotationProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object ssmcontacts {
     /**
      * The `AWS::SSMContacts::Contact` resource specifies a contact or escalation plan.
      *
-     * Incident Manager contacts are a subset of actions and data types that you can use for managing
-     * responder engagement and interaction.
+     * Incident Manager contacts are a subset of actions and data types that you can use for
+     * managing responder engagement and interaction.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -54,7 +62,7 @@ public object ssmcontacts {
     public inline fun cfnContact(
         scope: Construct,
         id: String,
-        block: CfnContactDsl.() -> Unit = {}
+        block: CfnContactDsl.() -> Unit = {},
     ): CfnContact {
         val builder = CfnContactDsl(scope, id)
         builder.apply(block)
@@ -62,11 +70,10 @@ public object ssmcontacts {
     }
 
     /**
-     * The `AWS::SSMContacts::ContactChannel` resource specifies a contact channel as the method that
-     * Incident Manager uses to engage your contact.
+     * The `AWS::SSMContacts::ContactChannel` resource specifies a contact channel as the method
+     * that Incident Manager uses to engage your contact.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -87,7 +94,7 @@ public object ssmcontacts {
     public inline fun cfnContactChannel(
         scope: Construct,
         id: String,
-        block: CfnContactChannelDsl.() -> Unit = {}
+        block: CfnContactChannelDsl.() -> Unit = {},
     ): CfnContactChannel {
         val builder = CfnContactChannelDsl(scope, id)
         builder.apply(block)
@@ -98,7 +105,6 @@ public object ssmcontacts {
      * Properties for defining a `CfnContactChannel`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -115,7 +121,9 @@ public object ssmcontacts {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html)
      */
-    public inline fun cfnContactChannelProps(block: CfnContactChannelPropsDsl.() -> Unit = {}): CfnContactChannelProps {
+    public inline fun cfnContactChannelProps(
+        block: CfnContactChannelPropsDsl.() -> Unit = {}
+    ): CfnContactChannelProps {
         val builder = CfnContactChannelPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -125,7 +133,6 @@ public object ssmcontacts {
      * Information about the contact channel that Incident Manager uses to engage the contact.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -139,8 +146,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html)
      */
     public inline fun cfnContactChannelTargetInfoProperty(
-        block: CfnContactChannelTargetInfoPropertyDsl.() -> Unit =
-            {}
+        block: CfnContactChannelTargetInfoPropertyDsl.() -> Unit = {}
     ): CfnContact.ChannelTargetInfoProperty {
         val builder = CfnContactChannelTargetInfoPropertyDsl()
         builder.apply(block)
@@ -151,7 +157,6 @@ public object ssmcontacts {
      * The contact that Incident Manager is engaging during an incident.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -165,8 +170,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html)
      */
     public inline fun cfnContactContactTargetInfoProperty(
-        block: CfnContactContactTargetInfoPropertyDsl.() -> Unit =
-            {}
+        block: CfnContactContactTargetInfoPropertyDsl.() -> Unit = {}
     ): CfnContact.ContactTargetInfoProperty {
         val builder = CfnContactContactTargetInfoPropertyDsl()
         builder.apply(block)
@@ -177,7 +181,6 @@ public object ssmcontacts {
      * Properties for defining a `CfnContact`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -213,11 +216,10 @@ public object ssmcontacts {
     }
 
     /**
-     * The `Stage` property type specifies a set amount of time that an escalation plan or engagement
-     * plan engages the specified contacts or contact methods.
+     * The `Stage` property type specifies a set amount of time that an escalation plan or
+     * engagement plan engages the specified contacts or contact methods.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -240,7 +242,9 @@ public object ssmcontacts {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-stage.html)
      */
-    public inline fun cfnContactStageProperty(block: CfnContactStagePropertyDsl.() -> Unit = {}): CfnContact.StageProperty {
+    public inline fun cfnContactStageProperty(
+        block: CfnContactStagePropertyDsl.() -> Unit = {}
+    ): CfnContact.StageProperty {
         val builder = CfnContactStagePropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -250,7 +254,6 @@ public object ssmcontacts {
      * The contact or contact channel that's being engaged.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -269,7 +272,9 @@ public object ssmcontacts {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-targets.html)
      */
-    public inline fun cfnContactTargetsProperty(block: CfnContactTargetsPropertyDsl.() -> Unit = {}): CfnContact.TargetsProperty {
+    public inline fun cfnContactTargetsProperty(
+        block: CfnContactTargetsPropertyDsl.() -> Unit = {}
+    ): CfnContact.TargetsProperty {
         val builder = CfnContactTargetsPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -280,7 +285,6 @@ public object ssmcontacts {
      * engagement plan.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -311,7 +315,7 @@ public object ssmcontacts {
     public inline fun cfnPlan(
         scope: Construct,
         id: String,
-        block: CfnPlanDsl.() -> Unit = {}
+        block: CfnPlanDsl.() -> Unit = {},
     ): CfnPlan {
         val builder = CfnPlanDsl(scope, id)
         builder.apply(block)
@@ -322,7 +326,6 @@ public object ssmcontacts {
      * Information about the contact channel that Incident Manager uses to engage the contact.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -336,8 +339,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-channeltargetinfo.html)
      */
     public inline fun cfnPlanChannelTargetInfoProperty(
-        block: CfnPlanChannelTargetInfoPropertyDsl.() -> Unit =
-            {}
+        block: CfnPlanChannelTargetInfoPropertyDsl.() -> Unit = {}
     ): CfnPlan.ChannelTargetInfoProperty {
         val builder = CfnPlanChannelTargetInfoPropertyDsl()
         builder.apply(block)
@@ -348,7 +350,6 @@ public object ssmcontacts {
      * The contact that Incident Manager is engaging during an incident.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -362,8 +363,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-contacttargetinfo.html)
      */
     public inline fun cfnPlanContactTargetInfoProperty(
-        block: CfnPlanContactTargetInfoPropertyDsl.() -> Unit =
-            {}
+        block: CfnPlanContactTargetInfoPropertyDsl.() -> Unit = {}
     ): CfnPlan.ContactTargetInfoProperty {
         val builder = CfnPlanContactTargetInfoPropertyDsl()
         builder.apply(block)
@@ -374,7 +374,6 @@ public object ssmcontacts {
      * Properties for defining a `CfnPlan`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -409,11 +408,10 @@ public object ssmcontacts {
     }
 
     /**
-     * A set amount of time that an escalation plan or engagement plan engages the specified contacts
-     * or contact methods.
+     * A set amount of time that an escalation plan or engagement plan engages the specified
+     * contacts or contact methods.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -436,7 +434,9 @@ public object ssmcontacts {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-stage.html)
      */
-    public inline fun cfnPlanStageProperty(block: CfnPlanStagePropertyDsl.() -> Unit = {}): CfnPlan.StageProperty {
+    public inline fun cfnPlanStageProperty(
+        block: CfnPlanStagePropertyDsl.() -> Unit = {}
+    ): CfnPlan.StageProperty {
         val builder = CfnPlanStagePropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -446,7 +446,6 @@ public object ssmcontacts {
      * The contact or contact channel that's being engaged.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -465,7 +464,9 @@ public object ssmcontacts {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html)
      */
-    public inline fun cfnPlanTargetsProperty(block: CfnPlanTargetsPropertyDsl.() -> Unit = {}): CfnPlan.TargetsProperty {
+    public inline fun cfnPlanTargetsProperty(
+        block: CfnPlanTargetsPropertyDsl.() -> Unit = {}
+    ): CfnPlan.TargetsProperty {
         val builder = CfnPlanTargetsPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -475,7 +476,6 @@ public object ssmcontacts {
      * Specifies a rotation in an on-call schedule.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -519,7 +519,7 @@ public object ssmcontacts {
     public inline fun cfnRotation(
         scope: Construct,
         id: String,
-        block: CfnRotationDsl.() -> Unit = {}
+        block: CfnRotationDsl.() -> Unit = {},
     ): CfnRotation {
         val builder = CfnRotationDsl(scope, id)
         builder.apply(block)
@@ -530,7 +530,6 @@ public object ssmcontacts {
      * Information about when an on-call shift begins and ends.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -544,8 +543,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-coveragetime.html)
      */
     public inline fun cfnRotationCoverageTimeProperty(
-        block: CfnRotationCoverageTimePropertyDsl.() -> Unit =
-            {}
+        block: CfnRotationCoverageTimePropertyDsl.() -> Unit = {}
     ): CfnRotation.CoverageTimeProperty {
         val builder = CfnRotationCoverageTimePropertyDsl()
         builder.apply(block)
@@ -556,7 +554,6 @@ public object ssmcontacts {
      * Information about on-call rotations that recur monthly.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -570,8 +567,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-monthlysetting.html)
      */
     public inline fun cfnRotationMonthlySettingProperty(
-        block: CfnRotationMonthlySettingPropertyDsl.() -> Unit =
-            {}
+        block: CfnRotationMonthlySettingPropertyDsl.() -> Unit = {}
     ): CfnRotation.MonthlySettingProperty {
         val builder = CfnRotationMonthlySettingPropertyDsl()
         builder.apply(block)
@@ -582,7 +578,6 @@ public object ssmcontacts {
      * Properties for defining a `CfnRotation`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -623,17 +618,19 @@ public object ssmcontacts {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html)
      */
-    public inline fun cfnRotationProps(block: CfnRotationPropsDsl.() -> Unit = {}): CfnRotationProps {
+    public inline fun cfnRotationProps(
+        block: CfnRotationPropsDsl.() -> Unit = {}
+    ): CfnRotationProps {
         val builder = CfnRotationPropsDsl()
         builder.apply(block)
         return builder.build()
     }
 
     /**
-     * Information about when an on-call rotation is in effect and how long the rotation period lasts.
+     * Information about when an on-call rotation is in effect and how long the rotation period
+     * lasts.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -664,8 +661,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-recurrencesettings.html)
      */
     public inline fun cfnRotationRecurrenceSettingsProperty(
-        block: CfnRotationRecurrenceSettingsPropertyDsl.() -> Unit =
-            {}
+        block: CfnRotationRecurrenceSettingsPropertyDsl.() -> Unit = {}
     ): CfnRotation.RecurrenceSettingsProperty {
         val builder = CfnRotationRecurrenceSettingsPropertyDsl()
         builder.apply(block)
@@ -676,7 +672,6 @@ public object ssmcontacts {
      * Information about the days of the week that the on-call rotation coverage includes.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -693,8 +688,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-shiftcoverage.html)
      */
     public inline fun cfnRotationShiftCoverageProperty(
-        block: CfnRotationShiftCoveragePropertyDsl.() -> Unit =
-            {}
+        block: CfnRotationShiftCoveragePropertyDsl.() -> Unit = {}
     ): CfnRotation.ShiftCoverageProperty {
         val builder = CfnRotationShiftCoveragePropertyDsl()
         builder.apply(block)
@@ -705,7 +699,6 @@ public object ssmcontacts {
      * Information about rotations that recur weekly.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -719,8 +712,7 @@ public object ssmcontacts {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-weeklysetting.html)
      */
     public inline fun cfnRotationWeeklySettingProperty(
-        block: CfnRotationWeeklySettingPropertyDsl.() -> Unit =
-            {}
+        block: CfnRotationWeeklySettingPropertyDsl.() -> Unit = {}
     ): CfnRotation.WeeklySettingProperty {
         val builder = CfnRotationWeeklySettingPropertyDsl()
         builder.apply(block)

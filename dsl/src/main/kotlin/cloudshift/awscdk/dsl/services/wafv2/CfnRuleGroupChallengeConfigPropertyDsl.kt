@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * This is available at the web ACL level and in each rule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,24 +36,26 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupChallengeConfigPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.ChallengeConfigProperty.Builder =
-      CfnRuleGroup.ChallengeConfigProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.ChallengeConfigProperty.Builder =
+        CfnRuleGroup.ChallengeConfigProperty.builder()
 
-  /**
-   * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
-   * valid after the client successfully responds to a challenge.
-   */
-  public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
-    cdkBuilder.immunityTimeProperty(immunityTimeProperty)
-  }
+    /**
+     * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
+     *   valid after the client successfully responds to a challenge.
+     */
+    public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty)
+    }
 
-  /**
-   * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
-   * valid after the client successfully responds to a challenge.
-   */
-  public fun immunityTimeProperty(immunityTimeProperty: CfnRuleGroup.ImmunityTimePropertyProperty) {
-    cdkBuilder.immunityTimeProperty(immunityTimeProperty)
-  }
+    /**
+     * @param immunityTimeProperty Determines how long a challenge timestamp in the token remains
+     *   valid after the client successfully responds to a challenge.
+     */
+    public fun immunityTimeProperty(
+        immunityTimeProperty: CfnRuleGroup.ImmunityTimePropertyProperty
+    ) {
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty)
+    }
 
-  public fun build(): CfnRuleGroup.ChallengeConfigProperty = cdkBuilder.build()
+    public fun build(): CfnRuleGroup.ChallengeConfigProperty = cdkBuilder.build()
 }

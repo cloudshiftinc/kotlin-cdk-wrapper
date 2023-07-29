@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelAudioDolbyEDecodePropertyDsl {
-  private val cdkBuilder: CfnChannel.AudioDolbyEDecodeProperty.Builder =
-      CfnChannel.AudioDolbyEDecodeProperty.builder()
+    private val cdkBuilder: CfnChannel.AudioDolbyEDecodeProperty.Builder =
+        CfnChannel.AudioDolbyEDecodeProperty.builder()
 
-  /**
-   * @param programSelection the value to be set.
-   */
-  public fun programSelection(programSelection: String) {
-    cdkBuilder.programSelection(programSelection)
-  }
+    /** @param programSelection the value to be set. */
+    public fun programSelection(programSelection: String) {
+        cdkBuilder.programSelection(programSelection)
+    }
 
-  public fun build(): CfnChannel.AudioDolbyEDecodeProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.AudioDolbyEDecodeProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkmanager
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistrat
  * Properties for defining a `CfnTransitGatewayRegistration`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistrat
  */
 @CdkDslMarker
 public class CfnTransitGatewayRegistrationPropsDsl {
-  private val cdkBuilder: CfnTransitGatewayRegistrationProps.Builder =
-      CfnTransitGatewayRegistrationProps.builder()
+    private val cdkBuilder: CfnTransitGatewayRegistrationProps.Builder =
+        CfnTransitGatewayRegistrationProps.builder()
 
-  /**
-   * @param globalNetworkId The ID of the global network. 
-   */
-  public fun globalNetworkId(globalNetworkId: String) {
-    cdkBuilder.globalNetworkId(globalNetworkId)
-  }
+    /** @param globalNetworkId The ID of the global network. */
+    public fun globalNetworkId(globalNetworkId: String) {
+        cdkBuilder.globalNetworkId(globalNetworkId)
+    }
 
-  /**
-   * @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway. 
-   */
-  public fun transitGatewayArn(transitGatewayArn: String) {
-    cdkBuilder.transitGatewayArn(transitGatewayArn)
-  }
+    /** @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway. */
+    public fun transitGatewayArn(transitGatewayArn: String) {
+        cdkBuilder.transitGatewayArn(transitGatewayArn)
+    }
 
-  public fun build(): CfnTransitGatewayRegistrationProps = cdkBuilder.build()
+    public fun build(): CfnTransitGatewayRegistrationProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatch
  * Resource Name (ARN).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,17 +34,15 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatch
  */
 @CdkDslMarker
 public class CfnApplicationCloudWatchLoggingOptionV2CloudWatchLoggingOptionPropertyDsl {
-  private val cdkBuilder:
-      CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.Builder =
-      CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.builder()
+    private val cdkBuilder:
+        CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.Builder =
+        CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.builder()
 
-  /**
-   * @param logStreamArn The ARN of the CloudWatch log to receive application messages. 
-   */
-  public fun logStreamArn(logStreamArn: String) {
-    cdkBuilder.logStreamArn(logStreamArn)
-  }
+    /** @param logStreamArn The ARN of the CloudWatch log to receive application messages. */
+    public fun logStreamArn(logStreamArn: String) {
+        cdkBuilder.logStreamArn(logStreamArn)
+    }
 
-  public fun build(): CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty =
-      cdkBuilder.build()
+    public fun build(): CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty =
+        cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.s3.CfnBucket
  * metrics `EventThreshold` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,16 +34,13 @@ import software.amazon.awscdk.services.s3.CfnBucket
  */
 @CdkDslMarker
 public class CfnBucketReplicationTimeValuePropertyDsl {
-  private val cdkBuilder: CfnBucket.ReplicationTimeValueProperty.Builder =
-      CfnBucket.ReplicationTimeValueProperty.builder()
+    private val cdkBuilder: CfnBucket.ReplicationTimeValueProperty.Builder =
+        CfnBucket.ReplicationTimeValueProperty.builder()
 
-  /**
-   * @param minutes Contains an integer specifying time in minutes. 
-   * Valid value: 15
-   */
-  public fun minutes(minutes: Number) {
-    cdkBuilder.minutes(minutes)
-  }
+    /** @param minutes Contains an integer specifying time in minutes. Valid value: 15 */
+    public fun minutes(minutes: Number) {
+        cdkBuilder.minutes(minutes)
+    }
 
-  public fun build(): CfnBucket.ReplicationTimeValueProperty = cdkBuilder.build()
+    public fun build(): CfnBucket.ReplicationTimeValueProperty = cdkBuilder.build()
 }

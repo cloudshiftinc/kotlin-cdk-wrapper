@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.TlsCertificateConfig
  * A wrapper for the tls config returned by `TlsCertificate.bind`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,25 +42,21 @@ import software.amazon.awscdk.services.appmesh.TlsCertificateConfig
  */
 @CdkDslMarker
 public class TlsCertificateConfigDsl {
-  private val cdkBuilder: TlsCertificateConfig.Builder = TlsCertificateConfig.builder()
+    private val cdkBuilder: TlsCertificateConfig.Builder = TlsCertificateConfig.builder()
 
-  /**
-   * @param tlsCertificate The CFN shape for a TLS certificate. 
-   */
-  public
-      fun tlsCertificate(tlsCertificate: CfnVirtualNodeListenerTlsCertificatePropertyDsl.() -> Unit
-      = {}) {
-    val builder = CfnVirtualNodeListenerTlsCertificatePropertyDsl()
-    builder.apply(tlsCertificate)
-    cdkBuilder.tlsCertificate(builder.build())
-  }
+    /** @param tlsCertificate The CFN shape for a TLS certificate. */
+    public fun tlsCertificate(
+        tlsCertificate: CfnVirtualNodeListenerTlsCertificatePropertyDsl.() -> Unit = {}
+    ) {
+        val builder = CfnVirtualNodeListenerTlsCertificatePropertyDsl()
+        builder.apply(tlsCertificate)
+        cdkBuilder.tlsCertificate(builder.build())
+    }
 
-  /**
-   * @param tlsCertificate The CFN shape for a TLS certificate. 
-   */
-  public fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
-    cdkBuilder.tlsCertificate(tlsCertificate)
-  }
+    /** @param tlsCertificate The CFN shape for a TLS certificate. */
+    public fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
+        cdkBuilder.tlsCertificate(tlsCertificate)
+    }
 
-  public fun build(): TlsCertificateConfig = cdkBuilder.build()
+    public fun build(): TlsCertificateConfig = cdkBuilder.build()
 }

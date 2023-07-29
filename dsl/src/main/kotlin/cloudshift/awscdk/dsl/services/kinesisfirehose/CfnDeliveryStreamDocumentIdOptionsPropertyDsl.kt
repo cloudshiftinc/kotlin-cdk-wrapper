@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,13 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class CfnDeliveryStreamDocumentIdOptionsPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.DocumentIdOptionsProperty.Builder =
-      CfnDeliveryStream.DocumentIdOptionsProperty.builder()
+    private val cdkBuilder: CfnDeliveryStream.DocumentIdOptionsProperty.Builder =
+        CfnDeliveryStream.DocumentIdOptionsProperty.builder()
 
-  /**
-   * @param defaultDocumentIdFormat the value to be set. 
-   */
-  public fun defaultDocumentIdFormat(defaultDocumentIdFormat: String) {
-    cdkBuilder.defaultDocumentIdFormat(defaultDocumentIdFormat)
-  }
+    /** @param defaultDocumentIdFormat the value to be set. */
+    public fun defaultDocumentIdFormat(defaultDocumentIdFormat: String) {
+        cdkBuilder.defaultDocumentIdFormat(defaultDocumentIdFormat)
+    }
 
-  public fun build(): CfnDeliveryStream.DocumentIdOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.DocumentIdOptionsProperty = cdkBuilder.build()
 }

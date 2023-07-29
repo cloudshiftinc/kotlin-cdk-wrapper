@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.ArtifactsConfig
 import software.amazon.awscdk.services.codebuild.CfnProject
-import kotlin.Unit
 
 /**
  * The type returned from `IArtifacts#bind`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,18 +44,16 @@ import kotlin.Unit
 public class ArtifactsConfigDsl {
     private val cdkBuilder: ArtifactsConfig.Builder = ArtifactsConfig.builder()
 
-    /**
-     * @param artifactsProperty The low-level CloudFormation artifacts property.
-     */
-    public fun artifactsProperty(artifactsProperty: CfnProjectArtifactsPropertyDsl.() -> Unit = {}) {
+    /** @param artifactsProperty The low-level CloudFormation artifacts property. */
+    public fun artifactsProperty(
+        artifactsProperty: CfnProjectArtifactsPropertyDsl.() -> Unit = {}
+    ) {
         val builder = CfnProjectArtifactsPropertyDsl()
         builder.apply(artifactsProperty)
         cdkBuilder.artifactsProperty(builder.build())
     }
 
-    /**
-     * @param artifactsProperty The low-level CloudFormation artifacts property.
-     */
+    /** @param artifactsProperty The low-level CloudFormation artifacts property. */
     public fun artifactsProperty(artifactsProperty: CfnProject.ArtifactsProperty) {
         cdkBuilder.artifactsProperty(artifactsProperty)
     }

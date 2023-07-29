@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,13 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  */
 @CdkDslMarker
 public class CfnInstanceInstanceIpv6AddressPropertyDsl {
-  private val cdkBuilder: CfnInstance.InstanceIpv6AddressProperty.Builder =
-      CfnInstance.InstanceIpv6AddressProperty.builder()
+    private val cdkBuilder: CfnInstance.InstanceIpv6AddressProperty.Builder =
+        CfnInstance.InstanceIpv6AddressProperty.builder()
 
-  /**
-   * @param ipv6Address The IPv6 address. 
-   */
-  public fun ipv6Address(ipv6Address: String) {
-    cdkBuilder.ipv6Address(ipv6Address)
-  }
+    /** @param ipv6Address The IPv6 address. */
+    public fun ipv6Address(ipv6Address: String) {
+        cdkBuilder.ipv6Address(ipv6Address)
+    }
 
-  public fun build(): CfnInstance.InstanceIpv6AddressProperty = cdkBuilder.build()
+    public fun build(): CfnInstance.InstanceIpv6AddressProperty = cdkBuilder.build()
 }

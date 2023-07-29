@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.RoleOptions
  * The destination for a docker image asset, when it is given to the AssetManifestBuilder.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,38 +40,30 @@ import software.amazon.awscdk.RoleOptions
  */
 @CdkDslMarker
 public class AssetManifestDockerImageDestinationDsl {
-  private val cdkBuilder: AssetManifestDockerImageDestination.Builder =
-      AssetManifestDockerImageDestination.builder()
+    private val cdkBuilder: AssetManifestDockerImageDestination.Builder =
+        AssetManifestDockerImageDestination.builder()
 
-  /**
-   * @param dockerTagPrefix Prefix to add to the asset hash to make the Docker image tag.
-   */
-  public fun dockerTagPrefix(dockerTagPrefix: String) {
-    cdkBuilder.dockerTagPrefix(dockerTagPrefix)
-  }
+    /** @param dockerTagPrefix Prefix to add to the asset hash to make the Docker image tag. */
+    public fun dockerTagPrefix(dockerTagPrefix: String) {
+        cdkBuilder.dockerTagPrefix(dockerTagPrefix)
+    }
 
-  /**
-   * @param repositoryName Repository name where the docker image asset should be written. 
-   */
-  public fun repositoryName(repositoryName: String) {
-    cdkBuilder.repositoryName(repositoryName)
-  }
+    /** @param repositoryName Repository name where the docker image asset should be written. */
+    public fun repositoryName(repositoryName: String) {
+        cdkBuilder.repositoryName(repositoryName)
+    }
 
-  /**
-   * @param role Role to use to perform the upload.
-   */
-  public fun role(role: RoleOptionsDsl.() -> Unit = {}) {
-    val builder = RoleOptionsDsl()
-    builder.apply(role)
-    cdkBuilder.role(builder.build())
-  }
+    /** @param role Role to use to perform the upload. */
+    public fun role(role: RoleOptionsDsl.() -> Unit = {}) {
+        val builder = RoleOptionsDsl()
+        builder.apply(role)
+        cdkBuilder.role(builder.build())
+    }
 
-  /**
-   * @param role Role to use to perform the upload.
-   */
-  public fun role(role: RoleOptions) {
-    cdkBuilder.role(role)
-  }
+    /** @param role Role to use to perform the upload. */
+    public fun role(role: RoleOptions) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): AssetManifestDockerImageDestination = cdkBuilder.build()
+    public fun build(): AssetManifestDockerImageDestination = cdkBuilder.build()
 }

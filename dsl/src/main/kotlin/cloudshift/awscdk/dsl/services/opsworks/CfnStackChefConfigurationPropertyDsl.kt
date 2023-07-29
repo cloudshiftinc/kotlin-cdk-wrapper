@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opsworks
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.opsworks.CfnStack
  * Describes the Chef configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.opsworks.CfnStack
  */
 @CdkDslMarker
 public class CfnStackChefConfigurationPropertyDsl {
-  private val cdkBuilder: CfnStack.ChefConfigurationProperty.Builder =
-      CfnStack.ChefConfigurationProperty.builder()
+    private val cdkBuilder: CfnStack.ChefConfigurationProperty.Builder =
+        CfnStack.ChefConfigurationProperty.builder()
 
-  /**
-   * @param berkshelfVersion The Berkshelf version.
-   */
-  public fun berkshelfVersion(berkshelfVersion: String) {
-    cdkBuilder.berkshelfVersion(berkshelfVersion)
-  }
+    /** @param berkshelfVersion The Berkshelf version. */
+    public fun berkshelfVersion(berkshelfVersion: String) {
+        cdkBuilder.berkshelfVersion(berkshelfVersion)
+    }
 
-  /**
-   * @param manageBerkshelf Whether to enable Berkshelf.
-   */
-  public fun manageBerkshelf(manageBerkshelf: Boolean) {
-    cdkBuilder.manageBerkshelf(manageBerkshelf)
-  }
+    /** @param manageBerkshelf Whether to enable Berkshelf. */
+    public fun manageBerkshelf(manageBerkshelf: Boolean) {
+        cdkBuilder.manageBerkshelf(manageBerkshelf)
+    }
 
-  /**
-   * @param manageBerkshelf Whether to enable Berkshelf.
-   */
-  public fun manageBerkshelf(manageBerkshelf: IResolvable) {
-    cdkBuilder.manageBerkshelf(manageBerkshelf)
-  }
+    /** @param manageBerkshelf Whether to enable Berkshelf. */
+    public fun manageBerkshelf(manageBerkshelf: IResolvable) {
+        cdkBuilder.manageBerkshelf(manageBerkshelf)
+    }
 
-  public fun build(): CfnStack.ChefConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnStack.ChefConfigurationProperty = cdkBuilder.build()
 }

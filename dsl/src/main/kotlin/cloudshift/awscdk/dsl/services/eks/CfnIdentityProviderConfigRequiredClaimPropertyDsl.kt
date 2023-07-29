@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
  * If set, each claim is verified to be present in the token with a matching value.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
  */
 @CdkDslMarker
 public class CfnIdentityProviderConfigRequiredClaimPropertyDsl {
-  private val cdkBuilder: CfnIdentityProviderConfig.RequiredClaimProperty.Builder =
-      CfnIdentityProviderConfig.RequiredClaimProperty.builder()
+    private val cdkBuilder: CfnIdentityProviderConfig.RequiredClaimProperty.Builder =
+        CfnIdentityProviderConfig.RequiredClaimProperty.builder()
 
-  /**
-   * @param key The key to match from the token. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The key to match from the token. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The value for the key from the token. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value for the key from the token. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnIdentityProviderConfig.RequiredClaimProperty = cdkBuilder.build()
+    public fun build(): CfnIdentityProviderConfig.RequiredClaimProperty = cdkBuilder.build()
 }

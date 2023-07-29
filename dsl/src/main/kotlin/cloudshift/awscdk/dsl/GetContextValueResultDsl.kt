@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.GetContextValueResult
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,23 +31,19 @@ import software.amazon.awscdk.GetContextValueResult
  */
 @CdkDslMarker
 public class GetContextValueResultDsl {
-  private val cdkBuilder: GetContextValueResult.Builder = GetContextValueResult.builder()
+    private val cdkBuilder: GetContextValueResult.Builder = GetContextValueResult.builder()
 
-  /**
-   * @param value the value to be set.
-   */
-  public fun `value`(`value`: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(`value`)
-    cdkBuilder.`value`(builder.map)
-  }
+    /** @param value the value to be set. */
+    public fun `value`(`value`: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(`value`)
+        cdkBuilder.`value`(builder.map)
+    }
 
-  /**
-   * @param value the value to be set.
-   */
-  public fun `value`(`value`: Any) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value the value to be set. */
+    public fun `value`(`value`: Any) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): GetContextValueResult = cdkBuilder.build()
+    public fun build(): GetContextValueResult = cdkBuilder.build()
 }

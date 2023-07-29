@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmcontacts
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ssmcontacts.CfnPlan
 import kotlin.Any
 import kotlin.Number
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ssmcontacts.CfnPlan
 
 /**
  * A set amount of time that an escalation plan or engagement plan engages the specified contacts or
  * contact methods.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,8 +53,8 @@ public class CfnPlanStagePropertyDsl {
     private val _targets: MutableList<Any> = mutableListOf()
 
     /**
-     * @param durationInMinutes The time to wait until beginning the next stage.
-     * The duration can only be set to 0 if a target is specified.
+     * @param durationInMinutes The time to wait until beginning the next stage. The duration can
+     *   only be set to 0 if a target is specified.
      */
     public fun durationInMinutes(durationInMinutes: Number) {
         cdkBuilder.durationInMinutes(durationInMinutes)
@@ -54,7 +62,7 @@ public class CfnPlanStagePropertyDsl {
 
     /**
      * @param targets The contacts or contact methods that the escalation plan or engagement plan is
-     * engaging.
+     *   engaging.
      */
     public fun targets(vararg targets: Any) {
         _targets.addAll(listOf(*targets))
@@ -62,7 +70,7 @@ public class CfnPlanStagePropertyDsl {
 
     /**
      * @param targets The contacts or contact methods that the escalation plan or engagement plan is
-     * engaging.
+     *   engaging.
      */
     public fun targets(targets: Collection<Any>) {
         _targets.addAll(targets)
@@ -70,7 +78,7 @@ public class CfnPlanStagePropertyDsl {
 
     /**
      * @param targets The contacts or contact methods that the escalation plan or engagement plan is
-     * engaging.
+     *   engaging.
      */
     public fun targets(targets: IResolvable) {
         cdkBuilder.targets(targets)

@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesis
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps
 import kotlin.String
+import software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps
 
 /**
  * Properties for defining a `CfnStreamConsumer`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,15 +37,13 @@ public class CfnStreamConsumerPropsDsl {
 
     /**
      * @param consumerName The name of the consumer is something you choose when you register the
-     * consumer.
+     *   consumer.
      */
     public fun consumerName(consumerName: String) {
         cdkBuilder.consumerName(consumerName)
     }
 
-    /**
-     * @param streamArn The ARN of the stream with which you registered the consumer.
-     */
+    /** @param streamArn The ARN of the stream with which you registered the consumer. */
     public fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
     }

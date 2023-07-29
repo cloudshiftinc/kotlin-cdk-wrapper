@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.logs
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.logs.CfnLogStreamProps
  * Properties for defining a `CfnLogStream`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,20 @@ import software.amazon.awscdk.services.logs.CfnLogStreamProps
  */
 @CdkDslMarker
 public class CfnLogStreamPropsDsl {
-  private val cdkBuilder: CfnLogStreamProps.Builder = CfnLogStreamProps.builder()
+    private val cdkBuilder: CfnLogStreamProps.Builder = CfnLogStreamProps.builder()
 
-  /**
-   * @param logGroupName The name of the log group where the log stream is created. 
-   */
-  public fun logGroupName(logGroupName: String) {
-    cdkBuilder.logGroupName(logGroupName)
-  }
+    /** @param logGroupName The name of the log group where the log stream is created. */
+    public fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+    }
 
-  /**
-   * @param logStreamName The name of the log stream.
-   * The name must be unique within the log group.
-   */
-  public fun logStreamName(logStreamName: String) {
-    cdkBuilder.logStreamName(logStreamName)
-  }
+    /**
+     * @param logStreamName The name of the log stream. The name must be unique within the log
+     *   group.
+     */
+    public fun logStreamName(logStreamName: String) {
+        cdkBuilder.logStreamName(logStreamName)
+    }
 
-  public fun build(): CfnLogStreamProps = cdkBuilder.build()
+    public fun build(): CfnLogStreamProps = cdkBuilder.build()
 }

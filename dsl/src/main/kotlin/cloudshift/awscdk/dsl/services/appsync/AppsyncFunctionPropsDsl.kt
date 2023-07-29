@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.appsync.MappingTemplate
  * the CDK properties for AppSync Functions.
  *
  * Example:
- *
  * ```
  * GraphqlApi api;
  * AppsyncFunction appsyncFunction = AppsyncFunction.Builder.create(this, "function")
@@ -29,63 +37,47 @@ import software.amazon.awscdk.services.appsync.MappingTemplate
  */
 @CdkDslMarker
 public class AppsyncFunctionPropsDsl {
-  private val cdkBuilder: AppsyncFunctionProps.Builder = AppsyncFunctionProps.builder()
+    private val cdkBuilder: AppsyncFunctionProps.Builder = AppsyncFunctionProps.builder()
 
-  /**
-   * @param api the GraphQL Api linked to this AppSync Function. 
-   */
-  public fun api(api: IGraphqlApi) {
-    cdkBuilder.api(api)
-  }
+    /** @param api the GraphQL Api linked to this AppSync Function. */
+    public fun api(api: IGraphqlApi) {
+        cdkBuilder.api(api)
+    }
 
-  /**
-   * @param code The function code.
-   */
-  public fun code(code: Code) {
-    cdkBuilder.code(code)
-  }
+    /** @param code The function code. */
+    public fun code(code: Code) {
+        cdkBuilder.code(code)
+    }
 
-  /**
-   * @param dataSource the data source linked to this AppSync Function. 
-   */
-  public fun dataSource(dataSource: BaseDataSource) {
-    cdkBuilder.dataSource(dataSource)
-  }
+    /** @param dataSource the data source linked to this AppSync Function. */
+    public fun dataSource(dataSource: BaseDataSource) {
+        cdkBuilder.dataSource(dataSource)
+    }
 
-  /**
-   * @param description the description for this AppSync Function.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description the description for this AppSync Function. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name the name of the AppSync Function. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name the name of the AppSync Function. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param requestMappingTemplate the request mapping template for the AppSync Function.
-   */
-  public fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
-    cdkBuilder.requestMappingTemplate(requestMappingTemplate)
-  }
+    /** @param requestMappingTemplate the request mapping template for the AppSync Function. */
+    public fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
+        cdkBuilder.requestMappingTemplate(requestMappingTemplate)
+    }
 
-  /**
-   * @param responseMappingTemplate the response mapping template for the AppSync Function.
-   */
-  public fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
-    cdkBuilder.responseMappingTemplate(responseMappingTemplate)
-  }
+    /** @param responseMappingTemplate the response mapping template for the AppSync Function. */
+    public fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
+        cdkBuilder.responseMappingTemplate(responseMappingTemplate)
+    }
 
-  /**
-   * @param runtime The functions runtime.
-   */
-  public fun runtime(runtime: FunctionRuntime) {
-    cdkBuilder.runtime(runtime)
-  }
+    /** @param runtime The functions runtime. */
+    public fun runtime(runtime: FunctionRuntime) {
+        cdkBuilder.runtime(runtime)
+    }
 
-  public fun build(): AppsyncFunctionProps = cdkBuilder.build()
+    public fun build(): AppsyncFunctionProps = cdkBuilder.build()
 }

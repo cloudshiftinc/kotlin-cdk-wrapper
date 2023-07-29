@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
  * An object that contains the filters for an event source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,34 +37,28 @@ import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
  */
 @CdkDslMarker
 public class CfnEventSourceMappingFilterCriteriaPropertyDsl {
-  private val cdkBuilder: CfnEventSourceMapping.FilterCriteriaProperty.Builder =
-      CfnEventSourceMapping.FilterCriteriaProperty.builder()
+    private val cdkBuilder: CfnEventSourceMapping.FilterCriteriaProperty.Builder =
+        CfnEventSourceMapping.FilterCriteriaProperty.builder()
 
-  private val _filters: MutableList<Any> = mutableListOf()
+    private val _filters: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param filters A list of filters.
-   */
-  public fun filters(vararg filters: Any) {
-    _filters.addAll(listOf(*filters))
-  }
+    /** @param filters A list of filters. */
+    public fun filters(vararg filters: Any) {
+        _filters.addAll(listOf(*filters))
+    }
 
-  /**
-   * @param filters A list of filters.
-   */
-  public fun filters(filters: Collection<Any>) {
-    _filters.addAll(filters)
-  }
+    /** @param filters A list of filters. */
+    public fun filters(filters: Collection<Any>) {
+        _filters.addAll(filters)
+    }
 
-  /**
-   * @param filters A list of filters.
-   */
-  public fun filters(filters: IResolvable) {
-    cdkBuilder.filters(filters)
-  }
+    /** @param filters A list of filters. */
+    public fun filters(filters: IResolvable) {
+        cdkBuilder.filters(filters)
+    }
 
-  public fun build(): CfnEventSourceMapping.FilterCriteriaProperty {
-    if(_filters.isNotEmpty()) cdkBuilder.filters(_filters)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnEventSourceMapping.FilterCriteriaProperty {
+        if (_filters.isNotEmpty()) cdkBuilder.filters(_filters)
+        return cdkBuilder.build()
+    }
 }

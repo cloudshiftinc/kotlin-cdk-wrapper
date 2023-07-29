@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * Permission for the resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,41 +35,38 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  */
 @CdkDslMarker
 public class CfnDataSetResourcePermissionPropertyDsl {
-  private val cdkBuilder: CfnDataSet.ResourcePermissionProperty.Builder =
-      CfnDataSet.ResourcePermissionProperty.builder()
+    private val cdkBuilder: CfnDataSet.ResourcePermissionProperty.Builder =
+        CfnDataSet.ResourcePermissionProperty.builder()
 
-  private val _actions: MutableList<String> = mutableListOf()
+    private val _actions: MutableList<String> = mutableListOf()
 
-  /**
-   * @param actions The IAM action to grant or revoke permisions on. 
-   */
-  public fun actions(vararg actions: String) {
-    _actions.addAll(listOf(*actions))
-  }
+    /** @param actions The IAM action to grant or revoke permisions on. */
+    public fun actions(vararg actions: String) {
+        _actions.addAll(listOf(*actions))
+    }
 
-  /**
-   * @param actions The IAM action to grant or revoke permisions on. 
-   */
-  public fun actions(actions: Collection<String>) {
-    _actions.addAll(actions)
-  }
+    /** @param actions The IAM action to grant or revoke permisions on. */
+    public fun actions(actions: Collection<String>) {
+        _actions.addAll(actions)
+    }
 
-  /**
-   * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
-   * following:. 
-   * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This
-   * is common.)
-   * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-   * dashboard, template, or theme. (This is common.)
-   * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
-   * this option only to share resources (templates) across AWS accounts . (This is less common.)
-   */
-  public fun principal(principal: String) {
-    cdkBuilder.principal(principal)
-  }
+    /**
+     * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
+     *   following:.
+     * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+     *   (This is common.)
+     * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+     *   dashboard, template, or theme. (This is common.)
+     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
+     *   this option only to share resources (templates) across AWS accounts . (This is less
+     *   common.)
+     */
+    public fun principal(principal: String) {
+        cdkBuilder.principal(principal)
+    }
 
-  public fun build(): CfnDataSet.ResourcePermissionProperty {
-    if(_actions.isNotEmpty()) cdkBuilder.actions(_actions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDataSet.ResourcePermissionProperty {
+        if (_actions.isNotEmpty()) cdkBuilder.actions(_actions)
+        return cdkBuilder.build()
+    }
 }

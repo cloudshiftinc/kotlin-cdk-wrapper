@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sam.CfnSimpleTable
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,22 +32,18 @@ import software.amazon.awscdk.services.sam.CfnSimpleTable
  */
 @CdkDslMarker
 public class CfnSimpleTablePrimaryKeyPropertyDsl {
-  private val cdkBuilder: CfnSimpleTable.PrimaryKeyProperty.Builder =
-      CfnSimpleTable.PrimaryKeyProperty.builder()
+    private val cdkBuilder: CfnSimpleTable.PrimaryKeyProperty.Builder =
+        CfnSimpleTable.PrimaryKeyProperty.builder()
 
-  /**
-   * @param name the value to be set.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name the value to be set. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param type the value to be set. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type the value to be set. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnSimpleTable.PrimaryKeyProperty = cdkBuilder.build()
+    public fun build(): CfnSimpleTable.PrimaryKeyProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.m2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.m2.CfnEnvironment
  * Defines the storage configuration for a runtime environment.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,36 +40,28 @@ import software.amazon.awscdk.services.m2.CfnEnvironment
  */
 @CdkDslMarker
 public class CfnEnvironmentStorageConfigurationPropertyDsl {
-  private val cdkBuilder: CfnEnvironment.StorageConfigurationProperty.Builder =
-      CfnEnvironment.StorageConfigurationProperty.builder()
+    private val cdkBuilder: CfnEnvironment.StorageConfigurationProperty.Builder =
+        CfnEnvironment.StorageConfigurationProperty.builder()
 
-  /**
-   * @param efs Defines the storage configuration for an Amazon EFS file system.
-   */
-  public fun efs(efs: IResolvable) {
-    cdkBuilder.efs(efs)
-  }
+    /** @param efs Defines the storage configuration for an Amazon EFS file system. */
+    public fun efs(efs: IResolvable) {
+        cdkBuilder.efs(efs)
+    }
 
-  /**
-   * @param efs Defines the storage configuration for an Amazon EFS file system.
-   */
-  public fun efs(efs: CfnEnvironment.EfsStorageConfigurationProperty) {
-    cdkBuilder.efs(efs)
-  }
+    /** @param efs Defines the storage configuration for an Amazon EFS file system. */
+    public fun efs(efs: CfnEnvironment.EfsStorageConfigurationProperty) {
+        cdkBuilder.efs(efs)
+    }
 
-  /**
-   * @param fsx Defines the storage configuration for an Amazon FSx file system.
-   */
-  public fun fsx(fsx: IResolvable) {
-    cdkBuilder.fsx(fsx)
-  }
+    /** @param fsx Defines the storage configuration for an Amazon FSx file system. */
+    public fun fsx(fsx: IResolvable) {
+        cdkBuilder.fsx(fsx)
+    }
 
-  /**
-   * @param fsx Defines the storage configuration for an Amazon FSx file system.
-   */
-  public fun fsx(fsx: CfnEnvironment.FsxStorageConfigurationProperty) {
-    cdkBuilder.fsx(fsx)
-  }
+    /** @param fsx Defines the storage configuration for an Amazon FSx file system. */
+    public fun fsx(fsx: CfnEnvironment.FsxStorageConfigurationProperty) {
+        cdkBuilder.fsx(fsx)
+    }
 
-  public fun build(): CfnEnvironment.StorageConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnEnvironment.StorageConfigurationProperty = cdkBuilder.build()
 }

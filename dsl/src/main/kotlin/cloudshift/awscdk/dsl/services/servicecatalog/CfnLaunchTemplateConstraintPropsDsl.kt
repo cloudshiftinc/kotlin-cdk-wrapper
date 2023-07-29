@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps
 import kotlin.String
+import software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps
 
 /**
  * Properties for defining a `CfnLaunchTemplateConstraint`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,30 +50,22 @@ public class CfnLaunchTemplateConstraintPropsDsl {
         cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    /**
-     * @param description The description of the constraint.
-     */
+    /** @param description The description of the constraint. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /**
-     * @param portfolioId The portfolio identifier.
-     */
+    /** @param portfolioId The portfolio identifier. */
     public fun portfolioId(portfolioId: String) {
         cdkBuilder.portfolioId(portfolioId)
     }
 
-    /**
-     * @param productId The product identifier.
-     */
+    /** @param productId The product identifier. */
     public fun productId(productId: String) {
         cdkBuilder.productId(productId)
     }
 
-    /**
-     * @param rules The constraint rules.
-     */
+    /** @param rules The constraint rules. */
     public fun rules(rules: String) {
         cdkBuilder.rules(rules)
     }

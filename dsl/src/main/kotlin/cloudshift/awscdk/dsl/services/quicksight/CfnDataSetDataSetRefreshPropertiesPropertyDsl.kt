@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * The dataset refresh properties for the dataset.</p>.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,22 +41,18 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  */
 @CdkDslMarker
 public class CfnDataSetDataSetRefreshPropertiesPropertyDsl {
-  private val cdkBuilder: CfnDataSet.DataSetRefreshPropertiesProperty.Builder =
-      CfnDataSet.DataSetRefreshPropertiesProperty.builder()
+    private val cdkBuilder: CfnDataSet.DataSetRefreshPropertiesProperty.Builder =
+        CfnDataSet.DataSetRefreshPropertiesProperty.builder()
 
-  /**
-   * @param refreshConfiguration  Refresh Configuration.</p>.
-   */
-  public fun refreshConfiguration(refreshConfiguration: IResolvable) {
-    cdkBuilder.refreshConfiguration(refreshConfiguration)
-  }
+    /** @param refreshConfiguration Refresh Configuration.</p>. */
+    public fun refreshConfiguration(refreshConfiguration: IResolvable) {
+        cdkBuilder.refreshConfiguration(refreshConfiguration)
+    }
 
-  /**
-   * @param refreshConfiguration  Refresh Configuration.</p>.
-   */
-  public fun refreshConfiguration(refreshConfiguration: CfnDataSet.RefreshConfigurationProperty) {
-    cdkBuilder.refreshConfiguration(refreshConfiguration)
-  }
+    /** @param refreshConfiguration Refresh Configuration.</p>. */
+    public fun refreshConfiguration(refreshConfiguration: CfnDataSet.RefreshConfigurationProperty) {
+        cdkBuilder.refreshConfiguration(refreshConfiguration)
+    }
 
-  public fun build(): CfnDataSet.DataSetRefreshPropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnDataSet.DataSetRefreshPropertiesProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cloudfront.CfnFunction
  * Contains metadata about a CloudFront function.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,16 +32,16 @@ import software.amazon.awscdk.services.cloudfront.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionFunctionMetadataPropertyDsl {
-  private val cdkBuilder: CfnFunction.FunctionMetadataProperty.Builder =
-      CfnFunction.FunctionMetadataProperty.builder()
+    private val cdkBuilder: CfnFunction.FunctionMetadataProperty.Builder =
+        CfnFunction.FunctionMetadataProperty.builder()
 
-  /**
-   * @param functionArn The Amazon Resource Name (ARN) of the function.
-   * The ARN uniquely identifies the function.
-   */
-  public fun functionArn(functionArn: String) {
-    cdkBuilder.functionArn(functionArn)
-  }
+    /**
+     * @param functionArn The Amazon Resource Name (ARN) of the function. The ARN uniquely
+     *   identifies the function.
+     */
+    public fun functionArn(functionArn: String) {
+        cdkBuilder.functionArn(functionArn)
+    }
 
-  public fun build(): CfnFunction.FunctionMetadataProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.FunctionMetadataProperty = cdkBuilder.build()
 }

@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnProject
-import kotlin.Boolean
 
 /**
- * `GitSubmodulesConfig` is a property of the [AWS CodeBuild Project
- * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+ * `GitSubmodulesConfig` is a property of the
+ * [AWS CodeBuild Project Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
  * property type that specifies information about the Git submodules configuration for the build
  * project.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,7 +41,7 @@ public class CfnProjectGitSubmodulesConfigPropertyDsl {
 
     /**
      * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
-     * project.
+     *   project.
      */
     public fun fetchSubmodules(fetchSubmodules: Boolean) {
         cdkBuilder.fetchSubmodules(fetchSubmodules)
@@ -41,7 +49,7 @@ public class CfnProjectGitSubmodulesConfigPropertyDsl {
 
     /**
      * @param fetchSubmodules Set to true to fetch Git submodules for your AWS CodeBuild build
-     * project.
+     *   project.
      */
     public fun fetchSubmodules(fetchSubmodules: IResolvable) {
         cdkBuilder.fetchSubmodules(fetchSubmodules)

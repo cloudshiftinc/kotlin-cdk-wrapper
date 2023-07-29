@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The options that determine the presentation of a KPI visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -102,109 +110,107 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisKPIOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.KPIOptionsProperty.Builder =
-      CfnAnalysis.KPIOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.KPIOptionsProperty.Builder =
+        CfnAnalysis.KPIOptionsProperty.builder()
 
-  /**
-   * @param comparison The comparison configuration of a KPI visual.
-   */
-  public fun comparison(comparison: IResolvable) {
-    cdkBuilder.comparison(comparison)
-  }
+    /** @param comparison The comparison configuration of a KPI visual. */
+    public fun comparison(comparison: IResolvable) {
+        cdkBuilder.comparison(comparison)
+    }
 
-  /**
-   * @param comparison The comparison configuration of a KPI visual.
-   */
-  public fun comparison(comparison: CfnAnalysis.ComparisonConfigurationProperty) {
-    cdkBuilder.comparison(comparison)
-  }
+    /** @param comparison The comparison configuration of a KPI visual. */
+    public fun comparison(comparison: CfnAnalysis.ComparisonConfigurationProperty) {
+        cdkBuilder.comparison(comparison)
+    }
 
-  /**
-   * @param primaryValueDisplayType The options that determine the primary value display type.
-   */
-  public fun primaryValueDisplayType(primaryValueDisplayType: String) {
-    cdkBuilder.primaryValueDisplayType(primaryValueDisplayType)
-  }
+    /** @param primaryValueDisplayType The options that determine the primary value display type. */
+    public fun primaryValueDisplayType(primaryValueDisplayType: String) {
+        cdkBuilder.primaryValueDisplayType(primaryValueDisplayType)
+    }
 
-  /**
-   * @param primaryValueFontConfiguration The options that determine the primary value font
-   * configuration.
-   */
-  public fun primaryValueFontConfiguration(primaryValueFontConfiguration: IResolvable) {
-    cdkBuilder.primaryValueFontConfiguration(primaryValueFontConfiguration)
-  }
+    /**
+     * @param primaryValueFontConfiguration The options that determine the primary value font
+     *   configuration.
+     */
+    public fun primaryValueFontConfiguration(primaryValueFontConfiguration: IResolvable) {
+        cdkBuilder.primaryValueFontConfiguration(primaryValueFontConfiguration)
+    }
 
-  /**
-   * @param primaryValueFontConfiguration The options that determine the primary value font
-   * configuration.
-   */
-  public
-      fun primaryValueFontConfiguration(primaryValueFontConfiguration: CfnAnalysis.FontConfigurationProperty) {
-    cdkBuilder.primaryValueFontConfiguration(primaryValueFontConfiguration)
-  }
+    /**
+     * @param primaryValueFontConfiguration The options that determine the primary value font
+     *   configuration.
+     */
+    public fun primaryValueFontConfiguration(
+        primaryValueFontConfiguration: CfnAnalysis.FontConfigurationProperty
+    ) {
+        cdkBuilder.primaryValueFontConfiguration(primaryValueFontConfiguration)
+    }
 
-  /**
-   * @param progressBar The options that determine the presentation of the progress bar of a KPI
-   * visual.
-   */
-  public fun progressBar(progressBar: IResolvable) {
-    cdkBuilder.progressBar(progressBar)
-  }
+    /**
+     * @param progressBar The options that determine the presentation of the progress bar of a KPI
+     *   visual.
+     */
+    public fun progressBar(progressBar: IResolvable) {
+        cdkBuilder.progressBar(progressBar)
+    }
 
-  /**
-   * @param progressBar The options that determine the presentation of the progress bar of a KPI
-   * visual.
-   */
-  public fun progressBar(progressBar: CfnAnalysis.ProgressBarOptionsProperty) {
-    cdkBuilder.progressBar(progressBar)
-  }
+    /**
+     * @param progressBar The options that determine the presentation of the progress bar of a KPI
+     *   visual.
+     */
+    public fun progressBar(progressBar: CfnAnalysis.ProgressBarOptionsProperty) {
+        cdkBuilder.progressBar(progressBar)
+    }
 
-  /**
-   * @param secondaryValue The options that determine the presentation of the secondary value of a
-   * KPI visual.
-   */
-  public fun secondaryValue(secondaryValue: IResolvable) {
-    cdkBuilder.secondaryValue(secondaryValue)
-  }
+    /**
+     * @param secondaryValue The options that determine the presentation of the secondary value of a
+     *   KPI visual.
+     */
+    public fun secondaryValue(secondaryValue: IResolvable) {
+        cdkBuilder.secondaryValue(secondaryValue)
+    }
 
-  /**
-   * @param secondaryValue The options that determine the presentation of the secondary value of a
-   * KPI visual.
-   */
-  public fun secondaryValue(secondaryValue: CfnAnalysis.SecondaryValueOptionsProperty) {
-    cdkBuilder.secondaryValue(secondaryValue)
-  }
+    /**
+     * @param secondaryValue The options that determine the presentation of the secondary value of a
+     *   KPI visual.
+     */
+    public fun secondaryValue(secondaryValue: CfnAnalysis.SecondaryValueOptionsProperty) {
+        cdkBuilder.secondaryValue(secondaryValue)
+    }
 
-  /**
-   * @param secondaryValueFontConfiguration The options that determine the secondary value font
-   * configuration.
-   */
-  public fun secondaryValueFontConfiguration(secondaryValueFontConfiguration: IResolvable) {
-    cdkBuilder.secondaryValueFontConfiguration(secondaryValueFontConfiguration)
-  }
+    /**
+     * @param secondaryValueFontConfiguration The options that determine the secondary value font
+     *   configuration.
+     */
+    public fun secondaryValueFontConfiguration(secondaryValueFontConfiguration: IResolvable) {
+        cdkBuilder.secondaryValueFontConfiguration(secondaryValueFontConfiguration)
+    }
 
-  /**
-   * @param secondaryValueFontConfiguration The options that determine the secondary value font
-   * configuration.
-   */
-  public
-      fun secondaryValueFontConfiguration(secondaryValueFontConfiguration: CfnAnalysis.FontConfigurationProperty) {
-    cdkBuilder.secondaryValueFontConfiguration(secondaryValueFontConfiguration)
-  }
+    /**
+     * @param secondaryValueFontConfiguration The options that determine the secondary value font
+     *   configuration.
+     */
+    public fun secondaryValueFontConfiguration(
+        secondaryValueFontConfiguration: CfnAnalysis.FontConfigurationProperty
+    ) {
+        cdkBuilder.secondaryValueFontConfiguration(secondaryValueFontConfiguration)
+    }
 
-  /**
-   * @param trendArrows The options that determine the presentation of trend arrows in a KPI visual.
-   */
-  public fun trendArrows(trendArrows: IResolvable) {
-    cdkBuilder.trendArrows(trendArrows)
-  }
+    /**
+     * @param trendArrows The options that determine the presentation of trend arrows in a KPI
+     *   visual.
+     */
+    public fun trendArrows(trendArrows: IResolvable) {
+        cdkBuilder.trendArrows(trendArrows)
+    }
 
-  /**
-   * @param trendArrows The options that determine the presentation of trend arrows in a KPI visual.
-   */
-  public fun trendArrows(trendArrows: CfnAnalysis.TrendArrowOptionsProperty) {
-    cdkBuilder.trendArrows(trendArrows)
-  }
+    /**
+     * @param trendArrows The options that determine the presentation of trend arrows in a KPI
+     *   visual.
+     */
+    public fun trendArrows(trendArrows: CfnAnalysis.TrendArrowOptionsProperty) {
+        cdkBuilder.trendArrows(trendArrows)
+    }
 
-  public fun build(): CfnAnalysis.KPIOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.KPIOptionsProperty = cdkBuilder.build()
 }

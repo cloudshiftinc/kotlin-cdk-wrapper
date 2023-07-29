@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudwatch
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudwatch.CfnMetricStream
  * additional statistics included in the stream.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.cloudwatch.CfnMetricStream
  */
 @CdkDslMarker
 public class CfnMetricStreamMetricStreamStatisticsMetricPropertyDsl {
-  private val cdkBuilder: CfnMetricStream.MetricStreamStatisticsMetricProperty.Builder =
-      CfnMetricStream.MetricStreamStatisticsMetricProperty.builder()
+    private val cdkBuilder: CfnMetricStream.MetricStreamStatisticsMetricProperty.Builder =
+        CfnMetricStream.MetricStreamStatisticsMetricProperty.builder()
 
-  /**
-   * @param metricName The name of the metric. 
-   */
-  public fun metricName(metricName: String) {
-    cdkBuilder.metricName(metricName)
-  }
+    /** @param metricName The name of the metric. */
+    public fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+    }
 
-  /**
-   * @param namespace The namespace of the metric. 
-   */
-  public fun namespace(namespace: String) {
-    cdkBuilder.namespace(namespace)
-  }
+    /** @param namespace The namespace of the metric. */
+    public fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+    }
 
-  public fun build(): CfnMetricStream.MetricStreamStatisticsMetricProperty = cdkBuilder.build()
+    public fun build(): CfnMetricStream.MetricStreamStatisticsMetricProperty = cdkBuilder.build()
 }

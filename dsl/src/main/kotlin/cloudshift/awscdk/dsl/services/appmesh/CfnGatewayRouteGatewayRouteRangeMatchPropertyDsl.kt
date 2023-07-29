@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * example, if the range specified were 1-100, only values 1-99 would be matched.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,22 +37,18 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteGatewayRouteRangeMatchPropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.GatewayRouteRangeMatchProperty.Builder =
-      CfnGatewayRoute.GatewayRouteRangeMatchProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.GatewayRouteRangeMatchProperty.Builder =
+        CfnGatewayRoute.GatewayRouteRangeMatchProperty.builder()
 
-  /**
-   * @param end The end of the range. 
-   */
-  public fun end(end: Number) {
-    cdkBuilder.end(end)
-  }
+    /** @param end The end of the range. */
+    public fun end(end: Number) {
+        cdkBuilder.end(end)
+    }
 
-  /**
-   * @param start The start of the range. 
-   */
-  public fun start(start: Number) {
-    cdkBuilder.start(start)
-  }
+    /** @param start The start of the range. */
+    public fun start(start: Number) {
+        cdkBuilder.start(start)
+    }
 
-  public fun build(): CfnGatewayRoute.GatewayRouteRangeMatchProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.GatewayRouteRangeMatchProperty = cdkBuilder.build()
 }

@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 import kotlin.Any
 import kotlin.Unit
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
 /**
  * An object that sets information about a property.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,20 +50,17 @@ import kotlin.Unit
  */
 @CdkDslMarker
 public class CfnEntityPropertyPropertyDsl {
-    private val cdkBuilder: CfnEntity.PropertyProperty.Builder = CfnEntity.PropertyProperty.builder()
+    private val cdkBuilder: CfnEntity.PropertyProperty.Builder =
+        CfnEntity.PropertyProperty.builder()
 
-    /**
-     * @param definition An object that specifies information about a property.
-     */
+    /** @param definition An object that specifies information about a property. */
     public fun definition(definition: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(definition)
         cdkBuilder.definition(builder.map)
     }
 
-    /**
-     * @param definition An object that specifies information about a property.
-     */
+    /** @param definition An object that specifies information about a property. */
     public fun definition(definition: Any) {
         cdkBuilder.definition(definition)
     }

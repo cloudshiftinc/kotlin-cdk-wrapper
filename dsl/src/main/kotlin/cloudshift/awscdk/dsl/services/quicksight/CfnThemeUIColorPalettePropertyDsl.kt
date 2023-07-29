@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTheme
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTheme
 
 /**
  * The theme colors that apply to UI and to charts, excluding data colors.
  *
  * The colors description is a hexadecimal color code that consists of six alphanumerical
- * characters, prefixed with `#` , for example #37BFF5. For more information, see [Using Themes in
- * Amazon QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html) in
- * the *Amazon QuickSight User Guide.*
+ * characters, prefixed with `#` , for example #37BFF5. For more information, see
+ * [Using Themes in Amazon QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html)
+ * in the *Amazon QuickSight User Guide.*
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,31 +55,27 @@ public class CfnThemeUIColorPalettePropertyDsl {
     private val cdkBuilder: CfnTheme.UIColorPaletteProperty.Builder =
         CfnTheme.UIColorPaletteProperty.builder()
 
-    /**
-     * @param accent This color is that applies to selected states and buttons.
-     */
+    /** @param accent This color is that applies to selected states and buttons. */
     public fun accent(accent: String) {
         cdkBuilder.accent(accent)
     }
 
     /**
      * @param accentForeground The foreground color that applies to any text or other elements that
-     * appear over the accent color.
+     *   appear over the accent color.
      */
     public fun accentForeground(accentForeground: String) {
         cdkBuilder.accentForeground(accentForeground)
     }
 
-    /**
-     * @param danger The color that applies to error messages.
-     */
+    /** @param danger The color that applies to error messages. */
     public fun danger(danger: String) {
         cdkBuilder.danger(danger)
     }
 
     /**
      * @param dangerForeground The foreground color that applies to any text or other elements that
-     * appear over the error color.
+     *   appear over the error color.
      */
     public fun dangerForeground(dangerForeground: String) {
         cdkBuilder.dangerForeground(dangerForeground)
@@ -79,15 +83,15 @@ public class CfnThemeUIColorPalettePropertyDsl {
 
     /**
      * @param dimension The color that applies to the names of fields that are identified as
-     * dimensions.
+     *   dimensions.
      */
     public fun dimension(dimension: String) {
         cdkBuilder.dimension(dimension)
     }
 
     /**
-     * @param dimensionForeground The foreground color that applies to any text or other elements that
-     * appear over the dimension color.
+     * @param dimensionForeground The foreground color that applies to any text or other elements
+     *   that appear over the dimension color.
      */
     public fun dimensionForeground(dimensionForeground: String) {
         cdkBuilder.dimensionForeground(dimensionForeground)
@@ -102,7 +106,7 @@ public class CfnThemeUIColorPalettePropertyDsl {
 
     /**
      * @param measureForeground The foreground color that applies to any text or other elements that
-     * appear over the measure color.
+     *   appear over the measure color.
      */
     public fun measureForeground(measureForeground: String) {
         cdkBuilder.measureForeground(measureForeground)
@@ -110,7 +114,7 @@ public class CfnThemeUIColorPalettePropertyDsl {
 
     /**
      * @param primaryBackground The background color that applies to visuals and other high emphasis
-     * UI.
+     *   UI.
      */
     public fun primaryBackground(primaryBackground: String) {
         cdkBuilder.primaryBackground(primaryBackground)
@@ -118,23 +122,23 @@ public class CfnThemeUIColorPalettePropertyDsl {
 
     /**
      * @param primaryForeground The color of text and other foreground elements that appear over the
-     * primary background regions, such as grid lines, borders, table banding, icons, and so on.
+     *   primary background regions, such as grid lines, borders, table banding, icons, and so on.
      */
     public fun primaryForeground(primaryForeground: String) {
         cdkBuilder.primaryForeground(primaryForeground)
     }
 
     /**
-     * @param secondaryBackground The background color that applies to the sheet background and sheet
-     * controls.
+     * @param secondaryBackground The background color that applies to the sheet background and
+     *   sheet controls.
      */
     public fun secondaryBackground(secondaryBackground: String) {
         cdkBuilder.secondaryBackground(secondaryBackground)
     }
 
     /**
-     * @param secondaryForeground The foreground color that applies to any sheet title, sheet control
-     * text, or UI that appears over the secondary background.
+     * @param secondaryForeground The foreground color that applies to any sheet title, sheet
+     *   control text, or UI that appears over the secondary background.
      */
     public fun secondaryForeground(secondaryForeground: String) {
         cdkBuilder.secondaryForeground(secondaryForeground)
@@ -142,7 +146,7 @@ public class CfnThemeUIColorPalettePropertyDsl {
 
     /**
      * @param success The color that applies to success messages, for example the check mark for a
-     * successful download.
+     *   successful download.
      */
     public fun success(success: String) {
         cdkBuilder.success(success)
@@ -150,22 +154,20 @@ public class CfnThemeUIColorPalettePropertyDsl {
 
     /**
      * @param successForeground The foreground color that applies to any text or other elements that
-     * appear over the success color.
+     *   appear over the success color.
      */
     public fun successForeground(successForeground: String) {
         cdkBuilder.successForeground(successForeground)
     }
 
-    /**
-     * @param warning This color that applies to warning and informational messages.
-     */
+    /** @param warning This color that applies to warning and informational messages. */
     public fun warning(warning: String) {
         cdkBuilder.warning(warning)
     }
 
     /**
      * @param warningForeground The foreground color that applies to any text or other elements that
-     * appear over the warning color.
+     *   appear over the warning color.
      */
     public fun warningForeground(warningForeground: String) {
         cdkBuilder.warningForeground(warningForeground)

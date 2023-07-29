@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnInput
  * The parent of this entity is Input.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,16 @@ import software.amazon.awscdk.services.medialive.CfnInput
  */
 @CdkDslMarker
 public class CfnInputInputDestinationRequestPropertyDsl {
-  private val cdkBuilder: CfnInput.InputDestinationRequestProperty.Builder =
-      CfnInput.InputDestinationRequestProperty.builder()
+    private val cdkBuilder: CfnInput.InputDestinationRequestProperty.Builder =
+        CfnInput.InputDestinationRequestProperty.builder()
 
-  /**
-   * @param streamName The stream name (application name/application instance) for the location the
-   * RTMP source content will be pushed to in MediaLive.
-   */
-  public fun streamName(streamName: String) {
-    cdkBuilder.streamName(streamName)
-  }
+    /**
+     * @param streamName The stream name (application name/application instance) for the location
+     *   the RTMP source content will be pushed to in MediaLive.
+     */
+    public fun streamName(streamName: String) {
+        cdkBuilder.streamName(streamName)
+    }
 
-  public fun build(): CfnInput.InputDestinationRequestProperty = cdkBuilder.build()
+    public fun build(): CfnInput.InputDestinationRequestProperty = cdkBuilder.build()
 }

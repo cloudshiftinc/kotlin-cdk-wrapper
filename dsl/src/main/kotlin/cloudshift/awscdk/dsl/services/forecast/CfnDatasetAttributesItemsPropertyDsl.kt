@@ -1,14 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.forecast
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.forecast.CfnDataset
 import kotlin.String
+import software.amazon.awscdk.services.forecast.CfnDataset
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,16 +34,12 @@ public class CfnDatasetAttributesItemsPropertyDsl {
     private val cdkBuilder: CfnDataset.AttributesItemsProperty.Builder =
         CfnDataset.AttributesItemsProperty.builder()
 
-    /**
-     * @param attributeName Name of the dataset field.
-     */
+    /** @param attributeName Name of the dataset field. */
     public fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
     }
 
-    /**
-     * @param attributeType Data type of the field.
-     */
+    /** @param attributeType Data type of the field. */
     public fun attributeType(attributeType: String) {
         cdkBuilder.attributeType(attributeType)
     }

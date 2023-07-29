@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmincidents
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  * Details about the PagerDuty configuration for a response plan.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,40 +38,40 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  */
 @CdkDslMarker
 public class CfnResponsePlanPagerDutyConfigurationPropertyDsl {
-  private val cdkBuilder: CfnResponsePlan.PagerDutyConfigurationProperty.Builder =
-      CfnResponsePlan.PagerDutyConfigurationProperty.builder()
+    private val cdkBuilder: CfnResponsePlan.PagerDutyConfigurationProperty.Builder =
+        CfnResponsePlan.PagerDutyConfigurationProperty.builder()
 
-  /**
-   * @param name The name of the PagerDuty configuration. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the PagerDuty configuration. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param pagerDutyIncidentConfiguration Details about the PagerDuty service associated with the
-   * configuration. 
-   */
-  public fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: IResolvable) {
-    cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration)
-  }
+    /**
+     * @param pagerDutyIncidentConfiguration Details about the PagerDuty service associated with the
+     *   configuration.
+     */
+    public fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: IResolvable) {
+        cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration)
+    }
 
-  /**
-   * @param pagerDutyIncidentConfiguration Details about the PagerDuty service associated with the
-   * configuration. 
-   */
-  public
-      fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: CfnResponsePlan.PagerDutyIncidentConfigurationProperty) {
-    cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration)
-  }
+    /**
+     * @param pagerDutyIncidentConfiguration Details about the PagerDuty service associated with the
+     *   configuration.
+     */
+    public fun pagerDutyIncidentConfiguration(
+        pagerDutyIncidentConfiguration: CfnResponsePlan.PagerDutyIncidentConfigurationProperty
+    ) {
+        cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration)
+    }
 
-  /**
-   * @param secretId The ID of the AWS Secrets Manager secret that stores your PagerDuty key, either
-   * a General Access REST API Key or User Token REST API Key, and other user credentials. 
-   */
-  public fun secretId(secretId: String) {
-    cdkBuilder.secretId(secretId)
-  }
+    /**
+     * @param secretId The ID of the AWS Secrets Manager secret that stores your PagerDuty key,
+     *   either a General Access REST API Key or User Token REST API Key, and other user
+     *   credentials.
+     */
+    public fun secretId(secretId: String) {
+        cdkBuilder.secretId(secretId)
+    }
 
-  public fun build(): CfnResponsePlan.PagerDutyConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnResponsePlan.PagerDutyConfigurationProperty = cdkBuilder.build()
 }

@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cxapi
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.cxapi.AssemblyBuildOptions
 import software.amazon.awscdk.cxapi.AssetManifestArtifact
 import software.amazon.awscdk.cxapi.AwsCloudFormationStackProperties
@@ -23,13 +34,10 @@ import software.amazon.awscdk.cxapi.TreeCloudArtifact
 import software.amazon.awscdk.cxapi.VpcContextResponse
 import software.amazon.awscdk.cxapi.VpcSubnet
 import software.amazon.awscdk.cxapi.VpcSubnetGroup
-import kotlin.String
-import kotlin.Unit
 
 public object cxapi {
     /**
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -37,7 +45,9 @@ public object cxapi {
      * AssemblyBuildOptions assemblyBuildOptions = AssemblyBuildOptions.builder().build();
      * ```
      */
-    public inline fun assemblyBuildOptions(block: AssemblyBuildOptionsDsl.() -> Unit = {}): AssemblyBuildOptions {
+    public inline fun assemblyBuildOptions(
+        block: AssemblyBuildOptionsDsl.() -> Unit = {}
+    ): AssemblyBuildOptions {
         val builder = AssemblyBuildOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -47,7 +57,6 @@ public object cxapi {
      * Asset manifest is a description of a set of assets which need to be built and published.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -98,7 +107,7 @@ public object cxapi {
     public inline fun assetManifestArtifact(
         assembly: CloudAssembly,
         name: String,
-        block: AssetManifestArtifactDsl.() -> Unit = {}
+        block: AssetManifestArtifactDsl.() -> Unit = {},
     ): AssetManifestArtifact {
         val builder = AssetManifestArtifactDsl(assembly, name)
         builder.apply(block)
@@ -109,7 +118,6 @@ public object cxapi {
      * Artifact properties for CloudFormation stacks.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -126,8 +134,7 @@ public object cxapi {
      * ```
      */
     public inline fun awsCloudFormationStackProperties(
-        block: AwsCloudFormationStackPropertiesDsl.() -> Unit =
-            {}
+        block: AwsCloudFormationStackPropertiesDsl.() -> Unit = {}
     ): AwsCloudFormationStackProperties {
         val builder = AwsCloudFormationStackPropertiesDsl()
         builder.apply(block)
@@ -138,7 +145,6 @@ public object cxapi {
      * Represents a deployable cloud application.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -150,7 +156,10 @@ public object cxapi {
      * .build();
      * ```
      */
-    public inline fun cloudAssembly(directory: String, block: CloudAssemblyDsl.() -> Unit = {}): CloudAssembly {
+    public inline fun cloudAssembly(
+        directory: String,
+        block: CloudAssemblyDsl.() -> Unit = {}
+    ): CloudAssembly {
         val builder = CloudAssemblyDsl(directory)
         builder.apply(block)
         return builder.build()
@@ -160,7 +169,6 @@ public object cxapi {
      * Can be used to build a cloud assembly.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -174,8 +182,7 @@ public object cxapi {
      */
     public inline fun cloudAssemblyBuilder(
         outdir: String,
-        block: CloudAssemblyBuilderDsl.() -> Unit =
-            {}
+        block: CloudAssemblyBuilderDsl.() -> Unit = {}
     ): CloudAssemblyBuilder {
         val builder = CloudAssemblyBuilderDsl(outdir)
         builder.apply(block)
@@ -186,7 +193,6 @@ public object cxapi {
      * Construction properties for CloudAssemblyBuilder.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -198,7 +204,9 @@ public object cxapi {
      * .build();
      * ```
      */
-    public inline fun cloudAssemblyBuilderProps(block: CloudAssemblyBuilderPropsDsl.() -> Unit = {}): CloudAssemblyBuilderProps {
+    public inline fun cloudAssemblyBuilderProps(
+        block: CloudAssemblyBuilderPropsDsl.() -> Unit = {}
+    ): CloudAssemblyBuilderProps {
         val builder = CloudAssemblyBuilderPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -206,7 +214,6 @@ public object cxapi {
 
     /**
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -257,7 +264,7 @@ public object cxapi {
     public inline fun cloudFormationStackArtifact(
         assembly: CloudAssembly,
         artifactId: String,
-        block: CloudFormationStackArtifactDsl.() -> Unit = {}
+        block: CloudFormationStackArtifactDsl.() -> Unit = {},
     ): CloudFormationStackArtifact {
         val builder = CloudFormationStackArtifactDsl(assembly, artifactId)
         builder.apply(block)
@@ -268,7 +275,6 @@ public object cxapi {
      * Query to hosted zone context provider.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -282,8 +288,7 @@ public object cxapi {
      * ```
      */
     public inline fun endpointServiceAvailabilityZonesContextQuery(
-        block: EndpointServiceAvailabilityZonesContextQueryDsl.() -> Unit =
-            {}
+        block: EndpointServiceAvailabilityZonesContextQueryDsl.() -> Unit = {}
     ): EndpointServiceAvailabilityZonesContextQuery {
         val builder = EndpointServiceAvailabilityZonesContextQueryDsl()
         builder.apply(block)
@@ -294,7 +299,6 @@ public object cxapi {
      * Models an AWS execution environment, for use within the CDK toolkit.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -316,7 +320,6 @@ public object cxapi {
      * Return the appropriate values for the environment placeholders.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -330,8 +333,7 @@ public object cxapi {
      * ```
      */
     public inline fun environmentPlaceholderValues(
-        block: EnvironmentPlaceholderValuesDsl.() -> Unit =
-            {}
+        block: EnvironmentPlaceholderValuesDsl.() -> Unit = {}
     ): EnvironmentPlaceholderValues {
         val builder = EnvironmentPlaceholderValuesDsl()
         builder.apply(block)
@@ -342,7 +344,6 @@ public object cxapi {
      * Properties of a discovered key.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -352,7 +353,9 @@ public object cxapi {
      * .build();
      * ```
      */
-    public inline fun keyContextResponse(block: KeyContextResponseDsl.() -> Unit = {}): KeyContextResponse {
+    public inline fun keyContextResponse(
+        block: KeyContextResponseDsl.() -> Unit = {}
+    ): KeyContextResponse {
         val builder = KeyContextResponseDsl()
         builder.apply(block)
         return builder.build()
@@ -362,7 +365,6 @@ public object cxapi {
      * Properties of a discovered load balancer.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -378,8 +380,7 @@ public object cxapi {
      * ```
      */
     public inline fun loadBalancerContextResponse(
-        block: LoadBalancerContextResponseDsl.() -> Unit =
-            {}
+        block: LoadBalancerContextResponseDsl.() -> Unit = {}
     ): LoadBalancerContextResponse {
         val builder = LoadBalancerContextResponseDsl()
         builder.apply(block)
@@ -390,7 +391,6 @@ public object cxapi {
      * Properties of a discovered load balancer listener.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -404,8 +404,7 @@ public object cxapi {
      * ```
      */
     public inline fun loadBalancerListenerContextResponse(
-        block: LoadBalancerListenerContextResponseDsl.() -> Unit =
-            {}
+        block: LoadBalancerListenerContextResponseDsl.() -> Unit = {}
     ): LoadBalancerListenerContextResponse {
         val builder = LoadBalancerListenerContextResponseDsl()
         builder.apply(block)
@@ -414,7 +413,6 @@ public object cxapi {
 
     /**
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -428,7 +426,9 @@ public object cxapi {
      * .build();
      * ```
      */
-    public inline fun metadataEntryResult(block: MetadataEntryResultDsl.() -> Unit = {}): MetadataEntryResult {
+    public inline fun metadataEntryResult(
+        block: MetadataEntryResultDsl.() -> Unit = {}
+    ): MetadataEntryResult {
         val builder = MetadataEntryResultDsl()
         builder.apply(block)
         return builder.build()
@@ -438,7 +438,6 @@ public object cxapi {
      * Asset manifest is a description of a set of assets which need to be built and published.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -489,7 +488,7 @@ public object cxapi {
     public inline fun nestedCloudAssemblyArtifact(
         assembly: CloudAssembly,
         name: String,
-        block: NestedCloudAssemblyArtifactDsl.() -> Unit = {}
+        block: NestedCloudAssemblyArtifactDsl.() -> Unit = {},
     ): NestedCloudAssemblyArtifact {
         val builder = NestedCloudAssemblyArtifactDsl(assembly, name)
         builder.apply(block)
@@ -500,7 +499,6 @@ public object cxapi {
      * Properties of a discovered SecurityGroup.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -513,8 +511,7 @@ public object cxapi {
      * ```
      */
     public inline fun securityGroupContextResponse(
-        block: SecurityGroupContextResponseDsl.() -> Unit =
-            {}
+        block: SecurityGroupContextResponseDsl.() -> Unit = {}
     ): SecurityGroupContextResponse {
         val builder = SecurityGroupContextResponseDsl()
         builder.apply(block)
@@ -523,7 +520,6 @@ public object cxapi {
 
     /**
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -540,7 +536,9 @@ public object cxapi {
      * .build();
      * ```
      */
-    public inline fun synthesisMessage(block: SynthesisMessageDsl.() -> Unit = {}): SynthesisMessage {
+    public inline fun synthesisMessage(
+        block: SynthesisMessageDsl.() -> Unit = {}
+    ): SynthesisMessage {
         val builder = SynthesisMessageDsl()
         builder.apply(block)
         return builder.build()
@@ -548,7 +546,6 @@ public object cxapi {
 
     /**
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -598,7 +595,7 @@ public object cxapi {
     public inline fun treeCloudArtifact(
         assembly: CloudAssembly,
         name: String,
-        block: TreeCloudArtifactDsl.() -> Unit = {}
+        block: TreeCloudArtifactDsl.() -> Unit = {},
     ): TreeCloudArtifact {
         val builder = TreeCloudArtifactDsl(assembly, name)
         builder.apply(block)
@@ -609,7 +606,6 @@ public object cxapi {
      * Properties of a discovered VPC.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -645,7 +641,9 @@ public object cxapi {
      * .build();
      * ```
      */
-    public inline fun vpcContextResponse(block: VpcContextResponseDsl.() -> Unit = {}): VpcContextResponse {
+    public inline fun vpcContextResponse(
+        block: VpcContextResponseDsl.() -> Unit = {}
+    ): VpcContextResponse {
         val builder = VpcContextResponseDsl()
         builder.apply(block)
         return builder.build()
@@ -655,7 +653,6 @@ public object cxapi {
      * A subnet representation that the VPC provider uses.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -681,7 +678,6 @@ public object cxapi {
      * The included subnets do NOT have to be symmetric!
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.

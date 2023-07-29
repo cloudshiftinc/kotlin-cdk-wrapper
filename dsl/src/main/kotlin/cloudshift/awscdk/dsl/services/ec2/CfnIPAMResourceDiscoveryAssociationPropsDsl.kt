@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociationPr
  * Properties for defining a `CfnIPAMResourceDiscoveryAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,45 +44,41 @@ import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociationPr
  */
 @CdkDslMarker
 public class CfnIPAMResourceDiscoveryAssociationPropsDsl {
-  private val cdkBuilder: CfnIPAMResourceDiscoveryAssociationProps.Builder =
-      CfnIPAMResourceDiscoveryAssociationProps.builder()
+    private val cdkBuilder: CfnIPAMResourceDiscoveryAssociationProps.Builder =
+        CfnIPAMResourceDiscoveryAssociationProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param ipamId The IPAM ID. 
-   */
-  public fun ipamId(ipamId: String) {
-    cdkBuilder.ipamId(ipamId)
-  }
+    /** @param ipamId The IPAM ID. */
+    public fun ipamId(ipamId: String) {
+        cdkBuilder.ipamId(ipamId)
+    }
 
-  /**
-   * @param ipamResourceDiscoveryId The resource discovery ID. 
-   */
-  public fun ipamResourceDiscoveryId(ipamResourceDiscoveryId: String) {
-    cdkBuilder.ipamResourceDiscoveryId(ipamResourceDiscoveryId)
-  }
+    /** @param ipamResourceDiscoveryId The resource discovery ID. */
+    public fun ipamResourceDiscoveryId(ipamResourceDiscoveryId: String) {
+        cdkBuilder.ipamResourceDiscoveryId(ipamResourceDiscoveryId)
+    }
 
-  /**
-   * @param tags A tag is a label that you assign to an AWS resource.
-   * Each tag consists of a key and an optional value. You can use tags to search and filter your
-   * resources or track your AWS costs.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags A tag is a label that you assign to an AWS resource. Each tag consists of a key
+     *   and an optional value. You can use tags to search and filter your resources or track your
+     *   AWS costs.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags A tag is a label that you assign to an AWS resource.
-   * Each tag consists of a key and an optional value. You can use tags to search and filter your
-   * resources or track your AWS costs.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags A tag is a label that you assign to an AWS resource. Each tag consists of a key
+     *   and an optional value. You can use tags to search and filter your resources or track your
+     *   AWS costs.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnIPAMResourceDiscoveryAssociationProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnIPAMResourceDiscoveryAssociationProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

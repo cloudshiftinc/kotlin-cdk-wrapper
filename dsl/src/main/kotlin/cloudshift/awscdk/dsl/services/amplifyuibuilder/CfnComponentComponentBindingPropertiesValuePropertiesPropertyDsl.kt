@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * Amplify DataStore model or an authenticated user attribute.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,76 +55,58 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  */
 @CdkDslMarker
 public class CfnComponentComponentBindingPropertiesValuePropertiesPropertyDsl {
-  private val cdkBuilder: CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.Builder =
-      CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.builder()
+    private val cdkBuilder: CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.Builder =
+        CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.builder()
 
-  private val _predicates: MutableList<Any> = mutableListOf()
+    private val _predicates: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param bucket An Amazon S3 bucket.
-   */
-  public fun bucket(bucket: String) {
-    cdkBuilder.bucket(bucket)
-  }
+    /** @param bucket An Amazon S3 bucket. */
+    public fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+    }
 
-  /**
-   * @param defaultValue The default value to assign to the property.
-   */
-  public fun defaultValue(defaultValue: String) {
-    cdkBuilder.defaultValue(defaultValue)
-  }
+    /** @param defaultValue The default value to assign to the property. */
+    public fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+    }
 
-  /**
-   * @param field The field to bind the data to.
-   */
-  public fun `field`(`field`: String) {
-    cdkBuilder.`field`(`field`)
-  }
+    /** @param field The field to bind the data to. */
+    public fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+    }
 
-  /**
-   * @param key The storage key for an Amazon S3 bucket.
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The storage key for an Amazon S3 bucket. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param model An Amplify DataStore model.
-   */
-  public fun model(model: String) {
-    cdkBuilder.model(model)
-  }
+    /** @param model An Amplify DataStore model. */
+    public fun model(model: String) {
+        cdkBuilder.model(model)
+    }
 
-  /**
-   * @param predicates A list of predicates for binding a component's properties to data.
-   */
-  public fun predicates(vararg predicates: Any) {
-    _predicates.addAll(listOf(*predicates))
-  }
+    /** @param predicates A list of predicates for binding a component's properties to data. */
+    public fun predicates(vararg predicates: Any) {
+        _predicates.addAll(listOf(*predicates))
+    }
 
-  /**
-   * @param predicates A list of predicates for binding a component's properties to data.
-   */
-  public fun predicates(predicates: Collection<Any>) {
-    _predicates.addAll(predicates)
-  }
+    /** @param predicates A list of predicates for binding a component's properties to data. */
+    public fun predicates(predicates: Collection<Any>) {
+        _predicates.addAll(predicates)
+    }
 
-  /**
-   * @param predicates A list of predicates for binding a component's properties to data.
-   */
-  public fun predicates(predicates: IResolvable) {
-    cdkBuilder.predicates(predicates)
-  }
+    /** @param predicates A list of predicates for binding a component's properties to data. */
+    public fun predicates(predicates: IResolvable) {
+        cdkBuilder.predicates(predicates)
+    }
 
-  /**
-   * @param userAttribute An authenticated user attribute.
-   */
-  public fun userAttribute(userAttribute: String) {
-    cdkBuilder.userAttribute(userAttribute)
-  }
+    /** @param userAttribute An authenticated user attribute. */
+    public fun userAttribute(userAttribute: String) {
+        cdkBuilder.userAttribute(userAttribute)
+    }
 
-  public fun build(): CfnComponent.ComponentBindingPropertiesValuePropertiesProperty {
-    if(_predicates.isNotEmpty()) cdkBuilder.predicates(_predicates)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnComponent.ComponentBindingPropertiesValuePropertiesProperty {
+        if (_predicates.isNotEmpty()) cdkBuilder.predicates(_predicates)
+        return cdkBuilder.build()
+    }
 }

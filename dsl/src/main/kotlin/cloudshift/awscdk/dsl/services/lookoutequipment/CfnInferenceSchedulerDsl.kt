@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lookoutequipment
 
@@ -24,16 +33,13 @@ import software.constructs.Construct
  * desired, and set the frequency of inferencing. You must also provide an Amazon S3 bucket location
  * for the output data.
  *
- *
  * Updating some properties below (for example, InferenceSchedulerName and ServerSideKmsKeyId)
  * triggers a resource replacement, which requires a new model. To replace such a property using AWS
  * CloudFormation , but without creating a completely new stack, you must replace ModelName. If you
- * need to replace the property, but want to use the same model, delete the current stack and create a
- * new one with the updated properties.
- *
+ * need to replace the property, but want to use the same model, delete the current stack and create
+ * a new one with the updated properties.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -62,173 +68,187 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnInferenceSchedulerDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnInferenceScheduler.Builder =
-      CfnInferenceScheduler.Builder.create(scope, id)
+    private val cdkBuilder: CfnInferenceScheduler.Builder =
+        CfnInferenceScheduler.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * A period of time (in minutes) by which inference on the data is delayed after the data starts.
-   *
-   * For instance, if an offset delay time of five minutes was selected, inference will not begin on
-   * the data until the first data measurement after the five minute mark. For example, if five minutes
-   * is selected, the inference scheduler will wake up at the configured frequency with the additional
-   * five minute delay time to check the customer S3 bucket. The customer can upload data at the same
-   * frequency and they don't need to stop and restart the scheduler when uploading new data.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datadelayoffsetinminutes)
-   * @param dataDelayOffsetInMinutes A period of time (in minutes) by which inference on the data is
-   * delayed after the data starts. 
-   */
-  public fun dataDelayOffsetInMinutes(dataDelayOffsetInMinutes: Number) {
-    cdkBuilder.dataDelayOffsetInMinutes(dataDelayOffsetInMinutes)
-  }
+    /**
+     * A period of time (in minutes) by which inference on the data is delayed after the data
+     * starts.
+     *
+     * For instance, if an offset delay time of five minutes was selected, inference will not begin
+     * on the data until the first data measurement after the five minute mark. For example, if five
+     * minutes is selected, the inference scheduler will wake up at the configured frequency with
+     * the additional five minute delay time to check the customer S3 bucket. The customer can
+     * upload data at the same frequency and they don't need to stop and restart the scheduler when
+     * uploading new data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datadelayoffsetinminutes)
+     *
+     * @param dataDelayOffsetInMinutes A period of time (in minutes) by which inference on the data
+     *   is delayed after the data starts.
+     */
+    public fun dataDelayOffsetInMinutes(dataDelayOffsetInMinutes: Number) {
+        cdkBuilder.dataDelayOffsetInMinutes(dataDelayOffsetInMinutes)
+    }
 
-  /**
-   * Specifies configuration information for the input data for the inference scheduler, including
-   * delimiter, format, and dataset location.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datainputconfiguration)
-   * @param dataInputConfiguration Specifies configuration information for the input data for the
-   * inference scheduler, including delimiter, format, and dataset location. 
-   */
-  public fun dataInputConfiguration(dataInputConfiguration: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(dataInputConfiguration)
-    cdkBuilder.dataInputConfiguration(builder.map)
-  }
+    /**
+     * Specifies configuration information for the input data for the inference scheduler, including
+     * delimiter, format, and dataset location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datainputconfiguration)
+     *
+     * @param dataInputConfiguration Specifies configuration information for the input data for the
+     *   inference scheduler, including delimiter, format, and dataset location.
+     */
+    public fun dataInputConfiguration(dataInputConfiguration: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(dataInputConfiguration)
+        cdkBuilder.dataInputConfiguration(builder.map)
+    }
 
-  /**
-   * Specifies configuration information for the input data for the inference scheduler, including
-   * delimiter, format, and dataset location.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datainputconfiguration)
-   * @param dataInputConfiguration Specifies configuration information for the input data for the
-   * inference scheduler, including delimiter, format, and dataset location. 
-   */
-  public fun dataInputConfiguration(dataInputConfiguration: Any) {
-    cdkBuilder.dataInputConfiguration(dataInputConfiguration)
-  }
+    /**
+     * Specifies configuration information for the input data for the inference scheduler, including
+     * delimiter, format, and dataset location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datainputconfiguration)
+     *
+     * @param dataInputConfiguration Specifies configuration information for the input data for the
+     *   inference scheduler, including delimiter, format, and dataset location.
+     */
+    public fun dataInputConfiguration(dataInputConfiguration: Any) {
+        cdkBuilder.dataInputConfiguration(dataInputConfiguration)
+    }
 
-  /**
-   * Specifies configuration information for the output results for the inference scheduler,
-   * including the Amazon S3 location for the output.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration)
-   * @param dataOutputConfiguration Specifies configuration information for the output results for
-   * the inference scheduler, including the Amazon S3 location for the output. 
-   */
-  public fun dataOutputConfiguration(dataOutputConfiguration: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(dataOutputConfiguration)
-    cdkBuilder.dataOutputConfiguration(builder.map)
-  }
+    /**
+     * Specifies configuration information for the output results for the inference scheduler,
+     * including the Amazon S3 location for the output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration)
+     *
+     * @param dataOutputConfiguration Specifies configuration information for the output results for
+     *   the inference scheduler, including the Amazon S3 location for the output.
+     */
+    public fun dataOutputConfiguration(dataOutputConfiguration: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(dataOutputConfiguration)
+        cdkBuilder.dataOutputConfiguration(builder.map)
+    }
 
-  /**
-   * Specifies configuration information for the output results for the inference scheduler,
-   * including the Amazon S3 location for the output.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration)
-   * @param dataOutputConfiguration Specifies configuration information for the output results for
-   * the inference scheduler, including the Amazon S3 location for the output. 
-   */
-  public fun dataOutputConfiguration(dataOutputConfiguration: Any) {
-    cdkBuilder.dataOutputConfiguration(dataOutputConfiguration)
-  }
+    /**
+     * Specifies configuration information for the output results for the inference scheduler,
+     * including the Amazon S3 location for the output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration)
+     *
+     * @param dataOutputConfiguration Specifies configuration information for the output results for
+     *   the inference scheduler, including the Amazon S3 location for the output.
+     */
+    public fun dataOutputConfiguration(dataOutputConfiguration: Any) {
+        cdkBuilder.dataOutputConfiguration(dataOutputConfiguration)
+    }
 
-  /**
-   * How often data is uploaded to the source S3 bucket for the input data.
-   *
-   * This value is the length of time between data uploads. For instance, if you select 5 minutes,
-   * Amazon Lookout for Equipment will upload the real-time data to the source bucket once every 5
-   * minutes. This frequency also determines how often Amazon Lookout for Equipment starts a scheduled
-   * inference on your data. In this example, it starts once every 5 minutes.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datauploadfrequency)
-   * @param dataUploadFrequency How often data is uploaded to the source S3 bucket for the input
-   * data. 
-   */
-  public fun dataUploadFrequency(dataUploadFrequency: String) {
-    cdkBuilder.dataUploadFrequency(dataUploadFrequency)
-  }
+    /**
+     * How often data is uploaded to the source S3 bucket for the input data.
+     *
+     * This value is the length of time between data uploads. For instance, if you select 5 minutes,
+     * Amazon Lookout for Equipment will upload the real-time data to the source bucket once every 5
+     * minutes. This frequency also determines how often Amazon Lookout for Equipment starts a
+     * scheduled inference on your data. In this example, it starts once every 5 minutes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-datauploadfrequency)
+     *
+     * @param dataUploadFrequency How often data is uploaded to the source S3 bucket for the input
+     *   data.
+     */
+    public fun dataUploadFrequency(dataUploadFrequency: String) {
+        cdkBuilder.dataUploadFrequency(dataUploadFrequency)
+    }
 
-  /**
-   * The name of the inference scheduler.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-inferenceschedulername)
-   * @param inferenceSchedulerName The name of the inference scheduler. 
-   */
-  public fun inferenceSchedulerName(inferenceSchedulerName: String) {
-    cdkBuilder.inferenceSchedulerName(inferenceSchedulerName)
-  }
+    /**
+     * The name of the inference scheduler.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-inferenceschedulername)
+     *
+     * @param inferenceSchedulerName The name of the inference scheduler.
+     */
+    public fun inferenceSchedulerName(inferenceSchedulerName: String) {
+        cdkBuilder.inferenceSchedulerName(inferenceSchedulerName)
+    }
 
-  /**
-   * The name of the ML model used for the inference scheduler.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-modelname)
-   * @param modelName The name of the ML model used for the inference scheduler. 
-   */
-  public fun modelName(modelName: String) {
-    cdkBuilder.modelName(modelName)
-  }
+    /**
+     * The name of the ML model used for the inference scheduler.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-modelname)
+     *
+     * @param modelName The name of the ML model used for the inference scheduler.
+     */
+    public fun modelName(modelName: String) {
+        cdkBuilder.modelName(modelName)
+    }
 
-  /**
-   * The Amazon Resource Name (ARN) of a role with permission to access the data source being used
-   * for the inference.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-rolearn)
-   * @param roleArn The Amazon Resource Name (ARN) of a role with permission to access the data
-   * source being used for the inference. 
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /**
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source being used
+     * for the inference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-rolearn)
+     *
+     * @param roleArn The Amazon Resource Name (ARN) of a role with permission to access the data
+     *   source being used for the inference.
+     */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  /**
-   * Provides the identifier of the AWS KMS key used to encrypt inference scheduler data by Amazon
-   * Lookout for Equipment .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-serversidekmskeyid)
-   * @param serverSideKmsKeyId Provides the identifier of the AWS KMS key used to encrypt inference
-   * scheduler data by Amazon Lookout for Equipment . 
-   */
-  public fun serverSideKmsKeyId(serverSideKmsKeyId: String) {
-    cdkBuilder.serverSideKmsKeyId(serverSideKmsKeyId)
-  }
+    /**
+     * Provides the identifier of the AWS KMS key used to encrypt inference scheduler data by Amazon
+     * Lookout for Equipment .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-serversidekmskeyid)
+     *
+     * @param serverSideKmsKeyId Provides the identifier of the AWS KMS key used to encrypt
+     *   inference scheduler data by Amazon Lookout for Equipment .
+     */
+    public fun serverSideKmsKeyId(serverSideKmsKeyId: String) {
+        cdkBuilder.serverSideKmsKeyId(serverSideKmsKeyId)
+    }
 
-  /**
-   * Any tags associated with the inference scheduler.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-tags)
-   * @param tags Any tags associated with the inference scheduler. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * Any tags associated with the inference scheduler.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-tags)
+     *
+     * @param tags Any tags associated with the inference scheduler.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * Any tags associated with the inference scheduler.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-tags)
-   * @param tags Any tags associated with the inference scheduler. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * Any tags associated with the inference scheduler.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html#cfn-lookoutequipment-inferencescheduler-tags)
+     *
+     * @param tags Any tags associated with the inference scheduler.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnInferenceScheduler {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnInferenceScheduler {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

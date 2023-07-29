@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition
  * When the job reaches the time limit, Amazon SageMaker ends the training job.
  *
  * Example:
- *
  * ```
  * SageMakerCreateTrainingJob.Builder.create(this, "TrainSagemaker")
  * .trainingJobName(JsonPath.stringAt("$.JobName"))
@@ -46,15 +54,15 @@ import software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition
  */
 @CdkDslMarker
 public class StoppingConditionDsl {
-  private val cdkBuilder: StoppingCondition.Builder = StoppingCondition.builder()
+    private val cdkBuilder: StoppingCondition.Builder = StoppingCondition.builder()
 
-  /**
-   * @param maxRuntime The maximum length of time, in seconds, that the training or compilation job
-   * can run.
-   */
-  public fun maxRuntime(maxRuntime: Duration) {
-    cdkBuilder.maxRuntime(maxRuntime)
-  }
+    /**
+     * @param maxRuntime The maximum length of time, in seconds, that the training or compilation
+     *   job can run.
+     */
+    public fun maxRuntime(maxRuntime: Duration) {
+        cdkBuilder.maxRuntime(maxRuntime)
+    }
 
-  public fun build(): StoppingCondition = cdkBuilder.build()
+    public fun build(): StoppingCondition = cdkBuilder.build()
 }

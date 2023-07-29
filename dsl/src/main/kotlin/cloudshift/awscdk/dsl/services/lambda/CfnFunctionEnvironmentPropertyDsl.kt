@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  * configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,26 +39,26 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionEnvironmentPropertyDsl {
-  private val cdkBuilder: CfnFunction.EnvironmentProperty.Builder =
-      CfnFunction.EnvironmentProperty.builder()
+    private val cdkBuilder: CfnFunction.EnvironmentProperty.Builder =
+        CfnFunction.EnvironmentProperty.builder()
 
-  /**
-   * @param variables Environment variable key-value pairs.
-   * For more information, see [Using Lambda environment
-   * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-   */
-  public fun variables(variables: Map<String, String>) {
-    cdkBuilder.variables(variables)
-  }
+    /**
+     * @param variables Environment variable key-value pairs. For more information, see
+     *   [Using Lambda environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html)
+     *   .
+     */
+    public fun variables(variables: Map<String, String>) {
+        cdkBuilder.variables(variables)
+    }
 
-  /**
-   * @param variables Environment variable key-value pairs.
-   * For more information, see [Using Lambda environment
-   * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
-   */
-  public fun variables(variables: IResolvable) {
-    cdkBuilder.variables(variables)
-  }
+    /**
+     * @param variables Environment variable key-value pairs. For more information, see
+     *   [Using Lambda environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html)
+     *   .
+     */
+    public fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables)
+    }
 
-  public fun build(): CfnFunction.EnvironmentProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.EnvironmentProperty = cdkBuilder.build()
 }

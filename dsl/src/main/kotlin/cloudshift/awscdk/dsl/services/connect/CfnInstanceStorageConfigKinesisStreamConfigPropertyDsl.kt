@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
  * Configuration information of a Kinesis data stream.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
  */
 @CdkDslMarker
 public class CfnInstanceStorageConfigKinesisStreamConfigPropertyDsl {
-  private val cdkBuilder: CfnInstanceStorageConfig.KinesisStreamConfigProperty.Builder =
-      CfnInstanceStorageConfig.KinesisStreamConfigProperty.builder()
+    private val cdkBuilder: CfnInstanceStorageConfig.KinesisStreamConfigProperty.Builder =
+        CfnInstanceStorageConfig.KinesisStreamConfigProperty.builder()
 
-  /**
-   * @param streamArn The Amazon Resource Name (ARN) of the data stream. 
-   */
-  public fun streamArn(streamArn: String) {
-    cdkBuilder.streamArn(streamArn)
-  }
+    /** @param streamArn The Amazon Resource Name (ARN) of the data stream. */
+    public fun streamArn(streamArn: String) {
+        cdkBuilder.streamArn(streamArn)
+    }
 
-  public fun build(): CfnInstanceStorageConfig.KinesisStreamConfigProperty = cdkBuilder.build()
+    public fun build(): CfnInstanceStorageConfig.KinesisStreamConfigProperty = cdkBuilder.build()
 }

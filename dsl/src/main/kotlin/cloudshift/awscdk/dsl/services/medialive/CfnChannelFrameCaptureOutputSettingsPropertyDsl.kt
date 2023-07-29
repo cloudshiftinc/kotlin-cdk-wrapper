@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is OutputSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,16 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelFrameCaptureOutputSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.FrameCaptureOutputSettingsProperty.Builder =
-      CfnChannel.FrameCaptureOutputSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.FrameCaptureOutputSettingsProperty.Builder =
+        CfnChannel.FrameCaptureOutputSettingsProperty.builder()
 
-  /**
-   * @param nameModifier Required if the output group contains more than one output.
-   * This modifier forms part of the output file name.
-   */
-  public fun nameModifier(nameModifier: String) {
-    cdkBuilder.nameModifier(nameModifier)
-  }
+    /**
+     * @param nameModifier Required if the output group contains more than one output. This modifier
+     *   forms part of the output file name.
+     */
+    public fun nameModifier(nameModifier: String) {
+        cdkBuilder.nameModifier(nameModifier)
+    }
 
-  public fun build(): CfnChannel.FrameCaptureOutputSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.FrameCaptureOutputSettingsProperty = cdkBuilder.build()
 }

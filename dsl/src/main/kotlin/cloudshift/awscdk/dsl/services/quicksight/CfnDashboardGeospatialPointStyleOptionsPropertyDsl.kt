@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
-import kotlin.String
 
 /**
  * The point style of the geospatial map.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,7 +53,7 @@ public class CfnDashboardGeospatialPointStyleOptionsPropertyDsl {
 
     /**
      * @param clusterMarkerConfiguration The cluster marker configuration of the geospatial point
-     * style.
+     *   style.
      */
     public fun clusterMarkerConfiguration(clusterMarkerConfiguration: IResolvable) {
         cdkBuilder.clusterMarkerConfiguration(clusterMarkerConfiguration)
@@ -53,23 +61,23 @@ public class CfnDashboardGeospatialPointStyleOptionsPropertyDsl {
 
     /**
      * @param clusterMarkerConfiguration The cluster marker configuration of the geospatial point
-     * style.
+     *   style.
      */
-    public fun clusterMarkerConfiguration(clusterMarkerConfiguration: CfnDashboard.ClusterMarkerConfigurationProperty) {
+    public fun clusterMarkerConfiguration(
+        clusterMarkerConfiguration: CfnDashboard.ClusterMarkerConfigurationProperty
+    ) {
         cdkBuilder.clusterMarkerConfiguration(clusterMarkerConfiguration)
     }
 
-    /**
-     * @param heatmapConfiguration The heatmap configuration of the geospatial point style.
-     */
+    /** @param heatmapConfiguration The heatmap configuration of the geospatial point style. */
     public fun heatmapConfiguration(heatmapConfiguration: IResolvable) {
         cdkBuilder.heatmapConfiguration(heatmapConfiguration)
     }
 
-    /**
-     * @param heatmapConfiguration The heatmap configuration of the geospatial point style.
-     */
-    public fun heatmapConfiguration(heatmapConfiguration: CfnDashboard.GeospatialHeatmapConfigurationProperty) {
+    /** @param heatmapConfiguration The heatmap configuration of the geospatial point style. */
+    public fun heatmapConfiguration(
+        heatmapConfiguration: CfnDashboard.GeospatialHeatmapConfigurationProperty
+    ) {
         cdkBuilder.heatmapConfiguration(heatmapConfiguration)
     }
 

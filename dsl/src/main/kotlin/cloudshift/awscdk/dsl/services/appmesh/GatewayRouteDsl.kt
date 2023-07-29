@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * GatewayRoute represents a new or existing gateway route attached to a VirtualGateway and Mesh.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,39 +40,39 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class GatewayRouteDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: GatewayRoute.Builder = GatewayRoute.Builder.create(scope, id)
+    private val cdkBuilder: GatewayRoute.Builder = GatewayRoute.Builder.create(scope, id)
 
-  /**
-   * The name of the GatewayRoute.
-   *
-   * Default: - an automatically generated name
-   *
-   * @param gatewayRouteName The name of the GatewayRoute. 
-   */
-  public fun gatewayRouteName(gatewayRouteName: String) {
-    cdkBuilder.gatewayRouteName(gatewayRouteName)
-  }
+    /**
+     * The name of the GatewayRoute.
+     *
+     * Default: - an automatically generated name
+     *
+     * @param gatewayRouteName The name of the GatewayRoute.
+     */
+    public fun gatewayRouteName(gatewayRouteName: String) {
+        cdkBuilder.gatewayRouteName(gatewayRouteName)
+    }
 
-  /**
-   * What protocol the route uses.
-   *
-   * @param routeSpec What protocol the route uses. 
-   */
-  public fun routeSpec(routeSpec: GatewayRouteSpec) {
-    cdkBuilder.routeSpec(routeSpec)
-  }
+    /**
+     * What protocol the route uses.
+     *
+     * @param routeSpec What protocol the route uses.
+     */
+    public fun routeSpec(routeSpec: GatewayRouteSpec) {
+        cdkBuilder.routeSpec(routeSpec)
+    }
 
-  /**
-   * The VirtualGateway this GatewayRoute is associated with.
-   *
-   * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
-   */
-  public fun virtualGateway(virtualGateway: IVirtualGateway) {
-    cdkBuilder.virtualGateway(virtualGateway)
-  }
+    /**
+     * The VirtualGateway this GatewayRoute is associated with.
+     *
+     * @param virtualGateway The VirtualGateway this GatewayRoute is associated with.
+     */
+    public fun virtualGateway(virtualGateway: IVirtualGateway) {
+        cdkBuilder.virtualGateway(virtualGateway)
+    }
 
-  public fun build(): GatewayRoute = cdkBuilder.build()
+    public fun build(): GatewayRoute = cdkBuilder.build()
 }

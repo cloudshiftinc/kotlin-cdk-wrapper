@@ -11,9 +11,7 @@ dependencies {
 }
 
 // lots of generated Kotlin drives memory requirement
-kotlin {
-    kotlinDaemonJvmArgs = listOf("-Xms8g", "-Xmx8g")
-}
+kotlin { kotlinDaemonJvmArgs = listOf("-Xms8g", "-Xmx8g") }
 
 tasks.named<KotlinCompile>("compileKotlin") {
     onlyIf {

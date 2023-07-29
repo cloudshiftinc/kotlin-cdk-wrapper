@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.secretsmanager.AttachedSecretOptions
 import software.amazon.awscdk.services.secretsmanager.CfnResourcePolicy
 import software.amazon.awscdk.services.secretsmanager.CfnResourcePolicyProps
@@ -31,15 +42,12 @@ import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment
 import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachmentProps
 import software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object secretsmanager {
     /**
      * Options to add a secret attachment to a secret.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -50,7 +58,9 @@ public object secretsmanager {
      * .build();
      * ```
      */
-    public inline fun attachedSecretOptions(block: AttachedSecretOptionsDsl.() -> Unit = {}): AttachedSecretOptions {
+    public inline fun attachedSecretOptions(
+        block: AttachedSecretOptionsDsl.() -> Unit = {}
+    ): AttachedSecretOptions {
         val builder = AttachedSecretOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -59,22 +69,20 @@ public object secretsmanager {
     /**
      * Attaches a resource-based permission policy to a secret.
      *
-     * A resource-based policy is optional. For more information, see [Authentication and access
-   * control for Secrets
-   * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)
+     * A resource-based policy is optional. For more information, see
+     * [Authentication and access control for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)
      *
-     * For information about attaching a policy in the console, see [Attach a permissions policy to a
-   * secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html)
+     * For information about attaching a policy in the console, see
+     * [Attach a permissions policy to a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html)
      * .
      *
-     * *Required permissions:* `secretsmanager:PutResourcePolicy` . For more information, see [IAM
-   * policy actions for Secrets
-   * Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions)
-     * and [Authentication and access control in Secrets
-   * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html) .
+     * *Required permissions:* `secretsmanager:PutResourcePolicy` . For more information, see
+     * [IAM policy actions for Secrets Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions)
+     * and
+     * [Authentication and access control in Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)
+     * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -94,7 +102,7 @@ public object secretsmanager {
     public inline fun cfnResourcePolicy(
         scope: Construct,
         id: String,
-        block: CfnResourcePolicyDsl.() -> Unit = {}
+        block: CfnResourcePolicyDsl.() -> Unit = {},
     ): CfnResourcePolicy {
         val builder = CfnResourcePolicyDsl(scope, id)
         builder.apply(block)
@@ -105,7 +113,6 @@ public object secretsmanager {
      * Properties for defining a `CfnResourcePolicy`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -121,36 +128,37 @@ public object secretsmanager {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)
      */
-    public inline fun cfnResourcePolicyProps(block: CfnResourcePolicyPropsDsl.() -> Unit = {}): CfnResourcePolicyProps {
+    public inline fun cfnResourcePolicyProps(
+        block: CfnResourcePolicyPropsDsl.() -> Unit = {}
+    ): CfnResourcePolicyProps {
         val builder = CfnResourcePolicyPropsDsl()
         builder.apply(block)
         return builder.build()
     }
 
     /**
-     * Sets the rotation schedule and Lambda rotation function for a secret. For more information, see
-     * [How rotation
-   * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
+     * Sets the rotation schedule and Lambda rotation function for a secret. For more information,
+     * see
+     * [How rotation works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html)
+     * .
      *
-     * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
-   * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+     * For Amazon RDS master user credentials, see
+     * [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
      * For the rotation function, you have two options:
-     *
-     * * You can create a new rotation function based on one of the [Secrets Manager rotation function
-   * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
-     * by using `HostedRotationLambda` .
+     * * You can create a new rotation function based on one of the
+     *   [Secrets Manager rotation function templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+     *   by using `HostedRotationLambda` .
      * * You can choose an existing rotation function by using `RotationLambdaARN` .
      *
      * For database secrets, if you define both the secret and the database or service in the AWS
      * CloudFormation template, then you need to define the
      * [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)
-     * resource to populate the secret with the connection details of the database or service before you
-     * attempt to configure rotation.
+     * resource to populate the secret with the connection details of the database or service before
+     * you attempt to configure rotation.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -188,7 +196,7 @@ public object secretsmanager {
     public inline fun cfnRotationSchedule(
         scope: Construct,
         id: String,
-        block: CfnRotationScheduleDsl.() -> Unit = {}
+        block: CfnRotationScheduleDsl.() -> Unit = {},
     ): CfnRotationSchedule {
         val builder = CfnRotationScheduleDsl(scope, id)
         builder.apply(block)
@@ -196,19 +204,18 @@ public object secretsmanager {
     }
 
     /**
-     * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
-   * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+     * Creates a new Lambda rotation function based on one of the
+     * [Secrets Manager rotation function templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * .
      *
      * You must specify `Transform: AWS::SecretsManager-2020-07-23` at the beginning of the
      * CloudFormation template.
      *
-     * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
-   * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+     * For Amazon RDS master user credentials, see
+     * [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -233,8 +240,7 @@ public object secretsmanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)
      */
     public inline fun cfnRotationScheduleHostedRotationLambdaProperty(
-        block: CfnRotationScheduleHostedRotationLambdaPropertyDsl.() -> Unit =
-            {}
+        block: CfnRotationScheduleHostedRotationLambdaPropertyDsl.() -> Unit = {}
     ): CfnRotationSchedule.HostedRotationLambdaProperty {
         val builder = CfnRotationScheduleHostedRotationLambdaPropertyDsl()
         builder.apply(block)
@@ -245,7 +251,6 @@ public object secretsmanager {
      * Properties for defining a `CfnRotationSchedule`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -279,7 +284,9 @@ public object secretsmanager {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
      */
-    public inline fun cfnRotationScheduleProps(block: CfnRotationSchedulePropsDsl.() -> Unit = {}): CfnRotationScheduleProps {
+    public inline fun cfnRotationScheduleProps(
+        block: CfnRotationSchedulePropsDsl.() -> Unit = {}
+    ): CfnRotationScheduleProps {
         val builder = CfnRotationSchedulePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -288,11 +295,10 @@ public object secretsmanager {
     /**
      * The rotation schedule and window.
      *
-     * We recommend you use `ScheduleExpression` to set a cron or rate expression for the schedule and
-     * `Duration` to set the length of the rotation window.
+     * We recommend you use `ScheduleExpression` to set a cron or rate expression for the schedule
+     * and `Duration` to set the length of the rotation window.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -307,8 +313,7 @@ public object secretsmanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-rotationrules.html)
      */
     public inline fun cfnRotationScheduleRotationRulesProperty(
-        block: CfnRotationScheduleRotationRulesPropertyDsl.() -> Unit =
-            {}
+        block: CfnRotationScheduleRotationRulesPropertyDsl.() -> Unit = {}
     ): CfnRotationSchedule.RotationRulesProperty {
         val builder = CfnRotationScheduleRotationRulesPropertyDsl()
         builder.apply(block)
@@ -321,31 +326,31 @@ public object secretsmanager {
      * A *secret* can be a password, a set of credentials such as a user name and password, an OAuth
      * token, or other secret information that you store in an encrypted form in Secrets Manager.
      *
-     * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
-   * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+     * For Amazon RDS master user credentials, see
+     * [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
      * To retrieve a secret in a CloudFormation template, use a *dynamic reference* . For more
-     * information, see [Retrieve a secret in an AWS CloudFormation
-   * resource](https://docs.aws.amazon.com/secretsmanager/latest/userguide/cfn-example_reference-secret.html)
+     * information, see
+     * [Retrieve a secret in an AWS CloudFormation resource](https://docs.aws.amazon.com/secretsmanager/latest/userguide/cfn-example_reference-secret.html)
      * .
      *
      * A common scenario is to first create a secret with `GenerateSecretString` , which generates a
-     * password, and then use a dynamic reference to retrieve the username and password from the secret
-     * to use as credentials for a new database. See the example *Creating a Redshift cluster and a
-     * secret for the admin credentials* .
+     * password, and then use a dynamic reference to retrieve the username and password from the
+     * secret to use as credentials for a new database. See the example *Creating a Redshift cluster
+     * and a secret for the admin credentials* .
      *
-     * For information about creating a secret in the console, see [Create a
-   * secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)
+     * For information about creating a secret in the console, see
+     * [Create a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)
      * . For information about creating a secret using the CLI or SDK, see
      * [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html)
      * .
      *
-     * For information about retrieving a secret in code, see [Retrieve secrets from Secrets
-   * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html) .
+     * For information about retrieving a secret in code, see
+     * [Retrieve secrets from Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html)
+     * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -384,7 +389,7 @@ public object secretsmanager {
     public inline fun cfnSecret(
         scope: Construct,
         id: String,
-        block: CfnSecretDsl.() -> Unit = {}
+        block: CfnSecretDsl.() -> Unit = {},
     ): CfnSecret {
         val builder = CfnSecretDsl(scope, id)
         builder.apply(block)
@@ -397,14 +402,13 @@ public object secretsmanager {
      * We recommend that you specify the maximum length and include every character type that the
      * system you are generating a password for can support.
      *
-     * *Required permissions:* `secretsmanager:GetRandomPassword` . For more information, see [IAM
-   * policy actions for Secrets
-   * Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions)
-     * and [Authentication and access control in Secrets
-   * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html) .
+     * *Required permissions:* `secretsmanager:GetRandomPassword` . For more information, see
+     * [IAM policy actions for Secrets Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions)
+     * and
+     * [Authentication and access control in Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)
+     * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -427,8 +431,7 @@ public object secretsmanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-generatesecretstring.html)
      */
     public inline fun cfnSecretGenerateSecretStringProperty(
-        block: CfnSecretGenerateSecretStringPropertyDsl.() -> Unit =
-            {}
+        block: CfnSecretGenerateSecretStringPropertyDsl.() -> Unit = {}
     ): CfnSecret.GenerateSecretStringProperty {
         val builder = CfnSecretGenerateSecretStringPropertyDsl()
         builder.apply(block)
@@ -439,7 +442,6 @@ public object secretsmanager {
      * Properties for defining a `CfnSecret`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -485,7 +487,6 @@ public object secretsmanager {
      * Specifies a `Region` and the `KmsKeyId` for a replica secret.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -499,7 +500,9 @@ public object secretsmanager {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html)
      */
-    public inline fun cfnSecretReplicaRegionProperty(block: CfnSecretReplicaRegionPropertyDsl.() -> Unit = {}): CfnSecret.ReplicaRegionProperty {
+    public inline fun cfnSecretReplicaRegionProperty(
+        block: CfnSecretReplicaRegionPropertyDsl.() -> Unit = {}
+    ): CfnSecret.ReplicaRegionProperty {
         val builder = CfnSecretReplicaRegionPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -507,21 +510,19 @@ public object secretsmanager {
 
     /**
      * The `AWS::SecretsManager::SecretTargetAttachment` resource completes the final link between a
-     * Secrets Manager secret and the associated database by adding the database connection information
-     * to the secret JSON.
+     * Secrets Manager secret and the associated database by adding the database connection
+     * information to the secret JSON.
      *
      * If you want to turn on automatic rotation for a database credential secret, the secret must
-     * contain the database connection information. For more information, see [JSON structure of Secrets
-   * Manager database credential
-   * secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)
+     * contain the database connection information. For more information, see
+     * [JSON structure of Secrets Manager database credential secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)
      * .
      *
-     * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
-   * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+     * For Amazon RDS master user credentials, see
+     * [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -539,7 +540,7 @@ public object secretsmanager {
     public inline fun cfnSecretTargetAttachment(
         scope: Construct,
         id: String,
-        block: CfnSecretTargetAttachmentDsl.() -> Unit = {}
+        block: CfnSecretTargetAttachmentDsl.() -> Unit = {},
     ): CfnSecretTargetAttachment {
         val builder = CfnSecretTargetAttachmentDsl(scope, id)
         builder.apply(block)
@@ -550,7 +551,6 @@ public object secretsmanager {
      * Properties for defining a `CfnSecretTargetAttachment`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -565,7 +565,9 @@ public object secretsmanager {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)
      */
-    public inline fun cfnSecretTargetAttachmentProps(block: CfnSecretTargetAttachmentPropsDsl.() -> Unit = {}): CfnSecretTargetAttachmentProps {
+    public inline fun cfnSecretTargetAttachmentProps(
+        block: CfnSecretTargetAttachmentPropsDsl.() -> Unit = {}
+    ): CfnSecretTargetAttachmentProps {
         val builder = CfnSecretTargetAttachmentPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -575,7 +577,6 @@ public object secretsmanager {
      * Multi user hosted rotation options.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -605,7 +606,9 @@ public object secretsmanager {
      * .build();
      * ```
      */
-    public inline fun multiUserHostedRotationOptions(block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}): MultiUserHostedRotationOptions {
+    public inline fun multiUserHostedRotationOptions(
+        block: MultiUserHostedRotationOptionsDsl.() -> Unit = {}
+    ): MultiUserHostedRotationOptions {
         val builder = MultiUserHostedRotationOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -615,7 +618,6 @@ public object secretsmanager {
      * Secret replica region.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -643,14 +645,12 @@ public object secretsmanager {
      * You almost never need to define this construct directly.
      *
      * All AWS resources that support resource policies have a method called
-     * `addToResourcePolicy()`, which will automatically create a new resource
-     * policy if one doesn't exist yet, otherwise it will add to the existing
-     * policy.
+     * `addToResourcePolicy()`, which will automatically create a new resource policy if one doesn't
+     * exist yet, otherwise it will add to the existing policy.
      *
      * Prefer to use `addToResourcePolicy()` instead.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -664,7 +664,7 @@ public object secretsmanager {
     public inline fun resourcePolicy(
         scope: Construct,
         id: String,
-        block: ResourcePolicyDsl.() -> Unit = {}
+        block: ResourcePolicyDsl.() -> Unit = {},
     ): ResourcePolicy {
         val builder = ResourcePolicyDsl(scope, id)
         builder.apply(block)
@@ -675,7 +675,6 @@ public object secretsmanager {
      * Construction properties for a ResourcePolicy.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -686,7 +685,9 @@ public object secretsmanager {
      * .build();
      * ```
      */
-    public inline fun resourcePolicyProps(block: ResourcePolicyPropsDsl.() -> Unit = {}): ResourcePolicyProps {
+    public inline fun resourcePolicyProps(
+        block: ResourcePolicyPropsDsl.() -> Unit = {}
+    ): ResourcePolicyProps {
         val builder = ResourcePolicyPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -696,7 +697,6 @@ public object secretsmanager {
      * A rotation schedule.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -719,7 +719,7 @@ public object secretsmanager {
     public inline fun rotationSchedule(
         scope: Construct,
         id: String,
-        block: RotationScheduleDsl.() -> Unit = {}
+        block: RotationScheduleDsl.() -> Unit = {},
     ): RotationSchedule {
         val builder = RotationScheduleDsl(scope, id)
         builder.apply(block)
@@ -730,7 +730,6 @@ public object secretsmanager {
      * Options to add a rotation schedule to a secret.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * Function fn;
@@ -742,7 +741,9 @@ public object secretsmanager {
      * .build());
      * ```
      */
-    public inline fun rotationScheduleOptions(block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationScheduleOptions {
+    public inline fun rotationScheduleOptions(
+        block: RotationScheduleOptionsDsl.() -> Unit = {}
+    ): RotationScheduleOptions {
         val builder = RotationScheduleOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -752,7 +753,6 @@ public object secretsmanager {
      * Construction properties for a RotationSchedule.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -772,7 +772,9 @@ public object secretsmanager {
      * .build();
      * ```
      */
-    public inline fun rotationScheduleProps(block: RotationSchedulePropsDsl.() -> Unit = {}): RotationScheduleProps {
+    public inline fun rotationScheduleProps(
+        block: RotationSchedulePropsDsl.() -> Unit = {}
+    ): RotationScheduleProps {
         val builder = RotationSchedulePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -782,7 +784,6 @@ public object secretsmanager {
      * Creates a new secret in AWS SecretsManager.
      *
      * Example:
-     *
      * ```
      * Stack stack;
      * User user = new User(this, "User");
@@ -798,7 +799,7 @@ public object secretsmanager {
     public inline fun secret(
         scope: Construct,
         id: String,
-        block: SecretDsl.() -> Unit = {}
+        block: SecretDsl.() -> Unit = {},
     ): Secret {
         val builder = SecretDsl(scope, id)
         builder.apply(block)
@@ -809,7 +810,6 @@ public object secretsmanager {
      * Attachment target specifications.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -821,8 +821,7 @@ public object secretsmanager {
      * ```
      */
     public inline fun secretAttachmentTargetProps(
-        block: SecretAttachmentTargetPropsDsl.() -> Unit =
-            {}
+        block: SecretAttachmentTargetPropsDsl.() -> Unit = {}
     ): SecretAttachmentTargetProps {
         val builder = SecretAttachmentTargetPropsDsl()
         builder.apply(block)
@@ -835,7 +834,6 @@ public object secretsmanager {
      * One ARN format (`secretArn`, `secretCompleteArn`, `secretPartialArn`) must be provided.
      *
      * Example:
-     *
      * ```
      * UserPool userpool = new UserPool(this, "Pool");
      * SecretValue secret = Secret.fromSecretAttributes(this, "CognitoClientSecret",
@@ -850,7 +848,9 @@ public object secretsmanager {
      * .build();
      * ```
      */
-    public inline fun secretAttributes(block: SecretAttributesDsl.() -> Unit = {}): SecretAttributes {
+    public inline fun secretAttributes(
+        block: SecretAttributesDsl.() -> Unit = {}
+    ): SecretAttributes {
         val builder = SecretAttributesDsl()
         builder.apply(block)
         return builder.build()
@@ -860,7 +860,6 @@ public object secretsmanager {
      * The properties required to create a new secret in AWS Secrets Manager.
      *
      * Example:
-     *
      * ```
      * Stack stack;
      * User user = new User(this, "User");
@@ -883,7 +882,6 @@ public object secretsmanager {
      * Secret rotation for a service or database.
      *
      * Example:
-     *
      * ```
      * Secret myUserSecret;
      * Secret myMasterSecret;
@@ -901,7 +899,7 @@ public object secretsmanager {
     public inline fun secretRotation(
         scope: Construct,
         id: String,
-        block: SecretRotationDsl.() -> Unit = {}
+        block: SecretRotationDsl.() -> Unit = {},
     ): SecretRotation {
         val builder = SecretRotationDsl(scope, id)
         builder.apply(block)
@@ -912,7 +910,6 @@ public object secretsmanager {
      * A secret rotation serverless application.
      *
      * Example:
-     *
      * ```
      * Secret myUserSecret;
      * Secret myMasterSecret;
@@ -930,7 +927,7 @@ public object secretsmanager {
     public inline fun secretRotationApplication(
         applicationId: String,
         semanticVersion: String,
-        block: SecretRotationApplicationDsl.() -> Unit = {}
+        block: SecretRotationApplicationDsl.() -> Unit = {},
     ): SecretRotationApplication {
         val builder = SecretRotationApplicationDsl(applicationId, semanticVersion)
         builder.apply(block)
@@ -941,7 +938,6 @@ public object secretsmanager {
      * Options for a SecretRotationApplication.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -953,8 +949,7 @@ public object secretsmanager {
      * ```
      */
     public inline fun secretRotationApplicationOptions(
-        block: SecretRotationApplicationOptionsDsl.() -> Unit =
-            {}
+        block: SecretRotationApplicationOptionsDsl.() -> Unit = {}
     ): SecretRotationApplicationOptions {
         val builder = SecretRotationApplicationOptionsDsl()
         builder.apply(block)
@@ -965,7 +960,6 @@ public object secretsmanager {
      * Construction properties for a SecretRotation.
      *
      * Example:
-     *
      * ```
      * Secret myUserSecret;
      * Secret myMasterSecret;
@@ -980,7 +974,9 @@ public object secretsmanager {
      * .build();
      * ```
      */
-    public inline fun secretRotationProps(block: SecretRotationPropsDsl.() -> Unit = {}): SecretRotationProps {
+    public inline fun secretRotationProps(
+        block: SecretRotationPropsDsl.() -> Unit = {}
+    ): SecretRotationProps {
         val builder = SecretRotationPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -990,7 +986,6 @@ public object secretsmanager {
      * Configuration to generate secrets such as passwords automatically.
      *
      * Example:
-     *
      * ```
      * IVpc vpc;
      * DatabaseInstance instance1 = DatabaseInstance.Builder.create(this, "PostgresInstance1")
@@ -1017,7 +1012,9 @@ public object secretsmanager {
      * .build();
      * ```
      */
-    public inline fun secretStringGenerator(block: SecretStringGeneratorDsl.() -> Unit = {}): SecretStringGenerator {
+    public inline fun secretStringGenerator(
+        block: SecretStringGeneratorDsl.() -> Unit = {}
+    ): SecretStringGenerator {
         val builder = SecretStringGeneratorDsl()
         builder.apply(block)
         return builder.build()
@@ -1027,7 +1024,6 @@ public object secretsmanager {
      * An attached secret.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1044,7 +1040,7 @@ public object secretsmanager {
     public inline fun secretTargetAttachment(
         scope: Construct,
         id: String,
-        block: SecretTargetAttachmentDsl.() -> Unit = {}
+        block: SecretTargetAttachmentDsl.() -> Unit = {},
     ): SecretTargetAttachment {
         val builder = SecretTargetAttachmentDsl(scope, id)
         builder.apply(block)
@@ -1055,7 +1051,6 @@ public object secretsmanager {
      * Construction properties for an AttachedSecret.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1069,8 +1064,7 @@ public object secretsmanager {
      * ```
      */
     public inline fun secretTargetAttachmentProps(
-        block: SecretTargetAttachmentPropsDsl.() -> Unit =
-            {}
+        block: SecretTargetAttachmentPropsDsl.() -> Unit = {}
     ): SecretTargetAttachmentProps {
         val builder = SecretTargetAttachmentPropsDsl()
         builder.apply(block)
@@ -1081,7 +1075,6 @@ public object secretsmanager {
      * Single user hosted rotation options.
      *
      * Example:
-     *
      * ```
      * IVpc myVpc;
      * Connections dbConnections;
@@ -1094,8 +1087,7 @@ public object secretsmanager {
      * ```
      */
     public inline fun singleUserHostedRotationOptions(
-        block: SingleUserHostedRotationOptionsDsl.() -> Unit =
-            {}
+        block: SingleUserHostedRotationOptionsDsl.() -> Unit = {}
     ): SingleUserHostedRotationOptions {
         val builder = SingleUserHostedRotationOptionsDsl()
         builder.apply(block)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.rds.OracleEngineVersion
  * Used in `DatabaseInstanceEngine.oracleEe`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.rds.OracleEngineVersion
  */
 @CdkDslMarker
 public class OracleEeInstanceEnginePropsDsl {
-  private val cdkBuilder: OracleEeInstanceEngineProps.Builder =
-      OracleEeInstanceEngineProps.builder()
+    private val cdkBuilder: OracleEeInstanceEngineProps.Builder =
+        OracleEeInstanceEngineProps.builder()
 
-  /**
-   * @param version The exact version of the engine to use. 
-   */
-  public fun version(version: OracleEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The exact version of the engine to use. */
+    public fun version(version: OracleEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): OracleEeInstanceEngineProps = cdkBuilder.build()
+    public fun build(): OracleEeInstanceEngineProps = cdkBuilder.build()
 }

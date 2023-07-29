@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  * isn't reevaluated when you reset the timer.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,15 +35,13 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  */
 @CdkDslMarker
 public class CfnDetectorModelResetTimerPropertyDsl {
-  private val cdkBuilder: CfnDetectorModel.ResetTimerProperty.Builder =
-      CfnDetectorModel.ResetTimerProperty.builder()
+    private val cdkBuilder: CfnDetectorModel.ResetTimerProperty.Builder =
+        CfnDetectorModel.ResetTimerProperty.builder()
 
-  /**
-   * @param timerName The name of the timer to reset. 
-   */
-  public fun timerName(timerName: String) {
-    cdkBuilder.timerName(timerName)
-  }
+    /** @param timerName The name of the timer to reset. */
+    public fun timerName(timerName: String) {
+        cdkBuilder.timerName(timerName)
+    }
 
-  public fun build(): CfnDetectorModel.ResetTimerProperty = cdkBuilder.build()
+    public fun build(): CfnDetectorModel.ResetTimerProperty = cdkBuilder.build()
 }

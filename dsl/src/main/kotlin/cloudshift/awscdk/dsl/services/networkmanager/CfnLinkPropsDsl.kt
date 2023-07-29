@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkmanager
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.networkmanager.CfnLinkProps
  * Properties for defining a `CfnLink`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,78 +52,65 @@ import software.amazon.awscdk.services.networkmanager.CfnLinkProps
  */
 @CdkDslMarker
 public class CfnLinkPropsDsl {
-  private val cdkBuilder: CfnLinkProps.Builder = CfnLinkProps.builder()
+    private val cdkBuilder: CfnLinkProps.Builder = CfnLinkProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param bandwidth The bandwidth for the link. 
-   */
-  public fun bandwidth(bandwidth: IResolvable) {
-    cdkBuilder.bandwidth(bandwidth)
-  }
+    /** @param bandwidth The bandwidth for the link. */
+    public fun bandwidth(bandwidth: IResolvable) {
+        cdkBuilder.bandwidth(bandwidth)
+    }
 
-  /**
-   * @param bandwidth The bandwidth for the link. 
-   */
-  public fun bandwidth(bandwidth: CfnLink.BandwidthProperty) {
-    cdkBuilder.bandwidth(bandwidth)
-  }
+    /** @param bandwidth The bandwidth for the link. */
+    public fun bandwidth(bandwidth: CfnLink.BandwidthProperty) {
+        cdkBuilder.bandwidth(bandwidth)
+    }
 
-  /**
-   * @param description A description of the link.
-   * Constraints: Maximum length of 256 characters.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * @param description A description of the link. Constraints: Maximum length of 256 characters.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param globalNetworkId The ID of the global network. 
-   */
-  public fun globalNetworkId(globalNetworkId: String) {
-    cdkBuilder.globalNetworkId(globalNetworkId)
-  }
+    /** @param globalNetworkId The ID of the global network. */
+    public fun globalNetworkId(globalNetworkId: String) {
+        cdkBuilder.globalNetworkId(globalNetworkId)
+    }
 
-  /**
-   * @param provider The provider of the link.
-   * Constraints: Maximum length of 128 characters. Cannot include the following characters: | \ ^
-   */
-  public fun provider(provider: String) {
-    cdkBuilder.provider(provider)
-  }
+    /**
+     * @param provider The provider of the link. Constraints: Maximum length of 128 characters.
+     *   Cannot include the following characters: | \ ^
+     */
+    public fun provider(provider: String) {
+        cdkBuilder.provider(provider)
+    }
 
-  /**
-   * @param siteId The ID of the site. 
-   */
-  public fun siteId(siteId: String) {
-    cdkBuilder.siteId(siteId)
-  }
+    /** @param siteId The ID of the site. */
+    public fun siteId(siteId: String) {
+        cdkBuilder.siteId(siteId)
+    }
 
-  /**
-   * @param tags The tags for the link.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags for the link. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags for the link.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags for the link. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * @param type The type of the link.
-   * Constraints: Maximum length of 128 characters. Cannot include the following characters: | \ ^
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * @param type The type of the link. Constraints: Maximum length of 128 characters. Cannot
+     *   include the following characters: | \ ^
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnLinkProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnLinkProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

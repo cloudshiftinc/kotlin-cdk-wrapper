@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  * Describes an IPv6 address.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  */
 @CdkDslMarker
 public class CfnSpotFleetInstanceIpv6AddressPropertyDsl {
-  private val cdkBuilder: CfnSpotFleet.InstanceIpv6AddressProperty.Builder =
-      CfnSpotFleet.InstanceIpv6AddressProperty.builder()
+    private val cdkBuilder: CfnSpotFleet.InstanceIpv6AddressProperty.Builder =
+        CfnSpotFleet.InstanceIpv6AddressProperty.builder()
 
-  /**
-   * @param ipv6Address The IPv6 address. 
-   */
-  public fun ipv6Address(ipv6Address: String) {
-    cdkBuilder.ipv6Address(ipv6Address)
-  }
+    /** @param ipv6Address The IPv6 address. */
+    public fun ipv6Address(ipv6Address: String) {
+        cdkBuilder.ipv6Address(ipv6Address)
+    }
 
-  public fun build(): CfnSpotFleet.InstanceIpv6AddressProperty = cdkBuilder.build()
+    public fun build(): CfnSpotFleet.InstanceIpv6AddressProperty = cdkBuilder.build()
 }

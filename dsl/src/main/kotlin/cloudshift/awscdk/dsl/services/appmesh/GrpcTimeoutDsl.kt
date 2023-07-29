@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.GrpcTimeout
  * Represents timeouts for GRPC protocols.
  *
  * Example:
- *
  * ```
  * VirtualRouter router;
  * VirtualNode node;
@@ -32,22 +40,17 @@ import software.amazon.awscdk.services.appmesh.GrpcTimeout
  */
 @CdkDslMarker
 public class GrpcTimeoutDsl {
-  private val cdkBuilder: GrpcTimeout.Builder = GrpcTimeout.builder()
+    private val cdkBuilder: GrpcTimeout.Builder = GrpcTimeout.builder()
 
-  /**
-   * @param idle Represents an idle timeout.
-   * The amount of time that a connection may be idle.
-   */
-  public fun idle(idle: Duration) {
-    cdkBuilder.idle(idle)
-  }
+    /** @param idle Represents an idle timeout. The amount of time that a connection may be idle. */
+    public fun idle(idle: Duration) {
+        cdkBuilder.idle(idle)
+    }
 
-  /**
-   * @param perRequest Represents per request timeout.
-   */
-  public fun perRequest(perRequest: Duration) {
-    cdkBuilder.perRequest(perRequest)
-  }
+    /** @param perRequest Represents per request timeout. */
+    public fun perRequest(perRequest: Duration) {
+        cdkBuilder.perRequest(perRequest)
+    }
 
-  public fun build(): GrpcTimeout = cdkBuilder.build()
+    public fun build(): GrpcTimeout = cdkBuilder.build()
 }

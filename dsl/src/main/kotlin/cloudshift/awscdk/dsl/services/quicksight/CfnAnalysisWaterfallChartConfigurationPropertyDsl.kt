@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The configuration for a waterfall visual.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -23,7 +31,7 @@ public class CfnAnalysisWaterfallChartConfigurationPropertyDsl {
 
     /**
      * @param categoryAxisDisplayOptions The options that determine the presentation of the category
-     * axis.
+     *   axis.
      */
     public fun categoryAxisDisplayOptions(categoryAxisDisplayOptions: IResolvable) {
         cdkBuilder.categoryAxisDisplayOptions(categoryAxisDisplayOptions)
@@ -31,15 +39,17 @@ public class CfnAnalysisWaterfallChartConfigurationPropertyDsl {
 
     /**
      * @param categoryAxisDisplayOptions The options that determine the presentation of the category
-     * axis.
+     *   axis.
      */
-    public fun categoryAxisDisplayOptions(categoryAxisDisplayOptions: CfnAnalysis.AxisDisplayOptionsProperty) {
+    public fun categoryAxisDisplayOptions(
+        categoryAxisDisplayOptions: CfnAnalysis.AxisDisplayOptionsProperty
+    ) {
         cdkBuilder.categoryAxisDisplayOptions(categoryAxisDisplayOptions)
     }
 
     /**
      * @param categoryAxisLabelOptions The options that determine the presentation of the category
-     * axis label.
+     *   axis label.
      */
     public fun categoryAxisLabelOptions(categoryAxisLabelOptions: IResolvable) {
         cdkBuilder.categoryAxisLabelOptions(categoryAxisLabelOptions)
@@ -47,50 +57,40 @@ public class CfnAnalysisWaterfallChartConfigurationPropertyDsl {
 
     /**
      * @param categoryAxisLabelOptions The options that determine the presentation of the category
-     * axis label.
+     *   axis label.
      */
-    public fun categoryAxisLabelOptions(categoryAxisLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty) {
+    public fun categoryAxisLabelOptions(
+        categoryAxisLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty
+    ) {
         cdkBuilder.categoryAxisLabelOptions(categoryAxisLabelOptions)
     }
 
-    /**
-     * @param dataLabels The data label configuration of a waterfall visual.
-     */
+    /** @param dataLabels The data label configuration of a waterfall visual. */
     public fun dataLabels(dataLabels: IResolvable) {
         cdkBuilder.dataLabels(dataLabels)
     }
 
-    /**
-     * @param dataLabels The data label configuration of a waterfall visual.
-     */
+    /** @param dataLabels The data label configuration of a waterfall visual. */
     public fun dataLabels(dataLabels: CfnAnalysis.DataLabelOptionsProperty) {
         cdkBuilder.dataLabels(dataLabels)
     }
 
-    /**
-     * @param fieldWells The field well configuration of a waterfall visual.
-     */
+    /** @param fieldWells The field well configuration of a waterfall visual. */
     public fun fieldWells(fieldWells: IResolvable) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
-    /**
-     * @param fieldWells The field well configuration of a waterfall visual.
-     */
+    /** @param fieldWells The field well configuration of a waterfall visual. */
     public fun fieldWells(fieldWells: CfnAnalysis.WaterfallChartFieldWellsProperty) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
-    /**
-     * @param legend The legend configuration of a waterfall visual.
-     */
+    /** @param legend The legend configuration of a waterfall visual. */
     public fun legend(legend: IResolvable) {
         cdkBuilder.legend(legend)
     }
 
-    /**
-     * @param legend The legend configuration of a waterfall visual.
-     */
+    /** @param legend The legend configuration of a waterfall visual. */
     public fun legend(legend: CfnAnalysis.LegendOptionsProperty) {
         cdkBuilder.legend(legend)
     }
@@ -105,13 +105,15 @@ public class CfnAnalysisWaterfallChartConfigurationPropertyDsl {
     /**
      * @param primaryYAxisDisplayOptions The options that determine the presentation of the y-axis.
      */
-    public fun primaryYAxisDisplayOptions(primaryYAxisDisplayOptions: CfnAnalysis.AxisDisplayOptionsProperty) {
+    public fun primaryYAxisDisplayOptions(
+        primaryYAxisDisplayOptions: CfnAnalysis.AxisDisplayOptionsProperty
+    ) {
         cdkBuilder.primaryYAxisDisplayOptions(primaryYAxisDisplayOptions)
     }
 
     /**
      * @param primaryYAxisLabelOptions The options that determine the presentation of the y-axis
-     * label.
+     *   label.
      */
     public fun primaryYAxisLabelOptions(primaryYAxisLabelOptions: IResolvable) {
         cdkBuilder.primaryYAxisLabelOptions(primaryYAxisLabelOptions)
@@ -119,51 +121,51 @@ public class CfnAnalysisWaterfallChartConfigurationPropertyDsl {
 
     /**
      * @param primaryYAxisLabelOptions The options that determine the presentation of the y-axis
-     * label.
+     *   label.
      */
-    public fun primaryYAxisLabelOptions(primaryYAxisLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty) {
+    public fun primaryYAxisLabelOptions(
+        primaryYAxisLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty
+    ) {
         cdkBuilder.primaryYAxisLabelOptions(primaryYAxisLabelOptions)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a waterfall visual.
-     */
+    /** @param sortConfiguration The sort configuration of a waterfall visual. */
     public fun sortConfiguration(sortConfiguration: IResolvable) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a waterfall visual.
-     */
-    public fun sortConfiguration(sortConfiguration: CfnAnalysis.WaterfallChartSortConfigurationProperty) {
+    /** @param sortConfiguration The sort configuration of a waterfall visual. */
+    public fun sortConfiguration(
+        sortConfiguration: CfnAnalysis.WaterfallChartSortConfigurationProperty
+    ) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param visualPalette The visual palette configuration of a waterfall visual.
-     */
+    /** @param visualPalette The visual palette configuration of a waterfall visual. */
     public fun visualPalette(visualPalette: IResolvable) {
         cdkBuilder.visualPalette(visualPalette)
     }
 
-    /**
-     * @param visualPalette The visual palette configuration of a waterfall visual.
-     */
+    /** @param visualPalette The visual palette configuration of a waterfall visual. */
     public fun visualPalette(visualPalette: CfnAnalysis.VisualPaletteProperty) {
         cdkBuilder.visualPalette(visualPalette)
     }
 
     /**
-     * @param waterfallChartOptions The options that determine the presentation of a waterfall visual.
+     * @param waterfallChartOptions The options that determine the presentation of a waterfall
+     *   visual.
      */
     public fun waterfallChartOptions(waterfallChartOptions: IResolvable) {
         cdkBuilder.waterfallChartOptions(waterfallChartOptions)
     }
 
     /**
-     * @param waterfallChartOptions The options that determine the presentation of a waterfall visual.
+     * @param waterfallChartOptions The options that determine the presentation of a waterfall
+     *   visual.
      */
-    public fun waterfallChartOptions(waterfallChartOptions: CfnAnalysis.WaterfallChartOptionsProperty) {
+    public fun waterfallChartOptions(
+        waterfallChartOptions: CfnAnalysis.WaterfallChartOptionsProperty
+    ) {
         cdkBuilder.waterfallChartOptions(waterfallChartOptions)
     }
 

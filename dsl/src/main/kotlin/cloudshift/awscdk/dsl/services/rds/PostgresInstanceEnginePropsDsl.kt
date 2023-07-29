@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.rds.PostgresInstanceEngineProps
  * Used in `DatabaseInstanceEngine.postgres`.
  *
  * Example:
- *
  * ```
  * Vpc vpc;
  * IInstanceEngine engine =
@@ -33,15 +41,13 @@ import software.amazon.awscdk.services.rds.PostgresInstanceEngineProps
  */
 @CdkDslMarker
 public class PostgresInstanceEnginePropsDsl {
-  private val cdkBuilder: PostgresInstanceEngineProps.Builder =
-      PostgresInstanceEngineProps.builder()
+    private val cdkBuilder: PostgresInstanceEngineProps.Builder =
+        PostgresInstanceEngineProps.builder()
 
-  /**
-   * @param version The exact version of the engine to use. 
-   */
-  public fun version(version: PostgresEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The exact version of the engine to use. */
+    public fun version(version: PostgresEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): PostgresInstanceEngineProps = cdkBuilder.build()
+    public fun build(): PostgresInstanceEngineProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * based on what's selected in other controls.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,37 +43,37 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateCascadingControlConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.CascadingControlConfigurationProperty.Builder =
-      CfnTemplate.CascadingControlConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.CascadingControlConfigurationProperty.Builder =
+        CfnTemplate.CascadingControlConfigurationProperty.builder()
 
-  private val _sourceControls: MutableList<Any> = mutableListOf()
+    private val _sourceControls: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param sourceControls A list of source controls that determine the values that are used in the
-   * current control.
-   */
-  public fun sourceControls(vararg sourceControls: Any) {
-    _sourceControls.addAll(listOf(*sourceControls))
-  }
+    /**
+     * @param sourceControls A list of source controls that determine the values that are used in
+     *   the current control.
+     */
+    public fun sourceControls(vararg sourceControls: Any) {
+        _sourceControls.addAll(listOf(*sourceControls))
+    }
 
-  /**
-   * @param sourceControls A list of source controls that determine the values that are used in the
-   * current control.
-   */
-  public fun sourceControls(sourceControls: Collection<Any>) {
-    _sourceControls.addAll(sourceControls)
-  }
+    /**
+     * @param sourceControls A list of source controls that determine the values that are used in
+     *   the current control.
+     */
+    public fun sourceControls(sourceControls: Collection<Any>) {
+        _sourceControls.addAll(sourceControls)
+    }
 
-  /**
-   * @param sourceControls A list of source controls that determine the values that are used in the
-   * current control.
-   */
-  public fun sourceControls(sourceControls: IResolvable) {
-    cdkBuilder.sourceControls(sourceControls)
-  }
+    /**
+     * @param sourceControls A list of source controls that determine the values that are used in
+     *   the current control.
+     */
+    public fun sourceControls(sourceControls: IResolvable) {
+        cdkBuilder.sourceControls(sourceControls)
+    }
 
-  public fun build(): CfnTemplate.CascadingControlConfigurationProperty {
-    if(_sourceControls.isNotEmpty()) cdkBuilder.sourceControls(_sourceControls)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTemplate.CascadingControlConfigurationProperty {
+        if (_sourceControls.isNotEmpty()) cdkBuilder.sourceControls(_sourceControls)
+        return cdkBuilder.build()
+    }
 }

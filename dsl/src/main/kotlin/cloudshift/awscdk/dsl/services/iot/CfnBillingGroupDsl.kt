@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -21,7 +30,6 @@ import software.constructs.Construct
  * action.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,66 +50,72 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnBillingGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnBillingGroup.Builder = CfnBillingGroup.Builder.create(scope, id)
+    private val cdkBuilder: CfnBillingGroup.Builder = CfnBillingGroup.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * The name of the billing group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupname)
-   * @param billingGroupName The name of the billing group. 
-   */
-  public fun billingGroupName(billingGroupName: String) {
-    cdkBuilder.billingGroupName(billingGroupName)
-  }
+    /**
+     * The name of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupname)
+     *
+     * @param billingGroupName The name of the billing group.
+     */
+    public fun billingGroupName(billingGroupName: String) {
+        cdkBuilder.billingGroupName(billingGroupName)
+    }
 
-  /**
-   * The properties of the billing group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
-   * @param billingGroupProperties The properties of the billing group. 
-   */
-  public fun billingGroupProperties(billingGroupProperties: IResolvable) {
-    cdkBuilder.billingGroupProperties(billingGroupProperties)
-  }
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     *
+     * @param billingGroupProperties The properties of the billing group.
+     */
+    public fun billingGroupProperties(billingGroupProperties: IResolvable) {
+        cdkBuilder.billingGroupProperties(billingGroupProperties)
+    }
 
-  /**
-   * The properties of the billing group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
-   * @param billingGroupProperties The properties of the billing group. 
-   */
-  public
-      fun billingGroupProperties(billingGroupProperties: CfnBillingGroup.BillingGroupPropertiesProperty) {
-    cdkBuilder.billingGroupProperties(billingGroupProperties)
-  }
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     *
+     * @param billingGroupProperties The properties of the billing group.
+     */
+    public fun billingGroupProperties(
+        billingGroupProperties: CfnBillingGroup.BillingGroupPropertiesProperty
+    ) {
+        cdkBuilder.billingGroupProperties(billingGroupProperties)
+    }
 
-  /**
-   * Metadata which can be used to manage the billing group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
-   * @param tags Metadata which can be used to manage the billing group. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * Metadata which can be used to manage the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+     *
+     * @param tags Metadata which can be used to manage the billing group.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * Metadata which can be used to manage the billing group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
-   * @param tags Metadata which can be used to manage the billing group. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * Metadata which can be used to manage the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+     *
+     * @param tags Metadata which can be used to manage the billing group.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnBillingGroup {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBillingGroup {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

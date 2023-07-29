@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apprunner
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.apprunner.CfnService
  * repository and service logs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.apprunner.CfnService
  */
 @CdkDslMarker
 public class CfnServiceEncryptionConfigurationPropertyDsl {
-  private val cdkBuilder: CfnService.EncryptionConfigurationProperty.Builder =
-      CfnService.EncryptionConfigurationProperty.builder()
+    private val cdkBuilder: CfnService.EncryptionConfigurationProperty.Builder =
+        CfnService.EncryptionConfigurationProperty.builder()
 
-  /**
-   * @param kmsKey The ARN of the KMS key that's used for encryption. 
-   */
-  public fun kmsKey(kmsKey: String) {
-    cdkBuilder.kmsKey(kmsKey)
-  }
+    /** @param kmsKey The ARN of the KMS key that's used for encryption. */
+    public fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
+    }
 
-  public fun build(): CfnService.EncryptionConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnService.EncryptionConfigurationProperty = cdkBuilder.build()
 }

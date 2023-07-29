@@ -1,37 +1,38 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
-import software.amazon.awscdk.services.licensemanager.CfnLicense
 import kotlin.Unit
+import software.amazon.awscdk.services.licensemanager.CfnLicense
 
-/**
- * Configuration for consumption of the license.
- */
+/** Configuration for consumption of the license. */
 public inline fun CfnLicense.setConsumptionConfiguration(
-    block: CfnLicenseConsumptionConfigurationPropertyDsl.() -> Unit =
-        {}
+    block: CfnLicenseConsumptionConfigurationPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnLicenseConsumptionConfigurationPropertyDsl()
     builder.apply(block)
     return setConsumptionConfiguration(builder.build())
 }
 
-/**
- * License issuer.
- */
+/** License issuer. */
 public inline fun CfnLicense.setIssuer(block: CfnLicenseIssuerDataPropertyDsl.() -> Unit = {}) {
     val builder = CfnLicenseIssuerDataPropertyDsl()
     builder.apply(block)
     return setIssuer(builder.build())
 }
 
-/**
- * Date and time range during which the license is valid, in ISO8601-UTC format.
- */
+/** Date and time range during which the license is valid, in ISO8601-UTC format. */
 public inline fun CfnLicense.setValidity(
-    block: CfnLicenseValidityDateFormatPropertyDsl.() -> Unit =
-        {}
+    block: CfnLicenseValidityDateFormatPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnLicenseValidityDateFormatPropertyDsl()
     builder.apply(block)

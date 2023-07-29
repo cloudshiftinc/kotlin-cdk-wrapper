@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The measure (metric) type field.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -270,59 +278,49 @@ public class CfnAnalysisMeasureFieldPropertyDsl {
     private val cdkBuilder: CfnAnalysis.MeasureFieldProperty.Builder =
         CfnAnalysis.MeasureFieldProperty.builder()
 
-    /**
-     * @param calculatedMeasureField The calculated measure field only used in pivot tables.
-     */
+    /** @param calculatedMeasureField The calculated measure field only used in pivot tables. */
     public fun calculatedMeasureField(calculatedMeasureField: IResolvable) {
         cdkBuilder.calculatedMeasureField(calculatedMeasureField)
     }
 
-    /**
-     * @param calculatedMeasureField The calculated measure field only used in pivot tables.
-     */
-    public fun calculatedMeasureField(calculatedMeasureField: CfnAnalysis.CalculatedMeasureFieldProperty) {
+    /** @param calculatedMeasureField The calculated measure field only used in pivot tables. */
+    public fun calculatedMeasureField(
+        calculatedMeasureField: CfnAnalysis.CalculatedMeasureFieldProperty
+    ) {
         cdkBuilder.calculatedMeasureField(calculatedMeasureField)
     }
 
-    /**
-     * @param categoricalMeasureField The measure type field with categorical type columns.
-     */
+    /** @param categoricalMeasureField The measure type field with categorical type columns. */
     public fun categoricalMeasureField(categoricalMeasureField: IResolvable) {
         cdkBuilder.categoricalMeasureField(categoricalMeasureField)
     }
 
-    /**
-     * @param categoricalMeasureField The measure type field with categorical type columns.
-     */
-    public fun categoricalMeasureField(categoricalMeasureField: CfnAnalysis.CategoricalMeasureFieldProperty) {
+    /** @param categoricalMeasureField The measure type field with categorical type columns. */
+    public fun categoricalMeasureField(
+        categoricalMeasureField: CfnAnalysis.CategoricalMeasureFieldProperty
+    ) {
         cdkBuilder.categoricalMeasureField(categoricalMeasureField)
     }
 
-    /**
-     * @param dateMeasureField The measure type field with date type columns.
-     */
+    /** @param dateMeasureField The measure type field with date type columns. */
     public fun dateMeasureField(dateMeasureField: IResolvable) {
         cdkBuilder.dateMeasureField(dateMeasureField)
     }
 
-    /**
-     * @param dateMeasureField The measure type field with date type columns.
-     */
+    /** @param dateMeasureField The measure type field with date type columns. */
     public fun dateMeasureField(dateMeasureField: CfnAnalysis.DateMeasureFieldProperty) {
         cdkBuilder.dateMeasureField(dateMeasureField)
     }
 
-    /**
-     * @param numericalMeasureField The measure type field with numerical type columns.
-     */
+    /** @param numericalMeasureField The measure type field with numerical type columns. */
     public fun numericalMeasureField(numericalMeasureField: IResolvable) {
         cdkBuilder.numericalMeasureField(numericalMeasureField)
     }
 
-    /**
-     * @param numericalMeasureField The measure type field with numerical type columns.
-     */
-    public fun numericalMeasureField(numericalMeasureField: CfnAnalysis.NumericalMeasureFieldProperty) {
+    /** @param numericalMeasureField The measure type field with numerical type columns. */
+    public fun numericalMeasureField(
+        numericalMeasureField: CfnAnalysis.NumericalMeasureFieldProperty
+    ) {
         cdkBuilder.numericalMeasureField(numericalMeasureField)
     }
 

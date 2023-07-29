@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  * The properties that are applied when using Trend Micro as a flow source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  */
 @CdkDslMarker
 public class CfnFlowTrendmicroSourcePropertiesPropertyDsl {
-  private val cdkBuilder: CfnFlow.TrendmicroSourcePropertiesProperty.Builder =
-      CfnFlow.TrendmicroSourcePropertiesProperty.builder()
+    private val cdkBuilder: CfnFlow.TrendmicroSourcePropertiesProperty.Builder =
+        CfnFlow.TrendmicroSourcePropertiesProperty.builder()
 
-  /**
-   * @param object The object specified in the Trend Micro flow source. 
-   */
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
+    /** @param object The object specified in the Trend Micro flow source. */
+    public fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+    }
 
-  public fun build(): CfnFlow.TrendmicroSourcePropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnFlow.TrendmicroSourcePropertiesProperty = cdkBuilder.build()
 }

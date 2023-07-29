@@ -8,11 +8,9 @@ import org.gradle.api.tasks.TaskAction
 
 abstract class AbstractCheckTask : AbstractReleaseTask() {
 
-    @get:Internal
-    protected abstract val message: String
+    @get:Internal protected abstract val message: String
 
-    @get:Input
-    internal abstract val fail: Property<Boolean>
+    @get:Input internal abstract val fail: Property<Boolean>
 
     @TaskAction
     fun action() {

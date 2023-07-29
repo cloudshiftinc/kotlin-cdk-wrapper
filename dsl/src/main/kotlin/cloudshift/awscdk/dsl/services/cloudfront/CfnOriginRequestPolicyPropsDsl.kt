@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicyProps
  * Properties for defining a `CfnOriginRequestPolicy`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,23 +52,20 @@ import software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicyProps
  */
 @CdkDslMarker
 public class CfnOriginRequestPolicyPropsDsl {
-  private val cdkBuilder: CfnOriginRequestPolicyProps.Builder =
-      CfnOriginRequestPolicyProps.builder()
+    private val cdkBuilder: CfnOriginRequestPolicyProps.Builder =
+        CfnOriginRequestPolicyProps.builder()
 
-  /**
-   * @param originRequestPolicyConfig The origin request policy configuration. 
-   */
-  public fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
-    cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)
-  }
+    /** @param originRequestPolicyConfig The origin request policy configuration. */
+    public fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
+        cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)
+    }
 
-  /**
-   * @param originRequestPolicyConfig The origin request policy configuration. 
-   */
-  public
-      fun originRequestPolicyConfig(originRequestPolicyConfig: CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty) {
-    cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)
-  }
+    /** @param originRequestPolicyConfig The origin request policy configuration. */
+    public fun originRequestPolicyConfig(
+        originRequestPolicyConfig: CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty
+    ) {
+        cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig)
+    }
 
-  public fun build(): CfnOriginRequestPolicyProps = cdkBuilder.build()
+    public fun build(): CfnOriginRequestPolicyProps = cdkBuilder.build()
 }

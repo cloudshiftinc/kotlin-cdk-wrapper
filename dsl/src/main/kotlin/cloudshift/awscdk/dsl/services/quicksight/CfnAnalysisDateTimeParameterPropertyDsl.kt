@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * A date-time parameter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,34 +35,28 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisDateTimeParameterPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.DateTimeParameterProperty.Builder =
-      CfnAnalysis.DateTimeParameterProperty.builder()
+    private val cdkBuilder: CfnAnalysis.DateTimeParameterProperty.Builder =
+        CfnAnalysis.DateTimeParameterProperty.builder()
 
-  private val _values: MutableList<String> = mutableListOf()
+    private val _values: MutableList<String> = mutableListOf()
 
-  /**
-   * @param name A display name for the date-time parameter. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name A display name for the date-time parameter. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param values The values for the date-time parameter. 
-   */
-  public fun values(vararg values: String) {
-    _values.addAll(listOf(*values))
-  }
+    /** @param values The values for the date-time parameter. */
+    public fun values(vararg values: String) {
+        _values.addAll(listOf(*values))
+    }
 
-  /**
-   * @param values The values for the date-time parameter. 
-   */
-  public fun values(values: Collection<String>) {
-    _values.addAll(values)
-  }
+    /** @param values The values for the date-time parameter. */
+    public fun values(values: Collection<String>) {
+        _values.addAll(values)
+    }
 
-  public fun build(): CfnAnalysis.DateTimeParameterProperty {
-    if(_values.isNotEmpty()) cdkBuilder.values(_values)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalysis.DateTimeParameterProperty {
+        if (_values.isNotEmpty()) cdkBuilder.values(_values)
+        return cdkBuilder.build()
+    }
 }

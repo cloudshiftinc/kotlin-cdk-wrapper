@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps
  * Properties of CloudFront OriginAccessIdentity.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,14 +30,12 @@ import software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps
  */
 @CdkDslMarker
 public class OriginAccessIdentityPropsDsl {
-  private val cdkBuilder: OriginAccessIdentityProps.Builder = OriginAccessIdentityProps.builder()
+    private val cdkBuilder: OriginAccessIdentityProps.Builder = OriginAccessIdentityProps.builder()
 
-  /**
-   * @param comment Any comments you want to include about the origin access identity.
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /** @param comment Any comments you want to include about the origin access identity. */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  public fun build(): OriginAccessIdentityProps = cdkBuilder.build()
+    public fun build(): OriginAccessIdentityProps = cdkBuilder.build()
 }

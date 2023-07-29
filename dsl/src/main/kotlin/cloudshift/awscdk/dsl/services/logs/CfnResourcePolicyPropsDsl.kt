@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.logs
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.logs.CfnResourcePolicyProps
  * Properties for defining a `CfnResourcePolicy`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,23 +33,21 @@ import software.amazon.awscdk.services.logs.CfnResourcePolicyProps
  */
 @CdkDslMarker
 public class CfnResourcePolicyPropsDsl {
-  private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()
+    private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()
 
-  /**
-   * @param policyDocument The details of the policy. 
-   * It must be formatted in JSON, and you must use backslashes to escape characters that need to be
-   * escaped in JSON strings, such as double quote marks.
-   */
-  public fun policyDocument(policyDocument: String) {
-    cdkBuilder.policyDocument(policyDocument)
-  }
+    /**
+     * @param policyDocument The details of the policy. It must be formatted in JSON, and you must
+     *   use backslashes to escape characters that need to be escaped in JSON strings, such as
+     *   double quote marks.
+     */
+    public fun policyDocument(policyDocument: String) {
+        cdkBuilder.policyDocument(policyDocument)
+    }
 
-  /**
-   * @param policyName The name of the resource policy. 
-   */
-  public fun policyName(policyName: String) {
-    cdkBuilder.policyName(policyName)
-  }
+    /** @param policyName The name of the resource policy. */
+    public fun policyName(policyName: String) {
+        cdkBuilder.policyName(policyName)
+    }
 
-  public fun build(): CfnResourcePolicyProps = cdkBuilder.build()
+    public fun build(): CfnResourcePolicyProps = cdkBuilder.build()
 }

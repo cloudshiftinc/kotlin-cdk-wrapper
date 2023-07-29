@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.inspector
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps
  * Properties for defining a `CfnAssessmentTarget`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,25 +33,24 @@ import software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps
  */
 @CdkDslMarker
 public class CfnAssessmentTargetPropsDsl {
-  private val cdkBuilder: CfnAssessmentTargetProps.Builder = CfnAssessmentTargetProps.builder()
+    private val cdkBuilder: CfnAssessmentTargetProps.Builder = CfnAssessmentTargetProps.builder()
 
-  /**
-   * @param assessmentTargetName The name of the Amazon Inspector assessment target.
-   * The name must be unique within the AWS account .
-   */
-  public fun assessmentTargetName(assessmentTargetName: String) {
-    cdkBuilder.assessmentTargetName(assessmentTargetName)
-  }
+    /**
+     * @param assessmentTargetName The name of the Amazon Inspector assessment target. The name must
+     *   be unique within the AWS account .
+     */
+    public fun assessmentTargetName(assessmentTargetName: String) {
+        cdkBuilder.assessmentTargetName(assessmentTargetName)
+    }
 
-  /**
-   * @param resourceGroupArn The ARN that specifies the resource group that is used to create the
-   * assessment target.
-   * If `resourceGroupArn` is not specified, all EC2 instances in the current AWS account and Region
-   * are included in the assessment target.
-   */
-  public fun resourceGroupArn(resourceGroupArn: String) {
-    cdkBuilder.resourceGroupArn(resourceGroupArn)
-  }
+    /**
+     * @param resourceGroupArn The ARN that specifies the resource group that is used to create the
+     *   assessment target. If `resourceGroupArn` is not specified, all EC2 instances in the current
+     *   AWS account and Region are included in the assessment target.
+     */
+    public fun resourceGroupArn(resourceGroupArn: String) {
+        cdkBuilder.resourceGroupArn(resourceGroupArn)
+    }
 
-  public fun build(): CfnAssessmentTargetProps = cdkBuilder.build()
+    public fun build(): CfnAssessmentTargetProps = cdkBuilder.build()
 }

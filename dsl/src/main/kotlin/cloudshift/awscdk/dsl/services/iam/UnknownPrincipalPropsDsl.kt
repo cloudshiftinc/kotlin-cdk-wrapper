@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iam
 
@@ -10,7 +19,6 @@ import software.constructs.IConstruct
  * Properties for an UnknownPrincipal.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,14 +32,12 @@ import software.constructs.IConstruct
  */
 @CdkDslMarker
 public class UnknownPrincipalPropsDsl {
-  private val cdkBuilder: UnknownPrincipalProps.Builder = UnknownPrincipalProps.builder()
+    private val cdkBuilder: UnknownPrincipalProps.Builder = UnknownPrincipalProps.builder()
 
-  /**
-   * @param resource The resource the role proxy is for. 
-   */
-  public fun resource(resource: IConstruct) {
-    cdkBuilder.resource(resource)
-  }
+    /** @param resource The resource the role proxy is for. */
+    public fun resource(resource: IConstruct) {
+        cdkBuilder.resource(resource)
+    }
 
-  public fun build(): UnknownPrincipalProps = cdkBuilder.build()
+    public fun build(): UnknownPrincipalProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewall
  * specify, to filter traffic in the subnet's Availability Zone.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,23 +37,21 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewall
  */
 @CdkDslMarker
 public class CfnFirewallSubnetMappingPropertyDsl {
-  private val cdkBuilder: CfnFirewall.SubnetMappingProperty.Builder =
-      CfnFirewall.SubnetMappingProperty.builder()
+    private val cdkBuilder: CfnFirewall.SubnetMappingProperty.Builder =
+        CfnFirewall.SubnetMappingProperty.builder()
 
-  /**
-   * @param ipAddressType The subnet's IP address type.
-   * You can't change the IP address type after you create the subnet.
-   */
-  public fun ipAddressType(ipAddressType: String) {
-    cdkBuilder.ipAddressType(ipAddressType)
-  }
+    /**
+     * @param ipAddressType The subnet's IP address type. You can't change the IP address type after
+     *   you create the subnet.
+     */
+    public fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
+    }
 
-  /**
-   * @param subnetId The unique identifier for the subnet. 
-   */
-  public fun subnetId(subnetId: String) {
-    cdkBuilder.subnetId(subnetId)
-  }
+    /** @param subnetId The unique identifier for the subnet. */
+    public fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+    }
 
-  public fun build(): CfnFirewall.SubnetMappingProperty = cdkBuilder.build()
+    public fun build(): CfnFirewall.SubnetMappingProperty = cdkBuilder.build()
 }

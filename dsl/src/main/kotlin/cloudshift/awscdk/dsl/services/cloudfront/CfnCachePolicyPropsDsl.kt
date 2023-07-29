@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps
  * Properties for defining a `CfnCachePolicy`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,21 +60,17 @@ import software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps
  */
 @CdkDslMarker
 public class CfnCachePolicyPropsDsl {
-  private val cdkBuilder: CfnCachePolicyProps.Builder = CfnCachePolicyProps.builder()
+    private val cdkBuilder: CfnCachePolicyProps.Builder = CfnCachePolicyProps.builder()
 
-  /**
-   * @param cachePolicyConfig The cache policy configuration. 
-   */
-  public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
-    cdkBuilder.cachePolicyConfig(cachePolicyConfig)
-  }
+    /** @param cachePolicyConfig The cache policy configuration. */
+    public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
+        cdkBuilder.cachePolicyConfig(cachePolicyConfig)
+    }
 
-  /**
-   * @param cachePolicyConfig The cache policy configuration. 
-   */
-  public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
-    cdkBuilder.cachePolicyConfig(cachePolicyConfig)
-  }
+    /** @param cachePolicyConfig The cache policy configuration. */
+    public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
+        cdkBuilder.cachePolicyConfig(cachePolicyConfig)
+    }
 
-  public fun build(): CfnCachePolicyProps = cdkBuilder.build()
+    public fun build(): CfnCachePolicyProps = cdkBuilder.build()
 }

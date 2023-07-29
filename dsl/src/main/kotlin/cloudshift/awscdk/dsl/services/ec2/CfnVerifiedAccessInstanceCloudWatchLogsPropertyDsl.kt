@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
  * Options for CloudWatch Logs as a logging destination.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
  */
 @CdkDslMarker
 public class CfnVerifiedAccessInstanceCloudWatchLogsPropertyDsl {
-  private val cdkBuilder: CfnVerifiedAccessInstance.CloudWatchLogsProperty.Builder =
-      CfnVerifiedAccessInstance.CloudWatchLogsProperty.builder()
+    private val cdkBuilder: CfnVerifiedAccessInstance.CloudWatchLogsProperty.Builder =
+        CfnVerifiedAccessInstance.CloudWatchLogsProperty.builder()
 
-  /**
-   * @param enabled Indicates whether logging is enabled.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether logging is enabled. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Indicates whether logging is enabled.
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether logging is enabled. */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param logGroup The ID of the CloudWatch Logs log group.
-   */
-  public fun logGroup(logGroup: String) {
-    cdkBuilder.logGroup(logGroup)
-  }
+    /** @param logGroup The ID of the CloudWatch Logs log group. */
+    public fun logGroup(logGroup: String) {
+        cdkBuilder.logGroup(logGroup)
+    }
 
-  public fun build(): CfnVerifiedAccessInstance.CloudWatchLogsProperty = cdkBuilder.build()
+    public fun build(): CfnVerifiedAccessInstance.CloudWatchLogsProperty = cdkBuilder.build()
 }

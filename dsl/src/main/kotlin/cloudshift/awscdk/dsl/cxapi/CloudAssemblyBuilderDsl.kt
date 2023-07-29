@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cxapi
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 import kotlin.String
+import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 
 /**
  * Can be used to build a cloud assembly.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,9 +32,10 @@ import kotlin.String
  */
 @CdkDslMarker
 public class CloudAssemblyBuilderDsl(
-    outdir: String
+    outdir: String,
 ) {
-    private val cdkBuilder: CloudAssemblyBuilder.Builder = CloudAssemblyBuilder.Builder.create(outdir)
+    private val cdkBuilder: CloudAssemblyBuilder.Builder =
+        CloudAssemblyBuilder.Builder.create(outdir)
 
     /**
      * Use the given asset output directory.

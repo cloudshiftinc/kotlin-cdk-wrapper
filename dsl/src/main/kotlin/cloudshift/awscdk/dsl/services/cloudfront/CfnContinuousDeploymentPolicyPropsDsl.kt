@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyP
  * Properties for defining a `CfnContinuousDeploymentPolicy`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,25 +54,27 @@ import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyP
  */
 @CdkDslMarker
 public class CfnContinuousDeploymentPolicyPropsDsl {
-  private val cdkBuilder: CfnContinuousDeploymentPolicyProps.Builder =
-      CfnContinuousDeploymentPolicyProps.builder()
+    private val cdkBuilder: CfnContinuousDeploymentPolicyProps.Builder =
+        CfnContinuousDeploymentPolicyProps.builder()
 
-  /**
-   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
-   * policy. 
-   */
-  public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
-    cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
-  }
+    /**
+     * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous
+     *   deployment policy.
+     */
+    public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
+        cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
+    }
 
-  /**
-   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
-   * policy. 
-   */
-  public
-      fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty) {
-    cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
-  }
+    /**
+     * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous
+     *   deployment policy.
+     */
+    public fun continuousDeploymentPolicyConfig(
+        continuousDeploymentPolicyConfig:
+            CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty
+    ) {
+        cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
+    }
 
-  public fun build(): CfnContinuousDeploymentPolicyProps = cdkBuilder.build()
+    public fun build(): CfnContinuousDeploymentPolicyProps = cdkBuilder.build()
 }

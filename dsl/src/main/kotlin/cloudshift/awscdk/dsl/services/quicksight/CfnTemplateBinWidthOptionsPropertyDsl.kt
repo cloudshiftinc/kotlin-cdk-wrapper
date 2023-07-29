@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The options that determine the bin width of a histogram.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateBinWidthOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.BinWidthOptionsProperty.Builder =
-      CfnTemplate.BinWidthOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.BinWidthOptionsProperty.Builder =
+        CfnTemplate.BinWidthOptionsProperty.builder()
 
-  /**
-   * @param binCountLimit The options that determine the bin count limit.
-   */
-  public fun binCountLimit(binCountLimit: Number) {
-    cdkBuilder.binCountLimit(binCountLimit)
-  }
+    /** @param binCountLimit The options that determine the bin count limit. */
+    public fun binCountLimit(binCountLimit: Number) {
+        cdkBuilder.binCountLimit(binCountLimit)
+    }
 
-  /**
-   * @param value The options that determine the bin width value.
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The options that determine the bin width value. */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnTemplate.BinWidthOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.BinWidthOptionsProperty = cdkBuilder.build()
 }

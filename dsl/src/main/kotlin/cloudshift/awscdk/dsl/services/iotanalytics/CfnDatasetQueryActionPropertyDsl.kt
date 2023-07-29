@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
  * contents.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,42 +44,36 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
  */
 @CdkDslMarker
 public class CfnDatasetQueryActionPropertyDsl {
-  private val cdkBuilder: CfnDataset.QueryActionProperty.Builder =
-      CfnDataset.QueryActionProperty.builder()
+    private val cdkBuilder: CfnDataset.QueryActionProperty.Builder =
+        CfnDataset.QueryActionProperty.builder()
 
-  private val _filters: MutableList<Any> = mutableListOf()
+    private val _filters: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param filters Pre-filters applied to message data.
-   */
-  public fun filters(vararg filters: Any) {
-    _filters.addAll(listOf(*filters))
-  }
+    /** @param filters Pre-filters applied to message data. */
+    public fun filters(vararg filters: Any) {
+        _filters.addAll(listOf(*filters))
+    }
 
-  /**
-   * @param filters Pre-filters applied to message data.
-   */
-  public fun filters(filters: Collection<Any>) {
-    _filters.addAll(filters)
-  }
+    /** @param filters Pre-filters applied to message data. */
+    public fun filters(filters: Collection<Any>) {
+        _filters.addAll(filters)
+    }
 
-  /**
-   * @param filters Pre-filters applied to message data.
-   */
-  public fun filters(filters: IResolvable) {
-    cdkBuilder.filters(filters)
-  }
+    /** @param filters Pre-filters applied to message data. */
+    public fun filters(filters: IResolvable) {
+        cdkBuilder.filters(filters)
+    }
 
-  /**
-   * @param sqlQuery An "SqlQueryDatasetAction" object that uses an SQL query to automatically
-   * create data set contents. 
-   */
-  public fun sqlQuery(sqlQuery: String) {
-    cdkBuilder.sqlQuery(sqlQuery)
-  }
+    /**
+     * @param sqlQuery An "SqlQueryDatasetAction" object that uses an SQL query to automatically
+     *   create data set contents.
+     */
+    public fun sqlQuery(sqlQuery: String) {
+        cdkBuilder.sqlQuery(sqlQuery)
+    }
 
-  public fun build(): CfnDataset.QueryActionProperty {
-    if(_filters.isNotEmpty()) cdkBuilder.filters(_filters)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDataset.QueryActionProperty {
+        if (_filters.isNotEmpty()) cdkBuilder.filters(_filters)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotsitewise
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
  */
 @CdkDslMarker
 public class CfnAccessPolicyPortalPropertyDsl {
-  private val cdkBuilder: CfnAccessPolicy.PortalProperty.Builder =
-      CfnAccessPolicy.PortalProperty.builder()
+    private val cdkBuilder: CfnAccessPolicy.PortalProperty.Builder =
+        CfnAccessPolicy.PortalProperty.builder()
 
-  /**
-   * @param id The ID of the portal.
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The ID of the portal. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  public fun build(): CfnAccessPolicy.PortalProperty = cdkBuilder.build()
+    public fun build(): CfnAccessPolicy.PortalProperty = cdkBuilder.build()
 }

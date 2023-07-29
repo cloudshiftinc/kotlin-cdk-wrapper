@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * A parameter declaration for the `Integer` data type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -57,81 +65,70 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisIntegerParameterDeclarationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.IntegerParameterDeclarationProperty.Builder =
-      CfnAnalysis.IntegerParameterDeclarationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.IntegerParameterDeclarationProperty.Builder =
+        CfnAnalysis.IntegerParameterDeclarationProperty.builder()
 
-  private val _mappedDataSetParameters: MutableList<Any> = mutableListOf()
+    private val _mappedDataSetParameters: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param defaultValues The default values of a parameter.
-   * If the parameter is a single-value parameter, a maximum of one default value can be provided.
-   */
-  public fun defaultValues(defaultValues: IResolvable) {
-    cdkBuilder.defaultValues(defaultValues)
-  }
+    /**
+     * @param defaultValues The default values of a parameter. If the parameter is a single-value
+     *   parameter, a maximum of one default value can be provided.
+     */
+    public fun defaultValues(defaultValues: IResolvable) {
+        cdkBuilder.defaultValues(defaultValues)
+    }
 
-  /**
-   * @param defaultValues The default values of a parameter.
-   * If the parameter is a single-value parameter, a maximum of one default value can be provided.
-   */
-  public fun defaultValues(defaultValues: CfnAnalysis.IntegerDefaultValuesProperty) {
-    cdkBuilder.defaultValues(defaultValues)
-  }
+    /**
+     * @param defaultValues The default values of a parameter. If the parameter is a single-value
+     *   parameter, a maximum of one default value can be provided.
+     */
+    public fun defaultValues(defaultValues: CfnAnalysis.IntegerDefaultValuesProperty) {
+        cdkBuilder.defaultValues(defaultValues)
+    }
 
-  /**
-   * @param mappedDataSetParameters the value to be set.
-   */
-  public fun mappedDataSetParameters(vararg mappedDataSetParameters: Any) {
-    _mappedDataSetParameters.addAll(listOf(*mappedDataSetParameters))
-  }
+    /** @param mappedDataSetParameters the value to be set. */
+    public fun mappedDataSetParameters(vararg mappedDataSetParameters: Any) {
+        _mappedDataSetParameters.addAll(listOf(*mappedDataSetParameters))
+    }
 
-  /**
-   * @param mappedDataSetParameters the value to be set.
-   */
-  public fun mappedDataSetParameters(mappedDataSetParameters: Collection<Any>) {
-    _mappedDataSetParameters.addAll(mappedDataSetParameters)
-  }
+    /** @param mappedDataSetParameters the value to be set. */
+    public fun mappedDataSetParameters(mappedDataSetParameters: Collection<Any>) {
+        _mappedDataSetParameters.addAll(mappedDataSetParameters)
+    }
 
-  /**
-   * @param mappedDataSetParameters the value to be set.
-   */
-  public fun mappedDataSetParameters(mappedDataSetParameters: IResolvable) {
-    cdkBuilder.mappedDataSetParameters(mappedDataSetParameters)
-  }
+    /** @param mappedDataSetParameters the value to be set. */
+    public fun mappedDataSetParameters(mappedDataSetParameters: IResolvable) {
+        cdkBuilder.mappedDataSetParameters(mappedDataSetParameters)
+    }
 
-  /**
-   * @param name The name of the parameter that is being declared. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the parameter that is being declared. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param parameterValueType The value type determines whether the parameter is a single-value or
-   * multi-value parameter. 
-   */
-  public fun parameterValueType(parameterValueType: String) {
-    cdkBuilder.parameterValueType(parameterValueType)
-  }
+    /**
+     * @param parameterValueType The value type determines whether the parameter is a single-value
+     *   or multi-value parameter.
+     */
+    public fun parameterValueType(parameterValueType: String) {
+        cdkBuilder.parameterValueType(parameterValueType)
+    }
 
-  /**
-   * @param valueWhenUnset A parameter declaration for the `Integer` data type.
-   */
-  public fun valueWhenUnset(valueWhenUnset: IResolvable) {
-    cdkBuilder.valueWhenUnset(valueWhenUnset)
-  }
+    /** @param valueWhenUnset A parameter declaration for the `Integer` data type. */
+    public fun valueWhenUnset(valueWhenUnset: IResolvable) {
+        cdkBuilder.valueWhenUnset(valueWhenUnset)
+    }
 
-  /**
-   * @param valueWhenUnset A parameter declaration for the `Integer` data type.
-   */
-  public
-      fun valueWhenUnset(valueWhenUnset: CfnAnalysis.IntegerValueWhenUnsetConfigurationProperty) {
-    cdkBuilder.valueWhenUnset(valueWhenUnset)
-  }
+    /** @param valueWhenUnset A parameter declaration for the `Integer` data type. */
+    public fun valueWhenUnset(
+        valueWhenUnset: CfnAnalysis.IntegerValueWhenUnsetConfigurationProperty
+    ) {
+        cdkBuilder.valueWhenUnset(valueWhenUnset)
+    }
 
-  public fun build(): CfnAnalysis.IntegerParameterDeclarationProperty {
-    if(_mappedDataSetParameters.isNotEmpty())
-        cdkBuilder.mappedDataSetParameters(_mappedDataSetParameters)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalysis.IntegerParameterDeclarationProperty {
+        if (_mappedDataSetParameters.isNotEmpty())
+            cdkBuilder.mappedDataSetParameters(_mappedDataSetParameters)
+        return cdkBuilder.build()
+    }
 }

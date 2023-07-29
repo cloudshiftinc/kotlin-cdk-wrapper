@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apprunner
 
@@ -28,8 +37,8 @@ import software.constructs.Construct
  * same `ObservabilityConfigurationName` . App Runner creates multiple resources with incremental
  * `ObservabilityConfigurationRevision` values. When you specify a service and configure an
  * observability configuration resource, the service uses the latest active revision of the
- * observability configuration by default. You can optionally configure the service to use a specific
- * revision.
+ * observability configuration by default. You can optionally configure the service to use a
+ * specific revision.
  *
  * The observability configuration resource is designed to configure multiple features (currently
  * one feature, tracing). This resource takes optional parameters that describe the configuration of
@@ -37,7 +46,6 @@ import software.constructs.Construct
  * parameter, App Runner doesn't enable the feature.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -59,95 +67,101 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnObservabilityConfigurationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnObservabilityConfiguration.Builder =
-      CfnObservabilityConfiguration.Builder.create(scope, id)
+    private val cdkBuilder: CfnObservabilityConfiguration.Builder =
+        CfnObservabilityConfiguration.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * A name for the observability configuration.
-   *
-   * When you use it for the first time in an AWS Region , App Runner creates revision number `1` of
-   * this name. When you use the same name in subsequent calls, App Runner creates incremental
-   * revisions of the configuration.
-   *
-   *
-   * The name `DefaultConfiguration` is reserved. You can't use it to create a new observability
-   * configuration, and you can't create a revision of it.
-   *
-   * When you want to use your own observability configuration for your App Runner service, *create
-   * a configuration with a different name* , and then provide it when you create or update your
-   * service.
-   *
-   *
-   * If you don't specify a name, AWS CloudFormation generates a name for your observability
-   * configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-observabilityconfigurationname)
-   * @param observabilityConfigurationName A name for the observability configuration. 
-   */
-  public fun observabilityConfigurationName(observabilityConfigurationName: String) {
-    cdkBuilder.observabilityConfigurationName(observabilityConfigurationName)
-  }
+    /**
+     * A name for the observability configuration.
+     *
+     * When you use it for the first time in an AWS Region , App Runner creates revision number `1`
+     * of this name. When you use the same name in subsequent calls, App Runner creates incremental
+     * revisions of the configuration.
+     *
+     * The name `DefaultConfiguration` is reserved. You can't use it to create a new observability
+     * configuration, and you can't create a revision of it.
+     *
+     * When you want to use your own observability configuration for your App Runner service,
+     * *create a configuration with a different name* , and then provide it when you create or
+     * update your service.
+     *
+     * If you don't specify a name, AWS CloudFormation generates a name for your observability
+     * configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-observabilityconfigurationname)
+     *
+     * @param observabilityConfigurationName A name for the observability configuration.
+     */
+    public fun observabilityConfigurationName(observabilityConfigurationName: String) {
+        cdkBuilder.observabilityConfigurationName(observabilityConfigurationName)
+    }
 
-  /**
-   * A list of metadata items that you can associate with your observability configuration resource.
-   *
-   * A tag is a key-value pair.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-tags)
-   * @param tags A list of metadata items that you can associate with your observability
-   * configuration resource. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * A list of metadata items that you can associate with your observability configuration
+     * resource.
+     *
+     * A tag is a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-tags)
+     *
+     * @param tags A list of metadata items that you can associate with your observability
+     *   configuration resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * A list of metadata items that you can associate with your observability configuration resource.
-   *
-   * A tag is a key-value pair.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-tags)
-   * @param tags A list of metadata items that you can associate with your observability
-   * configuration resource. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * A list of metadata items that you can associate with your observability configuration
+     * resource.
+     *
+     * A tag is a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-tags)
+     *
+     * @param tags A list of metadata items that you can associate with your observability
+     *   configuration resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * The configuration of the tracing feature within this observability configuration.
-   *
-   * If you don't specify it, App Runner doesn't enable tracing.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-traceconfiguration)
-   * @param traceConfiguration The configuration of the tracing feature within this observability
-   * configuration. 
-   */
-  public fun traceConfiguration(traceConfiguration: IResolvable) {
-    cdkBuilder.traceConfiguration(traceConfiguration)
-  }
+    /**
+     * The configuration of the tracing feature within this observability configuration.
+     *
+     * If you don't specify it, App Runner doesn't enable tracing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-traceconfiguration)
+     *
+     * @param traceConfiguration The configuration of the tracing feature within this observability
+     *   configuration.
+     */
+    public fun traceConfiguration(traceConfiguration: IResolvable) {
+        cdkBuilder.traceConfiguration(traceConfiguration)
+    }
 
-  /**
-   * The configuration of the tracing feature within this observability configuration.
-   *
-   * If you don't specify it, App Runner doesn't enable tracing.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-traceconfiguration)
-   * @param traceConfiguration The configuration of the tracing feature within this observability
-   * configuration. 
-   */
-  public
-      fun traceConfiguration(traceConfiguration: CfnObservabilityConfiguration.TraceConfigurationProperty) {
-    cdkBuilder.traceConfiguration(traceConfiguration)
-  }
+    /**
+     * The configuration of the tracing feature within this observability configuration.
+     *
+     * If you don't specify it, App Runner doesn't enable tracing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html#cfn-apprunner-observabilityconfiguration-traceconfiguration)
+     *
+     * @param traceConfiguration The configuration of the tracing feature within this observability
+     *   configuration.
+     */
+    public fun traceConfiguration(
+        traceConfiguration: CfnObservabilityConfiguration.TraceConfigurationProperty
+    ) {
+        cdkBuilder.traceConfiguration(traceConfiguration)
+    }
 
-  public fun build(): CfnObservabilityConfiguration {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnObservabilityConfiguration {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

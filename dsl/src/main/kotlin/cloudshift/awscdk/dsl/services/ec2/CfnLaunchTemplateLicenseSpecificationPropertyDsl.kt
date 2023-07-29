@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -9,12 +18,11 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 /**
  * Specifies a license configuration for an instance.
  *
- * `LicenseSpecification` is a property of [AWS::EC2::LaunchTemplate
- * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * `LicenseSpecification` is a property of
+ * [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,15 +37,15 @@ import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
  */
 @CdkDslMarker
 public class CfnLaunchTemplateLicenseSpecificationPropertyDsl {
-  private val cdkBuilder: CfnLaunchTemplate.LicenseSpecificationProperty.Builder =
-      CfnLaunchTemplate.LicenseSpecificationProperty.builder()
+    private val cdkBuilder: CfnLaunchTemplate.LicenseSpecificationProperty.Builder =
+        CfnLaunchTemplate.LicenseSpecificationProperty.builder()
 
-  /**
-   * @param licenseConfigurationArn The Amazon Resource Name (ARN) of the license configuration.
-   */
-  public fun licenseConfigurationArn(licenseConfigurationArn: String) {
-    cdkBuilder.licenseConfigurationArn(licenseConfigurationArn)
-  }
+    /**
+     * @param licenseConfigurationArn The Amazon Resource Name (ARN) of the license configuration.
+     */
+    public fun licenseConfigurationArn(licenseConfigurationArn: String) {
+        cdkBuilder.licenseConfigurationArn(licenseConfigurationArn)
+    }
 
-  public fun build(): CfnLaunchTemplate.LicenseSpecificationProperty = cdkBuilder.build()
+    public fun build(): CfnLaunchTemplate.LicenseSpecificationProperty = cdkBuilder.build()
 }

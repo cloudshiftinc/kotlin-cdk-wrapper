@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  * The details of the Apache Kafka cluster to which the connector is connected.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,22 +38,18 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorKafkaClusterPropertyDsl {
-  private val cdkBuilder: CfnConnector.KafkaClusterProperty.Builder =
-      CfnConnector.KafkaClusterProperty.builder()
+    private val cdkBuilder: CfnConnector.KafkaClusterProperty.Builder =
+        CfnConnector.KafkaClusterProperty.builder()
 
-  /**
-   * @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. 
-   */
-  public fun apacheKafkaCluster(apacheKafkaCluster: IResolvable) {
-    cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
-  }
+    /** @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. */
+    public fun apacheKafkaCluster(apacheKafkaCluster: IResolvable) {
+        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
+    }
 
-  /**
-   * @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. 
-   */
-  public fun apacheKafkaCluster(apacheKafkaCluster: CfnConnector.ApacheKafkaClusterProperty) {
-    cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
-  }
+    /** @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. */
+    public fun apacheKafkaCluster(apacheKafkaCluster: CfnConnector.ApacheKafkaClusterProperty) {
+        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
+    }
 
-  public fun build(): CfnConnector.KafkaClusterProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.KafkaClusterProperty = cdkBuilder.build()
 }

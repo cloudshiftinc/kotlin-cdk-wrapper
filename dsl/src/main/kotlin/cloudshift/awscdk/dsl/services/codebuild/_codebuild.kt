@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.ArtifactsConfig
 import software.amazon.awscdk.services.codebuild.ArtifactsProps
 import software.amazon.awscdk.services.codebuild.BatchBuildConfig
@@ -49,15 +60,12 @@ import software.amazon.awscdk.services.codebuild.SourceProps
 import software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy
 import software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object codebuild {
     /**
      * The type returned from `IArtifacts#bind`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -88,7 +96,6 @@ public object codebuild {
      * Properties common to all Artifacts classes.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -108,7 +115,6 @@ public object codebuild {
      * The type returned from `IProject#enableBatchBuilds`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -120,7 +126,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun batchBuildConfig(block: BatchBuildConfigDsl.() -> Unit = {}): BatchBuildConfig {
+    public inline fun batchBuildConfig(
+        block: BatchBuildConfigDsl.() -> Unit = {}
+    ): BatchBuildConfig {
         val builder = BatchBuildConfigDsl()
         builder.apply(block)
         return builder.build()
@@ -130,7 +138,6 @@ public object codebuild {
      * The extra options passed to the `IProject.bindToCodePipeline` method.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -142,7 +149,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun bindToCodePipelineOptions(block: BindToCodePipelineOptionsDsl.() -> Unit = {}): BindToCodePipelineOptions {
+    public inline fun bindToCodePipelineOptions(
+        block: BindToCodePipelineOptionsDsl.() -> Unit = {}
+    ): BindToCodePipelineOptions {
         val builder = BindToCodePipelineOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -151,12 +160,10 @@ public object codebuild {
     /**
      * The source credentials used when contacting the BitBucket API.
      *
-     * **Note**: CodeBuild only allows a single credential for BitBucket
-     * to be saved in a given AWS account in a given region -
-     * any attempt to add more than one will result in an error.
+     * **Note**: CodeBuild only allows a single credential for BitBucket to be saved in a given AWS
+     * account in a given region - any attempt to add more than one will result in an error.
      *
      * Example:
-     *
      * ```
      * BitBucketSourceCredentials.Builder.create(this, "CodeBuildBitBucketCreds")
      * .username(SecretValue.secretsManager("my-bitbucket-creds",
@@ -169,7 +176,7 @@ public object codebuild {
     public inline fun bitBucketSourceCredentials(
         scope: Construct,
         id: String,
-        block: BitBucketSourceCredentialsDsl.() -> Unit = {}
+        block: BitBucketSourceCredentialsDsl.() -> Unit = {},
     ): BitBucketSourceCredentials {
         val builder = BitBucketSourceCredentialsDsl(scope, id)
         builder.apply(block)
@@ -180,7 +187,6 @@ public object codebuild {
      * Construction properties of `BitBucketSourceCredentials`.
      *
      * Example:
-     *
      * ```
      * BitBucketSourceCredentials.Builder.create(this, "CodeBuildBitBucketCreds")
      * .username(SecretValue.secretsManager("my-bitbucket-creds",
@@ -191,8 +197,7 @@ public object codebuild {
      * ```
      */
     public inline fun bitBucketSourceCredentialsProps(
-        block: BitBucketSourceCredentialsPropsDsl.() -> Unit =
-            {}
+        block: BitBucketSourceCredentialsPropsDsl.() -> Unit = {}
     ): BitBucketSourceCredentialsProps {
         val builder = BitBucketSourceCredentialsPropsDsl()
         builder.apply(block)
@@ -203,7 +208,6 @@ public object codebuild {
      * Construction properties for `BitBucketSource`.
      *
      * Example:
-     *
      * ```
      * ISource bbSource = Source.bitBucket(BitBucketSourceProps.builder()
      * .owner("owner")
@@ -211,7 +215,9 @@ public object codebuild {
      * .build());
      * ```
      */
-    public inline fun bitBucketSourceProps(block: BitBucketSourcePropsDsl.() -> Unit = {}): BitBucketSourceProps {
+    public inline fun bitBucketSourceProps(
+        block: BitBucketSourcePropsDsl.() -> Unit = {}
+    ): BitBucketSourceProps {
         val builder = BitBucketSourcePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -219,7 +225,6 @@ public object codebuild {
 
     /**
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -229,7 +234,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun bucketCacheOptions(block: BucketCacheOptionsDsl.() -> Unit = {}): BucketCacheOptions {
+    public inline fun bucketCacheOptions(
+        block: BucketCacheOptionsDsl.() -> Unit = {}
+    ): BucketCacheOptions {
         val builder = BucketCacheOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -237,7 +244,6 @@ public object codebuild {
 
     /**
      * Example:
-     *
      * ```
      * Vpc vpc;
      * SecurityGroup mySecurityGroup;
@@ -277,7 +283,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun buildEnvironment(block: BuildEnvironmentDsl.() -> Unit = {}): BuildEnvironment {
+    public inline fun buildEnvironment(
+        block: BuildEnvironmentDsl.() -> Unit = {}
+    ): BuildEnvironment {
         val builder = BuildEnvironmentDsl()
         builder.apply(block)
         return builder.build()
@@ -287,7 +295,6 @@ public object codebuild {
      * Location of a PEM certificate on S3.
      *
      * Example:
-     *
      * ```
      * Repository ecrRepository;
      * Project.Builder.create(this, "Project")
@@ -304,8 +311,7 @@ public object codebuild {
      * ```
      */
     public inline fun buildEnvironmentCertificate(
-        block: BuildEnvironmentCertificateDsl.() -> Unit =
-            {}
+        block: BuildEnvironmentCertificateDsl.() -> Unit = {}
     ): BuildEnvironmentCertificate {
         val builder = BuildEnvironmentCertificateDsl()
         builder.apply(block)
@@ -314,7 +320,6 @@ public object codebuild {
 
     /**
      * Example:
-     *
      * ```
      * // later:
      * PipelineProject project;
@@ -344,7 +349,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun buildEnvironmentVariable(block: BuildEnvironmentVariableDsl.() -> Unit = {}): BuildEnvironmentVariable {
+    public inline fun buildEnvironmentVariable(
+        block: BuildEnvironmentVariableDsl.() -> Unit = {}
+    ): BuildEnvironmentVariable {
         val builder = BuildEnvironmentVariableDsl()
         builder.apply(block)
         return builder.build()
@@ -354,7 +361,6 @@ public object codebuild {
      * Optional arguments to `IBuildImage.binder` - currently empty.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -362,7 +368,9 @@ public object codebuild {
      * BuildImageBindOptions buildImageBindOptions = BuildImageBindOptions.builder().build();
      * ```
      */
-    public inline fun buildImageBindOptions(block: BuildImageBindOptionsDsl.() -> Unit = {}): BuildImageBindOptions {
+    public inline fun buildImageBindOptions(
+        block: BuildImageBindOptionsDsl.() -> Unit = {}
+    ): BuildImageBindOptions {
         val builder = BuildImageBindOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -372,7 +380,6 @@ public object codebuild {
      * The return type from `IBuildImage.binder` - currently empty.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -380,7 +387,9 @@ public object codebuild {
      * BuildImageConfig buildImageConfig = BuildImageConfig.builder().build();
      * ```
      */
-    public inline fun buildImageConfig(block: BuildImageConfigDsl.() -> Unit = {}): BuildImageConfig {
+    public inline fun buildImageConfig(
+        block: BuildImageConfigDsl.() -> Unit = {}
+    ): BuildImageConfig {
         val builder = BuildImageConfigDsl()
         builder.apply(block)
         return builder.build()
@@ -392,13 +401,10 @@ public object codebuild {
      * For example, it tells CodeBuild where to get the source code and which build environment to
      * use.
      *
-     *
      * To unset or remove a project value via CFN, explicitly provide the attribute with value as
      * empty input.
      *
-     *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -573,7 +579,7 @@ public object codebuild {
     public inline fun cfnProject(
         scope: Construct,
         id: String,
-        block: CfnProjectDsl.() -> Unit = {}
+        block: CfnProjectDsl.() -> Unit = {},
     ): CfnProject {
         val builder = CfnProjectDsl(scope, id)
         builder.apply(block)
@@ -586,7 +592,6 @@ public object codebuild {
      * resource that specifies output settings for artifacts generated by an AWS CodeBuild build.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -608,8 +613,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html)
      */
     public inline fun cfnProjectArtifactsProperty(
-        block: CfnProjectArtifactsPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectArtifactsPropertyDsl.() -> Unit = {}
     ): CfnProject.ArtifactsProperty {
         val builder = CfnProjectArtifactsPropertyDsl()
         builder.apply(block)
@@ -620,7 +624,6 @@ public object codebuild {
      * Specifies restrictions for the batch build.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -634,8 +637,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html)
      */
     public inline fun cfnProjectBatchRestrictionsProperty(
-        block: CfnProjectBatchRestrictionsPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectBatchRestrictionsPropertyDsl.() -> Unit = {}
     ): CfnProject.BatchRestrictionsProperty {
         val builder = CfnProjectBatchRestrictionsPropertyDsl()
         builder.apply(block)
@@ -643,11 +645,10 @@ public object codebuild {
     }
 
     /**
-     * Contains information that defines how the AWS CodeBuild build project reports the build status
-     * to the source provider.
+     * Contains information that defines how the AWS CodeBuild build project reports the build
+     * status to the source provider.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -661,8 +662,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-buildstatusconfig.html)
      */
     public inline fun cfnProjectBuildStatusConfigProperty(
-        block: CfnProjectBuildStatusConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectBuildStatusConfigPropertyDsl.() -> Unit = {}
     ): CfnProject.BuildStatusConfigProperty {
         val builder = CfnProjectBuildStatusConfigPropertyDsl()
         builder.apply(block)
@@ -670,12 +670,12 @@ public object codebuild {
     }
 
     /**
-     * `CloudWatchLogs` is a property of the [AWS CodeBuild Project
-   * LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
-     * property type that specifies settings for CloudWatch logs generated by an AWS CodeBuild build.
+     * `CloudWatchLogs` is a property of the
+     * [AWS CodeBuild Project LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
+     * property type that specifies settings for CloudWatch logs generated by an AWS CodeBuild
+     * build.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -692,8 +692,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html)
      */
     public inline fun cfnProjectCloudWatchLogsConfigProperty(
-        block: CfnProjectCloudWatchLogsConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectCloudWatchLogsConfigPropertyDsl.() -> Unit = {}
     ): CfnProject.CloudWatchLogsConfigProperty {
         val builder = CfnProjectCloudWatchLogsConfigPropertyDsl()
         builder.apply(block)
@@ -706,7 +705,6 @@ public object codebuild {
      * resource that specifies the environment for an AWS CodeBuild project.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -735,8 +733,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
      */
     public inline fun cfnProjectEnvironmentProperty(
-        block: CfnProjectEnvironmentPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectEnvironmentPropertyDsl.() -> Unit = {}
     ): CfnProject.EnvironmentProperty {
         val builder = CfnProjectEnvironmentPropertyDsl()
         builder.apply(block)
@@ -744,15 +741,14 @@ public object codebuild {
     }
 
     /**
-     * `EnvironmentVariable` is a property of the [AWS CodeBuild Project
-   * Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
-     * property type that specifies the name and value of an environment variable for an AWS CodeBuild
-     * project environment. When you use the environment to run a build, these variables are available
-     * for your builds to use. `EnvironmentVariable` contains a list of `EnvironmentVariable` property
-     * types.
+     * `EnvironmentVariable` is a property of the
+     * [AWS CodeBuild Project Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
+     * property type that specifies the name and value of an environment variable for an AWS
+     * CodeBuild project environment. When you use the environment to run a build, these variables
+     * are available for your builds to use. `EnvironmentVariable` contains a list of
+     * `EnvironmentVariable` property types.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -768,8 +764,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html)
      */
     public inline fun cfnProjectEnvironmentVariableProperty(
-        block: CfnProjectEnvironmentVariablePropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectEnvironmentVariablePropertyDsl.() -> Unit = {}
     ): CfnProject.EnvironmentVariableProperty {
         val builder = CfnProjectEnvironmentVariablePropertyDsl()
         builder.apply(block)
@@ -777,13 +772,12 @@ public object codebuild {
     }
 
     /**
-     * `GitSubmodulesConfig` is a property of the [AWS CodeBuild Project
-   * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+     * `GitSubmodulesConfig` is a property of the
+     * [AWS CodeBuild Project Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
      * property type that specifies information about the Git submodules configuration for the build
      * project.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -796,8 +790,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html)
      */
     public inline fun cfnProjectGitSubmodulesConfigProperty(
-        block: CfnProjectGitSubmodulesConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectGitSubmodulesConfigPropertyDsl.() -> Unit = {}
     ): CfnProject.GitSubmodulesConfigProperty {
         val builder = CfnProjectGitSubmodulesConfigPropertyDsl()
         builder.apply(block)
@@ -805,13 +798,12 @@ public object codebuild {
     }
 
     /**
-     * `LogsConfig` is a property of the [AWS CodeBuild
-   * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
-     * resource that specifies information about logs for a build project. These can be logs in Amazon
-     * CloudWatch Logs, built in a specified S3 bucket, or both.
+     * `LogsConfig` is a property of the
+     * [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+     * resource that specifies information about logs for a build project. These can be logs in
+     * Amazon CloudWatch Logs, built in a specified S3 bucket, or both.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -835,8 +827,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
      */
     public inline fun cfnProjectLogsConfigProperty(
-        block: CfnProjectLogsConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectLogsConfigPropertyDsl.() -> Unit = {}
     ): CfnProject.LogsConfigProperty {
         val builder = CfnProjectLogsConfigPropertyDsl()
         builder.apply(block)
@@ -847,7 +838,6 @@ public object codebuild {
      * Contains configuration information about a batch build project.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -868,8 +858,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html)
      */
     public inline fun cfnProjectProjectBuildBatchConfigProperty(
-        block: CfnProjectProjectBuildBatchConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectProjectBuildBatchConfigPropertyDsl.() -> Unit = {}
     ): CfnProject.ProjectBuildBatchConfigProperty {
         val builder = CfnProjectProjectBuildBatchConfigPropertyDsl()
         builder.apply(block)
@@ -877,13 +866,12 @@ public object codebuild {
     }
 
     /**
-     * `ProjectCache` is a property of the [AWS CodeBuild
-   * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
-     * resource that specifies information about the cache for the build project. If `ProjectCache` is
-     * not specified, then both of its properties default to `NO_CACHE` .
+     * `ProjectCache` is a property of the
+     * [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+     * resource that specifies information about the cache for the build project. If `ProjectCache`
+     * is not specified, then both of its properties default to `NO_CACHE` .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -898,7 +886,9 @@ public object codebuild {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html)
      */
-    public inline fun cfnProjectProjectCacheProperty(block: CfnProjectProjectCachePropertyDsl.() -> Unit = {}): CfnProject.ProjectCacheProperty {
+    public inline fun cfnProjectProjectCacheProperty(
+        block: CfnProjectProjectCachePropertyDsl.() -> Unit = {}
+    ): CfnProject.ProjectCacheProperty {
         val builder = CfnProjectProjectCachePropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -907,11 +897,10 @@ public object codebuild {
     /**
      * Information about a file system created by Amazon Elastic File System (EFS).
      *
-     * For more information, see [What Is Amazon Elastic File
-   * System?](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html)
+     * For more information, see
+     * [What Is Amazon Elastic File System?](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html)
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -930,8 +919,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfilesystemlocation.html)
      */
     public inline fun cfnProjectProjectFileSystemLocationProperty(
-        block: CfnProjectProjectFileSystemLocationPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectProjectFileSystemLocationPropertyDsl.() -> Unit = {}
     ): CfnProject.ProjectFileSystemLocationProperty {
         val builder = CfnProjectProjectFileSystemLocationPropertyDsl()
         builder.apply(block)
@@ -942,7 +930,6 @@ public object codebuild {
      * A source identifier and its corresponding version.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -958,8 +945,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectsourceversion.html)
      */
     public inline fun cfnProjectProjectSourceVersionProperty(
-        block: CfnProjectProjectSourceVersionPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectProjectSourceVersionPropertyDsl.() -> Unit = {}
     ): CfnProject.ProjectSourceVersionProperty {
         val builder = CfnProjectProjectSourceVersionPropertyDsl()
         builder.apply(block)
@@ -967,17 +953,14 @@ public object codebuild {
     }
 
     /**
-     * `ProjectTriggers` is a property of the [AWS CodeBuild
-   * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+     * `ProjectTriggers` is a property of the
+     * [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
      * resource that specifies webhooks that trigger an AWS CodeBuild build.
-     *
      *
      * The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects. Use
      * the AWS CLI or AWS CodeBuild console to create the webhook.
      *
-     *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -997,8 +980,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
      */
     public inline fun cfnProjectProjectTriggersProperty(
-        block: CfnProjectProjectTriggersPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectProjectTriggersPropertyDsl.() -> Unit = {}
     ): CfnProject.ProjectTriggersProperty {
         val builder = CfnProjectProjectTriggersPropertyDsl()
         builder.apply(block)
@@ -1009,7 +991,6 @@ public object codebuild {
      * Properties for defining a `CfnProject`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1188,19 +1169,18 @@ public object codebuild {
     }
 
     /**
-     * `RegistryCredential` is a property of the [AWS CodeBuild Project
-   * Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
-     * property type that specifies information about credentials that provide access to a private Docker
-     * registry. When this is set:.
-     *
+     * `RegistryCredential` is a property of the
+     * [AWS CodeBuild Project Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
+     * property type that specifies information about credentials that provide access to a private
+     * Docker registry. When this is set:.
      * * `imagePullCredentialsType` must be set to `SERVICE_ROLE` .
      * * images cannot be curated or an Amazon ECR image.
      *
-     * For more information, see [Private Registry with AWS Secrets Manager Sample for AWS
-   * CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-private-registry.html) .
+     * For more information, see
+     * [Private Registry with AWS Secrets Manager Sample for AWS CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-private-registry.html)
+     * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1214,8 +1194,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html)
      */
     public inline fun cfnProjectRegistryCredentialProperty(
-        block: CfnProjectRegistryCredentialPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectRegistryCredentialPropertyDsl.() -> Unit = {}
     ): CfnProject.RegistryCredentialProperty {
         val builder = CfnProjectRegistryCredentialPropertyDsl()
         builder.apply(block)
@@ -1223,13 +1202,12 @@ public object codebuild {
     }
 
     /**
-     * `S3Logs` is a property of the [AWS CodeBuild Project
-   * LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
+     * `S3Logs` is a property of the
+     * [AWS CodeBuild Project LogsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-logsconfig.html)
      * property type that specifies settings for logs generated by an AWS CodeBuild build in an S3
      * bucket.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1244,22 +1222,23 @@ public object codebuild {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html)
      */
-    public inline fun cfnProjectS3LogsConfigProperty(block: CfnProjectS3LogsConfigPropertyDsl.() -> Unit = {}): CfnProject.S3LogsConfigProperty {
+    public inline fun cfnProjectS3LogsConfigProperty(
+        block: CfnProjectS3LogsConfigPropertyDsl.() -> Unit = {}
+    ): CfnProject.S3LogsConfigProperty {
         val builder = CfnProjectS3LogsConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
 
     /**
-     * `SourceAuth` is a property of the [AWS CodeBuild Project
-   * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
-     * property type that specifies authorization settings for AWS CodeBuild to access the source code to
-     * be built.
+     * `SourceAuth` is a property of the
+     * [AWS CodeBuild Project Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+     * property type that specifies authorization settings for AWS CodeBuild to access the source
+     * code to be built.
      *
      * `SourceAuth` is for use by the CodeBuild console only. Do not get or set it directly.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1274,8 +1253,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html)
      */
     public inline fun cfnProjectSourceAuthProperty(
-        block: CfnProjectSourceAuthPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectSourceAuthPropertyDsl.() -> Unit = {}
     ): CfnProject.SourceAuthProperty {
         val builder = CfnProjectSourceAuthPropertyDsl()
         builder.apply(block)
@@ -1289,7 +1267,6 @@ public object codebuild {
      * repository type and location.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1320,7 +1297,9 @@ public object codebuild {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
      */
-    public inline fun cfnProjectSourceProperty(block: CfnProjectSourcePropertyDsl.() -> Unit = {}): CfnProject.SourceProperty {
+    public inline fun cfnProjectSourceProperty(
+        block: CfnProjectSourcePropertyDsl.() -> Unit = {}
+    ): CfnProject.SourceProperty {
         val builder = CfnProjectSourcePropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -1329,13 +1308,12 @@ public object codebuild {
     /**
      * `VpcConfig` is a property of the
      * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
-     * resource that enable AWS CodeBuild to access resources in an Amazon VPC. For more information, see
-     * [Use AWS CodeBuild with Amazon Virtual Private
-   * Cloud](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html) in the *AWS
-     * CodeBuild User Guide* .
+     * resource that enable AWS CodeBuild to access resources in an Amazon VPC. For more
+     * information, see
+     * [Use AWS CodeBuild with Amazon Virtual Private Cloud](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html)
+     * in the *AWS CodeBuild User Guide* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1350,8 +1328,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html)
      */
     public inline fun cfnProjectVpcConfigProperty(
-        block: CfnProjectVpcConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectVpcConfigPropertyDsl.() -> Unit = {}
     ): CfnProject.VpcConfigProperty {
         val builder = CfnProjectVpcConfigPropertyDsl()
         builder.apply(block)
@@ -1359,17 +1336,14 @@ public object codebuild {
     }
 
     /**
-     * `WebhookFilter` is a structure of the `FilterGroups` property on the [AWS CodeBuild Project
-   * ProjectTriggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
+     * `WebhookFilter` is a structure of the `FilterGroups` property on the
+     * [AWS CodeBuild Project ProjectTriggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
      * property type that specifies which webhooks trigger an AWS CodeBuild build.
-     *
      *
      * The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects. Use
      * the AWS CLI or AWS CodeBuild console to create the webhook.
      *
-     *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1385,8 +1359,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html)
      */
     public inline fun cfnProjectWebhookFilterProperty(
-        block: CfnProjectWebhookFilterPropertyDsl.() -> Unit =
-            {}
+        block: CfnProjectWebhookFilterPropertyDsl.() -> Unit = {}
     ): CfnProject.WebhookFilterProperty {
         val builder = CfnProjectWebhookFilterPropertyDsl()
         builder.apply(block)
@@ -1399,7 +1372,6 @@ public object codebuild {
      * A report group contains a collection of reports.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1434,7 +1406,7 @@ public object codebuild {
     public inline fun cfnReportGroup(
         scope: Construct,
         id: String,
-        block: CfnReportGroupDsl.() -> Unit = {}
+        block: CfnReportGroupDsl.() -> Unit = {},
     ): CfnReportGroup {
         val builder = CfnReportGroupDsl(scope, id)
         builder.apply(block)
@@ -1445,7 +1417,6 @@ public object codebuild {
      * Properties for defining a `CfnReportGroup`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1477,7 +1448,9 @@ public object codebuild {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)
      */
-    public inline fun cfnReportGroupProps(block: CfnReportGroupPropsDsl.() -> Unit = {}): CfnReportGroupProps {
+    public inline fun cfnReportGroupProps(
+        block: CfnReportGroupPropsDsl.() -> Unit = {}
+    ): CfnReportGroupProps {
         val builder = CfnReportGroupPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1487,7 +1460,6 @@ public object codebuild {
      * Information about the location where the run of a report is exported.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1510,8 +1482,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-reportgroup-reportexportconfig.html)
      */
     public inline fun cfnReportGroupReportExportConfigProperty(
-        block: CfnReportGroupReportExportConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnReportGroupReportExportConfigPropertyDsl.() -> Unit = {}
     ): CfnReportGroup.ReportExportConfigProperty {
         val builder = CfnReportGroupReportExportConfigPropertyDsl()
         builder.apply(block)
@@ -1522,7 +1493,6 @@ public object codebuild {
      * Information about the S3 bucket where the raw data of a report are exported.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1542,8 +1512,7 @@ public object codebuild {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-reportgroup-s3reportexportconfig.html)
      */
     public inline fun cfnReportGroupS3ReportExportConfigProperty(
-        block: CfnReportGroupS3ReportExportConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnReportGroupS3ReportExportConfigPropertyDsl.() -> Unit = {}
     ): CfnReportGroup.S3ReportExportConfigProperty {
         val builder = CfnReportGroupS3ReportExportConfigPropertyDsl()
         builder.apply(block)
@@ -1554,18 +1523,14 @@ public object codebuild {
      * Information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository.
      *
      * We strongly recommend that you use AWS Secrets Manager to store your credentials. If you use
-     * Secrets Manager , you must have secrets in your secrets manager. For more information, see [Using
-   * Dynamic References to Specify Template
-   * Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * Secrets Manager , you must have secrets in your secrets manager. For more information, see
+     * [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
      * .
      *
-     *
-     * For security purposes, do not use plain text in your AWS CloudFormation template to store your
-     * credentials.
-     *
+     * For security purposes, do not use plain text in your AWS CloudFormation template to store
+     * your credentials.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1585,7 +1550,7 @@ public object codebuild {
     public inline fun cfnSourceCredential(
         scope: Construct,
         id: String,
-        block: CfnSourceCredentialDsl.() -> Unit = {}
+        block: CfnSourceCredentialDsl.() -> Unit = {},
     ): CfnSourceCredential {
         val builder = CfnSourceCredentialDsl(scope, id)
         builder.apply(block)
@@ -1596,7 +1561,6 @@ public object codebuild {
      * Properties for defining a `CfnSourceCredential`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1612,7 +1576,9 @@ public object codebuild {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html)
      */
-    public inline fun cfnSourceCredentialProps(block: CfnSourceCredentialPropsDsl.() -> Unit = {}): CfnSourceCredentialProps {
+    public inline fun cfnSourceCredentialProps(
+        block: CfnSourceCredentialPropsDsl.() -> Unit = {}
+    ): CfnSourceCredentialProps {
         val builder = CfnSourceCredentialPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1622,7 +1588,6 @@ public object codebuild {
      * Information about logs built to a CloudWatch Log Group for a build project.
      *
      * Example:
-     *
      * ```
      * Project.Builder.create(this, "Project")
      * .logging(LoggingOptions.builder()
@@ -1633,7 +1598,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun cloudWatchLoggingOptions(block: CloudWatchLoggingOptionsDsl.() -> Unit = {}): CloudWatchLoggingOptions {
+    public inline fun cloudWatchLoggingOptions(
+        block: CloudWatchLoggingOptionsDsl.() -> Unit = {}
+    ): CloudWatchLoggingOptions {
         val builder = CloudWatchLoggingOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -1643,7 +1610,6 @@ public object codebuild {
      * Construction properties for `CodeCommitSource`.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.services.codecommit.*;
      * Repository repo;
@@ -1662,7 +1628,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun codeCommitSourceProps(block: CodeCommitSourcePropsDsl.() -> Unit = {}): CodeCommitSourceProps {
+    public inline fun codeCommitSourceProps(
+        block: CodeCommitSourcePropsDsl.() -> Unit = {}
+    ): CodeCommitSourceProps {
         val builder = CodeCommitSourcePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1670,7 +1638,6 @@ public object codebuild {
 
     /**
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1758,7 +1725,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun commonProjectProps(block: CommonProjectPropsDsl.() -> Unit = {}): CommonProjectProps {
+    public inline fun commonProjectProps(
+        block: CommonProjectPropsDsl.() -> Unit = {}
+    ): CommonProjectProps {
         val builder = CommonProjectPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1769,7 +1738,6 @@ public object codebuild {
      * `LinuxBuildImage.fromDockerRegistry` or `WindowsBuildImage.fromDockerRegistry`.
      *
      * Example:
-     *
      * ```
      * .environment(BuildEnvironment.builder()
      * .buildImage(LinuxBuildImage.fromDockerRegistry("my-registry/my-repo",
@@ -1780,7 +1748,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun dockerImageOptions(block: DockerImageOptionsDsl.() -> Unit = {}): DockerImageOptions {
+    public inline fun dockerImageOptions(
+        block: DockerImageOptionsDsl.() -> Unit = {}
+    ): DockerImageOptions {
         val builder = DockerImageOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -1790,7 +1760,6 @@ public object codebuild {
      * Construction properties for `EfsFileSystemLocation`.
      *
      * Example:
-     *
      * ```
      * Project.Builder.create(this, "MyProject")
      * .buildSpec(BuildSpec.fromObject(Map.of(
@@ -1805,8 +1774,7 @@ public object codebuild {
      * ```
      */
     public inline fun efsFileSystemLocationProps(
-        block: EfsFileSystemLocationPropsDsl.() -> Unit =
-            {}
+        block: EfsFileSystemLocationPropsDsl.() -> Unit = {}
     ): EfsFileSystemLocationProps {
         val builder = EfsFileSystemLocationPropsDsl()
         builder.apply(block)
@@ -1817,7 +1785,6 @@ public object codebuild {
      * The type returned from `IFileSystemLocation#bind`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1834,7 +1801,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun fileSystemConfig(block: FileSystemConfigDsl.() -> Unit = {}): FileSystemConfig {
+    public inline fun fileSystemConfig(
+        block: FileSystemConfigDsl.() -> Unit = {}
+    ): FileSystemConfig {
         val builder = FileSystemConfigDsl()
         builder.apply(block)
         return builder.build()
@@ -1843,12 +1812,11 @@ public object codebuild {
     /**
      * The source credentials used when contacting the GitHub Enterprise API.
      *
-     * **Note**: CodeBuild only allows a single credential for GitHub Enterprise
-     * to be saved in a given AWS account in a given region -
-     * any attempt to add more than one will result in an error.
+     * **Note**: CodeBuild only allows a single credential for GitHub Enterprise to be saved in a
+     * given AWS account in a given region - any attempt to add more than one will result in an
+     * error.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1864,7 +1832,7 @@ public object codebuild {
     public inline fun gitHubEnterpriseSourceCredentials(
         scope: Construct,
         id: String,
-        block: GitHubEnterpriseSourceCredentialsDsl.() -> Unit = {}
+        block: GitHubEnterpriseSourceCredentialsDsl.() -> Unit = {},
     ): GitHubEnterpriseSourceCredentials {
         val builder = GitHubEnterpriseSourceCredentialsDsl(scope, id)
         builder.apply(block)
@@ -1875,7 +1843,6 @@ public object codebuild {
      * Creation properties for `GitHubEnterpriseSourceCredentials`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1889,8 +1856,7 @@ public object codebuild {
      * ```
      */
     public inline fun gitHubEnterpriseSourceCredentialsProps(
-        block: GitHubEnterpriseSourceCredentialsPropsDsl.() -> Unit =
-            {}
+        block: GitHubEnterpriseSourceCredentialsPropsDsl.() -> Unit = {}
     ): GitHubEnterpriseSourceCredentialsProps {
         val builder = GitHubEnterpriseSourceCredentialsPropsDsl()
         builder.apply(block)
@@ -1901,7 +1867,6 @@ public object codebuild {
      * Construction properties for `GitHubEnterpriseSource`.
      *
      * Example:
-     *
      * ```
      * Project.Builder.create(this, "Project")
      * .source(Source.gitHubEnterprise(GitHubEnterpriseSourceProps.builder()
@@ -1922,8 +1887,7 @@ public object codebuild {
      * ```
      */
     public inline fun gitHubEnterpriseSourceProps(
-        block: GitHubEnterpriseSourcePropsDsl.() -> Unit =
-            {}
+        block: GitHubEnterpriseSourcePropsDsl.() -> Unit = {}
     ): GitHubEnterpriseSourceProps {
         val builder = GitHubEnterpriseSourcePropsDsl()
         builder.apply(block)
@@ -1933,12 +1897,10 @@ public object codebuild {
     /**
      * The source credentials used when contacting the GitHub API.
      *
-     * **Note**: CodeBuild only allows a single credential for GitHub
-     * to be saved in a given AWS account in a given region -
-     * any attempt to add more than one will result in an error.
+     * **Note**: CodeBuild only allows a single credential for GitHub to be saved in a given AWS
+     * account in a given region - any attempt to add more than one will result in an error.
      *
      * Example:
-     *
      * ```
      * GitHubSourceCredentials.Builder.create(this, "CodeBuildGitHubCreds")
      * .accessToken(SecretValue.secretsManager("my-token"))
@@ -1948,7 +1910,7 @@ public object codebuild {
     public inline fun gitHubSourceCredentials(
         scope: Construct,
         id: String,
-        block: GitHubSourceCredentialsDsl.() -> Unit = {}
+        block: GitHubSourceCredentialsDsl.() -> Unit = {},
     ): GitHubSourceCredentials {
         val builder = GitHubSourceCredentialsDsl(scope, id)
         builder.apply(block)
@@ -1959,7 +1921,6 @@ public object codebuild {
      * Creation properties for `GitHubSourceCredentials`.
      *
      * Example:
-     *
      * ```
      * GitHubSourceCredentials.Builder.create(this, "CodeBuildGitHubCreds")
      * .accessToken(SecretValue.secretsManager("my-token"))
@@ -1967,8 +1928,7 @@ public object codebuild {
      * ```
      */
     public inline fun gitHubSourceCredentialsProps(
-        block: GitHubSourceCredentialsPropsDsl.() -> Unit =
-            {}
+        block: GitHubSourceCredentialsPropsDsl.() -> Unit = {}
     ): GitHubSourceCredentialsProps {
         val builder = GitHubSourceCredentialsPropsDsl()
         builder.apply(block)
@@ -1979,7 +1939,6 @@ public object codebuild {
      * Construction properties for `GitHubSource` and `GitHubEnterpriseSource`.
      *
      * Example:
-     *
      * ```
      * Project project = Project.Builder.create(this, "MyProject")
      * .buildSpec(BuildSpec.fromSourceFilename("my-buildspec.yml"))
@@ -1990,7 +1949,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun gitHubSourceProps(block: GitHubSourcePropsDsl.() -> Unit = {}): GitHubSourceProps {
+    public inline fun gitHubSourceProps(
+        block: GitHubSourcePropsDsl.() -> Unit = {}
+    ): GitHubSourceProps {
         val builder = GitHubSourcePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -2002,7 +1963,6 @@ public object codebuild {
      * A project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both.
      *
      * Example:
-     *
      * ```
      * Project.Builder.create(this, "Project")
      * .logging(LoggingOptions.builder()
@@ -2023,7 +1983,6 @@ public object codebuild {
      * A convenience class for CodeBuild Projects that are used in CodePipeline.
      *
      * Example:
-     *
      * ```
      * // Create a Cloudfront Web Distribution
      * import software.amazon.awscdk.services.cloudfront.*;
@@ -2074,7 +2033,7 @@ public object codebuild {
     public inline fun pipelineProject(
         scope: Construct,
         id: String,
-        block: PipelineProjectDsl.() -> Unit = {}
+        block: PipelineProjectDsl.() -> Unit = {},
     ): PipelineProject {
         val builder = PipelineProjectDsl(scope, id)
         builder.apply(block)
@@ -2083,7 +2042,6 @@ public object codebuild {
 
     /**
      * Example:
-     *
      * ```
      * // Create a Cloudfront Web Distribution
      * import software.amazon.awscdk.services.cloudfront.*;
@@ -2131,7 +2089,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun pipelineProjectProps(block: PipelineProjectPropsDsl.() -> Unit = {}): PipelineProjectProps {
+    public inline fun pipelineProjectProps(
+        block: PipelineProjectPropsDsl.() -> Unit = {}
+    ): PipelineProjectProps {
         val builder = PipelineProjectPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -2141,7 +2101,6 @@ public object codebuild {
      * A representation of a CodeBuild Project.
      *
      * Example:
-     *
      * ```
      * Repository ecrRepository;
      * Project.Builder.create(this, "Project")
@@ -2160,7 +2119,7 @@ public object codebuild {
     public inline fun project(
         scope: Construct,
         id: String,
-        block: ProjectDsl.() -> Unit = {}
+        block: ProjectDsl.() -> Unit = {},
     ): Project {
         val builder = ProjectDsl(scope, id)
         builder.apply(block)
@@ -2171,7 +2130,6 @@ public object codebuild {
      * Additional options to pass to the notification rule.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -2186,7 +2144,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun projectNotifyOnOptions(block: ProjectNotifyOnOptionsDsl.() -> Unit = {}): ProjectNotifyOnOptions {
+    public inline fun projectNotifyOnOptions(
+        block: ProjectNotifyOnOptionsDsl.() -> Unit = {}
+    ): ProjectNotifyOnOptions {
         val builder = ProjectNotifyOnOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -2194,7 +2154,6 @@ public object codebuild {
 
     /**
      * Example:
-     *
      * ```
      * Repository ecrRepository;
      * Project.Builder.create(this, "Project")
@@ -2220,7 +2179,6 @@ public object codebuild {
      * The ReportGroup resource class.
      *
      * Example:
-     *
      * ```
      * Source source;
      * // create a new ReportGroup
@@ -2239,7 +2197,7 @@ public object codebuild {
     public inline fun reportGroup(
         scope: Construct,
         id: String,
-        block: ReportGroupDsl.() -> Unit = {}
+        block: ReportGroupDsl.() -> Unit = {},
     ): ReportGroup {
         val builder = ReportGroupDsl(scope, id)
         builder.apply(block)
@@ -2250,7 +2208,6 @@ public object codebuild {
      * Construction properties for `ReportGroup`.
      *
      * Example:
-     *
      * ```
      * Source source;
      * // create a new ReportGroup
@@ -2269,7 +2226,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun reportGroupProps(block: ReportGroupPropsDsl.() -> Unit = {}): ReportGroupProps {
+    public inline fun reportGroupProps(
+        block: ReportGroupPropsDsl.() -> Unit = {}
+    ): ReportGroupProps {
         val builder = ReportGroupPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -2279,7 +2238,6 @@ public object codebuild {
      * Construction properties for `S3Artifacts`.
      *
      * Example:
-     *
      * ```
      * Bucket bucket;
      * Project project = Project.Builder.create(this, "MyProject")
@@ -2295,7 +2253,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun s3ArtifactsProps(block: S3ArtifactsPropsDsl.() -> Unit = {}): S3ArtifactsProps {
+    public inline fun s3ArtifactsProps(
+        block: S3ArtifactsPropsDsl.() -> Unit = {}
+    ): S3ArtifactsProps {
         val builder = S3ArtifactsPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -2305,7 +2265,6 @@ public object codebuild {
      * Information about logs built to an S3 bucket for a build project.
      *
      * Example:
-     *
      * ```
      * Project.Builder.create(this, "Project")
      * .logging(LoggingOptions.builder()
@@ -2316,7 +2275,9 @@ public object codebuild {
      * .build();
      * ```
      */
-    public inline fun s3LoggingOptions(block: S3LoggingOptionsDsl.() -> Unit = {}): S3LoggingOptions {
+    public inline fun s3LoggingOptions(
+        block: S3LoggingOptionsDsl.() -> Unit = {}
+    ): S3LoggingOptions {
         val builder = S3LoggingOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -2326,7 +2287,6 @@ public object codebuild {
      * Construction properties for `S3Source`.
      *
      * Example:
-     *
      * ```
      * Bucket bucket = new Bucket(this, "MyBucket");
      * Project.Builder.create(this, "MyProject")
@@ -2347,7 +2307,6 @@ public object codebuild {
      * The type returned from `ISource#bind`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -2400,7 +2359,6 @@ public object codebuild {
      * Properties common to all Source classes.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -2419,22 +2377,18 @@ public object codebuild {
     /**
      * Permissions Boundary for a CodeBuild Project running untrusted code.
      *
-     * This class is a Policy, intended to be used as a Permissions Boundary
-     * for a CodeBuild project. It allows most of the actions necessary to run
-     * the CodeBuild project, but disallows reading from Parameter Store
-     * and Secrets Manager.
+     * This class is a Policy, intended to be used as a Permissions Boundary for a CodeBuild
+     * project. It allows most of the actions necessary to run the CodeBuild project, but disallows
+     * reading from Parameter Store and Secrets Manager.
      *
-     * Use this when your CodeBuild project is running untrusted code (for
-     * example, if you are using one to automatically build Pull Requests
-     * that anyone can submit), and you want to prevent your future self
-     * from accidentally exposing Secrets to this build.
+     * Use this when your CodeBuild project is running untrusted code (for example, if you are using
+     * one to automatically build Pull Requests that anyone can submit), and you want to prevent
+     * your future self from accidentally exposing Secrets to this build.
      *
-     * (The reason you might want to do this is because otherwise anyone
-     * who can submit a Pull Request to your project can write a script
-     * to email those secrets to themselves).
+     * (The reason you might want to do this is because otherwise anyone who can submit a Pull
+     * Request to your project can write a script to email those secrets to themselves).
      *
      * Example:
-     *
      * ```
      * Project project;
      * PermissionsBoundary.of(project).apply(new UntrustedCodeBoundaryPolicy(this, "Boundary"));
@@ -2443,7 +2397,7 @@ public object codebuild {
     public inline fun untrustedCodeBoundaryPolicy(
         scope: Construct,
         id: String,
-        block: UntrustedCodeBoundaryPolicyDsl.() -> Unit = {}
+        block: UntrustedCodeBoundaryPolicyDsl.() -> Unit = {},
     ): UntrustedCodeBoundaryPolicy {
         val builder = UntrustedCodeBoundaryPolicyDsl(scope, id)
         builder.apply(block)
@@ -2454,7 +2408,6 @@ public object codebuild {
      * Construction properties for UntrustedCodeBoundaryPolicy.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -2469,8 +2422,7 @@ public object codebuild {
      * ```
      */
     public inline fun untrustedCodeBoundaryPolicyProps(
-        block: UntrustedCodeBoundaryPolicyPropsDsl.() -> Unit =
-            {}
+        block: UntrustedCodeBoundaryPolicyPropsDsl.() -> Unit = {}
     ): UntrustedCodeBoundaryPolicyProps {
         val builder = UntrustedCodeBoundaryPolicyPropsDsl()
         builder.apply(block)

@@ -1,16 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesis
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Number
+import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.kinesis.Stream
 import software.amazon.awscdk.services.kinesis.StreamEncryption
 import software.amazon.awscdk.services.kinesis.StreamMode
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
-import kotlin.Number
-import kotlin.String
 
 /**
  * A Kinesis stream.
@@ -18,7 +27,6 @@ import kotlin.String
  * Can be encrypted with a KMS key.
  *
  * Example:
- *
  * ```
  * Key key = new Key(this, "MyKey");
  * Stream.Builder.create(this, "MyEncryptedStream")
@@ -30,19 +38,19 @@ import kotlin.String
 @CdkDslMarker
 public class StreamDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: Stream.Builder = Stream.Builder.create(scope, id)
 
     /**
      * The kind of server-side encryption to apply to this stream.
      *
-     * If you choose KMS, you can specify a KMS key via `encryptionKey`. If
-     * encryption key is not specified, a key will automatically be created.
+     * If you choose KMS, you can specify a KMS key via `encryptionKey`. If encryption key is not
+     * specified, a key will automatically be created.
      *
-     * Default: - StreamEncryption.KMS if encrypted Streams are supported in the region
-     * or StreamEncryption.UNENCRYPTED otherwise.
-     * StreamEncryption.KMS if an encryption key is supplied through the encryptionKey property
+     * Default: - StreamEncryption.KMS if encrypted Streams are supported in the region or
+     * StreamEncryption.UNENCRYPTED otherwise. StreamEncryption.KMS if an encryption key is supplied
+     * through the encryptionKey property
      *
      * @param encryption The kind of server-side encryption to apply to this stream.
      */
@@ -55,9 +63,9 @@ public class StreamDsl(
      *
      * The 'encryption' property must be set to "Kms".
      *
-     * Default: - Kinesis Data Streams master key ('/alias/aws/kinesis').
-     * If encryption is set to StreamEncryption.KMS and this property is undefined, a new KMS key
-     * will be created and associated with this stream.
+     * Default: - Kinesis Data Streams master key ('/alias/aws/kinesis'). If encryption is set to
+     * StreamEncryption.KMS and this property is undefined, a new KMS key will be created and
+     * associated with this stream.
      *
      * @param encryptionKey External KMS key to use for stream encryption.
      */
@@ -71,7 +79,7 @@ public class StreamDsl(
      * Default: Duration.hours(24)
      *
      * @param retentionPeriod The number of hours for the data records that are stored in shards to
-     * remain accessible.
+     *   remain accessible.
      */
     public fun retentionPeriod(retentionPeriod: Duration) {
         cdkBuilder.retentionPeriod(retentionPeriod)

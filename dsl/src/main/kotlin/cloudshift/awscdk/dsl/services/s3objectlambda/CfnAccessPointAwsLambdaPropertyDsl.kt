@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3objectlambda
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,22 +32,18 @@ import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
  */
 @CdkDslMarker
 public class CfnAccessPointAwsLambdaPropertyDsl {
-  private val cdkBuilder: CfnAccessPoint.AwsLambdaProperty.Builder =
-      CfnAccessPoint.AwsLambdaProperty.builder()
+    private val cdkBuilder: CfnAccessPoint.AwsLambdaProperty.Builder =
+        CfnAccessPoint.AwsLambdaProperty.builder()
 
-  /**
-   * @param functionArn the value to be set. 
-   */
-  public fun functionArn(functionArn: String) {
-    cdkBuilder.functionArn(functionArn)
-  }
+    /** @param functionArn the value to be set. */
+    public fun functionArn(functionArn: String) {
+        cdkBuilder.functionArn(functionArn)
+    }
 
-  /**
-   * @param functionPayload the value to be set.
-   */
-  public fun functionPayload(functionPayload: String) {
-    cdkBuilder.functionPayload(functionPayload)
-  }
+    /** @param functionPayload the value to be set. */
+    public fun functionPayload(functionPayload: String) {
+        cdkBuilder.functionPayload(functionPayload)
+    }
 
-  public fun build(): CfnAccessPoint.AwsLambdaProperty = cdkBuilder.build()
+    public fun build(): CfnAccessPoint.AwsLambdaProperty = cdkBuilder.build()
 }

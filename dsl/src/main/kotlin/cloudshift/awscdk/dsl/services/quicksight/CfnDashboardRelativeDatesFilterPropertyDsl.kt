@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * A `RelativeDatesFilter` filters relative dates values.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,113 +55,99 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardRelativeDatesFilterPropertyDsl {
-  private val cdkBuilder: CfnDashboard.RelativeDatesFilterProperty.Builder =
-      CfnDashboard.RelativeDatesFilterProperty.builder()
+    private val cdkBuilder: CfnDashboard.RelativeDatesFilterProperty.Builder =
+        CfnDashboard.RelativeDatesFilterProperty.builder()
 
-  /**
-   * @param anchorDateConfiguration The date configuration of the filter. 
-   */
-  public fun anchorDateConfiguration(anchorDateConfiguration: IResolvable) {
-    cdkBuilder.anchorDateConfiguration(anchorDateConfiguration)
-  }
+    /** @param anchorDateConfiguration The date configuration of the filter. */
+    public fun anchorDateConfiguration(anchorDateConfiguration: IResolvable) {
+        cdkBuilder.anchorDateConfiguration(anchorDateConfiguration)
+    }
 
-  /**
-   * @param anchorDateConfiguration The date configuration of the filter. 
-   */
-  public
-      fun anchorDateConfiguration(anchorDateConfiguration: CfnDashboard.AnchorDateConfigurationProperty) {
-    cdkBuilder.anchorDateConfiguration(anchorDateConfiguration)
-  }
+    /** @param anchorDateConfiguration The date configuration of the filter. */
+    public fun anchorDateConfiguration(
+        anchorDateConfiguration: CfnDashboard.AnchorDateConfigurationProperty
+    ) {
+        cdkBuilder.anchorDateConfiguration(anchorDateConfiguration)
+    }
 
-  /**
-   * @param column The column that the filter is applied to. 
-   */
-  public fun column(column: IResolvable) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the filter is applied to. */
+    public fun column(column: IResolvable) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param column The column that the filter is applied to. 
-   */
-  public fun column(column: CfnDashboard.ColumnIdentifierProperty) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the filter is applied to. */
+    public fun column(column: CfnDashboard.ColumnIdentifierProperty) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param excludePeriodConfiguration The configuration for the exclude period of the filter.
-   */
-  public fun excludePeriodConfiguration(excludePeriodConfiguration: IResolvable) {
-    cdkBuilder.excludePeriodConfiguration(excludePeriodConfiguration)
-  }
+    /** @param excludePeriodConfiguration The configuration for the exclude period of the filter. */
+    public fun excludePeriodConfiguration(excludePeriodConfiguration: IResolvable) {
+        cdkBuilder.excludePeriodConfiguration(excludePeriodConfiguration)
+    }
 
-  /**
-   * @param excludePeriodConfiguration The configuration for the exclude period of the filter.
-   */
-  public
-      fun excludePeriodConfiguration(excludePeriodConfiguration: CfnDashboard.ExcludePeriodConfigurationProperty) {
-    cdkBuilder.excludePeriodConfiguration(excludePeriodConfiguration)
-  }
+    /** @param excludePeriodConfiguration The configuration for the exclude period of the filter. */
+    public fun excludePeriodConfiguration(
+        excludePeriodConfiguration: CfnDashboard.ExcludePeriodConfigurationProperty
+    ) {
+        cdkBuilder.excludePeriodConfiguration(excludePeriodConfiguration)
+    }
 
-  /**
-   * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
-   * or template. 
-   */
-  public fun filterId(filterId: String) {
-    cdkBuilder.filterId(filterId)
-  }
+    /**
+     * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
+     *   or template.
+     */
+    public fun filterId(filterId: String) {
+        cdkBuilder.filterId(filterId)
+    }
 
-  /**
-   * @param minimumGranularity The minimum granularity (period granularity) of the relative dates
-   * filter.
-   */
-  public fun minimumGranularity(minimumGranularity: String) {
-    cdkBuilder.minimumGranularity(minimumGranularity)
-  }
+    /**
+     * @param minimumGranularity The minimum granularity (period granularity) of the relative dates
+     *   filter.
+     */
+    public fun minimumGranularity(minimumGranularity: String) {
+        cdkBuilder.minimumGranularity(minimumGranularity)
+    }
 
-  /**
-   * @param nullOption This option determines how null values should be treated when filtering data.
-   * 
-   * * `ALL_VALUES` : Include null values in filtered results.
-   * * `NULLS_ONLY` : Only include null values in filtered results.
-   * * `NON_NULLS_ONLY` : Exclude null values from filtered results.
-   */
-  public fun nullOption(nullOption: String) {
-    cdkBuilder.nullOption(nullOption)
-  }
+    /**
+     * @param nullOption This option determines how null values should be treated when filtering
+     *   data.
+     * * `ALL_VALUES` : Include null values in filtered results.
+     * * `NULLS_ONLY` : Only include null values in filtered results.
+     * * `NON_NULLS_ONLY` : Exclude null values from filtered results.
+     */
+    public fun nullOption(nullOption: String) {
+        cdkBuilder.nullOption(nullOption)
+    }
 
-  /**
-   * @param parameterName The parameter whose value should be used for the filter value.
-   */
-  public fun parameterName(parameterName: String) {
-    cdkBuilder.parameterName(parameterName)
-  }
+    /** @param parameterName The parameter whose value should be used for the filter value. */
+    public fun parameterName(parameterName: String) {
+        cdkBuilder.parameterName(parameterName)
+    }
 
-  /**
-   * @param relativeDateType The range date type of the filter. Choose one of the options below:. 
-   * * `PREVIOUS`
-   * * `THIS`
-   * * `LAST`
-   * * `NOW`
-   * * `NEXT`
-   */
-  public fun relativeDateType(relativeDateType: String) {
-    cdkBuilder.relativeDateType(relativeDateType)
-  }
+    /**
+     * @param relativeDateType The range date type of the filter. Choose one of the options below:.
+     * * `PREVIOUS`
+     * * `THIS`
+     * * `LAST`
+     * * `NOW`
+     * * `NEXT`
+     */
+    public fun relativeDateType(relativeDateType: String) {
+        cdkBuilder.relativeDateType(relativeDateType)
+    }
 
-  /**
-   * @param relativeDateValue The date value of the filter.
-   */
-  public fun relativeDateValue(relativeDateValue: Number) {
-    cdkBuilder.relativeDateValue(relativeDateValue)
-  }
+    /** @param relativeDateValue The date value of the filter. */
+    public fun relativeDateValue(relativeDateValue: Number) {
+        cdkBuilder.relativeDateValue(relativeDateValue)
+    }
 
-  /**
-   * @param timeGranularity The level of time precision that is used to aggregate `DateTime` values.
-   * 
-   */
-  public fun timeGranularity(timeGranularity: String) {
-    cdkBuilder.timeGranularity(timeGranularity)
-  }
+    /**
+     * @param timeGranularity The level of time precision that is used to aggregate `DateTime`
+     *   values.
+     */
+    public fun timeGranularity(timeGranularity: String) {
+        cdkBuilder.timeGranularity(timeGranularity)
+    }
 
-  public fun build(): CfnDashboard.RelativeDatesFilterProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.RelativeDatesFilterProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,7 +26,6 @@ import software.constructs.Construct
  * Define a VPN Connection.
  *
  * Example:
- *
  * ```
  * // Across all tunnels in the account/region
  * Metric allDataOut = VpnConnection.metricAllTunnelDataOut();
@@ -30,99 +38,97 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class VpnConnectionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: VpnConnection.Builder = VpnConnection.Builder.create(scope, id)
+    private val cdkBuilder: VpnConnection.Builder = VpnConnection.Builder.create(scope, id)
 
-  private val _staticRoutes: MutableList<String> = mutableListOf()
+    private val _staticRoutes: MutableList<String> = mutableListOf()
 
-  private val _tunnelOptions: MutableList<VpnTunnelOption> = mutableListOf()
+    private val _tunnelOptions: MutableList<VpnTunnelOption> = mutableListOf()
 
-  /**
-   * The ASN of the customer gateway.
-   *
-   * Default: 65000
-   *
-   * @param asn The ASN of the customer gateway. 
-   */
-  public fun asn(asn: Number) {
-    cdkBuilder.asn(asn)
-  }
+    /**
+     * The ASN of the customer gateway.
+     *
+     * Default: 65000
+     *
+     * @param asn The ASN of the customer gateway.
+     */
+    public fun asn(asn: Number) {
+        cdkBuilder.asn(asn)
+    }
 
-  /**
-   * The ip address of the customer gateway.
-   *
-   * @param ip The ip address of the customer gateway. 
-   */
-  public fun ip(ip: String) {
-    cdkBuilder.ip(ip)
-  }
+    /**
+     * The ip address of the customer gateway.
+     *
+     * @param ip The ip address of the customer gateway.
+     */
+    public fun ip(ip: String) {
+        cdkBuilder.ip(ip)
+    }
 
-  /**
-   * The static routes to be routed from the VPN gateway to the customer gateway.
-   *
-   * Default: Dynamic routing (BGP)
-   *
-   * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
-   * gateway. 
-   */
-  public fun staticRoutes(vararg staticRoutes: String) {
-    _staticRoutes.addAll(listOf(*staticRoutes))
-  }
+    /**
+     * The static routes to be routed from the VPN gateway to the customer gateway.
+     *
+     * Default: Dynamic routing (BGP)
+     *
+     * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+     *   gateway.
+     */
+    public fun staticRoutes(vararg staticRoutes: String) {
+        _staticRoutes.addAll(listOf(*staticRoutes))
+    }
 
-  /**
-   * The static routes to be routed from the VPN gateway to the customer gateway.
-   *
-   * Default: Dynamic routing (BGP)
-   *
-   * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
-   * gateway. 
-   */
-  public fun staticRoutes(staticRoutes: Collection<String>) {
-    _staticRoutes.addAll(staticRoutes)
-  }
+    /**
+     * The static routes to be routed from the VPN gateway to the customer gateway.
+     *
+     * Default: Dynamic routing (BGP)
+     *
+     * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+     *   gateway.
+     */
+    public fun staticRoutes(staticRoutes: Collection<String>) {
+        _staticRoutes.addAll(staticRoutes)
+    }
 
-  /**
-   * The tunnel options for the VPN connection.
-   *
-   * At most two elements (one per tunnel).
-   * Duplicates not allowed.
-   *
-   * Default: Amazon generated tunnel options
-   *
-   * @param tunnelOptions The tunnel options for the VPN connection. 
-   */
-  public fun tunnelOptions(tunnelOptions: VpnTunnelOptionDsl.() -> Unit) {
-    _tunnelOptions.add(VpnTunnelOptionDsl().apply(tunnelOptions).build())
-  }
+    /**
+     * The tunnel options for the VPN connection.
+     *
+     * At most two elements (one per tunnel). Duplicates not allowed.
+     *
+     * Default: Amazon generated tunnel options
+     *
+     * @param tunnelOptions The tunnel options for the VPN connection.
+     */
+    public fun tunnelOptions(tunnelOptions: VpnTunnelOptionDsl.() -> Unit) {
+        _tunnelOptions.add(VpnTunnelOptionDsl().apply(tunnelOptions).build())
+    }
 
-  /**
-   * The tunnel options for the VPN connection.
-   *
-   * At most two elements (one per tunnel).
-   * Duplicates not allowed.
-   *
-   * Default: Amazon generated tunnel options
-   *
-   * @param tunnelOptions The tunnel options for the VPN connection. 
-   */
-  public fun tunnelOptions(tunnelOptions: Collection<VpnTunnelOption>) {
-    _tunnelOptions.addAll(tunnelOptions)
-  }
+    /**
+     * The tunnel options for the VPN connection.
+     *
+     * At most two elements (one per tunnel). Duplicates not allowed.
+     *
+     * Default: Amazon generated tunnel options
+     *
+     * @param tunnelOptions The tunnel options for the VPN connection.
+     */
+    public fun tunnelOptions(tunnelOptions: Collection<VpnTunnelOption>) {
+        _tunnelOptions.addAll(tunnelOptions)
+    }
 
-  /**
-   * The VPC to connect to.
-   *
-   * @param vpc The VPC to connect to. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /**
+     * The VPC to connect to.
+     *
+     * @param vpc The VPC to connect to.
+     */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  public fun build(): VpnConnection {
-    if(_staticRoutes.isNotEmpty()) cdkBuilder.staticRoutes(_staticRoutes)
-    if(_tunnelOptions.isNotEmpty()) cdkBuilder.tunnelOptions(_tunnelOptions)
-    return cdkBuilder.build()
-  }
+    public fun build(): VpnConnection {
+        if (_staticRoutes.isNotEmpty()) cdkBuilder.staticRoutes(_staticRoutes)
+        if (_tunnelOptions.isNotEmpty()) cdkBuilder.tunnelOptions(_tunnelOptions)
+        return cdkBuilder.build()
+    }
 }

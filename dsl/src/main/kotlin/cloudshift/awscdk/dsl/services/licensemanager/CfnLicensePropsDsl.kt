@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.licensemanager.CfnLicense
-import software.amazon.awscdk.services.licensemanager.CfnLicenseProps
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.licensemanager.CfnLicense
+import software.amazon.awscdk.services.licensemanager.CfnLicenseProps
 
 /**
  * Properties for defining a `CfnLicense`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -73,114 +81,84 @@ public class CfnLicensePropsDsl {
 
     private val _licenseMetadata: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param beneficiary License beneficiary.
-     */
+    /** @param beneficiary License beneficiary. */
     public fun beneficiary(beneficiary: String) {
         cdkBuilder.beneficiary(beneficiary)
     }
 
-    /**
-     * @param consumptionConfiguration Configuration for consumption of the license.
-     */
+    /** @param consumptionConfiguration Configuration for consumption of the license. */
     public fun consumptionConfiguration(consumptionConfiguration: IResolvable) {
         cdkBuilder.consumptionConfiguration(consumptionConfiguration)
     }
 
-    /**
-     * @param consumptionConfiguration Configuration for consumption of the license.
-     */
-    public fun consumptionConfiguration(consumptionConfiguration: CfnLicense.ConsumptionConfigurationProperty) {
+    /** @param consumptionConfiguration Configuration for consumption of the license. */
+    public fun consumptionConfiguration(
+        consumptionConfiguration: CfnLicense.ConsumptionConfigurationProperty
+    ) {
         cdkBuilder.consumptionConfiguration(consumptionConfiguration)
     }
 
-    /**
-     * @param entitlements License entitlements.
-     */
+    /** @param entitlements License entitlements. */
     public fun entitlements(vararg entitlements: Any) {
         _entitlements.addAll(listOf(*entitlements))
     }
 
-    /**
-     * @param entitlements License entitlements.
-     */
+    /** @param entitlements License entitlements. */
     public fun entitlements(entitlements: Collection<Any>) {
         _entitlements.addAll(entitlements)
     }
 
-    /**
-     * @param entitlements License entitlements.
-     */
+    /** @param entitlements License entitlements. */
     public fun entitlements(entitlements: IResolvable) {
         cdkBuilder.entitlements(entitlements)
     }
 
-    /**
-     * @param homeRegion Home Region of the license.
-     */
+    /** @param homeRegion Home Region of the license. */
     public fun homeRegion(homeRegion: String) {
         cdkBuilder.homeRegion(homeRegion)
     }
 
-    /**
-     * @param issuer License issuer.
-     */
+    /** @param issuer License issuer. */
     public fun issuer(issuer: IResolvable) {
         cdkBuilder.issuer(issuer)
     }
 
-    /**
-     * @param issuer License issuer.
-     */
+    /** @param issuer License issuer. */
     public fun issuer(issuer: CfnLicense.IssuerDataProperty) {
         cdkBuilder.issuer(issuer)
     }
 
-    /**
-     * @param licenseMetadata License metadata.
-     */
+    /** @param licenseMetadata License metadata. */
     public fun licenseMetadata(vararg licenseMetadata: Any) {
         _licenseMetadata.addAll(listOf(*licenseMetadata))
     }
 
-    /**
-     * @param licenseMetadata License metadata.
-     */
+    /** @param licenseMetadata License metadata. */
     public fun licenseMetadata(licenseMetadata: Collection<Any>) {
         _licenseMetadata.addAll(licenseMetadata)
     }
 
-    /**
-     * @param licenseMetadata License metadata.
-     */
+    /** @param licenseMetadata License metadata. */
     public fun licenseMetadata(licenseMetadata: IResolvable) {
         cdkBuilder.licenseMetadata(licenseMetadata)
     }
 
-    /**
-     * @param licenseName License name.
-     */
+    /** @param licenseName License name. */
     public fun licenseName(licenseName: String) {
         cdkBuilder.licenseName(licenseName)
     }
 
-    /**
-     * @param productName Product name.
-     */
+    /** @param productName Product name. */
     public fun productName(productName: String) {
         cdkBuilder.productName(productName)
     }
 
-    /**
-     * @param productSku Product SKU.
-     */
+    /** @param productSku Product SKU. */
     public fun productSku(productSku: String) {
         cdkBuilder.productSku(productSku)
     }
 
-    /**
-     * @param status License status.
-     */
+    /** @param status License status. */
     public fun status(status: String) {
         cdkBuilder.status(status)
     }

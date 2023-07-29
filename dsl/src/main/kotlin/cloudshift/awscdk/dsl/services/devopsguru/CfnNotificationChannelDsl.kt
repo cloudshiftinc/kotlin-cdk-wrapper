@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.devopsguru
 
@@ -15,18 +24,18 @@ import software.constructs.Construct
  * insight is generated.
  *
  * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants
- * DevOps Guru permission to send it notifications. DevOps Guru adds the required policy on your behalf
- * to send notifications using Amazon SNS in your account. DevOps Guru only supports standard SNS
- * topics. For more information, see [Permissions for Amazon SNS
- * topics](https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html) .
+ * DevOps Guru permission to send it notifications. DevOps Guru adds the required policy on your
+ * behalf to send notifications using Amazon SNS in your account. DevOps Guru only supports standard
+ * SNS topics. For more information, see
+ * [Permissions for Amazon SNS topics](https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html)
+ * .
  *
  * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service
  * customer-managed key (CMK), then you must add permissions to the CMK. For more information, see
- * [Permissions for AWS KMS–encrypted Amazon SNS
- * topics](https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html) .
+ * [Permissions for AWS KMS–encrypted Amazon SNS topics](https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,35 +58,37 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnNotificationChannelDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnNotificationChannel.Builder =
-      CfnNotificationChannel.Builder.create(scope, id)
+    private val cdkBuilder: CfnNotificationChannel.Builder =
+        CfnNotificationChannel.Builder.create(scope, id)
 
-  /**
-   * A `NotificationChannelConfig` object that contains information about configured notification
-   * channels.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html#cfn-devopsguru-notificationchannel-config)
-   * @param config A `NotificationChannelConfig` object that contains information about configured
-   * notification channels. 
-   */
-  public fun config(config: IResolvable) {
-    cdkBuilder.config(config)
-  }
+    /**
+     * A `NotificationChannelConfig` object that contains information about configured notification
+     * channels.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html#cfn-devopsguru-notificationchannel-config)
+     *
+     * @param config A `NotificationChannelConfig` object that contains information about configured
+     *   notification channels.
+     */
+    public fun config(config: IResolvable) {
+        cdkBuilder.config(config)
+    }
 
-  /**
-   * A `NotificationChannelConfig` object that contains information about configured notification
-   * channels.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html#cfn-devopsguru-notificationchannel-config)
-   * @param config A `NotificationChannelConfig` object that contains information about configured
-   * notification channels. 
-   */
-  public fun config(config: CfnNotificationChannel.NotificationChannelConfigProperty) {
-    cdkBuilder.config(config)
-  }
+    /**
+     * A `NotificationChannelConfig` object that contains information about configured notification
+     * channels.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html#cfn-devopsguru-notificationchannel-config)
+     *
+     * @param config A `NotificationChannelConfig` object that contains information about configured
+     *   notification channels.
+     */
+    public fun config(config: CfnNotificationChannel.NotificationChannelConfigProperty) {
+        cdkBuilder.config(config)
+    }
 
-  public fun build(): CfnNotificationChannel = cdkBuilder.build()
+    public fun build(): CfnNotificationChannel = cdkBuilder.build()
 }

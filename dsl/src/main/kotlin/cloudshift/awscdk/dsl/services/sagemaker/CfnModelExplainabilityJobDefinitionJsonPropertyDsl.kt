@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefini
  * The Json format.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefini
  */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionJsonPropertyDsl {
-  private val cdkBuilder: CfnModelExplainabilityJobDefinition.JsonProperty.Builder =
-      CfnModelExplainabilityJobDefinition.JsonProperty.builder()
+    private val cdkBuilder: CfnModelExplainabilityJobDefinition.JsonProperty.Builder =
+        CfnModelExplainabilityJobDefinition.JsonProperty.builder()
 
-  /**
-   * @param line A boolean flag indicating if it is JSON line format.
-   */
-  public fun line(line: Boolean) {
-    cdkBuilder.line(line)
-  }
+    /** @param line A boolean flag indicating if it is JSON line format. */
+    public fun line(line: Boolean) {
+        cdkBuilder.line(line)
+    }
 
-  /**
-   * @param line A boolean flag indicating if it is JSON line format.
-   */
-  public fun line(line: IResolvable) {
-    cdkBuilder.line(line)
-  }
+    /** @param line A boolean flag indicating if it is JSON line format. */
+    public fun line(line: IResolvable) {
+        cdkBuilder.line(line)
+    }
 
-  public fun build(): CfnModelExplainabilityJobDefinition.JsonProperty = cdkBuilder.build()
+    public fun build(): CfnModelExplainabilityJobDefinition.JsonProperty = cdkBuilder.build()
 }

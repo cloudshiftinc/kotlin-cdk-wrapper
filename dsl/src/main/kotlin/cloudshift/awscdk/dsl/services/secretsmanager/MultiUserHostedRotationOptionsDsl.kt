@@ -1,24 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.MultiUserHostedRotationOptions
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 
 /**
  * Multi user hosted rotation options.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,23 +63,17 @@ public class MultiUserHostedRotationOptionsDsl {
 
     private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
-    /**
-     * @param excludeCharacters A string of the characters that you don't want in the password.
-     */
+    /** @param excludeCharacters A string of the characters that you don't want in the password. */
     public fun excludeCharacters(excludeCharacters: String) {
         cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    /**
-     * @param functionName A name for the Lambda created to rotate the secret.
-     */
+    /** @param functionName A name for the Lambda created to rotate the secret. */
     public fun functionName(functionName: String) {
         cdkBuilder.functionName(functionName)
     }
 
-    /**
-     * @param masterSecret The master secret for a multi user rotation scheme.
-     */
+    /** @param masterSecret The master secret for a multi user rotation scheme. */
     public fun masterSecret(masterSecret: ISecret) {
         cdkBuilder.masterSecret(masterSecret)
     }
@@ -90,9 +92,7 @@ public class MultiUserHostedRotationOptionsDsl {
         _securityGroups.addAll(securityGroups)
     }
 
-    /**
-     * @param vpc The VPC where the Lambda rotation function will run.
-     */
+    /** @param vpc The VPC where the Lambda rotation function will run. */
     public fun vpc(vpc: IVpc) {
         cdkBuilder.vpc(vpc)
     }

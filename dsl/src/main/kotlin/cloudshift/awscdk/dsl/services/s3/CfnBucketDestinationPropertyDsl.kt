@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.s3.CfnBucket
  * bucket.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,42 +37,36 @@ import software.amazon.awscdk.services.s3.CfnBucket
  */
 @CdkDslMarker
 public class CfnBucketDestinationPropertyDsl {
-  private val cdkBuilder: CfnBucket.DestinationProperty.Builder =
-      CfnBucket.DestinationProperty.builder()
+    private val cdkBuilder: CfnBucket.DestinationProperty.Builder =
+        CfnBucket.DestinationProperty.builder()
 
-  /**
-   * @param bucketAccountId The account ID that owns the destination S3 bucket.
-   * If no account ID is provided, the owner is not validated before exporting data.
-   *
-   *
-   * Although this value is optional, we strongly recommend that you set it to help prevent problems
-   * if the destination bucket ownership changes.
-   */
-  public fun bucketAccountId(bucketAccountId: String) {
-    cdkBuilder.bucketAccountId(bucketAccountId)
-  }
+    /**
+     * @param bucketAccountId The account ID that owns the destination S3 bucket. If no account ID
+     *   is provided, the owner is not validated before exporting data.
+     *
+     * Although this value is optional, we strongly recommend that you set it to help prevent
+     * problems if the destination bucket ownership changes.
+     */
+    public fun bucketAccountId(bucketAccountId: String) {
+        cdkBuilder.bucketAccountId(bucketAccountId)
+    }
 
-  /**
-   * @param bucketArn The Amazon Resource Name (ARN) of the bucket to which data is exported. 
-   */
-  public fun bucketArn(bucketArn: String) {
-    cdkBuilder.bucketArn(bucketArn)
-  }
+    /** @param bucketArn The Amazon Resource Name (ARN) of the bucket to which data is exported. */
+    public fun bucketArn(bucketArn: String) {
+        cdkBuilder.bucketArn(bucketArn)
+    }
 
-  /**
-   * @param format Specifies the file format used when exporting data to Amazon S3. 
-   */
-  public fun format(format: String) {
-    cdkBuilder.format(format)
-  }
+    /** @param format Specifies the file format used when exporting data to Amazon S3. */
+    public fun format(format: String) {
+        cdkBuilder.format(format)
+    }
 
-  /**
-   * @param prefix The prefix to use when exporting data.
-   * The prefix is prepended to all results.
-   */
-  public fun prefix(prefix: String) {
-    cdkBuilder.prefix(prefix)
-  }
+    /**
+     * @param prefix The prefix to use when exporting data. The prefix is prepended to all results.
+     */
+    public fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+    }
 
-  public fun build(): CfnBucket.DestinationProperty = cdkBuilder.build()
+    public fun build(): CfnBucket.DestinationProperty = cdkBuilder.build()
 }

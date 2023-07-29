@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 
 /**
  * A structure for the table object.
@@ -16,7 +25,6 @@ import kotlin.Unit
  * privileges to a principal.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,32 +46,28 @@ public class CfnPrincipalPermissionsTableResourcePropertyDsl {
     private val cdkBuilder: CfnPrincipalPermissions.TableResourceProperty.Builder =
         CfnPrincipalPermissions.TableResourceProperty.builder()
 
-    /**
-     * @param catalogId the value to be set.
-     */
+    /** @param catalogId the value to be set. */
     public fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
     }
 
     /**
-     * @param databaseName The name of the database for the table.
-     * Unique to a Data Catalog. A database is a set of associated table definitions organized into a
-     * logical group. You can Grant and Revoke database privileges to a principal.
+     * @param databaseName The name of the database for the table. Unique to a Data Catalog. A
+     *   database is a set of associated table definitions organized into a logical group. You can
+     *   Grant and Revoke database privileges to a principal.
      */
     public fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
     }
 
-    /**
-     * @param name The name of the table.
-     */
+    /** @param name The name of the table. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
     /**
-     * @param tableWildcard A wildcard object representing every table under a database.
-     * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+     * @param tableWildcard A wildcard object representing every table under a database. At least
+     *   one of `TableResource$Name` or `TableResource$TableWildcard` is required.
      */
     public fun tableWildcard(tableWildcard: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -72,8 +76,8 @@ public class CfnPrincipalPermissionsTableResourcePropertyDsl {
     }
 
     /**
-     * @param tableWildcard A wildcard object representing every table under a database.
-     * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+     * @param tableWildcard A wildcard object representing every table under a database. At least
+     *   one of `TableResource$Name` or `TableResource$TableWildcard` is required.
      */
     public fun tableWildcard(tableWildcard: Any) {
         cdkBuilder.tableWildcard(tableWildcard)

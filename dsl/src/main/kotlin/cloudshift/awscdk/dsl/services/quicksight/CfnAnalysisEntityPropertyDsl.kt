@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * An object, structure, or sub-structure of an analysis, template, or dashboard.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,11 +32,12 @@ import kotlin.String
  */
 @CdkDslMarker
 public class CfnAnalysisEntityPropertyDsl {
-    private val cdkBuilder: CfnAnalysis.EntityProperty.Builder = CfnAnalysis.EntityProperty.builder()
+    private val cdkBuilder: CfnAnalysis.EntityProperty.Builder =
+        CfnAnalysis.EntityProperty.builder()
 
     /**
      * @param path The hierarchical path of the entity within the analysis, template, or dashboard
-     * definition tree.
+     *   definition tree.
      */
     public fun path(path: String) {
         cdkBuilder.path(path)

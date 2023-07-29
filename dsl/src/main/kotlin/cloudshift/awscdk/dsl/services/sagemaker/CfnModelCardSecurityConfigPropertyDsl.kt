@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  * The security configuration used to protect model card data.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,17 +32,17 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  */
 @CdkDslMarker
 public class CfnModelCardSecurityConfigPropertyDsl {
-  private val cdkBuilder: CfnModelCard.SecurityConfigProperty.Builder =
-      CfnModelCard.SecurityConfigProperty.builder()
+    private val cdkBuilder: CfnModelCard.SecurityConfigProperty.Builder =
+        CfnModelCard.SecurityConfigProperty.builder()
 
-  /**
-   * @param kmsKeyId A AWS Key Management Service [key
-   * ID](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id) used to
-   * encrypt a model card.
-   */
-  public fun kmsKeyId(kmsKeyId: String) {
-    cdkBuilder.kmsKeyId(kmsKeyId)
-  }
+    /**
+     * @param kmsKeyId A AWS Key Management Service
+     *   [key ID](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id)
+     *   used to encrypt a model card.
+     */
+    public fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+    }
 
-  public fun build(): CfnModelCard.SecurityConfigProperty = cdkBuilder.build()
+    public fun build(): CfnModelCard.SecurityConfigProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnDatastore
  * You can't change the file format after you create the data store.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,38 +50,32 @@ import software.amazon.awscdk.services.iotanalytics.CfnDatastore
  */
 @CdkDslMarker
 public class CfnDatastoreFileFormatConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDatastore.FileFormatConfigurationProperty.Builder =
-      CfnDatastore.FileFormatConfigurationProperty.builder()
+    private val cdkBuilder: CfnDatastore.FileFormatConfigurationProperty.Builder =
+        CfnDatastore.FileFormatConfigurationProperty.builder()
 
-  /**
-   * @param jsonConfiguration Contains the configuration information of the JSON format.
-   */
-  public fun jsonConfiguration(jsonConfiguration: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(jsonConfiguration)
-    cdkBuilder.jsonConfiguration(builder.map)
-  }
+    /** @param jsonConfiguration Contains the configuration information of the JSON format. */
+    public fun jsonConfiguration(jsonConfiguration: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(jsonConfiguration)
+        cdkBuilder.jsonConfiguration(builder.map)
+    }
 
-  /**
-   * @param jsonConfiguration Contains the configuration information of the JSON format.
-   */
-  public fun jsonConfiguration(jsonConfiguration: Any) {
-    cdkBuilder.jsonConfiguration(jsonConfiguration)
-  }
+    /** @param jsonConfiguration Contains the configuration information of the JSON format. */
+    public fun jsonConfiguration(jsonConfiguration: Any) {
+        cdkBuilder.jsonConfiguration(jsonConfiguration)
+    }
 
-  /**
-   * @param parquetConfiguration Contains the configuration information of the Parquet format.
-   */
-  public fun parquetConfiguration(parquetConfiguration: IResolvable) {
-    cdkBuilder.parquetConfiguration(parquetConfiguration)
-  }
+    /** @param parquetConfiguration Contains the configuration information of the Parquet format. */
+    public fun parquetConfiguration(parquetConfiguration: IResolvable) {
+        cdkBuilder.parquetConfiguration(parquetConfiguration)
+    }
 
-  /**
-   * @param parquetConfiguration Contains the configuration information of the Parquet format.
-   */
-  public fun parquetConfiguration(parquetConfiguration: CfnDatastore.ParquetConfigurationProperty) {
-    cdkBuilder.parquetConfiguration(parquetConfiguration)
-  }
+    /** @param parquetConfiguration Contains the configuration information of the Parquet format. */
+    public fun parquetConfiguration(
+        parquetConfiguration: CfnDatastore.ParquetConfigurationProperty
+    ) {
+        cdkBuilder.parquetConfiguration(parquetConfiguration)
+    }
 
-  public fun build(): CfnDatastore.FileFormatConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDatastore.FileFormatConfigurationProperty = cdkBuilder.build()
 }

@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The option that determines the hierarchy of any `DateTime` fields.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -61,7 +69,7 @@ public class CfnAnalysisDateTimeHierarchyPropertyDsl {
 
     /**
      * @param drillDownFilters The option that determines the drill down filters for the `DateTime`
-     * hierarchy.
+     *   hierarchy.
      */
     public fun drillDownFilters(vararg drillDownFilters: Any) {
         _drillDownFilters.addAll(listOf(*drillDownFilters))
@@ -69,7 +77,7 @@ public class CfnAnalysisDateTimeHierarchyPropertyDsl {
 
     /**
      * @param drillDownFilters The option that determines the drill down filters for the `DateTime`
-     * hierarchy.
+     *   hierarchy.
      */
     public fun drillDownFilters(drillDownFilters: Collection<Any>) {
         _drillDownFilters.addAll(drillDownFilters)
@@ -77,15 +85,13 @@ public class CfnAnalysisDateTimeHierarchyPropertyDsl {
 
     /**
      * @param drillDownFilters The option that determines the drill down filters for the `DateTime`
-     * hierarchy.
+     *   hierarchy.
      */
     public fun drillDownFilters(drillDownFilters: IResolvable) {
         cdkBuilder.drillDownFilters(drillDownFilters)
     }
 
-    /**
-     * @param hierarchyId The hierarchy ID of the `DateTime` hierarchy.
-     */
+    /** @param hierarchyId The hierarchy ID of the `DateTime` hierarchy. */
     public fun hierarchyId(hierarchyId: String) {
         cdkBuilder.hierarchyId(hierarchyId)
     }

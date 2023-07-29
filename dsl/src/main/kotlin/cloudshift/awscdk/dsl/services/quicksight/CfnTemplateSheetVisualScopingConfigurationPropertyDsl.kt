@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The filter that is applied to the options.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,43 +38,37 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateSheetVisualScopingConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.SheetVisualScopingConfigurationProperty.Builder =
-      CfnTemplate.SheetVisualScopingConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.SheetVisualScopingConfigurationProperty.Builder =
+        CfnTemplate.SheetVisualScopingConfigurationProperty.builder()
 
-  private val _visualIds: MutableList<String> = mutableListOf()
+    private val _visualIds: MutableList<String> = mutableListOf()
 
-  /**
-   * @param scope The scope of the applied entities. Choose one of the following options:. 
-   * * `ALL_VISUALS`
-   * * `SELECTED_VISUALS`
-   */
-  public fun scope(scope: String) {
-    cdkBuilder.scope(scope)
-  }
+    /**
+     * @param scope The scope of the applied entities. Choose one of the following options:.
+     * * `ALL_VISUALS`
+     * * `SELECTED_VISUALS`
+     */
+    public fun scope(scope: String) {
+        cdkBuilder.scope(scope)
+    }
 
-  /**
-   * @param sheetId The selected sheet that the filter is applied to. 
-   */
-  public fun sheetId(sheetId: String) {
-    cdkBuilder.sheetId(sheetId)
-  }
+    /** @param sheetId The selected sheet that the filter is applied to. */
+    public fun sheetId(sheetId: String) {
+        cdkBuilder.sheetId(sheetId)
+    }
 
-  /**
-   * @param visualIds The selected visuals that the filter is applied to.
-   */
-  public fun visualIds(vararg visualIds: String) {
-    _visualIds.addAll(listOf(*visualIds))
-  }
+    /** @param visualIds The selected visuals that the filter is applied to. */
+    public fun visualIds(vararg visualIds: String) {
+        _visualIds.addAll(listOf(*visualIds))
+    }
 
-  /**
-   * @param visualIds The selected visuals that the filter is applied to.
-   */
-  public fun visualIds(visualIds: Collection<String>) {
-    _visualIds.addAll(visualIds)
-  }
+    /** @param visualIds The selected visuals that the filter is applied to. */
+    public fun visualIds(visualIds: Collection<String>) {
+        _visualIds.addAll(visualIds)
+    }
 
-  public fun build(): CfnTemplate.SheetVisualScopingConfigurationProperty {
-    if(_visualIds.isNotEmpty()) cdkBuilder.visualIds(_visualIds)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTemplate.SheetVisualScopingConfigurationProperty {
+        if (_visualIds.isNotEmpty()) cdkBuilder.visualIds(_visualIds)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lightsail
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.lightsail.CfnContainer
  * service.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,34 +39,28 @@ import software.amazon.awscdk.services.lightsail.CfnContainer
  */
 @CdkDslMarker
 public class CfnContainerPublicDomainNamePropertyDsl {
-  private val cdkBuilder: CfnContainer.PublicDomainNameProperty.Builder =
-      CfnContainer.PublicDomainNameProperty.builder()
+    private val cdkBuilder: CfnContainer.PublicDomainNameProperty.Builder =
+        CfnContainer.PublicDomainNameProperty.builder()
 
-  private val _domainNames: MutableList<String> = mutableListOf()
+    private val _domainNames: MutableList<String> = mutableListOf()
 
-  /**
-   * @param certificateName The name of the certificate for the public domains.
-   */
-  public fun certificateName(certificateName: String) {
-    cdkBuilder.certificateName(certificateName)
-  }
+    /** @param certificateName The name of the certificate for the public domains. */
+    public fun certificateName(certificateName: String) {
+        cdkBuilder.certificateName(certificateName)
+    }
 
-  /**
-   * @param domainNames The public domain names to use with the container service.
-   */
-  public fun domainNames(vararg domainNames: String) {
-    _domainNames.addAll(listOf(*domainNames))
-  }
+    /** @param domainNames The public domain names to use with the container service. */
+    public fun domainNames(vararg domainNames: String) {
+        _domainNames.addAll(listOf(*domainNames))
+    }
 
-  /**
-   * @param domainNames The public domain names to use with the container service.
-   */
-  public fun domainNames(domainNames: Collection<String>) {
-    _domainNames.addAll(domainNames)
-  }
+    /** @param domainNames The public domain names to use with the container service. */
+    public fun domainNames(domainNames: Collection<String>) {
+        _domainNames.addAll(domainNames)
+    }
 
-  public fun build(): CfnContainer.PublicDomainNameProperty {
-    if(_domainNames.isNotEmpty()) cdkBuilder.domainNames(_domainNames)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnContainer.PublicDomainNameProperty {
+        if (_domainNames.isNotEmpty()) cdkBuilder.domainNames(_domainNames)
+        return cdkBuilder.build()
+    }
 }

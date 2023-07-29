@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ivschat
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
  * stored.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,16 +34,14 @@ import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
  */
 @CdkDslMarker
 public class CfnLoggingConfigurationS3DestinationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnLoggingConfiguration.S3DestinationConfigurationProperty.Builder =
-      CfnLoggingConfiguration.S3DestinationConfigurationProperty.builder()
+    private val cdkBuilder: CfnLoggingConfiguration.S3DestinationConfigurationProperty.Builder =
+        CfnLoggingConfiguration.S3DestinationConfigurationProperty.builder()
 
-  /**
-   * @param bucketName Name of the Amazon S3 bucket where chat activity will be logged. 
-   */
-  public fun bucketName(bucketName: String) {
-    cdkBuilder.bucketName(bucketName)
-  }
+    /** @param bucketName Name of the Amazon S3 bucket where chat activity will be logged. */
+    public fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+    }
 
-  public fun build(): CfnLoggingConfiguration.S3DestinationConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnLoggingConfiguration.S3DestinationConfigurationProperty =
+        cdkBuilder.build()
 }

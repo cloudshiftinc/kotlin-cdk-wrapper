@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The aggregated field well configuration of a `RadarChartVisual` .
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -30,44 +38,32 @@ public class CfnAnalysisRadarChartAggregatedFieldWellsPropertyDsl {
 
     private val _values: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param category The aggregated field well categories of a radar chart.
-     */
+    /** @param category The aggregated field well categories of a radar chart. */
     public fun category(vararg category: Any) {
         _category.addAll(listOf(*category))
     }
 
-    /**
-     * @param category The aggregated field well categories of a radar chart.
-     */
+    /** @param category The aggregated field well categories of a radar chart. */
     public fun category(category: Collection<Any>) {
         _category.addAll(category)
     }
 
-    /**
-     * @param category The aggregated field well categories of a radar chart.
-     */
+    /** @param category The aggregated field well categories of a radar chart. */
     public fun category(category: IResolvable) {
         cdkBuilder.category(category)
     }
 
-    /**
-     * @param color The color that are assigned to the aggregated field wells of a radar chart.
-     */
+    /** @param color The color that are assigned to the aggregated field wells of a radar chart. */
     public fun color(vararg color: Any) {
         _color.addAll(listOf(*color))
     }
 
-    /**
-     * @param color The color that are assigned to the aggregated field wells of a radar chart.
-     */
+    /** @param color The color that are assigned to the aggregated field wells of a radar chart. */
     public fun color(color: Collection<Any>) {
         _color.addAll(color)
     }
 
-    /**
-     * @param color The color that are assigned to the aggregated field wells of a radar chart.
-     */
+    /** @param color The color that are assigned to the aggregated field wells of a radar chart. */
     public fun color(color: IResolvable) {
         cdkBuilder.color(color)
     }

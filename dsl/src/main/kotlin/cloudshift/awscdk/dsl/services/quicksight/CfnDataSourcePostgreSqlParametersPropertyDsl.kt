@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  * The parameters for PostgreSQL.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,29 +36,23 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourcePostgreSqlParametersPropertyDsl {
-  private val cdkBuilder: CfnDataSource.PostgreSqlParametersProperty.Builder =
-      CfnDataSource.PostgreSqlParametersProperty.builder()
+    private val cdkBuilder: CfnDataSource.PostgreSqlParametersProperty.Builder =
+        CfnDataSource.PostgreSqlParametersProperty.builder()
 
-  /**
-   * @param database Database. 
-   */
-  public fun database(database: String) {
-    cdkBuilder.database(database)
-  }
+    /** @param database Database. */
+    public fun database(database: String) {
+        cdkBuilder.database(database)
+    }
 
-  /**
-   * @param host Host. 
-   */
-  public fun host(host: String) {
-    cdkBuilder.host(host)
-  }
+    /** @param host Host. */
+    public fun host(host: String) {
+        cdkBuilder.host(host)
+    }
 
-  /**
-   * @param port Port. 
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port Port. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  public fun build(): CfnDataSource.PostgreSqlParametersProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.PostgreSqlParametersProperty = cdkBuilder.build()
 }

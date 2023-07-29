@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticache
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup
  * A list of the replication groups.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,52 +42,48 @@ import software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup
  */
 @CdkDslMarker
 public class CfnGlobalReplicationGroupRegionalConfigurationPropertyDsl {
-  private val cdkBuilder: CfnGlobalReplicationGroup.RegionalConfigurationProperty.Builder =
-      CfnGlobalReplicationGroup.RegionalConfigurationProperty.builder()
+    private val cdkBuilder: CfnGlobalReplicationGroup.RegionalConfigurationProperty.Builder =
+        CfnGlobalReplicationGroup.RegionalConfigurationProperty.builder()
 
-  private val _reshardingConfigurations: MutableList<Any> = mutableListOf()
+    private val _reshardingConfigurations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param replicationGroupId The name of the secondary cluster.
-   */
-  public fun replicationGroupId(replicationGroupId: String) {
-    cdkBuilder.replicationGroupId(replicationGroupId)
-  }
+    /** @param replicationGroupId The name of the secondary cluster. */
+    public fun replicationGroupId(replicationGroupId: String) {
+        cdkBuilder.replicationGroupId(replicationGroupId)
+    }
 
-  /**
-   * @param replicationGroupRegion The Amazon region where the cluster is stored.
-   */
-  public fun replicationGroupRegion(replicationGroupRegion: String) {
-    cdkBuilder.replicationGroupRegion(replicationGroupRegion)
-  }
+    /** @param replicationGroupRegion The Amazon region where the cluster is stored. */
+    public fun replicationGroupRegion(replicationGroupRegion: String) {
+        cdkBuilder.replicationGroupRegion(replicationGroupRegion)
+    }
 
-  /**
-   * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the
-   * configuration of a node group in the resharded cluster.
-   */
-  public fun reshardingConfigurations(vararg reshardingConfigurations: Any) {
-    _reshardingConfigurations.addAll(listOf(*reshardingConfigurations))
-  }
+    /**
+     * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies
+     *   the configuration of a node group in the resharded cluster.
+     */
+    public fun reshardingConfigurations(vararg reshardingConfigurations: Any) {
+        _reshardingConfigurations.addAll(listOf(*reshardingConfigurations))
+    }
 
-  /**
-   * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the
-   * configuration of a node group in the resharded cluster.
-   */
-  public fun reshardingConfigurations(reshardingConfigurations: Collection<Any>) {
-    _reshardingConfigurations.addAll(reshardingConfigurations)
-  }
+    /**
+     * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies
+     *   the configuration of a node group in the resharded cluster.
+     */
+    public fun reshardingConfigurations(reshardingConfigurations: Collection<Any>) {
+        _reshardingConfigurations.addAll(reshardingConfigurations)
+    }
 
-  /**
-   * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies the
-   * configuration of a node group in the resharded cluster.
-   */
-  public fun reshardingConfigurations(reshardingConfigurations: IResolvable) {
-    cdkBuilder.reshardingConfigurations(reshardingConfigurations)
-  }
+    /**
+     * @param reshardingConfigurations A list of PreferredAvailabilityZones objects that specifies
+     *   the configuration of a node group in the resharded cluster.
+     */
+    public fun reshardingConfigurations(reshardingConfigurations: IResolvable) {
+        cdkBuilder.reshardingConfigurations(reshardingConfigurations)
+    }
 
-  public fun build(): CfnGlobalReplicationGroup.RegionalConfigurationProperty {
-    if(_reshardingConfigurations.isNotEmpty())
-        cdkBuilder.reshardingConfigurations(_reshardingConfigurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnGlobalReplicationGroup.RegionalConfigurationProperty {
+        if (_reshardingConfigurations.isNotEmpty())
+            cdkBuilder.reshardingConfigurations(_reshardingConfigurations)
+        return cdkBuilder.build()
+    }
 }

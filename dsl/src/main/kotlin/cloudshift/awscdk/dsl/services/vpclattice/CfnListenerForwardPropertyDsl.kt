@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.vpclattice.CfnListener
  * Traffic that matches the rule is forwarded to the specified target groups.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,58 +41,55 @@ import software.amazon.awscdk.services.vpclattice.CfnListener
  */
 @CdkDslMarker
 public class CfnListenerForwardPropertyDsl {
-  private val cdkBuilder: CfnListener.ForwardProperty.Builder =
-      CfnListener.ForwardProperty.builder()
+    private val cdkBuilder: CfnListener.ForwardProperty.Builder =
+        CfnListener.ForwardProperty.builder()
 
-  private val _targetGroups: MutableList<Any> = mutableListOf()
+    private val _targetGroups: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param targetGroups The target groups. 
-   * Traffic matching the rule is forwarded to the specified target groups. With forward actions,
-   * you can assign a weight that controls the prioritization and selection of each target group. This
-   * means that requests are distributed to individual target groups based on their weights. For
-   * example, if two target groups have the same weight, each target group receives half of the
-   * traffic.
-   *
-   * The default value is 1. This means that if only one target group is provided, there is no need
-   * to set the weight; 100% of traffic will go to that target group.
-   */
-  public fun targetGroups(vararg targetGroups: Any) {
-    _targetGroups.addAll(listOf(*targetGroups))
-  }
+    /**
+     * @param targetGroups The target groups. Traffic matching the rule is forwarded to the
+     *   specified target groups. With forward actions, you can assign a weight that controls the
+     *   prioritization and selection of each target group. This means that requests are distributed
+     *   to individual target groups based on their weights. For example, if two target groups have
+     *   the same weight, each target group receives half of the traffic.
+     *
+     * The default value is 1. This means that if only one target group is provided, there is no
+     * need to set the weight; 100% of traffic will go to that target group.
+     */
+    public fun targetGroups(vararg targetGroups: Any) {
+        _targetGroups.addAll(listOf(*targetGroups))
+    }
 
-  /**
-   * @param targetGroups The target groups. 
-   * Traffic matching the rule is forwarded to the specified target groups. With forward actions,
-   * you can assign a weight that controls the prioritization and selection of each target group. This
-   * means that requests are distributed to individual target groups based on their weights. For
-   * example, if two target groups have the same weight, each target group receives half of the
-   * traffic.
-   *
-   * The default value is 1. This means that if only one target group is provided, there is no need
-   * to set the weight; 100% of traffic will go to that target group.
-   */
-  public fun targetGroups(targetGroups: Collection<Any>) {
-    _targetGroups.addAll(targetGroups)
-  }
+    /**
+     * @param targetGroups The target groups. Traffic matching the rule is forwarded to the
+     *   specified target groups. With forward actions, you can assign a weight that controls the
+     *   prioritization and selection of each target group. This means that requests are distributed
+     *   to individual target groups based on their weights. For example, if two target groups have
+     *   the same weight, each target group receives half of the traffic.
+     *
+     * The default value is 1. This means that if only one target group is provided, there is no
+     * need to set the weight; 100% of traffic will go to that target group.
+     */
+    public fun targetGroups(targetGroups: Collection<Any>) {
+        _targetGroups.addAll(targetGroups)
+    }
 
-  /**
-   * @param targetGroups The target groups. 
-   * Traffic matching the rule is forwarded to the specified target groups. With forward actions,
-   * you can assign a weight that controls the prioritization and selection of each target group. This
-   * means that requests are distributed to individual target groups based on their weights. For
-   * example, if two target groups have the same weight, each target group receives half of the
-   * traffic.
-   *
-   * The default value is 1. This means that if only one target group is provided, there is no need
-   * to set the weight; 100% of traffic will go to that target group.
-   */
-  public fun targetGroups(targetGroups: IResolvable) {
-    cdkBuilder.targetGroups(targetGroups)
-  }
+    /**
+     * @param targetGroups The target groups. Traffic matching the rule is forwarded to the
+     *   specified target groups. With forward actions, you can assign a weight that controls the
+     *   prioritization and selection of each target group. This means that requests are distributed
+     *   to individual target groups based on their weights. For example, if two target groups have
+     *   the same weight, each target group receives half of the traffic.
+     *
+     * The default value is 1. This means that if only one target group is provided, there is no
+     * need to set the weight; 100% of traffic will go to that target group.
+     */
+    public fun targetGroups(targetGroups: IResolvable) {
+        cdkBuilder.targetGroups(targetGroups)
+    }
 
-  public fun build(): CfnListener.ForwardProperty {
-    if(_targetGroups.isNotEmpty()) cdkBuilder.targetGroups(_targetGroups)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnListener.ForwardProperty {
+        if (_targetGroups.isNotEmpty()) cdkBuilder.targetGroups(_targetGroups)
+        return cdkBuilder.build()
+    }
 }

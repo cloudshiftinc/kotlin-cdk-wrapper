@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dlm
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,20 @@ import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
  */
 @CdkDslMarker
 public class CfnLifecyclePolicyArchiveRetainRulePropertyDsl {
-  private val cdkBuilder: CfnLifecyclePolicy.ArchiveRetainRuleProperty.Builder =
-      CfnLifecyclePolicy.ArchiveRetainRuleProperty.builder()
+    private val cdkBuilder: CfnLifecyclePolicy.ArchiveRetainRuleProperty.Builder =
+        CfnLifecyclePolicy.ArchiveRetainRuleProperty.builder()
 
-  /**
-   * @param retentionArchiveTier the value to be set. 
-   */
-  public fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
-    cdkBuilder.retentionArchiveTier(retentionArchiveTier)
-  }
+    /** @param retentionArchiveTier the value to be set. */
+    public fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
+        cdkBuilder.retentionArchiveTier(retentionArchiveTier)
+    }
 
-  /**
-   * @param retentionArchiveTier the value to be set. 
-   */
-  public
-      fun retentionArchiveTier(retentionArchiveTier: CfnLifecyclePolicy.RetentionArchiveTierProperty) {
-    cdkBuilder.retentionArchiveTier(retentionArchiveTier)
-  }
+    /** @param retentionArchiveTier the value to be set. */
+    public fun retentionArchiveTier(
+        retentionArchiveTier: CfnLifecyclePolicy.RetentionArchiveTierProperty
+    ) {
+        cdkBuilder.retentionArchiveTier(retentionArchiveTier)
+    }
 
-  public fun build(): CfnLifecyclePolicy.ArchiveRetainRuleProperty = cdkBuilder.build()
+    public fun build(): CfnLifecyclePolicy.ArchiveRetainRuleProperty = cdkBuilder.build()
 }

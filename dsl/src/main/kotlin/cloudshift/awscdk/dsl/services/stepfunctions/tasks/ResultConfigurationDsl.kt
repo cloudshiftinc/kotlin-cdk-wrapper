@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration
  * Location of query result along with S3 bucket configuration.
  *
  * Example:
- *
  * ```
  * AthenaStartQueryExecution startQueryExecutionJob = AthenaStartQueryExecution.Builder.create(this,
  * "Start Athena Query")
@@ -37,42 +45,39 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration
  */
 @CdkDslMarker
 public class ResultConfigurationDsl {
-  private val cdkBuilder: ResultConfiguration.Builder = ResultConfiguration.builder()
+    private val cdkBuilder: ResultConfiguration.Builder = ResultConfiguration.builder()
 
-  /**
-   * @param encryptionConfiguration Encryption option used if enabled in S3.
-   */
-  public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationDsl.() -> Unit
-      = {}) {
-    val builder = EncryptionConfigurationDsl()
-    builder.apply(encryptionConfiguration)
-    cdkBuilder.encryptionConfiguration(builder.build())
-  }
+    /** @param encryptionConfiguration Encryption option used if enabled in S3. */
+    public fun encryptionConfiguration(
+        encryptionConfiguration: EncryptionConfigurationDsl.() -> Unit = {}
+    ) {
+        val builder = EncryptionConfigurationDsl()
+        builder.apply(encryptionConfiguration)
+        cdkBuilder.encryptionConfiguration(builder.build())
+    }
 
-  /**
-   * @param encryptionConfiguration Encryption option used if enabled in S3.
-   */
-  public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
-    cdkBuilder.encryptionConfiguration(encryptionConfiguration)
-  }
+    /** @param encryptionConfiguration Encryption option used if enabled in S3. */
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration)
+    }
 
-  /**
-   * @param outputLocation S3 path of query results.
-   * Example value: `s3://query-results-bucket/folder/`
-   */
-  public fun outputLocation(outputLocation: LocationDsl.() -> Unit = {}) {
-    val builder = LocationDsl()
-    builder.apply(outputLocation)
-    cdkBuilder.outputLocation(builder.build())
-  }
+    /**
+     * @param outputLocation S3 path of query results. Example value:
+     *   `s3://query-results-bucket/folder/`
+     */
+    public fun outputLocation(outputLocation: LocationDsl.() -> Unit = {}) {
+        val builder = LocationDsl()
+        builder.apply(outputLocation)
+        cdkBuilder.outputLocation(builder.build())
+    }
 
-  /**
-   * @param outputLocation S3 path of query results.
-   * Example value: `s3://query-results-bucket/folder/`
-   */
-  public fun outputLocation(outputLocation: Location) {
-    cdkBuilder.outputLocation(outputLocation)
-  }
+    /**
+     * @param outputLocation S3 path of query results. Example value:
+     *   `s3://query-results-bucket/folder/`
+     */
+    public fun outputLocation(outputLocation: Location) {
+        cdkBuilder.outputLocation(outputLocation)
+    }
 
-  public fun build(): ResultConfiguration = cdkBuilder.build()
+    public fun build(): ResultConfiguration = cdkBuilder.build()
 }

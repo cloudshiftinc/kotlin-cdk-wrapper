@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The field well configuration of a histogram.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -273,37 +281,37 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateHistogramAggregatedFieldWellsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.HistogramAggregatedFieldWellsProperty.Builder =
-      CfnTemplate.HistogramAggregatedFieldWellsProperty.builder()
+    private val cdkBuilder: CfnTemplate.HistogramAggregatedFieldWellsProperty.Builder =
+        CfnTemplate.HistogramAggregatedFieldWellsProperty.builder()
 
-  private val _values: MutableList<Any> = mutableListOf()
+    private val _values: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param values The value field wells of a histogram.
-   * Values are aggregated by `COUNT` or `DISTINCT_COUNT` .
-   */
-  public fun values(vararg values: Any) {
-    _values.addAll(listOf(*values))
-  }
+    /**
+     * @param values The value field wells of a histogram. Values are aggregated by `COUNT` or
+     *   `DISTINCT_COUNT` .
+     */
+    public fun values(vararg values: Any) {
+        _values.addAll(listOf(*values))
+    }
 
-  /**
-   * @param values The value field wells of a histogram.
-   * Values are aggregated by `COUNT` or `DISTINCT_COUNT` .
-   */
-  public fun values(values: Collection<Any>) {
-    _values.addAll(values)
-  }
+    /**
+     * @param values The value field wells of a histogram. Values are aggregated by `COUNT` or
+     *   `DISTINCT_COUNT` .
+     */
+    public fun values(values: Collection<Any>) {
+        _values.addAll(values)
+    }
 
-  /**
-   * @param values The value field wells of a histogram.
-   * Values are aggregated by `COUNT` or `DISTINCT_COUNT` .
-   */
-  public fun values(values: IResolvable) {
-    cdkBuilder.values(values)
-  }
+    /**
+     * @param values The value field wells of a histogram. Values are aggregated by `COUNT` or
+     *   `DISTINCT_COUNT` .
+     */
+    public fun values(values: IResolvable) {
+        cdkBuilder.values(values)
+    }
 
-  public fun build(): CfnTemplate.HistogramAggregatedFieldWellsProperty {
-    if(_values.isNotEmpty()) cdkBuilder.values(_values)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTemplate.HistogramAggregatedFieldWellsProperty {
+        if (_values.isNotEmpty()) cdkBuilder.values(_values)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The conditional formatting for a `PivotTableVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -128,35 +136,35 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardTableConditionalFormattingPropertyDsl {
-  private val cdkBuilder: CfnDashboard.TableConditionalFormattingProperty.Builder =
-      CfnDashboard.TableConditionalFormattingProperty.builder()
+    private val cdkBuilder: CfnDashboard.TableConditionalFormattingProperty.Builder =
+        CfnDashboard.TableConditionalFormattingProperty.builder()
 
-  private val _conditionalFormattingOptions: MutableList<Any> = mutableListOf()
+    private val _conditionalFormattingOptions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
-   */
-  public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any) {
-    _conditionalFormattingOptions.addAll(listOf(*conditionalFormattingOptions))
-  }
+    /**
+     * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
+     */
+    public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any) {
+        _conditionalFormattingOptions.addAll(listOf(*conditionalFormattingOptions))
+    }
 
-  /**
-   * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
-   */
-  public fun conditionalFormattingOptions(conditionalFormattingOptions: Collection<Any>) {
-    _conditionalFormattingOptions.addAll(conditionalFormattingOptions)
-  }
+    /**
+     * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
+     */
+    public fun conditionalFormattingOptions(conditionalFormattingOptions: Collection<Any>) {
+        _conditionalFormattingOptions.addAll(conditionalFormattingOptions)
+    }
 
-  /**
-   * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
-   */
-  public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable) {
-    cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
-  }
+    /**
+     * @param conditionalFormattingOptions Conditional formatting options for a `PivotTableVisual` .
+     */
+    public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable) {
+        cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
+    }
 
-  public fun build(): CfnDashboard.TableConditionalFormattingProperty {
-    if(_conditionalFormattingOptions.isNotEmpty())
-        cdkBuilder.conditionalFormattingOptions(_conditionalFormattingOptions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDashboard.TableConditionalFormattingProperty {
+        if (_conditionalFormattingOptions.isNotEmpty())
+            cdkBuilder.conditionalFormattingOptions(_conditionalFormattingOptions)
+        return cdkBuilder.build()
+    }
 }

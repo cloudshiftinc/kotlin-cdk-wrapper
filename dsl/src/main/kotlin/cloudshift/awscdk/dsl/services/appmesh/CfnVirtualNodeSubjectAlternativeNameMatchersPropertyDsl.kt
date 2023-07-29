@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  * Layer Security (TLS) certificate can be matched.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,27 +36,23 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  */
 @CdkDslMarker
 public class CfnVirtualNodeSubjectAlternativeNameMatchersPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.SubjectAlternativeNameMatchersProperty.Builder =
-      CfnVirtualNode.SubjectAlternativeNameMatchersProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.SubjectAlternativeNameMatchersProperty.Builder =
+        CfnVirtualNode.SubjectAlternativeNameMatchersProperty.builder()
 
-  private val _exact: MutableList<String> = mutableListOf()
+    private val _exact: MutableList<String> = mutableListOf()
 
-  /**
-   * @param exact The values sent must match the specified values exactly.
-   */
-  public fun exact(vararg exact: String) {
-    _exact.addAll(listOf(*exact))
-  }
+    /** @param exact The values sent must match the specified values exactly. */
+    public fun exact(vararg exact: String) {
+        _exact.addAll(listOf(*exact))
+    }
 
-  /**
-   * @param exact The values sent must match the specified values exactly.
-   */
-  public fun exact(exact: Collection<String>) {
-    _exact.addAll(exact)
-  }
+    /** @param exact The values sent must match the specified values exactly. */
+    public fun exact(exact: Collection<String>) {
+        _exact.addAll(exact)
+    }
 
-  public fun build(): CfnVirtualNode.SubjectAlternativeNameMatchersProperty {
-    if(_exact.isNotEmpty()) cdkBuilder.exact(_exact)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVirtualNode.SubjectAlternativeNameMatchersProperty {
+        if (_exact.isNotEmpty()) cdkBuilder.exact(_exact)
+        return cdkBuilder.build()
+    }
 }

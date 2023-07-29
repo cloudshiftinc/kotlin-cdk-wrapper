@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emrcontainers
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
-import kotlin.String
 
 /**
  * The information about the container provider.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,8 +43,7 @@ public class CfnVirtualClusterContainerProviderPropertyDsl {
         CfnVirtualCluster.ContainerProviderProperty.builder()
 
     /**
-     * @param id The ID of the container cluster.
-     * *Minimum* : 1
+     * @param id The ID of the container cluster. *Minimum* : 1
      *
      * *Maximum* : 100
      *
@@ -46,23 +53,19 @@ public class CfnVirtualClusterContainerProviderPropertyDsl {
         cdkBuilder.id(id)
     }
 
-    /**
-     * @param info The information about the container cluster.
-     */
+    /** @param info The information about the container cluster. */
     public fun info(info: IResolvable) {
         cdkBuilder.info(info)
     }
 
-    /**
-     * @param info The information about the container cluster.
-     */
+    /** @param info The information about the container cluster. */
     public fun info(info: CfnVirtualCluster.ContainerInfoProperty) {
         cdkBuilder.info(info)
     }
 
     /**
-     * @param type The type of the container provider.
-     * Amazon EKS is the only supported type as of now.
+     * @param type The type of the container provider. Amazon EKS is the only supported type as of
+     *   now.
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

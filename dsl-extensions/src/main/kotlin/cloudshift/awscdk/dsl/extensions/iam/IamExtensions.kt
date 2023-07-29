@@ -31,6 +31,7 @@ public fun iam.policyStatements(block: (PolicyStatementsDsl).() -> Unit): List<P
 
 public class PolicyStatementsDsl {
     internal val policyStatements = mutableListOf<PolicyStatement>()
+
     public fun policyStatement(block: PolicyStatementDsl.() -> Unit) {
         policyStatements.add(iam.policyStatement(block))
     }

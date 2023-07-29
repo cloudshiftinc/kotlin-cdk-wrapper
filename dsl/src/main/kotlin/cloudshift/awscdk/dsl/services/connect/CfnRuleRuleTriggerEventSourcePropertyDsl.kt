@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.connect.CfnRule
  * The name of the event source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,28 +35,28 @@ import software.amazon.awscdk.services.connect.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleRuleTriggerEventSourcePropertyDsl {
-  private val cdkBuilder: CfnRule.RuleTriggerEventSourceProperty.Builder =
-      CfnRule.RuleTriggerEventSourceProperty.builder()
+    private val cdkBuilder: CfnRule.RuleTriggerEventSourceProperty.Builder =
+        CfnRule.RuleTriggerEventSourceProperty.builder()
 
-  /**
-   * @param eventSourceName The name of the event source. 
-   * *Allowed values* : `OnPostCallAnalysisAvailable` | `OnRealTimeCallAnalysisAvailable` |
-   * `OnPostChatAnalysisAvailable` | `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` |
-   * `OnSalesforceCaseCreate`
-   */
-  public fun eventSourceName(eventSourceName: String) {
-    cdkBuilder.eventSourceName(eventSourceName)
-  }
+    /**
+     * @param eventSourceName The name of the event source. *Allowed values* :
+     *   `OnPostCallAnalysisAvailable` | `OnRealTimeCallAnalysisAvailable` |
+     *   `OnPostChatAnalysisAvailable` | `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` |
+     *   `OnSalesforceCaseCreate`
+     */
+    public fun eventSourceName(eventSourceName: String) {
+        cdkBuilder.eventSourceName(eventSourceName)
+    }
 
-  /**
-   * @param integrationAssociationArn The Amazon Resource Name (ARN) for the integration
-   * association.
-   * `IntegrationAssociationArn` is required if `TriggerEventSource` is one of the following values:
-   * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
-   */
-  public fun integrationAssociationArn(integrationAssociationArn: String) {
-    cdkBuilder.integrationAssociationArn(integrationAssociationArn)
-  }
+    /**
+     * @param integrationAssociationArn The Amazon Resource Name (ARN) for the integration
+     *   association. `IntegrationAssociationArn` is required if `TriggerEventSource` is one of the
+     *   following values: `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` |
+     *   `OnSalesforceCaseCreate`
+     */
+    public fun integrationAssociationArn(integrationAssociationArn: String) {
+        cdkBuilder.integrationAssociationArn(integrationAssociationArn)
+    }
 
-  public fun build(): CfnRule.RuleTriggerEventSourceProperty = cdkBuilder.build()
+    public fun build(): CfnRule.RuleTriggerEventSourceProperty = cdkBuilder.build()
 }

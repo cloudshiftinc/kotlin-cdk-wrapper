@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachm
  * Properties for defining a `CfnUserPoolUICustomizationAttachment`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,31 +36,27 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachm
  */
 @CdkDslMarker
 public class CfnUserPoolUICustomizationAttachmentPropsDsl {
-  private val cdkBuilder: CfnUserPoolUICustomizationAttachmentProps.Builder =
-      CfnUserPoolUICustomizationAttachmentProps.builder()
+    private val cdkBuilder: CfnUserPoolUICustomizationAttachmentProps.Builder =
+        CfnUserPoolUICustomizationAttachmentProps.builder()
 
-  /**
-   * @param clientId The client ID for the client app. 
-   * You can specify the UI customization settings for a single client (with a specific clientId) or
-   * for all clients (by setting the clientId to `ALL` ).
-   */
-  public fun clientId(clientId: String) {
-    cdkBuilder.clientId(clientId)
-  }
+    /**
+     * @param clientId The client ID for the client app. You can specify the UI customization
+     *   settings for a single client (with a specific clientId) or for all clients (by setting the
+     *   clientId to `ALL` ).
+     */
+    public fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+    }
 
-  /**
-   * @param css The CSS values in the UI customization.
-   */
-  public fun css(css: String) {
-    cdkBuilder.css(css)
-  }
+    /** @param css The CSS values in the UI customization. */
+    public fun css(css: String) {
+        cdkBuilder.css(css)
+    }
 
-  /**
-   * @param userPoolId The user pool ID for the user pool. 
-   */
-  public fun userPoolId(userPoolId: String) {
-    cdkBuilder.userPoolId(userPoolId)
-  }
+    /** @param userPoolId The user pool ID for the user pool. */
+    public fun userPoolId(userPoolId: String) {
+        cdkBuilder.userPoolId(userPoolId)
+    }
 
-  public fun build(): CfnUserPoolUICustomizationAttachmentProps = cdkBuilder.build()
+    public fun build(): CfnUserPoolUICustomizationAttachmentProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.s3.NotificationKeyFilter
 
 /**
  * Example:
- *
  * ```
  * Queue myQueue;
  * Bucket bucket = new Bucket(this, "MyBucket");
@@ -21,21 +29,17 @@ import software.amazon.awscdk.services.s3.NotificationKeyFilter
  */
 @CdkDslMarker
 public class NotificationKeyFilterDsl {
-  private val cdkBuilder: NotificationKeyFilter.Builder = NotificationKeyFilter.builder()
+    private val cdkBuilder: NotificationKeyFilter.Builder = NotificationKeyFilter.builder()
 
-  /**
-   * @param prefix S3 keys must have the specified prefix.
-   */
-  public fun prefix(prefix: String) {
-    cdkBuilder.prefix(prefix)
-  }
+    /** @param prefix S3 keys must have the specified prefix. */
+    public fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+    }
 
-  /**
-   * @param suffix S3 keys must have the specified suffix.
-   */
-  public fun suffix(suffix: String) {
-    cdkBuilder.suffix(suffix)
-  }
+    /** @param suffix S3 keys must have the specified suffix. */
+    public fun suffix(suffix: String) {
+        cdkBuilder.suffix(suffix)
+    }
 
-  public fun build(): NotificationKeyFilter = cdkBuilder.build()
+    public fun build(): NotificationKeyFilter = cdkBuilder.build()
 }

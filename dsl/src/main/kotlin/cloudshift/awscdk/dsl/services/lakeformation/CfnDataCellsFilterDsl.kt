@@ -1,14 +1,23 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter
-import software.constructs.Construct
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter
+import software.constructs.Construct
 
 /**
  * A structure that represents a data cell filter with column-level, row-level, and/or cell-level
@@ -19,7 +28,6 @@ import kotlin.collections.MutableList
  * `DataCellsFilter` resource, and calls the `DeleteDataCellsFilter` API operation to delete it.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,9 +56,10 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnDataCellsFilterDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
-    private val cdkBuilder: CfnDataCellsFilter.Builder = CfnDataCellsFilter.Builder.create(scope, id)
+    private val cdkBuilder: CfnDataCellsFilter.Builder =
+        CfnDataCellsFilter.Builder.create(scope, id)
 
     private val _columnNames: MutableList<String> = mutableListOf()
 
@@ -60,6 +69,7 @@ public class CfnDataCellsFilterDsl(
      * A list of column names.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-columnnames)
+     *
      * @param columnNames An array of UTF-8 strings.
      */
     public fun columnNames(vararg columnNames: String) {
@@ -72,6 +82,7 @@ public class CfnDataCellsFilterDsl(
      * A list of column names.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-columnnames)
+     *
      * @param columnNames An array of UTF-8 strings.
      */
     public fun columnNames(columnNames: Collection<String>) {
@@ -84,6 +95,7 @@ public class CfnDataCellsFilterDsl(
      * You must specify either a `ColumnNames` list or the `ColumnWildCard` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-columnwildcard)
+     *
      * @param columnWildcard A wildcard with exclusions.
      */
     public fun columnWildcard(columnWildcard: IResolvable) {
@@ -96,6 +108,7 @@ public class CfnDataCellsFilterDsl(
      * You must specify either a `ColumnNames` list or the `ColumnWildCard` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-columnwildcard)
+     *
      * @param columnWildcard A wildcard with exclusions.
      */
     public fun columnWildcard(columnWildcard: CfnDataCellsFilter.ColumnWildcardProperty) {
@@ -103,34 +116,34 @@ public class CfnDataCellsFilterDsl(
     }
 
     /**
-     * UTF-8 string, not less than 1 or more than 255 bytes long, matching the [single-line string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     * UTF-8 string, not less than 1 or more than 255 bytes long, matching the
+     * [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
      * .
      *
      * A database in the Data Catalog .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-databasename)
+     *
      * @param databaseName UTF-8 string, not less than 1 or more than 255 bytes long, matching the
-     * [single-line string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
-     * .
+     *   [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     *   .
      */
     public fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
     }
 
     /**
-     * UTF-8 string, not less than 1 or more than 255 bytes long, matching the [single-line string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     * UTF-8 string, not less than 1 or more than 255 bytes long, matching the
+     * [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
      * .
      *
      * The name given by the user to the data filter cell.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-name)
+     *
      * @param name UTF-8 string, not less than 1 or more than 255 bytes long, matching the
-     * [single-line string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
-     * .
+     *   [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     *   .
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
@@ -140,6 +153,7 @@ public class CfnDataCellsFilterDsl(
      * A PartiQL predicate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-rowfilter)
+     *
      * @param rowFilter A PartiQL predicate.
      */
     public fun rowFilter(rowFilter: IResolvable) {
@@ -150,6 +164,7 @@ public class CfnDataCellsFilterDsl(
      * A PartiQL predicate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-rowfilter)
+     *
      * @param rowFilter A PartiQL predicate.
      */
     public fun rowFilter(rowFilter: CfnDataCellsFilter.RowFilterProperty) {
@@ -157,35 +172,35 @@ public class CfnDataCellsFilterDsl(
     }
 
     /**
-     * Catalog id string, not less than 1 or more than 255 bytes long, matching the [single-line
-   * string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     * Catalog id string, not less than 1 or more than 255 bytes long, matching the
+     * [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
      * .
      *
      * The ID of the catalog to which the table belongs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-tablecatalogid)
-     * @param tableCatalogId Catalog id string, not less than 1 or more than 255 bytes long, matching
-     * the [single-line string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
-     * .
+     *
+     * @param tableCatalogId Catalog id string, not less than 1 or more than 255 bytes long,
+     *   matching the
+     *   [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     *   .
      */
     public fun tableCatalogId(tableCatalogId: String) {
         cdkBuilder.tableCatalogId(tableCatalogId)
     }
 
     /**
-     * UTF-8 string, not less than 1 or more than 255 bytes long, matching the [single-line string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     * UTF-8 string, not less than 1 or more than 255 bytes long, matching the
+     * [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
      * .
      *
      * A table in the database.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html#cfn-lakeformation-datacellsfilter-tablename)
+     *
      * @param tableName UTF-8 string, not less than 1 or more than 255 bytes long, matching the
-     * [single-line string
-   * pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
-     * .
+     *   [single-line string pattern](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-aws-lake-formation-api-common.html)
+     *   .
      */
     public fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)

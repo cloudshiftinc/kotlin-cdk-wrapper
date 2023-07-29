@@ -1,10 +1,19 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.mediaconnect.CfnBridge
 import kotlin.Number
+import software.amazon.awscdk.services.mediaconnect.CfnBridge
 
 /**
  * Create a bridge with the ingress bridge type.
@@ -13,7 +22,6 @@ import kotlin.Number
  * delivered to the cloud.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,16 +40,12 @@ public class CfnBridgeIngressGatewayBridgePropertyDsl {
     private val cdkBuilder: CfnBridge.IngressGatewayBridgeProperty.Builder =
         CfnBridge.IngressGatewayBridgeProperty.builder()
 
-    /**
-     * @param maxBitrate The maximum expected bitrate (in bps) of the ingress bridge.
-     */
+    /** @param maxBitrate The maximum expected bitrate (in bps) of the ingress bridge. */
     public fun maxBitrate(maxBitrate: Number) {
         cdkBuilder.maxBitrate(maxBitrate)
     }
 
-    /**
-     * @param maxOutputs The maximum number of outputs on the ingress bridge.
-     */
+    /** @param maxOutputs The maximum number of outputs on the ingress bridge. */
     public fun maxOutputs(maxOutputs: Number) {
         cdkBuilder.maxOutputs(maxOutputs)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.robomaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.robomaker.CfnRobotProps
  * Properties for defining a `CfnRobot`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,42 +39,35 @@ import software.amazon.awscdk.services.robomaker.CfnRobotProps
  */
 @CdkDslMarker
 public class CfnRobotPropsDsl {
-  private val cdkBuilder: CfnRobotProps.Builder = CfnRobotProps.builder()
+    private val cdkBuilder: CfnRobotProps.Builder = CfnRobotProps.builder()
 
-  /**
-   * @param architecture The architecture of the robot. 
-   */
-  public fun architecture(architecture: String) {
-    cdkBuilder.architecture(architecture)
-  }
+    /** @param architecture The architecture of the robot. */
+    public fun architecture(architecture: String) {
+        cdkBuilder.architecture(architecture)
+    }
 
-  /**
-   * @param fleet The Amazon Resource Name (ARN) of the fleet to which the robot will be registered.
-   */
-  public fun fleet(fleet: String) {
-    cdkBuilder.fleet(fleet)
-  }
+    /**
+     * @param fleet The Amazon Resource Name (ARN) of the fleet to which the robot will be
+     *   registered.
+     */
+    public fun fleet(fleet: String) {
+        cdkBuilder.fleet(fleet)
+    }
 
-  /**
-   * @param greengrassGroupId The Greengrass group associated with the robot. 
-   */
-  public fun greengrassGroupId(greengrassGroupId: String) {
-    cdkBuilder.greengrassGroupId(greengrassGroupId)
-  }
+    /** @param greengrassGroupId The Greengrass group associated with the robot. */
+    public fun greengrassGroupId(greengrassGroupId: String) {
+        cdkBuilder.greengrassGroupId(greengrassGroupId)
+    }
 
-  /**
-   * @param name The name of the robot.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the robot. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param tags A map that contains tag keys and tag values that are attached to the robot.
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags A map that contains tag keys and tag values that are attached to the robot. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnRobotProps = cdkBuilder.build()
+    public fun build(): CfnRobotProps = cdkBuilder.build()
 }

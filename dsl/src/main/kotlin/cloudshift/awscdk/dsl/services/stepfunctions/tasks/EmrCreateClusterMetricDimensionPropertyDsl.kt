@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -10,13 +19,11 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * A CloudWatch dimension, which is specified using a Key (known as a Name in CloudWatch), Value
  * pair.
  *
- * By default, Amazon EMR uses
- * one dimension whose Key is JobFlowID and Value is a variable representing the cluster ID, which
- * is ${emr.clusterId}. This enables
- * the rule to bootstrap when the cluster ID becomes available
+ * By default, Amazon EMR uses one dimension whose Key is JobFlowID and Value is a variable
+ * representing the cluster ID, which is ${emr.clusterId}. This enables the rule to bootstrap when
+ * the cluster ID becomes available
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +38,18 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  */
 @CdkDslMarker
 public class EmrCreateClusterMetricDimensionPropertyDsl {
-  private val cdkBuilder: EmrCreateCluster.MetricDimensionProperty.Builder =
-      EmrCreateCluster.MetricDimensionProperty.builder()
+    private val cdkBuilder: EmrCreateCluster.MetricDimensionProperty.Builder =
+        EmrCreateCluster.MetricDimensionProperty.builder()
 
-  /**
-   * @param key The dimension name. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The dimension name. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The dimension value. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The dimension value. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): EmrCreateCluster.MetricDimensionProperty = cdkBuilder.build()
+    public fun build(): EmrCreateCluster.MetricDimensionProperty = cdkBuilder.build()
 }

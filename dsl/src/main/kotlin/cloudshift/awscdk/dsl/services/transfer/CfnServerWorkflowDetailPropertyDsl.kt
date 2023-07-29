@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.transfer
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.transfer.CfnServer
  * partial upload occurs when a file is open when the session disconnects.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,23 +38,21 @@ import software.amazon.awscdk.services.transfer.CfnServer
  */
 @CdkDslMarker
 public class CfnServerWorkflowDetailPropertyDsl {
-  private val cdkBuilder: CfnServer.WorkflowDetailProperty.Builder =
-      CfnServer.WorkflowDetailProperty.builder()
+    private val cdkBuilder: CfnServer.WorkflowDetailProperty.Builder =
+        CfnServer.WorkflowDetailProperty.builder()
 
-  /**
-   * @param executionRole Includes the necessary permissions for S3, EFS, and Lambda operations that
-   * Transfer can assume, so that all workflow steps can operate on the required resources. 
-   */
-  public fun executionRole(executionRole: String) {
-    cdkBuilder.executionRole(executionRole)
-  }
+    /**
+     * @param executionRole Includes the necessary permissions for S3, EFS, and Lambda operations
+     *   that Transfer can assume, so that all workflow steps can operate on the required resources.
+     */
+    public fun executionRole(executionRole: String) {
+        cdkBuilder.executionRole(executionRole)
+    }
 
-  /**
-   * @param workflowId A unique identifier for the workflow. 
-   */
-  public fun workflowId(workflowId: String) {
-    cdkBuilder.workflowId(workflowId)
-  }
+    /** @param workflowId A unique identifier for the workflow. */
+    public fun workflowId(workflowId: String) {
+        cdkBuilder.workflowId(workflowId)
+    }
 
-  public fun build(): CfnServer.WorkflowDetailProperty = cdkBuilder.build()
+    public fun build(): CfnServer.WorkflowDetailProperty = cdkBuilder.build()
 }

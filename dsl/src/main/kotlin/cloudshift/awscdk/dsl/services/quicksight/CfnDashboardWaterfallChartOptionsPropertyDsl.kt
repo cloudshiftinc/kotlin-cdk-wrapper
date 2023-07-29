@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The options that determine the presentation of a waterfall visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,9 +36,7 @@ public class CfnDashboardWaterfallChartOptionsPropertyDsl {
     private val cdkBuilder: CfnDashboard.WaterfallChartOptionsProperty.Builder =
         CfnDashboard.WaterfallChartOptionsProperty.builder()
 
-    /**
-     * @param totalBarLabel This option determines the total bar label of a waterfall visual.
-     */
+    /** @param totalBarLabel This option determines the total bar label of a waterfall visual. */
     public fun totalBarLabel(totalBarLabel: String) {
         cdkBuilder.totalBarLabel(totalBarLabel)
     }

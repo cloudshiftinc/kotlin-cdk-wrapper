@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.omics
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.omics.CfnVariantStore
  * Server-side encryption (SSE) settings for a store.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.omics.CfnVariantStore
  */
 @CdkDslMarker
 public class CfnVariantStoreSseConfigPropertyDsl {
-  private val cdkBuilder: CfnVariantStore.SseConfigProperty.Builder =
-      CfnVariantStore.SseConfigProperty.builder()
+    private val cdkBuilder: CfnVariantStore.SseConfigProperty.Builder =
+        CfnVariantStore.SseConfigProperty.builder()
 
-  /**
-   * @param keyArn An encryption key ARN.
-   */
-  public fun keyArn(keyArn: String) {
-    cdkBuilder.keyArn(keyArn)
-  }
+    /** @param keyArn An encryption key ARN. */
+    public fun keyArn(keyArn: String) {
+        cdkBuilder.keyArn(keyArn)
+    }
 
-  /**
-   * @param type The encryption type. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The encryption type. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnVariantStore.SseConfigProperty = cdkBuilder.build()
+    public fun build(): CfnVariantStore.SseConfigProperty = cdkBuilder.build()
 }

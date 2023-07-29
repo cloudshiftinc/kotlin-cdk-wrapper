@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The share label options for the labels.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,36 +45,28 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardLabelOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.LabelOptionsProperty.Builder =
-      CfnDashboard.LabelOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.LabelOptionsProperty.Builder =
+        CfnDashboard.LabelOptionsProperty.builder()
 
-  /**
-   * @param customLabel The text for the label.
-   */
-  public fun customLabel(customLabel: String) {
-    cdkBuilder.customLabel(customLabel)
-  }
+    /** @param customLabel The text for the label. */
+    public fun customLabel(customLabel: String) {
+        cdkBuilder.customLabel(customLabel)
+    }
 
-  /**
-   * @param fontConfiguration The font configuration of the label.
-   */
-  public fun fontConfiguration(fontConfiguration: IResolvable) {
-    cdkBuilder.fontConfiguration(fontConfiguration)
-  }
+    /** @param fontConfiguration The font configuration of the label. */
+    public fun fontConfiguration(fontConfiguration: IResolvable) {
+        cdkBuilder.fontConfiguration(fontConfiguration)
+    }
 
-  /**
-   * @param fontConfiguration The font configuration of the label.
-   */
-  public fun fontConfiguration(fontConfiguration: CfnDashboard.FontConfigurationProperty) {
-    cdkBuilder.fontConfiguration(fontConfiguration)
-  }
+    /** @param fontConfiguration The font configuration of the label. */
+    public fun fontConfiguration(fontConfiguration: CfnDashboard.FontConfigurationProperty) {
+        cdkBuilder.fontConfiguration(fontConfiguration)
+    }
 
-  /**
-   * @param visibility Determines whether or not the label is visible.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /** @param visibility Determines whether or not the label is visible. */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnDashboard.LabelOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.LabelOptionsProperty = cdkBuilder.build()
 }

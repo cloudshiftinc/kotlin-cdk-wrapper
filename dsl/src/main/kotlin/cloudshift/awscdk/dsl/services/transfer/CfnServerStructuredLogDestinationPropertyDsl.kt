@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.transfer
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.transfer.CfnServer
  * Specifies a log group to which your server logs are sent.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,8 +30,8 @@ import software.amazon.awscdk.services.transfer.CfnServer
  */
 @CdkDslMarker
 public class CfnServerStructuredLogDestinationPropertyDsl {
-  private val cdkBuilder: CfnServer.StructuredLogDestinationProperty.Builder =
-      CfnServer.StructuredLogDestinationProperty.builder()
+    private val cdkBuilder: CfnServer.StructuredLogDestinationProperty.Builder =
+        CfnServer.StructuredLogDestinationProperty.builder()
 
-  public fun build(): CfnServer.StructuredLogDestinationProperty = cdkBuilder.build()
+    public fun build(): CfnServer.StructuredLogDestinationProperty = cdkBuilder.build()
 }

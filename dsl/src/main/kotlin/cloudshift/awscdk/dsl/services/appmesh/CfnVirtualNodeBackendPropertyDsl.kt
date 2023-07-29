@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  * to.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -63,22 +71,18 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  */
 @CdkDslMarker
 public class CfnVirtualNodeBackendPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.BackendProperty.Builder =
-      CfnVirtualNode.BackendProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.BackendProperty.Builder =
+        CfnVirtualNode.BackendProperty.builder()
 
-  /**
-   * @param virtualService Specifies a virtual service to use as a backend.
-   */
-  public fun virtualService(virtualService: IResolvable) {
-    cdkBuilder.virtualService(virtualService)
-  }
+    /** @param virtualService Specifies a virtual service to use as a backend. */
+    public fun virtualService(virtualService: IResolvable) {
+        cdkBuilder.virtualService(virtualService)
+    }
 
-  /**
-   * @param virtualService Specifies a virtual service to use as a backend.
-   */
-  public fun virtualService(virtualService: CfnVirtualNode.VirtualServiceBackendProperty) {
-    cdkBuilder.virtualService(virtualService)
-  }
+    /** @param virtualService Specifies a virtual service to use as a backend. */
+    public fun virtualService(virtualService: CfnVirtualNode.VirtualServiceBackendProperty) {
+        cdkBuilder.virtualService(virtualService)
+    }
 
-  public fun build(): CfnVirtualNode.BackendProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.BackendProperty = cdkBuilder.build()
 }

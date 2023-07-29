@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fsx
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine
  * including Microsoft Windows and macOS client accessing the file system.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,37 +45,40 @@ import software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine
  */
 @CdkDslMarker
 public class CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl {
-  private val cdkBuilder: CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.Builder =
-      CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.builder()
+    private val cdkBuilder: CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.Builder =
+        CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.builder()
 
-  /**
-   * @param netBiosName The NetBIOS name of the Active Directory computer object that will be
-   * created for your SVM.
-   */
-  public fun netBiosName(netBiosName: String) {
-    cdkBuilder.netBiosName(netBiosName)
-  }
+    /**
+     * @param netBiosName The NetBIOS name of the Active Directory computer object that will be
+     *   created for your SVM.
+     */
+    public fun netBiosName(netBiosName: String) {
+        cdkBuilder.netBiosName(netBiosName)
+    }
 
-  /**
-   * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
-   * the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises) Microsoft
-   * Active Directory (AD) directory.
-   */
-  public
-      fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
-    cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration)
-  }
+    /**
+     * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
+     *   the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises)
+     *   Microsoft Active Directory (AD) directory.
+     */
+    public fun selfManagedActiveDirectoryConfiguration(
+        selfManagedActiveDirectoryConfiguration: IResolvable
+    ) {
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration)
+    }
 
-  /**
-   * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
-   * the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises) Microsoft
-   * Active Directory (AD) directory.
-   */
-  public
-      fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty) {
-    cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration)
-  }
+    /**
+     * @param selfManagedActiveDirectoryConfiguration The configuration that Amazon FSx uses to join
+     *   the ONTAP storage virtual machine (SVM) to your self-managed (including on-premises)
+     *   Microsoft Active Directory (AD) directory.
+     */
+    public fun selfManagedActiveDirectoryConfiguration(
+        selfManagedActiveDirectoryConfiguration:
+            CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty
+    ) {
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration)
+    }
 
-  public fun build(): CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty =
+        cdkBuilder.build()
 }

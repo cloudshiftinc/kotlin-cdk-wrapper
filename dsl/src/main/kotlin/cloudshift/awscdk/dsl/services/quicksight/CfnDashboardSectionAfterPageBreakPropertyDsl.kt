@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The configuration of a page break after a section.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardSectionAfterPageBreakPropertyDsl {
-  private val cdkBuilder: CfnDashboard.SectionAfterPageBreakProperty.Builder =
-      CfnDashboard.SectionAfterPageBreakProperty.builder()
+    private val cdkBuilder: CfnDashboard.SectionAfterPageBreakProperty.Builder =
+        CfnDashboard.SectionAfterPageBreakProperty.builder()
 
-  /**
-   * @param status The option that enables or disables a page break at the end of a section.
-   */
-  public fun status(status: String) {
-    cdkBuilder.status(status)
-  }
+    /** @param status The option that enables or disables a page break at the end of a section. */
+    public fun status(status: String) {
+        cdkBuilder.status(status)
+    }
 
-  public fun build(): CfnDashboard.SectionAfterPageBreakProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.SectionAfterPageBreakProperty = cdkBuilder.build()
 }

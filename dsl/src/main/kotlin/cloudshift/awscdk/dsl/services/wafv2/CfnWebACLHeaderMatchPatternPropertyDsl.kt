@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -19,7 +28,6 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * Example JSON: `"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }`
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,64 +44,60 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLHeaderMatchPatternPropertyDsl {
-  private val cdkBuilder: CfnWebACL.HeaderMatchPatternProperty.Builder =
-      CfnWebACL.HeaderMatchPatternProperty.builder()
+    private val cdkBuilder: CfnWebACL.HeaderMatchPatternProperty.Builder =
+        CfnWebACL.HeaderMatchPatternProperty.builder()
 
-  private val _excludedHeaders: MutableList<String> = mutableListOf()
+    private val _excludedHeaders: MutableList<String> = mutableListOf()
 
-  private val _includedHeaders: MutableList<String> = mutableListOf()
+    private val _includedHeaders: MutableList<String> = mutableListOf()
 
-  /**
-   * @param all Inspect all headers.
-   */
-  public fun all(all: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(all)
-    cdkBuilder.all(builder.map)
-  }
+    /** @param all Inspect all headers. */
+    public fun all(all: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(all)
+        cdkBuilder.all(builder.map)
+    }
 
-  /**
-   * @param all Inspect all headers.
-   */
-  public fun all(all: Any) {
-    cdkBuilder.all(all)
-  }
+    /** @param all Inspect all headers. */
+    public fun all(all: Any) {
+        cdkBuilder.all(all)
+    }
 
-  /**
-   * @param excludedHeaders Inspect only the headers whose keys don't match any of the strings
-   * specified here.
-   */
-  public fun excludedHeaders(vararg excludedHeaders: String) {
-    _excludedHeaders.addAll(listOf(*excludedHeaders))
-  }
+    /**
+     * @param excludedHeaders Inspect only the headers whose keys don't match any of the strings
+     *   specified here.
+     */
+    public fun excludedHeaders(vararg excludedHeaders: String) {
+        _excludedHeaders.addAll(listOf(*excludedHeaders))
+    }
 
-  /**
-   * @param excludedHeaders Inspect only the headers whose keys don't match any of the strings
-   * specified here.
-   */
-  public fun excludedHeaders(excludedHeaders: Collection<String>) {
-    _excludedHeaders.addAll(excludedHeaders)
-  }
+    /**
+     * @param excludedHeaders Inspect only the headers whose keys don't match any of the strings
+     *   specified here.
+     */
+    public fun excludedHeaders(excludedHeaders: Collection<String>) {
+        _excludedHeaders.addAll(excludedHeaders)
+    }
 
-  /**
-   * @param includedHeaders Inspect only the headers that have a key that matches one of the strings
-   * specified here.
-   */
-  public fun includedHeaders(vararg includedHeaders: String) {
-    _includedHeaders.addAll(listOf(*includedHeaders))
-  }
+    /**
+     * @param includedHeaders Inspect only the headers that have a key that matches one of the
+     *   strings specified here.
+     */
+    public fun includedHeaders(vararg includedHeaders: String) {
+        _includedHeaders.addAll(listOf(*includedHeaders))
+    }
 
-  /**
-   * @param includedHeaders Inspect only the headers that have a key that matches one of the strings
-   * specified here.
-   */
-  public fun includedHeaders(includedHeaders: Collection<String>) {
-    _includedHeaders.addAll(includedHeaders)
-  }
+    /**
+     * @param includedHeaders Inspect only the headers that have a key that matches one of the
+     *   strings specified here.
+     */
+    public fun includedHeaders(includedHeaders: Collection<String>) {
+        _includedHeaders.addAll(includedHeaders)
+    }
 
-  public fun build(): CfnWebACL.HeaderMatchPatternProperty {
-    if(_excludedHeaders.isNotEmpty()) cdkBuilder.excludedHeaders(_excludedHeaders)
-    if(_includedHeaders.isNotEmpty()) cdkBuilder.includedHeaders(_includedHeaders)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnWebACL.HeaderMatchPatternProperty {
+        if (_excludedHeaders.isNotEmpty()) cdkBuilder.excludedHeaders(_excludedHeaders)
+        if (_includedHeaders.isNotEmpty()) cdkBuilder.includedHeaders(_includedHeaders)
+        return cdkBuilder.build()
+    }
 }

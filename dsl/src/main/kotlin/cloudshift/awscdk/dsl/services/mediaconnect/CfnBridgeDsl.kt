@@ -1,15 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.mediaconnect.CfnBridge
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.mediaconnect.CfnBridge
+import software.constructs.Construct
 
 /**
  * The AWS::MediaConnect::Bridge resource defines a connection between your data center’s gateway
@@ -19,7 +28,6 @@ import kotlin.collections.MutableList
  * outputs and failover.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -78,7 +86,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnBridgeDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnBridge.Builder = CfnBridge.Builder.create(scope, id)
 
@@ -93,6 +101,7 @@ public class CfnBridgeDsl(
      * flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
+     *
      * @param egressGatewayBridge Create a bridge with the egress bridge type.
      */
     public fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
@@ -106,6 +115,7 @@ public class CfnBridgeDsl(
      * flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
+     *
      * @param egressGatewayBridge Create a bridge with the egress bridge type.
      */
     public fun egressGatewayBridge(egressGatewayBridge: CfnBridge.EgressGatewayBridgeProperty) {
@@ -119,6 +129,7 @@ public class CfnBridgeDsl(
      * delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
+     *
      * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
      */
     public fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
@@ -132,6 +143,7 @@ public class CfnBridgeDsl(
      * delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
+     *
      * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
      */
     public fun ingressGatewayBridge(ingressGatewayBridge: CfnBridge.IngressGatewayBridgeProperty) {
@@ -144,6 +156,7 @@ public class CfnBridgeDsl(
      * This name is used to reference the output and must be unique among outputs in this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-name)
+     *
      * @param name The network output name.
      */
     public fun name(name: String) {
@@ -154,6 +167,7 @@ public class CfnBridgeDsl(
      * The outputs that you want to add to this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-outputs)
+     *
      * @param outputs The outputs that you want to add to this bridge.
      */
     public fun outputs(vararg outputs: Any) {
@@ -164,6 +178,7 @@ public class CfnBridgeDsl(
      * The outputs that you want to add to this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-outputs)
+     *
      * @param outputs The outputs that you want to add to this bridge.
      */
     public fun outputs(outputs: Collection<Any>) {
@@ -174,6 +189,7 @@ public class CfnBridgeDsl(
      * The outputs that you want to add to this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-outputs)
+     *
      * @param outputs The outputs that you want to add to this bridge.
      */
     public fun outputs(outputs: IResolvable) {
@@ -184,6 +200,7 @@ public class CfnBridgeDsl(
      * The bridge placement Amazon Resource Number (ARN).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-placementarn)
+     *
      * @param placementArn The bridge placement Amazon Resource Number (ARN).
      */
     public fun placementArn(placementArn: String) {
@@ -194,6 +211,7 @@ public class CfnBridgeDsl(
      * The settings for source failover.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-sourcefailoverconfig)
+     *
      * @param sourceFailoverConfig The settings for source failover.
      */
     public fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
@@ -204,6 +222,7 @@ public class CfnBridgeDsl(
      * The settings for source failover.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-sourcefailoverconfig)
+     *
      * @param sourceFailoverConfig The settings for source failover.
      */
     public fun sourceFailoverConfig(sourceFailoverConfig: CfnBridge.FailoverConfigProperty) {
@@ -214,6 +233,7 @@ public class CfnBridgeDsl(
      * The sources that you want to add to this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-sources)
+     *
      * @param sources The sources that you want to add to this bridge.
      */
     public fun sources(vararg sources: Any) {
@@ -224,6 +244,7 @@ public class CfnBridgeDsl(
      * The sources that you want to add to this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-sources)
+     *
      * @param sources The sources that you want to add to this bridge.
      */
     public fun sources(sources: Collection<Any>) {
@@ -234,6 +255,7 @@ public class CfnBridgeDsl(
      * The sources that you want to add to this bridge.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-sources)
+     *
      * @param sources The sources that you want to add to this bridge.
      */
     public fun sources(sources: IResolvable) {

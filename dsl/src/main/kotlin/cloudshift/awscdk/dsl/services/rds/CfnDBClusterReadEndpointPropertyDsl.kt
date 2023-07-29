@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -11,19 +20,19 @@ import software.amazon.awscdk.services.rds.CfnDBCluster
  *
  * The reader endpoint for a DB cluster load-balances connections across the Aurora Replicas that
  * are available in a DB cluster. As clients request new connections to the reader endpoint, Aurora
- * distributes the connection requests among the Aurora Replicas in the DB cluster. This functionality
- * can help balance your read workload across multiple Aurora Replicas in your DB cluster.
+ * distributes the connection requests among the Aurora Replicas in the DB cluster. This
+ * functionality can help balance your read workload across multiple Aurora Replicas in your DB
+ * cluster.
  *
  * If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the
- * primary instance, your connection is dropped. To continue sending your read workload to other Aurora
- * Replicas in the cluster, you can then reconnect to the reader endpoint.
+ * primary instance, your connection is dropped. To continue sending your read workload to other
+ * Aurora Replicas in the cluster, you can then reconnect to the reader endpoint.
  *
- * For more information about Aurora endpoints, see [Amazon Aurora connection
- * management](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html)
+ * For more information about Aurora endpoints, see
+ * [Amazon Aurora connection management](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html)
  * in the *Amazon Aurora User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,15 +46,13 @@ import software.amazon.awscdk.services.rds.CfnDBCluster
  */
 @CdkDslMarker
 public class CfnDBClusterReadEndpointPropertyDsl {
-  private val cdkBuilder: CfnDBCluster.ReadEndpointProperty.Builder =
-      CfnDBCluster.ReadEndpointProperty.builder()
+    private val cdkBuilder: CfnDBCluster.ReadEndpointProperty.Builder =
+        CfnDBCluster.ReadEndpointProperty.builder()
 
-  /**
-   * @param address The host address of the reader endpoint.
-   */
-  public fun address(address: String) {
-    cdkBuilder.address(address)
-  }
+    /** @param address The host address of the reader endpoint. */
+    public fun address(address: String) {
+        cdkBuilder.address(address)
+    }
 
-  public fun build(): CfnDBCluster.ReadEndpointProperty = cdkBuilder.build()
+    public fun build(): CfnDBCluster.ReadEndpointProperty = cdkBuilder.build()
 }

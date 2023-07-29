@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicediscovery
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceProps
 
 /**
  * Example:
- *
  * ```
  * Mesh mesh;
  * // Cloud Map service discovery is currently required for host ejection by outlier detection
@@ -34,28 +42,22 @@ import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceProps
  */
 @CdkDslMarker
 public class PrivateDnsNamespacePropsDsl {
-  private val cdkBuilder: PrivateDnsNamespaceProps.Builder = PrivateDnsNamespaceProps.builder()
+    private val cdkBuilder: PrivateDnsNamespaceProps.Builder = PrivateDnsNamespaceProps.builder()
 
-  /**
-   * @param description A description of the Namespace.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description of the Namespace. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name A name for the Namespace. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name A name for the Namespace. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param vpc The Amazon VPC that you want to associate the namespace with. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /** @param vpc The Amazon VPC that you want to associate the namespace with. */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  public fun build(): PrivateDnsNamespaceProps = cdkBuilder.build()
+    public fun build(): PrivateDnsNamespaceProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iam.IRole
  * [disable-awslint:ref-via-interface] The lifecycle hook to attach to and an IRole to use
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,23 +38,20 @@ import software.amazon.awscdk.services.iam.IRole
  */
 @CdkDslMarker
 public class BindHookTargetOptionsDsl {
-  private val cdkBuilder: BindHookTargetOptions.Builder = BindHookTargetOptions.builder()
+    private val cdkBuilder: BindHookTargetOptions.Builder = BindHookTargetOptions.builder()
 
-  /**
-   * @param lifecycleHook The lifecycle hook to attach to. 
-   * [disable-awslint:ref-via-interface]
-   */
-  public fun lifecycleHook(lifecycleHook: LifecycleHook) {
-    cdkBuilder.lifecycleHook(lifecycleHook)
-  }
+    /** @param lifecycleHook The lifecycle hook to attach to. [disable-awslint:ref-via-interface] */
+    public fun lifecycleHook(lifecycleHook: LifecycleHook) {
+        cdkBuilder.lifecycleHook(lifecycleHook)
+    }
 
-  /**
-   * @param role The role to use when attaching to the lifecycle hook.
-   * [disable-awslint:ref-via-interface]
-   */
-  public fun role(role: IRole) {
-    cdkBuilder.role(role)
-  }
+    /**
+     * @param role The role to use when attaching to the lifecycle hook.
+     *   [disable-awslint:ref-via-interface]
+     */
+    public fun role(role: IRole) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): BindHookTargetOptions = cdkBuilder.build()
+    public fun build(): BindHookTargetOptions = cdkBuilder.build()
 }

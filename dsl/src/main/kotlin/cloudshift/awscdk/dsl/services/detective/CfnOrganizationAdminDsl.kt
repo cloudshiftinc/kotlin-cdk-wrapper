@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.detective
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * account and creates a new behavior graph.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,23 +38,24 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnOrganizationAdminDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnOrganizationAdmin.Builder = CfnOrganizationAdmin.Builder.create(scope,
-      id)
+    private val cdkBuilder: CfnOrganizationAdmin.Builder =
+        CfnOrganizationAdmin.Builder.create(scope, id)
 
-  /**
-   * The AWS account identifier of the account to designate as the Detective administrator account
-   * for the organization.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html#cfn-detective-organizationadmin-accountid)
-   * @param accountId The AWS account identifier of the account to designate as the Detective
-   * administrator account for the organization. 
-   */
-  public fun accountId(accountId: String) {
-    cdkBuilder.accountId(accountId)
-  }
+    /**
+     * The AWS account identifier of the account to designate as the Detective administrator account
+     * for the organization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html#cfn-detective-organizationadmin-accountid)
+     *
+     * @param accountId The AWS account identifier of the account to designate as the Detective
+     *   administrator account for the organization.
+     */
+    public fun accountId(accountId: String) {
+        cdkBuilder.accountId(accountId)
+    }
 
-  public fun build(): CfnOrganizationAdmin = cdkBuilder.build()
+    public fun build(): CfnOrganizationAdmin = cdkBuilder.build()
 }

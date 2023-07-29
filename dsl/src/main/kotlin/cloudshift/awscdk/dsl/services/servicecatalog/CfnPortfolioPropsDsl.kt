@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.services.servicecatalog.CfnPortfolioProps
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.services.servicecatalog.CfnPortfolioProps
 
 /**
  * Properties for defining a `CfnPortfolio`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,37 +58,27 @@ public class CfnPortfolioPropsDsl {
         cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    /**
-     * @param description The description of the portfolio.
-     */
+    /** @param description The description of the portfolio. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /**
-     * @param displayName The name to use for display purposes.
-     */
+    /** @param displayName The name to use for display purposes. */
     public fun displayName(displayName: String) {
         cdkBuilder.displayName(displayName)
     }
 
-    /**
-     * @param providerName The name of the portfolio provider.
-     */
+    /** @param providerName The name of the portfolio provider. */
     public fun providerName(providerName: String) {
         cdkBuilder.providerName(providerName)
     }
 
-    /**
-     * @param tags One or more tags.
-     */
+    /** @param tags One or more tags. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /**
-     * @param tags One or more tags.
-     */
+    /** @param tags One or more tags. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

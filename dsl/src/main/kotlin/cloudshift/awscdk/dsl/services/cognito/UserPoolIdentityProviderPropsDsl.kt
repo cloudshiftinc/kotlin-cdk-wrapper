@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderProps
  * Properties to create a new instance of UserPoolIdentityProvider.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,33 +57,31 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderProps
  */
 @CdkDslMarker
 public class UserPoolIdentityProviderPropsDsl {
-  private val cdkBuilder: UserPoolIdentityProviderProps.Builder =
-      UserPoolIdentityProviderProps.builder()
+    private val cdkBuilder: UserPoolIdentityProviderProps.Builder =
+        UserPoolIdentityProviderProps.builder()
 
-  /**
-   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
-   * attributes of the user pool.
-   */
-  public fun attributeMapping(attributeMapping: AttributeMappingDsl.() -> Unit = {}) {
-    val builder = AttributeMappingDsl()
-    builder.apply(attributeMapping)
-    cdkBuilder.attributeMapping(builder.build())
-  }
+    /**
+     * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+     *   attributes of the user pool.
+     */
+    public fun attributeMapping(attributeMapping: AttributeMappingDsl.() -> Unit = {}) {
+        val builder = AttributeMappingDsl()
+        builder.apply(attributeMapping)
+        cdkBuilder.attributeMapping(builder.build())
+    }
 
-  /**
-   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
-   * attributes of the user pool.
-   */
-  public fun attributeMapping(attributeMapping: AttributeMapping) {
-    cdkBuilder.attributeMapping(attributeMapping)
-  }
+    /**
+     * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+     *   attributes of the user pool.
+     */
+    public fun attributeMapping(attributeMapping: AttributeMapping) {
+        cdkBuilder.attributeMapping(attributeMapping)
+    }
 
-  /**
-   * @param userPool The user pool to which this construct provides identities. 
-   */
-  public fun userPool(userPool: IUserPool) {
-    cdkBuilder.userPool(userPool)
-  }
+    /** @param userPool The user pool to which this construct provides identities. */
+    public fun userPool(userPool: IUserPool) {
+        cdkBuilder.userPool(userPool)
+    }
 
-  public fun build(): UserPoolIdentityProviderProps = cdkBuilder.build()
+    public fun build(): UserPoolIdentityProviderProps = cdkBuilder.build()
 }

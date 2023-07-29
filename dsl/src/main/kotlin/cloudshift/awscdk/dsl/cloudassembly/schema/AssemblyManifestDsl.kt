@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.ArtifactManifest
-import software.amazon.awscdk.cloudassembly.schema.AssemblyManifest
-import software.amazon.awscdk.cloudassembly.schema.MissingContext
-import software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.cloudassembly.schema.ArtifactManifest
+import software.amazon.awscdk.cloudassembly.schema.AssemblyManifest
+import software.amazon.awscdk.cloudassembly.schema.MissingContext
+import software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
 
 /**
  * A manifest which describes the cloud assembly.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -90,50 +98,40 @@ public class AssemblyManifestDsl {
 
     private val _missing: MutableList<MissingContext> = mutableListOf()
 
-    /**
-     * @param artifacts The set of artifacts in this assembly.
-     */
+    /** @param artifacts The set of artifacts in this assembly. */
     public fun artifacts(artifacts: Map<String, ArtifactManifest>) {
         cdkBuilder.artifacts(artifacts)
     }
 
     /**
-     * @param missing Missing context information.
-     * If this field has values, it means that the
-     * cloud assembly is not complete and should not be deployed.
+     * @param missing Missing context information. If this field has values, it means that the cloud
+     *   assembly is not complete and should not be deployed.
      */
     public fun missing(missing: MissingContextDsl.() -> Unit) {
         _missing.add(MissingContextDsl().apply(missing).build())
     }
 
     /**
-     * @param missing Missing context information.
-     * If this field has values, it means that the
-     * cloud assembly is not complete and should not be deployed.
+     * @param missing Missing context information. If this field has values, it means that the cloud
+     *   assembly is not complete and should not be deployed.
      */
     public fun missing(missing: Collection<MissingContext>) {
         _missing.addAll(missing)
     }
 
-    /**
-     * @param runtime Runtime information.
-     */
+    /** @param runtime Runtime information. */
     public fun runtime(runtime: RuntimeInfoDsl.() -> Unit = {}) {
         val builder = RuntimeInfoDsl()
         builder.apply(runtime)
         cdkBuilder.runtime(builder.build())
     }
 
-    /**
-     * @param runtime Runtime information.
-     */
+    /** @param runtime Runtime information. */
     public fun runtime(runtime: RuntimeInfo) {
         cdkBuilder.runtime(runtime)
     }
 
-    /**
-     * @param version Protocol version.
-     */
+    /** @param version Protocol version. */
     public fun version(version: String) {
         cdkBuilder.version(version)
     }

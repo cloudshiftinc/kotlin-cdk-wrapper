@@ -1,17 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emrcontainers
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
+import software.constructs.Construct
 
 /**
  * The `AWS::EMRContainers::VirtualCluster` resource specifies a virtual cluster.
@@ -22,7 +31,6 @@ import kotlin.collections.MutableList
  * virtual clusters the same way you model Kubernetes namespaces to meet your requirements.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,7 +60,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnVirtualClusterDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnVirtualCluster.Builder = CfnVirtualCluster.Builder.create(scope, id)
 
@@ -62,6 +70,7 @@ public class CfnVirtualClusterDsl(
      * The container provider of the virtual cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-containerprovider)
+     *
      * @param containerProvider The container provider of the virtual cluster.
      */
     public fun containerProvider(containerProvider: IResolvable) {
@@ -72,6 +81,7 @@ public class CfnVirtualClusterDsl(
      * The container provider of the virtual cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-containerprovider)
+     *
      * @param containerProvider The container provider of the virtual cluster.
      */
     public fun containerProvider(containerProvider: CfnVirtualCluster.ContainerProviderProperty) {
@@ -82,6 +92,7 @@ public class CfnVirtualClusterDsl(
      * The name of the virtual cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-name)
+     *
      * @param name The name of the virtual cluster.
      */
     public fun name(name: String) {
@@ -96,6 +107,7 @@ public class CfnVirtualClusterDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -110,6 +122,7 @@ public class CfnVirtualClusterDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: Collection<CfnTag>) {

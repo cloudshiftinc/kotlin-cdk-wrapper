@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.RoleOptions
  * Options for specifying a role.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,21 +32,17 @@ import software.amazon.awscdk.RoleOptions
  */
 @CdkDslMarker
 public class RoleOptionsDsl {
-  private val cdkBuilder: RoleOptions.Builder = RoleOptions.builder()
+    private val cdkBuilder: RoleOptions.Builder = RoleOptions.builder()
 
-  /**
-   * @param assumeRoleArn ARN of the role to assume. 
-   */
-  public fun assumeRoleArn(assumeRoleArn: String) {
-    cdkBuilder.assumeRoleArn(assumeRoleArn)
-  }
+    /** @param assumeRoleArn ARN of the role to assume. */
+    public fun assumeRoleArn(assumeRoleArn: String) {
+        cdkBuilder.assumeRoleArn(assumeRoleArn)
+    }
 
-  /**
-   * @param assumeRoleExternalId External ID to use when assuming the role.
-   */
-  public fun assumeRoleExternalId(assumeRoleExternalId: String) {
-    cdkBuilder.assumeRoleExternalId(assumeRoleExternalId)
-  }
+    /** @param assumeRoleExternalId External ID to use when assuming the role. */
+    public fun assumeRoleExternalId(assumeRoleExternalId: String) {
+        cdkBuilder.assumeRoleExternalId(assumeRoleExternalId)
+    }
 
-  public fun build(): RoleOptions = cdkBuilder.build()
+    public fun build(): RoleOptions = cdkBuilder.build()
 }

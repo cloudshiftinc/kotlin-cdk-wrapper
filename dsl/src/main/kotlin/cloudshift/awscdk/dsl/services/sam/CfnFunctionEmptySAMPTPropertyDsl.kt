@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -7,7 +16,6 @@ import software.amazon.awscdk.services.sam.CfnFunction
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -19,8 +27,8 @@ import software.amazon.awscdk.services.sam.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionEmptySAMPTPropertyDsl {
-  private val cdkBuilder: CfnFunction.EmptySAMPTProperty.Builder =
-      CfnFunction.EmptySAMPTProperty.builder()
+    private val cdkBuilder: CfnFunction.EmptySAMPTProperty.Builder =
+        CfnFunction.EmptySAMPTProperty.builder()
 
-  public fun build(): CfnFunction.EmptySAMPTProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.EmptySAMPTProperty = cdkBuilder.build()
 }

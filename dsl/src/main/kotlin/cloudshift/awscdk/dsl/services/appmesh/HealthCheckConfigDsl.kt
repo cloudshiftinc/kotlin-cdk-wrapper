@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.appmesh.HealthCheckConfig
  * All Properties for Health Checks for mesh endpoints.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,44 +51,39 @@ import software.amazon.awscdk.services.appmesh.HealthCheckConfig
  */
 @CdkDslMarker
 public class HealthCheckConfigDsl {
-  private val cdkBuilder: HealthCheckConfig.Builder = HealthCheckConfig.builder()
+    private val cdkBuilder: HealthCheckConfig.Builder = HealthCheckConfig.builder()
 
-  /**
-   * @param virtualGatewayHealthCheck VirtualGateway CFN configuration for Health Checks.
-   */
-  public
-      fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl.() -> Unit
-      = {}) {
-    val builder = CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl()
-    builder.apply(virtualGatewayHealthCheck)
-    cdkBuilder.virtualGatewayHealthCheck(builder.build())
-  }
+    /** @param virtualGatewayHealthCheck VirtualGateway CFN configuration for Health Checks. */
+    public fun virtualGatewayHealthCheck(
+        virtualGatewayHealthCheck:
+            CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl.() -> Unit =
+            {}
+    ) {
+        val builder = CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl()
+        builder.apply(virtualGatewayHealthCheck)
+        cdkBuilder.virtualGatewayHealthCheck(builder.build())
+    }
 
-  /**
-   * @param virtualGatewayHealthCheck VirtualGateway CFN configuration for Health Checks.
-   */
-  public
-      fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty) {
-    cdkBuilder.virtualGatewayHealthCheck(virtualGatewayHealthCheck)
-  }
+    /** @param virtualGatewayHealthCheck VirtualGateway CFN configuration for Health Checks. */
+    public fun virtualGatewayHealthCheck(
+        virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
+    ) {
+        cdkBuilder.virtualGatewayHealthCheck(virtualGatewayHealthCheck)
+    }
 
-  /**
-   * @param virtualNodeHealthCheck VirtualNode CFN configuration for Health Checks.
-   */
-  public
-      fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNodeHealthCheckPropertyDsl.() -> Unit
-      = {}) {
-    val builder = CfnVirtualNodeHealthCheckPropertyDsl()
-    builder.apply(virtualNodeHealthCheck)
-    cdkBuilder.virtualNodeHealthCheck(builder.build())
-  }
+    /** @param virtualNodeHealthCheck VirtualNode CFN configuration for Health Checks. */
+    public fun virtualNodeHealthCheck(
+        virtualNodeHealthCheck: CfnVirtualNodeHealthCheckPropertyDsl.() -> Unit = {}
+    ) {
+        val builder = CfnVirtualNodeHealthCheckPropertyDsl()
+        builder.apply(virtualNodeHealthCheck)
+        cdkBuilder.virtualNodeHealthCheck(builder.build())
+    }
 
-  /**
-   * @param virtualNodeHealthCheck VirtualNode CFN configuration for Health Checks.
-   */
-  public fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty) {
-    cdkBuilder.virtualNodeHealthCheck(virtualNodeHealthCheck)
-  }
+    /** @param virtualNodeHealthCheck VirtualNode CFN configuration for Health Checks. */
+    public fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty) {
+        cdkBuilder.virtualNodeHealthCheck(virtualNodeHealthCheck)
+    }
 
-  public fun build(): HealthCheckConfig = cdkBuilder.build()
+    public fun build(): HealthCheckConfig = cdkBuilder.build()
 }

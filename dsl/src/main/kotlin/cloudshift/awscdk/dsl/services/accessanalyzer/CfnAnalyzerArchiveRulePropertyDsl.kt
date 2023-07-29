@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.accessanalyzer
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
  * The criteria for an archive rule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,41 +44,33 @@ import software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
  */
 @CdkDslMarker
 public class CfnAnalyzerArchiveRulePropertyDsl {
-  private val cdkBuilder: CfnAnalyzer.ArchiveRuleProperty.Builder =
-      CfnAnalyzer.ArchiveRuleProperty.builder()
+    private val cdkBuilder: CfnAnalyzer.ArchiveRuleProperty.Builder =
+        CfnAnalyzer.ArchiveRuleProperty.builder()
 
-  private val _filter: MutableList<Any> = mutableListOf()
+    private val _filter: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param filter The criteria for the rule. 
-   */
-  public fun filter(vararg filter: Any) {
-    _filter.addAll(listOf(*filter))
-  }
+    /** @param filter The criteria for the rule. */
+    public fun filter(vararg filter: Any) {
+        _filter.addAll(listOf(*filter))
+    }
 
-  /**
-   * @param filter The criteria for the rule. 
-   */
-  public fun filter(filter: Collection<Any>) {
-    _filter.addAll(filter)
-  }
+    /** @param filter The criteria for the rule. */
+    public fun filter(filter: Collection<Any>) {
+        _filter.addAll(filter)
+    }
 
-  /**
-   * @param filter The criteria for the rule. 
-   */
-  public fun filter(filter: IResolvable) {
-    cdkBuilder.filter(filter)
-  }
+    /** @param filter The criteria for the rule. */
+    public fun filter(filter: IResolvable) {
+        cdkBuilder.filter(filter)
+    }
 
-  /**
-   * @param ruleName The name of the archive rule. 
-   */
-  public fun ruleName(ruleName: String) {
-    cdkBuilder.ruleName(ruleName)
-  }
+    /** @param ruleName The name of the archive rule. */
+    public fun ruleName(ruleName: String) {
+        cdkBuilder.ruleName(ruleName)
+    }
 
-  public fun build(): CfnAnalyzer.ArchiveRuleProperty {
-    if(_filter.isNotEmpty()) cdkBuilder.filter(_filter)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalyzer.ArchiveRuleProperty {
+        if (_filter.isNotEmpty()) cdkBuilder.filter(_filter)
+        return cdkBuilder.build()
+    }
 }

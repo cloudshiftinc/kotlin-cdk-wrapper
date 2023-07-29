@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * Provides information about the external source of the slot type's definition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,24 +40,26 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotExternalSourceSettingPropertyDsl {
-  private val cdkBuilder: CfnBot.ExternalSourceSettingProperty.Builder =
-      CfnBot.ExternalSourceSettingProperty.builder()
+    private val cdkBuilder: CfnBot.ExternalSourceSettingProperty.Builder =
+        CfnBot.ExternalSourceSettingProperty.builder()
 
-  /**
-   * @param grammarSlotTypeSetting Settings required for a slot type based on a grammar that you
-   * provide.
-   */
-  public fun grammarSlotTypeSetting(grammarSlotTypeSetting: IResolvable) {
-    cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting)
-  }
+    /**
+     * @param grammarSlotTypeSetting Settings required for a slot type based on a grammar that you
+     *   provide.
+     */
+    public fun grammarSlotTypeSetting(grammarSlotTypeSetting: IResolvable) {
+        cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting)
+    }
 
-  /**
-   * @param grammarSlotTypeSetting Settings required for a slot type based on a grammar that you
-   * provide.
-   */
-  public fun grammarSlotTypeSetting(grammarSlotTypeSetting: CfnBot.GrammarSlotTypeSettingProperty) {
-    cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting)
-  }
+    /**
+     * @param grammarSlotTypeSetting Settings required for a slot type based on a grammar that you
+     *   provide.
+     */
+    public fun grammarSlotTypeSetting(
+        grammarSlotTypeSetting: CfnBot.GrammarSlotTypeSettingProperty
+    ) {
+        cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting)
+    }
 
-  public fun build(): CfnBot.ExternalSourceSettingProperty = cdkBuilder.build()
+    public fun build(): CfnBot.ExternalSourceSettingProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is OutputSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,22 +37,18 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelMultiplexOutputSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.MultiplexOutputSettingsProperty.Builder =
-      CfnChannel.MultiplexOutputSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.MultiplexOutputSettingsProperty.Builder =
+        CfnChannel.MultiplexOutputSettingsProperty.builder()
 
-  /**
-   * @param destination Destination is a Multiplex.
-   */
-  public fun destination(destination: IResolvable) {
-    cdkBuilder.destination(destination)
-  }
+    /** @param destination Destination is a Multiplex. */
+    public fun destination(destination: IResolvable) {
+        cdkBuilder.destination(destination)
+    }
 
-  /**
-   * @param destination Destination is a Multiplex.
-   */
-  public fun destination(destination: CfnChannel.OutputLocationRefProperty) {
-    cdkBuilder.destination(destination)
-  }
+    /** @param destination Destination is a Multiplex. */
+    public fun destination(destination: CfnChannel.OutputLocationRefProperty) {
+        cdkBuilder.destination(destination)
+    }
 
-  public fun build(): CfnChannel.MultiplexOutputSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.MultiplexOutputSettingsProperty = cdkBuilder.build()
 }

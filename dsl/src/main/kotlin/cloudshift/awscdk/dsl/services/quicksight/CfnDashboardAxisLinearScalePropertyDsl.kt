@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,22 +36,18 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardAxisLinearScalePropertyDsl {
-  private val cdkBuilder: CfnDashboard.AxisLinearScaleProperty.Builder =
-      CfnDashboard.AxisLinearScaleProperty.builder()
+    private val cdkBuilder: CfnDashboard.AxisLinearScaleProperty.Builder =
+        CfnDashboard.AxisLinearScaleProperty.builder()
 
-  /**
-   * @param stepCount The step count setup of a linear axis.
-   */
-  public fun stepCount(stepCount: Number) {
-    cdkBuilder.stepCount(stepCount)
-  }
+    /** @param stepCount The step count setup of a linear axis. */
+    public fun stepCount(stepCount: Number) {
+        cdkBuilder.stepCount(stepCount)
+    }
 
-  /**
-   * @param stepSize The step size setup of a linear axis.
-   */
-  public fun stepSize(stepSize: Number) {
-    cdkBuilder.stepSize(stepSize)
-  }
+    /** @param stepSize The step size setup of a linear axis. */
+    public fun stepSize(stepSize: Number) {
+        cdkBuilder.stepSize(stepSize)
+    }
 
-  public fun build(): CfnDashboard.AxisLinearScaleProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.AxisLinearScaleProperty = cdkBuilder.build()
 }

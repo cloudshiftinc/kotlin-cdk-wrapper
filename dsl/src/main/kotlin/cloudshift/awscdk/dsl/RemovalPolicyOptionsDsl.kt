@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.RemovalPolicyOptions
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,22 +30,22 @@ import software.amazon.awscdk.RemovalPolicyOptions
  */
 @CdkDslMarker
 public class RemovalPolicyOptionsDsl {
-  private val cdkBuilder: RemovalPolicyOptions.Builder = RemovalPolicyOptions.builder()
+    private val cdkBuilder: RemovalPolicyOptions.Builder = RemovalPolicyOptions.builder()
 
-  /**
-   * @param applyToUpdateReplacePolicy Apply the same deletion policy to the resource's
-   * "UpdateReplacePolicy".
-   */
-  public fun applyToUpdateReplacePolicy(applyToUpdateReplacePolicy: Boolean) {
-    cdkBuilder.applyToUpdateReplacePolicy(applyToUpdateReplacePolicy)
-  }
+    /**
+     * @param applyToUpdateReplacePolicy Apply the same deletion policy to the resource's
+     *   "UpdateReplacePolicy".
+     */
+    public fun applyToUpdateReplacePolicy(applyToUpdateReplacePolicy: Boolean) {
+        cdkBuilder.applyToUpdateReplacePolicy(applyToUpdateReplacePolicy)
+    }
 
-  /**
-   * @param defaultValue The default policy to apply in case the removal policy is not defined.
-   */
-  public fun defaultValue(defaultValue: RemovalPolicy) {
-    cdkBuilder.defaultValue(defaultValue)
-  }
+    /**
+     * @param defaultValue The default policy to apply in case the removal policy is not defined.
+     */
+    public fun defaultValue(defaultValue: RemovalPolicy) {
+        cdkBuilder.defaultValue(defaultValue)
+    }
 
-  public fun build(): RemovalPolicyOptions = cdkBuilder.build()
+    public fun build(): RemovalPolicyOptions = cdkBuilder.build()
 }

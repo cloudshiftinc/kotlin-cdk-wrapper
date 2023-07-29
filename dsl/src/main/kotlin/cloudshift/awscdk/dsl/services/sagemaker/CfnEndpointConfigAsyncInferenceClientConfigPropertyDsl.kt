@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
  * during asynchronous inference.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,17 +34,17 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
  */
 @CdkDslMarker
 public class CfnEndpointConfigAsyncInferenceClientConfigPropertyDsl {
-  private val cdkBuilder: CfnEndpointConfig.AsyncInferenceClientConfigProperty.Builder =
-      CfnEndpointConfig.AsyncInferenceClientConfigProperty.builder()
+    private val cdkBuilder: CfnEndpointConfig.AsyncInferenceClientConfigProperty.Builder =
+        CfnEndpointConfig.AsyncInferenceClientConfigProperty.builder()
 
-  /**
-   * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent by
-   * the SageMaker client to the model container.
-   * If no value is provided, SageMaker will choose an optimal value for you.
-   */
-  public fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number) {
-    cdkBuilder.maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance)
-  }
+    /**
+     * @param maxConcurrentInvocationsPerInstance The maximum number of concurrent requests sent by
+     *   the SageMaker client to the model container. If no value is provided, SageMaker will choose
+     *   an optimal value for you.
+     */
+    public fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number) {
+        cdkBuilder.maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance)
+    }
 
-  public fun build(): CfnEndpointConfig.AsyncInferenceClientConfigProperty = cdkBuilder.build()
+    public fun build(): CfnEndpointConfig.AsyncInferenceClientConfigProperty = cdkBuilder.build()
 }

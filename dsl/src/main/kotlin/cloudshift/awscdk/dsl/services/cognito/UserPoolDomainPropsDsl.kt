@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.cognito.UserPoolDomainProps
  * Props for UserPoolDomain construct.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.certificatemanager.*;
  * Vpc vpc;
@@ -68,50 +76,48 @@ import software.amazon.awscdk.services.cognito.UserPoolDomainProps
  */
 @CdkDslMarker
 public class UserPoolDomainPropsDsl {
-  private val cdkBuilder: UserPoolDomainProps.Builder = UserPoolDomainProps.builder()
+    private val cdkBuilder: UserPoolDomainProps.Builder = UserPoolDomainProps.builder()
 
-  /**
-   * @param cognitoDomain Associate a cognito prefix domain with your user pool Either
-   * `customDomain` or `cognitoDomain` must be specified.
-   */
-  public fun cognitoDomain(cognitoDomain: CognitoDomainOptionsDsl.() -> Unit = {}) {
-    val builder = CognitoDomainOptionsDsl()
-    builder.apply(cognitoDomain)
-    cdkBuilder.cognitoDomain(builder.build())
-  }
+    /**
+     * @param cognitoDomain Associate a cognito prefix domain with your user pool Either
+     *   `customDomain` or `cognitoDomain` must be specified.
+     */
+    public fun cognitoDomain(cognitoDomain: CognitoDomainOptionsDsl.() -> Unit = {}) {
+        val builder = CognitoDomainOptionsDsl()
+        builder.apply(cognitoDomain)
+        cdkBuilder.cognitoDomain(builder.build())
+    }
 
-  /**
-   * @param cognitoDomain Associate a cognito prefix domain with your user pool Either
-   * `customDomain` or `cognitoDomain` must be specified.
-   */
-  public fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
-    cdkBuilder.cognitoDomain(cognitoDomain)
-  }
+    /**
+     * @param cognitoDomain Associate a cognito prefix domain with your user pool Either
+     *   `customDomain` or `cognitoDomain` must be specified.
+     */
+    public fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
+        cdkBuilder.cognitoDomain(cognitoDomain)
+    }
 
-  /**
-   * @param customDomain Associate a custom domain with your user pool Either `customDomain` or
-   * `cognitoDomain` must be specified.
-   */
-  public fun customDomain(customDomain: CustomDomainOptionsDsl.() -> Unit = {}) {
-    val builder = CustomDomainOptionsDsl()
-    builder.apply(customDomain)
-    cdkBuilder.customDomain(builder.build())
-  }
+    /**
+     * @param customDomain Associate a custom domain with your user pool Either `customDomain` or
+     *   `cognitoDomain` must be specified.
+     */
+    public fun customDomain(customDomain: CustomDomainOptionsDsl.() -> Unit = {}) {
+        val builder = CustomDomainOptionsDsl()
+        builder.apply(customDomain)
+        cdkBuilder.customDomain(builder.build())
+    }
 
-  /**
-   * @param customDomain Associate a custom domain with your user pool Either `customDomain` or
-   * `cognitoDomain` must be specified.
-   */
-  public fun customDomain(customDomain: CustomDomainOptions) {
-    cdkBuilder.customDomain(customDomain)
-  }
+    /**
+     * @param customDomain Associate a custom domain with your user pool Either `customDomain` or
+     *   `cognitoDomain` must be specified.
+     */
+    public fun customDomain(customDomain: CustomDomainOptions) {
+        cdkBuilder.customDomain(customDomain)
+    }
 
-  /**
-   * @param userPool The user pool to which this domain should be associated. 
-   */
-  public fun userPool(userPool: IUserPool) {
-    cdkBuilder.userPool(userPool)
-  }
+    /** @param userPool The user pool to which this domain should be associated. */
+    public fun userPool(userPool: IUserPool) {
+        cdkBuilder.userPool(userPool)
+    }
 
-  public fun build(): UserPoolDomainProps = cdkBuilder.build()
+    public fun build(): UserPoolDomainProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * You provide more than one `Statement` within the `AndStatement` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -354,37 +362,37 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupAndStatementPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.AndStatementProperty.Builder =
-      CfnRuleGroup.AndStatementProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.AndStatementProperty.Builder =
+        CfnRuleGroup.AndStatementProperty.builder()
 
-  private val _statements: MutableList<Any> = mutableListOf()
+    private val _statements: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param statements The statements to combine with AND logic. 
-   * You can use any statements that can be nested.
-   */
-  public fun statements(vararg statements: Any) {
-    _statements.addAll(listOf(*statements))
-  }
+    /**
+     * @param statements The statements to combine with AND logic. You can use any statements that
+     *   can be nested.
+     */
+    public fun statements(vararg statements: Any) {
+        _statements.addAll(listOf(*statements))
+    }
 
-  /**
-   * @param statements The statements to combine with AND logic. 
-   * You can use any statements that can be nested.
-   */
-  public fun statements(statements: Collection<Any>) {
-    _statements.addAll(statements)
-  }
+    /**
+     * @param statements The statements to combine with AND logic. You can use any statements that
+     *   can be nested.
+     */
+    public fun statements(statements: Collection<Any>) {
+        _statements.addAll(statements)
+    }
 
-  /**
-   * @param statements The statements to combine with AND logic. 
-   * You can use any statements that can be nested.
-   */
-  public fun statements(statements: IResolvable) {
-    cdkBuilder.statements(statements)
-  }
+    /**
+     * @param statements The statements to combine with AND logic. You can use any statements that
+     *   can be nested.
+     */
+    public fun statements(statements: IResolvable) {
+        cdkBuilder.statements(statements)
+    }
 
-  public fun build(): CfnRuleGroup.AndStatementProperty {
-    if(_statements.isNotEmpty()) cdkBuilder.statements(_statements)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnRuleGroup.AndStatementProperty {
+        if (_statements.isNotEmpty()) cdkBuilder.statements(_statements)
+        return cdkBuilder.build()
+    }
 }

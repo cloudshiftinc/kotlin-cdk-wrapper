@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmcontacts
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ssmcontacts.CfnPlan
  * The contact or contact channel that's being engaged.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,16 +55,12 @@ public class CfnPlanTargetsPropertyDsl {
         cdkBuilder.channelTargetInfo(channelTargetInfo)
     }
 
-    /**
-     * @param contactTargetInfo Information about the contact that Incident Manager engages.
-     */
+    /** @param contactTargetInfo Information about the contact that Incident Manager engages. */
     public fun contactTargetInfo(contactTargetInfo: IResolvable) {
         cdkBuilder.contactTargetInfo(contactTargetInfo)
     }
 
-    /**
-     * @param contactTargetInfo Information about the contact that Incident Manager engages.
-     */
+    /** @param contactTargetInfo Information about the contact that Incident Manager engages. */
     public fun contactTargetInfo(contactTargetInfo: CfnPlan.ContactTargetInfoProperty) {
         cdkBuilder.contactTargetInfo(contactTargetInfo)
     }

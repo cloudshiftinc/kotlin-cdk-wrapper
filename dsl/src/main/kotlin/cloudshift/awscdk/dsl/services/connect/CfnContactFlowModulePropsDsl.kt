@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.connect.CfnContactFlowModuleProps
  * Properties for defining a `CfnContactFlowModule`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,67 +46,55 @@ import software.amazon.awscdk.services.connect.CfnContactFlowModuleProps
  */
 @CdkDslMarker
 public class CfnContactFlowModulePropsDsl {
-  private val cdkBuilder: CfnContactFlowModuleProps.Builder = CfnContactFlowModuleProps.builder()
+    private val cdkBuilder: CfnContactFlowModuleProps.Builder = CfnContactFlowModuleProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param content The content of the flow module. 
-   */
-  public fun content(content: String) {
-    cdkBuilder.content(content)
-  }
+    /** @param content The content of the flow module. */
+    public fun content(content: String) {
+        cdkBuilder.content(content)
+    }
 
-  /**
-   * @param description The description of the flow module.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the flow module. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param instanceArn The Amazon Resource Name (ARN) of the Amazon Connect instance. 
-   */
-  public fun instanceArn(instanceArn: String) {
-    cdkBuilder.instanceArn(instanceArn)
-  }
+    /** @param instanceArn The Amazon Resource Name (ARN) of the Amazon Connect instance. */
+    public fun instanceArn(instanceArn: String) {
+        cdkBuilder.instanceArn(instanceArn)
+    }
 
-  /**
-   * @param name The name of the flow module. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the flow module. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param state The state of the flow module.
-   */
-  public fun state(state: String) {
-    cdkBuilder.state(state)
-  }
+    /** @param state The state of the flow module. */
+    public fun state(state: String) {
+        cdkBuilder.state(state)
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to this resource.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to this resource.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnContactFlowModuleProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnContactFlowModuleProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

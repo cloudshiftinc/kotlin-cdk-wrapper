@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
  * `network-interface` type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,29 +37,24 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
  */
 @CdkDslMarker
 public class CfnVerifiedAccessEndpointNetworkInterfaceOptionsPropertyDsl {
-  private val cdkBuilder: CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.Builder =
-      CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.builder()
+    private val cdkBuilder: CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.Builder =
+        CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.builder()
 
-  /**
-   * @param networkInterfaceId The ID of the network interface.
-   */
-  public fun networkInterfaceId(networkInterfaceId: String) {
-    cdkBuilder.networkInterfaceId(networkInterfaceId)
-  }
+    /** @param networkInterfaceId The ID of the network interface. */
+    public fun networkInterfaceId(networkInterfaceId: String) {
+        cdkBuilder.networkInterfaceId(networkInterfaceId)
+    }
 
-  /**
-   * @param port The IP port number.
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port The IP port number. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  /**
-   * @param protocol The IP protocol.
-   */
-  public fun protocol(protocol: String) {
-    cdkBuilder.protocol(protocol)
-  }
+    /** @param protocol The IP protocol. */
+    public fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+    }
 
-  public fun build(): CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty =
+        cdkBuilder.build()
 }

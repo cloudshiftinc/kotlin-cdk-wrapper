@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  * Also used to describe the format of the reference data source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,32 +38,32 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationRecordColumnPropertyDsl {
-  private val cdkBuilder: CfnApplication.RecordColumnProperty.Builder =
-      CfnApplication.RecordColumnProperty.builder()
+    private val cdkBuilder: CfnApplication.RecordColumnProperty.Builder =
+        CfnApplication.RecordColumnProperty.builder()
 
-  /**
-   * @param mapping A reference to the data element in the streaming input or the reference data
-   * source.
-   */
-  public fun mapping(mapping: String) {
-    cdkBuilder.mapping(mapping)
-  }
+    /**
+     * @param mapping A reference to the data element in the streaming input or the reference data
+     *   source.
+     */
+    public fun mapping(mapping: String) {
+        cdkBuilder.mapping(mapping)
+    }
 
-  /**
-   * @param name The name of the column that is created in the in-application input stream or
-   * reference table. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name The name of the column that is created in the in-application input stream or
+     *   reference table.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param sqlType The type of column created in the in-application input stream or reference
-   * table. 
-   */
-  public fun sqlType(sqlType: String) {
-    cdkBuilder.sqlType(sqlType)
-  }
+    /**
+     * @param sqlType The type of column created in the in-application input stream or reference
+     *   table.
+     */
+    public fun sqlType(sqlType: String) {
+        cdkBuilder.sqlType(sqlType)
+    }
 
-  public fun build(): CfnApplication.RecordColumnProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.RecordColumnProperty = cdkBuilder.build()
 }

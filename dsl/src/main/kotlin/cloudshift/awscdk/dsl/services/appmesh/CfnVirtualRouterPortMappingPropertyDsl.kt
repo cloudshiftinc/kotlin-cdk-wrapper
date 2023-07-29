@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
  * An object representing a virtual router listener port mapping.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,18 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
  */
 @CdkDslMarker
 public class CfnVirtualRouterPortMappingPropertyDsl {
-  private val cdkBuilder: CfnVirtualRouter.PortMappingProperty.Builder =
-      CfnVirtualRouter.PortMappingProperty.builder()
+    private val cdkBuilder: CfnVirtualRouter.PortMappingProperty.Builder =
+        CfnVirtualRouter.PortMappingProperty.builder()
 
-  /**
-   * @param port The port used for the port mapping. 
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port The port used for the port mapping. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  /**
-   * @param protocol The protocol used for the port mapping. 
-   * Specify one protocol.
-   */
-  public fun protocol(protocol: String) {
-    cdkBuilder.protocol(protocol)
-  }
+    /** @param protocol The protocol used for the port mapping. Specify one protocol. */
+    public fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+    }
 
-  public fun build(): CfnVirtualRouter.PortMappingProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualRouter.PortMappingProperty = cdkBuilder.build()
 }

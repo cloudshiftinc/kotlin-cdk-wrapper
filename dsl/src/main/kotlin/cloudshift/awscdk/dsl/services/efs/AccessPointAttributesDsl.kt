@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.efs
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.efs.IFileSystem
  * Attributes that can be specified when importing an AccessPoint.
  *
  * Example:
- *
  * ```
  * AccessPoint.fromAccessPointAttributes(this, "ap", AccessPointAttributes.builder()
  * .accessPointId("fsap-1293c4d9832fo0912")
@@ -24,28 +32,26 @@ import software.amazon.awscdk.services.efs.IFileSystem
  */
 @CdkDslMarker
 public class AccessPointAttributesDsl {
-  private val cdkBuilder: AccessPointAttributes.Builder = AccessPointAttributes.builder()
+    private val cdkBuilder: AccessPointAttributes.Builder = AccessPointAttributes.builder()
 
-  /**
-   * @param accessPointArn The ARN of the AccessPoint One of this, or `accessPointId` is required.
-   */
-  public fun accessPointArn(accessPointArn: String) {
-    cdkBuilder.accessPointArn(accessPointArn)
-  }
+    /**
+     * @param accessPointArn The ARN of the AccessPoint One of this, or `accessPointId` is required.
+     */
+    public fun accessPointArn(accessPointArn: String) {
+        cdkBuilder.accessPointArn(accessPointArn)
+    }
 
-  /**
-   * @param accessPointId The ID of the AccessPoint One of this, or `accessPointArn` is required.
-   */
-  public fun accessPointId(accessPointId: String) {
-    cdkBuilder.accessPointId(accessPointId)
-  }
+    /**
+     * @param accessPointId The ID of the AccessPoint One of this, or `accessPointArn` is required.
+     */
+    public fun accessPointId(accessPointId: String) {
+        cdkBuilder.accessPointId(accessPointId)
+    }
 
-  /**
-   * @param fileSystem The EFS file system.
-   */
-  public fun fileSystem(fileSystem: IFileSystem) {
-    cdkBuilder.fileSystem(fileSystem)
-  }
+    /** @param fileSystem The EFS file system. */
+    public fun fileSystem(fileSystem: IFileSystem) {
+        cdkBuilder.fileSystem(fileSystem)
+    }
 
-  public fun build(): AccessPointAttributes = cdkBuilder.build()
+    public fun build(): AccessPointAttributes = cdkBuilder.build()
 }

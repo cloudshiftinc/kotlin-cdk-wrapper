@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.connect.CfnEvaluationForm
  * in a section.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -85,36 +93,28 @@ import software.amazon.awscdk.services.connect.CfnEvaluationForm
  */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormItemPropertyDsl {
-  private val cdkBuilder: CfnEvaluationForm.EvaluationFormItemProperty.Builder =
-      CfnEvaluationForm.EvaluationFormItemProperty.builder()
+    private val cdkBuilder: CfnEvaluationForm.EvaluationFormItemProperty.Builder =
+        CfnEvaluationForm.EvaluationFormItemProperty.builder()
 
-  /**
-   * @param question The information of the question.
-   */
-  public fun question(question: IResolvable) {
-    cdkBuilder.question(question)
-  }
+    /** @param question The information of the question. */
+    public fun question(question: IResolvable) {
+        cdkBuilder.question(question)
+    }
 
-  /**
-   * @param question The information of the question.
-   */
-  public fun question(question: CfnEvaluationForm.EvaluationFormQuestionProperty) {
-    cdkBuilder.question(question)
-  }
+    /** @param question The information of the question. */
+    public fun question(question: CfnEvaluationForm.EvaluationFormQuestionProperty) {
+        cdkBuilder.question(question)
+    }
 
-  /**
-   * @param section The information of the section.
-   */
-  public fun section(section: IResolvable) {
-    cdkBuilder.section(section)
-  }
+    /** @param section The information of the section. */
+    public fun section(section: IResolvable) {
+        cdkBuilder.section(section)
+    }
 
-  /**
-   * @param section The information of the section.
-   */
-  public fun section(section: CfnEvaluationForm.EvaluationFormSectionProperty) {
-    cdkBuilder.section(section)
-  }
+    /** @param section The information of the section. */
+    public fun section(section: CfnEvaluationForm.EvaluationFormSectionProperty) {
+        cdkBuilder.section(section)
+    }
 
-  public fun build(): CfnEvaluationForm.EvaluationFormItemProperty = cdkBuilder.build()
+    public fun build(): CfnEvaluationForm.EvaluationFormItemProperty = cdkBuilder.build()
 }

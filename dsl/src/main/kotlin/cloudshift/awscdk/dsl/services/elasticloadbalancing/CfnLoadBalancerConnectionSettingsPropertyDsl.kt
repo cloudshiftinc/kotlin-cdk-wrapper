@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancing
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
  * Specifies the idle timeout value for your Classic Load Balancer.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,16 +32,16 @@ import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
  */
 @CdkDslMarker
 public class CfnLoadBalancerConnectionSettingsPropertyDsl {
-  private val cdkBuilder: CfnLoadBalancer.ConnectionSettingsProperty.Builder =
-      CfnLoadBalancer.ConnectionSettingsProperty.builder()
+    private val cdkBuilder: CfnLoadBalancer.ConnectionSettingsProperty.Builder =
+        CfnLoadBalancer.ConnectionSettingsProperty.builder()
 
-  /**
-   * @param idleTimeout The time, in seconds, that the connection is allowed to be idle (no data has
-   * been sent over the connection) before it is closed by the load balancer. 
-   */
-  public fun idleTimeout(idleTimeout: Number) {
-    cdkBuilder.idleTimeout(idleTimeout)
-  }
+    /**
+     * @param idleTimeout The time, in seconds, that the connection is allowed to be idle (no data
+     *   has been sent over the connection) before it is closed by the load balancer.
+     */
+    public fun idleTimeout(idleTimeout: Number) {
+        cdkBuilder.idleTimeout(idleTimeout)
+    }
 
-  public fun build(): CfnLoadBalancer.ConnectionSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnLoadBalancer.ConnectionSettingsProperty = cdkBuilder.build()
 }

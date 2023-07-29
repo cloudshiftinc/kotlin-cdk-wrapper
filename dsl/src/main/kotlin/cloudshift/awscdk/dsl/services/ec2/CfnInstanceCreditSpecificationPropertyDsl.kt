@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -13,12 +22,11 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
  * resource.
  *
- * For more information, see [Burstable performance
- * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+ * For more information, see
+ * [Burstable performance instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
  * in the *Amazon EC2 User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,18 +40,18 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  */
 @CdkDslMarker
 public class CfnInstanceCreditSpecificationPropertyDsl {
-  private val cdkBuilder: CfnInstance.CreditSpecificationProperty.Builder =
-      CfnInstance.CreditSpecificationProperty.builder()
+    private val cdkBuilder: CfnInstance.CreditSpecificationProperty.Builder =
+        CfnInstance.CreditSpecificationProperty.builder()
 
-  /**
-   * @param cpuCredits The credit option for CPU usage of the instance.
-   * Valid values: `standard` | `unlimited`
-   *
-   * T3 instances with `host` tenancy do not support the `unlimited` CPU credit option.
-   */
-  public fun cpuCredits(cpuCredits: String) {
-    cdkBuilder.cpuCredits(cpuCredits)
-  }
+    /**
+     * @param cpuCredits The credit option for CPU usage of the instance. Valid values: `standard` |
+     *   `unlimited`
+     *
+     * T3 instances with `host` tenancy do not support the `unlimited` CPU credit option.
+     */
+    public fun cpuCredits(cpuCredits: String) {
+        cdkBuilder.cpuCredits(cpuCredits)
+    }
 
-  public fun build(): CfnInstance.CreditSpecificationProperty = cdkBuilder.build()
+    public fun build(): CfnInstance.CreditSpecificationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3objectlambda
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.s3objectlambda.CfnAccessPointProps
  * Properties for defining a `CfnAccessPoint`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,31 +46,30 @@ import software.amazon.awscdk.services.s3objectlambda.CfnAccessPointProps
  */
 @CdkDslMarker
 public class CfnAccessPointPropsDsl {
-  private val cdkBuilder: CfnAccessPointProps.Builder = CfnAccessPointProps.builder()
+    private val cdkBuilder: CfnAccessPointProps.Builder = CfnAccessPointProps.builder()
 
-  /**
-   * @param name The name of this access point.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of this access point. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
-   * Point. 
-   */
-  public fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
-    cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
-  }
+    /**
+     * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
+     *   Point.
+     */
+    public fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
+        cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
+    }
 
-  /**
-   * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
-   * Point. 
-   */
-  public
-      fun objectLambdaConfiguration(objectLambdaConfiguration: CfnAccessPoint.ObjectLambdaConfigurationProperty) {
-    cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
-  }
+    /**
+     * @param objectLambdaConfiguration A configuration used when creating an Object Lambda Access
+     *   Point.
+     */
+    public fun objectLambdaConfiguration(
+        objectLambdaConfiguration: CfnAccessPoint.ObjectLambdaConfigurationProperty
+    ) {
+        cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration)
+    }
 
-  public fun build(): CfnAccessPointProps = cdkBuilder.build()
+    public fun build(): CfnAccessPointProps = cdkBuilder.build()
 }

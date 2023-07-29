@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * A transform operation that casts a column to a different type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,30 +36,26 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  */
 @CdkDslMarker
 public class CfnDataSetCastColumnTypeOperationPropertyDsl {
-  private val cdkBuilder: CfnDataSet.CastColumnTypeOperationProperty.Builder =
-      CfnDataSet.CastColumnTypeOperationProperty.builder()
+    private val cdkBuilder: CfnDataSet.CastColumnTypeOperationProperty.Builder =
+        CfnDataSet.CastColumnTypeOperationProperty.builder()
 
-  /**
-   * @param columnName Column name. 
-   */
-  public fun columnName(columnName: String) {
-    cdkBuilder.columnName(columnName)
-  }
+    /** @param columnName Column name. */
+    public fun columnName(columnName: String) {
+        cdkBuilder.columnName(columnName)
+    }
 
-  /**
-   * @param format When casting a column from string to datetime type, you can supply a string in a
-   * format supported by Amazon QuickSight to denote the source data format.
-   */
-  public fun format(format: String) {
-    cdkBuilder.format(format)
-  }
+    /**
+     * @param format When casting a column from string to datetime type, you can supply a string in
+     *   a format supported by Amazon QuickSight to denote the source data format.
+     */
+    public fun format(format: String) {
+        cdkBuilder.format(format)
+    }
 
-  /**
-   * @param newColumnType New column data type. 
-   */
-  public fun newColumnType(newColumnType: String) {
-    cdkBuilder.newColumnType(newColumnType)
-  }
+    /** @param newColumnType New column data type. */
+    public fun newColumnType(newColumnType: String) {
+        cdkBuilder.newColumnType(newColumnType)
+    }
 
-  public fun build(): CfnDataSet.CastColumnTypeOperationProperty = cdkBuilder.build()
+    public fun build(): CfnDataSet.CastColumnTypeOperationProperty = cdkBuilder.build()
 }

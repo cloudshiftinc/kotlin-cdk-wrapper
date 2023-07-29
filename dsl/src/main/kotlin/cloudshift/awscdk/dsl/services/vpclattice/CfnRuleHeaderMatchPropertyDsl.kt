@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  * Matches incoming requests with rule based on request header value before applying rule action.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,45 +43,33 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleHeaderMatchPropertyDsl {
-  private val cdkBuilder: CfnRule.HeaderMatchProperty.Builder =
-      CfnRule.HeaderMatchProperty.builder()
+    private val cdkBuilder: CfnRule.HeaderMatchProperty.Builder =
+        CfnRule.HeaderMatchProperty.builder()
 
-  /**
-   * @param caseSensitive Indicates whether the match is case sensitive.
-   * Defaults to false.
-   */
-  public fun caseSensitive(caseSensitive: Boolean) {
-    cdkBuilder.caseSensitive(caseSensitive)
-  }
+    /** @param caseSensitive Indicates whether the match is case sensitive. Defaults to false. */
+    public fun caseSensitive(caseSensitive: Boolean) {
+        cdkBuilder.caseSensitive(caseSensitive)
+    }
 
-  /**
-   * @param caseSensitive Indicates whether the match is case sensitive.
-   * Defaults to false.
-   */
-  public fun caseSensitive(caseSensitive: IResolvable) {
-    cdkBuilder.caseSensitive(caseSensitive)
-  }
+    /** @param caseSensitive Indicates whether the match is case sensitive. Defaults to false. */
+    public fun caseSensitive(caseSensitive: IResolvable) {
+        cdkBuilder.caseSensitive(caseSensitive)
+    }
 
-  /**
-   * @param match The header match type. 
-   */
-  public fun match(match: IResolvable) {
-    cdkBuilder.match(match)
-  }
+    /** @param match The header match type. */
+    public fun match(match: IResolvable) {
+        cdkBuilder.match(match)
+    }
 
-  /**
-   * @param match The header match type. 
-   */
-  public fun match(match: CfnRule.HeaderMatchTypeProperty) {
-    cdkBuilder.match(match)
-  }
+    /** @param match The header match type. */
+    public fun match(match: CfnRule.HeaderMatchTypeProperty) {
+        cdkBuilder.match(match)
+    }
 
-  /**
-   * @param name The name of the header. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the header. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnRule.HeaderMatchProperty = cdkBuilder.build()
+    public fun build(): CfnRule.HeaderMatchProperty = cdkBuilder.build()
 }

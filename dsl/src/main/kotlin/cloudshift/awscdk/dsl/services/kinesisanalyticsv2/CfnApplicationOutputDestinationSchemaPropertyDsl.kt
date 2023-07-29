@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
  * Analytics application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
  */
 @CdkDslMarker
 public class CfnApplicationOutputDestinationSchemaPropertyDsl {
-  private val cdkBuilder: CfnApplicationOutput.DestinationSchemaProperty.Builder =
-      CfnApplicationOutput.DestinationSchemaProperty.builder()
+    private val cdkBuilder: CfnApplicationOutput.DestinationSchemaProperty.Builder =
+        CfnApplicationOutput.DestinationSchemaProperty.builder()
 
-  /**
-   * @param recordFormatType Specifies the format of the records on the output stream.
-   */
-  public fun recordFormatType(recordFormatType: String) {
-    cdkBuilder.recordFormatType(recordFormatType)
-  }
+    /** @param recordFormatType Specifies the format of the records on the output stream. */
+    public fun recordFormatType(recordFormatType: String) {
+        cdkBuilder.recordFormatType(recordFormatType)
+    }
 
-  public fun build(): CfnApplicationOutput.DestinationSchemaProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationOutput.DestinationSchemaProperty = cdkBuilder.build()
 }

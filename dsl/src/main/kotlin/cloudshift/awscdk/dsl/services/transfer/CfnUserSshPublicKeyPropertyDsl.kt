@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.transfer
 
@@ -27,7 +36,6 @@ import software.amazon.awscdk.services.transfer.CfnUser
  * Required: Yes
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,8 +47,8 @@ import software.amazon.awscdk.services.transfer.CfnUser
  */
 @CdkDslMarker
 public class CfnUserSshPublicKeyPropertyDsl {
-  private val cdkBuilder: CfnUser.SshPublicKeyProperty.Builder =
-      CfnUser.SshPublicKeyProperty.builder()
+    private val cdkBuilder: CfnUser.SshPublicKeyProperty.Builder =
+        CfnUser.SshPublicKeyProperty.builder()
 
-  public fun build(): CfnUser.SshPublicKeyProperty = cdkBuilder.build()
+    public fun build(): CfnUser.SshPublicKeyProperty = cdkBuilder.build()
 }

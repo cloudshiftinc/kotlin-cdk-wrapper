@@ -1,11 +1,20 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.mediaconnect.CfnBridgeSource
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.mediaconnect.CfnBridgeSource
 
 /**
  * The source of the bridge.
@@ -13,7 +22,6 @@ import kotlin.String
  * A network source originates at your premises.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,30 +41,22 @@ public class CfnBridgeSourceBridgeNetworkSourcePropertyDsl {
     private val cdkBuilder: CfnBridgeSource.BridgeNetworkSourceProperty.Builder =
         CfnBridgeSource.BridgeNetworkSourceProperty.builder()
 
-    /**
-     * @param multicastIp The network source multicast IP.
-     */
+    /** @param multicastIp The network source multicast IP. */
     public fun multicastIp(multicastIp: String) {
         cdkBuilder.multicastIp(multicastIp)
     }
 
-    /**
-     * @param networkName The network source's gateway network name.
-     */
+    /** @param networkName The network source's gateway network name. */
     public fun networkName(networkName: String) {
         cdkBuilder.networkName(networkName)
     }
 
-    /**
-     * @param port The network source port.
-     */
+    /** @param port The network source port. */
     public fun port(port: Number) {
         cdkBuilder.port(port)
     }
 
-    /**
-     * @param protocol The network source protocol.
-     */
+    /** @param protocol The network source protocol. */
     public fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
     }

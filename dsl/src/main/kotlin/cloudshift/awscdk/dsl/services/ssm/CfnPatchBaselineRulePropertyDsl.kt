@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssm
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 
 /**
  * The `Rule` property type specifies an approval rule for a Systems Manager patch baseline.
@@ -17,7 +26,6 @@ import kotlin.String
  * property type contains a list of `Rule` property types.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,9 +52,9 @@ public class CfnPatchBaselineRulePropertyDsl {
         CfnPatchBaseline.RuleProperty.builder()
 
     /**
-     * @param approveAfterDays The number of days after the release date of each patch matched by the
-     * rule that the patch is marked as approved in the patch baseline.
-     * For example, a value of `7` means that patches are approved seven days after they are released.
+     * @param approveAfterDays The number of days after the release date of each patch matched by
+     *   the rule that the patch is marked as approved in the patch baseline. For example, a value
+     *   of `7` means that patches are approved seven days after they are released.
      *
      * You must specify a value for `ApproveAfterDays` .
      *
@@ -57,9 +65,9 @@ public class CfnPatchBaselineRulePropertyDsl {
     }
 
     /**
-     * @param approveUntilDate The cutoff date for auto approval of released patches.
-     * Any patches released on or before this date are installed automatically. Not supported on
-     * Debian Server or Ubuntu Server.
+     * @param approveUntilDate The cutoff date for auto approval of released patches. Any patches
+     *   released on or before this date are installed automatically. Not supported on Debian Server
+     *   or Ubuntu Server.
      *
      * Enter dates in the format `YYYY-MM-DD` . For example, `2021-12-31` .
      */
@@ -69,9 +77,8 @@ public class CfnPatchBaselineRulePropertyDsl {
 
     /**
      * @param complianceLevel A compliance severity level for all approved patches in a patch
-     * baseline.
-     * Valid compliance severity levels include the following: `UNSPECIFIED` , `CRITICAL` , `HIGH` ,
-     * `MEDIUM` , `LOW` , and `INFORMATIONAL` .
+     *   baseline. Valid compliance severity levels include the following: `UNSPECIFIED` ,
+     *   `CRITICAL` , `HIGH` , `MEDIUM` , `LOW` , and `INFORMATIONAL` .
      */
     public fun complianceLevel(complianceLevel: String) {
         cdkBuilder.complianceLevel(complianceLevel)
@@ -79,8 +86,8 @@ public class CfnPatchBaselineRulePropertyDsl {
 
     /**
      * @param enableNonSecurity For managed nodes identified by the approval rule filters, enables a
-     * patch baseline to apply non-security updates available in the specified repository.
-     * The default value is `false` . Applies to Linux managed nodes only.
+     *   patch baseline to apply non-security updates available in the specified repository. The
+     *   default value is `false` . Applies to Linux managed nodes only.
      */
     public fun enableNonSecurity(enableNonSecurity: Boolean) {
         cdkBuilder.enableNonSecurity(enableNonSecurity)
@@ -88,23 +95,19 @@ public class CfnPatchBaselineRulePropertyDsl {
 
     /**
      * @param enableNonSecurity For managed nodes identified by the approval rule filters, enables a
-     * patch baseline to apply non-security updates available in the specified repository.
-     * The default value is `false` . Applies to Linux managed nodes only.
+     *   patch baseline to apply non-security updates available in the specified repository. The
+     *   default value is `false` . Applies to Linux managed nodes only.
      */
     public fun enableNonSecurity(enableNonSecurity: IResolvable) {
         cdkBuilder.enableNonSecurity(enableNonSecurity)
     }
 
-    /**
-     * @param patchFilterGroup The patch filter group that defines the criteria for the rule.
-     */
+    /** @param patchFilterGroup The patch filter group that defines the criteria for the rule. */
     public fun patchFilterGroup(patchFilterGroup: IResolvable) {
         cdkBuilder.patchFilterGroup(patchFilterGroup)
     }
 
-    /**
-     * @param patchFilterGroup The patch filter group that defines the criteria for the rule.
-     */
+    /** @param patchFilterGroup The patch filter group that defines the criteria for the rule. */
     public fun patchFilterGroup(patchFilterGroup: CfnPatchBaseline.PatchFilterGroupProperty) {
         cdkBuilder.patchFilterGroup(patchFilterGroup)
     }

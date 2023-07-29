@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
-import software.amazon.awscdk.services.ec2.ISecurityGroup
-import software.amazon.awscdk.services.ec2.IVpc
-import software.amazon.awscdk.services.ec2.SubnetSelection
-import software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.ec2.ISecurityGroup
+import software.amazon.awscdk.services.ec2.IVpc
+import software.amazon.awscdk.services.ec2.SubnetSelection
+import software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions
 
 /**
  * Single user hosted rotation options.
  *
  * Example:
- *
  * ```
  * IVpc myVpc;
  * Connections dbConnections;
@@ -36,16 +44,12 @@ public class SingleUserHostedRotationOptionsDsl {
 
     private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
-    /**
-     * @param excludeCharacters A string of the characters that you don't want in the password.
-     */
+    /** @param excludeCharacters A string of the characters that you don't want in the password. */
     public fun excludeCharacters(excludeCharacters: String) {
         cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    /**
-     * @param functionName A name for the Lambda created to rotate the secret.
-     */
+    /** @param functionName A name for the Lambda created to rotate the secret. */
     public fun functionName(functionName: String) {
         cdkBuilder.functionName(functionName)
     }
@@ -64,9 +68,7 @@ public class SingleUserHostedRotationOptionsDsl {
         _securityGroups.addAll(securityGroups)
     }
 
-    /**
-     * @param vpc The VPC where the Lambda rotation function will run.
-     */
+    /** @param vpc The VPC where the Lambda rotation function will run. */
     public fun vpc(vpc: IVpc) {
         cdkBuilder.vpc(vpc)
     }

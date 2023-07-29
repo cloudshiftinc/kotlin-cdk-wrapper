@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmincidents
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ssmincidents.CfnReplicationSet
  * set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.ssmincidents.CfnReplicationSet
  */
 @CdkDslMarker
 public class CfnReplicationSetRegionConfigurationPropertyDsl {
-  private val cdkBuilder: CfnReplicationSet.RegionConfigurationProperty.Builder =
-      CfnReplicationSet.RegionConfigurationProperty.builder()
+    private val cdkBuilder: CfnReplicationSet.RegionConfigurationProperty.Builder =
+        CfnReplicationSet.RegionConfigurationProperty.builder()
 
-  /**
-   * @param sseKmsKeyId The KMS key ID to use to encrypt your replication set. 
-   */
-  public fun sseKmsKeyId(sseKmsKeyId: String) {
-    cdkBuilder.sseKmsKeyId(sseKmsKeyId)
-  }
+    /** @param sseKmsKeyId The KMS key ID to use to encrypt your replication set. */
+    public fun sseKmsKeyId(sseKmsKeyId: String) {
+        cdkBuilder.sseKmsKeyId(sseKmsKeyId)
+    }
 
-  public fun build(): CfnReplicationSet.RegionConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnReplicationSet.RegionConfigurationProperty = cdkBuilder.build()
 }

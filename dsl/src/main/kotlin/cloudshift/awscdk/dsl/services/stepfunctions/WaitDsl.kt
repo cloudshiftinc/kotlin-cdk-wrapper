@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -14,7 +23,6 @@ import software.constructs.Construct
  * A Wait state can be used to delay execution of the state machine for a while.
  *
  * Example:
- *
  * ```
  * EvaluateExpression convertToSeconds = EvaluateExpression.Builder.create(this, "Convert to
  * seconds")
@@ -42,30 +50,30 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class WaitDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: Wait.Builder = Wait.Builder.create(scope, id)
+    private val cdkBuilder: Wait.Builder = Wait.Builder.create(scope, id)
 
-  /**
-   * An optional description for this state.
-   *
-   * Default: No comment
-   *
-   * @param comment An optional description for this state. 
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /**
+     * An optional description for this state.
+     *
+     * Default: No comment
+     *
+     * @param comment An optional description for this state.
+     */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  /**
-   * Wait duration.
-   *
-   * @param time Wait duration. 
-   */
-  public fun time(time: WaitTime) {
-    cdkBuilder.time(time)
-  }
+    /**
+     * Wait duration.
+     *
+     * @param time Wait duration.
+     */
+    public fun time(time: WaitTime) {
+        cdkBuilder.time(time)
+    }
 
-  public fun build(): Wait = cdkBuilder.build()
+    public fun build(): Wait = cdkBuilder.build()
 }

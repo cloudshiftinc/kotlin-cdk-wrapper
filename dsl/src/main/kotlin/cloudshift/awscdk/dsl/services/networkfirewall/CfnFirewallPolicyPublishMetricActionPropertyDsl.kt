@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
  * This setting defines a CloudWatch dimension value to be published.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,34 +40,28 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
  */
 @CdkDslMarker
 public class CfnFirewallPolicyPublishMetricActionPropertyDsl {
-  private val cdkBuilder: CfnFirewallPolicy.PublishMetricActionProperty.Builder =
-      CfnFirewallPolicy.PublishMetricActionProperty.builder()
+    private val cdkBuilder: CfnFirewallPolicy.PublishMetricActionProperty.Builder =
+        CfnFirewallPolicy.PublishMetricActionProperty.builder()
 
-  private val _dimensions: MutableList<Any> = mutableListOf()
+    private val _dimensions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param dimensions the value to be set. 
-   */
-  public fun dimensions(vararg dimensions: Any) {
-    _dimensions.addAll(listOf(*dimensions))
-  }
+    /** @param dimensions the value to be set. */
+    public fun dimensions(vararg dimensions: Any) {
+        _dimensions.addAll(listOf(*dimensions))
+    }
 
-  /**
-   * @param dimensions the value to be set. 
-   */
-  public fun dimensions(dimensions: Collection<Any>) {
-    _dimensions.addAll(dimensions)
-  }
+    /** @param dimensions the value to be set. */
+    public fun dimensions(dimensions: Collection<Any>) {
+        _dimensions.addAll(dimensions)
+    }
 
-  /**
-   * @param dimensions the value to be set. 
-   */
-  public fun dimensions(dimensions: IResolvable) {
-    cdkBuilder.dimensions(dimensions)
-  }
+    /** @param dimensions the value to be set. */
+    public fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions)
+    }
 
-  public fun build(): CfnFirewallPolicy.PublishMetricActionProperty {
-    if(_dimensions.isNotEmpty()) cdkBuilder.dimensions(_dimensions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFirewallPolicy.PublishMetricActionProperty {
+        if (_dimensions.isNotEmpty()) cdkBuilder.dimensions(_dimensions)
+        return cdkBuilder.build()
+    }
 }

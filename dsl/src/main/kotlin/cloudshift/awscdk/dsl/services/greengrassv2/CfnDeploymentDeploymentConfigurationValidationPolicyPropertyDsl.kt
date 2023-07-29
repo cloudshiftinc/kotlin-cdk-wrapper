@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrassv2
 
@@ -15,12 +24,11 @@ import software.amazon.awscdk.services.greengrassv2.CfnDeployment
  * IPC operation to receive notifications when a deployment specifies a configuration update. Then,
  * components can respond with the
  * [SendConfigurationValidityReport](https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-sendconfigurationvalidityreport)
- * IPC operation. For more information, see the [Create
- * deployments](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html) in
- * the *AWS IoT Greengrass V2 Developer Guide* .
+ * IPC operation. For more information, see the
+ * [Create deployments](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html)
+ * in the *AWS IoT Greengrass V2 Developer Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,20 +43,20 @@ import software.amazon.awscdk.services.greengrassv2.CfnDeployment
  */
 @CdkDslMarker
 public class CfnDeploymentDeploymentConfigurationValidationPolicyPropertyDsl {
-  private val cdkBuilder: CfnDeployment.DeploymentConfigurationValidationPolicyProperty.Builder =
-      CfnDeployment.DeploymentConfigurationValidationPolicyProperty.builder()
+    private val cdkBuilder: CfnDeployment.DeploymentConfigurationValidationPolicyProperty.Builder =
+        CfnDeployment.DeploymentConfigurationValidationPolicyProperty.builder()
 
-  /**
-   * @param timeoutInSeconds The amount of time in seconds that a component can validate its
-   * configuration updates.
-   * If the validation time exceeds this timeout, then the deployment proceeds for the device.
-   *
-   * Default: `30`
-   */
-  public fun timeoutInSeconds(timeoutInSeconds: Number) {
-    cdkBuilder.timeoutInSeconds(timeoutInSeconds)
-  }
+    /**
+     * @param timeoutInSeconds The amount of time in seconds that a component can validate its
+     *   configuration updates. If the validation time exceeds this timeout, then the deployment
+     *   proceeds for the device.
+     *
+     * Default: `30`
+     */
+    public fun timeoutInSeconds(timeoutInSeconds: Number) {
+        cdkBuilder.timeoutInSeconds(timeoutInSeconds)
+    }
 
-  public fun build(): CfnDeployment.DeploymentConfigurationValidationPolicyProperty =
-      cdkBuilder.build()
+    public fun build(): CfnDeployment.DeploymentConfigurationValidationPolicyProperty =
+        cdkBuilder.build()
 }

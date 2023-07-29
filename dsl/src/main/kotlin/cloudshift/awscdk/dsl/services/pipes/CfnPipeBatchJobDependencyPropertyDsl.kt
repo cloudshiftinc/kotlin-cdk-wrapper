@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  * An object that represents an AWS Batch job dependency.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  */
 @CdkDslMarker
 public class CfnPipeBatchJobDependencyPropertyDsl {
-  private val cdkBuilder: CfnPipe.BatchJobDependencyProperty.Builder =
-      CfnPipe.BatchJobDependencyProperty.builder()
+    private val cdkBuilder: CfnPipe.BatchJobDependencyProperty.Builder =
+        CfnPipe.BatchJobDependencyProperty.builder()
 
-  /**
-   * @param jobId The job ID of the AWS Batch job that's associated with this dependency.
-   */
-  public fun jobId(jobId: String) {
-    cdkBuilder.jobId(jobId)
-  }
+    /** @param jobId The job ID of the AWS Batch job that's associated with this dependency. */
+    public fun jobId(jobId: String) {
+        cdkBuilder.jobId(jobId)
+    }
 
-  /**
-   * @param type The type of the job dependency.
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The type of the job dependency. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnPipe.BatchJobDependencyProperty = cdkBuilder.build()
+    public fun build(): CfnPipe.BatchJobDependencyProperty = cdkBuilder.build()
 }

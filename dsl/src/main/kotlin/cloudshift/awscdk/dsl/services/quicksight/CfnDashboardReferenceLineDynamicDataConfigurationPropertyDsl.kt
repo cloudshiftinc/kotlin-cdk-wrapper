@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The dynamic configuration of the reference line data configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,52 +53,45 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardReferenceLineDynamicDataConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ReferenceLineDynamicDataConfigurationProperty.Builder =
-      CfnDashboard.ReferenceLineDynamicDataConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.ReferenceLineDynamicDataConfigurationProperty.Builder =
+        CfnDashboard.ReferenceLineDynamicDataConfigurationProperty.builder()
 
-  /**
-   * @param calculation The calculation that is used in the dynamic data. 
-   */
-  public fun calculation(calculation: IResolvable) {
-    cdkBuilder.calculation(calculation)
-  }
+    /** @param calculation The calculation that is used in the dynamic data. */
+    public fun calculation(calculation: IResolvable) {
+        cdkBuilder.calculation(calculation)
+    }
 
-  /**
-   * @param calculation The calculation that is used in the dynamic data. 
-   */
-  public fun calculation(calculation: CfnDashboard.NumericalAggregationFunctionProperty) {
-    cdkBuilder.calculation(calculation)
-  }
+    /** @param calculation The calculation that is used in the dynamic data. */
+    public fun calculation(calculation: CfnDashboard.NumericalAggregationFunctionProperty) {
+        cdkBuilder.calculation(calculation)
+    }
 
-  /**
-   * @param column The column that the dynamic data targets. 
-   */
-  public fun column(column: IResolvable) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the dynamic data targets. */
+    public fun column(column: IResolvable) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param column The column that the dynamic data targets. 
-   */
-  public fun column(column: CfnDashboard.ColumnIdentifierProperty) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the dynamic data targets. */
+    public fun column(column: CfnDashboard.ColumnIdentifierProperty) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param measureAggregationFunction The aggregation function that is used in the dynamic data.
-   */
-  public fun measureAggregationFunction(measureAggregationFunction: IResolvable) {
-    cdkBuilder.measureAggregationFunction(measureAggregationFunction)
-  }
+    /**
+     * @param measureAggregationFunction The aggregation function that is used in the dynamic data.
+     */
+    public fun measureAggregationFunction(measureAggregationFunction: IResolvable) {
+        cdkBuilder.measureAggregationFunction(measureAggregationFunction)
+    }
 
-  /**
-   * @param measureAggregationFunction The aggregation function that is used in the dynamic data.
-   */
-  public
-      fun measureAggregationFunction(measureAggregationFunction: CfnDashboard.AggregationFunctionProperty) {
-    cdkBuilder.measureAggregationFunction(measureAggregationFunction)
-  }
+    /**
+     * @param measureAggregationFunction The aggregation function that is used in the dynamic data.
+     */
+    public fun measureAggregationFunction(
+        measureAggregationFunction: CfnDashboard.AggregationFunctionProperty
+    ) {
+        cdkBuilder.measureAggregationFunction(measureAggregationFunction)
+    }
 
-  public fun build(): CfnDashboard.ReferenceLineDynamicDataConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnDashboard.ReferenceLineDynamicDataConfigurationProperty =
+        cdkBuilder.build()
 }

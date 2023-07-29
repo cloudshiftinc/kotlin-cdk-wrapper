@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.gamelift
 
@@ -15,11 +24,10 @@ import software.amazon.awscdk.services.gamelift.CfnFleet
  *
  * The policy is evaluated when a player tries to create a new game session. For example, assume you
  * have a policy of 10 new game sessions and a time period of 60 minutes. On receiving a
- * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` ) has
- * created fewer than 10 game sessions in the past 60 minutes.
+ * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
+ * has created fewer than 10 game sessions in the past 60 minutes.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,29 +43,29 @@ import software.amazon.awscdk.services.gamelift.CfnFleet
  */
 @CdkDslMarker
 public class CfnFleetResourceCreationLimitPolicyPropertyDsl {
-  private val cdkBuilder: CfnFleet.ResourceCreationLimitPolicyProperty.Builder =
-      CfnFleet.ResourceCreationLimitPolicyProperty.builder()
+    private val cdkBuilder: CfnFleet.ResourceCreationLimitPolicyProperty.Builder =
+        CfnFleet.ResourceCreationLimitPolicyProperty.builder()
 
-  /**
-   * @param newGameSessionsPerCreator A policy that puts limits on the number of game sessions that
-   * a player can create within a specified span of time.
-   * With this policy, you can control players' ability to consume available resources.
-   *
-   * The policy is evaluated when a player tries to create a new game session. On receiving a
-   * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
-   * has created fewer than game session limit in the specified time period.
-   */
-  public fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
-    cdkBuilder.newGameSessionsPerCreator(newGameSessionsPerCreator)
-  }
+    /**
+     * @param newGameSessionsPerCreator A policy that puts limits on the number of game sessions
+     *   that a player can create within a specified span of time. With this policy, you can control
+     *   players' ability to consume available resources.
+     *
+     * The policy is evaluated when a player tries to create a new game session. On receiving a
+     * `CreateGameSession` request, Amazon GameLift checks that the player (identified by
+     * `CreatorId` ) has created fewer than game session limit in the specified time period.
+     */
+    public fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
+        cdkBuilder.newGameSessionsPerCreator(newGameSessionsPerCreator)
+    }
 
-  /**
-   * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit
-   * policy.
-   */
-  public fun policyPeriodInMinutes(policyPeriodInMinutes: Number) {
-    cdkBuilder.policyPeriodInMinutes(policyPeriodInMinutes)
-  }
+    /**
+     * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit
+     *   policy.
+     */
+    public fun policyPeriodInMinutes(policyPeriodInMinutes: Number) {
+        cdkBuilder.policyPeriodInMinutes(policyPeriodInMinutes)
+    }
 
-  public fun build(): CfnFleet.ResourceCreationLimitPolicyProperty = cdkBuilder.build()
+    public fun build(): CfnFleet.ResourceCreationLimitPolicyProperty = cdkBuilder.build()
 }

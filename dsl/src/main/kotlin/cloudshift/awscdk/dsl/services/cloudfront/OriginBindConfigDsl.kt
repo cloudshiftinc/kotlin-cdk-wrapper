@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.cloudfront.OriginFailoverConfig
  * The struct returned from `IOrigin.bind`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -58,39 +66,31 @@ import software.amazon.awscdk.services.cloudfront.OriginFailoverConfig
  */
 @CdkDslMarker
 public class OriginBindConfigDsl {
-  private val cdkBuilder: OriginBindConfig.Builder = OriginBindConfig.builder()
+    private val cdkBuilder: OriginBindConfig.Builder = OriginBindConfig.builder()
 
-  /**
-   * @param failoverConfig The failover configuration for this Origin.
-   */
-  public fun failoverConfig(failoverConfig: OriginFailoverConfigDsl.() -> Unit = {}) {
-    val builder = OriginFailoverConfigDsl()
-    builder.apply(failoverConfig)
-    cdkBuilder.failoverConfig(builder.build())
-  }
+    /** @param failoverConfig The failover configuration for this Origin. */
+    public fun failoverConfig(failoverConfig: OriginFailoverConfigDsl.() -> Unit = {}) {
+        val builder = OriginFailoverConfigDsl()
+        builder.apply(failoverConfig)
+        cdkBuilder.failoverConfig(builder.build())
+    }
 
-  /**
-   * @param failoverConfig The failover configuration for this Origin.
-   */
-  public fun failoverConfig(failoverConfig: OriginFailoverConfig) {
-    cdkBuilder.failoverConfig(failoverConfig)
-  }
+    /** @param failoverConfig The failover configuration for this Origin. */
+    public fun failoverConfig(failoverConfig: OriginFailoverConfig) {
+        cdkBuilder.failoverConfig(failoverConfig)
+    }
 
-  /**
-   * @param originProperty The CloudFormation OriginProperty configuration for this Origin.
-   */
-  public fun originProperty(originProperty: CfnDistributionOriginPropertyDsl.() -> Unit = {}) {
-    val builder = CfnDistributionOriginPropertyDsl()
-    builder.apply(originProperty)
-    cdkBuilder.originProperty(builder.build())
-  }
+    /** @param originProperty The CloudFormation OriginProperty configuration for this Origin. */
+    public fun originProperty(originProperty: CfnDistributionOriginPropertyDsl.() -> Unit = {}) {
+        val builder = CfnDistributionOriginPropertyDsl()
+        builder.apply(originProperty)
+        cdkBuilder.originProperty(builder.build())
+    }
 
-  /**
-   * @param originProperty The CloudFormation OriginProperty configuration for this Origin.
-   */
-  public fun originProperty(originProperty: CfnDistribution.OriginProperty) {
-    cdkBuilder.originProperty(originProperty)
-  }
+    /** @param originProperty The CloudFormation OriginProperty configuration for this Origin. */
+    public fun originProperty(originProperty: CfnDistribution.OriginProperty) {
+        cdkBuilder.originProperty(originProperty)
+    }
 
-  public fun build(): OriginBindConfig = cdkBuilder.build()
+    public fun build(): OriginBindConfig = cdkBuilder.build()
 }

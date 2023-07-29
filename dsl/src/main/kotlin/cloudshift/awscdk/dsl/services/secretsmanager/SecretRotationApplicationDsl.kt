@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.secretsmanager.SecretRotationApplication
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.services.secretsmanager.SecretRotationApplication
 
 /**
  * A secret rotation serverless application.
  *
  * Example:
- *
  * ```
  * Secret myUserSecret;
  * Secret myMasterSecret;
@@ -29,7 +37,7 @@ import kotlin.String
 @CdkDslMarker
 public class SecretRotationApplicationDsl(
     applicationId: String,
-    semanticVersion: String
+    semanticVersion: String,
 ) {
     private val cdkBuilder: SecretRotationApplication.Builder =
         SecretRotationApplication.Builder.create(applicationId, semanticVersion)

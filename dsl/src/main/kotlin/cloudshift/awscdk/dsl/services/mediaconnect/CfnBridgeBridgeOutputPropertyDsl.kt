@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.mediaconnect.CfnBridge
  * The output of the bridge.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,16 +43,16 @@ public class CfnBridgeBridgeOutputPropertyDsl {
         CfnBridge.BridgeOutputProperty.builder()
 
     /**
-     * @param networkOutput The output of the bridge.
-     * A network output is delivered to your premises.
+     * @param networkOutput The output of the bridge. A network output is delivered to your
+     *   premises.
      */
     public fun networkOutput(networkOutput: IResolvable) {
         cdkBuilder.networkOutput(networkOutput)
     }
 
     /**
-     * @param networkOutput The output of the bridge.
-     * A network output is delivered to your premises.
+     * @param networkOutput The output of the bridge. A network output is delivered to your
+     *   premises.
      */
     public fun networkOutput(networkOutput: CfnBridge.BridgeNetworkOutputProperty) {
         cdkBuilder.networkOutput(networkOutput)

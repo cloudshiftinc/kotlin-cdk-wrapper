@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -19,18 +28,17 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * than 100 bytes.
  *
  * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of bytes
- * of the body up to the limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB
- * (8,192 kilobytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 kilobytes). For
- * CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for additional
- * fees. If you know that the request body for your web requests should never exceed the inspection
- * limit, you could use a size constraint statement to block requests that have a larger request body
- * size.
+ * of the body up to the limit for the web ACL. By default, for regional web ACLs, this limit is 8
+ * KB (8,192 kilobytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 kilobytes). For
+ * CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
+ * additional fees. If you know that the request body for your web requests should never exceed the
+ * inspection limit, you could use a size constraint statement to block requests that have a larger
+ * request body size.
  *
  * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI
  * counts as one character. For example, the URI `/logo.jpg` is nine characters long.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -96,74 +104,69 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLSizeConstraintStatementPropertyDsl {
-  private val cdkBuilder: CfnWebACL.SizeConstraintStatementProperty.Builder =
-      CfnWebACL.SizeConstraintStatementProperty.builder()
+    private val cdkBuilder: CfnWebACL.SizeConstraintStatementProperty.Builder =
+        CfnWebACL.SizeConstraintStatementProperty.builder()
 
-  private val _textTransformations: MutableList<Any> = mutableListOf()
+    private val _textTransformations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param comparisonOperator The operator to use to compare the request part to the size setting. 
-   */
-  public fun comparisonOperator(comparisonOperator: String) {
-    cdkBuilder.comparisonOperator(comparisonOperator)
-  }
+    /**
+     * @param comparisonOperator The operator to use to compare the request part to the size
+     *   setting.
+     */
+    public fun comparisonOperator(comparisonOperator: String) {
+        cdkBuilder.comparisonOperator(comparisonOperator)
+    }
 
-  /**
-   * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
-   */
-  public fun fieldToMatch(fieldToMatch: IResolvable) {
-    cdkBuilder.fieldToMatch(fieldToMatch)
-  }
+    /** @param fieldToMatch The part of the web request that you want AWS WAF to inspect. */
+    public fun fieldToMatch(fieldToMatch: IResolvable) {
+        cdkBuilder.fieldToMatch(fieldToMatch)
+    }
 
-  /**
-   * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
-   */
-  public fun fieldToMatch(fieldToMatch: CfnWebACL.FieldToMatchProperty) {
-    cdkBuilder.fieldToMatch(fieldToMatch)
-  }
+    /** @param fieldToMatch The part of the web request that you want AWS WAF to inspect. */
+    public fun fieldToMatch(fieldToMatch: CfnWebACL.FieldToMatchProperty) {
+        cdkBuilder.fieldToMatch(fieldToMatch)
+    }
 
-  /**
-   * @param size The size, in byte, to compare to the request part, after any transformations. 
-   */
-  public fun size(size: Number) {
-    cdkBuilder.size(size)
-  }
+    /** @param size The size, in byte, to compare to the request part, after any transformations. */
+    public fun size(size: Number) {
+        cdkBuilder.size(size)
+    }
 
-  /**
-   * @param textTransformations Text transformations eliminate some of the unusual formatting that
-   * attackers use in web requests in an effort to bypass detection. 
-   * If you specify one or more transformations in a rule statement, AWS WAF performs all
-   * transformations on the content of the request component identified by `FieldToMatch` , starting
-   * from the lowest priority setting, before inspecting the content for a match.
-   */
-  public fun textTransformations(vararg textTransformations: Any) {
-    _textTransformations.addAll(listOf(*textTransformations))
-  }
+    /**
+     * @param textTransformations Text transformations eliminate some of the unusual formatting that
+     *   attackers use in web requests in an effort to bypass detection. If you specify one or more
+     *   transformations in a rule statement, AWS WAF performs all transformations on the content of
+     *   the request component identified by `FieldToMatch` , starting from the lowest priority
+     *   setting, before inspecting the content for a match.
+     */
+    public fun textTransformations(vararg textTransformations: Any) {
+        _textTransformations.addAll(listOf(*textTransformations))
+    }
 
-  /**
-   * @param textTransformations Text transformations eliminate some of the unusual formatting that
-   * attackers use in web requests in an effort to bypass detection. 
-   * If you specify one or more transformations in a rule statement, AWS WAF performs all
-   * transformations on the content of the request component identified by `FieldToMatch` , starting
-   * from the lowest priority setting, before inspecting the content for a match.
-   */
-  public fun textTransformations(textTransformations: Collection<Any>) {
-    _textTransformations.addAll(textTransformations)
-  }
+    /**
+     * @param textTransformations Text transformations eliminate some of the unusual formatting that
+     *   attackers use in web requests in an effort to bypass detection. If you specify one or more
+     *   transformations in a rule statement, AWS WAF performs all transformations on the content of
+     *   the request component identified by `FieldToMatch` , starting from the lowest priority
+     *   setting, before inspecting the content for a match.
+     */
+    public fun textTransformations(textTransformations: Collection<Any>) {
+        _textTransformations.addAll(textTransformations)
+    }
 
-  /**
-   * @param textTransformations Text transformations eliminate some of the unusual formatting that
-   * attackers use in web requests in an effort to bypass detection. 
-   * If you specify one or more transformations in a rule statement, AWS WAF performs all
-   * transformations on the content of the request component identified by `FieldToMatch` , starting
-   * from the lowest priority setting, before inspecting the content for a match.
-   */
-  public fun textTransformations(textTransformations: IResolvable) {
-    cdkBuilder.textTransformations(textTransformations)
-  }
+    /**
+     * @param textTransformations Text transformations eliminate some of the unusual formatting that
+     *   attackers use in web requests in an effort to bypass detection. If you specify one or more
+     *   transformations in a rule statement, AWS WAF performs all transformations on the content of
+     *   the request component identified by `FieldToMatch` , starting from the lowest priority
+     *   setting, before inspecting the content for a match.
+     */
+    public fun textTransformations(textTransformations: IResolvable) {
+        cdkBuilder.textTransformations(textTransformations)
+    }
 
-  public fun build(): CfnWebACL.SizeConstraintStatementProperty {
-    if(_textTransformations.isNotEmpty()) cdkBuilder.textTransformations(_textTransformations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnWebACL.SizeConstraintStatementProperty {
+        if (_textTransformations.isNotEmpty()) cdkBuilder.textTransformations(_textTransformations)
+        return cdkBuilder.build()
+    }
 }

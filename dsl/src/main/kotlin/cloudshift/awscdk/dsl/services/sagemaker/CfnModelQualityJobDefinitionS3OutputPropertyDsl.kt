@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
  * The Amazon S3 storage location where the results of a monitoring job are saved.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,33 +35,32 @@ import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
  */
 @CdkDslMarker
 public class CfnModelQualityJobDefinitionS3OutputPropertyDsl {
-  private val cdkBuilder: CfnModelQualityJobDefinition.S3OutputProperty.Builder =
-      CfnModelQualityJobDefinition.S3OutputProperty.builder()
+    private val cdkBuilder: CfnModelQualityJobDefinition.S3OutputProperty.Builder =
+        CfnModelQualityJobDefinition.S3OutputProperty.builder()
 
-  /**
-   * @param localPath The local path to the Amazon S3 storage location where Amazon SageMaker saves
-   * the results of a monitoring job. 
-   * LocalPath is an absolute path for the output data.
-   */
-  public fun localPath(localPath: String) {
-    cdkBuilder.localPath(localPath)
-  }
+    /**
+     * @param localPath The local path to the Amazon S3 storage location where Amazon SageMaker
+     *   saves the results of a monitoring job. LocalPath is an absolute path for the output data.
+     */
+    public fun localPath(localPath: String) {
+        cdkBuilder.localPath(localPath)
+    }
 
-  /**
-   * @param s3UploadMode Whether to upload the results of the monitoring job continuously or after
-   * the job completes.
-   */
-  public fun s3UploadMode(s3UploadMode: String) {
-    cdkBuilder.s3UploadMode(s3UploadMode)
-  }
+    /**
+     * @param s3UploadMode Whether to upload the results of the monitoring job continuously or after
+     *   the job completes.
+     */
+    public fun s3UploadMode(s3UploadMode: String) {
+        cdkBuilder.s3UploadMode(s3UploadMode)
+    }
 
-  /**
-   * @param s3Uri A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves
-   * the results of a monitoring job. 
-   */
-  public fun s3Uri(s3Uri: String) {
-    cdkBuilder.s3Uri(s3Uri)
-  }
+    /**
+     * @param s3Uri A URI that identifies the Amazon S3 storage location where Amazon SageMaker
+     *   saves the results of a monitoring job.
+     */
+    public fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+    }
 
-  public fun build(): CfnModelQualityJobDefinition.S3OutputProperty = cdkBuilder.build()
+    public fun build(): CfnModelQualityJobDefinition.S3OutputProperty = cdkBuilder.build()
 }

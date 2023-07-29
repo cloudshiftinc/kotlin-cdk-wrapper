@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appconfig
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.appconfig.CfnConfigurationProfile
  * the configuration data is valid.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,23 +38,21 @@ import software.amazon.awscdk.services.appconfig.CfnConfigurationProfile
  */
 @CdkDslMarker
 public class CfnConfigurationProfileValidatorsPropertyDsl {
-  private val cdkBuilder: CfnConfigurationProfile.ValidatorsProperty.Builder =
-      CfnConfigurationProfile.ValidatorsProperty.builder()
+    private val cdkBuilder: CfnConfigurationProfile.ValidatorsProperty.Builder =
+        CfnConfigurationProfile.ValidatorsProperty.builder()
 
-  /**
-   * @param content Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda
-   * function.
-   */
-  public fun content(content: String) {
-    cdkBuilder.content(content)
-  }
+    /**
+     * @param content Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda
+     *   function.
+     */
+    public fun content(content: String) {
+        cdkBuilder.content(content)
+    }
 
-  /**
-   * @param type AWS AppConfig supports validators of type `JSON_SCHEMA` and `LAMBDA`.
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type AWS AppConfig supports validators of type `JSON_SCHEMA` and `LAMBDA`. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnConfigurationProfile.ValidatorsProperty = cdkBuilder.build()
+    public fun build(): CfnConfigurationProfile.ValidatorsProperty = cdkBuilder.build()
 }

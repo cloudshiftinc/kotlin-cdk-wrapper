@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sam.CfnFunction
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,34 +33,28 @@ import software.amazon.awscdk.services.sam.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionHttpApiFunctionAuthPropertyDsl {
-  private val cdkBuilder: CfnFunction.HttpApiFunctionAuthProperty.Builder =
-      CfnFunction.HttpApiFunctionAuthProperty.builder()
+    private val cdkBuilder: CfnFunction.HttpApiFunctionAuthProperty.Builder =
+        CfnFunction.HttpApiFunctionAuthProperty.builder()
 
-  private val _authorizationScopes: MutableList<String> = mutableListOf()
+    private val _authorizationScopes: MutableList<String> = mutableListOf()
 
-  /**
-   * @param authorizationScopes the value to be set.
-   */
-  public fun authorizationScopes(vararg authorizationScopes: String) {
-    _authorizationScopes.addAll(listOf(*authorizationScopes))
-  }
+    /** @param authorizationScopes the value to be set. */
+    public fun authorizationScopes(vararg authorizationScopes: String) {
+        _authorizationScopes.addAll(listOf(*authorizationScopes))
+    }
 
-  /**
-   * @param authorizationScopes the value to be set.
-   */
-  public fun authorizationScopes(authorizationScopes: Collection<String>) {
-    _authorizationScopes.addAll(authorizationScopes)
-  }
+    /** @param authorizationScopes the value to be set. */
+    public fun authorizationScopes(authorizationScopes: Collection<String>) {
+        _authorizationScopes.addAll(authorizationScopes)
+    }
 
-  /**
-   * @param authorizer the value to be set.
-   */
-  public fun authorizer(authorizer: String) {
-    cdkBuilder.authorizer(authorizer)
-  }
+    /** @param authorizer the value to be set. */
+    public fun authorizer(authorizer: String) {
+        cdkBuilder.authorizer(authorizer)
+    }
 
-  public fun build(): CfnFunction.HttpApiFunctionAuthProperty {
-    if(_authorizationScopes.isNotEmpty()) cdkBuilder.authorizationScopes(_authorizationScopes)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFunction.HttpApiFunctionAuthProperty {
+        if (_authorizationScopes.isNotEmpty()) cdkBuilder.authorizationScopes(_authorizationScopes)
+        return cdkBuilder.build()
+    }
 }

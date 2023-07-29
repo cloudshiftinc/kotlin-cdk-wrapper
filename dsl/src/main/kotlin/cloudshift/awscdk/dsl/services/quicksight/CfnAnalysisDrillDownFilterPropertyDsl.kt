@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,48 +61,50 @@ public class CfnAnalysisDrillDownFilterPropertyDsl {
         CfnAnalysis.DrillDownFilterProperty.builder()
 
     /**
-     * @param categoryFilter The category type drill down filter.
-     * This filter is used for string type columns.
+     * @param categoryFilter The category type drill down filter. This filter is used for string
+     *   type columns.
      */
     public fun categoryFilter(categoryFilter: IResolvable) {
         cdkBuilder.categoryFilter(categoryFilter)
     }
 
     /**
-     * @param categoryFilter The category type drill down filter.
-     * This filter is used for string type columns.
+     * @param categoryFilter The category type drill down filter. This filter is used for string
+     *   type columns.
      */
     public fun categoryFilter(categoryFilter: CfnAnalysis.CategoryDrillDownFilterProperty) {
         cdkBuilder.categoryFilter(categoryFilter)
     }
 
     /**
-     * @param numericEqualityFilter The numeric equality type drill down filter.
-     * This filter is used for number type columns.
+     * @param numericEqualityFilter The numeric equality type drill down filter. This filter is used
+     *   for number type columns.
      */
     public fun numericEqualityFilter(numericEqualityFilter: IResolvable) {
         cdkBuilder.numericEqualityFilter(numericEqualityFilter)
     }
 
     /**
-     * @param numericEqualityFilter The numeric equality type drill down filter.
-     * This filter is used for number type columns.
+     * @param numericEqualityFilter The numeric equality type drill down filter. This filter is used
+     *   for number type columns.
      */
-    public fun numericEqualityFilter(numericEqualityFilter: CfnAnalysis.NumericEqualityDrillDownFilterProperty) {
+    public fun numericEqualityFilter(
+        numericEqualityFilter: CfnAnalysis.NumericEqualityDrillDownFilterProperty
+    ) {
         cdkBuilder.numericEqualityFilter(numericEqualityFilter)
     }
 
     /**
-     * @param timeRangeFilter The time range drill down filter.
-     * This filter is used for date time columns.
+     * @param timeRangeFilter The time range drill down filter. This filter is used for date time
+     *   columns.
      */
     public fun timeRangeFilter(timeRangeFilter: IResolvable) {
         cdkBuilder.timeRangeFilter(timeRangeFilter)
     }
 
     /**
-     * @param timeRangeFilter The time range drill down filter.
-     * This filter is used for date time columns.
+     * @param timeRangeFilter The time range drill down filter. This filter is used for date time
+     *   columns.
      */
     public fun timeRangeFilter(timeRangeFilter: CfnAnalysis.TimeRangeDrillDownFilterProperty) {
         cdkBuilder.timeRangeFilter(timeRangeFilter)

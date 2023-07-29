@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * Aggregation for numerical values.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,18 +41,20 @@ public class CfnAnalysisNumericalAggregationFunctionPropertyDsl {
         CfnAnalysis.NumericalAggregationFunctionProperty.builder()
 
     /**
-     * @param percentileAggregation An aggregation based on the percentile of values in a dimension or
-     * measure.
+     * @param percentileAggregation An aggregation based on the percentile of values in a dimension
+     *   or measure.
      */
     public fun percentileAggregation(percentileAggregation: IResolvable) {
         cdkBuilder.percentileAggregation(percentileAggregation)
     }
 
     /**
-     * @param percentileAggregation An aggregation based on the percentile of values in a dimension or
-     * measure.
+     * @param percentileAggregation An aggregation based on the percentile of values in a dimension
+     *   or measure.
      */
-    public fun percentileAggregation(percentileAggregation: CfnAnalysis.PercentileAggregationProperty) {
+    public fun percentileAggregation(
+        percentileAggregation: CfnAnalysis.PercentileAggregationProperty
+    ) {
         cdkBuilder.percentileAggregation(percentileAggregation)
     }
 

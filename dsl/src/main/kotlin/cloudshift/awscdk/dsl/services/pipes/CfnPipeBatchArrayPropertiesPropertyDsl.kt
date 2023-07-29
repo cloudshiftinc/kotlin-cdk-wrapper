@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  * an array job. This parameter is used only if the target is an AWS Batch job.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,13 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  */
 @CdkDslMarker
 public class CfnPipeBatchArrayPropertiesPropertyDsl {
-  private val cdkBuilder: CfnPipe.BatchArrayPropertiesProperty.Builder =
-      CfnPipe.BatchArrayPropertiesProperty.builder()
+    private val cdkBuilder: CfnPipe.BatchArrayPropertiesProperty.Builder =
+        CfnPipe.BatchArrayPropertiesProperty.builder()
 
-  /**
-   * @param size The size of the array, if this is an array batch job.
-   */
-  public fun size(size: Number) {
-    cdkBuilder.size(size)
-  }
+    /** @param size The size of the array, if this is an array batch job. */
+    public fun size(size: Number) {
+        cdkBuilder.size(size)
+    }
 
-  public fun build(): CfnPipe.BatchArrayPropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnPipe.BatchArrayPropertiesProperty = cdkBuilder.build()
 }

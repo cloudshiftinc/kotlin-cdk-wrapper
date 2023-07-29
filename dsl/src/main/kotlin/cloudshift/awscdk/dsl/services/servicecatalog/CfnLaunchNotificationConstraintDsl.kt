@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint
-import software.constructs.Construct
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint
+import software.constructs.Construct
 
 /**
  * Specifies a notification constraint.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,7 +42,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnLaunchNotificationConstraintDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnLaunchNotificationConstraint.Builder =
         CfnLaunchNotificationConstraint.Builder.create(scope, id)
@@ -43,11 +51,11 @@ public class CfnLaunchNotificationConstraintDsl(
 
     /**
      * The language code.
-     *
      * * `jp` - Japanese
      * * `zh` - Chinese
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-acceptlanguage)
+     *
      * @param acceptLanguage The language code.
      */
     public fun acceptLanguage(acceptLanguage: String) {
@@ -58,6 +66,7 @@ public class CfnLaunchNotificationConstraintDsl(
      * The description of the constraint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-description)
+     *
      * @param description The description of the constraint.
      */
     public fun description(description: String) {
@@ -68,6 +77,7 @@ public class CfnLaunchNotificationConstraintDsl(
      * The notification ARNs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-notificationarns)
+     *
      * @param notificationArns The notification ARNs.
      */
     public fun notificationArns(vararg notificationArns: String) {
@@ -78,6 +88,7 @@ public class CfnLaunchNotificationConstraintDsl(
      * The notification ARNs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-notificationarns)
+     *
      * @param notificationArns The notification ARNs.
      */
     public fun notificationArns(notificationArns: Collection<String>) {
@@ -88,6 +99,7 @@ public class CfnLaunchNotificationConstraintDsl(
      * The portfolio identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-portfolioid)
+     *
      * @param portfolioId The portfolio identifier.
      */
     public fun portfolioId(portfolioId: String) {
@@ -98,6 +110,7 @@ public class CfnLaunchNotificationConstraintDsl(
      * The product identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-productid)
+     *
      * @param productId The product identifier.
      */
     public fun productId(productId: String) {

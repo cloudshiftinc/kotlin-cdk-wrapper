@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.TlsValidationTrust
  * Represents the properties needed to define TLS Validation context.
  *
  * Example:
- *
  * ```
  * Mesh mesh;
  * Service service;
@@ -45,23 +53,20 @@ import software.amazon.awscdk.services.appmesh.TlsValidationTrust
  */
 @CdkDslMarker
 public class TlsValidationDsl {
-  private val cdkBuilder: TlsValidation.Builder = TlsValidation.builder()
+    private val cdkBuilder: TlsValidation.Builder = TlsValidation.builder()
 
-  /**
-   * @param subjectAlternativeNames Represents the subject alternative names (SANs) secured by the
-   * certificate.
-   * SANs must be in the FQDN or URI format.
-   */
-  public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
-    cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
-  }
+    /**
+     * @param subjectAlternativeNames Represents the subject alternative names (SANs) secured by the
+     *   certificate. SANs must be in the FQDN or URI format.
+     */
+    public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
+    }
 
-  /**
-   * @param trust Reference to where to retrieve the trust chain. 
-   */
-  public fun trust(trust: TlsValidationTrust) {
-    cdkBuilder.trust(trust)
-  }
+    /** @param trust Reference to where to retrieve the trust chain. */
+    public fun trust(trust: TlsValidationTrust) {
+        cdkBuilder.trust(trust)
+    }
 
-  public fun build(): TlsValidation = cdkBuilder.build()
+    public fun build(): TlsValidation = cdkBuilder.build()
 }

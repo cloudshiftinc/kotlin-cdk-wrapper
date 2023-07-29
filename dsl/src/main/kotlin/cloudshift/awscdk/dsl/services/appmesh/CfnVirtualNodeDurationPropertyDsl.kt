@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  * An object that represents a duration of time.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  */
 @CdkDslMarker
 public class CfnVirtualNodeDurationPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.DurationProperty.Builder =
-      CfnVirtualNode.DurationProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.DurationProperty.Builder =
+        CfnVirtualNode.DurationProperty.builder()
 
-  /**
-   * @param unit A unit of time. 
-   */
-  public fun unit(unit: String) {
-    cdkBuilder.unit(unit)
-  }
+    /** @param unit A unit of time. */
+    public fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+    }
 
-  /**
-   * @param value A number of time units. 
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value A number of time units. */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnVirtualNode.DurationProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.DurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.acmpca
 
@@ -11,12 +20,11 @@ import software.amazon.awscdk.services.acmpca.CfnCertificate
  * or `APICSRPassthrough` template variant must be selected, or else this parameter is ignored.
  *
  * If conflicting or duplicate certificate information is supplied from other sources, AWS Private
- * CA applies [order of operation
- * rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations)
+ * CA applies
+ * [order of operation rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations)
  * to determine what information is used.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -117,44 +125,40 @@ import software.amazon.awscdk.services.acmpca.CfnCertificate
  */
 @CdkDslMarker
 public class CfnCertificateApiPassthroughPropertyDsl {
-  private val cdkBuilder: CfnCertificate.ApiPassthroughProperty.Builder =
-      CfnCertificate.ApiPassthroughProperty.builder()
+    private val cdkBuilder: CfnCertificate.ApiPassthroughProperty.Builder =
+        CfnCertificate.ApiPassthroughProperty.builder()
 
-  /**
-   * @param extensions Specifies X.509 extension information for a certificate.
-   */
-  public fun extensions(extensions: IResolvable) {
-    cdkBuilder.extensions(extensions)
-  }
+    /** @param extensions Specifies X.509 extension information for a certificate. */
+    public fun extensions(extensions: IResolvable) {
+        cdkBuilder.extensions(extensions)
+    }
 
-  /**
-   * @param extensions Specifies X.509 extension information for a certificate.
-   */
-  public fun extensions(extensions: CfnCertificate.ExtensionsProperty) {
-    cdkBuilder.extensions(extensions)
-  }
+    /** @param extensions Specifies X.509 extension information for a certificate. */
+    public fun extensions(extensions: CfnCertificate.ExtensionsProperty) {
+        cdkBuilder.extensions(extensions)
+    }
 
-  /**
-   * @param subject Contains information about the certificate subject.
-   * The Subject field in the certificate identifies the entity that owns or controls the public key
-   * in the certificate. The entity can be a user, computer, device, or service. The Subject must
-   * contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names
-   * (RDNs). The RDNs are separated by commas in the certificate.
-   */
-  public fun subject(subject: IResolvable) {
-    cdkBuilder.subject(subject)
-  }
+    /**
+     * @param subject Contains information about the certificate subject. The Subject field in the
+     *   certificate identifies the entity that owns or controls the public key in the certificate.
+     *   The entity can be a user, computer, device, or service. The Subject must contain an X.500
+     *   distinguished name (DN). A DN is a sequence of relative distinguished names (RDNs). The
+     *   RDNs are separated by commas in the certificate.
+     */
+    public fun subject(subject: IResolvable) {
+        cdkBuilder.subject(subject)
+    }
 
-  /**
-   * @param subject Contains information about the certificate subject.
-   * The Subject field in the certificate identifies the entity that owns or controls the public key
-   * in the certificate. The entity can be a user, computer, device, or service. The Subject must
-   * contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names
-   * (RDNs). The RDNs are separated by commas in the certificate.
-   */
-  public fun subject(subject: CfnCertificate.SubjectProperty) {
-    cdkBuilder.subject(subject)
-  }
+    /**
+     * @param subject Contains information about the certificate subject. The Subject field in the
+     *   certificate identifies the entity that owns or controls the public key in the certificate.
+     *   The entity can be a user, computer, device, or service. The Subject must contain an X.500
+     *   distinguished name (DN). A DN is a sequence of relative distinguished names (RDNs). The
+     *   RDNs are separated by commas in the certificate.
+     */
+    public fun subject(subject: CfnCertificate.SubjectProperty) {
+        cdkBuilder.subject(subject)
+    }
 
-  public fun build(): CfnCertificate.ApiPassthroughProperty = cdkBuilder.build()
+    public fun build(): CfnCertificate.ApiPassthroughProperty = cdkBuilder.build()
 }

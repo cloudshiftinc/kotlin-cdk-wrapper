@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
  * An object that represents the specification of a virtual router.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,37 +40,37 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
  */
 @CdkDslMarker
 public class CfnVirtualRouterVirtualRouterSpecPropertyDsl {
-  private val cdkBuilder: CfnVirtualRouter.VirtualRouterSpecProperty.Builder =
-      CfnVirtualRouter.VirtualRouterSpecProperty.builder()
+    private val cdkBuilder: CfnVirtualRouter.VirtualRouterSpecProperty.Builder =
+        CfnVirtualRouter.VirtualRouterSpecProperty.builder()
 
-  private val _listeners: MutableList<Any> = mutableListOf()
+    private val _listeners: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param listeners The listeners that the virtual router is expected to receive inbound traffic
-   * from. 
-   */
-  public fun listeners(vararg listeners: Any) {
-    _listeners.addAll(listOf(*listeners))
-  }
+    /**
+     * @param listeners The listeners that the virtual router is expected to receive inbound traffic
+     *   from.
+     */
+    public fun listeners(vararg listeners: Any) {
+        _listeners.addAll(listOf(*listeners))
+    }
 
-  /**
-   * @param listeners The listeners that the virtual router is expected to receive inbound traffic
-   * from. 
-   */
-  public fun listeners(listeners: Collection<Any>) {
-    _listeners.addAll(listeners)
-  }
+    /**
+     * @param listeners The listeners that the virtual router is expected to receive inbound traffic
+     *   from.
+     */
+    public fun listeners(listeners: Collection<Any>) {
+        _listeners.addAll(listeners)
+    }
 
-  /**
-   * @param listeners The listeners that the virtual router is expected to receive inbound traffic
-   * from. 
-   */
-  public fun listeners(listeners: IResolvable) {
-    cdkBuilder.listeners(listeners)
-  }
+    /**
+     * @param listeners The listeners that the virtual router is expected to receive inbound traffic
+     *   from.
+     */
+    public fun listeners(listeners: IResolvable) {
+        cdkBuilder.listeners(listeners)
+    }
 
-  public fun build(): CfnVirtualRouter.VirtualRouterSpecProperty {
-    if(_listeners.isNotEmpty()) cdkBuilder.listeners(_listeners)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVirtualRouter.VirtualRouterSpecProperty {
+        if (_listeners.isNotEmpty()) cdkBuilder.listeners(_listeners)
+        return cdkBuilder.build()
+    }
 }

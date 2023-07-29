@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -13,12 +22,11 @@ import software.constructs.Construct
  * You can associate one route table with an attachment.
  *
  * Before you can update the route table associated with an attachment, you must disassociate the
- * transit gateway route table that is currently associated with the attachment. First update the stack
- * to remove the associated transit gateway route table, and then update the stack with the ID of the
- * new transit gateway route table to associate.
+ * transit gateway route table that is currently associated with the attachment. First update the
+ * stack to remove the associated transit gateway route table, and then update the stack with the ID
+ * of the new transit gateway route table to associate.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,31 +43,33 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnTransitGatewayRouteTableAssociationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnTransitGatewayRouteTableAssociation.Builder =
-      CfnTransitGatewayRouteTableAssociation.Builder.create(scope, id)
+    private val cdkBuilder: CfnTransitGatewayRouteTableAssociation.Builder =
+        CfnTransitGatewayRouteTableAssociation.Builder.create(scope, id)
 
-  /**
-   * The ID of the attachment.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html#cfn-ec2-transitgatewayroutetableassociation-transitgatewayattachmentid)
-   * @param transitGatewayAttachmentId The ID of the attachment. 
-   */
-  public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
-    cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
-  }
+    /**
+     * The ID of the attachment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html#cfn-ec2-transitgatewayroutetableassociation-transitgatewayattachmentid)
+     *
+     * @param transitGatewayAttachmentId The ID of the attachment.
+     */
+    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
+        cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
+    }
 
-  /**
-   * The ID of the route table for the transit gateway.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html#cfn-ec2-transitgatewayroutetableassociation-transitgatewayroutetableid)
-   * @param transitGatewayRouteTableId The ID of the route table for the transit gateway. 
-   */
-  public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
-    cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
-  }
+    /**
+     * The ID of the route table for the transit gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html#cfn-ec2-transitgatewayroutetableassociation-transitgatewayroutetableid)
+     *
+     * @param transitGatewayRouteTableId The ID of the route table for the transit gateway.
+     */
+    public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
+        cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
+    }
 
-  public fun build(): CfnTransitGatewayRouteTableAssociation = cdkBuilder.build()
+    public fun build(): CfnTransitGatewayRouteTableAssociation = cdkBuilder.build()
 }

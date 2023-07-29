@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.iot.CfnBillingGroupProps
  * Properties for defining a `CfnBillingGroup`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,48 +46,39 @@ import software.amazon.awscdk.services.iot.CfnBillingGroupProps
  */
 @CdkDslMarker
 public class CfnBillingGroupPropsDsl {
-  private val cdkBuilder: CfnBillingGroupProps.Builder = CfnBillingGroupProps.builder()
+    private val cdkBuilder: CfnBillingGroupProps.Builder = CfnBillingGroupProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param billingGroupName The name of the billing group.
-   */
-  public fun billingGroupName(billingGroupName: String) {
-    cdkBuilder.billingGroupName(billingGroupName)
-  }
+    /** @param billingGroupName The name of the billing group. */
+    public fun billingGroupName(billingGroupName: String) {
+        cdkBuilder.billingGroupName(billingGroupName)
+    }
 
-  /**
-   * @param billingGroupProperties The properties of the billing group.
-   */
-  public fun billingGroupProperties(billingGroupProperties: IResolvable) {
-    cdkBuilder.billingGroupProperties(billingGroupProperties)
-  }
+    /** @param billingGroupProperties The properties of the billing group. */
+    public fun billingGroupProperties(billingGroupProperties: IResolvable) {
+        cdkBuilder.billingGroupProperties(billingGroupProperties)
+    }
 
-  /**
-   * @param billingGroupProperties The properties of the billing group.
-   */
-  public
-      fun billingGroupProperties(billingGroupProperties: CfnBillingGroup.BillingGroupPropertiesProperty) {
-    cdkBuilder.billingGroupProperties(billingGroupProperties)
-  }
+    /** @param billingGroupProperties The properties of the billing group. */
+    public fun billingGroupProperties(
+        billingGroupProperties: CfnBillingGroup.BillingGroupPropertiesProperty
+    ) {
+        cdkBuilder.billingGroupProperties(billingGroupProperties)
+    }
 
-  /**
-   * @param tags Metadata which can be used to manage the billing group.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags Metadata which can be used to manage the billing group. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Metadata which can be used to manage the billing group.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags Metadata which can be used to manage the billing group. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnBillingGroupProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBillingGroupProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

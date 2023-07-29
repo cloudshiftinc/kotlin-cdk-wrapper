@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The forecast computation configuration.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -23,9 +31,7 @@ public class CfnTemplateForecastComputationPropertyDsl {
     private val cdkBuilder: CfnTemplate.ForecastComputationProperty.Builder =
         CfnTemplate.ForecastComputationProperty.builder()
 
-    /**
-     * @param computationId The ID for a computation.
-     */
+    /** @param computationId The ID for a computation. */
     public fun computationId(computationId: String) {
         cdkBuilder.computationId(computationId)
     }
@@ -37,44 +43,34 @@ public class CfnTemplateForecastComputationPropertyDsl {
         cdkBuilder.customSeasonalityValue(customSeasonalityValue)
     }
 
-    /**
-     * @param lowerBoundary The lower boundary setup of a forecast computation.
-     */
+    /** @param lowerBoundary The lower boundary setup of a forecast computation. */
     public fun lowerBoundary(lowerBoundary: Number) {
         cdkBuilder.lowerBoundary(lowerBoundary)
     }
 
-    /**
-     * @param name The name of a computation.
-     */
+    /** @param name The name of a computation. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param periodsBackward The periods backward setup of a forecast computation.
-     */
+    /** @param periodsBackward The periods backward setup of a forecast computation. */
     public fun periodsBackward(periodsBackward: Number) {
         cdkBuilder.periodsBackward(periodsBackward)
     }
 
-    /**
-     * @param periodsForward The periods forward setup of a forecast computation.
-     */
+    /** @param periodsForward The periods forward setup of a forecast computation. */
     public fun periodsForward(periodsForward: Number) {
         cdkBuilder.periodsForward(periodsForward)
     }
 
-    /**
-     * @param predictionInterval The prediction interval setup of a forecast computation.
-     */
+    /** @param predictionInterval The prediction interval setup of a forecast computation. */
     public fun predictionInterval(predictionInterval: Number) {
         cdkBuilder.predictionInterval(predictionInterval)
     }
 
     /**
-     * @param seasonality The seasonality setup of a forecast computation. Choose one of the following
-     * options:.
+     * @param seasonality The seasonality setup of a forecast computation. Choose one of the
+     *   following options:.
      * * `AUTOMATIC`
      * * `CUSTOM` : Checks the custom seasonality value.
      */
@@ -82,37 +78,27 @@ public class CfnTemplateForecastComputationPropertyDsl {
         cdkBuilder.seasonality(seasonality)
     }
 
-    /**
-     * @param time The time field that is used in a computation.
-     */
+    /** @param time The time field that is used in a computation. */
     public fun time(time: IResolvable) {
         cdkBuilder.time(time)
     }
 
-    /**
-     * @param time The time field that is used in a computation.
-     */
+    /** @param time The time field that is used in a computation. */
     public fun time(time: CfnTemplate.DimensionFieldProperty) {
         cdkBuilder.time(time)
     }
 
-    /**
-     * @param upperBoundary The upper boundary setup of a forecast computation.
-     */
+    /** @param upperBoundary The upper boundary setup of a forecast computation. */
     public fun upperBoundary(upperBoundary: Number) {
         cdkBuilder.upperBoundary(upperBoundary)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: CfnTemplate.MeasureFieldProperty) {
         cdkBuilder.`value`(`value`)
     }

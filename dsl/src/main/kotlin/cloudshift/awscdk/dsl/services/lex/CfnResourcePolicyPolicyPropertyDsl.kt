@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.lex.CfnResourcePolicy
  * define the policy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,8 +32,8 @@ import software.amazon.awscdk.services.lex.CfnResourcePolicy
  */
 @CdkDslMarker
 public class CfnResourcePolicyPolicyPropertyDsl {
-  private val cdkBuilder: CfnResourcePolicy.PolicyProperty.Builder =
-      CfnResourcePolicy.PolicyProperty.builder()
+    private val cdkBuilder: CfnResourcePolicy.PolicyProperty.Builder =
+        CfnResourcePolicy.PolicyProperty.builder()
 
-  public fun build(): CfnResourcePolicy.PolicyProperty = cdkBuilder.build()
+    public fun build(): CfnResourcePolicy.PolicyProperty = cdkBuilder.build()
 }

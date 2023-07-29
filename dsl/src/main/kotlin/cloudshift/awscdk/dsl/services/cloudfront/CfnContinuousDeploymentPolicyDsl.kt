@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -14,15 +23,14 @@ import software.constructs.Construct
  *
  * After you create and update a staging distribution, you can use a continuous deployment policy to
  * incrementally move traffic to the staging distribution. This enables you to test changes to a
- * distribution's configuration before moving all of your production traffic to the new configuration.
+ * distribution's configuration before moving all of your production traffic to the new
+ * configuration.
  *
- * For more information, see [Using CloudFront continuous deployment to safely test CDN
- * configuration
- * changes](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/continuous-deployment.html)
+ * For more information, see
+ * [Using CloudFront continuous deployment to safely test CDN configuration changes](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/continuous-deployment.html)
  * in the *Amazon CloudFront Developer Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -57,34 +65,38 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnContinuousDeploymentPolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnContinuousDeploymentPolicy.Builder =
-      CfnContinuousDeploymentPolicy.Builder.create(scope, id)
+    private val cdkBuilder: CfnContinuousDeploymentPolicy.Builder =
+        CfnContinuousDeploymentPolicy.Builder.create(scope, id)
 
-  /**
-   * Contains the configuration for a continuous deployment policy.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html#cfn-cloudfront-continuousdeploymentpolicy-continuousdeploymentpolicyconfig)
-   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
-   * policy. 
-   */
-  public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
-    cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
-  }
+    /**
+     * Contains the configuration for a continuous deployment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html#cfn-cloudfront-continuousdeploymentpolicy-continuousdeploymentpolicyconfig)
+     *
+     * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous
+     *   deployment policy.
+     */
+    public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
+        cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
+    }
 
-  /**
-   * Contains the configuration for a continuous deployment policy.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html#cfn-cloudfront-continuousdeploymentpolicy-continuousdeploymentpolicyconfig)
-   * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous deployment
-   * policy. 
-   */
-  public
-      fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty) {
-    cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
-  }
+    /**
+     * Contains the configuration for a continuous deployment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html#cfn-cloudfront-continuousdeploymentpolicy-continuousdeploymentpolicyconfig)
+     *
+     * @param continuousDeploymentPolicyConfig Contains the configuration for a continuous
+     *   deployment policy.
+     */
+    public fun continuousDeploymentPolicyConfig(
+        continuousDeploymentPolicyConfig:
+            CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty
+    ) {
+        cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
+    }
 
-  public fun build(): CfnContinuousDeploymentPolicy = cdkBuilder.build()
+    public fun build(): CfnContinuousDeploymentPolicy = cdkBuilder.build()
 }

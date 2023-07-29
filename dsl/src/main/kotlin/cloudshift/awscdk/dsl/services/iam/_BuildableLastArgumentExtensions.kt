@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iam
 
@@ -26,39 +35,38 @@ import software.amazon.awscdk.services.iam.SessionTagsPrincipal
 import software.amazon.awscdk.services.iam.UnknownPrincipal
 import software.amazon.awscdk.services.iam.User
 
-/**
- * Creates a password for the specified IAM user.
- */
+/** Creates a password for the specified IAM user. */
 public inline fun CfnUser.setLoginProfile(block: CfnUserLoginProfilePropertyDsl.() -> Unit = {}) {
-  val builder = CfnUserLoginProfilePropertyDsl()
-  builder.apply(block)
-  return setLoginProfile(builder.build())
+    val builder = CfnUserLoginProfilePropertyDsl()
+    builder.apply(block)
+    return setLoginProfile(builder.build())
 }
 
 /**
  * Add the principal to the AssumeRolePolicyDocument.
  *
- * Add the statements to the AssumeRolePolicyDocument necessary to give this principal
- * permissions to assume the given role.
+ * Add the statements to the AssumeRolePolicyDocument necessary to give this principal permissions
+ * to assume the given role.
  *
- * @param doc 
+ * @param doc
  */
-public inline fun CompositePrincipal.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit =
-    {}) {
-  val builder = PolicyDocumentDsl()
-  builder.apply(block)
-  return addToAssumeRolePolicy(builder.build())
+public inline fun CompositePrincipal.addToAssumeRolePolicy(
+    block: PolicyDocumentDsl.() -> Unit = {}
+) {
+    val builder = PolicyDocumentDsl()
+    builder.apply(block)
+    return addToAssumeRolePolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun Role.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
@@ -66,114 +74,118 @@ public inline fun Role.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): B
  *
  * If there is no default policy attached to this role, it will be created.
  *
- * @param statement The permission statement to add to the policy document. 
+ * @param statement The permission statement to add to the policy document.
  */
-public inline fun Role.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun Role.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Return a copy of this Role object whose Policies will not be updated.
  *
- * Use the object returned by this method if you want this Role to be used by
- * a construct without it automatically updating the Role's Policies.
+ * Use the object returned by this method if you want this Role to be used by a construct without it
+ * automatically updating the Role's Policies.
  *
- * If you do, you are responsible for adding the correct statements to the
- * Role's policies yourself.
+ * If you do, you are responsible for adding the correct statements to the Role's policies yourself.
  *
  * @param options
  */
-public inline fun Role.withoutPolicyUpdates(block: WithoutPolicyUpdatesOptionsDsl.() -> Unit = {}):
-    IRole {
-  val builder = WithoutPolicyUpdatesOptionsDsl()
-  builder.apply(block)
-  return withoutPolicyUpdates(builder.build())
+public inline fun Role.withoutPolicyUpdates(
+    block: WithoutPolicyUpdatesOptionsDsl.() -> Unit = {}
+): IRole {
+    val builder = WithoutPolicyUpdatesOptionsDsl()
+    builder.apply(block)
+    return withoutPolicyUpdates(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun UnknownPrincipal.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun UnknownPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun UnknownPrincipal.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Adds a statement to the policy document.
  *
- * @param statement the statement to add. 
+ * @param statement the statement to add.
  */
 public inline fun PolicyDocument.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addStatements(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addStatements(builder.build())
 }
 
 /**
  * Add the principal to the AssumeRolePolicyDocument.
  *
- * Add the statements to the AssumeRolePolicyDocument necessary to give this principal
- * permissions to assume the given role.
+ * Add the statements to the AssumeRolePolicyDocument necessary to give this principal permissions
+ * to assume the given role.
  *
- * @param document 
+ * @param document
  */
-public inline fun IAssumeRolePrincipal.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit =
-    {}) {
-  val builder = PolicyDocumentDsl()
-  builder.apply(block)
-  return addToAssumeRolePolicy(builder.build())
+public inline fun IAssumeRolePrincipal.addToAssumeRolePolicy(
+    block: PolicyDocumentDsl.() -> Unit = {}
+) {
+    val builder = PolicyDocumentDsl()
+    builder.apply(block)
+    return addToAssumeRolePolicy(builder.build())
 }
 
 /**
  * Add a statement to the resource's resource policy.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun IResourceWithPolicy.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit =
-    {}): AddToResourcePolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToResourcePolicy(builder.build())
+public inline fun IResourceWithPolicy.addToResourcePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToResourcePolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToResourcePolicy(builder.build())
 }
 
 /**
  * Adds a statement to the policy document.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun Policy.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addStatements(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addStatements(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun LazyRole.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
@@ -181,67 +193,73 @@ public inline fun LazyRole.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}
  *
  * If there is no default policy attached to this role, it will be created.
  *
- * @param statement The permission statement to add to the policy document. 
+ * @param statement The permission statement to add to the policy document.
  */
-public inline fun LazyRole.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun LazyRole.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Add the principal to the AssumeRolePolicyDocument.
  *
- * Add the statements to the AssumeRolePolicyDocument necessary to give this principal
- * permissions to assume the given role.
+ * Add the statements to the AssumeRolePolicyDocument necessary to give this principal permissions
+ * to assume the given role.
  *
- * @param doc 
+ * @param doc
  */
-public inline fun SessionTagsPrincipal.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit =
-    {}) {
-  val builder = PolicyDocumentDsl()
-  builder.apply(block)
-  return addToAssumeRolePolicy(builder.build())
+public inline fun SessionTagsPrincipal.addToAssumeRolePolicy(
+    block: PolicyDocumentDsl.() -> Unit = {}
+) {
+    val builder = PolicyDocumentDsl()
+    builder.apply(block)
+    return addToAssumeRolePolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun SessionTagsPrincipal.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+public inline fun SessionTagsPrincipal.addToPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): Boolean {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun SessionTagsPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit =
-    {}): AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun SessionTagsPrincipal.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Adds a service principal to this policy statement.
  *
  * @param service the service name for which a service principal is requested (e.g:
- * `s3.amazonaws.com`). 
+ *   `s3.amazonaws.com`).
  * @param opts options for adding the service principal (such as specifying a principal in a
- * different region).
+ *   different region).
  */
-public inline fun PolicyStatement.addServicePrincipal(service: String,
-    block: ServicePrincipalOptsDsl.() -> Unit = {}) {
-  val builder = ServicePrincipalOptsDsl()
-  builder.apply(block)
-  return addServicePrincipal(service, builder.build())
+public inline fun PolicyStatement.addServicePrincipal(
+    service: String,
+    block: ServicePrincipalOptsDsl.() -> Unit = {}
+) {
+    val builder = ServicePrincipalOptsDsl()
+    builder.apply(block)
+    return addServicePrincipal(service, builder.build())
 }
 
 /**
@@ -250,140 +268,147 @@ public inline fun PolicyStatement.addServicePrincipal(service: String,
  *
  * @param overrides
  */
-public inline fun PolicyStatement.copy(block: PolicyStatementPropsDsl.() -> Unit = {}):
-    PolicyStatement {
-  val builder = PolicyStatementPropsDsl()
-  builder.apply(block)
-  return copy(builder.build())
+public inline fun PolicyStatement.copy(
+    block: PolicyStatementPropsDsl.() -> Unit = {}
+): PolicyStatement {
+    val builder = PolicyStatementPropsDsl()
+    builder.apply(block)
+    return copy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun Group.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
  * Adds an IAM statement to the default policy.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun Group.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun Group.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Add the principal to the AssumeRolePolicyDocument.
  *
- * Add the statements to the AssumeRolePolicyDocument necessary to give this principal
- * permissions to assume the given role.
+ * Add the statements to the AssumeRolePolicyDocument necessary to give this principal permissions
+ * to assume the given role.
  *
- * @param document 
+ * @param document
  */
 public inline fun PrincipalBase.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit = {}) {
-  val builder = PolicyDocumentDsl()
-  builder.apply(block)
-  return addToAssumeRolePolicy(builder.build())
+    val builder = PolicyDocumentDsl()
+    builder.apply(block)
+    return addToAssumeRolePolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun PrincipalBase.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param _statement 
+ * @param _statement
  */
-public inline fun PrincipalBase.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun PrincipalBase.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun IPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun IPrincipal.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Adds a statement to the policy document.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun ManagedPolicy.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addStatements(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addStatements(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun User.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
  * Adds an IAM statement to the default policy.
  *
+ * @param statement
  * @return true
- * @param statement 
  */
-public inline fun User.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun User.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun PrincipalWithConditions.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
+public inline fun PrincipalWithConditions.addToPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): Boolean {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
 }
 
 /**
  * Add to the policy of this principal.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun PrincipalWithConditions.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit
-    = {}): AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+public inline fun PrincipalWithConditions.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }

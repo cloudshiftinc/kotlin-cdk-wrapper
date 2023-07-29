@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,18 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisShortFormatTextPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.ShortFormatTextProperty.Builder =
-      CfnAnalysis.ShortFormatTextProperty.builder()
+    private val cdkBuilder: CfnAnalysis.ShortFormatTextProperty.Builder =
+        CfnAnalysis.ShortFormatTextProperty.builder()
 
-  /**
-   * @param plainText Plain text format.
-   */
-  public fun plainText(plainText: String) {
-    cdkBuilder.plainText(plainText)
-  }
+    /** @param plainText Plain text format. */
+    public fun plainText(plainText: String) {
+        cdkBuilder.plainText(plainText)
+    }
 
-  /**
-   * @param richText Rich text.
-   * Examples of rich text include bold, underline, and italics.
-   */
-  public fun richText(richText: String) {
-    cdkBuilder.richText(richText)
-  }
+    /** @param richText Rich text. Examples of rich text include bold, underline, and italics. */
+    public fun richText(richText: String) {
+        cdkBuilder.richText(richText)
+    }
 
-  public fun build(): CfnAnalysis.ShortFormatTextProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.ShortFormatTextProperty = cdkBuilder.build()
 }

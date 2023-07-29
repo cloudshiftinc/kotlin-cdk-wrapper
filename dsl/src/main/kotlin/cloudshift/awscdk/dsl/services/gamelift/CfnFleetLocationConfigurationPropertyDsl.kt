@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.gamelift
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.gamelift.CfnFleet
  * A remote location where a multi-location fleet can deploy game servers for game hosting.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,47 +40,45 @@ import software.amazon.awscdk.services.gamelift.CfnFleet
  */
 @CdkDslMarker
 public class CfnFleetLocationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnFleet.LocationConfigurationProperty.Builder =
-      CfnFleet.LocationConfigurationProperty.builder()
+    private val cdkBuilder: CfnFleet.LocationConfigurationProperty.Builder =
+        CfnFleet.LocationConfigurationProperty.builder()
 
-  /**
-   * @param location An AWS Region code, such as `us-west-2` . 
-   */
-  public fun location(location: String) {
-    cdkBuilder.location(location)
-  }
+    /** @param location An AWS Region code, such as `us-west-2` . */
+    public fun location(location: String) {
+        cdkBuilder.location(location)
+    }
 
-  /**
-   * @param locationCapacity Current resource capacity settings in a specified fleet or location.
-   * The location value might refer to a fleet's remote location or its home Region.
-   *
-   * *Related actions*
-   *
-   * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
-   * |
-   * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
-   * |
-   * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
-   */
-  public fun locationCapacity(locationCapacity: IResolvable) {
-    cdkBuilder.locationCapacity(locationCapacity)
-  }
+    /**
+     * @param locationCapacity Current resource capacity settings in a specified fleet or location.
+     *   The location value might refer to a fleet's remote location or its home Region.
+     *
+     * *Related actions*
+     *
+     * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
+     * |
+     * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
+     * |
+     * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
+     */
+    public fun locationCapacity(locationCapacity: IResolvable) {
+        cdkBuilder.locationCapacity(locationCapacity)
+    }
 
-  /**
-   * @param locationCapacity Current resource capacity settings in a specified fleet or location.
-   * The location value might refer to a fleet's remote location or its home Region.
-   *
-   * *Related actions*
-   *
-   * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
-   * |
-   * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
-   * |
-   * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
-   */
-  public fun locationCapacity(locationCapacity: CfnFleet.LocationCapacityProperty) {
-    cdkBuilder.locationCapacity(locationCapacity)
-  }
+    /**
+     * @param locationCapacity Current resource capacity settings in a specified fleet or location.
+     *   The location value might refer to a fleet's remote location or its home Region.
+     *
+     * *Related actions*
+     *
+     * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
+     * |
+     * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
+     * |
+     * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
+     */
+    public fun locationCapacity(locationCapacity: CfnFleet.LocationCapacityProperty) {
+        cdkBuilder.locationCapacity(locationCapacity)
+    }
 
-  public fun build(): CfnFleet.LocationConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnFleet.LocationConfigurationProperty = cdkBuilder.build()
 }

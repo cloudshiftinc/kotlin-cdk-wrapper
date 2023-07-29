@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -51,30 +59,22 @@ public class CfnTemplateAxisDataOptionsPropertyDsl {
     private val cdkBuilder: CfnTemplate.AxisDataOptionsProperty.Builder =
         CfnTemplate.AxisDataOptionsProperty.builder()
 
-    /**
-     * @param dateAxisOptions The options for an axis with a date field.
-     */
+    /** @param dateAxisOptions The options for an axis with a date field. */
     public fun dateAxisOptions(dateAxisOptions: IResolvable) {
         cdkBuilder.dateAxisOptions(dateAxisOptions)
     }
 
-    /**
-     * @param dateAxisOptions The options for an axis with a date field.
-     */
+    /** @param dateAxisOptions The options for an axis with a date field. */
     public fun dateAxisOptions(dateAxisOptions: CfnTemplate.DateAxisOptionsProperty) {
         cdkBuilder.dateAxisOptions(dateAxisOptions)
     }
 
-    /**
-     * @param numericAxisOptions The options for an axis with a numeric field.
-     */
+    /** @param numericAxisOptions The options for an axis with a numeric field. */
     public fun numericAxisOptions(numericAxisOptions: IResolvable) {
         cdkBuilder.numericAxisOptions(numericAxisOptions)
     }
 
-    /**
-     * @param numericAxisOptions The options for an axis with a numeric field.
-     */
+    /** @param numericAxisOptions The options for an axis with a numeric field. */
     public fun numericAxisOptions(numericAxisOptions: CfnTemplate.NumericAxisOptionsProperty) {
         cdkBuilder.numericAxisOptions(numericAxisOptions)
     }

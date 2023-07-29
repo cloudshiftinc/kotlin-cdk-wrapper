@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,39 +36,35 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  */
 @CdkDslMarker
 public class CfnConnectorProfilePardotConnectorProfilePropertiesPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.Builder =
-      CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.builder()
+    private val cdkBuilder: CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.Builder =
+        CfnConnectorProfile.PardotConnectorProfilePropertiesProperty.builder()
 
-  /**
-   * @param businessUnitId the value to be set. 
-   */
-  public fun businessUnitId(businessUnitId: String) {
-    cdkBuilder.businessUnitId(businessUnitId)
-  }
+    /** @param businessUnitId the value to be set. */
+    public fun businessUnitId(businessUnitId: String) {
+        cdkBuilder.businessUnitId(businessUnitId)
+    }
 
-  /**
-   * @param instanceUrl the value to be set.
-   */
-  public fun instanceUrl(instanceUrl: String) {
-    cdkBuilder.instanceUrl(instanceUrl)
-  }
+    /** @param instanceUrl the value to be set. */
+    public fun instanceUrl(instanceUrl: String) {
+        cdkBuilder.instanceUrl(instanceUrl)
+    }
 
-  /**
-   * @param isSandboxEnvironment Indicates whether the connector profile applies to a demo or
-   * production environment.
-   */
-  public fun isSandboxEnvironment(isSandboxEnvironment: Boolean) {
-    cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
-  }
+    /**
+     * @param isSandboxEnvironment Indicates whether the connector profile applies to a demo or
+     *   production environment.
+     */
+    public fun isSandboxEnvironment(isSandboxEnvironment: Boolean) {
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
+    }
 
-  /**
-   * @param isSandboxEnvironment Indicates whether the connector profile applies to a demo or
-   * production environment.
-   */
-  public fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
-    cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
-  }
+    /**
+     * @param isSandboxEnvironment Indicates whether the connector profile applies to a demo or
+     *   production environment.
+     */
+    public fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment)
+    }
 
-  public fun build(): CfnConnectorProfile.PardotConnectorProfilePropertiesProperty =
-      cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.PardotConnectorProfilePropertiesProperty =
+        cdkBuilder.build()
 }

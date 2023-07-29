@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  * An object that represents the HTTP header in the request.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,45 +46,39 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  */
 @CdkDslMarker
 public class CfnRouteHttpRouteHeaderPropertyDsl {
-  private val cdkBuilder: CfnRoute.HttpRouteHeaderProperty.Builder =
-      CfnRoute.HttpRouteHeaderProperty.builder()
+    private val cdkBuilder: CfnRoute.HttpRouteHeaderProperty.Builder =
+        CfnRoute.HttpRouteHeaderProperty.builder()
 
-  /**
-   * @param invert Specify `True` to match anything except the match criteria.
-   * The default value is `False` .
-   */
-  public fun invert(invert: Boolean) {
-    cdkBuilder.invert(invert)
-  }
+    /**
+     * @param invert Specify `True` to match anything except the match criteria. The default value
+     *   is `False` .
+     */
+    public fun invert(invert: Boolean) {
+        cdkBuilder.invert(invert)
+    }
 
-  /**
-   * @param invert Specify `True` to match anything except the match criteria.
-   * The default value is `False` .
-   */
-  public fun invert(invert: IResolvable) {
-    cdkBuilder.invert(invert)
-  }
+    /**
+     * @param invert Specify `True` to match anything except the match criteria. The default value
+     *   is `False` .
+     */
+    public fun invert(invert: IResolvable) {
+        cdkBuilder.invert(invert)
+    }
 
-  /**
-   * @param match The `HeaderMatchMethod` object.
-   */
-  public fun match(match: IResolvable) {
-    cdkBuilder.match(match)
-  }
+    /** @param match The `HeaderMatchMethod` object. */
+    public fun match(match: IResolvable) {
+        cdkBuilder.match(match)
+    }
 
-  /**
-   * @param match The `HeaderMatchMethod` object.
-   */
-  public fun match(match: CfnRoute.HeaderMatchMethodProperty) {
-    cdkBuilder.match(match)
-  }
+    /** @param match The `HeaderMatchMethod` object. */
+    public fun match(match: CfnRoute.HeaderMatchMethodProperty) {
+        cdkBuilder.match(match)
+    }
 
-  /**
-   * @param name A name for the HTTP header in the client request that will be matched on. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name A name for the HTTP header in the client request that will be matched on. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnRoute.HttpRouteHeaderProperty = cdkBuilder.build()
+    public fun build(): CfnRoute.HttpRouteHeaderProperty = cdkBuilder.build()
 }

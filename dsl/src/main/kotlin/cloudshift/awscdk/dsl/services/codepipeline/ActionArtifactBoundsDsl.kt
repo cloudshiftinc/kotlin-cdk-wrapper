@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codepipeline
 
@@ -10,12 +19,10 @@ import software.amazon.awscdk.services.codepipeline.ActionArtifactBounds
  * Specifies the constraints on the number of input and output artifacts an action can have.
  *
  * The constraints for each action type are documented on the
- * [Pipeline Structure
- * Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html)
+ * [Pipeline Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html)
  * page.
  *
  * Example:
- *
  * ```
  * // MyAction is some action type that produces variables, like EcrSourceAction
  * MyAction myAction = new MyAction(new MyActionProps()
@@ -31,35 +38,27 @@ import software.amazon.awscdk.services.codepipeline.ActionArtifactBounds
  */
 @CdkDslMarker
 public class ActionArtifactBoundsDsl {
-  private val cdkBuilder: ActionArtifactBounds.Builder = ActionArtifactBounds.builder()
+    private val cdkBuilder: ActionArtifactBounds.Builder = ActionArtifactBounds.builder()
 
-  /**
-   * @param maxInputs the value to be set. 
-   */
-  public fun maxInputs(maxInputs: Number) {
-    cdkBuilder.maxInputs(maxInputs)
-  }
+    /** @param maxInputs the value to be set. */
+    public fun maxInputs(maxInputs: Number) {
+        cdkBuilder.maxInputs(maxInputs)
+    }
 
-  /**
-   * @param maxOutputs the value to be set. 
-   */
-  public fun maxOutputs(maxOutputs: Number) {
-    cdkBuilder.maxOutputs(maxOutputs)
-  }
+    /** @param maxOutputs the value to be set. */
+    public fun maxOutputs(maxOutputs: Number) {
+        cdkBuilder.maxOutputs(maxOutputs)
+    }
 
-  /**
-   * @param minInputs the value to be set. 
-   */
-  public fun minInputs(minInputs: Number) {
-    cdkBuilder.minInputs(minInputs)
-  }
+    /** @param minInputs the value to be set. */
+    public fun minInputs(minInputs: Number) {
+        cdkBuilder.minInputs(minInputs)
+    }
 
-  /**
-   * @param minOutputs the value to be set. 
-   */
-  public fun minOutputs(minOutputs: Number) {
-    cdkBuilder.minOutputs(minOutputs)
-  }
+    /** @param minOutputs the value to be set. */
+    public fun minOutputs(minOutputs: Number) {
+        cdkBuilder.minOutputs(minOutputs)
+    }
 
-  public fun build(): ActionArtifactBounds = cdkBuilder.build()
+    public fun build(): ActionArtifactBounds = cdkBuilder.build()
 }

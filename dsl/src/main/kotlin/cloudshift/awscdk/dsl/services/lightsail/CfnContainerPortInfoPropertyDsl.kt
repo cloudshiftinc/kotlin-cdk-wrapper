@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lightsail
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.lightsail.CfnContainer
  * Lightsail container service.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,21 @@ import software.amazon.awscdk.services.lightsail.CfnContainer
  */
 @CdkDslMarker
 public class CfnContainerPortInfoPropertyDsl {
-  private val cdkBuilder: CfnContainer.PortInfoProperty.Builder =
-      CfnContainer.PortInfoProperty.builder()
+    private val cdkBuilder: CfnContainer.PortInfoProperty.Builder =
+        CfnContainer.PortInfoProperty.builder()
 
-  /**
-   * @param port The open firewall ports of the container.
-   */
-  public fun port(port: String) {
-    cdkBuilder.port(port)
-  }
+    /** @param port The open firewall ports of the container. */
+    public fun port(port: String) {
+        cdkBuilder.port(port)
+    }
 
-  /**
-   * @param protocol The protocol name for the open ports.
-   * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
-   */
-  public fun protocol(protocol: String) {
-    cdkBuilder.protocol(protocol)
-  }
+    /**
+     * @param protocol The protocol name for the open ports. *Allowed values* : `HTTP` | `HTTPS` |
+     *   `TCP` | `UDP`
+     */
+    public fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+    }
 
-  public fun build(): CfnContainer.PortInfoProperty = cdkBuilder.build()
+    public fun build(): CfnContainer.PortInfoProperty = cdkBuilder.build()
 }

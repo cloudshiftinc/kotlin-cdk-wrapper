@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpointemail
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
  * current AWS Region.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,24 +34,24 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
  */
 @CdkDslMarker
 public class CfnConfigurationSetSendingOptionsPropertyDsl {
-  private val cdkBuilder: CfnConfigurationSet.SendingOptionsProperty.Builder =
-      CfnConfigurationSet.SendingOptionsProperty.builder()
+    private val cdkBuilder: CfnConfigurationSet.SendingOptionsProperty.Builder =
+        CfnConfigurationSet.SendingOptionsProperty.builder()
 
-  /**
-   * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
-   * If `false` , email sending is disabled for the configuration set.
-   */
-  public fun sendingEnabled(sendingEnabled: Boolean) {
-    cdkBuilder.sendingEnabled(sendingEnabled)
-  }
+    /**
+     * @param sendingEnabled If `true` , email sending is enabled for the configuration set. If
+     *   `false` , email sending is disabled for the configuration set.
+     */
+    public fun sendingEnabled(sendingEnabled: Boolean) {
+        cdkBuilder.sendingEnabled(sendingEnabled)
+    }
 
-  /**
-   * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
-   * If `false` , email sending is disabled for the configuration set.
-   */
-  public fun sendingEnabled(sendingEnabled: IResolvable) {
-    cdkBuilder.sendingEnabled(sendingEnabled)
-  }
+    /**
+     * @param sendingEnabled If `true` , email sending is enabled for the configuration set. If
+     *   `false` , email sending is disabled for the configuration set.
+     */
+    public fun sendingEnabled(sendingEnabled: IResolvable) {
+        cdkBuilder.sendingEnabled(sendingEnabled)
+    }
 
-  public fun build(): CfnConfigurationSet.SendingOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnConfigurationSet.SendingOptionsProperty = cdkBuilder.build()
 }

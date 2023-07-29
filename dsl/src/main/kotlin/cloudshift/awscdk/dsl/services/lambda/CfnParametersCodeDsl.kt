@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -10,12 +19,10 @@ import software.amazon.awscdk.services.lambda.CfnParametersCode
  * Lambda code defined using 2 CloudFormation parameters.
  *
  * Useful when you don't have access to the code of your Lambda from your CDK code, so you can't use
- * Assets,
- * and you want to deploy the Lambda in a CodePipeline, using CloudFormation Actions -
- * you can fill the parameters using the `#assign` method.
+ * Assets, and you want to deploy the Lambda in a CodePipeline, using CloudFormation Actions - you
+ * can fill the parameters using the `#assign` method.
  *
  * Example:
- *
  * ```
  * Stack lambdaStack = new Stack(app, "LambdaStack");
  * CfnParametersCode lambdaCode = Code.fromCfnParameters();
@@ -119,37 +126,37 @@ import software.amazon.awscdk.services.lambda.CfnParametersCode
  */
 @CdkDslMarker
 public class CfnParametersCodeDsl {
-  private val cdkBuilder: CfnParametersCode.Builder = CfnParametersCode.Builder.create()
+    private val cdkBuilder: CfnParametersCode.Builder = CfnParametersCode.Builder.create()
 
-  /**
-   * The CloudFormation parameter that represents the name of the S3 Bucket where the Lambda code
-   * will be located in.
-   *
-   * Must be of type 'String'.
-   *
-   * Default: a new parameter will be created
-   *
-   * @param bucketNameParam The CloudFormation parameter that represents the name of the S3 Bucket
-   * where the Lambda code will be located in. 
-   */
-  public fun bucketNameParam(bucketNameParam: CfnParameter) {
-    cdkBuilder.bucketNameParam(bucketNameParam)
-  }
+    /**
+     * The CloudFormation parameter that represents the name of the S3 Bucket where the Lambda code
+     * will be located in.
+     *
+     * Must be of type 'String'.
+     *
+     * Default: a new parameter will be created
+     *
+     * @param bucketNameParam The CloudFormation parameter that represents the name of the S3 Bucket
+     *   where the Lambda code will be located in.
+     */
+    public fun bucketNameParam(bucketNameParam: CfnParameter) {
+        cdkBuilder.bucketNameParam(bucketNameParam)
+    }
 
-  /**
-   * The CloudFormation parameter that represents the path inside the S3 Bucket where the Lambda
-   * code will be located at.
-   *
-   * Must be of type 'String'.
-   *
-   * Default: a new parameter will be created
-   *
-   * @param objectKeyParam The CloudFormation parameter that represents the path inside the S3
-   * Bucket where the Lambda code will be located at. 
-   */
-  public fun objectKeyParam(objectKeyParam: CfnParameter) {
-    cdkBuilder.objectKeyParam(objectKeyParam)
-  }
+    /**
+     * The CloudFormation parameter that represents the path inside the S3 Bucket where the Lambda
+     * code will be located at.
+     *
+     * Must be of type 'String'.
+     *
+     * Default: a new parameter will be created
+     *
+     * @param objectKeyParam The CloudFormation parameter that represents the path inside the S3
+     *   Bucket where the Lambda code will be located at.
+     */
+    public fun objectKeyParam(objectKeyParam: CfnParameter) {
+        cdkBuilder.objectKeyParam(objectKeyParam)
+    }
 
-  public fun build(): CfnParametersCode = cdkBuilder.build()
+    public fun build(): CfnParametersCode = cdkBuilder.build()
 }

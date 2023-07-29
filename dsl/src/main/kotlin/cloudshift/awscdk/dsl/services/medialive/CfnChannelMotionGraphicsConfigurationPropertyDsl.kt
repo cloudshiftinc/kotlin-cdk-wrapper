@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is EncoderSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,33 +39,34 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelMotionGraphicsConfigurationPropertyDsl {
-  private val cdkBuilder: CfnChannel.MotionGraphicsConfigurationProperty.Builder =
-      CfnChannel.MotionGraphicsConfigurationProperty.builder()
+    private val cdkBuilder: CfnChannel.MotionGraphicsConfigurationProperty.Builder =
+        CfnChannel.MotionGraphicsConfigurationProperty.builder()
 
-  /**
-   * @param motionGraphicsInsertion Enables or disables the motion graphics overlay feature in the
-   * channel.
-   */
-  public fun motionGraphicsInsertion(motionGraphicsInsertion: String) {
-    cdkBuilder.motionGraphicsInsertion(motionGraphicsInsertion)
-  }
+    /**
+     * @param motionGraphicsInsertion Enables or disables the motion graphics overlay feature in the
+     *   channel.
+     */
+    public fun motionGraphicsInsertion(motionGraphicsInsertion: String) {
+        cdkBuilder.motionGraphicsInsertion(motionGraphicsInsertion)
+    }
 
-  /**
-   * @param motionGraphicsSettings Settings to enable and configure the motion graphics overlay
-   * feature in the channel.
-   */
-  public fun motionGraphicsSettings(motionGraphicsSettings: IResolvable) {
-    cdkBuilder.motionGraphicsSettings(motionGraphicsSettings)
-  }
+    /**
+     * @param motionGraphicsSettings Settings to enable and configure the motion graphics overlay
+     *   feature in the channel.
+     */
+    public fun motionGraphicsSettings(motionGraphicsSettings: IResolvable) {
+        cdkBuilder.motionGraphicsSettings(motionGraphicsSettings)
+    }
 
-  /**
-   * @param motionGraphicsSettings Settings to enable and configure the motion graphics overlay
-   * feature in the channel.
-   */
-  public
-      fun motionGraphicsSettings(motionGraphicsSettings: CfnChannel.MotionGraphicsSettingsProperty) {
-    cdkBuilder.motionGraphicsSettings(motionGraphicsSettings)
-  }
+    /**
+     * @param motionGraphicsSettings Settings to enable and configure the motion graphics overlay
+     *   feature in the channel.
+     */
+    public fun motionGraphicsSettings(
+        motionGraphicsSettings: CfnChannel.MotionGraphicsSettingsProperty
+    ) {
+        cdkBuilder.motionGraphicsSettings(motionGraphicsSettings)
+    }
 
-  public fun build(): CfnChannel.MotionGraphicsConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.MotionGraphicsConfigurationProperty = cdkBuilder.build()
 }

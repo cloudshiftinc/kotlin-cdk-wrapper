@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  * API transforms that you write in an application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationGlueDataCatalogConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApplication.GlueDataCatalogConfigurationProperty.Builder =
-      CfnApplication.GlueDataCatalogConfigurationProperty.builder()
+    private val cdkBuilder: CfnApplication.GlueDataCatalogConfigurationProperty.Builder =
+        CfnApplication.GlueDataCatalogConfigurationProperty.builder()
 
-  /**
-   * @param databaseArn The Amazon Resource Name (ARN) of the database.
-   */
-  public fun databaseArn(databaseArn: String) {
-    cdkBuilder.databaseArn(databaseArn)
-  }
+    /** @param databaseArn The Amazon Resource Name (ARN) of the database. */
+    public fun databaseArn(databaseArn: String) {
+        cdkBuilder.databaseArn(databaseArn)
+    }
 
-  public fun build(): CfnApplication.GlueDataCatalogConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.GlueDataCatalogConfigurationProperty = cdkBuilder.build()
 }

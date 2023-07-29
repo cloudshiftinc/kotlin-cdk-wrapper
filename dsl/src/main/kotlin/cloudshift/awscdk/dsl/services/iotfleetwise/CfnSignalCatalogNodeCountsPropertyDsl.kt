@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotfleetwise
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
  * Information about the number of nodes and node types in a vehicle network.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,47 +36,45 @@ import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
  */
 @CdkDslMarker
 public class CfnSignalCatalogNodeCountsPropertyDsl {
-  private val cdkBuilder: CfnSignalCatalog.NodeCountsProperty.Builder =
-      CfnSignalCatalog.NodeCountsProperty.builder()
+    private val cdkBuilder: CfnSignalCatalog.NodeCountsProperty.Builder =
+        CfnSignalCatalog.NodeCountsProperty.builder()
 
-  /**
-   * @param totalActuators (Optional) The total number of nodes in a vehicle network that represent
-   * actuators.
-   */
-  public fun totalActuators(totalActuators: Number) {
-    cdkBuilder.totalActuators(totalActuators)
-  }
+    /**
+     * @param totalActuators (Optional) The total number of nodes in a vehicle network that
+     *   represent actuators.
+     */
+    public fun totalActuators(totalActuators: Number) {
+        cdkBuilder.totalActuators(totalActuators)
+    }
 
-  /**
-   * @param totalAttributes (Optional) The total number of nodes in a vehicle network that represent
-   * attributes.
-   */
-  public fun totalAttributes(totalAttributes: Number) {
-    cdkBuilder.totalAttributes(totalAttributes)
-  }
+    /**
+     * @param totalAttributes (Optional) The total number of nodes in a vehicle network that
+     *   represent attributes.
+     */
+    public fun totalAttributes(totalAttributes: Number) {
+        cdkBuilder.totalAttributes(totalAttributes)
+    }
 
-  /**
-   * @param totalBranches (Optional) The total number of nodes in a vehicle network that represent
-   * branches.
-   */
-  public fun totalBranches(totalBranches: Number) {
-    cdkBuilder.totalBranches(totalBranches)
-  }
+    /**
+     * @param totalBranches (Optional) The total number of nodes in a vehicle network that represent
+     *   branches.
+     */
+    public fun totalBranches(totalBranches: Number) {
+        cdkBuilder.totalBranches(totalBranches)
+    }
 
-  /**
-   * @param totalNodes (Optional) The total number of nodes in a vehicle network.
-   */
-  public fun totalNodes(totalNodes: Number) {
-    cdkBuilder.totalNodes(totalNodes)
-  }
+    /** @param totalNodes (Optional) The total number of nodes in a vehicle network. */
+    public fun totalNodes(totalNodes: Number) {
+        cdkBuilder.totalNodes(totalNodes)
+    }
 
-  /**
-   * @param totalSensors (Optional) The total number of nodes in a vehicle network that represent
-   * sensors.
-   */
-  public fun totalSensors(totalSensors: Number) {
-    cdkBuilder.totalSensors(totalSensors)
-  }
+    /**
+     * @param totalSensors (Optional) The total number of nodes in a vehicle network that represent
+     *   sensors.
+     */
+    public fun totalSensors(totalSensors: Number) {
+        cdkBuilder.totalSensors(totalSensors)
+    }
 
-  public fun build(): CfnSignalCatalog.NodeCountsProperty = cdkBuilder.build()
+    public fun build(): CfnSignalCatalog.NodeCountsProperty = cdkBuilder.build()
 }

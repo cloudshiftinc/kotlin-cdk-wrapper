@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The map style options of the geospatial map.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardGeospatialMapStyleOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.GeospatialMapStyleOptionsProperty.Builder =
-      CfnDashboard.GeospatialMapStyleOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.GeospatialMapStyleOptionsProperty.Builder =
+        CfnDashboard.GeospatialMapStyleOptionsProperty.builder()
 
-  /**
-   * @param baseMapStyle The base map style of the geospatial map.
-   */
-  public fun baseMapStyle(baseMapStyle: String) {
-    cdkBuilder.baseMapStyle(baseMapStyle)
-  }
+    /** @param baseMapStyle The base map style of the geospatial map. */
+    public fun baseMapStyle(baseMapStyle: String) {
+        cdkBuilder.baseMapStyle(baseMapStyle)
+    }
 
-  public fun build(): CfnDashboard.GeospatialMapStyleOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.GeospatialMapStyleOptionsProperty = cdkBuilder.build()
 }

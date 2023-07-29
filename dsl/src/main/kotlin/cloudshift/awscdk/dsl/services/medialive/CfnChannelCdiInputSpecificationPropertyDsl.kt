@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * This entity is at the top level in the channel.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,15 +38,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelCdiInputSpecificationPropertyDsl {
-  private val cdkBuilder: CfnChannel.CdiInputSpecificationProperty.Builder =
-      CfnChannel.CdiInputSpecificationProperty.builder()
+    private val cdkBuilder: CfnChannel.CdiInputSpecificationProperty.Builder =
+        CfnChannel.CdiInputSpecificationProperty.builder()
 
-  /**
-   * @param resolution Maximum CDI input resolution.
-   */
-  public fun resolution(resolution: String) {
-    cdkBuilder.resolution(resolution)
-  }
+    /** @param resolution Maximum CDI input resolution. */
+    public fun resolution(resolution: String) {
+        cdkBuilder.resolution(resolution)
+    }
 
-  public fun build(): CfnChannel.CdiInputSpecificationProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.CdiInputSpecificationProperty = cdkBuilder.build()
 }

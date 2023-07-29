@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudwatch
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.cloudwatch.VariableValue
 
 /**
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.cloudwatch.*;
  * Dashboard dashboard = Dashboard.Builder.create(this, "Dash")
@@ -29,21 +37,17 @@ import software.amazon.awscdk.services.cloudwatch.VariableValue
  */
 @CdkDslMarker
 public class VariableValueDsl {
-  private val cdkBuilder: VariableValue.Builder = VariableValue.builder()
+    private val cdkBuilder: VariableValue.Builder = VariableValue.builder()
 
-  /**
-   * @param label Optional label for the selected item.
-   */
-  public fun label(label: String) {
-    cdkBuilder.label(label)
-  }
+    /** @param label Optional label for the selected item. */
+    public fun label(label: String) {
+        cdkBuilder.label(label)
+    }
 
-  /**
-   * @param value Value of the selected item. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value Value of the selected item. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): VariableValue = cdkBuilder.build()
+    public fun build(): VariableValue = cdkBuilder.build()
 }

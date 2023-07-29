@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesis
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.kinesis.CfnStream
 import software.amazon.awscdk.services.kinesis.CfnStreamConsumer
 import software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps
@@ -10,8 +21,6 @@ import software.amazon.awscdk.services.kinesis.Stream
 import software.amazon.awscdk.services.kinesis.StreamAttributes
 import software.amazon.awscdk.services.kinesis.StreamProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object kinesis {
     /**
@@ -19,11 +28,10 @@ public object kinesis {
      * sources.
      *
      * For information about creating streams, see
-     * [CreateStream](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateStream.html) in
-     * the Amazon Kinesis API Reference.
+     * [CreateStream](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateStream.html)
+     * in the Amazon Kinesis API Reference.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -51,7 +59,7 @@ public object kinesis {
     public inline fun cfnStream(
         scope: Construct,
         id: String,
-        block: CfnStreamDsl.() -> Unit = {}
+        block: CfnStreamDsl.() -> Unit = {},
     ): CfnStream {
         val builder = CfnStreamDsl(scope, id)
         builder.apply(block)
@@ -59,24 +67,24 @@ public object kinesis {
     }
 
     /**
-     * Use the AWS CloudFormation `AWS::Kinesis::StreamConsumer` resource to register a consumer with
-     * a Kinesis data stream.
+     * Use the AWS CloudFormation `AWS::Kinesis::StreamConsumer` resource to register a consumer
+     * with a Kinesis data stream.
      *
      * The consumer you register can then call
      * [SubscribeToShard](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_SubscribeToShard.html)
-     * to receive data from the stream using enhanced fan-out, at a rate of up to 2 MiB per second for
-     * every shard you subscribe to. This rate is unaffected by the total number of consumers that read
-     * from the same stream.
+     * to receive data from the stream using enhanced fan-out, at a rate of up to 2 MiB per second
+     * for every shard you subscribe to. This rate is unaffected by the total number of consumers
+     * that read from the same stream.
      *
      * You can register up to five consumers per stream. However, you can request a limit increase
-     * using the [Kinesis Data Streams limits form](https://docs.aws.amazon.com/support/v1?#/) . A given
-     * consumer can only be registered with one stream at a time.
+     * using the [Kinesis Data Streams limits form](https://docs.aws.amazon.com/support/v1?#/) . A
+     * given consumer can only be registered with one stream at a time.
      *
-     * For more information, see [Using Consumers with Enhanced
-   * Fan-Out](https://docs.aws.amazon.com/streams/latest/dev/introduction-to-enhanced-consumers.html) .
+     * For more information, see
+     * [Using Consumers with Enhanced Fan-Out](https://docs.aws.amazon.com/streams/latest/dev/introduction-to-enhanced-consumers.html)
+     * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -93,7 +101,7 @@ public object kinesis {
     public inline fun cfnStreamConsumer(
         scope: Construct,
         id: String,
-        block: CfnStreamConsumerDsl.() -> Unit = {}
+        block: CfnStreamConsumerDsl.() -> Unit = {},
     ): CfnStreamConsumer {
         val builder = CfnStreamConsumerDsl(scope, id)
         builder.apply(block)
@@ -104,7 +112,6 @@ public object kinesis {
      * Properties for defining a `CfnStreamConsumer`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -117,7 +124,9 @@ public object kinesis {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html)
      */
-    public inline fun cfnStreamConsumerProps(block: CfnStreamConsumerPropsDsl.() -> Unit = {}): CfnStreamConsumerProps {
+    public inline fun cfnStreamConsumerProps(
+        block: CfnStreamConsumerPropsDsl.() -> Unit = {}
+    ): CfnStreamConsumerProps {
         val builder = CfnStreamConsumerPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -127,7 +136,6 @@ public object kinesis {
      * Properties for defining a `CfnStream`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -161,27 +169,26 @@ public object kinesis {
     /**
      * Enables or updates server-side encryption using an AWS KMS key for a specified stream.
      *
-     *
      * When invoking this API, you must use either the `StreamARN` or the `StreamName` parameter, or
-     * both. It is recommended that you use the `StreamARN` input parameter when you invoke this API.
-     *
+     * both. It is recommended that you use the `StreamARN` input parameter when you invoke this
+     * API.
      *
      * Starting encryption is an asynchronous operation. Upon receiving the request, Kinesis Data
-     * Streams returns immediately and sets the status of the stream to `UPDATING` . After the update is
-     * complete, Kinesis Data Streams sets the status of the stream back to `ACTIVE` . Updating or
-     * applying encryption normally takes a few seconds to complete, but it can take minutes. You can
-     * continue to read and write data to your stream while its status is `UPDATING` . Once the status of
-     * the stream is `ACTIVE` , encryption begins for records written to the stream.
+     * Streams returns immediately and sets the status of the stream to `UPDATING` . After the
+     * update is complete, Kinesis Data Streams sets the status of the stream back to `ACTIVE` .
+     * Updating or applying encryption normally takes a few seconds to complete, but it can take
+     * minutes. You can continue to read and write data to your stream while its status is
+     * `UPDATING` . Once the status of the stream is `ACTIVE` , encryption begins for records
+     * written to the stream.
      *
-     * API Limits: You can successfully apply a new AWS KMS key for server-side encryption 25 times in
-     * a rolling 24-hour period.
+     * API Limits: You can successfully apply a new AWS KMS key for server-side encryption 25 times
+     * in a rolling 24-hour period.
      *
-     * Note: It can take up to 5 seconds after the stream is in an `ACTIVE` status before all records
-     * written to the stream are encrypted. After you enable encryption, you can verify that encryption
-     * is applied by inspecting the API response from `PutRecord` or `PutRecords` .
+     * Note: It can take up to 5 seconds after the stream is in an `ACTIVE` status before all
+     * records written to the stream are encrypted. After you enable encryption, you can verify that
+     * encryption is applied by inspecting the API response from `PutRecord` or `PutRecords` .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -195,8 +202,7 @@ public object kinesis {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html)
      */
     public inline fun cfnStreamStreamEncryptionProperty(
-        block: CfnStreamStreamEncryptionPropertyDsl.() -> Unit =
-            {}
+        block: CfnStreamStreamEncryptionPropertyDsl.() -> Unit = {}
     ): CfnStream.StreamEncryptionProperty {
         val builder = CfnStreamStreamEncryptionPropertyDsl()
         builder.apply(block)
@@ -210,7 +216,6 @@ public object kinesis {
      * *provisioned* capacity mode for your data streams.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -223,8 +228,7 @@ public object kinesis {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streammodedetails.html)
      */
     public inline fun cfnStreamStreamModeDetailsProperty(
-        block: CfnStreamStreamModeDetailsPropertyDsl.() -> Unit =
-            {}
+        block: CfnStreamStreamModeDetailsPropertyDsl.() -> Unit = {}
     ): CfnStream.StreamModeDetailsProperty {
         val builder = CfnStreamStreamModeDetailsPropertyDsl()
         builder.apply(block)
@@ -237,7 +241,6 @@ public object kinesis {
      * Can be encrypted with a KMS key.
      *
      * Example:
-     *
      * ```
      * Key key = new Key(this, "MyKey");
      * Stream.Builder.create(this, "MyEncryptedStream")
@@ -249,7 +252,7 @@ public object kinesis {
     public inline fun stream(
         scope: Construct,
         id: String,
-        block: StreamDsl.() -> Unit = {}
+        block: StreamDsl.() -> Unit = {},
     ): Stream {
         val builder = StreamDsl(scope, id)
         builder.apply(block)
@@ -259,12 +262,10 @@ public object kinesis {
     /**
      * A reference to a stream.
      *
-     * The easiest way to instantiate is to call
-     * `stream.export()`. Then, the consumer can use `Stream.import(this, ref)` and
-     * get a `Stream`.
+     * The easiest way to instantiate is to call `stream.export()`. Then, the consumer can use
+     * `Stream.import(this, ref)` and get a `Stream`.
      *
      * Example:
-     *
      * ```
      * IStream importedStream = Stream.fromStreamAttributes(this, "ImportedEncryptedStream",
      * StreamAttributes.builder()
@@ -274,7 +275,9 @@ public object kinesis {
      * .build());
      * ```
      */
-    public inline fun streamAttributes(block: StreamAttributesDsl.() -> Unit = {}): StreamAttributes {
+    public inline fun streamAttributes(
+        block: StreamAttributesDsl.() -> Unit = {}
+    ): StreamAttributes {
         val builder = StreamAttributesDsl()
         builder.apply(block)
         return builder.build()
@@ -284,7 +287,6 @@ public object kinesis {
      * Properties for a Kinesis Stream.
      *
      * Example:
-     *
      * ```
      * Key key = new Key(this, "MyKey");
      * Stream.Builder.create(this, "MyEncryptedStream")

@@ -1,12 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -14,12 +20,14 @@ import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
+import software.constructs.Construct
 
 /**
  * Use the `AWS::IoTTwinMaker::ComponentType` resource to declare a component type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -103,7 +111,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnComponentTypeDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnComponentType.Builder = CfnComponentType.Builder.create(scope, id)
 
@@ -113,6 +121,7 @@ public class CfnComponentTypeDsl(
      * The ID of the component type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-componenttypeid)
+     *
      * @param componentTypeId The ID of the component type.
      */
     public fun componentTypeId(componentTypeId: String) {
@@ -123,6 +132,7 @@ public class CfnComponentTypeDsl(
      * The description of the component type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-description)
+     *
      * @param description The description of the component type.
      */
     public fun description(description: String) {
@@ -133,6 +143,7 @@ public class CfnComponentTypeDsl(
      * The name of the parent component type that this component type extends.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-extendsfrom)
+     *
      * @param extendsFrom The name of the parent component type that this component type extends.
      */
     public fun extendsFrom(vararg extendsFrom: String) {
@@ -143,6 +154,7 @@ public class CfnComponentTypeDsl(
      * The name of the parent component type that this component type extends.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-extendsfrom)
+     *
      * @param extendsFrom The name of the parent component type that this component type extends.
      */
     public fun extendsFrom(extendsFrom: Collection<String>) {
@@ -159,6 +171,7 @@ public class CfnComponentTypeDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-functions)
+     *
      * @param functions An object that maps strings to the functions in the component type.
      */
     public fun functions(functions: MapBuilder.() -> Unit = {}) {
@@ -177,6 +190,7 @@ public class CfnComponentTypeDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-functions)
+     *
      * @param functions An object that maps strings to the functions in the component type.
      */
     public fun functions(functions: Map<String, Any>) {
@@ -193,6 +207,7 @@ public class CfnComponentTypeDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-functions)
+     *
      * @param functions An object that maps strings to the functions in the component type.
      */
     public fun functions(functions: IResolvable) {
@@ -200,22 +215,26 @@ public class CfnComponentTypeDsl(
     }
 
     /**
-     * A boolean value that specifies whether an entity can have more than one component of this type.
+     * A boolean value that specifies whether an entity can have more than one component of this
+     * type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-issingleton)
+     *
      * @param isSingleton A boolean value that specifies whether an entity can have more than one
-     * component of this type.
+     *   component of this type.
      */
     public fun isSingleton(isSingleton: Boolean) {
         cdkBuilder.isSingleton(isSingleton)
     }
 
     /**
-     * A boolean value that specifies whether an entity can have more than one component of this type.
+     * A boolean value that specifies whether an entity can have more than one component of this
+     * type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-issingleton)
+     *
      * @param isSingleton A boolean value that specifies whether an entity can have more than one
-     * component of this type.
+     *   component of this type.
      */
     public fun isSingleton(isSingleton: IResolvable) {
         cdkBuilder.isSingleton(isSingleton)
@@ -231,8 +250,9 @@ public class CfnComponentTypeDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-propertydefinitions)
+     *
      * @param propertyDefinitions An object that maps strings to the property definitions in the
-     * component type.
+     *   component type.
      */
     public fun propertyDefinitions(propertyDefinitions: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -250,8 +270,9 @@ public class CfnComponentTypeDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-propertydefinitions)
+     *
      * @param propertyDefinitions An object that maps strings to the property definitions in the
-     * component type.
+     *   component type.
      */
     public fun propertyDefinitions(propertyDefinitions: Map<String, Any>) {
         cdkBuilder.propertyDefinitions(propertyDefinitions)
@@ -267,8 +288,9 @@ public class CfnComponentTypeDsl(
      * API reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-propertydefinitions)
+     *
      * @param propertyDefinitions An object that maps strings to the property definitions in the
-     * component type.
+     *   component type.
      */
     public fun propertyDefinitions(propertyDefinitions: IResolvable) {
         cdkBuilder.propertyDefinitions(propertyDefinitions)
@@ -280,8 +302,9 @@ public class CfnComponentTypeDsl(
      * Each string in the mapping must be unique to this object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-propertygroups)
-     * @param propertyGroups An object that maps strings to the property groups in the component type.
      *
+     * @param propertyGroups An object that maps strings to the property groups in the component
+     *   type.
      */
     public fun propertyGroups(propertyGroups: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -295,8 +318,9 @@ public class CfnComponentTypeDsl(
      * Each string in the mapping must be unique to this object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-propertygroups)
-     * @param propertyGroups An object that maps strings to the property groups in the component type.
      *
+     * @param propertyGroups An object that maps strings to the property groups in the component
+     *   type.
      */
     public fun propertyGroups(propertyGroups: Map<String, Any>) {
         cdkBuilder.propertyGroups(propertyGroups)
@@ -308,8 +332,9 @@ public class CfnComponentTypeDsl(
      * Each string in the mapping must be unique to this object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-propertygroups)
-     * @param propertyGroups An object that maps strings to the property groups in the component type.
      *
+     * @param propertyGroups An object that maps strings to the property groups in the component
+     *   type.
      */
     public fun propertyGroups(propertyGroups: IResolvable) {
         cdkBuilder.propertyGroups(propertyGroups)
@@ -319,6 +344,7 @@ public class CfnComponentTypeDsl(
      * The ComponentType tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-tags)
+     *
      * @param tags The ComponentType tags.
      */
     public fun tags(tags: Map<String, String>) {
@@ -329,6 +355,7 @@ public class CfnComponentTypeDsl(
      * The ID of the workspace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html#cfn-iottwinmaker-componenttype-workspaceid)
+     *
      * @param workspaceId The ID of the workspace.
      */
     public fun workspaceId(workspaceId: String) {

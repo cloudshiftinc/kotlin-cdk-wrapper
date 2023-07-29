@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3objectlambda
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
  */
 @CdkDslMarker
 public class CfnAccessPointContentTransformationPropertyDsl {
-  private val cdkBuilder: CfnAccessPoint.ContentTransformationProperty.Builder =
-      CfnAccessPoint.ContentTransformationProperty.builder()
+    private val cdkBuilder: CfnAccessPoint.ContentTransformationProperty.Builder =
+        CfnAccessPoint.ContentTransformationProperty.builder()
 
-  /**
-   * @param awsLambda the value to be set. 
-   */
-  public fun awsLambda(awsLambda: IResolvable) {
-    cdkBuilder.awsLambda(awsLambda)
-  }
+    /** @param awsLambda the value to be set. */
+    public fun awsLambda(awsLambda: IResolvable) {
+        cdkBuilder.awsLambda(awsLambda)
+    }
 
-  /**
-   * @param awsLambda the value to be set. 
-   */
-  public fun awsLambda(awsLambda: CfnAccessPoint.AwsLambdaProperty) {
-    cdkBuilder.awsLambda(awsLambda)
-  }
+    /** @param awsLambda the value to be set. */
+    public fun awsLambda(awsLambda: CfnAccessPoint.AwsLambdaProperty) {
+        cdkBuilder.awsLambda(awsLambda)
+    }
 
-  public fun build(): CfnAccessPoint.ContentTransformationProperty = cdkBuilder.build()
+    public fun build(): CfnAccessPoint.ContentTransformationProperty = cdkBuilder.build()
 }

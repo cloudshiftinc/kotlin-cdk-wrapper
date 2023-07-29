@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociation
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Associate the specified TagOption with the specified portfolio or product.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,7 +36,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnTagOptionAssociationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnTagOptionAssociation.Builder =
         CfnTagOptionAssociation.Builder.create(scope, id)
@@ -37,6 +45,7 @@ public class CfnTagOptionAssociationDsl(
      * The resource identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-resourceid)
+     *
      * @param resourceId The resource identifier.
      */
     public fun resourceId(resourceId: String) {
@@ -47,6 +56,7 @@ public class CfnTagOptionAssociationDsl(
      * The TagOption identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-tagoptionid)
+     *
      * @param tagOptionId The TagOption identifier.
      */
     public fun tagOptionId(tagOptionId: String) {

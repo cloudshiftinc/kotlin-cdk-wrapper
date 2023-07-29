@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.waf.regional
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps
  * Properties for defining a `CfnGeoMatchSet`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,44 +41,44 @@ import software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps
  */
 @CdkDslMarker
 public class CfnGeoMatchSetPropsDsl {
-  private val cdkBuilder: CfnGeoMatchSetProps.Builder = CfnGeoMatchSetProps.builder()
+    private val cdkBuilder: CfnGeoMatchSetProps.Builder = CfnGeoMatchSetProps.builder()
 
-  private val _geoMatchConstraints: MutableList<Any> = mutableListOf()
+    private val _geoMatchConstraints: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the country
-   * that you want AWS WAF to search for.
-   */
-  public fun geoMatchConstraints(vararg geoMatchConstraints: Any) {
-    _geoMatchConstraints.addAll(listOf(*geoMatchConstraints))
-  }
+    /**
+     * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the
+     *   country that you want AWS WAF to search for.
+     */
+    public fun geoMatchConstraints(vararg geoMatchConstraints: Any) {
+        _geoMatchConstraints.addAll(listOf(*geoMatchConstraints))
+    }
 
-  /**
-   * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the country
-   * that you want AWS WAF to search for.
-   */
-  public fun geoMatchConstraints(geoMatchConstraints: Collection<Any>) {
-    _geoMatchConstraints.addAll(geoMatchConstraints)
-  }
+    /**
+     * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the
+     *   country that you want AWS WAF to search for.
+     */
+    public fun geoMatchConstraints(geoMatchConstraints: Collection<Any>) {
+        _geoMatchConstraints.addAll(geoMatchConstraints)
+    }
 
-  /**
-   * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the country
-   * that you want AWS WAF to search for.
-   */
-  public fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
-    cdkBuilder.geoMatchConstraints(geoMatchConstraints)
-  }
+    /**
+     * @param geoMatchConstraints An array of `GeoMatchConstraint` objects, which contain the
+     *   country that you want AWS WAF to search for.
+     */
+    public fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
+        cdkBuilder.geoMatchConstraints(geoMatchConstraints)
+    }
 
-  /**
-   * @param name A friendly name or description of the `GeoMatchSet` . 
-   * You can't change the name of an `GeoMatchSet` after you create it.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name A friendly name or description of the `GeoMatchSet` . You can't change the name
+     *   of an `GeoMatchSet` after you create it.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnGeoMatchSetProps {
-    if(_geoMatchConstraints.isNotEmpty()) cdkBuilder.geoMatchConstraints(_geoMatchConstraints)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnGeoMatchSetProps {
+        if (_geoMatchConstraints.isNotEmpty()) cdkBuilder.geoMatchConstraints(_geoMatchConstraints)
+        return cdkBuilder.build()
+    }
 }

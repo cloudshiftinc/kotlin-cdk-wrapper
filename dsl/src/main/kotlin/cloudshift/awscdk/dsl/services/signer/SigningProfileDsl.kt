@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.signer
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.signer.Platform
 import software.amazon.awscdk.services.signer.SigningProfile
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Defines a Signing Profile.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.signer.*;
  * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
@@ -33,7 +41,7 @@ import kotlin.String
 @CdkDslMarker
 public class SigningProfileDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: SigningProfile.Builder = SigningProfile.Builder.create(scope, id)
 
@@ -41,6 +49,7 @@ public class SigningProfileDsl(
      * The Signing Platform available for signing profile.
      *
      * [Documentation](https://docs.aws.amazon.com/signer/latest/developerguide/gs-platform.html)
+     *
      * @param platform The Signing Platform available for signing profile.
      */
     public fun platform(platform: Platform) {
@@ -53,7 +62,7 @@ public class SigningProfileDsl(
      * Default: - 135 months
      *
      * @param signatureValidity The validity period for signatures generated using this signing
-     * profile.
+     *   profile.
      */
     public fun signatureValidity(signatureValidity: Duration) {
         cdkBuilder.signatureValidity(signatureValidity)

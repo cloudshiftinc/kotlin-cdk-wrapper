@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The sort configuration for a `PivotTableVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -61,34 +69,28 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisPivotTableSortConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.PivotTableSortConfigurationProperty.Builder =
-      CfnAnalysis.PivotTableSortConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.PivotTableSortConfigurationProperty.Builder =
+        CfnAnalysis.PivotTableSortConfigurationProperty.builder()
 
-  private val _fieldSortOptions: MutableList<Any> = mutableListOf()
+    private val _fieldSortOptions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param fieldSortOptions The field sort options for a pivot table sort configuration.
-   */
-  public fun fieldSortOptions(vararg fieldSortOptions: Any) {
-    _fieldSortOptions.addAll(listOf(*fieldSortOptions))
-  }
+    /** @param fieldSortOptions The field sort options for a pivot table sort configuration. */
+    public fun fieldSortOptions(vararg fieldSortOptions: Any) {
+        _fieldSortOptions.addAll(listOf(*fieldSortOptions))
+    }
 
-  /**
-   * @param fieldSortOptions The field sort options for a pivot table sort configuration.
-   */
-  public fun fieldSortOptions(fieldSortOptions: Collection<Any>) {
-    _fieldSortOptions.addAll(fieldSortOptions)
-  }
+    /** @param fieldSortOptions The field sort options for a pivot table sort configuration. */
+    public fun fieldSortOptions(fieldSortOptions: Collection<Any>) {
+        _fieldSortOptions.addAll(fieldSortOptions)
+    }
 
-  /**
-   * @param fieldSortOptions The field sort options for a pivot table sort configuration.
-   */
-  public fun fieldSortOptions(fieldSortOptions: IResolvable) {
-    cdkBuilder.fieldSortOptions(fieldSortOptions)
-  }
+    /** @param fieldSortOptions The field sort options for a pivot table sort configuration. */
+    public fun fieldSortOptions(fieldSortOptions: IResolvable) {
+        cdkBuilder.fieldSortOptions(fieldSortOptions)
+    }
 
-  public fun build(): CfnAnalysis.PivotTableSortConfigurationProperty {
-    if(_fieldSortOptions.isNotEmpty()) cdkBuilder.fieldSortOptions(_fieldSortOptions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalysis.PivotTableSortConfigurationProperty {
+        if (_fieldSortOptions.isNotEmpty()) cdkBuilder.fieldSortOptions(_fieldSortOptions)
+        return cdkBuilder.build()
+    }
 }

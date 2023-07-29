@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  * The parameters for using a Amazon SQS stream as a target.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,21 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  */
 @CdkDslMarker
 public class CfnPipePipeTargetSqsQueueParametersPropertyDsl {
-  private val cdkBuilder: CfnPipe.PipeTargetSqsQueueParametersProperty.Builder =
-      CfnPipe.PipeTargetSqsQueueParametersProperty.builder()
+    private val cdkBuilder: CfnPipe.PipeTargetSqsQueueParametersProperty.Builder =
+        CfnPipe.PipeTargetSqsQueueParametersProperty.builder()
 
-  /**
-   * @param messageDeduplicationId This parameter applies only to FIFO (first-in-first-out) queues.
-   * The token used for deduplication of sent messages.
-   */
-  public fun messageDeduplicationId(messageDeduplicationId: String) {
-    cdkBuilder.messageDeduplicationId(messageDeduplicationId)
-  }
+    /**
+     * @param messageDeduplicationId This parameter applies only to FIFO (first-in-first-out)
+     *   queues. The token used for deduplication of sent messages.
+     */
+    public fun messageDeduplicationId(messageDeduplicationId: String) {
+        cdkBuilder.messageDeduplicationId(messageDeduplicationId)
+    }
 
-  /**
-   * @param messageGroupId The FIFO message group ID to use as the target.
-   */
-  public fun messageGroupId(messageGroupId: String) {
-    cdkBuilder.messageGroupId(messageGroupId)
-  }
+    /** @param messageGroupId The FIFO message group ID to use as the target. */
+    public fun messageGroupId(messageGroupId: String) {
+        cdkBuilder.messageGroupId(messageGroupId)
+    }
 
-  public fun build(): CfnPipe.PipeTargetSqsQueueParametersProperty = cdkBuilder.build()
+    public fun build(): CfnPipe.PipeTargetSqsQueueParametersProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -68,39 +76,35 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardComparisonFormatConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ComparisonFormatConfigurationProperty.Builder =
-      CfnDashboard.ComparisonFormatConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.ComparisonFormatConfigurationProperty.Builder =
+        CfnDashboard.ComparisonFormatConfigurationProperty.builder()
 
-  /**
-   * @param numberDisplayFormatConfiguration The number display format.
-   */
-  public fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: IResolvable) {
-    cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
-  }
+    /** @param numberDisplayFormatConfiguration The number display format. */
+    public fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: IResolvable) {
+        cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param numberDisplayFormatConfiguration The number display format.
-   */
-  public
-      fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: CfnDashboard.NumberDisplayFormatConfigurationProperty) {
-    cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
-  }
+    /** @param numberDisplayFormatConfiguration The number display format. */
+    public fun numberDisplayFormatConfiguration(
+        numberDisplayFormatConfiguration: CfnDashboard.NumberDisplayFormatConfigurationProperty
+    ) {
+        cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param percentageDisplayFormatConfiguration The percentage display format.
-   */
-  public
-      fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: IResolvable) {
-    cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
-  }
+    /** @param percentageDisplayFormatConfiguration The percentage display format. */
+    public fun percentageDisplayFormatConfiguration(
+        percentageDisplayFormatConfiguration: IResolvable
+    ) {
+        cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param percentageDisplayFormatConfiguration The percentage display format.
-   */
-  public
-      fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: CfnDashboard.PercentageDisplayFormatConfigurationProperty) {
-    cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
-  }
+    /** @param percentageDisplayFormatConfiguration The percentage display format. */
+    public fun percentageDisplayFormatConfiguration(
+        percentageDisplayFormatConfiguration:
+            CfnDashboard.PercentageDisplayFormatConfigurationProperty
+    ) {
+        cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
+    }
 
-  public fun build(): CfnDashboard.ComparisonFormatConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ComparisonFormatConfigurationProperty = cdkBuilder.build()
 }

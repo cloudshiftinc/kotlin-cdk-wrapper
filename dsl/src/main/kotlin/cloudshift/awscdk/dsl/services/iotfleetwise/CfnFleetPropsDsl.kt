@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotfleetwise
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.iotfleetwise.CfnFleetProps
  * Properties for defining a `CfnFleet`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,47 +44,37 @@ import software.amazon.awscdk.services.iotfleetwise.CfnFleetProps
  */
 @CdkDslMarker
 public class CfnFleetPropsDsl {
-  private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()
+    private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description (Optional) A brief description of the fleet.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description (Optional) A brief description of the fleet. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param id The unique ID of the fleet. 
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The unique ID of the fleet. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param signalCatalogArn The ARN of the signal catalog associated with the fleet. 
-   */
-  public fun signalCatalogArn(signalCatalogArn: String) {
-    cdkBuilder.signalCatalogArn(signalCatalogArn)
-  }
+    /** @param signalCatalogArn The ARN of the signal catalog associated with the fleet. */
+    public fun signalCatalogArn(signalCatalogArn: String) {
+        cdkBuilder.signalCatalogArn(signalCatalogArn)
+    }
 
-  /**
-   * @param tags (Optional) Metadata that can be used to manage the fleet.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags (Optional) Metadata that can be used to manage the fleet. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags (Optional) Metadata that can be used to manage the fleet.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags (Optional) Metadata that can be used to manage the fleet. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnFleetProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFleetProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

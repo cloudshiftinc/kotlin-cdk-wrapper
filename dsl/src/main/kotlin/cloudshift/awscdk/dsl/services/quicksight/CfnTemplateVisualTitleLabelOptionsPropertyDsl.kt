@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * The title label options for a visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,9 +55,7 @@ public class CfnTemplateVisualTitleLabelOptionsPropertyDsl {
         cdkBuilder.formatText(formatText)
     }
 
-    /**
-     * @param visibility The visibility of the title label.
-     */
+    /** @param visibility The visibility of the title label. */
     public fun visibility(visibility: String) {
         cdkBuilder.visibility(visibility)
     }

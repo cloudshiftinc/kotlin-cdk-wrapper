@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amazonmq
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.amazonmq.CfnBroker
  * broker.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,30 +35,26 @@ import software.amazon.awscdk.services.amazonmq.CfnBroker
  */
 @CdkDslMarker
 public class CfnBrokerMaintenanceWindowPropertyDsl {
-  private val cdkBuilder: CfnBroker.MaintenanceWindowProperty.Builder =
-      CfnBroker.MaintenanceWindowProperty.builder()
+    private val cdkBuilder: CfnBroker.MaintenanceWindowProperty.Builder =
+        CfnBroker.MaintenanceWindowProperty.builder()
 
-  /**
-   * @param dayOfWeek The day of the week. 
-   */
-  public fun dayOfWeek(dayOfWeek: String) {
-    cdkBuilder.dayOfWeek(dayOfWeek)
-  }
+    /** @param dayOfWeek The day of the week. */
+    public fun dayOfWeek(dayOfWeek: String) {
+        cdkBuilder.dayOfWeek(dayOfWeek)
+    }
 
-  /**
-   * @param timeOfDay The time, in 24-hour format. 
-   */
-  public fun timeOfDay(timeOfDay: String) {
-    cdkBuilder.timeOfDay(timeOfDay)
-  }
+    /** @param timeOfDay The time, in 24-hour format. */
+    public fun timeOfDay(timeOfDay: String) {
+        cdkBuilder.timeOfDay(timeOfDay)
+    }
 
-  /**
-   * @param timeZone The time zone, UTC by default, in either the Country/City format, or the UTC
-   * offset format. 
-   */
-  public fun timeZone(timeZone: String) {
-    cdkBuilder.timeZone(timeZone)
-  }
+    /**
+     * @param timeZone The time zone, UTC by default, in either the Country/City format, or the UTC
+     *   offset format.
+     */
+    public fun timeZone(timeZone: String) {
+        cdkBuilder.timeZone(timeZone)
+    }
 
-  public fun build(): CfnBroker.MaintenanceWindowProperty = cdkBuilder.build()
+    public fun build(): CfnBroker.MaintenanceWindowProperty = cdkBuilder.build()
 }

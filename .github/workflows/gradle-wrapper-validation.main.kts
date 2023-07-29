@@ -10,26 +10,28 @@ import io.github.typesafegithub.workflows.dsl.workflow
 import io.github.typesafegithub.workflows.yaml.writeToFile
 
 workflow(
-    name = "Validate Gradle wrapper",
-    on = listOf(
-        Push(
-            branches = listOf("main"),
-            paths = listOf("gradle/wrapper/gradle-wrapper.jar"),
-        ),
-        PullRequest(
-            paths = listOf("gradle/wrapper/gradle-wrapper.jar"),
-        ),
-    ),
-    sourceFile = __FILE__.toPath(),
-) {
-    job(
-        id = "validation",
-        runsOn = UbuntuLatest,
+        name = "Validate Gradle wrapper",
+        on =
+            listOf(
+                Push(
+                    branches = listOf("main"),
+                    paths = listOf("gradle/wrapper/gradle-wrapper.jar"),
+                ),
+                PullRequest(
+                    paths = listOf("gradle/wrapper/gradle-wrapper.jar"),
+                ),
+            ),
+        sourceFile = __FILE__.toPath(),
     ) {
-        uses(action = CheckoutV3())
-        uses(
-            name = "Validate wrapper",
-            action = WrapperValidationActionV1(),
-        )
+        job(
+            id = "validation",
+            runsOn = UbuntuLatest,
+        ) {
+            uses(action = CheckoutV3())
+            uses(
+                name = "Validate wrapper",
+                action = WrapperValidationActionV1(),
+            )
+        }
     }
-}.writeToFile()
+    .writeToFile()

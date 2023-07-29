@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The calculated field of an analysis.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,23 +37,17 @@ public class CfnAnalysisCalculatedFieldPropertyDsl {
     private val cdkBuilder: CfnAnalysis.CalculatedFieldProperty.Builder =
         CfnAnalysis.CalculatedFieldProperty.builder()
 
-    /**
-     * @param dataSetIdentifier The data set that is used in this calculated field.
-     */
+    /** @param dataSetIdentifier The data set that is used in this calculated field. */
     public fun dataSetIdentifier(dataSetIdentifier: String) {
         cdkBuilder.dataSetIdentifier(dataSetIdentifier)
     }
 
-    /**
-     * @param expression The expression of the calculated field.
-     */
+    /** @param expression The expression of the calculated field. */
     public fun expression(expression: String) {
         cdkBuilder.expression(expression)
     }
 
-    /**
-     * @param name The name of the calculated field.
-     */
+    /** @param name The name of the calculated field. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.datasync
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.datasync.CfnStorageSystem
  * system's management interface.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,23 @@ import software.amazon.awscdk.services.datasync.CfnStorageSystem
  */
 @CdkDslMarker
 public class CfnStorageSystemServerConfigurationPropertyDsl {
-  private val cdkBuilder: CfnStorageSystem.ServerConfigurationProperty.Builder =
-      CfnStorageSystem.ServerConfigurationProperty.builder()
+    private val cdkBuilder: CfnStorageSystem.ServerConfigurationProperty.Builder =
+        CfnStorageSystem.ServerConfigurationProperty.builder()
 
-  /**
-   * @param serverHostname The domain name or IP address of your storage system's management
-   * interface. 
-   */
-  public fun serverHostname(serverHostname: String) {
-    cdkBuilder.serverHostname(serverHostname)
-  }
+    /**
+     * @param serverHostname The domain name or IP address of your storage system's management
+     *   interface.
+     */
+    public fun serverHostname(serverHostname: String) {
+        cdkBuilder.serverHostname(serverHostname)
+    }
 
-  /**
-   * @param serverPort The network port for accessing the storage system's management interface.
-   */
-  public fun serverPort(serverPort: Number) {
-    cdkBuilder.serverPort(serverPort)
-  }
+    /**
+     * @param serverPort The network port for accessing the storage system's management interface.
+     */
+    public fun serverPort(serverPort: Number) {
+        cdkBuilder.serverPort(serverPort)
+    }
 
-  public fun build(): CfnStorageSystem.ServerConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnStorageSystem.ServerConfigurationProperty = cdkBuilder.build()
 }

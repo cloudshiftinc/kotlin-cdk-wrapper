@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  * The configuration applies to all alarms that were created based on this alarm model.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,26 +36,24 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  */
 @CdkDslMarker
 public class CfnAlarmModelInitializationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAlarmModel.InitializationConfigurationProperty.Builder =
-      CfnAlarmModel.InitializationConfigurationProperty.builder()
+    private val cdkBuilder: CfnAlarmModel.InitializationConfigurationProperty.Builder =
+        CfnAlarmModel.InitializationConfigurationProperty.builder()
 
-  /**
-   * @param disabledOnInitialization The value must be `TRUE` or `FALSE` . 
-   * If `FALSE` , all alarm instances created based on the alarm model are activated. The default
-   * value is `TRUE` .
-   */
-  public fun disabledOnInitialization(disabledOnInitialization: Boolean) {
-    cdkBuilder.disabledOnInitialization(disabledOnInitialization)
-  }
+    /**
+     * @param disabledOnInitialization The value must be `TRUE` or `FALSE` . If `FALSE` , all alarm
+     *   instances created based on the alarm model are activated. The default value is `TRUE` .
+     */
+    public fun disabledOnInitialization(disabledOnInitialization: Boolean) {
+        cdkBuilder.disabledOnInitialization(disabledOnInitialization)
+    }
 
-  /**
-   * @param disabledOnInitialization The value must be `TRUE` or `FALSE` . 
-   * If `FALSE` , all alarm instances created based on the alarm model are activated. The default
-   * value is `TRUE` .
-   */
-  public fun disabledOnInitialization(disabledOnInitialization: IResolvable) {
-    cdkBuilder.disabledOnInitialization(disabledOnInitialization)
-  }
+    /**
+     * @param disabledOnInitialization The value must be `TRUE` or `FALSE` . If `FALSE` , all alarm
+     *   instances created based on the alarm model are activated. The default value is `TRUE` .
+     */
+    public fun disabledOnInitialization(disabledOnInitialization: IResolvable) {
+        cdkBuilder.disabledOnInitialization(disabledOnInitialization)
+    }
 
-  public fun build(): CfnAlarmModel.InitializationConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAlarmModel.InitializationConfigurationProperty = cdkBuilder.build()
 }

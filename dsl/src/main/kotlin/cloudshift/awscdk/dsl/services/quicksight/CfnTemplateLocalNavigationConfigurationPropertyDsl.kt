@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The navigation configuration for `CustomActionNavigationOperation` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateLocalNavigationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.LocalNavigationConfigurationProperty.Builder =
-      CfnTemplate.LocalNavigationConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.LocalNavigationConfigurationProperty.Builder =
+        CfnTemplate.LocalNavigationConfigurationProperty.builder()
 
-  /**
-   * @param targetSheetId The sheet that is targeted for navigation in the same analysis. 
-   */
-  public fun targetSheetId(targetSheetId: String) {
-    cdkBuilder.targetSheetId(targetSheetId)
-  }
+    /** @param targetSheetId The sheet that is targeted for navigation in the same analysis. */
+    public fun targetSheetId(targetSheetId: String) {
+        cdkBuilder.targetSheetId(targetSheetId)
+    }
 
-  public fun build(): CfnTemplate.LocalNavigationConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.LocalNavigationConfigurationProperty = cdkBuilder.build()
 }

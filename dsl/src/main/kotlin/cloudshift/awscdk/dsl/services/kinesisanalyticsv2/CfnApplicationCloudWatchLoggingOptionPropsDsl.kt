@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWat
  * Properties for defining a `CfnApplicationCloudWatchLoggingOption`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,32 +38,32 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWat
  */
 @CdkDslMarker
 public class CfnApplicationCloudWatchLoggingOptionPropsDsl {
-  private val cdkBuilder: CfnApplicationCloudWatchLoggingOptionProps.Builder =
-      CfnApplicationCloudWatchLoggingOptionProps.builder()
+    private val cdkBuilder: CfnApplicationCloudWatchLoggingOptionProps.Builder =
+        CfnApplicationCloudWatchLoggingOptionProps.builder()
 
-  /**
-   * @param applicationName The name of the application. 
-   */
-  public fun applicationName(applicationName: String) {
-    cdkBuilder.applicationName(applicationName)
-  }
+    /** @param applicationName The name of the application. */
+    public fun applicationName(applicationName: String) {
+        cdkBuilder.applicationName(applicationName)
+    }
 
-  /**
-   * @param cloudWatchLoggingOption Provides a description of Amazon CloudWatch logging options,
-   * including the log stream Amazon Resource Name (ARN). 
-   */
-  public fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
-    cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption)
-  }
+    /**
+     * @param cloudWatchLoggingOption Provides a description of Amazon CloudWatch logging options,
+     *   including the log stream Amazon Resource Name (ARN).
+     */
+    public fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
+        cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption)
+    }
 
-  /**
-   * @param cloudWatchLoggingOption Provides a description of Amazon CloudWatch logging options,
-   * including the log stream Amazon Resource Name (ARN). 
-   */
-  public
-      fun cloudWatchLoggingOption(cloudWatchLoggingOption: CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty) {
-    cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption)
-  }
+    /**
+     * @param cloudWatchLoggingOption Provides a description of Amazon CloudWatch logging options,
+     *   including the log stream Amazon Resource Name (ARN).
+     */
+    public fun cloudWatchLoggingOption(
+        cloudWatchLoggingOption:
+            CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty
+    ) {
+        cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption)
+    }
 
-  public fun build(): CfnApplicationCloudWatchLoggingOptionProps = cdkBuilder.build()
+    public fun build(): CfnApplicationCloudWatchLoggingOptionProps = cdkBuilder.build()
 }

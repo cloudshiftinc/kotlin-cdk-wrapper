@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -14,12 +23,11 @@ import software.amazon.awscdk.services.lex.CfnBot
  * Provides a list of conditional branches.
  *
  * Branches are evaluated in the order that they are entered in the list. The first branch with a
- * condition that evaluates to true is executed. The last branch in the list is the default branch. The
- * default branch should not have any condition expression. The default branch is executed if no other
- * branch has a matching condition.
+ * condition that evaluates to true is executed. The last branch in the list is the default branch.
+ * The default branch should not have any condition expression. The default branch is executed if no
+ * other branch has a matching condition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -194,74 +202,74 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotConditionalSpecificationPropertyDsl {
-  private val cdkBuilder: CfnBot.ConditionalSpecificationProperty.Builder =
-      CfnBot.ConditionalSpecificationProperty.builder()
+    private val cdkBuilder: CfnBot.ConditionalSpecificationProperty.Builder =
+        CfnBot.ConditionalSpecificationProperty.builder()
 
-  private val _conditionalBranches: MutableList<Any> = mutableListOf()
+    private val _conditionalBranches: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param conditionalBranches A list of conditional branches. 
-   * A conditional branch is made up of a condition, a response and a next step. The response and
-   * next step are executed when the condition is true.
-   */
-  public fun conditionalBranches(vararg conditionalBranches: Any) {
-    _conditionalBranches.addAll(listOf(*conditionalBranches))
-  }
+    /**
+     * @param conditionalBranches A list of conditional branches. A conditional branch is made up of
+     *   a condition, a response and a next step. The response and next step are executed when the
+     *   condition is true.
+     */
+    public fun conditionalBranches(vararg conditionalBranches: Any) {
+        _conditionalBranches.addAll(listOf(*conditionalBranches))
+    }
 
-  /**
-   * @param conditionalBranches A list of conditional branches. 
-   * A conditional branch is made up of a condition, a response and a next step. The response and
-   * next step are executed when the condition is true.
-   */
-  public fun conditionalBranches(conditionalBranches: Collection<Any>) {
-    _conditionalBranches.addAll(conditionalBranches)
-  }
+    /**
+     * @param conditionalBranches A list of conditional branches. A conditional branch is made up of
+     *   a condition, a response and a next step. The response and next step are executed when the
+     *   condition is true.
+     */
+    public fun conditionalBranches(conditionalBranches: Collection<Any>) {
+        _conditionalBranches.addAll(conditionalBranches)
+    }
 
-  /**
-   * @param conditionalBranches A list of conditional branches. 
-   * A conditional branch is made up of a condition, a response and a next step. The response and
-   * next step are executed when the condition is true.
-   */
-  public fun conditionalBranches(conditionalBranches: IResolvable) {
-    cdkBuilder.conditionalBranches(conditionalBranches)
-  }
+    /**
+     * @param conditionalBranches A list of conditional branches. A conditional branch is made up of
+     *   a condition, a response and a next step. The response and next step are executed when the
+     *   condition is true.
+     */
+    public fun conditionalBranches(conditionalBranches: IResolvable) {
+        cdkBuilder.conditionalBranches(conditionalBranches)
+    }
 
-  /**
-   * @param defaultBranch The conditional branch that should be followed when the conditions for
-   * other branches are not satisfied. 
-   * A conditional branch is made up of a condition, a response and a next step.
-   */
-  public fun defaultBranch(defaultBranch: IResolvable) {
-    cdkBuilder.defaultBranch(defaultBranch)
-  }
+    /**
+     * @param defaultBranch The conditional branch that should be followed when the conditions for
+     *   other branches are not satisfied. A conditional branch is made up of a condition, a
+     *   response and a next step.
+     */
+    public fun defaultBranch(defaultBranch: IResolvable) {
+        cdkBuilder.defaultBranch(defaultBranch)
+    }
 
-  /**
-   * @param defaultBranch The conditional branch that should be followed when the conditions for
-   * other branches are not satisfied. 
-   * A conditional branch is made up of a condition, a response and a next step.
-   */
-  public fun defaultBranch(defaultBranch: CfnBot.DefaultConditionalBranchProperty) {
-    cdkBuilder.defaultBranch(defaultBranch)
-  }
+    /**
+     * @param defaultBranch The conditional branch that should be followed when the conditions for
+     *   other branches are not satisfied. A conditional branch is made up of a condition, a
+     *   response and a next step.
+     */
+    public fun defaultBranch(defaultBranch: CfnBot.DefaultConditionalBranchProperty) {
+        cdkBuilder.defaultBranch(defaultBranch)
+    }
 
-  /**
-   * @param isActive Determines whether a conditional branch is active. 
-   * When `IsActive` is false, the conditions are not evaluated.
-   */
-  public fun isActive(isActive: Boolean) {
-    cdkBuilder.isActive(isActive)
-  }
+    /**
+     * @param isActive Determines whether a conditional branch is active. When `IsActive` is false,
+     *   the conditions are not evaluated.
+     */
+    public fun isActive(isActive: Boolean) {
+        cdkBuilder.isActive(isActive)
+    }
 
-  /**
-   * @param isActive Determines whether a conditional branch is active. 
-   * When `IsActive` is false, the conditions are not evaluated.
-   */
-  public fun isActive(isActive: IResolvable) {
-    cdkBuilder.isActive(isActive)
-  }
+    /**
+     * @param isActive Determines whether a conditional branch is active. When `IsActive` is false,
+     *   the conditions are not evaluated.
+     */
+    public fun isActive(isActive: IResolvable) {
+        cdkBuilder.isActive(isActive)
+    }
 
-  public fun build(): CfnBot.ConditionalSpecificationProperty {
-    if(_conditionalBranches.isNotEmpty()) cdkBuilder.conditionalBranches(_conditionalBranches)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBot.ConditionalSpecificationProperty {
+        if (_conditionalBranches.isNotEmpty()) cdkBuilder.conditionalBranches(_conditionalBranches)
+        return cdkBuilder.build()
+    }
 }

@@ -1,15 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.oam
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.services.oam.CfnSink
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import software.amazon.awscdk.services.oam.CfnSink
+import software.constructs.Construct
 
 /**
  * Creates or updates a *sink* in the current account, so that it can be used as a monitoring
@@ -25,7 +34,6 @@ import kotlin.collections.Map
  * An account can have one sink.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,7 +53,7 @@ import kotlin.collections.Map
 @CdkDslMarker
 public class CfnSinkDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnSink.Builder = CfnSink.Builder.create(scope, id)
 
@@ -53,6 +61,7 @@ public class CfnSinkDsl(
      * A name for the sink.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html#cfn-oam-sink-name)
+     *
      * @param name A name for the sink.
      */
     public fun name(name: String) {
@@ -63,11 +72,11 @@ public class CfnSinkDsl(
      * The IAM policy that grants permissions to source accounts to link to this sink.
      *
      * The policy can grant permission in the following ways:
-     *
      * * Include organization IDs or organization paths to permit all accounts in an organization
      * * Include account IDs to permit the specified accounts
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html#cfn-oam-sink-policy)
+     *
      * @param policy The IAM policy that grants permissions to source accounts to link to this sink.
      */
     public fun policy(policy: MapBuilder.() -> Unit = {}) {
@@ -80,11 +89,11 @@ public class CfnSinkDsl(
      * The IAM policy that grants permissions to source accounts to link to this sink.
      *
      * The policy can grant permission in the following ways:
-     *
      * * Include organization IDs or organization paths to permit all accounts in an organization
      * * Include account IDs to permit the specified accounts
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html#cfn-oam-sink-policy)
+     *
      * @param policy The IAM policy that grants permissions to source accounts to link to this sink.
      */
     public fun policy(policy: Any) {
@@ -99,6 +108,7 @@ public class CfnSinkDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html#cfn-oam-sink-tags)
+     *
      * @param tags An array of key-value pairs to apply to the sink.
      */
     public fun tags(tags: Map<String, String>) {

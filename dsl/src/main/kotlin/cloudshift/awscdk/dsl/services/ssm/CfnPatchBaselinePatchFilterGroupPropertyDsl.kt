@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssm
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 
 /**
  * The `PatchFilterGroup` property type specifies a set of patch filters for an AWS Systems Manager
@@ -20,7 +29,6 @@ import kotlin.collections.MutableList
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,23 +50,17 @@ public class CfnPatchBaselinePatchFilterGroupPropertyDsl {
 
     private val _patchFilters: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param patchFilters The set of patch filters that make up the group.
-     */
+    /** @param patchFilters The set of patch filters that make up the group. */
     public fun patchFilters(vararg patchFilters: Any) {
         _patchFilters.addAll(listOf(*patchFilters))
     }
 
-    /**
-     * @param patchFilters The set of patch filters that make up the group.
-     */
+    /** @param patchFilters The set of patch filters that make up the group. */
     public fun patchFilters(patchFilters: Collection<Any>) {
         _patchFilters.addAll(patchFilters)
     }
 
-    /**
-     * @param patchFilters The set of patch filters that make up the group.
-     */
+    /** @param patchFilters The set of patch filters that make up the group. */
     public fun patchFilters(patchFilters: IResolvable) {
         cdkBuilder.patchFilters(patchFilters)
     }

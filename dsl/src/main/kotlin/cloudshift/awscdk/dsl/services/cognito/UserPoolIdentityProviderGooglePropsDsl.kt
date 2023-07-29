@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGooglePro
  * Properties to initialize UserPoolGoogleIdentityProvider.
  *
  * Example:
- *
  * ```
  * UserPool userpool = new UserPool(this, "Pool");
  * SecretValue secret = Secret.fromSecretAttributes(this, "CognitoClientSecret",
@@ -34,79 +42,75 @@ import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGooglePro
  */
 @CdkDslMarker
 public class UserPoolIdentityProviderGooglePropsDsl {
-  private val cdkBuilder: UserPoolIdentityProviderGoogleProps.Builder =
-      UserPoolIdentityProviderGoogleProps.builder()
+    private val cdkBuilder: UserPoolIdentityProviderGoogleProps.Builder =
+        UserPoolIdentityProviderGoogleProps.builder()
 
-  private val _scopes: MutableList<String> = mutableListOf()
+    private val _scopes: MutableList<String> = mutableListOf()
 
-  /**
-   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
-   * attributes of the user pool.
-   */
-  public fun attributeMapping(attributeMapping: AttributeMappingDsl.() -> Unit = {}) {
-    val builder = AttributeMappingDsl()
-    builder.apply(attributeMapping)
-    cdkBuilder.attributeMapping(builder.build())
-  }
+    /**
+     * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+     *   attributes of the user pool.
+     */
+    public fun attributeMapping(attributeMapping: AttributeMappingDsl.() -> Unit = {}) {
+        val builder = AttributeMappingDsl()
+        builder.apply(attributeMapping)
+        cdkBuilder.attributeMapping(builder.build())
+    }
 
-  /**
-   * @param attributeMapping Mapping attributes from the identity provider to standard and custom
-   * attributes of the user pool.
-   */
-  public fun attributeMapping(attributeMapping: AttributeMapping) {
-    cdkBuilder.attributeMapping(attributeMapping)
-  }
+    /**
+     * @param attributeMapping Mapping attributes from the identity provider to standard and custom
+     *   attributes of the user pool.
+     */
+    public fun attributeMapping(attributeMapping: AttributeMapping) {
+        cdkBuilder.attributeMapping(attributeMapping)
+    }
 
-  /**
-   * @param clientId The client id recognized by Google APIs. 
-   */
-  public fun clientId(clientId: String) {
-    cdkBuilder.clientId(clientId)
-  }
+    /** @param clientId The client id recognized by Google APIs. */
+    public fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+    }
 
-  /**
-   * @param clientSecret The client secret to be accompanied with clientId for Google APIs to
-   * authenticate the client.
-   * @deprecated use clientSecretValue instead
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun clientSecret(clientSecret: String) {
-    cdkBuilder.clientSecret(clientSecret)
-  }
+    /**
+     * @param clientSecret The client secret to be accompanied with clientId for Google APIs to
+     *   authenticate the client.
+     * @deprecated use clientSecretValue instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+    }
 
-  /**
-   * @param clientSecretValue The client secret to be accompanied with clientId for Google APIs to
-   * authenticate the client as SecretValue.
-   */
-  public fun clientSecretValue(clientSecretValue: SecretValue) {
-    cdkBuilder.clientSecretValue(clientSecretValue)
-  }
+    /**
+     * @param clientSecretValue The client secret to be accompanied with clientId for Google APIs to
+     *   authenticate the client as SecretValue.
+     */
+    public fun clientSecretValue(clientSecretValue: SecretValue) {
+        cdkBuilder.clientSecretValue(clientSecretValue)
+    }
 
-  /**
-   * @param scopes The list of google permissions to obtain for getting access to the google
-   * profile.
-   */
-  public fun scopes(vararg scopes: String) {
-    _scopes.addAll(listOf(*scopes))
-  }
+    /**
+     * @param scopes The list of google permissions to obtain for getting access to the google
+     *   profile.
+     */
+    public fun scopes(vararg scopes: String) {
+        _scopes.addAll(listOf(*scopes))
+    }
 
-  /**
-   * @param scopes The list of google permissions to obtain for getting access to the google
-   * profile.
-   */
-  public fun scopes(scopes: Collection<String>) {
-    _scopes.addAll(scopes)
-  }
+    /**
+     * @param scopes The list of google permissions to obtain for getting access to the google
+     *   profile.
+     */
+    public fun scopes(scopes: Collection<String>) {
+        _scopes.addAll(scopes)
+    }
 
-  /**
-   * @param userPool The user pool to which this construct provides identities. 
-   */
-  public fun userPool(userPool: IUserPool) {
-    cdkBuilder.userPool(userPool)
-  }
+    /** @param userPool The user pool to which this construct provides identities. */
+    public fun userPool(userPool: IUserPool) {
+        cdkBuilder.userPool(userPool)
+    }
 
-  public fun build(): UserPoolIdentityProviderGoogleProps {
-    if(_scopes.isNotEmpty()) cdkBuilder.scopes(_scopes)
-    return cdkBuilder.build()
-  }
+    public fun build(): UserPoolIdentityProviderGoogleProps {
+        if (_scopes.isNotEmpty()) cdkBuilder.scopes(_scopes)
+        return cdkBuilder.build()
+    }
 }

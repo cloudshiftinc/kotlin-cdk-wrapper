@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * The configuration of adding parameters in action.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,22 +58,18 @@ public class CfnTemplateSetParameterValueConfigurationPropertyDsl {
 
     /**
      * @param destinationParameterName The destination parameter name of the
-     * `SetParameterValueConfiguration` .
+     *   `SetParameterValueConfiguration` .
      */
     public fun destinationParameterName(destinationParameterName: String) {
         cdkBuilder.destinationParameterName(destinationParameterName)
     }
 
-    /**
-     * @param value the value to be set.
-     */
+    /** @param value the value to be set. */
     public fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`)
     }
 
-    /**
-     * @param value the value to be set.
-     */
+    /** @param value the value to be set. */
     public fun `value`(`value`: CfnTemplate.DestinationParameterValueConfigurationProperty) {
         cdkBuilder.`value`(`value`)
     }

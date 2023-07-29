@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.globalaccelerator
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.globalaccelerator.AcceleratorProps
  * Construct properties of the Accelerator.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,21 +32,17 @@ import software.amazon.awscdk.services.globalaccelerator.AcceleratorProps
  */
 @CdkDslMarker
 public class AcceleratorPropsDsl {
-  private val cdkBuilder: AcceleratorProps.Builder = AcceleratorProps.builder()
+    private val cdkBuilder: AcceleratorProps.Builder = AcceleratorProps.builder()
 
-  /**
-   * @param acceleratorName The name of the accelerator.
-   */
-  public fun acceleratorName(acceleratorName: String) {
-    cdkBuilder.acceleratorName(acceleratorName)
-  }
+    /** @param acceleratorName The name of the accelerator. */
+    public fun acceleratorName(acceleratorName: String) {
+        cdkBuilder.acceleratorName(acceleratorName)
+    }
 
-  /**
-   * @param enabled Indicates whether the accelerator is enabled.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether the accelerator is enabled. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  public fun build(): AcceleratorProps = cdkBuilder.build()
+    public fun build(): AcceleratorProps = cdkBuilder.build()
 }

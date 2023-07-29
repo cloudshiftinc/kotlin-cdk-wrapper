@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.lambda.AdotLayerVersion
  * Properties for an ADOT instrumentation in Lambda.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.lambda.AdotLambdaExecWrapper;
  * import software.amazon.awscdk.services.lambda.AdotLayerVersion;
@@ -29,22 +37,20 @@ import software.amazon.awscdk.services.lambda.AdotLayerVersion
  */
 @CdkDslMarker
 public class AdotInstrumentationConfigDsl {
-  private val cdkBuilder: AdotInstrumentationConfig.Builder = AdotInstrumentationConfig.builder()
+    private val cdkBuilder: AdotInstrumentationConfig.Builder = AdotInstrumentationConfig.builder()
 
-  /**
-   * @param execWrapper The startup script to run, see ADOT documentation to pick the right script
-   * for your use case: https://aws-otel.github.io/docs/getting-started/lambda. 
-   */
-  public fun execWrapper(execWrapper: AdotLambdaExecWrapper) {
-    cdkBuilder.execWrapper(execWrapper)
-  }
+    /**
+     * @param execWrapper The startup script to run, see ADOT documentation to pick the right script
+     *   for your use case: https://aws-otel.github.io/docs/getting-started/lambda.
+     */
+    public fun execWrapper(execWrapper: AdotLambdaExecWrapper) {
+        cdkBuilder.execWrapper(execWrapper)
+    }
 
-  /**
-   * @param layerVersion The ADOT Lambda layer. 
-   */
-  public fun layerVersion(layerVersion: AdotLayerVersion) {
-    cdkBuilder.layerVersion(layerVersion)
-  }
+    /** @param layerVersion The ADOT Lambda layer. */
+    public fun layerVersion(layerVersion: AdotLayerVersion) {
+        cdkBuilder.layerVersion(layerVersion)
+    }
 
-  public fun build(): AdotInstrumentationConfig = cdkBuilder.build()
+    public fun build(): AdotInstrumentationConfig = cdkBuilder.build()
 }

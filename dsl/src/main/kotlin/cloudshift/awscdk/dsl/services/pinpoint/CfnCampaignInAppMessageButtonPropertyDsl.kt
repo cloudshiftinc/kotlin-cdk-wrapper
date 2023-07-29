@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.pinpoint.CfnCampaign
  * Specifies the configuration of a button that appears in an in-app message.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,16 +55,16 @@ public class CfnCampaignInAppMessageButtonPropertyDsl {
         CfnCampaign.InAppMessageButtonProperty.builder()
 
     /**
-     * @param android An object that defines the default behavior for a button in in-app messages sent
-     * to Android.
+     * @param android An object that defines the default behavior for a button in in-app messages
+     *   sent to Android.
      */
     public fun android(android: IResolvable) {
         cdkBuilder.android(android)
     }
 
     /**
-     * @param android An object that defines the default behavior for a button in in-app messages sent
-     * to Android.
+     * @param android An object that defines the default behavior for a button in in-app messages
+     *   sent to Android.
      */
     public fun android(android: CfnCampaign.OverrideButtonConfigurationProperty) {
         cdkBuilder.android(android)
@@ -64,7 +72,7 @@ public class CfnCampaignInAppMessageButtonPropertyDsl {
 
     /**
      * @param defaultConfig An object that defines the default behavior for a button in an in-app
-     * message.
+     *   message.
      */
     public fun defaultConfig(defaultConfig: IResolvable) {
         cdkBuilder.defaultConfig(defaultConfig)
@@ -72,39 +80,39 @@ public class CfnCampaignInAppMessageButtonPropertyDsl {
 
     /**
      * @param defaultConfig An object that defines the default behavior for a button in an in-app
-     * message.
+     *   message.
      */
     public fun defaultConfig(defaultConfig: CfnCampaign.DefaultButtonConfigurationProperty) {
         cdkBuilder.defaultConfig(defaultConfig)
     }
 
     /**
-     * @param ios An object that defines the default behavior for a button in in-app messages sent to
-     * iOS devices.
+     * @param ios An object that defines the default behavior for a button in in-app messages sent
+     *   to iOS devices.
      */
     public fun ios(ios: IResolvable) {
         cdkBuilder.ios(ios)
     }
 
     /**
-     * @param ios An object that defines the default behavior for a button in in-app messages sent to
-     * iOS devices.
+     * @param ios An object that defines the default behavior for a button in in-app messages sent
+     *   to iOS devices.
      */
     public fun ios(ios: CfnCampaign.OverrideButtonConfigurationProperty) {
         cdkBuilder.ios(ios)
     }
 
     /**
-     * @param web An object that defines the default behavior for a button in in-app messages for web
-     * applications.
+     * @param web An object that defines the default behavior for a button in in-app messages for
+     *   web applications.
      */
     public fun web(web: IResolvable) {
         cdkBuilder.web(web)
     }
 
     /**
-     * @param web An object that defines the default behavior for a button in in-app messages for web
-     * applications.
+     * @param web An object that defines the default behavior for a button in in-app messages for
+     *   web applications.
      */
     public fun web(web: CfnCampaign.OverrideButtonConfigurationProperty) {
         cdkBuilder.web(web)

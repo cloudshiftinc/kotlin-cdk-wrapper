@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,57 +37,43 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
  */
 @CdkDslMarker
 public class CfnHttpApiRoute53ConfigurationPropertyDsl {
-  private val cdkBuilder: CfnHttpApi.Route53ConfigurationProperty.Builder =
-      CfnHttpApi.Route53ConfigurationProperty.builder()
+    private val cdkBuilder: CfnHttpApi.Route53ConfigurationProperty.Builder =
+        CfnHttpApi.Route53ConfigurationProperty.builder()
 
-  /**
-   * @param distributedDomainName the value to be set.
-   */
-  public fun distributedDomainName(distributedDomainName: String) {
-    cdkBuilder.distributedDomainName(distributedDomainName)
-  }
+    /** @param distributedDomainName the value to be set. */
+    public fun distributedDomainName(distributedDomainName: String) {
+        cdkBuilder.distributedDomainName(distributedDomainName)
+    }
 
-  /**
-   * @param evaluateTargetHealth the value to be set.
-   */
-  public fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
-    cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
-  }
+    /** @param evaluateTargetHealth the value to be set. */
+    public fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+    }
 
-  /**
-   * @param evaluateTargetHealth the value to be set.
-   */
-  public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-    cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
-  }
+    /** @param evaluateTargetHealth the value to be set. */
+    public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+    }
 
-  /**
-   * @param hostedZoneId the value to be set.
-   */
-  public fun hostedZoneId(hostedZoneId: String) {
-    cdkBuilder.hostedZoneId(hostedZoneId)
-  }
+    /** @param hostedZoneId the value to be set. */
+    public fun hostedZoneId(hostedZoneId: String) {
+        cdkBuilder.hostedZoneId(hostedZoneId)
+    }
 
-  /**
-   * @param hostedZoneName the value to be set.
-   */
-  public fun hostedZoneName(hostedZoneName: String) {
-    cdkBuilder.hostedZoneName(hostedZoneName)
-  }
+    /** @param hostedZoneName the value to be set. */
+    public fun hostedZoneName(hostedZoneName: String) {
+        cdkBuilder.hostedZoneName(hostedZoneName)
+    }
 
-  /**
-   * @param ipV6 the value to be set.
-   */
-  public fun ipV6(ipV6: Boolean) {
-    cdkBuilder.ipV6(ipV6)
-  }
+    /** @param ipV6 the value to be set. */
+    public fun ipV6(ipV6: Boolean) {
+        cdkBuilder.ipV6(ipV6)
+    }
 
-  /**
-   * @param ipV6 the value to be set.
-   */
-  public fun ipV6(ipV6: IResolvable) {
-    cdkBuilder.ipV6(ipV6)
-  }
+    /** @param ipV6 the value to be set. */
+    public fun ipV6(ipV6: IResolvable) {
+        cdkBuilder.ipV6(ipV6)
+    }
 
-  public fun build(): CfnHttpApi.Route53ConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnHttpApi.Route53ConfigurationProperty = cdkBuilder.build()
 }

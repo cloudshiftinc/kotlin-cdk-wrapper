@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.detective
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.detective.CfnOrganizationAdminProps
  * Properties for defining a `CfnOrganizationAdmin`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,15 @@ import software.amazon.awscdk.services.detective.CfnOrganizationAdminProps
  */
 @CdkDslMarker
 public class CfnOrganizationAdminPropsDsl {
-  private val cdkBuilder: CfnOrganizationAdminProps.Builder = CfnOrganizationAdminProps.builder()
+    private val cdkBuilder: CfnOrganizationAdminProps.Builder = CfnOrganizationAdminProps.builder()
 
-  /**
-   * @param accountId The AWS account identifier of the account to designate as the Detective
-   * administrator account for the organization. 
-   */
-  public fun accountId(accountId: String) {
-    cdkBuilder.accountId(accountId)
-  }
+    /**
+     * @param accountId The AWS account identifier of the account to designate as the Detective
+     *   administrator account for the organization.
+     */
+    public fun accountId(accountId: String) {
+        cdkBuilder.accountId(accountId)
+    }
 
-  public fun build(): CfnOrganizationAdminProps = cdkBuilder.build()
+    public fun build(): CfnOrganizationAdminProps = cdkBuilder.build()
 }

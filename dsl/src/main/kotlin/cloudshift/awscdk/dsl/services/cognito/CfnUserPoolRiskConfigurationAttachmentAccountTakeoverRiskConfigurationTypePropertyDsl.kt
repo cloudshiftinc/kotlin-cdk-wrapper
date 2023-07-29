@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttac
  * potential account takeover.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -64,41 +72,40 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttac
  */
 @CdkDslMarker
 public class CfnUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurationTypePropertyDsl {
-  private val cdkBuilder:
-      CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty.Builder =
-      CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty.builder()
+    private val cdkBuilder:
+        CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty.Builder =
+        CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty
+            .builder()
 
-  /**
-   * @param actions Account takeover risk configuration actions. 
-   */
-  public fun actions(actions: IResolvable) {
-    cdkBuilder.actions(actions)
-  }
+    /** @param actions Account takeover risk configuration actions. */
+    public fun actions(actions: IResolvable) {
+        cdkBuilder.actions(actions)
+    }
 
-  /**
-   * @param actions Account takeover risk configuration actions. 
-   */
-  public
-      fun actions(actions: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty) {
-    cdkBuilder.actions(actions)
-  }
+    /** @param actions Account takeover risk configuration actions. */
+    public fun actions(
+        actions: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
+    ) {
+        cdkBuilder.actions(actions)
+    }
 
-  /**
-   * @param notifyConfiguration The notify configuration used to construct email notifications.
-   */
-  public fun notifyConfiguration(notifyConfiguration: IResolvable) {
-    cdkBuilder.notifyConfiguration(notifyConfiguration)
-  }
+    /**
+     * @param notifyConfiguration The notify configuration used to construct email notifications.
+     */
+    public fun notifyConfiguration(notifyConfiguration: IResolvable) {
+        cdkBuilder.notifyConfiguration(notifyConfiguration)
+    }
 
-  /**
-   * @param notifyConfiguration The notify configuration used to construct email notifications.
-   */
-  public
-      fun notifyConfiguration(notifyConfiguration: CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty) {
-    cdkBuilder.notifyConfiguration(notifyConfiguration)
-  }
+    /**
+     * @param notifyConfiguration The notify configuration used to construct email notifications.
+     */
+    public fun notifyConfiguration(
+        notifyConfiguration: CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty
+    ) {
+        cdkBuilder.notifyConfiguration(notifyConfiguration)
+    }
 
-  public fun build():
-      CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty =
-      cdkBuilder.build()
+    public fun build():
+        CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty =
+        cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingP
  * Construction properties for `TimeBasedCanaryTrafficRouting`.
  *
  * Example:
- *
  * ```
  * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
  * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
@@ -24,22 +32,18 @@ import software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingP
  */
 @CdkDslMarker
 public class TimeBasedCanaryTrafficRoutingPropsDsl {
-  private val cdkBuilder: TimeBasedCanaryTrafficRoutingProps.Builder =
-      TimeBasedCanaryTrafficRoutingProps.builder()
+    private val cdkBuilder: TimeBasedCanaryTrafficRoutingProps.Builder =
+        TimeBasedCanaryTrafficRoutingProps.builder()
 
-  /**
-   * @param interval The amount of time between traffic shifts. 
-   */
-  public fun interval(interval: Duration) {
-    cdkBuilder.interval(interval)
-  }
+    /** @param interval The amount of time between traffic shifts. */
+    public fun interval(interval: Duration) {
+        cdkBuilder.interval(interval)
+    }
 
-  /**
-   * @param percentage The percentage to increase traffic on each traffic shift. 
-   */
-  public fun percentage(percentage: Number) {
-    cdkBuilder.percentage(percentage)
-  }
+    /** @param percentage The percentage to increase traffic on each traffic shift. */
+    public fun percentage(percentage: Number) {
+        cdkBuilder.percentage(percentage)
+    }
 
-  public fun build(): TimeBasedCanaryTrafficRoutingProps = cdkBuilder.build()
+    public fun build(): TimeBasedCanaryTrafficRoutingProps = cdkBuilder.build()
 }

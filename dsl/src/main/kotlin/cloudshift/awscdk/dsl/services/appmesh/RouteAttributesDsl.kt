@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.RouteAttributes
  * Interface with properties ncecessary to import a reusable Route.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,21 +33,17 @@ import software.amazon.awscdk.services.appmesh.RouteAttributes
  */
 @CdkDslMarker
 public class RouteAttributesDsl {
-  private val cdkBuilder: RouteAttributes.Builder = RouteAttributes.builder()
+    private val cdkBuilder: RouteAttributes.Builder = RouteAttributes.builder()
 
-  /**
-   * @param routeName The name of the Route. 
-   */
-  public fun routeName(routeName: String) {
-    cdkBuilder.routeName(routeName)
-  }
+    /** @param routeName The name of the Route. */
+    public fun routeName(routeName: String) {
+        cdkBuilder.routeName(routeName)
+    }
 
-  /**
-   * @param virtualRouter The VirtualRouter the Route belongs to. 
-   */
-  public fun virtualRouter(virtualRouter: IVirtualRouter) {
-    cdkBuilder.virtualRouter(virtualRouter)
-  }
+    /** @param virtualRouter The VirtualRouter the Route belongs to. */
+    public fun virtualRouter(virtualRouter: IVirtualRouter) {
+        cdkBuilder.virtualRouter(virtualRouter)
+    }
 
-  public fun build(): RouteAttributes = cdkBuilder.build()
+    public fun build(): RouteAttributes = cdkBuilder.build()
 }

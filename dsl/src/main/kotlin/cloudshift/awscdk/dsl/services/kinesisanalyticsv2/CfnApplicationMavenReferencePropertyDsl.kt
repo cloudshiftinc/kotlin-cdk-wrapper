@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  * You can use Maven references to specify dependency JAR files.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,29 +36,23 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationMavenReferencePropertyDsl {
-  private val cdkBuilder: CfnApplication.MavenReferenceProperty.Builder =
-      CfnApplication.MavenReferenceProperty.builder()
+    private val cdkBuilder: CfnApplication.MavenReferenceProperty.Builder =
+        CfnApplication.MavenReferenceProperty.builder()
 
-  /**
-   * @param artifactId The artifact ID of the Maven reference. 
-   */
-  public fun artifactId(artifactId: String) {
-    cdkBuilder.artifactId(artifactId)
-  }
+    /** @param artifactId The artifact ID of the Maven reference. */
+    public fun artifactId(artifactId: String) {
+        cdkBuilder.artifactId(artifactId)
+    }
 
-  /**
-   * @param groupId The group ID of the Maven reference. 
-   */
-  public fun groupId(groupId: String) {
-    cdkBuilder.groupId(groupId)
-  }
+    /** @param groupId The group ID of the Maven reference. */
+    public fun groupId(groupId: String) {
+        cdkBuilder.groupId(groupId)
+    }
 
-  /**
-   * @param version The version of the Maven reference. 
-   */
-  public fun version(version: String) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The version of the Maven reference. */
+    public fun version(version: String) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): CfnApplication.MavenReferenceProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.MavenReferenceProperty = cdkBuilder.build()
 }

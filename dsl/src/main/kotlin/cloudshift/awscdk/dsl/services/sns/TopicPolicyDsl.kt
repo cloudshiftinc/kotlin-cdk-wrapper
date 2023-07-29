@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sns
 
@@ -20,15 +29,13 @@ import software.constructs.Construct
  *
  * You almost never need to define this construct directly.
  *
- * All AWS resources that support resource policies have a method called
- * `addToResourcePolicy()`, which will automatically create a new resource
- * policy if one doesn't exist yet, otherwise it will add to the existing
- * policy.
+ * All AWS resources that support resource policies have a method called `addToResourcePolicy()`,
+ * which will automatically create a new resource policy if one doesn't exist yet, otherwise it will
+ * add to the existing policy.
  *
  * Prefer to use `addToResourcePolicy()` instead.
  *
  * Example:
- *
  * ```
  * Topic topic = new Topic(this, "Topic");
  * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "TopicPolicy")
@@ -43,57 +50,57 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class TopicPolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: TopicPolicy.Builder = TopicPolicy.Builder.create(scope, id)
+    private val cdkBuilder: TopicPolicy.Builder = TopicPolicy.Builder.create(scope, id)
 
-  private val _topics: MutableList<ITopic> = mutableListOf()
+    private val _topics: MutableList<ITopic> = mutableListOf()
 
-  /**
-   * IAM policy document to apply to topic(s).
-   *
-   * Default: empty policy document
-   *
-   * @param policyDocument IAM policy document to apply to topic(s). 
-   */
-  public fun policyDocument(policyDocument: PolicyDocumentDsl.() -> Unit = {}) {
-    val builder = PolicyDocumentDsl()
-    builder.apply(policyDocument)
-    cdkBuilder.policyDocument(builder.build())
-  }
+    /**
+     * IAM policy document to apply to topic(s).
+     *
+     * Default: empty policy document
+     *
+     * @param policyDocument IAM policy document to apply to topic(s).
+     */
+    public fun policyDocument(policyDocument: PolicyDocumentDsl.() -> Unit = {}) {
+        val builder = PolicyDocumentDsl()
+        builder.apply(policyDocument)
+        cdkBuilder.policyDocument(builder.build())
+    }
 
-  /**
-   * IAM policy document to apply to topic(s).
-   *
-   * Default: empty policy document
-   *
-   * @param policyDocument IAM policy document to apply to topic(s). 
-   */
-  public fun policyDocument(policyDocument: PolicyDocument) {
-    cdkBuilder.policyDocument(policyDocument)
-  }
+    /**
+     * IAM policy document to apply to topic(s).
+     *
+     * Default: empty policy document
+     *
+     * @param policyDocument IAM policy document to apply to topic(s).
+     */
+    public fun policyDocument(policyDocument: PolicyDocument) {
+        cdkBuilder.policyDocument(policyDocument)
+    }
 
-  /**
-   * The set of topics this policy applies to.
-   *
-   * @param topics The set of topics this policy applies to. 
-   */
-  public fun topics(vararg topics: ITopic) {
-    _topics.addAll(listOf(*topics))
-  }
+    /**
+     * The set of topics this policy applies to.
+     *
+     * @param topics The set of topics this policy applies to.
+     */
+    public fun topics(vararg topics: ITopic) {
+        _topics.addAll(listOf(*topics))
+    }
 
-  /**
-   * The set of topics this policy applies to.
-   *
-   * @param topics The set of topics this policy applies to. 
-   */
-  public fun topics(topics: Collection<ITopic>) {
-    _topics.addAll(topics)
-  }
+    /**
+     * The set of topics this policy applies to.
+     *
+     * @param topics The set of topics this policy applies to.
+     */
+    public fun topics(topics: Collection<ITopic>) {
+        _topics.addAll(topics)
+    }
 
-  public fun build(): TopicPolicy {
-    if(_topics.isNotEmpty()) cdkBuilder.topics(_topics)
-    return cdkBuilder.build()
-  }
+    public fun build(): TopicPolicy {
+        if (_topics.isNotEmpty()) cdkBuilder.topics(_topics)
+        return cdkBuilder.build()
+    }
 }

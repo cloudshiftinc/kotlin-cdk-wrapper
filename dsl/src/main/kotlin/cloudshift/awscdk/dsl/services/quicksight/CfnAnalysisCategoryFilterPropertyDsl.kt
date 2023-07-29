@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,12 +19,11 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
 /**
  * A `CategoryFilter` filters text values.
  *
- * For more information, see [Adding text
- * filters](https://docs.aws.amazon.com/quicksight/latest/user/add-a-text-filter-data-prep.html) in the
- * *Amazon QuickSight User Guide* .
+ * For more information, see
+ * [Adding text filters](https://docs.aws.amazon.com/quicksight/latest/user/add-a-text-filter-data-prep.html)
+ * in the *Amazon QuickSight User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -56,44 +64,36 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisCategoryFilterPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.CategoryFilterProperty.Builder =
-      CfnAnalysis.CategoryFilterProperty.builder()
+    private val cdkBuilder: CfnAnalysis.CategoryFilterProperty.Builder =
+        CfnAnalysis.CategoryFilterProperty.builder()
 
-  /**
-   * @param column The column that the filter is applied to. 
-   */
-  public fun column(column: IResolvable) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the filter is applied to. */
+    public fun column(column: IResolvable) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param column The column that the filter is applied to. 
-   */
-  public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the filter is applied to. */
+    public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param configuration The configuration for a `CategoryFilter` . 
-   */
-  public fun configuration(configuration: IResolvable) {
-    cdkBuilder.configuration(configuration)
-  }
+    /** @param configuration The configuration for a `CategoryFilter` . */
+    public fun configuration(configuration: IResolvable) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  /**
-   * @param configuration The configuration for a `CategoryFilter` . 
-   */
-  public fun configuration(configuration: CfnAnalysis.CategoryFilterConfigurationProperty) {
-    cdkBuilder.configuration(configuration)
-  }
+    /** @param configuration The configuration for a `CategoryFilter` . */
+    public fun configuration(configuration: CfnAnalysis.CategoryFilterConfigurationProperty) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  /**
-   * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
-   * or template. 
-   */
-  public fun filterId(filterId: String) {
-    cdkBuilder.filterId(filterId)
-  }
+    /**
+     * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
+     *   or template.
+     */
+    public fun filterId(filterId: String) {
+        cdkBuilder.filterId(filterId)
+    }
 
-  public fun build(): CfnAnalysis.CategoryFilterProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.CategoryFilterProperty = cdkBuilder.build()
 }

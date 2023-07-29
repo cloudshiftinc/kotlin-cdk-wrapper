@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnInput
  * The parent of this entity is Input.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,16 @@ import software.amazon.awscdk.services.medialive.CfnInput
  */
 @CdkDslMarker
 public class CfnInputMediaConnectFlowRequestPropertyDsl {
-  private val cdkBuilder: CfnInput.MediaConnectFlowRequestProperty.Builder =
-      CfnInput.MediaConnectFlowRequestProperty.builder()
+    private val cdkBuilder: CfnInput.MediaConnectFlowRequestProperty.Builder =
+        CfnInput.MediaConnectFlowRequestProperty.builder()
 
-  /**
-   * @param flowArn The ARN of one or two MediaConnect flows that are the sources for this
-   * MediaConnect input.
-   */
-  public fun flowArn(flowArn: String) {
-    cdkBuilder.flowArn(flowArn)
-  }
+    /**
+     * @param flowArn The ARN of one or two MediaConnect flows that are the sources for this
+     *   MediaConnect input.
+     */
+    public fun flowArn(flowArn: String) {
+        cdkBuilder.flowArn(flowArn)
+    }
 
-  public fun build(): CfnInput.MediaConnectFlowRequestProperty = cdkBuilder.build()
+    public fun build(): CfnInput.MediaConnectFlowRequestProperty = cdkBuilder.build()
 }

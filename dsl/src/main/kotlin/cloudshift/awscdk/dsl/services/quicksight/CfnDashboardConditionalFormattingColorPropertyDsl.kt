@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The formatting configuration for the color.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,36 +48,28 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardConditionalFormattingColorPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ConditionalFormattingColorProperty.Builder =
-      CfnDashboard.ConditionalFormattingColorProperty.builder()
+    private val cdkBuilder: CfnDashboard.ConditionalFormattingColorProperty.Builder =
+        CfnDashboard.ConditionalFormattingColorProperty.builder()
 
-  /**
-   * @param gradient Formatting configuration for gradient color.
-   */
-  public fun gradient(gradient: IResolvable) {
-    cdkBuilder.gradient(gradient)
-  }
+    /** @param gradient Formatting configuration for gradient color. */
+    public fun gradient(gradient: IResolvable) {
+        cdkBuilder.gradient(gradient)
+    }
 
-  /**
-   * @param gradient Formatting configuration for gradient color.
-   */
-  public fun gradient(gradient: CfnDashboard.ConditionalFormattingGradientColorProperty) {
-    cdkBuilder.gradient(gradient)
-  }
+    /** @param gradient Formatting configuration for gradient color. */
+    public fun gradient(gradient: CfnDashboard.ConditionalFormattingGradientColorProperty) {
+        cdkBuilder.gradient(gradient)
+    }
 
-  /**
-   * @param solid Formatting configuration for solid color.
-   */
-  public fun solid(solid: IResolvable) {
-    cdkBuilder.solid(solid)
-  }
+    /** @param solid Formatting configuration for solid color. */
+    public fun solid(solid: IResolvable) {
+        cdkBuilder.solid(solid)
+    }
 
-  /**
-   * @param solid Formatting configuration for solid color.
-   */
-  public fun solid(solid: CfnDashboard.ConditionalFormattingSolidColorProperty) {
-    cdkBuilder.solid(solid)
-  }
+    /** @param solid Formatting configuration for solid color. */
+    public fun solid(solid: CfnDashboard.ConditionalFormattingSolidColorProperty) {
+        cdkBuilder.solid(solid)
+    }
 
-  public fun build(): CfnDashboard.ConditionalFormattingColorProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ConditionalFormattingColorProperty = cdkBuilder.build()
 }

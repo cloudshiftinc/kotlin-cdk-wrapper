@@ -1,22 +1,30 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.triggers
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.triggers.Trigger
 import software.amazon.awscdk.triggers.TriggerFunction
 import software.amazon.awscdk.triggers.TriggerFunctionProps
 import software.amazon.awscdk.triggers.TriggerOptions
 import software.amazon.awscdk.triggers.TriggerProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object triggers {
     /**
      * Triggers an AWS Lambda function during deployment.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.triggers.*;
      * Function func = Function.Builder.create(this, "MyFunction")
@@ -34,7 +42,7 @@ public object triggers {
     public inline fun trigger(
         scope: Construct,
         id: String,
-        block: TriggerDsl.() -> Unit = {}
+        block: TriggerDsl.() -> Unit = {},
     ): Trigger {
         val builder = TriggerDsl(scope, id)
         builder.apply(block)
@@ -45,7 +53,6 @@ public object triggers {
      * Invokes an AWS Lambda function during deployment.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.triggers.*;
      * TriggerFunction.Builder.create(this, "MyTrigger")
@@ -58,7 +65,7 @@ public object triggers {
     public inline fun triggerFunction(
         scope: Construct,
         id: String,
-        block: TriggerFunctionDsl.() -> Unit = {}
+        block: TriggerFunctionDsl.() -> Unit = {},
     ): TriggerFunction {
         val builder = TriggerFunctionDsl(scope, id)
         builder.apply(block)
@@ -69,7 +76,6 @@ public object triggers {
      * Props for `InvokeFunction`.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.triggers.*;
      * TriggerFunction.Builder.create(this, "MyTrigger")
@@ -79,7 +85,9 @@ public object triggers {
      * .build();
      * ```
      */
-    public inline fun triggerFunctionProps(block: TriggerFunctionPropsDsl.() -> Unit = {}): TriggerFunctionProps {
+    public inline fun triggerFunctionProps(
+        block: TriggerFunctionPropsDsl.() -> Unit = {}
+    ): TriggerFunctionProps {
         val builder = TriggerFunctionPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -89,7 +97,6 @@ public object triggers {
      * Options for `Trigger`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -113,7 +120,6 @@ public object triggers {
      * Props for `Trigger`.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.triggers.*;
      * Function func = Function.Builder.create(this, "MyFunction")

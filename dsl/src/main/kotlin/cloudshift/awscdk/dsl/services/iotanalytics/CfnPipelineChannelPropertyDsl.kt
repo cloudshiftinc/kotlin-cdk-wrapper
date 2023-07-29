@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnPipeline
  * Determines the source of the messages to be processed.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.iotanalytics.CfnPipeline
  */
 @CdkDslMarker
 public class CfnPipelineChannelPropertyDsl {
-  private val cdkBuilder: CfnPipeline.ChannelProperty.Builder =
-      CfnPipeline.ChannelProperty.builder()
+    private val cdkBuilder: CfnPipeline.ChannelProperty.Builder =
+        CfnPipeline.ChannelProperty.builder()
 
-  /**
-   * @param channelName The name of the channel from which the messages are processed. 
-   */
-  public fun channelName(channelName: String) {
-    cdkBuilder.channelName(channelName)
-  }
+    /** @param channelName The name of the channel from which the messages are processed. */
+    public fun channelName(channelName: String) {
+        cdkBuilder.channelName(channelName)
+    }
 
-  /**
-   * @param name The name of the 'channel' activity. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the 'channel' activity. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param next The next activity in the pipeline.
-   */
-  public fun next(next: String) {
-    cdkBuilder.next(next)
-  }
+    /** @param next The next activity in the pipeline. */
+    public fun next(next: String) {
+        cdkBuilder.next(next)
+    }
 
-  public fun build(): CfnPipeline.ChannelProperty = cdkBuilder.build()
+    public fun build(): CfnPipeline.ChannelProperty = cdkBuilder.build()
 }

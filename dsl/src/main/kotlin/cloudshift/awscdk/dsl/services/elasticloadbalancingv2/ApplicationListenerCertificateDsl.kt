@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * Add certificates to a listener.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,51 +40,51 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class ApplicationListenerCertificateDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: ApplicationListenerCertificate.Builder =
-      ApplicationListenerCertificate.Builder.create(scope, id)
+    private val cdkBuilder: ApplicationListenerCertificate.Builder =
+        ApplicationListenerCertificate.Builder.create(scope, id)
 
-  private val _certificates: MutableList<IListenerCertificate> = mutableListOf()
+    private val _certificates: MutableList<IListenerCertificate> = mutableListOf()
 
-  /**
-   * Certificates to attach.
-   *
-   * Duplicates are not allowed.
-   *
-   * Default: - One of 'certificates' and 'certificateArns' is required.
-   *
-   * @param certificates Certificates to attach. 
-   */
-  public fun certificates(vararg certificates: IListenerCertificate) {
-    _certificates.addAll(listOf(*certificates))
-  }
+    /**
+     * Certificates to attach.
+     *
+     * Duplicates are not allowed.
+     *
+     * Default: - One of 'certificates' and 'certificateArns' is required.
+     *
+     * @param certificates Certificates to attach.
+     */
+    public fun certificates(vararg certificates: IListenerCertificate) {
+        _certificates.addAll(listOf(*certificates))
+    }
 
-  /**
-   * Certificates to attach.
-   *
-   * Duplicates are not allowed.
-   *
-   * Default: - One of 'certificates' and 'certificateArns' is required.
-   *
-   * @param certificates Certificates to attach. 
-   */
-  public fun certificates(certificates: Collection<IListenerCertificate>) {
-    _certificates.addAll(certificates)
-  }
+    /**
+     * Certificates to attach.
+     *
+     * Duplicates are not allowed.
+     *
+     * Default: - One of 'certificates' and 'certificateArns' is required.
+     *
+     * @param certificates Certificates to attach.
+     */
+    public fun certificates(certificates: Collection<IListenerCertificate>) {
+        _certificates.addAll(certificates)
+    }
 
-  /**
-   * The listener to attach the rule to.
-   *
-   * @param listener The listener to attach the rule to. 
-   */
-  public fun listener(listener: IApplicationListener) {
-    cdkBuilder.listener(listener)
-  }
+    /**
+     * The listener to attach the rule to.
+     *
+     * @param listener The listener to attach the rule to.
+     */
+    public fun listener(listener: IApplicationListener) {
+        cdkBuilder.listener(listener)
+    }
 
-  public fun build(): ApplicationListenerCertificate {
-    if(_certificates.isNotEmpty()) cdkBuilder.certificates(_certificates)
-    return cdkBuilder.build()
-  }
+    public fun build(): ApplicationListenerCertificate {
+        if (_certificates.isNotEmpty()) cdkBuilder.certificates(_certificates)
+        return cdkBuilder.build()
+    }
 }

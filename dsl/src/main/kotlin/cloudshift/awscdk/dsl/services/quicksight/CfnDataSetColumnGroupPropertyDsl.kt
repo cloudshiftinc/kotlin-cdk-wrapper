@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * be non-null.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,17 +43,15 @@ public class CfnDataSetColumnGroupPropertyDsl {
     private val cdkBuilder: CfnDataSet.ColumnGroupProperty.Builder =
         CfnDataSet.ColumnGroupProperty.builder()
 
-    /**
-     * @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy.
-     */
+    /** @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy. */
     public fun geoSpatialColumnGroup(geoSpatialColumnGroup: IResolvable) {
         cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup)
     }
 
-    /**
-     * @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy.
-     */
-    public fun geoSpatialColumnGroup(geoSpatialColumnGroup: CfnDataSet.GeoSpatialColumnGroupProperty) {
+    /** @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy. */
+    public fun geoSpatialColumnGroup(
+        geoSpatialColumnGroup: CfnDataSet.GeoSpatialColumnGroupProperty
+    ) {
         cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup)
     }
 

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.glue.CfnSchemaVersionProps
  * Properties for defining a `CfnSchemaVersion`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,28 +39,22 @@ import software.amazon.awscdk.services.glue.CfnSchemaVersionProps
  */
 @CdkDslMarker
 public class CfnSchemaVersionPropsDsl {
-  private val cdkBuilder: CfnSchemaVersionProps.Builder = CfnSchemaVersionProps.builder()
+    private val cdkBuilder: CfnSchemaVersionProps.Builder = CfnSchemaVersionProps.builder()
 
-  /**
-   * @param schema The schema that includes the schema version. 
-   */
-  public fun schema(schema: IResolvable) {
-    cdkBuilder.schema(schema)
-  }
+    /** @param schema The schema that includes the schema version. */
+    public fun schema(schema: IResolvable) {
+        cdkBuilder.schema(schema)
+    }
 
-  /**
-   * @param schema The schema that includes the schema version. 
-   */
-  public fun schema(schema: CfnSchemaVersion.SchemaProperty) {
-    cdkBuilder.schema(schema)
-  }
+    /** @param schema The schema that includes the schema version. */
+    public fun schema(schema: CfnSchemaVersion.SchemaProperty) {
+        cdkBuilder.schema(schema)
+    }
 
-  /**
-   * @param schemaDefinition The schema definition for the schema version. 
-   */
-  public fun schemaDefinition(schemaDefinition: String) {
-    cdkBuilder.schemaDefinition(schemaDefinition)
-  }
+    /** @param schemaDefinition The schema definition for the schema version. */
+    public fun schemaDefinition(schemaDefinition: String) {
+        cdkBuilder.schemaDefinition(schemaDefinition)
+    }
 
-  public fun build(): CfnSchemaVersionProps = cdkBuilder.build()
+    public fun build(): CfnSchemaVersionProps = cdkBuilder.build()
 }

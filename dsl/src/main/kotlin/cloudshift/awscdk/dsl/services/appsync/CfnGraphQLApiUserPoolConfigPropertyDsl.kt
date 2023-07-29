@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appsync.CfnGraphQLApi
  * Amazon Cognito user pools with your GraphQL endpoint for an AWS AppSync GraphQL API.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,41 +36,37 @@ import software.amazon.awscdk.services.appsync.CfnGraphQLApi
  */
 @CdkDslMarker
 public class CfnGraphQLApiUserPoolConfigPropertyDsl {
-  private val cdkBuilder: CfnGraphQLApi.UserPoolConfigProperty.Builder =
-      CfnGraphQLApi.UserPoolConfigProperty.builder()
+    private val cdkBuilder: CfnGraphQLApi.UserPoolConfigProperty.Builder =
+        CfnGraphQLApi.UserPoolConfigProperty.builder()
 
-  /**
-   * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito user
-   * pool app client ID.
-   * If this value isn't set, no filtering is applied.
-   */
-  public fun appIdClientRegex(appIdClientRegex: String) {
-    cdkBuilder.appIdClientRegex(appIdClientRegex)
-  }
+    /**
+     * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito user
+     *   pool app client ID. If this value isn't set, no filtering is applied.
+     */
+    public fun appIdClientRegex(appIdClientRegex: String) {
+        cdkBuilder.appIdClientRegex(appIdClientRegex)
+    }
 
-  /**
-   * @param awsRegion The AWS Region in which the user pool was created.
-   */
-  public fun awsRegion(awsRegion: String) {
-    cdkBuilder.awsRegion(awsRegion)
-  }
+    /** @param awsRegion The AWS Region in which the user pool was created. */
+    public fun awsRegion(awsRegion: String) {
+        cdkBuilder.awsRegion(awsRegion)
+    }
 
-  /**
-   * @param defaultAction The action that you want your GraphQL API to take when a request that uses
-   * Amazon Cognito user pool authentication doesn't match the Amazon Cognito user pool configuration.
-   * When specifying Amazon Cognito user pools as the default authentication, you must set the value
-   * for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders` .
-   */
-  public fun defaultAction(defaultAction: String) {
-    cdkBuilder.defaultAction(defaultAction)
-  }
+    /**
+     * @param defaultAction The action that you want your GraphQL API to take when a request that
+     *   uses Amazon Cognito user pool authentication doesn't match the Amazon Cognito user pool
+     *   configuration. When specifying Amazon Cognito user pools as the default authentication, you
+     *   must set the value for `DefaultAction` to `ALLOW` if specifying
+     *   `AdditionalAuthenticationProviders` .
+     */
+    public fun defaultAction(defaultAction: String) {
+        cdkBuilder.defaultAction(defaultAction)
+    }
 
-  /**
-   * @param userPoolId The user pool ID.
-   */
-  public fun userPoolId(userPoolId: String) {
-    cdkBuilder.userPoolId(userPoolId)
-  }
+    /** @param userPoolId The user pool ID. */
+    public fun userPoolId(userPoolId: String) {
+        cdkBuilder.userPoolId(userPoolId)
+    }
 
-  public fun build(): CfnGraphQLApi.UserPoolConfigProperty = cdkBuilder.build()
+    public fun build(): CfnGraphQLApi.UserPoolConfigProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The conditional formatting of a table row.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -64,16 +72,16 @@ public class CfnTemplateTableRowConditionalFormattingPropertyDsl {
         CfnTemplate.TableRowConditionalFormattingProperty.builder()
 
     /**
-     * @param backgroundColor The conditional formatting color (solid, gradient) of the background for
-     * a table row.
+     * @param backgroundColor The conditional formatting color (solid, gradient) of the background
+     *   for a table row.
      */
     public fun backgroundColor(backgroundColor: IResolvable) {
         cdkBuilder.backgroundColor(backgroundColor)
     }
 
     /**
-     * @param backgroundColor The conditional formatting color (solid, gradient) of the background for
-     * a table row.
+     * @param backgroundColor The conditional formatting color (solid, gradient) of the background
+     *   for a table row.
      */
     public fun backgroundColor(backgroundColor: CfnTemplate.ConditionalFormattingColorProperty) {
         cdkBuilder.backgroundColor(backgroundColor)
@@ -81,7 +89,7 @@ public class CfnTemplateTableRowConditionalFormattingPropertyDsl {
 
     /**
      * @param textColor The conditional formatting color (solid, gradient) of the text for a table
-     * row.
+     *   row.
      */
     public fun textColor(textColor: IResolvable) {
         cdkBuilder.textColor(textColor)
@@ -89,7 +97,7 @@ public class CfnTemplateTableRowConditionalFormattingPropertyDsl {
 
     /**
      * @param textColor The conditional formatting color (solid, gradient) of the text for a table
-     * row.
+     *   row.
      */
     public fun textColor(textColor: CfnTemplate.ConditionalFormattingColorProperty) {
         cdkBuilder.textColor(textColor)

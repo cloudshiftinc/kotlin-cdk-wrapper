@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The limit configuration of the visual display for an axis.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,8 +39,8 @@ public class CfnTemplateItemsLimitConfigurationPropertyDsl {
         CfnTemplate.ItemsLimitConfigurationProperty.builder()
 
     /**
-     * @param itemsLimit The limit on how many items of a field are showed in the chart.
-     * For example, the number of slices that are displayed in a pie chart.
+     * @param itemsLimit The limit on how many items of a field are showed in the chart. For
+     *   example, the number of slices that are displayed in a pie chart.
      */
     public fun itemsLimit(itemsLimit: Number) {
         cdkBuilder.itemsLimit(itemsLimit)
@@ -40,7 +48,7 @@ public class CfnTemplateItemsLimitConfigurationPropertyDsl {
 
     /**
      * @param otherCategories The `Show other` of an axis in the chart. Choose one of the following
-     * options:.
+     *   options:.
      * * `INCLUDE`
      * * `EXCLUDE`
      */

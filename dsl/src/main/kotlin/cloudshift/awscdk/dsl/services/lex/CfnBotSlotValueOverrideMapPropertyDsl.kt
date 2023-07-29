@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * object.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,29 +44,27 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotSlotValueOverrideMapPropertyDsl {
-  private val cdkBuilder: CfnBot.SlotValueOverrideMapProperty.Builder =
-      CfnBot.SlotValueOverrideMapProperty.builder()
+    private val cdkBuilder: CfnBot.SlotValueOverrideMapProperty.Builder =
+        CfnBot.SlotValueOverrideMapProperty.builder()
 
-  /**
-   * @param slotName The name of the slot.
-   */
-  public fun slotName(slotName: String) {
-    cdkBuilder.slotName(slotName)
-  }
+    /** @param slotName The name of the slot. */
+    public fun slotName(slotName: String) {
+        cdkBuilder.slotName(slotName)
+    }
 
-  /**
-   * @param slotValueOverride The SlotValueOverride object to which the slot name will be mapped.
-   */
-  public fun slotValueOverride(slotValueOverride: IResolvable) {
-    cdkBuilder.slotValueOverride(slotValueOverride)
-  }
+    /**
+     * @param slotValueOverride The SlotValueOverride object to which the slot name will be mapped.
+     */
+    public fun slotValueOverride(slotValueOverride: IResolvable) {
+        cdkBuilder.slotValueOverride(slotValueOverride)
+    }
 
-  /**
-   * @param slotValueOverride The SlotValueOverride object to which the slot name will be mapped.
-   */
-  public fun slotValueOverride(slotValueOverride: CfnBot.SlotValueOverrideProperty) {
-    cdkBuilder.slotValueOverride(slotValueOverride)
-  }
+    /**
+     * @param slotValueOverride The SlotValueOverride object to which the slot name will be mapped.
+     */
+    public fun slotValueOverride(slotValueOverride: CfnBot.SlotValueOverrideProperty) {
+        cdkBuilder.slotValueOverride(slotValueOverride)
+    }
 
-  public fun build(): CfnBot.SlotValueOverrideMapProperty = cdkBuilder.build()
+    public fun build(): CfnBot.SlotValueOverrideMapProperty = cdkBuilder.build()
 }

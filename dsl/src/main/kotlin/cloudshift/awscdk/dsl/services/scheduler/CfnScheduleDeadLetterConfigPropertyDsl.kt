@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.scheduler
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.scheduler.CfnSchedule
  * delivered to a target to the queue.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,16 @@ import software.amazon.awscdk.services.scheduler.CfnSchedule
  */
 @CdkDslMarker
 public class CfnScheduleDeadLetterConfigPropertyDsl {
-  private val cdkBuilder: CfnSchedule.DeadLetterConfigProperty.Builder =
-      CfnSchedule.DeadLetterConfigProperty.builder()
+    private val cdkBuilder: CfnSchedule.DeadLetterConfigProperty.Builder =
+        CfnSchedule.DeadLetterConfigProperty.builder()
 
-  /**
-   * @param arn The Amazon Resource Name (ARN) of the SQS queue specified as the destination for the
-   * dead-letter queue.
-   */
-  public fun arn(arn: String) {
-    cdkBuilder.arn(arn)
-  }
+    /**
+     * @param arn The Amazon Resource Name (ARN) of the SQS queue specified as the destination for
+     *   the dead-letter queue.
+     */
+    public fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+    }
 
-  public fun build(): CfnSchedule.DeadLetterConfigProperty = cdkBuilder.build()
+    public fun build(): CfnSchedule.DeadLetterConfigProperty = cdkBuilder.build()
 }

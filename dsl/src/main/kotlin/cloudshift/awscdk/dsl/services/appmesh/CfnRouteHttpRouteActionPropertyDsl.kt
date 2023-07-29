@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  * An object that represents the action to take if a match is determined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,37 +40,37 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  */
 @CdkDslMarker
 public class CfnRouteHttpRouteActionPropertyDsl {
-  private val cdkBuilder: CfnRoute.HttpRouteActionProperty.Builder =
-      CfnRoute.HttpRouteActionProperty.builder()
+    private val cdkBuilder: CfnRoute.HttpRouteActionProperty.Builder =
+        CfnRoute.HttpRouteActionProperty.builder()
 
-  private val _weightedTargets: MutableList<Any> = mutableListOf()
+    private val _weightedTargets: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param weightedTargets An object that represents the targets that traffic is routed to when a
-   * request matches the route. 
-   */
-  public fun weightedTargets(vararg weightedTargets: Any) {
-    _weightedTargets.addAll(listOf(*weightedTargets))
-  }
+    /**
+     * @param weightedTargets An object that represents the targets that traffic is routed to when a
+     *   request matches the route.
+     */
+    public fun weightedTargets(vararg weightedTargets: Any) {
+        _weightedTargets.addAll(listOf(*weightedTargets))
+    }
 
-  /**
-   * @param weightedTargets An object that represents the targets that traffic is routed to when a
-   * request matches the route. 
-   */
-  public fun weightedTargets(weightedTargets: Collection<Any>) {
-    _weightedTargets.addAll(weightedTargets)
-  }
+    /**
+     * @param weightedTargets An object that represents the targets that traffic is routed to when a
+     *   request matches the route.
+     */
+    public fun weightedTargets(weightedTargets: Collection<Any>) {
+        _weightedTargets.addAll(weightedTargets)
+    }
 
-  /**
-   * @param weightedTargets An object that represents the targets that traffic is routed to when a
-   * request matches the route. 
-   */
-  public fun weightedTargets(weightedTargets: IResolvable) {
-    cdkBuilder.weightedTargets(weightedTargets)
-  }
+    /**
+     * @param weightedTargets An object that represents the targets that traffic is routed to when a
+     *   request matches the route.
+     */
+    public fun weightedTargets(weightedTargets: IResolvable) {
+        cdkBuilder.weightedTargets(weightedTargets)
+    }
 
-  public fun build(): CfnRoute.HttpRouteActionProperty {
-    if(_weightedTargets.isNotEmpty()) cdkBuilder.weightedTargets(_weightedTargets)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnRoute.HttpRouteActionProperty {
+        if (_weightedTargets.isNotEmpty()) cdkBuilder.weightedTargets(_weightedTargets)
+        return cdkBuilder.build()
+    }
 }

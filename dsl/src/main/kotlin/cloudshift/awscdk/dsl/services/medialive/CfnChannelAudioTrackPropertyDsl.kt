@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is AudioTrackSelection.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelAudioTrackPropertyDsl {
-  private val cdkBuilder: CfnChannel.AudioTrackProperty.Builder =
-      CfnChannel.AudioTrackProperty.builder()
+    private val cdkBuilder: CfnChannel.AudioTrackProperty.Builder =
+        CfnChannel.AudioTrackProperty.builder()
 
-  /**
-   * @param track 1-based integer value that maps to a specific audio track.
-   */
-  public fun track(track: Number) {
-    cdkBuilder.track(track)
-  }
+    /** @param track 1-based integer value that maps to a specific audio track. */
+    public fun track(track: Number) {
+        cdkBuilder.track(track)
+    }
 
-  public fun build(): CfnChannel.AudioTrackProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.AudioTrackProperty = cdkBuilder.build()
 }

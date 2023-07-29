@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fms
 
@@ -18,17 +27,15 @@ import software.amazon.awscdk.services.fms.CfnPolicy
  * This is used for the policy's `IncludeMap` and `ExcludeMap` .
  *
  * You can specify account IDs, OUs, or a combination:
- *
  * * Specify account IDs by setting the key to `ACCOUNT` . For example, the following is a valid
- * map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}` .
+ *   map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}` .
  * * Specify OUs by setting the key to `ORGUNIT` . For example, the following is a valid map:
- * `{“ORGUNIT” : [“ouid111”, “ouid112”]}` .
+ *   `{“ORGUNIT” : [“ouid111”, “ouid112”]}` .
  * * Specify accounts and OUs together in a single map, separated with a comma. For example, the
- * following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORGUNIT” : [“ouid111”,
- * “ouid112”]}` .
+ *   following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORGUNIT” :
+ *   [“ouid111”, “ouid112”]}` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,43 +49,35 @@ import software.amazon.awscdk.services.fms.CfnPolicy
  */
 @CdkDslMarker
 public class CfnPolicyIEMapPropertyDsl {
-  private val cdkBuilder: CfnPolicy.IEMapProperty.Builder = CfnPolicy.IEMapProperty.builder()
+    private val cdkBuilder: CfnPolicy.IEMapProperty.Builder = CfnPolicy.IEMapProperty.builder()
 
-  private val _account: MutableList<String> = mutableListOf()
+    private val _account: MutableList<String> = mutableListOf()
 
-  private val _orgunit: MutableList<String> = mutableListOf()
+    private val _orgunit: MutableList<String> = mutableListOf()
 
-  /**
-   * @param account The account list for the map.
-   */
-  public fun account(vararg account: String) {
-    _account.addAll(listOf(*account))
-  }
+    /** @param account The account list for the map. */
+    public fun account(vararg account: String) {
+        _account.addAll(listOf(*account))
+    }
 
-  /**
-   * @param account The account list for the map.
-   */
-  public fun account(account: Collection<String>) {
-    _account.addAll(account)
-  }
+    /** @param account The account list for the map. */
+    public fun account(account: Collection<String>) {
+        _account.addAll(account)
+    }
 
-  /**
-   * @param orgunit The organizational unit list for the map.
-   */
-  public fun orgunit(vararg orgunit: String) {
-    _orgunit.addAll(listOf(*orgunit))
-  }
+    /** @param orgunit The organizational unit list for the map. */
+    public fun orgunit(vararg orgunit: String) {
+        _orgunit.addAll(listOf(*orgunit))
+    }
 
-  /**
-   * @param orgunit The organizational unit list for the map.
-   */
-  public fun orgunit(orgunit: Collection<String>) {
-    _orgunit.addAll(orgunit)
-  }
+    /** @param orgunit The organizational unit list for the map. */
+    public fun orgunit(orgunit: Collection<String>) {
+        _orgunit.addAll(orgunit)
+    }
 
-  public fun build(): CfnPolicy.IEMapProperty {
-    if(_account.isNotEmpty()) cdkBuilder.account(_account)
-    if(_orgunit.isNotEmpty()) cdkBuilder.orgunit(_orgunit)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnPolicy.IEMapProperty {
+        if (_account.isNotEmpty()) cdkBuilder.account(_account)
+        if (_orgunit.isNotEmpty()) cdkBuilder.orgunit(_orgunit)
+        return cdkBuilder.build()
+    }
 }

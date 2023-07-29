@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.waf.regional
 
@@ -13,17 +22,15 @@ import software.amazon.awscdk.services.waf.regional.CfnWebACL
  * the web requests that you want to allow, block, or count.
  *
  * For example, you might create a `Rule` that includes the following predicates:
- *
  * * An `IPSet` that causes AWS WAF to search for web requests that originate from the IP address
- * `192.0.2.44`
+ *   `192.0.2.44`
  * * A `ByteMatchSet` that causes AWS WAF to search for web requests for which the value of the
- * `User-Agent` header is `BadBot` .
+ *   `User-Agent` header is `BadBot` .
  *
  * To match the settings in this `Rule` , a request must originate from `192.0.2.44` AND include a
  * `User-Agent` header for which the value is `BadBot` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,40 +48,38 @@ import software.amazon.awscdk.services.waf.regional.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLRulePropertyDsl {
-  private val cdkBuilder: CfnWebACL.RuleProperty.Builder = CfnWebACL.RuleProperty.builder()
+    private val cdkBuilder: CfnWebACL.RuleProperty.Builder = CfnWebACL.RuleProperty.builder()
 
-  /**
-   * @param action The action that AWS WAF takes when a web request matches all conditions in the
-   * rule, such as allow, block, or count the request. 
-   */
-  public fun action(action: IResolvable) {
-    cdkBuilder.action(action)
-  }
+    /**
+     * @param action The action that AWS WAF takes when a web request matches all conditions in the
+     *   rule, such as allow, block, or count the request.
+     */
+    public fun action(action: IResolvable) {
+        cdkBuilder.action(action)
+    }
 
-  /**
-   * @param action The action that AWS WAF takes when a web request matches all conditions in the
-   * rule, such as allow, block, or count the request. 
-   */
-  public fun action(action: CfnWebACL.ActionProperty) {
-    cdkBuilder.action(action)
-  }
+    /**
+     * @param action The action that AWS WAF takes when a web request matches all conditions in the
+     *   rule, such as allow, block, or count the request.
+     */
+    public fun action(action: CfnWebACL.ActionProperty) {
+        cdkBuilder.action(action)
+    }
 
-  /**
-   * @param priority The order in which AWS WAF evaluates the rules in a web ACL. 
-   * AWS WAF evaluates rules with a lower value before rules with a higher value. The value must be
-   * a unique integer. If you have multiple rules in a web ACL, the priority numbers do not need to be
-   * consecutive.
-   */
-  public fun priority(priority: Number) {
-    cdkBuilder.priority(priority)
-  }
+    /**
+     * @param priority The order in which AWS WAF evaluates the rules in a web ACL. AWS WAF
+     *   evaluates rules with a lower value before rules with a higher value. The value must be a
+     *   unique integer. If you have multiple rules in a web ACL, the priority numbers do not need
+     *   to be consecutive.
+     */
+    public fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
+    }
 
-  /**
-   * @param ruleId The ID of an AWS WAF Regional rule to associate with a web ACL. 
-   */
-  public fun ruleId(ruleId: String) {
-    cdkBuilder.ruleId(ruleId)
-  }
+    /** @param ruleId The ID of an AWS WAF Regional rule to associate with a web ACL. */
+    public fun ruleId(ruleId: String) {
+        cdkBuilder.ruleId(ruleId)
+    }
 
-  public fun build(): CfnWebACL.RuleProperty = cdkBuilder.build()
+    public fun build(): CfnWebACL.RuleProperty = cdkBuilder.build()
 }

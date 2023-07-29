@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  * The parameters for Snowflake.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,29 +34,23 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceSnowflakeParametersPropertyDsl {
-  private val cdkBuilder: CfnDataSource.SnowflakeParametersProperty.Builder =
-      CfnDataSource.SnowflakeParametersProperty.builder()
+    private val cdkBuilder: CfnDataSource.SnowflakeParametersProperty.Builder =
+        CfnDataSource.SnowflakeParametersProperty.builder()
 
-  /**
-   * @param database Database. 
-   */
-  public fun database(database: String) {
-    cdkBuilder.database(database)
-  }
+    /** @param database Database. */
+    public fun database(database: String) {
+        cdkBuilder.database(database)
+    }
 
-  /**
-   * @param host Host. 
-   */
-  public fun host(host: String) {
-    cdkBuilder.host(host)
-  }
+    /** @param host Host. */
+    public fun host(host: String) {
+        cdkBuilder.host(host)
+    }
 
-  /**
-   * @param warehouse Warehouse. 
-   */
-  public fun warehouse(warehouse: String) {
-    cdkBuilder.warehouse(warehouse)
-  }
+    /** @param warehouse Warehouse. */
+    public fun warehouse(warehouse: String) {
+        cdkBuilder.warehouse(warehouse)
+    }
 
-  public fun build(): CfnDataSource.SnowflakeParametersProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.SnowflakeParametersProperty = cdkBuilder.build()
 }

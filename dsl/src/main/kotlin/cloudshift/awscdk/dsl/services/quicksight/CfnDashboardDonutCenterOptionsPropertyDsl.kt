@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * This option isn't available for pie charts.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,16 +34,16 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardDonutCenterOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.DonutCenterOptionsProperty.Builder =
-      CfnDashboard.DonutCenterOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.DonutCenterOptionsProperty.Builder =
+        CfnDashboard.DonutCenterOptionsProperty.builder()
 
-  /**
-   * @param labelVisibility Determines the visibility of the label in a donut chart.
-   * In the Amazon QuickSight console, this option is called `'Show total'` .
-   */
-  public fun labelVisibility(labelVisibility: String) {
-    cdkBuilder.labelVisibility(labelVisibility)
-  }
+    /**
+     * @param labelVisibility Determines the visibility of the label in a donut chart. In the Amazon
+     *   QuickSight console, this option is called `'Show total'` .
+     */
+    public fun labelVisibility(labelVisibility: String) {
+        cdkBuilder.labelVisibility(labelVisibility)
+    }
 
-  public fun build(): CfnDashboard.DonutCenterOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.DonutCenterOptionsProperty = cdkBuilder.build()
 }

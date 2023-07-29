@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.rds.ProcessorFeatures
  * The processor features.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,21 +31,17 @@ import software.amazon.awscdk.services.rds.ProcessorFeatures
  */
 @CdkDslMarker
 public class ProcessorFeaturesDsl {
-  private val cdkBuilder: ProcessorFeatures.Builder = ProcessorFeatures.builder()
+    private val cdkBuilder: ProcessorFeatures.Builder = ProcessorFeatures.builder()
 
-  /**
-   * @param coreCount The number of CPU core.
-   */
-  public fun coreCount(coreCount: Number) {
-    cdkBuilder.coreCount(coreCount)
-  }
+    /** @param coreCount The number of CPU core. */
+    public fun coreCount(coreCount: Number) {
+        cdkBuilder.coreCount(coreCount)
+    }
 
-  /**
-   * @param threadsPerCore The number of threads per core.
-   */
-  public fun threadsPerCore(threadsPerCore: Number) {
-    cdkBuilder.threadsPerCore(threadsPerCore)
-  }
+    /** @param threadsPerCore The number of threads per core. */
+    public fun threadsPerCore(threadsPerCore: Number) {
+        cdkBuilder.threadsPerCore(threadsPerCore)
+    }
 
-  public fun build(): ProcessorFeatures = cdkBuilder.build()
+    public fun build(): ProcessorFeatures = cdkBuilder.build()
 }

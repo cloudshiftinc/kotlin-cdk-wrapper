@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * be non-null.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -62,50 +70,38 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  */
 @CdkDslMarker
 public class CfnDataSetPhysicalTablePropertyDsl {
-  private val cdkBuilder: CfnDataSet.PhysicalTableProperty.Builder =
-      CfnDataSet.PhysicalTableProperty.builder()
+    private val cdkBuilder: CfnDataSet.PhysicalTableProperty.Builder =
+        CfnDataSet.PhysicalTableProperty.builder()
 
-  /**
-   * @param customSql A physical table type built from the results of the custom SQL query.
-   */
-  public fun customSql(customSql: IResolvable) {
-    cdkBuilder.customSql(customSql)
-  }
+    /** @param customSql A physical table type built from the results of the custom SQL query. */
+    public fun customSql(customSql: IResolvable) {
+        cdkBuilder.customSql(customSql)
+    }
 
-  /**
-   * @param customSql A physical table type built from the results of the custom SQL query.
-   */
-  public fun customSql(customSql: CfnDataSet.CustomSqlProperty) {
-    cdkBuilder.customSql(customSql)
-  }
+    /** @param customSql A physical table type built from the results of the custom SQL query. */
+    public fun customSql(customSql: CfnDataSet.CustomSqlProperty) {
+        cdkBuilder.customSql(customSql)
+    }
 
-  /**
-   * @param relationalTable A physical table type for relational data sources.
-   */
-  public fun relationalTable(relationalTable: IResolvable) {
-    cdkBuilder.relationalTable(relationalTable)
-  }
+    /** @param relationalTable A physical table type for relational data sources. */
+    public fun relationalTable(relationalTable: IResolvable) {
+        cdkBuilder.relationalTable(relationalTable)
+    }
 
-  /**
-   * @param relationalTable A physical table type for relational data sources.
-   */
-  public fun relationalTable(relationalTable: CfnDataSet.RelationalTableProperty) {
-    cdkBuilder.relationalTable(relationalTable)
-  }
+    /** @param relationalTable A physical table type for relational data sources. */
+    public fun relationalTable(relationalTable: CfnDataSet.RelationalTableProperty) {
+        cdkBuilder.relationalTable(relationalTable)
+    }
 
-  /**
-   * @param s3Source A physical table type for as S3 data source.
-   */
-  public fun s3Source(s3Source: IResolvable) {
-    cdkBuilder.s3Source(s3Source)
-  }
+    /** @param s3Source A physical table type for as S3 data source. */
+    public fun s3Source(s3Source: IResolvable) {
+        cdkBuilder.s3Source(s3Source)
+    }
 
-  /**
-   * @param s3Source A physical table type for as S3 data source.
-   */
-  public fun s3Source(s3Source: CfnDataSet.S3SourceProperty) {
-    cdkBuilder.s3Source(s3Source)
-  }
+    /** @param s3Source A physical table type for as S3 data source. */
+    public fun s3Source(s3Source: CfnDataSet.S3SourceProperty) {
+        cdkBuilder.s3Source(s3Source)
+    }
 
-  public fun build(): CfnDataSet.PhysicalTableProperty = cdkBuilder.build()
+    public fun build(): CfnDataSet.PhysicalTableProperty = cdkBuilder.build()
 }

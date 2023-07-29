@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.route53.CfnHostedZone
  * If you don't want to specify a comment, omit both the `HostedZoneConfig` and `Comment` elements.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.route53.CfnHostedZone
  */
 @CdkDslMarker
 public class CfnHostedZoneHostedZoneConfigPropertyDsl {
-  private val cdkBuilder: CfnHostedZone.HostedZoneConfigProperty.Builder =
-      CfnHostedZone.HostedZoneConfigProperty.builder()
+    private val cdkBuilder: CfnHostedZone.HostedZoneConfigProperty.Builder =
+        CfnHostedZone.HostedZoneConfigProperty.builder()
 
-  /**
-   * @param comment Any comments that you want to include about the hosted zone.
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /** @param comment Any comments that you want to include about the hosted zone. */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  public fun build(): CfnHostedZone.HostedZoneConfigProperty = cdkBuilder.build()
+    public fun build(): CfnHostedZone.HostedZoneConfigProperty = cdkBuilder.build()
 }

@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
+import software.constructs.Construct
 
 /**
  * Provisions a wireless gateway.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,9 +54,10 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnWirelessGatewayDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
-    private val cdkBuilder: CfnWirelessGateway.Builder = CfnWirelessGateway.Builder.create(scope, id)
+    private val cdkBuilder: CfnWirelessGateway.Builder =
+        CfnWirelessGateway.Builder.create(scope, id)
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
@@ -58,6 +67,7 @@ public class CfnWirelessGatewayDsl(
      * The maximum length is 2048 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-description)
+     *
      * @param description The description of the new resource.
      */
     public fun description(description: String) {
@@ -68,6 +78,7 @@ public class CfnWirelessGatewayDsl(
      * The date and time when the most recent uplink was received.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lastuplinkreceivedat)
+     *
      * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
      */
     public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
@@ -78,6 +89,7 @@ public class CfnWirelessGatewayDsl(
      * The gateway configuration information to use to create the wireless gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lorawan)
+     *
      * @param loRaWan The gateway configuration information to use to create the wireless gateway.
      */
     public fun loRaWan(loRaWan: IResolvable) {
@@ -88,6 +100,7 @@ public class CfnWirelessGatewayDsl(
      * The gateway configuration information to use to create the wireless gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lorawan)
+     *
      * @param loRaWan The gateway configuration information to use to create the wireless gateway.
      */
     public fun loRaWan(loRaWan: CfnWirelessGateway.LoRaWANGatewayProperty) {
@@ -98,6 +111,7 @@ public class CfnWirelessGatewayDsl(
      * The name of the new resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-name)
+     *
      * @param name The name of the new resource.
      */
     public fun name(name: String) {
@@ -110,6 +124,7 @@ public class CfnWirelessGatewayDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -122,6 +137,7 @@ public class CfnWirelessGatewayDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: Collection<CfnTag>) {
@@ -132,6 +148,7 @@ public class CfnWirelessGatewayDsl(
      * The ARN of the thing to associate with the wireless gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-thingarn)
+     *
      * @param thingArn The ARN of the thing to associate with the wireless gateway.
      */
     public fun thingArn(thingArn: String) {
@@ -144,6 +161,7 @@ public class CfnWirelessGatewayDsl(
      * The value is empty if a thing isn't associated with the gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-thingname)
+     *
      * @param thingName The name of the thing associated with the wireless gateway.
      */
     public fun thingName(thingName: String) {

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling
 
@@ -13,12 +22,11 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  * Use this structure to specify the launch templates and instance types (overrides) for a mixed
  * instances policy.
  *
- * `LaunchTemplate` is a property of the [AWS::AutoScaling::AutoScalingGroup
- * MixedInstancesPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.html)
+ * `LaunchTemplate` is a property of the
+ * [AWS::AutoScaling::AutoScalingGroup MixedInstancesPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.html)
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -100,52 +108,49 @@ import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
  */
 @CdkDslMarker
 public class CfnAutoScalingGroupLaunchTemplatePropertyDsl {
-  private val cdkBuilder: CfnAutoScalingGroup.LaunchTemplateProperty.Builder =
-      CfnAutoScalingGroup.LaunchTemplateProperty.builder()
+    private val cdkBuilder: CfnAutoScalingGroup.LaunchTemplateProperty.Builder =
+        CfnAutoScalingGroup.LaunchTemplateProperty.builder()
 
-  private val _overrides: MutableList<Any> = mutableListOf()
+    private val _overrides: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param launchTemplateSpecification The launch template. 
-   */
-  public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-    cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
-  }
+    /** @param launchTemplateSpecification The launch template. */
+    public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
+    }
 
-  /**
-   * @param launchTemplateSpecification The launch template. 
-   */
-  public
-      fun launchTemplateSpecification(launchTemplateSpecification: CfnAutoScalingGroup.LaunchTemplateSpecificationProperty) {
-    cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
-  }
+    /** @param launchTemplateSpecification The launch template. */
+    public fun launchTemplateSpecification(
+        launchTemplateSpecification: CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
+    ) {
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification)
+    }
 
-  /**
-   * @param overrides Any properties that you specify override the same properties in the launch
-   * template.
-   */
-  public fun overrides(vararg overrides: Any) {
-    _overrides.addAll(listOf(*overrides))
-  }
+    /**
+     * @param overrides Any properties that you specify override the same properties in the launch
+     *   template.
+     */
+    public fun overrides(vararg overrides: Any) {
+        _overrides.addAll(listOf(*overrides))
+    }
 
-  /**
-   * @param overrides Any properties that you specify override the same properties in the launch
-   * template.
-   */
-  public fun overrides(overrides: Collection<Any>) {
-    _overrides.addAll(overrides)
-  }
+    /**
+     * @param overrides Any properties that you specify override the same properties in the launch
+     *   template.
+     */
+    public fun overrides(overrides: Collection<Any>) {
+        _overrides.addAll(overrides)
+    }
 
-  /**
-   * @param overrides Any properties that you specify override the same properties in the launch
-   * template.
-   */
-  public fun overrides(overrides: IResolvable) {
-    cdkBuilder.overrides(overrides)
-  }
+    /**
+     * @param overrides Any properties that you specify override the same properties in the launch
+     *   template.
+     */
+    public fun overrides(overrides: IResolvable) {
+        cdkBuilder.overrides(overrides)
+    }
 
-  public fun build(): CfnAutoScalingGroup.LaunchTemplateProperty {
-    if(_overrides.isNotEmpty()) cdkBuilder.overrides(_overrides)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAutoScalingGroup.LaunchTemplateProperty {
+        if (_overrides.isNotEmpty()) cdkBuilder.overrides(_overrides)
+        return cdkBuilder.build()
+    }
 }

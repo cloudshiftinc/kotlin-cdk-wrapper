@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes
  * Unterface with properties necessary to import a reusable VirtualGateway.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,21 +33,17 @@ import software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes
  */
 @CdkDslMarker
 public class VirtualGatewayAttributesDsl {
-  private val cdkBuilder: VirtualGatewayAttributes.Builder = VirtualGatewayAttributes.builder()
+    private val cdkBuilder: VirtualGatewayAttributes.Builder = VirtualGatewayAttributes.builder()
 
-  /**
-   * @param mesh The Mesh that the VirtualGateway belongs to. 
-   */
-  public fun mesh(mesh: IMesh) {
-    cdkBuilder.mesh(mesh)
-  }
+    /** @param mesh The Mesh that the VirtualGateway belongs to. */
+    public fun mesh(mesh: IMesh) {
+        cdkBuilder.mesh(mesh)
+    }
 
-  /**
-   * @param virtualGatewayName The name of the VirtualGateway. 
-   */
-  public fun virtualGatewayName(virtualGatewayName: String) {
-    cdkBuilder.virtualGatewayName(virtualGatewayName)
-  }
+    /** @param virtualGatewayName The name of the VirtualGateway. */
+    public fun virtualGatewayName(virtualGatewayName: String) {
+        cdkBuilder.virtualGatewayName(virtualGatewayName)
+    }
 
-  public fun build(): VirtualGatewayAttributes = cdkBuilder.build()
+    public fun build(): VirtualGatewayAttributes = cdkBuilder.build()
 }

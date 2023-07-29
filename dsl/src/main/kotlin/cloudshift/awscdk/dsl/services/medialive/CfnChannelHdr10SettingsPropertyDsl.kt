@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * and VideoSelectorColorSpaceSettings (for color space settings in the input).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,24 +36,25 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelHdr10SettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.Hdr10SettingsProperty.Builder =
-      CfnChannel.Hdr10SettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.Hdr10SettingsProperty.Builder =
+        CfnChannel.Hdr10SettingsProperty.builder()
 
-  /**
-   * @param maxCll Maximum Content Light Level An integer metadata value defining the maximum light
-   * level, in nits, of any single pixel within an encoded HDR video stream or file.
-   */
-  public fun maxCll(maxCll: Number) {
-    cdkBuilder.maxCll(maxCll)
-  }
+    /**
+     * @param maxCll Maximum Content Light Level An integer metadata value defining the maximum
+     *   light level, in nits, of any single pixel within an encoded HDR video stream or file.
+     */
+    public fun maxCll(maxCll: Number) {
+        cdkBuilder.maxCll(maxCll)
+    }
 
-  /**
-   * @param maxFall Maximum Frame Average Light Level An integer metadata value defining the maximum
-   * average light level, in nits, for any single frame within an encoded HDR video stream or file.
-   */
-  public fun maxFall(maxFall: Number) {
-    cdkBuilder.maxFall(maxFall)
-  }
+    /**
+     * @param maxFall Maximum Frame Average Light Level An integer metadata value defining the
+     *   maximum average light level, in nits, for any single frame within an encoded HDR video
+     *   stream or file.
+     */
+    public fun maxFall(maxFall: Number) {
+        cdkBuilder.maxFall(maxFall)
+    }
 
-  public fun build(): CfnChannel.Hdr10SettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.Hdr10SettingsProperty = cdkBuilder.build()
 }

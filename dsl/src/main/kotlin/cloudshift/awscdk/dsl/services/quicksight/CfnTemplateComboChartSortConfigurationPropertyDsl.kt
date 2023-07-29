@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The sort configuration of a `ComboChartVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -92,7 +100,7 @@ public class CfnTemplateComboChartSortConfigurationPropertyDsl {
 
     /**
      * @param categoryItemsLimit The item limit configuration for the category field well of a combo
-     * chart.
+     *   chart.
      */
     public fun categoryItemsLimit(categoryItemsLimit: IResolvable) {
         cdkBuilder.categoryItemsLimit(categoryItemsLimit)
@@ -100,29 +108,23 @@ public class CfnTemplateComboChartSortConfigurationPropertyDsl {
 
     /**
      * @param categoryItemsLimit The item limit configuration for the category field well of a combo
-     * chart.
+     *   chart.
      */
     public fun categoryItemsLimit(categoryItemsLimit: CfnTemplate.ItemsLimitConfigurationProperty) {
         cdkBuilder.categoryItemsLimit(categoryItemsLimit)
     }
 
-    /**
-     * @param categorySort The sort configuration of the category field well in a combo chart.
-     */
+    /** @param categorySort The sort configuration of the category field well in a combo chart. */
     public fun categorySort(vararg categorySort: Any) {
         _categorySort.addAll(listOf(*categorySort))
     }
 
-    /**
-     * @param categorySort The sort configuration of the category field well in a combo chart.
-     */
+    /** @param categorySort The sort configuration of the category field well in a combo chart. */
     public fun categorySort(categorySort: Collection<Any>) {
         _categorySort.addAll(categorySort)
     }
 
-    /**
-     * @param categorySort The sort configuration of the category field well in a combo chart.
-     */
+    /** @param categorySort The sort configuration of the category field well in a combo chart. */
     public fun categorySort(categorySort: IResolvable) {
         cdkBuilder.categorySort(categorySort)
     }
@@ -141,23 +143,17 @@ public class CfnTemplateComboChartSortConfigurationPropertyDsl {
         cdkBuilder.colorItemsLimit(colorItemsLimit)
     }
 
-    /**
-     * @param colorSort The sort configuration of the color field well in a combo chart.
-     */
+    /** @param colorSort The sort configuration of the color field well in a combo chart. */
     public fun colorSort(vararg colorSort: Any) {
         _colorSort.addAll(listOf(*colorSort))
     }
 
-    /**
-     * @param colorSort The sort configuration of the color field well in a combo chart.
-     */
+    /** @param colorSort The sort configuration of the color field well in a combo chart. */
     public fun colorSort(colorSort: Collection<Any>) {
         _colorSort.addAll(colorSort)
     }
 
-    /**
-     * @param colorSort The sort configuration of the color field well in a combo chart.
-     */
+    /** @param colorSort The sort configuration of the color field well in a combo chart. */
     public fun colorSort(colorSort: IResolvable) {
         cdkBuilder.colorSort(colorSort)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is AudioSelectorSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,21 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelAudioHlsRenditionSelectionPropertyDsl {
-  private val cdkBuilder: CfnChannel.AudioHlsRenditionSelectionProperty.Builder =
-      CfnChannel.AudioHlsRenditionSelectionProperty.builder()
+    private val cdkBuilder: CfnChannel.AudioHlsRenditionSelectionProperty.Builder =
+        CfnChannel.AudioHlsRenditionSelectionProperty.builder()
 
-  /**
-   * @param groupId Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio
-   * rendition.
-   */
-  public fun groupId(groupId: String) {
-    cdkBuilder.groupId(groupId)
-  }
+    /**
+     * @param groupId Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio
+     *   rendition.
+     */
+    public fun groupId(groupId: String) {
+        cdkBuilder.groupId(groupId)
+    }
 
-  /**
-   * @param name Specifies the NAME in the #EXT-X-MEDIA tag of the target HLS audio rendition.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name Specifies the NAME in the #EXT-X-MEDIA tag of the target HLS audio rendition. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnChannel.AudioHlsRenditionSelectionProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.AudioHlsRenditionSelectionProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudtrail
 
@@ -18,7 +27,6 @@ import software.constructs.Construct
  * Contains information about a returned CloudTrail channel.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,100 +49,106 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnChannelDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnChannel.Builder = CfnChannel.Builder.create(scope, id)
+    private val cdkBuilder: CfnChannel.Builder = CfnChannel.Builder.create(scope, id)
 
-  private val _destinations: MutableList<Any> = mutableListOf()
+    private val _destinations: MutableList<Any> = mutableListOf()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * One or more event data stores to which events arriving through a channel will be logged.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-destinations)
-   * @param destinations One or more event data stores to which events arriving through a channel
-   * will be logged. 
-   */
-  public fun destinations(vararg destinations: Any) {
-    _destinations.addAll(listOf(*destinations))
-  }
+    /**
+     * One or more event data stores to which events arriving through a channel will be logged.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-destinations)
+     *
+     * @param destinations One or more event data stores to which events arriving through a channel
+     *   will be logged.
+     */
+    public fun destinations(vararg destinations: Any) {
+        _destinations.addAll(listOf(*destinations))
+    }
 
-  /**
-   * One or more event data stores to which events arriving through a channel will be logged.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-destinations)
-   * @param destinations One or more event data stores to which events arriving through a channel
-   * will be logged. 
-   */
-  public fun destinations(destinations: Collection<Any>) {
-    _destinations.addAll(destinations)
-  }
+    /**
+     * One or more event data stores to which events arriving through a channel will be logged.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-destinations)
+     *
+     * @param destinations One or more event data stores to which events arriving through a channel
+     *   will be logged.
+     */
+    public fun destinations(destinations: Collection<Any>) {
+        _destinations.addAll(destinations)
+    }
 
-  /**
-   * One or more event data stores to which events arriving through a channel will be logged.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-destinations)
-   * @param destinations One or more event data stores to which events arriving through a channel
-   * will be logged. 
-   */
-  public fun destinations(destinations: IResolvable) {
-    cdkBuilder.destinations(destinations)
-  }
+    /**
+     * One or more event data stores to which events arriving through a channel will be logged.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-destinations)
+     *
+     * @param destinations One or more event data stores to which events arriving through a channel
+     *   will be logged.
+     */
+    public fun destinations(destinations: IResolvable) {
+        cdkBuilder.destinations(destinations)
+    }
 
-  /**
-   * The name of the channel.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-name)
-   * @param name The name of the channel. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-name)
+     *
+     * @param name The name of the channel.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * The name of the partner or external event source.
-   *
-   * You cannot change this name after you create the channel. A maximum of one channel is allowed
-   * per source.
-   *
-   * A source can be either `Custom` for all valid non- AWS events, or the name of a partner event
-   * source. For information about the source names for available partners, see [Additional information
-   * about integration
-   * partners](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store-integration.html#cloudtrail-lake-partner-information)
-   * in the CloudTrail User Guide.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-source)
-   * @param source The name of the partner or external event source. 
-   */
-  public fun source(source: String) {
-    cdkBuilder.source(source)
-  }
+    /**
+     * The name of the partner or external event source.
+     *
+     * You cannot change this name after you create the channel. A maximum of one channel is allowed
+     * per source.
+     *
+     * A source can be either `Custom` for all valid non- AWS events, or the name of a partner event
+     * source. For information about the source names for available partners, see
+     * [Additional information about integration partners](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store-integration.html#cloudtrail-lake-partner-information)
+     * in the CloudTrail User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-source)
+     *
+     * @param source The name of the partner or external event source.
+     */
+    public fun source(source: String) {
+        cdkBuilder.source(source)
+    }
 
-  /**
-   * A list of tags.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-tags)
-   * @param tags A list of tags. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * A list of tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-tags)
+     *
+     * @param tags A list of tags.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * A list of tags.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-tags)
-   * @param tags A list of tags. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * A list of tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html#cfn-cloudtrail-channel-tags)
+     *
+     * @param tags A list of tags.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnChannel {
-    if(_destinations.isNotEmpty()) cdkBuilder.destinations(_destinations)
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnChannel {
+        if (_destinations.isNotEmpty()) cdkBuilder.destinations(_destinations)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

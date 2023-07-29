@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.MessageLanguage
 import software.amazon.awscdk.services.servicecatalog.Portfolio
 import software.amazon.awscdk.services.servicecatalog.TagOptions
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * A Service Catalog portfolio.
  *
  * Example:
- *
  * ```
  * Portfolio.Builder.create(this, "Portfolio")
  * .displayName("MyPortfolio")
@@ -24,7 +32,7 @@ import kotlin.String
 @CdkDslMarker
 public class PortfolioDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: Portfolio.Builder = Portfolio.Builder.create(scope, id)
 
@@ -51,8 +59,7 @@ public class PortfolioDsl(
     /**
      * The message language.
      *
-     * Controls language for
-     * status logging and errors.
+     * Controls language for status logging and errors.
      *
      * Default: - English
      *

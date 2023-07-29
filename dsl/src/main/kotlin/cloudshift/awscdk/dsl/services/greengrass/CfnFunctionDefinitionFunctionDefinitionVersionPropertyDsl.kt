@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -12,12 +21,10 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
 /**
  * A function definition version contains a list of functions.
  *
- *
  * After you create a function definition version that contains the functions you want to deploy,
  * you must add it to your group version. For more information, see
  * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
  * .
- *
  *
  * In an AWS CloudFormation template, `FunctionDefinitionVersion` is the property type of the
  * `InitialVersion` property in the
@@ -25,7 +32,6 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -78,52 +84,44 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
  */
 @CdkDslMarker
 public class CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl {
-  private val cdkBuilder: CfnFunctionDefinition.FunctionDefinitionVersionProperty.Builder =
-      CfnFunctionDefinition.FunctionDefinitionVersionProperty.builder()
+    private val cdkBuilder: CfnFunctionDefinition.FunctionDefinitionVersionProperty.Builder =
+        CfnFunctionDefinition.FunctionDefinitionVersionProperty.builder()
 
-  private val _functions: MutableList<Any> = mutableListOf()
+    private val _functions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param defaultConfig The default configuration that applies to all Lambda functions in the
-   * group.
-   * Individual Lambda functions can override these settings.
-   */
-  public fun defaultConfig(defaultConfig: IResolvable) {
-    cdkBuilder.defaultConfig(defaultConfig)
-  }
+    /**
+     * @param defaultConfig The default configuration that applies to all Lambda functions in the
+     *   group. Individual Lambda functions can override these settings.
+     */
+    public fun defaultConfig(defaultConfig: IResolvable) {
+        cdkBuilder.defaultConfig(defaultConfig)
+    }
 
-  /**
-   * @param defaultConfig The default configuration that applies to all Lambda functions in the
-   * group.
-   * Individual Lambda functions can override these settings.
-   */
-  public fun defaultConfig(defaultConfig: CfnFunctionDefinition.DefaultConfigProperty) {
-    cdkBuilder.defaultConfig(defaultConfig)
-  }
+    /**
+     * @param defaultConfig The default configuration that applies to all Lambda functions in the
+     *   group. Individual Lambda functions can override these settings.
+     */
+    public fun defaultConfig(defaultConfig: CfnFunctionDefinition.DefaultConfigProperty) {
+        cdkBuilder.defaultConfig(defaultConfig)
+    }
 
-  /**
-   * @param functions The functions in this version. 
-   */
-  public fun functions(vararg functions: Any) {
-    _functions.addAll(listOf(*functions))
-  }
+    /** @param functions The functions in this version. */
+    public fun functions(vararg functions: Any) {
+        _functions.addAll(listOf(*functions))
+    }
 
-  /**
-   * @param functions The functions in this version. 
-   */
-  public fun functions(functions: Collection<Any>) {
-    _functions.addAll(functions)
-  }
+    /** @param functions The functions in this version. */
+    public fun functions(functions: Collection<Any>) {
+        _functions.addAll(functions)
+    }
 
-  /**
-   * @param functions The functions in this version. 
-   */
-  public fun functions(functions: IResolvable) {
-    cdkBuilder.functions(functions)
-  }
+    /** @param functions The functions in this version. */
+    public fun functions(functions: IResolvable) {
+        cdkBuilder.functions(functions)
+    }
 
-  public fun build(): CfnFunctionDefinition.FunctionDefinitionVersionProperty {
-    if(_functions.isNotEmpty()) cdkBuilder.functions(_functions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFunctionDefinition.FunctionDefinitionVersionProperty {
+        if (_functions.isNotEmpty()) cdkBuilder.functions(_functions)
+        return cdkBuilder.build()
+    }
 }

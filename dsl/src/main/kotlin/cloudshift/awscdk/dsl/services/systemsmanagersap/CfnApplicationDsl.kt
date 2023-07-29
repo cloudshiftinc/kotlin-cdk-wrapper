@@ -1,24 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.systemsmanagersap
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.systemsmanagersap.CfnApplication
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.systemsmanagersap.CfnApplication
+import software.constructs.Construct
 
 /**
  * An SAP application registered with AWS Systems Manager for SAP.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,7 +55,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnApplicationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnApplication.Builder = CfnApplication.Builder.create(scope, id)
 
@@ -61,6 +69,7 @@ public class CfnApplicationDsl(
      * The ID of the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-applicationid)
+     *
      * @param applicationId The ID of the application.
      */
     public fun applicationId(applicationId: String) {
@@ -71,6 +80,7 @@ public class CfnApplicationDsl(
      * The type of the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-applicationtype)
+     *
      * @param applicationType The type of the application.
      */
     public fun applicationType(applicationType: String) {
@@ -81,6 +91,7 @@ public class CfnApplicationDsl(
      * The credentials of the SAP application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
+     *
      * @param credentials The credentials of the SAP application.
      */
     public fun credentials(vararg credentials: Any) {
@@ -91,6 +102,7 @@ public class CfnApplicationDsl(
      * The credentials of the SAP application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
+     *
      * @param credentials The credentials of the SAP application.
      */
     public fun credentials(credentials: Collection<Any>) {
@@ -101,6 +113,7 @@ public class CfnApplicationDsl(
      * The credentials of the SAP application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
+     *
      * @param credentials The credentials of the SAP application.
      */
     public fun credentials(credentials: IResolvable) {
@@ -111,6 +124,7 @@ public class CfnApplicationDsl(
      * The Amazon EC2 instances on which your SAP application is running.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-instances)
+     *
      * @param instances The Amazon EC2 instances on which your SAP application is running.
      */
     public fun instances(vararg instances: String) {
@@ -121,6 +135,7 @@ public class CfnApplicationDsl(
      * The Amazon EC2 instances on which your SAP application is running.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-instances)
+     *
      * @param instances The Amazon EC2 instances on which your SAP application is running.
      */
     public fun instances(instances: Collection<String>) {
@@ -131,6 +146,7 @@ public class CfnApplicationDsl(
      * The SAP instance number of the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-sapinstancenumber)
+     *
      * @param sapInstanceNumber The SAP instance number of the application.
      */
     public fun sapInstanceNumber(sapInstanceNumber: String) {
@@ -141,6 +157,7 @@ public class CfnApplicationDsl(
      * The System ID of the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-sid)
+     *
      * @param sid The System ID of the application.
      */
     public fun sid(sid: String) {
@@ -151,6 +168,7 @@ public class CfnApplicationDsl(
      * The tags on the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-tags)
+     *
      * @param tags The tags on the application.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -161,6 +179,7 @@ public class CfnApplicationDsl(
      * The tags on the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-tags)
+     *
      * @param tags The tags on the application.
      */
     public fun tags(tags: Collection<CfnTag>) {

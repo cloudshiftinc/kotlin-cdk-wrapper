@@ -1,18 +1,17 @@
 package cloudshift.gradle.release
 
 import cloudshift.gradle.release.GitService.GitOutput
+import java.io.ByteArrayOutputStream
+import java.io.File
+import javax.inject.Inject
 import org.gradle.api.GradleException
 import org.gradle.api.logging.Logging
 import org.gradle.api.services.BuildService
 import org.gradle.api.services.BuildServiceParameters
 import org.gradle.process.ExecOperations
-import java.io.ByteArrayOutputStream
-import java.io.File
-import javax.inject.Inject
 
-internal abstract class GitServiceImpl
-@Inject
-constructor(private val execOps: ExecOperations) : BuildService<BuildServiceParameters.None>, GitService {
+internal abstract class GitServiceImpl @Inject constructor(private val execOps: ExecOperations) :
+    BuildService<BuildServiceParameters.None>, GitService {
     private val logger = Logging.getLogger(GitServiceImpl::class.java)
 
     private object GitCommands {
@@ -49,8 +48,8 @@ constructor(private val execOps: ExecOperations) : BuildService<BuildServicePara
         git("push", "--porcelain")
     }
 
-
-    private fun git(vararg args: String, block: (GitDsl).() -> Unit = {}) = git(args.toList(), block)
+    private fun git(vararg args: String, block: (GitDsl).() -> Unit = {}) =
+        git(args.toList(), block)
 
     private fun git(args: List<String>, block: (GitDsl).() -> Unit = {}): GitOutput {
         val dsl = GitDsl()
@@ -63,12 +62,13 @@ constructor(private val execOps: ExecOperations) : BuildService<BuildServicePara
         logger.info("Executing $commandLine")
         val stdOutput = ByteArrayOutputStream()
         val stdError = ByteArrayOutputStream()
-        val execResult = execOps.exec {
-            commandLine(commandLine)
-            standardOutput = stdOutput
-            errorOutput = stdError
-            isIgnoreExitValue = true
-        }
+        val execResult =
+            execOps.exec {
+                commandLine(commandLine)
+                standardOutput = stdOutput
+                errorOutput = stdError
+                isIgnoreExitValue = true
+            }
         logger.info("Exit code: ${execResult.exitValue}")
 
         return when (execResult.exitValue) {
@@ -95,9 +95,9 @@ constructor(private val execOps: ExecOperations) : BuildService<BuildServicePara
 
     private class GitDsl {
         val args = mutableListOf<String>()
+
         fun args(vararg args: String) {
             this.args.addAll(args.toList())
         }
     }
-
 }

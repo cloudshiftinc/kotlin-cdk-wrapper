@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
  * The maximum duration that you can set for an inference experiment is 30 days.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,19 @@ import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
  */
 @CdkDslMarker
 public class CfnInferenceExperimentInferenceExperimentSchedulePropertyDsl {
-  private val cdkBuilder: CfnInferenceExperiment.InferenceExperimentScheduleProperty.Builder =
-      CfnInferenceExperiment.InferenceExperimentScheduleProperty.builder()
+    private val cdkBuilder: CfnInferenceExperiment.InferenceExperimentScheduleProperty.Builder =
+        CfnInferenceExperiment.InferenceExperimentScheduleProperty.builder()
 
-  /**
-   * @param endTime The timestamp at which the inference experiment ended or will end.
-   */
-  public fun endTime(endTime: String) {
-    cdkBuilder.endTime(endTime)
-  }
+    /** @param endTime The timestamp at which the inference experiment ended or will end. */
+    public fun endTime(endTime: String) {
+        cdkBuilder.endTime(endTime)
+    }
 
-  /**
-   * @param startTime The timestamp at which the inference experiment started or will start.
-   */
-  public fun startTime(startTime: String) {
-    cdkBuilder.startTime(startTime)
-  }
+    /** @param startTime The timestamp at which the inference experiment started or will start. */
+    public fun startTime(startTime: String) {
+        cdkBuilder.startTime(startTime)
+    }
 
-  public fun build(): CfnInferenceExperiment.InferenceExperimentScheduleProperty =
-      cdkBuilder.build()
+    public fun build(): CfnInferenceExperiment.InferenceExperimentScheduleProperty =
+        cdkBuilder.build()
 }

@@ -1,24 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CloudFormationProduct
-import software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion
-import software.amazon.awscdk.services.servicecatalog.MessageLanguage
-import software.amazon.awscdk.services.servicecatalog.TagOptions
-import software.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.servicecatalog.CloudFormationProduct
+import software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion
+import software.amazon.awscdk.services.servicecatalog.MessageLanguage
+import software.amazon.awscdk.services.servicecatalog.TagOptions
+import software.constructs.Construct
 
 /**
  * A Service Catalog Cloudformation Product.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.*;
  * public class S3BucketProduct extends ProductStack {
@@ -41,7 +49,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CloudFormationProductDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CloudFormationProduct.Builder =
         CloudFormationProduct.Builder.create(scope, id)
@@ -125,8 +133,8 @@ public class CloudFormationProductDsl(
      *
      * Default: false
      *
-     * @param replaceProductVersionIds Whether to give provisioning artifacts a new unique identifier
-     * when the product attributes or provisioning artifacts is updated.
+     * @param replaceProductVersionIds Whether to give provisioning artifacts a new unique
+     *   identifier when the product attributes or provisioning artifacts is updated.
      */
     public fun replaceProductVersionIds(replaceProductVersionIds: Boolean) {
         cdkBuilder.replaceProductVersionIds(replaceProductVersionIds)

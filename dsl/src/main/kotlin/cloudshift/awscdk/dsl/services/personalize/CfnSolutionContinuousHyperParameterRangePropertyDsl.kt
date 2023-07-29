@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.personalize
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.personalize.CfnSolution
  * Provides the name and range of a continuous hyperparameter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,29 +36,23 @@ import software.amazon.awscdk.services.personalize.CfnSolution
  */
 @CdkDslMarker
 public class CfnSolutionContinuousHyperParameterRangePropertyDsl {
-  private val cdkBuilder: CfnSolution.ContinuousHyperParameterRangeProperty.Builder =
-      CfnSolution.ContinuousHyperParameterRangeProperty.builder()
+    private val cdkBuilder: CfnSolution.ContinuousHyperParameterRangeProperty.Builder =
+        CfnSolution.ContinuousHyperParameterRangeProperty.builder()
 
-  /**
-   * @param maxValue The maximum allowable value for the hyperparameter.
-   */
-  public fun maxValue(maxValue: Number) {
-    cdkBuilder.maxValue(maxValue)
-  }
+    /** @param maxValue The maximum allowable value for the hyperparameter. */
+    public fun maxValue(maxValue: Number) {
+        cdkBuilder.maxValue(maxValue)
+    }
 
-  /**
-   * @param minValue The minimum allowable value for the hyperparameter.
-   */
-  public fun minValue(minValue: Number) {
-    cdkBuilder.minValue(minValue)
-  }
+    /** @param minValue The minimum allowable value for the hyperparameter. */
+    public fun minValue(minValue: Number) {
+        cdkBuilder.minValue(minValue)
+    }
 
-  /**
-   * @param name The name of the hyperparameter.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the hyperparameter. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnSolution.ContinuousHyperParameterRangeProperty = cdkBuilder.build()
+    public fun build(): CfnSolution.ContinuousHyperParameterRangeProperty = cdkBuilder.build()
 }

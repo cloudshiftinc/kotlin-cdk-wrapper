@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionCo
  * Configuration options for the ContainerDefinition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,19 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionCo
  */
 @CdkDslMarker
 public class ContainerDefinitionConfigDsl {
-  private val cdkBuilder: ContainerDefinitionConfig.Builder = ContainerDefinitionConfig.builder()
+    private val cdkBuilder: ContainerDefinitionConfig.Builder = ContainerDefinitionConfig.builder()
 
-  /**
-   * @param parameters Additional parameters to pass to the base task.
-   */
-  public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(parameters)
-    cdkBuilder.parameters(builder.map)
-  }
+    /** @param parameters Additional parameters to pass to the base task. */
+    public fun parameters(parameters: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(parameters)
+        cdkBuilder.parameters(builder.map)
+    }
 
-  /**
-   * @param parameters Additional parameters to pass to the base task.
-   */
-  public fun parameters(parameters: Map<String, Any>) {
-    cdkBuilder.parameters(parameters)
-  }
+    /** @param parameters Additional parameters to pass to the base task. */
+    public fun parameters(parameters: Map<String, Any>) {
+        cdkBuilder.parameters(parameters)
+    }
 
-  public fun build(): ContainerDefinitionConfig = cdkBuilder.build()
+    public fun build(): ContainerDefinitionConfig = cdkBuilder.build()
 }

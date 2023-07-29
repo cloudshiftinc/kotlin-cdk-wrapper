@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ec2.VpcIpamOptions
  * Cidr Allocated Vpc.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,28 +33,22 @@ import software.amazon.awscdk.services.ec2.VpcIpamOptions
  */
 @CdkDslMarker
 public class VpcIpamOptionsDsl {
-  private val cdkBuilder: VpcIpamOptions.Builder = VpcIpamOptions.builder()
+    private val cdkBuilder: VpcIpamOptions.Builder = VpcIpamOptions.builder()
 
-  /**
-   * @param cidrBlock Cidr Block for Vpc.
-   */
-  public fun cidrBlock(cidrBlock: String) {
-    cdkBuilder.cidrBlock(cidrBlock)
-  }
+    /** @param cidrBlock Cidr Block for Vpc. */
+    public fun cidrBlock(cidrBlock: String) {
+        cdkBuilder.cidrBlock(cidrBlock)
+    }
 
-  /**
-   * @param ipv4IpamPoolId ipv4 IPAM Pool Id.
-   */
-  public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
-    cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
-  }
+    /** @param ipv4IpamPoolId ipv4 IPAM Pool Id. */
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+        cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
+    }
 
-  /**
-   * @param ipv4NetmaskLength Cidr Mask for Vpc.
-   */
-  public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
-    cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
-  }
+    /** @param ipv4NetmaskLength Cidr Mask for Vpc. */
+    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
+        cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
+    }
 
-  public fun build(): VpcIpamOptions = cdkBuilder.build()
+    public fun build(): VpcIpamOptions = cdkBuilder.build()
 }

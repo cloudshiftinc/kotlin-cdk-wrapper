@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
-import kotlin.Boolean
 
 /**
  * The usage configuration to apply to child datasets that reference this dataset as a source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,7 +40,7 @@ public class CfnDataSetDataSetUsageConfigurationPropertyDsl {
 
     /**
      * @param disableUseAsDirectQuerySource An option that controls whether a child dataset of a
-     * direct query can use this dataset as a source.
+     *   direct query can use this dataset as a source.
      */
     public fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: Boolean) {
         cdkBuilder.disableUseAsDirectQuerySource(disableUseAsDirectQuerySource)
@@ -40,23 +48,23 @@ public class CfnDataSetDataSetUsageConfigurationPropertyDsl {
 
     /**
      * @param disableUseAsDirectQuerySource An option that controls whether a child dataset of a
-     * direct query can use this dataset as a source.
+     *   direct query can use this dataset as a source.
      */
     public fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: IResolvable) {
         cdkBuilder.disableUseAsDirectQuerySource(disableUseAsDirectQuerySource)
     }
 
     /**
-     * @param disableUseAsImportedSource An option that controls whether a child dataset that's stored
-     * in QuickSight can use this dataset as a source.
+     * @param disableUseAsImportedSource An option that controls whether a child dataset that's
+     *   stored in QuickSight can use this dataset as a source.
      */
     public fun disableUseAsImportedSource(disableUseAsImportedSource: Boolean) {
         cdkBuilder.disableUseAsImportedSource(disableUseAsImportedSource)
     }
 
     /**
-     * @param disableUseAsImportedSource An option that controls whether a child dataset that's stored
-     * in QuickSight can use this dataset as a source.
+     * @param disableUseAsImportedSource An option that controls whether a child dataset that's
+     *   stored in QuickSight can use this dataset as a source.
      */
     public fun disableUseAsImportedSource(disableUseAsImportedSource: IResolvable) {
         cdkBuilder.disableUseAsImportedSource(disableUseAsImportedSource)

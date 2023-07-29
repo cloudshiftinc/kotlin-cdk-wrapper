@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
  * `TargetGroupArn` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,52 +47,53 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
  */
 @CdkDslMarker
 public class CfnListenerForwardConfigPropertyDsl {
-  private val cdkBuilder: CfnListener.ForwardConfigProperty.Builder =
-      CfnListener.ForwardConfigProperty.builder()
+    private val cdkBuilder: CfnListener.ForwardConfigProperty.Builder =
+        CfnListener.ForwardConfigProperty.builder()
 
-  private val _targetGroups: MutableList<Any> = mutableListOf()
+    private val _targetGroups: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param targetGroupStickinessConfig Information about the target group stickiness for a rule.
-   */
-  public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
-    cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig)
-  }
+    /**
+     * @param targetGroupStickinessConfig Information about the target group stickiness for a rule.
+     */
+    public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
+        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig)
+    }
 
-  /**
-   * @param targetGroupStickinessConfig Information about the target group stickiness for a rule.
-   */
-  public
-      fun targetGroupStickinessConfig(targetGroupStickinessConfig: CfnListener.TargetGroupStickinessConfigProperty) {
-    cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig)
-  }
+    /**
+     * @param targetGroupStickinessConfig Information about the target group stickiness for a rule.
+     */
+    public fun targetGroupStickinessConfig(
+        targetGroupStickinessConfig: CfnListener.TargetGroupStickinessConfigProperty
+    ) {
+        cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig)
+    }
 
-  /**
-   * @param targetGroups Information about how traffic will be distributed between multiple target
-   * groups in a forward rule.
-   */
-  public fun targetGroups(vararg targetGroups: Any) {
-    _targetGroups.addAll(listOf(*targetGroups))
-  }
+    /**
+     * @param targetGroups Information about how traffic will be distributed between multiple target
+     *   groups in a forward rule.
+     */
+    public fun targetGroups(vararg targetGroups: Any) {
+        _targetGroups.addAll(listOf(*targetGroups))
+    }
 
-  /**
-   * @param targetGroups Information about how traffic will be distributed between multiple target
-   * groups in a forward rule.
-   */
-  public fun targetGroups(targetGroups: Collection<Any>) {
-    _targetGroups.addAll(targetGroups)
-  }
+    /**
+     * @param targetGroups Information about how traffic will be distributed between multiple target
+     *   groups in a forward rule.
+     */
+    public fun targetGroups(targetGroups: Collection<Any>) {
+        _targetGroups.addAll(targetGroups)
+    }
 
-  /**
-   * @param targetGroups Information about how traffic will be distributed between multiple target
-   * groups in a forward rule.
-   */
-  public fun targetGroups(targetGroups: IResolvable) {
-    cdkBuilder.targetGroups(targetGroups)
-  }
+    /**
+     * @param targetGroups Information about how traffic will be distributed between multiple target
+     *   groups in a forward rule.
+     */
+    public fun targetGroups(targetGroups: IResolvable) {
+        cdkBuilder.targetGroups(targetGroups)
+    }
 
-  public fun build(): CfnListener.ForwardConfigProperty {
-    if(_targetGroups.isNotEmpty()) cdkBuilder.targetGroups(_targetGroups)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnListener.ForwardConfigProperty {
+        if (_targetGroups.isNotEmpty()) cdkBuilder.targetGroups(_targetGroups)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,17 +46,15 @@ public class CfnDashboardFilterScopeConfigurationPropertyDsl {
     private val cdkBuilder: CfnDashboard.FilterScopeConfigurationProperty.Builder =
         CfnDashboard.FilterScopeConfigurationProperty.builder()
 
-    /**
-     * @param selectedSheets The configuration for applying a filter to specific sheets.
-     */
+    /** @param selectedSheets The configuration for applying a filter to specific sheets. */
     public fun selectedSheets(selectedSheets: IResolvable) {
         cdkBuilder.selectedSheets(selectedSheets)
     }
 
-    /**
-     * @param selectedSheets The configuration for applying a filter to specific sheets.
-     */
-    public fun selectedSheets(selectedSheets: CfnDashboard.SelectedSheetsFilterScopeConfigurationProperty) {
+    /** @param selectedSheets The configuration for applying a filter to specific sheets. */
+    public fun selectedSheets(
+        selectedSheets: CfnDashboard.SelectedSheetsFilterScopeConfigurationProperty
+    ) {
         cdkBuilder.selectedSheets(selectedSheets)
     }
 

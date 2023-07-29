@@ -1,22 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.pipelines.ManualApprovalStep
 import kotlin.String
+import software.amazon.awscdk.pipelines.ManualApprovalStep
 
 /**
  * A manual approval step.
  *
- * If this step is added to a Pipeline, the Pipeline will
- * be paused waiting for a human to resume it
+ * If this step is added to a Pipeline, the Pipeline will be paused waiting for a human to resume it
  *
- * Only engines that support pausing the deployment will
- * support this step type.
+ * Only engines that support pausing the deployment will support this step type.
  *
  * Example:
- *
  * ```
  * CodePipeline pipeline;
  * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
@@ -35,7 +41,7 @@ import kotlin.String
  */
 @CdkDslMarker
 public class ManualApprovalStepDsl(
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: ManualApprovalStep.Builder = ManualApprovalStep.Builder.create(id)
 

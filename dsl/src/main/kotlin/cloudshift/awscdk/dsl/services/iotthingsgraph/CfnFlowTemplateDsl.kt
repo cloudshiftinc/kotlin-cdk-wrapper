@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotthingsgraph
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * Resource Type definition for AWS::IoTThingsGraph::FlowTemplate.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,34 +40,37 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnFlowTemplateDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnFlowTemplate.Builder = CfnFlowTemplate.Builder.create(scope, id)
+    private val cdkBuilder: CfnFlowTemplate.Builder = CfnFlowTemplate.Builder.create(scope, id)
 
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion)
-   * @param compatibleNamespaceVersion 
-   */
-  public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
-    cdkBuilder.compatibleNamespaceVersion(compatibleNamespaceVersion)
-  }
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion)
+     *
+     * @param compatibleNamespaceVersion
+     */
+    public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
+        cdkBuilder.compatibleNamespaceVersion(compatibleNamespaceVersion)
+    }
 
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-definition)
-   * @param definition 
-   */
-  public fun definition(definition: IResolvable) {
-    cdkBuilder.definition(definition)
-  }
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-definition)
+     *
+     * @param definition
+     */
+    public fun definition(definition: IResolvable) {
+        cdkBuilder.definition(definition)
+    }
 
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-definition)
-   * @param definition 
-   */
-  public fun definition(definition: CfnFlowTemplate.DefinitionDocumentProperty) {
-    cdkBuilder.definition(definition)
-  }
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-definition)
+     *
+     * @param definition
+     */
+    public fun definition(definition: CfnFlowTemplate.DefinitionDocumentProperty) {
+        cdkBuilder.definition(definition)
+    }
 
-  public fun build(): CfnFlowTemplate = cdkBuilder.build()
+    public fun build(): CfnFlowTemplate = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The sort configuration of a sankey diagram.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -59,67 +67,62 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardSankeyDiagramSortConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.SankeyDiagramSortConfigurationProperty.Builder =
-      CfnDashboard.SankeyDiagramSortConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.SankeyDiagramSortConfigurationProperty.Builder =
+        CfnDashboard.SankeyDiagramSortConfigurationProperty.builder()
 
-  private val _weightSort: MutableList<Any> = mutableListOf()
+    private val _weightSort: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param destinationItemsLimit The limit on the number of destination nodes that are displayed in
-   * a sankey diagram.
-   */
-  public fun destinationItemsLimit(destinationItemsLimit: IResolvable) {
-    cdkBuilder.destinationItemsLimit(destinationItemsLimit)
-  }
+    /**
+     * @param destinationItemsLimit The limit on the number of destination nodes that are displayed
+     *   in a sankey diagram.
+     */
+    public fun destinationItemsLimit(destinationItemsLimit: IResolvable) {
+        cdkBuilder.destinationItemsLimit(destinationItemsLimit)
+    }
 
-  /**
-   * @param destinationItemsLimit The limit on the number of destination nodes that are displayed in
-   * a sankey diagram.
-   */
-  public
-      fun destinationItemsLimit(destinationItemsLimit: CfnDashboard.ItemsLimitConfigurationProperty) {
-    cdkBuilder.destinationItemsLimit(destinationItemsLimit)
-  }
+    /**
+     * @param destinationItemsLimit The limit on the number of destination nodes that are displayed
+     *   in a sankey diagram.
+     */
+    public fun destinationItemsLimit(
+        destinationItemsLimit: CfnDashboard.ItemsLimitConfigurationProperty
+    ) {
+        cdkBuilder.destinationItemsLimit(destinationItemsLimit)
+    }
 
-  /**
-   * @param sourceItemsLimit The limit on the number of source nodes that are displayed in a sankey
-   * diagram.
-   */
-  public fun sourceItemsLimit(sourceItemsLimit: IResolvable) {
-    cdkBuilder.sourceItemsLimit(sourceItemsLimit)
-  }
+    /**
+     * @param sourceItemsLimit The limit on the number of source nodes that are displayed in a
+     *   sankey diagram.
+     */
+    public fun sourceItemsLimit(sourceItemsLimit: IResolvable) {
+        cdkBuilder.sourceItemsLimit(sourceItemsLimit)
+    }
 
-  /**
-   * @param sourceItemsLimit The limit on the number of source nodes that are displayed in a sankey
-   * diagram.
-   */
-  public fun sourceItemsLimit(sourceItemsLimit: CfnDashboard.ItemsLimitConfigurationProperty) {
-    cdkBuilder.sourceItemsLimit(sourceItemsLimit)
-  }
+    /**
+     * @param sourceItemsLimit The limit on the number of source nodes that are displayed in a
+     *   sankey diagram.
+     */
+    public fun sourceItemsLimit(sourceItemsLimit: CfnDashboard.ItemsLimitConfigurationProperty) {
+        cdkBuilder.sourceItemsLimit(sourceItemsLimit)
+    }
 
-  /**
-   * @param weightSort The sort configuration of the weight fields.
-   */
-  public fun weightSort(vararg weightSort: Any) {
-    _weightSort.addAll(listOf(*weightSort))
-  }
+    /** @param weightSort The sort configuration of the weight fields. */
+    public fun weightSort(vararg weightSort: Any) {
+        _weightSort.addAll(listOf(*weightSort))
+    }
 
-  /**
-   * @param weightSort The sort configuration of the weight fields.
-   */
-  public fun weightSort(weightSort: Collection<Any>) {
-    _weightSort.addAll(weightSort)
-  }
+    /** @param weightSort The sort configuration of the weight fields. */
+    public fun weightSort(weightSort: Collection<Any>) {
+        _weightSort.addAll(weightSort)
+    }
 
-  /**
-   * @param weightSort The sort configuration of the weight fields.
-   */
-  public fun weightSort(weightSort: IResolvable) {
-    cdkBuilder.weightSort(weightSort)
-  }
+    /** @param weightSort The sort configuration of the weight fields. */
+    public fun weightSort(weightSort: IResolvable) {
+        cdkBuilder.weightSort(weightSort)
+    }
 
-  public fun build(): CfnDashboard.SankeyDiagramSortConfigurationProperty {
-    if(_weightSort.isNotEmpty()) cdkBuilder.weightSort(_weightSort)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDashboard.SankeyDiagramSortConfigurationProperty {
+        if (_weightSort.isNotEmpty()) cdkBuilder.weightSort(_weightSort)
+        return cdkBuilder.build()
+    }
 }

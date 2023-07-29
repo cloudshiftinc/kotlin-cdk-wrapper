@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
  * Describes the client connection logging options for the Client VPN endpoint.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,38 +38,34 @@ import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
  */
 @CdkDslMarker
 public class CfnClientVpnEndpointConnectionLogOptionsPropertyDsl {
-  private val cdkBuilder: CfnClientVpnEndpoint.ConnectionLogOptionsProperty.Builder =
-      CfnClientVpnEndpoint.ConnectionLogOptionsProperty.builder()
+    private val cdkBuilder: CfnClientVpnEndpoint.ConnectionLogOptionsProperty.Builder =
+        CfnClientVpnEndpoint.ConnectionLogOptionsProperty.builder()
 
-  /**
-   * @param cloudwatchLogGroup The name of the CloudWatch Logs log group.
-   * Required if connection logging is enabled.
-   */
-  public fun cloudwatchLogGroup(cloudwatchLogGroup: String) {
-    cdkBuilder.cloudwatchLogGroup(cloudwatchLogGroup)
-  }
+    /**
+     * @param cloudwatchLogGroup The name of the CloudWatch Logs log group. Required if connection
+     *   logging is enabled.
+     */
+    public fun cloudwatchLogGroup(cloudwatchLogGroup: String) {
+        cdkBuilder.cloudwatchLogGroup(cloudwatchLogGroup)
+    }
 
-  /**
-   * @param cloudwatchLogStream The name of the CloudWatch Logs log stream to which the connection
-   * data is published.
-   */
-  public fun cloudwatchLogStream(cloudwatchLogStream: String) {
-    cdkBuilder.cloudwatchLogStream(cloudwatchLogStream)
-  }
+    /**
+     * @param cloudwatchLogStream The name of the CloudWatch Logs log stream to which the connection
+     *   data is published.
+     */
+    public fun cloudwatchLogStream(cloudwatchLogStream: String) {
+        cdkBuilder.cloudwatchLogStream(cloudwatchLogStream)
+    }
 
-  /**
-   * @param enabled Indicates whether connection logging is enabled. 
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether connection logging is enabled. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Indicates whether connection logging is enabled. 
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Indicates whether connection logging is enabled. */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  public fun build(): CfnClientVpnEndpoint.ConnectionLogOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnClientVpnEndpoint.ConnectionLogOptionsProperty = cdkBuilder.build()
 }

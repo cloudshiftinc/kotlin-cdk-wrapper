@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.DockerCacheOption
-import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.cloudassembly.schema.DockerCacheOption
+import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
 
 /**
  * Properties for how to produce a Docker image from a source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -57,93 +65,75 @@ public class DockerImageSourceDsl {
 
     private val _executable: MutableList<String> = mutableListOf()
 
-    /**
-     * @param cacheFrom Cache from options to pass to the `docker build` command.
-     */
+    /** @param cacheFrom Cache from options to pass to the `docker build` command. */
     public fun cacheFrom(cacheFrom: DockerCacheOptionDsl.() -> Unit) {
         _cacheFrom.add(DockerCacheOptionDsl().apply(cacheFrom).build())
     }
 
-    /**
-     * @param cacheFrom Cache from options to pass to the `docker build` command.
-     */
+    /** @param cacheFrom Cache from options to pass to the `docker build` command. */
     public fun cacheFrom(cacheFrom: Collection<DockerCacheOption>) {
         _cacheFrom.addAll(cacheFrom)
     }
 
-    /**
-     * @param cacheTo Cache to options to pass to the `docker build` command.
-     */
+    /** @param cacheTo Cache to options to pass to the `docker build` command. */
     public fun cacheTo(cacheTo: DockerCacheOptionDsl.() -> Unit = {}) {
         val builder = DockerCacheOptionDsl()
         builder.apply(cacheTo)
         cdkBuilder.cacheTo(builder.build())
     }
 
-    /**
-     * @param cacheTo Cache to options to pass to the `docker build` command.
-     */
+    /** @param cacheTo Cache to options to pass to the `docker build` command. */
     public fun cacheTo(cacheTo: DockerCacheOption) {
         cdkBuilder.cacheTo(cacheTo)
     }
 
     /**
-     * @param directory The directory containing the Docker image build instructions.
-     * This path is relative to the asset manifest location.
+     * @param directory The directory containing the Docker image build instructions. This path is
+     *   relative to the asset manifest location.
      */
     public fun directory(directory: String) {
         cdkBuilder.directory(directory)
     }
 
-    /**
-     * @param dockerBuildArgs Additional build arguments.
-     * Only allowed when `directory` is set.
-     */
+    /** @param dockerBuildArgs Additional build arguments. Only allowed when `directory` is set. */
     public fun dockerBuildArgs(dockerBuildArgs: Map<String, String>) {
         cdkBuilder.dockerBuildArgs(dockerBuildArgs)
     }
 
-    /**
-     * @param dockerBuildSecrets Additional build secrets.
-     * Only allowed when `directory` is set.
-     */
+    /** @param dockerBuildSecrets Additional build secrets. Only allowed when `directory` is set. */
     public fun dockerBuildSecrets(dockerBuildSecrets: Map<String, String>) {
         cdkBuilder.dockerBuildSecrets(dockerBuildSecrets)
     }
 
     /**
-     * @param dockerBuildTarget Target build stage in a Dockerfile with multiple build stages.
-     * Only allowed when `directory` is set.
+     * @param dockerBuildTarget Target build stage in a Dockerfile with multiple build stages. Only
+     *   allowed when `directory` is set.
      */
     public fun dockerBuildTarget(dockerBuildTarget: String) {
         cdkBuilder.dockerBuildTarget(dockerBuildTarget)
     }
 
     /**
-     * @param dockerFile The name of the file with build instructions.
-     * Only allowed when `directory` is set.
+     * @param dockerFile The name of the file with build instructions. Only allowed when `directory`
+     *   is set.
      */
     public fun dockerFile(dockerFile: String) {
         cdkBuilder.dockerFile(dockerFile)
     }
 
-    /**
-     * @param dockerOutputs Outputs.
-     */
+    /** @param dockerOutputs Outputs. */
     public fun dockerOutputs(vararg dockerOutputs: String) {
         _dockerOutputs.addAll(listOf(*dockerOutputs))
     }
 
-    /**
-     * @param dockerOutputs Outputs.
-     */
+    /** @param dockerOutputs Outputs. */
     public fun dockerOutputs(dockerOutputs: Collection<String>) {
         _dockerOutputs.addAll(dockerOutputs)
     }
 
     /**
      * @param executable A command-line executable that returns the name of a local Docker image on
-     * stdout after being run.
+     *   stdout after being run.
      */
     public fun executable(vararg executable: String) {
         _executable.addAll(listOf(*executable))
@@ -151,7 +141,7 @@ public class DockerImageSourceDsl {
 
     /**
      * @param executable A command-line executable that returns the name of a local Docker image on
-     * stdout after being run.
+     *   stdout after being run.
      */
     public fun executable(executable: Collection<String>) {
         _executable.addAll(executable)
@@ -159,16 +149,15 @@ public class DockerImageSourceDsl {
 
     /**
      * @param networkMode Networking mode for the RUN commands during build. *Requires Docker Engine
-     * API v1.25+*.
-     * Specify this property to build images on a specific networking mode.
+     *   API v1.25+*. Specify this property to build images on a specific networking mode.
      */
     public fun networkMode(networkMode: String) {
         cdkBuilder.networkMode(networkMode)
     }
 
     /**
-     * @param platform Platform to build for. *Requires Docker Buildx*.
-     * Specify this property to build images on a specific platform/architecture.
+     * @param platform Platform to build for. *Requires Docker Buildx*. Specify this property to
+     *   build images on a specific platform/architecture.
      */
     public fun platform(platform: String) {
         cdkBuilder.platform(platform)

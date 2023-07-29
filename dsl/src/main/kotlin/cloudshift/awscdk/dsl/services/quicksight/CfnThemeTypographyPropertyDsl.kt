@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTheme
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTheme
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,23 +40,17 @@ public class CfnThemeTypographyPropertyDsl {
 
     private val _fontFamilies: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param fontFamilies the value to be set.
-     */
+    /** @param fontFamilies the value to be set. */
     public fun fontFamilies(vararg fontFamilies: Any) {
         _fontFamilies.addAll(listOf(*fontFamilies))
     }
 
-    /**
-     * @param fontFamilies the value to be set.
-     */
+    /** @param fontFamilies the value to be set. */
     public fun fontFamilies(fontFamilies: Collection<Any>) {
         _fontFamilies.addAll(fontFamilies)
     }
 
-    /**
-     * @param fontFamilies the value to be set.
-     */
+    /** @param fontFamilies the value to be set. */
     public fun fontFamilies(fontFamilies: IResolvable) {
         cdkBuilder.fontFamilies(fontFamilies)
     }

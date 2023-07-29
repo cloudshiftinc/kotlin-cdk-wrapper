@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -11,12 +20,11 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  *
  * When you specify CPU options, you must specify both the number of CPU cores and threads per core.
  *
- * For more information, see [Optimize CPU
- * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
- * *Amazon Elastic Compute Cloud User Guide* .
+ * For more information, see
+ * [Optimize CPU options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html)
+ * in the *Amazon Elastic Compute Cloud User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,18 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  */
 @CdkDslMarker
 public class CfnInstanceCpuOptionsPropertyDsl {
-  private val cdkBuilder: CfnInstance.CpuOptionsProperty.Builder =
-      CfnInstance.CpuOptionsProperty.builder()
+    private val cdkBuilder: CfnInstance.CpuOptionsProperty.Builder =
+        CfnInstance.CpuOptionsProperty.builder()
 
-  /**
-   * @param coreCount The number of CPU cores for the instance.
-   */
-  public fun coreCount(coreCount: Number) {
-    cdkBuilder.coreCount(coreCount)
-  }
+    /** @param coreCount The number of CPU cores for the instance. */
+    public fun coreCount(coreCount: Number) {
+        cdkBuilder.coreCount(coreCount)
+    }
 
-  /**
-   * @param threadsPerCore The number of threads per CPU core.
-   */
-  public fun threadsPerCore(threadsPerCore: Number) {
-    cdkBuilder.threadsPerCore(threadsPerCore)
-  }
+    /** @param threadsPerCore The number of threads per CPU core. */
+    public fun threadsPerCore(threadsPerCore: Number) {
+        cdkBuilder.threadsPerCore(threadsPerCore)
+    }
 
-  public fun build(): CfnInstance.CpuOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnInstance.CpuOptionsProperty = cdkBuilder.build()
 }

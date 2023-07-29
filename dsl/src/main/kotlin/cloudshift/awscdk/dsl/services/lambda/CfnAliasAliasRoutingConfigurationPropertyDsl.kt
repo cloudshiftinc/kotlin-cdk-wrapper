@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.lambda.CfnAlias
  * configuration of a Lambda function alias.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,38 +41,38 @@ import software.amazon.awscdk.services.lambda.CfnAlias
  */
 @CdkDslMarker
 public class CfnAliasAliasRoutingConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAlias.AliasRoutingConfigurationProperty.Builder =
-      CfnAlias.AliasRoutingConfigurationProperty.builder()
+    private val cdkBuilder: CfnAlias.AliasRoutingConfigurationProperty.Builder =
+        CfnAlias.AliasRoutingConfigurationProperty.builder()
 
-  private val _additionalVersionWeights: MutableList<Any> = mutableListOf()
+    private val _additionalVersionWeights: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param additionalVersionWeights The second version, and the percentage of traffic that's routed
-   * to it. 
-   */
-  public fun additionalVersionWeights(vararg additionalVersionWeights: Any) {
-    _additionalVersionWeights.addAll(listOf(*additionalVersionWeights))
-  }
+    /**
+     * @param additionalVersionWeights The second version, and the percentage of traffic that's
+     *   routed to it.
+     */
+    public fun additionalVersionWeights(vararg additionalVersionWeights: Any) {
+        _additionalVersionWeights.addAll(listOf(*additionalVersionWeights))
+    }
 
-  /**
-   * @param additionalVersionWeights The second version, and the percentage of traffic that's routed
-   * to it. 
-   */
-  public fun additionalVersionWeights(additionalVersionWeights: Collection<Any>) {
-    _additionalVersionWeights.addAll(additionalVersionWeights)
-  }
+    /**
+     * @param additionalVersionWeights The second version, and the percentage of traffic that's
+     *   routed to it.
+     */
+    public fun additionalVersionWeights(additionalVersionWeights: Collection<Any>) {
+        _additionalVersionWeights.addAll(additionalVersionWeights)
+    }
 
-  /**
-   * @param additionalVersionWeights The second version, and the percentage of traffic that's routed
-   * to it. 
-   */
-  public fun additionalVersionWeights(additionalVersionWeights: IResolvable) {
-    cdkBuilder.additionalVersionWeights(additionalVersionWeights)
-  }
+    /**
+     * @param additionalVersionWeights The second version, and the percentage of traffic that's
+     *   routed to it.
+     */
+    public fun additionalVersionWeights(additionalVersionWeights: IResolvable) {
+        cdkBuilder.additionalVersionWeights(additionalVersionWeights)
+    }
 
-  public fun build(): CfnAlias.AliasRoutingConfigurationProperty {
-    if(_additionalVersionWeights.isNotEmpty())
-        cdkBuilder.additionalVersionWeights(_additionalVersionWeights)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAlias.AliasRoutingConfigurationProperty {
+        if (_additionalVersionWeights.isNotEmpty())
+            cdkBuilder.additionalVersionWeights(_additionalVersionWeights)
+        return cdkBuilder.build()
+    }
 }

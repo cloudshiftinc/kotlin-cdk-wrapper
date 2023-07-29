@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opensearchservice
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.opensearchservice.DomainAttributes
  * Reference to an Amazon OpenSearch Service domain.
  *
  * Example:
- *
  * ```
  * String domainArn = Fn.importValue("another-cf-stack-export-domain-arn");
  * String domainEndpoint = Fn.importValue("another-cf-stack-export-domain-endpoint");
@@ -22,21 +30,17 @@ import software.amazon.awscdk.services.opensearchservice.DomainAttributes
  */
 @CdkDslMarker
 public class DomainAttributesDsl {
-  private val cdkBuilder: DomainAttributes.Builder = DomainAttributes.builder()
+    private val cdkBuilder: DomainAttributes.Builder = DomainAttributes.builder()
 
-  /**
-   * @param domainArn The ARN of the Amazon OpenSearch Service domain. 
-   */
-  public fun domainArn(domainArn: String) {
-    cdkBuilder.domainArn(domainArn)
-  }
+    /** @param domainArn The ARN of the Amazon OpenSearch Service domain. */
+    public fun domainArn(domainArn: String) {
+        cdkBuilder.domainArn(domainArn)
+    }
 
-  /**
-   * @param domainEndpoint The domain endpoint of the Amazon OpenSearch Service domain. 
-   */
-  public fun domainEndpoint(domainEndpoint: String) {
-    cdkBuilder.domainEndpoint(domainEndpoint)
-  }
+    /** @param domainEndpoint The domain endpoint of the Amazon OpenSearch Service domain. */
+    public fun domainEndpoint(domainEndpoint: String) {
+        cdkBuilder.domainEndpoint(domainEndpoint)
+    }
 
-  public fun build(): DomainAttributes = cdkBuilder.build()
+    public fun build(): DomainAttributes = cdkBuilder.build()
 }

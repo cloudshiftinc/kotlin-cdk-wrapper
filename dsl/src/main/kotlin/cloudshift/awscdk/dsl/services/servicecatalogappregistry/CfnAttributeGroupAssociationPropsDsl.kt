@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalogappregistry
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGro
  * Properties for defining a `CfnAttributeGroupAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,21 @@ import software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGro
  */
 @CdkDslMarker
 public class CfnAttributeGroupAssociationPropsDsl {
-  private val cdkBuilder: CfnAttributeGroupAssociationProps.Builder =
-      CfnAttributeGroupAssociationProps.builder()
+    private val cdkBuilder: CfnAttributeGroupAssociationProps.Builder =
+        CfnAttributeGroupAssociationProps.builder()
 
-  /**
-   * @param application The name or ID of the application. 
-   */
-  public fun application(application: String) {
-    cdkBuilder.application(application)
-  }
+    /** @param application The name or ID of the application. */
+    public fun application(application: String) {
+        cdkBuilder.application(application)
+    }
 
-  /**
-   * @param attributeGroup The name or ID of the attribute group that holds the attributes to
-   * describe the application. 
-   */
-  public fun attributeGroup(attributeGroup: String) {
-    cdkBuilder.attributeGroup(attributeGroup)
-  }
+    /**
+     * @param attributeGroup The name or ID of the attribute group that holds the attributes to
+     *   describe the application.
+     */
+    public fun attributeGroup(attributeGroup: String) {
+        cdkBuilder.attributeGroup(attributeGroup)
+    }
 
-  public fun build(): CfnAttributeGroupAssociationProps = cdkBuilder.build()
+    public fun build(): CfnAttributeGroupAssociationProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.groundstation
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
  */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupRangedSocketAddressPropertyDsl {
-  private val cdkBuilder: CfnDataflowEndpointGroup.RangedSocketAddressProperty.Builder =
-      CfnDataflowEndpointGroup.RangedSocketAddressProperty.builder()
+    private val cdkBuilder: CfnDataflowEndpointGroup.RangedSocketAddressProperty.Builder =
+        CfnDataflowEndpointGroup.RangedSocketAddressProperty.builder()
 
-  /**
-   * @param name the value to be set.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name the value to be set. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param portRange the value to be set.
-   */
-  public fun portRange(portRange: IResolvable) {
-    cdkBuilder.portRange(portRange)
-  }
+    /** @param portRange the value to be set. */
+    public fun portRange(portRange: IResolvable) {
+        cdkBuilder.portRange(portRange)
+    }
 
-  /**
-   * @param portRange the value to be set.
-   */
-  public fun portRange(portRange: CfnDataflowEndpointGroup.IntegerRangeProperty) {
-    cdkBuilder.portRange(portRange)
-  }
+    /** @param portRange the value to be set. */
+    public fun portRange(portRange: CfnDataflowEndpointGroup.IntegerRangeProperty) {
+        cdkBuilder.portRange(portRange)
+    }
 
-  public fun build(): CfnDataflowEndpointGroup.RangedSocketAddressProperty = cdkBuilder.build()
+    public fun build(): CfnDataflowEndpointGroup.RangedSocketAddressProperty = cdkBuilder.build()
 }

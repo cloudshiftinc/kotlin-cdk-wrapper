@@ -1,7 +1,17 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
+import kotlin.Unit
 import software.amazon.awscdk.cloudassembly.schema.AmiContextQuery
 import software.amazon.awscdk.cloudassembly.schema.ArtifactManifest
 import software.amazon.awscdk.cloudassembly.schema.AssemblyManifest
@@ -50,14 +60,12 @@ import software.amazon.awscdk.cloudassembly.schema.TestCase
 import software.amazon.awscdk.cloudassembly.schema.TestOptions
 import software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties
 import software.amazon.awscdk.cloudassembly.schema.VpcContextQuery
-import kotlin.Unit
 
 public object schema {
     /**
      * Query to AMI context provider.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -83,7 +91,6 @@ public object schema {
      * A manifest for a single artifact within the cloud assembly.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -128,7 +135,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun artifactManifest(block: ArtifactManifestDsl.() -> Unit = {}): ArtifactManifest {
+    public inline fun artifactManifest(
+        block: ArtifactManifestDsl.() -> Unit = {}
+    ): ArtifactManifest {
         val builder = ArtifactManifestDsl()
         builder.apply(block)
         return builder.build()
@@ -138,7 +147,6 @@ public object schema {
      * A manifest which describes the cloud assembly.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -205,7 +213,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun assemblyManifest(block: AssemblyManifestDsl.() -> Unit = {}): AssemblyManifest {
+    public inline fun assemblyManifest(
+        block: AssemblyManifestDsl.() -> Unit = {}
+    ): AssemblyManifest {
         val builder = AssemblyManifestDsl()
         builder.apply(block)
         return builder.build()
@@ -215,7 +225,6 @@ public object schema {
      * Definitions for the asset manifest.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -290,7 +299,6 @@ public object schema {
      * Configuration options for the Asset Manifest.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -301,7 +309,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun assetManifestOptions(block: AssetManifestOptionsDsl.() -> Unit = {}): AssetManifestOptions {
+    public inline fun assetManifestOptions(
+        block: AssetManifestOptionsDsl.() -> Unit = {}
+    ): AssetManifestOptions {
         val builder = AssetManifestOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -311,7 +321,6 @@ public object schema {
      * Artifact properties for the Asset Manifest.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -324,7 +333,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun assetManifestProperties(block: AssetManifestPropertiesDsl.() -> Unit = {}): AssetManifestProperties {
+    public inline fun assetManifestProperties(
+        block: AssetManifestPropertiesDsl.() -> Unit = {}
+    ): AssetManifestProperties {
         val builder = AssetManifestPropertiesDsl()
         builder.apply(block)
         return builder.build()
@@ -334,7 +345,6 @@ public object schema {
      * Query to availability zone context provider.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -349,8 +359,7 @@ public object schema {
      * ```
      */
     public inline fun availabilityZonesContextQuery(
-        block: AvailabilityZonesContextQueryDsl.() -> Unit =
-            {}
+        block: AvailabilityZonesContextQueryDsl.() -> Unit = {}
     ): AvailabilityZonesContextQuery {
         val builder = AvailabilityZonesContextQueryDsl()
         builder.apply(block)
@@ -361,7 +370,6 @@ public object schema {
      * Artifact properties for CloudFormation stacks.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -394,8 +402,7 @@ public object schema {
      * ```
      */
     public inline fun awsCloudFormationStackProperties(
-        block: AwsCloudFormationStackPropertiesDsl.() -> Unit =
-            {}
+        block: AwsCloudFormationStackPropertiesDsl.() -> Unit = {}
     ): AwsCloudFormationStackProperties {
         val builder = AwsCloudFormationStackPropertiesDsl()
         builder.apply(block)
@@ -406,7 +413,6 @@ public object schema {
      * Destination for assets that need to be uploaded to AWS.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -428,7 +434,6 @@ public object schema {
      * Information needed to access an IAM role created as part of the bootstrap process.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -452,7 +457,6 @@ public object schema {
      * Represents a cdk command i.e. `synth`, `deploy`, &amp; `destroy`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -474,7 +478,6 @@ public object schema {
      * Options for specific cdk commands that are run as part of the integration test workflow.
      *
      * Example:
-     *
      * ```
      * App app = new App();
      * Stack stackUnderTest = new Stack(app, "StackUnderTest");
@@ -509,7 +512,6 @@ public object schema {
      * Options for configuring the Docker cache backend.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -523,7 +525,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun containerImageAssetCacheOption(block: ContainerImageAssetCacheOptionDsl.() -> Unit = {}): ContainerImageAssetCacheOption {
+    public inline fun containerImageAssetCacheOption(
+        block: ContainerImageAssetCacheOptionDsl.() -> Unit = {}
+    ): ContainerImageAssetCacheOption {
         val builder = ContainerImageAssetCacheOptionDsl()
         builder.apply(block)
         return builder.build()
@@ -533,7 +537,6 @@ public object schema {
      * Metadata Entry spec for container images.
      *
      * Example:
-     *
      * ```
      * Map&lt;String, String&gt; entry = Map.of(
      * "packaging", "container-image",
@@ -542,8 +545,7 @@ public object schema {
      * ```
      */
     public inline fun containerImageAssetMetadataEntry(
-        block: ContainerImageAssetMetadataEntryDsl.() -> Unit =
-            {}
+        block: ContainerImageAssetMetadataEntryDsl.() -> Unit = {}
     ): ContainerImageAssetMetadataEntry {
         val builder = ContainerImageAssetMetadataEntryDsl()
         builder.apply(block)
@@ -554,7 +556,6 @@ public object schema {
      * Default CDK CLI options that apply to all commands.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -587,7 +588,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun defaultCdkOptions(block: DefaultCdkOptionsDsl.() -> Unit = {}): DefaultCdkOptions {
+    public inline fun defaultCdkOptions(
+        block: DefaultCdkOptionsDsl.() -> Unit = {}
+    ): DefaultCdkOptions {
         val builder = DefaultCdkOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -597,7 +600,6 @@ public object schema {
      * Represents a cdk deploy command.
      *
      * Example:
-     *
      * ```
      * App app = new App();
      * Stack stackUnderTest = new Stack(app, "StackUnderTest");
@@ -632,7 +634,6 @@ public object schema {
      * Options to use with cdk deploy.
      *
      * Example:
-     *
      * ```
      * App app = new App();
      * Stack stackUnderTest = new Stack(app, "StackUnderTest");
@@ -667,7 +668,6 @@ public object schema {
      * Represents a cdk destroy command.
      *
      * Example:
-     *
      * ```
      * App app = new App();
      * Stack stackUnderTest = new Stack(app, "StackUnderTest");
@@ -702,7 +702,6 @@ public object schema {
      * Options to use with cdk destroy.
      *
      * Example:
-     *
      * ```
      * App app = new App();
      * Stack stackUnderTest = new Stack(app, "StackUnderTest");
@@ -737,7 +736,6 @@ public object schema {
      * Options for configuring the Docker cache backend.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -750,7 +748,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun dockerCacheOption(block: DockerCacheOptionDsl.() -> Unit = {}): DockerCacheOption {
+    public inline fun dockerCacheOption(
+        block: DockerCacheOptionDsl.() -> Unit = {}
+    ): DockerCacheOption {
         val builder = DockerCacheOptionDsl()
         builder.apply(block)
         return builder.build()
@@ -760,7 +760,6 @@ public object schema {
      * A file asset.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -803,7 +802,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun dockerImageAsset(block: DockerImageAssetDsl.() -> Unit = {}): DockerImageAsset {
+    public inline fun dockerImageAsset(
+        block: DockerImageAssetDsl.() -> Unit = {}
+    ): DockerImageAsset {
         val builder = DockerImageAssetDsl()
         builder.apply(block)
         return builder.build()
@@ -813,7 +814,6 @@ public object schema {
      * Where to publish docker images.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -828,7 +828,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun dockerImageDestination(block: DockerImageDestinationDsl.() -> Unit = {}): DockerImageDestination {
+    public inline fun dockerImageDestination(
+        block: DockerImageDestinationDsl.() -> Unit = {}
+    ): DockerImageDestination {
         val builder = DockerImageDestinationDsl()
         builder.apply(block)
         return builder.build()
@@ -838,7 +840,6 @@ public object schema {
      * Properties for how to produce a Docker image from a source.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -870,7 +871,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun dockerImageSource(block: DockerImageSourceDsl.() -> Unit = {}): DockerImageSource {
+    public inline fun dockerImageSource(
+        block: DockerImageSourceDsl.() -> Unit = {}
+    ): DockerImageSource {
         val builder = DockerImageSourceDsl()
         builder.apply(block)
         return builder.build()
@@ -880,7 +883,6 @@ public object schema {
      * Query to endpoint service context provider.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -896,8 +898,7 @@ public object schema {
      * ```
      */
     public inline fun endpointServiceAvailabilityZonesContextQuery(
-        block: EndpointServiceAvailabilityZonesContextQueryDsl.() -> Unit =
-            {}
+        block: EndpointServiceAvailabilityZonesContextQueryDsl.() -> Unit = {}
     ): EndpointServiceAvailabilityZonesContextQuery {
         val builder = EndpointServiceAvailabilityZonesContextQueryDsl()
         builder.apply(block)
@@ -908,7 +909,6 @@ public object schema {
      * A file asset.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -941,7 +941,6 @@ public object schema {
      * Metadata Entry spec for files.
      *
      * Example:
-     *
      * ```
      * Map&lt;String, String&gt; entry = Map.of(
      * "packaging", "file",
@@ -950,7 +949,9 @@ public object schema {
      * "artifactHashParameter", "hash-parameter");
      * ```
      */
-    public inline fun fileAssetMetadataEntry(block: FileAssetMetadataEntryDsl.() -> Unit = {}): FileAssetMetadataEntry {
+    public inline fun fileAssetMetadataEntry(
+        block: FileAssetMetadataEntryDsl.() -> Unit = {}
+    ): FileAssetMetadataEntry {
         val builder = FileAssetMetadataEntryDsl()
         builder.apply(block)
         return builder.build()
@@ -960,7 +961,6 @@ public object schema {
      * Where in S3 a file asset needs to be published.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -985,7 +985,6 @@ public object schema {
      * Describe the source of a file asset.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1007,7 +1006,6 @@ public object schema {
      * Commands to run at predefined points during the integration test workflow.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1030,7 +1028,6 @@ public object schema {
      * Query to hosted zone context provider.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1046,7 +1043,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun hostedZoneContextQuery(block: HostedZoneContextQueryDsl.() -> Unit = {}): HostedZoneContextQuery {
+    public inline fun hostedZoneContextQuery(
+        block: HostedZoneContextQueryDsl.() -> Unit = {}
+    ): HostedZoneContextQuery {
         val builder = HostedZoneContextQueryDsl()
         builder.apply(block)
         return builder.build()
@@ -1056,7 +1055,6 @@ public object schema {
      * Definitions for the integration testing manifest.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1177,7 +1175,6 @@ public object schema {
      * Query input for looking up a KMS Key.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1201,7 +1198,6 @@ public object schema {
      * Query input for looking up a load balancer.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1220,7 +1216,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun loadBalancerContextQuery(block: LoadBalancerContextQueryDsl.() -> Unit = {}): LoadBalancerContextQuery {
+    public inline fun loadBalancerContextQuery(
+        block: LoadBalancerContextQueryDsl.() -> Unit = {}
+    ): LoadBalancerContextQuery {
         val builder = LoadBalancerContextQueryDsl()
         builder.apply(block)
         return builder.build()
@@ -1230,7 +1228,6 @@ public object schema {
      * Filters for selecting load balancers.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1246,7 +1243,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun loadBalancerFilter(block: LoadBalancerFilterDsl.() -> Unit = {}): LoadBalancerFilter {
+    public inline fun loadBalancerFilter(
+        block: LoadBalancerFilterDsl.() -> Unit = {}
+    ): LoadBalancerFilter {
         val builder = LoadBalancerFilterDsl()
         builder.apply(block)
         return builder.build()
@@ -1256,7 +1255,6 @@ public object schema {
      * Query input for looking up a load balancer listener.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1280,8 +1278,7 @@ public object schema {
      * ```
      */
     public inline fun loadBalancerListenerContextQuery(
-        block: LoadBalancerListenerContextQueryDsl.() -> Unit =
-            {}
+        block: LoadBalancerListenerContextQueryDsl.() -> Unit = {}
     ): LoadBalancerListenerContextQuery {
         val builder = LoadBalancerListenerContextQueryDsl()
         builder.apply(block)
@@ -1292,7 +1289,6 @@ public object schema {
      * Options for the loadManifest operation.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1304,7 +1300,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun loadManifestOptions(block: LoadManifestOptionsDsl.() -> Unit = {}): LoadManifestOptions {
+    public inline fun loadManifestOptions(
+        block: LoadManifestOptionsDsl.() -> Unit = {}
+    ): LoadManifestOptions {
         val builder = LoadManifestOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -1314,7 +1312,6 @@ public object schema {
      * A metadata entry in a cloud assembly artifact.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1337,7 +1334,6 @@ public object schema {
      * Represents a missing piece of context.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1367,7 +1363,6 @@ public object schema {
      * Artifact properties for nested cloud assemblies.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1381,8 +1376,7 @@ public object schema {
      * ```
      */
     public inline fun nestedCloudAssemblyProperties(
-        block: NestedCloudAssemblyPropertiesDsl.() -> Unit =
-            {}
+        block: NestedCloudAssemblyPropertiesDsl.() -> Unit = {}
     ): NestedCloudAssemblyProperties {
         val builder = NestedCloudAssemblyPropertiesDsl()
         builder.apply(block)
@@ -1392,11 +1386,10 @@ public object schema {
     /**
      * Query input for plugins.
      *
-     * This alternate branch is necessary because it needs to be able to escape all type checking
-     * we do on on the cloud assembly -- we cannot know the properties that will be used a priori.
+     * This alternate branch is necessary because it needs to be able to escape all type checking we
+     * do on on the cloud assembly -- we cannot know the properties that will be used a priori.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1406,7 +1399,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun pluginContextQuery(block: PluginContextQueryDsl.() -> Unit = {}): PluginContextQuery {
+    public inline fun pluginContextQuery(
+        block: PluginContextQueryDsl.() -> Unit = {}
+    ): PluginContextQuery {
         val builder = PluginContextQueryDsl()
         builder.apply(block)
         return builder.build()
@@ -1416,7 +1411,6 @@ public object schema {
      * Information about the application's runtime components.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1437,7 +1431,6 @@ public object schema {
      * Query to SSM Parameter Context Provider.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1451,7 +1444,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun sSMParameterContextQuery(block: SSMParameterContextQueryDsl.() -> Unit = {}): SSMParameterContextQuery {
+    public inline fun sSMParameterContextQuery(
+        block: SSMParameterContextQueryDsl.() -> Unit = {}
+    ): SSMParameterContextQuery {
         val builder = SSMParameterContextQueryDsl()
         builder.apply(block)
         return builder.build()
@@ -1461,7 +1456,6 @@ public object schema {
      * Query input for looking up a security group.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1477,7 +1471,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun securityGroupContextQuery(block: SecurityGroupContextQueryDsl.() -> Unit = {}): SecurityGroupContextQuery {
+    public inline fun securityGroupContextQuery(
+        block: SecurityGroupContextQueryDsl.() -> Unit = {}
+    ): SecurityGroupContextQuery {
         val builder = SecurityGroupContextQueryDsl()
         builder.apply(block)
         return builder.build()
@@ -1487,7 +1483,6 @@ public object schema {
      * Metadata Entry spec for stack tag.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1508,7 +1503,6 @@ public object schema {
      * Represents an integration test case.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1621,7 +1615,6 @@ public object schema {
      * The set of options to control the workflow of the test runner.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1730,7 +1723,6 @@ public object schema {
      * Artifact properties for the Construct Tree Artifact.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1740,7 +1732,9 @@ public object schema {
      * .build();
      * ```
      */
-    public inline fun treeArtifactProperties(block: TreeArtifactPropertiesDsl.() -> Unit = {}): TreeArtifactProperties {
+    public inline fun treeArtifactProperties(
+        block: TreeArtifactPropertiesDsl.() -> Unit = {}
+    ): TreeArtifactProperties {
         val builder = TreeArtifactPropertiesDsl()
         builder.apply(block)
         return builder.build()
@@ -1750,7 +1744,6 @@ public object schema {
      * Query input for looking up a VPC.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.

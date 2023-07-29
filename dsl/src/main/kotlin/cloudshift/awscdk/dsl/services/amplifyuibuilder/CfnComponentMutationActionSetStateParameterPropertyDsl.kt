@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * the same component.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -66,36 +74,28 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  */
 @CdkDslMarker
 public class CfnComponentMutationActionSetStateParameterPropertyDsl {
-  private val cdkBuilder: CfnComponent.MutationActionSetStateParameterProperty.Builder =
-      CfnComponent.MutationActionSetStateParameterProperty.builder()
+    private val cdkBuilder: CfnComponent.MutationActionSetStateParameterProperty.Builder =
+        CfnComponent.MutationActionSetStateParameterProperty.builder()
 
-  /**
-   * @param componentName The name of the component that is being modified. 
-   */
-  public fun componentName(componentName: String) {
-    cdkBuilder.componentName(componentName)
-  }
+    /** @param componentName The name of the component that is being modified. */
+    public fun componentName(componentName: String) {
+        cdkBuilder.componentName(componentName)
+    }
 
-  /**
-   * @param property The name of the component property to apply the state configuration to. 
-   */
-  public fun `property`(`property`: String) {
-    cdkBuilder.`property`(`property`)
-  }
+    /** @param property The name of the component property to apply the state configuration to. */
+    public fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+    }
 
-  /**
-   * @param set The state configuration to assign to the property. 
-   */
-  public fun `set`(`set`: IResolvable) {
-    cdkBuilder.`set`(`set`)
-  }
+    /** @param set The state configuration to assign to the property. */
+    public fun `set`(`set`: IResolvable) {
+        cdkBuilder.`set`(`set`)
+    }
 
-  /**
-   * @param set The state configuration to assign to the property. 
-   */
-  public fun `set`(`set`: CfnComponent.ComponentPropertyProperty) {
-    cdkBuilder.`set`(`set`)
-  }
+    /** @param set The state configuration to assign to the property. */
+    public fun `set`(`set`: CfnComponent.ComponentPropertyProperty) {
+        cdkBuilder.`set`(`set`)
+    }
 
-  public fun build(): CfnComponent.MutationActionSetStateParameterProperty = cdkBuilder.build()
+    public fun build(): CfnComponent.MutationActionSetStateParameterProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.datasync
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
  * system.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,40 +46,40 @@ import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
  */
 @CdkDslMarker
 public class CfnLocationFSxONTAPProtocolPropertyDsl {
-  private val cdkBuilder: CfnLocationFSxONTAP.ProtocolProperty.Builder =
-      CfnLocationFSxONTAP.ProtocolProperty.builder()
+    private val cdkBuilder: CfnLocationFSxONTAP.ProtocolProperty.Builder =
+        CfnLocationFSxONTAP.ProtocolProperty.builder()
 
-  /**
-   * @param nfs Specifies the Network File System (NFS) protocol configuration that DataSync uses to
-   * access your FSx for ONTAP file system's storage virtual machine (SVM).
-   */
-  public fun nfs(nfs: IResolvable) {
-    cdkBuilder.nfs(nfs)
-  }
+    /**
+     * @param nfs Specifies the Network File System (NFS) protocol configuration that DataSync uses
+     *   to access your FSx for ONTAP file system's storage virtual machine (SVM).
+     */
+    public fun nfs(nfs: IResolvable) {
+        cdkBuilder.nfs(nfs)
+    }
 
-  /**
-   * @param nfs Specifies the Network File System (NFS) protocol configuration that DataSync uses to
-   * access your FSx for ONTAP file system's storage virtual machine (SVM).
-   */
-  public fun nfs(nfs: CfnLocationFSxONTAP.NFSProperty) {
-    cdkBuilder.nfs(nfs)
-  }
+    /**
+     * @param nfs Specifies the Network File System (NFS) protocol configuration that DataSync uses
+     *   to access your FSx for ONTAP file system's storage virtual machine (SVM).
+     */
+    public fun nfs(nfs: CfnLocationFSxONTAP.NFSProperty) {
+        cdkBuilder.nfs(nfs)
+    }
 
-  /**
-   * @param smb Specifies the Server Message Block (SMB) protocol configuration that DataSync uses
-   * to access your FSx for ONTAP file system's SVM.
-   */
-  public fun smb(smb: IResolvable) {
-    cdkBuilder.smb(smb)
-  }
+    /**
+     * @param smb Specifies the Server Message Block (SMB) protocol configuration that DataSync uses
+     *   to access your FSx for ONTAP file system's SVM.
+     */
+    public fun smb(smb: IResolvable) {
+        cdkBuilder.smb(smb)
+    }
 
-  /**
-   * @param smb Specifies the Server Message Block (SMB) protocol configuration that DataSync uses
-   * to access your FSx for ONTAP file system's SVM.
-   */
-  public fun smb(smb: CfnLocationFSxONTAP.SMBProperty) {
-    cdkBuilder.smb(smb)
-  }
+    /**
+     * @param smb Specifies the Server Message Block (SMB) protocol configuration that DataSync uses
+     *   to access your FSx for ONTAP file system's SVM.
+     */
+    public fun smb(smb: CfnLocationFSxONTAP.SMBProperty) {
+        cdkBuilder.smb(smb)
+    }
 
-  public fun build(): CfnLocationFSxONTAP.ProtocolProperty = cdkBuilder.build()
+    public fun build(): CfnLocationFSxONTAP.ProtocolProperty = cdkBuilder.build()
 }

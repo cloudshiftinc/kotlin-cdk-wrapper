@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling.common
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.autoscaling.common.ScalingInterval
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,33 +38,27 @@ import software.amazon.awscdk.services.autoscaling.common.ScalingInterval
  */
 @CdkDslMarker
 public class ArbitraryIntervalsDsl {
-  private val cdkBuilder: ArbitraryIntervals.Builder = ArbitraryIntervals.builder()
+    private val cdkBuilder: ArbitraryIntervals.Builder = ArbitraryIntervals.builder()
 
-  private val _intervals: MutableList<ScalingInterval> = mutableListOf()
+    private val _intervals: MutableList<ScalingInterval> = mutableListOf()
 
-  /**
-   * @param absolute the value to be set. 
-   */
-  public fun absolute(absolute: Boolean) {
-    cdkBuilder.absolute(absolute)
-  }
+    /** @param absolute the value to be set. */
+    public fun absolute(absolute: Boolean) {
+        cdkBuilder.absolute(absolute)
+    }
 
-  /**
-   * @param intervals the value to be set. 
-   */
-  public fun intervals(intervals: ScalingIntervalDsl.() -> Unit) {
-    _intervals.add(ScalingIntervalDsl().apply(intervals).build())
-  }
+    /** @param intervals the value to be set. */
+    public fun intervals(intervals: ScalingIntervalDsl.() -> Unit) {
+        _intervals.add(ScalingIntervalDsl().apply(intervals).build())
+    }
 
-  /**
-   * @param intervals the value to be set. 
-   */
-  public fun intervals(intervals: Collection<ScalingInterval>) {
-    _intervals.addAll(intervals)
-  }
+    /** @param intervals the value to be set. */
+    public fun intervals(intervals: Collection<ScalingInterval>) {
+        _intervals.addAll(intervals)
+    }
 
-  public fun build(): ArbitraryIntervals {
-    if(_intervals.isNotEmpty()) cdkBuilder.intervals(_intervals)
-    return cdkBuilder.build()
-  }
+    public fun build(): ArbitraryIntervals {
+        if (_intervals.isNotEmpty()) cdkBuilder.intervals(_intervals)
+        return cdkBuilder.build()
+    }
 }

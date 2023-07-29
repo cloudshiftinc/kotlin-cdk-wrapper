@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * Configures the display properties of the given text.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,30 +44,22 @@ public class CfnTemplateFontConfigurationPropertyDsl {
     private val cdkBuilder: CfnTemplate.FontConfigurationProperty.Builder =
         CfnTemplate.FontConfigurationProperty.builder()
 
-    /**
-     * @param fontColor Determines the color of the text.
-     */
+    /** @param fontColor Determines the color of the text. */
     public fun fontColor(fontColor: String) {
         cdkBuilder.fontColor(fontColor)
     }
 
-    /**
-     * @param fontDecoration Determines the appearance of decorative lines on the text.
-     */
+    /** @param fontDecoration Determines the appearance of decorative lines on the text. */
     public fun fontDecoration(fontDecoration: String) {
         cdkBuilder.fontDecoration(fontDecoration)
     }
 
-    /**
-     * @param fontSize The option that determines the text display size.
-     */
+    /** @param fontSize The option that determines the text display size. */
     public fun fontSize(fontSize: IResolvable) {
         cdkBuilder.fontSize(fontSize)
     }
 
-    /**
-     * @param fontSize The option that determines the text display size.
-     */
+    /** @param fontSize The option that determines the text display size. */
     public fun fontSize(fontSize: CfnTemplate.FontSizeProperty) {
         cdkBuilder.fontSize(fontSize)
     }
@@ -71,16 +71,12 @@ public class CfnTemplateFontConfigurationPropertyDsl {
         cdkBuilder.fontStyle(fontStyle)
     }
 
-    /**
-     * @param fontWeight The option that determines the text display weight, or boldness.
-     */
+    /** @param fontWeight The option that determines the text display weight, or boldness. */
     public fun fontWeight(fontWeight: IResolvable) {
         cdkBuilder.fontWeight(fontWeight)
     }
 
-    /**
-     * @param fontWeight The option that determines the text display weight, or boldness.
-     */
+    /** @param fontWeight The option that determines the text display weight, or boldness. */
     public fun fontWeight(fontWeight: CfnTemplate.FontWeightProperty) {
         cdkBuilder.fontWeight(fontWeight)
     }

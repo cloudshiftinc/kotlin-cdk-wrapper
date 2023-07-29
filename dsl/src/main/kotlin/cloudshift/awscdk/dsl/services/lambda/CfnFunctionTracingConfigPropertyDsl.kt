@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  * tracing configuration. To sample and record incoming requests, set `Mode` to `Active` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionTracingConfigPropertyDsl {
-  private val cdkBuilder: CfnFunction.TracingConfigProperty.Builder =
-      CfnFunction.TracingConfigProperty.builder()
+    private val cdkBuilder: CfnFunction.TracingConfigProperty.Builder =
+        CfnFunction.TracingConfigProperty.builder()
 
-  /**
-   * @param mode The tracing mode.
-   */
-  public fun mode(mode: String) {
-    cdkBuilder.mode(mode)
-  }
+    /** @param mode The tracing mode. */
+    public fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+    }
 
-  public fun build(): CfnFunction.TracingConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.TracingConfigProperty = cdkBuilder.build()
 }

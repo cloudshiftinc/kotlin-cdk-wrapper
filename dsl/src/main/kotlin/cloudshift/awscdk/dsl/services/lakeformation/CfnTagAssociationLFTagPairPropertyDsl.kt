@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
 
 /**
  * A structure containing the catalog ID, tag key, and tag values of an LF-tag key-value pair.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,31 +42,29 @@ public class CfnTagAssociationLFTagPairPropertyDsl {
     private val _tagValues: MutableList<String> = mutableListOf()
 
     /**
-     * @param catalogId The identifier for the Data Catalog .
-     * By default, it is the account ID of the caller.
+     * @param catalogId The identifier for the Data Catalog . By default, it is the account ID of
+     *   the caller.
      */
     public fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
     }
 
-    /**
-     * @param tagKey The key-name for the LF-tag.
-     */
+    /** @param tagKey The key-name for the LF-tag. */
     public fun tagKey(tagKey: String) {
         cdkBuilder.tagKey(tagKey)
     }
 
     /**
-     * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag key-value
-     * pair.
+     * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+     *   key-value pair.
      */
     public fun tagValues(vararg tagValues: String) {
         _tagValues.addAll(listOf(*tagValues))
     }
 
     /**
-     * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag key-value
-     * pair.
+     * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+     *   key-value pair.
      */
     public fun tagValues(tagValues: Collection<String>) {
         _tagValues.addAll(tagValues)

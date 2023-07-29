@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The configuration for applying a filter to specific sheets or visuals.
@@ -18,7 +27,6 @@ import kotlin.collections.MutableList
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,7 +53,7 @@ public class CfnAnalysisSelectedSheetsFilterScopeConfigurationPropertyDsl {
 
     /**
      * @param sheetVisualScopingConfigurations The sheet ID and visual IDs of the sheet and visuals
-     * that the filter is applied to.
+     *   that the filter is applied to.
      */
     public fun sheetVisualScopingConfigurations(vararg sheetVisualScopingConfigurations: Any) {
         _sheetVisualScopingConfigurations.addAll(listOf(*sheetVisualScopingConfigurations))
@@ -53,7 +61,7 @@ public class CfnAnalysisSelectedSheetsFilterScopeConfigurationPropertyDsl {
 
     /**
      * @param sheetVisualScopingConfigurations The sheet ID and visual IDs of the sheet and visuals
-     * that the filter is applied to.
+     *   that the filter is applied to.
      */
     public fun sheetVisualScopingConfigurations(sheetVisualScopingConfigurations: Collection<Any>) {
         _sheetVisualScopingConfigurations.addAll(sheetVisualScopingConfigurations)
@@ -61,16 +69,15 @@ public class CfnAnalysisSelectedSheetsFilterScopeConfigurationPropertyDsl {
 
     /**
      * @param sheetVisualScopingConfigurations The sheet ID and visual IDs of the sheet and visuals
-     * that the filter is applied to.
+     *   that the filter is applied to.
      */
     public fun sheetVisualScopingConfigurations(sheetVisualScopingConfigurations: IResolvable) {
         cdkBuilder.sheetVisualScopingConfigurations(sheetVisualScopingConfigurations)
     }
 
     public fun build(): CfnAnalysis.SelectedSheetsFilterScopeConfigurationProperty {
-        if (_sheetVisualScopingConfigurations.isNotEmpty()) {
+        if (_sheetVisualScopingConfigurations.isNotEmpty())
             cdkBuilder.sheetVisualScopingConfigurations(_sheetVisualScopingConfigurations)
-        }
         return cdkBuilder.build()
     }
 }

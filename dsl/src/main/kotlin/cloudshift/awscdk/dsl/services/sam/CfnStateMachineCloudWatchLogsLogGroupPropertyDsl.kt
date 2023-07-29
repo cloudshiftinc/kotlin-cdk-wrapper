@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sam.CfnStateMachine
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,15 +31,13 @@ import software.amazon.awscdk.services.sam.CfnStateMachine
  */
 @CdkDslMarker
 public class CfnStateMachineCloudWatchLogsLogGroupPropertyDsl {
-  private val cdkBuilder: CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder =
-      CfnStateMachine.CloudWatchLogsLogGroupProperty.builder()
+    private val cdkBuilder: CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder =
+        CfnStateMachine.CloudWatchLogsLogGroupProperty.builder()
 
-  /**
-   * @param logGroupArn the value to be set. 
-   */
-  public fun logGroupArn(logGroupArn: String) {
-    cdkBuilder.logGroupArn(logGroupArn)
-  }
+    /** @param logGroupArn the value to be set. */
+    public fun logGroupArn(logGroupArn: String) {
+        cdkBuilder.logGroupArn(logGroupArn)
+    }
 
-  public fun build(): CfnStateMachine.CloudWatchLogsLogGroupProperty = cdkBuilder.build()
+    public fun build(): CfnStateMachine.CloudWatchLogsLogGroupProperty = cdkBuilder.build()
 }

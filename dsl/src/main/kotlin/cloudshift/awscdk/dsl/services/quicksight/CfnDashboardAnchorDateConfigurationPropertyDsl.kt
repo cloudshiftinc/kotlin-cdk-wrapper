@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The date configuration of the filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,7 +46,8 @@ public class CfnDashboardAnchorDateConfigurationPropertyDsl {
     }
 
     /**
-     * @param parameterName The name of the parameter that is used for the anchor date configuration.
+     * @param parameterName The name of the parameter that is used for the anchor date
+     *   configuration.
      */
     public fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)

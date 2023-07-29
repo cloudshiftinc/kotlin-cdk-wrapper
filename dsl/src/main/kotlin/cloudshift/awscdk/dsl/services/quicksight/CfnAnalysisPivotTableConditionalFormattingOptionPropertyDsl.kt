@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Conditional formatting options for a `PivotTableVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -94,19 +102,16 @@ public class CfnAnalysisPivotTableConditionalFormattingOptionPropertyDsl {
     private val cdkBuilder: CfnAnalysis.PivotTableConditionalFormattingOptionProperty.Builder =
         CfnAnalysis.PivotTableConditionalFormattingOptionProperty.builder()
 
-    /**
-     * @param cell The cell conditional formatting option for a pivot table.
-     */
+    /** @param cell The cell conditional formatting option for a pivot table. */
     public fun cell(cell: IResolvable) {
         cdkBuilder.cell(cell)
     }
 
-    /**
-     * @param cell The cell conditional formatting option for a pivot table.
-     */
+    /** @param cell The cell conditional formatting option for a pivot table. */
     public fun cell(cell: CfnAnalysis.PivotTableCellConditionalFormattingProperty) {
         cdkBuilder.cell(cell)
     }
 
-    public fun build(): CfnAnalysis.PivotTableConditionalFormattingOptionProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.PivotTableConditionalFormattingOptionProperty =
+        cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.route53.PublicHostedZoneAttributes
  * Reference to a public hosted zone.
  *
  * Example:
- *
  * ```
  * IPublicHostedZone zoneFromAttributes = PublicHostedZone.fromPublicHostedZoneAttributes(this,
  * "MyZone", PublicHostedZoneAttributes.builder()
@@ -24,21 +32,18 @@ import software.amazon.awscdk.services.route53.PublicHostedZoneAttributes
  */
 @CdkDslMarker
 public class PublicHostedZoneAttributesDsl {
-  private val cdkBuilder: PublicHostedZoneAttributes.Builder = PublicHostedZoneAttributes.builder()
+    private val cdkBuilder: PublicHostedZoneAttributes.Builder =
+        PublicHostedZoneAttributes.builder()
 
-  /**
-   * @param hostedZoneId Identifier of the hosted zone. 
-   */
-  public fun hostedZoneId(hostedZoneId: String) {
-    cdkBuilder.hostedZoneId(hostedZoneId)
-  }
+    /** @param hostedZoneId Identifier of the hosted zone. */
+    public fun hostedZoneId(hostedZoneId: String) {
+        cdkBuilder.hostedZoneId(hostedZoneId)
+    }
 
-  /**
-   * @param zoneName Name of the hosted zone. 
-   */
-  public fun zoneName(zoneName: String) {
-    cdkBuilder.zoneName(zoneName)
-  }
+    /** @param zoneName Name of the hosted zone. */
+    public fun zoneName(zoneName: String) {
+        cdkBuilder.zoneName(zoneName)
+    }
 
-  public fun build(): PublicHostedZoneAttributes = cdkBuilder.build()
+    public fun build(): PublicHostedZoneAttributes = cdkBuilder.build()
 }

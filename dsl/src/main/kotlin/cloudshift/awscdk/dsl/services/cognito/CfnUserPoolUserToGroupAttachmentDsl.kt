@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * Calling this action requires developer credentials.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,41 +38,44 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnUserPoolUserToGroupAttachmentDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnUserPoolUserToGroupAttachment.Builder =
-      CfnUserPoolUserToGroupAttachment.Builder.create(scope, id)
+    private val cdkBuilder: CfnUserPoolUserToGroupAttachment.Builder =
+        CfnUserPoolUserToGroupAttachment.Builder.create(scope, id)
 
-  /**
-   * The group name.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-groupname)
-   * @param groupName The group name. 
-   */
-  public fun groupName(groupName: String) {
-    cdkBuilder.groupName(groupName)
-  }
+    /**
+     * The group name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-groupname)
+     *
+     * @param groupName The group name.
+     */
+    public fun groupName(groupName: String) {
+        cdkBuilder.groupName(groupName)
+    }
 
-  /**
-   * The user pool ID for the user pool.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid)
-   * @param userPoolId The user pool ID for the user pool. 
-   */
-  public fun userPoolId(userPoolId: String) {
-    cdkBuilder.userPoolId(userPoolId)
-  }
+    /**
+     * The user pool ID for the user pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid)
+     *
+     * @param userPoolId The user pool ID for the user pool.
+     */
+    public fun userPoolId(userPoolId: String) {
+        cdkBuilder.userPoolId(userPoolId)
+    }
 
-  /**
-   * The username for the user.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
-   * @param username The username for the user. 
-   */
-  public fun username(username: String) {
-    cdkBuilder.username(username)
-  }
+    /**
+     * The username for the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
+     *
+     * @param username The username for the user.
+     */
+    public fun username(username: String) {
+        cdkBuilder.username(username)
+    }
 
-  public fun build(): CfnUserPoolUserToGroupAttachment = cdkBuilder.build()
+    public fun build(): CfnUserPoolUserToGroupAttachment = cdkBuilder.build()
 }

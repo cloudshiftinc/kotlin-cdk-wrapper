@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecr
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps
  * Properties for defining a `CfnReplicationConfiguration`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,23 +46,20 @@ import software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps
  */
 @CdkDslMarker
 public class CfnReplicationConfigurationPropsDsl {
-  private val cdkBuilder: CfnReplicationConfigurationProps.Builder =
-      CfnReplicationConfigurationProps.builder()
+    private val cdkBuilder: CfnReplicationConfigurationProps.Builder =
+        CfnReplicationConfigurationProps.builder()
 
-  /**
-   * @param replicationConfiguration The replication configuration for a registry. 
-   */
-  public fun replicationConfiguration(replicationConfiguration: IResolvable) {
-    cdkBuilder.replicationConfiguration(replicationConfiguration)
-  }
+    /** @param replicationConfiguration The replication configuration for a registry. */
+    public fun replicationConfiguration(replicationConfiguration: IResolvable) {
+        cdkBuilder.replicationConfiguration(replicationConfiguration)
+    }
 
-  /**
-   * @param replicationConfiguration The replication configuration for a registry. 
-   */
-  public
-      fun replicationConfiguration(replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty) {
-    cdkBuilder.replicationConfiguration(replicationConfiguration)
-  }
+    /** @param replicationConfiguration The replication configuration for a registry. */
+    public fun replicationConfiguration(
+        replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty
+    ) {
+        cdkBuilder.replicationConfiguration(replicationConfiguration)
+    }
 
-  public fun build(): CfnReplicationConfigurationProps = cdkBuilder.build()
+    public fun build(): CfnReplicationConfigurationProps = cdkBuilder.build()
 }

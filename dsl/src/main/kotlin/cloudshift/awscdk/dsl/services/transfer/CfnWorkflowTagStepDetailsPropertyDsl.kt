@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.transfer
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.transfer.CfnWorkflow
  * You specify one or more tags. Each tag contains a key-value pair.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,46 +42,41 @@ import software.amazon.awscdk.services.transfer.CfnWorkflow
  */
 @CdkDslMarker
 public class CfnWorkflowTagStepDetailsPropertyDsl {
-  private val cdkBuilder: CfnWorkflow.TagStepDetailsProperty.Builder =
-      CfnWorkflow.TagStepDetailsProperty.builder()
+    private val cdkBuilder: CfnWorkflow.TagStepDetailsProperty.Builder =
+        CfnWorkflow.TagStepDetailsProperty.builder()
 
-  private val _tags: MutableList<CfnWorkflow.S3TagProperty> = mutableListOf()
+    private val _tags: MutableList<CfnWorkflow.S3TagProperty> = mutableListOf()
 
-  /**
-   * @param name The name of the step, used as an identifier.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the step, used as an identifier. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param sourceFileLocation Specifies which file to use as input to the workflow step: either the
-   * output from the previous step, or the originally uploaded file for the workflow.
-   * * To use the previous file as the input, enter `${previous.file}` . In this case, this workflow
-   * step uses the output file from the previous workflow step as input. This is the default value.
-   * * To use the originally uploaded file location as input for this step, enter `${original.file}`
-   * .
-   */
-  public fun sourceFileLocation(sourceFileLocation: String) {
-    cdkBuilder.sourceFileLocation(sourceFileLocation)
-  }
+    /**
+     * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
+     *   the output from the previous step, or the originally uploaded file for the workflow.
+     * * To use the previous file as the input, enter `${previous.file}` . In this case, this
+     *   workflow step uses the output file from the previous workflow step as input. This is the
+     *   default value.
+     * * To use the originally uploaded file location as input for this step, enter
+     *   `${original.file}` .
+     */
+    public fun sourceFileLocation(sourceFileLocation: String) {
+        cdkBuilder.sourceFileLocation(sourceFileLocation)
+    }
 
-  /**
-   * @param tags Array that contains from 1 to 10 key/value pairs.
-   */
-  public fun tags(tags: CfnWorkflowS3TagPropertyDsl.() -> Unit) {
-    _tags.add(CfnWorkflowS3TagPropertyDsl().apply(tags).build())
-  }
+    /** @param tags Array that contains from 1 to 10 key/value pairs. */
+    public fun tags(tags: CfnWorkflowS3TagPropertyDsl.() -> Unit) {
+        _tags.add(CfnWorkflowS3TagPropertyDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Array that contains from 1 to 10 key/value pairs.
-   */
-  public fun tags(tags: Collection<CfnWorkflow.S3TagProperty>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags Array that contains from 1 to 10 key/value pairs. */
+    public fun tags(tags: Collection<CfnWorkflow.S3TagProperty>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnWorkflow.TagStepDetailsProperty {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnWorkflow.TagStepDetailsProperty {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

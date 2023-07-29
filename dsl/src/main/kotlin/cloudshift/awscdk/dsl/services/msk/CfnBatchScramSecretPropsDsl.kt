@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.msk.CfnBatchScramSecretProps
  * Properties for defining a `CfnBatchScramSecret`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,33 +36,27 @@ import software.amazon.awscdk.services.msk.CfnBatchScramSecretProps
  */
 @CdkDslMarker
 public class CfnBatchScramSecretPropsDsl {
-  private val cdkBuilder: CfnBatchScramSecretProps.Builder = CfnBatchScramSecretProps.builder()
+    private val cdkBuilder: CfnBatchScramSecretProps.Builder = CfnBatchScramSecretProps.builder()
 
-  private val _secretArnList: MutableList<String> = mutableListOf()
+    private val _secretArnList: MutableList<String> = mutableListOf()
 
-  /**
-   * @param clusterArn the value to be set. 
-   */
-  public fun clusterArn(clusterArn: String) {
-    cdkBuilder.clusterArn(clusterArn)
-  }
+    /** @param clusterArn the value to be set. */
+    public fun clusterArn(clusterArn: String) {
+        cdkBuilder.clusterArn(clusterArn)
+    }
 
-  /**
-   * @param secretArnList the value to be set.
-   */
-  public fun secretArnList(vararg secretArnList: String) {
-    _secretArnList.addAll(listOf(*secretArnList))
-  }
+    /** @param secretArnList the value to be set. */
+    public fun secretArnList(vararg secretArnList: String) {
+        _secretArnList.addAll(listOf(*secretArnList))
+    }
 
-  /**
-   * @param secretArnList the value to be set.
-   */
-  public fun secretArnList(secretArnList: Collection<String>) {
-    _secretArnList.addAll(secretArnList)
-  }
+    /** @param secretArnList the value to be set. */
+    public fun secretArnList(secretArnList: Collection<String>) {
+        _secretArnList.addAll(secretArnList)
+    }
 
-  public fun build(): CfnBatchScramSecretProps {
-    if(_secretArnList.isNotEmpty()) cdkBuilder.secretArnList(_secretArnList)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBatchScramSecretProps {
+        if (_secretArnList.isNotEmpty()) cdkBuilder.secretArnList(_secretArnList)
+        return cdkBuilder.build()
+    }
 }

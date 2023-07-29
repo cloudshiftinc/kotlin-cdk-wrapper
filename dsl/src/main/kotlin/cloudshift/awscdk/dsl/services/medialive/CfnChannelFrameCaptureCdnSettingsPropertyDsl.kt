@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is FrameCaptureGroupSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,25 +37,26 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelFrameCaptureCdnSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.FrameCaptureCdnSettingsProperty.Builder =
-      CfnChannel.FrameCaptureCdnSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.FrameCaptureCdnSettingsProperty.Builder =
+        CfnChannel.FrameCaptureCdnSettingsProperty.builder()
 
-  /**
-   * @param frameCaptureS3Settings Sets up Amazon S3 as the destination for this Frame Capture
-   * output.
-   */
-  public fun frameCaptureS3Settings(frameCaptureS3Settings: IResolvable) {
-    cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings)
-  }
+    /**
+     * @param frameCaptureS3Settings Sets up Amazon S3 as the destination for this Frame Capture
+     *   output.
+     */
+    public fun frameCaptureS3Settings(frameCaptureS3Settings: IResolvable) {
+        cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings)
+    }
 
-  /**
-   * @param frameCaptureS3Settings Sets up Amazon S3 as the destination for this Frame Capture
-   * output.
-   */
-  public
-      fun frameCaptureS3Settings(frameCaptureS3Settings: CfnChannel.FrameCaptureS3SettingsProperty) {
-    cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings)
-  }
+    /**
+     * @param frameCaptureS3Settings Sets up Amazon S3 as the destination for this Frame Capture
+     *   output.
+     */
+    public fun frameCaptureS3Settings(
+        frameCaptureS3Settings: CfnChannel.FrameCaptureS3SettingsProperty
+    ) {
+        cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings)
+    }
 
-  public fun build(): CfnChannel.FrameCaptureCdnSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.FrameCaptureCdnSettingsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.supportapp
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfiguration
  * Properties for defining a `CfnSlackWorkspaceConfiguration`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,24 +35,24 @@ import software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfiguration
  */
 @CdkDslMarker
 public class CfnSlackWorkspaceConfigurationPropsDsl {
-  private val cdkBuilder: CfnSlackWorkspaceConfigurationProps.Builder =
-      CfnSlackWorkspaceConfigurationProps.builder()
+    private val cdkBuilder: CfnSlackWorkspaceConfigurationProps.Builder =
+        CfnSlackWorkspaceConfigurationProps.builder()
 
-  /**
-   * @param teamId The team ID in Slack. 
-   * This ID uniquely identifies a Slack workspace, such as `T012ABCDEFG` .
-   */
-  public fun teamId(teamId: String) {
-    cdkBuilder.teamId(teamId)
-  }
+    /**
+     * @param teamId The team ID in Slack. This ID uniquely identifies a Slack workspace, such as
+     *   `T012ABCDEFG` .
+     */
+    public fun teamId(teamId: String) {
+        cdkBuilder.teamId(teamId)
+    }
 
-  /**
-   * @param versionId An identifier used to update an existing Slack workspace configuration in AWS
-   * CloudFormation , such as `100` .
-   */
-  public fun versionId(versionId: String) {
-    cdkBuilder.versionId(versionId)
-  }
+    /**
+     * @param versionId An identifier used to update an existing Slack workspace configuration in
+     *   AWS CloudFormation , such as `100` .
+     */
+    public fun versionId(versionId: String) {
+        cdkBuilder.versionId(versionId)
+    }
 
-  public fun build(): CfnSlackWorkspaceConfigurationProps = cdkBuilder.build()
+    public fun build(): CfnSlackWorkspaceConfigurationProps = cdkBuilder.build()
 }

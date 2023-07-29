@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDataSet
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
  * A physical table type built from the results of the custom SQL query.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,44 +47,32 @@ public class CfnDataSetCustomSqlPropertyDsl {
 
     private val _columns: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param columns The column schema from the SQL query result set.
-     */
+    /** @param columns The column schema from the SQL query result set. */
     public fun columns(vararg columns: Any) {
         _columns.addAll(listOf(*columns))
     }
 
-    /**
-     * @param columns The column schema from the SQL query result set.
-     */
+    /** @param columns The column schema from the SQL query result set. */
     public fun columns(columns: Collection<Any>) {
         _columns.addAll(columns)
     }
 
-    /**
-     * @param columns The column schema from the SQL query result set.
-     */
+    /** @param columns The column schema from the SQL query result set. */
     public fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns)
     }
 
-    /**
-     * @param dataSourceArn The Amazon Resource Name (ARN) of the data source.
-     */
+    /** @param dataSourceArn The Amazon Resource Name (ARN) of the data source. */
     public fun dataSourceArn(dataSourceArn: String) {
         cdkBuilder.dataSourceArn(dataSourceArn)
     }
 
-    /**
-     * @param name A display name for the SQL query result.
-     */
+    /** @param name A display name for the SQL query result. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param sqlQuery The SQL query.
-     */
+    /** @param sqlQuery The SQL query. */
     public fun sqlQuery(sqlQuery: String) {
         cdkBuilder.sqlQuery(sqlQuery)
     }

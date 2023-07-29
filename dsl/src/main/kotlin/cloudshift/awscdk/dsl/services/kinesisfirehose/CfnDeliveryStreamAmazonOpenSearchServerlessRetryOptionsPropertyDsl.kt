@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,16 +31,15 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class CfnDeliveryStreamAmazonOpenSearchServerlessRetryOptionsPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.Builder =
-      CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.builder()
+    private val cdkBuilder:
+        CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.Builder =
+        CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.builder()
 
-  /**
-   * @param durationInSeconds the value to be set.
-   */
-  public fun durationInSeconds(durationInSeconds: Number) {
-    cdkBuilder.durationInSeconds(durationInSeconds)
-  }
+    /** @param durationInSeconds the value to be set. */
+    public fun durationInSeconds(durationInSeconds: Number) {
+        cdkBuilder.durationInSeconds(durationInSeconds)
+    }
 
-  public fun build(): CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty =
-      cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty =
+        cdkBuilder.build()
 }

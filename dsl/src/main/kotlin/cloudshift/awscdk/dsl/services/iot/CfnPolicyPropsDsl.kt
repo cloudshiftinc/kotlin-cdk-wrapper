@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iot.CfnPolicyProps
  * Properties for defining a `CfnPolicy`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,30 +38,24 @@ import software.amazon.awscdk.services.iot.CfnPolicyProps
  */
 @CdkDslMarker
 public class CfnPolicyPropsDsl {
-  private val cdkBuilder: CfnPolicyProps.Builder = CfnPolicyProps.builder()
+    private val cdkBuilder: CfnPolicyProps.Builder = CfnPolicyProps.builder()
 
-  /**
-   * @param policyDocument The JSON document that describes the policy. 
-   */
-  public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(policyDocument)
-    cdkBuilder.policyDocument(builder.map)
-  }
+    /** @param policyDocument The JSON document that describes the policy. */
+    public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(policyDocument)
+        cdkBuilder.policyDocument(builder.map)
+    }
 
-  /**
-   * @param policyDocument The JSON document that describes the policy. 
-   */
-  public fun policyDocument(policyDocument: Any) {
-    cdkBuilder.policyDocument(policyDocument)
-  }
+    /** @param policyDocument The JSON document that describes the policy. */
+    public fun policyDocument(policyDocument: Any) {
+        cdkBuilder.policyDocument(policyDocument)
+    }
 
-  /**
-   * @param policyName The policy name.
-   */
-  public fun policyName(policyName: String) {
-    cdkBuilder.policyName(policyName)
-  }
+    /** @param policyName The policy name. */
+    public fun policyName(policyName: String) {
+        cdkBuilder.policyName(policyName)
+    }
 
-  public fun build(): CfnPolicyProps = cdkBuilder.build()
+    public fun build(): CfnPolicyProps = cdkBuilder.build()
 }

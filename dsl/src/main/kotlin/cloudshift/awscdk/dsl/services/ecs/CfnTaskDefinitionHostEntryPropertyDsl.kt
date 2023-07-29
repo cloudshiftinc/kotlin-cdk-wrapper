@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
  */
 @CdkDslMarker
 public class CfnTaskDefinitionHostEntryPropertyDsl {
-  private val cdkBuilder: CfnTaskDefinition.HostEntryProperty.Builder =
-      CfnTaskDefinition.HostEntryProperty.builder()
+    private val cdkBuilder: CfnTaskDefinition.HostEntryProperty.Builder =
+        CfnTaskDefinition.HostEntryProperty.builder()
 
-  /**
-   * @param hostname The hostname to use in the `/etc/hosts` entry.
-   */
-  public fun hostname(hostname: String) {
-    cdkBuilder.hostname(hostname)
-  }
+    /** @param hostname The hostname to use in the `/etc/hosts` entry. */
+    public fun hostname(hostname: String) {
+        cdkBuilder.hostname(hostname)
+    }
 
-  /**
-   * @param ipAddress The IP address to use in the `/etc/hosts` entry.
-   */
-  public fun ipAddress(ipAddress: String) {
-    cdkBuilder.ipAddress(ipAddress)
-  }
+    /** @param ipAddress The IP address to use in the `/etc/hosts` entry. */
+    public fun ipAddress(ipAddress: String) {
+        cdkBuilder.ipAddress(ipAddress)
+    }
 
-  public fun build(): CfnTaskDefinition.HostEntryProperty = cdkBuilder.build()
+    public fun build(): CfnTaskDefinition.HostEntryProperty = cdkBuilder.build()
 }

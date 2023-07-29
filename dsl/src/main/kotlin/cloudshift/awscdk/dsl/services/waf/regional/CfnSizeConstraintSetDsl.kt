@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.waf.regional
 
@@ -14,22 +23,19 @@ import software.constructs.Construct
 /**
  * This is *AWS WAF Classic* documentation.
  *
- * For more information, see [AWS WAF
- * Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the
- * developer guide.
+ * For more information, see
+ * [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html)
+ * in the developer guide.
  *
- *
- * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the [AWS WAF Developer
- * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) . With the latest
- * version, AWS WAF has a single set of endpoints for regional and global use.
- *
+ * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the
+ * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)
+ * . With the latest version, AWS WAF has a single set of endpoints for regional and global use.
  *
  * A complex type that contains `SizeConstraint` objects, which specify the parts of web requests
  * that you want AWS WAF to inspect the size of. If a `SizeConstraintSet` contains more than one
  * `SizeConstraint` object, a request only needs to match one constraint to be considered a match.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,56 +61,60 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnSizeConstraintSetDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnSizeConstraintSet.Builder = CfnSizeConstraintSet.Builder.create(scope,
-      id)
+    private val cdkBuilder: CfnSizeConstraintSet.Builder =
+        CfnSizeConstraintSet.Builder.create(scope, id)
 
-  private val _sizeConstraints: MutableList<Any> = mutableListOf()
+    private val _sizeConstraints: MutableList<Any> = mutableListOf()
 
-  /**
-   * The name, if any, of the `SizeConstraintSet` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-name)
-   * @param name The name, if any, of the `SizeConstraintSet` . 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name, if any, of the `SizeConstraintSet` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-name)
+     *
+     * @param name The name, if any, of the `SizeConstraintSet` .
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * The size constraint and the part of the web request to check.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-sizeconstraints)
-   * @param sizeConstraints The size constraint and the part of the web request to check. 
-   */
-  public fun sizeConstraints(vararg sizeConstraints: Any) {
-    _sizeConstraints.addAll(listOf(*sizeConstraints))
-  }
+    /**
+     * The size constraint and the part of the web request to check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-sizeconstraints)
+     *
+     * @param sizeConstraints The size constraint and the part of the web request to check.
+     */
+    public fun sizeConstraints(vararg sizeConstraints: Any) {
+        _sizeConstraints.addAll(listOf(*sizeConstraints))
+    }
 
-  /**
-   * The size constraint and the part of the web request to check.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-sizeconstraints)
-   * @param sizeConstraints The size constraint and the part of the web request to check. 
-   */
-  public fun sizeConstraints(sizeConstraints: Collection<Any>) {
-    _sizeConstraints.addAll(sizeConstraints)
-  }
+    /**
+     * The size constraint and the part of the web request to check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-sizeconstraints)
+     *
+     * @param sizeConstraints The size constraint and the part of the web request to check.
+     */
+    public fun sizeConstraints(sizeConstraints: Collection<Any>) {
+        _sizeConstraints.addAll(sizeConstraints)
+    }
 
-  /**
-   * The size constraint and the part of the web request to check.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-sizeconstraints)
-   * @param sizeConstraints The size constraint and the part of the web request to check. 
-   */
-  public fun sizeConstraints(sizeConstraints: IResolvable) {
-    cdkBuilder.sizeConstraints(sizeConstraints)
-  }
+    /**
+     * The size constraint and the part of the web request to check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html#cfn-wafregional-sizeconstraintset-sizeconstraints)
+     *
+     * @param sizeConstraints The size constraint and the part of the web request to check.
+     */
+    public fun sizeConstraints(sizeConstraints: IResolvable) {
+        cdkBuilder.sizeConstraints(sizeConstraints)
+    }
 
-  public fun build(): CfnSizeConstraintSet {
-    if(_sizeConstraints.isNotEmpty()) cdkBuilder.sizeConstraints(_sizeConstraints)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnSizeConstraintSet {
+        if (_sizeConstraints.isNotEmpty()) cdkBuilder.sizeConstraints(_sizeConstraints)
+        return cdkBuilder.build()
+    }
 }

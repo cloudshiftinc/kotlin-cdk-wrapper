@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
  * data will be written.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
  */
 @CdkDslMarker
 public class CfnTopicRulePutItemInputPropertyDsl {
-  private val cdkBuilder: CfnTopicRule.PutItemInputProperty.Builder =
-      CfnTopicRule.PutItemInputProperty.builder()
+    private val cdkBuilder: CfnTopicRule.PutItemInputProperty.Builder =
+        CfnTopicRule.PutItemInputProperty.builder()
 
-  /**
-   * @param tableName The table where the message data will be written. 
-   */
-  public fun tableName(tableName: String) {
-    cdkBuilder.tableName(tableName)
-  }
+    /** @param tableName The table where the message data will be written. */
+    public fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+    }
 
-  public fun build(): CfnTopicRule.PutItemInputProperty = cdkBuilder.build()
+    public fun build(): CfnTopicRule.PutItemInputProperty = cdkBuilder.build()
 }

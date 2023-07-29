@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -21,23 +29,20 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardHeatMapFieldWellsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.HeatMapFieldWellsProperty.Builder =
-      CfnDashboard.HeatMapFieldWellsProperty.builder()
+    private val cdkBuilder: CfnDashboard.HeatMapFieldWellsProperty.Builder =
+        CfnDashboard.HeatMapFieldWellsProperty.builder()
 
-  /**
-   * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
-   */
-  public fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: IResolvable) {
-    cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
-  }
+    /** @param heatMapAggregatedFieldWells The aggregated field wells of a heat map. */
+    public fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: IResolvable) {
+        cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
+    }
 
-  /**
-   * @param heatMapAggregatedFieldWells The aggregated field wells of a heat map.
-   */
-  public
-      fun heatMapAggregatedFieldWells(heatMapAggregatedFieldWells: CfnDashboard.HeatMapAggregatedFieldWellsProperty) {
-    cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
-  }
+    /** @param heatMapAggregatedFieldWells The aggregated field wells of a heat map. */
+    public fun heatMapAggregatedFieldWells(
+        heatMapAggregatedFieldWells: CfnDashboard.HeatMapAggregatedFieldWellsProperty
+    ) {
+        cdkBuilder.heatMapAggregatedFieldWells(heatMapAggregatedFieldWells)
+    }
 
-  public fun build(): CfnDashboard.HeatMapFieldWellsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.HeatMapFieldWellsProperty = cdkBuilder.build()
 }

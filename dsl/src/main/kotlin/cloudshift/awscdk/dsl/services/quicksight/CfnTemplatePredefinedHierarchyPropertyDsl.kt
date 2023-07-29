@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * These fields are available to use in any analysis that uses the data source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -60,68 +68,60 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplatePredefinedHierarchyPropertyDsl {
-  private val cdkBuilder: CfnTemplate.PredefinedHierarchyProperty.Builder =
-      CfnTemplate.PredefinedHierarchyProperty.builder()
+    private val cdkBuilder: CfnTemplate.PredefinedHierarchyProperty.Builder =
+        CfnTemplate.PredefinedHierarchyProperty.builder()
 
-  private val _columns: MutableList<Any> = mutableListOf()
+    private val _columns: MutableList<Any> = mutableListOf()
 
-  private val _drillDownFilters: MutableList<Any> = mutableListOf()
+    private val _drillDownFilters: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param columns The list of columns that define the predefined hierarchy. 
-   */
-  public fun columns(vararg columns: Any) {
-    _columns.addAll(listOf(*columns))
-  }
+    /** @param columns The list of columns that define the predefined hierarchy. */
+    public fun columns(vararg columns: Any) {
+        _columns.addAll(listOf(*columns))
+    }
 
-  /**
-   * @param columns The list of columns that define the predefined hierarchy. 
-   */
-  public fun columns(columns: Collection<Any>) {
-    _columns.addAll(columns)
-  }
+    /** @param columns The list of columns that define the predefined hierarchy. */
+    public fun columns(columns: Collection<Any>) {
+        _columns.addAll(columns)
+    }
 
-  /**
-   * @param columns The list of columns that define the predefined hierarchy. 
-   */
-  public fun columns(columns: IResolvable) {
-    cdkBuilder.columns(columns)
-  }
+    /** @param columns The list of columns that define the predefined hierarchy. */
+    public fun columns(columns: IResolvable) {
+        cdkBuilder.columns(columns)
+    }
 
-  /**
-   * @param drillDownFilters The option that determines the drill down filters for the predefined
-   * hierarchy.
-   */
-  public fun drillDownFilters(vararg drillDownFilters: Any) {
-    _drillDownFilters.addAll(listOf(*drillDownFilters))
-  }
+    /**
+     * @param drillDownFilters The option that determines the drill down filters for the predefined
+     *   hierarchy.
+     */
+    public fun drillDownFilters(vararg drillDownFilters: Any) {
+        _drillDownFilters.addAll(listOf(*drillDownFilters))
+    }
 
-  /**
-   * @param drillDownFilters The option that determines the drill down filters for the predefined
-   * hierarchy.
-   */
-  public fun drillDownFilters(drillDownFilters: Collection<Any>) {
-    _drillDownFilters.addAll(drillDownFilters)
-  }
+    /**
+     * @param drillDownFilters The option that determines the drill down filters for the predefined
+     *   hierarchy.
+     */
+    public fun drillDownFilters(drillDownFilters: Collection<Any>) {
+        _drillDownFilters.addAll(drillDownFilters)
+    }
 
-  /**
-   * @param drillDownFilters The option that determines the drill down filters for the predefined
-   * hierarchy.
-   */
-  public fun drillDownFilters(drillDownFilters: IResolvable) {
-    cdkBuilder.drillDownFilters(drillDownFilters)
-  }
+    /**
+     * @param drillDownFilters The option that determines the drill down filters for the predefined
+     *   hierarchy.
+     */
+    public fun drillDownFilters(drillDownFilters: IResolvable) {
+        cdkBuilder.drillDownFilters(drillDownFilters)
+    }
 
-  /**
-   * @param hierarchyId The hierarchy ID of the predefined hierarchy. 
-   */
-  public fun hierarchyId(hierarchyId: String) {
-    cdkBuilder.hierarchyId(hierarchyId)
-  }
+    /** @param hierarchyId The hierarchy ID of the predefined hierarchy. */
+    public fun hierarchyId(hierarchyId: String) {
+        cdkBuilder.hierarchyId(hierarchyId)
+    }
 
-  public fun build(): CfnTemplate.PredefinedHierarchyProperty {
-    if(_columns.isNotEmpty()) cdkBuilder.columns(_columns)
-    if(_drillDownFilters.isNotEmpty()) cdkBuilder.drillDownFilters(_drillDownFilters)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTemplate.PredefinedHierarchyProperty {
+        if (_columns.isNotEmpty()) cdkBuilder.columns(_columns)
+        if (_drillDownFilters.isNotEmpty()) cdkBuilder.drillDownFilters(_drillDownFilters)
+        return cdkBuilder.build()
+    }
 }

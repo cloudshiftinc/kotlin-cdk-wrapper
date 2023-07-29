@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -16,7 +25,6 @@ import software.constructs.Construct
  * Class for creating a RDS DB subnet group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,76 +53,76 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class SubnetGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: SubnetGroup.Builder = SubnetGroup.Builder.create(scope, id)
+    private val cdkBuilder: SubnetGroup.Builder = SubnetGroup.Builder.create(scope, id)
 
-  /**
-   * Description of the subnet group.
-   *
-   * @param description Description of the subnet group. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * Description of the subnet group.
+     *
+     * @param description Description of the subnet group.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * The removal policy to apply when the subnet group are removed from the stack or replaced during
-   * an update.
-   *
-   * Default: RemovalPolicy.DESTROY
-   *
-   * @param removalPolicy The removal policy to apply when the subnet group are removed from the
-   * stack or replaced during an update. 
-   */
-  public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    cdkBuilder.removalPolicy(removalPolicy)
-  }
+    /**
+     * The removal policy to apply when the subnet group are removed from the stack or replaced
+     * during an update.
+     *
+     * Default: RemovalPolicy.DESTROY
+     *
+     * @param removalPolicy The removal policy to apply when the subnet group are removed from the
+     *   stack or replaced during an update.
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
+    }
 
-  /**
-   * The name of the subnet group.
-   *
-   * Default: - a name is generated
-   *
-   * @param subnetGroupName The name of the subnet group. 
-   */
-  public fun subnetGroupName(subnetGroupName: String) {
-    cdkBuilder.subnetGroupName(subnetGroupName)
-  }
+    /**
+     * The name of the subnet group.
+     *
+     * Default: - a name is generated
+     *
+     * @param subnetGroupName The name of the subnet group.
+     */
+    public fun subnetGroupName(subnetGroupName: String) {
+        cdkBuilder.subnetGroupName(subnetGroupName)
+    }
 
-  /**
-   * The VPC to place the subnet group in.
-   *
-   * @param vpc The VPC to place the subnet group in. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /**
+     * The VPC to place the subnet group in.
+     *
+     * @param vpc The VPC to place the subnet group in.
+     */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  /**
-   * Which subnets within the VPC to associate with this group.
-   *
-   * Default: - private subnets
-   *
-   * @param vpcSubnets Which subnets within the VPC to associate with this group. 
-   */
-  public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
-    val builder = SubnetSelectionDsl()
-    builder.apply(vpcSubnets)
-    cdkBuilder.vpcSubnets(builder.build())
-  }
+    /**
+     * Which subnets within the VPC to associate with this group.
+     *
+     * Default: - private subnets
+     *
+     * @param vpcSubnets Which subnets within the VPC to associate with this group.
+     */
+    public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
+        val builder = SubnetSelectionDsl()
+        builder.apply(vpcSubnets)
+        cdkBuilder.vpcSubnets(builder.build())
+    }
 
-  /**
-   * Which subnets within the VPC to associate with this group.
-   *
-   * Default: - private subnets
-   *
-   * @param vpcSubnets Which subnets within the VPC to associate with this group. 
-   */
-  public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    cdkBuilder.vpcSubnets(vpcSubnets)
-  }
+    /**
+     * Which subnets within the VPC to associate with this group.
+     *
+     * Default: - private subnets
+     *
+     * @param vpcSubnets Which subnets within the VPC to associate with this group.
+     */
+    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
+        cdkBuilder.vpcSubnets(vpcSubnets)
+    }
 
-  public fun build(): SubnetGroup = cdkBuilder.build()
+    public fun build(): SubnetGroup = cdkBuilder.build()
 }

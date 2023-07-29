@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagatio
  * Properties for defining a `CfnTransitGatewayRouteTablePropagation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagatio
  */
 @CdkDslMarker
 public class CfnTransitGatewayRouteTablePropagationPropsDsl {
-  private val cdkBuilder: CfnTransitGatewayRouteTablePropagationProps.Builder =
-      CfnTransitGatewayRouteTablePropagationProps.builder()
+    private val cdkBuilder: CfnTransitGatewayRouteTablePropagationProps.Builder =
+        CfnTransitGatewayRouteTablePropagationProps.builder()
 
-  /**
-   * @param transitGatewayAttachmentId The ID of the attachment. 
-   */
-  public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
-    cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
-  }
+    /** @param transitGatewayAttachmentId The ID of the attachment. */
+    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
+        cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
+    }
 
-  /**
-   * @param transitGatewayRouteTableId The ID of the propagation route table. 
-   */
-  public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
-    cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
-  }
+    /** @param transitGatewayRouteTableId The ID of the propagation route table. */
+    public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
+        cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
+    }
 
-  public fun build(): CfnTransitGatewayRouteTablePropagationProps = cdkBuilder.build()
+    public fun build(): CfnTransitGatewayRouteTablePropagationProps = cdkBuilder.build()
 }

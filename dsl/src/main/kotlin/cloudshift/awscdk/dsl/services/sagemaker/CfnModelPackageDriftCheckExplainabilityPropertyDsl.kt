@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  * set using the model package.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,36 +45,28 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  */
 @CdkDslMarker
 public class CfnModelPackageDriftCheckExplainabilityPropertyDsl {
-  private val cdkBuilder: CfnModelPackage.DriftCheckExplainabilityProperty.Builder =
-      CfnModelPackage.DriftCheckExplainabilityProperty.builder()
+    private val cdkBuilder: CfnModelPackage.DriftCheckExplainabilityProperty.Builder =
+        CfnModelPackage.DriftCheckExplainabilityProperty.builder()
 
-  /**
-   * @param configFile The explainability config file for the model.
-   */
-  public fun configFile(configFile: IResolvable) {
-    cdkBuilder.configFile(configFile)
-  }
+    /** @param configFile The explainability config file for the model. */
+    public fun configFile(configFile: IResolvable) {
+        cdkBuilder.configFile(configFile)
+    }
 
-  /**
-   * @param configFile The explainability config file for the model.
-   */
-  public fun configFile(configFile: CfnModelPackage.FileSourceProperty) {
-    cdkBuilder.configFile(configFile)
-  }
+    /** @param configFile The explainability config file for the model. */
+    public fun configFile(configFile: CfnModelPackage.FileSourceProperty) {
+        cdkBuilder.configFile(configFile)
+    }
 
-  /**
-   * @param constraints The drift check explainability constraints.
-   */
-  public fun constraints(constraints: IResolvable) {
-    cdkBuilder.constraints(constraints)
-  }
+    /** @param constraints The drift check explainability constraints. */
+    public fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  /**
-   * @param constraints The drift check explainability constraints.
-   */
-  public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
-    cdkBuilder.constraints(constraints)
-  }
+    /** @param constraints The drift check explainability constraints. */
+    public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  public fun build(): CfnModelPackage.DriftCheckExplainabilityProperty = cdkBuilder.build()
+    public fun build(): CfnModelPackage.DriftCheckExplainabilityProperty = cdkBuilder.build()
 }

@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotwireless.CfnMulticastGroup
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotwireless.CfnMulticastGroup
+import software.constructs.Construct
 
 /**
  * A multicast group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,7 +56,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnMulticastGroupDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnMulticastGroup.Builder = CfnMulticastGroup.Builder.create(scope, id)
 
@@ -58,8 +66,9 @@ public class CfnMulticastGroupDsl(
      * The ID of the wireless device to associate with a multicast group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-associatewirelessdevice)
+     *
      * @param associateWirelessDevice The ID of the wireless device to associate with a multicast
-     * group.
+     *   group.
      */
     public fun associateWirelessDevice(associateWirelessDevice: String) {
         cdkBuilder.associateWirelessDevice(associateWirelessDevice)
@@ -69,6 +78,7 @@ public class CfnMulticastGroupDsl(
      * The description of the multicast group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-description)
+     *
      * @param description The description of the multicast group.
      */
     public fun description(description: String) {
@@ -79,8 +89,9 @@ public class CfnMulticastGroupDsl(
      * The ID of the wireless device to disassociate from a multicast group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-disassociatewirelessdevice)
+     *
      * @param disassociateWirelessDevice The ID of the wireless device to disassociate from a
-     * multicast group.
+     *   multicast group.
      */
     public fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
         cdkBuilder.disassociateWirelessDevice(disassociateWirelessDevice)
@@ -90,6 +101,7 @@ public class CfnMulticastGroupDsl(
      * The LoRaWAN information that is to be used with the multicast group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-lorawan)
+     *
      * @param loRaWan The LoRaWAN information that is to be used with the multicast group.
      */
     public fun loRaWan(loRaWan: IResolvable) {
@@ -100,6 +112,7 @@ public class CfnMulticastGroupDsl(
      * The LoRaWAN information that is to be used with the multicast group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-lorawan)
+     *
      * @param loRaWan The LoRaWAN information that is to be used with the multicast group.
      */
     public fun loRaWan(loRaWan: CfnMulticastGroup.LoRaWANProperty) {
@@ -110,6 +123,7 @@ public class CfnMulticastGroupDsl(
      * The name of the multicast group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-name)
+     *
      * @param name The name of the multicast group.
      */
     public fun name(name: String) {
@@ -122,6 +136,7 @@ public class CfnMulticastGroupDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -134,6 +149,7 @@ public class CfnMulticastGroupDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html#cfn-iotwireless-multicastgroup-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: Collection<CfnTag>) {

@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * A date-time parameter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,23 +40,17 @@ public class CfnDashboardDateTimeParameterPropertyDsl {
 
     private val _values: MutableList<String> = mutableListOf()
 
-    /**
-     * @param name A display name for the date-time parameter.
-     */
+    /** @param name A display name for the date-time parameter. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param values The values for the date-time parameter.
-     */
+    /** @param values The values for the date-time parameter. */
     public fun values(vararg values: String) {
         _values.addAll(listOf(*values))
     }
 
-    /**
-     * @param values The values for the date-time parameter.
-     */
+    /** @param values The values for the date-time parameter. */
     public fun values(values: Collection<String>) {
         _values.addAll(values)
     }

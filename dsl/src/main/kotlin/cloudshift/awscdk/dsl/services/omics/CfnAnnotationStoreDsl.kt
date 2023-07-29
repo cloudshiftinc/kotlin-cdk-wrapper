@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.omics
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * Creates an annotation store.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,110 +58,121 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnAnnotationStoreDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnAnnotationStore.Builder = CfnAnnotationStore.Builder.create(scope, id)
+    private val cdkBuilder: CfnAnnotationStore.Builder =
+        CfnAnnotationStore.Builder.create(scope, id)
 
-  /**
-   * A description for the store.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-description)
-   * @param description A description for the store. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * A description for the store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-description)
+     *
+     * @param description A description for the store.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * The name of the Annotation Store.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-name)
-   * @param name The name of the Annotation Store. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the Annotation Store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-name)
+     *
+     * @param name The name of the Annotation Store.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * The genome reference for the store's annotations.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-reference)
-   * @param reference The genome reference for the store's annotations. 
-   */
-  public fun reference(reference: IResolvable) {
-    cdkBuilder.reference(reference)
-  }
+    /**
+     * The genome reference for the store's annotations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-reference)
+     *
+     * @param reference The genome reference for the store's annotations.
+     */
+    public fun reference(reference: IResolvable) {
+        cdkBuilder.reference(reference)
+    }
 
-  /**
-   * The genome reference for the store's annotations.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-reference)
-   * @param reference The genome reference for the store's annotations. 
-   */
-  public fun reference(reference: CfnAnnotationStore.ReferenceItemProperty) {
-    cdkBuilder.reference(reference)
-  }
+    /**
+     * The genome reference for the store's annotations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-reference)
+     *
+     * @param reference The genome reference for the store's annotations.
+     */
+    public fun reference(reference: CfnAnnotationStore.ReferenceItemProperty) {
+        cdkBuilder.reference(reference)
+    }
 
-  /**
-   * The store's server-side encryption (SSE) settings.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-sseconfig)
-   * @param sseConfig The store's server-side encryption (SSE) settings. 
-   */
-  public fun sseConfig(sseConfig: IResolvable) {
-    cdkBuilder.sseConfig(sseConfig)
-  }
+    /**
+     * The store's server-side encryption (SSE) settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-sseconfig)
+     *
+     * @param sseConfig The store's server-side encryption (SSE) settings.
+     */
+    public fun sseConfig(sseConfig: IResolvable) {
+        cdkBuilder.sseConfig(sseConfig)
+    }
 
-  /**
-   * The store's server-side encryption (SSE) settings.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-sseconfig)
-   * @param sseConfig The store's server-side encryption (SSE) settings. 
-   */
-  public fun sseConfig(sseConfig: CfnAnnotationStore.SseConfigProperty) {
-    cdkBuilder.sseConfig(sseConfig)
-  }
+    /**
+     * The store's server-side encryption (SSE) settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-sseconfig)
+     *
+     * @param sseConfig The store's server-side encryption (SSE) settings.
+     */
+    public fun sseConfig(sseConfig: CfnAnnotationStore.SseConfigProperty) {
+        cdkBuilder.sseConfig(sseConfig)
+    }
 
-  /**
-   * The annotation file format of the store.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-storeformat)
-   * @param storeFormat The annotation file format of the store. 
-   */
-  public fun storeFormat(storeFormat: String) {
-    cdkBuilder.storeFormat(storeFormat)
-  }
+    /**
+     * The annotation file format of the store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-storeformat)
+     *
+     * @param storeFormat The annotation file format of the store.
+     */
+    public fun storeFormat(storeFormat: String) {
+        cdkBuilder.storeFormat(storeFormat)
+    }
 
-  /**
-   * File parsing options for the annotation store.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-storeoptions)
-   * @param storeOptions File parsing options for the annotation store. 
-   */
-  public fun storeOptions(storeOptions: IResolvable) {
-    cdkBuilder.storeOptions(storeOptions)
-  }
+    /**
+     * File parsing options for the annotation store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-storeoptions)
+     *
+     * @param storeOptions File parsing options for the annotation store.
+     */
+    public fun storeOptions(storeOptions: IResolvable) {
+        cdkBuilder.storeOptions(storeOptions)
+    }
 
-  /**
-   * File parsing options for the annotation store.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-storeoptions)
-   * @param storeOptions File parsing options for the annotation store. 
-   */
-  public fun storeOptions(storeOptions: CfnAnnotationStore.StoreOptionsProperty) {
-    cdkBuilder.storeOptions(storeOptions)
-  }
+    /**
+     * File parsing options for the annotation store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-storeoptions)
+     *
+     * @param storeOptions File parsing options for the annotation store.
+     */
+    public fun storeOptions(storeOptions: CfnAnnotationStore.StoreOptionsProperty) {
+        cdkBuilder.storeOptions(storeOptions)
+    }
 
-  /**
-   * Tags for the store.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-tags)
-   * @param tags Tags for the store. 
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /**
+     * Tags for the store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html#cfn-omics-annotationstore-tags)
+     *
+     * @param tags Tags for the store.
+     */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnAnnotationStore = cdkBuilder.build()
+    public fun build(): CfnAnnotationStore = cdkBuilder.build()
 }

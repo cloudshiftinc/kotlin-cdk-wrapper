@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  * Spot Fleet registers the running Spot Instances with these target groups.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,34 +39,28 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  */
 @CdkDslMarker
 public class CfnSpotFleetTargetGroupsConfigPropertyDsl {
-  private val cdkBuilder: CfnSpotFleet.TargetGroupsConfigProperty.Builder =
-      CfnSpotFleet.TargetGroupsConfigProperty.builder()
+    private val cdkBuilder: CfnSpotFleet.TargetGroupsConfigProperty.Builder =
+        CfnSpotFleet.TargetGroupsConfigProperty.builder()
 
-  private val _targetGroups: MutableList<Any> = mutableListOf()
+    private val _targetGroups: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param targetGroups One or more target groups. 
-   */
-  public fun targetGroups(vararg targetGroups: Any) {
-    _targetGroups.addAll(listOf(*targetGroups))
-  }
+    /** @param targetGroups One or more target groups. */
+    public fun targetGroups(vararg targetGroups: Any) {
+        _targetGroups.addAll(listOf(*targetGroups))
+    }
 
-  /**
-   * @param targetGroups One or more target groups. 
-   */
-  public fun targetGroups(targetGroups: Collection<Any>) {
-    _targetGroups.addAll(targetGroups)
-  }
+    /** @param targetGroups One or more target groups. */
+    public fun targetGroups(targetGroups: Collection<Any>) {
+        _targetGroups.addAll(targetGroups)
+    }
 
-  /**
-   * @param targetGroups One or more target groups. 
-   */
-  public fun targetGroups(targetGroups: IResolvable) {
-    cdkBuilder.targetGroups(targetGroups)
-  }
+    /** @param targetGroups One or more target groups. */
+    public fun targetGroups(targetGroups: IResolvable) {
+        cdkBuilder.targetGroups(targetGroups)
+    }
 
-  public fun build(): CfnSpotFleet.TargetGroupsConfigProperty {
-    if(_targetGroups.isNotEmpty()) cdkBuilder.targetGroups(_targetGroups)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnSpotFleet.TargetGroupsConfigProperty {
+        if (_targetGroups.isNotEmpty()) cdkBuilder.targetGroups(_targetGroups)
+        return cdkBuilder.build()
+    }
 }

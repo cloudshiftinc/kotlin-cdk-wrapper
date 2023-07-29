@@ -1,17 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisvideo
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.services.kinesisvideo.CfnStream
-import software.constructs.Construct
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.services.kinesisvideo.CfnStream
+import software.constructs.Construct
 
 /**
  * Specifies a new Kinesis video stream.
@@ -21,13 +30,12 @@ import kotlin.collections.MutableList
  *
  * `CreateStream` is an asynchronous operation.
  *
- * For information about how the service works, see [How it
- * Works](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-it-works.html) .
+ * For information about how the service works, see
+ * [How it Works](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-it-works.html) .
  *
  * You must have permissions for the `KinesisVideo:CreateStream` action.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,7 +58,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnStreamDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnStream.Builder = CfnStream.Builder.create(scope, id)
 
@@ -60,6 +68,7 @@ public class CfnStreamDsl(
      * How long the stream retains data, in hours.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html#cfn-kinesisvideo-stream-dataretentioninhours)
+     *
      * @param dataRetentionInHours How long the stream retains data, in hours.
      */
     public fun dataRetentionInHours(dataRetentionInHours: Number) {
@@ -70,6 +79,7 @@ public class CfnStreamDsl(
      * The name of the device that is associated with the stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html#cfn-kinesisvideo-stream-devicename)
+     *
      * @param deviceName The name of the device that is associated with the stream.
      */
     public fun deviceName(deviceName: String) {
@@ -81,8 +91,9 @@ public class CfnStreamDsl(
      * encrypt data on the stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html#cfn-kinesisvideo-stream-kmskeyid)
+     *
      * @param kmsKeyId The ID of the AWS Key Management Service ( AWS KMS ) key that Kinesis Video
-     * Streams uses to encrypt data on the stream.
+     *   Streams uses to encrypt data on the stream.
      */
     public fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
@@ -92,6 +103,7 @@ public class CfnStreamDsl(
      * The `MediaType` of the stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html#cfn-kinesisvideo-stream-mediatype)
+     *
      * @param mediaType The `MediaType` of the stream.
      */
     public fun mediaType(mediaType: String) {
@@ -102,6 +114,7 @@ public class CfnStreamDsl(
      * The name of the stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html#cfn-kinesisvideo-stream-name)
+     *
      * @param name The name of the stream.
      */
     public fun name(name: String) {
@@ -116,6 +129,7 @@ public class CfnStreamDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html#cfn-kinesisvideo-stream-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -130,6 +144,7 @@ public class CfnStreamDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html#cfn-kinesisvideo-stream-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: Collection<CfnTag>) {

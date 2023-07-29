@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codeguruprofiler
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
 
 /**
  * The agent permissions attached to this profiling group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,16 +39,12 @@ public class CfnProfilingGroupAgentPermissionsPropertyDsl {
 
     private val _principals: MutableList<String> = mutableListOf()
 
-    /**
-     * @param principals The principals for the agent permissions.
-     */
+    /** @param principals The principals for the agent permissions. */
     public fun principals(vararg principals: String) {
         _principals.addAll(listOf(*principals))
     }
 
-    /**
-     * @param principals The principals for the agent permissions.
-     */
+    /** @param principals The principals for the agent permissions. */
     public fun principals(principals: Collection<String>) {
         _principals.addAll(principals)
     }

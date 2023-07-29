@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appflow.CfnConnector
  * Contains information about the configuration of the connector being registered.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,24 +35,24 @@ import software.amazon.awscdk.services.appflow.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorConnectorProvisioningConfigPropertyDsl {
-  private val cdkBuilder: CfnConnector.ConnectorProvisioningConfigProperty.Builder =
-      CfnConnector.ConnectorProvisioningConfigProperty.builder()
+    private val cdkBuilder: CfnConnector.ConnectorProvisioningConfigProperty.Builder =
+        CfnConnector.ConnectorProvisioningConfigProperty.builder()
 
-  /**
-   * @param lambda Contains information about the configuration of the lambda which is being
-   * registered as the connector.
-   */
-  public fun lambda(lambda: IResolvable) {
-    cdkBuilder.lambda(lambda)
-  }
+    /**
+     * @param lambda Contains information about the configuration of the lambda which is being
+     *   registered as the connector.
+     */
+    public fun lambda(lambda: IResolvable) {
+        cdkBuilder.lambda(lambda)
+    }
 
-  /**
-   * @param lambda Contains information about the configuration of the lambda which is being
-   * registered as the connector.
-   */
-  public fun lambda(lambda: CfnConnector.LambdaConnectorProvisioningConfigProperty) {
-    cdkBuilder.lambda(lambda)
-  }
+    /**
+     * @param lambda Contains information about the configuration of the lambda which is being
+     *   registered as the connector.
+     */
+    public fun lambda(lambda: CfnConnector.LambdaConnectorProvisioningConfigProperty) {
+        cdkBuilder.lambda(lambda)
+    }
 
-  public fun build(): CfnConnector.ConnectorProvisioningConfigProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.ConnectorProvisioningConfigProperty = cdkBuilder.build()
 }

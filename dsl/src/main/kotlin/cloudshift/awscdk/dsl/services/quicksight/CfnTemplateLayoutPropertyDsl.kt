@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -9,15 +18,14 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 /**
  * A `Layout` defines the placement of elements within a sheet.
  *
- * For more information, see [Types of
- * layout](https://docs.aws.amazon.com/quicksight/latest/user/types-of-layout.html) in the *Amazon
- * QuickSight User Guide* .
+ * For more information, see
+ * [Types of layout](https://docs.aws.amazon.com/quicksight/latest/user/types-of-layout.html) in the
+ * *Amazon QuickSight User Guide* .
  *
  * This is a union type structure. For this structure to be valid, only one of the attributes can be
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -255,21 +263,22 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateLayoutPropertyDsl {
-  private val cdkBuilder: CfnTemplate.LayoutProperty.Builder = CfnTemplate.LayoutProperty.builder()
+    private val cdkBuilder: CfnTemplate.LayoutProperty.Builder =
+        CfnTemplate.LayoutProperty.builder()
 
-  /**
-   * @param configuration The configuration that determines what the type of layout for a sheet. 
-   */
-  public fun configuration(configuration: IResolvable) {
-    cdkBuilder.configuration(configuration)
-  }
+    /**
+     * @param configuration The configuration that determines what the type of layout for a sheet.
+     */
+    public fun configuration(configuration: IResolvable) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  /**
-   * @param configuration The configuration that determines what the type of layout for a sheet. 
-   */
-  public fun configuration(configuration: CfnTemplate.LayoutConfigurationProperty) {
-    cdkBuilder.configuration(configuration)
-  }
+    /**
+     * @param configuration The configuration that determines what the type of layout for a sheet.
+     */
+    public fun configuration(configuration: CfnTemplate.LayoutConfigurationProperty) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  public fun build(): CfnTemplate.LayoutProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.LayoutProperty = cdkBuilder.build()
 }

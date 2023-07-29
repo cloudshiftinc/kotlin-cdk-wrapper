@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The table cell style for a cell in pivot table or table visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -81,80 +89,64 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateTableCellStylePropertyDsl {
-  private val cdkBuilder: CfnTemplate.TableCellStyleProperty.Builder =
-      CfnTemplate.TableCellStyleProperty.builder()
+    private val cdkBuilder: CfnTemplate.TableCellStyleProperty.Builder =
+        CfnTemplate.TableCellStyleProperty.builder()
 
-  /**
-   * @param backgroundColor The background color for the table cells.
-   */
-  public fun backgroundColor(backgroundColor: String) {
-    cdkBuilder.backgroundColor(backgroundColor)
-  }
+    /** @param backgroundColor The background color for the table cells. */
+    public fun backgroundColor(backgroundColor: String) {
+        cdkBuilder.backgroundColor(backgroundColor)
+    }
 
-  /**
-   * @param border The borders for the table cells.
-   */
-  public fun border(border: IResolvable) {
-    cdkBuilder.border(border)
-  }
+    /** @param border The borders for the table cells. */
+    public fun border(border: IResolvable) {
+        cdkBuilder.border(border)
+    }
 
-  /**
-   * @param border The borders for the table cells.
-   */
-  public fun border(border: CfnTemplate.GlobalTableBorderOptionsProperty) {
-    cdkBuilder.border(border)
-  }
+    /** @param border The borders for the table cells. */
+    public fun border(border: CfnTemplate.GlobalTableBorderOptionsProperty) {
+        cdkBuilder.border(border)
+    }
 
-  /**
-   * @param fontConfiguration The font configuration of the table cells.
-   */
-  public fun fontConfiguration(fontConfiguration: IResolvable) {
-    cdkBuilder.fontConfiguration(fontConfiguration)
-  }
+    /** @param fontConfiguration The font configuration of the table cells. */
+    public fun fontConfiguration(fontConfiguration: IResolvable) {
+        cdkBuilder.fontConfiguration(fontConfiguration)
+    }
 
-  /**
-   * @param fontConfiguration The font configuration of the table cells.
-   */
-  public fun fontConfiguration(fontConfiguration: CfnTemplate.FontConfigurationProperty) {
-    cdkBuilder.fontConfiguration(fontConfiguration)
-  }
+    /** @param fontConfiguration The font configuration of the table cells. */
+    public fun fontConfiguration(fontConfiguration: CfnTemplate.FontConfigurationProperty) {
+        cdkBuilder.fontConfiguration(fontConfiguration)
+    }
 
-  /**
-   * @param height The height color for the table cells.
-   */
-  public fun height(height: Number) {
-    cdkBuilder.height(height)
-  }
+    /** @param height The height color for the table cells. */
+    public fun height(height: Number) {
+        cdkBuilder.height(height)
+    }
 
-  /**
-   * @param horizontalTextAlignment The horizontal text alignment (left, center, right, auto) for
-   * the table cells.
-   */
-  public fun horizontalTextAlignment(horizontalTextAlignment: String) {
-    cdkBuilder.horizontalTextAlignment(horizontalTextAlignment)
-  }
+    /**
+     * @param horizontalTextAlignment The horizontal text alignment (left, center, right, auto) for
+     *   the table cells.
+     */
+    public fun horizontalTextAlignment(horizontalTextAlignment: String) {
+        cdkBuilder.horizontalTextAlignment(horizontalTextAlignment)
+    }
 
-  /**
-   * @param textWrap The text wrap (none, wrap) for the table cells.
-   */
-  public fun textWrap(textWrap: String) {
-    cdkBuilder.textWrap(textWrap)
-  }
+    /** @param textWrap The text wrap (none, wrap) for the table cells. */
+    public fun textWrap(textWrap: String) {
+        cdkBuilder.textWrap(textWrap)
+    }
 
-  /**
-   * @param verticalTextAlignment The vertical text alignment (top, middle, bottom) for the table
-   * cells.
-   */
-  public fun verticalTextAlignment(verticalTextAlignment: String) {
-    cdkBuilder.verticalTextAlignment(verticalTextAlignment)
-  }
+    /**
+     * @param verticalTextAlignment The vertical text alignment (top, middle, bottom) for the table
+     *   cells.
+     */
+    public fun verticalTextAlignment(verticalTextAlignment: String) {
+        cdkBuilder.verticalTextAlignment(verticalTextAlignment)
+    }
 
-  /**
-   * @param visibility The visibility of the table cells.
-   */
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    /** @param visibility The visibility of the table cells. */
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnTemplate.TableCellStyleProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.TableCellStyleProperty = cdkBuilder.build()
 }

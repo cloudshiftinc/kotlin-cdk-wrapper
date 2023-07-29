@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.resourceexplorer2
 
@@ -22,8 +31,7 @@ import software.constructs.Construct
  * Regions in the AWS account .
  *
  * For more details about what happens when you turn on Resource Explorer in an AWS Region , see
- * [Turning on Resource Explorer to index your resources in an AWS
- * Region](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-service-activate.html)
+ * [Turning on Resource Explorer to index your resources in an AWS Region](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-service-activate.html)
  * in the *AWS Resource Explorer User Guide.*
  *
  * If this is the first AWS Region in which you've created an index for Resource Explorer, this
@@ -31,7 +39,6 @@ import software.constructs.Construct
  * search for your resources and populate the index.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,37 +55,38 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnIndexDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnIndex.Builder = CfnIndex.Builder.create(scope, id)
+    private val cdkBuilder: CfnIndex.Builder = CfnIndex.Builder.create(scope, id)
 
-  /**
-   * The specified tags are attached to only the index created in this AWS Region .
-   *
-   * The tags don't attach to any of the resources listed in the index.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-tags)
-   * @param tags The specified tags are attached to only the index created in this AWS Region . 
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /**
+     * The specified tags are attached to only the index created in this AWS Region .
+     *
+     * The tags don't attach to any of the resources listed in the index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-tags)
+     *
+     * @param tags The specified tags are attached to only the index created in this AWS Region .
+     */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  /**
-   * Specifies the type of the index in this Region.
-   *
-   * For information about the aggregator index and how it differs from a local index, see [Turning
-   * on cross-Region search by creating an aggregator
-   * index](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html)
-   * in the *AWS Resource Explorer User Guide.* .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-type)
-   * @param type Specifies the type of the index in this Region. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * Specifies the type of the index in this Region.
+     *
+     * For information about the aggregator index and how it differs from a local index, see
+     * [Turning on cross-Region search by creating an aggregator index](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html)
+     * in the *AWS Resource Explorer User Guide.* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-type)
+     *
+     * @param type Specifies the type of the index in this Region.
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnIndex = cdkBuilder.build()
+    public fun build(): CfnIndex = cdkBuilder.build()
 }

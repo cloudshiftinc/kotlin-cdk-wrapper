@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.cognito.IUserPool
  * Configuration for Cognito user-pools in AppSync.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,28 +37,22 @@ import software.amazon.awscdk.services.cognito.IUserPool
  */
 @CdkDslMarker
 public class UserPoolConfigDsl {
-  private val cdkBuilder: UserPoolConfig.Builder = UserPoolConfig.builder()
+    private val cdkBuilder: UserPoolConfig.Builder = UserPoolConfig.builder()
 
-  /**
-   * @param appIdClientRegex the optional app id regex.
-   */
-  public fun appIdClientRegex(appIdClientRegex: String) {
-    cdkBuilder.appIdClientRegex(appIdClientRegex)
-  }
+    /** @param appIdClientRegex the optional app id regex. */
+    public fun appIdClientRegex(appIdClientRegex: String) {
+        cdkBuilder.appIdClientRegex(appIdClientRegex)
+    }
 
-  /**
-   * @param defaultAction Default auth action.
-   */
-  public fun defaultAction(defaultAction: UserPoolDefaultAction) {
-    cdkBuilder.defaultAction(defaultAction)
-  }
+    /** @param defaultAction Default auth action. */
+    public fun defaultAction(defaultAction: UserPoolDefaultAction) {
+        cdkBuilder.defaultAction(defaultAction)
+    }
 
-  /**
-   * @param userPool The Cognito user pool to use as identity source. 
-   */
-  public fun userPool(userPool: IUserPool) {
-    cdkBuilder.userPool(userPool)
-  }
+    /** @param userPool The Cognito user pool to use as identity source. */
+    public fun userPool(userPool: IUserPool) {
+        cdkBuilder.userPool(userPool)
+    }
 
-  public fun build(): UserPoolConfig = cdkBuilder.build()
+    public fun build(): UserPoolConfig = cdkBuilder.build()
 }

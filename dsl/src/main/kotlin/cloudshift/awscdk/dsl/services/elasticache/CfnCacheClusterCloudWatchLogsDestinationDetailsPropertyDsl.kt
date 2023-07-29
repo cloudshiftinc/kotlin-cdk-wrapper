@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticache
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.elasticache.CfnCacheCluster
  * destination.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,14 @@ import software.amazon.awscdk.services.elasticache.CfnCacheCluster
  */
 @CdkDslMarker
 public class CfnCacheClusterCloudWatchLogsDestinationDetailsPropertyDsl {
-  private val cdkBuilder: CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty.Builder =
-      CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty.builder()
+    private val cdkBuilder: CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty.Builder =
+        CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty.builder()
 
-  /**
-   * @param logGroup The name of the CloudWatch Logs log group. 
-   */
-  public fun logGroup(logGroup: String) {
-    cdkBuilder.logGroup(logGroup)
-  }
+    /** @param logGroup The name of the CloudWatch Logs log group. */
+    public fun logGroup(logGroup: String) {
+        cdkBuilder.logGroup(logGroup)
+    }
 
-  public fun build(): CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty = cdkBuilder.build()
+    public fun build(): CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty =
+        cdkBuilder.build()
 }

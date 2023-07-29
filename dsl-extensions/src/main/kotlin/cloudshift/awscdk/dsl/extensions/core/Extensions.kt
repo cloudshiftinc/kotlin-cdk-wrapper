@@ -1,6 +1,7 @@
 package cloudshift.awscdk.dsl.extensions.core
 
 import cloudshift.awscdk.dsl.ArnComponentsDsl
+import kotlin.reflect.KClass
 import software.amazon.awscdk.Arn
 import software.amazon.awscdk.ArnComponents
 import software.amazon.awscdk.ArnFormat
@@ -9,16 +10,13 @@ import software.amazon.awscdk.Stack
 import software.amazon.awscdk.Tags
 import software.constructs.Construct
 import software.constructs.IConstruct
-import kotlin.reflect.KClass
 
 public fun Construct.addTag(key: String, value: String) {
     Tags.of(this).add(key, value)
 }
 
 public fun Construct.addComment(comment: String) {
-    node.children
-        .filterIsInstance<CfnResource>()
-        .forEach { it.addComment(comment) }
+    node.children.filterIsInstance<CfnResource>().forEach { it.addComment(comment) }
 }
 
 public fun <T : CfnResource> Construct.addPropertyOverride(
@@ -62,12 +60,20 @@ public inline fun arn(scope: IConstruct, block: (ArnComponentsDsl).() -> Unit): 
     return Arn.format(builder.build(), Stack.of(scope))
 }
 
-public fun String.toArnComponents(format: ArnFormat = ArnFormat.SLASH_RESOURCE_NAME): ArnComponents = Arn.split(this, format)
+public fun String.toArnComponents(
+    format: ArnFormat = ArnFormat.SLASH_RESOURCE_NAME
+): ArnComponents = Arn.split(this, format)
 
-public inline fun <reified T : Construct> Construct.withSingleton(id: String, block: (String) -> T): T {
+public inline fun <reified T : Construct> Construct.withSingleton(
+    id: String,
+    block: (String) -> T
+): T {
     return allChildren().filterIsInstance<T>().firstOrNull { it.node.id == id } ?: block(id)
 }
 
-public inline fun <reified T> Construct.withSingleton(predicate: (T) -> Boolean = { true }, block: () -> T): T {
+public inline fun <reified T> Construct.withSingleton(
+    predicate: (T) -> Boolean = { true },
+    block: () -> T
+): T {
     return allChildren().filterIsInstance<T>().firstOrNull(predicate) ?: block()
 }

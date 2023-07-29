@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  * A structure that represents a default formatting definition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,31 +50,26 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  */
 @CdkDslMarker
 public class CfnTopicDefaultFormattingPropertyDsl {
-  private val cdkBuilder: CfnTopic.DefaultFormattingProperty.Builder =
-      CfnTopic.DefaultFormattingProperty.builder()
+    private val cdkBuilder: CfnTopic.DefaultFormattingProperty.Builder =
+        CfnTopic.DefaultFormattingProperty.builder()
 
-  /**
-   * @param displayFormat The display format.
-   * Valid values for this structure are `AUTO` , `PERCENT` , `CURRENCY` , `NUMBER` , `DATE` , and
-   * `STRING` .
-   */
-  public fun displayFormat(displayFormat: String) {
-    cdkBuilder.displayFormat(displayFormat)
-  }
+    /**
+     * @param displayFormat The display format. Valid values for this structure are `AUTO` ,
+     *   `PERCENT` , `CURRENCY` , `NUMBER` , `DATE` , and `STRING` .
+     */
+    public fun displayFormat(displayFormat: String) {
+        cdkBuilder.displayFormat(displayFormat)
+    }
 
-  /**
-   * @param displayFormatOptions The additional options for display formatting.
-   */
-  public fun displayFormatOptions(displayFormatOptions: IResolvable) {
-    cdkBuilder.displayFormatOptions(displayFormatOptions)
-  }
+    /** @param displayFormatOptions The additional options for display formatting. */
+    public fun displayFormatOptions(displayFormatOptions: IResolvable) {
+        cdkBuilder.displayFormatOptions(displayFormatOptions)
+    }
 
-  /**
-   * @param displayFormatOptions The additional options for display formatting.
-   */
-  public fun displayFormatOptions(displayFormatOptions: CfnTopic.DisplayFormatOptionsProperty) {
-    cdkBuilder.displayFormatOptions(displayFormatOptions)
-  }
+    /** @param displayFormatOptions The additional options for display formatting. */
+    public fun displayFormatOptions(displayFormatOptions: CfnTopic.DisplayFormatOptionsProperty) {
+        cdkBuilder.displayFormatOptions(displayFormatOptions)
+    }
 
-  public fun build(): CfnTopic.DefaultFormattingProperty = cdkBuilder.build()
+    public fun build(): CfnTopic.DefaultFormattingProperty = cdkBuilder.build()
 }

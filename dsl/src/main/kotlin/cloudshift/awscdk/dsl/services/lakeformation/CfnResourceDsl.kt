@@ -1,16 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnResource
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
 
 /**
- * The `AWS::LakeFormation::Resource` represents the data (  buckets and folders) that is being
+ * The `AWS::LakeFormation::Resource` represents the data ( buckets and folders) that is being
  * registered with AWS Lake Formation .
  *
  * During a stack operation, AWS CloudFormation calls the AWS Lake Formation
@@ -21,7 +30,6 @@ import kotlin.String
  * API operation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,7 +48,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnResourceDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnResource.Builder = CfnResource.Builder.create(scope, id)
 
@@ -48,6 +56,7 @@ public class CfnResourceDsl(
      * The Amazon Resource Name (ARN) of the resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-resourcearn)
+     *
      * @param resourceArn The Amazon Resource Name (ARN) of the resource.
      */
     public fun resourceArn(resourceArn: String) {
@@ -58,6 +67,7 @@ public class CfnResourceDsl(
      * The IAM role that registered a resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-rolearn)
+     *
      * @param roleArn The IAM role that registered a resource.
      */
     public fun roleArn(roleArn: String) {
@@ -65,24 +75,26 @@ public class CfnResourceDsl(
     }
 
     /**
-     * Designates a trusted caller, an IAM principal, by registering this caller with the Data Catalog
-     * .
+     * Designates a trusted caller, an IAM principal, by registering this caller with the Data
+     * Catalog .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-useservicelinkedrole)
-     * @param useServiceLinkedRole Designates a trusted caller, an IAM principal, by registering this
-     * caller with the Data Catalog .
+     *
+     * @param useServiceLinkedRole Designates a trusted caller, an IAM principal, by registering
+     *   this caller with the Data Catalog .
      */
     public fun useServiceLinkedRole(useServiceLinkedRole: Boolean) {
         cdkBuilder.useServiceLinkedRole(useServiceLinkedRole)
     }
 
     /**
-     * Designates a trusted caller, an IAM principal, by registering this caller with the Data Catalog
-     * .
+     * Designates a trusted caller, an IAM principal, by registering this caller with the Data
+     * Catalog .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-useservicelinkedrole)
-     * @param useServiceLinkedRole Designates a trusted caller, an IAM principal, by registering this
-     * caller with the Data Catalog .
+     *
+     * @param useServiceLinkedRole Designates a trusted caller, an IAM principal, by registering
+     *   this caller with the Data Catalog .
      */
     public fun useServiceLinkedRole(useServiceLinkedRole: IResolvable) {
         cdkBuilder.useServiceLinkedRole(useServiceLinkedRole)
@@ -92,8 +104,9 @@ public class CfnResourceDsl(
      * Allows Lake Formation to assume a role to access tables in a federated database.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-withfederation)
+     *
      * @param withFederation Allows Lake Formation to assume a role to access tables in a federated
-     * database.
+     *   database.
      */
     public fun withFederation(withFederation: Boolean) {
         cdkBuilder.withFederation(withFederation)
@@ -103,8 +116,9 @@ public class CfnResourceDsl(
      * Allows Lake Formation to assume a role to access tables in a federated database.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-withfederation)
+     *
      * @param withFederation Allows Lake Formation to assume a role to access tables in a federated
-     * database.
+     *   database.
      */
     public fun withFederation(withFederation: IResolvable) {
         cdkBuilder.withFederation(withFederation)

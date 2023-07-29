@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,12 +21,11 @@ import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery
  * Operating Regions are AWS Regions where the IPAM is allowed to manage IP address CIDRs. IPAM only
  * discovers and monitors resources in the AWS Regions you select as operating Regions.
  *
- * For more information about operating Regions, see [Create an
- * IPAM](https://docs.aws.amazon.com//vpc/latest/ipam/create-ipam.html) in the *Amazon VPC IPAM User
- * Guide* .
+ * For more information about operating Regions, see
+ * [Create an IPAM](https://docs.aws.amazon.com//vpc/latest/ipam/create-ipam.html) in the *Amazon
+ * VPC IPAM User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,15 +39,13 @@ import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery
  */
 @CdkDslMarker
 public class CfnIPAMResourceDiscoveryIpamOperatingRegionPropertyDsl {
-  private val cdkBuilder: CfnIPAMResourceDiscovery.IpamOperatingRegionProperty.Builder =
-      CfnIPAMResourceDiscovery.IpamOperatingRegionProperty.builder()
+    private val cdkBuilder: CfnIPAMResourceDiscovery.IpamOperatingRegionProperty.Builder =
+        CfnIPAMResourceDiscovery.IpamOperatingRegionProperty.builder()
 
-  /**
-   * @param regionName The name of the operating Region. 
-   */
-  public fun regionName(regionName: String) {
-    cdkBuilder.regionName(regionName)
-  }
+    /** @param regionName The name of the operating Region. */
+    public fun regionName(regionName: String) {
+        cdkBuilder.regionName(regionName)
+    }
 
-  public fun build(): CfnIPAMResourceDiscovery.IpamOperatingRegionProperty = cdkBuilder.build()
+    public fun build(): CfnIPAMResourceDiscovery.IpamOperatingRegionProperty = cdkBuilder.build()
 }

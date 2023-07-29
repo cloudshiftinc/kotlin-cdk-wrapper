@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -16,15 +25,13 @@ import software.constructs.Construct
  *
  * You almost never need to define this construct directly.
  *
- * All AWS resources that support resource policies have a method called
- * `addToResourcePolicy()`, which will automatically create a new resource
- * policy if one doesn't exist yet, otherwise it will add to the existing
- * policy.
+ * All AWS resources that support resource policies have a method called `addToResourcePolicy()`,
+ * which will automatically create a new resource policy if one doesn't exist yet, otherwise it will
+ * add to the existing policy.
  *
  * Prefer to use `addToResourcePolicy()` instead.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,30 +47,30 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class BucketPolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: BucketPolicy.Builder = BucketPolicy.Builder.create(scope, id)
+    private val cdkBuilder: BucketPolicy.Builder = BucketPolicy.Builder.create(scope, id)
 
-  /**
-   * The Amazon S3 bucket that the policy applies to.
-   *
-   * @param bucket The Amazon S3 bucket that the policy applies to. 
-   */
-  public fun bucket(bucket: IBucket) {
-    cdkBuilder.bucket(bucket)
-  }
+    /**
+     * The Amazon S3 bucket that the policy applies to.
+     *
+     * @param bucket The Amazon S3 bucket that the policy applies to.
+     */
+    public fun bucket(bucket: IBucket) {
+        cdkBuilder.bucket(bucket)
+    }
 
-  /**
-   * Policy to apply when the policy is removed from this stack.
-   *
-   * Default: - RemovalPolicy.DESTROY.
-   *
-   * @param removalPolicy Policy to apply when the policy is removed from this stack. 
-   */
-  public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    cdkBuilder.removalPolicy(removalPolicy)
-  }
+    /**
+     * Policy to apply when the policy is removed from this stack.
+     *
+     * Default: - RemovalPolicy.DESTROY.
+     *
+     * @param removalPolicy Policy to apply when the policy is removed from this stack.
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
+    }
 
-  public fun build(): BucketPolicy = cdkBuilder.build()
+    public fun build(): BucketPolicy = cdkBuilder.build()
 }

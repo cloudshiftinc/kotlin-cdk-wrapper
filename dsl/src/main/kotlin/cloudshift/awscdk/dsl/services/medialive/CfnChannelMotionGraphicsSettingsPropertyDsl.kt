@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is MotionGraphicsConfiguration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,25 +35,26 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelMotionGraphicsSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.MotionGraphicsSettingsProperty.Builder =
-      CfnChannel.MotionGraphicsSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.MotionGraphicsSettingsProperty.Builder =
+        CfnChannel.MotionGraphicsSettingsProperty.builder()
 
-  /**
-   * @param htmlMotionGraphicsSettings Settings to configure the motion graphics overlay to use an
-   * HTML asset.
-   */
-  public fun htmlMotionGraphicsSettings(htmlMotionGraphicsSettings: IResolvable) {
-    cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings)
-  }
+    /**
+     * @param htmlMotionGraphicsSettings Settings to configure the motion graphics overlay to use an
+     *   HTML asset.
+     */
+    public fun htmlMotionGraphicsSettings(htmlMotionGraphicsSettings: IResolvable) {
+        cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings)
+    }
 
-  /**
-   * @param htmlMotionGraphicsSettings Settings to configure the motion graphics overlay to use an
-   * HTML asset.
-   */
-  public
-      fun htmlMotionGraphicsSettings(htmlMotionGraphicsSettings: CfnChannel.HtmlMotionGraphicsSettingsProperty) {
-    cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings)
-  }
+    /**
+     * @param htmlMotionGraphicsSettings Settings to configure the motion graphics overlay to use an
+     *   HTML asset.
+     */
+    public fun htmlMotionGraphicsSettings(
+        htmlMotionGraphicsSettings: CfnChannel.HtmlMotionGraphicsSettingsProperty
+    ) {
+        cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings)
+    }
 
-  public fun build(): CfnChannel.MotionGraphicsSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.MotionGraphicsSettingsProperty = cdkBuilder.build()
 }

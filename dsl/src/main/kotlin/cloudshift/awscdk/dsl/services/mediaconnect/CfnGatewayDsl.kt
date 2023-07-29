@@ -1,15 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.mediaconnect.CfnGateway
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.mediaconnect.CfnGateway
+import software.constructs.Construct
 
 /**
  * The AWS::MediaConnect::Gateway resource is used to create a new gateway.
@@ -20,7 +29,6 @@ import kotlin.collections.MutableList
  * distribute live video from the AWS Cloud to your local data center.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,7 +48,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnGatewayDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnGateway.Builder = CfnGateway.Builder.create(scope, id)
 
@@ -52,12 +60,13 @@ public class CfnGatewayDsl(
      * The range of IP addresses that are allowed to contribute content or initiate output requests
      * for flows communicating with this gateway.
      *
-     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for
-     * example, 10.0.0.0/16.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-egresscidrblocks)
+     *
      * @param egressCidrBlocks The range of IP addresses that are allowed to contribute content or
-     * initiate output requests for flows communicating with this gateway.
+     *   initiate output requests for flows communicating with this gateway.
      */
     public fun egressCidrBlocks(vararg egressCidrBlocks: String) {
         _egressCidrBlocks.addAll(listOf(*egressCidrBlocks))
@@ -67,12 +76,13 @@ public class CfnGatewayDsl(
      * The range of IP addresses that are allowed to contribute content or initiate output requests
      * for flows communicating with this gateway.
      *
-     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for
-     * example, 10.0.0.0/16.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-egresscidrblocks)
+     *
      * @param egressCidrBlocks The range of IP addresses that are allowed to contribute content or
-     * initiate output requests for flows communicating with this gateway.
+     *   initiate output requests for flows communicating with this gateway.
      */
     public fun egressCidrBlocks(egressCidrBlocks: Collection<String>) {
         _egressCidrBlocks.addAll(egressCidrBlocks)
@@ -84,6 +94,7 @@ public class CfnGatewayDsl(
      * This name can not be modified after the gateway is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-name)
+     *
      * @param name The name of the gateway.
      */
     public fun name(name: String) {
@@ -94,6 +105,7 @@ public class CfnGatewayDsl(
      * The list of networks that you want to add.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-networks)
+     *
      * @param networks The list of networks that you want to add.
      */
     public fun networks(vararg networks: Any) {
@@ -104,6 +116,7 @@ public class CfnGatewayDsl(
      * The list of networks that you want to add.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-networks)
+     *
      * @param networks The list of networks that you want to add.
      */
     public fun networks(networks: Collection<Any>) {
@@ -114,6 +127,7 @@ public class CfnGatewayDsl(
      * The list of networks that you want to add.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-networks)
+     *
      * @param networks The list of networks that you want to add.
      */
     public fun networks(networks: IResolvable) {

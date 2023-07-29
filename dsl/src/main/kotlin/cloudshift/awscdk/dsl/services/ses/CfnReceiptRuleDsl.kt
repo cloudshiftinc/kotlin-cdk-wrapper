@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * Specifies a receipt rule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -76,56 +84,60 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnReceiptRuleDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnReceiptRule.Builder = CfnReceiptRule.Builder.create(scope, id)
+    private val cdkBuilder: CfnReceiptRule.Builder = CfnReceiptRule.Builder.create(scope, id)
 
-  /**
-   * The name of an existing rule after which the new rule is placed.
-   *
-   * If this parameter is null, the new rule is inserted at the beginning of the rule list.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-after)
-   * @param after The name of an existing rule after which the new rule is placed. 
-   */
-  public fun after(after: String) {
-    cdkBuilder.after(after)
-  }
+    /**
+     * The name of an existing rule after which the new rule is placed.
+     *
+     * If this parameter is null, the new rule is inserted at the beginning of the rule list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-after)
+     *
+     * @param after The name of an existing rule after which the new rule is placed.
+     */
+    public fun after(after: String) {
+        cdkBuilder.after(after)
+    }
 
-  /**
-   * A data structure that contains the specified rule's name, actions, recipients, domains, enabled
-   * status, scan status, and TLS policy.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rule)
-   * @param rule A data structure that contains the specified rule's name, actions, recipients,
-   * domains, enabled status, scan status, and TLS policy. 
-   */
-  public fun rule(rule: IResolvable) {
-    cdkBuilder.rule(rule)
-  }
+    /**
+     * A data structure that contains the specified rule's name, actions, recipients, domains,
+     * enabled status, scan status, and TLS policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rule)
+     *
+     * @param rule A data structure that contains the specified rule's name, actions, recipients,
+     *   domains, enabled status, scan status, and TLS policy.
+     */
+    public fun rule(rule: IResolvable) {
+        cdkBuilder.rule(rule)
+    }
 
-  /**
-   * A data structure that contains the specified rule's name, actions, recipients, domains, enabled
-   * status, scan status, and TLS policy.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rule)
-   * @param rule A data structure that contains the specified rule's name, actions, recipients,
-   * domains, enabled status, scan status, and TLS policy. 
-   */
-  public fun rule(rule: CfnReceiptRule.RuleProperty) {
-    cdkBuilder.rule(rule)
-  }
+    /**
+     * A data structure that contains the specified rule's name, actions, recipients, domains,
+     * enabled status, scan status, and TLS policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rule)
+     *
+     * @param rule A data structure that contains the specified rule's name, actions, recipients,
+     *   domains, enabled status, scan status, and TLS policy.
+     */
+    public fun rule(rule: CfnReceiptRule.RuleProperty) {
+        cdkBuilder.rule(rule)
+    }
 
-  /**
-   * The name of the rule set where the receipt rule is added.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rulesetname)
-   * @param ruleSetName The name of the rule set where the receipt rule is added. 
-   */
-  public fun ruleSetName(ruleSetName: String) {
-    cdkBuilder.ruleSetName(ruleSetName)
-  }
+    /**
+     * The name of the rule set where the receipt rule is added.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rulesetname)
+     *
+     * @param ruleSetName The name of the rule set where the receipt rule is added.
+     */
+    public fun ruleSetName(ruleSetName: String) {
+        cdkBuilder.ruleSetName(ruleSetName)
+    }
 
-  public fun build(): CfnReceiptRule = cdkBuilder.build()
+    public fun build(): CfnReceiptRule = cdkBuilder.build()
 }

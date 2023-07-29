@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.connect.CfnInstanceProps
  * Properties for defining a `CfnInstance`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,44 +47,36 @@ import software.amazon.awscdk.services.connect.CfnInstanceProps
  */
 @CdkDslMarker
 public class CfnInstancePropsDsl {
-  private val cdkBuilder: CfnInstanceProps.Builder = CfnInstanceProps.builder()
+    private val cdkBuilder: CfnInstanceProps.Builder = CfnInstanceProps.builder()
 
-  /**
-   * @param attributes A toggle for an individual feature at the instance level. 
-   */
-  public fun attributes(attributes: IResolvable) {
-    cdkBuilder.attributes(attributes)
-  }
+    /** @param attributes A toggle for an individual feature at the instance level. */
+    public fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes)
+    }
 
-  /**
-   * @param attributes A toggle for an individual feature at the instance level. 
-   */
-  public fun attributes(attributes: CfnInstance.AttributesProperty) {
-    cdkBuilder.attributes(attributes)
-  }
+    /** @param attributes A toggle for an individual feature at the instance level. */
+    public fun attributes(attributes: CfnInstance.AttributesProperty) {
+        cdkBuilder.attributes(attributes)
+    }
 
-  /**
-   * @param directoryId The identifier for the directory.
-   */
-  public fun directoryId(directoryId: String) {
-    cdkBuilder.directoryId(directoryId)
-  }
+    /** @param directoryId The identifier for the directory. */
+    public fun directoryId(directoryId: String) {
+        cdkBuilder.directoryId(directoryId)
+    }
 
-  /**
-   * @param identityManagementType The identity management type. 
-   */
-  public fun identityManagementType(identityManagementType: String) {
-    cdkBuilder.identityManagementType(identityManagementType)
-  }
+    /** @param identityManagementType The identity management type. */
+    public fun identityManagementType(identityManagementType: String) {
+        cdkBuilder.identityManagementType(identityManagementType)
+    }
 
-  /**
-   * @param instanceAlias The alias of instance.
-   * `InstanceAlias` is only required when `IdentityManagementType` is `CONNECT_MANAGED` or `SAML` .
-   * `InstanceAlias` is not required when `IdentityManagementType` is `EXISTING_DIRECTORY` .
-   */
-  public fun instanceAlias(instanceAlias: String) {
-    cdkBuilder.instanceAlias(instanceAlias)
-  }
+    /**
+     * @param instanceAlias The alias of instance. `InstanceAlias` is only required when
+     *   `IdentityManagementType` is `CONNECT_MANAGED` or `SAML` . `InstanceAlias` is not required
+     *   when `IdentityManagementType` is `EXISTING_DIRECTORY` .
+     */
+    public fun instanceAlias(instanceAlias: String) {
+        cdkBuilder.instanceAlias(instanceAlias)
+    }
 
-  public fun build(): CfnInstanceProps = cdkBuilder.build()
+    public fun build(): CfnInstanceProps = cdkBuilder.build()
 }

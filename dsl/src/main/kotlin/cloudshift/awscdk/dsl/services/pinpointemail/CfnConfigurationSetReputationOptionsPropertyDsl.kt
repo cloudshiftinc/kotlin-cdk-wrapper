@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpointemail
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
  * configuration set in the current AWS Region.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,26 +34,26 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
  */
 @CdkDslMarker
 public class CfnConfigurationSetReputationOptionsPropertyDsl {
-  private val cdkBuilder: CfnConfigurationSet.ReputationOptionsProperty.Builder =
-      CfnConfigurationSet.ReputationOptionsProperty.builder()
+    private val cdkBuilder: CfnConfigurationSet.ReputationOptionsProperty.Builder =
+        CfnConfigurationSet.ReputationOptionsProperty.builder()
 
-  /**
-   * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for the
-   * configuration set.
-   * If `false` , tracking of reputation metrics is disabled for the configuration set.
-   */
-  public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
-    cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
-  }
+    /**
+     * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for the
+     *   configuration set. If `false` , tracking of reputation metrics is disabled for the
+     *   configuration set.
+     */
+    public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
+    }
 
-  /**
-   * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for the
-   * configuration set.
-   * If `false` , tracking of reputation metrics is disabled for the configuration set.
-   */
-  public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
-    cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
-  }
+    /**
+     * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for the
+     *   configuration set. If `false` , tracking of reputation metrics is disabled for the
+     *   configuration set.
+     */
+    public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
+    }
 
-  public fun build(): CfnConfigurationSet.ReputationOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnConfigurationSet.ReputationOptionsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting
  * Define a traffic routing config of type 'TimeBasedCanary'.
  *
  * Example:
- *
  * ```
  * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
  * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
@@ -24,26 +32,26 @@ import software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting
  */
 @CdkDslMarker
 public class TimeBasedCanaryTrafficRoutingDsl {
-  private val cdkBuilder: TimeBasedCanaryTrafficRouting.Builder =
-      TimeBasedCanaryTrafficRouting.Builder.create()
+    private val cdkBuilder: TimeBasedCanaryTrafficRouting.Builder =
+        TimeBasedCanaryTrafficRouting.Builder.create()
 
-  /**
-   * The amount of time between traffic shifts.
-   *
-   * @param interval The amount of time between traffic shifts. 
-   */
-  public fun interval(interval: Duration) {
-    cdkBuilder.interval(interval)
-  }
+    /**
+     * The amount of time between traffic shifts.
+     *
+     * @param interval The amount of time between traffic shifts.
+     */
+    public fun interval(interval: Duration) {
+        cdkBuilder.interval(interval)
+    }
 
-  /**
-   * The percentage to increase traffic on each traffic shift.
-   *
-   * @param percentage The percentage to increase traffic on each traffic shift. 
-   */
-  public fun percentage(percentage: Number) {
-    cdkBuilder.percentage(percentage)
-  }
+    /**
+     * The percentage to increase traffic on each traffic shift.
+     *
+     * @param percentage The percentage to increase traffic on each traffic shift.
+     */
+    public fun percentage(percentage: Number) {
+        cdkBuilder.percentage(percentage)
+    }
 
-  public fun build(): TimeBasedCanaryTrafficRouting = cdkBuilder.build()
+    public fun build(): TimeBasedCanaryTrafficRouting = cdkBuilder.build()
 }

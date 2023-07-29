@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalance
  * Properties for a network load balancer.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
  * Vpc vpc = new Vpc(this, "VPC");
@@ -36,58 +44,44 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalance
  */
 @CdkDslMarker
 public class NetworkLoadBalancerPropsDsl {
-  private val cdkBuilder: NetworkLoadBalancerProps.Builder = NetworkLoadBalancerProps.builder()
+    private val cdkBuilder: NetworkLoadBalancerProps.Builder = NetworkLoadBalancerProps.builder()
 
-  /**
-   * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
-   */
-  public fun crossZoneEnabled(crossZoneEnabled: Boolean) {
-    cdkBuilder.crossZoneEnabled(crossZoneEnabled)
-  }
+    /** @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+        cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
 
-  /**
-   * @param deletionProtection Indicates whether deletion protection is enabled.
-   */
-  public fun deletionProtection(deletionProtection: Boolean) {
-    cdkBuilder.deletionProtection(deletionProtection)
-  }
+    /** @param deletionProtection Indicates whether deletion protection is enabled. */
+    public fun deletionProtection(deletionProtection: Boolean) {
+        cdkBuilder.deletionProtection(deletionProtection)
+    }
 
-  /**
-   * @param internetFacing Whether the load balancer has an internet-routable address.
-   */
-  public fun internetFacing(internetFacing: Boolean) {
-    cdkBuilder.internetFacing(internetFacing)
-  }
+    /** @param internetFacing Whether the load balancer has an internet-routable address. */
+    public fun internetFacing(internetFacing: Boolean) {
+        cdkBuilder.internetFacing(internetFacing)
+    }
 
-  /**
-   * @param loadBalancerName Name of the load balancer.
-   */
-  public fun loadBalancerName(loadBalancerName: String) {
-    cdkBuilder.loadBalancerName(loadBalancerName)
-  }
+    /** @param loadBalancerName Name of the load balancer. */
+    public fun loadBalancerName(loadBalancerName: String) {
+        cdkBuilder.loadBalancerName(loadBalancerName)
+    }
 
-  /**
-   * @param vpc The VPC network to place the load balancer in. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /** @param vpc The VPC network to place the load balancer in. */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  /**
-   * @param vpcSubnets Which subnets place the load balancer in.
-   */
-  public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
-    val builder = SubnetSelectionDsl()
-    builder.apply(vpcSubnets)
-    cdkBuilder.vpcSubnets(builder.build())
-  }
+    /** @param vpcSubnets Which subnets place the load balancer in. */
+    public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit = {}) {
+        val builder = SubnetSelectionDsl()
+        builder.apply(vpcSubnets)
+        cdkBuilder.vpcSubnets(builder.build())
+    }
 
-  /**
-   * @param vpcSubnets Which subnets place the load balancer in.
-   */
-  public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    cdkBuilder.vpcSubnets(vpcSubnets)
-  }
+    /** @param vpcSubnets Which subnets place the load balancer in. */
+    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
+        cdkBuilder.vpcSubnets(vpcSubnets)
+    }
 
-  public fun build(): NetworkLoadBalancerProps = cdkBuilder.build()
+    public fun build(): NetworkLoadBalancerProps = cdkBuilder.build()
 }

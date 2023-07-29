@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrassv2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
  * Contains parameters for a Linux process that contains an AWS Lambda function.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,33 +49,33 @@ import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
  */
 @CdkDslMarker
 public class CfnComponentVersionLambdaLinuxProcessParamsPropertyDsl {
-  private val cdkBuilder: CfnComponentVersion.LambdaLinuxProcessParamsProperty.Builder =
-      CfnComponentVersion.LambdaLinuxProcessParamsProperty.builder()
+    private val cdkBuilder: CfnComponentVersion.LambdaLinuxProcessParamsProperty.Builder =
+        CfnComponentVersion.LambdaLinuxProcessParamsProperty.builder()
 
-  /**
-   * @param containerParams The parameters for the container in which the Lambda function runs.
-   */
-  public fun containerParams(containerParams: IResolvable) {
-    cdkBuilder.containerParams(containerParams)
-  }
+    /**
+     * @param containerParams The parameters for the container in which the Lambda function runs.
+     */
+    public fun containerParams(containerParams: IResolvable) {
+        cdkBuilder.containerParams(containerParams)
+    }
 
-  /**
-   * @param containerParams The parameters for the container in which the Lambda function runs.
-   */
-  public fun containerParams(containerParams: CfnComponentVersion.LambdaContainerParamsProperty) {
-    cdkBuilder.containerParams(containerParams)
-  }
+    /**
+     * @param containerParams The parameters for the container in which the Lambda function runs.
+     */
+    public fun containerParams(containerParams: CfnComponentVersion.LambdaContainerParamsProperty) {
+        cdkBuilder.containerParams(containerParams)
+    }
 
-  /**
-   * @param isolationMode The isolation mode for the process that contains the Lambda function.
-   * The process can run in an isolated runtime environment inside the AWS IoT Greengrass container,
-   * or as a regular process outside any container.
-   *
-   * Default: `GreengrassContainer`
-   */
-  public fun isolationMode(isolationMode: String) {
-    cdkBuilder.isolationMode(isolationMode)
-  }
+    /**
+     * @param isolationMode The isolation mode for the process that contains the Lambda function.
+     *   The process can run in an isolated runtime environment inside the AWS IoT Greengrass
+     *   container, or as a regular process outside any container.
+     *
+     * Default: `GreengrassContainer`
+     */
+    public fun isolationMode(isolationMode: String) {
+        cdkBuilder.isolationMode(isolationMode)
+    }
 
-  public fun build(): CfnComponentVersion.LambdaLinuxProcessParamsProperty = cdkBuilder.build()
+    public fun build(): CfnComponentVersion.LambdaLinuxProcessParamsProperty = cdkBuilder.build()
 }

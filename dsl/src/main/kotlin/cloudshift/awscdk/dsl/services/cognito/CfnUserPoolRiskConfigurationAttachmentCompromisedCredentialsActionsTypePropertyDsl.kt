@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttac
  * The compromised credentials actions type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,18 +33,16 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttac
  */
 @CdkDslMarker
 public class CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsActionsTypePropertyDsl {
-  private val cdkBuilder:
-      CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.Builder =
-      CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.builder()
+    private val cdkBuilder:
+        CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.Builder =
+        CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty.builder()
 
-  /**
-   * @param eventAction The event action. 
-   */
-  public fun eventAction(eventAction: String) {
-    cdkBuilder.eventAction(eventAction)
-  }
+    /** @param eventAction The event action. */
+    public fun eventAction(eventAction: String) {
+        cdkBuilder.eventAction(eventAction)
+    }
 
-  public fun build():
-      CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty =
-      cdkBuilder.build()
+    public fun build():
+        CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty =
+        cdkBuilder.build()
 }

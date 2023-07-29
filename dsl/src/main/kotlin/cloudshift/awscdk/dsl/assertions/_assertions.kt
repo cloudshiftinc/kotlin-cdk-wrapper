@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.assertions
 
+import kotlin.Unit
 import software.amazon.awscdk.assertions.MatchCapture
 import software.amazon.awscdk.assertions.MatchFailure
 import software.amazon.awscdk.assertions.TemplateParsingOptions
-import kotlin.Unit
 
 public object assertions {
     /**
      * Information about a value captured during match.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -35,7 +43,6 @@ public object assertions {
      * Match failure details.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -60,7 +67,6 @@ public object assertions {
      * Options to configure template parsing behavior, such as disregarding circular dependencies.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -70,7 +76,9 @@ public object assertions {
      * .build();
      * ```
      */
-    public inline fun templateParsingOptions(block: TemplateParsingOptionsDsl.() -> Unit = {}): TemplateParsingOptions {
+    public inline fun templateParsingOptions(
+        block: TemplateParsingOptionsDsl.() -> Unit = {}
+    ): TemplateParsingOptions {
         val builder = TemplateParsingOptionsDsl()
         builder.apply(block)
         return builder.build()

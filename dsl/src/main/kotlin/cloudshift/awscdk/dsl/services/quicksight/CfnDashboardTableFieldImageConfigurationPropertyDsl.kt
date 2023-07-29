@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The image configuration of a table field URL.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,17 +38,15 @@ public class CfnDashboardTableFieldImageConfigurationPropertyDsl {
     private val cdkBuilder: CfnDashboard.TableFieldImageConfigurationProperty.Builder =
         CfnDashboard.TableFieldImageConfigurationProperty.builder()
 
-    /**
-     * @param sizingOptions The sizing options for the table image configuration.
-     */
+    /** @param sizingOptions The sizing options for the table image configuration. */
     public fun sizingOptions(sizingOptions: IResolvable) {
         cdkBuilder.sizingOptions(sizingOptions)
     }
 
-    /**
-     * @param sizingOptions The sizing options for the table image configuration.
-     */
-    public fun sizingOptions(sizingOptions: CfnDashboard.TableCellImageSizingConfigurationProperty) {
+    /** @param sizingOptions The sizing options for the table image configuration. */
+    public fun sizingOptions(
+        sizingOptions: CfnDashboard.TableCellImageSizingConfigurationProperty
+    ) {
         cdkBuilder.sizingOptions(sizingOptions)
     }
 

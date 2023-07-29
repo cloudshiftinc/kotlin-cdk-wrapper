@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
 import kotlin.Number
+import software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
 
 /**
  * Specifies the default sending limits for campaigns in the application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,8 +40,7 @@ public class CfnApplicationSettingsLimitsPropertyDsl {
 
     /**
      * @param daily The maximum number of messages that a campaign can send to a single endpoint
-     * during a 24-hour period.
-     * The maximum value is 100.
+     *   during a 24-hour period. The maximum value is 100.
      */
     public fun daily(daily: Number) {
         cdkBuilder.daily(daily)
@@ -41,8 +48,8 @@ public class CfnApplicationSettingsLimitsPropertyDsl {
 
     /**
      * @param maximumDuration The maximum amount of time, in seconds, that a campaign can attempt to
-     * deliver a message after the scheduled start time for the campaign.
-     * The minimum value is 60 seconds.
+     *   deliver a message after the scheduled start time for the campaign. The minimum value is 60
+     *   seconds.
      */
     public fun maximumDuration(maximumDuration: Number) {
         cdkBuilder.maximumDuration(maximumDuration)
@@ -50,7 +57,7 @@ public class CfnApplicationSettingsLimitsPropertyDsl {
 
     /**
      * @param messagesPerSecond The maximum number of messages that a campaign can send each second.
-     * The minimum value is 1. The maximum value is 20,000.
+     *   The minimum value is 1. The maximum value is 20,000.
      */
     public fun messagesPerSecond(messagesPerSecond: Number) {
         cdkBuilder.messagesPerSecond(messagesPerSecond)
@@ -58,8 +65,7 @@ public class CfnApplicationSettingsLimitsPropertyDsl {
 
     /**
      * @param total The maximum number of messages that a campaign can send to a single endpoint
-     * during the course of the campaign.
-     * The maximum value is 100.
+     *   during the course of the campaign. The maximum value is 100.
      */
     public fun total(total: Number) {
         cdkBuilder.total(total)

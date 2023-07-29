@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  * application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -69,40 +77,40 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  */
 @CdkDslMarker
 public class CfnApplicationV2SqlApplicationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApplicationV2.SqlApplicationConfigurationProperty.Builder =
-      CfnApplicationV2.SqlApplicationConfigurationProperty.builder()
+    private val cdkBuilder: CfnApplicationV2.SqlApplicationConfigurationProperty.Builder =
+        CfnApplicationV2.SqlApplicationConfigurationProperty.builder()
 
-  private val _inputs: MutableList<Any> = mutableListOf()
+    private val _inputs: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param inputs The array of
-   * [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
-   * describing the input streams used by the application.
-   */
-  public fun inputs(vararg inputs: Any) {
-    _inputs.addAll(listOf(*inputs))
-  }
+    /**
+     * @param inputs The array of
+     *   [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
+     *   describing the input streams used by the application.
+     */
+    public fun inputs(vararg inputs: Any) {
+        _inputs.addAll(listOf(*inputs))
+    }
 
-  /**
-   * @param inputs The array of
-   * [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
-   * describing the input streams used by the application.
-   */
-  public fun inputs(inputs: Collection<Any>) {
-    _inputs.addAll(inputs)
-  }
+    /**
+     * @param inputs The array of
+     *   [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
+     *   describing the input streams used by the application.
+     */
+    public fun inputs(inputs: Collection<Any>) {
+        _inputs.addAll(inputs)
+    }
 
-  /**
-   * @param inputs The array of
-   * [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
-   * describing the input streams used by the application.
-   */
-  public fun inputs(inputs: IResolvable) {
-    cdkBuilder.inputs(inputs)
-  }
+    /**
+     * @param inputs The array of
+     *   [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) objects
+     *   describing the input streams used by the application.
+     */
+    public fun inputs(inputs: IResolvable) {
+        cdkBuilder.inputs(inputs)
+    }
 
-  public fun build(): CfnApplicationV2.SqlApplicationConfigurationProperty {
-    if(_inputs.isNotEmpty()) cdkBuilder.inputs(_inputs)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnApplicationV2.SqlApplicationConfigurationProperty {
+        if (_inputs.isNotEmpty()) cdkBuilder.inputs(_inputs)
+        return cdkBuilder.build()
+    }
 }

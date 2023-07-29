@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -14,13 +23,13 @@ import software.amazon.awscdk.services.apigateway.CfnUsagePlan
  * APIs.
  *
  * In some cases clients can exceed the targets that you set. Don’t rely on usage plans to control
- * costs. Consider using [AWS
- * Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
- * to monitor costs and [AWS
- * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API requests.
+ * costs. Consider using
+ * [AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
+ * to monitor costs and
+ * [AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API
+ * requests.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,31 +45,31 @@ import software.amazon.awscdk.services.apigateway.CfnUsagePlan
  */
 @CdkDslMarker
 public class CfnUsagePlanQuotaSettingsPropertyDsl {
-  private val cdkBuilder: CfnUsagePlan.QuotaSettingsProperty.Builder =
-      CfnUsagePlan.QuotaSettingsProperty.builder()
+    private val cdkBuilder: CfnUsagePlan.QuotaSettingsProperty.Builder =
+        CfnUsagePlan.QuotaSettingsProperty.builder()
 
-  /**
-   * @param limit The target maximum number of requests that can be made in a given time period.
-   */
-  public fun limit(limit: Number) {
-    cdkBuilder.limit(limit)
-  }
+    /**
+     * @param limit The target maximum number of requests that can be made in a given time period.
+     */
+    public fun limit(limit: Number) {
+        cdkBuilder.limit(limit)
+    }
 
-  /**
-   * @param offset The number of requests subtracted from the given limit in the initial time
-   * period.
-   */
-  public fun offset(offset: Number) {
-    cdkBuilder.offset(offset)
-  }
+    /**
+     * @param offset The number of requests subtracted from the given limit in the initial time
+     *   period.
+     */
+    public fun offset(offset: Number) {
+        cdkBuilder.offset(offset)
+    }
 
-  /**
-   * @param period The time period in which the limit applies.
-   * Valid values are "DAY", "WEEK" or "MONTH".
-   */
-  public fun period(period: String) {
-    cdkBuilder.period(period)
-  }
+    /**
+     * @param period The time period in which the limit applies. Valid values are "DAY", "WEEK" or
+     *   "MONTH".
+     */
+    public fun period(period: String) {
+        cdkBuilder.period(period)
+    }
 
-  public fun build(): CfnUsagePlan.QuotaSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnUsagePlan.QuotaSettingsProperty = cdkBuilder.build()
 }

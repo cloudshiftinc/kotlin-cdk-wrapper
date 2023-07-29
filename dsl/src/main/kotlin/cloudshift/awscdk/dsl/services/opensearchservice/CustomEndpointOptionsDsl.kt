@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opensearchservice
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.route53.IHostedZone
  * Configures a custom domain endpoint for the Amazon OpenSearch Service domain.
  *
  * Example:
- *
  * ```
  * Domain.Builder.create(this, "Domain")
  * .version(EngineVersion.OPENSEARCH_1_0)
@@ -24,28 +32,22 @@ import software.amazon.awscdk.services.route53.IHostedZone
  */
 @CdkDslMarker
 public class CustomEndpointOptionsDsl {
-  private val cdkBuilder: CustomEndpointOptions.Builder = CustomEndpointOptions.builder()
+    private val cdkBuilder: CustomEndpointOptions.Builder = CustomEndpointOptions.builder()
 
-  /**
-   * @param certificate The certificate to use.
-   */
-  public fun certificate(certificate: ICertificate) {
-    cdkBuilder.certificate(certificate)
-  }
+    /** @param certificate The certificate to use. */
+    public fun certificate(certificate: ICertificate) {
+        cdkBuilder.certificate(certificate)
+    }
 
-  /**
-   * @param domainName The custom domain name to assign. 
-   */
-  public fun domainName(domainName: String) {
-    cdkBuilder.domainName(domainName)
-  }
+    /** @param domainName The custom domain name to assign. */
+    public fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+    }
 
-  /**
-   * @param hostedZone The hosted zone in Route53 to create the CNAME record in.
-   */
-  public fun hostedZone(hostedZone: IHostedZone) {
-    cdkBuilder.hostedZone(hostedZone)
-  }
+    /** @param hostedZone The hosted zone in Route53 to create the CNAME record in. */
+    public fun hostedZone(hostedZone: IHostedZone) {
+        cdkBuilder.hostedZone(hostedZone)
+    }
 
-  public fun build(): CustomEndpointOptions = cdkBuilder.build()
+    public fun build(): CustomEndpointOptions = cdkBuilder.build()
 }

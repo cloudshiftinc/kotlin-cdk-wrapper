@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.connect.CfnTaskTemplate
  * Indicates a field that is read-only to an agent.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.connect.CfnTaskTemplate
  */
 @CdkDslMarker
 public class CfnTaskTemplateReadOnlyFieldInfoPropertyDsl {
-  private val cdkBuilder: CfnTaskTemplate.ReadOnlyFieldInfoProperty.Builder =
-      CfnTaskTemplate.ReadOnlyFieldInfoProperty.builder()
+    private val cdkBuilder: CfnTaskTemplate.ReadOnlyFieldInfoProperty.Builder =
+        CfnTaskTemplate.ReadOnlyFieldInfoProperty.builder()
 
-  /**
-   * @param id Identifier of the read-only field. 
-   */
-  public fun id(id: IResolvable) {
-    cdkBuilder.id(id)
-  }
+    /** @param id Identifier of the read-only field. */
+    public fun id(id: IResolvable) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param id Identifier of the read-only field. 
-   */
-  public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
-    cdkBuilder.id(id)
-  }
+    /** @param id Identifier of the read-only field. */
+    public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
+        cdkBuilder.id(id)
+    }
 
-  public fun build(): CfnTaskTemplate.ReadOnlyFieldInfoProperty = cdkBuilder.build()
+    public fun build(): CfnTaskTemplate.ReadOnlyFieldInfoProperty = cdkBuilder.build()
 }

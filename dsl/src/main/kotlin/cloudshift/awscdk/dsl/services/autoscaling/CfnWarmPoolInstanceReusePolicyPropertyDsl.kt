@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling
 
@@ -12,12 +21,11 @@ import software.amazon.awscdk.services.autoscaling.CfnWarmPool
  * [AWS::AutoScaling::WarmPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html)
  * resource.
  *
- * For more information, see [Warm pools for Amazon EC2 Auto
- * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html) in
- * the *Amazon EC2 Auto Scaling User Guide* .
+ * For more information, see
+ * [Warm pools for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,24 +39,24 @@ import software.amazon.awscdk.services.autoscaling.CfnWarmPool
  */
 @CdkDslMarker
 public class CfnWarmPoolInstanceReusePolicyPropertyDsl {
-  private val cdkBuilder: CfnWarmPool.InstanceReusePolicyProperty.Builder =
-      CfnWarmPool.InstanceReusePolicyProperty.builder()
+    private val cdkBuilder: CfnWarmPool.InstanceReusePolicyProperty.Builder =
+        CfnWarmPool.InstanceReusePolicyProperty.builder()
 
-  /**
-   * @param reuseOnScaleIn Specifies whether instances in the Auto Scaling group can be returned to
-   * the warm pool on scale in.
-   */
-  public fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
-    cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
-  }
+    /**
+     * @param reuseOnScaleIn Specifies whether instances in the Auto Scaling group can be returned
+     *   to the warm pool on scale in.
+     */
+    public fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
+        cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
+    }
 
-  /**
-   * @param reuseOnScaleIn Specifies whether instances in the Auto Scaling group can be returned to
-   * the warm pool on scale in.
-   */
-  public fun reuseOnScaleIn(reuseOnScaleIn: IResolvable) {
-    cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
-  }
+    /**
+     * @param reuseOnScaleIn Specifies whether instances in the Auto Scaling group can be returned
+     *   to the warm pool on scale in.
+     */
+    public fun reuseOnScaleIn(reuseOnScaleIn: IResolvable) {
+        cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
+    }
 
-  public fun build(): CfnWarmPool.InstanceReusePolicyProperty = cdkBuilder.build()
+    public fun build(): CfnWarmPool.InstanceReusePolicyProperty = cdkBuilder.build()
 }

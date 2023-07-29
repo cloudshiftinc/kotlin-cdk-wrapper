@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.TagOptionsProps
 import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
+import software.amazon.awscdk.services.servicecatalog.TagOptionsProps
 
 /**
  * Properties for TagOptions.
  *
  * Example:
- *
  * ```
  * Portfolio portfolio;
  * CloudFormationProduct product;
@@ -34,9 +42,9 @@ public class TagOptionsPropsDsl {
     private val cdkBuilder: TagOptionsProps.Builder = TagOptionsProps.builder()
 
     /**
-     * @param allowedValuesForTags The values that are allowed to be set for specific tags.
-     * The keys of the map represent the tag keys,
-     * and the values of the map are a list of allowed values for that particular tag key.
+     * @param allowedValuesForTags The values that are allowed to be set for specific tags. The keys
+     *   of the map represent the tag keys, and the values of the map are a list of allowed values
+     *   for that particular tag key.
      */
     public fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
         cdkBuilder.allowedValuesForTags(allowedValuesForTags)

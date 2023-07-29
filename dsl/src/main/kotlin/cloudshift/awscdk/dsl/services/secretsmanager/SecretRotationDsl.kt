@@ -1,9 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
+import kotlin.Boolean
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ec2.IConnectable
 import software.amazon.awscdk.services.ec2.IInterfaceVpcEndpoint
@@ -14,15 +26,11 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.SecretRotation
 import software.amazon.awscdk.services.secretsmanager.SecretRotationApplication
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
-import kotlin.Unit
 
 /**
  * Secret rotation for a service or database.
  *
  * Example:
- *
  * ```
  * Secret myUserSecret;
  * Secret myMasterSecret;
@@ -40,7 +48,7 @@ import kotlin.Unit
 @CdkDslMarker
 public class SecretRotationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: SecretRotation.Builder = SecretRotation.Builder.create(scope, id)
 
@@ -60,7 +68,7 @@ public class SecretRotationDsl(
      * Default: Duration.days(30)
      *
      * @param automaticallyAfter Specifies the number of days after the previous rotation before
-     * Secrets Manager triggers the next automatic rotation.
+     *   Secrets Manager triggers the next automatic rotation.
      */
     public fun automaticallyAfter(automaticallyAfter: Duration) {
         cdkBuilder.automaticallyAfter(automaticallyAfter)
@@ -111,7 +119,7 @@ public class SecretRotationDsl(
      * Default: true
      *
      * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
-     * until the next scheduled rotation window.
+     *   until the next scheduled rotation window.
      */
     public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
         cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
@@ -134,10 +142,11 @@ public class SecretRotationDsl(
      * ```
      *
      * This is typically the case for a secret referenced from an
-     * `AWS::SecretsManager::SecretTargetAttachment`
-     * or an `ISecret` returned by the `attach()` method of `Secret`.
+     * `AWS::SecretsManager::SecretTargetAttachment` or an `ISecret` returned by the `attach()`
+     * method of `Secret`.
      *
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)
+     *
      * @param secret The secret to rotate. It must be a JSON string with the following format:.
      */
     public fun secret(secret: ISecret) {

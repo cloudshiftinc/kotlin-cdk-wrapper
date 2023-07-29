@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.iot.CfnThingGroup
  * The attribute payload.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,26 +35,24 @@ import software.amazon.awscdk.services.iot.CfnThingGroup
  */
 @CdkDslMarker
 public class CfnThingGroupAttributePayloadPropertyDsl {
-  private val cdkBuilder: CfnThingGroup.AttributePayloadProperty.Builder =
-      CfnThingGroup.AttributePayloadProperty.builder()
+    private val cdkBuilder: CfnThingGroup.AttributePayloadProperty.Builder =
+        CfnThingGroup.AttributePayloadProperty.builder()
 
-  /**
-   * @param attributes A JSON string containing up to three key-value pair in JSON format. For
-   * example:.
-   * `{\"attributes\":{\"string1\":\"string2\"}}`
-   */
-  public fun attributes(attributes: Map<String, String>) {
-    cdkBuilder.attributes(attributes)
-  }
+    /**
+     * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+     *   example:. `{\"attributes\":{\"string1\":\"string2\"}}`
+     */
+    public fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
+    }
 
-  /**
-   * @param attributes A JSON string containing up to three key-value pair in JSON format. For
-   * example:.
-   * `{\"attributes\":{\"string1\":\"string2\"}}`
-   */
-  public fun attributes(attributes: IResolvable) {
-    cdkBuilder.attributes(attributes)
-  }
+    /**
+     * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+     *   example:. `{\"attributes\":{\"string1\":\"string2\"}}`
+     */
+    public fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes)
+    }
 
-  public fun build(): CfnThingGroup.AttributePayloadProperty = cdkBuilder.build()
+    public fun build(): CfnThingGroup.AttributePayloadProperty = cdkBuilder.build()
 }

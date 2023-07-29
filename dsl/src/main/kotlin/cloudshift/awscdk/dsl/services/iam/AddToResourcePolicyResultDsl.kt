@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iam
 
@@ -11,7 +20,6 @@ import software.constructs.IDependable
  * Result of calling addToResourcePolicy.
  *
  * Example:
- *
  * ```
  * IBucket bucket = Bucket.fromBucketName(this, "existingBucket", "bucket-name");
  * // No policy statement will be added to the resource
@@ -25,21 +33,19 @@ import software.constructs.IDependable
  */
 @CdkDslMarker
 public class AddToResourcePolicyResultDsl {
-  private val cdkBuilder: AddToResourcePolicyResult.Builder = AddToResourcePolicyResult.builder()
+    private val cdkBuilder: AddToResourcePolicyResult.Builder = AddToResourcePolicyResult.builder()
 
-  /**
-   * @param policyDependable Dependable which allows depending on the policy change being applied.
-   */
-  public fun policyDependable(policyDependable: IDependable) {
-    cdkBuilder.policyDependable(policyDependable)
-  }
+    /**
+     * @param policyDependable Dependable which allows depending on the policy change being applied.
+     */
+    public fun policyDependable(policyDependable: IDependable) {
+        cdkBuilder.policyDependable(policyDependable)
+    }
 
-  /**
-   * @param statementAdded Whether the statement was added. 
-   */
-  public fun statementAdded(statementAdded: Boolean) {
-    cdkBuilder.statementAdded(statementAdded)
-  }
+    /** @param statementAdded Whether the statement was added. */
+    public fun statementAdded(statementAdded: Boolean) {
+        cdkBuilder.statementAdded(statementAdded)
+    }
 
-  public fun build(): AddToResourcePolicyResult = cdkBuilder.build()
+    public fun build(): AddToResourcePolicyResult = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.sam.CfnFunction
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,37 +44,30 @@ import software.amazon.awscdk.services.sam.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionEventInvokeConfigPropertyDsl {
-  private val cdkBuilder: CfnFunction.EventInvokeConfigProperty.Builder =
-      CfnFunction.EventInvokeConfigProperty.builder()
+    private val cdkBuilder: CfnFunction.EventInvokeConfigProperty.Builder =
+        CfnFunction.EventInvokeConfigProperty.builder()
 
-  /**
-   * @param destinationConfig the value to be set.
-   */
-  public fun destinationConfig(destinationConfig: IResolvable) {
-    cdkBuilder.destinationConfig(destinationConfig)
-  }
+    /** @param destinationConfig the value to be set. */
+    public fun destinationConfig(destinationConfig: IResolvable) {
+        cdkBuilder.destinationConfig(destinationConfig)
+    }
 
-  /**
-   * @param destinationConfig the value to be set.
-   */
-  public
-      fun destinationConfig(destinationConfig: CfnFunction.EventInvokeDestinationConfigProperty) {
-    cdkBuilder.destinationConfig(destinationConfig)
-  }
+    /** @param destinationConfig the value to be set. */
+    public fun destinationConfig(
+        destinationConfig: CfnFunction.EventInvokeDestinationConfigProperty
+    ) {
+        cdkBuilder.destinationConfig(destinationConfig)
+    }
 
-  /**
-   * @param maximumEventAgeInSeconds the value to be set.
-   */
-  public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
-    cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
-  }
+    /** @param maximumEventAgeInSeconds the value to be set. */
+    public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
+        cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
+    }
 
-  /**
-   * @param maximumRetryAttempts the value to be set.
-   */
-  public fun maximumRetryAttempts(maximumRetryAttempts: Number) {
-    cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
-  }
+    /** @param maximumRetryAttempts the value to be set. */
+    public fun maximumRetryAttempts(maximumRetryAttempts: Number) {
+        cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
+    }
 
-  public fun build(): CfnFunction.EventInvokeConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.EventInvokeConfigProperty = cdkBuilder.build()
 }

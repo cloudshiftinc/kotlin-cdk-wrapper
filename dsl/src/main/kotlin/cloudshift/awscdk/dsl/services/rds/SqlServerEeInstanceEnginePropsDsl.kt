@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.rds.SqlServerEngineVersion
  * Used in `DatabaseInstanceEngine.sqlServerEe`.
  *
  * Example:
- *
  * ```
  * Vpc vpc;
  * ParameterGroup parameterGroup = ParameterGroup.Builder.create(this, "ParameterGroup")
@@ -31,15 +39,13 @@ import software.amazon.awscdk.services.rds.SqlServerEngineVersion
  */
 @CdkDslMarker
 public class SqlServerEeInstanceEnginePropsDsl {
-  private val cdkBuilder: SqlServerEeInstanceEngineProps.Builder =
-      SqlServerEeInstanceEngineProps.builder()
+    private val cdkBuilder: SqlServerEeInstanceEngineProps.Builder =
+        SqlServerEeInstanceEngineProps.builder()
 
-  /**
-   * @param version The exact version of the engine to use. 
-   */
-  public fun version(version: SqlServerEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The exact version of the engine to use. */
+    public fun version(version: SqlServerEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): SqlServerEeInstanceEngineProps = cdkBuilder.build()
+    public fun build(): SqlServerEeInstanceEngineProps = cdkBuilder.build()
 }

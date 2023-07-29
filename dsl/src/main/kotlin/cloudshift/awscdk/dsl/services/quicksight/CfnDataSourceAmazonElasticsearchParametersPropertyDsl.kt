@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDataSource
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDataSource
 
 /**
  * The parameters for OpenSearch.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,9 +36,7 @@ public class CfnDataSourceAmazonElasticsearchParametersPropertyDsl {
     private val cdkBuilder: CfnDataSource.AmazonElasticsearchParametersProperty.Builder =
         CfnDataSource.AmazonElasticsearchParametersProperty.builder()
 
-    /**
-     * @param domain The OpenSearch domain.
-     */
+    /** @param domain The OpenSearch domain. */
     public fun domain(domain: String) {
         cdkBuilder.domain(domain)
     }

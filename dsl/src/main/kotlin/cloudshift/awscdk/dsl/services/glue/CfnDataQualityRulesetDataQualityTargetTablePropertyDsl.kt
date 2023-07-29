@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.glue.CfnDataQualityRuleset
  * An object representing an AWS Glue table.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.glue.CfnDataQualityRuleset
  */
 @CdkDslMarker
 public class CfnDataQualityRulesetDataQualityTargetTablePropertyDsl {
-  private val cdkBuilder: CfnDataQualityRuleset.DataQualityTargetTableProperty.Builder =
-      CfnDataQualityRuleset.DataQualityTargetTableProperty.builder()
+    private val cdkBuilder: CfnDataQualityRuleset.DataQualityTargetTableProperty.Builder =
+        CfnDataQualityRuleset.DataQualityTargetTableProperty.builder()
 
-  /**
-   * @param databaseName The name of the database where the AWS Glue table exists.
-   */
-  public fun databaseName(databaseName: String) {
-    cdkBuilder.databaseName(databaseName)
-  }
+    /** @param databaseName The name of the database where the AWS Glue table exists. */
+    public fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+    }
 
-  /**
-   * @param tableName The name of the AWS Glue table.
-   */
-  public fun tableName(tableName: String) {
-    cdkBuilder.tableName(tableName)
-  }
+    /** @param tableName The name of the AWS Glue table. */
+    public fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+    }
 
-  public fun build(): CfnDataQualityRuleset.DataQualityTargetTableProperty = cdkBuilder.build()
+    public fun build(): CfnDataQualityRuleset.DataQualityTargetTableProperty = cdkBuilder.build()
 }

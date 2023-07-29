@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.GrpcConnectionPool
  * Connection pool properties for gRPC listeners.
  *
  * Example:
- *
  * ```
  * // A Virtual Node with a gRPC listener with a connection pool set
  * Mesh mesh;
@@ -45,14 +53,12 @@ import software.amazon.awscdk.services.appmesh.GrpcConnectionPool
  */
 @CdkDslMarker
 public class GrpcConnectionPoolDsl {
-  private val cdkBuilder: GrpcConnectionPool.Builder = GrpcConnectionPool.builder()
+    private val cdkBuilder: GrpcConnectionPool.Builder = GrpcConnectionPool.builder()
 
-  /**
-   * @param maxRequests The maximum requests in the pool. 
-   */
-  public fun maxRequests(maxRequests: Number) {
-    cdkBuilder.maxRequests(maxRequests)
-  }
+    /** @param maxRequests The maximum requests in the pool. */
+    public fun maxRequests(maxRequests: Number) {
+        cdkBuilder.maxRequests(maxRequests)
+    }
 
-  public fun build(): GrpcConnectionPool = cdkBuilder.build()
+    public fun build(): GrpcConnectionPool = cdkBuilder.build()
 }

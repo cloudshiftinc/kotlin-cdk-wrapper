@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.ec2.UserData
  * Allows you to create a generic Windows EC2 , manually specify an AMI map.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,20 +36,20 @@ import software.amazon.awscdk.services.ec2.UserData
  */
 @CdkDslMarker
 public class GenericWindowsImageDsl(
-  amiMap: Map<String, String>,
+    amiMap: Map<String, String>,
 ) {
-  private val cdkBuilder: GenericWindowsImage.Builder = GenericWindowsImage.Builder.create(amiMap)
+    private val cdkBuilder: GenericWindowsImage.Builder = GenericWindowsImage.Builder.create(amiMap)
 
-  /**
-   * Initial user data.
-   *
-   * Default: - Empty UserData for Windows machines
-   *
-   * @param userData Initial user data. 
-   */
-  public fun userData(userData: UserData) {
-    cdkBuilder.userData(userData)
-  }
+    /**
+     * Initial user data.
+     *
+     * Default: - Empty UserData for Windows machines
+     *
+     * @param userData Initial user data.
+     */
+    public fun userData(userData: UserData) {
+        cdkBuilder.userData(userData)
+    }
 
-  public fun build(): GenericWindowsImage = cdkBuilder.build()
+    public fun build(): GenericWindowsImage = cdkBuilder.build()
 }

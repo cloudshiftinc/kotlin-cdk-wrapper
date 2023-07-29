@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -15,11 +24,10 @@ import software.constructs.Construct
  * time in your `LogDestinationConfigs` .
  *
  * You can make only one of the following changes to your `LoggingConfiguration` resource:
- *
  * * Create a new log destination object by adding a single `LogDestinationConfig` array element to
- * `LogDestinationConfigs` .
+ *   `LogDestinationConfigs` .
  * * Delete a log destination object by removing a single `LogDestinationConfig` array element from
- * `LogDestinationConfigs` .
+ *   `LogDestinationConfigs` .
  * * Change the `LogDestination` setting in a single `LogDestinationConfig` array element.
  *
  * You can't change the `LogDestinationType` or `LogType` in a `LogDestinationConfig` . To change
@@ -27,7 +35,6 @@ import software.constructs.Construct
  * separate modifications.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,61 +59,66 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnLoggingConfigurationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnLoggingConfiguration.Builder =
-      CfnLoggingConfiguration.Builder.create(scope, id)
+    private val cdkBuilder: CfnLoggingConfiguration.Builder =
+        CfnLoggingConfiguration.Builder.create(scope, id)
 
-  /**
-   * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
-   * with.
-   *
-   * You can't change the firewall specification after you create the logging configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-firewallarn)
-   * @param firewallArn The Amazon Resource Name (ARN) of the `Firewall` that the logging
-   * configuration is associated with. 
-   */
-  public fun firewallArn(firewallArn: String) {
-    cdkBuilder.firewallArn(firewallArn)
-  }
+    /**
+     * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
+     * with.
+     *
+     * You can't change the firewall specification after you create the logging configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-firewallarn)
+     *
+     * @param firewallArn The Amazon Resource Name (ARN) of the `Firewall` that the logging
+     *   configuration is associated with.
+     */
+    public fun firewallArn(firewallArn: String) {
+        cdkBuilder.firewallArn(firewallArn)
+    }
 
-  /**
-   * The name of the firewall that the logging configuration is associated with.
-   *
-   * You can't change the firewall specification after you create the logging configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-firewallname)
-   * @param firewallName The name of the firewall that the logging configuration is associated with.
-   * 
-   */
-  public fun firewallName(firewallName: String) {
-    cdkBuilder.firewallName(firewallName)
-  }
+    /**
+     * The name of the firewall that the logging configuration is associated with.
+     *
+     * You can't change the firewall specification after you create the logging configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-firewallname)
+     *
+     * @param firewallName The name of the firewall that the logging configuration is associated
+     *   with.
+     */
+    public fun firewallName(firewallName: String) {
+        cdkBuilder.firewallName(firewallName)
+    }
 
-  /**
-   * Defines how AWS Network Firewall performs logging for a `Firewall` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-loggingconfiguration)
-   * @param loggingConfiguration Defines how AWS Network Firewall performs logging for a `Firewall`
-   * . 
-   */
-  public fun loggingConfiguration(loggingConfiguration: IResolvable) {
-    cdkBuilder.loggingConfiguration(loggingConfiguration)
-  }
+    /**
+     * Defines how AWS Network Firewall performs logging for a `Firewall` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-loggingconfiguration)
+     *
+     * @param loggingConfiguration Defines how AWS Network Firewall performs logging for a
+     *   `Firewall` .
+     */
+    public fun loggingConfiguration(loggingConfiguration: IResolvable) {
+        cdkBuilder.loggingConfiguration(loggingConfiguration)
+    }
 
-  /**
-   * Defines how AWS Network Firewall performs logging for a `Firewall` .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-loggingconfiguration)
-   * @param loggingConfiguration Defines how AWS Network Firewall performs logging for a `Firewall`
-   * . 
-   */
-  public
-      fun loggingConfiguration(loggingConfiguration: CfnLoggingConfiguration.LoggingConfigurationProperty) {
-    cdkBuilder.loggingConfiguration(loggingConfiguration)
-  }
+    /**
+     * Defines how AWS Network Firewall performs logging for a `Firewall` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-loggingconfiguration)
+     *
+     * @param loggingConfiguration Defines how AWS Network Firewall performs logging for a
+     *   `Firewall` .
+     */
+    public fun loggingConfiguration(
+        loggingConfiguration: CfnLoggingConfiguration.LoggingConfigurationProperty
+    ) {
+        cdkBuilder.loggingConfiguration(loggingConfiguration)
+    }
 
-  public fun build(): CfnLoggingConfiguration = cdkBuilder.build()
+    public fun build(): CfnLoggingConfiguration = cdkBuilder.build()
 }

@@ -1,11 +1,20 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * The label options for a chart axis.
@@ -13,7 +22,6 @@ import kotlin.String
  * You must specify the field that the label is targeted to.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,37 +56,27 @@ public class CfnTemplateAxisLabelOptionsPropertyDsl {
     private val cdkBuilder: CfnTemplate.AxisLabelOptionsProperty.Builder =
         CfnTemplate.AxisLabelOptionsProperty.builder()
 
-    /**
-     * @param applyTo The options that indicate which field the label belongs to.
-     */
+    /** @param applyTo The options that indicate which field the label belongs to. */
     public fun applyTo(applyTo: IResolvable) {
         cdkBuilder.applyTo(applyTo)
     }
 
-    /**
-     * @param applyTo The options that indicate which field the label belongs to.
-     */
+    /** @param applyTo The options that indicate which field the label belongs to. */
     public fun applyTo(applyTo: CfnTemplate.AxisLabelReferenceOptionsProperty) {
         cdkBuilder.applyTo(applyTo)
     }
 
-    /**
-     * @param customLabel The text for the axis label.
-     */
+    /** @param customLabel The text for the axis label. */
     public fun customLabel(customLabel: String) {
         cdkBuilder.customLabel(customLabel)
     }
 
-    /**
-     * @param fontConfiguration The font configuration of the axis label.
-     */
+    /** @param fontConfiguration The font configuration of the axis label. */
     public fun fontConfiguration(fontConfiguration: IResolvable) {
         cdkBuilder.fontConfiguration(fontConfiguration)
     }
 
-    /**
-     * @param fontConfiguration The font configuration of the axis label.
-     */
+    /** @param fontConfiguration The font configuration of the axis label. */
     public fun fontConfiguration(fontConfiguration: CfnTemplate.FontConfigurationProperty) {
         cdkBuilder.fontConfiguration(fontConfiguration)
     }

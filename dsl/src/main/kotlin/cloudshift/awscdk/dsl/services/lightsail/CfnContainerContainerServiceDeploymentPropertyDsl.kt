@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lightsail
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.lightsail.CfnContainer
  * deployed to your container service.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -57,51 +65,47 @@ import software.amazon.awscdk.services.lightsail.CfnContainer
  */
 @CdkDslMarker
 public class CfnContainerContainerServiceDeploymentPropertyDsl {
-  private val cdkBuilder: CfnContainer.ContainerServiceDeploymentProperty.Builder =
-      CfnContainer.ContainerServiceDeploymentProperty.builder()
+    private val cdkBuilder: CfnContainer.ContainerServiceDeploymentProperty.Builder =
+        CfnContainer.ContainerServiceDeploymentProperty.builder()
 
-  private val _containers: MutableList<Any> = mutableListOf()
+    private val _containers: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param containers An object that describes the configuration for the containers of the
-   * deployment.
-   */
-  public fun containers(vararg containers: Any) {
-    _containers.addAll(listOf(*containers))
-  }
+    /**
+     * @param containers An object that describes the configuration for the containers of the
+     *   deployment.
+     */
+    public fun containers(vararg containers: Any) {
+        _containers.addAll(listOf(*containers))
+    }
 
-  /**
-   * @param containers An object that describes the configuration for the containers of the
-   * deployment.
-   */
-  public fun containers(containers: Collection<Any>) {
-    _containers.addAll(containers)
-  }
+    /**
+     * @param containers An object that describes the configuration for the containers of the
+     *   deployment.
+     */
+    public fun containers(containers: Collection<Any>) {
+        _containers.addAll(containers)
+    }
 
-  /**
-   * @param containers An object that describes the configuration for the containers of the
-   * deployment.
-   */
-  public fun containers(containers: IResolvable) {
-    cdkBuilder.containers(containers)
-  }
+    /**
+     * @param containers An object that describes the configuration for the containers of the
+     *   deployment.
+     */
+    public fun containers(containers: IResolvable) {
+        cdkBuilder.containers(containers)
+    }
 
-  /**
-   * @param publicEndpoint An object that describes the endpoint of the deployment.
-   */
-  public fun publicEndpoint(publicEndpoint: IResolvable) {
-    cdkBuilder.publicEndpoint(publicEndpoint)
-  }
+    /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+    public fun publicEndpoint(publicEndpoint: IResolvable) {
+        cdkBuilder.publicEndpoint(publicEndpoint)
+    }
 
-  /**
-   * @param publicEndpoint An object that describes the endpoint of the deployment.
-   */
-  public fun publicEndpoint(publicEndpoint: CfnContainer.PublicEndpointProperty) {
-    cdkBuilder.publicEndpoint(publicEndpoint)
-  }
+    /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+    public fun publicEndpoint(publicEndpoint: CfnContainer.PublicEndpointProperty) {
+        cdkBuilder.publicEndpoint(publicEndpoint)
+    }
 
-  public fun build(): CfnContainer.ContainerServiceDeploymentProperty {
-    if(_containers.isNotEmpty()) cdkBuilder.containers(_containers)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnContainer.ContainerServiceDeploymentProperty {
+        if (_containers.isNotEmpty()) cdkBuilder.containers(_containers)
+        return cdkBuilder.build()
+    }
 }

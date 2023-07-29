@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.Number
 
 /**
  * The category drill down filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,23 +41,17 @@ public class CfnTemplateNumericEqualityDrillDownFilterPropertyDsl {
     private val cdkBuilder: CfnTemplate.NumericEqualityDrillDownFilterProperty.Builder =
         CfnTemplate.NumericEqualityDrillDownFilterProperty.builder()
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: CfnTemplate.ColumnIdentifierProperty) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param value The value of the double input numeric drill down filter.
-     */
+    /** @param value The value of the double input numeric drill down filter. */
     public fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
     }

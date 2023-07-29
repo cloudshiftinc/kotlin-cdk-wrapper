@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fsx
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  * The configuration object for mounting a file system.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,37 +38,38 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  */
 @CdkDslMarker
 public class CfnFileSystemNfsExportsPropertyDsl {
-  private val cdkBuilder: CfnFileSystem.NfsExportsProperty.Builder =
-      CfnFileSystem.NfsExportsProperty.builder()
+    private val cdkBuilder: CfnFileSystem.NfsExportsProperty.Builder =
+        CfnFileSystem.NfsExportsProperty.builder()
 
-  private val _clientConfigurations: MutableList<Any> = mutableListOf()
+    private val _clientConfigurations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param clientConfigurations A list of configuration objects that contain the client and options
-   * for mounting the OpenZFS file system.
-   */
-  public fun clientConfigurations(vararg clientConfigurations: Any) {
-    _clientConfigurations.addAll(listOf(*clientConfigurations))
-  }
+    /**
+     * @param clientConfigurations A list of configuration objects that contain the client and
+     *   options for mounting the OpenZFS file system.
+     */
+    public fun clientConfigurations(vararg clientConfigurations: Any) {
+        _clientConfigurations.addAll(listOf(*clientConfigurations))
+    }
 
-  /**
-   * @param clientConfigurations A list of configuration objects that contain the client and options
-   * for mounting the OpenZFS file system.
-   */
-  public fun clientConfigurations(clientConfigurations: Collection<Any>) {
-    _clientConfigurations.addAll(clientConfigurations)
-  }
+    /**
+     * @param clientConfigurations A list of configuration objects that contain the client and
+     *   options for mounting the OpenZFS file system.
+     */
+    public fun clientConfigurations(clientConfigurations: Collection<Any>) {
+        _clientConfigurations.addAll(clientConfigurations)
+    }
 
-  /**
-   * @param clientConfigurations A list of configuration objects that contain the client and options
-   * for mounting the OpenZFS file system.
-   */
-  public fun clientConfigurations(clientConfigurations: IResolvable) {
-    cdkBuilder.clientConfigurations(clientConfigurations)
-  }
+    /**
+     * @param clientConfigurations A list of configuration objects that contain the client and
+     *   options for mounting the OpenZFS file system.
+     */
+    public fun clientConfigurations(clientConfigurations: IResolvable) {
+        cdkBuilder.clientConfigurations(clientConfigurations)
+    }
 
-  public fun build(): CfnFileSystem.NfsExportsProperty {
-    if(_clientConfigurations.isNotEmpty()) cdkBuilder.clientConfigurations(_clientConfigurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFileSystem.NfsExportsProperty {
+        if (_clientConfigurations.isNotEmpty())
+            cdkBuilder.clientConfigurations(_clientConfigurations)
+        return cdkBuilder.build()
+    }
 }

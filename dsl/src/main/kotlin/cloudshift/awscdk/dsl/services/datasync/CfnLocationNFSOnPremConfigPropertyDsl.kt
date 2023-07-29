@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.datasync
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.datasync.CfnLocationNFS
  * A list of Amazon Resource Names (ARNs) of agents to use for a Network File System (NFS) location.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,27 +34,23 @@ import software.amazon.awscdk.services.datasync.CfnLocationNFS
  */
 @CdkDslMarker
 public class CfnLocationNFSOnPremConfigPropertyDsl {
-  private val cdkBuilder: CfnLocationNFS.OnPremConfigProperty.Builder =
-      CfnLocationNFS.OnPremConfigProperty.builder()
+    private val cdkBuilder: CfnLocationNFS.OnPremConfigProperty.Builder =
+        CfnLocationNFS.OnPremConfigProperty.builder()
 
-  private val _agentArns: MutableList<String> = mutableListOf()
+    private val _agentArns: MutableList<String> = mutableListOf()
 
-  /**
-   * @param agentArns ARNs of the agents to use for an NFS location. 
-   */
-  public fun agentArns(vararg agentArns: String) {
-    _agentArns.addAll(listOf(*agentArns))
-  }
+    /** @param agentArns ARNs of the agents to use for an NFS location. */
+    public fun agentArns(vararg agentArns: String) {
+        _agentArns.addAll(listOf(*agentArns))
+    }
 
-  /**
-   * @param agentArns ARNs of the agents to use for an NFS location. 
-   */
-  public fun agentArns(agentArns: Collection<String>) {
-    _agentArns.addAll(agentArns)
-  }
+    /** @param agentArns ARNs of the agents to use for an NFS location. */
+    public fun agentArns(agentArns: Collection<String>) {
+        _agentArns.addAll(agentArns)
+    }
 
-  public fun build(): CfnLocationNFS.OnPremConfigProperty {
-    if(_agentArns.isNotEmpty()) cdkBuilder.agentArns(_agentArns)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnLocationNFS.OnPremConfigProperty {
+        if (_agentArns.isNotEmpty()) cdkBuilder.agentArns(_agentArns)
+        return cdkBuilder.build()
+    }
 }

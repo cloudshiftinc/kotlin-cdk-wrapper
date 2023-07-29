@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.billingconductor
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps
  * Properties for defining a `CfnBillingGroup`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,80 +52,73 @@ import software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps
  */
 @CdkDslMarker
 public class CfnBillingGroupPropsDsl {
-  private val cdkBuilder: CfnBillingGroupProps.Builder = CfnBillingGroupProps.builder()
+    private val cdkBuilder: CfnBillingGroupProps.Builder = CfnBillingGroupProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param accountGrouping The set of accounts that will be under the billing group. 
-   * The set of accounts resemble the linked accounts in a consolidated family.
-   */
-  public fun accountGrouping(accountGrouping: IResolvable) {
-    cdkBuilder.accountGrouping(accountGrouping)
-  }
+    /**
+     * @param accountGrouping The set of accounts that will be under the billing group. The set of
+     *   accounts resemble the linked accounts in a consolidated family.
+     */
+    public fun accountGrouping(accountGrouping: IResolvable) {
+        cdkBuilder.accountGrouping(accountGrouping)
+    }
 
-  /**
-   * @param accountGrouping The set of accounts that will be under the billing group. 
-   * The set of accounts resemble the linked accounts in a consolidated family.
-   */
-  public fun accountGrouping(accountGrouping: CfnBillingGroup.AccountGroupingProperty) {
-    cdkBuilder.accountGrouping(accountGrouping)
-  }
+    /**
+     * @param accountGrouping The set of accounts that will be under the billing group. The set of
+     *   accounts resemble the linked accounts in a consolidated family.
+     */
+    public fun accountGrouping(accountGrouping: CfnBillingGroup.AccountGroupingProperty) {
+        cdkBuilder.accountGrouping(accountGrouping)
+    }
 
-  /**
-   * @param computationPreference The preferences and settings that will be used to compute the AWS
-   * charges for a billing group. 
-   */
-  public fun computationPreference(computationPreference: IResolvable) {
-    cdkBuilder.computationPreference(computationPreference)
-  }
+    /**
+     * @param computationPreference The preferences and settings that will be used to compute the
+     *   AWS charges for a billing group.
+     */
+    public fun computationPreference(computationPreference: IResolvable) {
+        cdkBuilder.computationPreference(computationPreference)
+    }
 
-  /**
-   * @param computationPreference The preferences and settings that will be used to compute the AWS
-   * charges for a billing group. 
-   */
-  public
-      fun computationPreference(computationPreference: CfnBillingGroup.ComputationPreferenceProperty) {
-    cdkBuilder.computationPreference(computationPreference)
-  }
+    /**
+     * @param computationPreference The preferences and settings that will be used to compute the
+     *   AWS charges for a billing group.
+     */
+    public fun computationPreference(
+        computationPreference: CfnBillingGroup.ComputationPreferenceProperty
+    ) {
+        cdkBuilder.computationPreference(computationPreference)
+    }
 
-  /**
-   * @param description The description of the billing group.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the billing group. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name The billing group's name. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The billing group's name. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param primaryAccountId The account ID that serves as the main account in a billing group. 
-   */
-  public fun primaryAccountId(primaryAccountId: String) {
-    cdkBuilder.primaryAccountId(primaryAccountId)
-  }
+    /**
+     * @param primaryAccountId The account ID that serves as the main account in a billing group.
+     */
+    public fun primaryAccountId(primaryAccountId: String) {
+        cdkBuilder.primaryAccountId(primaryAccountId)
+    }
 
-  /**
-   * @param tags the value to be set.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags the value to be set. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags the value to be set.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags the value to be set. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnBillingGroupProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBillingGroupProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

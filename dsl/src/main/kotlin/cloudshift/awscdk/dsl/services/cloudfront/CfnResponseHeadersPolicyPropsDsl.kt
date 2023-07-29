@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps
  * Properties for defining a `CfnResponseHeadersPolicy`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -96,23 +104,20 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps
  */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyPropsDsl {
-  private val cdkBuilder: CfnResponseHeadersPolicyProps.Builder =
-      CfnResponseHeadersPolicyProps.builder()
+    private val cdkBuilder: CfnResponseHeadersPolicyProps.Builder =
+        CfnResponseHeadersPolicyProps.builder()
 
-  /**
-   * @param responseHeadersPolicyConfig A response headers policy configuration. 
-   */
-  public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
-    cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
-  }
+    /** @param responseHeadersPolicyConfig A response headers policy configuration. */
+    public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
+        cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
+    }
 
-  /**
-   * @param responseHeadersPolicyConfig A response headers policy configuration. 
-   */
-  public
-      fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty) {
-    cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
-  }
+    /** @param responseHeadersPolicyConfig A response headers policy configuration. */
+    public fun responseHeadersPolicyConfig(
+        responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
+    ) {
+        cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
+    }
 
-  public fun build(): CfnResponseHeadersPolicyProps = cdkBuilder.build()
+    public fun build(): CfnResponseHeadersPolicyProps = cdkBuilder.build()
 }

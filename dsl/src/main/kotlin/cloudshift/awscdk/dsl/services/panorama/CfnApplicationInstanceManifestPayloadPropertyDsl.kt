@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.panorama
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.panorama.CfnApplicationInstance
  * `graphs` folder in your application source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,13 @@ import software.amazon.awscdk.services.panorama.CfnApplicationInstance
  */
 @CdkDslMarker
 public class CfnApplicationInstanceManifestPayloadPropertyDsl {
-  private val cdkBuilder: CfnApplicationInstance.ManifestPayloadProperty.Builder =
-      CfnApplicationInstance.ManifestPayloadProperty.builder()
+    private val cdkBuilder: CfnApplicationInstance.ManifestPayloadProperty.Builder =
+        CfnApplicationInstance.ManifestPayloadProperty.builder()
 
-  /**
-   * @param payloadData The application manifest.
-   */
-  public fun payloadData(payloadData: String) {
-    cdkBuilder.payloadData(payloadData)
-  }
+    /** @param payloadData The application manifest. */
+    public fun payloadData(payloadData: String) {
+        cdkBuilder.payloadData(payloadData)
+    }
 
-  public fun build(): CfnApplicationInstance.ManifestPayloadProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationInstance.ManifestPayloadProperty = cdkBuilder.build()
 }

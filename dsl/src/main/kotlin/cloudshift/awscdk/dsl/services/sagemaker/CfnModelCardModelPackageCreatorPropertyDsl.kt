@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,13 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  */
 @CdkDslMarker
 public class CfnModelCardModelPackageCreatorPropertyDsl {
-  private val cdkBuilder: CfnModelCard.ModelPackageCreatorProperty.Builder =
-      CfnModelCard.ModelPackageCreatorProperty.builder()
+    private val cdkBuilder: CfnModelCard.ModelPackageCreatorProperty.Builder =
+        CfnModelCard.ModelPackageCreatorProperty.builder()
 
-  /**
-   * @param userProfileName The name of the user's profile in Studio.
-   */
-  public fun userProfileName(userProfileName: String) {
-    cdkBuilder.userProfileName(userProfileName)
-  }
+    /** @param userProfileName The name of the user's profile in Studio. */
+    public fun userProfileName(userProfileName: String) {
+        cdkBuilder.userProfileName(userProfileName)
+    }
 
-  public fun build(): CfnModelCard.ModelPackageCreatorProperty = cdkBuilder.build()
+    public fun build(): CfnModelCard.ModelPackageCreatorProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.servicediscovery.IService
  * The options for using a cloudmap service.
  *
  * Example:
- *
  * ```
  * Service cloudMapService;
  * FargateService ecsService;
@@ -23,29 +31,23 @@ import software.amazon.awscdk.services.servicediscovery.IService
  */
 @CdkDslMarker
 public class AssociateCloudMapServiceOptionsDsl {
-  private val cdkBuilder: AssociateCloudMapServiceOptions.Builder =
-      AssociateCloudMapServiceOptions.builder()
+    private val cdkBuilder: AssociateCloudMapServiceOptions.Builder =
+        AssociateCloudMapServiceOptions.builder()
 
-  /**
-   * @param container The container to point to for a SRV record.
-   */
-  public fun container(container: ContainerDefinition) {
-    cdkBuilder.container(container)
-  }
+    /** @param container The container to point to for a SRV record. */
+    public fun container(container: ContainerDefinition) {
+        cdkBuilder.container(container)
+    }
 
-  /**
-   * @param containerPort The port to point to for a SRV record.
-   */
-  public fun containerPort(containerPort: Number) {
-    cdkBuilder.containerPort(containerPort)
-  }
+    /** @param containerPort The port to point to for a SRV record. */
+    public fun containerPort(containerPort: Number) {
+        cdkBuilder.containerPort(containerPort)
+    }
 
-  /**
-   * @param service The cloudmap service to register with. 
-   */
-  public fun service(service: IService) {
-    cdkBuilder.service(service)
-  }
+    /** @param service The cloudmap service to register with. */
+    public fun service(service: IService) {
+        cdkBuilder.service(service)
+    }
 
-  public fun build(): AssociateCloudMapServiceOptions = cdkBuilder.build()
+    public fun build(): AssociateCloudMapServiceOptions = cdkBuilder.build()
 }

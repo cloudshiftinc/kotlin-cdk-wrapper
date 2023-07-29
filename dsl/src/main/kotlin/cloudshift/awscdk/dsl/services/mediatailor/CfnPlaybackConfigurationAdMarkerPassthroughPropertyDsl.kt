@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediatailor
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
  * ads are filled for that ad break, MediaTailor will not set the value to 0.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,22 +38,18 @@ import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
  */
 @CdkDslMarker
 public class CfnPlaybackConfigurationAdMarkerPassthroughPropertyDsl {
-  private val cdkBuilder: CfnPlaybackConfiguration.AdMarkerPassthroughProperty.Builder =
-      CfnPlaybackConfiguration.AdMarkerPassthroughProperty.builder()
+    private val cdkBuilder: CfnPlaybackConfiguration.AdMarkerPassthroughProperty.Builder =
+        CfnPlaybackConfiguration.AdMarkerPassthroughProperty.builder()
 
-  /**
-   * @param enabled Enables ad marker passthrough for your configuration.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Enables ad marker passthrough for your configuration. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled Enables ad marker passthrough for your configuration.
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled Enables ad marker passthrough for your configuration. */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  public fun build(): CfnPlaybackConfiguration.AdMarkerPassthroughProperty = cdkBuilder.build()
+    public fun build(): CfnPlaybackConfiguration.AdMarkerPassthroughProperty = cdkBuilder.build()
 }

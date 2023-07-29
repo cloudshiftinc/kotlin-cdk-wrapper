@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codestarconnections
 
@@ -20,7 +29,6 @@ import software.constructs.Construct
  * can make its status `AVAILABLE` by updating the connection in the console.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,68 +49,73 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnConnectionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnConnection.Builder = CfnConnection.Builder.create(scope, id)
+    private val cdkBuilder: CfnConnection.Builder = CfnConnection.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * The name of the connection.
-   *
-   * Connection names must be unique in an AWS user account.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-connectionname)
-   * @param connectionName The name of the connection. 
-   */
-  public fun connectionName(connectionName: String) {
-    cdkBuilder.connectionName(connectionName)
-  }
+    /**
+     * The name of the connection.
+     *
+     * Connection names must be unique in an AWS user account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-connectionname)
+     *
+     * @param connectionName The name of the connection.
+     */
+    public fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+    }
 
-  /**
-   * The Amazon Resource Name (ARN) of the host associated with the connection.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-hostarn)
-   * @param hostArn The Amazon Resource Name (ARN) of the host associated with the connection. 
-   */
-  public fun hostArn(hostArn: String) {
-    cdkBuilder.hostArn(hostArn)
-  }
+    /**
+     * The Amazon Resource Name (ARN) of the host associated with the connection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-hostarn)
+     *
+     * @param hostArn The Amazon Resource Name (ARN) of the host associated with the connection.
+     */
+    public fun hostArn(hostArn: String) {
+        cdkBuilder.hostArn(hostArn)
+    }
 
-  /**
-   * The name of the external provider where your third-party code repository is configured.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-providertype)
-   * @param providerType The name of the external provider where your third-party code repository is
-   * configured. 
-   */
-  public fun providerType(providerType: String) {
-    cdkBuilder.providerType(providerType)
-  }
+    /**
+     * The name of the external provider where your third-party code repository is configured.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-providertype)
+     *
+     * @param providerType The name of the external provider where your third-party code repository
+     *   is configured.
+     */
+    public fun providerType(providerType: String) {
+        cdkBuilder.providerType(providerType)
+    }
 
-  /**
-   * Specifies the tags applied to the resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-tags)
-   * @param tags Specifies the tags applied to the resource. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * Specifies the tags applied to the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-tags)
+     *
+     * @param tags Specifies the tags applied to the resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * Specifies the tags applied to the resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-tags)
-   * @param tags Specifies the tags applied to the resource. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * Specifies the tags applied to the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-tags)
+     *
+     * @param tags Specifies the tags applied to the resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnConnection {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnConnection {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

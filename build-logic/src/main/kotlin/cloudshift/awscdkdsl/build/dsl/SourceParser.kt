@@ -27,9 +27,7 @@ internal object SourceParser {
 
             val classes = processCompilationUnit(cu)
 
-            synchronized(sourceClasses) {
-                sourceClasses.addAll(classes)
-            }
+            synchronized(sourceClasses) { sourceClasses.addAll(classes) }
             SourceRoot.Callback.Result.DONT_SAVE
         }
 
@@ -44,34 +42,33 @@ internal object SourceParser {
     private fun processType(type: TypeDeclaration<*>): List<CdkSourceClass> {
         val list = mutableListOf(convertTypeDeclaration(type))
         list.addAll(
-            type.members.filterIsInstance<TypeDeclaration<*>>()
-                .filter {
-                    !it.name.asString()
-                        .contains("Jsii")
-                }
-                .flatMap {
-                    processType(it)
-                }
+            type.members
+                .filterIsInstance<TypeDeclaration<*>>()
+                .filter { !it.name.asString().contains("Jsii") }
+                .flatMap { processType(it) }
         )
         return list
     }
 
     private fun convertTypeDeclaration(type: TypeDeclaration<*>): CdkSourceClass {
-        val methods = type.methods.filter {
-            (it.isPublic || (type is ClassOrInterfaceDeclaration && type.isInterface)) && !it.isStatic && !it.isConstructorDeclaration
-        }
-            .map { method ->
-                val comment = method.comment.getOrNull()
-                    ?.let { convertJavadocComment(it.content) }
-                CdkSourceMethod(
-                    name = method.name.identifier,
-                    parameterCount = method.parameters.size,
-                    comment = comment
-                )
-            }
+        val methods =
+            type.methods
+                .filter {
+                    (it.isPublic || (type is ClassOrInterfaceDeclaration && type.isInterface)) &&
+                        !it.isStatic &&
+                        !it.isConstructorDeclaration
+                }
+                .map { method ->
+                    val comment =
+                        method.comment.getOrNull()?.let { convertJavadocComment(it.content) }
+                    CdkSourceMethod(
+                        name = method.name.identifier,
+                        parameterCount = method.parameters.size,
+                        comment = comment
+                    )
+                }
 
-        val comment = type.comment.getOrNull()
-            ?.let { convertJavadocComment(it.content) }
+        val comment = type.comment.getOrNull()?.let { convertJavadocComment(it.content) }
 
         return CdkSourceClass(className = type.className, methods = methods, comment = comment)
     }
@@ -97,14 +94,17 @@ internal object SourceParser {
         }
 
     private fun convertJavadocComment(comment: String): String {
-        return comment.lines()
+        return comment
+            .lines()
             .asSequence()
             .map { it.trim() }
             .map { it.removePrefix("* ") }
             .dropWhile { it.isBlank() }
             .map { it.trim() }
             .filter { it !in javaDocLinesToRemove }
-            .map { replaceMap.entries.fold(it) { acc, entry -> acc.replace(entry.key, entry.value) } }
+            .map {
+                replaceMap.entries.fold(it) { acc, entry -> acc.replace(entry.key, entry.value) }
+            }
             .map { line ->
                 line.replace(seeAlsoRegex) {
                     val (url, _) = it.destructured
@@ -114,49 +114,49 @@ internal object SourceParser {
             .map { line ->
                 line.replace(aHrefRegex) { "[${it.groupValues[2]}](${it.groupValues[1]})" }
             }
-            .map { line ->
-                line.replace(linkRegex) { "[${it.groupValues[1]}]" }
-            }
+            .map { line -> line.replace(linkRegex) { "[${it.groupValues[1]}]" } }
             .filter { !it.startsWith("Sets the value of ") }
             .joinToString("\n")
     }
 
-    private val replaceMap = mapOf(
-        "<blockquote>" to "",
-        "</blockquote>" to "",
-        "<pre>" to "```",
-        "</pre>" to "```",
-        "<ul>" to "",
-        "</ul>" to "",
-        "<ol>" to "",
-        "</ol>" to "",
-        "<li>" to "* ",
-        "</li>" to "",
-        "<p>" to "",
-        "<strong>" to "**",
-        "</strong>" to "**",
-        "<em>" to "*",
-        "</em>" to "*",
-        "<code>" to "`",
-        "</code>" to "`",
+    private val replaceMap =
+        mapOf(
+            "<blockquote>" to "",
+            "</blockquote>" to "",
+            "<pre>" to "```",
+            "</pre>" to "```",
+            "<ul>" to "",
+            "</ul>" to "",
+            "<ol>" to "",
+            "</ol>" to "",
+            "<li>" to "* ",
+            "</li>" to "",
+            "<p>" to "",
+            "<strong>" to "**",
+            "</strong>" to "**",
+            "<em>" to "*",
+            "</em>" to "*",
+            "<code>" to "`",
+            "</code>" to "`",
 
-        // Java CDK erroneously uses "This parameter is required." seeming randomly
-        "This parameter is required." to "",
+            // Java CDK erroneously uses "This parameter is required." seeming randomly
+            "This parameter is required." to "",
 
-        // do this last
-        "/*" to "/ *"
-    )
+            // do this last
+            "/*" to "/ *"
+        )
     private val seeAlsoRegex = Regex("^@see <a href=\"(.*?)\">(.*?)</a>\$")
     private val aHrefRegex = Regex("<a href=\"(.*?)\">(.*?)</a>")
     private val linkRegex = Regex("\\{@link (.*?)}")
 
     // remove "@return {@code this}" as that is an artifact of Java builder pattern
-    private val javaDocLinesToRemove = setOf(
-        "@return {@code this}",
-        "<ul>",
-        "</ul>",
-        "<blockquote>",
-        "</blockquote>",
-        "@deprecated <ul>"
-    )
+    private val javaDocLinesToRemove =
+        setOf(
+            "@return {@code this}",
+            "<ul>",
+            "</ul>",
+            "<blockquote>",
+            "</blockquote>",
+            "@deprecated <ul>"
+        )
 }

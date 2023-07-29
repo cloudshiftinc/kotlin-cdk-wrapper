@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.route53.CfnCidrCollection
  * Specifies the list of CIDR blocks for a CIDR location.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,34 +35,28 @@ import software.amazon.awscdk.services.route53.CfnCidrCollection
  */
 @CdkDslMarker
 public class CfnCidrCollectionLocationPropertyDsl {
-  private val cdkBuilder: CfnCidrCollection.LocationProperty.Builder =
-      CfnCidrCollection.LocationProperty.builder()
+    private val cdkBuilder: CfnCidrCollection.LocationProperty.Builder =
+        CfnCidrCollection.LocationProperty.builder()
 
-  private val _cidrList: MutableList<String> = mutableListOf()
+    private val _cidrList: MutableList<String> = mutableListOf()
 
-  /**
-   * @param cidrList List of CIDR blocks. 
-   */
-  public fun cidrList(vararg cidrList: String) {
-    _cidrList.addAll(listOf(*cidrList))
-  }
+    /** @param cidrList List of CIDR blocks. */
+    public fun cidrList(vararg cidrList: String) {
+        _cidrList.addAll(listOf(*cidrList))
+    }
 
-  /**
-   * @param cidrList List of CIDR blocks. 
-   */
-  public fun cidrList(cidrList: Collection<String>) {
-    _cidrList.addAll(cidrList)
-  }
+    /** @param cidrList List of CIDR blocks. */
+    public fun cidrList(cidrList: Collection<String>) {
+        _cidrList.addAll(cidrList)
+    }
 
-  /**
-   * @param locationName The CIDR collection location name. 
-   */
-  public fun locationName(locationName: String) {
-    cdkBuilder.locationName(locationName)
-  }
+    /** @param locationName The CIDR collection location name. */
+    public fun locationName(locationName: String) {
+        cdkBuilder.locationName(locationName)
+    }
 
-  public fun build(): CfnCidrCollection.LocationProperty {
-    if(_cidrList.isNotEmpty()) cdkBuilder.cidrList(_cidrList)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnCidrCollection.LocationProperty {
+        if (_cidrList.isNotEmpty()) cdkBuilder.cidrList(_cidrList)
+        return cdkBuilder.build()
+    }
 }

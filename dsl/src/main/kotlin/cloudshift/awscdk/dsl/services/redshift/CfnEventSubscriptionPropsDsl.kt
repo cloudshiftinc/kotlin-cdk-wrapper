@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.redshift
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.redshift.CfnEventSubscriptionProps
  * Properties for defining a `CfnEventSubscription`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,140 +50,132 @@ import software.amazon.awscdk.services.redshift.CfnEventSubscriptionProps
  */
 @CdkDslMarker
 public class CfnEventSubscriptionPropsDsl {
-  private val cdkBuilder: CfnEventSubscriptionProps.Builder = CfnEventSubscriptionProps.builder()
+    private val cdkBuilder: CfnEventSubscriptionProps.Builder = CfnEventSubscriptionProps.builder()
 
-  private val _eventCategories: MutableList<String> = mutableListOf()
+    private val _eventCategories: MutableList<String> = mutableListOf()
 
-  private val _sourceIds: MutableList<String> = mutableListOf()
+    private val _sourceIds: MutableList<String> = mutableListOf()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param enabled A boolean value;.
-   * set to `true` to activate the subscription, and set to `false` to create the subscription but
-   * not activate it.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /**
+     * @param enabled A boolean value;. set to `true` to activate the subscription, and set to
+     *   `false` to create the subscription but not activate it.
+     */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled A boolean value;.
-   * set to `true` to activate the subscription, and set to `false` to create the subscription but
-   * not activate it.
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /**
+     * @param enabled A boolean value;. set to `true` to activate the subscription, and set to
+     *   `false` to create the subscription but not activate it.
+     */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param eventCategories Specifies the Amazon Redshift event categories to be published by the
-   * event notification subscription.
-   * Values: configuration, management, monitoring, security, pending
-   */
-  public fun eventCategories(vararg eventCategories: String) {
-    _eventCategories.addAll(listOf(*eventCategories))
-  }
+    /**
+     * @param eventCategories Specifies the Amazon Redshift event categories to be published by the
+     *   event notification subscription. Values: configuration, management, monitoring, security,
+     *   pending
+     */
+    public fun eventCategories(vararg eventCategories: String) {
+        _eventCategories.addAll(listOf(*eventCategories))
+    }
 
-  /**
-   * @param eventCategories Specifies the Amazon Redshift event categories to be published by the
-   * event notification subscription.
-   * Values: configuration, management, monitoring, security, pending
-   */
-  public fun eventCategories(eventCategories: Collection<String>) {
-    _eventCategories.addAll(eventCategories)
-  }
+    /**
+     * @param eventCategories Specifies the Amazon Redshift event categories to be published by the
+     *   event notification subscription. Values: configuration, management, monitoring, security,
+     *   pending
+     */
+    public fun eventCategories(eventCategories: Collection<String>) {
+        _eventCategories.addAll(eventCategories)
+    }
 
-  /**
-   * @param severity Specifies the Amazon Redshift event severity to be published by the event
-   * notification subscription.
-   * Values: ERROR, INFO
-   */
-  public fun severity(severity: String) {
-    cdkBuilder.severity(severity)
-  }
+    /**
+     * @param severity Specifies the Amazon Redshift event severity to be published by the event
+     *   notification subscription. Values: ERROR, INFO
+     */
+    public fun severity(severity: String) {
+        cdkBuilder.severity(severity)
+    }
 
-  /**
-   * @param snsTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the
-   * event notifications.
-   * The ARN is created by Amazon SNS when you create a topic and subscribe to it.
-   */
-  public fun snsTopicArn(snsTopicArn: String) {
-    cdkBuilder.snsTopicArn(snsTopicArn)
-  }
+    /**
+     * @param snsTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit
+     *   the event notifications. The ARN is created by Amazon SNS when you create a topic and
+     *   subscribe to it.
+     */
+    public fun snsTopicArn(snsTopicArn: String) {
+        cdkBuilder.snsTopicArn(snsTopicArn)
+    }
 
-  /**
-   * @param sourceIds A list of one or more identifiers of Amazon Redshift source objects.
-   * All of the objects must be of the same type as was specified in the source type parameter. The
-   * event subscription will return only events generated by the specified objects. If not specified,
-   * then events are returned for all objects within the source type specified.
-   *
-   * Example: my-cluster-1, my-cluster-2
-   *
-   * Example: my-snapshot-20131010
-   */
-  public fun sourceIds(vararg sourceIds: String) {
-    _sourceIds.addAll(listOf(*sourceIds))
-  }
+    /**
+     * @param sourceIds A list of one or more identifiers of Amazon Redshift source objects. All of
+     *   the objects must be of the same type as was specified in the source type parameter. The
+     *   event subscription will return only events generated by the specified objects. If not
+     *   specified, then events are returned for all objects within the source type specified.
+     *
+     * Example: my-cluster-1, my-cluster-2
+     *
+     * Example: my-snapshot-20131010
+     */
+    public fun sourceIds(vararg sourceIds: String) {
+        _sourceIds.addAll(listOf(*sourceIds))
+    }
 
-  /**
-   * @param sourceIds A list of one or more identifiers of Amazon Redshift source objects.
-   * All of the objects must be of the same type as was specified in the source type parameter. The
-   * event subscription will return only events generated by the specified objects. If not specified,
-   * then events are returned for all objects within the source type specified.
-   *
-   * Example: my-cluster-1, my-cluster-2
-   *
-   * Example: my-snapshot-20131010
-   */
-  public fun sourceIds(sourceIds: Collection<String>) {
-    _sourceIds.addAll(sourceIds)
-  }
+    /**
+     * @param sourceIds A list of one or more identifiers of Amazon Redshift source objects. All of
+     *   the objects must be of the same type as was specified in the source type parameter. The
+     *   event subscription will return only events generated by the specified objects. If not
+     *   specified, then events are returned for all objects within the source type specified.
+     *
+     * Example: my-cluster-1, my-cluster-2
+     *
+     * Example: my-snapshot-20131010
+     */
+    public fun sourceIds(sourceIds: Collection<String>) {
+        _sourceIds.addAll(sourceIds)
+    }
 
-  /**
-   * @param sourceType The type of source that will be generating the events.
-   * For example, if you want to be notified of events generated by a cluster, you would set this
-   * parameter to cluster. If this value is not specified, events are returned for all Amazon Redshift
-   * objects in your AWS account . You must specify a source type in order to specify source IDs.
-   *
-   * Valid values: cluster, cluster-parameter-group, cluster-security-group, cluster-snapshot, and
-   * scheduled-action.
-   */
-  public fun sourceType(sourceType: String) {
-    cdkBuilder.sourceType(sourceType)
-  }
+    /**
+     * @param sourceType The type of source that will be generating the events. For example, if you
+     *   want to be notified of events generated by a cluster, you would set this parameter to
+     *   cluster. If this value is not specified, events are returned for all Amazon Redshift
+     *   objects in your AWS account . You must specify a source type in order to specify source
+     *   IDs.
+     *
+     * Valid values: cluster, cluster-parameter-group, cluster-security-group, cluster-snapshot, and
+     * scheduled-action.
+     */
+    public fun sourceType(sourceType: String) {
+        cdkBuilder.sourceType(sourceType)
+    }
 
-  /**
-   * @param subscriptionName The name of the event subscription to be created. 
-   * Constraints:
-   *
-   * * Cannot be null, empty, or blank.
-   * * Must contain from 1 to 255 alphanumeric characters or hyphens.
-   * * First character must be a letter.
-   * * Cannot end with a hyphen or contain two consecutive hyphens.
-   */
-  public fun subscriptionName(subscriptionName: String) {
-    cdkBuilder.subscriptionName(subscriptionName)
-  }
+    /**
+     * @param subscriptionName The name of the event subscription to be created. Constraints:
+     * * Cannot be null, empty, or blank.
+     * * Must contain from 1 to 255 alphanumeric characters or hyphens.
+     * * First character must be a letter.
+     * * Cannot end with a hyphen or contain two consecutive hyphens.
+     */
+    public fun subscriptionName(subscriptionName: String) {
+        cdkBuilder.subscriptionName(subscriptionName)
+    }
 
-  /**
-   * @param tags A list of tag instances.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags A list of tag instances. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags A list of tag instances.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags A list of tag instances. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnEventSubscriptionProps {
-    if(_eventCategories.isNotEmpty()) cdkBuilder.eventCategories(_eventCategories)
-    if(_sourceIds.isNotEmpty()) cdkBuilder.sourceIds(_sourceIds)
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnEventSubscriptionProps {
+        if (_eventCategories.isNotEmpty()) cdkBuilder.eventCategories(_eventCategories)
+        if (_sourceIds.isNotEmpty()) cdkBuilder.sourceIds(_sourceIds)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.apigateway.ThrottleSettings
  * Container for defining throttling parameters to API stages or methods.
  *
  * Example:
- *
  * ```
  * LambdaIntegration integration;
  * RestApi api = new RestApi(this, "hello-api");
@@ -31,23 +39,23 @@ import software.amazon.awscdk.services.apigateway.ThrottleSettings
  */
 @CdkDslMarker
 public class ThrottleSettingsDsl {
-  private val cdkBuilder: ThrottleSettings.Builder = ThrottleSettings.builder()
+    private val cdkBuilder: ThrottleSettings.Builder = ThrottleSettings.builder()
 
-  /**
-   * @param burstLimit The maximum API request rate limit over a time ranging from one to a few
-   * seconds.
-   */
-  public fun burstLimit(burstLimit: Number) {
-    cdkBuilder.burstLimit(burstLimit)
-  }
+    /**
+     * @param burstLimit The maximum API request rate limit over a time ranging from one to a few
+     *   seconds.
+     */
+    public fun burstLimit(burstLimit: Number) {
+        cdkBuilder.burstLimit(burstLimit)
+    }
 
-  /**
-   * @param rateLimit The API request steady-state rate limit (average requests per second over an
-   * extended period of time).
-   */
-  public fun rateLimit(rateLimit: Number) {
-    cdkBuilder.rateLimit(rateLimit)
-  }
+    /**
+     * @param rateLimit The API request steady-state rate limit (average requests per second over an
+     *   extended period of time).
+     */
+    public fun rateLimit(rateLimit: Number) {
+        cdkBuilder.rateLimit(rateLimit)
+    }
 
-  public fun build(): ThrottleSettings = cdkBuilder.build()
+    public fun build(): ThrottleSettings = cdkBuilder.build()
 }

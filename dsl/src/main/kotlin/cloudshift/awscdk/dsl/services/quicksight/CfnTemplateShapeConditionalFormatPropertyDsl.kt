@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The shape conditional formatting of a filled map visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,7 +55,7 @@ public class CfnTemplateShapeConditionalFormatPropertyDsl {
 
     /**
      * @param backgroundColor The conditional formatting for the shape background color of a filled
-     * map visual.
+     *   map visual.
      */
     public fun backgroundColor(backgroundColor: IResolvable) {
         cdkBuilder.backgroundColor(backgroundColor)
@@ -55,7 +63,7 @@ public class CfnTemplateShapeConditionalFormatPropertyDsl {
 
     /**
      * @param backgroundColor The conditional formatting for the shape background color of a filled
-     * map visual.
+     *   map visual.
      */
     public fun backgroundColor(backgroundColor: CfnTemplate.ConditionalFormattingColorProperty) {
         cdkBuilder.backgroundColor(backgroundColor)

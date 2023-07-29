@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * Sheet controls option.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardSheetControlsOptionPropertyDsl {
-  private val cdkBuilder: CfnDashboard.SheetControlsOptionProperty.Builder =
-      CfnDashboard.SheetControlsOptionProperty.builder()
+    private val cdkBuilder: CfnDashboard.SheetControlsOptionProperty.Builder =
+        CfnDashboard.SheetControlsOptionProperty.builder()
 
-  /**
-   * @param visibilityState Visibility state.
-   */
-  public fun visibilityState(visibilityState: String) {
-    cdkBuilder.visibilityState(visibilityState)
-  }
+    /** @param visibilityState Visibility state. */
+    public fun visibilityState(visibilityState: String) {
+        cdkBuilder.visibilityState(visibilityState)
+    }
 
-  public fun build(): CfnDashboard.SheetControlsOptionProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.SheetControlsOptionProperty = cdkBuilder.build()
 }

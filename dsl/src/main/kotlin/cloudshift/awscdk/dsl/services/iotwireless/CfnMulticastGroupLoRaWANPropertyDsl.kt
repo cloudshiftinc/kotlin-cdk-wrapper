@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.iotwireless.CfnMulticastGroup
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.iotwireless.CfnMulticastGroup
 
 /**
  * The LoRaWAN information that is to be used with the multicast group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,10 +40,7 @@ public class CfnMulticastGroupLoRaWANPropertyDsl {
     private val cdkBuilder: CfnMulticastGroup.LoRaWANProperty.Builder =
         CfnMulticastGroup.LoRaWANProperty.builder()
 
-    /**
-     * @param dlClass DlClass for LoRaWAN.
-     * Valid values are ClassB and ClassC.
-     */
+    /** @param dlClass DlClass for LoRaWAN. Valid values are ClassB and ClassC. */
     public fun dlClass(dlClass: String) {
         cdkBuilder.dlClass(dlClass)
     }
@@ -48,16 +53,14 @@ public class CfnMulticastGroupLoRaWANPropertyDsl {
     }
 
     /**
-     * @param numberOfDevicesRequested Number of devices that are requested to be associated with the
-     * multicast group.
+     * @param numberOfDevicesRequested Number of devices that are requested to be associated with
+     *   the multicast group.
      */
     public fun numberOfDevicesRequested(numberOfDevicesRequested: Number) {
         cdkBuilder.numberOfDevicesRequested(numberOfDevicesRequested)
     }
 
-    /**
-     * @param rfRegion The frequency band (RFRegion) value.
-     */
+    /** @param rfRegion The frequency band (RFRegion) value. */
     public fun rfRegion(rfRegion: String) {
         cdkBuilder.rfRegion(rfRegion)
     }

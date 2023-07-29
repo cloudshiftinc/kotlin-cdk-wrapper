@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.panorama
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.panorama.CfnPackageProps
  * Properties for defining a `CfnPackage`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,47 +51,37 @@ import software.amazon.awscdk.services.panorama.CfnPackageProps
  */
 @CdkDslMarker
 public class CfnPackagePropsDsl {
-  private val cdkBuilder: CfnPackageProps.Builder = CfnPackageProps.builder()
+    private val cdkBuilder: CfnPackageProps.Builder = CfnPackageProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param packageName A name for the package. 
-   */
-  public fun packageName(packageName: String) {
-    cdkBuilder.packageName(packageName)
-  }
+    /** @param packageName A name for the package. */
+    public fun packageName(packageName: String) {
+        cdkBuilder.packageName(packageName)
+    }
 
-  /**
-   * @param storageLocation the value to be set.
-   */
-  public fun storageLocation(storageLocation: IResolvable) {
-    cdkBuilder.storageLocation(storageLocation)
-  }
+    /** @param storageLocation the value to be set. */
+    public fun storageLocation(storageLocation: IResolvable) {
+        cdkBuilder.storageLocation(storageLocation)
+    }
 
-  /**
-   * @param storageLocation the value to be set.
-   */
-  public fun storageLocation(storageLocation: CfnPackage.StorageLocationProperty) {
-    cdkBuilder.storageLocation(storageLocation)
-  }
+    /** @param storageLocation the value to be set. */
+    public fun storageLocation(storageLocation: CfnPackage.StorageLocationProperty) {
+        cdkBuilder.storageLocation(storageLocation)
+    }
 
-  /**
-   * @param tags Tags for the package.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags Tags for the package. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Tags for the package.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags Tags for the package. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnPackageProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnPackageProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appstream
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appstream.CfnFleet
  * The desired capacity for a fleet.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.appstream.CfnFleet
  */
 @CdkDslMarker
 public class CfnFleetComputeCapacityPropertyDsl {
-  private val cdkBuilder: CfnFleet.ComputeCapacityProperty.Builder =
-      CfnFleet.ComputeCapacityProperty.builder()
+    private val cdkBuilder: CfnFleet.ComputeCapacityProperty.Builder =
+        CfnFleet.ComputeCapacityProperty.builder()
 
-  /**
-   * @param desiredInstances The desired number of streaming instances. 
-   */
-  public fun desiredInstances(desiredInstances: Number) {
-    cdkBuilder.desiredInstances(desiredInstances)
-  }
+    /** @param desiredInstances The desired number of streaming instances. */
+    public fun desiredInstances(desiredInstances: Number) {
+        cdkBuilder.desiredInstances(desiredInstances)
+    }
 
-  public fun build(): CfnFleet.ComputeCapacityProperty = cdkBuilder.build()
+    public fun build(): CfnFleet.ComputeCapacityProperty = cdkBuilder.build()
 }

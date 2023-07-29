@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraintProps
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraintProps
 
 /**
  * Properties for defining a `CfnStackSetConstraint`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,7 +43,8 @@ import kotlin.collections.MutableList
  */
 @CdkDslMarker
 public class CfnStackSetConstraintPropsDsl {
-    private val cdkBuilder: CfnStackSetConstraintProps.Builder = CfnStackSetConstraintProps.builder()
+    private val cdkBuilder: CfnStackSetConstraintProps.Builder =
+        CfnStackSetConstraintProps.builder()
 
     private val _accountList: MutableList<String> = mutableListOf()
 
@@ -64,48 +73,38 @@ public class CfnStackSetConstraintPropsDsl {
         _accountList.addAll(accountList)
     }
 
-    /**
-     * @param adminRole AdminRole ARN.
-     */
+    /** @param adminRole AdminRole ARN. */
     public fun adminRole(adminRole: String) {
         cdkBuilder.adminRole(adminRole)
     }
 
-    /**
-     * @param description The description of the constraint.
-     */
+    /** @param description The description of the constraint. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /**
-     * @param executionRole ExecutionRole name.
-     */
+    /** @param executionRole ExecutionRole name. */
     public fun executionRole(executionRole: String) {
         cdkBuilder.executionRole(executionRole)
     }
 
-    /**
-     * @param portfolioId The portfolio identifier.
-     */
+    /** @param portfolioId The portfolio identifier. */
     public fun portfolioId(portfolioId: String) {
         cdkBuilder.portfolioId(portfolioId)
     }
 
-    /**
-     * @param productId The product identifier.
-     */
+    /** @param productId The product identifier. */
     public fun productId(productId: String) {
         cdkBuilder.productId(productId)
     }
 
     /**
      * @param regionList One or more AWS Regions where the provisioned product will be available.
-     * Applicable only to a `CFN_STACKSET` provisioned product type.
+     *   Applicable only to a `CFN_STACKSET` provisioned product type.
      *
      * The specified Regions should be within the list of Regions from the `STACKSET` constraint. To
-     * get the list of Regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters`
-     * operation.
+     * get the list of Regions in the `STACKSET` constraint, use the
+     * `DescribeProvisioningParameters` operation.
      *
      * If no values are specified, the default value is all Regions from the `STACKSET` constraint.
      */
@@ -115,11 +114,11 @@ public class CfnStackSetConstraintPropsDsl {
 
     /**
      * @param regionList One or more AWS Regions where the provisioned product will be available.
-     * Applicable only to a `CFN_STACKSET` provisioned product type.
+     *   Applicable only to a `CFN_STACKSET` provisioned product type.
      *
      * The specified Regions should be within the list of Regions from the `STACKSET` constraint. To
-     * get the list of Regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters`
-     * operation.
+     * get the list of Regions in the `STACKSET` constraint, use the
+     * `DescribeProvisioningParameters` operation.
      *
      * If no values are specified, the default value is all Regions from the `STACKSET` constraint.
      */
@@ -128,8 +127,8 @@ public class CfnStackSetConstraintPropsDsl {
     }
 
     /**
-     * @param stackInstanceControl Permission to create, update, and delete stack instances.
-     * Choose from ALLOWED and NOT_ALLOWED.
+     * @param stackInstanceControl Permission to create, update, and delete stack instances. Choose
+     *   from ALLOWED and NOT_ALLOWED.
      */
     public fun stackInstanceControl(stackInstanceControl: String) {
         cdkBuilder.stackInstanceControl(stackInstanceControl)

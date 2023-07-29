@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpointemail
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.pinpointemail.CfnIdentity
  * An object that defines the tags (keys and values) that you want to associate with the identity.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,27 +33,27 @@ import software.amazon.awscdk.services.pinpointemail.CfnIdentity
  */
 @CdkDslMarker
 public class CfnIdentityTagsPropertyDsl {
-  private val cdkBuilder: CfnIdentity.TagsProperty.Builder = CfnIdentity.TagsProperty.builder()
+    private val cdkBuilder: CfnIdentity.TagsProperty.Builder = CfnIdentity.TagsProperty.builder()
 
-  /**
-   * @param key One part of a key-value pair that defines a tag.
-   * The maximum length of a tag key is 128 characters. The minimum length is 1 character.
-   *
-   * If you specify tags for the identity, then this value is required.
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /**
+     * @param key One part of a key-value pair that defines a tag. The maximum length of a tag key
+     *   is 128 characters. The minimum length is 1 character.
+     *
+     * If you specify tags for the identity, then this value is required.
+     */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The optional part of a key-value pair that defines a tag.
-   * The maximum length of a tag value is 256 characters. The minimum length is 0 characters. If you
-   * don’t want a resource to have a specific tag value, don’t specify a value for this parameter.
-   * Amazon Pinpoint will set the value to an empty string.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value The optional part of a key-value pair that defines a tag. The maximum length of
+     *   a tag value is 256 characters. The minimum length is 0 characters. If you don’t want a
+     *   resource to have a specific tag value, don’t specify a value for this parameter. Amazon
+     *   Pinpoint will set the value to an empty string.
+     */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnIdentity.TagsProperty = cdkBuilder.build()
+    public fun build(): CfnIdentity.TagsProperty = cdkBuilder.build()
 }

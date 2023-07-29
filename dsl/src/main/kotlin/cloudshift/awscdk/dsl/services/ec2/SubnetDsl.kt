@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * Represents a new VPC subnet resource.
  *
  * Example:
- *
  * ```
  * Cluster cluster;
  * ApplicationLoadBalancedFargateService loadBalancedFargateService =
@@ -32,48 +40,48 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class SubnetDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: Subnet.Builder = Subnet.Builder.create(scope, id)
+    private val cdkBuilder: Subnet.Builder = Subnet.Builder.create(scope, id)
 
-  /**
-   * The availability zone for the subnet.
-   *
-   * @param availabilityZone The availability zone for the subnet. 
-   */
-  public fun availabilityZone(availabilityZone: String) {
-    cdkBuilder.availabilityZone(availabilityZone)
-  }
+    /**
+     * The availability zone for the subnet.
+     *
+     * @param availabilityZone The availability zone for the subnet.
+     */
+    public fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
+    }
 
-  /**
-   * The CIDR notation for this subnet.
-   *
-   * @param cidrBlock The CIDR notation for this subnet. 
-   */
-  public fun cidrBlock(cidrBlock: String) {
-    cdkBuilder.cidrBlock(cidrBlock)
-  }
+    /**
+     * The CIDR notation for this subnet.
+     *
+     * @param cidrBlock The CIDR notation for this subnet.
+     */
+    public fun cidrBlock(cidrBlock: String) {
+        cdkBuilder.cidrBlock(cidrBlock)
+    }
 
-  /**
-   * Controls if a public IP is associated to an instance at launch.
-   *
-   * Default: true in Subnet.Public, false in Subnet.Private or Subnet.Isolated.
-   *
-   * @param mapPublicIpOnLaunch Controls if a public IP is associated to an instance at launch. 
-   */
-  public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
-    cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
-  }
+    /**
+     * Controls if a public IP is associated to an instance at launch.
+     *
+     * Default: true in Subnet.Public, false in Subnet.Private or Subnet.Isolated.
+     *
+     * @param mapPublicIpOnLaunch Controls if a public IP is associated to an instance at launch.
+     */
+    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
+        cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
+    }
 
-  /**
-   * The VPC which this subnet is part of.
-   *
-   * @param vpcId The VPC which this subnet is part of. 
-   */
-  public fun vpcId(vpcId: String) {
-    cdkBuilder.vpcId(vpcId)
-  }
+    /**
+     * The VPC which this subnet is part of.
+     *
+     * @param vpcId The VPC which this subnet is part of.
+     */
+    public fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+    }
 
-  public fun build(): Subnet = cdkBuilder.build()
+    public fun build(): Subnet = cdkBuilder.build()
 }

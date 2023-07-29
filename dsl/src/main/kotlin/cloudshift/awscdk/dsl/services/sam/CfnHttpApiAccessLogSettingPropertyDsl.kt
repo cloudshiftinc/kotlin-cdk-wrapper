@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,18 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
  */
 @CdkDslMarker
 public class CfnHttpApiAccessLogSettingPropertyDsl {
-  private val cdkBuilder: CfnHttpApi.AccessLogSettingProperty.Builder =
-      CfnHttpApi.AccessLogSettingProperty.builder()
+    private val cdkBuilder: CfnHttpApi.AccessLogSettingProperty.Builder =
+        CfnHttpApi.AccessLogSettingProperty.builder()
 
-  /**
-   * @param destinationArn the value to be set.
-   */
-  public fun destinationArn(destinationArn: String) {
-    cdkBuilder.destinationArn(destinationArn)
-  }
+    /** @param destinationArn the value to be set. */
+    public fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+    }
 
-  /**
-   * @param format the value to be set.
-   */
-  public fun format(format: String) {
-    cdkBuilder.format(format)
-  }
+    /** @param format the value to be set. */
+    public fun format(format: String) {
+        cdkBuilder.format(format)
+    }
 
-  public fun build(): CfnHttpApi.AccessLogSettingProperty = cdkBuilder.build()
+    public fun build(): CfnHttpApi.AccessLogSettingProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  * Analytics, Marketo, Zendesk, and Slack.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,24 +35,24 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  */
 @CdkDslMarker
 public class CfnConnectorProfileConnectorOAuthRequestPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.ConnectorOAuthRequestProperty.Builder =
-      CfnConnectorProfile.ConnectorOAuthRequestProperty.builder()
+    private val cdkBuilder: CfnConnectorProfile.ConnectorOAuthRequestProperty.Builder =
+        CfnConnectorProfile.ConnectorOAuthRequestProperty.builder()
 
-  /**
-   * @param authCode The code provided by the connector when it has been authenticated via the
-   * connected app.
-   */
-  public fun authCode(authCode: String) {
-    cdkBuilder.authCode(authCode)
-  }
+    /**
+     * @param authCode The code provided by the connector when it has been authenticated via the
+     *   connected app.
+     */
+    public fun authCode(authCode: String) {
+        cdkBuilder.authCode(authCode)
+    }
 
-  /**
-   * @param redirectUri The URL to which the authentication server redirects the browser after
-   * authorization has been granted.
-   */
-  public fun redirectUri(redirectUri: String) {
-    cdkBuilder.redirectUri(redirectUri)
-  }
+    /**
+     * @param redirectUri The URL to which the authentication server redirects the browser after
+     *   authorization has been granted.
+     */
+    public fun redirectUri(redirectUri: String) {
+        cdkBuilder.redirectUri(redirectUri)
+    }
 
-  public fun build(): CfnConnectorProfile.ConnectorOAuthRequestProperty = cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.ConnectorOAuthRequestProperty = cdkBuilder.build()
 }

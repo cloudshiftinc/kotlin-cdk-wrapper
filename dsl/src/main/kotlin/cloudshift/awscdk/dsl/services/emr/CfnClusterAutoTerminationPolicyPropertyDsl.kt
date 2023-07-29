@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emr
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.emr.CfnCluster
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,15 +31,13 @@ import software.amazon.awscdk.services.emr.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterAutoTerminationPolicyPropertyDsl {
-  private val cdkBuilder: CfnCluster.AutoTerminationPolicyProperty.Builder =
-      CfnCluster.AutoTerminationPolicyProperty.builder()
+    private val cdkBuilder: CfnCluster.AutoTerminationPolicyProperty.Builder =
+        CfnCluster.AutoTerminationPolicyProperty.builder()
 
-  /**
-   * @param idleTimeout the value to be set.
-   */
-  public fun idleTimeout(idleTimeout: Number) {
-    cdkBuilder.idleTimeout(idleTimeout)
-  }
+    /** @param idleTimeout the value to be set. */
+    public fun idleTimeout(idleTimeout: Number) {
+        cdkBuilder.idleTimeout(idleTimeout)
+    }
 
-  public fun build(): CfnCluster.AutoTerminationPolicyProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.AutoTerminationPolicyProperty = cdkBuilder.build()
 }

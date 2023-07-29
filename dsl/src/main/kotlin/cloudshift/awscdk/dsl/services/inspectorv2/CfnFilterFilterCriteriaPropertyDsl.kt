@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.inspectorv2
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.inspectorv2.CfnFilter
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.inspectorv2.CfnFilter
 
 /**
  * Details on the criteria used to define the filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -239,85 +247,70 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     private val _vulnerablePackages: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param awsAccountId Details of the AWS account IDs used to filter findings.
-     */
+    /** @param awsAccountId Details of the AWS account IDs used to filter findings. */
     public fun awsAccountId(vararg awsAccountId: Any) {
         _awsAccountId.addAll(listOf(*awsAccountId))
     }
 
-    /**
-     * @param awsAccountId Details of the AWS account IDs used to filter findings.
-     */
+    /** @param awsAccountId Details of the AWS account IDs used to filter findings. */
     public fun awsAccountId(awsAccountId: Collection<Any>) {
         _awsAccountId.addAll(awsAccountId)
     }
 
-    /**
-     * @param awsAccountId Details of the AWS account IDs used to filter findings.
-     */
+    /** @param awsAccountId Details of the AWS account IDs used to filter findings. */
     public fun awsAccountId(awsAccountId: IResolvable) {
         cdkBuilder.awsAccountId(awsAccountId)
     }
 
-    /**
-     * @param componentId Details of the component IDs used to filter findings.
-     */
+    /** @param componentId Details of the component IDs used to filter findings. */
     public fun componentId(vararg componentId: Any) {
         _componentId.addAll(listOf(*componentId))
     }
 
-    /**
-     * @param componentId Details of the component IDs used to filter findings.
-     */
+    /** @param componentId Details of the component IDs used to filter findings. */
     public fun componentId(componentId: Collection<Any>) {
         _componentId.addAll(componentId)
     }
 
-    /**
-     * @param componentId Details of the component IDs used to filter findings.
-     */
+    /** @param componentId Details of the component IDs used to filter findings. */
     public fun componentId(componentId: IResolvable) {
         cdkBuilder.componentId(componentId)
     }
 
-    /**
-     * @param componentType Details of the component types used to filter findings.
-     */
+    /** @param componentType Details of the component types used to filter findings. */
     public fun componentType(vararg componentType: Any) {
         _componentType.addAll(listOf(*componentType))
     }
 
-    /**
-     * @param componentType Details of the component types used to filter findings.
-     */
+    /** @param componentType Details of the component types used to filter findings. */
     public fun componentType(componentType: Collection<Any>) {
         _componentType.addAll(componentType)
     }
 
-    /**
-     * @param componentType Details of the component types used to filter findings.
-     */
+    /** @param componentType Details of the component types used to filter findings. */
     public fun componentType(componentType: IResolvable) {
         cdkBuilder.componentType(componentType)
     }
 
     /**
-     * @param ec2InstanceImageId Details of the Amazon EC2 instance image IDs used to filter findings.
+     * @param ec2InstanceImageId Details of the Amazon EC2 instance image IDs used to filter
+     *   findings.
      */
     public fun ec2InstanceImageId(vararg ec2InstanceImageId: Any) {
         _ec2InstanceImageId.addAll(listOf(*ec2InstanceImageId))
     }
 
     /**
-     * @param ec2InstanceImageId Details of the Amazon EC2 instance image IDs used to filter findings.
+     * @param ec2InstanceImageId Details of the Amazon EC2 instance image IDs used to filter
+     *   findings.
      */
     public fun ec2InstanceImageId(ec2InstanceImageId: Collection<Any>) {
         _ec2InstanceImageId.addAll(ec2InstanceImageId)
     }
 
     /**
-     * @param ec2InstanceImageId Details of the Amazon EC2 instance image IDs used to filter findings.
+     * @param ec2InstanceImageId Details of the Amazon EC2 instance image IDs used to filter
+     *   findings.
      */
     public fun ec2InstanceImageId(ec2InstanceImageId: IResolvable) {
         cdkBuilder.ec2InstanceImageId(ec2InstanceImageId)
@@ -325,7 +318,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ec2InstanceSubnetId Details of the Amazon EC2 instance subnet IDs used to filter
-     * findings.
+     *   findings.
      */
     public fun ec2InstanceSubnetId(vararg ec2InstanceSubnetId: Any) {
         _ec2InstanceSubnetId.addAll(listOf(*ec2InstanceSubnetId))
@@ -333,7 +326,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ec2InstanceSubnetId Details of the Amazon EC2 instance subnet IDs used to filter
-     * findings.
+     *   findings.
      */
     public fun ec2InstanceSubnetId(ec2InstanceSubnetId: Collection<Any>) {
         _ec2InstanceSubnetId.addAll(ec2InstanceSubnetId)
@@ -341,7 +334,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ec2InstanceSubnetId Details of the Amazon EC2 instance subnet IDs used to filter
-     * findings.
+     *   findings.
      */
     public fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable) {
         cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId)
@@ -370,7 +363,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ecrImageArchitecture Details of the Amazon ECR image architecture types used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImageArchitecture(vararg ecrImageArchitecture: Any) {
         _ecrImageArchitecture.addAll(listOf(*ecrImageArchitecture))
@@ -378,7 +371,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ecrImageArchitecture Details of the Amazon ECR image architecture types used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImageArchitecture(ecrImageArchitecture: Collection<Any>) {
         _ecrImageArchitecture.addAll(ecrImageArchitecture)
@@ -386,36 +379,30 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ecrImageArchitecture Details of the Amazon ECR image architecture types used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImageArchitecture(ecrImageArchitecture: IResolvable) {
         cdkBuilder.ecrImageArchitecture(ecrImageArchitecture)
     }
 
-    /**
-     * @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings.
-     */
+    /** @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings. */
     public fun ecrImageHash(vararg ecrImageHash: Any) {
         _ecrImageHash.addAll(listOf(*ecrImageHash))
     }
 
-    /**
-     * @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings.
-     */
+    /** @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings. */
     public fun ecrImageHash(ecrImageHash: Collection<Any>) {
         _ecrImageHash.addAll(ecrImageHash)
     }
 
-    /**
-     * @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings.
-     */
+    /** @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings. */
     public fun ecrImageHash(ecrImageHash: IResolvable) {
         cdkBuilder.ecrImageHash(ecrImageHash)
     }
 
     /**
      * @param ecrImagePushedAt Details on the Amazon ECR image push date and time used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImagePushedAt(vararg ecrImagePushedAt: Any) {
         _ecrImagePushedAt.addAll(listOf(*ecrImagePushedAt))
@@ -423,7 +410,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ecrImagePushedAt Details on the Amazon ECR image push date and time used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImagePushedAt(ecrImagePushedAt: Collection<Any>) {
         _ecrImagePushedAt.addAll(ecrImagePushedAt)
@@ -431,36 +418,30 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ecrImagePushedAt Details on the Amazon ECR image push date and time used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImagePushedAt(ecrImagePushedAt: IResolvable) {
         cdkBuilder.ecrImagePushedAt(ecrImagePushedAt)
     }
 
-    /**
-     * @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings.
-     */
+    /** @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings. */
     public fun ecrImageRegistry(vararg ecrImageRegistry: Any) {
         _ecrImageRegistry.addAll(listOf(*ecrImageRegistry))
     }
 
-    /**
-     * @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings.
-     */
+    /** @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings. */
     public fun ecrImageRegistry(ecrImageRegistry: Collection<Any>) {
         _ecrImageRegistry.addAll(ecrImageRegistry)
     }
 
-    /**
-     * @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings.
-     */
+    /** @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings. */
     public fun ecrImageRegistry(ecrImageRegistry: IResolvable) {
         cdkBuilder.ecrImageRegistry(ecrImageRegistry)
     }
 
     /**
      * @param ecrImageRepositoryName Details on the name of the Amazon ECR repository used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImageRepositoryName(vararg ecrImageRepositoryName: Any) {
         _ecrImageRepositoryName.addAll(listOf(*ecrImageRepositoryName))
@@ -468,7 +449,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ecrImageRepositoryName Details on the name of the Amazon ECR repository used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImageRepositoryName(ecrImageRepositoryName: Collection<Any>) {
         _ecrImageRepositoryName.addAll(ecrImageRepositoryName)
@@ -476,99 +457,75 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param ecrImageRepositoryName Details on the name of the Amazon ECR repository used to filter
-     * findings.
+     *   findings.
      */
     public fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable) {
         cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName)
     }
 
-    /**
-     * @param ecrImageTags The tags attached to the Amazon ECR container image.
-     */
+    /** @param ecrImageTags The tags attached to the Amazon ECR container image. */
     public fun ecrImageTags(vararg ecrImageTags: Any) {
         _ecrImageTags.addAll(listOf(*ecrImageTags))
     }
 
-    /**
-     * @param ecrImageTags The tags attached to the Amazon ECR container image.
-     */
+    /** @param ecrImageTags The tags attached to the Amazon ECR container image. */
     public fun ecrImageTags(ecrImageTags: Collection<Any>) {
         _ecrImageTags.addAll(ecrImageTags)
     }
 
-    /**
-     * @param ecrImageTags The tags attached to the Amazon ECR container image.
-     */
+    /** @param ecrImageTags The tags attached to the Amazon ECR container image. */
     public fun ecrImageTags(ecrImageTags: IResolvable) {
         cdkBuilder.ecrImageTags(ecrImageTags)
     }
 
-    /**
-     * @param findingArn Details on the finding ARNs used to filter findings.
-     */
+    /** @param findingArn Details on the finding ARNs used to filter findings. */
     public fun findingArn(vararg findingArn: Any) {
         _findingArn.addAll(listOf(*findingArn))
     }
 
-    /**
-     * @param findingArn Details on the finding ARNs used to filter findings.
-     */
+    /** @param findingArn Details on the finding ARNs used to filter findings. */
     public fun findingArn(findingArn: Collection<Any>) {
         _findingArn.addAll(findingArn)
     }
 
-    /**
-     * @param findingArn Details on the finding ARNs used to filter findings.
-     */
+    /** @param findingArn Details on the finding ARNs used to filter findings. */
     public fun findingArn(findingArn: IResolvable) {
         cdkBuilder.findingArn(findingArn)
     }
 
-    /**
-     * @param findingStatus Details on the finding status types used to filter findings.
-     */
+    /** @param findingStatus Details on the finding status types used to filter findings. */
     public fun findingStatus(vararg findingStatus: Any) {
         _findingStatus.addAll(listOf(*findingStatus))
     }
 
-    /**
-     * @param findingStatus Details on the finding status types used to filter findings.
-     */
+    /** @param findingStatus Details on the finding status types used to filter findings. */
     public fun findingStatus(findingStatus: Collection<Any>) {
         _findingStatus.addAll(findingStatus)
     }
 
-    /**
-     * @param findingStatus Details on the finding status types used to filter findings.
-     */
+    /** @param findingStatus Details on the finding status types used to filter findings. */
     public fun findingStatus(findingStatus: IResolvable) {
         cdkBuilder.findingStatus(findingStatus)
     }
 
-    /**
-     * @param findingType Details on the finding types used to filter findings.
-     */
+    /** @param findingType Details on the finding types used to filter findings. */
     public fun findingType(vararg findingType: Any) {
         _findingType.addAll(listOf(*findingType))
     }
 
-    /**
-     * @param findingType Details on the finding types used to filter findings.
-     */
+    /** @param findingType Details on the finding types used to filter findings. */
     public fun findingType(findingType: Collection<Any>) {
         _findingType.addAll(findingType)
     }
 
-    /**
-     * @param findingType Details on the finding types used to filter findings.
-     */
+    /** @param findingType Details on the finding types used to filter findings. */
     public fun findingType(findingType: IResolvable) {
         cdkBuilder.findingType(findingType)
     }
 
     /**
      * @param firstObservedAt Details on the date and time a finding was first seen used to filter
-     * findings.
+     *   findings.
      */
     public fun firstObservedAt(vararg firstObservedAt: Any) {
         _firstObservedAt.addAll(listOf(*firstObservedAt))
@@ -576,7 +533,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param firstObservedAt Details on the date and time a finding was first seen used to filter
-     * findings.
+     *   findings.
      */
     public fun firstObservedAt(firstObservedAt: Collection<Any>) {
         _firstObservedAt.addAll(firstObservedAt)
@@ -584,36 +541,30 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param firstObservedAt Details on the date and time a finding was first seen used to filter
-     * findings.
+     *   findings.
      */
     public fun firstObservedAt(firstObservedAt: IResolvable) {
         cdkBuilder.firstObservedAt(firstObservedAt)
     }
 
-    /**
-     * @param inspectorScore The Amazon Inspector score to filter on.
-     */
+    /** @param inspectorScore The Amazon Inspector score to filter on. */
     public fun inspectorScore(vararg inspectorScore: Any) {
         _inspectorScore.addAll(listOf(*inspectorScore))
     }
 
-    /**
-     * @param inspectorScore The Amazon Inspector score to filter on.
-     */
+    /** @param inspectorScore The Amazon Inspector score to filter on. */
     public fun inspectorScore(inspectorScore: Collection<Any>) {
         _inspectorScore.addAll(inspectorScore)
     }
 
-    /**
-     * @param inspectorScore The Amazon Inspector score to filter on.
-     */
+    /** @param inspectorScore The Amazon Inspector score to filter on. */
     public fun inspectorScore(inspectorScore: IResolvable) {
         cdkBuilder.inspectorScore(inspectorScore)
     }
 
     /**
      * @param lastObservedAt Details on the date and time a finding was last seen used to filter
-     * findings.
+     *   findings.
      */
     public fun lastObservedAt(vararg lastObservedAt: Any) {
         _lastObservedAt.addAll(listOf(*lastObservedAt))
@@ -621,7 +572,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param lastObservedAt Details on the date and time a finding was last seen used to filter
-     * findings.
+     *   findings.
      */
     public fun lastObservedAt(lastObservedAt: Collection<Any>) {
         _lastObservedAt.addAll(lastObservedAt)
@@ -629,50 +580,38 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param lastObservedAt Details on the date and time a finding was last seen used to filter
-     * findings.
+     *   findings.
      */
     public fun lastObservedAt(lastObservedAt: IResolvable) {
         cdkBuilder.lastObservedAt(lastObservedAt)
     }
 
-    /**
-     * @param networkProtocol Details on network protocol used to filter findings.
-     */
+    /** @param networkProtocol Details on network protocol used to filter findings. */
     public fun networkProtocol(vararg networkProtocol: Any) {
         _networkProtocol.addAll(listOf(*networkProtocol))
     }
 
-    /**
-     * @param networkProtocol Details on network protocol used to filter findings.
-     */
+    /** @param networkProtocol Details on network protocol used to filter findings. */
     public fun networkProtocol(networkProtocol: Collection<Any>) {
         _networkProtocol.addAll(networkProtocol)
     }
 
-    /**
-     * @param networkProtocol Details on network protocol used to filter findings.
-     */
+    /** @param networkProtocol Details on network protocol used to filter findings. */
     public fun networkProtocol(networkProtocol: IResolvable) {
         cdkBuilder.networkProtocol(networkProtocol)
     }
 
-    /**
-     * @param portRange Details on the port ranges used to filter findings.
-     */
+    /** @param portRange Details on the port ranges used to filter findings. */
     public fun portRange(vararg portRange: Any) {
         _portRange.addAll(listOf(*portRange))
     }
 
-    /**
-     * @param portRange Details on the port ranges used to filter findings.
-     */
+    /** @param portRange Details on the port ranges used to filter findings. */
     public fun portRange(portRange: Collection<Any>) {
         _portRange.addAll(portRange)
     }
 
-    /**
-     * @param portRange Details on the port ranges used to filter findings.
-     */
+    /** @param portRange Details on the port ranges used to filter findings. */
     public fun portRange(portRange: IResolvable) {
         cdkBuilder.portRange(portRange)
     }
@@ -698,114 +637,84 @@ public class CfnFilterFilterCriteriaPropertyDsl {
         cdkBuilder.relatedVulnerabilities(relatedVulnerabilities)
     }
 
-    /**
-     * @param resourceId Details on the resource IDs used to filter findings.
-     */
+    /** @param resourceId Details on the resource IDs used to filter findings. */
     public fun resourceId(vararg resourceId: Any) {
         _resourceId.addAll(listOf(*resourceId))
     }
 
-    /**
-     * @param resourceId Details on the resource IDs used to filter findings.
-     */
+    /** @param resourceId Details on the resource IDs used to filter findings. */
     public fun resourceId(resourceId: Collection<Any>) {
         _resourceId.addAll(resourceId)
     }
 
-    /**
-     * @param resourceId Details on the resource IDs used to filter findings.
-     */
+    /** @param resourceId Details on the resource IDs used to filter findings. */
     public fun resourceId(resourceId: IResolvable) {
         cdkBuilder.resourceId(resourceId)
     }
 
-    /**
-     * @param resourceTags Details on the resource tags used to filter findings.
-     */
+    /** @param resourceTags Details on the resource tags used to filter findings. */
     public fun resourceTags(vararg resourceTags: Any) {
         _resourceTags.addAll(listOf(*resourceTags))
     }
 
-    /**
-     * @param resourceTags Details on the resource tags used to filter findings.
-     */
+    /** @param resourceTags Details on the resource tags used to filter findings. */
     public fun resourceTags(resourceTags: Collection<Any>) {
         _resourceTags.addAll(resourceTags)
     }
 
-    /**
-     * @param resourceTags Details on the resource tags used to filter findings.
-     */
+    /** @param resourceTags Details on the resource tags used to filter findings. */
     public fun resourceTags(resourceTags: IResolvable) {
         cdkBuilder.resourceTags(resourceTags)
     }
 
-    /**
-     * @param resourceType Details on the resource types used to filter findings.
-     */
+    /** @param resourceType Details on the resource types used to filter findings. */
     public fun resourceType(vararg resourceType: Any) {
         _resourceType.addAll(listOf(*resourceType))
     }
 
-    /**
-     * @param resourceType Details on the resource types used to filter findings.
-     */
+    /** @param resourceType Details on the resource types used to filter findings. */
     public fun resourceType(resourceType: Collection<Any>) {
         _resourceType.addAll(resourceType)
     }
 
-    /**
-     * @param resourceType Details on the resource types used to filter findings.
-     */
+    /** @param resourceType Details on the resource types used to filter findings. */
     public fun resourceType(resourceType: IResolvable) {
         cdkBuilder.resourceType(resourceType)
     }
 
-    /**
-     * @param severity Details on the severity used to filter findings.
-     */
+    /** @param severity Details on the severity used to filter findings. */
     public fun severity(vararg severity: Any) {
         _severity.addAll(listOf(*severity))
     }
 
-    /**
-     * @param severity Details on the severity used to filter findings.
-     */
+    /** @param severity Details on the severity used to filter findings. */
     public fun severity(severity: Collection<Any>) {
         _severity.addAll(severity)
     }
 
-    /**
-     * @param severity Details on the severity used to filter findings.
-     */
+    /** @param severity Details on the severity used to filter findings. */
     public fun severity(severity: IResolvable) {
         cdkBuilder.severity(severity)
     }
 
-    /**
-     * @param title Details on the finding title used to filter findings.
-     */
+    /** @param title Details on the finding title used to filter findings. */
     public fun title(vararg title: Any) {
         _title.addAll(listOf(*title))
     }
 
-    /**
-     * @param title Details on the finding title used to filter findings.
-     */
+    /** @param title Details on the finding title used to filter findings. */
     public fun title(title: Collection<Any>) {
         _title.addAll(title)
     }
 
-    /**
-     * @param title Details on the finding title used to filter findings.
-     */
+    /** @param title Details on the finding title used to filter findings. */
     public fun title(title: IResolvable) {
         cdkBuilder.title(title)
     }
 
     /**
      * @param updatedAt Details on the date and time a finding was last updated at used to filter
-     * findings.
+     *   findings.
      */
     public fun updatedAt(vararg updatedAt: Any) {
         _updatedAt.addAll(listOf(*updatedAt))
@@ -813,7 +722,7 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param updatedAt Details on the date and time a finding was last updated at used to filter
-     * findings.
+     *   findings.
      */
     public fun updatedAt(updatedAt: Collection<Any>) {
         _updatedAt.addAll(updatedAt)
@@ -821,92 +730,68 @@ public class CfnFilterFilterCriteriaPropertyDsl {
 
     /**
      * @param updatedAt Details on the date and time a finding was last updated at used to filter
-     * findings.
+     *   findings.
      */
     public fun updatedAt(updatedAt: IResolvable) {
         cdkBuilder.updatedAt(updatedAt)
     }
 
-    /**
-     * @param vendorSeverity Details on the vendor severity used to filter findings.
-     */
+    /** @param vendorSeverity Details on the vendor severity used to filter findings. */
     public fun vendorSeverity(vararg vendorSeverity: Any) {
         _vendorSeverity.addAll(listOf(*vendorSeverity))
     }
 
-    /**
-     * @param vendorSeverity Details on the vendor severity used to filter findings.
-     */
+    /** @param vendorSeverity Details on the vendor severity used to filter findings. */
     public fun vendorSeverity(vendorSeverity: Collection<Any>) {
         _vendorSeverity.addAll(vendorSeverity)
     }
 
-    /**
-     * @param vendorSeverity Details on the vendor severity used to filter findings.
-     */
+    /** @param vendorSeverity Details on the vendor severity used to filter findings. */
     public fun vendorSeverity(vendorSeverity: IResolvable) {
         cdkBuilder.vendorSeverity(vendorSeverity)
     }
 
-    /**
-     * @param vulnerabilityId Details on the vulnerability ID used to filter findings.
-     */
+    /** @param vulnerabilityId Details on the vulnerability ID used to filter findings. */
     public fun vulnerabilityId(vararg vulnerabilityId: Any) {
         _vulnerabilityId.addAll(listOf(*vulnerabilityId))
     }
 
-    /**
-     * @param vulnerabilityId Details on the vulnerability ID used to filter findings.
-     */
+    /** @param vulnerabilityId Details on the vulnerability ID used to filter findings. */
     public fun vulnerabilityId(vulnerabilityId: Collection<Any>) {
         _vulnerabilityId.addAll(vulnerabilityId)
     }
 
-    /**
-     * @param vulnerabilityId Details on the vulnerability ID used to filter findings.
-     */
+    /** @param vulnerabilityId Details on the vulnerability ID used to filter findings. */
     public fun vulnerabilityId(vulnerabilityId: IResolvable) {
         cdkBuilder.vulnerabilityId(vulnerabilityId)
     }
 
-    /**
-     * @param vulnerabilitySource Details on the vulnerability score to filter findings by.
-     */
+    /** @param vulnerabilitySource Details on the vulnerability score to filter findings by. */
     public fun vulnerabilitySource(vararg vulnerabilitySource: Any) {
         _vulnerabilitySource.addAll(listOf(*vulnerabilitySource))
     }
 
-    /**
-     * @param vulnerabilitySource Details on the vulnerability score to filter findings by.
-     */
+    /** @param vulnerabilitySource Details on the vulnerability score to filter findings by. */
     public fun vulnerabilitySource(vulnerabilitySource: Collection<Any>) {
         _vulnerabilitySource.addAll(vulnerabilitySource)
     }
 
-    /**
-     * @param vulnerabilitySource Details on the vulnerability score to filter findings by.
-     */
+    /** @param vulnerabilitySource Details on the vulnerability score to filter findings by. */
     public fun vulnerabilitySource(vulnerabilitySource: IResolvable) {
         cdkBuilder.vulnerabilitySource(vulnerabilitySource)
     }
 
-    /**
-     * @param vulnerablePackages Details on the vulnerable packages used to filter findings.
-     */
+    /** @param vulnerablePackages Details on the vulnerable packages used to filter findings. */
     public fun vulnerablePackages(vararg vulnerablePackages: Any) {
         _vulnerablePackages.addAll(listOf(*vulnerablePackages))
     }
 
-    /**
-     * @param vulnerablePackages Details on the vulnerable packages used to filter findings.
-     */
+    /** @param vulnerablePackages Details on the vulnerable packages used to filter findings. */
     public fun vulnerablePackages(vulnerablePackages: Collection<Any>) {
         _vulnerablePackages.addAll(vulnerablePackages)
     }
 
-    /**
-     * @param vulnerablePackages Details on the vulnerable packages used to filter findings.
-     */
+    /** @param vulnerablePackages Details on the vulnerable packages used to filter findings. */
     public fun vulnerablePackages(vulnerablePackages: IResolvable) {
         cdkBuilder.vulnerablePackages(vulnerablePackages)
     }
@@ -918,13 +803,13 @@ public class CfnFilterFilterCriteriaPropertyDsl {
         if (_ec2InstanceImageId.isNotEmpty()) cdkBuilder.ec2InstanceImageId(_ec2InstanceImageId)
         if (_ec2InstanceSubnetId.isNotEmpty()) cdkBuilder.ec2InstanceSubnetId(_ec2InstanceSubnetId)
         if (_ec2InstanceVpcId.isNotEmpty()) cdkBuilder.ec2InstanceVpcId(_ec2InstanceVpcId)
-        if (_ecrImageArchitecture.isNotEmpty()) cdkBuilder.ecrImageArchitecture(_ecrImageArchitecture)
+        if (_ecrImageArchitecture.isNotEmpty())
+            cdkBuilder.ecrImageArchitecture(_ecrImageArchitecture)
         if (_ecrImageHash.isNotEmpty()) cdkBuilder.ecrImageHash(_ecrImageHash)
         if (_ecrImagePushedAt.isNotEmpty()) cdkBuilder.ecrImagePushedAt(_ecrImagePushedAt)
         if (_ecrImageRegistry.isNotEmpty()) cdkBuilder.ecrImageRegistry(_ecrImageRegistry)
-        if (_ecrImageRepositoryName.isNotEmpty()) {
+        if (_ecrImageRepositoryName.isNotEmpty())
             cdkBuilder.ecrImageRepositoryName(_ecrImageRepositoryName)
-        }
         if (_ecrImageTags.isNotEmpty()) cdkBuilder.ecrImageTags(_ecrImageTags)
         if (_findingArn.isNotEmpty()) cdkBuilder.findingArn(_findingArn)
         if (_findingStatus.isNotEmpty()) cdkBuilder.findingStatus(_findingStatus)
@@ -934,9 +819,8 @@ public class CfnFilterFilterCriteriaPropertyDsl {
         if (_lastObservedAt.isNotEmpty()) cdkBuilder.lastObservedAt(_lastObservedAt)
         if (_networkProtocol.isNotEmpty()) cdkBuilder.networkProtocol(_networkProtocol)
         if (_portRange.isNotEmpty()) cdkBuilder.portRange(_portRange)
-        if (_relatedVulnerabilities.isNotEmpty()) {
+        if (_relatedVulnerabilities.isNotEmpty())
             cdkBuilder.relatedVulnerabilities(_relatedVulnerabilities)
-        }
         if (_resourceId.isNotEmpty()) cdkBuilder.resourceId(_resourceId)
         if (_resourceTags.isNotEmpty()) cdkBuilder.resourceTags(_resourceTags)
         if (_resourceType.isNotEmpty()) cdkBuilder.resourceType(_resourceType)

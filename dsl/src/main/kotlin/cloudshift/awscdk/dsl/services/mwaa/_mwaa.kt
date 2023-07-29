@@ -1,12 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mwaa
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.mwaa.CfnEnvironment
 import software.amazon.awscdk.services.mwaa.CfnEnvironmentProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object mwaa {
     /**
@@ -14,7 +23,6 @@ public object mwaa {
      * (MWAA) environment.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -82,7 +90,7 @@ public object mwaa {
     public inline fun cfnEnvironment(
         scope: Construct,
         id: String,
-        block: CfnEnvironmentDsl.() -> Unit = {}
+        block: CfnEnvironmentDsl.() -> Unit = {},
     ): CfnEnvironment {
         val builder = CfnEnvironmentDsl(scope, id)
         builder.apply(block)
@@ -93,7 +101,6 @@ public object mwaa {
      * The type of Apache Airflow logs to send to CloudWatch Logs.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -131,8 +138,7 @@ public object mwaa {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-loggingconfiguration.html)
      */
     public inline fun cfnEnvironmentLoggingConfigurationProperty(
-        block: CfnEnvironmentLoggingConfigurationPropertyDsl.() -> Unit =
-            {}
+        block: CfnEnvironmentLoggingConfigurationPropertyDsl.() -> Unit = {}
     ): CfnEnvironment.LoggingConfigurationProperty {
         val builder = CfnEnvironmentLoggingConfigurationPropertyDsl()
         builder.apply(block)
@@ -143,7 +149,6 @@ public object mwaa {
      * Defines the type of logs to send for the Apache Airflow log type (e.g. `DagProcessingLogs` ).
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -159,8 +164,7 @@ public object mwaa {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-moduleloggingconfiguration.html)
      */
     public inline fun cfnEnvironmentModuleLoggingConfigurationProperty(
-        block: CfnEnvironmentModuleLoggingConfigurationPropertyDsl.() -> Unit =
-            {}
+        block: CfnEnvironmentModuleLoggingConfigurationPropertyDsl.() -> Unit = {}
     ): CfnEnvironment.ModuleLoggingConfigurationProperty {
         val builder = CfnEnvironmentModuleLoggingConfigurationPropertyDsl()
         builder.apply(block)
@@ -171,11 +175,11 @@ public object mwaa {
      * The VPC networking components used to secure and enable network traffic between the AWS
      * resources for your environment.
      *
-     * To learn more, see [About networking on Amazon
-   * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+     * To learn more, see
+     * [About networking on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html)
+     * .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -190,8 +194,7 @@ public object mwaa {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html)
      */
     public inline fun cfnEnvironmentNetworkConfigurationProperty(
-        block: CfnEnvironmentNetworkConfigurationPropertyDsl.() -> Unit =
-            {}
+        block: CfnEnvironmentNetworkConfigurationPropertyDsl.() -> Unit = {}
     ): CfnEnvironment.NetworkConfigurationProperty {
         val builder = CfnEnvironmentNetworkConfigurationPropertyDsl()
         builder.apply(block)
@@ -202,7 +205,6 @@ public object mwaa {
      * Properties for defining a `CfnEnvironment`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -267,7 +269,9 @@ public object mwaa {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html)
      */
-    public inline fun cfnEnvironmentProps(block: CfnEnvironmentPropsDsl.() -> Unit = {}): CfnEnvironmentProps {
+    public inline fun cfnEnvironmentProps(
+        block: CfnEnvironmentPropsDsl.() -> Unit = {}
+    ): CfnEnvironmentProps {
         val builder = CfnEnvironmentPropsDsl()
         builder.apply(block)
         return builder.build()

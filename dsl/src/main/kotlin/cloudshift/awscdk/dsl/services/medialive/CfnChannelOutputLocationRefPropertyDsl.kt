@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * MediaPackageGroupSettings, MSSmoothGroupSettings, RtmpOutputSettings, and UdpOutputSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,15 +35,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelOutputLocationRefPropertyDsl {
-  private val cdkBuilder: CfnChannel.OutputLocationRefProperty.Builder =
-      CfnChannel.OutputLocationRefProperty.builder()
+    private val cdkBuilder: CfnChannel.OutputLocationRefProperty.Builder =
+        CfnChannel.OutputLocationRefProperty.builder()
 
-  /**
-   * @param destinationRefId A reference ID for this destination.
-   */
-  public fun destinationRefId(destinationRefId: String) {
-    cdkBuilder.destinationRefId(destinationRefId)
-  }
+    /** @param destinationRefId A reference ID for this destination. */
+    public fun destinationRefId(destinationRefId: String) {
+        cdkBuilder.destinationRefId(destinationRefId)
+    }
 
-  public fun build(): CfnChannel.OutputLocationRefProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.OutputLocationRefProperty = cdkBuilder.build()
 }

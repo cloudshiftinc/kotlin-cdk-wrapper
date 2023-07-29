@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * Determines the gradient color settings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,23 +45,17 @@ public class CfnDashboardGradientColorPropertyDsl {
 
     private val _stops: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param stops The list of gradient color stops.
-     */
+    /** @param stops The list of gradient color stops. */
     public fun stops(vararg stops: Any) {
         _stops.addAll(listOf(*stops))
     }
 
-    /**
-     * @param stops The list of gradient color stops.
-     */
+    /** @param stops The list of gradient color stops. */
     public fun stops(stops: Collection<Any>) {
         _stops.addAll(stops)
     }
 
-    /**
-     * @param stops The list of gradient color stops.
-     */
+    /** @param stops The list of gradient color stops. */
     public fun stops(stops: IResolvable) {
         cdkBuilder.stops(stops)
     }

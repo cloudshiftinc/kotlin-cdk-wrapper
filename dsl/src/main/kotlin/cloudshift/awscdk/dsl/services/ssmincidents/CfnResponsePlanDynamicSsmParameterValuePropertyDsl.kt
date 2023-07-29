@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmincidents
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  * The dynamic parameter value.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  */
 @CdkDslMarker
 public class CfnResponsePlanDynamicSsmParameterValuePropertyDsl {
-  private val cdkBuilder: CfnResponsePlan.DynamicSsmParameterValueProperty.Builder =
-      CfnResponsePlan.DynamicSsmParameterValueProperty.builder()
+    private val cdkBuilder: CfnResponsePlan.DynamicSsmParameterValueProperty.Builder =
+        CfnResponsePlan.DynamicSsmParameterValueProperty.builder()
 
-  /**
-   * @param variable Variable dynamic parameters.
-   * A parameter value is determined when an incident is created.
-   */
-  public fun variable(variable: String) {
-    cdkBuilder.variable(variable)
-  }
+    /**
+     * @param variable Variable dynamic parameters. A parameter value is determined when an incident
+     *   is created.
+     */
+    public fun variable(variable: String) {
+        cdkBuilder.variable(variable)
+    }
 
-  public fun build(): CfnResponsePlan.DynamicSsmParameterValueProperty = cdkBuilder.build()
+    public fun build(): CfnResponsePlan.DynamicSsmParameterValueProperty = cdkBuilder.build()
 }

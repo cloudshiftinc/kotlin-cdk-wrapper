@@ -1,14 +1,23 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.services.pinpoint.CfnApp
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.pinpoint.CfnApp
+import software.constructs.Construct
 
 /**
  * An *app* is an Amazon Pinpoint application, also referred to as a *project* .
@@ -19,7 +28,6 @@ import kotlin.Unit
  * The App resource represents an Amazon Pinpoint application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,7 +45,7 @@ import kotlin.Unit
 @CdkDslMarker
 public class CfnAppDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnApp.Builder = CfnApp.Builder.create(scope, id)
 
@@ -45,6 +53,7 @@ public class CfnAppDsl(
      * The display name of the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html#cfn-pinpoint-app-name)
+     *
      * @param name The display name of the application.
      */
     public fun name(name: String) {
@@ -59,6 +68,7 @@ public class CfnAppDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html#cfn-pinpoint-app-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: MapBuilder.() -> Unit = {}) {
@@ -75,6 +85,7 @@ public class CfnAppDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html#cfn-pinpoint-app-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: Any) {

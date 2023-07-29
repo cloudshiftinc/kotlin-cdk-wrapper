@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ses.CfnConfigurationSet
  * Settings for your VDM configuration as applicable to the Guardian.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,18 +32,18 @@ import software.amazon.awscdk.services.ses.CfnConfigurationSet
  */
 @CdkDslMarker
 public class CfnConfigurationSetGuardianOptionsPropertyDsl {
-  private val cdkBuilder: CfnConfigurationSet.GuardianOptionsProperty.Builder =
-      CfnConfigurationSet.GuardianOptionsProperty.builder()
+    private val cdkBuilder: CfnConfigurationSet.GuardianOptionsProperty.Builder =
+        CfnConfigurationSet.GuardianOptionsProperty.builder()
 
-  /**
-   * @param optimizedSharedDelivery Specifies the status of your VDM optimized shared delivery. Can
-   * be one of the following:. 
-   * * `ENABLED` – Amazon SES enables optimized shared delivery for the configuration set.
-   * * `DISABLED` – Amazon SES disables optimized shared delivery for the configuration set.
-   */
-  public fun optimizedSharedDelivery(optimizedSharedDelivery: String) {
-    cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
-  }
+    /**
+     * @param optimizedSharedDelivery Specifies the status of your VDM optimized shared delivery.
+     *   Can be one of the following:.
+     * * `ENABLED` – Amazon SES enables optimized shared delivery for the configuration set.
+     * * `DISABLED` – Amazon SES disables optimized shared delivery for the configuration set.
+     */
+    public fun optimizedSharedDelivery(optimizedSharedDelivery: String) {
+        cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
+    }
 
-  public fun build(): CfnConfigurationSet.GuardianOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnConfigurationSet.GuardianOptionsProperty = cdkBuilder.build()
 }

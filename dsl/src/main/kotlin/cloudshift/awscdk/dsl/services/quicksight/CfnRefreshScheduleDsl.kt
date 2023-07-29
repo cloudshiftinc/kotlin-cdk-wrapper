@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnRefreshSchedule
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Creates a refresh schedule for a dataset in Amazon QuickSight .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,14 +51,16 @@ import kotlin.String
 @CdkDslMarker
 public class CfnRefreshScheduleDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
-    private val cdkBuilder: CfnRefreshSchedule.Builder = CfnRefreshSchedule.Builder.create(scope, id)
+    private val cdkBuilder: CfnRefreshSchedule.Builder =
+        CfnRefreshSchedule.Builder.create(scope, id)
 
     /**
      * The AWS account ID of the account that you are creating a schedule in.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html#cfn-quicksight-refreshschedule-awsaccountid)
+     *
      * @param awsAccountId The AWS account ID of the account that you are creating a schedule in.
      */
     public fun awsAccountId(awsAccountId: String) {
@@ -61,6 +71,7 @@ public class CfnRefreshScheduleDsl(
      * The ID of the dataset that you are creating a refresh schedule for.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html#cfn-quicksight-refreshschedule-datasetid)
+     *
      * @param dataSetId The ID of the dataset that you are creating a refresh schedule for.
      */
     public fun dataSetId(dataSetId: String) {
@@ -71,6 +82,7 @@ public class CfnRefreshScheduleDsl(
      * The refresh schedule of a dataset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html#cfn-quicksight-refreshschedule-schedule)
+     *
      * @param schedule The refresh schedule of a dataset.
      */
     public fun schedule(schedule: IResolvable) {
@@ -81,6 +93,7 @@ public class CfnRefreshScheduleDsl(
      * The refresh schedule of a dataset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html#cfn-quicksight-refreshschedule-schedule)
+     *
      * @param schedule The refresh schedule of a dataset.
      */
     public fun schedule(schedule: CfnRefreshSchedule.RefreshScheduleMapProperty) {

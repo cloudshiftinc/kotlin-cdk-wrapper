@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -14,12 +23,11 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  *
  * To remove a filter, specify a `FilterCriteria` object with an empty array of `Filter` objects.
  *
- * For more information, see [Events and Event
- * Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+ * For more information, see
+ * [Events and Event Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
  * in the *Amazon EventBridge User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,34 +43,28 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  */
 @CdkDslMarker
 public class CfnPipeFilterCriteriaPropertyDsl {
-  private val cdkBuilder: CfnPipe.FilterCriteriaProperty.Builder =
-      CfnPipe.FilterCriteriaProperty.builder()
+    private val cdkBuilder: CfnPipe.FilterCriteriaProperty.Builder =
+        CfnPipe.FilterCriteriaProperty.builder()
 
-  private val _filters: MutableList<Any> = mutableListOf()
+    private val _filters: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param filters The event patterns.
-   */
-  public fun filters(vararg filters: Any) {
-    _filters.addAll(listOf(*filters))
-  }
+    /** @param filters The event patterns. */
+    public fun filters(vararg filters: Any) {
+        _filters.addAll(listOf(*filters))
+    }
 
-  /**
-   * @param filters The event patterns.
-   */
-  public fun filters(filters: Collection<Any>) {
-    _filters.addAll(filters)
-  }
+    /** @param filters The event patterns. */
+    public fun filters(filters: Collection<Any>) {
+        _filters.addAll(filters)
+    }
 
-  /**
-   * @param filters The event patterns.
-   */
-  public fun filters(filters: IResolvable) {
-    cdkBuilder.filters(filters)
-  }
+    /** @param filters The event patterns. */
+    public fun filters(filters: IResolvable) {
+        cdkBuilder.filters(filters)
+    }
 
-  public fun build(): CfnPipe.FilterCriteriaProperty {
-    if(_filters.isNotEmpty()) cdkBuilder.filters(_filters)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnPipe.FilterCriteriaProperty {
+        if (_filters.isNotEmpty()) cdkBuilder.filters(_filters)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codestarnotifications
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.codestarnotifications.NotificationRuleSou
  * Information about the Codebuild or CodePipeline associated with a notification source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,15 +31,13 @@ import software.amazon.awscdk.services.codestarnotifications.NotificationRuleSou
  */
 @CdkDslMarker
 public class NotificationRuleSourceConfigDsl {
-  private val cdkBuilder: NotificationRuleSourceConfig.Builder =
-      NotificationRuleSourceConfig.builder()
+    private val cdkBuilder: NotificationRuleSourceConfig.Builder =
+        NotificationRuleSourceConfig.builder()
 
-  /**
-   * @param sourceArn The Amazon Resource Name (ARN) of the notification source. 
-   */
-  public fun sourceArn(sourceArn: String) {
-    cdkBuilder.sourceArn(sourceArn)
-  }
+    /** @param sourceArn The Amazon Resource Name (ARN) of the notification source. */
+    public fun sourceArn(sourceArn: String) {
+        cdkBuilder.sourceArn(sourceArn)
+    }
 
-  public fun build(): NotificationRuleSourceConfig = cdkBuilder.build()
+    public fun build(): NotificationRuleSourceConfig = cdkBuilder.build()
 }

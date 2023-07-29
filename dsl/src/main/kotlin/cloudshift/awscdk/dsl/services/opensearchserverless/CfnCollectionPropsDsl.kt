@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opensearchserverless
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps
  * Properties for defining a `CfnCollection`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,63 +44,58 @@ import software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps
  */
 @CdkDslMarker
 public class CfnCollectionPropsDsl {
-  private val cdkBuilder: CfnCollectionProps.Builder = CfnCollectionProps.builder()
+    private val cdkBuilder: CfnCollectionProps.Builder = CfnCollectionProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description A description of the collection.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description of the collection. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name The name of the collection. 
-   * Collection names must meet the following criteria:
-   *
-   * * Starts with a lowercase letter
-   * * Unique to your account and AWS Region
-   * * Contains between 3 and 28 characters
-   * * Contains only lowercase letters a-z, the numbers 0-9, and the hyphen (-)
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name The name of the collection. Collection names must meet the following criteria:
+     * * Starts with a lowercase letter
+     * * Unique to your account and AWS Region
+     * * Contains between 3 and 28 characters
+     * * Contains only lowercase letters a-z, the numbers 0-9, and the hyphen (-)
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param tags An arbitrary set of tags (key–value pairs) to associate with the collection.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags An arbitrary set of tags (key–value pairs) to associate with the collection. For
+     *   more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags An arbitrary set of tags (key–value pairs) to associate with the collection.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags An arbitrary set of tags (key–value pairs) to associate with the collection. For
+     *   more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * @param type The type of collection.
-   * Possible values are `SEARCH` and `TIMESERIES` . For more information, see [Choosing a
-   * collection
-   * type](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-usecase)
-   * .
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * @param type The type of collection. Possible values are `SEARCH` and `TIMESERIES` . For more
+     *   information, see
+     *   [Choosing a collection type](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-usecase)
+     *   .
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnCollectionProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnCollectionProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

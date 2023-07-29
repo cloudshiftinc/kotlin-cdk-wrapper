@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
  * Represents the settings used to enable point in time recovery.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,24 +34,24 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
  */
 @CdkDslMarker
 public class CfnGlobalTablePointInTimeRecoverySpecificationPropertyDsl {
-  private val cdkBuilder: CfnGlobalTable.PointInTimeRecoverySpecificationProperty.Builder =
-      CfnGlobalTable.PointInTimeRecoverySpecificationProperty.builder()
+    private val cdkBuilder: CfnGlobalTable.PointInTimeRecoverySpecificationProperty.Builder =
+        CfnGlobalTable.PointInTimeRecoverySpecificationProperty.builder()
 
-  /**
-   * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled (true) or
-   * disabled (false) on the table.
-   */
-  public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
-    cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
-  }
+    /**
+     * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled (true)
+     *   or disabled (false) on the table.
+     */
+    public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
+        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
+    }
 
-  /**
-   * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled (true) or
-   * disabled (false) on the table.
-   */
-  public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
-    cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
-  }
+    /**
+     * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled (true)
+     *   or disabled (false) on the table.
+     */
+    public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
+        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
+    }
 
-  public fun build(): CfnGlobalTable.PointInTimeRecoverySpecificationProperty = cdkBuilder.build()
+    public fun build(): CfnGlobalTable.PointInTimeRecoverySpecificationProperty = cdkBuilder.build()
 }

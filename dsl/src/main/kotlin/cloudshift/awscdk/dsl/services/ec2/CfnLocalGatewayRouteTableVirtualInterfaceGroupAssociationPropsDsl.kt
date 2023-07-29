@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInter
  * Properties for defining a `CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,41 +45,33 @@ import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInter
  */
 @CdkDslMarker
 public class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationPropsDsl {
-  private val cdkBuilder: CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.Builder =
-      CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.builder()
+    private val cdkBuilder: CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.Builder =
+        CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param localGatewayRouteTableId The ID of the local gateway route table. 
-   */
-  public fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
-    cdkBuilder.localGatewayRouteTableId(localGatewayRouteTableId)
-  }
+    /** @param localGatewayRouteTableId The ID of the local gateway route table. */
+    public fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
+        cdkBuilder.localGatewayRouteTableId(localGatewayRouteTableId)
+    }
 
-  /**
-   * @param localGatewayVirtualInterfaceGroupId The ID of the virtual interface group. 
-   */
-  public fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
-    cdkBuilder.localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId)
-  }
+    /** @param localGatewayVirtualInterfaceGroupId The ID of the virtual interface group. */
+    public fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
+        cdkBuilder.localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId)
+    }
 
-  /**
-   * @param tags The tags assigned to the association.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags assigned to the association. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags assigned to the association.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags assigned to the association. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

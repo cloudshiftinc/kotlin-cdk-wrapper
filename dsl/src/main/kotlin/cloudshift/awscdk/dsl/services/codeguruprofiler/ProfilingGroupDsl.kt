@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codeguruprofiler
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.codeguruprofiler.ComputePlatform
 import software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * A new Profiling Group.
  *
  * Example:
- *
  * ```
  * // The execution role of your application that publishes to the ProfilingGroup via CodeGuru
  * Profiler Profiling Agent. (the following is merely an example)
@@ -26,7 +34,7 @@ import kotlin.String
 @CdkDslMarker
 public class ProfilingGroupDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: ProfilingGroup.Builder = ProfilingGroup.Builder.create(scope, id)
 

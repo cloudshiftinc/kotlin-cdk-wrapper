@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAct
  * Properties for adding a new action to a listener.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,14 +31,12 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAct
  */
 @CdkDslMarker
 public class AddNetworkActionPropsDsl {
-  private val cdkBuilder: AddNetworkActionProps.Builder = AddNetworkActionProps.builder()
+    private val cdkBuilder: AddNetworkActionProps.Builder = AddNetworkActionProps.builder()
 
-  /**
-   * @param action Action to perform. 
-   */
-  public fun action(action: NetworkListenerAction) {
-    cdkBuilder.action(action)
-  }
+    /** @param action Action to perform. */
+    public fun action(action: NetworkListenerAction) {
+        cdkBuilder.action(action)
+    }
 
-  public fun build(): AddNetworkActionProps = cdkBuilder.build()
+    public fun build(): AddNetworkActionProps = cdkBuilder.build()
 }

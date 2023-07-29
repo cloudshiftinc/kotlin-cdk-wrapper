@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  * The properties that are applied when using Zendesk as a flow source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  */
 @CdkDslMarker
 public class CfnIntegrationZendeskSourcePropertiesPropertyDsl {
-  private val cdkBuilder: CfnIntegration.ZendeskSourcePropertiesProperty.Builder =
-      CfnIntegration.ZendeskSourcePropertiesProperty.builder()
+    private val cdkBuilder: CfnIntegration.ZendeskSourcePropertiesProperty.Builder =
+        CfnIntegration.ZendeskSourcePropertiesProperty.builder()
 
-  /**
-   * @param object The object specified in the Zendesk flow source. 
-   */
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
+    /** @param object The object specified in the Zendesk flow source. */
+    public fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+    }
 
-  public fun build(): CfnIntegration.ZendeskSourcePropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnIntegration.ZendeskSourcePropertiesProperty = cdkBuilder.build()
 }

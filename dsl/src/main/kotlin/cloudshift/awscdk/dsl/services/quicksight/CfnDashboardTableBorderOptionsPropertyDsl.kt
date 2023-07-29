@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The border options for a table border.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,23 +38,17 @@ public class CfnDashboardTableBorderOptionsPropertyDsl {
     private val cdkBuilder: CfnDashboard.TableBorderOptionsProperty.Builder =
         CfnDashboard.TableBorderOptionsProperty.builder()
 
-    /**
-     * @param color The color of a table border.
-     */
+    /** @param color The color of a table border. */
     public fun color(color: String) {
         cdkBuilder.color(color)
     }
 
-    /**
-     * @param style The style (none, solid) of a table border.
-     */
+    /** @param style The style (none, solid) of a table border. */
     public fun style(style: String) {
         cdkBuilder.style(style)
     }
 
-    /**
-     * @param thickness The thickness of a table border.
-     */
+    /** @param thickness The thickness of a table border. */
     public fun thickness(thickness: Number) {
         cdkBuilder.thickness(thickness)
     }

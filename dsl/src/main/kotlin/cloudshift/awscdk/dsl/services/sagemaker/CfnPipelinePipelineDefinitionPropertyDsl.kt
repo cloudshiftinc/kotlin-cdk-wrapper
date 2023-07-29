@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sagemaker.CfnPipeline
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,13 @@ import software.amazon.awscdk.services.sagemaker.CfnPipeline
  */
 @CdkDslMarker
 public class CfnPipelinePipelineDefinitionPropertyDsl {
-  private val cdkBuilder: CfnPipeline.PipelineDefinitionProperty.Builder =
-      CfnPipeline.PipelineDefinitionProperty.builder()
+    private val cdkBuilder: CfnPipeline.PipelineDefinitionProperty.Builder =
+        CfnPipeline.PipelineDefinitionProperty.builder()
 
-  /**
-   * @param pipelineDefinitionBody A specification that defines the pipeline in JSON format. 
-   */
-  public fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
-    cdkBuilder.pipelineDefinitionBody(pipelineDefinitionBody)
-  }
+    /** @param pipelineDefinitionBody A specification that defines the pipeline in JSON format. */
+    public fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
+        cdkBuilder.pipelineDefinitionBody(pipelineDefinitionBody)
+    }
 
-  public fun build(): CfnPipeline.PipelineDefinitionProperty = cdkBuilder.build()
+    public fun build(): CfnPipeline.PipelineDefinitionProperty = cdkBuilder.build()
 }

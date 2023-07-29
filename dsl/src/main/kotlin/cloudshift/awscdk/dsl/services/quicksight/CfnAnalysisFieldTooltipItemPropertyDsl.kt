@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The tooltip item for the fields.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,23 +38,17 @@ public class CfnAnalysisFieldTooltipItemPropertyDsl {
     private val cdkBuilder: CfnAnalysis.FieldTooltipItemProperty.Builder =
         CfnAnalysis.FieldTooltipItemProperty.builder()
 
-    /**
-     * @param fieldId The unique ID of the field that is targeted by the tooltip.
-     */
+    /** @param fieldId The unique ID of the field that is targeted by the tooltip. */
     public fun fieldId(fieldId: String) {
         cdkBuilder.fieldId(fieldId)
     }
 
-    /**
-     * @param label The label of the tooltip item.
-     */
+    /** @param label The label of the tooltip item. */
     public fun label(label: String) {
         cdkBuilder.label(label)
     }
 
-    /**
-     * @param visibility The visibility of the tooltip item.
-     */
+    /** @param visibility The visibility of the tooltip item. */
     public fun visibility(visibility: String) {
         cdkBuilder.visibility(visibility)
     }

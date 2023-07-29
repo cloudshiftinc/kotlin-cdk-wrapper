@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,45 +38,36 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  */
 @CdkDslMarker
 public class CfnConnectorProfilePardotConnectorProfileCredentialsPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.Builder =
-      CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.builder()
+    private val cdkBuilder: CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.Builder =
+        CfnConnectorProfile.PardotConnectorProfileCredentialsProperty.builder()
 
-  /**
-   * @param accessToken the value to be set.
-   */
-  public fun accessToken(accessToken: String) {
-    cdkBuilder.accessToken(accessToken)
-  }
+    /** @param accessToken the value to be set. */
+    public fun accessToken(accessToken: String) {
+        cdkBuilder.accessToken(accessToken)
+    }
 
-  /**
-   * @param clientCredentialsArn the value to be set.
-   */
-  public fun clientCredentialsArn(clientCredentialsArn: String) {
-    cdkBuilder.clientCredentialsArn(clientCredentialsArn)
-  }
+    /** @param clientCredentialsArn the value to be set. */
+    public fun clientCredentialsArn(clientCredentialsArn: String) {
+        cdkBuilder.clientCredentialsArn(clientCredentialsArn)
+    }
 
-  /**
-   * @param connectorOAuthRequest the value to be set.
-   */
-  public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-    cdkBuilder.connectorOAuthRequest(connectorOAuthRequest)
-  }
+    /** @param connectorOAuthRequest the value to be set. */
+    public fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest)
+    }
 
-  /**
-   * @param connectorOAuthRequest the value to be set.
-   */
-  public
-      fun connectorOAuthRequest(connectorOAuthRequest: CfnConnectorProfile.ConnectorOAuthRequestProperty) {
-    cdkBuilder.connectorOAuthRequest(connectorOAuthRequest)
-  }
+    /** @param connectorOAuthRequest the value to be set. */
+    public fun connectorOAuthRequest(
+        connectorOAuthRequest: CfnConnectorProfile.ConnectorOAuthRequestProperty
+    ) {
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest)
+    }
 
-  /**
-   * @param refreshToken the value to be set.
-   */
-  public fun refreshToken(refreshToken: String) {
-    cdkBuilder.refreshToken(refreshToken)
-  }
+    /** @param refreshToken the value to be set. */
+    public fun refreshToken(refreshToken: String) {
+        cdkBuilder.refreshToken(refreshToken)
+    }
 
-  public fun build(): CfnConnectorProfile.PardotConnectorProfileCredentialsProperty =
-      cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.PardotConnectorProfileCredentialsProperty =
+        cdkBuilder.build()
 }

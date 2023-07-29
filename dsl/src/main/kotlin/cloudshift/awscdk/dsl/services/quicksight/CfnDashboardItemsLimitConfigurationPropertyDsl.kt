@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The limit configuration of the visual display for an axis.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,26 +35,26 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardItemsLimitConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ItemsLimitConfigurationProperty.Builder =
-      CfnDashboard.ItemsLimitConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.ItemsLimitConfigurationProperty.Builder =
+        CfnDashboard.ItemsLimitConfigurationProperty.builder()
 
-  /**
-   * @param itemsLimit The limit on how many items of a field are showed in the chart.
-   * For example, the number of slices that are displayed in a pie chart.
-   */
-  public fun itemsLimit(itemsLimit: Number) {
-    cdkBuilder.itemsLimit(itemsLimit)
-  }
+    /**
+     * @param itemsLimit The limit on how many items of a field are showed in the chart. For
+     *   example, the number of slices that are displayed in a pie chart.
+     */
+    public fun itemsLimit(itemsLimit: Number) {
+        cdkBuilder.itemsLimit(itemsLimit)
+    }
 
-  /**
-   * @param otherCategories The `Show other` of an axis in the chart. Choose one of the following
-   * options:.
-   * * `INCLUDE`
-   * * `EXCLUDE`
-   */
-  public fun otherCategories(otherCategories: String) {
-    cdkBuilder.otherCategories(otherCategories)
-  }
+    /**
+     * @param otherCategories The `Show other` of an axis in the chart. Choose one of the following
+     *   options:.
+     * * `INCLUDE`
+     * * `EXCLUDE`
+     */
+    public fun otherCategories(otherCategories: String) {
+        cdkBuilder.otherCategories(otherCategories)
+    }
 
-  public fun build(): CfnDashboard.ItemsLimitConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ItemsLimitConfigurationProperty = cdkBuilder.build()
 }

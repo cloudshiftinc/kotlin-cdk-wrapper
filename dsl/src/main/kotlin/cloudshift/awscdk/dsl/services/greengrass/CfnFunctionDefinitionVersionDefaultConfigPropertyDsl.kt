@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,24 +45,24 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion
  */
 @CdkDslMarker
 public class CfnFunctionDefinitionVersionDefaultConfigPropertyDsl {
-  private val cdkBuilder: CfnFunctionDefinitionVersion.DefaultConfigProperty.Builder =
-      CfnFunctionDefinitionVersion.DefaultConfigProperty.builder()
+    private val cdkBuilder: CfnFunctionDefinitionVersion.DefaultConfigProperty.Builder =
+        CfnFunctionDefinitionVersion.DefaultConfigProperty.builder()
 
-  /**
-   * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-   * Greengrass core. 
-   */
-  public fun execution(execution: IResolvable) {
-    cdkBuilder.execution(execution)
-  }
+    /**
+     * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+     *   Greengrass core.
+     */
+    public fun execution(execution: IResolvable) {
+        cdkBuilder.execution(execution)
+    }
 
-  /**
-   * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-   * Greengrass core. 
-   */
-  public fun execution(execution: CfnFunctionDefinitionVersion.ExecutionProperty) {
-    cdkBuilder.execution(execution)
-  }
+    /**
+     * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+     *   Greengrass core.
+     */
+    public fun execution(execution: CfnFunctionDefinitionVersion.ExecutionProperty) {
+        cdkBuilder.execution(execution)
+    }
 
-  public fun build(): CfnFunctionDefinitionVersion.DefaultConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFunctionDefinitionVersion.DefaultConfigProperty = cdkBuilder.build()
 }

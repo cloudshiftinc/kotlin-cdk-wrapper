@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ses.CfnReceiptRuleProps
  * Properties for defining a `CfnReceiptRule`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -76,38 +84,36 @@ import software.amazon.awscdk.services.ses.CfnReceiptRuleProps
  */
 @CdkDslMarker
 public class CfnReceiptRulePropsDsl {
-  private val cdkBuilder: CfnReceiptRuleProps.Builder = CfnReceiptRuleProps.builder()
+    private val cdkBuilder: CfnReceiptRuleProps.Builder = CfnReceiptRuleProps.builder()
 
-  /**
-   * @param after The name of an existing rule after which the new rule is placed.
-   * If this parameter is null, the new rule is inserted at the beginning of the rule list.
-   */
-  public fun after(after: String) {
-    cdkBuilder.after(after)
-  }
+    /**
+     * @param after The name of an existing rule after which the new rule is placed. If this
+     *   parameter is null, the new rule is inserted at the beginning of the rule list.
+     */
+    public fun after(after: String) {
+        cdkBuilder.after(after)
+    }
 
-  /**
-   * @param rule A data structure that contains the specified rule's name, actions, recipients,
-   * domains, enabled status, scan status, and TLS policy. 
-   */
-  public fun rule(rule: IResolvable) {
-    cdkBuilder.rule(rule)
-  }
+    /**
+     * @param rule A data structure that contains the specified rule's name, actions, recipients,
+     *   domains, enabled status, scan status, and TLS policy.
+     */
+    public fun rule(rule: IResolvable) {
+        cdkBuilder.rule(rule)
+    }
 
-  /**
-   * @param rule A data structure that contains the specified rule's name, actions, recipients,
-   * domains, enabled status, scan status, and TLS policy. 
-   */
-  public fun rule(rule: CfnReceiptRule.RuleProperty) {
-    cdkBuilder.rule(rule)
-  }
+    /**
+     * @param rule A data structure that contains the specified rule's name, actions, recipients,
+     *   domains, enabled status, scan status, and TLS policy.
+     */
+    public fun rule(rule: CfnReceiptRule.RuleProperty) {
+        cdkBuilder.rule(rule)
+    }
 
-  /**
-   * @param ruleSetName The name of the rule set where the receipt rule is added. 
-   */
-  public fun ruleSetName(ruleSetName: String) {
-    cdkBuilder.ruleSetName(ruleSetName)
-  }
+    /** @param ruleSetName The name of the rule set where the receipt rule is added. */
+    public fun ruleSetName(ruleSetName: String) {
+        cdkBuilder.ruleSetName(ruleSetName)
+    }
 
-  public fun build(): CfnReceiptRuleProps = cdkBuilder.build()
+    public fun build(): CfnReceiptRuleProps = cdkBuilder.build()
 }

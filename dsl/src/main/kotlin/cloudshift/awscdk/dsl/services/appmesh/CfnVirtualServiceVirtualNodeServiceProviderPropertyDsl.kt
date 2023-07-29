@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualService
  * An object that represents a virtual node service provider.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualService
  */
 @CdkDslMarker
 public class CfnVirtualServiceVirtualNodeServiceProviderPropertyDsl {
-  private val cdkBuilder: CfnVirtualService.VirtualNodeServiceProviderProperty.Builder =
-      CfnVirtualService.VirtualNodeServiceProviderProperty.builder()
+    private val cdkBuilder: CfnVirtualService.VirtualNodeServiceProviderProperty.Builder =
+        CfnVirtualService.VirtualNodeServiceProviderProperty.builder()
 
-  /**
-   * @param virtualNodeName The name of the virtual node that is acting as a service provider. 
-   */
-  public fun virtualNodeName(virtualNodeName: String) {
-    cdkBuilder.virtualNodeName(virtualNodeName)
-  }
+    /** @param virtualNodeName The name of the virtual node that is acting as a service provider. */
+    public fun virtualNodeName(virtualNodeName: String) {
+        cdkBuilder.virtualNodeName(virtualNodeName)
+    }
 
-  public fun build(): CfnVirtualService.VirtualNodeServiceProviderProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualService.VirtualNodeServiceProviderProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.robomaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.robomaker.CfnFleetProps
  * Properties for defining a `CfnFleet`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,21 +35,17 @@ import software.amazon.awscdk.services.robomaker.CfnFleetProps
  */
 @CdkDslMarker
 public class CfnFleetPropsDsl {
-  private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()
+    private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()
 
-  /**
-   * @param name The name of the fleet.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the fleet. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param tags The list of all tags added to the fleet.
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags The list of all tags added to the fleet. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnFleetProps = cdkBuilder.build()
+    public fun build(): CfnFleetProps = cdkBuilder.build()
 }

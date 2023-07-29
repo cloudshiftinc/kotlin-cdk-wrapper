@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.msk.CfnCluster
  * Contains information about storage volumes attached to Amazon MSK broker nodes.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,22 +38,18 @@ import software.amazon.awscdk.services.msk.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterStorageInfoPropertyDsl {
-  private val cdkBuilder: CfnCluster.StorageInfoProperty.Builder =
-      CfnCluster.StorageInfoProperty.builder()
+    private val cdkBuilder: CfnCluster.StorageInfoProperty.Builder =
+        CfnCluster.StorageInfoProperty.builder()
 
-  /**
-   * @param ebsStorageInfo EBS volume information.
-   */
-  public fun ebsStorageInfo(ebsStorageInfo: IResolvable) {
-    cdkBuilder.ebsStorageInfo(ebsStorageInfo)
-  }
+    /** @param ebsStorageInfo EBS volume information. */
+    public fun ebsStorageInfo(ebsStorageInfo: IResolvable) {
+        cdkBuilder.ebsStorageInfo(ebsStorageInfo)
+    }
 
-  /**
-   * @param ebsStorageInfo EBS volume information.
-   */
-  public fun ebsStorageInfo(ebsStorageInfo: CfnCluster.EBSStorageInfoProperty) {
-    cdkBuilder.ebsStorageInfo(ebsStorageInfo)
-  }
+    /** @param ebsStorageInfo EBS volume information. */
+    public fun ebsStorageInfo(ebsStorageInfo: CfnCluster.EBSStorageInfoProperty) {
+        cdkBuilder.ebsStorageInfo(ebsStorageInfo)
+    }
 
-  public fun build(): CfnCluster.StorageInfoProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.StorageInfoProperty = cdkBuilder.build()
 }

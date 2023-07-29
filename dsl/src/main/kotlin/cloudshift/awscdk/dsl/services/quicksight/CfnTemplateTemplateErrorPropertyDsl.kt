@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * List of errors that occurred when the template version creation failed.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,16 +45,12 @@ public class CfnTemplateTemplateErrorPropertyDsl {
 
     private val _violatedEntities: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param message Description of the error type.
-     */
+    /** @param message Description of the error type. */
     public fun message(message: String) {
         cdkBuilder.message(message)
     }
 
-    /**
-     * @param type Type of error.
-     */
+    /** @param type Type of error. */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

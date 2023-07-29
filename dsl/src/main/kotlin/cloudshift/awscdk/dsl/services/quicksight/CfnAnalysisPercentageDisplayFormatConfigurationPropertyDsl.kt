@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * The options that determine the percentage display format configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,36 +55,44 @@ public class CfnAnalysisPercentageDisplayFormatConfigurationPropertyDsl {
         CfnAnalysis.PercentageDisplayFormatConfigurationProperty.builder()
 
     /**
-     * @param decimalPlacesConfiguration The option that determines the decimal places configuration.
+     * @param decimalPlacesConfiguration The option that determines the decimal places
+     *   configuration.
      */
     public fun decimalPlacesConfiguration(decimalPlacesConfiguration: IResolvable) {
         cdkBuilder.decimalPlacesConfiguration(decimalPlacesConfiguration)
     }
 
     /**
-     * @param decimalPlacesConfiguration The option that determines the decimal places configuration.
+     * @param decimalPlacesConfiguration The option that determines the decimal places
+     *   configuration.
      */
-    public fun decimalPlacesConfiguration(decimalPlacesConfiguration: CfnAnalysis.DecimalPlacesConfigurationProperty) {
+    public fun decimalPlacesConfiguration(
+        decimalPlacesConfiguration: CfnAnalysis.DecimalPlacesConfigurationProperty
+    ) {
         cdkBuilder.decimalPlacesConfiguration(decimalPlacesConfiguration)
     }
 
     /**
-     * @param negativeValueConfiguration The options that determine the negative value configuration.
+     * @param negativeValueConfiguration The options that determine the negative value
+     *   configuration.
      */
     public fun negativeValueConfiguration(negativeValueConfiguration: IResolvable) {
         cdkBuilder.negativeValueConfiguration(negativeValueConfiguration)
     }
 
     /**
-     * @param negativeValueConfiguration The options that determine the negative value configuration.
+     * @param negativeValueConfiguration The options that determine the negative value
+     *   configuration.
      */
-    public fun negativeValueConfiguration(negativeValueConfiguration: CfnAnalysis.NegativeValueConfigurationProperty) {
+    public fun negativeValueConfiguration(
+        negativeValueConfiguration: CfnAnalysis.NegativeValueConfigurationProperty
+    ) {
         cdkBuilder.negativeValueConfiguration(negativeValueConfiguration)
     }
 
     /**
      * @param nullValueFormatConfiguration The options that determine the null value format
-     * configuration.
+     *   configuration.
      */
     public fun nullValueFormatConfiguration(nullValueFormatConfiguration: IResolvable) {
         cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
@@ -84,15 +100,15 @@ public class CfnAnalysisPercentageDisplayFormatConfigurationPropertyDsl {
 
     /**
      * @param nullValueFormatConfiguration The options that determine the null value format
-     * configuration.
+     *   configuration.
      */
-    public fun nullValueFormatConfiguration(nullValueFormatConfiguration: CfnAnalysis.NullValueFormatConfigurationProperty) {
+    public fun nullValueFormatConfiguration(
+        nullValueFormatConfiguration: CfnAnalysis.NullValueFormatConfigurationProperty
+    ) {
         cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
     }
 
-    /**
-     * @param prefix Determines the prefix value of the percentage format.
-     */
+    /** @param prefix Determines the prefix value of the percentage format. */
     public fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
     }
@@ -107,16 +123,17 @@ public class CfnAnalysisPercentageDisplayFormatConfigurationPropertyDsl {
     /**
      * @param separatorConfiguration The options that determine the numeric separator configuration.
      */
-    public fun separatorConfiguration(separatorConfiguration: CfnAnalysis.NumericSeparatorConfigurationProperty) {
+    public fun separatorConfiguration(
+        separatorConfiguration: CfnAnalysis.NumericSeparatorConfigurationProperty
+    ) {
         cdkBuilder.separatorConfiguration(separatorConfiguration)
     }
 
-    /**
-     * @param suffix Determines the suffix value of the percentage format.
-     */
+    /** @param suffix Determines the suffix value of the percentage format. */
     public fun suffix(suffix: String) {
         cdkBuilder.suffix(suffix)
     }
 
-    public fun build(): CfnAnalysis.PercentageDisplayFormatConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.PercentageDisplayFormatConfigurationProperty =
+        cdkBuilder.build()
 }

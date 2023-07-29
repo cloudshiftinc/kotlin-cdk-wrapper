@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,11 +21,9 @@ import software.constructs.Construct
 /**
  * A parameter group.
  *
- * Represents both a cluster parameter group,
- * and an instance parameter group.
+ * Represents both a cluster parameter group, and an instance parameter group.
  *
  * Example:
- *
  * ```
  * BackupPlan plan;
  * Vpc vpc;
@@ -51,41 +58,41 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class ParameterGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: ParameterGroup.Builder = ParameterGroup.Builder.create(scope, id)
+    private val cdkBuilder: ParameterGroup.Builder = ParameterGroup.Builder.create(scope, id)
 
-  /**
-   * Description for this parameter group.
-   *
-   * Default: a CDK generated description
-   *
-   * @param description Description for this parameter group. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * Description for this parameter group.
+     *
+     * Default: a CDK generated description
+     *
+     * @param description Description for this parameter group.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * The database engine for this parameter group.
-   *
-   * @param engine The database engine for this parameter group. 
-   */
-  public fun engine(engine: IEngine) {
-    cdkBuilder.engine(engine)
-  }
+    /**
+     * The database engine for this parameter group.
+     *
+     * @param engine The database engine for this parameter group.
+     */
+    public fun engine(engine: IEngine) {
+        cdkBuilder.engine(engine)
+    }
 
-  /**
-   * The parameters in this parameter group.
-   *
-   * Default: - None
-   *
-   * @param parameters The parameters in this parameter group. 
-   */
-  public fun parameters(parameters: Map<String, String>) {
-    cdkBuilder.parameters(parameters)
-  }
+    /**
+     * The parameters in this parameter group.
+     *
+     * Default: - None
+     *
+     * @param parameters The parameters in this parameter group.
+     */
+    public fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
+    }
 
-  public fun build(): ParameterGroup = cdkBuilder.build()
+    public fun build(): ParameterGroup = cdkBuilder.build()
 }

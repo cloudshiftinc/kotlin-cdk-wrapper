@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.msk.CfnServerlessClusterProps
  * Properties for defining a `CfnServerlessCluster`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,62 +53,49 @@ import software.amazon.awscdk.services.msk.CfnServerlessClusterProps
  */
 @CdkDslMarker
 public class CfnServerlessClusterPropsDsl {
-  private val cdkBuilder: CfnServerlessClusterProps.Builder = CfnServerlessClusterProps.builder()
+    private val cdkBuilder: CfnServerlessClusterProps.Builder = CfnServerlessClusterProps.builder()
 
-  private val _vpcConfigs: MutableList<Any> = mutableListOf()
+    private val _vpcConfigs: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param clientAuthentication the value to be set. 
-   */
-  public fun clientAuthentication(clientAuthentication: IResolvable) {
-    cdkBuilder.clientAuthentication(clientAuthentication)
-  }
+    /** @param clientAuthentication the value to be set. */
+    public fun clientAuthentication(clientAuthentication: IResolvable) {
+        cdkBuilder.clientAuthentication(clientAuthentication)
+    }
 
-  /**
-   * @param clientAuthentication the value to be set. 
-   */
-  public
-      fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty) {
-    cdkBuilder.clientAuthentication(clientAuthentication)
-  }
+    /** @param clientAuthentication the value to be set. */
+    public fun clientAuthentication(
+        clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty
+    ) {
+        cdkBuilder.clientAuthentication(clientAuthentication)
+    }
 
-  /**
-   * @param clusterName the value to be set. 
-   */
-  public fun clusterName(clusterName: String) {
-    cdkBuilder.clusterName(clusterName)
-  }
+    /** @param clusterName the value to be set. */
+    public fun clusterName(clusterName: String) {
+        cdkBuilder.clusterName(clusterName)
+    }
 
-  /**
-   * @param tags A key-value pair to associate with a resource.
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags A key-value pair to associate with a resource. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  /**
-   * @param vpcConfigs the value to be set. 
-   */
-  public fun vpcConfigs(vararg vpcConfigs: Any) {
-    _vpcConfigs.addAll(listOf(*vpcConfigs))
-  }
+    /** @param vpcConfigs the value to be set. */
+    public fun vpcConfigs(vararg vpcConfigs: Any) {
+        _vpcConfigs.addAll(listOf(*vpcConfigs))
+    }
 
-  /**
-   * @param vpcConfigs the value to be set. 
-   */
-  public fun vpcConfigs(vpcConfigs: Collection<Any>) {
-    _vpcConfigs.addAll(vpcConfigs)
-  }
+    /** @param vpcConfigs the value to be set. */
+    public fun vpcConfigs(vpcConfigs: Collection<Any>) {
+        _vpcConfigs.addAll(vpcConfigs)
+    }
 
-  /**
-   * @param vpcConfigs the value to be set. 
-   */
-  public fun vpcConfigs(vpcConfigs: IResolvable) {
-    cdkBuilder.vpcConfigs(vpcConfigs)
-  }
+    /** @param vpcConfigs the value to be set. */
+    public fun vpcConfigs(vpcConfigs: IResolvable) {
+        cdkBuilder.vpcConfigs(vpcConfigs)
+    }
 
-  public fun build(): CfnServerlessClusterProps {
-    if(_vpcConfigs.isNotEmpty()) cdkBuilder.vpcConfigs(_vpcConfigs)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnServerlessClusterProps {
+        if (_vpcConfigs.isNotEmpty()) cdkBuilder.vpcConfigs(_vpcConfigs)
+        return cdkBuilder.build()
+    }
 }

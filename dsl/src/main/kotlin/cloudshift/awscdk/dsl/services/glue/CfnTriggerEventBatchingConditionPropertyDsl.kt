@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.glue.CfnTrigger
  * expired) before EventBridge event trigger fires.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,24 +36,24 @@ import software.amazon.awscdk.services.glue.CfnTrigger
  */
 @CdkDslMarker
 public class CfnTriggerEventBatchingConditionPropertyDsl {
-  private val cdkBuilder: CfnTrigger.EventBatchingConditionProperty.Builder =
-      CfnTrigger.EventBatchingConditionProperty.builder()
+    private val cdkBuilder: CfnTrigger.EventBatchingConditionProperty.Builder =
+        CfnTrigger.EventBatchingConditionProperty.builder()
 
-  /**
-   * @param batchSize Number of events that must be received from Amazon EventBridge before
-   * EventBridge event trigger fires. 
-   */
-  public fun batchSize(batchSize: Number) {
-    cdkBuilder.batchSize(batchSize)
-  }
+    /**
+     * @param batchSize Number of events that must be received from Amazon EventBridge before
+     *   EventBridge event trigger fires.
+     */
+    public fun batchSize(batchSize: Number) {
+        cdkBuilder.batchSize(batchSize)
+    }
 
-  /**
-   * @param batchWindow Window of time in seconds after which EventBridge event trigger fires.
-   * Window starts when first event is received.
-   */
-  public fun batchWindow(batchWindow: Number) {
-    cdkBuilder.batchWindow(batchWindow)
-  }
+    /**
+     * @param batchWindow Window of time in seconds after which EventBridge event trigger fires.
+     *   Window starts when first event is received.
+     */
+    public fun batchWindow(batchWindow: Number) {
+        cdkBuilder.batchWindow(batchWindow)
+    }
 
-  public fun build(): CfnTrigger.EventBatchingConditionProperty = cdkBuilder.build()
+    public fun build(): CfnTrigger.EventBatchingConditionProperty = cdkBuilder.build()
 }

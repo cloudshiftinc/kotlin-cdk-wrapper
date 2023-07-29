@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.batch
 
@@ -10,12 +19,9 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
 /**
  * The `ulimit` settings to pass to the container.
  *
- *
  * This object isn't applicable to jobs that are running on Fargate resources.
  *
- *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,29 +37,23 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
  */
 @CdkDslMarker
 public class CfnJobDefinitionUlimitPropertyDsl {
-  private val cdkBuilder: CfnJobDefinition.UlimitProperty.Builder =
-      CfnJobDefinition.UlimitProperty.builder()
+    private val cdkBuilder: CfnJobDefinition.UlimitProperty.Builder =
+        CfnJobDefinition.UlimitProperty.builder()
 
-  /**
-   * @param hardLimit The hard limit for the `ulimit` type. 
-   */
-  public fun hardLimit(hardLimit: Number) {
-    cdkBuilder.hardLimit(hardLimit)
-  }
+    /** @param hardLimit The hard limit for the `ulimit` type. */
+    public fun hardLimit(hardLimit: Number) {
+        cdkBuilder.hardLimit(hardLimit)
+    }
 
-  /**
-   * @param name The `type` of the `ulimit` . 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The `type` of the `ulimit` . */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param softLimit The soft limit for the `ulimit` type. 
-   */
-  public fun softLimit(softLimit: Number) {
-    cdkBuilder.softLimit(softLimit)
-  }
+    /** @param softLimit The soft limit for the `ulimit` type. */
+    public fun softLimit(softLimit: Number) {
+        cdkBuilder.softLimit(softLimit)
+    }
 
-  public fun build(): CfnJobDefinition.UlimitProperty = cdkBuilder.build()
+    public fun build(): CfnJobDefinition.UlimitProperty = cdkBuilder.build()
 }

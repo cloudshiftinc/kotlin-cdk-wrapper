@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -12,12 +21,10 @@ import software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
 /**
  * A connector definition version contains a list of connectors.
  *
- *
  * After you create a connector definition version that contains the connectors you want to deploy,
  * you must add it to your group version. For more information, see
  * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
  * .
- *
  *
  * In an AWS CloudFormation template, `ConnectorDefinitionVersion` is the property type of the
  * `InitialVersion` property in the
@@ -25,7 +32,6 @@ import software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,40 +52,37 @@ import software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
  */
 @CdkDslMarker
 public class CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl {
-  private val cdkBuilder: CfnConnectorDefinition.ConnectorDefinitionVersionProperty.Builder =
-      CfnConnectorDefinition.ConnectorDefinitionVersionProperty.builder()
+    private val cdkBuilder: CfnConnectorDefinition.ConnectorDefinitionVersionProperty.Builder =
+        CfnConnectorDefinition.ConnectorDefinitionVersionProperty.builder()
 
-  private val _connectors: MutableList<Any> = mutableListOf()
+    private val _connectors: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param connectors The connectors in this version. 
-   * Only one instance of a given connector can be added to a connector definition version at a
-   * time.
-   */
-  public fun connectors(vararg connectors: Any) {
-    _connectors.addAll(listOf(*connectors))
-  }
+    /**
+     * @param connectors The connectors in this version. Only one instance of a given connector can
+     *   be added to a connector definition version at a time.
+     */
+    public fun connectors(vararg connectors: Any) {
+        _connectors.addAll(listOf(*connectors))
+    }
 
-  /**
-   * @param connectors The connectors in this version. 
-   * Only one instance of a given connector can be added to a connector definition version at a
-   * time.
-   */
-  public fun connectors(connectors: Collection<Any>) {
-    _connectors.addAll(connectors)
-  }
+    /**
+     * @param connectors The connectors in this version. Only one instance of a given connector can
+     *   be added to a connector definition version at a time.
+     */
+    public fun connectors(connectors: Collection<Any>) {
+        _connectors.addAll(connectors)
+    }
 
-  /**
-   * @param connectors The connectors in this version. 
-   * Only one instance of a given connector can be added to a connector definition version at a
-   * time.
-   */
-  public fun connectors(connectors: IResolvable) {
-    cdkBuilder.connectors(connectors)
-  }
+    /**
+     * @param connectors The connectors in this version. Only one instance of a given connector can
+     *   be added to a connector definition version at a time.
+     */
+    public fun connectors(connectors: IResolvable) {
+        cdkBuilder.connectors(connectors)
+    }
 
-  public fun build(): CfnConnectorDefinition.ConnectorDefinitionVersionProperty {
-    if(_connectors.isNotEmpty()) cdkBuilder.connectors(_connectors)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnConnectorDefinition.ConnectorDefinitionVersionProperty {
+        if (_connectors.isNotEmpty()) cdkBuilder.connectors(_connectors)
+        return cdkBuilder.build()
+    }
 }

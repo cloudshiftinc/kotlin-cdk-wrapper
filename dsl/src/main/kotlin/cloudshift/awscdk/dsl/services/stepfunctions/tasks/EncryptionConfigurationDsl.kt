@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EncryptionOption
  * Encryption Configuration of the S3 bucket.
  *
  * Example:
- *
  * ```
  * AthenaStartQueryExecution startQueryExecutionJob = AthenaStartQueryExecution.Builder.create(this,
  * "Start Athena Query")
@@ -35,21 +43,17 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EncryptionOption
  */
 @CdkDslMarker
 public class EncryptionConfigurationDsl {
-  private val cdkBuilder: EncryptionConfiguration.Builder = EncryptionConfiguration.builder()
+    private val cdkBuilder: EncryptionConfiguration.Builder = EncryptionConfiguration.builder()
 
-  /**
-   * @param encryptionKey KMS key ARN or ID.
-   */
-  public fun encryptionKey(encryptionKey: IKey) {
-    cdkBuilder.encryptionKey(encryptionKey)
-  }
+    /** @param encryptionKey KMS key ARN or ID. */
+    public fun encryptionKey(encryptionKey: IKey) {
+        cdkBuilder.encryptionKey(encryptionKey)
+    }
 
-  /**
-   * @param encryptionOption Type of S3 server-side encryption enabled. 
-   */
-  public fun encryptionOption(encryptionOption: EncryptionOption) {
-    cdkBuilder.encryptionOption(encryptionOption)
-  }
+    /** @param encryptionOption Type of S3 server-side encryption enabled. */
+    public fun encryptionOption(encryptionOption: EncryptionOption) {
+        cdkBuilder.encryptionOption(encryptionOption)
+    }
 
-  public fun build(): EncryptionConfiguration = cdkBuilder.build()
+    public fun build(): EncryptionConfiguration = cdkBuilder.build()
 }

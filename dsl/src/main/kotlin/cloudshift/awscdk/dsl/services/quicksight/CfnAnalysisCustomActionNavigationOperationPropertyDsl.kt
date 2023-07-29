@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,17 +41,15 @@ public class CfnAnalysisCustomActionNavigationOperationPropertyDsl {
     private val cdkBuilder: CfnAnalysis.CustomActionNavigationOperationProperty.Builder =
         CfnAnalysis.CustomActionNavigationOperationProperty.builder()
 
-    /**
-     * @param localNavigationConfiguration The configuration that chooses the navigation target.
-     */
+    /** @param localNavigationConfiguration The configuration that chooses the navigation target. */
     public fun localNavigationConfiguration(localNavigationConfiguration: IResolvable) {
         cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)
     }
 
-    /**
-     * @param localNavigationConfiguration The configuration that chooses the navigation target.
-     */
-    public fun localNavigationConfiguration(localNavigationConfiguration: CfnAnalysis.LocalNavigationConfigurationProperty) {
+    /** @param localNavigationConfiguration The configuration that chooses the navigation target. */
+    public fun localNavigationConfiguration(
+        localNavigationConfiguration: CfnAnalysis.LocalNavigationConfigurationProperty
+    ) {
         cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)
     }
 

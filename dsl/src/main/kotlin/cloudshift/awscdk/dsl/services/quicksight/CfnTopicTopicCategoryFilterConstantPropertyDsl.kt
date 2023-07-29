@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  * A constant used in a category filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,41 +38,41 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  */
 @CdkDslMarker
 public class CfnTopicTopicCategoryFilterConstantPropertyDsl {
-  private val cdkBuilder: CfnTopic.TopicCategoryFilterConstantProperty.Builder =
-      CfnTopic.TopicCategoryFilterConstantProperty.builder()
+    private val cdkBuilder: CfnTopic.TopicCategoryFilterConstantProperty.Builder =
+        CfnTopic.TopicCategoryFilterConstantProperty.builder()
 
-  /**
-   * @param collectiveConstant A collective constant used in a category filter.
-   * This element is used to specify a list of values for the constant.
-   */
-  public fun collectiveConstant(collectiveConstant: IResolvable) {
-    cdkBuilder.collectiveConstant(collectiveConstant)
-  }
+    /**
+     * @param collectiveConstant A collective constant used in a category filter. This element is
+     *   used to specify a list of values for the constant.
+     */
+    public fun collectiveConstant(collectiveConstant: IResolvable) {
+        cdkBuilder.collectiveConstant(collectiveConstant)
+    }
 
-  /**
-   * @param collectiveConstant A collective constant used in a category filter.
-   * This element is used to specify a list of values for the constant.
-   */
-  public fun collectiveConstant(collectiveConstant: CfnTopic.CollectiveConstantProperty) {
-    cdkBuilder.collectiveConstant(collectiveConstant)
-  }
+    /**
+     * @param collectiveConstant A collective constant used in a category filter. This element is
+     *   used to specify a list of values for the constant.
+     */
+    public fun collectiveConstant(collectiveConstant: CfnTopic.CollectiveConstantProperty) {
+        cdkBuilder.collectiveConstant(collectiveConstant)
+    }
 
-  /**
-   * @param constantType The type of category filter constant.
-   * This element is used to specify whether a constant is a singular or collective. Valid values
-   * are `SINGULAR` and `COLLECTIVE` .
-   */
-  public fun constantType(constantType: String) {
-    cdkBuilder.constantType(constantType)
-  }
+    /**
+     * @param constantType The type of category filter constant. This element is used to specify
+     *   whether a constant is a singular or collective. Valid values are `SINGULAR` and
+     *   `COLLECTIVE` .
+     */
+    public fun constantType(constantType: String) {
+        cdkBuilder.constantType(constantType)
+    }
 
-  /**
-   * @param singularConstant A singular constant used in a category filter.
-   * This element is used to specify a single value for the constant.
-   */
-  public fun singularConstant(singularConstant: String) {
-    cdkBuilder.singularConstant(singularConstant)
-  }
+    /**
+     * @param singularConstant A singular constant used in a category filter. This element is used
+     *   to specify a single value for the constant.
+     */
+    public fun singularConstant(singularConstant: String) {
+        cdkBuilder.singularConstant(singularConstant)
+    }
 
-  public fun build(): CfnTopic.TopicCategoryFilterConstantProperty = cdkBuilder.build()
+    public fun build(): CfnTopic.TopicCategoryFilterConstantProperty = cdkBuilder.build()
 }

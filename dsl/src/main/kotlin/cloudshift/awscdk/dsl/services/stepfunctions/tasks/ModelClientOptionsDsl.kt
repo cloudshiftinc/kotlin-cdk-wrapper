@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions
  * Configures the timeout and maximum number of retries for processing a transform job invocation.
  *
  * Example:
- *
  * ```
  * SageMakerCreateTransformJob.Builder.create(this, "Batch Inference")
  * .transformJobName("MyTransformJob")
@@ -40,22 +48,20 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions
  */
 @CdkDslMarker
 public class ModelClientOptionsDsl {
-  private val cdkBuilder: ModelClientOptions.Builder = ModelClientOptions.builder()
+    private val cdkBuilder: ModelClientOptions.Builder = ModelClientOptions.builder()
 
-  /**
-   * @param invocationsMaxRetries The maximum number of retries when invocation requests are
-   * failing.
-   */
-  public fun invocationsMaxRetries(invocationsMaxRetries: Number) {
-    cdkBuilder.invocationsMaxRetries(invocationsMaxRetries)
-  }
+    /**
+     * @param invocationsMaxRetries The maximum number of retries when invocation requests are
+     *   failing.
+     */
+    public fun invocationsMaxRetries(invocationsMaxRetries: Number) {
+        cdkBuilder.invocationsMaxRetries(invocationsMaxRetries)
+    }
 
-  /**
-   * @param invocationsTimeout The timeout duration for an invocation request.
-   */
-  public fun invocationsTimeout(invocationsTimeout: Duration) {
-    cdkBuilder.invocationsTimeout(invocationsTimeout)
-  }
+    /** @param invocationsTimeout The timeout duration for an invocation request. */
+    public fun invocationsTimeout(invocationsTimeout: Duration) {
+        cdkBuilder.invocationsTimeout(invocationsTimeout)
+    }
 
-  public fun build(): ModelClientOptions = cdkBuilder.build()
+    public fun build(): ModelClientOptions = cdkBuilder.build()
 }

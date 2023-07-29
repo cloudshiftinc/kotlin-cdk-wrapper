@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.managedblockchain
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.managedblockchain.CfnMember
  * Blockchain network uses.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,23 +37,20 @@ import software.amazon.awscdk.services.managedblockchain.CfnMember
  */
 @CdkDslMarker
 public class CfnMemberMemberFrameworkConfigurationPropertyDsl {
-  private val cdkBuilder: CfnMember.MemberFrameworkConfigurationProperty.Builder =
-      CfnMember.MemberFrameworkConfigurationProperty.builder()
+    private val cdkBuilder: CfnMember.MemberFrameworkConfigurationProperty.Builder =
+        CfnMember.MemberFrameworkConfigurationProperty.builder()
 
-  /**
-   * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-   */
-  public fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
-    cdkBuilder.memberFabricConfiguration(memberFabricConfiguration)
-  }
+    /** @param memberFabricConfiguration Configuration properties for Hyperledger Fabric. */
+    public fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
+        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration)
+    }
 
-  /**
-   * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
-   */
-  public
-      fun memberFabricConfiguration(memberFabricConfiguration: CfnMember.MemberFabricConfigurationProperty) {
-    cdkBuilder.memberFabricConfiguration(memberFabricConfiguration)
-  }
+    /** @param memberFabricConfiguration Configuration properties for Hyperledger Fabric. */
+    public fun memberFabricConfiguration(
+        memberFabricConfiguration: CfnMember.MemberFabricConfigurationProperty
+    ) {
+        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration)
+    }
 
-  public fun build(): CfnMember.MemberFrameworkConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnMember.MemberFrameworkConfigurationProperty = cdkBuilder.build()
 }

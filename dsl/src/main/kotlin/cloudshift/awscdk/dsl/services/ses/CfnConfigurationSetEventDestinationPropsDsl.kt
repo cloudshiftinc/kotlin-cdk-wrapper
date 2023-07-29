@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationPr
  * Properties for defining a `CfnConfigurationSetEventDestination`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,31 +55,28 @@ import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationPr
  */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationPropsDsl {
-  private val cdkBuilder: CfnConfigurationSetEventDestinationProps.Builder =
-      CfnConfigurationSetEventDestinationProps.builder()
+    private val cdkBuilder: CfnConfigurationSetEventDestinationProps.Builder =
+        CfnConfigurationSetEventDestinationProps.builder()
 
-  /**
-   * @param configurationSetName The name of the configuration set that contains the event
-   * destination. 
-   */
-  public fun configurationSetName(configurationSetName: String) {
-    cdkBuilder.configurationSetName(configurationSetName)
-  }
+    /**
+     * @param configurationSetName The name of the configuration set that contains the event
+     *   destination.
+     */
+    public fun configurationSetName(configurationSetName: String) {
+        cdkBuilder.configurationSetName(configurationSetName)
+    }
 
-  /**
-   * @param eventDestination The event destination object. 
-   */
-  public fun eventDestination(eventDestination: IResolvable) {
-    cdkBuilder.eventDestination(eventDestination)
-  }
+    /** @param eventDestination The event destination object. */
+    public fun eventDestination(eventDestination: IResolvable) {
+        cdkBuilder.eventDestination(eventDestination)
+    }
 
-  /**
-   * @param eventDestination The event destination object. 
-   */
-  public
-      fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty) {
-    cdkBuilder.eventDestination(eventDestination)
-  }
+    /** @param eventDestination The event destination object. */
+    public fun eventDestination(
+        eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty
+    ) {
+        cdkBuilder.eventDestination(eventDestination)
+    }
 
-  public fun build(): CfnConfigurationSetEventDestinationProps = cdkBuilder.build()
+    public fun build(): CfnConfigurationSetEventDestinationProps = cdkBuilder.build()
 }

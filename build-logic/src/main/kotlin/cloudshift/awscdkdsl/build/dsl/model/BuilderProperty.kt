@@ -18,10 +18,11 @@ internal data class BuilderProperty(
     val comment: String?,
     val nullable: Boolean
 ) {
-    fun typeName(): TypeName = when (nullable) {
-        false -> type
-        true -> type.copy(nullable = true)
-    }
+    fun typeName(): TypeName =
+        when (nullable) {
+            false -> type
+            true -> type.copy(nullable = true)
+        }
 
     fun isList(): Boolean {
         return when (type) {
@@ -34,7 +35,10 @@ internal data class BuilderProperty(
     fun isObjectMap(): Boolean {
         return when (type) {
             is ParameterizedTypeName -> {
-                type.rawType == MAP && type.typeArguments.size == 2 && type.typeArguments[0] == STRING && type.typeArguments[1] == ANY
+                type.rawType == MAP &&
+                    type.typeArguments.size == 2 &&
+                    type.typeArguments[0] == STRING &&
+                    type.typeArguments[1] == ANY
             }
             else -> false
         }

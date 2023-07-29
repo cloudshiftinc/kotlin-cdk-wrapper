@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.connect.CfnTaskTemplate
  * The identifier of the task template field.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.connect.CfnTaskTemplate
  */
 @CdkDslMarker
 public class CfnTaskTemplateFieldIdentifierPropertyDsl {
-  private val cdkBuilder: CfnTaskTemplate.FieldIdentifierProperty.Builder =
-      CfnTaskTemplate.FieldIdentifierProperty.builder()
+    private val cdkBuilder: CfnTaskTemplate.FieldIdentifierProperty.Builder =
+        CfnTaskTemplate.FieldIdentifierProperty.builder()
 
-  /**
-   * @param name The name of the task template field. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the task template field. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnTaskTemplate.FieldIdentifierProperty = cdkBuilder.build()
+    public fun build(): CfnTaskTemplate.FieldIdentifierProperty = cdkBuilder.build()
 }

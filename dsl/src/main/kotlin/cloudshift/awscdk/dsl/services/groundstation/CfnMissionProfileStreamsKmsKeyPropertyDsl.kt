@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.groundstation
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.groundstation.CfnMissionProfile
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,18 @@ import software.amazon.awscdk.services.groundstation.CfnMissionProfile
  */
 @CdkDslMarker
 public class CfnMissionProfileStreamsKmsKeyPropertyDsl {
-  private val cdkBuilder: CfnMissionProfile.StreamsKmsKeyProperty.Builder =
-      CfnMissionProfile.StreamsKmsKeyProperty.builder()
+    private val cdkBuilder: CfnMissionProfile.StreamsKmsKeyProperty.Builder =
+        CfnMissionProfile.StreamsKmsKeyProperty.builder()
 
-  /**
-   * @param kmsAliasArn the value to be set.
-   */
-  public fun kmsAliasArn(kmsAliasArn: String) {
-    cdkBuilder.kmsAliasArn(kmsAliasArn)
-  }
+    /** @param kmsAliasArn the value to be set. */
+    public fun kmsAliasArn(kmsAliasArn: String) {
+        cdkBuilder.kmsAliasArn(kmsAliasArn)
+    }
 
-  /**
-   * @param kmsKeyArn the value to be set.
-   */
-  public fun kmsKeyArn(kmsKeyArn: String) {
-    cdkBuilder.kmsKeyArn(kmsKeyArn)
-  }
+    /** @param kmsKeyArn the value to be set. */
+    public fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+    }
 
-  public fun build(): CfnMissionProfile.StreamsKmsKeyProperty = cdkBuilder.build()
+    public fun build(): CfnMissionProfile.StreamsKmsKeyProperty = cdkBuilder.build()
 }

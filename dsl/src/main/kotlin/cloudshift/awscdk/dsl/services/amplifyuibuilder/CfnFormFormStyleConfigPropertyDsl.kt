@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  * properties.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,21 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  */
 @CdkDslMarker
 public class CfnFormFormStyleConfigPropertyDsl {
-  private val cdkBuilder: CfnForm.FormStyleConfigProperty.Builder =
-      CfnForm.FormStyleConfigProperty.builder()
+    private val cdkBuilder: CfnForm.FormStyleConfigProperty.Builder =
+        CfnForm.FormStyleConfigProperty.builder()
 
-  /**
-   * @param tokenReference A reference to a design token to use to bind the form's style properties
-   * to an existing theme.
-   */
-  public fun tokenReference(tokenReference: String) {
-    cdkBuilder.tokenReference(tokenReference)
-  }
+    /**
+     * @param tokenReference A reference to a design token to use to bind the form's style
+     *   properties to an existing theme.
+     */
+    public fun tokenReference(tokenReference: String) {
+        cdkBuilder.tokenReference(tokenReference)
+    }
 
-  /**
-   * @param value The value of the style setting.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value of the style setting. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnForm.FormStyleConfigProperty = cdkBuilder.build()
+    public fun build(): CfnForm.FormStyleConfigProperty = cdkBuilder.build()
 }

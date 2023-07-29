@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sso
 
@@ -10,12 +19,12 @@ import software.amazon.awscdk.services.sso.CfnPermissionSet
  * Specifies the configuration of the AWS managed or customer managed policy that you want to set as
  * a permissions boundary.
  */
-public inline
-    fun CfnPermissionSet.setPermissionsBoundary(block: CfnPermissionSetPermissionsBoundaryPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPermissionSetPermissionsBoundaryPropertyDsl()
-  builder.apply(block)
-  return setPermissionsBoundary(builder.build())
+public inline fun CfnPermissionSet.setPermissionsBoundary(
+    block: CfnPermissionSetPermissionsBoundaryPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPermissionSetPermissionsBoundaryPropertyDsl()
+    builder.apply(block)
+    return setPermissionsBoundary(builder.build())
 }
 
 /**
@@ -24,11 +33,15 @@ public inline
  *
  * @deprecated this property has been deprecated
  */
-public inline
-    fun CfnInstanceAccessControlAttributeConfiguration.setInstanceAccessControlAttributeConfiguration(block: CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder =
-      CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl()
-  builder.apply(block)
-  return setInstanceAccessControlAttributeConfiguration(builder.build())
+public inline fun CfnInstanceAccessControlAttributeConfiguration
+    .setInstanceAccessControlAttributeConfiguration(
+    block:
+        CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl.(
+        ) -> Unit =
+        {}
+) {
+    val builder =
+        CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl()
+    builder.apply(block)
+    return setInstanceAccessControlAttributeConfiguration(builder.build())
 }

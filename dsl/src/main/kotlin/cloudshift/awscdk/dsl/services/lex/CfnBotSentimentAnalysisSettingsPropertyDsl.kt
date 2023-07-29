@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * utterances.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,24 +35,24 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotSentimentAnalysisSettingsPropertyDsl {
-  private val cdkBuilder: CfnBot.SentimentAnalysisSettingsProperty.Builder =
-      CfnBot.SentimentAnalysisSettingsProperty.builder()
+    private val cdkBuilder: CfnBot.SentimentAnalysisSettingsProperty.Builder =
+        CfnBot.SentimentAnalysisSettingsProperty.builder()
 
-  /**
-   * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment
-   * of user utterances. 
-   */
-  public fun detectSentiment(detectSentiment: Boolean) {
-    cdkBuilder.detectSentiment(detectSentiment)
-  }
+    /**
+     * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment
+     *   of user utterances.
+     */
+    public fun detectSentiment(detectSentiment: Boolean) {
+        cdkBuilder.detectSentiment(detectSentiment)
+    }
 
-  /**
-   * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment
-   * of user utterances. 
-   */
-  public fun detectSentiment(detectSentiment: IResolvable) {
-    cdkBuilder.detectSentiment(detectSentiment)
-  }
+    /**
+     * @param detectSentiment Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment
+     *   of user utterances.
+     */
+    public fun detectSentiment(detectSentiment: IResolvable) {
+        cdkBuilder.detectSentiment(detectSentiment)
+    }
 
-  public fun build(): CfnBot.SentimentAnalysisSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnBot.SentimentAnalysisSettingsProperty = cdkBuilder.build()
 }

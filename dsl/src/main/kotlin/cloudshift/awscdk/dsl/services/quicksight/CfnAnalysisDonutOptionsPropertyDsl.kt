@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The options for configuring a donut chart or pie chart.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,7 +42,7 @@ public class CfnAnalysisDonutOptionsPropertyDsl {
 
     /**
      * @param arcOptions The option for define the arc of the chart shape. Valid values are as
-     * follows:.
+     *   follows:.
      * * `WHOLE` - A pie chart
      * * `SMALL` - A small-sized donut chart
      * * `MEDIUM` - A medium-sized donut chart
@@ -46,7 +54,7 @@ public class CfnAnalysisDonutOptionsPropertyDsl {
 
     /**
      * @param arcOptions The option for define the arc of the chart shape. Valid values are as
-     * follows:.
+     *   follows:.
      * * `WHOLE` - A pie chart
      * * `SMALL` - A small-sized donut chart
      * * `MEDIUM` - A medium-sized donut chart
@@ -58,8 +66,7 @@ public class CfnAnalysisDonutOptionsPropertyDsl {
 
     /**
      * @param donutCenterOptions The label options of the label that is displayed in the center of a
-     * donut chart.
-     * This option isn't available for pie charts.
+     *   donut chart. This option isn't available for pie charts.
      */
     public fun donutCenterOptions(donutCenterOptions: IResolvable) {
         cdkBuilder.donutCenterOptions(donutCenterOptions)
@@ -67,8 +74,7 @@ public class CfnAnalysisDonutOptionsPropertyDsl {
 
     /**
      * @param donutCenterOptions The label options of the label that is displayed in the center of a
-     * donut chart.
-     * This option isn't available for pie charts.
+     *   donut chart. This option isn't available for pie charts.
      */
     public fun donutCenterOptions(donutCenterOptions: CfnAnalysis.DonutCenterOptionsProperty) {
         cdkBuilder.donutCenterOptions(donutCenterOptions)

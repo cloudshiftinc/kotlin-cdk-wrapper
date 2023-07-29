@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.events.CfnEventBusPolicy
  * `'{"Type" : "StringEquals", "Key": "aws:PrincipalOrgID", "Value": "o-1234567890"}'`
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,32 +41,32 @@ import software.amazon.awscdk.services.events.CfnEventBusPolicy
  */
 @CdkDslMarker
 public class CfnEventBusPolicyConditionPropertyDsl {
-  private val cdkBuilder: CfnEventBusPolicy.ConditionProperty.Builder =
-      CfnEventBusPolicy.ConditionProperty.builder()
+    private val cdkBuilder: CfnEventBusPolicy.ConditionProperty.Builder =
+        CfnEventBusPolicy.ConditionProperty.builder()
 
-  /**
-   * @param key Specifies the key for the condition.
-   * Currently the only supported key is `aws:PrincipalOrgID` .
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /**
+     * @param key Specifies the key for the condition. Currently the only supported key is
+     *   `aws:PrincipalOrgID` .
+     */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param type Specifies the type of condition.
-   * Currently the only supported value is `StringEquals` .
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * @param type Specifies the type of condition. Currently the only supported value is
+     *   `StringEquals` .
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  /**
-   * @param value Specifies the value for the key.
-   * Currently, this must be the ID of the organization.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value Specifies the value for the key. Currently, this must be the ID of the
+     *   organization.
+     */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnEventBusPolicy.ConditionProperty = cdkBuilder.build()
+    public fun build(): CfnEventBusPolicy.ConditionProperty = cdkBuilder.build()
 }

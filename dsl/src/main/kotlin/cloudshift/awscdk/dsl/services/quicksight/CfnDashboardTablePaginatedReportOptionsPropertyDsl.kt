@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The paginated report options for a table visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,9 +44,7 @@ public class CfnDashboardTablePaginatedReportOptionsPropertyDsl {
         cdkBuilder.overflowColumnHeaderVisibility(overflowColumnHeaderVisibility)
     }
 
-    /**
-     * @param verticalOverflowVisibility The visibility of printing table overflow across pages.
-     */
+    /** @param verticalOverflowVisibility The visibility of printing table overflow across pages. */
     public fun verticalOverflowVisibility(verticalOverflowVisibility: String) {
         cdkBuilder.verticalOverflowVisibility(verticalOverflowVisibility)
     }

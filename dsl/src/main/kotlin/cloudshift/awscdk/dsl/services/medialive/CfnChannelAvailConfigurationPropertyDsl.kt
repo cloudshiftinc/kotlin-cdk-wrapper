@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is EncoderSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,22 +53,18 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelAvailConfigurationPropertyDsl {
-  private val cdkBuilder: CfnChannel.AvailConfigurationProperty.Builder =
-      CfnChannel.AvailConfigurationProperty.builder()
+    private val cdkBuilder: CfnChannel.AvailConfigurationProperty.Builder =
+        CfnChannel.AvailConfigurationProperty.builder()
 
-  /**
-   * @param availSettings The setup of ad avail handling in the output.
-   */
-  public fun availSettings(availSettings: IResolvable) {
-    cdkBuilder.availSettings(availSettings)
-  }
+    /** @param availSettings The setup of ad avail handling in the output. */
+    public fun availSettings(availSettings: IResolvable) {
+        cdkBuilder.availSettings(availSettings)
+    }
 
-  /**
-   * @param availSettings The setup of ad avail handling in the output.
-   */
-  public fun availSettings(availSettings: CfnChannel.AvailSettingsProperty) {
-    cdkBuilder.availSettings(availSettings)
-  }
+    /** @param availSettings The setup of ad avail handling in the output. */
+    public fun availSettings(availSettings: CfnChannel.AvailSettingsProperty) {
+        cdkBuilder.availSettings(availSettings)
+    }
 
-  public fun build(): CfnChannel.AvailConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.AvailConfigurationProperty = cdkBuilder.build()
 }

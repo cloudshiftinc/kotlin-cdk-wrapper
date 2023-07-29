@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * The `SortProperty` property specifies how to sort the data that you bind to a component.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  */
 @CdkDslMarker
 public class CfnComponentSortPropertyPropertyDsl {
-  private val cdkBuilder: CfnComponent.SortPropertyProperty.Builder =
-      CfnComponent.SortPropertyProperty.builder()
+    private val cdkBuilder: CfnComponent.SortPropertyProperty.Builder =
+        CfnComponent.SortPropertyProperty.builder()
 
-  /**
-   * @param direction The direction of the sort, either ascending or descending. 
-   */
-  public fun direction(direction: String) {
-    cdkBuilder.direction(direction)
-  }
+    /** @param direction The direction of the sort, either ascending or descending. */
+    public fun direction(direction: String) {
+        cdkBuilder.direction(direction)
+    }
 
-  /**
-   * @param field The field to perform the sort on. 
-   */
-  public fun `field`(`field`: String) {
-    cdkBuilder.`field`(`field`)
-  }
+    /** @param field The field to perform the sort on. */
+    public fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+    }
 
-  public fun build(): CfnComponent.SortPropertyProperty = cdkBuilder.build()
+    public fun build(): CfnComponent.SortPropertyProperty = cdkBuilder.build()
 }

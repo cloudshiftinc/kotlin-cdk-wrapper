@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * determination must be made at deploy time.
  *
  * Example:
- *
  * ```
  * CfnBucket rawBucket = CfnBucket.Builder.create(this, "Bucket").build();
  * // -or-
@@ -27,21 +35,21 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnConditionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnCondition.Builder = CfnCondition.Builder.create(scope, id)
+    private val cdkBuilder: CfnCondition.Builder = CfnCondition.Builder.create(scope, id)
 
-  /**
-   * The expression that the condition will evaluate.
-   *
-   * Default: - None.
-   *
-   * @param expression The expression that the condition will evaluate. 
-   */
-  public fun expression(expression: ICfnConditionExpression) {
-    cdkBuilder.expression(expression)
-  }
+    /**
+     * The expression that the condition will evaluate.
+     *
+     * Default: - None.
+     *
+     * @param expression The expression that the condition will evaluate.
+     */
+    public fun expression(expression: ICfnConditionExpression) {
+        cdkBuilder.expression(expression)
+    }
 
-  public fun build(): CfnCondition = cdkBuilder.build()
+    public fun build(): CfnCondition = cdkBuilder.build()
 }

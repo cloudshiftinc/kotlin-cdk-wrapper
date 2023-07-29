@@ -21,8 +21,8 @@ public fun ec2.securityGroupNoOutbound(
 }
 
 /**
- * Attaches internet gateway to this VPC. Does not add it to routing tables. Useful for minimal
- * VPCs that have only ISOLATED subnets but require IGW for GlobalAccelerator or other purposes.
+ * Attaches internet gateway to this VPC. Does not add it to routing tables. Useful for minimal VPCs
+ * that have only ISOLATED subnets but require IGW for GlobalAccelerator or other purposes.
  */
 public fun Vpc.attachInternetGateway(): CfnInternetGateway {
     val igw = CfnInternetGateway(this, "IGW")

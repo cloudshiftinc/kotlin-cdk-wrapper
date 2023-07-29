@@ -15,9 +15,12 @@ public interface SubnetSelections {
 }
 
 private object SubnetSelectionsImpl : SubnetSelections {
-    override val PublicSubnets: SubnetSelection = ec2.subnetSelection { subnetType(SubnetType.PUBLIC) }
-    override val PrivateSubnets: SubnetSelection = ec2.subnetSelection { subnetType(SubnetType.PRIVATE_WITH_EGRESS) }
-    override val IsolatedSubnets: SubnetSelection = ec2.subnetSelection { subnetType(SubnetType.PRIVATE_ISOLATED) }
+    override val PublicSubnets: SubnetSelection =
+        ec2.subnetSelection { subnetType(SubnetType.PUBLIC) }
+    override val PrivateSubnets: SubnetSelection =
+        ec2.subnetSelection { subnetType(SubnetType.PRIVATE_WITH_EGRESS) }
+    override val IsolatedSubnets: SubnetSelection =
+        ec2.subnetSelection { subnetType(SubnetType.PRIVATE_ISOLATED) }
 }
 
 public val ec2.SubnetSelections: SubnetSelections

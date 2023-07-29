@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.AuthFlow
  * Types of authentication flow.
  *
  * Example:
- *
  * ```
  * UserPool pool = new UserPool(this, "pool");
  * pool.addClient("app-client", UserPoolClientOptions.builder()
@@ -25,35 +33,27 @@ import software.amazon.awscdk.services.cognito.AuthFlow
  */
 @CdkDslMarker
 public class AuthFlowDsl {
-  private val cdkBuilder: AuthFlow.Builder = AuthFlow.builder()
+    private val cdkBuilder: AuthFlow.Builder = AuthFlow.builder()
 
-  /**
-   * @param adminUserPassword Enable admin based user password authentication flow.
-   */
-  public fun adminUserPassword(adminUserPassword: Boolean) {
-    cdkBuilder.adminUserPassword(adminUserPassword)
-  }
+    /** @param adminUserPassword Enable admin based user password authentication flow. */
+    public fun adminUserPassword(adminUserPassword: Boolean) {
+        cdkBuilder.adminUserPassword(adminUserPassword)
+    }
 
-  /**
-   * @param custom Enable custom authentication flow.
-   */
-  public fun custom(custom: Boolean) {
-    cdkBuilder.custom(custom)
-  }
+    /** @param custom Enable custom authentication flow. */
+    public fun custom(custom: Boolean) {
+        cdkBuilder.custom(custom)
+    }
 
-  /**
-   * @param userPassword Enable auth using username &amp; password.
-   */
-  public fun userPassword(userPassword: Boolean) {
-    cdkBuilder.userPassword(userPassword)
-  }
+    /** @param userPassword Enable auth using username &amp; password. */
+    public fun userPassword(userPassword: Boolean) {
+        cdkBuilder.userPassword(userPassword)
+    }
 
-  /**
-   * @param userSrp Enable SRP based authentication.
-   */
-  public fun userSrp(userSrp: Boolean) {
-    cdkBuilder.userSrp(userSrp)
-  }
+    /** @param userSrp Enable SRP based authentication. */
+    public fun userSrp(userSrp: Boolean) {
+        cdkBuilder.userSrp(userSrp)
+    }
 
-  public fun build(): AuthFlow = cdkBuilder.build()
+    public fun build(): AuthFlow = cdkBuilder.build()
 }

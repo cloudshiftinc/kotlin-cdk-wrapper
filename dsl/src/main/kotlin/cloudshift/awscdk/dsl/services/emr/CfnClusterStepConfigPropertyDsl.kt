@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emr
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.emr.CfnCluster
  * node. Steps are used to submit data processing jobs to the cluster.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,37 +48,31 @@ import software.amazon.awscdk.services.emr.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterStepConfigPropertyDsl {
-  private val cdkBuilder: CfnCluster.StepConfigProperty.Builder =
-      CfnCluster.StepConfigProperty.builder()
+    private val cdkBuilder: CfnCluster.StepConfigProperty.Builder =
+        CfnCluster.StepConfigProperty.builder()
 
-  /**
-   * @param actionOnFailure The action to take when the cluster step fails.
-   * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
-   */
-  public fun actionOnFailure(actionOnFailure: String) {
-    cdkBuilder.actionOnFailure(actionOnFailure)
-  }
+    /**
+     * @param actionOnFailure The action to take when the cluster step fails. Possible values are
+     *   `CANCEL_AND_WAIT` and `CONTINUE` .
+     */
+    public fun actionOnFailure(actionOnFailure: String) {
+        cdkBuilder.actionOnFailure(actionOnFailure)
+    }
 
-  /**
-   * @param hadoopJarStep The JAR file used for the step. 
-   */
-  public fun hadoopJarStep(hadoopJarStep: IResolvable) {
-    cdkBuilder.hadoopJarStep(hadoopJarStep)
-  }
+    /** @param hadoopJarStep The JAR file used for the step. */
+    public fun hadoopJarStep(hadoopJarStep: IResolvable) {
+        cdkBuilder.hadoopJarStep(hadoopJarStep)
+    }
 
-  /**
-   * @param hadoopJarStep The JAR file used for the step. 
-   */
-  public fun hadoopJarStep(hadoopJarStep: CfnCluster.HadoopJarStepConfigProperty) {
-    cdkBuilder.hadoopJarStep(hadoopJarStep)
-  }
+    /** @param hadoopJarStep The JAR file used for the step. */
+    public fun hadoopJarStep(hadoopJarStep: CfnCluster.HadoopJarStepConfigProperty) {
+        cdkBuilder.hadoopJarStep(hadoopJarStep)
+    }
 
-  /**
-   * @param name The name of the step. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the step. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnCluster.StepConfigProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.StepConfigProperty = cdkBuilder.build()
 }

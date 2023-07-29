@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The sort configuration for a `TableVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -62,7 +70,7 @@ public class CfnTemplateTableSortConfigurationPropertyDsl {
 
     /**
      * @param paginationConfiguration The pagination configuration (page size, page number) for the
-     * table.
+     *   table.
      */
     public fun paginationConfiguration(paginationConfiguration: IResolvable) {
         cdkBuilder.paginationConfiguration(paginationConfiguration)
@@ -70,29 +78,25 @@ public class CfnTemplateTableSortConfigurationPropertyDsl {
 
     /**
      * @param paginationConfiguration The pagination configuration (page size, page number) for the
-     * table.
+     *   table.
      */
-    public fun paginationConfiguration(paginationConfiguration: CfnTemplate.PaginationConfigurationProperty) {
+    public fun paginationConfiguration(
+        paginationConfiguration: CfnTemplate.PaginationConfigurationProperty
+    ) {
         cdkBuilder.paginationConfiguration(paginationConfiguration)
     }
 
-    /**
-     * @param rowSort The field sort options for rows in the table.
-     */
+    /** @param rowSort The field sort options for rows in the table. */
     public fun rowSort(vararg rowSort: Any) {
         _rowSort.addAll(listOf(*rowSort))
     }
 
-    /**
-     * @param rowSort The field sort options for rows in the table.
-     */
+    /** @param rowSort The field sort options for rows in the table. */
     public fun rowSort(rowSort: Collection<Any>) {
         _rowSort.addAll(rowSort)
     }
 
-    /**
-     * @param rowSort The field sort options for rows in the table.
-     */
+    /** @param rowSort The field sort options for rows in the table. */
     public fun rowSort(rowSort: IResolvable) {
         cdkBuilder.rowSort(rowSort)
     }

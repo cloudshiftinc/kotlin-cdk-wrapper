@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  * `"name2", "address2"`
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,25 +42,26 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceV2CSVMappingParametersPropertyDsl {
-  private val cdkBuilder: CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty.Builder =
-      CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty.builder()
+    private val cdkBuilder:
+        CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty.Builder =
+        CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty.builder()
 
-  /**
-   * @param recordColumnDelimiter The column delimiter. 
-   * For example, in a CSV format, a comma (",") is the typical column delimiter.
-   */
-  public fun recordColumnDelimiter(recordColumnDelimiter: String) {
-    cdkBuilder.recordColumnDelimiter(recordColumnDelimiter)
-  }
+    /**
+     * @param recordColumnDelimiter The column delimiter. For example, in a CSV format, a comma
+     *   (",") is the typical column delimiter.
+     */
+    public fun recordColumnDelimiter(recordColumnDelimiter: String) {
+        cdkBuilder.recordColumnDelimiter(recordColumnDelimiter)
+    }
 
-  /**
-   * @param recordRowDelimiter The row delimiter. 
-   * For example, in a CSV format, *'\n'* is the typical row delimiter.
-   */
-  public fun recordRowDelimiter(recordRowDelimiter: String) {
-    cdkBuilder.recordRowDelimiter(recordRowDelimiter)
-  }
+    /**
+     * @param recordRowDelimiter The row delimiter. For example, in a CSV format, *'\n'* is the
+     *   typical row delimiter.
+     */
+    public fun recordRowDelimiter(recordRowDelimiter: String) {
+        cdkBuilder.recordRowDelimiter(recordRowDelimiter)
+    }
 
-  public fun build(): CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty =
-      cdkBuilder.build()
+    public fun build(): CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty =
+        cdkBuilder.build()
 }

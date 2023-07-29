@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -95,7 +103,7 @@ public class CfnAnalysisNumericFormatConfigurationPropertyDsl {
 
     /**
      * @param currencyDisplayFormatConfiguration The options that determine the currency display
-     * format configuration.
+     *   format configuration.
      */
     public fun currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration: IResolvable) {
         cdkBuilder.currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration)
@@ -103,15 +111,17 @@ public class CfnAnalysisNumericFormatConfigurationPropertyDsl {
 
     /**
      * @param currencyDisplayFormatConfiguration The options that determine the currency display
-     * format configuration.
+     *   format configuration.
      */
-    public fun currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration: CfnAnalysis.CurrencyDisplayFormatConfigurationProperty) {
+    public fun currencyDisplayFormatConfiguration(
+        currencyDisplayFormatConfiguration: CfnAnalysis.CurrencyDisplayFormatConfigurationProperty
+    ) {
         cdkBuilder.currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration)
     }
 
     /**
      * @param numberDisplayFormatConfiguration The options that determine the number display format
-     * configuration.
+     *   configuration.
      */
     public fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: IResolvable) {
         cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
@@ -119,25 +129,32 @@ public class CfnAnalysisNumericFormatConfigurationPropertyDsl {
 
     /**
      * @param numberDisplayFormatConfiguration The options that determine the number display format
-     * configuration.
+     *   configuration.
      */
-    public fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: CfnAnalysis.NumberDisplayFormatConfigurationProperty) {
+    public fun numberDisplayFormatConfiguration(
+        numberDisplayFormatConfiguration: CfnAnalysis.NumberDisplayFormatConfigurationProperty
+    ) {
         cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
     }
 
     /**
      * @param percentageDisplayFormatConfiguration The options that determine the percentage display
-     * format configuration.
+     *   format configuration.
      */
-    public fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: IResolvable) {
+    public fun percentageDisplayFormatConfiguration(
+        percentageDisplayFormatConfiguration: IResolvable
+    ) {
         cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
     }
 
     /**
      * @param percentageDisplayFormatConfiguration The options that determine the percentage display
-     * format configuration.
+     *   format configuration.
      */
-    public fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: CfnAnalysis.PercentageDisplayFormatConfigurationProperty) {
+    public fun percentageDisplayFormatConfiguration(
+        percentageDisplayFormatConfiguration:
+            CfnAnalysis.PercentageDisplayFormatConfigurationProperty
+    ) {
         cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
     }
 

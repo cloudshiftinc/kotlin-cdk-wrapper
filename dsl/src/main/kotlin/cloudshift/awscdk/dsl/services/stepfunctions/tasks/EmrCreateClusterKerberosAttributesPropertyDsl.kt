@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * See the RunJobFlow API for complete documentation on input parameters
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,52 +40,47 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  */
 @CdkDslMarker
 public class EmrCreateClusterKerberosAttributesPropertyDsl {
-  private val cdkBuilder: EmrCreateCluster.KerberosAttributesProperty.Builder =
-      EmrCreateCluster.KerberosAttributesProperty.builder()
+    private val cdkBuilder: EmrCreateCluster.KerberosAttributesProperty.Builder =
+        EmrCreateCluster.KerberosAttributesProperty.builder()
 
-  /**
-   * @param adDomainJoinPassword The Active Directory password for ADDomainJoinUser.
-   */
-  public fun adDomainJoinPassword(adDomainJoinPassword: String) {
-    cdkBuilder.adDomainJoinPassword(adDomainJoinPassword)
-  }
+    /** @param adDomainJoinPassword The Active Directory password for ADDomainJoinUser. */
+    public fun adDomainJoinPassword(adDomainJoinPassword: String) {
+        cdkBuilder.adDomainJoinPassword(adDomainJoinPassword)
+    }
 
-  /**
-   * @param adDomainJoinUser Required only when establishing a cross-realm trust with an Active
-   * Directory domain.
-   * A user with sufficient privileges to join
-   * resources to the domain.
-   */
-  public fun adDomainJoinUser(adDomainJoinUser: String) {
-    cdkBuilder.adDomainJoinUser(adDomainJoinUser)
-  }
+    /**
+     * @param adDomainJoinUser Required only when establishing a cross-realm trust with an Active
+     *   Directory domain. A user with sufficient privileges to join resources to the domain.
+     */
+    public fun adDomainJoinUser(adDomainJoinUser: String) {
+        cdkBuilder.adDomainJoinUser(adDomainJoinUser)
+    }
 
-  /**
-   * @param crossRealmTrustPrincipalPassword Required only when establishing a cross-realm trust
-   * with a KDC in a different realm.
-   * The cross-realm principal password, which
-   * must be identical across realms.
-   */
-  public fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String) {
-    cdkBuilder.crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword)
-  }
+    /**
+     * @param crossRealmTrustPrincipalPassword Required only when establishing a cross-realm trust
+     *   with a KDC in a different realm. The cross-realm principal password, which must be
+     *   identical across realms.
+     */
+    public fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String) {
+        cdkBuilder.crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword)
+    }
 
-  /**
-   * @param kdcAdminPassword The password used within the cluster for the kadmin service on the
-   * cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for the
-   * cluster.
-   */
-  public fun kdcAdminPassword(kdcAdminPassword: String) {
-    cdkBuilder.kdcAdminPassword(kdcAdminPassword)
-  }
+    /**
+     * @param kdcAdminPassword The password used within the cluster for the kadmin service on the
+     *   cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs
+     *   for the cluster.
+     */
+    public fun kdcAdminPassword(kdcAdminPassword: String) {
+        cdkBuilder.kdcAdminPassword(kdcAdminPassword)
+    }
 
-  /**
-   * @param realm The name of the Kerberos realm to which all nodes in a cluster belong. 
-   * For example, EC2.INTERNAL.
-   */
-  public fun realm(realm: String) {
-    cdkBuilder.realm(realm)
-  }
+    /**
+     * @param realm The name of the Kerberos realm to which all nodes in a cluster belong. For
+     *   example, EC2.INTERNAL.
+     */
+    public fun realm(realm: String) {
+        cdkBuilder.realm(realm)
+    }
 
-  public fun build(): EmrCreateCluster.KerberosAttributesProperty = cdkBuilder.build()
+    public fun build(): EmrCreateCluster.KerberosAttributesProperty = cdkBuilder.build()
 }

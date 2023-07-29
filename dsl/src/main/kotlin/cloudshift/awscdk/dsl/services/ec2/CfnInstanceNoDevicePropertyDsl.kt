@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,12 +19,11 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  *
  * To suppress a device, specify an empty string.
  *
- * `NoDevice` is a property of the [Amazon EC2
- * BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html)
+ * `NoDevice` is a property of the
+ * [Amazon EC2 BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html)
  * property.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,8 +35,8 @@ import software.amazon.awscdk.services.ec2.CfnInstance
  */
 @CdkDslMarker
 public class CfnInstanceNoDevicePropertyDsl {
-  private val cdkBuilder: CfnInstance.NoDeviceProperty.Builder =
-      CfnInstance.NoDeviceProperty.builder()
+    private val cdkBuilder: CfnInstance.NoDeviceProperty.Builder =
+        CfnInstance.NoDeviceProperty.builder()
 
-  public fun build(): CfnInstance.NoDeviceProperty = cdkBuilder.build()
+    public fun build(): CfnInstance.NoDeviceProperty = cdkBuilder.build()
 }

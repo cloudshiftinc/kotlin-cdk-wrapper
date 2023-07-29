@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
  * An object that represents the specification of a service mesh resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -141,69 +149,63 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
  */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewaySpecPropertyDsl {
-  private val cdkBuilder: CfnVirtualGateway.VirtualGatewaySpecProperty.Builder =
-      CfnVirtualGateway.VirtualGatewaySpecProperty.builder()
+    private val cdkBuilder: CfnVirtualGateway.VirtualGatewaySpecProperty.Builder =
+        CfnVirtualGateway.VirtualGatewaySpecProperty.builder()
 
-  private val _listeners: MutableList<Any> = mutableListOf()
+    private val _listeners: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param backendDefaults A reference to an object that represents the defaults for backends.
-   */
-  public fun backendDefaults(backendDefaults: IResolvable) {
-    cdkBuilder.backendDefaults(backendDefaults)
-  }
+    /**
+     * @param backendDefaults A reference to an object that represents the defaults for backends.
+     */
+    public fun backendDefaults(backendDefaults: IResolvable) {
+        cdkBuilder.backendDefaults(backendDefaults)
+    }
 
-  /**
-   * @param backendDefaults A reference to an object that represents the defaults for backends.
-   */
-  public
-      fun backendDefaults(backendDefaults: CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty) {
-    cdkBuilder.backendDefaults(backendDefaults)
-  }
+    /**
+     * @param backendDefaults A reference to an object that represents the defaults for backends.
+     */
+    public fun backendDefaults(
+        backendDefaults: CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
+    ) {
+        cdkBuilder.backendDefaults(backendDefaults)
+    }
 
-  /**
-   * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
-   * from. 
-   * You can specify one listener.
-   */
-  public fun listeners(vararg listeners: Any) {
-    _listeners.addAll(listOf(*listeners))
-  }
+    /**
+     * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
+     *   from. You can specify one listener.
+     */
+    public fun listeners(vararg listeners: Any) {
+        _listeners.addAll(listOf(*listeners))
+    }
 
-  /**
-   * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
-   * from. 
-   * You can specify one listener.
-   */
-  public fun listeners(listeners: Collection<Any>) {
-    _listeners.addAll(listeners)
-  }
+    /**
+     * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
+     *   from. You can specify one listener.
+     */
+    public fun listeners(listeners: Collection<Any>) {
+        _listeners.addAll(listeners)
+    }
 
-  /**
-   * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
-   * from. 
-   * You can specify one listener.
-   */
-  public fun listeners(listeners: IResolvable) {
-    cdkBuilder.listeners(listeners)
-  }
+    /**
+     * @param listeners The listeners that the mesh endpoint is expected to receive inbound traffic
+     *   from. You can specify one listener.
+     */
+    public fun listeners(listeners: IResolvable) {
+        cdkBuilder.listeners(listeners)
+    }
 
-  /**
-   * @param logging An object that represents logging information.
-   */
-  public fun logging(logging: IResolvable) {
-    cdkBuilder.logging(logging)
-  }
+    /** @param logging An object that represents logging information. */
+    public fun logging(logging: IResolvable) {
+        cdkBuilder.logging(logging)
+    }
 
-  /**
-   * @param logging An object that represents logging information.
-   */
-  public fun logging(logging: CfnVirtualGateway.VirtualGatewayLoggingProperty) {
-    cdkBuilder.logging(logging)
-  }
+    /** @param logging An object that represents logging information. */
+    public fun logging(logging: CfnVirtualGateway.VirtualGatewayLoggingProperty) {
+        cdkBuilder.logging(logging)
+    }
 
-  public fun build(): CfnVirtualGateway.VirtualGatewaySpecProperty {
-    if(_listeners.isNotEmpty()) cdkBuilder.listeners(_listeners)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVirtualGateway.VirtualGatewaySpecProperty {
+        if (_listeners.isNotEmpty()) cdkBuilder.listeners(_listeners)
+        return cdkBuilder.build()
+    }
 }

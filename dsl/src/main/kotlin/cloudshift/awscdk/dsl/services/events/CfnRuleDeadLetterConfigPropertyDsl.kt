@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.events.CfnRule
  * A `DeadLetterConfig` object that contains information about a dead-letter queue configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.events.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleDeadLetterConfigPropertyDsl {
-  private val cdkBuilder: CfnRule.DeadLetterConfigProperty.Builder =
-      CfnRule.DeadLetterConfigProperty.builder()
+    private val cdkBuilder: CfnRule.DeadLetterConfigProperty.Builder =
+        CfnRule.DeadLetterConfigProperty.builder()
 
-  /**
-   * @param arn The ARN of the SQS queue specified as the target for the dead-letter queue.
-   */
-  public fun arn(arn: String) {
-    cdkBuilder.arn(arn)
-  }
+    /** @param arn The ARN of the SQS queue specified as the target for the dead-letter queue. */
+    public fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+    }
 
-  public fun build(): CfnRule.DeadLetterConfigProperty = cdkBuilder.build()
+    public fun build(): CfnRule.DeadLetterConfigProperty = cdkBuilder.build()
 }

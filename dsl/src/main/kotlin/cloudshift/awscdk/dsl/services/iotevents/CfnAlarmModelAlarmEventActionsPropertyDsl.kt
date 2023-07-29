@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  * Contains information about one or more alarm actions.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -123,37 +131,37 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  */
 @CdkDslMarker
 public class CfnAlarmModelAlarmEventActionsPropertyDsl {
-  private val cdkBuilder: CfnAlarmModel.AlarmEventActionsProperty.Builder =
-      CfnAlarmModel.AlarmEventActionsProperty.builder()
+    private val cdkBuilder: CfnAlarmModel.AlarmEventActionsProperty.Builder =
+        CfnAlarmModel.AlarmEventActionsProperty.builder()
 
-  private val _alarmActions: MutableList<Any> = mutableListOf()
+    private val _alarmActions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param alarmActions Specifies one or more supported actions to receive notifications when the
-   * alarm state changes.
-   */
-  public fun alarmActions(vararg alarmActions: Any) {
-    _alarmActions.addAll(listOf(*alarmActions))
-  }
+    /**
+     * @param alarmActions Specifies one or more supported actions to receive notifications when the
+     *   alarm state changes.
+     */
+    public fun alarmActions(vararg alarmActions: Any) {
+        _alarmActions.addAll(listOf(*alarmActions))
+    }
 
-  /**
-   * @param alarmActions Specifies one or more supported actions to receive notifications when the
-   * alarm state changes.
-   */
-  public fun alarmActions(alarmActions: Collection<Any>) {
-    _alarmActions.addAll(alarmActions)
-  }
+    /**
+     * @param alarmActions Specifies one or more supported actions to receive notifications when the
+     *   alarm state changes.
+     */
+    public fun alarmActions(alarmActions: Collection<Any>) {
+        _alarmActions.addAll(alarmActions)
+    }
 
-  /**
-   * @param alarmActions Specifies one or more supported actions to receive notifications when the
-   * alarm state changes.
-   */
-  public fun alarmActions(alarmActions: IResolvable) {
-    cdkBuilder.alarmActions(alarmActions)
-  }
+    /**
+     * @param alarmActions Specifies one or more supported actions to receive notifications when the
+     *   alarm state changes.
+     */
+    public fun alarmActions(alarmActions: IResolvable) {
+        cdkBuilder.alarmActions(alarmActions)
+    }
 
-  public fun build(): CfnAlarmModel.AlarmEventActionsProperty {
-    if(_alarmActions.isNotEmpty()) cdkBuilder.alarmActions(_alarmActions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAlarmModel.AlarmEventActionsProperty {
+        if (_alarmActions.isNotEmpty()) cdkBuilder.alarmActions(_alarmActions)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is HlsGroupSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,22 +41,18 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelKeyProviderSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.KeyProviderSettingsProperty.Builder =
-      CfnChannel.KeyProviderSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.KeyProviderSettingsProperty.Builder =
+        CfnChannel.KeyProviderSettingsProperty.builder()
 
-  /**
-   * @param staticKeySettings The configuration of static key settings.
-   */
-  public fun staticKeySettings(staticKeySettings: IResolvable) {
-    cdkBuilder.staticKeySettings(staticKeySettings)
-  }
+    /** @param staticKeySettings The configuration of static key settings. */
+    public fun staticKeySettings(staticKeySettings: IResolvable) {
+        cdkBuilder.staticKeySettings(staticKeySettings)
+    }
 
-  /**
-   * @param staticKeySettings The configuration of static key settings.
-   */
-  public fun staticKeySettings(staticKeySettings: CfnChannel.StaticKeySettingsProperty) {
-    cdkBuilder.staticKeySettings(staticKeySettings)
-  }
+    /** @param staticKeySettings The configuration of static key settings. */
+    public fun staticKeySettings(staticKeySettings: CfnChannel.StaticKeySettingsProperty) {
+        cdkBuilder.staticKeySettings(staticKeySettings)
+    }
 
-  public fun build(): CfnChannel.KeyProviderSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.KeyProviderSettingsProperty = cdkBuilder.build()
 }

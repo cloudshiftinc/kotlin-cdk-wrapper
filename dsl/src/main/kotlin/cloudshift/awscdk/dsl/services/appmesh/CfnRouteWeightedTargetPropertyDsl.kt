@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  * weight of 10. The total weight for all targets combined must be less than or equal to 100.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,29 +40,23 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  */
 @CdkDslMarker
 public class CfnRouteWeightedTargetPropertyDsl {
-  private val cdkBuilder: CfnRoute.WeightedTargetProperty.Builder =
-      CfnRoute.WeightedTargetProperty.builder()
+    private val cdkBuilder: CfnRoute.WeightedTargetProperty.Builder =
+        CfnRoute.WeightedTargetProperty.builder()
 
-  /**
-   * @param port The targeted port of the weighted object.
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port The targeted port of the weighted object. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  /**
-   * @param virtualNode The virtual node to associate with the weighted target. 
-   */
-  public fun virtualNode(virtualNode: String) {
-    cdkBuilder.virtualNode(virtualNode)
-  }
+    /** @param virtualNode The virtual node to associate with the weighted target. */
+    public fun virtualNode(virtualNode: String) {
+        cdkBuilder.virtualNode(virtualNode)
+    }
 
-  /**
-   * @param weight The relative weight of the weighted target. 
-   */
-  public fun weight(weight: Number) {
-    cdkBuilder.weight(weight)
-  }
+    /** @param weight The relative weight of the weighted target. */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+    }
 
-  public fun build(): CfnRoute.WeightedTargetProperty = cdkBuilder.build()
+    public fun build(): CfnRoute.WeightedTargetProperty = cdkBuilder.build()
 }

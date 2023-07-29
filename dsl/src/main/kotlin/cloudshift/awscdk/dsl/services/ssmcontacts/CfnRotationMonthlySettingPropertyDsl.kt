@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmcontacts
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.ssmcontacts.CfnRotation
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.ssmcontacts.CfnRotation
 
 /**
  * Information about on-call rotations that recur monthly.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,9 +37,7 @@ public class CfnRotationMonthlySettingPropertyDsl {
     private val cdkBuilder: CfnRotation.MonthlySettingProperty.Builder =
         CfnRotation.MonthlySettingProperty.builder()
 
-    /**
-     * @param dayOfMonth The day of the month when monthly recurring on-call rotations begin.
-     */
+    /** @param dayOfMonth The day of the month when monthly recurring on-call rotations begin. */
     public fun dayOfMonth(dayOfMonth: Number) {
         cdkBuilder.dayOfMonth(dayOfMonth)
     }

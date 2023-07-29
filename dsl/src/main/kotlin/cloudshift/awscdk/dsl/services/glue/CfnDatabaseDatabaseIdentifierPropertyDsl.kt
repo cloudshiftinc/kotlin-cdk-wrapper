@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.glue.CfnDatabase
  * A structure that describes a target database for resource linking.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.glue.CfnDatabase
  */
 @CdkDslMarker
 public class CfnDatabaseDatabaseIdentifierPropertyDsl {
-  private val cdkBuilder: CfnDatabase.DatabaseIdentifierProperty.Builder =
-      CfnDatabase.DatabaseIdentifierProperty.builder()
+    private val cdkBuilder: CfnDatabase.DatabaseIdentifierProperty.Builder =
+        CfnDatabase.DatabaseIdentifierProperty.builder()
 
-  /**
-   * @param catalogId The ID of the Data Catalog in which the database resides.
-   */
-  public fun catalogId(catalogId: String) {
-    cdkBuilder.catalogId(catalogId)
-  }
+    /** @param catalogId The ID of the Data Catalog in which the database resides. */
+    public fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+    }
 
-  /**
-   * @param databaseName The name of the catalog database.
-   */
-  public fun databaseName(databaseName: String) {
-    cdkBuilder.databaseName(databaseName)
-  }
+    /** @param databaseName The name of the catalog database. */
+    public fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+    }
 
-  public fun build(): CfnDatabase.DatabaseIdentifierProperty = cdkBuilder.build()
+    public fun build(): CfnDatabase.DatabaseIdentifierProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.rds.OptionGroupProps
  * Construction properties for an OptionGroup.
  *
  * Example:
- *
  * ```
  * // Set open cursors with parameter group
  * ParameterGroup parameterGroup = ParameterGroup.Builder.create(this, "ParameterGroup")
@@ -83,40 +91,32 @@ import software.amazon.awscdk.services.rds.OptionGroupProps
  */
 @CdkDslMarker
 public class OptionGroupPropsDsl {
-  private val cdkBuilder: OptionGroupProps.Builder = OptionGroupProps.builder()
+    private val cdkBuilder: OptionGroupProps.Builder = OptionGroupProps.builder()
 
-  private val _configurations: MutableList<OptionConfiguration> = mutableListOf()
+    private val _configurations: MutableList<OptionConfiguration> = mutableListOf()
 
-  /**
-   * @param configurations The configurations for this option group. 
-   */
-  public fun configurations(configurations: OptionConfigurationDsl.() -> Unit) {
-    _configurations.add(OptionConfigurationDsl().apply(configurations).build())
-  }
+    /** @param configurations The configurations for this option group. */
+    public fun configurations(configurations: OptionConfigurationDsl.() -> Unit) {
+        _configurations.add(OptionConfigurationDsl().apply(configurations).build())
+    }
 
-  /**
-   * @param configurations The configurations for this option group. 
-   */
-  public fun configurations(configurations: Collection<OptionConfiguration>) {
-    _configurations.addAll(configurations)
-  }
+    /** @param configurations The configurations for this option group. */
+    public fun configurations(configurations: Collection<OptionConfiguration>) {
+        _configurations.addAll(configurations)
+    }
 
-  /**
-   * @param description A description of the option group.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description of the option group. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param engine The database engine that this option group is associated with. 
-   */
-  public fun engine(engine: IInstanceEngine) {
-    cdkBuilder.engine(engine)
-  }
+    /** @param engine The database engine that this option group is associated with. */
+    public fun engine(engine: IInstanceEngine) {
+        cdkBuilder.engine(engine)
+    }
 
-  public fun build(): OptionGroupProps {
-    if(_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): OptionGroupProps {
+        if (_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
+        return cdkBuilder.build()
+    }
 }

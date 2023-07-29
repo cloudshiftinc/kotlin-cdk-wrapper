@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The display options of a control.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,29 +54,29 @@ public class CfnDashboardTextFieldControlDisplayOptionsPropertyDsl {
         CfnDashboard.TextFieldControlDisplayOptionsProperty.builder()
 
     /**
-     * @param placeholderOptions The configuration of the placeholder options in a text field control.
+     * @param placeholderOptions The configuration of the placeholder options in a text field
+     *   control.
      */
     public fun placeholderOptions(placeholderOptions: IResolvable) {
         cdkBuilder.placeholderOptions(placeholderOptions)
     }
 
     /**
-     * @param placeholderOptions The configuration of the placeholder options in a text field control.
+     * @param placeholderOptions The configuration of the placeholder options in a text field
+     *   control.
      */
-    public fun placeholderOptions(placeholderOptions: CfnDashboard.TextControlPlaceholderOptionsProperty) {
+    public fun placeholderOptions(
+        placeholderOptions: CfnDashboard.TextControlPlaceholderOptionsProperty
+    ) {
         cdkBuilder.placeholderOptions(placeholderOptions)
     }
 
-    /**
-     * @param titleOptions The options to configure the title visibility, name, and font size.
-     */
+    /** @param titleOptions The options to configure the title visibility, name, and font size. */
     public fun titleOptions(titleOptions: IResolvable) {
         cdkBuilder.titleOptions(titleOptions)
     }
 
-    /**
-     * @param titleOptions The options to configure the title visibility, name, and font size.
-     */
+    /** @param titleOptions The options to configure the title visibility, name, and font size. */
     public fun titleOptions(titleOptions: CfnDashboard.LabelOptionsProperty) {
         cdkBuilder.titleOptions(titleOptions)
     }

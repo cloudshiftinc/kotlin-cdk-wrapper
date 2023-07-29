@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amazonmq
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociationProps
  * Properties for defining a `CfnConfigurationAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,29 +39,23 @@ import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociationProps
  */
 @CdkDslMarker
 public class CfnConfigurationAssociationPropsDsl {
-  private val cdkBuilder: CfnConfigurationAssociationProps.Builder =
-      CfnConfigurationAssociationProps.builder()
+    private val cdkBuilder: CfnConfigurationAssociationProps.Builder =
+        CfnConfigurationAssociationProps.builder()
 
-  /**
-   * @param broker The broker to associate with a configuration. 
-   */
-  public fun broker(broker: String) {
-    cdkBuilder.broker(broker)
-  }
+    /** @param broker The broker to associate with a configuration. */
+    public fun broker(broker: String) {
+        cdkBuilder.broker(broker)
+    }
 
-  /**
-   * @param configuration The configuration to associate with a broker. 
-   */
-  public fun configuration(configuration: IResolvable) {
-    cdkBuilder.configuration(configuration)
-  }
+    /** @param configuration The configuration to associate with a broker. */
+    public fun configuration(configuration: IResolvable) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  /**
-   * @param configuration The configuration to associate with a broker. 
-   */
-  public fun configuration(configuration: CfnConfigurationAssociation.ConfigurationIdProperty) {
-    cdkBuilder.configuration(configuration)
-  }
+    /** @param configuration The configuration to associate with a broker. */
+    public fun configuration(configuration: CfnConfigurationAssociation.ConfigurationIdProperty) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  public fun build(): CfnConfigurationAssociationProps = cdkBuilder.build()
+    public fun build(): CfnConfigurationAssociationProps = cdkBuilder.build()
 }

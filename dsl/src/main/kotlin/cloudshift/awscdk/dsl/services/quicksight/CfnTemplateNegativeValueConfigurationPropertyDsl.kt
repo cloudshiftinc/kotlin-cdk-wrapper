@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The options that determine the negative value configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateNegativeValueConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.NegativeValueConfigurationProperty.Builder =
-      CfnTemplate.NegativeValueConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.NegativeValueConfigurationProperty.Builder =
+        CfnTemplate.NegativeValueConfigurationProperty.builder()
 
-  /**
-   * @param displayMode Determines the display mode of the negative value configuration. 
-   */
-  public fun displayMode(displayMode: String) {
-    cdkBuilder.displayMode(displayMode)
-  }
+    /** @param displayMode Determines the display mode of the negative value configuration. */
+    public fun displayMode(displayMode: String) {
+        cdkBuilder.displayMode(displayMode)
+    }
 
-  public fun build(): CfnTemplate.NegativeValueConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.NegativeValueConfigurationProperty = cdkBuilder.build()
 }

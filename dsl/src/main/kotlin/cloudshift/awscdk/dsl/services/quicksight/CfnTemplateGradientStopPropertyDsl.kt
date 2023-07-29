@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * Determines the gradient stop configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,23 +39,17 @@ public class CfnTemplateGradientStopPropertyDsl {
     private val cdkBuilder: CfnTemplate.GradientStopProperty.Builder =
         CfnTemplate.GradientStopProperty.builder()
 
-    /**
-     * @param color Determines the color.
-     */
+    /** @param color Determines the color. */
     public fun color(color: String) {
         cdkBuilder.color(color)
     }
 
-    /**
-     * @param dataValue Determines the data value.
-     */
+    /** @param dataValue Determines the data value. */
     public fun dataValue(dataValue: Number) {
         cdkBuilder.dataValue(dataValue)
     }
 
-    /**
-     * @param gradientOffset Determines gradient offset value.
-     */
+    /** @param gradientOffset Determines gradient offset value. */
     public fun gradientOffset(gradientOffset: Number) {
         cdkBuilder.gradientOffset(gradientOffset)
     }

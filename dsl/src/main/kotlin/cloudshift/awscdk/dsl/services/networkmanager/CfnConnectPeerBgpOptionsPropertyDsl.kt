@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkmanager
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.networkmanager.CfnConnectPeer
  * Describes the BGP options.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.networkmanager.CfnConnectPeer
  */
 @CdkDslMarker
 public class CfnConnectPeerBgpOptionsPropertyDsl {
-  private val cdkBuilder: CfnConnectPeer.BgpOptionsProperty.Builder =
-      CfnConnectPeer.BgpOptionsProperty.builder()
+    private val cdkBuilder: CfnConnectPeer.BgpOptionsProperty.Builder =
+        CfnConnectPeer.BgpOptionsProperty.builder()
 
-  /**
-   * @param peerAsn The Peer ASN of the BGP.
-   */
-  public fun peerAsn(peerAsn: Number) {
-    cdkBuilder.peerAsn(peerAsn)
-  }
+    /** @param peerAsn The Peer ASN of the BGP. */
+    public fun peerAsn(peerAsn: Number) {
+        cdkBuilder.peerAsn(peerAsn)
+    }
 
-  public fun build(): CfnConnectPeer.BgpOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnConnectPeer.BgpOptionsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ecs.CfnTaskSet
  * set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,23 +35,20 @@ import software.amazon.awscdk.services.ecs.CfnTaskSet
  */
 @CdkDslMarker
 public class CfnTaskSetScalePropertyDsl {
-  private val cdkBuilder: CfnTaskSet.ScaleProperty.Builder = CfnTaskSet.ScaleProperty.builder()
+    private val cdkBuilder: CfnTaskSet.ScaleProperty.Builder = CfnTaskSet.ScaleProperty.builder()
 
-  /**
-   * @param unit The unit of measure for the scale value.
-   */
-  public fun unit(unit: String) {
-    cdkBuilder.unit(unit)
-  }
+    /** @param unit The unit of measure for the scale value. */
+    public fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+    }
 
-  /**
-   * @param value The value, specified as a percent total of a service's `desiredCount` , to scale
-   * the task set.
-   * Accepted values are numbers between 0 and 100.
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value The value, specified as a percent total of a service's `desiredCount` , to scale
+     *   the task set. Accepted values are numbers between 0 and 100.
+     */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnTaskSet.ScaleProperty = cdkBuilder.build()
+    public fun build(): CfnTaskSet.ScaleProperty = cdkBuilder.build()
 }

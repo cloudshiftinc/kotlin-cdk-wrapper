@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * Dataset schema.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,23 +44,17 @@ public class CfnTemplateDataSetSchemaPropertyDsl {
 
     private val _columnSchemaList: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param columnSchemaList A structure containing the list of column schemas.
-     */
+    /** @param columnSchemaList A structure containing the list of column schemas. */
     public fun columnSchemaList(vararg columnSchemaList: Any) {
         _columnSchemaList.addAll(listOf(*columnSchemaList))
     }
 
-    /**
-     * @param columnSchemaList A structure containing the list of column schemas.
-     */
+    /** @param columnSchemaList A structure containing the list of column schemas. */
     public fun columnSchemaList(columnSchemaList: Collection<Any>) {
         _columnSchemaList.addAll(columnSchemaList)
     }
 
-    /**
-     * @param columnSchemaList A structure containing the list of column schemas.
-     */
+    /** @param columnSchemaList A structure containing the list of column schemas. */
     public fun columnSchemaList(columnSchemaList: IResolvable) {
         cdkBuilder.columnSchemaList(columnSchemaList)
     }

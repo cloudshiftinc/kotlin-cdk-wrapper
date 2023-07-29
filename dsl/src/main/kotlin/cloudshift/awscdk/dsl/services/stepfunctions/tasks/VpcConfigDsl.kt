@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig
  * Specifies the VPC that you want your Amazon SageMaker training job to connect to.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,30 +46,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig
  */
 @CdkDslMarker
 public class VpcConfigDsl {
-  private val cdkBuilder: VpcConfig.Builder = VpcConfig.builder()
+    private val cdkBuilder: VpcConfig.Builder = VpcConfig.builder()
 
-  /**
-   * @param subnets VPC subnets.
-   */
-  public fun subnets(subnets: SubnetSelectionDsl.() -> Unit = {}) {
-    val builder = SubnetSelectionDsl()
-    builder.apply(subnets)
-    cdkBuilder.subnets(builder.build())
-  }
+    /** @param subnets VPC subnets. */
+    public fun subnets(subnets: SubnetSelectionDsl.() -> Unit = {}) {
+        val builder = SubnetSelectionDsl()
+        builder.apply(subnets)
+        cdkBuilder.subnets(builder.build())
+    }
 
-  /**
-   * @param subnets VPC subnets.
-   */
-  public fun subnets(subnets: SubnetSelection) {
-    cdkBuilder.subnets(subnets)
-  }
+    /** @param subnets VPC subnets. */
+    public fun subnets(subnets: SubnetSelection) {
+        cdkBuilder.subnets(subnets)
+    }
 
-  /**
-   * @param vpc VPC. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /** @param vpc VPC. */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  public fun build(): VpcConfig = cdkBuilder.build()
+    public fun build(): VpcConfig = cdkBuilder.build()
 }

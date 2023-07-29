@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
-import kotlin.String
 
 /**
  * The period over period computation configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -515,44 +523,32 @@ public class CfnDashboardPeriodOverPeriodComputationPropertyDsl {
     private val cdkBuilder: CfnDashboard.PeriodOverPeriodComputationProperty.Builder =
         CfnDashboard.PeriodOverPeriodComputationProperty.builder()
 
-    /**
-     * @param computationId The ID for a computation.
-     */
+    /** @param computationId The ID for a computation. */
     public fun computationId(computationId: String) {
         cdkBuilder.computationId(computationId)
     }
 
-    /**
-     * @param name The name of a computation.
-     */
+    /** @param name The name of a computation. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param time The time field that is used in a computation.
-     */
+    /** @param time The time field that is used in a computation. */
     public fun time(time: IResolvable) {
         cdkBuilder.time(time)
     }
 
-    /**
-     * @param time The time field that is used in a computation.
-     */
+    /** @param time The time field that is used in a computation. */
     public fun time(time: CfnDashboard.DimensionFieldProperty) {
         cdkBuilder.time(time)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: CfnDashboard.MeasureFieldProperty) {
         cdkBuilder.`value`(`value`)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  * An object that represents a client policy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -56,24 +64,24 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  */
 @CdkDslMarker
 public class CfnVirtualNodeClientPolicyPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.ClientPolicyProperty.Builder =
-      CfnVirtualNode.ClientPolicyProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.ClientPolicyProperty.Builder =
+        CfnVirtualNode.ClientPolicyProperty.builder()
 
-  /**
-   * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-   * policy.
-   */
-  public fun tls(tls: IResolvable) {
-    cdkBuilder.tls(tls)
-  }
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+     *   policy.
+     */
+    public fun tls(tls: IResolvable) {
+        cdkBuilder.tls(tls)
+    }
 
-  /**
-   * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
-   * policy.
-   */
-  public fun tls(tls: CfnVirtualNode.ClientPolicyTlsProperty) {
-    cdkBuilder.tls(tls)
-  }
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS) client
+     *   policy.
+     */
+    public fun tls(tls: CfnVirtualNode.ClientPolicyTlsProperty) {
+        cdkBuilder.tls(tls)
+    }
 
-  public fun build(): CfnVirtualNode.ClientPolicyProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.ClientPolicyProperty = cdkBuilder.build()
 }

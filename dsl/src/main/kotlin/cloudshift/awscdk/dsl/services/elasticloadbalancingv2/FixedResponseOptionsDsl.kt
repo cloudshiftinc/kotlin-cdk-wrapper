@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptio
  * Options for `ListenerAction.fixedResponse()`.
  *
  * Example:
- *
  * ```
  * ApplicationListener listener;
  * listener.addAction("Fixed", AddApplicationActionProps.builder()
@@ -25,22 +33,20 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptio
  */
 @CdkDslMarker
 public class FixedResponseOptionsDsl {
-  private val cdkBuilder: FixedResponseOptions.Builder = FixedResponseOptions.builder()
+    private val cdkBuilder: FixedResponseOptions.Builder = FixedResponseOptions.builder()
 
-  /**
-   * @param contentType Content Type of the response.
-   * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-   */
-  public fun contentType(contentType: String) {
-    cdkBuilder.contentType(contentType)
-  }
+    /**
+     * @param contentType Content Type of the response. Valid Values: text/plain | text/css |
+     *   text/html | application/javascript | application/json
+     */
+    public fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+    }
 
-  /**
-   * @param messageBody The response body.
-   */
-  public fun messageBody(messageBody: String) {
-    cdkBuilder.messageBody(messageBody)
-  }
+    /** @param messageBody The response body. */
+    public fun messageBody(messageBody: String) {
+        cdkBuilder.messageBody(messageBody)
+    }
 
-  public fun build(): FixedResponseOptions = cdkBuilder.build()
+    public fun build(): FixedResponseOptions = cdkBuilder.build()
 }

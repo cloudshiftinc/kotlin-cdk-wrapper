@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kendra
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.kendra.CfnDataSource
  * Provides the configuration information for processing attachments to Salesforce standard objects.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,45 +44,43 @@ import software.amazon.awscdk.services.kendra.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceSalesforceStandardObjectAttachmentConfigurationPropertyDsl {
-  private val cdkBuilder:
-      CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty.Builder =
-      CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty.builder()
+    private val cdkBuilder:
+        CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty.Builder =
+        CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty.builder()
 
-  private val _fieldMappings: MutableList<Any> = mutableListOf()
+    private val _fieldMappings: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param documentTitleFieldName The name of the field used for the document title.
-   */
-  public fun documentTitleFieldName(documentTitleFieldName: String) {
-    cdkBuilder.documentTitleFieldName(documentTitleFieldName)
-  }
+    /** @param documentTitleFieldName The name of the field used for the document title. */
+    public fun documentTitleFieldName(documentTitleFieldName: String) {
+        cdkBuilder.documentTitleFieldName(documentTitleFieldName)
+    }
 
-  /**
-   * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra index
-   * fields.
-   */
-  public fun fieldMappings(vararg fieldMappings: Any) {
-    _fieldMappings.addAll(listOf(*fieldMappings))
-  }
+    /**
+     * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra
+     *   index fields.
+     */
+    public fun fieldMappings(vararg fieldMappings: Any) {
+        _fieldMappings.addAll(listOf(*fieldMappings))
+    }
 
-  /**
-   * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra index
-   * fields.
-   */
-  public fun fieldMappings(fieldMappings: Collection<Any>) {
-    _fieldMappings.addAll(fieldMappings)
-  }
+    /**
+     * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra
+     *   index fields.
+     */
+    public fun fieldMappings(fieldMappings: Collection<Any>) {
+        _fieldMappings.addAll(fieldMappings)
+    }
 
-  /**
-   * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra index
-   * fields.
-   */
-  public fun fieldMappings(fieldMappings: IResolvable) {
-    cdkBuilder.fieldMappings(fieldMappings)
-  }
+    /**
+     * @param fieldMappings One or more objects that map fields in attachments to Amazon Kendra
+     *   index fields.
+     */
+    public fun fieldMappings(fieldMappings: IResolvable) {
+        cdkBuilder.fieldMappings(fieldMappings)
+    }
 
-  public fun build(): CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty {
-    if(_fieldMappings.isNotEmpty()) cdkBuilder.fieldMappings(_fieldMappings)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty {
+        if (_fieldMappings.isNotEmpty()) cdkBuilder.fieldMappings(_fieldMappings)
+        return cdkBuilder.build()
+    }
 }

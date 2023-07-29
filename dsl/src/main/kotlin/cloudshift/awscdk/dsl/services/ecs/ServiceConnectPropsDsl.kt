@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.ecs.ServiceConnectService
  * Interface for Service Connect configuration.
  *
  * Example:
- *
  * ```
  * Cluster cluster;
  * TaskDefinition taskDefinition;
@@ -43,46 +51,40 @@ import software.amazon.awscdk.services.ecs.ServiceConnectService
  */
 @CdkDslMarker
 public class ServiceConnectPropsDsl {
-  private val cdkBuilder: ServiceConnectProps.Builder = ServiceConnectProps.builder()
+    private val cdkBuilder: ServiceConnectProps.Builder = ServiceConnectProps.builder()
 
-  private val _services: MutableList<ServiceConnectService> = mutableListOf()
+    private val _services: MutableList<ServiceConnectService> = mutableListOf()
 
-  /**
-   * @param logDriver The log driver configuration to use for the Service Connect agent logs.
-   */
-  public fun logDriver(logDriver: LogDriver) {
-    cdkBuilder.logDriver(logDriver)
-  }
+    /** @param logDriver The log driver configuration to use for the Service Connect agent logs. */
+    public fun logDriver(logDriver: LogDriver) {
+        cdkBuilder.logDriver(logDriver)
+    }
 
-  /**
-   * @param namespace The cloudmap namespace to register this service into.
-   */
-  public fun namespace(namespace: String) {
-    cdkBuilder.namespace(namespace)
-  }
+    /** @param namespace The cloudmap namespace to register this service into. */
+    public fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+    }
 
-  /**
-   * @param services The list of Services, including a port mapping, terse client alias, and
-   * optional intermediate DNS name.
-   * This property may be left blank if the current ECS service does not need to advertise any ports
-   * via Service Connect.
-   */
-  public fun services(services: ServiceConnectServiceDsl.() -> Unit) {
-    _services.add(ServiceConnectServiceDsl().apply(services).build())
-  }
+    /**
+     * @param services The list of Services, including a port mapping, terse client alias, and
+     *   optional intermediate DNS name. This property may be left blank if the current ECS service
+     *   does not need to advertise any ports via Service Connect.
+     */
+    public fun services(services: ServiceConnectServiceDsl.() -> Unit) {
+        _services.add(ServiceConnectServiceDsl().apply(services).build())
+    }
 
-  /**
-   * @param services The list of Services, including a port mapping, terse client alias, and
-   * optional intermediate DNS name.
-   * This property may be left blank if the current ECS service does not need to advertise any ports
-   * via Service Connect.
-   */
-  public fun services(services: Collection<ServiceConnectService>) {
-    _services.addAll(services)
-  }
+    /**
+     * @param services The list of Services, including a port mapping, terse client alias, and
+     *   optional intermediate DNS name. This property may be left blank if the current ECS service
+     *   does not need to advertise any ports via Service Connect.
+     */
+    public fun services(services: Collection<ServiceConnectService>) {
+        _services.addAll(services)
+    }
 
-  public fun build(): ServiceConnectProps {
-    if(_services.isNotEmpty()) cdkBuilder.services(_services)
-    return cdkBuilder.build()
-  }
+    public fun build(): ServiceConnectProps {
+        if (_services.isNotEmpty()) cdkBuilder.services(_services)
+        return cdkBuilder.build()
+    }
 }

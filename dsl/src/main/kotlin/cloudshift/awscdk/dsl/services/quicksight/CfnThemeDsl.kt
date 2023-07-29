@@ -1,29 +1,37 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTheme
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTheme
+import software.constructs.Construct
 
 /**
  * Creates a theme.
  *
  * A *theme* is set of configuration options for color and layout. Themes apply to analyses and
- * dashboards. For more information, see [Using Themes in Amazon
- * QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html) in the
- * *Amazon QuickSight User Guide* .
+ * dashboards. For more information, see
+ * [Using Themes in Amazon QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html)
+ * in the *Amazon QuickSight User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -98,7 +106,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnThemeDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnTheme.Builder = CfnTheme.Builder.create(scope, id)
 
@@ -110,6 +118,7 @@ public class CfnThemeDsl(
      * The ID of the AWS account where you want to store the new theme.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-awsaccountid)
+     *
      * @param awsAccountId The ID of the AWS account where you want to store the new theme.
      */
     public fun awsAccountId(awsAccountId: String) {
@@ -119,10 +128,11 @@ public class CfnThemeDsl(
     /**
      * The ID of the theme that a custom theme will inherit from.
      *
-     * All themes inherit from one of the starting themes defined by Amazon QuickSight. For a list of
-     * the starting themes, use `ListThemes` or choose *Themes* from within an analysis.
+     * All themes inherit from one of the starting themes defined by Amazon QuickSight. For a list
+     * of the starting themes, use `ListThemes` or choose *Themes* from within an analysis.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-basethemeid)
+     *
      * @param baseThemeId The ID of the theme that a custom theme will inherit from.
      */
     public fun baseThemeId(baseThemeId: String) {
@@ -133,6 +143,7 @@ public class CfnThemeDsl(
      * The theme configuration, which contains the theme display properties.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-configuration)
+     *
      * @param configuration The theme configuration, which contains the theme display properties.
      */
     public fun configuration(configuration: IResolvable) {
@@ -143,6 +154,7 @@ public class CfnThemeDsl(
      * The theme configuration, which contains the theme display properties.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-configuration)
+     *
      * @param configuration The theme configuration, which contains the theme display properties.
      */
     public fun configuration(configuration: CfnTheme.ThemeConfigurationProperty) {
@@ -153,6 +165,7 @@ public class CfnThemeDsl(
      * A display name for the theme.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-name)
+     *
      * @param name A display name for the theme.
      */
     public fun name(name: String) {
@@ -163,6 +176,7 @@ public class CfnThemeDsl(
      * A valid grouping of resource permissions to apply to the new theme.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-permissions)
+     *
      * @param permissions A valid grouping of resource permissions to apply to the new theme.
      */
     public fun permissions(vararg permissions: Any) {
@@ -173,6 +187,7 @@ public class CfnThemeDsl(
      * A valid grouping of resource permissions to apply to the new theme.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-permissions)
+     *
      * @param permissions A valid grouping of resource permissions to apply to the new theme.
      */
     public fun permissions(permissions: Collection<Any>) {
@@ -183,6 +198,7 @@ public class CfnThemeDsl(
      * A valid grouping of resource permissions to apply to the new theme.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-permissions)
+     *
      * @param permissions A valid grouping of resource permissions to apply to the new theme.
      */
     public fun permissions(permissions: IResolvable) {
@@ -190,22 +206,26 @@ public class CfnThemeDsl(
     }
 
     /**
-     * A map of the key-value pairs for the resource tag or tags that you want to add to the resource.
+     * A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-tags)
+     *
      * @param tags A map of the key-value pairs for the resource tag or tags that you want to add to
-     * the resource.
+     *   the resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * A map of the key-value pairs for the resource tag or tags that you want to add to the resource.
+     * A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-tags)
+     *
      * @param tags A map of the key-value pairs for the resource tag or tags that you want to add to
-     * the resource.
+     *   the resource.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
@@ -217,6 +237,7 @@ public class CfnThemeDsl(
      * The theme ID is unique per AWS Region in each AWS account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-themeid)
+     *
      * @param themeId An ID for the theme that you want to create.
      */
     public fun themeId(themeId: String) {
@@ -230,8 +251,9 @@ public class CfnThemeDsl(
      * description of the version in the `VersionDescription` field.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html#cfn-quicksight-theme-versiondescription)
-     * @param versionDescription A description of the first version of the theme that you're creating.
      *
+     * @param versionDescription A description of the first version of the theme that you're
+     *   creating.
      */
     public fun versionDescription(versionDescription: String) {
         cdkBuilder.versionDescription(versionDescription)

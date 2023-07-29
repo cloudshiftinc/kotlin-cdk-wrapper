@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociationProps
  * Properties for defining a `CfnSubnetNetworkAclAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociationProps
  */
 @CdkDslMarker
 public class CfnSubnetNetworkAclAssociationPropsDsl {
-  private val cdkBuilder: CfnSubnetNetworkAclAssociationProps.Builder =
-      CfnSubnetNetworkAclAssociationProps.builder()
+    private val cdkBuilder: CfnSubnetNetworkAclAssociationProps.Builder =
+        CfnSubnetNetworkAclAssociationProps.builder()
 
-  /**
-   * @param networkAclId The ID of the network ACL. 
-   */
-  public fun networkAclId(networkAclId: String) {
-    cdkBuilder.networkAclId(networkAclId)
-  }
+    /** @param networkAclId The ID of the network ACL. */
+    public fun networkAclId(networkAclId: String) {
+        cdkBuilder.networkAclId(networkAclId)
+    }
 
-  /**
-   * @param subnetId The ID of the subnet. 
-   */
-  public fun subnetId(subnetId: String) {
-    cdkBuilder.subnetId(subnetId)
-  }
+    /** @param subnetId The ID of the subnet. */
+    public fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+    }
 
-  public fun build(): CfnSubnetNetworkAclAssociationProps = cdkBuilder.build()
+    public fun build(): CfnSubnetNetworkAclAssociationProps = cdkBuilder.build()
 }

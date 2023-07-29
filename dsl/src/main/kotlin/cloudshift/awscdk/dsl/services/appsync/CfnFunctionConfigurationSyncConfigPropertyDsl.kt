@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
  * invoked.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,46 +41,48 @@ import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
  */
 @CdkDslMarker
 public class CfnFunctionConfigurationSyncConfigPropertyDsl {
-  private val cdkBuilder: CfnFunctionConfiguration.SyncConfigProperty.Builder =
-      CfnFunctionConfiguration.SyncConfigProperty.builder()
+    private val cdkBuilder: CfnFunctionConfiguration.SyncConfigProperty.Builder =
+        CfnFunctionConfiguration.SyncConfigProperty.builder()
 
-  /**
-   * @param conflictDetection The Conflict Detection strategy to use. 
-   * * *VERSION* : Detect conflicts based on object versions for this resolver.
-   * * *NONE* : Do not detect conflicts when invoking this resolver.
-   */
-  public fun conflictDetection(conflictDetection: String) {
-    cdkBuilder.conflictDetection(conflictDetection)
-  }
+    /**
+     * @param conflictDetection The Conflict Detection strategy to use.
+     * * *VERSION* : Detect conflicts based on object versions for this resolver.
+     * * *NONE* : Do not detect conflicts when invoking this resolver.
+     */
+    public fun conflictDetection(conflictDetection: String) {
+        cdkBuilder.conflictDetection(conflictDetection)
+    }
 
-  /**
-   * @param conflictHandler The Conflict Resolution strategy to perform in the event of a conflict.
-   * * *OPTIMISTIC_CONCURRENCY* : Resolve conflicts by rejecting mutations when versions don't match
-   * the latest version at the server.
-   * * *AUTOMERGE* : Resolve conflicts with the Automerge conflict resolution strategy.
-   * * *LAMBDA* : Resolve conflicts with an AWS Lambda function supplied in the
-   * `LambdaConflictHandlerConfig` .
-   */
-  public fun conflictHandler(conflictHandler: String) {
-    cdkBuilder.conflictHandler(conflictHandler)
-  }
+    /**
+     * @param conflictHandler The Conflict Resolution strategy to perform in the event of a
+     *   conflict.
+     * * *OPTIMISTIC_CONCURRENCY* : Resolve conflicts by rejecting mutations when versions don't
+     *   match the latest version at the server.
+     * * *AUTOMERGE* : Resolve conflicts with the Automerge conflict resolution strategy.
+     * * *LAMBDA* : Resolve conflicts with an AWS Lambda function supplied in the
+     *   `LambdaConflictHandlerConfig` .
+     */
+    public fun conflictHandler(conflictHandler: String) {
+        cdkBuilder.conflictHandler(conflictHandler)
+    }
 
-  /**
-   * @param lambdaConflictHandlerConfig The `LambdaConflictHandlerConfig` when configuring `LAMBDA`
-   * as the Conflict Handler.
-   */
-  public fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable) {
-    cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig)
-  }
+    /**
+     * @param lambdaConflictHandlerConfig The `LambdaConflictHandlerConfig` when configuring
+     *   `LAMBDA` as the Conflict Handler.
+     */
+    public fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable) {
+        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig)
+    }
 
-  /**
-   * @param lambdaConflictHandlerConfig The `LambdaConflictHandlerConfig` when configuring `LAMBDA`
-   * as the Conflict Handler.
-   */
-  public
-      fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty) {
-    cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig)
-  }
+    /**
+     * @param lambdaConflictHandlerConfig The `LambdaConflictHandlerConfig` when configuring
+     *   `LAMBDA` as the Conflict Handler.
+     */
+    public fun lambdaConflictHandlerConfig(
+        lambdaConflictHandlerConfig: CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
+    ) {
+        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig)
+    }
 
-  public fun build(): CfnFunctionConfiguration.SyncConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFunctionConfiguration.SyncConfigProperty = cdkBuilder.build()
 }

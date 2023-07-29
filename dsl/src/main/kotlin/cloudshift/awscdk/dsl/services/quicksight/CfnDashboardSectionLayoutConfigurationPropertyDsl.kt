@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The layout configuration of a section.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -57,23 +65,20 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardSectionLayoutConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.SectionLayoutConfigurationProperty.Builder =
-      CfnDashboard.SectionLayoutConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.SectionLayoutConfigurationProperty.Builder =
+        CfnDashboard.SectionLayoutConfigurationProperty.builder()
 
-  /**
-   * @param freeFormLayout The free-form layout configuration of a section. 
-   */
-  public fun freeFormLayout(freeFormLayout: IResolvable) {
-    cdkBuilder.freeFormLayout(freeFormLayout)
-  }
+    /** @param freeFormLayout The free-form layout configuration of a section. */
+    public fun freeFormLayout(freeFormLayout: IResolvable) {
+        cdkBuilder.freeFormLayout(freeFormLayout)
+    }
 
-  /**
-   * @param freeFormLayout The free-form layout configuration of a section. 
-   */
-  public
-      fun freeFormLayout(freeFormLayout: CfnDashboard.FreeFormSectionLayoutConfigurationProperty) {
-    cdkBuilder.freeFormLayout(freeFormLayout)
-  }
+    /** @param freeFormLayout The free-form layout configuration of a section. */
+    public fun freeFormLayout(
+        freeFormLayout: CfnDashboard.FreeFormSectionLayoutConfigurationProperty
+    ) {
+        cdkBuilder.freeFormLayout(freeFormLayout)
+    }
 
-  public fun build(): CfnDashboard.SectionLayoutConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.SectionLayoutConfigurationProperty = cdkBuilder.build()
 }

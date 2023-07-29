@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.omics
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.omics.CfnRunGroupProps
  * Properties for defining a `CfnRunGroup`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,42 +39,32 @@ import software.amazon.awscdk.services.omics.CfnRunGroupProps
  */
 @CdkDslMarker
 public class CfnRunGroupPropsDsl {
-  private val cdkBuilder: CfnRunGroupProps.Builder = CfnRunGroupProps.builder()
+    private val cdkBuilder: CfnRunGroupProps.Builder = CfnRunGroupProps.builder()
 
-  /**
-   * @param maxCpus The group's maximum CPU count setting.
-   */
-  public fun maxCpus(maxCpus: Number) {
-    cdkBuilder.maxCpus(maxCpus)
-  }
+    /** @param maxCpus The group's maximum CPU count setting. */
+    public fun maxCpus(maxCpus: Number) {
+        cdkBuilder.maxCpus(maxCpus)
+    }
 
-  /**
-   * @param maxDuration The group's maximum duration setting in minutes.
-   */
-  public fun maxDuration(maxDuration: Number) {
-    cdkBuilder.maxDuration(maxDuration)
-  }
+    /** @param maxDuration The group's maximum duration setting in minutes. */
+    public fun maxDuration(maxDuration: Number) {
+        cdkBuilder.maxDuration(maxDuration)
+    }
 
-  /**
-   * @param maxRuns The group's maximum concurrent run setting.
-   */
-  public fun maxRuns(maxRuns: Number) {
-    cdkBuilder.maxRuns(maxRuns)
-  }
+    /** @param maxRuns The group's maximum concurrent run setting. */
+    public fun maxRuns(maxRuns: Number) {
+        cdkBuilder.maxRuns(maxRuns)
+    }
 
-  /**
-   * @param name The group's name.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The group's name. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param tags Tags for the group.
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags Tags for the group. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnRunGroupProps = cdkBuilder.build()
+    public fun build(): CfnRunGroupProps = cdkBuilder.build()
 }

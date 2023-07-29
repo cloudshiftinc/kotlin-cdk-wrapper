@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The cluster marker that is a part of the cluster marker configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardClusterMarkerPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ClusterMarkerProperty.Builder =
-      CfnDashboard.ClusterMarkerProperty.builder()
+    private val cdkBuilder: CfnDashboard.ClusterMarkerProperty.Builder =
+        CfnDashboard.ClusterMarkerProperty.builder()
 
-  /**
-   * @param simpleClusterMarker The simple cluster marker of the cluster marker.
-   */
-  public fun simpleClusterMarker(simpleClusterMarker: IResolvable) {
-    cdkBuilder.simpleClusterMarker(simpleClusterMarker)
-  }
+    /** @param simpleClusterMarker The simple cluster marker of the cluster marker. */
+    public fun simpleClusterMarker(simpleClusterMarker: IResolvable) {
+        cdkBuilder.simpleClusterMarker(simpleClusterMarker)
+    }
 
-  /**
-   * @param simpleClusterMarker The simple cluster marker of the cluster marker.
-   */
-  public fun simpleClusterMarker(simpleClusterMarker: CfnDashboard.SimpleClusterMarkerProperty) {
-    cdkBuilder.simpleClusterMarker(simpleClusterMarker)
-  }
+    /** @param simpleClusterMarker The simple cluster marker of the cluster marker. */
+    public fun simpleClusterMarker(simpleClusterMarker: CfnDashboard.SimpleClusterMarkerProperty) {
+        cdkBuilder.simpleClusterMarker(simpleClusterMarker)
+    }
 
-  public fun build(): CfnDashboard.ClusterMarkerProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ClusterMarkerProperty = cdkBuilder.build()
 }

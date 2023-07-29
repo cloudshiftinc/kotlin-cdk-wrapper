@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDataSet
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
  * A transform operation that filters rows based on a condition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,8 +36,8 @@ public class CfnDataSetFilterOperationPropertyDsl {
         CfnDataSet.FilterOperationProperty.builder()
 
     /**
-     * @param conditionExpression An expression that must evaluate to a Boolean value.
-     * Rows for which the expression evaluates to true are kept in the dataset.
+     * @param conditionExpression An expression that must evaluate to a Boolean value. Rows for
+     *   which the expression evaluates to true are kept in the dataset.
      */
     public fun conditionExpression(conditionExpression: String) {
         cdkBuilder.conditionExpression(conditionExpression)

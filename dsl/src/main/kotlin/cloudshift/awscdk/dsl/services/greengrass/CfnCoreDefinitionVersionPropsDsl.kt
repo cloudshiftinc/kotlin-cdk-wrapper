@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersionProps
  * Properties for defining a `CfnCoreDefinitionVersion`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,45 +44,45 @@ import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersionProps
  */
 @CdkDslMarker
 public class CfnCoreDefinitionVersionPropsDsl {
-  private val cdkBuilder: CfnCoreDefinitionVersionProps.Builder =
-      CfnCoreDefinitionVersionProps.builder()
+    private val cdkBuilder: CfnCoreDefinitionVersionProps.Builder =
+        CfnCoreDefinitionVersionProps.builder()
 
-  private val _cores: MutableList<Any> = mutableListOf()
+    private val _cores: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param coreDefinitionId The ID of the core definition associated with this version. 
-   * This value is a GUID.
-   */
-  public fun coreDefinitionId(coreDefinitionId: String) {
-    cdkBuilder.coreDefinitionId(coreDefinitionId)
-  }
+    /**
+     * @param coreDefinitionId The ID of the core definition associated with this version. This
+     *   value is a GUID.
+     */
+    public fun coreDefinitionId(coreDefinitionId: String) {
+        cdkBuilder.coreDefinitionId(coreDefinitionId)
+    }
 
-  /**
-   * @param cores The Greengrass core in this version. 
-   * Currently, the `Cores` property for a core definition version can contain only one core.
-   */
-  public fun cores(vararg cores: Any) {
-    _cores.addAll(listOf(*cores))
-  }
+    /**
+     * @param cores The Greengrass core in this version. Currently, the `Cores` property for a core
+     *   definition version can contain only one core.
+     */
+    public fun cores(vararg cores: Any) {
+        _cores.addAll(listOf(*cores))
+    }
 
-  /**
-   * @param cores The Greengrass core in this version. 
-   * Currently, the `Cores` property for a core definition version can contain only one core.
-   */
-  public fun cores(cores: Collection<Any>) {
-    _cores.addAll(cores)
-  }
+    /**
+     * @param cores The Greengrass core in this version. Currently, the `Cores` property for a core
+     *   definition version can contain only one core.
+     */
+    public fun cores(cores: Collection<Any>) {
+        _cores.addAll(cores)
+    }
 
-  /**
-   * @param cores The Greengrass core in this version. 
-   * Currently, the `Cores` property for a core definition version can contain only one core.
-   */
-  public fun cores(cores: IResolvable) {
-    cdkBuilder.cores(cores)
-  }
+    /**
+     * @param cores The Greengrass core in this version. Currently, the `Cores` property for a core
+     *   definition version can contain only one core.
+     */
+    public fun cores(cores: IResolvable) {
+        cdkBuilder.cores(cores)
+    }
 
-  public fun build(): CfnCoreDefinitionVersionProps {
-    if(_cores.isNotEmpty()) cdkBuilder.cores(_cores)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnCoreDefinitionVersionProps {
+        if (_cores.isNotEmpty()) cdkBuilder.cores(_cores)
+        return cdkBuilder.build()
+    }
 }

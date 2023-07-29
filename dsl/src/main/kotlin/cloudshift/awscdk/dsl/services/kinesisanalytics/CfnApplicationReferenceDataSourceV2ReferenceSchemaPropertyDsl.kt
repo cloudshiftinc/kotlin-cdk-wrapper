@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  * in-application stream.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,56 +58,48 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceV2ReferenceSchemaPropertyDsl {
-  private val cdkBuilder: CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.Builder =
-      CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.builder()
+    private val cdkBuilder: CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.Builder =
+        CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.builder()
 
-  private val _recordColumns: MutableList<Any> = mutableListOf()
+    private val _recordColumns: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param recordColumns A list of `RecordColumn` objects. 
-   */
-  public fun recordColumns(vararg recordColumns: Any) {
-    _recordColumns.addAll(listOf(*recordColumns))
-  }
+    /** @param recordColumns A list of `RecordColumn` objects. */
+    public fun recordColumns(vararg recordColumns: Any) {
+        _recordColumns.addAll(listOf(*recordColumns))
+    }
 
-  /**
-   * @param recordColumns A list of `RecordColumn` objects. 
-   */
-  public fun recordColumns(recordColumns: Collection<Any>) {
-    _recordColumns.addAll(recordColumns)
-  }
+    /** @param recordColumns A list of `RecordColumn` objects. */
+    public fun recordColumns(recordColumns: Collection<Any>) {
+        _recordColumns.addAll(recordColumns)
+    }
 
-  /**
-   * @param recordColumns A list of `RecordColumn` objects. 
-   */
-  public fun recordColumns(recordColumns: IResolvable) {
-    cdkBuilder.recordColumns(recordColumns)
-  }
+    /** @param recordColumns A list of `RecordColumn` objects. */
+    public fun recordColumns(recordColumns: IResolvable) {
+        cdkBuilder.recordColumns(recordColumns)
+    }
 
-  /**
-   * @param recordEncoding Specifies the encoding of the records in the streaming source.
-   * For example, UTF-8.
-   */
-  public fun recordEncoding(recordEncoding: String) {
-    cdkBuilder.recordEncoding(recordEncoding)
-  }
+    /**
+     * @param recordEncoding Specifies the encoding of the records in the streaming source. For
+     *   example, UTF-8.
+     */
+    public fun recordEncoding(recordEncoding: String) {
+        cdkBuilder.recordEncoding(recordEncoding)
+    }
 
-  /**
-   * @param recordFormat Specifies the format of the records on the streaming source. 
-   */
-  public fun recordFormat(recordFormat: IResolvable) {
-    cdkBuilder.recordFormat(recordFormat)
-  }
+    /** @param recordFormat Specifies the format of the records on the streaming source. */
+    public fun recordFormat(recordFormat: IResolvable) {
+        cdkBuilder.recordFormat(recordFormat)
+    }
 
-  /**
-   * @param recordFormat Specifies the format of the records on the streaming source. 
-   */
-  public fun recordFormat(recordFormat: CfnApplicationReferenceDataSourceV2.RecordFormatProperty) {
-    cdkBuilder.recordFormat(recordFormat)
-  }
+    /** @param recordFormat Specifies the format of the records on the streaming source. */
+    public fun recordFormat(
+        recordFormat: CfnApplicationReferenceDataSourceV2.RecordFormatProperty
+    ) {
+        cdkBuilder.recordFormat(recordFormat)
+    }
 
-  public fun build(): CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty {
-    if(_recordColumns.isNotEmpty()) cdkBuilder.recordColumns(_recordColumns)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty {
+        if (_recordColumns.isNotEmpty()) cdkBuilder.recordColumns(_recordColumns)
+        return cdkBuilder.build()
+    }
 }

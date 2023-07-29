@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.apigateway.CfnApiKey
  * clients with the key to make requests to methods in that stage.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,21 +36,18 @@ import software.amazon.awscdk.services.apigateway.CfnApiKey
  */
 @CdkDslMarker
 public class CfnApiKeyStageKeyPropertyDsl {
-  private val cdkBuilder: CfnApiKey.StageKeyProperty.Builder = CfnApiKey.StageKeyProperty.builder()
+    private val cdkBuilder: CfnApiKey.StageKeyProperty.Builder =
+        CfnApiKey.StageKeyProperty.builder()
 
-  /**
-   * @param restApiId The string identifier of the associated RestApi.
-   */
-  public fun restApiId(restApiId: String) {
-    cdkBuilder.restApiId(restApiId)
-  }
+    /** @param restApiId The string identifier of the associated RestApi. */
+    public fun restApiId(restApiId: String) {
+        cdkBuilder.restApiId(restApiId)
+    }
 
-  /**
-   * @param stageName The stage name associated with the stage key.
-   */
-  public fun stageName(stageName: String) {
-    cdkBuilder.stageName(stageName)
-  }
+    /** @param stageName The stage name associated with the stage key. */
+    public fun stageName(stageName: String) {
+        cdkBuilder.stageName(stageName)
+    }
 
-  public fun build(): CfnApiKey.StageKeyProperty = cdkBuilder.build()
+    public fun build(): CfnApiKey.StageKeyProperty = cdkBuilder.build()
 }

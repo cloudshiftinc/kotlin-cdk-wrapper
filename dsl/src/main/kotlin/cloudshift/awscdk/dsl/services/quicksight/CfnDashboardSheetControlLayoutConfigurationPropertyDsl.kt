@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The configuration that determines the elements and canvas size options of sheet control.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,7 +56,7 @@ public class CfnDashboardSheetControlLayoutConfigurationPropertyDsl {
 
     /**
      * @param gridLayout The configuration that determines the elements and canvas size options of
-     * sheet control.
+     *   sheet control.
      */
     public fun gridLayout(gridLayout: IResolvable) {
         cdkBuilder.gridLayout(gridLayout)
@@ -56,7 +64,7 @@ public class CfnDashboardSheetControlLayoutConfigurationPropertyDsl {
 
     /**
      * @param gridLayout The configuration that determines the elements and canvas size options of
-     * sheet control.
+     *   sheet control.
      */
     public fun gridLayout(gridLayout: CfnDashboard.GridLayoutConfigurationProperty) {
         cdkBuilder.gridLayout(gridLayout)

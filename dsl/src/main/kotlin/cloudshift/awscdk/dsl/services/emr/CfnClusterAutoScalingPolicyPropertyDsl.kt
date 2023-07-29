@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emr
 
@@ -13,12 +22,11 @@ import software.amazon.awscdk.services.emr.CfnCluster
  * `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
  *
  * `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances
- * in response to the value of a CloudWatch metric. For more information, see [Using Automatic Scaling
- * in Amazon EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html)
+ * in response to the value of a CloudWatch metric. For more information, see
+ * [Using Automatic Scaling in Amazon EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html)
  * in the *Amazon EMR Management Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -67,54 +75,46 @@ import software.amazon.awscdk.services.emr.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterAutoScalingPolicyPropertyDsl {
-  private val cdkBuilder: CfnCluster.AutoScalingPolicyProperty.Builder =
-      CfnCluster.AutoScalingPolicyProperty.builder()
+    private val cdkBuilder: CfnCluster.AutoScalingPolicyProperty.Builder =
+        CfnCluster.AutoScalingPolicyProperty.builder()
 
-  private val _rules: MutableList<Any> = mutableListOf()
+    private val _rules: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-   * policy. 
-   * Automatic scaling activity will not cause an instance group to grow above or below these
-   * limits.
-   */
-  public fun constraints(constraints: IResolvable) {
-    cdkBuilder.constraints(constraints)
-  }
+    /**
+     * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+     *   policy. Automatic scaling activity will not cause an instance group to grow above or below
+     *   these limits.
+     */
+    public fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  /**
-   * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-   * policy. 
-   * Automatic scaling activity will not cause an instance group to grow above or below these
-   * limits.
-   */
-  public fun constraints(constraints: CfnCluster.ScalingConstraintsProperty) {
-    cdkBuilder.constraints(constraints)
-  }
+    /**
+     * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+     *   policy. Automatic scaling activity will not cause an instance group to grow above or below
+     *   these limits.
+     */
+    public fun constraints(constraints: CfnCluster.ScalingConstraintsProperty) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  /**
-   * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-   */
-  public fun rules(vararg rules: Any) {
-    _rules.addAll(listOf(*rules))
-  }
+    /** @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. */
+    public fun rules(vararg rules: Any) {
+        _rules.addAll(listOf(*rules))
+    }
 
-  /**
-   * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-   */
-  public fun rules(rules: Collection<Any>) {
-    _rules.addAll(rules)
-  }
+    /** @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. */
+    public fun rules(rules: Collection<Any>) {
+        _rules.addAll(rules)
+    }
 
-  /**
-   * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-   */
-  public fun rules(rules: IResolvable) {
-    cdkBuilder.rules(rules)
-  }
+    /** @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. */
+    public fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules)
+    }
 
-  public fun build(): CfnCluster.AutoScalingPolicyProperty {
-    if(_rules.isNotEmpty()) cdkBuilder.rules(_rules)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnCluster.AutoScalingPolicyProperty {
+        if (_rules.isNotEmpty()) cdkBuilder.rules(_rules)
+        return cdkBuilder.build()
+    }
 }

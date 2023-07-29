@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.batch
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
  * An object that contains the properties for the Kubernetes resources of a job.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -79,22 +87,18 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
  */
 @CdkDslMarker
 public class CfnJobDefinitionEksPropertiesPropertyDsl {
-  private val cdkBuilder: CfnJobDefinition.EksPropertiesProperty.Builder =
-      CfnJobDefinition.EksPropertiesProperty.builder()
+    private val cdkBuilder: CfnJobDefinition.EksPropertiesProperty.Builder =
+        CfnJobDefinition.EksPropertiesProperty.builder()
 
-  /**
-   * @param podProperties The properties for the Kubernetes pod resources of a job.
-   */
-  public fun podProperties(podProperties: IResolvable) {
-    cdkBuilder.podProperties(podProperties)
-  }
+    /** @param podProperties The properties for the Kubernetes pod resources of a job. */
+    public fun podProperties(podProperties: IResolvable) {
+        cdkBuilder.podProperties(podProperties)
+    }
 
-  /**
-   * @param podProperties The properties for the Kubernetes pod resources of a job.
-   */
-  public fun podProperties(podProperties: CfnJobDefinition.PodPropertiesProperty) {
-    cdkBuilder.podProperties(podProperties)
-  }
+    /** @param podProperties The properties for the Kubernetes pod resources of a job. */
+    public fun podProperties(podProperties: CfnJobDefinition.PodPropertiesProperty) {
+        cdkBuilder.podProperties(podProperties)
+    }
 
-  public fun build(): CfnJobDefinition.EksPropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnJobDefinition.EksPropertiesProperty = cdkBuilder.build()
 }

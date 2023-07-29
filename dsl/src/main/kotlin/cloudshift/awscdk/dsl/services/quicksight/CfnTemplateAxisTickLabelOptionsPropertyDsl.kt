@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The tick label options of an axis.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,29 +49,23 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateAxisTickLabelOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.AxisTickLabelOptionsProperty.Builder =
-      CfnTemplate.AxisTickLabelOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.AxisTickLabelOptionsProperty.Builder =
+        CfnTemplate.AxisTickLabelOptionsProperty.builder()
 
-  /**
-   * @param labelOptions Determines whether or not the axis ticks are visible.
-   */
-  public fun labelOptions(labelOptions: IResolvable) {
-    cdkBuilder.labelOptions(labelOptions)
-  }
+    /** @param labelOptions Determines whether or not the axis ticks are visible. */
+    public fun labelOptions(labelOptions: IResolvable) {
+        cdkBuilder.labelOptions(labelOptions)
+    }
 
-  /**
-   * @param labelOptions Determines whether or not the axis ticks are visible.
-   */
-  public fun labelOptions(labelOptions: CfnTemplate.LabelOptionsProperty) {
-    cdkBuilder.labelOptions(labelOptions)
-  }
+    /** @param labelOptions Determines whether or not the axis ticks are visible. */
+    public fun labelOptions(labelOptions: CfnTemplate.LabelOptionsProperty) {
+        cdkBuilder.labelOptions(labelOptions)
+    }
 
-  /**
-   * @param rotationAngle The rotation angle of the axis tick labels.
-   */
-  public fun rotationAngle(rotationAngle: Number) {
-    cdkBuilder.rotationAngle(rotationAngle)
-  }
+    /** @param rotationAngle The rotation angle of the axis tick labels. */
+    public fun rotationAngle(rotationAngle: Number) {
+        cdkBuilder.rotationAngle(rotationAngle)
+    }
 
-  public fun build(): CfnTemplate.AxisTickLabelOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.AxisTickLabelOptionsProperty = cdkBuilder.build()
 }

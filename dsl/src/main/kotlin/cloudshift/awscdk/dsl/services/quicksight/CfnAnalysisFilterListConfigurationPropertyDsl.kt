@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * A list of filter configurations.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,30 +43,27 @@ public class CfnAnalysisFilterListConfigurationPropertyDsl {
 
     private val _categoryValues: MutableList<String> = mutableListOf()
 
-    /**
-     * @param categoryValues The list of category values for the filter.
-     */
+    /** @param categoryValues The list of category values for the filter. */
     public fun categoryValues(vararg categoryValues: String) {
         _categoryValues.addAll(listOf(*categoryValues))
     }
 
-    /**
-     * @param categoryValues The list of category values for the filter.
-     */
+    /** @param categoryValues The list of category values for the filter. */
     public fun categoryValues(categoryValues: Collection<String>) {
         _categoryValues.addAll(categoryValues)
     }
 
     /**
      * @param matchOperator The match operator that is used to determine if a filter should be
-     * applied.
+     *   applied.
      */
     public fun matchOperator(matchOperator: String) {
         cdkBuilder.matchOperator(matchOperator)
     }
 
     /**
-     * @param selectAllOptions Select all of the values. Null is not the assigned value of select all.
+     * @param selectAllOptions Select all of the values. Null is not the assigned value of select
+     *   all.
      * * `FILTER_ALL_VALUES`
      */
     public fun selectAllOptions(selectAllOptions: String) {

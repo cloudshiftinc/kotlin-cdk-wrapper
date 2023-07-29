@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The sheet layout maximization options of a dashbaord.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,5 +43,6 @@ public class CfnDashboardSheetLayoutElementMaximizationOptionPropertyDsl {
         cdkBuilder.availabilityStatus(availabilityStatus)
     }
 
-    public fun build(): CfnDashboard.SheetLayoutElementMaximizationOptionProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.SheetLayoutElementMaximizationOptionProperty =
+        cdkBuilder.build()
 }

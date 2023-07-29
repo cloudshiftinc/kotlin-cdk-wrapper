@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kendra
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.kendra.CfnDataSource
  * Each metadata file contains metadata about a single document.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,17 +36,17 @@ import software.amazon.awscdk.services.kendra.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceDocumentsMetadataConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDataSource.DocumentsMetadataConfigurationProperty.Builder =
-      CfnDataSource.DocumentsMetadataConfigurationProperty.builder()
+    private val cdkBuilder: CfnDataSource.DocumentsMetadataConfigurationProperty.Builder =
+        CfnDataSource.DocumentsMetadataConfigurationProperty.builder()
 
-  /**
-   * @param s3Prefix A prefix used to filter metadata configuration files in the AWS S3 bucket.
-   * The S3 bucket might contain multiple metadata files. Use `S3Prefix` to include only the desired
-   * metadata files.
-   */
-  public fun s3Prefix(s3Prefix: String) {
-    cdkBuilder.s3Prefix(s3Prefix)
-  }
+    /**
+     * @param s3Prefix A prefix used to filter metadata configuration files in the AWS S3 bucket.
+     *   The S3 bucket might contain multiple metadata files. Use `S3Prefix` to include only the
+     *   desired metadata files.
+     */
+    public fun s3Prefix(s3Prefix: String) {
+        cdkBuilder.s3Prefix(s3Prefix)
+    }
 
-  public fun build(): CfnDataSource.DocumentsMetadataConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.DocumentsMetadataConfigurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  * Use `FormInputValueProperty` to specify the values to render or bind by default.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,15 +35,13 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
  */
 @CdkDslMarker
 public class CfnFormFormInputValuePropertyPropertyDsl {
-  private val cdkBuilder: CfnForm.FormInputValuePropertyProperty.Builder =
-      CfnForm.FormInputValuePropertyProperty.builder()
+    private val cdkBuilder: CfnForm.FormInputValuePropertyProperty.Builder =
+        CfnForm.FormInputValuePropertyProperty.builder()
 
-  /**
-   * @param value The value to assign to the input field.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value to assign to the input field. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnForm.FormInputValuePropertyProperty = cdkBuilder.build()
+    public fun build(): CfnForm.FormInputValuePropertyProperty = cdkBuilder.build()
 }

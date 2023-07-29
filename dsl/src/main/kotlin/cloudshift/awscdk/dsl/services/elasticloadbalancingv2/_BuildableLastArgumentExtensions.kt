@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -30,65 +39,69 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase
 /**
  * Perform the given default action on incoming requests.
  *
- * This allows full control of the default action of the load balancer,
- * including Action chaining, fixed responses and redirect responses. See
- * the `ListenerAction` class for all options.
+ * This allows full control of the default action of the load balancer, including Action chaining,
+ * fixed responses and redirect responses. See the `ListenerAction` class for all options.
  *
- * It's possible to add routing conditions to the Action added in this way.
- * At least one Action must be added without conditions (which becomes the
- * default Action).
+ * It's possible to add routing conditions to the Action added in this way. At least one Action must
+ * be added without conditions (which becomes the default Action).
  *
- * @param id 
- * @param props 
+ * @param id
+ * @param props
  */
-public inline fun ApplicationListener.addAction(id: String,
-    block: AddApplicationActionPropsDsl.() -> Unit = {}) {
-  val builder = AddApplicationActionPropsDsl()
-  builder.apply(block)
-  return addAction(id, builder.build())
+public inline fun ApplicationListener.addAction(
+    id: String,
+    block: AddApplicationActionPropsDsl.() -> Unit = {}
+) {
+    val builder = AddApplicationActionPropsDsl()
+    builder.apply(block)
+    return addAction(id, builder.build())
 }
 
 /**
  * Load balance incoming requests to the given target groups.
  *
- * All target groups will be load balanced to with equal weight and without
- * stickiness. For a more complex configuration than that, use `addAction()`.
+ * All target groups will be load balanced to with equal weight and without stickiness. For a more
+ * complex configuration than that, use `addAction()`.
  *
- * It's possible to add routing conditions to the TargetGroups added in this
- * way. At least one TargetGroup must be added without conditions (which will
- * become the default Action for this listener).
+ * It's possible to add routing conditions to the TargetGroups added in this way. At least one
+ * TargetGroup must be added without conditions (which will become the default Action for this
+ * listener).
  *
- * @param id 
- * @param props 
+ * @param id
+ * @param props
  */
-public inline fun ApplicationListener.addTargetGroups(id: String,
-    block: AddApplicationTargetGroupsPropsDsl.() -> Unit = {}) {
-  val builder = AddApplicationTargetGroupsPropsDsl()
-  builder.apply(block)
-  return addTargetGroups(id, builder.build())
+public inline fun ApplicationListener.addTargetGroups(
+    id: String,
+    block: AddApplicationTargetGroupsPropsDsl.() -> Unit = {}
+) {
+    val builder = AddApplicationTargetGroupsPropsDsl()
+    builder.apply(block)
+    return addTargetGroups(id, builder.build())
 }
 
 /**
  * Load balance incoming requests to the given load balancing targets.
  *
- * This method implicitly creates an ApplicationTargetGroup for the targets
- * involved, and a 'forward' action to route traffic to the given TargetGroup.
+ * This method implicitly creates an ApplicationTargetGroup for the targets involved, and a
+ * 'forward' action to route traffic to the given TargetGroup.
  *
- * If you want more control over the precise setup, create the TargetGroup
- * and use `addAction` yourself.
+ * If you want more control over the precise setup, create the TargetGroup and use `addAction`
+ * yourself.
  *
- * It's possible to add conditions to the targets added in this way. At least
- * one set of targets must be added without conditions.
+ * It's possible to add conditions to the targets added in this way. At least one set of targets
+ * must be added without conditions.
  *
+ * @param id
+ * @param props
  * @return The newly created target group
- * @param id 
- * @param props 
  */
-public inline fun ApplicationListener.addTargets(id: String,
-    block: AddApplicationTargetsPropsDsl.() -> Unit = {}): ApplicationTargetGroup {
-  val builder = AddApplicationTargetsPropsDsl()
-  builder.apply(block)
-  return addTargets(id, builder.build())
+public inline fun ApplicationListener.addTargets(
+    id: String,
+    block: AddApplicationTargetsPropsDsl.() -> Unit = {}
+): ApplicationTargetGroup {
+    val builder = AddApplicationTargetsPropsDsl()
+    builder.apply(block)
+    return addTargets(id, builder.build())
 }
 
 /**
@@ -96,28 +109,32 @@ public inline fun ApplicationListener.addTargets(id: String,
  *
  * Don't call this directly. It is called by ApplicationTargetGroup.
  *
- * @param connectable 
- * @param portRange 
+ * @param connectable
+ * @param portRange
  */
-public inline fun ApplicationListener.registerConnectable(connectable: IConnectable,
-    block: PortDsl.() -> Unit = {}) {
-  val builder = PortDsl()
-  builder.apply(block)
-  return registerConnectable(connectable, builder.build())
+public inline fun ApplicationListener.registerConnectable(
+    connectable: IConnectable,
+    block: PortDsl.() -> Unit = {}
+) {
+    val builder = PortDsl()
+    builder.apply(block)
+    return registerConnectable(connectable, builder.build())
 }
 
 /**
  * Add a listener to this load balancer.
  *
+ * @param id
+ * @param props
  * @return The newly created listener
- * @param id 
- * @param props 
  */
-public inline fun NetworkLoadBalancer.addListener(id: String,
-    block: BaseNetworkListenerPropsDsl.() -> Unit = {}): NetworkListener {
-  val builder = BaseNetworkListenerPropsDsl()
-  builder.apply(block)
-  return addListener(id, builder.build())
+public inline fun NetworkLoadBalancer.addListener(
+    id: String,
+    block: BaseNetworkListenerPropsDsl.() -> Unit = {}
+): NetworkListener {
+    val builder = BaseNetworkListenerPropsDsl()
+    builder.apply(block)
+    return addListener(id, builder.build())
 }
 
 /**
@@ -125,34 +142,37 @@ public inline fun NetworkLoadBalancer.addListener(id: String,
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.custom` instead
- * @param metricName 
+ * @param metricName
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.custom` instead
  */
-public inline fun NetworkLoadBalancer.metric(metricName: String, block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun NetworkLoadBalancer.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
  * (deprecated) The total number of concurrent TCP flows (or connections) from clients to targets.
  *
- * This metric includes connections in the SYN_SENT and ESTABLISHED states.
- * TCP connections are not terminated at the load balancer, so a client
- * opening a TCP connection to a target counts as a single flow.
+ * This metric includes connections in the SYN_SENT and ESTABLISHED states. TCP connections are not
+ * terminated at the load balancer, so a client opening a TCP connection to a target counts as a
+ * single flow.
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.activeFlowCount` instead
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.activeFlowCount` instead
  */
-public inline fun NetworkLoadBalancer.metricActiveFlowCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricActiveFlowCount(builder.build())
+public inline fun NetworkLoadBalancer.metricActiveFlowCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricActiveFlowCount(builder.build())
 }
 
 /**
@@ -160,14 +180,15 @@ public inline fun NetworkLoadBalancer.metricActiveFlowCount(block: MetricOptions
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.activeFlowCount` instead
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.activeFlowCount` instead
  */
-public inline fun NetworkLoadBalancer.metricConsumedLCUs(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricConsumedLCUs(builder.build())
+public inline fun NetworkLoadBalancer.metricConsumedLCUs(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConsumedLCUs(builder.build())
 }
 
 /**
@@ -176,14 +197,15 @@ public inline fun NetworkLoadBalancer.metricConsumedLCUs(block: MetricOptionsDsl
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.newFlowCount` instead
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.newFlowCount` instead
  */
-public inline fun NetworkLoadBalancer.metricNewFlowCount(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNewFlowCount(builder.build())
+public inline fun NetworkLoadBalancer.metricNewFlowCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNewFlowCount(builder.build())
 }
 
 /**
@@ -191,14 +213,15 @@ public inline fun NetworkLoadBalancer.metricNewFlowCount(block: MetricOptionsDsl
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.processedBytes` instead
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.processedBytes` instead
  */
-public inline fun NetworkLoadBalancer.metricProcessedBytes(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricProcessedBytes(builder.build())
+public inline fun NetworkLoadBalancer.metricProcessedBytes(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricProcessedBytes(builder.build())
 }
 
 /**
@@ -208,14 +231,15 @@ public inline fun NetworkLoadBalancer.metricProcessedBytes(block: MetricOptionsD
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.tcpClientResetCount` instead
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.tcpClientResetCount` instead
  */
-public inline fun NetworkLoadBalancer.metricTcpClientResetCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTcpClientResetCount(builder.build())
+public inline fun NetworkLoadBalancer.metricTcpClientResetCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTcpClientResetCount(builder.build())
 }
 
 /**
@@ -223,14 +247,15 @@ public inline fun NetworkLoadBalancer.metricTcpClientResetCount(block: MetricOpt
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.tcpElbResetCount` instead
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.tcpElbResetCount` instead
  */
-public inline fun NetworkLoadBalancer.metricTcpElbResetCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTcpElbResetCount(builder.build())
+public inline fun NetworkLoadBalancer.metricTcpElbResetCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTcpElbResetCount(builder.build())
 }
 
 /**
@@ -240,34 +265,36 @@ public inline fun NetworkLoadBalancer.metricTcpElbResetCount(block: MetricOption
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `NetworkLoadBalancer.metrics.tcpTargetResetCount` instead
  * @param props
+ * @deprecated Use `NetworkLoadBalancer.metrics.tcpTargetResetCount` instead
  */
-public inline fun NetworkLoadBalancer.metricTcpTargetResetCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTcpTargetResetCount(builder.build())
+public inline fun NetworkLoadBalancer.metricTcpTargetResetCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTcpTargetResetCount(builder.build())
 }
 
 /**
  * Return the given named metric for this Application Load Balancer Target Group.
  *
- * Returns the metric for this target group from the point of view of the first
- * load balancer load balancing to it. If you have multiple load balancers load
- * sending traffic to the same target group, you will have to override the dimensions
- * on this metric.
+ * Returns the metric for this target group from the point of view of the first load balancer load
+ * balancing to it. If you have multiple load balancers load sending traffic to the same target
+ * group, you will have to override the dimensions on this metric.
  *
  * Default: Average over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun ApplicationTargetGroup.metric(metricName: String,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun ApplicationTargetGroup.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -275,14 +302,15 @@ public inline fun ApplicationTargetGroup.metric(metricName: String,
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.healthyHostCount` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.healthyHostCount` instead
  */
-public inline fun ApplicationTargetGroup.metricHealthyHostCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHealthyHostCount(builder.build())
+public inline fun ApplicationTargetGroup.metricHealthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHealthyHostCount(builder.build())
 }
 
 /**
@@ -293,15 +321,17 @@ public inline fun ApplicationTargetGroup.metricHealthyHostCount(block: MetricOpt
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.httpCodeTarget` instead
- * @param code 
+ * @param code
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.httpCodeTarget` instead
  */
-public inline fun ApplicationTargetGroup.metricHttpCodeTarget(code: HttpCodeTarget,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHttpCodeTarget(code, builder.build())
+public inline fun ApplicationTargetGroup.metricHttpCodeTarget(
+    code: HttpCodeTarget,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHttpCodeTarget(code, builder.build())
 }
 
 /**
@@ -309,14 +339,15 @@ public inline fun ApplicationTargetGroup.metricHttpCodeTarget(code: HttpCodeTarg
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.ipv6RequestCount` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.ipv6RequestCount` instead
  */
-public inline fun ApplicationTargetGroup.metricIpv6RequestCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricIpv6RequestCount(builder.build())
+public inline fun ApplicationTargetGroup.metricIpv6RequestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricIpv6RequestCount(builder.build())
 }
 
 /**
@@ -326,14 +357,15 @@ public inline fun ApplicationTargetGroup.metricIpv6RequestCount(block: MetricOpt
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.requestCount` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.requestCount` instead
  */
-public inline fun ApplicationTargetGroup.metricRequestCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricRequestCount(builder.build())
+public inline fun ApplicationTargetGroup.metricRequestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricRequestCount(builder.build())
 }
 
 /**
@@ -343,15 +375,15 @@ public inline fun ApplicationTargetGroup.metricRequestCount(block: MetricOptions
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.requestCountPerTarget` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.requestCountPerTarget` instead
  */
-public inline
-    fun ApplicationTargetGroup.metricRequestCountPerTarget(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricRequestCountPerTarget(builder.build())
+public inline fun ApplicationTargetGroup.metricRequestCountPerTarget(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricRequestCountPerTarget(builder.build())
 }
 
 /**
@@ -360,15 +392,15 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.targetConnectionErrorCount` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.targetConnectionErrorCount` instead
  */
-public inline
-    fun ApplicationTargetGroup.metricTargetConnectionErrorCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTargetConnectionErrorCount(builder.build())
+public inline fun ApplicationTargetGroup.metricTargetConnectionErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTargetConnectionErrorCount(builder.build())
 }
 
 /**
@@ -377,14 +409,15 @@ public inline
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.targetResponseTime` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.targetResponseTime` instead
  */
-public inline fun ApplicationTargetGroup.metricTargetResponseTime(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTargetResponseTime(builder.build())
+public inline fun ApplicationTargetGroup.metricTargetResponseTime(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTargetResponseTime(builder.build())
 }
 
 /**
@@ -395,15 +428,15 @@ public inline fun ApplicationTargetGroup.metricTargetResponseTime(block: MetricO
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.tlsNegotiationErrorCount` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.tlsNegotiationErrorCount` instead
  */
-public inline
-    fun ApplicationTargetGroup.metricTargetTLSNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTargetTLSNegotiationErrorCount(builder.build())
+public inline fun ApplicationTargetGroup.metricTargetTLSNegotiationErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTargetTLSNegotiationErrorCount(builder.build())
 }
 
 /**
@@ -411,14 +444,15 @@ public inline
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `ApplicationTargetGroup.metrics.unhealthyHostCount` instead
  * @param props
+ * @deprecated Use `ApplicationTargetGroup.metrics.unhealthyHostCount` instead
  */
-public inline fun ApplicationTargetGroup.metricUnhealthyHostCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricUnhealthyHostCount(builder.build())
+public inline fun ApplicationTargetGroup.metricUnhealthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricUnhealthyHostCount(builder.build())
 }
 
 /**
@@ -426,27 +460,31 @@ public inline fun ApplicationTargetGroup.metricUnhealthyHostCount(block: MetricO
  *
  * Don't call this directly. It will be called by load balancing targets.
  *
- * @param connectable 
+ * @param connectable
  * @param portRange
  */
-public inline fun ApplicationTargetGroup.registerConnectable(connectable: IConnectable,
-    block: PortDsl.() -> Unit = {}) {
-  val builder = PortDsl()
-  builder.apply(block)
-  return registerConnectable(connectable, builder.build())
+public inline fun ApplicationTargetGroup.registerConnectable(
+    connectable: IConnectable,
+    block: PortDsl.() -> Unit = {}
+) {
+    val builder = PortDsl()
+    builder.apply(block)
+    return registerConnectable(connectable, builder.build())
 }
 
 /**
  * Add a new listener to this load balancer.
  *
- * @param id 
- * @param props 
+ * @param id
+ * @param props
  */
-public inline fun ApplicationLoadBalancer.addListener(id: String,
-    block: BaseApplicationListenerPropsDsl.() -> Unit = {}): ApplicationListener {
-  val builder = BaseApplicationListenerPropsDsl()
-  builder.apply(block)
-  return addListener(id, builder.build())
+public inline fun ApplicationLoadBalancer.addListener(
+    id: String,
+    block: BaseApplicationListenerPropsDsl.() -> Unit = {}
+): ApplicationListener {
+    val builder = BaseApplicationListenerPropsDsl()
+    builder.apply(block)
+    return addListener(id, builder.build())
 }
 
 /**
@@ -454,12 +492,12 @@ public inline fun ApplicationLoadBalancer.addListener(id: String,
  *
  * @param props
  */
-public inline
-    fun ApplicationLoadBalancer.addRedirect(block: ApplicationLoadBalancerRedirectConfigDsl.() -> Unit
-    = {}): ApplicationListener {
-  val builder = ApplicationLoadBalancerRedirectConfigDsl()
-  builder.apply(block)
-  return addRedirect(builder.build())
+public inline fun ApplicationLoadBalancer.addRedirect(
+    block: ApplicationLoadBalancerRedirectConfigDsl.() -> Unit = {}
+): ApplicationListener {
+    val builder = ApplicationLoadBalancerRedirectConfigDsl()
+    builder.apply(block)
+    return addRedirect(builder.build())
 }
 
 /**
@@ -467,15 +505,17 @@ public inline
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.custom` instead
- * @param metricName 
+ * @param metricName
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.custom` instead
  */
-public inline fun ApplicationLoadBalancer.metric(metricName: String,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun ApplicationLoadBalancer.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -484,35 +524,34 @@ public inline fun ApplicationLoadBalancer.metric(metricName: String,
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.activeConnectionCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.activeConnectionCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricActiveConnectionCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricActiveConnectionCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricActiveConnectionCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricActiveConnectionCount(builder.build())
 }
 
 /**
  * (deprecated) The number of TLS connections initiated by the client that did not establish a
  * session with the load balancer.
  *
- * Possible causes include a
- * mismatch of ciphers or protocols.
+ * Possible causes include a mismatch of ciphers or protocols.
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.clientTlsNegotiationErrorCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.clientTlsNegotiationErrorCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricClientTlsNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricClientTlsNegotiationErrorCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricClientTlsNegotiationErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricClientTlsNegotiationErrorCount(builder.build())
 }
 
 /**
@@ -520,33 +559,35 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.consumedLCUs` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.consumedLCUs` instead
  */
-public inline fun ApplicationLoadBalancer.metricConsumedLCUs(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricConsumedLCUs(builder.build())
+public inline fun ApplicationLoadBalancer.metricConsumedLCUs(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConsumedLCUs(builder.build())
 }
 
 /**
  * (deprecated) The number of user authentications that could not be completed.
  *
- * Because an authenticate action was misconfigured, the load balancer
- * couldn't establish a connection with the IdP, or the load balancer
- * couldn't complete the authentication flow due to an internal error.
+ * Because an authenticate action was misconfigured, the load balancer couldn't establish a
+ * connection with the IdP, or the load balancer couldn't complete the authentication flow due to an
+ * internal error.
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthError` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthError` instead
  */
-public inline fun ApplicationLoadBalancer.metricElbAuthError(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricElbAuthError(builder.build())
+public inline fun ApplicationLoadBalancer.metricElbAuthError(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricElbAuthError(builder.build())
 }
 
 /**
@@ -555,14 +596,15 @@ public inline fun ApplicationLoadBalancer.metricElbAuthError(block: MetricOption
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthFailure` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthFailure` instead
  */
-public inline fun ApplicationLoadBalancer.metricElbAuthFailure(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricElbAuthFailure(builder.build())
+public inline fun ApplicationLoadBalancer.metricElbAuthFailure(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricElbAuthFailure(builder.build())
 }
 
 /**
@@ -572,32 +614,34 @@ public inline fun ApplicationLoadBalancer.metricElbAuthFailure(block: MetricOpti
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthLatency` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthLatency` instead
  */
-public inline fun ApplicationLoadBalancer.metricElbAuthLatency(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricElbAuthLatency(builder.build())
+public inline fun ApplicationLoadBalancer.metricElbAuthLatency(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricElbAuthLatency(builder.build())
 }
 
 /**
  * (deprecated) The number of authenticate actions that were successful.
  *
- * This metric is incremented at the end of the authentication workflow,
- * after the load balancer has retrieved the user claims from the IdP.
+ * This metric is incremented at the end of the authentication workflow, after the load balancer has
+ * retrieved the user claims from the IdP.
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthSuccess` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthSuccess` instead
  */
-public inline fun ApplicationLoadBalancer.metricElbAuthSuccess(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricElbAuthSuccess(builder.build())
+public inline fun ApplicationLoadBalancer.metricElbAuthSuccess(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricElbAuthSuccess(builder.build())
 }
 
 /**
@@ -607,15 +651,17 @@ public inline fun ApplicationLoadBalancer.metricElbAuthSuccess(block: MetricOpti
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.httpCodeElb` instead
- * @param code 
+ * @param code
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpCodeElb` instead
  */
-public inline fun ApplicationLoadBalancer.metricHttpCodeElb(code: HttpCodeElb,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHttpCodeElb(code, builder.build())
+public inline fun ApplicationLoadBalancer.metricHttpCodeElb(
+    code: HttpCodeElb,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHttpCodeElb(code, builder.build())
 }
 
 /**
@@ -626,15 +672,17 @@ public inline fun ApplicationLoadBalancer.metricHttpCodeElb(code: HttpCodeElb,
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.httpCodeTarget` instead
- * @param code 
+ * @param code
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpCodeTarget` instead
  */
-public inline fun ApplicationLoadBalancer.metricHttpCodeTarget(code: HttpCodeTarget,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHttpCodeTarget(code, builder.build())
+public inline fun ApplicationLoadBalancer.metricHttpCodeTarget(
+    code: HttpCodeTarget,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHttpCodeTarget(code, builder.build())
 }
 
 /**
@@ -642,15 +690,15 @@ public inline fun ApplicationLoadBalancer.metricHttpCodeTarget(code: HttpCodeTar
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.httpFixedResponseCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpFixedResponseCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricHttpFixedResponseCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHttpFixedResponseCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricHttpFixedResponseCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHttpFixedResponseCount(builder.build())
 }
 
 /**
@@ -658,14 +706,15 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.httpRedirectCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpRedirectCount` instead
  */
-public inline fun ApplicationLoadBalancer.metricHttpRedirectCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHttpRedirectCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricHttpRedirectCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHttpRedirectCount(builder.build())
 }
 
 /**
@@ -674,15 +723,15 @@ public inline fun ApplicationLoadBalancer.metricHttpRedirectCount(block: MetricO
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.httpRedirectUrlLimitExceededCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpRedirectUrlLimitExceededCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricHttpRedirectUrlLimitExceededCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHttpRedirectUrlLimitExceededCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricHttpRedirectUrlLimitExceededCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHttpRedirectUrlLimitExceededCount(builder.build())
 }
 
 /**
@@ -690,15 +739,15 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.ipv6ProcessedBytes` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.ipv6ProcessedBytes` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricIpv6ProcessedBytes(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricIpv6ProcessedBytes(builder.build())
+public inline fun ApplicationLoadBalancer.metricIpv6ProcessedBytes(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricIpv6ProcessedBytes(builder.build())
 }
 
 /**
@@ -706,14 +755,15 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.ipv6RequestCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.ipv6RequestCount` instead
  */
-public inline fun ApplicationLoadBalancer.metricIpv6RequestCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricIpv6RequestCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricIpv6RequestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricIpv6RequestCount(builder.build())
 }
 
 /**
@@ -722,15 +772,15 @@ public inline fun ApplicationLoadBalancer.metricIpv6RequestCount(block: MetricOp
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.newConnectionCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.newConnectionCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricNewConnectionCount(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNewConnectionCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricNewConnectionCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNewConnectionCount(builder.build())
 }
 
 /**
@@ -738,14 +788,15 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.processedBytes` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.processedBytes` instead
  */
-public inline fun ApplicationLoadBalancer.metricProcessedBytes(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricProcessedBytes(builder.build())
+public inline fun ApplicationLoadBalancer.metricProcessedBytes(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricProcessedBytes(builder.build())
 }
 
 /**
@@ -754,15 +805,15 @@ public inline fun ApplicationLoadBalancer.metricProcessedBytes(block: MetricOpti
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.rejectedConnectionCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.rejectedConnectionCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricRejectedConnectionCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricRejectedConnectionCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricRejectedConnectionCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricRejectedConnectionCount(builder.build())
 }
 
 /**
@@ -772,14 +823,15 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.requestCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.requestCount` instead
  */
-public inline fun ApplicationLoadBalancer.metricRequestCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricRequestCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricRequestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricRequestCount(builder.build())
 }
 
 /**
@@ -788,14 +840,15 @@ public inline fun ApplicationLoadBalancer.metricRequestCount(block: MetricOption
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.ruleEvaluations` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.ruleEvaluations` instead
  */
-public inline fun ApplicationLoadBalancer.metricRuleEvaluations(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricRuleEvaluations(builder.build())
+public inline fun ApplicationLoadBalancer.metricRuleEvaluations(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricRuleEvaluations(builder.build())
 }
 
 /**
@@ -804,15 +857,15 @@ public inline fun ApplicationLoadBalancer.metricRuleEvaluations(block: MetricOpt
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.targetConnectionErrorCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.targetConnectionErrorCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricTargetConnectionErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTargetConnectionErrorCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricTargetConnectionErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTargetConnectionErrorCount(builder.build())
 }
 
 /**
@@ -821,15 +874,15 @@ public inline
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.targetResponseTime` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.targetResponseTime` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricTargetResponseTime(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTargetResponseTime(builder.build())
+public inline fun ApplicationLoadBalancer.metricTargetResponseTime(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTargetResponseTime(builder.build())
 }
 
 /**
@@ -840,74 +893,77 @@ public inline
  *
  * Default: Sum over 5 minutes
  *
- * @deprecated Use `ApplicationLoadBalancer.metrics.targetTLSNegotiationErrorCount` instead
  * @param props
+ * @deprecated Use `ApplicationLoadBalancer.metrics.targetTLSNegotiationErrorCount` instead
  */
-public inline
-    fun ApplicationLoadBalancer.metricTargetTLSNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTargetTLSNegotiationErrorCount(builder.build())
+public inline fun ApplicationLoadBalancer.metricTargetTLSNegotiationErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTargetTLSNegotiationErrorCount(builder.build())
 }
 
 /**
  * Perform the given action on incoming requests.
  *
- * This allows full control of the default action of the load balancer,
- * including Action chaining, fixed responses and redirect responses. See
- * the `ListenerAction` class for all options.
+ * This allows full control of the default action of the load balancer, including Action chaining,
+ * fixed responses and redirect responses. See the `ListenerAction` class for all options.
  *
  * It's possible to add routing conditions to the Action added in this way.
  *
- * It is not possible to add a default action to an imported IApplicationListener.
- * In order to add actions to an imported IApplicationListener a `priority`
- * must be provided.
+ * It is not possible to add a default action to an imported IApplicationListener. In order to add
+ * actions to an imported IApplicationListener a `priority` must be provided.
  *
- * @param id 
- * @param props 
+ * @param id
+ * @param props
  */
-public inline fun IApplicationListener.addAction(arg0: String,
-    block: AddApplicationActionPropsDsl.() -> Unit = {}) {
-  val builder = AddApplicationActionPropsDsl()
-  builder.apply(block)
-  return addAction(arg0, builder.build())
+public inline fun IApplicationListener.addAction(
+    arg0: String,
+    block: AddApplicationActionPropsDsl.() -> Unit = {}
+) {
+    val builder = AddApplicationActionPropsDsl()
+    builder.apply(block)
+    return addAction(arg0, builder.build())
 }
 
 /**
  * Load balance incoming requests to the given target groups.
  *
- * It's possible to add conditions to the TargetGroups added in this way.
- * At least one TargetGroup must be added without conditions.
+ * It's possible to add conditions to the TargetGroups added in this way. At least one TargetGroup
+ * must be added without conditions.
  *
- * @param id 
- * @param props 
+ * @param id
+ * @param props
  */
-public inline fun IApplicationListener.addTargetGroups(arg0: String,
-    block: AddApplicationTargetGroupsPropsDsl.() -> Unit = {}) {
-  val builder = AddApplicationTargetGroupsPropsDsl()
-  builder.apply(block)
-  return addTargetGroups(arg0, builder.build())
+public inline fun IApplicationListener.addTargetGroups(
+    arg0: String,
+    block: AddApplicationTargetGroupsPropsDsl.() -> Unit = {}
+) {
+    val builder = AddApplicationTargetGroupsPropsDsl()
+    builder.apply(block)
+    return addTargetGroups(arg0, builder.build())
 }
 
 /**
  * Load balance incoming requests to the given load balancing targets.
  *
- * This method implicitly creates an ApplicationTargetGroup for the targets
- * involved.
+ * This method implicitly creates an ApplicationTargetGroup for the targets involved.
  *
- * It's possible to add conditions to the targets added in this way. At least
- * one set of targets must be added without conditions.
+ * It's possible to add conditions to the targets added in this way. At least one set of targets
+ * must be added without conditions.
  *
+ * @param id
+ * @param props
  * @return The newly created target group
- * @param id 
- * @param props 
  */
-public inline fun IApplicationListener.addTargets(arg0: String,
-    block: AddApplicationTargetsPropsDsl.() -> Unit = {}): ApplicationTargetGroup {
-  val builder = AddApplicationTargetsPropsDsl()
-  builder.apply(block)
-  return addTargets(arg0, builder.build())
+public inline fun IApplicationListener.addTargets(
+    arg0: String,
+    block: AddApplicationTargetsPropsDsl.() -> Unit = {}
+): ApplicationTargetGroup {
+    val builder = AddApplicationTargetsPropsDsl()
+    builder.apply(block)
+    return addTargets(arg0, builder.build())
 }
 
 /**
@@ -915,14 +971,16 @@ public inline fun IApplicationListener.addTargets(arg0: String,
  *
  * Don't call this directly. It is called by ApplicationTargetGroup.
  *
- * @param connectable 
- * @param portRange 
+ * @param connectable
+ * @param portRange
  */
-public inline fun IApplicationListener.registerConnectable(arg0: IConnectable,
-    block: PortDsl.() -> Unit = {}) {
-  val builder = PortDsl()
-  builder.apply(block)
-  return registerConnectable(arg0, builder.build())
+public inline fun IApplicationListener.registerConnectable(
+    arg0: IConnectable,
+    block: PortDsl.() -> Unit = {}
+) {
+    val builder = PortDsl()
+    builder.apply(block)
+    return registerConnectable(arg0, builder.build())
 }
 
 /**
@@ -930,32 +988,35 @@ public inline fun IApplicationListener.registerConnectable(arg0: IConnectable,
  *
  * Don't call this directly. It will be called by load balancing targets.
  *
- * @param connectable 
+ * @param connectable
  * @param portRange
  */
-public inline fun IApplicationTargetGroup.registerConnectable(arg0: IConnectable,
-    block: PortDsl.() -> Unit = {}) {
-  val builder = PortDsl()
-  builder.apply(block)
-  return registerConnectable(arg0, builder.build())
+public inline fun IApplicationTargetGroup.registerConnectable(
+    arg0: IConnectable,
+    block: PortDsl.() -> Unit = {}
+) {
+    val builder = PortDsl()
+    builder.apply(block)
+    return registerConnectable(arg0, builder.build())
 }
 
 /**
  * The total number of concurrent TCP flows (or connections) from clients to targets.
  *
- * This metric includes connections in the SYN_SENT and ESTABLISHED states.
- * TCP connections are not terminated at the load balancer, so a client
- * opening a TCP connection to a target counts as a single flow.
+ * This metric includes connections in the SYN_SENT and ESTABLISHED states. TCP connections are not
+ * terminated at the load balancer, so a client opening a TCP connection to a target counts as a
+ * single flow.
  *
  * Default: Average over 5 minutes
  *
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.activeFlowCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return activeFlowCount(builder.build())
+public inline fun INetworkLoadBalancerMetrics.activeFlowCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return activeFlowCount(builder.build())
 }
 
 /**
@@ -965,11 +1026,12 @@ public inline fun INetworkLoadBalancerMetrics.activeFlowCount(block: MetricOptio
  *
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.consumedLCUs(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return consumedLCUs(builder.build())
+public inline fun INetworkLoadBalancerMetrics.consumedLCUs(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return consumedLCUs(builder.build())
 }
 
 /**
@@ -977,14 +1039,16 @@ public inline fun INetworkLoadBalancerMetrics.consumedLCUs(block: MetricOptionsD
  *
  * Default: Average over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.custom(arg0: String,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return custom(arg0, builder.build())
+public inline fun INetworkLoadBalancerMetrics.custom(
+    arg0: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return custom(arg0, builder.build())
 }
 
 /**
@@ -995,11 +1059,12 @@ public inline fun INetworkLoadBalancerMetrics.custom(arg0: String,
  *
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.newFlowCount(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return newFlowCount(builder.build())
+public inline fun INetworkLoadBalancerMetrics.newFlowCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return newFlowCount(builder.build())
 }
 
 /**
@@ -1009,11 +1074,12 @@ public inline fun INetworkLoadBalancerMetrics.newFlowCount(block: MetricOptionsD
  *
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.processedBytes(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return processedBytes(builder.build())
+public inline fun INetworkLoadBalancerMetrics.processedBytes(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return processedBytes(builder.build())
 }
 
 /**
@@ -1025,11 +1091,12 @@ public inline fun INetworkLoadBalancerMetrics.processedBytes(block: MetricOption
  *
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.tcpClientResetCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return tcpClientResetCount(builder.build())
+public inline fun INetworkLoadBalancerMetrics.tcpClientResetCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return tcpClientResetCount(builder.build())
 }
 
 /**
@@ -1039,11 +1106,12 @@ public inline fun INetworkLoadBalancerMetrics.tcpClientResetCount(block: MetricO
  *
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.tcpElbResetCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return tcpElbResetCount(builder.build())
+public inline fun INetworkLoadBalancerMetrics.tcpElbResetCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return tcpElbResetCount(builder.build())
 }
 
 /**
@@ -1055,11 +1123,12 @@ public inline fun INetworkLoadBalancerMetrics.tcpElbResetCount(block: MetricOpti
  *
  * @param props
  */
-public inline fun INetworkLoadBalancerMetrics.tcpTargetResetCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return tcpTargetResetCount(builder.build())
+public inline fun INetworkLoadBalancerMetrics.tcpTargetResetCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return tcpTargetResetCount(builder.build())
 }
 
 /**
@@ -1067,14 +1136,16 @@ public inline fun INetworkLoadBalancerMetrics.tcpTargetResetCount(block: MetricO
  *
  * Default: Average over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun IApplicationTargetGroupMetrics.custom(arg0: String,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return custom(arg0, builder.build())
+public inline fun IApplicationTargetGroupMetrics.custom(
+    arg0: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return custom(arg0, builder.build())
 }
 
 /**
@@ -1084,11 +1155,12 @@ public inline fun IApplicationTargetGroupMetrics.custom(arg0: String,
  *
  * @param props
  */
-public inline fun IApplicationTargetGroupMetrics.healthyHostCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return healthyHostCount(builder.build())
+public inline fun IApplicationTargetGroupMetrics.healthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return healthyHostCount(builder.build())
 }
 
 /**
@@ -1098,14 +1170,16 @@ public inline fun IApplicationTargetGroupMetrics.healthyHostCount(block: MetricO
  *
  * Default: Sum over 5 minutes
  *
- * @param code 
+ * @param code
  * @param props
  */
-public inline fun IApplicationTargetGroupMetrics.httpCodeTarget(arg0: HttpCodeTarget,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return httpCodeTarget(arg0, builder.build())
+public inline fun IApplicationTargetGroupMetrics.httpCodeTarget(
+    arg0: HttpCodeTarget,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return httpCodeTarget(arg0, builder.build())
 }
 
 /**
@@ -1115,11 +1189,12 @@ public inline fun IApplicationTargetGroupMetrics.httpCodeTarget(arg0: HttpCodeTa
  *
  * @param props
  */
-public inline fun IApplicationTargetGroupMetrics.ipv6RequestCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return ipv6RequestCount(builder.build())
+public inline fun IApplicationTargetGroupMetrics.ipv6RequestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return ipv6RequestCount(builder.build())
 }
 
 /**
@@ -1131,11 +1206,12 @@ public inline fun IApplicationTargetGroupMetrics.ipv6RequestCount(block: MetricO
  *
  * @param props
  */
-public inline fun IApplicationTargetGroupMetrics.requestCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return requestCount(builder.build())
+public inline fun IApplicationTargetGroupMetrics.requestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return requestCount(builder.build())
 }
 
 /**
@@ -1147,12 +1223,12 @@ public inline fun IApplicationTargetGroupMetrics.requestCount(block: MetricOptio
  *
  * @param props
  */
-public inline
-    fun IApplicationTargetGroupMetrics.requestCountPerTarget(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return requestCountPerTarget(builder.build())
+public inline fun IApplicationTargetGroupMetrics.requestCountPerTarget(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return requestCountPerTarget(builder.build())
 }
 
 /**
@@ -1163,12 +1239,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationTargetGroupMetrics.targetConnectionErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return targetConnectionErrorCount(builder.build())
+public inline fun IApplicationTargetGroupMetrics.targetConnectionErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return targetConnectionErrorCount(builder.build())
 }
 
 /**
@@ -1179,12 +1255,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationTargetGroupMetrics.targetResponseTime(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return targetResponseTime(builder.build())
+public inline fun IApplicationTargetGroupMetrics.targetResponseTime(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return targetResponseTime(builder.build())
 }
 
 /**
@@ -1197,12 +1273,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationTargetGroupMetrics.targetTLSNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return targetTLSNegotiationErrorCount(builder.build())
+public inline fun IApplicationTargetGroupMetrics.targetTLSNegotiationErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return targetTLSNegotiationErrorCount(builder.build())
 }
 
 /**
@@ -1212,12 +1288,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationTargetGroupMetrics.unhealthyHostCount(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return unhealthyHostCount(builder.build())
+public inline fun IApplicationTargetGroupMetrics.unhealthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return unhealthyHostCount(builder.build())
 }
 
 /**
@@ -1228,31 +1304,30 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.activeConnectionCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return activeConnectionCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.activeConnectionCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return activeConnectionCount(builder.build())
 }
 
 /**
  * The number of TLS connections initiated by the client that did not establish a session with the
  * load balancer.
  *
- * Possible causes include a
- * mismatch of ciphers or protocols.
+ * Possible causes include a mismatch of ciphers or protocols.
  *
  * Default: Sum over 5 minutes
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.clientTlsNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return clientTlsNegotiationErrorCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.clientTlsNegotiationErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return clientTlsNegotiationErrorCount(builder.build())
 }
 
 /**
@@ -1262,11 +1337,12 @@ public inline
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.consumedLCUs(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return consumedLCUs(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.consumedLCUs(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return consumedLCUs(builder.build())
 }
 
 /**
@@ -1274,32 +1350,35 @@ public inline fun IApplicationLoadBalancerMetrics.consumedLCUs(block: MetricOpti
  *
  * Default: Average over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.custom(arg0: String,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return custom(arg0, builder.build())
+public inline fun IApplicationLoadBalancerMetrics.custom(
+    arg0: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return custom(arg0, builder.build())
 }
 
 /**
  * The number of user authentications that could not be completed.
  *
- * Because an authenticate action was misconfigured, the load balancer
- * couldn't establish a connection with the IdP, or the load balancer
- * couldn't complete the authentication flow due to an internal error.
+ * Because an authenticate action was misconfigured, the load balancer couldn't establish a
+ * connection with the IdP, or the load balancer couldn't complete the authentication flow due to an
+ * internal error.
  *
  * Default: Sum over 5 minutes
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.elbAuthError(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return elbAuthError(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.elbAuthError(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return elbAuthError(builder.build())
 }
 
 /**
@@ -1310,11 +1389,12 @@ public inline fun IApplicationLoadBalancerMetrics.elbAuthError(block: MetricOpti
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.elbAuthFailure(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return elbAuthFailure(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.elbAuthFailure(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return elbAuthFailure(builder.build())
 }
 
 /**
@@ -1326,28 +1406,30 @@ public inline fun IApplicationLoadBalancerMetrics.elbAuthFailure(block: MetricOp
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.elbAuthLatency(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return elbAuthLatency(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.elbAuthLatency(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return elbAuthLatency(builder.build())
 }
 
 /**
  * The number of authenticate actions that were successful.
  *
- * This metric is incremented at the end of the authentication workflow,
- * after the load balancer has retrieved the user claims from the IdP.
+ * This metric is incremented at the end of the authentication workflow, after the load balancer has
+ * retrieved the user claims from the IdP.
  *
  * Default: Sum over 5 minutes
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.elbAuthSuccess(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return elbAuthSuccess(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.elbAuthSuccess(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return elbAuthSuccess(builder.build())
 }
 
 /**
@@ -1357,14 +1439,16 @@ public inline fun IApplicationLoadBalancerMetrics.elbAuthSuccess(block: MetricOp
  *
  * Default: Sum over 5 minutes
  *
- * @param code 
+ * @param code
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.httpCodeElb(arg0: HttpCodeElb,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return httpCodeElb(arg0, builder.build())
+public inline fun IApplicationLoadBalancerMetrics.httpCodeElb(
+    arg0: HttpCodeElb,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return httpCodeElb(arg0, builder.build())
 }
 
 /**
@@ -1374,14 +1458,16 @@ public inline fun IApplicationLoadBalancerMetrics.httpCodeElb(arg0: HttpCodeElb,
  *
  * Default: Sum over 5 minutes
  *
- * @param code 
+ * @param code
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.httpCodeTarget(arg0: HttpCodeTarget,
-    block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return httpCodeTarget(arg0, builder.build())
+public inline fun IApplicationLoadBalancerMetrics.httpCodeTarget(
+    arg0: HttpCodeTarget,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return httpCodeTarget(arg0, builder.build())
 }
 
 /**
@@ -1391,12 +1477,12 @@ public inline fun IApplicationLoadBalancerMetrics.httpCodeTarget(arg0: HttpCodeT
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.httpFixedResponseCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return httpFixedResponseCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.httpFixedResponseCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return httpFixedResponseCount(builder.build())
 }
 
 /**
@@ -1406,12 +1492,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.httpRedirectCount(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return httpRedirectCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.httpRedirectCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return httpRedirectCount(builder.build())
 }
 
 /**
@@ -1422,12 +1508,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.httpRedirectUrlLimitExceededCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return httpRedirectUrlLimitExceededCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.httpRedirectUrlLimitExceededCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return httpRedirectUrlLimitExceededCount(builder.build())
 }
 
 /**
@@ -1437,12 +1523,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.ipv6ProcessedBytes(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return ipv6ProcessedBytes(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.ipv6ProcessedBytes(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return ipv6ProcessedBytes(builder.build())
 }
 
 /**
@@ -1452,12 +1538,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.ipv6RequestCount(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return ipv6RequestCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.ipv6RequestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return ipv6RequestCount(builder.build())
 }
 
 /**
@@ -1468,12 +1554,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.newConnectionCount(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return newConnectionCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.newConnectionCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return newConnectionCount(builder.build())
 }
 
 /**
@@ -1483,11 +1569,12 @@ public inline
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.processedBytes(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return processedBytes(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.processedBytes(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return processedBytes(builder.build())
 }
 
 /**
@@ -1498,12 +1585,12 @@ public inline fun IApplicationLoadBalancerMetrics.processedBytes(block: MetricOp
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.rejectedConnectionCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return rejectedConnectionCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.rejectedConnectionCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return rejectedConnectionCount(builder.build())
 }
 
 /**
@@ -1515,11 +1602,12 @@ public inline
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.requestCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return requestCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.requestCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return requestCount(builder.build())
 }
 
 /**
@@ -1529,11 +1617,12 @@ public inline fun IApplicationLoadBalancerMetrics.requestCount(block: MetricOpti
  *
  * @param props
  */
-public inline fun IApplicationLoadBalancerMetrics.ruleEvaluations(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return ruleEvaluations(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.ruleEvaluations(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return ruleEvaluations(builder.build())
 }
 
 /**
@@ -1544,12 +1633,12 @@ public inline fun IApplicationLoadBalancerMetrics.ruleEvaluations(block: MetricO
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.targetConnectionErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return targetConnectionErrorCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.targetConnectionErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return targetConnectionErrorCount(builder.build())
 }
 
 /**
@@ -1560,12 +1649,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.targetResponseTime(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return targetResponseTime(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.targetResponseTime(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return targetResponseTime(builder.build())
 }
 
 /**
@@ -1578,12 +1667,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun IApplicationLoadBalancerMetrics.targetTLSNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return targetTLSNegotiationErrorCount(builder.build())
+public inline fun IApplicationLoadBalancerMetrics.targetTLSNegotiationErrorCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return targetTLSNegotiationErrorCount(builder.build())
 }
 
 /**
@@ -1591,14 +1680,16 @@ public inline
  *
  * Default: Average over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun INetworkTargetGroupMetrics.custom(arg0: String, block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return custom(arg0, builder.build())
+public inline fun INetworkTargetGroupMetrics.custom(
+    arg0: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return custom(arg0, builder.build())
 }
 
 /**
@@ -1608,11 +1699,12 @@ public inline fun INetworkTargetGroupMetrics.custom(arg0: String, block: MetricO
  *
  * @param props
  */
-public inline fun INetworkTargetGroupMetrics.healthyHostCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return healthyHostCount(builder.build())
+public inline fun INetworkTargetGroupMetrics.healthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return healthyHostCount(builder.build())
 }
 
 /**
@@ -1622,98 +1714,104 @@ public inline fun INetworkTargetGroupMetrics.healthyHostCount(block: MetricOptio
  *
  * @param props
  */
-public inline fun INetworkTargetGroupMetrics.unHealthyHostCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return unHealthyHostCount(builder.build())
+public inline fun INetworkTargetGroupMetrics.unHealthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return unHealthyHostCount(builder.build())
 }
 
 /**
  * Add a new listener to this load balancer.
  *
- * @param id 
- * @param props 
+ * @param id
+ * @param props
  */
-public inline fun IApplicationLoadBalancer.addListener(arg0: String,
-    block: BaseApplicationListenerPropsDsl.() -> Unit = {}): ApplicationListener {
-  val builder = BaseApplicationListenerPropsDsl()
-  builder.apply(block)
-  return addListener(arg0, builder.build())
+public inline fun IApplicationLoadBalancer.addListener(
+    arg0: String,
+    block: BaseApplicationListenerPropsDsl.() -> Unit = {}
+): ApplicationListener {
+    val builder = BaseApplicationListenerPropsDsl()
+    builder.apply(block)
+    return addListener(arg0, builder.build())
 }
 
 /**
  * Add a listener to this load balancer.
  *
+ * @param id
+ * @param props
  * @return The newly created listener
- * @param id 
- * @param props 
  */
-public inline fun INetworkLoadBalancer.addListener(arg0: String,
-    block: BaseNetworkListenerPropsDsl.() -> Unit = {}): NetworkListener {
-  val builder = BaseNetworkListenerPropsDsl()
-  builder.apply(block)
-  return addListener(arg0, builder.build())
+public inline fun INetworkLoadBalancer.addListener(
+    arg0: String,
+    block: BaseNetworkListenerPropsDsl.() -> Unit = {}
+): NetworkListener {
+    val builder = BaseNetworkListenerPropsDsl()
+    builder.apply(block)
+    return addListener(arg0, builder.build())
 }
 
 /**
  * Set/replace the target group's health check.
  *
- * @param healthCheck 
+ * @param healthCheck
  */
 public inline fun TargetGroupBase.configureHealthCheck(block: HealthCheckDsl.() -> Unit = {}) {
-  val builder = HealthCheckDsl()
-  builder.apply(block)
-  return configureHealthCheck(builder.build())
+    val builder = HealthCheckDsl()
+    builder.apply(block)
+    return configureHealthCheck(builder.build())
 }
 
-/**
- * Health check for the members of this target group.
- */
+/** Health check for the members of this target group. */
 public inline fun TargetGroupBase.setHealthCheck(block: HealthCheckDsl.() -> Unit = {}) {
-  val builder = HealthCheckDsl()
-  builder.apply(block)
-  return setHealthCheck(builder.build())
+    val builder = HealthCheckDsl()
+    builder.apply(block)
+    return setHealthCheck(builder.build())
 }
 
 /**
  * Perform the given Action on incoming requests.
  *
- * This allows full control of the default Action of the load balancer,
- * including weighted forwarding. See the `NetworkListenerAction` class for
- * all options.
+ * This allows full control of the default Action of the load balancer, including weighted
+ * forwarding. See the `NetworkListenerAction` class for all options.
  *
- * @param _id 
- * @param props 
+ * @param _id
+ * @param props
  */
-public inline fun NetworkListener.addAction(_id: String, block: AddNetworkActionPropsDsl.() -> Unit
-    = {}) {
-  val builder = AddNetworkActionPropsDsl()
-  builder.apply(block)
-  return addAction(_id, builder.build())
+public inline fun NetworkListener.addAction(
+    _id: String,
+    block: AddNetworkActionPropsDsl.() -> Unit = {}
+) {
+    val builder = AddNetworkActionPropsDsl()
+    builder.apply(block)
+    return addAction(_id, builder.build())
 }
 
 /**
  * Load balance incoming requests to the given load balancing targets.
  *
- * This method implicitly creates a NetworkTargetGroup for the targets
- * involved, and a 'forward' action to route traffic to the given TargetGroup.
+ * This method implicitly creates a NetworkTargetGroup for the targets involved, and a 'forward'
+ * action to route traffic to the given TargetGroup.
  *
- * If you want more control over the precise setup, create the TargetGroup
- * and use `addAction` yourself.
+ * If you want more control over the precise setup, create the TargetGroup and use `addAction`
+ * yourself.
  *
- * It's possible to add conditions to the targets added in this way. At least
- * one set of targets must be added without conditions.
+ * It's possible to add conditions to the targets added in this way. At least one set of targets
+ * must be added without conditions.
  *
+ * @param id
+ * @param props
  * @return The newly created target group
- * @param id 
- * @param props 
  */
-public inline fun NetworkListener.addTargets(id: String, block: AddNetworkTargetsPropsDsl.() -> Unit
-    = {}): NetworkTargetGroup {
-  val builder = AddNetworkTargetsPropsDsl()
-  builder.apply(block)
-  return addTargets(id, builder.build())
+public inline fun NetworkListener.addTargets(
+    id: String,
+    block: AddNetworkTargetsPropsDsl.() -> Unit = {}
+): NetworkTargetGroup {
+    val builder = AddNetworkTargetsPropsDsl()
+    builder.apply(block)
+    return addTargets(id, builder.build())
 }
 
 /**
@@ -1721,14 +1819,15 @@ public inline fun NetworkListener.addTargets(id: String, block: AddNetworkTarget
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `NetworkTargetGroup.metrics.healthyHostCount` instead
  * @param props
+ * @deprecated Use `NetworkTargetGroup.metrics.healthyHostCount` instead
  */
-public inline fun NetworkTargetGroup.metricHealthyHostCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHealthyHostCount(builder.build())
+public inline fun NetworkTargetGroup.metricHealthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHealthyHostCount(builder.build())
 }
 
 /**
@@ -1736,23 +1835,25 @@ public inline fun NetworkTargetGroup.metricHealthyHostCount(block: MetricOptions
  *
  * Default: Average over 5 minutes
  *
- * @deprecated Use `NetworkTargetGroup.metrics.healthyHostCount` instead
  * @param props
+ * @deprecated Use `NetworkTargetGroup.metrics.healthyHostCount` instead
  */
-public inline fun NetworkTargetGroup.metricUnHealthyHostCount(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricUnHealthyHostCount(builder.build())
+public inline fun NetworkTargetGroup.metricUnHealthyHostCount(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricUnHealthyHostCount(builder.build())
 }
 
 /**
  * [HTTP/HTTPS health checks] The HTTP or gRPC codes to use when checking for a successful response
  * from a target.
  */
-public inline fun CfnTargetGroup.setMatcher(block: CfnTargetGroupMatcherPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnTargetGroupMatcherPropertyDsl()
-  builder.apply(block)
-  return setMatcher(builder.build())
+public inline fun CfnTargetGroup.setMatcher(
+    block: CfnTargetGroupMatcherPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTargetGroupMatcherPropertyDsl()
+    builder.apply(block)
+    return setMatcher(builder.build())
 }

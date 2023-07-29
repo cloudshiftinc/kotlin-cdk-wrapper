@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.connect.CfnTaskTemplate
  * A field that is invisible to an agent.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.connect.CfnTaskTemplate
  */
 @CdkDslMarker
 public class CfnTaskTemplateInvisibleFieldInfoPropertyDsl {
-  private val cdkBuilder: CfnTaskTemplate.InvisibleFieldInfoProperty.Builder =
-      CfnTaskTemplate.InvisibleFieldInfoProperty.builder()
+    private val cdkBuilder: CfnTaskTemplate.InvisibleFieldInfoProperty.Builder =
+        CfnTaskTemplate.InvisibleFieldInfoProperty.builder()
 
-  /**
-   * @param id Identifier of the invisible field. 
-   */
-  public fun id(id: IResolvable) {
-    cdkBuilder.id(id)
-  }
+    /** @param id Identifier of the invisible field. */
+    public fun id(id: IResolvable) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param id Identifier of the invisible field. 
-   */
-  public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
-    cdkBuilder.id(id)
-  }
+    /** @param id Identifier of the invisible field. */
+    public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
+        cdkBuilder.id(id)
+    }
 
-  public fun build(): CfnTaskTemplate.InvisibleFieldInfoProperty = cdkBuilder.build()
+    public fun build(): CfnTaskTemplate.InvisibleFieldInfoProperty = cdkBuilder.build()
 }

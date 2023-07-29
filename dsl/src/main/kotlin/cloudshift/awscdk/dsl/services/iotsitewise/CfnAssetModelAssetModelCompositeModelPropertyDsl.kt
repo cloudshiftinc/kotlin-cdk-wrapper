@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotsitewise
 
@@ -18,18 +27,16 @@ import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
  *
  * If you use the `AssetModelCompositeModel` property to create an alarm, you must use the following
  * information to define three asset model properties:
- *
  * * Use an asset model property to specify the alarm type.
  * * The name must be `AWS/ALARM_TYPE` .
  * * The data type must be `STRING` .
  * * For the `Type` property, the type name must be `Attribute` and the default value must be
- * `IOT_EVENTS` .
+ *   `IOT_EVENTS` .
  * * Use an asset model property to specify the alarm source.
  * * The name must be `AWS/ALARM_SOURCE` .
  * * The data type must be `STRING` .
  * * For the `Type` property, the type name must be `Attribute` and the default value must be the
- * ARN of the alarm model that you created in AWS IoT Events .
- *
+ *   ARN of the alarm model that you created in AWS IoT Events .
  *
  * For the ARN of the alarm model, you can use the `Fn::Sub` intrinsic function to substitute the
  * `AWS::Partition` , `AWS::Region` , and `AWS::AccountId` variables in an input string with values
@@ -43,8 +50,6 @@ import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
  * For more information about using the `Fn::Sub` intrinsic function, see
  * [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html)
  * .
- *
- *
  * * Use an asset model property to specify the state of the alarm.
  * * The name must be `AWS/ALARM_STATE` .
  * * The data type must be `STRUCT` .
@@ -54,7 +59,6 @@ import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
  * At the bottom of this page, we provide a YAML example that you can modify to create an alarm.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -116,57 +120,47 @@ import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
  */
 @CdkDslMarker
 public class CfnAssetModelAssetModelCompositeModelPropertyDsl {
-  private val cdkBuilder: CfnAssetModel.AssetModelCompositeModelProperty.Builder =
-      CfnAssetModel.AssetModelCompositeModelProperty.builder()
+    private val cdkBuilder: CfnAssetModel.AssetModelCompositeModelProperty.Builder =
+        CfnAssetModel.AssetModelCompositeModelProperty.builder()
 
-  private val _compositeModelProperties: MutableList<Any> = mutableListOf()
+    private val _compositeModelProperties: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param compositeModelProperties The asset property definitions for this composite model.
-   */
-  public fun compositeModelProperties(vararg compositeModelProperties: Any) {
-    _compositeModelProperties.addAll(listOf(*compositeModelProperties))
-  }
+    /** @param compositeModelProperties The asset property definitions for this composite model. */
+    public fun compositeModelProperties(vararg compositeModelProperties: Any) {
+        _compositeModelProperties.addAll(listOf(*compositeModelProperties))
+    }
 
-  /**
-   * @param compositeModelProperties The asset property definitions for this composite model.
-   */
-  public fun compositeModelProperties(compositeModelProperties: Collection<Any>) {
-    _compositeModelProperties.addAll(compositeModelProperties)
-  }
+    /** @param compositeModelProperties The asset property definitions for this composite model. */
+    public fun compositeModelProperties(compositeModelProperties: Collection<Any>) {
+        _compositeModelProperties.addAll(compositeModelProperties)
+    }
 
-  /**
-   * @param compositeModelProperties The asset property definitions for this composite model.
-   */
-  public fun compositeModelProperties(compositeModelProperties: IResolvable) {
-    cdkBuilder.compositeModelProperties(compositeModelProperties)
-  }
+    /** @param compositeModelProperties The asset property definitions for this composite model. */
+    public fun compositeModelProperties(compositeModelProperties: IResolvable) {
+        cdkBuilder.compositeModelProperties(compositeModelProperties)
+    }
 
-  /**
-   * @param description The description of the composite model.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the composite model. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name The name of the composite model. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the composite model. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param type The type of the composite model. 
-   * For alarm composite models, this type is `AWS/ALARM` .
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /**
+     * @param type The type of the composite model. For alarm composite models, this type is
+     *   `AWS/ALARM` .
+     */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnAssetModel.AssetModelCompositeModelProperty {
-    if(_compositeModelProperties.isNotEmpty())
-        cdkBuilder.compositeModelProperties(_compositeModelProperties)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAssetModel.AssetModelCompositeModelProperty {
+        if (_compositeModelProperties.isNotEmpty())
+            cdkBuilder.compositeModelProperties(_compositeModelProperties)
+        return cdkBuilder.build()
+    }
 }

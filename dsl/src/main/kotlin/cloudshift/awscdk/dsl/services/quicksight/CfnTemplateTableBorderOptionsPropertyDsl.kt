@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The border options for a table border.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateTableBorderOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.TableBorderOptionsProperty.Builder =
-      CfnTemplate.TableBorderOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.TableBorderOptionsProperty.Builder =
+        CfnTemplate.TableBorderOptionsProperty.builder()
 
-  /**
-   * @param color The color of a table border.
-   */
-  public fun color(color: String) {
-    cdkBuilder.color(color)
-  }
+    /** @param color The color of a table border. */
+    public fun color(color: String) {
+        cdkBuilder.color(color)
+    }
 
-  /**
-   * @param style The style (none, solid) of a table border.
-   */
-  public fun style(style: String) {
-    cdkBuilder.style(style)
-  }
+    /** @param style The style (none, solid) of a table border. */
+    public fun style(style: String) {
+        cdkBuilder.style(style)
+    }
 
-  /**
-   * @param thickness The thickness of a table border.
-   */
-  public fun thickness(thickness: Number) {
-    cdkBuilder.thickness(thickness)
-  }
+    /** @param thickness The thickness of a table border. */
+    public fun thickness(thickness: Number) {
+        cdkBuilder.thickness(thickness)
+    }
 
-  public fun build(): CfnTemplate.TableBorderOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.TableBorderOptionsProperty = cdkBuilder.build()
 }

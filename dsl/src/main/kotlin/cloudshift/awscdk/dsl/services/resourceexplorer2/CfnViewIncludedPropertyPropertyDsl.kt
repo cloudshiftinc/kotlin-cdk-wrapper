@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.resourceexplorer2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.resourceexplorer2.CfnView
  * include in a view.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.resourceexplorer2.CfnView
  */
 @CdkDslMarker
 public class CfnViewIncludedPropertyPropertyDsl {
-  private val cdkBuilder: CfnView.IncludedPropertyProperty.Builder =
-      CfnView.IncludedPropertyProperty.builder()
+    private val cdkBuilder: CfnView.IncludedPropertyProperty.Builder =
+        CfnView.IncludedPropertyProperty.builder()
 
-  /**
-   * @param name The name of the property that is included in this view. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the property that is included in this view. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnView.IncludedPropertyProperty = cdkBuilder.build()
+    public fun build(): CfnView.IncludedPropertyProperty = cdkBuilder.build()
 }

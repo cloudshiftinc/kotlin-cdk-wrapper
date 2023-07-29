@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.connect.CfnQuickConnect
  * The contact flow must be of type Transfer to Agent.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,22 +36,18 @@ import software.amazon.awscdk.services.connect.CfnQuickConnect
  */
 @CdkDslMarker
 public class CfnQuickConnectUserQuickConnectConfigPropertyDsl {
-  private val cdkBuilder: CfnQuickConnect.UserQuickConnectConfigProperty.Builder =
-      CfnQuickConnect.UserQuickConnectConfigProperty.builder()
+    private val cdkBuilder: CfnQuickConnect.UserQuickConnectConfigProperty.Builder =
+        CfnQuickConnect.UserQuickConnectConfigProperty.builder()
 
-  /**
-   * @param contactFlowArn The Amazon Resource Name (ARN) of the flow. 
-   */
-  public fun contactFlowArn(contactFlowArn: String) {
-    cdkBuilder.contactFlowArn(contactFlowArn)
-  }
+    /** @param contactFlowArn The Amazon Resource Name (ARN) of the flow. */
+    public fun contactFlowArn(contactFlowArn: String) {
+        cdkBuilder.contactFlowArn(contactFlowArn)
+    }
 
-  /**
-   * @param userArn The Amazon Resource Name (ARN) of the user. 
-   */
-  public fun userArn(userArn: String) {
-    cdkBuilder.userArn(userArn)
-  }
+    /** @param userArn The Amazon Resource Name (ARN) of the user. */
+    public fun userArn(userArn: String) {
+        cdkBuilder.userArn(userArn)
+    }
 
-  public fun build(): CfnQuickConnect.UserQuickConnectConfigProperty = cdkBuilder.build()
+    public fun build(): CfnQuickConnect.UserQuickConnectConfigProperty = cdkBuilder.build()
 }

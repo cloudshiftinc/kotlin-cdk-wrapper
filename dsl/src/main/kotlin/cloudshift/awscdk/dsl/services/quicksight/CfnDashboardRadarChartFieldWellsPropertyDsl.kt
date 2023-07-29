@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The field wells of a radar chart visual.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -21,17 +29,15 @@ public class CfnDashboardRadarChartFieldWellsPropertyDsl {
     private val cdkBuilder: CfnDashboard.RadarChartFieldWellsProperty.Builder =
         CfnDashboard.RadarChartFieldWellsProperty.builder()
 
-    /**
-     * @param radarChartAggregatedFieldWells The aggregated field wells of a radar chart visual.
-     */
+    /** @param radarChartAggregatedFieldWells The aggregated field wells of a radar chart visual. */
     public fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: IResolvable) {
         cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)
     }
 
-    /**
-     * @param radarChartAggregatedFieldWells The aggregated field wells of a radar chart visual.
-     */
-    public fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: CfnDashboard.RadarChartAggregatedFieldWellsProperty) {
+    /** @param radarChartAggregatedFieldWells The aggregated field wells of a radar chart visual. */
+    public fun radarChartAggregatedFieldWells(
+        radarChartAggregatedFieldWells: CfnDashboard.RadarChartAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)
     }
 

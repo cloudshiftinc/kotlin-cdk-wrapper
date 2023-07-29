@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * Formatting configuration for solid color.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,15 +38,14 @@ public class CfnDashboardConditionalFormattingSolidColorPropertyDsl {
     private val cdkBuilder: CfnDashboard.ConditionalFormattingSolidColorProperty.Builder =
         CfnDashboard.ConditionalFormattingSolidColorProperty.builder()
 
-    /**
-     * @param color Determines the color.
-     */
+    /** @param color Determines the color. */
     public fun color(color: String) {
         cdkBuilder.color(color)
     }
 
     /**
-     * @param expression The expression that determines the formatting configuration for solid color.
+     * @param expression The expression that determines the formatting configuration for solid
+     *   color.
      */
     public fun expression(expression: String) {
         cdkBuilder.expression(expression)

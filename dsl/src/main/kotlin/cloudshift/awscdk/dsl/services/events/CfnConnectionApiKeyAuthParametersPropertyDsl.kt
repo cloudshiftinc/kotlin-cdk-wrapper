@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.events.CfnConnection
  * Contains the API key authorization parameters for the connection.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.events.CfnConnection
  */
 @CdkDslMarker
 public class CfnConnectionApiKeyAuthParametersPropertyDsl {
-  private val cdkBuilder: CfnConnection.ApiKeyAuthParametersProperty.Builder =
-      CfnConnection.ApiKeyAuthParametersProperty.builder()
+    private val cdkBuilder: CfnConnection.ApiKeyAuthParametersProperty.Builder =
+        CfnConnection.ApiKeyAuthParametersProperty.builder()
 
-  /**
-   * @param apiKeyName The name of the API key to use for authorization. 
-   */
-  public fun apiKeyName(apiKeyName: String) {
-    cdkBuilder.apiKeyName(apiKeyName)
-  }
+    /** @param apiKeyName The name of the API key to use for authorization. */
+    public fun apiKeyName(apiKeyName: String) {
+        cdkBuilder.apiKeyName(apiKeyName)
+    }
 
-  /**
-   * @param apiKeyValue The value for the API key to use for authorization. 
-   */
-  public fun apiKeyValue(apiKeyValue: String) {
-    cdkBuilder.apiKeyValue(apiKeyValue)
-  }
+    /** @param apiKeyValue The value for the API key to use for authorization. */
+    public fun apiKeyValue(apiKeyValue: String) {
+        cdkBuilder.apiKeyValue(apiKeyValue)
+    }
 
-  public fun build(): CfnConnection.ApiKeyAuthParametersProperty = cdkBuilder.build()
+    public fun build(): CfnConnection.ApiKeyAuthParametersProperty = cdkBuilder.build()
 }

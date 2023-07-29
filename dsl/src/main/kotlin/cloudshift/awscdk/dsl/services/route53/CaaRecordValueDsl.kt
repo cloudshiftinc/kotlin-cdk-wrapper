@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.route53.CaaTag
  * Properties for a CAA record value.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,28 +34,22 @@ import software.amazon.awscdk.services.route53.CaaTag
  */
 @CdkDslMarker
 public class CaaRecordValueDsl {
-  private val cdkBuilder: CaaRecordValue.Builder = CaaRecordValue.builder()
+    private val cdkBuilder: CaaRecordValue.Builder = CaaRecordValue.builder()
 
-  /**
-   * @param flag The flag. 
-   */
-  public fun flag(flag: Number) {
-    cdkBuilder.flag(flag)
-  }
+    /** @param flag The flag. */
+    public fun flag(flag: Number) {
+        cdkBuilder.flag(flag)
+    }
 
-  /**
-   * @param tag The tag. 
-   */
-  public fun tag(tag: CaaTag) {
-    cdkBuilder.tag(tag)
-  }
+    /** @param tag The tag. */
+    public fun tag(tag: CaaTag) {
+        cdkBuilder.tag(tag)
+    }
 
-  /**
-   * @param value The value associated with the tag. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value associated with the tag. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CaaRecordValue = cdkBuilder.build()
+    public fun build(): CaaRecordValue = cdkBuilder.build()
 }

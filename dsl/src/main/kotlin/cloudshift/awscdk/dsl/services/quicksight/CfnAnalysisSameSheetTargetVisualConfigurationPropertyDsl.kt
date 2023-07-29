@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,39 +39,38 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisSameSheetTargetVisualConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.SameSheetTargetVisualConfigurationProperty.Builder =
-      CfnAnalysis.SameSheetTargetVisualConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.SameSheetTargetVisualConfigurationProperty.Builder =
+        CfnAnalysis.SameSheetTargetVisualConfigurationProperty.builder()
 
-  private val _targetVisuals: MutableList<String> = mutableListOf()
+    private val _targetVisuals: MutableList<String> = mutableListOf()
 
-  /**
-   * @param targetVisualOptions The options that choose the target visual in the same sheet.
-   * Valid values are defined as follows:
-   *
-   * * `ALL_VISUALS` : Applies the filter operation to all visuals in the same sheet.
-   */
-  public fun targetVisualOptions(targetVisualOptions: String) {
-    cdkBuilder.targetVisualOptions(targetVisualOptions)
-  }
+    /**
+     * @param targetVisualOptions The options that choose the target visual in the same sheet. Valid
+     *   values are defined as follows:
+     * * `ALL_VISUALS` : Applies the filter operation to all visuals in the same sheet.
+     */
+    public fun targetVisualOptions(targetVisualOptions: String) {
+        cdkBuilder.targetVisualOptions(targetVisualOptions)
+    }
 
-  /**
-   * @param targetVisuals A list of the target visual IDs that are located in the same sheet of the
-   * analysis.
-   */
-  public fun targetVisuals(vararg targetVisuals: String) {
-    _targetVisuals.addAll(listOf(*targetVisuals))
-  }
+    /**
+     * @param targetVisuals A list of the target visual IDs that are located in the same sheet of
+     *   the analysis.
+     */
+    public fun targetVisuals(vararg targetVisuals: String) {
+        _targetVisuals.addAll(listOf(*targetVisuals))
+    }
 
-  /**
-   * @param targetVisuals A list of the target visual IDs that are located in the same sheet of the
-   * analysis.
-   */
-  public fun targetVisuals(targetVisuals: Collection<String>) {
-    _targetVisuals.addAll(targetVisuals)
-  }
+    /**
+     * @param targetVisuals A list of the target visual IDs that are located in the same sheet of
+     *   the analysis.
+     */
+    public fun targetVisuals(targetVisuals: Collection<String>) {
+        _targetVisuals.addAll(targetVisuals)
+    }
 
-  public fun build(): CfnAnalysis.SameSheetTargetVisualConfigurationProperty {
-    if(_targetVisuals.isNotEmpty()) cdkBuilder.targetVisuals(_targetVisuals)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalysis.SameSheetTargetVisualConfigurationProperty {
+        if (_targetVisuals.isNotEmpty()) cdkBuilder.targetVisuals(_targetVisuals)
+        return cdkBuilder.build()
+    }
 }

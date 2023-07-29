@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.ResourceServerScopeProps
  * Props to initialize ResourceServerScope.
  *
  * Example:
- *
  * ```
  * UserPool pool = new UserPool(this, "Pool");
  * ResourceServerScope readOnlyScope =
@@ -42,21 +50,17 @@ import software.amazon.awscdk.services.cognito.ResourceServerScopeProps
  */
 @CdkDslMarker
 public class ResourceServerScopePropsDsl {
-  private val cdkBuilder: ResourceServerScopeProps.Builder = ResourceServerScopeProps.builder()
+    private val cdkBuilder: ResourceServerScopeProps.Builder = ResourceServerScopeProps.builder()
 
-  /**
-   * @param scopeDescription A description of the scope. 
-   */
-  public fun scopeDescription(scopeDescription: String) {
-    cdkBuilder.scopeDescription(scopeDescription)
-  }
+    /** @param scopeDescription A description of the scope. */
+    public fun scopeDescription(scopeDescription: String) {
+        cdkBuilder.scopeDescription(scopeDescription)
+    }
 
-  /**
-   * @param scopeName The name of the scope. 
-   */
-  public fun scopeName(scopeName: String) {
-    cdkBuilder.scopeName(scopeName)
-  }
+    /** @param scopeName The name of the scope. */
+    public fun scopeName(scopeName: String) {
+        cdkBuilder.scopeName(scopeName)
+    }
 
-  public fun build(): ResourceServerScopeProps = cdkBuilder.build()
+    public fun build(): ResourceServerScopeProps = cdkBuilder.build()
 }

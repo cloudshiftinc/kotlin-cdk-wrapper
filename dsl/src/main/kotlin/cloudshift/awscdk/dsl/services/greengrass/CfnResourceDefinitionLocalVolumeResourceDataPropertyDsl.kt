@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -11,8 +20,8 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  * Settings for a local volume resource, which represents a file or directory on the root file
  * system.
  *
- * For more information, see [Access Local Resources with Lambda
- * Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+ * For more information, see
+ * [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
  * in the *Developer Guide* .
  *
  * In an AWS CloudFormation template, `LocalVolumeResourceData` can be used in the
@@ -20,7 +29,6 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,39 +50,39 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  */
 @CdkDslMarker
 public class CfnResourceDefinitionLocalVolumeResourceDataPropertyDsl {
-  private val cdkBuilder: CfnResourceDefinition.LocalVolumeResourceDataProperty.Builder =
-      CfnResourceDefinition.LocalVolumeResourceDataProperty.builder()
+    private val cdkBuilder: CfnResourceDefinition.LocalVolumeResourceDataProperty.Builder =
+        CfnResourceDefinition.LocalVolumeResourceDataProperty.builder()
 
-  /**
-   * @param destinationPath The absolute local path of the resource in the Lambda environment. 
-   */
-  public fun destinationPath(destinationPath: String) {
-    cdkBuilder.destinationPath(destinationPath)
-  }
+    /** @param destinationPath The absolute local path of the resource in the Lambda environment. */
+    public fun destinationPath(destinationPath: String) {
+        cdkBuilder.destinationPath(destinationPath)
+    }
 
-  /**
-   * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give to
-   * the Lambda function process.
-   */
-  public fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
-    cdkBuilder.groupOwnerSetting(groupOwnerSetting)
-  }
+    /**
+     * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+     *   to the Lambda function process.
+     */
+    public fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting)
+    }
 
-  /**
-   * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give to
-   * the Lambda function process.
-   */
-  public fun groupOwnerSetting(groupOwnerSetting: CfnResourceDefinition.GroupOwnerSettingProperty) {
-    cdkBuilder.groupOwnerSetting(groupOwnerSetting)
-  }
+    /**
+     * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+     *   to the Lambda function process.
+     */
+    public fun groupOwnerSetting(
+        groupOwnerSetting: CfnResourceDefinition.GroupOwnerSettingProperty
+    ) {
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting)
+    }
 
-  /**
-   * @param sourcePath The local absolute path of the volume resource on the host. 
-   * The source path for a volume resource type cannot start with `/sys` .
-   */
-  public fun sourcePath(sourcePath: String) {
-    cdkBuilder.sourcePath(sourcePath)
-  }
+    /**
+     * @param sourcePath The local absolute path of the volume resource on the host. The source path
+     *   for a volume resource type cannot start with `/sys` .
+     */
+    public fun sourcePath(sourcePath: String) {
+        cdkBuilder.sourcePath(sourcePath)
+    }
 
-  public fun build(): CfnResourceDefinition.LocalVolumeResourceDataProperty = cdkBuilder.build()
+    public fun build(): CfnResourceDefinition.LocalVolumeResourceDataProperty = cdkBuilder.build()
 }

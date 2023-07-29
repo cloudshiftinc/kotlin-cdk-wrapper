@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * A CloudFront Function.
  *
  * Example:
- *
  * ```
  * Bucket s3Bucket;
  * // Add a cloudfront Function to a Distribution
@@ -32,41 +40,41 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class FunctionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: Function.Builder = Function.Builder.create(scope, id)
+    private val cdkBuilder: Function.Builder = Function.Builder.create(scope, id)
 
-  /**
-   * The source code of the function.
-   *
-   * @param code The source code of the function. 
-   */
-  public fun code(code: FunctionCode) {
-    cdkBuilder.code(code)
-  }
+    /**
+     * The source code of the function.
+     *
+     * @param code The source code of the function.
+     */
+    public fun code(code: FunctionCode) {
+        cdkBuilder.code(code)
+    }
 
-  /**
-   * A comment to describe the function.
-   *
-   * Default: - same as `functionName`
-   *
-   * @param comment A comment to describe the function. 
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /**
+     * A comment to describe the function.
+     *
+     * Default: - same as `functionName`
+     *
+     * @param comment A comment to describe the function.
+     */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  /**
-   * A name to identify the function.
-   *
-   * Default: - generated from the `id`
-   *
-   * @param functionName A name to identify the function. 
-   */
-  public fun functionName(functionName: String) {
-    cdkBuilder.functionName(functionName)
-  }
+    /**
+     * A name to identify the function.
+     *
+     * Default: - generated from the `id`
+     *
+     * @param functionName A name to identify the function.
+     */
+    public fun functionName(functionName: String) {
+        cdkBuilder.functionName(functionName)
+    }
 
-  public fun build(): Function = cdkBuilder.build()
+    public fun build(): Function = cdkBuilder.build()
 }

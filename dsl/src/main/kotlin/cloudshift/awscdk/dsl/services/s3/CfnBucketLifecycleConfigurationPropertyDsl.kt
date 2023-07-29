@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -12,12 +21,11 @@ import software.amazon.awscdk.services.s3.CfnBucket
 /**
  * Specifies the lifecycle configuration for objects in an Amazon S3 bucket.
  *
- * For more information, see [Object Lifecycle
- * Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) in the
- * *Amazon S3 User Guide* .
+ * For more information, see
+ * [Object Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)
+ * in the *Amazon S3 User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -79,34 +87,28 @@ import software.amazon.awscdk.services.s3.CfnBucket
  */
 @CdkDslMarker
 public class CfnBucketLifecycleConfigurationPropertyDsl {
-  private val cdkBuilder: CfnBucket.LifecycleConfigurationProperty.Builder =
-      CfnBucket.LifecycleConfigurationProperty.builder()
+    private val cdkBuilder: CfnBucket.LifecycleConfigurationProperty.Builder =
+        CfnBucket.LifecycleConfigurationProperty.builder()
 
-  private val _rules: MutableList<Any> = mutableListOf()
+    private val _rules: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
-   */
-  public fun rules(vararg rules: Any) {
-    _rules.addAll(listOf(*rules))
-  }
+    /** @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. */
+    public fun rules(vararg rules: Any) {
+        _rules.addAll(listOf(*rules))
+    }
 
-  /**
-   * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
-   */
-  public fun rules(rules: Collection<Any>) {
-    _rules.addAll(rules)
-  }
+    /** @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. */
+    public fun rules(rules: Collection<Any>) {
+        _rules.addAll(rules)
+    }
 
-  /**
-   * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
-   */
-  public fun rules(rules: IResolvable) {
-    cdkBuilder.rules(rules)
-  }
+    /** @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. */
+    public fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules)
+    }
 
-  public fun build(): CfnBucket.LifecycleConfigurationProperty {
-    if(_rules.isNotEmpty()) cdkBuilder.rules(_rules)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBucket.LifecycleConfigurationProperty {
+        if (_rules.isNotEmpty()) cdkBuilder.rules(_rules)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -19,7 +28,6 @@ import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
  * replicates.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,42 +45,36 @@ import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
  */
 @CdkDslMarker
 public class CfnInferenceExperimentShadowModeConfigPropertyDsl {
-  private val cdkBuilder: CfnInferenceExperiment.ShadowModeConfigProperty.Builder =
-      CfnInferenceExperiment.ShadowModeConfigProperty.builder()
+    private val cdkBuilder: CfnInferenceExperiment.ShadowModeConfigProperty.Builder =
+        CfnInferenceExperiment.ShadowModeConfigProperty.builder()
 
-  private val _shadowModelVariants: MutableList<Any> = mutableListOf()
+    private val _shadowModelVariants: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param shadowModelVariants List of shadow variant configurations. 
-   */
-  public fun shadowModelVariants(vararg shadowModelVariants: Any) {
-    _shadowModelVariants.addAll(listOf(*shadowModelVariants))
-  }
+    /** @param shadowModelVariants List of shadow variant configurations. */
+    public fun shadowModelVariants(vararg shadowModelVariants: Any) {
+        _shadowModelVariants.addAll(listOf(*shadowModelVariants))
+    }
 
-  /**
-   * @param shadowModelVariants List of shadow variant configurations. 
-   */
-  public fun shadowModelVariants(shadowModelVariants: Collection<Any>) {
-    _shadowModelVariants.addAll(shadowModelVariants)
-  }
+    /** @param shadowModelVariants List of shadow variant configurations. */
+    public fun shadowModelVariants(shadowModelVariants: Collection<Any>) {
+        _shadowModelVariants.addAll(shadowModelVariants)
+    }
 
-  /**
-   * @param shadowModelVariants List of shadow variant configurations. 
-   */
-  public fun shadowModelVariants(shadowModelVariants: IResolvable) {
-    cdkBuilder.shadowModelVariants(shadowModelVariants)
-  }
+    /** @param shadowModelVariants List of shadow variant configurations. */
+    public fun shadowModelVariants(shadowModelVariants: IResolvable) {
+        cdkBuilder.shadowModelVariants(shadowModelVariants)
+    }
 
-  /**
-   * @param sourceModelVariantName The name of the production variant, which takes all the inference
-   * requests. 
-   */
-  public fun sourceModelVariantName(sourceModelVariantName: String) {
-    cdkBuilder.sourceModelVariantName(sourceModelVariantName)
-  }
+    /**
+     * @param sourceModelVariantName The name of the production variant, which takes all the
+     *   inference requests.
+     */
+    public fun sourceModelVariantName(sourceModelVariantName: String) {
+        cdkBuilder.sourceModelVariantName(sourceModelVariantName)
+    }
 
-  public fun build(): CfnInferenceExperiment.ShadowModeConfigProperty {
-    if(_shadowModelVariants.isNotEmpty()) cdkBuilder.shadowModelVariants(_shadowModelVariants)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnInferenceExperiment.ShadowModeConfigProperty {
+        if (_shadowModelVariants.isNotEmpty()) cdkBuilder.shadowModelVariants(_shadowModelVariants)
+        return cdkBuilder.build()
+    }
 }

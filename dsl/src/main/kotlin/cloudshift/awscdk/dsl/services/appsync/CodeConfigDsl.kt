@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appsync.CodeConfig
  * Result of binding `Code` into a `Function`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,21 +31,17 @@ import software.amazon.awscdk.services.appsync.CodeConfig
  */
 @CdkDslMarker
 public class CodeConfigDsl {
-  private val cdkBuilder: CodeConfig.Builder = CodeConfig.builder()
+    private val cdkBuilder: CodeConfig.Builder = CodeConfig.builder()
 
-  /**
-   * @param inlineCode Inline code (mutually exclusive with `s3Location`).
-   */
-  public fun inlineCode(inlineCode: String) {
-    cdkBuilder.inlineCode(inlineCode)
-  }
+    /** @param inlineCode Inline code (mutually exclusive with `s3Location`). */
+    public fun inlineCode(inlineCode: String) {
+        cdkBuilder.inlineCode(inlineCode)
+    }
 
-  /**
-   * @param s3Location The location of the code in S3 (mutually exclusive with `inlineCode`.
-   */
-  public fun s3Location(s3Location: String) {
-    cdkBuilder.s3Location(s3Location)
-  }
+    /** @param s3Location The location of the code in S3 (mutually exclusive with `inlineCode`. */
+    public fun s3Location(s3Location: String) {
+        cdkBuilder.s3Location(s3Location)
+    }
 
-  public fun build(): CodeConfig = cdkBuilder.build()
+    public fun build(): CodeConfig = cdkBuilder.build()
 }

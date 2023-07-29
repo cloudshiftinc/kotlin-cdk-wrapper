@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
-import kotlin.String
 
 /**
  * A top level `ProductViewDetail` response containing details about the product’s connection.
  *
  * AWS Service Catalog returns this field for the `CreateProduct` , `UpdateProduct` ,
- * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same fields
- * as the `ConnectionParameters` request, with the addition of the `LastSync` response.
+ * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same
+ * fields as the `ConnectionParameters` request, with the addition of the `LastSync` response.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,23 +48,19 @@ public class CfnCloudFormationProductSourceConnectionPropertyDsl {
     private val cdkBuilder: CfnCloudFormationProduct.SourceConnectionProperty.Builder =
         CfnCloudFormationProduct.SourceConnectionProperty.builder()
 
-    /**
-     * @param connectionParameters The connection details based on the connection `Type` .
-     */
+    /** @param connectionParameters The connection details based on the connection `Type` . */
     public fun connectionParameters(connectionParameters: IResolvable) {
         cdkBuilder.connectionParameters(connectionParameters)
     }
 
-    /**
-     * @param connectionParameters The connection details based on the connection `Type` .
-     */
-    public fun connectionParameters(connectionParameters: CfnCloudFormationProduct.ConnectionParametersProperty) {
+    /** @param connectionParameters The connection details based on the connection `Type` . */
+    public fun connectionParameters(
+        connectionParameters: CfnCloudFormationProduct.ConnectionParametersProperty
+    ) {
         cdkBuilder.connectionParameters(connectionParameters)
     }
 
-    /**
-     * @param type The only supported `SourceConnection` type is Codestar.
-     */
+    /** @param type The only supported `SourceConnection` type is Codestar. */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

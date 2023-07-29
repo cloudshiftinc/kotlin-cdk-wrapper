@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  * Defines the connector-specific configuration and credentials for the connector profile.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -254,42 +262,44 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  */
 @CdkDslMarker
 public class CfnConnectorProfileConnectorProfileConfigPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.ConnectorProfileConfigProperty.Builder =
-      CfnConnectorProfile.ConnectorProfileConfigProperty.builder()
+    private val cdkBuilder: CfnConnectorProfile.ConnectorProfileConfigProperty.Builder =
+        CfnConnectorProfile.ConnectorProfileConfigProperty.builder()
 
-  /**
-   * @param connectorProfileCredentials The connector-specific credentials required by each
-   * connector.
-   */
-  public fun connectorProfileCredentials(connectorProfileCredentials: IResolvable) {
-    cdkBuilder.connectorProfileCredentials(connectorProfileCredentials)
-  }
+    /**
+     * @param connectorProfileCredentials The connector-specific credentials required by each
+     *   connector.
+     */
+    public fun connectorProfileCredentials(connectorProfileCredentials: IResolvable) {
+        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials)
+    }
 
-  /**
-   * @param connectorProfileCredentials The connector-specific credentials required by each
-   * connector.
-   */
-  public
-      fun connectorProfileCredentials(connectorProfileCredentials: CfnConnectorProfile.ConnectorProfileCredentialsProperty) {
-    cdkBuilder.connectorProfileCredentials(connectorProfileCredentials)
-  }
+    /**
+     * @param connectorProfileCredentials The connector-specific credentials required by each
+     *   connector.
+     */
+    public fun connectorProfileCredentials(
+        connectorProfileCredentials: CfnConnectorProfile.ConnectorProfileCredentialsProperty
+    ) {
+        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials)
+    }
 
-  /**
-   * @param connectorProfileProperties The connector-specific properties of the profile
-   * configuration.
-   */
-  public fun connectorProfileProperties(connectorProfileProperties: IResolvable) {
-    cdkBuilder.connectorProfileProperties(connectorProfileProperties)
-  }
+    /**
+     * @param connectorProfileProperties The connector-specific properties of the profile
+     *   configuration.
+     */
+    public fun connectorProfileProperties(connectorProfileProperties: IResolvable) {
+        cdkBuilder.connectorProfileProperties(connectorProfileProperties)
+    }
 
-  /**
-   * @param connectorProfileProperties The connector-specific properties of the profile
-   * configuration.
-   */
-  public
-      fun connectorProfileProperties(connectorProfileProperties: CfnConnectorProfile.ConnectorProfilePropertiesProperty) {
-    cdkBuilder.connectorProfileProperties(connectorProfileProperties)
-  }
+    /**
+     * @param connectorProfileProperties The connector-specific properties of the profile
+     *   configuration.
+     */
+    public fun connectorProfileProperties(
+        connectorProfileProperties: CfnConnectorProfile.ConnectorProfilePropertiesProperty
+    ) {
+        cdkBuilder.connectorProfileProperties(connectorProfileProperties)
+    }
 
-  public fun build(): CfnConnectorProfile.ConnectorProfileConfigProperty = cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.ConnectorProfileConfigProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lambda.DlqDestinationConfig
  * A destination configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,14 +30,12 @@ import software.amazon.awscdk.services.lambda.DlqDestinationConfig
  */
 @CdkDslMarker
 public class DlqDestinationConfigDsl {
-  private val cdkBuilder: DlqDestinationConfig.Builder = DlqDestinationConfig.builder()
+    private val cdkBuilder: DlqDestinationConfig.Builder = DlqDestinationConfig.builder()
 
-  /**
-   * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-   */
-  public fun destination(destination: String) {
-    cdkBuilder.destination(destination)
-  }
+    /** @param destination The Amazon Resource Name (ARN) of the destination resource. */
+    public fun destination(destination: String) {
+        cdkBuilder.destination(destination)
+    }
 
-  public fun build(): DlqDestinationConfig = cdkBuilder.build()
+    public fun build(): DlqDestinationConfig = cdkBuilder.build()
 }

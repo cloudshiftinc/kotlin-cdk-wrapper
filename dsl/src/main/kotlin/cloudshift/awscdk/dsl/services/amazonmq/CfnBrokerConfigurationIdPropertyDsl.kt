@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amazonmq
 
@@ -10,12 +19,9 @@ import software.amazon.awscdk.services.amazonmq.CfnBroker
 /**
  * A list of information about the configuration.
  *
- *
  * Does not apply to RabbitMQ brokers.
  *
- *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,22 +36,18 @@ import software.amazon.awscdk.services.amazonmq.CfnBroker
  */
 @CdkDslMarker
 public class CfnBrokerConfigurationIdPropertyDsl {
-  private val cdkBuilder: CfnBroker.ConfigurationIdProperty.Builder =
-      CfnBroker.ConfigurationIdProperty.builder()
+    private val cdkBuilder: CfnBroker.ConfigurationIdProperty.Builder =
+        CfnBroker.ConfigurationIdProperty.builder()
 
-  /**
-   * @param id The unique ID that Amazon MQ generates for the configuration. 
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The unique ID that Amazon MQ generates for the configuration. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param revision The revision number of the configuration. 
-   */
-  public fun revision(revision: Number) {
-    cdkBuilder.revision(revision)
-  }
+    /** @param revision The revision number of the configuration. */
+    public fun revision(revision: Number) {
+        cdkBuilder.revision(revision)
+    }
 
-  public fun build(): CfnBroker.ConfigurationIdProperty = cdkBuilder.build()
+    public fun build(): CfnBroker.ConfigurationIdProperty = cdkBuilder.build()
 }

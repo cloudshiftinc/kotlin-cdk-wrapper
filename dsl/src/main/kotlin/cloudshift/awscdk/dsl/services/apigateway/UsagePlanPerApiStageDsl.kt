@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage
  * Represents the API stages that a usage plan applies to.
  *
  * Example:
- *
  * ```
  * UsagePlan plan;
  * RestApi api;
@@ -34,40 +42,32 @@ import software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage
  */
 @CdkDslMarker
 public class UsagePlanPerApiStageDsl {
-  private val cdkBuilder: UsagePlanPerApiStage.Builder = UsagePlanPerApiStage.builder()
+    private val cdkBuilder: UsagePlanPerApiStage.Builder = UsagePlanPerApiStage.builder()
 
-  private val _throttle: MutableList<ThrottlingPerMethod> = mutableListOf()
+    private val _throttle: MutableList<ThrottlingPerMethod> = mutableListOf()
 
-  /**
-   * @param api the value to be set.
-   */
-  public fun api(api: IRestApi) {
-    cdkBuilder.api(api)
-  }
+    /** @param api the value to be set. */
+    public fun api(api: IRestApi) {
+        cdkBuilder.api(api)
+    }
 
-  /**
-   * @param stage [disable-awslint:ref-via-interface].
-   */
-  public fun stage(stage: Stage) {
-    cdkBuilder.stage(stage)
-  }
+    /** @param stage [disable-awslint:ref-via-interface]. */
+    public fun stage(stage: Stage) {
+        cdkBuilder.stage(stage)
+    }
 
-  /**
-   * @param throttle the value to be set.
-   */
-  public fun throttle(throttle: ThrottlingPerMethodDsl.() -> Unit) {
-    _throttle.add(ThrottlingPerMethodDsl().apply(throttle).build())
-  }
+    /** @param throttle the value to be set. */
+    public fun throttle(throttle: ThrottlingPerMethodDsl.() -> Unit) {
+        _throttle.add(ThrottlingPerMethodDsl().apply(throttle).build())
+    }
 
-  /**
-   * @param throttle the value to be set.
-   */
-  public fun throttle(throttle: Collection<ThrottlingPerMethod>) {
-    _throttle.addAll(throttle)
-  }
+    /** @param throttle the value to be set. */
+    public fun throttle(throttle: Collection<ThrottlingPerMethod>) {
+        _throttle.addAll(throttle)
+    }
 
-  public fun build(): UsagePlanPerApiStage {
-    if(_throttle.isNotEmpty()) cdkBuilder.throttle(_throttle)
-    return cdkBuilder.build()
-  }
+    public fun build(): UsagePlanPerApiStage {
+        if (_throttle.isNotEmpty()) cdkBuilder.throttle(_throttle)
+        return cdkBuilder.build()
+    }
 }

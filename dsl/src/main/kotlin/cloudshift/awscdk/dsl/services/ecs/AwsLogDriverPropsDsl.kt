@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.logs.RetentionDays
  * Specifies the awslogs log driver configuration options.
  *
  * Example:
- *
  * ```
  * // Create a Task Definition for the Windows container to start
  * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
@@ -33,67 +41,59 @@ import software.amazon.awscdk.services.logs.RetentionDays
  */
 @CdkDslMarker
 public class AwsLogDriverPropsDsl {
-  private val cdkBuilder: AwsLogDriverProps.Builder = AwsLogDriverProps.builder()
+    private val cdkBuilder: AwsLogDriverProps.Builder = AwsLogDriverProps.builder()
 
-  /**
-   * @param datetimeFormat This option defines a multiline start pattern in Python strftime format.
-   * A log message consists of a line that matches the pattern and any
-   * following lines that don’t match the pattern. Thus the matched line is
-   * the delimiter between log messages.
-   */
-  public fun datetimeFormat(datetimeFormat: String) {
-    cdkBuilder.datetimeFormat(datetimeFormat)
-  }
+    /**
+     * @param datetimeFormat This option defines a multiline start pattern in Python strftime
+     *   format. A log message consists of a line that matches the pattern and any following lines
+     *   that don’t match the pattern. Thus the matched line is the delimiter between log messages.
+     */
+    public fun datetimeFormat(datetimeFormat: String) {
+        cdkBuilder.datetimeFormat(datetimeFormat)
+    }
 
-  /**
-   * @param logGroup The log group to log to.
-   */
-  public fun logGroup(logGroup: ILogGroup) {
-    cdkBuilder.logGroup(logGroup)
-  }
+    /** @param logGroup The log group to log to. */
+    public fun logGroup(logGroup: ILogGroup) {
+        cdkBuilder.logGroup(logGroup)
+    }
 
-  /**
-   * @param logRetention The number of days log events are kept in CloudWatch Logs when the log
-   * group is automatically created by this construct.
-   */
-  public fun logRetention(logRetention: RetentionDays) {
-    cdkBuilder.logRetention(logRetention)
-  }
+    /**
+     * @param logRetention The number of days log events are kept in CloudWatch Logs when the log
+     *   group is automatically created by this construct.
+     */
+    public fun logRetention(logRetention: RetentionDays) {
+        cdkBuilder.logRetention(logRetention)
+    }
 
-  /**
-   * @param mode The delivery mode of log messages from the container to awslogs.
-   */
-  public fun mode(mode: AwsLogDriverMode) {
-    cdkBuilder.mode(mode)
-  }
+    /** @param mode The delivery mode of log messages from the container to awslogs. */
+    public fun mode(mode: AwsLogDriverMode) {
+        cdkBuilder.mode(mode)
+    }
 
-  /**
-   * @param multilinePattern This option defines a multiline start pattern using a regular
-   * expression.
-   * A log message consists of a line that matches the pattern and any
-   * following lines that don’t match the pattern. Thus the matched line is
-   * the delimiter between log messages.
-   *
-   * This option is ignored if datetimeFormat is also configured.
-   */
-  public fun multilinePattern(multilinePattern: String) {
-    cdkBuilder.multilinePattern(multilinePattern)
-  }
+    /**
+     * @param multilinePattern This option defines a multiline start pattern using a regular
+     *   expression. A log message consists of a line that matches the pattern and any following
+     *   lines that don’t match the pattern. Thus the matched line is the delimiter between log
+     *   messages.
+     *
+     * This option is ignored if datetimeFormat is also configured.
+     */
+    public fun multilinePattern(multilinePattern: String) {
+        cdkBuilder.multilinePattern(multilinePattern)
+    }
 
-  /**
-   * @param streamPrefix Prefix for the log streams. 
-   * The awslogs-stream-prefix option allows you to associate a log stream
-   * with the specified prefix, the container name, and the ID of the Amazon
-   * ECS task to which the container belongs. If you specify a prefix with
-   * this option, then the log stream takes the following format:
-   *
-   * ```
-   * prefix-name/container-name/ecs-task-id
-   * ```
-   */
-  public fun streamPrefix(streamPrefix: String) {
-    cdkBuilder.streamPrefix(streamPrefix)
-  }
+    /**
+     * @param streamPrefix Prefix for the log streams. The awslogs-stream-prefix option allows you
+     *   to associate a log stream with the specified prefix, the container name, and the ID of the
+     *   Amazon ECS task to which the container belongs. If you specify a prefix with this option,
+     *   then the log stream takes the following format:
+     * ```
+     * prefix-name/container-name/ecs-task-id
+     * ```
+     */
+    public fun streamPrefix(streamPrefix: String) {
+        cdkBuilder.streamPrefix(streamPrefix)
+    }
 
-  public fun build(): AwsLogDriverProps = cdkBuilder.build()
+    public fun build(): AwsLogDriverProps = cdkBuilder.build()
 }

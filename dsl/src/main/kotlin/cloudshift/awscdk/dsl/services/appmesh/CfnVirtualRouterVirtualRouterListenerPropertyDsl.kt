@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
  * An object that represents a virtual router listener.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,22 +36,18 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
  */
 @CdkDslMarker
 public class CfnVirtualRouterVirtualRouterListenerPropertyDsl {
-  private val cdkBuilder: CfnVirtualRouter.VirtualRouterListenerProperty.Builder =
-      CfnVirtualRouter.VirtualRouterListenerProperty.builder()
+    private val cdkBuilder: CfnVirtualRouter.VirtualRouterListenerProperty.Builder =
+        CfnVirtualRouter.VirtualRouterListenerProperty.builder()
 
-  /**
-   * @param portMapping The port mapping information for the listener. 
-   */
-  public fun portMapping(portMapping: IResolvable) {
-    cdkBuilder.portMapping(portMapping)
-  }
+    /** @param portMapping The port mapping information for the listener. */
+    public fun portMapping(portMapping: IResolvable) {
+        cdkBuilder.portMapping(portMapping)
+    }
 
-  /**
-   * @param portMapping The port mapping information for the listener. 
-   */
-  public fun portMapping(portMapping: CfnVirtualRouter.PortMappingProperty) {
-    cdkBuilder.portMapping(portMapping)
-  }
+    /** @param portMapping The port mapping information for the listener. */
+    public fun portMapping(portMapping: CfnVirtualRouter.PortMappingProperty) {
+        cdkBuilder.portMapping(portMapping)
+    }
 
-  public fun build(): CfnVirtualRouter.VirtualRouterListenerProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualRouter.VirtualRouterListenerProperty = cdkBuilder.build()
 }

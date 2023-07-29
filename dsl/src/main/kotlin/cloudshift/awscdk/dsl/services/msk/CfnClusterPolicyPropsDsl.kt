@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.msk.CfnClusterPolicyProps
  * Properties for defining a `CfnClusterPolicy`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,30 +37,24 @@ import software.amazon.awscdk.services.msk.CfnClusterPolicyProps
  */
 @CdkDslMarker
 public class CfnClusterPolicyPropsDsl {
-  private val cdkBuilder: CfnClusterPolicyProps.Builder = CfnClusterPolicyProps.builder()
+    private val cdkBuilder: CfnClusterPolicyProps.Builder = CfnClusterPolicyProps.builder()
 
-  /**
-   * @param clusterArn The Amazon Resource Name (ARN) that uniquely identifies the cluster. 
-   */
-  public fun clusterArn(clusterArn: String) {
-    cdkBuilder.clusterArn(clusterArn)
-  }
+    /** @param clusterArn The Amazon Resource Name (ARN) that uniquely identifies the cluster. */
+    public fun clusterArn(clusterArn: String) {
+        cdkBuilder.clusterArn(clusterArn)
+    }
 
-  /**
-   * @param policy Resource policy for the cluster. 
-   */
-  public fun policy(policy: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(policy)
-    cdkBuilder.policy(builder.map)
-  }
+    /** @param policy Resource policy for the cluster. */
+    public fun policy(policy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(policy)
+        cdkBuilder.policy(builder.map)
+    }
 
-  /**
-   * @param policy Resource policy for the cluster. 
-   */
-  public fun policy(policy: Any) {
-    cdkBuilder.policy(policy)
-  }
+    /** @param policy Resource policy for the cluster. */
+    public fun policy(policy: Any) {
+        cdkBuilder.policy(policy)
+    }
 
-  public fun build(): CfnClusterPolicyProps = cdkBuilder.build()
+    public fun build(): CfnClusterPolicyProps = cdkBuilder.build()
 }

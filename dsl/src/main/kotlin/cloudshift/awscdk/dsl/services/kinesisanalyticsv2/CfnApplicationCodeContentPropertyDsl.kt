@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  * Kinesis Data Analytics application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,38 +41,39 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationCodeContentPropertyDsl {
-  private val cdkBuilder: CfnApplication.CodeContentProperty.Builder =
-      CfnApplication.CodeContentProperty.builder()
+    private val cdkBuilder: CfnApplication.CodeContentProperty.Builder =
+        CfnApplication.CodeContentProperty.builder()
 
-  /**
-   * @param s3ContentLocation Information about the Amazon S3 bucket that contains the application
-   * code.
-   */
-  public fun s3ContentLocation(s3ContentLocation: IResolvable) {
-    cdkBuilder.s3ContentLocation(s3ContentLocation)
-  }
+    /**
+     * @param s3ContentLocation Information about the Amazon S3 bucket that contains the application
+     *   code.
+     */
+    public fun s3ContentLocation(s3ContentLocation: IResolvable) {
+        cdkBuilder.s3ContentLocation(s3ContentLocation)
+    }
 
-  /**
-   * @param s3ContentLocation Information about the Amazon S3 bucket that contains the application
-   * code.
-   */
-  public fun s3ContentLocation(s3ContentLocation: CfnApplication.S3ContentLocationProperty) {
-    cdkBuilder.s3ContentLocation(s3ContentLocation)
-  }
+    /**
+     * @param s3ContentLocation Information about the Amazon S3 bucket that contains the application
+     *   code.
+     */
+    public fun s3ContentLocation(s3ContentLocation: CfnApplication.S3ContentLocationProperty) {
+        cdkBuilder.s3ContentLocation(s3ContentLocation)
+    }
 
-  /**
-   * @param textContent The text-format code for a Flink-based Kinesis Data Analytics application.
-   */
-  public fun textContent(textContent: String) {
-    cdkBuilder.textContent(textContent)
-  }
+    /**
+     * @param textContent The text-format code for a Flink-based Kinesis Data Analytics application.
+     */
+    public fun textContent(textContent: String) {
+        cdkBuilder.textContent(textContent)
+    }
 
-  /**
-   * @param zipFileContent The zip-format code for a Flink-based Kinesis Data Analytics application.
-   */
-  public fun zipFileContent(zipFileContent: String) {
-    cdkBuilder.zipFileContent(zipFileContent)
-  }
+    /**
+     * @param zipFileContent The zip-format code for a Flink-based Kinesis Data Analytics
+     *   application.
+     */
+    public fun zipFileContent(zipFileContent: String) {
+        cdkBuilder.zipFileContent(zipFileContent)
+    }
 
-  public fun build(): CfnApplication.CodeContentProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.CodeContentProperty = cdkBuilder.build()
 }

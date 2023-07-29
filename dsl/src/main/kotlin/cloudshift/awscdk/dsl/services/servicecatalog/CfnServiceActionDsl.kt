@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.servicecatalog.CfnServiceAction
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.servicecatalog.CfnServiceAction
+import software.constructs.Construct
 
 /**
  * Creates a self-service action.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,7 +46,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnServiceActionDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnServiceAction.Builder = CfnServiceAction.Builder.create(scope, id)
 
@@ -46,12 +54,12 @@ public class CfnServiceActionDsl(
 
     /**
      * The language code.
-     *
      * * `en` - English (default)
      * * `jp` - Japanese
      * * `zh` - Chinese
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-acceptlanguage)
+     *
      * @param acceptLanguage The language code.
      */
     public fun acceptLanguage(acceptLanguage: String) {
@@ -62,6 +70,7 @@ public class CfnServiceActionDsl(
      * A map that defines the self-service action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definition)
+     *
      * @param definition A map that defines the self-service action.
      */
     public fun definition(vararg definition: Any) {
@@ -72,6 +81,7 @@ public class CfnServiceActionDsl(
      * A map that defines the self-service action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definition)
+     *
      * @param definition A map that defines the self-service action.
      */
     public fun definition(definition: Collection<Any>) {
@@ -82,6 +92,7 @@ public class CfnServiceActionDsl(
      * A map that defines the self-service action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definition)
+     *
      * @param definition A map that defines the self-service action.
      */
     public fun definition(definition: IResolvable) {
@@ -94,6 +105,7 @@ public class CfnServiceActionDsl(
      * For example, `SSM_AUTOMATION` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definitiontype)
+     *
      * @param definitionType The self-service action definition type.
      */
     public fun definitionType(definitionType: String) {
@@ -104,6 +116,7 @@ public class CfnServiceActionDsl(
      * The self-service action description.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-description)
+     *
      * @param description The self-service action description.
      */
     public fun description(description: String) {
@@ -114,6 +127,7 @@ public class CfnServiceActionDsl(
      * The self-service action name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-name)
+     *
      * @param name The self-service action name.
      */
     public fun name(name: String) {

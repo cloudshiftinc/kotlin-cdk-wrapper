@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lookoutmetrics
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
  * Contains information about how a source JSON data file should be analyzed.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
  */
 @CdkDslMarker
 public class CfnAnomalyDetectorJsonFormatDescriptorPropertyDsl {
-  private val cdkBuilder: CfnAnomalyDetector.JsonFormatDescriptorProperty.Builder =
-      CfnAnomalyDetector.JsonFormatDescriptorProperty.builder()
+    private val cdkBuilder: CfnAnomalyDetector.JsonFormatDescriptorProperty.Builder =
+        CfnAnomalyDetector.JsonFormatDescriptorProperty.builder()
 
-  /**
-   * @param charset The character set in which the source JSON file is written.
-   */
-  public fun charset(charset: String) {
-    cdkBuilder.charset(charset)
-  }
+    /** @param charset The character set in which the source JSON file is written. */
+    public fun charset(charset: String) {
+        cdkBuilder.charset(charset)
+    }
 
-  /**
-   * @param fileCompression The level of compression of the source CSV file.
-   */
-  public fun fileCompression(fileCompression: String) {
-    cdkBuilder.fileCompression(fileCompression)
-  }
+    /** @param fileCompression The level of compression of the source CSV file. */
+    public fun fileCompression(fileCompression: String) {
+        cdkBuilder.fileCompression(fileCompression)
+    }
 
-  public fun build(): CfnAnomalyDetector.JsonFormatDescriptorProperty = cdkBuilder.build()
+    public fun build(): CfnAnomalyDetector.JsonFormatDescriptorProperty = cdkBuilder.build()
 }

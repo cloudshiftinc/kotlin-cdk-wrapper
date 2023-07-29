@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  * When entering this state, perform these `actions` if the `condition` is TRUE.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -145,37 +153,37 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  */
 @CdkDslMarker
 public class CfnDetectorModelOnEnterPropertyDsl {
-  private val cdkBuilder: CfnDetectorModel.OnEnterProperty.Builder =
-      CfnDetectorModel.OnEnterProperty.builder()
+    private val cdkBuilder: CfnDetectorModel.OnEnterProperty.Builder =
+        CfnDetectorModel.OnEnterProperty.builder()
 
-  private val _events: MutableList<Any> = mutableListOf()
+    private val _events: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param events Specifies the actions that are performed when the state is entered and the
-   * `condition` is `TRUE` .
-   */
-  public fun events(vararg events: Any) {
-    _events.addAll(listOf(*events))
-  }
+    /**
+     * @param events Specifies the actions that are performed when the state is entered and the
+     *   `condition` is `TRUE` .
+     */
+    public fun events(vararg events: Any) {
+        _events.addAll(listOf(*events))
+    }
 
-  /**
-   * @param events Specifies the actions that are performed when the state is entered and the
-   * `condition` is `TRUE` .
-   */
-  public fun events(events: Collection<Any>) {
-    _events.addAll(events)
-  }
+    /**
+     * @param events Specifies the actions that are performed when the state is entered and the
+     *   `condition` is `TRUE` .
+     */
+    public fun events(events: Collection<Any>) {
+        _events.addAll(events)
+    }
 
-  /**
-   * @param events Specifies the actions that are performed when the state is entered and the
-   * `condition` is `TRUE` .
-   */
-  public fun events(events: IResolvable) {
-    cdkBuilder.events(events)
-  }
+    /**
+     * @param events Specifies the actions that are performed when the state is entered and the
+     *   `condition` is `TRUE` .
+     */
+    public fun events(events: IResolvable) {
+        cdkBuilder.events(events)
+    }
 
-  public fun build(): CfnDetectorModel.OnEnterProperty {
-    if(_events.isNotEmpty()) cdkBuilder.events(_events)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDetectorModel.OnEnterProperty {
+        if (_events.isNotEmpty()) cdkBuilder.events(_events)
+        return cdkBuilder.build()
+    }
 }

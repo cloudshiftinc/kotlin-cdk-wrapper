@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudtrail
 
@@ -15,10 +24,9 @@ import software.amazon.awscdk.services.cloudtrail.CfnEventDataStore
  * event record ﬁelds.
  *
  * They help you control costs by logging only those events that are important to you. For more
- * information about advanced event selectors, see [Logging data
- * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+ * information about advanced event selectors, see
+ * [Logging data events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
  * in the *AWS CloudTrail User Guide* .
- *
  * * `readOnly`
  * * `eventSource`
  * * `eventName`
@@ -29,7 +37,6 @@ import software.amazon.awscdk.services.cloudtrail.CfnEventDataStore
  * You cannot apply both event selectors and advanced event selectors to a trail.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,42 +62,36 @@ import software.amazon.awscdk.services.cloudtrail.CfnEventDataStore
  */
 @CdkDslMarker
 public class CfnEventDataStoreAdvancedEventSelectorPropertyDsl {
-  private val cdkBuilder: CfnEventDataStore.AdvancedEventSelectorProperty.Builder =
-      CfnEventDataStore.AdvancedEventSelectorProperty.builder()
+    private val cdkBuilder: CfnEventDataStore.AdvancedEventSelectorProperty.Builder =
+        CfnEventDataStore.AdvancedEventSelectorProperty.builder()
 
-  private val _fieldSelectors: MutableList<Any> = mutableListOf()
+    private val _fieldSelectors: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param fieldSelectors Contains all selector statements in an advanced event selector. 
-   */
-  public fun fieldSelectors(vararg fieldSelectors: Any) {
-    _fieldSelectors.addAll(listOf(*fieldSelectors))
-  }
+    /** @param fieldSelectors Contains all selector statements in an advanced event selector. */
+    public fun fieldSelectors(vararg fieldSelectors: Any) {
+        _fieldSelectors.addAll(listOf(*fieldSelectors))
+    }
 
-  /**
-   * @param fieldSelectors Contains all selector statements in an advanced event selector. 
-   */
-  public fun fieldSelectors(fieldSelectors: Collection<Any>) {
-    _fieldSelectors.addAll(fieldSelectors)
-  }
+    /** @param fieldSelectors Contains all selector statements in an advanced event selector. */
+    public fun fieldSelectors(fieldSelectors: Collection<Any>) {
+        _fieldSelectors.addAll(fieldSelectors)
+    }
 
-  /**
-   * @param fieldSelectors Contains all selector statements in an advanced event selector. 
-   */
-  public fun fieldSelectors(fieldSelectors: IResolvable) {
-    cdkBuilder.fieldSelectors(fieldSelectors)
-  }
+    /** @param fieldSelectors Contains all selector statements in an advanced event selector. */
+    public fun fieldSelectors(fieldSelectors: IResolvable) {
+        cdkBuilder.fieldSelectors(fieldSelectors)
+    }
 
-  /**
-   * @param name An optional, descriptive name for an advanced event selector, such as "Log data
-   * events for only two S3 buckets".
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name An optional, descriptive name for an advanced event selector, such as "Log data
+     *   events for only two S3 buckets".
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnEventDataStore.AdvancedEventSelectorProperty {
-    if(_fieldSelectors.isNotEmpty()) cdkBuilder.fieldSelectors(_fieldSelectors)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnEventDataStore.AdvancedEventSelectorProperty {
+        if (_fieldSelectors.isNotEmpty()) cdkBuilder.fieldSelectors(_fieldSelectors)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayConnectProps
  * Properties for defining a `CfnTransitGatewayConnect`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,51 +48,47 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayConnectProps
  */
 @CdkDslMarker
 public class CfnTransitGatewayConnectPropsDsl {
-  private val cdkBuilder: CfnTransitGatewayConnectProps.Builder =
-      CfnTransitGatewayConnectProps.builder()
+    private val cdkBuilder: CfnTransitGatewayConnectProps.Builder =
+        CfnTransitGatewayConnectProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param options The Connect attachment options. 
-   * * protocol (gre)
-   */
-  public fun options(options: IResolvable) {
-    cdkBuilder.options(options)
-  }
+    /**
+     * @param options The Connect attachment options.
+     * * protocol (gre)
+     */
+    public fun options(options: IResolvable) {
+        cdkBuilder.options(options)
+    }
 
-  /**
-   * @param options The Connect attachment options. 
-   * * protocol (gre)
-   */
-  public fun options(options: CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty) {
-    cdkBuilder.options(options)
-  }
+    /**
+     * @param options The Connect attachment options.
+     * * protocol (gre)
+     */
+    public fun options(options: CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty) {
+        cdkBuilder.options(options)
+    }
 
-  /**
-   * @param tags The tags for the attachment.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags for the attachment. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags for the attachment.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags for the attachment. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect
-   * attachment was created. 
-   */
-  public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
-    cdkBuilder.transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId)
-  }
+    /**
+     * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect
+     *   attachment was created.
+     */
+    public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
+        cdkBuilder.transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId)
+    }
 
-  public fun build(): CfnTransitGatewayConnectProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTransitGatewayConnectProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

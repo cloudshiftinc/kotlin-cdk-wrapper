@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotwireless.CfnFuotaTask
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotwireless.CfnFuotaTask
+import software.constructs.Construct
 
 /**
  * A FUOTA task.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,7 +57,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnFuotaTaskDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnFuotaTask.Builder = CfnFuotaTask.Builder.create(scope, id)
 
@@ -59,6 +67,7 @@ public class CfnFuotaTaskDsl(
      * The ID of the multicast group to associate with a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-associatemulticastgroup)
+     *
      * @param associateMulticastGroup The ID of the multicast group to associate with a FUOTA task.
      */
     public fun associateMulticastGroup(associateMulticastGroup: String) {
@@ -69,8 +78,9 @@ public class CfnFuotaTaskDsl(
      * The ID of the wireless device to associate with a multicast group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-associatewirelessdevice)
+     *
      * @param associateWirelessDevice The ID of the wireless device to associate with a multicast
-     * group.
+     *   group.
      */
     public fun associateWirelessDevice(associateWirelessDevice: String) {
         cdkBuilder.associateWirelessDevice(associateWirelessDevice)
@@ -80,6 +90,7 @@ public class CfnFuotaTaskDsl(
      * The description of the new resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-description)
+     *
      * @param description The description of the new resource.
      */
     public fun description(description: String) {
@@ -90,8 +101,9 @@ public class CfnFuotaTaskDsl(
      * The ID of the multicast group to disassociate from a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-disassociatemulticastgroup)
+     *
      * @param disassociateMulticastGroup The ID of the multicast group to disassociate from a FUOTA
-     * task.
+     *   task.
      */
     public fun disassociateMulticastGroup(disassociateMulticastGroup: String) {
         cdkBuilder.disassociateMulticastGroup(disassociateMulticastGroup)
@@ -101,8 +113,9 @@ public class CfnFuotaTaskDsl(
      * The ID of the wireless device to disassociate from a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-disassociatewirelessdevice)
+     *
      * @param disassociateWirelessDevice The ID of the wireless device to disassociate from a FUOTA
-     * task.
+     *   task.
      */
     public fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
         cdkBuilder.disassociateWirelessDevice(disassociateWirelessDevice)
@@ -112,8 +125,9 @@ public class CfnFuotaTaskDsl(
      * The S3 URI points to a firmware update image that is to be used with a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-firmwareupdateimage)
-     * @param firmwareUpdateImage The S3 URI points to a firmware update image that is to be used with
-     * a FUOTA task.
+     *
+     * @param firmwareUpdateImage The S3 URI points to a firmware update image that is to be used
+     *   with a FUOTA task.
      */
     public fun firmwareUpdateImage(firmwareUpdateImage: String) {
         cdkBuilder.firmwareUpdateImage(firmwareUpdateImage)
@@ -123,6 +137,7 @@ public class CfnFuotaTaskDsl(
      * The firmware update role that is to be used with a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-firmwareupdaterole)
+     *
      * @param firmwareUpdateRole The firmware update role that is to be used with a FUOTA task.
      */
     public fun firmwareUpdateRole(firmwareUpdateRole: String) {
@@ -133,6 +148,7 @@ public class CfnFuotaTaskDsl(
      * The LoRaWAN information used with a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-lorawan)
+     *
      * @param loRaWan The LoRaWAN information used with a FUOTA task.
      */
     public fun loRaWan(loRaWan: IResolvable) {
@@ -143,6 +159,7 @@ public class CfnFuotaTaskDsl(
      * The LoRaWAN information used with a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-lorawan)
+     *
      * @param loRaWan The LoRaWAN information used with a FUOTA task.
      */
     public fun loRaWan(loRaWan: CfnFuotaTask.LoRaWANProperty) {
@@ -153,6 +170,7 @@ public class CfnFuotaTaskDsl(
      * The name of a FUOTA task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-name)
+     *
      * @param name The name of a FUOTA task.
      */
     public fun name(name: String) {
@@ -165,6 +183,7 @@ public class CfnFuotaTaskDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -177,6 +196,7 @@ public class CfnFuotaTaskDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html#cfn-iotwireless-fuotatask-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: Collection<CfnTag>) {

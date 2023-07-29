@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ecs.RuntimePlatform
  * The interface for Runtime Platform.
  *
  * Example:
- *
  * ```
  * // Create a Task Definition for the Windows container to start
  * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
@@ -31,21 +39,17 @@ import software.amazon.awscdk.services.ecs.RuntimePlatform
  */
 @CdkDslMarker
 public class RuntimePlatformDsl {
-  private val cdkBuilder: RuntimePlatform.Builder = RuntimePlatform.builder()
+    private val cdkBuilder: RuntimePlatform.Builder = RuntimePlatform.builder()
 
-  /**
-   * @param cpuArchitecture The CpuArchitecture for Fargate Runtime Platform.
-   */
-  public fun cpuArchitecture(cpuArchitecture: CpuArchitecture) {
-    cdkBuilder.cpuArchitecture(cpuArchitecture)
-  }
+    /** @param cpuArchitecture The CpuArchitecture for Fargate Runtime Platform. */
+    public fun cpuArchitecture(cpuArchitecture: CpuArchitecture) {
+        cdkBuilder.cpuArchitecture(cpuArchitecture)
+    }
 
-  /**
-   * @param operatingSystemFamily The operating system for Fargate Runtime Platform.
-   */
-  public fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily) {
-    cdkBuilder.operatingSystemFamily(operatingSystemFamily)
-  }
+    /** @param operatingSystemFamily The operating system for Fargate Runtime Platform. */
+    public fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily) {
+        cdkBuilder.operatingSystemFamily(operatingSystemFamily)
+    }
 
-  public fun build(): RuntimePlatform = cdkBuilder.build()
+    public fun build(): RuntimePlatform = cdkBuilder.build()
 }

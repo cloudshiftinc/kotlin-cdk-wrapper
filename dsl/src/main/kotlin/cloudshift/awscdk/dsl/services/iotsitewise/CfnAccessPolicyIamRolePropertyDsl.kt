@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotsitewise
 
@@ -9,11 +18,11 @@ import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
 /**
  * Contains information about an AWS Identity and Access Management role.
  *
- * For more information, see [IAM
- * roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide* .
+ * For more information, see
+ * [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User
+ * Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,18 +36,17 @@ import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
  */
 @CdkDslMarker
 public class CfnAccessPolicyIamRolePropertyDsl {
-  private val cdkBuilder: CfnAccessPolicy.IamRoleProperty.Builder =
-      CfnAccessPolicy.IamRoleProperty.builder()
+    private val cdkBuilder: CfnAccessPolicy.IamRoleProperty.Builder =
+        CfnAccessPolicy.IamRoleProperty.builder()
 
-  /**
-   * @param arn The ARN of the IAM role.
-   * For more information, see [IAM
-   * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
-   * User Guide* .
-   */
-  public fun arn(arn: String) {
-    cdkBuilder.arn(arn)
-  }
+    /**
+     * @param arn The ARN of the IAM role. For more information, see
+     *   [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in
+     *   the *IAM User Guide* .
+     */
+    public fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+    }
 
-  public fun build(): CfnAccessPolicy.IamRoleProperty = cdkBuilder.build()
+    public fun build(): CfnAccessPolicy.IamRoleProperty = cdkBuilder.build()
 }

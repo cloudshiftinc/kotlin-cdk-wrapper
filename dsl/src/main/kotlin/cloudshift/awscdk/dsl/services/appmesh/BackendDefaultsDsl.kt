@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.TlsClientPolicy
  * Represents the properties needed to define backend defaults.
  *
  * Example:
- *
  * ```
  * Mesh mesh;
  * Service service;
@@ -45,23 +53,19 @@ import software.amazon.awscdk.services.appmesh.TlsClientPolicy
  */
 @CdkDslMarker
 public class BackendDefaultsDsl {
-  private val cdkBuilder: BackendDefaults.Builder = BackendDefaults.builder()
+    private val cdkBuilder: BackendDefaults.Builder = BackendDefaults.builder()
 
-  /**
-   * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
-   */
-  public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicyDsl.() -> Unit = {}) {
-    val builder = TlsClientPolicyDsl()
-    builder.apply(tlsClientPolicy)
-    cdkBuilder.tlsClientPolicy(builder.build())
-  }
+    /** @param tlsClientPolicy TLS properties for Client policy for backend defaults. */
+    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicyDsl.() -> Unit = {}) {
+        val builder = TlsClientPolicyDsl()
+        builder.apply(tlsClientPolicy)
+        cdkBuilder.tlsClientPolicy(builder.build())
+    }
 
-  /**
-   * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
-   */
-  public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
-    cdkBuilder.tlsClientPolicy(tlsClientPolicy)
-  }
+    /** @param tlsClientPolicy TLS properties for Client policy for backend defaults. */
+    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
+        cdkBuilder.tlsClientPolicy(tlsClientPolicy)
+    }
 
-  public fun build(): BackendDefaults = cdkBuilder.build()
+    public fun build(): BackendDefaults = cdkBuilder.build()
 }

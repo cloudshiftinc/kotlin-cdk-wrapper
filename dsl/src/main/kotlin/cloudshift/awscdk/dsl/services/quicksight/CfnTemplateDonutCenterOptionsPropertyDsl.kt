@@ -1,10 +1,19 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The label options of the label that is displayed in the center of a donut chart.
@@ -12,7 +21,6 @@ import kotlin.String
  * This option isn't available for pie charts.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,8 +38,8 @@ public class CfnTemplateDonutCenterOptionsPropertyDsl {
         CfnTemplate.DonutCenterOptionsProperty.builder()
 
     /**
-     * @param labelVisibility Determines the visibility of the label in a donut chart.
-     * In the Amazon QuickSight console, this option is called `'Show total'` .
+     * @param labelVisibility Determines the visibility of the label in a donut chart. In the Amazon
+     *   QuickSight console, this option is called `'Show total'` .
      */
     public fun labelVisibility(labelVisibility: String) {
         cdkBuilder.labelVisibility(labelVisibility)

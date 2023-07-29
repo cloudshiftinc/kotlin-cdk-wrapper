@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ecs.ContainerDependencyCondition
  * The details of a dependency on another container in the task definition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,24 +36,22 @@ import software.amazon.awscdk.services.ecs.ContainerDependencyCondition
  */
 @CdkDslMarker
 public class ContainerDependencyDsl {
-  private val cdkBuilder: ContainerDependency.Builder = ContainerDependency.builder()
+    private val cdkBuilder: ContainerDependency.Builder = ContainerDependency.builder()
 
-  /**
-   * @param condition The state the container needs to be in to satisfy the dependency and proceed
-   * with startup.
-   * Valid values are ContainerDependencyCondition.START, ContainerDependencyCondition.COMPLETE,
-   * ContainerDependencyCondition.SUCCESS and ContainerDependencyCondition.HEALTHY.
-   */
-  public fun condition(condition: ContainerDependencyCondition) {
-    cdkBuilder.condition(condition)
-  }
+    /**
+     * @param condition The state the container needs to be in to satisfy the dependency and proceed
+     *   with startup. Valid values are ContainerDependencyCondition.START,
+     *   ContainerDependencyCondition.COMPLETE, ContainerDependencyCondition.SUCCESS and
+     *   ContainerDependencyCondition.HEALTHY.
+     */
+    public fun condition(condition: ContainerDependencyCondition) {
+        cdkBuilder.condition(condition)
+    }
 
-  /**
-   * @param container The container to depend on. 
-   */
-  public fun container(container: ContainerDefinition) {
-    cdkBuilder.container(container)
-  }
+    /** @param container The container to depend on. */
+    public fun container(container: ContainerDefinition) {
+        cdkBuilder.container(container)
+    }
 
-  public fun build(): ContainerDependency = cdkBuilder.build()
+    public fun build(): ContainerDependency = cdkBuilder.build()
 }

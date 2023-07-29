@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
  * This is part of a `RuleVariables` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,27 +35,23 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
  */
 @CdkDslMarker
 public class CfnFirewallPolicyIPSetPropertyDsl {
-  private val cdkBuilder: CfnFirewallPolicy.IPSetProperty.Builder =
-      CfnFirewallPolicy.IPSetProperty.builder()
+    private val cdkBuilder: CfnFirewallPolicy.IPSetProperty.Builder =
+        CfnFirewallPolicy.IPSetProperty.builder()
 
-  private val _definition: MutableList<String> = mutableListOf()
+    private val _definition: MutableList<String> = mutableListOf()
 
-  /**
-   * @param definition The list of IP addresses and address ranges, in CIDR notation.
-   */
-  public fun definition(vararg definition: String) {
-    _definition.addAll(listOf(*definition))
-  }
+    /** @param definition The list of IP addresses and address ranges, in CIDR notation. */
+    public fun definition(vararg definition: String) {
+        _definition.addAll(listOf(*definition))
+    }
 
-  /**
-   * @param definition The list of IP addresses and address ranges, in CIDR notation.
-   */
-  public fun definition(definition: Collection<String>) {
-    _definition.addAll(definition)
-  }
+    /** @param definition The list of IP addresses and address ranges, in CIDR notation. */
+    public fun definition(definition: Collection<String>) {
+        _definition.addAll(definition)
+    }
 
-  public fun build(): CfnFirewallPolicy.IPSetProperty {
-    if(_definition.isNotEmpty()) cdkBuilder.definition(_definition)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFirewallPolicy.IPSetProperty {
+        if (_definition.isNotEmpty()) cdkBuilder.definition(_definition)
+        return cdkBuilder.build()
+    }
 }

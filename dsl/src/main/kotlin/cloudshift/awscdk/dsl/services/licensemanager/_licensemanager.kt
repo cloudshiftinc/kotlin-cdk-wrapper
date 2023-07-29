@@ -1,26 +1,34 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.licensemanager.CfnGrant
 import software.amazon.awscdk.services.licensemanager.CfnGrantProps
 import software.amazon.awscdk.services.licensemanager.CfnLicense
 import software.amazon.awscdk.services.licensemanager.CfnLicenseProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object licensemanager {
     /**
      * Specifies a grant.
      *
      * A grant shares the use of license entitlements with specific AWS accounts . For more
-     * information, see [Granted
-   * licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html) in
-     * the *AWS License Manager User Guide* .
+     * information, see
+     * [Granted licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html)
+     * in the *AWS License Manager User Guide* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -40,7 +48,7 @@ public object licensemanager {
     public inline fun cfnGrant(
         scope: Construct,
         id: String,
-        block: CfnGrantDsl.() -> Unit = {}
+        block: CfnGrantDsl.() -> Unit = {},
     ): CfnGrant {
         val builder = CfnGrantDsl(scope, id)
         builder.apply(block)
@@ -51,7 +59,6 @@ public object licensemanager {
      * Properties for defining a `CfnGrant`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -78,13 +85,12 @@ public object licensemanager {
      * Specifies a granted license.
      *
      * Granted licenses are licenses for products that your organization purchased from AWS
-     * Marketplace or directly from a seller who integrated their software with managed entitlements. For
-     * more information, see [Granted
-   * licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html) in
-     * the *AWS License Manager User Guide* .
+     * Marketplace or directly from a seller who integrated their software with managed
+     * entitlements. For more information, see
+     * [Granted licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html)
+     * in the *AWS License Manager User Guide* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -137,7 +143,7 @@ public object licensemanager {
     public inline fun cfnLicense(
         scope: Construct,
         id: String,
-        block: CfnLicenseDsl.() -> Unit = {}
+        block: CfnLicenseDsl.() -> Unit = {},
     ): CfnLicense {
         val builder = CfnLicenseDsl(scope, id)
         builder.apply(block)
@@ -148,7 +154,6 @@ public object licensemanager {
      * Details about a borrow configuration.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -162,8 +167,7 @@ public object licensemanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-borrowconfiguration.html)
      */
     public inline fun cfnLicenseBorrowConfigurationProperty(
-        block: CfnLicenseBorrowConfigurationPropertyDsl.() -> Unit =
-            {}
+        block: CfnLicenseBorrowConfigurationPropertyDsl.() -> Unit = {}
     ): CfnLicense.BorrowConfigurationProperty {
         val builder = CfnLicenseBorrowConfigurationPropertyDsl()
         builder.apply(block)
@@ -174,7 +178,6 @@ public object licensemanager {
      * Details about a consumption configuration.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -195,8 +198,7 @@ public object licensemanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-consumptionconfiguration.html)
      */
     public inline fun cfnLicenseConsumptionConfigurationProperty(
-        block: CfnLicenseConsumptionConfigurationPropertyDsl.() -> Unit =
-            {}
+        block: CfnLicenseConsumptionConfigurationPropertyDsl.() -> Unit = {}
     ): CfnLicense.ConsumptionConfigurationProperty {
         val builder = CfnLicenseConsumptionConfigurationPropertyDsl()
         builder.apply(block)
@@ -207,7 +209,6 @@ public object licensemanager {
      * Describes a resource entitled for use with a license.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -226,8 +227,7 @@ public object licensemanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html)
      */
     public inline fun cfnLicenseEntitlementProperty(
-        block: CfnLicenseEntitlementPropertyDsl.() -> Unit =
-            {}
+        block: CfnLicenseEntitlementPropertyDsl.() -> Unit = {}
     ): CfnLicense.EntitlementProperty {
         val builder = CfnLicenseEntitlementPropertyDsl()
         builder.apply(block)
@@ -238,7 +238,6 @@ public object licensemanager {
      * Details associated with the issuer of a license.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -253,8 +252,7 @@ public object licensemanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html)
      */
     public inline fun cfnLicenseIssuerDataProperty(
-        block: CfnLicenseIssuerDataPropertyDsl.() -> Unit =
-            {}
+        block: CfnLicenseIssuerDataPropertyDsl.() -> Unit = {}
     ): CfnLicense.IssuerDataProperty {
         val builder = CfnLicenseIssuerDataPropertyDsl()
         builder.apply(block)
@@ -265,7 +263,6 @@ public object licensemanager {
      * Describes key/value pairs.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -279,8 +276,7 @@ public object licensemanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html)
      */
     public inline fun cfnLicenseMetadataProperty(
-        block: CfnLicenseMetadataPropertyDsl.() -> Unit =
-            {}
+        block: CfnLicenseMetadataPropertyDsl.() -> Unit = {}
     ): CfnLicense.MetadataProperty {
         val builder = CfnLicenseMetadataPropertyDsl()
         builder.apply(block)
@@ -291,7 +287,6 @@ public object licensemanager {
      * Properties for defining a `CfnLicense`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -351,7 +346,6 @@ public object licensemanager {
      * Details about a provisional configuration.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -365,8 +359,7 @@ public object licensemanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html)
      */
     public inline fun cfnLicenseProvisionalConfigurationProperty(
-        block: CfnLicenseProvisionalConfigurationPropertyDsl.() -> Unit =
-            {}
+        block: CfnLicenseProvisionalConfigurationPropertyDsl.() -> Unit = {}
     ): CfnLicense.ProvisionalConfigurationProperty {
         val builder = CfnLicenseProvisionalConfigurationPropertyDsl()
         builder.apply(block)
@@ -377,7 +370,6 @@ public object licensemanager {
      * Date and time range during which the license is valid, in ISO8601-UTC format.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -391,8 +383,7 @@ public object licensemanager {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html)
      */
     public inline fun cfnLicenseValidityDateFormatProperty(
-        block: CfnLicenseValidityDateFormatPropertyDsl.() -> Unit =
-            {}
+        block: CfnLicenseValidityDateFormatPropertyDsl.() -> Unit = {}
     ): CfnLicense.ValidityDateFormatProperty {
         val builder = CfnLicenseValidityDateFormatPropertyDsl()
         builder.apply(block)

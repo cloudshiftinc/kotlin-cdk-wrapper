@@ -1,14 +1,23 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.services.pinpoint.CfnEmailTemplate
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.pinpoint.CfnEmailTemplate
+import software.constructs.Construct
 
 /**
  * Creates a message template that you can use in messages that are sent through the email channel.
@@ -17,7 +26,6 @@ import kotlin.Unit
  * messages for any of your Amazon Pinpoint applications.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,7 +48,7 @@ import kotlin.Unit
 @CdkDslMarker
 public class CfnEmailTemplateDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnEmailTemplate.Builder = CfnEmailTemplate.Builder.create(scope, id)
 
@@ -49,13 +57,14 @@ public class CfnEmailTemplateDsl(
      * template.
      *
      * This object is a set of key-value pairs. Each key defines a message variable in the template.
-     * The corresponding value defines the default value for that variable. When you create a message
-     * that's based on the template, you can override these defaults with message-specific and
-     * address-specific variables and values.
+     * The corresponding value defines the default value for that variable. When you create a
+     * message that's based on the template, you can override these defaults with message-specific
+     * and address-specific variables and values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-defaultsubstitutions)
-     * @param defaultSubstitutions A JSON object that specifies the default values to use for message
-     * variables in the message template.
+     *
+     * @param defaultSubstitutions A JSON object that specifies the default values to use for
+     *   message variables in the message template.
      */
     public fun defaultSubstitutions(defaultSubstitutions: String) {
         cdkBuilder.defaultSubstitutions(defaultSubstitutions)
@@ -69,8 +78,9 @@ public class CfnEmailTemplateDsl(
      * links, formatted text, and more in an HTML message.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-htmlpart)
+     *
      * @param htmlPart The message body, in HTML format, to use in email messages that are based on
-     * the message template.
+     *   the message template.
      */
     public fun htmlPart(htmlPart: String) {
         cdkBuilder.htmlPart(htmlPart)
@@ -80,8 +90,9 @@ public class CfnEmailTemplateDsl(
      * The subject line, or title, to use in email messages that are based on the message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-subject)
+     *
      * @param subject The subject line, or title, to use in email messages that are based on the
-     * message template.
+     *   message template.
      */
     public fun subject(subject: String) {
         cdkBuilder.subject(subject)
@@ -95,6 +106,7 @@ public class CfnEmailTemplateDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: MapBuilder.() -> Unit = {}) {
@@ -111,6 +123,7 @@ public class CfnEmailTemplateDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: Any) {
@@ -121,6 +134,7 @@ public class CfnEmailTemplateDsl(
      * A custom description of the message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-templatedescription)
+     *
      * @param templateDescription A custom description of the message template.
      */
     public fun templateDescription(templateDescription: String) {
@@ -131,6 +145,7 @@ public class CfnEmailTemplateDsl(
      * The name of the message template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-templatename)
+     *
      * @param templateName The name of the message template.
      */
     public fun templateName(templateName: String) {
@@ -138,15 +153,16 @@ public class CfnEmailTemplateDsl(
     }
 
     /**
-     * The message body, in plain text format, to use in email messages that are based on the message
-     * template.
+     * The message body, in plain text format, to use in email messages that are based on the
+     * message template.
      *
      * We recommend using plain text format for email clients that don't render HTML content and
      * clients that are connected to high-latency networks, such as mobile devices.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html#cfn-pinpoint-emailtemplate-textpart)
-     * @param textPart The message body, in plain text format, to use in email messages that are based
-     * on the message template.
+     *
+     * @param textPart The message body, in plain text format, to use in email messages that are
+     *   based on the message template.
      */
     public fun textPart(textPart: String) {
         cdkBuilder.textPart(textPart)

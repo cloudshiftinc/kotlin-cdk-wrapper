@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudfront.CfnKeyGroupProps
  * Properties for defining a `CfnKeyGroup`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,21 +38,17 @@ import software.amazon.awscdk.services.cloudfront.CfnKeyGroupProps
  */
 @CdkDslMarker
 public class CfnKeyGroupPropsDsl {
-  private val cdkBuilder: CfnKeyGroupProps.Builder = CfnKeyGroupProps.builder()
+    private val cdkBuilder: CfnKeyGroupProps.Builder = CfnKeyGroupProps.builder()
 
-  /**
-   * @param keyGroupConfig The key group configuration. 
-   */
-  public fun keyGroupConfig(keyGroupConfig: IResolvable) {
-    cdkBuilder.keyGroupConfig(keyGroupConfig)
-  }
+    /** @param keyGroupConfig The key group configuration. */
+    public fun keyGroupConfig(keyGroupConfig: IResolvable) {
+        cdkBuilder.keyGroupConfig(keyGroupConfig)
+    }
 
-  /**
-   * @param keyGroupConfig The key group configuration. 
-   */
-  public fun keyGroupConfig(keyGroupConfig: CfnKeyGroup.KeyGroupConfigProperty) {
-    cdkBuilder.keyGroupConfig(keyGroupConfig)
-  }
+    /** @param keyGroupConfig The key group configuration. */
+    public fun keyGroupConfig(keyGroupConfig: CfnKeyGroup.KeyGroupConfigProperty) {
+        cdkBuilder.keyGroupConfig(keyGroupConfig)
+    }
 
-  public fun build(): CfnKeyGroupProps = cdkBuilder.build()
+    public fun build(): CfnKeyGroupProps = cdkBuilder.build()
 }

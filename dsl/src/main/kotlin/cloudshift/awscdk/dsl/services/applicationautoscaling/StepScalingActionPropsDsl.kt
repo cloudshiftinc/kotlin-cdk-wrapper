@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.applicationautoscaling
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.applicationautoscaling.StepScalingActionP
  * Properties for a scaling policy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,57 +43,46 @@ import software.amazon.awscdk.services.applicationautoscaling.StepScalingActionP
  */
 @CdkDslMarker
 public class StepScalingActionPropsDsl {
-  private val cdkBuilder: StepScalingActionProps.Builder = StepScalingActionProps.builder()
+    private val cdkBuilder: StepScalingActionProps.Builder = StepScalingActionProps.builder()
 
-  /**
-   * @param adjustmentType How the adjustment numbers are interpreted.
-   */
-  public fun adjustmentType(adjustmentType: AdjustmentType) {
-    cdkBuilder.adjustmentType(adjustmentType)
-  }
+    /** @param adjustmentType How the adjustment numbers are interpreted. */
+    public fun adjustmentType(adjustmentType: AdjustmentType) {
+        cdkBuilder.adjustmentType(adjustmentType)
+    }
 
-  /**
-   * @param cooldown Grace period after scaling activity.
-   * For scale out policies, multiple scale outs during the cooldown period are
-   * squashed so that only the biggest scale out happens.
-   *
-   * For scale in policies, subsequent scale ins during the cooldown period are
-   * ignored.
-   */
-  public fun cooldown(cooldown: Duration) {
-    cdkBuilder.cooldown(cooldown)
-  }
+    /**
+     * @param cooldown Grace period after scaling activity. For scale out policies, multiple scale
+     *   outs during the cooldown period are squashed so that only the biggest scale out happens.
+     *
+     * For scale in policies, subsequent scale ins during the cooldown period are ignored.
+     */
+    public fun cooldown(cooldown: Duration) {
+        cdkBuilder.cooldown(cooldown)
+    }
 
-  /**
-   * @param metricAggregationType The aggregation type for the CloudWatch metrics.
-   */
-  public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-    cdkBuilder.metricAggregationType(metricAggregationType)
-  }
+    /** @param metricAggregationType The aggregation type for the CloudWatch metrics. */
+    public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
+        cdkBuilder.metricAggregationType(metricAggregationType)
+    }
 
-  /**
-   * @param minAdjustmentMagnitude Minimum absolute number to adjust capacity with as result of
-   * percentage scaling.
-   * Only when using AdjustmentType = PercentChangeInCapacity, this number controls
-   * the minimum absolute effect size.
-   */
-  public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
-  }
+    /**
+     * @param minAdjustmentMagnitude Minimum absolute number to adjust capacity with as result of
+     *   percentage scaling. Only when using AdjustmentType = PercentChangeInCapacity, this number
+     *   controls the minimum absolute effect size.
+     */
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+        cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
+    }
 
-  /**
-   * @param policyName A name for the scaling policy.
-   */
-  public fun policyName(policyName: String) {
-    cdkBuilder.policyName(policyName)
-  }
+    /** @param policyName A name for the scaling policy. */
+    public fun policyName(policyName: String) {
+        cdkBuilder.policyName(policyName)
+    }
 
-  /**
-   * @param scalingTarget The scalable target. 
-   */
-  public fun scalingTarget(scalingTarget: IScalableTarget) {
-    cdkBuilder.scalingTarget(scalingTarget)
-  }
+    /** @param scalingTarget The scalable target. */
+    public fun scalingTarget(scalingTarget: IScalableTarget) {
+        cdkBuilder.scalingTarget(scalingTarget)
+    }
 
-  public fun build(): StepScalingActionProps = cdkBuilder.build()
+    public fun build(): StepScalingActionProps = cdkBuilder.build()
 }

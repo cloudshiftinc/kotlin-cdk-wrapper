@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appstream
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appstream.CfnStack
  * streaming sessions.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.appstream.CfnStack
  */
 @CdkDslMarker
 public class CfnStackUserSettingPropertyDsl {
-  private val cdkBuilder: CfnStack.UserSettingProperty.Builder =
-      CfnStack.UserSettingProperty.builder()
+    private val cdkBuilder: CfnStack.UserSettingProperty.Builder =
+        CfnStack.UserSettingProperty.builder()
 
-  /**
-   * @param action The action that is enabled or disabled. 
-   */
-  public fun action(action: String) {
-    cdkBuilder.action(action)
-  }
+    /** @param action The action that is enabled or disabled. */
+    public fun action(action: String) {
+        cdkBuilder.action(action)
+    }
 
-  /**
-   * @param permission Indicates whether the action is enabled or disabled. 
-   */
-  public fun permission(permission: String) {
-    cdkBuilder.permission(permission)
-  }
+    /** @param permission Indicates whether the action is enabled or disabled. */
+    public fun permission(permission: String) {
+        cdkBuilder.permission(permission)
+    }
 
-  public fun build(): CfnStack.UserSettingProperty = cdkBuilder.build()
+    public fun build(): CfnStack.UserSettingProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is VideoSelectorSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelVideoSelectorPidPropertyDsl {
-  private val cdkBuilder: CfnChannel.VideoSelectorPidProperty.Builder =
-      CfnChannel.VideoSelectorPidProperty.builder()
+    private val cdkBuilder: CfnChannel.VideoSelectorPidProperty.Builder =
+        CfnChannel.VideoSelectorPidProperty.builder()
 
-  /**
-   * @param pid Selects a specific PID from within a video source.
-   */
-  public fun pid(pid: Number) {
-    cdkBuilder.pid(pid)
-  }
+    /** @param pid Selects a specific PID from within a video source. */
+    public fun pid(pid: Number) {
+        cdkBuilder.pid(pid)
+    }
 
-  public fun build(): CfnChannel.VideoSelectorPidProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.VideoSelectorPidProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnDatastore
  * The dimension must be an `AttributePartition` or a `TimestampPartition` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.iotanalytics.CfnDatastore
  */
 @CdkDslMarker
 public class CfnDatastorePartitionPropertyDsl {
-  private val cdkBuilder: CfnDatastore.PartitionProperty.Builder =
-      CfnDatastore.PartitionProperty.builder()
+    private val cdkBuilder: CfnDatastore.PartitionProperty.Builder =
+        CfnDatastore.PartitionProperty.builder()
 
-  /**
-   * @param attributeName The name of the attribute that defines a partition dimension. 
-   */
-  public fun attributeName(attributeName: String) {
-    cdkBuilder.attributeName(attributeName)
-  }
+    /** @param attributeName The name of the attribute that defines a partition dimension. */
+    public fun attributeName(attributeName: String) {
+        cdkBuilder.attributeName(attributeName)
+    }
 
-  public fun build(): CfnDatastore.PartitionProperty = cdkBuilder.build()
+    public fun build(): CfnDatastore.PartitionProperty = cdkBuilder.build()
 }

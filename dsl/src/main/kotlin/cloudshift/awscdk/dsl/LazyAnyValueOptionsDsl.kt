@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.LazyAnyValueOptions
  * Options for creating lazy untyped tokens.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,22 +32,20 @@ import software.amazon.awscdk.LazyAnyValueOptions
  */
 @CdkDslMarker
 public class LazyAnyValueOptionsDsl {
-  private val cdkBuilder: LazyAnyValueOptions.Builder = LazyAnyValueOptions.builder()
+    private val cdkBuilder: LazyAnyValueOptions.Builder = LazyAnyValueOptions.builder()
 
-  /**
-   * @param displayHint Use the given name as a display hint.
-   */
-  public fun displayHint(displayHint: String) {
-    cdkBuilder.displayHint(displayHint)
-  }
+    /** @param displayHint Use the given name as a display hint. */
+    public fun displayHint(displayHint: String) {
+        cdkBuilder.displayHint(displayHint)
+    }
 
-  /**
-   * @param omitEmptyArray If the produced value is an array and it is empty, return 'undefined'
-   * instead.
-   */
-  public fun omitEmptyArray(omitEmptyArray: Boolean) {
-    cdkBuilder.omitEmptyArray(omitEmptyArray)
-  }
+    /**
+     * @param omitEmptyArray If the produced value is an array and it is empty, return 'undefined'
+     *   instead.
+     */
+    public fun omitEmptyArray(omitEmptyArray: Boolean) {
+        cdkBuilder.omitEmptyArray(omitEmptyArray)
+    }
 
-  public fun build(): LazyAnyValueOptions = cdkBuilder.build()
+    public fun build(): LazyAnyValueOptions = cdkBuilder.build()
 }

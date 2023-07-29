@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkmanager
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.networkmanager.CfnConnectPeer
  * Describes a core network BGP configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,36 +37,28 @@ import software.amazon.awscdk.services.networkmanager.CfnConnectPeer
  */
 @CdkDslMarker
 public class CfnConnectPeerConnectPeerBgpConfigurationPropertyDsl {
-  private val cdkBuilder: CfnConnectPeer.ConnectPeerBgpConfigurationProperty.Builder =
-      CfnConnectPeer.ConnectPeerBgpConfigurationProperty.builder()
+    private val cdkBuilder: CfnConnectPeer.ConnectPeerBgpConfigurationProperty.Builder =
+        CfnConnectPeer.ConnectPeerBgpConfigurationProperty.builder()
 
-  /**
-   * @param coreNetworkAddress The address of a core network.
-   */
-  public fun coreNetworkAddress(coreNetworkAddress: String) {
-    cdkBuilder.coreNetworkAddress(coreNetworkAddress)
-  }
+    /** @param coreNetworkAddress The address of a core network. */
+    public fun coreNetworkAddress(coreNetworkAddress: String) {
+        cdkBuilder.coreNetworkAddress(coreNetworkAddress)
+    }
 
-  /**
-   * @param coreNetworkAsn The ASN of the Coret Network.
-   */
-  public fun coreNetworkAsn(coreNetworkAsn: Number) {
-    cdkBuilder.coreNetworkAsn(coreNetworkAsn)
-  }
+    /** @param coreNetworkAsn The ASN of the Coret Network. */
+    public fun coreNetworkAsn(coreNetworkAsn: Number) {
+        cdkBuilder.coreNetworkAsn(coreNetworkAsn)
+    }
 
-  /**
-   * @param peerAddress The address of a core network Connect peer.
-   */
-  public fun peerAddress(peerAddress: String) {
-    cdkBuilder.peerAddress(peerAddress)
-  }
+    /** @param peerAddress The address of a core network Connect peer. */
+    public fun peerAddress(peerAddress: String) {
+        cdkBuilder.peerAddress(peerAddress)
+    }
 
-  /**
-   * @param peerAsn The ASN of the Connect peer.
-   */
-  public fun peerAsn(peerAsn: Number) {
-    cdkBuilder.peerAsn(peerAsn)
-  }
+    /** @param peerAsn The ASN of the Connect peer. */
+    public fun peerAsn(peerAsn: Number) {
+        cdkBuilder.peerAsn(peerAsn)
+    }
 
-  public fun build(): CfnConnectPeer.ConnectPeerBgpConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnConnectPeer.ConnectPeerBgpConfigurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.rds.ParameterGroupClusterConfig
  * The type returned from `IParameterGroup.bindToCluster`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,13 @@ import software.amazon.awscdk.services.rds.ParameterGroupClusterConfig
  */
 @CdkDslMarker
 public class ParameterGroupClusterConfigDsl {
-  private val cdkBuilder: ParameterGroupClusterConfig.Builder =
-      ParameterGroupClusterConfig.builder()
+    private val cdkBuilder: ParameterGroupClusterConfig.Builder =
+        ParameterGroupClusterConfig.builder()
 
-  /**
-   * @param parameterGroupName The name of this parameter group. 
-   */
-  public fun parameterGroupName(parameterGroupName: String) {
-    cdkBuilder.parameterGroupName(parameterGroupName)
-  }
+    /** @param parameterGroupName The name of this parameter group. */
+    public fun parameterGroupName(parameterGroupName: String) {
+        cdkBuilder.parameterGroupName(parameterGroupName)
+    }
 
-  public fun build(): ParameterGroupClusterConfig = cdkBuilder.build()
+    public fun build(): ParameterGroupClusterConfig = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig
  * Properties for a VirtualNode listener.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -137,23 +145,19 @@ import software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig
  */
 @CdkDslMarker
 public class VirtualNodeListenerConfigDsl {
-  private val cdkBuilder: VirtualNodeListenerConfig.Builder = VirtualNodeListenerConfig.builder()
+    private val cdkBuilder: VirtualNodeListenerConfig.Builder = VirtualNodeListenerConfig.builder()
 
-  /**
-   * @param listener Single listener config for a VirtualNode. 
-   */
-  public fun listener(listener: CfnVirtualNodeListenerPropertyDsl.() -> Unit = {}) {
-    val builder = CfnVirtualNodeListenerPropertyDsl()
-    builder.apply(listener)
-    cdkBuilder.listener(builder.build())
-  }
+    /** @param listener Single listener config for a VirtualNode. */
+    public fun listener(listener: CfnVirtualNodeListenerPropertyDsl.() -> Unit = {}) {
+        val builder = CfnVirtualNodeListenerPropertyDsl()
+        builder.apply(listener)
+        cdkBuilder.listener(builder.build())
+    }
 
-  /**
-   * @param listener Single listener config for a VirtualNode. 
-   */
-  public fun listener(listener: CfnVirtualNode.ListenerProperty) {
-    cdkBuilder.listener(listener)
-  }
+    /** @param listener Single listener config for a VirtualNode. */
+    public fun listener(listener: CfnVirtualNode.ListenerProperty) {
+        cdkBuilder.listener(listener)
+    }
 
-  public fun build(): VirtualNodeListenerConfig = cdkBuilder.build()
+    public fun build(): VirtualNodeListenerConfig = cdkBuilder.build()
 }

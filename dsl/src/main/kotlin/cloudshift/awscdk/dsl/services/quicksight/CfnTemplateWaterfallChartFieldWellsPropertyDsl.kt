@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The field well configuration of a waterfall visual.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -18,23 +26,24 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateWaterfallChartFieldWellsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.WaterfallChartFieldWellsProperty.Builder =
-      CfnTemplate.WaterfallChartFieldWellsProperty.builder()
+    private val cdkBuilder: CfnTemplate.WaterfallChartFieldWellsProperty.Builder =
+        CfnTemplate.WaterfallChartFieldWellsProperty.builder()
 
-  /**
-   * @param waterfallChartAggregatedFieldWells The field well configuration of a waterfall visual.
-   */
-  public fun waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells: IResolvable) {
-    cdkBuilder.waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells)
-  }
+    /**
+     * @param waterfallChartAggregatedFieldWells The field well configuration of a waterfall visual.
+     */
+    public fun waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells: IResolvable) {
+        cdkBuilder.waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells)
+    }
 
-  /**
-   * @param waterfallChartAggregatedFieldWells The field well configuration of a waterfall visual.
-   */
-  public
-      fun waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells: CfnTemplate.WaterfallChartAggregatedFieldWellsProperty) {
-    cdkBuilder.waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells)
-  }
+    /**
+     * @param waterfallChartAggregatedFieldWells The field well configuration of a waterfall visual.
+     */
+    public fun waterfallChartAggregatedFieldWells(
+        waterfallChartAggregatedFieldWells: CfnTemplate.WaterfallChartAggregatedFieldWellsProperty
+    ) {
+        cdkBuilder.waterfallChartAggregatedFieldWells(waterfallChartAggregatedFieldWells)
+    }
 
-  public fun build(): CfnTemplate.WaterfallChartFieldWellsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.WaterfallChartFieldWellsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opsworks
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.opsworks.CfnApp
  * Describes an app's SSL configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,31 +34,26 @@ import software.amazon.awscdk.services.opsworks.CfnApp
  */
 @CdkDslMarker
 public class CfnAppSslConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApp.SslConfigurationProperty.Builder =
-      CfnApp.SslConfigurationProperty.builder()
+    private val cdkBuilder: CfnApp.SslConfigurationProperty.Builder =
+        CfnApp.SslConfigurationProperty.builder()
 
-  /**
-   * @param certificate The contents of the certificate's domain.crt file.
-   */
-  public fun certificate(certificate: String) {
-    cdkBuilder.certificate(certificate)
-  }
+    /** @param certificate The contents of the certificate's domain.crt file. */
+    public fun certificate(certificate: String) {
+        cdkBuilder.certificate(certificate)
+    }
 
-  /**
-   * @param chain Optional.
-   * Can be used to specify an intermediate certificate authority key or client authentication.
-   */
-  public fun chain(chain: String) {
-    cdkBuilder.chain(chain)
-  }
+    /**
+     * @param chain Optional. Can be used to specify an intermediate certificate authority key or
+     *   client authentication.
+     */
+    public fun chain(chain: String) {
+        cdkBuilder.chain(chain)
+    }
 
-  /**
-   * @param privateKey The private key;.
-   * the contents of the certificate's domain.kex file.
-   */
-  public fun privateKey(privateKey: String) {
-    cdkBuilder.privateKey(privateKey)
-  }
+    /** @param privateKey The private key;. the contents of the certificate's domain.kex file. */
+    public fun privateKey(privateKey: String) {
+        cdkBuilder.privateKey(privateKey)
+    }
 
-  public fun build(): CfnApp.SslConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnApp.SslConfigurationProperty = cdkBuilder.build()
 }

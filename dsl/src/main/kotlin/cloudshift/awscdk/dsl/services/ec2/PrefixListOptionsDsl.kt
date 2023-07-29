@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.PrefixListOptions
  * Options to add a prefix list.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,14 +30,12 @@ import software.amazon.awscdk.services.ec2.PrefixListOptions
  */
 @CdkDslMarker
 public class PrefixListOptionsDsl {
-  private val cdkBuilder: PrefixListOptions.Builder = PrefixListOptions.builder()
+    private val cdkBuilder: PrefixListOptions.Builder = PrefixListOptions.builder()
 
-  /**
-   * @param maxEntries The maximum number of entries for the prefix list.
-   */
-  public fun maxEntries(maxEntries: Number) {
-    cdkBuilder.maxEntries(maxEntries)
-  }
+    /** @param maxEntries The maximum number of entries for the prefix list. */
+    public fun maxEntries(maxEntries: Number) {
+        cdkBuilder.maxEntries(maxEntries)
+    }
 
-  public fun build(): PrefixListOptions = cdkBuilder.build()
+    public fun build(): PrefixListOptions = cdkBuilder.build()
 }

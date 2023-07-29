@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
-import kotlin.String
 
 /**
  * A control to display a dropdown list with buttons that are used to select a single value.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -67,7 +75,7 @@ public class CfnDashboardFilterDropDownControlPropertyDsl {
 
     /**
      * @param cascadingControlConfiguration The values that are displayed in a control can be
-     * configured to only show values that are valid based on what's selected in other controls.
+     *   configured to only show values that are valid based on what's selected in other controls.
      */
     public fun cascadingControlConfiguration(cascadingControlConfiguration: IResolvable) {
         cdkBuilder.cascadingControlConfiguration(cascadingControlConfiguration)
@@ -75,57 +83,45 @@ public class CfnDashboardFilterDropDownControlPropertyDsl {
 
     /**
      * @param cascadingControlConfiguration The values that are displayed in a control can be
-     * configured to only show values that are valid based on what's selected in other controls.
+     *   configured to only show values that are valid based on what's selected in other controls.
      */
-    public fun cascadingControlConfiguration(cascadingControlConfiguration: CfnDashboard.CascadingControlConfigurationProperty) {
+    public fun cascadingControlConfiguration(
+        cascadingControlConfiguration: CfnDashboard.CascadingControlConfigurationProperty
+    ) {
         cdkBuilder.cascadingControlConfiguration(cascadingControlConfiguration)
     }
 
-    /**
-     * @param displayOptions The display options of the `FilterDropDownControl` .
-     */
+    /** @param displayOptions The display options of the `FilterDropDownControl` . */
     public fun displayOptions(displayOptions: IResolvable) {
         cdkBuilder.displayOptions(displayOptions)
     }
 
-    /**
-     * @param displayOptions The display options of the `FilterDropDownControl` .
-     */
+    /** @param displayOptions The display options of the `FilterDropDownControl` . */
     public fun displayOptions(displayOptions: CfnDashboard.DropDownControlDisplayOptionsProperty) {
         cdkBuilder.displayOptions(displayOptions)
     }
 
-    /**
-     * @param filterControlId The ID of the `FilterDropDownControl` .
-     */
+    /** @param filterControlId The ID of the `FilterDropDownControl` . */
     public fun filterControlId(filterControlId: String) {
         cdkBuilder.filterControlId(filterControlId)
     }
 
-    /**
-     * @param selectableValues A list of selectable values that are used in a control.
-     */
+    /** @param selectableValues A list of selectable values that are used in a control. */
     public fun selectableValues(selectableValues: IResolvable) {
         cdkBuilder.selectableValues(selectableValues)
     }
 
-    /**
-     * @param selectableValues A list of selectable values that are used in a control.
-     */
+    /** @param selectableValues A list of selectable values that are used in a control. */
     public fun selectableValues(selectableValues: CfnDashboard.FilterSelectableValuesProperty) {
         cdkBuilder.selectableValues(selectableValues)
     }
 
-    /**
-     * @param sourceFilterId The source filter ID of the `FilterDropDownControl` .
-     */
+    /** @param sourceFilterId The source filter ID of the `FilterDropDownControl` . */
     public fun sourceFilterId(sourceFilterId: String) {
         cdkBuilder.sourceFilterId(sourceFilterId)
     }
 
-    /**
-     * @param title The title of the `FilterDropDownControl` .
-     */
+    /** @param title The title of the `FilterDropDownControl` . */
     public fun title(title: String) {
         cdkBuilder.title(title)
     }

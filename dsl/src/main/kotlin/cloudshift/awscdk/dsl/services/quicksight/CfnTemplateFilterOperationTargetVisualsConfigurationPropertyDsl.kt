@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,7 +45,7 @@ public class CfnTemplateFilterOperationTargetVisualsConfigurationPropertyDsl {
 
     /**
      * @param sameSheetTargetVisualConfiguration The configuration of the same-sheet target visuals
-     * that you want to be filtered.
+     *   that you want to be filtered.
      */
     public fun sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration: IResolvable) {
         cdkBuilder.sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration)
@@ -45,11 +53,14 @@ public class CfnTemplateFilterOperationTargetVisualsConfigurationPropertyDsl {
 
     /**
      * @param sameSheetTargetVisualConfiguration The configuration of the same-sheet target visuals
-     * that you want to be filtered.
+     *   that you want to be filtered.
      */
-    public fun sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration: CfnTemplate.SameSheetTargetVisualConfigurationProperty) {
+    public fun sameSheetTargetVisualConfiguration(
+        sameSheetTargetVisualConfiguration: CfnTemplate.SameSheetTargetVisualConfigurationProperty
+    ) {
         cdkBuilder.sameSheetTargetVisualConfiguration(sameSheetTargetVisualConfiguration)
     }
 
-    public fun build(): CfnTemplate.FilterOperationTargetVisualsConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.FilterOperationTargetVisualsConfigurationProperty =
+        cdkBuilder.build()
 }

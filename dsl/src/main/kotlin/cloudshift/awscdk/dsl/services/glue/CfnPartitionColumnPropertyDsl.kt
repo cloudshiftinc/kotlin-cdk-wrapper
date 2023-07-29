@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.glue.CfnPartition
  * A column in a `Table` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.glue.CfnPartition
  */
 @CdkDslMarker
 public class CfnPartitionColumnPropertyDsl {
-  private val cdkBuilder: CfnPartition.ColumnProperty.Builder =
-      CfnPartition.ColumnProperty.builder()
+    private val cdkBuilder: CfnPartition.ColumnProperty.Builder =
+        CfnPartition.ColumnProperty.builder()
 
-  /**
-   * @param comment A free-form text comment.
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /** @param comment A free-form text comment. */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  /**
-   * @param name The name of the `Column` . 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the `Column` . */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param type The data type of the `Column` .
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The data type of the `Column` . */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnPartition.ColumnProperty = cdkBuilder.build()
+    public fun build(): CfnPartition.ColumnProperty = cdkBuilder.build()
 }

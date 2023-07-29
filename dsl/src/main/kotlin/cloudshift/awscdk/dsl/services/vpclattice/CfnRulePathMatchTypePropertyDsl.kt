@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  * Each rule can include only one of the following types of paths.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  */
 @CdkDslMarker
 public class CfnRulePathMatchTypePropertyDsl {
-  private val cdkBuilder: CfnRule.PathMatchTypeProperty.Builder =
-      CfnRule.PathMatchTypeProperty.builder()
+    private val cdkBuilder: CfnRule.PathMatchTypeProperty.Builder =
+        CfnRule.PathMatchTypeProperty.builder()
 
-  /**
-   * @param exact An exact match of the path.
-   */
-  public fun exact(exact: String) {
-    cdkBuilder.exact(exact)
-  }
+    /** @param exact An exact match of the path. */
+    public fun exact(exact: String) {
+        cdkBuilder.exact(exact)
+    }
 
-  /**
-   * @param prefix A prefix match of the path.
-   */
-  public fun prefix(prefix: String) {
-    cdkBuilder.prefix(prefix)
-  }
+    /** @param prefix A prefix match of the path. */
+    public fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+    }
 
-  public fun build(): CfnRule.PathMatchTypeProperty = cdkBuilder.build()
+    public fun build(): CfnRule.PathMatchTypeProperty = cdkBuilder.build()
 }

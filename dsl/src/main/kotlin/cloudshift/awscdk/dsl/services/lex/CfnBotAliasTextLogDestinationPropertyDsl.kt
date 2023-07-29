@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lex.CfnBotAlias
  * Defines the Amazon CloudWatch Logs destination log group for conversation text logs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,24 +35,24 @@ import software.amazon.awscdk.services.lex.CfnBotAlias
  */
 @CdkDslMarker
 public class CfnBotAliasTextLogDestinationPropertyDsl {
-  private val cdkBuilder: CfnBotAlias.TextLogDestinationProperty.Builder =
-      CfnBotAlias.TextLogDestinationProperty.builder()
+    private val cdkBuilder: CfnBotAlias.TextLogDestinationProperty.Builder =
+        CfnBotAlias.TextLogDestinationProperty.builder()
 
-  /**
-   * @param cloudWatch Defines the Amazon CloudWatch Logs log group where text and metadata logs are
-   * delivered. 
-   */
-  public fun cloudWatch(cloudWatch: IResolvable) {
-    cdkBuilder.cloudWatch(cloudWatch)
-  }
+    /**
+     * @param cloudWatch Defines the Amazon CloudWatch Logs log group where text and metadata logs
+     *   are delivered.
+     */
+    public fun cloudWatch(cloudWatch: IResolvable) {
+        cdkBuilder.cloudWatch(cloudWatch)
+    }
 
-  /**
-   * @param cloudWatch Defines the Amazon CloudWatch Logs log group where text and metadata logs are
-   * delivered. 
-   */
-  public fun cloudWatch(cloudWatch: CfnBotAlias.CloudWatchLogGroupLogDestinationProperty) {
-    cdkBuilder.cloudWatch(cloudWatch)
-  }
+    /**
+     * @param cloudWatch Defines the Amazon CloudWatch Logs log group where text and metadata logs
+     *   are delivered.
+     */
+    public fun cloudWatch(cloudWatch: CfnBotAlias.CloudWatchLogGroupLogDestinationProperty) {
+        cdkBuilder.cloudWatch(cloudWatch)
+    }
 
-  public fun build(): CfnBotAlias.TextLogDestinationProperty = cdkBuilder.build()
+    public fun build(): CfnBotAlias.TextLogDestinationProperty = cdkBuilder.build()
 }

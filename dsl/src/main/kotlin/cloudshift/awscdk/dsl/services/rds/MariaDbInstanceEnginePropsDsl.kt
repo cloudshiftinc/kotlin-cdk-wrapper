@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps
  * Used in `DatabaseInstanceEngine.mariaDb`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,14 +33,13 @@ import software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps
  */
 @CdkDslMarker
 public class MariaDbInstanceEnginePropsDsl {
-  private val cdkBuilder: MariaDbInstanceEngineProps.Builder = MariaDbInstanceEngineProps.builder()
+    private val cdkBuilder: MariaDbInstanceEngineProps.Builder =
+        MariaDbInstanceEngineProps.builder()
 
-  /**
-   * @param version The exact version of the engine to use. 
-   */
-  public fun version(version: MariaDbEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The exact version of the engine to use. */
+    public fun version(version: MariaDbEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): MariaDbInstanceEngineProps = cdkBuilder.build()
+    public fun build(): MariaDbInstanceEngineProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * begins.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,31 +51,33 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  */
 @CdkDslMarker
 public class EmrCreateClusterScalingTriggerPropertyDsl {
-  private val cdkBuilder: EmrCreateCluster.ScalingTriggerProperty.Builder =
-      EmrCreateCluster.ScalingTriggerProperty.builder()
+    private val cdkBuilder: EmrCreateCluster.ScalingTriggerProperty.Builder =
+        EmrCreateCluster.ScalingTriggerProperty.builder()
 
-  /**
-   * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-   * When the defined alarm conditions are met along with other trigger parameters,
-   * scaling activity begins.
-   */
-  public
-      fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl.() -> Unit
-      = {}) {
-    val builder = EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl()
-    builder.apply(cloudWatchAlarmDefinition)
-    cdkBuilder.cloudWatchAlarmDefinition(builder.build())
-  }
+    /**
+     * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. When the
+     *   defined alarm conditions are met along with other trigger parameters, scaling activity
+     *   begins.
+     */
+    public fun cloudWatchAlarmDefinition(
+        cloudWatchAlarmDefinition: EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl.() -> Unit =
+            {}
+    ) {
+        val builder = EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl()
+        builder.apply(cloudWatchAlarmDefinition)
+        cdkBuilder.cloudWatchAlarmDefinition(builder.build())
+    }
 
-  /**
-   * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-   * When the defined alarm conditions are met along with other trigger parameters,
-   * scaling activity begins.
-   */
-  public
-      fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: EmrCreateCluster.CloudWatchAlarmDefinitionProperty) {
-    cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition)
-  }
+    /**
+     * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. When the
+     *   defined alarm conditions are met along with other trigger parameters, scaling activity
+     *   begins.
+     */
+    public fun cloudWatchAlarmDefinition(
+        cloudWatchAlarmDefinition: EmrCreateCluster.CloudWatchAlarmDefinitionProperty
+    ) {
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition)
+    }
 
-  public fun build(): EmrCreateCluster.ScalingTriggerProperty = cdkBuilder.build()
+    public fun build(): EmrCreateCluster.ScalingTriggerProperty = cdkBuilder.build()
 }

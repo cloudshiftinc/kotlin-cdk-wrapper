@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sam.CfnFunction
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,21 +31,17 @@ import software.amazon.awscdk.services.sam.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionHooksPropertyDsl {
-  private val cdkBuilder: CfnFunction.HooksProperty.Builder = CfnFunction.HooksProperty.builder()
+    private val cdkBuilder: CfnFunction.HooksProperty.Builder = CfnFunction.HooksProperty.builder()
 
-  /**
-   * @param postTraffic the value to be set.
-   */
-  public fun postTraffic(postTraffic: String) {
-    cdkBuilder.postTraffic(postTraffic)
-  }
+    /** @param postTraffic the value to be set. */
+    public fun postTraffic(postTraffic: String) {
+        cdkBuilder.postTraffic(postTraffic)
+    }
 
-  /**
-   * @param preTraffic the value to be set.
-   */
-  public fun preTraffic(preTraffic: String) {
-    cdkBuilder.preTraffic(preTraffic)
-  }
+    /** @param preTraffic the value to be set. */
+    public fun preTraffic(preTraffic: String) {
+        cdkBuilder.preTraffic(preTraffic)
+    }
 
-  public fun build(): CfnFunction.HooksProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.HooksProperty = cdkBuilder.build()
 }

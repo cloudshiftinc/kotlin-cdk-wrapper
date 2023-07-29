@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -515,17 +523,15 @@ public class CfnDashboardBoxPlotFieldWellsPropertyDsl {
     private val cdkBuilder: CfnDashboard.BoxPlotFieldWellsProperty.Builder =
         CfnDashboard.BoxPlotFieldWellsProperty.builder()
 
-    /**
-     * @param boxPlotAggregatedFieldWells The aggregated field wells of a box plot.
-     */
+    /** @param boxPlotAggregatedFieldWells The aggregated field wells of a box plot. */
     public fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: IResolvable) {
         cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)
     }
 
-    /**
-     * @param boxPlotAggregatedFieldWells The aggregated field wells of a box plot.
-     */
-    public fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: CfnDashboard.BoxPlotAggregatedFieldWellsProperty) {
+    /** @param boxPlotAggregatedFieldWells The aggregated field wells of a box plot. */
+    public fun boxPlotAggregatedFieldWells(
+        boxPlotAggregatedFieldWells: CfnDashboard.BoxPlotAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)
     }
 

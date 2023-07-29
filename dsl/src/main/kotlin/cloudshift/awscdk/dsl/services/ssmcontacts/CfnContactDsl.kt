@@ -1,15 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmcontacts
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ssmcontacts.CfnContact
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ssmcontacts.CfnContact
+import software.constructs.Construct
 
 /**
  * The `AWS::SSMContacts::Contact` resource specifies a contact or escalation plan.
@@ -18,7 +27,6 @@ import kotlin.collections.MutableList
  * responder engagement and interaction.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,7 +58,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnContactDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnContact.Builder = CfnContact.Builder.create(scope, id)
 
@@ -60,6 +68,7 @@ public class CfnContactDsl(
      * The unique and identifiable alias of the contact or escalation plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-alias)
+     *
      * @param alias The unique and identifiable alias of the contact or escalation plan.
      */
     public fun alias(alias: String) {
@@ -70,6 +79,7 @@ public class CfnContactDsl(
      * The full name of the contact or escalation plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-displayname)
+     *
      * @param displayName The full name of the contact or escalation plan.
      */
     public fun displayName(displayName: String) {
@@ -83,6 +93,7 @@ public class CfnContactDsl(
      * escalation plan uses stages that contact specified contacts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-plan)
+     *
      * @param plan A list of stages.
      */
     public fun plan(vararg plan: Any) {
@@ -96,6 +107,7 @@ public class CfnContactDsl(
      * escalation plan uses stages that contact specified contacts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-plan)
+     *
      * @param plan A list of stages.
      */
     public fun plan(plan: Collection<Any>) {
@@ -109,6 +121,7 @@ public class CfnContactDsl(
      * escalation plan uses stages that contact specified contacts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-plan)
+     *
      * @param plan A list of stages.
      */
     public fun plan(plan: IResolvable) {
@@ -117,12 +130,12 @@ public class CfnContactDsl(
 
     /**
      * Refers to the type of contact:.
-     *
      * * `PERSONAL` : A single, individual contact.
      * * `ESCALATION` : An escalation plan.
      * * `ONCALL_SCHEDULE` : An on-call schedule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-type)
+     *
      * @param type Refers to the type of contact:.
      */
     public fun type(type: String) {

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The time range drill down filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,44 +40,36 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisTimeRangeDrillDownFilterPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.TimeRangeDrillDownFilterProperty.Builder =
-      CfnAnalysis.TimeRangeDrillDownFilterProperty.builder()
+    private val cdkBuilder: CfnAnalysis.TimeRangeDrillDownFilterProperty.Builder =
+        CfnAnalysis.TimeRangeDrillDownFilterProperty.builder()
 
-  /**
-   * @param column The column that the filter is applied to. 
-   */
-  public fun column(column: IResolvable) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the filter is applied to. */
+    public fun column(column: IResolvable) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param column The column that the filter is applied to. 
-   */
-  public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
-    cdkBuilder.column(column)
-  }
+    /** @param column The column that the filter is applied to. */
+    public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
+        cdkBuilder.column(column)
+    }
 
-  /**
-   * @param rangeMaximum The maximum value for the filter value range. 
-   */
-  public fun rangeMaximum(rangeMaximum: String) {
-    cdkBuilder.rangeMaximum(rangeMaximum)
-  }
+    /** @param rangeMaximum The maximum value for the filter value range. */
+    public fun rangeMaximum(rangeMaximum: String) {
+        cdkBuilder.rangeMaximum(rangeMaximum)
+    }
 
-  /**
-   * @param rangeMinimum The minimum value for the filter value range. 
-   */
-  public fun rangeMinimum(rangeMinimum: String) {
-    cdkBuilder.rangeMinimum(rangeMinimum)
-  }
+    /** @param rangeMinimum The minimum value for the filter value range. */
+    public fun rangeMinimum(rangeMinimum: String) {
+        cdkBuilder.rangeMinimum(rangeMinimum)
+    }
 
-  /**
-   * @param timeGranularity The level of time precision that is used to aggregate `DateTime` values.
-   * 
-   */
-  public fun timeGranularity(timeGranularity: String) {
-    cdkBuilder.timeGranularity(timeGranularity)
-  }
+    /**
+     * @param timeGranularity The level of time precision that is used to aggregate `DateTime`
+     *   values.
+     */
+    public fun timeGranularity(timeGranularity: String) {
+        cdkBuilder.timeGranularity(timeGranularity)
+    }
 
-  public fun build(): CfnAnalysis.TimeRangeDrillDownFilterProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.TimeRangeDrillDownFilterProperty = cdkBuilder.build()
 }

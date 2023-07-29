@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicediscovery
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.servicediscovery.CnameInstanceBaseProps
 
 /**
  * Example:
- *
  * ```
  * import software.amazon.awscdk.*;
  * import software.amazon.awscdk.*;
@@ -31,30 +39,27 @@ import software.amazon.awscdk.services.servicediscovery.CnameInstanceBaseProps
  */
 @CdkDslMarker
 public class CnameInstanceBasePropsDsl {
-  private val cdkBuilder: CnameInstanceBaseProps.Builder = CnameInstanceBaseProps.builder()
+    private val cdkBuilder: CnameInstanceBaseProps.Builder = CnameInstanceBaseProps.builder()
 
-  /**
-   * @param customAttributes Custom attributes of the instance.
-   */
-  public fun customAttributes(customAttributes: Map<String, String>) {
-    cdkBuilder.customAttributes(customAttributes)
-  }
+    /** @param customAttributes Custom attributes of the instance. */
+    public fun customAttributes(customAttributes: Map<String, String>) {
+        cdkBuilder.customAttributes(customAttributes)
+    }
 
-  /**
-   * @param instanceCname If the service configuration includes a CNAME record, the domain name that
-   * you want Route 53 to return in response to DNS queries, for example, example.com. This value is
-   * required if the service specified by ServiceId includes settings for an CNAME record. 
-   */
-  public fun instanceCname(instanceCname: String) {
-    cdkBuilder.instanceCname(instanceCname)
-  }
+    /**
+     * @param instanceCname If the service configuration includes a CNAME record, the domain name
+     *   that you want Route 53 to return in response to DNS queries, for example, example.com. This
+     *   value is required if the service specified by ServiceId includes settings for an CNAME
+     *   record.
+     */
+    public fun instanceCname(instanceCname: String) {
+        cdkBuilder.instanceCname(instanceCname)
+    }
 
-  /**
-   * @param instanceId The id of the instance resource.
-   */
-  public fun instanceId(instanceId: String) {
-    cdkBuilder.instanceId(instanceId)
-  }
+    /** @param instanceId The id of the instance resource. */
+    public fun instanceId(instanceId: String) {
+        cdkBuilder.instanceId(instanceId)
+    }
 
-  public fun build(): CnameInstanceBaseProps = cdkBuilder.build()
+    public fun build(): CnameInstanceBaseProps = cdkBuilder.build()
 }

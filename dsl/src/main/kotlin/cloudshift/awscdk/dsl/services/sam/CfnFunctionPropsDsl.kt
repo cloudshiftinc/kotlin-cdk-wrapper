@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -19,7 +28,6 @@ import software.amazon.awscdk.services.sam.CfnFunctionProps
  * Properties for defining a `CfnFunction`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -116,397 +124,294 @@ import software.amazon.awscdk.services.sam.CfnFunctionProps
  */
 @CdkDslMarker
 public class CfnFunctionPropsDsl {
-  private val cdkBuilder: CfnFunctionProps.Builder = CfnFunctionProps.builder()
+    private val cdkBuilder: CfnFunctionProps.Builder = CfnFunctionProps.builder()
 
-  private val _architectures: MutableList<String> = mutableListOf()
+    private val _architectures: MutableList<String> = mutableListOf()
 
-  private val _fileSystemConfigs: MutableList<Any> = mutableListOf()
+    private val _fileSystemConfigs: MutableList<Any> = mutableListOf()
 
-  private val _layers: MutableList<String> = mutableListOf()
+    private val _layers: MutableList<String> = mutableListOf()
 
-  private val _policies: MutableList<Any> = mutableListOf()
+    private val _policies: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param architectures the value to be set.
-   */
-  public fun architectures(vararg architectures: String) {
-    _architectures.addAll(listOf(*architectures))
-  }
+    /** @param architectures the value to be set. */
+    public fun architectures(vararg architectures: String) {
+        _architectures.addAll(listOf(*architectures))
+    }
 
-  /**
-   * @param architectures the value to be set.
-   */
-  public fun architectures(architectures: Collection<String>) {
-    _architectures.addAll(architectures)
-  }
+    /** @param architectures the value to be set. */
+    public fun architectures(architectures: Collection<String>) {
+        _architectures.addAll(architectures)
+    }
 
-  /**
-   * @param assumeRolePolicyDocument the value to be set.
-   */
-  public fun assumeRolePolicyDocument(assumeRolePolicyDocument: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(assumeRolePolicyDocument)
-    cdkBuilder.assumeRolePolicyDocument(builder.map)
-  }
+    /** @param assumeRolePolicyDocument the value to be set. */
+    public fun assumeRolePolicyDocument(assumeRolePolicyDocument: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(assumeRolePolicyDocument)
+        cdkBuilder.assumeRolePolicyDocument(builder.map)
+    }
 
-  /**
-   * @param assumeRolePolicyDocument the value to be set.
-   */
-  public fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any) {
-    cdkBuilder.assumeRolePolicyDocument(assumeRolePolicyDocument)
-  }
+    /** @param assumeRolePolicyDocument the value to be set. */
+    public fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any) {
+        cdkBuilder.assumeRolePolicyDocument(assumeRolePolicyDocument)
+    }
 
-  /**
-   * @param autoPublishAlias the value to be set.
-   */
-  public fun autoPublishAlias(autoPublishAlias: String) {
-    cdkBuilder.autoPublishAlias(autoPublishAlias)
-  }
+    /** @param autoPublishAlias the value to be set. */
+    public fun autoPublishAlias(autoPublishAlias: String) {
+        cdkBuilder.autoPublishAlias(autoPublishAlias)
+    }
 
-  /**
-   * @param autoPublishCodeSha256 the value to be set.
-   */
-  public fun autoPublishCodeSha256(autoPublishCodeSha256: String) {
-    cdkBuilder.autoPublishCodeSha256(autoPublishCodeSha256)
-  }
+    /** @param autoPublishCodeSha256 the value to be set. */
+    public fun autoPublishCodeSha256(autoPublishCodeSha256: String) {
+        cdkBuilder.autoPublishCodeSha256(autoPublishCodeSha256)
+    }
 
-  /**
-   * @param codeSigningConfigArn the value to be set.
-   */
-  public fun codeSigningConfigArn(codeSigningConfigArn: String) {
-    cdkBuilder.codeSigningConfigArn(codeSigningConfigArn)
-  }
+    /** @param codeSigningConfigArn the value to be set. */
+    public fun codeSigningConfigArn(codeSigningConfigArn: String) {
+        cdkBuilder.codeSigningConfigArn(codeSigningConfigArn)
+    }
 
-  /**
-   * @param codeUri the value to be set.
-   */
-  public fun codeUri(codeUri: String) {
-    cdkBuilder.codeUri(codeUri)
-  }
+    /** @param codeUri the value to be set. */
+    public fun codeUri(codeUri: String) {
+        cdkBuilder.codeUri(codeUri)
+    }
 
-  /**
-   * @param codeUri the value to be set.
-   */
-  public fun codeUri(codeUri: IResolvable) {
-    cdkBuilder.codeUri(codeUri)
-  }
+    /** @param codeUri the value to be set. */
+    public fun codeUri(codeUri: IResolvable) {
+        cdkBuilder.codeUri(codeUri)
+    }
 
-  /**
-   * @param codeUri the value to be set.
-   */
-  public fun codeUri(codeUri: CfnFunction.S3LocationProperty) {
-    cdkBuilder.codeUri(codeUri)
-  }
+    /** @param codeUri the value to be set. */
+    public fun codeUri(codeUri: CfnFunction.S3LocationProperty) {
+        cdkBuilder.codeUri(codeUri)
+    }
 
-  /**
-   * @param deadLetterQueue the value to be set.
-   */
-  public fun deadLetterQueue(deadLetterQueue: IResolvable) {
-    cdkBuilder.deadLetterQueue(deadLetterQueue)
-  }
+    /** @param deadLetterQueue the value to be set. */
+    public fun deadLetterQueue(deadLetterQueue: IResolvable) {
+        cdkBuilder.deadLetterQueue(deadLetterQueue)
+    }
 
-  /**
-   * @param deadLetterQueue the value to be set.
-   */
-  public fun deadLetterQueue(deadLetterQueue: CfnFunction.DeadLetterQueueProperty) {
-    cdkBuilder.deadLetterQueue(deadLetterQueue)
-  }
+    /** @param deadLetterQueue the value to be set. */
+    public fun deadLetterQueue(deadLetterQueue: CfnFunction.DeadLetterQueueProperty) {
+        cdkBuilder.deadLetterQueue(deadLetterQueue)
+    }
 
-  /**
-   * @param deploymentPreference the value to be set.
-   */
-  public fun deploymentPreference(deploymentPreference: IResolvable) {
-    cdkBuilder.deploymentPreference(deploymentPreference)
-  }
+    /** @param deploymentPreference the value to be set. */
+    public fun deploymentPreference(deploymentPreference: IResolvable) {
+        cdkBuilder.deploymentPreference(deploymentPreference)
+    }
 
-  /**
-   * @param deploymentPreference the value to be set.
-   */
-  public fun deploymentPreference(deploymentPreference: CfnFunction.DeploymentPreferenceProperty) {
-    cdkBuilder.deploymentPreference(deploymentPreference)
-  }
+    /** @param deploymentPreference the value to be set. */
+    public fun deploymentPreference(
+        deploymentPreference: CfnFunction.DeploymentPreferenceProperty
+    ) {
+        cdkBuilder.deploymentPreference(deploymentPreference)
+    }
 
-  /**
-   * @param description the value to be set.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description the value to be set. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param environment the value to be set.
-   */
-  public fun environment(environment: IResolvable) {
-    cdkBuilder.environment(environment)
-  }
+    /** @param environment the value to be set. */
+    public fun environment(environment: IResolvable) {
+        cdkBuilder.environment(environment)
+    }
 
-  /**
-   * @param environment the value to be set.
-   */
-  public fun environment(environment: CfnFunction.FunctionEnvironmentProperty) {
-    cdkBuilder.environment(environment)
-  }
+    /** @param environment the value to be set. */
+    public fun environment(environment: CfnFunction.FunctionEnvironmentProperty) {
+        cdkBuilder.environment(environment)
+    }
 
-  /**
-   * @param eventInvokeConfig the value to be set.
-   */
-  public fun eventInvokeConfig(eventInvokeConfig: IResolvable) {
-    cdkBuilder.eventInvokeConfig(eventInvokeConfig)
-  }
+    /** @param eventInvokeConfig the value to be set. */
+    public fun eventInvokeConfig(eventInvokeConfig: IResolvable) {
+        cdkBuilder.eventInvokeConfig(eventInvokeConfig)
+    }
 
-  /**
-   * @param eventInvokeConfig the value to be set.
-   */
-  public fun eventInvokeConfig(eventInvokeConfig: CfnFunction.EventInvokeConfigProperty) {
-    cdkBuilder.eventInvokeConfig(eventInvokeConfig)
-  }
+    /** @param eventInvokeConfig the value to be set. */
+    public fun eventInvokeConfig(eventInvokeConfig: CfnFunction.EventInvokeConfigProperty) {
+        cdkBuilder.eventInvokeConfig(eventInvokeConfig)
+    }
 
-  /**
-   * @param events the value to be set.
-   */
-  public fun events(events: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(events)
-    cdkBuilder.events(builder.map)
-  }
+    /** @param events the value to be set. */
+    public fun events(events: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(events)
+        cdkBuilder.events(builder.map)
+    }
 
-  /**
-   * @param events the value to be set.
-   */
-  public fun events(events: Map<String, Any>) {
-    cdkBuilder.events(events)
-  }
+    /** @param events the value to be set. */
+    public fun events(events: Map<String, Any>) {
+        cdkBuilder.events(events)
+    }
 
-  /**
-   * @param events the value to be set.
-   */
-  public fun events(events: IResolvable) {
-    cdkBuilder.events(events)
-  }
+    /** @param events the value to be set. */
+    public fun events(events: IResolvable) {
+        cdkBuilder.events(events)
+    }
 
-  /**
-   * @param fileSystemConfigs the value to be set.
-   */
-  public fun fileSystemConfigs(vararg fileSystemConfigs: Any) {
-    _fileSystemConfigs.addAll(listOf(*fileSystemConfigs))
-  }
+    /** @param fileSystemConfigs the value to be set. */
+    public fun fileSystemConfigs(vararg fileSystemConfigs: Any) {
+        _fileSystemConfigs.addAll(listOf(*fileSystemConfigs))
+    }
 
-  /**
-   * @param fileSystemConfigs the value to be set.
-   */
-  public fun fileSystemConfigs(fileSystemConfigs: Collection<Any>) {
-    _fileSystemConfigs.addAll(fileSystemConfigs)
-  }
+    /** @param fileSystemConfigs the value to be set. */
+    public fun fileSystemConfigs(fileSystemConfigs: Collection<Any>) {
+        _fileSystemConfigs.addAll(fileSystemConfigs)
+    }
 
-  /**
-   * @param fileSystemConfigs the value to be set.
-   */
-  public fun fileSystemConfigs(fileSystemConfigs: IResolvable) {
-    cdkBuilder.fileSystemConfigs(fileSystemConfigs)
-  }
+    /** @param fileSystemConfigs the value to be set. */
+    public fun fileSystemConfigs(fileSystemConfigs: IResolvable) {
+        cdkBuilder.fileSystemConfigs(fileSystemConfigs)
+    }
 
-  /**
-   * @param functionName the value to be set.
-   */
-  public fun functionName(functionName: String) {
-    cdkBuilder.functionName(functionName)
-  }
+    /** @param functionName the value to be set. */
+    public fun functionName(functionName: String) {
+        cdkBuilder.functionName(functionName)
+    }
 
-  /**
-   * @param handler the value to be set.
-   */
-  public fun handler(handler: String) {
-    cdkBuilder.handler(handler)
-  }
+    /** @param handler the value to be set. */
+    public fun handler(handler: String) {
+        cdkBuilder.handler(handler)
+    }
 
-  /**
-   * @param imageConfig the value to be set.
-   */
-  public fun imageConfig(imageConfig: IResolvable) {
-    cdkBuilder.imageConfig(imageConfig)
-  }
+    /** @param imageConfig the value to be set. */
+    public fun imageConfig(imageConfig: IResolvable) {
+        cdkBuilder.imageConfig(imageConfig)
+    }
 
-  /**
-   * @param imageConfig the value to be set.
-   */
-  public fun imageConfig(imageConfig: CfnFunction.ImageConfigProperty) {
-    cdkBuilder.imageConfig(imageConfig)
-  }
+    /** @param imageConfig the value to be set. */
+    public fun imageConfig(imageConfig: CfnFunction.ImageConfigProperty) {
+        cdkBuilder.imageConfig(imageConfig)
+    }
 
-  /**
-   * @param imageUri the value to be set.
-   */
-  public fun imageUri(imageUri: String) {
-    cdkBuilder.imageUri(imageUri)
-  }
+    /** @param imageUri the value to be set. */
+    public fun imageUri(imageUri: String) {
+        cdkBuilder.imageUri(imageUri)
+    }
 
-  /**
-   * @param inlineCode the value to be set.
-   */
-  public fun inlineCode(inlineCode: String) {
-    cdkBuilder.inlineCode(inlineCode)
-  }
+    /** @param inlineCode the value to be set. */
+    public fun inlineCode(inlineCode: String) {
+        cdkBuilder.inlineCode(inlineCode)
+    }
 
-  /**
-   * @param kmsKeyArn the value to be set.
-   */
-  public fun kmsKeyArn(kmsKeyArn: String) {
-    cdkBuilder.kmsKeyArn(kmsKeyArn)
-  }
+    /** @param kmsKeyArn the value to be set. */
+    public fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+    }
 
-  /**
-   * @param layers the value to be set.
-   */
-  public fun layers(vararg layers: String) {
-    _layers.addAll(listOf(*layers))
-  }
+    /** @param layers the value to be set. */
+    public fun layers(vararg layers: String) {
+        _layers.addAll(listOf(*layers))
+    }
 
-  /**
-   * @param layers the value to be set.
-   */
-  public fun layers(layers: Collection<String>) {
-    _layers.addAll(layers)
-  }
+    /** @param layers the value to be set. */
+    public fun layers(layers: Collection<String>) {
+        _layers.addAll(layers)
+    }
 
-  /**
-   * @param memorySize the value to be set.
-   */
-  public fun memorySize(memorySize: Number) {
-    cdkBuilder.memorySize(memorySize)
-  }
+    /** @param memorySize the value to be set. */
+    public fun memorySize(memorySize: Number) {
+        cdkBuilder.memorySize(memorySize)
+    }
 
-  /**
-   * @param packageType the value to be set.
-   */
-  public fun packageType(packageType: String) {
-    cdkBuilder.packageType(packageType)
-  }
+    /** @param packageType the value to be set. */
+    public fun packageType(packageType: String) {
+        cdkBuilder.packageType(packageType)
+    }
 
-  /**
-   * @param permissionsBoundary the value to be set.
-   */
-  public fun permissionsBoundary(permissionsBoundary: String) {
-    cdkBuilder.permissionsBoundary(permissionsBoundary)
-  }
+    /** @param permissionsBoundary the value to be set. */
+    public fun permissionsBoundary(permissionsBoundary: String) {
+        cdkBuilder.permissionsBoundary(permissionsBoundary)
+    }
 
-  /**
-   * @param policies the value to be set.
-   */
-  public fun policies(policies: String) {
-    cdkBuilder.policies(policies)
-  }
+    /** @param policies the value to be set. */
+    public fun policies(policies: String) {
+        cdkBuilder.policies(policies)
+    }
 
-  /**
-   * @param policies the value to be set.
-   */
-  public fun policies(vararg policies: Any) {
-    _policies.addAll(listOf(*policies))
-  }
+    /** @param policies the value to be set. */
+    public fun policies(vararg policies: Any) {
+        _policies.addAll(listOf(*policies))
+    }
 
-  /**
-   * @param policies the value to be set.
-   */
-  public fun policies(policies: Collection<Any>) {
-    _policies.addAll(policies)
-  }
+    /** @param policies the value to be set. */
+    public fun policies(policies: Collection<Any>) {
+        _policies.addAll(policies)
+    }
 
-  /**
-   * @param policies the value to be set.
-   */
-  public fun policies(policies: IResolvable) {
-    cdkBuilder.policies(policies)
-  }
+    /** @param policies the value to be set. */
+    public fun policies(policies: IResolvable) {
+        cdkBuilder.policies(policies)
+    }
 
-  /**
-   * @param policies the value to be set.
-   */
-  public fun policies(policies: CfnFunction.IAMPolicyDocumentProperty) {
-    cdkBuilder.policies(policies)
-  }
+    /** @param policies the value to be set. */
+    public fun policies(policies: CfnFunction.IAMPolicyDocumentProperty) {
+        cdkBuilder.policies(policies)
+    }
 
-  /**
-   * @param provisionedConcurrencyConfig the value to be set.
-   */
-  public fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-    cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig)
-  }
+    /** @param provisionedConcurrencyConfig the value to be set. */
+    public fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
+        cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig)
+    }
 
-  /**
-   * @param provisionedConcurrencyConfig the value to be set.
-   */
-  public
-      fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: CfnFunction.ProvisionedConcurrencyConfigProperty) {
-    cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig)
-  }
+    /** @param provisionedConcurrencyConfig the value to be set. */
+    public fun provisionedConcurrencyConfig(
+        provisionedConcurrencyConfig: CfnFunction.ProvisionedConcurrencyConfigProperty
+    ) {
+        cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig)
+    }
 
-  /**
-   * @param reservedConcurrentExecutions the value to be set.
-   */
-  public fun reservedConcurrentExecutions(reservedConcurrentExecutions: Number) {
-    cdkBuilder.reservedConcurrentExecutions(reservedConcurrentExecutions)
-  }
+    /** @param reservedConcurrentExecutions the value to be set. */
+    public fun reservedConcurrentExecutions(reservedConcurrentExecutions: Number) {
+        cdkBuilder.reservedConcurrentExecutions(reservedConcurrentExecutions)
+    }
 
-  /**
-   * @param role the value to be set.
-   */
-  public fun role(role: String) {
-    cdkBuilder.role(role)
-  }
+    /** @param role the value to be set. */
+    public fun role(role: String) {
+        cdkBuilder.role(role)
+    }
 
-  /**
-   * @param runtime the value to be set.
-   */
-  public fun runtime(runtime: String) {
-    cdkBuilder.runtime(runtime)
-  }
+    /** @param runtime the value to be set. */
+    public fun runtime(runtime: String) {
+        cdkBuilder.runtime(runtime)
+    }
 
-  /**
-   * @param tags the value to be set.
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags the value to be set. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  /**
-   * @param timeout the value to be set.
-   */
-  public fun timeout(timeout: Number) {
-    cdkBuilder.timeout(timeout)
-  }
+    /** @param timeout the value to be set. */
+    public fun timeout(timeout: Number) {
+        cdkBuilder.timeout(timeout)
+    }
 
-  /**
-   * @param tracing the value to be set.
-   */
-  public fun tracing(tracing: String) {
-    cdkBuilder.tracing(tracing)
-  }
+    /** @param tracing the value to be set. */
+    public fun tracing(tracing: String) {
+        cdkBuilder.tracing(tracing)
+    }
 
-  /**
-   * @param versionDescription the value to be set.
-   */
-  public fun versionDescription(versionDescription: String) {
-    cdkBuilder.versionDescription(versionDescription)
-  }
+    /** @param versionDescription the value to be set. */
+    public fun versionDescription(versionDescription: String) {
+        cdkBuilder.versionDescription(versionDescription)
+    }
 
-  /**
-   * @param vpcConfig the value to be set.
-   */
-  public fun vpcConfig(vpcConfig: IResolvable) {
-    cdkBuilder.vpcConfig(vpcConfig)
-  }
+    /** @param vpcConfig the value to be set. */
+    public fun vpcConfig(vpcConfig: IResolvable) {
+        cdkBuilder.vpcConfig(vpcConfig)
+    }
 
-  /**
-   * @param vpcConfig the value to be set.
-   */
-  public fun vpcConfig(vpcConfig: CfnFunction.VpcConfigProperty) {
-    cdkBuilder.vpcConfig(vpcConfig)
-  }
+    /** @param vpcConfig the value to be set. */
+    public fun vpcConfig(vpcConfig: CfnFunction.VpcConfigProperty) {
+        cdkBuilder.vpcConfig(vpcConfig)
+    }
 
-  public fun build(): CfnFunctionProps {
-    if(_architectures.isNotEmpty()) cdkBuilder.architectures(_architectures)
-    if(_fileSystemConfigs.isNotEmpty()) cdkBuilder.fileSystemConfigs(_fileSystemConfigs)
-    if(_layers.isNotEmpty()) cdkBuilder.layers(_layers)
-    if(_policies.isNotEmpty()) cdkBuilder.policies(_policies)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFunctionProps {
+        if (_architectures.isNotEmpty()) cdkBuilder.architectures(_architectures)
+        if (_fileSystemConfigs.isNotEmpty()) cdkBuilder.fileSystemConfigs(_fileSystemConfigs)
+        if (_layers.isNotEmpty()) cdkBuilder.layers(_layers)
+        if (_policies.isNotEmpty()) cdkBuilder.policies(_policies)
+        return cdkBuilder.build()
+    }
 }

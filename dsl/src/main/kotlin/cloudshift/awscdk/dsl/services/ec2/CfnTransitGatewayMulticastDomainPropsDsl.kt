@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainProps
  * Properties for defining a `CfnTransitGatewayMulticastDomain`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,56 +47,50 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainProps
  */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastDomainPropsDsl {
-  private val cdkBuilder: CfnTransitGatewayMulticastDomainProps.Builder =
-      CfnTransitGatewayMulticastDomainProps.builder()
+    private val cdkBuilder: CfnTransitGatewayMulticastDomainProps.Builder =
+        CfnTransitGatewayMulticastDomainProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param options The options for the transit gateway multicast domain.
-   * * AutoAcceptSharedAssociations (enable | disable)
-   * * Igmpv2Support (enable | disable)
-   * * StaticSourcesSupport (enable | disable)
-   */
-  public fun options(options: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(options)
-    cdkBuilder.options(builder.map)
-  }
+    /**
+     * @param options The options for the transit gateway multicast domain.
+     * * AutoAcceptSharedAssociations (enable | disable)
+     * * Igmpv2Support (enable | disable)
+     * * StaticSourcesSupport (enable | disable)
+     */
+    public fun options(options: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(options)
+        cdkBuilder.options(builder.map)
+    }
 
-  /**
-   * @param options The options for the transit gateway multicast domain.
-   * * AutoAcceptSharedAssociations (enable | disable)
-   * * Igmpv2Support (enable | disable)
-   * * StaticSourcesSupport (enable | disable)
-   */
-  public fun options(options: Any) {
-    cdkBuilder.options(options)
-  }
+    /**
+     * @param options The options for the transit gateway multicast domain.
+     * * AutoAcceptSharedAssociations (enable | disable)
+     * * Igmpv2Support (enable | disable)
+     * * StaticSourcesSupport (enable | disable)
+     */
+    public fun options(options: Any) {
+        cdkBuilder.options(options)
+    }
 
-  /**
-   * @param tags The tags for the transit gateway multicast domain.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags for the transit gateway multicast domain. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags for the transit gateway multicast domain.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags for the transit gateway multicast domain. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * @param transitGatewayId The ID of the transit gateway. 
-   */
-  public fun transitGatewayId(transitGatewayId: String) {
-    cdkBuilder.transitGatewayId(transitGatewayId)
-  }
+    /** @param transitGatewayId The ID of the transit gateway. */
+    public fun transitGatewayId(transitGatewayId: String) {
+        cdkBuilder.transitGatewayId(transitGatewayId)
+    }
 
-  public fun build(): CfnTransitGatewayMulticastDomainProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTransitGatewayMulticastDomainProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

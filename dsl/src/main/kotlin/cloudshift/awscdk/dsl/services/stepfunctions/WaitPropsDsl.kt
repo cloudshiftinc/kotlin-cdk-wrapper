@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.stepfunctions.WaitTime
  * Properties for defining a Wait state.
  *
  * Example:
- *
  * ```
  * EvaluateExpression convertToSeconds = EvaluateExpression.Builder.create(this, "Convert to
  * seconds")
@@ -39,21 +47,17 @@ import software.amazon.awscdk.services.stepfunctions.WaitTime
  */
 @CdkDslMarker
 public class WaitPropsDsl {
-  private val cdkBuilder: WaitProps.Builder = WaitProps.builder()
+    private val cdkBuilder: WaitProps.Builder = WaitProps.builder()
 
-  /**
-   * @param comment An optional description for this state.
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /** @param comment An optional description for this state. */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  /**
-   * @param time Wait duration. 
-   */
-  public fun time(time: WaitTime) {
-    cdkBuilder.time(time)
-  }
+    /** @param time Wait duration. */
+    public fun time(time: WaitTime) {
+        cdkBuilder.time(time)
+    }
 
-  public fun build(): WaitProps = cdkBuilder.build()
+    public fun build(): WaitProps = cdkBuilder.build()
 }

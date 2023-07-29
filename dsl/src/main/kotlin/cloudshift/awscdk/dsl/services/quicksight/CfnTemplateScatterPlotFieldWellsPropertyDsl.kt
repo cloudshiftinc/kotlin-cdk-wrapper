@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -26,37 +34,46 @@ public class CfnTemplateScatterPlotFieldWellsPropertyDsl {
 
     /**
      * @param scatterPlotCategoricallyAggregatedFieldWells The aggregated field wells of a scatter
-     * plot.
-     * The x and y-axes of scatter plots with aggregated field wells are aggregated by category,
-     * label, or both.
+     *   plot. The x and y-axes of scatter plots with aggregated field wells are aggregated by
+     *   category, label, or both.
      */
-    public fun scatterPlotCategoricallyAggregatedFieldWells(scatterPlotCategoricallyAggregatedFieldWells: IResolvable) {
-        cdkBuilder.scatterPlotCategoricallyAggregatedFieldWells(scatterPlotCategoricallyAggregatedFieldWells)
+    public fun scatterPlotCategoricallyAggregatedFieldWells(
+        scatterPlotCategoricallyAggregatedFieldWells: IResolvable
+    ) {
+        cdkBuilder.scatterPlotCategoricallyAggregatedFieldWells(
+            scatterPlotCategoricallyAggregatedFieldWells
+        )
     }
 
     /**
      * @param scatterPlotCategoricallyAggregatedFieldWells The aggregated field wells of a scatter
-     * plot.
-     * The x and y-axes of scatter plots with aggregated field wells are aggregated by category,
-     * label, or both.
+     *   plot. The x and y-axes of scatter plots with aggregated field wells are aggregated by
+     *   category, label, or both.
      */
-    public fun scatterPlotCategoricallyAggregatedFieldWells(scatterPlotCategoricallyAggregatedFieldWells: CfnTemplate.ScatterPlotCategoricallyAggregatedFieldWellsProperty) {
-        cdkBuilder.scatterPlotCategoricallyAggregatedFieldWells(scatterPlotCategoricallyAggregatedFieldWells)
+    public fun scatterPlotCategoricallyAggregatedFieldWells(
+        scatterPlotCategoricallyAggregatedFieldWells:
+            CfnTemplate.ScatterPlotCategoricallyAggregatedFieldWellsProperty
+    ) {
+        cdkBuilder.scatterPlotCategoricallyAggregatedFieldWells(
+            scatterPlotCategoricallyAggregatedFieldWells
+        )
     }
 
     /**
-     * @param scatterPlotUnaggregatedFieldWells The unaggregated field wells of a scatter plot.
-     * The x and y-axes of these scatter plots are unaggregated.
+     * @param scatterPlotUnaggregatedFieldWells The unaggregated field wells of a scatter plot. The
+     *   x and y-axes of these scatter plots are unaggregated.
      */
     public fun scatterPlotUnaggregatedFieldWells(scatterPlotUnaggregatedFieldWells: IResolvable) {
         cdkBuilder.scatterPlotUnaggregatedFieldWells(scatterPlotUnaggregatedFieldWells)
     }
 
     /**
-     * @param scatterPlotUnaggregatedFieldWells The unaggregated field wells of a scatter plot.
-     * The x and y-axes of these scatter plots are unaggregated.
+     * @param scatterPlotUnaggregatedFieldWells The unaggregated field wells of a scatter plot. The
+     *   x and y-axes of these scatter plots are unaggregated.
      */
-    public fun scatterPlotUnaggregatedFieldWells(scatterPlotUnaggregatedFieldWells: CfnTemplate.ScatterPlotUnaggregatedFieldWellsProperty) {
+    public fun scatterPlotUnaggregatedFieldWells(
+        scatterPlotUnaggregatedFieldWells: CfnTemplate.ScatterPlotUnaggregatedFieldWellsProperty
+    ) {
         cdkBuilder.scatterPlotUnaggregatedFieldWells(scatterPlotUnaggregatedFieldWells)
     }
 

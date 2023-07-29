@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediapackage
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.mediapackage.CfnChannel
  * The access log configuration parameters for your channel.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.mediapackage.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelLogConfigurationPropertyDsl {
-  private val cdkBuilder: CfnChannel.LogConfigurationProperty.Builder =
-      CfnChannel.LogConfigurationProperty.builder()
+    private val cdkBuilder: CfnChannel.LogConfigurationProperty.Builder =
+        CfnChannel.LogConfigurationProperty.builder()
 
-  /**
-   * @param logGroupName Sets a custom Amazon CloudWatch log group name.
-   */
-  public fun logGroupName(logGroupName: String) {
-    cdkBuilder.logGroupName(logGroupName)
-  }
+    /** @param logGroupName Sets a custom Amazon CloudWatch log group name. */
+    public fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+    }
 
-  public fun build(): CfnChannel.LogConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.LogConfigurationProperty = cdkBuilder.build()
 }

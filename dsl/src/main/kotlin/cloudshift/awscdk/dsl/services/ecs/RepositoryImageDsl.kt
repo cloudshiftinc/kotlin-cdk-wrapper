@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
  * [EcrImage](https://docs.aws.amazon.com/AmazonECR/latest/userguide/images.html).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,21 +34,21 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
  */
 @CdkDslMarker
 public class RepositoryImageDsl(
-  imageName: String,
+    imageName: String,
 ) {
-  private val cdkBuilder: RepositoryImage.Builder = RepositoryImage.Builder.create(imageName)
+    private val cdkBuilder: RepositoryImage.Builder = RepositoryImage.Builder.create(imageName)
 
-  /**
-   * The secret to expose to the container that contains the credentials for the image repository.
-   *
-   * The supported value is the full ARN of an AWS Secrets Manager secret.
-   *
-   * @param credentials The secret to expose to the container that contains the credentials for the
-   * image repository. 
-   */
-  public fun credentials(credentials: ISecret) {
-    cdkBuilder.credentials(credentials)
-  }
+    /**
+     * The secret to expose to the container that contains the credentials for the image repository.
+     *
+     * The supported value is the full ARN of an AWS Secrets Manager secret.
+     *
+     * @param credentials The secret to expose to the container that contains the credentials for
+     *   the image repository.
+     */
+    public fun credentials(credentials: ISecret) {
+        cdkBuilder.credentials(credentials)
+    }
 
-  public fun build(): RepositoryImage = cdkBuilder.build()
+    public fun build(): RepositoryImage = cdkBuilder.build()
 }

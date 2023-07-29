@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertifi
  * Specifies an SSL server certificate for the certificate list of a secure listener.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertifi
  */
 @CdkDslMarker
 public class CfnListenerCertificateCertificatePropertyDsl {
-  private val cdkBuilder: CfnListenerCertificate.CertificateProperty.Builder =
-      CfnListenerCertificate.CertificateProperty.builder()
+    private val cdkBuilder: CfnListenerCertificate.CertificateProperty.Builder =
+        CfnListenerCertificate.CertificateProperty.builder()
 
-  /**
-   * @param certificateArn The Amazon Resource Name (ARN) of the certificate.
-   */
-  public fun certificateArn(certificateArn: String) {
-    cdkBuilder.certificateArn(certificateArn)
-  }
+    /** @param certificateArn The Amazon Resource Name (ARN) of the certificate. */
+    public fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+    }
 
-  public fun build(): CfnListenerCertificate.CertificateProperty = cdkBuilder.build()
+    public fun build(): CfnListenerCertificate.CertificateProperty = cdkBuilder.build()
 }

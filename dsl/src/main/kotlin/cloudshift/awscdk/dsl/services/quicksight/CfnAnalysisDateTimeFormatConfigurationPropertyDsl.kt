@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * Formatting configuration for `DateTime` fields.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -97,16 +105,14 @@ public class CfnAnalysisDateTimeFormatConfigurationPropertyDsl {
     private val cdkBuilder: CfnAnalysis.DateTimeFormatConfigurationProperty.Builder =
         CfnAnalysis.DateTimeFormatConfigurationProperty.builder()
 
-    /**
-     * @param dateTimeFormat Determines the `DateTime` format.
-     */
+    /** @param dateTimeFormat Determines the `DateTime` format. */
     public fun dateTimeFormat(dateTimeFormat: String) {
         cdkBuilder.dateTimeFormat(dateTimeFormat)
     }
 
     /**
      * @param nullValueFormatConfiguration The options that determine the null value format
-     * configuration.
+     *   configuration.
      */
     public fun nullValueFormatConfiguration(nullValueFormatConfiguration: IResolvable) {
         cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
@@ -114,9 +120,11 @@ public class CfnAnalysisDateTimeFormatConfigurationPropertyDsl {
 
     /**
      * @param nullValueFormatConfiguration The options that determine the null value format
-     * configuration.
+     *   configuration.
      */
-    public fun nullValueFormatConfiguration(nullValueFormatConfiguration: CfnAnalysis.NullValueFormatConfigurationProperty) {
+    public fun nullValueFormatConfiguration(
+        nullValueFormatConfiguration: CfnAnalysis.NullValueFormatConfigurationProperty
+    ) {
         cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
     }
 
@@ -130,7 +138,9 @@ public class CfnAnalysisDateTimeFormatConfigurationPropertyDsl {
     /**
      * @param numericFormatConfiguration The formatting configuration for numeric `DateTime` fields.
      */
-    public fun numericFormatConfiguration(numericFormatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty) {
+    public fun numericFormatConfiguration(
+        numericFormatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty
+    ) {
         cdkBuilder.numericFormatConfiguration(numericFormatConfiguration)
     }
 

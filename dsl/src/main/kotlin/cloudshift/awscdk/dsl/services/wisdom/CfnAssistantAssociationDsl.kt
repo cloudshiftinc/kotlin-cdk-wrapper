@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wisdom
 
@@ -20,7 +29,6 @@ import software.constructs.Construct
  * single association.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,76 +52,82 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnAssistantAssociationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnAssistantAssociation.Builder =
-      CfnAssistantAssociation.Builder.create(scope, id)
+    private val cdkBuilder: CfnAssistantAssociation.Builder =
+        CfnAssistantAssociation.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * The identifier of the Wisdom assistant.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-assistantid)
-   * @param assistantId The identifier of the Wisdom assistant. 
-   */
-  public fun assistantId(assistantId: String) {
-    cdkBuilder.assistantId(assistantId)
-  }
+    /**
+     * The identifier of the Wisdom assistant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-assistantid)
+     *
+     * @param assistantId The identifier of the Wisdom assistant.
+     */
+    public fun assistantId(assistantId: String) {
+        cdkBuilder.assistantId(assistantId)
+    }
 
-  /**
-   * The identifier of the associated resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-association)
-   * @param association The identifier of the associated resource. 
-   */
-  public fun association(association: IResolvable) {
-    cdkBuilder.association(association)
-  }
+    /**
+     * The identifier of the associated resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-association)
+     *
+     * @param association The identifier of the associated resource.
+     */
+    public fun association(association: IResolvable) {
+        cdkBuilder.association(association)
+    }
 
-  /**
-   * The identifier of the associated resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-association)
-   * @param association The identifier of the associated resource. 
-   */
-  public fun association(association: CfnAssistantAssociation.AssociationDataProperty) {
-    cdkBuilder.association(association)
-  }
+    /**
+     * The identifier of the associated resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-association)
+     *
+     * @param association The identifier of the associated resource.
+     */
+    public fun association(association: CfnAssistantAssociation.AssociationDataProperty) {
+        cdkBuilder.association(association)
+    }
 
-  /**
-   * The type of association.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-associationtype)
-   * @param associationType The type of association. 
-   */
-  public fun associationType(associationType: String) {
-    cdkBuilder.associationType(associationType)
-  }
+    /**
+     * The type of association.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-associationtype)
+     *
+     * @param associationType The type of association.
+     */
+    public fun associationType(associationType: String) {
+        cdkBuilder.associationType(associationType)
+    }
 
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-tags)
-   * @param tags The tags used to organize, track, or control access for this resource. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * The tags used to organize, track, or control access for this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-tags)
+     *
+     * @param tags The tags used to organize, track, or control access for this resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-tags)
-   * @param tags The tags used to organize, track, or control access for this resource. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * The tags used to organize, track, or control access for this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html#cfn-wisdom-assistantassociation-tags)
+     *
+     * @param tags The tags used to organize, track, or control access for this resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnAssistantAssociation {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAssistantAssociation {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

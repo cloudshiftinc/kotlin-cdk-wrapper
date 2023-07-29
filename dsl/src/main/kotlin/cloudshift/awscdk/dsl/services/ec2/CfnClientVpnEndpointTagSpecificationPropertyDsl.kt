@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,14 +26,11 @@ import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
  * When you specify a tag, you must specify the resource type to tag, otherwise the request will
  * fail.
  *
- *
  * The `Valid Values` lists all the resource types that can be tagged. However, the action you're
- * using might not support tagging all of these resource types. If you try to tag a resource type that
- * is unsupported for the action you're using, you'll get an error.
- *
+ * using might not support tagging all of these resource types. If you try to tag a resource type
+ * that is unsupported for the action you're using, you'll get an error.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,34 +48,28 @@ import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
  */
 @CdkDslMarker
 public class CfnClientVpnEndpointTagSpecificationPropertyDsl {
-  private val cdkBuilder: CfnClientVpnEndpoint.TagSpecificationProperty.Builder =
-      CfnClientVpnEndpoint.TagSpecificationProperty.builder()
+    private val cdkBuilder: CfnClientVpnEndpoint.TagSpecificationProperty.Builder =
+        CfnClientVpnEndpoint.TagSpecificationProperty.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param resourceType The type of resource to tag. 
-   */
-  public fun resourceType(resourceType: String) {
-    cdkBuilder.resourceType(resourceType)
-  }
+    /** @param resourceType The type of resource to tag. */
+    public fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
+    }
 
-  /**
-   * @param tags The tags to apply to the resource. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags to apply to the resource. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags to apply to the resource. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags to apply to the resource. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnClientVpnEndpoint.TagSpecificationProperty {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnClientVpnEndpoint.TagSpecificationProperty {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

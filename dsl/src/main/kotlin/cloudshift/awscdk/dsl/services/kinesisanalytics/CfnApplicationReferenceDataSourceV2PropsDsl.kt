@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  * Properties for defining a `CfnApplicationReferenceDataSource`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -58,36 +66,35 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
  */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceV2PropsDsl {
-  private val cdkBuilder: CfnApplicationReferenceDataSourceV2Props.Builder =
-      CfnApplicationReferenceDataSourceV2Props.builder()
+    private val cdkBuilder: CfnApplicationReferenceDataSourceV2Props.Builder =
+        CfnApplicationReferenceDataSourceV2Props.builder()
 
-  /**
-   * @param applicationName The name of the application. 
-   */
-  public fun applicationName(applicationName: String) {
-    cdkBuilder.applicationName(applicationName)
-  }
+    /** @param applicationName The name of the application. */
+    public fun applicationName(applicationName: String) {
+        cdkBuilder.applicationName(applicationName)
+    }
 
-  /**
-   * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
-   * reference data source by providing the source information (Amazon S3 bucket name and object key
-   * name), the resulting in-application table name that is created, and the necessary schema to map
-   * the data elements in the Amazon S3 object to the in-application table. 
-   */
-  public fun referenceDataSource(referenceDataSource: IResolvable) {
-    cdkBuilder.referenceDataSource(referenceDataSource)
-  }
+    /**
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     *   reference data source by providing the source information (Amazon S3 bucket name and object
+     *   key name), the resulting in-application table name that is created, and the necessary
+     *   schema to map the data elements in the Amazon S3 object to the in-application table.
+     */
+    public fun referenceDataSource(referenceDataSource: IResolvable) {
+        cdkBuilder.referenceDataSource(referenceDataSource)
+    }
 
-  /**
-   * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
-   * reference data source by providing the source information (Amazon S3 bucket name and object key
-   * name), the resulting in-application table name that is created, and the necessary schema to map
-   * the data elements in the Amazon S3 object to the in-application table. 
-   */
-  public
-      fun referenceDataSource(referenceDataSource: CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty) {
-    cdkBuilder.referenceDataSource(referenceDataSource)
-  }
+    /**
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     *   reference data source by providing the source information (Amazon S3 bucket name and object
+     *   key name), the resulting in-application table name that is created, and the necessary
+     *   schema to map the data elements in the Amazon S3 object to the in-application table.
+     */
+    public fun referenceDataSource(
+        referenceDataSource: CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty
+    ) {
+        cdkBuilder.referenceDataSource(referenceDataSource)
+    }
 
-  public fun build(): CfnApplicationReferenceDataSourceV2Props = cdkBuilder.build()
+    public fun build(): CfnApplicationReferenceDataSourceV2Props = cdkBuilder.build()
 }

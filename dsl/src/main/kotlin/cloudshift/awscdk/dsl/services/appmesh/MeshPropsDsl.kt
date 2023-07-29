@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.appmesh.MeshServiceDiscovery
  * The set of properties used when creating a Mesh.
  *
  * Example:
- *
  * ```
  * Stack infraStack;
  * Stack appStack;
@@ -32,37 +40,33 @@ import software.amazon.awscdk.services.appmesh.MeshServiceDiscovery
  */
 @CdkDslMarker
 public class MeshPropsDsl {
-  private val cdkBuilder: MeshProps.Builder = MeshProps.builder()
+    private val cdkBuilder: MeshProps.Builder = MeshProps.builder()
 
-  /**
-   * @param egressFilter Egress filter to be applied to the Mesh.
-   */
-  public fun egressFilter(egressFilter: MeshFilterType) {
-    cdkBuilder.egressFilter(egressFilter)
-  }
+    /** @param egressFilter Egress filter to be applied to the Mesh. */
+    public fun egressFilter(egressFilter: MeshFilterType) {
+        cdkBuilder.egressFilter(egressFilter)
+    }
 
-  /**
-   * @param meshName The name of the Mesh being defined.
-   */
-  public fun meshName(meshName: String) {
-    cdkBuilder.meshName(meshName)
-  }
+    /** @param meshName The name of the Mesh being defined. */
+    public fun meshName(meshName: String) {
+        cdkBuilder.meshName(meshName)
+    }
 
-  /**
-   * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh.
-   */
-  public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryDsl.() -> Unit = {}) {
-    val builder = MeshServiceDiscoveryDsl()
-    builder.apply(serviceDiscovery)
-    cdkBuilder.serviceDiscovery(builder.build())
-  }
+    /**
+     * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh.
+     */
+    public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryDsl.() -> Unit = {}) {
+        val builder = MeshServiceDiscoveryDsl()
+        builder.apply(serviceDiscovery)
+        cdkBuilder.serviceDiscovery(builder.build())
+    }
 
-  /**
-   * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh.
-   */
-  public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
-    cdkBuilder.serviceDiscovery(serviceDiscovery)
-  }
+    /**
+     * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh.
+     */
+    public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
+        cdkBuilder.serviceDiscovery(serviceDiscovery)
+    }
 
-  public fun build(): MeshProps = cdkBuilder.build()
+    public fun build(): MeshProps = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.WeightedTargetGrou
  * A Target Group and weight combination.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,17 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.WeightedTargetGrou
  */
 @CdkDslMarker
 public class WeightedTargetGroupDsl {
-  private val cdkBuilder: WeightedTargetGroup.Builder = WeightedTargetGroup.builder()
+    private val cdkBuilder: WeightedTargetGroup.Builder = WeightedTargetGroup.builder()
 
-  /**
-   * @param targetGroup The target group. 
-   */
-  public fun targetGroup(targetGroup: IApplicationTargetGroup) {
-    cdkBuilder.targetGroup(targetGroup)
-  }
+    /** @param targetGroup The target group. */
+    public fun targetGroup(targetGroup: IApplicationTargetGroup) {
+        cdkBuilder.targetGroup(targetGroup)
+    }
 
-  /**
-   * @param weight The target group's weight.
-   * Range is [0..1000).
-   */
-  public fun weight(weight: Number) {
-    cdkBuilder.weight(weight)
-  }
+    /** @param weight The target group's weight. Range is [0..1000). */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+    }
 
-  public fun build(): WeightedTargetGroup = cdkBuilder.build()
+    public fun build(): WeightedTargetGroup = cdkBuilder.build()
 }

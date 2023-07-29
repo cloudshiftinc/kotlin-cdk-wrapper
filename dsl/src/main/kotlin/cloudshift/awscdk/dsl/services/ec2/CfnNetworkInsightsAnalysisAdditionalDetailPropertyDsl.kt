@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -13,11 +22,11 @@ import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 /**
  * Describes an additional detail for a path analysis.
  *
- * For more information, see [Reachability Analyzer additional detail
- * codes](https://docs.aws.amazon.com/vpc/latest/reachability/additional-detail-codes.html) .
+ * For more information, see
+ * [Reachability Analyzer additional detail codes](https://docs.aws.amazon.com/vpc/latest/reachability/additional-detail-codes.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,62 +49,48 @@ import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
  */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisAdditionalDetailPropertyDsl {
-  private val cdkBuilder: CfnNetworkInsightsAnalysis.AdditionalDetailProperty.Builder =
-      CfnNetworkInsightsAnalysis.AdditionalDetailProperty.builder()
+    private val cdkBuilder: CfnNetworkInsightsAnalysis.AdditionalDetailProperty.Builder =
+        CfnNetworkInsightsAnalysis.AdditionalDetailProperty.builder()
 
-  private val _loadBalancers: MutableList<Any> = mutableListOf()
+    private val _loadBalancers: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param additionalDetailType The additional detail code.
-   */
-  public fun additionalDetailType(additionalDetailType: String) {
-    cdkBuilder.additionalDetailType(additionalDetailType)
-  }
+    /** @param additionalDetailType The additional detail code. */
+    public fun additionalDetailType(additionalDetailType: String) {
+        cdkBuilder.additionalDetailType(additionalDetailType)
+    }
 
-  /**
-   * @param component The path component.
-   */
-  public fun component(component: IResolvable) {
-    cdkBuilder.component(component)
-  }
+    /** @param component The path component. */
+    public fun component(component: IResolvable) {
+        cdkBuilder.component(component)
+    }
 
-  /**
-   * @param component The path component.
-   */
-  public fun component(component: CfnNetworkInsightsAnalysis.AnalysisComponentProperty) {
-    cdkBuilder.component(component)
-  }
+    /** @param component The path component. */
+    public fun component(component: CfnNetworkInsightsAnalysis.AnalysisComponentProperty) {
+        cdkBuilder.component(component)
+    }
 
-  /**
-   * @param loadBalancers The load balancers.
-   */
-  public fun loadBalancers(vararg loadBalancers: Any) {
-    _loadBalancers.addAll(listOf(*loadBalancers))
-  }
+    /** @param loadBalancers The load balancers. */
+    public fun loadBalancers(vararg loadBalancers: Any) {
+        _loadBalancers.addAll(listOf(*loadBalancers))
+    }
 
-  /**
-   * @param loadBalancers The load balancers.
-   */
-  public fun loadBalancers(loadBalancers: Collection<Any>) {
-    _loadBalancers.addAll(loadBalancers)
-  }
+    /** @param loadBalancers The load balancers. */
+    public fun loadBalancers(loadBalancers: Collection<Any>) {
+        _loadBalancers.addAll(loadBalancers)
+    }
 
-  /**
-   * @param loadBalancers The load balancers.
-   */
-  public fun loadBalancers(loadBalancers: IResolvable) {
-    cdkBuilder.loadBalancers(loadBalancers)
-  }
+    /** @param loadBalancers The load balancers. */
+    public fun loadBalancers(loadBalancers: IResolvable) {
+        cdkBuilder.loadBalancers(loadBalancers)
+    }
 
-  /**
-   * @param serviceName The name of the VPC endpoint service.
-   */
-  public fun serviceName(serviceName: String) {
-    cdkBuilder.serviceName(serviceName)
-  }
+    /** @param serviceName The name of the VPC endpoint service. */
+    public fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
+    }
 
-  public fun build(): CfnNetworkInsightsAnalysis.AdditionalDetailProperty {
-    if(_loadBalancers.isNotEmpty()) cdkBuilder.loadBalancers(_loadBalancers)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnNetworkInsightsAnalysis.AdditionalDetailProperty {
+        if (_loadBalancers.isNotEmpty()) cdkBuilder.loadBalancers(_loadBalancers)
+        return cdkBuilder.build()
+    }
 }

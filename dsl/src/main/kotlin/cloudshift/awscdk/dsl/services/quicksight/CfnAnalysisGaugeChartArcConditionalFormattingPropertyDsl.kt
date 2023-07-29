@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The options that determine the presentation of the arc of a `GaugeChartVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,16 +53,12 @@ public class CfnAnalysisGaugeChartArcConditionalFormattingPropertyDsl {
     private val cdkBuilder: CfnAnalysis.GaugeChartArcConditionalFormattingProperty.Builder =
         CfnAnalysis.GaugeChartArcConditionalFormattingProperty.builder()
 
-    /**
-     * @param foregroundColor The conditional formatting of the arc foreground color.
-     */
+    /** @param foregroundColor The conditional formatting of the arc foreground color. */
     public fun foregroundColor(foregroundColor: IResolvable) {
         cdkBuilder.foregroundColor(foregroundColor)
     }
 
-    /**
-     * @param foregroundColor The conditional formatting of the arc foreground color.
-     */
+    /** @param foregroundColor The conditional formatting of the arc foreground color. */
     public fun foregroundColor(foregroundColor: CfnAnalysis.ConditionalFormattingColorProperty) {
         cdkBuilder.foregroundColor(foregroundColor)
     }

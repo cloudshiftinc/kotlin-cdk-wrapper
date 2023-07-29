@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.evidently
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.evidently.CfnProject
  * AppConfig to run client-side evaluation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,24 +35,24 @@ import software.amazon.awscdk.services.evidently.CfnProject
  */
 @CdkDslMarker
 public class CfnProjectAppConfigResourceObjectPropertyDsl {
-  private val cdkBuilder: CfnProject.AppConfigResourceObjectProperty.Builder =
-      CfnProject.AppConfigResourceObjectProperty.builder()
+    private val cdkBuilder: CfnProject.AppConfigResourceObjectProperty.Builder =
+        CfnProject.AppConfigResourceObjectProperty.builder()
 
-  /**
-   * @param applicationId The ID of the AWS AppConfig application to use for client-side evaluation.
-   * 
-   */
-  public fun applicationId(applicationId: String) {
-    cdkBuilder.applicationId(applicationId)
-  }
+    /**
+     * @param applicationId The ID of the AWS AppConfig application to use for client-side
+     *   evaluation.
+     */
+    public fun applicationId(applicationId: String) {
+        cdkBuilder.applicationId(applicationId)
+    }
 
-  /**
-   * @param environmentId The ID of the AWS AppConfig environment to use for client-side evaluation.
-   * 
-   */
-  public fun environmentId(environmentId: String) {
-    cdkBuilder.environmentId(environmentId)
-  }
+    /**
+     * @param environmentId The ID of the AWS AppConfig environment to use for client-side
+     *   evaluation.
+     */
+    public fun environmentId(environmentId: String) {
+        cdkBuilder.environmentId(environmentId)
+    }
 
-  public fun build(): CfnProject.AppConfigResourceObjectProperty = cdkBuilder.build()
+    public fun build(): CfnProject.AppConfigResourceObjectProperty = cdkBuilder.build()
 }

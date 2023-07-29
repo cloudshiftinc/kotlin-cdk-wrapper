@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
-import kotlin.String
 
 /**
  * The configuration for default new sheet settings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -65,7 +73,7 @@ public class CfnDashboardDefaultNewSheetConfigurationPropertyDsl {
 
     /**
      * @param interactiveLayoutConfiguration The options that determine the default settings for
-     * interactive layout configuration.
+     *   interactive layout configuration.
      */
     public fun interactiveLayoutConfiguration(interactiveLayoutConfiguration: IResolvable) {
         cdkBuilder.interactiveLayoutConfiguration(interactiveLayoutConfiguration)
@@ -73,15 +81,17 @@ public class CfnDashboardDefaultNewSheetConfigurationPropertyDsl {
 
     /**
      * @param interactiveLayoutConfiguration The options that determine the default settings for
-     * interactive layout configuration.
+     *   interactive layout configuration.
      */
-    public fun interactiveLayoutConfiguration(interactiveLayoutConfiguration: CfnDashboard.DefaultInteractiveLayoutConfigurationProperty) {
+    public fun interactiveLayoutConfiguration(
+        interactiveLayoutConfiguration: CfnDashboard.DefaultInteractiveLayoutConfigurationProperty
+    ) {
         cdkBuilder.interactiveLayoutConfiguration(interactiveLayoutConfiguration)
     }
 
     /**
      * @param paginatedLayoutConfiguration The options that determine the default settings for a
-     * paginated layout configuration.
+     *   paginated layout configuration.
      */
     public fun paginatedLayoutConfiguration(paginatedLayoutConfiguration: IResolvable) {
         cdkBuilder.paginatedLayoutConfiguration(paginatedLayoutConfiguration)
@@ -89,15 +99,15 @@ public class CfnDashboardDefaultNewSheetConfigurationPropertyDsl {
 
     /**
      * @param paginatedLayoutConfiguration The options that determine the default settings for a
-     * paginated layout configuration.
+     *   paginated layout configuration.
      */
-    public fun paginatedLayoutConfiguration(paginatedLayoutConfiguration: CfnDashboard.DefaultPaginatedLayoutConfigurationProperty) {
+    public fun paginatedLayoutConfiguration(
+        paginatedLayoutConfiguration: CfnDashboard.DefaultPaginatedLayoutConfigurationProperty
+    ) {
         cdkBuilder.paginatedLayoutConfiguration(paginatedLayoutConfiguration)
     }
 
-    /**
-     * @param sheetContentType The option that determines the sheet content type.
-     */
+    /** @param sheetContentType The option that determines the sheet content type. */
     public fun sheetContentType(sheetContentType: String) {
         cdkBuilder.sheetContentType(sheetContentType)
     }

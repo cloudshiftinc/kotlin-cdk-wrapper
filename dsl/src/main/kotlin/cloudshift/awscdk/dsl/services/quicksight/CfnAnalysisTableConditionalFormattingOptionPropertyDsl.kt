@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Conditional formatting options for a `PivotTableVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -123,36 +131,28 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisTableConditionalFormattingOptionPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.TableConditionalFormattingOptionProperty.Builder =
-      CfnAnalysis.TableConditionalFormattingOptionProperty.builder()
+    private val cdkBuilder: CfnAnalysis.TableConditionalFormattingOptionProperty.Builder =
+        CfnAnalysis.TableConditionalFormattingOptionProperty.builder()
 
-  /**
-   * @param cell The cell conditional formatting option for a table.
-   */
-  public fun cell(cell: IResolvable) {
-    cdkBuilder.cell(cell)
-  }
+    /** @param cell The cell conditional formatting option for a table. */
+    public fun cell(cell: IResolvable) {
+        cdkBuilder.cell(cell)
+    }
 
-  /**
-   * @param cell The cell conditional formatting option for a table.
-   */
-  public fun cell(cell: CfnAnalysis.TableCellConditionalFormattingProperty) {
-    cdkBuilder.cell(cell)
-  }
+    /** @param cell The cell conditional formatting option for a table. */
+    public fun cell(cell: CfnAnalysis.TableCellConditionalFormattingProperty) {
+        cdkBuilder.cell(cell)
+    }
 
-  /**
-   * @param row The row conditional formatting option for a table.
-   */
-  public fun row(row: IResolvable) {
-    cdkBuilder.row(row)
-  }
+    /** @param row The row conditional formatting option for a table. */
+    public fun row(row: IResolvable) {
+        cdkBuilder.row(row)
+    }
 
-  /**
-   * @param row The row conditional formatting option for a table.
-   */
-  public fun row(row: CfnAnalysis.TableRowConditionalFormattingProperty) {
-    cdkBuilder.row(row)
-  }
+    /** @param row The row conditional formatting option for a table. */
+    public fun row(row: CfnAnalysis.TableRowConditionalFormattingProperty) {
+        cdkBuilder.row(row)
+    }
 
-  public fun build(): CfnAnalysis.TableConditionalFormattingOptionProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.TableConditionalFormattingOptionProperty = cdkBuilder.build()
 }

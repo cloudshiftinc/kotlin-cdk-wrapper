@@ -1,24 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * A grouping of individual filters. Filter groups are applied to the same group of visuals.
  *
- * For more information, see [Adding filter conditions (group filters) with AND and OR
- * operators](https://docs.aws.amazon.com/quicksight/latest/user/add-a-compound-filter.html) in the
- * *Amazon QuickSight User Guide* .
+ * For more information, see
+ * [Adding filter conditions (group filters) with AND and OR operators](https://docs.aws.amazon.com/quicksight/latest/user/add-a-compound-filter.html)
+ * in the *Amazon QuickSight User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -237,7 +245,7 @@ public class CfnDashboardFilterGroupPropertyDsl {
 
     /**
      * @param crossDataset The filter new feature which can apply filter group to all data sets.
-     * Choose one of the following options:.
+     *   Choose one of the following options:.
      * * `ALL_DATASETS`
      * * `SINGLE_DATASET`
      */
@@ -247,38 +255,31 @@ public class CfnDashboardFilterGroupPropertyDsl {
 
     /**
      * @param filterGroupId The value that uniquely identifies a `FilterGroup` within a dashboard,
-     * template, or analysis.
+     *   template, or analysis.
      */
     public fun filterGroupId(filterGroupId: String) {
         cdkBuilder.filterGroupId(filterGroupId)
     }
 
-    /**
-     * @param filters The list of filters that are present in a `FilterGroup` .
-     */
+    /** @param filters The list of filters that are present in a `FilterGroup` . */
     public fun filters(vararg filters: Any) {
         _filters.addAll(listOf(*filters))
     }
 
-    /**
-     * @param filters The list of filters that are present in a `FilterGroup` .
-     */
+    /** @param filters The list of filters that are present in a `FilterGroup` . */
     public fun filters(filters: Collection<Any>) {
         _filters.addAll(filters)
     }
 
-    /**
-     * @param filters The list of filters that are present in a `FilterGroup` .
-     */
+    /** @param filters The list of filters that are present in a `FilterGroup` . */
     public fun filters(filters: IResolvable) {
         cdkBuilder.filters(filters)
     }
 
     /**
      * @param scopeConfiguration The configuration that specifies what scope to apply to a
-     * `FilterGroup` .
-     * This is a union type structure. For this structure to be valid, only one of the attributes can
-     * be defined.
+     *   `FilterGroup` . This is a union type structure. For this structure to be valid, only one of
+     *   the attributes can be defined.
      */
     public fun scopeConfiguration(scopeConfiguration: IResolvable) {
         cdkBuilder.scopeConfiguration(scopeConfiguration)
@@ -286,17 +287,16 @@ public class CfnDashboardFilterGroupPropertyDsl {
 
     /**
      * @param scopeConfiguration The configuration that specifies what scope to apply to a
-     * `FilterGroup` .
-     * This is a union type structure. For this structure to be valid, only one of the attributes can
-     * be defined.
+     *   `FilterGroup` . This is a union type structure. For this structure to be valid, only one of
+     *   the attributes can be defined.
      */
-    public fun scopeConfiguration(scopeConfiguration: CfnDashboard.FilterScopeConfigurationProperty) {
+    public fun scopeConfiguration(
+        scopeConfiguration: CfnDashboard.FilterScopeConfigurationProperty
+    ) {
         cdkBuilder.scopeConfiguration(scopeConfiguration)
     }
 
-    /**
-     * @param status The status of the `FilterGroup` .
-     */
+    /** @param status The status of the `FilterGroup` . */
     public fun status(status: String) {
         cdkBuilder.status(status)
     }

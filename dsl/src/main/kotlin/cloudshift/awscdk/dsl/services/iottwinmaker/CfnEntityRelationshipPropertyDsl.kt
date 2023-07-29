@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 import kotlin.String
+import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
 /**
  * The entity relationship.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,12 @@ public class CfnEntityRelationshipPropertyDsl {
     private val cdkBuilder: CfnEntity.RelationshipProperty.Builder =
         CfnEntity.RelationshipProperty.builder()
 
-    /**
-     * @param relationshipType The relationship type.
-     */
+    /** @param relationshipType The relationship type. */
     public fun relationshipType(relationshipType: String) {
         cdkBuilder.relationshipType(relationshipType)
     }
 
-    /**
-     * @param targetComponentTypeId the component type Id target.
-     */
+    /** @param targetComponentTypeId the component type Id target. */
     public fun targetComponentTypeId(targetComponentTypeId: String) {
         cdkBuilder.targetComponentTypeId(targetComponentTypeId)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.logs
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * Define a Log Stream in a Log Group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,50 +38,49 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class LogStreamDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: LogStream.Builder = LogStream.Builder.create(scope, id)
+    private val cdkBuilder: LogStream.Builder = LogStream.Builder.create(scope, id)
 
-  /**
-   * The log group to create a log stream for.
-   *
-   * @param logGroup The log group to create a log stream for. 
-   */
-  public fun logGroup(logGroup: ILogGroup) {
-    cdkBuilder.logGroup(logGroup)
-  }
+    /**
+     * The log group to create a log stream for.
+     *
+     * @param logGroup The log group to create a log stream for.
+     */
+    public fun logGroup(logGroup: ILogGroup) {
+        cdkBuilder.logGroup(logGroup)
+    }
 
-  /**
-   * The name of the log stream to create.
-   *
-   * The name must be unique within the log group.
-   *
-   * Default: Automatically generated
-   *
-   * @param logStreamName The name of the log stream to create. 
-   */
-  public fun logStreamName(logStreamName: String) {
-    cdkBuilder.logStreamName(logStreamName)
-  }
+    /**
+     * The name of the log stream to create.
+     *
+     * The name must be unique within the log group.
+     *
+     * Default: Automatically generated
+     *
+     * @param logStreamName The name of the log stream to create.
+     */
+    public fun logStreamName(logStreamName: String) {
+        cdkBuilder.logStreamName(logStreamName)
+    }
 
-  /**
-   * Determine what happens when the log stream resource is removed from the app.
-   *
-   * Normally you want to retain the log stream so you can diagnose issues from
-   * logs even after a deployment that no longer includes the log stream.
-   *
-   * The date-based retention policy of your log group will age out the logs
-   * after a certain time.
-   *
-   * Default: RemovalPolicy.Retain
-   *
-   * @param removalPolicy Determine what happens when the log stream resource is removed from the
-   * app. 
-   */
-  public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    cdkBuilder.removalPolicy(removalPolicy)
-  }
+    /**
+     * Determine what happens when the log stream resource is removed from the app.
+     *
+     * Normally you want to retain the log stream so you can diagnose issues from logs even after a
+     * deployment that no longer includes the log stream.
+     *
+     * The date-based retention policy of your log group will age out the logs after a certain time.
+     *
+     * Default: RemovalPolicy.Retain
+     *
+     * @param removalPolicy Determine what happens when the log stream resource is removed from the
+     *   app.
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
+    }
 
-  public fun build(): LogStream = cdkBuilder.build()
+    public fun build(): LogStream = cdkBuilder.build()
 }

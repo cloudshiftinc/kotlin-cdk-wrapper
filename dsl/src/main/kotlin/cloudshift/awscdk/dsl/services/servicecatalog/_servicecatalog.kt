@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShare
 import software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
@@ -54,15 +65,12 @@ import software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions
 import software.amazon.awscdk.services.servicecatalog.TemplateRule
 import software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object servicecatalog {
     /**
      * Accepts an offer to share the specified portfolio.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -80,7 +88,7 @@ public object servicecatalog {
     public inline fun cfnAcceptedPortfolioShare(
         scope: Construct,
         id: String,
-        block: CfnAcceptedPortfolioShareDsl.() -> Unit = {}
+        block: CfnAcceptedPortfolioShareDsl.() -> Unit = {},
     ): CfnAcceptedPortfolioShare {
         val builder = CfnAcceptedPortfolioShareDsl(scope, id)
         builder.apply(block)
@@ -91,7 +99,6 @@ public object servicecatalog {
      * Properties for defining a `CfnAcceptedPortfolioShare`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -106,7 +113,9 @@ public object servicecatalog {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html)
      */
-    public inline fun cfnAcceptedPortfolioShareProps(block: CfnAcceptedPortfolioSharePropsDsl.() -> Unit = {}): CfnAcceptedPortfolioShareProps {
+    public inline fun cfnAcceptedPortfolioShareProps(
+        block: CfnAcceptedPortfolioSharePropsDsl.() -> Unit = {}
+    ): CfnAcceptedPortfolioShareProps {
         val builder = CfnAcceptedPortfolioSharePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -116,7 +125,6 @@ public object servicecatalog {
      * Specifies a product.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -166,7 +174,7 @@ public object servicecatalog {
     public inline fun cfnCloudFormationProduct(
         scope: Construct,
         id: String,
-        block: CfnCloudFormationProductDsl.() -> Unit = {}
+        block: CfnCloudFormationProductDsl.() -> Unit = {},
     ): CfnCloudFormationProduct {
         val builder = CfnCloudFormationProductDsl(scope, id)
         builder.apply(block)
@@ -177,7 +185,6 @@ public object servicecatalog {
      * The subtype containing details about the Codestar connection `Type` .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -193,8 +200,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html)
      */
     public inline fun cfnCloudFormationProductCodeStarParametersProperty(
-        block: CfnCloudFormationProductCodeStarParametersPropertyDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProductCodeStarParametersPropertyDsl.() -> Unit = {}
     ): CfnCloudFormationProduct.CodeStarParametersProperty {
         val builder = CfnCloudFormationProductCodeStarParametersPropertyDsl()
         builder.apply(block)
@@ -205,7 +211,6 @@ public object servicecatalog {
      * Provides connection details.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -224,8 +229,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-connectionparameters.html)
      */
     public inline fun cfnCloudFormationProductConnectionParametersProperty(
-        block: CfnCloudFormationProductConnectionParametersPropertyDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProductConnectionParametersPropertyDsl.() -> Unit = {}
     ): CfnCloudFormationProduct.ConnectionParametersProperty {
         val builder = CfnCloudFormationProductConnectionParametersPropertyDsl()
         builder.apply(block)
@@ -236,7 +240,6 @@ public object servicecatalog {
      * Properties for defining a `CfnCloudFormationProduct`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -284,8 +287,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html)
      */
     public inline fun cfnCloudFormationProductProps(
-        block: CfnCloudFormationProductPropsDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProductPropsDsl.() -> Unit = {}
     ): CfnCloudFormationProductProps {
         val builder = CfnCloudFormationProductPropsDsl()
         builder.apply(block)
@@ -296,7 +298,6 @@ public object servicecatalog {
      * Information about a provisioning artifact (also known as a version) for a product.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -316,8 +317,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html)
      */
     public inline fun cfnCloudFormationProductProvisioningArtifactPropertiesProperty(
-        block: CfnCloudFormationProductProvisioningArtifactPropertiesPropertyDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProductProvisioningArtifactPropertiesPropertyDsl.() -> Unit = {}
     ): CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty {
         val builder = CfnCloudFormationProductProvisioningArtifactPropertiesPropertyDsl()
         builder.apply(block)
@@ -328,11 +328,10 @@ public object servicecatalog {
      * A top level `ProductViewDetail` response containing details about the product’s connection.
      *
      * AWS Service Catalog returns this field for the `CreateProduct` , `UpdateProduct` ,
-     * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same fields
-     * as the `ConnectionParameters` request, with the addition of the `LastSync` response.
+     * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same
+     * fields as the `ConnectionParameters` request, with the addition of the `LastSync` response.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -353,8 +352,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-sourceconnection.html)
      */
     public inline fun cfnCloudFormationProductSourceConnectionProperty(
-        block: CfnCloudFormationProductSourceConnectionPropertyDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProductSourceConnectionPropertyDsl.() -> Unit = {}
     ): CfnCloudFormationProduct.SourceConnectionProperty {
         val builder = CfnCloudFormationProductSourceConnectionPropertyDsl()
         builder.apply(block)
@@ -364,17 +362,17 @@ public object servicecatalog {
     /**
      * Provisions the specified product.
      *
-     * A provisioned product is a resourced instance of a product. For example, provisioning a product
-     * based on a AWS CloudFormation template launches a AWS CloudFormation stack and its underlying
-     * resources. You can check the status of this request using
-     * [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html) .
+     * A provisioned product is a resourced instance of a product. For example, provisioning a
+     * product based on a AWS CloudFormation template launches a AWS CloudFormation stack and its
+     * underlying resources. You can check the status of this request using
+     * [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html)
+     * .
      *
      * If the request contains a tag key with an empty list of values, there is a tag conflict for
-     * that key. Do not include conflicted keys as tags, or this causes the error "Parameter validation
-     * failed: Missing required parameter in Tags[ *N* ]: *Value* ".
+     * that key. Do not include conflicted keys as tags, or this causes the error "Parameter
+     * validation failed: Missing required parameter in Tags[ *N* ]: *Value* ".
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -415,7 +413,7 @@ public object servicecatalog {
     public inline fun cfnCloudFormationProvisionedProduct(
         scope: Construct,
         id: String,
-        block: CfnCloudFormationProvisionedProductDsl.() -> Unit = {}
+        block: CfnCloudFormationProvisionedProductDsl.() -> Unit = {},
     ): CfnCloudFormationProvisionedProduct {
         val builder = CfnCloudFormationProvisionedProductDsl(scope, id)
         builder.apply(block)
@@ -426,7 +424,6 @@ public object servicecatalog {
      * Properties for defining a `CfnCloudFormationProvisionedProduct`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -465,8 +462,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html)
      */
     public inline fun cfnCloudFormationProvisionedProductProps(
-        block: CfnCloudFormationProvisionedProductPropsDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProvisionedProductPropsDsl.() -> Unit = {}
     ): CfnCloudFormationProvisionedProductProps {
         val builder = CfnCloudFormationProvisionedProductPropsDsl()
         builder.apply(block)
@@ -477,7 +473,6 @@ public object servicecatalog {
      * Information about a parameter used to provision a product.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -492,8 +487,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.html)
      */
     public inline fun cfnCloudFormationProvisionedProductProvisioningParameterProperty(
-        block: CfnCloudFormationProvisionedProductProvisioningParameterPropertyDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProvisionedProductProvisioningParameterPropertyDsl.() -> Unit = {}
     ): CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty {
         val builder = CfnCloudFormationProvisionedProductProvisioningParameterPropertyDsl()
         builder.apply(block)
@@ -509,14 +503,13 @@ public object servicecatalog {
      *
      * Applicable only to a `CFN_STACKSET` provisioned product type.
      *
-     * The AWS accounts specified should be within the list of accounts in the `STACKSET` constraint.
-     * To get the list of accounts in the `STACKSET` constraint, use the `DescribeProvisioningParameters`
-     * operation.
+     * The AWS accounts specified should be within the list of accounts in the `STACKSET`
+     * constraint. To get the list of accounts in the `STACKSET` constraint, use the
+     * `DescribeProvisioningParameters` operation.
      *
      * If no values are specified, the default value is all accounts from the `STACKSET` constraint.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -536,8 +529,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences.html)
      */
     public inline fun cfnCloudFormationProvisionedProductProvisioningPreferencesProperty(
-        block: CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl.() -> Unit =
-            {}
+        block: CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl.() -> Unit = {}
     ): CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty {
         val builder = CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl()
         builder.apply(block)
@@ -548,7 +540,6 @@ public object servicecatalog {
      * Specifies a notification constraint.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -569,7 +560,7 @@ public object servicecatalog {
     public inline fun cfnLaunchNotificationConstraint(
         scope: Construct,
         id: String,
-        block: CfnLaunchNotificationConstraintDsl.() -> Unit = {}
+        block: CfnLaunchNotificationConstraintDsl.() -> Unit = {},
     ): CfnLaunchNotificationConstraint {
         val builder = CfnLaunchNotificationConstraintDsl(scope, id)
         builder.apply(block)
@@ -580,7 +571,6 @@ public object servicecatalog {
      * Properties for defining a `CfnLaunchNotificationConstraint`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -599,8 +589,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html)
      */
     public inline fun cfnLaunchNotificationConstraintProps(
-        block: CfnLaunchNotificationConstraintPropsDsl.() -> Unit =
-            {}
+        block: CfnLaunchNotificationConstraintPropsDsl.() -> Unit = {}
     ): CfnLaunchNotificationConstraintProps {
         val builder = CfnLaunchNotificationConstraintPropsDsl()
         builder.apply(block)
@@ -611,7 +600,6 @@ public object servicecatalog {
      * Specifies a launch constraint.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -633,7 +621,7 @@ public object servicecatalog {
     public inline fun cfnLaunchRoleConstraint(
         scope: Construct,
         id: String,
-        block: CfnLaunchRoleConstraintDsl.() -> Unit = {}
+        block: CfnLaunchRoleConstraintDsl.() -> Unit = {},
     ): CfnLaunchRoleConstraint {
         val builder = CfnLaunchRoleConstraintDsl(scope, id)
         builder.apply(block)
@@ -644,7 +632,6 @@ public object servicecatalog {
      * Properties for defining a `CfnLaunchRoleConstraint`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -664,8 +651,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html)
      */
     public inline fun cfnLaunchRoleConstraintProps(
-        block: CfnLaunchRoleConstraintPropsDsl.() -> Unit =
-            {}
+        block: CfnLaunchRoleConstraintPropsDsl.() -> Unit = {}
     ): CfnLaunchRoleConstraintProps {
         val builder = CfnLaunchRoleConstraintPropsDsl()
         builder.apply(block)
@@ -676,7 +662,6 @@ public object servicecatalog {
      * Specifies a template constraint.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -697,7 +682,7 @@ public object servicecatalog {
     public inline fun cfnLaunchTemplateConstraint(
         scope: Construct,
         id: String,
-        block: CfnLaunchTemplateConstraintDsl.() -> Unit = {}
+        block: CfnLaunchTemplateConstraintDsl.() -> Unit = {},
     ): CfnLaunchTemplateConstraint {
         val builder = CfnLaunchTemplateConstraintDsl(scope, id)
         builder.apply(block)
@@ -708,7 +693,6 @@ public object servicecatalog {
      * Properties for defining a `CfnLaunchTemplateConstraint`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -727,8 +711,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html)
      */
     public inline fun cfnLaunchTemplateConstraintProps(
-        block: CfnLaunchTemplateConstraintPropsDsl.() -> Unit =
-            {}
+        block: CfnLaunchTemplateConstraintPropsDsl.() -> Unit = {}
     ): CfnLaunchTemplateConstraintProps {
         val builder = CfnLaunchTemplateConstraintPropsDsl()
         builder.apply(block)
@@ -739,7 +722,6 @@ public object servicecatalog {
      * Specifies a portfolio.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -762,7 +744,7 @@ public object servicecatalog {
     public inline fun cfnPortfolio(
         scope: Construct,
         id: String,
-        block: CfnPortfolioDsl.() -> Unit = {}
+        block: CfnPortfolioDsl.() -> Unit = {},
     ): CfnPortfolio {
         val builder = CfnPortfolioDsl(scope, id)
         builder.apply(block)
@@ -773,7 +755,6 @@ public object servicecatalog {
      * Associates the specified principal ARN with the specified portfolio.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -793,7 +774,7 @@ public object servicecatalog {
     public inline fun cfnPortfolioPrincipalAssociation(
         scope: Construct,
         id: String,
-        block: CfnPortfolioPrincipalAssociationDsl.() -> Unit = {}
+        block: CfnPortfolioPrincipalAssociationDsl.() -> Unit = {},
     ): CfnPortfolioPrincipalAssociation {
         val builder = CfnPortfolioPrincipalAssociationDsl(scope, id)
         builder.apply(block)
@@ -804,7 +785,6 @@ public object servicecatalog {
      * Properties for defining a `CfnPortfolioPrincipalAssociation`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -822,8 +802,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html)
      */
     public inline fun cfnPortfolioPrincipalAssociationProps(
-        block: CfnPortfolioPrincipalAssociationPropsDsl.() -> Unit =
-            {}
+        block: CfnPortfolioPrincipalAssociationPropsDsl.() -> Unit = {}
     ): CfnPortfolioPrincipalAssociationProps {
         val builder = CfnPortfolioPrincipalAssociationPropsDsl()
         builder.apply(block)
@@ -836,7 +815,6 @@ public object servicecatalog {
      * A delegated admin is authorized to invoke this command.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -856,7 +834,7 @@ public object servicecatalog {
     public inline fun cfnPortfolioProductAssociation(
         scope: Construct,
         id: String,
-        block: CfnPortfolioProductAssociationDsl.() -> Unit = {}
+        block: CfnPortfolioProductAssociationDsl.() -> Unit = {},
     ): CfnPortfolioProductAssociation {
         val builder = CfnPortfolioProductAssociationDsl(scope, id)
         builder.apply(block)
@@ -867,7 +845,6 @@ public object servicecatalog {
      * Properties for defining a `CfnPortfolioProductAssociation`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -885,8 +862,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html)
      */
     public inline fun cfnPortfolioProductAssociationProps(
-        block: CfnPortfolioProductAssociationPropsDsl.() -> Unit =
-            {}
+        block: CfnPortfolioProductAssociationPropsDsl.() -> Unit = {}
     ): CfnPortfolioProductAssociationProps {
         val builder = CfnPortfolioProductAssociationPropsDsl()
         builder.apply(block)
@@ -897,7 +873,6 @@ public object servicecatalog {
      * Properties for defining a `CfnPortfolio`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -917,7 +892,9 @@ public object servicecatalog {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html)
      */
-    public inline fun cfnPortfolioProps(block: CfnPortfolioPropsDsl.() -> Unit = {}): CfnPortfolioProps {
+    public inline fun cfnPortfolioProps(
+        block: CfnPortfolioPropsDsl.() -> Unit = {}
+    ): CfnPortfolioProps {
         val builder = CfnPortfolioPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -927,7 +904,6 @@ public object servicecatalog {
      * Shares the specified portfolio with the specified account.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -947,7 +923,7 @@ public object servicecatalog {
     public inline fun cfnPortfolioShare(
         scope: Construct,
         id: String,
-        block: CfnPortfolioShareDsl.() -> Unit = {}
+        block: CfnPortfolioShareDsl.() -> Unit = {},
     ): CfnPortfolioShare {
         val builder = CfnPortfolioShareDsl(scope, id)
         builder.apply(block)
@@ -958,7 +934,6 @@ public object servicecatalog {
      * Properties for defining a `CfnPortfolioShare`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -974,7 +949,9 @@ public object servicecatalog {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html)
      */
-    public inline fun cfnPortfolioShareProps(block: CfnPortfolioSharePropsDsl.() -> Unit = {}): CfnPortfolioShareProps {
+    public inline fun cfnPortfolioShareProps(
+        block: CfnPortfolioSharePropsDsl.() -> Unit = {}
+    ): CfnPortfolioShareProps {
         val builder = CfnPortfolioSharePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -984,7 +961,6 @@ public object servicecatalog {
      * Specifies a `RESOURCE_UPDATE` constraint.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1005,7 +981,7 @@ public object servicecatalog {
     public inline fun cfnResourceUpdateConstraint(
         scope: Construct,
         id: String,
-        block: CfnResourceUpdateConstraintDsl.() -> Unit = {}
+        block: CfnResourceUpdateConstraintDsl.() -> Unit = {},
     ): CfnResourceUpdateConstraint {
         val builder = CfnResourceUpdateConstraintDsl(scope, id)
         builder.apply(block)
@@ -1016,7 +992,6 @@ public object servicecatalog {
      * Properties for defining a `CfnResourceUpdateConstraint`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1035,8 +1010,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html)
      */
     public inline fun cfnResourceUpdateConstraintProps(
-        block: CfnResourceUpdateConstraintPropsDsl.() -> Unit =
-            {}
+        block: CfnResourceUpdateConstraintPropsDsl.() -> Unit = {}
     ): CfnResourceUpdateConstraintProps {
         val builder = CfnResourceUpdateConstraintPropsDsl()
         builder.apply(block)
@@ -1047,7 +1021,6 @@ public object servicecatalog {
      * Creates a self-service action.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1070,7 +1043,7 @@ public object servicecatalog {
     public inline fun cfnServiceAction(
         scope: Construct,
         id: String,
-        block: CfnServiceActionDsl.() -> Unit = {}
+        block: CfnServiceActionDsl.() -> Unit = {},
     ): CfnServiceAction {
         val builder = CfnServiceActionDsl(scope, id)
         builder.apply(block)
@@ -1082,7 +1055,6 @@ public object servicecatalog {
      * Provisioning Artifact ID.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1100,7 +1072,7 @@ public object servicecatalog {
     public inline fun cfnServiceActionAssociation(
         scope: Construct,
         id: String,
-        block: CfnServiceActionAssociationDsl.() -> Unit = {}
+        block: CfnServiceActionAssociationDsl.() -> Unit = {},
     ): CfnServiceActionAssociation {
         val builder = CfnServiceActionAssociationDsl(scope, id)
         builder.apply(block)
@@ -1111,7 +1083,6 @@ public object servicecatalog {
      * Properties for defining a `CfnServiceActionAssociation`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1127,8 +1098,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceactionassociation.html)
      */
     public inline fun cfnServiceActionAssociationProps(
-        block: CfnServiceActionAssociationPropsDsl.() -> Unit =
-            {}
+        block: CfnServiceActionAssociationPropsDsl.() -> Unit = {}
     ): CfnServiceActionAssociationProps {
         val builder = CfnServiceActionAssociationPropsDsl()
         builder.apply(block)
@@ -1142,7 +1112,6 @@ public object servicecatalog {
      * [{\"Name\":\"InstanceId\",\"Type\":\"TEXT_VALUE\"}]` .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1156,8 +1125,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-serviceaction-definitionparameter.html)
      */
     public inline fun cfnServiceActionDefinitionParameterProperty(
-        block: CfnServiceActionDefinitionParameterPropertyDsl.() -> Unit =
-            {}
+        block: CfnServiceActionDefinitionParameterPropertyDsl.() -> Unit = {}
     ): CfnServiceAction.DefinitionParameterProperty {
         val builder = CfnServiceActionDefinitionParameterPropertyDsl()
         builder.apply(block)
@@ -1168,7 +1136,6 @@ public object servicecatalog {
      * Properties for defining a `CfnServiceAction`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1188,7 +1155,9 @@ public object servicecatalog {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html)
      */
-    public inline fun cfnServiceActionProps(block: CfnServiceActionPropsDsl.() -> Unit = {}): CfnServiceActionProps {
+    public inline fun cfnServiceActionProps(
+        block: CfnServiceActionPropsDsl.() -> Unit = {}
+    ): CfnServiceActionProps {
         val builder = CfnServiceActionPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1198,7 +1167,6 @@ public object servicecatalog {
      * Specifies a StackSet constraint.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1223,7 +1191,7 @@ public object servicecatalog {
     public inline fun cfnStackSetConstraint(
         scope: Construct,
         id: String,
-        block: CfnStackSetConstraintDsl.() -> Unit = {}
+        block: CfnStackSetConstraintDsl.() -> Unit = {},
     ): CfnStackSetConstraint {
         val builder = CfnStackSetConstraintDsl(scope, id)
         builder.apply(block)
@@ -1234,7 +1202,6 @@ public object servicecatalog {
      * Properties for defining a `CfnStackSetConstraint`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1256,8 +1223,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-stacksetconstraint.html)
      */
     public inline fun cfnStackSetConstraintProps(
-        block: CfnStackSetConstraintPropsDsl.() -> Unit =
-            {}
+        block: CfnStackSetConstraintPropsDsl.() -> Unit = {}
     ): CfnStackSetConstraintProps {
         val builder = CfnStackSetConstraintPropsDsl()
         builder.apply(block)
@@ -1271,7 +1237,6 @@ public object servicecatalog {
      * creating an AWS tag.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1289,7 +1254,7 @@ public object servicecatalog {
     public inline fun cfnTagOption(
         scope: Construct,
         id: String,
-        block: CfnTagOptionDsl.() -> Unit = {}
+        block: CfnTagOptionDsl.() -> Unit = {},
     ): CfnTagOption {
         val builder = CfnTagOptionDsl(scope, id)
         builder.apply(block)
@@ -1300,7 +1265,6 @@ public object servicecatalog {
      * Associate the specified TagOption with the specified portfolio or product.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1317,7 +1281,7 @@ public object servicecatalog {
     public inline fun cfnTagOptionAssociation(
         scope: Construct,
         id: String,
-        block: CfnTagOptionAssociationDsl.() -> Unit = {}
+        block: CfnTagOptionAssociationDsl.() -> Unit = {},
     ): CfnTagOptionAssociation {
         val builder = CfnTagOptionAssociationDsl(scope, id)
         builder.apply(block)
@@ -1328,7 +1292,6 @@ public object servicecatalog {
      * Properties for defining a `CfnTagOptionAssociation`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1343,8 +1306,7 @@ public object servicecatalog {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html)
      */
     public inline fun cfnTagOptionAssociationProps(
-        block: CfnTagOptionAssociationPropsDsl.() -> Unit =
-            {}
+        block: CfnTagOptionAssociationPropsDsl.() -> Unit = {}
     ): CfnTagOptionAssociationProps {
         val builder = CfnTagOptionAssociationPropsDsl()
         builder.apply(block)
@@ -1355,7 +1317,6 @@ public object servicecatalog {
      * Properties for defining a `CfnTagOption`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1370,7 +1331,9 @@ public object servicecatalog {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html)
      */
-    public inline fun cfnTagOptionProps(block: CfnTagOptionPropsDsl.() -> Unit = {}): CfnTagOptionProps {
+    public inline fun cfnTagOptionProps(
+        block: CfnTagOptionPropsDsl.() -> Unit = {}
+    ): CfnTagOptionProps {
         val builder = CfnTagOptionPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1380,7 +1343,6 @@ public object servicecatalog {
      * A Service Catalog Cloudformation Product.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.*;
      * public class S3BucketProduct extends ProductStack {
@@ -1403,7 +1365,7 @@ public object servicecatalog {
     public inline fun cloudFormationProduct(
         scope: Construct,
         id: String,
-        block: CloudFormationProductDsl.() -> Unit = {}
+        block: CloudFormationProductDsl.() -> Unit = {},
     ): CloudFormationProduct {
         val builder = CloudFormationProductDsl(scope, id)
         builder.apply(block)
@@ -1414,7 +1376,6 @@ public object servicecatalog {
      * Properties for a Cloudformation Product.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.*;
      * public class S3BucketProduct extends ProductStack {
@@ -1435,8 +1396,7 @@ public object servicecatalog {
      * ```
      */
     public inline fun cloudFormationProductProps(
-        block: CloudFormationProductPropsDsl.() -> Unit =
-            {}
+        block: CloudFormationProductPropsDsl.() -> Unit = {}
     ): CloudFormationProductProps {
         val builder = CloudFormationProductPropsDsl()
         builder.apply(block)
@@ -1447,7 +1407,6 @@ public object servicecatalog {
      * Properties of product version (also known as a provisioning artifact).
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1464,8 +1423,7 @@ public object servicecatalog {
      * ```
      */
     public inline fun cloudFormationProductVersion(
-        block: CloudFormationProductVersionDsl.() -> Unit =
-            {}
+        block: CloudFormationProductVersionDsl.() -> Unit = {}
     ): CloudFormationProductVersion {
         val builder = CloudFormationProductVersionDsl()
         builder.apply(block)
@@ -1476,7 +1434,6 @@ public object servicecatalog {
      * Properties for provisoning rule constraint.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.*;
      * Portfolio portfolio;
@@ -1495,8 +1452,7 @@ public object servicecatalog {
      * ```
      */
     public inline fun cloudFormationRuleConstraintOptions(
-        block: CloudFormationRuleConstraintOptionsDsl.() -> Unit =
-            {}
+        block: CloudFormationRuleConstraintOptionsDsl.() -> Unit = {}
     ): CloudFormationRuleConstraintOptions {
         val builder = CloudFormationRuleConstraintOptionsDsl()
         builder.apply(block)
@@ -1507,7 +1463,6 @@ public object servicecatalog {
      * Result of binding `Template` into a `Product`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1523,8 +1478,7 @@ public object servicecatalog {
      * ```
      */
     public inline fun cloudFormationTemplateConfig(
-        block: CloudFormationTemplateConfigDsl.() -> Unit =
-            {}
+        block: CloudFormationTemplateConfigDsl.() -> Unit = {}
     ): CloudFormationTemplateConfig {
         val builder = CloudFormationTemplateConfigDsl()
         builder.apply(block)
@@ -1535,7 +1489,6 @@ public object servicecatalog {
      * Properties for governance mechanisms and constraints.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.services.sns.*;
      * Portfolio portfolio;
@@ -1548,7 +1501,9 @@ public object servicecatalog {
      * .build());
      * ```
      */
-    public inline fun commonConstraintOptions(block: CommonConstraintOptionsDsl.() -> Unit = {}): CommonConstraintOptions {
+    public inline fun commonConstraintOptions(
+        block: CommonConstraintOptionsDsl.() -> Unit = {}
+    ): CommonConstraintOptions {
         val builder = CommonConstraintOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -1558,7 +1513,6 @@ public object servicecatalog {
      * A Service Catalog portfolio.
      *
      * Example:
-     *
      * ```
      * Portfolio.Builder.create(this, "Portfolio")
      * .displayName("MyPortfolio")
@@ -1569,7 +1523,7 @@ public object servicecatalog {
     public inline fun portfolio(
         scope: Construct,
         id: String,
-        block: PortfolioDsl.() -> Unit = {}
+        block: PortfolioDsl.() -> Unit = {},
     ): Portfolio {
         val builder = PortfolioDsl(scope, id)
         builder.apply(block)
@@ -1580,7 +1534,6 @@ public object servicecatalog {
      * Properties for a Portfolio.
      *
      * Example:
-     *
      * ```
      * Portfolio.Builder.create(this, "Portfolio")
      * .displayName("MyPortfolio")
@@ -1598,7 +1551,6 @@ public object servicecatalog {
      * Options for portfolio share.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1609,7 +1561,9 @@ public object servicecatalog {
      * .build();
      * ```
      */
-    public inline fun portfolioShareOptions(block: PortfolioShareOptionsDsl.() -> Unit = {}): PortfolioShareOptions {
+    public inline fun portfolioShareOptions(
+        block: PortfolioShareOptionsDsl.() -> Unit = {}
+    ): PortfolioShareOptions {
         val builder = PortfolioShareOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -1621,12 +1575,11 @@ public object servicecatalog {
      * You can add the resources to this stack that you want to define for your service catalog
      * product.
      *
-     * This stack will not be treated as an independent deployment
-     * artifact (won't be listed in "cdk list" or deployable through "cdk deploy"),
-     * but rather only synthesized as a template and uploaded as an asset to S3.
+     * This stack will not be treated as an independent deployment artifact (won't be listed in "cdk
+     * list" or deployable through "cdk deploy"), but rather only synthesized as a template and
+     * uploaded as an asset to S3.
      *
      * Example:
-     *
      * ```
      * public class S3BucketProduct extends ProductStack {
      * public S3BucketProduct(Construct scope, String id) {
@@ -1651,7 +1604,7 @@ public object servicecatalog {
     public inline fun productStack(
         scope: Construct,
         id: String,
-        block: ProductStackDsl.() -> Unit = {}
+        block: ProductStackDsl.() -> Unit = {},
     ): ProductStack {
         val builder = ProductStackDsl(scope, id)
         builder.apply(block)
@@ -1663,7 +1616,6 @@ public object servicecatalog {
      * maintained.
      *
      * Example:
-     *
      * ```
      * public class S3BucketProduct extends ProductStack {
      * public S3BucketProduct(Construct scope, String id) {
@@ -1687,7 +1639,7 @@ public object servicecatalog {
     public inline fun productStackHistory(
         scope: Construct,
         id: String,
-        block: ProductStackHistoryDsl.() -> Unit = {}
+        block: ProductStackHistoryDsl.() -> Unit = {},
     ): ProductStackHistory {
         val builder = ProductStackHistoryDsl(scope, id)
         builder.apply(block)
@@ -1698,7 +1650,6 @@ public object servicecatalog {
      * Properties for a ProductStackHistory.
      *
      * Example:
-     *
      * ```
      * public class S3BucketProduct extends ProductStack {
      * public S3BucketProduct(Construct scope, String id) {
@@ -1719,7 +1670,9 @@ public object servicecatalog {
      * .build();
      * ```
      */
-    public inline fun productStackHistoryProps(block: ProductStackHistoryPropsDsl.() -> Unit = {}): ProductStackHistoryProps {
+    public inline fun productStackHistoryProps(
+        block: ProductStackHistoryPropsDsl.() -> Unit = {}
+    ): ProductStackHistoryProps {
         val builder = ProductStackHistoryPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1729,7 +1682,6 @@ public object servicecatalog {
      * Product stack props.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.services.lambda.*;
      * import software.amazon.awscdk.*;
@@ -1760,7 +1712,9 @@ public object servicecatalog {
      * .build();
      * ```
      */
-    public inline fun productStackProps(block: ProductStackPropsDsl.() -> Unit = {}): ProductStackProps {
+    public inline fun productStackProps(
+        block: ProductStackPropsDsl.() -> Unit = {}
+    ): ProductStackProps {
         val builder = ProductStackPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1770,7 +1724,6 @@ public object servicecatalog {
      * Properties for deploying with Stackset, which creates a StackSet constraint.
      *
      * Example:
-     *
      * ```
      * Portfolio portfolio;
      * CloudFormationProduct product;
@@ -1787,8 +1740,7 @@ public object servicecatalog {
      * ```
      */
     public inline fun stackSetsConstraintOptions(
-        block: StackSetsConstraintOptionsDsl.() -> Unit =
-            {}
+        block: StackSetsConstraintOptionsDsl.() -> Unit = {}
     ): StackSetsConstraintOptions {
         val builder = StackSetsConstraintOptionsDsl()
         builder.apply(block)
@@ -1799,11 +1751,10 @@ public object servicecatalog {
      * Defines a set of TagOptions, which are a list of key-value pairs managed in AWS Service
      * Catalog.
      *
-     * It is not an AWS tag, but serves as a template for creating an AWS tag based on the TagOption.
-     * See https://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html
+     * It is not an AWS tag, but serves as a template for creating an AWS tag based on the
+     * TagOption. See https://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html
      *
      * Example:
-     *
      * ```
      * Portfolio portfolio;
      * CloudFormationProduct product;
@@ -1823,7 +1774,7 @@ public object servicecatalog {
     public inline fun tagOptions(
         scope: Construct,
         id: String,
-        block: TagOptionsDsl.() -> Unit = {}
+        block: TagOptionsDsl.() -> Unit = {},
     ): TagOptions {
         val builder = TagOptionsDsl(scope, id)
         builder.apply(block)
@@ -1834,7 +1785,6 @@ public object servicecatalog {
      * Properties for TagOptions.
      *
      * Example:
-     *
      * ```
      * Portfolio portfolio;
      * CloudFormationProduct product;
@@ -1861,7 +1811,6 @@ public object servicecatalog {
      * Properties for ResourceUpdateConstraint.
      *
      * Example:
-     *
      * ```
      * Portfolio portfolio;
      * CloudFormationProduct product;
@@ -1872,8 +1821,7 @@ public object servicecatalog {
      * ```
      */
     public inline fun tagUpdateConstraintOptions(
-        block: TagUpdateConstraintOptionsDsl.() -> Unit =
-            {}
+        block: TagUpdateConstraintOptionsDsl.() -> Unit = {}
     ): TagUpdateConstraintOptions {
         val builder = TagUpdateConstraintOptionsDsl()
         builder.apply(block)
@@ -1884,7 +1832,6 @@ public object servicecatalog {
      * Defines the provisioning template constraints.
      *
      * Example:
-     *
      * ```
      * import software.amazon.awscdk.*;
      * Portfolio portfolio;
@@ -1912,7 +1859,6 @@ public object servicecatalog {
      * An assertion within a template rule, defined by intrinsic functions.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1926,7 +1872,9 @@ public object servicecatalog {
      * .build();
      * ```
      */
-    public inline fun templateRuleAssertion(block: TemplateRuleAssertionDsl.() -> Unit = {}): TemplateRuleAssertion {
+    public inline fun templateRuleAssertion(
+        block: TemplateRuleAssertionDsl.() -> Unit = {}
+    ): TemplateRuleAssertion {
         val builder = TemplateRuleAssertionDsl()
         builder.apply(block)
         return builder.build()

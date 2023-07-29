@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.iotwireless.CfnDestination
 import software.amazon.awscdk.services.iotwireless.CfnDestinationProps
 import software.amazon.awscdk.services.iotwireless.CfnDeviceProfile
@@ -25,15 +36,12 @@ import software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceProps
 import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
 import software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object iotwireless {
     /**
      * Creates a new destination that maps a device message to an AWS IoT rule.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -57,7 +65,7 @@ public object iotwireless {
     public inline fun cfnDestination(
         scope: Construct,
         id: String,
-        block: CfnDestinationDsl.() -> Unit = {}
+        block: CfnDestinationDsl.() -> Unit = {},
     ): CfnDestination {
         val builder = CfnDestinationDsl(scope, id)
         builder.apply(block)
@@ -68,7 +76,6 @@ public object iotwireless {
      * Properties for defining a `CfnDestination`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -89,7 +96,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)
      */
-    public inline fun cfnDestinationProps(block: CfnDestinationPropsDsl.() -> Unit = {}): CfnDestinationProps {
+    public inline fun cfnDestinationProps(
+        block: CfnDestinationPropsDsl.() -> Unit = {}
+    ): CfnDestinationProps {
         val builder = CfnDestinationPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -99,7 +108,6 @@ public object iotwireless {
      * Creates a new device profile.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -139,7 +147,7 @@ public object iotwireless {
     public inline fun cfnDeviceProfile(
         scope: Construct,
         id: String,
-        block: CfnDeviceProfileDsl.() -> Unit = {}
+        block: CfnDeviceProfileDsl.() -> Unit = {},
     ): CfnDeviceProfile {
         val builder = CfnDeviceProfileDsl(scope, id)
         builder.apply(block)
@@ -150,7 +158,6 @@ public object iotwireless {
      * LoRaWAN device profile object.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -182,8 +189,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html)
      */
     public inline fun cfnDeviceProfileLoRaWANDeviceProfileProperty(
-        block: CfnDeviceProfileLoRaWANDeviceProfilePropertyDsl.() -> Unit =
-            {}
+        block: CfnDeviceProfileLoRaWANDeviceProfilePropertyDsl.() -> Unit = {}
     ): CfnDeviceProfile.LoRaWANDeviceProfileProperty {
         val builder = CfnDeviceProfileLoRaWANDeviceProfilePropertyDsl()
         builder.apply(block)
@@ -194,7 +200,6 @@ public object iotwireless {
      * Properties for defining a `CfnDeviceProfile`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -231,7 +236,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)
      */
-    public inline fun cfnDeviceProfileProps(block: CfnDeviceProfilePropsDsl.() -> Unit = {}): CfnDeviceProfileProps {
+    public inline fun cfnDeviceProfileProps(
+        block: CfnDeviceProfilePropsDsl.() -> Unit = {}
+    ): CfnDeviceProfileProps {
         val builder = CfnDeviceProfilePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -241,7 +248,6 @@ public object iotwireless {
      * A FUOTA task.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -273,7 +279,7 @@ public object iotwireless {
     public inline fun cfnFuotaTask(
         scope: Construct,
         id: String,
-        block: CfnFuotaTaskDsl.() -> Unit = {}
+        block: CfnFuotaTaskDsl.() -> Unit = {},
     ): CfnFuotaTask {
         val builder = CfnFuotaTaskDsl(scope, id)
         builder.apply(block)
@@ -284,7 +290,6 @@ public object iotwireless {
      * The LoRaWAN information used with a FUOTA task.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -299,8 +304,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-fuotatask-lorawan.html)
      */
     public inline fun cfnFuotaTaskLoRaWANProperty(
-        block: CfnFuotaTaskLoRaWANPropertyDsl.() -> Unit =
-            {}
+        block: CfnFuotaTaskLoRaWANPropertyDsl.() -> Unit = {}
     ): CfnFuotaTask.LoRaWANProperty {
         val builder = CfnFuotaTaskLoRaWANPropertyDsl()
         builder.apply(block)
@@ -311,7 +315,6 @@ public object iotwireless {
      * Properties for defining a `CfnFuotaTask`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -340,7 +343,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html)
      */
-    public inline fun cfnFuotaTaskProps(block: CfnFuotaTaskPropsDsl.() -> Unit = {}): CfnFuotaTaskProps {
+    public inline fun cfnFuotaTaskProps(
+        block: CfnFuotaTaskPropsDsl.() -> Unit = {}
+    ): CfnFuotaTaskProps {
         val builder = CfnFuotaTaskPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -350,7 +355,6 @@ public object iotwireless {
      * A multicast group.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -381,7 +385,7 @@ public object iotwireless {
     public inline fun cfnMulticastGroup(
         scope: Construct,
         id: String,
-        block: CfnMulticastGroupDsl.() -> Unit = {}
+        block: CfnMulticastGroupDsl.() -> Unit = {},
     ): CfnMulticastGroup {
         val builder = CfnMulticastGroupDsl(scope, id)
         builder.apply(block)
@@ -392,7 +396,6 @@ public object iotwireless {
      * The LoRaWAN information that is to be used with the multicast group.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -409,8 +412,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-multicastgroup-lorawan.html)
      */
     public inline fun cfnMulticastGroupLoRaWANProperty(
-        block: CfnMulticastGroupLoRaWANPropertyDsl.() -> Unit =
-            {}
+        block: CfnMulticastGroupLoRaWANPropertyDsl.() -> Unit = {}
     ): CfnMulticastGroup.LoRaWANProperty {
         val builder = CfnMulticastGroupLoRaWANPropertyDsl()
         builder.apply(block)
@@ -421,7 +423,6 @@ public object iotwireless {
      * Properties for defining a `CfnMulticastGroup`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -448,7 +449,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html)
      */
-    public inline fun cfnMulticastGroupProps(block: CfnMulticastGroupPropsDsl.() -> Unit = {}): CfnMulticastGroupProps {
+    public inline fun cfnMulticastGroupProps(
+        block: CfnMulticastGroupPropsDsl.() -> Unit = {}
+    ): CfnMulticastGroupProps {
         val builder = CfnMulticastGroupPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -458,7 +461,6 @@ public object iotwireless {
      * Network analyzer configuration.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -484,7 +486,7 @@ public object iotwireless {
     public inline fun cfnNetworkAnalyzerConfiguration(
         scope: Construct,
         id: String,
-        block: CfnNetworkAnalyzerConfigurationDsl.() -> Unit = {}
+        block: CfnNetworkAnalyzerConfigurationDsl.() -> Unit = {},
     ): CfnNetworkAnalyzerConfiguration {
         val builder = CfnNetworkAnalyzerConfigurationDsl(scope, id)
         builder.apply(block)
@@ -495,7 +497,6 @@ public object iotwireless {
      * Properties for defining a `CfnNetworkAnalyzerConfiguration`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -519,8 +520,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html)
      */
     public inline fun cfnNetworkAnalyzerConfigurationProps(
-        block: CfnNetworkAnalyzerConfigurationPropsDsl.() -> Unit =
-            {}
+        block: CfnNetworkAnalyzerConfigurationPropsDsl.() -> Unit = {}
     ): CfnNetworkAnalyzerConfigurationProps {
         val builder = CfnNetworkAnalyzerConfigurationPropsDsl()
         builder.apply(block)
@@ -531,7 +531,6 @@ public object iotwireless {
      * Trace content for your wireless gateway and wireless device resources.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -545,8 +544,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-networkanalyzerconfiguration-tracecontent.html)
      */
     public inline fun cfnNetworkAnalyzerConfigurationTraceContentProperty(
-        block: CfnNetworkAnalyzerConfigurationTraceContentPropertyDsl.() -> Unit =
-            {}
+        block: CfnNetworkAnalyzerConfigurationTraceContentPropertyDsl.() -> Unit = {}
     ): CfnNetworkAnalyzerConfiguration.TraceContentProperty {
         val builder = CfnNetworkAnalyzerConfigurationTraceContentPropertyDsl()
         builder.apply(block)
@@ -559,7 +557,6 @@ public object iotwireless {
      * If `PartnerAccountId` and `PartnerType` are `null` , returns all partner accounts.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -592,7 +589,7 @@ public object iotwireless {
     public inline fun cfnPartnerAccount(
         scope: Construct,
         id: String,
-        block: CfnPartnerAccountDsl.() -> Unit = {}
+        block: CfnPartnerAccountDsl.() -> Unit = {},
     ): CfnPartnerAccount {
         val builder = CfnPartnerAccountDsl(scope, id)
         builder.apply(block)
@@ -603,7 +600,6 @@ public object iotwireless {
      * Properties for defining a `CfnPartnerAccount`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -632,7 +628,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html)
      */
-    public inline fun cfnPartnerAccountProps(block: CfnPartnerAccountPropsDsl.() -> Unit = {}): CfnPartnerAccountProps {
+    public inline fun cfnPartnerAccountProps(
+        block: CfnPartnerAccountPropsDsl.() -> Unit = {}
+    ): CfnPartnerAccountProps {
         val builder = CfnPartnerAccountPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -642,7 +640,6 @@ public object iotwireless {
      * Information about a Sidewalk account.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -655,8 +652,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html)
      */
     public inline fun cfnPartnerAccountSidewalkAccountInfoProperty(
-        block: CfnPartnerAccountSidewalkAccountInfoPropertyDsl.() -> Unit =
-            {}
+        block: CfnPartnerAccountSidewalkAccountInfoPropertyDsl.() -> Unit = {}
     ): CfnPartnerAccount.SidewalkAccountInfoProperty {
         val builder = CfnPartnerAccountSidewalkAccountInfoPropertyDsl()
         builder.apply(block)
@@ -667,7 +663,6 @@ public object iotwireless {
      * Information about a Sidewalk account.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -683,8 +678,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfowithfingerprint.html)
      */
     public inline fun cfnPartnerAccountSidewalkAccountInfoWithFingerprintProperty(
-        block: CfnPartnerAccountSidewalkAccountInfoWithFingerprintPropertyDsl.() -> Unit =
-            {}
+        block: CfnPartnerAccountSidewalkAccountInfoWithFingerprintPropertyDsl.() -> Unit = {}
     ): CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty {
         val builder = CfnPartnerAccountSidewalkAccountInfoWithFingerprintPropertyDsl()
         builder.apply(block)
@@ -695,7 +689,6 @@ public object iotwireless {
      * Sidewalk update.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -709,8 +702,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html)
      */
     public inline fun cfnPartnerAccountSidewalkUpdateAccountProperty(
-        block: CfnPartnerAccountSidewalkUpdateAccountPropertyDsl.() -> Unit =
-            {}
+        block: CfnPartnerAccountSidewalkUpdateAccountPropertyDsl.() -> Unit = {}
     ): CfnPartnerAccount.SidewalkUpdateAccountProperty {
         val builder = CfnPartnerAccountSidewalkUpdateAccountPropertyDsl()
         builder.apply(block)
@@ -721,7 +713,6 @@ public object iotwireless {
      * Creates a new service profile.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -762,7 +753,7 @@ public object iotwireless {
     public inline fun cfnServiceProfile(
         scope: Construct,
         id: String,
-        block: CfnServiceProfileDsl.() -> Unit = {}
+        block: CfnServiceProfileDsl.() -> Unit = {},
     ): CfnServiceProfile {
         val builder = CfnServiceProfileDsl(scope, id)
         builder.apply(block)
@@ -773,7 +764,6 @@ public object iotwireless {
      * LoRaWANServiceProfile object.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -805,8 +795,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html)
      */
     public inline fun cfnServiceProfileLoRaWANServiceProfileProperty(
-        block: CfnServiceProfileLoRaWANServiceProfilePropertyDsl.() -> Unit =
-            {}
+        block: CfnServiceProfileLoRaWANServiceProfilePropertyDsl.() -> Unit = {}
     ): CfnServiceProfile.LoRaWANServiceProfileProperty {
         val builder = CfnServiceProfileLoRaWANServiceProfilePropertyDsl()
         builder.apply(block)
@@ -817,7 +806,6 @@ public object iotwireless {
      * Properties for defining a `CfnServiceProfile`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -854,7 +842,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)
      */
-    public inline fun cfnServiceProfileProps(block: CfnServiceProfilePropsDsl.() -> Unit = {}): CfnServiceProfileProps {
+    public inline fun cfnServiceProfileProps(
+        block: CfnServiceProfilePropsDsl.() -> Unit = {}
+    ): CfnServiceProfileProps {
         val builder = CfnServiceProfilePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -864,7 +854,6 @@ public object iotwireless {
      * Creates a gateway task definition.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -917,7 +906,7 @@ public object iotwireless {
     public inline fun cfnTaskDefinition(
         scope: Construct,
         id: String,
-        block: CfnTaskDefinitionDsl.() -> Unit = {}
+        block: CfnTaskDefinitionDsl.() -> Unit = {},
     ): CfnTaskDefinition {
         val builder = CfnTaskDefinitionDsl(scope, id)
         builder.apply(block)
@@ -928,7 +917,6 @@ public object iotwireless {
      * LoRaWANGatewayVersion object.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -944,8 +932,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html)
      */
     public inline fun cfnTaskDefinitionLoRaWANGatewayVersionProperty(
-        block: CfnTaskDefinitionLoRaWANGatewayVersionPropertyDsl.() -> Unit =
-            {}
+        block: CfnTaskDefinitionLoRaWANGatewayVersionPropertyDsl.() -> Unit = {}
     ): CfnTaskDefinition.LoRaWANGatewayVersionProperty {
         val builder = CfnTaskDefinitionLoRaWANGatewayVersionPropertyDsl()
         builder.apply(block)
@@ -956,7 +943,6 @@ public object iotwireless {
      * The signature used to verify the update firmware.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -981,8 +967,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate.html)
      */
     public inline fun cfnTaskDefinitionLoRaWANUpdateGatewayTaskCreateProperty(
-        block: CfnTaskDefinitionLoRaWANUpdateGatewayTaskCreatePropertyDsl.() -> Unit =
-            {}
+        block: CfnTaskDefinitionLoRaWANUpdateGatewayTaskCreatePropertyDsl.() -> Unit = {}
     ): CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty {
         val builder = CfnTaskDefinitionLoRaWANUpdateGatewayTaskCreatePropertyDsl()
         builder.apply(block)
@@ -993,7 +978,6 @@ public object iotwireless {
      * LoRaWANUpdateGatewayTaskEntry object.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1016,8 +1000,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskentry.html)
      */
     public inline fun cfnTaskDefinitionLoRaWANUpdateGatewayTaskEntryProperty(
-        block: CfnTaskDefinitionLoRaWANUpdateGatewayTaskEntryPropertyDsl.() -> Unit =
-            {}
+        block: CfnTaskDefinitionLoRaWANUpdateGatewayTaskEntryPropertyDsl.() -> Unit = {}
     ): CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty {
         val builder = CfnTaskDefinitionLoRaWANUpdateGatewayTaskEntryPropertyDsl()
         builder.apply(block)
@@ -1028,7 +1011,6 @@ public object iotwireless {
      * Properties for defining a `CfnTaskDefinition`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1077,7 +1059,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)
      */
-    public inline fun cfnTaskDefinitionProps(block: CfnTaskDefinitionPropsDsl.() -> Unit = {}): CfnTaskDefinitionProps {
+    public inline fun cfnTaskDefinitionProps(
+        block: CfnTaskDefinitionPropsDsl.() -> Unit = {}
+    ): CfnTaskDefinitionProps {
         val builder = CfnTaskDefinitionPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1087,7 +1071,6 @@ public object iotwireless {
      * UpdateWirelessGatewayTaskCreate object.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1116,8 +1099,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html)
      */
     public inline fun cfnTaskDefinitionUpdateWirelessGatewayTaskCreateProperty(
-        block: CfnTaskDefinitionUpdateWirelessGatewayTaskCreatePropertyDsl.() -> Unit =
-            {}
+        block: CfnTaskDefinitionUpdateWirelessGatewayTaskCreatePropertyDsl.() -> Unit = {}
     ): CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty {
         val builder = CfnTaskDefinitionUpdateWirelessGatewayTaskCreatePropertyDsl()
         builder.apply(block)
@@ -1128,7 +1110,6 @@ public object iotwireless {
      * Provisions a wireless device.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1184,7 +1165,7 @@ public object iotwireless {
     public inline fun cfnWirelessDevice(
         scope: Construct,
         id: String,
-        block: CfnWirelessDeviceDsl.() -> Unit = {}
+        block: CfnWirelessDeviceDsl.() -> Unit = {},
     ): CfnWirelessDevice {
         val builder = CfnWirelessDeviceDsl(scope, id)
         builder.apply(block)
@@ -1195,7 +1176,6 @@ public object iotwireless {
      * ABP device object for LoRaWAN specification v1.0.x.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1212,8 +1192,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html)
      */
     public inline fun cfnWirelessDeviceAbpV10xProperty(
-        block: CfnWirelessDeviceAbpV10xPropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceAbpV10xPropertyDsl.() -> Unit = {}
     ): CfnWirelessDevice.AbpV10xProperty {
         val builder = CfnWirelessDeviceAbpV10xPropertyDsl()
         builder.apply(block)
@@ -1224,7 +1203,6 @@ public object iotwireless {
      * ABP device object for create APIs for v1.1.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1243,8 +1221,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv11.html)
      */
     public inline fun cfnWirelessDeviceAbpV11Property(
-        block: CfnWirelessDeviceAbpV11PropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceAbpV11PropertyDsl.() -> Unit = {}
     ): CfnWirelessDevice.AbpV11Property {
         val builder = CfnWirelessDeviceAbpV11PropertyDsl()
         builder.apply(block)
@@ -1255,11 +1232,10 @@ public object iotwireless {
      * Information about an import task for wireless devices.
      *
      * When creating the resource, either create a single wireless device import task using the
-     * Sidewalk manufacturing serial number (SMSN) of the wireless device, or create an import task for
-     * multiple devices by specifying both the `DeviceCreationFile` and the `Role` .
+     * Sidewalk manufacturing serial number (SMSN) of the wireless device, or create an import task
+     * for multiple devices by specifying both the `DeviceCreationFile` and the `Role` .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1286,7 +1262,7 @@ public object iotwireless {
     public inline fun cfnWirelessDeviceImportTask(
         scope: Construct,
         id: String,
-        block: CfnWirelessDeviceImportTaskDsl.() -> Unit = {}
+        block: CfnWirelessDeviceImportTaskDsl.() -> Unit = {},
     ): CfnWirelessDeviceImportTask {
         val builder = CfnWirelessDeviceImportTaskDsl(scope, id)
         builder.apply(block)
@@ -1297,7 +1273,6 @@ public object iotwireless {
      * Properties for defining a `CfnWirelessDeviceImportTask`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1322,8 +1297,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html)
      */
     public inline fun cfnWirelessDeviceImportTaskProps(
-        block: CfnWirelessDeviceImportTaskPropsDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceImportTaskPropsDsl.() -> Unit = {}
     ): CfnWirelessDeviceImportTaskProps {
         val builder = CfnWirelessDeviceImportTaskPropsDsl()
         builder.apply(block)
@@ -1334,7 +1308,6 @@ public object iotwireless {
      * Sidewalk-related information about a wireless device import task.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1350,8 +1323,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdeviceimporttask-sidewalk.html)
      */
     public inline fun cfnWirelessDeviceImportTaskSidewalkProperty(
-        block: CfnWirelessDeviceImportTaskSidewalkPropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceImportTaskSidewalkPropertyDsl.() -> Unit = {}
     ): CfnWirelessDeviceImportTask.SidewalkProperty {
         val builder = CfnWirelessDeviceImportTaskSidewalkPropertyDsl()
         builder.apply(block)
@@ -1362,7 +1334,6 @@ public object iotwireless {
      * LoRaWAN object for create functions.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1402,8 +1373,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html)
      */
     public inline fun cfnWirelessDeviceLoRaWANDeviceProperty(
-        block: CfnWirelessDeviceLoRaWANDevicePropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceLoRaWANDevicePropertyDsl.() -> Unit = {}
     ): CfnWirelessDevice.LoRaWANDeviceProperty {
         val builder = CfnWirelessDeviceLoRaWANDevicePropertyDsl()
         builder.apply(block)
@@ -1414,7 +1384,6 @@ public object iotwireless {
      * OTAA device object for create APIs for v1.0.x.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1428,8 +1397,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html)
      */
     public inline fun cfnWirelessDeviceOtaaV10xProperty(
-        block: CfnWirelessDeviceOtaaV10xPropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceOtaaV10xPropertyDsl.() -> Unit = {}
     ): CfnWirelessDevice.OtaaV10xProperty {
         val builder = CfnWirelessDeviceOtaaV10xPropertyDsl()
         builder.apply(block)
@@ -1440,7 +1408,6 @@ public object iotwireless {
      * OTAA device object for v1.1 for create APIs.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1455,8 +1422,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html)
      */
     public inline fun cfnWirelessDeviceOtaaV11Property(
-        block: CfnWirelessDeviceOtaaV11PropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceOtaaV11PropertyDsl.() -> Unit = {}
     ): CfnWirelessDevice.OtaaV11Property {
         val builder = CfnWirelessDeviceOtaaV11PropertyDsl()
         builder.apply(block)
@@ -1467,7 +1433,6 @@ public object iotwireless {
      * Properties for defining a `CfnWirelessDevice`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1519,7 +1484,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)
      */
-    public inline fun cfnWirelessDeviceProps(block: CfnWirelessDevicePropsDsl.() -> Unit = {}): CfnWirelessDeviceProps {
+    public inline fun cfnWirelessDeviceProps(
+        block: CfnWirelessDevicePropsDsl.() -> Unit = {}
+    ): CfnWirelessDeviceProps {
         val builder = CfnWirelessDevicePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1529,7 +1496,6 @@ public object iotwireless {
      * LoRaWAN object for create APIs.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1543,8 +1509,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html)
      */
     public inline fun cfnWirelessDeviceSessionKeysAbpV10xProperty(
-        block: CfnWirelessDeviceSessionKeysAbpV10xPropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceSessionKeysAbpV10xPropertyDsl.() -> Unit = {}
     ): CfnWirelessDevice.SessionKeysAbpV10xProperty {
         val builder = CfnWirelessDeviceSessionKeysAbpV10xPropertyDsl()
         builder.apply(block)
@@ -1555,7 +1520,6 @@ public object iotwireless {
      * Session keys for ABP v1.1.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1571,8 +1535,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html)
      */
     public inline fun cfnWirelessDeviceSessionKeysAbpV11Property(
-        block: CfnWirelessDeviceSessionKeysAbpV11PropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessDeviceSessionKeysAbpV11PropertyDsl.() -> Unit = {}
     ): CfnWirelessDevice.SessionKeysAbpV11Property {
         val builder = CfnWirelessDeviceSessionKeysAbpV11PropertyDsl()
         builder.apply(block)
@@ -1583,7 +1546,6 @@ public object iotwireless {
      * Provisions a wireless gateway.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1612,7 +1574,7 @@ public object iotwireless {
     public inline fun cfnWirelessGateway(
         scope: Construct,
         id: String,
-        block: CfnWirelessGatewayDsl.() -> Unit = {}
+        block: CfnWirelessGatewayDsl.() -> Unit = {},
     ): CfnWirelessGateway {
         val builder = CfnWirelessGatewayDsl(scope, id)
         builder.apply(block)
@@ -1623,7 +1585,6 @@ public object iotwireless {
      * LoRaWAN wireless gateway object.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1637,8 +1598,7 @@ public object iotwireless {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessgateway-lorawangateway.html)
      */
     public inline fun cfnWirelessGatewayLoRaWANGatewayProperty(
-        block: CfnWirelessGatewayLoRaWANGatewayPropertyDsl.() -> Unit =
-            {}
+        block: CfnWirelessGatewayLoRaWANGatewayPropertyDsl.() -> Unit = {}
     ): CfnWirelessGateway.LoRaWANGatewayProperty {
         val builder = CfnWirelessGatewayLoRaWANGatewayPropertyDsl()
         builder.apply(block)
@@ -1649,7 +1609,6 @@ public object iotwireless {
      * Properties for defining a `CfnWirelessGateway`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1674,7 +1633,9 @@ public object iotwireless {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)
      */
-    public inline fun cfnWirelessGatewayProps(block: CfnWirelessGatewayPropsDsl.() -> Unit = {}): CfnWirelessGatewayProps {
+    public inline fun cfnWirelessGatewayProps(
+        block: CfnWirelessGatewayPropsDsl.() -> Unit = {}
+    ): CfnWirelessGatewayProps {
         val builder = CfnWirelessGatewayPropsDsl()
         builder.apply(block)
         return builder.build()

@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.inspectorv2
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 import software.amazon.awscdk.services.inspectorv2.CfnFilterProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object inspectorv2 {
     /**
      * Details about a filter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -181,7 +189,7 @@ public object inspectorv2 {
     public inline fun cfnFilter(
         scope: Construct,
         id: String,
-        block: CfnFilterDsl.() -> Unit = {}
+        block: CfnFilterDsl.() -> Unit = {},
     ): CfnFilter {
         val builder = CfnFilterDsl(scope, id)
         builder.apply(block)
@@ -192,7 +200,6 @@ public object inspectorv2 {
      * Contains details on the time range used to filter findings.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -206,8 +213,7 @@ public object inspectorv2 {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html)
      */
     public inline fun cfnFilterDateFilterProperty(
-        block: CfnFilterDateFilterPropertyDsl.() -> Unit =
-            {}
+        block: CfnFilterDateFilterPropertyDsl.() -> Unit = {}
     ): CfnFilter.DateFilterProperty {
         val builder = CfnFilterDateFilterPropertyDsl()
         builder.apply(block)
@@ -218,7 +224,6 @@ public object inspectorv2 {
      * Details on the criteria used to define the filter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -378,8 +383,7 @@ public object inspectorv2 {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html)
      */
     public inline fun cfnFilterFilterCriteriaProperty(
-        block: CfnFilterFilterCriteriaPropertyDsl.() -> Unit =
-            {}
+        block: CfnFilterFilterCriteriaPropertyDsl.() -> Unit = {}
     ): CfnFilter.FilterCriteriaProperty {
         val builder = CfnFilterFilterCriteriaPropertyDsl()
         builder.apply(block)
@@ -390,7 +394,6 @@ public object inspectorv2 {
      * An object that describes details of a map filter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -406,8 +409,7 @@ public object inspectorv2 {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html)
      */
     public inline fun cfnFilterMapFilterProperty(
-        block: CfnFilterMapFilterPropertyDsl.() -> Unit =
-            {}
+        block: CfnFilterMapFilterPropertyDsl.() -> Unit = {}
     ): CfnFilter.MapFilterProperty {
         val builder = CfnFilterMapFilterPropertyDsl()
         builder.apply(block)
@@ -418,7 +420,6 @@ public object inspectorv2 {
      * An object that describes the details of a number filter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -432,8 +433,7 @@ public object inspectorv2 {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html)
      */
     public inline fun cfnFilterNumberFilterProperty(
-        block: CfnFilterNumberFilterPropertyDsl.() -> Unit =
-            {}
+        block: CfnFilterNumberFilterPropertyDsl.() -> Unit = {}
     ): CfnFilter.NumberFilterProperty {
         val builder = CfnFilterNumberFilterPropertyDsl()
         builder.apply(block)
@@ -444,7 +444,6 @@ public object inspectorv2 {
      * Contains information on the details of a package filter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -479,7 +478,9 @@ public object inspectorv2 {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html)
      */
-    public inline fun cfnFilterPackageFilterProperty(block: CfnFilterPackageFilterPropertyDsl.() -> Unit = {}): CfnFilter.PackageFilterProperty {
+    public inline fun cfnFilterPackageFilterProperty(
+        block: CfnFilterPackageFilterPropertyDsl.() -> Unit = {}
+    ): CfnFilter.PackageFilterProperty {
         val builder = CfnFilterPackageFilterPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -489,7 +490,6 @@ public object inspectorv2 {
      * An object that describes the details of a port range filter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -503,8 +503,7 @@ public object inspectorv2 {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-portrangefilter.html)
      */
     public inline fun cfnFilterPortRangeFilterProperty(
-        block: CfnFilterPortRangeFilterPropertyDsl.() -> Unit =
-            {}
+        block: CfnFilterPortRangeFilterPropertyDsl.() -> Unit = {}
     ): CfnFilter.PortRangeFilterProperty {
         val builder = CfnFilterPortRangeFilterPropertyDsl()
         builder.apply(block)
@@ -515,7 +514,6 @@ public object inspectorv2 {
      * Properties for defining a `CfnFilter`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -690,7 +688,6 @@ public object inspectorv2 {
      * An object that describes the details of a string filter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -704,8 +701,7 @@ public object inspectorv2 {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-stringfilter.html)
      */
     public inline fun cfnFilterStringFilterProperty(
-        block: CfnFilterStringFilterPropertyDsl.() -> Unit =
-            {}
+        block: CfnFilterStringFilterPropertyDsl.() -> Unit = {}
     ): CfnFilter.StringFilterProperty {
         val builder = CfnFilterStringFilterPropertyDsl()
         builder.apply(block)

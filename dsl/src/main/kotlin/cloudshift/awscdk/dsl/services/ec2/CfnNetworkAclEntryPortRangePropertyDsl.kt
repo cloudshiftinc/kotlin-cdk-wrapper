@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnNetworkAclEntry
  * Describes a range of ports.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,24 +33,24 @@ import software.amazon.awscdk.services.ec2.CfnNetworkAclEntry
  */
 @CdkDslMarker
 public class CfnNetworkAclEntryPortRangePropertyDsl {
-  private val cdkBuilder: CfnNetworkAclEntry.PortRangeProperty.Builder =
-      CfnNetworkAclEntry.PortRangeProperty.builder()
+    private val cdkBuilder: CfnNetworkAclEntry.PortRangeProperty.Builder =
+        CfnNetworkAclEntry.PortRangeProperty.builder()
 
-  /**
-   * @param from The first port in the range.
-   * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
-   */
-  public fun from(from: Number) {
-    cdkBuilder.from(from)
-  }
+    /**
+     * @param from The first port in the range. Required if you specify 6 (TCP) or 17 (UDP) for the
+     *   protocol parameter.
+     */
+    public fun from(from: Number) {
+        cdkBuilder.from(from)
+    }
 
-  /**
-   * @param to The last port in the range.
-   * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
-   */
-  public fun to(to: Number) {
-    cdkBuilder.to(to)
-  }
+    /**
+     * @param to The last port in the range. Required if you specify 6 (TCP) or 17 (UDP) for the
+     *   protocol parameter.
+     */
+    public fun to(to: Number) {
+        cdkBuilder.to(to)
+    }
 
-  public fun build(): CfnNetworkAclEntry.PortRangeProperty = cdkBuilder.build()
+    public fun build(): CfnNetworkAclEntry.PortRangeProperty = cdkBuilder.build()
 }

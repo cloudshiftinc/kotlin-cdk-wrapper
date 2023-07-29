@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrassv2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
  * destination inside the container.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,49 +40,42 @@ import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
  */
 @CdkDslMarker
 public class CfnComponentVersionLambdaVolumeMountPropertyDsl {
-  private val cdkBuilder: CfnComponentVersion.LambdaVolumeMountProperty.Builder =
-      CfnComponentVersion.LambdaVolumeMountProperty.builder()
+    private val cdkBuilder: CfnComponentVersion.LambdaVolumeMountProperty.Builder =
+        CfnComponentVersion.LambdaVolumeMountProperty.builder()
 
-  /**
-   * @param addGroupOwner Whether or not to add the AWS IoT Greengrass user group as an owner of the
-   * volume.
-   * Default: `false`
-   */
-  public fun addGroupOwner(addGroupOwner: Boolean) {
-    cdkBuilder.addGroupOwner(addGroupOwner)
-  }
+    /**
+     * @param addGroupOwner Whether or not to add the AWS IoT Greengrass user group as an owner of
+     *   the volume. Default: `false`
+     */
+    public fun addGroupOwner(addGroupOwner: Boolean) {
+        cdkBuilder.addGroupOwner(addGroupOwner)
+    }
 
-  /**
-   * @param addGroupOwner Whether or not to add the AWS IoT Greengrass user group as an owner of the
-   * volume.
-   * Default: `false`
-   */
-  public fun addGroupOwner(addGroupOwner: IResolvable) {
-    cdkBuilder.addGroupOwner(addGroupOwner)
-  }
+    /**
+     * @param addGroupOwner Whether or not to add the AWS IoT Greengrass user group as an owner of
+     *   the volume. Default: `false`
+     */
+    public fun addGroupOwner(addGroupOwner: IResolvable) {
+        cdkBuilder.addGroupOwner(addGroupOwner)
+    }
 
-  /**
-   * @param destinationPath The path to the logical volume in the file system.
-   */
-  public fun destinationPath(destinationPath: String) {
-    cdkBuilder.destinationPath(destinationPath)
-  }
+    /** @param destinationPath The path to the logical volume in the file system. */
+    public fun destinationPath(destinationPath: String) {
+        cdkBuilder.destinationPath(destinationPath)
+    }
 
-  /**
-   * @param permission The permission to access the volume: read/only ( `ro` ) or read/write ( `rw`
-   * ).
-   * Default: `ro`
-   */
-  public fun permission(permission: String) {
-    cdkBuilder.permission(permission)
-  }
+    /**
+     * @param permission The permission to access the volume: read/only ( `ro` ) or read/write (
+     *   `rw` ). Default: `ro`
+     */
+    public fun permission(permission: String) {
+        cdkBuilder.permission(permission)
+    }
 
-  /**
-   * @param sourcePath The path to the physical volume in the file system.
-   */
-  public fun sourcePath(sourcePath: String) {
-    cdkBuilder.sourcePath(sourcePath)
-  }
+    /** @param sourcePath The path to the physical volume in the file system. */
+    public fun sourcePath(sourcePath: String) {
+        cdkBuilder.sourcePath(sourcePath)
+    }
 
-  public fun build(): CfnComponentVersion.LambdaVolumeMountProperty = cdkBuilder.build()
+    public fun build(): CfnComponentVersion.LambdaVolumeMountProperty = cdkBuilder.build()
 }

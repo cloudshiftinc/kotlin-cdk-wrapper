@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -12,11 +21,11 @@ import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination
  *
  * Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets,
  * which enable you to publish email sending events. For information about using configuration sets,
- * see the [Amazon SES Developer
- * Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+ * see the
+ * [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,26 +41,26 @@ import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination
  */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyDsl {
-  private val cdkBuilder:
-      CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.Builder =
-      CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
+    private val cdkBuilder:
+        CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.Builder =
+        CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
 
-  /**
-   * @param deliveryStreamArn The ARN of the Amazon Kinesis Firehose stream that email sending
-   * events should be published to. 
-   */
-  public fun deliveryStreamArn(deliveryStreamArn: String) {
-    cdkBuilder.deliveryStreamArn(deliveryStreamArn)
-  }
+    /**
+     * @param deliveryStreamArn The ARN of the Amazon Kinesis Firehose stream that email sending
+     *   events should be published to.
+     */
+    public fun deliveryStreamArn(deliveryStreamArn: String) {
+        cdkBuilder.deliveryStreamArn(deliveryStreamArn)
+    }
 
-  /**
-   * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending events
-   * to the Amazon Kinesis Firehose stream. 
-   */
-  public fun iamRoleArn(iamRoleArn: String) {
-    cdkBuilder.iamRoleArn(iamRoleArn)
-  }
+    /**
+     * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending
+     *   events to the Amazon Kinesis Firehose stream.
+     */
+    public fun iamRoleArn(iamRoleArn: String) {
+        cdkBuilder.iamRoleArn(iamRoleArn)
+    }
 
-  public fun build(): CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty =
+        cdkBuilder.build()
 }

@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTheme
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTheme
 
 /**
  * Theme error.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,12 @@ public class CfnThemeThemeErrorPropertyDsl {
     private val cdkBuilder: CfnTheme.ThemeErrorProperty.Builder =
         CfnTheme.ThemeErrorProperty.builder()
 
-    /**
-     * @param message The error message.
-     */
+    /** @param message The error message. */
     public fun message(message: String) {
         cdkBuilder.message(message)
     }
 
-    /**
-     * @param type The type of error.
-     */
+    /** @param type The type of error. */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

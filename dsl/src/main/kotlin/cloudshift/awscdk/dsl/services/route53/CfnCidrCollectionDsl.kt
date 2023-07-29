@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * Creates a CIDR collection in the current AWS account.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,55 +43,59 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnCidrCollectionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnCidrCollection.Builder = CfnCidrCollection.Builder.create(scope, id)
+    private val cdkBuilder: CfnCidrCollection.Builder = CfnCidrCollection.Builder.create(scope, id)
 
-  private val _locations: MutableList<Any> = mutableListOf()
+    private val _locations: MutableList<Any> = mutableListOf()
 
-  /**
-   * A complex type that contains information about the list of CIDR locations.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-   * @param locations A complex type that contains information about the list of CIDR locations. 
-   */
-  public fun locations(vararg locations: Any) {
-    _locations.addAll(listOf(*locations))
-  }
+    /**
+     * A complex type that contains information about the list of CIDR locations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+     *
+     * @param locations A complex type that contains information about the list of CIDR locations.
+     */
+    public fun locations(vararg locations: Any) {
+        _locations.addAll(listOf(*locations))
+    }
 
-  /**
-   * A complex type that contains information about the list of CIDR locations.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-   * @param locations A complex type that contains information about the list of CIDR locations. 
-   */
-  public fun locations(locations: Collection<Any>) {
-    _locations.addAll(locations)
-  }
+    /**
+     * A complex type that contains information about the list of CIDR locations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+     *
+     * @param locations A complex type that contains information about the list of CIDR locations.
+     */
+    public fun locations(locations: Collection<Any>) {
+        _locations.addAll(locations)
+    }
 
-  /**
-   * A complex type that contains information about the list of CIDR locations.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-   * @param locations A complex type that contains information about the list of CIDR locations. 
-   */
-  public fun locations(locations: IResolvable) {
-    cdkBuilder.locations(locations)
-  }
+    /**
+     * A complex type that contains information about the list of CIDR locations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+     *
+     * @param locations A complex type that contains information about the list of CIDR locations.
+     */
+    public fun locations(locations: IResolvable) {
+        cdkBuilder.locations(locations)
+    }
 
-  /**
-   * The name of a CIDR collection.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-name)
-   * @param name The name of a CIDR collection. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of a CIDR collection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-name)
+     *
+     * @param name The name of a CIDR collection.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnCidrCollection {
-    if(_locations.isNotEmpty()) cdkBuilder.locations(_locations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnCidrCollection {
+        if (_locations.isNotEmpty()) cdkBuilder.locations(_locations)
+        return cdkBuilder.build()
+    }
 }

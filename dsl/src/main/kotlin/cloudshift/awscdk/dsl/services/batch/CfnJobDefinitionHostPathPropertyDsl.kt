@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.batch
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,13 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
  */
 @CdkDslMarker
 public class CfnJobDefinitionHostPathPropertyDsl {
-  private val cdkBuilder: CfnJobDefinition.HostPathProperty.Builder =
-      CfnJobDefinition.HostPathProperty.builder()
+    private val cdkBuilder: CfnJobDefinition.HostPathProperty.Builder =
+        CfnJobDefinition.HostPathProperty.builder()
 
-  /**
-   * @param path the value to be set.
-   */
-  public fun path(path: String) {
-    cdkBuilder.path(path)
-  }
+    /** @param path the value to be set. */
+    public fun path(path: String) {
+        cdkBuilder.path(path)
+    }
 
-  public fun build(): CfnJobDefinition.HostPathProperty = cdkBuilder.build()
+    public fun build(): CfnJobDefinition.HostPathProperty = cdkBuilder.build()
 }

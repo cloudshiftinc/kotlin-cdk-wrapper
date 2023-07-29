@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutputPr
  * Properties for defining a `CfnApplicationOutput`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,34 +50,32 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutputPr
  */
 @CdkDslMarker
 public class CfnApplicationOutputPropsDsl {
-  private val cdkBuilder: CfnApplicationOutputProps.Builder = CfnApplicationOutputProps.builder()
+    private val cdkBuilder: CfnApplicationOutputProps.Builder = CfnApplicationOutputProps.builder()
 
-  /**
-   * @param applicationName The name of the application. 
-   */
-  public fun applicationName(applicationName: String) {
-    cdkBuilder.applicationName(applicationName)
-  }
+    /** @param applicationName The name of the application. */
+    public fun applicationName(applicationName: String) {
+        cdkBuilder.applicationName(applicationName)
+    }
 
-  /**
-   * @param output Describes a SQL-based Kinesis Data Analytics application's output configuration,
-   * in which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written. 
-   * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
-   */
-  public fun output(output: IResolvable) {
-    cdkBuilder.output(output)
-  }
+    /**
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
+     *   configuration, in which you identify an in-application stream and a destination where you
+     *   want the in-application stream data to be written. The destination can be a Kinesis data
+     *   stream or a Kinesis Data Firehose delivery stream.
+     */
+    public fun output(output: IResolvable) {
+        cdkBuilder.output(output)
+    }
 
-  /**
-   * @param output Describes a SQL-based Kinesis Data Analytics application's output configuration,
-   * in which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written. 
-   * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
-   */
-  public fun output(output: CfnApplicationOutput.OutputProperty) {
-    cdkBuilder.output(output)
-  }
+    /**
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
+     *   configuration, in which you identify an in-application stream and a destination where you
+     *   want the in-application stream data to be written. The destination can be a Kinesis data
+     *   stream or a Kinesis Data Firehose delivery stream.
+     */
+    public fun output(output: CfnApplicationOutput.OutputProperty) {
+        cdkBuilder.output(output)
+    }
 
-  public fun build(): CfnApplicationOutputProps = cdkBuilder.build()
+    public fun build(): CfnApplicationOutputProps = cdkBuilder.build()
 }

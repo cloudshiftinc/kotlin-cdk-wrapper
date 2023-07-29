@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.s3.CfnStorageLens
  * configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,54 +36,54 @@ import software.amazon.awscdk.services.s3.CfnStorageLens
  */
 @CdkDslMarker
 public class CfnStorageLensBucketsAndRegionsPropertyDsl {
-  private val cdkBuilder: CfnStorageLens.BucketsAndRegionsProperty.Builder =
-      CfnStorageLens.BucketsAndRegionsProperty.builder()
+    private val cdkBuilder: CfnStorageLens.BucketsAndRegionsProperty.Builder =
+        CfnStorageLens.BucketsAndRegionsProperty.builder()
 
-  private val _buckets: MutableList<String> = mutableListOf()
+    private val _buckets: MutableList<String> = mutableListOf()
 
-  private val _regions: MutableList<String> = mutableListOf()
+    private val _regions: MutableList<String> = mutableListOf()
 
-  /**
-   * @param buckets This property contains the details of the buckets for the Amazon S3 Storage Lens
-   * configuration.
-   * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN format
-   * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-   * in the *Amazon S3 API Reference* .
-   */
-  public fun buckets(vararg buckets: String) {
-    _buckets.addAll(listOf(*buckets))
-  }
+    /**
+     * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
+     *   Lens configuration. This should be the bucket Amazon Resource Name(ARN). For valid values,
+     *   see
+     *   [Buckets ARN format here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+     *   in the *Amazon S3 API Reference* .
+     */
+    public fun buckets(vararg buckets: String) {
+        _buckets.addAll(listOf(*buckets))
+    }
 
-  /**
-   * @param buckets This property contains the details of the buckets for the Amazon S3 Storage Lens
-   * configuration.
-   * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN format
-   * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-   * in the *Amazon S3 API Reference* .
-   */
-  public fun buckets(buckets: Collection<String>) {
-    _buckets.addAll(buckets)
-  }
+    /**
+     * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
+     *   Lens configuration. This should be the bucket Amazon Resource Name(ARN). For valid values,
+     *   see
+     *   [Buckets ARN format here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+     *   in the *Amazon S3 API Reference* .
+     */
+    public fun buckets(buckets: Collection<String>) {
+        _buckets.addAll(buckets)
+    }
 
-  /**
-   * @param regions This property contains the details of the Regions for the S3 Storage Lens
-   * configuration.
-   */
-  public fun regions(vararg regions: String) {
-    _regions.addAll(listOf(*regions))
-  }
+    /**
+     * @param regions This property contains the details of the Regions for the S3 Storage Lens
+     *   configuration.
+     */
+    public fun regions(vararg regions: String) {
+        _regions.addAll(listOf(*regions))
+    }
 
-  /**
-   * @param regions This property contains the details of the Regions for the S3 Storage Lens
-   * configuration.
-   */
-  public fun regions(regions: Collection<String>) {
-    _regions.addAll(regions)
-  }
+    /**
+     * @param regions This property contains the details of the Regions for the S3 Storage Lens
+     *   configuration.
+     */
+    public fun regions(regions: Collection<String>) {
+        _regions.addAll(regions)
+    }
 
-  public fun build(): CfnStorageLens.BucketsAndRegionsProperty {
-    if(_buckets.isNotEmpty()) cdkBuilder.buckets(_buckets)
-    if(_regions.isNotEmpty()) cdkBuilder.regions(_regions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnStorageLens.BucketsAndRegionsProperty {
+        if (_buckets.isNotEmpty()) cdkBuilder.buckets(_buckets)
+        if (_regions.isNotEmpty()) cdkBuilder.regions(_regions)
+        return cdkBuilder.build()
+    }
 }

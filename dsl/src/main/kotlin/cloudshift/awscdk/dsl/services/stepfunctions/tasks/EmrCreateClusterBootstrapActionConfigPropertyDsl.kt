@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * See the RunJobFlow API for complete documentation on input parameters
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,34 +41,30 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  */
 @CdkDslMarker
 public class EmrCreateClusterBootstrapActionConfigPropertyDsl {
-  private val cdkBuilder: EmrCreateCluster.BootstrapActionConfigProperty.Builder =
-      EmrCreateCluster.BootstrapActionConfigProperty.builder()
+    private val cdkBuilder: EmrCreateCluster.BootstrapActionConfigProperty.Builder =
+        EmrCreateCluster.BootstrapActionConfigProperty.builder()
 
-  /**
-   * @param name The name of the bootstrap action. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the bootstrap action. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param scriptBootstrapAction The script run by the bootstrap action. 
-   */
-  public
-      fun scriptBootstrapAction(scriptBootstrapAction: EmrCreateClusterScriptBootstrapActionConfigPropertyDsl.() -> Unit
-      = {}) {
-    val builder = EmrCreateClusterScriptBootstrapActionConfigPropertyDsl()
-    builder.apply(scriptBootstrapAction)
-    cdkBuilder.scriptBootstrapAction(builder.build())
-  }
+    /** @param scriptBootstrapAction The script run by the bootstrap action. */
+    public fun scriptBootstrapAction(
+        scriptBootstrapAction: EmrCreateClusterScriptBootstrapActionConfigPropertyDsl.() -> Unit =
+            {}
+    ) {
+        val builder = EmrCreateClusterScriptBootstrapActionConfigPropertyDsl()
+        builder.apply(scriptBootstrapAction)
+        cdkBuilder.scriptBootstrapAction(builder.build())
+    }
 
-  /**
-   * @param scriptBootstrapAction The script run by the bootstrap action. 
-   */
-  public
-      fun scriptBootstrapAction(scriptBootstrapAction: EmrCreateCluster.ScriptBootstrapActionConfigProperty) {
-    cdkBuilder.scriptBootstrapAction(scriptBootstrapAction)
-  }
+    /** @param scriptBootstrapAction The script run by the bootstrap action. */
+    public fun scriptBootstrapAction(
+        scriptBootstrapAction: EmrCreateCluster.ScriptBootstrapActionConfigProperty
+    ) {
+        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction)
+    }
 
-  public fun build(): EmrCreateCluster.BootstrapActionConfigProperty = cdkBuilder.build()
+    public fun build(): EmrCreateCluster.BootstrapActionConfigProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.events.CfnRule
  * instances are to be sent the command.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,37 +40,37 @@ import software.amazon.awscdk.services.events.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleRunCommandParametersPropertyDsl {
-  private val cdkBuilder: CfnRule.RunCommandParametersProperty.Builder =
-      CfnRule.RunCommandParametersProperty.builder()
+    private val cdkBuilder: CfnRule.RunCommandParametersProperty.Builder =
+        CfnRule.RunCommandParametersProperty.builder()
 
-  private val _runCommandTargets: MutableList<Any> = mutableListOf()
+    private val _runCommandTargets: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param runCommandTargets Currently, we support including only one RunCommandTarget block, which
-   * specifies either an array of InstanceIds or a tag. 
-   */
-  public fun runCommandTargets(vararg runCommandTargets: Any) {
-    _runCommandTargets.addAll(listOf(*runCommandTargets))
-  }
+    /**
+     * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+     *   which specifies either an array of InstanceIds or a tag.
+     */
+    public fun runCommandTargets(vararg runCommandTargets: Any) {
+        _runCommandTargets.addAll(listOf(*runCommandTargets))
+    }
 
-  /**
-   * @param runCommandTargets Currently, we support including only one RunCommandTarget block, which
-   * specifies either an array of InstanceIds or a tag. 
-   */
-  public fun runCommandTargets(runCommandTargets: Collection<Any>) {
-    _runCommandTargets.addAll(runCommandTargets)
-  }
+    /**
+     * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+     *   which specifies either an array of InstanceIds or a tag.
+     */
+    public fun runCommandTargets(runCommandTargets: Collection<Any>) {
+        _runCommandTargets.addAll(runCommandTargets)
+    }
 
-  /**
-   * @param runCommandTargets Currently, we support including only one RunCommandTarget block, which
-   * specifies either an array of InstanceIds or a tag. 
-   */
-  public fun runCommandTargets(runCommandTargets: IResolvable) {
-    cdkBuilder.runCommandTargets(runCommandTargets)
-  }
+    /**
+     * @param runCommandTargets Currently, we support including only one RunCommandTarget block,
+     *   which specifies either an array of InstanceIds or a tag.
+     */
+    public fun runCommandTargets(runCommandTargets: IResolvable) {
+        cdkBuilder.runCommandTargets(runCommandTargets)
+    }
 
-  public fun build(): CfnRule.RunCommandParametersProperty {
-    if(_runCommandTargets.isNotEmpty()) cdkBuilder.runCommandTargets(_runCommandTargets)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnRule.RunCommandParametersProperty {
+        if (_runCommandTargets.isNotEmpty()) cdkBuilder.runCommandTargets(_runCommandTargets)
+        return cdkBuilder.build()
+    }
 }

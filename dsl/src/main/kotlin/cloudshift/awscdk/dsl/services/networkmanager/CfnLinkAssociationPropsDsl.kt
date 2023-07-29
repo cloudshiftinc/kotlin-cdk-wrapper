@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkmanager
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.networkmanager.CfnLinkAssociationProps
  * Properties for defining a `CfnLinkAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,28 +34,22 @@ import software.amazon.awscdk.services.networkmanager.CfnLinkAssociationProps
  */
 @CdkDslMarker
 public class CfnLinkAssociationPropsDsl {
-  private val cdkBuilder: CfnLinkAssociationProps.Builder = CfnLinkAssociationProps.builder()
+    private val cdkBuilder: CfnLinkAssociationProps.Builder = CfnLinkAssociationProps.builder()
 
-  /**
-   * @param deviceId The device ID for the link association. 
-   */
-  public fun deviceId(deviceId: String) {
-    cdkBuilder.deviceId(deviceId)
-  }
+    /** @param deviceId The device ID for the link association. */
+    public fun deviceId(deviceId: String) {
+        cdkBuilder.deviceId(deviceId)
+    }
 
-  /**
-   * @param globalNetworkId The ID of the global network. 
-   */
-  public fun globalNetworkId(globalNetworkId: String) {
-    cdkBuilder.globalNetworkId(globalNetworkId)
-  }
+    /** @param globalNetworkId The ID of the global network. */
+    public fun globalNetworkId(globalNetworkId: String) {
+        cdkBuilder.globalNetworkId(globalNetworkId)
+    }
 
-  /**
-   * @param linkId The ID of the link. 
-   */
-  public fun linkId(linkId: String) {
-    cdkBuilder.linkId(linkId)
-  }
+    /** @param linkId The ID of the link. */
+    public fun linkId(linkId: String) {
+        cdkBuilder.linkId(linkId)
+    }
 
-  public fun build(): CfnLinkAssociationProps = cdkBuilder.build()
+    public fun build(): CfnLinkAssociationProps = cdkBuilder.build()
 }

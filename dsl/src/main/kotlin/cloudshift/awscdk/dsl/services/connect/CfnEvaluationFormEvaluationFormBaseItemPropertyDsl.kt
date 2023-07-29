@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.connect.CfnEvaluationForm
  * All items must be sections.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -87,22 +95,18 @@ import software.amazon.awscdk.services.connect.CfnEvaluationForm
  */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormBaseItemPropertyDsl {
-  private val cdkBuilder: CfnEvaluationForm.EvaluationFormBaseItemProperty.Builder =
-      CfnEvaluationForm.EvaluationFormBaseItemProperty.builder()
+    private val cdkBuilder: CfnEvaluationForm.EvaluationFormBaseItemProperty.Builder =
+        CfnEvaluationForm.EvaluationFormBaseItemProperty.builder()
 
-  /**
-   * @param section A subsection or inner section of an item. 
-   */
-  public fun section(section: IResolvable) {
-    cdkBuilder.section(section)
-  }
+    /** @param section A subsection or inner section of an item. */
+    public fun section(section: IResolvable) {
+        cdkBuilder.section(section)
+    }
 
-  /**
-   * @param section A subsection or inner section of an item. 
-   */
-  public fun section(section: CfnEvaluationForm.EvaluationFormSectionProperty) {
-    cdkBuilder.section(section)
-  }
+    /** @param section A subsection or inner section of an item. */
+    public fun section(section: CfnEvaluationForm.EvaluationFormSectionProperty) {
+        cdkBuilder.section(section)
+    }
 
-  public fun build(): CfnEvaluationForm.EvaluationFormBaseItemProperty = cdkBuilder.build()
+    public fun build(): CfnEvaluationForm.EvaluationFormBaseItemProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.databrew.CfnDataset
  * DataBrew .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,24 +34,24 @@ import software.amazon.awscdk.services.databrew.CfnDataset
  */
 @CdkDslMarker
 public class CfnDatasetJsonOptionsPropertyDsl {
-  private val cdkBuilder: CfnDataset.JsonOptionsProperty.Builder =
-      CfnDataset.JsonOptionsProperty.builder()
+    private val cdkBuilder: CfnDataset.JsonOptionsProperty.Builder =
+        CfnDataset.JsonOptionsProperty.builder()
 
-  /**
-   * @param multiLine A value that specifies whether JSON input contains embedded new line
-   * characters.
-   */
-  public fun multiLine(multiLine: Boolean) {
-    cdkBuilder.multiLine(multiLine)
-  }
+    /**
+     * @param multiLine A value that specifies whether JSON input contains embedded new line
+     *   characters.
+     */
+    public fun multiLine(multiLine: Boolean) {
+        cdkBuilder.multiLine(multiLine)
+    }
 
-  /**
-   * @param multiLine A value that specifies whether JSON input contains embedded new line
-   * characters.
-   */
-  public fun multiLine(multiLine: IResolvable) {
-    cdkBuilder.multiLine(multiLine)
-  }
+    /**
+     * @param multiLine A value that specifies whether JSON input contains embedded new line
+     *   characters.
+     */
+    public fun multiLine(multiLine: IResolvable) {
+        cdkBuilder.multiLine(multiLine)
+    }
 
-  public fun build(): CfnDataset.JsonOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDataset.JsonOptionsProperty = cdkBuilder.build()
 }

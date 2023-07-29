@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefini
  * The output object for a monitoring job.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,25 +37,25 @@ import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefini
  */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionMonitoringOutputPropertyDsl {
-  private val cdkBuilder: CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.Builder =
-      CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.builder()
+    private val cdkBuilder: CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.Builder =
+        CfnModelExplainabilityJobDefinition.MonitoringOutputProperty.builder()
 
-  /**
-   * @param s3Output The Amazon S3 storage location where the results of a monitoring job are saved.
-   * 
-   */
-  public fun s3Output(s3Output: IResolvable) {
-    cdkBuilder.s3Output(s3Output)
-  }
+    /**
+     * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+     *   saved.
+     */
+    public fun s3Output(s3Output: IResolvable) {
+        cdkBuilder.s3Output(s3Output)
+    }
 
-  /**
-   * @param s3Output The Amazon S3 storage location where the results of a monitoring job are saved.
-   * 
-   */
-  public fun s3Output(s3Output: CfnModelExplainabilityJobDefinition.S3OutputProperty) {
-    cdkBuilder.s3Output(s3Output)
-  }
+    /**
+     * @param s3Output The Amazon S3 storage location where the results of a monitoring job are
+     *   saved.
+     */
+    public fun s3Output(s3Output: CfnModelExplainabilityJobDefinition.S3OutputProperty) {
+        cdkBuilder.s3Output(s3Output)
+    }
 
-  public fun build(): CfnModelExplainabilityJobDefinition.MonitoringOutputProperty =
-      cdkBuilder.build()
+    public fun build(): CfnModelExplainabilityJobDefinition.MonitoringOutputProperty =
+        cdkBuilder.build()
 }

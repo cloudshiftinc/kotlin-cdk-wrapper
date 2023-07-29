@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.athena
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.athena.CfnWorkGroup
  * This setting does not apply to Athena SQL workgroups.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,14 @@ import software.amazon.awscdk.services.athena.CfnWorkGroup
  */
 @CdkDslMarker
 public class CfnWorkGroupCustomerContentEncryptionConfigurationPropertyDsl {
-  private val cdkBuilder: CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.Builder =
-      CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.builder()
+    private val cdkBuilder: CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.Builder =
+        CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.builder()
 
-  /**
-   * @param kmsKey The KMS key that is used to encrypt the user's data stores in Athena. 
-   */
-  public fun kmsKey(kmsKey: String) {
-    cdkBuilder.kmsKey(kmsKey)
-  }
+    /** @param kmsKey The KMS key that is used to encrypt the user's data stores in Athena. */
+    public fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
+    }
 
-  public fun build(): CfnWorkGroup.CustomerContentEncryptionConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnWorkGroup.CustomerContentEncryptionConfigurationProperty =
+        cdkBuilder.build()
 }

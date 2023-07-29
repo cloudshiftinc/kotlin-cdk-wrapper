@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.BootstrapRole
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.cloudassembly.schema.BootstrapRole
 
 /**
  * Information needed to access an IAM role created as part of the bootstrap process.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,12 @@ import kotlin.String
 public class BootstrapRoleDsl {
     private val cdkBuilder: BootstrapRole.Builder = BootstrapRole.builder()
 
-    /**
-     * @param arn The ARN of the IAM role created as part of bootrapping e.g. lookupRoleArn.
-     */
+    /** @param arn The ARN of the IAM role created as part of bootrapping e.g. lookupRoleArn. */
     public fun arn(arn: String) {
         cdkBuilder.arn(arn)
     }
 
-    /**
-     * @param assumeRoleExternalId External ID to use when assuming the bootstrap role.
-     */
+    /** @param assumeRoleExternalId External ID to use when assuming the bootstrap role. */
     public fun assumeRoleExternalId(assumeRoleExternalId: String) {
         cdkBuilder.assumeRoleExternalId(assumeRoleExternalId)
     }

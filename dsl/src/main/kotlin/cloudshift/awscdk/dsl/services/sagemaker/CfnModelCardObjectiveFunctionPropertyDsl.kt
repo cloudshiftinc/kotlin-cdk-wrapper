@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  * The function that is optimized during model training.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,32 +38,32 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  */
 @CdkDslMarker
 public class CfnModelCardObjectiveFunctionPropertyDsl {
-  private val cdkBuilder: CfnModelCard.ObjectiveFunctionProperty.Builder =
-      CfnModelCard.ObjectiveFunctionProperty.builder()
+    private val cdkBuilder: CfnModelCard.ObjectiveFunctionProperty.Builder =
+        CfnModelCard.ObjectiveFunctionProperty.builder()
 
-  /**
-   * @param function A function object that details optimization direction, metric, and additional
-   * descriptions.
-   */
-  public fun function(function: IResolvable) {
-    cdkBuilder.function(function)
-  }
+    /**
+     * @param function A function object that details optimization direction, metric, and additional
+     *   descriptions.
+     */
+    public fun function(function: IResolvable) {
+        cdkBuilder.function(function)
+    }
 
-  /**
-   * @param function A function object that details optimization direction, metric, and additional
-   * descriptions.
-   */
-  public fun function(function: CfnModelCard.FunctionProperty) {
-    cdkBuilder.function(function)
-  }
+    /**
+     * @param function A function object that details optimization direction, metric, and additional
+     *   descriptions.
+     */
+    public fun function(function: CfnModelCard.FunctionProperty) {
+        cdkBuilder.function(function)
+    }
 
-  /**
-   * @param notes Notes about the object function, including other considerations for possible
-   * objective functions.
-   */
-  public fun notes(notes: String) {
-    cdkBuilder.notes(notes)
-  }
+    /**
+     * @param notes Notes about the object function, including other considerations for possible
+     *   objective functions.
+     */
+    public fun notes(notes: String) {
+        cdkBuilder.notes(notes)
+    }
 
-  public fun build(): CfnModelCard.ObjectiveFunctionProperty = cdkBuilder.build()
+    public fun build(): CfnModelCard.ObjectiveFunctionProperty = cdkBuilder.build()
 }

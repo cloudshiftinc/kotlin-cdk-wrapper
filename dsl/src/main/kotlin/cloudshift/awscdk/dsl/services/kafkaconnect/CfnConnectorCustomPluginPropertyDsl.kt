@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  * A plugin is an AWS resource that contains the code that defines a connector's logic.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorCustomPluginPropertyDsl {
-  private val cdkBuilder: CfnConnector.CustomPluginProperty.Builder =
-      CfnConnector.CustomPluginProperty.builder()
+    private val cdkBuilder: CfnConnector.CustomPluginProperty.Builder =
+        CfnConnector.CustomPluginProperty.builder()
 
-  /**
-   * @param customPluginArn The Amazon Resource Name (ARN) of the custom plugin. 
-   */
-  public fun customPluginArn(customPluginArn: String) {
-    cdkBuilder.customPluginArn(customPluginArn)
-  }
+    /** @param customPluginArn The Amazon Resource Name (ARN) of the custom plugin. */
+    public fun customPluginArn(customPluginArn: String) {
+        cdkBuilder.customPluginArn(customPluginArn)
+    }
 
-  /**
-   * @param revision The revision of the custom plugin. 
-   */
-  public fun revision(revision: Number) {
-    cdkBuilder.revision(revision)
-  }
+    /** @param revision The revision of the custom plugin. */
+    public fun revision(revision: Number) {
+        cdkBuilder.revision(revision)
+    }
 
-  public fun build(): CfnConnector.CustomPluginProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.CustomPluginProperty = cdkBuilder.build()
 }

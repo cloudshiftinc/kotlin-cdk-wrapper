@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,29 +33,23 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelTimecodeBurninSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.TimecodeBurninSettingsProperty.Builder =
-      CfnChannel.TimecodeBurninSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.TimecodeBurninSettingsProperty.Builder =
+        CfnChannel.TimecodeBurninSettingsProperty.builder()
 
-  /**
-   * @param fontSize the value to be set.
-   */
-  public fun fontSize(fontSize: String) {
-    cdkBuilder.fontSize(fontSize)
-  }
+    /** @param fontSize the value to be set. */
+    public fun fontSize(fontSize: String) {
+        cdkBuilder.fontSize(fontSize)
+    }
 
-  /**
-   * @param position the value to be set.
-   */
-  public fun position(position: String) {
-    cdkBuilder.position(position)
-  }
+    /** @param position the value to be set. */
+    public fun position(position: String) {
+        cdkBuilder.position(position)
+    }
 
-  /**
-   * @param prefix the value to be set.
-   */
-  public fun prefix(prefix: String) {
-    cdkBuilder.prefix(prefix)
-  }
+    /** @param prefix the value to be set. */
+    public fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+    }
 
-  public fun build(): CfnChannel.TimecodeBurninSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.TimecodeBurninSettingsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  * [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview.html) .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,16 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationZeppelinMonitoringConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApplication.ZeppelinMonitoringConfigurationProperty.Builder =
-      CfnApplication.ZeppelinMonitoringConfigurationProperty.builder()
+    private val cdkBuilder: CfnApplication.ZeppelinMonitoringConfigurationProperty.Builder =
+        CfnApplication.ZeppelinMonitoringConfigurationProperty.builder()
 
-  /**
-   * @param logLevel The verbosity of the CloudWatch Logs for an application.
-   * You can set it to `INFO` , `WARN` , `ERROR` , or `DEBUG` .
-   */
-  public fun logLevel(logLevel: String) {
-    cdkBuilder.logLevel(logLevel)
-  }
+    /**
+     * @param logLevel The verbosity of the CloudWatch Logs for an application. You can set it to
+     *   `INFO` , `WARN` , `ERROR` , or `DEBUG` .
+     */
+    public fun logLevel(logLevel: String) {
+        cdkBuilder.logLevel(logLevel)
+    }
 
-  public fun build(): CfnApplication.ZeppelinMonitoringConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.ZeppelinMonitoringConfigurationProperty = cdkBuilder.build()
 }

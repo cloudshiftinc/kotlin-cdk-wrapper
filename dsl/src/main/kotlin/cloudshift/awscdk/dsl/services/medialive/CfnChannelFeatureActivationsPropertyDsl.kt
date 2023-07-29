@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is EncoderSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,18 +35,18 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelFeatureActivationsPropertyDsl {
-  private val cdkBuilder: CfnChannel.FeatureActivationsProperty.Builder =
-      CfnChannel.FeatureActivationsProperty.builder()
+    private val cdkBuilder: CfnChannel.FeatureActivationsProperty.Builder =
+        CfnChannel.FeatureActivationsProperty.builder()
 
-  /**
-   * @param inputPrepareScheduleActions Enables the Input Prepare feature.
-   * You can create Input Prepare actions in the schedule only if this feature is enabled.
-   * If you disable the feature on an existing schedule, make sure that you first delete all input
-   * prepare actions from the schedule.
-   */
-  public fun inputPrepareScheduleActions(inputPrepareScheduleActions: String) {
-    cdkBuilder.inputPrepareScheduleActions(inputPrepareScheduleActions)
-  }
+    /**
+     * @param inputPrepareScheduleActions Enables the Input Prepare feature. You can create Input
+     *   Prepare actions in the schedule only if this feature is enabled. If you disable the feature
+     *   on an existing schedule, make sure that you first delete all input prepare actions from the
+     *   schedule.
+     */
+    public fun inputPrepareScheduleActions(inputPrepareScheduleActions: String) {
+        cdkBuilder.inputPrepareScheduleActions(inputPrepareScheduleActions)
+    }
 
-  public fun build(): CfnChannel.FeatureActivationsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.FeatureActivationsProperty = cdkBuilder.build()
 }

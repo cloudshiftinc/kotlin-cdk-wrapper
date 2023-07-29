@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.eks.NodeType
  * Properties for EksOptimizedImage.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,28 +34,22 @@ import software.amazon.awscdk.services.eks.NodeType
  */
 @CdkDslMarker
 public class EksOptimizedImagePropsDsl {
-  private val cdkBuilder: EksOptimizedImageProps.Builder = EksOptimizedImageProps.builder()
+    private val cdkBuilder: EksOptimizedImageProps.Builder = EksOptimizedImageProps.builder()
 
-  /**
-   * @param cpuArch What cpu architecture to retrieve the image for (arm64 or x86_64).
-   */
-  public fun cpuArch(cpuArch: CpuArch) {
-    cdkBuilder.cpuArch(cpuArch)
-  }
+    /** @param cpuArch What cpu architecture to retrieve the image for (arm64 or x86_64). */
+    public fun cpuArch(cpuArch: CpuArch) {
+        cdkBuilder.cpuArch(cpuArch)
+    }
 
-  /**
-   * @param kubernetesVersion The Kubernetes version to use.
-   */
-  public fun kubernetesVersion(kubernetesVersion: String) {
-    cdkBuilder.kubernetesVersion(kubernetesVersion)
-  }
+    /** @param kubernetesVersion The Kubernetes version to use. */
+    public fun kubernetesVersion(kubernetesVersion: String) {
+        cdkBuilder.kubernetesVersion(kubernetesVersion)
+    }
 
-  /**
-   * @param nodeType What instance type to retrieve the image for (standard or GPU-optimized).
-   */
-  public fun nodeType(nodeType: NodeType) {
-    cdkBuilder.nodeType(nodeType)
-  }
+    /** @param nodeType What instance type to retrieve the image for (standard or GPU-optimized). */
+    public fun nodeType(nodeType: NodeType) {
+        cdkBuilder.nodeType(nodeType)
+    }
 
-  public fun build(): EksOptimizedImageProps = cdkBuilder.build()
+    public fun build(): EksOptimizedImageProps = cdkBuilder.build()
 }

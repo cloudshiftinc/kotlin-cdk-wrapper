@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.sagemaker.CfnPipeline
  * unless overridden.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,15 +36,15 @@ import software.amazon.awscdk.services.sagemaker.CfnPipeline
  */
 @CdkDslMarker
 public class CfnPipelineParallelismConfigurationPropertyDsl {
-  private val cdkBuilder: CfnPipeline.ParallelismConfigurationProperty.Builder =
-      CfnPipeline.ParallelismConfigurationProperty.builder()
+    private val cdkBuilder: CfnPipeline.ParallelismConfigurationProperty.Builder =
+        CfnPipeline.ParallelismConfigurationProperty.builder()
 
-  /**
-   * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
-   */
-  public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
-    cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
-  }
+    /**
+     * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel.
+     */
+    public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
+        cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
+    }
 
-  public fun build(): CfnPipeline.ParallelismConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnPipeline.ParallelismConfigurationProperty = cdkBuilder.build()
 }

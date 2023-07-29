@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.msk.CfnCluster
  * Details for client authentication using SASL for VpcConnectivity.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,36 +37,28 @@ import software.amazon.awscdk.services.msk.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterVpcConnectivitySaslPropertyDsl {
-  private val cdkBuilder: CfnCluster.VpcConnectivitySaslProperty.Builder =
-      CfnCluster.VpcConnectivitySaslProperty.builder()
+    private val cdkBuilder: CfnCluster.VpcConnectivitySaslProperty.Builder =
+        CfnCluster.VpcConnectivitySaslProperty.builder()
 
-  /**
-   * @param iam Details for ClientAuthentication using IAM for VpcConnectivity.
-   */
-  public fun iam(iam: IResolvable) {
-    cdkBuilder.iam(iam)
-  }
+    /** @param iam Details for ClientAuthentication using IAM for VpcConnectivity. */
+    public fun iam(iam: IResolvable) {
+        cdkBuilder.iam(iam)
+    }
 
-  /**
-   * @param iam Details for ClientAuthentication using IAM for VpcConnectivity.
-   */
-  public fun iam(iam: CfnCluster.VpcConnectivityIamProperty) {
-    cdkBuilder.iam(iam)
-  }
+    /** @param iam Details for ClientAuthentication using IAM for VpcConnectivity. */
+    public fun iam(iam: CfnCluster.VpcConnectivityIamProperty) {
+        cdkBuilder.iam(iam)
+    }
 
-  /**
-   * @param scram Details for SASL/SCRAM client authentication for VpcConnectivity.
-   */
-  public fun scram(scram: IResolvable) {
-    cdkBuilder.scram(scram)
-  }
+    /** @param scram Details for SASL/SCRAM client authentication for VpcConnectivity. */
+    public fun scram(scram: IResolvable) {
+        cdkBuilder.scram(scram)
+    }
 
-  /**
-   * @param scram Details for SASL/SCRAM client authentication for VpcConnectivity.
-   */
-  public fun scram(scram: CfnCluster.VpcConnectivityScramProperty) {
-    cdkBuilder.scram(scram)
-  }
+    /** @param scram Details for SASL/SCRAM client authentication for VpcConnectivity. */
+    public fun scram(scram: CfnCluster.VpcConnectivityScramProperty) {
+        cdkBuilder.scram(scram)
+    }
 
-  public fun build(): CfnCluster.VpcConnectivitySaslProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.VpcConnectivitySaslProperty = cdkBuilder.build()
 }

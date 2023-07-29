@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The option that determines the text display weight, or boldness.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,9 +35,7 @@ public class CfnAnalysisFontWeightPropertyDsl {
     private val cdkBuilder: CfnAnalysis.FontWeightProperty.Builder =
         CfnAnalysis.FontWeightProperty.builder()
 
-    /**
-     * @param name The lexical name for the level of boldness of the text display.
-     */
+    /** @param name The lexical name for the level of boldness of the text display. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -17,12 +26,11 @@ import software.constructs.Construct
  * This resource is deprecated.
  *
  * Amazon CloudFront is deprecating real-time messaging protocol (RTMP) distributions on December
- * 31, 2020. For more information, [read the
- * announcement](https://docs.aws.amazon.com/ann.jspa?annID=7356) on the Amazon CloudFront discussion
- * forum.
+ * 31, 2020. For more information,
+ * [read the announcement](https://docs.aws.amazon.com/ann.jspa?annID=7356) on the Amazon CloudFront
+ * discussion forum.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -62,59 +70,64 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnStreamingDistributionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnStreamingDistribution.Builder =
-      CfnStreamingDistribution.Builder.create(scope, id)
+    private val cdkBuilder: CfnStreamingDistribution.Builder =
+        CfnStreamingDistribution.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * The current configuration information for the RTMP distribution.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)
-   * @param streamingDistributionConfig The current configuration information for the RTMP
-   * distribution. 
-   */
-  public fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
-    cdkBuilder.streamingDistributionConfig(streamingDistributionConfig)
-  }
+    /**
+     * The current configuration information for the RTMP distribution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)
+     *
+     * @param streamingDistributionConfig The current configuration information for the RTMP
+     *   distribution.
+     */
+    public fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
+        cdkBuilder.streamingDistributionConfig(streamingDistributionConfig)
+    }
 
-  /**
-   * The current configuration information for the RTMP distribution.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)
-   * @param streamingDistributionConfig The current configuration information for the RTMP
-   * distribution. 
-   */
-  public
-      fun streamingDistributionConfig(streamingDistributionConfig: CfnStreamingDistribution.StreamingDistributionConfigProperty) {
-    cdkBuilder.streamingDistributionConfig(streamingDistributionConfig)
-  }
+    /**
+     * The current configuration information for the RTMP distribution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)
+     *
+     * @param streamingDistributionConfig The current configuration information for the RTMP
+     *   distribution.
+     */
+    public fun streamingDistributionConfig(
+        streamingDistributionConfig: CfnStreamingDistribution.StreamingDistributionConfigProperty
+    ) {
+        cdkBuilder.streamingDistributionConfig(streamingDistributionConfig)
+    }
 
-  /**
-   * A complex type that contains zero or more `Tag` elements.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-tags)
-   * @param tags A complex type that contains zero or more `Tag` elements. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * A complex type that contains zero or more `Tag` elements.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-tags)
+     *
+     * @param tags A complex type that contains zero or more `Tag` elements.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * A complex type that contains zero or more `Tag` elements.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-tags)
-   * @param tags A complex type that contains zero or more `Tag` elements. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * A complex type that contains zero or more `Tag` elements.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-tags)
+     *
+     * @param tags A complex type that contains zero or more `Tag` elements.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnStreamingDistribution {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnStreamingDistribution {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

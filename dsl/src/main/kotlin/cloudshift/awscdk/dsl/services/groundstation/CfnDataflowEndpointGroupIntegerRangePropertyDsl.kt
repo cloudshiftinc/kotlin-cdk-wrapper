@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.groundstation
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,18 @@ import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
  */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupIntegerRangePropertyDsl {
-  private val cdkBuilder: CfnDataflowEndpointGroup.IntegerRangeProperty.Builder =
-      CfnDataflowEndpointGroup.IntegerRangeProperty.builder()
+    private val cdkBuilder: CfnDataflowEndpointGroup.IntegerRangeProperty.Builder =
+        CfnDataflowEndpointGroup.IntegerRangeProperty.builder()
 
-  /**
-   * @param maximum the value to be set.
-   */
-  public fun maximum(maximum: Number) {
-    cdkBuilder.maximum(maximum)
-  }
+    /** @param maximum the value to be set. */
+    public fun maximum(maximum: Number) {
+        cdkBuilder.maximum(maximum)
+    }
 
-  /**
-   * @param minimum the value to be set.
-   */
-  public fun minimum(minimum: Number) {
-    cdkBuilder.minimum(minimum)
-  }
+    /** @param minimum the value to be set. */
+    public fun minimum(minimum: Number) {
+        cdkBuilder.minimum(minimum)
+    }
 
-  public fun build(): CfnDataflowEndpointGroup.IntegerRangeProperty = cdkBuilder.build()
+    public fun build(): CfnDataflowEndpointGroup.IntegerRangeProperty = cdkBuilder.build()
 }

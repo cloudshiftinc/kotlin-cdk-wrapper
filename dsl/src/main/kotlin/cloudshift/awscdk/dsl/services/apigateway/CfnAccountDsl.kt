@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * per region per account.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,20 +37,21 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnAccountDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnAccount.Builder = CfnAccount.Builder.create(scope, id)
+    private val cdkBuilder: CfnAccount.Builder = CfnAccount.Builder.create(scope, id)
 
-  /**
-   * The ARN of an Amazon CloudWatch role for the current Account.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html#cfn-apigateway-account-cloudwatchrolearn)
-   * @param cloudWatchRoleArn The ARN of an Amazon CloudWatch role for the current Account. 
-   */
-  public fun cloudWatchRoleArn(cloudWatchRoleArn: String) {
-    cdkBuilder.cloudWatchRoleArn(cloudWatchRoleArn)
-  }
+    /**
+     * The ARN of an Amazon CloudWatch role for the current Account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html#cfn-apigateway-account-cloudwatchrolearn)
+     *
+     * @param cloudWatchRoleArn The ARN of an Amazon CloudWatch role for the current Account.
+     */
+    public fun cloudWatchRoleArn(cloudWatchRoleArn: String) {
+        cdkBuilder.cloudWatchRoleArn(cloudWatchRoleArn)
+    }
 
-  public fun build(): CfnAccount = cdkBuilder.build()
+    public fun build(): CfnAccount = cdkBuilder.build()
 }

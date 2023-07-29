@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.pipelines.AddStageOpts
 import software.amazon.awscdk.pipelines.CodeBuildOptions
 import software.amazon.awscdk.pipelines.CodeBuildStep
@@ -33,15 +44,12 @@ import software.amazon.awscdk.pipelines.Wave
 import software.amazon.awscdk.pipelines.WaveOptions
 import software.amazon.awscdk.pipelines.WaveProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object pipelines {
     /**
      * Options to pass to `addStage`.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline;
      * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
@@ -68,7 +76,6 @@ public object pipelines {
      * Options for customizing a single CodeBuild project.
      *
      * Example:
-     *
      * ```
      * IFileSetProducer source; // the repository source
      * String[] synthCommands; // Commands to synthesize your app
@@ -99,7 +106,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun codeBuildOptions(block: CodeBuildOptionsDsl.() -> Unit = {}): CodeBuildOptions {
+    public inline fun codeBuildOptions(
+        block: CodeBuildOptionsDsl.() -> Unit = {}
+    ): CodeBuildOptions {
         val builder = CodeBuildOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -108,11 +117,9 @@ public object pipelines {
     /**
      * Run a script as a CodeBuild Project.
      *
-     * The BuildSpec must be available inline--it cannot reference a file
-     * on disk. If your current build instructions are in a file like
-     * `buildspec.yml` in your repository, extract them to a script
-     * (say, `build.sh`) and invoke that script as part of the build:
-     *
+     * The BuildSpec must be available inline--it cannot reference a file on disk. If your current
+     * build instructions are in a file like `buildspec.yml` in your repository, extract them to a
+     * script (say, `build.sh`) and invoke that script as part of the build:
      * ```
      * CodeBuildStep.Builder.create("Synth")
      * .commands(List.of("./build.sh"))
@@ -120,7 +127,6 @@ public object pipelines {
      * ```
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
      * .synth(ShellStep.Builder.create("Synth")
@@ -147,7 +153,10 @@ public object pipelines {
      * .build());
      * ```
      */
-    public inline fun codeBuildStep(id: String, block: CodeBuildStepDsl.() -> Unit = {}): CodeBuildStep {
+    public inline fun codeBuildStep(
+        id: String,
+        block: CodeBuildStepDsl.() -> Unit = {}
+    ): CodeBuildStep {
         val builder = CodeBuildStepDsl(id)
         builder.apply(block)
         return builder.build()
@@ -157,7 +166,6 @@ public object pipelines {
      * Construction props for a CodeBuildStep.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
      * .synth(ShellStep.Builder.create("Synth")
@@ -184,7 +192,9 @@ public object pipelines {
      * .build());
      * ```
      */
-    public inline fun codeBuildStepProps(block: CodeBuildStepPropsDsl.() -> Unit = {}): CodeBuildStepProps {
+    public inline fun codeBuildStepProps(
+        block: CodeBuildStepPropsDsl.() -> Unit = {}
+    ): CodeBuildStepProps {
         val builder = CodeBuildStepPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -194,7 +204,6 @@ public object pipelines {
      * Configuration options for a CodeCommit source.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -210,7 +219,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun codeCommitSourceOptions(block: CodeCommitSourceOptionsDsl.() -> Unit = {}): CodeCommitSourceOptions {
+    public inline fun codeCommitSourceOptions(
+        block: CodeCommitSourceOptionsDsl.() -> Unit = {}
+    ): CodeCommitSourceOptions {
         val builder = CodeCommitSourceOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -219,12 +230,10 @@ public object pipelines {
     /**
      * A CDK Pipeline that uses CodePipeline to deploy CDK apps.
      *
-     * This is a `Pipeline` with its `engine` property set to
-     * `CodePipelineEngine`, and exists for nicer ergonomics for
-     * users that don't need to switch out engines.
+     * This is a `Pipeline` with its `engine` property set to `CodePipelineEngine`, and exists for
+     * nicer ergonomics for users that don't need to switch out engines.
      *
      * Example:
-     *
      * ```
      * Pipeline codePipeline;
      * Artifact sourceArtifact = new Artifact("MySourceArtifact");
@@ -240,7 +249,7 @@ public object pipelines {
     public inline fun codePipeline(
         scope: Construct,
         id: String,
-        block: CodePipelineDsl.() -> Unit = {}
+        block: CodePipelineDsl.() -> Unit = {},
     ): CodePipeline {
         val builder = CodePipelineDsl(scope, id)
         builder.apply(block)
@@ -251,7 +260,6 @@ public object pipelines {
      * The result of adding actions to the pipeline.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -267,8 +275,7 @@ public object pipelines {
      * ```
      */
     public inline fun codePipelineActionFactoryResult(
-        block: CodePipelineActionFactoryResultDsl.() -> Unit =
-            {}
+        block: CodePipelineActionFactoryResultDsl.() -> Unit = {}
     ): CodePipelineActionFactoryResult {
         val builder = CodePipelineActionFactoryResultDsl()
         builder.apply(block)
@@ -279,7 +286,6 @@ public object pipelines {
      * Properties for a `CodePipeline`.
      *
      * Example:
-     *
      * ```
      * Pipeline codePipeline;
      * Artifact sourceArtifact = new Artifact("MySourceArtifact");
@@ -292,7 +298,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun codePipelineProps(block: CodePipelinePropsDsl.() -> Unit = {}): CodePipelineProps {
+    public inline fun codePipelineProps(
+        block: CodePipelinePropsDsl.() -> Unit = {}
+    ): CodePipelineProps {
         val builder = CodePipelinePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -304,7 +312,6 @@ public object pipelines {
      * This step is only supported in CodePipeline pipelines.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline;
      * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
@@ -314,7 +321,10 @@ public object pipelines {
      * .build());
      * ```
      */
-    public inline fun confirmPermissionsBroadening(id: String, block: ConfirmPermissionsBroadeningDsl.() -> Unit = {}): ConfirmPermissionsBroadening {
+    public inline fun confirmPermissionsBroadening(
+        id: String,
+        block: ConfirmPermissionsBroadeningDsl.() -> Unit = {}
+    ): ConfirmPermissionsBroadening {
         val builder = ConfirmPermissionsBroadeningDsl(id)
         builder.apply(block)
         return builder.build()
@@ -324,7 +334,6 @@ public object pipelines {
      * Configuration options for CodeStar source.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
      * .synth(ShellStep.Builder.create("Synth")
@@ -351,7 +360,9 @@ public object pipelines {
      * .build());
      * ```
      */
-    public inline fun connectionSourceOptions(block: ConnectionSourceOptionsDsl.() -> Unit = {}): ConnectionSourceOptions {
+    public inline fun connectionSourceOptions(
+        block: ConnectionSourceOptionsDsl.() -> Unit = {}
+    ): ConnectionSourceOptions {
         val builder = ConnectionSourceOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -361,7 +372,6 @@ public object pipelines {
      * Options for ECR sources.
      *
      * Example:
-     *
      * ```
      * IRepository repository;
      * CodePipelineSource.ecr(repository, ECRSourceOptions.builder()
@@ -369,7 +379,9 @@ public object pipelines {
      * .build());
      * ```
      */
-    public inline fun eCRSourceOptions(block: ECRSourceOptionsDsl.() -> Unit = {}): ECRSourceOptions {
+    public inline fun eCRSourceOptions(
+        block: ECRSourceOptionsDsl.() -> Unit = {}
+    ): ECRSourceOptions {
         val builder = ECRSourceOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -379,7 +391,6 @@ public object pipelines {
      * Options for defining access for a Docker Credential composed of ECR repos.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -393,8 +404,7 @@ public object pipelines {
      * ```
      */
     public inline fun ecrDockerCredentialOptions(
-        block: EcrDockerCredentialOptionsDsl.() -> Unit =
-            {}
+        block: EcrDockerCredentialOptionsDsl.() -> Unit = {}
     ): EcrDockerCredentialOptions {
         val builder = EcrDockerCredentialOptionsDsl()
         builder.apply(block)
@@ -405,7 +415,6 @@ public object pipelines {
      * Options for defining credentials for a Docker Credential.
      *
      * Example:
-     *
      * ```
      * ISecret dockerHubSecret = Secret.fromSecretCompleteArn(this, "DHSecret", "arn:aws:...");
      * // Only the image asset publishing actions will be granted read access to the secret.
@@ -414,8 +423,7 @@ public object pipelines {
      * ```
      */
     public inline fun externalDockerCredentialOptions(
-        block: ExternalDockerCredentialOptionsDsl.() -> Unit =
-            {}
+        block: ExternalDockerCredentialOptionsDsl.() -> Unit = {}
     ): ExternalDockerCredentialOptions {
         val builder = ExternalDockerCredentialOptionsDsl()
         builder.apply(block)
@@ -426,7 +434,6 @@ public object pipelines {
      * Location of a FileSet consumed or produced by a ShellStep.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -448,7 +455,6 @@ public object pipelines {
      * Options for GitHub sources.
      *
      * Example:
-     *
      * ```
      * CodePipelineSource.gitHub("org/repo", "branch", GitHubSourceOptions.builder()
      * // This is optional
@@ -456,7 +462,9 @@ public object pipelines {
      * .build());
      * ```
      */
-    public inline fun gitHubSourceOptions(block: GitHubSourceOptionsDsl.() -> Unit = {}): GitHubSourceOptions {
+    public inline fun gitHubSourceOptions(
+        block: GitHubSourceOptionsDsl.() -> Unit = {}
+    ): GitHubSourceOptions {
         val builder = GitHubSourceOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -465,14 +473,12 @@ public object pipelines {
     /**
      * A manual approval step.
      *
-     * If this step is added to a Pipeline, the Pipeline will
-     * be paused waiting for a human to resume it
+     * If this step is added to a Pipeline, the Pipeline will be paused waiting for a human to
+     * resume it
      *
-     * Only engines that support pausing the deployment will
-     * support this step type.
+     * Only engines that support pausing the deployment will support this step type.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline;
      * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
@@ -489,7 +495,10 @@ public object pipelines {
      * .build());
      * ```
      */
-    public inline fun manualApprovalStep(id: String, block: ManualApprovalStepDsl.() -> Unit = {}): ManualApprovalStep {
+    public inline fun manualApprovalStep(
+        id: String,
+        block: ManualApprovalStepDsl.() -> Unit = {}
+    ): ManualApprovalStep {
         val builder = ManualApprovalStepDsl(id)
         builder.apply(block)
         return builder.build()
@@ -499,7 +508,6 @@ public object pipelines {
      * Construction properties for a `ManualApprovalStep`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -509,7 +517,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun manualApprovalStepProps(block: ManualApprovalStepPropsDsl.() -> Unit = {}): ManualApprovalStepProps {
+    public inline fun manualApprovalStepProps(
+        block: ManualApprovalStepPropsDsl.() -> Unit = {}
+    ): ManualApprovalStepProps {
         val builder = ManualApprovalStepPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -519,7 +529,6 @@ public object pipelines {
      * Properties for a `PermissionsBroadeningCheck`.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline;
      * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
@@ -530,8 +539,7 @@ public object pipelines {
      * ```
      */
     public inline fun permissionsBroadeningCheckProps(
-        block: PermissionsBroadeningCheckPropsDsl.() -> Unit =
-            {}
+        block: PermissionsBroadeningCheckPropsDsl.() -> Unit = {}
     ): PermissionsBroadeningCheckProps {
         val builder = PermissionsBroadeningCheckPropsDsl()
         builder.apply(block)
@@ -542,7 +550,6 @@ public object pipelines {
      * Properties for a `Pipeline`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -553,7 +560,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun pipelineBaseProps(block: PipelineBasePropsDsl.() -> Unit = {}): PipelineBaseProps {
+    public inline fun pipelineBaseProps(
+        block: PipelineBasePropsDsl.() -> Unit = {}
+    ): PipelineBaseProps {
         val builder = PipelineBasePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -563,7 +572,6 @@ public object pipelines {
      * Options for the `CodePipelineActionFactory.produce()` method.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -653,7 +661,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun produceActionOptions(block: ProduceActionOptionsDsl.() -> Unit = {}): ProduceActionOptions {
+    public inline fun produceActionOptions(
+        block: ProduceActionOptionsDsl.() -> Unit = {}
+    ): ProduceActionOptions {
         val builder = ProduceActionOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -663,7 +673,6 @@ public object pipelines {
      * Options for S3 sources.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -687,11 +696,9 @@ public object pipelines {
     /**
      * Run shell script commands in the pipeline.
      *
-     * This is a generic step designed
-     * to be deployment engine agnostic.
+     * This is a generic step designed to be deployment engine agnostic.
      *
      * Example:
-     *
      * ```
      * Pipeline codePipeline;
      * Artifact sourceArtifact = new Artifact("MySourceArtifact");
@@ -714,7 +721,6 @@ public object pipelines {
      * Construction properties for a `ShellStep`.
      *
      * Example:
-     *
      * ```
      * Pipeline codePipeline;
      * Artifact sourceArtifact = new Artifact("MySourceArtifact");
@@ -737,7 +743,6 @@ public object pipelines {
      * An asset used by a Stack.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -763,7 +768,6 @@ public object pipelines {
      * Properties for a `StackDeployment`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -793,7 +797,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun stackDeploymentProps(block: StackDeploymentPropsDsl.() -> Unit = {}): StackDeploymentProps {
+    public inline fun stackDeploymentProps(
+        block: StackDeploymentPropsDsl.() -> Unit = {}
+    ): StackDeploymentProps {
         val builder = StackDeploymentPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -803,7 +809,6 @@ public object pipelines {
      * Instructions for additional steps that are run at stack level.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -830,7 +835,6 @@ public object pipelines {
      * Properties for a `StageDeployment`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -852,7 +856,9 @@ public object pipelines {
      * .build();
      * ```
      */
-    public inline fun stageDeploymentProps(block: StageDeploymentPropsDsl.() -> Unit = {}): StageDeploymentProps {
+    public inline fun stageDeploymentProps(
+        block: StageDeploymentPropsDsl.() -> Unit = {}
+    ): StageDeploymentProps {
         val builder = StageDeploymentPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -862,7 +868,6 @@ public object pipelines {
      * Multiple stages that are deployed in parallel.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline;
      * Wave europeWave = pipeline.addWave("Europe");
@@ -884,7 +889,6 @@ public object pipelines {
      * Options to pass to `addWave`.
      *
      * Example:
-     *
      * ```
      * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
      * .synth(ShellStep.Builder.create("Synth")
@@ -921,7 +925,6 @@ public object pipelines {
      * Construction properties for a `Wave`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.

@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.codebuild.S3SourceProps
 import software.amazon.awscdk.services.s3.IBucket
-import kotlin.String
 
 /**
  * Construction properties for `S3Source`.
  *
  * Example:
- *
  * ```
  * Bucket bucket = new Bucket(this, "MyBucket");
  * Project.Builder.create(this, "MyProject")
@@ -26,24 +34,17 @@ import kotlin.String
 public class S3SourcePropsDsl {
     private val cdkBuilder: S3SourceProps.Builder = S3SourceProps.builder()
 
-    /**
-     * @param bucket the value to be set.
-     */
+    /** @param bucket the value to be set. */
     public fun bucket(bucket: IBucket) {
         cdkBuilder.bucket(bucket)
     }
 
-    /**
-     * @param identifier The source identifier.
-     * This property is required on secondary sources.
-     */
+    /** @param identifier The source identifier. This property is required on secondary sources. */
     public fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)
     }
 
-    /**
-     * @param path the value to be set.
-     */
+    /** @param path the value to be set. */
     public fun path(path: String) {
         cdkBuilder.path(path)
     }

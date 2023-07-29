@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmcontacts
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ssmcontacts.CfnRotation
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ssmcontacts.CfnRotation
+import software.constructs.Construct
 
 /**
  * Specifies a rotation in an on-call schedule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -61,7 +69,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnRotationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnRotation.Builder = CfnRotation.Builder.create(scope, id)
 
@@ -75,6 +83,7 @@ public class CfnRotationDsl(
      * The order in which you list the contacts is their shift order in the rotation schedule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-contactids)
+     *
      * @param contactIds The Amazon Resource Names (ARNs) of the contacts to add to the rotation.
      */
     public fun contactIds(vararg contactIds: String) {
@@ -87,6 +96,7 @@ public class CfnRotationDsl(
      * The order in which you list the contacts is their shift order in the rotation schedule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-contactids)
+     *
      * @param contactIds The Amazon Resource Names (ARNs) of the contacts to add to the rotation.
      */
     public fun contactIds(contactIds: Collection<String>) {
@@ -97,6 +107,7 @@ public class CfnRotationDsl(
      * The name for the rotation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-name)
+     *
      * @param name The name for the rotation.
      */
     public fun name(name: String) {
@@ -107,6 +118,7 @@ public class CfnRotationDsl(
      * Information about the rule that specifies when shift team members rotate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-recurrence)
+     *
      * @param recurrence Information about the rule that specifies when shift team members rotate.
      */
     public fun recurrence(recurrence: IResolvable) {
@@ -117,6 +129,7 @@ public class CfnRotationDsl(
      * Information about the rule that specifies when shift team members rotate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-recurrence)
+     *
      * @param recurrence Information about the rule that specifies when shift team members rotate.
      */
     public fun recurrence(recurrence: CfnRotation.RecurrenceSettingsProperty) {
@@ -127,6 +140,7 @@ public class CfnRotationDsl(
      * The date and time the rotation goes into effect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-starttime)
+     *
      * @param startTime The date and time the rotation goes into effect.
      */
     public fun startTime(startTime: String) {
@@ -137,11 +151,12 @@ public class CfnRotationDsl(
      * Optional metadata to assign to the rotation.
      *
      * Tags enable you to categorize a resource in different ways, such as by purpose, owner, or
-     * environment. For more information, see [Tagging Incident Manager
-   * resources](https://docs.aws.amazon.com/incident-manager/latest/userguide/tagging.html) in the
-     * *Incident Manager User Guide* .
+     * environment. For more information, see
+     * [Tagging Incident Manager resources](https://docs.aws.amazon.com/incident-manager/latest/userguide/tagging.html)
+     * in the *Incident Manager User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-tags)
+     *
      * @param tags Optional metadata to assign to the rotation.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -152,11 +167,12 @@ public class CfnRotationDsl(
      * Optional metadata to assign to the rotation.
      *
      * Tags enable you to categorize a resource in different ways, such as by purpose, owner, or
-     * environment. For more information, see [Tagging Incident Manager
-   * resources](https://docs.aws.amazon.com/incident-manager/latest/userguide/tagging.html) in the
-     * *Incident Manager User Guide* .
+     * environment. For more information, see
+     * [Tagging Incident Manager resources](https://docs.aws.amazon.com/incident-manager/latest/userguide/tagging.html)
+     * in the *Incident Manager User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-tags)
+     *
      * @param tags Optional metadata to assign to the rotation.
      */
     public fun tags(tags: Collection<CfnTag>) {
@@ -164,15 +180,17 @@ public class CfnRotationDsl(
     }
 
     /**
-     * The time zone to base the rotation’s activity on, in Internet Assigned Numbers Authority (IANA)
-     * format.
+     * The time zone to base the rotation’s activity on, in Internet Assigned Numbers Authority
+     * (IANA) format.
      *
-     * For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information, see the [Time
-   * Zone Database](https://docs.aws.amazon.com/https://www.iana.org/time-zones) on the IANA website.
+     * For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information, see the
+     * [Time Zone Database](https://docs.aws.amazon.com/https://www.iana.org/time-zones) on the IANA
+     * website.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-timezoneid)
+     *
      * @param timeZoneId The time zone to base the rotation’s activity on, in Internet Assigned
-     * Numbers Authority (IANA) format.
+     *   Numbers Authority (IANA) format.
      */
     public fun timeZoneId(timeZoneId: String) {
         cdkBuilder.timeZoneId(timeZoneId)

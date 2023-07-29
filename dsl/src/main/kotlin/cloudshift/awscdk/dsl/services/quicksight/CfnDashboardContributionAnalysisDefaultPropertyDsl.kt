@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The contribution analysis visual display for a line, pie, or bar chart.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,44 +41,43 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardContributionAnalysisDefaultPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ContributionAnalysisDefaultProperty.Builder =
-      CfnDashboard.ContributionAnalysisDefaultProperty.builder()
+    private val cdkBuilder: CfnDashboard.ContributionAnalysisDefaultProperty.Builder =
+        CfnDashboard.ContributionAnalysisDefaultProperty.builder()
 
-  private val _contributorDimensions: MutableList<Any> = mutableListOf()
+    private val _contributorDimensions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param contributorDimensions The dimensions columns that are used in the contribution analysis,
-   * usually a list of `ColumnIdentifiers` . 
-   */
-  public fun contributorDimensions(vararg contributorDimensions: Any) {
-    _contributorDimensions.addAll(listOf(*contributorDimensions))
-  }
+    /**
+     * @param contributorDimensions The dimensions columns that are used in the contribution
+     *   analysis, usually a list of `ColumnIdentifiers` .
+     */
+    public fun contributorDimensions(vararg contributorDimensions: Any) {
+        _contributorDimensions.addAll(listOf(*contributorDimensions))
+    }
 
-  /**
-   * @param contributorDimensions The dimensions columns that are used in the contribution analysis,
-   * usually a list of `ColumnIdentifiers` . 
-   */
-  public fun contributorDimensions(contributorDimensions: Collection<Any>) {
-    _contributorDimensions.addAll(contributorDimensions)
-  }
+    /**
+     * @param contributorDimensions The dimensions columns that are used in the contribution
+     *   analysis, usually a list of `ColumnIdentifiers` .
+     */
+    public fun contributorDimensions(contributorDimensions: Collection<Any>) {
+        _contributorDimensions.addAll(contributorDimensions)
+    }
 
-  /**
-   * @param contributorDimensions The dimensions columns that are used in the contribution analysis,
-   * usually a list of `ColumnIdentifiers` . 
-   */
-  public fun contributorDimensions(contributorDimensions: IResolvable) {
-    cdkBuilder.contributorDimensions(contributorDimensions)
-  }
+    /**
+     * @param contributorDimensions The dimensions columns that are used in the contribution
+     *   analysis, usually a list of `ColumnIdentifiers` .
+     */
+    public fun contributorDimensions(contributorDimensions: IResolvable) {
+        cdkBuilder.contributorDimensions(contributorDimensions)
+    }
 
-  /**
-   * @param measureFieldId The measure field that is used in the contribution analysis. 
-   */
-  public fun measureFieldId(measureFieldId: String) {
-    cdkBuilder.measureFieldId(measureFieldId)
-  }
+    /** @param measureFieldId The measure field that is used in the contribution analysis. */
+    public fun measureFieldId(measureFieldId: String) {
+        cdkBuilder.measureFieldId(measureFieldId)
+    }
 
-  public fun build(): CfnDashboard.ContributionAnalysisDefaultProperty {
-    if(_contributorDimensions.isNotEmpty()) cdkBuilder.contributorDimensions(_contributorDimensions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDashboard.ContributionAnalysisDefaultProperty {
+        if (_contributorDimensions.isNotEmpty())
+            cdkBuilder.contributorDimensions(_contributorDimensions)
+        return cdkBuilder.build()
+    }
 }

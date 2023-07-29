@@ -3,12 +3,12 @@ package cloudshift.awscdkdsl.build.dsl.asm
 import com.github.benmanes.caffeine.cache.Caffeine
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.UNIT
+import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap
+import kotlin.reflect.jvm.internal.impl.name.FqName
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Opcodes.ACC_PUBLIC
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.MethodNode
-import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap
-import kotlin.reflect.jvm.internal.impl.name.FqName
 
 internal object Asm {
     const val ConstructorMethodName = "<init>"
@@ -44,9 +44,7 @@ internal fun ClassName.Companion.fromAsmClassName(name: String): ClassName {
             "V" -> UNIT
             else -> {
                 val fqClassName = normalizeBinaryClassName(name)
-                if (fqClassName.toString()
-                        .startsWith("V")
-                ) {
+                if (fqClassName.toString().startsWith("V")) {
                     println("$name -> $fqClassName")
                 }
                 val fqName = FqName(fqClassName.toString())
@@ -59,20 +57,13 @@ internal fun ClassName.Companion.fromAsmClassName(name: String): ClassName {
     }
 }
 
-private val classNameCache = Caffeine.newBuilder()
-    .build<String, ClassName>()
+private val classNameCache = Caffeine.newBuilder().build<String, ClassName>()
 
 private fun normalizeBinaryClassName(binaryClassName: String): ClassName {
     val className = binaryClassName.substringAfterLast("/")
-    val packageName = binaryClassName.removeSuffix(className)
-        .dropLast(1)
-        .removePrefix("[L")
+    val packageName = binaryClassName.removeSuffix(className).dropLast(1).removePrefix("[L")
     check(!packageName.startsWith("[") && !packageName.startsWith("L")) {
         "Unable to normalize classname: $binaryClassName (package: $packageName; class: $className"
     }
-    return ClassName(
-        packageName.replace('/', '.'),
-        className.removeSuffix(";")
-            .split("$")
-    )
+    return ClassName(packageName.replace('/', '.'), className.removeSuffix(";").split("$"))
 }

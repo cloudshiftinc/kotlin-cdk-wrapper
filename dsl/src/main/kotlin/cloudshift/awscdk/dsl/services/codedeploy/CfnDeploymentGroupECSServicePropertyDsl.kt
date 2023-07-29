@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
  * Contains the service and cluster names used to identify an Amazon ECS deployment's target.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,20 @@ import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
  */
 @CdkDslMarker
 public class CfnDeploymentGroupECSServicePropertyDsl {
-  private val cdkBuilder: CfnDeploymentGroup.ECSServiceProperty.Builder =
-      CfnDeploymentGroup.ECSServiceProperty.builder()
+    private val cdkBuilder: CfnDeploymentGroup.ECSServiceProperty.Builder =
+        CfnDeploymentGroup.ECSServiceProperty.builder()
 
-  /**
-   * @param clusterName The name of the cluster that the Amazon ECS service is associated with. 
-   */
-  public fun clusterName(clusterName: String) {
-    cdkBuilder.clusterName(clusterName)
-  }
+    /**
+     * @param clusterName The name of the cluster that the Amazon ECS service is associated with.
+     */
+    public fun clusterName(clusterName: String) {
+        cdkBuilder.clusterName(clusterName)
+    }
 
-  /**
-   * @param serviceName The name of the target Amazon ECS service. 
-   */
-  public fun serviceName(serviceName: String) {
-    cdkBuilder.serviceName(serviceName)
-  }
+    /** @param serviceName The name of the target Amazon ECS service. */
+    public fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
+    }
 
-  public fun build(): CfnDeploymentGroup.ECSServiceProperty = cdkBuilder.build()
+    public fun build(): CfnDeploymentGroup.ECSServiceProperty = cdkBuilder.build()
 }

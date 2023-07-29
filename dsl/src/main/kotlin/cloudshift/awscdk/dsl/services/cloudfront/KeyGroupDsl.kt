@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -14,7 +23,6 @@ import software.constructs.Construct
  * A Key Group configuration.
  *
  * Example:
- *
  * ```
  * // Validating signed URLs or signed cookies with Trusted Key Groups
  * // public key in PEM format
@@ -35,55 +43,55 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class KeyGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: KeyGroup.Builder = KeyGroup.Builder.create(scope, id)
+    private val cdkBuilder: KeyGroup.Builder = KeyGroup.Builder.create(scope, id)
 
-  private val _items: MutableList<IPublicKey> = mutableListOf()
+    private val _items: MutableList<IPublicKey> = mutableListOf()
 
-  /**
-   * A comment to describe the key group.
-   *
-   * Default: - no comment
-   *
-   * @param comment A comment to describe the key group. 
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /**
+     * A comment to describe the key group.
+     *
+     * Default: - no comment
+     *
+     * @param comment A comment to describe the key group.
+     */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  /**
-   * A list of public keys to add to the key group.
-   *
-   * @param items A list of public keys to add to the key group. 
-   */
-  public fun items(vararg items: IPublicKey) {
-    _items.addAll(listOf(*items))
-  }
+    /**
+     * A list of public keys to add to the key group.
+     *
+     * @param items A list of public keys to add to the key group.
+     */
+    public fun items(vararg items: IPublicKey) {
+        _items.addAll(listOf(*items))
+    }
 
-  /**
-   * A list of public keys to add to the key group.
-   *
-   * @param items A list of public keys to add to the key group. 
-   */
-  public fun items(items: Collection<IPublicKey>) {
-    _items.addAll(items)
-  }
+    /**
+     * A list of public keys to add to the key group.
+     *
+     * @param items A list of public keys to add to the key group.
+     */
+    public fun items(items: Collection<IPublicKey>) {
+        _items.addAll(items)
+    }
 
-  /**
-   * A name to identify the key group.
-   *
-   * Default: - generated from the `id`
-   *
-   * @param keyGroupName A name to identify the key group. 
-   */
-  public fun keyGroupName(keyGroupName: String) {
-    cdkBuilder.keyGroupName(keyGroupName)
-  }
+    /**
+     * A name to identify the key group.
+     *
+     * Default: - generated from the `id`
+     *
+     * @param keyGroupName A name to identify the key group.
+     */
+    public fun keyGroupName(keyGroupName: String) {
+        cdkBuilder.keyGroupName(keyGroupName)
+    }
 
-  public fun build(): KeyGroup {
-    if(_items.isNotEmpty()) cdkBuilder.items(_items)
-    return cdkBuilder.build()
-  }
+    public fun build(): KeyGroup {
+        if (_items.isNotEmpty()) cdkBuilder.items(_items)
+        return cdkBuilder.build()
+    }
 }

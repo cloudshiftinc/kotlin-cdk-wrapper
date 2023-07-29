@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.IVirtualGateway
  * Interface with properties necessary to import a reusable GatewayRoute.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,21 +33,17 @@ import software.amazon.awscdk.services.appmesh.IVirtualGateway
  */
 @CdkDslMarker
 public class GatewayRouteAttributesDsl {
-  private val cdkBuilder: GatewayRouteAttributes.Builder = GatewayRouteAttributes.builder()
+    private val cdkBuilder: GatewayRouteAttributes.Builder = GatewayRouteAttributes.builder()
 
-  /**
-   * @param gatewayRouteName The name of the GatewayRoute. 
-   */
-  public fun gatewayRouteName(gatewayRouteName: String) {
-    cdkBuilder.gatewayRouteName(gatewayRouteName)
-  }
+    /** @param gatewayRouteName The name of the GatewayRoute. */
+    public fun gatewayRouteName(gatewayRouteName: String) {
+        cdkBuilder.gatewayRouteName(gatewayRouteName)
+    }
 
-  /**
-   * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
-   */
-  public fun virtualGateway(virtualGateway: IVirtualGateway) {
-    cdkBuilder.virtualGateway(virtualGateway)
-  }
+    /** @param virtualGateway The VirtualGateway this GatewayRoute is associated with. */
+    public fun virtualGateway(virtualGateway: IVirtualGateway) {
+        cdkBuilder.virtualGateway(virtualGateway)
+    }
 
-  public fun build(): GatewayRouteAttributes = cdkBuilder.build()
+    public fun build(): GatewayRouteAttributes = cdkBuilder.build()
 }

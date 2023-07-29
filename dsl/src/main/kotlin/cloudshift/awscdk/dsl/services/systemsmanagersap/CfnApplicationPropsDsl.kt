@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.systemsmanagersap
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.systemsmanagersap.CfnApplicationProps
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.systemsmanagersap.CfnApplicationProps
 
 /**
  * Properties for defining a `CfnApplication`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,79 +61,57 @@ public class CfnApplicationPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /**
-     * @param applicationId The ID of the application.
-     */
+    /** @param applicationId The ID of the application. */
     public fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
     }
 
-    /**
-     * @param applicationType The type of the application.
-     */
+    /** @param applicationType The type of the application. */
     public fun applicationType(applicationType: String) {
         cdkBuilder.applicationType(applicationType)
     }
 
-    /**
-     * @param credentials The credentials of the SAP application.
-     */
+    /** @param credentials The credentials of the SAP application. */
     public fun credentials(vararg credentials: Any) {
         _credentials.addAll(listOf(*credentials))
     }
 
-    /**
-     * @param credentials The credentials of the SAP application.
-     */
+    /** @param credentials The credentials of the SAP application. */
     public fun credentials(credentials: Collection<Any>) {
         _credentials.addAll(credentials)
     }
 
-    /**
-     * @param credentials The credentials of the SAP application.
-     */
+    /** @param credentials The credentials of the SAP application. */
     public fun credentials(credentials: IResolvable) {
         cdkBuilder.credentials(credentials)
     }
 
-    /**
-     * @param instances The Amazon EC2 instances on which your SAP application is running.
-     */
+    /** @param instances The Amazon EC2 instances on which your SAP application is running. */
     public fun instances(vararg instances: String) {
         _instances.addAll(listOf(*instances))
     }
 
-    /**
-     * @param instances The Amazon EC2 instances on which your SAP application is running.
-     */
+    /** @param instances The Amazon EC2 instances on which your SAP application is running. */
     public fun instances(instances: Collection<String>) {
         _instances.addAll(instances)
     }
 
-    /**
-     * @param sapInstanceNumber The SAP instance number of the application.
-     */
+    /** @param sapInstanceNumber The SAP instance number of the application. */
     public fun sapInstanceNumber(sapInstanceNumber: String) {
         cdkBuilder.sapInstanceNumber(sapInstanceNumber)
     }
 
-    /**
-     * @param sid The System ID of the application.
-     */
+    /** @param sid The System ID of the application. */
     public fun sid(sid: String) {
         cdkBuilder.sid(sid)
     }
 
-    /**
-     * @param tags The tags on the application.
-     */
+    /** @param tags The tags on the application. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /**
-     * @param tags The tags on the application.
-     */
+    /** @param tags The tags on the application. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

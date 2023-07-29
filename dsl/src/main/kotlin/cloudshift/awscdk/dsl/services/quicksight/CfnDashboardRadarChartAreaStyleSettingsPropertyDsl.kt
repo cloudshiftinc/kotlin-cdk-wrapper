@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The configured style settings of a radar chart.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,9 +36,7 @@ public class CfnDashboardRadarChartAreaStyleSettingsPropertyDsl {
     private val cdkBuilder: CfnDashboard.RadarChartAreaStyleSettingsProperty.Builder =
         CfnDashboard.RadarChartAreaStyleSettingsProperty.builder()
 
-    /**
-     * @param visibility The visibility settings of a radar chart.
-     */
+    /** @param visibility The visibility settings of a radar chart. */
     public fun visibility(visibility: String) {
         cdkBuilder.visibility(visibility)
     }

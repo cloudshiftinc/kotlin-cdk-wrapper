@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.cognito.CfnUserPool
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,18 @@ import software.amazon.awscdk.services.cognito.CfnUserPool
  */
 @CdkDslMarker
 public class CfnUserPoolStringAttributeConstraintsPropertyDsl {
-  private val cdkBuilder: CfnUserPool.StringAttributeConstraintsProperty.Builder =
-      CfnUserPool.StringAttributeConstraintsProperty.builder()
+    private val cdkBuilder: CfnUserPool.StringAttributeConstraintsProperty.Builder =
+        CfnUserPool.StringAttributeConstraintsProperty.builder()
 
-  /**
-   * @param maxLength The maximum length.
-   */
-  public fun maxLength(maxLength: String) {
-    cdkBuilder.maxLength(maxLength)
-  }
+    /** @param maxLength The maximum length. */
+    public fun maxLength(maxLength: String) {
+        cdkBuilder.maxLength(maxLength)
+    }
 
-  /**
-   * @param minLength The minimum length.
-   */
-  public fun minLength(minLength: String) {
-    cdkBuilder.minLength(minLength)
-  }
+    /** @param minLength The minimum length. */
+    public fun minLength(minLength: String) {
+        cdkBuilder.minLength(minLength)
+    }
 
-  public fun build(): CfnUserPool.StringAttributeConstraintsProperty = cdkBuilder.build()
+    public fun build(): CfnUserPool.StringAttributeConstraintsProperty = cdkBuilder.build()
 }

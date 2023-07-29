@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The conditional formatting for the text.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -82,44 +90,32 @@ public class CfnDashboardTextConditionalFormatPropertyDsl {
     private val cdkBuilder: CfnDashboard.TextConditionalFormatProperty.Builder =
         CfnDashboard.TextConditionalFormatProperty.builder()
 
-    /**
-     * @param backgroundColor The conditional formatting for the text background color.
-     */
+    /** @param backgroundColor The conditional formatting for the text background color. */
     public fun backgroundColor(backgroundColor: IResolvable) {
         cdkBuilder.backgroundColor(backgroundColor)
     }
 
-    /**
-     * @param backgroundColor The conditional formatting for the text background color.
-     */
+    /** @param backgroundColor The conditional formatting for the text background color. */
     public fun backgroundColor(backgroundColor: CfnDashboard.ConditionalFormattingColorProperty) {
         cdkBuilder.backgroundColor(backgroundColor)
     }
 
-    /**
-     * @param icon The conditional formatting for the icon.
-     */
+    /** @param icon The conditional formatting for the icon. */
     public fun icon(icon: IResolvable) {
         cdkBuilder.icon(icon)
     }
 
-    /**
-     * @param icon The conditional formatting for the icon.
-     */
+    /** @param icon The conditional formatting for the icon. */
     public fun icon(icon: CfnDashboard.ConditionalFormattingIconProperty) {
         cdkBuilder.icon(icon)
     }
 
-    /**
-     * @param textColor The conditional formatting for the text color.
-     */
+    /** @param textColor The conditional formatting for the text color. */
     public fun textColor(textColor: IResolvable) {
         cdkBuilder.textColor(textColor)
     }
 
-    /**
-     * @param textColor The conditional formatting for the text color.
-     */
+    /** @param textColor The conditional formatting for the text color. */
     public fun textColor(textColor: CfnDashboard.ConditionalFormattingColorProperty) {
         cdkBuilder.textColor(textColor)
     }

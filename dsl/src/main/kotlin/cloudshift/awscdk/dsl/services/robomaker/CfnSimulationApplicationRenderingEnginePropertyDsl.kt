@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.robomaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.robomaker.CfnSimulationApplication
  * Information about a rendering engine.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.robomaker.CfnSimulationApplication
  */
 @CdkDslMarker
 public class CfnSimulationApplicationRenderingEnginePropertyDsl {
-  private val cdkBuilder: CfnSimulationApplication.RenderingEngineProperty.Builder =
-      CfnSimulationApplication.RenderingEngineProperty.builder()
+    private val cdkBuilder: CfnSimulationApplication.RenderingEngineProperty.Builder =
+        CfnSimulationApplication.RenderingEngineProperty.builder()
 
-  /**
-   * @param name The name of the rendering engine. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the rendering engine. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param version The version of the rendering engine. 
-   */
-  public fun version(version: String) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The version of the rendering engine. */
+    public fun version(version: String) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): CfnSimulationApplication.RenderingEngineProperty = cdkBuilder.build()
+    public fun build(): CfnSimulationApplication.RenderingEngineProperty = cdkBuilder.build()
 }

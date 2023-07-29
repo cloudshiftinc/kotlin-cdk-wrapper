@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.devopsguru
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.devopsguru.CfnNotificationChannelProps
  * Properties for defining a `CfnNotificationChannel`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,24 +41,24 @@ import software.amazon.awscdk.services.devopsguru.CfnNotificationChannelProps
  */
 @CdkDslMarker
 public class CfnNotificationChannelPropsDsl {
-  private val cdkBuilder: CfnNotificationChannelProps.Builder =
-      CfnNotificationChannelProps.builder()
+    private val cdkBuilder: CfnNotificationChannelProps.Builder =
+        CfnNotificationChannelProps.builder()
 
-  /**
-   * @param config A `NotificationChannelConfig` object that contains information about configured
-   * notification channels. 
-   */
-  public fun config(config: IResolvable) {
-    cdkBuilder.config(config)
-  }
+    /**
+     * @param config A `NotificationChannelConfig` object that contains information about configured
+     *   notification channels.
+     */
+    public fun config(config: IResolvable) {
+        cdkBuilder.config(config)
+    }
 
-  /**
-   * @param config A `NotificationChannelConfig` object that contains information about configured
-   * notification channels. 
-   */
-  public fun config(config: CfnNotificationChannel.NotificationChannelConfigProperty) {
-    cdkBuilder.config(config)
-  }
+    /**
+     * @param config A `NotificationChannelConfig` object that contains information about configured
+     *   notification channels.
+     */
+    public fun config(config: CfnNotificationChannel.NotificationChannelConfigProperty) {
+        cdkBuilder.config(config)
+    }
 
-  public fun build(): CfnNotificationChannelProps = cdkBuilder.build()
+    public fun build(): CfnNotificationChannelProps = cdkBuilder.build()
 }

@@ -1,22 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * The source credentials used when contacting the BitBucket API.
  *
- * **Note**: CodeBuild only allows a single credential for BitBucket
- * to be saved in a given AWS account in a given region -
- * any attempt to add more than one will result in an error.
+ * **Note**: CodeBuild only allows a single credential for BitBucket to be saved in a given AWS
+ * account in a given region - any attempt to add more than one will result in an error.
  *
  * Example:
- *
  * ```
  * BitBucketSourceCredentials.Builder.create(this, "CodeBuildBitBucketCreds")
  * .username(SecretValue.secretsManager("my-bitbucket-creds",
@@ -29,7 +36,7 @@ import kotlin.String
 @CdkDslMarker
 public class BitBucketSourceCredentialsDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: BitBucketSourceCredentials.Builder =
         BitBucketSourceCredentials.Builder.create(scope, id)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.glue.CfnCrawler
  * Specifies an Amazon DynamoDB table to crawl.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.glue.CfnCrawler
  */
 @CdkDslMarker
 public class CfnCrawlerDynamoDBTargetPropertyDsl {
-  private val cdkBuilder: CfnCrawler.DynamoDBTargetProperty.Builder =
-      CfnCrawler.DynamoDBTargetProperty.builder()
+    private val cdkBuilder: CfnCrawler.DynamoDBTargetProperty.Builder =
+        CfnCrawler.DynamoDBTargetProperty.builder()
 
-  /**
-   * @param path The name of the DynamoDB table to crawl.
-   */
-  public fun path(path: String) {
-    cdkBuilder.path(path)
-  }
+    /** @param path The name of the DynamoDB table to crawl. */
+    public fun path(path: String) {
+        cdkBuilder.path(path)
+    }
 
-  public fun build(): CfnCrawler.DynamoDBTargetProperty = cdkBuilder.build()
+    public fun build(): CfnCrawler.DynamoDBTargetProperty = cdkBuilder.build()
 }

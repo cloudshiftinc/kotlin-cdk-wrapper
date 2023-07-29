@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The sort configuration of a pie chart.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -92,7 +100,7 @@ public class CfnTemplatePieChartSortConfigurationPropertyDsl {
 
     /**
      * @param categoryItemsLimit The limit on the number of categories that are displayed in a pie
-     * chart.
+     *   chart.
      */
     public fun categoryItemsLimit(categoryItemsLimit: IResolvable) {
         cdkBuilder.categoryItemsLimit(categoryItemsLimit)
@@ -100,66 +108,56 @@ public class CfnTemplatePieChartSortConfigurationPropertyDsl {
 
     /**
      * @param categoryItemsLimit The limit on the number of categories that are displayed in a pie
-     * chart.
+     *   chart.
      */
     public fun categoryItemsLimit(categoryItemsLimit: CfnTemplate.ItemsLimitConfigurationProperty) {
         cdkBuilder.categoryItemsLimit(categoryItemsLimit)
     }
 
-    /**
-     * @param categorySort The sort configuration of the category fields.
-     */
+    /** @param categorySort The sort configuration of the category fields. */
     public fun categorySort(vararg categorySort: Any) {
         _categorySort.addAll(listOf(*categorySort))
     }
 
-    /**
-     * @param categorySort The sort configuration of the category fields.
-     */
+    /** @param categorySort The sort configuration of the category fields. */
     public fun categorySort(categorySort: Collection<Any>) {
         _categorySort.addAll(categorySort)
     }
 
-    /**
-     * @param categorySort The sort configuration of the category fields.
-     */
+    /** @param categorySort The sort configuration of the category fields. */
     public fun categorySort(categorySort: IResolvable) {
         cdkBuilder.categorySort(categorySort)
     }
 
     /**
-     * @param smallMultiplesLimitConfiguration The limit on the number of small multiples panels that
-     * are displayed.
+     * @param smallMultiplesLimitConfiguration The limit on the number of small multiples panels
+     *   that are displayed.
      */
     public fun smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration: IResolvable) {
         cdkBuilder.smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration)
     }
 
     /**
-     * @param smallMultiplesLimitConfiguration The limit on the number of small multiples panels that
-     * are displayed.
+     * @param smallMultiplesLimitConfiguration The limit on the number of small multiples panels
+     *   that are displayed.
      */
-    public fun smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration: CfnTemplate.ItemsLimitConfigurationProperty) {
+    public fun smallMultiplesLimitConfiguration(
+        smallMultiplesLimitConfiguration: CfnTemplate.ItemsLimitConfigurationProperty
+    ) {
         cdkBuilder.smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration)
     }
 
-    /**
-     * @param smallMultiplesSort The sort configuration of the small multiples field.
-     */
+    /** @param smallMultiplesSort The sort configuration of the small multiples field. */
     public fun smallMultiplesSort(vararg smallMultiplesSort: Any) {
         _smallMultiplesSort.addAll(listOf(*smallMultiplesSort))
     }
 
-    /**
-     * @param smallMultiplesSort The sort configuration of the small multiples field.
-     */
+    /** @param smallMultiplesSort The sort configuration of the small multiples field. */
     public fun smallMultiplesSort(smallMultiplesSort: Collection<Any>) {
         _smallMultiplesSort.addAll(smallMultiplesSort)
     }
 
-    /**
-     * @param smallMultiplesSort The sort configuration of the small multiples field.
-     */
+    /** @param smallMultiplesSort The sort configuration of the small multiples field. */
     public fun smallMultiplesSort(smallMultiplesSort: IResolvable) {
         cdkBuilder.smallMultiplesSort(smallMultiplesSort)
     }

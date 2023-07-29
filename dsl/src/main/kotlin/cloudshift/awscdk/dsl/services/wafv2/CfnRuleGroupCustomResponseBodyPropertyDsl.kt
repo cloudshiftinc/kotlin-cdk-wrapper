@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * This is referenced by key from `CustomResponse` `CustomResponseBodyKey` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,28 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupCustomResponseBodyPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.CustomResponseBodyProperty.Builder =
-      CfnRuleGroup.CustomResponseBodyProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.CustomResponseBodyProperty.Builder =
+        CfnRuleGroup.CustomResponseBodyProperty.builder()
 
-  /**
-   * @param content The payload of the custom response. 
-   * You can use JSON escape strings in JSON content. To do this, you must specify JSON content in
-   * the `ContentType` setting.
-   *
-   * For information about the limits on count and size for custom request and response settings,
-   * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the
-   * *AWS WAF Developer Guide* .
-   */
-  public fun content(content: String) {
-    cdkBuilder.content(content)
-  }
+    /**
+     * @param content The payload of the custom response. You can use JSON escape strings in JSON
+     *   content. To do this, you must specify JSON content in the `ContentType` setting.
+     *
+     * For information about the limits on count and size for custom request and response settings,
+     * see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in
+     * the *AWS WAF Developer Guide* .
+     */
+    public fun content(content: String) {
+        cdkBuilder.content(content)
+    }
 
-  /**
-   * @param contentType The type of content in the payload that you are defining in the `Content`
-   * string. 
-   */
-  public fun contentType(contentType: String) {
-    cdkBuilder.contentType(contentType)
-  }
+    /**
+     * @param contentType The type of content in the payload that you are defining in the `Content`
+     *   string.
+     */
+    public fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+    }
 
-  public fun build(): CfnRuleGroup.CustomResponseBodyProperty = cdkBuilder.build()
+    public fun build(): CfnRuleGroup.CustomResponseBodyProperty = cdkBuilder.build()
 }

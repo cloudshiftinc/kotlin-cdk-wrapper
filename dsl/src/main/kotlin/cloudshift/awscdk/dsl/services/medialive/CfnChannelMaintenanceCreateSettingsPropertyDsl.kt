@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,22 +32,18 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelMaintenanceCreateSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.MaintenanceCreateSettingsProperty.Builder =
-      CfnChannel.MaintenanceCreateSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.MaintenanceCreateSettingsProperty.Builder =
+        CfnChannel.MaintenanceCreateSettingsProperty.builder()
 
-  /**
-   * @param maintenanceDay the value to be set.
-   */
-  public fun maintenanceDay(maintenanceDay: String) {
-    cdkBuilder.maintenanceDay(maintenanceDay)
-  }
+    /** @param maintenanceDay the value to be set. */
+    public fun maintenanceDay(maintenanceDay: String) {
+        cdkBuilder.maintenanceDay(maintenanceDay)
+    }
 
-  /**
-   * @param maintenanceStartTime the value to be set.
-   */
-  public fun maintenanceStartTime(maintenanceStartTime: String) {
-    cdkBuilder.maintenanceStartTime(maintenanceStartTime)
-  }
+    /** @param maintenanceStartTime the value to be set. */
+    public fun maintenanceStartTime(maintenanceStartTime: String) {
+        cdkBuilder.maintenanceStartTime(maintenanceStartTime)
+    }
 
-  public fun build(): CfnChannel.MaintenanceCreateSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.MaintenanceCreateSettingsProperty = cdkBuilder.build()
 }

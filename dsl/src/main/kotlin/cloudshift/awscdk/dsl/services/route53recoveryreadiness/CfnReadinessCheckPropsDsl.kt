@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53recoveryreadiness
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessChec
  * Properties for defining a `CfnReadinessCheck`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,40 +42,32 @@ import software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessChec
  */
 @CdkDslMarker
 public class CfnReadinessCheckPropsDsl {
-  private val cdkBuilder: CfnReadinessCheckProps.Builder = CfnReadinessCheckProps.builder()
+    private val cdkBuilder: CfnReadinessCheckProps.Builder = CfnReadinessCheckProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param readinessCheckName The name of the readiness check to create.
-   */
-  public fun readinessCheckName(readinessCheckName: String) {
-    cdkBuilder.readinessCheckName(readinessCheckName)
-  }
+    /** @param readinessCheckName The name of the readiness check to create. */
+    public fun readinessCheckName(readinessCheckName: String) {
+        cdkBuilder.readinessCheckName(readinessCheckName)
+    }
 
-  /**
-   * @param resourceSetName The name of the resource set to check.
-   */
-  public fun resourceSetName(resourceSetName: String) {
-    cdkBuilder.resourceSetName(resourceSetName)
-  }
+    /** @param resourceSetName The name of the resource set to check. */
+    public fun resourceSetName(resourceSetName: String) {
+        cdkBuilder.resourceSetName(resourceSetName)
+    }
 
-  /**
-   * @param tags A collection of tags associated with a resource.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags A collection of tags associated with a resource. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags A collection of tags associated with a resource.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags A collection of tags associated with a resource. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnReadinessCheckProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnReadinessCheckProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

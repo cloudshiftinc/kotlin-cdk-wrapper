@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * An object representing the gateway route host name to match.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteGatewayRouteHostnameMatchPropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.GatewayRouteHostnameMatchProperty.Builder =
-      CfnGatewayRoute.GatewayRouteHostnameMatchProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.GatewayRouteHostnameMatchProperty.Builder =
+        CfnGatewayRoute.GatewayRouteHostnameMatchProperty.builder()
 
-  /**
-   * @param exact The exact host name to match on.
-   */
-  public fun exact(exact: String) {
-    cdkBuilder.exact(exact)
-  }
+    /** @param exact The exact host name to match on. */
+    public fun exact(exact: String) {
+        cdkBuilder.exact(exact)
+    }
 
-  /**
-   * @param suffix The specified ending characters of the host name to match on.
-   */
-  public fun suffix(suffix: String) {
-    cdkBuilder.suffix(suffix)
-  }
+    /** @param suffix The specified ending characters of the host name to match on. */
+    public fun suffix(suffix: String) {
+        cdkBuilder.suffix(suffix)
+    }
 
-  public fun build(): CfnGatewayRoute.GatewayRouteHostnameMatchProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.GatewayRouteHostnameMatchProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,37 +21,34 @@ import software.constructs.Construct
  * Specifies a Spot Fleet request.
  *
  * The Spot Fleet request specifies the total target capacity and the On-Demand target capacity.
- * Amazon EC2 calculates the difference between the total capacity and On-Demand capacity, and launches
- * the difference as Spot capacity.
+ * Amazon EC2 calculates the difference between the total capacity and On-Demand capacity, and
+ * launches the difference as Spot capacity.
  *
  * You can submit a single request that includes multiple launch specifications that vary by
  * instance type, AMI, Availability Zone, or subnet.
  *
  * By default, the Spot Fleet requests Spot Instances in the Spot Instance pool where the price per
- * unit is the lowest. Each launch specification can include its own instance weighting that reflects
- * the value of the instance type to your application workload.
+ * unit is the lowest. Each launch specification can include its own instance weighting that
+ * reflects the value of the instance type to your application workload.
  *
  * Alternatively, you can specify that the Spot Fleet distribute the target capacity across the Spot
- * pools included in its launch specifications. By ensuring that the Spot Instances in your Spot Fleet
- * are in different Spot pools, you can improve the availability of your fleet.
+ * pools included in its launch specifications. By ensuring that the Spot Instances in your Spot
+ * Fleet are in different Spot pools, you can improve the availability of your fleet.
  *
  * You can specify tags for the Spot Fleet request and instances launched by the fleet. You cannot
  * tag other resource types in a Spot Fleet request because only the `spot-fleet-request` and
  * `instance` resource types are supported.
  *
- * For more information, see [Spot
- * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User
- * Guide for Linux Instances* .
- *
+ * For more information, see
+ * [Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon
+ * EC2 User Guide for Linux Instances* .
  *
  * We strongly discourage using the RequestSpotFleet API because it is a legacy API with no planned
- * investment. For options for requesting Spot Instances, see [Which is the best Spot request method to
- * use?](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use)
+ * investment. For options for requesting Spot Instances, see
+ * [Which is the best Spot request method to use?](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use)
  * in the *Amazon EC2 User Guide for Linux Instances* .
  *
- *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -288,31 +294,34 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnSpotFleetDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnSpotFleet.Builder = CfnSpotFleet.Builder.create(scope, id)
+    private val cdkBuilder: CfnSpotFleet.Builder = CfnSpotFleet.Builder.create(scope, id)
 
-  /**
-   * Describes the configuration of a Spot Fleet request.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata)
-   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
-   */
-  public fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
-    cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
-  }
+    /**
+     * Describes the configuration of a Spot Fleet request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata)
+     *
+     * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request.
+     */
+    public fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
+        cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
+    }
 
-  /**
-   * Describes the configuration of a Spot Fleet request.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata)
-   * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
-   */
-  public
-      fun spotFleetRequestConfigData(spotFleetRequestConfigData: CfnSpotFleet.SpotFleetRequestConfigDataProperty) {
-    cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
-  }
+    /**
+     * Describes the configuration of a Spot Fleet request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata)
+     *
+     * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request.
+     */
+    public fun spotFleetRequestConfigData(
+        spotFleetRequestConfigData: CfnSpotFleet.SpotFleetRequestConfigDataProperty
+    ) {
+        cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData)
+    }
 
-  public fun build(): CfnSpotFleet = cdkBuilder.build()
+    public fun build(): CfnSpotFleet = cdkBuilder.build()
 }

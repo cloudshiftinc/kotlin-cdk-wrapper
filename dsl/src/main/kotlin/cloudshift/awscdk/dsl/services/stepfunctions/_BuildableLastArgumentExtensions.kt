@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -29,18 +38,18 @@ import software.amazon.awscdk.services.stepfunctions.TaskStateBase
 import software.constructs.Construct
 
 /**
- * @param scope 
- * @param sfnPrincipal 
- * @param sfnProps 
+ * @param scope
+ * @param sfnPrincipal
+ * @param sfnProps
  */
 public inline fun DefinitionBody.bind(
-  arg0: Construct,
-  arg1: IPrincipal,
-  block: StateMachinePropsDsl.() -> Unit = {},
+    arg0: Construct,
+    arg1: IPrincipal,
+    block: StateMachinePropsDsl.() -> Unit = {},
 ): DefinitionConfig {
-  val builder = StateMachinePropsDsl()
-  builder.apply(block)
-  return bind(arg0, arg1, builder.build())
+    val builder = StateMachinePropsDsl()
+    builder.apply(block)
+    return bind(arg0, arg1, builder.build())
 }
 
 /**
@@ -48,30 +57,31 @@ public inline fun DefinitionBody.bind(
  *
  * This can be used to add error handling to a sequence of states.
  *
- * Be aware that this changes the result of the inner state machine
- * to be an array with the result of the state machine in it. Adjust
- * your paths accordingly. For example, change 'outputPath' to
+ * Be aware that this changes the result of the inner state machine to be an array with the result
+ * of the state machine in it. Adjust your paths accordingly. For example, change 'outputPath' to
  * '$[0]'.
  *
- * @param id 
+ * @param id
  * @param props
  */
-public inline fun Chain.toSingleState(id: String, block: ParallelPropsDsl.() -> Unit = {}):
-    Parallel {
-  val builder = ParallelPropsDsl()
-  builder.apply(block)
-  return toSingleState(id, builder.build())
+public inline fun Chain.toSingleState(
+    id: String,
+    block: ParallelPropsDsl.() -> Unit = {}
+): Parallel {
+    val builder = ParallelPropsDsl()
+    builder.apply(block)
+    return toSingleState(id, builder.build())
 }
 
 /**
  * Register a Policy Statement used by states in this graph.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun StateGraph.registerPolicyStatement(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return registerPolicyStatement(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return registerPolicyStatement(builder.build())
 }
 
 /**
@@ -79,14 +89,16 @@ public inline fun StateGraph.registerPolicyStatement(block: PolicyStatementDsl.(
  *
  * Default: sum over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun Activity.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun Activity.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -97,9 +109,9 @@ public inline fun Activity.metric(metricName: String, block: MetricOptionsDsl.()
  * @param props
  */
 public inline fun Activity.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFailed(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricFailed(builder.build())
 }
 
 /**
@@ -109,11 +121,12 @@ public inline fun Activity.metricFailed(block: MetricOptionsDsl.() -> Unit = {})
  *
  * @param props
  */
-public inline fun Activity.metricHeartbeatTimedOut(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHeartbeatTimedOut(builder.build())
+public inline fun Activity.metricHeartbeatTimedOut(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHeartbeatTimedOut(builder.build())
 }
 
 /**
@@ -124,9 +137,9 @@ public inline fun Activity.metricHeartbeatTimedOut(block: MetricOptionsDsl.() ->
  * @param props
  */
 public inline fun Activity.metricRunTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricRunTime(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricRunTime(builder.build())
 }
 
 /**
@@ -137,9 +150,9 @@ public inline fun Activity.metricRunTime(block: MetricOptionsDsl.() -> Unit = {}
  * @param props
  */
 public inline fun Activity.metricScheduled(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricScheduled(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricScheduled(builder.build())
 }
 
 /**
@@ -150,9 +163,9 @@ public inline fun Activity.metricScheduled(block: MetricOptionsDsl.() -> Unit = 
  * @param props
  */
 public inline fun Activity.metricScheduleTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricScheduleTime(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricScheduleTime(builder.build())
 }
 
 /**
@@ -163,9 +176,9 @@ public inline fun Activity.metricScheduleTime(block: MetricOptionsDsl.() -> Unit
  * @param props
  */
 public inline fun Activity.metricStarted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricStarted(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricStarted(builder.build())
 }
 
 /**
@@ -176,9 +189,9 @@ public inline fun Activity.metricStarted(block: MetricOptionsDsl.() -> Unit = {}
  * @param props
  */
 public inline fun Activity.metricSucceeded(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSucceeded(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSucceeded(builder.build())
 }
 
 /**
@@ -189,9 +202,9 @@ public inline fun Activity.metricSucceeded(block: MetricOptionsDsl.() -> Unit = 
  * @param props
  */
 public inline fun Activity.metricTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTime(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTime(builder.build())
 }
 
 /**
@@ -202,29 +215,28 @@ public inline fun Activity.metricTime(block: MetricOptionsDsl.() -> Unit = {}): 
  * @param props
  */
 public inline fun Activity.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTimedOut(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTimedOut(builder.build())
 }
 
 /**
  * Wrap all states in this state machine fragment up into a single state.
  *
- * This can be used to add retry or error handling onto this state
- * machine fragment.
+ * This can be used to add retry or error handling onto this state machine fragment.
  *
- * Be aware that this changes the result of the inner state machine
- * to be an array with the result of the state machine in it. Adjust
- * your paths accordingly. For example, change 'outputPath' to
+ * Be aware that this changes the result of the inner state machine to be an array with the result
+ * of the state machine in it. Adjust your paths accordingly. For example, change 'outputPath' to
  * '$[0]'.
  *
  * @param options
  */
-public inline fun StateMachineFragment.toSingleState(block: SingleStateOptionsDsl.() -> Unit = {}):
-    Parallel {
-  val builder = SingleStateOptionsDsl()
-  builder.apply(block)
-  return toSingleState(builder.build())
+public inline fun StateMachineFragment.toSingleState(
+    block: SingleStateOptionsDsl.() -> Unit = {}
+): Parallel {
+    val builder = SingleStateOptionsDsl()
+    builder.apply(block)
+    return toSingleState(builder.build())
 }
 
 /**
@@ -232,14 +244,16 @@ public inline fun StateMachineFragment.toSingleState(block: SingleStateOptionsDs
  *
  * Default: - sum over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun IStateMachine.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(arg0, builder.build())
+public inline fun IStateMachine.metric(
+    arg0: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(arg0, builder.build())
 }
 
 /**
@@ -250,9 +264,9 @@ public inline fun IStateMachine.metric(arg0: String, block: MetricOptionsDsl.() 
  * @param props
  */
 public inline fun IStateMachine.metricAborted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricAborted(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricAborted(builder.build())
 }
 
 /**
@@ -263,9 +277,9 @@ public inline fun IStateMachine.metricAborted(block: MetricOptionsDsl.() -> Unit
  * @param props
  */
 public inline fun IStateMachine.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFailed(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricFailed(builder.build())
 }
 
 /**
@@ -276,9 +290,9 @@ public inline fun IStateMachine.metricFailed(block: MetricOptionsDsl.() -> Unit 
  * @param props
  */
 public inline fun IStateMachine.metricStarted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricStarted(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricStarted(builder.build())
 }
 
 /**
@@ -289,9 +303,9 @@ public inline fun IStateMachine.metricStarted(block: MetricOptionsDsl.() -> Unit
  * @param props
  */
 public inline fun IStateMachine.metricSucceeded(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSucceeded(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSucceeded(builder.build())
 }
 
 /**
@@ -302,9 +316,9 @@ public inline fun IStateMachine.metricSucceeded(block: MetricOptionsDsl.() -> Un
  * @param props
  */
 public inline fun IStateMachine.metricThrottled(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricThrottled(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottled(builder.build())
 }
 
 /**
@@ -316,9 +330,9 @@ public inline fun IStateMachine.metricThrottled(block: MetricOptionsDsl.() -> Un
  * @param props
  */
 public inline fun IStateMachine.metricTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTime(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTime(builder.build())
 }
 
 /**
@@ -329,9 +343,9 @@ public inline fun IStateMachine.metricTime(block: MetricOptionsDsl.() -> Unit = 
  * @param props
  */
 public inline fun IStateMachine.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTimedOut(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTimedOut(builder.build())
 }
 
 /**
@@ -342,20 +356,20 @@ public inline fun IStateMachine.metricTimedOut(block: MetricOptionsDsl.() -> Uni
  * @param options
  */
 public inline fun Choice.afterwards(block: AfterwardsOptionsDsl.() -> Unit = {}): Chain {
-  val builder = AfterwardsOptionsDsl()
-  builder.apply(block)
-  return afterwards(builder.build())
+    val builder = AfterwardsOptionsDsl()
+    builder.apply(block)
+    return afterwards(builder.build())
 }
 
 /**
  * Add the given statement to the role's policy.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun StateMachine.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToRolePolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToRolePolicy(builder.build())
 }
 
 /**
@@ -363,14 +377,16 @@ public inline fun StateMachine.addToRolePolicy(block: PolicyStatementDsl.() -> U
  *
  * Default: - sum over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun StateMachine.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun StateMachine.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -381,9 +397,9 @@ public inline fun StateMachine.metric(metricName: String, block: MetricOptionsDs
  * @param props
  */
 public inline fun StateMachine.metricAborted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricAborted(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricAborted(builder.build())
 }
 
 /**
@@ -394,9 +410,9 @@ public inline fun StateMachine.metricAborted(block: MetricOptionsDsl.() -> Unit 
  * @param props
  */
 public inline fun StateMachine.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFailed(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricFailed(builder.build())
 }
 
 /**
@@ -407,9 +423,9 @@ public inline fun StateMachine.metricFailed(block: MetricOptionsDsl.() -> Unit =
  * @param props
  */
 public inline fun StateMachine.metricStarted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricStarted(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricStarted(builder.build())
 }
 
 /**
@@ -420,9 +436,9 @@ public inline fun StateMachine.metricStarted(block: MetricOptionsDsl.() -> Unit 
  * @param props
  */
 public inline fun StateMachine.metricSucceeded(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSucceeded(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSucceeded(builder.build())
 }
 
 /**
@@ -433,9 +449,9 @@ public inline fun StateMachine.metricSucceeded(block: MetricOptionsDsl.() -> Uni
  * @param props
  */
 public inline fun StateMachine.metricThrottled(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricThrottled(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottled(builder.build())
 }
 
 /**
@@ -447,9 +463,9 @@ public inline fun StateMachine.metricThrottled(block: MetricOptionsDsl.() -> Uni
  * @param props
  */
 public inline fun StateMachine.metricTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTime(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTime(builder.build())
 }
 
 /**
@@ -460,161 +476,156 @@ public inline fun StateMachine.metricTime(block: MetricOptionsDsl.() -> Unit = {
  * @param props
  */
 public inline fun StateMachine.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTimedOut(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTimedOut(builder.build())
+}
+
+/** The name of the S3 bucket where the state machine definition is stored. */
+public inline fun CfnStateMachine.setDefinitionS3Location(
+    block: CfnStateMachineS3LocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineS3LocationPropertyDsl()
+    builder.apply(block)
+    return setDefinitionS3Location(builder.build())
+}
+
+/** Defines what execution history events are logged and where they are logged. */
+public inline fun CfnStateMachine.setLoggingConfiguration(
+    block: CfnStateMachineLoggingConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineLoggingConfigurationPropertyDsl()
+    builder.apply(block)
+    return setLoggingConfiguration(builder.build())
+}
+
+/** Selects whether or not the state machine's AWS X-Ray tracing is enabled. */
+public inline fun CfnStateMachine.setTracingConfiguration(
+    block: CfnStateMachineTracingConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineTracingConfigurationPropertyDsl()
+    builder.apply(block)
+    return setTracingConfiguration(builder.build())
 }
 
 /**
- * The name of the S3 bucket where the state machine definition is stored.
- */
-public inline
-    fun CfnStateMachine.setDefinitionS3Location(block: CfnStateMachineS3LocationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStateMachineS3LocationPropertyDsl()
-  builder.apply(block)
-  return setDefinitionS3Location(builder.build())
-}
-
-/**
- * Defines what execution history events are logged and where they are logged.
- */
-public inline
-    fun CfnStateMachine.setLoggingConfiguration(block: CfnStateMachineLoggingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStateMachineLoggingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setLoggingConfiguration(builder.build())
-}
-
-/**
- * Selects whether or not the state machine's AWS X-Ray tracing is enabled.
- */
-public inline
-    fun CfnStateMachine.setTracingConfiguration(block: CfnStateMachineTracingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStateMachineTracingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setTracingConfiguration(builder.build())
-}
-
-/**
- * @param _scope 
- * @param _sfnPrincipal 
- * @param _sfnProps 
+ * @param _scope
+ * @param _sfnPrincipal
+ * @param _sfnProps
  */
 public inline fun StringDefinitionBody.bind(
-  _scope: Construct,
-  _sfnPrincipal: IPrincipal,
-  block: StateMachinePropsDsl.() -> Unit = {},
+    _scope: Construct,
+    _sfnPrincipal: IPrincipal,
+    block: StateMachinePropsDsl.() -> Unit = {},
 ): DefinitionConfig {
-  val builder = StateMachinePropsDsl()
-  builder.apply(block)
-  return bind(_scope, _sfnPrincipal, builder.build())
+    val builder = StateMachinePropsDsl()
+    builder.apply(block)
+    return bind(_scope, _sfnPrincipal, builder.build())
 }
 
 /**
- * @param scope 
- * @param sfnPrincipal 
- * @param sfnProps 
+ * @param scope
+ * @param sfnPrincipal
+ * @param sfnProps
  */
 public inline fun ChainDefinitionBody.bind(
-  scope: Construct,
-  sfnPrincipal: IPrincipal,
-  block: StateMachinePropsDsl.() -> Unit = {},
+    scope: Construct,
+    sfnPrincipal: IPrincipal,
+    block: StateMachinePropsDsl.() -> Unit = {},
 ): DefinitionConfig {
-  val builder = StateMachinePropsDsl()
-  builder.apply(block)
-  return bind(scope, sfnPrincipal, builder.build())
+    val builder = StateMachinePropsDsl()
+    builder.apply(block)
+    return bind(scope, sfnPrincipal, builder.build())
 }
 
 /**
  * Add a recovery handler for this state.
  *
- * When a particular error occurs, execution will continue at the error
- * handler instead of failing the state machine execution.
+ * When a particular error occurs, execution will continue at the error handler instead of failing
+ * the state machine execution.
  *
- * @param handler 
+ * @param handler
  * @param props
  */
-public inline fun Parallel.addCatch(handler: IChainable, block: CatchPropsDsl.() -> Unit = {}):
-    Parallel {
-  val builder = CatchPropsDsl()
-  builder.apply(block)
-  return addCatch(handler, builder.build())
+public inline fun Parallel.addCatch(
+    handler: IChainable,
+    block: CatchPropsDsl.() -> Unit = {}
+): Parallel {
+    val builder = CatchPropsDsl()
+    builder.apply(block)
+    return addCatch(handler, builder.build())
 }
 
 /**
  * Add retry configuration for this state.
  *
- * This controls if and how the execution will be retried if a particular
- * error occurs.
+ * This controls if and how the execution will be retried if a particular error occurs.
  *
  * @param props
  */
 public inline fun Parallel.addRetry(block: RetryPropsDsl.() -> Unit = {}): Parallel {
-  val builder = RetryPropsDsl()
-  builder.apply(block)
-  return addRetry(builder.build())
+    val builder = RetryPropsDsl()
+    builder.apply(block)
+    return addRetry(builder.build())
 }
 
 /**
  * Add a recovery handler for this state.
  *
- * When a particular error occurs, execution will continue at the error
- * handler instead of failing the state machine execution.
+ * When a particular error occurs, execution will continue at the error handler instead of failing
+ * the state machine execution.
  *
- * @param handler 
+ * @param handler
  * @param props
  */
 public inline fun Map.addCatch(handler: IChainable, block: CatchPropsDsl.() -> Unit = {}): Map {
-  val builder = CatchPropsDsl()
-  builder.apply(block)
-  return addCatch(handler, builder.build())
+    val builder = CatchPropsDsl()
+    builder.apply(block)
+    return addCatch(handler, builder.build())
 }
 
 /**
  * Add retry configuration for this state.
  *
- * This controls if and how the execution will be retried if a particular
- * error occurs.
+ * This controls if and how the execution will be retried if a particular error occurs.
  *
  * @param props
  */
 public inline fun Map.addRetry(block: RetryPropsDsl.() -> Unit = {}): Map {
-  val builder = RetryPropsDsl()
-  builder.apply(block)
-  return addRetry(builder.build())
+    val builder = RetryPropsDsl()
+    builder.apply(block)
+    return addRetry(builder.build())
 }
 
 /**
  * Add a recovery handler for this state.
  *
- * When a particular error occurs, execution will continue at the error
- * handler instead of failing the state machine execution.
+ * When a particular error occurs, execution will continue at the error handler instead of failing
+ * the state machine execution.
  *
- * @param handler 
+ * @param handler
  * @param props
  */
-public inline fun TaskStateBase.addCatch(handler: IChainable, block: CatchPropsDsl.() -> Unit = {}):
-    TaskStateBase {
-  val builder = CatchPropsDsl()
-  builder.apply(block)
-  return addCatch(handler, builder.build())
+public inline fun TaskStateBase.addCatch(
+    handler: IChainable,
+    block: CatchPropsDsl.() -> Unit = {}
+): TaskStateBase {
+    val builder = CatchPropsDsl()
+    builder.apply(block)
+    return addCatch(handler, builder.build())
 }
 
 /**
  * Add retry configuration for this state.
  *
- * This controls if and how the execution will be retried if a particular
- * error occurs.
+ * This controls if and how the execution will be retried if a particular error occurs.
  *
  * @param props
  */
 public inline fun TaskStateBase.addRetry(block: RetryPropsDsl.() -> Unit = {}): TaskStateBase {
-  val builder = RetryPropsDsl()
-  builder.apply(block)
-  return addRetry(builder.build())
+    val builder = RetryPropsDsl()
+    builder.apply(block)
+    return addRetry(builder.build())
 }
 
 /**
@@ -622,14 +633,16 @@ public inline fun TaskStateBase.addRetry(block: RetryPropsDsl.() -> Unit = {}): 
  *
  * Default: - sum over 5 minutes
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun TaskStateBase.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun TaskStateBase.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -640,9 +653,9 @@ public inline fun TaskStateBase.metric(metricName: String, block: MetricOptionsD
  * @param props
  */
 public inline fun TaskStateBase.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFailed(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricFailed(builder.build())
 }
 
 /**
@@ -652,11 +665,12 @@ public inline fun TaskStateBase.metricFailed(block: MetricOptionsDsl.() -> Unit 
  *
  * @param props
  */
-public inline fun TaskStateBase.metricHeartbeatTimedOut(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricHeartbeatTimedOut(builder.build())
+public inline fun TaskStateBase.metricHeartbeatTimedOut(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricHeartbeatTimedOut(builder.build())
 }
 
 /**
@@ -667,9 +681,9 @@ public inline fun TaskStateBase.metricHeartbeatTimedOut(block: MetricOptionsDsl.
  * @param props
  */
 public inline fun TaskStateBase.metricRunTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricRunTime(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricRunTime(builder.build())
 }
 
 /**
@@ -680,9 +694,9 @@ public inline fun TaskStateBase.metricRunTime(block: MetricOptionsDsl.() -> Unit
  * @param props
  */
 public inline fun TaskStateBase.metricScheduled(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricScheduled(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricScheduled(builder.build())
 }
 
 /**
@@ -692,11 +706,12 @@ public inline fun TaskStateBase.metricScheduled(block: MetricOptionsDsl.() -> Un
  *
  * @param props
  */
-public inline fun TaskStateBase.metricScheduleTime(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricScheduleTime(builder.build())
+public inline fun TaskStateBase.metricScheduleTime(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricScheduleTime(builder.build())
 }
 
 /**
@@ -707,9 +722,9 @@ public inline fun TaskStateBase.metricScheduleTime(block: MetricOptionsDsl.() ->
  * @param props
  */
 public inline fun TaskStateBase.metricStarted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricStarted(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricStarted(builder.build())
 }
 
 /**
@@ -720,9 +735,9 @@ public inline fun TaskStateBase.metricStarted(block: MetricOptionsDsl.() -> Unit
  * @param props
  */
 public inline fun TaskStateBase.metricSucceeded(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSucceeded(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSucceeded(builder.build())
 }
 
 /**
@@ -733,9 +748,9 @@ public inline fun TaskStateBase.metricSucceeded(block: MetricOptionsDsl.() -> Un
  * @param props
  */
 public inline fun TaskStateBase.metricTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTime(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTime(builder.build())
 }
 
 /**
@@ -746,33 +761,31 @@ public inline fun TaskStateBase.metricTime(block: MetricOptionsDsl.() -> Unit = 
  * @param props
  */
 public inline fun TaskStateBase.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTimedOut(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricTimedOut(builder.build())
 }
 
 /**
- * @param scope 
- * @param _sfnPrincipal 
- * @param _sfnProps 
+ * @param scope
+ * @param _sfnPrincipal
+ * @param _sfnProps
  */
 public inline fun FileDefinitionBody.bind(
-  scope: Construct,
-  _sfnPrincipal: IPrincipal,
-  block: StateMachinePropsDsl.() -> Unit = {},
+    scope: Construct,
+    _sfnPrincipal: IPrincipal,
+    block: StateMachinePropsDsl.() -> Unit = {},
 ): DefinitionConfig {
-  val builder = StateMachinePropsDsl()
-  builder.apply(block)
-  return bind(scope, _sfnPrincipal, builder.build())
+    val builder = StateMachinePropsDsl()
+    builder.apply(block)
+    return bind(scope, _sfnPrincipal, builder.build())
 }
 
-/**
- * The settings that enable gradual state machine deployments.
- */
-public inline
-    fun CfnStateMachineAlias.setDeploymentPreference(block: CfnStateMachineAliasDeploymentPreferencePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStateMachineAliasDeploymentPreferencePropertyDsl()
-  builder.apply(block)
-  return setDeploymentPreference(builder.build())
+/** The settings that enable gradual state machine deployments. */
+public inline fun CfnStateMachineAlias.setDeploymentPreference(
+    block: CfnStateMachineAliasDeploymentPreferencePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineAliasDeploymentPreferencePropertyDsl()
+    builder.apply(block)
+    return setDeploymentPreference(builder.build())
 }

@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The configuration for a section-based layout.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -199,79 +207,59 @@ public class CfnTemplateSectionBasedLayoutConfigurationPropertyDsl {
 
     private val _headerSections: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param bodySections A list of body section configurations.
-     */
+    /** @param bodySections A list of body section configurations. */
     public fun bodySections(vararg bodySections: Any) {
         _bodySections.addAll(listOf(*bodySections))
     }
 
-    /**
-     * @param bodySections A list of body section configurations.
-     */
+    /** @param bodySections A list of body section configurations. */
     public fun bodySections(bodySections: Collection<Any>) {
         _bodySections.addAll(bodySections)
     }
 
-    /**
-     * @param bodySections A list of body section configurations.
-     */
+    /** @param bodySections A list of body section configurations. */
     public fun bodySections(bodySections: IResolvable) {
         cdkBuilder.bodySections(bodySections)
     }
 
-    /**
-     * @param canvasSizeOptions The options for the canvas of a section-based layout.
-     */
+    /** @param canvasSizeOptions The options for the canvas of a section-based layout. */
     public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
         cdkBuilder.canvasSizeOptions(canvasSizeOptions)
     }
 
-    /**
-     * @param canvasSizeOptions The options for the canvas of a section-based layout.
-     */
-    public fun canvasSizeOptions(canvasSizeOptions: CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty) {
+    /** @param canvasSizeOptions The options for the canvas of a section-based layout. */
+    public fun canvasSizeOptions(
+        canvasSizeOptions: CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty
+    ) {
         cdkBuilder.canvasSizeOptions(canvasSizeOptions)
     }
 
-    /**
-     * @param footerSections A list of footer section configurations.
-     */
+    /** @param footerSections A list of footer section configurations. */
     public fun footerSections(vararg footerSections: Any) {
         _footerSections.addAll(listOf(*footerSections))
     }
 
-    /**
-     * @param footerSections A list of footer section configurations.
-     */
+    /** @param footerSections A list of footer section configurations. */
     public fun footerSections(footerSections: Collection<Any>) {
         _footerSections.addAll(footerSections)
     }
 
-    /**
-     * @param footerSections A list of footer section configurations.
-     */
+    /** @param footerSections A list of footer section configurations. */
     public fun footerSections(footerSections: IResolvable) {
         cdkBuilder.footerSections(footerSections)
     }
 
-    /**
-     * @param headerSections A list of header section configurations.
-     */
+    /** @param headerSections A list of header section configurations. */
     public fun headerSections(vararg headerSections: Any) {
         _headerSections.addAll(listOf(*headerSections))
     }
 
-    /**
-     * @param headerSections A list of header section configurations.
-     */
+    /** @param headerSections A list of header section configurations. */
     public fun headerSections(headerSections: Collection<Any>) {
         _headerSections.addAll(headerSections)
     }
 
-    /**
-     * @param headerSections A list of header section configurations.
-     */
+    /** @param headerSections A list of header section configurations. */
     public fun headerSections(headerSections: IResolvable) {
         cdkBuilder.headerSections(headerSections)
     }

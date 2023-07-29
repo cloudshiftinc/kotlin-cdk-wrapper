@@ -1,8 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cxapi
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.List
+import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.ArtifactType
 import software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties
 import software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties
@@ -11,17 +25,11 @@ import software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties
 import software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties
 import software.amazon.awscdk.cxapi.CloudAssembly
 import software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact
-import kotlin.String
-import kotlin.collections.Collection
-import kotlin.collections.List
-import kotlin.collections.Map
-import kotlin.collections.MutableList
 
 /**
  * Asset manifest is a description of a set of assets which need to be built and published.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -72,7 +80,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class NestedCloudAssemblyArtifactDsl(
     assembly: CloudAssembly,
-    name: String
+    name: String,
 ) {
     private val cdkBuilder: NestedCloudAssemblyArtifact.Builder =
         NestedCloudAssemblyArtifact.Builder.create(assembly, name)

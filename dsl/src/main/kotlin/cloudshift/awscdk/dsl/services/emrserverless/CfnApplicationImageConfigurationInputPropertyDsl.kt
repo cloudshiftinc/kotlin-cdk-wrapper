@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emrserverless
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.emrserverless.CfnApplication
  * The image configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,17 +33,17 @@ import software.amazon.awscdk.services.emrserverless.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationImageConfigurationInputPropertyDsl {
-  private val cdkBuilder: CfnApplication.ImageConfigurationInputProperty.Builder =
-      CfnApplication.ImageConfigurationInputProperty.builder()
+    private val cdkBuilder: CfnApplication.ImageConfigurationInputProperty.Builder =
+        CfnApplication.ImageConfigurationInputProperty.builder()
 
-  /**
-   * @param imageUri The URI of an image in the Amazon ECR registry.
-   * This field is required when you create a new application. If you leave this field blank in an
-   * update, Amazon EMR will remove the image configuration.
-   */
-  public fun imageUri(imageUri: String) {
-    cdkBuilder.imageUri(imageUri)
-  }
+    /**
+     * @param imageUri The URI of an image in the Amazon ECR registry. This field is required when
+     *   you create a new application. If you leave this field blank in an update, Amazon EMR will
+     *   remove the image configuration.
+     */
+    public fun imageUri(imageUri: String) {
+        cdkBuilder.imageUri(imageUri)
+    }
 
-  public fun build(): CfnApplication.ImageConfigurationInputProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.ImageConfigurationInputProperty = cdkBuilder.build()
 }

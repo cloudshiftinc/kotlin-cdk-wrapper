@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalogappregistry
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.servicecatalogappregistry.CfnResourceAsso
  * Properties for defining a `CfnResourceAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,29 +34,25 @@ import software.amazon.awscdk.services.servicecatalogappregistry.CfnResourceAsso
  */
 @CdkDslMarker
 public class CfnResourceAssociationPropsDsl {
-  private val cdkBuilder: CfnResourceAssociationProps.Builder =
-      CfnResourceAssociationProps.builder()
+    private val cdkBuilder: CfnResourceAssociationProps.Builder =
+        CfnResourceAssociationProps.builder()
 
-  /**
-   * @param application The name or ID of the application. 
-   */
-  public fun application(application: String) {
-    cdkBuilder.application(application)
-  }
+    /** @param application The name or ID of the application. */
+    public fun application(application: String) {
+        cdkBuilder.application(application)
+    }
 
-  /**
-   * @param resource The name or ID of the resource of which the application will be associated. 
-   */
-  public fun resource(resource: String) {
-    cdkBuilder.resource(resource)
-  }
+    /**
+     * @param resource The name or ID of the resource of which the application will be associated.
+     */
+    public fun resource(resource: String) {
+        cdkBuilder.resource(resource)
+    }
 
-  /**
-   * @param resourceType The type of resource of which the application will be associated. 
-   */
-  public fun resourceType(resourceType: String) {
-    cdkBuilder.resourceType(resourceType)
-  }
+    /** @param resourceType The type of resource of which the application will be associated. */
+    public fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
+    }
 
-  public fun build(): CfnResourceAssociationProps = cdkBuilder.build()
+    public fun build(): CfnResourceAssociationProps = cdkBuilder.build()
 }

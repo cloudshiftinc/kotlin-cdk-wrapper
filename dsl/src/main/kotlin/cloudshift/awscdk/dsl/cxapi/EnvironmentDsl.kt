@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cxapi
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cxapi.Environment
 import kotlin.String
+import software.amazon.awscdk.cxapi.Environment
 
 /**
  * Models an AWS execution environment, for use within the CDK toolkit.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,9 +34,7 @@ import kotlin.String
 public class EnvironmentDsl {
     private val cdkBuilder: Environment.Builder = Environment.builder()
 
-    /**
-     * @param account The AWS account this environment deploys into.
-     */
+    /** @param account The AWS account this environment deploys into. */
     public fun account(account: String) {
         cdkBuilder.account(account)
     }
@@ -40,9 +46,7 @@ public class EnvironmentDsl {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param region The AWS region name where this environment deploys into.
-     */
+    /** @param region The AWS region name where this environment deploys into. */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }

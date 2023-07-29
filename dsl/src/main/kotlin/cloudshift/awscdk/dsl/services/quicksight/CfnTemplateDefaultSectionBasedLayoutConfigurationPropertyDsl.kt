@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The options that determine the default settings for a section-based layout configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,24 +44,27 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateDefaultSectionBasedLayoutConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty.Builder =
-      CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty.Builder =
+        CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty.builder()
 
-  /**
-   * @param canvasSizeOptions Determines the screen canvas size options for a section-based layout. 
-   */
-  public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
-    cdkBuilder.canvasSizeOptions(canvasSizeOptions)
-  }
+    /**
+     * @param canvasSizeOptions Determines the screen canvas size options for a section-based
+     *   layout.
+     */
+    public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
+        cdkBuilder.canvasSizeOptions(canvasSizeOptions)
+    }
 
-  /**
-   * @param canvasSizeOptions Determines the screen canvas size options for a section-based layout. 
-   */
-  public
-      fun canvasSizeOptions(canvasSizeOptions: CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty) {
-    cdkBuilder.canvasSizeOptions(canvasSizeOptions)
-  }
+    /**
+     * @param canvasSizeOptions Determines the screen canvas size options for a section-based
+     *   layout.
+     */
+    public fun canvasSizeOptions(
+        canvasSizeOptions: CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty
+    ) {
+        cdkBuilder.canvasSizeOptions(canvasSizeOptions)
+    }
 
-  public fun build(): CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnTemplate.DefaultSectionBasedLayoutConfigurationProperty =
+        cdkBuilder.build()
 }

@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssm
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 
 /**
  * The `RuleGroup` property type specifies a set of rules that define the approval rules for an AWS
@@ -18,7 +27,6 @@ import kotlin.collections.MutableList
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,23 +56,17 @@ public class CfnPatchBaselineRuleGroupPropertyDsl {
 
     private val _patchRules: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param patchRules The rules that make up the rule group.
-     */
+    /** @param patchRules The rules that make up the rule group. */
     public fun patchRules(vararg patchRules: Any) {
         _patchRules.addAll(listOf(*patchRules))
     }
 
-    /**
-     * @param patchRules The rules that make up the rule group.
-     */
+    /** @param patchRules The rules that make up the rule group. */
     public fun patchRules(patchRules: Collection<Any>) {
         _patchRules.addAll(patchRules)
     }
 
-    /**
-     * @param patchRules The rules that make up the rule group.
-     */
+    /** @param patchRules The rules that make up the rule group. */
     public fun patchRules(patchRules: IResolvable) {
         cdkBuilder.patchRules(patchRules)
     }

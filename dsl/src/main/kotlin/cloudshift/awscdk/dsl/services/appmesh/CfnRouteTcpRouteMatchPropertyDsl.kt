@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  * An object representing the TCP route to match.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.appmesh.CfnRoute
  */
 @CdkDslMarker
 public class CfnRouteTcpRouteMatchPropertyDsl {
-  private val cdkBuilder: CfnRoute.TcpRouteMatchProperty.Builder =
-      CfnRoute.TcpRouteMatchProperty.builder()
+    private val cdkBuilder: CfnRoute.TcpRouteMatchProperty.Builder =
+        CfnRoute.TcpRouteMatchProperty.builder()
 
-  /**
-   * @param port The port number to match on.
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port The port number to match on. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  public fun build(): CfnRoute.TcpRouteMatchProperty = cdkBuilder.build()
+    public fun build(): CfnRoute.TcpRouteMatchProperty = cdkBuilder.build()
 }

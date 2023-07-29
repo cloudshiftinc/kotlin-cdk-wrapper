@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.UserData
  * Configuration options for GenericWindowsImage.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,14 +31,12 @@ import software.amazon.awscdk.services.ec2.UserData
  */
 @CdkDslMarker
 public class GenericWindowsImagePropsDsl {
-  private val cdkBuilder: GenericWindowsImageProps.Builder = GenericWindowsImageProps.builder()
+    private val cdkBuilder: GenericWindowsImageProps.Builder = GenericWindowsImageProps.builder()
 
-  /**
-   * @param userData Initial user data.
-   */
-  public fun userData(userData: UserData) {
-    cdkBuilder.userData(userData)
-  }
+    /** @param userData Initial user data. */
+    public fun userData(userData: UserData) {
+        cdkBuilder.userData(userData)
+    }
 
-  public fun build(): GenericWindowsImageProps = cdkBuilder.build()
+    public fun build(): GenericWindowsImageProps = cdkBuilder.build()
 }

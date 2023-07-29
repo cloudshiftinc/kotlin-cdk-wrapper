@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  * The parameters for Presto.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourcePrestoParametersPropertyDsl {
-  private val cdkBuilder: CfnDataSource.PrestoParametersProperty.Builder =
-      CfnDataSource.PrestoParametersProperty.builder()
+    private val cdkBuilder: CfnDataSource.PrestoParametersProperty.Builder =
+        CfnDataSource.PrestoParametersProperty.builder()
 
-  /**
-   * @param catalog Catalog. 
-   */
-  public fun catalog(catalog: String) {
-    cdkBuilder.catalog(catalog)
-  }
+    /** @param catalog Catalog. */
+    public fun catalog(catalog: String) {
+        cdkBuilder.catalog(catalog)
+    }
 
-  /**
-   * @param host Host. 
-   */
-  public fun host(host: String) {
-    cdkBuilder.host(host)
-  }
+    /** @param host Host. */
+    public fun host(host: String) {
+        cdkBuilder.host(host)
+    }
 
-  /**
-   * @param port Port. 
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port Port. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  public fun build(): CfnDataSource.PrestoParametersProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.PrestoParametersProperty = cdkBuilder.build()
 }

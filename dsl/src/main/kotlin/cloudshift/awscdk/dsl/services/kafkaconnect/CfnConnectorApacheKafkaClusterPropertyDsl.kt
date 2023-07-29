@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  * The details of the Apache Kafka cluster to which the connector is connected.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,31 +37,29 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorApacheKafkaClusterPropertyDsl {
-  private val cdkBuilder: CfnConnector.ApacheKafkaClusterProperty.Builder =
-      CfnConnector.ApacheKafkaClusterProperty.builder()
+    private val cdkBuilder: CfnConnector.ApacheKafkaClusterProperty.Builder =
+        CfnConnector.ApacheKafkaClusterProperty.builder()
 
-  /**
-   * @param bootstrapServers The bootstrap servers of the cluster. 
-   */
-  public fun bootstrapServers(bootstrapServers: String) {
-    cdkBuilder.bootstrapServers(bootstrapServers)
-  }
+    /** @param bootstrapServers The bootstrap servers of the cluster. */
+    public fun bootstrapServers(bootstrapServers: String) {
+        cdkBuilder.bootstrapServers(bootstrapServers)
+    }
 
-  /**
-   * @param vpc Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.
-   * 
-   */
-  public fun vpc(vpc: IResolvable) {
-    cdkBuilder.vpc(vpc)
-  }
+    /**
+     * @param vpc Details of an Amazon VPC which has network connectivity to the Apache Kafka
+     *   cluster.
+     */
+    public fun vpc(vpc: IResolvable) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  /**
-   * @param vpc Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.
-   * 
-   */
-  public fun vpc(vpc: CfnConnector.VpcProperty) {
-    cdkBuilder.vpc(vpc)
-  }
+    /**
+     * @param vpc Details of an Amazon VPC which has network connectivity to the Apache Kafka
+     *   cluster.
+     */
+    public fun vpc(vpc: CfnConnector.VpcProperty) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  public fun build(): CfnConnector.ApacheKafkaClusterProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.ApacheKafkaClusterProperty = cdkBuilder.build()
 }

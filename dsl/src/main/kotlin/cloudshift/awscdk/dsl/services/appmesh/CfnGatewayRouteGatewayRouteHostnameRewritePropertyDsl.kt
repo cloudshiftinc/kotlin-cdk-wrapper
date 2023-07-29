@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * An object representing the gateway route host name to rewrite.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteGatewayRouteHostnameRewritePropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.GatewayRouteHostnameRewriteProperty.Builder =
-      CfnGatewayRoute.GatewayRouteHostnameRewriteProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.GatewayRouteHostnameRewriteProperty.Builder =
+        CfnGatewayRoute.GatewayRouteHostnameRewriteProperty.builder()
 
-  /**
-   * @param defaultTargetHostname The default target host name to write to.
-   */
-  public fun defaultTargetHostname(defaultTargetHostname: String) {
-    cdkBuilder.defaultTargetHostname(defaultTargetHostname)
-  }
+    /** @param defaultTargetHostname The default target host name to write to. */
+    public fun defaultTargetHostname(defaultTargetHostname: String) {
+        cdkBuilder.defaultTargetHostname(defaultTargetHostname)
+    }
 
-  public fun build(): CfnGatewayRoute.GatewayRouteHostnameRewriteProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.GatewayRouteHostnameRewriteProperty = cdkBuilder.build()
 }

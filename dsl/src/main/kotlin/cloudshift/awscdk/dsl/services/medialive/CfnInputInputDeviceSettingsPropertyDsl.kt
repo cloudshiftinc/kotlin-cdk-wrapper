@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.medialive.CfnInput
  * The parent of this entity is Input.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.medialive.CfnInput
  */
 @CdkDslMarker
 public class CfnInputInputDeviceSettingsPropertyDsl {
-  private val cdkBuilder: CfnInput.InputDeviceSettingsProperty.Builder =
-      CfnInput.InputDeviceSettingsProperty.builder()
+    private val cdkBuilder: CfnInput.InputDeviceSettingsProperty.Builder =
+        CfnInput.InputDeviceSettingsProperty.builder()
 
-  /**
-   * @param id The unique ID for the device.
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The unique ID for the device. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  public fun build(): CfnInput.InputDeviceSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnInput.InputDeviceSettingsProperty = cdkBuilder.build()
 }

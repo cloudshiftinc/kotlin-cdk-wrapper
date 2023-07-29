@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,7 +26,6 @@ import software.constructs.Construct
  * instance.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,32 +41,34 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnVPCDHCPOptionsAssociationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnVPCDHCPOptionsAssociation.Builder =
-      CfnVPCDHCPOptionsAssociation.Builder.create(scope, id)
+    private val cdkBuilder: CfnVPCDHCPOptionsAssociation.Builder =
+        CfnVPCDHCPOptionsAssociation.Builder.create(scope, id)
 
-  /**
-   * The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid)
-   * @param dhcpOptionsId The ID of the DHCP options set, or `default` to associate no DHCP options
-   * with the VPC. 
-   */
-  public fun dhcpOptionsId(dhcpOptionsId: String) {
-    cdkBuilder.dhcpOptionsId(dhcpOptionsId)
-  }
+    /**
+     * The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid)
+     *
+     * @param dhcpOptionsId The ID of the DHCP options set, or `default` to associate no DHCP
+     *   options with the VPC.
+     */
+    public fun dhcpOptionsId(dhcpOptionsId: String) {
+        cdkBuilder.dhcpOptionsId(dhcpOptionsId)
+    }
 
-  /**
-   * The ID of the VPC.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-vpcid)
-   * @param vpcId The ID of the VPC. 
-   */
-  public fun vpcId(vpcId: String) {
-    cdkBuilder.vpcId(vpcId)
-  }
+    /**
+     * The ID of the VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-vpcid)
+     *
+     * @param vpcId The ID of the VPC.
+     */
+    public fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+    }
 
-  public fun build(): CfnVPCDHCPOptionsAssociation = cdkBuilder.build()
+    public fun build(): CfnVPCDHCPOptionsAssociation = cdkBuilder.build()
 }

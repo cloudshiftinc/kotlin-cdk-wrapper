@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpointemail
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDes
  * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,38 +42,39 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDes
  */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationCloudWatchDestinationPropertyDsl {
-  private val cdkBuilder: CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.Builder
-      = CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
+    private val cdkBuilder:
+        CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.Builder =
+        CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
 
-  private val _dimensionConfigurations: MutableList<Any> = mutableListOf()
+    private val _dimensionConfigurations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param dimensionConfigurations An array of objects that define the dimensions to use when you
-   * send email events to Amazon CloudWatch.
-   */
-  public fun dimensionConfigurations(vararg dimensionConfigurations: Any) {
-    _dimensionConfigurations.addAll(listOf(*dimensionConfigurations))
-  }
+    /**
+     * @param dimensionConfigurations An array of objects that define the dimensions to use when you
+     *   send email events to Amazon CloudWatch.
+     */
+    public fun dimensionConfigurations(vararg dimensionConfigurations: Any) {
+        _dimensionConfigurations.addAll(listOf(*dimensionConfigurations))
+    }
 
-  /**
-   * @param dimensionConfigurations An array of objects that define the dimensions to use when you
-   * send email events to Amazon CloudWatch.
-   */
-  public fun dimensionConfigurations(dimensionConfigurations: Collection<Any>) {
-    _dimensionConfigurations.addAll(dimensionConfigurations)
-  }
+    /**
+     * @param dimensionConfigurations An array of objects that define the dimensions to use when you
+     *   send email events to Amazon CloudWatch.
+     */
+    public fun dimensionConfigurations(dimensionConfigurations: Collection<Any>) {
+        _dimensionConfigurations.addAll(dimensionConfigurations)
+    }
 
-  /**
-   * @param dimensionConfigurations An array of objects that define the dimensions to use when you
-   * send email events to Amazon CloudWatch.
-   */
-  public fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
-    cdkBuilder.dimensionConfigurations(dimensionConfigurations)
-  }
+    /**
+     * @param dimensionConfigurations An array of objects that define the dimensions to use when you
+     *   send email events to Amazon CloudWatch.
+     */
+    public fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
+        cdkBuilder.dimensionConfigurations(dimensionConfigurations)
+    }
 
-  public fun build(): CfnConfigurationSetEventDestination.CloudWatchDestinationProperty {
-    if(_dimensionConfigurations.isNotEmpty())
-        cdkBuilder.dimensionConfigurations(_dimensionConfigurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnConfigurationSetEventDestination.CloudWatchDestinationProperty {
+        if (_dimensionConfigurations.isNotEmpty())
+            cdkBuilder.dimensionConfigurations(_dimensionConfigurations)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
  * Describes the Active Directory to be used for client authentication.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,15 @@ import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
  */
 @CdkDslMarker
 public class CfnClientVpnEndpointDirectoryServiceAuthenticationRequestPropertyDsl {
-  private val cdkBuilder: CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.Builder
-      = CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.builder()
+    private val cdkBuilder:
+        CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.Builder =
+        CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.builder()
 
-  /**
-   * @param directoryId The ID of the Active Directory to be used for authentication. 
-   */
-  public fun directoryId(directoryId: String) {
-    cdkBuilder.directoryId(directoryId)
-  }
+    /** @param directoryId The ID of the Active Directory to be used for authentication. */
+    public fun directoryId(directoryId: String) {
+        cdkBuilder.directoryId(directoryId)
+    }
 
-  public fun build(): CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty =
-      cdkBuilder.build()
+    public fun build(): CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty =
+        cdkBuilder.build()
 }

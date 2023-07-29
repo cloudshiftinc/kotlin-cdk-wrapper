@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * A `NumericEqualityFilter` filters values that are equal to the specified value.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -50,37 +58,29 @@ public class CfnDashboardNumericEqualityFilterPropertyDsl {
     private val cdkBuilder: CfnDashboard.NumericEqualityFilterProperty.Builder =
         CfnDashboard.NumericEqualityFilterProperty.builder()
 
-    /**
-     * @param aggregationFunction The aggregation function of the filter.
-     */
+    /** @param aggregationFunction The aggregation function of the filter. */
     public fun aggregationFunction(aggregationFunction: IResolvable) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param aggregationFunction The aggregation function of the filter.
-     */
+    /** @param aggregationFunction The aggregation function of the filter. */
     public fun aggregationFunction(aggregationFunction: CfnDashboard.AggregationFunctionProperty) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: CfnDashboard.ColumnIdentifierProperty) {
         cdkBuilder.column(column)
     }
 
     /**
      * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
-     * or template.
+     *   or template.
      */
     public fun filterId(filterId: String) {
         cdkBuilder.filterId(filterId)
@@ -88,15 +88,15 @@ public class CfnDashboardNumericEqualityFilterPropertyDsl {
 
     /**
      * @param matchOperator The match operator that is used to determine if a filter should be
-     * applied.
+     *   applied.
      */
     public fun matchOperator(matchOperator: String) {
         cdkBuilder.matchOperator(matchOperator)
     }
 
     /**
-     * @param nullOption This option determines how null values should be treated when filtering data.
-     *
+     * @param nullOption This option determines how null values should be treated when filtering
+     *   data.
      * * `ALL_VALUES` : Include null values in filtered results.
      * * `NULLS_ONLY` : Only include null values in filtered results.
      * * `NON_NULLS_ONLY` : Exclude null values from filtered results.
@@ -105,24 +105,21 @@ public class CfnDashboardNumericEqualityFilterPropertyDsl {
         cdkBuilder.nullOption(nullOption)
     }
 
-    /**
-     * @param parameterName The parameter whose value should be used for the filter value.
-     */
+    /** @param parameterName The parameter whose value should be used for the filter value. */
     public fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
     }
 
     /**
-     * @param selectAllOptions Select all of the values. Null is not the assigned value of select all.
+     * @param selectAllOptions Select all of the values. Null is not the assigned value of select
+     *   all.
      * * `FILTER_ALL_VALUES`
      */
     public fun selectAllOptions(selectAllOptions: String) {
         cdkBuilder.selectAllOptions(selectAllOptions)
     }
 
-    /**
-     * @param value The input value.
-     */
+    /** @param value The input value. */
     public fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
  * but not both. You can switch between fixed capacity and auto scaling.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,33 +51,35 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
  */
 @CdkDslMarker
 public class CfnGlobalTableReadProvisionedThroughputSettingsPropertyDsl {
-  private val cdkBuilder: CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.Builder =
-      CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.builder()
+    private val cdkBuilder: CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.Builder =
+        CfnGlobalTable.ReadProvisionedThroughputSettingsProperty.builder()
 
-  /**
-   * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica table or
-   * global secondary index.
-   */
-  public fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: IResolvable) {
-    cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings)
-  }
+    /**
+     * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica table
+     *   or global secondary index.
+     */
+    public fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: IResolvable) {
+        cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings)
+    }
 
-  /**
-   * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica table or
-   * global secondary index.
-   */
-  public
-      fun readCapacityAutoScalingSettings(readCapacityAutoScalingSettings: CfnGlobalTable.CapacityAutoScalingSettingsProperty) {
-    cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings)
-  }
+    /**
+     * @param readCapacityAutoScalingSettings Specifies auto scaling settings for the replica table
+     *   or global secondary index.
+     */
+    public fun readCapacityAutoScalingSettings(
+        readCapacityAutoScalingSettings: CfnGlobalTable.CapacityAutoScalingSettingsProperty
+    ) {
+        cdkBuilder.readCapacityAutoScalingSettings(readCapacityAutoScalingSettings)
+    }
 
-  /**
-   * @param readCapacityUnits Specifies a fixed read capacity for the replica table or global
-   * secondary index.
-   */
-  public fun readCapacityUnits(readCapacityUnits: Number) {
-    cdkBuilder.readCapacityUnits(readCapacityUnits)
-  }
+    /**
+     * @param readCapacityUnits Specifies a fixed read capacity for the replica table or global
+     *   secondary index.
+     */
+    public fun readCapacityUnits(readCapacityUnits: Number) {
+        cdkBuilder.readCapacityUnits(readCapacityUnits)
+    }
 
-  public fun build(): CfnGlobalTable.ReadProvisionedThroughputSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnGlobalTable.ReadProvisionedThroughputSettingsProperty =
+        cdkBuilder.build()
 }

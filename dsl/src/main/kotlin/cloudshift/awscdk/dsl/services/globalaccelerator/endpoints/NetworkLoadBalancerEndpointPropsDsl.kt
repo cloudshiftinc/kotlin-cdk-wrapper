@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.globalaccelerator.endpoints
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBa
  * Properties for a NetworkLoadBalancerEndpoint.
  *
  * Example:
- *
  * ```
  * NetworkLoadBalancer nlb;
  * Listener listener;
@@ -24,16 +32,16 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBa
  */
 @CdkDslMarker
 public class NetworkLoadBalancerEndpointPropsDsl {
-  private val cdkBuilder: NetworkLoadBalancerEndpointProps.Builder =
-      NetworkLoadBalancerEndpointProps.builder()
+    private val cdkBuilder: NetworkLoadBalancerEndpointProps.Builder =
+        NetworkLoadBalancerEndpointProps.builder()
 
-  /**
-   * @param weight Endpoint weight across all endpoints in the group.
-   * Must be a value between 0 and 255.
-   */
-  public fun weight(weight: Number) {
-    cdkBuilder.weight(weight)
-  }
+    /**
+     * @param weight Endpoint weight across all endpoints in the group. Must be a value between 0
+     *   and 255.
+     */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+    }
 
-  public fun build(): NetworkLoadBalancerEndpointProps = cdkBuilder.build()
+    public fun build(): NetworkLoadBalancerEndpointProps = cdkBuilder.build()
 }

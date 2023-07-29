@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery
 import kotlin.String
+import software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery
 
 /**
  * Query to availability zone context provider.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,9 +37,7 @@ public class AvailabilityZonesContextQueryDsl {
     private val cdkBuilder: AvailabilityZonesContextQuery.Builder =
         AvailabilityZonesContextQuery.builder()
 
-    /**
-     * @param account Query account.
-     */
+    /** @param account Query account. */
     public fun account(account: String) {
         cdkBuilder.account(account)
     }
@@ -43,9 +49,7 @@ public class AvailabilityZonesContextQueryDsl {
         cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    /**
-     * @param region Query region.
-     */
+    /** @param region Query region. */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }

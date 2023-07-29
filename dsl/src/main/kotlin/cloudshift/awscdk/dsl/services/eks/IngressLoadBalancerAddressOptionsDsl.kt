@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions
  * Options for fetching an IngressLoadBalancerAddress.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions
  */
 @CdkDslMarker
 public class IngressLoadBalancerAddressOptionsDsl {
-  private val cdkBuilder: IngressLoadBalancerAddressOptions.Builder =
-      IngressLoadBalancerAddressOptions.builder()
+    private val cdkBuilder: IngressLoadBalancerAddressOptions.Builder =
+        IngressLoadBalancerAddressOptions.builder()
 
-  /**
-   * @param namespace The namespace the service belongs to.
-   */
-  public fun namespace(namespace: String) {
-    cdkBuilder.namespace(namespace)
-  }
+    /** @param namespace The namespace the service belongs to. */
+    public fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+    }
 
-  /**
-   * @param timeout Timeout for waiting on the load balancer address.
-   */
-  public fun timeout(timeout: Duration) {
-    cdkBuilder.timeout(timeout)
-  }
+    /** @param timeout Timeout for waiting on the load balancer address. */
+    public fun timeout(timeout: Duration) {
+        cdkBuilder.timeout(timeout)
+    }
 
-  public fun build(): IngressLoadBalancerAddressOptions = cdkBuilder.build()
+    public fun build(): IngressLoadBalancerAddressOptions = cdkBuilder.build()
 }

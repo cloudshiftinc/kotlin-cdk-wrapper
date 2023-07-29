@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.CustomAttributeProps
  * Constraints that can be applied to a custom attribute of any type.
  *
  * Example:
- *
  * ```
  * UserPool.Builder.create(this, "myuserpool")
  * // ...
@@ -34,20 +42,18 @@ import software.amazon.awscdk.services.cognito.CustomAttributeProps
  */
 @CdkDslMarker
 public class CustomAttributePropsDsl {
-  private val cdkBuilder: CustomAttributeProps.Builder = CustomAttributeProps.builder()
+    private val cdkBuilder: CustomAttributeProps.Builder = CustomAttributeProps.builder()
 
-  /**
-   * @param mutable Specifies whether the value of the attribute can be changed.
-   * For any user pool attribute that's mapped to an identity provider attribute, you must set this
-   * parameter to true.
-   * Amazon Cognito updates mapped attributes when users sign in to your application through an
-   * identity provider.
-   * If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the
-   * attribute.
-   */
-  public fun mutable(mutable: Boolean) {
-    cdkBuilder.mutable(mutable)
-  }
+    /**
+     * @param mutable Specifies whether the value of the attribute can be changed. For any user pool
+     *   attribute that's mapped to an identity provider attribute, you must set this parameter to
+     *   true. Amazon Cognito updates mapped attributes when users sign in to your application
+     *   through an identity provider. If an attribute is immutable, Amazon Cognito throws an error
+     *   when it attempts to update the attribute.
+     */
+    public fun mutable(mutable: Boolean) {
+        cdkBuilder.mutable(mutable)
+    }
 
-  public fun build(): CustomAttributeProps = cdkBuilder.build()
+    public fun build(): CustomAttributeProps = cdkBuilder.build()
 }

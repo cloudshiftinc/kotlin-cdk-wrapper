@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * If you don't specify this, AWS WAF uses its default settings for `CaptchaConfig` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,24 +37,24 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLCaptchaConfigPropertyDsl {
-  private val cdkBuilder: CfnWebACL.CaptchaConfigProperty.Builder =
-      CfnWebACL.CaptchaConfigProperty.builder()
+    private val cdkBuilder: CfnWebACL.CaptchaConfigProperty.Builder =
+        CfnWebACL.CaptchaConfigProperty.builder()
 
-  /**
-   * @param immunityTimeProperty Determines how long a `CAPTCHA` timestamp in the token remains
-   * valid after the client successfully solves a `CAPTCHA` puzzle.
-   */
-  public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
-    cdkBuilder.immunityTimeProperty(immunityTimeProperty)
-  }
+    /**
+     * @param immunityTimeProperty Determines how long a `CAPTCHA` timestamp in the token remains
+     *   valid after the client successfully solves a `CAPTCHA` puzzle.
+     */
+    public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty)
+    }
 
-  /**
-   * @param immunityTimeProperty Determines how long a `CAPTCHA` timestamp in the token remains
-   * valid after the client successfully solves a `CAPTCHA` puzzle.
-   */
-  public fun immunityTimeProperty(immunityTimeProperty: CfnWebACL.ImmunityTimePropertyProperty) {
-    cdkBuilder.immunityTimeProperty(immunityTimeProperty)
-  }
+    /**
+     * @param immunityTimeProperty Determines how long a `CAPTCHA` timestamp in the token remains
+     *   valid after the client successfully solves a `CAPTCHA` puzzle.
+     */
+    public fun immunityTimeProperty(immunityTimeProperty: CfnWebACL.ImmunityTimePropertyProperty) {
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty)
+    }
 
-  public fun build(): CfnWebACL.CaptchaConfigProperty = cdkBuilder.build()
+    public fun build(): CfnWebACL.CaptchaConfigProperty = cdkBuilder.build()
 }

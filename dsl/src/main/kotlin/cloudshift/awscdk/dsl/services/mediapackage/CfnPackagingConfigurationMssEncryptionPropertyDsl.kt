@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediapackage
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
  * Holds encryption information so that access to the content can be controlled by a DRM solution.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,23 +41,20 @@ import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
  */
 @CdkDslMarker
 public class CfnPackagingConfigurationMssEncryptionPropertyDsl {
-  private val cdkBuilder: CfnPackagingConfiguration.MssEncryptionProperty.Builder =
-      CfnPackagingConfiguration.MssEncryptionProperty.builder()
+    private val cdkBuilder: CfnPackagingConfiguration.MssEncryptionProperty.Builder =
+        CfnPackagingConfiguration.MssEncryptionProperty.builder()
 
-  /**
-   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-   */
-  public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-    cdkBuilder.spekeKeyProvider(spekeKeyProvider)
-  }
+    /** @param spekeKeyProvider Parameters for the SPEKE key provider. */
+    public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider)
+    }
 
-  /**
-   * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-   */
-  public
-      fun spekeKeyProvider(spekeKeyProvider: CfnPackagingConfiguration.SpekeKeyProviderProperty) {
-    cdkBuilder.spekeKeyProvider(spekeKeyProvider)
-  }
+    /** @param spekeKeyProvider Parameters for the SPEKE key provider. */
+    public fun spekeKeyProvider(
+        spekeKeyProvider: CfnPackagingConfiguration.SpekeKeyProviderProperty
+    ) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider)
+    }
 
-  public fun build(): CfnPackagingConfiguration.MssEncryptionProperty = cdkBuilder.build()
+    public fun build(): CfnPackagingConfiguration.MssEncryptionProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * A control from a date filter that is used to specify the relative date.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,44 +55,35 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardFilterRelativeDateTimeControlPropertyDsl {
-  private val cdkBuilder: CfnDashboard.FilterRelativeDateTimeControlProperty.Builder =
-      CfnDashboard.FilterRelativeDateTimeControlProperty.builder()
+    private val cdkBuilder: CfnDashboard.FilterRelativeDateTimeControlProperty.Builder =
+        CfnDashboard.FilterRelativeDateTimeControlProperty.builder()
 
-  /**
-   * @param displayOptions The display options of a control.
-   */
-  public fun displayOptions(displayOptions: IResolvable) {
-    cdkBuilder.displayOptions(displayOptions)
-  }
+    /** @param displayOptions The display options of a control. */
+    public fun displayOptions(displayOptions: IResolvable) {
+        cdkBuilder.displayOptions(displayOptions)
+    }
 
-  /**
-   * @param displayOptions The display options of a control.
-   */
-  public
-      fun displayOptions(displayOptions: CfnDashboard.RelativeDateTimeControlDisplayOptionsProperty) {
-    cdkBuilder.displayOptions(displayOptions)
-  }
+    /** @param displayOptions The display options of a control. */
+    public fun displayOptions(
+        displayOptions: CfnDashboard.RelativeDateTimeControlDisplayOptionsProperty
+    ) {
+        cdkBuilder.displayOptions(displayOptions)
+    }
 
-  /**
-   * @param filterControlId The ID of the `FilterTextAreaControl` . 
-   */
-  public fun filterControlId(filterControlId: String) {
-    cdkBuilder.filterControlId(filterControlId)
-  }
+    /** @param filterControlId The ID of the `FilterTextAreaControl` . */
+    public fun filterControlId(filterControlId: String) {
+        cdkBuilder.filterControlId(filterControlId)
+    }
 
-  /**
-   * @param sourceFilterId The source filter ID of the `FilterTextAreaControl` . 
-   */
-  public fun sourceFilterId(sourceFilterId: String) {
-    cdkBuilder.sourceFilterId(sourceFilterId)
-  }
+    /** @param sourceFilterId The source filter ID of the `FilterTextAreaControl` . */
+    public fun sourceFilterId(sourceFilterId: String) {
+        cdkBuilder.sourceFilterId(sourceFilterId)
+    }
 
-  /**
-   * @param title The title of the `FilterTextAreaControl` . 
-   */
-  public fun title(title: String) {
-    cdkBuilder.title(title)
-  }
+    /** @param title The title of the `FilterTextAreaControl` . */
+    public fun title(title: String) {
+        cdkBuilder.title(title)
+    }
 
-  public fun build(): CfnDashboard.FilterRelativeDateTimeControlProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.FilterRelativeDateTimeControlProperty = cdkBuilder.build()
 }

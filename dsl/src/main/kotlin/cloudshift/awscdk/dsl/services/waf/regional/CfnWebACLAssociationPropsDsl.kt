@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.waf.regional
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.waf.regional.CfnWebACLAssociationProps
  * Properties for defining a `CfnWebACLAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,21 +33,20 @@ import software.amazon.awscdk.services.waf.regional.CfnWebACLAssociationProps
  */
 @CdkDslMarker
 public class CfnWebACLAssociationPropsDsl {
-  private val cdkBuilder: CfnWebACLAssociationProps.Builder = CfnWebACLAssociationProps.builder()
+    private val cdkBuilder: CfnWebACLAssociationProps.Builder = CfnWebACLAssociationProps.builder()
 
-  /**
-   * @param resourceArn The Amazon Resource Name (ARN) of the resource to protect with the web ACL. 
-   */
-  public fun resourceArn(resourceArn: String) {
-    cdkBuilder.resourceArn(resourceArn)
-  }
+    /**
+     * @param resourceArn The Amazon Resource Name (ARN) of the resource to protect with the web
+     *   ACL.
+     */
+    public fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+    }
 
-  /**
-   * @param webAclId A unique identifier (ID) for the web ACL. 
-   */
-  public fun webAclId(webAclId: String) {
-    cdkBuilder.webAclId(webAclId)
-  }
+    /** @param webAclId A unique identifier (ID) for the web ACL. */
+    public fun webAclId(webAclId: String) {
+        cdkBuilder.webAclId(webAclId)
+    }
 
-  public fun build(): CfnWebACLAssociationProps = cdkBuilder.build()
+    public fun build(): CfnWebACLAssociationProps = cdkBuilder.build()
 }

@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The configuration of a `BarChartVisual` .
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -30,8 +38,8 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
     private val _referenceLines: MutableList<Any> = mutableListOf()
 
     /**
-     * @param barsArrangement Determines the arrangement of the bars.
-     * The orientation and arrangement of bars determine the type of bar that is used in the visual.
+     * @param barsArrangement Determines the arrangement of the bars. The orientation and
+     *   arrangement of bars determine the type of bar that is used in the visual.
      */
     public fun barsArrangement(barsArrangement: String) {
         cdkBuilder.barsArrangement(barsArrangement)
@@ -39,7 +47,7 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
 
     /**
      * @param categoryAxis The label display options (grid line, range, scale, axis step) for bar
-     * chart category.
+     *   chart category.
      */
     public fun categoryAxis(categoryAxis: IResolvable) {
         cdkBuilder.categoryAxis(categoryAxis)
@@ -47,7 +55,7 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
 
     /**
      * @param categoryAxis The label display options (grid line, range, scale, axis step) for bar
-     * chart category.
+     *   chart category.
      */
     public fun categoryAxis(categoryAxis: CfnAnalysis.AxisDisplayOptionsProperty) {
         cdkBuilder.categoryAxis(categoryAxis)
@@ -55,7 +63,7 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
 
     /**
      * @param categoryLabelOptions The label options (label text, label visibility and sort icon
-     * visibility) for a bar chart.
+     *   visibility) for a bar chart.
      */
     public fun categoryLabelOptions(categoryLabelOptions: IResolvable) {
         cdkBuilder.categoryLabelOptions(categoryLabelOptions)
@@ -63,15 +71,17 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
 
     /**
      * @param categoryLabelOptions The label options (label text, label visibility and sort icon
-     * visibility) for a bar chart.
+     *   visibility) for a bar chart.
      */
-    public fun categoryLabelOptions(categoryLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty) {
+    public fun categoryLabelOptions(
+        categoryLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty
+    ) {
         cdkBuilder.categoryLabelOptions(categoryLabelOptions)
     }
 
     /**
      * @param colorLabelOptions The label options (label text, label visibility and sort icon
-     * visibility) for a color that is used in a bar chart.
+     *   visibility) for a color that is used in a bar chart.
      */
     public fun colorLabelOptions(colorLabelOptions: IResolvable) {
         cdkBuilder.colorLabelOptions(colorLabelOptions)
@@ -79,164 +89,137 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
 
     /**
      * @param colorLabelOptions The label options (label text, label visibility and sort icon
-     * visibility) for a color that is used in a bar chart.
+     *   visibility) for a color that is used in a bar chart.
      */
     public fun colorLabelOptions(colorLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty) {
         cdkBuilder.colorLabelOptions(colorLabelOptions)
     }
 
     /**
-     * @param contributionAnalysisDefaults The contribution analysis (anomaly configuration) setup of
-     * the visual.
+     * @param contributionAnalysisDefaults The contribution analysis (anomaly configuration) setup
+     *   of the visual.
      */
     public fun contributionAnalysisDefaults(vararg contributionAnalysisDefaults: Any) {
         _contributionAnalysisDefaults.addAll(listOf(*contributionAnalysisDefaults))
     }
 
     /**
-     * @param contributionAnalysisDefaults The contribution analysis (anomaly configuration) setup of
-     * the visual.
+     * @param contributionAnalysisDefaults The contribution analysis (anomaly configuration) setup
+     *   of the visual.
      */
     public fun contributionAnalysisDefaults(contributionAnalysisDefaults: Collection<Any>) {
         _contributionAnalysisDefaults.addAll(contributionAnalysisDefaults)
     }
 
     /**
-     * @param contributionAnalysisDefaults The contribution analysis (anomaly configuration) setup of
-     * the visual.
+     * @param contributionAnalysisDefaults The contribution analysis (anomaly configuration) setup
+     *   of the visual.
      */
     public fun contributionAnalysisDefaults(contributionAnalysisDefaults: IResolvable) {
         cdkBuilder.contributionAnalysisDefaults(contributionAnalysisDefaults)
     }
 
-    /**
-     * @param dataLabels The options that determine if visual data labels are displayed.
-     */
+    /** @param dataLabels The options that determine if visual data labels are displayed. */
     public fun dataLabels(dataLabels: IResolvable) {
         cdkBuilder.dataLabels(dataLabels)
     }
 
-    /**
-     * @param dataLabels The options that determine if visual data labels are displayed.
-     */
+    /** @param dataLabels The options that determine if visual data labels are displayed. */
     public fun dataLabels(dataLabels: CfnAnalysis.DataLabelOptionsProperty) {
         cdkBuilder.dataLabels(dataLabels)
     }
 
-    /**
-     * @param fieldWells The field wells of the visual.
-     */
+    /** @param fieldWells The field wells of the visual. */
     public fun fieldWells(fieldWells: IResolvable) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
-    /**
-     * @param fieldWells The field wells of the visual.
-     */
+    /** @param fieldWells The field wells of the visual. */
     public fun fieldWells(fieldWells: CfnAnalysis.BarChartFieldWellsProperty) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
-    /**
-     * @param legend The legend display setup of the visual.
-     */
+    /** @param legend The legend display setup of the visual. */
     public fun legend(legend: IResolvable) {
         cdkBuilder.legend(legend)
     }
 
-    /**
-     * @param legend The legend display setup of the visual.
-     */
+    /** @param legend The legend display setup of the visual. */
     public fun legend(legend: CfnAnalysis.LegendOptionsProperty) {
         cdkBuilder.legend(legend)
     }
 
     /**
      * @param orientation The orientation of the bars in a bar chart visual. There are two valid
-     * values in this structure:.
+     *   values in this structure:.
      * * `HORIZONTAL` : Used for charts that have horizontal bars. Visuals that use this value are
-     * horizontal bar charts, horizontal stacked bar charts, and horizontal stacked 100% bar charts.
+     *   horizontal bar charts, horizontal stacked bar charts, and horizontal stacked 100% bar
+     *   charts.
      * * `VERTICAL` : Used for charts that have vertical bars. Visuals that use this value are
-     * vertical bar charts, vertical stacked bar charts, and vertical stacked 100% bar charts.
+     *   vertical bar charts, vertical stacked bar charts, and vertical stacked 100% bar charts.
      */
     public fun orientation(orientation: String) {
         cdkBuilder.orientation(orientation)
     }
 
-    /**
-     * @param referenceLines The reference line setup of the visual.
-     */
+    /** @param referenceLines The reference line setup of the visual. */
     public fun referenceLines(vararg referenceLines: Any) {
         _referenceLines.addAll(listOf(*referenceLines))
     }
 
-    /**
-     * @param referenceLines The reference line setup of the visual.
-     */
+    /** @param referenceLines The reference line setup of the visual. */
     public fun referenceLines(referenceLines: Collection<Any>) {
         _referenceLines.addAll(referenceLines)
     }
 
-    /**
-     * @param referenceLines The reference line setup of the visual.
-     */
+    /** @param referenceLines The reference line setup of the visual. */
     public fun referenceLines(referenceLines: IResolvable) {
         cdkBuilder.referenceLines(referenceLines)
     }
 
-    /**
-     * @param smallMultiplesOptions The small multiples setup for the visual.
-     */
+    /** @param smallMultiplesOptions The small multiples setup for the visual. */
     public fun smallMultiplesOptions(smallMultiplesOptions: IResolvable) {
         cdkBuilder.smallMultiplesOptions(smallMultiplesOptions)
     }
 
-    /**
-     * @param smallMultiplesOptions The small multiples setup for the visual.
-     */
-    public fun smallMultiplesOptions(smallMultiplesOptions: CfnAnalysis.SmallMultiplesOptionsProperty) {
+    /** @param smallMultiplesOptions The small multiples setup for the visual. */
+    public fun smallMultiplesOptions(
+        smallMultiplesOptions: CfnAnalysis.SmallMultiplesOptionsProperty
+    ) {
         cdkBuilder.smallMultiplesOptions(smallMultiplesOptions)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a `BarChartVisual` .
-     */
+    /** @param sortConfiguration The sort configuration of a `BarChartVisual` . */
     public fun sortConfiguration(sortConfiguration: IResolvable) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a `BarChartVisual` .
-     */
+    /** @param sortConfiguration The sort configuration of a `BarChartVisual` . */
     public fun sortConfiguration(sortConfiguration: CfnAnalysis.BarChartSortConfigurationProperty) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param tooltip The tooltip display setup of the visual.
-     */
+    /** @param tooltip The tooltip display setup of the visual. */
     public fun tooltip(tooltip: IResolvable) {
         cdkBuilder.tooltip(tooltip)
     }
 
-    /**
-     * @param tooltip The tooltip display setup of the visual.
-     */
+    /** @param tooltip The tooltip display setup of the visual. */
     public fun tooltip(tooltip: CfnAnalysis.TooltipOptionsProperty) {
         cdkBuilder.tooltip(tooltip)
     }
 
     /**
-     * @param valueAxis The label display options (grid line, range, scale, axis step) for a bar chart
-     * value.
+     * @param valueAxis The label display options (grid line, range, scale, axis step) for a bar
+     *   chart value.
      */
     public fun valueAxis(valueAxis: IResolvable) {
         cdkBuilder.valueAxis(valueAxis)
     }
 
     /**
-     * @param valueAxis The label display options (grid line, range, scale, axis step) for a bar chart
-     * value.
+     * @param valueAxis The label display options (grid line, range, scale, axis step) for a bar
+     *   chart value.
      */
     public fun valueAxis(valueAxis: CfnAnalysis.AxisDisplayOptionsProperty) {
         cdkBuilder.valueAxis(valueAxis)
@@ -244,7 +227,7 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
 
     /**
      * @param valueLabelOptions The label options (label text, label visibility and sort icon
-     * visibility) for a bar chart value.
+     *   visibility) for a bar chart value.
      */
     public fun valueLabelOptions(valueLabelOptions: IResolvable) {
         cdkBuilder.valueLabelOptions(valueLabelOptions)
@@ -252,30 +235,25 @@ public class CfnAnalysisBarChartConfigurationPropertyDsl {
 
     /**
      * @param valueLabelOptions The label options (label text, label visibility and sort icon
-     * visibility) for a bar chart value.
+     *   visibility) for a bar chart value.
      */
     public fun valueLabelOptions(valueLabelOptions: CfnAnalysis.ChartAxisLabelOptionsProperty) {
         cdkBuilder.valueLabelOptions(valueLabelOptions)
     }
 
-    /**
-     * @param visualPalette The palette (chart color) display setup of the visual.
-     */
+    /** @param visualPalette The palette (chart color) display setup of the visual. */
     public fun visualPalette(visualPalette: IResolvable) {
         cdkBuilder.visualPalette(visualPalette)
     }
 
-    /**
-     * @param visualPalette The palette (chart color) display setup of the visual.
-     */
+    /** @param visualPalette The palette (chart color) display setup of the visual. */
     public fun visualPalette(visualPalette: CfnAnalysis.VisualPaletteProperty) {
         cdkBuilder.visualPalette(visualPalette)
     }
 
     public fun build(): CfnAnalysis.BarChartConfigurationProperty {
-        if (_contributionAnalysisDefaults.isNotEmpty()) {
+        if (_contributionAnalysisDefaults.isNotEmpty())
             cdkBuilder.contributionAnalysisDefaults(_contributionAnalysisDefaults)
-        }
         if (_referenceLines.isNotEmpty()) cdkBuilder.referenceLines(_referenceLines)
         return cdkBuilder.build()
     }

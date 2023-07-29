@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
-import kotlin.String
 
 /**
  * The window options of the geospatial map visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,9 +57,7 @@ public class CfnDashboardGeospatialWindowOptionsPropertyDsl {
         cdkBuilder.bounds(bounds)
     }
 
-    /**
-     * @param mapZoomMode The map zoom modes (manual, auto) of the geospatial window options.
-     */
+    /** @param mapZoomMode The map zoom modes (manual, auto) of the geospatial window options. */
     public fun mapZoomMode(mapZoomMode: String) {
         cdkBuilder.mapZoomMode(mapZoomMode)
     }

@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig
-import kotlin.String
 
 /**
  * Result of binding `Template` into a `Product`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,16 +39,12 @@ public class CloudFormationTemplateConfigDsl {
     private val cdkBuilder: CloudFormationTemplateConfig.Builder =
         CloudFormationTemplateConfig.builder()
 
-    /**
-     * @param assetBucket The S3 bucket containing product stack assets.
-     */
+    /** @param assetBucket The S3 bucket containing product stack assets. */
     public fun assetBucket(assetBucket: IBucket) {
         cdkBuilder.assetBucket(assetBucket)
     }
 
-    /**
-     * @param httpUrl The http url of the template in S3.
-     */
+    /** @param httpUrl The http url of the template in S3. */
     public fun httpUrl(httpUrl: String) {
         cdkBuilder.httpUrl(httpUrl)
     }

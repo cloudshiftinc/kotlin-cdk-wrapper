@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.iot.CfnThingGroup
  * Thing group properties.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,29 +38,23 @@ import software.amazon.awscdk.services.iot.CfnThingGroup
  */
 @CdkDslMarker
 public class CfnThingGroupThingGroupPropertiesPropertyDsl {
-  private val cdkBuilder: CfnThingGroup.ThingGroupPropertiesProperty.Builder =
-      CfnThingGroup.ThingGroupPropertiesProperty.builder()
+    private val cdkBuilder: CfnThingGroup.ThingGroupPropertiesProperty.Builder =
+        CfnThingGroup.ThingGroupPropertiesProperty.builder()
 
-  /**
-   * @param attributePayload The thing group attributes in JSON format.
-   */
-  public fun attributePayload(attributePayload: IResolvable) {
-    cdkBuilder.attributePayload(attributePayload)
-  }
+    /** @param attributePayload The thing group attributes in JSON format. */
+    public fun attributePayload(attributePayload: IResolvable) {
+        cdkBuilder.attributePayload(attributePayload)
+    }
 
-  /**
-   * @param attributePayload The thing group attributes in JSON format.
-   */
-  public fun attributePayload(attributePayload: CfnThingGroup.AttributePayloadProperty) {
-    cdkBuilder.attributePayload(attributePayload)
-  }
+    /** @param attributePayload The thing group attributes in JSON format. */
+    public fun attributePayload(attributePayload: CfnThingGroup.AttributePayloadProperty) {
+        cdkBuilder.attributePayload(attributePayload)
+    }
 
-  /**
-   * @param thingGroupDescription The thing group description.
-   */
-  public fun thingGroupDescription(thingGroupDescription: String) {
-    cdkBuilder.thingGroupDescription(thingGroupDescription)
-  }
+    /** @param thingGroupDescription The thing group description. */
+    public fun thingGroupDescription(thingGroupDescription: String) {
+        cdkBuilder.thingGroupDescription(thingGroupDescription)
+    }
 
-  public fun build(): CfnThingGroup.ThingGroupPropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnThingGroup.ThingGroupPropertiesProperty = cdkBuilder.build()
 }

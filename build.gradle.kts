@@ -13,7 +13,8 @@ nexusPublishing {
     this.repositories {
         sonatype { // only for users registered in Sonatype after 24 Feb 2021
             nexusUrl = uri("https://s01.oss.sonatype.org/service/local/")
-            snapshotRepositoryUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+            snapshotRepositoryUrl =
+                uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
         }
     }
 }
@@ -24,81 +25,85 @@ val awscdkSource: Configuration by configurations.creating
 dependencies {
     awscdk(project.libs.awscdk)
     awscdkSource(project.libs.awscdk) {
-        artifact {
-            classifier = "sources"
-        }
+        artifact { classifier = "sources" }
         isTransitive = false
     }
 }
 
 tasks {
-//    val downloadCloudformationSpecZip = register<Download>("downloadCloudFormationSpecZip") {
-//        src("https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip")
-//        onlyIfModified(true)
-//        dest(temporaryDir.resolve("cloudFormationSpec.zip"))
-//    }
+    //    val downloadCloudformationSpecZip = register<Download>("downloadCloudFormationSpecZip") {
+    //
+    // src("https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip")
+    //        onlyIfModified(true)
+    //        dest(temporaryDir.resolve("cloudFormationSpec.zip"))
+    //    }
 
     register<GenerateDslTask>("generateDsl") {
         dslDir = file("dsl/src/main/kotlin")
         classpath = awscdk
         sources = awscdkSource
-//        cloudFormationSpecificationZip = downloadCloudformationSpecZip.map { it.dest }
+        //        cloudFormationSpecificationZip = downloadCloudformationSpecZip.map { it.dest }
     }
 
-    // from https://github.com/Vampire/setup-wsl/blob/master/gradle/build-logic/src/main/kotlin/net/kautler/github_actions.gradle.kts
+    // from
+    // https://github.com/Vampire/setup-wsl/blob/master/gradle/build-logic/src/main/kotlin/net/kautler/github_actions.gradle.kts
     val preprocessWorkflows by registering
 
-    file(".github/workflows").listFiles { _, name -> name.endsWith(".main.kts") }!!
+    file(".github/workflows")
+        .listFiles { _, name -> name.endsWith(".main.kts") }!!
         .forEach { workflowScript ->
             val workflowName = workflowScript.name.removeSuffix(".main.kts")
-            val camelCasedWorkflowName = workflowName.replace("""-\w""".toRegex()) {
-                it.value.substring(1)
+            val camelCasedWorkflowName =
+                workflowName
+                    .replace("""-\w""".toRegex()) {
+                        it.value.substring(1).replaceFirstChar(Char::uppercaseChar)
+                    }
                     .replaceFirstChar(Char::uppercaseChar)
-            }
-                .replaceFirstChar(Char::uppercaseChar)
 
-            val task = register<Exec>("preprocess${camelCasedWorkflowName}Workflow") {
-                inputs.file(workflowScript)
-                    .withPropertyName("workflowScript")
-                outputs.file(workflowScript.resolveSibling("$workflowName.yaml"))
-                    .withPropertyName("workflowFile")
-                commandLine(workflowScript.absolutePath)
-            }
-            preprocessWorkflows {
-                dependsOn(task)
-            }
+            val task =
+                register<Exec>("preprocess${camelCasedWorkflowName}Workflow") {
+                    inputs.file(workflowScript).withPropertyName("workflowScript")
+                    outputs
+                        .file(workflowScript.resolveSibling("$workflowName.yaml"))
+                        .withPropertyName("workflowFile")
+                    commandLine(workflowScript.absolutePath)
+                }
+            preprocessWorkflows { dependsOn(task) }
         }
 
-    named("precommit") {
-        dependsOn(preprocessWorkflows)
+    named("precommit") { dependsOn(preprocessWorkflows) }
+}
+
+val ktfmt by configurations.creating
+
+dependencies { ktfmt("com.facebook:ktfmt:0.44") }
+
+val ktfmtFormat by
+    tasks.registering(JavaExec::class) {
+        val ktfmtArgs =
+            mutableListOf("--kotlinlang-style", layout.projectDirectory.asFile.absolutePath)
+        if (System.getenv()["CI"] != null) ktfmtArgs.add("--set-exit-if-changed")
+        group = "formatting"
+        description = "Run ktfmt"
+        classpath = ktfmt
+        mainClass.set("com.facebook.ktfmt.cli.Main")
+        //        jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
+        args(ktfmtArgs)
     }
-}
 
-val ktlint: Configuration by configurations.creating
+val check = tasks.named("check") { dependsOn(ktfmtFormat) }
 
-dependencies {
-    ktlint("com.pinterest:ktlint:0.50.0")
-}
+tasks.named("precommit") { dependsOn(check) }
 
-val ktlintFormat = tasks.register<JavaExec>("ktlintFormat") {
-    group = LifecycleBasePlugin.VERIFICATION_GROUP
-    description = "Check Kotlin code style and format"
-    classpath = ktlint
-    mainClass.set("com.pinterest.ktlint.Main")
-    jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
-//    args("--format", "**/src/**/*.kt", "**.kts", "!build-logic/build/**")
-    args("--format", "**/src/**/*.kt", "**.kts", "!build-logic/build/**", "!dsl/src/**/*.kt")
-}
-
-//val noLocalChanges = tasks.register<NoLocalChanges>("noLocalChanges") {
+// val noLocalChanges = tasks.register<NoLocalChanges>("noLocalChanges") {
 //    group = LifecycleBasePlugin.VERIFICATION_GROUP
 //    onlyIf { System.getenv()["CI"] != null }
 //    dependsOn(ktlintFormat)
-//}
+// }
 
-//tasks.named("check") {
+// tasks.named("check") {
 //    dependsOn(noLocalChanges)
-//}
+// }
 
 release {
     checks {
@@ -109,8 +114,6 @@ release {
     }
     preProcessFiles {
         templates(sourceDir = "gradle/templates", destinationDir = layout.projectDirectory)
-        replacements {
-            includes("README.MD")
-        }
+        replacements { includes("README.MD") }
     }
 }

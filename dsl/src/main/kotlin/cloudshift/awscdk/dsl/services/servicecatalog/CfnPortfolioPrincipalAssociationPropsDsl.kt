@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociationProps
 import kotlin.String
+import software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociationProps
 
 /**
  * Properties for defining a `CfnPortfolioPrincipalAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,23 +49,19 @@ public class CfnPortfolioPrincipalAssociationPropsDsl {
         cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    /**
-     * @param portfolioId The portfolio identifier.
-     */
+    /** @param portfolioId The portfolio identifier. */
     public fun portfolioId(portfolioId: String) {
         cdkBuilder.portfolioId(portfolioId)
     }
 
-    /**
-     * @param principalArn The ARN of the principal ( IAM user, role, or group).
-     */
+    /** @param principalArn The ARN of the principal ( IAM user, role, or group). */
     public fun principalArn(principalArn: String) {
         cdkBuilder.principalArn(principalArn)
     }
 
     /**
-     * @param principalType The principal type. The supported value is `IAM` .
-     * *Allowed Values* : `IAM`
+     * @param principalType The principal type. The supported value is `IAM` . *Allowed Values* :
+     *   `IAM`
      */
     public fun principalType(principalType: String) {
         cdkBuilder.principalType(principalType)

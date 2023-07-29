@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediapackage
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.mediapackage.CfnAsset
  * The playback endpoint for a packaging configuration on an asset.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,23 +33,21 @@ import software.amazon.awscdk.services.mediapackage.CfnAsset
  */
 @CdkDslMarker
 public class CfnAssetEgressEndpointPropertyDsl {
-  private val cdkBuilder: CfnAsset.EgressEndpointProperty.Builder =
-      CfnAsset.EgressEndpointProperty.builder()
+    private val cdkBuilder: CfnAsset.EgressEndpointProperty.Builder =
+        CfnAsset.EgressEndpointProperty.builder()
 
-  /**
-   * @param packagingConfigurationId The ID of a packaging configuration that's applied to this
-   * asset. 
-   */
-  public fun packagingConfigurationId(packagingConfigurationId: String) {
-    cdkBuilder.packagingConfigurationId(packagingConfigurationId)
-  }
+    /**
+     * @param packagingConfigurationId The ID of a packaging configuration that's applied to this
+     *   asset.
+     */
+    public fun packagingConfigurationId(packagingConfigurationId: String) {
+        cdkBuilder.packagingConfigurationId(packagingConfigurationId)
+    }
 
-  /**
-   * @param url The URL that's used to request content from this endpoint. 
-   */
-  public fun url(url: String) {
-    cdkBuilder.url(url)
-  }
+    /** @param url The URL that's used to request content from this endpoint. */
+    public fun url(url: String) {
+        cdkBuilder.url(url)
+    }
 
-  public fun build(): CfnAsset.EgressEndpointProperty = cdkBuilder.build()
+    public fun build(): CfnAsset.EgressEndpointProperty = cdkBuilder.build()
 }

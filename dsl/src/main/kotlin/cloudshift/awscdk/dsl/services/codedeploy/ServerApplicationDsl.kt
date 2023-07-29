@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -11,7 +20,6 @@ import software.constructs.Construct
  * A CodeDeploy Application that deploys to EC2/on-premise instances.
  *
  * Example:
- *
  * ```
  * ServerApplication application = ServerApplication.Builder.create(this, "CodeDeployApplication")
  * .applicationName("MyApplication")
@@ -20,21 +28,21 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class ServerApplicationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: ServerApplication.Builder = ServerApplication.Builder.create(scope, id)
+    private val cdkBuilder: ServerApplication.Builder = ServerApplication.Builder.create(scope, id)
 
-  /**
-   * The physical, human-readable name of the CodeDeploy Application.
-   *
-   * Default: an auto-generated name will be used
-   *
-   * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
-   */
-  public fun applicationName(applicationName: String) {
-    cdkBuilder.applicationName(applicationName)
-  }
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     *
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+     */
+    public fun applicationName(applicationName: String) {
+        cdkBuilder.applicationName(applicationName)
+    }
 
-  public fun build(): ServerApplication = cdkBuilder.build()
+    public fun build(): ServerApplication = cdkBuilder.build()
 }

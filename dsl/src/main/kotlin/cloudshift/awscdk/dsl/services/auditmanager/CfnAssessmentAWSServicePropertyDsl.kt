@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.auditmanager
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.auditmanager.CfnAssessment
  * so on.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.auditmanager.CfnAssessment
  */
 @CdkDslMarker
 public class CfnAssessmentAWSServicePropertyDsl {
-  private val cdkBuilder: CfnAssessment.AWSServiceProperty.Builder =
-      CfnAssessment.AWSServiceProperty.builder()
+    private val cdkBuilder: CfnAssessment.AWSServiceProperty.Builder =
+        CfnAssessment.AWSServiceProperty.builder()
 
-  /**
-   * @param serviceName The name of the AWS service .
-   */
-  public fun serviceName(serviceName: String) {
-    cdkBuilder.serviceName(serviceName)
-  }
+    /** @param serviceName The name of the AWS service . */
+    public fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
+    }
 
-  public fun build(): CfnAssessment.AWSServiceProperty = cdkBuilder.build()
+    public fun build(): CfnAssessment.AWSServiceProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53recoverycontrol
 
@@ -17,11 +26,10 @@ import software.constructs.Construct
  *
  * A control panel represents a group of routing controls that can be changed together in a single
  * transaction. You can use a control panel to centrally view the operational status of applications
- * across your organization, and trigger multi-app failovers in a single transaction, for example, to
- * fail over from one AWS Region (cell) to another.
+ * across your organization, and trigger multi-app failovers in a single transaction, for example,
+ * to fail over from one AWS Region (cell) to another.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,57 +49,61 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnControlPanelDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnControlPanel.Builder = CfnControlPanel.Builder.create(scope, id)
+    private val cdkBuilder: CfnControlPanel.Builder = CfnControlPanel.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * The Amazon Resource Name (ARN) of the cluster for the control panel.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-clusterarn)
-   * @param clusterArn The Amazon Resource Name (ARN) of the cluster for the control panel. 
-   */
-  public fun clusterArn(clusterArn: String) {
-    cdkBuilder.clusterArn(clusterArn)
-  }
+    /**
+     * The Amazon Resource Name (ARN) of the cluster for the control panel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-clusterarn)
+     *
+     * @param clusterArn The Amazon Resource Name (ARN) of the cluster for the control panel.
+     */
+    public fun clusterArn(clusterArn: String) {
+        cdkBuilder.clusterArn(clusterArn)
+    }
 
-  /**
-   * The name of the control panel.
-   *
-   * You can use any non-white space character in the name.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-name)
-   * @param name The name of the control panel. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the control panel.
+     *
+     * You can use any non-white space character in the name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-name)
+     *
+     * @param name The name of the control panel.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * The value for a tag.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-tags)
-   * @param tags The value for a tag. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * The value for a tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-tags)
+     *
+     * @param tags The value for a tag.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * The value for a tag.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-tags)
-   * @param tags The value for a tag. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * The value for a tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html#cfn-route53recoverycontrol-controlpanel-tags)
+     *
+     * @param tags The value for a tag.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnControlPanel {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnControlPanel {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

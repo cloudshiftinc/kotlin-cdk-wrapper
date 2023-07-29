@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.licensemanager.CfnLicense
 import kotlin.String
+import software.amazon.awscdk.services.licensemanager.CfnLicense
 
 /**
  * Date and time range during which the license is valid, in ISO8601-UTC format.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,12 @@ public class CfnLicenseValidityDateFormatPropertyDsl {
     private val cdkBuilder: CfnLicense.ValidityDateFormatProperty.Builder =
         CfnLicense.ValidityDateFormatProperty.builder()
 
-    /**
-     * @param begin Start of the time range.
-     */
+    /** @param begin Start of the time range. */
     public fun begin(begin: String) {
         cdkBuilder.begin(begin)
     }
 
-    /**
-     * @param end End of the time range.
-     */
+    /** @param end End of the time range. */
     public fun end(end: String) {
         cdkBuilder.end(end)
     }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.efs
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.efs.FileSystemAttributes
  * Properties that describe an existing EFS file system.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.iam.*;
  * IFileSystem importedFileSystem = FileSystem.fromFileSystemAttributes(this, "existingFS",
@@ -26,28 +34,22 @@ import software.amazon.awscdk.services.efs.FileSystemAttributes
  */
 @CdkDslMarker
 public class FileSystemAttributesDsl {
-  private val cdkBuilder: FileSystemAttributes.Builder = FileSystemAttributes.builder()
+    private val cdkBuilder: FileSystemAttributes.Builder = FileSystemAttributes.builder()
 
-  /**
-   * @param fileSystemArn The File System's Arn.
-   */
-  public fun fileSystemArn(fileSystemArn: String) {
-    cdkBuilder.fileSystemArn(fileSystemArn)
-  }
+    /** @param fileSystemArn The File System's Arn. */
+    public fun fileSystemArn(fileSystemArn: String) {
+        cdkBuilder.fileSystemArn(fileSystemArn)
+    }
 
-  /**
-   * @param fileSystemId The File System's ID.
-   */
-  public fun fileSystemId(fileSystemId: String) {
-    cdkBuilder.fileSystemId(fileSystemId)
-  }
+    /** @param fileSystemId The File System's ID. */
+    public fun fileSystemId(fileSystemId: String) {
+        cdkBuilder.fileSystemId(fileSystemId)
+    }
 
-  /**
-   * @param securityGroup The security group of the file system. 
-   */
-  public fun securityGroup(securityGroup: ISecurityGroup) {
-    cdkBuilder.securityGroup(securityGroup)
-  }
+    /** @param securityGroup The security group of the file system. */
+    public fun securityGroup(securityGroup: ISecurityGroup) {
+        cdkBuilder.securityGroup(securityGroup)
+    }
 
-  public fun build(): FileSystemAttributes = cdkBuilder.build()
+    public fun build(): FileSystemAttributes = cdkBuilder.build()
 }

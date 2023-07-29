@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wisdom
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.wisdom.CfnAssistantAssociationProps
  * Properties for defining a `CfnAssistantAssociation`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,55 +49,43 @@ import software.amazon.awscdk.services.wisdom.CfnAssistantAssociationProps
  */
 @CdkDslMarker
 public class CfnAssistantAssociationPropsDsl {
-  private val cdkBuilder: CfnAssistantAssociationProps.Builder =
-      CfnAssistantAssociationProps.builder()
+    private val cdkBuilder: CfnAssistantAssociationProps.Builder =
+        CfnAssistantAssociationProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param assistantId The identifier of the Wisdom assistant. 
-   */
-  public fun assistantId(assistantId: String) {
-    cdkBuilder.assistantId(assistantId)
-  }
+    /** @param assistantId The identifier of the Wisdom assistant. */
+    public fun assistantId(assistantId: String) {
+        cdkBuilder.assistantId(assistantId)
+    }
 
-  /**
-   * @param association The identifier of the associated resource. 
-   */
-  public fun association(association: IResolvable) {
-    cdkBuilder.association(association)
-  }
+    /** @param association The identifier of the associated resource. */
+    public fun association(association: IResolvable) {
+        cdkBuilder.association(association)
+    }
 
-  /**
-   * @param association The identifier of the associated resource. 
-   */
-  public fun association(association: CfnAssistantAssociation.AssociationDataProperty) {
-    cdkBuilder.association(association)
-  }
+    /** @param association The identifier of the associated resource. */
+    public fun association(association: CfnAssistantAssociation.AssociationDataProperty) {
+        cdkBuilder.association(association)
+    }
 
-  /**
-   * @param associationType The type of association. 
-   */
-  public fun associationType(associationType: String) {
-    cdkBuilder.associationType(associationType)
-  }
+    /** @param associationType The type of association. */
+    public fun associationType(associationType: String) {
+        cdkBuilder.associationType(associationType)
+    }
 
-  /**
-   * @param tags The tags used to organize, track, or control access for this resource.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags used to organize, track, or control access for this resource. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags used to organize, track, or control access for this resource.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags used to organize, track, or control access for this resource. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnAssistantAssociationProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAssistantAssociationProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

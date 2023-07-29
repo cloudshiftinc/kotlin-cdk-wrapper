@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * An object that represents an HTTP gateway route.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -80,36 +88,28 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteHttpGatewayRoutePropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.HttpGatewayRouteProperty.Builder =
-      CfnGatewayRoute.HttpGatewayRouteProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.HttpGatewayRouteProperty.Builder =
+        CfnGatewayRoute.HttpGatewayRouteProperty.builder()
 
-  /**
-   * @param action An object that represents the action to take if a match is determined. 
-   */
-  public fun action(action: IResolvable) {
-    cdkBuilder.action(action)
-  }
+    /** @param action An object that represents the action to take if a match is determined. */
+    public fun action(action: IResolvable) {
+        cdkBuilder.action(action)
+    }
 
-  /**
-   * @param action An object that represents the action to take if a match is determined. 
-   */
-  public fun action(action: CfnGatewayRoute.HttpGatewayRouteActionProperty) {
-    cdkBuilder.action(action)
-  }
+    /** @param action An object that represents the action to take if a match is determined. */
+    public fun action(action: CfnGatewayRoute.HttpGatewayRouteActionProperty) {
+        cdkBuilder.action(action)
+    }
 
-  /**
-   * @param match An object that represents the criteria for determining a request match. 
-   */
-  public fun match(match: IResolvable) {
-    cdkBuilder.match(match)
-  }
+    /** @param match An object that represents the criteria for determining a request match. */
+    public fun match(match: IResolvable) {
+        cdkBuilder.match(match)
+    }
 
-  /**
-   * @param match An object that represents the criteria for determining a request match. 
-   */
-  public fun match(match: CfnGatewayRoute.HttpGatewayRouteMatchProperty) {
-    cdkBuilder.match(match)
-  }
+    /** @param match An object that represents the criteria for determining a request match. */
+    public fun match(match: CfnGatewayRoute.HttpGatewayRouteMatchProperty) {
+        cdkBuilder.match(match)
+    }
 
-  public fun build(): CfnGatewayRoute.HttpGatewayRouteProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.HttpGatewayRouteProperty = cdkBuilder.build()
 }

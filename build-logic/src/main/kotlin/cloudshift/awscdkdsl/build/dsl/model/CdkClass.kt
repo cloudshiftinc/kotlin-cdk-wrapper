@@ -29,13 +29,13 @@ internal interface CdkClass {
             val type: TypeName
             val nullable: Boolean
 
-            fun typeName(): TypeName = when (nullable) {
-                true -> type.copy(nullable = true)
-                else -> type
-            }
+            fun typeName(): TypeName =
+                when (nullable) {
+                    true -> type.copy(nullable = true)
+                    else -> type
+                }
         }
     }
 }
 
-private val BuilderInterface =
-    ClassName("software.amazon.jsii", listOf("Builder"))
+private val BuilderInterface = ClassName("software.amazon.jsii", listOf("Builder"))

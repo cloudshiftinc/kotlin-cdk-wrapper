@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
  * property that defines the rules to be used for mapping users to roles.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,37 +43,28 @@ import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
  */
 @CdkDslMarker
 public class CfnIdentityPoolRoleAttachmentRulesConfigurationTypePropertyDsl {
-  private val cdkBuilder: CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.Builder =
-      CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.builder()
+    private val cdkBuilder: CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.Builder =
+        CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.builder()
 
-  private val _rules: MutableList<Any> = mutableListOf()
+    private val _rules: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param rules The rules. 
-   * You can specify up to 25 rules per identity provider.
-   */
-  public fun rules(vararg rules: Any) {
-    _rules.addAll(listOf(*rules))
-  }
+    /** @param rules The rules. You can specify up to 25 rules per identity provider. */
+    public fun rules(vararg rules: Any) {
+        _rules.addAll(listOf(*rules))
+    }
 
-  /**
-   * @param rules The rules. 
-   * You can specify up to 25 rules per identity provider.
-   */
-  public fun rules(rules: Collection<Any>) {
-    _rules.addAll(rules)
-  }
+    /** @param rules The rules. You can specify up to 25 rules per identity provider. */
+    public fun rules(rules: Collection<Any>) {
+        _rules.addAll(rules)
+    }
 
-  /**
-   * @param rules The rules. 
-   * You can specify up to 25 rules per identity provider.
-   */
-  public fun rules(rules: IResolvable) {
-    cdkBuilder.rules(rules)
-  }
+    /** @param rules The rules. You can specify up to 25 rules per identity provider. */
+    public fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules)
+    }
 
-  public fun build(): CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty {
-    if(_rules.isNotEmpty()) cdkBuilder.rules(_rules)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty {
+        if (_rules.isNotEmpty()) cdkBuilder.rules(_rules)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -7,12 +16,11 @@ import kotlin.Number
 import software.amazon.awscdk.services.lambda.CfnVersion
 
 /**
- * A [provisioned
- * concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html)
+ * A
+ * [provisioned concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html)
  * configuration for a function's version.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,16 @@ import software.amazon.awscdk.services.lambda.CfnVersion
  */
 @CdkDslMarker
 public class CfnVersionProvisionedConcurrencyConfigurationPropertyDsl {
-  private val cdkBuilder: CfnVersion.ProvisionedConcurrencyConfigurationProperty.Builder =
-      CfnVersion.ProvisionedConcurrencyConfigurationProperty.builder()
+    private val cdkBuilder: CfnVersion.ProvisionedConcurrencyConfigurationProperty.Builder =
+        CfnVersion.ProvisionedConcurrencyConfigurationProperty.builder()
 
-  /**
-   * @param provisionedConcurrentExecutions The amount of provisioned concurrency to allocate for
-   * the version. 
-   */
-  public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
-    cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
-  }
+    /**
+     * @param provisionedConcurrentExecutions The amount of provisioned concurrency to allocate for
+     *   the version.
+     */
+    public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
+        cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
+    }
 
-  public fun build(): CfnVersion.ProvisionedConcurrencyConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnVersion.ProvisionedConcurrencyConfigurationProperty = cdkBuilder.build()
 }

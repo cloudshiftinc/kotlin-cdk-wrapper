@@ -13,23 +13,23 @@ import com.squareup.kotlinpoet.UNIT
 internal class NamespaceObjectGenerator {
     fun generate(builders: List<CdkBuilder>): Map<ClassName, List<NamespacedBuilderFunction>> {
         // add extension function to allow DSL builder
-        return builders.map { builder ->
-            val namespaceObjectName =
-                packageToNamespaceObject(
-                    builder.buildableClass.className.packageName
+        return builders
+            .map { builder ->
+                val namespaceObjectName =
+                    packageToNamespaceObject(builder.buildableClass.className.packageName)
+                val builderName =
+                    builder.buildableClass.className.simpleNames
+                        .joinToString(separator = "")
+                        .replaceFirstChar { it.lowercase() }
+                val fn = processBuilder(builder, builderName)
+                NamespacedBuilderFunction(
+                    namespace = namespaceObjectName,
+                    builderName = builderName,
+                    funSpec = fn
                 )
-            val builderName =
-                builder.buildableClass.className.simpleNames.joinToString(
-                    separator = ""
-                )
-                    .replaceFirstChar { it.lowercase() }
-            val fn = processBuilder(builder, builderName)
-            NamespacedBuilderFunction(
-                namespace = namespaceObjectName,
-                builderName = builderName,
-                funSpec = fn
-            )
-        }.sorted().groupBy { it.namespace }
+            }
+            .sorted()
+            .groupBy { it.namespace }
     }
 
     private fun processBuilder(builder: CdkBuilder, builderName: String): FunSpec {
@@ -39,9 +39,7 @@ internal class NamespaceObjectGenerator {
                 .returns(builder.buildableClass.className)
 
         if (builder.cdkBuilderClass.deprecated) {
-            funSpecBuilder.addAnnotation(
-                Annotations.Deprecated
-            )
+            funSpecBuilder.addAnnotation(Annotations.Deprecated)
         }
 
         builder.buildableClass.comment?.let { funSpecBuilder.addKdoc("%L", it) }
@@ -53,26 +51,19 @@ internal class NamespaceObjectGenerator {
         val dslBuilderClass = builder.dslBuilderClass
 
         // enable builder DSL
-        val lambdaTypeName =
-            LambdaTypeName.get(
-                dslBuilderClass,
-                returnType = UNIT
-            )
+        val lambdaTypeName = LambdaTypeName.get(dslBuilderClass, returnType = UNIT)
         funSpecBuilder.addParameter(
-            ParameterSpec.builder("block", lambdaTypeName)
-                .defaultValue("{}")
-                .build()
+            ParameterSpec.builder("block", lambdaTypeName).defaultValue("{}").build()
         )
 
         val codeBlockBuilder = CodeBlock.builder()
 
-        codeBlockBuilder.addStatement(
-            "val builder = %T(%L)",
-            dslBuilderClass,
-            builder.builderFactoryFunction.parameters.joinToString(
-                ", "
-            ) { it.name }
-        )
+        codeBlockBuilder
+            .addStatement(
+                "val builder = %T(%L)",
+                dslBuilderClass,
+                builder.builderFactoryFunction.parameters.joinToString(", ") { it.name }
+            )
             .addStatement("builder.apply(block)")
             .addStatement("return builder.build()")
 
@@ -81,24 +72,18 @@ internal class NamespaceObjectGenerator {
     }
 
     private fun packageToNamespaceObject(packageName: String): ClassName {
-        val dslPackageName =
-            packageName.replace(
-                CdkDsl.cdkPackageName,
-                CdkDsl.packageName
-            )
+        val dslPackageName = packageName.replace(CdkDsl.cdkPackageName, CdkDsl.packageName)
 
         return ClassName(dslPackageName, packageName.split(".").last())
     }
 
-    internal data class NamespacedBuilderFunction(val namespace: ClassName, val builderName: String, val funSpec: FunSpec) :
-        Comparable<NamespacedBuilderFunction> {
-            override fun compareTo(other: NamespacedBuilderFunction): Int {
-                return compareValuesBy(
-                    this,
-                    other,
-                    { it.namespace },
-                    { it.builderName }
-                )
-            }
+    internal data class NamespacedBuilderFunction(
+        val namespace: ClassName,
+        val builderName: String,
+        val funSpec: FunSpec
+    ) : Comparable<NamespacedBuilderFunction> {
+        override fun compareTo(other: NamespacedBuilderFunction): Int {
+            return compareValuesBy(this, other, { it.namespace }, { it.builderName })
         }
+    }
 }

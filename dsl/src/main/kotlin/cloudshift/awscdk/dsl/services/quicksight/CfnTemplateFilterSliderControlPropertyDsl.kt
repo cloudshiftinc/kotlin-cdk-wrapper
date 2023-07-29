@@ -1,12 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * A control to display a horizontal toggle bar.
@@ -14,7 +23,6 @@ import kotlin.String
  * This is used to change a value by sliding the toggle.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,58 +63,42 @@ public class CfnTemplateFilterSliderControlPropertyDsl {
     private val cdkBuilder: CfnTemplate.FilterSliderControlProperty.Builder =
         CfnTemplate.FilterSliderControlProperty.builder()
 
-    /**
-     * @param displayOptions The display options of a control.
-     */
+    /** @param displayOptions The display options of a control. */
     public fun displayOptions(displayOptions: IResolvable) {
         cdkBuilder.displayOptions(displayOptions)
     }
 
-    /**
-     * @param displayOptions The display options of a control.
-     */
+    /** @param displayOptions The display options of a control. */
     public fun displayOptions(displayOptions: CfnTemplate.SliderControlDisplayOptionsProperty) {
         cdkBuilder.displayOptions(displayOptions)
     }
 
-    /**
-     * @param filterControlId The ID of the `FilterSliderControl` .
-     */
+    /** @param filterControlId The ID of the `FilterSliderControl` . */
     public fun filterControlId(filterControlId: String) {
         cdkBuilder.filterControlId(filterControlId)
     }
 
-    /**
-     * @param maximumValue The smaller value that is displayed at the left of the slider.
-     */
+    /** @param maximumValue The smaller value that is displayed at the left of the slider. */
     public fun maximumValue(maximumValue: Number) {
         cdkBuilder.maximumValue(maximumValue)
     }
 
-    /**
-     * @param minimumValue The larger value that is displayed at the right of the slider.
-     */
+    /** @param minimumValue The larger value that is displayed at the right of the slider. */
     public fun minimumValue(minimumValue: Number) {
         cdkBuilder.minimumValue(minimumValue)
     }
 
-    /**
-     * @param sourceFilterId The source filter ID of the `FilterSliderControl` .
-     */
+    /** @param sourceFilterId The source filter ID of the `FilterSliderControl` . */
     public fun sourceFilterId(sourceFilterId: String) {
         cdkBuilder.sourceFilterId(sourceFilterId)
     }
 
-    /**
-     * @param stepSize The number of increments that the slider bar is divided into.
-     */
+    /** @param stepSize The number of increments that the slider bar is divided into. */
     public fun stepSize(stepSize: Number) {
         cdkBuilder.stepSize(stepSize)
     }
 
-    /**
-     * @param title The title of the `FilterSliderControl` .
-     */
+    /** @param title The title of the `FilterSliderControl` . */
     public fun title(title: String) {
         cdkBuilder.title(title)
     }

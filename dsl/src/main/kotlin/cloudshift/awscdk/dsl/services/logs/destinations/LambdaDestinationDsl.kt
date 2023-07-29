@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.logs.destinations
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.logs.destinations.LambdaDestination
  * Use a Lambda Function as the destination for a log subscription.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.logs.destinations.*;
  * Function fn;
@@ -25,20 +33,20 @@ import software.amazon.awscdk.services.logs.destinations.LambdaDestination
  */
 @CdkDslMarker
 public class LambdaDestinationDsl(
-  fn: IFunction,
+    fn: IFunction,
 ) {
-  private val cdkBuilder: LambdaDestination.Builder = LambdaDestination.Builder.create(fn)
+    private val cdkBuilder: LambdaDestination.Builder = LambdaDestination.Builder.create(fn)
 
-  /**
-   * Whether or not to add Lambda Permissions.
-   *
-   * Default: true
-   *
-   * @param addPermissions Whether or not to add Lambda Permissions. 
-   */
-  public fun addPermissions(addPermissions: Boolean) {
-    cdkBuilder.addPermissions(addPermissions)
-  }
+    /**
+     * Whether or not to add Lambda Permissions.
+     *
+     * Default: true
+     *
+     * @param addPermissions Whether or not to add Lambda Permissions.
+     */
+    public fun addPermissions(addPermissions: Boolean) {
+        cdkBuilder.addPermissions(addPermissions)
+    }
 
-  public fun build(): LambdaDestination = cdkBuilder.build()
+    public fun build(): LambdaDestination = cdkBuilder.build()
 }

@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration
 import kotlin.String
+import software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration
 
 /**
  * Trace content for your wireless gateway and wireless device resources.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,9 +37,9 @@ public class CfnNetworkAnalyzerConfigurationTraceContentPropertyDsl {
         CfnNetworkAnalyzerConfiguration.TraceContentProperty.builder()
 
     /**
-     * @param logLevel The log level for a log message.
-     * The log levels can be disabled, or set to `ERROR` to display less verbose logs containing only
-     * error information, or to `INFO` for more detailed logs
+     * @param logLevel The log level for a log message. The log levels can be disabled, or set to
+     *   `ERROR` to display less verbose logs containing only error information, or to `INFO` for
+     *   more detailed logs
      */
     public fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
@@ -39,9 +47,8 @@ public class CfnNetworkAnalyzerConfigurationTraceContentPropertyDsl {
 
     /**
      * @param wirelessDeviceFrameInfo `FrameInfo` of your wireless device resources for the trace
-     * content.
-     * Use FrameInfo to debug the communication between your LoRaWAN end devices and the network
-     * server.
+     *   content. Use FrameInfo to debug the communication between your LoRaWAN end devices and the
+     *   network server.
      */
     public fun wirelessDeviceFrameInfo(wirelessDeviceFrameInfo: String) {
         cdkBuilder.wirelessDeviceFrameInfo(wirelessDeviceFrameInfo)

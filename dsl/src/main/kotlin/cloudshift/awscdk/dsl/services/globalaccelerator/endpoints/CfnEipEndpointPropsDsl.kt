@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.globalaccelerator.endpoints
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoin
  * Properties for a NetworkLoadBalancerEndpoint.
  *
  * Example:
- *
  * ```
  * Listener listener;
  * CfnEIP eip;
@@ -24,15 +32,15 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoin
  */
 @CdkDslMarker
 public class CfnEipEndpointPropsDsl {
-  private val cdkBuilder: CfnEipEndpointProps.Builder = CfnEipEndpointProps.builder()
+    private val cdkBuilder: CfnEipEndpointProps.Builder = CfnEipEndpointProps.builder()
 
-  /**
-   * @param weight Endpoint weight across all endpoints in the group.
-   * Must be a value between 0 and 255.
-   */
-  public fun weight(weight: Number) {
-    cdkBuilder.weight(weight)
-  }
+    /**
+     * @param weight Endpoint weight across all endpoints in the group. Must be a value between 0
+     *   and 255.
+     */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+    }
 
-  public fun build(): CfnEipEndpointProps = cdkBuilder.build()
+    public fun build(): CfnEipEndpointProps = cdkBuilder.build()
 }

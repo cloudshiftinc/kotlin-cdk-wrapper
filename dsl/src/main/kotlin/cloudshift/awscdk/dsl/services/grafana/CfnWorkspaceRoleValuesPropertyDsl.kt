@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.grafana
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.grafana.CfnWorkspace
  * over the workspace.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,48 +39,48 @@ import software.amazon.awscdk.services.grafana.CfnWorkspace
  */
 @CdkDslMarker
 public class CfnWorkspaceRoleValuesPropertyDsl {
-  private val cdkBuilder: CfnWorkspace.RoleValuesProperty.Builder =
-      CfnWorkspace.RoleValuesProperty.builder()
+    private val cdkBuilder: CfnWorkspace.RoleValuesProperty.Builder =
+        CfnWorkspace.RoleValuesProperty.builder()
 
-  private val _admin: MutableList<String> = mutableListOf()
+    private val _admin: MutableList<String> = mutableListOf()
 
-  private val _editor: MutableList<String> = mutableListOf()
+    private val _editor: MutableList<String> = mutableListOf()
 
-  /**
-   * @param admin A list of groups from the SAML assertion attribute to grant the Grafana `Admin`
-   * role to.
-   */
-  public fun admin(vararg admin: String) {
-    _admin.addAll(listOf(*admin))
-  }
+    /**
+     * @param admin A list of groups from the SAML assertion attribute to grant the Grafana `Admin`
+     *   role to.
+     */
+    public fun admin(vararg admin: String) {
+        _admin.addAll(listOf(*admin))
+    }
 
-  /**
-   * @param admin A list of groups from the SAML assertion attribute to grant the Grafana `Admin`
-   * role to.
-   */
-  public fun admin(admin: Collection<String>) {
-    _admin.addAll(admin)
-  }
+    /**
+     * @param admin A list of groups from the SAML assertion attribute to grant the Grafana `Admin`
+     *   role to.
+     */
+    public fun admin(admin: Collection<String>) {
+        _admin.addAll(admin)
+    }
 
-  /**
-   * @param editor A list of groups from the SAML assertion attribute to grant the Grafana `Editor`
-   * role to.
-   */
-  public fun editor(vararg editor: String) {
-    _editor.addAll(listOf(*editor))
-  }
+    /**
+     * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
+     *   `Editor` role to.
+     */
+    public fun editor(vararg editor: String) {
+        _editor.addAll(listOf(*editor))
+    }
 
-  /**
-   * @param editor A list of groups from the SAML assertion attribute to grant the Grafana `Editor`
-   * role to.
-   */
-  public fun editor(editor: Collection<String>) {
-    _editor.addAll(editor)
-  }
+    /**
+     * @param editor A list of groups from the SAML assertion attribute to grant the Grafana
+     *   `Editor` role to.
+     */
+    public fun editor(editor: Collection<String>) {
+        _editor.addAll(editor)
+    }
 
-  public fun build(): CfnWorkspace.RoleValuesProperty {
-    if(_admin.isNotEmpty()) cdkBuilder.admin(_admin)
-    if(_editor.isNotEmpty()) cdkBuilder.editor(_editor)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnWorkspace.RoleValuesProperty {
+        if (_admin.isNotEmpty()) cdkBuilder.admin(_admin)
+        if (_editor.isNotEmpty()) cdkBuilder.editor(_editor)
+        return cdkBuilder.build()
+    }
 }

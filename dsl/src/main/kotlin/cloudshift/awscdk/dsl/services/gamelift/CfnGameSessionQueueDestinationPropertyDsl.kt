@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.gamelift
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
  * destinations.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,17 +35,17 @@ import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
  */
 @CdkDslMarker
 public class CfnGameSessionQueueDestinationPropertyDsl {
-  private val cdkBuilder: CfnGameSessionQueue.DestinationProperty.Builder =
-      CfnGameSessionQueue.DestinationProperty.builder()
+    private val cdkBuilder: CfnGameSessionQueue.DestinationProperty.Builder =
+        CfnGameSessionQueue.DestinationProperty.builder()
 
-  /**
-   * @param destinationArn The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
-   * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
-   * across all Regions.
-   */
-  public fun destinationArn(destinationArn: String) {
-    cdkBuilder.destinationArn(destinationArn)
-  }
+    /**
+     * @param destinationArn The Amazon Resource Name (ARN) that is assigned to fleet or fleet
+     *   alias. ARNs, which include a fleet ID or alias ID and a Region name, provide a unique
+     *   identifier across all Regions.
+     */
+    public fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+    }
 
-  public fun build(): CfnGameSessionQueue.DestinationProperty = cdkBuilder.build()
+    public fun build(): CfnGameSessionQueue.DestinationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -90,60 +98,65 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateNumericFormatConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.NumericFormatConfigurationProperty.Builder =
-      CfnTemplate.NumericFormatConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.NumericFormatConfigurationProperty.Builder =
+        CfnTemplate.NumericFormatConfigurationProperty.builder()
 
-  /**
-   * @param currencyDisplayFormatConfiguration The options that determine the currency display
-   * format configuration.
-   */
-  public fun currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration: IResolvable) {
-    cdkBuilder.currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration)
-  }
+    /**
+     * @param currencyDisplayFormatConfiguration The options that determine the currency display
+     *   format configuration.
+     */
+    public fun currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration: IResolvable) {
+        cdkBuilder.currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param currencyDisplayFormatConfiguration The options that determine the currency display
-   * format configuration.
-   */
-  public
-      fun currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration: CfnTemplate.CurrencyDisplayFormatConfigurationProperty) {
-    cdkBuilder.currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration)
-  }
+    /**
+     * @param currencyDisplayFormatConfiguration The options that determine the currency display
+     *   format configuration.
+     */
+    public fun currencyDisplayFormatConfiguration(
+        currencyDisplayFormatConfiguration: CfnTemplate.CurrencyDisplayFormatConfigurationProperty
+    ) {
+        cdkBuilder.currencyDisplayFormatConfiguration(currencyDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param numberDisplayFormatConfiguration The options that determine the number display format
-   * configuration.
-   */
-  public fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: IResolvable) {
-    cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
-  }
+    /**
+     * @param numberDisplayFormatConfiguration The options that determine the number display format
+     *   configuration.
+     */
+    public fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: IResolvable) {
+        cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param numberDisplayFormatConfiguration The options that determine the number display format
-   * configuration.
-   */
-  public
-      fun numberDisplayFormatConfiguration(numberDisplayFormatConfiguration: CfnTemplate.NumberDisplayFormatConfigurationProperty) {
-    cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
-  }
+    /**
+     * @param numberDisplayFormatConfiguration The options that determine the number display format
+     *   configuration.
+     */
+    public fun numberDisplayFormatConfiguration(
+        numberDisplayFormatConfiguration: CfnTemplate.NumberDisplayFormatConfigurationProperty
+    ) {
+        cdkBuilder.numberDisplayFormatConfiguration(numberDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param percentageDisplayFormatConfiguration The options that determine the percentage display
-   * format configuration.
-   */
-  public
-      fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: IResolvable) {
-    cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
-  }
+    /**
+     * @param percentageDisplayFormatConfiguration The options that determine the percentage display
+     *   format configuration.
+     */
+    public fun percentageDisplayFormatConfiguration(
+        percentageDisplayFormatConfiguration: IResolvable
+    ) {
+        cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
+    }
 
-  /**
-   * @param percentageDisplayFormatConfiguration The options that determine the percentage display
-   * format configuration.
-   */
-  public
-      fun percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration: CfnTemplate.PercentageDisplayFormatConfigurationProperty) {
-    cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
-  }
+    /**
+     * @param percentageDisplayFormatConfiguration The options that determine the percentage display
+     *   format configuration.
+     */
+    public fun percentageDisplayFormatConfiguration(
+        percentageDisplayFormatConfiguration:
+            CfnTemplate.PercentageDisplayFormatConfigurationProperty
+    ) {
+        cdkBuilder.percentageDisplayFormatConfiguration(percentageDisplayFormatConfiguration)
+    }
 
-  public fun build(): CfnTemplate.NumericFormatConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.NumericFormatConfigurationProperty = cdkBuilder.build()
 }

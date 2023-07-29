@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dax
 
@@ -14,7 +23,6 @@ import software.constructs.Construct
  * A named set of parameters that are applied to all of the nodes in a DAX cluster.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,70 +40,70 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnParameterGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnParameterGroup.Builder = CfnParameterGroup.Builder.create(scope, id)
+    private val cdkBuilder: CfnParameterGroup.Builder = CfnParameterGroup.Builder.create(scope, id)
 
-  /**
-   * A description of the parameter group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-description)
-   * @param description A description of the parameter group. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * A description of the parameter group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-description)
+     *
+     * @param description A description of the parameter group.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * The name of the parameter group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parametergroupname)
-   * @param parameterGroupName The name of the parameter group. 
-   */
-  public fun parameterGroupName(parameterGroupName: String) {
-    cdkBuilder.parameterGroupName(parameterGroupName)
-  }
+    /**
+     * The name of the parameter group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parametergroupname)
+     *
+     * @param parameterGroupName The name of the parameter group.
+     */
+    public fun parameterGroupName(parameterGroupName: String) {
+        cdkBuilder.parameterGroupName(parameterGroupName)
+    }
 
-  /**
-   * An array of name-value pairs for the parameters in the group.
-   *
-   * Each element in the array represents a single parameter.
-   *
-   *
-   * `record-ttl-millis` and `query-ttl-millis` are the only supported parameter names. For more
-   * details, see [Configuring TTL
-   * Settings](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.cluster-management.html#DAX.cluster-management.custom-settings.ttl)
-   * .
-   *
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parameternamevalues)
-   * @param parameterNameValues An array of name-value pairs for the parameters in the group. 
-   */
-  public fun parameterNameValues(parameterNameValues: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(parameterNameValues)
-    cdkBuilder.parameterNameValues(builder.map)
-  }
+    /**
+     * An array of name-value pairs for the parameters in the group.
+     *
+     * Each element in the array represents a single parameter.
+     *
+     * `record-ttl-millis` and `query-ttl-millis` are the only supported parameter names. For more
+     * details, see
+     * [Configuring TTL Settings](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.cluster-management.html#DAX.cluster-management.custom-settings.ttl)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parameternamevalues)
+     *
+     * @param parameterNameValues An array of name-value pairs for the parameters in the group.
+     */
+    public fun parameterNameValues(parameterNameValues: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(parameterNameValues)
+        cdkBuilder.parameterNameValues(builder.map)
+    }
 
-  /**
-   * An array of name-value pairs for the parameters in the group.
-   *
-   * Each element in the array represents a single parameter.
-   *
-   *
-   * `record-ttl-millis` and `query-ttl-millis` are the only supported parameter names. For more
-   * details, see [Configuring TTL
-   * Settings](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.cluster-management.html#DAX.cluster-management.custom-settings.ttl)
-   * .
-   *
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parameternamevalues)
-   * @param parameterNameValues An array of name-value pairs for the parameters in the group. 
-   */
-  public fun parameterNameValues(parameterNameValues: Any) {
-    cdkBuilder.parameterNameValues(parameterNameValues)
-  }
+    /**
+     * An array of name-value pairs for the parameters in the group.
+     *
+     * Each element in the array represents a single parameter.
+     *
+     * `record-ttl-millis` and `query-ttl-millis` are the only supported parameter names. For more
+     * details, see
+     * [Configuring TTL Settings](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.cluster-management.html#DAX.cluster-management.custom-settings.ttl)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parameternamevalues)
+     *
+     * @param parameterNameValues An array of name-value pairs for the parameters in the group.
+     */
+    public fun parameterNameValues(parameterNameValues: Any) {
+        cdkBuilder.parameterNameValues(parameterNameValues)
+    }
 
-  public fun build(): CfnParameterGroup = cdkBuilder.build()
+    public fun build(): CfnParameterGroup = cdkBuilder.build()
 }

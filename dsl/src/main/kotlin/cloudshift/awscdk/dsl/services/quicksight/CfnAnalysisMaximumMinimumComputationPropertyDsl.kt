@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * The maximum and minimum computation configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -516,30 +524,22 @@ public class CfnAnalysisMaximumMinimumComputationPropertyDsl {
     private val cdkBuilder: CfnAnalysis.MaximumMinimumComputationProperty.Builder =
         CfnAnalysis.MaximumMinimumComputationProperty.builder()
 
-    /**
-     * @param computationId The ID for a computation.
-     */
+    /** @param computationId The ID for a computation. */
     public fun computationId(computationId: String) {
         cdkBuilder.computationId(computationId)
     }
 
-    /**
-     * @param name The name of a computation.
-     */
+    /** @param name The name of a computation. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param time The time field that is used in a computation.
-     */
+    /** @param time The time field that is used in a computation. */
     public fun time(time: IResolvable) {
         cdkBuilder.time(time)
     }
 
-    /**
-     * @param time The time field that is used in a computation.
-     */
+    /** @param time The time field that is used in a computation. */
     public fun time(time: CfnAnalysis.DimensionFieldProperty) {
         cdkBuilder.time(time)
     }
@@ -553,16 +553,12 @@ public class CfnAnalysisMaximumMinimumComputationPropertyDsl {
         cdkBuilder.type(type)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: CfnAnalysis.MeasureFieldProperty) {
         cdkBuilder.`value`(`value`)
     }

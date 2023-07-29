@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.route53resolver
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfigPr
  * Properties for defining a `CfnResolverDNSSECConfig`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfigPr
  */
 @CdkDslMarker
 public class CfnResolverDNSSECConfigPropsDsl {
-  private val cdkBuilder: CfnResolverDNSSECConfigProps.Builder =
-      CfnResolverDNSSECConfigProps.builder()
+    private val cdkBuilder: CfnResolverDNSSECConfigProps.Builder =
+        CfnResolverDNSSECConfigProps.builder()
 
-  /**
-   * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC
-   * validation status for.
-   */
-  public fun resourceId(resourceId: String) {
-    cdkBuilder.resourceId(resourceId)
-  }
+    /**
+     * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the
+     *   DNSSEC validation status for.
+     */
+    public fun resourceId(resourceId: String) {
+        cdkBuilder.resourceId(resourceId)
+    }
 
-  public fun build(): CfnResolverDNSSECConfigProps = cdkBuilder.build()
+    public fun build(): CfnResolverDNSSECConfigProps = cdkBuilder.build()
 }

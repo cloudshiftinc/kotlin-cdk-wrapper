@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps
  * Properties for defining a `CfnAccessLogSubscription`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,44 +44,40 @@ import software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps
  */
 @CdkDslMarker
 public class CfnAccessLogSubscriptionPropsDsl {
-  private val cdkBuilder: CfnAccessLogSubscriptionProps.Builder =
-      CfnAccessLogSubscriptionProps.builder()
+    private val cdkBuilder: CfnAccessLogSubscriptionProps.Builder =
+        CfnAccessLogSubscriptionProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param destinationArn The Amazon Resource Name (ARN) of the destination. 
-   * The supported destination types are CloudWatch Log groups, Kinesis Data Firehose delivery
-   * streams, and Amazon S3 buckets.
-   */
-  public fun destinationArn(destinationArn: String) {
-    cdkBuilder.destinationArn(destinationArn)
-  }
+    /**
+     * @param destinationArn The Amazon Resource Name (ARN) of the destination. The supported
+     *   destination types are CloudWatch Log groups, Kinesis Data Firehose delivery streams, and
+     *   Amazon S3 buckets.
+     */
+    public fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+    }
 
-  /**
-   * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
-   * service.
-   */
-  public fun resourceIdentifier(resourceIdentifier: String) {
-    cdkBuilder.resourceIdentifier(resourceIdentifier)
-  }
+    /**
+     * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
+     *   service.
+     */
+    public fun resourceIdentifier(resourceIdentifier: String) {
+        cdkBuilder.resourceIdentifier(resourceIdentifier)
+    }
 
-  /**
-   * @param tags The tags for the access log subscription.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags for the access log subscription. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags for the access log subscription.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags for the access log subscription. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnAccessLogSubscriptionProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAccessLogSubscriptionProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

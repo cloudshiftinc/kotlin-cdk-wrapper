@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -14,7 +23,6 @@ import software.constructs.Construct
  * Represents a CloudFormation mapping.
  *
  * Example:
- *
  * ```
  * CfnMapping regionTable = CfnMapping.Builder.create(this, "RegionTable")
  * .mapping(Map.of(
@@ -28,34 +36,32 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnMappingDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnMapping.Builder = CfnMapping.Builder.create(scope, id)
+    private val cdkBuilder: CfnMapping.Builder = CfnMapping.Builder.create(scope, id)
 
-  /**
-   * @param lazy 
-   */
-  public fun lazy(lazy: Boolean) {
-    cdkBuilder.lazy(lazy)
-  }
+    /** @param lazy */
+    public fun lazy(lazy: Boolean) {
+        cdkBuilder.lazy(lazy)
+    }
 
-  /**
-   * Mapping of key to a set of corresponding set of named values.
-   *
-   * The key identifies a map of name-value pairs and must be unique within the mapping.
-   *
-   * For example, if you want to set values based on a region, you can create a mapping
-   * that uses the region name as a key and contains the values you want to specify for
-   * each specific region.
-   *
-   * Default: - No mapping.
-   *
-   * @param mapping Mapping of key to a set of corresponding set of named values. 
-   */
-  public fun mapping(mapping: Map<String, Map<String, Any>>) {
-    cdkBuilder.mapping(mapping)
-  }
+    /**
+     * Mapping of key to a set of corresponding set of named values.
+     *
+     * The key identifies a map of name-value pairs and must be unique within the mapping.
+     *
+     * For example, if you want to set values based on a region, you can create a mapping that uses
+     * the region name as a key and contains the values you want to specify for each specific
+     * region.
+     *
+     * Default: - No mapping.
+     *
+     * @param mapping Mapping of key to a set of corresponding set of named values.
+     */
+    public fun mapping(mapping: Map<String, Map<String, Any>>) {
+        cdkBuilder.mapping(mapping)
+    }
 
-  public fun build(): CfnMapping = cdkBuilder.build()
+    public fun build(): CfnMapping = cdkBuilder.build()
 }

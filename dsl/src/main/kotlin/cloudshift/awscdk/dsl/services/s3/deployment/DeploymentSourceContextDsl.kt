@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3.deployment
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext
  * Bind context for ISources.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,14 +32,12 @@ import software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext
  */
 @CdkDslMarker
 public class DeploymentSourceContextDsl {
-  private val cdkBuilder: DeploymentSourceContext.Builder = DeploymentSourceContext.builder()
+    private val cdkBuilder: DeploymentSourceContext.Builder = DeploymentSourceContext.builder()
 
-  /**
-   * @param handlerRole The role for the handler. 
-   */
-  public fun handlerRole(handlerRole: IRole) {
-    cdkBuilder.handlerRole(handlerRole)
-  }
+    /** @param handlerRole The role for the handler. */
+    public fun handlerRole(handlerRole: IRole) {
+        cdkBuilder.handlerRole(handlerRole)
+    }
 
-  public fun build(): DeploymentSourceContext = cdkBuilder.build()
+    public fun build(): DeploymentSourceContext = cdkBuilder.build()
 }

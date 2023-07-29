@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariab
  * An environment variable to be set in the container run as a task.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,23 +31,23 @@ import software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariab
  */
 @CdkDslMarker
 public class TaskEnvironmentVariableDsl {
-  private val cdkBuilder: TaskEnvironmentVariable.Builder = TaskEnvironmentVariable.builder()
+    private val cdkBuilder: TaskEnvironmentVariable.Builder = TaskEnvironmentVariable.builder()
 
-  /**
-   * @param name Name for the environment variable. 
-   * Use `JsonPath` class's static methods to specify name from a JSON path.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name Name for the environment variable. Use `JsonPath` class's static methods to
+     *   specify name from a JSON path.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param value Value of the environment variable. 
-   * Use `JsonPath` class's static methods to specify value from a JSON path.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value Value of the environment variable. Use `JsonPath` class's static methods to
+     *   specify value from a JSON path.
+     */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): TaskEnvironmentVariable = cdkBuilder.build()
+    public fun build(): TaskEnvironmentVariable = cdkBuilder.build()
 }

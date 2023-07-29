@@ -1,21 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesis
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.kinesis.StreamAttributes
 import software.amazon.awscdk.services.kms.IKey
-import kotlin.String
 
 /**
  * A reference to a stream.
  *
- * The easiest way to instantiate is to call
- * `stream.export()`. Then, the consumer can use `Stream.import(this, ref)` and
- * get a `Stream`.
+ * The easiest way to instantiate is to call `stream.export()`. Then, the consumer can use
+ * `Stream.import(this, ref)` and get a `Stream`.
  *
  * Example:
- *
  * ```
  * IStream importedStream = Stream.fromStreamAttributes(this, "ImportedEncryptedStream",
  * StreamAttributes.builder()
@@ -30,15 +37,14 @@ public class StreamAttributesDsl {
     private val cdkBuilder: StreamAttributes.Builder = StreamAttributes.builder()
 
     /**
-     * @param encryptionKey The KMS key securing the contents of the stream if encryption is enabled.
+     * @param encryptionKey The KMS key securing the contents of the stream if encryption is
+     *   enabled.
      */
     public fun encryptionKey(encryptionKey: IKey) {
         cdkBuilder.encryptionKey(encryptionKey)
     }
 
-    /**
-     * @param streamArn The ARN of the stream.
-     */
+    /** @param streamArn The ARN of the stream. */
     public fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
     }

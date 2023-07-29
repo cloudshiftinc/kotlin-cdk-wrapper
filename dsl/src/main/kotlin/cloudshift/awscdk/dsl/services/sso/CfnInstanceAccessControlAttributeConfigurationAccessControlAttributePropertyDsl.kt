@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sso
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConf
  * evaluation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,34 +43,32 @@ import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConf
  */
 @CdkDslMarker
 public class CfnInstanceAccessControlAttributeConfigurationAccessControlAttributePropertyDsl {
-  private val cdkBuilder:
-      CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty.Builder =
-      CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty.builder()
+    private val cdkBuilder:
+        CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty.Builder =
+        CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty.builder()
 
-  /**
-   * @param key The name of the attribute associated with your identities in your identity source. 
-   * This is used to map a specified attribute in your identity source with an attribute in IAM
-   * Identity Center .
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /**
+     * @param key The name of the attribute associated with your identities in your identity source.
+     *   This is used to map a specified attribute in your identity source with an attribute in IAM
+     *   Identity Center .
+     */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The value used for mapping a specified attribute to an identity source. 
-   */
-  public fun `value`(`value`: IResolvable) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value used for mapping a specified attribute to an identity source. */
+    public fun `value`(`value`: IResolvable) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  /**
-   * @param value The value used for mapping a specified attribute to an identity source. 
-   */
-  public
-      fun `value`(`value`: CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value used for mapping a specified attribute to an identity source. */
+    public fun `value`(
+        `value`: CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty
+    ) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty
-      = cdkBuilder.build()
+    public fun build():
+        CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty =
+        cdkBuilder.build()
 }

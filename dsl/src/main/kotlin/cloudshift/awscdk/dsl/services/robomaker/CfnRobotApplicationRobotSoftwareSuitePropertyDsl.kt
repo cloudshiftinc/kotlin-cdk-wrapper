@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.robomaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.robomaker.CfnRobotApplication
  * Information about a robot software suite.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,24 +34,21 @@ import software.amazon.awscdk.services.robomaker.CfnRobotApplication
  */
 @CdkDslMarker
 public class CfnRobotApplicationRobotSoftwareSuitePropertyDsl {
-  private val cdkBuilder: CfnRobotApplication.RobotSoftwareSuiteProperty.Builder =
-      CfnRobotApplication.RobotSoftwareSuiteProperty.builder()
+    private val cdkBuilder: CfnRobotApplication.RobotSoftwareSuiteProperty.Builder =
+        CfnRobotApplication.RobotSoftwareSuiteProperty.builder()
 
-  /**
-   * @param name The name of the robot software suite. 
-   * `General` is the only supported value.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the robot software suite. `General` is the only supported value. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param version The version of the robot software suite.
-   * Not applicable for General software suite.
-   */
-  public fun version(version: String) {
-    cdkBuilder.version(version)
-  }
+    /**
+     * @param version The version of the robot software suite. Not applicable for General software
+     *   suite.
+     */
+    public fun version(version: String) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): CfnRobotApplication.RobotSoftwareSuiteProperty = cdkBuilder.build()
+    public fun build(): CfnRobotApplication.RobotSoftwareSuiteProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.identitystore
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.identitystore.CfnGroupMembership
  * member of the group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,15 +35,13 @@ import software.amazon.awscdk.services.identitystore.CfnGroupMembership
  */
 @CdkDslMarker
 public class CfnGroupMembershipMemberIdPropertyDsl {
-  private val cdkBuilder: CfnGroupMembership.MemberIdProperty.Builder =
-      CfnGroupMembership.MemberIdProperty.builder()
+    private val cdkBuilder: CfnGroupMembership.MemberIdProperty.Builder =
+        CfnGroupMembership.MemberIdProperty.builder()
 
-  /**
-   * @param userId The identifier for a user in the identity store. 
-   */
-  public fun userId(userId: String) {
-    cdkBuilder.userId(userId)
-  }
+    /** @param userId The identifier for a user in the identity store. */
+    public fun userId(userId: String) {
+        cdkBuilder.userId(userId)
+    }
 
-  public fun build(): CfnGroupMembership.MemberIdProperty = cdkBuilder.build()
+    public fun build(): CfnGroupMembership.MemberIdProperty = cdkBuilder.build()
 }

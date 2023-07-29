@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * Block traffic towards application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,21 +40,18 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupBlockPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.BlockProperty.Builder = CfnRuleGroup.BlockProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.BlockProperty.Builder =
+        CfnRuleGroup.BlockProperty.builder()
 
-  /**
-   * @param customResponse Custom response.
-   */
-  public fun customResponse(customResponse: IResolvable) {
-    cdkBuilder.customResponse(customResponse)
-  }
+    /** @param customResponse Custom response. */
+    public fun customResponse(customResponse: IResolvable) {
+        cdkBuilder.customResponse(customResponse)
+    }
 
-  /**
-   * @param customResponse Custom response.
-   */
-  public fun customResponse(customResponse: CfnRuleGroup.CustomResponseProperty) {
-    cdkBuilder.customResponse(customResponse)
-  }
+    /** @param customResponse Custom response. */
+    public fun customResponse(customResponse: CfnRuleGroup.CustomResponseProperty) {
+        cdkBuilder.customResponse(customResponse)
+    }
 
-  public fun build(): CfnRuleGroup.BlockProperty = cdkBuilder.build()
+    public fun build(): CfnRuleGroup.BlockProperty = cdkBuilder.build()
 }

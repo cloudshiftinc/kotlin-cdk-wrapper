@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * operation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,34 +43,36 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnTemplateDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnTemplate.Builder = CfnTemplate.Builder.create(scope, id)
+    private val cdkBuilder: CfnTemplate.Builder = CfnTemplate.Builder.create(scope, id)
 
-  /**
-   * The content of the email, composed of a subject line and either an HTML part or a text-only
-   * part.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
-   * @param template The content of the email, composed of a subject line and either an HTML part or
-   * a text-only part. 
-   */
-  public fun template(template: IResolvable) {
-    cdkBuilder.template(template)
-  }
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     *
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     *   or a text-only part.
+     */
+    public fun template(template: IResolvable) {
+        cdkBuilder.template(template)
+    }
 
-  /**
-   * The content of the email, composed of a subject line and either an HTML part or a text-only
-   * part.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
-   * @param template The content of the email, composed of a subject line and either an HTML part or
-   * a text-only part. 
-   */
-  public fun template(template: CfnTemplate.TemplateProperty) {
-    cdkBuilder.template(template)
-  }
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     *
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     *   or a text-only part.
+     */
+    public fun template(template: CfnTemplate.TemplateProperty) {
+        cdkBuilder.template(template)
+    }
 
-  public fun build(): CfnTemplate = cdkBuilder.build()
+    public fun build(): CfnTemplate = cdkBuilder.build()
 }

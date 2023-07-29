@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig
  * Configuration for a shuffle option for input data in a channel.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,14 +30,12 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig
  */
 @CdkDslMarker
 public class ShuffleConfigDsl {
-  private val cdkBuilder: ShuffleConfig.Builder = ShuffleConfig.builder()
+    private val cdkBuilder: ShuffleConfig.Builder = ShuffleConfig.builder()
 
-  /**
-   * @param seed Determines the shuffling order. 
-   */
-  public fun seed(seed: Number) {
-    cdkBuilder.seed(seed)
-  }
+    /** @param seed Determines the shuffling order. */
+    public fun seed(seed: Number) {
+        cdkBuilder.seed(seed)
+    }
 
-  public fun build(): ShuffleConfig = cdkBuilder.build()
+    public fun build(): ShuffleConfig = cdkBuilder.build()
 }

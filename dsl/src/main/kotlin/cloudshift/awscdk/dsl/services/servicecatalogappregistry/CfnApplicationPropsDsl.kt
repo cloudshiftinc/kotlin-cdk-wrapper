@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalogappregistry
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.servicecatalogappregistry.CfnApplicationP
  * Properties for defining a `CfnApplication`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,29 +37,25 @@ import software.amazon.awscdk.services.servicecatalogappregistry.CfnApplicationP
  */
 @CdkDslMarker
 public class CfnApplicationPropsDsl {
-  private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()
+    private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()
 
-  /**
-   * @param description The description of the application.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the application. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name The name of the application. 
-   * The name must be unique in the region in which you are creating the application.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * @param name The name of the application. The name must be unique in the region in which you
+     *   are creating the application.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param tags Key-value pairs you can use to associate with the application.
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags Key-value pairs you can use to associate with the application. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnApplicationProps = cdkBuilder.build()
+    public fun build(): CfnApplicationProps = cdkBuilder.build()
 }

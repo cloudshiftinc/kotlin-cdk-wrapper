@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 import kotlin.String
+import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 
 /**
  * The Lambda function.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,9 +35,7 @@ public class CfnComponentTypeLambdaFunctionPropertyDsl {
     private val cdkBuilder: CfnComponentType.LambdaFunctionProperty.Builder =
         CfnComponentType.LambdaFunctionProperty.builder()
 
-    /**
-     * @param arn The Lambda function ARN.
-     */
+    /** @param arn The Lambda function ARN. */
     public fun arn(arn: String) {
         cdkBuilder.arn(arn)
     }

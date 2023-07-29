@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnSegment
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnSegment
+import software.constructs.Construct
 
 /**
  * Updates the configuration, dimension, and other settings for an existing segment.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -149,16 +157,18 @@ import kotlin.Unit
 @CdkDslMarker
 public class CfnSegmentDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnSegment.Builder = CfnSegment.Builder.create(scope, id)
 
     /**
-     * The unique identifier for the Amazon Pinpoint application that the segment is associated with.
+     * The unique identifier for the Amazon Pinpoint application that the segment is associated
+     * with.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-applicationid)
-     * @param applicationId The unique identifier for the Amazon Pinpoint application that the segment
-     * is associated with.
+     *
+     * @param applicationId The unique identifier for the Amazon Pinpoint application that the
+     *   segment is associated with.
      */
     public fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
@@ -168,6 +178,7 @@ public class CfnSegmentDsl(
      * The criteria that define the dimensions for the segment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-dimensions)
+     *
      * @param dimensions The criteria that define the dimensions for the segment.
      */
     public fun dimensions(dimensions: IResolvable) {
@@ -178,6 +189,7 @@ public class CfnSegmentDsl(
      * The criteria that define the dimensions for the segment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-dimensions)
+     *
      * @param dimensions The criteria that define the dimensions for the segment.
      */
     public fun dimensions(dimensions: CfnSegment.SegmentDimensionsProperty) {
@@ -187,11 +199,10 @@ public class CfnSegmentDsl(
     /**
      * The name of the segment.
      *
-     *
      * A segment must have a name otherwise it will not appear in the Amazon Pinpoint console.
      *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-name)
+     *
      * @param name The name of the segment.
      */
     public fun name(name: String) {
@@ -206,8 +217,9 @@ public class CfnSegmentDsl(
      * segment group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-segmentgroups)
+     *
      * @param segmentGroups The segment group to use and the dimensions to apply to the group's base
-     * segments in order to build the segment.
+     *   segments in order to build the segment.
      */
     public fun segmentGroups(segmentGroups: IResolvable) {
         cdkBuilder.segmentGroups(segmentGroups)
@@ -221,8 +233,9 @@ public class CfnSegmentDsl(
      * segment group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-segmentgroups)
+     *
      * @param segmentGroups The segment group to use and the dimensions to apply to the group's base
-     * segments in order to build the segment.
+     *   segments in order to build the segment.
      */
     public fun segmentGroups(segmentGroups: CfnSegment.SegmentGroupsProperty) {
         cdkBuilder.segmentGroups(segmentGroups)
@@ -236,6 +249,7 @@ public class CfnSegmentDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: MapBuilder.() -> Unit = {}) {
@@ -252,6 +266,7 @@ public class CfnSegmentDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html#cfn-pinpoint-segment-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: Any) {

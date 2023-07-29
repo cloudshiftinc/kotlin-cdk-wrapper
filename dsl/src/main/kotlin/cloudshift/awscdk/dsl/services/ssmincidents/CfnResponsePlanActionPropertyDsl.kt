@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmincidents
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  * The `Action` property type specifies the configuration to launch.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -40,24 +48,24 @@ import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
  */
 @CdkDslMarker
 public class CfnResponsePlanActionPropertyDsl {
-  private val cdkBuilder: CfnResponsePlan.ActionProperty.Builder =
-      CfnResponsePlan.ActionProperty.builder()
+    private val cdkBuilder: CfnResponsePlan.ActionProperty.Builder =
+        CfnResponsePlan.ActionProperty.builder()
 
-  /**
-   * @param ssmAutomation Details about the Systems Manager automation document that will be used as
-   * a runbook during an incident.
-   */
-  public fun ssmAutomation(ssmAutomation: IResolvable) {
-    cdkBuilder.ssmAutomation(ssmAutomation)
-  }
+    /**
+     * @param ssmAutomation Details about the Systems Manager automation document that will be used
+     *   as a runbook during an incident.
+     */
+    public fun ssmAutomation(ssmAutomation: IResolvable) {
+        cdkBuilder.ssmAutomation(ssmAutomation)
+    }
 
-  /**
-   * @param ssmAutomation Details about the Systems Manager automation document that will be used as
-   * a runbook during an incident.
-   */
-  public fun ssmAutomation(ssmAutomation: CfnResponsePlan.SsmAutomationProperty) {
-    cdkBuilder.ssmAutomation(ssmAutomation)
-  }
+    /**
+     * @param ssmAutomation Details about the Systems Manager automation document that will be used
+     *   as a runbook during an incident.
+     */
+    public fun ssmAutomation(ssmAutomation: CfnResponsePlan.SsmAutomationProperty) {
+        cdkBuilder.ssmAutomation(ssmAutomation)
+    }
 
-  public fun build(): CfnResponsePlan.ActionProperty = cdkBuilder.build()
+    public fun build(): CfnResponsePlan.ActionProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opensearchserverless
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigPro
  * Properties for defining a `CfnSecurityConfig`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,43 +43,38 @@ import software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigPro
  */
 @CdkDslMarker
 public class CfnSecurityConfigPropsDsl {
-  private val cdkBuilder: CfnSecurityConfigProps.Builder = CfnSecurityConfigProps.builder()
+    private val cdkBuilder: CfnSecurityConfigProps.Builder = CfnSecurityConfigProps.builder()
 
-  /**
-   * @param description The description of the security configuration.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the security configuration. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name The name of the security configuration.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the security configuration. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param samlOptions SAML options for the security configuration in the form of a key-value map.
-   */
-  public fun samlOptions(samlOptions: IResolvable) {
-    cdkBuilder.samlOptions(samlOptions)
-  }
+    /**
+     * @param samlOptions SAML options for the security configuration in the form of a key-value
+     *   map.
+     */
+    public fun samlOptions(samlOptions: IResolvable) {
+        cdkBuilder.samlOptions(samlOptions)
+    }
 
-  /**
-   * @param samlOptions SAML options for the security configuration in the form of a key-value map.
-   */
-  public fun samlOptions(samlOptions: CfnSecurityConfig.SamlConfigOptionsProperty) {
-    cdkBuilder.samlOptions(samlOptions)
-  }
+    /**
+     * @param samlOptions SAML options for the security configuration in the form of a key-value
+     *   map.
+     */
+    public fun samlOptions(samlOptions: CfnSecurityConfig.SamlConfigOptionsProperty) {
+        cdkBuilder.samlOptions(samlOptions)
+    }
 
-  /**
-   * @param type The type of security configuration.
-   * Currently the only option is `saml` .
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The type of security configuration. Currently the only option is `saml` . */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnSecurityConfigProps = cdkBuilder.build()
+    public fun build(): CfnSecurityConfigProps = cdkBuilder.build()
 }

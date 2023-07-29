@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -512,23 +520,20 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisWordCloudFieldWellsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.WordCloudFieldWellsProperty.Builder =
-      CfnAnalysis.WordCloudFieldWellsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.WordCloudFieldWellsProperty.Builder =
+        CfnAnalysis.WordCloudFieldWellsProperty.builder()
 
-  /**
-   * @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud.
-   */
-  public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: IResolvable) {
-    cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
-  }
+    /** @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud. */
+    public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: IResolvable) {
+        cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
+    }
 
-  /**
-   * @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud.
-   */
-  public
-      fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: CfnAnalysis.WordCloudAggregatedFieldWellsProperty) {
-    cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
-  }
+    /** @param wordCloudAggregatedFieldWells The aggregated field wells of a word cloud. */
+    public fun wordCloudAggregatedFieldWells(
+        wordCloudAggregatedFieldWells: CfnAnalysis.WordCloudAggregatedFieldWellsProperty
+    ) {
+        cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
+    }
 
-  public fun build(): CfnAnalysis.WordCloudFieldWellsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.WordCloudFieldWellsProperty = cdkBuilder.build()
 }

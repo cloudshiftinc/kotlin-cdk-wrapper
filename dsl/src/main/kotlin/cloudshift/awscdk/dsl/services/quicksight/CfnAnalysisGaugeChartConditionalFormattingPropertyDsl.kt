@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The conditional formatting of a `GaugeChartVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -115,9 +123,8 @@ public class CfnAnalysisGaugeChartConditionalFormattingPropertyDsl {
     }
 
     public fun build(): CfnAnalysis.GaugeChartConditionalFormattingProperty {
-        if (_conditionalFormattingOptions.isNotEmpty()) {
+        if (_conditionalFormattingOptions.isNotEmpty())
             cdkBuilder.conditionalFormattingOptions(_conditionalFormattingOptions)
-        }
         return cdkBuilder.build()
     }
 }

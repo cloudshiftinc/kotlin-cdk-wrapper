@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps
  * Properties for defining a `CfnVerifiedAccessTrustProvider`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,90 +61,72 @@ import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps
  */
 @CdkDslMarker
 public class CfnVerifiedAccessTrustProviderPropsDsl {
-  private val cdkBuilder: CfnVerifiedAccessTrustProviderProps.Builder =
-      CfnVerifiedAccessTrustProviderProps.builder()
+    private val cdkBuilder: CfnVerifiedAccessTrustProviderProps.Builder =
+        CfnVerifiedAccessTrustProviderProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description A description for the AWS Verified Access trust provider.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description for the AWS Verified Access trust provider. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param deviceOptions The options for device-identity trust provider.
-   */
-  public fun deviceOptions(deviceOptions: IResolvable) {
-    cdkBuilder.deviceOptions(deviceOptions)
-  }
+    /** @param deviceOptions The options for device-identity trust provider. */
+    public fun deviceOptions(deviceOptions: IResolvable) {
+        cdkBuilder.deviceOptions(deviceOptions)
+    }
 
-  /**
-   * @param deviceOptions The options for device-identity trust provider.
-   */
-  public fun deviceOptions(deviceOptions: CfnVerifiedAccessTrustProvider.DeviceOptionsProperty) {
-    cdkBuilder.deviceOptions(deviceOptions)
-  }
+    /** @param deviceOptions The options for device-identity trust provider. */
+    public fun deviceOptions(deviceOptions: CfnVerifiedAccessTrustProvider.DeviceOptionsProperty) {
+        cdkBuilder.deviceOptions(deviceOptions)
+    }
 
-  /**
-   * @param deviceTrustProviderType The type of device-based trust provider.
-   */
-  public fun deviceTrustProviderType(deviceTrustProviderType: String) {
-    cdkBuilder.deviceTrustProviderType(deviceTrustProviderType)
-  }
+    /** @param deviceTrustProviderType The type of device-based trust provider. */
+    public fun deviceTrustProviderType(deviceTrustProviderType: String) {
+        cdkBuilder.deviceTrustProviderType(deviceTrustProviderType)
+    }
 
-  /**
-   * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
-   */
-  public fun oidcOptions(oidcOptions: IResolvable) {
-    cdkBuilder.oidcOptions(oidcOptions)
-  }
+    /**
+     * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
+     */
+    public fun oidcOptions(oidcOptions: IResolvable) {
+        cdkBuilder.oidcOptions(oidcOptions)
+    }
 
-  /**
-   * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
-   */
-  public fun oidcOptions(oidcOptions: CfnVerifiedAccessTrustProvider.OidcOptionsProperty) {
-    cdkBuilder.oidcOptions(oidcOptions)
-  }
+    /**
+     * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
+     */
+    public fun oidcOptions(oidcOptions: CfnVerifiedAccessTrustProvider.OidcOptionsProperty) {
+        cdkBuilder.oidcOptions(oidcOptions)
+    }
 
-  /**
-   * @param policyReferenceName The identifier to be used when working with policy rules. 
-   */
-  public fun policyReferenceName(policyReferenceName: String) {
-    cdkBuilder.policyReferenceName(policyReferenceName)
-  }
+    /** @param policyReferenceName The identifier to be used when working with policy rules. */
+    public fun policyReferenceName(policyReferenceName: String) {
+        cdkBuilder.policyReferenceName(policyReferenceName)
+    }
 
-  /**
-   * @param tags The tags.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * @param trustProviderType The type of Verified Access trust provider. 
-   */
-  public fun trustProviderType(trustProviderType: String) {
-    cdkBuilder.trustProviderType(trustProviderType)
-  }
+    /** @param trustProviderType The type of Verified Access trust provider. */
+    public fun trustProviderType(trustProviderType: String) {
+        cdkBuilder.trustProviderType(trustProviderType)
+    }
 
-  /**
-   * @param userTrustProviderType The type of user-based trust provider.
-   */
-  public fun userTrustProviderType(userTrustProviderType: String) {
-    cdkBuilder.userTrustProviderType(userTrustProviderType)
-  }
+    /** @param userTrustProviderType The type of user-based trust provider. */
+    public fun userTrustProviderType(userTrustProviderType: String) {
+        cdkBuilder.userTrustProviderType(userTrustProviderType)
+    }
 
-  public fun build(): CfnVerifiedAccessTrustProviderProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVerifiedAccessTrustProviderProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

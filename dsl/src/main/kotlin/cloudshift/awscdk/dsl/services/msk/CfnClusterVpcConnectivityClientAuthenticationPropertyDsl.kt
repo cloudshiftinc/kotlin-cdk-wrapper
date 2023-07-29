@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.msk.CfnCluster
  * Includes all client authentication information for VpcConnectivity.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,36 +43,28 @@ import software.amazon.awscdk.services.msk.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterVpcConnectivityClientAuthenticationPropertyDsl {
-  private val cdkBuilder: CfnCluster.VpcConnectivityClientAuthenticationProperty.Builder =
-      CfnCluster.VpcConnectivityClientAuthenticationProperty.builder()
+    private val cdkBuilder: CfnCluster.VpcConnectivityClientAuthenticationProperty.Builder =
+        CfnCluster.VpcConnectivityClientAuthenticationProperty.builder()
 
-  /**
-   * @param sasl Details for VpcConnectivity ClientAuthentication using SASL.
-   */
-  public fun sasl(sasl: IResolvable) {
-    cdkBuilder.sasl(sasl)
-  }
+    /** @param sasl Details for VpcConnectivity ClientAuthentication using SASL. */
+    public fun sasl(sasl: IResolvable) {
+        cdkBuilder.sasl(sasl)
+    }
 
-  /**
-   * @param sasl Details for VpcConnectivity ClientAuthentication using SASL.
-   */
-  public fun sasl(sasl: CfnCluster.VpcConnectivitySaslProperty) {
-    cdkBuilder.sasl(sasl)
-  }
+    /** @param sasl Details for VpcConnectivity ClientAuthentication using SASL. */
+    public fun sasl(sasl: CfnCluster.VpcConnectivitySaslProperty) {
+        cdkBuilder.sasl(sasl)
+    }
 
-  /**
-   * @param tls Details for VpcConnectivity ClientAuthentication using TLS.
-   */
-  public fun tls(tls: IResolvable) {
-    cdkBuilder.tls(tls)
-  }
+    /** @param tls Details for VpcConnectivity ClientAuthentication using TLS. */
+    public fun tls(tls: IResolvable) {
+        cdkBuilder.tls(tls)
+    }
 
-  /**
-   * @param tls Details for VpcConnectivity ClientAuthentication using TLS.
-   */
-  public fun tls(tls: CfnCluster.VpcConnectivityTlsProperty) {
-    cdkBuilder.tls(tls)
-  }
+    /** @param tls Details for VpcConnectivity ClientAuthentication using TLS. */
+    public fun tls(tls: CfnCluster.VpcConnectivityTlsProperty) {
+        cdkBuilder.tls(tls)
+    }
 
-  public fun build(): CfnCluster.VpcConnectivityClientAuthenticationProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.VpcConnectivityClientAuthenticationProperty = cdkBuilder.build()
 }

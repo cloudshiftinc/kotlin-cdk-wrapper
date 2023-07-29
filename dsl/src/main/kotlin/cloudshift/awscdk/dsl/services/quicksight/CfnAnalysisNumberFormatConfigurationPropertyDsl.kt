@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Formatting configuration for number fields.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -92,17 +100,15 @@ public class CfnAnalysisNumberFormatConfigurationPropertyDsl {
     private val cdkBuilder: CfnAnalysis.NumberFormatConfigurationProperty.Builder =
         CfnAnalysis.NumberFormatConfigurationProperty.builder()
 
-    /**
-     * @param formatConfiguration The options that determine the numeric format configuration.
-     */
+    /** @param formatConfiguration The options that determine the numeric format configuration. */
     public fun formatConfiguration(formatConfiguration: IResolvable) {
         cdkBuilder.formatConfiguration(formatConfiguration)
     }
 
-    /**
-     * @param formatConfiguration The options that determine the numeric format configuration.
-     */
-    public fun formatConfiguration(formatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty) {
+    /** @param formatConfiguration The options that determine the numeric format configuration. */
+    public fun formatConfiguration(
+        formatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty
+    ) {
         cdkBuilder.formatConfiguration(formatConfiguration)
     }
 

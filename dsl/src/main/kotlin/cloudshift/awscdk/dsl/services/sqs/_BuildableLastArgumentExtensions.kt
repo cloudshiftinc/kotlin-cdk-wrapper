@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sqs
 
@@ -14,29 +23,30 @@ import software.amazon.awscdk.services.sqs.QueueBase
 /**
  * Adds a statement to the IAM resource policy associated with this queue.
  *
- * If this queue was created in this stack (`new Queue`), a queue policy
- * will be automatically created upon the first call to `addToPolicy`. If
- * the queue is imported (`Queue.import`), then this is a no-op.
+ * If this queue was created in this stack (`new Queue`), a queue policy will be automatically
+ * created upon the first call to `addToPolicy`. If the queue is imported (`Queue.import`), then
+ * this is a no-op.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun IQueue.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToResourcePolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToResourcePolicy(builder.build())
+public inline fun IQueue.addToResourcePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToResourcePolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToResourcePolicy(builder.build())
 }
 
 /**
  * Return the given named metric for this Queue.
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
 public inline fun IQueue.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(arg0, builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(arg0, builder.build())
 }
 
 /**
@@ -46,11 +56,12 @@ public inline fun IQueue.metric(arg0: String, block: MetricOptionsDsl.() -> Unit
  *
  * @param props
  */
-public inline fun IQueue.metricApproximateAgeOfOldestMessage(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateAgeOfOldestMessage(builder.build())
+public inline fun IQueue.metricApproximateAgeOfOldestMessage(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateAgeOfOldestMessage(builder.build())
 }
 
 /**
@@ -60,11 +71,12 @@ public inline fun IQueue.metricApproximateAgeOfOldestMessage(block: MetricOption
  *
  * @param props
  */
-public inline fun IQueue.metricApproximateNumberOfMessagesDelayed(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateNumberOfMessagesDelayed(builder.build())
+public inline fun IQueue.metricApproximateNumberOfMessagesDelayed(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateNumberOfMessagesDelayed(builder.build())
 }
 
 /**
@@ -74,12 +86,12 @@ public inline fun IQueue.metricApproximateNumberOfMessagesDelayed(block: MetricO
  *
  * @param props
  */
-public inline
-    fun IQueue.metricApproximateNumberOfMessagesNotVisible(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateNumberOfMessagesNotVisible(builder.build())
+public inline fun IQueue.metricApproximateNumberOfMessagesNotVisible(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateNumberOfMessagesNotVisible(builder.build())
 }
 
 /**
@@ -89,11 +101,12 @@ public inline
  *
  * @param props
  */
-public inline fun IQueue.metricApproximateNumberOfMessagesVisible(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateNumberOfMessagesVisible(builder.build())
+public inline fun IQueue.metricApproximateNumberOfMessagesVisible(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateNumberOfMessagesVisible(builder.build())
 }
 
 /**
@@ -103,11 +116,12 @@ public inline fun IQueue.metricApproximateNumberOfMessagesVisible(block: MetricO
  *
  * @param props
  */
-public inline fun IQueue.metricNumberOfEmptyReceives(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfEmptyReceives(builder.build())
+public inline fun IQueue.metricNumberOfEmptyReceives(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfEmptyReceives(builder.build())
 }
 
 /**
@@ -117,11 +131,12 @@ public inline fun IQueue.metricNumberOfEmptyReceives(block: MetricOptionsDsl.() 
  *
  * @param props
  */
-public inline fun IQueue.metricNumberOfMessagesDeleted(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfMessagesDeleted(builder.build())
+public inline fun IQueue.metricNumberOfMessagesDeleted(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfMessagesDeleted(builder.build())
 }
 
 /**
@@ -131,11 +146,12 @@ public inline fun IQueue.metricNumberOfMessagesDeleted(block: MetricOptionsDsl.(
  *
  * @param props
  */
-public inline fun IQueue.metricNumberOfMessagesReceived(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfMessagesReceived(builder.build())
+public inline fun IQueue.metricNumberOfMessagesReceived(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfMessagesReceived(builder.build())
 }
 
 /**
@@ -145,11 +161,12 @@ public inline fun IQueue.metricNumberOfMessagesReceived(block: MetricOptionsDsl.
  *
  * @param props
  */
-public inline fun IQueue.metricNumberOfMessagesSent(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfMessagesSent(builder.build())
+public inline fun IQueue.metricNumberOfMessagesSent(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfMessagesSent(builder.build())
 }
 
 /**
@@ -160,38 +177,41 @@ public inline fun IQueue.metricNumberOfMessagesSent(block: MetricOptionsDsl.() -
  * @param props
  */
 public inline fun IQueue.metricSentMessageSize(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSentMessageSize(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSentMessageSize(builder.build())
 }
 
 /**
  * Adds a statement to the IAM resource policy associated with this queue.
  *
- * If this queue was created in this stack (`new Queue`), a queue policy
- * will be automatically created upon the first call to `addToPolicy`. If
- * the queue is imported (`Queue.import`), then this is a no-op.
+ * If this queue was created in this stack (`new Queue`), a queue policy will be automatically
+ * created upon the first call to `addToPolicy`. If the queue is imported (`Queue.import`), then
+ * this is a no-op.
  *
- * @param statement 
+ * @param statement
  */
-public inline fun QueueBase.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToResourcePolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToResourcePolicy(builder.build())
+public inline fun QueueBase.addToResourcePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToResourcePolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToResourcePolicy(builder.build())
 }
 
 /**
  * Return the given named metric for this Queue.
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun QueueBase.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun QueueBase.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -201,11 +221,12 @@ public inline fun QueueBase.metric(metricName: String, block: MetricOptionsDsl.(
  *
  * @param props
  */
-public inline fun QueueBase.metricApproximateAgeOfOldestMessage(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateAgeOfOldestMessage(builder.build())
+public inline fun QueueBase.metricApproximateAgeOfOldestMessage(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateAgeOfOldestMessage(builder.build())
 }
 
 /**
@@ -215,12 +236,12 @@ public inline fun QueueBase.metricApproximateAgeOfOldestMessage(block: MetricOpt
  *
  * @param props
  */
-public inline
-    fun QueueBase.metricApproximateNumberOfMessagesDelayed(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateNumberOfMessagesDelayed(builder.build())
+public inline fun QueueBase.metricApproximateNumberOfMessagesDelayed(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateNumberOfMessagesDelayed(builder.build())
 }
 
 /**
@@ -230,12 +251,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun QueueBase.metricApproximateNumberOfMessagesNotVisible(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateNumberOfMessagesNotVisible(builder.build())
+public inline fun QueueBase.metricApproximateNumberOfMessagesNotVisible(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateNumberOfMessagesNotVisible(builder.build())
 }
 
 /**
@@ -245,12 +266,12 @@ public inline
  *
  * @param props
  */
-public inline
-    fun QueueBase.metricApproximateNumberOfMessagesVisible(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricApproximateNumberOfMessagesVisible(builder.build())
+public inline fun QueueBase.metricApproximateNumberOfMessagesVisible(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricApproximateNumberOfMessagesVisible(builder.build())
 }
 
 /**
@@ -260,11 +281,12 @@ public inline
  *
  * @param props
  */
-public inline fun QueueBase.metricNumberOfEmptyReceives(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfEmptyReceives(builder.build())
+public inline fun QueueBase.metricNumberOfEmptyReceives(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfEmptyReceives(builder.build())
 }
 
 /**
@@ -274,11 +296,12 @@ public inline fun QueueBase.metricNumberOfEmptyReceives(block: MetricOptionsDsl.
  *
  * @param props
  */
-public inline fun QueueBase.metricNumberOfMessagesDeleted(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfMessagesDeleted(builder.build())
+public inline fun QueueBase.metricNumberOfMessagesDeleted(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfMessagesDeleted(builder.build())
 }
 
 /**
@@ -288,11 +311,12 @@ public inline fun QueueBase.metricNumberOfMessagesDeleted(block: MetricOptionsDs
  *
  * @param props
  */
-public inline fun QueueBase.metricNumberOfMessagesReceived(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfMessagesReceived(builder.build())
+public inline fun QueueBase.metricNumberOfMessagesReceived(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfMessagesReceived(builder.build())
 }
 
 /**
@@ -302,11 +326,12 @@ public inline fun QueueBase.metricNumberOfMessagesReceived(block: MetricOptionsD
  *
  * @param props
  */
-public inline fun QueueBase.metricNumberOfMessagesSent(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricNumberOfMessagesSent(builder.build())
+public inline fun QueueBase.metricNumberOfMessagesSent(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricNumberOfMessagesSent(builder.build())
 }
 
 /**
@@ -317,7 +342,7 @@ public inline fun QueueBase.metricNumberOfMessagesSent(block: MetricOptionsDsl.(
  * @param props
  */
 public inline fun QueueBase.metricSentMessageSize(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSentMessageSize(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSentMessageSize(builder.build())
 }

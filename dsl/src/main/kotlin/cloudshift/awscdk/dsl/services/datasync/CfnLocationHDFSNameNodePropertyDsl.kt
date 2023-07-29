@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.datasync
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.datasync.CfnLocationHDFS
  * blocks of data to the DataNodes.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,24 +38,22 @@ import software.amazon.awscdk.services.datasync.CfnLocationHDFS
  */
 @CdkDslMarker
 public class CfnLocationHDFSNameNodePropertyDsl {
-  private val cdkBuilder: CfnLocationHDFS.NameNodeProperty.Builder =
-      CfnLocationHDFS.NameNodeProperty.builder()
+    private val cdkBuilder: CfnLocationHDFS.NameNodeProperty.Builder =
+        CfnLocationHDFS.NameNodeProperty.builder()
 
-  /**
-   * @param hostname The hostname of the NameNode in the HDFS cluster. 
-   * This value is the IP address or Domain Name Service (DNS) name of the NameNode. An agent that's
-   * installed on-premises uses this hostname to communicate with the NameNode in the network.
-   */
-  public fun hostname(hostname: String) {
-    cdkBuilder.hostname(hostname)
-  }
+    /**
+     * @param hostname The hostname of the NameNode in the HDFS cluster. This value is the IP
+     *   address or Domain Name Service (DNS) name of the NameNode. An agent that's installed
+     *   on-premises uses this hostname to communicate with the NameNode in the network.
+     */
+    public fun hostname(hostname: String) {
+        cdkBuilder.hostname(hostname)
+    }
 
-  /**
-   * @param port The port that the NameNode uses to listen to client requests. 
-   */
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
+    /** @param port The port that the NameNode uses to listen to client requests. */
+    public fun port(port: Number) {
+        cdkBuilder.port(port)
+    }
 
-  public fun build(): CfnLocationHDFS.NameNodeProperty = cdkBuilder.build()
+    public fun build(): CfnLocationHDFS.NameNodeProperty = cdkBuilder.build()
 }

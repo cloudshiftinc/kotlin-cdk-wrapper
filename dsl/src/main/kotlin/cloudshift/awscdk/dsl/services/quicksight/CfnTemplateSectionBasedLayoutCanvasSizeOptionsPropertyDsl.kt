@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The options for the canvas of a section-based layout.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,23 +42,20 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateSectionBasedLayoutCanvasSizeOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty.Builder =
-      CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty.Builder =
+        CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty.builder()
 
-  /**
-   * @param paperCanvasSizeOptions The options for a paper canvas of a section-based layout.
-   */
-  public fun paperCanvasSizeOptions(paperCanvasSizeOptions: IResolvable) {
-    cdkBuilder.paperCanvasSizeOptions(paperCanvasSizeOptions)
-  }
+    /** @param paperCanvasSizeOptions The options for a paper canvas of a section-based layout. */
+    public fun paperCanvasSizeOptions(paperCanvasSizeOptions: IResolvable) {
+        cdkBuilder.paperCanvasSizeOptions(paperCanvasSizeOptions)
+    }
 
-  /**
-   * @param paperCanvasSizeOptions The options for a paper canvas of a section-based layout.
-   */
-  public
-      fun paperCanvasSizeOptions(paperCanvasSizeOptions: CfnTemplate.SectionBasedLayoutPaperCanvasSizeOptionsProperty) {
-    cdkBuilder.paperCanvasSizeOptions(paperCanvasSizeOptions)
-  }
+    /** @param paperCanvasSizeOptions The options for a paper canvas of a section-based layout. */
+    public fun paperCanvasSizeOptions(
+        paperCanvasSizeOptions: CfnTemplate.SectionBasedLayoutPaperCanvasSizeOptionsProperty
+    ) {
+        cdkBuilder.paperCanvasSizeOptions(paperCanvasSizeOptions)
+    }
 
-  public fun build(): CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.SectionBasedLayoutCanvasSizeOptionsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -16,11 +25,9 @@ import software.amazon.awscdk.services.iam.IRole
  * The common properties for all task definitions.
  *
  * For more information, see
- * [Task Definition
- * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html).
+ * [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -66,64 +73,58 @@ import software.amazon.awscdk.services.iam.IRole
  */
 @CdkDslMarker
 public class CommonTaskDefinitionPropsDsl {
-  private val cdkBuilder: CommonTaskDefinitionProps.Builder = CommonTaskDefinitionProps.builder()
+    private val cdkBuilder: CommonTaskDefinitionProps.Builder = CommonTaskDefinitionProps.builder()
 
-  private val _volumes: MutableList<Volume> = mutableListOf()
+    private val _volumes: MutableList<Volume> = mutableListOf()
 
-  /**
-   * @param executionRole The name of the IAM task execution role that grants the ECS agent
-   * permission to call AWS APIs on your behalf.
-   * The role will be used to retrieve container images from ECR and create CloudWatch log groups.
-   */
-  public fun executionRole(executionRole: IRole) {
-    cdkBuilder.executionRole(executionRole)
-  }
+    /**
+     * @param executionRole The name of the IAM task execution role that grants the ECS agent
+     *   permission to call AWS APIs on your behalf. The role will be used to retrieve container
+     *   images from ECR and create CloudWatch log groups.
+     */
+    public fun executionRole(executionRole: IRole) {
+        cdkBuilder.executionRole(executionRole)
+    }
 
-  /**
-   * @param family The name of a family that this task definition is registered to.
-   * A family groups multiple versions of a task definition.
-   */
-  public fun family(family: String) {
-    cdkBuilder.family(family)
-  }
+    /**
+     * @param family The name of a family that this task definition is registered to. A family
+     *   groups multiple versions of a task definition.
+     */
+    public fun family(family: String) {
+        cdkBuilder.family(family)
+    }
 
-  /**
-   * @param proxyConfiguration The configuration details for the App Mesh proxy.
-   */
-  public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-    cdkBuilder.proxyConfiguration(proxyConfiguration)
-  }
+    /** @param proxyConfiguration The configuration details for the App Mesh proxy. */
+    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
+        cdkBuilder.proxyConfiguration(proxyConfiguration)
+    }
 
-  /**
-   * @param taskRole The name of the IAM role that grants containers in the task permission to call
-   * AWS APIs on your behalf.
-   */
-  public fun taskRole(taskRole: IRole) {
-    cdkBuilder.taskRole(taskRole)
-  }
+    /**
+     * @param taskRole The name of the IAM role that grants containers in the task permission to
+     *   call AWS APIs on your behalf.
+     */
+    public fun taskRole(taskRole: IRole) {
+        cdkBuilder.taskRole(taskRole)
+    }
 
-  /**
-   * @param volumes The list of volume definitions for the task.
-   * For more information, see
-   * [Task Definition Parameter
-   * Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html#volumes).
-   */
-  public fun volumes(volumes: VolumeDsl.() -> Unit) {
-    _volumes.add(VolumeDsl().apply(volumes).build())
-  }
+    /**
+     * @param volumes The list of volume definitions for the task. For more information, see
+     *   [Task Definition Parameter Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html#volumes).
+     */
+    public fun volumes(volumes: VolumeDsl.() -> Unit) {
+        _volumes.add(VolumeDsl().apply(volumes).build())
+    }
 
-  /**
-   * @param volumes The list of volume definitions for the task.
-   * For more information, see
-   * [Task Definition Parameter
-   * Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html#volumes).
-   */
-  public fun volumes(volumes: Collection<Volume>) {
-    _volumes.addAll(volumes)
-  }
+    /**
+     * @param volumes The list of volume definitions for the task. For more information, see
+     *   [Task Definition Parameter Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html#volumes).
+     */
+    public fun volumes(volumes: Collection<Volume>) {
+        _volumes.addAll(volumes)
+    }
 
-  public fun build(): CommonTaskDefinitionProps {
-    if(_volumes.isNotEmpty()) cdkBuilder.volumes(_volumes)
-    return cdkBuilder.build()
-  }
+    public fun build(): CommonTaskDefinitionProps {
+        if (_volumes.isNotEmpty()) cdkBuilder.volumes(_volumes)
+        return cdkBuilder.build()
+    }
 }

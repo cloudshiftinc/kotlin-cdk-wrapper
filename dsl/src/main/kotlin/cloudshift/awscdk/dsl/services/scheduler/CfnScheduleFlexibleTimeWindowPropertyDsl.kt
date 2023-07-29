@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.scheduler
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.scheduler.CfnSchedule
  * Allows you to configure a time window during which EventBridge Scheduler invokes the schedule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,26 +35,26 @@ import software.amazon.awscdk.services.scheduler.CfnSchedule
  */
 @CdkDslMarker
 public class CfnScheduleFlexibleTimeWindowPropertyDsl {
-  private val cdkBuilder: CfnSchedule.FlexibleTimeWindowProperty.Builder =
-      CfnSchedule.FlexibleTimeWindowProperty.builder()
+    private val cdkBuilder: CfnSchedule.FlexibleTimeWindowProperty.Builder =
+        CfnSchedule.FlexibleTimeWindowProperty.builder()
 
-  /**
-   * @param maximumWindowInMinutes The maximum time window during which a schedule can be invoked.
-   * *Minimum* : `1`
-   *
-   * *Maximum* : `1440`
-   */
-  public fun maximumWindowInMinutes(maximumWindowInMinutes: Number) {
-    cdkBuilder.maximumWindowInMinutes(maximumWindowInMinutes)
-  }
+    /**
+     * @param maximumWindowInMinutes The maximum time window during which a schedule can be invoked.
+     *   *Minimum* : `1`
+     *
+     * *Maximum* : `1440`
+     */
+    public fun maximumWindowInMinutes(maximumWindowInMinutes: Number) {
+        cdkBuilder.maximumWindowInMinutes(maximumWindowInMinutes)
+    }
 
-  /**
-   * @param mode Determines whether the schedule is invoked within a flexible time window. 
-   * *Allowed Values* : `OFF` | `FLEXIBLE`
-   */
-  public fun mode(mode: String) {
-    cdkBuilder.mode(mode)
-  }
+    /**
+     * @param mode Determines whether the schedule is invoked within a flexible time window.
+     *   *Allowed Values* : `OFF` | `FLEXIBLE`
+     */
+    public fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+    }
 
-  public fun build(): CfnSchedule.FlexibleTimeWindowProperty = cdkBuilder.build()
+    public fun build(): CfnSchedule.FlexibleTimeWindowProperty = cdkBuilder.build()
 }

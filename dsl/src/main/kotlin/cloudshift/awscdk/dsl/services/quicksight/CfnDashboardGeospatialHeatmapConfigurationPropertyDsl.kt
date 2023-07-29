@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The heatmap configuration of the geospatial point style.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,22 +37,18 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  */
 @CdkDslMarker
 public class CfnDashboardGeospatialHeatmapConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.GeospatialHeatmapConfigurationProperty.Builder =
-      CfnDashboard.GeospatialHeatmapConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.GeospatialHeatmapConfigurationProperty.Builder =
+        CfnDashboard.GeospatialHeatmapConfigurationProperty.builder()
 
-  /**
-   * @param heatmapColor The color scale specification for the heatmap point style.
-   */
-  public fun heatmapColor(heatmapColor: IResolvable) {
-    cdkBuilder.heatmapColor(heatmapColor)
-  }
+    /** @param heatmapColor The color scale specification for the heatmap point style. */
+    public fun heatmapColor(heatmapColor: IResolvable) {
+        cdkBuilder.heatmapColor(heatmapColor)
+    }
 
-  /**
-   * @param heatmapColor The color scale specification for the heatmap point style.
-   */
-  public fun heatmapColor(heatmapColor: CfnDashboard.GeospatialHeatmapColorScaleProperty) {
-    cdkBuilder.heatmapColor(heatmapColor)
-  }
+    /** @param heatmapColor The color scale specification for the heatmap point style. */
+    public fun heatmapColor(heatmapColor: CfnDashboard.GeospatialHeatmapColorScaleProperty) {
+        cdkBuilder.heatmapColor(heatmapColor)
+    }
 
-  public fun build(): CfnDashboard.GeospatialHeatmapConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.GeospatialHeatmapConfigurationProperty = cdkBuilder.build()
 }

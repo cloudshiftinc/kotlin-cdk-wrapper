@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs.patterns
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps
  * Properties to define a network load balancer target group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,20 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps
  */
 @CdkDslMarker
 public class NetworkTargetPropsDsl {
-  private val cdkBuilder: NetworkTargetProps.Builder = NetworkTargetProps.builder()
+    private val cdkBuilder: NetworkTargetProps.Builder = NetworkTargetProps.builder()
 
-  /**
-   * @param containerPort The port number of the container. 
-   * Only applicable when using application/network load balancers.
-   */
-  public fun containerPort(containerPort: Number) {
-    cdkBuilder.containerPort(containerPort)
-  }
+    /**
+     * @param containerPort The port number of the container. Only applicable when using
+     *   application/network load balancers.
+     */
+    public fun containerPort(containerPort: Number) {
+        cdkBuilder.containerPort(containerPort)
+    }
 
-  /**
-   * @param listener Name of the listener the target group attached to.
-   */
-  public fun listener(listener: String) {
-    cdkBuilder.listener(listener)
-  }
+    /** @param listener Name of the listener the target group attached to. */
+    public fun listener(listener: String) {
+        cdkBuilder.listener(listener)
+    }
 
-  public fun build(): NetworkTargetProps = cdkBuilder.build()
+    public fun build(): NetworkTargetProps = cdkBuilder.build()
 }

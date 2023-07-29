@@ -1,8 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.pipelines.CodeBuildOptions
 import software.amazon.awscdk.pipelines.CodePipeline
 import software.amazon.awscdk.pipelines.DockerCredential
@@ -11,21 +25,14 @@ import software.amazon.awscdk.services.codepipeline.Pipeline
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 
 /**
  * A CDK Pipeline that uses CodePipeline to deploy CDK apps.
  *
- * This is a `Pipeline` with its `engine` property set to
- * `CodePipelineEngine`, and exists for nicer ergonomics for
- * users that don't need to switch out engines.
+ * This is a `Pipeline` with its `engine` property set to `CodePipelineEngine`, and exists for nicer
+ * ergonomics for users that don't need to switch out engines.
  *
  * Example:
- *
  * ```
  * Pipeline codePipeline;
  * Artifact sourceArtifact = new Artifact("MySourceArtifact");
@@ -41,7 +48,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CodePipelineDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CodePipeline.Builder = CodePipeline.Builder.create(scope, id)
 
@@ -64,11 +71,10 @@ public class CodePipelineDsl(
      * Default: - Only `codeBuildDefaults` are applied
      *
      * @param assetPublishingCodeBuildDefaults Additional customizations to apply to the asset
-     * publishing CodeBuild projects.
+     *   publishing CodeBuild projects.
      */
     public fun assetPublishingCodeBuildDefaults(
-        assetPublishingCodeBuildDefaults: CodeBuildOptionsDsl.() -> Unit =
-            {}
+        assetPublishingCodeBuildDefaults: CodeBuildOptionsDsl.() -> Unit = {}
     ) {
         val builder = CodeBuildOptionsDsl()
         builder.apply(assetPublishingCodeBuildDefaults)
@@ -81,30 +87,30 @@ public class CodePipelineDsl(
      * Default: - Only `codeBuildDefaults` are applied
      *
      * @param assetPublishingCodeBuildDefaults Additional customizations to apply to the asset
-     * publishing CodeBuild projects.
+     *   publishing CodeBuild projects.
      */
-    public fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions) {
+    public fun assetPublishingCodeBuildDefaults(
+        assetPublishingCodeBuildDefaults: CodeBuildOptions
+    ) {
         cdkBuilder.assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults)
     }
 
     /**
      * CDK CLI version to use in self-mutation and asset publishing steps.
      *
-     * If you want to lock the CDK CLI version used in the pipeline, by steps
-     * that are automatically generated for you, specify the version here.
+     * If you want to lock the CDK CLI version used in the pipeline, by steps that are automatically
+     * generated for you, specify the version here.
      *
-     * We recommend you do not specify this value, as not specifying it always
-     * uses the latest CLI version which is backwards compatible with old versions.
+     * We recommend you do not specify this value, as not specifying it always uses the latest CLI
+     * version which is backwards compatible with old versions.
      *
      * If you do specify it, be aware that this version should always be equal to or higher than the
-     * version of the CDK framework used by the CDK app, when the CDK commands are
-     * run during your pipeline execution. When you change this version, the *next
-     * time* the `SelfMutate` step runs it will still be using the CLI of the the
-     * *previous* version that was in this property: it will only start using the
-     * new version after `SelfMutate` completes successfully. That means that if
-     * you want to update both framework and CLI version, you should update the
-     * CLI version first, commit, push and deploy, and only then update the
-     * framework version.
+     * version of the CDK framework used by the CDK app, when the CDK commands are run during your
+     * pipeline execution. When you change this version, the *next time* the `SelfMutate` step runs
+     * it will still be using the CLI of the the *previous* version that was in this property: it
+     * will only start using the new version after `SelfMutate` completes successfully. That means
+     * that if you want to update both framework and CLI version, you should update the CLI version
+     * first, commit, push and deploy, and only then update the framework version.
      *
      * Default: - Latest version
      *
@@ -117,7 +123,8 @@ public class CodePipelineDsl(
     /**
      * Customize the CodeBuild projects created for this pipeline.
      *
-     * Default: - All projects run non-privileged build, SMALL instance, LinuxBuildImage.STANDARD_6_0
+     * Default: - All projects run non-privileged build, SMALL instance,
+     * LinuxBuildImage.STANDARD_6_0
      *
      * @param codeBuildDefaults Customize the CodeBuild projects created for this pipeline.
      */
@@ -130,7 +137,8 @@ public class CodePipelineDsl(
     /**
      * Customize the CodeBuild projects created for this pipeline.
      *
-     * Default: - All projects run non-privileged build, SMALL instance, LinuxBuildImage.STANDARD_6_0
+     * Default: - All projects run non-privileged build, SMALL instance,
+     * LinuxBuildImage.STANDARD_6_0
      *
      * @param codeBuildDefaults Customize the CodeBuild projects created for this pipeline.
      */
@@ -154,16 +162,16 @@ public class CodePipelineDsl(
     /**
      * Create KMS keys for the artifact buckets, allowing cross-account deployments.
      *
-     * The artifact buckets have to be encrypted to support deploying CDK apps to
-     * another account, so if you want to do that or want to have your artifact
-     * buckets encrypted, be sure to set this value to `true`.
+     * The artifact buckets have to be encrypted to support deploying CDK apps to another account,
+     * so if you want to do that or want to have your artifact buckets encrypted, be sure to set
+     * this value to `true`.
      *
      * Be aware there is a cost associated with maintaining the KMS keys.
      *
      * Default: false
      *
      * @param crossAccountKeys Create KMS keys for the artifact buckets, allowing cross-account
-     * deployments.
+     *   deployments.
      */
     public fun crossAccountKeys(crossAccountKeys: Boolean) {
         cdkBuilder.crossAccountKeys(crossAccountKeys)
@@ -200,18 +208,17 @@ public class CodePipelineDsl(
     /**
      * Enable Docker for the self-mutate step.
      *
-     * Set this to true if the pipeline itself uses Docker container assets
-     * (for example, if you use `LinuxBuildImage.fromAsset()` as the build
-     * image of a CodeBuild step in the pipeline).
+     * Set this to true if the pipeline itself uses Docker container assets (for example, if you use
+     * `LinuxBuildImage.fromAsset()` as the build image of a CodeBuild step in the pipeline).
      *
-     * You do not need to set it if you build Docker image assets in the
-     * application Stages and Stacks that are *deployed* by this pipeline.
+     * You do not need to set it if you build Docker image assets in the application Stages and
+     * Stacks that are *deployed* by this pipeline.
      *
      * Configures privileged mode for the self-mutation CodeBuild action.
      *
-     * If you are about to turn this on in an already-deployed Pipeline,
-     * set the value to `true` first, commit and allow the pipeline to
-     * self-update, and only then use the Docker asset in the pipeline.
+     * If you are about to turn this on in an already-deployed Pipeline, set the value to `true`
+     * first, commit and allow the pipeline to self-update, and only then use the Docker asset in
+     * the pipeline.
      *
      * Default: false
      *
@@ -224,20 +231,17 @@ public class CodePipelineDsl(
     /**
      * Enable Docker for the 'synth' step.
      *
-     * Set this to true if you are using file assets that require
-     * "bundling" anywhere in your application (meaning an asset
-     * compilation step will be run with the tools provided by
-     * a Docker image), both for the Pipeline stack as well as the
-     * application stacks.
+     * Set this to true if you are using file assets that require "bundling" anywhere in your
+     * application (meaning an asset compilation step will be run with the tools provided by a
+     * Docker image), both for the Pipeline stack as well as the application stacks.
      *
-     * A common way to use bundling assets in your application is by
-     * using the `&#64;aws-cdk/aws-lambda-nodejs` library.
+     * A common way to use bundling assets in your application is by using the
+     * `&#64;aws-cdk/aws-lambda-nodejs` library.
      *
      * Configures privileged mode for the synth CodeBuild action.
      *
-     * If you are about to turn this on in an already-deployed Pipeline,
-     * set the value to `true` first, commit and allow the pipeline to
-     * self-update, and only then use the bundled asset.
+     * If you are about to turn this on in an already-deployed Pipeline, set the value to `true`
+     * first, commit and allow the pipeline to self-update, and only then use the bundled asset.
      *
      * Default: false
      *
@@ -250,8 +254,7 @@ public class CodePipelineDsl(
     /**
      * Enable KMS key rotation for the generated KMS keys.
      *
-     * By default KMS key rotation is disabled, but will add
-     * additional costs when enabled.
+     * By default KMS key rotation is disabled, but will add additional costs when enabled.
      *
      * Default: - false (key rotation is disabled)
      *
@@ -277,9 +280,8 @@ public class CodePipelineDsl(
      *
      * If set to false, use one Project per type to publish all assets.
      *
-     * Publishing in parallel improves concurrency and may reduce publishing
-     * latency, but may also increase overall provisioning time of the CodeBuild
-     * projects.
+     * Publishing in parallel improves concurrency and may reduce publishing latency, but may also
+     * increase overall provisioning time of the CodeBuild projects.
      *
      * Experiment and see what value works best for you.
      *
@@ -297,7 +299,7 @@ public class CodePipelineDsl(
      * Default: - true (Use the same support stack for all pipelines in App)
      *
      * @param reuseCrossRegionSupportStacks Reuse the same cross region support stack for all
-     * pipelines in the App.
+     *   pipelines in the App.
      */
     public fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean) {
         cdkBuilder.reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks)
@@ -317,12 +319,11 @@ public class CodePipelineDsl(
     /**
      * Whether the pipeline will update itself.
      *
-     * This needs to be set to `true` to allow the pipeline to reconfigure
-     * itself when assets or stages are being added to it, and `true` is the
-     * recommended setting.
+     * This needs to be set to `true` to allow the pipeline to reconfigure itself when assets or
+     * stages are being added to it, and `true` is the recommended setting.
      *
-     * You can temporarily set this to `false` while you are iterating
-     * on the pipeline itself and prefer to deploy changes using `cdk deploy`.
+     * You can temporarily set this to `false` while you are iterating on the pipeline itself and
+     * prefer to deploy changes using `cdk deploy`.
      *
      * Default: true
      *
@@ -338,11 +339,10 @@ public class CodePipelineDsl(
      * Default: - Only `codeBuildDefaults` are applied
      *
      * @param selfMutationCodeBuildDefaults Additional customizations to apply to the self mutation
-     * CodeBuild projects.
+     *   CodeBuild projects.
      */
     public fun selfMutationCodeBuildDefaults(
-        selfMutationCodeBuildDefaults: CodeBuildOptionsDsl.() -> Unit =
-            {}
+        selfMutationCodeBuildDefaults: CodeBuildOptionsDsl.() -> Unit = {}
     ) {
         val builder = CodeBuildOptionsDsl()
         builder.apply(selfMutationCodeBuildDefaults)
@@ -355,7 +355,7 @@ public class CodePipelineDsl(
      * Default: - Only `codeBuildDefaults` are applied
      *
      * @param selfMutationCodeBuildDefaults Additional customizations to apply to the self mutation
-     * CodeBuild projects.
+     *   CodeBuild projects.
      */
     public fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions) {
         cdkBuilder.selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults)
@@ -364,11 +364,11 @@ public class CodePipelineDsl(
     /**
      * The build step that produces the CDK Cloud Assembly.
      *
-     * The primary output of this step needs to be the `cdk.out` directory
-     * generated by the `cdk synth` command.
+     * The primary output of this step needs to be the `cdk.out` directory generated by the `cdk
+     * synth` command.
      *
-     * If you use a `ShellStep` here and you don't configure an output directory,
-     * the output directory will automatically be assumed to be `cdk.out`.
+     * If you use a `ShellStep` here and you don't configure an output directory, the output
+     * directory will automatically be assumed to be `cdk.out`.
      *
      * @param synth The build step that produces the CDK Cloud Assembly.
      */
@@ -382,7 +382,7 @@ public class CodePipelineDsl(
      * Default: - Only `codeBuildDefaults` are applied
      *
      * @param synthCodeBuildDefaults Additional customizations to apply to the synthesize CodeBuild
-     * projects.
+     *   projects.
      */
     public fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptionsDsl.() -> Unit = {}) {
         val builder = CodeBuildOptionsDsl()
@@ -396,7 +396,7 @@ public class CodePipelineDsl(
      * Default: - Only `codeBuildDefaults` are applied
      *
      * @param synthCodeBuildDefaults Additional customizations to apply to the synthesize CodeBuild
-     * projects.
+     *   projects.
      */
     public fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions) {
         cdkBuilder.synthCodeBuildDefaults(synthCodeBuildDefaults)
@@ -405,8 +405,8 @@ public class CodePipelineDsl(
     /**
      * Deploy every stack by creating a change set and executing it.
      *
-     * When enabled, creates a "Prepare" and "Execute" action for each stack. Disable
-     * to deploy the stack in one pipeline action.
+     * When enabled, creates a "Prepare" and "Execute" action for each stack. Disable to deploy the
+     * stack in one pipeline action.
      *
      * Default: true
      *

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is FailoverConditionSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,16 +36,16 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelInputLossFailoverSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.InputLossFailoverSettingsProperty.Builder =
-      CfnChannel.InputLossFailoverSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.InputLossFailoverSettingsProperty.Builder =
+        CfnChannel.InputLossFailoverSettingsProperty.builder()
 
-  /**
-   * @param inputLossThresholdMsec The amount of time (in milliseconds) that no input is detected.
-   * After that time, an input failover will occur.
-   */
-  public fun inputLossThresholdMsec(inputLossThresholdMsec: Number) {
-    cdkBuilder.inputLossThresholdMsec(inputLossThresholdMsec)
-  }
+    /**
+     * @param inputLossThresholdMsec The amount of time (in milliseconds) that no input is detected.
+     *   After that time, an input failover will occur.
+     */
+    public fun inputLossThresholdMsec(inputLossThresholdMsec: Number) {
+        cdkBuilder.inputLossThresholdMsec(inputLossThresholdMsec)
+    }
 
-  public fun build(): CfnChannel.InputLossFailoverSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.InputLossFailoverSettingsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.datasync
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
  * Represents the protocol that AWS DataSync uses to access your Amazon FSx for OpenZFS file system.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,24 +36,24 @@ import software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
  */
 @CdkDslMarker
 public class CfnLocationFSxOpenZFSProtocolPropertyDsl {
-  private val cdkBuilder: CfnLocationFSxOpenZFS.ProtocolProperty.Builder =
-      CfnLocationFSxOpenZFS.ProtocolProperty.builder()
+    private val cdkBuilder: CfnLocationFSxOpenZFS.ProtocolProperty.Builder =
+        CfnLocationFSxOpenZFS.ProtocolProperty.builder()
 
-  /**
-   * @param nfs Represents the Network File System (NFS) protocol that DataSync uses to access your
-   * FSx for OpenZFS file system.
-   */
-  public fun nfs(nfs: IResolvable) {
-    cdkBuilder.nfs(nfs)
-  }
+    /**
+     * @param nfs Represents the Network File System (NFS) protocol that DataSync uses to access
+     *   your FSx for OpenZFS file system.
+     */
+    public fun nfs(nfs: IResolvable) {
+        cdkBuilder.nfs(nfs)
+    }
 
-  /**
-   * @param nfs Represents the Network File System (NFS) protocol that DataSync uses to access your
-   * FSx for OpenZFS file system.
-   */
-  public fun nfs(nfs: CfnLocationFSxOpenZFS.NFSProperty) {
-    cdkBuilder.nfs(nfs)
-  }
+    /**
+     * @param nfs Represents the Network File System (NFS) protocol that DataSync uses to access
+     *   your FSx for OpenZFS file system.
+     */
+    public fun nfs(nfs: CfnLocationFSxOpenZFS.NFSProperty) {
+        cdkBuilder.nfs(nfs)
+    }
 
-  public fun build(): CfnLocationFSxOpenZFS.ProtocolProperty = cdkBuilder.build()
+    public fun build(): CfnLocationFSxOpenZFS.ProtocolProperty = cdkBuilder.build()
 }

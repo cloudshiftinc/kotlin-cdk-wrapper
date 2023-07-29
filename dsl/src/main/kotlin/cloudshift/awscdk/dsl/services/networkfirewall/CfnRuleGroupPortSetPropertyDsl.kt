@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
  * A set of port ranges for use in the rules in a rule group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,27 +34,23 @@ import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupPortSetPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.PortSetProperty.Builder =
-      CfnRuleGroup.PortSetProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.PortSetProperty.Builder =
+        CfnRuleGroup.PortSetProperty.builder()
 
-  private val _definition: MutableList<String> = mutableListOf()
+    private val _definition: MutableList<String> = mutableListOf()
 
-  /**
-   * @param definition The set of port ranges.
-   */
-  public fun definition(vararg definition: String) {
-    _definition.addAll(listOf(*definition))
-  }
+    /** @param definition The set of port ranges. */
+    public fun definition(vararg definition: String) {
+        _definition.addAll(listOf(*definition))
+    }
 
-  /**
-   * @param definition The set of port ranges.
-   */
-  public fun definition(definition: Collection<String>) {
-    _definition.addAll(definition)
-  }
+    /** @param definition The set of port ranges. */
+    public fun definition(definition: Collection<String>) {
+        _definition.addAll(definition)
+    }
 
-  public fun build(): CfnRuleGroup.PortSetProperty {
-    if(_definition.isNotEmpty()) cdkBuilder.definition(_definition)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnRuleGroup.PortSetProperty {
+        if (_definition.isNotEmpty()) cdkBuilder.definition(_definition)
+        return cdkBuilder.build()
+    }
 }

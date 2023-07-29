@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnGCMChannel
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
 
 /**
  * A *channel* is a type of platform that you can deliver messages to.
@@ -21,7 +30,6 @@ import kotlin.String
  * an application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,7 +47,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnGCMChannelDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnGCMChannel.Builder = CfnGCMChannel.Builder.create(scope, id)
 
@@ -48,8 +56,9 @@ public class CfnGCMChannelDsl(
      * with Google services.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html#cfn-pinpoint-gcmchannel-apikey)
-     * @param apiKey The Web API key, also called the *server key* , that you received from Google to
-     * communicate with Google services.
+     *
+     * @param apiKey The Web API key, also called the *server key* , that you received from Google
+     *   to communicate with Google services.
      */
     public fun apiKey(apiKey: String) {
         cdkBuilder.apiKey(apiKey)
@@ -59,8 +68,9 @@ public class CfnGCMChannelDsl(
      * The unique identifier for the Amazon Pinpoint application that the GCM channel applies to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html#cfn-pinpoint-gcmchannel-applicationid)
+     *
      * @param applicationId The unique identifier for the Amazon Pinpoint application that the GCM
-     * channel applies to.
+     *   channel applies to.
      */
     public fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
@@ -70,8 +80,9 @@ public class CfnGCMChannelDsl(
      * Specifies whether to enable the GCM channel for the Amazon Pinpoint application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html#cfn-pinpoint-gcmchannel-enabled)
-     * @param enabled Specifies whether to enable the GCM channel for the Amazon Pinpoint application.
      *
+     * @param enabled Specifies whether to enable the GCM channel for the Amazon Pinpoint
+     *   application.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -81,8 +92,9 @@ public class CfnGCMChannelDsl(
      * Specifies whether to enable the GCM channel for the Amazon Pinpoint application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html#cfn-pinpoint-gcmchannel-enabled)
-     * @param enabled Specifies whether to enable the GCM channel for the Amazon Pinpoint application.
      *
+     * @param enabled Specifies whether to enable the GCM channel for the Amazon Pinpoint
+     *   application.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)

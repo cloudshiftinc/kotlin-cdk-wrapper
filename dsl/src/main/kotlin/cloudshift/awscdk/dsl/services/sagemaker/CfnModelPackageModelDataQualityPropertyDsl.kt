@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  * Data quality constraints and statistics for a model.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,36 +43,28 @@ import software.amazon.awscdk.services.sagemaker.CfnModelPackage
  */
 @CdkDslMarker
 public class CfnModelPackageModelDataQualityPropertyDsl {
-  private val cdkBuilder: CfnModelPackage.ModelDataQualityProperty.Builder =
-      CfnModelPackage.ModelDataQualityProperty.builder()
+    private val cdkBuilder: CfnModelPackage.ModelDataQualityProperty.Builder =
+        CfnModelPackage.ModelDataQualityProperty.builder()
 
-  /**
-   * @param constraints Data quality constraints for a model.
-   */
-  public fun constraints(constraints: IResolvable) {
-    cdkBuilder.constraints(constraints)
-  }
+    /** @param constraints Data quality constraints for a model. */
+    public fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  /**
-   * @param constraints Data quality constraints for a model.
-   */
-  public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
-    cdkBuilder.constraints(constraints)
-  }
+    /** @param constraints Data quality constraints for a model. */
+    public fun constraints(constraints: CfnModelPackage.MetricsSourceProperty) {
+        cdkBuilder.constraints(constraints)
+    }
 
-  /**
-   * @param statistics Data quality statistics for a model.
-   */
-  public fun statistics(statistics: IResolvable) {
-    cdkBuilder.statistics(statistics)
-  }
+    /** @param statistics Data quality statistics for a model. */
+    public fun statistics(statistics: IResolvable) {
+        cdkBuilder.statistics(statistics)
+    }
 
-  /**
-   * @param statistics Data quality statistics for a model.
-   */
-  public fun statistics(statistics: CfnModelPackage.MetricsSourceProperty) {
-    cdkBuilder.statistics(statistics)
-  }
+    /** @param statistics Data quality statistics for a model. */
+    public fun statistics(statistics: CfnModelPackage.MetricsSourceProperty) {
+        cdkBuilder.statistics(statistics)
+    }
 
-  public fun build(): CfnModelPackage.ModelDataQualityProperty = cdkBuilder.build()
+    public fun build(): CfnModelPackage.ModelDataQualityProperty = cdkBuilder.build()
 }

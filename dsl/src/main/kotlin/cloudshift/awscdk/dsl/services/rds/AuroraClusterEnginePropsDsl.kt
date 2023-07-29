@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.rds.AuroraEngineVersion
  * Used in `DatabaseClusterEngine.aurora`.
  *
  * Example:
- *
  * ```
  * Vpc vpc;
  * DatabaseClusterFromSnapshot.Builder.create(this, "Database")
@@ -25,14 +33,12 @@ import software.amazon.awscdk.services.rds.AuroraEngineVersion
  */
 @CdkDslMarker
 public class AuroraClusterEnginePropsDsl {
-  private val cdkBuilder: AuroraClusterEngineProps.Builder = AuroraClusterEngineProps.builder()
+    private val cdkBuilder: AuroraClusterEngineProps.Builder = AuroraClusterEngineProps.builder()
 
-  /**
-   * @param version The version of the Aurora cluster engine. 
-   */
-  public fun version(version: AuroraEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The version of the Aurora cluster engine. */
+    public fun version(version: AuroraEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): AuroraClusterEngineProps = cdkBuilder.build()
+    public fun build(): AuroraClusterEngineProps = cdkBuilder.build()
 }

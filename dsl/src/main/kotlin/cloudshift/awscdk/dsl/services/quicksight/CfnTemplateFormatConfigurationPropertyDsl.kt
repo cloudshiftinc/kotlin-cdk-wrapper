@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The formatting configuration for all types of field.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -234,45 +242,39 @@ public class CfnTemplateFormatConfigurationPropertyDsl {
     private val cdkBuilder: CfnTemplate.FormatConfigurationProperty.Builder =
         CfnTemplate.FormatConfigurationProperty.builder()
 
-    /**
-     * @param dateTimeFormatConfiguration Formatting configuration for `DateTime` fields.
-     */
+    /** @param dateTimeFormatConfiguration Formatting configuration for `DateTime` fields. */
     public fun dateTimeFormatConfiguration(dateTimeFormatConfiguration: IResolvable) {
         cdkBuilder.dateTimeFormatConfiguration(dateTimeFormatConfiguration)
     }
 
-    /**
-     * @param dateTimeFormatConfiguration Formatting configuration for `DateTime` fields.
-     */
-    public fun dateTimeFormatConfiguration(dateTimeFormatConfiguration: CfnTemplate.DateTimeFormatConfigurationProperty) {
+    /** @param dateTimeFormatConfiguration Formatting configuration for `DateTime` fields. */
+    public fun dateTimeFormatConfiguration(
+        dateTimeFormatConfiguration: CfnTemplate.DateTimeFormatConfigurationProperty
+    ) {
         cdkBuilder.dateTimeFormatConfiguration(dateTimeFormatConfiguration)
     }
 
-    /**
-     * @param numberFormatConfiguration Formatting configuration for number fields.
-     */
+    /** @param numberFormatConfiguration Formatting configuration for number fields. */
     public fun numberFormatConfiguration(numberFormatConfiguration: IResolvable) {
         cdkBuilder.numberFormatConfiguration(numberFormatConfiguration)
     }
 
-    /**
-     * @param numberFormatConfiguration Formatting configuration for number fields.
-     */
-    public fun numberFormatConfiguration(numberFormatConfiguration: CfnTemplate.NumberFormatConfigurationProperty) {
+    /** @param numberFormatConfiguration Formatting configuration for number fields. */
+    public fun numberFormatConfiguration(
+        numberFormatConfiguration: CfnTemplate.NumberFormatConfigurationProperty
+    ) {
         cdkBuilder.numberFormatConfiguration(numberFormatConfiguration)
     }
 
-    /**
-     * @param stringFormatConfiguration Formatting configuration for string fields.
-     */
+    /** @param stringFormatConfiguration Formatting configuration for string fields. */
     public fun stringFormatConfiguration(stringFormatConfiguration: IResolvable) {
         cdkBuilder.stringFormatConfiguration(stringFormatConfiguration)
     }
 
-    /**
-     * @param stringFormatConfiguration Formatting configuration for string fields.
-     */
-    public fun stringFormatConfiguration(stringFormatConfiguration: CfnTemplate.StringFormatConfigurationProperty) {
+    /** @param stringFormatConfiguration Formatting configuration for string fields. */
+    public fun stringFormatConfiguration(
+        stringFormatConfiguration: CfnTemplate.StringFormatConfigurationProperty
+    ) {
         cdkBuilder.stringFormatConfiguration(stringFormatConfiguration)
     }
 

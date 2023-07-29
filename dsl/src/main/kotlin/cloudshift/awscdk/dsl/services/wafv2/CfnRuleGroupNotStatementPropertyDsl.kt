@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * You provide one `Statement` within the `NotStatement` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -351,24 +359,18 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  */
 @CdkDslMarker
 public class CfnRuleGroupNotStatementPropertyDsl {
-  private val cdkBuilder: CfnRuleGroup.NotStatementProperty.Builder =
-      CfnRuleGroup.NotStatementProperty.builder()
+    private val cdkBuilder: CfnRuleGroup.NotStatementProperty.Builder =
+        CfnRuleGroup.NotStatementProperty.builder()
 
-  /**
-   * @param statement The statement to negate. 
-   * You can use any statement that can be nested.
-   */
-  public fun statement(statement: IResolvable) {
-    cdkBuilder.statement(statement)
-  }
+    /** @param statement The statement to negate. You can use any statement that can be nested. */
+    public fun statement(statement: IResolvable) {
+        cdkBuilder.statement(statement)
+    }
 
-  /**
-   * @param statement The statement to negate. 
-   * You can use any statement that can be nested.
-   */
-  public fun statement(statement: CfnRuleGroup.StatementProperty) {
-    cdkBuilder.statement(statement)
-  }
+    /** @param statement The statement to negate. You can use any statement that can be nested. */
+    public fun statement(statement: CfnRuleGroup.StatementProperty) {
+        cdkBuilder.statement(statement)
+    }
 
-  public fun build(): CfnRuleGroup.NotStatementProperty = cdkBuilder.build()
+    public fun build(): CfnRuleGroup.NotStatementProperty = cdkBuilder.build()
 }

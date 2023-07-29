@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.databrew.CfnDataset
  * Each `PathParameter` consists of a name and a parameter definition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,29 +54,23 @@ import software.amazon.awscdk.services.databrew.CfnDataset
  */
 @CdkDslMarker
 public class CfnDatasetPathParameterPropertyDsl {
-  private val cdkBuilder: CfnDataset.PathParameterProperty.Builder =
-      CfnDataset.PathParameterProperty.builder()
+    private val cdkBuilder: CfnDataset.PathParameterProperty.Builder =
+        CfnDataset.PathParameterProperty.builder()
 
-  /**
-   * @param datasetParameter The path parameter definition. 
-   */
-  public fun datasetParameter(datasetParameter: IResolvable) {
-    cdkBuilder.datasetParameter(datasetParameter)
-  }
+    /** @param datasetParameter The path parameter definition. */
+    public fun datasetParameter(datasetParameter: IResolvable) {
+        cdkBuilder.datasetParameter(datasetParameter)
+    }
 
-  /**
-   * @param datasetParameter The path parameter definition. 
-   */
-  public fun datasetParameter(datasetParameter: CfnDataset.DatasetParameterProperty) {
-    cdkBuilder.datasetParameter(datasetParameter)
-  }
+    /** @param datasetParameter The path parameter definition. */
+    public fun datasetParameter(datasetParameter: CfnDataset.DatasetParameterProperty) {
+        cdkBuilder.datasetParameter(datasetParameter)
+    }
 
-  /**
-   * @param pathParameterName The name of the path parameter. 
-   */
-  public fun pathParameterName(pathParameterName: String) {
-    cdkBuilder.pathParameterName(pathParameterName)
-  }
+    /** @param pathParameterName The name of the path parameter. */
+    public fun pathParameterName(pathParameterName: String) {
+        cdkBuilder.pathParameterName(pathParameterName)
+    }
 
-  public fun build(): CfnDataset.PathParameterProperty = cdkBuilder.build()
+    public fun build(): CfnDataset.PathParameterProperty = cdkBuilder.build()
 }

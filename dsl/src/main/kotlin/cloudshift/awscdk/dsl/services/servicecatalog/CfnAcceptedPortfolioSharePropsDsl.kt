@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps
 import kotlin.String
+import software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps
 
 /**
  * Properties for defining a `CfnAcceptedPortfolioShare`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,9 +47,7 @@ public class CfnAcceptedPortfolioSharePropsDsl {
         cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    /**
-     * @param portfolioId The portfolio identifier.
-     */
+    /** @param portfolioId The portfolio identifier. */
     public fun portfolioId(portfolioId: String) {
         cdkBuilder.portfolioId(portfolioId)
     }

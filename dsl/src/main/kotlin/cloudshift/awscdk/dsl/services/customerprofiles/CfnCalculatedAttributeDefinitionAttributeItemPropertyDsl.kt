@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDe
  * The details of a single attribute item specified in the mathematical expression.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDe
  */
 @CdkDslMarker
 public class CfnCalculatedAttributeDefinitionAttributeItemPropertyDsl {
-  private val cdkBuilder: CfnCalculatedAttributeDefinition.AttributeItemProperty.Builder =
-      CfnCalculatedAttributeDefinition.AttributeItemProperty.builder()
+    private val cdkBuilder: CfnCalculatedAttributeDefinition.AttributeItemProperty.Builder =
+        CfnCalculatedAttributeDefinition.AttributeItemProperty.builder()
 
-  /**
-   * @param name The unique name of the calculated attribute. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The unique name of the calculated attribute. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnCalculatedAttributeDefinition.AttributeItemProperty = cdkBuilder.build()
+    public fun build(): CfnCalculatedAttributeDefinition.AttributeItemProperty = cdkBuilder.build()
 }

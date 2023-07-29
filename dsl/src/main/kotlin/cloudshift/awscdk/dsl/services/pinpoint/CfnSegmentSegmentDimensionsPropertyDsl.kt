@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnSegment
 import kotlin.Any
 import kotlin.Unit
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnSegment
 
 /**
  * Specifies the dimension settings for a segment.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -81,9 +89,9 @@ public class CfnSegmentSegmentDimensionsPropertyDsl {
         CfnSegment.SegmentDimensionsProperty.builder()
 
     /**
-     * @param attributes One or more custom attributes to use as criteria for the segment.
-     * For more information see
-     * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+     * @param attributes One or more custom attributes to use as criteria for the segment. For more
+     *   information see
+     *   [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
      */
     public fun attributes(attributes: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -92,25 +100,25 @@ public class CfnSegmentSegmentDimensionsPropertyDsl {
     }
 
     /**
-     * @param attributes One or more custom attributes to use as criteria for the segment.
-     * For more information see
-     * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+     * @param attributes One or more custom attributes to use as criteria for the segment. For more
+     *   information see
+     *   [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
      */
     public fun attributes(attributes: Any) {
         cdkBuilder.attributes(attributes)
     }
 
     /**
-     * @param behavior The behavior-based criteria, such as how recently users have used your app, for
-     * the segment.
+     * @param behavior The behavior-based criteria, such as how recently users have used your app,
+     *   for the segment.
      */
     public fun behavior(behavior: IResolvable) {
         cdkBuilder.behavior(behavior)
     }
 
     /**
-     * @param behavior The behavior-based criteria, such as how recently users have used your app, for
-     * the segment.
+     * @param behavior The behavior-based criteria, such as how recently users have used your app,
+     *   for the segment.
      */
     public fun behavior(behavior: CfnSegment.BehaviorProperty) {
         cdkBuilder.behavior(behavior)
@@ -132,7 +140,7 @@ public class CfnSegmentSegmentDimensionsPropertyDsl {
 
     /**
      * @param location The location-based criteria, such as region or GPS coordinates, for the
-     * segment.
+     *   segment.
      */
     public fun location(location: IResolvable) {
         cdkBuilder.location(location)
@@ -140,24 +148,20 @@ public class CfnSegmentSegmentDimensionsPropertyDsl {
 
     /**
      * @param location The location-based criteria, such as region or GPS coordinates, for the
-     * segment.
+     *   segment.
      */
     public fun location(location: CfnSegment.LocationProperty) {
         cdkBuilder.location(location)
     }
 
-    /**
-     * @param metrics One or more custom metrics to use as criteria for the segment.
-     */
+    /** @param metrics One or more custom metrics to use as criteria for the segment. */
     public fun metrics(metrics: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(metrics)
         cdkBuilder.metrics(builder.map)
     }
 
-    /**
-     * @param metrics One or more custom metrics to use as criteria for the segment.
-     */
+    /** @param metrics One or more custom metrics to use as criteria for the segment. */
     public fun metrics(metrics: Any) {
         cdkBuilder.metrics(metrics)
     }

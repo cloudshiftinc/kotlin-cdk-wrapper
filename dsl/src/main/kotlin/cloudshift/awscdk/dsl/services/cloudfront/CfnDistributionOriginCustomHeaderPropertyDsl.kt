@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
  * distribution.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,25 +34,23 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
  */
 @CdkDslMarker
 public class CfnDistributionOriginCustomHeaderPropertyDsl {
-  private val cdkBuilder: CfnDistribution.OriginCustomHeaderProperty.Builder =
-      CfnDistribution.OriginCustomHeaderProperty.builder()
+    private val cdkBuilder: CfnDistribution.OriginCustomHeaderProperty.Builder =
+        CfnDistribution.OriginCustomHeaderProperty.builder()
 
-  /**
-   * @param headerName The name of a header that you want CloudFront to send to your origin. 
-   * For more information, see [Adding Custom Headers to Origin
-   * Requests](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/forward-custom-headers.html)
-   * in the *Amazon CloudFront Developer Guide* .
-   */
-  public fun headerName(headerName: String) {
-    cdkBuilder.headerName(headerName)
-  }
+    /**
+     * @param headerName The name of a header that you want CloudFront to send to your origin. For
+     *   more information, see
+     *   [Adding Custom Headers to Origin Requests](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/forward-custom-headers.html)
+     *   in the *Amazon CloudFront Developer Guide* .
+     */
+    public fun headerName(headerName: String) {
+        cdkBuilder.headerName(headerName)
+    }
 
-  /**
-   * @param headerValue The value for the header that you specified in the `HeaderName` field. 
-   */
-  public fun headerValue(headerValue: String) {
-    cdkBuilder.headerValue(headerValue)
-  }
+    /** @param headerValue The value for the header that you specified in the `HeaderName` field. */
+    public fun headerValue(headerValue: String) {
+        cdkBuilder.headerValue(headerValue)
+    }
 
-  public fun build(): CfnDistribution.OriginCustomHeaderProperty = cdkBuilder.build()
+    public fun build(): CfnDistribution.OriginCustomHeaderProperty = cdkBuilder.build()
 }

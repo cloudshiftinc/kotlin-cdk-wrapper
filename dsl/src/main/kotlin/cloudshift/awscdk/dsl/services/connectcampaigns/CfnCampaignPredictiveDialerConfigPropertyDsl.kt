@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.connectcampaigns
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  * Contains predictive dialer configuration for an outbound campaign.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
  */
 @CdkDslMarker
 public class CfnCampaignPredictiveDialerConfigPropertyDsl {
-  private val cdkBuilder: CfnCampaign.PredictiveDialerConfigProperty.Builder =
-      CfnCampaign.PredictiveDialerConfigProperty.builder()
+    private val cdkBuilder: CfnCampaign.PredictiveDialerConfigProperty.Builder =
+        CfnCampaign.PredictiveDialerConfigProperty.builder()
 
-  /**
-   * @param bandwidthAllocation Bandwidth allocation for the predictive dialer. 
-   */
-  public fun bandwidthAllocation(bandwidthAllocation: Number) {
-    cdkBuilder.bandwidthAllocation(bandwidthAllocation)
-  }
+    /** @param bandwidthAllocation Bandwidth allocation for the predictive dialer. */
+    public fun bandwidthAllocation(bandwidthAllocation: Number) {
+        cdkBuilder.bandwidthAllocation(bandwidthAllocation)
+    }
 
-  public fun build(): CfnCampaign.PredictiveDialerConfigProperty = cdkBuilder.build()
+    public fun build(): CfnCampaign.PredictiveDialerConfigProperty = cdkBuilder.build()
 }

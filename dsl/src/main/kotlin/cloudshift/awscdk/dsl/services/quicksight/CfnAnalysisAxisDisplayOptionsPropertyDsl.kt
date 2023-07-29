@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * The display options for the axis label.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -81,66 +89,50 @@ public class CfnAnalysisAxisDisplayOptionsPropertyDsl {
     private val cdkBuilder: CfnAnalysis.AxisDisplayOptionsProperty.Builder =
         CfnAnalysis.AxisDisplayOptionsProperty.builder()
 
-    /**
-     * @param axisLineVisibility Determines whether or not the axis line is visible.
-     */
+    /** @param axisLineVisibility Determines whether or not the axis line is visible. */
     public fun axisLineVisibility(axisLineVisibility: String) {
         cdkBuilder.axisLineVisibility(axisLineVisibility)
     }
 
     /**
-     * @param axisOffset The offset value that determines the starting placement of the axis within a
-     * visual's bounds.
+     * @param axisOffset The offset value that determines the starting placement of the axis within
+     *   a visual's bounds.
      */
     public fun axisOffset(axisOffset: String) {
         cdkBuilder.axisOffset(axisOffset)
     }
 
-    /**
-     * @param dataOptions The data options for an axis.
-     */
+    /** @param dataOptions The data options for an axis. */
     public fun dataOptions(dataOptions: IResolvable) {
         cdkBuilder.dataOptions(dataOptions)
     }
 
-    /**
-     * @param dataOptions The data options for an axis.
-     */
+    /** @param dataOptions The data options for an axis. */
     public fun dataOptions(dataOptions: CfnAnalysis.AxisDataOptionsProperty) {
         cdkBuilder.dataOptions(dataOptions)
     }
 
-    /**
-     * @param gridLineVisibility Determines whether or not the grid line is visible.
-     */
+    /** @param gridLineVisibility Determines whether or not the grid line is visible. */
     public fun gridLineVisibility(gridLineVisibility: String) {
         cdkBuilder.gridLineVisibility(gridLineVisibility)
     }
 
-    /**
-     * @param scrollbarOptions The scroll bar options for an axis.
-     */
+    /** @param scrollbarOptions The scroll bar options for an axis. */
     public fun scrollbarOptions(scrollbarOptions: IResolvable) {
         cdkBuilder.scrollbarOptions(scrollbarOptions)
     }
 
-    /**
-     * @param scrollbarOptions The scroll bar options for an axis.
-     */
+    /** @param scrollbarOptions The scroll bar options for an axis. */
     public fun scrollbarOptions(scrollbarOptions: CfnAnalysis.ScrollBarOptionsProperty) {
         cdkBuilder.scrollbarOptions(scrollbarOptions)
     }
 
-    /**
-     * @param tickLabelOptions The tick label options of an axis.
-     */
+    /** @param tickLabelOptions The tick label options of an axis. */
     public fun tickLabelOptions(tickLabelOptions: IResolvable) {
         cdkBuilder.tickLabelOptions(tickLabelOptions)
     }
 
-    /**
-     * @param tickLabelOptions The tick label options of an axis.
-     */
+    /** @param tickLabelOptions The tick label options of an axis. */
     public fun tickLabelOptions(tickLabelOptions: CfnAnalysis.AxisTickLabelOptionsProperty) {
         cdkBuilder.tickLabelOptions(tickLabelOptions)
     }

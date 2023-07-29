@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.systemsmanagersap
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.systemsmanagersap.CfnApplication
 import kotlin.String
+import software.amazon.awscdk.services.systemsmanagersap.CfnApplication
 
 /**
  * The credentials of your SAP application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,23 +37,19 @@ public class CfnApplicationCredentialPropertyDsl {
     private val cdkBuilder: CfnApplication.CredentialProperty.Builder =
         CfnApplication.CredentialProperty.builder()
 
-    /**
-     * @param credentialType The type of the application credentials.
-     */
+    /** @param credentialType The type of the application credentials. */
     public fun credentialType(credentialType: String) {
         cdkBuilder.credentialType(credentialType)
     }
 
-    /**
-     * @param databaseName The name of the SAP HANA database.
-     */
+    /** @param databaseName The name of the SAP HANA database. */
     public fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
     }
 
     /**
      * @param secretId The secret ID created in AWS Secrets Manager to store the credentials of the
-     * SAP application.
+     *   SAP application.
      */
     public fun secretId(secretId: String) {
         cdkBuilder.secretId(secretId)

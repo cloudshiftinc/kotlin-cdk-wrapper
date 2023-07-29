@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The sort by field for the field sort options.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,23 +63,19 @@ public class CfnTemplatePivotTableSortByPropertyDsl {
     private val cdkBuilder: CfnTemplate.PivotTableSortByProperty.Builder =
         CfnTemplate.PivotTableSortByProperty.builder()
 
-    /**
-     * @param column The column sort (field id, direction) for the pivot table sort by options.
-     */
+    /** @param column The column sort (field id, direction) for the pivot table sort by options. */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column sort (field id, direction) for the pivot table sort by options.
-     */
+    /** @param column The column sort (field id, direction) for the pivot table sort by options. */
     public fun column(column: CfnTemplate.ColumnSortProperty) {
         cdkBuilder.column(column)
     }
 
     /**
      * @param dataPath The data path sort (data path value, direction) for the pivot table sort by
-     * options.
+     *   options.
      */
     public fun dataPath(dataPath: IResolvable) {
         cdkBuilder.dataPath(dataPath)
@@ -79,22 +83,18 @@ public class CfnTemplatePivotTableSortByPropertyDsl {
 
     /**
      * @param dataPath The data path sort (data path value, direction) for the pivot table sort by
-     * options.
+     *   options.
      */
     public fun dataPath(dataPath: CfnTemplate.DataPathSortProperty) {
         cdkBuilder.dataPath(dataPath)
     }
 
-    /**
-     * @param field The field sort (field id, direction) for the pivot table sort by options.
-     */
+    /** @param field The field sort (field id, direction) for the pivot table sort by options. */
     public fun `field`(`field`: IResolvable) {
         cdkBuilder.`field`(`field`)
     }
 
-    /**
-     * @param field The field sort (field id, direction) for the pivot table sort by options.
-     */
+    /** @param field The field sort (field id, direction) for the pivot table sort by options. */
     public fun `field`(`field`: CfnTemplate.FieldSortProperty) {
         cdkBuilder.`field`(`field`)
     }

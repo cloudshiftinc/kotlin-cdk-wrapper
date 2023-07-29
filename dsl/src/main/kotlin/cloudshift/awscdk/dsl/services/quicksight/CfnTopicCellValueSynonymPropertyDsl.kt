@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTopic
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.quicksight.CfnTopic
 
 /**
  * A structure that represents the cell value synonym.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,23 +40,17 @@ public class CfnTopicCellValueSynonymPropertyDsl {
 
     private val _synonyms: MutableList<String> = mutableListOf()
 
-    /**
-     * @param cellValue The cell value.
-     */
+    /** @param cellValue The cell value. */
     public fun cellValue(cellValue: String) {
         cdkBuilder.cellValue(cellValue)
     }
 
-    /**
-     * @param synonyms Other names or aliases for the cell value.
-     */
+    /** @param synonyms Other names or aliases for the cell value. */
     public fun synonyms(vararg synonyms: String) {
         _synonyms.addAll(listOf(*synonyms))
     }
 
-    /**
-     * @param synonyms Other names or aliases for the cell value.
-     */
+    /** @param synonyms Other names or aliases for the cell value. */
     public fun synonyms(synonyms: Collection<String>) {
         _synonyms.addAll(synonyms)
     }

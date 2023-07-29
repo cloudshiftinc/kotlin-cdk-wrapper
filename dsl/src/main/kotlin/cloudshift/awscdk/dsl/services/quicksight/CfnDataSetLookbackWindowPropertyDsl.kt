@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,29 +33,23 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  */
 @CdkDslMarker
 public class CfnDataSetLookbackWindowPropertyDsl {
-  private val cdkBuilder: CfnDataSet.LookbackWindowProperty.Builder =
-      CfnDataSet.LookbackWindowProperty.builder()
+    private val cdkBuilder: CfnDataSet.LookbackWindowProperty.Builder =
+        CfnDataSet.LookbackWindowProperty.builder()
 
-  /**
-   * @param columnName Column Name</p>.
-   */
-  public fun columnName(columnName: String) {
-    cdkBuilder.columnName(columnName)
-  }
+    /** @param columnName Column Name</p>. */
+    public fun columnName(columnName: String) {
+        cdkBuilder.columnName(columnName)
+    }
 
-  /**
-   * @param size Size</p>.
-   */
-  public fun size(size: Number) {
-    cdkBuilder.size(size)
-  }
+    /** @param size Size</p>. */
+    public fun size(size: Number) {
+        cdkBuilder.size(size)
+    }
 
-  /**
-   * @param sizeUnit the value to be set.
-   */
-  public fun sizeUnit(sizeUnit: String) {
-    cdkBuilder.sizeUnit(sizeUnit)
-  }
+    /** @param sizeUnit the value to be set. */
+    public fun sizeUnit(sizeUnit: String) {
+        cdkBuilder.sizeUnit(sizeUnit)
+    }
 
-  public fun build(): CfnDataSet.LookbackWindowProperty = cdkBuilder.build()
+    public fun build(): CfnDataSet.LookbackWindowProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
  * A complex data type for the origin groups specified for a distribution.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,41 +52,33 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
  */
 @CdkDslMarker
 public class CfnDistributionOriginGroupsPropertyDsl {
-  private val cdkBuilder: CfnDistribution.OriginGroupsProperty.Builder =
-      CfnDistribution.OriginGroupsProperty.builder()
+    private val cdkBuilder: CfnDistribution.OriginGroupsProperty.Builder =
+        CfnDistribution.OriginGroupsProperty.builder()
 
-  private val _items: MutableList<Any> = mutableListOf()
+    private val _items: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param items The items (origin groups) in a distribution.
-   */
-  public fun items(vararg items: Any) {
-    _items.addAll(listOf(*items))
-  }
+    /** @param items The items (origin groups) in a distribution. */
+    public fun items(vararg items: Any) {
+        _items.addAll(listOf(*items))
+    }
 
-  /**
-   * @param items The items (origin groups) in a distribution.
-   */
-  public fun items(items: Collection<Any>) {
-    _items.addAll(items)
-  }
+    /** @param items The items (origin groups) in a distribution. */
+    public fun items(items: Collection<Any>) {
+        _items.addAll(items)
+    }
 
-  /**
-   * @param items The items (origin groups) in a distribution.
-   */
-  public fun items(items: IResolvable) {
-    cdkBuilder.items(items)
-  }
+    /** @param items The items (origin groups) in a distribution. */
+    public fun items(items: IResolvable) {
+        cdkBuilder.items(items)
+    }
 
-  /**
-   * @param quantity The number of origin groups. 
-   */
-  public fun quantity(quantity: Number) {
-    cdkBuilder.quantity(quantity)
-  }
+    /** @param quantity The number of origin groups. */
+    public fun quantity(quantity: Number) {
+        cdkBuilder.quantity(quantity)
+    }
 
-  public fun build(): CfnDistribution.OriginGroupsProperty {
-    if(_items.isNotEmpty()) cdkBuilder.items(_items)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDistribution.OriginGroupsProperty {
+        if (_items.isNotEmpty()) cdkBuilder.items(_items)
+        return cdkBuilder.build()
+    }
 }

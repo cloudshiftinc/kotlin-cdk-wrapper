@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Formatting configuration for icon set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,23 +35,21 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisConditionalFormattingIconSetPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.ConditionalFormattingIconSetProperty.Builder =
-      CfnAnalysis.ConditionalFormattingIconSetProperty.builder()
+    private val cdkBuilder: CfnAnalysis.ConditionalFormattingIconSetProperty.Builder =
+        CfnAnalysis.ConditionalFormattingIconSetProperty.builder()
 
-  /**
-   * @param expression The expression that determines the formatting configuration for the icon set.
-   * 
-   */
-  public fun expression(expression: String) {
-    cdkBuilder.expression(expression)
-  }
+    /**
+     * @param expression The expression that determines the formatting configuration for the icon
+     *   set.
+     */
+    public fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+    }
 
-  /**
-   * @param iconSetType Determines the icon set type.
-   */
-  public fun iconSetType(iconSetType: String) {
-    cdkBuilder.iconSetType(iconSetType)
-  }
+    /** @param iconSetType Determines the icon set type. */
+    public fun iconSetType(iconSetType: String) {
+        cdkBuilder.iconSetType(iconSetType)
+    }
 
-  public fun build(): CfnAnalysis.ConditionalFormattingIconSetProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.ConditionalFormattingIconSetProperty = cdkBuilder.build()
 }

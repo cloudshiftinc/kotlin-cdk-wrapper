@@ -1,10 +1,19 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesis
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.kinesis.CfnStream
 import kotlin.String
+import software.amazon.awscdk.services.kinesis.CfnStream
 
 /**
  * Specifies the capacity mode to which you want to set your data stream.
@@ -13,7 +22,6 @@ import kotlin.String
  * *provisioned* capacity mode for your data streams.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,8 +40,8 @@ public class CfnStreamStreamModeDetailsPropertyDsl {
 
     /**
      * @param streamMode Specifies the capacity mode to which you want to set your data stream.
-     * Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and a
-     * *provisioned* capacity mode for your data streams.
+     *   Currently, in Kinesis Data Streams, you can choose between an *on-demand* capacity mode and
+     *   a *provisioned* capacity mode for your data streams.
      */
     public fun streamMode(streamMode: String) {
         cdkBuilder.streamMode(streamMode)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTargetOpt
  * Options to run an ECS task on EC2 in StepFunctions and ECS.
  *
  * Example:
- *
  * ```
  * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
  * .isDefault(true)
@@ -45,43 +53,36 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTargetOpt
  */
 @CdkDslMarker
 public class EcsEc2LaunchTargetOptionsDsl {
-  private val cdkBuilder: EcsEc2LaunchTargetOptions.Builder = EcsEc2LaunchTargetOptions.builder()
+    private val cdkBuilder: EcsEc2LaunchTargetOptions.Builder = EcsEc2LaunchTargetOptions.builder()
 
-  private val _placementConstraints: MutableList<PlacementConstraint> = mutableListOf()
+    private val _placementConstraints: MutableList<PlacementConstraint> = mutableListOf()
 
-  private val _placementStrategies: MutableList<PlacementStrategy> = mutableListOf()
+    private val _placementStrategies: MutableList<PlacementStrategy> = mutableListOf()
 
-  /**
-   * @param placementConstraints Placement constraints.
-   */
-  public fun placementConstraints(vararg placementConstraints: PlacementConstraint) {
-    _placementConstraints.addAll(listOf(*placementConstraints))
-  }
+    /** @param placementConstraints Placement constraints. */
+    public fun placementConstraints(vararg placementConstraints: PlacementConstraint) {
+        _placementConstraints.addAll(listOf(*placementConstraints))
+    }
 
-  /**
-   * @param placementConstraints Placement constraints.
-   */
-  public fun placementConstraints(placementConstraints: Collection<PlacementConstraint>) {
-    _placementConstraints.addAll(placementConstraints)
-  }
+    /** @param placementConstraints Placement constraints. */
+    public fun placementConstraints(placementConstraints: Collection<PlacementConstraint>) {
+        _placementConstraints.addAll(placementConstraints)
+    }
 
-  /**
-   * @param placementStrategies Placement strategies.
-   */
-  public fun placementStrategies(vararg placementStrategies: PlacementStrategy) {
-    _placementStrategies.addAll(listOf(*placementStrategies))
-  }
+    /** @param placementStrategies Placement strategies. */
+    public fun placementStrategies(vararg placementStrategies: PlacementStrategy) {
+        _placementStrategies.addAll(listOf(*placementStrategies))
+    }
 
-  /**
-   * @param placementStrategies Placement strategies.
-   */
-  public fun placementStrategies(placementStrategies: Collection<PlacementStrategy>) {
-    _placementStrategies.addAll(placementStrategies)
-  }
+    /** @param placementStrategies Placement strategies. */
+    public fun placementStrategies(placementStrategies: Collection<PlacementStrategy>) {
+        _placementStrategies.addAll(placementStrategies)
+    }
 
-  public fun build(): EcsEc2LaunchTargetOptions {
-    if(_placementConstraints.isNotEmpty()) cdkBuilder.placementConstraints(_placementConstraints)
-    if(_placementStrategies.isNotEmpty()) cdkBuilder.placementStrategies(_placementStrategies)
-    return cdkBuilder.build()
-  }
+    public fun build(): EcsEc2LaunchTargetOptions {
+        if (_placementConstraints.isNotEmpty())
+            cdkBuilder.placementConstraints(_placementConstraints)
+        if (_placementStrategies.isNotEmpty()) cdkBuilder.placementStrategies(_placementStrategies)
+        return cdkBuilder.build()
+    }
 }

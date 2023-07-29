@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * A grid layout to define the placement of sheet control.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,24 +52,24 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateSheetControlLayoutPropertyDsl {
-  private val cdkBuilder: CfnTemplate.SheetControlLayoutProperty.Builder =
-      CfnTemplate.SheetControlLayoutProperty.builder()
+    private val cdkBuilder: CfnTemplate.SheetControlLayoutProperty.Builder =
+        CfnTemplate.SheetControlLayoutProperty.builder()
 
-  /**
-   * @param configuration The configuration that determines the elements and canvas size options of
-   * sheet control. 
-   */
-  public fun configuration(configuration: IResolvable) {
-    cdkBuilder.configuration(configuration)
-  }
+    /**
+     * @param configuration The configuration that determines the elements and canvas size options
+     *   of sheet control.
+     */
+    public fun configuration(configuration: IResolvable) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  /**
-   * @param configuration The configuration that determines the elements and canvas size options of
-   * sheet control. 
-   */
-  public fun configuration(configuration: CfnTemplate.SheetControlLayoutConfigurationProperty) {
-    cdkBuilder.configuration(configuration)
-  }
+    /**
+     * @param configuration The configuration that determines the elements and canvas size options
+     *   of sheet control.
+     */
+    public fun configuration(configuration: CfnTemplate.SheetControlLayoutConfigurationProperty) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  public fun build(): CfnTemplate.SheetControlLayoutProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.SheetControlLayoutProperty = cdkBuilder.build()
 }

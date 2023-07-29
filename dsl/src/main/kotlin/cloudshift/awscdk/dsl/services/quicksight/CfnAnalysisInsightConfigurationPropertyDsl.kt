@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The configuration of an insight visual.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -21,48 +29,38 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisInsightConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.InsightConfigurationProperty.Builder =
-      CfnAnalysis.InsightConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.InsightConfigurationProperty.Builder =
+        CfnAnalysis.InsightConfigurationProperty.builder()
 
-  private val _computations: MutableList<Any> = mutableListOf()
+    private val _computations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param computations The computations configurations of the insight visual.
-   */
-  public fun computations(vararg computations: Any) {
-    _computations.addAll(listOf(*computations))
-  }
+    /** @param computations The computations configurations of the insight visual. */
+    public fun computations(vararg computations: Any) {
+        _computations.addAll(listOf(*computations))
+    }
 
-  /**
-   * @param computations The computations configurations of the insight visual.
-   */
-  public fun computations(computations: Collection<Any>) {
-    _computations.addAll(computations)
-  }
+    /** @param computations The computations configurations of the insight visual. */
+    public fun computations(computations: Collection<Any>) {
+        _computations.addAll(computations)
+    }
 
-  /**
-   * @param computations The computations configurations of the insight visual.
-   */
-  public fun computations(computations: IResolvable) {
-    cdkBuilder.computations(computations)
-  }
+    /** @param computations The computations configurations of the insight visual. */
+    public fun computations(computations: IResolvable) {
+        cdkBuilder.computations(computations)
+    }
 
-  /**
-   * @param customNarrative The custom narrative of the insight visual.
-   */
-  public fun customNarrative(customNarrative: IResolvable) {
-    cdkBuilder.customNarrative(customNarrative)
-  }
+    /** @param customNarrative The custom narrative of the insight visual. */
+    public fun customNarrative(customNarrative: IResolvable) {
+        cdkBuilder.customNarrative(customNarrative)
+    }
 
-  /**
-   * @param customNarrative The custom narrative of the insight visual.
-   */
-  public fun customNarrative(customNarrative: CfnAnalysis.CustomNarrativeOptionsProperty) {
-    cdkBuilder.customNarrative(customNarrative)
-  }
+    /** @param customNarrative The custom narrative of the insight visual. */
+    public fun customNarrative(customNarrative: CfnAnalysis.CustomNarrativeOptionsProperty) {
+        cdkBuilder.customNarrative(customNarrative)
+    }
 
-  public fun build(): CfnAnalysis.InsightConfigurationProperty {
-    if(_computations.isNotEmpty()) cdkBuilder.computations(_computations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnalysis.InsightConfigurationProperty {
+        if (_computations.isNotEmpty()) cdkBuilder.computations(_computations)
+        return cdkBuilder.build()
+    }
 }

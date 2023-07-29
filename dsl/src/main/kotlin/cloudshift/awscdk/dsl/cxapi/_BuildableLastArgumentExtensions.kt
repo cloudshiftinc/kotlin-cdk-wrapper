@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cxapi
 
 import cloudshift.awscdk.dsl.cloudassembly.schema.ArtifactManifestDsl
 import cloudshift.awscdk.dsl.cloudassembly.schema.MissingContextDsl
-import software.amazon.awscdk.cxapi.CloudAssembly
-import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.cxapi.CloudAssembly
+import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 
 /**
  * Adds an artifact into the cloud assembly.
@@ -17,8 +26,7 @@ import kotlin.Unit
  */
 public inline fun CloudAssemblyBuilder.addArtifact(
     id: String,
-    block: ArtifactManifestDsl.() -> Unit =
-        {}
+    block: ArtifactManifestDsl.() -> Unit = {}
 ) {
     val builder = ArtifactManifestDsl()
     builder.apply(block)
@@ -43,8 +51,7 @@ public inline fun CloudAssemblyBuilder.addMissing(block: MissingContextDsl.() ->
  * @param options
  */
 public inline fun CloudAssemblyBuilder.buildAssembly(
-    block: AssemblyBuildOptionsDsl.() -> Unit =
-        {}
+    block: AssemblyBuildOptionsDsl.() -> Unit = {}
 ): CloudAssembly {
     val builder = AssemblyBuildOptionsDsl()
     builder.apply(block)

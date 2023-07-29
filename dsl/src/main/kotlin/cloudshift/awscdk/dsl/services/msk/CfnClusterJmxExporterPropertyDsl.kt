@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.msk.CfnCluster
  * Indicates whether you want to enable or disable the JMX Exporter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.msk.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterJmxExporterPropertyDsl {
-  private val cdkBuilder: CfnCluster.JmxExporterProperty.Builder =
-      CfnCluster.JmxExporterProperty.builder()
+    private val cdkBuilder: CfnCluster.JmxExporterProperty.Builder =
+        CfnCluster.JmxExporterProperty.builder()
 
-  /**
-   * @param enabledInBroker Indicates whether you want to enable or disable the JMX Exporter. 
-   */
-  public fun enabledInBroker(enabledInBroker: Boolean) {
-    cdkBuilder.enabledInBroker(enabledInBroker)
-  }
+    /** @param enabledInBroker Indicates whether you want to enable or disable the JMX Exporter. */
+    public fun enabledInBroker(enabledInBroker: Boolean) {
+        cdkBuilder.enabledInBroker(enabledInBroker)
+    }
 
-  /**
-   * @param enabledInBroker Indicates whether you want to enable or disable the JMX Exporter. 
-   */
-  public fun enabledInBroker(enabledInBroker: IResolvable) {
-    cdkBuilder.enabledInBroker(enabledInBroker)
-  }
+    /** @param enabledInBroker Indicates whether you want to enable or disable the JMX Exporter. */
+    public fun enabledInBroker(enabledInBroker: IResolvable) {
+        cdkBuilder.enabledInBroker(enabledInBroker)
+    }
 
-  public fun build(): CfnCluster.JmxExporterProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.JmxExporterProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy
  * included in requests that CloudFront sends to the origin.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,44 +37,41 @@ import software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy
  */
 @CdkDslMarker
 public class CfnOriginRequestPolicyCookiesConfigPropertyDsl {
-  private val cdkBuilder: CfnOriginRequestPolicy.CookiesConfigProperty.Builder =
-      CfnOriginRequestPolicy.CookiesConfigProperty.builder()
+    private val cdkBuilder: CfnOriginRequestPolicy.CookiesConfigProperty.Builder =
+        CfnOriginRequestPolicy.CookiesConfigProperty.builder()
 
-  private val _cookies: MutableList<String> = mutableListOf()
+    private val _cookies: MutableList<String> = mutableListOf()
 
-  /**
-   * @param cookieBehavior Determines whether cookies in viewer requests are included in requests
-   * that CloudFront sends to the origin. Valid values are:. 
-   * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to the
-   * origin. Even when this field is set to `none` , any cookies that are listed in a `CachePolicy`
-   * *are* included in origin requests.
-   * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type
-   * are included in requests that CloudFront sends to the origin.
-   * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to the
-   * origin.
-   * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront sends
-   * to the origin, **except** for those listed in the `CookieNames` type, which are not included.
-   */
-  public fun cookieBehavior(cookieBehavior: String) {
-    cdkBuilder.cookieBehavior(cookieBehavior)
-  }
+    /**
+     * @param cookieBehavior Determines whether cookies in viewer requests are included in requests
+     *   that CloudFront sends to the origin. Valid values are:.
+     * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
+     *   the origin. Even when this field is set to `none` , any cookies that are listed in a
+     *   `CachePolicy` *are* included in origin requests.
+     * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type
+     *   are included in requests that CloudFront sends to the origin.
+     * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
+     *   the origin.
+     * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront sends
+     *   to the origin, **except** for those listed in the `CookieNames` type, which are not
+     *   included.
+     */
+    public fun cookieBehavior(cookieBehavior: String) {
+        cdkBuilder.cookieBehavior(cookieBehavior)
+    }
 
-  /**
-   * @param cookies Contains a list of cookie names.
-   */
-  public fun cookies(vararg cookies: String) {
-    _cookies.addAll(listOf(*cookies))
-  }
+    /** @param cookies Contains a list of cookie names. */
+    public fun cookies(vararg cookies: String) {
+        _cookies.addAll(listOf(*cookies))
+    }
 
-  /**
-   * @param cookies Contains a list of cookie names.
-   */
-  public fun cookies(cookies: Collection<String>) {
-    _cookies.addAll(cookies)
-  }
+    /** @param cookies Contains a list of cookie names. */
+    public fun cookies(cookies: Collection<String>) {
+        _cookies.addAll(cookies)
+    }
 
-  public fun build(): CfnOriginRequestPolicy.CookiesConfigProperty {
-    if(_cookies.isNotEmpty()) cdkBuilder.cookies(_cookies)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnOriginRequestPolicy.CookiesConfigProperty {
+        if (_cookies.isNotEmpty()) cdkBuilder.cookies(_cookies)
+        return cdkBuilder.build()
+    }
 }

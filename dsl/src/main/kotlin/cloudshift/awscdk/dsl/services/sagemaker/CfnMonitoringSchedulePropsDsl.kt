@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps
  * Properties for defining a `CfnMonitoringSchedule`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -136,94 +144,87 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps
  */
 @CdkDslMarker
 public class CfnMonitoringSchedulePropsDsl {
-  private val cdkBuilder: CfnMonitoringScheduleProps.Builder = CfnMonitoringScheduleProps.builder()
+    private val cdkBuilder: CfnMonitoringScheduleProps.Builder =
+        CfnMonitoringScheduleProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param endpointName The name of the endpoint using the monitoring schedule.
-   */
-  public fun endpointName(endpointName: String) {
-    cdkBuilder.endpointName(endpointName)
-  }
+    /** @param endpointName The name of the endpoint using the monitoring schedule. */
+    public fun endpointName(endpointName: String) {
+        cdkBuilder.endpointName(endpointName)
+    }
 
-  /**
-   * @param failureReason Contains the reason a monitoring job failed, if it failed.
-   */
-  public fun failureReason(failureReason: String) {
-    cdkBuilder.failureReason(failureReason)
-  }
+    /** @param failureReason Contains the reason a monitoring job failed, if it failed. */
+    public fun failureReason(failureReason: String) {
+        cdkBuilder.failureReason(failureReason)
+    }
 
-  /**
-   * @param lastMonitoringExecutionSummary Describes metadata on the last execution to run, if there
-   * was one.
-   */
-  public fun lastMonitoringExecutionSummary(lastMonitoringExecutionSummary: IResolvable) {
-    cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary)
-  }
+    /**
+     * @param lastMonitoringExecutionSummary Describes metadata on the last execution to run, if
+     *   there was one.
+     */
+    public fun lastMonitoringExecutionSummary(lastMonitoringExecutionSummary: IResolvable) {
+        cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary)
+    }
 
-  /**
-   * @param lastMonitoringExecutionSummary Describes metadata on the last execution to run, if there
-   * was one.
-   */
-  public
-      fun lastMonitoringExecutionSummary(lastMonitoringExecutionSummary: CfnMonitoringSchedule.MonitoringExecutionSummaryProperty) {
-    cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary)
-  }
+    /**
+     * @param lastMonitoringExecutionSummary Describes metadata on the last execution to run, if
+     *   there was one.
+     */
+    public fun lastMonitoringExecutionSummary(
+        lastMonitoringExecutionSummary: CfnMonitoringSchedule.MonitoringExecutionSummaryProperty
+    ) {
+        cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary)
+    }
 
-  /**
-   * @param monitoringScheduleConfig The configuration object that specifies the monitoring schedule
-   * and defines the monitoring job. 
-   */
-  public fun monitoringScheduleConfig(monitoringScheduleConfig: IResolvable) {
-    cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig)
-  }
+    /**
+     * @param monitoringScheduleConfig The configuration object that specifies the monitoring
+     *   schedule and defines the monitoring job.
+     */
+    public fun monitoringScheduleConfig(monitoringScheduleConfig: IResolvable) {
+        cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig)
+    }
 
-  /**
-   * @param monitoringScheduleConfig The configuration object that specifies the monitoring schedule
-   * and defines the monitoring job. 
-   */
-  public
-      fun monitoringScheduleConfig(monitoringScheduleConfig: CfnMonitoringSchedule.MonitoringScheduleConfigProperty) {
-    cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig)
-  }
+    /**
+     * @param monitoringScheduleConfig The configuration object that specifies the monitoring
+     *   schedule and defines the monitoring job.
+     */
+    public fun monitoringScheduleConfig(
+        monitoringScheduleConfig: CfnMonitoringSchedule.MonitoringScheduleConfigProperty
+    ) {
+        cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig)
+    }
 
-  /**
-   * @param monitoringScheduleName The name of the monitoring schedule. 
-   */
-  public fun monitoringScheduleName(monitoringScheduleName: String) {
-    cdkBuilder.monitoringScheduleName(monitoringScheduleName)
-  }
+    /** @param monitoringScheduleName The name of the monitoring schedule. */
+    public fun monitoringScheduleName(monitoringScheduleName: String) {
+        cdkBuilder.monitoringScheduleName(monitoringScheduleName)
+    }
 
-  /**
-   * @param monitoringScheduleStatus The status of the monitoring schedule.
-   */
-  public fun monitoringScheduleStatus(monitoringScheduleStatus: String) {
-    cdkBuilder.monitoringScheduleStatus(monitoringScheduleStatus)
-  }
+    /** @param monitoringScheduleStatus The status of the monitoring schedule. */
+    public fun monitoringScheduleStatus(monitoringScheduleStatus: String) {
+        cdkBuilder.monitoringScheduleStatus(monitoringScheduleStatus)
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to this resource.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to this resource.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnMonitoringScheduleProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnMonitoringScheduleProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

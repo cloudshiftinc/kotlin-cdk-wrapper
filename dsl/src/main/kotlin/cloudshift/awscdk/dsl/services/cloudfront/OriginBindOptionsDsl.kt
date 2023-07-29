@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cloudfront.OriginBindOptions
  * Options passed to Origin.bind().
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,15 +30,15 @@ import software.amazon.awscdk.services.cloudfront.OriginBindOptions
  */
 @CdkDslMarker
 public class OriginBindOptionsDsl {
-  private val cdkBuilder: OriginBindOptions.Builder = OriginBindOptions.builder()
+    private val cdkBuilder: OriginBindOptions.Builder = OriginBindOptions.builder()
 
-  /**
-   * @param originId The identifier of this Origin, as assigned by the Distribution this Origin has
-   * been used added to. 
-   */
-  public fun originId(originId: String) {
-    cdkBuilder.originId(originId)
-  }
+    /**
+     * @param originId The identifier of this Origin, as assigned by the Distribution this Origin
+     *   has been used added to.
+     */
+    public fun originId(originId: String) {
+        cdkBuilder.originId(originId)
+    }
 
-  public fun build(): OriginBindOptions = cdkBuilder.build()
+    public fun build(): OriginBindOptions = cdkBuilder.build()
 }

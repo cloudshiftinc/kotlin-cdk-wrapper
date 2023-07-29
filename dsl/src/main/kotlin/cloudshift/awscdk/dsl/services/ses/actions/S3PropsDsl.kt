@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses.actions
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.sns.ITopic
  * Construction properties for a S3 action.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.s3.*;
  * import software.amazon.awscdk.services.ses.actions.*;
@@ -44,36 +52,30 @@ import software.amazon.awscdk.services.sns.ITopic
  */
 @CdkDslMarker
 public class S3PropsDsl {
-  private val cdkBuilder: S3Props.Builder = S3Props.builder()
+    private val cdkBuilder: S3Props.Builder = S3Props.builder()
 
-  /**
-   * @param bucket The S3 bucket that incoming email will be saved to. 
-   */
-  public fun bucket(bucket: IBucket) {
-    cdkBuilder.bucket(bucket)
-  }
+    /** @param bucket The S3 bucket that incoming email will be saved to. */
+    public fun bucket(bucket: IBucket) {
+        cdkBuilder.bucket(bucket)
+    }
 
-  /**
-   * @param kmsKey The master key that SES should use to encrypt your emails before saving them to
-   * the S3 bucket.
-   */
-  public fun kmsKey(kmsKey: IKey) {
-    cdkBuilder.kmsKey(kmsKey)
-  }
+    /**
+     * @param kmsKey The master key that SES should use to encrypt your emails before saving them to
+     *   the S3 bucket.
+     */
+    public fun kmsKey(kmsKey: IKey) {
+        cdkBuilder.kmsKey(kmsKey)
+    }
 
-  /**
-   * @param objectKeyPrefix The key prefix of the S3 bucket.
-   */
-  public fun objectKeyPrefix(objectKeyPrefix: String) {
-    cdkBuilder.objectKeyPrefix(objectKeyPrefix)
-  }
+    /** @param objectKeyPrefix The key prefix of the S3 bucket. */
+    public fun objectKeyPrefix(objectKeyPrefix: String) {
+        cdkBuilder.objectKeyPrefix(objectKeyPrefix)
+    }
 
-  /**
-   * @param topic The SNS topic to notify when the S3 action is taken.
-   */
-  public fun topic(topic: ITopic) {
-    cdkBuilder.topic(topic)
-  }
+    /** @param topic The SNS topic to notify when the S3 action is taken. */
+    public fun topic(topic: ITopic) {
+        cdkBuilder.topic(topic)
+    }
 
-  public fun build(): S3Props = cdkBuilder.build()
+    public fun build(): S3Props = cdkBuilder.build()
 }

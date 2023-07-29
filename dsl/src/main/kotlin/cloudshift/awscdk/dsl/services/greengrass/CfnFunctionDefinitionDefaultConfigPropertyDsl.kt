@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,24 +45,24 @@ import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
  */
 @CdkDslMarker
 public class CfnFunctionDefinitionDefaultConfigPropertyDsl {
-  private val cdkBuilder: CfnFunctionDefinition.DefaultConfigProperty.Builder =
-      CfnFunctionDefinition.DefaultConfigProperty.builder()
+    private val cdkBuilder: CfnFunctionDefinition.DefaultConfigProperty.Builder =
+        CfnFunctionDefinition.DefaultConfigProperty.builder()
 
-  /**
-   * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-   * Greengrass core. 
-   */
-  public fun execution(execution: IResolvable) {
-    cdkBuilder.execution(execution)
-  }
+    /**
+     * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+     *   Greengrass core.
+     */
+    public fun execution(execution: IResolvable) {
+        cdkBuilder.execution(execution)
+    }
 
-  /**
-   * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
-   * Greengrass core. 
-   */
-  public fun execution(execution: CfnFunctionDefinition.ExecutionProperty) {
-    cdkBuilder.execution(execution)
-  }
+    /**
+     * @param execution Configuration settings for the Lambda execution environment on the AWS IoT
+     *   Greengrass core.
+     */
+    public fun execution(execution: CfnFunctionDefinition.ExecutionProperty) {
+        cdkBuilder.execution(execution)
+    }
 
-  public fun build(): CfnFunctionDefinition.DefaultConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFunctionDefinition.DefaultConfigProperty = cdkBuilder.build()
 }

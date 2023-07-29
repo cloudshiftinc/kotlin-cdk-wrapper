@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannel
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
 
 /**
  * A *channel* is a type of platform that you can deliver messages to.
@@ -21,7 +30,6 @@ import kotlin.String
  * VoIP sandbox channel for an application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,7 +54,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnAPNSVoipSandboxChannelDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnAPNSVoipSandboxChannel.Builder =
         CfnAPNSVoipSandboxChannel.Builder.create(scope, id)
@@ -55,8 +63,9 @@ public class CfnAPNSVoipSandboxChannelDsl(
      * The unique identifier for the application that the APNs VoIP sandbox channel applies to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-applicationid)
+     *
      * @param applicationId The unique identifier for the application that the APNs VoIP sandbox
-     * channel applies to.
+     *   channel applies to.
      */
     public fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
@@ -68,6 +77,7 @@ public class CfnAPNSVoipSandboxChannelDsl(
      * This identifier is used for APNs tokens.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-bundleid)
+     *
      * @param bundleId The bundle identifier that's assigned to your iOS app.
      */
     public fun bundleId(bundleId: String) {
@@ -77,10 +87,11 @@ public class CfnAPNSVoipSandboxChannelDsl(
     /**
      * The APNs client certificate that you received from Apple.
      *
-     * Specify this value if you want Amazon Pinpoint to communicate with the APNs sandbox environment
-     * by using an APNs certificate.
+     * Specify this value if you want Amazon Pinpoint to communicate with the APNs sandbox
+     * environment by using an APNs certificate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-certificate)
+     *
      * @param certificate The APNs client certificate that you received from Apple.
      */
     public fun certificate(certificate: String) {
@@ -88,14 +99,15 @@ public class CfnAPNSVoipSandboxChannelDsl(
     }
 
     /**
-     * The default authentication method that you want Amazon Pinpoint to use when authenticating with
-     * APNs.
+     * The default authentication method that you want Amazon Pinpoint to use when authenticating
+     * with APNs.
      *
      * Valid options are `key` or `certificate` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-defaultauthenticationmethod)
+     *
      * @param defaultAuthenticationMethod The default authentication method that you want Amazon
-     * Pinpoint to use when authenticating with APNs.
+     *   Pinpoint to use when authenticating with APNs.
      */
     public fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
         cdkBuilder.defaultAuthenticationMethod(defaultAuthenticationMethod)
@@ -105,7 +117,9 @@ public class CfnAPNSVoipSandboxChannelDsl(
      * Specifies whether the APNs VoIP sandbox channel is enabled for the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-enabled)
-     * @param enabled Specifies whether the APNs VoIP sandbox channel is enabled for the application.
+     *
+     * @param enabled Specifies whether the APNs VoIP sandbox channel is enabled for the
+     *   application.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -115,7 +129,9 @@ public class CfnAPNSVoipSandboxChannelDsl(
      * Specifies whether the APNs VoIP sandbox channel is enabled for the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-enabled)
-     * @param enabled Specifies whether the APNs VoIP sandbox channel is enabled for the application.
+     *
+     * @param enabled Specifies whether the APNs VoIP sandbox channel is enabled for the
+     *   application.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
@@ -126,8 +142,9 @@ public class CfnAPNSVoipSandboxChannelDsl(
      * communicate with the APNs sandbox environment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-privatekey)
-     * @param privateKey The private key for the APNs client certificate that you want Amazon Pinpoint
-     * to use to communicate with the APNs sandbox environment.
+     *
+     * @param privateKey The private key for the APNs client certificate that you want Amazon
+     *   Pinpoint to use to communicate with the APNs sandbox environment.
      */
     public fun privateKey(privateKey: String) {
         cdkBuilder.privateKey(privateKey)
@@ -139,6 +156,7 @@ public class CfnAPNSVoipSandboxChannelDsl(
      * This identifier is used for APNs tokens.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-teamid)
+     *
      * @param teamId The identifier that's assigned to your Apple developer account team.
      */
     public fun teamId(teamId: String) {
@@ -149,6 +167,7 @@ public class CfnAPNSVoipSandboxChannelDsl(
      * The authentication key to use for APNs tokens.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-tokenkey)
+     *
      * @param tokenKey The authentication key to use for APNs tokens.
      */
     public fun tokenKey(tokenKey: String) {
@@ -158,10 +177,11 @@ public class CfnAPNSVoipSandboxChannelDsl(
     /**
      * The key identifier that's assigned to your APNs signing key.
      *
-     * Specify this value if you want Amazon Pinpoint to communicate with the APNs sandbox environment
-     * by using APNs tokens.
+     * Specify this value if you want Amazon Pinpoint to communicate with the APNs sandbox
+     * environment by using APNs tokens.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html#cfn-pinpoint-apnsvoipsandboxchannel-tokenkeyid)
+     *
      * @param tokenKeyId The key identifier that's assigned to your APNs signing key.
      */
     public fun tokenKeyId(tokenKeyId: String) {

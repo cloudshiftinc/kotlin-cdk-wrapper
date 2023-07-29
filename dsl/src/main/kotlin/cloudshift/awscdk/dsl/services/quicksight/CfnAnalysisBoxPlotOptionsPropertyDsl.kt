@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The options of a box plot visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,36 +37,30 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisBoxPlotOptionsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.BoxPlotOptionsProperty.Builder =
-      CfnAnalysis.BoxPlotOptionsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.BoxPlotOptionsProperty.Builder =
+        CfnAnalysis.BoxPlotOptionsProperty.builder()
 
-  /**
-   * @param allDataPointsVisibility Determines the visibility of all data points of the box plot.
-   */
-  public fun allDataPointsVisibility(allDataPointsVisibility: String) {
-    cdkBuilder.allDataPointsVisibility(allDataPointsVisibility)
-  }
+    /**
+     * @param allDataPointsVisibility Determines the visibility of all data points of the box plot.
+     */
+    public fun allDataPointsVisibility(allDataPointsVisibility: String) {
+        cdkBuilder.allDataPointsVisibility(allDataPointsVisibility)
+    }
 
-  /**
-   * @param outlierVisibility Determines the visibility of the outlier in a box plot.
-   */
-  public fun outlierVisibility(outlierVisibility: String) {
-    cdkBuilder.outlierVisibility(outlierVisibility)
-  }
+    /** @param outlierVisibility Determines the visibility of the outlier in a box plot. */
+    public fun outlierVisibility(outlierVisibility: String) {
+        cdkBuilder.outlierVisibility(outlierVisibility)
+    }
 
-  /**
-   * @param styleOptions The style options of the box plot.
-   */
-  public fun styleOptions(styleOptions: IResolvable) {
-    cdkBuilder.styleOptions(styleOptions)
-  }
+    /** @param styleOptions The style options of the box plot. */
+    public fun styleOptions(styleOptions: IResolvable) {
+        cdkBuilder.styleOptions(styleOptions)
+    }
 
-  /**
-   * @param styleOptions The style options of the box plot.
-   */
-  public fun styleOptions(styleOptions: CfnAnalysis.BoxPlotStyleOptionsProperty) {
-    cdkBuilder.styleOptions(styleOptions)
-  }
+    /** @param styleOptions The style options of the box plot. */
+    public fun styleOptions(styleOptions: CfnAnalysis.BoxPlotStyleOptionsProperty) {
+        cdkBuilder.styleOptions(styleOptions)
+    }
 
-  public fun build(): CfnAnalysis.BoxPlotOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.BoxPlotOptionsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.omics
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
  * Creates a run group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,60 +40,65 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnRunGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnRunGroup.Builder = CfnRunGroup.Builder.create(scope, id)
+    private val cdkBuilder: CfnRunGroup.Builder = CfnRunGroup.Builder.create(scope, id)
 
-  /**
-   * The group's maximum CPU count setting.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxcpus)
-   * @param maxCpus The group's maximum CPU count setting. 
-   */
-  public fun maxCpus(maxCpus: Number) {
-    cdkBuilder.maxCpus(maxCpus)
-  }
+    /**
+     * The group's maximum CPU count setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxcpus)
+     *
+     * @param maxCpus The group's maximum CPU count setting.
+     */
+    public fun maxCpus(maxCpus: Number) {
+        cdkBuilder.maxCpus(maxCpus)
+    }
 
-  /**
-   * The group's maximum duration setting in minutes.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxduration)
-   * @param maxDuration The group's maximum duration setting in minutes. 
-   */
-  public fun maxDuration(maxDuration: Number) {
-    cdkBuilder.maxDuration(maxDuration)
-  }
+    /**
+     * The group's maximum duration setting in minutes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxduration)
+     *
+     * @param maxDuration The group's maximum duration setting in minutes.
+     */
+    public fun maxDuration(maxDuration: Number) {
+        cdkBuilder.maxDuration(maxDuration)
+    }
 
-  /**
-   * The group's maximum concurrent run setting.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxruns)
-   * @param maxRuns The group's maximum concurrent run setting. 
-   */
-  public fun maxRuns(maxRuns: Number) {
-    cdkBuilder.maxRuns(maxRuns)
-  }
+    /**
+     * The group's maximum concurrent run setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxruns)
+     *
+     * @param maxRuns The group's maximum concurrent run setting.
+     */
+    public fun maxRuns(maxRuns: Number) {
+        cdkBuilder.maxRuns(maxRuns)
+    }
 
-  /**
-   * The group's name.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-name)
-   * @param name The group's name. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The group's name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-name)
+     *
+     * @param name The group's name.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * Tags for the group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-tags)
-   * @param tags Tags for the group. 
-   */
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    /**
+     * Tags for the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-tags)
+     *
+     * @param tags Tags for the group.
+     */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnRunGroup = cdkBuilder.build()
+    public fun build(): CfnRunGroup = cdkBuilder.build()
 }

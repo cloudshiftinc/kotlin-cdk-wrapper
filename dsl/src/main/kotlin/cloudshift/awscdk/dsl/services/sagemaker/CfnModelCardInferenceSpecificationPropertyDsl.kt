@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,37 +39,37 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  */
 @CdkDslMarker
 public class CfnModelCardInferenceSpecificationPropertyDsl {
-  private val cdkBuilder: CfnModelCard.InferenceSpecificationProperty.Builder =
-      CfnModelCard.InferenceSpecificationProperty.builder()
+    private val cdkBuilder: CfnModelCard.InferenceSpecificationProperty.Builder =
+        CfnModelCard.InferenceSpecificationProperty.builder()
 
-  private val _containers: MutableList<Any> = mutableListOf()
+    private val _containers: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param containers Contains inference related information which were used to create model
-   * package. 
-   */
-  public fun containers(vararg containers: Any) {
-    _containers.addAll(listOf(*containers))
-  }
+    /**
+     * @param containers Contains inference related information which were used to create model
+     *   package.
+     */
+    public fun containers(vararg containers: Any) {
+        _containers.addAll(listOf(*containers))
+    }
 
-  /**
-   * @param containers Contains inference related information which were used to create model
-   * package. 
-   */
-  public fun containers(containers: Collection<Any>) {
-    _containers.addAll(containers)
-  }
+    /**
+     * @param containers Contains inference related information which were used to create model
+     *   package.
+     */
+    public fun containers(containers: Collection<Any>) {
+        _containers.addAll(containers)
+    }
 
-  /**
-   * @param containers Contains inference related information which were used to create model
-   * package. 
-   */
-  public fun containers(containers: IResolvable) {
-    cdkBuilder.containers(containers)
-  }
+    /**
+     * @param containers Contains inference related information which were used to create model
+     *   package.
+     */
+    public fun containers(containers: IResolvable) {
+        cdkBuilder.containers(containers)
+    }
 
-  public fun build(): CfnModelCard.InferenceSpecificationProperty {
-    if(_containers.isNotEmpty()) cdkBuilder.containers(_containers)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnModelCard.InferenceSpecificationProperty {
+        if (_containers.isNotEmpty()) cdkBuilder.containers(_containers)
+        return cdkBuilder.build()
+    }
 }

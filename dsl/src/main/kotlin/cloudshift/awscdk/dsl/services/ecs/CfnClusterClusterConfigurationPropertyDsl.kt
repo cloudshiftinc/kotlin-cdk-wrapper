@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ecs.CfnCluster
  * The execute command configuration for the cluster.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,23 +43,20 @@ import software.amazon.awscdk.services.ecs.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterClusterConfigurationPropertyDsl {
-  private val cdkBuilder: CfnCluster.ClusterConfigurationProperty.Builder =
-      CfnCluster.ClusterConfigurationProperty.builder()
+    private val cdkBuilder: CfnCluster.ClusterConfigurationProperty.Builder =
+        CfnCluster.ClusterConfigurationProperty.builder()
 
-  /**
-   * @param executeCommandConfiguration The details of the execute command configuration.
-   */
-  public fun executeCommandConfiguration(executeCommandConfiguration: IResolvable) {
-    cdkBuilder.executeCommandConfiguration(executeCommandConfiguration)
-  }
+    /** @param executeCommandConfiguration The details of the execute command configuration. */
+    public fun executeCommandConfiguration(executeCommandConfiguration: IResolvable) {
+        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration)
+    }
 
-  /**
-   * @param executeCommandConfiguration The details of the execute command configuration.
-   */
-  public
-      fun executeCommandConfiguration(executeCommandConfiguration: CfnCluster.ExecuteCommandConfigurationProperty) {
-    cdkBuilder.executeCommandConfiguration(executeCommandConfiguration)
-  }
+    /** @param executeCommandConfiguration The details of the execute command configuration. */
+    public fun executeCommandConfiguration(
+        executeCommandConfiguration: CfnCluster.ExecuteCommandConfigurationProperty
+    ) {
+        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration)
+    }
 
-  public fun build(): CfnCluster.ClusterConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.ClusterConfigurationProperty = cdkBuilder.build()
 }

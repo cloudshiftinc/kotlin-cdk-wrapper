@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.stepfunctions.CustomStateProps
  * Properties for defining a custom state definition.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.dynamodb.*;
  * // create a table
@@ -52,23 +60,19 @@ import software.amazon.awscdk.services.stepfunctions.CustomStateProps
  */
 @CdkDslMarker
 public class CustomStatePropsDsl {
-  private val cdkBuilder: CustomStateProps.Builder = CustomStateProps.builder()
+    private val cdkBuilder: CustomStateProps.Builder = CustomStateProps.builder()
 
-  /**
-   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
-   */
-  public fun stateJson(stateJson: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(stateJson)
-    cdkBuilder.stateJson(builder.map)
-  }
+    /** @param stateJson Amazon States Language (JSON-based) definition of the state. */
+    public fun stateJson(stateJson: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(stateJson)
+        cdkBuilder.stateJson(builder.map)
+    }
 
-  /**
-   * @param stateJson Amazon States Language (JSON-based) definition of the state. 
-   */
-  public fun stateJson(stateJson: Map<String, Any>) {
-    cdkBuilder.stateJson(stateJson)
-  }
+    /** @param stateJson Amazon States Language (JSON-based) definition of the state. */
+    public fun stateJson(stateJson: Map<String, Any>) {
+        cdkBuilder.stateJson(stateJson)
+    }
 
-  public fun build(): CustomStateProps = cdkBuilder.build()
+    public fun build(): CustomStateProps = cdkBuilder.build()
 }

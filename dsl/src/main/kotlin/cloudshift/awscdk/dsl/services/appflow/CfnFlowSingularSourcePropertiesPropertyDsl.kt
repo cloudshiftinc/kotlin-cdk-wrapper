@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  * The properties that are applied when Singular is being used as a source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  */
 @CdkDslMarker
 public class CfnFlowSingularSourcePropertiesPropertyDsl {
-  private val cdkBuilder: CfnFlow.SingularSourcePropertiesProperty.Builder =
-      CfnFlow.SingularSourcePropertiesProperty.builder()
+    private val cdkBuilder: CfnFlow.SingularSourcePropertiesProperty.Builder =
+        CfnFlow.SingularSourcePropertiesProperty.builder()
 
-  /**
-   * @param object The object specified in the Singular flow source. 
-   */
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
+    /** @param object The object specified in the Singular flow source. */
+    public fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+    }
 
-  public fun build(): CfnFlow.SingularSourcePropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnFlow.SingularSourcePropertiesProperty = cdkBuilder.build()
 }

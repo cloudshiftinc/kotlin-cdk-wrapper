@@ -1,12 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnCampaign
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -14,6 +20,9 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnCampaign
+import software.constructs.Construct
 
 /**
  * Specifies the settings for a campaign.
@@ -22,7 +31,6 @@ import kotlin.collections.MutableList
  * Pinpoint application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -459,7 +467,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnCampaignDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnCampaign.Builder = CfnCampaign.Builder.create(scope, id)
 
@@ -470,8 +478,9 @@ public class CfnCampaignDsl(
      * default treatment for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-additionaltreatments)
+     *
      * @param additionalTreatments An array of requests that defines additional treatments for the
-     * campaign, in addition to the default treatment for the campaign.
+     *   campaign, in addition to the default treatment for the campaign.
      */
     public fun additionalTreatments(vararg additionalTreatments: Any) {
         _additionalTreatments.addAll(listOf(*additionalTreatments))
@@ -482,8 +491,9 @@ public class CfnCampaignDsl(
      * default treatment for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-additionaltreatments)
+     *
      * @param additionalTreatments An array of requests that defines additional treatments for the
-     * campaign, in addition to the default treatment for the campaign.
+     *   campaign, in addition to the default treatment for the campaign.
      */
     public fun additionalTreatments(additionalTreatments: Collection<Any>) {
         _additionalTreatments.addAll(additionalTreatments)
@@ -494,19 +504,22 @@ public class CfnCampaignDsl(
      * default treatment for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-additionaltreatments)
+     *
      * @param additionalTreatments An array of requests that defines additional treatments for the
-     * campaign, in addition to the default treatment for the campaign.
+     *   campaign, in addition to the default treatment for the campaign.
      */
     public fun additionalTreatments(additionalTreatments: IResolvable) {
         cdkBuilder.additionalTreatments(additionalTreatments)
     }
 
     /**
-     * The unique identifier for the Amazon Pinpoint application that the campaign is associated with.
+     * The unique identifier for the Amazon Pinpoint application that the campaign is associated
+     * with.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-applicationid)
+     *
      * @param applicationId The unique identifier for the Amazon Pinpoint application that the
-     * campaign is associated with.
+     *   campaign is associated with.
      */
     public fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
@@ -516,6 +529,7 @@ public class CfnCampaignDsl(
      * Specifies the Lambda function to use as a code hook for a campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-campaignhook)
+     *
      * @param campaignHook Specifies the Lambda function to use as a code hook for a campaign.
      */
     public fun campaignHook(campaignHook: IResolvable) {
@@ -526,6 +540,7 @@ public class CfnCampaignDsl(
      * Specifies the Lambda function to use as a code hook for a campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-campaignhook)
+     *
      * @param campaignHook Specifies the Lambda function to use as a code hook for a campaign.
      */
     public fun campaignHook(campaignHook: CfnCampaign.CampaignHookProperty) {
@@ -539,8 +554,9 @@ public class CfnCampaignDsl(
      * `CustomMessage` object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-customdeliveryconfiguration)
+     *
      * @param customDeliveryConfiguration The delivery configuration settings for sending the
-     * treatment through a custom channel.
+     *   treatment through a custom channel.
      */
     public fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable) {
         cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration)
@@ -553,10 +569,13 @@ public class CfnCampaignDsl(
      * `CustomMessage` object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-customdeliveryconfiguration)
+     *
      * @param customDeliveryConfiguration The delivery configuration settings for sending the
-     * treatment through a custom channel.
+     *   treatment through a custom channel.
      */
-    public fun customDeliveryConfiguration(customDeliveryConfiguration: CfnCampaign.CustomDeliveryConfigurationProperty) {
+    public fun customDeliveryConfiguration(
+        customDeliveryConfiguration: CfnCampaign.CustomDeliveryConfigurationProperty
+    ) {
         cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration)
     }
 
@@ -564,6 +583,7 @@ public class CfnCampaignDsl(
      * A custom description of the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-description)
+     *
      * @param description A custom description of the campaign.
      */
     public fun description(description: String) {
@@ -575,8 +595,9 @@ public class CfnCampaignDsl(
      * campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-holdoutpercent)
-     * @param holdoutPercent The allocated percentage of users (segment members) who shouldn't receive
-     * messages from the campaign.
+     *
+     * @param holdoutPercent The allocated percentage of users (segment members) who shouldn't
+     *   receive messages from the campaign.
      */
     public fun holdoutPercent(holdoutPercent: Number) {
         cdkBuilder.holdoutPercent(holdoutPercent)
@@ -586,11 +607,13 @@ public class CfnCampaignDsl(
      * Specifies whether to pause the campaign.
      *
      * A paused campaign doesn't run unless you resume it by changing this value to `false` . If you
-     * restart a campaign, the campaign restarts from the beginning and not at the point you paused it.
-     * If a campaign is running it will complete and then pause. Pause only pauses or skips the next run
-     * for a recurring future scheduled campaign. A campaign scheduled for immediate can't be paused.
+     * restart a campaign, the campaign restarts from the beginning and not at the point you paused
+     * it. If a campaign is running it will complete and then pause. Pause only pauses or skips the
+     * next run for a recurring future scheduled campaign. A campaign scheduled for immediate can't
+     * be paused.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-ispaused)
+     *
      * @param isPaused Specifies whether to pause the campaign.
      */
     public fun isPaused(isPaused: Boolean) {
@@ -601,11 +624,13 @@ public class CfnCampaignDsl(
      * Specifies whether to pause the campaign.
      *
      * A paused campaign doesn't run unless you resume it by changing this value to `false` . If you
-     * restart a campaign, the campaign restarts from the beginning and not at the point you paused it.
-     * If a campaign is running it will complete and then pause. Pause only pauses or skips the next run
-     * for a recurring future scheduled campaign. A campaign scheduled for immediate can't be paused.
+     * restart a campaign, the campaign restarts from the beginning and not at the point you paused
+     * it. If a campaign is running it will complete and then pause. Pause only pauses or skips the
+     * next run for a recurring future scheduled campaign. A campaign scheduled for immediate can't
+     * be paused.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-ispaused)
+     *
      * @param isPaused Specifies whether to pause the campaign.
      */
     public fun isPaused(isPaused: IResolvable) {
@@ -616,6 +641,7 @@ public class CfnCampaignDsl(
      * The messaging limits for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-limits)
+     *
      * @param limits The messaging limits for the campaign.
      */
     public fun limits(limits: IResolvable) {
@@ -626,6 +652,7 @@ public class CfnCampaignDsl(
      * The messaging limits for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-limits)
+     *
      * @param limits The messaging limits for the campaign.
      */
     public fun limits(limits: CfnCampaign.LimitsProperty) {
@@ -636,6 +663,7 @@ public class CfnCampaignDsl(
      * The message configuration settings for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-messageconfiguration)
+     *
      * @param messageConfiguration The message configuration settings for the campaign.
      */
     public fun messageConfiguration(messageConfiguration: IResolvable) {
@@ -646,9 +674,12 @@ public class CfnCampaignDsl(
      * The message configuration settings for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-messageconfiguration)
+     *
      * @param messageConfiguration The message configuration settings for the campaign.
      */
-    public fun messageConfiguration(messageConfiguration: CfnCampaign.MessageConfigurationProperty) {
+    public fun messageConfiguration(
+        messageConfiguration: CfnCampaign.MessageConfigurationProperty
+    ) {
         cdkBuilder.messageConfiguration(messageConfiguration)
     }
 
@@ -656,6 +687,7 @@ public class CfnCampaignDsl(
      * The name of the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-name)
+     *
      * @param name The name of the campaign.
      */
     public fun name(name: String) {
@@ -670,8 +702,9 @@ public class CfnCampaignDsl(
      * determines the order in which those messages are displayed.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-priority)
+     *
      * @param priority An integer between 1 and 5, inclusive, that represents the priority of the
-     * in-app message campaign, where 1 is the highest priority and 5 is the lowest.
+     *   in-app message campaign, where 1 is the highest priority and 5 is the lowest.
      */
     public fun priority(priority: Number) {
         cdkBuilder.priority(priority)
@@ -681,6 +714,7 @@ public class CfnCampaignDsl(
      * The schedule settings for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-schedule)
+     *
      * @param schedule The schedule settings for the campaign.
      */
     public fun schedule(schedule: IResolvable) {
@@ -691,6 +725,7 @@ public class CfnCampaignDsl(
      * The schedule settings for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-schedule)
+     *
      * @param schedule The schedule settings for the campaign.
      */
     public fun schedule(schedule: CfnCampaign.ScheduleProperty) {
@@ -701,6 +736,7 @@ public class CfnCampaignDsl(
      * The unique identifier for the segment to associate with the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-segmentid)
+     *
      * @param segmentId The unique identifier for the segment to associate with the campaign.
      */
     public fun segmentId(segmentId: String) {
@@ -711,6 +747,7 @@ public class CfnCampaignDsl(
      * The version of the segment to associate with the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-segmentversion)
+     *
      * @param segmentVersion The version of the segment to associate with the campaign.
      */
     public fun segmentVersion(segmentVersion: Number) {
@@ -725,6 +762,7 @@ public class CfnCampaignDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: MapBuilder.() -> Unit = {}) {
@@ -741,6 +779,7 @@ public class CfnCampaignDsl(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-tags)
+     *
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: Any) {
@@ -751,6 +790,7 @@ public class CfnCampaignDsl(
      * The message template to use for the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-templateconfiguration)
+     *
      * @param templateConfiguration The message template to use for the treatment.
      */
     public fun templateConfiguration(templateConfiguration: IResolvable) {
@@ -761,9 +801,12 @@ public class CfnCampaignDsl(
      * The message template to use for the treatment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-templateconfiguration)
+     *
      * @param templateConfiguration The message template to use for the treatment.
      */
-    public fun templateConfiguration(templateConfiguration: CfnCampaign.TemplateConfigurationProperty) {
+    public fun templateConfiguration(
+        templateConfiguration: CfnCampaign.TemplateConfigurationProperty
+    ) {
         cdkBuilder.templateConfiguration(templateConfiguration)
     }
 
@@ -771,6 +814,7 @@ public class CfnCampaignDsl(
      * A custom description of the default treatment for the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-treatmentdescription)
+     *
      * @param treatmentDescription A custom description of the default treatment for the campaign.
      */
     public fun treatmentDescription(treatmentDescription: String) {
@@ -784,15 +828,17 @@ public class CfnCampaignDsl(
      * A *treatment* is a variation of a campaign that's used for A/B testing.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html#cfn-pinpoint-campaign-treatmentname)
+     *
      * @param treatmentName A custom name of the default treatment for the campaign, if the campaign
-     * has multiple treatments.
+     *   has multiple treatments.
      */
     public fun treatmentName(treatmentName: String) {
         cdkBuilder.treatmentName(treatmentName)
     }
 
     public fun build(): CfnCampaign {
-        if (_additionalTreatments.isNotEmpty()) cdkBuilder.additionalTreatments(_additionalTreatments)
+        if (_additionalTreatments.isNotEmpty())
+            cdkBuilder.additionalTreatments(_additionalTreatments)
         return cdkBuilder.build()
     }
 }

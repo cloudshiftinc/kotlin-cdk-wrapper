@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The field well configuration of a sankey diagram.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -31,7 +39,9 @@ public class CfnTemplateSankeyDiagramFieldWellsPropertyDsl {
     /**
      * @param sankeyDiagramAggregatedFieldWells The field well configuration of a sankey diagram.
      */
-    public fun sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells: CfnTemplate.SankeyDiagramAggregatedFieldWellsProperty) {
+    public fun sankeyDiagramAggregatedFieldWells(
+        sankeyDiagramAggregatedFieldWells: CfnTemplate.SankeyDiagramAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells)
     }
 

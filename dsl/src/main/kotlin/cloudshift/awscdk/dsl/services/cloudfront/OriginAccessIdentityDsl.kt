@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * origins, so that you can secure all or just some of your Amazon S3 content.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,22 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class OriginAccessIdentityDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: OriginAccessIdentity.Builder = OriginAccessIdentity.Builder.create(scope,
-      id)
+    private val cdkBuilder: OriginAccessIdentity.Builder =
+        OriginAccessIdentity.Builder.create(scope, id)
 
-  /**
-   * Any comments you want to include about the origin access identity.
-   *
-   * Default: "Allows CloudFront to reach the bucket"
-   *
-   * @param comment Any comments you want to include about the origin access identity. 
-   */
-  public fun comment(comment: String) {
-    cdkBuilder.comment(comment)
-  }
+    /**
+     * Any comments you want to include about the origin access identity.
+     *
+     * Default: "Allows CloudFront to reach the bucket"
+     *
+     * @param comment Any comments you want to include about the origin access identity.
+     */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
 
-  public fun build(): OriginAccessIdentity = cdkBuilder.build()
+    public fun build(): OriginAccessIdentity = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The URL content (text, icon) for the table link configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -55,23 +63,27 @@ public class CfnTemplateTableFieldLinkContentConfigurationPropertyDsl {
     /**
      * @param customIconContent The custom icon content for the table link content configuration.
      */
-    public fun customIconContent(customIconContent: CfnTemplate.TableFieldCustomIconContentProperty) {
+    public fun customIconContent(
+        customIconContent: CfnTemplate.TableFieldCustomIconContentProperty
+    ) {
         cdkBuilder.customIconContent(customIconContent)
     }
 
     /**
-     * @param customTextContent The custom text content (value, font configuration) for the table link
-     * content configuration.
+     * @param customTextContent The custom text content (value, font configuration) for the table
+     *   link content configuration.
      */
     public fun customTextContent(customTextContent: IResolvable) {
         cdkBuilder.customTextContent(customTextContent)
     }
 
     /**
-     * @param customTextContent The custom text content (value, font configuration) for the table link
-     * content configuration.
+     * @param customTextContent The custom text content (value, font configuration) for the table
+     *   link content configuration.
      */
-    public fun customTextContent(customTextContent: CfnTemplate.TableFieldCustomTextContentProperty) {
+    public fun customTextContent(
+        customTextContent: CfnTemplate.TableFieldCustomTextContentProperty
+    ) {
         cdkBuilder.customTextContent(customTextContent)
     }
 

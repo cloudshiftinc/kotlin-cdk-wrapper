@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The configuration for default analysis settings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -60,23 +68,20 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisAnalysisDefaultsPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.AnalysisDefaultsProperty.Builder =
-      CfnAnalysis.AnalysisDefaultsProperty.builder()
+    private val cdkBuilder: CfnAnalysis.AnalysisDefaultsProperty.Builder =
+        CfnAnalysis.AnalysisDefaultsProperty.builder()
 
-  /**
-   * @param defaultNewSheetConfiguration The configuration for default new sheet settings. 
-   */
-  public fun defaultNewSheetConfiguration(defaultNewSheetConfiguration: IResolvable) {
-    cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)
-  }
+    /** @param defaultNewSheetConfiguration The configuration for default new sheet settings. */
+    public fun defaultNewSheetConfiguration(defaultNewSheetConfiguration: IResolvable) {
+        cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)
+    }
 
-  /**
-   * @param defaultNewSheetConfiguration The configuration for default new sheet settings. 
-   */
-  public
-      fun defaultNewSheetConfiguration(defaultNewSheetConfiguration: CfnAnalysis.DefaultNewSheetConfigurationProperty) {
-    cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)
-  }
+    /** @param defaultNewSheetConfiguration The configuration for default new sheet settings. */
+    public fun defaultNewSheetConfiguration(
+        defaultNewSheetConfiguration: CfnAnalysis.DefaultNewSheetConfigurationProperty
+    ) {
+        cdkBuilder.defaultNewSheetConfiguration(defaultNewSheetConfiguration)
+    }
 
-  public fun build(): CfnAnalysis.AnalysisDefaultsProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.AnalysisDefaultsProperty = cdkBuilder.build()
 }

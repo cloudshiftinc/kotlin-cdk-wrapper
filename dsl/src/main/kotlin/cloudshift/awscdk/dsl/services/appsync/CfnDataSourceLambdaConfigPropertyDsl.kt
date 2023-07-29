@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.appsync.CfnDataSource
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,15 +37,13 @@ import software.amazon.awscdk.services.appsync.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceLambdaConfigPropertyDsl {
-  private val cdkBuilder: CfnDataSource.LambdaConfigProperty.Builder =
-      CfnDataSource.LambdaConfigProperty.builder()
+    private val cdkBuilder: CfnDataSource.LambdaConfigProperty.Builder =
+        CfnDataSource.LambdaConfigProperty.builder()
 
-  /**
-   * @param lambdaFunctionArn The ARN for the Lambda function. 
-   */
-  public fun lambdaFunctionArn(lambdaFunctionArn: String) {
-    cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
-  }
+    /** @param lambdaFunctionArn The ARN for the Lambda function. */
+    public fun lambdaFunctionArn(lambdaFunctionArn: String) {
+        cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
+    }
 
-  public fun build(): CfnDataSource.LambdaConfigProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.LambdaConfigProperty = cdkBuilder.build()
 }

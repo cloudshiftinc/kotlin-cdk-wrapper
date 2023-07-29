@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.databrew.CfnDataset
  * Represents a structure for defining parameter conditions.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,47 +40,47 @@ import software.amazon.awscdk.services.databrew.CfnDataset
  */
 @CdkDslMarker
 public class CfnDatasetFilterExpressionPropertyDsl {
-  private val cdkBuilder: CfnDataset.FilterExpressionProperty.Builder =
-      CfnDataset.FilterExpressionProperty.builder()
+    private val cdkBuilder: CfnDataset.FilterExpressionProperty.Builder =
+        CfnDataset.FilterExpressionProperty.builder()
 
-  private val _valuesMap: MutableList<Any> = mutableListOf()
+    private val _valuesMap: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param expression The expression which includes condition names followed by substitution
-   * variables, possibly grouped and combined with other conditions. 
-   * For example, "(starts_with :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or
-   * ends_with :suffix2)". Substitution variables should start with ':' symbol.
-   */
-  public fun expression(expression: String) {
-    cdkBuilder.expression(expression)
-  }
+    /**
+     * @param expression The expression which includes condition names followed by substitution
+     *   variables, possibly grouped and combined with other conditions. For example, "(starts_with
+     *   :prefix1 or starts_with :prefix2) and (ends_with :suffix1 or ends_with :suffix2)".
+     *   Substitution variables should start with ':' symbol.
+     */
+    public fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+    }
 
-  /**
-   * @param valuesMap The map of substitution variable names to their values used in this filter
-   * expression. 
-   */
-  public fun valuesMap(vararg valuesMap: Any) {
-    _valuesMap.addAll(listOf(*valuesMap))
-  }
+    /**
+     * @param valuesMap The map of substitution variable names to their values used in this filter
+     *   expression.
+     */
+    public fun valuesMap(vararg valuesMap: Any) {
+        _valuesMap.addAll(listOf(*valuesMap))
+    }
 
-  /**
-   * @param valuesMap The map of substitution variable names to their values used in this filter
-   * expression. 
-   */
-  public fun valuesMap(valuesMap: Collection<Any>) {
-    _valuesMap.addAll(valuesMap)
-  }
+    /**
+     * @param valuesMap The map of substitution variable names to their values used in this filter
+     *   expression.
+     */
+    public fun valuesMap(valuesMap: Collection<Any>) {
+        _valuesMap.addAll(valuesMap)
+    }
 
-  /**
-   * @param valuesMap The map of substitution variable names to their values used in this filter
-   * expression. 
-   */
-  public fun valuesMap(valuesMap: IResolvable) {
-    cdkBuilder.valuesMap(valuesMap)
-  }
+    /**
+     * @param valuesMap The map of substitution variable names to their values used in this filter
+     *   expression.
+     */
+    public fun valuesMap(valuesMap: IResolvable) {
+        cdkBuilder.valuesMap(valuesMap)
+    }
 
-  public fun build(): CfnDataset.FilterExpressionProperty {
-    if(_valuesMap.isNotEmpty()) cdkBuilder.valuesMap(_valuesMap)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDataset.FilterExpressionProperty {
+        if (_valuesMap.isNotEmpty()) cdkBuilder.valuesMap(_valuesMap)
+        return cdkBuilder.build()
+    }
 }

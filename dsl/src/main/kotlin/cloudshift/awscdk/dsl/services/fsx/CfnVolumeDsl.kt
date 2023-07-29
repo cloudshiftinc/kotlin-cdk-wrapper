@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fsx
 
@@ -17,7 +26,6 @@ import software.constructs.Construct
  * Creates an FSx for ONTAP or Amazon FSx for OpenZFS storage volume.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -79,113 +87,122 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnVolumeDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnVolume.Builder = CfnVolume.Builder.create(scope, id)
+    private val cdkBuilder: CfnVolume.Builder = CfnVolume.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * Specifies the ID of the volume backup to use to create a new volume.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-backupid)
-   * @param backupId Specifies the ID of the volume backup to use to create a new volume. 
-   */
-  public fun backupId(backupId: String) {
-    cdkBuilder.backupId(backupId)
-  }
+    /**
+     * Specifies the ID of the volume backup to use to create a new volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-backupid)
+     *
+     * @param backupId Specifies the ID of the volume backup to use to create a new volume.
+     */
+    public fun backupId(backupId: String) {
+        cdkBuilder.backupId(backupId)
+    }
 
-  /**
-   * The name of the volume.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-name)
-   * @param name The name of the volume. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-name)
+     *
+     * @param name The name of the volume.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * The configuration of an Amazon FSx for NetApp ONTAP volume.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-ontapconfiguration)
-   * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume. 
-   */
-  public fun ontapConfiguration(ontapConfiguration: IResolvable) {
-    cdkBuilder.ontapConfiguration(ontapConfiguration)
-  }
+    /**
+     * The configuration of an Amazon FSx for NetApp ONTAP volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-ontapconfiguration)
+     *
+     * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume.
+     */
+    public fun ontapConfiguration(ontapConfiguration: IResolvable) {
+        cdkBuilder.ontapConfiguration(ontapConfiguration)
+    }
 
-  /**
-   * The configuration of an Amazon FSx for NetApp ONTAP volume.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-ontapconfiguration)
-   * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume. 
-   */
-  public fun ontapConfiguration(ontapConfiguration: CfnVolume.OntapConfigurationProperty) {
-    cdkBuilder.ontapConfiguration(ontapConfiguration)
-  }
+    /**
+     * The configuration of an Amazon FSx for NetApp ONTAP volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-ontapconfiguration)
+     *
+     * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume.
+     */
+    public fun ontapConfiguration(ontapConfiguration: CfnVolume.OntapConfigurationProperty) {
+        cdkBuilder.ontapConfiguration(ontapConfiguration)
+    }
 
-  /**
-   * The configuration of an Amazon FSx for OpenZFS volume.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-openzfsconfiguration)
-   * @param openZfsConfiguration The configuration of an Amazon FSx for OpenZFS volume. 
-   */
-  public fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
-    cdkBuilder.openZfsConfiguration(openZfsConfiguration)
-  }
+    /**
+     * The configuration of an Amazon FSx for OpenZFS volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-openzfsconfiguration)
+     *
+     * @param openZfsConfiguration The configuration of an Amazon FSx for OpenZFS volume.
+     */
+    public fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
+        cdkBuilder.openZfsConfiguration(openZfsConfiguration)
+    }
 
-  /**
-   * The configuration of an Amazon FSx for OpenZFS volume.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-openzfsconfiguration)
-   * @param openZfsConfiguration The configuration of an Amazon FSx for OpenZFS volume. 
-   */
-  public fun openZfsConfiguration(openZfsConfiguration: CfnVolume.OpenZFSConfigurationProperty) {
-    cdkBuilder.openZfsConfiguration(openZfsConfiguration)
-  }
+    /**
+     * The configuration of an Amazon FSx for OpenZFS volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-openzfsconfiguration)
+     *
+     * @param openZfsConfiguration The configuration of an Amazon FSx for OpenZFS volume.
+     */
+    public fun openZfsConfiguration(openZfsConfiguration: CfnVolume.OpenZFSConfigurationProperty) {
+        cdkBuilder.openZfsConfiguration(openZfsConfiguration)
+    }
 
-  /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-tags)
-   * @param tags An array of key-value pairs to apply to this resource. 
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-tags)
-   * @param tags An array of key-value pairs to apply to this resource. 
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * The type of the volume.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-volumetype)
-   * @param volumeType The type of the volume. 
-   */
-  public fun volumeType(volumeType: String) {
-    cdkBuilder.volumeType(volumeType)
-  }
+    /**
+     * The type of the volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html#cfn-fsx-volume-volumetype)
+     *
+     * @param volumeType The type of the volume.
+     */
+    public fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+    }
 
-  public fun build(): CfnVolume {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVolume {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wisdom
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
  * The KMS key used for encryption.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,19 +33,18 @@ import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
  */
 @CdkDslMarker
 public class CfnKnowledgeBaseServerSideEncryptionConfigurationPropertyDsl {
-  private val cdkBuilder: CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.Builder =
-      CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.builder()
+    private val cdkBuilder: CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.Builder =
+        CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.builder()
 
-  /**
-   * @param kmsKeyId The KMS key .
-   * For information about valid ID values, see [Key identifiers
-   * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) in the *AWS
-   * Key Management Service Developer Guide* .
-   */
-  public fun kmsKeyId(kmsKeyId: String) {
-    cdkBuilder.kmsKeyId(kmsKeyId)
-  }
+    /**
+     * @param kmsKeyId The KMS key . For information about valid ID values, see
+     *   [Key identifiers (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id)
+     *   in the *AWS Key Management Service Developer Guide* .
+     */
+    public fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+    }
 
-  public fun build(): CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty =
+        cdkBuilder.build()
 }

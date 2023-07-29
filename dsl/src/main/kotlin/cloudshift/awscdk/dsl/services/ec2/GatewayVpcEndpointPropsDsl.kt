@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
  * Construction properties for a GatewayVpcEndpoint.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,44 +49,40 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
  */
 @CdkDslMarker
 public class GatewayVpcEndpointPropsDsl {
-  private val cdkBuilder: GatewayVpcEndpointProps.Builder = GatewayVpcEndpointProps.builder()
+    private val cdkBuilder: GatewayVpcEndpointProps.Builder = GatewayVpcEndpointProps.builder()
 
-  private val _subnets: MutableList<SubnetSelection> = mutableListOf()
+    private val _subnets: MutableList<SubnetSelection> = mutableListOf()
 
-  /**
-   * @param service The service to use for this gateway VPC endpoint. 
-   */
-  public fun service(service: IGatewayVpcEndpointService) {
-    cdkBuilder.service(service)
-  }
+    /** @param service The service to use for this gateway VPC endpoint. */
+    public fun service(service: IGatewayVpcEndpointService) {
+        cdkBuilder.service(service)
+    }
 
-  /**
-   * @param subnets Where to add endpoint routing.
-   * By default, this endpoint will be routable from all subnets in the VPC.
-   * Specify a list of subnet selection objects here to be more specific.
-   */
-  public fun subnets(subnets: SubnetSelectionDsl.() -> Unit) {
-    _subnets.add(SubnetSelectionDsl().apply(subnets).build())
-  }
+    /**
+     * @param subnets Where to add endpoint routing. By default, this endpoint will be routable from
+     *   all subnets in the VPC. Specify a list of subnet selection objects here to be more
+     *   specific.
+     */
+    public fun subnets(subnets: SubnetSelectionDsl.() -> Unit) {
+        _subnets.add(SubnetSelectionDsl().apply(subnets).build())
+    }
 
-  /**
-   * @param subnets Where to add endpoint routing.
-   * By default, this endpoint will be routable from all subnets in the VPC.
-   * Specify a list of subnet selection objects here to be more specific.
-   */
-  public fun subnets(subnets: Collection<SubnetSelection>) {
-    _subnets.addAll(subnets)
-  }
+    /**
+     * @param subnets Where to add endpoint routing. By default, this endpoint will be routable from
+     *   all subnets in the VPC. Specify a list of subnet selection objects here to be more
+     *   specific.
+     */
+    public fun subnets(subnets: Collection<SubnetSelection>) {
+        _subnets.addAll(subnets)
+    }
 
-  /**
-   * @param vpc The VPC network in which the gateway endpoint will be used. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /** @param vpc The VPC network in which the gateway endpoint will be used. */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  public fun build(): GatewayVpcEndpointProps {
-    if(_subnets.isNotEmpty()) cdkBuilder.subnets(_subnets)
-    return cdkBuilder.build()
-  }
+    public fun build(): GatewayVpcEndpointProps {
+        if (_subnets.isNotEmpty()) cdkBuilder.subnets(_subnets)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.s3.CfnBucket
  * Must be specified together with a `Metrics` block.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,31 +40,29 @@ import software.amazon.awscdk.services.s3.CfnBucket
  */
 @CdkDslMarker
 public class CfnBucketReplicationTimePropertyDsl {
-  private val cdkBuilder: CfnBucket.ReplicationTimeProperty.Builder =
-      CfnBucket.ReplicationTimeProperty.builder()
+    private val cdkBuilder: CfnBucket.ReplicationTimeProperty.Builder =
+        CfnBucket.ReplicationTimeProperty.builder()
 
-  /**
-   * @param status Specifies whether the replication time is enabled. 
-   */
-  public fun status(status: String) {
-    cdkBuilder.status(status)
-  }
+    /** @param status Specifies whether the replication time is enabled. */
+    public fun status(status: String) {
+        cdkBuilder.status(status)
+    }
 
-  /**
-   * @param time A container specifying the time by which replication should be complete for all
-   * objects and operations on objects. 
-   */
-  public fun time(time: IResolvable) {
-    cdkBuilder.time(time)
-  }
+    /**
+     * @param time A container specifying the time by which replication should be complete for all
+     *   objects and operations on objects.
+     */
+    public fun time(time: IResolvable) {
+        cdkBuilder.time(time)
+    }
 
-  /**
-   * @param time A container specifying the time by which replication should be complete for all
-   * objects and operations on objects. 
-   */
-  public fun time(time: CfnBucket.ReplicationTimeValueProperty) {
-    cdkBuilder.time(time)
-  }
+    /**
+     * @param time A container specifying the time by which replication should be complete for all
+     *   objects and operations on objects.
+     */
+    public fun time(time: CfnBucket.ReplicationTimeValueProperty) {
+        cdkBuilder.time(time)
+    }
 
-  public fun build(): CfnBucket.ReplicationTimeProperty = cdkBuilder.build()
+    public fun build(): CfnBucket.ReplicationTimeProperty = cdkBuilder.build()
 }

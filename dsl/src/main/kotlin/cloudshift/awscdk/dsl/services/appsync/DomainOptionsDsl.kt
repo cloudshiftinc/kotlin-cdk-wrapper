@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.certificatemanager.ICertificate
  * Domain name configuration for AppSync.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.certificatemanager.*;
  * import software.amazon.awscdk.services.route53.*;
@@ -47,22 +55,17 @@ import software.amazon.awscdk.services.certificatemanager.ICertificate
  */
 @CdkDslMarker
 public class DomainOptionsDsl {
-  private val cdkBuilder: DomainOptions.Builder = DomainOptions.builder()
+    private val cdkBuilder: DomainOptions.Builder = DomainOptions.builder()
 
-  /**
-   * @param certificate The certificate to use with the domain name. 
-   */
-  public fun certificate(certificate: ICertificate) {
-    cdkBuilder.certificate(certificate)
-  }
+    /** @param certificate The certificate to use with the domain name. */
+    public fun certificate(certificate: ICertificate) {
+        cdkBuilder.certificate(certificate)
+    }
 
-  /**
-   * @param domainName The actual domain name. 
-   * For example, `api.example.com`.
-   */
-  public fun domainName(domainName: String) {
-    cdkBuilder.domainName(domainName)
-  }
+    /** @param domainName The actual domain name. For example, `api.example.com`. */
+    public fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+    }
 
-  public fun build(): DomainOptions = cdkBuilder.build()
+    public fun build(): DomainOptions = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling
 
@@ -15,14 +24,12 @@ import software.constructs.Construct
 /**
  * Define a step scaling action.
  *
- * This kind of scaling policy adjusts the target capacity in configurable
- * steps. The size of the step is configurable based on the metric's distance
- * to its alarm threshold.
+ * This kind of scaling policy adjusts the target capacity in configurable steps. The size of the
+ * step is configurable based on the metric's distance to its alarm threshold.
  *
  * This Action must be used as the target of a CloudWatch alarm to take effect.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,79 +50,79 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class StepScalingActionDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: StepScalingAction.Builder = StepScalingAction.Builder.create(scope, id)
+    private val cdkBuilder: StepScalingAction.Builder = StepScalingAction.Builder.create(scope, id)
 
-  /**
-   * How the adjustment numbers are interpreted.
-   *
-   * Default: ChangeInCapacity
-   *
-   * @param adjustmentType How the adjustment numbers are interpreted. 
-   */
-  public fun adjustmentType(adjustmentType: AdjustmentType) {
-    cdkBuilder.adjustmentType(adjustmentType)
-  }
+    /**
+     * How the adjustment numbers are interpreted.
+     *
+     * Default: ChangeInCapacity
+     *
+     * @param adjustmentType How the adjustment numbers are interpreted.
+     */
+    public fun adjustmentType(adjustmentType: AdjustmentType) {
+        cdkBuilder.adjustmentType(adjustmentType)
+    }
 
-  /**
-   * The auto scaling group.
-   *
-   * @param autoScalingGroup The auto scaling group. 
-   */
-  public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-    cdkBuilder.autoScalingGroup(autoScalingGroup)
-  }
+    /**
+     * The auto scaling group.
+     *
+     * @param autoScalingGroup The auto scaling group.
+     */
+    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
+        cdkBuilder.autoScalingGroup(autoScalingGroup)
+    }
 
-  /**
-   * Period after a scaling completes before another scaling activity can start.
-   *
-   * Default: The default cooldown configured on the AutoScalingGroup
-   *
-   * @param cooldown Period after a scaling completes before another scaling activity can start. 
-   */
-  public fun cooldown(cooldown: Duration) {
-    cdkBuilder.cooldown(cooldown)
-  }
+    /**
+     * Period after a scaling completes before another scaling activity can start.
+     *
+     * Default: The default cooldown configured on the AutoScalingGroup
+     *
+     * @param cooldown Period after a scaling completes before another scaling activity can start.
+     */
+    public fun cooldown(cooldown: Duration) {
+        cdkBuilder.cooldown(cooldown)
+    }
 
-  /**
-   * Estimated time until a newly launched instance can send metrics to CloudWatch.
-   *
-   * Default: Same as the cooldown
-   *
-   * @param estimatedInstanceWarmup Estimated time until a newly launched instance can send metrics
-   * to CloudWatch. 
-   */
-  public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-    cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
-  }
+    /**
+     * Estimated time until a newly launched instance can send metrics to CloudWatch.
+     *
+     * Default: Same as the cooldown
+     *
+     * @param estimatedInstanceWarmup Estimated time until a newly launched instance can send
+     *   metrics to CloudWatch.
+     */
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+        cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
+    }
 
-  /**
-   * The aggregation type for the CloudWatch metrics.
-   *
-   * Default: Average
-   *
-   * @param metricAggregationType The aggregation type for the CloudWatch metrics. 
-   */
-  public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-    cdkBuilder.metricAggregationType(metricAggregationType)
-  }
+    /**
+     * The aggregation type for the CloudWatch metrics.
+     *
+     * Default: Average
+     *
+     * @param metricAggregationType The aggregation type for the CloudWatch metrics.
+     */
+    public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
+        cdkBuilder.metricAggregationType(metricAggregationType)
+    }
 
-  /**
-   * Minimum absolute number to adjust capacity with as result of percentage scaling.
-   *
-   * Only when using AdjustmentType = PercentChangeInCapacity, this number controls
-   * the minimum absolute effect size.
-   *
-   * Default: No minimum scaling effect
-   *
-   * @param minAdjustmentMagnitude Minimum absolute number to adjust capacity with as result of
-   * percentage scaling. 
-   */
-  public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
-  }
+    /**
+     * Minimum absolute number to adjust capacity with as result of percentage scaling.
+     *
+     * Only when using AdjustmentType = PercentChangeInCapacity, this number controls the minimum
+     * absolute effect size.
+     *
+     * Default: No minimum scaling effect
+     *
+     * @param minAdjustmentMagnitude Minimum absolute number to adjust capacity with as result of
+     *   percentage scaling.
+     */
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+        cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
+    }
 
-  public fun build(): StepScalingAction = cdkBuilder.build()
+    public fun build(): StepScalingAction = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.omics
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.omics.CfnAnnotationStore
  * A genome reference.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.omics.CfnAnnotationStore
  */
 @CdkDslMarker
 public class CfnAnnotationStoreReferenceItemPropertyDsl {
-  private val cdkBuilder: CfnAnnotationStore.ReferenceItemProperty.Builder =
-      CfnAnnotationStore.ReferenceItemProperty.builder()
+    private val cdkBuilder: CfnAnnotationStore.ReferenceItemProperty.Builder =
+        CfnAnnotationStore.ReferenceItemProperty.builder()
 
-  /**
-   * @param referenceArn The reference's ARN. 
-   */
-  public fun referenceArn(referenceArn: String) {
-    cdkBuilder.referenceArn(referenceArn)
-  }
+    /** @param referenceArn The reference's ARN. */
+    public fun referenceArn(referenceArn: String) {
+        cdkBuilder.referenceArn(referenceArn)
+    }
 
-  public fun build(): CfnAnnotationStore.ReferenceItemProperty = cdkBuilder.build()
+    public fun build(): CfnAnnotationStore.ReferenceItemProperty = cdkBuilder.build()
 }

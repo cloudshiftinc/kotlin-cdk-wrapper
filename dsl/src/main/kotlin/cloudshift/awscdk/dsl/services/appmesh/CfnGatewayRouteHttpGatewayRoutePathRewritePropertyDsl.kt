@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  * An object that represents the path to rewrite.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
  */
 @CdkDslMarker
 public class CfnGatewayRouteHttpGatewayRoutePathRewritePropertyDsl {
-  private val cdkBuilder: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Builder =
-      CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.builder()
+    private val cdkBuilder: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Builder =
+        CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.builder()
 
-  /**
-   * @param exact The exact path to rewrite.
-   */
-  public fun exact(exact: String) {
-    cdkBuilder.exact(exact)
-  }
+    /** @param exact The exact path to rewrite. */
+    public fun exact(exact: String) {
+        cdkBuilder.exact(exact)
+    }
 
-  public fun build(): CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty = cdkBuilder.build()
+    public fun build(): CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty = cdkBuilder.build()
 }

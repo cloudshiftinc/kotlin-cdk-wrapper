@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.docdbelastic
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.docdbelastic.CfnCluster
 import software.amazon.awscdk.services.docdbelastic.CfnClusterProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object docdbelastic {
     /**
      * Creates a new Amazon DocumentDB elastic cluster and returns its cluster structure.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -42,7 +50,7 @@ public object docdbelastic {
     public inline fun cfnCluster(
         scope: Construct,
         id: String,
-        block: CfnClusterDsl.() -> Unit = {}
+        block: CfnClusterDsl.() -> Unit = {},
     ): CfnCluster {
         val builder = CfnClusterDsl(scope, id)
         builder.apply(block)
@@ -53,7 +61,6 @@ public object docdbelastic {
      * Properties for defining a `CfnCluster`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.

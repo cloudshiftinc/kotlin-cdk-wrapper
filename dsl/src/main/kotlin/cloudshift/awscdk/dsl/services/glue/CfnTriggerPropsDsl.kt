@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.glue
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.glue.CfnTriggerProps
  * Properties for defining a `CfnTrigger`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -66,137 +74,113 @@ import software.amazon.awscdk.services.glue.CfnTriggerProps
  */
 @CdkDslMarker
 public class CfnTriggerPropsDsl {
-  private val cdkBuilder: CfnTriggerProps.Builder = CfnTriggerProps.builder()
+    private val cdkBuilder: CfnTriggerProps.Builder = CfnTriggerProps.builder()
 
-  private val _actions: MutableList<Any> = mutableListOf()
+    private val _actions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param actions The actions initiated by this trigger. 
-   */
-  public fun actions(vararg actions: Any) {
-    _actions.addAll(listOf(*actions))
-  }
+    /** @param actions The actions initiated by this trigger. */
+    public fun actions(vararg actions: Any) {
+        _actions.addAll(listOf(*actions))
+    }
 
-  /**
-   * @param actions The actions initiated by this trigger. 
-   */
-  public fun actions(actions: Collection<Any>) {
-    _actions.addAll(actions)
-  }
+    /** @param actions The actions initiated by this trigger. */
+    public fun actions(actions: Collection<Any>) {
+        _actions.addAll(actions)
+    }
 
-  /**
-   * @param actions The actions initiated by this trigger. 
-   */
-  public fun actions(actions: IResolvable) {
-    cdkBuilder.actions(actions)
-  }
+    /** @param actions The actions initiated by this trigger. */
+    public fun actions(actions: IResolvable) {
+        cdkBuilder.actions(actions)
+    }
 
-  /**
-   * @param description A description of this trigger.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description of this trigger. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param eventBatchingCondition Batch condition that must be met (specified number of events
-   * received or batch time window expired) before EventBridge event trigger fires.
-   */
-  public fun eventBatchingCondition(eventBatchingCondition: IResolvable) {
-    cdkBuilder.eventBatchingCondition(eventBatchingCondition)
-  }
+    /**
+     * @param eventBatchingCondition Batch condition that must be met (specified number of events
+     *   received or batch time window expired) before EventBridge event trigger fires.
+     */
+    public fun eventBatchingCondition(eventBatchingCondition: IResolvable) {
+        cdkBuilder.eventBatchingCondition(eventBatchingCondition)
+    }
 
-  /**
-   * @param eventBatchingCondition Batch condition that must be met (specified number of events
-   * received or batch time window expired) before EventBridge event trigger fires.
-   */
-  public
-      fun eventBatchingCondition(eventBatchingCondition: CfnTrigger.EventBatchingConditionProperty) {
-    cdkBuilder.eventBatchingCondition(eventBatchingCondition)
-  }
+    /**
+     * @param eventBatchingCondition Batch condition that must be met (specified number of events
+     *   received or batch time window expired) before EventBridge event trigger fires.
+     */
+    public fun eventBatchingCondition(
+        eventBatchingCondition: CfnTrigger.EventBatchingConditionProperty
+    ) {
+        cdkBuilder.eventBatchingCondition(eventBatchingCondition)
+    }
 
-  /**
-   * @param name The name of the trigger.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the trigger. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param predicate The predicate of this trigger, which defines when it will fire.
-   */
-  public fun predicate(predicate: IResolvable) {
-    cdkBuilder.predicate(predicate)
-  }
+    /** @param predicate The predicate of this trigger, which defines when it will fire. */
+    public fun predicate(predicate: IResolvable) {
+        cdkBuilder.predicate(predicate)
+    }
 
-  /**
-   * @param predicate The predicate of this trigger, which defines when it will fire.
-   */
-  public fun predicate(predicate: CfnTrigger.PredicateProperty) {
-    cdkBuilder.predicate(predicate)
-  }
+    /** @param predicate The predicate of this trigger, which defines when it will fire. */
+    public fun predicate(predicate: CfnTrigger.PredicateProperty) {
+        cdkBuilder.predicate(predicate)
+    }
 
-  /**
-   * @param schedule A `cron` expression used to specify the schedule.
-   * For more information, see [Time-Based Schedules for Jobs and
-   * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) in the
-   * *AWS Glue Developer Guide* . For example, to run something every day at 12:15 UTC, specify
-   * `cron(15 12 * * ? *)` .
-   */
-  public fun schedule(schedule: String) {
-    cdkBuilder.schedule(schedule)
-  }
+    /**
+     * @param schedule A `cron` expression used to specify the schedule. For more information, see
+     *   [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+     *   in the *AWS Glue Developer Guide* . For example, to run something every day at 12:15 UTC,
+     *   specify `cron(15 12 * * ? *)` .
+     */
+    public fun schedule(schedule: String) {
+        cdkBuilder.schedule(schedule)
+    }
 
-  /**
-   * @param startOnCreation Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when
-   * created.
-   * True is not supported for `ON_DEMAND` triggers.
-   */
-  public fun startOnCreation(startOnCreation: Boolean) {
-    cdkBuilder.startOnCreation(startOnCreation)
-  }
+    /**
+     * @param startOnCreation Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when
+     *   created. True is not supported for `ON_DEMAND` triggers.
+     */
+    public fun startOnCreation(startOnCreation: Boolean) {
+        cdkBuilder.startOnCreation(startOnCreation)
+    }
 
-  /**
-   * @param startOnCreation Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when
-   * created.
-   * True is not supported for `ON_DEMAND` triggers.
-   */
-  public fun startOnCreation(startOnCreation: IResolvable) {
-    cdkBuilder.startOnCreation(startOnCreation)
-  }
+    /**
+     * @param startOnCreation Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when
+     *   created. True is not supported for `ON_DEMAND` triggers.
+     */
+    public fun startOnCreation(startOnCreation: IResolvable) {
+        cdkBuilder.startOnCreation(startOnCreation)
+    }
 
-  /**
-   * @param tags The tags to use with this trigger.
-   */
-  public fun tags(tags: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(tags)
-    cdkBuilder.tags(builder.map)
-  }
+    /** @param tags The tags to use with this trigger. */
+    public fun tags(tags: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(tags)
+        cdkBuilder.tags(builder.map)
+    }
 
-  /**
-   * @param tags The tags to use with this trigger.
-   */
-  public fun tags(tags: Any) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags The tags to use with this trigger. */
+    public fun tags(tags: Any) {
+        cdkBuilder.tags(tags)
+    }
 
-  /**
-   * @param type The type of trigger that this is. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The type of trigger that this is. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  /**
-   * @param workflowName The name of the workflow associated with the trigger.
-   */
-  public fun workflowName(workflowName: String) {
-    cdkBuilder.workflowName(workflowName)
-  }
+    /** @param workflowName The name of the workflow associated with the trigger. */
+    public fun workflowName(workflowName: String) {
+        cdkBuilder.workflowName(workflowName)
+    }
 
-  public fun build(): CfnTriggerProps {
-    if(_actions.isNotEmpty()) cdkBuilder.actions(_actions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnTriggerProps {
+        if (_actions.isNotEmpty()) cdkBuilder.actions(_actions)
+        return cdkBuilder.build()
+    }
 }

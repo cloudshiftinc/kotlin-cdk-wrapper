@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.timestream
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.timestream.CfnScheduledQuery
  * Configuration of the schedule of the query.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.services.timestream.CfnScheduledQuery
  */
 @CdkDslMarker
 public class CfnScheduledQueryScheduleConfigurationPropertyDsl {
-  private val cdkBuilder: CfnScheduledQuery.ScheduleConfigurationProperty.Builder =
-      CfnScheduledQuery.ScheduleConfigurationProperty.builder()
+    private val cdkBuilder: CfnScheduledQuery.ScheduleConfigurationProperty.Builder =
+        CfnScheduledQuery.ScheduleConfigurationProperty.builder()
 
-  /**
-   * @param scheduleExpression An expression that denotes when to trigger the scheduled query run. 
-   * This can be a cron expression or a rate expression.
-   */
-  public fun scheduleExpression(scheduleExpression: String) {
-    cdkBuilder.scheduleExpression(scheduleExpression)
-  }
+    /**
+     * @param scheduleExpression An expression that denotes when to trigger the scheduled query run.
+     *   This can be a cron expression or a rate expression.
+     */
+    public fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
+    }
 
-  public fun build(): CfnScheduledQuery.ScheduleConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnScheduledQuery.ScheduleConfigurationProperty = cdkBuilder.build()
 }

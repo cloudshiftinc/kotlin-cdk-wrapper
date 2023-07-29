@@ -2,13 +2,13 @@ package cloudshift.gradle.release
 
 import cloudshift.gradle.release.hooks.PreProcessFilesHook
 import cloudshift.gradle.release.tasks.PreReleaseHook
+import javax.inject.Inject
+import kotlin.reflect.KClass
 import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.model.ObjectFactory
 import org.gradle.api.provider.ListProperty
 import org.gradle.api.provider.Property
 import org.gradle.kotlin.dsl.newInstance
-import javax.inject.Inject
-import kotlin.reflect.KClass
 
 abstract class ReleaseExtension @Inject constructor(objects: ObjectFactory) {
 
@@ -51,9 +51,7 @@ abstract class ReleaseExtension @Inject constructor(objects: ObjectFactory) {
 
     internal val checks: Checks = objects.newInstance<Checks>()
 
-    /**
-     * Configure pre-release checks
-     */
+    /** Configure pre-release checks */
     fun checks(block: (Checks).() -> Unit) {
         checks.apply(block)
     }
@@ -90,9 +88,7 @@ abstract class ReleaseExtension @Inject constructor(objects: ObjectFactory) {
 
     internal val versionProperties = objects.newInstance<VersionProperties>()
 
-    /**
-     * Configure where the version property lives.
-     */
+    /** Configure where the version property lives. */
     fun versionProperties(block: (VersionProperties).() -> Unit) {
         versionProperties.apply(block)
     }
@@ -134,7 +130,10 @@ abstract class ReleaseExtension @Inject constructor(objects: ObjectFactory) {
     }
 }
 
-internal class PreReleaseHookSpec<T : PreReleaseHook>(val klass: KClass<T>, val parameters: Array<out Any>)
+internal class PreReleaseHookSpec<T : PreReleaseHook>(
+    val klass: KClass<T>,
+    val parameters: Array<out Any>
+)
 
 /**
  * Adds a pre-release hook for processing files, either via templates or in-line token replacements.
@@ -156,18 +155,14 @@ class PreProcessFilesDsl {
     internal val templateSpecs = mutableListOf<PreProcessFilesHook.TemplateSpec>()
     internal val replacementSpecs = mutableListOf<PreProcessFilesHook.ReplacementSpec>()
 
-    /**
-     *
-     */
+    /**  */
     fun templates(sourceDir: Any, destinationDir: Any, block: (TemplateDsl).() -> Unit = {}) {
         val dsl = TemplateDsl(sourceDir, destinationDir)
         dsl.apply(block)
         templateSpecs.add(dsl.build())
     }
 
-    /**
-     *
-     */
+    /**  */
     fun replacements(block: (ReplacementDsl).() -> Unit) {
         val dsl = ReplacementDsl()
         dsl.apply(block)
@@ -180,28 +175,25 @@ class PreProcessFilesDsl {
         private val excludes = mutableListOf<String>()
         private val properties = mutableMapOf<String, String>()
 
-        /**
-         *
-         */
+        /**  */
         fun includes(vararg pattern: String) {
             includes.addAll(pattern)
         }
 
-        /**
-         *
-         */
+        /**  */
         fun excludes(vararg pattern: String) {
             excludes.addAll(pattern)
         }
 
-//        /**
-//         * By default, files generated from templates will fail the build if they have been tampered with.
-//         *
-//         * Call `allowTampering` to disable this check.
-//         */
-//        fun allowTampering() {
-//            preventTampering = false
-//        }
+        //        /**
+        //         * By default, files generated from templates will fail the build if they have
+        // been tampered with.
+        //         *
+        //         * Call `allowTampering` to disable this check.
+        //         */
+        //        fun allowTampering() {
+        //            preventTampering = false
+        //        }
 
         internal fun build(): PreProcessFilesHook.TemplateSpec {
             return PreProcessFilesHook.TemplateSpec(
@@ -220,43 +212,37 @@ class PreProcessFilesDsl {
         private val excludes = mutableListOf<String>()
         private val replacements = mutableMapOf<String, String>()
 
-        /**
-         *
-         */
+        /**  */
         fun includes(vararg pattern: String) {
             includes.addAll(pattern)
         }
 
-        /**
-         *
-         */
+        /**  */
         fun excludes(vararg pattern: String) {
             excludes.addAll(pattern)
         }
 
-        /**
-         *
-         */
+        /**  */
         fun replace(string: String, replacement: String) {
             replacements.put(string, replacement)
         }
 
-        /**
-         *
-         */
+        /**  */
         fun replace(replacement: Pair<String, String>) {
             replacements.put(replacement.first, replacement.second)
         }
 
-        /**
-         *
-         */
+        /**  */
         fun replace(replacements: Map<String, String>) {
             this.replacements.putAll(replacements)
         }
 
         internal fun build(): PreProcessFilesHook.ReplacementSpec {
-            return PreProcessFilesHook.ReplacementSpec(includes = includes, excludes = excludes, replacements = replacements)
+            return PreProcessFilesHook.ReplacementSpec(
+                includes = includes,
+                excludes = excludes,
+                replacements = replacements
+            )
         }
     }
 }

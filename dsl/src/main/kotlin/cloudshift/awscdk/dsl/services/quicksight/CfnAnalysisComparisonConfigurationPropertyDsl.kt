@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 /**
  * The comparison display configuration of a KPI or gauge chart.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -72,17 +80,15 @@ public class CfnAnalysisComparisonConfigurationPropertyDsl {
     private val cdkBuilder: CfnAnalysis.ComparisonConfigurationProperty.Builder =
         CfnAnalysis.ComparisonConfigurationProperty.builder()
 
-    /**
-     * @param comparisonFormat The format of the comparison.
-     */
+    /** @param comparisonFormat The format of the comparison. */
     public fun comparisonFormat(comparisonFormat: IResolvable) {
         cdkBuilder.comparisonFormat(comparisonFormat)
     }
 
-    /**
-     * @param comparisonFormat The format of the comparison.
-     */
-    public fun comparisonFormat(comparisonFormat: CfnAnalysis.ComparisonFormatConfigurationProperty) {
+    /** @param comparisonFormat The format of the comparison. */
+    public fun comparisonFormat(
+        comparisonFormat: CfnAnalysis.ComparisonFormatConfigurationProperty
+    ) {
         cdkBuilder.comparisonFormat(comparisonFormat)
     }
 

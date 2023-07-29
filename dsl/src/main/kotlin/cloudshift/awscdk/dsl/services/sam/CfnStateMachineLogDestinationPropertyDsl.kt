@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sam.CfnStateMachine
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,23 +32,20 @@ import software.amazon.awscdk.services.sam.CfnStateMachine
  */
 @CdkDslMarker
 public class CfnStateMachineLogDestinationPropertyDsl {
-  private val cdkBuilder: CfnStateMachine.LogDestinationProperty.Builder =
-      CfnStateMachine.LogDestinationProperty.builder()
+    private val cdkBuilder: CfnStateMachine.LogDestinationProperty.Builder =
+        CfnStateMachine.LogDestinationProperty.builder()
 
-  /**
-   * @param cloudWatchLogsLogGroup the value to be set. 
-   */
-  public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
-    cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup)
-  }
+    /** @param cloudWatchLogsLogGroup the value to be set. */
+    public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup)
+    }
 
-  /**
-   * @param cloudWatchLogsLogGroup the value to be set. 
-   */
-  public
-      fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CfnStateMachine.CloudWatchLogsLogGroupProperty) {
-    cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup)
-  }
+    /** @param cloudWatchLogsLogGroup the value to be set. */
+    public fun cloudWatchLogsLogGroup(
+        cloudWatchLogsLogGroup: CfnStateMachine.CloudWatchLogsLogGroupProperty
+    ) {
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup)
+    }
 
-  public fun build(): CfnStateMachine.LogDestinationProperty = cdkBuilder.build()
+    public fun build(): CfnStateMachine.LogDestinationProperty = cdkBuilder.build()
 }

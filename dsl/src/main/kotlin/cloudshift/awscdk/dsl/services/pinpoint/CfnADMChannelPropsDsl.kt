@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnADMChannelProps
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnADMChannelProps
 
 /**
  * Properties for defining a `CfnADMChannel`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,7 +42,7 @@ public class CfnADMChannelPropsDsl {
 
     /**
      * @param applicationId The unique identifier for the Amazon Pinpoint application that the ADM
-     * channel applies to.
+     *   channel applies to.
      */
     public fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
@@ -49,22 +57,18 @@ public class CfnADMChannelPropsDsl {
 
     /**
      * @param clientSecret The Client Secret that you received from Amazon to send messages by using
-     * ADM.
+     *   ADM.
      */
     public fun clientSecret(clientSecret: String) {
         cdkBuilder.clientSecret(clientSecret)
     }
 
-    /**
-     * @param enabled Specifies whether to enable the ADM channel for the application.
-     */
+    /** @param enabled Specifies whether to enable the ADM channel for the application. */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
-    /**
-     * @param enabled Specifies whether to enable the ADM channel for the application.
-     */
+    /** @param enabled Specifies whether to enable the ADM channel for the application. */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
     }

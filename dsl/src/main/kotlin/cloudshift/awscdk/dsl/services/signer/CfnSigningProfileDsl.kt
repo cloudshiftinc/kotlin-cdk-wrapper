@@ -1,17 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.signer
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.signer.CfnSigningProfile
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.signer.CfnSigningProfile
+import software.constructs.Construct
 
 /**
  * Creates a signing profile.
@@ -20,7 +29,6 @@ import kotlin.collections.MutableList
  * job.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,7 +53,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnSigningProfileDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnSigningProfile.Builder = CfnSigningProfile.Builder.create(scope, id)
 
@@ -55,6 +63,7 @@ public class CfnSigningProfileDsl(
      * The ID of a platform that is available for use by a signing profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-platformid)
+     *
      * @param platformId The ID of a platform that is available for use by a signing profile.
      */
     public fun platformId(platformId: String) {
@@ -67,8 +76,9 @@ public class CfnSigningProfileDsl(
      * If unspecified, the default is 135 months.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-signaturevalidityperiod)
+     *
      * @param signatureValidityPeriod The validity period override for any signature generated using
-     * this signing profile.
+     *   this signing profile.
      */
     public fun signatureValidityPeriod(signatureValidityPeriod: IResolvable) {
         cdkBuilder.signatureValidityPeriod(signatureValidityPeriod)
@@ -80,10 +90,13 @@ public class CfnSigningProfileDsl(
      * If unspecified, the default is 135 months.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-signaturevalidityperiod)
+     *
      * @param signatureValidityPeriod The validity period override for any signature generated using
-     * this signing profile.
+     *   this signing profile.
      */
-    public fun signatureValidityPeriod(signatureValidityPeriod: CfnSigningProfile.SignatureValidityPeriodProperty) {
+    public fun signatureValidityPeriod(
+        signatureValidityPeriod: CfnSigningProfile.SignatureValidityPeriodProperty
+    ) {
         cdkBuilder.signatureValidityPeriod(signatureValidityPeriod)
     }
 
@@ -91,6 +104,7 @@ public class CfnSigningProfileDsl(
      * A list of tags associated with the signing profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-tags)
+     *
      * @param tags A list of tags associated with the signing profile.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -101,6 +115,7 @@ public class CfnSigningProfileDsl(
      * A list of tags associated with the signing profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-tags)
+     *
      * @param tags A list of tags associated with the signing profile.
      */
     public fun tags(tags: Collection<CfnTag>) {

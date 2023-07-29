@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The configuration of a tree map.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -23,7 +31,7 @@ public class CfnTemplateTreeMapConfigurationPropertyDsl {
 
     /**
      * @param colorLabelOptions The label options (label text, label visibility) for the colors
-     * displayed in a tree map.
+     *   displayed in a tree map.
      */
     public fun colorLabelOptions(colorLabelOptions: IResolvable) {
         cdkBuilder.colorLabelOptions(colorLabelOptions)
@@ -31,57 +39,45 @@ public class CfnTemplateTreeMapConfigurationPropertyDsl {
 
     /**
      * @param colorLabelOptions The label options (label text, label visibility) for the colors
-     * displayed in a tree map.
+     *   displayed in a tree map.
      */
     public fun colorLabelOptions(colorLabelOptions: CfnTemplate.ChartAxisLabelOptionsProperty) {
         cdkBuilder.colorLabelOptions(colorLabelOptions)
     }
 
-    /**
-     * @param colorScale The color options (gradient color, point of divergence) of a tree map.
-     */
+    /** @param colorScale The color options (gradient color, point of divergence) of a tree map. */
     public fun colorScale(colorScale: IResolvable) {
         cdkBuilder.colorScale(colorScale)
     }
 
-    /**
-     * @param colorScale The color options (gradient color, point of divergence) of a tree map.
-     */
+    /** @param colorScale The color options (gradient color, point of divergence) of a tree map. */
     public fun colorScale(colorScale: CfnTemplate.ColorScaleProperty) {
         cdkBuilder.colorScale(colorScale)
     }
 
-    /**
-     * @param dataLabels The options that determine if visual data labels are displayed.
-     */
+    /** @param dataLabels The options that determine if visual data labels are displayed. */
     public fun dataLabels(dataLabels: IResolvable) {
         cdkBuilder.dataLabels(dataLabels)
     }
 
-    /**
-     * @param dataLabels The options that determine if visual data labels are displayed.
-     */
+    /** @param dataLabels The options that determine if visual data labels are displayed. */
     public fun dataLabels(dataLabels: CfnTemplate.DataLabelOptionsProperty) {
         cdkBuilder.dataLabels(dataLabels)
     }
 
-    /**
-     * @param fieldWells The field wells of the visual.
-     */
+    /** @param fieldWells The field wells of the visual. */
     public fun fieldWells(fieldWells: IResolvable) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
-    /**
-     * @param fieldWells The field wells of the visual.
-     */
+    /** @param fieldWells The field wells of the visual. */
     public fun fieldWells(fieldWells: CfnTemplate.TreeMapFieldWellsProperty) {
         cdkBuilder.fieldWells(fieldWells)
     }
 
     /**
      * @param groupLabelOptions The label options (label text, label visibility) of the groups that
-     * are displayed in a tree map.
+     *   are displayed in a tree map.
      */
     public fun groupLabelOptions(groupLabelOptions: IResolvable) {
         cdkBuilder.groupLabelOptions(groupLabelOptions)
@@ -89,66 +85,54 @@ public class CfnTemplateTreeMapConfigurationPropertyDsl {
 
     /**
      * @param groupLabelOptions The label options (label text, label visibility) of the groups that
-     * are displayed in a tree map.
+     *   are displayed in a tree map.
      */
     public fun groupLabelOptions(groupLabelOptions: CfnTemplate.ChartAxisLabelOptionsProperty) {
         cdkBuilder.groupLabelOptions(groupLabelOptions)
     }
 
-    /**
-     * @param legend The legend display setup of the visual.
-     */
+    /** @param legend The legend display setup of the visual. */
     public fun legend(legend: IResolvable) {
         cdkBuilder.legend(legend)
     }
 
-    /**
-     * @param legend The legend display setup of the visual.
-     */
+    /** @param legend The legend display setup of the visual. */
     public fun legend(legend: CfnTemplate.LegendOptionsProperty) {
         cdkBuilder.legend(legend)
     }
 
     /**
-     * @param sizeLabelOptions The label options (label text, label visibility) of the sizes that are
-     * displayed in a tree map.
+     * @param sizeLabelOptions The label options (label text, label visibility) of the sizes that
+     *   are displayed in a tree map.
      */
     public fun sizeLabelOptions(sizeLabelOptions: IResolvable) {
         cdkBuilder.sizeLabelOptions(sizeLabelOptions)
     }
 
     /**
-     * @param sizeLabelOptions The label options (label text, label visibility) of the sizes that are
-     * displayed in a tree map.
+     * @param sizeLabelOptions The label options (label text, label visibility) of the sizes that
+     *   are displayed in a tree map.
      */
     public fun sizeLabelOptions(sizeLabelOptions: CfnTemplate.ChartAxisLabelOptionsProperty) {
         cdkBuilder.sizeLabelOptions(sizeLabelOptions)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a tree map.
-     */
+    /** @param sortConfiguration The sort configuration of a tree map. */
     public fun sortConfiguration(sortConfiguration: IResolvable) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param sortConfiguration The sort configuration of a tree map.
-     */
+    /** @param sortConfiguration The sort configuration of a tree map. */
     public fun sortConfiguration(sortConfiguration: CfnTemplate.TreeMapSortConfigurationProperty) {
         cdkBuilder.sortConfiguration(sortConfiguration)
     }
 
-    /**
-     * @param tooltip The tooltip display setup of the visual.
-     */
+    /** @param tooltip The tooltip display setup of the visual. */
     public fun tooltip(tooltip: IResolvable) {
         cdkBuilder.tooltip(tooltip)
     }
 
-    /**
-     * @param tooltip The tooltip display setup of the visual.
-     */
+    /** @param tooltip The tooltip display setup of the visual. */
     public fun tooltip(tooltip: CfnTemplate.TooltipOptionsProperty) {
         cdkBuilder.tooltip(tooltip)
     }

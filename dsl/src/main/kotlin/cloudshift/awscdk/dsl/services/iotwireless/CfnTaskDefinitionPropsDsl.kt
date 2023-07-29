@@ -1,24 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotwireless.CfnTaskDefinition
-import software.amazon.awscdk.services.iotwireless.CfnTaskDefinitionProps
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotwireless.CfnTaskDefinition
+import software.amazon.awscdk.services.iotwireless.CfnTaskDefinitionProps
 
 /**
  * Properties for defining a `CfnTaskDefinition`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -74,47 +82,43 @@ public class CfnTaskDefinitionPropsDsl {
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * @param autoCreateTasks Whether to automatically create tasks using this task definition for all
-     * gateways with the specified current version.
-     * If `false` , the task must be created by calling `CreateWirelessGatewayTask` .
+     * @param autoCreateTasks Whether to automatically create tasks using this task definition for
+     *   all gateways with the specified current version. If `false` , the task must be created by
+     *   calling `CreateWirelessGatewayTask` .
      */
     public fun autoCreateTasks(autoCreateTasks: Boolean) {
         cdkBuilder.autoCreateTasks(autoCreateTasks)
     }
 
     /**
-     * @param autoCreateTasks Whether to automatically create tasks using this task definition for all
-     * gateways with the specified current version.
-     * If `false` , the task must be created by calling `CreateWirelessGatewayTask` .
+     * @param autoCreateTasks Whether to automatically create tasks using this task definition for
+     *   all gateways with the specified current version. If `false` , the task must be created by
+     *   calling `CreateWirelessGatewayTask` .
      */
     public fun autoCreateTasks(autoCreateTasks: IResolvable) {
         cdkBuilder.autoCreateTasks(autoCreateTasks)
     }
 
-    /**
-     * @param loRaWanUpdateGatewayTaskEntry the value to be set.
-     */
+    /** @param loRaWanUpdateGatewayTaskEntry the value to be set. */
     public fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
         cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry)
     }
 
-    /**
-     * @param loRaWanUpdateGatewayTaskEntry the value to be set.
-     */
-    public fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty) {
+    /** @param loRaWanUpdateGatewayTaskEntry the value to be set. */
+    public fun loRaWanUpdateGatewayTaskEntry(
+        loRaWanUpdateGatewayTaskEntry: CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty
+    ) {
         cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry)
     }
 
-    /**
-     * @param name The name of the new resource.
-     */
+    /** @param name The name of the new resource. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
     /**
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
-     * Tags can have a minimum of 0 and a maximum of 50 items.
+     *   Tags can have a minimum of 0 and a maximum of 50 items.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
@@ -122,30 +126,26 @@ public class CfnTaskDefinitionPropsDsl {
 
     /**
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
-     * Tags can have a minimum of 0 and a maximum of 50 items.
+     *   Tags can have a minimum of 0 and a maximum of 50 items.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }
 
     /**
-     * @param taskDefinitionType A filter to list only the wireless gateway task definitions that use
-     * this task definition type.
+     * @param taskDefinitionType A filter to list only the wireless gateway task definitions that
+     *   use this task definition type.
      */
     public fun taskDefinitionType(taskDefinitionType: String) {
         cdkBuilder.taskDefinitionType(taskDefinitionType)
     }
 
-    /**
-     * @param update Information about the gateways to update.
-     */
+    /** @param update Information about the gateways to update. */
     public fun update(update: IResolvable) {
         cdkBuilder.update(update)
     }
 
-    /**
-     * @param update Information about the gateways to update.
-     */
+    /** @param update Information about the gateways to update. */
     public fun update(update: CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty) {
         cdkBuilder.update(update)
     }

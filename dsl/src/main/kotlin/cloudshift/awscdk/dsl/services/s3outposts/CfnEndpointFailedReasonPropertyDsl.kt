@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3outposts
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.s3outposts.CfnEndpoint
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,18 @@ import software.amazon.awscdk.services.s3outposts.CfnEndpoint
  */
 @CdkDslMarker
 public class CfnEndpointFailedReasonPropertyDsl {
-  private val cdkBuilder: CfnEndpoint.FailedReasonProperty.Builder =
-      CfnEndpoint.FailedReasonProperty.builder()
+    private val cdkBuilder: CfnEndpoint.FailedReasonProperty.Builder =
+        CfnEndpoint.FailedReasonProperty.builder()
 
-  /**
-   * @param errorCode the value to be set.
-   */
-  public fun errorCode(errorCode: String) {
-    cdkBuilder.errorCode(errorCode)
-  }
+    /** @param errorCode the value to be set. */
+    public fun errorCode(errorCode: String) {
+        cdkBuilder.errorCode(errorCode)
+    }
 
-  /**
-   * @param message the value to be set.
-   */
-  public fun message(message: String) {
-    cdkBuilder.message(message)
-  }
+    /** @param message the value to be set. */
+    public fun message(message: String) {
+        cdkBuilder.message(message)
+    }
 
-  public fun build(): CfnEndpoint.FailedReasonProperty = cdkBuilder.build()
+    public fun build(): CfnEndpoint.FailedReasonProperty = cdkBuilder.build()
 }

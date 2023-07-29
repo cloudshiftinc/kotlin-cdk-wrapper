@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurity
  * Content-Security-Policy HTTP response header.
  *
  * Example:
- *
  * ```
  * // Using an existing managed response headers policy
  * S3Origin bucketOrigin;
@@ -62,25 +70,25 @@ import software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurity
  */
 @CdkDslMarker
 public class ResponseHeadersContentSecurityPolicyDsl {
-  private val cdkBuilder: ResponseHeadersContentSecurityPolicy.Builder =
-      ResponseHeadersContentSecurityPolicy.builder()
+    private val cdkBuilder: ResponseHeadersContentSecurityPolicy.Builder =
+        ResponseHeadersContentSecurityPolicy.builder()
 
-  /**
-   * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as
-   * values for the Content-Security-Policy HTTP response header. 
-   */
-  public fun contentSecurityPolicy(contentSecurityPolicy: String) {
-    cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
-  }
+    /**
+     * @param contentSecurityPolicy The policy directives and their values that CloudFront includes
+     *   as values for the Content-Security-Policy HTTP response header.
+     */
+    public fun contentSecurityPolicy(contentSecurityPolicy: String) {
+        cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
+    }
 
-  /**
-   * @param override A Boolean that determines whether CloudFront overrides the
-   * Content-Security-Policy HTTP response header received from the origin with the one specified in
-   * this response headers policy. 
-   */
-  public fun `override`(`override`: Boolean) {
-    cdkBuilder.`override`(`override`)
-  }
+    /**
+     * @param override A Boolean that determines whether CloudFront overrides the
+     *   Content-Security-Policy HTTP response header received from the origin with the one
+     *   specified in this response headers policy.
+     */
+    public fun `override`(`override`: Boolean) {
+        cdkBuilder.`override`(`override`)
+    }
 
-  public fun build(): ResponseHeadersContentSecurityPolicy = cdkBuilder.build()
+    public fun build(): ResponseHeadersContentSecurityPolicy = cdkBuilder.build()
 }

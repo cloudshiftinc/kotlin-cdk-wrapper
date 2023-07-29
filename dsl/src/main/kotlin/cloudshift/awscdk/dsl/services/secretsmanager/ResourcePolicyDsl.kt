@@ -1,12 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.ResourcePolicy
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Resource Policy for SecretsManager Secrets.
@@ -15,15 +24,13 @@ import kotlin.String
  *
  * You almost never need to define this construct directly.
  *
- * All AWS resources that support resource policies have a method called
- * `addToResourcePolicy()`, which will automatically create a new resource
- * policy if one doesn't exist yet, otherwise it will add to the existing
- * policy.
+ * All AWS resources that support resource policies have a method called `addToResourcePolicy()`,
+ * which will automatically create a new resource policy if one doesn't exist yet, otherwise it will
+ * add to the existing policy.
  *
  * Prefer to use `addToResourcePolicy()` instead.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,7 +44,7 @@ import kotlin.String
 @CdkDslMarker
 public class ResourcePolicyDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: ResourcePolicy.Builder = ResourcePolicy.Builder.create(scope, id)
 

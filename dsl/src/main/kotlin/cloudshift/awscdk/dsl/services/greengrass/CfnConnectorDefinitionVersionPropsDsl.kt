@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersionP
  * Properties for defining a `CfnConnectorDefinitionVersion`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,48 +44,45 @@ import software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersionP
  */
 @CdkDslMarker
 public class CfnConnectorDefinitionVersionPropsDsl {
-  private val cdkBuilder: CfnConnectorDefinitionVersionProps.Builder =
-      CfnConnectorDefinitionVersionProps.builder()
+    private val cdkBuilder: CfnConnectorDefinitionVersionProps.Builder =
+        CfnConnectorDefinitionVersionProps.builder()
 
-  private val _connectors: MutableList<Any> = mutableListOf()
+    private val _connectors: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param connectorDefinitionId The ID of the connector definition associated with this version. 
-   * This value is a GUID.
-   */
-  public fun connectorDefinitionId(connectorDefinitionId: String) {
-    cdkBuilder.connectorDefinitionId(connectorDefinitionId)
-  }
+    /**
+     * @param connectorDefinitionId The ID of the connector definition associated with this version.
+     *   This value is a GUID.
+     */
+    public fun connectorDefinitionId(connectorDefinitionId: String) {
+        cdkBuilder.connectorDefinitionId(connectorDefinitionId)
+    }
 
-  /**
-   * @param connectors The connectors in this version. 
-   * Only one instance of a given connector can be added to the connector definition version at a
-   * time.
-   */
-  public fun connectors(vararg connectors: Any) {
-    _connectors.addAll(listOf(*connectors))
-  }
+    /**
+     * @param connectors The connectors in this version. Only one instance of a given connector can
+     *   be added to the connector definition version at a time.
+     */
+    public fun connectors(vararg connectors: Any) {
+        _connectors.addAll(listOf(*connectors))
+    }
 
-  /**
-   * @param connectors The connectors in this version. 
-   * Only one instance of a given connector can be added to the connector definition version at a
-   * time.
-   */
-  public fun connectors(connectors: Collection<Any>) {
-    _connectors.addAll(connectors)
-  }
+    /**
+     * @param connectors The connectors in this version. Only one instance of a given connector can
+     *   be added to the connector definition version at a time.
+     */
+    public fun connectors(connectors: Collection<Any>) {
+        _connectors.addAll(connectors)
+    }
 
-  /**
-   * @param connectors The connectors in this version. 
-   * Only one instance of a given connector can be added to the connector definition version at a
-   * time.
-   */
-  public fun connectors(connectors: IResolvable) {
-    cdkBuilder.connectors(connectors)
-  }
+    /**
+     * @param connectors The connectors in this version. Only one instance of a given connector can
+     *   be added to the connector definition version at a time.
+     */
+    public fun connectors(connectors: IResolvable) {
+        cdkBuilder.connectors(connectors)
+    }
 
-  public fun build(): CfnConnectorDefinitionVersionProps {
-    if(_connectors.isNotEmpty()) cdkBuilder.connectors(_connectors)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnConnectorDefinitionVersionProps {
+        if (_connectors.isNotEmpty()) cdkBuilder.connectors(_connectors)
+        return cdkBuilder.build()
+    }
 }

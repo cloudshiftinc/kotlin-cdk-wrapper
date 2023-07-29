@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -7,11 +16,10 @@ import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnFunction
 
 /**
- * The function's [AWS Lambda
- * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+ * The function's
+ * [AWS Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionSnapStartPropertyDsl {
-  private val cdkBuilder: CfnFunction.SnapStartProperty.Builder =
-      CfnFunction.SnapStartProperty.builder()
+    private val cdkBuilder: CfnFunction.SnapStartProperty.Builder =
+        CfnFunction.SnapStartProperty.builder()
 
-  /**
-   * @param applyOn Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized
-   * execution environment when you publish a function version. 
-   */
-  public fun applyOn(applyOn: String) {
-    cdkBuilder.applyOn(applyOn)
-  }
+    /**
+     * @param applyOn Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized
+     *   execution environment when you publish a function version.
+     */
+    public fun applyOn(applyOn: String) {
+        cdkBuilder.applyOn(applyOn)
+    }
 
-  public fun build(): CfnFunction.SnapStartProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.SnapStartProperty = cdkBuilder.build()
 }

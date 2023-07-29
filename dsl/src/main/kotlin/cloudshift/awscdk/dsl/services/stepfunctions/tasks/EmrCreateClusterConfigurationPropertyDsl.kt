@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  * See the RunJobFlow API for complete documentation on input parameters
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,43 +43,42 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
  */
 @CdkDslMarker
 public class EmrCreateClusterConfigurationPropertyDsl {
-  private val cdkBuilder: EmrCreateCluster.ConfigurationProperty.Builder =
-      EmrCreateCluster.ConfigurationProperty.builder()
+    private val cdkBuilder: EmrCreateCluster.ConfigurationProperty.Builder =
+        EmrCreateCluster.ConfigurationProperty.builder()
 
-  private val _configurations: MutableList<EmrCreateCluster.ConfigurationProperty> = mutableListOf()
+    private val _configurations: MutableList<EmrCreateCluster.ConfigurationProperty> =
+        mutableListOf()
 
-  /**
-   * @param classification The classification within a configuration.
-   */
-  public fun classification(classification: String) {
-    cdkBuilder.classification(classification)
-  }
+    /** @param classification The classification within a configuration. */
+    public fun classification(classification: String) {
+        cdkBuilder.classification(classification)
+    }
 
-  /**
-   * @param configurations A list of additional configurations to apply within a configuration
-   * object.
-   */
-  public fun configurations(configurations: EmrCreateClusterConfigurationPropertyDsl.() -> Unit) {
-    _configurations.add(EmrCreateClusterConfigurationPropertyDsl().apply(configurations).build())
-  }
+    /**
+     * @param configurations A list of additional configurations to apply within a configuration
+     *   object.
+     */
+    public fun configurations(configurations: EmrCreateClusterConfigurationPropertyDsl.() -> Unit) {
+        _configurations.add(
+            EmrCreateClusterConfigurationPropertyDsl().apply(configurations).build()
+        )
+    }
 
-  /**
-   * @param configurations A list of additional configurations to apply within a configuration
-   * object.
-   */
-  public fun configurations(configurations: Collection<EmrCreateCluster.ConfigurationProperty>) {
-    _configurations.addAll(configurations)
-  }
+    /**
+     * @param configurations A list of additional configurations to apply within a configuration
+     *   object.
+     */
+    public fun configurations(configurations: Collection<EmrCreateCluster.ConfigurationProperty>) {
+        _configurations.addAll(configurations)
+    }
 
-  /**
-   * @param properties A set of properties specified within a configuration classification.
-   */
-  public fun properties(properties: Map<String, String>) {
-    cdkBuilder.properties(properties)
-  }
+    /** @param properties A set of properties specified within a configuration classification. */
+    public fun properties(properties: Map<String, String>) {
+        cdkBuilder.properties(properties)
+    }
 
-  public fun build(): EmrCreateCluster.ConfigurationProperty {
-    if(_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): EmrCreateCluster.ConfigurationProperty {
+        if (_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
+        return cdkBuilder.build()
+    }
 }

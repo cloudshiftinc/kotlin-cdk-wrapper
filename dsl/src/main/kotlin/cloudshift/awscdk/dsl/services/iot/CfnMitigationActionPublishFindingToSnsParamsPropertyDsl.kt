@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.iot.CfnMitigationAction
  * You can implement your own custom actions in response to the Amazon SNS messages.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,15 +35,13 @@ import software.amazon.awscdk.services.iot.CfnMitigationAction
  */
 @CdkDslMarker
 public class CfnMitigationActionPublishFindingToSnsParamsPropertyDsl {
-  private val cdkBuilder: CfnMitigationAction.PublishFindingToSnsParamsProperty.Builder =
-      CfnMitigationAction.PublishFindingToSnsParamsProperty.builder()
+    private val cdkBuilder: CfnMitigationAction.PublishFindingToSnsParamsProperty.Builder =
+        CfnMitigationAction.PublishFindingToSnsParamsProperty.builder()
 
-  /**
-   * @param topicArn The ARN of the topic to which you want to publish the findings. 
-   */
-  public fun topicArn(topicArn: String) {
-    cdkBuilder.topicArn(topicArn)
-  }
+    /** @param topicArn The ARN of the topic to which you want to publish the findings. */
+    public fun topicArn(topicArn: String) {
+        cdkBuilder.topicArn(topicArn)
+    }
 
-  public fun build(): CfnMitigationAction.PublishFindingToSnsParamsProperty = cdkBuilder.build()
+    public fun build(): CfnMitigationAction.PublishFindingToSnsParamsProperty = cdkBuilder.build()
 }

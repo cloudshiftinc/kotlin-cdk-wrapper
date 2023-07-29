@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  * The connector-specific profile credentials required when using Snowflake.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,20 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
  */
 @CdkDslMarker
 public class CfnConnectorProfileSnowflakeConnectorProfileCredentialsPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.Builder =
-      CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.builder()
+    private val cdkBuilder:
+        CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.Builder =
+        CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty.builder()
 
-  /**
-   * @param password The password that corresponds to the user name. 
-   */
-  public fun password(password: String) {
-    cdkBuilder.password(password)
-  }
+    /** @param password The password that corresponds to the user name. */
+    public fun password(password: String) {
+        cdkBuilder.password(password)
+    }
 
-  /**
-   * @param username The name of the user. 
-   */
-  public fun username(username: String) {
-    cdkBuilder.username(username)
-  }
+    /** @param username The name of the user. */
+    public fun username(username: String) {
+        cdkBuilder.username(username)
+    }
 
-  public fun build(): CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty =
-      cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty =
+        cdkBuilder.build()
 }

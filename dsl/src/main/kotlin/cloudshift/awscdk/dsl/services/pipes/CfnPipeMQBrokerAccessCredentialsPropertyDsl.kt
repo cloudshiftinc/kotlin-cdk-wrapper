@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  * The AWS Secrets Manager secret that stores your broker credentials.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,13 @@ import software.amazon.awscdk.services.pipes.CfnPipe
  */
 @CdkDslMarker
 public class CfnPipeMQBrokerAccessCredentialsPropertyDsl {
-  private val cdkBuilder: CfnPipe.MQBrokerAccessCredentialsProperty.Builder =
-      CfnPipe.MQBrokerAccessCredentialsProperty.builder()
+    private val cdkBuilder: CfnPipe.MQBrokerAccessCredentialsProperty.Builder =
+        CfnPipe.MQBrokerAccessCredentialsProperty.builder()
 
-  /**
-   * @param basicAuth The ARN of the Secrets Manager secret. 
-   */
-  public fun basicAuth(basicAuth: String) {
-    cdkBuilder.basicAuth(basicAuth)
-  }
+    /** @param basicAuth The ARN of the Secrets Manager secret. */
+    public fun basicAuth(basicAuth: String) {
+        cdkBuilder.basicAuth(basicAuth)
+    }
 
-  public fun build(): CfnPipe.MQBrokerAccessCredentialsProperty = cdkBuilder.build()
+    public fun build(): CfnPipe.MQBrokerAccessCredentialsProperty = cdkBuilder.build()
 }

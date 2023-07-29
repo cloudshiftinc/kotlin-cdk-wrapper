@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTopic
 import kotlin.String
 import kotlin.collections.Map
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTopic
 
 /**
  * A structure that represents a metric.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,9 +41,9 @@ public class CfnTopicNamedEntityDefinitionMetricPropertyDsl {
         CfnTopic.NamedEntityDefinitionMetricProperty.builder()
 
     /**
-     * @param aggregation The aggregation of a named entity.
-     * Valid values for this structure are `SUM` , `MIN` , `MAX` , `COUNT` , `AVERAGE` ,
-     * `DISTINCT_COUNT` , `STDEV` , `STDEVP` , `VAR` , `VARP` , `PERCENTILE` , `MEDIAN` , and `CUSTOM` .
+     * @param aggregation The aggregation of a named entity. Valid values for this structure are
+     *   `SUM` , `MIN` , `MAX` , `COUNT` , `AVERAGE` , `DISTINCT_COUNT` , `STDEV` , `STDEVP` , `VAR`
+     *   , `VARP` , `PERCENTILE` , `MEDIAN` , and `CUSTOM` .
      */
     public fun aggregation(aggregation: String) {
         cdkBuilder.aggregation(aggregation)

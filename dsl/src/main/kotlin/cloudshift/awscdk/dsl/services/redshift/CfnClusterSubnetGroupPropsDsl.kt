@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.redshift
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.redshift.CfnClusterSubnetGroupProps
  * Properties for defining a `CfnClusterSubnetGroup`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,56 +43,53 @@ import software.amazon.awscdk.services.redshift.CfnClusterSubnetGroupProps
  */
 @CdkDslMarker
 public class CfnClusterSubnetGroupPropsDsl {
-  private val cdkBuilder: CfnClusterSubnetGroupProps.Builder = CfnClusterSubnetGroupProps.builder()
+    private val cdkBuilder: CfnClusterSubnetGroupProps.Builder =
+        CfnClusterSubnetGroupProps.builder()
 
-  private val _subnetIds: MutableList<String> = mutableListOf()
+    private val _subnetIds: MutableList<String> = mutableListOf()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description A description for the subnet group. 
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description for the subnet group. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param subnetIds An array of VPC subnet IDs. 
-   * A maximum of 20 subnets can be modified in a single request.
-   */
-  public fun subnetIds(vararg subnetIds: String) {
-    _subnetIds.addAll(listOf(*subnetIds))
-  }
+    /**
+     * @param subnetIds An array of VPC subnet IDs. A maximum of 20 subnets can be modified in a
+     *   single request.
+     */
+    public fun subnetIds(vararg subnetIds: String) {
+        _subnetIds.addAll(listOf(*subnetIds))
+    }
 
-  /**
-   * @param subnetIds An array of VPC subnet IDs. 
-   * A maximum of 20 subnets can be modified in a single request.
-   */
-  public fun subnetIds(subnetIds: Collection<String>) {
-    _subnetIds.addAll(subnetIds)
-  }
+    /**
+     * @param subnetIds An array of VPC subnet IDs. A maximum of 20 subnets can be modified in a
+     *   single request.
+     */
+    public fun subnetIds(subnetIds: Collection<String>) {
+        _subnetIds.addAll(subnetIds)
+    }
 
-  /**
-   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this subnet
-   * group.
-   * Use tags to manage your resources.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     *   subnet group. Use tags to manage your resources.
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this subnet
-   * group.
-   * Use tags to manage your resources.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     *   subnet group. Use tags to manage your resources.
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnClusterSubnetGroupProps {
-    if(_subnetIds.isNotEmpty()) cdkBuilder.subnetIds(_subnetIds)
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnClusterSubnetGroupProps {
+        if (_subnetIds.isNotEmpty()) cdkBuilder.subnetIds(_subnetIds)
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

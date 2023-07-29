@@ -1,22 +1,30 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.secretsmanager.HostedRotation
 import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.RotationSchedule
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
 
 /**
  * A rotation schedule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,7 +47,7 @@ import kotlin.String
 @CdkDslMarker
 public class RotationScheduleDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: RotationSchedule.Builder = RotationSchedule.Builder.create(scope, id)
 
@@ -52,7 +60,7 @@ public class RotationScheduleDsl(
      * Default: Duration.days(30)
      *
      * @param automaticallyAfter Specifies the number of days after the previous rotation before
-     * Secrets Manager triggers the next automatic rotation.
+     *   Secrets Manager triggers the next automatic rotation.
      */
     public fun automaticallyAfter(automaticallyAfter: Duration) {
         cdkBuilder.automaticallyAfter(automaticallyAfter)
@@ -76,7 +84,7 @@ public class RotationScheduleDsl(
      * Default: true
      *
      * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
-     * until the next scheduled rotation window.
+     *   until the next scheduled rotation window.
      */
     public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
         cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
@@ -97,7 +105,6 @@ public class RotationScheduleDsl(
      * The secret to rotate.
      *
      * If hosted rotation is used, this must be a JSON string with the following format:
-     *
      * ```
      * {
      * "engine": &lt;required: database engine&gt;,
@@ -112,8 +119,8 @@ public class RotationScheduleDsl(
      * ```
      *
      * This is typically the case for a secret referenced from an
-     * `AWS::SecretsManager::SecretTargetAttachment`
-     * or an `ISecret` returned by the `attach()` method of `Secret`.
+     * `AWS::SecretsManager::SecretTargetAttachment` or an `ISecret` returned by the `attach()`
+     * method of `Secret`.
      *
      * @param secret The secret to rotate.
      */

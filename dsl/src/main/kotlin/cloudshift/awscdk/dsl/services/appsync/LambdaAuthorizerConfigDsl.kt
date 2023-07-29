@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.lambda.IFunction
  * Note that you can only have a single AWS Lambda function configured to authorize your API.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.lambda.*;
  * Function authFunction;
@@ -34,30 +42,27 @@ import software.amazon.awscdk.services.lambda.IFunction
  */
 @CdkDslMarker
 public class LambdaAuthorizerConfigDsl {
-  private val cdkBuilder: LambdaAuthorizerConfig.Builder = LambdaAuthorizerConfig.builder()
+    private val cdkBuilder: LambdaAuthorizerConfig.Builder = LambdaAuthorizerConfig.builder()
 
-  /**
-   * @param handler The authorizer lambda function. 
-   */
-  public fun handler(handler: IFunction) {
-    cdkBuilder.handler(handler)
-  }
+    /** @param handler The authorizer lambda function. */
+    public fun handler(handler: IFunction) {
+        cdkBuilder.handler(handler)
+    }
 
-  /**
-   * @param resultsCacheTtl How long the results are cached.
-   * Disable caching by setting this to 0.
-   */
-  public fun resultsCacheTtl(resultsCacheTtl: Duration) {
-    cdkBuilder.resultsCacheTtl(resultsCacheTtl)
-  }
+    /**
+     * @param resultsCacheTtl How long the results are cached. Disable caching by setting this to 0.
+     */
+    public fun resultsCacheTtl(resultsCacheTtl: Duration) {
+        cdkBuilder.resultsCacheTtl(resultsCacheTtl)
+    }
 
-  /**
-   * @param validationRegex A regular expression for validation of tokens before the Lambda function
-   * is called.
-   */
-  public fun validationRegex(validationRegex: String) {
-    cdkBuilder.validationRegex(validationRegex)
-  }
+    /**
+     * @param validationRegex A regular expression for validation of tokens before the Lambda
+     *   function is called.
+     */
+    public fun validationRegex(validationRegex: String) {
+        cdkBuilder.validationRegex(validationRegex)
+    }
 
-  public fun build(): LambdaAuthorizerConfig = cdkBuilder.build()
+    public fun build(): LambdaAuthorizerConfig = cdkBuilder.build()
 }

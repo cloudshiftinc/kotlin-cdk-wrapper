@@ -1,29 +1,36 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * The `AWS::SecretsManager::SecretTargetAttachment` resource completes the final link between a
- * Secrets Manager secret and the associated database by adding the database connection information to
- * the secret JSON.
+ * Secrets Manager secret and the associated database by adding the database connection information
+ * to the secret JSON.
  *
  * If you want to turn on automatic rotation for a database credential secret, the secret must
- * contain the database connection information. For more information, see [JSON structure of Secrets
- * Manager database credential
- * secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)
+ * contain the database connection information. For more information, see
+ * [JSON structure of Secrets Manager database credential secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)
  * .
  *
- * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
- * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+ * For Amazon RDS master user credentials, see
+ * [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -41,7 +48,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnSecretTargetAttachmentDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnSecretTargetAttachment.Builder =
         CfnSecretTargetAttachment.Builder.create(scope, id)
@@ -54,6 +61,7 @@ public class CfnSecretTargetAttachmentDsl(
      * function with the secret's logical ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-secretid)
+     *
      * @param secretId The ARN or name of the secret.
      */
     public fun secretId(secretId: String) {
@@ -64,6 +72,7 @@ public class CfnSecretTargetAttachmentDsl(
      * The ID of the database or cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targetid)
+     *
      * @param targetId The ID of the database or cluster.
      */
     public fun targetId(targetId: String) {
@@ -75,7 +84,6 @@ public class CfnSecretTargetAttachmentDsl(
      *
      * This value instructs Secrets Manager how to update the secret with the details of the service
      * or database. This value must be one of the following:
-     *
      * * AWS::RDS::DBInstance
      * * AWS::RDS::DBCluster
      * * AWS::Redshift::Cluster
@@ -83,8 +91,9 @@ public class CfnSecretTargetAttachmentDsl(
      * * AWS::DocDB::DBCluster
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targettype)
+     *
      * @param targetType A string that defines the type of service or database associated with the
-     * secret.
+     *   secret.
      */
     public fun targetType(targetType: String) {
         cdkBuilder.targetType(targetType)

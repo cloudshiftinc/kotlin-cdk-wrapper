@@ -1,13 +1,22 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnTagOption
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
 
 /**
  * Specifies a TagOption.
@@ -16,7 +25,6 @@ import kotlin.String
  * creating an AWS tag.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,7 +42,7 @@ import kotlin.String
 @CdkDslMarker
 public class CfnTagOptionDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnTagOption.Builder = CfnTagOption.Builder.create(scope, id)
 
@@ -42,6 +50,7 @@ public class CfnTagOptionDsl(
      * The TagOption active state.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-active)
+     *
      * @param active The TagOption active state.
      */
     public fun active(active: Boolean) {
@@ -52,6 +61,7 @@ public class CfnTagOptionDsl(
      * The TagOption active state.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-active)
+     *
      * @param active The TagOption active state.
      */
     public fun active(active: IResolvable) {
@@ -62,6 +72,7 @@ public class CfnTagOptionDsl(
      * The TagOption key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-key)
+     *
      * @param key The TagOption key.
      */
     public fun key(key: String) {
@@ -72,6 +83,7 @@ public class CfnTagOptionDsl(
      * The TagOption value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-value)
+     *
      * @param value The TagOption value.
      */
     public fun `value`(`value`: String) {

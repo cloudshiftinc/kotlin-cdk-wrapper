@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -24,17 +32,15 @@ public class CfnDashboardGeospatialMapFieldWellsPropertyDsl {
     private val cdkBuilder: CfnDashboard.GeospatialMapFieldWellsProperty.Builder =
         CfnDashboard.GeospatialMapFieldWellsProperty.builder()
 
-    /**
-     * @param geospatialMapAggregatedFieldWells The aggregated field well for a geospatial map.
-     */
+    /** @param geospatialMapAggregatedFieldWells The aggregated field well for a geospatial map. */
     public fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: IResolvable) {
         cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)
     }
 
-    /**
-     * @param geospatialMapAggregatedFieldWells The aggregated field well for a geospatial map.
-     */
-    public fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: CfnDashboard.GeospatialMapAggregatedFieldWellsProperty) {
+    /** @param geospatialMapAggregatedFieldWells The aggregated field well for a geospatial map. */
+    public fun geospatialMapAggregatedFieldWells(
+        geospatialMapAggregatedFieldWells: CfnDashboard.GeospatialMapAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)
     }
 

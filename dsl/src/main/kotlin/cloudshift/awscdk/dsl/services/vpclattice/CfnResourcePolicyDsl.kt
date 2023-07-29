@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -17,7 +26,6 @@ import software.constructs.Construct
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,42 +42,45 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnResourcePolicy.Builder = CfnResourcePolicy.Builder.create(scope, id)
+    private val cdkBuilder: CfnResourcePolicy.Builder = CfnResourcePolicy.Builder.create(scope, id)
 
-  /**
-   * The Amazon Resource Name (ARN) of the service network or service.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcepolicy.html#cfn-vpclattice-resourcepolicy-policy)
-   * @param policy The Amazon Resource Name (ARN) of the service network or service. 
-   */
-  public fun policy(policy: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(policy)
-    cdkBuilder.policy(builder.map)
-  }
+    /**
+     * The Amazon Resource Name (ARN) of the service network or service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcepolicy.html#cfn-vpclattice-resourcepolicy-policy)
+     *
+     * @param policy The Amazon Resource Name (ARN) of the service network or service.
+     */
+    public fun policy(policy: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(policy)
+        cdkBuilder.policy(builder.map)
+    }
 
-  /**
-   * The Amazon Resource Name (ARN) of the service network or service.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcepolicy.html#cfn-vpclattice-resourcepolicy-policy)
-   * @param policy The Amazon Resource Name (ARN) of the service network or service. 
-   */
-  public fun policy(policy: Any) {
-    cdkBuilder.policy(policy)
-  }
+    /**
+     * The Amazon Resource Name (ARN) of the service network or service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcepolicy.html#cfn-vpclattice-resourcepolicy-policy)
+     *
+     * @param policy The Amazon Resource Name (ARN) of the service network or service.
+     */
+    public fun policy(policy: Any) {
+        cdkBuilder.policy(policy)
+    }
 
-  /**
-   * An IAM policy.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcepolicy.html#cfn-vpclattice-resourcepolicy-resourcearn)
-   * @param resourceArn An IAM policy. 
-   */
-  public fun resourceArn(resourceArn: String) {
-    cdkBuilder.resourceArn(resourceArn)
-  }
+    /**
+     * An IAM policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcepolicy.html#cfn-vpclattice-resourcepolicy-resourcearn)
+     *
+     * @param resourceArn An IAM policy.
+     */
+    public fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+    }
 
-  public fun build(): CfnResourcePolicy = cdkBuilder.build()
+    public fun build(): CfnResourcePolicy = cdkBuilder.build()
 }

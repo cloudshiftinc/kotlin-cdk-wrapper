@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * A `TimeEqualityFilter` filters values that are equal to a given value.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,46 +44,43 @@ public class CfnTemplateTimeEqualityFilterPropertyDsl {
     private val cdkBuilder: CfnTemplate.TimeEqualityFilterProperty.Builder =
         CfnTemplate.TimeEqualityFilterProperty.builder()
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: CfnTemplate.ColumnIdentifierProperty) {
         cdkBuilder.column(column)
     }
 
     /**
      * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
-     * or template.
+     *   or template.
      */
     public fun filterId(filterId: String) {
         cdkBuilder.filterId(filterId)
     }
 
     /**
-     * @param parameterName The parameter whose value should be used for the filter value.
-     * This field is mutually exclusive to `Value` .
+     * @param parameterName The parameter whose value should be used for the filter value. This
+     *   field is mutually exclusive to `Value` .
      */
     public fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
     }
 
     /**
-     * @param timeGranularity The level of time precision that is used to aggregate `DateTime` values.
+     * @param timeGranularity The level of time precision that is used to aggregate `DateTime`
+     *   values.
      */
     public fun timeGranularity(timeGranularity: String) {
         cdkBuilder.timeGranularity(timeGranularity)
     }
 
     /**
-     * @param value The value of a `TimeEquality` filter.
-     * This field is mutually exclusive to `ParameterName` .
+     * @param value The value of a `TimeEquality` filter. This field is mutually exclusive to
+     *   `ParameterName` .
      */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * Implementation of Kubectl Lambda.
  *
  * Example:
- *
  * ```
  * IRole handlerRole = Role.fromRoleArn(this, "HandlerRole",
  * "arn:aws:iam::123456789012:role/lambda-role");
@@ -33,19 +41,19 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class KubectlProviderDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: KubectlProvider.Builder = KubectlProvider.Builder.create(scope, id)
+    private val cdkBuilder: KubectlProvider.Builder = KubectlProvider.Builder.create(scope, id)
 
-  /**
-   * The cluster to control.
-   *
-   * @param cluster The cluster to control. 
-   */
-  public fun cluster(cluster: ICluster) {
-    cdkBuilder.cluster(cluster)
-  }
+    /**
+     * The cluster to control.
+     *
+     * @param cluster The cluster to control.
+     */
+    public fun cluster(cluster: ICluster) {
+        cdkBuilder.cluster(cluster)
+    }
 
-  public fun build(): KubectlProvider = cdkBuilder.build()
+    public fun build(): KubectlProvider = cdkBuilder.build()
 }

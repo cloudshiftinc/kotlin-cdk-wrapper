@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecr
 
@@ -13,19 +22,15 @@ import software.constructs.Construct
  * configuration for a private registry.
  *
  * The first time a replication configuration is applied to a private registry, a service-linked IAM
- * role is created in your account for the replication process. For more information, see [Using
- * Service-Linked Roles for Amazon
- * ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html) in the
- * *Amazon Elastic Container Registry User Guide* .
- *
+ * role is created in your account for the replication process. For more information, see
+ * [Using Service-Linked Roles for Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html)
+ * in the *Amazon Elastic Container Registry User Guide* .
  *
  * When configuring cross-account replication, the destination account must grant the source account
- * permission to replicate. This permission is controlled using a private registry permissions policy.
- * For more information, see `AWS::ECR::RegistryPolicy` .
- *
+ * permission to replicate. This permission is controlled using a private registry permissions
+ * policy. For more information, see `AWS::ECR::RegistryPolicy` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,32 +57,35 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnReplicationConfigurationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnReplicationConfiguration.Builder =
-      CfnReplicationConfiguration.Builder.create(scope, id)
+    private val cdkBuilder: CfnReplicationConfiguration.Builder =
+        CfnReplicationConfiguration.Builder.create(scope, id)
 
-  /**
-   * The replication configuration for a registry.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html#cfn-ecr-replicationconfiguration-replicationconfiguration)
-   * @param replicationConfiguration The replication configuration for a registry. 
-   */
-  public fun replicationConfiguration(replicationConfiguration: IResolvable) {
-    cdkBuilder.replicationConfiguration(replicationConfiguration)
-  }
+    /**
+     * The replication configuration for a registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html#cfn-ecr-replicationconfiguration-replicationconfiguration)
+     *
+     * @param replicationConfiguration The replication configuration for a registry.
+     */
+    public fun replicationConfiguration(replicationConfiguration: IResolvable) {
+        cdkBuilder.replicationConfiguration(replicationConfiguration)
+    }
 
-  /**
-   * The replication configuration for a registry.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html#cfn-ecr-replicationconfiguration-replicationconfiguration)
-   * @param replicationConfiguration The replication configuration for a registry. 
-   */
-  public
-      fun replicationConfiguration(replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty) {
-    cdkBuilder.replicationConfiguration(replicationConfiguration)
-  }
+    /**
+     * The replication configuration for a registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html#cfn-ecr-replicationconfiguration-replicationconfiguration)
+     *
+     * @param replicationConfiguration The replication configuration for a registry.
+     */
+    public fun replicationConfiguration(
+        replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty
+    ) {
+        cdkBuilder.replicationConfiguration(replicationConfiguration)
+    }
 
-  public fun build(): CfnReplicationConfiguration = cdkBuilder.build()
+    public fun build(): CfnReplicationConfiguration = cdkBuilder.build()
 }

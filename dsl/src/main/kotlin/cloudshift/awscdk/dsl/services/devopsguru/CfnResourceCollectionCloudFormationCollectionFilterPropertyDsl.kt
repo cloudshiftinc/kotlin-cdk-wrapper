@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.devopsguru
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.devopsguru.CfnResourceCollection
  * CloudFormation User Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,27 +40,23 @@ import software.amazon.awscdk.services.devopsguru.CfnResourceCollection
  */
 @CdkDslMarker
 public class CfnResourceCollectionCloudFormationCollectionFilterPropertyDsl {
-  private val cdkBuilder: CfnResourceCollection.CloudFormationCollectionFilterProperty.Builder =
-      CfnResourceCollection.CloudFormationCollectionFilterProperty.builder()
+    private val cdkBuilder: CfnResourceCollection.CloudFormationCollectionFilterProperty.Builder =
+        CfnResourceCollection.CloudFormationCollectionFilterProperty.builder()
 
-  private val _stackNames: MutableList<String> = mutableListOf()
+    private val _stackNames: MutableList<String> = mutableListOf()
 
-  /**
-   * @param stackNames An array of CloudFormation stack names.
-   */
-  public fun stackNames(vararg stackNames: String) {
-    _stackNames.addAll(listOf(*stackNames))
-  }
+    /** @param stackNames An array of CloudFormation stack names. */
+    public fun stackNames(vararg stackNames: String) {
+        _stackNames.addAll(listOf(*stackNames))
+    }
 
-  /**
-   * @param stackNames An array of CloudFormation stack names.
-   */
-  public fun stackNames(stackNames: Collection<String>) {
-    _stackNames.addAll(stackNames)
-  }
+    /** @param stackNames An array of CloudFormation stack names. */
+    public fun stackNames(stackNames: Collection<String>) {
+        _stackNames.addAll(stackNames)
+    }
 
-  public fun build(): CfnResourceCollection.CloudFormationCollectionFilterProperty {
-    if(_stackNames.isNotEmpty()) cdkBuilder.stackNames(_stackNames)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnResourceCollection.CloudFormationCollectionFilterProperty {
+        if (_stackNames.isNotEmpty()) cdkBuilder.stackNames(_stackNames)
+        return cdkBuilder.build()
+    }
 }

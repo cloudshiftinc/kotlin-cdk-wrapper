@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lookoutequipment
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler
  * S3 location.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,22 +36,18 @@ import software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler
  */
 @CdkDslMarker
 public class CfnInferenceSchedulerS3OutputConfigurationPropertyDsl {
-  private val cdkBuilder: CfnInferenceScheduler.S3OutputConfigurationProperty.Builder =
-      CfnInferenceScheduler.S3OutputConfigurationProperty.builder()
+    private val cdkBuilder: CfnInferenceScheduler.S3OutputConfigurationProperty.Builder =
+        CfnInferenceScheduler.S3OutputConfigurationProperty.builder()
 
-  /**
-   * @param bucket the value to be set. 
-   */
-  public fun bucket(bucket: String) {
-    cdkBuilder.bucket(bucket)
-  }
+    /** @param bucket the value to be set. */
+    public fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+    }
 
-  /**
-   * @param prefix the value to be set.
-   */
-  public fun prefix(prefix: String) {
-    cdkBuilder.prefix(prefix)
-  }
+    /** @param prefix the value to be set. */
+    public fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+    }
 
-  public fun build(): CfnInferenceScheduler.S3OutputConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnInferenceScheduler.S3OutputConfigurationProperty = cdkBuilder.build()
 }

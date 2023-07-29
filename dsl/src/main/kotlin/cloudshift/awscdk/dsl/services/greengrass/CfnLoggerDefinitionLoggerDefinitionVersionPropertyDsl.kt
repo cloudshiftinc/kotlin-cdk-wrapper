@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -14,12 +23,10 @@ import software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
  * [loggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
  * .
  *
- *
  * After you create a logger definition version that contains the loggers you want to deploy, you
  * must add it to your group version. For more information, see
  * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
  * .
- *
  *
  * In an AWS CloudFormation template, `LoggerDefinitionVersion` is the property type of the
  * `InitialVersion` property in the
@@ -27,7 +34,6 @@ import software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -49,34 +55,28 @@ import software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
  */
 @CdkDslMarker
 public class CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl {
-  private val cdkBuilder: CfnLoggerDefinition.LoggerDefinitionVersionProperty.Builder =
-      CfnLoggerDefinition.LoggerDefinitionVersionProperty.builder()
+    private val cdkBuilder: CfnLoggerDefinition.LoggerDefinitionVersionProperty.Builder =
+        CfnLoggerDefinition.LoggerDefinitionVersionProperty.builder()
 
-  private val _loggers: MutableList<Any> = mutableListOf()
+    private val _loggers: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param loggers The loggers in this version. 
-   */
-  public fun loggers(vararg loggers: Any) {
-    _loggers.addAll(listOf(*loggers))
-  }
+    /** @param loggers The loggers in this version. */
+    public fun loggers(vararg loggers: Any) {
+        _loggers.addAll(listOf(*loggers))
+    }
 
-  /**
-   * @param loggers The loggers in this version. 
-   */
-  public fun loggers(loggers: Collection<Any>) {
-    _loggers.addAll(loggers)
-  }
+    /** @param loggers The loggers in this version. */
+    public fun loggers(loggers: Collection<Any>) {
+        _loggers.addAll(loggers)
+    }
 
-  /**
-   * @param loggers The loggers in this version. 
-   */
-  public fun loggers(loggers: IResolvable) {
-    cdkBuilder.loggers(loggers)
-  }
+    /** @param loggers The loggers in this version. */
+    public fun loggers(loggers: IResolvable) {
+        cdkBuilder.loggers(loggers)
+    }
 
-  public fun build(): CfnLoggerDefinition.LoggerDefinitionVersionProperty {
-    if(_loggers.isNotEmpty()) cdkBuilder.loggers(_loggers)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnLoggerDefinition.LoggerDefinitionVersionProperty {
+        if (_loggers.isNotEmpty()) cdkBuilder.loggers(_loggers)
+        return cdkBuilder.build()
+    }
 }

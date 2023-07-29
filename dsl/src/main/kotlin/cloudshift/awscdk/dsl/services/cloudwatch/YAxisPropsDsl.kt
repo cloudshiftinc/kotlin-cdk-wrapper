@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudwatch
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.cloudwatch.YAxisProps
  * Properties for a Y-Axis.
  *
  * Example:
- *
  * ```
  * Dashboard dashboard;
  * Alarm errorAlarm;
@@ -28,35 +36,27 @@ import software.amazon.awscdk.services.cloudwatch.YAxisProps
  */
 @CdkDslMarker
 public class YAxisPropsDsl {
-  private val cdkBuilder: YAxisProps.Builder = YAxisProps.builder()
+    private val cdkBuilder: YAxisProps.Builder = YAxisProps.builder()
 
-  /**
-   * @param label The label.
-   */
-  public fun label(label: String) {
-    cdkBuilder.label(label)
-  }
+    /** @param label The label. */
+    public fun label(label: String) {
+        cdkBuilder.label(label)
+    }
 
-  /**
-   * @param max The max value.
-   */
-  public fun max(max: Number) {
-    cdkBuilder.max(max)
-  }
+    /** @param max The max value. */
+    public fun max(max: Number) {
+        cdkBuilder.max(max)
+    }
 
-  /**
-   * @param min The min value.
-   */
-  public fun min(min: Number) {
-    cdkBuilder.min(min)
-  }
+    /** @param min The min value. */
+    public fun min(min: Number) {
+        cdkBuilder.min(min)
+    }
 
-  /**
-   * @param showUnits Whether to show units.
-   */
-  public fun showUnits(showUnits: Boolean) {
-    cdkBuilder.showUnits(showUnits)
-  }
+    /** @param showUnits Whether to show units. */
+    public fun showUnits(showUnits: Boolean) {
+        cdkBuilder.showUnits(showUnits)
+    }
 
-  public fun build(): YAxisProps = cdkBuilder.build()
+    public fun build(): YAxisProps = cdkBuilder.build()
 }

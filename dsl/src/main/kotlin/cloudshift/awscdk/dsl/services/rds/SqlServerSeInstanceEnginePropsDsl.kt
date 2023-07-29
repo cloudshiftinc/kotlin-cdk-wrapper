@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps
  * Used in `DatabaseInstanceEngine.sqlServerSe`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps
  */
 @CdkDslMarker
 public class SqlServerSeInstanceEnginePropsDsl {
-  private val cdkBuilder: SqlServerSeInstanceEngineProps.Builder =
-      SqlServerSeInstanceEngineProps.builder()
+    private val cdkBuilder: SqlServerSeInstanceEngineProps.Builder =
+        SqlServerSeInstanceEngineProps.builder()
 
-  /**
-   * @param version The exact version of the engine to use. 
-   */
-  public fun version(version: SqlServerEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The exact version of the engine to use. */
+    public fun version(version: SqlServerEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): SqlServerSeInstanceEngineProps = cdkBuilder.build()
+    public fun build(): SqlServerSeInstanceEngineProps = cdkBuilder.build()
 }

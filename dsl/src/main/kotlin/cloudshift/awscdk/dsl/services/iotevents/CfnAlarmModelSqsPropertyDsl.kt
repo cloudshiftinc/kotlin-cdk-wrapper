@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  * Amazon SQS queue.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,48 +41,44 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  */
 @CdkDslMarker
 public class CfnAlarmModelSqsPropertyDsl {
-  private val cdkBuilder: CfnAlarmModel.SqsProperty.Builder = CfnAlarmModel.SqsProperty.builder()
+    private val cdkBuilder: CfnAlarmModel.SqsProperty.Builder = CfnAlarmModel.SqsProperty.builder()
 
-  /**
-   * @param payload You can configure the action payload when you send a message to an Amazon SQS
-   * queue.
-   */
-  public fun payload(payload: IResolvable) {
-    cdkBuilder.payload(payload)
-  }
+    /**
+     * @param payload You can configure the action payload when you send a message to an Amazon SQS
+     *   queue.
+     */
+    public fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload)
+    }
 
-  /**
-   * @param payload You can configure the action payload when you send a message to an Amazon SQS
-   * queue.
-   */
-  public fun payload(payload: CfnAlarmModel.PayloadProperty) {
-    cdkBuilder.payload(payload)
-  }
+    /**
+     * @param payload You can configure the action payload when you send a message to an Amazon SQS
+     *   queue.
+     */
+    public fun payload(payload: CfnAlarmModel.PayloadProperty) {
+        cdkBuilder.payload(payload)
+    }
 
-  /**
-   * @param queueUrl The URL of the SQS queue where the data is written. 
-   */
-  public fun queueUrl(queueUrl: String) {
-    cdkBuilder.queueUrl(queueUrl)
-  }
+    /** @param queueUrl The URL of the SQS queue where the data is written. */
+    public fun queueUrl(queueUrl: String) {
+        cdkBuilder.queueUrl(queueUrl)
+    }
 
-  /**
-   * @param useBase64 Set this to TRUE if you want the data to be base-64 encoded before it is
-   * written to the queue.
-   * Otherwise, set this to FALSE.
-   */
-  public fun useBase64(useBase64: Boolean) {
-    cdkBuilder.useBase64(useBase64)
-  }
+    /**
+     * @param useBase64 Set this to TRUE if you want the data to be base-64 encoded before it is
+     *   written to the queue. Otherwise, set this to FALSE.
+     */
+    public fun useBase64(useBase64: Boolean) {
+        cdkBuilder.useBase64(useBase64)
+    }
 
-  /**
-   * @param useBase64 Set this to TRUE if you want the data to be base-64 encoded before it is
-   * written to the queue.
-   * Otherwise, set this to FALSE.
-   */
-  public fun useBase64(useBase64: IResolvable) {
-    cdkBuilder.useBase64(useBase64)
-  }
+    /**
+     * @param useBase64 Set this to TRUE if you want the data to be base-64 encoded before it is
+     *   written to the queue. Otherwise, set this to FALSE.
+     */
+    public fun useBase64(useBase64: IResolvable) {
+        cdkBuilder.useBase64(useBase64)
+    }
 
-  public fun build(): CfnAlarmModel.SqsProperty = cdkBuilder.build()
+    public fun build(): CfnAlarmModel.SqsProperty = cdkBuilder.build()
 }

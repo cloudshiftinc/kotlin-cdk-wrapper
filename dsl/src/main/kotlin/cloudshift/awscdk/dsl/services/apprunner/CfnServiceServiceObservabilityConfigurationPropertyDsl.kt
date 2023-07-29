@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apprunner
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.apprunner.CfnService
  * configured in a separate resource that you associate with your service.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,39 +40,39 @@ import software.amazon.awscdk.services.apprunner.CfnService
  */
 @CdkDslMarker
 public class CfnServiceServiceObservabilityConfigurationPropertyDsl {
-  private val cdkBuilder: CfnService.ServiceObservabilityConfigurationProperty.Builder =
-      CfnService.ServiceObservabilityConfigurationProperty.builder()
+    private val cdkBuilder: CfnService.ServiceObservabilityConfigurationProperty.Builder =
+        CfnService.ServiceObservabilityConfigurationProperty.builder()
 
-  /**
-   * @param observabilityConfigurationArn The Amazon Resource Name (ARN) of the observability
-   * configuration that is associated with the service.
-   * Specified only when `ObservabilityEnabled` is `true` .
-   *
-   * Specify an ARN with a name and a revision number to associate that revision. For example:
-   * `arn:aws:apprunner:us-east-1:123456789012:observabilityconfiguration/xray-tracing/3`
-   *
-   * Specify just the name to associate the latest revision. For example:
-   * `arn:aws:apprunner:us-east-1:123456789012:observabilityconfiguration/xray-tracing`
-   */
-  public fun observabilityConfigurationArn(observabilityConfigurationArn: String) {
-    cdkBuilder.observabilityConfigurationArn(observabilityConfigurationArn)
-  }
+    /**
+     * @param observabilityConfigurationArn The Amazon Resource Name (ARN) of the observability
+     *   configuration that is associated with the service. Specified only when
+     *   `ObservabilityEnabled` is `true` .
+     *
+     * Specify an ARN with a name and a revision number to associate that revision. For example:
+     * `arn:aws:apprunner:us-east-1:123456789012:observabilityconfiguration/xray-tracing/3`
+     *
+     * Specify just the name to associate the latest revision. For example:
+     * `arn:aws:apprunner:us-east-1:123456789012:observabilityconfiguration/xray-tracing`
+     */
+    public fun observabilityConfigurationArn(observabilityConfigurationArn: String) {
+        cdkBuilder.observabilityConfigurationArn(observabilityConfigurationArn)
+    }
 
-  /**
-   * @param observabilityEnabled When `true` , an observability configuration resource is associated
-   * with the service, and an `ObservabilityConfigurationArn` is specified. 
-   */
-  public fun observabilityEnabled(observabilityEnabled: Boolean) {
-    cdkBuilder.observabilityEnabled(observabilityEnabled)
-  }
+    /**
+     * @param observabilityEnabled When `true` , an observability configuration resource is
+     *   associated with the service, and an `ObservabilityConfigurationArn` is specified.
+     */
+    public fun observabilityEnabled(observabilityEnabled: Boolean) {
+        cdkBuilder.observabilityEnabled(observabilityEnabled)
+    }
 
-  /**
-   * @param observabilityEnabled When `true` , an observability configuration resource is associated
-   * with the service, and an `ObservabilityConfigurationArn` is specified. 
-   */
-  public fun observabilityEnabled(observabilityEnabled: IResolvable) {
-    cdkBuilder.observabilityEnabled(observabilityEnabled)
-  }
+    /**
+     * @param observabilityEnabled When `true` , an observability configuration resource is
+     *   associated with the service, and an `ObservabilityConfigurationArn` is specified.
+     */
+    public fun observabilityEnabled(observabilityEnabled: IResolvable) {
+        cdkBuilder.observabilityEnabled(observabilityEnabled)
+    }
 
-  public fun build(): CfnService.ServiceObservabilityConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnService.ServiceObservabilityConfigurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * that you associate at least two subnets to provide Availability Zone redundancy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,31 +39,33 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnClientVpnTargetNetworkAssociationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnClientVpnTargetNetworkAssociation.Builder =
-      CfnClientVpnTargetNetworkAssociation.Builder.create(scope, id)
+    private val cdkBuilder: CfnClientVpnTargetNetworkAssociation.Builder =
+        CfnClientVpnTargetNetworkAssociation.Builder.create(scope, id)
 
-  /**
-   * The ID of the Client VPN endpoint.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid)
-   * @param clientVpnEndpointId The ID of the Client VPN endpoint. 
-   */
-  public fun clientVpnEndpointId(clientVpnEndpointId: String) {
-    cdkBuilder.clientVpnEndpointId(clientVpnEndpointId)
-  }
+    /**
+     * The ID of the Client VPN endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid)
+     *
+     * @param clientVpnEndpointId The ID of the Client VPN endpoint.
+     */
+    public fun clientVpnEndpointId(clientVpnEndpointId: String) {
+        cdkBuilder.clientVpnEndpointId(clientVpnEndpointId)
+    }
 
-  /**
-   * The ID of the subnet to associate with the Client VPN endpoint.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-subnetid)
-   * @param subnetId The ID of the subnet to associate with the Client VPN endpoint. 
-   */
-  public fun subnetId(subnetId: String) {
-    cdkBuilder.subnetId(subnetId)
-  }
+    /**
+     * The ID of the subnet to associate with the Client VPN endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-subnetid)
+     *
+     * @param subnetId The ID of the subnet to associate with the Client VPN endpoint.
+     */
+    public fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+    }
 
-  public fun build(): CfnClientVpnTargetNetworkAssociation = cdkBuilder.build()
+    public fun build(): CfnClientVpnTargetNetworkAssociation = cdkBuilder.build()
 }

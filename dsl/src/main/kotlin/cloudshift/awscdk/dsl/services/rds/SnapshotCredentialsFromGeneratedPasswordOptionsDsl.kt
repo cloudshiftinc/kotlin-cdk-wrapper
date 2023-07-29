@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
  * Options used in the `SnapshotCredentials.fromGeneratedPassword` method.
  *
  * Example:
- *
  * ```
  * Vpc vpc;
  * IInstanceEngine engine =
@@ -38,41 +46,33 @@ import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
  */
 @CdkDslMarker
 public class SnapshotCredentialsFromGeneratedPasswordOptionsDsl {
-  private val cdkBuilder: SnapshotCredentialsFromGeneratedPasswordOptions.Builder =
-      SnapshotCredentialsFromGeneratedPasswordOptions.builder()
+    private val cdkBuilder: SnapshotCredentialsFromGeneratedPasswordOptions.Builder =
+        SnapshotCredentialsFromGeneratedPasswordOptions.builder()
 
-  private val _replicaRegions: MutableList<ReplicaRegion> = mutableListOf()
+    private val _replicaRegions: MutableList<ReplicaRegion> = mutableListOf()
 
-  /**
-   * @param encryptionKey KMS encryption key to encrypt the generated secret.
-   */
-  public fun encryptionKey(encryptionKey: IKey) {
-    cdkBuilder.encryptionKey(encryptionKey)
-  }
+    /** @param encryptionKey KMS encryption key to encrypt the generated secret. */
+    public fun encryptionKey(encryptionKey: IKey) {
+        cdkBuilder.encryptionKey(encryptionKey)
+    }
 
-  /**
-   * @param excludeCharacters The characters to exclude from the generated password.
-   */
-  public fun excludeCharacters(excludeCharacters: String) {
-    cdkBuilder.excludeCharacters(excludeCharacters)
-  }
+    /** @param excludeCharacters The characters to exclude from the generated password. */
+    public fun excludeCharacters(excludeCharacters: String) {
+        cdkBuilder.excludeCharacters(excludeCharacters)
+    }
 
-  /**
-   * @param replicaRegions A list of regions where to replicate this secret.
-   */
-  public fun replicaRegions(replicaRegions: ReplicaRegionDsl.() -> Unit) {
-    _replicaRegions.add(ReplicaRegionDsl().apply(replicaRegions).build())
-  }
+    /** @param replicaRegions A list of regions where to replicate this secret. */
+    public fun replicaRegions(replicaRegions: ReplicaRegionDsl.() -> Unit) {
+        _replicaRegions.add(ReplicaRegionDsl().apply(replicaRegions).build())
+    }
 
-  /**
-   * @param replicaRegions A list of regions where to replicate this secret.
-   */
-  public fun replicaRegions(replicaRegions: Collection<ReplicaRegion>) {
-    _replicaRegions.addAll(replicaRegions)
-  }
+    /** @param replicaRegions A list of regions where to replicate this secret. */
+    public fun replicaRegions(replicaRegions: Collection<ReplicaRegion>) {
+        _replicaRegions.addAll(replicaRegions)
+    }
 
-  public fun build(): SnapshotCredentialsFromGeneratedPasswordOptions {
-    if(_replicaRegions.isNotEmpty()) cdkBuilder.replicaRegions(_replicaRegions)
-    return cdkBuilder.build()
-  }
+    public fun build(): SnapshotCredentialsFromGeneratedPasswordOptions {
+        if (_replicaRegions.isNotEmpty()) cdkBuilder.replicaRegions(_replicaRegions)
+        return cdkBuilder.build()
+    }
 }

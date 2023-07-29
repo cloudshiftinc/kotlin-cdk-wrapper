@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.iot.CfnRoleAliasProps
  * Properties for defining a `CfnRoleAlias`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,53 +45,45 @@ import software.amazon.awscdk.services.iot.CfnRoleAliasProps
  */
 @CdkDslMarker
 public class CfnRoleAliasPropsDsl {
-  private val cdkBuilder: CfnRoleAliasProps.Builder = CfnRoleAliasProps.builder()
+    private val cdkBuilder: CfnRoleAliasProps.Builder = CfnRoleAliasProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param credentialDurationSeconds The number of seconds for which the credential is valid.
-   */
-  public fun credentialDurationSeconds(credentialDurationSeconds: Number) {
-    cdkBuilder.credentialDurationSeconds(credentialDurationSeconds)
-  }
+    /** @param credentialDurationSeconds The number of seconds for which the credential is valid. */
+    public fun credentialDurationSeconds(credentialDurationSeconds: Number) {
+        cdkBuilder.credentialDurationSeconds(credentialDurationSeconds)
+    }
 
-  /**
-   * @param roleAlias The role alias.
-   */
-  public fun roleAlias(roleAlias: String) {
-    cdkBuilder.roleAlias(roleAlias)
-  }
+    /** @param roleAlias The role alias. */
+    public fun roleAlias(roleAlias: String) {
+        cdkBuilder.roleAlias(roleAlias)
+    }
 
-  /**
-   * @param roleArn The role ARN. 
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /** @param roleArn The role ARN. */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to this resource.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to this resource.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to this resource. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnRoleAliasProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnRoleAliasProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

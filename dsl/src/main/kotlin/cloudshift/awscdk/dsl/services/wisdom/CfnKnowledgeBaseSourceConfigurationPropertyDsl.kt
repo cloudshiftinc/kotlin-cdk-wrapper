@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wisdom
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
  * Configuration information about the external data source.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,25 +36,26 @@ import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
  */
 @CdkDslMarker
 public class CfnKnowledgeBaseSourceConfigurationPropertyDsl {
-  private val cdkBuilder: CfnKnowledgeBase.SourceConfigurationProperty.Builder =
-      CfnKnowledgeBase.SourceConfigurationProperty.builder()
+    private val cdkBuilder: CfnKnowledgeBase.SourceConfigurationProperty.Builder =
+        CfnKnowledgeBase.SourceConfigurationProperty.builder()
 
-  /**
-   * @param appIntegrations Configuration information for Amazon AppIntegrations to automatically
-   * ingest content. 
-   */
-  public fun appIntegrations(appIntegrations: IResolvable) {
-    cdkBuilder.appIntegrations(appIntegrations)
-  }
+    /**
+     * @param appIntegrations Configuration information for Amazon AppIntegrations to automatically
+     *   ingest content.
+     */
+    public fun appIntegrations(appIntegrations: IResolvable) {
+        cdkBuilder.appIntegrations(appIntegrations)
+    }
 
-  /**
-   * @param appIntegrations Configuration information for Amazon AppIntegrations to automatically
-   * ingest content. 
-   */
-  public
-      fun appIntegrations(appIntegrations: CfnKnowledgeBase.AppIntegrationsConfigurationProperty) {
-    cdkBuilder.appIntegrations(appIntegrations)
-  }
+    /**
+     * @param appIntegrations Configuration information for Amazon AppIntegrations to automatically
+     *   ingest content.
+     */
+    public fun appIntegrations(
+        appIntegrations: CfnKnowledgeBase.AppIntegrationsConfigurationProperty
+    ) {
+        cdkBuilder.appIntegrations(appIntegrations)
+    }
 
-  public fun build(): CfnKnowledgeBase.SourceConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnKnowledgeBase.SourceConfigurationProperty = cdkBuilder.build()
 }

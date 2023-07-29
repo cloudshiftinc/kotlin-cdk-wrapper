@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,18 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
  */
 @CdkDslMarker
 public class CfnEndpointConfigClarifyTextConfigPropertyDsl {
-  private val cdkBuilder: CfnEndpointConfig.ClarifyTextConfigProperty.Builder =
-      CfnEndpointConfig.ClarifyTextConfigProperty.builder()
+    private val cdkBuilder: CfnEndpointConfig.ClarifyTextConfigProperty.Builder =
+        CfnEndpointConfig.ClarifyTextConfigProperty.builder()
 
-  /**
-   * @param granularity the value to be set. 
-   */
-  public fun granularity(granularity: String) {
-    cdkBuilder.granularity(granularity)
-  }
+    /** @param granularity the value to be set. */
+    public fun granularity(granularity: String) {
+        cdkBuilder.granularity(granularity)
+    }
 
-  /**
-   * @param language the value to be set. 
-   */
-  public fun language(language: String) {
-    cdkBuilder.language(language)
-  }
+    /** @param language the value to be set. */
+    public fun language(language: String) {
+        cdkBuilder.language(language)
+    }
 
-  public fun build(): CfnEndpointConfig.ClarifyTextConfigProperty = cdkBuilder.build()
+    public fun build(): CfnEndpointConfig.ClarifyTextConfigProperty = cdkBuilder.build()
 }

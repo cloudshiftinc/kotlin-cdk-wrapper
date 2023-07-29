@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * You provide more than one `Statement` within the `OrStatement` .
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -23,37 +31,37 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  */
 @CdkDslMarker
 public class CfnWebACLOrStatementPropertyDsl {
-  private val cdkBuilder: CfnWebACL.OrStatementProperty.Builder =
-      CfnWebACL.OrStatementProperty.builder()
+    private val cdkBuilder: CfnWebACL.OrStatementProperty.Builder =
+        CfnWebACL.OrStatementProperty.builder()
 
-  private val _statements: MutableList<Any> = mutableListOf()
+    private val _statements: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param statements The statements to combine with OR logic. 
-   * You can use any statements that can be nested.
-   */
-  public fun statements(vararg statements: Any) {
-    _statements.addAll(listOf(*statements))
-  }
+    /**
+     * @param statements The statements to combine with OR logic. You can use any statements that
+     *   can be nested.
+     */
+    public fun statements(vararg statements: Any) {
+        _statements.addAll(listOf(*statements))
+    }
 
-  /**
-   * @param statements The statements to combine with OR logic. 
-   * You can use any statements that can be nested.
-   */
-  public fun statements(statements: Collection<Any>) {
-    _statements.addAll(statements)
-  }
+    /**
+     * @param statements The statements to combine with OR logic. You can use any statements that
+     *   can be nested.
+     */
+    public fun statements(statements: Collection<Any>) {
+        _statements.addAll(statements)
+    }
 
-  /**
-   * @param statements The statements to combine with OR logic. 
-   * You can use any statements that can be nested.
-   */
-  public fun statements(statements: IResolvable) {
-    cdkBuilder.statements(statements)
-  }
+    /**
+     * @param statements The statements to combine with OR logic. You can use any statements that
+     *   can be nested.
+     */
+    public fun statements(statements: IResolvable) {
+        cdkBuilder.statements(statements)
+    }
 
-  public fun build(): CfnWebACL.OrStatementProperty {
-    if(_statements.isNotEmpty()) cdkBuilder.statements(_statements)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnWebACL.OrStatementProperty {
+        if (_statements.isNotEmpty()) cdkBuilder.statements(_statements)
+        return cdkBuilder.build()
+    }
 }

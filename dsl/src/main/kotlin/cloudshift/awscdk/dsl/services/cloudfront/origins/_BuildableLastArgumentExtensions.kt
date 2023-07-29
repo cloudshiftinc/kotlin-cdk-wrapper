@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront.origins
 
@@ -12,25 +21,29 @@ import software.constructs.Construct
 /**
  * The method called when a given Origin is added (for the first time) to a Distribution.
  *
- * @param scope 
- * @param options 
+ * @param scope
+ * @param options
  */
-public inline fun OriginGroup.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
-    OriginBindConfig {
-  val builder = OriginBindOptionsDsl()
-  builder.apply(block)
-  return bind(scope, builder.build())
+public inline fun OriginGroup.bind(
+    scope: Construct,
+    block: OriginBindOptionsDsl.() -> Unit = {}
+): OriginBindConfig {
+    val builder = OriginBindOptionsDsl()
+    builder.apply(block)
+    return bind(scope, builder.build())
 }
 
 /**
  * The method called when a given Origin is added (for the first time) to a Distribution.
  *
- * @param scope 
- * @param options 
+ * @param scope
+ * @param options
  */
-public inline fun S3Origin.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
-    OriginBindConfig {
-  val builder = OriginBindOptionsDsl()
-  builder.apply(block)
-  return bind(scope, builder.build())
+public inline fun S3Origin.bind(
+    scope: Construct,
+    block: OriginBindOptionsDsl.() -> Unit = {}
+): OriginBindConfig {
+    val builder = OriginBindOptionsDsl()
+    builder.apply(block)
+    return bind(scope, builder.build())
 }

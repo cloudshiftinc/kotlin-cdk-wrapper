@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * Configuration options for the canvas of a free-form layout.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,7 +40,7 @@ public class CfnDashboardFreeFormLayoutCanvasSizeOptionsPropertyDsl {
 
     /**
      * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
-     * free-form layout.
+     *   free-form layout.
      */
     public fun screenCanvasSizeOptions(screenCanvasSizeOptions: IResolvable) {
         cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
@@ -40,9 +48,11 @@ public class CfnDashboardFreeFormLayoutCanvasSizeOptionsPropertyDsl {
 
     /**
      * @param screenCanvasSizeOptions The options that determine the sizing of the canvas used in a
-     * free-form layout.
+     *   free-form layout.
      */
-    public fun screenCanvasSizeOptions(screenCanvasSizeOptions: CfnDashboard.FreeFormLayoutScreenCanvasSizeOptionsProperty) {
+    public fun screenCanvasSizeOptions(
+        screenCanvasSizeOptions: CfnDashboard.FreeFormLayoutScreenCanvasSizeOptionsProperty
+    ) {
         cdkBuilder.screenCanvasSizeOptions(screenCanvasSizeOptions)
     }
 

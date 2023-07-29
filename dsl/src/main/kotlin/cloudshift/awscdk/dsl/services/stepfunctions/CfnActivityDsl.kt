@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -15,17 +24,16 @@ import software.constructs.Construct
  * access to AWS Step Functions .
  *
  * Activities must poll Step Functions using the `GetActivityTask` API action and respond using
- * `SendTask*` API actions. This function lets Step Functions know the existence of your activity and
- * returns an identifier for use in a state machine and when polling from the activity.
+ * `SendTask*` API actions. This function lets Step Functions know the existence of your activity
+ * and returns an identifier for use in a state machine and when polling from the activity.
  *
- * For information about creating an activity, see [Creating an Activity State
- * Machine](https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-creating-activity-state-machine.html)
+ * For information about creating an activity, see
+ * [Creating an Activity State Machine](https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-creating-activity-state-machine.html)
  * in the *AWS Step Functions Developer Guide* and
  * [CreateActivity](https://docs.aws.amazon.com/step-functions/latest/apireference/API_CreateActivity.html)
  * in the *AWS Step Functions API Reference* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,59 +52,61 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnActivityDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnActivity.Builder = CfnActivity.Builder.create(scope, id)
+    private val cdkBuilder: CfnActivity.Builder = CfnActivity.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnActivity.TagsEntryProperty> = mutableListOf()
+    private val _tags: MutableList<CfnActivity.TagsEntryProperty> = mutableListOf()
 
-  /**
-   * The name of the activity.
-   *
-   * A name must *not* contain:
-   *
-   * * white space
-   * * brackets `&lt; &gt; { } [ ]`
-   * * wildcard characters `? *`
-   * * special characters `" # % \ ^ | ~ ` $ &amp; , ; : /`
-   * * control characters ( `U+0000-001F` , `U+007F-009F` )
-   *
-   * To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-name)
-   * @param name The name of the activity. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /**
+     * The name of the activity.
+     *
+     * A name must *not* contain:
+     * * white space
+     * * brackets `&lt; &gt; { } [ ]`
+     * * wildcard characters `? *`
+     * * special characters `" # % \ ^ | ~ ` $ &amp; , ; : /`
+     * * control characters ( `U+0000-001F` , `U+007F-009F` )
+     *
+     * To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-name)
+     *
+     * @param name The name of the activity.
+     */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * The list of tags to add to a resource.
-   *
-   * Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + -
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-tags)
-   * @param tags The list of tags to add to a resource. 
-   */
-  public fun tags(tags: CfnActivityTagsEntryPropertyDsl.() -> Unit) {
-    _tags.add(CfnActivityTagsEntryPropertyDsl().apply(tags).build())
-  }
+    /**
+     * The list of tags to add to a resource.
+     *
+     * Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + -
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-tags)
+     *
+     * @param tags The list of tags to add to a resource.
+     */
+    public fun tags(tags: CfnActivityTagsEntryPropertyDsl.() -> Unit) {
+        _tags.add(CfnActivityTagsEntryPropertyDsl().apply(tags).build())
+    }
 
-  /**
-   * The list of tags to add to a resource.
-   *
-   * Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + -
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-tags)
-   * @param tags The list of tags to add to a resource. 
-   */
-  public fun tags(tags: Collection<CfnActivity.TagsEntryProperty>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * The list of tags to add to a resource.
+     *
+     * Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + -
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-tags)
+     *
+     * @param tags The list of tags to add to a resource.
+     */
+    public fun tags(tags: Collection<CfnActivity.TagsEntryProperty>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnActivity {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnActivity {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

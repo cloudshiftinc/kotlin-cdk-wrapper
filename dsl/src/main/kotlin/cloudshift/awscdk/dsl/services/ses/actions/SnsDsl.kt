@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses.actions
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sns.ITopic
  * Publishes the email content within a notification to Amazon SNS.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.s3.*;
  * import software.amazon.awscdk.services.ses.actions.*;
@@ -42,27 +50,27 @@ import software.amazon.awscdk.services.sns.ITopic
  */
 @CdkDslMarker
 public class SnsDsl {
-  private val cdkBuilder: Sns.Builder = Sns.Builder.create()
+    private val cdkBuilder: Sns.Builder = Sns.Builder.create()
 
-  /**
-   * The encoding to use for the email within the Amazon SNS notification.
-   *
-   * Default: UTF-8
-   *
-   * @param encoding The encoding to use for the email within the Amazon SNS notification. 
-   */
-  public fun encoding(encoding: EmailEncoding) {
-    cdkBuilder.encoding(encoding)
-  }
+    /**
+     * The encoding to use for the email within the Amazon SNS notification.
+     *
+     * Default: UTF-8
+     *
+     * @param encoding The encoding to use for the email within the Amazon SNS notification.
+     */
+    public fun encoding(encoding: EmailEncoding) {
+        cdkBuilder.encoding(encoding)
+    }
 
-  /**
-   * The SNS topic to notify.
-   *
-   * @param topic The SNS topic to notify. 
-   */
-  public fun topic(topic: ITopic) {
-    cdkBuilder.topic(topic)
-  }
+    /**
+     * The SNS topic to notify.
+     *
+     * @param topic The SNS topic to notify.
+     */
+    public fun topic(topic: ITopic) {
+        cdkBuilder.topic(topic)
+    }
 
-  public fun build(): Sns = cdkBuilder.build()
+    public fun build(): Sns = cdkBuilder.build()
 }

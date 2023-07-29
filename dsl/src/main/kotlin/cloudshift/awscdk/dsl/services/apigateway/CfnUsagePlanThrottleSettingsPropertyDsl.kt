@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.apigateway.CfnUsagePlan
  * when users call your REST APIs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,23 +36,21 @@ import software.amazon.awscdk.services.apigateway.CfnUsagePlan
  */
 @CdkDslMarker
 public class CfnUsagePlanThrottleSettingsPropertyDsl {
-  private val cdkBuilder: CfnUsagePlan.ThrottleSettingsProperty.Builder =
-      CfnUsagePlan.ThrottleSettingsProperty.builder()
+    private val cdkBuilder: CfnUsagePlan.ThrottleSettingsProperty.Builder =
+        CfnUsagePlan.ThrottleSettingsProperty.builder()
 
-  /**
-   * @param burstLimit The API target request burst rate limit.
-   * This allows more requests through for a period of time than the target rate limit.
-   */
-  public fun burstLimit(burstLimit: Number) {
-    cdkBuilder.burstLimit(burstLimit)
-  }
+    /**
+     * @param burstLimit The API target request burst rate limit. This allows more requests through
+     *   for a period of time than the target rate limit.
+     */
+    public fun burstLimit(burstLimit: Number) {
+        cdkBuilder.burstLimit(burstLimit)
+    }
 
-  /**
-   * @param rateLimit The API target request rate limit.
-   */
-  public fun rateLimit(rateLimit: Number) {
-    cdkBuilder.rateLimit(rateLimit)
-  }
+    /** @param rateLimit The API target request rate limit. */
+    public fun rateLimit(rateLimit: Number) {
+        cdkBuilder.rateLimit(rateLimit)
+    }
 
-  public fun build(): CfnUsagePlan.ThrottleSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnUsagePlan.ThrottleSettingsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSet
  * Incremental Refresh</p>.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,16 +39,12 @@ public class CfnDataSetIncrementalRefreshPropertyDsl {
     private val cdkBuilder: CfnDataSet.IncrementalRefreshProperty.Builder =
         CfnDataSet.IncrementalRefreshProperty.builder()
 
-    /**
-     * @param lookbackWindow the value to be set.
-     */
+    /** @param lookbackWindow the value to be set. */
     public fun lookbackWindow(lookbackWindow: IResolvable) {
         cdkBuilder.lookbackWindow(lookbackWindow)
     }
 
-    /**
-     * @param lookbackWindow the value to be set.
-     */
+    /** @param lookbackWindow the value to be set. */
     public fun lookbackWindow(lookbackWindow: CfnDataSet.LookbackWindowProperty) {
         cdkBuilder.lookbackWindow(lookbackWindow)
     }

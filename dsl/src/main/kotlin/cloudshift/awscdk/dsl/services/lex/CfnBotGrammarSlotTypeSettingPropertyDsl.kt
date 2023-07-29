@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * Settings requried for a slot type based on a grammar that you provide.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,22 +38,18 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotGrammarSlotTypeSettingPropertyDsl {
-  private val cdkBuilder: CfnBot.GrammarSlotTypeSettingProperty.Builder =
-      CfnBot.GrammarSlotTypeSettingProperty.builder()
+    private val cdkBuilder: CfnBot.GrammarSlotTypeSettingProperty.Builder =
+        CfnBot.GrammarSlotTypeSettingProperty.builder()
 
-  /**
-   * @param source The source of the grammar used to create the slot type.
-   */
-  public fun source(source: IResolvable) {
-    cdkBuilder.source(source)
-  }
+    /** @param source The source of the grammar used to create the slot type. */
+    public fun source(source: IResolvable) {
+        cdkBuilder.source(source)
+    }
 
-  /**
-   * @param source The source of the grammar used to create the slot type.
-   */
-  public fun source(source: CfnBot.GrammarSlotTypeSourceProperty) {
-    cdkBuilder.source(source)
-  }
+    /** @param source The source of the grammar used to create the slot type. */
+    public fun source(source: CfnBot.GrammarSlotTypeSourceProperty) {
+        cdkBuilder.source(source)
+    }
 
-  public fun build(): CfnBot.GrammarSlotTypeSettingProperty = cdkBuilder.build()
+    public fun build(): CfnBot.GrammarSlotTypeSettingProperty = cdkBuilder.build()
 }

@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * A `NumericRangeFilter` filters values that are within the value range.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -56,77 +64,69 @@ public class CfnTemplateNumericRangeFilterPropertyDsl {
     private val cdkBuilder: CfnTemplate.NumericRangeFilterProperty.Builder =
         CfnTemplate.NumericRangeFilterProperty.builder()
 
-    /**
-     * @param aggregationFunction The aggregation function of the filter.
-     */
+    /** @param aggregationFunction The aggregation function of the filter. */
     public fun aggregationFunction(aggregationFunction: IResolvable) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param aggregationFunction The aggregation function of the filter.
-     */
+    /** @param aggregationFunction The aggregation function of the filter. */
     public fun aggregationFunction(aggregationFunction: CfnTemplate.AggregationFunctionProperty) {
         cdkBuilder.aggregationFunction(aggregationFunction)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: CfnTemplate.ColumnIdentifierProperty) {
         cdkBuilder.column(column)
     }
 
     /**
      * @param filterId An identifier that uniquely identifies a filter within a dashboard, analysis,
-     * or template.
+     *   or template.
      */
     public fun filterId(filterId: String) {
         cdkBuilder.filterId(filterId)
     }
 
     /**
-     * @param includeMaximum Determines whether the maximum value in the filter value range should be
-     * included in the filtered results.
+     * @param includeMaximum Determines whether the maximum value in the filter value range should
+     *   be included in the filtered results.
      */
     public fun includeMaximum(includeMaximum: Boolean) {
         cdkBuilder.includeMaximum(includeMaximum)
     }
 
     /**
-     * @param includeMaximum Determines whether the maximum value in the filter value range should be
-     * included in the filtered results.
+     * @param includeMaximum Determines whether the maximum value in the filter value range should
+     *   be included in the filtered results.
      */
     public fun includeMaximum(includeMaximum: IResolvable) {
         cdkBuilder.includeMaximum(includeMaximum)
     }
 
     /**
-     * @param includeMinimum Determines whether the minimum value in the filter value range should be
-     * included in the filtered results.
+     * @param includeMinimum Determines whether the minimum value in the filter value range should
+     *   be included in the filtered results.
      */
     public fun includeMinimum(includeMinimum: Boolean) {
         cdkBuilder.includeMinimum(includeMinimum)
     }
 
     /**
-     * @param includeMinimum Determines whether the minimum value in the filter value range should be
-     * included in the filtered results.
+     * @param includeMinimum Determines whether the minimum value in the filter value range should
+     *   be included in the filtered results.
      */
     public fun includeMinimum(includeMinimum: IResolvable) {
         cdkBuilder.includeMinimum(includeMinimum)
     }
 
     /**
-     * @param nullOption This option determines how null values should be treated when filtering data.
-     *
+     * @param nullOption This option determines how null values should be treated when filtering
+     *   data.
      * * `ALL_VALUES` : Include null values in filtered results.
      * * `NULLS_ONLY` : Only include null values in filtered results.
      * * `NON_NULLS_ONLY` : Exclude null values from filtered results.
@@ -135,36 +135,29 @@ public class CfnTemplateNumericRangeFilterPropertyDsl {
         cdkBuilder.nullOption(nullOption)
     }
 
-    /**
-     * @param rangeMaximum The maximum value for the filter value range.
-     */
+    /** @param rangeMaximum The maximum value for the filter value range. */
     public fun rangeMaximum(rangeMaximum: IResolvable) {
         cdkBuilder.rangeMaximum(rangeMaximum)
     }
 
-    /**
-     * @param rangeMaximum The maximum value for the filter value range.
-     */
+    /** @param rangeMaximum The maximum value for the filter value range. */
     public fun rangeMaximum(rangeMaximum: CfnTemplate.NumericRangeFilterValueProperty) {
         cdkBuilder.rangeMaximum(rangeMaximum)
     }
 
-    /**
-     * @param rangeMinimum The minimum value for the filter value range.
-     */
+    /** @param rangeMinimum The minimum value for the filter value range. */
     public fun rangeMinimum(rangeMinimum: IResolvable) {
         cdkBuilder.rangeMinimum(rangeMinimum)
     }
 
-    /**
-     * @param rangeMinimum The minimum value for the filter value range.
-     */
+    /** @param rangeMinimum The minimum value for the filter value range. */
     public fun rangeMinimum(rangeMinimum: CfnTemplate.NumericRangeFilterValueProperty) {
         cdkBuilder.rangeMinimum(rangeMinimum)
     }
 
     /**
-     * @param selectAllOptions Select all of the values. Null is not the assigned value of select all.
+     * @param selectAllOptions Select all of the values. Null is not the assigned value of select
+     *   all.
      * * `FILTER_ALL_VALUES`
      */
     public fun selectAllOptions(selectAllOptions: String) {

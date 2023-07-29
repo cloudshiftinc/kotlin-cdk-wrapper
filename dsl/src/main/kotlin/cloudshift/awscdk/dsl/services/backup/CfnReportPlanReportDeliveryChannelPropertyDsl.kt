@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.backup
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.backup.CfnReportPlan
  * Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,46 +39,43 @@ import software.amazon.awscdk.services.backup.CfnReportPlan
  */
 @CdkDslMarker
 public class CfnReportPlanReportDeliveryChannelPropertyDsl {
-  private val cdkBuilder: CfnReportPlan.ReportDeliveryChannelProperty.Builder =
-      CfnReportPlan.ReportDeliveryChannelProperty.builder()
+    private val cdkBuilder: CfnReportPlan.ReportDeliveryChannelProperty.Builder =
+        CfnReportPlan.ReportDeliveryChannelProperty.builder()
 
-  private val _formats: MutableList<String> = mutableListOf()
+    private val _formats: MutableList<String> = mutableListOf()
 
-  /**
-   * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
-   * If not specified, the default format is `CSV` .
-   */
-  public fun formats(vararg formats: String) {
-    _formats.addAll(listOf(*formats))
-  }
+    /**
+     * @param formats A list of the format of your reports: `CSV` , `JSON` , or both. If not
+     *   specified, the default format is `CSV` .
+     */
+    public fun formats(vararg formats: String) {
+        _formats.addAll(listOf(*formats))
+    }
 
-  /**
-   * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
-   * If not specified, the default format is `CSV` .
-   */
-  public fun formats(formats: Collection<String>) {
-    _formats.addAll(formats)
-  }
+    /**
+     * @param formats A list of the format of your reports: `CSV` , `JSON` , or both. If not
+     *   specified, the default format is `CSV` .
+     */
+    public fun formats(formats: Collection<String>) {
+        _formats.addAll(formats)
+    }
 
-  /**
-   * @param s3BucketName The unique name of the S3 bucket that receives your reports. 
-   */
-  public fun s3BucketName(s3BucketName: String) {
-    cdkBuilder.s3BucketName(s3BucketName)
-  }
+    /** @param s3BucketName The unique name of the S3 bucket that receives your reports. */
+    public fun s3BucketName(s3BucketName: String) {
+        cdkBuilder.s3BucketName(s3BucketName)
+    }
 
-  /**
-   * @param s3KeyPrefix The prefix for where AWS Backup Audit Manager delivers your reports to
-   * Amazon S3.
-   * The prefix is this part of the following path: s3://your-bucket-name/ `prefix`
-   * /Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
-   */
-  public fun s3KeyPrefix(s3KeyPrefix: String) {
-    cdkBuilder.s3KeyPrefix(s3KeyPrefix)
-  }
+    /**
+     * @param s3KeyPrefix The prefix for where AWS Backup Audit Manager delivers your reports to
+     *   Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/ `prefix`
+     *   /Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+     */
+    public fun s3KeyPrefix(s3KeyPrefix: String) {
+        cdkBuilder.s3KeyPrefix(s3KeyPrefix)
+    }
 
-  public fun build(): CfnReportPlan.ReportDeliveryChannelProperty {
-    if(_formats.isNotEmpty()) cdkBuilder.formats(_formats)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnReportPlan.ReportDeliveryChannelProperty {
+        if (_formats.isNotEmpty()) cdkBuilder.formats(_formats)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * Resource Names (ARNs) for a Kinesis stream used as the source for a delivery stream.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,23 +35,21 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 @CdkDslMarker
 public class CfnDeliveryStreamKinesisStreamSourceConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.Builder =
-      CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.builder()
+    private val cdkBuilder: CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.Builder =
+        CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.builder()
 
-  /**
-   * @param kinesisStreamArn The ARN of the source Kinesis data stream. 
-   */
-  public fun kinesisStreamArn(kinesisStreamArn: String) {
-    cdkBuilder.kinesisStreamArn(kinesisStreamArn)
-  }
+    /** @param kinesisStreamArn The ARN of the source Kinesis data stream. */
+    public fun kinesisStreamArn(kinesisStreamArn: String) {
+        cdkBuilder.kinesisStreamArn(kinesisStreamArn)
+    }
 
-  /**
-   * @param roleArn The ARN of the role that provides access to the source Kinesis data stream. 
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /**
+     * @param roleArn The ARN of the role that provides access to the source Kinesis data stream.
+     */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  public fun build(): CfnDeliveryStream.KinesisStreamSourceConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.KinesisStreamSourceConfigurationProperty =
+        cdkBuilder.build()
 }

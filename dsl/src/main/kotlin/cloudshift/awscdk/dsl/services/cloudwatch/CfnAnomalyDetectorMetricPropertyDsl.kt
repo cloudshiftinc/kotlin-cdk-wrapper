@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudwatch
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
  * Represents a specific metric.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,49 +42,38 @@ import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
  */
 @CdkDslMarker
 public class CfnAnomalyDetectorMetricPropertyDsl {
-  private val cdkBuilder: CfnAnomalyDetector.MetricProperty.Builder =
-      CfnAnomalyDetector.MetricProperty.builder()
+    private val cdkBuilder: CfnAnomalyDetector.MetricProperty.Builder =
+        CfnAnomalyDetector.MetricProperty.builder()
 
-  private val _dimensions: MutableList<Any> = mutableListOf()
+    private val _dimensions: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param dimensions The dimensions for the metric.
-   */
-  public fun dimensions(vararg dimensions: Any) {
-    _dimensions.addAll(listOf(*dimensions))
-  }
+    /** @param dimensions The dimensions for the metric. */
+    public fun dimensions(vararg dimensions: Any) {
+        _dimensions.addAll(listOf(*dimensions))
+    }
 
-  /**
-   * @param dimensions The dimensions for the metric.
-   */
-  public fun dimensions(dimensions: Collection<Any>) {
-    _dimensions.addAll(dimensions)
-  }
+    /** @param dimensions The dimensions for the metric. */
+    public fun dimensions(dimensions: Collection<Any>) {
+        _dimensions.addAll(dimensions)
+    }
 
-  /**
-   * @param dimensions The dimensions for the metric.
-   */
-  public fun dimensions(dimensions: IResolvable) {
-    cdkBuilder.dimensions(dimensions)
-  }
+    /** @param dimensions The dimensions for the metric. */
+    public fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions)
+    }
 
-  /**
-   * @param metricName The name of the metric. 
-   * This is a required field.
-   */
-  public fun metricName(metricName: String) {
-    cdkBuilder.metricName(metricName)
-  }
+    /** @param metricName The name of the metric. This is a required field. */
+    public fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+    }
 
-  /**
-   * @param namespace The namespace of the metric. 
-   */
-  public fun namespace(namespace: String) {
-    cdkBuilder.namespace(namespace)
-  }
+    /** @param namespace The namespace of the metric. */
+    public fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+    }
 
-  public fun build(): CfnAnomalyDetector.MetricProperty {
-    if(_dimensions.isNotEmpty()) cdkBuilder.dimensions(_dimensions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAnomalyDetector.MetricProperty {
+        if (_dimensions.isNotEmpty()) cdkBuilder.dimensions(_dimensions)
+        return cdkBuilder.build()
+    }
 }

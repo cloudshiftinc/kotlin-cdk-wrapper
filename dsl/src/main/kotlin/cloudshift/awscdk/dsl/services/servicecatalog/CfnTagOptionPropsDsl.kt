@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.servicecatalog.CfnTagOptionProps
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.servicecatalog.CfnTagOptionProps
 
 /**
  * Properties for defining a `CfnTagOption`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,30 +39,22 @@ import kotlin.String
 public class CfnTagOptionPropsDsl {
     private val cdkBuilder: CfnTagOptionProps.Builder = CfnTagOptionProps.builder()
 
-    /**
-     * @param active The TagOption active state.
-     */
+    /** @param active The TagOption active state. */
     public fun active(active: Boolean) {
         cdkBuilder.active(active)
     }
 
-    /**
-     * @param active The TagOption active state.
-     */
+    /** @param active The TagOption active state. */
     public fun active(active: IResolvable) {
         cdkBuilder.active(active)
     }
 
-    /**
-     * @param key The TagOption key.
-     */
+    /** @param key The TagOption key. */
     public fun key(key: String) {
         cdkBuilder.key(key)
     }
 
-    /**
-     * @param value The TagOption value.
-     */
+    /** @param value The TagOption value. */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
     }

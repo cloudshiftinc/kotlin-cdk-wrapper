@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig
  * Configuration for `QueryParameterMatch`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,24 +37,21 @@ import software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig
  */
 @CdkDslMarker
 public class QueryParameterMatchConfigDsl {
-  private val cdkBuilder: QueryParameterMatchConfig.Builder = QueryParameterMatchConfig.builder()
+    private val cdkBuilder: QueryParameterMatchConfig.Builder = QueryParameterMatchConfig.builder()
 
-  /**
-   * @param queryParameterMatch Route CFN configuration for route query parameter match. 
-   */
-  public fun queryParameterMatch(queryParameterMatch: CfnRouteQueryParameterPropertyDsl.() -> Unit =
-      {}) {
-    val builder = CfnRouteQueryParameterPropertyDsl()
-    builder.apply(queryParameterMatch)
-    cdkBuilder.queryParameterMatch(builder.build())
-  }
+    /** @param queryParameterMatch Route CFN configuration for route query parameter match. */
+    public fun queryParameterMatch(
+        queryParameterMatch: CfnRouteQueryParameterPropertyDsl.() -> Unit = {}
+    ) {
+        val builder = CfnRouteQueryParameterPropertyDsl()
+        builder.apply(queryParameterMatch)
+        cdkBuilder.queryParameterMatch(builder.build())
+    }
 
-  /**
-   * @param queryParameterMatch Route CFN configuration for route query parameter match. 
-   */
-  public fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty) {
-    cdkBuilder.queryParameterMatch(queryParameterMatch)
-  }
+    /** @param queryParameterMatch Route CFN configuration for route query parameter match. */
+    public fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty) {
+        cdkBuilder.queryParameterMatch(queryParameterMatch)
+    }
 
-  public fun build(): QueryParameterMatchConfig = cdkBuilder.build()
+    public fun build(): QueryParameterMatchConfig = cdkBuilder.build()
 }

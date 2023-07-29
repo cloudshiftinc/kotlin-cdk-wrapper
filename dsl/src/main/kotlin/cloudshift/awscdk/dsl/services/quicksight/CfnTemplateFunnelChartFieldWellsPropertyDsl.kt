@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -513,23 +521,26 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateFunnelChartFieldWellsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.FunnelChartFieldWellsProperty.Builder =
-      CfnTemplate.FunnelChartFieldWellsProperty.builder()
+    private val cdkBuilder: CfnTemplate.FunnelChartFieldWellsProperty.Builder =
+        CfnTemplate.FunnelChartFieldWellsProperty.builder()
 
-  /**
-   * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual` .
-   */
-  public fun funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells: IResolvable) {
-    cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)
-  }
+    /**
+     * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual`
+     *   .
+     */
+    public fun funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells: IResolvable) {
+        cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)
+    }
 
-  /**
-   * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual` .
-   */
-  public
-      fun funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells: CfnTemplate.FunnelChartAggregatedFieldWellsProperty) {
-    cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)
-  }
+    /**
+     * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual`
+     *   .
+     */
+    public fun funnelChartAggregatedFieldWells(
+        funnelChartAggregatedFieldWells: CfnTemplate.FunnelChartAggregatedFieldWellsProperty
+    ) {
+        cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)
+    }
 
-  public fun build(): CfnTemplate.FunnelChartFieldWellsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.FunnelChartFieldWellsProperty = cdkBuilder.build()
 }

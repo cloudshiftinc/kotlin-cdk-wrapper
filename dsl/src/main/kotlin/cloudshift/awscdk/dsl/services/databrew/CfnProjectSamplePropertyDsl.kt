@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.databrew.CfnProject
  * Represents the sample size and sampling type for DataBrew to use for interactive data analysis.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,21 +35,17 @@ import software.amazon.awscdk.services.databrew.CfnProject
  */
 @CdkDslMarker
 public class CfnProjectSamplePropertyDsl {
-  private val cdkBuilder: CfnProject.SampleProperty.Builder = CfnProject.SampleProperty.builder()
+    private val cdkBuilder: CfnProject.SampleProperty.Builder = CfnProject.SampleProperty.builder()
 
-  /**
-   * @param size The number of rows in the sample.
-   */
-  public fun size(size: Number) {
-    cdkBuilder.size(size)
-  }
+    /** @param size The number of rows in the sample. */
+    public fun size(size: Number) {
+        cdkBuilder.size(size)
+    }
 
-  /**
-   * @param type The way in which DataBrew obtains rows from a dataset. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The way in which DataBrew obtains rows from a dataset. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnProject.SampleProperty = cdkBuilder.build()
+    public fun build(): CfnProject.SampleProperty = cdkBuilder.build()
 }

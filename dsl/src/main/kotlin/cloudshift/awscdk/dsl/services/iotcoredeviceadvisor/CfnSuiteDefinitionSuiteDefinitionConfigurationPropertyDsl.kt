@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotcoredeviceadvisor
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,69 +44,57 @@ import software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
  */
 @CdkDslMarker
 public class CfnSuiteDefinitionSuiteDefinitionConfigurationPropertyDsl {
-  private val cdkBuilder: CfnSuiteDefinition.SuiteDefinitionConfigurationProperty.Builder =
-      CfnSuiteDefinition.SuiteDefinitionConfigurationProperty.builder()
+    private val cdkBuilder: CfnSuiteDefinition.SuiteDefinitionConfigurationProperty.Builder =
+        CfnSuiteDefinition.SuiteDefinitionConfigurationProperty.builder()
 
-  private val _devices: MutableList<Any> = mutableListOf()
+    private val _devices: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param devicePermissionRoleArn The device permission role arn of the test suite. 
-   */
-  public fun devicePermissionRoleArn(devicePermissionRoleArn: String) {
-    cdkBuilder.devicePermissionRoleArn(devicePermissionRoleArn)
-  }
+    /** @param devicePermissionRoleArn The device permission role arn of the test suite. */
+    public fun devicePermissionRoleArn(devicePermissionRoleArn: String) {
+        cdkBuilder.devicePermissionRoleArn(devicePermissionRoleArn)
+    }
 
-  /**
-   * @param devices The devices being tested in the test suite.
-   */
-  public fun devices(vararg devices: Any) {
-    _devices.addAll(listOf(*devices))
-  }
+    /** @param devices The devices being tested in the test suite. */
+    public fun devices(vararg devices: Any) {
+        _devices.addAll(listOf(*devices))
+    }
 
-  /**
-   * @param devices The devices being tested in the test suite.
-   */
-  public fun devices(devices: Collection<Any>) {
-    _devices.addAll(devices)
-  }
+    /** @param devices The devices being tested in the test suite. */
+    public fun devices(devices: Collection<Any>) {
+        _devices.addAll(devices)
+    }
 
-  /**
-   * @param devices The devices being tested in the test suite.
-   */
-  public fun devices(devices: IResolvable) {
-    cdkBuilder.devices(devices)
-  }
+    /** @param devices The devices being tested in the test suite. */
+    public fun devices(devices: IResolvable) {
+        cdkBuilder.devices(devices)
+    }
 
-  /**
-   * @param intendedForQualification Whether the tests are intended for qualification in a suite.
-   */
-  public fun intendedForQualification(intendedForQualification: Boolean) {
-    cdkBuilder.intendedForQualification(intendedForQualification)
-  }
+    /**
+     * @param intendedForQualification Whether the tests are intended for qualification in a suite.
+     */
+    public fun intendedForQualification(intendedForQualification: Boolean) {
+        cdkBuilder.intendedForQualification(intendedForQualification)
+    }
 
-  /**
-   * @param intendedForQualification Whether the tests are intended for qualification in a suite.
-   */
-  public fun intendedForQualification(intendedForQualification: IResolvable) {
-    cdkBuilder.intendedForQualification(intendedForQualification)
-  }
+    /**
+     * @param intendedForQualification Whether the tests are intended for qualification in a suite.
+     */
+    public fun intendedForQualification(intendedForQualification: IResolvable) {
+        cdkBuilder.intendedForQualification(intendedForQualification)
+    }
 
-  /**
-   * @param rootGroup The root group of the test suite. 
-   */
-  public fun rootGroup(rootGroup: String) {
-    cdkBuilder.rootGroup(rootGroup)
-  }
+    /** @param rootGroup The root group of the test suite. */
+    public fun rootGroup(rootGroup: String) {
+        cdkBuilder.rootGroup(rootGroup)
+    }
 
-  /**
-   * @param suiteDefinitionName The Name of the suite definition.
-   */
-  public fun suiteDefinitionName(suiteDefinitionName: String) {
-    cdkBuilder.suiteDefinitionName(suiteDefinitionName)
-  }
+    /** @param suiteDefinitionName The Name of the suite definition. */
+    public fun suiteDefinitionName(suiteDefinitionName: String) {
+        cdkBuilder.suiteDefinitionName(suiteDefinitionName)
+    }
 
-  public fun build(): CfnSuiteDefinition.SuiteDefinitionConfigurationProperty {
-    if(_devices.isNotEmpty()) cdkBuilder.devices(_devices)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnSuiteDefinition.SuiteDefinitionConfigurationProperty {
+        if (_devices.isNotEmpty()) cdkBuilder.devices(_devices)
+        return cdkBuilder.build()
+    }
 }

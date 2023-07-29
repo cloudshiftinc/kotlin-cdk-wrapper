@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  * for failed asynchronous invocations.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,15 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionDeadLetterConfigPropertyDsl {
-  private val cdkBuilder: CfnFunction.DeadLetterConfigProperty.Builder =
-      CfnFunction.DeadLetterConfigProperty.builder()
+    private val cdkBuilder: CfnFunction.DeadLetterConfigProperty.Builder =
+        CfnFunction.DeadLetterConfigProperty.builder()
 
-  /**
-   * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
-   */
-  public fun targetArn(targetArn: String) {
-    cdkBuilder.targetArn(targetArn)
-  }
+    /**
+     * @param targetArn The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+     */
+    public fun targetArn(targetArn: String) {
+        cdkBuilder.targetArn(targetArn)
+    }
 
-  public fun build(): CfnFunction.DeadLetterConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.DeadLetterConfigProperty = cdkBuilder.build()
 }

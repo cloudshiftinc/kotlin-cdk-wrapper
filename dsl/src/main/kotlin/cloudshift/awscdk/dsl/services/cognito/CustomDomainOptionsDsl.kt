@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cognito.CustomDomainOptions
  * Options while specifying custom domain.
  *
  * Example:
- *
  * ```
  * UserPool pool = new UserPool(this, "Pool");
  * pool.addDomain("CognitoDomain", UserPoolDomainOptions.builder()
@@ -34,21 +42,20 @@ import software.amazon.awscdk.services.cognito.CustomDomainOptions
  */
 @CdkDslMarker
 public class CustomDomainOptionsDsl {
-  private val cdkBuilder: CustomDomainOptions.Builder = CustomDomainOptions.builder()
+    private val cdkBuilder: CustomDomainOptions.Builder = CustomDomainOptions.builder()
 
-  /**
-   * @param certificate The certificate to associate with this domain. 
-   */
-  public fun certificate(certificate: ICertificate) {
-    cdkBuilder.certificate(certificate)
-  }
+    /** @param certificate The certificate to associate with this domain. */
+    public fun certificate(certificate: ICertificate) {
+        cdkBuilder.certificate(certificate)
+    }
 
-  /**
-   * @param domainName The custom domain name that you would like to associate with this User Pool. 
-   */
-  public fun domainName(domainName: String) {
-    cdkBuilder.domainName(domainName)
-  }
+    /**
+     * @param domainName The custom domain name that you would like to associate with this User
+     *   Pool.
+     */
+    public fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+    }
 
-  public fun build(): CustomDomainOptions = cdkBuilder.build()
+    public fun build(): CustomDomainOptions = cdkBuilder.build()
 }

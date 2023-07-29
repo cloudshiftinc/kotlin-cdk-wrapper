@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda.eventsources
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.sqs.IQueue
  * Properties forwarded to the Lambda Subscription.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.sns.*;
  * import software.amazon.awscdk.services.lambda.eventsources.SnsEventSource;
@@ -29,31 +37,31 @@ import software.amazon.awscdk.services.sqs.IQueue
  */
 @CdkDslMarker
 public class SnsEventSourcePropsDsl {
-  private val cdkBuilder: SnsEventSourceProps.Builder = SnsEventSourceProps.builder()
+    private val cdkBuilder: SnsEventSourceProps.Builder = SnsEventSourceProps.builder()
 
-  /**
-   * @param deadLetterQueue Queue to be used as dead letter queue.
-   * If not passed no dead letter queue is enabled.
-   */
-  public fun deadLetterQueue(deadLetterQueue: IQueue) {
-    cdkBuilder.deadLetterQueue(deadLetterQueue)
-  }
+    /**
+     * @param deadLetterQueue Queue to be used as dead letter queue. If not passed no dead letter
+     *   queue is enabled.
+     */
+    public fun deadLetterQueue(deadLetterQueue: IQueue) {
+        cdkBuilder.deadLetterQueue(deadLetterQueue)
+    }
 
-  /**
-   * @param filterPolicy The filter policy.
-   */
-  public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
-    cdkBuilder.filterPolicy(filterPolicy)
-  }
+    /** @param filterPolicy The filter policy. */
+    public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
+        cdkBuilder.filterPolicy(filterPolicy)
+    }
 
-  /**
-   * @param filterPolicyWithMessageBody The filter policy that is applied on the message body.
-   * To apply a filter policy to the message attributes, use `filterPolicy`. A maximum of one of
-   * `filterPolicyWithMessageBody` and `filterPolicy` may be used.
-   */
-  public fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>) {
-    cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody)
-  }
+    /**
+     * @param filterPolicyWithMessageBody The filter policy that is applied on the message body. To
+     *   apply a filter policy to the message attributes, use `filterPolicy`. A maximum of one of
+     *   `filterPolicyWithMessageBody` and `filterPolicy` may be used.
+     */
+    public fun filterPolicyWithMessageBody(
+        filterPolicyWithMessageBody: Map<String, FilterOrPolicy>
+    ) {
+        cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody)
+    }
 
-  public fun build(): SnsEventSourceProps = cdkBuilder.build()
+    public fun build(): SnsEventSourceProps = cdkBuilder.build()
 }

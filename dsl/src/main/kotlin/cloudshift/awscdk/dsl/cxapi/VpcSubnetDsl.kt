@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cxapi
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cxapi.VpcSubnet
 import kotlin.String
+import software.amazon.awscdk.cxapi.VpcSubnet
 
 /**
  * A subnet representation that the VPC provider uses.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,29 +38,23 @@ public class VpcSubnetDsl {
 
     /**
      * @param availabilityZone The code of the availability zone this subnet is in (for example,
-     * 'us-west-2a').
+     *   'us-west-2a').
      */
     public fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    /**
-     * @param cidr CIDR range of the subnet.
-     */
+    /** @param cidr CIDR range of the subnet. */
     public fun cidr(cidr: String) {
         cdkBuilder.cidr(cidr)
     }
 
-    /**
-     * @param routeTableId The identifier of the route table for this subnet.
-     */
+    /** @param routeTableId The identifier of the route table for this subnet. */
     public fun routeTableId(routeTableId: String) {
         cdkBuilder.routeTableId(routeTableId)
     }
 
-    /**
-     * @param subnetId The identifier of the subnet.
-     */
+    /** @param subnetId The identifier of the subnet. */
     public fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
     }

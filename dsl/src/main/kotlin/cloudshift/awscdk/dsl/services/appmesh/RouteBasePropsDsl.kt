@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.RouteSpec
  * Base interface properties for all Routes.
  *
  * Example:
- *
  * ```
  * VirtualRouter router;
  * VirtualNode node;
@@ -34,21 +42,17 @@ import software.amazon.awscdk.services.appmesh.RouteSpec
  */
 @CdkDslMarker
 public class RouteBasePropsDsl {
-  private val cdkBuilder: RouteBaseProps.Builder = RouteBaseProps.builder()
+    private val cdkBuilder: RouteBaseProps.Builder = RouteBaseProps.builder()
 
-  /**
-   * @param routeName The name of the route.
-   */
-  public fun routeName(routeName: String) {
-    cdkBuilder.routeName(routeName)
-  }
+    /** @param routeName The name of the route. */
+    public fun routeName(routeName: String) {
+        cdkBuilder.routeName(routeName)
+    }
 
-  /**
-   * @param routeSpec Protocol specific spec. 
-   */
-  public fun routeSpec(routeSpec: RouteSpec) {
-    cdkBuilder.routeSpec(routeSpec)
-  }
+    /** @param routeSpec Protocol specific spec. */
+    public fun routeSpec(routeSpec: RouteSpec) {
+        cdkBuilder.routeSpec(routeSpec)
+    }
 
-  public fun build(): RouteBaseProps = cdkBuilder.build()
+    public fun build(): RouteBaseProps = cdkBuilder.build()
 }

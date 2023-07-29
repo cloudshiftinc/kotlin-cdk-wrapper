@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.sam.CfnFunction
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,22 +31,18 @@ import software.amazon.awscdk.services.sam.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionDeadLetterQueuePropertyDsl {
-  private val cdkBuilder: CfnFunction.DeadLetterQueueProperty.Builder =
-      CfnFunction.DeadLetterQueueProperty.builder()
+    private val cdkBuilder: CfnFunction.DeadLetterQueueProperty.Builder =
+        CfnFunction.DeadLetterQueueProperty.builder()
 
-  /**
-   * @param targetArn the value to be set. 
-   */
-  public fun targetArn(targetArn: String) {
-    cdkBuilder.targetArn(targetArn)
-  }
+    /** @param targetArn the value to be set. */
+    public fun targetArn(targetArn: String) {
+        cdkBuilder.targetArn(targetArn)
+    }
 
-  /**
-   * @param type the value to be set. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type the value to be set. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnFunction.DeadLetterQueueProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.DeadLetterQueueProperty = cdkBuilder.build()
 }

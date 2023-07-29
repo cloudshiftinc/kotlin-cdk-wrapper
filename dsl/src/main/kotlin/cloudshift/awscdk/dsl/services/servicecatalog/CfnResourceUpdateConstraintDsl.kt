@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Specifies a `RESOURCE_UPDATE` constraint.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,18 +40,18 @@ import kotlin.String
 @CdkDslMarker
 public class CfnResourceUpdateConstraintDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnResourceUpdateConstraint.Builder =
         CfnResourceUpdateConstraint.Builder.create(scope, id)
 
     /**
      * The language code.
-     *
      * * `jp` - Japanese
      * * `zh` - Chinese
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html#cfn-servicecatalog-resourceupdateconstraint-acceptlanguage)
+     *
      * @param acceptLanguage The language code.
      */
     public fun acceptLanguage(acceptLanguage: String) {
@@ -54,6 +62,7 @@ public class CfnResourceUpdateConstraintDsl(
      * The description of the constraint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html#cfn-servicecatalog-resourceupdateconstraint-description)
+     *
      * @param description The description of the constraint.
      */
     public fun description(description: String) {
@@ -64,6 +73,7 @@ public class CfnResourceUpdateConstraintDsl(
      * The portfolio identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html#cfn-servicecatalog-resourceupdateconstraint-portfolioid)
+     *
      * @param portfolioId The portfolio identifier.
      */
     public fun portfolioId(portfolioId: String) {
@@ -74,6 +84,7 @@ public class CfnResourceUpdateConstraintDsl(
      * The product identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html#cfn-servicecatalog-resourceupdateconstraint-productid)
+     *
      * @param productId The product identifier.
      */
     public fun productId(productId: String) {
@@ -90,9 +101,10 @@ public class CfnResourceUpdateConstraintDsl(
      * resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html#cfn-servicecatalog-resourceupdateconstraint-tagupdateonprovisionedproduct)
+     *
      * @param tagUpdateOnProvisionedProduct If set to `ALLOWED` , lets users change tags in a
-     * [CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html)
-     * resource.
+     *   [CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html)
+     *   resource.
      */
     public fun tagUpdateOnProvisionedProduct(tagUpdateOnProvisionedProduct: String) {
         cdkBuilder.tagUpdateOnProvisionedProduct(tagUpdateOnProvisionedProduct)

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.databrew.CfnJob
  * Represents one or more actions to be performed on a DataBrew dataset.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,21 +34,17 @@ import software.amazon.awscdk.services.databrew.CfnJob
  */
 @CdkDslMarker
 public class CfnJobRecipePropertyDsl {
-  private val cdkBuilder: CfnJob.RecipeProperty.Builder = CfnJob.RecipeProperty.builder()
+    private val cdkBuilder: CfnJob.RecipeProperty.Builder = CfnJob.RecipeProperty.builder()
 
-  /**
-   * @param name The unique name for the recipe. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The unique name for the recipe. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param version The identifier for the version for the recipe.
-   */
-  public fun version(version: String) {
-    cdkBuilder.version(version)
-  }
+    /** @param version The identifier for the version for the recipe. */
+    public fun version(version: String) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): CfnJob.RecipeProperty = cdkBuilder.build()
+    public fun build(): CfnJob.RecipeProperty = cdkBuilder.build()
 }

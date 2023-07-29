@@ -1,15 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssm
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget
+import software.constructs.Construct
 
 /**
  * The `AWS::SSM::MaintenanceWindowTarget` resource registers a target with a maintenance window for
@@ -20,7 +29,6 @@ import kotlin.collections.MutableList
  * in the *AWS Systems Manager API Reference* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,7 +53,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnMaintenanceWindowTargetDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnMaintenanceWindowTarget.Builder =
         CfnMaintenanceWindowTarget.Builder.create(scope, id)
@@ -56,6 +64,7 @@ public class CfnMaintenanceWindowTargetDsl(
      * A description for the target.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-description)
+     *
      * @param description A description for the target.
      */
     public fun description(description: String) {
@@ -66,6 +75,7 @@ public class CfnMaintenanceWindowTargetDsl(
      * The name for the maintenance window target.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-name)
+     *
      * @param name The name for the maintenance window target.
      */
     public fun name(name: String) {
@@ -77,8 +87,10 @@ public class CfnMaintenanceWindowTargetDsl(
      * raised while running tasks for these targets in this maintenance window.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-ownerinformation)
+     *
      * @param ownerInformation A user-provided value that will be included in any Amazon CloudWatch
-     * Events events that are raised while running tasks for these targets in this maintenance window.
+     *   Events events that are raised while running tasks for these targets in this maintenance
+     *   window.
      */
     public fun ownerInformation(ownerInformation: String) {
         cdkBuilder.ownerInformation(ownerInformation)
@@ -88,6 +100,7 @@ public class CfnMaintenanceWindowTargetDsl(
      * The type of target that is being registered with the maintenance window.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-resourcetype)
+     *
      * @param resourceType The type of target that is being registered with the maintenance window.
      */
     public fun resourceType(resourceType: String) {
@@ -102,6 +115,7 @@ public class CfnMaintenanceWindowTargetDsl(
      * You must specify targets by using the `WindowTargetIds` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-targets)
+     *
      * @param targets The targets to register with the maintenance window.
      */
     public fun targets(vararg targets: Any) {
@@ -116,6 +130,7 @@ public class CfnMaintenanceWindowTargetDsl(
      * You must specify targets by using the `WindowTargetIds` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-targets)
+     *
      * @param targets The targets to register with the maintenance window.
      */
     public fun targets(targets: Collection<Any>) {
@@ -130,6 +145,7 @@ public class CfnMaintenanceWindowTargetDsl(
      * You must specify targets by using the `WindowTargetIds` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-targets)
+     *
      * @param targets The targets to register with the maintenance window.
      */
     public fun targets(targets: IResolvable) {
@@ -140,6 +156,7 @@ public class CfnMaintenanceWindowTargetDsl(
      * The ID of the maintenance window to register the target with.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html#cfn-ssm-maintenancewindowtarget-windowid)
+     *
      * @param windowId The ID of the maintenance window to register the target with.
      */
     public fun windowId(windowId: String) {

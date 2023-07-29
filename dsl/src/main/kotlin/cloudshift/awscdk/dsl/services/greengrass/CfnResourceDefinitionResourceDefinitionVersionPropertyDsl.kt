@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.greengrass
 
@@ -13,12 +22,10 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  * A resource definition version contains a list of resources. (In AWS CloudFormation , resources
  * are named *resource instances* .).
  *
- *
  * After you create a resource definition version that contains the resources you want to deploy,
  * you must add it to your group version. For more information, see
  * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
  * .
- *
  *
  * In an AWS CloudFormation template, `ResourceDefinitionVersion` is the property type of the
  * `InitialVersion` property in the
@@ -26,7 +33,6 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -88,34 +94,28 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
  */
 @CdkDslMarker
 public class CfnResourceDefinitionResourceDefinitionVersionPropertyDsl {
-  private val cdkBuilder: CfnResourceDefinition.ResourceDefinitionVersionProperty.Builder =
-      CfnResourceDefinition.ResourceDefinitionVersionProperty.builder()
+    private val cdkBuilder: CfnResourceDefinition.ResourceDefinitionVersionProperty.Builder =
+        CfnResourceDefinition.ResourceDefinitionVersionProperty.builder()
 
-  private val _resources: MutableList<Any> = mutableListOf()
+    private val _resources: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param resources The resources in this version. 
-   */
-  public fun resources(vararg resources: Any) {
-    _resources.addAll(listOf(*resources))
-  }
+    /** @param resources The resources in this version. */
+    public fun resources(vararg resources: Any) {
+        _resources.addAll(listOf(*resources))
+    }
 
-  /**
-   * @param resources The resources in this version. 
-   */
-  public fun resources(resources: Collection<Any>) {
-    _resources.addAll(resources)
-  }
+    /** @param resources The resources in this version. */
+    public fun resources(resources: Collection<Any>) {
+        _resources.addAll(resources)
+    }
 
-  /**
-   * @param resources The resources in this version. 
-   */
-  public fun resources(resources: IResolvable) {
-    cdkBuilder.resources(resources)
-  }
+    /** @param resources The resources in this version. */
+    public fun resources(resources: IResolvable) {
+        cdkBuilder.resources(resources)
+    }
 
-  public fun build(): CfnResourceDefinition.ResourceDefinitionVersionProperty {
-    if(_resources.isNotEmpty()) cdkBuilder.resources(_resources)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnResourceDefinition.ResourceDefinitionVersionProperty {
+        if (_resources.isNotEmpty()) cdkBuilder.resources(_resources)
+        return cdkBuilder.build()
+    }
 }

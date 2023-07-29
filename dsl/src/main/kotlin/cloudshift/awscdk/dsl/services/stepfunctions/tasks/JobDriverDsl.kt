@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver
  * The job driver is used to provide an input for the job that will be run.
  *
  * Example:
- *
  * ```
  * EmrContainersStartJobRun.Builder.create(this, "EMR Containers Start Job Run")
  * .virtualCluster(VirtualClusterInput.fromVirtualClusterId("de92jdei2910fwedz"))
@@ -35,23 +43,19 @@ import software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver
  */
 @CdkDslMarker
 public class JobDriverDsl {
-  private val cdkBuilder: JobDriver.Builder = JobDriver.builder()
+    private val cdkBuilder: JobDriver.Builder = JobDriver.builder()
 
-  /**
-   * @param sparkSubmitJobDriver The job driver parameters specified for spark submit. 
-   */
-  public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriverDsl.() -> Unit = {}) {
-    val builder = SparkSubmitJobDriverDsl()
-    builder.apply(sparkSubmitJobDriver)
-    cdkBuilder.sparkSubmitJobDriver(builder.build())
-  }
+    /** @param sparkSubmitJobDriver The job driver parameters specified for spark submit. */
+    public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriverDsl.() -> Unit = {}) {
+        val builder = SparkSubmitJobDriverDsl()
+        builder.apply(sparkSubmitJobDriver)
+        cdkBuilder.sparkSubmitJobDriver(builder.build())
+    }
 
-  /**
-   * @param sparkSubmitJobDriver The job driver parameters specified for spark submit. 
-   */
-  public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver) {
-    cdkBuilder.sparkSubmitJobDriver(sparkSubmitJobDriver)
-  }
+    /** @param sparkSubmitJobDriver The job driver parameters specified for spark submit. */
+    public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver) {
+        cdkBuilder.sparkSubmitJobDriver(sparkSubmitJobDriver)
+    }
 
-  public fun build(): JobDriver = cdkBuilder.build()
+    public fun build(): JobDriver = cdkBuilder.build()
 }

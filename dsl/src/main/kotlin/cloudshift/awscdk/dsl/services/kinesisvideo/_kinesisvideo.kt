@@ -1,14 +1,23 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisvideo
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel
 import software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps
 import software.amazon.awscdk.services.kinesisvideo.CfnStream
 import software.amazon.awscdk.services.kinesisvideo.CfnStreamProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object kinesisvideo {
     /**
@@ -17,7 +26,6 @@ public object kinesisvideo {
      * `CreateSignalingChannel` is an asynchronous operation.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -39,7 +47,7 @@ public object kinesisvideo {
     public inline fun cfnSignalingChannel(
         scope: Construct,
         id: String,
-        block: CfnSignalingChannelDsl.() -> Unit = {}
+        block: CfnSignalingChannelDsl.() -> Unit = {},
     ): CfnSignalingChannel {
         val builder = CfnSignalingChannelDsl(scope, id)
         builder.apply(block)
@@ -50,7 +58,6 @@ public object kinesisvideo {
      * Properties for defining a `CfnSignalingChannel`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -68,7 +75,9 @@ public object kinesisvideo {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html)
      */
-    public inline fun cfnSignalingChannelProps(block: CfnSignalingChannelPropsDsl.() -> Unit = {}): CfnSignalingChannelProps {
+    public inline fun cfnSignalingChannelProps(
+        block: CfnSignalingChannelPropsDsl.() -> Unit = {}
+    ): CfnSignalingChannelProps {
         val builder = CfnSignalingChannelPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -82,13 +91,12 @@ public object kinesisvideo {
      *
      * `CreateStream` is an asynchronous operation.
      *
-     * For information about how the service works, see [How it
-   * Works](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-it-works.html) .
+     * For information about how the service works, see
+     * [How it Works](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-it-works.html) .
      *
      * You must have permissions for the `KinesisVideo:CreateStream` action.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -111,7 +119,7 @@ public object kinesisvideo {
     public inline fun cfnStream(
         scope: Construct,
         id: String,
-        block: CfnStreamDsl.() -> Unit = {}
+        block: CfnStreamDsl.() -> Unit = {},
     ): CfnStream {
         val builder = CfnStreamDsl(scope, id)
         builder.apply(block)
@@ -122,7 +130,6 @@ public object kinesisvideo {
      * Properties for defining a `CfnStream`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.

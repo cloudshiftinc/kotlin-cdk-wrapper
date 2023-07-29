@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  * You use this database for SQL queries that you write in a Kinesis Data Analytics Studio notebook.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,29 +37,28 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
  */
 @CdkDslMarker
 public class CfnApplicationV2CatalogConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApplicationV2.CatalogConfigurationProperty.Builder =
-      CfnApplicationV2.CatalogConfigurationProperty.builder()
+    private val cdkBuilder: CfnApplicationV2.CatalogConfigurationProperty.Builder =
+        CfnApplicationV2.CatalogConfigurationProperty.builder()
 
-  /**
-   * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon Glue
-   * database.
-   * You use this database for Apache Flink SQL queries and table API transforms that you write in a
-   * Kinesis Data Analytics Studio notebook.
-   */
-  public fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
-    cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration)
-  }
+    /**
+     * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon Glue
+     *   database. You use this database for Apache Flink SQL queries and table API transforms that
+     *   you write in a Kinesis Data Analytics Studio notebook.
+     */
+    public fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
+        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration)
+    }
 
-  /**
-   * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon Glue
-   * database.
-   * You use this database for Apache Flink SQL queries and table API transforms that you write in a
-   * Kinesis Data Analytics Studio notebook.
-   */
-  public
-      fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: CfnApplicationV2.GlueDataCatalogConfigurationProperty) {
-    cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration)
-  }
+    /**
+     * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon Glue
+     *   database. You use this database for Apache Flink SQL queries and table API transforms that
+     *   you write in a Kinesis Data Analytics Studio notebook.
+     */
+    public fun glueDataCatalogConfiguration(
+        glueDataCatalogConfiguration: CfnApplicationV2.GlueDataCatalogConfigurationProperty
+    ) {
+        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration)
+    }
 
-  public fun build(): CfnApplicationV2.CatalogConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationV2.CatalogConfigurationProperty = cdkBuilder.build()
 }

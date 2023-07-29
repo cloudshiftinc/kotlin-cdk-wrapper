@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apprunner
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration
  * configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,15 +33,14 @@ import software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration
  */
 @CdkDslMarker
 public class CfnObservabilityConfigurationTraceConfigurationPropertyDsl {
-  private val cdkBuilder: CfnObservabilityConfiguration.TraceConfigurationProperty.Builder =
-      CfnObservabilityConfiguration.TraceConfigurationProperty.builder()
+    private val cdkBuilder: CfnObservabilityConfiguration.TraceConfigurationProperty.Builder =
+        CfnObservabilityConfiguration.TraceConfigurationProperty.builder()
 
-  /**
-   * @param vendor The implementation provider chosen for tracing App Runner services. 
-   */
-  public fun vendor(vendor: String) {
-    cdkBuilder.vendor(vendor)
-  }
+    /** @param vendor The implementation provider chosen for tracing App Runner services. */
+    public fun vendor(vendor: String) {
+        cdkBuilder.vendor(vendor)
+    }
 
-  public fun build(): CfnObservabilityConfiguration.TraceConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnObservabilityConfiguration.TraceConfigurationProperty =
+        cdkBuilder.build()
 }

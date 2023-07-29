@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.iot.CfnThingType
  * description, and a list of searchable thing attribute names.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,34 +36,29 @@ import software.amazon.awscdk.services.iot.CfnThingType
  */
 @CdkDslMarker
 public class CfnThingTypeThingTypePropertiesPropertyDsl {
-  private val cdkBuilder: CfnThingType.ThingTypePropertiesProperty.Builder =
-      CfnThingType.ThingTypePropertiesProperty.builder()
+    private val cdkBuilder: CfnThingType.ThingTypePropertiesProperty.Builder =
+        CfnThingType.ThingTypePropertiesProperty.builder()
 
-  private val _searchableAttributes: MutableList<String> = mutableListOf()
+    private val _searchableAttributes: MutableList<String> = mutableListOf()
 
-  /**
-   * @param searchableAttributes A list of searchable thing attribute names.
-   */
-  public fun searchableAttributes(vararg searchableAttributes: String) {
-    _searchableAttributes.addAll(listOf(*searchableAttributes))
-  }
+    /** @param searchableAttributes A list of searchable thing attribute names. */
+    public fun searchableAttributes(vararg searchableAttributes: String) {
+        _searchableAttributes.addAll(listOf(*searchableAttributes))
+    }
 
-  /**
-   * @param searchableAttributes A list of searchable thing attribute names.
-   */
-  public fun searchableAttributes(searchableAttributes: Collection<String>) {
-    _searchableAttributes.addAll(searchableAttributes)
-  }
+    /** @param searchableAttributes A list of searchable thing attribute names. */
+    public fun searchableAttributes(searchableAttributes: Collection<String>) {
+        _searchableAttributes.addAll(searchableAttributes)
+    }
 
-  /**
-   * @param thingTypeDescription The description of the thing type.
-   */
-  public fun thingTypeDescription(thingTypeDescription: String) {
-    cdkBuilder.thingTypeDescription(thingTypeDescription)
-  }
+    /** @param thingTypeDescription The description of the thing type. */
+    public fun thingTypeDescription(thingTypeDescription: String) {
+        cdkBuilder.thingTypeDescription(thingTypeDescription)
+    }
 
-  public fun build(): CfnThingType.ThingTypePropertiesProperty {
-    if(_searchableAttributes.isNotEmpty()) cdkBuilder.searchableAttributes(_searchableAttributes)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnThingType.ThingTypePropertiesProperty {
+        if (_searchableAttributes.isNotEmpty())
+            cdkBuilder.searchableAttributes(_searchableAttributes)
+        return cdkBuilder.build()
+    }
 }

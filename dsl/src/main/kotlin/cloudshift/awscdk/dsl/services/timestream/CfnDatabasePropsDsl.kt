@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.timestream
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.timestream.CfnDatabaseProps
  * Properties for defining a `CfnDatabase`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,42 +42,38 @@ import software.amazon.awscdk.services.timestream.CfnDatabaseProps
  */
 @CdkDslMarker
 public class CfnDatabasePropsDsl {
-  private val cdkBuilder: CfnDatabaseProps.Builder = CfnDatabaseProps.builder()
+    private val cdkBuilder: CfnDatabaseProps.Builder = CfnDatabaseProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param databaseName The name of the Timestream database.
-   * *Length Constraints* : Minimum length of 3 bytes. Maximum length of 256 bytes.
-   */
-  public fun databaseName(databaseName: String) {
-    cdkBuilder.databaseName(databaseName)
-  }
+    /**
+     * @param databaseName The name of the Timestream database. *Length Constraints* : Minimum
+     *   length of 3 bytes. Maximum length of 256 bytes.
+     */
+    public fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+    }
 
-  /**
-   * @param kmsKeyId The identifier of the AWS KMS key used to encrypt the data stored in the
-   * database.
-   */
-  public fun kmsKeyId(kmsKeyId: String) {
-    cdkBuilder.kmsKeyId(kmsKeyId)
-  }
+    /**
+     * @param kmsKeyId The identifier of the AWS KMS key used to encrypt the data stored in the
+     *   database.
+     */
+    public fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+    }
 
-  /**
-   * @param tags The tags to add to the database.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags The tags to add to the database. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags The tags to add to the database.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags The tags to add to the database. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnDatabaseProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDatabaseProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

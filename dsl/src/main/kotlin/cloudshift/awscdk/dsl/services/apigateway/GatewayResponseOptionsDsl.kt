@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.apigateway.ResponseType
  * Options to add gateway response.
  *
  * Example:
- *
  * ```
  * RestApi api = new RestApi(this, "books-api");
  * api.addGatewayResponse("test-response", GatewayResponseOptions.builder()
@@ -30,35 +38,27 @@ import software.amazon.awscdk.services.apigateway.ResponseType
  */
 @CdkDslMarker
 public class GatewayResponseOptionsDsl {
-  private val cdkBuilder: GatewayResponseOptions.Builder = GatewayResponseOptions.builder()
+    private val cdkBuilder: GatewayResponseOptions.Builder = GatewayResponseOptions.builder()
 
-  /**
-   * @param responseHeaders Custom headers parameters for response.
-   */
-  public fun responseHeaders(responseHeaders: Map<String, String>) {
-    cdkBuilder.responseHeaders(responseHeaders)
-  }
+    /** @param responseHeaders Custom headers parameters for response. */
+    public fun responseHeaders(responseHeaders: Map<String, String>) {
+        cdkBuilder.responseHeaders(responseHeaders)
+    }
 
-  /**
-   * @param statusCode Http status code for response.
-   */
-  public fun statusCode(statusCode: String) {
-    cdkBuilder.statusCode(statusCode)
-  }
+    /** @param statusCode Http status code for response. */
+    public fun statusCode(statusCode: String) {
+        cdkBuilder.statusCode(statusCode)
+    }
 
-  /**
-   * @param templates Custom templates to get mapped as response.
-   */
-  public fun templates(templates: Map<String, String>) {
-    cdkBuilder.templates(templates)
-  }
+    /** @param templates Custom templates to get mapped as response. */
+    public fun templates(templates: Map<String, String>) {
+        cdkBuilder.templates(templates)
+    }
 
-  /**
-   * @param type Response type to associate with gateway response. 
-   */
-  public fun type(type: ResponseType) {
-    cdkBuilder.type(type)
-  }
+    /** @param type Response type to associate with gateway response. */
+    public fun type(type: ResponseType) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): GatewayResponseOptions = cdkBuilder.build()
+    public fun build(): GatewayResponseOptions = cdkBuilder.build()
 }

@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.mediaconnect
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.mediaconnect.CfnBridge
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeOutputProps
@@ -21,19 +32,16 @@ import software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterfaceProps
 import software.amazon.awscdk.services.mediaconnect.CfnGateway
 import software.amazon.awscdk.services.mediaconnect.CfnGatewayProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object mediaconnect {
     /**
-     * The AWS::MediaConnect::Bridge resource defines a connection between your data center’s gateway
-     * instances and the cloud.
+     * The AWS::MediaConnect::Bridge resource defines a connection between your data center’s
+     * gateway instances and the cloud.
      *
-     * For each bridge, you specify the type of bridge, transport protocol to use, and details for any
-     * outputs and failover.
+     * For each bridge, you specify the type of bridge, transport protocol to use, and details for
+     * any outputs and failover.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -92,7 +100,7 @@ public object mediaconnect {
     public inline fun cfnBridge(
         scope: Construct,
         id: String,
-        block: CfnBridgeDsl.() -> Unit = {}
+        block: CfnBridgeDsl.() -> Unit = {},
     ): CfnBridge {
         val builder = CfnBridgeDsl(scope, id)
         builder.apply(block)
@@ -105,7 +113,6 @@ public object mediaconnect {
      * A flow source originates in MediaConnect as an existing cloud flow.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -123,8 +130,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html)
      */
     public inline fun cfnBridgeBridgeFlowSourceProperty(
-        block: CfnBridgeBridgeFlowSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeBridgeFlowSourcePropertyDsl.() -> Unit = {}
     ): CfnBridge.BridgeFlowSourceProperty {
         val builder = CfnBridgeBridgeFlowSourcePropertyDsl()
         builder.apply(block)
@@ -137,7 +143,6 @@ public object mediaconnect {
      * A network output is delivered to your premises.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -155,8 +160,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html)
      */
     public inline fun cfnBridgeBridgeNetworkOutputProperty(
-        block: CfnBridgeBridgeNetworkOutputPropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeBridgeNetworkOutputPropertyDsl.() -> Unit = {}
     ): CfnBridge.BridgeNetworkOutputProperty {
         val builder = CfnBridgeBridgeNetworkOutputPropertyDsl()
         builder.apply(block)
@@ -169,7 +173,6 @@ public object mediaconnect {
      * A network source originates at your premises.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -186,8 +189,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html)
      */
     public inline fun cfnBridgeBridgeNetworkSourceProperty(
-        block: CfnBridgeBridgeNetworkSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeBridgeNetworkSourcePropertyDsl.() -> Unit = {}
     ): CfnBridge.BridgeNetworkSourceProperty {
         val builder = CfnBridgeBridgeNetworkSourcePropertyDsl()
         builder.apply(block)
@@ -198,7 +200,6 @@ public object mediaconnect {
      * The output of the bridge.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -218,8 +219,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html)
      */
     public inline fun cfnBridgeBridgeOutputProperty(
-        block: CfnBridgeBridgeOutputPropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeBridgeOutputPropertyDsl.() -> Unit = {}
     ): CfnBridge.BridgeOutputProperty {
         val builder = CfnBridgeBridgeOutputPropertyDsl()
         builder.apply(block)
@@ -230,7 +230,6 @@ public object mediaconnect {
      * The bridge's source.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -257,8 +256,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgesource.html)
      */
     public inline fun cfnBridgeBridgeSourceProperty(
-        block: CfnBridgeBridgeSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeBridgeSourcePropertyDsl.() -> Unit = {}
     ): CfnBridge.BridgeSourceProperty {
         val builder = CfnBridgeBridgeSourcePropertyDsl()
         builder.apply(block)
@@ -272,7 +270,6 @@ public object mediaconnect {
      * flow and is delivered to your premises.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -285,8 +282,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-egressgatewaybridge.html)
      */
     public inline fun cfnBridgeEgressGatewayBridgeProperty(
-        block: CfnBridgeEgressGatewayBridgePropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeEgressGatewayBridgePropertyDsl.() -> Unit = {}
     ): CfnBridge.EgressGatewayBridgeProperty {
         val builder = CfnBridgeEgressGatewayBridgePropertyDsl()
         builder.apply(block)
@@ -297,7 +293,6 @@ public object mediaconnect {
      * The settings for source failover.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -315,8 +310,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html)
      */
     public inline fun cfnBridgeFailoverConfigProperty(
-        block: CfnBridgeFailoverConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeFailoverConfigPropertyDsl.() -> Unit = {}
     ): CfnBridge.FailoverConfigProperty {
         val builder = CfnBridgeFailoverConfigPropertyDsl()
         builder.apply(block)
@@ -330,7 +324,6 @@ public object mediaconnect {
      * delivered to the cloud.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -345,8 +338,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-ingressgatewaybridge.html)
      */
     public inline fun cfnBridgeIngressGatewayBridgeProperty(
-        block: CfnBridgeIngressGatewayBridgePropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeIngressGatewayBridgePropertyDsl.() -> Unit = {}
     ): CfnBridge.IngressGatewayBridgeProperty {
         val builder = CfnBridgeIngressGatewayBridgePropertyDsl()
         builder.apply(block)
@@ -357,7 +349,6 @@ public object mediaconnect {
      * Adds outputs to an existing bridge.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -380,7 +371,7 @@ public object mediaconnect {
     public inline fun cfnBridgeOutput(
         scope: Construct,
         id: String,
-        block: CfnBridgeOutputDsl.() -> Unit = {}
+        block: CfnBridgeOutputDsl.() -> Unit = {},
     ): CfnBridgeOutput {
         val builder = CfnBridgeOutputDsl(scope, id)
         builder.apply(block)
@@ -393,7 +384,6 @@ public object mediaconnect {
      * A network output is delivered to your premises.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -410,8 +400,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgeoutput-bridgenetworkoutput.html)
      */
     public inline fun cfnBridgeOutputBridgeNetworkOutputProperty(
-        block: CfnBridgeOutputBridgeNetworkOutputPropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeOutputBridgeNetworkOutputPropertyDsl.() -> Unit = {}
     ): CfnBridgeOutput.BridgeNetworkOutputProperty {
         val builder = CfnBridgeOutputBridgeNetworkOutputPropertyDsl()
         builder.apply(block)
@@ -422,7 +411,6 @@ public object mediaconnect {
      * Properties for defining a `CfnBridgeOutput`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -442,7 +430,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html)
      */
-    public inline fun cfnBridgeOutputProps(block: CfnBridgeOutputPropsDsl.() -> Unit = {}): CfnBridgeOutputProps {
+    public inline fun cfnBridgeOutputProps(
+        block: CfnBridgeOutputPropsDsl.() -> Unit = {}
+    ): CfnBridgeOutputProps {
         val builder = CfnBridgeOutputPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -452,7 +442,6 @@ public object mediaconnect {
      * Properties for defining a `CfnBridge`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -518,7 +507,6 @@ public object mediaconnect {
      * Adds sources to an existing bridge.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -548,7 +536,7 @@ public object mediaconnect {
     public inline fun cfnBridgeSource(
         scope: Construct,
         id: String,
-        block: CfnBridgeSourceDsl.() -> Unit = {}
+        block: CfnBridgeSourceDsl.() -> Unit = {},
     ): CfnBridgeSource {
         val builder = CfnBridgeSourceDsl(scope, id)
         builder.apply(block)
@@ -561,7 +549,6 @@ public object mediaconnect {
      * A flow source originates in MediaConnect as an existing cloud flow.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -578,8 +565,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgeflowsource.html)
      */
     public inline fun cfnBridgeSourceBridgeFlowSourceProperty(
-        block: CfnBridgeSourceBridgeFlowSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeSourceBridgeFlowSourcePropertyDsl.() -> Unit = {}
     ): CfnBridgeSource.BridgeFlowSourceProperty {
         val builder = CfnBridgeSourceBridgeFlowSourcePropertyDsl()
         builder.apply(block)
@@ -592,7 +578,6 @@ public object mediaconnect {
      * A network source originates at your premises.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -608,8 +593,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgenetworksource.html)
      */
     public inline fun cfnBridgeSourceBridgeNetworkSourceProperty(
-        block: CfnBridgeSourceBridgeNetworkSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeSourceBridgeNetworkSourcePropertyDsl.() -> Unit = {}
     ): CfnBridgeSource.BridgeNetworkSourceProperty {
         val builder = CfnBridgeSourceBridgeNetworkSourcePropertyDsl()
         builder.apply(block)
@@ -623,7 +607,6 @@ public object mediaconnect {
      * setting only applies when Failover Mode is set to FAILOVER.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -636,8 +619,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html)
      */
     public inline fun cfnBridgeSourcePriorityProperty(
-        block: CfnBridgeSourcePriorityPropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeSourcePriorityPropertyDsl.() -> Unit = {}
     ): CfnBridge.SourcePriorityProperty {
         val builder = CfnBridgeSourcePriorityPropertyDsl()
         builder.apply(block)
@@ -648,7 +630,6 @@ public object mediaconnect {
      * Properties for defining a `CfnBridgeSource`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -675,7 +656,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html)
      */
-    public inline fun cfnBridgeSourceProps(block: CfnBridgeSourcePropsDsl.() -> Unit = {}): CfnBridgeSourceProps {
+    public inline fun cfnBridgeSourceProps(
+        block: CfnBridgeSourcePropsDsl.() -> Unit = {}
+    ): CfnBridgeSourceProps {
         val builder = CfnBridgeSourcePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -685,7 +668,6 @@ public object mediaconnect {
      * The VPC interface that you want to send your output to.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -699,8 +681,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-vpcinterfaceattachment.html)
      */
     public inline fun cfnBridgeSourceVpcInterfaceAttachmentProperty(
-        block: CfnBridgeSourceVpcInterfaceAttachmentPropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeSourceVpcInterfaceAttachmentPropertyDsl.() -> Unit = {}
     ): CfnBridgeSource.VpcInterfaceAttachmentProperty {
         val builder = CfnBridgeSourceVpcInterfaceAttachmentPropertyDsl()
         builder.apply(block)
@@ -711,7 +692,6 @@ public object mediaconnect {
      * The VPC interface that you want to send your output to.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -725,8 +705,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html)
      */
     public inline fun cfnBridgeVpcInterfaceAttachmentProperty(
-        block: CfnBridgeVpcInterfaceAttachmentPropertyDsl.() -> Unit =
-            {}
+        block: CfnBridgeVpcInterfaceAttachmentPropertyDsl.() -> Unit = {}
     ): CfnBridge.VpcInterfaceAttachmentProperty {
         val builder = CfnBridgeVpcInterfaceAttachmentPropertyDsl()
         builder.apply(block)
@@ -734,17 +713,17 @@ public object mediaconnect {
     }
 
     /**
-     * The AWS::MediaConnect::Flow resource defines a connection between one or more video sources and
-     * one or more outputs.
+     * The AWS::MediaConnect::Flow resource defines a connection between one or more video sources
+     * and one or more outputs.
      *
      * For each flow, you specify the transport protocol to use, encryption information, and details
      * for any outputs or entitlements that you want. AWS Elemental MediaConnect returns an ingest
-     * endpoint where you can send your live video as a single unicast stream. The service replicates and
-     * distributes the video to every output that you specify, whether inside or outside the AWS Cloud.
-     * You can also set up entitlements on a flow to allow other AWS accounts to access your content.
+     * endpoint where you can send your live video as a single unicast stream. The service
+     * replicates and distributes the video to every output that you specify, whether inside or
+     * outside the AWS Cloud. You can also set up entitlements on a flow to allow other AWS accounts
+     * to access your content.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -808,7 +787,7 @@ public object mediaconnect {
     public inline fun cfnFlow(
         scope: Construct,
         id: String,
-        block: CfnFlowDsl.() -> Unit = {}
+        block: CfnFlowDsl.() -> Unit = {},
     ): CfnFlow {
         val builder = CfnFlowDsl(scope, id)
         builder.apply(block)
@@ -819,7 +798,6 @@ public object mediaconnect {
      * Information about the encryption of the flow.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -840,7 +818,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-encryption.html)
      */
-    public inline fun cfnFlowEncryptionProperty(block: CfnFlowEncryptionPropertyDsl.() -> Unit = {}): CfnFlow.EncryptionProperty {
+    public inline fun cfnFlowEncryptionProperty(
+        block: CfnFlowEncryptionPropertyDsl.() -> Unit = {}
+    ): CfnFlow.EncryptionProperty {
         val builder = CfnFlowEncryptionPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -852,11 +832,10 @@ public object mediaconnect {
      * MediaConnect flow.
      *
      * The content originator grants an entitlement to a specific AWS account (the subscriber). When
-     * an entitlement is granted, the subscriber can create a flow using the originator's flow as the
-     * source. Each flow can have up to 50 entitlements.
+     * an entitlement is granted, the subscriber can create a flow using the originator's flow as
+     * the source. Each flow can have up to 50 entitlements.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -890,7 +869,7 @@ public object mediaconnect {
     public inline fun cfnFlowEntitlement(
         scope: Construct,
         id: String,
-        block: CfnFlowEntitlementDsl.() -> Unit = {}
+        block: CfnFlowEntitlementDsl.() -> Unit = {},
     ): CfnFlowEntitlement {
         val builder = CfnFlowEntitlementDsl(scope, id)
         builder.apply(block)
@@ -901,7 +880,6 @@ public object mediaconnect {
      * Information about the encryption of the flow.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -923,8 +901,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowentitlement-encryption.html)
      */
     public inline fun cfnFlowEntitlementEncryptionProperty(
-        block: CfnFlowEntitlementEncryptionPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowEntitlementEncryptionPropertyDsl.() -> Unit = {}
     ): CfnFlowEntitlement.EncryptionProperty {
         val builder = CfnFlowEntitlementEncryptionPropertyDsl()
         builder.apply(block)
@@ -935,7 +912,6 @@ public object mediaconnect {
      * Properties for defining a `CfnFlowEntitlement`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -965,7 +941,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html)
      */
-    public inline fun cfnFlowEntitlementProps(block: CfnFlowEntitlementPropsDsl.() -> Unit = {}): CfnFlowEntitlementProps {
+    public inline fun cfnFlowEntitlementProps(
+        block: CfnFlowEntitlementPropsDsl.() -> Unit = {}
+    ): CfnFlowEntitlementProps {
         val builder = CfnFlowEntitlementPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -975,7 +953,6 @@ public object mediaconnect {
      * The settings for source failover.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -993,8 +970,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html)
      */
     public inline fun cfnFlowFailoverConfigProperty(
-        block: CfnFlowFailoverConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowFailoverConfigPropertyDsl.() -> Unit = {}
     ): CfnFlow.FailoverConfigProperty {
         val builder = CfnFlowFailoverConfigPropertyDsl()
         builder.apply(block)
@@ -1005,7 +981,6 @@ public object mediaconnect {
      * The source configuration for cloud flows receiving a stream from a bridge.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1022,8 +997,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-gatewaybridgesource.html)
      */
     public inline fun cfnFlowGatewayBridgeSourceProperty(
-        block: CfnFlowGatewayBridgeSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowGatewayBridgeSourcePropertyDsl.() -> Unit = {}
     ): CfnFlow.GatewayBridgeSourceProperty {
         val builder = CfnFlowGatewayBridgeSourcePropertyDsl()
         builder.apply(block)
@@ -1031,16 +1005,15 @@ public object mediaconnect {
     }
 
     /**
-     * The AWS::MediaConnect::FlowOutput resource defines the destination address, protocol, and port
-     * that AWS Elemental MediaConnect sends the ingested video to.
+     * The AWS::MediaConnect::FlowOutput resource defines the destination address, protocol, and
+     * port that AWS Elemental MediaConnect sends the ingested video to.
      *
      * Each flow can have up to 50 outputs. An output can have the same protocol or a different
-     * protocol from the source. The following protocols are supported: RIST, RTP, RTP-FEC, SRT-listener,
-     * SRT-caller, Zixi pull, Zixi push, and Fujitsu-QoS. CDI and ST 2110 JPEG XS protocols are not
-     * currently supported by AWS CloudFormation.
+     * protocol from the source. The following protocols are supported: RIST, RTP, RTP-FEC,
+     * SRT-listener, SRT-caller, Zixi pull, Zixi push, and Fujitsu-QoS. CDI and ST 2110 JPEG XS
+     * protocols are not currently supported by AWS CloudFormation.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1077,7 +1050,7 @@ public object mediaconnect {
     public inline fun cfnFlowOutput(
         scope: Construct,
         id: String,
-        block: CfnFlowOutputDsl.() -> Unit = {}
+        block: CfnFlowOutputDsl.() -> Unit = {},
     ): CfnFlowOutput {
         val builder = CfnFlowOutputDsl(scope, id)
         builder.apply(block)
@@ -1088,7 +1061,6 @@ public object mediaconnect {
      * Information about the encryption of the flow.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1105,8 +1077,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-encryption.html)
      */
     public inline fun cfnFlowOutputEncryptionProperty(
-        block: CfnFlowOutputEncryptionPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowOutputEncryptionPropertyDsl.() -> Unit = {}
     ): CfnFlowOutput.EncryptionProperty {
         val builder = CfnFlowOutputEncryptionPropertyDsl()
         builder.apply(block)
@@ -1117,7 +1088,6 @@ public object mediaconnect {
      * Properties for defining a `CfnFlowOutput`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1151,7 +1121,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html)
      */
-    public inline fun cfnFlowOutputProps(block: CfnFlowOutputPropsDsl.() -> Unit = {}): CfnFlowOutputProps {
+    public inline fun cfnFlowOutputProps(
+        block: CfnFlowOutputPropsDsl.() -> Unit = {}
+    ): CfnFlowOutputProps {
         val builder = CfnFlowOutputPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1161,7 +1133,6 @@ public object mediaconnect {
      * The VPC interface that you want to send your output to.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1175,8 +1146,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-vpcinterfaceattachment.html)
      */
     public inline fun cfnFlowOutputVpcInterfaceAttachmentProperty(
-        block: CfnFlowOutputVpcInterfaceAttachmentPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowOutputVpcInterfaceAttachmentPropertyDsl.() -> Unit = {}
     ): CfnFlowOutput.VpcInterfaceAttachmentProperty {
         val builder = CfnFlowOutputVpcInterfaceAttachmentPropertyDsl()
         builder.apply(block)
@@ -1187,7 +1157,6 @@ public object mediaconnect {
      * Properties for defining a `CfnFlow`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1260,12 +1229,11 @@ public object mediaconnect {
      *
      * Adding an additional source requires Failover to be enabled. When you enable Failover, the
      * additional source must use the same protocol as the existing source. A source is the external
-     * video content that includes configuration information (encryption and source type) and a network
-     * address. Each flow has at least one source. A standard source comes from a source other than
-     * another AWS Elemental MediaConnect flow, such as an on-premises encoder.
+     * video content that includes configuration information (encryption and source type) and a
+     * network address. Each flow has at least one source. A standard source comes from a source
+     * other than another AWS Elemental MediaConnect flow, such as an on-premises encoder.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1315,7 +1283,7 @@ public object mediaconnect {
     public inline fun cfnFlowSource(
         scope: Construct,
         id: String,
-        block: CfnFlowSourceDsl.() -> Unit = {}
+        block: CfnFlowSourceDsl.() -> Unit = {},
     ): CfnFlowSource {
         val builder = CfnFlowSourceDsl(scope, id)
         builder.apply(block)
@@ -1326,7 +1294,6 @@ public object mediaconnect {
      * Information about the encryption of the flow.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1348,8 +1315,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-encryption.html)
      */
     public inline fun cfnFlowSourceEncryptionProperty(
-        block: CfnFlowSourceEncryptionPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowSourceEncryptionPropertyDsl.() -> Unit = {}
     ): CfnFlowSource.EncryptionProperty {
         val builder = CfnFlowSourceEncryptionPropertyDsl()
         builder.apply(block)
@@ -1360,7 +1326,6 @@ public object mediaconnect {
      * The source configuration for cloud flows receiving a stream from a bridge.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1377,8 +1342,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-gatewaybridgesource.html)
      */
     public inline fun cfnFlowSourceGatewayBridgeSourceProperty(
-        block: CfnFlowSourceGatewayBridgeSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowSourceGatewayBridgeSourcePropertyDsl.() -> Unit = {}
     ): CfnFlowSource.GatewayBridgeSourceProperty {
         val builder = CfnFlowSourceGatewayBridgeSourcePropertyDsl()
         builder.apply(block)
@@ -1392,7 +1356,6 @@ public object mediaconnect {
      * setting only applies when Failover Mode is set to FAILOVER.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1405,8 +1368,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcepriority.html)
      */
     public inline fun cfnFlowSourcePriorityProperty(
-        block: CfnFlowSourcePriorityPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowSourcePriorityPropertyDsl.() -> Unit = {}
     ): CfnFlow.SourcePriorityProperty {
         val builder = CfnFlowSourcePriorityPropertyDsl()
         builder.apply(block)
@@ -1418,16 +1380,14 @@ public object mediaconnect {
      *
      * If you are creating a flow with a VPC source, you must first create the flow with a temporary
      * standard source by doing the following:
-     *
      * * Use CloudFormation to create a flow with a standard source that uses the flow’s public IP
-     * address.
-     * * Use CloudFormation to create the VPC interface to add to this flow. This can also be done as
-     * part of the previous step.
+     *   address.
+     * * Use CloudFormation to create the VPC interface to add to this flow. This can also be done
+     *   as part of the previous step.
      * * After CloudFormation has created the flow and the VPC interface, update the source to point
-     * to the VPC interface that you created.
+     *   to the VPC interface that you created.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1475,7 +1435,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html)
      */
-    public inline fun cfnFlowSourceProperty(block: CfnFlowSourcePropertyDsl.() -> Unit = {}): CfnFlow.SourceProperty {
+    public inline fun cfnFlowSourceProperty(
+        block: CfnFlowSourcePropertyDsl.() -> Unit = {}
+    ): CfnFlow.SourceProperty {
         val builder = CfnFlowSourcePropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -1485,7 +1447,6 @@ public object mediaconnect {
      * Properties for defining a `CfnFlowSource`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1532,7 +1493,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html)
      */
-    public inline fun cfnFlowSourceProps(block: CfnFlowSourcePropsDsl.() -> Unit = {}): CfnFlowSourceProps {
+    public inline fun cfnFlowSourceProps(
+        block: CfnFlowSourcePropsDsl.() -> Unit = {}
+    ): CfnFlowSourceProps {
         val builder = CfnFlowSourcePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1542,7 +1505,6 @@ public object mediaconnect {
      * The settings for attaching a VPC interface to an resource.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1556,8 +1518,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html)
      */
     public inline fun cfnFlowSourceVpcInterfaceAttachmentProperty(
-        block: CfnFlowSourceVpcInterfaceAttachmentPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowSourceVpcInterfaceAttachmentPropertyDsl.() -> Unit = {}
     ): CfnFlowSource.VpcInterfaceAttachmentProperty {
         val builder = CfnFlowSourceVpcInterfaceAttachmentPropertyDsl()
         builder.apply(block)
@@ -1569,21 +1530,20 @@ public object mediaconnect {
      * MediaConnect flow and a virtual private cloud (VPC) that you created using the Amazon Virtual
      * Private Cloud service.
      *
-     * To avoid streaming your content over the public internet, you can add up to two VPC interfaces
-     * to your flow and use those connections to transfer content between your VPC and MediaConnect.
+     * To avoid streaming your content over the public internet, you can add up to two VPC
+     * interfaces to your flow and use those connections to transfer content between your VPC and
+     * MediaConnect.
      *
      * You can update an existing flow to add a VPC interface. If you haven’t created the flow yet,
      * you must create the flow with a temporary standard source by doing the following:
-     *
-     * * Use CloudFormation to create a flow with a standard source that uses to the flow’s public IP
-     * address.
+     * * Use CloudFormation to create a flow with a standard source that uses to the flow’s public
+     *   IP address.
      * * Use CloudFormation to create a VPC interface to add to this flow. This can also be done as
-     * part of the previous step.
+     *   part of the previous step.
      * * After CloudFormation has created the flow and the VPC interface, update the source to point
-     * to the VPC interface that you created.
+     *   to the VPC interface that you created.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1603,7 +1563,7 @@ public object mediaconnect {
     public inline fun cfnFlowVpcInterface(
         scope: Construct,
         id: String,
-        block: CfnFlowVpcInterfaceDsl.() -> Unit = {}
+        block: CfnFlowVpcInterfaceDsl.() -> Unit = {},
     ): CfnFlowVpcInterface {
         val builder = CfnFlowVpcInterfaceDsl(scope, id)
         builder.apply(block)
@@ -1614,7 +1574,6 @@ public object mediaconnect {
      * The settings for attaching a VPC interface to an resource.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1628,8 +1587,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterfaceattachment.html)
      */
     public inline fun cfnFlowVpcInterfaceAttachmentProperty(
-        block: CfnFlowVpcInterfaceAttachmentPropertyDsl.() -> Unit =
-            {}
+        block: CfnFlowVpcInterfaceAttachmentPropertyDsl.() -> Unit = {}
     ): CfnFlow.VpcInterfaceAttachmentProperty {
         val builder = CfnFlowVpcInterfaceAttachmentPropertyDsl()
         builder.apply(block)
@@ -1640,7 +1598,6 @@ public object mediaconnect {
      * Properties for defining a `CfnFlowVpcInterface`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1656,7 +1613,9 @@ public object mediaconnect {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html)
      */
-    public inline fun cfnFlowVpcInterfaceProps(block: CfnFlowVpcInterfacePropsDsl.() -> Unit = {}): CfnFlowVpcInterfaceProps {
+    public inline fun cfnFlowVpcInterfaceProps(
+        block: CfnFlowVpcInterfacePropsDsl.() -> Unit = {}
+    ): CfnFlowVpcInterfaceProps {
         val builder = CfnFlowVpcInterfacePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1666,12 +1625,11 @@ public object mediaconnect {
      * The AWS::MediaConnect::Gateway resource is used to create a new gateway.
      *
      * AWS Elemental MediaConnect Gateway is a feature of MediaConnect that allows the deployment of
-     * on-premises resources for transporting live video to and from the AWS Cloud. MediaConnect Gateway
-     * allows you to contribute live video to the AWS Cloud from on-premises hardware, as well as
-     * distribute live video from the AWS Cloud to your local data center.
+     * on-premises resources for transporting live video to and from the AWS Cloud. MediaConnect
+     * Gateway allows you to contribute live video to the AWS Cloud from on-premises hardware, as
+     * well as distribute live video from the AWS Cloud to your local data center.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1691,7 +1649,7 @@ public object mediaconnect {
     public inline fun cfnGateway(
         scope: Construct,
         id: String,
-        block: CfnGatewayDsl.() -> Unit = {}
+        block: CfnGatewayDsl.() -> Unit = {},
     ): CfnGateway {
         val builder = CfnGatewayDsl(scope, id)
         builder.apply(block)
@@ -1702,7 +1660,6 @@ public object mediaconnect {
      * The network settings for a gateway.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1716,8 +1673,7 @@ public object mediaconnect {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-gateway-gatewaynetwork.html)
      */
     public inline fun cfnGatewayGatewayNetworkProperty(
-        block: CfnGatewayGatewayNetworkPropertyDsl.() -> Unit =
-            {}
+        block: CfnGatewayGatewayNetworkPropertyDsl.() -> Unit = {}
     ): CfnGateway.GatewayNetworkProperty {
         val builder = CfnGatewayGatewayNetworkPropertyDsl()
         builder.apply(block)
@@ -1728,7 +1684,6 @@ public object mediaconnect {
      * Properties for defining a `CfnGateway`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.

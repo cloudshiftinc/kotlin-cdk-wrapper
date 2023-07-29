@@ -1,12 +1,21 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.Stage
 import software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening
 import software.amazon.awscdk.services.sns.ITopic
-import kotlin.String
 
 /**
  * Pause the pipeline if a deployment would add IAM permissions or Security Group rules.
@@ -14,7 +23,6 @@ import kotlin.String
  * This step is only supported in CodePipeline pipelines.
  *
  * Example:
- *
  * ```
  * CodePipeline pipeline;
  * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
@@ -26,7 +34,7 @@ import kotlin.String
  */
 @CdkDslMarker
 public class ConfirmPermissionsBroadeningDsl(
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: ConfirmPermissionsBroadening.Builder =
         ConfirmPermissionsBroadening.Builder.create(id)
@@ -37,7 +45,7 @@ public class ConfirmPermissionsBroadeningDsl(
      * Default: - no notification
      *
      * @param notificationTopic Topic to send notifications when a human needs to give manual
-     * confirmation.
+     *   confirmation.
      */
     public fun notificationTopic(notificationTopic: ITopic) {
         cdkBuilder.notificationTopic(notificationTopic)

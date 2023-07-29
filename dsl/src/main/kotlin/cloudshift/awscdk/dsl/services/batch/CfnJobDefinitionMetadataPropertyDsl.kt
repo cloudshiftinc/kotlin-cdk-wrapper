@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.batch
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,24 +33,20 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
  */
 @CdkDslMarker
 public class CfnJobDefinitionMetadataPropertyDsl {
-  private val cdkBuilder: CfnJobDefinition.MetadataProperty.Builder =
-      CfnJobDefinition.MetadataProperty.builder()
+    private val cdkBuilder: CfnJobDefinition.MetadataProperty.Builder =
+        CfnJobDefinition.MetadataProperty.builder()
 
-  /**
-   * @param labels the value to be set.
-   */
-  public fun labels(labels: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(labels)
-    cdkBuilder.labels(builder.map)
-  }
+    /** @param labels the value to be set. */
+    public fun labels(labels: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(labels)
+        cdkBuilder.labels(builder.map)
+    }
 
-  /**
-   * @param labels the value to be set.
-   */
-  public fun labels(labels: Any) {
-    cdkBuilder.labels(labels)
-  }
+    /** @param labels the value to be set. */
+    public fun labels(labels: Any) {
+        cdkBuilder.labels(labels)
+    }
 
-  public fun build(): CfnJobDefinition.MetadataProperty = cdkBuilder.build()
+    public fun build(): CfnJobDefinition.MetadataProperty = cdkBuilder.build()
 }

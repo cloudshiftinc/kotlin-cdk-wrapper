@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The filter operation that filters data included in a visual or in an entire sheet.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -51,13 +59,15 @@ public class CfnAnalysisCustomActionFilterOperationPropertyDsl {
     /**
      * @param selectedFieldsConfiguration The configuration that chooses the fields to be filtered.
      */
-    public fun selectedFieldsConfiguration(selectedFieldsConfiguration: CfnAnalysis.FilterOperationSelectedFieldsConfigurationProperty) {
+    public fun selectedFieldsConfiguration(
+        selectedFieldsConfiguration: CfnAnalysis.FilterOperationSelectedFieldsConfigurationProperty
+    ) {
         cdkBuilder.selectedFieldsConfiguration(selectedFieldsConfiguration)
     }
 
     /**
      * @param targetVisualsConfiguration The configuration that chooses the target visuals to be
-     * filtered.
+     *   filtered.
      */
     public fun targetVisualsConfiguration(targetVisualsConfiguration: IResolvable) {
         cdkBuilder.targetVisualsConfiguration(targetVisualsConfiguration)
@@ -65,9 +75,11 @@ public class CfnAnalysisCustomActionFilterOperationPropertyDsl {
 
     /**
      * @param targetVisualsConfiguration The configuration that chooses the target visuals to be
-     * filtered.
+     *   filtered.
      */
-    public fun targetVisualsConfiguration(targetVisualsConfiguration: CfnAnalysis.FilterOperationTargetVisualsConfigurationProperty) {
+    public fun targetVisualsConfiguration(
+        targetVisualsConfiguration: CfnAnalysis.FilterOperationTargetVisualsConfigurationProperty
+    ) {
         cdkBuilder.targetVisualsConfiguration(targetVisualsConfiguration)
     }
 

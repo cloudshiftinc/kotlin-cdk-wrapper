@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
  * Describes a port range.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
  */
 @CdkDslMarker
 public class CfnNetworkInsightsPathFilterPortRangePropertyDsl {
-  private val cdkBuilder: CfnNetworkInsightsPath.FilterPortRangeProperty.Builder =
-      CfnNetworkInsightsPath.FilterPortRangeProperty.builder()
+    private val cdkBuilder: CfnNetworkInsightsPath.FilterPortRangeProperty.Builder =
+        CfnNetworkInsightsPath.FilterPortRangeProperty.builder()
 
-  /**
-   * @param fromPort The first port in the range.
-   */
-  public fun fromPort(fromPort: Number) {
-    cdkBuilder.fromPort(fromPort)
-  }
+    /** @param fromPort The first port in the range. */
+    public fun fromPort(fromPort: Number) {
+        cdkBuilder.fromPort(fromPort)
+    }
 
-  /**
-   * @param toPort The last port in the range.
-   */
-  public fun toPort(toPort: Number) {
-    cdkBuilder.toPort(toPort)
-  }
+    /** @param toPort The last port in the range. */
+    public fun toPort(toPort: Number) {
+        cdkBuilder.toPort(toPort)
+    }
 
-  public fun build(): CfnNetworkInsightsPath.FilterPortRangeProperty = cdkBuilder.build()
+    public fun build(): CfnNetworkInsightsPath.FilterPortRangeProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emrcontainers
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
  * The information about the container used for a job run or a managed endpoint.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,12 @@ public class CfnVirtualClusterContainerInfoPropertyDsl {
     private val cdkBuilder: CfnVirtualCluster.ContainerInfoProperty.Builder =
         CfnVirtualCluster.ContainerInfoProperty.builder()
 
-    /**
-     * @param eksInfo The information about the Amazon EKS cluster.
-     */
+    /** @param eksInfo The information about the Amazon EKS cluster. */
     public fun eksInfo(eksInfo: IResolvable) {
         cdkBuilder.eksInfo(eksInfo)
     }
 
-    /**
-     * @param eksInfo The information about the Amazon EKS cluster.
-     */
+    /** @param eksInfo The information about the Amazon EKS cluster. */
     public fun eksInfo(eksInfo: CfnVirtualCluster.EksInfoProperty) {
         cdkBuilder.eksInfo(eksInfo)
     }

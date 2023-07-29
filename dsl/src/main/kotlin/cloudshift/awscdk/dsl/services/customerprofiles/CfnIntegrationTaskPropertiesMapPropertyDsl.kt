@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  * The execution service looks for particular information based on the `TaskType` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  */
 @CdkDslMarker
 public class CfnIntegrationTaskPropertiesMapPropertyDsl {
-  private val cdkBuilder: CfnIntegration.TaskPropertiesMapProperty.Builder =
-      CfnIntegration.TaskPropertiesMapProperty.builder()
+    private val cdkBuilder: CfnIntegration.TaskPropertiesMapProperty.Builder =
+        CfnIntegration.TaskPropertiesMapProperty.builder()
 
-  /**
-   * @param operatorPropertyKey The task property key. 
-   */
-  public fun operatorPropertyKey(operatorPropertyKey: String) {
-    cdkBuilder.operatorPropertyKey(operatorPropertyKey)
-  }
+    /** @param operatorPropertyKey The task property key. */
+    public fun operatorPropertyKey(operatorPropertyKey: String) {
+        cdkBuilder.operatorPropertyKey(operatorPropertyKey)
+    }
 
-  /**
-   * @param property The task property value. 
-   */
-  public fun `property`(`property`: String) {
-    cdkBuilder.`property`(`property`)
-  }
+    /** @param property The task property value. */
+    public fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+    }
 
-  public fun build(): CfnIntegration.TaskPropertiesMapProperty = cdkBuilder.build()
+    public fun build(): CfnIntegration.TaskPropertiesMapProperty = cdkBuilder.build()
 }

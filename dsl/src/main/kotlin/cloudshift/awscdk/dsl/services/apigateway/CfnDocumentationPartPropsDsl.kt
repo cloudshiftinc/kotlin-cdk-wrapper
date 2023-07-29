@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.apigateway.CfnDocumentationPartProps
  * Properties for defining a `CfnDocumentationPart`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,39 +42,37 @@ import software.amazon.awscdk.services.apigateway.CfnDocumentationPartProps
  */
 @CdkDslMarker
 public class CfnDocumentationPartPropsDsl {
-  private val cdkBuilder: CfnDocumentationPartProps.Builder = CfnDocumentationPartProps.builder()
+    private val cdkBuilder: CfnDocumentationPartProps.Builder = CfnDocumentationPartProps.builder()
 
-  /**
-   * @param location The location of the targeted API entity of the to-be-created documentation
-   * part. 
-   */
-  public fun location(location: IResolvable) {
-    cdkBuilder.location(location)
-  }
+    /**
+     * @param location The location of the targeted API entity of the to-be-created documentation
+     *   part.
+     */
+    public fun location(location: IResolvable) {
+        cdkBuilder.location(location)
+    }
 
-  /**
-   * @param location The location of the targeted API entity of the to-be-created documentation
-   * part. 
-   */
-  public fun location(location: CfnDocumentationPart.LocationProperty) {
-    cdkBuilder.location(location)
-  }
+    /**
+     * @param location The location of the targeted API entity of the to-be-created documentation
+     *   part.
+     */
+    public fun location(location: CfnDocumentationPart.LocationProperty) {
+        cdkBuilder.location(location)
+    }
 
-  /**
-   * @param properties The new documentation content map of the targeted API entity. 
-   * Enclosed key-value pairs are API-specific, but only OpenAPI-compliant key-value pairs can be
-   * exported and, hence, published.
-   */
-  public fun properties(properties: String) {
-    cdkBuilder.properties(properties)
-  }
+    /**
+     * @param properties The new documentation content map of the targeted API entity. Enclosed
+     *   key-value pairs are API-specific, but only OpenAPI-compliant key-value pairs can be
+     *   exported and, hence, published.
+     */
+    public fun properties(properties: String) {
+        cdkBuilder.properties(properties)
+    }
 
-  /**
-   * @param restApiId The string identifier of the associated RestApi. 
-   */
-  public fun restApiId(restApiId: String) {
-    cdkBuilder.restApiId(restApiId)
-  }
+    /** @param restApiId The string identifier of the associated RestApi. */
+    public fun restApiId(restApiId: String) {
+        cdkBuilder.restApiId(restApiId)
+    }
 
-  public fun build(): CfnDocumentationPartProps = cdkBuilder.build()
+    public fun build(): CfnDocumentationPartProps = cdkBuilder.build()
 }

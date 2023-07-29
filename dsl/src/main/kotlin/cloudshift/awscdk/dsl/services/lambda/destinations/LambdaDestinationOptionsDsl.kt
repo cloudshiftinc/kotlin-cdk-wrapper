@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda.destinations
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOpti
  * Options for a Lambda destination.
  *
  * Example:
- *
  * ```
  * // Auto-extract response payload with a lambda destination
  * Function destinationFn;
@@ -27,22 +35,21 @@ import software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOpti
  */
 @CdkDslMarker
 public class LambdaDestinationOptionsDsl {
-  private val cdkBuilder: LambdaDestinationOptions.Builder = LambdaDestinationOptions.builder()
+    private val cdkBuilder: LambdaDestinationOptions.Builder = LambdaDestinationOptions.builder()
 
-  /**
-   * @param responseOnly Whether the destination function receives only the `responsePayload` of the
-   * source function.
-   * When set to `true` and used as `onSuccess` destination, the destination
-   * function will be invoked with the payload returned by the source function.
-   *
-   * When set to `true` and used as `onFailure` destination, the destination
-   * function will be invoked with the error object returned by source function.
-   *
-   * See the README of this module to see a full explanation of this option.
-   */
-  public fun responseOnly(responseOnly: Boolean) {
-    cdkBuilder.responseOnly(responseOnly)
-  }
+    /**
+     * @param responseOnly Whether the destination function receives only the `responsePayload` of
+     *   the source function. When set to `true` and used as `onSuccess` destination, the
+     *   destination function will be invoked with the payload returned by the source function.
+     *
+     * When set to `true` and used as `onFailure` destination, the destination function will be
+     * invoked with the error object returned by source function.
+     *
+     * See the README of this module to see a full explanation of this option.
+     */
+    public fun responseOnly(responseOnly: Boolean) {
+        cdkBuilder.responseOnly(responseOnly)
+    }
 
-  public fun build(): LambdaDestinationOptions = cdkBuilder.build()
+    public fun build(): LambdaDestinationOptions = cdkBuilder.build()
 }

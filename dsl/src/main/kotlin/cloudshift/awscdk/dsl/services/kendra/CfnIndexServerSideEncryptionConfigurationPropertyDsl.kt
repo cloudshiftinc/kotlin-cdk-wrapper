@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kendra
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.kendra.CfnIndex
  * support asymmetric CMKs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,16 @@ import software.amazon.awscdk.services.kendra.CfnIndex
  */
 @CdkDslMarker
 public class CfnIndexServerSideEncryptionConfigurationPropertyDsl {
-  private val cdkBuilder: CfnIndex.ServerSideEncryptionConfigurationProperty.Builder =
-      CfnIndex.ServerSideEncryptionConfigurationProperty.builder()
+    private val cdkBuilder: CfnIndex.ServerSideEncryptionConfigurationProperty.Builder =
+        CfnIndex.ServerSideEncryptionConfigurationProperty.builder()
 
-  /**
-   * @param kmsKeyId The identifier of the AWS KMS key .
-   * Amazon Kendra doesn't support asymmetric keys.
-   */
-  public fun kmsKeyId(kmsKeyId: String) {
-    cdkBuilder.kmsKeyId(kmsKeyId)
-  }
+    /**
+     * @param kmsKeyId The identifier of the AWS KMS key . Amazon Kendra doesn't support asymmetric
+     *   keys.
+     */
+    public fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+    }
 
-  public fun build(): CfnIndex.ServerSideEncryptionConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnIndex.ServerSideEncryptionConfigurationProperty = cdkBuilder.build()
 }

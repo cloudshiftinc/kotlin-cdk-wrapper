@@ -1,8 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.AmiContextQuery
 import software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery
 import software.amazon.awscdk.cloudassembly.schema.ContextProvider
@@ -16,13 +26,11 @@ import software.amazon.awscdk.cloudassembly.schema.PluginContextQuery
 import software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery
 import software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery
 import software.amazon.awscdk.cloudassembly.schema.VpcContextQuery
-import kotlin.String
 
 /**
  * Represents a missing piece of context.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,93 +54,67 @@ import kotlin.String
 public class MissingContextDsl {
     private val cdkBuilder: MissingContext.Builder = MissingContext.builder()
 
-    /**
-     * @param key The missing context key.
-     */
+    /** @param key The missing context key. */
     public fun key(key: String) {
         cdkBuilder.key(key)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: AmiContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: AvailabilityZonesContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: EndpointServiceAvailabilityZonesContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: HostedZoneContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: KeyContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: LoadBalancerContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: LoadBalancerListenerContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: PluginContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: SSMParameterContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: SecurityGroupContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param props A set of provider-specific options.
-     */
+    /** @param props A set of provider-specific options. */
     public fun props(props: VpcContextQuery) {
         cdkBuilder.props(props)
     }
 
-    /**
-     * @param provider The provider from which we expect this context key to be obtained.
-     */
+    /** @param provider The provider from which we expect this context key to be obtained. */
     public fun provider(provider: ContextProvider) {
         cdkBuilder.provider(provider)
     }

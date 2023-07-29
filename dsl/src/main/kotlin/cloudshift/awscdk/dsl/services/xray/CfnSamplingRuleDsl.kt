@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.xray
 
@@ -18,22 +27,19 @@ import software.constructs.Construct
  *
  * Include a `SamplingRule` entity to create or update a sampling rule.
  *
- *
  * `SamplingRule.Version` can only be set when creating a sampling rule. Updating the version will
  * cause the update to fail.
  *
- *
  * Services retrieve rules with
  * [GetSamplingRules](https://docs.aws.amazon.com//xray/latest/api/API_GetSamplingRules.html) , and
- * evaluate each rule in ascending order of *priority* for each request. If a rule matches, the service
- * records a trace, borrowing it from the reservoir size. After 10 seconds, the service reports back to
- * X-Ray with
+ * evaluate each rule in ascending order of *priority* for each request. If a rule matches, the
+ * service records a trace, borrowing it from the reservoir size. After 10 seconds, the service
+ * reports back to X-Ray with
  * [GetSamplingTargets](https://docs.aws.amazon.com//xray/latest/api/API_GetSamplingTargets.html) to
- * get updated versions of each in-use rule. The updated rule contains a trace quota that the service
- * can use instead of borrowing from the reservoir.
+ * get updated versions of each in-use rule. The updated rule contains a trace quota that the
+ * service can use instead of borrowing from the reservoir.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -102,109 +108,118 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnSamplingRuleDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnSamplingRule.Builder = CfnSamplingRule.Builder.create(scope, id)
+    private val cdkBuilder: CfnSamplingRule.Builder = CfnSamplingRule.Builder.create(scope, id)
 
-  private val _tags: MutableList<Any> = mutableListOf()
+    private val _tags: MutableList<Any> = mutableListOf()
 
-  /**
-   * (deprecated) The ARN of the sampling rule.
-   *
-   * Specify a rule by either name or ARN, but not both.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-rulename)
-   * @deprecated this property has been deprecated
-   * @param ruleName The ARN of the sampling rule. 
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun ruleName(ruleName: String) {
-    cdkBuilder.ruleName(ruleName)
-  }
+    /**
+     * (deprecated) The ARN of the sampling rule.
+     *
+     * Specify a rule by either name or ARN, but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-rulename)
+     *
+     * @param ruleName The ARN of the sampling rule.
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun ruleName(ruleName: String) {
+        cdkBuilder.ruleName(ruleName)
+    }
 
-  /**
-   * The sampling rule to be created or updated.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrule)
-   * @param samplingRule The sampling rule to be created or updated. 
-   */
-  public fun samplingRule(samplingRule: IResolvable) {
-    cdkBuilder.samplingRule(samplingRule)
-  }
+    /**
+     * The sampling rule to be created or updated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrule)
+     *
+     * @param samplingRule The sampling rule to be created or updated.
+     */
+    public fun samplingRule(samplingRule: IResolvable) {
+        cdkBuilder.samplingRule(samplingRule)
+    }
 
-  /**
-   * The sampling rule to be created or updated.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrule)
-   * @param samplingRule The sampling rule to be created or updated. 
-   */
-  public fun samplingRule(samplingRule: CfnSamplingRule.SamplingRuleProperty) {
-    cdkBuilder.samplingRule(samplingRule)
-  }
+    /**
+     * The sampling rule to be created or updated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrule)
+     *
+     * @param samplingRule The sampling rule to be created or updated.
+     */
+    public fun samplingRule(samplingRule: CfnSamplingRule.SamplingRuleProperty) {
+        cdkBuilder.samplingRule(samplingRule)
+    }
 
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrulerecord)
-   * @deprecated this property has been deprecated
-   * @param samplingRuleRecord 
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun samplingRuleRecord(samplingRuleRecord: IResolvable) {
-    cdkBuilder.samplingRuleRecord(samplingRuleRecord)
-  }
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrulerecord)
+     *
+     * @param samplingRuleRecord
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun samplingRuleRecord(samplingRuleRecord: IResolvable) {
+        cdkBuilder.samplingRuleRecord(samplingRuleRecord)
+    }
 
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrulerecord)
-   * @deprecated this property has been deprecated
-   * @param samplingRuleRecord 
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun samplingRuleRecord(samplingRuleRecord: CfnSamplingRule.SamplingRuleRecordProperty) {
-    cdkBuilder.samplingRuleRecord(samplingRuleRecord)
-  }
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingrulerecord)
+     *
+     * @param samplingRuleRecord
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun samplingRuleRecord(samplingRuleRecord: CfnSamplingRule.SamplingRuleRecordProperty) {
+        cdkBuilder.samplingRuleRecord(samplingRuleRecord)
+    }
 
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingruleupdate)
-   * @deprecated this property has been deprecated
-   * @param samplingRuleUpdate 
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun samplingRuleUpdate(samplingRuleUpdate: IResolvable) {
-    cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
-  }
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingruleupdate)
+     *
+     * @param samplingRuleUpdate
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun samplingRuleUpdate(samplingRuleUpdate: IResolvable) {
+        cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
+    }
 
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingruleupdate)
-   * @deprecated this property has been deprecated
-   * @param samplingRuleUpdate 
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun samplingRuleUpdate(samplingRuleUpdate: CfnSamplingRule.SamplingRuleUpdateProperty) {
-    cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
-  }
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-samplingruleupdate)
+     *
+     * @param samplingRuleUpdate
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun samplingRuleUpdate(samplingRuleUpdate: CfnSamplingRule.SamplingRuleUpdateProperty) {
+        cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
+    }
 
-  /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-tags)
-   * @param tags An array of key-value pairs to apply to this resource. 
-   */
-  public fun tags(vararg tags: Any) {
-    _tags.addAll(listOf(*tags))
-  }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(vararg tags: Any) {
+        _tags.addAll(listOf(*tags))
+    }
 
-  /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-tags)
-   * @param tags An array of key-value pairs to apply to this resource. 
-   */
-  public fun tags(tags: Collection<Any>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html#cfn-xray-samplingrule-tags)
+     *
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: Collection<Any>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnSamplingRule {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnSamplingRule {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

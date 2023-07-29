@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.CfnProject
 import software.amazon.awscdk.services.codebuild.FileSystemConfig
-import kotlin.Unit
 
 /**
  * The type returned from `IFileSystemLocation#bind`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,18 +40,14 @@ import kotlin.Unit
 public class FileSystemConfigDsl {
     private val cdkBuilder: FileSystemConfig.Builder = FileSystemConfig.builder()
 
-    /**
-     * @param location File system location wrapper property.
-     */
+    /** @param location File system location wrapper property. */
     public fun location(location: CfnProjectProjectFileSystemLocationPropertyDsl.() -> Unit = {}) {
         val builder = CfnProjectProjectFileSystemLocationPropertyDsl()
         builder.apply(location)
         cdkBuilder.location(builder.build())
     }
 
-    /**
-     * @param location File system location wrapper property.
-     */
+    /** @param location File system location wrapper property. */
     public fun location(location: CfnProject.ProjectFileSystemLocationProperty) {
         cdkBuilder.location(location)
     }

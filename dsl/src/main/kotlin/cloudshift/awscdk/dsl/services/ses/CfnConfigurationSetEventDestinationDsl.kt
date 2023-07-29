@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -17,7 +26,6 @@ import software.constructs.Construct
  * (Amazon SNS).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -52,43 +60,47 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnConfigurationSetEventDestination.Builder =
-      CfnConfigurationSetEventDestination.Builder.create(scope, id)
+    private val cdkBuilder: CfnConfigurationSetEventDestination.Builder =
+        CfnConfigurationSetEventDestination.Builder.create(scope, id)
 
-  /**
-   * The name of the configuration set that contains the event destination.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-configurationsetname)
-   * @param configurationSetName The name of the configuration set that contains the event
-   * destination. 
-   */
-  public fun configurationSetName(configurationSetName: String) {
-    cdkBuilder.configurationSetName(configurationSetName)
-  }
+    /**
+     * The name of the configuration set that contains the event destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-configurationsetname)
+     *
+     * @param configurationSetName The name of the configuration set that contains the event
+     *   destination.
+     */
+    public fun configurationSetName(configurationSetName: String) {
+        cdkBuilder.configurationSetName(configurationSetName)
+    }
 
-  /**
-   * The event destination object.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-   * @param eventDestination The event destination object. 
-   */
-  public fun eventDestination(eventDestination: IResolvable) {
-    cdkBuilder.eventDestination(eventDestination)
-  }
+    /**
+     * The event destination object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
+     *
+     * @param eventDestination The event destination object.
+     */
+    public fun eventDestination(eventDestination: IResolvable) {
+        cdkBuilder.eventDestination(eventDestination)
+    }
 
-  /**
-   * The event destination object.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-   * @param eventDestination The event destination object. 
-   */
-  public
-      fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty) {
-    cdkBuilder.eventDestination(eventDestination)
-  }
+    /**
+     * The event destination object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
+     *
+     * @param eventDestination The event destination object.
+     */
+    public fun eventDestination(
+        eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty
+    ) {
+        cdkBuilder.eventDestination(eventDestination)
+    }
 
-  public fun build(): CfnConfigurationSetEventDestination = cdkBuilder.build()
+    public fun build(): CfnConfigurationSetEventDestination = cdkBuilder.build()
 }

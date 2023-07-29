@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.internetmonitor
 
@@ -11,11 +20,10 @@ import software.amazon.awscdk.services.internetmonitor.CfnMonitor
  * Amazon S3.
  *
  * The configuration includes the bucket name and (optionally) bucket prefix for the S3 bucket to
- * store the measurements, and the delivery status. The delivery status is `ENABLED` if you choose to
- * deliver internet measurements to S3 logs, and `DISABLED` otherwise.
+ * store the measurements, and the delivery status. The delivery status is `ENABLED` if you choose
+ * to deliver internet measurements to S3 logs, and `DISABLED` otherwise.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,32 +39,29 @@ import software.amazon.awscdk.services.internetmonitor.CfnMonitor
  */
 @CdkDslMarker
 public class CfnMonitorS3ConfigPropertyDsl {
-  private val cdkBuilder: CfnMonitor.S3ConfigProperty.Builder =
-      CfnMonitor.S3ConfigProperty.builder()
+    private val cdkBuilder: CfnMonitor.S3ConfigProperty.Builder =
+        CfnMonitor.S3ConfigProperty.builder()
 
-  /**
-   * @param bucketName The Amazon S3 bucket name for internet measurements publishing.
-   */
-  public fun bucketName(bucketName: String) {
-    cdkBuilder.bucketName(bucketName)
-  }
+    /** @param bucketName The Amazon S3 bucket name for internet measurements publishing. */
+    public fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+    }
 
-  /**
-   * @param bucketPrefix An optional Amazon S3 bucket prefix for internet measurements publishing.
-   */
-  public fun bucketPrefix(bucketPrefix: String) {
-    cdkBuilder.bucketPrefix(bucketPrefix)
-  }
+    /**
+     * @param bucketPrefix An optional Amazon S3 bucket prefix for internet measurements publishing.
+     */
+    public fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
+    }
 
-  /**
-   * @param logDeliveryStatus The status of publishing Internet Monitor internet measurements to an
-   * Amazon S3 bucket.
-   * The delivery status is `ENABLED` if you choose to deliver internet measurements to an S3
-   * bucket, and `DISABLED` otherwise.
-   */
-  public fun logDeliveryStatus(logDeliveryStatus: String) {
-    cdkBuilder.logDeliveryStatus(logDeliveryStatus)
-  }
+    /**
+     * @param logDeliveryStatus The status of publishing Internet Monitor internet measurements to
+     *   an Amazon S3 bucket. The delivery status is `ENABLED` if you choose to deliver internet
+     *   measurements to an S3 bucket, and `DISABLED` otherwise.
+     */
+    public fun logDeliveryStatus(logDeliveryStatus: String) {
+        cdkBuilder.logDeliveryStatus(logDeliveryStatus)
+    }
 
-  public fun build(): CfnMonitor.S3ConfigProperty = cdkBuilder.build()
+    public fun build(): CfnMonitor.S3ConfigProperty = cdkBuilder.build()
 }

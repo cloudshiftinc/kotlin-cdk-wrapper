@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appstream
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appstream.CfnDirectoryConfig
  * directory.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,25 +35,22 @@ import software.amazon.awscdk.services.appstream.CfnDirectoryConfig
  */
 @CdkDslMarker
 public class CfnDirectoryConfigServiceAccountCredentialsPropertyDsl {
-  private val cdkBuilder: CfnDirectoryConfig.ServiceAccountCredentialsProperty.Builder =
-      CfnDirectoryConfig.ServiceAccountCredentialsProperty.builder()
+    private val cdkBuilder: CfnDirectoryConfig.ServiceAccountCredentialsProperty.Builder =
+        CfnDirectoryConfig.ServiceAccountCredentialsProperty.builder()
 
-  /**
-   * @param accountName The user name of the account. 
-   * This account must have the following privileges: create computer objects, join computers to the
-   * domain, and change/reset the password on descendant computer objects for the organizational units
-   * specified.
-   */
-  public fun accountName(accountName: String) {
-    cdkBuilder.accountName(accountName)
-  }
+    /**
+     * @param accountName The user name of the account. This account must have the following
+     *   privileges: create computer objects, join computers to the domain, and change/reset the
+     *   password on descendant computer objects for the organizational units specified.
+     */
+    public fun accountName(accountName: String) {
+        cdkBuilder.accountName(accountName)
+    }
 
-  /**
-   * @param accountPassword The password for the account. 
-   */
-  public fun accountPassword(accountPassword: String) {
-    cdkBuilder.accountPassword(accountPassword)
-  }
+    /** @param accountPassword The password for the account. */
+    public fun accountPassword(accountPassword: String) {
+        cdkBuilder.accountPassword(accountPassword)
+    }
 
-  public fun build(): CfnDirectoryConfig.ServiceAccountCredentialsProperty = cdkBuilder.build()
+    public fun build(): CfnDirectoryConfig.ServiceAccountCredentialsProperty = cdkBuilder.build()
 }

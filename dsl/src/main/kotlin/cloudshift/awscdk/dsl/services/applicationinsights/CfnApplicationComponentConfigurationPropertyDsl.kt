@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.applicationinsights
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.applicationinsights.CfnApplication
  * configuration settings of the component.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -92,50 +100,41 @@ import software.amazon.awscdk.services.applicationinsights.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationComponentConfigurationPropertyDsl {
-  private val cdkBuilder: CfnApplication.ComponentConfigurationProperty.Builder =
-      CfnApplication.ComponentConfigurationProperty.builder()
+    private val cdkBuilder: CfnApplication.ComponentConfigurationProperty.Builder =
+        CfnApplication.ComponentConfigurationProperty.builder()
 
-  private val _subComponentTypeConfigurations: MutableList<Any> = mutableListOf()
+    private val _subComponentTypeConfigurations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param configurationDetails The configuration settings.
-   */
-  public fun configurationDetails(configurationDetails: IResolvable) {
-    cdkBuilder.configurationDetails(configurationDetails)
-  }
+    /** @param configurationDetails The configuration settings. */
+    public fun configurationDetails(configurationDetails: IResolvable) {
+        cdkBuilder.configurationDetails(configurationDetails)
+    }
 
-  /**
-   * @param configurationDetails The configuration settings.
-   */
-  public
-      fun configurationDetails(configurationDetails: CfnApplication.ConfigurationDetailsProperty) {
-    cdkBuilder.configurationDetails(configurationDetails)
-  }
+    /** @param configurationDetails The configuration settings. */
+    public fun configurationDetails(
+        configurationDetails: CfnApplication.ConfigurationDetailsProperty
+    ) {
+        cdkBuilder.configurationDetails(configurationDetails)
+    }
 
-  /**
-   * @param subComponentTypeConfigurations Sub-component configurations of the component.
-   */
-  public fun subComponentTypeConfigurations(vararg subComponentTypeConfigurations: Any) {
-    _subComponentTypeConfigurations.addAll(listOf(*subComponentTypeConfigurations))
-  }
+    /** @param subComponentTypeConfigurations Sub-component configurations of the component. */
+    public fun subComponentTypeConfigurations(vararg subComponentTypeConfigurations: Any) {
+        _subComponentTypeConfigurations.addAll(listOf(*subComponentTypeConfigurations))
+    }
 
-  /**
-   * @param subComponentTypeConfigurations Sub-component configurations of the component.
-   */
-  public fun subComponentTypeConfigurations(subComponentTypeConfigurations: Collection<Any>) {
-    _subComponentTypeConfigurations.addAll(subComponentTypeConfigurations)
-  }
+    /** @param subComponentTypeConfigurations Sub-component configurations of the component. */
+    public fun subComponentTypeConfigurations(subComponentTypeConfigurations: Collection<Any>) {
+        _subComponentTypeConfigurations.addAll(subComponentTypeConfigurations)
+    }
 
-  /**
-   * @param subComponentTypeConfigurations Sub-component configurations of the component.
-   */
-  public fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable) {
-    cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations)
-  }
+    /** @param subComponentTypeConfigurations Sub-component configurations of the component. */
+    public fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable) {
+        cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations)
+    }
 
-  public fun build(): CfnApplication.ComponentConfigurationProperty {
-    if(_subComponentTypeConfigurations.isNotEmpty())
-        cdkBuilder.subComponentTypeConfigurations(_subComponentTypeConfigurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnApplication.ComponentConfigurationProperty {
+        if (_subComponentTypeConfigurations.isNotEmpty())
+            cdkBuilder.subComponentTypeConfigurations(_subComponentTypeConfigurations)
+        return cdkBuilder.build()
+    }
 }

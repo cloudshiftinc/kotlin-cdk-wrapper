@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * The numeric equality type drill down filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,7 +47,7 @@ public class CfnAnalysisCategoryDrillDownFilterPropertyDsl {
 
     /**
      * @param categoryValues A list of the string inputs that are the values of the category drill
-     * down filter.
+     *   down filter.
      */
     public fun categoryValues(vararg categoryValues: String) {
         _categoryValues.addAll(listOf(*categoryValues))
@@ -47,22 +55,18 @@ public class CfnAnalysisCategoryDrillDownFilterPropertyDsl {
 
     /**
      * @param categoryValues A list of the string inputs that are the values of the category drill
-     * down filter.
+     *   down filter.
      */
     public fun categoryValues(categoryValues: Collection<String>) {
         _categoryValues.addAll(categoryValues)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: IResolvable) {
         cdkBuilder.column(column)
     }
 
-    /**
-     * @param column The column that the filter is applied to.
-     */
+    /** @param column The column that the filter is applied to. */
     public fun column(column: CfnAnalysis.ColumnIdentifierProperty) {
         cdkBuilder.column(column)
     }

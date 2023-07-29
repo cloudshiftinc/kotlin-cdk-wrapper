@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ecs.DeploymentAlarmOptions
  * Options for deployment alarms.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.cloudwatch.*;
  * Cluster cluster;
@@ -39,14 +47,12 @@ import software.amazon.awscdk.services.ecs.DeploymentAlarmOptions
  */
 @CdkDslMarker
 public class DeploymentAlarmOptionsDsl {
-  private val cdkBuilder: DeploymentAlarmOptions.Builder = DeploymentAlarmOptions.builder()
+    private val cdkBuilder: DeploymentAlarmOptions.Builder = DeploymentAlarmOptions.builder()
 
-  /**
-   * @param behavior Default rollback on alarm.
-   */
-  public fun behavior(behavior: AlarmBehavior) {
-    cdkBuilder.behavior(behavior)
-  }
+    /** @param behavior Default rollback on alarm. */
+    public fun behavior(behavior: AlarmBehavior) {
+        cdkBuilder.behavior(behavior)
+    }
 
-  public fun build(): DeploymentAlarmOptions = cdkBuilder.build()
+    public fun build(): DeploymentAlarmOptions = cdkBuilder.build()
 }

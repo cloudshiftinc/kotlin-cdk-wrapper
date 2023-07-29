@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The top ranked and bottom ranked computation configuration.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -23,37 +31,27 @@ public class CfnTemplateTopBottomRankedComputationPropertyDsl {
     private val cdkBuilder: CfnTemplate.TopBottomRankedComputationProperty.Builder =
         CfnTemplate.TopBottomRankedComputationProperty.builder()
 
-    /**
-     * @param category The category field that is used in a computation.
-     */
+    /** @param category The category field that is used in a computation. */
     public fun category(category: IResolvable) {
         cdkBuilder.category(category)
     }
 
-    /**
-     * @param category The category field that is used in a computation.
-     */
+    /** @param category The category field that is used in a computation. */
     public fun category(category: CfnTemplate.DimensionFieldProperty) {
         cdkBuilder.category(category)
     }
 
-    /**
-     * @param computationId The ID for a computation.
-     */
+    /** @param computationId The ID for a computation. */
     public fun computationId(computationId: String) {
         cdkBuilder.computationId(computationId)
     }
 
-    /**
-     * @param name The name of a computation.
-     */
+    /** @param name The name of a computation. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param resultSize The result size of a top and bottom ranked computation.
-     */
+    /** @param resultSize The result size of a top and bottom ranked computation. */
     public fun resultSize(resultSize: Number) {
         cdkBuilder.resultSize(resultSize)
     }
@@ -67,16 +65,12 @@ public class CfnTemplateTopBottomRankedComputationPropertyDsl {
         cdkBuilder.type(type)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`)
     }
 
-    /**
-     * @param value The value field that is used in a computation.
-     */
+    /** @param value The value field that is used in a computation. */
     public fun `value`(`value`: CfnTemplate.MeasureFieldProperty) {
         cdkBuilder.`value`(`value`)
     }

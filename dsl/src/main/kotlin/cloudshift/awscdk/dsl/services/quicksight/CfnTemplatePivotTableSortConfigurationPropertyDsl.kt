@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The sort configuration for a `PivotTableVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -66,23 +74,17 @@ public class CfnTemplatePivotTableSortConfigurationPropertyDsl {
 
     private val _fieldSortOptions: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param fieldSortOptions The field sort options for a pivot table sort configuration.
-     */
+    /** @param fieldSortOptions The field sort options for a pivot table sort configuration. */
     public fun fieldSortOptions(vararg fieldSortOptions: Any) {
         _fieldSortOptions.addAll(listOf(*fieldSortOptions))
     }
 
-    /**
-     * @param fieldSortOptions The field sort options for a pivot table sort configuration.
-     */
+    /** @param fieldSortOptions The field sort options for a pivot table sort configuration. */
     public fun fieldSortOptions(fieldSortOptions: Collection<Any>) {
         _fieldSortOptions.addAll(fieldSortOptions)
     }
 
-    /**
-     * @param fieldSortOptions The field sort options for a pivot table sort configuration.
-     */
+    /** @param fieldSortOptions The field sort options for a pivot table sort configuration. */
     public fun fieldSortOptions(fieldSortOptions: IResolvable) {
         cdkBuilder.fieldSortOptions(fieldSortOptions)
     }

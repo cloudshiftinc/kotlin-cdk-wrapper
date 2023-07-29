@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition
  * The configuration for a baseline model bias job.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,30 +37,26 @@ import software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition
  */
 @CdkDslMarker
 public class CfnModelBiasJobDefinitionModelBiasBaselineConfigPropertyDsl {
-  private val cdkBuilder: CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty.Builder =
-      CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty.builder()
+    private val cdkBuilder: CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty.Builder =
+        CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty.builder()
 
-  /**
-   * @param baseliningJobName The name of the baseline model bias job.
-   */
-  public fun baseliningJobName(baseliningJobName: String) {
-    cdkBuilder.baseliningJobName(baseliningJobName)
-  }
+    /** @param baseliningJobName The name of the baseline model bias job. */
+    public fun baseliningJobName(baseliningJobName: String) {
+        cdkBuilder.baseliningJobName(baseliningJobName)
+    }
 
-  /**
-   * @param constraintsResource The constraints resource for a monitoring job.
-   */
-  public fun constraintsResource(constraintsResource: IResolvable) {
-    cdkBuilder.constraintsResource(constraintsResource)
-  }
+    /** @param constraintsResource The constraints resource for a monitoring job. */
+    public fun constraintsResource(constraintsResource: IResolvable) {
+        cdkBuilder.constraintsResource(constraintsResource)
+    }
 
-  /**
-   * @param constraintsResource The constraints resource for a monitoring job.
-   */
-  public
-      fun constraintsResource(constraintsResource: CfnModelBiasJobDefinition.ConstraintsResourceProperty) {
-    cdkBuilder.constraintsResource(constraintsResource)
-  }
+    /** @param constraintsResource The constraints resource for a monitoring job. */
+    public fun constraintsResource(
+        constraintsResource: CfnModelBiasJobDefinition.ConstraintsResourceProperty
+    ) {
+        cdkBuilder.constraintsResource(constraintsResource)
+    }
 
-  public fun build(): CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty = cdkBuilder.build()
+    public fun build(): CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty =
+        cdkBuilder.build()
 }

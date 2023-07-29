@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpoint
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.pinpoint.CfnSegment
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.pinpoint.CfnSegment
 
 /**
  * An array that defines the set of segment criteria to evaluate when handling segment groups for
  * the segment.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -95,81 +103,84 @@ public class CfnSegmentGroupsPropertyDsl {
     private val _sourceSegments: MutableList<Any> = mutableListOf()
 
     /**
-     * @param dimensions An array that defines the dimensions to include or exclude from the segment.
+     * @param dimensions An array that defines the dimensions to include or exclude from the
+     *   segment.
      */
     public fun dimensions(vararg dimensions: Any) {
         _dimensions.addAll(listOf(*dimensions))
     }
 
     /**
-     * @param dimensions An array that defines the dimensions to include or exclude from the segment.
+     * @param dimensions An array that defines the dimensions to include or exclude from the
+     *   segment.
      */
     public fun dimensions(dimensions: Collection<Any>) {
         _dimensions.addAll(dimensions)
     }
 
     /**
-     * @param dimensions An array that defines the dimensions to include or exclude from the segment.
+     * @param dimensions An array that defines the dimensions to include or exclude from the
+     *   segment.
      */
     public fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions)
     }
 
     /**
-     * @param sourceSegments The base segment to build the segment on.
-     * A base segment, also called a *source segment* , defines the initial population of endpoints
-     * for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the base segment by
-     * using the dimensions that you specify.
+     * @param sourceSegments The base segment to build the segment on. A base segment, also called a
+     *   *source segment* , defines the initial population of endpoints for a segment. When you add
+     *   dimensions to the segment, Amazon Pinpoint filters the base segment by using the dimensions
+     *   that you specify.
      *
-     * You can specify more than one dimensional segment or only one imported segment. If you specify
-     * an imported segment, the segment size estimate that displays on the Amazon Pinpoint console
-     * indicates the size of the imported segment without any filters applied to it.
+     * You can specify more than one dimensional segment or only one imported segment. If you
+     * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+     * console indicates the size of the imported segment without any filters applied to it.
      */
     public fun sourceSegments(vararg sourceSegments: Any) {
         _sourceSegments.addAll(listOf(*sourceSegments))
     }
 
     /**
-     * @param sourceSegments The base segment to build the segment on.
-     * A base segment, also called a *source segment* , defines the initial population of endpoints
-     * for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the base segment by
-     * using the dimensions that you specify.
+     * @param sourceSegments The base segment to build the segment on. A base segment, also called a
+     *   *source segment* , defines the initial population of endpoints for a segment. When you add
+     *   dimensions to the segment, Amazon Pinpoint filters the base segment by using the dimensions
+     *   that you specify.
      *
-     * You can specify more than one dimensional segment or only one imported segment. If you specify
-     * an imported segment, the segment size estimate that displays on the Amazon Pinpoint console
-     * indicates the size of the imported segment without any filters applied to it.
+     * You can specify more than one dimensional segment or only one imported segment. If you
+     * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+     * console indicates the size of the imported segment without any filters applied to it.
      */
     public fun sourceSegments(sourceSegments: Collection<Any>) {
         _sourceSegments.addAll(sourceSegments)
     }
 
     /**
-     * @param sourceSegments The base segment to build the segment on.
-     * A base segment, also called a *source segment* , defines the initial population of endpoints
-     * for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the base segment by
-     * using the dimensions that you specify.
+     * @param sourceSegments The base segment to build the segment on. A base segment, also called a
+     *   *source segment* , defines the initial population of endpoints for a segment. When you add
+     *   dimensions to the segment, Amazon Pinpoint filters the base segment by using the dimensions
+     *   that you specify.
      *
-     * You can specify more than one dimensional segment or only one imported segment. If you specify
-     * an imported segment, the segment size estimate that displays on the Amazon Pinpoint console
-     * indicates the size of the imported segment without any filters applied to it.
+     * You can specify more than one dimensional segment or only one imported segment. If you
+     * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+     * console indicates the size of the imported segment without any filters applied to it.
      */
     public fun sourceSegments(sourceSegments: IResolvable) {
         cdkBuilder.sourceSegments(sourceSegments)
     }
 
     /**
-     * @param sourceType Specifies how to handle multiple base segments for the segment.
-     * For example, if you specify three base segments for the segment, whether the resulting segment
-     * is based on all, any, or none of the base segments.
+     * @param sourceType Specifies how to handle multiple base segments for the segment. For
+     *   example, if you specify three base segments for the segment, whether the resulting segment
+     *   is based on all, any, or none of the base segments.
      */
     public fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
     }
 
     /**
-     * @param type Specifies how to handle multiple dimensions for the segment.
-     * For example, if you specify three dimensions for the segment, whether the resulting segment
-     * includes endpoints that match all, any, or none of the dimensions.
+     * @param type Specifies how to handle multiple dimensions for the segment. For example, if you
+     *   specify three dimensions for the segment, whether the resulting segment includes endpoints
+     *   that match all, any, or none of the dimensions.
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

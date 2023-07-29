@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * Determines the color scale that is applied to the visual.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,44 +50,32 @@ public class CfnDashboardColorScalePropertyDsl {
 
     private val _colors: MutableList<Any> = mutableListOf()
 
-    /**
-     * @param colorFillType Determines the color fill type.
-     */
+    /** @param colorFillType Determines the color fill type. */
     public fun colorFillType(colorFillType: String) {
         cdkBuilder.colorFillType(colorFillType)
     }
 
-    /**
-     * @param colors Determines the list of colors that are applied to the visual.
-     */
+    /** @param colors Determines the list of colors that are applied to the visual. */
     public fun colors(vararg colors: Any) {
         _colors.addAll(listOf(*colors))
     }
 
-    /**
-     * @param colors Determines the list of colors that are applied to the visual.
-     */
+    /** @param colors Determines the list of colors that are applied to the visual. */
     public fun colors(colors: Collection<Any>) {
         _colors.addAll(colors)
     }
 
-    /**
-     * @param colors Determines the list of colors that are applied to the visual.
-     */
+    /** @param colors Determines the list of colors that are applied to the visual. */
     public fun colors(colors: IResolvable) {
         cdkBuilder.colors(colors)
     }
 
-    /**
-     * @param nullValueColor Determines the color that is applied to null values.
-     */
+    /** @param nullValueColor Determines the color that is applied to null values. */
     public fun nullValueColor(nullValueColor: IResolvable) {
         cdkBuilder.nullValueColor(nullValueColor)
     }
 
-    /**
-     * @param nullValueColor Determines the color that is applied to null values.
-     */
+    /** @param nullValueColor Determines the color that is applied to null values. */
     public fun nullValueColor(nullValueColor: CfnDashboard.DataColorProperty) {
         cdkBuilder.nullValueColor(nullValueColor)
     }

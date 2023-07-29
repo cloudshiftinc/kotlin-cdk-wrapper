@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emr
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps
  * Properties for defining a `CfnInstanceGroupConfig`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -96,141 +104,129 @@ import software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps
  */
 @CdkDslMarker
 public class CfnInstanceGroupConfigPropsDsl {
-  private val cdkBuilder: CfnInstanceGroupConfigProps.Builder =
-      CfnInstanceGroupConfigProps.builder()
+    private val cdkBuilder: CfnInstanceGroupConfigProps.Builder =
+        CfnInstanceGroupConfigProps.builder()
 
-  private val _configurations: MutableList<Any> = mutableListOf()
+    private val _configurations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
-   * `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances
-   * in response to the value of a CloudWatch metric. For more information, see [Using Automatic
-   * Scaling in Amazon
-   * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) in the
-   * *Amazon EMR Management Guide* .
-   */
-  public fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-    cdkBuilder.autoScalingPolicy(autoScalingPolicy)
-  }
+    /**
+     * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
+     *   `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2
+     *   instances in response to the value of a CloudWatch metric. For more information, see
+     *   [Using Automatic Scaling in Amazon EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html)
+     *   in the *Amazon EMR Management Guide* .
+     */
+    public fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
+        cdkBuilder.autoScalingPolicy(autoScalingPolicy)
+    }
 
-  /**
-   * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
-   * `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances
-   * in response to the value of a CloudWatch metric. For more information, see [Using Automatic
-   * Scaling in Amazon
-   * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) in the
-   * *Amazon EMR Management Guide* .
-   */
-  public
-      fun autoScalingPolicy(autoScalingPolicy: CfnInstanceGroupConfig.AutoScalingPolicyProperty) {
-    cdkBuilder.autoScalingPolicy(autoScalingPolicy)
-  }
+    /**
+     * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
+     *   `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2
+     *   instances in response to the value of a CloudWatch metric. For more information, see
+     *   [Using Automatic Scaling in Amazon EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html)
+     *   in the *Amazon EMR Management Guide* .
+     */
+    public fun autoScalingPolicy(
+        autoScalingPolicy: CfnInstanceGroupConfig.AutoScalingPolicyProperty
+    ) {
+        cdkBuilder.autoScalingPolicy(autoScalingPolicy)
+    }
 
-  /**
-   * @param bidPrice If specified, indicates that the instance group uses Spot Instances.
-   * This is the maximum price you are willing to pay for Spot Instances. Specify `OnDemandPrice` to
-   * set the amount equal to the On-Demand price, or specify an amount in USD.
-   */
-  public fun bidPrice(bidPrice: String) {
-    cdkBuilder.bidPrice(bidPrice)
-  }
+    /**
+     * @param bidPrice If specified, indicates that the instance group uses Spot Instances. This is
+     *   the maximum price you are willing to pay for Spot Instances. Specify `OnDemandPrice` to set
+     *   the amount equal to the On-Demand price, or specify an amount in USD.
+     */
+    public fun bidPrice(bidPrice: String) {
+        cdkBuilder.bidPrice(bidPrice)
+    }
 
-  /**
-   * @param configurations Amazon EMR releases 4.x or later.
-   * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a
-   * separate configuration for each instance group (master, core, and task).
-   */
-  public fun configurations(vararg configurations: Any) {
-    _configurations.addAll(listOf(*configurations))
-  }
+    /**
+     * @param configurations Amazon EMR releases 4.x or later. The list of configurations supplied
+     *   for an Amazon EMR cluster instance group. You can specify a separate configuration for each
+     *   instance group (master, core, and task).
+     */
+    public fun configurations(vararg configurations: Any) {
+        _configurations.addAll(listOf(*configurations))
+    }
 
-  /**
-   * @param configurations Amazon EMR releases 4.x or later.
-   * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a
-   * separate configuration for each instance group (master, core, and task).
-   */
-  public fun configurations(configurations: Collection<Any>) {
-    _configurations.addAll(configurations)
-  }
+    /**
+     * @param configurations Amazon EMR releases 4.x or later. The list of configurations supplied
+     *   for an Amazon EMR cluster instance group. You can specify a separate configuration for each
+     *   instance group (master, core, and task).
+     */
+    public fun configurations(configurations: Collection<Any>) {
+        _configurations.addAll(configurations)
+    }
 
-  /**
-   * @param configurations Amazon EMR releases 4.x or later.
-   * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a
-   * separate configuration for each instance group (master, core, and task).
-   */
-  public fun configurations(configurations: IResolvable) {
-    cdkBuilder.configurations(configurations)
-  }
+    /**
+     * @param configurations Amazon EMR releases 4.x or later. The list of configurations supplied
+     *   for an Amazon EMR cluster instance group. You can specify a separate configuration for each
+     *   instance group (master, core, and task).
+     */
+    public fun configurations(configurations: IResolvable) {
+        cdkBuilder.configurations(configurations)
+    }
 
-  /**
-   * @param customAmiId The custom AMI ID to use for the provisioned instance group.
-   */
-  public fun customAmiId(customAmiId: String) {
-    cdkBuilder.customAmiId(customAmiId)
-  }
+    /** @param customAmiId The custom AMI ID to use for the provisioned instance group. */
+    public fun customAmiId(customAmiId: String) {
+        cdkBuilder.customAmiId(customAmiId)
+    }
 
-  /**
-   * @param ebsConfiguration `EbsConfiguration` determines the EBS volumes to attach to EMR cluster
-   * instances.
-   */
-  public fun ebsConfiguration(ebsConfiguration: IResolvable) {
-    cdkBuilder.ebsConfiguration(ebsConfiguration)
-  }
+    /**
+     * @param ebsConfiguration `EbsConfiguration` determines the EBS volumes to attach to EMR
+     *   cluster instances.
+     */
+    public fun ebsConfiguration(ebsConfiguration: IResolvable) {
+        cdkBuilder.ebsConfiguration(ebsConfiguration)
+    }
 
-  /**
-   * @param ebsConfiguration `EbsConfiguration` determines the EBS volumes to attach to EMR cluster
-   * instances.
-   */
-  public fun ebsConfiguration(ebsConfiguration: CfnInstanceGroupConfig.EbsConfigurationProperty) {
-    cdkBuilder.ebsConfiguration(ebsConfiguration)
-  }
+    /**
+     * @param ebsConfiguration `EbsConfiguration` determines the EBS volumes to attach to EMR
+     *   cluster instances.
+     */
+    public fun ebsConfiguration(ebsConfiguration: CfnInstanceGroupConfig.EbsConfigurationProperty) {
+        cdkBuilder.ebsConfiguration(ebsConfiguration)
+    }
 
-  /**
-   * @param instanceCount Target number of instances for the instance group. 
-   */
-  public fun instanceCount(instanceCount: Number) {
-    cdkBuilder.instanceCount(instanceCount)
-  }
+    /** @param instanceCount Target number of instances for the instance group. */
+    public fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
+    }
 
-  /**
-   * @param instanceRole The role of the instance group in the cluster. 
-   * *Allowed Values* : TASK
-   */
-  public fun instanceRole(instanceRole: String) {
-    cdkBuilder.instanceRole(instanceRole)
-  }
+    /**
+     * @param instanceRole The role of the instance group in the cluster. *Allowed Values* : TASK
+     */
+    public fun instanceRole(instanceRole: String) {
+        cdkBuilder.instanceRole(instanceRole)
+    }
 
-  /**
-   * @param instanceType The Amazon EC2 instance type for all instances in the instance group. 
-   */
-  public fun instanceType(instanceType: String) {
-    cdkBuilder.instanceType(instanceType)
-  }
+    /** @param instanceType The Amazon EC2 instance type for all instances in the instance group. */
+    public fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+    }
 
-  /**
-   * @param jobFlowId The ID of an Amazon EMR cluster that you want to associate this instance group
-   * with. 
-   */
-  public fun jobFlowId(jobFlowId: String) {
-    cdkBuilder.jobFlowId(jobFlowId)
-  }
+    /**
+     * @param jobFlowId The ID of an Amazon EMR cluster that you want to associate this instance
+     *   group with.
+     */
+    public fun jobFlowId(jobFlowId: String) {
+        cdkBuilder.jobFlowId(jobFlowId)
+    }
 
-  /**
-   * @param market Market type of the Amazon EC2 instances used to create a cluster node.
-   */
-  public fun market(market: String) {
-    cdkBuilder.market(market)
-  }
+    /** @param market Market type of the Amazon EC2 instances used to create a cluster node. */
+    public fun market(market: String) {
+        cdkBuilder.market(market)
+    }
 
-  /**
-   * @param name Friendly name given to the instance group.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name Friendly name given to the instance group. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnInstanceGroupConfigProps {
-    if(_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnInstanceGroupConfigProps {
+        if (_configurations.isNotEmpty()) cdkBuilder.configurations(_configurations)
+        return cdkBuilder.build()
+    }
 }

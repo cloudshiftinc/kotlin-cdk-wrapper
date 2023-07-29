@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
  * rule.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,23 +35,18 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
  */
 @CdkDslMarker
 public class CfnListenerTargetGroupTuplePropertyDsl {
-  private val cdkBuilder: CfnListener.TargetGroupTupleProperty.Builder =
-      CfnListener.TargetGroupTupleProperty.builder()
+    private val cdkBuilder: CfnListener.TargetGroupTupleProperty.Builder =
+        CfnListener.TargetGroupTupleProperty.builder()
 
-  /**
-   * @param targetGroupArn The Amazon Resource Name (ARN) of the target group.
-   */
-  public fun targetGroupArn(targetGroupArn: String) {
-    cdkBuilder.targetGroupArn(targetGroupArn)
-  }
+    /** @param targetGroupArn The Amazon Resource Name (ARN) of the target group. */
+    public fun targetGroupArn(targetGroupArn: String) {
+        cdkBuilder.targetGroupArn(targetGroupArn)
+    }
 
-  /**
-   * @param weight The weight.
-   * The range is 0 to 999.
-   */
-  public fun weight(weight: Number) {
-    cdkBuilder.weight(weight)
-  }
+    /** @param weight The weight. The range is 0 to 999. */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+    }
 
-  public fun build(): CfnListener.TargetGroupTupleProperty = cdkBuilder.build()
+    public fun build(): CfnListener.TargetGroupTupleProperty = cdkBuilder.build()
 }

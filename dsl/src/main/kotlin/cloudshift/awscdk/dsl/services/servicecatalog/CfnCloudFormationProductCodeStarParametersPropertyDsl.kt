@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
 import kotlin.String
+import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
 
 /**
  * The subtype containing details about the Codestar connection `Type` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,22 +40,20 @@ public class CfnCloudFormationProductCodeStarParametersPropertyDsl {
 
     /**
      * @param artifactPath The absolute path wehre the artifact resides within the repo and branch,
-     * formatted as "folder/file.json.".
+     *   formatted as "folder/file.json.".
      */
     public fun artifactPath(artifactPath: String) {
         cdkBuilder.artifactPath(artifactPath)
     }
 
-    /**
-     * @param branch The specific branch where the artifact resides.
-     */
+    /** @param branch The specific branch where the artifact resides. */
     public fun branch(branch: String) {
         cdkBuilder.branch(branch)
     }
 
     /**
-     * @param connectionArn The CodeStar ARN, which is the connection between AWS Service Catalog and
-     * the external repository.
+     * @param connectionArn The CodeStar ARN, which is the connection between AWS Service Catalog
+     *   and the external repository.
      */
     public fun connectionArn(connectionArn: String) {
         cdkBuilder.connectionArn(connectionArn)
@@ -55,7 +61,7 @@ public class CfnCloudFormationProductCodeStarParametersPropertyDsl {
 
     /**
      * @param repository The specific repository where the product’s artifact-to-be-synced resides,
-     * formatted as "Account/Repo.".
+     *   formatted as "Account/Repo.".
      */
     public fun repository(repository: String) {
         cdkBuilder.repository(repository)

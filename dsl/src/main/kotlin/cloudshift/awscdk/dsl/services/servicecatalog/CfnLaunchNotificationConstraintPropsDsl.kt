@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraintProps
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraintProps
 
 /**
  * Properties for defining a `CfnLaunchNotificationConstraint`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -46,37 +54,27 @@ public class CfnLaunchNotificationConstraintPropsDsl {
         cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    /**
-     * @param description The description of the constraint.
-     */
+    /** @param description The description of the constraint. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /**
-     * @param notificationArns The notification ARNs.
-     */
+    /** @param notificationArns The notification ARNs. */
     public fun notificationArns(vararg notificationArns: String) {
         _notificationArns.addAll(listOf(*notificationArns))
     }
 
-    /**
-     * @param notificationArns The notification ARNs.
-     */
+    /** @param notificationArns The notification ARNs. */
     public fun notificationArns(notificationArns: Collection<String>) {
         _notificationArns.addAll(notificationArns)
     }
 
-    /**
-     * @param portfolioId The portfolio identifier.
-     */
+    /** @param portfolioId The portfolio identifier. */
     public fun portfolioId(portfolioId: String) {
         cdkBuilder.portfolioId(portfolioId)
     }
 
-    /**
-     * @param productId The product identifier.
-     */
+    /** @param productId The product identifier. */
     public fun productId(productId: String) {
         cdkBuilder.productId(productId)
     }

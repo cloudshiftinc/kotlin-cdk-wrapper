@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codepipeline
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.codepipeline.ActionConfig
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,23 +31,19 @@ import software.amazon.awscdk.services.codepipeline.ActionConfig
  */
 @CdkDslMarker
 public class ActionConfigDsl {
-  private val cdkBuilder: ActionConfig.Builder = ActionConfig.builder()
+    private val cdkBuilder: ActionConfig.Builder = ActionConfig.builder()
 
-  /**
-   * @param configuration the value to be set.
-   */
-  public fun configuration(configuration: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(configuration)
-    cdkBuilder.configuration(builder.map)
-  }
+    /** @param configuration the value to be set. */
+    public fun configuration(configuration: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(configuration)
+        cdkBuilder.configuration(builder.map)
+    }
 
-  /**
-   * @param configuration the value to be set.
-   */
-  public fun configuration(configuration: Any) {
-    cdkBuilder.configuration(configuration)
-  }
+    /** @param configuration the value to be set. */
+    public fun configuration(configuration: Any) {
+        cdkBuilder.configuration(configuration)
+    }
 
-  public fun build(): ActionConfig = cdkBuilder.build()
+    public fun build(): ActionConfig = cdkBuilder.build()
 }

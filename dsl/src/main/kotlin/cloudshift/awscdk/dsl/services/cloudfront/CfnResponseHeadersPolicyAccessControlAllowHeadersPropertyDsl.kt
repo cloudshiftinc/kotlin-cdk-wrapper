@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
  * in the MDN Web Docs.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -32,29 +40,23 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
  */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyAccessControlAllowHeadersPropertyDsl {
-  private val cdkBuilder: CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.Builder =
-      CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.builder()
+    private val cdkBuilder: CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.Builder =
+        CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.builder()
 
-  private val _items: MutableList<String> = mutableListOf()
+    private val _items: MutableList<String> = mutableListOf()
 
-  /**
-   * @param items The list of HTTP header names. 
-   * You can specify `*` to allow all headers.
-   */
-  public fun items(vararg items: String) {
-    _items.addAll(listOf(*items))
-  }
+    /** @param items The list of HTTP header names. You can specify `*` to allow all headers. */
+    public fun items(vararg items: String) {
+        _items.addAll(listOf(*items))
+    }
 
-  /**
-   * @param items The list of HTTP header names. 
-   * You can specify `*` to allow all headers.
-   */
-  public fun items(items: Collection<String>) {
-    _items.addAll(items)
-  }
+    /** @param items The list of HTTP header names. You can specify `*` to allow all headers. */
+    public fun items(items: Collection<String>) {
+        _items.addAll(items)
+    }
 
-  public fun build(): CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty {
-    if(_items.isNotEmpty()) cdkBuilder.items(_items)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty {
+        if (_items.isNotEmpty()) cdkBuilder.items(_items)
+        return cdkBuilder.build()
+    }
 }

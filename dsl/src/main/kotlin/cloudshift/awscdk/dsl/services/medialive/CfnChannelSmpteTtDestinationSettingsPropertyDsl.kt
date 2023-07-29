@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is CaptionDestinationSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,8 +32,8 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelSmpteTtDestinationSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.SmpteTtDestinationSettingsProperty.Builder =
-      CfnChannel.SmpteTtDestinationSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.SmpteTtDestinationSettingsProperty.Builder =
+        CfnChannel.SmpteTtDestinationSettingsProperty.builder()
 
-  public fun build(): CfnChannel.SmpteTtDestinationSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.SmpteTtDestinationSettingsProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.eks
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.eks.KubectlProviderProps
  * Properties for a KubectlProvider.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -23,14 +31,12 @@ import software.amazon.awscdk.services.eks.KubectlProviderProps
  */
 @CdkDslMarker
 public class KubectlProviderPropsDsl {
-  private val cdkBuilder: KubectlProviderProps.Builder = KubectlProviderProps.builder()
+    private val cdkBuilder: KubectlProviderProps.Builder = KubectlProviderProps.builder()
 
-  /**
-   * @param cluster The cluster to control. 
-   */
-  public fun cluster(cluster: ICluster) {
-    cdkBuilder.cluster(cluster)
-  }
+    /** @param cluster The cluster to control. */
+    public fun cluster(cluster: ICluster) {
+        cdkBuilder.cluster(cluster)
+    }
 
-  public fun build(): KubectlProviderProps = cdkBuilder.build()
+    public fun build(): KubectlProviderProps = cdkBuilder.build()
 }

@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.cloudassembly.schema
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery
 import kotlin.String
+import software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery
 
 /**
  * Query to endpoint service context provider.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,9 +38,7 @@ public class EndpointServiceAvailabilityZonesContextQueryDsl {
     private val cdkBuilder: EndpointServiceAvailabilityZonesContextQuery.Builder =
         EndpointServiceAvailabilityZonesContextQuery.builder()
 
-    /**
-     * @param account Query account.
-     */
+    /** @param account Query account. */
     public fun account(account: String) {
         cdkBuilder.account(account)
     }
@@ -44,16 +50,12 @@ public class EndpointServiceAvailabilityZonesContextQueryDsl {
         cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    /**
-     * @param region Query region.
-     */
+    /** @param region Query region. */
     public fun region(region: String) {
         cdkBuilder.region(region)
     }
 
-    /**
-     * @param serviceName Query service name.
-     */
+    /** @param serviceName Query service name. */
     public fun serviceName(serviceName: String) {
         cdkBuilder.serviceName(serviceName)
     }

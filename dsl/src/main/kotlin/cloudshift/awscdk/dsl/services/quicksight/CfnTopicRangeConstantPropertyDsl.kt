@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  * The value of the constant that is used to specify the endpoints of a range filter.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.quicksight.CfnTopic
  */
 @CdkDslMarker
 public class CfnTopicRangeConstantPropertyDsl {
-  private val cdkBuilder: CfnTopic.RangeConstantProperty.Builder =
-      CfnTopic.RangeConstantProperty.builder()
+    private val cdkBuilder: CfnTopic.RangeConstantProperty.Builder =
+        CfnTopic.RangeConstantProperty.builder()
 
-  /**
-   * @param maximum The maximum value for a range constant.
-   */
-  public fun maximum(maximum: String) {
-    cdkBuilder.maximum(maximum)
-  }
+    /** @param maximum The maximum value for a range constant. */
+    public fun maximum(maximum: String) {
+        cdkBuilder.maximum(maximum)
+    }
 
-  /**
-   * @param minimum The minimum value for a range constant.
-   */
-  public fun minimum(minimum: String) {
-    cdkBuilder.minimum(minimum)
-  }
+    /** @param minimum The minimum value for a range constant. */
+    public fun minimum(minimum: String) {
+        cdkBuilder.minimum(minimum)
+    }
 
-  public fun build(): CfnTopic.RangeConstantProperty = cdkBuilder.build()
+    public fun build(): CfnTopic.RangeConstantProperty = cdkBuilder.build()
 }

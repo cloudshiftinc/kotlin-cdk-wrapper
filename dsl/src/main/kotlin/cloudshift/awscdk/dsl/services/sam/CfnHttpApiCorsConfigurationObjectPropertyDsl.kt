@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,99 +41,77 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
  */
 @CdkDslMarker
 public class CfnHttpApiCorsConfigurationObjectPropertyDsl {
-  private val cdkBuilder: CfnHttpApi.CorsConfigurationObjectProperty.Builder =
-      CfnHttpApi.CorsConfigurationObjectProperty.builder()
+    private val cdkBuilder: CfnHttpApi.CorsConfigurationObjectProperty.Builder =
+        CfnHttpApi.CorsConfigurationObjectProperty.builder()
 
-  private val _allowHeaders: MutableList<String> = mutableListOf()
+    private val _allowHeaders: MutableList<String> = mutableListOf()
 
-  private val _allowMethods: MutableList<String> = mutableListOf()
+    private val _allowMethods: MutableList<String> = mutableListOf()
 
-  private val _allowOrigins: MutableList<String> = mutableListOf()
+    private val _allowOrigins: MutableList<String> = mutableListOf()
 
-  private val _exposeHeaders: MutableList<String> = mutableListOf()
+    private val _exposeHeaders: MutableList<String> = mutableListOf()
 
-  /**
-   * @param allowCredentials the value to be set.
-   */
-  public fun allowCredentials(allowCredentials: Boolean) {
-    cdkBuilder.allowCredentials(allowCredentials)
-  }
+    /** @param allowCredentials the value to be set. */
+    public fun allowCredentials(allowCredentials: Boolean) {
+        cdkBuilder.allowCredentials(allowCredentials)
+    }
 
-  /**
-   * @param allowCredentials the value to be set.
-   */
-  public fun allowCredentials(allowCredentials: IResolvable) {
-    cdkBuilder.allowCredentials(allowCredentials)
-  }
+    /** @param allowCredentials the value to be set. */
+    public fun allowCredentials(allowCredentials: IResolvable) {
+        cdkBuilder.allowCredentials(allowCredentials)
+    }
 
-  /**
-   * @param allowHeaders the value to be set.
-   */
-  public fun allowHeaders(vararg allowHeaders: String) {
-    _allowHeaders.addAll(listOf(*allowHeaders))
-  }
+    /** @param allowHeaders the value to be set. */
+    public fun allowHeaders(vararg allowHeaders: String) {
+        _allowHeaders.addAll(listOf(*allowHeaders))
+    }
 
-  /**
-   * @param allowHeaders the value to be set.
-   */
-  public fun allowHeaders(allowHeaders: Collection<String>) {
-    _allowHeaders.addAll(allowHeaders)
-  }
+    /** @param allowHeaders the value to be set. */
+    public fun allowHeaders(allowHeaders: Collection<String>) {
+        _allowHeaders.addAll(allowHeaders)
+    }
 
-  /**
-   * @param allowMethods the value to be set.
-   */
-  public fun allowMethods(vararg allowMethods: String) {
-    _allowMethods.addAll(listOf(*allowMethods))
-  }
+    /** @param allowMethods the value to be set. */
+    public fun allowMethods(vararg allowMethods: String) {
+        _allowMethods.addAll(listOf(*allowMethods))
+    }
 
-  /**
-   * @param allowMethods the value to be set.
-   */
-  public fun allowMethods(allowMethods: Collection<String>) {
-    _allowMethods.addAll(allowMethods)
-  }
+    /** @param allowMethods the value to be set. */
+    public fun allowMethods(allowMethods: Collection<String>) {
+        _allowMethods.addAll(allowMethods)
+    }
 
-  /**
-   * @param allowOrigins the value to be set.
-   */
-  public fun allowOrigins(vararg allowOrigins: String) {
-    _allowOrigins.addAll(listOf(*allowOrigins))
-  }
+    /** @param allowOrigins the value to be set. */
+    public fun allowOrigins(vararg allowOrigins: String) {
+        _allowOrigins.addAll(listOf(*allowOrigins))
+    }
 
-  /**
-   * @param allowOrigins the value to be set.
-   */
-  public fun allowOrigins(allowOrigins: Collection<String>) {
-    _allowOrigins.addAll(allowOrigins)
-  }
+    /** @param allowOrigins the value to be set. */
+    public fun allowOrigins(allowOrigins: Collection<String>) {
+        _allowOrigins.addAll(allowOrigins)
+    }
 
-  /**
-   * @param exposeHeaders the value to be set.
-   */
-  public fun exposeHeaders(vararg exposeHeaders: String) {
-    _exposeHeaders.addAll(listOf(*exposeHeaders))
-  }
+    /** @param exposeHeaders the value to be set. */
+    public fun exposeHeaders(vararg exposeHeaders: String) {
+        _exposeHeaders.addAll(listOf(*exposeHeaders))
+    }
 
-  /**
-   * @param exposeHeaders the value to be set.
-   */
-  public fun exposeHeaders(exposeHeaders: Collection<String>) {
-    _exposeHeaders.addAll(exposeHeaders)
-  }
+    /** @param exposeHeaders the value to be set. */
+    public fun exposeHeaders(exposeHeaders: Collection<String>) {
+        _exposeHeaders.addAll(exposeHeaders)
+    }
 
-  /**
-   * @param maxAge the value to be set.
-   */
-  public fun maxAge(maxAge: Number) {
-    cdkBuilder.maxAge(maxAge)
-  }
+    /** @param maxAge the value to be set. */
+    public fun maxAge(maxAge: Number) {
+        cdkBuilder.maxAge(maxAge)
+    }
 
-  public fun build(): CfnHttpApi.CorsConfigurationObjectProperty {
-    if(_allowHeaders.isNotEmpty()) cdkBuilder.allowHeaders(_allowHeaders)
-    if(_allowMethods.isNotEmpty()) cdkBuilder.allowMethods(_allowMethods)
-    if(_allowOrigins.isNotEmpty()) cdkBuilder.allowOrigins(_allowOrigins)
-    if(_exposeHeaders.isNotEmpty()) cdkBuilder.exposeHeaders(_exposeHeaders)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnHttpApi.CorsConfigurationObjectProperty {
+        if (_allowHeaders.isNotEmpty()) cdkBuilder.allowHeaders(_allowHeaders)
+        if (_allowMethods.isNotEmpty()) cdkBuilder.allowMethods(_allowMethods)
+        if (_allowOrigins.isNotEmpty()) cdkBuilder.allowOrigins(_allowOrigins)
+        if (_exposeHeaders.isNotEmpty()) cdkBuilder.exposeHeaders(_exposeHeaders)
+        return cdkBuilder.build()
+    }
 }

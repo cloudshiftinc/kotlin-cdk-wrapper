@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.msk.CfnCluster
  * VPC connection control settings for brokers.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,23 +44,20 @@ import software.amazon.awscdk.services.msk.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterVpcConnectivityPropertyDsl {
-  private val cdkBuilder: CfnCluster.VpcConnectivityProperty.Builder =
-      CfnCluster.VpcConnectivityProperty.builder()
+    private val cdkBuilder: CfnCluster.VpcConnectivityProperty.Builder =
+        CfnCluster.VpcConnectivityProperty.builder()
 
-  /**
-   * @param clientAuthentication VPC connection control settings for brokers.
-   */
-  public fun clientAuthentication(clientAuthentication: IResolvable) {
-    cdkBuilder.clientAuthentication(clientAuthentication)
-  }
+    /** @param clientAuthentication VPC connection control settings for brokers. */
+    public fun clientAuthentication(clientAuthentication: IResolvable) {
+        cdkBuilder.clientAuthentication(clientAuthentication)
+    }
 
-  /**
-   * @param clientAuthentication VPC connection control settings for brokers.
-   */
-  public
-      fun clientAuthentication(clientAuthentication: CfnCluster.VpcConnectivityClientAuthenticationProperty) {
-    cdkBuilder.clientAuthentication(clientAuthentication)
-  }
+    /** @param clientAuthentication VPC connection control settings for brokers. */
+    public fun clientAuthentication(
+        clientAuthentication: CfnCluster.VpcConnectivityClientAuthenticationProperty
+    ) {
+        cdkBuilder.clientAuthentication(clientAuthentication)
+    }
 
-  public fun build(): CfnCluster.VpcConnectivityProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.VpcConnectivityProperty = cdkBuilder.build()
 }

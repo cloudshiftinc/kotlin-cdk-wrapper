@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.groundstation
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,29 +39,24 @@ import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
  */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupRangedConnectionDetailsPropertyDsl {
-  private val cdkBuilder: CfnDataflowEndpointGroup.RangedConnectionDetailsProperty.Builder =
-      CfnDataflowEndpointGroup.RangedConnectionDetailsProperty.builder()
+    private val cdkBuilder: CfnDataflowEndpointGroup.RangedConnectionDetailsProperty.Builder =
+        CfnDataflowEndpointGroup.RangedConnectionDetailsProperty.builder()
 
-  /**
-   * @param mtu the value to be set.
-   */
-  public fun mtu(mtu: Number) {
-    cdkBuilder.mtu(mtu)
-  }
+    /** @param mtu the value to be set. */
+    public fun mtu(mtu: Number) {
+        cdkBuilder.mtu(mtu)
+    }
 
-  /**
-   * @param socketAddress the value to be set.
-   */
-  public fun socketAddress(socketAddress: IResolvable) {
-    cdkBuilder.socketAddress(socketAddress)
-  }
+    /** @param socketAddress the value to be set. */
+    public fun socketAddress(socketAddress: IResolvable) {
+        cdkBuilder.socketAddress(socketAddress)
+    }
 
-  /**
-   * @param socketAddress the value to be set.
-   */
-  public fun socketAddress(socketAddress: CfnDataflowEndpointGroup.RangedSocketAddressProperty) {
-    cdkBuilder.socketAddress(socketAddress)
-  }
+    /** @param socketAddress the value to be set. */
+    public fun socketAddress(socketAddress: CfnDataflowEndpointGroup.RangedSocketAddressProperty) {
+        cdkBuilder.socketAddress(socketAddress)
+    }
 
-  public fun build(): CfnDataflowEndpointGroup.RangedConnectionDetailsProperty = cdkBuilder.build()
+    public fun build(): CfnDataflowEndpointGroup.RangedConnectionDetailsProperty =
+        cdkBuilder.build()
 }

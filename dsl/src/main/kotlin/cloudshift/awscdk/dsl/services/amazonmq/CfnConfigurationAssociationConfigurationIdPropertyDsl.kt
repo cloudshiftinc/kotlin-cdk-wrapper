@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amazonmq
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
  * configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
  */
 @CdkDslMarker
 public class CfnConfigurationAssociationConfigurationIdPropertyDsl {
-  private val cdkBuilder: CfnConfigurationAssociation.ConfigurationIdProperty.Builder =
-      CfnConfigurationAssociation.ConfigurationIdProperty.builder()
+    private val cdkBuilder: CfnConfigurationAssociation.ConfigurationIdProperty.Builder =
+        CfnConfigurationAssociation.ConfigurationIdProperty.builder()
 
-  /**
-   * @param id The unique ID that Amazon MQ generates for the configuration. 
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The unique ID that Amazon MQ generates for the configuration. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param revision The revision number of the configuration. 
-   */
-  public fun revision(revision: Number) {
-    cdkBuilder.revision(revision)
-  }
+    /** @param revision The revision number of the configuration. */
+    public fun revision(revision: Number) {
+        cdkBuilder.revision(revision)
+    }
 
-  public fun build(): CfnConfigurationAssociation.ConfigurationIdProperty = cdkBuilder.build()
+    public fun build(): CfnConfigurationAssociation.ConfigurationIdProperty = cdkBuilder.build()
 }

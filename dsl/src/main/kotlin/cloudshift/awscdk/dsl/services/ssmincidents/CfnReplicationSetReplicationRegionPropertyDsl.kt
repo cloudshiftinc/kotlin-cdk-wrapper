@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssmincidents
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ssmincidents.CfnReplicationSet
  * set.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,30 +37,25 @@ import software.amazon.awscdk.services.ssmincidents.CfnReplicationSet
  */
 @CdkDslMarker
 public class CfnReplicationSetReplicationRegionPropertyDsl {
-  private val cdkBuilder: CfnReplicationSet.ReplicationRegionProperty.Builder =
-      CfnReplicationSet.ReplicationRegionProperty.builder()
+    private val cdkBuilder: CfnReplicationSet.ReplicationRegionProperty.Builder =
+        CfnReplicationSet.ReplicationRegionProperty.builder()
 
-  /**
-   * @param regionConfiguration Specifies the Region configuration.
-   */
-  public fun regionConfiguration(regionConfiguration: IResolvable) {
-    cdkBuilder.regionConfiguration(regionConfiguration)
-  }
+    /** @param regionConfiguration Specifies the Region configuration. */
+    public fun regionConfiguration(regionConfiguration: IResolvable) {
+        cdkBuilder.regionConfiguration(regionConfiguration)
+    }
 
-  /**
-   * @param regionConfiguration Specifies the Region configuration.
-   */
-  public
-      fun regionConfiguration(regionConfiguration: CfnReplicationSet.RegionConfigurationProperty) {
-    cdkBuilder.regionConfiguration(regionConfiguration)
-  }
+    /** @param regionConfiguration Specifies the Region configuration. */
+    public fun regionConfiguration(
+        regionConfiguration: CfnReplicationSet.RegionConfigurationProperty
+    ) {
+        cdkBuilder.regionConfiguration(regionConfiguration)
+    }
 
-  /**
-   * @param regionName Specifies the region name to add to the replication set.
-   */
-  public fun regionName(regionName: String) {
-    cdkBuilder.regionName(regionName)
-  }
+    /** @param regionName Specifies the region name to add to the replication set. */
+    public fun regionName(regionName: String) {
+        cdkBuilder.regionName(regionName)
+    }
 
-  public fun build(): CfnReplicationSet.ReplicationRegionProperty = cdkBuilder.build()
+    public fun build(): CfnReplicationSet.ReplicationRegionProperty = cdkBuilder.build()
 }

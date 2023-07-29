@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment
  * The status of the transit gateway peering attachment.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,23 +34,20 @@ import software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment
  */
 @CdkDslMarker
 public class CfnTransitGatewayPeeringAttachmentPeeringAttachmentStatusPropertyDsl {
-  private val cdkBuilder: CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty.Builder
-      = CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty.builder()
+    private val cdkBuilder:
+        CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty.Builder =
+        CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty.builder()
 
-  /**
-   * @param code The status code.
-   */
-  public fun code(code: String) {
-    cdkBuilder.code(code)
-  }
+    /** @param code The status code. */
+    public fun code(code: String) {
+        cdkBuilder.code(code)
+    }
 
-  /**
-   * @param message The status message, if applicable.
-   */
-  public fun message(message: String) {
-    cdkBuilder.message(message)
-  }
+    /** @param message The status message, if applicable. */
+    public fun message(message: String) {
+        cdkBuilder.message(message)
+    }
 
-  public fun build(): CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty =
-      cdkBuilder.build()
+    public fun build(): CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty =
+        cdkBuilder.build()
 }

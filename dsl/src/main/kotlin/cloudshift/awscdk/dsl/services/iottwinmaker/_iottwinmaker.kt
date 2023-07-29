@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iottwinmaker
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 import software.amazon.awscdk.services.iottwinmaker.CfnComponentTypeProps
 import software.amazon.awscdk.services.iottwinmaker.CfnEntity
@@ -13,15 +24,12 @@ import software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps
 import software.amazon.awscdk.services.iottwinmaker.CfnWorkspace
 import software.amazon.awscdk.services.iottwinmaker.CfnWorkspaceProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object iottwinmaker {
     /**
      * Use the `AWS::IoTTwinMaker::ComponentType` resource to declare a component type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -105,7 +113,7 @@ public object iottwinmaker {
     public inline fun cfnComponentType(
         scope: Construct,
         id: String,
-        block: CfnComponentTypeDsl.() -> Unit = {}
+        block: CfnComponentTypeDsl.() -> Unit = {},
     ): CfnComponentType {
         val builder = CfnComponentTypeDsl(scope, id)
         builder.apply(block)
@@ -116,7 +124,6 @@ public object iottwinmaker {
      * The data connector.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -132,8 +139,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html)
      */
     public inline fun cfnComponentTypeDataConnectorProperty(
-        block: CfnComponentTypeDataConnectorPropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeDataConnectorPropertyDsl.() -> Unit = {}
     ): CfnComponentType.DataConnectorProperty {
         val builder = CfnComponentTypeDataConnectorPropertyDsl()
         builder.apply(block)
@@ -144,7 +150,6 @@ public object iottwinmaker {
      * An object that specifies the data type of a property.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -179,8 +184,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-datatype.html)
      */
     public inline fun cfnComponentTypeDataTypeProperty(
-        block: CfnComponentTypeDataTypePropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeDataTypePropertyDsl.() -> Unit = {}
     ): CfnComponentType.DataTypeProperty {
         val builder = CfnComponentTypeDataTypePropertyDsl()
         builder.apply(block)
@@ -191,7 +195,6 @@ public object iottwinmaker {
      * An object that specifies a value for a property.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -215,8 +218,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-datavalue.html)
      */
     public inline fun cfnComponentTypeDataValueProperty(
-        block: CfnComponentTypeDataValuePropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeDataValuePropertyDsl.() -> Unit = {}
     ): CfnComponentType.DataValueProperty {
         val builder = CfnComponentTypeDataValuePropertyDsl()
         builder.apply(block)
@@ -227,7 +229,6 @@ public object iottwinmaker {
      * The component type error.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -241,8 +242,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html)
      */
     public inline fun cfnComponentTypeErrorProperty(
-        block: CfnComponentTypeErrorPropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeErrorPropertyDsl.() -> Unit = {}
     ): CfnComponentType.ErrorProperty {
         val builder = CfnComponentTypeErrorPropertyDsl()
         builder.apply(block)
@@ -253,7 +253,6 @@ public object iottwinmaker {
      * The function body.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -273,8 +272,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-function.html)
      */
     public inline fun cfnComponentTypeFunctionProperty(
-        block: CfnComponentTypeFunctionPropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeFunctionPropertyDsl.() -> Unit = {}
     ): CfnComponentType.FunctionProperty {
         val builder = CfnComponentTypeFunctionPropertyDsl()
         builder.apply(block)
@@ -285,7 +283,6 @@ public object iottwinmaker {
      * The Lambda function.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -298,8 +295,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html)
      */
     public inline fun cfnComponentTypeLambdaFunctionProperty(
-        block: CfnComponentTypeLambdaFunctionPropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeLambdaFunctionPropertyDsl.() -> Unit = {}
     ): CfnComponentType.LambdaFunctionProperty {
         val builder = CfnComponentTypeLambdaFunctionPropertyDsl()
         builder.apply(block)
@@ -307,11 +303,10 @@ public object iottwinmaker {
     }
 
     /**
-     * PropertyDefinition is an object that maps strings to the property definitions in the component
-     * type.
+     * PropertyDefinition is an object that maps strings to the property definitions in the
+     * component type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -366,8 +361,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertydefinition.html)
      */
     public inline fun cfnComponentTypePropertyDefinitionProperty(
-        block: CfnComponentTypePropertyDefinitionPropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypePropertyDefinitionPropertyDsl.() -> Unit = {}
     ): CfnComponentType.PropertyDefinitionProperty {
         val builder = CfnComponentTypePropertyDefinitionPropertyDsl()
         builder.apply(block)
@@ -378,7 +372,6 @@ public object iottwinmaker {
      * The property group.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -392,8 +385,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html)
      */
     public inline fun cfnComponentTypePropertyGroupProperty(
-        block: CfnComponentTypePropertyGroupPropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypePropertyGroupPropertyDsl.() -> Unit = {}
     ): CfnComponentType.PropertyGroupProperty {
         val builder = CfnComponentTypePropertyGroupPropertyDsl()
         builder.apply(block)
@@ -404,7 +396,6 @@ public object iottwinmaker {
      * Properties for defining a `CfnComponentType`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -485,7 +476,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html)
      */
-    public inline fun cfnComponentTypeProps(block: CfnComponentTypePropsDsl.() -> Unit = {}): CfnComponentTypeProps {
+    public inline fun cfnComponentTypeProps(
+        block: CfnComponentTypePropsDsl.() -> Unit = {}
+    ): CfnComponentTypeProps {
         val builder = CfnComponentTypePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -495,7 +488,6 @@ public object iottwinmaker {
      * An object that specifies a relationship with another component type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -509,8 +501,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationship.html)
      */
     public inline fun cfnComponentTypeRelationshipProperty(
-        block: CfnComponentTypeRelationshipPropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeRelationshipPropertyDsl.() -> Unit = {}
     ): CfnComponentType.RelationshipProperty {
         val builder = CfnComponentTypeRelationshipPropertyDsl()
         builder.apply(block)
@@ -521,7 +512,6 @@ public object iottwinmaker {
      * The component type relationship value.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -535,8 +525,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html)
      */
     public inline fun cfnComponentTypeRelationshipValueProperty(
-        block: CfnComponentTypeRelationshipValuePropertyDsl.() -> Unit =
-            {}
+        block: CfnComponentTypeRelationshipValuePropertyDsl.() -> Unit = {}
     ): CfnComponentType.RelationshipValueProperty {
         val builder = CfnComponentTypeRelationshipValuePropertyDsl()
         builder.apply(block)
@@ -547,7 +536,6 @@ public object iottwinmaker {
      * The component type status.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -563,7 +551,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html)
      */
-    public inline fun cfnComponentTypeStatusProperty(block: CfnComponentTypeStatusPropertyDsl.() -> Unit = {}): CfnComponentType.StatusProperty {
+    public inline fun cfnComponentTypeStatusProperty(
+        block: CfnComponentTypeStatusPropertyDsl.() -> Unit = {}
+    ): CfnComponentType.StatusProperty {
         val builder = CfnComponentTypeStatusPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -573,7 +563,6 @@ public object iottwinmaker {
      * Use the `AWS::IoTTwinMaker::Entity` resource to declare an entity.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -631,7 +620,7 @@ public object iottwinmaker {
     public inline fun cfnEntity(
         scope: Construct,
         id: String,
-        block: CfnEntityDsl.() -> Unit = {}
+        block: CfnEntityDsl.() -> Unit = {},
     ): CfnEntity {
         val builder = CfnEntityDsl(scope, id)
         builder.apply(block)
@@ -642,7 +631,6 @@ public object iottwinmaker {
      * The entity component.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -687,8 +675,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-component.html)
      */
     public inline fun cfnEntityComponentProperty(
-        block: CfnEntityComponentPropertyDsl.() -> Unit =
-            {}
+        block: CfnEntityComponentPropertyDsl.() -> Unit = {}
     ): CfnEntity.ComponentProperty {
         val builder = CfnEntityComponentPropertyDsl()
         builder.apply(block)
@@ -699,7 +686,6 @@ public object iottwinmaker {
      * The entity data type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -732,7 +718,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-datatype.html)
      */
-    public inline fun cfnEntityDataTypeProperty(block: CfnEntityDataTypePropertyDsl.() -> Unit = {}): CfnEntity.DataTypeProperty {
+    public inline fun cfnEntityDataTypeProperty(
+        block: CfnEntityDataTypePropertyDsl.() -> Unit = {}
+    ): CfnEntity.DataTypeProperty {
         val builder = CfnEntityDataTypePropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -742,7 +730,6 @@ public object iottwinmaker {
      * An object that specifies a value for a property.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -766,8 +753,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-datavalue.html)
      */
     public inline fun cfnEntityDataValueProperty(
-        block: CfnEntityDataValuePropertyDsl.() -> Unit =
-            {}
+        block: CfnEntityDataValuePropertyDsl.() -> Unit = {}
     ): CfnEntity.DataValueProperty {
         val builder = CfnEntityDataValuePropertyDsl()
         builder.apply(block)
@@ -778,7 +764,6 @@ public object iottwinmaker {
      * The entity definition.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -835,8 +820,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-definition.html)
      */
     public inline fun cfnEntityDefinitionProperty(
-        block: CfnEntityDefinitionPropertyDsl.() -> Unit =
-            {}
+        block: CfnEntityDefinitionPropertyDsl.() -> Unit = {}
     ): CfnEntity.DefinitionProperty {
         val builder = CfnEntityDefinitionPropertyDsl()
         builder.apply(block)
@@ -847,7 +831,6 @@ public object iottwinmaker {
      * The entity error.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -860,7 +843,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-error.html)
      */
-    public inline fun cfnEntityErrorProperty(block: CfnEntityErrorPropertyDsl.() -> Unit = {}): CfnEntity.ErrorProperty {
+    public inline fun cfnEntityErrorProperty(
+        block: CfnEntityErrorPropertyDsl.() -> Unit = {}
+    ): CfnEntity.ErrorProperty {
         val builder = CfnEntityErrorPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -870,7 +855,6 @@ public object iottwinmaker {
      * The property group.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -883,7 +867,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-propertygroup.html)
      */
-    public inline fun cfnEntityPropertyGroupProperty(block: CfnEntityPropertyGroupPropertyDsl.() -> Unit = {}): CfnEntity.PropertyGroupProperty {
+    public inline fun cfnEntityPropertyGroupProperty(
+        block: CfnEntityPropertyGroupPropertyDsl.() -> Unit = {}
+    ): CfnEntity.PropertyGroupProperty {
         val builder = CfnEntityPropertyGroupPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -893,7 +879,6 @@ public object iottwinmaker {
      * An object that sets information about a property.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -920,7 +905,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-property.html)
      */
-    public inline fun cfnEntityPropertyProperty(block: CfnEntityPropertyPropertyDsl.() -> Unit = {}): CfnEntity.PropertyProperty {
+    public inline fun cfnEntityPropertyProperty(
+        block: CfnEntityPropertyPropertyDsl.() -> Unit = {}
+    ): CfnEntity.PropertyProperty {
         val builder = CfnEntityPropertyPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -930,7 +917,6 @@ public object iottwinmaker {
      * Properties for defining a `CfnEntity`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -995,7 +981,6 @@ public object iottwinmaker {
      * The entity relationship.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1009,8 +994,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-relationship.html)
      */
     public inline fun cfnEntityRelationshipProperty(
-        block: CfnEntityRelationshipPropertyDsl.() -> Unit =
-            {}
+        block: CfnEntityRelationshipPropertyDsl.() -> Unit = {}
     ): CfnEntity.RelationshipProperty {
         val builder = CfnEntityRelationshipPropertyDsl()
         builder.apply(block)
@@ -1021,7 +1005,6 @@ public object iottwinmaker {
      * The entity relationship.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1035,8 +1018,7 @@ public object iottwinmaker {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-relationshipvalue.html)
      */
     public inline fun cfnEntityRelationshipValueProperty(
-        block: CfnEntityRelationshipValuePropertyDsl.() -> Unit =
-            {}
+        block: CfnEntityRelationshipValuePropertyDsl.() -> Unit = {}
     ): CfnEntity.RelationshipValueProperty {
         val builder = CfnEntityRelationshipValuePropertyDsl()
         builder.apply(block)
@@ -1047,7 +1029,6 @@ public object iottwinmaker {
      * The current status of the entity.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1061,7 +1042,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-status.html)
      */
-    public inline fun cfnEntityStatusProperty(block: CfnEntityStatusPropertyDsl.() -> Unit = {}): CfnEntity.StatusProperty {
+    public inline fun cfnEntityStatusProperty(
+        block: CfnEntityStatusPropertyDsl.() -> Unit = {}
+    ): CfnEntity.StatusProperty {
         val builder = CfnEntityStatusPropertyDsl()
         builder.apply(block)
         return builder.build()
@@ -1071,7 +1054,6 @@ public object iottwinmaker {
      * Use the `AWS::IoTTwinMaker::Scene` resource to declare a scene.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1095,7 +1077,7 @@ public object iottwinmaker {
     public inline fun cfnScene(
         scope: Construct,
         id: String,
-        block: CfnSceneDsl.() -> Unit = {}
+        block: CfnSceneDsl.() -> Unit = {},
     ): CfnScene {
         val builder = CfnSceneDsl(scope, id)
         builder.apply(block)
@@ -1106,7 +1088,6 @@ public object iottwinmaker {
      * Properties for defining a `CfnScene`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1137,7 +1118,6 @@ public object iottwinmaker {
      * The SyncJob.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1157,7 +1137,7 @@ public object iottwinmaker {
     public inline fun cfnSyncJob(
         scope: Construct,
         id: String,
-        block: CfnSyncJobDsl.() -> Unit = {}
+        block: CfnSyncJobDsl.() -> Unit = {},
     ): CfnSyncJob {
         val builder = CfnSyncJobDsl(scope, id)
         builder.apply(block)
@@ -1168,7 +1148,6 @@ public object iottwinmaker {
      * Properties for defining a `CfnSyncJob`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1195,7 +1174,6 @@ public object iottwinmaker {
      * Use the `AWS::IoTTwinMaker::Workspace` resource to declare a workspace.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1216,7 +1194,7 @@ public object iottwinmaker {
     public inline fun cfnWorkspace(
         scope: Construct,
         id: String,
-        block: CfnWorkspaceDsl.() -> Unit = {}
+        block: CfnWorkspaceDsl.() -> Unit = {},
     ): CfnWorkspace {
         val builder = CfnWorkspaceDsl(scope, id)
         builder.apply(block)
@@ -1227,7 +1205,6 @@ public object iottwinmaker {
      * Properties for defining a `CfnWorkspace`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1245,7 +1222,9 @@ public object iottwinmaker {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-workspace.html)
      */
-    public inline fun cfnWorkspaceProps(block: CfnWorkspacePropsDsl.() -> Unit = {}): CfnWorkspaceProps {
+    public inline fun cfnWorkspaceProps(
+        block: CfnWorkspacePropsDsl.() -> Unit = {}
+    ): CfnWorkspaceProps {
         val builder = CfnWorkspacePropsDsl()
         builder.apply(block)
         return builder.build()

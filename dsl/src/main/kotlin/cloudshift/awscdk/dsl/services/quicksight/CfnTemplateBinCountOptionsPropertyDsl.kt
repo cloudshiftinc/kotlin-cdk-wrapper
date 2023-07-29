@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The options that determine the bin count of a histogram.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateBinCountOptionsPropertyDsl {
-  private val cdkBuilder: CfnTemplate.BinCountOptionsProperty.Builder =
-      CfnTemplate.BinCountOptionsProperty.builder()
+    private val cdkBuilder: CfnTemplate.BinCountOptionsProperty.Builder =
+        CfnTemplate.BinCountOptionsProperty.builder()
 
-  /**
-   * @param value The options that determine the bin count value.
-   */
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The options that determine the bin count value. */
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnTemplate.BinCountOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.BinCountOptionsProperty = cdkBuilder.build()
 }

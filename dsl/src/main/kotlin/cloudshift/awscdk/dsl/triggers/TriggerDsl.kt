@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.triggers
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
+import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.Function
 import software.amazon.awscdk.triggers.InvocationType
 import software.amazon.awscdk.triggers.Trigger
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.String
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 
 /**
  * Triggers an AWS Lambda function during deployment.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.triggers.*;
  * Function func = Function.Builder.create(this, "MyFunction")
@@ -35,7 +43,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class TriggerDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: Trigger.Builder = Trigger.Builder.create(scope, id)
 
@@ -51,8 +59,8 @@ public class TriggerDsl(
      *
      * Default: []
      *
-     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
-     * scopes have been provisioned.
+     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these
+     *   construct scopes have been provisioned.
      */
     public fun executeAfter(vararg executeAfter: Construct) {
         _executeAfter.addAll(listOf(*executeAfter))
@@ -66,8 +74,8 @@ public class TriggerDsl(
      *
      * Default: []
      *
-     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
-     * scopes have been provisioned.
+     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these
+     *   construct scopes have been provisioned.
      */
     public fun executeAfter(executeAfter: Collection<Construct>) {
         _executeAfter.addAll(executeAfter)
@@ -76,8 +84,7 @@ public class TriggerDsl(
     /**
      * Adds this trigger as a dependency on other constructs.
      *
-     * This means that this
-     * trigger will get executed *before* the given construct(s).
+     * This means that this trigger will get executed *before* the given construct(s).
      *
      * You can also use `trigger.executeBefore()` to add additional dependants.
      *
@@ -92,8 +99,7 @@ public class TriggerDsl(
     /**
      * Adds this trigger as a dependency on other constructs.
      *
-     * This means that this
-     * trigger will get executed *before* the given construct(s).
+     * This means that this trigger will get executed *before* the given construct(s).
      *
      * You can also use `trigger.executeBefore()` to add additional dependants.
      *
@@ -108,9 +114,8 @@ public class TriggerDsl(
     /**
      * Re-executes the trigger every time the handler changes.
      *
-     * This implies that the trigger is associated with the `currentVersion` of
-     * the handler, which gets recreated every time the handler or its
-     * configuration is updated.
+     * This implies that the trigger is associated with the `currentVersion` of the handler, which
+     * gets recreated every time the handler or its configuration is updated.
      *
      * Default: true
      *

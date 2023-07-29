@@ -1,20 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.pipelines.DockerCredentialUsage
-import software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions
-import software.amazon.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.pipelines.DockerCredentialUsage
+import software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions
+import software.amazon.awscdk.services.iam.IRole
 
 /**
  * Options for defining credentials for a Docker Credential.
  *
  * Example:
- *
  * ```
  * ISecret dockerHubSecret = Secret.fromSecretCompleteArn(this, "DHSecret", "arn:aws:...");
  * // Only the image asset publishing actions will be granted read access to the secret.
@@ -29,16 +37,14 @@ public class ExternalDockerCredentialOptionsDsl {
 
     private val _usages: MutableList<DockerCredentialUsage> = mutableListOf()
 
-    /**
-     * @param assumeRole An IAM role to assume prior to accessing the secret.
-     */
+    /** @param assumeRole An IAM role to assume prior to accessing the secret. */
     public fun assumeRole(assumeRole: IRole) {
         cdkBuilder.assumeRole(assumeRole)
     }
 
     /**
      * @param secretPasswordField The name of the JSON field of the secret which contains the
-     * secret/password.
+     *   secret/password.
      */
     public fun secretPasswordField(secretPasswordField: String) {
         cdkBuilder.secretPasswordField(secretPasswordField)
@@ -46,7 +52,7 @@ public class ExternalDockerCredentialOptionsDsl {
 
     /**
      * @param secretUsernameField The name of the JSON field of the secret which contains the
-     * user/login name.
+     *   user/login name.
      */
     public fun secretUsernameField(secretUsernameField: String) {
         cdkBuilder.secretUsernameField(secretUsernameField)
@@ -54,7 +60,7 @@ public class ExternalDockerCredentialOptionsDsl {
 
     /**
      * @param usages Defines which stages of the pipeline should be granted access to these
-     * credentials.
+     *   credentials.
      */
     public fun usages(vararg usages: DockerCredentialUsage) {
         _usages.addAll(listOf(*usages))
@@ -62,7 +68,7 @@ public class ExternalDockerCredentialOptionsDsl {
 
     /**
      * @param usages Defines which stages of the pipeline should be granted access to these
-     * credentials.
+     *   credentials.
      */
     public fun usages(usages: Collection<DockerCredentialUsage>) {
         _usages.addAll(usages)

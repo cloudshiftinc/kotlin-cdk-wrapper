@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps
  * Construction properties for a ResourcePolicy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,9 +33,7 @@ import software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps
 public class ResourcePolicyPropsDsl {
     private val cdkBuilder: ResourcePolicyProps.Builder = ResourcePolicyProps.builder()
 
-    /**
-     * @param secret The secret to attach a resource-based permissions policy.
-     */
+    /** @param secret The secret to attach a resource-based permissions policy. */
     public fun secret(secret: ISecret) {
         cdkBuilder.secret(secret)
     }

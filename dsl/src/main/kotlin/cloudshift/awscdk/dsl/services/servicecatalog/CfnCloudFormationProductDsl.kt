@@ -1,25 +1,33 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
+import software.constructs.Construct
 
 /**
  * Specifies a product.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -69,7 +77,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnCloudFormationProductDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnCloudFormationProduct.Builder =
         CfnCloudFormationProduct.Builder.create(scope, id)
@@ -80,11 +88,11 @@ public class CfnCloudFormationProductDsl(
 
     /**
      * The language code.
-     *
      * * `jp` - Japanese
      * * `zh` - Chinese
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-acceptlanguage)
+     *
      * @param acceptLanguage The language code.
      */
     public fun acceptLanguage(acceptLanguage: String) {
@@ -95,6 +103,7 @@ public class CfnCloudFormationProductDsl(
      * The description of the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-description)
+     *
      * @param description The description of the product.
      */
     public fun description(description: String) {
@@ -105,6 +114,7 @@ public class CfnCloudFormationProductDsl(
      * The distributor of the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-distributor)
+     *
      * @param distributor The distributor of the product.
      */
     public fun distributor(distributor: String) {
@@ -115,6 +125,7 @@ public class CfnCloudFormationProductDsl(
      * The name of the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-name)
+     *
      * @param name The name of the product.
      */
     public fun name(name: String) {
@@ -125,6 +136,7 @@ public class CfnCloudFormationProductDsl(
      * The owner of the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-owner)
+     *
      * @param owner The owner of the product.
      */
     public fun owner(owner: String) {
@@ -135,6 +147,7 @@ public class CfnCloudFormationProductDsl(
      * The type of product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-producttype)
+     *
      * @param productType The type of product.
      */
     public fun productType(productType: String) {
@@ -145,8 +158,9 @@ public class CfnCloudFormationProductDsl(
      * The configuration of the provisioning artifact (also known as a version).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)
+     *
      * @param provisioningArtifactParameters The configuration of the provisioning artifact (also
-     * known as a version).
+     *   known as a version).
      */
     public fun provisioningArtifactParameters(vararg provisioningArtifactParameters: Any) {
         _provisioningArtifactParameters.addAll(listOf(*provisioningArtifactParameters))
@@ -156,8 +170,9 @@ public class CfnCloudFormationProductDsl(
      * The configuration of the provisioning artifact (also known as a version).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)
+     *
      * @param provisioningArtifactParameters The configuration of the provisioning artifact (also
-     * known as a version).
+     *   known as a version).
      */
     public fun provisioningArtifactParameters(provisioningArtifactParameters: Collection<Any>) {
         _provisioningArtifactParameters.addAll(provisioningArtifactParameters)
@@ -167,8 +182,9 @@ public class CfnCloudFormationProductDsl(
      * The configuration of the provisioning artifact (also known as a version).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)
+     *
      * @param provisioningArtifactParameters The configuration of the provisioning artifact (also
-     * known as a version).
+     *   known as a version).
      */
     public fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable) {
         cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters)
@@ -178,15 +194,17 @@ public class CfnCloudFormationProductDsl(
      * This property is turned off by default.
      *
      * If turned off, you can update provisioning artifacts or product attributes (such as
-     * description, distributor, name, owner, and more) and the associated provisioning artifacts will
-     * retain the same unique identifier. Provisioning artifacts are matched within the
+     * description, distributor, name, owner, and more) and the associated provisioning artifacts
+     * will retain the same unique identifier. Provisioning artifacts are matched within the
      * CloudFormationProduct resource, and only those that have been updated will be changed.
-     * Provisioning artifacts are matched by a combinaton of provisioning artifact template URL and name.
+     * Provisioning artifacts are matched by a combinaton of provisioning artifact template URL and
+     * name.
      *
-     * If turned on, provisioning artifacts will be given a new unique identifier when you update the
-     * product or provisioning artifacts.
+     * If turned on, provisioning artifacts will be given a new unique identifier when you update
+     * the product or provisioning artifacts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts)
+     *
      * @param replaceProvisioningArtifacts This property is turned off by default.
      */
     public fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: Boolean) {
@@ -197,15 +215,17 @@ public class CfnCloudFormationProductDsl(
      * This property is turned off by default.
      *
      * If turned off, you can update provisioning artifacts or product attributes (such as
-     * description, distributor, name, owner, and more) and the associated provisioning artifacts will
-     * retain the same unique identifier. Provisioning artifacts are matched within the
+     * description, distributor, name, owner, and more) and the associated provisioning artifacts
+     * will retain the same unique identifier. Provisioning artifacts are matched within the
      * CloudFormationProduct resource, and only those that have been updated will be changed.
-     * Provisioning artifacts are matched by a combinaton of provisioning artifact template URL and name.
+     * Provisioning artifacts are matched by a combinaton of provisioning artifact template URL and
+     * name.
      *
-     * If turned on, provisioning artifacts will be given a new unique identifier when you update the
-     * product or provisioning artifacts.
+     * If turned on, provisioning artifacts will be given a new unique identifier when you update
+     * the product or provisioning artifacts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts)
+     *
      * @param replaceProvisioningArtifacts This property is turned off by default.
      */
     public fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: IResolvable) {
@@ -216,12 +236,13 @@ public class CfnCloudFormationProductDsl(
      * A top level `ProductViewDetail` response containing details about the product’s connection.
      *
      * AWS Service Catalog returns this field for the `CreateProduct` , `UpdateProduct` ,
-     * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same fields
-     * as the `ConnectionParameters` request, with the addition of the `LastSync` response.
+     * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same
+     * fields as the `ConnectionParameters` request, with the addition of the `LastSync` response.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-sourceconnection)
+     *
      * @param sourceConnection A top level `ProductViewDetail` response containing details about the
-     * product’s connection.
+     *   product’s connection.
      */
     public fun sourceConnection(sourceConnection: IResolvable) {
         cdkBuilder.sourceConnection(sourceConnection)
@@ -231,14 +252,17 @@ public class CfnCloudFormationProductDsl(
      * A top level `ProductViewDetail` response containing details about the product’s connection.
      *
      * AWS Service Catalog returns this field for the `CreateProduct` , `UpdateProduct` ,
-     * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same fields
-     * as the `ConnectionParameters` request, with the addition of the `LastSync` response.
+     * `DescribeProductAsAdmin` , and `SearchProductAsAdmin` APIs. This response contains the same
+     * fields as the `ConnectionParameters` request, with the addition of the `LastSync` response.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-sourceconnection)
+     *
      * @param sourceConnection A top level `ProductViewDetail` response containing details about the
-     * product’s connection.
+     *   product’s connection.
      */
-    public fun sourceConnection(sourceConnection: CfnCloudFormationProduct.SourceConnectionProperty) {
+    public fun sourceConnection(
+        sourceConnection: CfnCloudFormationProduct.SourceConnectionProperty
+    ) {
         cdkBuilder.sourceConnection(sourceConnection)
     }
 
@@ -246,6 +270,7 @@ public class CfnCloudFormationProductDsl(
      * The support information about the product.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-supportdescription)
+     *
      * @param supportDescription The support information about the product.
      */
     public fun supportDescription(supportDescription: String) {
@@ -256,6 +281,7 @@ public class CfnCloudFormationProductDsl(
      * The contact email for product support.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-supportemail)
+     *
      * @param supportEmail The contact email for product support.
      */
     public fun supportEmail(supportEmail: String) {
@@ -268,6 +294,7 @@ public class CfnCloudFormationProductDsl(
      * `^https?:\/\//` / is the pattern used to validate SupportUrl.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-supporturl)
+     *
      * @param supportUrl The contact URL for product support.
      */
     public fun supportUrl(supportUrl: String) {
@@ -278,6 +305,7 @@ public class CfnCloudFormationProductDsl(
      * One or more tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-tags)
+     *
      * @param tags One or more tags.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -288,6 +316,7 @@ public class CfnCloudFormationProductDsl(
      * One or more tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html#cfn-servicecatalog-cloudformationproduct-tags)
+     *
      * @param tags One or more tags.
      */
     public fun tags(tags: Collection<CfnTag>) {
@@ -295,9 +324,8 @@ public class CfnCloudFormationProductDsl(
     }
 
     public fun build(): CfnCloudFormationProduct {
-        if (_provisioningArtifactParameters.isNotEmpty()) {
+        if (_provisioningArtifactParameters.isNotEmpty())
             cdkBuilder.provisioningArtifactParameters(_provisioningArtifactParameters)
-        }
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

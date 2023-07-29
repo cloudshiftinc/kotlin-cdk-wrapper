@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.SizeRoundingBehavior
  * Options for how to convert time to a different unit.
  *
  * Example:
- *
  * ```
  * Size.mebibytes(2).toKibibytes(); // yields 2048
  * Size.kibibytes(2050).toMebibytes(SizeConversionOptions.builder().rounding(SizeRoundingBehavior.FLOOR).build());
@@ -18,14 +26,12 @@ import software.amazon.awscdk.SizeRoundingBehavior
  */
 @CdkDslMarker
 public class SizeConversionOptionsDsl {
-  private val cdkBuilder: SizeConversionOptions.Builder = SizeConversionOptions.builder()
+    private val cdkBuilder: SizeConversionOptions.Builder = SizeConversionOptions.builder()
 
-  /**
-   * @param rounding How conversions should behave when it encounters a non-integer result.
-   */
-  public fun rounding(rounding: SizeRoundingBehavior) {
-    cdkBuilder.rounding(rounding)
-  }
+    /** @param rounding How conversions should behave when it encounters a non-integer result. */
+    public fun rounding(rounding: SizeRoundingBehavior) {
+        cdkBuilder.rounding(rounding)
+    }
 
-  public fun build(): SizeConversionOptions = cdkBuilder.build()
+    public fun build(): SizeConversionOptions = cdkBuilder.build()
 }

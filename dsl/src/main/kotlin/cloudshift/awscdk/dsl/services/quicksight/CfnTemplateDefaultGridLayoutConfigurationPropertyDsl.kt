@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The options that determine the default settings for a grid layout configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,20 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  */
 @CdkDslMarker
 public class CfnTemplateDefaultGridLayoutConfigurationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.DefaultGridLayoutConfigurationProperty.Builder =
-      CfnTemplate.DefaultGridLayoutConfigurationProperty.builder()
+    private val cdkBuilder: CfnTemplate.DefaultGridLayoutConfigurationProperty.Builder =
+        CfnTemplate.DefaultGridLayoutConfigurationProperty.builder()
 
-  /**
-   * @param canvasSizeOptions Determines the screen canvas size options for a grid layout. 
-   */
-  public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
-    cdkBuilder.canvasSizeOptions(canvasSizeOptions)
-  }
+    /** @param canvasSizeOptions Determines the screen canvas size options for a grid layout. */
+    public fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
+        cdkBuilder.canvasSizeOptions(canvasSizeOptions)
+    }
 
-  /**
-   * @param canvasSizeOptions Determines the screen canvas size options for a grid layout. 
-   */
-  public fun canvasSizeOptions(canvasSizeOptions: CfnTemplate.GridLayoutCanvasSizeOptionsProperty) {
-    cdkBuilder.canvasSizeOptions(canvasSizeOptions)
-  }
+    /** @param canvasSizeOptions Determines the screen canvas size options for a grid layout. */
+    public fun canvasSizeOptions(
+        canvasSizeOptions: CfnTemplate.GridLayoutCanvasSizeOptionsProperty
+    ) {
+        cdkBuilder.canvasSizeOptions(canvasSizeOptions)
+    }
 
-  public fun build(): CfnTemplate.DefaultGridLayoutConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.DefaultGridLayoutConfigurationProperty = cdkBuilder.build()
 }

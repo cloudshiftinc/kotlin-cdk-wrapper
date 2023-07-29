@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  * An object that represents a type of connection pool.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
  */
 @CdkDslMarker
 public class CfnVirtualNodeVirtualNodeHttp2ConnectionPoolPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty.Builder =
-      CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty.Builder =
+        CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty.builder()
 
-  /**
-   * @param maxRequests Maximum number of inflight requests Envoy can concurrently support across
-   * hosts in upstream cluster. 
-   */
-  public fun maxRequests(maxRequests: Number) {
-    cdkBuilder.maxRequests(maxRequests)
-  }
+    /**
+     * @param maxRequests Maximum number of inflight requests Envoy can concurrently support across
+     *   hosts in upstream cluster.
+     */
+    public fun maxRequests(maxRequests: Number) {
+        cdkBuilder.maxRequests(maxRequests)
+    }
 
-  public fun build(): CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty = cdkBuilder.build()
 }

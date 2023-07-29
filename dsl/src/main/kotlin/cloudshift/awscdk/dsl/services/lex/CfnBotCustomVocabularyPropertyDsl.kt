@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.lex.CfnBot
  * bot.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,37 +43,38 @@ import software.amazon.awscdk.services.lex.CfnBot
  */
 @CdkDslMarker
 public class CfnBotCustomVocabularyPropertyDsl {
-  private val cdkBuilder: CfnBot.CustomVocabularyProperty.Builder =
-      CfnBot.CustomVocabularyProperty.builder()
+    private val cdkBuilder: CfnBot.CustomVocabularyProperty.Builder =
+        CfnBot.CustomVocabularyProperty.builder()
 
-  private val _customVocabularyItems: MutableList<Any> = mutableListOf()
+    private val _customVocabularyItems: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param customVocabularyItems Specifies a list of words that you expect to be used during a
-   * conversation with your bot. 
-   */
-  public fun customVocabularyItems(vararg customVocabularyItems: Any) {
-    _customVocabularyItems.addAll(listOf(*customVocabularyItems))
-  }
+    /**
+     * @param customVocabularyItems Specifies a list of words that you expect to be used during a
+     *   conversation with your bot.
+     */
+    public fun customVocabularyItems(vararg customVocabularyItems: Any) {
+        _customVocabularyItems.addAll(listOf(*customVocabularyItems))
+    }
 
-  /**
-   * @param customVocabularyItems Specifies a list of words that you expect to be used during a
-   * conversation with your bot. 
-   */
-  public fun customVocabularyItems(customVocabularyItems: Collection<Any>) {
-    _customVocabularyItems.addAll(customVocabularyItems)
-  }
+    /**
+     * @param customVocabularyItems Specifies a list of words that you expect to be used during a
+     *   conversation with your bot.
+     */
+    public fun customVocabularyItems(customVocabularyItems: Collection<Any>) {
+        _customVocabularyItems.addAll(customVocabularyItems)
+    }
 
-  /**
-   * @param customVocabularyItems Specifies a list of words that you expect to be used during a
-   * conversation with your bot. 
-   */
-  public fun customVocabularyItems(customVocabularyItems: IResolvable) {
-    cdkBuilder.customVocabularyItems(customVocabularyItems)
-  }
+    /**
+     * @param customVocabularyItems Specifies a list of words that you expect to be used during a
+     *   conversation with your bot.
+     */
+    public fun customVocabularyItems(customVocabularyItems: IResolvable) {
+        cdkBuilder.customVocabularyItems(customVocabularyItems)
+    }
 
-  public fun build(): CfnBot.CustomVocabularyProperty {
-    if(_customVocabularyItems.isNotEmpty()) cdkBuilder.customVocabularyItems(_customVocabularyItems)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnBot.CustomVocabularyProperty {
+        if (_customVocabularyItems.isNotEmpty())
+            cdkBuilder.customVocabularyItems(_customVocabularyItems)
+        return cdkBuilder.build()
+    }
 }

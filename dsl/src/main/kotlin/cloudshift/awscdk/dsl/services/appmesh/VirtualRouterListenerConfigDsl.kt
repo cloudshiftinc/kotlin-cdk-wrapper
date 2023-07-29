@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig
  * Properties for a VirtualRouter listener.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,24 +36,22 @@ import software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig
  */
 @CdkDslMarker
 public class VirtualRouterListenerConfigDsl {
-  private val cdkBuilder: VirtualRouterListenerConfig.Builder =
-      VirtualRouterListenerConfig.builder()
+    private val cdkBuilder: VirtualRouterListenerConfig.Builder =
+        VirtualRouterListenerConfig.builder()
 
-  /**
-   * @param listener Single listener config for a VirtualRouter. 
-   */
-  public fun listener(listener: CfnVirtualRouterVirtualRouterListenerPropertyDsl.() -> Unit = {}) {
-    val builder = CfnVirtualRouterVirtualRouterListenerPropertyDsl()
-    builder.apply(listener)
-    cdkBuilder.listener(builder.build())
-  }
+    /** @param listener Single listener config for a VirtualRouter. */
+    public fun listener(
+        listener: CfnVirtualRouterVirtualRouterListenerPropertyDsl.() -> Unit = {}
+    ) {
+        val builder = CfnVirtualRouterVirtualRouterListenerPropertyDsl()
+        builder.apply(listener)
+        cdkBuilder.listener(builder.build())
+    }
 
-  /**
-   * @param listener Single listener config for a VirtualRouter. 
-   */
-  public fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty) {
-    cdkBuilder.listener(listener)
-  }
+    /** @param listener Single listener config for a VirtualRouter. */
+    public fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty) {
+        cdkBuilder.listener(listener)
+    }
 
-  public fun build(): VirtualRouterListenerConfig = cdkBuilder.build()
+    public fun build(): VirtualRouterListenerConfig = cdkBuilder.build()
 }

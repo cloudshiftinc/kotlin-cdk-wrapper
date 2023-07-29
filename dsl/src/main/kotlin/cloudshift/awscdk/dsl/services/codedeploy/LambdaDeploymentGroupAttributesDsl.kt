@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttribute
  * Properties of a reference to a CodeDeploy Lambda Deployment Group.
  *
  * Example:
- *
  * ```
  * LambdaApplication application;
  * ILambdaDeploymentGroup deploymentGroup =
@@ -27,31 +35,29 @@ import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttribute
  */
 @CdkDslMarker
 public class LambdaDeploymentGroupAttributesDsl {
-  private val cdkBuilder: LambdaDeploymentGroupAttributes.Builder =
-      LambdaDeploymentGroupAttributes.builder()
+    private val cdkBuilder: LambdaDeploymentGroupAttributes.Builder =
+        LambdaDeploymentGroupAttributes.builder()
 
-  /**
-   * @param application The reference to the CodeDeploy Lambda Application that this Deployment
-   * Group belongs to. 
-   */
-  public fun application(application: ILambdaApplication) {
-    cdkBuilder.application(application)
-  }
+    /**
+     * @param application The reference to the CodeDeploy Lambda Application that this Deployment
+     *   Group belongs to.
+     */
+    public fun application(application: ILambdaApplication) {
+        cdkBuilder.application(application)
+    }
 
-  /**
-   * @param deploymentConfig The Deployment Configuration this Deployment Group uses.
-   */
-  public fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
-    cdkBuilder.deploymentConfig(deploymentConfig)
-  }
+    /** @param deploymentConfig The Deployment Configuration this Deployment Group uses. */
+    public fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
+        cdkBuilder.deploymentConfig(deploymentConfig)
+    }
 
-  /**
-   * @param deploymentGroupName The physical, human-readable name of the CodeDeploy Lambda
-   * Deployment Group that we are referencing. 
-   */
-  public fun deploymentGroupName(deploymentGroupName: String) {
-    cdkBuilder.deploymentGroupName(deploymentGroupName)
-  }
+    /**
+     * @param deploymentGroupName The physical, human-readable name of the CodeDeploy Lambda
+     *   Deployment Group that we are referencing.
+     */
+    public fun deploymentGroupName(deploymentGroupName: String) {
+        cdkBuilder.deploymentGroupName(deploymentGroupName)
+    }
 
-  public fun build(): LambdaDeploymentGroupAttributes = cdkBuilder.build()
+    public fun build(): LambdaDeploymentGroupAttributes = cdkBuilder.build()
 }

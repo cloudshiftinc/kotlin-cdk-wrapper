@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -517,16 +525,20 @@ public class CfnAnalysisFunnelChartFieldWellsPropertyDsl {
         CfnAnalysis.FunnelChartFieldWellsProperty.builder()
 
     /**
-     * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual` .
+     * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual`
+     *   .
      */
     public fun funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells: IResolvable) {
         cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)
     }
 
     /**
-     * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual` .
+     * @param funnelChartAggregatedFieldWells The field well configuration of a `FunnelChartVisual`
+     *   .
      */
-    public fun funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells: CfnAnalysis.FunnelChartAggregatedFieldWellsProperty) {
+    public fun funnelChartAggregatedFieldWells(
+        funnelChartAggregatedFieldWells: CfnAnalysis.FunnelChartAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.funnelChartAggregatedFieldWells(funnelChartAggregatedFieldWells)
     }
 

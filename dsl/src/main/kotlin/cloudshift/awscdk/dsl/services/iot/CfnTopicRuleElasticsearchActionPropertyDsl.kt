@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -9,15 +18,13 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
 /**
  * Describes an action that writes data to an Amazon OpenSearch Service domain.
  *
- *
  * The `Elasticsearch` action can only be used by existing rule actions. To create a new rule action
  * or to update an existing rule action, use the `OpenSearch` rule action instead. For more
  * information, see
- * [OpenSearchAction](https://docs.aws.amazon.com//iot/latest/apireference/API_OpenSearchAction.html) .
- *
+ * [OpenSearchAction](https://docs.aws.amazon.com//iot/latest/apireference/API_OpenSearchAction.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,43 +42,33 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
  */
 @CdkDslMarker
 public class CfnTopicRuleElasticsearchActionPropertyDsl {
-  private val cdkBuilder: CfnTopicRule.ElasticsearchActionProperty.Builder =
-      CfnTopicRule.ElasticsearchActionProperty.builder()
+    private val cdkBuilder: CfnTopicRule.ElasticsearchActionProperty.Builder =
+        CfnTopicRule.ElasticsearchActionProperty.builder()
 
-  /**
-   * @param endpoint The endpoint of your OpenSearch domain. 
-   */
-  public fun endpoint(endpoint: String) {
-    cdkBuilder.endpoint(endpoint)
-  }
+    /** @param endpoint The endpoint of your OpenSearch domain. */
+    public fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+    }
 
-  /**
-   * @param id The unique identifier for the document you are storing. 
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The unique identifier for the document you are storing. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param index The index where you want to store your data. 
-   */
-  public fun index(index: String) {
-    cdkBuilder.index(index)
-  }
+    /** @param index The index where you want to store your data. */
+    public fun index(index: String) {
+        cdkBuilder.index(index)
+    }
 
-  /**
-   * @param roleArn The IAM role ARN that has access to OpenSearch. 
-   */
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    /** @param roleArn The IAM role ARN that has access to OpenSearch. */
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  /**
-   * @param type The type of document you are storing. 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The type of document you are storing. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnTopicRule.ElasticsearchActionProperty = cdkBuilder.build()
+    public fun build(): CfnTopicRule.ElasticsearchActionProperty = cdkBuilder.build()
 }

@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 /**
  * The options that determine the arc thickness of a `GaugeChartVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,9 +35,7 @@ public class CfnTemplateArcOptionsPropertyDsl {
     private val cdkBuilder: CfnTemplate.ArcOptionsProperty.Builder =
         CfnTemplate.ArcOptionsProperty.builder()
 
-    /**
-     * @param arcThickness The arc thickness of a `GaugeChartVisual` .
-     */
+    /** @param arcThickness The arc thickness of a `GaugeChartVisual` . */
     public fun arcThickness(arcThickness: String) {
         cdkBuilder.arcThickness(arcThickness)
     }

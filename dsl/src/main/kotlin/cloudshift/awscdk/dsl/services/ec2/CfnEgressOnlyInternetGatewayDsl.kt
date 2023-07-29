@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -15,7 +24,6 @@ import software.constructs.Construct
  * connection with your instance.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,21 +38,22 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnEgressOnlyInternetGatewayDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnEgressOnlyInternetGateway.Builder =
-      CfnEgressOnlyInternetGateway.Builder.create(scope, id)
+    private val cdkBuilder: CfnEgressOnlyInternetGateway.Builder =
+        CfnEgressOnlyInternetGateway.Builder.create(scope, id)
 
-  /**
-   * The ID of the VPC for which to create the egress-only internet gateway.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html#cfn-ec2-egressonlyinternetgateway-vpcid)
-   * @param vpcId The ID of the VPC for which to create the egress-only internet gateway. 
-   */
-  public fun vpcId(vpcId: String) {
-    cdkBuilder.vpcId(vpcId)
-  }
+    /**
+     * The ID of the VPC for which to create the egress-only internet gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html#cfn-ec2-egressonlyinternetgateway-vpcid)
+     *
+     * @param vpcId The ID of the VPC for which to create the egress-only internet gateway.
+     */
+    public fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+    }
 
-  public fun build(): CfnEgressOnlyInternetGateway = cdkBuilder.build()
+    public fun build(): CfnEgressOnlyInternetGateway = cdkBuilder.build()
 }

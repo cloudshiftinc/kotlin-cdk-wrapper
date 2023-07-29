@@ -1,24 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration
+import software.constructs.Construct
 
 /**
  * Network analyzer configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,7 +52,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnNetworkAnalyzerConfigurationDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnNetworkAnalyzerConfiguration.Builder =
         CfnNetworkAnalyzerConfiguration.Builder.create(scope, id)
@@ -59,6 +67,7 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * The description of the resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-description)
+     *
      * @param description The description of the resource.
      */
     public fun description(description: String) {
@@ -69,6 +78,7 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Name of the network analyzer configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-name)
+     *
      * @param name Name of the network analyzer configuration.
      */
     public fun name(name: String) {
@@ -81,6 +91,7 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Tags are metadata that you can use to manage a resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-tags)
+     *
      * @param tags The tags to attach to the specified resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -93,6 +104,7 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Tags are metadata that you can use to manage a resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-tags)
+     *
      * @param tags The tags to attach to the specified resource.
      */
     public fun tags(tags: Collection<CfnTag>) {
@@ -103,6 +115,7 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Trace content for your wireless gateway and wireless device resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-tracecontent)
+     *
      * @param traceContent Trace content for your wireless gateway and wireless device resources.
      */
     public fun traceContent(traceContent: MapBuilder.() -> Unit = {}) {
@@ -115,6 +128,7 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Trace content for your wireless gateway and wireless device resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-tracecontent)
+     *
      * @param traceContent Trace content for your wireless gateway and wireless device resources.
      */
     public fun traceContent(traceContent: Any) {
@@ -127,7 +141,9 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Provide the `WirelessDeviceId` of the resource to add in the input array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-wirelessdevices)
-     * @param wirelessDevices Wireless device resources to add to the network analyzer configuration.
+     *
+     * @param wirelessDevices Wireless device resources to add to the network analyzer
+     *   configuration.
      */
     public fun wirelessDevices(vararg wirelessDevices: String) {
         _wirelessDevices.addAll(listOf(*wirelessDevices))
@@ -139,7 +155,9 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Provide the `WirelessDeviceId` of the resource to add in the input array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-wirelessdevices)
-     * @param wirelessDevices Wireless device resources to add to the network analyzer configuration.
+     *
+     * @param wirelessDevices Wireless device resources to add to the network analyzer
+     *   configuration.
      */
     public fun wirelessDevices(wirelessDevices: Collection<String>) {
         _wirelessDevices.addAll(wirelessDevices)
@@ -151,8 +169,9 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Provide the `WirelessGatewayId` of the resource to add in the input array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-wirelessgateways)
+     *
      * @param wirelessGateways Wireless gateway resources to add to the network analyzer
-     * configuration.
+     *   configuration.
      */
     public fun wirelessGateways(vararg wirelessGateways: String) {
         _wirelessGateways.addAll(listOf(*wirelessGateways))
@@ -164,8 +183,9 @@ public class CfnNetworkAnalyzerConfigurationDsl(
      * Provide the `WirelessGatewayId` of the resource to add in the input array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html#cfn-iotwireless-networkanalyzerconfiguration-wirelessgateways)
+     *
      * @param wirelessGateways Wireless gateway resources to add to the network analyzer
-     * configuration.
+     *   configuration.
      */
     public fun wirelessGateways(wirelessGateways: Collection<String>) {
         _wirelessGateways.addAll(wirelessGateways)

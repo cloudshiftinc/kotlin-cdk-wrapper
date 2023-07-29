@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.scheduler
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.scheduler.CfnSchedule
  * Pipeline.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,20 @@ import software.amazon.awscdk.services.scheduler.CfnSchedule
  */
 @CdkDslMarker
 public class CfnScheduleSageMakerPipelineParameterPropertyDsl {
-  private val cdkBuilder: CfnSchedule.SageMakerPipelineParameterProperty.Builder =
-      CfnSchedule.SageMakerPipelineParameterProperty.builder()
+    private val cdkBuilder: CfnSchedule.SageMakerPipelineParameterProperty.Builder =
+        CfnSchedule.SageMakerPipelineParameterProperty.builder()
 
-  /**
-   * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /**
+     * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline.
+     */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnSchedule.SageMakerPipelineParameterProperty = cdkBuilder.build()
+    public fun build(): CfnSchedule.SageMakerPipelineParameterProperty = cdkBuilder.build()
 }

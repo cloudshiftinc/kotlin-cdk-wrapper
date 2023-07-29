@@ -1,7 +1,18 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ssm
 
+import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.services.ssm.CfnAssociation
 import software.amazon.awscdk.services.ssm.CfnAssociationProps
 import software.amazon.awscdk.services.ssm.CfnDocument
@@ -30,26 +41,24 @@ import software.amazon.awscdk.services.ssm.StringParameter
 import software.amazon.awscdk.services.ssm.StringParameterAttributes
 import software.amazon.awscdk.services.ssm.StringParameterProps
 import software.constructs.Construct
-import kotlin.String
-import kotlin.Unit
 
 public object ssm {
     /**
      * The `AWS::SSM::Association` resource creates a State Manager association for your managed
      * instances.
      *
-     * A State Manager association defines the state that you want to maintain on your instances. For
-     * example, an association can specify that anti-virus software must be installed and running on your
-     * instances, or that certain ports must be closed. For static targets, the association specifies a
-     * schedule for when the configuration is reapplied. For dynamic targets, such as an AWS Resource
-     * Groups or an AWS Auto Scaling Group, State Manager applies the configuration when new instances
-     * are added to the group. The association also specifies actions to take when applying the
-     * configuration. For example, an association for anti-virus software might run once a day. If the
-     * software is not installed, then State Manager installs it. If the software is installed, but the
-     * service is not running, then the association might instruct State Manager to start the service.
+     * A State Manager association defines the state that you want to maintain on your instances.
+     * For example, an association can specify that anti-virus software must be installed and
+     * running on your instances, or that certain ports must be closed. For static targets, the
+     * association specifies a schedule for when the configuration is reapplied. For dynamic
+     * targets, such as an AWS Resource Groups or an AWS Auto Scaling Group, State Manager applies
+     * the configuration when new instances are added to the group. The association also specifies
+     * actions to take when applying the configuration. For example, an association for anti-virus
+     * software might run once a day. If the software is not installed, then State Manager installs
+     * it. If the software is installed, but the service is not running, then the association might
+     * instruct State Manager to start the service.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -91,7 +100,7 @@ public object ssm {
     public inline fun cfnAssociation(
         scope: Construct,
         id: String,
-        block: CfnAssociationDsl.() -> Unit = {}
+        block: CfnAssociationDsl.() -> Unit = {},
     ): CfnAssociation {
         val builder = CfnAssociationDsl(scope, id)
         builder.apply(block)
@@ -105,12 +114,10 @@ public object ssm {
      * association request.
      *
      * For the minimal permissions required to enable Amazon S3 output for an association, see
-     * [Creating
-   * associations](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-state-assoc.html)
+     * [Creating associations](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-state-assoc.html)
      * in the *Systems Manager User Guide* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -128,8 +135,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
      */
     public inline fun cfnAssociationInstanceAssociationOutputLocationProperty(
-        block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit =
-            {}
+        block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit = {}
     ): CfnAssociation.InstanceAssociationOutputLocationProperty {
         val builder = CfnAssociationInstanceAssociationOutputLocationPropertyDsl()
         builder.apply(block)
@@ -140,7 +146,6 @@ public object ssm {
      * Properties for defining a `CfnAssociation`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -179,7 +184,9 @@ public object ssm {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
      */
-    public inline fun cfnAssociationProps(block: CfnAssociationPropsDsl.() -> Unit = {}): CfnAssociationProps {
+    public inline fun cfnAssociationProps(
+        block: CfnAssociationPropsDsl.() -> Unit = {}
+    ): CfnAssociationProps {
         val builder = CfnAssociationPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -192,7 +199,6 @@ public object ssm {
      * association request.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -207,8 +213,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html)
      */
     public inline fun cfnAssociationS3OutputLocationProperty(
-        block: CfnAssociationS3OutputLocationPropertyDsl.() -> Unit =
-            {}
+        block: CfnAssociationS3OutputLocationPropertyDsl.() -> Unit = {}
     ): CfnAssociation.S3OutputLocationProperty {
         val builder = CfnAssociationS3OutputLocationPropertyDsl()
         builder.apply(block)
@@ -218,13 +223,12 @@ public object ssm {
     /**
      * `Target` is a property of the
      * [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
-     * resource that specifies the targets for an SSM document in Systems Manager . You can target all
-     * instances in an AWS account by specifying the `InstanceIds` key with a value of `*` . To view a
-     * JSON and a YAML example that targets all instances, see "Create an association for all managed
-     * instances in an AWS account " on the Examples page.
+     * resource that specifies the targets for an SSM document in Systems Manager . You can target
+     * all instances in an AWS account by specifying the `InstanceIds` key with a value of `*` . To
+     * view a JSON and a YAML example that targets all instances, see "Create an association for all
+     * managed instances in an AWS account " on the Examples page.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -238,8 +242,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html)
      */
     public inline fun cfnAssociationTargetProperty(
-        block: CfnAssociationTargetPropertyDsl.() -> Unit =
-            {}
+        block: CfnAssociationTargetPropertyDsl.() -> Unit = {}
     ): CfnAssociation.TargetProperty {
         val builder = CfnAssociationTargetPropertyDsl()
         builder.apply(block)
@@ -252,12 +255,9 @@ public object ssm {
      *
      * This document defines the actions that Systems Manager performs on your AWS resources.
      *
-     *
      * This resource does not support CloudFormation drift detection.
      *
-     *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -293,7 +293,7 @@ public object ssm {
     public inline fun cfnDocument(
         scope: Construct,
         id: String,
-        block: CfnDocumentDsl.() -> Unit = {}
+        block: CfnDocumentDsl.() -> Unit = {},
     ): CfnDocument {
         val builder = CfnDocumentDsl(scope, id)
         builder.apply(block)
@@ -305,7 +305,6 @@ public object ssm {
      * pair that identifies the location of an attachment to a document.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -320,8 +319,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-attachmentssource.html)
      */
     public inline fun cfnDocumentAttachmentsSourceProperty(
-        block: CfnDocumentAttachmentsSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnDocumentAttachmentsSourcePropertyDsl.() -> Unit = {}
     ): CfnDocument.AttachmentsSourceProperty {
         val builder = CfnDocumentAttachmentsSourcePropertyDsl()
         builder.apply(block)
@@ -332,7 +330,6 @@ public object ssm {
      * An SSM document required by the current document.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -346,8 +343,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-documentrequires.html)
      */
     public inline fun cfnDocumentDocumentRequiresProperty(
-        block: CfnDocumentDocumentRequiresPropertyDsl.() -> Unit =
-            {}
+        block: CfnDocumentDocumentRequiresPropertyDsl.() -> Unit = {}
     ): CfnDocument.DocumentRequiresProperty {
         val builder = CfnDocumentDocumentRequiresPropertyDsl()
         builder.apply(block)
@@ -358,7 +354,6 @@ public object ssm {
      * Properties for defining a `CfnDocument`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -391,7 +386,9 @@ public object ssm {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html)
      */
-    public inline fun cfnDocumentProps(block: CfnDocumentPropsDsl.() -> Unit = {}): CfnDocumentProps {
+    public inline fun cfnDocumentProps(
+        block: CfnDocumentPropsDsl.() -> Unit = {}
+    ): CfnDocumentProps {
         val builder = CfnDocumentPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -406,14 +403,13 @@ public object ssm {
      * installing software. Each maintenance window has a schedule, a duration, a set of registered
      * targets, and a set of registered tasks.
      *
-     * For more information, see [Systems Manager Maintenance
-   * Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html)
+     * For more information, see
+     * [Systems Manager Maintenance Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html)
      * in the *AWS Systems Manager User Guide* and
      * [CreateMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html)
      * in the *AWS Systems Manager API Reference* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -443,7 +439,7 @@ public object ssm {
     public inline fun cfnMaintenanceWindow(
         scope: Construct,
         id: String,
-        block: CfnMaintenanceWindowDsl.() -> Unit = {}
+        block: CfnMaintenanceWindowDsl.() -> Unit = {},
     ): CfnMaintenanceWindow {
         val builder = CfnMaintenanceWindowDsl(scope, id)
         builder.apply(block)
@@ -454,7 +450,6 @@ public object ssm {
      * Properties for defining a `CfnMaintenanceWindow`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -480,7 +475,9 @@ public object ssm {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html)
      */
-    public inline fun cfnMaintenanceWindowProps(block: CfnMaintenanceWindowPropsDsl.() -> Unit = {}): CfnMaintenanceWindowProps {
+    public inline fun cfnMaintenanceWindowProps(
+        block: CfnMaintenanceWindowPropsDsl.() -> Unit = {}
+    ): CfnMaintenanceWindowProps {
         val builder = CfnMaintenanceWindowPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -495,7 +492,6 @@ public object ssm {
      * in the *AWS Systems Manager API Reference* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -520,7 +516,7 @@ public object ssm {
     public inline fun cfnMaintenanceWindowTarget(
         scope: Construct,
         id: String,
-        block: CfnMaintenanceWindowTargetDsl.() -> Unit = {}
+        block: CfnMaintenanceWindowTargetDsl.() -> Unit = {},
     ): CfnMaintenanceWindowTarget {
         val builder = CfnMaintenanceWindowTargetDsl(scope, id)
         builder.apply(block)
@@ -531,7 +527,6 @@ public object ssm {
      * Properties for defining a `CfnMaintenanceWindowTarget`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -554,8 +549,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html)
      */
     public inline fun cfnMaintenanceWindowTargetProps(
-        block: CfnMaintenanceWindowTargetPropsDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTargetPropsDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTargetProps {
         val builder = CfnMaintenanceWindowTargetPropsDsl()
         builder.apply(block)
@@ -571,7 +565,6 @@ public object ssm {
      * resource.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -585,8 +578,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtarget-targets.html)
      */
     public inline fun cfnMaintenanceWindowTargetTargetsProperty(
-        block: CfnMaintenanceWindowTargetTargetsPropertyDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTargetTargetsPropertyDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTarget.TargetsProperty {
         val builder = CfnMaintenanceWindowTargetTargetsPropertyDsl()
         builder.apply(block)
@@ -602,7 +594,6 @@ public object ssm {
      * in the *AWS Systems Manager API Reference* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -677,7 +668,7 @@ public object ssm {
     public inline fun cfnMaintenanceWindowTask(
         scope: Construct,
         id: String,
-        block: CfnMaintenanceWindowTaskDsl.() -> Unit = {}
+        block: CfnMaintenanceWindowTaskDsl.() -> Unit = {},
     ): CfnMaintenanceWindowTask {
         val builder = CfnMaintenanceWindowTaskDsl(scope, id)
         builder.apply(block)
@@ -688,7 +679,6 @@ public object ssm {
      * Configuration options for sending command output to Amazon CloudWatch Logs.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -703,8 +693,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html)
      */
     public inline fun cfnMaintenanceWindowTaskCloudWatchOutputConfigProperty(
-        block: CfnMaintenanceWindowTaskCloudWatchOutputConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTaskCloudWatchOutputConfigPropertyDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty {
         val builder = CfnMaintenanceWindowTaskCloudWatchOutputConfigPropertyDsl()
         builder.apply(block)
@@ -719,17 +708,14 @@ public object ssm {
      * [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
      * resource.
      *
-     *
-     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs, instead use
-     * the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
-     * structure. For information about how Systems Manager handles these options for the supported
-     * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
-   * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
+     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs, instead
+     * use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the
+     * `TaskInvocationParameters` structure. For information about how Systems Manager handles these
+     * options for the supported maintenance window task types, see
+     * [AWS ::SSM::MaintenanceWindowTask MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * .
      *
-     *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -745,8 +731,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html)
      */
     public inline fun cfnMaintenanceWindowTaskLoggingInfoProperty(
-        block: CfnMaintenanceWindowTaskLoggingInfoPropertyDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTaskLoggingInfoPropertyDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTask.LoggingInfoProperty {
         val builder = CfnMaintenanceWindowTaskLoggingInfoPropertyDsl()
         builder.apply(block)
@@ -761,13 +746,12 @@ public object ssm {
      * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
      * property type.
      *
-     * For information about available parameters in Automation runbooks, you can view the content of
-     * the runbook itself in the Systems Manager console. For information, see [View runbook
-   * content](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-documents-reference-details.html#view-automation-json)
+     * For information about available parameters in Automation runbooks, you can view the content
+     * of the runbook itself in the Systems Manager console. For information, see
+     * [View runbook content](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-documents-reference-details.html#view-automation-json)
      * in the *AWS Systems Manager User Guide* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -800,7 +784,6 @@ public object ssm {
      * property type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -816,8 +799,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html)
      */
     public inline fun cfnMaintenanceWindowTaskMaintenanceWindowLambdaParametersProperty(
-        block: CfnMaintenanceWindowTaskMaintenanceWindowLambdaParametersPropertyDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTaskMaintenanceWindowLambdaParametersPropertyDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty {
         val builder = CfnMaintenanceWindowTaskMaintenanceWindowLambdaParametersPropertyDsl()
         builder.apply(block)
@@ -828,15 +810,14 @@ public object ssm {
      * The `MaintenanceWindowRunCommandParameters` property type specifies the parameters for a
      * `RUN_COMMAND` task type for a maintenance window task in AWS Systems Manager .
      *
-     * This means that these parameters are the same as those for the `SendCommand` API call. For more
-     * information about `SendCommand` parameters, see
+     * This means that these parameters are the same as those for the `SendCommand` API call. For
+     * more information about `SendCommand` parameters, see
      * [SendCommand](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_SendCommand.html)
      * in the *AWS Systems Manager API Reference* .
      *
      * For information about available parameters in SSM Command documents, you can view the content
-     * of the document itself in the Systems Manager console. For information, see [Viewing SSM command
-   * document
-   * content](https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-ssm-document-content.html)
+     * of the document itself in the Systems Manager console. For information, see
+     * [Viewing SSM command document content](https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-ssm-document-content.html)
      * in the *AWS Systems Manager User Guide* .
      *
      * `MaintenanceWindowRunCommandParameters` is a property of the
@@ -844,7 +825,6 @@ public object ssm {
      * property type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -894,7 +874,6 @@ public object ssm {
      * property type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -910,7 +889,8 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html)
      */
     public inline fun cfnMaintenanceWindowTaskMaintenanceWindowStepFunctionsParametersProperty(
-        block: CfnMaintenanceWindowTaskMaintenanceWindowStepFunctionsParametersPropertyDsl.() -> Unit =
+        block:
+            CfnMaintenanceWindowTaskMaintenanceWindowStepFunctionsParametersPropertyDsl.() -> Unit =
             {}
     ): CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty {
         val builder = CfnMaintenanceWindowTaskMaintenanceWindowStepFunctionsParametersPropertyDsl()
@@ -919,15 +899,14 @@ public object ssm {
     }
 
     /**
-     * The `NotificationConfig` property type specifies configurations for sending notifications for a
-     * maintenance window task in AWS Systems Manager .
+     * The `NotificationConfig` property type specifies configurations for sending notifications for
+     * a maintenance window task in AWS Systems Manager .
      *
      * `NotificationConfig` is a property of the
      * [MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * property type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -943,8 +922,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html)
      */
     public inline fun cfnMaintenanceWindowTaskNotificationConfigProperty(
-        block: CfnMaintenanceWindowTaskNotificationConfigPropertyDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTaskNotificationConfigPropertyDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTask.NotificationConfigProperty {
         val builder = CfnMaintenanceWindowTaskNotificationConfigPropertyDsl()
         builder.apply(block)
@@ -955,7 +933,6 @@ public object ssm {
      * Properties for defining a `CfnMaintenanceWindowTask`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1028,8 +1005,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
      */
     public inline fun cfnMaintenanceWindowTaskProps(
-        block: CfnMaintenanceWindowTaskPropsDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTaskPropsDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTaskProps {
         val builder = CfnMaintenanceWindowTaskPropsDsl()
         builder.apply(block)
@@ -1041,24 +1017,21 @@ public object ssm {
      *
      * You specify instances by using `Key=InstanceIds,Values=&lt; *instanceid1* &gt;,&lt;
      * *instanceid2* &gt;` . You specify window target IDs using `Key=WindowTargetIds,Values=&lt;
-     * *window-target-id-1* &gt;,&lt; *window-target-id-2* &gt;` for a maintenance window task in AWS
-     * Systems Manager .
+     * *window-target-id-1* &gt;,&lt; *window-target-id-2* &gt;` for a maintenance window task in
+     * AWS Systems Manager .
      *
      * `Target` is a property of the
      * [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
      * property type.
      *
-     *
-     * To use `resource-groups:Name` as the key for a maintenance window target, specify the resource
-     * group as a `AWS::SSM::MaintenanceWindowTarget` type, and use the `Ref` function to specify the
-     * target for `AWS::SSM::MaintenanceWindowTask` . For an example, see *Create a Run Command task that
-     * targets instances using a resource group name* in [AWS::SSM::MaintenanceWindowTask
-   * Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#aws-resource-ssm-maintenancewindowtask--examples)
+     * To use `resource-groups:Name` as the key for a maintenance window target, specify the
+     * resource group as a `AWS::SSM::MaintenanceWindowTarget` type, and use the `Ref` function to
+     * specify the target for `AWS::SSM::MaintenanceWindowTask` . For an example, see *Create a Run
+     * Command task that targets instances using a resource group name* in
+     * [AWS::SSM::MaintenanceWindowTask Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#aws-resource-ssm-maintenancewindowtask--examples)
      * .
      *
-     *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1072,8 +1045,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html)
      */
     public inline fun cfnMaintenanceWindowTaskTargetProperty(
-        block: CfnMaintenanceWindowTaskTargetPropertyDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTaskTargetPropertyDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTask.TargetProperty {
         val builder = CfnMaintenanceWindowTaskTargetPropertyDsl()
         builder.apply(block)
@@ -1089,7 +1061,6 @@ public object ssm {
      * property type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1137,8 +1108,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
      */
     public inline fun cfnMaintenanceWindowTaskTaskInvocationParametersProperty(
-        block: CfnMaintenanceWindowTaskTaskInvocationParametersPropertyDsl.() -> Unit =
-            {}
+        block: CfnMaintenanceWindowTaskTaskInvocationParametersPropertyDsl.() -> Unit = {}
     ): CfnMaintenanceWindowTask.TaskInvocationParametersProperty {
         val builder = CfnMaintenanceWindowTaskTaskInvocationParametersPropertyDsl()
         builder.apply(block)
@@ -1149,29 +1119,24 @@ public object ssm {
      * The `AWS::SSM::Parameter` resource creates an SSM parameter in AWS Systems Manager Parameter
      * Store.
      *
-     *
      * To create an SSM parameter, you must have the AWS Identity and Access Management ( IAM )
-     * permissions `ssm:PutParameter` and `ssm:AddTagsToResource` . On stack creation, AWS CloudFormation
-     * adds the following three tags to the parameter: `aws:cloudformation:stack-name` ,
-     * `aws:cloudformation:logical-id` , and `aws:cloudformation:stack-id` , in addition to any custom
-     * tags you specify.
+     * permissions `ssm:PutParameter` and `ssm:AddTagsToResource` . On stack creation, AWS
+     * CloudFormation adds the following three tags to the parameter:
+     * `aws:cloudformation:stack-name` , `aws:cloudformation:logical-id` , and
+     * `aws:cloudformation:stack-id` , in addition to any custom tags you specify.
      *
      * To add, update, or remove tags during stack update, you must have IAM permissions for both
-     * `ssm:AddTagsToResource` and `ssm:RemoveTagsFromResource` . For more information, see [Managing
-   * Access Using
-   * Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/security-iam.html#security_iam_access-manage)
+     * `ssm:AddTagsToResource` and `ssm:RemoveTagsFromResource` . For more information, see
+     * [Managing Access Using Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/security-iam.html#security_iam_access-manage)
      * in the *AWS Systems Manager User Guide* .
      *
-     *
-     * For information about valid values for parameters, see [Requirements and Constraints for
-   * Parameter
-   * Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-su-create.html#sysman-parameter-name-constraints)
+     * For information about valid values for parameters, see
+     * [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-su-create.html#sysman-parameter-name-constraints)
      * in the *AWS Systems Manager User Guide* and
      * [PutParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutParameter.html)
      * in the *AWS Systems Manager API Reference* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1196,7 +1161,7 @@ public object ssm {
     public inline fun cfnParameter(
         scope: Construct,
         id: String,
-        block: CfnParameterDsl.() -> Unit = {}
+        block: CfnParameterDsl.() -> Unit = {},
     ): CfnParameter {
         val builder = CfnParameterDsl(scope, id)
         builder.apply(block)
@@ -1207,7 +1172,6 @@ public object ssm {
      * Properties for defining a `CfnParameter`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1229,15 +1193,17 @@ public object ssm {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
      */
-    public inline fun cfnParameterProps(block: CfnParameterPropsDsl.() -> Unit = {}): CfnParameterProps {
+    public inline fun cfnParameterProps(
+        block: CfnParameterPropsDsl.() -> Unit = {}
+    ): CfnParameterProps {
         val builder = CfnParameterPropsDsl()
         builder.apply(block)
         return builder.build()
     }
 
     /**
-     * The `AWS::SSM::PatchBaseline` resource defines the basic information for an AWS Systems Manager
-     * patch baseline.
+     * The `AWS::SSM::PatchBaseline` resource defines the basic information for an AWS Systems
+     * Manager patch baseline.
      *
      * A patch baseline defines which patches are approved for installation on your instances.
      *
@@ -1246,7 +1212,6 @@ public object ssm {
      * in the *AWS Systems Manager API Reference* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1299,7 +1264,7 @@ public object ssm {
     public inline fun cfnPatchBaseline(
         scope: Construct,
         id: String,
-        block: CfnPatchBaselineDsl.() -> Unit = {}
+        block: CfnPatchBaselineDsl.() -> Unit = {},
     ): CfnPatchBaseline {
         val builder = CfnPatchBaselineDsl(scope, id)
         builder.apply(block)
@@ -1308,7 +1273,8 @@ public object ssm {
 
     /**
      * The `PatchFilterGroup` property type specifies a set of patch filters for an AWS Systems
-     * Manager patch baseline, typically used for approval rules for a Systems Manager patch baseline.
+     * Manager patch baseline, typically used for approval rules for a Systems Manager patch
+     * baseline.
      *
      * `PatchFilterGroup` is the property type for the `GlobalFilters` property of the
      * [AWS::SSM::PatchBaseline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
@@ -1317,7 +1283,6 @@ public object ssm {
      * property type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1333,8 +1298,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html)
      */
     public inline fun cfnPatchBaselinePatchFilterGroupProperty(
-        block: CfnPatchBaselinePatchFilterGroupPropertyDsl.() -> Unit =
-            {}
+        block: CfnPatchBaselinePatchFilterGroupPropertyDsl.() -> Unit = {}
     ): CfnPatchBaseline.PatchFilterGroupProperty {
         val builder = CfnPatchBaselinePatchFilterGroupPropertyDsl()
         builder.apply(block)
@@ -1355,7 +1319,6 @@ public object ssm {
      * in the *AWS Systems Manager API Reference* .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1369,8 +1332,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfilter.html)
      */
     public inline fun cfnPatchBaselinePatchFilterProperty(
-        block: CfnPatchBaselinePatchFilterPropertyDsl.() -> Unit =
-            {}
+        block: CfnPatchBaselinePatchFilterPropertyDsl.() -> Unit = {}
     ): CfnPatchBaseline.PatchFilterProperty {
         val builder = CfnPatchBaselinePatchFilterPropertyDsl()
         builder.apply(block)
@@ -1387,7 +1349,6 @@ public object ssm {
      * repository. Applies to Linux instances only.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1402,8 +1363,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html)
      */
     public inline fun cfnPatchBaselinePatchSourceProperty(
-        block: CfnPatchBaselinePatchSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnPatchBaselinePatchSourcePropertyDsl.() -> Unit = {}
     ): CfnPatchBaseline.PatchSourceProperty {
         val builder = CfnPatchBaselinePatchSourcePropertyDsl()
         builder.apply(block)
@@ -1414,7 +1374,6 @@ public object ssm {
      * Properties for defining a `CfnPatchBaseline`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1464,7 +1423,9 @@ public object ssm {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
      */
-    public inline fun cfnPatchBaselineProps(block: CfnPatchBaselinePropsDsl.() -> Unit = {}): CfnPatchBaselineProps {
+    public inline fun cfnPatchBaselineProps(
+        block: CfnPatchBaselinePropsDsl.() -> Unit = {}
+    ): CfnPatchBaselineProps {
         val builder = CfnPatchBaselinePropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1479,7 +1440,6 @@ public object ssm {
      * resource.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1503,8 +1463,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html)
      */
     public inline fun cfnPatchBaselineRuleGroupProperty(
-        block: CfnPatchBaselineRuleGroupPropertyDsl.() -> Unit =
-            {}
+        block: CfnPatchBaselineRuleGroupPropertyDsl.() -> Unit = {}
     ): CfnPatchBaseline.RuleGroupProperty {
         val builder = CfnPatchBaselineRuleGroupPropertyDsl()
         builder.apply(block)
@@ -1519,7 +1478,6 @@ public object ssm {
      * property type contains a list of `Rule` property types.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1541,8 +1499,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html)
      */
     public inline fun cfnPatchBaselineRuleProperty(
-        block: CfnPatchBaselineRulePropertyDsl.() -> Unit =
-            {}
+        block: CfnPatchBaselineRulePropertyDsl.() -> Unit = {}
     ): CfnPatchBaseline.RuleProperty {
         val builder = CfnPatchBaselineRulePropertyDsl()
         builder.apply(block)
@@ -1550,39 +1507,39 @@ public object ssm {
     }
 
     /**
-     * The `AWS::SSM::ResourceDataSync` resource creates, updates, or deletes a resource data sync for
-     * AWS Systems Manager .
+     * The `AWS::SSM::ResourceDataSync` resource creates, updates, or deletes a resource data sync
+     * for AWS Systems Manager .
      *
      * A resource data sync helps you view data from multiple sources in a single location. Systems
      * Manager offers two types of resource data sync: `SyncToDestination` and `SyncFromSource` .
      *
-     * You can configure Systems Manager Inventory to use the `SyncToDestination` type to synchronize
-     * Inventory data from multiple AWS Regions to a single Amazon S3 bucket.
+     * You can configure Systems Manager Inventory to use the `SyncToDestination` type to
+     * synchronize Inventory data from multiple AWS Regions to a single Amazon S3 bucket.
      *
      * You can configure Systems Manager Explorer to use the `SyncFromSource` type to synchronize
-     * operational work items (OpsItems) and operational data (OpsData) from multiple AWS Regions . This
-     * type can synchronize OpsItems and OpsData from multiple AWS accounts and Regions or from an
-     * `EntireOrganization` by using AWS Organizations .
+     * operational work items (OpsItems) and operational data (OpsData) from multiple AWS Regions .
+     * This type can synchronize OpsItems and OpsData from multiple AWS accounts and Regions or from
+     * an `EntireOrganization` by using AWS Organizations .
      *
-     * A resource data sync is an asynchronous operation that returns immediately. After a successful
-     * initial sync is completed, the system continuously syncs data.
+     * A resource data sync is an asynchronous operation that returns immediately. After a
+     * successful initial sync is completed, the system continuously syncs data.
      *
      * By default, data is not encrypted in Amazon S3 . We strongly recommend that you enable
-     * encryption in Amazon S3 to ensure secure data storage. We also recommend that you secure access to
-     * the Amazon S3 bucket by creating a restrictive bucket policy.
+     * encryption in Amazon S3 to ensure secure data storage. We also recommend that you secure
+     * access to the Amazon S3 bucket by creating a restrictive bucket policy.
      *
-     * For more information, see [Configuring Inventory
-   * Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync)
-     * and [Setting Up Systems Manager Explorer to Display Data from Multiple Accounts and
-   * Regions](https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-resource-data-sync.html)
+     * For more information, see
+     * [Configuring Inventory Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync)
+     * and
+     * [Setting Up Systems Manager Explorer to Display Data from Multiple Accounts and Regions](https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-resource-data-sync.html)
      * in the *AWS Systems Manager User Guide* .
      *
      * Important: The following *Syntax* section shows all fields that are supported for a resource
-     * data sync. The *Examples* section below shows the recommended way to specify configurations for
-     * each sync type. Please see the *Examples* section when you create your resource data sync.
+     * data sync. The *Examples* section below shows the recommended way to specify configurations
+     * for each sync type. Please see the *Examples* section when you create your resource data
+     * sync.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1624,7 +1581,7 @@ public object ssm {
     public inline fun cfnResourceDataSync(
         scope: Construct,
         id: String,
-        block: CfnResourceDataSyncDsl.() -> Unit = {}
+        block: CfnResourceDataSyncDsl.() -> Unit = {},
     ): CfnResourceDataSync {
         val builder = CfnResourceDataSyncDsl(scope, id)
         builder.apply(block)
@@ -1638,7 +1595,6 @@ public object ssm {
      * organization isn't present, from multiple AWS Regions .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1654,8 +1610,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-awsorganizationssource.html)
      */
     public inline fun cfnResourceDataSyncAwsOrganizationsSourceProperty(
-        block: CfnResourceDataSyncAwsOrganizationsSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnResourceDataSyncAwsOrganizationsSourcePropertyDsl.() -> Unit = {}
     ): CfnResourceDataSync.AwsOrganizationsSourceProperty {
         val builder = CfnResourceDataSyncAwsOrganizationsSourcePropertyDsl()
         builder.apply(block)
@@ -1666,7 +1621,6 @@ public object ssm {
      * Properties for defining a `CfnResourceDataSync`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1704,7 +1658,9 @@ public object ssm {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html)
      */
-    public inline fun cfnResourceDataSyncProps(block: CfnResourceDataSyncPropsDsl.() -> Unit = {}): CfnResourceDataSyncProps {
+    public inline fun cfnResourceDataSyncProps(
+        block: CfnResourceDataSyncPropsDsl.() -> Unit = {}
+    ): CfnResourceDataSyncProps {
         val builder = CfnResourceDataSyncPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1714,7 +1670,6 @@ public object ssm {
      * Information about the target S3 bucket for the resource data sync.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1732,8 +1687,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-s3destination.html)
      */
     public inline fun cfnResourceDataSyncS3DestinationProperty(
-        block: CfnResourceDataSyncS3DestinationPropertyDsl.() -> Unit =
-            {}
+        block: CfnResourceDataSyncS3DestinationPropertyDsl.() -> Unit = {}
     ): CfnResourceDataSync.S3DestinationProperty {
         val builder = CfnResourceDataSyncS3DestinationPropertyDsl()
         builder.apply(block)
@@ -1744,7 +1698,6 @@ public object ssm {
      * Information about the source of the data included in the resource data sync.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1765,8 +1718,7 @@ public object ssm {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-syncsource.html)
      */
     public inline fun cfnResourceDataSyncSyncSourceProperty(
-        block: CfnResourceDataSyncSyncSourcePropertyDsl.() -> Unit =
-            {}
+        block: CfnResourceDataSyncSyncSourcePropertyDsl.() -> Unit = {}
     ): CfnResourceDataSync.SyncSourceProperty {
         val builder = CfnResourceDataSyncSyncSourcePropertyDsl()
         builder.apply(block)
@@ -1778,12 +1730,11 @@ public object ssm {
      *
      * A resource policy helps you to define the IAM entity (for example, an AWS account ) that can
      * manage your Systems Manager resources. Currently, `OpsItemGroup` is the only resource that
-     * supports Systems Manager resource policies. The resource policy for `OpsItemGroup` enables AWS
-     * accounts to view and interact with OpsCenter operational work items (OpsItems). OpsCenter is a
-     * capability of Systems Manager .
+     * supports Systems Manager resource policies. The resource policy for `OpsItemGroup` enables
+     * AWS accounts to view and interact with OpsCenter operational work items (OpsItems). OpsCenter
+     * is a capability of Systems Manager .
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1801,7 +1752,7 @@ public object ssm {
     public inline fun cfnResourcePolicy(
         scope: Construct,
         id: String,
-        block: CfnResourcePolicyDsl.() -> Unit = {}
+        block: CfnResourcePolicyDsl.() -> Unit = {},
     ): CfnResourcePolicy {
         val builder = CfnResourcePolicyDsl(scope, id)
         builder.apply(block)
@@ -1812,7 +1763,6 @@ public object ssm {
      * Properties for defining a `CfnResourcePolicy`.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1826,7 +1776,9 @@ public object ssm {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html)
      */
-    public inline fun cfnResourcePolicyProps(block: CfnResourcePolicyPropsDsl.() -> Unit = {}): CfnResourcePolicyProps {
+    public inline fun cfnResourcePolicyProps(
+        block: CfnResourcePolicyPropsDsl.() -> Unit = {}
+    ): CfnResourcePolicyProps {
         val builder = CfnResourcePolicyPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -1836,7 +1788,6 @@ public object ssm {
      * Common attributes for string parameters.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1850,8 +1801,7 @@ public object ssm {
      * ```
      */
     public inline fun commonStringParameterAttributes(
-        block: CommonStringParameterAttributesDsl.() -> Unit =
-            {}
+        block: CommonStringParameterAttributesDsl.() -> Unit = {}
     ): CommonStringParameterAttributes {
         val builder = CommonStringParameterAttributesDsl()
         builder.apply(block)
@@ -1862,7 +1812,6 @@ public object ssm {
      * Attributes for parameters of string list type.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1878,7 +1827,9 @@ public object ssm {
      *
      * [Documentation](ParameterType)
      */
-    public inline fun listParameterAttributes(block: ListParameterAttributesDsl.() -> Unit = {}): ListParameterAttributes {
+    public inline fun listParameterAttributes(
+        block: ListParameterAttributesDsl.() -> Unit = {}
+    ): ListParameterAttributes {
         val builder = ListParameterAttributesDsl()
         builder.apply(block)
         return builder.build()
@@ -1888,7 +1839,6 @@ public object ssm {
      * Properties needed to create a new SSM Parameter.
      *
      * Example:
-     *
      * ```
      * // The code below shows an example of how to instantiate this type.
      * // The values are placeholders you should change.
@@ -1902,7 +1852,9 @@ public object ssm {
      * .build();
      * ```
      */
-    public inline fun parameterOptions(block: ParameterOptionsDsl.() -> Unit = {}): ParameterOptions {
+    public inline fun parameterOptions(
+        block: ParameterOptionsDsl.() -> Unit = {}
+    ): ParameterOptions {
         val builder = ParameterOptionsDsl()
         builder.apply(block)
         return builder.build()
@@ -1912,7 +1864,6 @@ public object ssm {
      * Attributes for secure string parameters.
      *
      * Example:
-     *
      * ```
      * Number parameterVersion = Token.asNumber(Map.of("Ref", "MyParameter"));
      * // Retrieve the latest value of the non-secret parameter
@@ -1944,8 +1895,7 @@ public object ssm {
      * ```
      */
     public inline fun secureStringParameterAttributes(
-        block: SecureStringParameterAttributesDsl.() -> Unit =
-            {}
+        block: SecureStringParameterAttributesDsl.() -> Unit = {}
     ): SecureStringParameterAttributes {
         val builder = SecureStringParameterAttributesDsl()
         builder.apply(block)
@@ -1956,7 +1906,6 @@ public object ssm {
      * Creates a new StringList SSM Parameter.
      *
      * Example:
-     *
      * ```
      * StringListParameter.valueForTypedListParameter(this, "/My/Public/Parameter",
      * ParameterValueType.AWS_EC2_IMAGE_ID);
@@ -1965,7 +1914,7 @@ public object ssm {
     public inline fun stringListParameter(
         scope: Construct,
         id: String,
-        block: StringListParameterDsl.() -> Unit = {}
+        block: StringListParameterDsl.() -> Unit = {},
     ): StringListParameter {
         val builder = StringListParameterDsl(scope, id)
         builder.apply(block)
@@ -1976,7 +1925,6 @@ public object ssm {
      * Properties needed to create a StringList SSM Parameter.
      *
      * Example:
-     *
      * ```
      * // Grant read access to some Role
      * IRole role;
@@ -1996,7 +1944,9 @@ public object ssm {
      * .build();
      * ```
      */
-    public inline fun stringListParameterProps(block: StringListParameterPropsDsl.() -> Unit = {}): StringListParameterProps {
+    public inline fun stringListParameterProps(
+        block: StringListParameterPropsDsl.() -> Unit = {}
+    ): StringListParameterProps {
         val builder = StringListParameterPropsDsl()
         builder.apply(block)
         return builder.build()
@@ -2006,7 +1956,6 @@ public object ssm {
      * Creates a new String SSM Parameter.
      *
      * Example:
-     *
      * ```
      * StringParameter ssmParameter = StringParameter.Builder.create(this, "mySsmParameter")
      * .parameterName("mySsmParameter")
@@ -2017,7 +1966,7 @@ public object ssm {
     public inline fun stringParameter(
         scope: Construct,
         id: String,
-        block: StringParameterDsl.() -> Unit = {}
+        block: StringParameterDsl.() -> Unit = {},
     ): StringParameter {
         val builder = StringParameterDsl(scope, id)
         builder.apply(block)
@@ -2028,7 +1977,6 @@ public object ssm {
      * Attributes for parameters of various types of string.
      *
      * Example:
-     *
      * ```
      * Number parameterVersion = Token.asNumber(Map.of("Ref", "MyParameter"));
      * // Retrieve the latest value of the non-secret parameter
@@ -2061,7 +2009,9 @@ public object ssm {
      *
      * [Documentation](ParameterType)
      */
-    public inline fun stringParameterAttributes(block: StringParameterAttributesDsl.() -> Unit = {}): StringParameterAttributes {
+    public inline fun stringParameterAttributes(
+        block: StringParameterAttributesDsl.() -> Unit = {}
+    ): StringParameterAttributes {
         val builder = StringParameterAttributesDsl()
         builder.apply(block)
         return builder.build()
@@ -2071,7 +2021,6 @@ public object ssm {
      * Properties needed to create a String SSM parameter.
      *
      * Example:
-     *
      * ```
      * // Grant read access to some Role
      * IRole role;
@@ -2091,7 +2040,9 @@ public object ssm {
      * .build();
      * ```
      */
-    public inline fun stringParameterProps(block: StringParameterPropsDsl.() -> Unit = {}): StringParameterProps {
+    public inline fun stringParameterProps(
+        block: StringParameterPropsDsl.() -> Unit = {}
+    ): StringParameterProps {
         val builder = StringParameterPropsDsl()
         builder.apply(block)
         return builder.build()

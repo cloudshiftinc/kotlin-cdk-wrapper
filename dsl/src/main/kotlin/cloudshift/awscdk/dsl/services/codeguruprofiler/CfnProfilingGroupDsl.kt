@@ -1,25 +1,33 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codeguruprofiler
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
+import software.constructs.Construct
 
 /**
  * Creates a profiling group.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,7 +56,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnProfilingGroupDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnProfilingGroup.Builder = CfnProfilingGroup.Builder.create(scope, id)
 
@@ -59,22 +67,23 @@ public class CfnProfilingGroupDsl(
     /**
      * The agent permissions attached to this profiling group.
      *
-     * This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform actions
-     * required by the profiling agent. The Json consists of key `Principals` .
+     * This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform
+     * actions required by the profiling agent. The Json consists of key `Principals` .
      *
      * *Principals* : A list of string ARNs for the roles and users you want to grant access to the
      * profiling group. Wildcards are not supported in the ARNs. You are allowed to provide up to 50
      * ARNs. An empty list is not permitted. This is a required key.
      *
-     * For more information, see [Resource-based policies in CodeGuru
-   * Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in
-     * the *Amazon CodeGuru Profiler user guide* ,
+     * For more information, see
+     * [Resource-based policies in CodeGuru Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html)
+     * in the *Amazon CodeGuru Profiler user guide* ,
      * [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html)
      * , and
      * [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-agentpermissions)
+     *
      * @param agentPermissions The agent permissions attached to this profiling group.
      */
     public fun agentPermissions(agentPermissions: MapBuilder.() -> Unit = {}) {
@@ -86,22 +95,23 @@ public class CfnProfilingGroupDsl(
     /**
      * The agent permissions attached to this profiling group.
      *
-     * This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform actions
-     * required by the profiling agent. The Json consists of key `Principals` .
+     * This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform
+     * actions required by the profiling agent. The Json consists of key `Principals` .
      *
      * *Principals* : A list of string ARNs for the roles and users you want to grant access to the
      * profiling group. Wildcards are not supported in the ARNs. You are allowed to provide up to 50
      * ARNs. An empty list is not permitted. This is a required key.
      *
-     * For more information, see [Resource-based policies in CodeGuru
-   * Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in
-     * the *Amazon CodeGuru Profiler user guide* ,
+     * For more information, see
+     * [Resource-based policies in CodeGuru Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html)
+     * in the *Amazon CodeGuru Profiler user guide* ,
      * [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html)
      * , and
      * [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-agentpermissions)
+     *
      * @param agentPermissions The agent permissions attached to this profiling group.
      */
     public fun agentPermissions(agentPermissions: Any) {
@@ -112,21 +122,29 @@ public class CfnProfilingGroupDsl(
      * Adds anomaly notifications for a profiling group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration)
+     *
      * @param anomalyDetectionNotificationConfiguration Adds anomaly notifications for a profiling
-     * group.
+     *   group.
      */
-    public fun anomalyDetectionNotificationConfiguration(vararg anomalyDetectionNotificationConfiguration: Any) {
-        _anomalyDetectionNotificationConfiguration.addAll(listOf(*anomalyDetectionNotificationConfiguration))
+    public fun anomalyDetectionNotificationConfiguration(
+        vararg anomalyDetectionNotificationConfiguration: Any
+    ) {
+        _anomalyDetectionNotificationConfiguration.addAll(
+            listOf(*anomalyDetectionNotificationConfiguration)
+        )
     }
 
     /**
      * Adds anomaly notifications for a profiling group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration)
+     *
      * @param anomalyDetectionNotificationConfiguration Adds anomaly notifications for a profiling
-     * group.
+     *   group.
      */
-    public fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: Collection<Any>) {
+    public fun anomalyDetectionNotificationConfiguration(
+        anomalyDetectionNotificationConfiguration: Collection<Any>
+    ) {
         _anomalyDetectionNotificationConfiguration.addAll(anomalyDetectionNotificationConfiguration)
     }
 
@@ -134,21 +152,28 @@ public class CfnProfilingGroupDsl(
      * Adds anomaly notifications for a profiling group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration)
+     *
      * @param anomalyDetectionNotificationConfiguration Adds anomaly notifications for a profiling
-     * group.
+     *   group.
      */
-    public fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
-        cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
+    public fun anomalyDetectionNotificationConfiguration(
+        anomalyDetectionNotificationConfiguration: IResolvable
+    ) {
+        cdkBuilder.anomalyDetectionNotificationConfiguration(
+            anomalyDetectionNotificationConfiguration
+        )
     }
 
     /**
      * The compute platform of the profiling group.
      *
-     * Use `AWSLambda` if your application runs on AWS Lambda. Use `Default` if your application runs
-     * on a compute platform that is not AWS Lambda , such an Amazon EC2 instance, an on-premises server,
-     * or a different platform. If not specified, `Default` is used. This property is immutable.
+     * Use `AWSLambda` if your application runs on AWS Lambda. Use `Default` if your application
+     * runs on a compute platform that is not AWS Lambda , such an Amazon EC2 instance, an
+     * on-premises server, or a different platform. If not specified, `Default` is used. This
+     * property is immutable.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-computeplatform)
+     *
      * @param computePlatform The compute platform of the profiling group.
      */
     public fun computePlatform(computePlatform: String) {
@@ -159,6 +184,7 @@ public class CfnProfilingGroupDsl(
      * The name of the profiling group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-profilinggroupname)
+     *
      * @param profilingGroupName The name of the profiling group.
      */
     public fun profilingGroupName(profilingGroupName: String) {
@@ -169,6 +195,7 @@ public class CfnProfilingGroupDsl(
      * A list of tags to add to the created profiling group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-tags)
+     *
      * @param tags A list of tags to add to the created profiling group.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -179,6 +206,7 @@ public class CfnProfilingGroupDsl(
      * A list of tags to add to the created profiling group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-tags)
+     *
      * @param tags A list of tags to add to the created profiling group.
      */
     public fun tags(tags: Collection<CfnTag>) {
@@ -186,9 +214,10 @@ public class CfnProfilingGroupDsl(
     }
 
     public fun build(): CfnProfilingGroup {
-        if (_anomalyDetectionNotificationConfiguration.isNotEmpty()) {
-            cdkBuilder.anomalyDetectionNotificationConfiguration(_anomalyDetectionNotificationConfiguration)
-        }
+        if (_anomalyDetectionNotificationConfiguration.isNotEmpty())
+            cdkBuilder.anomalyDetectionNotificationConfiguration(
+                _anomalyDetectionNotificationConfiguration
+            )
         if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
         return cdkBuilder.build()
     }

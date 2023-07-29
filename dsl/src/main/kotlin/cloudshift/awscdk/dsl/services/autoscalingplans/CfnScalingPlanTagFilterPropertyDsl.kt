@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.autoscalingplans
 
@@ -11,10 +20,10 @@ import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 /**
  * `TagFilter` is a subproperty of
  * [ApplicationSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html)
- * that specifies a tag for an application source to use with AWS Auto Scaling ( Auto Scaling Plans ).
+ * that specifies a tag for an application source to use with AWS Auto Scaling ( Auto Scaling Plans
+ * ).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,34 +39,28 @@ import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
  */
 @CdkDslMarker
 public class CfnScalingPlanTagFilterPropertyDsl {
-  private val cdkBuilder: CfnScalingPlan.TagFilterProperty.Builder =
-      CfnScalingPlan.TagFilterProperty.builder()
+    private val cdkBuilder: CfnScalingPlan.TagFilterProperty.Builder =
+        CfnScalingPlan.TagFilterProperty.builder()
 
-  private val _values: MutableList<String> = mutableListOf()
+    private val _values: MutableList<String> = mutableListOf()
 
-  /**
-   * @param key The tag key. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The tag key. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param values The tag values (0 to 20).
-   */
-  public fun values(vararg values: String) {
-    _values.addAll(listOf(*values))
-  }
+    /** @param values The tag values (0 to 20). */
+    public fun values(vararg values: String) {
+        _values.addAll(listOf(*values))
+    }
 
-  /**
-   * @param values The tag values (0 to 20).
-   */
-  public fun values(values: Collection<String>) {
-    _values.addAll(values)
-  }
+    /** @param values The tag values (0 to 20). */
+    public fun values(values: Collection<String>) {
+        _values.addAll(values)
+    }
 
-  public fun build(): CfnScalingPlan.TagFilterProperty {
-    if(_values.isNotEmpty()) cdkBuilder.values(_values)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnScalingPlan.TagFilterProperty {
+        if (_values.isNotEmpty()) cdkBuilder.values(_values)
+        return cdkBuilder.build()
+    }
 }

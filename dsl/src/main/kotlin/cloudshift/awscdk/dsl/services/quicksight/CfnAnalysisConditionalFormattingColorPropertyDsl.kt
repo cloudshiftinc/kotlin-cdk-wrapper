@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * The formatting configuration for the color.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -43,30 +51,22 @@ public class CfnAnalysisConditionalFormattingColorPropertyDsl {
     private val cdkBuilder: CfnAnalysis.ConditionalFormattingColorProperty.Builder =
         CfnAnalysis.ConditionalFormattingColorProperty.builder()
 
-    /**
-     * @param gradient Formatting configuration for gradient color.
-     */
+    /** @param gradient Formatting configuration for gradient color. */
     public fun gradient(gradient: IResolvable) {
         cdkBuilder.gradient(gradient)
     }
 
-    /**
-     * @param gradient Formatting configuration for gradient color.
-     */
+    /** @param gradient Formatting configuration for gradient color. */
     public fun gradient(gradient: CfnAnalysis.ConditionalFormattingGradientColorProperty) {
         cdkBuilder.gradient(gradient)
     }
 
-    /**
-     * @param solid Formatting configuration for solid color.
-     */
+    /** @param solid Formatting configuration for solid color. */
     public fun solid(solid: IResolvable) {
         cdkBuilder.solid(solid)
     }
 
-    /**
-     * @param solid Formatting configuration for solid color.
-     */
+    /** @param solid Formatting configuration for solid color. */
     public fun solid(solid: CfnAnalysis.ConditionalFormattingSolidColorProperty) {
         cdkBuilder.solid(solid)
     }

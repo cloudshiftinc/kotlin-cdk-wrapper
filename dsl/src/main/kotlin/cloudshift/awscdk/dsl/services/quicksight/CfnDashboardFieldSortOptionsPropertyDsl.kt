@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * The field sort options in a chart configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,30 +56,22 @@ public class CfnDashboardFieldSortOptionsPropertyDsl {
     private val cdkBuilder: CfnDashboard.FieldSortOptionsProperty.Builder =
         CfnDashboard.FieldSortOptionsProperty.builder()
 
-    /**
-     * @param columnSort The sort configuration for a column that is not used in a field well.
-     */
+    /** @param columnSort The sort configuration for a column that is not used in a field well. */
     public fun columnSort(columnSort: IResolvable) {
         cdkBuilder.columnSort(columnSort)
     }
 
-    /**
-     * @param columnSort The sort configuration for a column that is not used in a field well.
-     */
+    /** @param columnSort The sort configuration for a column that is not used in a field well. */
     public fun columnSort(columnSort: CfnDashboard.ColumnSortProperty) {
         cdkBuilder.columnSort(columnSort)
     }
 
-    /**
-     * @param fieldSort The sort configuration for a field in a field well.
-     */
+    /** @param fieldSort The sort configuration for a field in a field well. */
     public fun fieldSort(fieldSort: IResolvable) {
         cdkBuilder.fieldSort(fieldSort)
     }
 
-    /**
-     * @param fieldSort The sort configuration for a field in a field well.
-     */
+    /** @param fieldSort The sort configuration for a field in a field well. */
     public fun fieldSort(fieldSort: CfnDashboard.FieldSortProperty) {
         cdkBuilder.fieldSort(fieldSort)
     }

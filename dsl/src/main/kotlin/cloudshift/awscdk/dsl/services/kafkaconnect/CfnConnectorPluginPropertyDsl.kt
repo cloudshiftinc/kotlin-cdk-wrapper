@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  * A plugin is an AWS resource that contains the code that defines your connector logic.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,22 +35,18 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
  */
 @CdkDslMarker
 public class CfnConnectorPluginPropertyDsl {
-  private val cdkBuilder: CfnConnector.PluginProperty.Builder =
-      CfnConnector.PluginProperty.builder()
+    private val cdkBuilder: CfnConnector.PluginProperty.Builder =
+        CfnConnector.PluginProperty.builder()
 
-  /**
-   * @param customPlugin Details about a custom plugin. 
-   */
-  public fun customPlugin(customPlugin: IResolvable) {
-    cdkBuilder.customPlugin(customPlugin)
-  }
+    /** @param customPlugin Details about a custom plugin. */
+    public fun customPlugin(customPlugin: IResolvable) {
+        cdkBuilder.customPlugin(customPlugin)
+    }
 
-  /**
-   * @param customPlugin Details about a custom plugin. 
-   */
-  public fun customPlugin(customPlugin: CfnConnector.CustomPluginProperty) {
-    cdkBuilder.customPlugin(customPlugin)
-  }
+    /** @param customPlugin Details about a custom plugin. */
+    public fun customPlugin(customPlugin: CfnConnector.CustomPluginProperty) {
+        cdkBuilder.customPlugin(customPlugin)
+    }
 
-  public fun build(): CfnConnector.PluginProperty = cdkBuilder.build()
+    public fun build(): CfnConnector.PluginProperty = cdkBuilder.build()
 }

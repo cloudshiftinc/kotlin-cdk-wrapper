@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
  * behavior that's associated with this response headers policy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,34 +42,28 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
  */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyCustomHeadersConfigPropertyDsl {
-  private val cdkBuilder: CfnResponseHeadersPolicy.CustomHeadersConfigProperty.Builder =
-      CfnResponseHeadersPolicy.CustomHeadersConfigProperty.builder()
+    private val cdkBuilder: CfnResponseHeadersPolicy.CustomHeadersConfigProperty.Builder =
+        CfnResponseHeadersPolicy.CustomHeadersConfigProperty.builder()
 
-  private val _items: MutableList<Any> = mutableListOf()
+    private val _items: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param items The list of HTTP response headers and their values. 
-   */
-  public fun items(vararg items: Any) {
-    _items.addAll(listOf(*items))
-  }
+    /** @param items The list of HTTP response headers and their values. */
+    public fun items(vararg items: Any) {
+        _items.addAll(listOf(*items))
+    }
 
-  /**
-   * @param items The list of HTTP response headers and their values. 
-   */
-  public fun items(items: Collection<Any>) {
-    _items.addAll(items)
-  }
+    /** @param items The list of HTTP response headers and their values. */
+    public fun items(items: Collection<Any>) {
+        _items.addAll(items)
+    }
 
-  /**
-   * @param items The list of HTTP response headers and their values. 
-   */
-  public fun items(items: IResolvable) {
-    cdkBuilder.items(items)
-  }
+    /** @param items The list of HTTP response headers and their values. */
+    public fun items(items: IResolvable) {
+        cdkBuilder.items(items)
+    }
 
-  public fun build(): CfnResponseHeadersPolicy.CustomHeadersConfigProperty {
-    if(_items.isNotEmpty()) cdkBuilder.items(_items)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnResponseHeadersPolicy.CustomHeadersConfigProperty {
+        if (_items.isNotEmpty()) cdkBuilder.items(_items)
+        return cdkBuilder.build()
+    }
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigatewayv2
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.apigatewayv2.CfnDomainNameProps
  * Properties for defining a `CfnDomainName`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,75 +53,66 @@ import software.amazon.awscdk.services.apigatewayv2.CfnDomainNameProps
  */
 @CdkDslMarker
 public class CfnDomainNamePropsDsl {
-  private val cdkBuilder: CfnDomainNameProps.Builder = CfnDomainNameProps.builder()
+    private val cdkBuilder: CfnDomainNameProps.Builder = CfnDomainNameProps.builder()
 
-  private val _domainNameConfigurations: MutableList<Any> = mutableListOf()
+    private val _domainNameConfigurations: MutableList<Any> = mutableListOf()
 
-  /**
-   * @param domainName The custom domain name for your API in Amazon API Gateway. 
-   * Uppercase letters are not supported.
-   */
-  public fun domainName(domainName: String) {
-    cdkBuilder.domainName(domainName)
-  }
+    /**
+     * @param domainName The custom domain name for your API in Amazon API Gateway. Uppercase
+     *   letters are not supported.
+     */
+    public fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+    }
 
-  /**
-   * @param domainNameConfigurations The domain name configurations.
-   */
-  public fun domainNameConfigurations(vararg domainNameConfigurations: Any) {
-    _domainNameConfigurations.addAll(listOf(*domainNameConfigurations))
-  }
+    /** @param domainNameConfigurations The domain name configurations. */
+    public fun domainNameConfigurations(vararg domainNameConfigurations: Any) {
+        _domainNameConfigurations.addAll(listOf(*domainNameConfigurations))
+    }
 
-  /**
-   * @param domainNameConfigurations The domain name configurations.
-   */
-  public fun domainNameConfigurations(domainNameConfigurations: Collection<Any>) {
-    _domainNameConfigurations.addAll(domainNameConfigurations)
-  }
+    /** @param domainNameConfigurations The domain name configurations. */
+    public fun domainNameConfigurations(domainNameConfigurations: Collection<Any>) {
+        _domainNameConfigurations.addAll(domainNameConfigurations)
+    }
 
-  /**
-   * @param domainNameConfigurations The domain name configurations.
-   */
-  public fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
-    cdkBuilder.domainNameConfigurations(domainNameConfigurations)
-  }
+    /** @param domainNameConfigurations The domain name configurations. */
+    public fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
+        cdkBuilder.domainNameConfigurations(domainNameConfigurations)
+    }
 
-  /**
-   * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom domain
-   * name.
-   */
-  public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-    cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
-  }
+    /**
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     *   domain name.
+     */
+    public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
+    }
 
-  /**
-   * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom domain
-   * name.
-   */
-  public
-      fun mutualTlsAuthentication(mutualTlsAuthentication: CfnDomainName.MutualTlsAuthenticationProperty) {
-    cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
-  }
+    /**
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     *   domain name.
+     */
+    public fun mutualTlsAuthentication(
+        mutualTlsAuthentication: CfnDomainName.MutualTlsAuthenticationProperty
+    ) {
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication)
+    }
 
-  /**
-   * @param tags The collection of tags associated with a domain name.
-   */
-  public fun tags(tags: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(tags)
-    cdkBuilder.tags(builder.map)
-  }
+    /** @param tags The collection of tags associated with a domain name. */
+    public fun tags(tags: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(tags)
+        cdkBuilder.tags(builder.map)
+    }
 
-  /**
-   * @param tags The collection of tags associated with a domain name.
-   */
-  public fun tags(tags: Any) {
-    cdkBuilder.tags(tags)
-  }
+    /** @param tags The collection of tags associated with a domain name. */
+    public fun tags(tags: Any) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun build(): CfnDomainNameProps {
-    if(_domainNameConfigurations.isNotEmpty())
-        cdkBuilder.domainNameConfigurations(_domainNameConfigurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDomainNameProps {
+        if (_domainNameConfigurations.isNotEmpty())
+            cdkBuilder.domainNameConfigurations(_domainNameConfigurations)
+        return cdkBuilder.build()
+    }
 }

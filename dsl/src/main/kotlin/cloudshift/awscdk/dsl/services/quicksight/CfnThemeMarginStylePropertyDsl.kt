@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.quicksight.CfnTheme
  * The display options for margins around the outside edge of sheets.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.quicksight.CfnTheme
  */
 @CdkDslMarker
 public class CfnThemeMarginStylePropertyDsl {
-  private val cdkBuilder: CfnTheme.MarginStyleProperty.Builder =
-      CfnTheme.MarginStyleProperty.builder()
+    private val cdkBuilder: CfnTheme.MarginStyleProperty.Builder =
+        CfnTheme.MarginStyleProperty.builder()
 
-  /**
-   * @param show This Boolean value controls whether to display sheet margins.
-   */
-  public fun show(show: Boolean) {
-    cdkBuilder.show(show)
-  }
+    /** @param show This Boolean value controls whether to display sheet margins. */
+    public fun show(show: Boolean) {
+        cdkBuilder.show(show)
+    }
 
-  /**
-   * @param show This Boolean value controls whether to display sheet margins.
-   */
-  public fun show(show: IResolvable) {
-    cdkBuilder.show(show)
-  }
+    /** @param show This Boolean value controls whether to display sheet margins. */
+    public fun show(show: IResolvable) {
+        cdkBuilder.show(show)
+    }
 
-  public fun build(): CfnTheme.MarginStyleProperty = cdkBuilder.build()
+    public fun build(): CfnTheme.MarginStyleProperty = cdkBuilder.build()
 }

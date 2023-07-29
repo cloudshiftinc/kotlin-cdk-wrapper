@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.msk.CfnCluster
  * Details for SASL/IAM client authentication for VpcConnectivity.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.msk.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterVpcConnectivityIamPropertyDsl {
-  private val cdkBuilder: CfnCluster.VpcConnectivityIamProperty.Builder =
-      CfnCluster.VpcConnectivityIamProperty.builder()
+    private val cdkBuilder: CfnCluster.VpcConnectivityIamProperty.Builder =
+        CfnCluster.VpcConnectivityIamProperty.builder()
 
-  /**
-   * @param enabled SASL/IAM authentication is enabled or not. 
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled SASL/IAM authentication is enabled or not. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled SASL/IAM authentication is enabled or not. 
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled SASL/IAM authentication is enabled or not. */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  public fun build(): CfnCluster.VpcConnectivityIamProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.VpcConnectivityIamProperty = cdkBuilder.build()
 }

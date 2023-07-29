@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
  * generation.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.services.iotanalytics.CfnDataset
  */
 @CdkDslMarker
 public class CfnDatasetTriggeringDatasetPropertyDsl {
-  private val cdkBuilder: CfnDataset.TriggeringDatasetProperty.Builder =
-      CfnDataset.TriggeringDatasetProperty.builder()
+    private val cdkBuilder: CfnDataset.TriggeringDatasetProperty.Builder =
+        CfnDataset.TriggeringDatasetProperty.builder()
 
-  /**
-   * @param datasetName The name of the data set whose content generation triggers the new data set
-   * content generation. 
-   */
-  public fun datasetName(datasetName: String) {
-    cdkBuilder.datasetName(datasetName)
-  }
+    /**
+     * @param datasetName The name of the data set whose content generation triggers the new data
+     *   set content generation.
+     */
+    public fun datasetName(datasetName: String) {
+        cdkBuilder.datasetName(datasetName)
+    }
 
-  public fun build(): CfnDataset.TriggeringDatasetProperty = cdkBuilder.build()
+    public fun build(): CfnDataset.TriggeringDatasetProperty = cdkBuilder.build()
 }

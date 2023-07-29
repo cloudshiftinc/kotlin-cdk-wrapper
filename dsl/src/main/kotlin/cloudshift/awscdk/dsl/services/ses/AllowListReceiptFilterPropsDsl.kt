@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ses.AllowListReceiptFilterProps
  * Construction properties for am AllowListReceiptFilter.
  *
  * Example:
- *
  * ```
  * AllowListReceiptFilter.Builder.create(this, "AllowList")
  * .ips(List.of("10.0.0.0/16", "1.2.3.4/16"))
@@ -21,27 +29,23 @@ import software.amazon.awscdk.services.ses.AllowListReceiptFilterProps
  */
 @CdkDslMarker
 public class AllowListReceiptFilterPropsDsl {
-  private val cdkBuilder: AllowListReceiptFilterProps.Builder =
-      AllowListReceiptFilterProps.builder()
+    private val cdkBuilder: AllowListReceiptFilterProps.Builder =
+        AllowListReceiptFilterProps.builder()
 
-  private val _ips: MutableList<String> = mutableListOf()
+    private val _ips: MutableList<String> = mutableListOf()
 
-  /**
-   * @param ips A list of ip addresses or ranges to allow list. 
-   */
-  public fun ips(vararg ips: String) {
-    _ips.addAll(listOf(*ips))
-  }
+    /** @param ips A list of ip addresses or ranges to allow list. */
+    public fun ips(vararg ips: String) {
+        _ips.addAll(listOf(*ips))
+    }
 
-  /**
-   * @param ips A list of ip addresses or ranges to allow list. 
-   */
-  public fun ips(ips: Collection<String>) {
-    _ips.addAll(ips)
-  }
+    /** @param ips A list of ip addresses or ranges to allow list. */
+    public fun ips(ips: Collection<String>) {
+        _ips.addAll(ips)
+    }
 
-  public fun build(): AllowListReceiptFilterProps {
-    if(_ips.isNotEmpty()) cdkBuilder.ips(_ips)
-    return cdkBuilder.build()
-  }
+    public fun build(): AllowListReceiptFilterProps {
+        if (_ips.isNotEmpty()) cdkBuilder.ips(_ips)
+        return cdkBuilder.build()
+    }
 }

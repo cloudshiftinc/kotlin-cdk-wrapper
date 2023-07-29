@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ses.actions
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.ses.actions.BounceTemplateProps
  * Construction properties for a BounceTemplate.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,28 +33,22 @@ import software.amazon.awscdk.services.ses.actions.BounceTemplateProps
  */
 @CdkDslMarker
 public class BounceTemplatePropsDsl {
-  private val cdkBuilder: BounceTemplateProps.Builder = BounceTemplateProps.builder()
+    private val cdkBuilder: BounceTemplateProps.Builder = BounceTemplateProps.builder()
 
-  /**
-   * @param message Human-readable text to include in the bounce message. 
-   */
-  public fun message(message: String) {
-    cdkBuilder.message(message)
-  }
+    /** @param message Human-readable text to include in the bounce message. */
+    public fun message(message: String) {
+        cdkBuilder.message(message)
+    }
 
-  /**
-   * @param smtpReplyCode The SMTP reply code, as defined by RFC 5321. 
-   */
-  public fun smtpReplyCode(smtpReplyCode: String) {
-    cdkBuilder.smtpReplyCode(smtpReplyCode)
-  }
+    /** @param smtpReplyCode The SMTP reply code, as defined by RFC 5321. */
+    public fun smtpReplyCode(smtpReplyCode: String) {
+        cdkBuilder.smtpReplyCode(smtpReplyCode)
+    }
 
-  /**
-   * @param statusCode The SMTP enhanced status code, as defined by RFC 3463.
-   */
-  public fun statusCode(statusCode: String) {
-    cdkBuilder.statusCode(statusCode)
-  }
+    /** @param statusCode The SMTP enhanced status code, as defined by RFC 3463. */
+    public fun statusCode(statusCode: String) {
+        cdkBuilder.statusCode(statusCode)
+    }
 
-  public fun build(): BounceTemplateProps = cdkBuilder.build()
+    public fun build(): BounceTemplateProps = cdkBuilder.build()
 }

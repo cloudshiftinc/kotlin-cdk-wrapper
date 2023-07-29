@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.CfnTag
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -21,21 +29,17 @@ import software.amazon.awscdk.CfnTag
  */
 @CdkDslMarker
 public class CfnTagDsl {
-  private val cdkBuilder: CfnTag.Builder = CfnTag.builder()
+    private val cdkBuilder: CfnTag.Builder = CfnTag.builder()
 
-  /**
-   * @param key the value to be set. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key the value to be set. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value the value to be set. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value the value to be set. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnTag = cdkBuilder.build()
+    public fun build(): CfnTag = cdkBuilder.build()
 }

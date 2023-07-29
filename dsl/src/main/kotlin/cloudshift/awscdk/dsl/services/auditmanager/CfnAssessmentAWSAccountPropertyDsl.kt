@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.auditmanager
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.auditmanager.CfnAssessment
  * ID, email address, and so on.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,29 +35,23 @@ import software.amazon.awscdk.services.auditmanager.CfnAssessment
  */
 @CdkDslMarker
 public class CfnAssessmentAWSAccountPropertyDsl {
-  private val cdkBuilder: CfnAssessment.AWSAccountProperty.Builder =
-      CfnAssessment.AWSAccountProperty.builder()
+    private val cdkBuilder: CfnAssessment.AWSAccountProperty.Builder =
+        CfnAssessment.AWSAccountProperty.builder()
 
-  /**
-   * @param emailAddress The email address that's associated with the AWS account .
-   */
-  public fun emailAddress(emailAddress: String) {
-    cdkBuilder.emailAddress(emailAddress)
-  }
+    /** @param emailAddress The email address that's associated with the AWS account . */
+    public fun emailAddress(emailAddress: String) {
+        cdkBuilder.emailAddress(emailAddress)
+    }
 
-  /**
-   * @param id The identifier for the AWS account .
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The identifier for the AWS account . */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param name The name of the AWS account .
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name The name of the AWS account . */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): CfnAssessment.AWSAccountProperty = cdkBuilder.build()
+    public fun build(): CfnAssessment.AWSAccountProperty = cdkBuilder.build()
 }

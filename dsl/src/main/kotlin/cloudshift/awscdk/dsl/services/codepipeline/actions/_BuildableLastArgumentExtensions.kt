@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codepipeline.actions
 
@@ -12,38 +21,38 @@ import software.amazon.awscdk.services.codepipeline.actions.CloudFormationDelete
 /**
  * Add statement to the service role assumed by CloudFormation while executing this action.
  *
- * @param statement 
+ * @param statement
  */
-public inline
-    fun CloudFormationDeleteStackAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
-    = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToDeploymentRolePolicy(builder.build())
+public inline fun CloudFormationDeleteStackAction.addToDeploymentRolePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): Boolean {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToDeploymentRolePolicy(builder.build())
 }
 
 /**
  * Add statement to the service role assumed by CloudFormation while executing this action.
  *
- * @param statement 
+ * @param statement
  */
-public inline
-    fun CloudFormationCreateReplaceChangeSetAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
-    = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToDeploymentRolePolicy(builder.build())
+public inline fun CloudFormationCreateReplaceChangeSetAction.addToDeploymentRolePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): Boolean {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToDeploymentRolePolicy(builder.build())
 }
 
 /**
  * Add statement to the service role assumed by CloudFormation while executing this action.
  *
- * @param statement 
+ * @param statement
  */
-public inline
-    fun CloudFormationCreateUpdateStackAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
-    = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToDeploymentRolePolicy(builder.build())
+public inline fun CloudFormationCreateUpdateStackAction.addToDeploymentRolePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): Boolean {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToDeploymentRolePolicy(builder.build())
 }

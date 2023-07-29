@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.pipelines
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.pipelines.DockerCredentialUsage
 import software.amazon.awscdk.pipelines.EcrDockerCredentialOptions
 import software.amazon.awscdk.services.iam.IRole
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 
 /**
  * Options for defining access for a Docker Credential composed of ECR repos.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,20 +36,19 @@ import kotlin.collections.MutableList
  */
 @CdkDslMarker
 public class EcrDockerCredentialOptionsDsl {
-    private val cdkBuilder: EcrDockerCredentialOptions.Builder = EcrDockerCredentialOptions.builder()
+    private val cdkBuilder: EcrDockerCredentialOptions.Builder =
+        EcrDockerCredentialOptions.builder()
 
     private val _usages: MutableList<DockerCredentialUsage> = mutableListOf()
 
-    /**
-     * @param assumeRole An IAM role to assume prior to accessing the secret.
-     */
+    /** @param assumeRole An IAM role to assume prior to accessing the secret. */
     public fun assumeRole(assumeRole: IRole) {
         cdkBuilder.assumeRole(assumeRole)
     }
 
     /**
      * @param usages Defines which stages of the pipeline should be granted access to these
-     * credentials.
+     *   credentials.
      */
     public fun usages(vararg usages: DockerCredentialUsage) {
         _usages.addAll(listOf(*usages))
@@ -49,7 +56,7 @@ public class EcrDockerCredentialOptionsDsl {
 
     /**
      * @param usages Defines which stages of the pipeline should be granted access to these
-     * credentials.
+     *   credentials.
      */
     public fun usages(usages: Collection<DockerCredentialUsage>) {
         _usages.addAll(usages)

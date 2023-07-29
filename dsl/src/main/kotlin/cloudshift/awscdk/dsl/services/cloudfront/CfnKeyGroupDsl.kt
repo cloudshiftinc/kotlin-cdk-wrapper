@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -11,12 +20,11 @@ import software.constructs.Construct
 /**
  * A key group.
  *
- * A key group contains a list of public keys that you can use with [CloudFront signed URLs and
- * signed
- * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) .
+ * A key group contains a list of public keys that you can use with
+ * [CloudFront signed URLs and signed cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+ * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -35,30 +43,32 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnKeyGroupDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnKeyGroup.Builder = CfnKeyGroup.Builder.create(scope, id)
+    private val cdkBuilder: CfnKeyGroup.Builder = CfnKeyGroup.Builder.create(scope, id)
 
-  /**
-   * The key group configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html#cfn-cloudfront-keygroup-keygroupconfig)
-   * @param keyGroupConfig The key group configuration. 
-   */
-  public fun keyGroupConfig(keyGroupConfig: IResolvable) {
-    cdkBuilder.keyGroupConfig(keyGroupConfig)
-  }
+    /**
+     * The key group configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html#cfn-cloudfront-keygroup-keygroupconfig)
+     *
+     * @param keyGroupConfig The key group configuration.
+     */
+    public fun keyGroupConfig(keyGroupConfig: IResolvable) {
+        cdkBuilder.keyGroupConfig(keyGroupConfig)
+    }
 
-  /**
-   * The key group configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html#cfn-cloudfront-keygroup-keygroupconfig)
-   * @param keyGroupConfig The key group configuration. 
-   */
-  public fun keyGroupConfig(keyGroupConfig: CfnKeyGroup.KeyGroupConfigProperty) {
-    cdkBuilder.keyGroupConfig(keyGroupConfig)
-  }
+    /**
+     * The key group configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html#cfn-cloudfront-keygroup-keygroupconfig)
+     *
+     * @param keyGroupConfig The key group configuration.
+     */
+    public fun keyGroupConfig(keyGroupConfig: CfnKeyGroup.KeyGroupConfigProperty) {
+        cdkBuilder.keyGroupConfig(keyGroupConfig)
+    }
 
-  public fun build(): CfnKeyGroup = cdkBuilder.build()
+    public fun build(): CfnKeyGroup = cdkBuilder.build()
 }

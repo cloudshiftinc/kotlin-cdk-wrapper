@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appstream
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appstream.CfnApplication
  * The S3 location of the application icon.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.appstream.CfnApplication
  */
 @CdkDslMarker
 public class CfnApplicationS3LocationPropertyDsl {
-  private val cdkBuilder: CfnApplication.S3LocationProperty.Builder =
-      CfnApplication.S3LocationProperty.builder()
+    private val cdkBuilder: CfnApplication.S3LocationProperty.Builder =
+        CfnApplication.S3LocationProperty.builder()
 
-  /**
-   * @param s3Bucket The S3 bucket of the S3 object. 
-   */
-  public fun s3Bucket(s3Bucket: String) {
-    cdkBuilder.s3Bucket(s3Bucket)
-  }
+    /** @param s3Bucket The S3 bucket of the S3 object. */
+    public fun s3Bucket(s3Bucket: String) {
+        cdkBuilder.s3Bucket(s3Bucket)
+    }
 
-  /**
-   * @param s3Key The S3 key of the S3 object. 
-   */
-  public fun s3Key(s3Key: String) {
-    cdkBuilder.s3Key(s3Key)
-  }
+    /** @param s3Key The S3 key of the S3 object. */
+    public fun s3Key(s3Key: String) {
+        cdkBuilder.s3Key(s3Key)
+    }
 
-  public fun build(): CfnApplication.S3LocationProperty = cdkBuilder.build()
+    public fun build(): CfnApplication.S3LocationProperty = cdkBuilder.build()
 }

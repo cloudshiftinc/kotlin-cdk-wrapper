@@ -1,10 +1,19 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 /**
  * A *sheet* , which is an object that contains a set of visuals that are viewed together on one
@@ -15,7 +24,6 @@ import kotlin.String
  * associated with other components, such as controls, filters, and so on.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,16 +41,14 @@ public class CfnAnalysisSheetPropertyDsl {
     private val cdkBuilder: CfnAnalysis.SheetProperty.Builder = CfnAnalysis.SheetProperty.builder()
 
     /**
-     * @param name The name of a sheet.
-     * This name is displayed on the sheet's tab in the Amazon QuickSight console.
+     * @param name The name of a sheet. This name is displayed on the sheet's tab in the Amazon
+     *   QuickSight console.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param sheetId The unique identifier associated with a sheet.
-     */
+    /** @param sheetId The unique identifier associated with a sheet. */
     public fun sheetId(sheetId: String) {
         cdkBuilder.sheetId(sheetId)
     }

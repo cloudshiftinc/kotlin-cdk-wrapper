@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Formatting configuration for string fields.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -92,40 +100,38 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  */
 @CdkDslMarker
 public class CfnAnalysisStringFormatConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.StringFormatConfigurationProperty.Builder =
-      CfnAnalysis.StringFormatConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.StringFormatConfigurationProperty.Builder =
+        CfnAnalysis.StringFormatConfigurationProperty.builder()
 
-  /**
-   * @param nullValueFormatConfiguration The options that determine the null value format
-   * configuration.
-   */
-  public fun nullValueFormatConfiguration(nullValueFormatConfiguration: IResolvable) {
-    cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
-  }
+    /**
+     * @param nullValueFormatConfiguration The options that determine the null value format
+     *   configuration.
+     */
+    public fun nullValueFormatConfiguration(nullValueFormatConfiguration: IResolvable) {
+        cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
+    }
 
-  /**
-   * @param nullValueFormatConfiguration The options that determine the null value format
-   * configuration.
-   */
-  public
-      fun nullValueFormatConfiguration(nullValueFormatConfiguration: CfnAnalysis.NullValueFormatConfigurationProperty) {
-    cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
-  }
+    /**
+     * @param nullValueFormatConfiguration The options that determine the null value format
+     *   configuration.
+     */
+    public fun nullValueFormatConfiguration(
+        nullValueFormatConfiguration: CfnAnalysis.NullValueFormatConfigurationProperty
+    ) {
+        cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
+    }
 
-  /**
-   * @param numericFormatConfiguration The formatting configuration for numeric strings.
-   */
-  public fun numericFormatConfiguration(numericFormatConfiguration: IResolvable) {
-    cdkBuilder.numericFormatConfiguration(numericFormatConfiguration)
-  }
+    /** @param numericFormatConfiguration The formatting configuration for numeric strings. */
+    public fun numericFormatConfiguration(numericFormatConfiguration: IResolvable) {
+        cdkBuilder.numericFormatConfiguration(numericFormatConfiguration)
+    }
 
-  /**
-   * @param numericFormatConfiguration The formatting configuration for numeric strings.
-   */
-  public
-      fun numericFormatConfiguration(numericFormatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty) {
-    cdkBuilder.numericFormatConfiguration(numericFormatConfiguration)
-  }
+    /** @param numericFormatConfiguration The formatting configuration for numeric strings. */
+    public fun numericFormatConfiguration(
+        numericFormatConfiguration: CfnAnalysis.NumericFormatConfigurationProperty
+    ) {
+        cdkBuilder.numericFormatConfiguration(numericFormatConfiguration)
+    }
 
-  public fun build(): CfnAnalysis.StringFormatConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.StringFormatConfigurationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -9,7 +18,6 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
 /**
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -53,43 +61,33 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
  */
 @CdkDslMarker
 public class CfnEndpointConfigClarifyExplainerConfigPropertyDsl {
-  private val cdkBuilder: CfnEndpointConfig.ClarifyExplainerConfigProperty.Builder =
-      CfnEndpointConfig.ClarifyExplainerConfigProperty.builder()
+    private val cdkBuilder: CfnEndpointConfig.ClarifyExplainerConfigProperty.Builder =
+        CfnEndpointConfig.ClarifyExplainerConfigProperty.builder()
 
-  /**
-   * @param enableExplanations the value to be set.
-   */
-  public fun enableExplanations(enableExplanations: String) {
-    cdkBuilder.enableExplanations(enableExplanations)
-  }
+    /** @param enableExplanations the value to be set. */
+    public fun enableExplanations(enableExplanations: String) {
+        cdkBuilder.enableExplanations(enableExplanations)
+    }
 
-  /**
-   * @param inferenceConfig the value to be set.
-   */
-  public fun inferenceConfig(inferenceConfig: IResolvable) {
-    cdkBuilder.inferenceConfig(inferenceConfig)
-  }
+    /** @param inferenceConfig the value to be set. */
+    public fun inferenceConfig(inferenceConfig: IResolvable) {
+        cdkBuilder.inferenceConfig(inferenceConfig)
+    }
 
-  /**
-   * @param inferenceConfig the value to be set.
-   */
-  public fun inferenceConfig(inferenceConfig: CfnEndpointConfig.ClarifyInferenceConfigProperty) {
-    cdkBuilder.inferenceConfig(inferenceConfig)
-  }
+    /** @param inferenceConfig the value to be set. */
+    public fun inferenceConfig(inferenceConfig: CfnEndpointConfig.ClarifyInferenceConfigProperty) {
+        cdkBuilder.inferenceConfig(inferenceConfig)
+    }
 
-  /**
-   * @param shapConfig the value to be set. 
-   */
-  public fun shapConfig(shapConfig: IResolvable) {
-    cdkBuilder.shapConfig(shapConfig)
-  }
+    /** @param shapConfig the value to be set. */
+    public fun shapConfig(shapConfig: IResolvable) {
+        cdkBuilder.shapConfig(shapConfig)
+    }
 
-  /**
-   * @param shapConfig the value to be set. 
-   */
-  public fun shapConfig(shapConfig: CfnEndpointConfig.ClarifyShapConfigProperty) {
-    cdkBuilder.shapConfig(shapConfig)
-  }
+    /** @param shapConfig the value to be set. */
+    public fun shapConfig(shapConfig: CfnEndpointConfig.ClarifyShapConfigProperty) {
+        cdkBuilder.shapConfig(shapConfig)
+    }
 
-  public fun build(): CfnEndpointConfig.ClarifyExplainerConfigProperty = cdkBuilder.build()
+    public fun build(): CfnEndpointConfig.ClarifyExplainerConfigProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront.experimental
 
@@ -20,27 +29,31 @@ import software.amazon.awscdk.services.lambda.FunctionUrl
 /**
  * Defines an alias for this version.
  *
- * @param aliasName 
+ * @param aliasName
  * @param options
  */
-public inline fun EdgeFunction.addAlias(aliasName: String, block: AliasOptionsDsl.() -> Unit = {}):
-    Alias {
-  val builder = AliasOptionsDsl()
-  builder.apply(block)
-  return addAlias(aliasName, builder.build())
+public inline fun EdgeFunction.addAlias(
+    aliasName: String,
+    block: AliasOptionsDsl.() -> Unit = {}
+): Alias {
+    val builder = AliasOptionsDsl()
+    builder.apply(block)
+    return addAlias(aliasName, builder.build())
 }
 
 /**
  * Adds an event source that maps to this AWS Lambda function.
  *
- * @param id 
- * @param options 
+ * @param id
+ * @param options
  */
-public inline fun EdgeFunction.addEventSourceMapping(id: String,
-    block: EventSourceMappingOptionsDsl.() -> Unit = {}): EventSourceMapping {
-  val builder = EventSourceMappingOptionsDsl()
-  builder.apply(block)
-  return addEventSourceMapping(id, builder.build())
+public inline fun EdgeFunction.addEventSourceMapping(
+    id: String,
+    block: EventSourceMappingOptionsDsl.() -> Unit = {}
+): EventSourceMapping {
+    val builder = EventSourceMappingOptionsDsl()
+    builder.apply(block)
+    return addEventSourceMapping(id, builder.build())
 }
 
 /**
@@ -48,59 +61,63 @@ public inline fun EdgeFunction.addEventSourceMapping(id: String,
  *
  * @param options
  */
-public inline fun EdgeFunction.addFunctionUrl(block: FunctionUrlOptionsDsl.() -> Unit = {}):
-    FunctionUrl {
-  val builder = FunctionUrlOptionsDsl()
-  builder.apply(block)
-  return addFunctionUrl(builder.build())
+public inline fun EdgeFunction.addFunctionUrl(
+    block: FunctionUrlOptionsDsl.() -> Unit = {}
+): FunctionUrl {
+    val builder = FunctionUrlOptionsDsl()
+    builder.apply(block)
+    return addFunctionUrl(builder.build())
 }
 
 /**
  * Adds a permission to the Lambda resource policy.
  *
- * @param id 
- * @param permission 
+ * @param id
+ * @param permission
  */
 public inline fun EdgeFunction.addPermission(id: String, block: PermissionDsl.() -> Unit = {}) {
-  val builder = PermissionDsl()
-  builder.apply(block)
-  return addPermission(id, builder.build())
+    val builder = PermissionDsl()
+    builder.apply(block)
+    return addPermission(id, builder.build())
 }
 
 /**
  * Adds a statement to the IAM role assumed by the instance.
  *
- * @param statement 
+ * @param statement
  */
 public inline fun EdgeFunction.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToRolePolicy(builder.build())
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToRolePolicy(builder.build())
 }
 
 /**
  * Configures options for asynchronous invocation.
  *
- * @param options 
+ * @param options
  */
-public inline fun EdgeFunction.configureAsyncInvoke(block: EventInvokeConfigOptionsDsl.() -> Unit =
-    {}) {
-  val builder = EventInvokeConfigOptionsDsl()
-  builder.apply(block)
-  return configureAsyncInvoke(builder.build())
+public inline fun EdgeFunction.configureAsyncInvoke(
+    block: EventInvokeConfigOptionsDsl.() -> Unit = {}
+) {
+    val builder = EventInvokeConfigOptionsDsl()
+    builder.apply(block)
+    return configureAsyncInvoke(builder.build())
 }
 
 /**
  * Return the given named metric for this Lambda Return the given named metric for this Function.
  *
- * @param metricName 
+ * @param metricName
  * @param props
  */
-public inline fun EdgeFunction.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
+public inline fun EdgeFunction.metric(
+    metricName: String,
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(metricName, builder.build())
 }
 
 /**
@@ -111,9 +128,9 @@ public inline fun EdgeFunction.metric(metricName: String, block: MetricOptionsDs
  * @param props
  */
 public inline fun EdgeFunction.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricDuration(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricDuration(builder.build())
 }
 
 /**
@@ -124,9 +141,9 @@ public inline fun EdgeFunction.metricDuration(block: MetricOptionsDsl.() -> Unit
  * @param props
  */
 public inline fun EdgeFunction.metricErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricErrors(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricErrors(builder.build())
 }
 
 /**
@@ -137,9 +154,9 @@ public inline fun EdgeFunction.metricErrors(block: MetricOptionsDsl.() -> Unit =
  * @param props
  */
 public inline fun EdgeFunction.metricInvocations(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricInvocations(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricInvocations(builder.build())
 }
 
 /**
@@ -150,7 +167,7 @@ public inline fun EdgeFunction.metricInvocations(block: MetricOptionsDsl.() -> U
  * @param props
  */
 public inline fun EdgeFunction.metricThrottles(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricThrottles(builder.build())
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottles(builder.build())
 }

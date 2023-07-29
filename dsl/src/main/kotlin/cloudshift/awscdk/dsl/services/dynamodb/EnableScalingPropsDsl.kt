@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.dynamodb.EnableScalingProps
  * Properties for enabling DynamoDB capacity scaling.
  *
  * Example:
- *
  * ```
  * Table globalTable = Table.Builder.create(this, "Table")
  * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
@@ -25,21 +33,17 @@ import software.amazon.awscdk.services.dynamodb.EnableScalingProps
  */
 @CdkDslMarker
 public class EnableScalingPropsDsl {
-  private val cdkBuilder: EnableScalingProps.Builder = EnableScalingProps.builder()
+    private val cdkBuilder: EnableScalingProps.Builder = EnableScalingProps.builder()
 
-  /**
-   * @param maxCapacity Maximum capacity to scale to. 
-   */
-  public fun maxCapacity(maxCapacity: Number) {
-    cdkBuilder.maxCapacity(maxCapacity)
-  }
+    /** @param maxCapacity Maximum capacity to scale to. */
+    public fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
+    }
 
-  /**
-   * @param minCapacity Minimum capacity to scale to. 
-   */
-  public fun minCapacity(minCapacity: Number) {
-    cdkBuilder.minCapacity(minCapacity)
-  }
+    /** @param minCapacity Minimum capacity to scale to. */
+    public fun minCapacity(minCapacity: Number) {
+        cdkBuilder.minCapacity(minCapacity)
+    }
 
-  public fun build(): EnableScalingProps = cdkBuilder.build()
+    public fun build(): EnableScalingProps = cdkBuilder.build()
 }

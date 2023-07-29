@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  * The default value is 512, but it can be any whole number between 512 and 10,240 MB.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,15 +34,13 @@ import software.amazon.awscdk.services.lambda.CfnFunction
  */
 @CdkDslMarker
 public class CfnFunctionEphemeralStoragePropertyDsl {
-  private val cdkBuilder: CfnFunction.EphemeralStorageProperty.Builder =
-      CfnFunction.EphemeralStorageProperty.builder()
+    private val cdkBuilder: CfnFunction.EphemeralStorageProperty.Builder =
+        CfnFunction.EphemeralStorageProperty.builder()
 
-  /**
-   * @param size The size of the function's `/tmp` directory. 
-   */
-  public fun size(size: Number) {
-    cdkBuilder.size(size)
-  }
+    /** @param size The size of the function's `/tmp` directory. */
+    public fun size(size: Number) {
+        cdkBuilder.size(size)
+    }
 
-  public fun build(): CfnFunction.EphemeralStorageProperty = cdkBuilder.build()
+    public fun build(): CfnFunction.EphemeralStorageProperty = cdkBuilder.build()
 }

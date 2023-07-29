@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * Determines the color that is applied to a particular data value.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,12 @@ public class CfnDashboardDataColorPropertyDsl {
     private val cdkBuilder: CfnDashboard.DataColorProperty.Builder =
         CfnDashboard.DataColorProperty.builder()
 
-    /**
-     * @param color The color that is applied to the data value.
-     */
+    /** @param color The color that is applied to the data value. */
     public fun color(color: String) {
         cdkBuilder.color(color)
     }
 
-    /**
-     * @param dataValue The data value that the color is applied to.
-     */
+    /** @param dataValue The data value that the color is applied to. */
     public fun dataValue(dataValue: Number) {
         cdkBuilder.dataValue(dataValue)
     }

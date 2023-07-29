@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
  * file.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,18 +35,18 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
  */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayTlsValidationContextFileTrustPropertyDsl {
-  private val cdkBuilder:
-      CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.Builder =
-      CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+    private val cdkBuilder:
+        CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.Builder =
+        CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.builder()
 
-  /**
-   * @param certificateChain The certificate trust chain for a certificate stored on the file system
-   * of the virtual node that the proxy is running on. 
-   */
-  public fun certificateChain(certificateChain: String) {
-    cdkBuilder.certificateChain(certificateChain)
-  }
+    /**
+     * @param certificateChain The certificate trust chain for a certificate stored on the file
+     *   system of the virtual node that the proxy is running on.
+     */
+    public fun certificateChain(certificateChain: String) {
+        cdkBuilder.certificateChain(certificateChain)
+    }
 
-  public fun build(): CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty =
-      cdkBuilder.build()
+    public fun build(): CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty =
+        cdkBuilder.build()
 }

@@ -1,18 +1,26 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicecatalog
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion
-import software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion
+import software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate
 
 /**
  * Properties of product version (also known as a provisioning artifact).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,31 +42,26 @@ public class CloudFormationProductVersionDsl {
         CloudFormationProductVersion.builder()
 
     /**
-     * @param cloudFormationTemplate The S3 template that points to the provisioning version template.
-     *
+     * @param cloudFormationTemplate The S3 template that points to the provisioning version
+     *   template.
      */
     public fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate) {
         cdkBuilder.cloudFormationTemplate(cloudFormationTemplate)
     }
 
-    /**
-     * @param description The description of the product version.
-     */
+    /** @param description The description of the product version. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /**
-     * @param productVersionName The name of the product version.
-     */
+    /** @param productVersionName The name of the product version. */
     public fun productVersionName(productVersionName: String) {
         cdkBuilder.productVersionName(productVersionName)
     }
 
     /**
      * @param validateTemplate Whether the specified product template will be validated by
-     * CloudFormation.
-     * If turned off, an invalid template configuration can be stored.
+     *   CloudFormation. If turned off, an invalid template configuration can be stored.
      */
     public fun validateTemplate(validateTemplate: Boolean) {
         cdkBuilder.validateTemplate(validateTemplate)

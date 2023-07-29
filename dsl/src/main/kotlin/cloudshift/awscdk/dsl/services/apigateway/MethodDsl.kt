@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
@@ -13,7 +22,6 @@ import software.constructs.Construct
 
 /**
  * Example:
- *
  * ```
  * LambdaIntegration integration;
  * RestApi api = new RestApi(this, "hello-api");
@@ -34,80 +42,79 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class MethodDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: Method.Builder = Method.Builder.create(scope, id)
+    private val cdkBuilder: Method.Builder = Method.Builder.create(scope, id)
 
-  /**
-   * The HTTP method ("GET", "POST", "PUT", ...) that clients use to call this method.
-   *
-   * @param httpMethod The HTTP method ("GET", "POST", "PUT", ...) that clients use to call this
-   * method. 
-   */
-  public fun httpMethod(httpMethod: String) {
-    cdkBuilder.httpMethod(httpMethod)
-  }
+    /**
+     * The HTTP method ("GET", "POST", "PUT", ...) that clients use to call this method.
+     *
+     * @param httpMethod The HTTP method ("GET", "POST", "PUT", ...) that clients use to call this
+     *   method.
+     */
+    public fun httpMethod(httpMethod: String) {
+        cdkBuilder.httpMethod(httpMethod)
+    }
 
-  /**
-   * The backend system that the method calls when it receives a request.
-   *
-   * Default: - a new `MockIntegration`.
-   *
-   * @param integration The backend system that the method calls when it receives a request. 
-   */
-  public fun integration(integration: IntegrationDsl.() -> Unit = {}) {
-    val builder = IntegrationDsl()
-    builder.apply(integration)
-    cdkBuilder.integration(builder.build())
-  }
+    /**
+     * The backend system that the method calls when it receives a request.
+     *
+     * Default: - a new `MockIntegration`.
+     *
+     * @param integration The backend system that the method calls when it receives a request.
+     */
+    public fun integration(integration: IntegrationDsl.() -> Unit = {}) {
+        val builder = IntegrationDsl()
+        builder.apply(integration)
+        cdkBuilder.integration(builder.build())
+    }
 
-  /**
-   * The backend system that the method calls when it receives a request.
-   *
-   * Default: - a new `MockIntegration`.
-   *
-   * @param integration The backend system that the method calls when it receives a request. 
-   */
-  public fun integration(integration: Integration) {
-    cdkBuilder.integration(integration)
-  }
+    /**
+     * The backend system that the method calls when it receives a request.
+     *
+     * Default: - a new `MockIntegration`.
+     *
+     * @param integration The backend system that the method calls when it receives a request.
+     */
+    public fun integration(integration: Integration) {
+        cdkBuilder.integration(integration)
+    }
 
-  /**
-   * Method options.
-   *
-   * Default: - No options.
-   *
-   * @param options Method options. 
-   */
-  public fun options(options: MethodOptionsDsl.() -> Unit = {}) {
-    val builder = MethodOptionsDsl()
-    builder.apply(options)
-    cdkBuilder.options(builder.build())
-  }
+    /**
+     * Method options.
+     *
+     * Default: - No options.
+     *
+     * @param options Method options.
+     */
+    public fun options(options: MethodOptionsDsl.() -> Unit = {}) {
+        val builder = MethodOptionsDsl()
+        builder.apply(options)
+        cdkBuilder.options(builder.build())
+    }
 
-  /**
-   * Method options.
-   *
-   * Default: - No options.
-   *
-   * @param options Method options. 
-   */
-  public fun options(options: MethodOptions) {
-    cdkBuilder.options(options)
-  }
+    /**
+     * Method options.
+     *
+     * Default: - No options.
+     *
+     * @param options Method options.
+     */
+    public fun options(options: MethodOptions) {
+        cdkBuilder.options(options)
+    }
 
-  /**
-   * The resource this method is associated with.
-   *
-   * For root resource methods,
-   * specify the `RestApi` object.
-   *
-   * @param resource The resource this method is associated with. 
-   */
-  public fun resource(resource: IResource) {
-    cdkBuilder.resource(resource)
-  }
+    /**
+     * The resource this method is associated with.
+     *
+     * For root resource methods, specify the `RestApi` object.
+     *
+     * @param resource The resource this method is associated with.
+     */
+    public fun resource(resource: IResource) {
+        cdkBuilder.resource(resource)
+    }
 
-  public fun build(): Method = cdkBuilder.build()
+    public fun build(): Method = cdkBuilder.build()
 }

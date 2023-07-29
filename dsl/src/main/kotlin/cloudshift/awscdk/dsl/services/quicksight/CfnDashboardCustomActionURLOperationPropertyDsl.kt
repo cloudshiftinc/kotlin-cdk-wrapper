@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.String
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 /**
  * The URL operation that opens a link to another webpage.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,9 +38,8 @@ public class CfnDashboardCustomActionURLOperationPropertyDsl {
         CfnDashboard.CustomActionURLOperationProperty.builder()
 
     /**
-     * @param urlTarget The target of the `CustomActionURLOperation` .
-     * Valid values are defined as follows:
-     *
+     * @param urlTarget The target of the `CustomActionURLOperation` . Valid values are defined as
+     *   follows:
      * * `NEW_TAB` : Opens the target URL in a new browser tab.
      * * `NEW_WINDOW` : Opens the target URL in a new browser window.
      * * `SAME_TAB` : Opens the target URL in the same browser tab.
@@ -41,9 +48,7 @@ public class CfnDashboardCustomActionURLOperationPropertyDsl {
         cdkBuilder.urlTarget(urlTarget)
     }
 
-    /**
-     * @param urlTemplate THe URL link of the `CustomActionURLOperation` .
-     */
+    /** @param urlTemplate THe URL link of the `CustomActionURLOperation` . */
     public fun urlTemplate(urlTemplate: String) {
         cdkBuilder.urlTemplate(urlTemplate)
     }

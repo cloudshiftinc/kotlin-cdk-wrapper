@@ -1,21 +1,29 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.codebuild.CfnProject
 import kotlin.String
+import software.amazon.awscdk.services.codebuild.CfnProject
 
 /**
- * `SourceAuth` is a property of the [AWS CodeBuild Project
- * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
- * property type that specifies authorization settings for AWS CodeBuild to access the source code to
- * be built.
+ * `SourceAuth` is a property of the
+ * [AWS CodeBuild Project Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+ * property type that specifies authorization settings for AWS CodeBuild to access the source code
+ * to be built.
  *
  * `SourceAuth` is for use by the CodeBuild console only. Do not get or set it directly.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -45,7 +53,7 @@ public class CfnProjectSourceAuthPropertyDsl {
 
     /**
      * @param type The authorization type to use. The only valid value is `OAUTH` , which represents
-     * the OAuth authorization type.
+     *   the OAuth authorization type.
      *
      * This data type is used by the AWS CodeBuild console only.
      */

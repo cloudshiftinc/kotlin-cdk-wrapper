@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.logs
 
@@ -17,13 +26,11 @@ import software.constructs.Construct
  * There is no limit on the number of log streams that you can create for a log group.
  *
  * You must use the following guidelines when naming a log stream:
- *
  * * Log stream names must be unique within the log group.
  * * Log stream names can be between 1 and 512 characters long.
  * * The ':' (colon) and '*' (asterisk) characters are not allowed.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -39,32 +46,34 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnLogStreamDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnLogStream.Builder = CfnLogStream.Builder.create(scope, id)
+    private val cdkBuilder: CfnLogStream.Builder = CfnLogStream.Builder.create(scope, id)
 
-  /**
-   * The name of the log group where the log stream is created.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-loggroupname)
-   * @param logGroupName The name of the log group where the log stream is created. 
-   */
-  public fun logGroupName(logGroupName: String) {
-    cdkBuilder.logGroupName(logGroupName)
-  }
+    /**
+     * The name of the log group where the log stream is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-loggroupname)
+     *
+     * @param logGroupName The name of the log group where the log stream is created.
+     */
+    public fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+    }
 
-  /**
-   * The name of the log stream.
-   *
-   * The name must be unique within the log group.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-logstreamname)
-   * @param logStreamName The name of the log stream. 
-   */
-  public fun logStreamName(logStreamName: String) {
-    cdkBuilder.logStreamName(logStreamName)
-  }
+    /**
+     * The name of the log stream.
+     *
+     * The name must be unique within the log group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-logstreamname)
+     *
+     * @param logStreamName The name of the log stream.
+     */
+    public fun logStreamName(logStreamName: String) {
+        cdkBuilder.logStreamName(logStreamName)
+    }
 
-  public fun build(): CfnLogStream = cdkBuilder.build()
+    public fun build(): CfnLogStream = cdkBuilder.build()
 }

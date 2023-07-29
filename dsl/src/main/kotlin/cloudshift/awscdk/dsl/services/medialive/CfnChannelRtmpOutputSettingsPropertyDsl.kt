@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  * The parent of this entity is OutputSettings.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -33,48 +41,46 @@ import software.amazon.awscdk.services.medialive.CfnChannel
  */
 @CdkDslMarker
 public class CfnChannelRtmpOutputSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.RtmpOutputSettingsProperty.Builder =
-      CfnChannel.RtmpOutputSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.RtmpOutputSettingsProperty.Builder =
+        CfnChannel.RtmpOutputSettingsProperty.builder()
 
-  /**
-   * @param certificateMode If set to verifyAuthenticity, verifies the TLS certificate chain to a
-   * trusted certificate authority (CA).
-   * This causes RTMPS outputs with self-signed certificates to fail.
-   */
-  public fun certificateMode(certificateMode: String) {
-    cdkBuilder.certificateMode(certificateMode)
-  }
+    /**
+     * @param certificateMode If set to verifyAuthenticity, verifies the TLS certificate chain to a
+     *   trusted certificate authority (CA). This causes RTMPS outputs with self-signed certificates
+     *   to fail.
+     */
+    public fun certificateMode(certificateMode: String) {
+        cdkBuilder.certificateMode(certificateMode)
+    }
 
-  /**
-   * @param connectionRetryInterval The number of seconds to wait before retrying a connection to
-   * the Flash Media server if the connection is lost.
-   */
-  public fun connectionRetryInterval(connectionRetryInterval: Number) {
-    cdkBuilder.connectionRetryInterval(connectionRetryInterval)
-  }
+    /**
+     * @param connectionRetryInterval The number of seconds to wait before retrying a connection to
+     *   the Flash Media server if the connection is lost.
+     */
+    public fun connectionRetryInterval(connectionRetryInterval: Number) {
+        cdkBuilder.connectionRetryInterval(connectionRetryInterval)
+    }
 
-  /**
-   * @param destination The RTMP endpoint excluding the stream name (for example,
-   * rtmp://host/appname).
-   */
-  public fun destination(destination: IResolvable) {
-    cdkBuilder.destination(destination)
-  }
+    /**
+     * @param destination The RTMP endpoint excluding the stream name (for example,
+     *   rtmp://host/appname).
+     */
+    public fun destination(destination: IResolvable) {
+        cdkBuilder.destination(destination)
+    }
 
-  /**
-   * @param destination The RTMP endpoint excluding the stream name (for example,
-   * rtmp://host/appname).
-   */
-  public fun destination(destination: CfnChannel.OutputLocationRefProperty) {
-    cdkBuilder.destination(destination)
-  }
+    /**
+     * @param destination The RTMP endpoint excluding the stream name (for example,
+     *   rtmp://host/appname).
+     */
+    public fun destination(destination: CfnChannel.OutputLocationRefProperty) {
+        cdkBuilder.destination(destination)
+    }
 
-  /**
-   * @param numRetries The number of retry attempts.
-   */
-  public fun numRetries(numRetries: Number) {
-    cdkBuilder.numRetries(numRetries)
-  }
+    /** @param numRetries The number of retry attempts. */
+    public fun numRetries(numRetries: Number) {
+        cdkBuilder.numRetries(numRetries)
+    }
 
-  public fun build(): CfnChannel.RtmpOutputSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.RtmpOutputSettingsProperty = cdkBuilder.build()
 }

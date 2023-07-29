@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.nimblestudio
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
  * A parameter for a studio component script, in the form of a key-value pair.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
  */
 @CdkDslMarker
 public class CfnStudioComponentScriptParameterKeyValuePropertyDsl {
-  private val cdkBuilder: CfnStudioComponent.ScriptParameterKeyValueProperty.Builder =
-      CfnStudioComponent.ScriptParameterKeyValueProperty.builder()
+    private val cdkBuilder: CfnStudioComponent.ScriptParameterKeyValueProperty.Builder =
+        CfnStudioComponent.ScriptParameterKeyValueProperty.builder()
 
-  /**
-   * @param key A script parameter key.
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key A script parameter key. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value A script parameter value.
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value A script parameter value. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnStudioComponent.ScriptParameterKeyValueProperty = cdkBuilder.build()
+    public fun build(): CfnStudioComponent.ScriptParameterKeyValueProperty = cdkBuilder.build()
 }

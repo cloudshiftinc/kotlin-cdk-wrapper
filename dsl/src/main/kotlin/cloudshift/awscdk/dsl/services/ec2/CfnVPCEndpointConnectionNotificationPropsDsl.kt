@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationP
  * Properties for defining a `CfnVPCEndpointConnectionNotification`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,50 +39,44 @@ import software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationP
  */
 @CdkDslMarker
 public class CfnVPCEndpointConnectionNotificationPropsDsl {
-  private val cdkBuilder: CfnVPCEndpointConnectionNotificationProps.Builder =
-      CfnVPCEndpointConnectionNotificationProps.builder()
+    private val cdkBuilder: CfnVPCEndpointConnectionNotificationProps.Builder =
+        CfnVPCEndpointConnectionNotificationProps.builder()
 
-  private val _connectionEvents: MutableList<String> = mutableListOf()
+    private val _connectionEvents: MutableList<String> = mutableListOf()
 
-  /**
-   * @param connectionEvents The endpoint events for which to receive notifications. 
-   * Valid values are `Accept` , `Connect` , `Delete` , and `Reject` .
-   */
-  public fun connectionEvents(vararg connectionEvents: String) {
-    _connectionEvents.addAll(listOf(*connectionEvents))
-  }
+    /**
+     * @param connectionEvents The endpoint events for which to receive notifications. Valid values
+     *   are `Accept` , `Connect` , `Delete` , and `Reject` .
+     */
+    public fun connectionEvents(vararg connectionEvents: String) {
+        _connectionEvents.addAll(listOf(*connectionEvents))
+    }
 
-  /**
-   * @param connectionEvents The endpoint events for which to receive notifications. 
-   * Valid values are `Accept` , `Connect` , `Delete` , and `Reject` .
-   */
-  public fun connectionEvents(connectionEvents: Collection<String>) {
-    _connectionEvents.addAll(connectionEvents)
-  }
+    /**
+     * @param connectionEvents The endpoint events for which to receive notifications. Valid values
+     *   are `Accept` , `Connect` , `Delete` , and `Reject` .
+     */
+    public fun connectionEvents(connectionEvents: Collection<String>) {
+        _connectionEvents.addAll(connectionEvents)
+    }
 
-  /**
-   * @param connectionNotificationArn The ARN of the SNS topic for the notifications. 
-   */
-  public fun connectionNotificationArn(connectionNotificationArn: String) {
-    cdkBuilder.connectionNotificationArn(connectionNotificationArn)
-  }
+    /** @param connectionNotificationArn The ARN of the SNS topic for the notifications. */
+    public fun connectionNotificationArn(connectionNotificationArn: String) {
+        cdkBuilder.connectionNotificationArn(connectionNotificationArn)
+    }
 
-  /**
-   * @param serviceId The ID of the endpoint service.
-   */
-  public fun serviceId(serviceId: String) {
-    cdkBuilder.serviceId(serviceId)
-  }
+    /** @param serviceId The ID of the endpoint service. */
+    public fun serviceId(serviceId: String) {
+        cdkBuilder.serviceId(serviceId)
+    }
 
-  /**
-   * @param vpcEndpointId The ID of the endpoint.
-   */
-  public fun vpcEndpointId(vpcEndpointId: String) {
-    cdkBuilder.vpcEndpointId(vpcEndpointId)
-  }
+    /** @param vpcEndpointId The ID of the endpoint. */
+    public fun vpcEndpointId(vpcEndpointId: String) {
+        cdkBuilder.vpcEndpointId(vpcEndpointId)
+    }
 
-  public fun build(): CfnVPCEndpointConnectionNotificationProps {
-    if(_connectionEvents.isNotEmpty()) cdkBuilder.connectionEvents(_connectionEvents)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVPCEndpointConnectionNotificationProps {
+        if (_connectionEvents.isNotEmpty()) cdkBuilder.connectionEvents(_connectionEvents)
+        return cdkBuilder.build()
+    }
 }

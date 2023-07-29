@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.rds.CfnDBCluster
  * cluster.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,20 @@ import software.amazon.awscdk.services.rds.CfnDBCluster
  */
 @CdkDslMarker
 public class CfnDBClusterEndpointPropertyDsl {
-  private val cdkBuilder: CfnDBCluster.EndpointProperty.Builder =
-      CfnDBCluster.EndpointProperty.builder()
+    private val cdkBuilder: CfnDBCluster.EndpointProperty.Builder =
+        CfnDBCluster.EndpointProperty.builder()
 
-  /**
-   * @param address Specifies the connection endpoint for the primary instance of the DB cluster.
-   */
-  public fun address(address: String) {
-    cdkBuilder.address(address)
-  }
+    /**
+     * @param address Specifies the connection endpoint for the primary instance of the DB cluster.
+     */
+    public fun address(address: String) {
+        cdkBuilder.address(address)
+    }
 
-  /**
-   * @param port Specifies the port that the database engine is listening on.
-   */
-  public fun port(port: String) {
-    cdkBuilder.port(port)
-  }
+    /** @param port Specifies the port that the database engine is listening on. */
+    public fun port(port: String) {
+        cdkBuilder.port(port)
+    }
 
-  public fun build(): CfnDBCluster.EndpointProperty = cdkBuilder.build()
+    public fun build(): CfnDBCluster.EndpointProperty = cdkBuilder.build()
 }

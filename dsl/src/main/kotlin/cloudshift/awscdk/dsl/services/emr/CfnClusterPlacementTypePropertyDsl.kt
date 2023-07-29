@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emr
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.emr.CfnCluster
  * flow).
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,17 +35,17 @@ import software.amazon.awscdk.services.emr.CfnCluster
  */
 @CdkDslMarker
 public class CfnClusterPlacementTypePropertyDsl {
-  private val cdkBuilder: CfnCluster.PlacementTypeProperty.Builder =
-      CfnCluster.PlacementTypeProperty.builder()
+    private val cdkBuilder: CfnCluster.PlacementTypeProperty.Builder =
+        CfnCluster.PlacementTypeProperty.builder()
 
-  /**
-   * @param availabilityZone The Amazon EC2 Availability Zone for the cluster. 
-   * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural) is
-   * used for instance fleets.
-   */
-  public fun availabilityZone(availabilityZone: String) {
-    cdkBuilder.availabilityZone(availabilityZone)
-  }
+    /**
+     * @param availabilityZone The Amazon EC2 Availability Zone for the cluster. `AvailabilityZone`
+     *   is used for uniform instance groups, while `AvailabilityZones` (plural) is used for
+     *   instance fleets.
+     */
+    public fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
+    }
 
-  public fun build(): CfnCluster.PlacementTypeProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.PlacementTypeProperty = cdkBuilder.build()
 }

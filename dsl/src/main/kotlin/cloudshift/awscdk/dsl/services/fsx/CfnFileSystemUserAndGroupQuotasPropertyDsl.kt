@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.fsx
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  * The configuration for how much storage a user or group can use on the volume.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,30 +35,26 @@ import software.amazon.awscdk.services.fsx.CfnFileSystem
  */
 @CdkDslMarker
 public class CfnFileSystemUserAndGroupQuotasPropertyDsl {
-  private val cdkBuilder: CfnFileSystem.UserAndGroupQuotasProperty.Builder =
-      CfnFileSystem.UserAndGroupQuotasProperty.builder()
+    private val cdkBuilder: CfnFileSystem.UserAndGroupQuotasProperty.Builder =
+        CfnFileSystem.UserAndGroupQuotasProperty.builder()
 
-  /**
-   * @param id The ID of the user or group.
-   */
-  public fun id(id: Number) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The ID of the user or group. */
+    public fun id(id: Number) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param storageCapacityQuotaGiB The amount of storage that the user or group can use in
-   * gibibytes (GiB).
-   */
-  public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
-    cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
-  }
+    /**
+     * @param storageCapacityQuotaGiB The amount of storage that the user or group can use in
+     *   gibibytes (GiB).
+     */
+    public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
+        cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
+    }
 
-  /**
-   * @param type A value that specifies whether the quota applies to a user or group.
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type A value that specifies whether the quota applies to a user or group. */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnFileSystem.UserAndGroupQuotasProperty = cdkBuilder.build()
+    public fun build(): CfnFileSystem.UserAndGroupQuotasProperty = cdkBuilder.build()
 }

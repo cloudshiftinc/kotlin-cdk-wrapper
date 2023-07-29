@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -14,7 +23,6 @@ import software.constructs.Construct
  * to the gateway to be routed according to the routes in the route table.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,31 +38,33 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnGatewayRouteTableAssociationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnGatewayRouteTableAssociation.Builder =
-      CfnGatewayRouteTableAssociation.Builder.create(scope, id)
+    private val cdkBuilder: CfnGatewayRouteTableAssociation.Builder =
+        CfnGatewayRouteTableAssociation.Builder.create(scope, id)
 
-  /**
-   * The ID of the gateway.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-gatewayid)
-   * @param gatewayId The ID of the gateway. 
-   */
-  public fun gatewayId(gatewayId: String) {
-    cdkBuilder.gatewayId(gatewayId)
-  }
+    /**
+     * The ID of the gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-gatewayid)
+     *
+     * @param gatewayId The ID of the gateway.
+     */
+    public fun gatewayId(gatewayId: String) {
+        cdkBuilder.gatewayId(gatewayId)
+    }
 
-  /**
-   * The ID of the route table.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-routetableid)
-   * @param routeTableId The ID of the route table. 
-   */
-  public fun routeTableId(routeTableId: String) {
-    cdkBuilder.routeTableId(routeTableId)
-  }
+    /**
+     * The ID of the route table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-routetableid)
+     *
+     * @param routeTableId The ID of the route table.
+     */
+    public fun routeTableId(routeTableId: String) {
+        cdkBuilder.routeTableId(routeTableId)
+    }
 
-  public fun build(): CfnGatewayRouteTableAssociation = cdkBuilder.build()
+    public fun build(): CfnGatewayRouteTableAssociation = cdkBuilder.build()
 }

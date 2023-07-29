@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.globalaccelerator
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.globalaccelerator.PortRange
  * Construct options for Listener.
  *
  * Example:
- *
  * ```
  * // Create an Accelerator
  * Accelerator accelerator = new Accelerator(this, "Accelerator");
@@ -48,53 +56,50 @@ import software.amazon.awscdk.services.globalaccelerator.PortRange
  */
 @CdkDslMarker
 public class ListenerOptionsDsl {
-  private val cdkBuilder: ListenerOptions.Builder = ListenerOptions.builder()
+    private val cdkBuilder: ListenerOptions.Builder = ListenerOptions.builder()
 
-  private val _portRanges: MutableList<PortRange> = mutableListOf()
+    private val _portRanges: MutableList<PortRange> = mutableListOf()
 
-  /**
-   * @param clientAffinity Client affinity to direct all requests from a user to the same endpoint.
-   * If you have stateful applications, client affinity lets you direct all
-   * requests from a user to the same endpoint.
-   *
-   * By default, each connection from each client is routed to seperate
-   * endpoints. Set client affinity to SOURCE_IP to route all connections from
-   * a single client to the same endpoint.
-   */
-  public fun clientAffinity(clientAffinity: ClientAffinity) {
-    cdkBuilder.clientAffinity(clientAffinity)
-  }
+    /**
+     * @param clientAffinity Client affinity to direct all requests from a user to the same
+     *   endpoint. If you have stateful applications, client affinity lets you direct all requests
+     *   from a user to the same endpoint.
+     *
+     * By default, each connection from each client is routed to seperate endpoints. Set client
+     * affinity to SOURCE_IP to route all connections from a single client to the same endpoint.
+     */
+    public fun clientAffinity(clientAffinity: ClientAffinity) {
+        cdkBuilder.clientAffinity(clientAffinity)
+    }
 
-  /**
-   * @param listenerName Name of the listener.
-   */
-  public fun listenerName(listenerName: String) {
-    cdkBuilder.listenerName(listenerName)
-  }
+    /** @param listenerName Name of the listener. */
+    public fun listenerName(listenerName: String) {
+        cdkBuilder.listenerName(listenerName)
+    }
 
-  /**
-   * @param portRanges The list of port ranges for the connections from clients to the accelerator. 
-   */
-  public fun portRanges(portRanges: PortRangeDsl.() -> Unit) {
-    _portRanges.add(PortRangeDsl().apply(portRanges).build())
-  }
+    /**
+     * @param portRanges The list of port ranges for the connections from clients to the
+     *   accelerator.
+     */
+    public fun portRanges(portRanges: PortRangeDsl.() -> Unit) {
+        _portRanges.add(PortRangeDsl().apply(portRanges).build())
+    }
 
-  /**
-   * @param portRanges The list of port ranges for the connections from clients to the accelerator. 
-   */
-  public fun portRanges(portRanges: Collection<PortRange>) {
-    _portRanges.addAll(portRanges)
-  }
+    /**
+     * @param portRanges The list of port ranges for the connections from clients to the
+     *   accelerator.
+     */
+    public fun portRanges(portRanges: Collection<PortRange>) {
+        _portRanges.addAll(portRanges)
+    }
 
-  /**
-   * @param protocol The protocol for the connections from clients to the accelerator.
-   */
-  public fun protocol(protocol: ConnectionProtocol) {
-    cdkBuilder.protocol(protocol)
-  }
+    /** @param protocol The protocol for the connections from clients to the accelerator. */
+    public fun protocol(protocol: ConnectionProtocol) {
+        cdkBuilder.protocol(protocol)
+    }
 
-  public fun build(): ListenerOptions {
-    if(_portRanges.isNotEmpty()) cdkBuilder.portRanges(_portRanges)
-    return cdkBuilder.build()
-  }
+    public fun build(): ListenerOptions {
+        if (_portRanges.isNotEmpty()) cdkBuilder.portRanges(_portRanges)
+        return cdkBuilder.build()
+    }
 }

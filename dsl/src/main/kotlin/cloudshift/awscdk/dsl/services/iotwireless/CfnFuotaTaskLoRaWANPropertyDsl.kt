@@ -1,16 +1,24 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.iotwireless.CfnFuotaTask
 import kotlin.String
+import software.amazon.awscdk.services.iotwireless.CfnFuotaTask
 
 /**
  * The LoRaWAN information used with a FUOTA task.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,16 +37,12 @@ public class CfnFuotaTaskLoRaWANPropertyDsl {
     private val cdkBuilder: CfnFuotaTask.LoRaWANProperty.Builder =
         CfnFuotaTask.LoRaWANProperty.builder()
 
-    /**
-     * @param rfRegion The frequency band (RFRegion) value.
-     */
+    /** @param rfRegion The frequency band (RFRegion) value. */
     public fun rfRegion(rfRegion: String) {
         cdkBuilder.rfRegion(rfRegion)
     }
 
-    /**
-     * @param startTime Start time of a FUOTA task.
-     */
+    /** @param startTime Start time of a FUOTA task. */
     public fun startTime(startTime: String) {
         cdkBuilder.startTime(startTime)
     }

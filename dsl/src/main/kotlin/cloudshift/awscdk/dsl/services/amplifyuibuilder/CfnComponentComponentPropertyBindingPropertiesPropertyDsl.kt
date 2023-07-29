@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  * property values.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,22 +39,18 @@ import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
  */
 @CdkDslMarker
 public class CfnComponentComponentPropertyBindingPropertiesPropertyDsl {
-  private val cdkBuilder: CfnComponent.ComponentPropertyBindingPropertiesProperty.Builder =
-      CfnComponent.ComponentPropertyBindingPropertiesProperty.builder()
+    private val cdkBuilder: CfnComponent.ComponentPropertyBindingPropertiesProperty.Builder =
+        CfnComponent.ComponentPropertyBindingPropertiesProperty.builder()
 
-  /**
-   * @param field The data field to bind the property to.
-   */
-  public fun `field`(`field`: String) {
-    cdkBuilder.`field`(`field`)
-  }
+    /** @param field The data field to bind the property to. */
+    public fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+    }
 
-  /**
-   * @param property The component property to bind to the data field. 
-   */
-  public fun `property`(`property`: String) {
-    cdkBuilder.`property`(`property`)
-  }
+    /** @param property The component property to bind to the data field. */
+    public fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+    }
 
-  public fun build(): CfnComponent.ComponentPropertyBindingPropertiesProperty = cdkBuilder.build()
+    public fun build(): CfnComponent.ComponentPropertyBindingPropertiesProperty = cdkBuilder.build()
 }

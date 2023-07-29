@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -22,7 +31,6 @@ import software.constructs.Construct
  * Define a StepFunctions State Machine.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.stepfunctions.*;
  * Pipeline pipeline = new Pipeline(this, "MyPipeline");
@@ -44,130 +52,130 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class StateMachineDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: StateMachine.Builder = StateMachine.Builder.create(scope, id)
+    private val cdkBuilder: StateMachine.Builder = StateMachine.Builder.create(scope, id)
 
-  /**
-   * (deprecated) Definition for this state machine.
-   *
-   * @deprecated use definitionBody: DefinitionBody.fromChainable()
-   * @param definition Definition for this state machine. 
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun definition(definition: IChainable) {
-    cdkBuilder.definition(definition)
-  }
+    /**
+     * (deprecated) Definition for this state machine.
+     *
+     * @param definition Definition for this state machine.
+     * @deprecated use definitionBody: DefinitionBody.fromChainable()
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun definition(definition: IChainable) {
+        cdkBuilder.definition(definition)
+    }
 
-  /**
-   * Definition for this state machine.
-   *
-   * @param definitionBody Definition for this state machine. 
-   */
-  public fun definitionBody(definitionBody: DefinitionBody) {
-    cdkBuilder.definitionBody(definitionBody)
-  }
+    /**
+     * Definition for this state machine.
+     *
+     * @param definitionBody Definition for this state machine.
+     */
+    public fun definitionBody(definitionBody: DefinitionBody) {
+        cdkBuilder.definitionBody(definitionBody)
+    }
 
-  /**
-   * substitutions for the definition body aas a key-value map.
-   *
-   * @param definitionSubstitutions substitutions for the definition body aas a key-value map. 
-   */
-  public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
-    cdkBuilder.definitionSubstitutions(definitionSubstitutions)
-  }
+    /**
+     * substitutions for the definition body aas a key-value map.
+     *
+     * @param definitionSubstitutions substitutions for the definition body aas a key-value map.
+     */
+    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
+        cdkBuilder.definitionSubstitutions(definitionSubstitutions)
+    }
 
-  /**
-   * Defines what execution history events are logged and where they are logged.
-   *
-   * Default: No logging
-   *
-   * @param logs Defines what execution history events are logged and where they are logged. 
-   */
-  public fun logs(logs: LogOptionsDsl.() -> Unit = {}) {
-    val builder = LogOptionsDsl()
-    builder.apply(logs)
-    cdkBuilder.logs(builder.build())
-  }
+    /**
+     * Defines what execution history events are logged and where they are logged.
+     *
+     * Default: No logging
+     *
+     * @param logs Defines what execution history events are logged and where they are logged.
+     */
+    public fun logs(logs: LogOptionsDsl.() -> Unit = {}) {
+        val builder = LogOptionsDsl()
+        builder.apply(logs)
+        cdkBuilder.logs(builder.build())
+    }
 
-  /**
-   * Defines what execution history events are logged and where they are logged.
-   *
-   * Default: No logging
-   *
-   * @param logs Defines what execution history events are logged and where they are logged. 
-   */
-  public fun logs(logs: LogOptions) {
-    cdkBuilder.logs(logs)
-  }
+    /**
+     * Defines what execution history events are logged and where they are logged.
+     *
+     * Default: No logging
+     *
+     * @param logs Defines what execution history events are logged and where they are logged.
+     */
+    public fun logs(logs: LogOptions) {
+        cdkBuilder.logs(logs)
+    }
 
-  /**
-   * The removal policy to apply to state machine.
-   *
-   * Default: RemovalPolicy.DESTROY
-   *
-   * @param removalPolicy The removal policy to apply to state machine. 
-   */
-  public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    cdkBuilder.removalPolicy(removalPolicy)
-  }
+    /**
+     * The removal policy to apply to state machine.
+     *
+     * Default: RemovalPolicy.DESTROY
+     *
+     * @param removalPolicy The removal policy to apply to state machine.
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
+    }
 
-  /**
-   * The execution role for the state machine service.
-   *
-   * Default: A role is automatically created
-   *
-   * @param role The execution role for the state machine service. 
-   */
-  public fun role(role: IRole) {
-    cdkBuilder.role(role)
-  }
+    /**
+     * The execution role for the state machine service.
+     *
+     * Default: A role is automatically created
+     *
+     * @param role The execution role for the state machine service.
+     */
+    public fun role(role: IRole) {
+        cdkBuilder.role(role)
+    }
 
-  /**
-   * A name for the state machine.
-   *
-   * Default: A name is automatically generated
-   *
-   * @param stateMachineName A name for the state machine. 
-   */
-  public fun stateMachineName(stateMachineName: String) {
-    cdkBuilder.stateMachineName(stateMachineName)
-  }
+    /**
+     * A name for the state machine.
+     *
+     * Default: A name is automatically generated
+     *
+     * @param stateMachineName A name for the state machine.
+     */
+    public fun stateMachineName(stateMachineName: String) {
+        cdkBuilder.stateMachineName(stateMachineName)
+    }
 
-  /**
-   * Type of the state machine.
-   *
-   * Default: StateMachineType.STANDARD
-   *
-   * @param stateMachineType Type of the state machine. 
-   */
-  public fun stateMachineType(stateMachineType: StateMachineType) {
-    cdkBuilder.stateMachineType(stateMachineType)
-  }
+    /**
+     * Type of the state machine.
+     *
+     * Default: StateMachineType.STANDARD
+     *
+     * @param stateMachineType Type of the state machine.
+     */
+    public fun stateMachineType(stateMachineType: StateMachineType) {
+        cdkBuilder.stateMachineType(stateMachineType)
+    }
 
-  /**
-   * Maximum run time for this state machine.
-   *
-   * Default: No timeout
-   *
-   * @param timeout Maximum run time for this state machine. 
-   */
-  public fun timeout(timeout: Duration) {
-    cdkBuilder.timeout(timeout)
-  }
+    /**
+     * Maximum run time for this state machine.
+     *
+     * Default: No timeout
+     *
+     * @param timeout Maximum run time for this state machine.
+     */
+    public fun timeout(timeout: Duration) {
+        cdkBuilder.timeout(timeout)
+    }
 
-  /**
-   * Specifies whether Amazon X-Ray tracing is enabled for this state machine.
-   *
-   * Default: false
-   *
-   * @param tracingEnabled Specifies whether Amazon X-Ray tracing is enabled for this state machine.
-   * 
-   */
-  public fun tracingEnabled(tracingEnabled: Boolean) {
-    cdkBuilder.tracingEnabled(tracingEnabled)
-  }
+    /**
+     * Specifies whether Amazon X-Ray tracing is enabled for this state machine.
+     *
+     * Default: false
+     *
+     * @param tracingEnabled Specifies whether Amazon X-Ray tracing is enabled for this state
+     *   machine.
+     */
+    public fun tracingEnabled(tracingEnabled: Boolean) {
+        cdkBuilder.tracingEnabled(tracingEnabled)
+    }
 
-  public fun build(): StateMachine = cdkBuilder.build()
+    public fun build(): StateMachine = cdkBuilder.build()
 }

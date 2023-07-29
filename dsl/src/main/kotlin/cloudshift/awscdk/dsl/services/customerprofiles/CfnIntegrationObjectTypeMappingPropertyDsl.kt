@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.customerprofiles
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  * and each value is an `ObjectTypeName` (template) used to ingest the event.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.customerprofiles.CfnIntegration
  */
 @CdkDslMarker
 public class CfnIntegrationObjectTypeMappingPropertyDsl {
-  private val cdkBuilder: CfnIntegration.ObjectTypeMappingProperty.Builder =
-      CfnIntegration.ObjectTypeMappingProperty.builder()
+    private val cdkBuilder: CfnIntegration.ObjectTypeMappingProperty.Builder =
+        CfnIntegration.ObjectTypeMappingProperty.builder()
 
-  /**
-   * @param key The key. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key The key. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  /**
-   * @param value The value. 
-   */
-  public fun `value`(`value`: String) {
-    cdkBuilder.`value`(`value`)
-  }
+    /** @param value The value. */
+    public fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnIntegration.ObjectTypeMappingProperty = cdkBuilder.build()
+    public fun build(): CfnIntegration.ObjectTypeMappingProperty = cdkBuilder.build()
 }

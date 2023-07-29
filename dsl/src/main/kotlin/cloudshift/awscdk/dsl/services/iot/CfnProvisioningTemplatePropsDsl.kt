@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iot
 
@@ -18,7 +27,6 @@ import software.amazon.awscdk.services.iot.CfnProvisioningTemplateProps
  * Properties for defining a `CfnProvisioningTemplate`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -47,93 +55,75 @@ import software.amazon.awscdk.services.iot.CfnProvisioningTemplateProps
  */
 @CdkDslMarker
 public class CfnProvisioningTemplatePropsDsl {
-  private val cdkBuilder: CfnProvisioningTemplateProps.Builder =
-      CfnProvisioningTemplateProps.builder()
+    private val cdkBuilder: CfnProvisioningTemplateProps.Builder =
+        CfnProvisioningTemplateProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param description The description of the fleet provisioning template.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description The description of the fleet provisioning template. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param enabled True to enable the fleet provisioning template, otherwise false.
-   */
-  public fun enabled(enabled: Boolean) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled True to enable the fleet provisioning template, otherwise false. */
+    public fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param enabled True to enable the fleet provisioning template, otherwise false.
-   */
-  public fun enabled(enabled: IResolvable) {
-    cdkBuilder.enabled(enabled)
-  }
+    /** @param enabled True to enable the fleet provisioning template, otherwise false. */
+    public fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled)
+    }
 
-  /**
-   * @param preProvisioningHook Creates a pre-provisioning hook template.
-   */
-  public fun preProvisioningHook(preProvisioningHook: IResolvable) {
-    cdkBuilder.preProvisioningHook(preProvisioningHook)
-  }
+    /** @param preProvisioningHook Creates a pre-provisioning hook template. */
+    public fun preProvisioningHook(preProvisioningHook: IResolvable) {
+        cdkBuilder.preProvisioningHook(preProvisioningHook)
+    }
 
-  /**
-   * @param preProvisioningHook Creates a pre-provisioning hook template.
-   */
-  public
-      fun preProvisioningHook(preProvisioningHook: CfnProvisioningTemplate.ProvisioningHookProperty) {
-    cdkBuilder.preProvisioningHook(preProvisioningHook)
-  }
+    /** @param preProvisioningHook Creates a pre-provisioning hook template. */
+    public fun preProvisioningHook(
+        preProvisioningHook: CfnProvisioningTemplate.ProvisioningHookProperty
+    ) {
+        cdkBuilder.preProvisioningHook(preProvisioningHook)
+    }
 
-  /**
-   * @param provisioningRoleArn The role ARN for the role associated with the fleet provisioning
-   * template. 
-   * This IoT role grants permission to provision a device.
-   */
-  public fun provisioningRoleArn(provisioningRoleArn: String) {
-    cdkBuilder.provisioningRoleArn(provisioningRoleArn)
-  }
+    /**
+     * @param provisioningRoleArn The role ARN for the role associated with the fleet provisioning
+     *   template. This IoT role grants permission to provision a device.
+     */
+    public fun provisioningRoleArn(provisioningRoleArn: String) {
+        cdkBuilder.provisioningRoleArn(provisioningRoleArn)
+    }
 
-  /**
-   * @param tags Metadata that can be used to manage the fleet provisioning template.
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /** @param tags Metadata that can be used to manage the fleet provisioning template. */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags Metadata that can be used to manage the fleet provisioning template.
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /** @param tags Metadata that can be used to manage the fleet provisioning template. */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  /**
-   * @param templateBody The JSON formatted contents of the fleet provisioning template version. 
-   */
-  public fun templateBody(templateBody: String) {
-    cdkBuilder.templateBody(templateBody)
-  }
+    /**
+     * @param templateBody The JSON formatted contents of the fleet provisioning template version.
+     */
+    public fun templateBody(templateBody: String) {
+        cdkBuilder.templateBody(templateBody)
+    }
 
-  /**
-   * @param templateName The name of the fleet provisioning template.
-   */
-  public fun templateName(templateName: String) {
-    cdkBuilder.templateName(templateName)
-  }
+    /** @param templateName The name of the fleet provisioning template. */
+    public fun templateName(templateName: String) {
+        cdkBuilder.templateName(templateName)
+    }
 
-  /**
-   * @param templateType The type of the provisioning template.
-   */
-  public fun templateType(templateType: String) {
-    cdkBuilder.templateType(templateType)
-  }
+    /** @param templateType The type of the provisioning template. */
+    public fun templateType(templateType: String) {
+        cdkBuilder.templateType(templateType)
+    }
 
-  public fun build(): CfnProvisioningTemplateProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnProvisioningTemplateProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

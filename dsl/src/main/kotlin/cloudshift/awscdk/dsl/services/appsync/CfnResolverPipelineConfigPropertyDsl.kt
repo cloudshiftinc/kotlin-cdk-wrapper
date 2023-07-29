@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -16,7 +25,6 @@ import software.amazon.awscdk.services.appsync.CfnResolver
  * resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,27 +38,23 @@ import software.amazon.awscdk.services.appsync.CfnResolver
  */
 @CdkDslMarker
 public class CfnResolverPipelineConfigPropertyDsl {
-  private val cdkBuilder: CfnResolver.PipelineConfigProperty.Builder =
-      CfnResolver.PipelineConfigProperty.builder()
+    private val cdkBuilder: CfnResolver.PipelineConfigProperty.Builder =
+        CfnResolver.PipelineConfigProperty.builder()
 
-  private val _functions: MutableList<String> = mutableListOf()
+    private val _functions: MutableList<String> = mutableListOf()
 
-  /**
-   * @param functions A list of `Function` objects.
-   */
-  public fun functions(vararg functions: String) {
-    _functions.addAll(listOf(*functions))
-  }
+    /** @param functions A list of `Function` objects. */
+    public fun functions(vararg functions: String) {
+        _functions.addAll(listOf(*functions))
+    }
 
-  /**
-   * @param functions A list of `Function` objects.
-   */
-  public fun functions(functions: Collection<String>) {
-    _functions.addAll(functions)
-  }
+    /** @param functions A list of `Function` objects. */
+    public fun functions(functions: Collection<String>) {
+        _functions.addAll(functions)
+    }
 
-  public fun build(): CfnResolver.PipelineConfigProperty {
-    if(_functions.isNotEmpty()) cdkBuilder.functions(_functions)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnResolver.PipelineConfigProperty {
+        if (_functions.isNotEmpty()) cdkBuilder.functions(_functions)
+        return cdkBuilder.build()
+    }
 }

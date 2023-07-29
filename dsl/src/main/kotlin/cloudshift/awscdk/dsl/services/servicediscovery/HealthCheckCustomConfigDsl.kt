@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicediscovery
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig
  * Specifies information about an optional custom health check.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,16 +30,16 @@ import software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig
  */
 @CdkDslMarker
 public class HealthCheckCustomConfigDsl {
-  private val cdkBuilder: HealthCheckCustomConfig.Builder = HealthCheckCustomConfig.builder()
+    private val cdkBuilder: HealthCheckCustomConfig.Builder = HealthCheckCustomConfig.builder()
 
-  /**
-   * @param failureThreshold The number of 30-second intervals that you want Cloud Map to wait after
-   * receiving an UpdateInstanceCustomHealthStatus request before it changes the health status of a
-   * service instance.
-   */
-  public fun failureThreshold(failureThreshold: Number) {
-    cdkBuilder.failureThreshold(failureThreshold)
-  }
+    /**
+     * @param failureThreshold The number of 30-second intervals that you want Cloud Map to wait
+     *   after receiving an UpdateInstanceCustomHealthStatus request before it changes the health
+     *   status of a service instance.
+     */
+    public fun failureThreshold(failureThreshold: Number) {
+        cdkBuilder.failureThreshold(failureThreshold)
+    }
 
-  public fun build(): HealthCheckCustomConfig = cdkBuilder.build()
+    public fun build(): HealthCheckCustomConfig = cdkBuilder.build()
 }

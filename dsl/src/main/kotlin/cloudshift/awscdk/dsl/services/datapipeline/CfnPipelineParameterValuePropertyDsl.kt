@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.datapipeline
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.datapipeline.CfnPipeline
  * A value or list of parameter values.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,22 +33,18 @@ import software.amazon.awscdk.services.datapipeline.CfnPipeline
  */
 @CdkDslMarker
 public class CfnPipelineParameterValuePropertyDsl {
-  private val cdkBuilder: CfnPipeline.ParameterValueProperty.Builder =
-      CfnPipeline.ParameterValueProperty.builder()
+    private val cdkBuilder: CfnPipeline.ParameterValueProperty.Builder =
+        CfnPipeline.ParameterValueProperty.builder()
 
-  /**
-   * @param id The ID of the parameter value. 
-   */
-  public fun id(id: String) {
-    cdkBuilder.id(id)
-  }
+    /** @param id The ID of the parameter value. */
+    public fun id(id: String) {
+        cdkBuilder.id(id)
+    }
 
-  /**
-   * @param stringValue The field value, expressed as a String. 
-   */
-  public fun stringValue(stringValue: String) {
-    cdkBuilder.stringValue(stringValue)
-  }
+    /** @param stringValue The field value, expressed as a String. */
+    public fun stringValue(stringValue: String) {
+        cdkBuilder.stringValue(stringValue)
+    }
 
-  public fun build(): CfnPipeline.ParameterValueProperty = cdkBuilder.build()
+    public fun build(): CfnPipeline.ParameterValueProperty = cdkBuilder.build()
 }

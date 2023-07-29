@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
  * defined.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -515,17 +523,15 @@ public class CfnDashboardFilledMapFieldWellsPropertyDsl {
     private val cdkBuilder: CfnDashboard.FilledMapFieldWellsProperty.Builder =
         CfnDashboard.FilledMapFieldWellsProperty.builder()
 
-    /**
-     * @param filledMapAggregatedFieldWells The aggregated field well of the filled map.
-     */
+    /** @param filledMapAggregatedFieldWells The aggregated field well of the filled map. */
     public fun filledMapAggregatedFieldWells(filledMapAggregatedFieldWells: IResolvable) {
         cdkBuilder.filledMapAggregatedFieldWells(filledMapAggregatedFieldWells)
     }
 
-    /**
-     * @param filledMapAggregatedFieldWells The aggregated field well of the filled map.
-     */
-    public fun filledMapAggregatedFieldWells(filledMapAggregatedFieldWells: CfnDashboard.FilledMapAggregatedFieldWellsProperty) {
+    /** @param filledMapAggregatedFieldWells The aggregated field well of the filled map. */
+    public fun filledMapAggregatedFieldWells(
+        filledMapAggregatedFieldWells: CfnDashboard.FilledMapAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.filledMapAggregatedFieldWells(filledMapAggregatedFieldWells)
     }
 

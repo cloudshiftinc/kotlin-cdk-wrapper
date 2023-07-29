@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.opensearchservice
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
  * The automated snapshot configuration for the OpenSearch Service domain indexes.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,18 +37,18 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
  */
 @CdkDslMarker
 public class CfnDomainSnapshotOptionsPropertyDsl {
-  private val cdkBuilder: CfnDomain.SnapshotOptionsProperty.Builder =
-      CfnDomain.SnapshotOptionsProperty.builder()
+    private val cdkBuilder: CfnDomain.SnapshotOptionsProperty.Builder =
+        CfnDomain.SnapshotOptionsProperty.builder()
 
-  /**
-   * @param automatedSnapshotStartHour The hour in UTC during which the service takes an automated
-   * daily snapshot of the indexes in the OpenSearch Service domain.
-   * For example, if you specify 0, OpenSearch Service takes an automated snapshot everyday between
-   * midnight and 1 am. You can specify a value between 0 and 23.
-   */
-  public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
-    cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
-  }
+    /**
+     * @param automatedSnapshotStartHour The hour in UTC during which the service takes an automated
+     *   daily snapshot of the indexes in the OpenSearch Service domain. For example, if you specify
+     *   0, OpenSearch Service takes an automated snapshot everyday between midnight and 1 am. You
+     *   can specify a value between 0 and 23.
+     */
+    public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
+        cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
+    }
 
-  public fun build(): CfnDomain.SnapshotOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDomain.SnapshotOptionsProperty = cdkBuilder.build()
 }

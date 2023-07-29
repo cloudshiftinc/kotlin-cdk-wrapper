@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cognito.SignInUrlOptions
  * Options to customize the behaviour of `signInUrl()`.
  *
  * Example:
- *
  * ```
  * UserPool userpool = UserPool.Builder.create(this, "UserPool").build();
  * UserPoolClient client = userpool.addClient("Client", UserPoolClientOptions.builder()
@@ -31,28 +39,22 @@ import software.amazon.awscdk.services.cognito.SignInUrlOptions
  */
 @CdkDslMarker
 public class SignInUrlOptionsDsl {
-  private val cdkBuilder: SignInUrlOptions.Builder = SignInUrlOptions.builder()
+    private val cdkBuilder: SignInUrlOptions.Builder = SignInUrlOptions.builder()
 
-  /**
-   * @param fips Whether to return the FIPS-compliant endpoint.
-   */
-  public fun fips(fips: Boolean) {
-    cdkBuilder.fips(fips)
-  }
+    /** @param fips Whether to return the FIPS-compliant endpoint. */
+    public fun fips(fips: Boolean) {
+        cdkBuilder.fips(fips)
+    }
 
-  /**
-   * @param redirectUri Where to redirect to after sign in. 
-   */
-  public fun redirectUri(redirectUri: String) {
-    cdkBuilder.redirectUri(redirectUri)
-  }
+    /** @param redirectUri Where to redirect to after sign in. */
+    public fun redirectUri(redirectUri: String) {
+        cdkBuilder.redirectUri(redirectUri)
+    }
 
-  /**
-   * @param signInPath The path in the URI where the sign-in page is located.
-   */
-  public fun signInPath(signInPath: String) {
-    cdkBuilder.signInPath(signInPath)
-  }
+    /** @param signInPath The path in the URI where the sign-in page is located. */
+    public fun signInPath(signInPath: String) {
+        cdkBuilder.signInPath(signInPath)
+    }
 
-  public fun build(): SignInUrlOptions = cdkBuilder.build()
+    public fun build(): SignInUrlOptions = cdkBuilder.build()
 }

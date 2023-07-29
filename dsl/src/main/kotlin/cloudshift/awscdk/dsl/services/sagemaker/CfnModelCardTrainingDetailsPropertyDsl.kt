@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  * The training details of the model.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -60,43 +68,33 @@ import software.amazon.awscdk.services.sagemaker.CfnModelCard
  */
 @CdkDslMarker
 public class CfnModelCardTrainingDetailsPropertyDsl {
-  private val cdkBuilder: CfnModelCard.TrainingDetailsProperty.Builder =
-      CfnModelCard.TrainingDetailsProperty.builder()
+    private val cdkBuilder: CfnModelCard.TrainingDetailsProperty.Builder =
+        CfnModelCard.TrainingDetailsProperty.builder()
 
-  /**
-   * @param objectiveFunction The function that is optimized during model training.
-   */
-  public fun objectiveFunction(objectiveFunction: IResolvable) {
-    cdkBuilder.objectiveFunction(objectiveFunction)
-  }
+    /** @param objectiveFunction The function that is optimized during model training. */
+    public fun objectiveFunction(objectiveFunction: IResolvable) {
+        cdkBuilder.objectiveFunction(objectiveFunction)
+    }
 
-  /**
-   * @param objectiveFunction The function that is optimized during model training.
-   */
-  public fun objectiveFunction(objectiveFunction: CfnModelCard.ObjectiveFunctionProperty) {
-    cdkBuilder.objectiveFunction(objectiveFunction)
-  }
+    /** @param objectiveFunction The function that is optimized during model training. */
+    public fun objectiveFunction(objectiveFunction: CfnModelCard.ObjectiveFunctionProperty) {
+        cdkBuilder.objectiveFunction(objectiveFunction)
+    }
 
-  /**
-   * @param trainingJobDetails Details about any associated training jobs.
-   */
-  public fun trainingJobDetails(trainingJobDetails: IResolvable) {
-    cdkBuilder.trainingJobDetails(trainingJobDetails)
-  }
+    /** @param trainingJobDetails Details about any associated training jobs. */
+    public fun trainingJobDetails(trainingJobDetails: IResolvable) {
+        cdkBuilder.trainingJobDetails(trainingJobDetails)
+    }
 
-  /**
-   * @param trainingJobDetails Details about any associated training jobs.
-   */
-  public fun trainingJobDetails(trainingJobDetails: CfnModelCard.TrainingJobDetailsProperty) {
-    cdkBuilder.trainingJobDetails(trainingJobDetails)
-  }
+    /** @param trainingJobDetails Details about any associated training jobs. */
+    public fun trainingJobDetails(trainingJobDetails: CfnModelCard.TrainingJobDetailsProperty) {
+        cdkBuilder.trainingJobDetails(trainingJobDetails)
+    }
 
-  /**
-   * @param trainingObservations Any observations about training.
-   */
-  public fun trainingObservations(trainingObservations: String) {
-    cdkBuilder.trainingObservations(trainingObservations)
-  }
+    /** @param trainingObservations Any observations about training. */
+    public fun trainingObservations(trainingObservations: String) {
+        cdkBuilder.trainingObservations(trainingObservations)
+    }
 
-  public fun build(): CfnModelCard.TrainingDetailsProperty = cdkBuilder.build()
+    public fun build(): CfnModelCard.TrainingDetailsProperty = cdkBuilder.build()
 }

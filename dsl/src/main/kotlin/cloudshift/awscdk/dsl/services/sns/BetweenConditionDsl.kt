@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.sns
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.sns.BetweenCondition
  * Between condition for a numeric attribute.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.lambda.*;
  * Function fn;
@@ -39,21 +47,17 @@ import software.amazon.awscdk.services.sns.BetweenCondition
  */
 @CdkDslMarker
 public class BetweenConditionDsl {
-  private val cdkBuilder: BetweenCondition.Builder = BetweenCondition.builder()
+    private val cdkBuilder: BetweenCondition.Builder = BetweenCondition.builder()
 
-  /**
-   * @param start The start value. 
-   */
-  public fun start(start: Number) {
-    cdkBuilder.start(start)
-  }
+    /** @param start The start value. */
+    public fun start(start: Number) {
+        cdkBuilder.start(start)
+    }
 
-  /**
-   * @param stop The stop value. 
-   */
-  public fun stop(stop: Number) {
-    cdkBuilder.stop(stop)
-  }
+    /** @param stop The stop value. */
+    public fun stop(stop: Number) {
+        cdkBuilder.stop(stop)
+    }
 
-  public fun build(): BetweenCondition = cdkBuilder.build()
+    public fun build(): BetweenCondition = cdkBuilder.build()
 }

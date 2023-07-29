@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -14,17 +23,16 @@ import software.constructs.Construct
  * A response headers policy contains information about a set of HTTP response headers.
  *
  * After you create a response headers policy, you can use its ID to attach it to one or more cache
- * behaviors in a CloudFront distribution. When it's attached to a cache behavior, the response headers
- * policy affects the HTTP headers that CloudFront includes in HTTP responses to requests that match
- * the cache behavior. CloudFront adds or removes response headers according to the configuration of
- * the response headers policy.
+ * behaviors in a CloudFront distribution. When it's attached to a cache behavior, the response
+ * headers policy affects the HTTP headers that CloudFront includes in HTTP responses to requests
+ * that match the cache behavior. CloudFront adds or removes response headers according to the
+ * configuration of the response headers policy.
  *
- * For more information, see [Adding or removing HTTP headers in CloudFront
- * responses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html)
+ * For more information, see
+ * [Adding or removing HTTP headers in CloudFront responses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html)
  * in the *Amazon CloudFront Developer Guide* .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -109,32 +117,35 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnResponseHeadersPolicy.Builder =
-      CfnResponseHeadersPolicy.Builder.create(scope, id)
+    private val cdkBuilder: CfnResponseHeadersPolicy.Builder =
+        CfnResponseHeadersPolicy.Builder.create(scope, id)
 
-  /**
-   * A response headers policy configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig)
-   * @param responseHeadersPolicyConfig A response headers policy configuration. 
-   */
-  public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
-    cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
-  }
+    /**
+     * A response headers policy configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig)
+     *
+     * @param responseHeadersPolicyConfig A response headers policy configuration.
+     */
+    public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
+        cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
+    }
 
-  /**
-   * A response headers policy configuration.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig)
-   * @param responseHeadersPolicyConfig A response headers policy configuration. 
-   */
-  public
-      fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty) {
-    cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
-  }
+    /**
+     * A response headers policy configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig)
+     *
+     * @param responseHeadersPolicyConfig A response headers policy configuration.
+     */
+    public fun responseHeadersPolicyConfig(
+        responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
+    ) {
+        cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
+    }
 
-  public fun build(): CfnResponseHeadersPolicy = cdkBuilder.build()
+    public fun build(): CfnResponseHeadersPolicy = cdkBuilder.build()
 }

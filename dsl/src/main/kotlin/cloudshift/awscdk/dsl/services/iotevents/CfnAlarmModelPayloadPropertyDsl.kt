@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -15,7 +24,6 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  * `contentExpression` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,26 +38,25 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
  */
 @CdkDslMarker
 public class CfnAlarmModelPayloadPropertyDsl {
-  private val cdkBuilder: CfnAlarmModel.PayloadProperty.Builder =
-      CfnAlarmModel.PayloadProperty.builder()
+    private val cdkBuilder: CfnAlarmModel.PayloadProperty.Builder =
+        CfnAlarmModel.PayloadProperty.builder()
 
-  /**
-   * @param contentExpression The content of the payload. 
-   * You can use a string expression that includes quoted strings ( `'&lt;string&gt;'` ), variables
-   * ( `$variable.&lt;variable-name&gt;` ), input values (
-   * `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted strings
-   * that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
-   */
-  public fun contentExpression(contentExpression: String) {
-    cdkBuilder.contentExpression(contentExpression)
-  }
+    /**
+     * @param contentExpression The content of the payload. You can use a string expression that
+     *   includes quoted strings ( `'&lt;string&gt;'` ), variables (
+     *   `$variable.&lt;variable-name&gt;` ), input values (
+     *   `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ), string concatenations, and quoted
+     *   strings that contain `${}` as the content. The recommended maximum size of a content
+     *   expression is 1 KB.
+     */
+    public fun contentExpression(contentExpression: String) {
+        cdkBuilder.contentExpression(contentExpression)
+    }
 
-  /**
-   * @param type The value of the payload type can be either `STRING` or `JSON` . 
-   */
-  public fun type(type: String) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The value of the payload type can be either `STRING` or `JSON` . */
+    public fun type(type: String) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): CfnAlarmModel.PayloadProperty = cdkBuilder.build()
+    public fun build(): CfnAlarmModel.PayloadProperty = cdkBuilder.build()
 }

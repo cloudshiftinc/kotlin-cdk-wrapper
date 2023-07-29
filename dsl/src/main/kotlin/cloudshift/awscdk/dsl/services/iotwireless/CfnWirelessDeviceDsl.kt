@@ -1,23 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
+import software.constructs.Construct
 
 /**
  * Provisions a wireless device.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -73,7 +81,7 @@ import kotlin.collections.MutableList
 @CdkDslMarker
 public class CfnWirelessDeviceDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: CfnWirelessDevice.Builder = CfnWirelessDevice.Builder.create(scope, id)
 
@@ -85,6 +93,7 @@ public class CfnWirelessDeviceDsl(
      * Maximum length is 2048.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-description)
+     *
      * @param description The description of the new resource.
      */
     public fun description(description: String) {
@@ -94,10 +103,11 @@ public class CfnWirelessDeviceDsl(
     /**
      * The name of the destination to assign to the new wireless device.
      *
-     * Can have only have alphanumeric, - (hyphen) and _ (underscore) characters and it can't have any
-     * spaces.
+     * Can have only have alphanumeric, - (hyphen) and _ (underscore) characters and it can't have
+     * any spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-destinationname)
+     *
      * @param destinationName The name of the destination to assign to the new wireless device.
      */
     public fun destinationName(destinationName: String) {
@@ -108,6 +118,7 @@ public class CfnWirelessDeviceDsl(
      * The date and time when the most recent uplink was received.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-lastuplinkreceivedat)
+     *
      * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
      */
     public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
@@ -120,6 +131,7 @@ public class CfnWirelessDeviceDsl(
      * Must be at least one of OtaaV10x, OtaaV11, AbpV11, or AbpV10x.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-lorawan)
+     *
      * @param loRaWan The device configuration information to use to create the wireless device.
      */
     public fun loRaWan(loRaWan: IResolvable) {
@@ -132,6 +144,7 @@ public class CfnWirelessDeviceDsl(
      * Must be at least one of OtaaV10x, OtaaV11, AbpV11, or AbpV10x.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-lorawan)
+     *
      * @param loRaWan The device configuration information to use to create the wireless device.
      */
     public fun loRaWan(loRaWan: CfnWirelessDevice.LoRaWANDeviceProperty) {
@@ -142,6 +155,7 @@ public class CfnWirelessDeviceDsl(
      * The name of the new resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-name)
+     *
      * @param name The name of the new resource.
      */
     public fun name(name: String) {
@@ -154,6 +168,7 @@ public class CfnWirelessDeviceDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
@@ -166,6 +181,7 @@ public class CfnWirelessDeviceDsl(
      * Tags can have a minimum of 0 and a maximum of 50 items.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-tags)
+     *
      * @param tags The tags are an array of key-value pairs to attach to the specified resource.
      */
     public fun tags(tags: Collection<CfnTag>) {
@@ -176,6 +192,7 @@ public class CfnWirelessDeviceDsl(
      * The ARN of the thing to associate with the wireless device.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-thingarn)
+     *
      * @param thingArn The ARN of the thing to associate with the wireless device.
      */
     public fun thingArn(thingArn: String) {
@@ -186,6 +203,7 @@ public class CfnWirelessDeviceDsl(
      * The wireless device type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-type)
+     *
      * @param type The wireless device type.
      */
     public fun type(type: String) {

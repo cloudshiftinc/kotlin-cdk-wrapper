@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * defined.
  *
  * Example:
- *
  * ```
  * ```
  *
@@ -24,17 +32,15 @@ public class CfnTemplatePieChartFieldWellsPropertyDsl {
     private val cdkBuilder: CfnTemplate.PieChartFieldWellsProperty.Builder =
         CfnTemplate.PieChartFieldWellsProperty.builder()
 
-    /**
-     * @param pieChartAggregatedFieldWells The field well configuration of a pie chart.
-     */
+    /** @param pieChartAggregatedFieldWells The field well configuration of a pie chart. */
     public fun pieChartAggregatedFieldWells(pieChartAggregatedFieldWells: IResolvable) {
         cdkBuilder.pieChartAggregatedFieldWells(pieChartAggregatedFieldWells)
     }
 
-    /**
-     * @param pieChartAggregatedFieldWells The field well configuration of a pie chart.
-     */
-    public fun pieChartAggregatedFieldWells(pieChartAggregatedFieldWells: CfnTemplate.PieChartAggregatedFieldWellsProperty) {
+    /** @param pieChartAggregatedFieldWells The field well configuration of a pie chart. */
+    public fun pieChartAggregatedFieldWells(
+        pieChartAggregatedFieldWells: CfnTemplate.PieChartAggregatedFieldWellsProperty
+    ) {
         cdkBuilder.pieChartAggregatedFieldWells(pieChartAggregatedFieldWells)
     }
 

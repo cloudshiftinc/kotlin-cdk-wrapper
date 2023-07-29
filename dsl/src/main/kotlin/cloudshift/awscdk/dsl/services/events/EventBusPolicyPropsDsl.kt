@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -14,7 +23,6 @@ import software.amazon.awscdk.services.iam.PolicyStatement
  * Properties to associate Event Buses with a policy.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,38 +39,32 @@ import software.amazon.awscdk.services.iam.PolicyStatement
  */
 @CdkDslMarker
 public class EventBusPolicyPropsDsl {
-  private val cdkBuilder: EventBusPolicyProps.Builder = EventBusPolicyProps.builder()
+    private val cdkBuilder: EventBusPolicyProps.Builder = EventBusPolicyProps.builder()
 
-  /**
-   * @param eventBus The event bus to which the policy applies. 
-   */
-  public fun eventBus(eventBus: IEventBus) {
-    cdkBuilder.eventBus(eventBus)
-  }
+    /** @param eventBus The event bus to which the policy applies. */
+    public fun eventBus(eventBus: IEventBus) {
+        cdkBuilder.eventBus(eventBus)
+    }
 
-  /**
-   * @param statement An IAM Policy Statement to apply to the Event Bus. 
-   */
-  public fun statement(statement: PolicyStatementDsl.() -> Unit = {}) {
-    val builder = PolicyStatementDsl()
-    builder.apply(statement)
-    cdkBuilder.statement(builder.build())
-  }
+    /** @param statement An IAM Policy Statement to apply to the Event Bus. */
+    public fun statement(statement: PolicyStatementDsl.() -> Unit = {}) {
+        val builder = PolicyStatementDsl()
+        builder.apply(statement)
+        cdkBuilder.statement(builder.build())
+    }
 
-  /**
-   * @param statement An IAM Policy Statement to apply to the Event Bus. 
-   */
-  public fun statement(statement: PolicyStatement) {
-    cdkBuilder.statement(statement)
-  }
+    /** @param statement An IAM Policy Statement to apply to the Event Bus. */
+    public fun statement(statement: PolicyStatement) {
+        cdkBuilder.statement(statement)
+    }
 
-  /**
-   * @param statementId An identifier string for the external account that you are granting
-   * permissions to. 
-   */
-  public fun statementId(statementId: String) {
-    cdkBuilder.statementId(statementId)
-  }
+    /**
+     * @param statementId An identifier string for the external account that you are granting
+     *   permissions to.
+     */
+    public fun statementId(statementId: String) {
+        cdkBuilder.statementId(statementId)
+    }
 
-  public fun build(): EventBusPolicyProps = cdkBuilder.build()
+    public fun build(): EventBusPolicyProps = cdkBuilder.build()
 }

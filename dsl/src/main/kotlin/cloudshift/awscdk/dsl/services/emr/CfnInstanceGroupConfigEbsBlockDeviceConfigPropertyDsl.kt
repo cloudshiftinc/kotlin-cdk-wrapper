@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.emr
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
  * volumes that are associated to every instance.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -34,35 +42,36 @@ import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
  */
 @CdkDslMarker
 public class CfnInstanceGroupConfigEbsBlockDeviceConfigPropertyDsl {
-  private val cdkBuilder: CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.Builder =
-      CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.builder()
+    private val cdkBuilder: CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.Builder =
+        CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.builder()
 
-  /**
-   * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB) and
-   * throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2 instance in the
-   * cluster. 
-   */
-  public fun volumeSpecification(volumeSpecification: IResolvable) {
-    cdkBuilder.volumeSpecification(volumeSpecification)
-  }
+    /**
+     * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+     *   and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+     *   instance in the cluster.
+     */
+    public fun volumeSpecification(volumeSpecification: IResolvable) {
+        cdkBuilder.volumeSpecification(volumeSpecification)
+    }
 
-  /**
-   * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB) and
-   * throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2 instance in the
-   * cluster. 
-   */
-  public
-      fun volumeSpecification(volumeSpecification: CfnInstanceGroupConfig.VolumeSpecificationProperty) {
-    cdkBuilder.volumeSpecification(volumeSpecification)
-  }
+    /**
+     * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+     *   and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+     *   instance in the cluster.
+     */
+    public fun volumeSpecification(
+        volumeSpecification: CfnInstanceGroupConfig.VolumeSpecificationProperty
+    ) {
+        cdkBuilder.volumeSpecification(volumeSpecification)
+    }
 
-  /**
-   * @param volumesPerInstance Number of EBS volumes with a specific volume configuration that are
-   * associated with every instance in the instance group.
-   */
-  public fun volumesPerInstance(volumesPerInstance: Number) {
-    cdkBuilder.volumesPerInstance(volumesPerInstance)
-  }
+    /**
+     * @param volumesPerInstance Number of EBS volumes with a specific volume configuration that are
+     *   associated with every instance in the instance group.
+     */
+    public fun volumesPerInstance(volumesPerInstance: Number) {
+        cdkBuilder.volumesPerInstance(volumesPerInstance)
+    }
 
-  public fun build(): CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty = cdkBuilder.build()
+    public fun build(): CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty = cdkBuilder.build()
 }

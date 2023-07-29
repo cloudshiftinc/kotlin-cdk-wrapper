@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
-import kotlin.String
 
 /**
  * A parameter created in the dataset of date time data type.</p>.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -38,8 +46,7 @@ public class CfnDataSetDateTimeDatasetParameterPropertyDsl {
 
     /**
      * @param defaultValues List of default values defined for a given string date time parameter
-     * type.
-     * Currently only static values are supported.</p>
+     *   type. Currently only static values are supported.</p>
      */
     public fun defaultValues(defaultValues: IResolvable) {
         cdkBuilder.defaultValues(defaultValues)
@@ -47,37 +54,32 @@ public class CfnDataSetDateTimeDatasetParameterPropertyDsl {
 
     /**
      * @param defaultValues List of default values defined for a given string date time parameter
-     * type.
-     * Currently only static values are supported.</p>
+     *   type. Currently only static values are supported.</p>
      */
-    public fun defaultValues(defaultValues: CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty) {
+    public fun defaultValues(
+        defaultValues: CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty
+    ) {
         cdkBuilder.defaultValues(defaultValues)
     }
 
-    /**
-     * @param id Identifier of the parameter created in the dataset.</p>.
-     */
+    /** @param id Identifier of the parameter created in the dataset.</p>. */
     public fun id(id: String) {
         cdkBuilder.id(id)
     }
 
-    /**
-     * @param name Name of the parameter created in the dataset.</p>.
-     */
+    /** @param name Name of the parameter created in the dataset.</p>. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
-    /**
-     * @param timeGranularity the value to be set.
-     */
+    /** @param timeGranularity the value to be set. */
     public fun timeGranularity(timeGranularity: String) {
         cdkBuilder.timeGranularity(timeGranularity)
     }
 
     /**
      * @param valueType Every parameter value could be either a single value or multi value which
-     * helps to validate before evaluation.</p>.
+     *   helps to validate before evaluation.</p>.
      */
     public fun valueType(valueType: String) {
         cdkBuilder.valueType(valueType)

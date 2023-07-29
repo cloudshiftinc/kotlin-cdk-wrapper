@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.stepfunctions.TaskRole
  * resource.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.lambda.*;
  * Function submitLambda;
@@ -32,14 +40,12 @@ import software.amazon.awscdk.services.stepfunctions.TaskRole
  */
 @CdkDslMarker
 public class CredentialsDsl {
-  private val cdkBuilder: Credentials.Builder = Credentials.builder()
+    private val cdkBuilder: Credentials.Builder = Credentials.builder()
 
-  /**
-   * @param role The role to be assumed for executing the Task. 
-   */
-  public fun role(role: TaskRole) {
-    cdkBuilder.role(role)
-  }
+    /** @param role The role to be assumed for executing the Task. */
+    public fun role(role: TaskRole) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): Credentials = cdkBuilder.build()
+    public fun build(): Credentials = cdkBuilder.build()
 }

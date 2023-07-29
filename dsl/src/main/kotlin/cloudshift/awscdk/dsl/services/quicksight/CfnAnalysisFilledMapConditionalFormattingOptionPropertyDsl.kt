@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
  * Conditional formatting options of a `FilledMapVisual` .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -51,19 +59,16 @@ public class CfnAnalysisFilledMapConditionalFormattingOptionPropertyDsl {
     private val cdkBuilder: CfnAnalysis.FilledMapConditionalFormattingOptionProperty.Builder =
         CfnAnalysis.FilledMapConditionalFormattingOptionProperty.builder()
 
-    /**
-     * @param shape The conditional formatting that determines the shape of the filled map.
-     */
+    /** @param shape The conditional formatting that determines the shape of the filled map. */
     public fun shape(shape: IResolvable) {
         cdkBuilder.shape(shape)
     }
 
-    /**
-     * @param shape The conditional formatting that determines the shape of the filled map.
-     */
+    /** @param shape The conditional formatting that determines the shape of the filled map. */
     public fun shape(shape: CfnAnalysis.FilledMapShapeConditionalFormattingProperty) {
         cdkBuilder.shape(shape)
     }
 
-    public fun build(): CfnAnalysis.FilledMapConditionalFormattingOptionProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.FilledMapConditionalFormattingOptionProperty =
+        cdkBuilder.build()
 }

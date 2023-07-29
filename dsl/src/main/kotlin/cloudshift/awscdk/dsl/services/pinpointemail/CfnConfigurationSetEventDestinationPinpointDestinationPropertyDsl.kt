@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.pinpointemail
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDes
  * these attributes to create segments for your campaigns.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,17 +35,18 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDes
  */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationPinpointDestinationPropertyDsl {
-  private val cdkBuilder: CfnConfigurationSetEventDestination.PinpointDestinationProperty.Builder =
-      CfnConfigurationSetEventDestination.PinpointDestinationProperty.builder()
+    private val cdkBuilder:
+        CfnConfigurationSetEventDestination.PinpointDestinationProperty.Builder =
+        CfnConfigurationSetEventDestination.PinpointDestinationProperty.builder()
 
-  /**
-   * @param applicationArn The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you
-   * want to send email events to.
-   */
-  public fun applicationArn(applicationArn: String) {
-    cdkBuilder.applicationArn(applicationArn)
-  }
+    /**
+     * @param applicationArn The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you
+     *   want to send email events to.
+     */
+    public fun applicationArn(applicationArn: String) {
+        cdkBuilder.applicationArn(applicationArn)
+    }
 
-  public fun build(): CfnConfigurationSetEventDestination.PinpointDestinationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnConfigurationSetEventDestination.PinpointDestinationProperty =
+        cdkBuilder.build()
 }

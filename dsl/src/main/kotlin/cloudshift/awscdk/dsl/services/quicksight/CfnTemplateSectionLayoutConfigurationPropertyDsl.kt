@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
  * The layout configuration of a section.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -60,17 +68,15 @@ public class CfnTemplateSectionLayoutConfigurationPropertyDsl {
     private val cdkBuilder: CfnTemplate.SectionLayoutConfigurationProperty.Builder =
         CfnTemplate.SectionLayoutConfigurationProperty.builder()
 
-    /**
-     * @param freeFormLayout The free-form layout configuration of a section.
-     */
+    /** @param freeFormLayout The free-form layout configuration of a section. */
     public fun freeFormLayout(freeFormLayout: IResolvable) {
         cdkBuilder.freeFormLayout(freeFormLayout)
     }
 
-    /**
-     * @param freeFormLayout The free-form layout configuration of a section.
-     */
-    public fun freeFormLayout(freeFormLayout: CfnTemplate.FreeFormSectionLayoutConfigurationProperty) {
+    /** @param freeFormLayout The free-form layout configuration of a section. */
+    public fun freeFormLayout(
+        freeFormLayout: CfnTemplate.FreeFormSectionLayoutConfigurationProperty
+    ) {
         cdkBuilder.freeFormLayout(freeFormLayout)
     }
 

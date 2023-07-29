@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.rekognition
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
  * .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,15 +39,13 @@ import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
  */
 @CdkDslMarker
 public class CfnStreamProcessorNotificationChannelPropertyDsl {
-  private val cdkBuilder: CfnStreamProcessor.NotificationChannelProperty.Builder =
-      CfnStreamProcessor.NotificationChannelProperty.builder()
+    private val cdkBuilder: CfnStreamProcessor.NotificationChannelProperty.Builder =
+        CfnStreamProcessor.NotificationChannelProperty.builder()
 
-  /**
-   * @param arn The ARN of the SNS topic that receives notifications. 
-   */
-  public fun arn(arn: String) {
-    cdkBuilder.arn(arn)
-  }
+    /** @param arn The ARN of the SNS topic that receives notifications. */
+    public fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+    }
 
-  public fun build(): CfnStreamProcessor.NotificationChannelProperty = cdkBuilder.build()
+    public fun build(): CfnStreamProcessor.NotificationChannelProperty = cdkBuilder.build()
 }

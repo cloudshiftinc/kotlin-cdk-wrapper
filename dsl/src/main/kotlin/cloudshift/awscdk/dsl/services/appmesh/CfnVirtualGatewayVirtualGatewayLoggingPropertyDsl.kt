@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
  * An object that represents logging information.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,22 +45,18 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
  */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayLoggingPropertyDsl {
-  private val cdkBuilder: CfnVirtualGateway.VirtualGatewayLoggingProperty.Builder =
-      CfnVirtualGateway.VirtualGatewayLoggingProperty.builder()
+    private val cdkBuilder: CfnVirtualGateway.VirtualGatewayLoggingProperty.Builder =
+        CfnVirtualGateway.VirtualGatewayLoggingProperty.builder()
 
-  /**
-   * @param accessLog The access log configuration.
-   */
-  public fun accessLog(accessLog: IResolvable) {
-    cdkBuilder.accessLog(accessLog)
-  }
+    /** @param accessLog The access log configuration. */
+    public fun accessLog(accessLog: IResolvable) {
+        cdkBuilder.accessLog(accessLog)
+    }
 
-  /**
-   * @param accessLog The access log configuration.
-   */
-  public fun accessLog(accessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty) {
-    cdkBuilder.accessLog(accessLog)
-  }
+    /** @param accessLog The access log configuration. */
+    public fun accessLog(accessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty) {
+        cdkBuilder.accessLog(accessLog)
+    }
 
-  public fun build(): CfnVirtualGateway.VirtualGatewayLoggingProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualGateway.VirtualGatewayLoggingProperty = cdkBuilder.build()
 }

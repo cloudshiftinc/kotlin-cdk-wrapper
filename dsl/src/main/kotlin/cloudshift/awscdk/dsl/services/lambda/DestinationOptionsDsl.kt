@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.lambda.DestinationType
  * Options when binding a destination to a function.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,14 +30,12 @@ import software.amazon.awscdk.services.lambda.DestinationType
  */
 @CdkDslMarker
 public class DestinationOptionsDsl {
-  private val cdkBuilder: DestinationOptions.Builder = DestinationOptions.builder()
+    private val cdkBuilder: DestinationOptions.Builder = DestinationOptions.builder()
 
-  /**
-   * @param type The destination type. 
-   */
-  public fun type(type: DestinationType) {
-    cdkBuilder.type(type)
-  }
+    /** @param type The destination type. */
+    public fun type(type: DestinationType) {
+        cdkBuilder.type(type)
+    }
 
-  public fun build(): DestinationOptions = cdkBuilder.build()
+    public fun build(): DestinationOptions = cdkBuilder.build()
 }

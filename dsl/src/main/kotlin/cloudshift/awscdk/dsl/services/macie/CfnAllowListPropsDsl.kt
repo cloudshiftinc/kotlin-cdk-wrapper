@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.macie
 
@@ -17,7 +26,6 @@ import software.amazon.awscdk.services.macie.CfnAllowListProps
  * Properties for defining a `CfnAllowList`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -44,68 +52,61 @@ import software.amazon.awscdk.services.macie.CfnAllowListProps
  */
 @CdkDslMarker
 public class CfnAllowListPropsDsl {
-  private val cdkBuilder: CfnAllowListProps.Builder = CfnAllowListProps.builder()
+    private val cdkBuilder: CfnAllowListProps.Builder = CfnAllowListProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  /**
-   * @param criteria The criteria that specify the text or text pattern to ignore. 
-   * The criteria can be the location and name of an Amazon S3 object that lists specific text to
-   * ignore ( `S3WordsList` ), or a regular expression ( `Regex` ) that defines a text pattern to
-   * ignore.
-   */
-  public fun criteria(criteria: IResolvable) {
-    cdkBuilder.criteria(criteria)
-  }
+    /**
+     * @param criteria The criteria that specify the text or text pattern to ignore. The criteria
+     *   can be the location and name of an Amazon S3 object that lists specific text to ignore (
+     *   `S3WordsList` ), or a regular expression ( `Regex` ) that defines a text pattern to ignore.
+     */
+    public fun criteria(criteria: IResolvable) {
+        cdkBuilder.criteria(criteria)
+    }
 
-  /**
-   * @param criteria The criteria that specify the text or text pattern to ignore. 
-   * The criteria can be the location and name of an Amazon S3 object that lists specific text to
-   * ignore ( `S3WordsList` ), or a regular expression ( `Regex` ) that defines a text pattern to
-   * ignore.
-   */
-  public fun criteria(criteria: CfnAllowList.CriteriaProperty) {
-    cdkBuilder.criteria(criteria)
-  }
+    /**
+     * @param criteria The criteria that specify the text or text pattern to ignore. The criteria
+     *   can be the location and name of an Amazon S3 object that lists specific text to ignore (
+     *   `S3WordsList` ), or a regular expression ( `Regex` ) that defines a text pattern to ignore.
+     */
+    public fun criteria(criteria: CfnAllowList.CriteriaProperty) {
+        cdkBuilder.criteria(criteria)
+    }
 
-  /**
-   * @param description A custom description of the allow list.
-   * The description can contain 1-512 characters.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /**
+     * @param description A custom description of the allow list. The description can contain 1-512
+     *   characters.
+     */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name A custom name for the allow list. 
-   * The name can contain 1-128 characters.
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name A custom name for the allow list. The name can contain 1-128 characters. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to the allow list.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to the allow list. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  /**
-   * @param tags An array of key-value pairs to apply to the allow list.
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   */
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    /**
+     * @param tags An array of key-value pairs to apply to the allow list. For more information, see
+     *   [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     *   .
+     */
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnAllowListProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnAllowListProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

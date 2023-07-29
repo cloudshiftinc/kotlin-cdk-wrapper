@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  * Default: No minimum or maximum limits
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,24 +36,24 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
  */
 @CdkDslMarker
 public class CfnSpotFleetNetworkBandwidthGbpsRequestPropertyDsl {
-  private val cdkBuilder: CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.Builder =
-      CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.builder()
+    private val cdkBuilder: CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.Builder =
+        CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.builder()
 
-  /**
-   * @param max The maximum amount of network bandwidth, in Gbps.
-   * To specify no maximum limit, omit this parameter.
-   */
-  public fun max(max: Number) {
-    cdkBuilder.max(max)
-  }
+    /**
+     * @param max The maximum amount of network bandwidth, in Gbps. To specify no maximum limit,
+     *   omit this parameter.
+     */
+    public fun max(max: Number) {
+        cdkBuilder.max(max)
+    }
 
-  /**
-   * @param min The minimum amount of network bandwidth, in Gbps.
-   * To specify no minimum limit, omit this parameter.
-   */
-  public fun min(min: Number) {
-    cdkBuilder.min(min)
-  }
+    /**
+     * @param min The minimum amount of network bandwidth, in Gbps. To specify no minimum limit,
+     *   omit this parameter.
+     */
+    public fun min(min: Number) {
+        cdkBuilder.min(min)
+    }
 
-  public fun build(): CfnSpotFleet.NetworkBandwidthGbpsRequestProperty = cdkBuilder.build()
+    public fun build(): CfnSpotFleet.NetworkBandwidthGbpsRequestProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -13,11 +22,10 @@ import software.constructs.Construct
 /**
  * Define a new custom network ACL.
  *
- * By default, will deny all inbound and outbound traffic unless entries are
- * added explicitly allowing it.
+ * By default, will deny all inbound and outbound traffic unless entries are added explicitly
+ * allowing it.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -42,63 +50,61 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class NetworkAclDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: NetworkAcl.Builder = NetworkAcl.Builder.create(scope, id)
+    private val cdkBuilder: NetworkAcl.Builder = NetworkAcl.Builder.create(scope, id)
 
-  /**
-   * The name of the NetworkAcl.
-   *
-   * It is not recommended to use an explicit name.
-   *
-   * Default: If you don't specify a networkAclName, AWS CloudFormation generates a
-   * unique physical ID and uses that ID for the group name.
-   *
-   * @param networkAclName The name of the NetworkAcl. 
-   */
-  public fun networkAclName(networkAclName: String) {
-    cdkBuilder.networkAclName(networkAclName)
-  }
+    /**
+     * The name of the NetworkAcl.
+     *
+     * It is not recommended to use an explicit name.
+     *
+     * Default: If you don't specify a networkAclName, AWS CloudFormation generates a unique
+     * physical ID and uses that ID for the group name.
+     *
+     * @param networkAclName The name of the NetworkAcl.
+     */
+    public fun networkAclName(networkAclName: String) {
+        cdkBuilder.networkAclName(networkAclName)
+    }
 
-  /**
-   * Subnets in the given VPC to associate the ACL with.
-   *
-   * More subnets can always be added later by calling
-   * `associateWithSubnets()`.
-   *
-   * Default: - No subnets associated
-   *
-   * @param subnetSelection Subnets in the given VPC to associate the ACL with. 
-   */
-  public fun subnetSelection(subnetSelection: SubnetSelectionDsl.() -> Unit = {}) {
-    val builder = SubnetSelectionDsl()
-    builder.apply(subnetSelection)
-    cdkBuilder.subnetSelection(builder.build())
-  }
+    /**
+     * Subnets in the given VPC to associate the ACL with.
+     *
+     * More subnets can always be added later by calling `associateWithSubnets()`.
+     *
+     * Default: - No subnets associated
+     *
+     * @param subnetSelection Subnets in the given VPC to associate the ACL with.
+     */
+    public fun subnetSelection(subnetSelection: SubnetSelectionDsl.() -> Unit = {}) {
+        val builder = SubnetSelectionDsl()
+        builder.apply(subnetSelection)
+        cdkBuilder.subnetSelection(builder.build())
+    }
 
-  /**
-   * Subnets in the given VPC to associate the ACL with.
-   *
-   * More subnets can always be added later by calling
-   * `associateWithSubnets()`.
-   *
-   * Default: - No subnets associated
-   *
-   * @param subnetSelection Subnets in the given VPC to associate the ACL with. 
-   */
-  public fun subnetSelection(subnetSelection: SubnetSelection) {
-    cdkBuilder.subnetSelection(subnetSelection)
-  }
+    /**
+     * Subnets in the given VPC to associate the ACL with.
+     *
+     * More subnets can always be added later by calling `associateWithSubnets()`.
+     *
+     * Default: - No subnets associated
+     *
+     * @param subnetSelection Subnets in the given VPC to associate the ACL with.
+     */
+    public fun subnetSelection(subnetSelection: SubnetSelection) {
+        cdkBuilder.subnetSelection(subnetSelection)
+    }
 
-  /**
-   * The VPC in which to create the NetworkACL.
-   *
-   * @param vpc The VPC in which to create the NetworkACL. 
-   */
-  public fun vpc(vpc: IVpc) {
-    cdkBuilder.vpc(vpc)
-  }
+    /**
+     * The VPC in which to create the NetworkACL.
+     *
+     * @param vpc The VPC in which to create the NetworkACL.
+     */
+    public fun vpc(vpc: IVpc) {
+        cdkBuilder.vpc(vpc)
+    }
 
-  public fun build(): NetworkAcl = cdkBuilder.build()
+    public fun build(): NetworkAcl = cdkBuilder.build()
 }

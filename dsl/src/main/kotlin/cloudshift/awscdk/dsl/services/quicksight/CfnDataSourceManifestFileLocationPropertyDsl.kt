@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  * Amazon S3 manifest file location.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,22 +34,18 @@ import software.amazon.awscdk.services.quicksight.CfnDataSource
  */
 @CdkDslMarker
 public class CfnDataSourceManifestFileLocationPropertyDsl {
-  private val cdkBuilder: CfnDataSource.ManifestFileLocationProperty.Builder =
-      CfnDataSource.ManifestFileLocationProperty.builder()
+    private val cdkBuilder: CfnDataSource.ManifestFileLocationProperty.Builder =
+        CfnDataSource.ManifestFileLocationProperty.builder()
 
-  /**
-   * @param bucket Amazon S3 bucket. 
-   */
-  public fun bucket(bucket: String) {
-    cdkBuilder.bucket(bucket)
-  }
+    /** @param bucket Amazon S3 bucket. */
+    public fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+    }
 
-  /**
-   * @param key Amazon S3 key that identifies an object. 
-   */
-  public fun key(key: String) {
-    cdkBuilder.key(key)
-  }
+    /** @param key Amazon S3 key that identifies an object. */
+    public fun key(key: String) {
+        cdkBuilder.key(key)
+    }
 
-  public fun build(): CfnDataSource.ManifestFileLocationProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.ManifestFileLocationProperty = cdkBuilder.build()
 }

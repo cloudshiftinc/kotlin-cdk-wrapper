@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.servicediscovery
 
@@ -8,7 +17,6 @@ import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps
 
 /**
  * Example:
- *
  * ```
  * import software.amazon.awscdk.*;
  * import software.amazon.awscdk.*;
@@ -36,21 +44,17 @@ import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps
  */
 @CdkDslMarker
 public class PublicDnsNamespacePropsDsl {
-  private val cdkBuilder: PublicDnsNamespaceProps.Builder = PublicDnsNamespaceProps.builder()
+    private val cdkBuilder: PublicDnsNamespaceProps.Builder = PublicDnsNamespaceProps.builder()
 
-  /**
-   * @param description A description of the Namespace.
-   */
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    /** @param description A description of the Namespace. */
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  /**
-   * @param name A name for the Namespace. 
-   */
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    /** @param name A name for the Namespace. */
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun build(): PublicDnsNamespaceProps = cdkBuilder.build()
+    public fun build(): PublicDnsNamespaceProps = cdkBuilder.build()
 }

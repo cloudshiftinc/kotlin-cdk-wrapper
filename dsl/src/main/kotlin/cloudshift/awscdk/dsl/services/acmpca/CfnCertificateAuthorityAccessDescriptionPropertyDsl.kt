@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.acmpca
 
@@ -8,10 +17,10 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
 /**
  * Provides access information used by the `authorityInfoAccess` and `subjectInfoAccess` extensions
- * described in [RFC 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) .
+ * described in
+ * [RFC 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) .
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -63,36 +72,28 @@ import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
  */
 @CdkDslMarker
 public class CfnCertificateAuthorityAccessDescriptionPropertyDsl {
-  private val cdkBuilder: CfnCertificateAuthority.AccessDescriptionProperty.Builder =
-      CfnCertificateAuthority.AccessDescriptionProperty.builder()
+    private val cdkBuilder: CfnCertificateAuthority.AccessDescriptionProperty.Builder =
+        CfnCertificateAuthority.AccessDescriptionProperty.builder()
 
-  /**
-   * @param accessLocation The location of `AccessDescription` information. 
-   */
-  public fun accessLocation(accessLocation: IResolvable) {
-    cdkBuilder.accessLocation(accessLocation)
-  }
+    /** @param accessLocation The location of `AccessDescription` information. */
+    public fun accessLocation(accessLocation: IResolvable) {
+        cdkBuilder.accessLocation(accessLocation)
+    }
 
-  /**
-   * @param accessLocation The location of `AccessDescription` information. 
-   */
-  public fun accessLocation(accessLocation: CfnCertificateAuthority.GeneralNameProperty) {
-    cdkBuilder.accessLocation(accessLocation)
-  }
+    /** @param accessLocation The location of `AccessDescription` information. */
+    public fun accessLocation(accessLocation: CfnCertificateAuthority.GeneralNameProperty) {
+        cdkBuilder.accessLocation(accessLocation)
+    }
 
-  /**
-   * @param accessMethod The type and format of `AccessDescription` information. 
-   */
-  public fun accessMethod(accessMethod: IResolvable) {
-    cdkBuilder.accessMethod(accessMethod)
-  }
+    /** @param accessMethod The type and format of `AccessDescription` information. */
+    public fun accessMethod(accessMethod: IResolvable) {
+        cdkBuilder.accessMethod(accessMethod)
+    }
 
-  /**
-   * @param accessMethod The type and format of `AccessDescription` information. 
-   */
-  public fun accessMethod(accessMethod: CfnCertificateAuthority.AccessMethodProperty) {
-    cdkBuilder.accessMethod(accessMethod)
-  }
+    /** @param accessMethod The type and format of `AccessDescription` information. */
+    public fun accessMethod(accessMethod: CfnCertificateAuthority.AccessMethodProperty) {
+        cdkBuilder.accessMethod(accessMethod)
+    }
 
-  public fun build(): CfnCertificateAuthority.AccessDescriptionProperty = cdkBuilder.build()
+    public fun build(): CfnCertificateAuthority.AccessDescriptionProperty = cdkBuilder.build()
 }

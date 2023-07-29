@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolDomain
  * application.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,17 +34,16 @@ import software.amazon.awscdk.services.cognito.CfnUserPoolDomain
  */
 @CdkDslMarker
 public class CfnUserPoolDomainCustomDomainConfigTypePropertyDsl {
-  private val cdkBuilder: CfnUserPoolDomain.CustomDomainConfigTypeProperty.Builder =
-      CfnUserPoolDomain.CustomDomainConfigTypeProperty.builder()
+    private val cdkBuilder: CfnUserPoolDomain.CustomDomainConfigTypeProperty.Builder =
+        CfnUserPoolDomain.CustomDomainConfigTypeProperty.builder()
 
-  /**
-   * @param certificateArn The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL
-   * certificate.
-   * You use this certificate for the subdomain of your custom domain.
-   */
-  public fun certificateArn(certificateArn: String) {
-    cdkBuilder.certificateArn(certificateArn)
-  }
+    /**
+     * @param certificateArn The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL
+     *   certificate. You use this certificate for the subdomain of your custom domain.
+     */
+    public fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+    }
 
-  public fun build(): CfnUserPoolDomain.CustomDomainConfigTypeProperty = cdkBuilder.build()
+    public fun build(): CfnUserPoolDomain.CustomDomainConfigTypeProperty = cdkBuilder.build()
 }

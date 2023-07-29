@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.applicationautoscaling
 
@@ -8,12 +17,11 @@ import software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget
 
 /**
  * `ScalableTargetAction` specifies the minimum and maximum capacity for the `ScalableTargetAction`
- * property of the [AWS::ApplicationAutoScaling::ScalableTarget
- * ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html)
+ * property of the
+ * [AWS::ApplicationAutoScaling::ScalableTarget ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html)
  * property type.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -29,22 +37,18 @@ import software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget
  */
 @CdkDslMarker
 public class CfnScalableTargetScalableTargetActionPropertyDsl {
-  private val cdkBuilder: CfnScalableTarget.ScalableTargetActionProperty.Builder =
-      CfnScalableTarget.ScalableTargetActionProperty.builder()
+    private val cdkBuilder: CfnScalableTarget.ScalableTargetActionProperty.Builder =
+        CfnScalableTarget.ScalableTargetActionProperty.builder()
 
-  /**
-   * @param maxCapacity The maximum capacity.
-   */
-  public fun maxCapacity(maxCapacity: Number) {
-    cdkBuilder.maxCapacity(maxCapacity)
-  }
+    /** @param maxCapacity The maximum capacity. */
+    public fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
+    }
 
-  /**
-   * @param minCapacity The minimum capacity.
-   */
-  public fun minCapacity(minCapacity: Number) {
-    cdkBuilder.minCapacity(minCapacity)
-  }
+    /** @param minCapacity The minimum capacity. */
+    public fun minCapacity(minCapacity: Number) {
+        cdkBuilder.minCapacity(minCapacity)
+    }
 
-  public fun build(): CfnScalableTarget.ScalableTargetActionProperty = cdkBuilder.build()
+    public fun build(): CfnScalableTarget.ScalableTargetActionProperty = cdkBuilder.build()
 }

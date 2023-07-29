@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.nimblestudio
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
  * The configuration for a render farm that is associated with a studio resource.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,24 +34,24 @@ import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
  */
 @CdkDslMarker
 public class CfnStudioComponentComputeFarmConfigurationPropertyDsl {
-  private val cdkBuilder: CfnStudioComponent.ComputeFarmConfigurationProperty.Builder =
-      CfnStudioComponent.ComputeFarmConfigurationProperty.builder()
+    private val cdkBuilder: CfnStudioComponent.ComputeFarmConfigurationProperty.Builder =
+        CfnStudioComponent.ComputeFarmConfigurationProperty.builder()
 
-  /**
-   * @param activeDirectoryUser The name of an Active Directory user that is used on ComputeFarm
-   * worker instances.
-   */
-  public fun activeDirectoryUser(activeDirectoryUser: String) {
-    cdkBuilder.activeDirectoryUser(activeDirectoryUser)
-  }
+    /**
+     * @param activeDirectoryUser The name of an Active Directory user that is used on ComputeFarm
+     *   worker instances.
+     */
+    public fun activeDirectoryUser(activeDirectoryUser: String) {
+        cdkBuilder.activeDirectoryUser(activeDirectoryUser)
+    }
 
-  /**
-   * @param endpoint The endpoint of the ComputeFarm that is accessed by the studio component
-   * resource.
-   */
-  public fun endpoint(endpoint: String) {
-    cdkBuilder.endpoint(endpoint)
-  }
+    /**
+     * @param endpoint The endpoint of the ComputeFarm that is accessed by the studio component
+     *   resource.
+     */
+    public fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+    }
 
-  public fun build(): CfnStudioComponent.ComputeFarmConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnStudioComponent.ComputeFarmConfigurationProperty = cdkBuilder.build()
 }

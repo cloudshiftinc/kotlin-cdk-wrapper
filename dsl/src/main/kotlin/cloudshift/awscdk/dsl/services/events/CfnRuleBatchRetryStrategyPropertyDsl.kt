@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.events
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.events.CfnRule
  * definition.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -27,16 +35,16 @@ import software.amazon.awscdk.services.events.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleBatchRetryStrategyPropertyDsl {
-  private val cdkBuilder: CfnRule.BatchRetryStrategyProperty.Builder =
-      CfnRule.BatchRetryStrategyProperty.builder()
+    private val cdkBuilder: CfnRule.BatchRetryStrategyProperty.Builder =
+        CfnRule.BatchRetryStrategyProperty.builder()
 
-  /**
-   * @param attempts The number of times to attempt to retry, if the job fails.
-   * Valid values are 1–10.
-   */
-  public fun attempts(attempts: Number) {
-    cdkBuilder.attempts(attempts)
-  }
+    /**
+     * @param attempts The number of times to attempt to retry, if the job fails. Valid values are
+     *   1–10.
+     */
+    public fun attempts(attempts: Number) {
+        cdkBuilder.attempts(attempts)
+    }
 
-  public fun build(): CfnRule.BatchRetryStrategyProperty = cdkBuilder.build()
+    public fun build(): CfnRule.BatchRetryStrategyProperty = cdkBuilder.build()
 }

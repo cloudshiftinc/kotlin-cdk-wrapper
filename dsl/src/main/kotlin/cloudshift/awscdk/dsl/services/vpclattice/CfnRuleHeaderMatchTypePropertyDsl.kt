@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  * Only one can be provided.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -28,30 +36,23 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleHeaderMatchTypePropertyDsl {
-  private val cdkBuilder: CfnRule.HeaderMatchTypeProperty.Builder =
-      CfnRule.HeaderMatchTypeProperty.builder()
+    private val cdkBuilder: CfnRule.HeaderMatchTypeProperty.Builder =
+        CfnRule.HeaderMatchTypeProperty.builder()
 
-  /**
-   * @param contains Specifies a contains type match.
-   */
-  public fun contains(contains: String) {
-    cdkBuilder.contains(contains)
-  }
+    /** @param contains Specifies a contains type match. */
+    public fun contains(contains: String) {
+        cdkBuilder.contains(contains)
+    }
 
-  /**
-   * @param exact Specifies an exact type match.
-   */
-  public fun exact(exact: String) {
-    cdkBuilder.exact(exact)
-  }
+    /** @param exact Specifies an exact type match. */
+    public fun exact(exact: String) {
+        cdkBuilder.exact(exact)
+    }
 
-  /**
-   * @param prefix Specifies a prefix type match.
-   * Matches the value with the prefix.
-   */
-  public fun prefix(prefix: String) {
-    cdkBuilder.prefix(prefix)
-  }
+    /** @param prefix Specifies a prefix type match. Matches the value with the prefix. */
+    public fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+    }
 
-  public fun build(): CfnRule.HeaderMatchTypeProperty = cdkBuilder.build()
+    public fun build(): CfnRule.HeaderMatchTypeProperty = cdkBuilder.build()
 }

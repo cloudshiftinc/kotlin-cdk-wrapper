@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.s3outposts
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.s3outposts.CfnEndpoint
  * The container for the network interface.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -24,15 +32,13 @@ import software.amazon.awscdk.services.s3outposts.CfnEndpoint
  */
 @CdkDslMarker
 public class CfnEndpointNetworkInterfacePropertyDsl {
-  private val cdkBuilder: CfnEndpoint.NetworkInterfaceProperty.Builder =
-      CfnEndpoint.NetworkInterfaceProperty.builder()
+    private val cdkBuilder: CfnEndpoint.NetworkInterfaceProperty.Builder =
+        CfnEndpoint.NetworkInterfaceProperty.builder()
 
-  /**
-   * @param networkInterfaceId The ID for the network interface. 
-   */
-  public fun networkInterfaceId(networkInterfaceId: String) {
-    cdkBuilder.networkInterfaceId(networkInterfaceId)
-  }
+    /** @param networkInterfaceId The ID for the network interface. */
+    public fun networkInterfaceId(networkInterfaceId: String) {
+        cdkBuilder.networkInterfaceId(networkInterfaceId)
+    }
 
-  public fun build(): CfnEndpoint.NetworkInterfaceProperty = cdkBuilder.build()
+    public fun build(): CfnEndpoint.NetworkInterfaceProperty = cdkBuilder.build()
 }

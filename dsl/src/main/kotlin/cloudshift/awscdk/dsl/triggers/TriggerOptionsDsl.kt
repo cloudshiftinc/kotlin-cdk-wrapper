@@ -1,19 +1,27 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.triggers
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.triggers.TriggerOptions
-import software.constructs.Construct
 import kotlin.Boolean
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.triggers.TriggerOptions
+import software.constructs.Construct
 
 /**
  * Options for `Trigger`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,27 +44,26 @@ public class TriggerOptionsDsl {
     private val _executeBefore: MutableList<Construct> = mutableListOf()
 
     /**
-     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
-     * scopes have been provisioned.
-     * You can also use `trigger.executeAfter()` to add additional dependencies.
+     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these
+     *   construct scopes have been provisioned. You can also use `trigger.executeAfter()` to add
+     *   additional dependencies.
      */
     public fun executeAfter(vararg executeAfter: Construct) {
         _executeAfter.addAll(listOf(*executeAfter))
     }
 
     /**
-     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these construct
-     * scopes have been provisioned.
-     * You can also use `trigger.executeAfter()` to add additional dependencies.
+     * @param executeAfter Adds trigger dependencies. Execute this trigger only after these
+     *   construct scopes have been provisioned. You can also use `trigger.executeAfter()` to add
+     *   additional dependencies.
      */
     public fun executeAfter(executeAfter: Collection<Construct>) {
         _executeAfter.addAll(executeAfter)
     }
 
     /**
-     * @param executeBefore Adds this trigger as a dependency on other constructs.
-     * This means that this
-     * trigger will get executed *before* the given construct(s).
+     * @param executeBefore Adds this trigger as a dependency on other constructs. This means that
+     *   this trigger will get executed *before* the given construct(s).
      *
      * You can also use `trigger.executeBefore()` to add additional dependants.
      */
@@ -65,9 +72,8 @@ public class TriggerOptionsDsl {
     }
 
     /**
-     * @param executeBefore Adds this trigger as a dependency on other constructs.
-     * This means that this
-     * trigger will get executed *before* the given construct(s).
+     * @param executeBefore Adds this trigger as a dependency on other constructs. This means that
+     *   this trigger will get executed *before* the given construct(s).
      *
      * You can also use `trigger.executeBefore()` to add additional dependants.
      */
@@ -76,10 +82,9 @@ public class TriggerOptionsDsl {
     }
 
     /**
-     * @param executeOnHandlerChange Re-executes the trigger every time the handler changes.
-     * This implies that the trigger is associated with the `currentVersion` of
-     * the handler, which gets recreated every time the handler or its
-     * configuration is updated.
+     * @param executeOnHandlerChange Re-executes the trigger every time the handler changes. This
+     *   implies that the trigger is associated with the `currentVersion` of the handler, which gets
+     *   recreated every time the handler or its configuration is updated.
      */
     public fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
         cdkBuilder.executeOnHandlerChange(executeOnHandlerChange)

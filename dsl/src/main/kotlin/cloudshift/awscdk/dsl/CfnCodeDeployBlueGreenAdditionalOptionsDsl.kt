@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions
  * The type of the `CfnCodeDeployBlueGreenHookProps.additionalOptions` property.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -25,16 +33,16 @@ import software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions
  */
 @CdkDslMarker
 public class CfnCodeDeployBlueGreenAdditionalOptionsDsl {
-  private val cdkBuilder: CfnCodeDeployBlueGreenAdditionalOptions.Builder =
-      CfnCodeDeployBlueGreenAdditionalOptions.builder()
+    private val cdkBuilder: CfnCodeDeployBlueGreenAdditionalOptions.Builder =
+        CfnCodeDeployBlueGreenAdditionalOptions.builder()
 
-  /**
-   * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating the
-   * blue resources.
-   */
-  public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
-    cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
-  }
+    /**
+     * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating
+     *   the blue resources.
+     */
+    public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
+        cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
+    }
 
-  public fun build(): CfnCodeDeployBlueGreenAdditionalOptions = cdkBuilder.build()
+    public fun build(): CfnCodeDeployBlueGreenAdditionalOptions = cdkBuilder.build()
 }

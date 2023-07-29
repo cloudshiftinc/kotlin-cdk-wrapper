@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.globalaccelerator.endpoints
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBa
  * Use a Network Load Balancer as a Global Accelerator Endpoint.
  *
  * Example:
- *
  * ```
  * // Create an Accelerator
  * Accelerator accelerator = new Accelerator(this, "Accelerator");
@@ -43,23 +51,23 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBa
  */
 @CdkDslMarker
 public class NetworkLoadBalancerEndpointDsl(
-  loadBalancer: INetworkLoadBalancer,
+    loadBalancer: INetworkLoadBalancer,
 ) {
-  private val cdkBuilder: NetworkLoadBalancerEndpoint.Builder =
-      NetworkLoadBalancerEndpoint.Builder.create(loadBalancer)
+    private val cdkBuilder: NetworkLoadBalancerEndpoint.Builder =
+        NetworkLoadBalancerEndpoint.Builder.create(loadBalancer)
 
-  /**
-   * Endpoint weight across all endpoints in the group.
-   *
-   * Must be a value between 0 and 255.
-   *
-   * Default: 128
-   *
-   * @param weight Endpoint weight across all endpoints in the group. 
-   */
-  public fun weight(weight: Number) {
-    cdkBuilder.weight(weight)
-  }
+    /**
+     * Endpoint weight across all endpoints in the group.
+     *
+     * Must be a value between 0 and 255.
+     *
+     * Default: 128
+     *
+     * @param weight Endpoint weight across all endpoints in the group.
+     */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+    }
 
-  public fun build(): NetworkLoadBalancerEndpoint = cdkBuilder.build()
+    public fun build(): NetworkLoadBalancerEndpoint = cdkBuilder.build()
 }

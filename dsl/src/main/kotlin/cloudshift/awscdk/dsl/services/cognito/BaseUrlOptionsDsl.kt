@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -10,7 +19,6 @@ import software.amazon.awscdk.services.cognito.BaseUrlOptions
  * Options to customize the behaviour of `baseUrl()`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -22,14 +30,12 @@ import software.amazon.awscdk.services.cognito.BaseUrlOptions
  */
 @CdkDslMarker
 public class BaseUrlOptionsDsl {
-  private val cdkBuilder: BaseUrlOptions.Builder = BaseUrlOptions.builder()
+    private val cdkBuilder: BaseUrlOptions.Builder = BaseUrlOptions.builder()
 
-  /**
-   * @param fips Whether to return the FIPS-compliant endpoint.
-   */
-  public fun fips(fips: Boolean) {
-    cdkBuilder.fips(fips)
-  }
+    /** @param fips Whether to return the FIPS-compliant endpoint. */
+    public fun fips(fips: Boolean) {
+        cdkBuilder.fips(fips)
+    }
 
-  public fun build(): BaseUrlOptions = cdkBuilder.build()
+    public fun build(): BaseUrlOptions = cdkBuilder.build()
 }

@@ -1,26 +1,33 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.kms
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.kms.Alias
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
-import kotlin.String
 
 /**
  * Defines a display name for a customer master key (CMK) in AWS Key Management Service (AWS KMS).
  *
- * Using an alias to refer to a key can help you simplify key
- * management. For example, when rotating keys, you can just update the alias
- * mapping instead of tracking and changing key IDs. For more information, see
- * Working with Aliases in the AWS Key Management Service Developer Guide.
+ * Using an alias to refer to a key can help you simplify key management. For example, when rotating
+ * keys, you can just update the alias mapping instead of tracking and changing key IDs. For more
+ * information, see Working with Aliases in the AWS Key Management Service Developer Guide.
  *
  * You can also add an alias for a key by calling `key.addAlias(alias)`.
  *
  * Example:
- *
  * ```
  * // Passing an encrypted replication bucket created in a different stack.
  * App app = new App();
@@ -44,16 +51,15 @@ import kotlin.String
 @CdkDslMarker
 public class AliasDsl(
     scope: Construct,
-    id: String
+    id: String,
 ) {
     private val cdkBuilder: Alias.Builder = Alias.Builder.create(scope, id)
 
     /**
      * The name of the alias.
      *
-     * The name must start with alias followed by a
-     * forward slash, such as alias/. You can't specify aliases that begin with
-     * alias/AWS. These aliases are reserved.
+     * The name must start with alias followed by a forward slash, such as alias/. You can't specify
+     * aliases that begin with alias/AWS. These aliases are reserved.
      *
      * @param aliasName The name of the alias.
      */
@@ -75,9 +81,8 @@ public class AliasDsl(
     /**
      * The ID of the key for which you are creating the alias.
      *
-     * Specify the key's
-     * globally unique identifier or Amazon Resource Name (ARN). You can't
-     * specify another alias.
+     * Specify the key's globally unique identifier or Amazon Resource Name (ARN). You can't specify
+     * another alias.
      *
      * @param targetKey The ID of the key for which you are creating the alias.
      */

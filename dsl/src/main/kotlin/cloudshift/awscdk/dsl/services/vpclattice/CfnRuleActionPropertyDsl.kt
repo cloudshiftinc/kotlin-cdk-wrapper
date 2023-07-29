@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.vpclattice
 
@@ -13,7 +22,6 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  * `fixed-response` , and it must be the last action to be performed.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -36,37 +44,33 @@ import software.amazon.awscdk.services.vpclattice.CfnRule
  */
 @CdkDslMarker
 public class CfnRuleActionPropertyDsl {
-  private val cdkBuilder: CfnRule.ActionProperty.Builder = CfnRule.ActionProperty.builder()
+    private val cdkBuilder: CfnRule.ActionProperty.Builder = CfnRule.ActionProperty.builder()
 
-  /**
-   * @param fixedResponse Describes the rule action that returns a custom HTTP response.
-   */
-  public fun fixedResponse(fixedResponse: IResolvable) {
-    cdkBuilder.fixedResponse(fixedResponse)
-  }
+    /** @param fixedResponse Describes the rule action that returns a custom HTTP response. */
+    public fun fixedResponse(fixedResponse: IResolvable) {
+        cdkBuilder.fixedResponse(fixedResponse)
+    }
 
-  /**
-   * @param fixedResponse Describes the rule action that returns a custom HTTP response.
-   */
-  public fun fixedResponse(fixedResponse: CfnRule.FixedResponseProperty) {
-    cdkBuilder.fixedResponse(fixedResponse)
-  }
+    /** @param fixedResponse Describes the rule action that returns a custom HTTP response. */
+    public fun fixedResponse(fixedResponse: CfnRule.FixedResponseProperty) {
+        cdkBuilder.fixedResponse(fixedResponse)
+    }
 
-  /**
-   * @param forward The forward action.
-   * Traffic that matches the rule is forwarded to the specified target groups.
-   */
-  public fun forward(forward: IResolvable) {
-    cdkBuilder.forward(forward)
-  }
+    /**
+     * @param forward The forward action. Traffic that matches the rule is forwarded to the
+     *   specified target groups.
+     */
+    public fun forward(forward: IResolvable) {
+        cdkBuilder.forward(forward)
+    }
 
-  /**
-   * @param forward The forward action.
-   * Traffic that matches the rule is forwarded to the specified target groups.
-   */
-  public fun forward(forward: CfnRule.ForwardProperty) {
-    cdkBuilder.forward(forward)
-  }
+    /**
+     * @param forward The forward action. Traffic that matches the rule is forwarded to the
+     *   specified target groups.
+     */
+    public fun forward(forward: CfnRule.ForwardProperty) {
+        cdkBuilder.forward(forward)
+    }
 
-  public fun build(): CfnRule.ActionProperty = cdkBuilder.build()
+    public fun build(): CfnRule.ActionProperty = cdkBuilder.build()
 }

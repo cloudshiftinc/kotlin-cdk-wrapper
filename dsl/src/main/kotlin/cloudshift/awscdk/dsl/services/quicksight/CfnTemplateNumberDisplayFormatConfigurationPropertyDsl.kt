@@ -1,17 +1,25 @@
-@file:Suppress("RedundantVisibilityModifier", "RedundantUnitReturnType", "RemoveRedundantQualifierName", "unused", "UnusedImport", "ClassName", "REDUNDANT_PROJECTION", "DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
-import kotlin.String
 
 /**
  * The options that determine the number display format configuration.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -48,36 +56,44 @@ public class CfnTemplateNumberDisplayFormatConfigurationPropertyDsl {
         CfnTemplate.NumberDisplayFormatConfigurationProperty.builder()
 
     /**
-     * @param decimalPlacesConfiguration The option that determines the decimal places configuration.
+     * @param decimalPlacesConfiguration The option that determines the decimal places
+     *   configuration.
      */
     public fun decimalPlacesConfiguration(decimalPlacesConfiguration: IResolvable) {
         cdkBuilder.decimalPlacesConfiguration(decimalPlacesConfiguration)
     }
 
     /**
-     * @param decimalPlacesConfiguration The option that determines the decimal places configuration.
+     * @param decimalPlacesConfiguration The option that determines the decimal places
+     *   configuration.
      */
-    public fun decimalPlacesConfiguration(decimalPlacesConfiguration: CfnTemplate.DecimalPlacesConfigurationProperty) {
+    public fun decimalPlacesConfiguration(
+        decimalPlacesConfiguration: CfnTemplate.DecimalPlacesConfigurationProperty
+    ) {
         cdkBuilder.decimalPlacesConfiguration(decimalPlacesConfiguration)
     }
 
     /**
-     * @param negativeValueConfiguration The options that determine the negative value configuration.
+     * @param negativeValueConfiguration The options that determine the negative value
+     *   configuration.
      */
     public fun negativeValueConfiguration(negativeValueConfiguration: IResolvable) {
         cdkBuilder.negativeValueConfiguration(negativeValueConfiguration)
     }
 
     /**
-     * @param negativeValueConfiguration The options that determine the negative value configuration.
+     * @param negativeValueConfiguration The options that determine the negative value
+     *   configuration.
      */
-    public fun negativeValueConfiguration(negativeValueConfiguration: CfnTemplate.NegativeValueConfigurationProperty) {
+    public fun negativeValueConfiguration(
+        negativeValueConfiguration: CfnTemplate.NegativeValueConfigurationProperty
+    ) {
         cdkBuilder.negativeValueConfiguration(negativeValueConfiguration)
     }
 
     /**
      * @param nullValueFormatConfiguration The options that determine the null value format
-     * configuration.
+     *   configuration.
      */
     public fun nullValueFormatConfiguration(nullValueFormatConfiguration: IResolvable) {
         cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
@@ -85,22 +101,20 @@ public class CfnTemplateNumberDisplayFormatConfigurationPropertyDsl {
 
     /**
      * @param nullValueFormatConfiguration The options that determine the null value format
-     * configuration.
+     *   configuration.
      */
-    public fun nullValueFormatConfiguration(nullValueFormatConfiguration: CfnTemplate.NullValueFormatConfigurationProperty) {
+    public fun nullValueFormatConfiguration(
+        nullValueFormatConfiguration: CfnTemplate.NullValueFormatConfigurationProperty
+    ) {
         cdkBuilder.nullValueFormatConfiguration(nullValueFormatConfiguration)
     }
 
-    /**
-     * @param numberScale Determines the number scale value of the number format.
-     */
+    /** @param numberScale Determines the number scale value of the number format. */
     public fun numberScale(numberScale: String) {
         cdkBuilder.numberScale(numberScale)
     }
 
-    /**
-     * @param prefix Determines the prefix value of the number format.
-     */
+    /** @param prefix Determines the prefix value of the number format. */
     public fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
     }
@@ -115,13 +129,13 @@ public class CfnTemplateNumberDisplayFormatConfigurationPropertyDsl {
     /**
      * @param separatorConfiguration The options that determine the numeric separator configuration.
      */
-    public fun separatorConfiguration(separatorConfiguration: CfnTemplate.NumericSeparatorConfigurationProperty) {
+    public fun separatorConfiguration(
+        separatorConfiguration: CfnTemplate.NumericSeparatorConfigurationProperty
+    ) {
         cdkBuilder.separatorConfiguration(separatorConfiguration)
     }
 
-    /**
-     * @param suffix Determines the suffix value of the number format.
-     */
+    /** @param suffix Determines the suffix value of the number format. */
     public fun suffix(suffix: String) {
         cdkBuilder.suffix(suffix)
     }

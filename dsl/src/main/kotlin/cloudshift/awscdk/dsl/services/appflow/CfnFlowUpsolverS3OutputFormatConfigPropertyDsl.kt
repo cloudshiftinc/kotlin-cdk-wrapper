@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  * is used as the destination.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -37,48 +45,48 @@ import software.amazon.awscdk.services.appflow.CfnFlow
  */
 @CdkDslMarker
 public class CfnFlowUpsolverS3OutputFormatConfigPropertyDsl {
-  private val cdkBuilder: CfnFlow.UpsolverS3OutputFormatConfigProperty.Builder =
-      CfnFlow.UpsolverS3OutputFormatConfigProperty.builder()
+    private val cdkBuilder: CfnFlow.UpsolverS3OutputFormatConfigProperty.Builder =
+        CfnFlow.UpsolverS3OutputFormatConfigProperty.builder()
 
-  /**
-   * @param aggregationConfig The aggregation settings that you can use to customize the output
-   * format of your flow data.
-   */
-  public fun aggregationConfig(aggregationConfig: IResolvable) {
-    cdkBuilder.aggregationConfig(aggregationConfig)
-  }
+    /**
+     * @param aggregationConfig The aggregation settings that you can use to customize the output
+     *   format of your flow data.
+     */
+    public fun aggregationConfig(aggregationConfig: IResolvable) {
+        cdkBuilder.aggregationConfig(aggregationConfig)
+    }
 
-  /**
-   * @param aggregationConfig The aggregation settings that you can use to customize the output
-   * format of your flow data.
-   */
-  public fun aggregationConfig(aggregationConfig: CfnFlow.AggregationConfigProperty) {
-    cdkBuilder.aggregationConfig(aggregationConfig)
-  }
+    /**
+     * @param aggregationConfig The aggregation settings that you can use to customize the output
+     *   format of your flow data.
+     */
+    public fun aggregationConfig(aggregationConfig: CfnFlow.AggregationConfigProperty) {
+        cdkBuilder.aggregationConfig(aggregationConfig)
+    }
 
-  /**
-   * @param fileType Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3
-   * bucket.
-   */
-  public fun fileType(fileType: String) {
-    cdkBuilder.fileType(fileType)
-  }
+    /**
+     * @param fileType Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3
+     *   bucket.
+     */
+    public fun fileType(fileType: String) {
+        cdkBuilder.fileType(fileType)
+    }
 
-  /**
-   * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-   * names in the flow destination. 
-   */
-  public fun prefixConfig(prefixConfig: IResolvable) {
-    cdkBuilder.prefixConfig(prefixConfig)
-  }
+    /**
+     * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+     *   names in the flow destination.
+     */
+    public fun prefixConfig(prefixConfig: IResolvable) {
+        cdkBuilder.prefixConfig(prefixConfig)
+    }
 
-  /**
-   * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-   * names in the flow destination. 
-   */
-  public fun prefixConfig(prefixConfig: CfnFlow.PrefixConfigProperty) {
-    cdkBuilder.prefixConfig(prefixConfig)
-  }
+    /**
+     * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+     *   names in the flow destination.
+     */
+    public fun prefixConfig(prefixConfig: CfnFlow.PrefixConfigProperty) {
+        cdkBuilder.prefixConfig(prefixConfig)
+    }
 
-  public fun build(): CfnFlow.UpsolverS3OutputFormatConfigProperty = cdkBuilder.build()
+    public fun build(): CfnFlow.UpsolverS3OutputFormatConfigProperty = cdkBuilder.build()
 }

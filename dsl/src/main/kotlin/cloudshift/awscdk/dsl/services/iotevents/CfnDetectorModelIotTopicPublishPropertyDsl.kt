@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotevents
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  * Information required to publish the MQTT message through the AWS IoT message broker.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -30,33 +38,33 @@ import software.amazon.awscdk.services.iotevents.CfnDetectorModel
  */
 @CdkDslMarker
 public class CfnDetectorModelIotTopicPublishPropertyDsl {
-  private val cdkBuilder: CfnDetectorModel.IotTopicPublishProperty.Builder =
-      CfnDetectorModel.IotTopicPublishProperty.builder()
+    private val cdkBuilder: CfnDetectorModel.IotTopicPublishProperty.Builder =
+        CfnDetectorModel.IotTopicPublishProperty.builder()
 
-  /**
-   * @param mqttTopic The MQTT topic of the message. 
-   * You can use a string expression that includes variables ( `$variable.&lt;variable-name&gt;` )
-   * and input values ( `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
-   */
-  public fun mqttTopic(mqttTopic: String) {
-    cdkBuilder.mqttTopic(mqttTopic)
-  }
+    /**
+     * @param mqttTopic The MQTT topic of the message. You can use a string expression that includes
+     *   variables ( `$variable.&lt;variable-name&gt;` ) and input values (
+     *   `$input.&lt;input-name&gt;.&lt;path-to-datum&gt;` ) as the topic string.
+     */
+    public fun mqttTopic(mqttTopic: String) {
+        cdkBuilder.mqttTopic(mqttTopic)
+    }
 
-  /**
-   * @param payload You can configure the action payload when you publish a message to an AWS IoT
-   * Core topic.
-   */
-  public fun payload(payload: IResolvable) {
-    cdkBuilder.payload(payload)
-  }
+    /**
+     * @param payload You can configure the action payload when you publish a message to an AWS IoT
+     *   Core topic.
+     */
+    public fun payload(payload: IResolvable) {
+        cdkBuilder.payload(payload)
+    }
 
-  /**
-   * @param payload You can configure the action payload when you publish a message to an AWS IoT
-   * Core topic.
-   */
-  public fun payload(payload: CfnDetectorModel.PayloadProperty) {
-    cdkBuilder.payload(payload)
-  }
+    /**
+     * @param payload You can configure the action payload when you publish a message to an AWS IoT
+     *   Core topic.
+     */
+    public fun payload(payload: CfnDetectorModel.PayloadProperty) {
+        cdkBuilder.payload(payload)
+    }
 
-  public fun build(): CfnDetectorModel.IotTopicPublishProperty = cdkBuilder.build()
+    public fun build(): CfnDetectorModel.IotTopicPublishProperty = cdkBuilder.build()
 }

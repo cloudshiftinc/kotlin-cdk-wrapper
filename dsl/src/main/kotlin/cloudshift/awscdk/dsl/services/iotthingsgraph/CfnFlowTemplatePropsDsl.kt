@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.iotthingsgraph
 
@@ -12,7 +21,6 @@ import software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps
  * Properties for defining a `CfnFlowTemplate`.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -31,28 +39,22 @@ import software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps
  */
 @CdkDslMarker
 public class CfnFlowTemplatePropsDsl {
-  private val cdkBuilder: CfnFlowTemplateProps.Builder = CfnFlowTemplateProps.builder()
+    private val cdkBuilder: CfnFlowTemplateProps.Builder = CfnFlowTemplateProps.builder()
 
-  /**
-   * @param compatibleNamespaceVersion the value to be set.
-   */
-  public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
-    cdkBuilder.compatibleNamespaceVersion(compatibleNamespaceVersion)
-  }
+    /** @param compatibleNamespaceVersion the value to be set. */
+    public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
+        cdkBuilder.compatibleNamespaceVersion(compatibleNamespaceVersion)
+    }
 
-  /**
-   * @param definition the value to be set. 
-   */
-  public fun definition(definition: IResolvable) {
-    cdkBuilder.definition(definition)
-  }
+    /** @param definition the value to be set. */
+    public fun definition(definition: IResolvable) {
+        cdkBuilder.definition(definition)
+    }
 
-  /**
-   * @param definition the value to be set. 
-   */
-  public fun definition(definition: CfnFlowTemplate.DefinitionDocumentProperty) {
-    cdkBuilder.definition(definition)
-  }
+    /** @param definition the value to be set. */
+    public fun definition(definition: CfnFlowTemplate.DefinitionDocumentProperty) {
+        cdkBuilder.definition(definition)
+    }
 
-  public fun build(): CfnFlowTemplateProps = cdkBuilder.build()
+    public fun build(): CfnFlowTemplateProps = cdkBuilder.build()
 }

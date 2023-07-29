@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.ivschat
 
@@ -11,7 +20,6 @@ import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
  * chat logs will be stored.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,17 +34,18 @@ import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
  */
 @CdkDslMarker
 public class CfnLoggingConfigurationFirehoseDestinationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.Builder =
-      CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.builder()
+    private val cdkBuilder:
+        CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.Builder =
+        CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.builder()
 
-  /**
-   * @param deliveryStreamName Name of the Amazon Kinesis Firehose delivery stream where chat
-   * activity will be logged. 
-   */
-  public fun deliveryStreamName(deliveryStreamName: String) {
-    cdkBuilder.deliveryStreamName(deliveryStreamName)
-  }
+    /**
+     * @param deliveryStreamName Name of the Amazon Kinesis Firehose delivery stream where chat
+     *   activity will be logged.
+     */
+    public fun deliveryStreamName(deliveryStreamName: String) {
+        cdkBuilder.deliveryStreamName(deliveryStreamName)
+    }
 
-  public fun build(): CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty =
-      cdkBuilder.build()
+    public fun build(): CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty =
+        cdkBuilder.build()
 }

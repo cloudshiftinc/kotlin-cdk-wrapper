@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
@@ -9,11 +18,9 @@ import software.amazon.awscdk.services.appsync.SchemaFile
 /**
  * The Schema for a GraphQL Api.
  *
- * If no options are configured, schema will be generated
- * code-first.
+ * If no options are configured, schema will be generated code-first.
  *
  * Example:
- *
  * ```
  * import software.amazon.awscdk.services.events.*;
  * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
@@ -32,20 +39,19 @@ import software.amazon.awscdk.services.appsync.SchemaFile
  */
 @CdkDslMarker
 public class SchemaFileDsl {
-  private val cdkBuilder: SchemaFile.Builder = SchemaFile.Builder.create()
+    private val cdkBuilder: SchemaFile.Builder = SchemaFile.Builder.create()
 
-  /**
-   * The file path for the schema.
-   *
-   * When this option is
-   * configured, then the schema will be generated from an
-   * existing file from disk.
-   *
-   * @param filePath The file path for the schema. 
-   */
-  public fun filePath(filePath: String) {
-    cdkBuilder.filePath(filePath)
-  }
+    /**
+     * The file path for the schema.
+     *
+     * When this option is configured, then the schema will be generated from an existing file from
+     * disk.
+     *
+     * @param filePath The file path for the schema.
+     */
+    public fun filePath(filePath: String) {
+        cdkBuilder.filePath(filePath)
+    }
 
-  public fun build(): SchemaFile = cdkBuilder.build()
+    public fun build(): SchemaFile = cdkBuilder.build()
 }

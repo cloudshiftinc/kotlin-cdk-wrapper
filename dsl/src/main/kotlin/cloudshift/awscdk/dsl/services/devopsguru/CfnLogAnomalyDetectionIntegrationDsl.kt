@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
 
 package cloudshift.awscdk.dsl.services.devopsguru
 
@@ -12,7 +21,6 @@ import software.constructs.Construct
  * detection.
  *
  * Example:
- *
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
@@ -26,11 +34,11 @@ import software.constructs.Construct
  */
 @CdkDslMarker
 public class CfnLogAnomalyDetectionIntegrationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnLogAnomalyDetectionIntegration.Builder =
-      CfnLogAnomalyDetectionIntegration.Builder.create(scope, id)
+    private val cdkBuilder: CfnLogAnomalyDetectionIntegration.Builder =
+        CfnLogAnomalyDetectionIntegration.Builder.create(scope, id)
 
-  public fun build(): CfnLogAnomalyDetectionIntegration = cdkBuilder.build()
+    public fun build(): CfnLogAnomalyDetectionIntegration = cdkBuilder.build()
 }
