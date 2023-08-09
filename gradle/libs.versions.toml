@@ -39,7 +39,7 @@ asm-core = { module = "org.ow2.asm:asm" }
 asm-tree = { module = "org.ow2.asm:asm-tree" }
 asm-util = { module = "org.ow2.asm:asm-util" }
 
-caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.1.7" }
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.1.8" }
 aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.19" }
 
 guava = { module = "com.google.guava:guava", version = "32.1.1-jre" }
