@@ -550,39 +550,18 @@ public object ec2 {
      *
      * Example:
      * ```
-     * Vpc vpc;
-     * InstanceType instanceType;
-     * // Amazon Linux 2
-     * // Amazon Linux 2
-     * Instance.Builder.create(this, "Instance2")
-     * .vpc(vpc)
-     * .instanceType(instanceType)
-     * .machineImage(MachineImage.latestAmazonLinux2())
-     * .build();
-     * // Amazon Linux 2 with kernel 5.x
-     * // Amazon Linux 2 with kernel 5.x
-     * Instance.Builder.create(this, "Instance3")
-     * .vpc(vpc)
-     * .instanceType(instanceType)
-     * .machineImage(MachineImage.latestAmazonLinux2(AmazonLinux2ImageSsmParameterProps.builder()
-     * .kernel(AmazonLinux2Kernel.KERNEL_5_10)
-     * .build()))
-     * .build();
-     * // AWS Linux 2022
-     * // AWS Linux 2022
-     * Instance.Builder.create(this, "Instance4")
-     * .vpc(vpc)
-     * .instanceType(instanceType)
-     * .machineImage(MachineImage.latestAmazonLinux2022())
-     * .build();
-     * // Graviton 3 Processor
-     * // Graviton 3 Processor
-     * Instance.Builder.create(this, "Instance5")
-     * .vpc(vpc)
-     * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
-     * .machineImage(MachineImage.latestAmazonLinux2022(AmazonLinux2022ImageSsmParameterProps.builder()
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * AmazonLinux2022Kernel amazonLinux2022Kernel;
+     * UserData userData;
+     * AmazonLinux2022ImageSsmParameterProps amazonLinux2022ImageSsmParameterProps =
+     * AmazonLinux2022ImageSsmParameterProps.builder()
+     * .cachedInContext(false)
      * .cpuType(AmazonLinuxCpuType.ARM_64)
-     * .build()))
+     * .edition(AmazonLinuxEdition.STANDARD)
+     * .kernel(amazonLinux2022Kernel)
+     * .userData(userData)
      * .build();
      * ```
      */
@@ -709,19 +688,19 @@ public object ec2 {
      * .kernel(AmazonLinux2Kernel.KERNEL_5_10)
      * .build()))
      * .build();
-     * // AWS Linux 2022
-     * // AWS Linux 2022
+     * // Amazon Linux 2023
+     * // Amazon Linux 2023
      * Instance.Builder.create(this, "Instance4")
      * .vpc(vpc)
      * .instanceType(instanceType)
-     * .machineImage(MachineImage.latestAmazonLinux2022())
+     * .machineImage(MachineImage.latestAmazonLinux2023())
      * .build();
      * // Graviton 3 Processor
      * // Graviton 3 Processor
      * Instance.Builder.create(this, "Instance5")
      * .vpc(vpc)
      * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
-     * .machineImage(MachineImage.latestAmazonLinux2022(AmazonLinux2022ImageSsmParameterProps.builder()
+     * .machineImage(MachineImage.latestAmazonLinux2023(AmazonLinux2023ImageSsmParameterProps.builder()
      * .cpuType(AmazonLinuxCpuType.ARM_64)
      * .build()))
      * .build();
@@ -2676,6 +2655,9 @@ public object ec2 {
      * When you specify instance attributes, Amazon EC2 will identify instance types with these
      * attributes.
      *
+     * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
+     * unspecified optional attribute is set to its default.
+     *
      * When you specify multiple attributes, you get instance types that satisfy all of the
      * specified attributes. If you specify multiple values for an attribute, you get instance types
      * that satisfy any of the specified values.
@@ -2687,8 +2669,16 @@ public object ec2 {
      * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match
      *   your specified attributes.
      *
-     * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
-     * unspecified optional attribute is set to its default.
+     * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+     *
+     * Attribute-based instance type selection is only supported when using Auto Scaling groups, EC2
+     * Fleet, and Spot Fleet to launch instances. If you plan to use the launch template in the
+     * [launch instance wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html)
+     * , or with the
+     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+     * API or
+     * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+     * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
      *
      * For more information, see
      * [Attribute-based instance type selection for EC2 Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
@@ -4561,6 +4551,10 @@ public object ec2 {
      * When you specify CPU options, you must specify both the number of CPU cores and threads per
      * core.
      *
+     * Modifying the CPU options for an instance results in instance
+     * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+     * .
+     *
      * For more information, see
      * [Optimize CPU options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html)
      * in the *Amazon Elastic Compute Cloud User Guide* .
@@ -5819,6 +5813,9 @@ public object ec2 {
      * When you specify instance attributes, Amazon EC2 will identify instance types with these
      * attributes.
      *
+     * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
+     * unspecified optional attribute is set to its default.
+     *
      * When you specify multiple attributes, you get instance types that satisfy all of the
      * specified attributes. If you specify multiple values for an attribute, you get instance types
      * that satisfy any of the specified values.
@@ -5830,8 +5827,16 @@ public object ec2 {
      * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match
      *   your specified attributes.
      *
-     * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
-     * unspecified optional attribute is set to its default.
+     * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+     *
+     * Attribute-based instance type selection is only supported when using Auto Scaling groups, EC2
+     * Fleet, and Spot Fleet to launch instances. If you plan to use the launch template in the
+     * [launch instance wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html)
+     * , or with the
+     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+     * API or
+     * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+     * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
      *
      * For more information, see
      * [Attribute-based instance type selection for EC2 Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
@@ -10595,6 +10600,9 @@ public object ec2 {
      * When you specify instance attributes, Amazon EC2 will identify instance types with these
      * attributes.
      *
+     * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
+     * unspecified optional attribute is set to its default.
+     *
      * When you specify multiple attributes, you get instance types that satisfy all of the
      * specified attributes. If you specify multiple values for an attribute, you get instance types
      * that satisfy any of the specified values.
@@ -10606,8 +10614,16 @@ public object ec2 {
      * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match
      *   your specified attributes.
      *
-     * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any
-     * unspecified optional attribute is set to its default.
+     * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+     *
+     * Attribute-based instance type selection is only supported when using Auto Scaling groups, EC2
+     * Fleet, and Spot Fleet to launch instances. If you plan to use the launch template in the
+     * [launch instance wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html)
+     * , or with the
+     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
+     * API or
+     * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+     * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
      *
      * For more information, see
      * [Attribute-based instance type selection for EC2 Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
@@ -10939,7 +10955,11 @@ public object ec2 {
     }
 
     /**
-     * The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps).
+     * The minimum and maximum amount of baseline network bandwidth, in gigabits per second (Gbps).
+     *
+     * For more information, see
+     * [Amazon EC2 instance network bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html)
+     * in the *Amazon EC2 User Guide* .
      *
      * Default: No minimum or maximum limits
      *
@@ -16746,7 +16766,7 @@ public object ec2 {
      * .vpc(vpc)
      * .build();
      * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
-     * .machineImage(MachineImage.latestAmazonLinux2022())
+     * .machineImage(MachineImage.latestAmazonLinux2023())
      * .securityGroup(sg1)
      * .build();
      * launchTemplate.addSecurityGroup(sg2);
@@ -16800,7 +16820,7 @@ public object ec2 {
      * .vpc(vpc)
      * .build();
      * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
-     * .machineImage(MachineImage.latestAmazonLinux2022())
+     * .machineImage(MachineImage.latestAmazonLinux2023())
      * .securityGroup(sg1)
      * .build();
      * launchTemplate.addSecurityGroup(sg2);
@@ -17869,7 +17889,7 @@ public object ec2 {
      * .vpc(vpc)
      * .build();
      * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
-     * .machineImage(MachineImage.latestAmazonLinux2022())
+     * .machineImage(MachineImage.latestAmazonLinux2023())
      * .securityGroup(sg1)
      * .build();
      * launchTemplate.addSecurityGroup(sg2);
@@ -18171,7 +18191,7 @@ public object ec2 {
      * Instance.Builder.create(this, "Instance")
      * .vpc(vpc)
      * .instanceType(instanceType)
-     * .machineImage(MachineImage.latestAmazonLinux2022())
+     * .machineImage(MachineImage.latestAmazonLinux2023())
      * .init(CloudFormationInit.fromElements(InitService.systemdConfigFile("simpleserver",
      * SystemdConfigFileOptions.builder()
      * .command("/usr/bin/python3 -m http.server 8080")

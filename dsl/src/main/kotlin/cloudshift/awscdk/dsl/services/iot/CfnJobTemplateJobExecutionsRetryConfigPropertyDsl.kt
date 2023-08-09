@@ -44,17 +44,26 @@ public class CfnJobTemplateJobExecutionsRetryConfigPropertyDsl {
 
     private val _retryCriteriaList: MutableList<Any> = mutableListOf()
 
-    /** @param retryCriteriaList the value to be set. */
+    /**
+     * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+     *   for each failure type for a job.
+     */
     public fun retryCriteriaList(vararg retryCriteriaList: Any) {
         _retryCriteriaList.addAll(listOf(*retryCriteriaList))
     }
 
-    /** @param retryCriteriaList the value to be set. */
+    /**
+     * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+     *   for each failure type for a job.
+     */
     public fun retryCriteriaList(retryCriteriaList: Collection<Any>) {
         _retryCriteriaList.addAll(retryCriteriaList)
     }
 
-    /** @param retryCriteriaList the value to be set. */
+    /**
+     * @param retryCriteriaList The list of criteria that determines how many retries are allowed
+     *   for each failure type for a job.
+     */
     public fun retryCriteriaList(retryCriteriaList: IResolvable) {
         cdkBuilder.retryCriteriaList(retryCriteriaList)
     }

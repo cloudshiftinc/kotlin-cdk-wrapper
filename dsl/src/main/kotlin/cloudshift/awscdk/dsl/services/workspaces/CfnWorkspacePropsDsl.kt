@@ -124,8 +124,8 @@ public class CfnWorkspacePropsDsl {
     }
 
     /**
-     * @param volumeEncryptionKey The symmetric AWS KMS key used to encrypt data stored on your
-     *   WorkSpace. Amazon WorkSpaces does not support asymmetric KMS keys.
+     * @param volumeEncryptionKey The ARN of the symmetric AWS KMS key used to encrypt data stored
+     *   on your WorkSpace. Amazon WorkSpaces does not support asymmetric KMS keys.
      */
     public fun volumeEncryptionKey(volumeEncryptionKey: String) {
         cdkBuilder.volumeEncryptionKey(volumeEncryptionKey)

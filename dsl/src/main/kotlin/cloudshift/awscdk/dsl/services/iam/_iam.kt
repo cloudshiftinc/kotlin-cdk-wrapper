@@ -20,6 +20,8 @@ import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
 import software.amazon.awscdk.services.iam.CfnAccessKey
 import software.amazon.awscdk.services.iam.CfnAccessKeyProps
 import software.amazon.awscdk.services.iam.CfnGroup
+import software.amazon.awscdk.services.iam.CfnGroupPolicy
+import software.amazon.awscdk.services.iam.CfnGroupPolicyProps
 import software.amazon.awscdk.services.iam.CfnGroupProps
 import software.amazon.awscdk.services.iam.CfnInstanceProfile
 import software.amazon.awscdk.services.iam.CfnInstanceProfileProps
@@ -30,6 +32,8 @@ import software.amazon.awscdk.services.iam.CfnOIDCProviderProps
 import software.amazon.awscdk.services.iam.CfnPolicy
 import software.amazon.awscdk.services.iam.CfnPolicyProps
 import software.amazon.awscdk.services.iam.CfnRole
+import software.amazon.awscdk.services.iam.CfnRolePolicy
+import software.amazon.awscdk.services.iam.CfnRolePolicyProps
 import software.amazon.awscdk.services.iam.CfnRoleProps
 import software.amazon.awscdk.services.iam.CfnSAMLProvider
 import software.amazon.awscdk.services.iam.CfnSAMLProviderProps
@@ -38,6 +42,8 @@ import software.amazon.awscdk.services.iam.CfnServerCertificateProps
 import software.amazon.awscdk.services.iam.CfnServiceLinkedRole
 import software.amazon.awscdk.services.iam.CfnServiceLinkedRoleProps
 import software.amazon.awscdk.services.iam.CfnUser
+import software.amazon.awscdk.services.iam.CfnUserPolicy
+import software.amazon.awscdk.services.iam.CfnUserPolicyProps
 import software.amazon.awscdk.services.iam.CfnUserProps
 import software.amazon.awscdk.services.iam.CfnUserToGroupAddition
 import software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps
@@ -277,6 +283,49 @@ public object iam {
     }
 
     /**
+     * Adds or updates an inline policy document that is embedded in the specified IAM group.
+     *
+     * A group can also have managed policies attached to it. To attach a managed policy to a group,
+     * use
+     * [`AWS::IAM::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
+     * . To create a new managed policy, use
+     * [`AWS::IAM::ManagedPolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html)
+     * . For information about policies, see
+     * [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html)
+     * in the *IAM User Guide* .
+     *
+     * For information about the maximum number of inline policies that you can embed in a group,
+     * see
+     * [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html)
+     * in the *IAM User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iam.*;
+     * Object policyDocument;
+     * CfnGroupPolicy cfnGroupPolicy = CfnGroupPolicy.Builder.create(this, "MyCfnGroupPolicy")
+     * .groupName("groupName")
+     * .policyName("policyName")
+     * // the properties below are optional
+     * .policyDocument(policyDocument)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html)
+     */
+    public inline fun cfnGroupPolicy(
+        scope: Construct,
+        id: String,
+        block: CfnGroupPolicyDsl.() -> Unit = {},
+    ): CfnGroupPolicy {
+        val builder = CfnGroupPolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Contains information about an attached policy.
      *
      * An attached policy is a managed policy that has been attached to a user, group, or role.
@@ -303,6 +352,33 @@ public object iam {
         block: CfnGroupPolicyPropertyDsl.() -> Unit = {}
     ): CfnGroup.PolicyProperty {
         val builder = CfnGroupPolicyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnGroupPolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iam.*;
+     * Object policyDocument;
+     * CfnGroupPolicyProps cfnGroupPolicyProps = CfnGroupPolicyProps.builder()
+     * .groupName("groupName")
+     * .policyName("policyName")
+     * // the properties below are optional
+     * .policyDocument(policyDocument)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html)
+     */
+    public inline fun cfnGroupPolicyProps(
+        block: CfnGroupPolicyPropsDsl.() -> Unit = {}
+    ): CfnGroupPolicyProps {
+        val builder = CfnGroupPolicyPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -564,7 +640,7 @@ public object iam {
     }
 
     /**
-     * Adds or updates an inline policy document that is embedded in the specified IAM user, group,
+     * Adds or updates an inline policy document that is embedded in the specified IAM group, user
      * or role.
      *
      * An IAM user can also have a managed policy attached to it. For information about policies,
@@ -583,6 +659,16 @@ public object iam {
      * identity, see
      * [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html)
      * in the *IAM User Guide* .
+     *
+     * This resource does not support
+     * [drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html)
+     * . The following inline policy resource types support drift detection:
+     * *
+     * [`AWS::IAM::GroupPolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html)
+     * *
+     * [`AWS::IAM::RolePolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)
+     * *
+     * [`AWS::IAM::UserPolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)
      *
      * Example:
      * ```
@@ -689,6 +775,58 @@ public object iam {
     }
 
     /**
+     * Adds or updates an inline policy document that is embedded in the specified IAM role.
+     *
+     * When you embed an inline policy in a role, the inline policy is used as part of the role's
+     * access (permissions) policy. The role's trust policy is created at the same time as the role,
+     * using [`CreateRole`](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html)
+     * . You can update a role's trust policy using
+     * [`UpdateAssumeRolePolicy`](https://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateAssumeRolePolicy.html)
+     * . For information about roles, see
+     * [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html) in the *IAM
+     * User Guide* .
+     *
+     * A role can also have a managed policy attached to it. To attach a managed policy to a role,
+     * use
+     * [`AWS::IAM::Role`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+     * . To create a new managed policy, use
+     * [`AWS::IAM::ManagedPolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html)
+     * . For information about policies, see
+     * [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html)
+     * in the *IAM User Guide* .
+     *
+     * For information about the maximum number of inline policies that you can embed with a role,
+     * see
+     * [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html)
+     * in the *IAM User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iam.*;
+     * Object policyDocument;
+     * CfnRolePolicy cfnRolePolicy = CfnRolePolicy.Builder.create(this, "MyCfnRolePolicy")
+     * .policyName("policyName")
+     * .roleName("roleName")
+     * // the properties below are optional
+     * .policyDocument(policyDocument)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)
+     */
+    public inline fun cfnRolePolicy(
+        scope: Construct,
+        id: String,
+        block: CfnRolePolicyDsl.() -> Unit = {},
+    ): CfnRolePolicy {
+        val builder = CfnRolePolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Contains information about an attached policy.
      *
      * An attached policy is a managed policy that has been attached to a user, group, or role.
@@ -715,6 +853,33 @@ public object iam {
         block: CfnRolePolicyPropertyDsl.() -> Unit = {}
     ): CfnRole.PolicyProperty {
         val builder = CfnRolePolicyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnRolePolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iam.*;
+     * Object policyDocument;
+     * CfnRolePolicyProps cfnRolePolicyProps = CfnRolePolicyProps.builder()
+     * .policyName("policyName")
+     * .roleName("roleName")
+     * // the properties below are optional
+     * .policyDocument(policyDocument)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)
+     */
+    public inline fun cfnRolePolicyProps(
+        block: CfnRolePolicyPropsDsl.() -> Unit = {}
+    ): CfnRolePolicyProps {
+        val builder = CfnRolePolicyPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1061,6 +1226,48 @@ public object iam {
     }
 
     /**
+     * Adds or updates an inline policy document that is embedded in the specified IAM user.
+     *
+     * An IAM user can also have a managed policy attached to it. To attach a managed policy to a
+     * user, use
+     * [`AWS::IAM::User`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
+     * . To create a new managed policy, use
+     * [`AWS::IAM::ManagedPolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html)
+     * . For information about policies, see
+     * [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html)
+     * in the *IAM User Guide* .
+     *
+     * For information about the maximum number of inline policies that you can embed in a user, see
+     * [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html)
+     * in the *IAM User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iam.*;
+     * Object policyDocument;
+     * CfnUserPolicy cfnUserPolicy = CfnUserPolicy.Builder.create(this, "MyCfnUserPolicy")
+     * .policyName("policyName")
+     * .userName("userName")
+     * // the properties below are optional
+     * .policyDocument(policyDocument)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)
+     */
+    public inline fun cfnUserPolicy(
+        scope: Construct,
+        id: String,
+        block: CfnUserPolicyDsl.() -> Unit = {},
+    ): CfnUserPolicy {
+        val builder = CfnUserPolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Contains information about an attached policy.
      *
      * An attached policy is a managed policy that has been attached to a user, group, or role.
@@ -1087,6 +1294,33 @@ public object iam {
         block: CfnUserPolicyPropertyDsl.() -> Unit = {}
     ): CfnUser.PolicyProperty {
         val builder = CfnUserPolicyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnUserPolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.iam.*;
+     * Object policyDocument;
+     * CfnUserPolicyProps cfnUserPolicyProps = CfnUserPolicyProps.builder()
+     * .policyName("policyName")
+     * .userName("userName")
+     * // the properties below are optional
+     * .policyDocument(policyDocument)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)
+     */
+    public inline fun cfnUserPolicyProps(
+        block: CfnUserPolicyPropsDsl.() -> Unit = {}
+    ): CfnUserPolicyProps {
+        val builder = CfnUserPolicyPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1895,28 +2129,18 @@ public object iam {
      *
      * Example:
      * ```
-     * // Add gateway endpoints when creating the VPC
-     * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
-     * .gatewayEndpoints(Map.of(
-     * "S3", GatewayVpcEndpointOptions.builder()
-     * .service(GatewayVpcEndpointAwsService.S3)
-     * .build()))
+     * // Option 3: Create a new role that allows the account root principal to assume. Add this role
+     * in the `system:masters` and witch to this role from the AWS console.
+     * Cluster cluster;
+     * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
+     * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
      * .build();
-     * // Alternatively gateway endpoints can be added on the VPC
-     * GatewayVpcEndpoint dynamoDbEndpoint = vpc.addGatewayEndpoint("DynamoDbEndpoint",
-     * GatewayVpcEndpointOptions.builder()
-     * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+     * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
+     * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
+     * .resources(List.of(cluster.getClusterArn()))
      * .build());
-     * // This allows to customize the endpoint policy
-     * dynamoDbEndpoint.addToPolicy(
-     * PolicyStatement.Builder.create() // Restrict to listing and describing tables
-     * .principals(List.of(new AnyPrincipal()))
-     * .actions(List.of("dynamodb:DescribeTable", "dynamodb:ListTables"))
-     * .resources(List.of("*")).build());
-     * // Add an interface endpoint
-     * vpc.addInterfaceEndpoint("EcrDockerEndpoint", InterfaceVpcEndpointOptions.builder()
-     * .service(InterfaceVpcEndpointAwsService.ECR_DOCKER)
-     * .build());
+     * // Add this role to system:masters RBAC group
+     * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
      * ```
      */
     public inline fun policyStatement(block: PolicyStatementDsl.() -> Unit = {}): PolicyStatement {

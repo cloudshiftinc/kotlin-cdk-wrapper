@@ -48,6 +48,7 @@ public class CfnStandardPropsDsl {
 
     /**
      * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
+     *   *Maximum* : `100`
      */
     public fun disabledStandardsControls(vararg disabledStandardsControls: Any) {
         _disabledStandardsControls.addAll(listOf(*disabledStandardsControls))
@@ -55,6 +56,7 @@ public class CfnStandardPropsDsl {
 
     /**
      * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
+     *   *Maximum* : `100`
      */
     public fun disabledStandardsControls(disabledStandardsControls: Collection<Any>) {
         _disabledStandardsControls.addAll(disabledStandardsControls)
@@ -62,6 +64,7 @@ public class CfnStandardPropsDsl {
 
     /**
      * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
+     *   *Maximum* : `100`
      */
     public fun disabledStandardsControls(disabledStandardsControls: IResolvable) {
         cdkBuilder.disabledStandardsControls(disabledStandardsControls)

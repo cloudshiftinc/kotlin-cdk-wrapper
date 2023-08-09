@@ -70,16 +70,16 @@ public class CfnTargetGroupTargetGroupConfigPropertyDsl {
 
     /**
      * @param ipAddressType The type of IP address used for the target group. The possible values
-     *   are `ipv4` and `ipv6` . This is an optional parameter. If not specified, the IP address
-     *   type defaults to `ipv4` .
+     *   are `ipv4` and `ipv6` . This is an optional parameter. If not specified, the default is
+     *   `ipv4` .
      */
     public fun ipAddressType(ipAddressType: String) {
         cdkBuilder.ipAddressType(ipAddressType)
     }
 
     /**
-     * @param port The port on which the targets are listening. For HTTP, the default is `80` . For
-     *   HTTPS, the default is `443`
+     * @param port The port on which the targets are listening. For HTTP, the default is 80. For
+     *   HTTPS, the default is 443.
      */
     public fun port(port: Number) {
         cdkBuilder.port(port)

@@ -54,6 +54,7 @@ import software.constructs.Construct
  * StateMachine sm = StateMachine.Builder.create(this, "StateMachine")
  * .definition(chain)
  * .timeout(Duration.seconds(30))
+ * .comment("a super cool state machine")
  * .build();
  * // don't forget permissions. You need to assign them
  * table.grantWriteData(sm);

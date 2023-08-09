@@ -103,6 +103,10 @@ public class CfnTrafficMirrorSessionDsl(
      * If you do not want to mirror the entire packet, use the `PacketLength` parameter to specify
      * the number of bytes in each packet to mirror.
      *
+     * For sessions with Network Load Balancer (NLB) Traffic Mirror targets the default
+     * `PacketLength` will be set to 8500. Valid values are 1-8500. Setting a `PacketLength` greater
+     * than 8500 will result in an error response.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-packetlength)
      *
      * @param packetLength The number of bytes in each packet to mirror.

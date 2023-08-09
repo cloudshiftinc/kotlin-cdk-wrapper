@@ -521,6 +521,10 @@ public object batch {
      * .type("type")
      * .value("value")
      * .build()))
+     * .runtimePlatform(RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build())
      * .secrets(List.of(SecretProperty.builder()
      * .name("name")
      * .valueFrom("valueFrom")
@@ -669,6 +673,10 @@ public object batch {
      * .type("type")
      * .value("value")
      * .build()))
+     * .runtimePlatform(RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build())
      * .secrets(List.of(SecretProperty.builder()
      * .name("name")
      * .valueFrom("valueFrom")
@@ -827,6 +835,10 @@ public object batch {
      * .type("type")
      * .value("value")
      * .build()))
+     * .runtimePlatform(RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build())
      * .secrets(List.of(SecretProperty.builder()
      * .name("name")
      * .valueFrom("valueFrom")
@@ -1554,6 +1566,10 @@ public object batch {
      * .type("type")
      * .value("value")
      * .build()))
+     * .runtimePlatform(RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build())
      * .secrets(List.of(SecretProperty.builder()
      * .name("name")
      * .valueFrom("valueFrom")
@@ -1668,6 +1684,10 @@ public object batch {
      * .type("type")
      * .value("value")
      * .build()))
+     * .runtimePlatform(RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build())
      * .secrets(List.of(SecretProperty.builder()
      * .name("name")
      * .valueFrom("valueFrom")
@@ -1861,6 +1881,10 @@ public object batch {
      * .type("type")
      * .value("value")
      * .build()))
+     * .runtimePlatform(RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build())
      * .secrets(List.of(SecretProperty.builder()
      * .name("name")
      * .valueFrom("valueFrom")
@@ -2009,6 +2033,10 @@ public object batch {
      * .type("type")
      * .value("value")
      * .build()))
+     * .runtimePlatform(RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build())
      * .secrets(List.of(SecretProperty.builder()
      * .name("name")
      * .valueFrom("valueFrom")
@@ -2152,6 +2180,28 @@ public object batch {
         block: CfnJobDefinitionRetryStrategyPropertyDsl.() -> Unit = {}
     ): CfnJobDefinition.RetryStrategyProperty {
         val builder = CfnJobDefinitionRetryStrategyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.batch.*;
+     * RuntimePlatformProperty runtimePlatformProperty = RuntimePlatformProperty.builder()
+     * .cpuArchitecture("cpuArchitecture")
+     * .operatingSystemFamily("operatingSystemFamily")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-runtimeplatform.html)
+     */
+    public inline fun cfnJobDefinitionRuntimePlatformProperty(
+        block: CfnJobDefinitionRuntimePlatformPropertyDsl.() -> Unit = {}
+    ): CfnJobDefinition.RuntimePlatformProperty {
+        val builder = CfnJobDefinitionRuntimePlatformPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

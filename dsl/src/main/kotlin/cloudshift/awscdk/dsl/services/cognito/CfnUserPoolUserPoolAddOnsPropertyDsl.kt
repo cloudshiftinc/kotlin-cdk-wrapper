@@ -16,7 +16,15 @@ import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
 /**
- * The user pool add-ons type.
+ * User pool add-ons.
+ *
+ * Contains settings for activation of advanced security features. To log user security information
+ * but take no action, set to `AUDIT` . To configure automatic security responses to risky traffic
+ * to your user pool, set to `ENFORCED` .
+ *
+ * For more information, see
+ * [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+ * .
  *
  * Example:
  * ```
@@ -35,7 +43,10 @@ public class CfnUserPoolUserPoolAddOnsPropertyDsl {
     private val cdkBuilder: CfnUserPool.UserPoolAddOnsProperty.Builder =
         CfnUserPool.UserPoolAddOnsProperty.builder()
 
-    /** @param advancedSecurityMode The advanced security mode. */
+    /**
+     * @param advancedSecurityMode The operating mode of advanced security features in your user
+     *   pool.
+     */
     public fun advancedSecurityMode(advancedSecurityMode: String) {
         cdkBuilder.advancedSecurityMode(advancedSecurityMode)
     }

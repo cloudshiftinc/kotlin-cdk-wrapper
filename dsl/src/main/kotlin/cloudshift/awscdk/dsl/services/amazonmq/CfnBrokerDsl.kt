@@ -76,6 +76,8 @@ import software.constructs.Construct
  * .id("id")
  * .revision(123)
  * .build())
+ * .dataReplicationMode("dataReplicationMode")
+ * .dataReplicationPrimaryBrokerArn("dataReplicationPrimaryBrokerArn")
  * .encryptionOptions(EncryptionOptionsProperty.builder()
  * .useAwsOwnedKey(false)
  * // the properties below are optional
@@ -219,6 +221,24 @@ public class CfnBrokerDsl(
      */
     public fun configuration(configuration: CfnBroker.ConfigurationIdProperty) {
         cdkBuilder.configuration(configuration)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-datareplicationmode)
+     *
+     * @param dataReplicationMode
+     */
+    public fun dataReplicationMode(dataReplicationMode: String) {
+        cdkBuilder.dataReplicationMode(dataReplicationMode)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-datareplicationprimarybrokerarn)
+     *
+     * @param dataReplicationPrimaryBrokerArn
+     */
+    public fun dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn: String) {
+        cdkBuilder.dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn)
     }
 
     /**

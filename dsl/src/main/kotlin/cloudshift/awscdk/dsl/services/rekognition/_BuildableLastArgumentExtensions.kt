@@ -14,18 +14,6 @@ package cloudshift.awscdk.dsl.services.rekognition
 import kotlin.Unit
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
 
-/**
- * The Kinesis video stream that provides the source of the streaming video for an Amazon
- * Rekognition Video stream processor.
- */
-public inline fun CfnStreamProcessor.setKinesisVideoStream(
-    block: CfnStreamProcessorKinesisVideoStreamPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStreamProcessorKinesisVideoStreamPropertyDsl()
-    builder.apply(block)
-    return setKinesisVideoStream(builder.build())
-}
-
 /** Connected home settings to use on a streaming video. */
 public inline fun CfnStreamProcessor.setConnectedHomeSettings(
     block: CfnStreamProcessorConnectedHomeSettingsPropertyDsl.() -> Unit = {}
@@ -63,6 +51,18 @@ public inline fun CfnStreamProcessor.setKinesisDataStream(
     val builder = CfnStreamProcessorKinesisDataStreamPropertyDsl()
     builder.apply(block)
     return setKinesisDataStream(builder.build())
+}
+
+/**
+ * The Kinesis video stream that provides the source of the streaming video for an Amazon
+ * Rekognition Video stream processor.
+ */
+public inline fun CfnStreamProcessor.setKinesisVideoStream(
+    block: CfnStreamProcessorKinesisVideoStreamPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStreamProcessorKinesisVideoStreamPropertyDsl()
+    builder.apply(block)
+    return setKinesisVideoStream(builder.build())
 }
 
 /**

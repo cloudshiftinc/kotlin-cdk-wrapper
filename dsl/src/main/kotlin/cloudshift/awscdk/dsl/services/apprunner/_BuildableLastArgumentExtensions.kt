@@ -16,13 +16,13 @@ import software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration
 import software.amazon.awscdk.services.apprunner.CfnService
 import software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection
 
-/** The source to deploy to the App Runner service. */
-public inline fun CfnService.setSourceConfiguration(
-    block: CfnServiceSourceConfigurationPropertyDsl.() -> Unit = {}
+/** The configuration of the tracing feature within this observability configuration. */
+public inline fun CfnObservabilityConfiguration.setTraceConfiguration(
+    block: CfnObservabilityConfigurationTraceConfigurationPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnServiceSourceConfigurationPropertyDsl()
+    val builder = CfnObservabilityConfigurationTraceConfigurationPropertyDsl()
     builder.apply(block)
-    return setSourceConfiguration(builder.build())
+    return setTraceConfiguration(builder.build())
 }
 
 /**
@@ -79,6 +79,15 @@ public inline fun CfnService.setObservabilityConfiguration(
     return setObservabilityConfiguration(builder.build())
 }
 
+/** The source to deploy to the App Runner service. */
+public inline fun CfnService.setSourceConfiguration(
+    block: CfnServiceSourceConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnServiceSourceConfigurationPropertyDsl()
+    builder.apply(block)
+    return setSourceConfiguration(builder.build())
+}
+
 /**
  * Specifications for the customer’s Amazon VPC and the related AWS PrivateLink VPC endpoint that
  * are used to create the VPC Ingress Connection resource.
@@ -89,13 +98,4 @@ public inline fun CfnVpcIngressConnection.setIngressVpcConfiguration(
     val builder = CfnVpcIngressConnectionIngressVpcConfigurationPropertyDsl()
     builder.apply(block)
     return setIngressVpcConfiguration(builder.build())
-}
-
-/** The configuration of the tracing feature within this observability configuration. */
-public inline fun CfnObservabilityConfiguration.setTraceConfiguration(
-    block: CfnObservabilityConfigurationTraceConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnObservabilityConfigurationTraceConfigurationPropertyDsl()
-    builder.apply(block)
-    return setTraceConfiguration(builder.build())
 }

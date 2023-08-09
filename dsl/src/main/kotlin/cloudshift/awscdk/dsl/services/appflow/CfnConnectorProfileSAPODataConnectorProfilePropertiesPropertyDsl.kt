@@ -65,12 +65,18 @@ public class CfnConnectorProfileSAPODataConnectorProfilePropertiesPropertyDsl {
         cdkBuilder.clientNumber(clientNumber)
     }
 
-    /** @param disableSso the value to be set. */
+    /**
+     * @param disableSso If you set this parameter to true, Amazon AppFlow bypasses the single
+     *   sign-on (SSO) settings in your SAP account when it accesses your SAP OData instance.
+     */
     public fun disableSso(disableSso: Boolean) {
         cdkBuilder.disableSso(disableSso)
     }
 
-    /** @param disableSso the value to be set. */
+    /**
+     * @param disableSso If you set this parameter to true, Amazon AppFlow bypasses the single
+     *   sign-on (SSO) settings in your SAP account when it accesses your SAP OData instance.
+     */
     public fun disableSso(disableSso: IResolvable) {
         cdkBuilder.disableSso(disableSso)
     }

@@ -16,6 +16,7 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.CnameRecord
+import software.amazon.awscdk.services.route53.GeoLocation
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
@@ -102,6 +103,16 @@ public class CnameRecordDsl(
      */
     public fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
+    }
+
+    /**
+     * The geographical origin for this record to return DNS records based on the user's location.
+     *
+     * @param geoLocation The geographical origin for this record to return DNS records based on the
+     *   user's location.
+     */
+    public fun geoLocation(geoLocation: GeoLocation) {
+        cdkBuilder.geoLocation(geoLocation)
     }
 
     /**

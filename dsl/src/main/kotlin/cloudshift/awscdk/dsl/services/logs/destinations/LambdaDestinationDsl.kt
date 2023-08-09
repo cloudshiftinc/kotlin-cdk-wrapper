@@ -28,6 +28,7 @@ import software.amazon.awscdk.services.logs.destinations.LambdaDestination
  * .logGroup(logGroup)
  * .destination(new LambdaDestination(fn))
  * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+ * .filterName("ErrorInMainThread")
  * .build();
  * ```
  */

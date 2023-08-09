@@ -17,60 +17,6 @@ import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
 
-/** Parameters for CDN authorization. */
-public inline fun CfnPackagingGroup.setAuthorization(
-    block: CfnPackagingGroupAuthorizationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPackagingGroupAuthorizationPropertyDsl()
-    builder.apply(block)
-    return setAuthorization(builder.build())
-}
-
-/** The configuration parameters for egress access logging. */
-public inline fun CfnPackagingGroup.setEgressAccessLogs(
-    block: CfnPackagingGroupLogConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPackagingGroupLogConfigurationPropertyDsl()
-    builder.apply(block)
-    return setEgressAccessLogs(builder.build())
-}
-
-/** Parameters for CMAF packaging. */
-public inline fun CfnPackagingConfiguration.setCmafPackage(
-    block: CfnPackagingConfigurationCmafPackagePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPackagingConfigurationCmafPackagePropertyDsl()
-    builder.apply(block)
-    return setCmafPackage(builder.build())
-}
-
-/** Parameters for DASH-ISO packaging. */
-public inline fun CfnPackagingConfiguration.setDashPackage(
-    block: CfnPackagingConfigurationDashPackagePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPackagingConfigurationDashPackagePropertyDsl()
-    builder.apply(block)
-    return setDashPackage(builder.build())
-}
-
-/** Parameters for Apple HLS packaging. */
-public inline fun CfnPackagingConfiguration.setHlsPackage(
-    block: CfnPackagingConfigurationHlsPackagePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPackagingConfigurationHlsPackagePropertyDsl()
-    builder.apply(block)
-    return setHlsPackage(builder.build())
-}
-
-/** Parameters for Microsoft Smooth Streaming packaging. */
-public inline fun CfnPackagingConfiguration.setMssPackage(
-    block: CfnPackagingConfigurationMssPackagePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPackagingConfigurationMssPackagePropertyDsl()
-    builder.apply(block)
-    return setMssPackage(builder.build())
-}
-
 /** Configures egress access logs. */
 public inline fun CfnChannel.setEgressAccessLogs(
     block: CfnChannelLogConfigurationPropertyDsl.() -> Unit = {}
@@ -139,4 +85,58 @@ public inline fun CfnOriginEndpoint.setMssPackage(
     val builder = CfnOriginEndpointMssPackagePropertyDsl()
     builder.apply(block)
     return setMssPackage(builder.build())
+}
+
+/** Parameters for CMAF packaging. */
+public inline fun CfnPackagingConfiguration.setCmafPackage(
+    block: CfnPackagingConfigurationCmafPackagePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPackagingConfigurationCmafPackagePropertyDsl()
+    builder.apply(block)
+    return setCmafPackage(builder.build())
+}
+
+/** Parameters for DASH-ISO packaging. */
+public inline fun CfnPackagingConfiguration.setDashPackage(
+    block: CfnPackagingConfigurationDashPackagePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPackagingConfigurationDashPackagePropertyDsl()
+    builder.apply(block)
+    return setDashPackage(builder.build())
+}
+
+/** Parameters for Apple HLS packaging. */
+public inline fun CfnPackagingConfiguration.setHlsPackage(
+    block: CfnPackagingConfigurationHlsPackagePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPackagingConfigurationHlsPackagePropertyDsl()
+    builder.apply(block)
+    return setHlsPackage(builder.build())
+}
+
+/** Parameters for Microsoft Smooth Streaming packaging. */
+public inline fun CfnPackagingConfiguration.setMssPackage(
+    block: CfnPackagingConfigurationMssPackagePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPackagingConfigurationMssPackagePropertyDsl()
+    builder.apply(block)
+    return setMssPackage(builder.build())
+}
+
+/** Parameters for CDN authorization. */
+public inline fun CfnPackagingGroup.setAuthorization(
+    block: CfnPackagingGroupAuthorizationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPackagingGroupAuthorizationPropertyDsl()
+    builder.apply(block)
+    return setAuthorization(builder.build())
+}
+
+/** The configuration parameters for egress access logging. */
+public inline fun CfnPackagingGroup.setEgressAccessLogs(
+    block: CfnPackagingGroupLogConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPackagingGroupLogConfigurationPropertyDsl()
+    builder.apply(block)
+    return setEgressAccessLogs(builder.build())
 }

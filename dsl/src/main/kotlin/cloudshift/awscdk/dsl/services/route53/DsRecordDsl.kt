@@ -18,6 +18,7 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.DsRecord
+import software.amazon.awscdk.services.route53.GeoLocation
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
@@ -74,6 +75,16 @@ public class DsRecordDsl(
      */
     public fun deleteExisting(deleteExisting: Boolean) {
         cdkBuilder.deleteExisting(deleteExisting)
+    }
+
+    /**
+     * The geographical origin for this record to return DNS records based on the user's location.
+     *
+     * @param geoLocation The geographical origin for this record to return DNS records based on the
+     *   user's location.
+     */
+    public fun geoLocation(geoLocation: GeoLocation) {
+        cdkBuilder.geoLocation(geoLocation)
     }
 
     /**

@@ -115,11 +115,11 @@ public class CfnHoursOfOperationDsl(
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the instance.
+     * The Amazon Resource Name (ARN) of the instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-instancearn)
      *
-     * @param instanceArn The Amazon Resource Name (ARN) for the instance.
+     * @param instanceArn The Amazon Resource Name (ARN) of the instance.
      */
     public fun instanceArn(instanceArn: String) {
         cdkBuilder.instanceArn(instanceArn)

@@ -46,6 +46,11 @@ public class DockerImageAssetInvalidationOptionsDsl {
         cdkBuilder.buildSecrets(buildSecrets)
     }
 
+    /** @param buildSsh Use `buildSsh` while calculating the asset hash. */
+    public fun buildSsh(buildSsh: Boolean) {
+        cdkBuilder.buildSsh(buildSsh)
+    }
+
     /** @param extraHash Use `extraHash` while calculating the asset hash. */
     public fun extraHash(extraHash: Boolean) {
         cdkBuilder.extraHash(extraHash)

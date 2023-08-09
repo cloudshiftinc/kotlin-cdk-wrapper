@@ -20,6 +20,27 @@ import software.amazon.awscdk.services.kinesis.IStream
 import software.amazon.awscdk.services.kinesis.Stream
 
 /**
+ * When specified, enables or updates server-side encryption using an AWS KMS key for a specified
+ * stream.
+ */
+public inline fun CfnStream.setStreamEncryption(
+    block: CfnStreamStreamEncryptionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStreamStreamEncryptionPropertyDsl()
+    builder.apply(block)
+    return setStreamEncryption(builder.build())
+}
+
+/** Specifies the capacity mode to which you want to set your data stream. */
+public inline fun CfnStream.setStreamModeDetails(
+    block: CfnStreamStreamModeDetailsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStreamStreamModeDetailsPropertyDsl()
+    builder.apply(block)
+    return setStreamModeDetails(builder.build())
+}
+
+/**
  * Return stream metric based from its metric name.
  *
  * @param metricName name of the stream metric.
@@ -182,6 +203,23 @@ public inline fun IStream.metricPutRecordLatency(block: MetricOptionsDsl.() -> U
 }
 
 /**
+ * The number of successful PutRecord operations per Kinesis stream, measured over the specified
+ * time period.
+ *
+ * Average reflects the percentage of successful writes to a stream.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
+public inline fun IStream.metricPutRecordSuccess(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricPutRecordSuccess(builder.build())
+}
+
+/**
  * The number of bytes put to the Kinesis stream using the PutRecords operation over the specified
  * time period.
  *
@@ -296,23 +334,6 @@ public inline fun IStream.metricPutRecordsTotalRecords(
 }
 
 /**
- * The number of successful PutRecord operations per Kinesis stream, measured over the specified
- * time period.
- *
- * Average reflects the percentage of successful writes to a stream.
- *
- * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
- * `period` properties.
- *
- * @param props properties of the metric.
- */
-public inline fun IStream.metricPutRecordSuccess(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricPutRecordSuccess(builder.build())
-}
-
-/**
  * The number of GetRecords calls throttled for the stream over the specified time period.
  *
  * The most commonly used statistic for this metric is Average.
@@ -358,27 +379,6 @@ public inline fun IStream.metricWriteProvisionedThroughputExceeded(
     val builder = MetricOptionsDsl()
     builder.apply(block)
     return metricWriteProvisionedThroughputExceeded(builder.build())
-}
-
-/**
- * When specified, enables or updates server-side encryption using an AWS KMS key for a specified
- * stream.
- */
-public inline fun CfnStream.setStreamEncryption(
-    block: CfnStreamStreamEncryptionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStreamStreamEncryptionPropertyDsl()
-    builder.apply(block)
-    return setStreamEncryption(builder.build())
-}
-
-/** Specifies the capacity mode to which you want to set your data stream. */
-public inline fun CfnStream.setStreamModeDetails(
-    block: CfnStreamStreamModeDetailsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStreamStreamModeDetailsPropertyDsl()
-    builder.apply(block)
-    return setStreamModeDetails(builder.build())
 }
 
 /**
@@ -548,6 +548,23 @@ public inline fun Stream.metricPutRecordLatency(block: MetricOptionsDsl.() -> Un
 }
 
 /**
+ * The number of successful PutRecord operations per Kinesis stream, measured over the specified
+ * time period.
+ *
+ * Average reflects the percentage of successful writes to a stream.
+ *
+ * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
+ * `period` properties.
+ *
+ * @param props properties of the metric.
+ */
+public inline fun Stream.metricPutRecordSuccess(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricPutRecordSuccess(builder.build())
+}
+
+/**
  * The number of bytes put to the Kinesis stream using the PutRecords operation over the specified
  * time period.
  *
@@ -659,23 +676,6 @@ public inline fun Stream.metricPutRecordsTotalRecords(
     val builder = MetricOptionsDsl()
     builder.apply(block)
     return metricPutRecordsTotalRecords(builder.build())
-}
-
-/**
- * The number of successful PutRecord operations per Kinesis stream, measured over the specified
- * time period.
- *
- * Average reflects the percentage of successful writes to a stream.
- *
- * The metric defaults to average over 5 minutes, it can be changed by passing `statistic` and
- * `period` properties.
- *
- * @param props properties of the metric.
- */
-public inline fun Stream.metricPutRecordSuccess(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricPutRecordSuccess(builder.build())
 }
 
 /**

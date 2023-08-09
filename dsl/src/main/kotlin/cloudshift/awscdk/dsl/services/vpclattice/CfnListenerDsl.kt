@@ -125,8 +125,8 @@ public class CfnListenerDsl(
     /**
      * The listener port.
      *
-     * You can specify a value from `1` to `65535` . For HTTP, the default is `80` . For HTTPS, the
-     * default is `443` .
+     * You can specify a value from 1 to 65535. For HTTP, the default is 80. For HTTPS, the default
+     * is 443.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-listener.html#cfn-vpclattice-listener-port)
      *

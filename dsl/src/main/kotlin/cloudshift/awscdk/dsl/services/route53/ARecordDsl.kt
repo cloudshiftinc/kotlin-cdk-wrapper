@@ -16,6 +16,7 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.ARecord
+import software.amazon.awscdk.services.route53.GeoLocation
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordTarget
 import software.constructs.Construct
@@ -25,12 +26,14 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.apigateway.*;
+ * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
  * HostedZone zone;
- * LambdaRestApi restApi;
+ * DomainName domainName;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
- * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
+ * .target(RecordTarget.fromAlias(new
+ * ApiGatewayv2DomainProperties(domainName.getRegionalDomainName(),
+ * domainName.getRegionalHostedZoneId())))
  * .build();
  * ```
  */
@@ -71,6 +74,16 @@ public class ARecordDsl(
      */
     public fun deleteExisting(deleteExisting: Boolean) {
         cdkBuilder.deleteExisting(deleteExisting)
+    }
+
+    /**
+     * The geographical origin for this record to return DNS records based on the user's location.
+     *
+     * @param geoLocation The geographical origin for this record to return DNS records based on the
+     *   user's location.
+     */
+    public fun geoLocation(geoLocation: GeoLocation) {
+        cdkBuilder.geoLocation(geoLocation)
     }
 
     /**

@@ -65,6 +65,8 @@ public class CfnStandardDsl(
     /**
      * Specifies which controls are to be disabled in a standard.
      *
+     * *Maximum* : `100`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-standard.html#cfn-securityhub-standard-disabledstandardscontrols)
      *
      * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
@@ -76,6 +78,8 @@ public class CfnStandardDsl(
     /**
      * Specifies which controls are to be disabled in a standard.
      *
+     * *Maximum* : `100`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-standard.html#cfn-securityhub-standard-disabledstandardscontrols)
      *
      * @param disabledStandardsControls Specifies which controls are to be disabled in a standard.
@@ -86,6 +90,8 @@ public class CfnStandardDsl(
 
     /**
      * Specifies which controls are to be disabled in a standard.
+     *
+     * *Maximum* : `100`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-standard.html#cfn-securityhub-standard-disabledstandardscontrols)
      *

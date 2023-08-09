@@ -549,7 +549,7 @@ public class CfnTaskDefinitionPropsDsl {
 
     /**
      * @param requiresCompatibilities The task launch types the task definition was validated
-     *   against. The valid values are `EC2` , `FARGATE` , and `git diff` . For more information,
+     *   against. The valid values are `EC2` , `FARGATE` , and `EXTERNAL` . For more information,
      *   see
      *   [Amazon ECS launch types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
      *   in the *Amazon Elastic Container Service Developer Guide* .
@@ -560,7 +560,7 @@ public class CfnTaskDefinitionPropsDsl {
 
     /**
      * @param requiresCompatibilities The task launch types the task definition was validated
-     *   against. The valid values are `EC2` , `FARGATE` , and `git diff` . For more information,
+     *   against. The valid values are `EC2` , `FARGATE` , and `EXTERNAL` . For more information,
      *   see
      *   [Amazon ECS launch types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
      *   in the *Amazon Elastic Container Service Developer Guide* .

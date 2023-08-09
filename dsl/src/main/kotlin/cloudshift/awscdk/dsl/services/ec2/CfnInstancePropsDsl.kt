@@ -545,12 +545,10 @@ public class CfnInstancePropsDsl {
      *   [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
      *   in the *Amazon EC2 User Guide* . When you change your EBS-backed instance type, instance
      *   restart or replacement behavior depends on the instance type compatibility between the old
-     *   and new types. An instance that's backed by an instance store volume is always replaced.
-     *   For more information, see
+     *   and new types. An instance with an instance store volume as the root volume is always
+     *   replaced. For more information, see
      *   [Change the instance type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html)
      *   in the *Amazon EC2 User Guide* .
-     *
-     * Default: `m1.small`
      */
     public fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)

@@ -70,7 +70,7 @@ public class CfnEndpointConfigAsyncInferenceOutputConfigPropertyDsl {
         cdkBuilder.notificationConfig(notificationConfig)
     }
 
-    /** @param s3FailurePath the value to be set. */
+    /** @param s3FailurePath The Amazon S3 location to upload failure inference responses to. */
     public fun s3FailurePath(s3FailurePath: String) {
         cdkBuilder.s3FailurePath(s3FailurePath)
     }

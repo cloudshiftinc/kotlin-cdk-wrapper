@@ -18,7 +18,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
 /**
- * Contains information about the schema attribute.
+ * A list of the user attributes and their properties in your user pool.
+ *
+ * The attribute schema contains standard attributes, custom attributes with a `custom:` prefix, and
+ * developer attributes with a `dev:` prefix. For more information, see
+ * [User pool attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+ * .
+ *
+ * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients.
+ * You can create and update developer-only attributes only with IAM-authenticated API operations.
+ * Use app client read/write permissions instead.
  *
  * Example:
  * ```
@@ -49,7 +58,7 @@ public class CfnUserPoolSchemaAttributePropertyDsl {
     private val cdkBuilder: CfnUserPool.SchemaAttributeProperty.Builder =
         CfnUserPool.SchemaAttributeProperty.builder()
 
-    /** @param attributeDataType The attribute data type. */
+    /** @param attributeDataType The data format of the values for your attribute. */
     public fun attributeDataType(attributeDataType: String) {
         cdkBuilder.attributeDataType(attributeDataType)
     }
@@ -79,11 +88,11 @@ public class CfnUserPoolSchemaAttributePropertyDsl {
     }
 
     /**
-     * @param mutable Specifies whether the value of the attribute can be changed. For any user pool
-     *   attribute that is mapped to an IdP attribute, you must set this parameter to `true` .
-     *   Amazon Cognito updates mapped attributes when users sign in to your application through an
-     *   IdP. If an attribute is immutable, Amazon Cognito throws an error when it attempts to
-     *   update the attribute. For more information, see
+     * @param mutable Specifies whether the value of the attribute can be changed. Any user pool
+     *   attribute whose value you map from an IdP attribute must be mutable, with a parameter value
+     *   of `true` . Amazon Cognito updates mapped attributes when users sign in to your application
+     *   through an IdP. If an attribute is immutable, Amazon Cognito throws an error when it
+     *   attempts to update the attribute. For more information, see
      *   [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
      *   .
      */
@@ -92,11 +101,11 @@ public class CfnUserPoolSchemaAttributePropertyDsl {
     }
 
     /**
-     * @param mutable Specifies whether the value of the attribute can be changed. For any user pool
-     *   attribute that is mapped to an IdP attribute, you must set this parameter to `true` .
-     *   Amazon Cognito updates mapped attributes when users sign in to your application through an
-     *   IdP. If an attribute is immutable, Amazon Cognito throws an error when it attempts to
-     *   update the attribute. For more information, see
+     * @param mutable Specifies whether the value of the attribute can be changed. Any user pool
+     *   attribute whose value you map from an IdP attribute must be mutable, with a parameter value
+     *   of `true` . Amazon Cognito updates mapped attributes when users sign in to your application
+     *   through an IdP. If an attribute is immutable, Amazon Cognito throws an error when it
+     *   attempts to update the attribute. For more information, see
      *   [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
      *   .
      */
@@ -104,7 +113,10 @@ public class CfnUserPoolSchemaAttributePropertyDsl {
         cdkBuilder.mutable(mutable)
     }
 
-    /** @param name A schema attribute of the name type. */
+    /**
+     * @param name The name of your user pool attribute, for example `username` or
+     *   `custom:costcenter` .
+     */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }

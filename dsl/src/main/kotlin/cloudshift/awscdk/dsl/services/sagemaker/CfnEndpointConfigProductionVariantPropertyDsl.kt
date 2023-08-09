@@ -79,12 +79,24 @@ public class CfnEndpointConfigProductionVariantPropertyDsl {
         )
     }
 
-    /** @param enableSsmAccess the value to be set. */
+    /**
+     * @param enableSsmAccess You can use this parameter to turn on native AWS Systems Manager (SSM)
+     *   access for a production variant behind an endpoint. By default, SSM access is disabled for
+     *   all production variants behind an endpoint. You can turn on or turn off SSM access for a
+     *   production variant behind an existing endpoint by creating a new endpoint configuration and
+     *   calling `UpdateEndpoint` .
+     */
     public fun enableSsmAccess(enableSsmAccess: Boolean) {
         cdkBuilder.enableSsmAccess(enableSsmAccess)
     }
 
-    /** @param enableSsmAccess the value to be set. */
+    /**
+     * @param enableSsmAccess You can use this parameter to turn on native AWS Systems Manager (SSM)
+     *   access for a production variant behind an endpoint. By default, SSM access is disabled for
+     *   all production variants behind an endpoint. You can turn on or turn off SSM access for a
+     *   production variant behind an existing endpoint by creating a new endpoint configuration and
+     *   calling `UpdateEndpoint` .
+     */
     public fun enableSsmAccess(enableSsmAccess: IResolvable) {
         cdkBuilder.enableSsmAccess(enableSsmAccess)
     }

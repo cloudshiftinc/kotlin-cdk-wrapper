@@ -6,7 +6,6 @@ kotlin = "1.9.0"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "11.5.0" }
 
 [libraries]
 
@@ -43,6 +42,6 @@ caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.1.8
 aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.19" }
 
 guava = { module = "com.google.guava:guava", version = "32.1.2-jre" }
-awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.88.0" }
+awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.90.0" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.14.2" }
 javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.25.4" }

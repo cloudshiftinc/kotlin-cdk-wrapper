@@ -506,6 +506,22 @@ public class CfnKeyDsl(
     }
 
     /**
+     * The source of the key material for the KMS key.
+     *
+     * You cannot change the origin after you create the KMS key. The default is AWS_KMS, which
+     * means that AWS KMS creates the key material.
+     *
+     * Default: - "AWS_KMS"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-origin)
+     *
+     * @param origin The source of the key material for the KMS key.
+     */
+    public fun origin(origin: String) {
+        cdkBuilder.origin(origin)
+    }
+
+    /**
      * Specifies the number of days in the waiting period before AWS KMS deletes a KMS key that has
      * been removed from a CloudFormation stack.
      *

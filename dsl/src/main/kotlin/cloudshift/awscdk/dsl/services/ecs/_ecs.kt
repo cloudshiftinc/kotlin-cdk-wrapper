@@ -503,6 +503,7 @@ public object ecs {
      * "buildArgsKey", "buildArgs"))
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
+     * .buildSsh("buildSsh")
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -523,6 +524,7 @@ public object ecs {
      * .invalidation(DockerImageAssetInvalidationOptions.builder()
      * .buildArgs(false)
      * .buildSecrets(false)
+     * .buildSsh(false)
      * .extraHash(false)
      * .file(false)
      * .networkMode(false)
@@ -2333,11 +2335,28 @@ public object ecs {
     }
 
     /**
-     * The details of a task definition which describes the container and volume definitions of an
-     * Amazon Elastic Container Service task.
+     * Registers a new task definition from the supplied `family` and `containerDefinitions` .
      *
-     * You can specify which Docker images to use, the required resources, and other configurations
-     * related to launching the task definition through an Amazon ECS service or task.
+     * Optionally, you can add data volumes to your containers with the `volumes` parameter. For
+     * more information about task definition parameters and defaults, see
+     * [Amazon ECS Task Definitions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * You can specify a role for your task with the `taskRoleArn` parameter. When you specify a
+     * role for a task, its containers can then use the latest versions of the AWS CLI or SDKs to
+     * make API requests to the AWS services that are specified in the policy that's associated with
+     * the role. For more information, see
+     * [IAM Roles for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * You can specify a Docker networking mode for the containers in your task definition with the
+     * `networkMode` parameter. The available network modes correspond to those described in
+     * [Network settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#/network-settings)
+     * in the Docker run reference. If you specify the `awsvpc` network mode, the task is allocated
+     * an elastic network interface, and you must specify a `NetworkConfiguration` when you create a
+     * service or run a task with the task definition. For more information, see
+     * [Task Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
      *
      * Example:
      * ```
@@ -3891,7 +3910,6 @@ public object ecs {
      * .loadBalancers(List.of(LoadBalancerProperty.builder()
      * .containerName("containerName")
      * .containerPort(123)
-     * .loadBalancerName("loadBalancerName")
      * .targetGroupArn("targetGroupArn")
      * .build()))
      * .networkConfiguration(NetworkConfigurationProperty.builder()
@@ -3977,7 +3995,6 @@ public object ecs {
      * LoadBalancerProperty loadBalancerProperty = LoadBalancerProperty.builder()
      * .containerName("containerName")
      * .containerPort(123)
-     * .loadBalancerName("loadBalancerName")
      * .targetGroupArn("targetGroupArn")
      * .build();
      * ```
@@ -4039,7 +4056,6 @@ public object ecs {
      * .loadBalancers(List.of(LoadBalancerProperty.builder()
      * .containerName("containerName")
      * .containerPort(123)
-     * .loadBalancerName("loadBalancerName")
      * .targetGroupArn("targetGroupArn")
      * .build()))
      * .networkConfiguration(NetworkConfigurationProperty.builder()

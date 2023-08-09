@@ -12,6 +12,7 @@
 package cloudshift.awscdk.dsl.services.logs
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.logs.LogRetentionRetryOptions
@@ -35,7 +36,11 @@ import software.amazon.awscdk.services.logs.LogRetentionRetryOptions
 public class LogRetentionRetryOptionsDsl {
     private val cdkBuilder: LogRetentionRetryOptions.Builder = LogRetentionRetryOptions.builder()
 
-    /** @param base The base duration to use in the exponential backoff for operation retries. */
+    /**
+     * @param base The base duration to use in the exponential backoff for operation retries.
+     * @deprecated Unused since the upgrade to AWS SDK v3, which uses a different retry strategy
+     */
+    @Deprecated(message = "deprecated in CDK")
     public fun base(base: Duration) {
         cdkBuilder.base(base)
     }

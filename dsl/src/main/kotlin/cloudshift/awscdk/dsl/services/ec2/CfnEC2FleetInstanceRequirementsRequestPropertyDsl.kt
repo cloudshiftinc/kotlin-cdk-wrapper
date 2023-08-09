@@ -26,6 +26,9 @@ import software.amazon.awscdk.services.ec2.CfnEC2Fleet
  * When you specify instance attributes, Amazon EC2 will identify instance types with these
  * attributes.
  *
+ * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any unspecified
+ * optional attribute is set to its default.
+ *
  * When you specify multiple attributes, you get instance types that satisfy all of the specified
  * attributes. If you specify multiple values for an attribute, you get instance types that satisfy
  * any of the specified values.
@@ -37,8 +40,16 @@ import software.amazon.awscdk.services.ec2.CfnEC2Fleet
  * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match your
  *   specified attributes.
  *
- * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any unspecified
- * optional attribute is set to its default.
+ * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
+ *
+ * Attribute-based instance type selection is only supported when using Auto Scaling groups, EC2
+ * Fleet, and Spot Fleet to launch instances. If you plan to use the launch template in the
+ * [launch instance wizard](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html)
+ * , or with the
+ * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) API
+ * or
+ * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+ * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
  *
  * For more information, see
  * [Attribute-based instance type selection for EC2 Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
@@ -521,16 +532,24 @@ public class CfnEC2FleetInstanceRequirementsRequestPropertyDsl {
     }
 
     /**
-     * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in gigabits
-     *   per second (Gbps). Default: No minimum or maximum limits
+     * @param networkBandwidthGbps The minimum and maximum amount of baseline network bandwidth, in
+     *   gigabits per second (Gbps). For more information, see
+     *   [Amazon EC2 instance network bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html)
+     *   in the *Amazon EC2 User Guide* .
+     *
+     * Default: No minimum or maximum limits
      */
     public fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
         cdkBuilder.networkBandwidthGbps(networkBandwidthGbps)
     }
 
     /**
-     * @param networkBandwidthGbps The minimum and maximum amount of network bandwidth, in gigabits
-     *   per second (Gbps). Default: No minimum or maximum limits
+     * @param networkBandwidthGbps The minimum and maximum amount of baseline network bandwidth, in
+     *   gigabits per second (Gbps). For more information, see
+     *   [Amazon EC2 instance network bandwidth](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-network-bandwidth.html)
+     *   in the *Amazon EC2 User Guide* .
+     *
+     * Default: No minimum or maximum limits
      */
     public fun networkBandwidthGbps(
         networkBandwidthGbps: CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty

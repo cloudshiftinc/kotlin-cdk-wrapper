@@ -23,19 +23,6 @@ import software.amazon.awscdk.services.codepipeline.actions.CloudFormationDelete
  *
  * @param statement
  */
-public inline fun CloudFormationDeleteStackAction.addToDeploymentRolePolicy(
-    block: PolicyStatementDsl.() -> Unit = {}
-): Boolean {
-    val builder = PolicyStatementDsl()
-    builder.apply(block)
-    return addToDeploymentRolePolicy(builder.build())
-}
-
-/**
- * Add statement to the service role assumed by CloudFormation while executing this action.
- *
- * @param statement
- */
 public inline fun CloudFormationCreateReplaceChangeSetAction.addToDeploymentRolePolicy(
     block: PolicyStatementDsl.() -> Unit = {}
 ): Boolean {
@@ -50,6 +37,19 @@ public inline fun CloudFormationCreateReplaceChangeSetAction.addToDeploymentRole
  * @param statement
  */
 public inline fun CloudFormationCreateUpdateStackAction.addToDeploymentRolePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): Boolean {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToDeploymentRolePolicy(builder.build())
+}
+
+/**
+ * Add statement to the service role assumed by CloudFormation while executing this action.
+ *
+ * @param statement
+ */
+public inline fun CloudFormationDeleteStackAction.addToDeploymentRolePolicy(
     block: PolicyStatementDsl.() -> Unit = {}
 ): Boolean {
     val builder = PolicyStatementDsl()

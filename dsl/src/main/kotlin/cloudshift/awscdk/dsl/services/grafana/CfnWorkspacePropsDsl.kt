@@ -154,8 +154,8 @@ public class CfnWorkspacePropsDsl {
     }
 
     /**
-     * @param grafanaVersion Specifies the version of Grafana to support in the new workspace.
-     *   Supported values are `8.4` and `9.4` .
+     * @param grafanaVersion Specifies the version of Grafana to support in the new workspace. To
+     *   get a list of supported version, use the `ListVersions` operation.
      */
     public fun grafanaVersion(grafanaVersion: String) {
         cdkBuilder.grafanaVersion(grafanaVersion)

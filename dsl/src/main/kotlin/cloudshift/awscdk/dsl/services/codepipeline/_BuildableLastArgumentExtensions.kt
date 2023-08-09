@@ -35,6 +35,85 @@ import software.constructs.Construct
 /**
  * The callback invoked when this Action is added to a Pipeline.
  *
+ * @param scope
+ * @param stage
+ * @param options
+ */
+public inline fun Action.bind(
+    scope: Construct,
+    stage: IStage,
+    block: ActionBindOptionsDsl.() -> Unit = {},
+): ActionConfig {
+    val builder = ActionBindOptionsDsl()
+    builder.apply(block)
+    return bind(scope, stage, builder.build())
+}
+
+/**
+ * Creates an Event that will be triggered whenever the state of this Action changes.
+ *
+ * @param name
+ * @param target
+ * @param options
+ */
+public inline fun Action.onStateChange(
+    name: String,
+    target: IRuleTarget?,
+    block: RulePropsDsl.() -> Unit = {},
+): Rule {
+    val builder = RulePropsDsl()
+    builder.apply(block)
+    return onStateChange(name, target, builder.build())
+}
+
+/** The details of the input artifact for the action, such as its commit ID. */
+public inline fun CfnCustomActionType.setInputArtifactDetails(
+    block: CfnCustomActionTypeArtifactDetailsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnCustomActionTypeArtifactDetailsPropertyDsl()
+    builder.apply(block)
+    return setInputArtifactDetails(builder.build())
+}
+
+/** The details of the output artifact of the action, such as its commit ID. */
+public inline fun CfnCustomActionType.setOutputArtifactDetails(
+    block: CfnCustomActionTypeArtifactDetailsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnCustomActionTypeArtifactDetailsPropertyDsl()
+    builder.apply(block)
+    return setOutputArtifactDetails(builder.build())
+}
+
+/** URLs that provide users information about this custom action. */
+public inline fun CfnCustomActionType.setSettings(
+    block: CfnCustomActionTypeSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnCustomActionTypeSettingsPropertyDsl()
+    builder.apply(block)
+    return setSettings(builder.build())
+}
+
+/** The S3 bucket where artifacts for the pipeline are stored. */
+public inline fun CfnPipeline.setArtifactStore(
+    block: CfnPipelineArtifactStorePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPipelineArtifactStorePropertyDsl()
+    builder.apply(block)
+    return setArtifactStore(builder.build())
+}
+
+/** Properties that configure the authentication applied to incoming webhook trigger requests. */
+public inline fun CfnWebhook.setAuthenticationConfiguration(
+    block: CfnWebhookWebhookAuthConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnWebhookWebhookAuthConfigurationPropertyDsl()
+    builder.apply(block)
+    return setAuthenticationConfiguration(builder.build())
+}
+
+/**
+ * The callback invoked when this Action is added to a Pipeline.
+ *
  * @param scope the Construct tree scope the Action can use if it needs to create any resources.
  * @param stage the `IStage` this Action is being added to.
  * @param options additional options the Action can use, like the artifact Bucket of the pipeline
@@ -198,15 +277,6 @@ public inline fun IPipeline.onStateChange(
     return onStateChange(arg0, builder.build())
 }
 
-/** The S3 bucket where artifacts for the pipeline are stored. */
-public inline fun CfnPipeline.setArtifactStore(
-    block: CfnPipelineArtifactStorePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPipelineArtifactStorePropertyDsl()
-    builder.apply(block)
-    return setArtifactStore(builder.build())
-}
-
 /**
  * @param name
  * @param target
@@ -220,67 +290,6 @@ public inline fun IStage.onStateChange(
     val builder = RulePropsDsl()
     builder.apply(block)
     return onStateChange(arg0, arg1, builder.build())
-}
-
-/**
- * The callback invoked when this Action is added to a Pipeline.
- *
- * @param scope
- * @param stage
- * @param options
- */
-public inline fun Action.bind(
-    scope: Construct,
-    stage: IStage,
-    block: ActionBindOptionsDsl.() -> Unit = {},
-): ActionConfig {
-    val builder = ActionBindOptionsDsl()
-    builder.apply(block)
-    return bind(scope, stage, builder.build())
-}
-
-/**
- * Creates an Event that will be triggered whenever the state of this Action changes.
- *
- * @param name
- * @param target
- * @param options
- */
-public inline fun Action.onStateChange(
-    name: String,
-    target: IRuleTarget?,
-    block: RulePropsDsl.() -> Unit = {},
-): Rule {
-    val builder = RulePropsDsl()
-    builder.apply(block)
-    return onStateChange(name, target, builder.build())
-}
-
-/** The details of the input artifact for the action, such as its commit ID. */
-public inline fun CfnCustomActionType.setInputArtifactDetails(
-    block: CfnCustomActionTypeArtifactDetailsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnCustomActionTypeArtifactDetailsPropertyDsl()
-    builder.apply(block)
-    return setInputArtifactDetails(builder.build())
-}
-
-/** The details of the output artifact of the action, such as its commit ID. */
-public inline fun CfnCustomActionType.setOutputArtifactDetails(
-    block: CfnCustomActionTypeArtifactDetailsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnCustomActionTypeArtifactDetailsPropertyDsl()
-    builder.apply(block)
-    return setOutputArtifactDetails(builder.build())
-}
-
-/** URLs that provide users information about this custom action. */
-public inline fun CfnCustomActionType.setSettings(
-    block: CfnCustomActionTypeSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnCustomActionTypeSettingsPropertyDsl()
-    builder.apply(block)
-    return setSettings(builder.build())
 }
 
 /**
@@ -426,13 +435,4 @@ public inline fun Pipeline.onStateChange(
     val builder = OnEventOptionsDsl()
     builder.apply(block)
     return onStateChange(id, builder.build())
-}
-
-/** Properties that configure the authentication applied to incoming webhook trigger requests. */
-public inline fun CfnWebhook.setAuthenticationConfiguration(
-    block: CfnWebhookWebhookAuthConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnWebhookWebhookAuthConfigurationPropertyDsl()
-    builder.apply(block)
-    return setAuthenticationConfiguration(builder.build())
 }

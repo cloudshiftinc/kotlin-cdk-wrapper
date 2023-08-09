@@ -1101,6 +1101,35 @@ public object fsx {
      * .junctionPath("junctionPath")
      * .ontapVolumeType("ontapVolumeType")
      * .securityStyle("securityStyle")
+     * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
+     * .snaplockType("snaplockType")
+     * // the properties below are optional
+     * .auditLogVolume("auditLogVolume")
+     * .autocommitPeriod(AutocommitPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .privilegedDelete("privilegedDelete")
+     * .retentionPeriod(SnaplockRetentionPeriodProperty.builder()
+     * .defaultRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .maximumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .minimumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .build())
+     * .volumeAppendModeEnabled("volumeAppendModeEnabled")
+     * .build())
      * .snapshotPolicy("snapshotPolicy")
      * .storageEfficiencyEnabled("storageEfficiencyEnabled")
      * .tieringPolicy(TieringPolicyProperty.builder()
@@ -1150,6 +1179,37 @@ public object fsx {
         block: CfnVolumeDsl.() -> Unit = {},
     ): CfnVolume {
         val builder = CfnVolumeDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Sets the autocommit period of files in an FSx for ONTAP SnapLock volume, which determines how
+     * long the files must remain unmodified before they're automatically transitioned to the write
+     * once, read many (WORM) state.
+     *
+     * For more information, see
+     * [Autocommit](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-autocommit)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fsx.*;
+     * AutocommitPeriodProperty autocommitPeriodProperty = AutocommitPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html)
+     */
+    public inline fun cfnVolumeAutocommitPeriodProperty(
+        block: CfnVolumeAutocommitPeriodPropertyDsl.() -> Unit = {}
+    ): CfnVolume.AutocommitPeriodProperty {
+        val builder = CfnVolumeAutocommitPeriodPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -1222,6 +1282,35 @@ public object fsx {
      * .junctionPath("junctionPath")
      * .ontapVolumeType("ontapVolumeType")
      * .securityStyle("securityStyle")
+     * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
+     * .snaplockType("snaplockType")
+     * // the properties below are optional
+     * .auditLogVolume("auditLogVolume")
+     * .autocommitPeriod(AutocommitPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .privilegedDelete("privilegedDelete")
+     * .retentionPeriod(SnaplockRetentionPeriodProperty.builder()
+     * .defaultRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .maximumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .minimumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .build())
+     * .volumeAppendModeEnabled("volumeAppendModeEnabled")
+     * .build())
      * .snapshotPolicy("snapshotPolicy")
      * .storageEfficiencyEnabled("storageEfficiencyEnabled")
      * .tieringPolicy(TieringPolicyProperty.builder()
@@ -1333,6 +1422,35 @@ public object fsx {
      * .junctionPath("junctionPath")
      * .ontapVolumeType("ontapVolumeType")
      * .securityStyle("securityStyle")
+     * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
+     * .snaplockType("snaplockType")
+     * // the properties below are optional
+     * .auditLogVolume("auditLogVolume")
+     * .autocommitPeriod(AutocommitPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .privilegedDelete("privilegedDelete")
+     * .retentionPeriod(SnaplockRetentionPeriodProperty.builder()
+     * .defaultRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .maximumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .minimumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .build())
+     * .volumeAppendModeEnabled("volumeAppendModeEnabled")
+     * .build())
      * .snapshotPolicy("snapshotPolicy")
      * .storageEfficiencyEnabled("storageEfficiencyEnabled")
      * .tieringPolicy(TieringPolicyProperty.builder()
@@ -1378,6 +1496,131 @@ public object fsx {
      */
     public inline fun cfnVolumeProps(block: CfnVolumePropsDsl.() -> Unit = {}): CfnVolumeProps {
         val builder = CfnVolumePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the retention period of an FSx for ONTAP SnapLock volume.
+     *
+     * After it is set, it can't be changed. Files can't be deleted or modified during the retention
+     * period.
+     *
+     * For more information, see
+     * [Working with the retention period in SnapLock](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-retention.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fsx.*;
+     * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html)
+     */
+    public inline fun cfnVolumeRetentionPeriodProperty(
+        block: CfnVolumeRetentionPeriodPropertyDsl.() -> Unit = {}
+    ): CfnVolume.RetentionPeriodProperty {
+        val builder = CfnVolumeRetentionPeriodPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the SnapLock configuration for an FSx for ONTAP SnapLock volume.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fsx.*;
+     * SnaplockConfigurationProperty snaplockConfigurationProperty =
+     * SnaplockConfigurationProperty.builder()
+     * .snaplockType("snaplockType")
+     * // the properties below are optional
+     * .auditLogVolume("auditLogVolume")
+     * .autocommitPeriod(AutocommitPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .privilegedDelete("privilegedDelete")
+     * .retentionPeriod(SnaplockRetentionPeriodProperty.builder()
+     * .defaultRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .maximumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .minimumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .build())
+     * .volumeAppendModeEnabled("volumeAppendModeEnabled")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockconfiguration.html)
+     */
+    public inline fun cfnVolumeSnaplockConfigurationProperty(
+        block: CfnVolumeSnaplockConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnVolume.SnaplockConfigurationProperty {
+        val builder = CfnVolumeSnaplockConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The configuration to set the retention period of an FSx for ONTAP SnapLock volume.
+     *
+     * The retention period includes default, maximum, and minimum settings. For more information,
+     * see
+     * [Working with the retention period in SnapLock](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-retention.html)
+     * .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.fsx.*;
+     * SnaplockRetentionPeriodProperty snaplockRetentionPeriodProperty =
+     * SnaplockRetentionPeriodProperty.builder()
+     * .defaultRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .maximumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .minimumRetention(RetentionPeriodProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .value(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html)
+     */
+    public inline fun cfnVolumeSnaplockRetentionPeriodProperty(
+        block: CfnVolumeSnaplockRetentionPeriodPropertyDsl.() -> Unit = {}
+    ): CfnVolume.SnaplockRetentionPeriodProperty {
+        val builder = CfnVolumeSnaplockRetentionPeriodPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

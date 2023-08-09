@@ -81,6 +81,7 @@ public object destinations {
      * .logGroup(logGroup)
      * .destination(new LambdaDestination(fn))
      * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+     * .filterName("ErrorInMainThread")
      * .build();
      * ```
      */

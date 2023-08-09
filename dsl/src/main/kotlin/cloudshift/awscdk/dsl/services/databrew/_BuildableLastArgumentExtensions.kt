@@ -16,11 +16,13 @@ import software.amazon.awscdk.services.databrew.CfnDataset
 import software.amazon.awscdk.services.databrew.CfnJob
 import software.amazon.awscdk.services.databrew.CfnProject
 
-/** The sample size and sampling type to apply to the data. */
-public inline fun CfnProject.setSample(block: CfnProjectSamplePropertyDsl.() -> Unit = {}) {
-    val builder = CfnProjectSamplePropertyDsl()
+/** A set of options that define how DataBrew interprets the data in the dataset. */
+public inline fun CfnDataset.setFormatOptions(
+    block: CfnDatasetFormatOptionsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDatasetFormatOptionsPropertyDsl()
     builder.apply(block)
-    return setSample(builder.build())
+    return setFormatOptions(builder.build())
 }
 
 /**
@@ -31,15 +33,6 @@ public inline fun CfnDataset.setInput(block: CfnDatasetInputPropertyDsl.() -> Un
     val builder = CfnDatasetInputPropertyDsl()
     builder.apply(block)
     return setInput(builder.build())
-}
-
-/** A set of options that define how DataBrew interprets the data in the dataset. */
-public inline fun CfnDataset.setFormatOptions(
-    block: CfnDatasetFormatOptionsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDatasetFormatOptionsPropertyDsl()
-    builder.apply(block)
-    return setFormatOptions(builder.build())
 }
 
 /** A set of options that defines how DataBrew interprets an Amazon S3 path of the dataset. */
@@ -82,4 +75,11 @@ public inline fun CfnJob.setRecipe(block: CfnJobRecipePropertyDsl.() -> Unit = {
     val builder = CfnJobRecipePropertyDsl()
     builder.apply(block)
     return setRecipe(builder.build())
+}
+
+/** The sample size and sampling type to apply to the data. */
+public inline fun CfnProject.setSample(block: CfnProjectSamplePropertyDsl.() -> Unit = {}) {
+    val builder = CfnProjectSamplePropertyDsl()
+    builder.apply(block)
+    return setSample(builder.build())
 }

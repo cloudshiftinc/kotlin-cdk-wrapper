@@ -15,20 +15,11 @@ import kotlin.Unit
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
-/** The action to perform if none of the `Rules` contained in the `WebACL` match. */
-public inline fun CfnWebACL.setDefaultAction(
-    block: CfnWebACLDefaultActionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnWebACLDefaultActionPropertyDsl()
-    builder.apply(block)
-    return setDefaultAction(builder.build())
-}
-
 /** Defines and enables Amazon CloudWatch metrics and web request sample collection. */
-public inline fun CfnWebACL.setVisibilityConfig(
-    block: CfnWebACLVisibilityConfigPropertyDsl.() -> Unit = {}
+public inline fun CfnRuleGroup.setVisibilityConfig(
+    block: CfnRuleGroupVisibilityConfigPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnWebACLVisibilityConfigPropertyDsl()
+    val builder = CfnRuleGroupVisibilityConfigPropertyDsl()
     builder.apply(block)
     return setVisibilityConfig(builder.build())
 }
@@ -68,11 +59,20 @@ public inline fun CfnWebACL.setChallengeConfig(
     return setChallengeConfig(builder.build())
 }
 
-/** Defines and enables Amazon CloudWatch metrics and web request sample collection. */
-public inline fun CfnRuleGroup.setVisibilityConfig(
-    block: CfnRuleGroupVisibilityConfigPropertyDsl.() -> Unit = {}
+/** The action to perform if none of the `Rules` contained in the `WebACL` match. */
+public inline fun CfnWebACL.setDefaultAction(
+    block: CfnWebACLDefaultActionPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnRuleGroupVisibilityConfigPropertyDsl()
+    val builder = CfnWebACLDefaultActionPropertyDsl()
+    builder.apply(block)
+    return setDefaultAction(builder.build())
+}
+
+/** Defines and enables Amazon CloudWatch metrics and web request sample collection. */
+public inline fun CfnWebACL.setVisibilityConfig(
+    block: CfnWebACLVisibilityConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnWebACLVisibilityConfigPropertyDsl()
     builder.apply(block)
     return setVisibilityConfig(builder.build())
 }

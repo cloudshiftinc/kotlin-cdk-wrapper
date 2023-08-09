@@ -100,7 +100,7 @@ constructor(
         extensionFunctions.forEach { (packageName, funSpecs) ->
             val builder = FileSpec.builder(packageName, targetFile)
             builder.suppressWarningTypes(SUPPRESSIONS)
-            funSpecs.forEach { funSpec -> builder.addFunction(funSpec.funSpec) }
+            funSpecs.sorted().forEach { funSpec -> builder.addFunction(funSpec.funSpec) }
             builder.build().writeTo(dslDir.get().asFile)
         }
     }

@@ -77,6 +77,8 @@ public object amazonmq {
      * .id("id")
      * .revision(123)
      * .build())
+     * .dataReplicationMode("dataReplicationMode")
+     * .dataReplicationPrimaryBrokerArn("dataReplicationPrimaryBrokerArn")
      * .encryptionOptions(EncryptionOptionsProperty.builder()
      * .useAwsOwnedKey(false)
      * // the properties below are optional
@@ -296,6 +298,8 @@ public object amazonmq {
      * .id("id")
      * .revision(123)
      * .build())
+     * .dataReplicationMode("dataReplicationMode")
+     * .dataReplicationPrimaryBrokerArn("dataReplicationPrimaryBrokerArn")
      * .encryptionOptions(EncryptionOptionsProperty.builder()
      * .useAwsOwnedKey(false)
      * // the properties below are optional

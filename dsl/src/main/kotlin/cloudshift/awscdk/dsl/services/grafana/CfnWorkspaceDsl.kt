@@ -208,7 +208,7 @@ public class CfnWorkspaceDsl(
     /**
      * Specifies the version of Grafana to support in the new workspace.
      *
-     * Supported values are `8.4` and `9.4` .
+     * To get a list of supported version, use the `ListVersions` operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-grafanaversion)
      *

@@ -142,7 +142,7 @@ public class CfnAgentDsl(
      *
      * This is the subnet where DataSync creates and manages the
      * [network interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     * for your transfer.
+     * for your transfer. You can only specify one ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns)
      *
@@ -159,7 +159,7 @@ public class CfnAgentDsl(
      *
      * This is the subnet where DataSync creates and manages the
      * [network interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     * for your transfer.
+     * for your transfer. You can only specify one ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns)
      *

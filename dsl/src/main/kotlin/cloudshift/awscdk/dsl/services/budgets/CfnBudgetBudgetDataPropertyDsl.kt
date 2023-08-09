@@ -81,12 +81,12 @@ public class CfnBudgetBudgetDataPropertyDsl {
     private val cdkBuilder: CfnBudget.BudgetDataProperty.Builder =
         CfnBudget.BudgetDataProperty.builder()
 
-    /** @param autoAdjustData the value to be set. */
+    /** @param autoAdjustData Determine the budget amount for an auto-adjusting budget. */
     public fun autoAdjustData(autoAdjustData: IResolvable) {
         cdkBuilder.autoAdjustData(autoAdjustData)
     }
 
-    /** @param autoAdjustData the value to be set. */
+    /** @param autoAdjustData Determine the budget amount for an auto-adjusting budget. */
     public fun autoAdjustData(autoAdjustData: CfnBudget.AutoAdjustDataProperty) {
         cdkBuilder.autoAdjustData(autoAdjustData)
     }

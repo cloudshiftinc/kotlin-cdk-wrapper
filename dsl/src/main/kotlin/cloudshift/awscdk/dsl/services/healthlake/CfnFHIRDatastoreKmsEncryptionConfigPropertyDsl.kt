@@ -51,7 +51,7 @@ public class CfnFHIRDatastoreKmsEncryptionConfigPropertyDsl {
     }
 
     /**
-     * @param kmsKeyId The KMS encryption key id/alias used to encrypt the Data Store contents at
+     * @param kmsKeyId The KMS encryption key id/alias used to encrypt the data store contents at
      *   rest.
      */
     public fun kmsKeyId(kmsKeyId: String) {

@@ -290,6 +290,7 @@ public object lambda {
      * "buildArgsKey", "buildArgs"))
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
+     * .buildSsh("buildSsh")
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -312,6 +313,7 @@ public object lambda {
      * .invalidation(DockerImageAssetInvalidationOptions.builder()
      * .buildArgs(false)
      * .buildSecrets(false)
+     * .buildSsh(false)
      * .extraHash(false)
      * .file(false)
      * .networkMode(false)
@@ -355,6 +357,7 @@ public object lambda {
      * "buildArgsKey", "buildArgs"))
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
+     * .buildSsh("buildSsh")
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -377,6 +380,7 @@ public object lambda {
      * .invalidation(DockerImageAssetInvalidationOptions.builder()
      * .buildArgs(false)
      * .buildSecrets(false)
+     * .buildSsh(false)
      * .extraHash(false)
      * .file(false)
      * .networkMode(false)
@@ -2806,7 +2810,7 @@ public object lambda {
      * Usually, you won't need to define the mapping yourself. This will usually be done by event
      * sources. For example, to add an SQS event source to a function:
      *
-     * import { SqsEventSource } from '&#64;aws-cdk/aws-lambda-event-sources';
+     * import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
      * lambda.addEventSource(new SqsEventSource(sqs));
      *
      * The `SqsEventSource` class will automatically create the mapping, and will also modify the

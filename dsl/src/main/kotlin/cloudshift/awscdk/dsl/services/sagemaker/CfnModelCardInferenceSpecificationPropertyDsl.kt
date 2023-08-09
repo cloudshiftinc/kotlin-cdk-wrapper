@@ -19,6 +19,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
 /**
+ * Defines how to perform inference generation after a training job is run.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -45,24 +47,24 @@ public class CfnModelCardInferenceSpecificationPropertyDsl {
     private val _containers: MutableList<Any> = mutableListOf()
 
     /**
-     * @param containers Contains inference related information which were used to create model
-     *   package.
+     * @param containers The Amazon ECR registry path of the Docker image that contains the
+     *   inference code.
      */
     public fun containers(vararg containers: Any) {
         _containers.addAll(listOf(*containers))
     }
 
     /**
-     * @param containers Contains inference related information which were used to create model
-     *   package.
+     * @param containers The Amazon ECR registry path of the Docker image that contains the
+     *   inference code.
      */
     public fun containers(containers: Collection<Any>) {
         _containers.addAll(containers)
     }
 
     /**
-     * @param containers Contains inference related information which were used to create model
-     *   package.
+     * @param containers The Amazon ECR registry path of the Docker image that contains the
+     *   inference code.
      */
     public fun containers(containers: IResolvable) {
         cdkBuilder.containers(containers)

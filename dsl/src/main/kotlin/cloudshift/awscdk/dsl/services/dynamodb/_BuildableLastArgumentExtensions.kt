@@ -60,6 +60,85 @@ public inline fun CfnGlobalTable.setWriteProvisionedThroughputSettings(
 }
 
 /**
+ * The settings used to enable or disable CloudWatch Contributor Insights for the specified table.
+ */
+public inline fun CfnTable.setContributorInsightsSpecification(
+    block: CfnTableContributorInsightsSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableContributorInsightsSpecificationPropertyDsl()
+    builder.apply(block)
+    return setContributorInsightsSpecification(builder.build())
+}
+
+/** Specifies the properties of data being imported from the S3 bucket source to the table. */
+public inline fun CfnTable.setImportSourceSpecification(
+    block: CfnTableImportSourceSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableImportSourceSpecificationPropertyDsl()
+    builder.apply(block)
+    return setImportSourceSpecification(builder.build())
+}
+
+/** The Kinesis Data Streams configuration for the specified table. */
+public inline fun CfnTable.setKinesisStreamSpecification(
+    block: CfnTableKinesisStreamSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableKinesisStreamSpecificationPropertyDsl()
+    builder.apply(block)
+    return setKinesisStreamSpecification(builder.build())
+}
+
+/** The settings used to enable point in time recovery. */
+public inline fun CfnTable.setPointInTimeRecoverySpecification(
+    block: CfnTablePointInTimeRecoverySpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTablePointInTimeRecoverySpecificationPropertyDsl()
+    builder.apply(block)
+    return setPointInTimeRecoverySpecification(builder.build())
+}
+
+/**
+ * Throughput for the specified table, which consists of values for `ReadCapacityUnits` and
+ * `WriteCapacityUnits` .
+ */
+public inline fun CfnTable.setProvisionedThroughput(
+    block: CfnTableProvisionedThroughputPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableProvisionedThroughputPropertyDsl()
+    builder.apply(block)
+    return setProvisionedThroughput(builder.build())
+}
+
+/** Specifies the settings to enable server-side encryption. */
+public inline fun CfnTable.setSseSpecification(
+    block: CfnTableSSESpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableSSESpecificationPropertyDsl()
+    builder.apply(block)
+    return setSseSpecification(builder.build())
+}
+
+/**
+ * The settings for the DynamoDB table stream, which capture changes to items stored in the table.
+ */
+public inline fun CfnTable.setStreamSpecification(
+    block: CfnTableStreamSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableStreamSpecificationPropertyDsl()
+    builder.apply(block)
+    return setStreamSpecification(builder.build())
+}
+
+/** Specifies the Time to Live (TTL) settings for the table. */
+public inline fun CfnTable.setTimeToLiveSpecification(
+    block: CfnTableTimeToLiveSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableTimeToLiveSpecificationPropertyDsl()
+    builder.apply(block)
+    return setTimeToLiveSpecification(builder.build())
+}
+
+/**
  * Add scheduled scaling for this scaling attribute.
  *
  * @param id
@@ -85,6 +164,119 @@ public inline fun IScalableTableAttribute.scaleOnUtilization(
     val builder = UtilizationScalingPropsDsl()
     builder.apply(block)
     return scaleOnUtilization(builder.build())
+}
+
+/**
+ * Metric for the number of Errors executing all Lambdas.
+ *
+ * @param metricName
+ * @param props
+ */
+public inline fun ITable.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metric(arg0, builder.build())
+}
+
+/**
+ * Metric for the conditional check failed requests.
+ *
+ * @param props properties of a metric.
+ */
+public inline fun ITable.metricConditionalCheckFailedRequests(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConditionalCheckFailedRequests(builder.build())
+}
+
+/**
+ * Metric for the consumed read capacity units.
+ *
+ * @param props properties of a metric.
+ */
+public inline fun ITable.metricConsumedReadCapacityUnits(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConsumedReadCapacityUnits(builder.build())
+}
+
+/**
+ * Metric for the consumed write capacity units.
+ *
+ * @param props properties of a metric.
+ */
+public inline fun ITable.metricConsumedWriteCapacityUnits(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricConsumedWriteCapacityUnits(builder.build())
+}
+
+/**
+ * Metric for the successful request latency.
+ *
+ * @param props properties of a metric.
+ */
+public inline fun ITable.metricSuccessfulRequestLatency(
+    block: MetricOptionsDsl.() -> Unit = {}
+): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricSuccessfulRequestLatency(builder.build())
+}
+
+/**
+ * Metric for the system errors this table.
+ *
+ * @param props properties of a metric.
+ */
+public inline fun ITable.metricSystemErrorsForOperations(
+    block: SystemErrorsForOperationsMetricOptionsDsl.() -> Unit = {}
+): IMetric {
+    val builder = SystemErrorsForOperationsMetricOptionsDsl()
+    builder.apply(block)
+    return metricSystemErrorsForOperations(builder.build())
+}
+
+/**
+ * (deprecated) Metric for throttled requests.
+ *
+ * @param props properties of a metric.
+ * @deprecated use `metricThrottledRequestsForOperations`
+ */
+public inline fun ITable.metricThrottledRequests(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottledRequests(builder.build())
+}
+
+/**
+ * Metric for throttled requests.
+ *
+ * @param props properties of a metric.
+ */
+public inline fun ITable.metricThrottledRequestsForOperations(
+    block: OperationsMetricOptionsDsl.() -> Unit = {}
+): IMetric {
+    val builder = OperationsMetricOptionsDsl()
+    builder.apply(block)
+    return metricThrottledRequestsForOperations(builder.build())
+}
+
+/**
+ * Metric for the user errors.
+ *
+ * @param props properties of a metric.
+ */
+public inline fun ITable.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+    val builder = MetricOptionsDsl()
+    builder.apply(block)
+    return metricUserErrors(builder.build())
 }
 
 /**
@@ -331,198 +523,6 @@ public inline fun Table.metricThrottledRequestsForOperations(
  * @param props
  */
 public inline fun Table.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricUserErrors(builder.build())
-}
-
-/**
- * The settings used to enable or disable CloudWatch Contributor Insights for the specified table.
- */
-public inline fun CfnTable.setContributorInsightsSpecification(
-    block: CfnTableContributorInsightsSpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTableContributorInsightsSpecificationPropertyDsl()
-    builder.apply(block)
-    return setContributorInsightsSpecification(builder.build())
-}
-
-/** Specifies the properties of data being imported from the S3 bucket source to the table. */
-public inline fun CfnTable.setImportSourceSpecification(
-    block: CfnTableImportSourceSpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTableImportSourceSpecificationPropertyDsl()
-    builder.apply(block)
-    return setImportSourceSpecification(builder.build())
-}
-
-/** The Kinesis Data Streams configuration for the specified table. */
-public inline fun CfnTable.setKinesisStreamSpecification(
-    block: CfnTableKinesisStreamSpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTableKinesisStreamSpecificationPropertyDsl()
-    builder.apply(block)
-    return setKinesisStreamSpecification(builder.build())
-}
-
-/** The settings used to enable point in time recovery. */
-public inline fun CfnTable.setPointInTimeRecoverySpecification(
-    block: CfnTablePointInTimeRecoverySpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTablePointInTimeRecoverySpecificationPropertyDsl()
-    builder.apply(block)
-    return setPointInTimeRecoverySpecification(builder.build())
-}
-
-/**
- * Throughput for the specified table, which consists of values for `ReadCapacityUnits` and
- * `WriteCapacityUnits` .
- */
-public inline fun CfnTable.setProvisionedThroughput(
-    block: CfnTableProvisionedThroughputPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTableProvisionedThroughputPropertyDsl()
-    builder.apply(block)
-    return setProvisionedThroughput(builder.build())
-}
-
-/** Specifies the settings to enable server-side encryption. */
-public inline fun CfnTable.setSseSpecification(
-    block: CfnTableSSESpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTableSSESpecificationPropertyDsl()
-    builder.apply(block)
-    return setSseSpecification(builder.build())
-}
-
-/**
- * The settings for the DynamoDB table stream, which capture changes to items stored in the table.
- */
-public inline fun CfnTable.setStreamSpecification(
-    block: CfnTableStreamSpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTableStreamSpecificationPropertyDsl()
-    builder.apply(block)
-    return setStreamSpecification(builder.build())
-}
-
-/** Specifies the Time to Live (TTL) settings for the table. */
-public inline fun CfnTable.setTimeToLiveSpecification(
-    block: CfnTableTimeToLiveSpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTableTimeToLiveSpecificationPropertyDsl()
-    builder.apply(block)
-    return setTimeToLiveSpecification(builder.build())
-}
-
-/**
- * Metric for the number of Errors executing all Lambdas.
- *
- * @param metricName
- * @param props
- */
-public inline fun ITable.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metric(arg0, builder.build())
-}
-
-/**
- * Metric for the conditional check failed requests.
- *
- * @param props properties of a metric.
- */
-public inline fun ITable.metricConditionalCheckFailedRequests(
-    block: MetricOptionsDsl.() -> Unit = {}
-): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricConditionalCheckFailedRequests(builder.build())
-}
-
-/**
- * Metric for the consumed read capacity units.
- *
- * @param props properties of a metric.
- */
-public inline fun ITable.metricConsumedReadCapacityUnits(
-    block: MetricOptionsDsl.() -> Unit = {}
-): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricConsumedReadCapacityUnits(builder.build())
-}
-
-/**
- * Metric for the consumed write capacity units.
- *
- * @param props properties of a metric.
- */
-public inline fun ITable.metricConsumedWriteCapacityUnits(
-    block: MetricOptionsDsl.() -> Unit = {}
-): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricConsumedWriteCapacityUnits(builder.build())
-}
-
-/**
- * Metric for the successful request latency.
- *
- * @param props properties of a metric.
- */
-public inline fun ITable.metricSuccessfulRequestLatency(
-    block: MetricOptionsDsl.() -> Unit = {}
-): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricSuccessfulRequestLatency(builder.build())
-}
-
-/**
- * Metric for the system errors this table.
- *
- * @param props properties of a metric.
- */
-public inline fun ITable.metricSystemErrorsForOperations(
-    block: SystemErrorsForOperationsMetricOptionsDsl.() -> Unit = {}
-): IMetric {
-    val builder = SystemErrorsForOperationsMetricOptionsDsl()
-    builder.apply(block)
-    return metricSystemErrorsForOperations(builder.build())
-}
-
-/**
- * (deprecated) Metric for throttled requests.
- *
- * @param props properties of a metric.
- * @deprecated use `metricThrottledRequestsForOperations`
- */
-public inline fun ITable.metricThrottledRequests(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-    val builder = MetricOptionsDsl()
-    builder.apply(block)
-    return metricThrottledRequests(builder.build())
-}
-
-/**
- * Metric for throttled requests.
- *
- * @param props properties of a metric.
- */
-public inline fun ITable.metricThrottledRequestsForOperations(
-    block: OperationsMetricOptionsDsl.() -> Unit = {}
-): IMetric {
-    val builder = OperationsMetricOptionsDsl()
-    builder.apply(block)
-    return metricThrottledRequestsForOperations(builder.build())
-}
-
-/**
- * Metric for the user errors.
- *
- * @param props properties of a metric.
- */
-public inline fun ITable.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
     val builder = MetricOptionsDsl()
     builder.apply(block)
     return metricUserErrors(builder.build())

@@ -73,6 +73,8 @@ public class CfnStorageSystemDsl(
      * Specifies the Amazon Resource Name (ARN) of the DataSync agent that connects to and reads
      * from your on-premises storage system's management interface.
      *
+     * You can only specify one ARN.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html#cfn-datasync-storagesystem-agentarns)
      *
      * @param agentArns Specifies the Amazon Resource Name (ARN) of the DataSync agent that connects
@@ -85,6 +87,8 @@ public class CfnStorageSystemDsl(
     /**
      * Specifies the Amazon Resource Name (ARN) of the DataSync agent that connects to and reads
      * from your on-premises storage system's management interface.
+     *
+     * You can only specify one ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html#cfn-datasync-storagesystem-agentarns)
      *

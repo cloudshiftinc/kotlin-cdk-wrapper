@@ -131,6 +131,7 @@ public class CfnEventDataStoreAdvancedFieldSelectorPropertyDsl {
      * * `AWS::KendraRanking::ExecutionPlan`
      * * `AWS::ManagedBlockchain::Network`
      * * `AWS::ManagedBlockchain::Node`
+     * * `AWS::MedicalImaging::Datastore`
      * * `AWS::SageMaker::ExperimentTrialComponent`
      * * `AWS::SageMaker::FeatureGroup`
      * * `AWS::S3::AccessPoint`
@@ -212,12 +213,17 @@ public class CfnEventDataStoreAdvancedFieldSelectorPropertyDsl {
      *
      * When `resources.type` equals `AWS::ManagedBlockchain::Network` , and the operator is set to
      * `Equals` or `NotEquals` , the ARN must be in the following format:
-     * * `arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;::networks/&lt;network_ID&gt;`
+     * * `arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;`
      *
      * When `resources.type` equals `AWS::ManagedBlockchain::Node` , and the operator is set to
      * `Equals` or `NotEquals` , the ARN must be in the following format:
      * *
      * `arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;`
+     *
+     * When `resources.type` equals `AWS::MedicalImaging::Datastore` , and the operator is set to
+     * `Equals` or `NotEquals` , the ARN must be in the following format:
+     * *
+     * `arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;`
      *
      * When `resources.type` equals `AWS::SageMaker::ExperimentTrialComponent` , and the operator is
      * set to `Equals` or `NotEquals` , the ARN must be in the following format:

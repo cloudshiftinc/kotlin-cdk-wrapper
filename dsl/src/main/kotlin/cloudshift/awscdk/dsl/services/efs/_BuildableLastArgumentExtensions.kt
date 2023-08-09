@@ -21,38 +21,6 @@ import software.amazon.awscdk.services.efs.FileSystem
 import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
 
 /**
- * create access point from this filesystem.
- *
- * @param id
- * @param accessPointOptions
- */
-public inline fun FileSystem.addAccessPoint(
-    id: String,
-    block: AccessPointOptionsDsl.() -> Unit = {}
-): AccessPoint {
-    val builder = AccessPointOptionsDsl()
-    builder.apply(block)
-    return addAccessPoint(id, builder.build())
-}
-
-/**
- * Adds a statement to the resource policy associated with this file system.
- *
- * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
- *
- * Note that this does not work with imported file systems.
- *
- * @param statement The policy statement to add.
- */
-public inline fun FileSystem.addToResourcePolicy(
-    block: PolicyStatementDsl.() -> Unit = {}
-): AddToResourcePolicyResult {
-    val builder = PolicyStatementDsl()
-    builder.apply(block)
-    return addToResourcePolicy(builder.build())
-}
-
-/**
  * The full POSIX identity, including the user ID, group ID, and secondary group IDs on the access
  * point that is used for all file operations by NFS clients using the access point.
  */
@@ -83,4 +51,36 @@ public inline fun CfnFileSystem.setBackupPolicy(
     val builder = CfnFileSystemBackupPolicyPropertyDsl()
     builder.apply(block)
     return setBackupPolicy(builder.build())
+}
+
+/**
+ * create access point from this filesystem.
+ *
+ * @param id
+ * @param accessPointOptions
+ */
+public inline fun FileSystem.addAccessPoint(
+    id: String,
+    block: AccessPointOptionsDsl.() -> Unit = {}
+): AccessPoint {
+    val builder = AccessPointOptionsDsl()
+    builder.apply(block)
+    return addAccessPoint(id, builder.build())
+}
+
+/**
+ * Adds a statement to the resource policy associated with this file system.
+ *
+ * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
+ *
+ * Note that this does not work with imported file systems.
+ *
+ * @param statement The policy statement to add.
+ */
+public inline fun FileSystem.addToResourcePolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToResourcePolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToResourcePolicy(builder.build())
 }

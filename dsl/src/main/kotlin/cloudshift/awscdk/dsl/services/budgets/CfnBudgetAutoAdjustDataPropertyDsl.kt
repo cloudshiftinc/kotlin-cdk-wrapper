@@ -17,6 +17,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.budgets.CfnBudget
 
 /**
+ * Determine the budget amount for an auto-adjusting budget.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -38,17 +40,26 @@ public class CfnBudgetAutoAdjustDataPropertyDsl {
     private val cdkBuilder: CfnBudget.AutoAdjustDataProperty.Builder =
         CfnBudget.AutoAdjustDataProperty.builder()
 
-    /** @param autoAdjustType the value to be set. */
+    /**
+     * @param autoAdjustType The string that defines whether your budget auto-adjusts based on
+     *   historical or forecasted data.
+     */
     public fun autoAdjustType(autoAdjustType: String) {
         cdkBuilder.autoAdjustType(autoAdjustType)
     }
 
-    /** @param historicalOptions the value to be set. */
+    /**
+     * @param historicalOptions The parameters that define or describe the historical data that your
+     *   auto-adjusting budget is based on.
+     */
     public fun historicalOptions(historicalOptions: IResolvable) {
         cdkBuilder.historicalOptions(historicalOptions)
     }
 
-    /** @param historicalOptions the value to be set. */
+    /**
+     * @param historicalOptions The parameters that define or describe the historical data that your
+     *   auto-adjusting budget is based on.
+     */
     public fun historicalOptions(historicalOptions: CfnBudget.HistoricalOptionsProperty) {
         cdkBuilder.historicalOptions(historicalOptions)
     }

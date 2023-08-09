@@ -222,6 +222,11 @@ public class BatchSubmitJobPropsDsl {
         cdkBuilder.resultSelector(resultSelector)
     }
 
+    /** @param tags The tags applied to the job request. */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
+
     /**
      * @param taskTimeout Timeout for the task. [disable-awslint:duration-prop-type] is needed
      *   because all props interface in aws-stepfunctions-tasks extend this interface

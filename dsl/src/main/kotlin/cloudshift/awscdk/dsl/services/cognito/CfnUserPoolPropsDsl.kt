@@ -486,16 +486,28 @@ public class CfnUserPoolPropsDsl {
     }
 
     /**
-     * @param userPoolAddOns Enables advanced security risk detection. Set the key
-     *   `AdvancedSecurityMode` to the value "AUDIT".
+     * @param userPoolAddOns User pool add-ons. Contains settings for activation of advanced
+     *   security features. To log user security information but take no action, set to `AUDIT` . To
+     *   configure automatic security responses to risky traffic to your user pool, set to
+     *   `ENFORCED` .
+     *
+     * For more information, see
+     * [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * .
      */
     public fun userPoolAddOns(userPoolAddOns: IResolvable) {
         cdkBuilder.userPoolAddOns(userPoolAddOns)
     }
 
     /**
-     * @param userPoolAddOns Enables advanced security risk detection. Set the key
-     *   `AdvancedSecurityMode` to the value "AUDIT".
+     * @param userPoolAddOns User pool add-ons. Contains settings for activation of advanced
+     *   security features. To log user security information but take no action, set to `AUDIT` . To
+     *   configure automatic security responses to risky traffic to your user pool, set to
+     *   `ENFORCED` .
+     *
+     * For more information, see
+     * [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * .
      */
     public fun userPoolAddOns(userPoolAddOns: CfnUserPool.UserPoolAddOnsProperty) {
         cdkBuilder.userPoolAddOns(userPoolAddOns)

@@ -80,16 +80,16 @@ public class CfnTargetGroupPropsDsl {
     private val _targets: MutableList<Any> = mutableListOf()
 
     /**
-     * @param config The target group configuration. If `type` is set to `LAMBDA` , this parameter
-     *   doesn't apply.
+     * @param config The target group configuration. If the target group type is `LAMBDA` , this
+     *   parameter doesn't apply.
      */
     public fun config(config: IResolvable) {
         cdkBuilder.config(config)
     }
 
     /**
-     * @param config The target group configuration. If `type` is set to `LAMBDA` , this parameter
-     *   doesn't apply.
+     * @param config The target group configuration. If the target group type is `LAMBDA` , this
+     *   parameter doesn't apply.
      */
     public fun config(config: CfnTargetGroup.TargetGroupConfigProperty) {
         cdkBuilder.config(config)

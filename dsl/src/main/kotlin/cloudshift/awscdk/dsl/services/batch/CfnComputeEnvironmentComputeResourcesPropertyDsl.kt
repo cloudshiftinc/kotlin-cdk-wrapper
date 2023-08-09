@@ -542,7 +542,7 @@ public class CfnComputeEnvironmentComputeResourcesPropertyDsl {
      * @param tags Key-value pair tags to be applied to EC2 resources that are launched in the
      *   compute environment. For AWS Batch , these take the form of `"String1": "String2"` , where
      *   `String1` is the tag key and `String2` is the tag value-for example, `{ "Name": "Batch
-     *   Instance - C4OnDemand" }` . This is helpful for recognizing your AWS Batch instances in the
+     *   Instance - C4OnDemand" }` . This is helpful for recognizing your Batch instances in the
      *   Amazon EC2 console. These tags aren't seen when using the AWS Batch `ListTagsForResource`
      *   API operation.
      *

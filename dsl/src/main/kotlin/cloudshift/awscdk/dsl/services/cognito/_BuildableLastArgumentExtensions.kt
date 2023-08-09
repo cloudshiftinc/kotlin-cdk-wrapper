@@ -25,160 +25,6 @@ import software.amazon.awscdk.services.cognito.UserPoolClient
 import software.amazon.awscdk.services.cognito.UserPoolDomain
 import software.amazon.awscdk.services.cognito.UserPoolResourceServer
 
-/**
- * The user pool analytics configuration for collecting metrics and sending them to your Amazon
- * Pinpoint campaign.
- */
-public inline fun CfnUserPoolClient.setAnalyticsConfiguration(
-    block: CfnUserPoolClientAnalyticsConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnUserPoolClientAnalyticsConfigurationPropertyDsl()
-    builder.apply(block)
-    return setAnalyticsConfiguration(builder.build())
-}
-
-/** The units in which the validity times are represented. */
-public inline fun CfnUserPoolClient.setTokenValidityUnits(
-    block: CfnUserPoolClientTokenValidityUnitsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnUserPoolClientTokenValidityUnitsPropertyDsl()
-    builder.apply(block)
-    return setTokenValidityUnits(builder.build())
-}
-
-/**
- * The account takeover risk configuration object, including the `NotifyConfiguration` object and
- * `Actions` to take if there is an account takeover.
- */
-public inline fun CfnUserPoolRiskConfigurationAttachment.setAccountTakeoverRiskConfiguration(
-    block:
-        CfnUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurationTypePropertyDsl.(
-        ) -> Unit =
-        {}
-) {
-    val builder =
-        CfnUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurationTypePropertyDsl()
-    builder.apply(block)
-    return setAccountTakeoverRiskConfiguration(builder.build())
-}
-
-/**
- * The compromised credentials risk configuration object, including the `EventFilter` and the
- * `EventAction` .
- */
-public inline fun CfnUserPoolRiskConfigurationAttachment.setCompromisedCredentialsRiskConfiguration(
-    block:
-        CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationTypePropertyDsl.(
-        ) -> Unit =
-        {}
-) {
-    val builder =
-        CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationTypePropertyDsl()
-    builder.apply(block)
-    return setCompromisedCredentialsRiskConfiguration(builder.build())
-}
-
-/** The configuration to override the risk decision. */
-public inline fun CfnUserPoolRiskConfigurationAttachment.setRiskExceptionConfiguration(
-    block:
-        CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTypePropertyDsl.() -> Unit =
-        {}
-) {
-    val builder = CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTypePropertyDsl()
-    builder.apply(block)
-    return setRiskExceptionConfiguration(builder.build())
-}
-
-/**
- * The URL to the hosted UI associated with this domain.
- *
- * @param options options to customize baseUrl.
- */
-public inline fun UserPoolDomain.baseUrl(block: BaseUrlOptionsDsl.() -> Unit = {}): String {
-    val builder = BaseUrlOptionsDsl()
-    builder.apply(block)
-    return baseUrl(builder.build())
-}
-
-/**
- * The URL to the sign in page in this domain using a specific UserPoolClient.
- *
- * @param client [disable-awslint:ref-via-interface] the user pool client that the UI will use to
- *   interact with the UserPool.
- * @param options options to customize signInUrl.
- */
-public inline fun UserPoolDomain.signInUrl(
-    client: UserPoolClient,
-    block: SignInUrlOptionsDsl.() -> Unit = {}
-): String {
-    val builder = SignInUrlOptionsDsl()
-    builder.apply(block)
-    return signInUrl(client, builder.build())
-}
-
-/**
- * The configuration for a custom domain that hosts the sign-up and sign-in pages for your
- * application.
- */
-public inline fun CfnUserPoolDomain.setCustomDomainConfig(
-    block: CfnUserPoolDomainCustomDomainConfigTypePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnUserPoolDomainCustomDomainConfigTypePropertyDsl()
-    builder.apply(block)
-    return setCustomDomainConfig(builder.build())
-}
-
-/**
- * Add a new app client to this user pool.
- *
- * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html)
- *
- * @param id
- * @param options
- */
-public inline fun IUserPool.addClient(
-    arg0: String,
-    block: UserPoolClientOptionsDsl.() -> Unit = {}
-): UserPoolClient {
-    val builder = UserPoolClientOptionsDsl()
-    builder.apply(block)
-    return addClient(arg0, builder.build())
-}
-
-/**
- * Associate a domain to this user pool.
- *
- * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-assign-domain.html)
- *
- * @param id
- * @param options
- */
-public inline fun IUserPool.addDomain(
-    arg0: String,
-    block: UserPoolDomainOptionsDsl.() -> Unit = {}
-): UserPoolDomain {
-    val builder = UserPoolDomainOptionsDsl()
-    builder.apply(block)
-    return addDomain(arg0, builder.build())
-}
-
-/**
- * Add a new resource server to this user pool.
- *
- * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-resource-servers.html)
- *
- * @param id
- * @param options
- */
-public inline fun IUserPool.addResourceServer(
-    arg0: String,
-    block: UserPoolResourceServerOptionsDsl.() -> Unit = {}
-): UserPoolResourceServer {
-    val builder = UserPoolResourceServerOptionsDsl()
-    builder.apply(block)
-    return addResourceServer(arg0, builder.build())
-}
-
 /** Configuration options for configuring Amazon Cognito streams. */
 public inline fun CfnIdentityPool.setCognitoStreams(
     block: CfnIdentityPoolCognitoStreamsPropertyDsl.() -> Unit = {}
@@ -273,6 +119,15 @@ public inline fun CfnUserPool.setUserAttributeUpdateSettings(
     return setUserAttributeUpdateSettings(builder.build())
 }
 
+/** User pool add-ons. */
+public inline fun CfnUserPool.setUserPoolAddOns(
+    block: CfnUserPoolUserPoolAddOnsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnUserPoolUserPoolAddOnsPropertyDsl()
+    builder.apply(block)
+    return setUserPoolAddOns(builder.build())
+}
+
 /** You can choose to set case sensitivity on the username input for the selected sign-in option. */
 public inline fun CfnUserPool.setUsernameConfiguration(
     block: CfnUserPoolUsernameConfigurationPropertyDsl.() -> Unit = {}
@@ -280,15 +135,6 @@ public inline fun CfnUserPool.setUsernameConfiguration(
     val builder = CfnUserPoolUsernameConfigurationPropertyDsl()
     builder.apply(block)
     return setUsernameConfiguration(builder.build())
-}
-
-/** Enables advanced security risk detection. */
-public inline fun CfnUserPool.setUserPoolAddOns(
-    block: CfnUserPoolUserPoolAddOnsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnUserPoolUserPoolAddOnsPropertyDsl()
-    builder.apply(block)
-    return setUserPoolAddOns(builder.build())
 }
 
 /**
@@ -304,6 +150,82 @@ public inline fun CfnUserPool.setVerificationMessageTemplate(
 }
 
 /**
+ * The user pool analytics configuration for collecting metrics and sending them to your Amazon
+ * Pinpoint campaign.
+ */
+public inline fun CfnUserPoolClient.setAnalyticsConfiguration(
+    block: CfnUserPoolClientAnalyticsConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnUserPoolClientAnalyticsConfigurationPropertyDsl()
+    builder.apply(block)
+    return setAnalyticsConfiguration(builder.build())
+}
+
+/** The units in which the validity times are represented. */
+public inline fun CfnUserPoolClient.setTokenValidityUnits(
+    block: CfnUserPoolClientTokenValidityUnitsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnUserPoolClientTokenValidityUnitsPropertyDsl()
+    builder.apply(block)
+    return setTokenValidityUnits(builder.build())
+}
+
+/**
+ * The configuration for a custom domain that hosts the sign-up and sign-in pages for your
+ * application.
+ */
+public inline fun CfnUserPoolDomain.setCustomDomainConfig(
+    block: CfnUserPoolDomainCustomDomainConfigTypePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnUserPoolDomainCustomDomainConfigTypePropertyDsl()
+    builder.apply(block)
+    return setCustomDomainConfig(builder.build())
+}
+
+/**
+ * The account takeover risk configuration object, including the `NotifyConfiguration` object and
+ * `Actions` to take if there is an account takeover.
+ */
+public inline fun CfnUserPoolRiskConfigurationAttachment.setAccountTakeoverRiskConfiguration(
+    block:
+        CfnUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurationTypePropertyDsl.(
+        ) -> Unit =
+        {}
+) {
+    val builder =
+        CfnUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurationTypePropertyDsl()
+    builder.apply(block)
+    return setAccountTakeoverRiskConfiguration(builder.build())
+}
+
+/**
+ * The compromised credentials risk configuration object, including the `EventFilter` and the
+ * `EventAction` .
+ */
+public inline fun CfnUserPoolRiskConfigurationAttachment.setCompromisedCredentialsRiskConfiguration(
+    block:
+        CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationTypePropertyDsl.(
+        ) -> Unit =
+        {}
+) {
+    val builder =
+        CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationTypePropertyDsl()
+    builder.apply(block)
+    return setCompromisedCredentialsRiskConfiguration(builder.build())
+}
+
+/** The configuration to override the risk decision. */
+public inline fun CfnUserPoolRiskConfigurationAttachment.setRiskExceptionConfiguration(
+    block:
+        CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTypePropertyDsl.() -> Unit =
+        {}
+) {
+    val builder = CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTypePropertyDsl()
+    builder.apply(block)
+    return setRiskExceptionConfiguration(builder.build())
+}
+
+/**
  * Creates a custom ClientAttributes with the specified attributes.
  *
  * @param attributes a list of standard attributes to add to the set.
@@ -314,6 +236,57 @@ public inline fun ClientAttributes.withStandardAttributes(
     val builder = StandardAttributesMaskDsl()
     builder.apply(block)
     return withStandardAttributes(builder.build())
+}
+
+/**
+ * Add a new app client to this user pool.
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html)
+ *
+ * @param id
+ * @param options
+ */
+public inline fun IUserPool.addClient(
+    arg0: String,
+    block: UserPoolClientOptionsDsl.() -> Unit = {}
+): UserPoolClient {
+    val builder = UserPoolClientOptionsDsl()
+    builder.apply(block)
+    return addClient(arg0, builder.build())
+}
+
+/**
+ * Associate a domain to this user pool.
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-assign-domain.html)
+ *
+ * @param id
+ * @param options
+ */
+public inline fun IUserPool.addDomain(
+    arg0: String,
+    block: UserPoolDomainOptionsDsl.() -> Unit = {}
+): UserPoolDomain {
+    val builder = UserPoolDomainOptionsDsl()
+    builder.apply(block)
+    return addDomain(arg0, builder.build())
+}
+
+/**
+ * Add a new resource server to this user pool.
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-resource-servers.html)
+ *
+ * @param id
+ * @param options
+ */
+public inline fun IUserPool.addResourceServer(
+    arg0: String,
+    block: UserPoolResourceServerOptionsDsl.() -> Unit = {}
+): UserPoolResourceServer {
+    val builder = UserPoolResourceServerOptionsDsl()
+    builder.apply(block)
+    return addResourceServer(arg0, builder.build())
 }
 
 /**
@@ -359,4 +332,31 @@ public inline fun UserPool.addResourceServer(
     val builder = UserPoolResourceServerOptionsDsl()
     builder.apply(block)
     return addResourceServer(id, builder.build())
+}
+
+/**
+ * The URL to the hosted UI associated with this domain.
+ *
+ * @param options options to customize baseUrl.
+ */
+public inline fun UserPoolDomain.baseUrl(block: BaseUrlOptionsDsl.() -> Unit = {}): String {
+    val builder = BaseUrlOptionsDsl()
+    builder.apply(block)
+    return baseUrl(builder.build())
+}
+
+/**
+ * The URL to the sign in page in this domain using a specific UserPoolClient.
+ *
+ * @param client [disable-awslint:ref-via-interface] the user pool client that the UI will use to
+ *   interact with the UserPool.
+ * @param options options to customize signInUrl.
+ */
+public inline fun UserPoolDomain.signInUrl(
+    client: UserPoolClient,
+    block: SignInUrlOptionsDsl.() -> Unit = {}
+): String {
+    val builder = SignInUrlOptionsDsl()
+    builder.apply(block)
+    return signInUrl(client, builder.build())
 }

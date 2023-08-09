@@ -44,19 +44,19 @@ import software.amazon.awscdk.services.ec2.UserData
  * .kernel(AmazonLinux2Kernel.KERNEL_5_10)
  * .build()))
  * .build();
- * // AWS Linux 2022
- * // AWS Linux 2022
+ * // Amazon Linux 2023
+ * // Amazon Linux 2023
  * Instance.Builder.create(this, "Instance4")
  * .vpc(vpc)
  * .instanceType(instanceType)
- * .machineImage(MachineImage.latestAmazonLinux2022())
+ * .machineImage(MachineImage.latestAmazonLinux2023())
  * .build();
  * // Graviton 3 Processor
  * // Graviton 3 Processor
  * Instance.Builder.create(this, "Instance5")
  * .vpc(vpc)
  * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
- * .machineImage(MachineImage.latestAmazonLinux2022(AmazonLinux2022ImageSsmParameterProps.builder()
+ * .machineImage(MachineImage.latestAmazonLinux2023(AmazonLinux2023ImageSsmParameterProps.builder()
  * .cpuType(AmazonLinuxCpuType.ARM_64)
  * .build()))
  * .build();

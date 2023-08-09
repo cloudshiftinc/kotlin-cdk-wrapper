@@ -15,6 +15,7 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.Duration
+import software.amazon.awscdk.services.route53.GeoLocation
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordSetProps
 import software.amazon.awscdk.services.route53.RecordTarget
@@ -29,6 +30,7 @@ import software.amazon.awscdk.services.route53.RecordType
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.*;
  * import software.amazon.awscdk.services.route53.*;
+ * GeoLocation geoLocation;
  * HostedZone hostedZone;
  * RecordTarget recordTarget;
  * RecordSetProps recordSetProps = RecordSetProps.builder()
@@ -38,6 +40,7 @@ import software.amazon.awscdk.services.route53.RecordType
  * // the properties below are optional
  * .comment("comment")
  * .deleteExisting(false)
+ * .geoLocation(geoLocation)
  * .recordName("recordName")
  * .ttl(Duration.minutes(30))
  * .build();
@@ -65,6 +68,14 @@ public class RecordSetPropsDsl {
      */
     public fun deleteExisting(deleteExisting: Boolean) {
         cdkBuilder.deleteExisting(deleteExisting)
+    }
+
+    /**
+     * @param geoLocation The geographical origin for this record to return DNS records based on the
+     *   user's location.
+     */
+    public fun geoLocation(geoLocation: GeoLocation) {
+        cdkBuilder.geoLocation(geoLocation)
     }
 
     /**

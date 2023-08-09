@@ -22,27 +22,6 @@ import software.amazon.awscdk.services.backup.CfnBackupSelection
 import software.amazon.awscdk.services.backup.CfnBackupVault
 
 /**
- * Configuration for
- * [AWS Backup Vault Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) .
- */
-public inline fun CfnBackupVault.setLockConfiguration(
-    block: CfnBackupVaultLockConfigurationTypePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnBackupVaultLockConfigurationTypePropertyDsl()
-    builder.apply(block)
-    return setLockConfiguration(builder.build())
-}
-
-/** The SNS event notifications for the specified backup vault. */
-public inline fun CfnBackupVault.setNotifications(
-    block: CfnBackupVaultNotificationObjectTypePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnBackupVaultNotificationObjectTypePropertyDsl()
-    builder.apply(block)
-    return setNotifications(builder.build())
-}
-
-/**
  * Adds a rule to a plan.
  *
  * @param rule the rule to add.
@@ -95,4 +74,25 @@ public inline fun CfnBackupSelection.setBackupSelection(
     val builder = CfnBackupSelectionBackupSelectionResourceTypePropertyDsl()
     builder.apply(block)
     return setBackupSelection(builder.build())
+}
+
+/**
+ * Configuration for
+ * [AWS Backup Vault Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) .
+ */
+public inline fun CfnBackupVault.setLockConfiguration(
+    block: CfnBackupVaultLockConfigurationTypePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnBackupVaultLockConfigurationTypePropertyDsl()
+    builder.apply(block)
+    return setLockConfiguration(builder.build())
+}
+
+/** The SNS event notifications for the specified backup vault. */
+public inline fun CfnBackupVault.setNotifications(
+    block: CfnBackupVaultNotificationObjectTypePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnBackupVaultNotificationObjectTypePropertyDsl()
+    builder.apply(block)
+    return setNotifications(builder.build())
 }

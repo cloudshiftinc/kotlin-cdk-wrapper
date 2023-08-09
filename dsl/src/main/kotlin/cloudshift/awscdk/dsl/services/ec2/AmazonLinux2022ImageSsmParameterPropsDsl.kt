@@ -24,39 +24,18 @@ import software.amazon.awscdk.services.ec2.UserData
  *
  * Example:
  * ```
- * Vpc vpc;
- * InstanceType instanceType;
- * // Amazon Linux 2
- * // Amazon Linux 2
- * Instance.Builder.create(this, "Instance2")
- * .vpc(vpc)
- * .instanceType(instanceType)
- * .machineImage(MachineImage.latestAmazonLinux2())
- * .build();
- * // Amazon Linux 2 with kernel 5.x
- * // Amazon Linux 2 with kernel 5.x
- * Instance.Builder.create(this, "Instance3")
- * .vpc(vpc)
- * .instanceType(instanceType)
- * .machineImage(MachineImage.latestAmazonLinux2(AmazonLinux2ImageSsmParameterProps.builder()
- * .kernel(AmazonLinux2Kernel.KERNEL_5_10)
- * .build()))
- * .build();
- * // AWS Linux 2022
- * // AWS Linux 2022
- * Instance.Builder.create(this, "Instance4")
- * .vpc(vpc)
- * .instanceType(instanceType)
- * .machineImage(MachineImage.latestAmazonLinux2022())
- * .build();
- * // Graviton 3 Processor
- * // Graviton 3 Processor
- * Instance.Builder.create(this, "Instance5")
- * .vpc(vpc)
- * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
- * .machineImage(MachineImage.latestAmazonLinux2022(AmazonLinux2022ImageSsmParameterProps.builder()
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AmazonLinux2022Kernel amazonLinux2022Kernel;
+ * UserData userData;
+ * AmazonLinux2022ImageSsmParameterProps amazonLinux2022ImageSsmParameterProps =
+ * AmazonLinux2022ImageSsmParameterProps.builder()
+ * .cachedInContext(false)
  * .cpuType(AmazonLinuxCpuType.ARM_64)
- * .build()))
+ * .edition(AmazonLinuxEdition.STANDARD)
+ * .kernel(amazonLinux2022Kernel)
+ * .userData(userData)
  * .build();
  * ```
  */

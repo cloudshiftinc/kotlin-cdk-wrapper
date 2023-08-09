@@ -21,15 +21,6 @@ import software.amazon.awscdk.services.sam.CfnSimpleTable
 import software.amazon.awscdk.services.sam.CfnStateMachine
 
 /**  */
-public inline fun CfnLayerVersion.setContentUri(
-    block: CfnLayerVersionS3LocationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnLayerVersionS3LocationPropertyDsl()
-    builder.apply(block)
-    return setContentUri(builder.build())
-}
-
-/**  */
 public inline fun CfnApi.setAccessLogSetting(
     block: CfnApiAccessLogSettingPropertyDsl.() -> Unit = {}
 ) {
@@ -89,42 +80,6 @@ public inline fun CfnApplication.setLocation(
     val builder = CfnApplicationApplicationLocationPropertyDsl()
     builder.apply(block)
     return setLocation(builder.build())
-}
-
-/**  */
-public inline fun CfnStateMachine.setDefinitionUri(
-    block: CfnStateMachineS3LocationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStateMachineS3LocationPropertyDsl()
-    builder.apply(block)
-    return setDefinitionUri(builder.build())
-}
-
-/**  */
-public inline fun CfnStateMachine.setLogging(
-    block: CfnStateMachineLoggingConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStateMachineLoggingConfigurationPropertyDsl()
-    builder.apply(block)
-    return setLogging(builder.build())
-}
-
-/**  */
-public inline fun CfnStateMachine.setPolicies(
-    block: CfnStateMachineIAMPolicyDocumentPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStateMachineIAMPolicyDocumentPropertyDsl()
-    builder.apply(block)
-    return setPolicies(builder.build())
-}
-
-/**  */
-public inline fun CfnStateMachine.setTracing(
-    block: CfnStateMachineTracingConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStateMachineTracingConfigurationPropertyDsl()
-    builder.apply(block)
-    return setTracing(builder.build())
 }
 
 /**  */
@@ -266,6 +221,15 @@ public inline fun CfnHttpApi.setRouteSettings(
 }
 
 /**  */
+public inline fun CfnLayerVersion.setContentUri(
+    block: CfnLayerVersionS3LocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnLayerVersionS3LocationPropertyDsl()
+    builder.apply(block)
+    return setContentUri(builder.build())
+}
+
+/**  */
 public inline fun CfnSimpleTable.setPrimaryKey(
     block: CfnSimpleTablePrimaryKeyPropertyDsl.() -> Unit = {}
 ) {
@@ -290,4 +254,40 @@ public inline fun CfnSimpleTable.setSseSpecification(
     val builder = CfnSimpleTableSSESpecificationPropertyDsl()
     builder.apply(block)
     return setSseSpecification(builder.build())
+}
+
+/**  */
+public inline fun CfnStateMachine.setDefinitionUri(
+    block: CfnStateMachineS3LocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineS3LocationPropertyDsl()
+    builder.apply(block)
+    return setDefinitionUri(builder.build())
+}
+
+/**  */
+public inline fun CfnStateMachine.setLogging(
+    block: CfnStateMachineLoggingConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineLoggingConfigurationPropertyDsl()
+    builder.apply(block)
+    return setLogging(builder.build())
+}
+
+/**  */
+public inline fun CfnStateMachine.setPolicies(
+    block: CfnStateMachineIAMPolicyDocumentPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineIAMPolicyDocumentPropertyDsl()
+    builder.apply(block)
+    return setPolicies(builder.build())
+}
+
+/**  */
+public inline fun CfnStateMachine.setTracing(
+    block: CfnStateMachineTracingConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStateMachineTracingConfigurationPropertyDsl()
+    builder.apply(block)
+    return setTracing(builder.build())
 }

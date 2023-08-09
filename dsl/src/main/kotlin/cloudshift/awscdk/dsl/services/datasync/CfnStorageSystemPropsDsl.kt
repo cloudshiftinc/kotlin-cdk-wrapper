@@ -64,7 +64,8 @@ public class CfnStorageSystemPropsDsl {
 
     /**
      * @param agentArns Specifies the Amazon Resource Name (ARN) of the DataSync agent that connects
-     *   to and reads from your on-premises storage system's management interface.
+     *   to and reads from your on-premises storage system's management interface. You can only
+     *   specify one ARN.
      */
     public fun agentArns(vararg agentArns: String) {
         _agentArns.addAll(listOf(*agentArns))
@@ -72,7 +73,8 @@ public class CfnStorageSystemPropsDsl {
 
     /**
      * @param agentArns Specifies the Amazon Resource Name (ARN) of the DataSync agent that connects
-     *   to and reads from your on-premises storage system's management interface.
+     *   to and reads from your on-premises storage system's management interface. You can only
+     *   specify one ARN.
      */
     public fun agentArns(agentArns: Collection<String>) {
         _agentArns.addAll(agentArns)

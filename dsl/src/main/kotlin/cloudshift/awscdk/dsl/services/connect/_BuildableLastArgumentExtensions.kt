@@ -15,9 +15,28 @@ import kotlin.Unit
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 import software.amazon.awscdk.services.connect.CfnInstance
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
+import software.amazon.awscdk.services.connect.CfnQueue
 import software.amazon.awscdk.services.connect.CfnQuickConnect
 import software.amazon.awscdk.services.connect.CfnRule
 import software.amazon.awscdk.services.connect.CfnUser
+
+/** A scoring strategy of the evaluation form. */
+public inline fun CfnEvaluationForm.setScoringStrategy(
+    block: CfnEvaluationFormScoringStrategyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnEvaluationFormScoringStrategyPropertyDsl()
+    builder.apply(block)
+    return setScoringStrategy(builder.build())
+}
+
+/** A toggle for an individual feature at the instance level. */
+public inline fun CfnInstance.setAttributes(
+    block: CfnInstanceAttributesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnInstanceAttributesPropertyDsl()
+    builder.apply(block)
+    return setAttributes(builder.build())
+}
 
 /** The configuration of the Kinesis Firehose delivery stream. */
 public inline fun CfnInstanceStorageConfig.setKinesisFirehoseConfig(
@@ -55,29 +74,13 @@ public inline fun CfnInstanceStorageConfig.setS3Config(
     return setS3Config(builder.build())
 }
 
-/** Information about the phone configuration for the user. */
-public inline fun CfnUser.setPhoneConfig(block: CfnUserUserPhoneConfigPropertyDsl.() -> Unit = {}) {
-    val builder = CfnUserUserPhoneConfigPropertyDsl()
-    builder.apply(block)
-    return setPhoneConfig(builder.build())
-}
-
-/** Information about the user identity. */
-public inline fun CfnUser.setIdentityInfo(
-    block: CfnUserUserIdentityInfoPropertyDsl.() -> Unit = {}
+/** The outbound caller ID name, number, and outbound whisper flow. */
+public inline fun CfnQueue.setOutboundCallerConfig(
+    block: CfnQueueOutboundCallerConfigPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnUserUserIdentityInfoPropertyDsl()
+    val builder = CfnQueueOutboundCallerConfigPropertyDsl()
     builder.apply(block)
-    return setIdentityInfo(builder.build())
-}
-
-/** A scoring strategy of the evaluation form. */
-public inline fun CfnEvaluationForm.setScoringStrategy(
-    block: CfnEvaluationFormScoringStrategyPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnEvaluationFormScoringStrategyPropertyDsl()
-    builder.apply(block)
-    return setScoringStrategy(builder.build())
+    return setOutboundCallerConfig(builder.build())
 }
 
 /** Contains information about the quick connect. */
@@ -105,11 +108,18 @@ public inline fun CfnRule.setTriggerEventSource(
     return setTriggerEventSource(builder.build())
 }
 
-/** A toggle for an individual feature at the instance level. */
-public inline fun CfnInstance.setAttributes(
-    block: CfnInstanceAttributesPropertyDsl.() -> Unit = {}
+/** Information about the user identity. */
+public inline fun CfnUser.setIdentityInfo(
+    block: CfnUserUserIdentityInfoPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnInstanceAttributesPropertyDsl()
+    val builder = CfnUserUserIdentityInfoPropertyDsl()
     builder.apply(block)
-    return setAttributes(builder.build())
+    return setIdentityInfo(builder.build())
+}
+
+/** Information about the phone configuration for the user. */
+public inline fun CfnUser.setPhoneConfig(block: CfnUserUserPhoneConfigPropertyDsl.() -> Unit = {}) {
+    val builder = CfnUserUserPhoneConfigPropertyDsl()
+    builder.apply(block)
+    return setPhoneConfig(builder.build())
 }

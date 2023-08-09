@@ -90,6 +90,10 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
  * .type("type")
  * .value("value")
  * .build()))
+ * .runtimePlatform(RuntimePlatformProperty.builder()
+ * .cpuArchitecture("cpuArchitecture")
+ * .operatingSystemFamily("operatingSystemFamily")
+ * .build())
  * .secrets(List.of(SecretProperty.builder()
  * .name("name")
  * .valueFrom("valueFrom")
@@ -565,6 +569,16 @@ public class CfnJobDefinitionContainerPropertiesPropertyDsl {
      */
     public fun resourceRequirements(resourceRequirements: IResolvable) {
         cdkBuilder.resourceRequirements(resourceRequirements)
+    }
+
+    /** @param runtimePlatform the value to be set. */
+    public fun runtimePlatform(runtimePlatform: IResolvable) {
+        cdkBuilder.runtimePlatform(runtimePlatform)
+    }
+
+    /** @param runtimePlatform the value to be set. */
+    public fun runtimePlatform(runtimePlatform: CfnJobDefinition.RuntimePlatformProperty) {
+        cdkBuilder.runtimePlatform(runtimePlatform)
     }
 
     /**

@@ -35,6 +35,7 @@ import software.amazon.awscdk.DockerImageAssetSource
  * "dockerBuildArgsKey", "dockerBuildArgs"))
  * .dockerBuildSecrets(Map.of(
  * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+ * .dockerBuildSsh("dockerBuildSsh")
  * .dockerBuildTarget("dockerBuildTarget")
  * .dockerCacheFrom(List.of(DockerCacheOption.builder()
  * .type("type")
@@ -102,6 +103,11 @@ public class DockerImageAssetSourceDsl {
      */
     public fun dockerBuildSecrets(dockerBuildSecrets: Map<String, String>) {
         cdkBuilder.dockerBuildSecrets(dockerBuildSecrets)
+    }
+
+    /** @param dockerBuildSsh SSH agent socket or keys to pass to the `docker buildx` command. */
+    public fun dockerBuildSsh(dockerBuildSsh: String) {
+        cdkBuilder.dockerBuildSsh(dockerBuildSsh)
     }
 
     /**

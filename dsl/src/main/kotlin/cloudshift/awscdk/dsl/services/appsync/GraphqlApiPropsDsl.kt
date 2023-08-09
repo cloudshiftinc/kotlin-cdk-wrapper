@@ -97,7 +97,7 @@ public class GraphqlApiPropsDsl {
 
     /**
      * @param schema GraphQL schema definition. Specify how you want to define your schema.
-     *   Schema.fromFile(filePath: string) allows schema definition through schema.graphql file
+     *   SchemaFile.fromAsset(filePath: string) allows schema definition through schema.graphql file
      */
     public fun schema(schema: ISchema) {
         cdkBuilder.schema(schema)

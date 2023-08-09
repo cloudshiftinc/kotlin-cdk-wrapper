@@ -66,25 +66,29 @@ public class CfnFHIRDatastorePropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param datastoreName The user generated name for the Data Store. */
+    /** @param datastoreName The user generated name for the data store. */
     public fun datastoreName(datastoreName: String) {
         cdkBuilder.datastoreName(datastoreName)
     }
 
     /**
-     * @param datastoreTypeVersion The FHIR version of the Data Store. The only supported version is
+     * @param datastoreTypeVersion The FHIR version of the data store. The only supported version is
      *   R4.
      */
     public fun datastoreTypeVersion(datastoreTypeVersion: String) {
         cdkBuilder.datastoreTypeVersion(datastoreTypeVersion)
     }
 
-    /** @param identityProviderConfiguration the value to be set. */
+    /**
+     * @param identityProviderConfiguration The identity provider configuration for the datastore.
+     */
     public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
         cdkBuilder.identityProviderConfiguration(identityProviderConfiguration)
     }
 
-    /** @param identityProviderConfiguration the value to be set. */
+    /**
+     * @param identityProviderConfiguration The identity provider configuration for the datastore.
+     */
     public fun identityProviderConfiguration(
         identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty
     ) {
@@ -92,7 +96,7 @@ public class CfnFHIRDatastorePropsDsl {
     }
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the Data Store. Only data
+     * @param preloadDataConfig The preloaded data configuration for the data store. Only data
      *   preloaded from Synthea is supported.
      */
     public fun preloadDataConfig(preloadDataConfig: IResolvable) {
@@ -100,7 +104,7 @@ public class CfnFHIRDatastorePropsDsl {
     }
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the Data Store. Only data
+     * @param preloadDataConfig The preloaded data configuration for the data store. Only data
      *   preloaded from Synthea is supported.
      */
     public fun preloadDataConfig(preloadDataConfig: CfnFHIRDatastore.PreloadDataConfigProperty) {
@@ -109,7 +113,7 @@ public class CfnFHIRDatastorePropsDsl {
 
     /**
      * @param sseConfiguration The server-side encryption key configuration for a customer provided
-     *   encryption key specified for creating a Data Store.
+     *   encryption key specified for creating a data store.
      */
     public fun sseConfiguration(sseConfiguration: IResolvable) {
         cdkBuilder.sseConfiguration(sseConfiguration)
@@ -117,7 +121,7 @@ public class CfnFHIRDatastorePropsDsl {
 
     /**
      * @param sseConfiguration The server-side encryption key configuration for a customer provided
-     *   encryption key specified for creating a Data Store.
+     *   encryption key specified for creating a data store.
      */
     public fun sseConfiguration(sseConfiguration: CfnFHIRDatastore.SseConfigurationProperty) {
         cdkBuilder.sseConfiguration(sseConfiguration)

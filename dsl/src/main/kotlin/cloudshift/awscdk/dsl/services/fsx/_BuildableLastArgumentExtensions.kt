@@ -29,35 +29,6 @@ public inline fun CfnDataRepositoryAssociation.setS3(
     return setS3(builder.build())
 }
 
-/**
- * Describes the Microsoft Active Directory configuration to which the SVM is joined, if applicable.
- */
-public inline fun CfnStorageVirtualMachine.setActiveDirectoryConfiguration(
-    block: CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl()
-    builder.apply(block)
-    return setActiveDirectoryConfiguration(builder.build())
-}
-
-/** The configuration of an Amazon FSx for NetApp ONTAP volume. */
-public inline fun CfnVolume.setOntapConfiguration(
-    block: CfnVolumeOntapConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnVolumeOntapConfigurationPropertyDsl()
-    builder.apply(block)
-    return setOntapConfiguration(builder.build())
-}
-
-/** The configuration of an Amazon FSx for OpenZFS volume. */
-public inline fun CfnVolume.setOpenZfsConfiguration(
-    block: CfnVolumeOpenZFSConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnVolumeOpenZFSConfigurationPropertyDsl()
-    builder.apply(block)
-    return setOpenZfsConfiguration(builder.build())
-}
-
 /** The Lustre configuration for the file system being created. */
 public inline fun CfnFileSystem.setLustreConfiguration(
     block: CfnFileSystemLustreConfigurationPropertyDsl.() -> Unit = {}
@@ -94,4 +65,33 @@ public inline fun CfnFileSystem.setWindowsConfiguration(
     val builder = CfnFileSystemWindowsConfigurationPropertyDsl()
     builder.apply(block)
     return setWindowsConfiguration(builder.build())
+}
+
+/**
+ * Describes the Microsoft Active Directory configuration to which the SVM is joined, if applicable.
+ */
+public inline fun CfnStorageVirtualMachine.setActiveDirectoryConfiguration(
+    block: CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl()
+    builder.apply(block)
+    return setActiveDirectoryConfiguration(builder.build())
+}
+
+/** The configuration of an Amazon FSx for NetApp ONTAP volume. */
+public inline fun CfnVolume.setOntapConfiguration(
+    block: CfnVolumeOntapConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnVolumeOntapConfigurationPropertyDsl()
+    builder.apply(block)
+    return setOntapConfiguration(builder.build())
+}
+
+/** The configuration of an Amazon FSx for OpenZFS volume. */
+public inline fun CfnVolume.setOpenZfsConfiguration(
+    block: CfnVolumeOpenZFSConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnVolumeOpenZFSConfigurationPropertyDsl()
+    builder.apply(block)
+    return setOpenZfsConfiguration(builder.build())
 }

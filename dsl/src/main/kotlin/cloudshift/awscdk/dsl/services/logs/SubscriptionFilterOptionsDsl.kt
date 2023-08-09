@@ -12,6 +12,7 @@
 package cloudshift.awscdk.dsl.services.logs
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.services.logs.IFilterPattern
 import software.amazon.awscdk.services.logs.ILogSubscriptionDestination
 import software.amazon.awscdk.services.logs.SubscriptionFilterOptions
@@ -29,6 +30,8 @@ import software.amazon.awscdk.services.logs.SubscriptionFilterOptions
  * SubscriptionFilterOptions subscriptionFilterOptions = SubscriptionFilterOptions.builder()
  * .destination(logSubscriptionDestination)
  * .filterPattern(filterPattern)
+ * // the properties below are optional
+ * .filterName("filterName")
  * .build();
  * ```
  */
@@ -42,6 +45,11 @@ public class SubscriptionFilterOptionsDsl {
      */
     public fun destination(destination: ILogSubscriptionDestination) {
         cdkBuilder.destination(destination)
+    }
+
+    /** @param filterName The name of the subscription filter. */
+    public fun filterName(filterName: String) {
+        cdkBuilder.filterName(filterName)
     }
 
     /** @param filterPattern Log events matching this pattern will be sent to the destination. */

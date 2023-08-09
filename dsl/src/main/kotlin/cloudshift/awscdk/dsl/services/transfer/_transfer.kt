@@ -182,12 +182,15 @@ public object transfer {
 
     /**
      * Creates the connector, which captures the parameters for an outbound connection for the AS2
-     * protocol.
+     * or SFTP protocol.
      *
-     * The connector is required for sending files to an externally hosted AS2 server. For more
-     * details about connectors, see
+     * The connector is required for sending files to an externally hosted AS2 or SFTP server. For
+     * more details about AS2 connectors, see
      * [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)
      * .
+     *
+     * You must specify exactly one configuration object: either for AS2 ( `As2Config` ) or SFTP (
+     * `SftpConfig` ).
      *
      * Example:
      * ```
@@ -221,7 +224,7 @@ public object transfer {
     }
 
     /**
-     * A structure that contains the parameters for a connector object.
+     * A structure that contains the parameters for an AS2 connector object.
      *
      * Example:
      * ```

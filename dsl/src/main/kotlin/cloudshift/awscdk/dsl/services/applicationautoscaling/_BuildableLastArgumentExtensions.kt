@@ -22,6 +22,36 @@ import software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy
 import software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicy
 
 /**
+ * An embedded object that contains attributes and attribute values that are used to suspend and
+ * resume automatic scaling.
+ */
+public inline fun CfnScalableTarget.setSuspendedState(
+    block: CfnScalableTargetSuspendedStatePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnScalableTargetSuspendedStatePropertyDsl()
+    builder.apply(block)
+    return setSuspendedState(builder.build())
+}
+
+/** A step scaling policy. */
+public inline fun CfnScalingPolicy.setStepScalingPolicyConfiguration(
+    block: CfnScalingPolicyStepScalingPolicyConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnScalingPolicyStepScalingPolicyConfigurationPropertyDsl()
+    builder.apply(block)
+    return setStepScalingPolicyConfiguration(builder.build())
+}
+
+/** A target tracking scaling policy. */
+public inline fun CfnScalingPolicy.setTargetTrackingScalingPolicyConfiguration(
+    block: CfnScalingPolicyTargetTrackingScalingPolicyConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnScalingPolicyTargetTrackingScalingPolicyConfigurationPropertyDsl()
+    builder.apply(block)
+    return setTargetTrackingScalingPolicyConfiguration(builder.build())
+}
+
+/**
  * Add a policy statement to the role's policy.
  *
  * @param statement
@@ -77,24 +107,6 @@ public inline fun ScalableTarget.scaleToTrackMetric(
     return scaleToTrackMetric(id, builder.build())
 }
 
-/** A step scaling policy. */
-public inline fun CfnScalingPolicy.setStepScalingPolicyConfiguration(
-    block: CfnScalingPolicyStepScalingPolicyConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnScalingPolicyStepScalingPolicyConfigurationPropertyDsl()
-    builder.apply(block)
-    return setStepScalingPolicyConfiguration(builder.build())
-}
-
-/** A target tracking scaling policy. */
-public inline fun CfnScalingPolicy.setTargetTrackingScalingPolicyConfiguration(
-    block: CfnScalingPolicyTargetTrackingScalingPolicyConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnScalingPolicyTargetTrackingScalingPolicyConfigurationPropertyDsl()
-    builder.apply(block)
-    return setTargetTrackingScalingPolicyConfiguration(builder.build())
-}
-
 /**
  * Add an adjusment interval to the ScalingAction.
  *
@@ -104,16 +116,4 @@ public inline fun StepScalingAction.addAdjustment(block: AdjustmentTierDsl.() ->
     val builder = AdjustmentTierDsl()
     builder.apply(block)
     return addAdjustment(builder.build())
-}
-
-/**
- * An embedded object that contains attributes and attribute values that are used to suspend and
- * resume automatic scaling.
- */
-public inline fun CfnScalableTarget.setSuspendedState(
-    block: CfnScalableTargetSuspendedStatePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnScalableTargetSuspendedStatePropertyDsl()
-    builder.apply(block)
-    return setSuspendedState(builder.build())
 }

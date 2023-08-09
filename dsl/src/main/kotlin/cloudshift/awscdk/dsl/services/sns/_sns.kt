@@ -17,6 +17,8 @@ import software.amazon.awscdk.services.sns.BetweenCondition
 import software.amazon.awscdk.services.sns.CfnSubscription
 import software.amazon.awscdk.services.sns.CfnSubscriptionProps
 import software.amazon.awscdk.services.sns.CfnTopic
+import software.amazon.awscdk.services.sns.CfnTopicInlinePolicy
+import software.amazon.awscdk.services.sns.CfnTopicInlinePolicyProps
 import software.amazon.awscdk.services.sns.CfnTopicPolicy
 import software.amazon.awscdk.services.sns.CfnTopicPolicyProps
 import software.amazon.awscdk.services.sns.CfnTopicProps
@@ -189,6 +191,59 @@ public object sns {
         block: CfnTopicDsl.() -> Unit = {},
     ): CfnTopic {
         val builder = CfnTopicDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Schema for AWS::SNS::TopicInlinePolicy.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sns.*;
+     * Object policyDocument;
+     * CfnTopicInlinePolicy cfnTopicInlinePolicy = CfnTopicInlinePolicy.Builder.create(this,
+     * "MyCfnTopicInlinePolicy")
+     * .policyDocument(policyDocument)
+     * .topicArn("topicArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html)
+     */
+    public inline fun cfnTopicInlinePolicy(
+        scope: Construct,
+        id: String,
+        block: CfnTopicInlinePolicyDsl.() -> Unit = {},
+    ): CfnTopicInlinePolicy {
+        val builder = CfnTopicInlinePolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnTopicInlinePolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sns.*;
+     * Object policyDocument;
+     * CfnTopicInlinePolicyProps cfnTopicInlinePolicyProps = CfnTopicInlinePolicyProps.builder()
+     * .policyDocument(policyDocument)
+     * .topicArn("topicArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html)
+     */
+    public inline fun cfnTopicInlinePolicyProps(
+        block: CfnTopicInlinePolicyPropsDsl.() -> Unit = {}
+    ): CfnTopicInlinePolicyProps {
+        val builder = CfnTopicInlinePolicyPropsDsl()
         builder.apply(block)
         return builder.build()
     }

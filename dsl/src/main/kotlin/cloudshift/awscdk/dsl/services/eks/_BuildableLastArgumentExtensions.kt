@@ -32,19 +32,6 @@ import software.amazon.awscdk.services.iam.IUser
 import software.constructs.Construct
 
 /**
- * Add to the policy of this principal.
- *
- * @param statement
- */
-public inline fun ServiceAccount.addToPrincipalPolicy(
-    block: PolicyStatementDsl.() -> Unit = {}
-): AddToPrincipalPolicyResult {
-    val builder = PolicyStatementDsl()
-    builder.apply(block)
-    return addToPrincipalPolicy(builder.build())
-}
-
-/**
  * Adds a mapping between an IAM role to a Kubernetes user and groups.
  *
  * @param role The IAM role to map.
@@ -66,6 +53,49 @@ public inline fun AwsAuth.addUserMapping(user: IUser, block: AwsAuthMappingDsl.(
     val builder = AwsAuthMappingDsl()
     builder.apply(block)
     return addUserMapping(user, builder.build())
+}
+
+/** The Kubernetes network configuration for the cluster. */
+public inline fun CfnCluster.setKubernetesNetworkConfig(
+    block: CfnClusterKubernetesNetworkConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnClusterKubernetesNetworkConfigPropertyDsl()
+    builder.apply(block)
+    return setKubernetesNetworkConfig(builder.build())
+}
+
+/** The logging configuration for your cluster. */
+public inline fun CfnCluster.setLogging(block: CfnClusterLoggingPropertyDsl.() -> Unit = {}) {
+    val builder = CfnClusterLoggingPropertyDsl()
+    builder.apply(block)
+    return setLogging(builder.build())
+}
+
+/** An object representing the configuration of your local Amazon EKS cluster on an AWS Outpost. */
+public inline fun CfnCluster.setOutpostConfig(
+    block: CfnClusterOutpostConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnClusterOutpostConfigPropertyDsl()
+    builder.apply(block)
+    return setOutpostConfig(builder.build())
+}
+
+/** The VPC configuration that's used by the cluster control plane. */
+public inline fun CfnCluster.setResourcesVpcConfig(
+    block: CfnClusterResourcesVpcConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnClusterResourcesVpcConfigPropertyDsl()
+    builder.apply(block)
+    return setResourcesVpcConfig(builder.build())
+}
+
+/** An object representing an OpenID Connect (OIDC) identity provider configuration. */
+public inline fun CfnIdentityProviderConfig.setOidc(
+    block: CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl()
+    builder.apply(block)
+    return setOidc(builder.build())
 }
 
 /** An object representing a node group's launch template specification. */
@@ -104,118 +134,6 @@ public inline fun CfnNodegroup.setUpdateConfig(
     val builder = CfnNodegroupUpdateConfigPropertyDsl()
     builder.apply(block)
     return setUpdateConfig(builder.build())
-}
-
-/** The VPC configuration that's used by the cluster control plane. */
-public inline fun CfnCluster.setResourcesVpcConfig(
-    block: CfnClusterResourcesVpcConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnClusterResourcesVpcConfigPropertyDsl()
-    builder.apply(block)
-    return setResourcesVpcConfig(builder.build())
-}
-
-/** The Kubernetes network configuration for the cluster. */
-public inline fun CfnCluster.setKubernetesNetworkConfig(
-    block: CfnClusterKubernetesNetworkConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnClusterKubernetesNetworkConfigPropertyDsl()
-    builder.apply(block)
-    return setKubernetesNetworkConfig(builder.build())
-}
-
-/** The logging configuration for your cluster. */
-public inline fun CfnCluster.setLogging(block: CfnClusterLoggingPropertyDsl.() -> Unit = {}) {
-    val builder = CfnClusterLoggingPropertyDsl()
-    builder.apply(block)
-    return setLogging(builder.build())
-}
-
-/** An object representing the configuration of your local Amazon EKS cluster on an AWS Outpost. */
-public inline fun CfnCluster.setOutpostConfig(
-    block: CfnClusterOutpostConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnClusterOutpostConfigPropertyDsl()
-    builder.apply(block)
-    return setOutpostConfig(builder.build())
-}
-
-/**
- * Defines a CDK8s chart in this cluster.
- *
- * @param id logical id of this chart.
- * @param chart the cdk8s chart.
- * @param options
- * @return a `KubernetesManifest` construct representing the chart.
- */
-public inline fun ICluster.addCdk8sChart(
-    arg0: String,
-    arg1: Construct,
-    block: KubernetesManifestOptionsDsl.() -> Unit = {},
-): KubernetesManifest {
-    val builder = KubernetesManifestOptionsDsl()
-    builder.apply(block)
-    return addCdk8sChart(arg0, arg1, builder.build())
-}
-
-/**
- * Defines a Helm chart in this cluster.
- *
- * @param id logical id of this chart.
- * @param options options of this chart.
- * @return a `HelmChart` construct
- */
-public inline fun ICluster.addHelmChart(
-    arg0: String,
-    block: HelmChartOptionsDsl.() -> Unit = {}
-): HelmChart {
-    val builder = HelmChartOptionsDsl()
-    builder.apply(block)
-    return addHelmChart(arg0, builder.build())
-}
-
-/**
- * Creates a new service account with corresponding IAM Role (IRSA).
- *
- * @param id logical id of service account.
- * @param options service account options.
- */
-public inline fun ICluster.addServiceAccount(
-    arg0: String,
-    block: ServiceAccountOptionsDsl.() -> Unit = {}
-): ServiceAccount {
-    val builder = ServiceAccountOptionsDsl()
-    builder.apply(block)
-    return addServiceAccount(arg0, builder.build())
-}
-
-/**
- * Connect capacity in the form of an existing AutoScalingGroup to the EKS cluster.
- *
- * The AutoScalingGroup must be running an EKS-optimized AMI containing the /etc/eks/bootstrap.sh
- * script. This method will configure Security Groups, add the right policies to the instance role,
- * apply the right tags, and add the required user data to the instance's launch configuration.
- *
- * Spot instances will be labeled `lifecycle=Ec2Spot` and tainted with `PreferNoSchedule`. If
- * kubectl is enabled, the
- * [spot interrupt handler](https://github.com/awslabs/ec2-spot-labs/tree/master/ec2-spot-eks-solution/spot-termination-handler)
- * daemon will be installed on all spot instances to handle
- * [EC2 Spot Instance Termination Notices](https://aws.amazon.com/blogs/aws/new-ec2-spot-instance-termination-notices/).
- *
- * Prefer to use `addAutoScalingGroupCapacity` if possible.
- *
- * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html)
- *
- * @param autoScalingGroup [disable-awslint:ref-via-interface].
- * @param options options for adding auto scaling groups, like customizing the bootstrap script.
- */
-public inline fun ICluster.connectAutoScalingGroupCapacity(
-    arg0: AutoScalingGroup,
-    block: AutoScalingGroupOptionsDsl.() -> Unit = {}
-) {
-    val builder = AutoScalingGroupOptionsDsl()
-    builder.apply(block)
-    return connectAutoScalingGroupCapacity(arg0, builder.build())
 }
 
 /**
@@ -391,11 +309,93 @@ public inline fun Cluster.getServiceLoadBalancerAddress(
     return getServiceLoadBalancerAddress(serviceName, builder.build())
 }
 
-/** An object representing an OpenID Connect (OIDC) identity provider configuration. */
-public inline fun CfnIdentityProviderConfig.setOidc(
-    block: CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl()
+/**
+ * Defines a CDK8s chart in this cluster.
+ *
+ * @param id logical id of this chart.
+ * @param chart the cdk8s chart.
+ * @param options
+ * @return a `KubernetesManifest` construct representing the chart.
+ */
+public inline fun ICluster.addCdk8sChart(
+    arg0: String,
+    arg1: Construct,
+    block: KubernetesManifestOptionsDsl.() -> Unit = {},
+): KubernetesManifest {
+    val builder = KubernetesManifestOptionsDsl()
     builder.apply(block)
-    return setOidc(builder.build())
+    return addCdk8sChart(arg0, arg1, builder.build())
+}
+
+/**
+ * Defines a Helm chart in this cluster.
+ *
+ * @param id logical id of this chart.
+ * @param options options of this chart.
+ * @return a `HelmChart` construct
+ */
+public inline fun ICluster.addHelmChart(
+    arg0: String,
+    block: HelmChartOptionsDsl.() -> Unit = {}
+): HelmChart {
+    val builder = HelmChartOptionsDsl()
+    builder.apply(block)
+    return addHelmChart(arg0, builder.build())
+}
+
+/**
+ * Creates a new service account with corresponding IAM Role (IRSA).
+ *
+ * @param id logical id of service account.
+ * @param options service account options.
+ */
+public inline fun ICluster.addServiceAccount(
+    arg0: String,
+    block: ServiceAccountOptionsDsl.() -> Unit = {}
+): ServiceAccount {
+    val builder = ServiceAccountOptionsDsl()
+    builder.apply(block)
+    return addServiceAccount(arg0, builder.build())
+}
+
+/**
+ * Connect capacity in the form of an existing AutoScalingGroup to the EKS cluster.
+ *
+ * The AutoScalingGroup must be running an EKS-optimized AMI containing the /etc/eks/bootstrap.sh
+ * script. This method will configure Security Groups, add the right policies to the instance role,
+ * apply the right tags, and add the required user data to the instance's launch configuration.
+ *
+ * Spot instances will be labeled `lifecycle=Ec2Spot` and tainted with `PreferNoSchedule`. If
+ * kubectl is enabled, the
+ * [spot interrupt handler](https://github.com/awslabs/ec2-spot-labs/tree/master/ec2-spot-eks-solution/spot-termination-handler)
+ * daemon will be installed on all spot instances to handle
+ * [EC2 Spot Instance Termination Notices](https://aws.amazon.com/blogs/aws/new-ec2-spot-instance-termination-notices/).
+ *
+ * Prefer to use `addAutoScalingGroupCapacity` if possible.
+ *
+ * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html)
+ *
+ * @param autoScalingGroup [disable-awslint:ref-via-interface].
+ * @param options options for adding auto scaling groups, like customizing the bootstrap script.
+ */
+public inline fun ICluster.connectAutoScalingGroupCapacity(
+    arg0: AutoScalingGroup,
+    block: AutoScalingGroupOptionsDsl.() -> Unit = {}
+) {
+    val builder = AutoScalingGroupOptionsDsl()
+    builder.apply(block)
+    return connectAutoScalingGroupCapacity(arg0, builder.build())
+}
+
+/**
+ * Add to the policy of this principal.
+ *
+ * @param statement
+ */
+public inline fun ServiceAccount.addToPrincipalPolicy(
+    block: PolicyStatementDsl.() -> Unit = {}
+): AddToPrincipalPolicyResult {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPrincipalPolicy(builder.build())
 }

@@ -16,6 +16,36 @@ import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
 
+/**
+ * The ComputeResources property type specifies details of the compute resources managed by the
+ * compute environment.
+ */
+public inline fun CfnComputeEnvironment.setComputeResources(
+    block: CfnComputeEnvironmentComputeResourcesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnComputeEnvironmentComputeResourcesPropertyDsl()
+    builder.apply(block)
+    return setComputeResources(builder.build())
+}
+
+/** The details for the Amazon EKS cluster that supports the compute environment. */
+public inline fun CfnComputeEnvironment.setEksConfiguration(
+    block: CfnComputeEnvironmentEksConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnComputeEnvironmentEksConfigurationPropertyDsl()
+    builder.apply(block)
+    return setEksConfiguration(builder.build())
+}
+
+/** Specifies the infrastructure update policy for the compute environment. */
+public inline fun CfnComputeEnvironment.setUpdatePolicy(
+    block: CfnComputeEnvironmentUpdatePolicyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnComputeEnvironmentUpdatePolicyPropertyDsl()
+    builder.apply(block)
+    return setUpdatePolicy(builder.build())
+}
+
 /** An object with various properties specific to Amazon ECS based jobs. */
 public inline fun CfnJobDefinition.setContainerProperties(
     block: CfnJobDefinitionContainerPropertiesPropertyDsl.() -> Unit = {}
@@ -68,34 +98,4 @@ public inline fun CfnSchedulingPolicy.setFairsharePolicy(
     val builder = CfnSchedulingPolicyFairsharePolicyPropertyDsl()
     builder.apply(block)
     return setFairsharePolicy(builder.build())
-}
-
-/**
- * The ComputeResources property type specifies details of the compute resources managed by the
- * compute environment.
- */
-public inline fun CfnComputeEnvironment.setComputeResources(
-    block: CfnComputeEnvironmentComputeResourcesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnComputeEnvironmentComputeResourcesPropertyDsl()
-    builder.apply(block)
-    return setComputeResources(builder.build())
-}
-
-/** The details for the Amazon EKS cluster that supports the compute environment. */
-public inline fun CfnComputeEnvironment.setEksConfiguration(
-    block: CfnComputeEnvironmentEksConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnComputeEnvironmentEksConfigurationPropertyDsl()
-    builder.apply(block)
-    return setEksConfiguration(builder.build())
-}
-
-/** Specifies the infrastructure update policy for the compute environment. */
-public inline fun CfnComputeEnvironment.setUpdatePolicy(
-    block: CfnComputeEnvironmentUpdatePolicyPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnComputeEnvironmentUpdatePolicyPropertyDsl()
-    builder.apply(block)
-    return setUpdatePolicy(builder.build())
 }

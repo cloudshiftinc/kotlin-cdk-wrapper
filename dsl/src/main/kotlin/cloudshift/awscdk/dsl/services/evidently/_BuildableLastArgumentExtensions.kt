@@ -17,6 +17,35 @@ import software.amazon.awscdk.services.evidently.CfnLaunch
 import software.amazon.awscdk.services.evidently.CfnProject
 
 /**
+ * A structure that contains the configuration of which variation to use as the "control" version.
+ */
+public inline fun CfnExperiment.setOnlineAbConfig(
+    block: CfnExperimentOnlineAbConfigObjectPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnExperimentOnlineAbConfigObjectPropertyDsl()
+    builder.apply(block)
+    return setOnlineAbConfig(builder.build())
+}
+
+/** A structure that you can use to start and stop the experiment. */
+public inline fun CfnExperiment.setRunningStatus(
+    block: CfnExperimentRunningStatusObjectPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnExperimentRunningStatusObjectPropertyDsl()
+    builder.apply(block)
+    return setRunningStatus(builder.build())
+}
+
+/** A structure that you can use to start and stop the launch. */
+public inline fun CfnLaunch.setExecutionStatus(
+    block: CfnLaunchExecutionStatusObjectPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnLaunchExecutionStatusObjectPropertyDsl()
+    builder.apply(block)
+    return setExecutionStatus(builder.build())
+}
+
+/**
  * Use this parameter if the project will use *client-side evaluation powered by AWS AppConfig* .
  */
 public inline fun CfnProject.setAppConfigResource(
@@ -37,33 +66,4 @@ public inline fun CfnProject.setDataDelivery(
     val builder = CfnProjectDataDeliveryObjectPropertyDsl()
     builder.apply(block)
     return setDataDelivery(builder.build())
-}
-
-/** A structure that you can use to start and stop the launch. */
-public inline fun CfnLaunch.setExecutionStatus(
-    block: CfnLaunchExecutionStatusObjectPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnLaunchExecutionStatusObjectPropertyDsl()
-    builder.apply(block)
-    return setExecutionStatus(builder.build())
-}
-
-/**
- * A structure that contains the configuration of which variation to use as the "control" version.
- */
-public inline fun CfnExperiment.setOnlineAbConfig(
-    block: CfnExperimentOnlineAbConfigObjectPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnExperimentOnlineAbConfigObjectPropertyDsl()
-    builder.apply(block)
-    return setOnlineAbConfig(builder.build())
-}
-
-/** A structure that you can use to start and stop the experiment. */
-public inline fun CfnExperiment.setRunningStatus(
-    block: CfnExperimentRunningStatusObjectPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnExperimentRunningStatusObjectPropertyDsl()
-    builder.apply(block)
-    return setRunningStatus(builder.build())
 }

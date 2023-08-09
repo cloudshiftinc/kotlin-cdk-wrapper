@@ -18,13 +18,6 @@ import software.amazon.awscdk.services.vpclattice.CfnService
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 
-/**  */
-public inline fun CfnService.setDnsEntry(block: CfnServiceDnsEntryPropertyDsl.() -> Unit = {}) {
-    val builder = CfnServiceDnsEntryPropertyDsl()
-    builder.apply(block)
-    return setDnsEntry(builder.build())
-}
-
 /** The action for the default rule. */
 public inline fun CfnListener.setDefaultAction(
     block: CfnListenerDefaultActionPropertyDsl.() -> Unit = {}
@@ -32,15 +25,6 @@ public inline fun CfnListener.setDefaultAction(
     val builder = CfnListenerDefaultActionPropertyDsl()
     builder.apply(block)
     return setDefaultAction(builder.build())
-}
-
-/**  */
-public inline fun CfnServiceNetworkServiceAssociation.setDnsEntry(
-    block: CfnServiceNetworkServiceAssociationDnsEntryPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnServiceNetworkServiceAssociationDnsEntryPropertyDsl()
-    builder.apply(block)
-    return setDnsEntry(builder.build())
 }
 
 /** Describes the action for a rule. */
@@ -55,6 +39,22 @@ public inline fun CfnRule.setMatch(block: CfnRuleMatchPropertyDsl.() -> Unit = {
     val builder = CfnRuleMatchPropertyDsl()
     builder.apply(block)
     return setMatch(builder.build())
+}
+
+/**  */
+public inline fun CfnService.setDnsEntry(block: CfnServiceDnsEntryPropertyDsl.() -> Unit = {}) {
+    val builder = CfnServiceDnsEntryPropertyDsl()
+    builder.apply(block)
+    return setDnsEntry(builder.build())
+}
+
+/**  */
+public inline fun CfnServiceNetworkServiceAssociation.setDnsEntry(
+    block: CfnServiceNetworkServiceAssociationDnsEntryPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnServiceNetworkServiceAssociationDnsEntryPropertyDsl()
+    builder.apply(block)
+    return setDnsEntry(builder.build())
 }
 
 /** The target group configuration. */

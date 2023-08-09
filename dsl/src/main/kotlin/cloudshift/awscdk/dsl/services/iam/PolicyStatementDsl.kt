@@ -28,28 +28,18 @@ import software.amazon.awscdk.services.iam.PolicyStatement
  *
  * Example:
  * ```
- * // Add gateway endpoints when creating the VPC
- * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
- * .gatewayEndpoints(Map.of(
- * "S3", GatewayVpcEndpointOptions.builder()
- * .service(GatewayVpcEndpointAwsService.S3)
- * .build()))
+ * // Option 3: Create a new role that allows the account root principal to assume. Add this role in
+ * the `system:masters` and witch to this role from the AWS console.
+ * Cluster cluster;
+ * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
+ * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
  * .build();
- * // Alternatively gateway endpoints can be added on the VPC
- * GatewayVpcEndpoint dynamoDbEndpoint = vpc.addGatewayEndpoint("DynamoDbEndpoint",
- * GatewayVpcEndpointOptions.builder()
- * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+ * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
+ * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
+ * .resources(List.of(cluster.getClusterArn()))
  * .build());
- * // This allows to customize the endpoint policy
- * dynamoDbEndpoint.addToPolicy(
- * PolicyStatement.Builder.create() // Restrict to listing and describing tables
- * .principals(List.of(new AnyPrincipal()))
- * .actions(List.of("dynamodb:DescribeTable", "dynamodb:ListTables"))
- * .resources(List.of("*")).build());
- * // Add an interface endpoint
- * vpc.addInterfaceEndpoint("EcrDockerEndpoint", InterfaceVpcEndpointOptions.builder()
- * .service(InterfaceVpcEndpointAwsService.ECR_DOCKER)
- * .build());
+ * // Add this role to system:masters RBAC group
+ * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
  * ```
  */
 @CdkDslMarker

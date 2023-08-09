@@ -18,6 +18,15 @@ import software.amazon.awscdk.services.route53.CfnRecordSet
 import software.amazon.awscdk.services.route53.IPublicHostedZone
 import software.amazon.awscdk.services.route53.PublicHostedZone
 
+/** A complex type that contains detailed information about one health check. */
+public inline fun CfnHealthCheck.setHealthCheckConfig(
+    block: CfnHealthCheckHealthCheckConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnHealthCheckHealthCheckConfigPropertyDsl()
+    builder.apply(block)
+    return setHealthCheckConfig(builder.build())
+}
+
 /** A complex type that contains an optional comment. */
 public inline fun CfnHostedZone.setHostedZoneConfig(
     block: CfnHostedZoneHostedZoneConfigPropertyDsl.() -> Unit = {}
@@ -34,30 +43,6 @@ public inline fun CfnHostedZone.setQueryLoggingConfig(
     val builder = CfnHostedZoneQueryLoggingConfigPropertyDsl()
     builder.apply(block)
     return setQueryLoggingConfig(builder.build())
-}
-
-/** A complex type that contains detailed information about one health check. */
-public inline fun CfnHealthCheck.setHealthCheckConfig(
-    block: CfnHealthCheckHealthCheckConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnHealthCheckHealthCheckConfigPropertyDsl()
-    builder.apply(block)
-    return setHealthCheckConfig(builder.build())
-}
-
-/**
- * Adds a delegation from this zone to a designated zone.
- *
- * @param delegate the zone being delegated to.
- * @param opts options for creating the DNS record, if any.
- */
-public inline fun PublicHostedZone.addDelegation(
-    `delegate`: IPublicHostedZone,
-    block: ZoneDelegationOptionsDsl.() -> Unit = {}
-) {
-    val builder = ZoneDelegationOptionsDsl()
-    builder.apply(block)
-    return addDelegation(delegate, builder.build())
 }
 
 /**
@@ -94,4 +79,19 @@ public inline fun CfnRecordSet.setGeoLocation(
     val builder = CfnRecordSetGeoLocationPropertyDsl()
     builder.apply(block)
     return setGeoLocation(builder.build())
+}
+
+/**
+ * Adds a delegation from this zone to a designated zone.
+ *
+ * @param delegate the zone being delegated to.
+ * @param opts options for creating the DNS record, if any.
+ */
+public inline fun PublicHostedZone.addDelegation(
+    `delegate`: IPublicHostedZone,
+    block: ZoneDelegationOptionsDsl.() -> Unit = {}
+) {
+    val builder = ZoneDelegationOptionsDsl()
+    builder.apply(block)
+    return addDelegation(delegate, builder.build())
 }

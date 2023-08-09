@@ -24,13 +24,16 @@ import software.amazon.awscdk.services.transfer.CfnConnector
 import software.constructs.Construct
 
 /**
- * Creates the connector, which captures the parameters for an outbound connection for the AS2
- * protocol.
+ * Creates the connector, which captures the parameters for an outbound connection for the AS2 or
+ * SFTP protocol.
  *
- * The connector is required for sending files to an externally hosted AS2 server. For more details
- * about connectors, see
+ * The connector is required for sending files to an externally hosted AS2 or SFTP server. For more
+ * details about AS2 connectors, see
  * [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)
  * .
+ *
+ * You must specify exactly one configuration object: either for AS2 ( `As2Config` ) or SFTP (
+ * `SftpConfig` ).
  *
  * Example:
  * ```
@@ -89,11 +92,11 @@ public class CfnConnectorDsl(
     }
 
     /**
-     * A structure that contains the parameters for a connector object.
+     * A structure that contains the parameters for an AS2 connector object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-as2config)
      *
-     * @param as2Config A structure that contains the parameters for a connector object.
+     * @param as2Config A structure that contains the parameters for an AS2 connector object.
      */
     public fun as2Config(as2Config: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -102,11 +105,11 @@ public class CfnConnectorDsl(
     }
 
     /**
-     * A structure that contains the parameters for a connector object.
+     * A structure that contains the parameters for an AS2 connector object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-as2config)
      *
-     * @param as2Config A structure that contains the parameters for a connector object.
+     * @param as2Config A structure that contains the parameters for an AS2 connector object.
      */
     public fun as2Config(as2Config: Any) {
         cdkBuilder.as2Config(as2Config)
@@ -150,11 +153,11 @@ public class CfnConnectorDsl(
     }
 
     /**
-     * The URL of the partner's AS2 endpoint.
+     * The URL of the partner's AS2 or SFTP endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-url)
      *
-     * @param url The URL of the partner's AS2 endpoint.
+     * @param url The URL of the partner's AS2 or SFTP endpoint.
      */
     public fun url(url: String) {
         cdkBuilder.url(url)

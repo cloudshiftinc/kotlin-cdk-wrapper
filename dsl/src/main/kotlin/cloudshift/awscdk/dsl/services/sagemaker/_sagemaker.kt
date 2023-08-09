@@ -2130,6 +2130,11 @@ public object sagemaker {
      * .endpointConfigName("endpointConfigName")
      * // the properties below are optional
      * .deploymentConfig(DeploymentConfigProperty.builder()
+     * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+     * .alarms(List.of(AlarmProperty.builder()
+     * .alarmName("alarmName")
+     * .build()))
+     * .build())
      * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
      * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
      * .type("type")
@@ -2148,11 +2153,18 @@ public object sagemaker {
      * .maximumExecutionTimeoutInSeconds(123)
      * .terminationWaitInSeconds(123)
      * .build())
+     * .rollingUpdatePolicy(RollingUpdatePolicyProperty.builder()
+     * .maximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .waitIntervalInSeconds(123)
      * // the properties below are optional
-     * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
-     * .alarms(List.of(AlarmProperty.builder()
-     * .alarmName("alarmName")
-     * .build()))
+     * .maximumExecutionTimeoutInSeconds(123)
+     * .rollbackMaximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
      * .build())
      * .build())
      * .endpointName("endpointName")
@@ -3069,6 +3081,11 @@ public object sagemaker {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sagemaker.*;
      * DeploymentConfigProperty deploymentConfigProperty = DeploymentConfigProperty.builder()
+     * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+     * .alarms(List.of(AlarmProperty.builder()
+     * .alarmName("alarmName")
+     * .build()))
+     * .build())
      * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
      * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
      * .type("type")
@@ -3087,11 +3104,18 @@ public object sagemaker {
      * .maximumExecutionTimeoutInSeconds(123)
      * .terminationWaitInSeconds(123)
      * .build())
+     * .rollingUpdatePolicy(RollingUpdatePolicyProperty.builder()
+     * .maximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .waitIntervalInSeconds(123)
      * // the properties below are optional
-     * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
-     * .alarms(List.of(AlarmProperty.builder()
-     * .alarmName("alarmName")
-     * .build()))
+     * .maximumExecutionTimeoutInSeconds(123)
+     * .rollbackMaximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
      * .build())
      * .build();
      * ```
@@ -3118,6 +3142,11 @@ public object sagemaker {
      * .endpointConfigName("endpointConfigName")
      * // the properties below are optional
      * .deploymentConfig(DeploymentConfigProperty.builder()
+     * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+     * .alarms(List.of(AlarmProperty.builder()
+     * .alarmName("alarmName")
+     * .build()))
+     * .build())
      * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
      * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
      * .type("type")
@@ -3136,11 +3165,18 @@ public object sagemaker {
      * .maximumExecutionTimeoutInSeconds(123)
      * .terminationWaitInSeconds(123)
      * .build())
+     * .rollingUpdatePolicy(RollingUpdatePolicyProperty.builder()
+     * .maximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .waitIntervalInSeconds(123)
      * // the properties below are optional
-     * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
-     * .alarms(List.of(AlarmProperty.builder()
-     * .alarmName("alarmName")
-     * .build()))
+     * .maximumExecutionTimeoutInSeconds(123)
+     * .rollbackMaximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
      * .build())
      * .build())
      * .endpointName("endpointName")
@@ -3162,6 +3198,39 @@ public object sagemaker {
         block: CfnEndpointPropsDsl.() -> Unit = {}
     ): CfnEndpointProps {
         val builder = CfnEndpointPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a rolling deployment strategy for updating a SageMaker endpoint.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sagemaker.*;
+     * RollingUpdatePolicyProperty rollingUpdatePolicyProperty = RollingUpdatePolicyProperty.builder()
+     * .maximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .waitIntervalInSeconds(123)
+     * // the properties below are optional
+     * .maximumExecutionTimeoutInSeconds(123)
+     * .rollbackMaximumBatchSize(CapacitySizeProperty.builder()
+     * .type("type")
+     * .value(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-rollingupdatepolicy.html)
+     */
+    public inline fun cfnEndpointRollingUpdatePolicyProperty(
+        block: CfnEndpointRollingUpdatePolicyPropertyDsl.() -> Unit = {}
+    ): CfnEndpoint.RollingUpdatePolicyProperty {
+        val builder = CfnEndpointRollingUpdatePolicyPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -5392,6 +5461,8 @@ public object sagemaker {
     }
 
     /**
+     * Defines how to perform inference generation after a training job is run.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5832,6 +5903,11 @@ public object sagemaker {
     }
 
     /**
+     * Specifies an algorithm that was used to create the model package.
+     *
+     * The algorithm must be either an algorithm resource in your SageMaker account or an algorithm
+     * in AWS Marketplace that you are subscribed to.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

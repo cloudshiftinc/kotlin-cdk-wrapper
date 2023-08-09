@@ -101,7 +101,7 @@ public class CfnAgentPropsDsl {
      * @param subnetArns Specifies the ARN of the subnet where you want to run your DataSync task
      *   when using a VPC endpoint. This is the subnet where DataSync creates and manages the
      *   [network interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     *   for your transfer.
+     *   for your transfer. You can only specify one ARN.
      */
     public fun subnetArns(vararg subnetArns: String) {
         _subnetArns.addAll(listOf(*subnetArns))
@@ -111,7 +111,7 @@ public class CfnAgentPropsDsl {
      * @param subnetArns Specifies the ARN of the subnet where you want to run your DataSync task
      *   when using a VPC endpoint. This is the subnet where DataSync creates and manages the
      *   [network interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     *   for your transfer.
+     *   for your transfer. You can only specify one ARN.
      */
     public fun subnetArns(subnetArns: Collection<String>) {
         _subnetArns.addAll(subnetArns)

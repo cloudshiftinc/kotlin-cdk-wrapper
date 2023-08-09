@@ -74,42 +74,46 @@ public class CfnFHIRDatastoreDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * The user generated name for the Data Store.
+     * The user generated name for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastorename)
      *
-     * @param datastoreName The user generated name for the Data Store.
+     * @param datastoreName The user generated name for the data store.
      */
     public fun datastoreName(datastoreName: String) {
         cdkBuilder.datastoreName(datastoreName)
     }
 
     /**
-     * The FHIR version of the Data Store.
+     * The FHIR version of the data store.
      *
      * The only supported version is R4.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastoretypeversion)
      *
-     * @param datastoreTypeVersion The FHIR version of the Data Store.
+     * @param datastoreTypeVersion The FHIR version of the data store.
      */
     public fun datastoreTypeVersion(datastoreTypeVersion: String) {
         cdkBuilder.datastoreTypeVersion(datastoreTypeVersion)
     }
 
     /**
+     * The identity provider configuration for the datastore.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
      *
-     * @param identityProviderConfiguration
+     * @param identityProviderConfiguration The identity provider configuration for the datastore.
      */
     public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
         cdkBuilder.identityProviderConfiguration(identityProviderConfiguration)
     }
 
     /**
+     * The identity provider configuration for the datastore.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
      *
-     * @param identityProviderConfiguration
+     * @param identityProviderConfiguration The identity provider configuration for the datastore.
      */
     public fun identityProviderConfiguration(
         identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty
@@ -118,26 +122,26 @@ public class CfnFHIRDatastoreDsl(
     }
 
     /**
-     * The preloaded data configuration for the Data Store.
+     * The preloaded data configuration for the data store.
      *
      * Only data preloaded from Synthea is supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
      *
-     * @param preloadDataConfig The preloaded data configuration for the Data Store.
+     * @param preloadDataConfig The preloaded data configuration for the data store.
      */
     public fun preloadDataConfig(preloadDataConfig: IResolvable) {
         cdkBuilder.preloadDataConfig(preloadDataConfig)
     }
 
     /**
-     * The preloaded data configuration for the Data Store.
+     * The preloaded data configuration for the data store.
      *
      * Only data preloaded from Synthea is supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
      *
-     * @param preloadDataConfig The preloaded data configuration for the Data Store.
+     * @param preloadDataConfig The preloaded data configuration for the data store.
      */
     public fun preloadDataConfig(preloadDataConfig: CfnFHIRDatastore.PreloadDataConfigProperty) {
         cdkBuilder.preloadDataConfig(preloadDataConfig)
@@ -145,12 +149,12 @@ public class CfnFHIRDatastoreDsl(
 
     /**
      * The server-side encryption key configuration for a customer provided encryption key specified
-     * for creating a Data Store.
+     * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
      *
      * @param sseConfiguration The server-side encryption key configuration for a customer provided
-     *   encryption key specified for creating a Data Store.
+     *   encryption key specified for creating a data store.
      */
     public fun sseConfiguration(sseConfiguration: IResolvable) {
         cdkBuilder.sseConfiguration(sseConfiguration)
@@ -158,12 +162,12 @@ public class CfnFHIRDatastoreDsl(
 
     /**
      * The server-side encryption key configuration for a customer provided encryption key specified
-     * for creating a Data Store.
+     * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
      *
      * @param sseConfiguration The server-side encryption key configuration for a customer provided
-     *   encryption key specified for creating a Data Store.
+     *   encryption key specified for creating a data store.
      */
     public fun sseConfiguration(sseConfiguration: CfnFHIRDatastore.SseConfigurationProperty) {
         cdkBuilder.sseConfiguration(sseConfiguration)

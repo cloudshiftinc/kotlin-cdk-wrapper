@@ -118,6 +118,21 @@ public class AssetImageDsl(
     }
 
     /**
+     * SSH agent socket or keys to pass to the `docker build` command.
+     *
+     * Docker BuildKit must be enabled to use the ssh flag
+     *
+     * Default: - no --ssh flag
+     *
+     * [Documentation](https://docs.docker.com/build/buildkit/)
+     *
+     * @param buildSsh SSH agent socket or keys to pass to the `docker build` command.
+     */
+    public fun buildSsh(buildSsh: String) {
+        cdkBuilder.buildSsh(buildSsh)
+    }
+
+    /**
      * Cache from options to pass to the `docker build` command.
      *
      * Default: - no cache from options are passed to the build command

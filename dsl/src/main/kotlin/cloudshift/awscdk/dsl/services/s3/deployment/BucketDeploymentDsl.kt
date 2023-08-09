@@ -405,7 +405,7 @@ public class BucketDeploymentDsl(
      *
      * Default: true - when resource is deleted/updated, files are retained
      *
-     * [Documentation](https://github.com/aws/aws-cdk/tree/main/packages/%40aws-cdk/aws-s3-deployment#retain-on-delete)
+     * [Documentation](https://github.com/aws/aws-cdk/tree/main/packages/aws-cdk-lib/aws-s3-deployment#retain-on-delete)
      *
      * @param retainOnDelete If this is set to "false", the destination files will be deleted when
      *   the resource is deleted or the destination is updated.

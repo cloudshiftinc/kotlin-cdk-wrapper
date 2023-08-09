@@ -42,17 +42,27 @@ public class CfnDataSourceDataSourceToIndexFieldMappingPropertyDsl {
     private val cdkBuilder: CfnDataSource.DataSourceToIndexFieldMappingProperty.Builder =
         CfnDataSource.DataSourceToIndexFieldMappingProperty.builder()
 
-    /** @param dataSourceFieldName The name of the column or attribute in the data source. */
+    /**
+     * @param dataSourceFieldName The name of the field in the data source. You must first create
+     *   the index field using the `UpdateIndex` API.
+     */
     public fun dataSourceFieldName(dataSourceFieldName: String) {
         cdkBuilder.dataSourceFieldName(dataSourceFieldName)
     }
 
-    /** @param dateFieldFormat The type of data stored in the column or attribute. */
+    /**
+     * @param dateFieldFormat The format for date fields in the data source. If the field specified
+     *   in `DataSourceFieldName` is a date field, you must specify the date format. If the field is
+     *   not a date field, an exception is thrown.
+     */
     public fun dateFieldFormat(dateFieldFormat: String) {
         cdkBuilder.dateFieldFormat(dateFieldFormat)
     }
 
-    /** @param indexFieldName The name of the field in the index. */
+    /**
+     * @param indexFieldName The name of the index field to map to the data source field. The index
+     *   field type must match the data source field type.
+     */
     public fun indexFieldName(indexFieldName: String) {
         cdkBuilder.indexFieldName(indexFieldName)
     }

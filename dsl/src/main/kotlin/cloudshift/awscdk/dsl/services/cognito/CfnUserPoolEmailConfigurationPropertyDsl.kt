@@ -113,8 +113,11 @@ public class CfnUserPoolEmailConfigurationPropertyDsl {
     }
 
     /**
-     * @param sourceArn The ARN of a verified email address in Amazon SES. Amazon Cognito uses this
-     *   email address in one of the following ways, depending on the value that you specify for the
+     * @param sourceArn The ARN of a verified email address or an address from a verified domain in
+     *   Amazon SES. You can set a `SourceArn` email from a verified domain only with an API
+     *   request. You can set a verified email address, but not an address in a verified domain, in
+     *   the Amazon Cognito console. Amazon Cognito uses the email address that you provide in one
+     *   of the following ways, depending on the value that you specify for the
      *   `EmailSendingAccount` parameter:
      * * If you specify `COGNITO_DEFAULT` , Amazon Cognito uses this address as the custom FROM
      *   address when it emails your users using its built-in email account.

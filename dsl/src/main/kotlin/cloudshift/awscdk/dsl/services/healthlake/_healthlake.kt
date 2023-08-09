@@ -96,6 +96,8 @@ public object healthlake {
     }
 
     /**
+     * The identity provider configuration for the datastore.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -149,7 +151,7 @@ public object healthlake {
     }
 
     /**
-     * Optional parameter to preload data upon creation of the Data Store.
+     * Optional parameter to preload data upon creation of the data store.
      *
      * Currently, the only supported preloaded data is synthetic data generated from Synthea.
      *

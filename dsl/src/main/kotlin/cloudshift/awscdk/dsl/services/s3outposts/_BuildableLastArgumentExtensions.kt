@@ -16,13 +16,13 @@ import software.amazon.awscdk.services.s3outposts.CfnAccessPoint
 import software.amazon.awscdk.services.s3outposts.CfnBucket
 import software.amazon.awscdk.services.s3outposts.CfnEndpoint
 
-/**  */
-public inline fun CfnEndpoint.setFailedReason(
-    block: CfnEndpointFailedReasonPropertyDsl.() -> Unit = {}
+/** The virtual private cloud (VPC) configuration for this access point, if one exists. */
+public inline fun CfnAccessPoint.setVpcConfiguration(
+    block: CfnAccessPointVpcConfigurationPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnEndpointFailedReasonPropertyDsl()
+    val builder = CfnAccessPointVpcConfigurationPropertyDsl()
     builder.apply(block)
-    return setFailedReason(builder.build())
+    return setVpcConfiguration(builder.build())
 }
 
 /**
@@ -37,11 +37,11 @@ public inline fun CfnBucket.setLifecycleConfiguration(
     return setLifecycleConfiguration(builder.build())
 }
 
-/** The virtual private cloud (VPC) configuration for this access point, if one exists. */
-public inline fun CfnAccessPoint.setVpcConfiguration(
-    block: CfnAccessPointVpcConfigurationPropertyDsl.() -> Unit = {}
+/**  */
+public inline fun CfnEndpoint.setFailedReason(
+    block: CfnEndpointFailedReasonPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnAccessPointVpcConfigurationPropertyDsl()
+    val builder = CfnEndpointFailedReasonPropertyDsl()
     builder.apply(block)
-    return setVpcConfiguration(builder.build())
+    return setFailedReason(builder.build())
 }

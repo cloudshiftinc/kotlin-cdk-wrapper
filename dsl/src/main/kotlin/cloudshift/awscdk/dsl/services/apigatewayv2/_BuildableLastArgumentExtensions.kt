@@ -33,24 +33,6 @@ public inline fun CfnApi.setCorsConfiguration(block: CfnApiCorsPropertyDsl.() ->
     return setCorsConfiguration(builder.build())
 }
 
-/** Settings for logging access in this stage. */
-public inline fun CfnStage.setAccessLogSettings(
-    block: CfnStageAccessLogSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStageAccessLogSettingsPropertyDsl()
-    builder.apply(block)
-    return setAccessLogSettings(builder.build())
-}
-
-/** The default route settings for the stage. */
-public inline fun CfnStage.setDefaultRouteSettings(
-    block: CfnStageRouteSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStageRouteSettingsPropertyDsl()
-    builder.apply(block)
-    return setDefaultRouteSettings(builder.build())
-}
-
 /** Overrides the integration configuration for an API Gateway-managed integration. */
 public inline fun CfnApiGatewayManagedOverrides.setIntegration(
     block: CfnApiGatewayManagedOverridesIntegrationOverridesPropertyDsl.() -> Unit = {}
@@ -78,15 +60,6 @@ public inline fun CfnApiGatewayManagedOverrides.setStage(
     return setStage(builder.build())
 }
 
-/** The mutual TLS authentication configuration for a custom domain name. */
-public inline fun CfnDomainName.setMutualTlsAuthentication(
-    block: CfnDomainNameMutualTlsAuthenticationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDomainNameMutualTlsAuthenticationPropertyDsl()
-    builder.apply(block)
-    return setMutualTlsAuthentication(builder.build())
-}
-
 /** The `JWTConfiguration` property specifies the configuration of a JWT authorizer. */
 public inline fun CfnAuthorizer.setJwtConfiguration(
     block: CfnAuthorizerJWTConfigurationPropertyDsl.() -> Unit = {}
@@ -96,6 +69,15 @@ public inline fun CfnAuthorizer.setJwtConfiguration(
     return setJwtConfiguration(builder.build())
 }
 
+/** The mutual TLS authentication configuration for a custom domain name. */
+public inline fun CfnDomainName.setMutualTlsAuthentication(
+    block: CfnDomainNameMutualTlsAuthenticationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainNameMutualTlsAuthenticationPropertyDsl()
+    builder.apply(block)
+    return setMutualTlsAuthentication(builder.build())
+}
+
 /** The TLS configuration for a private integration. */
 public inline fun CfnIntegration.setTlsConfig(
     block: CfnIntegrationTlsConfigPropertyDsl.() -> Unit = {}
@@ -103,4 +85,22 @@ public inline fun CfnIntegration.setTlsConfig(
     val builder = CfnIntegrationTlsConfigPropertyDsl()
     builder.apply(block)
     return setTlsConfig(builder.build())
+}
+
+/** Settings for logging access in this stage. */
+public inline fun CfnStage.setAccessLogSettings(
+    block: CfnStageAccessLogSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStageAccessLogSettingsPropertyDsl()
+    builder.apply(block)
+    return setAccessLogSettings(builder.build())
+}
+
+/** The default route settings for the stage. */
+public inline fun CfnStage.setDefaultRouteSettings(
+    block: CfnStageRouteSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStageRouteSettingsPropertyDsl()
+    builder.apply(block)
+    return setDefaultRouteSettings(builder.build())
 }

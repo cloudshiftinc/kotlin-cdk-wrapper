@@ -54,7 +54,7 @@ public class CfnListenerForwardPropertyDsl {
      *   the same weight, each target group receives half of the traffic.
      *
      * The default value is 1. This means that if only one target group is provided, there is no
-     * need to set the weight; 100% of traffic will go to that target group.
+     * need to set the weight; 100% of the traffic goes to that target group.
      */
     public fun targetGroups(vararg targetGroups: Any) {
         _targetGroups.addAll(listOf(*targetGroups))
@@ -68,7 +68,7 @@ public class CfnListenerForwardPropertyDsl {
      *   the same weight, each target group receives half of the traffic.
      *
      * The default value is 1. This means that if only one target group is provided, there is no
-     * need to set the weight; 100% of traffic will go to that target group.
+     * need to set the weight; 100% of the traffic goes to that target group.
      */
     public fun targetGroups(targetGroups: Collection<Any>) {
         _targetGroups.addAll(targetGroups)
@@ -82,7 +82,7 @@ public class CfnListenerForwardPropertyDsl {
      *   the same weight, each target group receives half of the traffic.
      *
      * The default value is 1. This means that if only one target group is provided, there is no
-     * need to set the weight; 100% of traffic will go to that target group.
+     * need to set the weight; 100% of the traffic goes to that target group.
      */
     public fun targetGroups(targetGroups: IResolvable) {
         cdkBuilder.targetGroups(targetGroups)

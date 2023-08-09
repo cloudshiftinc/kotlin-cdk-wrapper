@@ -15,18 +15,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule
 
 /**
- * The criteria that you set for specific assertion controls (routing controls) that designate how
- * many control states must be `ON` as the result of a transaction.
- */
-public inline fun CfnSafetyRule.setRuleConfig(
-    block: CfnSafetyRuleRuleConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnSafetyRuleRuleConfigPropertyDsl()
-    builder.apply(block)
-    return setRuleConfig(builder.build())
-}
-
-/**
  * An assertion rule enforces that, when you change a routing control state, that the criteria that
  * you set in the rule configuration is met.
  */
@@ -49,4 +37,16 @@ public inline fun CfnSafetyRule.setGatingRule(
     val builder = CfnSafetyRuleGatingRulePropertyDsl()
     builder.apply(block)
     return setGatingRule(builder.build())
+}
+
+/**
+ * The criteria that you set for specific assertion controls (routing controls) that designate how
+ * many control states must be `ON` as the result of a transaction.
+ */
+public inline fun CfnSafetyRule.setRuleConfig(
+    block: CfnSafetyRuleRuleConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSafetyRuleRuleConfigPropertyDsl()
+    builder.apply(block)
+    return setRuleConfig(builder.build())
 }

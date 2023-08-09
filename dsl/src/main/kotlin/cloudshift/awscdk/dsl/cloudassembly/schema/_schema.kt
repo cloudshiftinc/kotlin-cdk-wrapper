@@ -261,6 +261,7 @@ public object schema {
      * "dockerBuildArgsKey", "dockerBuildArgs"))
      * .dockerBuildSecrets(Map.of(
      * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+     * .dockerBuildSsh("dockerBuildSsh")
      * .dockerBuildTarget("dockerBuildTarget")
      * .dockerFile("dockerFile")
      * .dockerOutputs(List.of("dockerOutputs"))
@@ -792,6 +793,7 @@ public object schema {
      * "dockerBuildArgsKey", "dockerBuildArgs"))
      * .dockerBuildSecrets(Map.of(
      * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+     * .dockerBuildSsh("dockerBuildSsh")
      * .dockerBuildTarget("dockerBuildTarget")
      * .dockerFile("dockerFile")
      * .dockerOutputs(List.of("dockerOutputs"))
@@ -862,6 +864,7 @@ public object schema {
      * "dockerBuildArgsKey", "dockerBuildArgs"))
      * .dockerBuildSecrets(Map.of(
      * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+     * .dockerBuildSsh("dockerBuildSsh")
      * .dockerBuildTarget("dockerBuildTarget")
      * .dockerFile("dockerFile")
      * .dockerOutputs(List.of("dockerOutputs"))

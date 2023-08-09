@@ -31,65 +31,13 @@ public inline fun CfnPrivateDnsNamespace.setProperties(
     return setProperties(builder.build())
 }
 
-/**
- * Registers a resource that is accessible using a CNAME.
- *
- * @param id
- * @param props
- */
-public inline fun Service.registerCnameInstance(
-    id: String,
-    block: CnameInstanceBasePropsDsl.() -> Unit = {}
-): IInstance {
-    val builder = CnameInstanceBasePropsDsl()
+/** Properties for the public DNS namespace. */
+public inline fun CfnPublicDnsNamespace.setProperties(
+    block: CfnPublicDnsNamespacePropertiesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPublicDnsNamespacePropertiesPropertyDsl()
     builder.apply(block)
-    return registerCnameInstance(id, builder.build())
-}
-
-/**
- * Registers a resource that is accessible using an IP address.
- *
- * @param id
- * @param props
- */
-public inline fun Service.registerIpInstance(
-    id: String,
-    block: IpInstanceBasePropsDsl.() -> Unit = {}
-): IInstance {
-    val builder = IpInstanceBasePropsDsl()
-    builder.apply(block)
-    return registerIpInstance(id, builder.build())
-}
-
-/**
- * Registers a resource that is accessible using values other than an IP address or a domain name
- * (CNAME).
- *
- * @param id
- * @param props
- */
-public inline fun Service.registerNonIpInstance(
-    id: String,
-    block: NonIpInstanceBasePropsDsl.() -> Unit = {}
-): IInstance {
-    val builder = NonIpInstanceBasePropsDsl()
-    builder.apply(block)
-    return registerNonIpInstance(id, builder.build())
-}
-
-/**
- * Creates a service within the namespace.
- *
- * @param id
- * @param props
- */
-public inline fun PrivateDnsNamespace.createService(
-    id: String,
-    block: DnsServicePropsDsl.() -> Unit = {}
-): Service {
-    val builder = DnsServicePropsDsl()
-    builder.apply(block)
-    return createService(id, builder.build())
+    return setProperties(builder.build())
 }
 
 /**
@@ -145,6 +93,21 @@ public inline fun HttpNamespace.createService(
  * @param id
  * @param props
  */
+public inline fun PrivateDnsNamespace.createService(
+    id: String,
+    block: DnsServicePropsDsl.() -> Unit = {}
+): Service {
+    val builder = DnsServicePropsDsl()
+    builder.apply(block)
+    return createService(id, builder.build())
+}
+
+/**
+ * Creates a service within the namespace.
+ *
+ * @param id
+ * @param props
+ */
 public inline fun PublicDnsNamespace.createService(
     id: String,
     block: DnsServicePropsDsl.() -> Unit = {}
@@ -154,11 +117,48 @@ public inline fun PublicDnsNamespace.createService(
     return createService(id, builder.build())
 }
 
-/** Properties for the public DNS namespace. */
-public inline fun CfnPublicDnsNamespace.setProperties(
-    block: CfnPublicDnsNamespacePropertiesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPublicDnsNamespacePropertiesPropertyDsl()
+/**
+ * Registers a resource that is accessible using a CNAME.
+ *
+ * @param id
+ * @param props
+ */
+public inline fun Service.registerCnameInstance(
+    id: String,
+    block: CnameInstanceBasePropsDsl.() -> Unit = {}
+): IInstance {
+    val builder = CnameInstanceBasePropsDsl()
     builder.apply(block)
-    return setProperties(builder.build())
+    return registerCnameInstance(id, builder.build())
+}
+
+/**
+ * Registers a resource that is accessible using an IP address.
+ *
+ * @param id
+ * @param props
+ */
+public inline fun Service.registerIpInstance(
+    id: String,
+    block: IpInstanceBasePropsDsl.() -> Unit = {}
+): IInstance {
+    val builder = IpInstanceBasePropsDsl()
+    builder.apply(block)
+    return registerIpInstance(id, builder.build())
+}
+
+/**
+ * Registers a resource that is accessible using values other than an IP address or a domain name
+ * (CNAME).
+ *
+ * @param id
+ * @param props
+ */
+public inline fun Service.registerNonIpInstance(
+    id: String,
+    block: NonIpInstanceBasePropsDsl.() -> Unit = {}
+): IInstance {
+    val builder = NonIpInstanceBasePropsDsl()
+    builder.apply(block)
+    return registerNonIpInstance(id, builder.build())
 }

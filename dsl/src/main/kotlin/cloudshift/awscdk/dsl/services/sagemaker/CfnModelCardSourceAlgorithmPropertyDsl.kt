@@ -16,6 +16,11 @@ import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
 /**
+ * Specifies an algorithm that was used to create the model package.
+ *
+ * The algorithm must be either an algorithm resource in your SageMaker account or an algorithm in
+ * AWS Marketplace that you are subscribed to.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -46,7 +51,10 @@ public class CfnModelCardSourceAlgorithmPropertyDsl {
 
     /**
      * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
-     *   training, are stored.
+     *   training, are stored. This path must point to a single `gzip` compressed tar archive (
+     *   `.tar.gz` suffix).
+     *
+     * The model artifacts must be in an S3 bucket that is in the same AWS region as the algorithm.
      */
     public fun modelDataUrl(modelDataUrl: String) {
         cdkBuilder.modelDataUrl(modelDataUrl)

@@ -18,15 +18,6 @@ import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
 
-/** The destination repository for the container image. */
-public inline fun CfnContainerRecipe.setTargetRepository(
-    block: CfnContainerRecipeTargetContainerRepositoryPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnContainerRecipeTargetContainerRepositoryPropertyDsl()
-    builder.apply(block)
-    return setTargetRepository(builder.build())
-}
-
 /**
  * A group of options that can be used to configure an instance for building and testing container
  * images.
@@ -39,22 +30,34 @@ public inline fun CfnContainerRecipe.setInstanceConfiguration(
     return setInstanceConfiguration(builder.build())
 }
 
-/** The instance metadata option settings for the infrastructure configuration. */
-public inline fun CfnInfrastructureConfiguration.setInstanceMetadataOptions(
-    block: CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl.() -> Unit = {}
+/** The destination repository for the container image. */
+public inline fun CfnContainerRecipe.setTargetRepository(
+    block: CfnContainerRecipeTargetContainerRepositoryPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl()
+    val builder = CfnContainerRecipeTargetContainerRepositoryPropertyDsl()
     builder.apply(block)
-    return setInstanceMetadataOptions(builder.build())
+    return setTargetRepository(builder.build())
 }
 
-/** The logging configuration defines where Image Builder uploads your logs. */
-public inline fun CfnInfrastructureConfiguration.setLogging(
-    block: CfnInfrastructureConfigurationLoggingPropertyDsl.() -> Unit = {}
+/** Contains settings for Image Builder image resource and container image scans. */
+public inline fun CfnImage.setImageScanningConfiguration(
+    block: CfnImageImageScanningConfigurationPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnInfrastructureConfigurationLoggingPropertyDsl()
+    val builder = CfnImageImageScanningConfigurationPropertyDsl()
     builder.apply(block)
-    return setLogging(builder.build())
+    return setImageScanningConfiguration(builder.build())
+}
+
+/**
+ * The configuration settings for your image test components, which includes a toggle that allows
+ * you to turn off tests, and a timeout setting.
+ */
+public inline fun CfnImage.setImageTestsConfiguration(
+    block: CfnImageImageTestsConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnImageImageTestsConfigurationPropertyDsl()
+    builder.apply(block)
+    return setImageTestsConfiguration(builder.build())
 }
 
 /** Determines if tests should run after building the image. */
@@ -99,23 +102,20 @@ public inline fun CfnImageRecipe.setAdditionalInstanceConfiguration(
     return setAdditionalInstanceConfiguration(builder.build())
 }
 
-/** Contains settings for Image Builder image resource and container image scans. */
-public inline fun CfnImage.setImageScanningConfiguration(
-    block: CfnImageImageScanningConfigurationPropertyDsl.() -> Unit = {}
+/** The instance metadata option settings for the infrastructure configuration. */
+public inline fun CfnInfrastructureConfiguration.setInstanceMetadataOptions(
+    block: CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnImageImageScanningConfigurationPropertyDsl()
+    val builder = CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl()
     builder.apply(block)
-    return setImageScanningConfiguration(builder.build())
+    return setInstanceMetadataOptions(builder.build())
 }
 
-/**
- * The configuration settings for your image test components, which includes a toggle that allows
- * you to turn off tests, and a timeout setting.
- */
-public inline fun CfnImage.setImageTestsConfiguration(
-    block: CfnImageImageTestsConfigurationPropertyDsl.() -> Unit = {}
+/** The logging configuration defines where Image Builder uploads your logs. */
+public inline fun CfnInfrastructureConfiguration.setLogging(
+    block: CfnInfrastructureConfigurationLoggingPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnImageImageTestsConfigurationPropertyDsl()
+    val builder = CfnInfrastructureConfigurationLoggingPropertyDsl()
     builder.apply(block)
-    return setImageTestsConfiguration(builder.build())
+    return setLogging(builder.build())
 }

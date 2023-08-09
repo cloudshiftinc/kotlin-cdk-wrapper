@@ -301,6 +301,7 @@ public object kms {
      * .keySpec("keySpec")
      * .keyUsage("keyUsage")
      * .multiRegion(false)
+     * .origin("origin")
      * .pendingWindowInDays(123)
      * .tags(List.of(CfnTag.builder()
      * .key("key")

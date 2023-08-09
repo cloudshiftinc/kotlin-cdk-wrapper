@@ -72,9 +72,8 @@ public class CfnServiceLoadBalancerPropertyDsl {
 
     /**
      * @param loadBalancerName The name of the load balancer to associate with the Amazon ECS
-     *   service or task set. A load balancer name is only specified when using a Classic Load
-     *   Balancer. If you are using an Application Load Balancer or a Network Load Balancer the load
-     *   balancer name parameter should be omitted.
+     *   service or task set. If you are using an Application Load Balancer or a Network Load
+     *   Balancer the load balancer name parameter should be omitted.
      */
     public fun loadBalancerName(loadBalancerName: String) {
         cdkBuilder.loadBalancerName(loadBalancerName)
@@ -83,8 +82,7 @@ public class CfnServiceLoadBalancerPropertyDsl {
     /**
      * @param targetGroupArn The full Amazon Resource Name (ARN) of the Elastic Load Balancing
      *   target group or groups associated with a service or task set. A target group ARN is only
-     *   specified when using an Application Load Balancer or Network Load Balancer. If you're using
-     *   a Classic Load Balancer, omit the target group ARN.
+     *   specified when using an Application Load Balancer or Network Load Balancer.
      *
      * For services using the `ECS` deployment controller, you can specify one or multiple target
      * groups. For more information, see

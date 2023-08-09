@@ -142,8 +142,8 @@ public class BundlingOptionsDsl {
      *   depending on the lock file you're using.
      *
      * See
-     * https://github.com/aws/aws-cdk/blob/main/packages/%40aws-cdk/aws-lambda-nodejs/lib/Dockerfile
-     * for the default image provided by
+     * https://github.com/aws/aws-cdk/blob/main/packages/aws-cdk-lib/aws-lambda-nodejs/lib/Dockerfile
+     * for the default image provided by aws-cdk-lib/aws-lambda-nodejs.
      */
     public fun dockerImage(dockerImage: DockerImage) {
         cdkBuilder.dockerImage(dockerImage)

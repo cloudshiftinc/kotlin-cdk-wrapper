@@ -45,6 +45,7 @@ import software.amazon.awscdk.services.ecs.AssetImageProps
  * "buildArgsKey", "buildArgs"))
  * .buildSecrets(Map.of(
  * "buildSecretsKey", "buildSecrets"))
+ * .buildSsh("buildSsh")
  * .cacheFrom(List.of(DockerCacheOption.builder()
  * .type("type")
  * // the properties below are optional
@@ -65,6 +66,7 @@ import software.amazon.awscdk.services.ecs.AssetImageProps
  * .invalidation(DockerImageAssetInvalidationOptions.builder()
  * .buildArgs(false)
  * .buildSecrets(false)
+ * .buildSsh(false)
  * .extraHash(false)
  * .file(false)
  * .networkMode(false)
@@ -110,6 +112,14 @@ public class AssetImagePropsDsl {
     /** @param buildSecrets Build secrets. Docker BuildKit must be enabled to use build secrets. */
     public fun buildSecrets(buildSecrets: Map<String, String>) {
         cdkBuilder.buildSecrets(buildSecrets)
+    }
+
+    /**
+     * @param buildSsh SSH agent socket or keys to pass to the `docker build` command. Docker
+     *   BuildKit must be enabled to use the ssh flag
+     */
+    public fun buildSsh(buildSsh: String) {
+        cdkBuilder.buildSsh(buildSsh)
     }
 
     /** @param cacheFrom Cache from options to pass to the `docker build` command. */

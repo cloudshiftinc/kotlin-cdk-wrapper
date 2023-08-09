@@ -38,7 +38,6 @@ import software.amazon.awscdk.services.ecs.CfnTaskSetProps
  * .loadBalancers(List.of(LoadBalancerProperty.builder()
  * .containerName("containerName")
  * .containerPort(123)
- * .loadBalancerName("loadBalancerName")
  * .targetGroupArn("targetGroupArn")
  * .build()))
  * .networkConfiguration(NetworkConfigurationProperty.builder()

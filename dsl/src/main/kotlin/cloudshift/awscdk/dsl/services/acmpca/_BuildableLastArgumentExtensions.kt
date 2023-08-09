@@ -15,15 +15,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.acmpca.CfnCertificate
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
-/** The period of time during which the certificate will be valid. */
-public inline fun CfnCertificate.setValidity(
-    block: CfnCertificateValidityPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnCertificateValidityPropertyDsl()
-    builder.apply(block)
-    return setValidity(builder.build())
-}
-
 /**
  * Specifies X.509 certificate information to be included in the issued certificate. An
  * `APIPassthrough` or `APICSRPassthrough` template variant must be selected, or else this parameter
@@ -37,6 +28,15 @@ public inline fun CfnCertificate.setApiPassthrough(
     return setApiPassthrough(builder.build())
 }
 
+/** The period of time during which the certificate will be valid. */
+public inline fun CfnCertificate.setValidity(
+    block: CfnCertificateValidityPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnCertificateValidityPropertyDsl()
+    builder.apply(block)
+    return setValidity(builder.build())
+}
+
 /** Information describing the start of the validity period of the certificate. */
 public inline fun CfnCertificate.setValidityNotBefore(
     block: CfnCertificateValidityPropertyDsl.() -> Unit = {}
@@ -44,15 +44,6 @@ public inline fun CfnCertificate.setValidityNotBefore(
     val builder = CfnCertificateValidityPropertyDsl()
     builder.apply(block)
     return setValidityNotBefore(builder.build())
-}
-
-/** Structure that contains X.500 distinguished name information for your private CA. */
-public inline fun CfnCertificateAuthority.setSubject(
-    block: CfnCertificateAuthoritySubjectPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnCertificateAuthoritySubjectPropertyDsl()
-    builder.apply(block)
-    return setSubject(builder.build())
 }
 
 /**
@@ -87,4 +78,13 @@ public inline fun CfnCertificateAuthority.setRevocationConfiguration(
     val builder = CfnCertificateAuthorityRevocationConfigurationPropertyDsl()
     builder.apply(block)
     return setRevocationConfiguration(builder.build())
+}
+
+/** Structure that contains X.500 distinguished name information for your private CA. */
+public inline fun CfnCertificateAuthority.setSubject(
+    block: CfnCertificateAuthoritySubjectPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnCertificateAuthoritySubjectPropertyDsl()
+    builder.apply(block)
+    return setSubject(builder.build())
 }

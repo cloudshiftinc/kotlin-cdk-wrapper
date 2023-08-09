@@ -58,6 +58,17 @@ public class StateMachineDsl(
     private val cdkBuilder: StateMachine.Builder = StateMachine.Builder.create(scope, id)
 
     /**
+     * Comment that describes this state machine.
+     *
+     * Default: - No comment
+     *
+     * @param comment Comment that describes this state machine.
+     */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
+
+    /**
      * (deprecated) Definition for this state machine.
      *
      * @param definition Definition for this state machine.

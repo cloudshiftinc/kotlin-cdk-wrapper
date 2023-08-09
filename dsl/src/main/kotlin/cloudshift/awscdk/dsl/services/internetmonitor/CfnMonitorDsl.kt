@@ -211,7 +211,7 @@ public class CfnMonitorDsl(
      * (ARNs).
      *
      * You can add a combination of Virtual Private Clouds (VPCs) and Amazon CloudFront
-     * distributions, or you can add WorkSpaces directories. You can't add all three types of
+     * distributions, or you can add Amazon WorkSpaces directories. You can't add all three types of
      * resources.
      *
      * If you add only VPC resources, at least one VPC must have an Internet Gateway attached to it,
@@ -231,7 +231,7 @@ public class CfnMonitorDsl(
      * (ARNs).
      *
      * You can add a combination of Virtual Private Clouds (VPCs) and Amazon CloudFront
-     * distributions, or you can add WorkSpaces directories. You can't add all three types of
+     * distributions, or you can add Amazon WorkSpaces directories. You can't add all three types of
      * resources.
      *
      * If you add only VPC resources, at least one VPC must have an Internet Gateway attached to it,

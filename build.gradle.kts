@@ -1,12 +1,20 @@
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
-import io.cloudshiftdev.gradle.release.preProcessFiles
 
 plugins {
     java
     id("cloudshift.awscdkdsl.build.base")
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0-rc-1" // only on root project
     id("de.undercouch.download") version "5.4.0"
-    id("io.cloudshiftdev.release") version "0.1.20"
+    id("io.cloudshiftdev.release") version "0.2.0"
+}
+
+release {
+    preReleaseHooks {
+        processTemplates {
+            from(fileTree("gradle/docs") { include("**/*.md") })
+            into(layout.projectDirectory)
+        }
+    }
 }
 
 nexusPublishing {
@@ -21,6 +29,7 @@ nexusPublishing {
 
 val awscdk: Configuration by configurations.creating
 val awscdkSource: Configuration by configurations.creating
+val ktfmt by configurations.creating
 
 dependencies {
     awscdk(project.libs.awscdk)
@@ -28,21 +37,14 @@ dependencies {
         artifact { classifier = "sources" }
         isTransitive = false
     }
+    ktfmt("com.facebook:ktfmt:0.44")
 }
 
 tasks {
-    //    val downloadCloudformationSpecZip = register<Download>("downloadCloudFormationSpecZip") {
-    //
-    // src("https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip")
-    //        onlyIfModified(true)
-    //        dest(temporaryDir.resolve("cloudFormationSpec.zip"))
-    //    }
-
     register<GenerateDslTask>("generateDsl") {
         dslDir = file("dsl/src/main/kotlin")
         classpath = awscdk
         sources = awscdkSource
-        //        cloudFormationSpecificationZip = downloadCloudformationSpecZip.map { it.dest }
     }
 
     // from
@@ -71,45 +73,23 @@ tasks {
             preprocessWorkflows { dependsOn(task) }
         }
 
-    named("precommit") { dependsOn(preprocessWorkflows) }
-}
-
-val ktfmt by configurations.creating
-
-dependencies { ktfmt("com.facebook:ktfmt:0.44") }
-
-val ktfmtFormat by
-    tasks.registering(JavaExec::class) {
-        val ktfmtArgs =
-            mutableListOf("--kotlinlang-style", layout.projectDirectory.asFile.absolutePath)
-        if (System.getenv()["CI"] != null) ktfmtArgs.add("--set-exit-if-changed")
-        group = "formatting"
-        description = "Run ktfmt"
-        classpath = ktfmt
-        mainClass.set("com.facebook.ktfmt.cli.Main")
-        //        jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
-        args(ktfmtArgs)
-    }
-
-val check = tasks.named("check") { dependsOn(ktfmtFormat) }
-
-tasks.named("precommit") { dependsOn(check) }
-
-// val noLocalChanges = tasks.register<NoLocalChanges>("noLocalChanges") {
-//    group = LifecycleBasePlugin.VERIFICATION_GROUP
-//    onlyIf { System.getenv()["CI"] != null }
-//    dependsOn(ktlintFormat)
-// }
-
-// tasks.named("check") {
-//    dependsOn(noLocalChanges)
-// }
-
-release {
-    preProcessFiles {
-        templates(sourceDir = "gradle/templates", destinationDir = layout.projectDirectory) {
-            includes("gradle/templates/**")
+    val ktfmtFormat by
+        registering(JavaExec::class) {
+            val ktfmtArgs =
+                mutableListOf(
+                    "--kotlinlang-style",
+                    "--do-not-remove-unused-imports",
+                    layout.projectDirectory.asFile.absolutePath,
+                )
+            if (System.getenv()["CI"] != null) ktfmtArgs.add("--set-exit-if-changed")
+            group = "formatting"
+            description = "Run ktfmt"
+            classpath = ktfmt
+            mainClass.set("com.facebook.ktfmt.cli.Main")
+            args(ktfmtArgs)
         }
-//        replacements { includes("README.MD") }
-    }
+
+    val check = named("check") { dependsOn(ktfmtFormat) }
+
+    named("precommit") { dependsOn(check, preprocessWorkflows) }
 }

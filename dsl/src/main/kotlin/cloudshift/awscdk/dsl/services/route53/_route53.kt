@@ -79,12 +79,14 @@ public object route53 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigateway.*;
+     * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
      * HostedZone zone;
-     * LambdaRestApi restApi;
+     * DomainName domainName;
      * ARecord.Builder.create(this, "AliasRecord")
      * .zone(zone)
-     * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
+     * .target(RecordTarget.fromAlias(new
+     * ApiGatewayv2DomainProperties(domainName.getRegionalDomainName(),
+     * domainName.getRegionalHostedZoneId())))
      * .build();
      * ```
      */
@@ -103,12 +105,14 @@ public object route53 {
      *
      * Example:
      * ```
-     * import software.amazon.awscdk.services.apigateway.*;
+     * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
      * HostedZone zone;
-     * LambdaRestApi restApi;
+     * DomainName domainName;
      * ARecord.Builder.create(this, "AliasRecord")
      * .zone(zone)
-     * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
+     * .target(RecordTarget.fromAlias(new
+     * ApiGatewayv2DomainProperties(domainName.getRegionalDomainName(),
+     * domainName.getRegionalHostedZoneId())))
      * .build();
      * ```
      */
@@ -196,12 +200,14 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * CaaAmazonRecord caaAmazonRecord = CaaAmazonRecord.Builder.create(this, "MyCaaAmazonRecord")
      * .zone(hostedZone)
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -226,12 +232,14 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * CaaAmazonRecordProps caaAmazonRecordProps = CaaAmazonRecordProps.builder()
      * .zone(hostedZone)
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -254,6 +262,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * CaaRecord caaRecord = CaaRecord.Builder.create(this, "MyCaaRecord")
      * .values(List.of(CaaRecordValue.builder()
@@ -265,6 +274,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -289,6 +299,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * CaaRecordProps caaRecordProps = CaaRecordProps.builder()
      * .values(List.of(CaaRecordValue.builder()
@@ -300,6 +311,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -1765,6 +1777,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * MxRecord mxRecord = MxRecord.Builder.create(this, "MyMxRecord")
      * .values(List.of(MxRecordValue.builder()
@@ -1775,6 +1788,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -1799,6 +1813,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * MxRecordProps mxRecordProps = MxRecordProps.builder()
      * .values(List.of(MxRecordValue.builder()
@@ -1809,6 +1824,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -2036,6 +2052,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * RecordTarget recordTarget;
      * RecordSet recordSet = RecordSet.Builder.create(this, "MyRecordSet")
@@ -2045,6 +2062,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -2069,12 +2087,14 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * RecordSetOptions recordSetOptions = RecordSetOptions.builder()
      * .zone(hostedZone)
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -2097,6 +2117,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * RecordTarget recordTarget;
      * RecordSetProps recordSetProps = RecordSetProps.builder()
@@ -2106,6 +2127,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -2126,6 +2148,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * SrvRecord srvRecord = SrvRecord.Builder.create(this, "MySrvRecord")
      * .values(List.of(SrvRecordValue.builder()
@@ -2138,6 +2161,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -2162,6 +2186,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * SrvRecordProps srvRecordProps = SrvRecordProps.builder()
      * .values(List.of(SrvRecordValue.builder()
@@ -2174,6 +2199,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -2340,6 +2366,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * ZoneDelegationRecord zoneDelegationRecord = ZoneDelegationRecord.Builder.create(this,
      * "MyZoneDelegationRecord")
@@ -2348,6 +2375,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();
@@ -2372,6 +2400,7 @@ public object route53 {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.*;
      * import software.amazon.awscdk.services.route53.*;
+     * GeoLocation geoLocation;
      * HostedZone hostedZone;
      * ZoneDelegationRecordProps zoneDelegationRecordProps = ZoneDelegationRecordProps.builder()
      * .nameServers(List.of("nameServers"))
@@ -2379,6 +2408,7 @@ public object route53 {
      * // the properties below are optional
      * .comment("comment")
      * .deleteExisting(false)
+     * .geoLocation(geoLocation)
      * .recordName("recordName")
      * .ttl(Duration.minutes(30))
      * .build();

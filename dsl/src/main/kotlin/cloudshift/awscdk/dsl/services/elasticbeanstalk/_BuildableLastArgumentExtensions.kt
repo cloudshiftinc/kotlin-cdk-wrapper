@@ -17,13 +17,6 @@ import software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion
 import software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate
 import software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment
 
-/** Specifies the tier to use in creating this environment. */
-public inline fun CfnEnvironment.setTier(block: CfnEnvironmentTierPropertyDsl.() -> Unit = {}) {
-    val builder = CfnEnvironmentTierPropertyDsl()
-    builder.apply(block)
-    return setTier(builder.build())
-}
-
 /**
  * Specifies an application resource lifecycle configuration to prevent your application from
  * accumulating too many versions.
@@ -54,4 +47,11 @@ public inline fun CfnConfigurationTemplate.setSourceConfiguration(
     val builder = CfnConfigurationTemplateSourceConfigurationPropertyDsl()
     builder.apply(block)
     return setSourceConfiguration(builder.build())
+}
+
+/** Specifies the tier to use in creating this environment. */
+public inline fun CfnEnvironment.setTier(block: CfnEnvironmentTierPropertyDsl.() -> Unit = {}) {
+    val builder = CfnEnvironmentTierPropertyDsl()
+    builder.apply(block)
+    return setTier(builder.build())
 }

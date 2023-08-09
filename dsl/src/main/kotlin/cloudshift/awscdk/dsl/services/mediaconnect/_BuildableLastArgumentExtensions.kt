@@ -20,40 +20,6 @@ import software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement
 import software.amazon.awscdk.services.mediaconnect.CfnFlowOutput
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSource
 
-/** Add a flow source to an existing bridge. */
-public inline fun CfnBridgeSource.setFlowSource(
-    block: CfnBridgeSourceBridgeFlowSourcePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnBridgeSourceBridgeFlowSourcePropertyDsl()
-    builder.apply(block)
-    return setFlowSource(builder.build())
-}
-
-/** Add a network source to an existing bridge. */
-public inline fun CfnBridgeSource.setNetworkSource(
-    block: CfnBridgeSourceBridgeNetworkSourcePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnBridgeSourceBridgeNetworkSourcePropertyDsl()
-    builder.apply(block)
-    return setNetworkSource(builder.build())
-}
-
-/** The settings for the source that you want to use for the new flow. */
-public inline fun CfnFlow.setSource(block: CfnFlowSourcePropertyDsl.() -> Unit = {}) {
-    val builder = CfnFlowSourcePropertyDsl()
-    builder.apply(block)
-    return setSource(builder.build())
-}
-
-/** The settings for source failover. */
-public inline fun CfnFlow.setSourceFailoverConfig(
-    block: CfnFlowFailoverConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnFlowFailoverConfigPropertyDsl()
-    builder.apply(block)
-    return setSourceFailoverConfig(builder.build())
-}
-
 /** Create a bridge with the egress bridge type. */
 public inline fun CfnBridge.setEgressGatewayBridge(
     block: CfnBridgeEgressGatewayBridgePropertyDsl.() -> Unit = {}
@@ -90,6 +56,52 @@ public inline fun CfnBridgeOutput.setNetworkOutput(
     return setNetworkOutput(builder.build())
 }
 
+/** Add a flow source to an existing bridge. */
+public inline fun CfnBridgeSource.setFlowSource(
+    block: CfnBridgeSourceBridgeFlowSourcePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnBridgeSourceBridgeFlowSourcePropertyDsl()
+    builder.apply(block)
+    return setFlowSource(builder.build())
+}
+
+/** Add a network source to an existing bridge. */
+public inline fun CfnBridgeSource.setNetworkSource(
+    block: CfnBridgeSourceBridgeNetworkSourcePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnBridgeSourceBridgeNetworkSourcePropertyDsl()
+    builder.apply(block)
+    return setNetworkSource(builder.build())
+}
+
+/** The settings for the source that you want to use for the new flow. */
+public inline fun CfnFlow.setSource(block: CfnFlowSourcePropertyDsl.() -> Unit = {}) {
+    val builder = CfnFlowSourcePropertyDsl()
+    builder.apply(block)
+    return setSource(builder.build())
+}
+
+/** The settings for source failover. */
+public inline fun CfnFlow.setSourceFailoverConfig(
+    block: CfnFlowFailoverConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFlowFailoverConfigPropertyDsl()
+    builder.apply(block)
+    return setSourceFailoverConfig(builder.build())
+}
+
+/**
+ * The type of encryption that MediaConnect will use on the output that is associated with the
+ * entitlement.
+ */
+public inline fun CfnFlowEntitlement.setEncryption(
+    block: CfnFlowEntitlementEncryptionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFlowEntitlementEncryptionPropertyDsl()
+    builder.apply(block)
+    return setEncryption(builder.build())
+}
+
 /** The encryption credentials that you want to use for the output. */
 public inline fun CfnFlowOutput.setEncryption(
     block: CfnFlowOutputEncryptionPropertyDsl.() -> Unit = {}
@@ -124,16 +136,4 @@ public inline fun CfnFlowSource.setGatewayBridgeSource(
     val builder = CfnFlowSourceGatewayBridgeSourcePropertyDsl()
     builder.apply(block)
     return setGatewayBridgeSource(builder.build())
-}
-
-/**
- * The type of encryption that MediaConnect will use on the output that is associated with the
- * entitlement.
- */
-public inline fun CfnFlowEntitlement.setEncryption(
-    block: CfnFlowEntitlementEncryptionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnFlowEntitlementEncryptionPropertyDsl()
-    builder.apply(block)
-    return setEncryption(builder.build())
 }

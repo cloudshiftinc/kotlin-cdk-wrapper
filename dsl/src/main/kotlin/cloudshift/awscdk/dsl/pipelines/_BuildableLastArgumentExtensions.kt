@@ -24,20 +24,33 @@ import software.amazon.awscdk.pipelines.Wave
 import software.amazon.awscdk.services.codepipeline.IStage
 
 /**
- * Add a Stage to this wave.
- *
- * It will be deployed in parallel with all other stages in this wave.
+ * Create the desired Action and add it to the pipeline.
  *
  * @param stage
  * @param options
  */
-public inline fun Wave.addStage(
-    stage: Stage,
-    block: AddStageOptsDsl.() -> Unit = {}
-): StageDeployment {
-    val builder = AddStageOptsDsl()
+public inline fun CodePipelineSource.produceAction(
+    stage: IStage,
+    block: ProduceActionOptionsDsl.() -> Unit = {}
+): CodePipelineActionFactoryResult {
+    val builder = ProduceActionOptionsDsl()
     builder.apply(block)
-    return addStage(stage, builder.build())
+    return produceAction(stage, builder.build())
+}
+
+/**
+ * Create the desired Action and add it to the pipeline.
+ *
+ * @param stage
+ * @param options
+ */
+public inline fun ConfirmPermissionsBroadening.produceAction(
+    stage: IStage,
+    block: ProduceActionOptionsDsl.() -> Unit = {}
+): CodePipelineActionFactoryResult {
+    val builder = ProduceActionOptionsDsl()
+    builder.apply(block)
+    return produceAction(stage, builder.build())
 }
 
 /**
@@ -97,31 +110,18 @@ public inline fun PipelineBase.addWave(id: String, block: WaveOptionsDsl.() -> U
 }
 
 /**
- * Create the desired Action and add it to the pipeline.
+ * Add a Stage to this wave.
+ *
+ * It will be deployed in parallel with all other stages in this wave.
  *
  * @param stage
  * @param options
  */
-public inline fun CodePipelineSource.produceAction(
-    stage: IStage,
-    block: ProduceActionOptionsDsl.() -> Unit = {}
-): CodePipelineActionFactoryResult {
-    val builder = ProduceActionOptionsDsl()
+public inline fun Wave.addStage(
+    stage: Stage,
+    block: AddStageOptsDsl.() -> Unit = {}
+): StageDeployment {
+    val builder = AddStageOptsDsl()
     builder.apply(block)
-    return produceAction(stage, builder.build())
-}
-
-/**
- * Create the desired Action and add it to the pipeline.
- *
- * @param stage
- * @param options
- */
-public inline fun ConfirmPermissionsBroadening.produceAction(
-    stage: IStage,
-    block: ProduceActionOptionsDsl.() -> Unit = {}
-): CodePipelineActionFactoryResult {
-    val builder = ProduceActionOptionsDsl()
-    builder.apply(block)
-    return produceAction(stage, builder.build())
+    return addStage(stage, builder.build())
 }

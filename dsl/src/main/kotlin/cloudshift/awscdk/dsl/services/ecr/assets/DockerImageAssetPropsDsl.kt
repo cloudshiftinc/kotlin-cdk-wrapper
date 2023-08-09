@@ -73,6 +73,14 @@ public class DockerImageAssetPropsDsl {
         cdkBuilder.buildSecrets(buildSecrets)
     }
 
+    /**
+     * @param buildSsh SSH agent socket or keys to pass to the `docker build` command. Docker
+     *   BuildKit must be enabled to use the ssh flag
+     */
+    public fun buildSsh(buildSsh: String) {
+        cdkBuilder.buildSsh(buildSsh)
+    }
+
     /** @param cacheFrom Cache from options to pass to the `docker build` command. */
     public fun cacheFrom(cacheFrom: DockerCacheOptionDsl.() -> Unit) {
         _cacheFrom.add(DockerCacheOptionDsl().apply(cacheFrom).build())

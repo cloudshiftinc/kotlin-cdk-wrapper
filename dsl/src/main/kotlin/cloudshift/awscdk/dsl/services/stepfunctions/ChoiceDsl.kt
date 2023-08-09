@@ -57,6 +57,7 @@ import software.constructs.Construct
  * StateMachine.Builder.create(this, "StateMachine")
  * .definition(definition)
  * .timeout(Duration.minutes(5))
+ * .comment("a super cool state machine")
  * .build();
  * ```
  */

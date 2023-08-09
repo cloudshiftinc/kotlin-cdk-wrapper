@@ -51,6 +51,8 @@ import software.amazon.awscdk.services.amazonmq.CfnBrokerProps
  * .id("id")
  * .revision(123)
  * .build())
+ * .dataReplicationMode("dataReplicationMode")
+ * .dataReplicationPrimaryBrokerArn("dataReplicationPrimaryBrokerArn")
  * .encryptionOptions(EncryptionOptionsProperty.builder()
  * .useAwsOwnedKey(false)
  * // the properties below are optional
@@ -158,6 +160,16 @@ public class CfnBrokerPropsDsl {
      */
     public fun configuration(configuration: CfnBroker.ConfigurationIdProperty) {
         cdkBuilder.configuration(configuration)
+    }
+
+    /** @param dataReplicationMode the value to be set. */
+    public fun dataReplicationMode(dataReplicationMode: String) {
+        cdkBuilder.dataReplicationMode(dataReplicationMode)
+    }
+
+    /** @param dataReplicationPrimaryBrokerArn the value to be set. */
+    public fun dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn: String) {
+        cdkBuilder.dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn)
     }
 
     /**

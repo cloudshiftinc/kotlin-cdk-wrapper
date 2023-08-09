@@ -300,10 +300,9 @@ public class CfnAutomationRulePropsDsl {
     /**
      * @param isTerminal Specifies whether a rule is the last to be applied with respect to a
      *   finding that matches the rule criteria. This is useful when a finding matches the criteria
-     *   for multiple rules, and each rule has different actions. If the value of this field is set
-     *   to `true` for a rule, Security Hub applies the rule action to a finding that matches the
-     *   rule criteria and doesn't evaluate other rules for the finding. The default value of this
-     *   field is `false` .
+     *   for multiple rules, and each rule has different actions. If a rule is terminal, Security
+     *   Hub applies the rule action to a finding that matches the rule criteria and doesn't
+     *   evaluate other rules for the finding. By default, a rule isn't terminal.
      */
     public fun isTerminal(isTerminal: Boolean) {
         cdkBuilder.isTerminal(isTerminal)
@@ -312,10 +311,9 @@ public class CfnAutomationRulePropsDsl {
     /**
      * @param isTerminal Specifies whether a rule is the last to be applied with respect to a
      *   finding that matches the rule criteria. This is useful when a finding matches the criteria
-     *   for multiple rules, and each rule has different actions. If the value of this field is set
-     *   to `true` for a rule, Security Hub applies the rule action to a finding that matches the
-     *   rule criteria and doesn't evaluate other rules for the finding. The default value of this
-     *   field is `false` .
+     *   for multiple rules, and each rule has different actions. If a rule is terminal, Security
+     *   Hub applies the rule action to a finding that matches the rule criteria and doesn't
+     *   evaluate other rules for the finding. By default, a rule isn't terminal.
      */
     public fun isTerminal(isTerminal: IResolvable) {
         cdkBuilder.isTerminal(isTerminal)

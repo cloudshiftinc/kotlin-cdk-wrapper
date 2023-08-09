@@ -50,12 +50,22 @@ public class CfnEndpointConfigAsyncInferenceNotificationConfigPropertyDsl {
         cdkBuilder.errorTopic(errorTopic)
     }
 
-    /** @param includeInferenceResponseIn the value to be set. */
+    /**
+     * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference response
+     *   to be included.
+     *
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     */
     public fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String) {
         _includeInferenceResponseIn.addAll(listOf(*includeInferenceResponseIn))
     }
 
-    /** @param includeInferenceResponseIn the value to be set. */
+    /**
+     * @param includeInferenceResponseIn The Amazon SNS topics where you want the inference response
+     *   to be included.
+     *
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     */
     public fun includeInferenceResponseIn(includeInferenceResponseIn: Collection<String>) {
         _includeInferenceResponseIn.addAll(includeInferenceResponseIn)
     }

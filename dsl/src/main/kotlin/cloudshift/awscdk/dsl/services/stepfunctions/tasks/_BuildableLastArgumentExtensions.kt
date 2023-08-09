@@ -22,18 +22,18 @@ import software.amazon.awscdk.services.stepfunctions.tasks.S3Location
 import software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig
 
 /**
- * called when the ECS launch target is configured on RunTask.
+ * Called when the EC2 launch type is configured on RunTask.
  *
- * @param task
+ * @param _task
  * @param launchTargetOptions
  */
-public inline fun IEcsLaunchTarget.bind(
-    arg0: EcsRunTask,
+public inline fun EcsEc2LaunchTarget.bind(
+    _task: EcsRunTask,
     block: LaunchTargetBindOptionsDsl.() -> Unit = {}
 ): EcsLaunchTargetConfig {
     val builder = LaunchTargetBindOptionsDsl()
     builder.apply(block)
-    return bind(arg0, builder.build())
+    return bind(_task, builder.build())
 }
 
 /**
@@ -52,18 +52,18 @@ public inline fun EcsFargateLaunchTarget.bind(
 }
 
 /**
- * Called when the EC2 launch type is configured on RunTask.
+ * called when the ECS launch target is configured on RunTask.
  *
- * @param _task
+ * @param task
  * @param launchTargetOptions
  */
-public inline fun EcsEc2LaunchTarget.bind(
-    _task: EcsRunTask,
+public inline fun IEcsLaunchTarget.bind(
+    arg0: EcsRunTask,
     block: LaunchTargetBindOptionsDsl.() -> Unit = {}
 ): EcsLaunchTargetConfig {
     val builder = LaunchTargetBindOptionsDsl()
     builder.apply(block)
-    return bind(_task, builder.build())
+    return bind(arg0, builder.build())
 }
 
 /**

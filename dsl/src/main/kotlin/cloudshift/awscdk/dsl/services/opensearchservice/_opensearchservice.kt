@@ -25,6 +25,7 @@ import software.amazon.awscdk.services.opensearchservice.DomainProps
 import software.amazon.awscdk.services.opensearchservice.EbsOptions
 import software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions
 import software.amazon.awscdk.services.opensearchservice.LoggingOptions
+import software.amazon.awscdk.services.opensearchservice.WindowStartTime
 import software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig
 import software.constructs.Construct
 
@@ -1120,6 +1121,25 @@ public object opensearchservice {
      */
     public inline fun loggingOptions(block: LoggingOptionsDsl.() -> Unit = {}): LoggingOptions {
         val builder = LoggingOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * Domain domain = Domain.Builder.create(this, "Domain")
+     * .version(EngineVersion.OPENSEARCH_1_3)
+     * .offPeakWindowEnabled(true) // can be omitted if offPeakWindowStart is set
+     * .offPeakWindowStart(WindowStartTime.builder()
+     * .hours(20)
+     * .minutes(0)
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun windowStartTime(block: WindowStartTimeDsl.() -> Unit = {}): WindowStartTime {
+        val builder = WindowStartTimeDsl()
         builder.apply(block)
         return builder.build()
     }

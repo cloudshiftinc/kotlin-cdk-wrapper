@@ -41,7 +41,7 @@ public object vpclattice {
      * Firehose.
      *
      * The service network owner can use the access logs to audit the services in the network. The
-     * service network owner will only see access logs from clients and services that are associated
+     * service network owner can only see access logs from clients and services that are associated
      * with their service network. Access log entries represent traffic originated from VPCs
      * associated with that network. For more information, see
      * [Access logs](https://docs.aws.amazon.com/vpc-lattice/latest/ug/monitoring-access-logs.html)
@@ -1286,7 +1286,7 @@ public object vpclattice {
     /**
      * The health check configuration of a target group.
      *
-     * Health check configurations aren't used for `LAMBDA` and `ALB` target groups.
+     * Health check configurations aren't used for target groups of type `LAMBDA` or `ALB` .
      *
      * Example:
      * ```

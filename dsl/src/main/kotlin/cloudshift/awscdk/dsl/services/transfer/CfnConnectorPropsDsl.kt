@@ -72,14 +72,14 @@ public class CfnConnectorPropsDsl {
         cdkBuilder.accessRole(accessRole)
     }
 
-    /** @param as2Config A structure that contains the parameters for a connector object. */
+    /** @param as2Config A structure that contains the parameters for an AS2 connector object. */
     public fun as2Config(as2Config: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
         builder.apply(as2Config)
         cdkBuilder.as2Config(builder.map)
     }
 
-    /** @param as2Config A structure that contains the parameters for a connector object. */
+    /** @param as2Config A structure that contains the parameters for an AS2 connector object. */
     public fun as2Config(as2Config: Any) {
         cdkBuilder.as2Config(as2Config)
     }
@@ -103,7 +103,7 @@ public class CfnConnectorPropsDsl {
         _tags.addAll(tags)
     }
 
-    /** @param url The URL of the partner's AS2 endpoint. */
+    /** @param url The URL of the partner's AS2 or SFTP endpoint. */
     public fun url(url: String) {
         cdkBuilder.url(url)
     }

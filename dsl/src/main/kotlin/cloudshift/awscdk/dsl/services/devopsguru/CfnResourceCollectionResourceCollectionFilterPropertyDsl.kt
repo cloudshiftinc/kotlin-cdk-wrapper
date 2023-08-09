@@ -49,7 +49,7 @@ public class CfnResourceCollectionResourceCollectionFilterPropertyDsl {
     private val _tags: MutableList<CfnResourceCollection.TagCollectionProperty> = mutableListOf()
 
     /**
-     * @param cloudFormation Information about AWS CloudFormation stacks. You can use up to 500
+     * @param cloudFormation Information about AWS CloudFormation stacks. You can use up to 1000
      *   stacks to specify which AWS resources in your account to analyze. For more information, see
      *   [Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html) in the
      *   *AWS CloudFormation User Guide* .
@@ -59,7 +59,7 @@ public class CfnResourceCollectionResourceCollectionFilterPropertyDsl {
     }
 
     /**
-     * @param cloudFormation Information about AWS CloudFormation stacks. You can use up to 500
+     * @param cloudFormation Information about AWS CloudFormation stacks. You can use up to 1000
      *   stacks to specify which AWS resources in your account to analyze. For more information, see
      *   [Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html) in the
      *   *AWS CloudFormation User Guide* .

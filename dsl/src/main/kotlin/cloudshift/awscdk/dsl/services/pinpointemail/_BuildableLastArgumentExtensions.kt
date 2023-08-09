@@ -16,24 +16,6 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 
-/** An object that defines the event destination. */
-public inline fun CfnConfigurationSetEventDestination.setEventDestination(
-    block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnConfigurationSetEventDestinationEventDestinationPropertyDsl()
-    builder.apply(block)
-    return setEventDestination(builder.build())
-}
-
-/** Used to enable or disable the custom Mail-From domain configuration for an email identity. */
-public inline fun CfnIdentity.setMailFromAttributes(
-    block: CfnIdentityMailFromAttributesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnIdentityMailFromAttributesPropertyDsl()
-    builder.apply(block)
-    return setMailFromAttributes(builder.build())
-}
-
 /**
  * An object that defines the dedicated IP pool that is used to send emails that you send using the
  * configuration set.
@@ -80,4 +62,22 @@ public inline fun CfnConfigurationSet.setTrackingOptions(
     val builder = CfnConfigurationSetTrackingOptionsPropertyDsl()
     builder.apply(block)
     return setTrackingOptions(builder.build())
+}
+
+/** An object that defines the event destination. */
+public inline fun CfnConfigurationSetEventDestination.setEventDestination(
+    block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnConfigurationSetEventDestinationEventDestinationPropertyDsl()
+    builder.apply(block)
+    return setEventDestination(builder.build())
+}
+
+/** Used to enable or disable the custom Mail-From domain configuration for an email identity. */
+public inline fun CfnIdentity.setMailFromAttributes(
+    block: CfnIdentityMailFromAttributesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnIdentityMailFromAttributesPropertyDsl()
+    builder.apply(block)
+    return setMailFromAttributes(builder.build())
 }

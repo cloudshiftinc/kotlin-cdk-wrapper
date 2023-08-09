@@ -16,18 +16,6 @@ import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConf
 import software.amazon.awscdk.services.sso.CfnPermissionSet
 
 /**
- * Specifies the configuration of the AWS managed or customer managed policy that you want to set as
- * a permissions boundary.
- */
-public inline fun CfnPermissionSet.setPermissionsBoundary(
-    block: CfnPermissionSetPermissionsBoundaryPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPermissionSetPermissionsBoundaryPropertyDsl()
-    builder.apply(block)
-    return setPermissionsBoundary(builder.build())
-}
-
-/**
  * (deprecated) The InstanceAccessControlAttributeConfiguration property has been deprecated but is
  * still supported for backwards compatibility purposes.
  *
@@ -44,4 +32,16 @@ public inline fun CfnInstanceAccessControlAttributeConfiguration
         CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl()
     builder.apply(block)
     return setInstanceAccessControlAttributeConfiguration(builder.build())
+}
+
+/**
+ * Specifies the configuration of the AWS managed or customer managed policy that you want to set as
+ * a permissions boundary.
+ */
+public inline fun CfnPermissionSet.setPermissionsBoundary(
+    block: CfnPermissionSetPermissionsBoundaryPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPermissionSetPermissionsBoundaryPropertyDsl()
+    builder.apply(block)
+    return setPermissionsBoundary(builder.build())
 }

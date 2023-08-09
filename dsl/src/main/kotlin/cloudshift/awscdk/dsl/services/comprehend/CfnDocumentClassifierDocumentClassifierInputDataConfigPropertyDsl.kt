@@ -183,9 +183,9 @@ public class CfnDocumentClassifierDocumentClassifierInputDataConfigPropertyDsl {
     }
 
     /**
-     * @param testS3Uri This specifies the Amazon S3 location where the test annotations for an
-     *   entity recognizer are located. The URI must be in the same AWS Region as the API endpoint
-     *   that you are calling.
+     * @param testS3Uri This specifies the Amazon S3 location that contains the test annotations for
+     *   the document classifier. The URI must be in the same AWS Region as the API endpoint that
+     *   you are calling.
      */
     public fun testS3Uri(testS3Uri: String) {
         cdkBuilder.testS3Uri(testS3Uri)

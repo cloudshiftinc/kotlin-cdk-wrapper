@@ -130,16 +130,40 @@ public class CfnUserPoolClientPropsDsl {
     }
 
     /**
-     * @param allowedOAuthFlowsUserPoolClient Set to true if the client is allowed to follow the
-     *   OAuth protocol when interacting with Amazon Cognito user pools.
+     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 features in your user
+     *   pool app client. `AllowedOAuthFlowsUserPoolClient` must be `true` before you can configure
+     *   the following features in your app client.
+     * * `CallBackURLs` : Callback URLs.
+     * * `LogoutURLs` : Sign-out redirect URLs.
+     * * `AllowedOAuthScopes` : OAuth 2.0 scopes.
+     * * `AllowedOAuthFlows` : Support for authorization code, implicit, and client credentials
+     *   OAuth 2.0 grants.
+     *
+     * To use OAuth 2.0 features, configure one of these features in the Amazon Cognito console or
+     * set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
+     * `UpdateUserPoolClient` API request. If you don't set a value for
+     * `AllowedOAuthFlowsUserPoolClient` in a request with the AWS CLI or SDKs, it defaults to
+     * `false` .
      */
     public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean) {
         cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient)
     }
 
     /**
-     * @param allowedOAuthFlowsUserPoolClient Set to true if the client is allowed to follow the
-     *   OAuth protocol when interacting with Amazon Cognito user pools.
+     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 features in your user
+     *   pool app client. `AllowedOAuthFlowsUserPoolClient` must be `true` before you can configure
+     *   the following features in your app client.
+     * * `CallBackURLs` : Callback URLs.
+     * * `LogoutURLs` : Sign-out redirect URLs.
+     * * `AllowedOAuthScopes` : OAuth 2.0 scopes.
+     * * `AllowedOAuthFlows` : Support for authorization code, implicit, and client credentials
+     *   OAuth 2.0 grants.
+     *
+     * To use OAuth 2.0 features, configure one of these features in the Amazon Cognito console or
+     * set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
+     * `UpdateUserPoolClient` API request. If you don't set a value for
+     * `AllowedOAuthFlowsUserPoolClient` in a request with the AWS CLI or SDKs, it defaults to
+     * `false` .
      */
     public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable) {
         cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient)

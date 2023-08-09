@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.iam.CfnPolicy
 import software.constructs.Construct
 
 /**
- * Adds or updates an inline policy document that is embedded in the specified IAM user, group, or
+ * Adds or updates an inline policy document that is embedded in the specified IAM group, user or
  * role.
  *
  * An IAM user can also have a managed policy attached to it. For information about policies, see
@@ -40,6 +40,16 @@ import software.constructs.Construct
  * see
  * [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html)
  * in the *IAM User Guide* .
+ *
+ * This resource does not support
+ * [drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html)
+ * . The following inline policy resource types support drift detection:
+ * *
+ * [`AWS::IAM::GroupPolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-grouppolicy.html)
+ * *
+ * [`AWS::IAM::RolePolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-rolepolicy.html)
+ * *
+ * [`AWS::IAM::UserPolicy`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html)
  *
  * Example:
  * ```

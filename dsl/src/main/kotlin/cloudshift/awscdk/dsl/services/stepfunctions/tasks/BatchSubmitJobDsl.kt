@@ -363,6 +363,17 @@ public class BatchSubmitJobDsl(
     }
 
     /**
+     * The tags applied to the job request.
+     *
+     * Default: {} - no tags
+     *
+     * @param tags The tags applied to the job request.
+     */
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
+
+    /**
      * Timeout for the task.
      *
      * [disable-awslint:duration-prop-type] is needed because all props interface in

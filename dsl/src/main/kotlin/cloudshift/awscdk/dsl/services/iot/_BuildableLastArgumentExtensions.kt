@@ -26,42 +26,6 @@ import software.amazon.awscdk.services.iot.CfnThingType
 import software.amazon.awscdk.services.iot.CfnTopicRule
 import software.amazon.awscdk.services.iot.CfnTopicRuleDestination
 
-/** Allows you to create the criteria to retry a job. */
-public inline fun CfnJobTemplate.setJobExecutionsRetryConfig(
-    block: CfnJobTemplateJobExecutionsRetryConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnJobTemplateJobExecutionsRetryConfigPropertyDsl()
-    builder.apply(block)
-    return setJobExecutionsRetryConfig(builder.build())
-}
-
-/** The rule payload. */
-public inline fun CfnTopicRule.setTopicRulePayload(
-    block: CfnTopicRuleTopicRulePayloadPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTopicRuleTopicRulePayloadPropertyDsl()
-    builder.apply(block)
-    return setTopicRulePayload(builder.build())
-}
-
-/** Information about the registration configuration. */
-public inline fun CfnCACertificate.setRegistrationConfig(
-    block: CfnCACertificateRegistrationConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnCACertificateRegistrationConfigPropertyDsl()
-    builder.apply(block)
-    return setRegistrationConfig(builder.build())
-}
-
-/** The properties of the billing group. */
-public inline fun CfnBillingGroup.setBillingGroupProperties(
-    block: CfnBillingGroupBillingGroupPropertiesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnBillingGroupBillingGroupPropertiesPropertyDsl()
-    builder.apply(block)
-    return setBillingGroupProperties(builder.build())
-}
-
 /** Specifies which audit checks are enabled and disabled for this account. */
 public inline fun CfnAccountAuditConfiguration.setAuditCheckConfigurations(
     block: CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl.() -> Unit = {}
@@ -79,6 +43,24 @@ public inline fun CfnAccountAuditConfiguration.setAuditNotificationTargetConfigu
     val builder = CfnAccountAuditConfigurationAuditNotificationTargetConfigurationsPropertyDsl()
     builder.apply(block)
     return setAuditNotificationTargetConfigurations(builder.build())
+}
+
+/** The properties of the billing group. */
+public inline fun CfnBillingGroup.setBillingGroupProperties(
+    block: CfnBillingGroupBillingGroupPropertiesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnBillingGroupBillingGroupPropertiesPropertyDsl()
+    builder.apply(block)
+    return setBillingGroupProperties(builder.build())
+}
+
+/** Information about the registration configuration. */
+public inline fun CfnCACertificate.setRegistrationConfig(
+    block: CfnCACertificateRegistrationConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnCACertificateRegistrationConfigPropertyDsl()
+    builder.apply(block)
+    return setRegistrationConfig(builder.build())
 }
 
 /** An object that specifies the authorization service for a domain. */
@@ -99,42 +81,6 @@ public inline fun CfnDomainConfiguration.setTlsConfig(
     return setTlsConfig(builder.build())
 }
 
-/** The thing type properties for the thing type to create. */
-public inline fun CfnThingType.setThingTypeProperties(
-    block: CfnThingTypeThingTypePropertiesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnThingTypeThingTypePropertiesPropertyDsl()
-    builder.apply(block)
-    return setThingTypeProperties(builder.build())
-}
-
-/** Properties of the HTTP URL. */
-public inline fun CfnTopicRuleDestination.setHttpUrlProperties(
-    block: CfnTopicRuleDestinationHttpUrlDestinationSummaryPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTopicRuleDestinationHttpUrlDestinationSummaryPropertyDsl()
-    builder.apply(block)
-    return setHttpUrlProperties(builder.build())
-}
-
-/** Properties of the virtual private cloud (VPC) connection. */
-public inline fun CfnTopicRuleDestination.setVpcProperties(
-    block: CfnTopicRuleDestinationVpcDestinationPropertiesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnTopicRuleDestinationVpcDestinationPropertiesPropertyDsl()
-    builder.apply(block)
-    return setVpcProperties(builder.build())
-}
-
-/** A string that contains up to three key value pairs. */
-public inline fun CfnThing.setAttributePayload(
-    block: CfnThingAttributePayloadPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnThingAttributePayloadPropertyDsl()
-    builder.apply(block)
-    return setAttributePayload(builder.build())
-}
-
 /** The type of the aggregation query. */
 public inline fun CfnFleetMetric.setAggregationType(
     block: CfnFleetMetricAggregationTypePropertyDsl.() -> Unit = {}
@@ -142,6 +88,15 @@ public inline fun CfnFleetMetric.setAggregationType(
     val builder = CfnFleetMetricAggregationTypePropertyDsl()
     builder.apply(block)
     return setAggregationType(builder.build())
+}
+
+/** Allows you to create the criteria to retry a job. */
+public inline fun CfnJobTemplate.setJobExecutionsRetryConfig(
+    block: CfnJobTemplateJobExecutionsRetryConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnJobTemplateJobExecutionsRetryConfigPropertyDsl()
+    builder.apply(block)
+    return setJobExecutionsRetryConfig(builder.build())
 }
 
 /** The set of parameters for this mitigation action. */
@@ -162,6 +117,15 @@ public inline fun CfnProvisioningTemplate.setPreProvisioningHook(
     return setPreProvisioningHook(builder.build())
 }
 
+/** A string that contains up to three key value pairs. */
+public inline fun CfnThing.setAttributePayload(
+    block: CfnThingAttributePayloadPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnThingAttributePayloadPropertyDsl()
+    builder.apply(block)
+    return setAttributePayload(builder.build())
+}
+
 /** Thing group properties. */
 public inline fun CfnThingGroup.setThingGroupProperties(
     block: CfnThingGroupThingGroupPropertiesPropertyDsl.() -> Unit = {}
@@ -169,4 +133,40 @@ public inline fun CfnThingGroup.setThingGroupProperties(
     val builder = CfnThingGroupThingGroupPropertiesPropertyDsl()
     builder.apply(block)
     return setThingGroupProperties(builder.build())
+}
+
+/** The thing type properties for the thing type to create. */
+public inline fun CfnThingType.setThingTypeProperties(
+    block: CfnThingTypeThingTypePropertiesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnThingTypeThingTypePropertiesPropertyDsl()
+    builder.apply(block)
+    return setThingTypeProperties(builder.build())
+}
+
+/** The rule payload. */
+public inline fun CfnTopicRule.setTopicRulePayload(
+    block: CfnTopicRuleTopicRulePayloadPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTopicRuleTopicRulePayloadPropertyDsl()
+    builder.apply(block)
+    return setTopicRulePayload(builder.build())
+}
+
+/** Properties of the HTTP URL. */
+public inline fun CfnTopicRuleDestination.setHttpUrlProperties(
+    block: CfnTopicRuleDestinationHttpUrlDestinationSummaryPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTopicRuleDestinationHttpUrlDestinationSummaryPropertyDsl()
+    builder.apply(block)
+    return setHttpUrlProperties(builder.build())
+}
+
+/** Properties of the virtual private cloud (VPC) connection. */
+public inline fun CfnTopicRuleDestination.setVpcProperties(
+    block: CfnTopicRuleDestinationVpcDestinationPropertiesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTopicRuleDestinationVpcDestinationPropertiesPropertyDsl()
+    builder.apply(block)
+    return setVpcProperties(builder.build())
 }

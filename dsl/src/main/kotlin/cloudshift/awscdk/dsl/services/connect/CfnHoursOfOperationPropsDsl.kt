@@ -84,7 +84,7 @@ public class CfnHoursOfOperationPropsDsl {
         cdkBuilder.description(description)
     }
 
-    /** @param instanceArn The Amazon Resource Name (ARN) for the instance. */
+    /** @param instanceArn The Amazon Resource Name (ARN) of the instance. */
     public fun instanceArn(instanceArn: String) {
         cdkBuilder.instanceArn(instanceArn)
     }

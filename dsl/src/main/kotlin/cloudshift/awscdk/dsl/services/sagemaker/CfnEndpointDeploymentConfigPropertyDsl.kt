@@ -25,6 +25,11 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpoint
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.sagemaker.*;
  * DeploymentConfigProperty deploymentConfigProperty = DeploymentConfigProperty.builder()
+ * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * .build()))
+ * .build())
  * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
  * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
  * .type("type")
@@ -43,11 +48,18 @@ import software.amazon.awscdk.services.sagemaker.CfnEndpoint
  * .maximumExecutionTimeoutInSeconds(123)
  * .terminationWaitInSeconds(123)
  * .build())
+ * .rollingUpdatePolicy(RollingUpdatePolicyProperty.builder()
+ * .maximumBatchSize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .waitIntervalInSeconds(123)
  * // the properties below are optional
- * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
- * .alarms(List.of(AlarmProperty.builder()
- * .alarmName("alarmName")
- * .build()))
+ * .maximumExecutionTimeoutInSeconds(123)
+ * .rollbackMaximumBatchSize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
  * .build())
  * .build();
  * ```
@@ -101,6 +113,22 @@ public class CfnEndpointDeploymentConfigPropertyDsl {
         blueGreenUpdatePolicy: CfnEndpoint.BlueGreenUpdatePolicyProperty
     ) {
         cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy)
+    }
+
+    /**
+     * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+     *   endpoint.
+     */
+    public fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy)
+    }
+
+    /**
+     * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+     *   endpoint.
+     */
+    public fun rollingUpdatePolicy(rollingUpdatePolicy: CfnEndpoint.RollingUpdatePolicyProperty) {
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy)
     }
 
     public fun build(): CfnEndpoint.DeploymentConfigProperty = cdkBuilder.build()

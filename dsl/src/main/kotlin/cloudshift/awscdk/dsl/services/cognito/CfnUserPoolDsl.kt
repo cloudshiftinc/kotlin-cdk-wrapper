@@ -664,26 +664,38 @@ public class CfnUserPoolDsl(
     }
 
     /**
-     * Enables advanced security risk detection.
+     * User pool add-ons.
      *
-     * Set the key `AdvancedSecurityMode` to the value "AUDIT".
+     * Contains settings for activation of advanced security features. To log user security
+     * information but take no action, set to `AUDIT` . To configure automatic security responses to
+     * risky traffic to your user pool, set to `ENFORCED` .
+     *
+     * For more information, see
+     * [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
      *
-     * @param userPoolAddOns Enables advanced security risk detection.
+     * @param userPoolAddOns User pool add-ons.
      */
     public fun userPoolAddOns(userPoolAddOns: IResolvable) {
         cdkBuilder.userPoolAddOns(userPoolAddOns)
     }
 
     /**
-     * Enables advanced security risk detection.
+     * User pool add-ons.
      *
-     * Set the key `AdvancedSecurityMode` to the value "AUDIT".
+     * Contains settings for activation of advanced security features. To log user security
+     * information but take no action, set to `AUDIT` . To configure automatic security responses to
+     * risky traffic to your user pool, set to `ENFORCED` .
+     *
+     * For more information, see
+     * [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
      *
-     * @param userPoolAddOns Enables advanced security risk detection.
+     * @param userPoolAddOns User pool add-ons.
      */
     public fun userPoolAddOns(userPoolAddOns: CfnUserPool.UserPoolAddOnsProperty) {
         cdkBuilder.userPoolAddOns(userPoolAddOns)

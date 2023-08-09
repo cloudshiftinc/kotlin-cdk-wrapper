@@ -33,7 +33,6 @@ internal class BuildableLastArgumentExtensionGenerator {
                             )
                         }
                 }
-                .sorted()
                 .groupBy { it.packageName }
 
         // adjust overrides that now class as the sole argument is always the configuration lambda
@@ -132,8 +131,8 @@ internal data class ExtensionFunctionSpec(
         return compareValuesBy(
             this,
             other,
-            { packageName },
-            { "${funSpec.receiverType}.${funSpec.name}" }
+            { it.packageName },
+            { it.qualifiedName() },
         )
     }
 }

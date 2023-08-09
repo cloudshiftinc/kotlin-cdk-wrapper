@@ -17,11 +17,20 @@ import software.amazon.awscdk.services.cloudformation.CfnResourceVersion
 import software.amazon.awscdk.services.cloudformation.CfnStackSet
 import software.amazon.awscdk.services.cloudformation.CfnTypeActivation
 
-/** Specifies logging configuration information for an extension. */
-public inline fun CfnTypeActivation.setLoggingConfig(
-    block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit = {}
+/** Contains logging configuration information for an extension. */
+public inline fun CfnHookVersion.setLoggingConfig(
+    block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnTypeActivationLoggingConfigPropertyDsl()
+    val builder = CfnHookVersionLoggingConfigPropertyDsl()
+    builder.apply(block)
+    return setLoggingConfig(builder.build())
+}
+
+/** Logging configuration information for a resource. */
+public inline fun CfnResourceVersion.setLoggingConfig(
+    block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnResourceVersionLoggingConfigPropertyDsl()
     builder.apply(block)
     return setLoggingConfig(builder.build())
 }
@@ -47,20 +56,11 @@ public inline fun CfnStackSet.setOperationPreferences(
     return setOperationPreferences(builder.build())
 }
 
-/** Logging configuration information for a resource. */
-public inline fun CfnResourceVersion.setLoggingConfig(
-    block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit = {}
+/** Specifies logging configuration information for an extension. */
+public inline fun CfnTypeActivation.setLoggingConfig(
+    block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnResourceVersionLoggingConfigPropertyDsl()
-    builder.apply(block)
-    return setLoggingConfig(builder.build())
-}
-
-/** Contains logging configuration information for an extension. */
-public inline fun CfnHookVersion.setLoggingConfig(
-    block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnHookVersionLoggingConfigPropertyDsl()
+    val builder = CfnTypeActivationLoggingConfigPropertyDsl()
     builder.apply(block)
     return setLoggingConfig(builder.build())
 }

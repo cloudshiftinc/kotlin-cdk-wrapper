@@ -47,7 +47,7 @@ public class CertificatePropsDsl {
     private val _subjectAlternativeNames: MutableList<String> = mutableListOf()
 
     /**
-     * @param certificateName The Certifcate name. Since the Certifcate resource doesn't support
+     * @param certificateName The Certificate name. Since the Certificate resource doesn't support
      *   providing a physical name, the value provided here will be recorded in the `Name` tag
      */
     public fun certificateName(certificateName: String) {

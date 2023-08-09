@@ -17,15 +17,6 @@ import software.amazon.awscdk.services.omics.CfnReferenceStore
 import software.amazon.awscdk.services.omics.CfnSequenceStore
 import software.amazon.awscdk.services.omics.CfnVariantStore
 
-/** Server-side encryption (SSE) settings for the store. */
-public inline fun CfnReferenceStore.setSseConfig(
-    block: CfnReferenceStoreSseConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnReferenceStoreSseConfigPropertyDsl()
-    builder.apply(block)
-    return setSseConfig(builder.build())
-}
-
 /** The genome reference for the store's annotations. */
 public inline fun CfnAnnotationStore.setReference(
     block: CfnAnnotationStoreReferenceItemPropertyDsl.() -> Unit = {}
@@ -51,6 +42,15 @@ public inline fun CfnAnnotationStore.setStoreOptions(
     val builder = CfnAnnotationStoreStoreOptionsPropertyDsl()
     builder.apply(block)
     return setStoreOptions(builder.build())
+}
+
+/** Server-side encryption (SSE) settings for the store. */
+public inline fun CfnReferenceStore.setSseConfig(
+    block: CfnReferenceStoreSseConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnReferenceStoreSseConfigPropertyDsl()
+    builder.apply(block)
+    return setSseConfig(builder.build())
 }
 
 /** Server-side encryption (SSE) settings for the store. */

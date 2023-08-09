@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.transfer.CfnConnector
 
 /**
- * A structure that contains the parameters for a connector object.
+ * A structure that contains the parameters for an AS2 connector object.
  *
  * Example:
  * ```

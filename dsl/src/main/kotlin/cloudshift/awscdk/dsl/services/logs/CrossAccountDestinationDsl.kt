@@ -24,7 +24,7 @@ import software.constructs.Construct
  * CloudWatch Subscription.
  *
  * Consumers will hardly ever need to use this class. Instead, directly subscribe a Kinesis stream
- * using the integration class in the `&#64;aws-cdk/aws-logs-destinations` package; if necessary, a
+ * using the integration class in the `aws-cdk-lib/aws-logs-destinations` package; if necessary, a
  * `CrossAccountDestination` will be created automatically.
  *
  * Example:

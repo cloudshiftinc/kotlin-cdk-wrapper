@@ -36,15 +36,6 @@ public inline fun CfnBillingGroup.setComputationPreference(
     return setComputationPreference(builder.build())
 }
 
-/** The set of tiering configurations for the pricing rule. */
-public inline fun CfnPricingRule.setTiering(
-    block: CfnPricingRuleTieringPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnPricingRuleTieringPropertyDsl()
-    builder.apply(block)
-    return setTiering(builder.build())
-}
-
 /** A time range for which the custom line item is effective. */
 public inline fun CfnCustomLineItem.setBillingPeriodRange(
     block: CfnCustomLineItemBillingPeriodRangePropertyDsl.() -> Unit = {}
@@ -61,4 +52,13 @@ public inline fun CfnCustomLineItem.setCustomLineItemChargeDetails(
     val builder = CfnCustomLineItemCustomLineItemChargeDetailsPropertyDsl()
     builder.apply(block)
     return setCustomLineItemChargeDetails(builder.build())
+}
+
+/** The set of tiering configurations for the pricing rule. */
+public inline fun CfnPricingRule.setTiering(
+    block: CfnPricingRuleTieringPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnPricingRuleTieringPropertyDsl()
+    builder.apply(block)
+    return setTiering(builder.build())
 }

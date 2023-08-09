@@ -13,6 +13,7 @@ package cloudshift.awscdk.dsl.services.ecs
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
+import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.ecs.AwsLogDriver
 import software.amazon.awscdk.services.ecs.AwsLogDriverMode
 import software.amazon.awscdk.services.logs.ILogGroup
@@ -91,6 +92,21 @@ public class AwsLogDriverDsl {
      */
     public fun logRetention(logRetention: RetentionDays) {
         cdkBuilder.logRetention(logRetention)
+    }
+
+    /**
+     * When AwsLogDriverMode.NON_BLOCKING is configured, this parameter controls the size of the
+     * non-blocking buffer used to temporarily store messages. This parameter is not valid with
+     * AwsLogDriverMode.BLOCKING.
+     *
+     * Default: - 1 megabyte if driver mode is non-blocking, otherwise this property is not set
+     *
+     * @param maxBufferSize When AwsLogDriverMode.NON_BLOCKING is configured, this parameter
+     *   controls the size of the non-blocking buffer used to temporarily store messages. This
+     *   parameter is not valid with AwsLogDriverMode.BLOCKING.
+     */
+    public fun maxBufferSize(maxBufferSize: Size) {
+        cdkBuilder.maxBufferSize(maxBufferSize)
     }
 
     /**

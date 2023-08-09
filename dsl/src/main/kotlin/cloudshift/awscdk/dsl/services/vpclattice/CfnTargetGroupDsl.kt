@@ -92,7 +92,7 @@ public class CfnTargetGroupDsl(
     /**
      * The target group configuration.
      *
-     * If `type` is set to `LAMBDA` , this parameter doesn't apply.
+     * If the target group type is `LAMBDA` , this parameter doesn't apply.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-config)
      *
@@ -105,7 +105,7 @@ public class CfnTargetGroupDsl(
     /**
      * The target group configuration.
      *
-     * If `type` is set to `LAMBDA` , this parameter doesn't apply.
+     * If the target group type is `LAMBDA` , this parameter doesn't apply.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html#cfn-vpclattice-targetgroup-config)
      *

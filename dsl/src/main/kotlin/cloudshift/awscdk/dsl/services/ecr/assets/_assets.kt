@@ -116,6 +116,7 @@ public object assets {
      * "buildArgsKey", "buildArgs"))
      * .buildSecrets(Map.of(
      * "buildSecretsKey", "buildSecrets"))
+     * .buildSsh("buildSsh")
      * .cacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")
      * // the properties below are optional
@@ -136,6 +137,7 @@ public object assets {
      * .invalidation(DockerImageAssetInvalidationOptions.builder()
      * .buildArgs(false)
      * .buildSecrets(false)
+     * .buildSsh(false)
      * .extraHash(false)
      * .file(false)
      * .networkMode(false)

@@ -13,6 +13,8 @@ package cloudshift.awscdk.dsl.services.logs
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.logs.CfnAccountPolicy
+import software.amazon.awscdk.services.logs.CfnAccountPolicyProps
 import software.amazon.awscdk.services.logs.CfnDestination
 import software.amazon.awscdk.services.logs.CfnDestinationProps
 import software.amazon.awscdk.services.logs.CfnLogGroup
@@ -57,6 +59,97 @@ import software.amazon.awscdk.services.logs.SubscriptionFilterProps
 import software.constructs.Construct
 
 public object logs {
+    /**
+     * Creates or updates an account-level data protection policy that applies to all log groups in
+     * the account.
+     *
+     * A data protection policy can help safeguard sensitive data that's ingested by your log groups
+     * by auditing and masking the sensitive log data. Each account can have only one account-level
+     * policy.
+     *
+     * Sensitive data is detected and masked when it is ingested into a log group. When you set a
+     * data protection policy, log events ingested into the log groups before that time are not
+     * masked.
+     *
+     * If you create a data protection policy for your whole account, it applies to both existing
+     * log groups and all log groups that are created later in this account. The account policy is
+     * applied to existing log groups with eventual consistency. It might take up to 5 minutes
+     * before sensitive data in existing log groups begins to be masked.
+     *
+     * By default, when a user views a log event that includes masked data, the sensitive data is
+     * replaced by asterisks. A user who has the `logs:Unmask` permission can use a
+     * [GetLogEvents](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_GetLogEvents.html)
+     * or
+     * [FilterLogEvents](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_FilterLogEvents.html)
+     * operation with the `unmask` parameter set to `true` to view the unmasked log events. Users
+     * with the `logs:Unmask` can also view unmasked data in the CloudWatch Logs console by running
+     * a CloudWatch Logs Insights query with the `unmask` query command.
+     *
+     * For more information, including a list of types of data that can be audited and masked, see
+     * [Protect sensitive log data with masking](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html)
+     * .
+     *
+     * To create an account-level policy, you must be signed on with the
+     * `logs:PutDataProtectionPolicy` and `logs:PutAccountPolicy` permissions.
+     *
+     * An account-level policy applies to all log groups in the account. You can also create a data
+     * protection policy that applies to just one log group. If a log group has its own data
+     * protection policy and the account also has an account-level data protection policy, then the
+     * two policies are cumulative. Any sensitive term specified in either policy is masked.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnAccountPolicy cfnAccountPolicy = CfnAccountPolicy.Builder.create(this, "MyCfnAccountPolicy")
+     * .policyDocument("policyDocument")
+     * .policyName("policyName")
+     * .policyType("policyType")
+     * // the properties below are optional
+     * .scope("scope")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html)
+     */
+    public inline fun cfnAccountPolicy(
+        scope: Construct,
+        id: String,
+        block: CfnAccountPolicyDsl.() -> Unit = {},
+    ): CfnAccountPolicy {
+        val builder = CfnAccountPolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnAccountPolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.logs.*;
+     * CfnAccountPolicyProps cfnAccountPolicyProps = CfnAccountPolicyProps.builder()
+     * .policyDocument("policyDocument")
+     * .policyName("policyName")
+     * .policyType("policyType")
+     * // the properties below are optional
+     * .scope("scope")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html)
+     */
+    public inline fun cfnAccountPolicyProps(
+        block: CfnAccountPolicyPropsDsl.() -> Unit = {}
+    ): CfnAccountPolicyProps {
+        val builder = CfnAccountPolicyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * The AWS::Logs::Destination resource specifies a CloudWatch Logs destination.
      *
@@ -634,7 +727,7 @@ public object logs {
      * CloudWatch Subscription.
      *
      * Consumers will hardly ever need to use this class. Instead, directly subscribe a Kinesis
-     * stream using the integration class in the `&#64;aws-cdk/aws-logs-destinations` package; if
+     * stream using the integration class in the `aws-cdk-lib/aws-logs-destinations` package; if
      * necessary, a `CrossAccountDestination` will be created automatically.
      *
      * Example:
@@ -1309,6 +1402,7 @@ public object logs {
      * .logGroup(logGroup)
      * .destination(new LambdaDestination(fn))
      * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+     * .filterName("ErrorInMainThread")
      * .build();
      * ```
      */
@@ -1335,6 +1429,8 @@ public object logs {
      * SubscriptionFilterOptions subscriptionFilterOptions = SubscriptionFilterOptions.builder()
      * .destination(logSubscriptionDestination)
      * .filterPattern(filterPattern)
+     * // the properties below are optional
+     * .filterName("filterName")
      * .build();
      * ```
      */
@@ -1358,6 +1454,7 @@ public object logs {
      * .logGroup(logGroup)
      * .destination(new LambdaDestination(fn))
      * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+     * .filterName("ErrorInMainThread")
      * .build();
      * ```
      */

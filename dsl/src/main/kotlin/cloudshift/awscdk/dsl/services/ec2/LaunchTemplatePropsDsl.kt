@@ -44,7 +44,7 @@ import software.amazon.awscdk.services.iam.IRole
  * .vpc(vpc)
  * .build();
  * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
- * .machineImage(MachineImage.latestAmazonLinux2022())
+ * .machineImage(MachineImage.latestAmazonLinux2023())
  * .securityGroup(sg1)
  * .build();
  * launchTemplate.addSecurityGroup(sg2);

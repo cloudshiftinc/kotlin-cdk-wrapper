@@ -173,6 +173,8 @@ public class StepScalingPolicyDsl(
      *
      * Maps a range of metric values to a particular scaling behavior.
      *
+     * Must be between 2 and 40 steps.
+     *
      * @param scalingSteps The intervals for scaling.
      */
     public fun scalingSteps(scalingSteps: ScalingIntervalDsl.() -> Unit) {
@@ -183,6 +185,8 @@ public class StepScalingPolicyDsl(
      * The intervals for scaling.
      *
      * Maps a range of metric values to a particular scaling behavior.
+     *
+     * Must be between 2 and 40 steps.
      *
      * @param scalingSteps The intervals for scaling.
      */

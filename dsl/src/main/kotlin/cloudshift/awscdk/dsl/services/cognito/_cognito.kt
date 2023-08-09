@@ -2184,7 +2184,16 @@ public object cognito {
     }
 
     /**
-     * Contains information about the schema attribute.
+     * A list of the user attributes and their properties in your user pool.
+     *
+     * The attribute schema contains standard attributes, custom attributes with a `custom:` prefix,
+     * and developer attributes with a `dev:` prefix. For more information, see
+     * [User pool attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+     * .
+     *
+     * Developer-only attributes are a legacy feature of user pools, are read-only to all app
+     * clients. You can create and update developer-only attributes only with IAM-authenticated API
+     * operations. Use app client read/write permissions instead.
      *
      * Example:
      * ```
@@ -2443,7 +2452,15 @@ public object cognito {
     }
 
     /**
-     * The user pool add-ons type.
+     * User pool add-ons.
+     *
+     * Contains settings for activation of advanced security features. To log user security
+     * information but take no action, set to `AUDIT` . To configure automatic security responses to
+     * risky traffic to your user pool, set to `ENFORCED` .
+     *
+     * For more information, see
+     * [Adding advanced security to a user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * .
      *
      * Example:
      * ```
@@ -2506,7 +2523,14 @@ public object cognito {
     /**
      * Adds the specified user to the specified group.
      *
-     * Calling this action requires developer credentials.
+     * Amazon Cognito evaluates AWS Identity and Access Management (IAM) policies in requests for
+     * this API operation. For this operation, you must use IAM credentials to authorize requests,
+     * and you must grant yourself the corresponding IAM permission in a policy.
+     *
+     * **Learn
+     * more** - [Signing AWS API Requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html)
+     * * [Using the Amazon Cognito user pools API and user pool
+     *   endpoints](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pools-API-operations.html)
      *
      * Example:
      * ```

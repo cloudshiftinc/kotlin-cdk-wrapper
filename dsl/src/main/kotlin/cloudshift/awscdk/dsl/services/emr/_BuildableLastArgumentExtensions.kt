@@ -17,15 +17,6 @@ import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig
 import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
 import software.amazon.awscdk.services.emr.CfnStep
 
-/** A specification of the number and type of Amazon EC2 instances. */
-public inline fun CfnCluster.setInstances(
-    block: CfnClusterJobFlowInstancesConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnClusterJobFlowInstancesConfigPropertyDsl()
-    builder.apply(block)
-    return setInstances(builder.build())
-}
-
 /**  */
 public inline fun CfnCluster.setAutoTerminationPolicy(
     block: CfnClusterAutoTerminationPolicyPropertyDsl.() -> Unit = {}
@@ -33,6 +24,15 @@ public inline fun CfnCluster.setAutoTerminationPolicy(
     val builder = CfnClusterAutoTerminationPolicyPropertyDsl()
     builder.apply(block)
     return setAutoTerminationPolicy(builder.build())
+}
+
+/** A specification of the number and type of Amazon EC2 instances. */
+public inline fun CfnCluster.setInstances(
+    block: CfnClusterJobFlowInstancesConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnClusterJobFlowInstancesConfigPropertyDsl()
+    builder.apply(block)
+    return setInstances(builder.build())
 }
 
 /**
@@ -65,18 +65,6 @@ public inline fun CfnInstanceFleetConfig.setLaunchSpecifications(
     return setLaunchSpecifications(builder.build())
 }
 
-/**
- * The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file whose
- * main function will be executed.
- */
-public inline fun CfnStep.setHadoopJarStep(
-    block: CfnStepHadoopJarStepConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStepHadoopJarStepConfigPropertyDsl()
-    builder.apply(block)
-    return setHadoopJarStep(builder.build())
-}
-
 /** `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` . */
 public inline fun CfnInstanceGroupConfig.setAutoScalingPolicy(
     block: CfnInstanceGroupConfigAutoScalingPolicyPropertyDsl.() -> Unit = {}
@@ -93,4 +81,16 @@ public inline fun CfnInstanceGroupConfig.setEbsConfiguration(
     val builder = CfnInstanceGroupConfigEbsConfigurationPropertyDsl()
     builder.apply(block)
     return setEbsConfiguration(builder.build())
+}
+
+/**
+ * The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file whose
+ * main function will be executed.
+ */
+public inline fun CfnStep.setHadoopJarStep(
+    block: CfnStepHadoopJarStepConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStepHadoopJarStepConfigPropertyDsl()
+    builder.apply(block)
+    return setHadoopJarStep(builder.build())
 }

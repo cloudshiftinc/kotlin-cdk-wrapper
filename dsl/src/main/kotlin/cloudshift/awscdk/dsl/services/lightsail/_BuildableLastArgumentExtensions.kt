@@ -18,11 +18,11 @@ import software.amazon.awscdk.services.lightsail.CfnDisk
 import software.amazon.awscdk.services.lightsail.CfnDistribution
 import software.amazon.awscdk.services.lightsail.CfnInstance
 
-/** Location of a resource. */
-public inline fun CfnDisk.setLocation(block: CfnDiskLocationPropertyDsl.() -> Unit = {}) {
-    val builder = CfnDiskLocationPropertyDsl()
+/** An object that describes the access rules for the bucket. */
+public inline fun CfnBucket.setAccessRules(block: CfnBucketAccessRulesPropertyDsl.() -> Unit = {}) {
+    val builder = CfnBucketAccessRulesPropertyDsl()
     builder.apply(block)
-    return setLocation(builder.build())
+    return setAccessRules(builder.build())
 }
 
 /** An object that describes the current container deployment of the container service. */
@@ -34,11 +34,41 @@ public inline fun CfnContainer.setContainerServiceDeployment(
     return setContainerServiceDeployment(builder.build())
 }
 
-/** An object that describes the access rules for the bucket. */
-public inline fun CfnBucket.setAccessRules(block: CfnBucketAccessRulesPropertyDsl.() -> Unit = {}) {
-    val builder = CfnBucketAccessRulesPropertyDsl()
+/** Location of a resource. */
+public inline fun CfnDisk.setLocation(block: CfnDiskLocationPropertyDsl.() -> Unit = {}) {
+    val builder = CfnDiskLocationPropertyDsl()
     builder.apply(block)
-    return setAccessRules(builder.build())
+    return setLocation(builder.build())
+}
+
+/** An object that describes the cache behavior settings of the distribution. */
+public inline fun CfnDistribution.setCacheBehaviorSettings(
+    block: CfnDistributionCacheSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDistributionCacheSettingsPropertyDsl()
+    builder.apply(block)
+    return setCacheBehaviorSettings(builder.build())
+}
+
+/** An object that describes the default cache behavior of the distribution. */
+public inline fun CfnDistribution.setDefaultCacheBehavior(
+    block: CfnDistributionCacheBehaviorPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDistributionCacheBehaviorPropertyDsl()
+    builder.apply(block)
+    return setDefaultCacheBehavior(builder.build())
+}
+
+/**
+ * An object that describes the origin resource of the distribution, such as a Lightsail instance,
+ * bucket, or load balancer.
+ */
+public inline fun CfnDistribution.setOrigin(
+    block: CfnDistributionInputOriginPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDistributionInputOriginPropertyDsl()
+    builder.apply(block)
+    return setOrigin(builder.build())
 }
 
 /**
@@ -72,34 +102,4 @@ public inline fun CfnInstance.setState(block: CfnInstanceStatePropertyDsl.() -> 
     val builder = CfnInstanceStatePropertyDsl()
     builder.apply(block)
     return setState(builder.build())
-}
-
-/** An object that describes the default cache behavior of the distribution. */
-public inline fun CfnDistribution.setDefaultCacheBehavior(
-    block: CfnDistributionCacheBehaviorPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDistributionCacheBehaviorPropertyDsl()
-    builder.apply(block)
-    return setDefaultCacheBehavior(builder.build())
-}
-
-/**
- * An object that describes the origin resource of the distribution, such as a Lightsail instance,
- * bucket, or load balancer.
- */
-public inline fun CfnDistribution.setOrigin(
-    block: CfnDistributionInputOriginPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDistributionInputOriginPropertyDsl()
-    builder.apply(block)
-    return setOrigin(builder.build())
-}
-
-/** An object that describes the cache behavior settings of the distribution. */
-public inline fun CfnDistribution.setCacheBehaviorSettings(
-    block: CfnDistributionCacheSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDistributionCacheSettingsPropertyDsl()
-    builder.apply(block)
-    return setCacheBehaviorSettings(builder.build())
 }

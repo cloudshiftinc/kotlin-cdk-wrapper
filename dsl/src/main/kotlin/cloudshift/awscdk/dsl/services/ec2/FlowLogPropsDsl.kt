@@ -53,7 +53,8 @@ public class FlowLogPropsDsl {
     }
 
     /**
-     * @param flowLogName The name of the FlowLog. It is not recommended to use an explicit name.
+     * @param flowLogName The name of the FlowLog. Since the FlowLog resource doesn't support
+     *   providing a physical name, the value provided here will be recorded in the `Name` tag.
      */
     public fun flowLogName(flowLogName: String) {
         cdkBuilder.flowLogName(flowLogName)

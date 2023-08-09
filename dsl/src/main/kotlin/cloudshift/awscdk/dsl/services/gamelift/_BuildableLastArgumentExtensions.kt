@@ -19,6 +19,24 @@ import software.amazon.awscdk.services.gamelift.CfnGameServerGroup
 import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
 import software.amazon.awscdk.services.gamelift.CfnScript
 
+/** The routing configuration, including routing type and fleet target, for the alias. */
+public inline fun CfnAlias.setRoutingStrategy(
+    block: CfnAliasRoutingStrategyPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAliasRoutingStrategyPropertyDsl()
+    builder.apply(block)
+    return setRoutingStrategy(builder.build())
+}
+
+/** Information indicating where your game build files are stored. */
+public inline fun CfnBuild.setStorageLocation(
+    block: CfnBuildStorageLocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnBuildStorageLocationPropertyDsl()
+    builder.apply(block)
+    return setStorageLocation(builder.build())
+}
+
 /** Configuration for Anywhere fleet. */
 public inline fun CfnFleet.setAnywhereConfiguration(
     block: CfnFleetAnywhereConfigurationPropertyDsl.() -> Unit = {}
@@ -58,27 +76,6 @@ public inline fun CfnFleet.setRuntimeConfiguration(
     return setRuntimeConfiguration(builder.build())
 }
 
-/** Information indicating where your game build files are stored. */
-public inline fun CfnBuild.setStorageLocation(
-    block: CfnBuildStorageLocationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnBuildStorageLocationPropertyDsl()
-    builder.apply(block)
-    return setStorageLocation(builder.build())
-}
-
-/**
- * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is
- * stored.
- */
-public inline fun CfnScript.setStorageLocation(
-    block: CfnScriptS3LocationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnScriptS3LocationPropertyDsl()
-    builder.apply(block)
-    return setStorageLocation(builder.build())
-}
-
 /**
  * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized
  * for game hosting.
@@ -103,15 +100,6 @@ public inline fun CfnGameServerGroup.setLaunchTemplate(
     return setLaunchTemplate(builder.build())
 }
 
-/** The routing configuration, including routing type and fleet target, for the alias. */
-public inline fun CfnAlias.setRoutingStrategy(
-    block: CfnAliasRoutingStrategyPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnAliasRoutingStrategyPropertyDsl()
-    builder.apply(block)
-    return setRoutingStrategy(builder.build())
-}
-
 /** A list of locations where a queue is allowed to place new game sessions. */
 public inline fun CfnGameSessionQueue.setFilterConfiguration(
     block: CfnGameSessionQueueFilterConfigurationPropertyDsl.() -> Unit = {}
@@ -130,4 +118,16 @@ public inline fun CfnGameSessionQueue.setPriorityConfiguration(
     val builder = CfnGameSessionQueuePriorityConfigurationPropertyDsl()
     builder.apply(block)
     return setPriorityConfiguration(builder.build())
+}
+
+/**
+ * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is
+ * stored.
+ */
+public inline fun CfnScript.setStorageLocation(
+    block: CfnScriptS3LocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnScriptS3LocationPropertyDsl()
+    builder.apply(block)
+    return setStorageLocation(builder.build())
 }

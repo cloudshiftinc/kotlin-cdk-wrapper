@@ -41,23 +41,6 @@ public inline fun EventBridgeDestination.bind(
 /**
  * Returns a destination configuration.
  *
- * @param _scope
- * @param fn
- * @param _options
- */
-public inline fun SqsDestination.bind(
-    _scope: Construct,
-    fn: IFunction,
-    block: DestinationOptionsDsl.() -> Unit = {},
-): DestinationConfig {
-    val builder = DestinationOptionsDsl()
-    builder.apply(block)
-    return bind(_scope, fn, builder.build())
-}
-
-/**
- * Returns a destination configuration.
- *
  * @param scope
  * @param fn
  * @param options
@@ -80,6 +63,23 @@ public inline fun LambdaDestination.bind(
  * @param _options
  */
 public inline fun SnsDestination.bind(
+    _scope: Construct,
+    fn: IFunction,
+    block: DestinationOptionsDsl.() -> Unit = {},
+): DestinationConfig {
+    val builder = DestinationOptionsDsl()
+    builder.apply(block)
+    return bind(_scope, fn, builder.build())
+}
+
+/**
+ * Returns a destination configuration.
+ *
+ * @param _scope
+ * @param fn
+ * @param _options
+ */
+public inline fun SqsDestination.bind(
     _scope: Construct,
     fn: IFunction,
     block: DestinationOptionsDsl.() -> Unit = {},

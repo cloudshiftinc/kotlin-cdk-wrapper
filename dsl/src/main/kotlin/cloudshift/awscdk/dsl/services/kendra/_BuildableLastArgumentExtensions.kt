@@ -37,6 +37,13 @@ public inline fun CfnDataSource.setDataSourceConfiguration(
     return setDataSourceConfiguration(builder.build())
 }
 
+/** The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data. */
+public inline fun CfnFaq.setS3Path(block: CfnFaqS3PathPropertyDsl.() -> Unit = {}) {
+    val builder = CfnFaqS3PathPropertyDsl()
+    builder.apply(block)
+    return setS3Path(builder.build())
+}
+
 /**  */
 public inline fun CfnIndex.setCapacityUnits(
     block: CfnIndexCapacityUnitsConfigurationPropertyDsl.() -> Unit = {}
@@ -56,11 +63,4 @@ public inline fun CfnIndex.setServerSideEncryptionConfiguration(
     val builder = CfnIndexServerSideEncryptionConfigurationPropertyDsl()
     builder.apply(block)
     return setServerSideEncryptionConfiguration(builder.build())
-}
-
-/** The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data. */
-public inline fun CfnFaq.setS3Path(block: CfnFaqS3PathPropertyDsl.() -> Unit = {}) {
-    val builder = CfnFaqS3PathPropertyDsl()
-    builder.apply(block)
-    return setS3Path(builder.build())
 }

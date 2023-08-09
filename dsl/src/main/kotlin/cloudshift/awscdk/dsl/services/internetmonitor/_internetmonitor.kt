@@ -81,6 +81,15 @@ public object internetmonitor {
     }
 
     /**
+     * Define the health event threshold percentages for the performance score and availability
+     * score for your application's monitor.
+     *
+     * Amazon CloudWatch Internet Monitor creates a health event when there's an internet issue that
+     * affects your application end users where a health score percentage is at or below a set
+     * threshold.
+     *
+     * If you don't set a health event threshold, the default value is 95%.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -103,6 +112,8 @@ public object internetmonitor {
     }
 
     /**
+     * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

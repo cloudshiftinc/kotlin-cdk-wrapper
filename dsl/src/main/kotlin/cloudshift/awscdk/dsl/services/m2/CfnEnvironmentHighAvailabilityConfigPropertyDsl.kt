@@ -36,7 +36,10 @@ public class CfnEnvironmentHighAvailabilityConfigPropertyDsl {
     private val cdkBuilder: CfnEnvironment.HighAvailabilityConfigProperty.Builder =
         CfnEnvironment.HighAvailabilityConfigProperty.builder()
 
-    /** @param desiredCapacity The number of instances in a high availability configuration. */
+    /**
+     * @param desiredCapacity The number of instances in a high availability configuration. The
+     *   minimum possible value is 1 and the maximum is 100.
+     */
     public fun desiredCapacity(desiredCapacity: Number) {
         cdkBuilder.desiredCapacity(desiredCapacity)
     }

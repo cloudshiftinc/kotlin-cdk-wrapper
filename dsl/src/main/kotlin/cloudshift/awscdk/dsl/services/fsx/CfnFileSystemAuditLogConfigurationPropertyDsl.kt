@@ -46,7 +46,7 @@ public class CfnFileSystemAuditLogConfigurationPropertyDsl {
      *   Data Firehose delivery stream ARN.
      *
      * The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The
-     * name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx`
+     * name of the Amazon Kinesis Data Firehose delivery stream must begin with the `aws-fsx`
      * prefix.
      *
      * The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery

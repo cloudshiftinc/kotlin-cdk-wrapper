@@ -68,14 +68,14 @@ public class DnsValidatedCertificateDsl(
     private val _subjectAlternativeNames: MutableList<String> = mutableListOf()
 
     /**
-     * The Certifcate name.
+     * The Certificate name.
      *
-     * Since the Certifcate resource doesn't support providing a physical name, the value provided
+     * Since the Certificate resource doesn't support providing a physical name, the value provided
      * here will be recorded in the `Name` tag
      *
      * Default: the full, absolute path of this construct
      *
-     * @param certificateName The Certifcate name.
+     * @param certificateName The Certificate name.
      */
     public fun certificateName(certificateName: String) {
         cdkBuilder.certificateName(certificateName)

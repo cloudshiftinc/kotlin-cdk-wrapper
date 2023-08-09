@@ -15,6 +15,24 @@ import kotlin.Unit
 import software.amazon.awscdk.services.robomaker.CfnRobotApplication
 import software.amazon.awscdk.services.robomaker.CfnSimulationApplication
 
+/** The robot software suite used by the robot application. */
+public inline fun CfnRobotApplication.setRobotSoftwareSuite(
+    block: CfnRobotApplicationRobotSoftwareSuitePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnRobotApplicationRobotSoftwareSuitePropertyDsl()
+    builder.apply(block)
+    return setRobotSoftwareSuite(builder.build())
+}
+
+/** The rendering engine for the simulation application. */
+public inline fun CfnSimulationApplication.setRenderingEngine(
+    block: CfnSimulationApplicationRenderingEnginePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSimulationApplicationRenderingEnginePropertyDsl()
+    builder.apply(block)
+    return setRenderingEngine(builder.build())
+}
+
 /** The robot software suite used by the simulation application. */
 public inline fun CfnSimulationApplication.setRobotSoftwareSuite(
     block: CfnSimulationApplicationRobotSoftwareSuitePropertyDsl.() -> Unit = {}
@@ -31,22 +49,4 @@ public inline fun CfnSimulationApplication.setSimulationSoftwareSuite(
     val builder = CfnSimulationApplicationSimulationSoftwareSuitePropertyDsl()
     builder.apply(block)
     return setSimulationSoftwareSuite(builder.build())
-}
-
-/** The rendering engine for the simulation application. */
-public inline fun CfnSimulationApplication.setRenderingEngine(
-    block: CfnSimulationApplicationRenderingEnginePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnSimulationApplicationRenderingEnginePropertyDsl()
-    builder.apply(block)
-    return setRenderingEngine(builder.build())
-}
-
-/** The robot software suite used by the robot application. */
-public inline fun CfnRobotApplication.setRobotSoftwareSuite(
-    block: CfnRobotApplicationRobotSoftwareSuitePropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnRobotApplicationRobotSoftwareSuitePropertyDsl()
-    builder.apply(block)
-    return setRobotSoftwareSuite(builder.build())
 }

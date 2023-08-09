@@ -109,6 +109,8 @@ public class BasicStepScalingPolicyPropsDsl {
     /**
      * @param scalingSteps The intervals for scaling. Maps a range of metric values to a particular
      *   scaling behavior.
+     *
+     * Must be between 2 and 40 steps.
      */
     public fun scalingSteps(scalingSteps: ScalingIntervalDsl.() -> Unit) {
         _scalingSteps.add(ScalingIntervalDsl().apply(scalingSteps).build())
@@ -117,6 +119,8 @@ public class BasicStepScalingPolicyPropsDsl {
     /**
      * @param scalingSteps The intervals for scaling. Maps a range of metric values to a particular
      *   scaling behavior.
+     *
+     * Must be between 2 and 40 steps.
      */
     public fun scalingSteps(scalingSteps: Collection<ScalingInterval>) {
         _scalingSteps.addAll(scalingSteps)

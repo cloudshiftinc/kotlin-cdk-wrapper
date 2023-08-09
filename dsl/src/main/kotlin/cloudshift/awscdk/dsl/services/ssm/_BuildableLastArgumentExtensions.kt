@@ -17,6 +17,18 @@ import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import software.amazon.awscdk.services.ssm.CfnResourceDataSync
 
+/**
+ * An Amazon Simple Storage Service (Amazon S3) bucket where you want to store the output details of
+ * the request.
+ */
+public inline fun CfnAssociation.setOutputLocation(
+    block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAssociationInstanceAssociationOutputLocationPropertyDsl()
+    builder.apply(block)
+    return setOutputLocation(builder.build())
+}
+
 /** Information about an Amazon S3 bucket to write Run Command task-level logs to. */
 public inline fun CfnMaintenanceWindowTask.setLoggingInfo(
     block: CfnMaintenanceWindowTaskLoggingInfoPropertyDsl.() -> Unit = {}
@@ -51,18 +63,6 @@ public inline fun CfnPatchBaseline.setGlobalFilters(
     val builder = CfnPatchBaselinePatchFilterGroupPropertyDsl()
     builder.apply(block)
     return setGlobalFilters(builder.build())
-}
-
-/**
- * An Amazon Simple Storage Service (Amazon S3) bucket where you want to store the output details of
- * the request.
- */
-public inline fun CfnAssociation.setOutputLocation(
-    block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnAssociationInstanceAssociationOutputLocationPropertyDsl()
-    builder.apply(block)
-    return setOutputLocation(builder.build())
 }
 
 /** Configuration information for the target S3 bucket. */

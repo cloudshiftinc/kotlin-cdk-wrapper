@@ -16,6 +16,15 @@ import software.amazon.awscdk.services.refactorspaces.CfnApplication
 import software.amazon.awscdk.services.refactorspaces.CfnRoute
 import software.amazon.awscdk.services.refactorspaces.CfnService
 
+/** The endpoint URL of the Amazon API Gateway proxy. */
+public inline fun CfnApplication.setApiGatewayProxy(
+    block: CfnApplicationApiGatewayProxyInputPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnApplicationApiGatewayProxyInputPropertyDsl()
+    builder.apply(block)
+    return setApiGatewayProxy(builder.build())
+}
+
 /** Configuration for the default route type. */
 public inline fun CfnRoute.setDefaultRoute(
     block: CfnRouteDefaultRouteInputPropertyDsl.() -> Unit = {}
@@ -50,13 +59,4 @@ public inline fun CfnService.setUrlEndpoint(
     val builder = CfnServiceUrlEndpointInputPropertyDsl()
     builder.apply(block)
     return setUrlEndpoint(builder.build())
-}
-
-/** The endpoint URL of the Amazon API Gateway proxy. */
-public inline fun CfnApplication.setApiGatewayProxy(
-    block: CfnApplicationApiGatewayProxyInputPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnApplicationApiGatewayProxyInputPropertyDsl()
-    builder.apply(block)
-    return setApiGatewayProxy(builder.build())
 }

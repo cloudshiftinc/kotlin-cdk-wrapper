@@ -49,7 +49,7 @@ public class CfnRuleRuleTriggerEventSourcePropertyDsl {
     }
 
     /**
-     * @param integrationAssociationArn The Amazon Resource Name (ARN) for the integration
+     * @param integrationAssociationArn The Amazon Resource Name (ARN) of the integration
      *   association. `IntegrationAssociationArn` is required if `TriggerEventSource` is one of the
      *   following values: `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` |
      *   `OnSalesforceCaseCreate`

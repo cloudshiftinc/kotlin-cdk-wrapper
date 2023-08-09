@@ -46,6 +46,7 @@ import software.amazon.awscdk.services.lambda.AssetImageCode
  * "buildArgsKey", "buildArgs"))
  * .buildSecrets(Map.of(
  * "buildSecretsKey", "buildSecrets"))
+ * .buildSsh("buildSsh")
  * .cacheFrom(List.of(DockerCacheOption.builder()
  * .type("type")
  * // the properties below are optional
@@ -68,6 +69,7 @@ import software.amazon.awscdk.services.lambda.AssetImageCode
  * .invalidation(DockerImageAssetInvalidationOptions.builder()
  * .buildArgs(false)
  * .buildSecrets(false)
+ * .buildSsh(false)
  * .extraHash(false)
  * .file(false)
  * .networkMode(false)
@@ -147,6 +149,21 @@ public class AssetImageCodeDsl(
      */
     public fun buildSecrets(buildSecrets: Map<String, String>) {
         cdkBuilder.buildSecrets(buildSecrets)
+    }
+
+    /**
+     * SSH agent socket or keys to pass to the `docker build` command.
+     *
+     * Docker BuildKit must be enabled to use the ssh flag
+     *
+     * Default: - no --ssh flag
+     *
+     * [Documentation](https://docs.docker.com/build/buildkit/)
+     *
+     * @param buildSsh SSH agent socket or keys to pass to the `docker build` command.
+     */
+    public fun buildSsh(buildSsh: String) {
+        cdkBuilder.buildSsh(buildSsh)
     }
 
     /**

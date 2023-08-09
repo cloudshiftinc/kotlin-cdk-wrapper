@@ -53,6 +53,11 @@ import software.amazon.awscdk.services.stepfunctions.StateMachineType
 public class StateMachinePropsDsl {
     private val cdkBuilder: StateMachineProps.Builder = StateMachineProps.builder()
 
+    /** @param comment Comment that describes this state machine. */
+    public fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+    }
+
     /**
      * @param definition Definition for this state machine.
      * @deprecated use definitionBody: DefinitionBody.fromChainable()

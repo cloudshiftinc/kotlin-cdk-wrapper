@@ -70,6 +70,14 @@ public class ServerlessV2ClusterInstancePropsDsl {
     }
 
     /**
+     * @param isFromLegacyInstanceProps Only used for migrating existing clusters from using
+     *   `instanceProps` to `writer` and `readers`.
+     */
+    public fun isFromLegacyInstanceProps(isFromLegacyInstanceProps: Boolean) {
+        cdkBuilder.isFromLegacyInstanceProps(isFromLegacyInstanceProps)
+    }
+
+    /**
      * @param parameterGroup The DB parameter group to associate with the instance. This is only
      *   needed if you need to configure different parameter groups for each individual instance,
      *   otherwise you should not provide this and just use the cluster parameter group

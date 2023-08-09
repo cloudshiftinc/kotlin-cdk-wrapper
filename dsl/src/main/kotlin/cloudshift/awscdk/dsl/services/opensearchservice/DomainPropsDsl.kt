@@ -36,6 +36,7 @@ import software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions
 import software.amazon.awscdk.services.opensearchservice.EngineVersion
 import software.amazon.awscdk.services.opensearchservice.LoggingOptions
 import software.amazon.awscdk.services.opensearchservice.TLSSecurityPolicy
+import software.amazon.awscdk.services.opensearchservice.WindowStartTime
 import software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig
 
 /**
@@ -171,6 +172,14 @@ public class DomainPropsDsl {
     }
 
     /**
+     * @param enableAutoSoftwareUpdate Specifies whether automatic service software updates are
+     *   enabled for the domain.
+     */
+    public fun enableAutoSoftwareUpdate(enableAutoSoftwareUpdate: Boolean) {
+        cdkBuilder.enableAutoSoftwareUpdate(enableAutoSoftwareUpdate)
+    }
+
+    /**
      * @param enableVersionUpgrade To upgrade an Amazon OpenSearch Service domain to a new version,
      *   rather than replacing the entire domain resource, use the EnableVersionUpgrade update
      *   policy.
@@ -238,6 +247,40 @@ public class DomainPropsDsl {
      */
     public fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
         cdkBuilder.nodeToNodeEncryption(nodeToNodeEncryption)
+    }
+
+    /**
+     * @param offPeakWindowEnabled Options for enabling a domain's off-peak window, during which
+     *   OpenSearch Service can perform mandatory configuration changes on the domain. Off-peak
+     *   windows were introduced on February 16, 2023. All domains created before this date have the
+     *   off-peak window disabled by default. You must manually enable and configure the off-peak
+     *   window for these domains. All domains created after this date will have the off-peak window
+     *   enabled by default. You can't disable the off-peak window for a domain after it's enabled.
+     */
+    public fun offPeakWindowEnabled(offPeakWindowEnabled: Boolean) {
+        cdkBuilder.offPeakWindowEnabled(offPeakWindowEnabled)
+    }
+
+    /**
+     * @param offPeakWindowStart Start time for the off-peak window, in Coordinated Universal Time
+     *   (UTC). The window length will always be 10 hours, so you can't specify an end time. For
+     *   example, if you specify 11:00 P.M. UTC as a start time, the end time will automatically be
+     *   set to 9:00 A.M.
+     */
+    public fun offPeakWindowStart(offPeakWindowStart: WindowStartTimeDsl.() -> Unit = {}) {
+        val builder = WindowStartTimeDsl()
+        builder.apply(offPeakWindowStart)
+        cdkBuilder.offPeakWindowStart(builder.build())
+    }
+
+    /**
+     * @param offPeakWindowStart Start time for the off-peak window, in Coordinated Universal Time
+     *   (UTC). The window length will always be 10 hours, so you can't specify an end time. For
+     *   example, if you specify 11:00 P.M. UTC as a start time, the end time will automatically be
+     *   set to 9:00 A.M.
+     */
+    public fun offPeakWindowStart(offPeakWindowStart: WindowStartTime) {
+        cdkBuilder.offPeakWindowStart(offPeakWindowStart)
     }
 
     /** @param removalPolicy Policy to apply when the domain is removed from the stack. */

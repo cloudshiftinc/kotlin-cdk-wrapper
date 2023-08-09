@@ -46,14 +46,16 @@ public class CfnJobTemplateJobExecutionsRolloutConfigPropertyDsl {
         CfnJobTemplate.JobExecutionsRolloutConfigProperty.builder()
 
     /**
-     * @param exponentialRolloutRate Allows you to create an exponential rate of rollout for a job.
+     * @param exponentialRolloutRate The rate of increase for a job rollout. This parameter allows
+     *   you to define an exponential rate for a job rollout.
      */
     public fun exponentialRolloutRate(exponentialRolloutRate: IResolvable) {
         cdkBuilder.exponentialRolloutRate(exponentialRolloutRate)
     }
 
     /**
-     * @param exponentialRolloutRate Allows you to create an exponential rate of rollout for a job.
+     * @param exponentialRolloutRate The rate of increase for a job rollout. This parameter allows
+     *   you to define an exponential rate for a job rollout.
      */
     public fun exponentialRolloutRate(
         exponentialRolloutRate: CfnJobTemplate.ExponentialRolloutRateProperty

@@ -15,15 +15,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
 import software.amazon.awscdk.services.iotsitewise.CfnGateway
 
-/** The gateway's platform. */
-public inline fun CfnGateway.setGatewayPlatform(
-    block: CfnGatewayGatewayPlatformPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnGatewayGatewayPlatformPropertyDsl()
-    builder.apply(block)
-    return setGatewayPlatform(builder.build())
-}
-
 /** The identity for this access policy. */
 public inline fun CfnAccessPolicy.setAccessPolicyIdentity(
     block: CfnAccessPolicyAccessPolicyIdentityPropertyDsl.() -> Unit = {}
@@ -40,4 +31,13 @@ public inline fun CfnAccessPolicy.setAccessPolicyResource(
     val builder = CfnAccessPolicyAccessPolicyResourcePropertyDsl()
     builder.apply(block)
     return setAccessPolicyResource(builder.build())
+}
+
+/** The gateway's platform. */
+public inline fun CfnGateway.setGatewayPlatform(
+    block: CfnGatewayGatewayPlatformPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnGatewayGatewayPlatformPropertyDsl()
+    builder.apply(block)
+    return setGatewayPlatform(builder.build())
 }

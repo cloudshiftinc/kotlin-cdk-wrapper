@@ -35,97 +35,14 @@ import software.amazon.awscdk.services.sagemaker.CfnSpace
 import software.amazon.awscdk.services.sagemaker.CfnUserProfile
 import software.amazon.awscdk.services.sagemaker.CfnWorkteam
 
-/** Information on the IMDS configuration of the notebook instance. */
-public inline fun CfnNotebookInstance.setInstanceMetadataServiceConfiguration(
-    block: CfnNotebookInstanceInstanceMetadataServiceConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnNotebookInstanceInstanceMetadataServiceConfigurationPropertyDsl()
-    builder.apply(block)
-    return setInstanceMetadataServiceConfiguration(builder.build())
-}
-
-/** Provisioned ServiceCatalog Details. */
-public inline fun CfnProject.setServiceCatalogProvisionedProductDetails(
-    block: CfnProjectServiceCatalogProvisionedProductDetailsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnProjectServiceCatalogProvisionedProductDetailsPropertyDsl()
-    builder.apply(block)
-    return setServiceCatalogProvisionedProductDetails(builder.build())
-}
-
 /**
- * The deployment configuration for an endpoint, which contains the desired deployment strategy and
- * rollback configurations.
+ * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type that
+ * the version runs on.
  */
-public inline fun CfnEndpoint.setDeploymentConfig(
-    block: CfnEndpointDeploymentConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnEndpointDeploymentConfigPropertyDsl()
+public inline fun CfnApp.setResourceSpec(block: CfnAppResourceSpecPropertyDsl.() -> Unit = {}) {
+    val builder = CfnAppResourceSpecPropertyDsl()
     builder.apply(block)
-    return setDeploymentConfig(builder.build())
-}
-
-/** Identifies the resources to deploy for a monitoring job. */
-public inline fun CfnModelBiasJobDefinition.setJobResources(
-    block: CfnModelBiasJobDefinitionMonitoringResourcesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelBiasJobDefinitionMonitoringResourcesPropertyDsl()
-    builder.apply(block)
-    return setJobResources(builder.build())
-}
-
-/** Configures the model bias job to run a specified Docker container image. */
-public inline fun CfnModelBiasJobDefinition.setModelBiasAppSpecification(
-    block: CfnModelBiasJobDefinitionModelBiasAppSpecificationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelBiasJobDefinitionModelBiasAppSpecificationPropertyDsl()
-    builder.apply(block)
-    return setModelBiasAppSpecification(builder.build())
-}
-
-/** Inputs for the model bias job. */
-public inline fun CfnModelBiasJobDefinition.setModelBiasJobInput(
-    block: CfnModelBiasJobDefinitionModelBiasJobInputPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelBiasJobDefinitionModelBiasJobInputPropertyDsl()
-    builder.apply(block)
-    return setModelBiasJobInput(builder.build())
-}
-
-/** The output configuration for monitoring jobs. */
-public inline fun CfnModelBiasJobDefinition.setModelBiasJobOutputConfig(
-    block: CfnModelBiasJobDefinitionMonitoringOutputConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelBiasJobDefinitionMonitoringOutputConfigPropertyDsl()
-    builder.apply(block)
-    return setModelBiasJobOutputConfig(builder.build())
-}
-
-/** The baseline configuration for a model bias job. */
-public inline fun CfnModelBiasJobDefinition.setModelBiasBaselineConfig(
-    block: CfnModelBiasJobDefinitionModelBiasBaselineConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelBiasJobDefinitionModelBiasBaselineConfigPropertyDsl()
-    builder.apply(block)
-    return setModelBiasBaselineConfig(builder.build())
-}
-
-/** Networking options for a model bias job. */
-public inline fun CfnModelBiasJobDefinition.setNetworkConfig(
-    block: CfnModelBiasJobDefinitionNetworkConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelBiasJobDefinitionNetworkConfigPropertyDsl()
-    builder.apply(block)
-    return setNetworkConfig(builder.build())
-}
-
-/** A time limit for how long the monitoring job is allowed to run before stopping. */
-public inline fun CfnModelBiasJobDefinition.setStoppingCondition(
-    block: CfnModelBiasJobDefinitionStoppingConditionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelBiasJobDefinitionStoppingConditionPropertyDsl()
-    builder.apply(block)
-    return setStoppingCondition(builder.build())
+    return setResourceSpec(builder.build())
 }
 
 /** The configuration for the file system and kernels in the SageMaker image. */
@@ -149,159 +66,6 @@ public inline fun CfnCodeRepository.setGitConfig(
     return setGitConfig(builder.build())
 }
 
-/** The content of the model card. */
-public inline fun CfnModelCard.setContent(block: CfnModelCardContentPropertyDsl.() -> Unit = {}) {
-    val builder = CfnModelCardContentPropertyDsl()
-    builder.apply(block)
-    return setContent(builder.build())
-}
-
-/** Information about the user who created or modified one or more of the following:. */
-public inline fun CfnModelCard.setCreatedBy(
-    block: CfnModelCardUserContextPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelCardUserContextPropertyDsl()
-    builder.apply(block)
-    return setCreatedBy(builder.build())
-}
-
-/**
- * Information about the user who created or modified an experiment, trial, trial component, lineage
- * group, project, or model card.
- */
-public inline fun CfnModelCard.setLastModifiedBy(
-    block: CfnModelCardUserContextPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelCardUserContextPropertyDsl()
-    builder.apply(block)
-    return setLastModifiedBy(builder.build())
-}
-
-/** The security configuration used to protect model card data. */
-public inline fun CfnModelCard.setSecurityConfig(
-    block: CfnModelCardSecurityConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelCardSecurityConfigPropertyDsl()
-    builder.apply(block)
-    return setSecurityConfig(builder.build())
-}
-
-/**
- * The configuration object that specifies the monitoring schedule and defines the monitoring job.
- */
-public inline fun CfnMonitoringSchedule.setMonitoringScheduleConfig(
-    block: CfnMonitoringScheduleMonitoringScheduleConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnMonitoringScheduleMonitoringScheduleConfigPropertyDsl()
-    builder.apply(block)
-    return setMonitoringScheduleConfig(builder.build())
-}
-
-/** Describes metadata on the last execution to run, if there was one. */
-public inline fun CfnMonitoringSchedule.setLastMonitoringExecutionSummary(
-    block: CfnMonitoringScheduleMonitoringExecutionSummaryPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnMonitoringScheduleMonitoringExecutionSummaryPropertyDsl()
-    builder.apply(block)
-    return setLastMonitoringExecutionSummary(builder.build())
-}
-
-/** Identifies the resources to deploy for a monitoring job. */
-public inline fun CfnModelExplainabilityJobDefinition.setJobResources(
-    block: CfnModelExplainabilityJobDefinitionMonitoringResourcesPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelExplainabilityJobDefinitionMonitoringResourcesPropertyDsl()
-    builder.apply(block)
-    return setJobResources(builder.build())
-}
-
-/** Configures the model explainability job to run a specified Docker container image. */
-public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityAppSpecification(
-    block:
-        CfnModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationPropertyDsl.(
-        ) -> Unit =
-        {}
-) {
-    val builder =
-        CfnModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationPropertyDsl()
-    builder.apply(block)
-    return setModelExplainabilityAppSpecification(builder.build())
-}
-
-/** Inputs for the model explainability job. */
-public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityJobInput(
-    block: CfnModelExplainabilityJobDefinitionModelExplainabilityJobInputPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelExplainabilityJobDefinitionModelExplainabilityJobInputPropertyDsl()
-    builder.apply(block)
-    return setModelExplainabilityJobInput(builder.build())
-}
-
-/** The output configuration for monitoring jobs. */
-public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityJobOutputConfig(
-    block: CfnModelExplainabilityJobDefinitionMonitoringOutputConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelExplainabilityJobDefinitionMonitoringOutputConfigPropertyDsl()
-    builder.apply(block)
-    return setModelExplainabilityJobOutputConfig(builder.build())
-}
-
-/** The baseline configuration for a model explainability job. */
-public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityBaselineConfig(
-    block:
-        CfnModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigPropertyDsl.() -> Unit =
-        {}
-) {
-    val builder = CfnModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigPropertyDsl()
-    builder.apply(block)
-    return setModelExplainabilityBaselineConfig(builder.build())
-}
-
-/** Networking options for a model explainability job. */
-public inline fun CfnModelExplainabilityJobDefinition.setNetworkConfig(
-    block: CfnModelExplainabilityJobDefinitionNetworkConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelExplainabilityJobDefinitionNetworkConfigPropertyDsl()
-    builder.apply(block)
-    return setNetworkConfig(builder.build())
-}
-
-/** A time limit for how long the monitoring job is allowed to run before stopping. */
-public inline fun CfnModelExplainabilityJobDefinition.setStoppingCondition(
-    block: CfnModelExplainabilityJobDefinitionStoppingConditionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelExplainabilityJobDefinitionStoppingConditionPropertyDsl()
-    builder.apply(block)
-    return setStoppingCondition(builder.build())
-}
-
-/** Specifies configuration for how an endpoint performs asynchronous inference. */
-public inline fun CfnEndpointConfig.setAsyncInferenceConfig(
-    block: CfnEndpointConfigAsyncInferenceConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnEndpointConfigAsyncInferenceConfigPropertyDsl()
-    builder.apply(block)
-    return setAsyncInferenceConfig(builder.build())
-}
-
-/** Specifies how to capture endpoint data for model monitor. */
-public inline fun CfnEndpointConfig.setDataCaptureConfig(
-    block: CfnEndpointConfigDataCaptureConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnEndpointConfigDataCaptureConfigPropertyDsl()
-    builder.apply(block)
-    return setDataCaptureConfig(builder.build())
-}
-
-/**  */
-public inline fun CfnEndpointConfig.setExplainerConfig(
-    block: CfnEndpointConfigExplainerConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnEndpointConfigExplainerConfigPropertyDsl()
-    builder.apply(block)
-    return setExplainerConfig(builder.build())
-}
-
 /** Specifies the container that runs the monitoring job. */
 public inline fun CfnDataQualityJobDefinition.setDataQualityAppSpecification(
     block: CfnDataQualityJobDefinitionDataQualityAppSpecificationPropertyDsl.() -> Unit = {}
@@ -309,6 +73,15 @@ public inline fun CfnDataQualityJobDefinition.setDataQualityAppSpecification(
     val builder = CfnDataQualityJobDefinitionDataQualityAppSpecificationPropertyDsl()
     builder.apply(block)
     return setDataQualityAppSpecification(builder.build())
+}
+
+/** Configures the constraints and baselines for the monitoring job. */
+public inline fun CfnDataQualityJobDefinition.setDataQualityBaselineConfig(
+    block: CfnDataQualityJobDefinitionDataQualityBaselineConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDataQualityJobDefinitionDataQualityBaselineConfigPropertyDsl()
+    builder.apply(block)
+    return setDataQualityBaselineConfig(builder.build())
 }
 
 /** A list of inputs for the monitoring job. */
@@ -338,15 +111,6 @@ public inline fun CfnDataQualityJobDefinition.setJobResources(
     return setJobResources(builder.build())
 }
 
-/** Configures the constraints and baselines for the monitoring job. */
-public inline fun CfnDataQualityJobDefinition.setDataQualityBaselineConfig(
-    block: CfnDataQualityJobDefinitionDataQualityBaselineConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDataQualityJobDefinitionDataQualityBaselineConfigPropertyDsl()
-    builder.apply(block)
-    return setDataQualityBaselineConfig(builder.build())
-}
-
 /** Specifies networking configuration for the monitoring job. */
 public inline fun CfnDataQualityJobDefinition.setNetworkConfig(
     block: CfnDataQualityJobDefinitionNetworkConfigPropertyDsl.() -> Unit = {}
@@ -365,13 +129,86 @@ public inline fun CfnDataQualityJobDefinition.setStoppingCondition(
     return setStoppingCondition(builder.build())
 }
 
-/** A collection of settings that apply to users of Amazon SageMaker Studio. */
-public inline fun CfnUserProfile.setUserSettings(
-    block: CfnUserProfileUserSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnUserProfileUserSettingsPropertyDsl()
+/** Edge device you want to create. */
+public inline fun CfnDevice.setDevice(block: CfnDeviceDevicePropertyDsl.() -> Unit = {}) {
+    val builder = CfnDeviceDevicePropertyDsl()
     builder.apply(block)
-    return setUserSettings(builder.build())
+    return setDevice(builder.build())
+}
+
+/** The output configuration for storing sample data collected by the fleet. */
+public inline fun CfnDeviceFleet.setOutputConfig(
+    block: CfnDeviceFleetEdgeOutputConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDeviceFleetEdgeOutputConfigPropertyDsl()
+    builder.apply(block)
+    return setOutputConfig(builder.build())
+}
+
+/** A collection of settings that apply to spaces of Amazon SageMaker Studio. */
+public inline fun CfnDomain.setDefaultSpaceSettings(
+    block: CfnDomainDefaultSpaceSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainDefaultSpaceSettingsPropertyDsl()
+    builder.apply(block)
+    return setDefaultSpaceSettings(builder.build())
+}
+
+/** The default user settings. */
+public inline fun CfnDomain.setDefaultUserSettings(
+    block: CfnDomainUserSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainUserSettingsPropertyDsl()
+    builder.apply(block)
+    return setDefaultUserSettings(builder.build())
+}
+
+/** A collection of settings that apply to the `SageMaker Domain` . */
+public inline fun CfnDomain.setDomainSettings(
+    block: CfnDomainDomainSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDomainDomainSettingsPropertyDsl()
+    builder.apply(block)
+    return setDomainSettings(builder.build())
+}
+
+/**
+ * The deployment configuration for an endpoint, which contains the desired deployment strategy and
+ * rollback configurations.
+ */
+public inline fun CfnEndpoint.setDeploymentConfig(
+    block: CfnEndpointDeploymentConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnEndpointDeploymentConfigPropertyDsl()
+    builder.apply(block)
+    return setDeploymentConfig(builder.build())
+}
+
+/** Specifies configuration for how an endpoint performs asynchronous inference. */
+public inline fun CfnEndpointConfig.setAsyncInferenceConfig(
+    block: CfnEndpointConfigAsyncInferenceConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnEndpointConfigAsyncInferenceConfigPropertyDsl()
+    builder.apply(block)
+    return setAsyncInferenceConfig(builder.build())
+}
+
+/** Specifies how to capture endpoint data for model monitor. */
+public inline fun CfnEndpointConfig.setDataCaptureConfig(
+    block: CfnEndpointConfigDataCaptureConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnEndpointConfigDataCaptureConfigPropertyDsl()
+    builder.apply(block)
+    return setDataCaptureConfig(builder.build())
+}
+
+/**  */
+public inline fun CfnEndpointConfig.setExplainerConfig(
+    block: CfnEndpointConfigExplainerConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnEndpointConfigExplainerConfigPropertyDsl()
+    builder.apply(block)
+    return setExplainerConfig(builder.build())
 }
 
 /** The Amazon S3 location and configuration for storing inference request and response data. */
@@ -403,34 +240,6 @@ public inline fun CfnInferenceExperiment.setShadowModeConfig(
     val builder = CfnInferenceExperimentShadowModeConfigPropertyDsl()
     builder.apply(block)
     return setShadowModeConfig(builder.build())
-}
-
-/** The output configuration for storing sample data collected by the fleet. */
-public inline fun CfnDeviceFleet.setOutputConfig(
-    block: CfnDeviceFleetEdgeOutputConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDeviceFleetEdgeOutputConfigPropertyDsl()
-    builder.apply(block)
-    return setOutputConfig(builder.build())
-}
-
-/**
- * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type that
- * the version runs on.
- */
-public inline fun CfnApp.setResourceSpec(block: CfnAppResourceSpecPropertyDsl.() -> Unit = {}) {
-    val builder = CfnAppResourceSpecPropertyDsl()
-    builder.apply(block)
-    return setResourceSpec(builder.build())
-}
-
-/** Configures SNS notifications of available or expiring work items for work teams. */
-public inline fun CfnWorkteam.setNotificationConfiguration(
-    block: CfnWorkteamNotificationConfigurationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnWorkteamNotificationConfigurationPropertyDsl()
-    builder.apply(block)
-    return setNotificationConfiguration(builder.build())
 }
 
 /** Specifies details of how containers in a multi-container endpoint are called. */
@@ -470,110 +279,173 @@ public inline fun CfnModel.setVpcConfig(block: CfnModelVpcConfigPropertyDsl.() -
     return setVpcConfig(builder.build())
 }
 
-/** A collection of space settings. */
-public inline fun CfnSpace.setSpaceSettings(
-    block: CfnSpaceSpaceSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnSpaceSpaceSettingsPropertyDsl()
-    builder.apply(block)
-    return setSpaceSettings(builder.build())
-}
-
 /** Identifies the resources to deploy for a monitoring job. */
-public inline fun CfnModelQualityJobDefinition.setJobResources(
-    block: CfnModelQualityJobDefinitionMonitoringResourcesPropertyDsl.() -> Unit = {}
+public inline fun CfnModelBiasJobDefinition.setJobResources(
+    block: CfnModelBiasJobDefinitionMonitoringResourcesPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnModelQualityJobDefinitionMonitoringResourcesPropertyDsl()
+    val builder = CfnModelBiasJobDefinitionMonitoringResourcesPropertyDsl()
     builder.apply(block)
     return setJobResources(builder.build())
 }
 
-/** Container image configuration object for the monitoring job. */
-public inline fun CfnModelQualityJobDefinition.setModelQualityAppSpecification(
-    block: CfnModelQualityJobDefinitionModelQualityAppSpecificationPropertyDsl.() -> Unit = {}
+/** Configures the model bias job to run a specified Docker container image. */
+public inline fun CfnModelBiasJobDefinition.setModelBiasAppSpecification(
+    block: CfnModelBiasJobDefinitionModelBiasAppSpecificationPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnModelQualityJobDefinitionModelQualityAppSpecificationPropertyDsl()
+    val builder = CfnModelBiasJobDefinitionModelBiasAppSpecificationPropertyDsl()
     builder.apply(block)
-    return setModelQualityAppSpecification(builder.build())
+    return setModelBiasAppSpecification(builder.build())
 }
 
-/** A list of the inputs that are monitored. */
-public inline fun CfnModelQualityJobDefinition.setModelQualityJobInput(
-    block: CfnModelQualityJobDefinitionModelQualityJobInputPropertyDsl.() -> Unit = {}
+/** The baseline configuration for a model bias job. */
+public inline fun CfnModelBiasJobDefinition.setModelBiasBaselineConfig(
+    block: CfnModelBiasJobDefinitionModelBiasBaselineConfigPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnModelQualityJobDefinitionModelQualityJobInputPropertyDsl()
+    val builder = CfnModelBiasJobDefinitionModelBiasBaselineConfigPropertyDsl()
     builder.apply(block)
-    return setModelQualityJobInput(builder.build())
+    return setModelBiasBaselineConfig(builder.build())
+}
+
+/** Inputs for the model bias job. */
+public inline fun CfnModelBiasJobDefinition.setModelBiasJobInput(
+    block: CfnModelBiasJobDefinitionModelBiasJobInputPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelBiasJobDefinitionModelBiasJobInputPropertyDsl()
+    builder.apply(block)
+    return setModelBiasJobInput(builder.build())
 }
 
 /** The output configuration for monitoring jobs. */
-public inline fun CfnModelQualityJobDefinition.setModelQualityJobOutputConfig(
-    block: CfnModelQualityJobDefinitionMonitoringOutputConfigPropertyDsl.() -> Unit = {}
+public inline fun CfnModelBiasJobDefinition.setModelBiasJobOutputConfig(
+    block: CfnModelBiasJobDefinitionMonitoringOutputConfigPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnModelQualityJobDefinitionMonitoringOutputConfigPropertyDsl()
+    val builder = CfnModelBiasJobDefinitionMonitoringOutputConfigPropertyDsl()
     builder.apply(block)
-    return setModelQualityJobOutputConfig(builder.build())
+    return setModelBiasJobOutputConfig(builder.build())
 }
 
-/** Specifies the constraints and baselines for the monitoring job. */
-public inline fun CfnModelQualityJobDefinition.setModelQualityBaselineConfig(
-    block: CfnModelQualityJobDefinitionModelQualityBaselineConfigPropertyDsl.() -> Unit = {}
+/** Networking options for a model bias job. */
+public inline fun CfnModelBiasJobDefinition.setNetworkConfig(
+    block: CfnModelBiasJobDefinitionNetworkConfigPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnModelQualityJobDefinitionModelQualityBaselineConfigPropertyDsl()
-    builder.apply(block)
-    return setModelQualityBaselineConfig(builder.build())
-}
-
-/** Specifies the network configuration for the monitoring job. */
-public inline fun CfnModelQualityJobDefinition.setNetworkConfig(
-    block: CfnModelQualityJobDefinitionNetworkConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnModelQualityJobDefinitionNetworkConfigPropertyDsl()
+    val builder = CfnModelBiasJobDefinitionNetworkConfigPropertyDsl()
     builder.apply(block)
     return setNetworkConfig(builder.build())
 }
 
 /** A time limit for how long the monitoring job is allowed to run before stopping. */
-public inline fun CfnModelQualityJobDefinition.setStoppingCondition(
-    block: CfnModelQualityJobDefinitionStoppingConditionPropertyDsl.() -> Unit = {}
+public inline fun CfnModelBiasJobDefinition.setStoppingCondition(
+    block: CfnModelBiasJobDefinitionStoppingConditionPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnModelQualityJobDefinitionStoppingConditionPropertyDsl()
+    val builder = CfnModelBiasJobDefinitionStoppingConditionPropertyDsl()
     builder.apply(block)
     return setStoppingCondition(builder.build())
 }
 
-/** The default user settings. */
-public inline fun CfnDomain.setDefaultUserSettings(
-    block: CfnDomainUserSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnDomainUserSettingsPropertyDsl()
+/** The content of the model card. */
+public inline fun CfnModelCard.setContent(block: CfnModelCardContentPropertyDsl.() -> Unit = {}) {
+    val builder = CfnModelCardContentPropertyDsl()
     builder.apply(block)
-    return setDefaultUserSettings(builder.build())
+    return setContent(builder.build())
 }
 
-/** A collection of settings that apply to spaces of Amazon SageMaker Studio. */
-public inline fun CfnDomain.setDefaultSpaceSettings(
-    block: CfnDomainDefaultSpaceSettingsPropertyDsl.() -> Unit = {}
+/** Information about the user who created or modified one or more of the following:. */
+public inline fun CfnModelCard.setCreatedBy(
+    block: CfnModelCardUserContextPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnDomainDefaultSpaceSettingsPropertyDsl()
+    val builder = CfnModelCardUserContextPropertyDsl()
     builder.apply(block)
-    return setDefaultSpaceSettings(builder.build())
+    return setCreatedBy(builder.build())
 }
 
-/** A collection of settings that apply to the `SageMaker Domain` . */
-public inline fun CfnDomain.setDomainSettings(
-    block: CfnDomainDomainSettingsPropertyDsl.() -> Unit = {}
+/**
+ * Information about the user who created or modified an experiment, trial, trial component, lineage
+ * group, project, or model card.
+ */
+public inline fun CfnModelCard.setLastModifiedBy(
+    block: CfnModelCardUserContextPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnDomainDomainSettingsPropertyDsl()
+    val builder = CfnModelCardUserContextPropertyDsl()
     builder.apply(block)
-    return setDomainSettings(builder.build())
+    return setLastModifiedBy(builder.build())
 }
 
-/** Edge device you want to create. */
-public inline fun CfnDevice.setDevice(block: CfnDeviceDevicePropertyDsl.() -> Unit = {}) {
-    val builder = CfnDeviceDevicePropertyDsl()
+/** The security configuration used to protect model card data. */
+public inline fun CfnModelCard.setSecurityConfig(
+    block: CfnModelCardSecurityConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelCardSecurityConfigPropertyDsl()
     builder.apply(block)
-    return setDevice(builder.build())
+    return setSecurityConfig(builder.build())
+}
+
+/** Identifies the resources to deploy for a monitoring job. */
+public inline fun CfnModelExplainabilityJobDefinition.setJobResources(
+    block: CfnModelExplainabilityJobDefinitionMonitoringResourcesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelExplainabilityJobDefinitionMonitoringResourcesPropertyDsl()
+    builder.apply(block)
+    return setJobResources(builder.build())
+}
+
+/** Configures the model explainability job to run a specified Docker container image. */
+public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityAppSpecification(
+    block:
+        CfnModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationPropertyDsl.(
+        ) -> Unit =
+        {}
+) {
+    val builder =
+        CfnModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationPropertyDsl()
+    builder.apply(block)
+    return setModelExplainabilityAppSpecification(builder.build())
+}
+
+/** The baseline configuration for a model explainability job. */
+public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityBaselineConfig(
+    block:
+        CfnModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigPropertyDsl.() -> Unit =
+        {}
+) {
+    val builder = CfnModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigPropertyDsl()
+    builder.apply(block)
+    return setModelExplainabilityBaselineConfig(builder.build())
+}
+
+/** Inputs for the model explainability job. */
+public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityJobInput(
+    block: CfnModelExplainabilityJobDefinitionModelExplainabilityJobInputPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelExplainabilityJobDefinitionModelExplainabilityJobInputPropertyDsl()
+    builder.apply(block)
+    return setModelExplainabilityJobInput(builder.build())
+}
+
+/** The output configuration for monitoring jobs. */
+public inline fun CfnModelExplainabilityJobDefinition.setModelExplainabilityJobOutputConfig(
+    block: CfnModelExplainabilityJobDefinitionMonitoringOutputConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelExplainabilityJobDefinitionMonitoringOutputConfigPropertyDsl()
+    builder.apply(block)
+    return setModelExplainabilityJobOutputConfig(builder.build())
+}
+
+/** Networking options for a model explainability job. */
+public inline fun CfnModelExplainabilityJobDefinition.setNetworkConfig(
+    block: CfnModelExplainabilityJobDefinitionNetworkConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelExplainabilityJobDefinitionNetworkConfigPropertyDsl()
+    builder.apply(block)
+    return setNetworkConfig(builder.build())
+}
+
+/** A time limit for how long the monitoring job is allowed to run before stopping. */
+public inline fun CfnModelExplainabilityJobDefinition.setStoppingCondition(
+    block: CfnModelExplainabilityJobDefinitionStoppingConditionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelExplainabilityJobDefinitionStoppingConditionPropertyDsl()
+    builder.apply(block)
+    return setStoppingCondition(builder.build())
 }
 
 /**
@@ -640,4 +512,132 @@ public inline fun CfnModelPackage.setValidationSpecification(
     val builder = CfnModelPackageValidationSpecificationPropertyDsl()
     builder.apply(block)
     return setValidationSpecification(builder.build())
+}
+
+/** Identifies the resources to deploy for a monitoring job. */
+public inline fun CfnModelQualityJobDefinition.setJobResources(
+    block: CfnModelQualityJobDefinitionMonitoringResourcesPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelQualityJobDefinitionMonitoringResourcesPropertyDsl()
+    builder.apply(block)
+    return setJobResources(builder.build())
+}
+
+/** Container image configuration object for the monitoring job. */
+public inline fun CfnModelQualityJobDefinition.setModelQualityAppSpecification(
+    block: CfnModelQualityJobDefinitionModelQualityAppSpecificationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelQualityJobDefinitionModelQualityAppSpecificationPropertyDsl()
+    builder.apply(block)
+    return setModelQualityAppSpecification(builder.build())
+}
+
+/** Specifies the constraints and baselines for the monitoring job. */
+public inline fun CfnModelQualityJobDefinition.setModelQualityBaselineConfig(
+    block: CfnModelQualityJobDefinitionModelQualityBaselineConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelQualityJobDefinitionModelQualityBaselineConfigPropertyDsl()
+    builder.apply(block)
+    return setModelQualityBaselineConfig(builder.build())
+}
+
+/** A list of the inputs that are monitored. */
+public inline fun CfnModelQualityJobDefinition.setModelQualityJobInput(
+    block: CfnModelQualityJobDefinitionModelQualityJobInputPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelQualityJobDefinitionModelQualityJobInputPropertyDsl()
+    builder.apply(block)
+    return setModelQualityJobInput(builder.build())
+}
+
+/** The output configuration for monitoring jobs. */
+public inline fun CfnModelQualityJobDefinition.setModelQualityJobOutputConfig(
+    block: CfnModelQualityJobDefinitionMonitoringOutputConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelQualityJobDefinitionMonitoringOutputConfigPropertyDsl()
+    builder.apply(block)
+    return setModelQualityJobOutputConfig(builder.build())
+}
+
+/** Specifies the network configuration for the monitoring job. */
+public inline fun CfnModelQualityJobDefinition.setNetworkConfig(
+    block: CfnModelQualityJobDefinitionNetworkConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelQualityJobDefinitionNetworkConfigPropertyDsl()
+    builder.apply(block)
+    return setNetworkConfig(builder.build())
+}
+
+/** A time limit for how long the monitoring job is allowed to run before stopping. */
+public inline fun CfnModelQualityJobDefinition.setStoppingCondition(
+    block: CfnModelQualityJobDefinitionStoppingConditionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnModelQualityJobDefinitionStoppingConditionPropertyDsl()
+    builder.apply(block)
+    return setStoppingCondition(builder.build())
+}
+
+/** Describes metadata on the last execution to run, if there was one. */
+public inline fun CfnMonitoringSchedule.setLastMonitoringExecutionSummary(
+    block: CfnMonitoringScheduleMonitoringExecutionSummaryPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnMonitoringScheduleMonitoringExecutionSummaryPropertyDsl()
+    builder.apply(block)
+    return setLastMonitoringExecutionSummary(builder.build())
+}
+
+/**
+ * The configuration object that specifies the monitoring schedule and defines the monitoring job.
+ */
+public inline fun CfnMonitoringSchedule.setMonitoringScheduleConfig(
+    block: CfnMonitoringScheduleMonitoringScheduleConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnMonitoringScheduleMonitoringScheduleConfigPropertyDsl()
+    builder.apply(block)
+    return setMonitoringScheduleConfig(builder.build())
+}
+
+/** Information on the IMDS configuration of the notebook instance. */
+public inline fun CfnNotebookInstance.setInstanceMetadataServiceConfiguration(
+    block: CfnNotebookInstanceInstanceMetadataServiceConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnNotebookInstanceInstanceMetadataServiceConfigurationPropertyDsl()
+    builder.apply(block)
+    return setInstanceMetadataServiceConfiguration(builder.build())
+}
+
+/** Provisioned ServiceCatalog Details. */
+public inline fun CfnProject.setServiceCatalogProvisionedProductDetails(
+    block: CfnProjectServiceCatalogProvisionedProductDetailsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnProjectServiceCatalogProvisionedProductDetailsPropertyDsl()
+    builder.apply(block)
+    return setServiceCatalogProvisionedProductDetails(builder.build())
+}
+
+/** A collection of space settings. */
+public inline fun CfnSpace.setSpaceSettings(
+    block: CfnSpaceSpaceSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSpaceSpaceSettingsPropertyDsl()
+    builder.apply(block)
+    return setSpaceSettings(builder.build())
+}
+
+/** A collection of settings that apply to users of Amazon SageMaker Studio. */
+public inline fun CfnUserProfile.setUserSettings(
+    block: CfnUserProfileUserSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnUserProfileUserSettingsPropertyDsl()
+    builder.apply(block)
+    return setUserSettings(builder.build())
+}
+
+/** Configures SNS notifications of available or expiring work items for work teams. */
+public inline fun CfnWorkteam.setNotificationConfiguration(
+    block: CfnWorkteamNotificationConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnWorkteamNotificationConfigurationPropertyDsl()
+    builder.apply(block)
+    return setNotificationConfiguration(builder.build())
 }

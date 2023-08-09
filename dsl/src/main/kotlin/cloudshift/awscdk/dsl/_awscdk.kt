@@ -3398,6 +3398,7 @@ public object awscdk {
      * "dockerBuildArgsKey", "dockerBuildArgs"))
      * .dockerBuildSecrets(Map.of(
      * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+     * .dockerBuildSsh("dockerBuildSsh")
      * .dockerBuildTarget("dockerBuildTarget")
      * .dockerCacheFrom(List.of(DockerCacheOption.builder()
      * .type("type")

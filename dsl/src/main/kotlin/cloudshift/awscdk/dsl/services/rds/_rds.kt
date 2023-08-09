@@ -2444,6 +2444,7 @@ public object rds {
      * .autoMinorVersionUpgrade(false)
      * .enablePerformanceInsights(false)
      * .instanceIdentifier("instanceIdentifier")
+     * .isFromLegacyInstanceProps(false)
      * .parameterGroup(parameterGroup)
      * .parameters(Map.of(
      * "parametersKey", "parameters"))

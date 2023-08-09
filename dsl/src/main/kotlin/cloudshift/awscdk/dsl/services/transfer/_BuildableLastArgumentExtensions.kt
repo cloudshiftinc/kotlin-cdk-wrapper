@@ -15,17 +15,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.transfer.CfnServer
 import software.amazon.awscdk.services.transfer.CfnUser
 
-/**
- * Specifies the full POSIX identity, including user ID ( `Uid` ), group ID ( `Gid` ), and any
- * secondary groups IDs ( `SecondaryGids` ), that controls your users' access to your Amazon Elastic
- * File System (Amazon EFS) file systems.
- */
-public inline fun CfnUser.setPosixProfile(block: CfnUserPosixProfilePropertyDsl.() -> Unit = {}) {
-    val builder = CfnUserPosixProfilePropertyDsl()
-    builder.apply(block)
-    return setPosixProfile(builder.build())
-}
-
 /** The virtual private cloud (VPC) endpoint settings that are configured for your server. */
 public inline fun CfnServer.setEndpointDetails(
     block: CfnServerEndpointDetailsPropertyDsl.() -> Unit = {}
@@ -66,4 +55,15 @@ public inline fun CfnServer.setWorkflowDetails(
     val builder = CfnServerWorkflowDetailsPropertyDsl()
     builder.apply(block)
     return setWorkflowDetails(builder.build())
+}
+
+/**
+ * Specifies the full POSIX identity, including user ID ( `Uid` ), group ID ( `Gid` ), and any
+ * secondary groups IDs ( `SecondaryGids` ), that controls your users' access to your Amazon Elastic
+ * File System (Amazon EFS) file systems.
+ */
+public inline fun CfnUser.setPosixProfile(block: CfnUserPosixProfilePropertyDsl.() -> Unit = {}) {
+    val builder = CfnUserPosixProfilePropertyDsl()
+    builder.apply(block)
+    return setPosixProfile(builder.build())
 }

@@ -25,6 +25,24 @@ public inline fun CfnConnector.setConnectorProvisioningConfig(
     return setConnectorProvisioningConfig(builder.build())
 }
 
+/** Defines the connector-specific configuration and credentials. */
+public inline fun CfnConnectorProfile.setConnectorProfileConfig(
+    block: CfnConnectorProfileConnectorProfileConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnConnectorProfileConnectorProfileConfigPropertyDsl()
+    builder.apply(block)
+    return setConnectorProfileConfig(builder.build())
+}
+
+/** Configurations of metadata catalog of the flow. */
+public inline fun CfnFlow.setMetadataCatalogConfig(
+    block: CfnFlowMetadataCatalogConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFlowMetadataCatalogConfigPropertyDsl()
+    builder.apply(block)
+    return setMetadataCatalogConfig(builder.build())
+}
+
 /** Contains information about the configuration of the source connector used in the flow. */
 public inline fun CfnFlow.setSourceFlowConfig(
     block: CfnFlowSourceFlowConfigPropertyDsl.() -> Unit = {}
@@ -39,22 +57,4 @@ public inline fun CfnFlow.setTriggerConfig(block: CfnFlowTriggerConfigPropertyDs
     val builder = CfnFlowTriggerConfigPropertyDsl()
     builder.apply(block)
     return setTriggerConfig(builder.build())
-}
-
-/** Configurations of metadata catalog of the flow. */
-public inline fun CfnFlow.setMetadataCatalogConfig(
-    block: CfnFlowMetadataCatalogConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnFlowMetadataCatalogConfigPropertyDsl()
-    builder.apply(block)
-    return setMetadataCatalogConfig(builder.build())
-}
-
-/** Defines the connector-specific configuration and credentials. */
-public inline fun CfnConnectorProfile.setConnectorProfileConfig(
-    block: CfnConnectorProfileConnectorProfileConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnConnectorProfileConnectorProfileConfigPropertyDsl()
-    builder.apply(block)
-    return setConnectorProfileConfig(builder.build())
 }

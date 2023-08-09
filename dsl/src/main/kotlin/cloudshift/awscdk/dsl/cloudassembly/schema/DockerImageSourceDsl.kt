@@ -46,6 +46,7 @@ import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
  * "dockerBuildArgsKey", "dockerBuildArgs"))
  * .dockerBuildSecrets(Map.of(
  * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+ * .dockerBuildSsh("dockerBuildSsh")
  * .dockerBuildTarget("dockerBuildTarget")
  * .dockerFile("dockerFile")
  * .dockerOutputs(List.of("dockerOutputs"))
@@ -103,6 +104,11 @@ public class DockerImageSourceDsl {
     /** @param dockerBuildSecrets Additional build secrets. Only allowed when `directory` is set. */
     public fun dockerBuildSecrets(dockerBuildSecrets: Map<String, String>) {
         cdkBuilder.dockerBuildSecrets(dockerBuildSecrets)
+    }
+
+    /** @param dockerBuildSsh SSH agent socket or keys. Requires building with docker buildkit. */
+    public fun dockerBuildSsh(dockerBuildSsh: String) {
+        cdkBuilder.dockerBuildSsh(dockerBuildSsh)
     }
 
     /**

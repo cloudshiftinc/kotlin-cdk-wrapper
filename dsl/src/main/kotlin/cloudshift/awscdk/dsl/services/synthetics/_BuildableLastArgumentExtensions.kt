@@ -14,23 +14,6 @@ package cloudshift.awscdk.dsl.services.synthetics
 import kotlin.Unit
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
-/** Use this structure to input your script code for the canary. */
-public inline fun CfnCanary.setCode(block: CfnCanaryCodePropertyDsl.() -> Unit = {}) {
-    val builder = CfnCanaryCodePropertyDsl()
-    builder.apply(block)
-    return setCode(builder.build())
-}
-
-/**
- * A structure that contains information about how often the canary is to run, and when these runs
- * are to stop.
- */
-public inline fun CfnCanary.setSchedule(block: CfnCanarySchedulePropertyDsl.() -> Unit = {}) {
-    val builder = CfnCanarySchedulePropertyDsl()
-    builder.apply(block)
-    return setSchedule(builder.build())
-}
-
 /**
  * A structure that contains the configuration for canary artifacts, including the
  * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3.
@@ -43,11 +26,28 @@ public inline fun CfnCanary.setArtifactConfig(
     return setArtifactConfig(builder.build())
 }
 
+/** Use this structure to input your script code for the canary. */
+public inline fun CfnCanary.setCode(block: CfnCanaryCodePropertyDsl.() -> Unit = {}) {
+    val builder = CfnCanaryCodePropertyDsl()
+    builder.apply(block)
+    return setCode(builder.build())
+}
+
 /** A structure that contains input information for a canary run. */
 public inline fun CfnCanary.setRunConfig(block: CfnCanaryRunConfigPropertyDsl.() -> Unit = {}) {
     val builder = CfnCanaryRunConfigPropertyDsl()
     builder.apply(block)
     return setRunConfig(builder.build())
+}
+
+/**
+ * A structure that contains information about how often the canary is to run, and when these runs
+ * are to stop.
+ */
+public inline fun CfnCanary.setSchedule(block: CfnCanarySchedulePropertyDsl.() -> Unit = {}) {
+    val builder = CfnCanarySchedulePropertyDsl()
+    builder.apply(block)
+    return setSchedule(builder.build())
 }
 
 /**

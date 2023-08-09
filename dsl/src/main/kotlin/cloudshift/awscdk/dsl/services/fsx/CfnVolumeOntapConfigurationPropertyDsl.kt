@@ -32,6 +32,35 @@ import software.amazon.awscdk.services.fsx.CfnVolume
  * .junctionPath("junctionPath")
  * .ontapVolumeType("ontapVolumeType")
  * .securityStyle("securityStyle")
+ * .snaplockConfiguration(SnaplockConfigurationProperty.builder()
+ * .snaplockType("snaplockType")
+ * // the properties below are optional
+ * .auditLogVolume("auditLogVolume")
+ * .autocommitPeriod(AutocommitPeriodProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .value(123)
+ * .build())
+ * .privilegedDelete("privilegedDelete")
+ * .retentionPeriod(SnaplockRetentionPeriodProperty.builder()
+ * .defaultRetention(RetentionPeriodProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .value(123)
+ * .build())
+ * .maximumRetention(RetentionPeriodProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .value(123)
+ * .build())
+ * .minimumRetention(RetentionPeriodProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .value(123)
+ * .build())
+ * .build())
+ * .volumeAppendModeEnabled("volumeAppendModeEnabled")
+ * .build())
  * .snapshotPolicy("snapshotPolicy")
  * .storageEfficiencyEnabled("storageEfficiencyEnabled")
  * .tieringPolicy(TieringPolicyProperty.builder()
@@ -104,11 +133,28 @@ public class CfnVolumeOntapConfigurationPropertyDsl {
 
     /**
      * @param sizeInMegabytes Specifies the size of the volume, in megabytes (MB), that you are
-     *   creating. Provide any whole number in the range of 20–104857600 to specify the size of the
-     *   volume.
+     *   creating.
      */
     public fun sizeInMegabytes(sizeInMegabytes: String) {
         cdkBuilder.sizeInMegabytes(sizeInMegabytes)
+    }
+
+    /**
+     * @param snaplockConfiguration The SnapLock configuration object for an FSx for ONTAP SnapLock
+     *   volume.
+     */
+    public fun snaplockConfiguration(snaplockConfiguration: IResolvable) {
+        cdkBuilder.snaplockConfiguration(snaplockConfiguration)
+    }
+
+    /**
+     * @param snaplockConfiguration The SnapLock configuration object for an FSx for ONTAP SnapLock
+     *   volume.
+     */
+    public fun snaplockConfiguration(
+        snaplockConfiguration: CfnVolume.SnaplockConfigurationProperty
+    ) {
+        cdkBuilder.snaplockConfiguration(snaplockConfiguration)
     }
 
     /**

@@ -149,6 +149,9 @@ public class CfnGraphQLApiDsl(
      * The value that indicates whether the GraphQL API is a standard API ( `GRAPHQL` ) or merged
      * API ( `MERGED` ).
      *
+     * *WARNING* : If the `ApiType` has not been defined, *explicitly* setting it to `GRAPHQL` in a
+     * template/stack update will result in an API replacement and new DNS values.
+     *
      * The following values are valid:
      *
      * `GRAPHQL | MERGED`
@@ -346,6 +349,9 @@ public class CfnGraphQLApiDsl(
      * Sets the scope of the GraphQL API to public ( `GLOBAL` ) or private ( `PRIVATE` ).
      *
      * By default, the scope is set to `Global` if no value is provided.
+     *
+     * *WARNING* : If `Visibility` has not been defined, *explicitly* setting it to `GLOBAL` in a
+     * template/stack update will result in an API replacement and new DNS values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-visibility)
      *

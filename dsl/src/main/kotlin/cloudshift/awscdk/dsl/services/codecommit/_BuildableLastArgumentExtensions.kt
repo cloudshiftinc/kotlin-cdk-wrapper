@@ -23,6 +23,16 @@ import software.amazon.awscdk.services.codestarnotifications.INotificationRuleTa
 import software.amazon.awscdk.services.events.Rule
 
 /**
+ * Information about code to be committed to a repository after it is created in an AWS
+ * CloudFormation stack.
+ */
+public inline fun CfnRepository.setCode(block: CfnRepositoryCodePropertyDsl.() -> Unit = {}) {
+    val builder = CfnRepositoryCodePropertyDsl()
+    builder.apply(block)
+    return setCode(builder.build())
+}
+
+/**
  * Defines a CodeStar Notification rule triggered when the project events specified by you are
  * emitted. Similar to `onEvent` API.
  *
@@ -609,14 +619,4 @@ public inline fun Repository.onStateChange(
     val builder = OnEventOptionsDsl()
     builder.apply(block)
     return onStateChange(id, builder.build())
-}
-
-/**
- * Information about code to be committed to a repository after it is created in an AWS
- * CloudFormation stack.
- */
-public inline fun CfnRepository.setCode(block: CfnRepositoryCodePropertyDsl.() -> Unit = {}) {
-    val builder = CfnRepositoryCodePropertyDsl()
-    builder.apply(block)
-    return setCode(builder.build())
 }

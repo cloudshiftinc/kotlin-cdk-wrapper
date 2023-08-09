@@ -99,8 +99,8 @@ public class CfnListenerPropsDsl {
     }
 
     /**
-     * @param port The listener port. You can specify a value from `1` to `65535` . For HTTP, the
-     *   default is `80` . For HTTPS, the default is `443` .
+     * @param port The listener port. You can specify a value from 1 to 65535. For HTTP, the default
+     *   is 80. For HTTPS, the default is 443.
      */
     public fun port(port: Number) {
         cdkBuilder.port(port)

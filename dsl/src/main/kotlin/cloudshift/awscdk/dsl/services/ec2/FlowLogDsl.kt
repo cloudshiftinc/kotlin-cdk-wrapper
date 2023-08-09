@@ -65,10 +65,10 @@ public class FlowLogDsl(
     /**
      * The name of the FlowLog.
      *
-     * It is not recommended to use an explicit name.
+     * Since the FlowLog resource doesn't support providing a physical name, the value provided here
+     * will be recorded in the `Name` tag.
      *
-     * Default: If you don't specify a flowLogName, AWS CloudFormation generates a unique physical
-     * ID and uses that ID for the group name.
+     * Default: CDK generated name
      *
      * @param flowLogName The name of the FlowLog.
      */

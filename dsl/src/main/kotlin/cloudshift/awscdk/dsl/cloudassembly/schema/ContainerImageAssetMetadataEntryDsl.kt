@@ -50,6 +50,11 @@ public class ContainerImageAssetMetadataEntryDsl {
         cdkBuilder.buildSecrets(buildSecrets)
     }
 
+    /** @param buildSsh SSH agent socket or keys to pass to the `docker build` command. */
+    public fun buildSsh(buildSsh: String) {
+        cdkBuilder.buildSsh(buildSsh)
+    }
+
     /** @param cacheFrom Cache from options to pass to the `docker build` command. */
     public fun cacheFrom(cacheFrom: ContainerImageAssetCacheOptionDsl.() -> Unit) {
         _cacheFrom.add(ContainerImageAssetCacheOptionDsl().apply(cacheFrom).build())

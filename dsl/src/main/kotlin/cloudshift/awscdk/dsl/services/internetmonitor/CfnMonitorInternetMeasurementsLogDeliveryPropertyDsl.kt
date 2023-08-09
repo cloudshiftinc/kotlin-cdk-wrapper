@@ -16,6 +16,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 
 /**
+ * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

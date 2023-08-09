@@ -16,6 +16,7 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.AaaaRecord
+import software.amazon.awscdk.services.route53.GeoLocation
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordTarget
 import software.constructs.Construct
@@ -71,6 +72,16 @@ public class AaaaRecordDsl(
      */
     public fun deleteExisting(deleteExisting: Boolean) {
         cdkBuilder.deleteExisting(deleteExisting)
+    }
+
+    /**
+     * The geographical origin for this record to return DNS records based on the user's location.
+     *
+     * @param geoLocation The geographical origin for this record to return DNS records based on the
+     *   user's location.
+     */
+    public fun geoLocation(geoLocation: GeoLocation) {
+        cdkBuilder.geoLocation(geoLocation)
     }
 
     /**

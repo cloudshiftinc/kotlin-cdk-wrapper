@@ -33,8 +33,12 @@ import software.amazon.awscdk.services.connect.CfnPhoneNumber
 import software.amazon.awscdk.services.connect.CfnPhoneNumberProps
 import software.amazon.awscdk.services.connect.CfnPrompt
 import software.amazon.awscdk.services.connect.CfnPromptProps
+import software.amazon.awscdk.services.connect.CfnQueue
+import software.amazon.awscdk.services.connect.CfnQueueProps
 import software.amazon.awscdk.services.connect.CfnQuickConnect
 import software.amazon.awscdk.services.connect.CfnQuickConnectProps
+import software.amazon.awscdk.services.connect.CfnRoutingProfile
+import software.amazon.awscdk.services.connect.CfnRoutingProfileProps
 import software.amazon.awscdk.services.connect.CfnRule
 import software.amazon.awscdk.services.connect.CfnRuleProps
 import software.amazon.awscdk.services.connect.CfnSecurityKey
@@ -1815,6 +1819,110 @@ public object connect {
     }
 
     /**
+     * Contains information about a queue.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnQueue cfnQueue = CfnQueue.Builder.create(this, "MyCfnQueue")
+     * .hoursOfOperationArn("hoursOfOperationArn")
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * // the properties below are optional
+     * .description("description")
+     * .maxContacts(123)
+     * .outboundCallerConfig(OutboundCallerConfigProperty.builder()
+     * .outboundCallerIdName("outboundCallerIdName")
+     * .outboundCallerIdNumberArn("outboundCallerIdNumberArn")
+     * .outboundFlowArn("outboundFlowArn")
+     * .build())
+     * .quickConnectArns(List.of("quickConnectArns"))
+     * .status("status")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html)
+     */
+    public inline fun cfnQueue(
+        scope: Construct,
+        id: String,
+        block: CfnQueueDsl.() -> Unit = {},
+    ): CfnQueue {
+        val builder = CfnQueueDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The outbound caller ID name, number, and outbound whisper flow.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * OutboundCallerConfigProperty outboundCallerConfigProperty =
+     * OutboundCallerConfigProperty.builder()
+     * .outboundCallerIdName("outboundCallerIdName")
+     * .outboundCallerIdNumberArn("outboundCallerIdNumberArn")
+     * .outboundFlowArn("outboundFlowArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-queue-outboundcallerconfig.html)
+     */
+    public inline fun cfnQueueOutboundCallerConfigProperty(
+        block: CfnQueueOutboundCallerConfigPropertyDsl.() -> Unit = {}
+    ): CfnQueue.OutboundCallerConfigProperty {
+        val builder = CfnQueueOutboundCallerConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnQueue`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnQueueProps cfnQueueProps = CfnQueueProps.builder()
+     * .hoursOfOperationArn("hoursOfOperationArn")
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * // the properties below are optional
+     * .description("description")
+     * .maxContacts(123)
+     * .outboundCallerConfig(OutboundCallerConfigProperty.builder()
+     * .outboundCallerIdName("outboundCallerIdName")
+     * .outboundCallerIdNumberArn("outboundCallerIdNumberArn")
+     * .outboundFlowArn("outboundFlowArn")
+     * .build())
+     * .quickConnectArns(List.of("quickConnectArns"))
+     * .status("status")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html)
+     */
+    public inline fun cfnQueueProps(block: CfnQueuePropsDsl.() -> Unit = {}): CfnQueueProps {
+        val builder = CfnQueuePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies a quick connect for an Amazon Connect instance.
      *
      * Example:
@@ -2015,6 +2123,211 @@ public object connect {
         block: CfnQuickConnectUserQuickConnectConfigPropertyDsl.() -> Unit = {}
     ): CfnQuickConnect.UserQuickConnectConfigProperty {
         val builder = CfnQuickConnectUserQuickConnectConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates a new routing profile.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnRoutingProfile cfnRoutingProfile = CfnRoutingProfile.Builder.create(this,
+     * "MyCfnRoutingProfile")
+     * .defaultOutboundQueueArn("defaultOutboundQueueArn")
+     * .description("description")
+     * .instanceArn("instanceArn")
+     * .mediaConcurrencies(List.of(MediaConcurrencyProperty.builder()
+     * .channel("channel")
+     * .concurrency(123)
+     * // the properties below are optional
+     * .crossChannelBehavior(CrossChannelBehaviorProperty.builder()
+     * .behaviorType("behaviorType")
+     * .build())
+     * .build()))
+     * .name("name")
+     * // the properties below are optional
+     * .queueConfigs(List.of(RoutingProfileQueueConfigProperty.builder()
+     * .delay(123)
+     * .priority(123)
+     * .queueReference(RoutingProfileQueueReferenceProperty.builder()
+     * .channel("channel")
+     * .queueArn("queueArn")
+     * .build())
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html)
+     */
+    public inline fun cfnRoutingProfile(
+        scope: Construct,
+        id: String,
+        block: CfnRoutingProfileDsl.() -> Unit = {},
+    ): CfnRoutingProfile {
+        val builder = CfnRoutingProfileDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Defines the cross-channel routing behavior that allows an agent working on a contact in one
+     * channel to be offered a contact from a different channel.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CrossChannelBehaviorProperty crossChannelBehaviorProperty =
+     * CrossChannelBehaviorProperty.builder()
+     * .behaviorType("behaviorType")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-routingprofile-crosschannelbehavior.html)
+     */
+    public inline fun cfnRoutingProfileCrossChannelBehaviorProperty(
+        block: CfnRoutingProfileCrossChannelBehaviorPropertyDsl.() -> Unit = {}
+    ): CfnRoutingProfile.CrossChannelBehaviorProperty {
+        val builder = CfnRoutingProfileCrossChannelBehaviorPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains information about which channels are supported, and how many contacts an agent can
+     * have on a channel simultaneously.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * MediaConcurrencyProperty mediaConcurrencyProperty = MediaConcurrencyProperty.builder()
+     * .channel("channel")
+     * .concurrency(123)
+     * // the properties below are optional
+     * .crossChannelBehavior(CrossChannelBehaviorProperty.builder()
+     * .behaviorType("behaviorType")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-routingprofile-mediaconcurrency.html)
+     */
+    public inline fun cfnRoutingProfileMediaConcurrencyProperty(
+        block: CfnRoutingProfileMediaConcurrencyPropertyDsl.() -> Unit = {}
+    ): CfnRoutingProfile.MediaConcurrencyProperty {
+        val builder = CfnRoutingProfileMediaConcurrencyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnRoutingProfile`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnRoutingProfileProps cfnRoutingProfileProps = CfnRoutingProfileProps.builder()
+     * .defaultOutboundQueueArn("defaultOutboundQueueArn")
+     * .description("description")
+     * .instanceArn("instanceArn")
+     * .mediaConcurrencies(List.of(MediaConcurrencyProperty.builder()
+     * .channel("channel")
+     * .concurrency(123)
+     * // the properties below are optional
+     * .crossChannelBehavior(CrossChannelBehaviorProperty.builder()
+     * .behaviorType("behaviorType")
+     * .build())
+     * .build()))
+     * .name("name")
+     * // the properties below are optional
+     * .queueConfigs(List.of(RoutingProfileQueueConfigProperty.builder()
+     * .delay(123)
+     * .priority(123)
+     * .queueReference(RoutingProfileQueueReferenceProperty.builder()
+     * .channel("channel")
+     * .queueArn("queueArn")
+     * .build())
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html)
+     */
+    public inline fun cfnRoutingProfileProps(
+        block: CfnRoutingProfilePropsDsl.() -> Unit = {}
+    ): CfnRoutingProfileProps {
+        val builder = CfnRoutingProfilePropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains information about the queue and channel for which priority and delay can be set.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * RoutingProfileQueueConfigProperty routingProfileQueueConfigProperty =
+     * RoutingProfileQueueConfigProperty.builder()
+     * .delay(123)
+     * .priority(123)
+     * .queueReference(RoutingProfileQueueReferenceProperty.builder()
+     * .channel("channel")
+     * .queueArn("queueArn")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-routingprofile-routingprofilequeueconfig.html)
+     */
+    public inline fun cfnRoutingProfileRoutingProfileQueueConfigProperty(
+        block: CfnRoutingProfileRoutingProfileQueueConfigPropertyDsl.() -> Unit = {}
+    ): CfnRoutingProfile.RoutingProfileQueueConfigProperty {
+        val builder = CfnRoutingProfileRoutingProfileQueueConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Contains the channel and queue identifier for a routing profile.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * RoutingProfileQueueReferenceProperty routingProfileQueueReferenceProperty =
+     * RoutingProfileQueueReferenceProperty.builder()
+     * .channel("channel")
+     * .queueArn("queueArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-routingprofile-routingprofilequeuereference.html)
+     */
+    public inline fun cfnRoutingProfileRoutingProfileQueueReferenceProperty(
+        block: CfnRoutingProfileRoutingProfileQueueReferencePropertyDsl.() -> Unit = {}
+    ): CfnRoutingProfile.RoutingProfileQueueReferenceProperty {
+        val builder = CfnRoutingProfileRoutingProfileQueueReferencePropertyDsl()
         builder.apply(block)
         return builder.build()
     }

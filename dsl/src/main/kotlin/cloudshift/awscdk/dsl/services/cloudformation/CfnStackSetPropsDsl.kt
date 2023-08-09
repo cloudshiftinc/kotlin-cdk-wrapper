@@ -283,9 +283,7 @@ public class CfnStackSetPropsDsl {
      *   [Grant Self-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
      *   .
      * * With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required
-     *   to deploy to accounts managed by AWS Organizations . For more information, see
-     *   [Grant Service-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html)
-     *   .
+     *   to deploy to accounts managed by AWS Organizations .
      */
     public fun permissionModel(permissionModel: String) {
         cdkBuilder.permissionModel(permissionModel)

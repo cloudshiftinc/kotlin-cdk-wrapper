@@ -25,6 +25,15 @@ public inline fun CfnAssistant.setServerSideEncryptionConfiguration(
     return setServerSideEncryptionConfiguration(builder.build())
 }
 
+/** The identifier of the associated resource. */
+public inline fun CfnAssistantAssociation.setAssociation(
+    block: CfnAssistantAssociationAssociationDataPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAssistantAssociationAssociationDataPropertyDsl()
+    builder.apply(block)
+    return setAssociation(builder.build())
+}
+
 /** Information about how to render the content. */
 public inline fun CfnKnowledgeBase.setRenderingConfiguration(
     block: CfnKnowledgeBaseRenderingConfigurationPropertyDsl.() -> Unit = {}
@@ -50,13 +59,4 @@ public inline fun CfnKnowledgeBase.setSourceConfiguration(
     val builder = CfnKnowledgeBaseSourceConfigurationPropertyDsl()
     builder.apply(block)
     return setSourceConfiguration(builder.build())
-}
-
-/** The identifier of the associated resource. */
-public inline fun CfnAssistantAssociation.setAssociation(
-    block: CfnAssistantAssociationAssociationDataPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnAssistantAssociationAssociationDataPropertyDsl()
-    builder.apply(block)
-    return setAssociation(builder.build())
 }

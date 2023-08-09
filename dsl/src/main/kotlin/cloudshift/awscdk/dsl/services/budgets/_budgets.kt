@@ -103,6 +103,8 @@ public object budgets {
     }
 
     /**
+     * Determine the budget amount for an auto-adjusting budget.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -229,6 +231,9 @@ public object budgets {
     }
 
     /**
+     * The parameters that define or describe the historical data that your auto-adjusting budget is
+     * based on.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

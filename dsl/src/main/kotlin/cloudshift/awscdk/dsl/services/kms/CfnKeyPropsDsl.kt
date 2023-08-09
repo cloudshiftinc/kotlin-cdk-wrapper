@@ -43,6 +43,7 @@ import software.amazon.awscdk.services.kms.CfnKeyProps
  * .keySpec("keySpec")
  * .keyUsage("keyUsage")
  * .multiRegion(false)
+ * .origin("origin")
  * .pendingWindowInDays(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -390,6 +391,15 @@ public class CfnKeyPropsDsl {
      */
     public fun multiRegion(multiRegion: IResolvable) {
         cdkBuilder.multiRegion(multiRegion)
+    }
+
+    /**
+     * @param origin The source of the key material for the KMS key. You cannot change the origin
+     *   after you create the KMS key. The default is AWS_KMS, which means that AWS KMS creates the
+     *   key material.
+     */
+    public fun origin(origin: String) {
+        cdkBuilder.origin(origin)
     }
 
     /**

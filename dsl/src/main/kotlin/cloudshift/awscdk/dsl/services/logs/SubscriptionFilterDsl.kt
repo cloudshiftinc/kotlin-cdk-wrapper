@@ -31,6 +31,7 @@ import software.constructs.Construct
  * .logGroup(logGroup)
  * .destination(new LambdaDestination(fn))
  * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+ * .filterName("ErrorInMainThread")
  * .build();
  * ```
  */
@@ -51,6 +52,17 @@ public class SubscriptionFilterDsl(
      */
     public fun destination(destination: ILogSubscriptionDestination) {
         cdkBuilder.destination(destination)
+    }
+
+    /**
+     * The name of the subscription filter.
+     *
+     * Default: Automatically generated
+     *
+     * @param filterName The name of the subscription filter.
+     */
+    public fun filterName(filterName: String) {
+        cdkBuilder.filterName(filterName)
     }
 
     /**

@@ -43,7 +43,6 @@ import software.constructs.Construct
  * .loadBalancers(List.of(LoadBalancerProperty.builder()
  * .containerName("containerName")
  * .containerPort(123)
- * .loadBalancerName("loadBalancerName")
  * .targetGroupArn("targetGroupArn")
  * .build()))
  * .networkConfiguration(NetworkConfigurationProperty.builder()

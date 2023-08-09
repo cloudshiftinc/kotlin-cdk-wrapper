@@ -22,11 +22,11 @@ import software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition
 
-/** The subscription definition version to include when the subscription definition is created. */
-public inline fun CfnSubscriptionDefinition.setInitialVersion(
-    block: CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl.() -> Unit = {}
+/** The connector definition version to include when the connector definition is created. */
+public inline fun CfnConnectorDefinition.setInitialVersion(
+    block: CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl()
+    val builder = CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl()
     builder.apply(block)
     return setInitialVersion(builder.build())
 }
@@ -40,38 +40,20 @@ public inline fun CfnCoreDefinition.setInitialVersion(
     return setInitialVersion(builder.build())
 }
 
-/** The function definition version to include when the function definition is created. */
-public inline fun CfnFunctionDefinition.setInitialVersion(
-    block: CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl()
-    builder.apply(block)
-    return setInitialVersion(builder.build())
-}
-
-/** The connector definition version to include when the connector definition is created. */
-public inline fun CfnConnectorDefinition.setInitialVersion(
-    block: CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl()
-    builder.apply(block)
-    return setInitialVersion(builder.build())
-}
-
-/** The group version to include when the group is created. */
-public inline fun CfnGroup.setInitialVersion(
-    block: CfnGroupGroupVersionPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnGroupGroupVersionPropertyDsl()
-    builder.apply(block)
-    return setInitialVersion(builder.build())
-}
-
 /** The device definition version to include when the device definition is created. */
 public inline fun CfnDeviceDefinition.setInitialVersion(
     block: CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl()
+    builder.apply(block)
+    return setInitialVersion(builder.build())
+}
+
+/** The function definition version to include when the function definition is created. */
+public inline fun CfnFunctionDefinition.setInitialVersion(
+    block: CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl()
     builder.apply(block)
     return setInitialVersion(builder.build())
 }
@@ -85,11 +67,11 @@ public inline fun CfnFunctionDefinitionVersion.setDefaultConfig(
     return setDefaultConfig(builder.build())
 }
 
-/** The resource definition version to include when the resource definition is created. */
-public inline fun CfnResourceDefinition.setInitialVersion(
-    block: CfnResourceDefinitionResourceDefinitionVersionPropertyDsl.() -> Unit = {}
+/** The group version to include when the group is created. */
+public inline fun CfnGroup.setInitialVersion(
+    block: CfnGroupGroupVersionPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnResourceDefinitionResourceDefinitionVersionPropertyDsl()
+    val builder = CfnGroupGroupVersionPropertyDsl()
     builder.apply(block)
     return setInitialVersion(builder.build())
 }
@@ -99,6 +81,24 @@ public inline fun CfnLoggerDefinition.setInitialVersion(
     block: CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl.() -> Unit = {}
 ) {
     val builder = CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl()
+    builder.apply(block)
+    return setInitialVersion(builder.build())
+}
+
+/** The resource definition version to include when the resource definition is created. */
+public inline fun CfnResourceDefinition.setInitialVersion(
+    block: CfnResourceDefinitionResourceDefinitionVersionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnResourceDefinitionResourceDefinitionVersionPropertyDsl()
+    builder.apply(block)
+    return setInitialVersion(builder.build())
+}
+
+/** The subscription definition version to include when the subscription definition is created. */
+public inline fun CfnSubscriptionDefinition.setInitialVersion(
+    block: CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl()
     builder.apply(block)
     return setInitialVersion(builder.build())
 }

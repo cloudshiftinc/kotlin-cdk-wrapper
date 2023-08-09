@@ -20,15 +20,6 @@ import software.amazon.awscdk.services.appstream.CfnFleet
 import software.amazon.awscdk.services.appstream.CfnImageBuilder
 import software.amazon.awscdk.services.appstream.CfnStack
 
-/** The source S3 location of the app block. */
-public inline fun CfnAppBlock.setSourceS3Location(
-    block: CfnAppBlockS3LocationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnAppBlockS3LocationPropertyDsl()
-    builder.apply(block)
-    return setSourceS3Location(builder.build())
-}
-
 /** The post setup script details of the app block. */
 public inline fun CfnAppBlock.setPostSetupScriptDetails(
     block: CfnAppBlockScriptDetailsPropertyDsl.() -> Unit = {}
@@ -47,16 +38,31 @@ public inline fun CfnAppBlock.setSetupScriptDetails(
     return setSetupScriptDetails(builder.build())
 }
 
-/**
- * The credentials for the service account used by the streaming instance to connect to the
- * directory.
- */
-public inline fun CfnDirectoryConfig.setServiceAccountCredentials(
-    block: CfnDirectoryConfigServiceAccountCredentialsPropertyDsl.() -> Unit = {}
+/** The source S3 location of the app block. */
+public inline fun CfnAppBlock.setSourceS3Location(
+    block: CfnAppBlockS3LocationPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnDirectoryConfigServiceAccountCredentialsPropertyDsl()
+    val builder = CfnAppBlockS3LocationPropertyDsl()
     builder.apply(block)
-    return setServiceAccountCredentials(builder.build())
+    return setSourceS3Location(builder.build())
+}
+
+/** The VPC configuration for the app block builder. */
+public inline fun CfnAppBlockBuilder.setVpcConfig(
+    block: CfnAppBlockBuilderVpcConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnAppBlockBuilderVpcConfigPropertyDsl()
+    builder.apply(block)
+    return setVpcConfig(builder.build())
+}
+
+/** The icon S3 location of the application. */
+public inline fun CfnApplication.setIconS3Location(
+    block: CfnApplicationS3LocationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnApplicationS3LocationPropertyDsl()
+    builder.apply(block)
+    return setIconS3Location(builder.build())
 }
 
 /**
@@ -69,6 +75,18 @@ public inline fun CfnDirectoryConfig.setCertificateBasedAuthProperties(
     val builder = CfnDirectoryConfigCertificateBasedAuthPropertiesPropertyDsl()
     builder.apply(block)
     return setCertificateBasedAuthProperties(builder.build())
+}
+
+/**
+ * The credentials for the service account used by the streaming instance to connect to the
+ * directory.
+ */
+public inline fun CfnDirectoryConfig.setServiceAccountCredentials(
+    block: CfnDirectoryConfigServiceAccountCredentialsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnDirectoryConfigServiceAccountCredentialsPropertyDsl()
+    builder.apply(block)
+    return setServiceAccountCredentials(builder.build())
 }
 
 /** The desired capacity for the fleet. */
@@ -108,42 +126,6 @@ public inline fun CfnFleet.setVpcConfig(block: CfnFleetVpcConfigPropertyDsl.() -
     return setVpcConfig(builder.build())
 }
 
-/** The icon S3 location of the application. */
-public inline fun CfnApplication.setIconS3Location(
-    block: CfnApplicationS3LocationPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnApplicationS3LocationPropertyDsl()
-    builder.apply(block)
-    return setIconS3Location(builder.build())
-}
-
-/** The persistent application settings for users of the stack. */
-public inline fun CfnStack.setApplicationSettings(
-    block: CfnStackApplicationSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStackApplicationSettingsPropertyDsl()
-    builder.apply(block)
-    return setApplicationSettings(builder.build())
-}
-
-/** The streaming protocol that you want your stack to prefer. */
-public inline fun CfnStack.setStreamingExperienceSettings(
-    block: CfnStackStreamingExperienceSettingsPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnStackStreamingExperienceSettingsPropertyDsl()
-    builder.apply(block)
-    return setStreamingExperienceSettings(builder.build())
-}
-
-/** The VPC configuration for the app block builder. */
-public inline fun CfnAppBlockBuilder.setVpcConfig(
-    block: CfnAppBlockBuilderVpcConfigPropertyDsl.() -> Unit = {}
-) {
-    val builder = CfnAppBlockBuilderVpcConfigPropertyDsl()
-    builder.apply(block)
-    return setVpcConfig(builder.build())
-}
-
 /**
  * The name of the directory and organizational unit (OU) to use to join the image builder to a
  * Microsoft Active Directory domain.
@@ -163,4 +145,22 @@ public inline fun CfnImageBuilder.setVpcConfig(
     val builder = CfnImageBuilderVpcConfigPropertyDsl()
     builder.apply(block)
     return setVpcConfig(builder.build())
+}
+
+/** The persistent application settings for users of the stack. */
+public inline fun CfnStack.setApplicationSettings(
+    block: CfnStackApplicationSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStackApplicationSettingsPropertyDsl()
+    builder.apply(block)
+    return setApplicationSettings(builder.build())
+}
+
+/** The streaming protocol that you want your stack to prefer. */
+public inline fun CfnStack.setStreamingExperienceSettings(
+    block: CfnStackStreamingExperienceSettingsPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnStackStreamingExperienceSettingsPropertyDsl()
+    builder.apply(block)
+    return setStreamingExperienceSettings(builder.build())
 }

@@ -595,9 +595,9 @@ public object securityhub {
     }
 
     /**
-     * A map filter for querying findings.
+     * A map filter for filtering AWS Security Hub findings.
      *
-     * Each map filter provides the field to check, the value to look for, and the comparison
+     * Each map filter provides the field to check for, the value to check for, and the comparison
      * operator.
      *
      * Example:
@@ -948,7 +948,7 @@ public object securityhub {
     }
 
     /**
-     * A string filter for querying findings.
+     * A string filter for filtering AWS Security Hub findings.
      *
      * Example:
      * ```

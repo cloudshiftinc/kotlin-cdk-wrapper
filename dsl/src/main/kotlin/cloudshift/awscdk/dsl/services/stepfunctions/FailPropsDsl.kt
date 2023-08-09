@@ -54,6 +54,7 @@ import software.amazon.awscdk.services.stepfunctions.FailProps
  * StateMachine.Builder.create(this, "StateMachine")
  * .definition(definition)
  * .timeout(Duration.minutes(5))
+ * .comment("a super cool state machine")
  * .build();
  * ```
  */

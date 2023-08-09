@@ -36,6 +36,7 @@ import software.amazon.awscdk.services.rds.PerformanceInsightRetention
  * .autoMinorVersionUpgrade(false)
  * .enablePerformanceInsights(false)
  * .instanceIdentifier("instanceIdentifier")
+ * .isFromLegacyInstanceProps(false)
  * .parameterGroup(parameterGroup)
  * .parameters(Map.of(
  * "parametersKey", "parameters"))
@@ -75,6 +76,14 @@ public class ClusterInstanceOptionsDsl {
     /** @param instanceIdentifier The identifier for the database instance. */
     public fun instanceIdentifier(instanceIdentifier: String) {
         cdkBuilder.instanceIdentifier(instanceIdentifier)
+    }
+
+    /**
+     * @param isFromLegacyInstanceProps Only used for migrating existing clusters from using
+     *   `instanceProps` to `writer` and `readers`.
+     */
+    public fun isFromLegacyInstanceProps(isFromLegacyInstanceProps: Boolean) {
+        cdkBuilder.isFromLegacyInstanceProps(isFromLegacyInstanceProps)
     }
 
     /**

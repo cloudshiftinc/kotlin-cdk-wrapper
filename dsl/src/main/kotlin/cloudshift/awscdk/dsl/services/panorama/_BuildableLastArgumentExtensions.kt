@@ -15,13 +15,13 @@ import kotlin.Unit
 import software.amazon.awscdk.services.panorama.CfnApplicationInstance
 import software.amazon.awscdk.services.panorama.CfnPackage
 
-/**  */
-public inline fun CfnPackage.setStorageLocation(
-    block: CfnPackageStorageLocationPropertyDsl.() -> Unit = {}
+/** Setting overrides for the application manifest. */
+public inline fun CfnApplicationInstance.setManifestOverridesPayload(
+    block: CfnApplicationInstanceManifestOverridesPayloadPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnPackageStorageLocationPropertyDsl()
+    val builder = CfnApplicationInstanceManifestOverridesPayloadPropertyDsl()
     builder.apply(block)
-    return setStorageLocation(builder.build())
+    return setManifestOverridesPayload(builder.build())
 }
 
 /** The application's manifest document. */
@@ -33,11 +33,11 @@ public inline fun CfnApplicationInstance.setManifestPayload(
     return setManifestPayload(builder.build())
 }
 
-/** Setting overrides for the application manifest. */
-public inline fun CfnApplicationInstance.setManifestOverridesPayload(
-    block: CfnApplicationInstanceManifestOverridesPayloadPropertyDsl.() -> Unit = {}
+/**  */
+public inline fun CfnPackage.setStorageLocation(
+    block: CfnPackageStorageLocationPropertyDsl.() -> Unit = {}
 ) {
-    val builder = CfnApplicationInstanceManifestOverridesPayloadPropertyDsl()
+    val builder = CfnPackageStorageLocationPropertyDsl()
     builder.apply(block)
-    return setManifestOverridesPayload(builder.build())
+    return setStorageLocation(builder.build())
 }

@@ -236,7 +236,7 @@ public class CodePipelineDsl(
      * Docker image), both for the Pipeline stack as well as the application stacks.
      *
      * A common way to use bundling assets in your application is by using the
-     * `&#64;aws-cdk/aws-lambda-nodejs` library.
+     * `aws-cdk-lib/aws-lambda-nodejs` library.
      *
      * Configures privileged mode for the synth CodeBuild action.
      *

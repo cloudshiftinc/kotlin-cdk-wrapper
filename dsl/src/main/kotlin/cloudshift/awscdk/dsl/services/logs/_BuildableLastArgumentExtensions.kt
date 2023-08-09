@@ -24,6 +24,58 @@ import software.amazon.awscdk.services.logs.LogStream
 import software.amazon.awscdk.services.logs.MetricFilter
 import software.amazon.awscdk.services.logs.SubscriptionFilter
 
+/** @param statement */
+public inline fun CrossAccountDestination.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}) {
+    val builder = PolicyStatementDsl()
+    builder.apply(block)
+    return addToPolicy(builder.build())
+}
+
+/**
+ * Create a new Metric Filter on this Log Group.
+ *
+ * @param id Unique identifier for the construct in its parent.
+ * @param props Properties for creating the MetricFilter.
+ */
+public inline fun ILogGroup.addMetricFilter(
+    arg0: String,
+    block: MetricFilterOptionsDsl.() -> Unit = {}
+): MetricFilter {
+    val builder = MetricFilterOptionsDsl()
+    builder.apply(block)
+    return addMetricFilter(arg0, builder.build())
+}
+
+/**
+ * Create a new Log Stream for this Log Group.
+ *
+ * @param id Unique identifier for the construct in its parent.
+ * @param props Properties for creating the LogStream.
+ */
+public inline fun ILogGroup.addStream(
+    arg0: String,
+    block: StreamOptionsDsl.() -> Unit = {}
+): LogStream {
+    val builder = StreamOptionsDsl()
+    builder.apply(block)
+    return addStream(arg0, builder.build())
+}
+
+/**
+ * Create a new Subscription Filter on this Log Group.
+ *
+ * @param id Unique identifier for the construct in its parent.
+ * @param props Properties for creating the SubscriptionFilter.
+ */
+public inline fun ILogGroup.addSubscriptionFilter(
+    arg0: String,
+    block: SubscriptionFilterOptionsDsl.() -> Unit = {}
+): SubscriptionFilter {
+    val builder = SubscriptionFilterOptionsDsl()
+    builder.apply(block)
+    return addSubscriptionFilter(arg0, builder.build())
+}
+
 /**
  * Create a new Metric Filter on this Log Group.
  *
@@ -87,13 +139,6 @@ public inline fun LogGroup.addToResourcePolicy(
     return addToResourcePolicy(builder.build())
 }
 
-/** @param statement */
-public inline fun CrossAccountDestination.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}) {
-    val builder = PolicyStatementDsl()
-    builder.apply(block)
-    return addToPolicy(builder.build())
-}
-
 /**
  * Return the given named metric for this Metric Filter.
  *
@@ -105,49 +150,4 @@ public inline fun MetricFilter.metric(block: MetricOptionsDsl.() -> Unit = {}): 
     val builder = MetricOptionsDsl()
     builder.apply(block)
     return metric(builder.build())
-}
-
-/**
- * Create a new Metric Filter on this Log Group.
- *
- * @param id Unique identifier for the construct in its parent.
- * @param props Properties for creating the MetricFilter.
- */
-public inline fun ILogGroup.addMetricFilter(
-    arg0: String,
-    block: MetricFilterOptionsDsl.() -> Unit = {}
-): MetricFilter {
-    val builder = MetricFilterOptionsDsl()
-    builder.apply(block)
-    return addMetricFilter(arg0, builder.build())
-}
-
-/**
- * Create a new Log Stream for this Log Group.
- *
- * @param id Unique identifier for the construct in its parent.
- * @param props Properties for creating the LogStream.
- */
-public inline fun ILogGroup.addStream(
-    arg0: String,
-    block: StreamOptionsDsl.() -> Unit = {}
-): LogStream {
-    val builder = StreamOptionsDsl()
-    builder.apply(block)
-    return addStream(arg0, builder.build())
-}
-
-/**
- * Create a new Subscription Filter on this Log Group.
- *
- * @param id Unique identifier for the construct in its parent.
- * @param props Properties for creating the SubscriptionFilter.
- */
-public inline fun ILogGroup.addSubscriptionFilter(
-    arg0: String,
-    block: SubscriptionFilterOptionsDsl.() -> Unit = {}
-): SubscriptionFilter {
-    val builder = SubscriptionFilterOptionsDsl()
-    builder.apply(block)
-    return addSubscriptionFilter(arg0, builder.build())
 }

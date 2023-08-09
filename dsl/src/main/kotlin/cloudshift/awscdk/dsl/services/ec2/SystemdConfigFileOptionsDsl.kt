@@ -26,7 +26,7 @@ import software.amazon.awscdk.services.ec2.SystemdConfigFileOptions
  * Instance.Builder.create(this, "Instance")
  * .vpc(vpc)
  * .instanceType(instanceType)
- * .machineImage(MachineImage.latestAmazonLinux2022())
+ * .machineImage(MachineImage.latestAmazonLinux2023())
  * .init(CloudFormationInit.fromElements(InitService.systemdConfigFile("simpleserver",
  * SystemdConfigFileOptions.builder()
  * .command("/usr/bin/python3 -m http.server 8080")
