@@ -607,6 +607,9 @@ public object wafv2 {
      * Object captcha;
      * Object challenge;
      * Object count;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * Object queryString;
      * Object singleHeader;
@@ -719,6 +722,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -1044,6 +1088,9 @@ public object wafv2 {
      * Object all;
      * Object allQueryArguments;
      * AndStatementProperty andStatementProperty_;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * Object queryString;
      * Object singleHeader;
@@ -1130,6 +1177,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -2357,6 +2445,9 @@ public object wafv2 {
      * import software.amazon.awscdk.services.wafv2.*;
      * Object all;
      * Object allQueryArguments;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * NotStatementProperty notStatementProperty_;
      * Object queryString;
@@ -2444,6 +2535,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -2707,6 +2839,9 @@ public object wafv2 {
      * import software.amazon.awscdk.services.wafv2.*;
      * Object all;
      * Object allQueryArguments;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * OrStatementProperty orStatementProperty_;
      * Object queryString;
@@ -2794,6 +2929,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -3060,6 +3236,9 @@ public object wafv2 {
      * Object captcha;
      * Object challenge;
      * Object count;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * Object queryString;
      * Object singleHeader;
@@ -3172,6 +3351,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -3455,12 +3675,136 @@ public object wafv2 {
     }
 
     /**
-     * A rate-based rule tracks the rate of requests for each originating IP address, and triggers
-     * the rule action when the rate exceeds a limit that you specify on the number of requests in
-     * any 5-minute time span.
+     * Specifies a single custom aggregate key for a rate-base rule.
      *
-     * You can use this to put a temporary block on requests from an IP address that is sending
-     * excessive requests.
+     * Web requests that are missing any of the components specified in the aggregation keys are
+     * omitted from the rate-based rule evaluation and handling.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
+     * RateBasedStatementCustomKeyProperty rateBasedStatementCustomKeyProperty =
+     * RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html)
+     */
+    public inline fun cfnRuleGroupRateBasedStatementCustomKeyProperty(
+        block: CfnRuleGroupRateBasedStatementCustomKeyPropertyDsl.() -> Unit = {}
+    ): CfnRuleGroup.RateBasedStatementCustomKeyProperty {
+        val builder = CfnRuleGroupRateBasedStatementCustomKeyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A rate-based rule counts incoming requests and rate limits requests when they are coming at
+     * too fast a rate.
+     *
+     * The rule categorizes requests according to your aggregation criteria, collects them into
+     * aggregation instances, and counts and rate limits the requests for each instance.
+     *
+     * You can specify individual aggregation keys, like IP address or HTTP method. You can also
+     * specify aggregation key combinations, like IP address and HTTP method, or HTTP method, query
+     * argument, and cookie.
+     *
+     * Each unique set of values for the aggregation keys that you specify is a separate aggregation
+     * instance, with the value from each key contributing to the aggregation instance definition.
+     *
+     * For example, assume the rule evaluates web requests with the following IP address and HTTP
+     * method values:
+     * * IP address 10.1.1.1, HTTP method POST
+     * * IP address 10.1.1.1, HTTP method GET
+     * * IP address 127.0.0.0, HTTP method POST
+     * * IP address 10.1.1.1, HTTP method GET
+     *
+     * The rule would create different aggregation instances according to your aggregation criteria,
+     * for example:
+     * * If the aggregation criteria is just the IP address, then each individual address is an
+     *   aggregation instance, and AWS WAF counts requests separately for each. The aggregation
+     *   instances and request counts for our example would be the following:
+     * * IP address 10.1.1.1: count 3
+     * * IP address 127.0.0.0: count 1
+     * * If the aggregation criteria is HTTP method, then each individual HTTP method is an
+     *   aggregation instance. The aggregation instances and request counts for our example would be
+     *   the following:
+     * * HTTP method POST: count 2
+     * * HTTP method GET: count 2
+     * * If the aggregation criteria is IP address and HTTP method, then each IP address and each
+     *   HTTP method would contribute to the combined aggregation instance. The aggregation
+     *   instances and request counts for our example would be the following:
+     * * IP address 10.1.1.1, HTTP method POST: count 1
+     * * IP address 10.1.1.1, HTTP method GET: count 2
+     * * IP address 127.0.0.0, HTTP method POST: count 1
+     *
+     * For any n-tuple of aggregation keys, each unique combination of values for the keys defines a
+     * separate aggregation instance, which AWS WAF counts and rate-limits individually.
+     *
+     * You can optionally nest another statement inside the rate-based statement, to narrow the
+     * scope of the rule so that it only counts and rate limits requests that match the nested
+     * statement. You can use this nested scope-down statement in conjunction with your aggregation
+     * key specifications or you can just count and rate limit all requests that match the
+     * scope-down statement, without additional aggregation. When you choose to just manage all
+     * requests that match a scope-down statement, the aggregation instance is singular for the
+     * rule.
+     *
+     * You cannot nest a `RateBasedStatement` inside another statement, for example inside a
+     * `NotStatement` or `OrStatement` . You can define a `RateBasedStatement` inside a web ACL and
+     * inside a rule group.
+     *
+     * For additional information about the options, see
+     * [Rate limiting web requests using rate-based rules](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rate-based-rules.html)
+     * in the *AWS WAF Developer Guide* .
+     *
+     * If you only aggregate on the individual IP address or forwarded IP address, you can retrieve
+     * the list of IP addresses that AWS WAF is currently rate limiting for a rule through the API
+     * call `GetRateBasedStatementManagedKeys` . This option is not available for other aggregation
+     * configurations.
      *
      * AWS WAF tracks and manages web requests separately for each instance of a rate-based rule
      * that you use. For example, if you provide the same rate-based rule settings in two web ACLs,
@@ -3469,27 +3813,6 @@ public object wafv2 {
      * rule group, and then use that rule group in multiple places, each use creates a separate
      * instance of the rate-based rule that gets its own tracking and management by AWS WAF .
      *
-     * When the rule action triggers, AWS WAF blocks additional requests from the IP address until
-     * the request rate falls below the limit.
-     *
-     * You can optionally nest another statement inside the rate-based statement, to narrow the
-     * scope of the rule so that it only counts requests that match the nested statement. For
-     * example, based on recent requests that you have seen from an attacker, you might create a
-     * rate-based rule with a nested AND rule statement that contains the following nested
-     * statements:
-     * * An IP match statement with an IP set that specifies the address 192.0.2.44.
-     * * A string match statement that searches in the User-Agent header for the string BadBot.
-     *
-     * In this rate-based rule, you also define a rate limit. For this example, the rate limit is
-     * 1,000. Requests that meet the criteria of both of the nested statements are counted. If the
-     * count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not
-     * meet the criteria of both of the nested statements are not counted towards the rate limit and
-     * are not affected by this rule.
-     *
-     * You cannot nest a `RateBasedStatement` inside another statement, for example inside a
-     * `NotStatement` or `OrStatement` . You can define a `RateBasedStatement` inside a web ACL and
-     * inside a rule group.
-     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -3497,6 +3820,9 @@ public object wafv2 {
      * import software.amazon.awscdk.services.wafv2.*;
      * Object all;
      * Object allQueryArguments;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * Object queryString;
      * RateBasedStatementProperty rateBasedStatementProperty_;
@@ -3508,6 +3834,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -3836,6 +4203,192 @@ public object wafv2 {
     }
 
     /**
+     * Specifies a cookie as an aggregate key for a rate-based rule.
+     *
+     * Each distinct value in the cookie contributes to the aggregation instance. If you use a
+     * single cookie as your custom key, then each value fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitCookieProperty rateLimitCookieProperty = RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitcookie.html)
+     */
+    public inline fun cfnRuleGroupRateLimitCookieProperty(
+        block: CfnRuleGroupRateLimitCookiePropertyDsl.() -> Unit = {}
+    ): CfnRuleGroup.RateLimitCookieProperty {
+        val builder = CfnRuleGroupRateLimitCookiePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a header as an aggregate key for a rate-based rule.
+     *
+     * Each distinct value in the header contributes to the aggregation instance. If you use a
+     * single header as your custom key, then each value fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitHeaderProperty rateLimitHeaderProperty = RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitheader.html)
+     */
+    public inline fun cfnRuleGroupRateLimitHeaderProperty(
+        block: CfnRuleGroupRateLimitHeaderPropertyDsl.() -> Unit = {}
+    ): CfnRuleGroup.RateLimitHeaderProperty {
+        val builder = CfnRuleGroupRateLimitHeaderPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a label namespace to use as an aggregate key for a rate-based rule.
+     *
+     * Each distinct fully qualified label name that has the specified label namespace contributes
+     * to the aggregation instance. If you use just one label namespace as your custom key, then
+     * each label name fully defines an aggregation instance.
+     *
+     * This uses only labels that have been added to the request by rules that are evaluated before
+     * this rate-based rule in the web ACL.
+     *
+     * For information about label namespaces and names, see
+     * [Label syntax and naming requirements](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-label-requirements.html)
+     * in the *AWS WAF Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitLabelNamespaceProperty rateLimitLabelNamespaceProperty =
+     * RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitlabelnamespace.html)
+     */
+    public inline fun cfnRuleGroupRateLimitLabelNamespaceProperty(
+        block: CfnRuleGroupRateLimitLabelNamespacePropertyDsl.() -> Unit = {}
+    ): CfnRuleGroup.RateLimitLabelNamespaceProperty {
+        val builder = CfnRuleGroupRateLimitLabelNamespacePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a query argument in the request as an aggregate key for a rate-based rule.
+     *
+     * Each distinct value for the named query argument contributes to the aggregation instance. If
+     * you use a single query argument as your custom key, then each value fully defines an
+     * aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitQueryArgumentProperty rateLimitQueryArgumentProperty =
+     * RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitqueryargument.html)
+     */
+    public inline fun cfnRuleGroupRateLimitQueryArgumentProperty(
+        block: CfnRuleGroupRateLimitQueryArgumentPropertyDsl.() -> Unit = {}
+    ): CfnRuleGroup.RateLimitQueryArgumentProperty {
+        val builder = CfnRuleGroupRateLimitQueryArgumentPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the request's query string as an aggregate key for a rate-based rule.
+     *
+     * Each distinct string contributes to the aggregation instance. If you use just the query
+     * string as your custom key, then each string fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitQueryStringProperty rateLimitQueryStringProperty =
+     * RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitquerystring.html)
+     */
+    public inline fun cfnRuleGroupRateLimitQueryStringProperty(
+        block: CfnRuleGroupRateLimitQueryStringPropertyDsl.() -> Unit = {}
+    ): CfnRuleGroup.RateLimitQueryStringProperty {
+        val builder = CfnRuleGroupRateLimitQueryStringPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the request's URI path as an aggregate key for a rate-based rule.
+     *
+     * Each distinct URI path contributes to the aggregation instance. If you use just the URI path
+     * as your custom key, then each URI path fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitUriPathProperty rateLimitUriPathProperty = RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimituripath.html)
+     */
+    public inline fun cfnRuleGroupRateLimitUriPathProperty(
+        block: CfnRuleGroupRateLimitUriPathPropertyDsl.() -> Unit = {}
+    ): CfnRuleGroup.RateLimitUriPathProperty {
+        val builder = CfnRuleGroupRateLimitUriPathPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * A rule statement used to search web request components for a match against a single regular
      * expression.
      *
@@ -4045,6 +4598,9 @@ public object wafv2 {
      * Object captcha;
      * Object challenge;
      * Object count;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * Object queryString;
      * Object singleHeader;
@@ -4135,6 +4691,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -4485,11 +5082,11 @@ public object wafv2 {
      *
      * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
      * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-     * limit is 8 KB (8,192 kilobytes) and for CloudFront web ACLs, this limit is 16 KB (16,384
-     * kilobytes). For CloudFront web ACLs, you can increase the limit in the web ACL
-     * `AssociationConfig` , for additional fees. If you know that the request body for your web
-     * requests should never exceed the inspection limit, you could use a size constraint statement
-     * to block requests that have a larger request body size.
+     * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
+     * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
+     * additional fees. If you know that the request body for your web requests should never exceed
+     * the inspection limit, you could use a size constraint statement to block requests that have a
+     * larger request body size.
      *
      * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI
      * counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -4654,6 +5251,9 @@ public object wafv2 {
      * import software.amazon.awscdk.services.wafv2.*;
      * Object all;
      * Object allQueryArguments;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
      * Object method;
      * Object queryString;
      * Object singleHeader;
@@ -4741,6 +5341,47 @@ public object wafv2 {
      * .aggregateKeyType("aggregateKeyType")
      * .limit(123)
      * // the properties below are optional
+     * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build()))
      * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
      * .fallbackBehavior("fallbackBehavior")
      * .headerName("headerName")
@@ -5151,6 +5792,70 @@ public object wafv2 {
     }
 
     /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * AWSManagedRulesACFPRuleSetProperty aWSManagedRulesACFPRuleSetProperty =
+     * AWSManagedRulesACFPRuleSetProperty.builder()
+     * .creationPath("creationPath")
+     * .registrationPagePath("registrationPagePath")
+     * .requestInspection(RequestInspectionACFPProperty.builder()
+     * .payloadType("payloadType")
+     * // the properties below are optional
+     * .addressFields(List.of(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build()))
+     * .emailField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .passwordField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .phoneNumberFields(List.of(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build()))
+     * .usernameField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .build())
+     * // the properties below are optional
+     * .enableRegexInPath(false)
+     * .responseInspection(ResponseInspectionProperty.builder()
+     * .bodyContains(ResponseInspectionBodyContainsProperty.builder()
+     * .failureStrings(List.of("failureStrings"))
+     * .successStrings(List.of("successStrings"))
+     * .build())
+     * .header(ResponseInspectionHeaderProperty.builder()
+     * .failureValues(List.of("failureValues"))
+     * .name("name")
+     * .successValues(List.of("successValues"))
+     * .build())
+     * .json(ResponseInspectionJsonProperty.builder()
+     * .failureValues(List.of("failureValues"))
+     * .identifier("identifier")
+     * .successValues(List.of("successValues"))
+     * .build())
+     * .statusCode(ResponseInspectionStatusCodeProperty.builder()
+     * .failureCodes(List.of(123))
+     * .successCodes(List.of(123))
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-awsmanagedrulesacfpruleset.html)
+     */
+    public inline fun cfnWebACLAWSManagedRulesACFPRuleSetProperty(
+        block: CfnWebACLAWSManagedRulesACFPRuleSetPropertyDsl.() -> Unit = {}
+    ): CfnWebACL.AWSManagedRulesACFPRuleSetProperty {
+        val builder = CfnWebACLAWSManagedRulesACFPRuleSetPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Details for your use of the account takeover prevention managed rule group,
      * `AWSManagedRulesATPRuleSet` .
      *
@@ -5165,6 +5870,7 @@ public object wafv2 {
      * AWSManagedRulesATPRuleSetProperty.builder()
      * .loginPath("loginPath")
      * // the properties below are optional
+     * .enableRegexInPath(false)
      * .requestInspection(RequestInspectionProperty.builder()
      * .passwordField(FieldIdentifierProperty.builder()
      * .identifier("identifier")
@@ -5343,7 +6049,7 @@ public object wafv2 {
      * resources.
      *
      * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 kilobytes).
+     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see
@@ -6490,9 +7196,55 @@ public object wafv2 {
      * import software.amazon.awscdk.services.wafv2.*;
      * ManagedRuleGroupConfigProperty managedRuleGroupConfigProperty =
      * ManagedRuleGroupConfigProperty.builder()
+     * .awsManagedRulesAcfpRuleSet(AWSManagedRulesACFPRuleSetProperty.builder()
+     * .creationPath("creationPath")
+     * .registrationPagePath("registrationPagePath")
+     * .requestInspection(RequestInspectionACFPProperty.builder()
+     * .payloadType("payloadType")
+     * // the properties below are optional
+     * .addressFields(List.of(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build()))
+     * .emailField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .passwordField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .phoneNumberFields(List.of(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build()))
+     * .usernameField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .build())
+     * // the properties below are optional
+     * .enableRegexInPath(false)
+     * .responseInspection(ResponseInspectionProperty.builder()
+     * .bodyContains(ResponseInspectionBodyContainsProperty.builder()
+     * .failureStrings(List.of("failureStrings"))
+     * .successStrings(List.of("successStrings"))
+     * .build())
+     * .header(ResponseInspectionHeaderProperty.builder()
+     * .failureValues(List.of("failureValues"))
+     * .name("name")
+     * .successValues(List.of("successValues"))
+     * .build())
+     * .json(ResponseInspectionJsonProperty.builder()
+     * .failureValues(List.of("failureValues"))
+     * .identifier("identifier")
+     * .successValues(List.of("successValues"))
+     * .build())
+     * .statusCode(ResponseInspectionStatusCodeProperty.builder()
+     * .failureCodes(List.of(123))
+     * .successCodes(List.of(123))
+     * .build())
+     * .build())
+     * .build())
      * .awsManagedRulesAtpRuleSet(AWSManagedRulesATPRuleSetProperty.builder()
      * .loginPath("loginPath")
      * // the properties below are optional
+     * .enableRegexInPath(false)
      * .requestInspection(RequestInspectionProperty.builder()
      * .passwordField(FieldIdentifierProperty.builder()
      * .identifier("identifier")
@@ -6660,12 +7412,136 @@ public object wafv2 {
     }
 
     /**
-     * A rate-based rule tracks the rate of requests for each originating IP address, and triggers
-     * the rule action when the rate exceeds a limit that you specify on the number of requests in
-     * any 5-minute time span.
+     * Specifies a single custom aggregate key for a rate-base rule.
      *
-     * You can use this to put a temporary block on requests from an IP address that is sending
-     * excessive requests.
+     * Web requests that are missing any of the components specified in the aggregation keys are
+     * omitted from the rate-based rule evaluation and handling.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * Object forwardedIp;
+     * Object httpMethod;
+     * Object ip;
+     * RateBasedStatementCustomKeyProperty rateBasedStatementCustomKeyProperty =
+     * RateBasedStatementCustomKeyProperty.builder()
+     * .cookie(RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .forwardedIp(forwardedIp)
+     * .header(RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .httpMethod(httpMethod)
+     * .ip(ip)
+     * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build())
+     * .queryArgument(RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .queryString(RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .uriPath(RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html)
+     */
+    public inline fun cfnWebACLRateBasedStatementCustomKeyProperty(
+        block: CfnWebACLRateBasedStatementCustomKeyPropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RateBasedStatementCustomKeyProperty {
+        val builder = CfnWebACLRateBasedStatementCustomKeyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A rate-based rule counts incoming requests and rate limits requests when they are coming at
+     * too fast a rate.
+     *
+     * The rule categorizes requests according to your aggregation criteria, collects them into
+     * aggregation instances, and counts and rate limits the requests for each instance.
+     *
+     * You can specify individual aggregation keys, like IP address or HTTP method. You can also
+     * specify aggregation key combinations, like IP address and HTTP method, or HTTP method, query
+     * argument, and cookie.
+     *
+     * Each unique set of values for the aggregation keys that you specify is a separate aggregation
+     * instance, with the value from each key contributing to the aggregation instance definition.
+     *
+     * For example, assume the rule evaluates web requests with the following IP address and HTTP
+     * method values:
+     * * IP address 10.1.1.1, HTTP method POST
+     * * IP address 10.1.1.1, HTTP method GET
+     * * IP address 127.0.0.0, HTTP method POST
+     * * IP address 10.1.1.1, HTTP method GET
+     *
+     * The rule would create different aggregation instances according to your aggregation criteria,
+     * for example:
+     * * If the aggregation criteria is just the IP address, then each individual address is an
+     *   aggregation instance, and AWS WAF counts requests separately for each. The aggregation
+     *   instances and request counts for our example would be the following:
+     * * IP address 10.1.1.1: count 3
+     * * IP address 127.0.0.0: count 1
+     * * If the aggregation criteria is HTTP method, then each individual HTTP method is an
+     *   aggregation instance. The aggregation instances and request counts for our example would be
+     *   the following:
+     * * HTTP method POST: count 2
+     * * HTTP method GET: count 2
+     * * If the aggregation criteria is IP address and HTTP method, then each IP address and each
+     *   HTTP method would contribute to the combined aggregation instance. The aggregation
+     *   instances and request counts for our example would be the following:
+     * * IP address 10.1.1.1, HTTP method POST: count 1
+     * * IP address 10.1.1.1, HTTP method GET: count 2
+     * * IP address 127.0.0.0, HTTP method POST: count 1
+     *
+     * For any n-tuple of aggregation keys, each unique combination of values for the keys defines a
+     * separate aggregation instance, which AWS WAF counts and rate-limits individually.
+     *
+     * You can optionally nest another statement inside the rate-based statement, to narrow the
+     * scope of the rule so that it only counts and rate limits requests that match the nested
+     * statement. You can use this nested scope-down statement in conjunction with your aggregation
+     * key specifications or you can just count and rate limit all requests that match the
+     * scope-down statement, without additional aggregation. When you choose to just manage all
+     * requests that match a scope-down statement, the aggregation instance is singular for the
+     * rule.
+     *
+     * You cannot nest a `RateBasedStatement` inside another statement, for example inside a
+     * `NotStatement` or `OrStatement` . You can define a `RateBasedStatement` inside a web ACL and
+     * inside a rule group.
+     *
+     * For additional information about the options, see
+     * [Rate limiting web requests using rate-based rules](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rate-based-rules.html)
+     * in the *AWS WAF Developer Guide* .
+     *
+     * If you only aggregate on the individual IP address or forwarded IP address, you can retrieve
+     * the list of IP addresses that AWS WAF is currently rate limiting for a rule through the API
+     * call `GetRateBasedStatementManagedKeys` . This option is not available for other aggregation
+     * configurations.
      *
      * AWS WAF tracks and manages web requests separately for each instance of a rate-based rule
      * that you use. For example, if you provide the same rate-based rule settings in two web ACLs,
@@ -6673,27 +7549,6 @@ public object wafv2 {
      * gets its own tracking and management by AWS WAF . If you define a rate-based rule inside a
      * rule group, and then use that rule group in multiple places, each use creates a separate
      * instance of the rate-based rule that gets its own tracking and management by AWS WAF .
-     *
-     * When the rule action triggers, AWS WAF blocks additional requests from the IP address until
-     * the request rate falls below the limit.
-     *
-     * You can optionally nest another statement inside the rate-based statement, to narrow the
-     * scope of the rule so that it only counts requests that match the nested statement. For
-     * example, based on recent requests that you have seen from an attacker, you might create a
-     * rate-based rule with a nested AND rule statement that contains the following nested
-     * statements:
-     * * An IP match statement with an IP set that specifies the address 192.0.2.44.
-     * * A string match statement that searches in the User-Agent header for the string BadBot.
-     *
-     * In this rate-based rule, you also define a rate limit. For this example, the rate limit is
-     * 1,000. Requests that meet the criteria of both of the nested statements are counted. If the
-     * count exceeds 1,000 requests per five minutes, the rule action triggers. Requests that do not
-     * meet the criteria of both of the nested statements are not counted towards the rate limit and
-     * are not affected by this rule.
-     *
-     * You cannot nest a `RateBasedStatement` inside another statement, for example inside a
-     * `NotStatement` or `OrStatement` . You can define a `RateBasedStatement` inside a web ACL and
-     * inside a rule group.
      *
      * Example:
      * ```
@@ -6705,6 +7560,192 @@ public object wafv2 {
         block: CfnWebACLRateBasedStatementPropertyDsl.() -> Unit = {}
     ): CfnWebACL.RateBasedStatementProperty {
         val builder = CfnWebACLRateBasedStatementPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a cookie as an aggregate key for a rate-based rule.
+     *
+     * Each distinct value in the cookie contributes to the aggregation instance. If you use a
+     * single cookie as your custom key, then each value fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitCookieProperty rateLimitCookieProperty = RateLimitCookieProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitcookie.html)
+     */
+    public inline fun cfnWebACLRateLimitCookieProperty(
+        block: CfnWebACLRateLimitCookiePropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RateLimitCookieProperty {
+        val builder = CfnWebACLRateLimitCookiePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a header as an aggregate key for a rate-based rule.
+     *
+     * Each distinct value in the header contributes to the aggregation instance. If you use a
+     * single header as your custom key, then each value fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitHeaderProperty rateLimitHeaderProperty = RateLimitHeaderProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitheader.html)
+     */
+    public inline fun cfnWebACLRateLimitHeaderProperty(
+        block: CfnWebACLRateLimitHeaderPropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RateLimitHeaderProperty {
+        val builder = CfnWebACLRateLimitHeaderPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a label namespace to use as an aggregate key for a rate-based rule.
+     *
+     * Each distinct fully qualified label name that has the specified label namespace contributes
+     * to the aggregation instance. If you use just one label namespace as your custom key, then
+     * each label name fully defines an aggregation instance.
+     *
+     * This uses only labels that have been added to the request by rules that are evaluated before
+     * this rate-based rule in the web ACL.
+     *
+     * For information about label namespaces and names, see
+     * [Label syntax and naming requirements](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-label-requirements.html)
+     * in the *AWS WAF Developer Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitLabelNamespaceProperty rateLimitLabelNamespaceProperty =
+     * RateLimitLabelNamespaceProperty.builder()
+     * .namespace("namespace")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitlabelnamespace.html)
+     */
+    public inline fun cfnWebACLRateLimitLabelNamespaceProperty(
+        block: CfnWebACLRateLimitLabelNamespacePropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RateLimitLabelNamespaceProperty {
+        val builder = CfnWebACLRateLimitLabelNamespacePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies a query argument in the request as an aggregate key for a rate-based rule.
+     *
+     * Each distinct value for the named query argument contributes to the aggregation instance. If
+     * you use a single query argument as your custom key, then each value fully defines an
+     * aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitQueryArgumentProperty rateLimitQueryArgumentProperty =
+     * RateLimitQueryArgumentProperty.builder()
+     * .name("name")
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitqueryargument.html)
+     */
+    public inline fun cfnWebACLRateLimitQueryArgumentProperty(
+        block: CfnWebACLRateLimitQueryArgumentPropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RateLimitQueryArgumentProperty {
+        val builder = CfnWebACLRateLimitQueryArgumentPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the request's query string as an aggregate key for a rate-based rule.
+     *
+     * Each distinct string contributes to the aggregation instance. If you use just the query
+     * string as your custom key, then each string fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitQueryStringProperty rateLimitQueryStringProperty =
+     * RateLimitQueryStringProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitquerystring.html)
+     */
+    public inline fun cfnWebACLRateLimitQueryStringProperty(
+        block: CfnWebACLRateLimitQueryStringPropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RateLimitQueryStringProperty {
+        val builder = CfnWebACLRateLimitQueryStringPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the request's URI path as an aggregate key for a rate-based rule.
+     *
+     * Each distinct URI path contributes to the aggregation instance. If you use just the URI path
+     * as your custom key, then each URI path fully defines an aggregation instance.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RateLimitUriPathProperty rateLimitUriPathProperty = RateLimitUriPathProperty.builder()
+     * .textTransformations(List.of(TextTransformationProperty.builder()
+     * .priority(123)
+     * .type("type")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimituripath.html)
+     */
+    public inline fun cfnWebACLRateLimitUriPathProperty(
+        block: CfnWebACLRateLimitUriPathPropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RateLimitUriPathProperty {
+        val builder = CfnWebACLRateLimitUriPathPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -6870,7 +7911,7 @@ public object wafv2 {
      * Customizes the maximum size of the request body that your protected CloudFront distributions
      * forward to AWS WAF for inspection.
      *
-     * The default size is 16 KB (16,384 kilobytes).
+     * The default size is 16 KB (16,384 bytes).
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see
@@ -6895,6 +7936,44 @@ public object wafv2 {
         block: CfnWebACLRequestBodyAssociatedResourceTypeConfigPropertyDsl.() -> Unit = {}
     ): CfnWebACL.RequestBodyAssociatedResourceTypeConfigProperty {
         val builder = CfnWebACLRequestBodyAssociatedResourceTypeConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.wafv2.*;
+     * RequestInspectionACFPProperty requestInspectionACFPProperty =
+     * RequestInspectionACFPProperty.builder()
+     * .payloadType("payloadType")
+     * // the properties below are optional
+     * .addressFields(List.of(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build()))
+     * .emailField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .passwordField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .phoneNumberFields(List.of(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build()))
+     * .usernameField(FieldIdentifierProperty.builder()
+     * .identifier("identifier")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-requestinspectionacfp.html)
+     */
+    public inline fun cfnWebACLRequestInspectionACFPProperty(
+        block: CfnWebACLRequestInspectionACFPPropertyDsl.() -> Unit = {}
+    ): CfnWebACL.RequestInspectionACFPProperty {
+        val builder = CfnWebACLRequestInspectionACFPPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -7432,11 +8511,11 @@ public object wafv2 {
      *
      * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
      * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-     * limit is 8 KB (8,192 kilobytes) and for CloudFront web ACLs, this limit is 16 KB (16,384
-     * kilobytes). For CloudFront web ACLs, you can increase the limit in the web ACL
-     * `AssociationConfig` , for additional fees. If you know that the request body for your web
-     * requests should never exceed the inspection limit, you could use a size constraint statement
-     * to block requests that have a larger request body size.
+     * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
+     * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
+     * additional fees. If you know that the request body for your web requests should never exceed
+     * the inspection limit, you could use a size constraint statement to block requests that have a
+     * larger request body size.
      *
      * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI
      * counts as one character. For example, the URI `/logo.jpg` is nine characters long.

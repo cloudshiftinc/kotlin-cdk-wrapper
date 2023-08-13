@@ -56,7 +56,10 @@ public class CfnBucketDestinationPropertyDsl {
         cdkBuilder.bucketArn(bucketArn)
     }
 
-    /** @param format Specifies the file format used when exporting data to Amazon S3. */
+    /**
+     * @param format Specifies the file format used when exporting data to Amazon S3. *Allowed
+     *   values* : `CSV` | `ORC` | `Parquet`
+     */
     public fun format(format: String) {
         cdkBuilder.format(format)
     }

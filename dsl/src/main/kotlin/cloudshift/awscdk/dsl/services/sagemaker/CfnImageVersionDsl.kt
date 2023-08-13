@@ -12,7 +12,11 @@
 package cloudshift.awscdk.dsl.services.sagemaker
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnImageVersion
 import software.constructs.Construct
 
@@ -40,6 +44,16 @@ import software.constructs.Construct
  * CfnImageVersion cfnImageVersion = CfnImageVersion.Builder.create(this, "MyCfnImageVersion")
  * .baseImage("baseImage")
  * .imageName("imageName")
+ * // the properties below are optional
+ * .alias("alias")
+ * .aliases(List.of("aliases"))
+ * .horovod(false)
+ * .jobType("jobType")
+ * .mlFramework("mlFramework")
+ * .processor("processor")
+ * .programmingLang("programmingLang")
+ * .releaseNotes("releaseNotes")
+ * .vendorGuidance("vendorGuidance")
  * .build();
  * ```
  *
@@ -51,6 +65,41 @@ public class CfnImageVersionDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnImageVersion.Builder = CfnImageVersion.Builder.create(scope, id)
+
+    private val _aliases: MutableList<String> = mutableListOf()
+
+    /**
+     * The alias of the image version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-alias)
+     *
+     * @param alias The alias of the image version.
+     */
+    public fun alias(alias: String) {
+        cdkBuilder.alias(alias)
+    }
+
+    /**
+     * List of aliases for the image version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-aliases)
+     *
+     * @param aliases List of aliases for the image version.
+     */
+    public fun aliases(vararg aliases: String) {
+        _aliases.addAll(listOf(*aliases))
+    }
+
+    /**
+     * List of aliases for the image version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-aliases)
+     *
+     * @param aliases List of aliases for the image version.
+     */
+    public fun aliases(aliases: Collection<String>) {
+        _aliases.addAll(aliases)
+    }
 
     /**
      * The container image that the SageMaker image version is based on.
@@ -68,6 +117,28 @@ public class CfnImageVersionDsl(
     }
 
     /**
+     * Indicates Horovod compatibility.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-horovod)
+     *
+     * @param horovod Indicates Horovod compatibility.
+     */
+    public fun horovod(horovod: Boolean) {
+        cdkBuilder.horovod(horovod)
+    }
+
+    /**
+     * Indicates Horovod compatibility.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-horovod)
+     *
+     * @param horovod Indicates Horovod compatibility.
+     */
+    public fun horovod(horovod: IResolvable) {
+        cdkBuilder.horovod(horovod)
+    }
+
+    /**
      * The name of the parent image.
      *
      * *Length Constraints* : Minimum length of 1. Maximum length of 63.
@@ -82,5 +153,74 @@ public class CfnImageVersionDsl(
         cdkBuilder.imageName(imageName)
     }
 
-    public fun build(): CfnImageVersion = cdkBuilder.build()
+    /**
+     * Indicates SageMaker job type compatibility.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-jobtype)
+     *
+     * @param jobType Indicates SageMaker job type compatibility.
+     */
+    public fun jobType(jobType: String) {
+        cdkBuilder.jobType(jobType)
+    }
+
+    /**
+     * The machine learning framework vended in the image version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-mlframework)
+     *
+     * @param mlFramework The machine learning framework vended in the image version.
+     */
+    public fun mlFramework(mlFramework: String) {
+        cdkBuilder.mlFramework(mlFramework)
+    }
+
+    /**
+     * Indicates CPU or GPU compatibility.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-processor)
+     *
+     * @param processor Indicates CPU or GPU compatibility.
+     */
+    public fun processor(processor: String) {
+        cdkBuilder.processor(processor)
+    }
+
+    /**
+     * The supported programming language and its version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-programminglang)
+     *
+     * @param programmingLang The supported programming language and its version.
+     */
+    public fun programmingLang(programmingLang: String) {
+        cdkBuilder.programmingLang(programmingLang)
+    }
+
+    /**
+     * The maintainer description of the image version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-releasenotes)
+     *
+     * @param releaseNotes The maintainer description of the image version.
+     */
+    public fun releaseNotes(releaseNotes: String) {
+        cdkBuilder.releaseNotes(releaseNotes)
+    }
+
+    /**
+     * The availability of the image version specified by the maintainer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html#cfn-sagemaker-imageversion-vendorguidance)
+     *
+     * @param vendorGuidance The availability of the image version specified by the maintainer.
+     */
+    public fun vendorGuidance(vendorGuidance: String) {
+        cdkBuilder.vendorGuidance(vendorGuidance)
+    }
+
+    public fun build(): CfnImageVersion {
+        if (_aliases.isNotEmpty()) cdkBuilder.aliases(_aliases)
+        return cdkBuilder.build()
+    }
 }

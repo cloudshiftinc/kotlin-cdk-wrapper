@@ -277,8 +277,8 @@ public class CfnJobDefinitionContainerPropertiesPropertyDsl {
     }
 
     /**
-     * @param image The image used to start a container. This string is passed directly to the
-     *   Docker daemon. Images in the Docker Hub registry are available by default. Other
+     * @param image Required. The image used to start a container. This string is passed directly to
+     *   the Docker daemon. Images in the Docker Hub registry are available by default. Other
      *   repositories are specified with `*repository-url* / *image* : *tag*` . It can be 255
      *   characters long. It can contain uppercase and lowercase letters, numbers, hyphens (-),
      *   underscores (_), colons (:), periods (.), forward slashes (/), and number signs (#). This

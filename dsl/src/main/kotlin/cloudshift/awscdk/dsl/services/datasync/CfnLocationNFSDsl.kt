@@ -60,40 +60,40 @@ public class CfnLocationNFSDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * Specifies the mount options that DataSync can use to mount your NFS share.
+     * Specifies the options that DataSync can use to mount your NFS file server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-mountoptions)
      *
-     * @param mountOptions Specifies the mount options that DataSync can use to mount your NFS
-     *   share.
+     * @param mountOptions Specifies the options that DataSync can use to mount your NFS file
+     *   server.
      */
     public fun mountOptions(mountOptions: IResolvable) {
         cdkBuilder.mountOptions(mountOptions)
     }
 
     /**
-     * Specifies the mount options that DataSync can use to mount your NFS share.
+     * Specifies the options that DataSync can use to mount your NFS file server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-mountoptions)
      *
-     * @param mountOptions Specifies the mount options that DataSync can use to mount your NFS
-     *   share.
+     * @param mountOptions Specifies the options that DataSync can use to mount your NFS file
+     *   server.
      */
     public fun mountOptions(mountOptions: CfnLocationNFS.MountOptionsProperty) {
         cdkBuilder.mountOptions(mountOptions)
     }
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of agents that DataSync uses to connect to your
+     * Specifies the Amazon Resource Name (ARN) of the DataSync agent that want to connect to your
      * NFS file server.
      *
-     * If you are copying data to or from your AWS Snowcone device, see
-     * [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone)
-     * for more information.
+     * You can specify more than one agent. For more information, see
+     * [Using multiple agents for transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-onpremconfig)
      *
-     * @param onPremConfig Specifies the Amazon Resource Names (ARNs) of agents that DataSync uses
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
      *   to connect to your NFS file server.
      */
     public fun onPremConfig(onPremConfig: IResolvable) {
@@ -101,16 +101,16 @@ public class CfnLocationNFSDsl(
     }
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of agents that DataSync uses to connect to your
+     * Specifies the Amazon Resource Name (ARN) of the DataSync agent that want to connect to your
      * NFS file server.
      *
-     * If you are copying data to or from your AWS Snowcone device, see
-     * [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone)
-     * for more information.
+     * You can specify more than one agent. For more information, see
+     * [Using multiple agents for transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-onpremconfig)
      *
-     * @param onPremConfig Specifies the Amazon Resource Names (ARNs) of agents that DataSync uses
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
      *   to connect to your NFS file server.
      */
     public fun onPremConfig(onPremConfig: CfnLocationNFS.OnPremConfigProperty) {
@@ -118,50 +118,30 @@ public class CfnLocationNFSDsl(
     }
 
     /**
-     * Specifies the IP address or domain name of your NFS file server.
-     *
-     * An agent that is installed on-premises uses this hostname to mount the NFS server in a
-     * network.
-     *
-     * If you are copying data to or from your AWS Snowcone device, see
-     * [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone)
-     * for more information.
-     *
-     * You must specify be an IP version 4 address or Domain Name System (DNS)-compliant name.
+     * Specifies the Domain Name System (DNS) name or IP version 4 address of the NFS file server
+     * that your DataSync agent connects to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-serverhostname)
      *
-     * @param serverHostname Specifies the IP address or domain name of your NFS file server.
+     * @param serverHostname Specifies the Domain Name System (DNS) name or IP version 4 address of
+     *   the NFS file server that your DataSync agent connects to.
      */
     public fun serverHostname(serverHostname: String) {
         cdkBuilder.serverHostname(serverHostname)
     }
 
     /**
-     * Specifies the subdirectory in the NFS file server that DataSync transfers to or from.
+     * Specifies the export path in your NFS file server that you want DataSync to mount.
      *
-     * The NFS path should be a path that's exported by the NFS server, or a subdirectory of that
-     * path. The path should be such that it can be mounted by other NFS clients in your network.
-     *
-     * To see all the paths exported by your NFS server, run " `showmount -e nfs-server-name` " from
-     * an NFS client that has access to your server. You can specify any directory that appears in
-     * the results, and any subdirectory of that directory. Ensure that the NFS export is accessible
-     * without Kerberos authentication.
-     *
-     * To transfer all the data in the folder you specified, DataSync needs to have permissions to
-     * read all the data. To ensure this, either configure the NFS export with `no_root_squash,` or
-     * ensure that the permissions for all of the files that you want DataSync allow read access for
-     * all users. Doing either enables the agent to read the files. For the agent to access
-     * directories, you must additionally enable all execute access.
-     *
-     * If you are copying data to or from your AWS Snowcone device, see
-     * [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone)
-     * for more information.
+     * This path (or a subdirectory of the path) is where DataSync transfers data to or from. For
+     * information on configuring an export for DataSync, see
+     * [Accessing NFS file servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#accessing-nfs)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-subdirectory)
      *
-     * @param subdirectory Specifies the subdirectory in the NFS file server that DataSync transfers
-     *   to or from.
+     * @param subdirectory Specifies the export path in your NFS file server that you want DataSync
+     *   to mount.
      */
     public fun subdirectory(subdirectory: String) {
         cdkBuilder.subdirectory(subdirectory)

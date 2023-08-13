@@ -86,9 +86,17 @@ import software.amazon.awscdk.services.glue.CfnTableProps
  * .catalogId("catalogId")
  * .databaseName("databaseName")
  * .name("name")
+ * .region("region")
  * .build())
  * .viewExpandedText("viewExpandedText")
  * .viewOriginalText("viewOriginalText")
+ * .build())
+ * // the properties below are optional
+ * .openTableFormatInput(OpenTableFormatInputProperty.builder()
+ * .icebergInput(IcebergInputProperty.builder()
+ * .metadataOperation("metadataOperation")
+ * .version("version")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -110,6 +118,16 @@ public class CfnTablePropsDsl {
      */
     public fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
+    }
+
+    /** @param openTableFormatInput the value to be set. */
+    public fun openTableFormatInput(openTableFormatInput: IResolvable) {
+        cdkBuilder.openTableFormatInput(openTableFormatInput)
+    }
+
+    /** @param openTableFormatInput the value to be set. */
+    public fun openTableFormatInput(openTableFormatInput: CfnTable.OpenTableFormatInputProperty) {
+        cdkBuilder.openTableFormatInput(openTableFormatInput)
     }
 
     /** @param tableInput A structure used to define a table. */

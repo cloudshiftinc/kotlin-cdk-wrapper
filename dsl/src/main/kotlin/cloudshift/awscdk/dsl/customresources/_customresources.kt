@@ -94,21 +94,14 @@ public object customresources {
      *
      * Example:
      * ```
-     * AwsCustomResource awsCustom = AwsCustomResource.Builder.create(this, "aws-custom")
-     * .onCreate(AwsSdkCall.builder()
-     * .service("...")
-     * .action("...")
+     * AwsCustomResource.Builder.create(this, "GetParameterCustomResource")
+     * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
+     * .service("SSM")
+     * .action("getParameter")
      * .parameters(Map.of(
-     * "text", "..."))
-     * .physicalResourceId(PhysicalResourceId.of("..."))
-     * .build())
-     * .onUpdate(AwsSdkCall.builder()
-     * .service("...")
-     * .action("...")
-     * .parameters(Map.of(
-     * "text", "...",
-     * "resourceId", new PhysicalResourceIdReference()))
-     * .build())
+     * "Name", "my-parameter",
+     * "WithDecryption", true))
+     * .physicalResourceId(PhysicalResourceId.fromResponse("Parameter.ARN")).build())
      * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
      * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
      * .build()))

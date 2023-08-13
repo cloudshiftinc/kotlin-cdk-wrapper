@@ -20,6 +20,8 @@ import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.transfer.CfnConnector
 import software.amazon.awscdk.services.transfer.CfnConnectorProps
 
 /**
@@ -33,10 +35,14 @@ import software.amazon.awscdk.services.transfer.CfnConnectorProps
  * Object as2Config;
  * CfnConnectorProps cfnConnectorProps = CfnConnectorProps.builder()
  * .accessRole("accessRole")
- * .as2Config(as2Config)
  * .url("url")
  * // the properties below are optional
+ * .as2Config(as2Config)
  * .loggingRole("loggingRole")
+ * .sftpConfig(SftpConfigProperty.builder()
+ * .trustedHostKeys(List.of("trustedHostKeys"))
+ * .userSecretId("userSecretId")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -53,20 +59,32 @@ public class CfnConnectorPropsDsl {
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * @param accessRole With AS2, you can send files by calling `StartFileTransfer` and specifying
-     *   the file paths in the request parameter, `SendFilePaths` . We use the file’s parent
-     *   directory (for example, for `--send-file-paths /bucket/dir/file.txt` , parent directory is
-     *   `/bucket/dir/` ) to temporarily store a processed AS2 message file, store the MDN when we
-     *   receive them from the partner, and write a final JSON file containing relevant metadata of
-     *   the transmission. So, the `AccessRole` needs to provide read and write access to the parent
-     *   directory of the file location used in the `StartFileTransfer` request. Additionally, you
-     *   need to provide read and write access to the parent directory of the files that you intend
-     *   to send with `StartFileTransfer` .
+     * @param accessRole Connectors are used to send files using either the AS2 or SFTP protocol.
+     *   For the access role, provide the Amazon Resource Name (ARN) of the AWS Identity and Access
+     *   Management role to use.
+     *
+     * *For AS2 connectors*
+     *
+     * With AS2, you can send files by calling `StartFileTransfer` and specifying the file paths in
+     * the request parameter, `SendFilePaths` . We use the file’s parent directory (for example, for
+     * `--send-file-paths /bucket/dir/file.txt` , parent directory is `/bucket/dir/` ) to
+     * temporarily store a processed AS2 message file, store the MDN when we receive them from the
+     * partner, and write a final JSON file containing relevant metadata of the transmission. So,
+     * the `AccessRole` needs to provide read and write access to the parent directory of the file
+     * location used in the `StartFileTransfer` request. Additionally, you need to provide read and
+     * write access to the parent directory of the files that you intend to send with
+     * `StartFileTransfer` .
      *
      * If you are using Basic authentication for your AS2 connector, the access role requires the
      * `secretsmanager:GetSecretValue` permission for the secret. If the secret is encrypted using a
      * customer-managed key instead of the AWS managed key in Secrets Manager, then the role also
      * needs the `kms:Decrypt` permission for that key.
+     *
+     * *For SFTP connectors*
+     *
+     * Make sure that the access role provides read and write access to the parent directory of the
+     * file location that's used in the `StartFileTransfer` request. Additionally, make sure that
+     * the role provides `secretsmanager:GetSecretValue` permission to AWS Secrets Manager .
      */
     public fun accessRole(accessRole: String) {
         cdkBuilder.accessRole(accessRole)
@@ -91,6 +109,16 @@ public class CfnConnectorPropsDsl {
      */
     public fun loggingRole(loggingRole: String) {
         cdkBuilder.loggingRole(loggingRole)
+    }
+
+    /** @param sftpConfig Configuration for an SFTP connector. */
+    public fun sftpConfig(sftpConfig: IResolvable) {
+        cdkBuilder.sftpConfig(sftpConfig)
+    }
+
+    /** @param sftpConfig Configuration for an SFTP connector. */
+    public fun sftpConfig(sftpConfig: CfnConnector.SftpConfigProperty) {
+        cdkBuilder.sftpConfig(sftpConfig)
     }
 
     /** @param tags Key-value pairs that can be used to group and search for connectors. */

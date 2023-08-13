@@ -286,22 +286,22 @@ public class CfnAppDsl(
     }
 
     /**
-     * The optional description for an app.
+     * Optional description for an application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-app.html#cfn-resiliencehub-app-description)
      *
-     * @param description The optional description for an app.
+     * @param description Optional description for an application.
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
     /**
-     * The name for the application.
+     * Name for the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-app.html#cfn-resiliencehub-app-name)
      *
-     * @param name The name for the application.
+     * @param name Name for the application.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
@@ -352,13 +352,13 @@ public class CfnAppDsl(
     }
 
     /**
-     * The tags assigned to the resource.
+     * Tags assigned to the resource.
      *
      * A tag is a label that you assign to an AWS resource. Each tag consists of a key/value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-app.html#cfn-resiliencehub-app-tags)
      *
-     * @param tags The tags assigned to the resource.
+     * @param tags Tags assigned to the resource.
      */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)

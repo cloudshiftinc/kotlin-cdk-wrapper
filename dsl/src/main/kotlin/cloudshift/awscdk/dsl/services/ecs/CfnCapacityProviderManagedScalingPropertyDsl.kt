@@ -61,7 +61,7 @@ public class CfnCapacityProviderManagedScalingPropertyDsl {
     /**
      * @param maximumScalingStepSize The maximum number of Amazon EC2 instances that Amazon ECS will
      *   scale out at one time. The scale in process is not affected by this parameter. If this
-     *   parameter is omitted, the default value of `1` is used.
+     *   parameter is omitted, the default value of `10000` is used.
      */
     public fun maximumScalingStepSize(maximumScalingStepSize: Number) {
         cdkBuilder.maximumScalingStepSize(maximumScalingStepSize)

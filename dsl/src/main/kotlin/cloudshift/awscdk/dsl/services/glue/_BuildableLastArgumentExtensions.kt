@@ -236,6 +236,15 @@ public inline fun CfnSecurityConfiguration.setEncryptionConfiguration(
     return setEncryptionConfiguration(builder.build())
 }
 
+/**  */
+public inline fun CfnTable.setOpenTableFormatInput(
+    block: CfnTableOpenTableFormatInputPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnTableOpenTableFormatInputPropertyDsl()
+    builder.apply(block)
+    return setOpenTableFormatInput(builder.build())
+}
+
 /** A structure used to define a table. */
 public inline fun CfnTable.setTableInput(block: CfnTableTableInputPropertyDsl.() -> Unit = {}) {
     val builder = CfnTableTableInputPropertyDsl()

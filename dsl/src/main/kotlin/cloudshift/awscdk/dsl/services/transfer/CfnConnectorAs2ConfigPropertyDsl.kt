@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.transfer.CfnConnector
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.transfer.*;
  * As2ConfigProperty as2ConfigProperty = As2ConfigProperty.builder()
+ * .basicAuthSecretId("basicAuthSecretId")
  * .compression("compression")
  * .encryptionAlgorithm("encryptionAlgorithm")
  * .localProfileId("localProfileId")
@@ -41,6 +42,15 @@ import software.amazon.awscdk.services.transfer.CfnConnector
 public class CfnConnectorAs2ConfigPropertyDsl {
     private val cdkBuilder: CfnConnector.As2ConfigProperty.Builder =
         CfnConnector.As2ConfigProperty.builder()
+
+    /**
+     * @param basicAuthSecretId ARN or name of the secret in AWS Secrets Manager which contains the
+     *   credentials for Basic authentication. If empty, Basic authentication is disabled for the
+     *   AS2 connector
+     */
+    public fun basicAuthSecretId(basicAuthSecretId: String) {
+        cdkBuilder.basicAuthSecretId(basicAuthSecretId)
+    }
 
     /** @param compression Specifies whether the AS2 file is compressed. */
     public fun compression(compression: String) {

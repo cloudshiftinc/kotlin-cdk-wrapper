@@ -328,6 +328,7 @@ public object omics {
      * CfnRunGroup cfnRunGroup = CfnRunGroup.Builder.create(this, "MyCfnRunGroup")
      * .maxCpus(123)
      * .maxDuration(123)
+     * .maxGpus(123)
      * .maxRuns(123)
      * .name("name")
      * .tags(Map.of(
@@ -358,6 +359,7 @@ public object omics {
      * CfnRunGroupProps cfnRunGroupProps = CfnRunGroupProps.builder()
      * .maxCpus(123)
      * .maxDuration(123)
+     * .maxGpus(123)
      * .maxRuns(123)
      * .name("name")
      * .tags(Map.of(
@@ -597,6 +599,7 @@ public object omics {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.omics.*;
      * CfnWorkflow cfnWorkflow = CfnWorkflow.Builder.create(this, "MyCfnWorkflow")
+     * .accelerators("accelerators")
      * .definitionUri("definitionUri")
      * .description("description")
      * .engine("engine")
@@ -634,6 +637,7 @@ public object omics {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.omics.*;
      * CfnWorkflowProps cfnWorkflowProps = CfnWorkflowProps.builder()
+     * .accelerators("accelerators")
      * .definitionUri("definitionUri")
      * .description("description")
      * .engine("engine")

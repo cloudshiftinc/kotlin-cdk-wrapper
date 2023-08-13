@@ -345,7 +345,7 @@ public class CfnQueuePropsDsl {
      *   [SSE-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html)
      *   or
      *   [SSE-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html)
-     *   ).
+     *   ). When `SqsManagedSseEnabled` is not defined, `SSE-SQS` encryption is enabled by default.
      */
     public fun sqsManagedSseEnabled(sqsManagedSseEnabled: Boolean) {
         cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled)
@@ -357,7 +357,7 @@ public class CfnQueuePropsDsl {
      *   [SSE-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html)
      *   or
      *   [SSE-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html)
-     *   ).
+     *   ). When `SqsManagedSseEnabled` is not defined, `SSE-SQS` encryption is enabled by default.
      */
     public fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable) {
         cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled)

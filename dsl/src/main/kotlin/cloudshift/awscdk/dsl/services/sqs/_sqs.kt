@@ -14,6 +14,8 @@ package cloudshift.awscdk.dsl.services.sqs
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.sqs.CfnQueue
+import software.amazon.awscdk.services.sqs.CfnQueueInlinePolicy
+import software.amazon.awscdk.services.sqs.CfnQueueInlinePolicyProps
 import software.amazon.awscdk.services.sqs.CfnQueuePolicy
 import software.amazon.awscdk.services.sqs.CfnQueuePolicyProps
 import software.amazon.awscdk.services.sqs.CfnQueueProps
@@ -88,6 +90,59 @@ public object sqs {
         block: CfnQueueDsl.() -> Unit = {},
     ): CfnQueue {
         val builder = CfnQueueDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Schema for SQS QueueInlinePolicy.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sqs.*;
+     * Object policyDocument;
+     * CfnQueueInlinePolicy cfnQueueInlinePolicy = CfnQueueInlinePolicy.Builder.create(this,
+     * "MyCfnQueueInlinePolicy")
+     * .policyDocument(policyDocument)
+     * .queue("queue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queueinlinepolicy.html)
+     */
+    public inline fun cfnQueueInlinePolicy(
+        scope: Construct,
+        id: String,
+        block: CfnQueueInlinePolicyDsl.() -> Unit = {},
+    ): CfnQueueInlinePolicy {
+        val builder = CfnQueueInlinePolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnQueueInlinePolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.sqs.*;
+     * Object policyDocument;
+     * CfnQueueInlinePolicyProps cfnQueueInlinePolicyProps = CfnQueueInlinePolicyProps.builder()
+     * .policyDocument(policyDocument)
+     * .queue("queue")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queueinlinepolicy.html)
+     */
+    public inline fun cfnQueueInlinePolicyProps(
+        block: CfnQueueInlinePolicyPropsDsl.() -> Unit = {}
+    ): CfnQueueInlinePolicyProps {
+        val builder = CfnQueueInlinePolicyPropsDsl()
         builder.apply(block)
         return builder.build()
     }

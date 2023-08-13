@@ -937,7 +937,7 @@ public object datasync {
     }
 
     /**
-     * Specifies the mount options that DataSync can use to mount your NFS share.
+     * Specifies the options that DataSync can use to mount your NFS file server.
      *
      * Example:
      * ```
@@ -960,8 +960,7 @@ public object datasync {
     }
 
     /**
-     * A list of Amazon Resource Names (ARNs) of agents to use for a Network File System (NFS)
-     * location.
+     * The AWS DataSync agents that are connecting to a Network File System (NFS) location.
      *
      * Example:
      * ```

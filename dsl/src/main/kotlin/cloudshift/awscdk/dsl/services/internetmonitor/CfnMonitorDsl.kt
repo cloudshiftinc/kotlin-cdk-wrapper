@@ -109,36 +109,18 @@ public class CfnMonitorDsl(
     }
 
     /**
-     * Publish internet measurements for a monitor for all city-networks (up to the 500,000 service
-     * limit) to another location, such as an Amazon S3 bucket.
-     *
-     * Measurements are also published to Amazon CloudWatch Logs for the first 500 (by traffic
-     * volume) city-networks (client locations and ASNs, typically internet service providers or
-     * ISPs).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html#cfn-internetmonitor-monitor-internetmeasurementslogdelivery)
      *
-     * @param internetMeasurementsLogDelivery Publish internet measurements for a monitor for all
-     *   city-networks (up to the 500,000 service limit) to another location, such as an Amazon S3
-     *   bucket.
+     * @param internetMeasurementsLogDelivery
      */
     public fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
         cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery)
     }
 
     /**
-     * Publish internet measurements for a monitor for all city-networks (up to the 500,000 service
-     * limit) to another location, such as an Amazon S3 bucket.
-     *
-     * Measurements are also published to Amazon CloudWatch Logs for the first 500 (by traffic
-     * volume) city-networks (client locations and ASNs, typically internet service providers or
-     * ISPs).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html#cfn-internetmonitor-monitor-internetmeasurementslogdelivery)
      *
-     * @param internetMeasurementsLogDelivery Publish internet measurements for a monitor for all
-     *   city-networks (up to the 500,000 service limit) to another location, such as an Amazon S3
-     *   bucket.
+     * @param internetMeasurementsLogDelivery
      */
     public fun internetMeasurementsLogDelivery(
         internetMeasurementsLogDelivery: CfnMonitor.InternetMeasurementsLogDeliveryProperty
@@ -308,18 +290,9 @@ public class CfnMonitorDsl(
     }
 
     /**
-     * The percentage of the internet-facing traffic for your application that you want to monitor.
-     *
-     * You can also, optionally, set a limit for the number of city-networks (client locations and
-     * ASNs, typically internet service providers) that Internet Monitor will monitor traffic for.
-     * The city-networks maximum limit caps the number of city-networks that Internet Monitor
-     * monitors for your application, regardless of the percentage of traffic that you choose to
-     * monitor.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html#cfn-internetmonitor-monitor-trafficpercentagetomonitor)
      *
-     * @param trafficPercentageToMonitor The percentage of the internet-facing traffic for your
-     *   application that you want to monitor.
+     * @param trafficPercentageToMonitor
      */
     public fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number) {
         cdkBuilder.trafficPercentageToMonitor(trafficPercentageToMonitor)

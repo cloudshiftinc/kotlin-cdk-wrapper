@@ -22,12 +22,11 @@ import software.amazon.awscdk.services.personalize.CfnDataset
  * Describes a job that imports training data from a data source (Amazon S3 bucket) to an Amazon
  * Personalize dataset.
  *
- * For more information, see
- * [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)
- * .
- *
  * A dataset import job can be in one of the following states:
  * * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
+ *
+ * If you specify a dataset import job as part of a dataset, all dataset import job fields are
+ * required.
  *
  * Example:
  * ```

@@ -31,6 +31,7 @@ import software.constructs.Construct
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.omics.*;
  * CfnWorkflow cfnWorkflow = CfnWorkflow.Builder.create(this, "MyCfnWorkflow")
+ * .accelerators("accelerators")
  * .definitionUri("definitionUri")
  * .description("description")
  * .engine("engine")
@@ -55,6 +56,15 @@ public class CfnWorkflowDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnWorkflow.Builder = CfnWorkflow.Builder.create(scope, id)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-accelerators)
+     *
+     * @param accelerators
+     */
+    public fun accelerators(accelerators: String) {
+        cdkBuilder.accelerators(accelerators)
+    }
 
     /**
      * The URI of a definition for the workflow.

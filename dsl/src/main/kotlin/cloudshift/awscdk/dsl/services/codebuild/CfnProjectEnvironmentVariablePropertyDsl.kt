@@ -74,10 +74,9 @@ public class CfnProjectEnvironmentVariablePropertyDsl {
      * @param value The value of the environment variable.
      *
      * We strongly discourage the use of `PLAINTEXT` environment variables to store sensitive
-     * values, especially AWS secret key IDs and secret access keys. `PLAINTEXT` environment
-     * variables can be displayed in plain text using the AWS CodeBuild console and the AWS CLI .
-     * For sensitive values, we recommend you use an environment variable of type `PARAMETER_STORE`
-     * or `SECRETS_MANAGER` .
+     * values, especially AWS secret key IDs. `PLAINTEXT` environment variables can be displayed in
+     * plain text using the AWS CodeBuild console and the AWS CLI . For sensitive values, we
+     * recommend you use an environment variable of type `PARAMETER_STORE` or `SECRETS_MANAGER` .
      */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)

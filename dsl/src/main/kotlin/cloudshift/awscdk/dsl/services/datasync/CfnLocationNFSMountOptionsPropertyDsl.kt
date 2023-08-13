@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationNFS
 
 /**
- * Specifies the mount options that DataSync can use to mount your NFS share.
+ * Specifies the options that DataSync can use to mount your NFS file server.
  *
  * Example:
  * ```

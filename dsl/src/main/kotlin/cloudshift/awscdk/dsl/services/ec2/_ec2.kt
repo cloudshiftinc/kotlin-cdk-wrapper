@@ -3698,6 +3698,7 @@ public object ec2 {
      * CfnHost cfnHost = CfnHost.Builder.create(this, "MyCfnHost")
      * .availabilityZone("availabilityZone")
      * // the properties below are optional
+     * .assetId("assetId")
      * .autoPlacement("autoPlacement")
      * .hostMaintenance("hostMaintenance")
      * .hostRecovery("hostRecovery")
@@ -3730,6 +3731,7 @@ public object ec2 {
      * CfnHostProps cfnHostProps = CfnHostProps.builder()
      * .availabilityZone("availabilityZone")
      * // the properties below are optional
+     * .assetId("assetId")
      * .autoPlacement("autoPlacement")
      * .hostMaintenance("hostMaintenance")
      * .hostRecovery("hostRecovery")

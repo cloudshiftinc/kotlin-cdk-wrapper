@@ -43,6 +43,12 @@ import software.amazon.awscdk.services.glue.CfnCrawler
  * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
  * .path("path")
  * .build()))
+ * .icebergTargets(List.of(IcebergTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .exclusions(List.of("exclusions"))
+ * .maximumTraversalDepth(123)
+ * .paths(List.of("paths"))
+ * .build()))
  * .jdbcTargets(List.of(JdbcTargetProperty.builder()
  * .connectionName("connectionName")
  * .exclusions(List.of("exclusions"))
@@ -75,6 +81,8 @@ public class CfnCrawlerTargetsPropertyDsl {
     private val _deltaTargets: MutableList<Any> = mutableListOf()
 
     private val _dynamoDbTargets: MutableList<Any> = mutableListOf()
+
+    private val _icebergTargets: MutableList<Any> = mutableListOf()
 
     private val _jdbcTargets: MutableList<Any> = mutableListOf()
 
@@ -127,6 +135,21 @@ public class CfnCrawlerTargetsPropertyDsl {
         cdkBuilder.dynamoDbTargets(dynamoDbTargets)
     }
 
+    /** @param icebergTargets the value to be set. */
+    public fun icebergTargets(vararg icebergTargets: Any) {
+        _icebergTargets.addAll(listOf(*icebergTargets))
+    }
+
+    /** @param icebergTargets the value to be set. */
+    public fun icebergTargets(icebergTargets: Collection<Any>) {
+        _icebergTargets.addAll(icebergTargets)
+    }
+
+    /** @param icebergTargets the value to be set. */
+    public fun icebergTargets(icebergTargets: IResolvable) {
+        cdkBuilder.icebergTargets(icebergTargets)
+    }
+
     /** @param jdbcTargets Specifies JDBC targets. */
     public fun jdbcTargets(vararg jdbcTargets: Any) {
         _jdbcTargets.addAll(listOf(*jdbcTargets))
@@ -176,6 +199,7 @@ public class CfnCrawlerTargetsPropertyDsl {
         if (_catalogTargets.isNotEmpty()) cdkBuilder.catalogTargets(_catalogTargets)
         if (_deltaTargets.isNotEmpty()) cdkBuilder.deltaTargets(_deltaTargets)
         if (_dynamoDbTargets.isNotEmpty()) cdkBuilder.dynamoDbTargets(_dynamoDbTargets)
+        if (_icebergTargets.isNotEmpty()) cdkBuilder.icebergTargets(_icebergTargets)
         if (_jdbcTargets.isNotEmpty()) cdkBuilder.jdbcTargets(_jdbcTargets)
         if (_mongoDbTargets.isNotEmpty()) cdkBuilder.mongoDbTargets(_mongoDbTargets)
         if (_s3Targets.isNotEmpty()) cdkBuilder.s3Targets(_s3Targets)

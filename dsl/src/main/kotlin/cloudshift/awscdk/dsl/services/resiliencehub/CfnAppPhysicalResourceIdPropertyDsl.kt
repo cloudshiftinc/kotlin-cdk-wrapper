@@ -49,7 +49,7 @@ public class CfnAppPhysicalResourceIdPropertyDsl {
         cdkBuilder.awsRegion(awsRegion)
     }
 
-    /** @param identifier The identifier of the physical resource. */
+    /** @param identifier Identifier of the physical resource. */
     public fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)
     }

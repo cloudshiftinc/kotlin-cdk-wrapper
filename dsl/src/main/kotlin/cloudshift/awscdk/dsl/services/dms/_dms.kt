@@ -19,6 +19,8 @@ import software.amazon.awscdk.services.dms.CfnEndpoint
 import software.amazon.awscdk.services.dms.CfnEndpointProps
 import software.amazon.awscdk.services.dms.CfnEventSubscription
 import software.amazon.awscdk.services.dms.CfnEventSubscriptionProps
+import software.amazon.awscdk.services.dms.CfnReplicationConfig
+import software.amazon.awscdk.services.dms.CfnReplicationConfigProps
 import software.amazon.awscdk.services.dms.CfnReplicationInstance
 import software.amazon.awscdk.services.dms.CfnReplicationInstanceProps
 import software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup
@@ -1444,6 +1446,142 @@ public object dms {
         block: CfnEventSubscriptionPropsDsl.() -> Unit = {}
     ): CfnEventSubscriptionProps {
         val builder = CfnEventSubscriptionPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A replication configuration that you later provide to configure and start a AWS DMS
+     * Serverless replication.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * Object replicationSettings;
+     * Object supplementalSettings;
+     * Object tableMappings;
+     * CfnReplicationConfig cfnReplicationConfig = CfnReplicationConfig.Builder.create(this,
+     * "MyCfnReplicationConfig")
+     * .computeConfig(ComputeConfigProperty.builder()
+     * .maxCapacityUnits(123)
+     * // the properties below are optional
+     * .availabilityZone("availabilityZone")
+     * .dnsNameServers("dnsNameServers")
+     * .kmsKeyId("kmsKeyId")
+     * .minCapacityUnits(123)
+     * .multiAz(false)
+     * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+     * .replicationSubnetGroupId("replicationSubnetGroupId")
+     * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+     * .build())
+     * .replicationConfigArn("replicationConfigArn")
+     * .replicationConfigIdentifier("replicationConfigIdentifier")
+     * .replicationSettings(replicationSettings)
+     * .replicationType("replicationType")
+     * .resourceIdentifier("resourceIdentifier")
+     * .sourceEndpointArn("sourceEndpointArn")
+     * .supplementalSettings(supplementalSettings)
+     * .tableMappings(tableMappings)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .targetEndpointArn("targetEndpointArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html)
+     */
+    public inline fun cfnReplicationConfig(
+        scope: Construct,
+        id: String,
+        block: CfnReplicationConfigDsl.() -> Unit = {},
+    ): CfnReplicationConfig {
+        val builder = CfnReplicationConfigDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration parameters for provisioning a AWS DMS Serverless replication.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * ComputeConfigProperty computeConfigProperty = ComputeConfigProperty.builder()
+     * .maxCapacityUnits(123)
+     * // the properties below are optional
+     * .availabilityZone("availabilityZone")
+     * .dnsNameServers("dnsNameServers")
+     * .kmsKeyId("kmsKeyId")
+     * .minCapacityUnits(123)
+     * .multiAz(false)
+     * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+     * .replicationSubnetGroupId("replicationSubnetGroupId")
+     * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-replicationconfig-computeconfig.html)
+     */
+    public inline fun cfnReplicationConfigComputeConfigProperty(
+        block: CfnReplicationConfigComputeConfigPropertyDsl.() -> Unit = {}
+    ): CfnReplicationConfig.ComputeConfigProperty {
+        val builder = CfnReplicationConfigComputeConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnReplicationConfig`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.dms.*;
+     * Object replicationSettings;
+     * Object supplementalSettings;
+     * Object tableMappings;
+     * CfnReplicationConfigProps cfnReplicationConfigProps = CfnReplicationConfigProps.builder()
+     * .computeConfig(ComputeConfigProperty.builder()
+     * .maxCapacityUnits(123)
+     * // the properties below are optional
+     * .availabilityZone("availabilityZone")
+     * .dnsNameServers("dnsNameServers")
+     * .kmsKeyId("kmsKeyId")
+     * .minCapacityUnits(123)
+     * .multiAz(false)
+     * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+     * .replicationSubnetGroupId("replicationSubnetGroupId")
+     * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+     * .build())
+     * .replicationConfigArn("replicationConfigArn")
+     * .replicationConfigIdentifier("replicationConfigIdentifier")
+     * .replicationSettings(replicationSettings)
+     * .replicationType("replicationType")
+     * .resourceIdentifier("resourceIdentifier")
+     * .sourceEndpointArn("sourceEndpointArn")
+     * .supplementalSettings(supplementalSettings)
+     * .tableMappings(tableMappings)
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .targetEndpointArn("targetEndpointArn")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html)
+     */
+    public inline fun cfnReplicationConfigProps(
+        block: CfnReplicationConfigPropsDsl.() -> Unit = {}
+    ): CfnReplicationConfigProps {
+        val builder = CfnReplicationConfigPropsDsl()
         builder.apply(block)
         return builder.build()
     }

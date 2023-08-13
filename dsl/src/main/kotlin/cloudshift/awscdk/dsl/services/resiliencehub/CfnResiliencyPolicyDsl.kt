@@ -127,13 +127,13 @@ public class CfnResiliencyPolicyDsl(
     }
 
     /**
-     * The tags assigned to the resource.
+     * Tags assigned to the resource.
      *
      * A tag is a label that you assign to an AWS resource. Each tag consists of a key/value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-tags)
      *
-     * @param tags The tags assigned to the resource.
+     * @param tags Tags assigned to the resource.
      */
     public fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)

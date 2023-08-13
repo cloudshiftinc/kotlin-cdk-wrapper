@@ -239,8 +239,14 @@ public object config {
      * .sourceIdentifier("sourceIdentifier")
      * .build())
      * // the properties below are optional
+     * .compliance(ComplianceProperty.builder()
+     * .type("type")
+     * .build())
      * .configRuleName("configRuleName")
      * .description("description")
+     * .evaluationModes(List.of(EvaluationModeConfigurationProperty.builder()
+     * .mode("mode")
+     * .build()))
      * .inputParameters(inputParameters)
      * .maximumExecutionFrequency("maximumExecutionFrequency")
      * .scope(ScopeProperty.builder()
@@ -260,6 +266,29 @@ public object config {
         block: CfnConfigRuleDsl.() -> Unit = {},
     ): CfnConfigRule {
         val builder = CfnConfigRuleDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Compliance details of the Config rule.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.config.*;
+     * ComplianceProperty complianceProperty = ComplianceProperty.builder()
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-compliance.html)
+     */
+    public inline fun cfnConfigRuleComplianceProperty(
+        block: CfnConfigRuleCompliancePropertyDsl.() -> Unit = {}
+    ): CfnConfigRule.ComplianceProperty {
+        val builder = CfnConfigRuleCompliancePropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -293,6 +322,30 @@ public object config {
     }
 
     /**
+     * Evaluation mode for the AWS Config rule.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.config.*;
+     * EvaluationModeConfigurationProperty evaluationModeConfigurationProperty =
+     * EvaluationModeConfigurationProperty.builder()
+     * .mode("mode")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-evaluationmodeconfiguration.html)
+     */
+    public inline fun cfnConfigRuleEvaluationModeConfigurationProperty(
+        block: CfnConfigRuleEvaluationModeConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnConfigRule.EvaluationModeConfigurationProperty {
+        val builder = CfnConfigRuleEvaluationModeConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnConfigRule`.
      *
      * Example:
@@ -319,8 +372,14 @@ public object config {
      * .sourceIdentifier("sourceIdentifier")
      * .build())
      * // the properties below are optional
+     * .compliance(ComplianceProperty.builder()
+     * .type("type")
+     * .build())
      * .configRuleName("configRuleName")
      * .description("description")
+     * .evaluationModes(List.of(EvaluationModeConfigurationProperty.builder()
+     * .mode("mode")
+     * .build()))
      * .inputParameters(inputParameters)
      * .maximumExecutionFrequency("maximumExecutionFrequency")
      * .scope(ScopeProperty.builder()

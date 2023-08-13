@@ -653,6 +653,14 @@ public object timestream {
      * // the properties below are optional
      * .magneticStoreWriteProperties(magneticStoreWriteProperties)
      * .retentionProperties(retentionProperties)
+     * .schema(SchemaProperty.builder()
+     * .compositePartitionKey(List.of(PartitionKeyProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .enforcementInRecord("enforcementInRecord")
+     * .name("name")
+     * .build()))
+     * .build())
      * .tableName("tableName")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -739,6 +747,36 @@ public object timestream {
     }
 
     /**
+     * An attribute used in partitioning data in a table.
+     *
+     * A dimension key partitions data using the values of the dimension specified by the
+     * dimension-name as partition key, while a measure key partitions data using measure names
+     * (values of the 'measure_name' column).
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.timestream.*;
+     * PartitionKeyProperty partitionKeyProperty = PartitionKeyProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .enforcementInRecord("enforcementInRecord")
+     * .name("name")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-partitionkey.html)
+     */
+    public inline fun cfnTablePartitionKeyProperty(
+        block: CfnTablePartitionKeyPropertyDsl.() -> Unit = {}
+    ): CfnTable.PartitionKeyProperty {
+        val builder = CfnTablePartitionKeyPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnTable`.
      *
      * Example:
@@ -753,6 +791,14 @@ public object timestream {
      * // the properties below are optional
      * .magneticStoreWriteProperties(magneticStoreWriteProperties)
      * .retentionProperties(retentionProperties)
+     * .schema(SchemaProperty.builder()
+     * .compositePartitionKey(List.of(PartitionKeyProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .enforcementInRecord("enforcementInRecord")
+     * .name("name")
+     * .build()))
+     * .build())
      * .tableName("tableName")
      * .tags(List.of(CfnTag.builder()
      * .key("key")
@@ -817,6 +863,34 @@ public object timestream {
         block: CfnTableS3ConfigurationPropertyDsl.() -> Unit = {}
     ): CfnTable.S3ConfigurationProperty {
         val builder = CfnTableS3ConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * A Schema specifies the expected data model of the table.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.timestream.*;
+     * SchemaProperty schemaProperty = SchemaProperty.builder()
+     * .compositePartitionKey(List.of(PartitionKeyProperty.builder()
+     * .type("type")
+     * // the properties below are optional
+     * .enforcementInRecord("enforcementInRecord")
+     * .name("name")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-schema.html)
+     */
+    public inline fun cfnTableSchemaProperty(
+        block: CfnTableSchemaPropertyDsl.() -> Unit = {}
+    ): CfnTable.SchemaProperty {
+        val builder = CfnTableSchemaPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

@@ -28,6 +28,7 @@ import software.amazon.awscdk.services.omics.CfnRunGroupProps
  * CfnRunGroupProps cfnRunGroupProps = CfnRunGroupProps.builder()
  * .maxCpus(123)
  * .maxDuration(123)
+ * .maxGpus(123)
  * .maxRuns(123)
  * .name("name")
  * .tags(Map.of(
@@ -49,6 +50,11 @@ public class CfnRunGroupPropsDsl {
     /** @param maxDuration The group's maximum duration setting in minutes. */
     public fun maxDuration(maxDuration: Number) {
         cdkBuilder.maxDuration(maxDuration)
+    }
+
+    /** @param maxGpus the value to be set. */
+    public fun maxGpus(maxGpus: Number) {
+        cdkBuilder.maxGpus(maxGpus)
     }
 
     /** @param maxRuns The group's maximum concurrent run setting. */

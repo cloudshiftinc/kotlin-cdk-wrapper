@@ -92,9 +92,17 @@ import software.constructs.Construct
  * .catalogId("catalogId")
  * .databaseName("databaseName")
  * .name("name")
+ * .region("region")
  * .build())
  * .viewExpandedText("viewExpandedText")
  * .viewOriginalText("viewOriginalText")
+ * .build())
+ * // the properties below are optional
+ * .openTableFormatInput(OpenTableFormatInputProperty.builder()
+ * .icebergInput(IcebergInputProperty.builder()
+ * .metadataOperation("metadataOperation")
+ * .version("version")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -130,6 +138,24 @@ public class CfnTableDsl(
      */
     public fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+     *
+     * @param openTableFormatInput
+     */
+    public fun openTableFormatInput(openTableFormatInput: IResolvable) {
+        cdkBuilder.openTableFormatInput(openTableFormatInput)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+     *
+     * @param openTableFormatInput
+     */
+    public fun openTableFormatInput(openTableFormatInput: CfnTable.OpenTableFormatInputProperty) {
+        cdkBuilder.openTableFormatInput(openTableFormatInput)
     }
 
     /**

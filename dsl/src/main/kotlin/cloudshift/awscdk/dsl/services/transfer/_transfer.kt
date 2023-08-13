@@ -181,12 +181,15 @@ public object transfer {
     }
 
     /**
-     * Creates the connector, which captures the parameters for an outbound connection for the AS2
-     * or SFTP protocol.
+     * Creates the connector, which captures the parameters for a connection for the AS2 or SFTP
+     * protocol.
      *
-     * The connector is required for sending files to an externally hosted AS2 or SFTP server. For
-     * more details about AS2 connectors, see
+     * For AS2, the connector is required for sending files to an externally hosted AS2 server. For
+     * SFTP, the connector is required when sending files to an SFTP server or receiving files from
+     * an SFTP server. For more details about connectors, see
      * [Create AS2 connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)
+     * and
+     * [Create SFTP connectors](https://docs.aws.amazon.com/transfer/latest/userguide/configure-sftp-connector.html)
      * .
      *
      * You must specify exactly one configuration object: either for AS2 ( `As2Config` ) or SFTP (
@@ -200,10 +203,14 @@ public object transfer {
      * Object as2Config;
      * CfnConnector cfnConnector = CfnConnector.Builder.create(this, "MyCfnConnector")
      * .accessRole("accessRole")
-     * .as2Config(as2Config)
      * .url("url")
      * // the properties below are optional
+     * .as2Config(as2Config)
      * .loggingRole("loggingRole")
+     * .sftpConfig(SftpConfigProperty.builder()
+     * .trustedHostKeys(List.of("trustedHostKeys"))
+     * .userSecretId("userSecretId")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -232,6 +239,7 @@ public object transfer {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.transfer.*;
      * As2ConfigProperty as2ConfigProperty = As2ConfigProperty.builder()
+     * .basicAuthSecretId("basicAuthSecretId")
      * .compression("compression")
      * .encryptionAlgorithm("encryptionAlgorithm")
      * .localProfileId("localProfileId")
@@ -264,10 +272,14 @@ public object transfer {
      * Object as2Config;
      * CfnConnectorProps cfnConnectorProps = CfnConnectorProps.builder()
      * .accessRole("accessRole")
-     * .as2Config(as2Config)
      * .url("url")
      * // the properties below are optional
+     * .as2Config(as2Config)
      * .loggingRole("loggingRole")
+     * .sftpConfig(SftpConfigProperty.builder()
+     * .trustedHostKeys(List.of("trustedHostKeys"))
+     * .userSecretId("userSecretId")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
@@ -281,6 +293,30 @@ public object transfer {
         block: CfnConnectorPropsDsl.() -> Unit = {}
     ): CfnConnectorProps {
         val builder = CfnConnectorPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Configuration for an SFTP connector.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.transfer.*;
+     * SftpConfigProperty sftpConfigProperty = SftpConfigProperty.builder()
+     * .trustedHostKeys(List.of("trustedHostKeys"))
+     * .userSecretId("userSecretId")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html)
+     */
+    public inline fun cfnConnectorSftpConfigProperty(
+        block: CfnConnectorSftpConfigPropertyDsl.() -> Unit = {}
+    ): CfnConnector.SftpConfigProperty {
+        val builder = CfnConnectorSftpConfigPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

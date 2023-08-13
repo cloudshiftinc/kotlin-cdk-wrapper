@@ -38,7 +38,7 @@ public class CfnSolutionHpoResourceConfigPropertyDsl {
 
     /**
      * @param maxNumberOfTrainingJobs The maximum number of training jobs when you create a solution
-     *   version. The maximum value for maxNumberOfTrainingJobs is 40.
+     *   version. The maximum value for `maxNumberOfTrainingJobs` is `40` .
      */
     public fun maxNumberOfTrainingJobs(maxNumberOfTrainingJobs: String) {
         cdkBuilder.maxNumberOfTrainingJobs(maxNumberOfTrainingJobs)
@@ -46,7 +46,7 @@ public class CfnSolutionHpoResourceConfigPropertyDsl {
 
     /**
      * @param maxParallelTrainingJobs The maximum number of parallel training jobs when you create a
-     *   solution version. The maximum value for maxParallelTrainingJobs is 10.
+     *   solution version. The maximum value for `maxParallelTrainingJobs` is `10` .
      */
     public fun maxParallelTrainingJobs(maxParallelTrainingJobs: String) {
         cdkBuilder.maxParallelTrainingJobs(maxParallelTrainingJobs)

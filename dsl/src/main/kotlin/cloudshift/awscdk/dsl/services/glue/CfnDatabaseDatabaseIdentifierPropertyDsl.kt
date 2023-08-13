@@ -26,6 +26,7 @@ import software.amazon.awscdk.services.glue.CfnDatabase
  * DatabaseIdentifierProperty databaseIdentifierProperty = DatabaseIdentifierProperty.builder()
  * .catalogId("catalogId")
  * .databaseName("databaseName")
+ * .region("region")
  * .build();
  * ```
  *
@@ -44,6 +45,11 @@ public class CfnDatabaseDatabaseIdentifierPropertyDsl {
     /** @param databaseName The name of the catalog database. */
     public fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
+    }
+
+    /** @param region the value to be set. */
+    public fun region(region: String) {
+        cdkBuilder.region(region)
     }
 
     public fun build(): CfnDatabase.DatabaseIdentifierProperty = cdkBuilder.build()

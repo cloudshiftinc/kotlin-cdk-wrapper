@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * Customizes the maximum size of the request body that your protected CloudFront distributions
  * forward to AWS WAF for inspection.
  *
- * The default size is 16 KB (16,384 kilobytes).
+ * The default size is 16 KB (16,384 bytes).
  *
  * You are charged additional fees when your protected resources forward body sizes that are larger
  * than the default. For more information, see
@@ -50,7 +50,7 @@ public class CfnWebACLRequestBodyAssociatedResourceTypeConfigPropertyDsl {
      *   component that an associated CloudFront distribution should send to AWS WAF for inspection.
      *   This applies to statements in the web ACL that inspect the body or JSON body.
      *
-     * Default: `16 KB (16,384 kilobytes)`
+     * Default: `16 KB (16,384 bytes)`
      */
     public fun defaultSizeInspectionLimit(defaultSizeInspectionLimit: String) {
         cdkBuilder.defaultSizeInspectionLimit(defaultSizeInspectionLimit)

@@ -48,7 +48,7 @@ public class CfnWebACLPropsDsl {
      * @param associationConfig Specifies custom configurations for the associations between the web
      *   ACL and protected resources. Use this to customize the maximum size of the request body
      *   that your protected CloudFront distributions forward to AWS WAF for inspection. The default
-     *   is 16 KB (16,384 kilobytes).
+     *   is 16 KB (16,384 bytes).
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see
@@ -62,7 +62,7 @@ public class CfnWebACLPropsDsl {
      * @param associationConfig Specifies custom configurations for the associations between the web
      *   ACL and protected resources. Use this to customize the maximum size of the request body
      *   that your protected CloudFront distributions forward to AWS WAF for inspection. The default
-     *   is 16 KB (16,384 kilobytes).
+     *   is 16 KB (16,384 bytes).
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see

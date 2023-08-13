@@ -88,6 +88,7 @@ import software.amazon.awscdk.services.glue.CfnTable
  * .catalogId("catalogId")
  * .databaseName("databaseName")
  * .name("name")
+ * .region("region")
  * .build())
  * .viewExpandedText("viewExpandedText")
  * .viewOriginalText("viewOriginalText")

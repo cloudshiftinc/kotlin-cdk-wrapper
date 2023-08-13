@@ -16,6 +16,8 @@ import cloudshift.awscdk.common.MapBuilder
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigRule
 import software.amazon.awscdk.services.config.CfnConfigRuleProps
@@ -47,8 +49,14 @@ import software.amazon.awscdk.services.config.CfnConfigRuleProps
  * .sourceIdentifier("sourceIdentifier")
  * .build())
  * // the properties below are optional
+ * .compliance(ComplianceProperty.builder()
+ * .type("type")
+ * .build())
  * .configRuleName("configRuleName")
  * .description("description")
+ * .evaluationModes(List.of(EvaluationModeConfigurationProperty.builder()
+ * .mode("mode")
+ * .build()))
  * .inputParameters(inputParameters)
  * .maximumExecutionFrequency("maximumExecutionFrequency")
  * .scope(ScopeProperty.builder()
@@ -66,6 +74,18 @@ import software.amazon.awscdk.services.config.CfnConfigRuleProps
 public class CfnConfigRulePropsDsl {
     private val cdkBuilder: CfnConfigRuleProps.Builder = CfnConfigRuleProps.builder()
 
+    private val _evaluationModes: MutableList<Any> = mutableListOf()
+
+    /** @param compliance Compliance details of the Config rule. */
+    public fun compliance(compliance: IResolvable) {
+        cdkBuilder.compliance(compliance)
+    }
+
+    /** @param compliance Compliance details of the Config rule. */
+    public fun compliance(compliance: CfnConfigRule.ComplianceProperty) {
+        cdkBuilder.compliance(compliance)
+    }
+
     /**
      * @param configRuleName A name for the AWS Config rule. If you don't specify a name, AWS
      *   CloudFormation generates a unique physical ID and uses that ID for the rule name. For more
@@ -80,6 +100,21 @@ public class CfnConfigRulePropsDsl {
     /** @param description The description that you provide for the AWS Config rule. */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /** @param evaluationModes List of EvaluationModeConfiguration objects. */
+    public fun evaluationModes(vararg evaluationModes: Any) {
+        _evaluationModes.addAll(listOf(*evaluationModes))
+    }
+
+    /** @param evaluationModes List of EvaluationModeConfiguration objects. */
+    public fun evaluationModes(evaluationModes: Collection<Any>) {
+        _evaluationModes.addAll(evaluationModes)
+    }
+
+    /** @param evaluationModes List of EvaluationModeConfiguration objects. */
+    public fun evaluationModes(evaluationModes: IResolvable) {
+        cdkBuilder.evaluationModes(evaluationModes)
     }
 
     /**
@@ -160,5 +195,8 @@ public class CfnConfigRulePropsDsl {
         cdkBuilder.source(source)
     }
 
-    public fun build(): CfnConfigRuleProps = cdkBuilder.build()
+    public fun build(): CfnConfigRuleProps {
+        if (_evaluationModes.isNotEmpty()) cdkBuilder.evaluationModes(_evaluationModes)
+        return cdkBuilder.build()
+    }
 }

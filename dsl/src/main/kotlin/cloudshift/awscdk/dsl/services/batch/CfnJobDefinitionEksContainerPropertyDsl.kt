@@ -244,12 +244,20 @@ public class CfnJobDefinitionEksContainerPropertyDsl {
         cdkBuilder.resources(resources)
     }
 
-    /** @param securityContext the value to be set. */
+    /**
+     * @param securityContext The security context for a job. For more information, see
+     *   [Configure a security context for a pod or container](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+     *   in the *Kubernetes documentation* .
+     */
     public fun securityContext(securityContext: IResolvable) {
         cdkBuilder.securityContext(securityContext)
     }
 
-    /** @param securityContext the value to be set. */
+    /**
+     * @param securityContext The security context for a job. For more information, see
+     *   [Configure a security context for a pod or container](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+     *   in the *Kubernetes documentation* .
+     */
     public fun securityContext(securityContext: CfnJobDefinition.SecurityContextProperty) {
         cdkBuilder.securityContext(securityContext)
     }

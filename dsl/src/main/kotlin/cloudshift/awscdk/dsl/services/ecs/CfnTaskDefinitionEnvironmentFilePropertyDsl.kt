@@ -32,8 +32,7 @@ import software.amazon.awscdk.services.ecs.CfnTaskDefinition
  * [Specifying environment variables](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/taskdef-envfiles.html)
  * in the *Amazon Elastic Container Service Developer Guide* .
  *
- * This parameter is only supported for tasks hosted on Fargate using the following platform
- * versions:
+ * You must use the following platforms for the Fargate launch type:
  * * Linux platform version `1.4.0` or later.
  * * Windows platform version `1.0.0` or later.
  *

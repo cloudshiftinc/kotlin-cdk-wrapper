@@ -104,8 +104,15 @@ public class CfnServiceServiceConnectConfigurationPropertyDsl {
      *
      * Understand the following when specifying a log configuration for your containers.
      * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-     *   daemon (shown in the valid values below). Additional log drivers may be available in future
-     *   releases of the Amazon ECS container agent.
+     *   daemon. Additional log drivers may be available in future releases of the Amazon ECS
+     *   container agent.
+     *
+     * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+     * `awsfirelens` .
+     *
+     * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
+     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens`
+     * .
      * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
      *   instance.
      * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must
@@ -142,8 +149,15 @@ public class CfnServiceServiceConnectConfigurationPropertyDsl {
      *
      * Understand the following when specifying a log configuration for your containers.
      * * Amazon ECS currently supports a subset of the logging drivers available to the Docker
-     *   daemon (shown in the valid values below). Additional log drivers may be available in future
-     *   releases of the Amazon ECS container agent.
+     *   daemon. Additional log drivers may be available in future releases of the Amazon ECS
+     *   container agent.
+     *
+     * For tasks on AWS Fargate , the supported log drivers are `awslogs` , `splunk` , and
+     * `awsfirelens` .
+     *
+     * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
+     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens`
+     * .
      * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
      *   instance.
      * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must

@@ -63,7 +63,7 @@ public inline fun CfnLocationHDFS.setQopConfiguration(
     return setQopConfiguration(builder.build())
 }
 
-/** Specifies the mount options that DataSync can use to mount your NFS share. */
+/** Specifies the options that DataSync can use to mount your NFS file server. */
 public inline fun CfnLocationNFS.setMountOptions(
     block: CfnLocationNFSMountOptionsPropertyDsl.() -> Unit = {}
 ) {
@@ -73,7 +73,7 @@ public inline fun CfnLocationNFS.setMountOptions(
 }
 
 /**
- * Specifies the Amazon Resource Names (ARNs) of agents that DataSync uses to connect to your NFS
+ * Specifies the Amazon Resource Name (ARN) of the DataSync agent that want to connect to your NFS
  * file server.
  */
 public inline fun CfnLocationNFS.setOnPremConfig(

@@ -16,7 +16,7 @@ import kotlin.String
 import software.amazon.awscdk.services.personalize.CfnDataset
 
 /**
- * The Amazon S3 bucket that contains the training data to import.
+ * Describes the data source that contains the data to upload to a dataset.
  *
  * Example:
  * ```
@@ -37,7 +37,9 @@ public class CfnDatasetDataSourcePropertyDsl {
 
     /**
      * @param dataLocation The path to the Amazon S3 bucket where the data that you want to upload
-     *   to your dataset is stored.
+     *   to your dataset is stored. For example:
+     *
+     * `s3://bucket-name/folder-name/`
      */
     public fun dataLocation(dataLocation: String) {
         cdkBuilder.dataLocation(dataLocation)

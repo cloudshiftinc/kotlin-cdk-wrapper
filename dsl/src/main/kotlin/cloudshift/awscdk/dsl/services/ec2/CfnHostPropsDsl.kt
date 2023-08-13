@@ -26,6 +26,7 @@ import software.amazon.awscdk.services.ec2.CfnHostProps
  * CfnHostProps cfnHostProps = CfnHostProps.builder()
  * .availabilityZone("availabilityZone")
  * // the properties below are optional
+ * .assetId("assetId")
  * .autoPlacement("autoPlacement")
  * .hostMaintenance("hostMaintenance")
  * .hostRecovery("hostRecovery")
@@ -40,6 +41,13 @@ import software.amazon.awscdk.services.ec2.CfnHostProps
 @CdkDslMarker
 public class CfnHostPropsDsl {
     private val cdkBuilder: CfnHostProps.Builder = CfnHostProps.builder()
+
+    /**
+     * @param assetId The ID of the Outpost hardware asset on which the Dedicated Host is allocated.
+     */
+    public fun assetId(assetId: String) {
+        cdkBuilder.assetId(assetId)
+    }
 
     /**
      * @param autoPlacement Indicates whether the host accepts any untargeted instance launches that

@@ -114,7 +114,10 @@ public class CfnWebACLRulePropertyDsl {
     }
 
     /**
-     * @param name The name of the rule. You can't change the name of a `Rule` after you create it.
+     * @param name The name of the rule. If you change the name of a `Rule` after you create it and
+     *   you want the rule's metric name to reflect the change, update the metric name in the rule's
+     *   `VisibilityConfig` settings. AWS WAF doesn't automatically update the metric name when you
+     *   update the rule name.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
@@ -255,7 +258,9 @@ public class CfnWebACLRulePropertyDsl {
 
     /**
      * @param visibilityConfig Defines and enables Amazon CloudWatch metrics and web request sample
-     *   collection.
+     *   collection. If you change the name of a `Rule` after you create it and you want the rule's
+     *   metric name to reflect the change, update the metric name as well. AWS WAF doesn't
+     *   automatically update the metric name.
      */
     public fun visibilityConfig(visibilityConfig: IResolvable) {
         cdkBuilder.visibilityConfig(visibilityConfig)
@@ -263,7 +268,9 @@ public class CfnWebACLRulePropertyDsl {
 
     /**
      * @param visibilityConfig Defines and enables Amazon CloudWatch metrics and web request sample
-     *   collection.
+     *   collection. If you change the name of a `Rule` after you create it and you want the rule's
+     *   metric name to reflect the change, update the metric name as well. AWS WAF doesn't
+     *   automatically update the metric name.
      */
     public fun visibilityConfig(visibilityConfig: CfnWebACL.VisibilityConfigProperty) {
         cdkBuilder.visibilityConfig(visibilityConfig)

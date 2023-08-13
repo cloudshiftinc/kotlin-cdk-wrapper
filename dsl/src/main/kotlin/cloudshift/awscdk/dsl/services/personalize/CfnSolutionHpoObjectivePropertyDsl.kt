@@ -16,7 +16,9 @@ import kotlin.String
 import software.amazon.awscdk.services.personalize.CfnSolution
 
 /**
- * The metric to optimize during HPO.
+ * The metric to optimize during hyperparameter optimization (HPO).
+ *
+ * Amazon Personalize doesn't support configuring the `hpoObjective` at this time.
  *
  * Example:
  * ```
@@ -47,7 +49,7 @@ public class CfnSolutionHpoObjectivePropertyDsl {
         cdkBuilder.metricRegex(metricRegex)
     }
 
-    /** @param type The type of the metric. Valid values are Maximize and Minimize. */
+    /** @param type The type of the metric. Valid values are `Maximize` and `Minimize` . */
     public fun type(type: String) {
         cdkBuilder.type(type)
     }

@@ -16,12 +16,10 @@ import kotlin.String
 import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 
 /**
- * The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements to
- * Amazon S3.
+ * Configuration information for other locations that you choose to publish Amazon CloudWatch
+ * Internet Monitor internet measurements to, such as Amazon S3.
  *
- * The configuration includes the bucket name and (optionally) bucket prefix for the S3 bucket to
- * store the measurements, and the delivery status. The delivery status is `ENABLED` if you choose
- * to deliver internet measurements to S3 logs, and `DISABLED` otherwise.
+ * The measurements are also published to Amazon CloudWatch Logs.
  *
  * Example:
  * ```
@@ -42,22 +40,19 @@ public class CfnMonitorS3ConfigPropertyDsl {
     private val cdkBuilder: CfnMonitor.S3ConfigProperty.Builder =
         CfnMonitor.S3ConfigProperty.builder()
 
-    /** @param bucketName The Amazon S3 bucket name for internet measurements publishing. */
+    /** @param bucketName The Amazon S3 bucket name. */
     public fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
     }
 
-    /**
-     * @param bucketPrefix An optional Amazon S3 bucket prefix for internet measurements publishing.
-     */
+    /** @param bucketPrefix The Amazon S3 bucket prefix. */
     public fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
     }
 
     /**
      * @param logDeliveryStatus The status of publishing Internet Monitor internet measurements to
-     *   an Amazon S3 bucket. The delivery status is `ENABLED` if you choose to deliver internet
-     *   measurements to an S3 bucket, and `DISABLED` otherwise.
+     *   an Amazon S3 bucket.
      */
     public fun logDeliveryStatus(logDeliveryStatus: String) {
         cdkBuilder.logDeliveryStatus(logDeliveryStatus)

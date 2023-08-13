@@ -26,6 +26,15 @@ import software.amazon.awscdk.services.config.IRule
 import software.amazon.awscdk.services.config.ManagedRule
 import software.amazon.awscdk.services.events.Rule
 
+/** Compliance details of the Config rule. */
+public inline fun CfnConfigRule.setCompliance(
+    block: CfnConfigRuleCompliancePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnConfigRuleCompliancePropertyDsl()
+    builder.apply(block)
+    return setCompliance(builder.build())
+}
+
 /** Defines which resources can trigger an evaluation for the rule. */
 public inline fun CfnConfigRule.setScope(block: CfnConfigRuleScopePropertyDsl.() -> Unit = {}) {
     val builder = CfnConfigRuleScopePropertyDsl()

@@ -127,7 +127,7 @@ public class CfnCollectionDsl(
     /**
      * The type of collection.
      *
-     * Possible values are `SEARCH` and `TIMESERIES` . For more information, see
+     * Possible values are `SEARCH` , `TIMESERIES` , and `VECTORSEARCH` . For more information, see
      * [Choosing a collection type](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-usecase)
      * .
      *

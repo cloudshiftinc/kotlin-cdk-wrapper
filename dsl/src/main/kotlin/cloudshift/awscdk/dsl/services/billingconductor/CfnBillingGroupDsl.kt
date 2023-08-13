@@ -34,6 +34,8 @@ import software.constructs.Construct
  * CfnBillingGroup cfnBillingGroup = CfnBillingGroup.Builder.create(this, "MyCfnBillingGroup")
  * .accountGrouping(AccountGroupingProperty.builder()
  * .linkedAccountIds(List.of("linkedAccountIds"))
+ * // the properties below are optional
+ * .autoAssociate(false)
  * .build())
  * .computationPreference(ComputationPreferenceProperty.builder()
  * .pricingPlanArn("pricingPlanArn")

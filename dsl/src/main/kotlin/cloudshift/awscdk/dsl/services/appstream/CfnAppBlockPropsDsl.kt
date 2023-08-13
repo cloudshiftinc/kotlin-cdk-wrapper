@@ -98,12 +98,18 @@ public class CfnAppBlockPropsDsl {
         cdkBuilder.packagingType(packagingType)
     }
 
-    /** @param postSetupScriptDetails The post setup script details of the app block. */
+    /**
+     * @param postSetupScriptDetails The post setup script details of the app block. This only
+     *   applies to app blocks with PackagingType `APPSTREAM2` .
+     */
     public fun postSetupScriptDetails(postSetupScriptDetails: IResolvable) {
         cdkBuilder.postSetupScriptDetails(postSetupScriptDetails)
     }
 
-    /** @param postSetupScriptDetails The post setup script details of the app block. */
+    /**
+     * @param postSetupScriptDetails The post setup script details of the app block. This only
+     *   applies to app blocks with PackagingType `APPSTREAM2` .
+     */
     public fun postSetupScriptDetails(postSetupScriptDetails: CfnAppBlock.ScriptDetailsProperty) {
         cdkBuilder.postSetupScriptDetails(postSetupScriptDetails)
     }

@@ -12,7 +12,27 @@
 package cloudshift.awscdk.dsl.services.mediatailor
 
 import kotlin.Unit
+import software.amazon.awscdk.services.mediatailor.CfnChannel
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
+import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
+
+/** Slate VOD source configuration.</p>. */
+public inline fun CfnChannel.setFillerSlate(
+    block: CfnChannelSlateSourcePropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnChannelSlateSourcePropertyDsl()
+    builder.apply(block)
+    return setFillerSlate(builder.build())
+}
+
+/** The log configuration for the channel.</p>. */
+public inline fun CfnChannel.setLogConfiguration(
+    block: CfnChannelLogConfigurationForChannelPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnChannelLogConfigurationForChannelPropertyDsl()
+    builder.apply(block)
+    return setLogConfiguration(builder.build())
+}
 
 /** The configuration for avail suppression, also known as ad suppression. */
 public inline fun CfnPlaybackConfiguration.setAvailSuppression(
@@ -78,4 +98,31 @@ public inline fun CfnPlaybackConfiguration.setManifestProcessingRules(
     val builder = CfnPlaybackConfigurationManifestProcessingRulesPropertyDsl()
     builder.apply(block)
     return setManifestProcessingRules(builder.build())
+}
+
+/** Access configuration parameters.</p>. */
+public inline fun CfnSourceLocation.setAccessConfiguration(
+    block: CfnSourceLocationAccessConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSourceLocationAccessConfigurationPropertyDsl()
+    builder.apply(block)
+    return setAccessConfiguration(builder.build())
+}
+
+/** The optional configuration for a server that serves segments. */
+public inline fun CfnSourceLocation.setDefaultSegmentDeliveryConfiguration(
+    block: CfnSourceLocationDefaultSegmentDeliveryConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSourceLocationDefaultSegmentDeliveryConfigurationPropertyDsl()
+    builder.apply(block)
+    return setDefaultSegmentDeliveryConfiguration(builder.build())
+}
+
+/** The HTTP configuration for the source location.</p>. */
+public inline fun CfnSourceLocation.setHttpConfiguration(
+    block: CfnSourceLocationHttpConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnSourceLocationHttpConfigurationPropertyDsl()
+    builder.apply(block)
+    return setHttpConfiguration(builder.build())
 }

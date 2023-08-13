@@ -75,59 +75,45 @@ public class CfnAppBlockBuilderDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * The access endpoints of the app block builder.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-accessendpoints)
      *
-     * @param accessEndpoints The access endpoints of the app block builder.
+     * @param accessEndpoints
      */
     public fun accessEndpoints(vararg accessEndpoints: Any) {
         _accessEndpoints.addAll(listOf(*accessEndpoints))
     }
 
     /**
-     * The access endpoints of the app block builder.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-accessendpoints)
      *
-     * @param accessEndpoints The access endpoints of the app block builder.
+     * @param accessEndpoints
      */
     public fun accessEndpoints(accessEndpoints: Collection<Any>) {
         _accessEndpoints.addAll(accessEndpoints)
     }
 
     /**
-     * The access endpoints of the app block builder.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-accessendpoints)
      *
-     * @param accessEndpoints The access endpoints of the app block builder.
+     * @param accessEndpoints
      */
     public fun accessEndpoints(accessEndpoints: IResolvable) {
         cdkBuilder.accessEndpoints(accessEndpoints)
     }
 
     /**
-     * The ARN of the app block.
-     *
-     * *Maximum* : `1`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-appblockarns)
      *
-     * @param appBlockArns The ARN of the app block.
+     * @param appBlockArns
      */
     public fun appBlockArns(vararg appBlockArns: String) {
         _appBlockArns.addAll(listOf(*appBlockArns))
     }
 
     /**
-     * The ARN of the app block.
-     *
-     * *Maximum* : `1`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-appblockarns)
      *
-     * @param appBlockArns The ARN of the app block.
+     * @param appBlockArns
      */
     public fun appBlockArns(appBlockArns: Collection<String>) {
         _appBlockArns.addAll(appBlockArns)
@@ -215,7 +201,7 @@ public class CfnAppBlockBuilderDsl(
     /**
      * The platform of the app block builder.
      *
-     * *Allowed values* : `WINDOWS_SERVER_2019`
+     * `WINDOWS_SERVER_2019` is the only valid value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-platform)
      *
@@ -226,22 +212,18 @@ public class CfnAppBlockBuilderDsl(
     }
 
     /**
-     * The tags of the app block builder.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-tags)
      *
-     * @param tags The tags of the app block builder.
+     * @param tags
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * The tags of the app block builder.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html#cfn-appstream-appblockbuilder-tags)
      *
-     * @param tags The tags of the app block builder.
+     * @param tags
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

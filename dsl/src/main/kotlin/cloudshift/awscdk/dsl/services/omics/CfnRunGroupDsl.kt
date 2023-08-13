@@ -29,6 +29,7 @@ import software.constructs.Construct
  * CfnRunGroup cfnRunGroup = CfnRunGroup.Builder.create(this, "MyCfnRunGroup")
  * .maxCpus(123)
  * .maxDuration(123)
+ * .maxGpus(123)
  * .maxRuns(123)
  * .name("name")
  * .tags(Map.of(
@@ -65,6 +66,15 @@ public class CfnRunGroupDsl(
      */
     public fun maxDuration(maxDuration: Number) {
         cdkBuilder.maxDuration(maxDuration)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxgpus)
+     *
+     * @param maxGpus
+     */
+    public fun maxGpus(maxGpus: Number) {
+        cdkBuilder.maxGpus(maxGpus)
     }
 
     /**

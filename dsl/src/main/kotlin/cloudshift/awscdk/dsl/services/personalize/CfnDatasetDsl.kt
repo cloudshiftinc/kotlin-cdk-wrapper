@@ -91,6 +91,9 @@ public class CfnDatasetDsl(
      * Describes a job that imports training data from a data source (Amazon S3 bucket) to an Amazon
      * Personalize dataset.
      *
+     * If you specify a dataset import job as part of a dataset, all dataset import job fields are
+     * required.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html#cfn-personalize-dataset-datasetimportjob)
      *
      * @param datasetImportJob Describes a job that imports training data from a data source (Amazon
@@ -103,6 +106,9 @@ public class CfnDatasetDsl(
     /**
      * Describes a job that imports training data from a data source (Amazon S3 bucket) to an Amazon
      * Personalize dataset.
+     *
+     * If you specify a dataset import job as part of a dataset, all dataset import job fields are
+     * required.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html#cfn-personalize-dataset-datasetimportjob)
      *

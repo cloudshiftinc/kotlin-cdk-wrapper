@@ -13,6 +13,7 @@ package cloudshift.awscdk.dsl.services.dms
 
 import kotlin.Unit
 import software.amazon.awscdk.services.dms.CfnEndpoint
+import software.amazon.awscdk.services.dms.CfnReplicationConfig
 
 /** Settings in JSON format for the source and target DocumentDB endpoint. */
 public inline fun CfnEndpoint.setDocDbSettings(
@@ -165,4 +166,13 @@ public inline fun CfnEndpoint.setSybaseSettings(
     val builder = CfnEndpointSybaseSettingsPropertyDsl()
     builder.apply(block)
     return setSybaseSettings(builder.build())
+}
+
+/** Configuration parameters for provisioning a AWS DMS Serverless replication. */
+public inline fun CfnReplicationConfig.setComputeConfig(
+    block: CfnReplicationConfigComputeConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnReplicationConfigComputeConfigPropertyDsl()
+    builder.apply(block)
+    return setComputeConfig(builder.build())
 }

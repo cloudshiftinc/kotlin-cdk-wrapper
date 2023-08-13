@@ -58,6 +58,7 @@ import software.constructs.Construct
  * .dbClusterIdentifier("dbClusterIdentifier")
  * .dbClusterParameterGroupName("dbClusterParameterGroupName")
  * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
+ * .dbPort(123)
  * .dbSubnetGroupName("dbSubnetGroupName")
  * .deletionProtection(false)
  * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
@@ -267,6 +268,22 @@ public class CfnDBClusterDsl(
      */
     public fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String) {
         cdkBuilder.dbInstanceParameterGroupName(dbInstanceParameterGroupName)
+    }
+
+    /**
+     * The port number on which the DB instances in the DB cluster accept connections.
+     *
+     * If not specified, the default port used is `8182`.
+     *
+     * Note: `Port` property will soon be deprecated from this resource. Please update existing
+     * templates to rename it with new property `DBPort` having same functionalities.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbport)
+     *
+     * @param dbPort The port number on which the DB instances in the DB cluster accept connections.
+     */
+    public fun dbPort(dbPort: Number) {
+        cdkBuilder.dbPort(dbPort)
     }
 
     /**

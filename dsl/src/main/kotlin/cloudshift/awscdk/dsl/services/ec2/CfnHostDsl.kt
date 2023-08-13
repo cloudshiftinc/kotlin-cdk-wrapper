@@ -33,6 +33,7 @@ import software.constructs.Construct
  * CfnHost cfnHost = CfnHost.Builder.create(this, "MyCfnHost")
  * .availabilityZone("availabilityZone")
  * // the properties below are optional
+ * .assetId("assetId")
  * .autoPlacement("autoPlacement")
  * .hostMaintenance("hostMaintenance")
  * .hostRecovery("hostRecovery")
@@ -50,6 +51,17 @@ public class CfnHostDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnHost.Builder = CfnHost.Builder.create(scope, id)
+
+    /**
+     * The ID of the Outpost hardware asset on which the Dedicated Host is allocated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-assetid)
+     *
+     * @param assetId The ID of the Outpost hardware asset on which the Dedicated Host is allocated.
+     */
+    public fun assetId(assetId: String) {
+        cdkBuilder.assetId(assetId)
+    }
 
     /**
      * Indicates whether the host accepts any untargeted instance launches that match its instance

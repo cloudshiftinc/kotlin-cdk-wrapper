@@ -12,9 +12,11 @@
 package cloudshift.awscdk.dsl.services.billingconductor
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.billingconductor.CfnBillingGroup
 
 /**
@@ -29,6 +31,8 @@ import software.amazon.awscdk.services.billingconductor.CfnBillingGroup
  * import software.amazon.awscdk.services.billingconductor.*;
  * AccountGroupingProperty accountGroupingProperty = AccountGroupingProperty.builder()
  * .linkedAccountIds(List.of("linkedAccountIds"))
+ * // the properties below are optional
+ * .autoAssociate(false)
  * .build();
  * ```
  *
@@ -40,6 +44,16 @@ public class CfnBillingGroupAccountGroupingPropertyDsl {
         CfnBillingGroup.AccountGroupingProperty.builder()
 
     private val _linkedAccountIds: MutableList<String> = mutableListOf()
+
+    /** @param autoAssociate the value to be set. */
+    public fun autoAssociate(autoAssociate: Boolean) {
+        cdkBuilder.autoAssociate(autoAssociate)
+    }
+
+    /** @param autoAssociate the value to be set. */
+    public fun autoAssociate(autoAssociate: IResolvable) {
+        cdkBuilder.autoAssociate(autoAssociate)
+    }
 
     /**
      * @param linkedAccountIds The account IDs that make up the billing group. Account IDs must be a

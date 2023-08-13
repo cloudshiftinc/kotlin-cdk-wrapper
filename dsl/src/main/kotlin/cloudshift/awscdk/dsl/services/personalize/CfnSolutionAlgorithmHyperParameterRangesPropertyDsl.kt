@@ -19,7 +19,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnSolution
 
 /**
- * The hyperparameters and their allowable ranges.
+ * Specifies the hyperparameters and their ranges.
+ *
+ * Hyperparameters can be categorical, continuous, or integer-valued.
  *
  * Example:
  * ```
@@ -58,47 +60,74 @@ public class CfnSolutionAlgorithmHyperParameterRangesPropertyDsl {
 
     private val _integerHyperParameterRanges: MutableList<Any> = mutableListOf()
 
-    /** @param categoricalHyperParameterRanges The categorical hyperparameters and their ranges. */
+    /**
+     * @param categoricalHyperParameterRanges Provides the name and range of a categorical
+     *   hyperparameter.
+     */
     public fun categoricalHyperParameterRanges(vararg categoricalHyperParameterRanges: Any) {
         _categoricalHyperParameterRanges.addAll(listOf(*categoricalHyperParameterRanges))
     }
 
-    /** @param categoricalHyperParameterRanges The categorical hyperparameters and their ranges. */
+    /**
+     * @param categoricalHyperParameterRanges Provides the name and range of a categorical
+     *   hyperparameter.
+     */
     public fun categoricalHyperParameterRanges(categoricalHyperParameterRanges: Collection<Any>) {
         _categoricalHyperParameterRanges.addAll(categoricalHyperParameterRanges)
     }
 
-    /** @param categoricalHyperParameterRanges The categorical hyperparameters and their ranges. */
+    /**
+     * @param categoricalHyperParameterRanges Provides the name and range of a categorical
+     *   hyperparameter.
+     */
     public fun categoricalHyperParameterRanges(categoricalHyperParameterRanges: IResolvable) {
         cdkBuilder.categoricalHyperParameterRanges(categoricalHyperParameterRanges)
     }
 
-    /** @param continuousHyperParameterRanges The continuous hyperparameters and their ranges. */
+    /**
+     * @param continuousHyperParameterRanges Provides the name and range of a continuous
+     *   hyperparameter.
+     */
     public fun continuousHyperParameterRanges(vararg continuousHyperParameterRanges: Any) {
         _continuousHyperParameterRanges.addAll(listOf(*continuousHyperParameterRanges))
     }
 
-    /** @param continuousHyperParameterRanges The continuous hyperparameters and their ranges. */
+    /**
+     * @param continuousHyperParameterRanges Provides the name and range of a continuous
+     *   hyperparameter.
+     */
     public fun continuousHyperParameterRanges(continuousHyperParameterRanges: Collection<Any>) {
         _continuousHyperParameterRanges.addAll(continuousHyperParameterRanges)
     }
 
-    /** @param continuousHyperParameterRanges The continuous hyperparameters and their ranges. */
+    /**
+     * @param continuousHyperParameterRanges Provides the name and range of a continuous
+     *   hyperparameter.
+     */
     public fun continuousHyperParameterRanges(continuousHyperParameterRanges: IResolvable) {
         cdkBuilder.continuousHyperParameterRanges(continuousHyperParameterRanges)
     }
 
-    /** @param integerHyperParameterRanges The integer hyperparameters and their ranges. */
+    /**
+     * @param integerHyperParameterRanges Provides the name and range of an integer-valued
+     *   hyperparameter.
+     */
     public fun integerHyperParameterRanges(vararg integerHyperParameterRanges: Any) {
         _integerHyperParameterRanges.addAll(listOf(*integerHyperParameterRanges))
     }
 
-    /** @param integerHyperParameterRanges The integer hyperparameters and their ranges. */
+    /**
+     * @param integerHyperParameterRanges Provides the name and range of an integer-valued
+     *   hyperparameter.
+     */
     public fun integerHyperParameterRanges(integerHyperParameterRanges: Collection<Any>) {
         _integerHyperParameterRanges.addAll(integerHyperParameterRanges)
     }
 
-    /** @param integerHyperParameterRanges The integer hyperparameters and their ranges. */
+    /**
+     * @param integerHyperParameterRanges Provides the name and range of an integer-valued
+     *   hyperparameter.
+     */
     public fun integerHyperParameterRanges(integerHyperParameterRanges: IResolvable) {
         cdkBuilder.integerHyperParameterRanges(integerHyperParameterRanges)
     }

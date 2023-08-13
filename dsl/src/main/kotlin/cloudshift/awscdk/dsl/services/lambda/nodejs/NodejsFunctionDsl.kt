@@ -709,7 +709,7 @@ public class NodejsFunctionDsl(
      *
      * Only runtimes of the Node.js family are supported.
      *
-     * Default: Runtime.NODEJS_14_X
+     * Default: Runtime.NODEJS_18_X
      *
      * @param runtime The runtime environment.
      */

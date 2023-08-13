@@ -3660,6 +3660,16 @@ public object sagemaker {
      * CfnImageVersion cfnImageVersion = CfnImageVersion.Builder.create(this, "MyCfnImageVersion")
      * .baseImage("baseImage")
      * .imageName("imageName")
+     * // the properties below are optional
+     * .alias("alias")
+     * .aliases(List.of("aliases"))
+     * .horovod(false)
+     * .jobType("jobType")
+     * .mlFramework("mlFramework")
+     * .processor("processor")
+     * .programmingLang("programmingLang")
+     * .releaseNotes("releaseNotes")
+     * .vendorGuidance("vendorGuidance")
      * .build();
      * ```
      *
@@ -3686,6 +3696,16 @@ public object sagemaker {
      * CfnImageVersionProps cfnImageVersionProps = CfnImageVersionProps.builder()
      * .baseImage("baseImage")
      * .imageName("imageName")
+     * // the properties below are optional
+     * .alias("alias")
+     * .aliases(List.of("aliases"))
+     * .horovod(false)
+     * .jobType("jobType")
+     * .mlFramework("mlFramework")
+     * .processor("processor")
+     * .programmingLang("programmingLang")
+     * .releaseNotes("releaseNotes")
+     * .vendorGuidance("vendorGuidance")
      * .build();
      * ```
      *

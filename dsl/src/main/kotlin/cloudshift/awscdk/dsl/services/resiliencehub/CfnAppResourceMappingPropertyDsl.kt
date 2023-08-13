@@ -74,17 +74,17 @@ public class CfnAppResourceMappingPropertyDsl {
         cdkBuilder.mappingType(mappingType)
     }
 
-    /** @param physicalResourceId The identifier of this resource. */
+    /** @param physicalResourceId Identifier of the physical resource. */
     public fun physicalResourceId(physicalResourceId: IResolvable) {
         cdkBuilder.physicalResourceId(physicalResourceId)
     }
 
-    /** @param physicalResourceId The identifier of this resource. */
+    /** @param physicalResourceId Identifier of the physical resource. */
     public fun physicalResourceId(physicalResourceId: CfnApp.PhysicalResourceIdProperty) {
         cdkBuilder.physicalResourceId(physicalResourceId)
     }
 
-    /** @param resourceName The name of the resource this resource is mapped to. */
+    /** @param resourceName Name of the resource that the resource is mapped to. */
     public fun resourceName(resourceName: String) {
         cdkBuilder.resourceName(resourceName)
     }

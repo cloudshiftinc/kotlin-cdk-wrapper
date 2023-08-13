@@ -18,7 +18,7 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.personalize.CfnSolution
 
 /**
- * Provides the name and values of a Categorical hyperparameter.
+ * Provides the name and range of a categorical hyperparameter.
  *
  * Example:
  * ```

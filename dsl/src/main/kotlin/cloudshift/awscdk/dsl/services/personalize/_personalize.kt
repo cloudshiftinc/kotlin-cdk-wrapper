@@ -88,7 +88,7 @@ public object personalize {
     }
 
     /**
-     * The Amazon S3 bucket that contains the training data to import.
+     * Describes the data source that contains the data to upload to a dataset.
      *
      * Example:
      * ```
@@ -114,12 +114,11 @@ public object personalize {
      * Describes a job that imports training data from a data source (Amazon S3 bucket) to an Amazon
      * Personalize dataset.
      *
-     * For more information, see
-     * [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)
-     * .
-     *
      * A dataset import job can be in one of the following states:
      * * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
+     *
+     * If you specify a dataset import job as part of a dataset, all dataset import job fields are
+     * required.
      *
      * Example:
      * ```
@@ -359,7 +358,9 @@ public object personalize {
     }
 
     /**
-     * The hyperparameters and their allowable ranges.
+     * Specifies the hyperparameters and their ranges.
+     *
+     * Hyperparameters can be categorical, continuous, or integer-valued.
      *
      * Example:
      * ```
@@ -396,7 +397,10 @@ public object personalize {
     }
 
     /**
-     * The AutoMLConfig object containing a list of recipes to search when AutoML is performed.
+     * When the solution performs AutoML ( `performAutoML` is true in
+     * [CreateSolution](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html)
+     * ), Amazon Personalize determines which recipe, from the specified list, optimizes the given
+     * metric. Amazon Personalize then uses that recipe for the solution.
      *
      * Example:
      * ```
@@ -420,7 +424,7 @@ public object personalize {
     }
 
     /**
-     * Provides the name and values of a Categorical hyperparameter.
+     * Provides the name and range of a categorical hyperparameter.
      *
      * Example:
      * ```
@@ -518,7 +522,9 @@ public object personalize {
     }
 
     /**
-     * The metric to optimize during HPO.
+     * The metric to optimize during hyperparameter optimization (HPO).
+     *
+     * Amazon Personalize doesn't support configuring the `hpoObjective` at this time.
      *
      * Example:
      * ```

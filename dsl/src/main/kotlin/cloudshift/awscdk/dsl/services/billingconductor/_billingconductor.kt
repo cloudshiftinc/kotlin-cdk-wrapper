@@ -36,6 +36,8 @@ public object billingconductor {
      * CfnBillingGroup cfnBillingGroup = CfnBillingGroup.Builder.create(this, "MyCfnBillingGroup")
      * .accountGrouping(AccountGroupingProperty.builder()
      * .linkedAccountIds(List.of("linkedAccountIds"))
+     * // the properties below are optional
+     * .autoAssociate(false)
      * .build())
      * .computationPreference(ComputationPreferenceProperty.builder()
      * .pricingPlanArn("pricingPlanArn")
@@ -75,6 +77,8 @@ public object billingconductor {
      * import software.amazon.awscdk.services.billingconductor.*;
      * AccountGroupingProperty accountGroupingProperty = AccountGroupingProperty.builder()
      * .linkedAccountIds(List.of("linkedAccountIds"))
+     * // the properties below are optional
+     * .autoAssociate(false)
      * .build();
      * ```
      *
@@ -124,6 +128,8 @@ public object billingconductor {
      * CfnBillingGroupProps cfnBillingGroupProps = CfnBillingGroupProps.builder()
      * .accountGrouping(AccountGroupingProperty.builder()
      * .linkedAccountIds(List.of("linkedAccountIds"))
+     * // the properties below are optional
+     * .autoAssociate(false)
      * .build())
      * .computationPreference(ComputationPreferenceProperty.builder()
      * .pricingPlanArn("pricingPlanArn")

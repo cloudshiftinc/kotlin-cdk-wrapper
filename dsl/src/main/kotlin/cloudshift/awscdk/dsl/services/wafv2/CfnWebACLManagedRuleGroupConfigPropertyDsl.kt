@@ -30,9 +30,55 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * import software.amazon.awscdk.services.wafv2.*;
  * ManagedRuleGroupConfigProperty managedRuleGroupConfigProperty =
  * ManagedRuleGroupConfigProperty.builder()
+ * .awsManagedRulesAcfpRuleSet(AWSManagedRulesACFPRuleSetProperty.builder()
+ * .creationPath("creationPath")
+ * .registrationPagePath("registrationPagePath")
+ * .requestInspection(RequestInspectionACFPProperty.builder()
+ * .payloadType("payloadType")
+ * // the properties below are optional
+ * .addressFields(List.of(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build()))
+ * .emailField(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build())
+ * .passwordField(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build())
+ * .phoneNumberFields(List.of(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build()))
+ * .usernameField(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .enableRegexInPath(false)
+ * .responseInspection(ResponseInspectionProperty.builder()
+ * .bodyContains(ResponseInspectionBodyContainsProperty.builder()
+ * .failureStrings(List.of("failureStrings"))
+ * .successStrings(List.of("successStrings"))
+ * .build())
+ * .header(ResponseInspectionHeaderProperty.builder()
+ * .failureValues(List.of("failureValues"))
+ * .name("name")
+ * .successValues(List.of("successValues"))
+ * .build())
+ * .json(ResponseInspectionJsonProperty.builder()
+ * .failureValues(List.of("failureValues"))
+ * .identifier("identifier")
+ * .successValues(List.of("successValues"))
+ * .build())
+ * .statusCode(ResponseInspectionStatusCodeProperty.builder()
+ * .failureCodes(List.of(123))
+ * .successCodes(List.of(123))
+ * .build())
+ * .build())
+ * .build())
  * .awsManagedRulesAtpRuleSet(AWSManagedRulesATPRuleSetProperty.builder()
  * .loginPath("loginPath")
  * // the properties below are optional
+ * .enableRegexInPath(false)
  * .requestInspection(RequestInspectionProperty.builder()
  * .passwordField(FieldIdentifierProperty.builder()
  * .identifier("identifier")
@@ -83,6 +129,18 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
 public class CfnWebACLManagedRuleGroupConfigPropertyDsl {
     private val cdkBuilder: CfnWebACL.ManagedRuleGroupConfigProperty.Builder =
         CfnWebACL.ManagedRuleGroupConfigProperty.builder()
+
+    /** @param awsManagedRulesAcfpRuleSet the value to be set. */
+    public fun awsManagedRulesAcfpRuleSet(awsManagedRulesAcfpRuleSet: IResolvable) {
+        cdkBuilder.awsManagedRulesAcfpRuleSet(awsManagedRulesAcfpRuleSet)
+    }
+
+    /** @param awsManagedRulesAcfpRuleSet the value to be set. */
+    public fun awsManagedRulesAcfpRuleSet(
+        awsManagedRulesAcfpRuleSet: CfnWebACL.AWSManagedRulesACFPRuleSetProperty
+    ) {
+        cdkBuilder.awsManagedRulesAcfpRuleSet(awsManagedRulesAcfpRuleSet)
+    }
 
     /**
      * @param awsManagedRulesAtpRuleSet Additional configuration for using the account takeover

@@ -30,6 +30,7 @@ import software.amazon.awscdk.services.omics.CfnWorkflowProps
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.omics.*;
  * CfnWorkflowProps cfnWorkflowProps = CfnWorkflowProps.builder()
+ * .accelerators("accelerators")
  * .definitionUri("definitionUri")
  * .description("description")
  * .engine("engine")
@@ -51,6 +52,11 @@ import software.amazon.awscdk.services.omics.CfnWorkflowProps
 @CdkDslMarker
 public class CfnWorkflowPropsDsl {
     private val cdkBuilder: CfnWorkflowProps.Builder = CfnWorkflowProps.builder()
+
+    /** @param accelerators the value to be set. */
+    public fun accelerators(accelerators: String) {
+        cdkBuilder.accelerators(accelerators)
+    }
 
     /** @param definitionUri The URI of a definition for the workflow. */
     public fun definitionUri(definitionUri: String) {

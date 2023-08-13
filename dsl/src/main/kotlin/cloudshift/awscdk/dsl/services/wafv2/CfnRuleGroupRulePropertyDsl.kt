@@ -39,6 +39,9 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * Object captcha;
  * Object challenge;
  * Object count;
+ * Object forwardedIp;
+ * Object httpMethod;
+ * Object ip;
  * Object method;
  * Object queryString;
  * Object singleHeader;
@@ -129,6 +132,47 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroup
  * .aggregateKeyType("aggregateKeyType")
  * .limit(123)
  * // the properties below are optional
+ * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+ * .cookie(RateLimitCookieProperty.builder()
+ * .name("name")
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .forwardedIp(forwardedIp)
+ * .header(RateLimitHeaderProperty.builder()
+ * .name("name")
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .httpMethod(httpMethod)
+ * .ip(ip)
+ * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+ * .namespace("namespace")
+ * .build())
+ * .queryArgument(RateLimitQueryArgumentProperty.builder()
+ * .name("name")
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .queryString(RateLimitQueryStringProperty.builder()
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .uriPath(RateLimitUriPathProperty.builder()
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build()))
  * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
  * .fallbackBehavior("fallbackBehavior")
  * .headerName("headerName")
@@ -455,7 +499,10 @@ public class CfnRuleGroupRulePropertyDsl {
     }
 
     /**
-     * @param name The name of the rule. You can't change the name of a `Rule` after you create it.
+     * @param name The name of the rule. If you change the name of a `Rule` after you create it and
+     *   you want the rule's metric name to reflect the change, update the metric name in the rule's
+     *   `VisibilityConfig` settings. AWS WAF doesn't automatically update the metric name when you
+     *   update the rule name.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
@@ -558,7 +605,9 @@ public class CfnRuleGroupRulePropertyDsl {
 
     /**
      * @param visibilityConfig Defines and enables Amazon CloudWatch metrics and web request sample
-     *   collection.
+     *   collection. If you change the name of a `Rule` after you create it and you want the rule's
+     *   metric name to reflect the change, update the metric name as well. AWS WAF doesn't
+     *   automatically update the metric name.
      */
     public fun visibilityConfig(visibilityConfig: IResolvable) {
         cdkBuilder.visibilityConfig(visibilityConfig)
@@ -566,7 +615,9 @@ public class CfnRuleGroupRulePropertyDsl {
 
     /**
      * @param visibilityConfig Defines and enables Amazon CloudWatch metrics and web request sample
-     *   collection.
+     *   collection. If you change the name of a `Rule` after you create it and you want the rule's
+     *   metric name to reflect the change, update the metric name as well. AWS WAF doesn't
+     *   automatically update the metric name.
      */
     public fun visibilityConfig(visibilityConfig: CfnRuleGroup.VisibilityConfigProperty) {
         cdkBuilder.visibilityConfig(visibilityConfig)

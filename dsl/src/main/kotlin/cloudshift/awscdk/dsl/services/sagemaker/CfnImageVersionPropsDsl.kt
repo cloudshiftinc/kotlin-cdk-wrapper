@@ -12,7 +12,11 @@
 package cloudshift.awscdk.dsl.services.sagemaker
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnImageVersionProps
 
 /**
@@ -26,6 +30,16 @@ import software.amazon.awscdk.services.sagemaker.CfnImageVersionProps
  * CfnImageVersionProps cfnImageVersionProps = CfnImageVersionProps.builder()
  * .baseImage("baseImage")
  * .imageName("imageName")
+ * // the properties below are optional
+ * .alias("alias")
+ * .aliases(List.of("aliases"))
+ * .horovod(false)
+ * .jobType("jobType")
+ * .mlFramework("mlFramework")
+ * .processor("processor")
+ * .programmingLang("programmingLang")
+ * .releaseNotes("releaseNotes")
+ * .vendorGuidance("vendorGuidance")
  * .build();
  * ```
  *
@@ -35,6 +49,23 @@ import software.amazon.awscdk.services.sagemaker.CfnImageVersionProps
 public class CfnImageVersionPropsDsl {
     private val cdkBuilder: CfnImageVersionProps.Builder = CfnImageVersionProps.builder()
 
+    private val _aliases: MutableList<String> = mutableListOf()
+
+    /** @param alias The alias of the image version. */
+    public fun alias(alias: String) {
+        cdkBuilder.alias(alias)
+    }
+
+    /** @param aliases List of aliases for the image version. */
+    public fun aliases(vararg aliases: String) {
+        _aliases.addAll(listOf(*aliases))
+    }
+
+    /** @param aliases List of aliases for the image version. */
+    public fun aliases(aliases: Collection<String>) {
+        _aliases.addAll(aliases)
+    }
+
     /**
      * @param baseImage The container image that the SageMaker image version is based on. *Length
      *   Constraints* : Minimum length of 1. Maximum length of 255.
@@ -43,6 +74,16 @@ public class CfnImageVersionPropsDsl {
      */
     public fun baseImage(baseImage: String) {
         cdkBuilder.baseImage(baseImage)
+    }
+
+    /** @param horovod Indicates Horovod compatibility. */
+    public fun horovod(horovod: Boolean) {
+        cdkBuilder.horovod(horovod)
+    }
+
+    /** @param horovod Indicates Horovod compatibility. */
+    public fun horovod(horovod: IResolvable) {
+        cdkBuilder.horovod(horovod)
     }
 
     /**
@@ -55,5 +96,38 @@ public class CfnImageVersionPropsDsl {
         cdkBuilder.imageName(imageName)
     }
 
-    public fun build(): CfnImageVersionProps = cdkBuilder.build()
+    /** @param jobType Indicates SageMaker job type compatibility. */
+    public fun jobType(jobType: String) {
+        cdkBuilder.jobType(jobType)
+    }
+
+    /** @param mlFramework The machine learning framework vended in the image version. */
+    public fun mlFramework(mlFramework: String) {
+        cdkBuilder.mlFramework(mlFramework)
+    }
+
+    /** @param processor Indicates CPU or GPU compatibility. */
+    public fun processor(processor: String) {
+        cdkBuilder.processor(processor)
+    }
+
+    /** @param programmingLang The supported programming language and its version. */
+    public fun programmingLang(programmingLang: String) {
+        cdkBuilder.programmingLang(programmingLang)
+    }
+
+    /** @param releaseNotes The maintainer description of the image version. */
+    public fun releaseNotes(releaseNotes: String) {
+        cdkBuilder.releaseNotes(releaseNotes)
+    }
+
+    /** @param vendorGuidance The availability of the image version specified by the maintainer. */
+    public fun vendorGuidance(vendorGuidance: String) {
+        cdkBuilder.vendorGuidance(vendorGuidance)
+    }
+
+    public fun build(): CfnImageVersionProps {
+        if (_aliases.isNotEmpty()) cdkBuilder.aliases(_aliases)
+        return cdkBuilder.build()
+    }
 }

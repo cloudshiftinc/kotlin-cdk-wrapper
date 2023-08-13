@@ -46,6 +46,7 @@ import software.amazon.awscdk.services.glue.CfnDatabaseProps
  * .targetDatabase(DatabaseIdentifierProperty.builder()
  * .catalogId("catalogId")
  * .databaseName("databaseName")
+ * .region("region")
  * .build())
  * .build())
  * .build();

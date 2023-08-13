@@ -82,24 +82,12 @@ public class CfnMonitorPropsDsl {
         cdkBuilder.healthEventsConfig(healthEventsConfig)
     }
 
-    /**
-     * @param internetMeasurementsLogDelivery Publish internet measurements for a monitor for all
-     *   city-networks (up to the 500,000 service limit) to another location, such as an Amazon S3
-     *   bucket. Measurements are also published to Amazon CloudWatch Logs for the first 500 (by
-     *   traffic volume) city-networks (client locations and ASNs, typically internet service
-     *   providers or ISPs).
-     */
+    /** @param internetMeasurementsLogDelivery the value to be set. */
     public fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
         cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery)
     }
 
-    /**
-     * @param internetMeasurementsLogDelivery Publish internet measurements for a monitor for all
-     *   city-networks (up to the 500,000 service limit) to another location, such as an Amazon S3
-     *   bucket. Measurements are also published to Amazon CloudWatch Logs for the first 500 (by
-     *   traffic volume) city-networks (client locations and ASNs, typically internet service
-     *   providers or ISPs).
-     */
+    /** @param internetMeasurementsLogDelivery the value to be set. */
     public fun internetMeasurementsLogDelivery(
         internetMeasurementsLogDelivery: CfnMonitor.InternetMeasurementsLogDeliveryProperty
     ) {
@@ -204,14 +192,7 @@ public class CfnMonitorPropsDsl {
         _tags.addAll(tags)
     }
 
-    /**
-     * @param trafficPercentageToMonitor The percentage of the internet-facing traffic for your
-     *   application that you want to monitor. You can also, optionally, set a limit for the number
-     *   of city-networks (client locations and ASNs, typically internet service providers) that
-     *   Internet Monitor will monitor traffic for. The city-networks maximum limit caps the number
-     *   of city-networks that Internet Monitor monitors for your application, regardless of the
-     *   percentage of traffic that you choose to monitor.
-     */
+    /** @param trafficPercentageToMonitor the value to be set. */
     public fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number) {
         cdkBuilder.trafficPercentageToMonitor(trafficPercentageToMonitor)
     }

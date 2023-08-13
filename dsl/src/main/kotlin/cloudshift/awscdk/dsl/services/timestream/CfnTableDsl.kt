@@ -20,6 +20,7 @@ import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.timestream.CfnTable
 import software.constructs.Construct
 
@@ -47,6 +48,14 @@ import software.constructs.Construct
  * // the properties below are optional
  * .magneticStoreWriteProperties(magneticStoreWriteProperties)
  * .retentionProperties(retentionProperties)
+ * .schema(SchemaProperty.builder()
+ * .compositePartitionKey(List.of(PartitionKeyProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .enforcementInRecord("enforcementInRecord")
+ * .name("name")
+ * .build()))
+ * .build())
  * .tableName("tableName")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -263,6 +272,28 @@ public class CfnTableDsl(
      */
     public fun retentionProperties(retentionProperties: Any) {
         cdkBuilder.retentionProperties(retentionProperties)
+    }
+
+    /**
+     * The schema of the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html#cfn-timestream-table-schema)
+     *
+     * @param schema The schema of the table.
+     */
+    public fun schema(schema: IResolvable) {
+        cdkBuilder.schema(schema)
+    }
+
+    /**
+     * The schema of the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html#cfn-timestream-table-schema)
+     *
+     * @param schema The schema of the table.
+     */
+    public fun schema(schema: CfnTable.SchemaProperty) {
+        cdkBuilder.schema(schema)
     }
 
     /**

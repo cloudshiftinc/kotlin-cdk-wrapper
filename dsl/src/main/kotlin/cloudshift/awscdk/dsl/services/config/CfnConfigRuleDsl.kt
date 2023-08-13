@@ -16,6 +16,8 @@ import cloudshift.awscdk.common.MapBuilder
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigRule
 import software.constructs.Construct
@@ -94,8 +96,14 @@ import software.constructs.Construct
  * .sourceIdentifier("sourceIdentifier")
  * .build())
  * // the properties below are optional
+ * .compliance(ComplianceProperty.builder()
+ * .type("type")
+ * .build())
  * .configRuleName("configRuleName")
  * .description("description")
+ * .evaluationModes(List.of(EvaluationModeConfigurationProperty.builder()
+ * .mode("mode")
+ * .build()))
  * .inputParameters(inputParameters)
  * .maximumExecutionFrequency("maximumExecutionFrequency")
  * .scope(ScopeProperty.builder()
@@ -115,6 +123,30 @@ public class CfnConfigRuleDsl(
     id: String,
 ) {
     private val cdkBuilder: CfnConfigRule.Builder = CfnConfigRule.Builder.create(scope, id)
+
+    private val _evaluationModes: MutableList<Any> = mutableListOf()
+
+    /**
+     * Compliance details of the Config rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-compliance)
+     *
+     * @param compliance Compliance details of the Config rule.
+     */
+    public fun compliance(compliance: IResolvable) {
+        cdkBuilder.compliance(compliance)
+    }
+
+    /**
+     * Compliance details of the Config rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-compliance)
+     *
+     * @param compliance Compliance details of the Config rule.
+     */
+    public fun compliance(compliance: CfnConfigRule.ComplianceProperty) {
+        cdkBuilder.compliance(compliance)
+    }
 
     /**
      * A name for the AWS Config rule.
@@ -141,6 +173,39 @@ public class CfnConfigRuleDsl(
      */
     public fun description(description: String) {
         cdkBuilder.description(description)
+    }
+
+    /**
+     * List of EvaluationModeConfiguration objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-evaluationmodes)
+     *
+     * @param evaluationModes List of EvaluationModeConfiguration objects.
+     */
+    public fun evaluationModes(vararg evaluationModes: Any) {
+        _evaluationModes.addAll(listOf(*evaluationModes))
+    }
+
+    /**
+     * List of EvaluationModeConfiguration objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-evaluationmodes)
+     *
+     * @param evaluationModes List of EvaluationModeConfiguration objects.
+     */
+    public fun evaluationModes(evaluationModes: Collection<Any>) {
+        _evaluationModes.addAll(evaluationModes)
+    }
+
+    /**
+     * List of EvaluationModeConfiguration objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-evaluationmodes)
+     *
+     * @param evaluationModes List of EvaluationModeConfiguration objects.
+     */
+    public fun evaluationModes(evaluationModes: IResolvable) {
+        cdkBuilder.evaluationModes(evaluationModes)
     }
 
     /**
@@ -257,5 +322,8 @@ public class CfnConfigRuleDsl(
         cdkBuilder.source(source)
     }
 
-    public fun build(): CfnConfigRule = cdkBuilder.build()
+    public fun build(): CfnConfigRule {
+        if (_evaluationModes.isNotEmpty()) cdkBuilder.evaluationModes(_evaluationModes)
+        return cdkBuilder.build()
+    }
 }

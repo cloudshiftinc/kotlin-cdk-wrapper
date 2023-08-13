@@ -29,7 +29,9 @@ import software.amazon.awscdk.services.glue.CfnClassifier
  * import software.amazon.awscdk.services.glue.*;
  * CsvClassifierProperty csvClassifierProperty = CsvClassifierProperty.builder()
  * .allowSingleColumn(false)
+ * .containsCustomDatatype(List.of("containsCustomDatatype"))
  * .containsHeader("containsHeader")
+ * .customDatatypeConfigured(false)
  * .delimiter("delimiter")
  * .disableValueTrimming(false)
  * .header(List.of("header"))
@@ -45,6 +47,8 @@ public class CfnClassifierCsvClassifierPropertyDsl {
     private val cdkBuilder: CfnClassifier.CsvClassifierProperty.Builder =
         CfnClassifier.CsvClassifierProperty.builder()
 
+    private val _containsCustomDatatype: MutableList<String> = mutableListOf()
+
     private val _header: MutableList<String> = mutableListOf()
 
     /** @param allowSingleColumn Enables the processing of files that contain only one column. */
@@ -57,6 +61,16 @@ public class CfnClassifierCsvClassifierPropertyDsl {
         cdkBuilder.allowSingleColumn(allowSingleColumn)
     }
 
+    /** @param containsCustomDatatype the value to be set. */
+    public fun containsCustomDatatype(vararg containsCustomDatatype: String) {
+        _containsCustomDatatype.addAll(listOf(*containsCustomDatatype))
+    }
+
+    /** @param containsCustomDatatype the value to be set. */
+    public fun containsCustomDatatype(containsCustomDatatype: Collection<String>) {
+        _containsCustomDatatype.addAll(containsCustomDatatype)
+    }
+
     /**
      * @param containsHeader Indicates whether the CSV file contains a header. A value of `UNKNOWN`
      *   specifies that the classifier will detect whether the CSV file contains headings.
@@ -67,6 +81,16 @@ public class CfnClassifierCsvClassifierPropertyDsl {
      */
     public fun containsHeader(containsHeader: String) {
         cdkBuilder.containsHeader(containsHeader)
+    }
+
+    /** @param customDatatypeConfigured the value to be set. */
+    public fun customDatatypeConfigured(customDatatypeConfigured: Boolean) {
+        cdkBuilder.customDatatypeConfigured(customDatatypeConfigured)
+    }
+
+    /** @param customDatatypeConfigured the value to be set. */
+    public fun customDatatypeConfigured(customDatatypeConfigured: IResolvable) {
+        cdkBuilder.customDatatypeConfigured(customDatatypeConfigured)
     }
 
     /** @param delimiter A custom symbol to denote what separates each column entry in the row. */
@@ -114,6 +138,8 @@ public class CfnClassifierCsvClassifierPropertyDsl {
     }
 
     public fun build(): CfnClassifier.CsvClassifierProperty {
+        if (_containsCustomDatatype.isNotEmpty())
+            cdkBuilder.containsCustomDatatype(_containsCustomDatatype)
         if (_header.isNotEmpty()) cdkBuilder.`header`(_header)
         return cdkBuilder.build()
     }

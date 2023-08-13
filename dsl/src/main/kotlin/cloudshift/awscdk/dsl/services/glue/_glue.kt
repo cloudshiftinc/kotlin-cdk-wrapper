@@ -70,7 +70,9 @@ public object glue {
      * CfnClassifier cfnClassifier = CfnClassifier.Builder.create(this, "MyCfnClassifier")
      * .csvClassifier(CsvClassifierProperty.builder()
      * .allowSingleColumn(false)
+     * .containsCustomDatatype(List.of("containsCustomDatatype"))
      * .containsHeader("containsHeader")
+     * .customDatatypeConfigured(false)
      * .delimiter("delimiter")
      * .disableValueTrimming(false)
      * .header(List.of("header"))
@@ -120,7 +122,9 @@ public object glue {
      * import software.amazon.awscdk.services.glue.*;
      * CsvClassifierProperty csvClassifierProperty = CsvClassifierProperty.builder()
      * .allowSingleColumn(false)
+     * .containsCustomDatatype(List.of("containsCustomDatatype"))
      * .containsHeader("containsHeader")
+     * .customDatatypeConfigured(false)
      * .delimiter("delimiter")
      * .disableValueTrimming(false)
      * .header(List.of("header"))
@@ -202,7 +206,9 @@ public object glue {
      * CfnClassifierProps cfnClassifierProps = CfnClassifierProps.builder()
      * .csvClassifier(CsvClassifierProperty.builder()
      * .allowSingleColumn(false)
+     * .containsCustomDatatype(List.of("containsCustomDatatype"))
      * .containsHeader("containsHeader")
+     * .customDatatypeConfigured(false)
      * .delimiter("delimiter")
      * .disableValueTrimming(false)
      * .header(List.of("header"))
@@ -442,6 +448,12 @@ public object glue {
      * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
      * .path("path")
      * .build()))
+     * .icebergTargets(List.of(IcebergTargetProperty.builder()
+     * .connectionName("connectionName")
+     * .exclusions(List.of("exclusions"))
+     * .maximumTraversalDepth(123)
+     * .paths(List.of("paths"))
+     * .build()))
      * .jdbcTargets(List.of(JdbcTargetProperty.builder()
      * .connectionName("connectionName")
      * .exclusions(List.of("exclusions"))
@@ -571,6 +583,30 @@ public object glue {
     }
 
     /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * IcebergTargetProperty icebergTargetProperty = IcebergTargetProperty.builder()
+     * .connectionName("connectionName")
+     * .exclusions(List.of("exclusions"))
+     * .maximumTraversalDepth(123)
+     * .paths(List.of("paths"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html)
+     */
+    public inline fun cfnCrawlerIcebergTargetProperty(
+        block: CfnCrawlerIcebergTargetPropertyDsl.() -> Unit = {}
+    ): CfnCrawler.IcebergTargetProperty {
+        val builder = CfnCrawlerIcebergTargetPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies a JDBC data store to crawl.
      *
      * Example:
@@ -646,6 +682,12 @@ public object glue {
      * .build()))
      * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
      * .path("path")
+     * .build()))
+     * .icebergTargets(List.of(IcebergTargetProperty.builder()
+     * .connectionName("connectionName")
+     * .exclusions(List.of("exclusions"))
+     * .maximumTraversalDepth(123)
+     * .paths(List.of("paths"))
      * .build()))
      * .jdbcTargets(List.of(JdbcTargetProperty.builder()
      * .connectionName("connectionName")
@@ -830,6 +872,12 @@ public object glue {
      * .build()))
      * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
      * .path("path")
+     * .build()))
+     * .icebergTargets(List.of(IcebergTargetProperty.builder()
+     * .connectionName("connectionName")
+     * .exclusions(List.of("exclusions"))
+     * .maximumTraversalDepth(123)
+     * .paths(List.of("paths"))
      * .build()))
      * .jdbcTargets(List.of(JdbcTargetProperty.builder()
      * .connectionName("connectionName")
@@ -1158,6 +1206,7 @@ public object glue {
      * .targetDatabase(DatabaseIdentifierProperty.builder()
      * .catalogId("catalogId")
      * .databaseName("databaseName")
+     * .region("region")
      * .build())
      * .build())
      * .build();
@@ -1209,6 +1258,7 @@ public object glue {
      * DatabaseIdentifierProperty databaseIdentifierProperty = DatabaseIdentifierProperty.builder()
      * .catalogId("catalogId")
      * .databaseName("databaseName")
+     * .region("region")
      * .build();
      * ```
      *
@@ -1249,6 +1299,7 @@ public object glue {
      * .targetDatabase(DatabaseIdentifierProperty.builder()
      * .catalogId("catalogId")
      * .databaseName("databaseName")
+     * .region("region")
      * .build())
      * .build();
      * ```
@@ -1342,6 +1393,7 @@ public object glue {
      * .targetDatabase(DatabaseIdentifierProperty.builder()
      * .catalogId("catalogId")
      * .databaseName("databaseName")
+     * .region("region")
      * .build())
      * .build())
      * .build();
@@ -3003,9 +3055,17 @@ public object glue {
      * .catalogId("catalogId")
      * .databaseName("databaseName")
      * .name("name")
+     * .region("region")
      * .build())
      * .viewExpandedText("viewExpandedText")
      * .viewOriginalText("viewOriginalText")
+     * .build())
+     * // the properties below are optional
+     * .openTableFormatInput(OpenTableFormatInputProperty.builder()
+     * .icebergInput(IcebergInputProperty.builder()
+     * .metadataOperation("metadataOperation")
+     * .version("version")
+     * .build())
      * .build())
      * .build();
      * ```
@@ -3044,6 +3104,53 @@ public object glue {
         block: CfnTableColumnPropertyDsl.() -> Unit = {}
     ): CfnTable.ColumnProperty {
         val builder = CfnTableColumnPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * IcebergInputProperty icebergInputProperty = IcebergInputProperty.builder()
+     * .metadataOperation("metadataOperation")
+     * .version("version")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html)
+     */
+    public inline fun cfnTableIcebergInputProperty(
+        block: CfnTableIcebergInputPropertyDsl.() -> Unit = {}
+    ): CfnTable.IcebergInputProperty {
+        val builder = CfnTableIcebergInputPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.glue.*;
+     * OpenTableFormatInputProperty openTableFormatInputProperty =
+     * OpenTableFormatInputProperty.builder()
+     * .icebergInput(IcebergInputProperty.builder()
+     * .metadataOperation("metadataOperation")
+     * .version("version")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-opentableformatinput.html)
+     */
+    public inline fun cfnTableOpenTableFormatInputProperty(
+        block: CfnTableOpenTableFormatInputPropertyDsl.() -> Unit = {}
+    ): CfnTable.OpenTableFormatInputProperty {
+        val builder = CfnTableOpenTableFormatInputPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -3141,9 +3248,17 @@ public object glue {
      * .catalogId("catalogId")
      * .databaseName("databaseName")
      * .name("name")
+     * .region("region")
      * .build())
      * .viewExpandedText("viewExpandedText")
      * .viewOriginalText("viewOriginalText")
+     * .build())
+     * // the properties below are optional
+     * .openTableFormatInput(OpenTableFormatInputProperty.builder()
+     * .icebergInput(IcebergInputProperty.builder()
+     * .metadataOperation("metadataOperation")
+     * .version("version")
+     * .build())
      * .build())
      * .build();
      * ```
@@ -3340,6 +3455,7 @@ public object glue {
      * .catalogId("catalogId")
      * .databaseName("databaseName")
      * .name("name")
+     * .region("region")
      * .build();
      * ```
      *
@@ -3419,6 +3535,7 @@ public object glue {
      * .catalogId("catalogId")
      * .databaseName("databaseName")
      * .name("name")
+     * .region("region")
      * .build())
      * .viewExpandedText("viewExpandedText")
      * .viewOriginalText("viewOriginalText")

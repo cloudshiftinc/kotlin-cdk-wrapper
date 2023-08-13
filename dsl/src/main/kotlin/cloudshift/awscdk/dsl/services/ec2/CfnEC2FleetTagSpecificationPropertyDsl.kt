@@ -50,7 +50,7 @@ public class CfnEC2FleetTagSpecificationPropertyDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param resourceType The type of resource to tag. `ResourceType` must be `fleet` . */
+    /** @param resourceType The type of resource to tag. */
     public fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
     }

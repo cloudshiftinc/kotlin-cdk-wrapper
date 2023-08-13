@@ -71,28 +71,30 @@ public class CfnSolutionHpoConfigPropertyDsl {
         cdkBuilder.algorithmHyperParameterRanges(algorithmHyperParameterRanges)
     }
 
-    /** @param hpoObjective The metric to optimize during HPO. */
+    /**
+     * @param hpoObjective The metric to optimize during HPO.
+     *
+     * Amazon Personalize doesn't support configuring the `hpoObjective` at this time.
+     */
     public fun hpoObjective(hpoObjective: IResolvable) {
         cdkBuilder.hpoObjective(hpoObjective)
     }
 
-    /** @param hpoObjective The metric to optimize during HPO. */
+    /**
+     * @param hpoObjective The metric to optimize during HPO.
+     *
+     * Amazon Personalize doesn't support configuring the `hpoObjective` at this time.
+     */
     public fun hpoObjective(hpoObjective: CfnSolution.HpoObjectiveProperty) {
         cdkBuilder.hpoObjective(hpoObjective)
     }
 
-    /**
-     * @param hpoResourceConfig Describes the resource configuration for hyperparameter optimization
-     *   (HPO).
-     */
+    /** @param hpoResourceConfig Describes the resource configuration for HPO. */
     public fun hpoResourceConfig(hpoResourceConfig: IResolvable) {
         cdkBuilder.hpoResourceConfig(hpoResourceConfig)
     }
 
-    /**
-     * @param hpoResourceConfig Describes the resource configuration for hyperparameter optimization
-     *   (HPO).
-     */
+    /** @param hpoResourceConfig Describes the resource configuration for HPO. */
     public fun hpoResourceConfig(hpoResourceConfig: CfnSolution.HpoResourceConfigProperty) {
         cdkBuilder.hpoResourceConfig(hpoResourceConfig)
     }

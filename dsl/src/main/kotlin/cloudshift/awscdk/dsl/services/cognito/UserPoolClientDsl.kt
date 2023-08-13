@@ -74,7 +74,8 @@ public class UserPoolClientDsl(
     /**
      * The set of OAuth authentication flows to enable on the client.
      *
-     * Default: - all auth flows disabled
+     * Default: - If you don't specify a value, your user client supports ALLOW_REFRESH_TOKEN_AUTH,
+     * ALLOW_USER_SRP_AUTH, and ALLOW_CUSTOM_AUTH.
      *
      * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html)
      *
@@ -89,7 +90,8 @@ public class UserPoolClientDsl(
     /**
      * The set of OAuth authentication flows to enable on the client.
      *
-     * Default: - all auth flows disabled
+     * Default: - If you don't specify a value, your user client supports ALLOW_REFRESH_TOKEN_AUTH,
+     * ALLOW_USER_SRP_AUTH, and ALLOW_CUSTOM_AUTH.
      *
      * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html)
      *

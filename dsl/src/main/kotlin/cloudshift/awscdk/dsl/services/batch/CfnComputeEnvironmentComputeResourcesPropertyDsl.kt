@@ -115,11 +115,16 @@ public class CfnComputeEnvironmentComputeResourcesPropertyDsl {
      *   large enough to meet the requirements of the jobs in the queue, with a preference for
      *   instance types that are less likely to be interrupted. This allocation strategy is only
      *   available for Spot Instance compute resources.
+     * * **SPOT_PRICE_CAPACITY_OPTIMIZED** - The price and capacity optimized allocation strategy
+     *   looks at both price and capacity to select the Spot Instance pools that are the least
+     *   likely to be interrupted and have the lowest possible price. This allocation strategy is
+     *   only available for Spot Instance compute resources.
      *
-     * With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies using
-     * On-Demand or Spot Instances, and the `BEST_FIT` strategy using Spot Instances, AWS Batch
-     * might need to go above `maxvCpus` to meet your capacity requirements. In this event, AWS
-     * Batch never exceeds `maxvCpus` by more than a single instance.
+     * With `BEST_FIT_PROGRESSIVE` , `SPOT_CAPACITY_OPTIMIZED` , and `SPOT_PRICE_CAPACITY_OPTIMIZED`
+     * (recommended) allocation strategies using On-Demand or Spot Instances, and the `BEST_FIT`
+     * strategy using Spot Instances, AWS Batch might need to go above `maxvCpus` to meet your
+     * capacity requirements. In this event, AWS Batch never exceeds `maxvCpus` by more than a
+     * single instance.
      */
     public fun allocationStrategy(allocationStrategy: String) {
         cdkBuilder.allocationStrategy(allocationStrategy)
@@ -267,9 +272,10 @@ public class CfnComputeEnvironmentComputeResourcesPropertyDsl {
 
     /**
      * @param instanceRole The Amazon ECS instance profile applied to Amazon EC2 instances in a
-     *   compute environment. You can specify the short name or full Amazon Resource Name (ARN) of
-     *   an instance profile. For example, `*ecsInstanceRole*` or `arn:aws:iam::
-     *   *&lt;aws_account_id&gt;* :instance-profile/ *ecsInstanceRole*` . For more information, see
+     *   compute environment. Required for Amazon EC2 instances. You can specify the short name or
+     *   full Amazon Resource Name (ARN) of an instance profile. For example, `*ecsInstanceRole*` or
+     *   `arn:aws:iam:: *&lt;aws_account_id&gt;* :instance-profile/ *ecsInstanceRole*` . For more
+     *   information, see
      *   [Amazon ECS instance role](https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html)
      *   in the *AWS Batch User Guide* .
      *
@@ -384,11 +390,10 @@ public class CfnComputeEnvironmentComputeResourcesPropertyDsl {
     /**
      * @param maxvCpus The maximum number of Amazon EC2 vCPUs that an environment can reach.
      *
-     * With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies using
-     * On-Demand or Spot Instances, and the `BEST_FIT` strategy using Spot Instances, AWS Batch
-     * might need to exceed `maxvCpus` to meet your capacity requirements. In this event, AWS Batch
-     * never exceeds `maxvCpus` by more than a single instance. That is, no more than a single
-     * instance from among those specified in your compute environment.
+     * With `BEST_FIT_PROGRESSIVE` , `SPOT_CAPACITY_OPTIMIZED` and `SPOT_PRICE_CAPACITY_OPTIMIZED`
+     * (recommended) strategies using On-Demand or Spot Instances, and the `BEST_FIT` strategy using
+     * Spot Instances, AWS Batch might need to exceed `maxvCpus` to meet your capacity requirements.
+     * In this event, AWS Batch never exceeds `maxvCpus` by more than a single instance.
      */
     public fun maxvCpus(maxvCpus: Number) {
         cdkBuilder.maxvCpus(maxvCpus)

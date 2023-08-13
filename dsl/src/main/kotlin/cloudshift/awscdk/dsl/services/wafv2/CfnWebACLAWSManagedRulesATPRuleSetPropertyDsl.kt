@@ -12,6 +12,7 @@
 package cloudshift.awscdk.dsl.services.wafv2
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
@@ -31,6 +32,7 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * AWSManagedRulesATPRuleSetProperty.builder()
  * .loginPath("loginPath")
  * // the properties below are optional
+ * .enableRegexInPath(false)
  * .requestInspection(RequestInspectionProperty.builder()
  * .passwordField(FieldIdentifierProperty.builder()
  * .identifier("identifier")
@@ -69,6 +71,16 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
 public class CfnWebACLAWSManagedRulesATPRuleSetPropertyDsl {
     private val cdkBuilder: CfnWebACL.AWSManagedRulesATPRuleSetProperty.Builder =
         CfnWebACL.AWSManagedRulesATPRuleSetProperty.builder()
+
+    /** @param enableRegexInPath the value to be set. */
+    public fun enableRegexInPath(enableRegexInPath: Boolean) {
+        cdkBuilder.enableRegexInPath(enableRegexInPath)
+    }
+
+    /** @param enableRegexInPath the value to be set. */
+    public fun enableRegexInPath(enableRegexInPath: IResolvable) {
+        cdkBuilder.enableRegexInPath(enableRegexInPath)
+    }
 
     /**
      * @param loginPath The path of the login endpoint for your application. For example, for the

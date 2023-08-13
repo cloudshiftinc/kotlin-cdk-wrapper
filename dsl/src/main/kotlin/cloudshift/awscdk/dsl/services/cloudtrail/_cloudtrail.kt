@@ -534,15 +534,17 @@ public object cloudtrail {
 
     /**
      * The Amazon S3 buckets, AWS Lambda functions, or Amazon DynamoDB tables that you specify in
-     * event selectors in your AWS CloudFormation template for your trail to log data events.
+     * your event selectors for your trail to log data events.
      *
      * Data events provide information about the resource operations performed on or within a
      * resource itself. These are also known as data plane operations. You can specify up to 250
-     * data resources for a trail. Currently, advanced event selectors for data events are not
-     * supported in AWS CloudFormation templates.
+     * data resources for a trail.
      *
      * The total number of allowed data resources is 250. This number can be distributed between 1
-     * and 5 event selectors, but the total cannot exceed 250 across all selectors.
+     * and 5 event selectors, but the total cannot exceed 250 across all selectors for the trail.
+     *
+     * If you are using advanced event selectors, the maximum total number of values for all
+     * conditions, across all advanced event selectors for the trail, is 500.
      *
      * The following example demonstrates how logging works when you configure logging of all data
      * events for an S3 bucket named `bucket-1` . In this example, the CloudTrail user specified an

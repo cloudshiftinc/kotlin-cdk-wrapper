@@ -1647,11 +1647,11 @@ public class CfnDBInstancePropsDsl {
      * value is inherited from the source DB instance, and if the DB instance is encrypted, the
      * specified `KmsKeyId` property is used.
      *
-     * If you specify the `SnapshotIdentifier` and the specified snapshot is encrypted, don't
+     * If you specify the `DBSnapshotIdentifier` and the specified snapshot is encrypted, don't
      * specify this property. The value is inherited from the snapshot, and the specified `KmsKeyId`
      * property is used.
      *
-     * If you specify the `SnapshotIdentifier` and the specified snapshot isn't encrypted, you can
+     * If you specify the `DBSnapshotIdentifier` and the specified snapshot isn't encrypted, you can
      * use this property to specify that the restored DB instance is encrypted. Specify the
      * `KmsKeyId` property for the KMS key to use for encryption. If you don't want the restored DB
      * instance to be encrypted, then don't set this property or set it to `false` .
@@ -1673,11 +1673,11 @@ public class CfnDBInstancePropsDsl {
      * value is inherited from the source DB instance, and if the DB instance is encrypted, the
      * specified `KmsKeyId` property is used.
      *
-     * If you specify the `SnapshotIdentifier` and the specified snapshot is encrypted, don't
+     * If you specify the `DBSnapshotIdentifier` and the specified snapshot is encrypted, don't
      * specify this property. The value is inherited from the snapshot, and the specified `KmsKeyId`
      * property is used.
      *
-     * If you specify the `SnapshotIdentifier` and the specified snapshot isn't encrypted, you can
+     * If you specify the `DBSnapshotIdentifier` and the specified snapshot isn't encrypted, you can
      * use this property to specify that the restored DB instance is encrypted. Specify the
      * `KmsKeyId` property for the KMS key to use for encryption. If you don't want the restored DB
      * instance to be encrypted, then don't set this property or set it to `false` .

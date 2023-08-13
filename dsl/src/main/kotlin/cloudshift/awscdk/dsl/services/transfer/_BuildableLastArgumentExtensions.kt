@@ -12,8 +12,18 @@
 package cloudshift.awscdk.dsl.services.transfer
 
 import kotlin.Unit
+import software.amazon.awscdk.services.transfer.CfnConnector
 import software.amazon.awscdk.services.transfer.CfnServer
 import software.amazon.awscdk.services.transfer.CfnUser
+
+/** Configuration for an SFTP connector. */
+public inline fun CfnConnector.setSftpConfig(
+    block: CfnConnectorSftpConfigPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnConnectorSftpConfigPropertyDsl()
+    builder.apply(block)
+    return setSftpConfig(builder.build())
+}
 
 /** The virtual private cloud (VPC) endpoint settings that are configured for your server. */
 public inline fun CfnServer.setEndpointDetails(

@@ -145,6 +145,8 @@ public class CfnTaskDefinitionVolumePropertyDsl {
      * @param name The name of the volume. Up to 255 letters (uppercase and lowercase), numbers,
      *   underscores, and hyphens are allowed. This name is referenced in the `sourceVolume`
      *   parameter of container definition `mountPoints` .
+     *
+     * This is required wwhen you use an Amazon EFS volume.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)

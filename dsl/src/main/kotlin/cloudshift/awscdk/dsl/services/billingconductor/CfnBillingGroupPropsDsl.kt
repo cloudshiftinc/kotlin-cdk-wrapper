@@ -33,6 +33,8 @@ import software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps
  * CfnBillingGroupProps cfnBillingGroupProps = CfnBillingGroupProps.builder()
  * .accountGrouping(AccountGroupingProperty.builder()
  * .linkedAccountIds(List.of("linkedAccountIds"))
+ * // the properties below are optional
+ * .autoAssociate(false)
  * .build())
  * .computationPreference(ComputationPreferenceProperty.builder()
  * .pricingPlanArn("pricingPlanArn")

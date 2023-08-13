@@ -256,12 +256,12 @@ public class CfnAppPropsDsl {
         cdkBuilder.appTemplateBody(appTemplateBody)
     }
 
-    /** @param description The optional description for an app. */
+    /** @param description Optional description for an application. */
     public fun description(description: String) {
         cdkBuilder.description(description)
     }
 
-    /** @param name The name for the application. */
+    /** @param name Name for the application. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
@@ -287,7 +287,7 @@ public class CfnAppPropsDsl {
     }
 
     /**
-     * @param tags The tags assigned to the resource. A tag is a label that you assign to an AWS
+     * @param tags Tags assigned to the resource. A tag is a label that you assign to an AWS
      *   resource. Each tag consists of a key/value pair.
      */
     public fun tags(tags: Map<String, String>) {

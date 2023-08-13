@@ -27,6 +27,7 @@ import software.amazon.awscdk.services.glue.CfnTable
  * .catalogId("catalogId")
  * .databaseName("databaseName")
  * .name("name")
+ * .region("region")
  * .build();
  * ```
  *
@@ -50,6 +51,11 @@ public class CfnTableTableIdentifierPropertyDsl {
     /** @param name The name of the target table. */
     public fun name(name: String) {
         cdkBuilder.name(name)
+    }
+
+    /** @param region the value to be set. */
+    public fun region(region: String) {
+        cdkBuilder.region(region)
     }
 
     public fun build(): CfnTable.TableIdentifierProperty = cdkBuilder.build()

@@ -68,6 +68,9 @@ public class CfnSecurityProfileBehaviorPropertyDsl {
     /**
      * @param criteria The criteria that determine if a device is behaving normally in regard to the
      *   `metric` .
+     *
+     * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+     * Device Defender detects that a device is behaving anomalously.
      */
     public fun criteria(criteria: IResolvable) {
         cdkBuilder.criteria(criteria)
@@ -76,6 +79,9 @@ public class CfnSecurityProfileBehaviorPropertyDsl {
     /**
      * @param criteria The criteria that determine if a device is behaving normally in regard to the
      *   `metric` .
+     *
+     * In the AWS IoT console, you can choose to be sent an alert through Amazon SNS when AWS IoT
+     * Device Defender detects that a device is behaving anomalously.
      */
     public fun criteria(criteria: CfnSecurityProfile.BehaviorCriteriaProperty) {
         cdkBuilder.criteria(criteria)

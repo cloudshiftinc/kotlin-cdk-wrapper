@@ -48,14 +48,14 @@ public class CfnCapacityProviderAutoScalingGroupProviderPropertyDsl {
 
     /**
      * @param autoScalingGroupArn The Amazon Resource Name (ARN) that identifies the Auto Scaling
-     *   group.
+     *   group, or the Auto Scaling group name.
      */
     public fun autoScalingGroupArn(autoScalingGroupArn: String) {
         cdkBuilder.autoScalingGroupArn(autoScalingGroupArn)
     }
 
     /**
-     * @param managedScaling The managed scaling settings for the Auto Scaling group capacity
+     * @param managedScaling he managed scaling settings for the Auto Scaling group capacity
      *   provider.
      */
     public fun managedScaling(managedScaling: IResolvable) {
@@ -63,7 +63,7 @@ public class CfnCapacityProviderAutoScalingGroupProviderPropertyDsl {
     }
 
     /**
-     * @param managedScaling The managed scaling settings for the Auto Scaling group capacity
+     * @param managedScaling he managed scaling settings for the Auto Scaling group capacity
      *   provider.
      */
     public fun managedScaling(managedScaling: CfnCapacityProvider.ManagedScalingProperty) {

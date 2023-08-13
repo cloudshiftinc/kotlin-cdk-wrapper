@@ -13,11 +13,303 @@ package cloudshift.awscdk.dsl.services.mediatailor
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.mediatailor.CfnChannel
+import software.amazon.awscdk.services.mediatailor.CfnChannelPolicy
+import software.amazon.awscdk.services.mediatailor.CfnChannelPolicyProps
+import software.amazon.awscdk.services.mediatailor.CfnChannelProps
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps
+import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
+import software.amazon.awscdk.services.mediatailor.CfnSourceLocationProps
 import software.constructs.Construct
 
 public object mediatailor {
+    /**
+     * Definition of AWS::MediaTailor::Channel Resource Type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnChannel cfnChannel = CfnChannel.Builder.create(this, "MyCfnChannel")
+     * .channelName("channelName")
+     * .outputs(List.of(RequestOutputItemProperty.builder()
+     * .manifestName("manifestName")
+     * .sourceGroup("sourceGroup")
+     * // the properties below are optional
+     * .dashPlaylistSettings(DashPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .minBufferTimeSeconds(123)
+     * .minUpdatePeriodSeconds(123)
+     * .suggestedPresentationDelaySeconds(123)
+     * .build())
+     * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .build())
+     * .build()))
+     * .playbackMode("playbackMode")
+     * // the properties below are optional
+     * .fillerSlate(SlateSourceProperty.builder()
+     * .sourceLocationName("sourceLocationName")
+     * .vodSourceName("vodSourceName")
+     * .build())
+     * .logConfiguration(LogConfigurationForChannelProperty.builder()
+     * .logTypes(List.of("logTypes"))
+     * .build())
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .tier("tier")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)
+     */
+    public inline fun cfnChannel(
+        scope: Construct,
+        id: String,
+        block: CfnChannelDsl.() -> Unit = {},
+    ): CfnChannel {
+        val builder = CfnChannelDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Dash manifest configuration parameters.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * DashPlaylistSettingsProperty dashPlaylistSettingsProperty =
+     * DashPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .minBufferTimeSeconds(123)
+     * .minUpdatePeriodSeconds(123)
+     * .suggestedPresentationDelaySeconds(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-dashplaylistsettings.html)
+     */
+    public inline fun cfnChannelDashPlaylistSettingsProperty(
+        block: CfnChannelDashPlaylistSettingsPropertyDsl.() -> Unit = {}
+    ): CfnChannel.DashPlaylistSettingsProperty {
+        val builder = CfnChannelDashPlaylistSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * HLS playlist configuration parameters.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * HlsPlaylistSettingsProperty hlsPlaylistSettingsProperty = HlsPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html)
+     */
+    public inline fun cfnChannelHlsPlaylistSettingsProperty(
+        block: CfnChannelHlsPlaylistSettingsPropertyDsl.() -> Unit = {}
+    ): CfnChannel.HlsPlaylistSettingsProperty {
+        val builder = CfnChannelHlsPlaylistSettingsPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The log configuration for the channel.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * LogConfigurationForChannelProperty logConfigurationForChannelProperty =
+     * LogConfigurationForChannelProperty.builder()
+     * .logTypes(List.of("logTypes"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-logconfigurationforchannel.html)
+     */
+    public inline fun cfnChannelLogConfigurationForChannelProperty(
+        block: CfnChannelLogConfigurationForChannelPropertyDsl.() -> Unit = {}
+    ): CfnChannel.LogConfigurationForChannelProperty {
+        val builder = CfnChannelLogConfigurationForChannelPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Definition of AWS::MediaTailor::ChannelPolicy Resource Type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * Object policy;
+     * CfnChannelPolicy cfnChannelPolicy = CfnChannelPolicy.Builder.create(this, "MyCfnChannelPolicy")
+     * .channelName("channelName")
+     * .policy(policy)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html)
+     */
+    public inline fun cfnChannelPolicy(
+        scope: Construct,
+        id: String,
+        block: CfnChannelPolicyDsl.() -> Unit = {},
+    ): CfnChannelPolicy {
+        val builder = CfnChannelPolicyDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnChannelPolicy`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * Object policy;
+     * CfnChannelPolicyProps cfnChannelPolicyProps = CfnChannelPolicyProps.builder()
+     * .channelName("channelName")
+     * .policy(policy)
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html)
+     */
+    public inline fun cfnChannelPolicyProps(
+        block: CfnChannelPolicyPropsDsl.() -> Unit = {}
+    ): CfnChannelPolicyProps {
+        val builder = CfnChannelPolicyPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnChannel`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnChannelProps cfnChannelProps = CfnChannelProps.builder()
+     * .channelName("channelName")
+     * .outputs(List.of(RequestOutputItemProperty.builder()
+     * .manifestName("manifestName")
+     * .sourceGroup("sourceGroup")
+     * // the properties below are optional
+     * .dashPlaylistSettings(DashPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .minBufferTimeSeconds(123)
+     * .minUpdatePeriodSeconds(123)
+     * .suggestedPresentationDelaySeconds(123)
+     * .build())
+     * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .build())
+     * .build()))
+     * .playbackMode("playbackMode")
+     * // the properties below are optional
+     * .fillerSlate(SlateSourceProperty.builder()
+     * .sourceLocationName("sourceLocationName")
+     * .vodSourceName("vodSourceName")
+     * .build())
+     * .logConfiguration(LogConfigurationForChannelProperty.builder()
+     * .logTypes(List.of("logTypes"))
+     * .build())
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .tier("tier")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)
+     */
+    public inline fun cfnChannelProps(block: CfnChannelPropsDsl.() -> Unit = {}): CfnChannelProps {
+        val builder = CfnChannelPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The output configuration for this channel.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * RequestOutputItemProperty requestOutputItemProperty = RequestOutputItemProperty.builder()
+     * .manifestName("manifestName")
+     * .sourceGroup("sourceGroup")
+     * // the properties below are optional
+     * .dashPlaylistSettings(DashPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .minBufferTimeSeconds(123)
+     * .minUpdatePeriodSeconds(123)
+     * .suggestedPresentationDelaySeconds(123)
+     * .build())
+     * .hlsPlaylistSettings(HlsPlaylistSettingsProperty.builder()
+     * .manifestWindowSeconds(123)
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-requestoutputitem.html)
+     */
+    public inline fun cfnChannelRequestOutputItemProperty(
+        block: CfnChannelRequestOutputItemPropertyDsl.() -> Unit = {}
+    ): CfnChannel.RequestOutputItemProperty {
+        val builder = CfnChannelRequestOutputItemPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Slate VOD source configuration.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * SlateSourceProperty slateSourceProperty = SlateSourceProperty.builder()
+     * .sourceLocationName("sourceLocationName")
+     * .vodSourceName("vodSourceName")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html)
+     */
+    public inline fun cfnChannelSlateSourceProperty(
+        block: CfnChannelSlateSourcePropertyDsl.() -> Unit = {}
+    ): CfnChannel.SlateSourceProperty {
+        val builder = CfnChannelSlateSourcePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
     /**
      * Adds a new playback configuration to AWS Elemental MediaTailor .
      *
@@ -358,6 +650,236 @@ public object mediatailor {
         block: CfnPlaybackConfigurationPropsDsl.() -> Unit = {}
     ): CfnPlaybackConfigurationProps {
         val builder = CfnPlaybackConfigurationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Definition of AWS::MediaTailor::SourceLocation Resource Type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnSourceLocation cfnSourceLocation = CfnSourceLocation.Builder.create(this,
+     * "MyCfnSourceLocation")
+     * .httpConfiguration(HttpConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .build())
+     * .sourceLocationName("sourceLocationName")
+     * // the properties below are optional
+     * .accessConfiguration(AccessConfigurationProperty.builder()
+     * .accessType("accessType")
+     * .secretsManagerAccessTokenConfiguration(SecretsManagerAccessTokenConfigurationProperty.builder()
+     * .headerName("headerName")
+     * .secretArn("secretArn")
+     * .secretStringKey("secretStringKey")
+     * .build())
+     * .build())
+     * .defaultSegmentDeliveryConfiguration(DefaultSegmentDeliveryConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .build())
+     * .segmentDeliveryConfigurations(List.of(SegmentDeliveryConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .name("name")
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html)
+     */
+    public inline fun cfnSourceLocation(
+        scope: Construct,
+        id: String,
+        block: CfnSourceLocationDsl.() -> Unit = {},
+    ): CfnSourceLocation {
+        val builder = CfnSourceLocationDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Access configuration parameters.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * AccessConfigurationProperty accessConfigurationProperty = AccessConfigurationProperty.builder()
+     * .accessType("accessType")
+     * .secretsManagerAccessTokenConfiguration(SecretsManagerAccessTokenConfigurationProperty.builder()
+     * .headerName("headerName")
+     * .secretArn("secretArn")
+     * .secretStringKey("secretStringKey")
+     * .build())
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-accessconfiguration.html)
+     */
+    public inline fun cfnSourceLocationAccessConfigurationProperty(
+        block: CfnSourceLocationAccessConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnSourceLocation.AccessConfigurationProperty {
+        val builder = CfnSourceLocationAccessConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The optional configuration for a server that serves segments.
+     *
+     * Use this if you want the segment delivery server to be different from the source location
+     * server. For example, you can configure your source location server to be an origination
+     * server, such as MediaPackage, and the segment delivery server to be a content delivery
+     * network (CDN), such as CloudFront. If you don't specify a segment delivery server, then the
+     * source location server is used.</p>
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * DefaultSegmentDeliveryConfigurationProperty defaultSegmentDeliveryConfigurationProperty =
+     * DefaultSegmentDeliveryConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration.html)
+     */
+    public inline fun cfnSourceLocationDefaultSegmentDeliveryConfigurationProperty(
+        block: CfnSourceLocationDefaultSegmentDeliveryConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty {
+        val builder = CfnSourceLocationDefaultSegmentDeliveryConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The HTTP configuration for the source location.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * HttpConfigurationProperty httpConfigurationProperty = HttpConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-httpconfiguration.html)
+     */
+    public inline fun cfnSourceLocationHttpConfigurationProperty(
+        block: CfnSourceLocationHttpConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnSourceLocation.HttpConfigurationProperty {
+        val builder = CfnSourceLocationHttpConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnSourceLocation`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnSourceLocationProps cfnSourceLocationProps = CfnSourceLocationProps.builder()
+     * .httpConfiguration(HttpConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .build())
+     * .sourceLocationName("sourceLocationName")
+     * // the properties below are optional
+     * .accessConfiguration(AccessConfigurationProperty.builder()
+     * .accessType("accessType")
+     * .secretsManagerAccessTokenConfiguration(SecretsManagerAccessTokenConfigurationProperty.builder()
+     * .headerName("headerName")
+     * .secretArn("secretArn")
+     * .secretStringKey("secretStringKey")
+     * .build())
+     * .build())
+     * .defaultSegmentDeliveryConfiguration(DefaultSegmentDeliveryConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .build())
+     * .segmentDeliveryConfigurations(List.of(SegmentDeliveryConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .name("name")
+     * .build()))
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html)
+     */
+    public inline fun cfnSourceLocationProps(
+        block: CfnSourceLocationPropsDsl.() -> Unit = {}
+    ): CfnSourceLocationProps {
+        val builder = CfnSourceLocationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * AWS Secrets Manager access token configuration parameters.
+     *
+     * For information about Secrets Manager access token authentication, see
+     * [Working with AWS Secrets Manager access token authentication](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-access-configuration-access-token.html).</p>
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * SecretsManagerAccessTokenConfigurationProperty secretsManagerAccessTokenConfigurationProperty =
+     * SecretsManagerAccessTokenConfigurationProperty.builder()
+     * .headerName("headerName")
+     * .secretArn("secretArn")
+     * .secretStringKey("secretStringKey")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html)
+     */
+    public inline fun cfnSourceLocationSecretsManagerAccessTokenConfigurationProperty(
+        block: CfnSourceLocationSecretsManagerAccessTokenConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty {
+        val builder = CfnSourceLocationSecretsManagerAccessTokenConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The segment delivery configuration settings.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * SegmentDeliveryConfigurationProperty segmentDeliveryConfigurationProperty =
+     * SegmentDeliveryConfigurationProperty.builder()
+     * .baseUrl("baseUrl")
+     * .name("name")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html)
+     */
+    public inline fun cfnSourceLocationSegmentDeliveryConfigurationProperty(
+        block: CfnSourceLocationSegmentDeliveryConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnSourceLocation.SegmentDeliveryConfigurationProperty {
+        val builder = CfnSourceLocationSegmentDeliveryConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

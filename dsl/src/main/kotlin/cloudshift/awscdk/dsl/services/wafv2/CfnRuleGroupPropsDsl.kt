@@ -41,6 +41,9 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroupProps
  * Object captcha;
  * Object challenge;
  * Object count;
+ * Object forwardedIp;
+ * Object httpMethod;
+ * Object ip;
  * Object method;
  * Object queryString;
  * Object singleHeader;
@@ -153,6 +156,47 @@ import software.amazon.awscdk.services.wafv2.CfnRuleGroupProps
  * .aggregateKeyType("aggregateKeyType")
  * .limit(123)
  * // the properties below are optional
+ * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+ * .cookie(RateLimitCookieProperty.builder()
+ * .name("name")
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .forwardedIp(forwardedIp)
+ * .header(RateLimitHeaderProperty.builder()
+ * .name("name")
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .httpMethod(httpMethod)
+ * .ip(ip)
+ * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
+ * .namespace("namespace")
+ * .build())
+ * .queryArgument(RateLimitQueryArgumentProperty.builder()
+ * .name("name")
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .queryString(RateLimitQueryStringProperty.builder()
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .uriPath(RateLimitUriPathProperty.builder()
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build()))
  * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
  * .fallbackBehavior("fallbackBehavior")
  * .headerName("headerName")

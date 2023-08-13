@@ -69,27 +69,27 @@ public class CfnAppBlockBuilderPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param accessEndpoints The access endpoints of the app block builder. */
+    /** @param accessEndpoints the value to be set. */
     public fun accessEndpoints(vararg accessEndpoints: Any) {
         _accessEndpoints.addAll(listOf(*accessEndpoints))
     }
 
-    /** @param accessEndpoints The access endpoints of the app block builder. */
+    /** @param accessEndpoints the value to be set. */
     public fun accessEndpoints(accessEndpoints: Collection<Any>) {
         _accessEndpoints.addAll(accessEndpoints)
     }
 
-    /** @param accessEndpoints The access endpoints of the app block builder. */
+    /** @param accessEndpoints the value to be set. */
     public fun accessEndpoints(accessEndpoints: IResolvable) {
         cdkBuilder.accessEndpoints(accessEndpoints)
     }
 
-    /** @param appBlockArns The ARN of the app block. *Maximum* : `1` */
+    /** @param appBlockArns the value to be set. */
     public fun appBlockArns(vararg appBlockArns: String) {
         _appBlockArns.addAll(listOf(*appBlockArns))
     }
 
-    /** @param appBlockArns The ARN of the app block. *Maximum* : `1` */
+    /** @param appBlockArns the value to be set. */
     public fun appBlockArns(appBlockArns: Collection<String>) {
         _appBlockArns.addAll(appBlockArns)
     }
@@ -136,19 +136,19 @@ public class CfnAppBlockBuilderPropsDsl {
     }
 
     /**
-     * @param platform The platform of the app block builder. *Allowed values* :
-     *   `WINDOWS_SERVER_2019`
+     * @param platform The platform of the app block builder. `WINDOWS_SERVER_2019` is the only
+     *   valid value.
      */
     public fun platform(platform: String) {
         cdkBuilder.platform(platform)
     }
 
-    /** @param tags The tags of the app block builder. */
+    /** @param tags the value to be set. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags The tags of the app block builder. */
+    /** @param tags the value to be set. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

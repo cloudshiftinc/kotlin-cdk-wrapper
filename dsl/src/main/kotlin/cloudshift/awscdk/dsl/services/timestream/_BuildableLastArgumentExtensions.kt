@@ -13,6 +13,7 @@ package cloudshift.awscdk.dsl.services.timestream
 
 import kotlin.Unit
 import software.amazon.awscdk.services.timestream.CfnScheduledQuery
+import software.amazon.awscdk.services.timestream.CfnTable
 
 /** Configuration for error reporting. */
 public inline fun CfnScheduledQuery.setErrorReportConfiguration(
@@ -48,4 +49,11 @@ public inline fun CfnScheduledQuery.setTargetConfiguration(
     val builder = CfnScheduledQueryTargetConfigurationPropertyDsl()
     builder.apply(block)
     return setTargetConfiguration(builder.build())
+}
+
+/** The schema of the table. */
+public inline fun CfnTable.setSchema(block: CfnTableSchemaPropertyDsl.() -> Unit = {}) {
+    val builder = CfnTableSchemaPropertyDsl()
+    builder.apply(block)
+    return setSchema(builder.build())
 }

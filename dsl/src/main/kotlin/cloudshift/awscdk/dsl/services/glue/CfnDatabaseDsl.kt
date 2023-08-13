@@ -52,6 +52,7 @@ import software.constructs.Construct
  * .targetDatabase(DatabaseIdentifierProperty.builder()
  * .catalogId("catalogId")
  * .databaseName("databaseName")
+ * .region("region")
  * .build())
  * .build())
  * .build();

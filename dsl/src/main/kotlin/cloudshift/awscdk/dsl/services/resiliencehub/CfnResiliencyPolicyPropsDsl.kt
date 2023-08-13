@@ -86,7 +86,7 @@ public class CfnResiliencyPolicyPropsDsl {
     }
 
     /**
-     * @param tags The tags assigned to the resource. A tag is a label that you assign to an AWS
+     * @param tags Tags assigned to the resource. A tag is a label that you assign to an AWS
      *   resource. Each tag consists of a key/value pair.
      */
     public fun tags(tags: Map<String, String>) {

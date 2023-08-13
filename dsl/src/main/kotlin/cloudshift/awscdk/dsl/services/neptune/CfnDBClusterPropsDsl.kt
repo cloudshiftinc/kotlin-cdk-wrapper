@@ -45,6 +45,7 @@ import software.amazon.awscdk.services.neptune.CfnDBClusterProps
  * .dbClusterIdentifier("dbClusterIdentifier")
  * .dbClusterParameterGroupName("dbClusterParameterGroupName")
  * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
+ * .dbPort(123)
  * .dbSubnetGroupName("dbSubnetGroupName")
  * .deletionProtection(false)
  * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
@@ -188,6 +189,17 @@ public class CfnDBClusterPropsDsl {
      */
     public fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String) {
         cdkBuilder.dbInstanceParameterGroupName(dbInstanceParameterGroupName)
+    }
+
+    /**
+     * @param dbPort The port number on which the DB instances in the DB cluster accept connections.
+     *   If not specified, the default port used is `8182`.
+     *
+     * Note: `Port` property will soon be deprecated from this resource. Please update existing
+     * templates to rename it with new property `DBPort` having same functionalities.
+     */
+    public fun dbPort(dbPort: Number) {
+        cdkBuilder.dbPort(dbPort)
     }
 
     /**

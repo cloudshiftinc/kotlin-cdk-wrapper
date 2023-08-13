@@ -18,16 +18,18 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudtrail.CfnTrail
 
 /**
- * The Amazon S3 buckets, AWS Lambda functions, or Amazon DynamoDB tables that you specify in event
- * selectors in your AWS CloudFormation template for your trail to log data events.
+ * The Amazon S3 buckets, AWS Lambda functions, or Amazon DynamoDB tables that you specify in your
+ * event selectors for your trail to log data events.
  *
  * Data events provide information about the resource operations performed on or within a resource
  * itself. These are also known as data plane operations. You can specify up to 250 data resources
- * for a trail. Currently, advanced event selectors for data events are not supported in AWS
- * CloudFormation templates.
+ * for a trail.
  *
  * The total number of allowed data resources is 250. This number can be distributed between 1 and 5
- * event selectors, but the total cannot exceed 250 across all selectors.
+ * event selectors, but the total cannot exceed 250 across all selectors for the trail.
+ *
+ * If you are using advanced event selectors, the maximum total number of values for all conditions,
+ * across all advanced event selectors for the trail, is 500.
  *
  * The following example demonstrates how logging works when you configure logging of all data
  * events for an S3 bucket named `bucket-1` . In this example, the CloudTrail user specified an
@@ -77,9 +79,35 @@ public class CfnTrailDataResourcePropertyDsl {
     /**
      * @param type The resource type in which you want to log data events. You can specify the
      *   following *basic* event selector resource types:
-     * * `AWS::S3::Object`
-     * * `AWS::Lambda::Function`
      * * `AWS::DynamoDB::Table`
+     * * `AWS::Lambda::Function`
+     * * `AWS::S3::Object`
+     *
+     * The following resource types are also available through *advanced* event selectors. Basic
+     * event selector resource types are valid in advanced event selectors, but advanced event
+     * selector resource types are not valid in basic event selectors. For more information, see
+     * [AdvancedFieldSelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html)
+     * .
+     * * `AWS::CloudTrail::Channel`
+     * * `AWS::CodeWhisperer::Profile`
+     * * `AWS::Cognito::IdentityPool`
+     * * `AWS::DynamoDB::Stream`
+     * * `AWS::EC2::Snapshot`
+     * * `AWS::EMRWAL::Workspace`
+     * * `AWS::FinSpace::Environment`
+     * * `AWS::Glue::Table`
+     * * `AWS::GuardDuty::Detector`
+     * * `AWS::KendraRanking::ExecutionPlan`
+     * * `AWS::ManagedBlockchain::Network`
+     * * `AWS::ManagedBlockchain::Node`
+     * * `AWS::MedicalImaging::Datastore`
+     * * `AWS::SageMaker::ExperimentTrialComponent`
+     * * `AWS::SageMaker::FeatureGroup`
+     * * `AWS::S3::AccessPoint`
+     * * `AWS::S3ObjectLambda::AccessPoint`
+     * * `AWS::S3Outposts::Object`
+     * * `AWS::SSMMessages::ControlChannel`
+     * * `AWS::VerifiedPermissions::PolicyStore`
      */
     public fun type(type: String) {
         cdkBuilder.type(type)

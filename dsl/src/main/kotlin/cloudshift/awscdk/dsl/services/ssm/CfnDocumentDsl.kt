@@ -34,32 +34,11 @@ import software.constructs.Construct
  *
  * Example:
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import software.amazon.awscdk.services.ssm.*;
- * Object content;
- * CfnDocument cfnDocument = CfnDocument.Builder.create(this, "MyCfnDocument")
- * .content(content)
- * // the properties below are optional
- * .attachments(List.of(AttachmentsSourceProperty.builder()
- * .key("key")
- * .name("name")
- * .values(List.of("values"))
- * .build()))
- * .documentFormat("documentFormat")
- * .documentType("documentType")
- * .name("name")
- * .requires(List.of(DocumentRequiresProperty.builder()
- * .name("name")
- * .version("version")
- * .build()))
- * .tags(List.of(CfnTag.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .targetType("targetType")
- * .updateMethod("updateMethod")
- * .versionName("versionName")
+ * Application application;
+ * CfnDocument document;
+ * SourcedConfiguration.Builder.create(this, "MySourcedConfiguration")
+ * .application(application)
+ * .location(ConfigurationSource.fromCfnDocument(document))
  * .build();
  * ```
  *

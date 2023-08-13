@@ -18,7 +18,7 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.datasync.CfnLocationNFS
 
 /**
- * A list of Amazon Resource Names (ARNs) of agents to use for a Network File System (NFS) location.
+ * The AWS DataSync agents that are connecting to a Network File System (NFS) location.
  *
  * Example:
  * ```
@@ -39,12 +39,18 @@ public class CfnLocationNFSOnPremConfigPropertyDsl {
 
     private val _agentArns: MutableList<String> = mutableListOf()
 
-    /** @param agentArns ARNs of the agents to use for an NFS location. */
+    /**
+     * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
+     *   location.
+     */
     public fun agentArns(vararg agentArns: String) {
         _agentArns.addAll(listOf(*agentArns))
     }
 
-    /** @param agentArns ARNs of the agents to use for an NFS location. */
+    /**
+     * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
+     *   location.
+     */
     public fun agentArns(agentArns: Collection<String>) {
         _agentArns.addAll(agentArns)
     }
