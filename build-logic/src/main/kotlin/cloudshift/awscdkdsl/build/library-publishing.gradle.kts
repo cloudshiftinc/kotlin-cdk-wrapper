@@ -53,7 +53,7 @@ val publishingPredicate = provider {
     val ci = System.getenv()["CI"] == "true"
      when {
         !ci -> false
-        else -> false
+        else -> true
     }
 }
 
