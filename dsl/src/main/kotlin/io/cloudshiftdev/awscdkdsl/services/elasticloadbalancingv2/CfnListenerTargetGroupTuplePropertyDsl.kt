@@ -1,0 +1,52 @@
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION"
+)
+
+package io.cloudshiftdev.awscdkdsl.services.elasticloadbalancingv2
+
+import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
+import kotlin.Number
+import kotlin.String
+import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
+
+/**
+ * Information about how traffic will be distributed between multiple target groups in a forward
+ * rule.
+ *
+ * Example:
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * TargetGroupTupleProperty targetGroupTupleProperty = TargetGroupTupleProperty.builder()
+ * .targetGroupArn("targetGroupArn")
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.html)
+ */
+@CdkDslMarker
+public class CfnListenerTargetGroupTuplePropertyDsl {
+    private val cdkBuilder: CfnListener.TargetGroupTupleProperty.Builder =
+        CfnListener.TargetGroupTupleProperty.builder()
+
+    /** @param targetGroupArn The Amazon Resource Name (ARN) of the target group. */
+    public fun targetGroupArn(targetGroupArn: String) {
+        cdkBuilder.targetGroupArn(targetGroupArn)
+    }
+
+    /** @param weight The weight. The range is 0 to 999. */
+    public fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+    }
+
+    public fun build(): CfnListener.TargetGroupTupleProperty = cdkBuilder.build()
+}

@@ -51,7 +51,7 @@ signing {
 
 val publishingPredicate = provider {
     val ci = System.getenv()["CI"] == "true"
-     when {
+    when {
         !ci -> false
         else -> true
     }
@@ -64,4 +64,3 @@ tasks.withType<PublishToMavenRepository>().configureEach {
 tasks.named("publishToSonatype") {
     onlyIf("Publishing only allowed on CI") { publishingPredicate.get() }
 }
-

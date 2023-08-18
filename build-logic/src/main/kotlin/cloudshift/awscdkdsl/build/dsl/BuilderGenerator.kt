@@ -4,7 +4,6 @@ import cloudshift.awscdkdsl.build.dsl.model.BuilderProperty
 import cloudshift.awscdkdsl.build.dsl.model.CdkBuilder
 import cloudshift.awscdkdsl.build.dsl.model.CdkDsl
 import com.squareup.kotlinpoet.COLLECTION
-import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
@@ -86,8 +85,7 @@ internal object BuilderGenerator {
     }
 
     private fun handleObjectProperty(prop: BuilderProperty, builderClassBuilder: TypeSpec.Builder) {
-        val mapBuilderClass = ClassName("cloudshift.awscdk.common", "MapBuilder")
-        val lambdaTypeName = LambdaTypeName.get(mapBuilderClass, returnType = UNIT)
+        val lambdaTypeName = LambdaTypeName.get(CdkDsl.MapBuilderClass, returnType = UNIT)
 
         // DSL setter
         builderClassBuilder.addFunction(
@@ -95,7 +93,7 @@ internal object BuilderGenerator {
                 addParameter(
                     ParameterSpec.builder(prop.name, lambdaTypeName).defaultValue("{}").build()
                 )
-                addStatement("val builder = %T()", mapBuilderClass)
+                addStatement("val builder = %T()", CdkDsl.MapBuilderClass)
                 addStatement("builder.apply(%N)", prop.name)
                 addStatement("cdkBuilder.%N(builder.map)", prop.name)
             }
