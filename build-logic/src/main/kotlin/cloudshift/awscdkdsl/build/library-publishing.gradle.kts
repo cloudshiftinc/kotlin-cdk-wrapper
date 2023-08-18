@@ -51,19 +51,8 @@ signing {
 
 val publishingPredicate = provider {
     val ci = System.getenv()["CI"] == "true"
-    System.getenv()
-        .filter {
-            it.key.startsWith("GITHUB_") && (it.key.contains("REF") || it.key.contains("EVENT"))
-        }
-        .forEach { println("Publishing env: ${it.key} -> ${it.value}") }
-
-    val eventName = System.getenv()["GITHUB_EVENT_NAME"]
-    val refName = System.getenv()["GITHUB_REF_NAME"]
-
-    when {
+     when {
         !ci -> false
-        eventName == "push" && refName == "main" -> true
-        // TODO - handle PR merges
         else -> false
     }
 }
@@ -76,15 +65,3 @@ tasks.named("publishToSonatype") {
     onlyIf("Publishing only allowed on CI") { publishingPredicate.get() }
 }
 
-/*
- For a push on main:
-
- Publishing env: GITHUB_REF_TYPE -> branch
- Publishing env: GITHUB_REF -> refs/heads/main
- Publishing env: GITHUB_BASE_REF ->
- Publishing env: GITHUB_EVENT_NAME -> push
- Publishing env: GITHUB_WORKFLOW_REF -> cloudshiftinc/awscdk-dsl-kotlin/.github/workflows/build.yaml@refs/heads/main
- Publishing env: GITHUB_REF_NAME -> main
- Publishing env: GITHUB_HEAD_REF ->
-
-  */
