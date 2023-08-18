@@ -75,6 +75,7 @@ tasks {
 
     val ktfmtFormat by
         registering(JavaExec::class) {
+            onlyIf { System.getenv()["CI"] == null }
             val ktfmtArgs =
                 mutableListOf(
                     "--kotlinlang-style",
