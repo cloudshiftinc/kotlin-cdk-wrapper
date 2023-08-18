@@ -1,13 +1,13 @@
-package cloudshift.awscdk.dsl.extensions.core
+package io.cloudshiftdev.awscdkdsl.ext.core
 
-import cloudshift.awscdk.dsl.awscdk
-import cloudshift.awscdk.dsl.extensions.iam.action
-import cloudshift.awscdk.dsl.extensions.iam.allow
-import cloudshift.awscdk.dsl.extensions.iam.anyResource
-import cloudshift.awscdk.dsl.extensions.iam.policyStatements
-import cloudshift.awscdk.dsl.extensions.iam.resource
-import cloudshift.awscdk.dsl.services.iam.iam
-import cloudshift.awscdk.dsl.services.s3.s3
+import io.cloudshiftdev.awscdkdsl.awscdk
+import io.cloudshiftdev.awscdkdsl.ext.iam.action
+import io.cloudshiftdev.awscdkdsl.ext.iam.allow
+import io.cloudshiftdev.awscdkdsl.ext.iam.anyResource
+import io.cloudshiftdev.awscdkdsl.ext.iam.policyStatements
+import io.cloudshiftdev.awscdkdsl.ext.iam.resource
+import io.cloudshiftdev.awscdkdsl.services.iam.iam
+import io.cloudshiftdev.awscdkdsl.services.s3.s3
 import io.kotest.core.spec.style.FunSpec
 import software.constructs.Construct
 

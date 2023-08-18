@@ -1,6 +1,6 @@
-package cloudshift.awscdk.dsl.services.s3
+package io.cloudshiftdev.awscdkdsl.services.s3
 
-import cloudshift.awscdk.dsl.awscdk
+import io.cloudshiftdev.awscdkdsl.awscdk
 import io.kotest.core.spec.style.FunSpec
 import software.amazon.awscdk.services.s3.HttpMethods
 
