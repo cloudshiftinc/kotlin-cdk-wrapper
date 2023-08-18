@@ -1,6 +1,5 @@
 ![Maven Central](https://img.shields.io/maven-central/v/io.cloudshiftdev.awscdk-dsl-kotlin/dsl)
 ![GitHub](https://img.shields.io/github/license/cloudshiftinc/awscdk-dsl-kotlin)
-[![ktlint](https://img.shields.io/badge/ktlint%20code--style-%E2%9D%A4-FF4081)](https://pinterest.github.io/ktlint/)
 # Kotlin DSL for AWS CDK
 
 Use the AWS CDK with all the power of a native Kotlin DSL!
@@ -25,11 +24,11 @@ This provides the basis for powerful Kotlin extensions to the DSL to supercharge
 
 For the core DSL add this dependency to your Gradle script:
 
-`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl:0.3.14")`
+`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl:0.3.15")`
 
 Alternately, to use the extensions (recommended), use this dependency instead:
 
-`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl-extensions:0.3.14")`
+`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl-extensions:0.3.15")`
 
 # Extensions
 
