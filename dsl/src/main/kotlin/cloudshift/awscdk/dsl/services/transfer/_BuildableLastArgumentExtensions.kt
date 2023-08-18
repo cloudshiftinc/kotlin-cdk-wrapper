@@ -16,7 +16,7 @@ import software.amazon.awscdk.services.transfer.CfnConnector
 import software.amazon.awscdk.services.transfer.CfnServer
 import software.amazon.awscdk.services.transfer.CfnUser
 
-/** Configuration for an SFTP connector. */
+/** A structure that contains the parameters for an SFTP connector object. */
 public inline fun CfnConnector.setSftpConfig(
     block: CfnConnectorSftpConfigPropertyDsl.() -> Unit = {}
 ) {

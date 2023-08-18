@@ -95,7 +95,7 @@ public object sqs {
     }
 
     /**
-     * Schema for SQS QueueInlinePolicy.
+     * The `AWS::SQS::QueueInlinePolicy` resource associates one Amazon SQS queue with one policy.
      *
      * Example:
      * ```

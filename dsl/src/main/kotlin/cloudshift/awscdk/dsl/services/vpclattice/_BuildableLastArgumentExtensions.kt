@@ -41,14 +41,14 @@ public inline fun CfnRule.setMatch(block: CfnRuleMatchPropertyDsl.() -> Unit = {
     return setMatch(builder.build())
 }
 
-/**  */
+/** The DNS information of the service. */
 public inline fun CfnService.setDnsEntry(block: CfnServiceDnsEntryPropertyDsl.() -> Unit = {}) {
     val builder = CfnServiceDnsEntryPropertyDsl()
     builder.apply(block)
     return setDnsEntry(builder.build())
 }
 
-/**  */
+/** The DNS information of the service. */
 public inline fun CfnServiceNetworkServiceAssociation.setDnsEntry(
     block: CfnServiceNetworkServiceAssociationDnsEntryPropertyDsl.() -> Unit = {}
 ) {

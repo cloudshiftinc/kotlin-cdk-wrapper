@@ -16,7 +16,9 @@ import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
- * Details for your use of the Bot Control managed rule group, used in `ManagedRuleGroupConfig` .
+ * Details for your use of the Bot Control managed rule group, `AWSManagedRulesBotControlRuleSet` .
+ *
+ * This configuration is used in `ManagedRuleGroupConfig` .
  *
  * Example:
  * ```
@@ -41,7 +43,7 @@ public class CfnWebACLAWSManagedRulesBotControlRuleSetPropertyDsl {
      *   level is the least expensive. The targeted level includes all common level rules and adds
      *   rules with more advanced inspection criteria. For details, see
      *   [AWS WAF Bot Control rule group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html)
-     *   .
+     *   in the *AWS WAF Developer Guide* .
      */
     public fun inspectionLevel(inspectionLevel: String) {
         cdkBuilder.inspectionLevel(inspectionLevel)

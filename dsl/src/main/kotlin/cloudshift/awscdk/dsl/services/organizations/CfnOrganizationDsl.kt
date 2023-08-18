@@ -36,7 +36,7 @@ import software.constructs.Construct
  *   removing those accounts. You can remove a member account only if it has all the information
  *   that's required to operate as a standalone AWS account. For more information about how to
  *   provide that information and then remove the account, see
- *   [Leaving an organization as a member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_leave-as-member)
+ *   [Leave an organization from your member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_leave-as-member.html)
  *   in the *AWS Organizations User Guide* .
  * * If you closed a member account before you remove it from the organization, it enters a
  *   'suspended' state for a period of time and you can't remove the account from the organization
@@ -44,7 +44,7 @@ import software.constructs.Construct
  *   organization until all member accounts are completely closed.
  *
  * For more information, see
- * [Deleting the organization by removing the management account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_delete.html)
+ * [Deleting an organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_delete.html)
  * in the *AWS Organizations User Guide* .
  *
  * Example:
@@ -81,7 +81,7 @@ public class CfnOrganizationDsl(
      * * `CONSOLIDATED_BILLING` All member accounts have their bills consolidated to and paid by the
      *   management account. For more information, see
      *   [Consolidated billing](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#feature-set-cb-only)
-     *   in the *AWS Organizations User Guide.*
+     *   in the *AWS Organizations User Guide* .
      *
      * The consolidated billing feature subset isn't available for organizations in the AWS GovCloud
      * (US) Region.

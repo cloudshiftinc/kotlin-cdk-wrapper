@@ -261,12 +261,20 @@ public class CfnEndpointRedshiftSettingsPropertyDsl {
         cdkBuilder.loadTimeout(loadTimeout)
     }
 
-    /** @param mapBooleanAsBoolean the value to be set. */
+    /**
+     * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean. By
+     *   default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both the
+     *   source and target endpoints for it to take effect.
+     */
     public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
     }
 
-    /** @param mapBooleanAsBoolean the value to be set. */
+    /**
+     * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean. By
+     *   default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both the
+     *   source and target endpoints for it to take effect.
+     */
     public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
     }

@@ -25,6 +25,7 @@ import software.amazon.awscdk.services.opensearchservice.DomainProps
 import software.amazon.awscdk.services.opensearchservice.EbsOptions
 import software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions
 import software.amazon.awscdk.services.opensearchservice.LoggingOptions
+import software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty
 import software.amazon.awscdk.services.opensearchservice.WindowStartTime
 import software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig
 import software.constructs.Construct
@@ -44,12 +45,11 @@ public object opensearchservice {
      * .build())
      * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
      * .masterUserName("master-user")
+     * .samlAuthenticationEnabled(true)
+     * .samlAuthenticationOptions(SAMLOptionsProperty.builder()
+     * .idpEntityId("entity-id")
+     * .idpMetadataContent("metadata-content-with-quotes-escaped")
      * .build())
-     * .logging(LoggingOptions.builder()
-     * .auditLogEnabled(true)
-     * .slowSearchLogEnabled(true)
-     * .appLogEnabled(true)
-     * .slowIndexLogEnabled(true)
      * .build())
      * .build();
      * ```
@@ -1076,12 +1076,11 @@ public object opensearchservice {
      * .build())
      * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
      * .masterUserName("master-user")
+     * .samlAuthenticationEnabled(true)
+     * .samlAuthenticationOptions(SAMLOptionsProperty.builder()
+     * .idpEntityId("entity-id")
+     * .idpMetadataContent("metadata-content-with-quotes-escaped")
      * .build())
-     * .logging(LoggingOptions.builder()
-     * .auditLogEnabled(true)
-     * .slowSearchLogEnabled(true)
-     * .appLogEnabled(true)
-     * .slowIndexLogEnabled(true)
      * .build())
      * .build();
      * ```
@@ -1121,6 +1120,37 @@ public object opensearchservice {
      */
     public inline fun loggingOptions(block: LoggingOptionsDsl.() -> Unit = {}): LoggingOptions {
         val builder = LoggingOptionsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Container for information about the SAML configuration for OpenSearch Dashboards.
+     *
+     * Example:
+     * ```
+     * Domain domain = Domain.Builder.create(this, "Domain")
+     * .version(EngineVersion.OPENSEARCH_1_0)
+     * .enforceHttps(true)
+     * .nodeToNodeEncryption(true)
+     * .encryptionAtRest(EncryptionAtRestOptions.builder()
+     * .enabled(true)
+     * .build())
+     * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
+     * .masterUserName("master-user")
+     * .samlAuthenticationEnabled(true)
+     * .samlAuthenticationOptions(SAMLOptionsProperty.builder()
+     * .idpEntityId("entity-id")
+     * .idpMetadataContent("metadata-content-with-quotes-escaped")
+     * .build())
+     * .build())
+     * .build();
+     * ```
+     */
+    public inline fun sAMLOptionsProperty(
+        block: SAMLOptionsPropertyDsl.() -> Unit = {}
+    ): SAMLOptionsProperty {
+        val builder = SAMLOptionsPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

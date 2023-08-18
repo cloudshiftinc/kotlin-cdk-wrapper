@@ -68,18 +68,22 @@ public class CfnServiceNetworkServiceAssociationDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
+     * The DNS information of the service.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-dnsentry)
      *
-     * @param dnsEntry
+     * @param dnsEntry The DNS information of the service.
      */
     public fun dnsEntry(dnsEntry: IResolvable) {
         cdkBuilder.dnsEntry(dnsEntry)
     }
 
     /**
+     * The DNS information of the service.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-dnsentry)
      *
-     * @param dnsEntry
+     * @param dnsEntry The DNS information of the service.
      */
     public fun dnsEntry(dnsEntry: CfnServiceNetworkServiceAssociation.DnsEntryProperty) {
         cdkBuilder.dnsEntry(dnsEntry)

@@ -35,11 +35,11 @@ import software.amazon.awscdk.services.kms.CfnKeyProps
  * import software.amazon.awscdk.services.kms.*;
  * Object keyPolicy;
  * CfnKeyProps cfnKeyProps = CfnKeyProps.builder()
- * .keyPolicy(keyPolicy)
- * // the properties below are optional
+ * .bypassPolicyLockoutSafetyCheck(false)
  * .description("description")
  * .enabled(false)
  * .enableKeyRotation(false)
+ * .keyPolicy(keyPolicy)
  * .keySpec("keySpec")
  * .keyUsage("keyUsage")
  * .multiRegion(false)
@@ -59,6 +59,22 @@ public class CfnKeyPropsDsl {
     private val cdkBuilder: CfnKeyProps.Builder = CfnKeyProps.builder()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * @param bypassPolicyLockoutSafetyCheck Skips ("bypasses") the key policy lockout safety check.
+     *   The default value is false.
+     */
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
+        cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck)
+    }
+
+    /**
+     * @param bypassPolicyLockoutSafetyCheck Skips ("bypasses") the key policy lockout safety check.
+     *   The default value is false.
+     */
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
+        cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck)
+    }
 
     /**
      * @param description A description of the KMS key. Use a description that helps you to

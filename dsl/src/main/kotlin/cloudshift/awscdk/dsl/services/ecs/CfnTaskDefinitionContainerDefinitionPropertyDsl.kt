@@ -1581,14 +1581,17 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
      *   [Docker Remote API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/)
      *   and the `--sysctl` option to
      *   [docker run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     *   .
+     *   . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
+     *   lived connections.
      *
      * We don't recommended that you specify network-related `systemControls` parameters for
      * multiple containers in a single task that also uses either the `awsvpc` or `host` network
      * modes. For tasks that use the `awsvpc` network mode, the container that's started last
      * determines which `systemControls` parameters take effect. For tasks that use the `host`
      * network mode, it changes the container instance's namespaced kernel parameters as well as the
-     * containers.
+     * containers. &gt; This parameter is not supported for Windows containers. &gt; This parameter
+     * is only supported for tasks that are hosted on AWS Fargate if the tasks are using platform
+     * version `1.4.0` or later (Linux). This isn't supported for Windows containers on Fargate.
      */
     public fun systemControls(vararg systemControls: Any) {
         _systemControls.addAll(listOf(*systemControls))
@@ -1602,14 +1605,17 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
      *   [Docker Remote API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/)
      *   and the `--sysctl` option to
      *   [docker run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     *   .
+     *   . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
+     *   lived connections.
      *
      * We don't recommended that you specify network-related `systemControls` parameters for
      * multiple containers in a single task that also uses either the `awsvpc` or `host` network
      * modes. For tasks that use the `awsvpc` network mode, the container that's started last
      * determines which `systemControls` parameters take effect. For tasks that use the `host`
      * network mode, it changes the container instance's namespaced kernel parameters as well as the
-     * containers.
+     * containers. &gt; This parameter is not supported for Windows containers. &gt; This parameter
+     * is only supported for tasks that are hosted on AWS Fargate if the tasks are using platform
+     * version `1.4.0` or later (Linux). This isn't supported for Windows containers on Fargate.
      */
     public fun systemControls(systemControls: Collection<Any>) {
         _systemControls.addAll(systemControls)
@@ -1623,14 +1629,17 @@ public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
      *   [Docker Remote API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/)
      *   and the `--sysctl` option to
      *   [docker run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     *   .
+     *   . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
+     *   lived connections.
      *
      * We don't recommended that you specify network-related `systemControls` parameters for
      * multiple containers in a single task that also uses either the `awsvpc` or `host` network
      * modes. For tasks that use the `awsvpc` network mode, the container that's started last
      * determines which `systemControls` parameters take effect. For tasks that use the `host`
      * network mode, it changes the container instance's namespaced kernel parameters as well as the
-     * containers.
+     * containers. &gt; This parameter is not supported for Windows containers. &gt; This parameter
+     * is only supported for tasks that are hosted on AWS Fargate if the tasks are using platform
+     * version `1.4.0` or later (Linux). This isn't supported for Windows containers on Fargate.
      */
     public fun systemControls(systemControls: IResolvable) {
         cdkBuilder.systemControls(systemControls)

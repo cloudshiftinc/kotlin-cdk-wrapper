@@ -120,11 +120,14 @@ public class CfnComputeEnvironmentComputeResourcesPropertyDsl {
      *   likely to be interrupted and have the lowest possible price. This allocation strategy is
      *   only available for Spot Instance compute resources.
      *
+     * We recommend that you use `SPOT_PRICE_CAPACITY_OPTIMIZED` rather than
+     * `SPOT_CAPACITY_OPTIMIZED` in most instances.
+     *
      * With `BEST_FIT_PROGRESSIVE` , `SPOT_CAPACITY_OPTIMIZED` , and `SPOT_PRICE_CAPACITY_OPTIMIZED`
-     * (recommended) allocation strategies using On-Demand or Spot Instances, and the `BEST_FIT`
-     * strategy using Spot Instances, AWS Batch might need to go above `maxvCpus` to meet your
-     * capacity requirements. In this event, AWS Batch never exceeds `maxvCpus` by more than a
-     * single instance.
+     * allocation strategies using On-Demand or Spot Instances, and the `BEST_FIT` strategy using
+     * Spot Instances, AWS Batch might need to go above `maxvCpus` to meet your capacity
+     * requirements. In this event, AWS Batch never exceeds `maxvCpus` by more than a single
+     * instance.
      */
     public fun allocationStrategy(allocationStrategy: String) {
         cdkBuilder.allocationStrategy(allocationStrategy)

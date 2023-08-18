@@ -72,12 +72,12 @@ public class CfnWebACLAWSManagedRulesATPRuleSetPropertyDsl {
     private val cdkBuilder: CfnWebACL.AWSManagedRulesATPRuleSetProperty.Builder =
         CfnWebACL.AWSManagedRulesATPRuleSetProperty.builder()
 
-    /** @param enableRegexInPath the value to be set. */
+    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
     public fun enableRegexInPath(enableRegexInPath: Boolean) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }
 
-    /** @param enableRegexInPath the value to be set. */
+    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
     public fun enableRegexInPath(enableRegexInPath: IResolvable) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }
@@ -110,14 +110,16 @@ public class CfnWebACLAWSManagedRulesATPRuleSetPropertyDsl {
 
     /**
      * @param responseInspection The criteria for inspecting responses to login requests, used by
-     *   the ATP rule group to track login failure rates. The ATP rule group evaluates the responses
-     *   that your protected resources send back to client login attempts, keeping count of
-     *   successful and failed attempts from each IP address and client session. Using this
-     *   information, the rule group labels and mitigates requests from client sessions and IP
-     *   addresses that submit too many failed login attempts in a short amount of time.
+     *   the ATP rule group to track login failure rates.
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.
+     *
+     * The ATP rule group evaluates the responses that your protected resources send back to client
+     * login attempts, keeping count of successful and failed attempts for each IP address and
+     * client session. Using this information, the rule group labels and mitigates requests from
+     * client sessions and IP addresses that have had too many failed login attempts in a short
+     * amount of time.
      */
     public fun responseInspection(responseInspection: IResolvable) {
         cdkBuilder.responseInspection(responseInspection)
@@ -125,14 +127,16 @@ public class CfnWebACLAWSManagedRulesATPRuleSetPropertyDsl {
 
     /**
      * @param responseInspection The criteria for inspecting responses to login requests, used by
-     *   the ATP rule group to track login failure rates. The ATP rule group evaluates the responses
-     *   that your protected resources send back to client login attempts, keeping count of
-     *   successful and failed attempts from each IP address and client session. Using this
-     *   information, the rule group labels and mitigates requests from client sessions and IP
-     *   addresses that submit too many failed login attempts in a short amount of time.
+     *   the ATP rule group to track login failure rates.
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.
+     *
+     * The ATP rule group evaluates the responses that your protected resources send back to client
+     * login attempts, keeping count of successful and failed attempts for each IP address and
+     * client session. Using this information, the rule group labels and mitigates requests from
+     * client sessions and IP addresses that have had too many failed login attempts in a short
+     * amount of time.
      */
     public fun responseInspection(responseInspection: CfnWebACL.ResponseInspectionProperty) {
         cdkBuilder.responseInspection(responseInspection)

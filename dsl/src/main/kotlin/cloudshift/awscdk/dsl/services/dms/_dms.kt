@@ -1505,7 +1505,7 @@ public object dms {
     }
 
     /**
-     * Configuration parameters for provisioning a AWS DMS Serverless replication.
+     * Configuration parameters for provisioning an AWS DMS Serverless replication.
      *
      * Example:
      * ```

@@ -20,7 +20,7 @@ import software.amazon.awscdk.services.sns.CfnTopicInlinePolicy
 import software.constructs.Construct
 
 /**
- * Schema for AWS::SNS::TopicInlinePolicy.
+ * The `AWS::SNS::TopicInlinePolicy` resource associates one Amazon SNS topic with one policy.
  *
  * Example:
  * ```
@@ -46,12 +46,12 @@ public class CfnTopicInlinePolicyDsl(
         CfnTopicInlinePolicy.Builder.create(scope, id)
 
     /**
-     * A policy document that contains permissions to add to the specified SNS topics.
+     * A policy document that contains permissions to add to the specified Amazon SNS topic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html#cfn-sns-topicinlinepolicy-policydocument)
      *
-     * @param policyDocument A policy document that contains permissions to add to the specified SNS
-     *   topics.
+     * @param policyDocument A policy document that contains permissions to add to the specified
+     *   Amazon SNS topic.
      */
     public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -60,12 +60,12 @@ public class CfnTopicInlinePolicyDsl(
     }
 
     /**
-     * A policy document that contains permissions to add to the specified SNS topics.
+     * A policy document that contains permissions to add to the specified Amazon SNS topic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html#cfn-sns-topicinlinepolicy-policydocument)
      *
-     * @param policyDocument A policy document that contains permissions to add to the specified SNS
-     *   topics.
+     * @param policyDocument A policy document that contains permissions to add to the specified
+     *   Amazon SNS topic.
      */
     public fun policyDocument(policyDocument: Any) {
         cdkBuilder.policyDocument(policyDocument)

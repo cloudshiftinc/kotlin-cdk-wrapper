@@ -60,7 +60,7 @@ public class CfnBillingGroupPropsDsl {
 
     /**
      * @param accountGrouping The set of accounts that will be under the billing group. The set of
-     *   accounts resemble the linked accounts in a consolidated family.
+     *   accounts resemble the linked accounts in a consolidated billing family.
      */
     public fun accountGrouping(accountGrouping: IResolvable) {
         cdkBuilder.accountGrouping(accountGrouping)
@@ -68,7 +68,7 @@ public class CfnBillingGroupPropsDsl {
 
     /**
      * @param accountGrouping The set of accounts that will be under the billing group. The set of
-     *   accounts resemble the linked accounts in a consolidated family.
+     *   accounts resemble the linked accounts in a consolidated billing family.
      */
     public fun accountGrouping(accountGrouping: CfnBillingGroup.AccountGroupingProperty) {
         cdkBuilder.accountGrouping(accountGrouping)
@@ -109,12 +109,16 @@ public class CfnBillingGroupPropsDsl {
         cdkBuilder.primaryAccountId(primaryAccountId)
     }
 
-    /** @param tags the value to be set. */
+    /**
+     * @param tags A map that contains tag keys and tag values that are attached to a billing group.
+     */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags the value to be set. */
+    /**
+     * @param tags A map that contains tag keys and tag values that are attached to a billing group.
+     */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

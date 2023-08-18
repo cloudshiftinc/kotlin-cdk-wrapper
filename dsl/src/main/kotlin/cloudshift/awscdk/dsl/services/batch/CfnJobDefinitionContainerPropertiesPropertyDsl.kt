@@ -571,12 +571,18 @@ public class CfnJobDefinitionContainerPropertiesPropertyDsl {
         cdkBuilder.resourceRequirements(resourceRequirements)
     }
 
-    /** @param runtimePlatform the value to be set. */
+    /**
+     * @param runtimePlatform An object that represents the compute environment architecture for AWS
+     *   Batch jobs on Fargate.
+     */
     public fun runtimePlatform(runtimePlatform: IResolvable) {
         cdkBuilder.runtimePlatform(runtimePlatform)
     }
 
-    /** @param runtimePlatform the value to be set. */
+    /**
+     * @param runtimePlatform An object that represents the compute environment architecture for AWS
+     *   Batch jobs on Fargate.
+     */
     public fun runtimePlatform(runtimePlatform: CfnJobDefinition.RuntimePlatformProperty) {
         cdkBuilder.runtimePlatform(runtimePlatform)
     }

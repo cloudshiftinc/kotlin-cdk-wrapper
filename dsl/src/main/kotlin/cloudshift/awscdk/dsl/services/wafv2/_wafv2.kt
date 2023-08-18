@@ -5792,6 +5792,8 @@ public object wafv2 {
     }
 
     /**
+     * Not currently supported by AWS CloudFormation .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -5914,8 +5916,10 @@ public object wafv2 {
     }
 
     /**
-     * Details for your use of the Bot Control managed rule group, used in `ManagedRuleGroupConfig`
-     * .
+     * Details for your use of the Bot Control managed rule group,
+     * `AWSManagedRulesBotControlRuleSet` .
+     *
+     * This configuration is used in `ManagedRuleGroupConfig` .
      *
      * Example:
      * ```
@@ -6695,8 +6699,10 @@ public object wafv2 {
     }
 
     /**
-     * The identifier of the username or password field, used in the `ManagedRuleGroupConfig`
-     * settings.
+     * The identifier of a field in the web request payload that contains customer data.
+     *
+     * This data type is used to specify fields in the `RequestInspection` configurations, for the
+     * managed rule group configuration `AWSManagedRulesATPRuleSet` .
      *
      * Example:
      * ```
@@ -7186,8 +7192,13 @@ public object wafv2 {
      * Additional information that's used by a managed rule group. Many managed rule groups don't
      * require this.
      *
-     * Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection
-     * level that you want the Bot Control rule group to use.
+     * The rule groups used for intelligent threat mitigation require additional configuration:
+     * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account takeover
+     *   prevention managed rule group. The configuration includes the sign-in page of your
+     *   application and the locations in the login request payload of data such as the username and
+     *   password.
+     * * Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection
+     *   level that you want the Bot Control rule group to use.
      *
      * Example:
      * ```
@@ -7302,10 +7313,16 @@ public object wafv2 {
     /**
      * A rule statement used to run the rules that are defined in a managed rule group.
      *
-     * To use this, provide the vendor name and the name of the rule group in this statement.
+     * To use this, provide the vendor name and the name of the rule group in this statement. You
+     * can retrieve the required names through the API call `ListAvailableManagedRuleGroups` .
      *
      * You cannot nest a `ManagedRuleGroupStatement` , for example for use inside a `NotStatement`
      * or `OrStatement` . It can only be referenced as a top-level statement within a rule.
+     *
+     * You are charged additional fees when you use the AWS WAF Bot Control managed rule group
+     * `AWSManagedRulesBotControlRuleSet` or the AWS WAF Fraud Control account takeover prevention
+     * (ATP) managed rule group `AWSManagedRulesATPRuleSet` . For more information, see
+     * [AWS WAF Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
      * Example:
      * ```
@@ -7941,6 +7958,8 @@ public object wafv2 {
     }
 
     /**
+     * Not currently supported by AWS CloudFormation .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.
@@ -8109,22 +8128,22 @@ public object wafv2 {
 
     /**
      * The criteria for inspecting responses to login requests, used by the ATP rule group to track
-     * login failure rates.
-     *
-     * The ATP rule group evaluates the responses that your protected resources send back to client
-     * login attempts, keeping count of successful and failed attempts from each IP address and
-     * client session. Using this information, the rule group labels and mitigates requests from
-     * client sessions and IP addresses that submit too many failed login attempts in a short amount
-     * of time.
+     * login success and failure rates.
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.
      *
+     * The rule group evaluates the responses that your protected resources send back to client
+     * login attempts, keeping count of successful and failed attempts from each IP address and
+     * client session. Using this information, the rule group labels and mitigates requests from
+     * client sessions and IP addresses with too much suspicious activity in a short amount of time.
+     *
      * This is part of the `AWSManagedRulesATPRuleSet` configuration in `ManagedRuleGroupConfig` .
      *
-     * Enable login response inspection by configuring exactly one component of the response to
-     * inspect. You can't configure more than one. If you don't configure any of the response
-     * inspection options, response inspection is disabled.
+     * Enable response inspection by configuring exactly one component of the response to inspect,
+     * for example, `Header` or `StatusCode` . You can't configure more than one component for
+     * inspection. If you don't configure any of the response inspection options, response
+     * inspection is disabled.
      *
      * Example:
      * ```
@@ -8164,8 +8183,9 @@ public object wafv2 {
     }
 
     /**
-     * Configures inspection of the response status code. This is part of the `ResponseInspection`
-     * configuration for `AWSManagedRulesATPRuleSet` .
+     * Configures inspection of the response status code for success and failure indicators.
+     *
+     * This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.

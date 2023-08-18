@@ -52,7 +52,7 @@ public class CfnRunGroupPropsDsl {
         cdkBuilder.maxDuration(maxDuration)
     }
 
-    /** @param maxGpus the value to be set. */
+    /** @param maxGpus The maximum GPUs that can be used by a run group. */
     public fun maxGpus(maxGpus: Number) {
         cdkBuilder.maxGpus(maxGpus)
     }

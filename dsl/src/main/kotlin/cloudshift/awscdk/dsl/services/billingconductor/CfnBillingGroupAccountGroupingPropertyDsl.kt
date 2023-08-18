@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.billingconductor.CfnBillingGroup
 /**
  * The set of accounts that will be under the billing group.
  *
- * The set of accounts resemble the linked accounts in a consolidated family.
+ * The set of accounts resemble the linked accounts in a consolidated billing family.
  *
  * Example:
  * ```
@@ -45,12 +45,18 @@ public class CfnBillingGroupAccountGroupingPropertyDsl {
 
     private val _linkedAccountIds: MutableList<String> = mutableListOf()
 
-    /** @param autoAssociate the value to be set. */
+    /**
+     * @param autoAssociate Specifies if this billing group will automatically associate newly added
+     *   AWS accounts that join your consolidated billing family.
+     */
     public fun autoAssociate(autoAssociate: Boolean) {
         cdkBuilder.autoAssociate(autoAssociate)
     }
 
-    /** @param autoAssociate the value to be set. */
+    /**
+     * @param autoAssociate Specifies if this billing group will automatically associate newly added
+     *   AWS accounts that join your consolidated billing family.
+     */
     public fun autoAssociate(autoAssociate: IResolvable) {
         cdkBuilder.autoAssociate(autoAssociate)
     }

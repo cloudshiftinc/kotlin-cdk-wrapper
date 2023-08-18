@@ -17,20 +17,20 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
  * The criteria for inspecting responses to login requests, used by the ATP rule group to track
- * login failure rates.
- *
- * The ATP rule group evaluates the responses that your protected resources send back to client
- * login attempts, keeping count of successful and failed attempts from each IP address and client
- * session. Using this information, the rule group labels and mitigates requests from client
- * sessions and IP addresses that submit too many failed login attempts in a short amount of time.
+ * login success and failure rates.
  *
  * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
  *
+ * The rule group evaluates the responses that your protected resources send back to client login
+ * attempts, keeping count of successful and failed attempts from each IP address and client
+ * session. Using this information, the rule group labels and mitigates requests from client
+ * sessions and IP addresses with too much suspicious activity in a short amount of time.
+ *
  * This is part of the `AWSManagedRulesATPRuleSet` configuration in `ManagedRuleGroupConfig` .
  *
- * Enable login response inspection by configuring exactly one component of the response to inspect.
- * You can't configure more than one. If you don't configure any of the response inspection options,
- * response inspection is disabled.
+ * Enable response inspection by configuring exactly one component of the response to inspect, for
+ * example, `Header` or `StatusCode` . You can't configure more than one component for inspection.
+ * If you don't configure any of the response inspection options, response inspection is disabled.
  *
  * Example:
  * ```
@@ -67,53 +67,65 @@ public class CfnWebACLResponseInspectionPropertyDsl {
         CfnWebACL.ResponseInspectionProperty.builder()
 
     /**
-     * @param bodyContains Configures inspection of the response body. AWS WAF can inspect the first
-     *   65,536 bytes (64 KB) of the response body.
+     * @param bodyContains Configures inspection of the response body for success and failure
+     *   indicators. AWS WAF can inspect the first 65,536 bytes (64 KB) of the response body.
      */
     public fun bodyContains(bodyContains: IResolvable) {
         cdkBuilder.bodyContains(bodyContains)
     }
 
     /**
-     * @param bodyContains Configures inspection of the response body. AWS WAF can inspect the first
-     *   65,536 bytes (64 KB) of the response body.
+     * @param bodyContains Configures inspection of the response body for success and failure
+     *   indicators. AWS WAF can inspect the first 65,536 bytes (64 KB) of the response body.
      */
     public fun bodyContains(bodyContains: CfnWebACL.ResponseInspectionBodyContainsProperty) {
         cdkBuilder.bodyContains(bodyContains)
     }
 
-    /** @param header Configures inspection of the response header. */
+    /**
+     * @param header Configures inspection of the response header for success and failure
+     *   indicators.
+     */
     public fun `header`(`header`: IResolvable) {
         cdkBuilder.`header`(`header`)
     }
 
-    /** @param header Configures inspection of the response header. */
+    /**
+     * @param header Configures inspection of the response header for success and failure
+     *   indicators.
+     */
     public fun `header`(`header`: CfnWebACL.ResponseInspectionHeaderProperty) {
         cdkBuilder.`header`(`header`)
     }
 
     /**
-     * @param json Configures inspection of the response JSON. AWS WAF can inspect the first 65,536
-     *   bytes (64 KB) of the response JSON.
+     * @param json Configures inspection of the response JSON for success and failure indicators.
+     *   AWS WAF can inspect the first 65,536 bytes (64 KB) of the response JSON.
      */
     public fun json(json: IResolvable) {
         cdkBuilder.json(json)
     }
 
     /**
-     * @param json Configures inspection of the response JSON. AWS WAF can inspect the first 65,536
-     *   bytes (64 KB) of the response JSON.
+     * @param json Configures inspection of the response JSON for success and failure indicators.
+     *   AWS WAF can inspect the first 65,536 bytes (64 KB) of the response JSON.
      */
     public fun json(json: CfnWebACL.ResponseInspectionJsonProperty) {
         cdkBuilder.json(json)
     }
 
-    /** @param statusCode Configures inspection of the response status code. */
+    /**
+     * @param statusCode Configures inspection of the response status code for success and failure
+     *   indicators.
+     */
     public fun statusCode(statusCode: IResolvable) {
         cdkBuilder.statusCode(statusCode)
     }
 
-    /** @param statusCode Configures inspection of the response status code. */
+    /**
+     * @param statusCode Configures inspection of the response status code for success and failure
+     *   indicators.
+     */
     public fun statusCode(statusCode: CfnWebACL.ResponseInspectionStatusCodeProperty) {
         cdkBuilder.statusCode(statusCode)
     }

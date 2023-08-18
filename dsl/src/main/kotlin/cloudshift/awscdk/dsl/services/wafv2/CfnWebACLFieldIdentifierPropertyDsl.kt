@@ -16,7 +16,10 @@ import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
- * The identifier of the username or password field, used in the `ManagedRuleGroupConfig` settings.
+ * The identifier of a field in the web request payload that contains customer data.
+ *
+ * This data type is used to specify fields in the `RequestInspection` configurations, for the
+ * managed rule group configuration `AWSManagedRulesATPRuleSet` .
  *
  * Example:
  * ```
@@ -36,14 +39,17 @@ public class CfnWebACLFieldIdentifierPropertyDsl {
         CfnWebACL.FieldIdentifierProperty.builder()
 
     /**
-     * @param identifier The name of the username or password field, used in the
-     *   `ManagedRuleGroupConfig` settings. When the `PayloadType` is `JSON` , the identifier must
-     *   be in JSON pointer syntax. For example `/form/username` . For information about the JSON
-     *   Pointer syntax, see the Internet Engineering Task Force (IETF) documentation
+     * @param identifier The name of the field. When the `PayloadType` in the request inspection is
+     *   `JSON` , this identifier must be in JSON pointer syntax. For example `/form/username` . For
+     *   information about the JSON Pointer syntax, see the Internet Engineering Task Force (IETF)
+     *   documentation
      *   [JavaScript Object Notation (JSON) Pointer](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901)
      *   .
      *
      * When the `PayloadType` is `FORM_ENCODED` , use the HTML form names. For example, `username` .
+     *
+     * For more information, see the descriptions for each field type in the request inspection
+     * properties.
      */
     public fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)

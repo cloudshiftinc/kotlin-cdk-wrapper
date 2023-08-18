@@ -84,8 +84,7 @@ public object batch {
      *   property or set it to the *AWSServiceRoleForBatch* service-linked role.
      * * Set the
      *   [AllocationStrategy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-allocationstrategy)
-     *   property to `BEST_FIT_PROGRESSIVE` , `SPOT_CAPACITY_OPTIMIZED` or
-     *   `SPOT_PRICE_CAPACITY_OPTIMIZED` .
+     *   property to `BEST_FIT_PROGRESSIVE` or `SPOT_CAPACITY_OPTIMIZED` .
      * * Set the
      *   [ReplaceComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-replacecomputeenvironment)
      *   property to `false` .
@@ -1134,6 +1133,12 @@ public object batch {
     }
 
     /**
+     * Specifies the configuration of a Kubernetes `secret` volume.
+     *
+     * For more information, see
+     * [secret](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#secret)
+     * in the *Kubernetes documentation* .
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

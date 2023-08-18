@@ -326,9 +326,9 @@ public class CfnTopicDsl(
      * Tracing mode of an Amazon SNS topic.
      *
      * By default `TracingConfig` is set to `PassThrough` , and the topic passes through the tracing
-     * header it receives from an SNS publisher to its subscriptions. If set to `Active` , SNS will
-     * vend X-Ray segment data to topic owner account if the sampled flag in the tracing header is
-     * true. Only supported on standard topics.
+     * header it receives from an Amazon SNS publisher to its subscriptions. If set to `Active` ,
+     * Amazon SNS will vend X-Ray segment data to topic owner account if the sampled flag in the
+     * tracing header is true. Only supported on standard topics.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-tracingconfig)
      *

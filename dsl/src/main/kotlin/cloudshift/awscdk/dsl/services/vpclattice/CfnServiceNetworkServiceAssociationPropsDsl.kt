@@ -54,12 +54,12 @@ public class CfnServiceNetworkServiceAssociationPropsDsl {
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    /** @param dnsEntry the value to be set. */
+    /** @param dnsEntry The DNS information of the service. */
     public fun dnsEntry(dnsEntry: IResolvable) {
         cdkBuilder.dnsEntry(dnsEntry)
     }
 
-    /** @param dnsEntry the value to be set. */
+    /** @param dnsEntry The DNS information of the service. */
     public fun dnsEntry(dnsEntry: CfnServiceNetworkServiceAssociation.DnsEntryProperty) {
         cdkBuilder.dnsEntry(dnsEntry)
     }

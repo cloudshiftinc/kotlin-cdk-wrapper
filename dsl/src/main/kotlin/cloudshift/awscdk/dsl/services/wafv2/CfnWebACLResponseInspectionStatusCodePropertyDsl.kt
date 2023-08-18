@@ -19,8 +19,9 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
- * Configures inspection of the response status code. This is part of the `ResponseInspection`
- * configuration for `AWSManagedRulesATPRuleSet` .
+ * Configures inspection of the response status code for success and failure indicators.
+ *
+ * This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
  *
  * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
  *
@@ -48,9 +49,9 @@ public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
     private val _successCodes: MutableList<Number> = mutableListOf()
 
     /**
-     * @param failureCodes Status codes in the response that indicate a failed login attempt. To be
-     *   counted as a failed login, the response status code must match one of these. Each code must
-     *   be unique among the success and failure status codes.
+     * @param failureCodes Status codes in the response that indicate a failed login or account
+     *   creation attempt. To be counted as a failure, the response status code must match one of
+     *   these. Each code must be unique among the success and failure status codes.
      *
      * JSON example: `"FailureCodes": [ 400, 404 ]`
      */
@@ -59,9 +60,9 @@ public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
     }
 
     /**
-     * @param failureCodes Status codes in the response that indicate a failed login attempt. To be
-     *   counted as a failed login, the response status code must match one of these. Each code must
-     *   be unique among the success and failure status codes.
+     * @param failureCodes Status codes in the response that indicate a failed login or account
+     *   creation attempt. To be counted as a failure, the response status code must match one of
+     *   these. Each code must be unique among the success and failure status codes.
      *
      * JSON example: `"FailureCodes": [ 400, 404 ]`
      */
@@ -70,9 +71,9 @@ public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
     }
 
     /**
-     * @param failureCodes Status codes in the response that indicate a failed login attempt. To be
-     *   counted as a failed login, the response status code must match one of these. Each code must
-     *   be unique among the success and failure status codes.
+     * @param failureCodes Status codes in the response that indicate a failed login or account
+     *   creation attempt. To be counted as a failure, the response status code must match one of
+     *   these. Each code must be unique among the success and failure status codes.
      *
      * JSON example: `"FailureCodes": [ 400, 404 ]`
      */
@@ -81,9 +82,9 @@ public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
     }
 
     /**
-     * @param successCodes Status codes in the response that indicate a successful login attempt. To
-     *   be counted as a successful login, the response status code must match one of these. Each
-     *   code must be unique among the success and failure status codes.
+     * @param successCodes Status codes in the response that indicate a successful login or account
+     *   creation attempt. To be counted as a success, the response status code must match one of
+     *   these. Each code must be unique among the success and failure status codes.
      *
      * JSON example: `"SuccessCodes": [ 200, 201 ]`
      */
@@ -92,9 +93,9 @@ public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
     }
 
     /**
-     * @param successCodes Status codes in the response that indicate a successful login attempt. To
-     *   be counted as a successful login, the response status code must match one of these. Each
-     *   code must be unique among the success and failure status codes.
+     * @param successCodes Status codes in the response that indicate a successful login or account
+     *   creation attempt. To be counted as a success, the response status code must match one of
+     *   these. Each code must be unique among the success and failure status codes.
      *
      * JSON example: `"SuccessCodes": [ 200, 201 ]`
      */
@@ -103,9 +104,9 @@ public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
     }
 
     /**
-     * @param successCodes Status codes in the response that indicate a successful login attempt. To
-     *   be counted as a successful login, the response status code must match one of these. Each
-     *   code must be unique among the success and failure status codes.
+     * @param successCodes Status codes in the response that indicate a successful login or account
+     *   creation attempt. To be counted as a success, the response status code must match one of
+     *   these. Each code must be unique among the success and failure status codes.
      *
      * JSON example: `"SuccessCodes": [ 200, 201 ]`
      */

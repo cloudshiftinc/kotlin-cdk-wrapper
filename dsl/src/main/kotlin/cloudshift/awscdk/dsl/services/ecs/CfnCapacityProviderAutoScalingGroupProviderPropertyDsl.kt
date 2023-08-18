@@ -55,7 +55,7 @@ public class CfnCapacityProviderAutoScalingGroupProviderPropertyDsl {
     }
 
     /**
-     * @param managedScaling he managed scaling settings for the Auto Scaling group capacity
+     * @param managedScaling The managed scaling settings for the Auto Scaling group capacity
      *   provider.
      */
     public fun managedScaling(managedScaling: IResolvable) {
@@ -63,7 +63,7 @@ public class CfnCapacityProviderAutoScalingGroupProviderPropertyDsl {
     }
 
     /**
-     * @param managedScaling he managed scaling settings for the Auto Scaling group capacity
+     * @param managedScaling The managed scaling settings for the Auto Scaling group capacity
      *   provider.
      */
     public fun managedScaling(managedScaling: CfnCapacityProvider.ManagedScalingProperty) {

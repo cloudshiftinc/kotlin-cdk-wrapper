@@ -111,12 +111,12 @@ public class CfnConnectorPropsDsl {
         cdkBuilder.loggingRole(loggingRole)
     }
 
-    /** @param sftpConfig Configuration for an SFTP connector. */
+    /** @param sftpConfig A structure that contains the parameters for an SFTP connector object. */
     public fun sftpConfig(sftpConfig: IResolvable) {
         cdkBuilder.sftpConfig(sftpConfig)
     }
 
-    /** @param sftpConfig Configuration for an SFTP connector. */
+    /** @param sftpConfig A structure that contains the parameters for an SFTP connector object. */
     public fun sftpConfig(sftpConfig: CfnConnector.SftpConfigProperty) {
         cdkBuilder.sftpConfig(sftpConfig)
     }

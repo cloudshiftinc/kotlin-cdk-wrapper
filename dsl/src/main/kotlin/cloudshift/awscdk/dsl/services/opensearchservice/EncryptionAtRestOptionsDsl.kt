@@ -34,12 +34,11 @@ import software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions
  * .build())
  * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
  * .masterUserName("master-user")
+ * .samlAuthenticationEnabled(true)
+ * .samlAuthenticationOptions(SAMLOptionsProperty.builder()
+ * .idpEntityId("entity-id")
+ * .idpMetadataContent("metadata-content-with-quotes-escaped")
  * .build())
- * .logging(LoggingOptions.builder()
- * .auditLogEnabled(true)
- * .slowSearchLogEnabled(true)
- * .appLogEnabled(true)
- * .slowIndexLogEnabled(true)
  * .build())
  * .build();
  * ```

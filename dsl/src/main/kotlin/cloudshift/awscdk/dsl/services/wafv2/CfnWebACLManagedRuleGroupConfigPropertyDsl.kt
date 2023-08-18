@@ -20,8 +20,12 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * Additional information that's used by a managed rule group. Many managed rule groups don't
  * require this.
  *
- * Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection level
- * that you want the Bot Control rule group to use.
+ * The rule groups used for intelligent threat mitigation require additional configuration:
+ * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account takeover
+ *   prevention managed rule group. The configuration includes the sign-in page of your application
+ *   and the locations in the login request payload of data such as the username and password.
+ * * Use the `AWSManagedRulesBotControlRuleSet` configuration object to configure the protection
+ *   level that you want the Bot Control rule group to use.
  *
  * Example:
  * ```
@@ -130,12 +134,12 @@ public class CfnWebACLManagedRuleGroupConfigPropertyDsl {
     private val cdkBuilder: CfnWebACL.ManagedRuleGroupConfigProperty.Builder =
         CfnWebACL.ManagedRuleGroupConfigProperty.builder()
 
-    /** @param awsManagedRulesAcfpRuleSet the value to be set. */
+    /** @param awsManagedRulesAcfpRuleSet Not currently supported by AWS CloudFormation . */
     public fun awsManagedRulesAcfpRuleSet(awsManagedRulesAcfpRuleSet: IResolvable) {
         cdkBuilder.awsManagedRulesAcfpRuleSet(awsManagedRulesAcfpRuleSet)
     }
 
-    /** @param awsManagedRulesAcfpRuleSet the value to be set. */
+    /** @param awsManagedRulesAcfpRuleSet Not currently supported by AWS CloudFormation . */
     public fun awsManagedRulesAcfpRuleSet(
         awsManagedRulesAcfpRuleSet: CfnWebACL.AWSManagedRulesACFPRuleSetProperty
     ) {
@@ -221,40 +225,40 @@ public class CfnWebACLManagedRuleGroupConfigPropertyDsl {
     }
 
     /**
-     * @param passwordField Instead of this setting, provide your configuration under
-     *   `AWSManagedRulesATPRuleSet` `RequestInspection` .
+     * @param passwordField Instead of this setting, provide your configuration under the request
+     *   inspection configuration for `AWSManagedRulesATPRuleSet` .
      */
     public fun passwordField(passwordField: IResolvable) {
         cdkBuilder.passwordField(passwordField)
     }
 
     /**
-     * @param passwordField Instead of this setting, provide your configuration under
-     *   `AWSManagedRulesATPRuleSet` `RequestInspection` .
+     * @param passwordField Instead of this setting, provide your configuration under the request
+     *   inspection configuration for `AWSManagedRulesATPRuleSet` .
      */
     public fun passwordField(passwordField: CfnWebACL.FieldIdentifierProperty) {
         cdkBuilder.passwordField(passwordField)
     }
 
     /**
-     * @param payloadType Instead of this setting, provide your configuration under
-     *   `AWSManagedRulesATPRuleSet` `RequestInspection` .
+     * @param payloadType Instead of this setting, provide your configuration under the request
+     *   inspection configuration for `AWSManagedRulesATPRuleSet` .
      */
     public fun payloadType(payloadType: String) {
         cdkBuilder.payloadType(payloadType)
     }
 
     /**
-     * @param usernameField Instead of this setting, provide your configuration under
-     *   `AWSManagedRulesATPRuleSet` `RequestInspection` .
+     * @param usernameField Instead of this setting, provide your configuration under the request
+     *   inspection configuration for `AWSManagedRulesATPRuleSet` .
      */
     public fun usernameField(usernameField: IResolvable) {
         cdkBuilder.usernameField(usernameField)
     }
 
     /**
-     * @param usernameField Instead of this setting, provide your configuration under
-     *   `AWSManagedRulesATPRuleSet` `RequestInspection` .
+     * @param usernameField Instead of this setting, provide your configuration under the request
+     *   inspection configuration for `AWSManagedRulesATPRuleSet` .
      */
     public fun usernameField(usernameField: CfnWebACL.FieldIdentifierProperty) {
         cdkBuilder.usernameField(usernameField)

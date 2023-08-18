@@ -12,9 +12,12 @@
 package cloudshift.awscdk.dsl.services.opensearchservice
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
+import kotlin.Unit
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions
+import software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty
 
 /**
  * Specifies options for fine-grained access control.
@@ -30,12 +33,11 @@ import software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions
  * .build())
  * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
  * .masterUserName("master-user")
+ * .samlAuthenticationEnabled(true)
+ * .samlAuthenticationOptions(SAMLOptionsProperty.builder()
+ * .idpEntityId("entity-id")
+ * .idpMetadataContent("metadata-content-with-quotes-escaped")
  * .build())
- * .logging(LoggingOptions.builder()
- * .auditLogEnabled(true)
- * .slowSearchLogEnabled(true)
- * .appLogEnabled(true)
- * .slowIndexLogEnabled(true)
  * .build())
  * .build();
  * ```
@@ -67,6 +69,31 @@ public class AdvancedSecurityOptionsDsl {
      */
     public fun masterUserPassword(masterUserPassword: SecretValue) {
         cdkBuilder.masterUserPassword(masterUserPassword)
+    }
+
+    /** @param samlAuthenticationEnabled True to enable SAML authentication for a domain. */
+    public fun samlAuthenticationEnabled(samlAuthenticationEnabled: Boolean) {
+        cdkBuilder.samlAuthenticationEnabled(samlAuthenticationEnabled)
+    }
+
+    /**
+     * @param samlAuthenticationOptions Container for information about the SAML configuration for
+     *   OpenSearch Dashboards. If set, `samlAuthenticationEnabled` will be enabled.
+     */
+    public fun samlAuthenticationOptions(
+        samlAuthenticationOptions: SAMLOptionsPropertyDsl.() -> Unit = {}
+    ) {
+        val builder = SAMLOptionsPropertyDsl()
+        builder.apply(samlAuthenticationOptions)
+        cdkBuilder.samlAuthenticationOptions(builder.build())
+    }
+
+    /**
+     * @param samlAuthenticationOptions Container for information about the SAML configuration for
+     *   OpenSearch Dashboards. If set, `samlAuthenticationEnabled` will be enabled.
+     */
+    public fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty) {
+        cdkBuilder.samlAuthenticationOptions(samlAuthenticationOptions)
     }
 
     public fun build(): AdvancedSecurityOptions = cdkBuilder.build()

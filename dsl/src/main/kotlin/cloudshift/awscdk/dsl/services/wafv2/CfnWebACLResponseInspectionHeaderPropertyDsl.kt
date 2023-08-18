@@ -49,7 +49,7 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param failureValues Values in the response header with the specified name that indicate a
-     *   failed login attempt. To be counted as a failed login, the value must be an exact match,
+     *   failed login attempt. To be counted as a failure, the value must be an exact match,
      *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"FailureValues": [ "LoginFailed", "Failed login" ]`
@@ -60,7 +60,7 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param failureValues Values in the response header with the specified name that indicate a
-     *   failed login attempt. To be counted as a failed login, the value must be an exact match,
+     *   failed login attempt. To be counted as a failure, the value must be an exact match,
      *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"FailureValues": [ "LoginFailed", "Failed login" ]`
@@ -71,7 +71,7 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param name The name of the header to match against. The name must be an exact match,
-     *   including case. JSON example: `"Name": [ "LoginResult" ]`
+     *   including case. JSON example: `"Name": [ "RequestResult" ]`
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
@@ -79,8 +79,8 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param successValues Values in the response header with the specified name that indicate a
-     *   successful login attempt. To be counted as a successful login, the value must be an exact
-     *   match, including case. Each value must be unique among the success and failure values.
+     *   successful login attempt. To be counted as a success, the value must be an exact match,
+     *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"SuccessValues": [ "LoginPassed", "Successful login" ]`
      */
@@ -90,8 +90,8 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param successValues Values in the response header with the specified name that indicate a
-     *   successful login attempt. To be counted as a successful login, the value must be an exact
-     *   match, including case. Each value must be unique among the success and failure values.
+     *   successful login attempt. To be counted as a success, the value must be an exact match,
+     *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"SuccessValues": [ "LoginPassed", "Successful login" ]`
      */

@@ -52,10 +52,10 @@ public class CfnWebACLResponseInspectionBodyContainsPropertyDsl {
      * @param failureStrings Strings in the body of the response that indicate a failed login
      *   attempt.
      *
-     * To be counted as a failed login, the string can be anywhere in the body and must be an exact
+     * To be counted as a failure, the string can be anywhere in the body and must be an exact
      * match, including case. Each string must be unique among the success and failure strings.
      *
-     * JSON example: `"FailureStrings": [ "Login failed" ]`
+     * JSON example: `"FailureStrings": [ "Request failed" ]`
      */
     public fun failureStrings(vararg failureStrings: String) {
         _failureStrings.addAll(listOf(*failureStrings))
@@ -65,10 +65,10 @@ public class CfnWebACLResponseInspectionBodyContainsPropertyDsl {
      * @param failureStrings Strings in the body of the response that indicate a failed login
      *   attempt.
      *
-     * To be counted as a failed login, the string can be anywhere in the body and must be an exact
+     * To be counted as a failure, the string can be anywhere in the body and must be an exact
      * match, including case. Each string must be unique among the success and failure strings.
      *
-     * JSON example: `"FailureStrings": [ "Login failed" ]`
+     * JSON example: `"FailureStrings": [ "Request failed" ]`
      */
     public fun failureStrings(failureStrings: Collection<String>) {
         _failureStrings.addAll(failureStrings)
@@ -76,11 +76,11 @@ public class CfnWebACLResponseInspectionBodyContainsPropertyDsl {
 
     /**
      * @param successStrings Strings in the body of the response that indicate a successful login
-     *   attempt. To be counted as a successful login, the string can be anywhere in the body and
-     *   must be an exact match, including case. Each string must be unique among the success and
-     *   failure strings.
+     *   attempt. To be counted as a success, the string can be anywhere in the body and must be an
+     *   exact match, including case. Each string must be unique among the success and failure
+     *   strings.
      *
-     * JSON example: `"SuccessStrings": [ "Login successful", "Welcome to our site!" ]`
+     * JSON example: `"SuccessStrings": [ "Login successful" ]`
      */
     public fun successStrings(vararg successStrings: String) {
         _successStrings.addAll(listOf(*successStrings))
@@ -88,11 +88,11 @@ public class CfnWebACLResponseInspectionBodyContainsPropertyDsl {
 
     /**
      * @param successStrings Strings in the body of the response that indicate a successful login
-     *   attempt. To be counted as a successful login, the string can be anywhere in the body and
-     *   must be an exact match, including case. Each string must be unique among the success and
-     *   failure strings.
+     *   attempt. To be counted as a success, the string can be anywhere in the body and must be an
+     *   exact match, including case. Each string must be unique among the success and failure
+     *   strings.
      *
-     * JSON example: `"SuccessStrings": [ "Login successful", "Welcome to our site!" ]`
+     * JSON example: `"SuccessStrings": [ "Login successful" ]`
      */
     public fun successStrings(successStrings: Collection<String>) {
         _successStrings.addAll(successStrings)

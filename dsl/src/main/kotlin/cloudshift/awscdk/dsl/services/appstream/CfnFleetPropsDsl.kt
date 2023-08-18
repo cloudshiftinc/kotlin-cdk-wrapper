@@ -249,7 +249,7 @@ public class CfnFleetPropsDsl {
      *   being disconnected. After this time elapses, the instance is terminated and replaced by a
      *   new instance.
      *
-     * Specify a value between 600 and 360000.
+     * Specify a value between 600 and 432000.
      */
     public fun maxUserDurationInSeconds(maxUserDurationInSeconds: Number) {
         cdkBuilder.maxUserDurationInSeconds(maxUserDurationInSeconds)

@@ -37,12 +37,12 @@ public class CfnPricingRuleTieringPropertyDsl {
     private val cdkBuilder: CfnPricingRule.TieringProperty.Builder =
         CfnPricingRule.TieringProperty.builder()
 
-    /** @param freeTier The possible customizable free tier configurations. */
+    /** @param freeTier The possible AWS Free Tier configurations. */
     public fun freeTier(freeTier: IResolvable) {
         cdkBuilder.freeTier(freeTier)
     }
 
-    /** @param freeTier The possible customizable free tier configurations. */
+    /** @param freeTier The possible AWS Free Tier configurations. */
     public fun freeTier(freeTier: CfnPricingRule.FreeTierProperty) {
         cdkBuilder.freeTier(freeTier)
     }

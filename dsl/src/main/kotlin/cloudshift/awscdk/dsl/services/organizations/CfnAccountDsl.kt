@@ -39,12 +39,12 @@ import software.constructs.Construct
  * * Check the CloudTrail log for the `CreateAccountResult` event. For information on using
  *   CloudTrail with AWS Organizations , see
  *   [Logging and monitoring in AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_security_incident-response.html#orgs_cloudtrail-integration)
- *   in the *AWS Organizations User Guide.*
+ *   in the *AWS Organizations User Guide* .
  *
  * The user who calls the API to create an account must have the `organizations:CreateAccount`
  * permission. If you enabled all features in the organization, AWS Organizations creates the
  * required service-linked role named `AWSServiceRoleForOrganizations` . For more information, see
- * [AWS Organizations and Service-Linked Roles](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs)
+ * [AWS Organizations and service-linked roles](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs)
  * in the *AWS Organizations User Guide* .
  *
  * If the request includes tags, then the requester must have the `organizations:TagResource`
@@ -57,8 +57,8 @@ import software.constructs.Construct
  * account from the organization's management account.
  *
  * For more information about creating accounts, see
- * [Creating an AWS account in Your Organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html)
- * in the *AWS Organizations User Guide.*
+ * [Creating a member account in your organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html)
+ * in the *AWS Organizations User Guide* .
  *
  * This operation can be called only from the organization's management account.
  *
@@ -85,14 +85,14 @@ import software.constructs.Construct
  * account. Both the update and the update roll-back will fail, so you must skip the account
  * resource update. To update parameters `AccountName` and `Email` , you must sign in to the AWS
  * Management Console as the AWS account root user. For more information, see
- * [Modifying the account name, email address, or password for the AWS account root user](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html)
+ * [Update the AWS account name, email address, or password for the root user](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html)
  * in the *AWS Account Management Reference Guide* .
  * * When you create an account in an organization using the AWS Organizations console, API, or AWS
  *   CLI commands, we don't automatically collect the information required for the account to
  *   operate as a standalone account. That includes collecting the payment method and signing the
  *   end user license agreement (EULA). If you must remove an account from your organization later,
- *   you can do so only after you provide the missing information. Follow the steps at
- *   [To leave an organization as a member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info)
+ *   you can do so only after you provide the missing information. For more information, see
+ *   [Considerations before removing an account from an organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_account-before-remove.html)
  *   in the *AWS Organizations User Guide* .
  * * When you create an account in an organization using AWS CloudFormation , you can't specify a
  *   value for the `CreateAccount` operation parameter `IamUserAccessToBilling` . The default value
@@ -117,7 +117,7 @@ import software.constructs.Construct
  *   [`CloseAccount`](https://docs.aws.amazon.com/organizations/latest/APIReference/API_CloseAccount.html)
  *   operation or from the AWS Organizations console in the organization's management account. For
  *   information on the requirements and process for closing an account, see
- *   [Closing an AWS account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html)
+ *   [Closing a member account in your organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html)
  *   in the *AWS Organizations User Guide* .
  *
  * Example:
@@ -239,11 +239,11 @@ public class CfnAccountDsl(
      *
      * For more information about how to use this role to access the member account, see the
      * following links:
-     * * [Accessing and Administering the Member Accounts in Your
-     *   Organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role)
+     * * [Creating the OrganizationAccountAccessRole in an invited member
+     *   account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role)
      *   in the *AWS Organizations User Guide*
      * * Steps 2 and 3 in
-     *   [Tutorial: Delegate Access Across AWS accounts Using IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
+     *   [IAM Tutorial: Delegate access across AWS accounts using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
      *   in the *IAM User Guide*
      *
      * The [regex pattern](https://docs.aws.amazon.com/http://wikipedia.org/wiki/regex) that is used

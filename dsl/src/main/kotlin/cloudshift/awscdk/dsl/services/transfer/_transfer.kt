@@ -298,7 +298,7 @@ public object transfer {
     }
 
     /**
-     * Configuration for an SFTP connector.
+     * A structure that contains the parameters for an SFTP connector object.
      *
      * Example:
      * ```

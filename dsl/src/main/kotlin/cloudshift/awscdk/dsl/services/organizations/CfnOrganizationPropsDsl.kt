@@ -49,7 +49,7 @@ public class CfnOrganizationPropsDsl {
      * * `CONSOLIDATED_BILLING` All member accounts have their bills consolidated to and paid by the
      *   management account. For more information, see
      *   [Consolidated billing](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#feature-set-cb-only)
-     *   in the *AWS Organizations User Guide.*
+     *   in the *AWS Organizations User Guide* .
      *
      * The consolidated billing feature subset isn't available for organizations in the AWS GovCloud
      * (US) Region.

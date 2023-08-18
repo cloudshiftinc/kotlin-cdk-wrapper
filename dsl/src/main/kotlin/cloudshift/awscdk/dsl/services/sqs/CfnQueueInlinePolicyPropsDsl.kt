@@ -40,8 +40,10 @@ public class CfnQueueInlinePolicyPropsDsl {
     private val cdkBuilder: CfnQueueInlinePolicyProps.Builder = CfnQueueInlinePolicyProps.builder()
 
     /**
-     * @param policyDocument A policy document that contains permissions to add to the specified SQS
-     *   queue.
+     * @param policyDocument A policy document that contains the permissions for the specified
+     *   Amazon SQS queues. For more information about Amazon SQS policies, see
+     *   [Using custom policies with the Amazon SQS access policy language](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-creating-custom-policies.html)
+     *   in the *Amazon SQS Developer Guide* .
      */
     public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -50,14 +52,22 @@ public class CfnQueueInlinePolicyPropsDsl {
     }
 
     /**
-     * @param policyDocument A policy document that contains permissions to add to the specified SQS
-     *   queue.
+     * @param policyDocument A policy document that contains the permissions for the specified
+     *   Amazon SQS queues. For more information about Amazon SQS policies, see
+     *   [Using custom policies with the Amazon SQS access policy language](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-creating-custom-policies.html)
+     *   in the *Amazon SQS Developer Guide* .
      */
     public fun policyDocument(policyDocument: Any) {
         cdkBuilder.policyDocument(policyDocument)
     }
 
-    /** @param queue The URL of the SQS queue. */
+    /**
+     * @param queue The URLs of the queues to which you want to add the policy. You can use the
+     *   `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
+     *   function to specify an
+     *   `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)`
+     *   resource.
+     */
     public fun queue(queue: String) {
         cdkBuilder.queue(queue)
     }

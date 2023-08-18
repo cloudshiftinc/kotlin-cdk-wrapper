@@ -150,22 +150,22 @@ public class CfnConnectorDsl(
     }
 
     /**
-     * Configuration for an SFTP connector.
+     * A structure that contains the parameters for an SFTP connector object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-sftpconfig)
      *
-     * @param sftpConfig Configuration for an SFTP connector.
+     * @param sftpConfig A structure that contains the parameters for an SFTP connector object.
      */
     public fun sftpConfig(sftpConfig: IResolvable) {
         cdkBuilder.sftpConfig(sftpConfig)
     }
 
     /**
-     * Configuration for an SFTP connector.
+     * A structure that contains the parameters for an SFTP connector object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-sftpconfig)
      *
-     * @param sftpConfig Configuration for an SFTP connector.
+     * @param sftpConfig A structure that contains the parameters for an SFTP connector object.
      */
     public fun sftpConfig(sftpConfig: CfnConnector.SftpConfigProperty) {
         cdkBuilder.sftpConfig(sftpConfig)

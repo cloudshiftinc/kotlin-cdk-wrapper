@@ -227,7 +227,7 @@ public class CfnMetricStreamPropsDsl {
      * statistics to stream for those metrics. The additional statistics that you can stream depend
      * on the stream's `OutputFormat` . If the `OutputFormat` is `json` , you can stream any
      * additional statistic that is supported by CloudWatch , listed in
-     * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html)
+     * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html)
      * . If the `OutputFormat` is `opentelemetry0` .7, you can stream percentile statistics *(p??)*
      * .
      */
@@ -245,7 +245,7 @@ public class CfnMetricStreamPropsDsl {
      * statistics to stream for those metrics. The additional statistics that you can stream depend
      * on the stream's `OutputFormat` . If the `OutputFormat` is `json` , you can stream any
      * additional statistic that is supported by CloudWatch , listed in
-     * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html)
+     * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html)
      * . If the `OutputFormat` is `opentelemetry0` .7, you can stream percentile statistics *(p??)*
      * .
      */
@@ -263,7 +263,7 @@ public class CfnMetricStreamPropsDsl {
      * statistics to stream for those metrics. The additional statistics that you can stream depend
      * on the stream's `OutputFormat` . If the `OutputFormat` is `json` , you can stream any
      * additional statistic that is supported by CloudWatch , listed in
-     * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html)
+     * [CloudWatch statistics definitions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html)
      * . If the `OutputFormat` is `opentelemetry0` .7, you can stream percentile statistics *(p??)*
      * .
      */

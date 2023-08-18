@@ -134,8 +134,6 @@ public class CfnAppBlockDsl(
     /**
      * The post setup script details of the app block.
      *
-     * This only applies to app blocks with PackagingType `APPSTREAM2` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-postsetupscriptdetails)
      *
      * @param postSetupScriptDetails The post setup script details of the app block.
@@ -146,8 +144,6 @@ public class CfnAppBlockDsl(
 
     /**
      * The post setup script details of the app block.
-     *
-     * This only applies to app blocks with PackagingType `APPSTREAM2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-postsetupscriptdetails)
      *

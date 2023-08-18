@@ -293,11 +293,11 @@ public object kms {
      * import software.amazon.awscdk.services.kms.*;
      * Object keyPolicy;
      * CfnKeyProps cfnKeyProps = CfnKeyProps.builder()
-     * .keyPolicy(keyPolicy)
-     * // the properties below are optional
+     * .bypassPolicyLockoutSafetyCheck(false)
      * .description("description")
      * .enabled(false)
      * .enableKeyRotation(false)
+     * .keyPolicy(keyPolicy)
      * .keySpec("keySpec")
      * .keyUsage("keyUsage")
      * .multiRegion(false)

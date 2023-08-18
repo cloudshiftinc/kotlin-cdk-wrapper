@@ -168,7 +168,7 @@ public inline fun CfnEndpoint.setSybaseSettings(
     return setSybaseSettings(builder.build())
 }
 
-/** Configuration parameters for provisioning a AWS DMS Serverless replication. */
+/** Configuration parameters for provisioning an AWS DMS Serverless replication. */
 public inline fun CfnReplicationConfig.setComputeConfig(
     block: CfnReplicationConfigComputeConfigPropertyDsl.() -> Unit = {}
 ) {

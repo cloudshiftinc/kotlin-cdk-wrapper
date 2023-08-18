@@ -51,7 +51,7 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param failureValues Values for the specified identifier in the response JSON that indicate a
-     *   failed login attempt. To be counted as a failed login, the value must be an exact match,
+     *   failed login attempt. To be counted as a failure, the value must be an exact match,
      *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"FailureValues": [ "False", "Failed" ]`
@@ -62,7 +62,7 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param failureValues Values for the specified identifier in the response JSON that indicate a
-     *   failed login attempt. To be counted as a failed login, the value must be an exact match,
+     *   failed login attempt. To be counted as a failure, the value must be an exact match,
      *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"FailureValues": [ "False", "Failed" ]`
@@ -83,8 +83,8 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param successValues Values for the specified identifier in the response JSON that indicate a
-     *   successful login attempt. To be counted as a successful login, the value must be an exact
-     *   match, including case. Each value must be unique among the success and failure values.
+     *   successful login attempt. To be counted as a success, the value must be an exact match,
+     *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"SuccessValues": [ "True", "Succeeded" ]`
      */
@@ -94,8 +94,8 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param successValues Values for the specified identifier in the response JSON that indicate a
-     *   successful login attempt. To be counted as a successful login, the value must be an exact
-     *   match, including case. Each value must be unique among the success and failure values.
+     *   successful login attempt. To be counted as a success, the value must be an exact match,
+     *   including case. Each value must be unique among the success and failure values.
      *
      * JSON example: `"SuccessValues": [ "True", "Succeeded" ]`
      */

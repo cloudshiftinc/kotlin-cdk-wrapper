@@ -103,18 +103,22 @@ public class CfnServiceDsl(
     }
 
     /**
+     * The DNS information of the service.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
      *
-     * @param dnsEntry
+     * @param dnsEntry The DNS information of the service.
      */
     public fun dnsEntry(dnsEntry: IResolvable) {
         cdkBuilder.dnsEntry(dnsEntry)
     }
 
     /**
+     * The DNS information of the service.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
      *
-     * @param dnsEntry
+     * @param dnsEntry The DNS information of the service.
      */
     public fun dnsEntry(dnsEntry: CfnService.DnsEntryProperty) {
         cdkBuilder.dnsEntry(dnsEntry)

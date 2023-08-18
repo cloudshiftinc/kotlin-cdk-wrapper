@@ -100,6 +100,36 @@ public class CfnKeyDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
+     * Skips ("bypasses") the key policy lockout safety check.
+     *
+     * The default value is false.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-bypasspolicylockoutsafetycheck)
+     *
+     * @param bypassPolicyLockoutSafetyCheck Skips ("bypasses") the key policy lockout safety check.
+     */
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
+        cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck)
+    }
+
+    /**
+     * Skips ("bypasses") the key policy lockout safety check.
+     *
+     * The default value is false.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-bypasspolicylockoutsafetycheck)
+     *
+     * @param bypassPolicyLockoutSafetyCheck Skips ("bypasses") the key policy lockout safety check.
+     */
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
+        cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck)
+    }
+
+    /**
      * A description of the KMS key.
      *
      * Use a description that helps you to distinguish this KMS key from others in the account, such

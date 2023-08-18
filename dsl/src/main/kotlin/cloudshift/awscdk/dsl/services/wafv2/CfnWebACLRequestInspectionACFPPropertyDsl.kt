@@ -20,6 +20,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
+ * Not currently supported by AWS CloudFormation .
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -58,67 +60,67 @@ public class CfnWebACLRequestInspectionACFPPropertyDsl {
 
     private val _phoneNumberFields: MutableList<Any> = mutableListOf()
 
-    /** @param addressFields the value to be set. */
+    /** @param addressFields Not currently supported by AWS CloudFormation . */
     public fun addressFields(vararg addressFields: Any) {
         _addressFields.addAll(listOf(*addressFields))
     }
 
-    /** @param addressFields the value to be set. */
+    /** @param addressFields Not currently supported by AWS CloudFormation . */
     public fun addressFields(addressFields: Collection<Any>) {
         _addressFields.addAll(addressFields)
     }
 
-    /** @param addressFields the value to be set. */
+    /** @param addressFields Not currently supported by AWS CloudFormation . */
     public fun addressFields(addressFields: IResolvable) {
         cdkBuilder.addressFields(addressFields)
     }
 
-    /** @param emailField the value to be set. */
+    /** @param emailField Not currently supported by AWS CloudFormation . */
     public fun emailField(emailField: IResolvable) {
         cdkBuilder.emailField(emailField)
     }
 
-    /** @param emailField the value to be set. */
+    /** @param emailField Not currently supported by AWS CloudFormation . */
     public fun emailField(emailField: CfnWebACL.FieldIdentifierProperty) {
         cdkBuilder.emailField(emailField)
     }
 
-    /** @param passwordField the value to be set. */
+    /** @param passwordField Not currently supported by AWS CloudFormation . */
     public fun passwordField(passwordField: IResolvable) {
         cdkBuilder.passwordField(passwordField)
     }
 
-    /** @param passwordField the value to be set. */
+    /** @param passwordField Not currently supported by AWS CloudFormation . */
     public fun passwordField(passwordField: CfnWebACL.FieldIdentifierProperty) {
         cdkBuilder.passwordField(passwordField)
     }
 
-    /** @param payloadType the value to be set. */
+    /** @param payloadType Not currently supported by AWS CloudFormation . */
     public fun payloadType(payloadType: String) {
         cdkBuilder.payloadType(payloadType)
     }
 
-    /** @param phoneNumberFields the value to be set. */
+    /** @param phoneNumberFields Not currently supported by AWS CloudFormation . */
     public fun phoneNumberFields(vararg phoneNumberFields: Any) {
         _phoneNumberFields.addAll(listOf(*phoneNumberFields))
     }
 
-    /** @param phoneNumberFields the value to be set. */
+    /** @param phoneNumberFields Not currently supported by AWS CloudFormation . */
     public fun phoneNumberFields(phoneNumberFields: Collection<Any>) {
         _phoneNumberFields.addAll(phoneNumberFields)
     }
 
-    /** @param phoneNumberFields the value to be set. */
+    /** @param phoneNumberFields Not currently supported by AWS CloudFormation . */
     public fun phoneNumberFields(phoneNumberFields: IResolvable) {
         cdkBuilder.phoneNumberFields(phoneNumberFields)
     }
 
-    /** @param usernameField the value to be set. */
+    /** @param usernameField Not currently supported by AWS CloudFormation . */
     public fun usernameField(usernameField: IResolvable) {
         cdkBuilder.usernameField(usernameField)
     }
 
-    /** @param usernameField the value to be set. */
+    /** @param usernameField Not currently supported by AWS CloudFormation . */
     public fun usernameField(usernameField: CfnWebACL.FieldIdentifierProperty) {
         cdkBuilder.usernameField(usernameField)
     }

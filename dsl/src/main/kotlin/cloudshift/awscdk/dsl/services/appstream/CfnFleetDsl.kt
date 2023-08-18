@@ -340,7 +340,7 @@ public class CfnFleetDsl(
      * reached, they are prompted to save any open documents before being disconnected. After this
      * time elapses, the instance is terminated and replaced by a new instance.
      *
-     * Specify a value between 600 and 360000.
+     * Specify a value between 600 and 432000.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-maxuserdurationinseconds)
      *

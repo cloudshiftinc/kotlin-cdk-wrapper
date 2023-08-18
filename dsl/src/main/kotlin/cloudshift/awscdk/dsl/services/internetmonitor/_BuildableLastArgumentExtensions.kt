@@ -23,7 +23,10 @@ public inline fun CfnMonitor.setHealthEventsConfig(
     return setHealthEventsConfig(builder.build())
 }
 
-/**  */
+/**
+ * Publish internet measurements for a monitor for all city-networks (up to the 500,000 service
+ * limit) to another location, such as an Amazon S3 bucket.
+ */
 public inline fun CfnMonitor.setInternetMeasurementsLogDelivery(
     block: CfnMonitorInternetMeasurementsLogDeliveryPropertyDsl.() -> Unit = {}
 ) {

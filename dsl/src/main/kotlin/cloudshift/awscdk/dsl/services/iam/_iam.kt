@@ -2388,13 +2388,12 @@ public object iam {
      *
      * Example:
      * ```
-     * IChainable definition;
-     * User user = new User(this, "MyUser");
-     * StateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
-     * .definition(definition)
-     * .build();
-     * //give user permission to send task success to the state machine
-     * stateMachine.grant(user, "states:SendTaskSuccess");
+     * User user = User.Builder.create(this,
+     * "MyUser").password(SecretValue.plainText("1234")).build();
+     * Group group = new Group(this, "MyGroup");
+     * Policy policy = new Policy(this, "MyPolicy");
+     * policy.attachToUser(user);
+     * group.attachInlinePolicy(policy);
      * ```
      */
     public inline fun user(

@@ -65,7 +65,7 @@ public class CfnBillingGroupDsl(
     /**
      * The set of accounts that will be under the billing group.
      *
-     * The set of accounts resemble the linked accounts in a consolidated family.
+     * The set of accounts resemble the linked accounts in a consolidated billing family.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html#cfn-billingconductor-billinggroup-accountgrouping)
      *
@@ -78,7 +78,7 @@ public class CfnBillingGroupDsl(
     /**
      * The set of accounts that will be under the billing group.
      *
-     * The set of accounts resemble the linked accounts in a consolidated family.
+     * The set of accounts resemble the linked accounts in a consolidated billing family.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html#cfn-billingconductor-billinggroup-accountgrouping)
      *
@@ -150,18 +150,22 @@ public class CfnBillingGroupDsl(
     }
 
     /**
+     * A map that contains tag keys and tag values that are attached to a billing group.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html#cfn-billingconductor-billinggroup-tags)
      *
-     * @param tags
+     * @param tags A map that contains tag keys and tag values that are attached to a billing group.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
+     * A map that contains tag keys and tag values that are attached to a billing group.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html#cfn-billingconductor-billinggroup-tags)
      *
-     * @param tags
+     * @param tags A map that contains tag keys and tag values that are attached to a billing group.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

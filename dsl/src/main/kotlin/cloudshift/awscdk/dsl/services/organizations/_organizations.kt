@@ -44,13 +44,13 @@ public object organizations {
      * * Check the CloudTrail log for the `CreateAccountResult` event. For information on using
      *   CloudTrail with AWS Organizations , see
      *   [Logging and monitoring in AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_security_incident-response.html#orgs_cloudtrail-integration)
-     *   in the *AWS Organizations User Guide.*
+     *   in the *AWS Organizations User Guide* .
      *
      * The user who calls the API to create an account must have the `organizations:CreateAccount`
      * permission. If you enabled all features in the organization, AWS Organizations creates the
      * required service-linked role named `AWSServiceRoleForOrganizations` . For more information,
      * see
-     * [AWS Organizations and Service-Linked Roles](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs)
+     * [AWS Organizations and service-linked roles](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs)
      * in the *AWS Organizations User Guide* .
      *
      * If the request includes tags, then the requester must have the `organizations:TagResource`
@@ -63,8 +63,8 @@ public object organizations {
      * new account from the organization's management account.
      *
      * For more information about creating accounts, see
-     * [Creating an AWS account in Your Organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html)
-     * in the *AWS Organizations User Guide.*
+     * [Creating a member account in your organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html)
+     * in the *AWS Organizations User Guide* .
      *
      * This operation can be called only from the organization's management account.
      *
@@ -91,14 +91,15 @@ public object organizations {
      * account. Both the update and the update roll-back will fail, so you must skip the account
      * resource update. To update parameters `AccountName` and `Email` , you must sign in to the AWS
      * Management Console as the AWS account root user. For more information, see
-     * [Modifying the account name, email address, or password for the AWS account root user](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html)
+     * [Update the AWS account name, email address, or password for the root user](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html)
      * in the *AWS Account Management Reference Guide* .
      * * When you create an account in an organization using the AWS Organizations console, API, or
      *   AWS CLI commands, we don't automatically collect the information required for the account
      *   to operate as a standalone account. That includes collecting the payment method and signing
      *   the end user license agreement (EULA). If you must remove an account from your organization
-     *   later, you can do so only after you provide the missing information. Follow the steps at
-     *   [To leave an organization as a member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info)
+     *   later, you can do so only after you provide the missing information. For more information,
+     *   see
+     *   [Considerations before removing an account from an organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_account-before-remove.html)
      *   in the *AWS Organizations User Guide* .
      * * When you create an account in an organization using AWS CloudFormation , you can't specify
      *   a value for the `CreateAccount` operation parameter `IamUserAccessToBilling` . The default
@@ -123,7 +124,7 @@ public object organizations {
      *   [`CloseAccount`](https://docs.aws.amazon.com/organizations/latest/APIReference/API_CloseAccount.html)
      *   operation or from the AWS Organizations console in the organization's management account.
      *   For information on the requirements and process for closing an account, see
-     *   [Closing an AWS account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html)
+     *   [Closing a member account in your organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html)
      *   in the *AWS Organizations User Guide* .
      *
      * Example:
@@ -205,7 +206,7 @@ public object organizations {
      *   might be blocked from removing those accounts. You can remove a member account only if it
      *   has all the information that's required to operate as a standalone AWS account. For more
      *   information about how to provide that information and then remove the account, see
-     *   [Leaving an organization as a member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_leave-as-member)
+     *   [Leave an organization from your member account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_leave-as-member.html)
      *   in the *AWS Organizations User Guide* .
      * * If you closed a member account before you remove it from the organization, it enters a
      *   'suspended' state for a period of time and you can't remove the account from the
@@ -213,7 +214,7 @@ public object organizations {
      *   from deleting the organization until all member accounts are completely closed.
      *
      * For more information, see
-     * [Deleting the organization by removing the management account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_delete.html)
+     * [Deleting an organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_delete.html)
      * in the *AWS Organizations User Guide* .
      *
      * Example:
@@ -270,8 +271,8 @@ public object organizations {
      * the limit is five.
      *
      * For more information about OUs, see
-     * [Managing Organizational Units](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html)
-     * in the *AWS Organizations User Guide.*
+     * [Managing organizational units (OUs)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html)
+     * in the *AWS Organizations User Guide* .
      *
      * If the request includes tags, then the requester must have the `organizations:TagResource`
      * permission.
@@ -341,7 +342,7 @@ public object organizations {
      * (OU), or an individual AWS account .
      *
      * For more information about policies and their use, see
-     * [Managing Organization Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html)
+     * [Managing AWS Organizations policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html)
      * .
      *
      * If the request includes tags, then the requester must have the `organizations:TagResource`

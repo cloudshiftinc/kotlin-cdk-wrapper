@@ -61,7 +61,14 @@ public class CfnTaskDefinitionSystemControlPropertyDsl {
     }
 
     /**
-     * @param value The value for the namespaced kernel parameter that's specified in `namespace` .
+     * @param value The namespaced kernel parameter to set a `value` for. Valid IPC namespace
+     *   values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" | "kernel.sem" |
+     *   "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"` , and
+     *   `Sysctls` that start with `"fs.mqueue.*"`
+     *
+     * Valid network namespace values: `Sysctls` that start with `"net.*"`
+     *
+     * All of these values are supported by Fargate.
      */
     public fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)

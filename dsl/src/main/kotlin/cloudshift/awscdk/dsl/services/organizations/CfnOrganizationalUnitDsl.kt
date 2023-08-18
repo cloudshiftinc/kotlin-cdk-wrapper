@@ -30,8 +30,8 @@ import software.constructs.Construct
  * five.
  *
  * For more information about OUs, see
- * [Managing Organizational Units](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html)
- * in the *AWS Organizations User Guide.*
+ * [Managing organizational units (OUs)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html)
+ * in the *AWS Organizations User Guide* .
  *
  * If the request includes tags, then the requester must have the `organizations:TagResource`
  * permission.

@@ -196,7 +196,7 @@ public object sns {
     }
 
     /**
-     * Schema for AWS::SNS::TopicInlinePolicy.
+     * The `AWS::SNS::TopicInlinePolicy` resource associates one Amazon SNS topic with one policy.
      *
      * Example:
      * ```

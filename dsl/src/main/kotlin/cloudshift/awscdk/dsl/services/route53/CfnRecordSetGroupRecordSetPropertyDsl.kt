@@ -323,6 +323,9 @@ public class CfnRecordSetGroupRecordSetPropertyDsl {
      * @param hostedZoneId The ID of the hosted zone that you want to create records in. Specify
      *   either `HostedZoneName` or `HostedZoneId` , but not both. If you have multiple hosted zones
      *   with the same domain name, you must specify the hosted zone using `HostedZoneId` .
+     *
+     * Do not provide the `HostedZoneId` if it is already defined in `AWS::Route53::RecordSetGroup`
+     * . The creation fails if `HostedZoneId` is defined in both.
      */
     public fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)

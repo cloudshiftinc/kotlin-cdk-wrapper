@@ -40,8 +40,8 @@ public class CfnTopicInlinePolicyPropsDsl {
     private val cdkBuilder: CfnTopicInlinePolicyProps.Builder = CfnTopicInlinePolicyProps.builder()
 
     /**
-     * @param policyDocument A policy document that contains permissions to add to the specified SNS
-     *   topics.
+     * @param policyDocument A policy document that contains permissions to add to the specified
+     *   Amazon SNS topic.
      */
     public fun policyDocument(policyDocument: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -50,8 +50,8 @@ public class CfnTopicInlinePolicyPropsDsl {
     }
 
     /**
-     * @param policyDocument A policy document that contains permissions to add to the specified SNS
-     *   topics.
+     * @param policyDocument A policy document that contains permissions to add to the specified
+     *   Amazon SNS topic.
      */
     public fun policyDocument(policyDocument: Any) {
         cdkBuilder.policyDocument(policyDocument)

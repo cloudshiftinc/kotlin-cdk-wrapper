@@ -18,6 +18,8 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
+ * Not currently supported by AWS CloudFormation .
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -78,42 +80,42 @@ public class CfnWebACLAWSManagedRulesACFPRuleSetPropertyDsl {
     private val cdkBuilder: CfnWebACL.AWSManagedRulesACFPRuleSetProperty.Builder =
         CfnWebACL.AWSManagedRulesACFPRuleSetProperty.builder()
 
-    /** @param creationPath the value to be set. */
+    /** @param creationPath Not currently supported by AWS CloudFormation . */
     public fun creationPath(creationPath: String) {
         cdkBuilder.creationPath(creationPath)
     }
 
-    /** @param enableRegexInPath the value to be set. */
+    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
     public fun enableRegexInPath(enableRegexInPath: Boolean) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }
 
-    /** @param enableRegexInPath the value to be set. */
+    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
     public fun enableRegexInPath(enableRegexInPath: IResolvable) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }
 
-    /** @param registrationPagePath the value to be set. */
+    /** @param registrationPagePath Not currently supported by AWS CloudFormation . */
     public fun registrationPagePath(registrationPagePath: String) {
         cdkBuilder.registrationPagePath(registrationPagePath)
     }
 
-    /** @param requestInspection the value to be set. */
+    /** @param requestInspection Not currently supported by AWS CloudFormation . */
     public fun requestInspection(requestInspection: IResolvable) {
         cdkBuilder.requestInspection(requestInspection)
     }
 
-    /** @param requestInspection the value to be set. */
+    /** @param requestInspection Not currently supported by AWS CloudFormation . */
     public fun requestInspection(requestInspection: CfnWebACL.RequestInspectionACFPProperty) {
         cdkBuilder.requestInspection(requestInspection)
     }
 
-    /** @param responseInspection the value to be set. */
+    /** @param responseInspection Not currently supported by AWS CloudFormation . */
     public fun responseInspection(responseInspection: IResolvable) {
         cdkBuilder.responseInspection(responseInspection)
     }
 
-    /** @param responseInspection the value to be set. */
+    /** @param responseInspection Not currently supported by AWS CloudFormation . */
     public fun responseInspection(responseInspection: CfnWebACL.ResponseInspectionProperty) {
         cdkBuilder.responseInspection(responseInspection)
     }

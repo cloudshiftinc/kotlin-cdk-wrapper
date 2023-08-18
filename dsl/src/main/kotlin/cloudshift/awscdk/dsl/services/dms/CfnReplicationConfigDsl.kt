@@ -79,11 +79,11 @@ public class CfnReplicationConfigDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * Configuration parameters for provisioning a AWS DMS Serverless replication.
+     * Configuration parameters for provisioning an AWS DMS Serverless replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-computeconfig)
      *
-     * @param computeConfig Configuration parameters for provisioning a AWS DMS Serverless
+     * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
      *   replication.
      */
     public fun computeConfig(computeConfig: IResolvable) {
@@ -91,11 +91,11 @@ public class CfnReplicationConfigDsl(
     }
 
     /**
-     * Configuration parameters for provisioning a AWS DMS Serverless replication.
+     * Configuration parameters for provisioning an AWS DMS Serverless replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-computeconfig)
      *
-     * @param computeConfig Configuration parameters for provisioning a AWS DMS Serverless
+     * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
      *   replication.
      */
     public fun computeConfig(computeConfig: CfnReplicationConfig.ComputeConfigProperty) {
@@ -103,33 +103,48 @@ public class CfnReplicationConfigDsl(
     }
 
     /**
+     * The Amazon Resource Name (ARN) of this AWS DMS Serverless replication configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationconfigarn)
      *
-     * @param replicationConfigArn
+     * @param replicationConfigArn The Amazon Resource Name (ARN) of this AWS DMS Serverless
+     *   replication configuration.
      */
     public fun replicationConfigArn(replicationConfigArn: String) {
         cdkBuilder.replicationConfigArn(replicationConfigArn)
     }
 
     /**
-     * A unique identifier of replication configuration.
+     * A unique identifier that you want to use to create a `ReplicationConfigArn` that is returned
+     * as part of the output from this action.
+     *
+     * You can then pass this output `ReplicationConfigArn` as the value of the
+     * `ReplicationConfigArn` option for other actions to identify both AWS DMS Serverless
+     * replications and replication configurations that you want those actions to operate on. For
+     * some actions, you can also use either this unique identifier or a corresponding ARN in action
+     * filters to identify the specific replication and replication configuration to operate on.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationconfigidentifier)
      *
-     * @param replicationConfigIdentifier A unique identifier of replication configuration.
+     * @param replicationConfigIdentifier A unique identifier that you want to use to create a
+     *   `ReplicationConfigArn` that is returned as part of the output from this action.
      */
     public fun replicationConfigIdentifier(replicationConfigIdentifier: String) {
         cdkBuilder.replicationConfigIdentifier(replicationConfigIdentifier)
     }
 
     /**
-     * JSON settings for Servereless replications that are provisioned using this replication
-     * configuration.
+     * Optional JSON settings for AWS DMS Serverless replications that are provisioned using this
+     * replication configuration.
+     *
+     * For example, see
+     * [Change processing tuning settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.ChangeProcessingTuning.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationsettings)
      *
-     * @param replicationSettings JSON settings for Servereless replications that are provisioned
-     *   using this replication configuration.
+     * @param replicationSettings Optional JSON settings for AWS DMS Serverless replications that
+     *   are provisioned using this replication configuration.
      */
     public fun replicationSettings(replicationSettings: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -138,13 +153,17 @@ public class CfnReplicationConfigDsl(
     }
 
     /**
-     * JSON settings for Servereless replications that are provisioned using this replication
-     * configuration.
+     * Optional JSON settings for AWS DMS Serverless replications that are provisioned using this
+     * replication configuration.
+     *
+     * For example, see
+     * [Change processing tuning settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.ChangeProcessingTuning.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationsettings)
      *
-     * @param replicationSettings JSON settings for Servereless replications that are provisioned
-     *   using this replication configuration.
+     * @param replicationSettings Optional JSON settings for AWS DMS Serverless replications that
+     *   are provisioned using this replication configuration.
      */
     public fun replicationSettings(replicationSettings: Any) {
         cdkBuilder.replicationSettings(replicationSettings)
@@ -152,6 +171,11 @@ public class CfnReplicationConfigDsl(
 
     /**
      * The type of AWS DMS Serverless replication to provision using this replication configuration.
+     *
+     * Possible values:
+     * * `"full-load"`
+     * * `"cdc"`
+     * * `"full-load-and-cdc"`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationtype)
      *
@@ -163,13 +187,17 @@ public class CfnReplicationConfigDsl(
     }
 
     /**
-     * A unique value or name that you get set for a given resource that can be used to construct an
-     * Amazon Resource Name (ARN) for that resource.
+     * Optional unique value or name that you set for a given resource that can be used to construct
+     * an Amazon Resource Name (ARN) for that resource.
+     *
+     * For more information, see
+     * [Fine-grained access control using resource names and tags](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.FineGrainedAccess)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-resourceidentifier)
      *
-     * @param resourceIdentifier A unique value or name that you get set for a given resource that
-     *   can be used to construct an Amazon Resource Name (ARN) for that resource.
+     * @param resourceIdentifier Optional unique value or name that you set for a given resource
+     *   that can be used to construct an Amazon Resource Name (ARN) for that resource.
      */
     public fun resourceIdentifier(resourceIdentifier: String) {
         cdkBuilder.resourceIdentifier(resourceIdentifier)
@@ -189,11 +217,15 @@ public class CfnReplicationConfigDsl(
     }
 
     /**
-     * JSON settings for specifying supplemental data.
+     * Optional JSON settings for specifying supplemental data.
+     *
+     * For more information, see
+     * [Specifying supplemental data for task settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.TaskData.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-supplementalsettings)
      *
-     * @param supplementalSettings JSON settings for specifying supplemental data.
+     * @param supplementalSettings Optional JSON settings for specifying supplemental data.
      */
     public fun supplementalSettings(supplementalSettings: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -202,11 +234,15 @@ public class CfnReplicationConfigDsl(
     }
 
     /**
-     * JSON settings for specifying supplemental data.
+     * Optional JSON settings for specifying supplemental data.
+     *
+     * For more information, see
+     * [Specifying supplemental data for task settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.TaskData.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-supplementalsettings)
      *
-     * @param supplementalSettings JSON settings for specifying supplemental data.
+     * @param supplementalSettings Optional JSON settings for specifying supplemental data.
      */
     public fun supplementalSettings(supplementalSettings: Any) {
         cdkBuilder.supplementalSettings(supplementalSettings)
@@ -215,6 +251,10 @@ public class CfnReplicationConfigDsl(
     /**
      * JSON table mappings for AWS DMS Serverless replications that are provisioned using this
      * replication configuration.
+     *
+     * For more information, see
+     * [Specifying table selection and transformations rules using JSON](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.SelectionTransformation.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-tablemappings)
      *
@@ -231,6 +271,10 @@ public class CfnReplicationConfigDsl(
      * JSON table mappings for AWS DMS Serverless replications that are provisioned using this
      * replication configuration.
      *
+     * For more information, see
+     * [Specifying table selection and transformations rules using JSON](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.SelectionTransformation.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-tablemappings)
      *
      * @param tableMappings JSON table mappings for AWS DMS Serverless replications that are
@@ -241,39 +285,47 @@ public class CfnReplicationConfigDsl(
     }
 
     /**
-     * Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     * dataset.</p>.
+     * One or more optional tags associated with resources used by the AWS DMS Serverless
+     * replication.
+     *
+     * For more information, see
+     * [Tagging resources in AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-tags)
      *
-     * @param tags Contains a map of the key-value pairs for the resource tag or tags assigned to
-     *   the dataset.</p>.
+     * @param tags One or more optional tags associated with resources used by the AWS DMS
+     *   Serverless replication.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * Contains a map of the key-value pairs for the resource tag or tags assigned to the
-     * dataset.</p>.
+     * One or more optional tags associated with resources used by the AWS DMS Serverless
+     * replication.
+     *
+     * For more information, see
+     * [Tagging resources in AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tagging.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-tags)
      *
-     * @param tags Contains a map of the key-value pairs for the resource tag or tags assigned to
-     *   the dataset.</p>.
+     * @param tags One or more optional tags associated with resources used by the AWS DMS
+     *   Serverless replication.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the target endpoint for this AWS DMS Serverless replication
+     * The Amazon Resource Name (ARN) of the target endpoint for this AWS DMS serverless replication
      * configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-targetendpointarn)
      *
      * @param targetEndpointArn The Amazon Resource Name (ARN) of the target endpoint for this AWS
-     *   DMS Serverless replication configuration.
+     *   DMS serverless replication configuration.
      */
     public fun targetEndpointArn(targetEndpointArn: String) {
         cdkBuilder.targetEndpointArn(targetEndpointArn)

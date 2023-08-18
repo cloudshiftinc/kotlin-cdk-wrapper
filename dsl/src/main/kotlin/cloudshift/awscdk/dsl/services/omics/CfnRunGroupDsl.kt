@@ -69,9 +69,11 @@ public class CfnRunGroupDsl(
     }
 
     /**
+     * The maximum GPUs that can be used by a run group.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html#cfn-omics-rungroup-maxgpus)
      *
-     * @param maxGpus
+     * @param maxGpus The maximum GPUs that can be used by a run group.
      */
     public fun maxGpus(maxGpus: Number) {
         cdkBuilder.maxGpus(maxGpus)

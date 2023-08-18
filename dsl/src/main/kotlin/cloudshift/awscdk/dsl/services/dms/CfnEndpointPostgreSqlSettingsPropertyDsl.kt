@@ -156,12 +156,20 @@ public class CfnEndpointPostgreSqlSettingsPropertyDsl {
         cdkBuilder.heartbeatSchema(heartbeatSchema)
     }
 
-    /** @param mapBooleanAsBoolean the value to be set. */
+    /**
+     * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean. By
+     *   default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on both
+     *   the source and target endpoints for it to take effect.
+     */
     public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
     }
 
-    /** @param mapBooleanAsBoolean the value to be set. */
+    /**
+     * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean. By
+     *   default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on both
+     *   the source and target endpoints for it to take effect.
+     */
     public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
     }

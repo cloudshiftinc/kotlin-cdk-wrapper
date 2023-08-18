@@ -142,8 +142,11 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
      * @param deploymentType Specifies the file system deployment type. Single AZ deployment types
      *   are configured for redundancy within a single Availability Zone in an AWS Region . Valid
      *   values are the following:
+     * * `MULTI_AZ_1` - Creates file systems with high availability that are configured for Multi-AZ
+     *   redundancy to tolerate temporary unavailability in Availability Zones (AZs). `Multi_AZ_1`
+     *   is available in the following AWS Regions :
      * * `SINGLE_AZ_1` - (Default) Creates file systems with throughput capacities of 64 - 4,096
-     *   MBps. `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is
+     *   MB/s. `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is
      *   available.
      * * `SINGLE_AZ_2` - Creates file systems with throughput capacities of 160 - 10,240 MB/s using
      *   an NVMe L2ARC cache. `Single_AZ_2` is available only in the US East (N. Virginia), US East
@@ -161,10 +164,11 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
 
     /**
      * @param diskIopsConfiguration The SSD IOPS (input/output operations per second) configuration
-     *   for an Amazon FSx for NetApp ONTAP or FSx for OpenZFS file system. By default, Amazon FSx
-     *   automatically provisions 3 IOPS per GB of storage capacity. You can provision additional
-     *   IOPS per GB of storage. The configuration consists of the total number of provisioned SSD
-     *   IOPS and how it is was provisioned, or the mode (by the customer or by Amazon FSx).
+     *   for an Amazon FSx for NetApp ONTAP, Amazon FSx for Windows File Server, or FSx for OpenZFS
+     *   file system. By default, Amazon FSx automatically provisions 3 IOPS per GB of storage
+     *   capacity. You can provision additional IOPS per GB of storage. The configuration consists
+     *   of the total number of provisioned SSD IOPS and how it is was provisioned, or the mode (by
+     *   the customer or by Amazon FSx).
      */
     public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
         cdkBuilder.diskIopsConfiguration(diskIopsConfiguration)
@@ -172,10 +176,11 @@ public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
 
     /**
      * @param diskIopsConfiguration The SSD IOPS (input/output operations per second) configuration
-     *   for an Amazon FSx for NetApp ONTAP or FSx for OpenZFS file system. By default, Amazon FSx
-     *   automatically provisions 3 IOPS per GB of storage capacity. You can provision additional
-     *   IOPS per GB of storage. The configuration consists of the total number of provisioned SSD
-     *   IOPS and how it is was provisioned, or the mode (by the customer or by Amazon FSx).
+     *   for an Amazon FSx for NetApp ONTAP, Amazon FSx for Windows File Server, or FSx for OpenZFS
+     *   file system. By default, Amazon FSx automatically provisions 3 IOPS per GB of storage
+     *   capacity. You can provision additional IOPS per GB of storage. The configuration consists
+     *   of the total number of provisioned SSD IOPS and how it is was provisioned, or the mode (by
+     *   the customer or by Amazon FSx).
      */
     public fun diskIopsConfiguration(
         diskIopsConfiguration: CfnFileSystem.DiskIopsConfigurationProperty

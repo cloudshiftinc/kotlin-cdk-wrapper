@@ -74,12 +74,12 @@ public class CfnServicePropsDsl {
         cdkBuilder.customDomainName(customDomainName)
     }
 
-    /** @param dnsEntry the value to be set. */
+    /** @param dnsEntry The DNS information of the service. */
     public fun dnsEntry(dnsEntry: IResolvable) {
         cdkBuilder.dnsEntry(dnsEntry)
     }
 
-    /** @param dnsEntry the value to be set. */
+    /** @param dnsEntry The DNS information of the service. */
     public fun dnsEntry(dnsEntry: CfnService.DnsEntryProperty) {
         cdkBuilder.dnsEntry(dnsEntry)
     }
