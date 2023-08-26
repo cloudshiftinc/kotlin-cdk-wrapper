@@ -42,6 +42,6 @@ caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.1.8
 aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.20" }
 
 guava = { module = "com.google.guava:guava", version = "32.1.2-jre" }
-awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.92.0" }
+awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.93.0" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.14.2" }
 javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.25.4" }
