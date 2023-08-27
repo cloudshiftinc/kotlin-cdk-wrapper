@@ -24,11 +24,11 @@ This provides the basis for powerful Kotlin extensions to the DSL to supercharge
 
 For the core DSL add this dependency to your Gradle script:
 
-`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl:0.4.1")`
+`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl:0.4.2")`
 
 Alternately, to use the extensions (recommended), use this dependency instead:
 
-`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl-extensions:0.4.1")`
+`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl-extensions:0.4.2")`
 
 # Extensions
 
