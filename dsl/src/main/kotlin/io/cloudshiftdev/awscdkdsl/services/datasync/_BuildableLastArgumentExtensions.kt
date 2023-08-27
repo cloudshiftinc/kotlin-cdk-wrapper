@@ -12,6 +12,7 @@
 package io.cloudshiftdev.awscdkdsl.services.datasync
 
 import kotlin.Unit
+import software.amazon.awscdk.services.datasync.CfnLocationAzureBlob
 import software.amazon.awscdk.services.datasync.CfnLocationEFS
 import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
 import software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
@@ -21,6 +22,15 @@ import software.amazon.awscdk.services.datasync.CfnLocationS3
 import software.amazon.awscdk.services.datasync.CfnLocationSMB
 import software.amazon.awscdk.services.datasync.CfnStorageSystem
 import software.amazon.awscdk.services.datasync.CfnTask
+
+/** Specifies the SAS configuration that allows DataSync to access your Azure Blob Storage. */
+public inline fun CfnLocationAzureBlob.setAzureBlobSasConfiguration(
+    block: CfnLocationAzureBlobAzureBlobSasConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnLocationAzureBlobAzureBlobSasConfigurationPropertyDsl()
+    builder.apply(block)
+    return setAzureBlobSasConfiguration(builder.build())
+}
 
 /** Specifies the subnet and security groups DataSync uses to access your Amazon EFS file system. */
 public inline fun CfnLocationEFS.setEc2Config(

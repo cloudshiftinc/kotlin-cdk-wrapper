@@ -2098,7 +2098,7 @@ public object cloudwatch {
      * Metric metric = Metric.Builder.create()
      * .namespace("MyNamespace")
      * .metricName("MyMetric")
-     * .dimensions(Map.of("MyDimension", "MyDimensionValue"))
+     * .dimensionsMap(Map.of("MyDimension", "MyDimensionValue"))
      * .build();
      * Alarm alarm = Alarm.Builder.create(this, "MyAlarm")
      * .metric(metric)

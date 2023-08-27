@@ -24,6 +24,7 @@ import software.amazon.awscdk.services.lambda.LambdaRuntimeProps
  * import software.amazon.awscdk.services.lambda.*;
  * LambdaRuntimeProps lambdaRuntimeProps = LambdaRuntimeProps.builder()
  * .bundlingDockerImage("bundlingDockerImage")
+ * .isVariable(false)
  * .supportsCodeGuruProfiling(false)
  * .supportsInlineCode(false)
  * .build();
@@ -36,6 +37,13 @@ public class LambdaRuntimePropsDsl {
     /** @param bundlingDockerImage The Docker image name to be used for bundling in this runtime. */
     public fun bundlingDockerImage(bundlingDockerImage: String) {
         cdkBuilder.bundlingDockerImage(bundlingDockerImage)
+    }
+
+    /**
+     * @param isVariable Whether the runtime enum is meant to change over time, IE NODEJS_LATEST.
+     */
+    public fun isVariable(isVariable: Boolean) {
+        cdkBuilder.isVariable(isVariable)
     }
 
     /**

@@ -16,9 +16,10 @@ import kotlin.String
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
 /**
- * Specifies the KMS key that is used to encrypt the user's data stores in Athena.
+ * Specifies the customer managed KMS key that is used to encrypt the user's data stores in Athena.
  *
- * This setting does not apply to Athena SQL workgroups.
+ * When an AWS managed key is used, this value is null. This setting does not apply to Athena SQL
+ * workgroups.
  *
  * Example:
  * ```
@@ -38,7 +39,10 @@ public class CfnWorkGroupCustomerContentEncryptionConfigurationPropertyDsl {
     private val cdkBuilder: CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.Builder =
         CfnWorkGroup.CustomerContentEncryptionConfigurationProperty.builder()
 
-    /** @param kmsKey The KMS key that is used to encrypt the user's data stores in Athena. */
+    /**
+     * @param kmsKey The customer managed KMS key that is used to encrypt the user's data stores in
+     *   Athena.
+     */
     public fun kmsKey(kmsKey: String) {
         cdkBuilder.kmsKey(kmsKey)
     }

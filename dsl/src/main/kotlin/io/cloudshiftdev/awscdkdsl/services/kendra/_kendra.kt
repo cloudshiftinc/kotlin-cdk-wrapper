@@ -361,6 +361,9 @@ public object kendra {
      * .subnetIds(List.of("subnetIds"))
      * .build())
      * .build())
+     * .templateConfiguration(TemplateConfigurationProperty.builder()
+     * .template("template")
+     * .build())
      * .webCrawlerConfiguration(WebCrawlerConfigurationProperty.builder()
      * .urls(WebCrawlerUrlsProperty.builder()
      * .seedUrlConfiguration(WebCrawlerSeedUrlConfigurationProperty.builder()
@@ -1222,6 +1225,9 @@ public object kendra {
      * .securityGroupIds(List.of("securityGroupIds"))
      * .subnetIds(List.of("subnetIds"))
      * .build())
+     * .build())
+     * .templateConfiguration(TemplateConfigurationProperty.builder()
+     * .template("template")
      * .build())
      * .webCrawlerConfiguration(WebCrawlerConfigurationProperty.builder()
      * .urls(WebCrawlerUrlsProperty.builder()
@@ -2090,6 +2096,9 @@ public object kendra {
      * .subnetIds(List.of("subnetIds"))
      * .build())
      * .build())
+     * .templateConfiguration(TemplateConfigurationProperty.builder()
+     * .template("template")
+     * .build())
      * .webCrawlerConfiguration(WebCrawlerConfigurationProperty.builder()
      * .urls(WebCrawlerUrlsProperty.builder()
      * .seedUrlConfiguration(WebCrawlerSeedUrlConfigurationProperty.builder()
@@ -2751,6 +2760,28 @@ public object kendra {
         block: CfnDataSourceSqlConfigurationPropertyDsl.() -> Unit = {}
     ): CfnDataSource.SqlConfigurationProperty {
         val builder = CfnDataSourceSqlConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.kendra.*;
+     * TemplateConfigurationProperty templateConfigurationProperty =
+     * TemplateConfigurationProperty.builder()
+     * .template("template")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-templateconfiguration.html)
+     */
+    public inline fun cfnDataSourceTemplateConfigurationProperty(
+        block: CfnDataSourceTemplateConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnDataSource.TemplateConfigurationProperty {
+        val builder = CfnDataSourceTemplateConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

@@ -87,6 +87,7 @@ import software.amazon.awscdk.services.ecs.Ulimit
  * .containerPort(123)
  * // the properties below are optional
  * .appProtocol(appProtocol)
+ * .containerPortRange("containerPortRange")
  * .hostPort(123)
  * .name("name")
  * .protocol(Protocol.TCP)

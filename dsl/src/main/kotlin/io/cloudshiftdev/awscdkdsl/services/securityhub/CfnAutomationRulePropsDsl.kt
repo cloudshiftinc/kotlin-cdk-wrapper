@@ -247,24 +247,24 @@ public class CfnAutomationRulePropsDsl {
     private val _actions: MutableList<Any> = mutableListOf()
 
     /**
-     * @param actions One or more actions to update finding fields if a finding matches the defined
-     *   criteria of the rule.
+     * @param actions One or more actions to update finding fields if a finding matches the
+     *   conditions specified in `Criteria` .
      */
     public fun actions(vararg actions: Any) {
         _actions.addAll(listOf(*actions))
     }
 
     /**
-     * @param actions One or more actions to update finding fields if a finding matches the defined
-     *   criteria of the rule.
+     * @param actions One or more actions to update finding fields if a finding matches the
+     *   conditions specified in `Criteria` .
      */
     public fun actions(actions: Collection<Any>) {
         _actions.addAll(actions)
     }
 
     /**
-     * @param actions One or more actions to update finding fields if a finding matches the defined
-     *   criteria of the rule.
+     * @param actions One or more actions to update finding fields if a finding matches the
+     *   conditions specified in `Criteria` .
      */
     public fun actions(actions: IResolvable) {
         cdkBuilder.actions(actions)
@@ -272,9 +272,9 @@ public class CfnAutomationRulePropsDsl {
 
     /**
      * @param criteria A set of
-     *   [AWS Security Finding Format](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
+     *   [AWS Security Finding Format (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      *   finding field attributes and corresponding expected values that Security Hub uses to filter
-     *   findings. If a rule is enabled and a finding matches the conditions specified in this
+     *   findings. If a rule is enabled and a finding matches the criteria specified in this
      *   parameter, Security Hub applies the rule action to the finding.
      */
     public fun criteria(criteria: IResolvable) {
@@ -283,9 +283,9 @@ public class CfnAutomationRulePropsDsl {
 
     /**
      * @param criteria A set of
-     *   [AWS Security Finding Format](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
+     *   [AWS Security Finding Format (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      *   finding field attributes and corresponding expected values that Security Hub uses to filter
-     *   findings. If a rule is enabled and a finding matches the conditions specified in this
+     *   findings. If a rule is enabled and a finding matches the criteria specified in this
      *   parameter, Security Hub applies the rule action to the finding.
      */
     public fun criteria(criteria: CfnAutomationRule.AutomationRulesFindingFiltersProperty) {

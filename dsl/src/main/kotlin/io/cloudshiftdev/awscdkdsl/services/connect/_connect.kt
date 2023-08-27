@@ -45,6 +45,8 @@ import software.amazon.awscdk.services.connect.CfnSecurityKey
 import software.amazon.awscdk.services.connect.CfnSecurityKeyProps
 import software.amazon.awscdk.services.connect.CfnTaskTemplate
 import software.amazon.awscdk.services.connect.CfnTaskTemplateProps
+import software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup
+import software.amazon.awscdk.services.connect.CfnTrafficDistributionGroupProps
 import software.amazon.awscdk.services.connect.CfnUser
 import software.amazon.awscdk.services.connect.CfnUserHierarchyGroup
 import software.amazon.awscdk.services.connect.CfnUserHierarchyGroupProps
@@ -3022,6 +3024,70 @@ public object connect {
         block: CfnTaskTemplateRequiredFieldInfoPropertyDsl.() -> Unit = {}
     ): CfnTaskTemplate.RequiredFieldInfoProperty {
         val builder = CfnTaskTemplateRequiredFieldInfoPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Information about a traffic distribution group.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnTrafficDistributionGroup cfnTrafficDistributionGroup =
+     * CfnTrafficDistributionGroup.Builder.create(this, "MyCfnTrafficDistributionGroup")
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * // the properties below are optional
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-trafficdistributiongroup.html)
+     */
+    public inline fun cfnTrafficDistributionGroup(
+        scope: Construct,
+        id: String,
+        block: CfnTrafficDistributionGroupDsl.() -> Unit = {},
+    ): CfnTrafficDistributionGroup {
+        val builder = CfnTrafficDistributionGroupDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnTrafficDistributionGroup`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.connect.*;
+     * CfnTrafficDistributionGroupProps cfnTrafficDistributionGroupProps =
+     * CfnTrafficDistributionGroupProps.builder()
+     * .instanceArn("instanceArn")
+     * .name("name")
+     * // the properties below are optional
+     * .description("description")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-trafficdistributiongroup.html)
+     */
+    public inline fun cfnTrafficDistributionGroupProps(
+        block: CfnTrafficDistributionGroupPropsDsl.() -> Unit = {}
+    ): CfnTrafficDistributionGroupProps {
+        val builder = CfnTrafficDistributionGroupPropsDsl()
         builder.apply(block)
         return builder.build()
     }

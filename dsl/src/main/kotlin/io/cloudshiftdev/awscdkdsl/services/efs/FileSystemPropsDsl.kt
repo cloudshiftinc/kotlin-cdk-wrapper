@@ -36,25 +36,27 @@ import software.amazon.awscdk.services.kms.IKey
  * Example:
  * ```
  * import software.amazon.awscdk.services.iam.*;
- * PolicyDocument myFileSystemPolicy = PolicyDocument.Builder.create()
- * .statements(List.of(PolicyStatement.Builder.create()
- * .actions(List.of("elasticfilesystem:ClientWrite", "elasticfilesystem:ClientMount"))
- * .principals(List.of(new AccountRootPrincipal()))
- * .resources(List.of("*"))
- * .conditions(Map.of(
- * "Bool", Map.of(
- * "elasticfilesystem:AccessedViaMountTarget", "true")))
- * .build()))
+ * Role role = Role.Builder.create(this, "ClientRole")
+ * .assumedBy(new AnyPrincipal())
  * .build();
  * FileSystem fileSystem = FileSystem.Builder.create(this, "MyEfsFileSystem")
  * .vpc(new Vpc(this, "VPC"))
- * .fileSystemPolicy(myFileSystemPolicy)
+ * .allowAnonymousAccess(true)
  * .build();
+ * fileSystem.grantRead(role);
  * ```
  */
 @CdkDslMarker
 public class FileSystemPropsDsl {
     private val cdkBuilder: FileSystemProps.Builder = FileSystemProps.builder()
+
+    /**
+     * @param allowAnonymousAccess Allow access from anonymous client that doesn't use IAM
+     *   authentication.
+     */
+    public fun allowAnonymousAccess(allowAnonymousAccess: Boolean) {
+        cdkBuilder.allowAnonymousAccess(allowAnonymousAccess)
+    }
 
     /** @param enableAutomaticBackups Whether to enable automatic backups for the file system. */
     public fun enableAutomaticBackups(enableAutomaticBackups: Boolean) {

@@ -640,14 +640,15 @@ public object config {
     }
 
     /**
-     * The AWS::Config::ConfigurationRecorder resource describes the AWS resource types for which
-     * AWS Config records configuration changes.
+     * The `AWS::Config::ConfigurationRecorder` resource type describes the AWS resource types that
+     * AWS Config records for configuration changes.
      *
-     * The configuration recorder stores the configurations of the supported resources in your
-     * account as configuration items.
+     * The configuration recorder stores the configuration changes of the specified resources in
+     * your account as configuration items.
      *
-     * To enable AWS Config , you must create a configuration recorder and a delivery channel. AWS
-     * Config uses the delivery channel to deliver the configuration changes to your Amazon S3
+     * To enable AWS Config , you must create a configuration recorder and a delivery channel.
+     *
+     * AWS Config uses the delivery channel to deliver the configuration changes to your Amazon S3
      * bucket or Amazon SNS topic. For more information, see
      * [AWS::Config::DeliveryChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html)
      * .
@@ -675,7 +676,13 @@ public object config {
      * .name("name")
      * .recordingGroup(RecordingGroupProperty.builder()
      * .allSupported(false)
+     * .exclusionByResourceTypes(ExclusionByResourceTypesProperty.builder()
+     * .resourceTypes(List.of("resourceTypes"))
+     * .build())
      * .includeGlobalResourceTypes(false)
+     * .recordingStrategy(RecordingStrategyProperty.builder()
+     * .useOnly("useOnly")
+     * .build())
      * .resourceTypes(List.of("resourceTypes"))
      * .build())
      * .build();
@@ -689,6 +696,37 @@ public object config {
         block: CfnConfigurationRecorderDsl.() -> Unit = {},
     ): CfnConfigurationRecorder {
         val builder = CfnConfigurationRecorderDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies whether the configuration recorder excludes resource types from being recorded.
+     *
+     * Use the `resourceTypes` field to enter a comma-separated list of resource types to exclude as
+     * exemptions.
+     *
+     * To use this option, you must set the `useOnly` field of
+     * [AWS::Config::ConfigurationRecorder RecordingStrategy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html)
+     * to `EXCLUSION_BY_RESOURCE_TYPES` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.config.*;
+     * ExclusionByResourceTypesProperty exclusionByResourceTypesProperty =
+     * ExclusionByResourceTypesProperty.builder()
+     * .resourceTypes(List.of("resourceTypes"))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-exclusionbyresourcetypes.html)
+     */
+    public inline fun cfnConfigurationRecorderExclusionByResourceTypesProperty(
+        block: CfnConfigurationRecorderExclusionByResourceTypesPropertyDsl.() -> Unit = {}
+    ): CfnConfigurationRecorder.ExclusionByResourceTypesProperty {
+        val builder = CfnConfigurationRecorderExclusionByResourceTypesPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -708,7 +746,13 @@ public object config {
      * .name("name")
      * .recordingGroup(RecordingGroupProperty.builder()
      * .allSupported(false)
+     * .exclusionByResourceTypes(ExclusionByResourceTypesProperty.builder()
+     * .resourceTypes(List.of("resourceTypes"))
+     * .build())
      * .includeGlobalResourceTypes(false)
+     * .recordingStrategy(RecordingStrategyProperty.builder()
+     * .useOnly("useOnly")
+     * .build())
      * .resourceTypes(List.of("resourceTypes"))
      * .build())
      * .build();
@@ -742,7 +786,7 @@ public object config {
      * Config regions where AWS Config was available before February 2022 (which excludes Asia
      * Pacific (Hyderabad), Asia Pacific (Melbourne), Europe (Spain), Europe (Zurich), Israel (Tel
      * Aviv), and Middle East (UAE)). AWS Config also supports some global resources types for
-     * Amazon Elastic Container Registry Public, AWS Global Accelerator , and Amazon Route 53;
+     * Amazon Elastic Container Registry Public , AWS Global Accelerator , and Amazon Route 53 ;
      * however, these resource types are not globally recorded in all enabled AWS Config regions.
      *
      * Global resource types onboarded to AWS Config recording after February 2022 will be recorded
@@ -769,7 +813,13 @@ public object config {
      * import software.amazon.awscdk.services.config.*;
      * RecordingGroupProperty recordingGroupProperty = RecordingGroupProperty.builder()
      * .allSupported(false)
+     * .exclusionByResourceTypes(ExclusionByResourceTypesProperty.builder()
+     * .resourceTypes(List.of("resourceTypes"))
+     * .build())
      * .includeGlobalResourceTypes(false)
+     * .recordingStrategy(RecordingStrategyProperty.builder()
+     * .useOnly("useOnly")
+     * .build())
      * .resourceTypes(List.of("resourceTypes"))
      * .build();
      * ```
@@ -780,6 +830,32 @@ public object config {
         block: CfnConfigurationRecorderRecordingGroupPropertyDsl.() -> Unit = {}
     ): CfnConfigurationRecorder.RecordingGroupProperty {
         val builder = CfnConfigurationRecorderRecordingGroupPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Specifies the recording strategy of the configuration recorder.
+     *
+     * Valid values include: `ALL_SUPPORTED_RESOURCE_TYPES` , `INCLUSION_BY_RESOURCE_TYPES` , and
+     * `EXCLUSION_BY_RESOURCE_TYPES` .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.config.*;
+     * RecordingStrategyProperty recordingStrategyProperty = RecordingStrategyProperty.builder()
+     * .useOnly("useOnly")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html)
+     */
+    public inline fun cfnConfigurationRecorderRecordingStrategyProperty(
+        block: CfnConfigurationRecorderRecordingStrategyPropertyDsl.() -> Unit = {}
+    ): CfnConfigurationRecorder.RecordingStrategyProperty {
+        val builder = CfnConfigurationRecorderRecordingStrategyPropertyDsl()
         builder.apply(block)
         return builder.build()
     }

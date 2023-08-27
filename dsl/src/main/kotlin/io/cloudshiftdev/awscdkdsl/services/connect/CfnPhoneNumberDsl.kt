@@ -117,12 +117,12 @@ public class CfnPhoneNumberDsl(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of Amazon Connect instances or traffic distribution group that
-     * phone numbers are claimed to.
+     * The Amazon Resource Name (ARN) for Amazon Connect instances or traffic distribution group
+     * that phone numbers are claimed to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html#cfn-connect-phonenumber-targetarn)
      *
-     * @param targetArn The Amazon Resource Name (ARN) of Amazon Connect instances or traffic
+     * @param targetArn The Amazon Resource Name (ARN) for Amazon Connect instances or traffic
      *   distribution group that phone numbers are claimed to.
      */
     public fun targetArn(targetArn: String) {

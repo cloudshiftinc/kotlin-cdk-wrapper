@@ -16,6 +16,8 @@ import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnBuild
 
 /**
+ * The location in Amazon S3 where build or script files are stored for access by Amazon GameLift.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.
@@ -37,7 +39,12 @@ public class CfnBuildStorageLocationPropertyDsl {
     private val cdkBuilder: CfnBuild.StorageLocationProperty.Builder =
         CfnBuild.StorageLocationProperty.builder()
 
-    /** @param bucket An Amazon S3 bucket identifier. This is the name of the S3 bucket. */
+    /**
+     * @param bucket An Amazon S3 bucket identifier. Thename of the S3 bucket.
+     *
+     * Amazon GameLift doesn't support uploading from Amazon S3 buckets with names that contain a
+     * dot (.).
+     */
     public fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
     }
@@ -58,8 +65,9 @@ public class CfnBuildStorageLocationPropertyDsl {
     }
 
     /**
-     * @param roleArn The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to
-     *   access the S3 bucket.
+     * @param roleArn The Amazon Resource Name (
+     *   [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role
+     *   that allows Amazon GameLift to access the S3 bucket.
      */
     public fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)

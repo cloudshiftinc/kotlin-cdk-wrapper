@@ -85,7 +85,7 @@ public class CfnPhoneNumberPropsDsl {
     }
 
     /**
-     * @param targetArn The Amazon Resource Name (ARN) of Amazon Connect instances or traffic
+     * @param targetArn The Amazon Resource Name (ARN) for Amazon Connect instances or traffic
      *   distribution group that phone numbers are claimed to.
      */
     public fun targetArn(targetArn: String) {

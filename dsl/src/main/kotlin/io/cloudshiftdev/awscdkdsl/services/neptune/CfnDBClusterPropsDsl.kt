@@ -193,10 +193,10 @@ public class CfnDBClusterPropsDsl {
 
     /**
      * @param dbPort The port number on which the DB instances in the DB cluster accept connections.
-     *   If not specified, the default port used is `8182`.
+     *   If not specified, the default port used is `8182` .
      *
-     * Note: `Port` property will soon be deprecated from this resource. Please update existing
-     * templates to rename it with new property `DBPort` having same functionalities.
+     * The `Port` property will soon be deprecated. Please update existing templates to use the new
+     * `DBPort` property that has the same functionality.
      */
     public fun dbPort(dbPort: Number) {
         cdkBuilder.dbPort(dbPort)

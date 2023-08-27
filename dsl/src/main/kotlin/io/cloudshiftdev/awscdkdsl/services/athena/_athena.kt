@@ -469,9 +469,11 @@ public object athena {
     }
 
     /**
-     * Specifies the KMS key that is used to encrypt the user's data stores in Athena.
+     * Specifies the customer managed KMS key that is used to encrypt the user's data stores in
+     * Athena.
      *
-     * This setting does not apply to Athena SQL workgroups.
+     * When an AWS managed key is used, this value is null. This setting does not apply to Athena
+     * SQL workgroups.
      *
      * Example:
      * ```

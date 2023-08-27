@@ -19,7 +19,7 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
  * Configures inspection of the response header. This is part of the `ResponseInspection`
- * configuration for `AWSManagedRulesATPRuleSet` .
+ * configuration for `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet` .
  *
  * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
  *
@@ -49,10 +49,12 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param failureValues Values in the response header with the specified name that indicate a
-     *   failed login attempt. To be counted as a failure, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   failed login or account creation attempt. To be counted as a failure, the value must be an
+     *   exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
-     * JSON example: `"FailureValues": [ "LoginFailed", "Failed login" ]`
+     * JSON examples: `"FailureValues": [ "LoginFailed", "Failed login" ]` and `"FailureValues":
+     * [ "AccountCreationFailed" ]`
      */
     public fun failureValues(vararg failureValues: String) {
         _failureValues.addAll(listOf(*failureValues))
@@ -60,10 +62,12 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param failureValues Values in the response header with the specified name that indicate a
-     *   failed login attempt. To be counted as a failure, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   failed login or account creation attempt. To be counted as a failure, the value must be an
+     *   exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
-     * JSON example: `"FailureValues": [ "LoginFailed", "Failed login" ]`
+     * JSON examples: `"FailureValues": [ "LoginFailed", "Failed login" ]` and `"FailureValues":
+     * [ "AccountCreationFailed" ]`
      */
     public fun failureValues(failureValues: Collection<String>) {
         _failureValues.addAll(failureValues)
@@ -79,10 +83,12 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param successValues Values in the response header with the specified name that indicate a
-     *   successful login attempt. To be counted as a success, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   successful login or account creation attempt. To be counted as a success, the value must be
+     *   an exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
-     * JSON example: `"SuccessValues": [ "LoginPassed", "Successful login" ]`
+     * JSON examples: `"SuccessValues": [ "LoginPassed", "Successful login" ]` and `"SuccessValues":
+     * [ "AccountCreated", "Successful account creation" ]`
      */
     public fun successValues(vararg successValues: String) {
         _successValues.addAll(listOf(*successValues))
@@ -90,10 +96,12 @@ public class CfnWebACLResponseInspectionHeaderPropertyDsl {
 
     /**
      * @param successValues Values in the response header with the specified name that indicate a
-     *   successful login attempt. To be counted as a success, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   successful login or account creation attempt. To be counted as a success, the value must be
+     *   an exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
-     * JSON example: `"SuccessValues": [ "LoginPassed", "Successful login" ]`
+     * JSON examples: `"SuccessValues": [ "LoginPassed", "Successful login" ]` and `"SuccessValues":
+     * [ "AccountCreated", "Successful account creation" ]`
      */
     public fun successValues(successValues: Collection<String>) {
         _successValues.addAll(successValues)

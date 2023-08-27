@@ -25,7 +25,11 @@ import software.amazon.awscdk.services.rolesanywhere.CfnProfile
 import software.constructs.Construct
 
 /**
- * Creates a Profile.
+ * Creates a *profile* , a list of the roles that Roles Anywhere service is trusted to assume.
+ *
+ * You use profiles to intersect permissions with IAM managed policies.
+ *
+ * *Required permissions:* `rolesanywhere:CreateProfile` .
  *
  * Example:
  * ```
@@ -64,133 +68,138 @@ public class CfnProfileDsl(
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * The number of seconds vended session credentials will be valid for.
+     * Sets the maximum number of seconds that vended temporary credentials through
+     * [CreateSession](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html)
+     * will be valid for, between 900 and 3600.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-durationseconds)
      *
-     * @param durationSeconds The number of seconds vended session credentials will be valid for.
+     * @param durationSeconds Sets the maximum number of seconds that vended temporary credentials
+     *   through
+     *   [CreateSession](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html)
+     *   will be valid for, between 900 and 3600.
      */
     public fun durationSeconds(durationSeconds: Number) {
         cdkBuilder.durationSeconds(durationSeconds)
     }
 
     /**
-     * The enabled status of the resource.
+     * Indicates whether the profile is enabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-enabled)
      *
-     * @param enabled The enabled status of the resource.
+     * @param enabled Indicates whether the profile is enabled.
      */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * The enabled status of the resource.
+     * Indicates whether the profile is enabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-enabled)
      *
-     * @param enabled The enabled status of the resource.
+     * @param enabled Indicates whether the profile is enabled.
      */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * A list of managed policy ARNs.
-     *
-     * Managed policies identified by this list will be applied to the vended session credentials.
+     * A list of managed policy ARNs that apply to the vended session credentials.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-managedpolicyarns)
      *
-     * @param managedPolicyArns A list of managed policy ARNs.
+     * @param managedPolicyArns A list of managed policy ARNs that apply to the vended session
+     *   credentials.
      */
     public fun managedPolicyArns(vararg managedPolicyArns: String) {
         _managedPolicyArns.addAll(listOf(*managedPolicyArns))
     }
 
     /**
-     * A list of managed policy ARNs.
-     *
-     * Managed policies identified by this list will be applied to the vended session credentials.
+     * A list of managed policy ARNs that apply to the vended session credentials.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-managedpolicyarns)
      *
-     * @param managedPolicyArns A list of managed policy ARNs.
+     * @param managedPolicyArns A list of managed policy ARNs that apply to the vended session
+     *   credentials.
      */
     public fun managedPolicyArns(managedPolicyArns: Collection<String>) {
         _managedPolicyArns.addAll(managedPolicyArns)
     }
 
     /**
-     * The customer specified name of the resource.
+     * The name of the profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-name)
      *
-     * @param name The customer specified name of the resource.
+     * @param name The name of the profile.
      */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
     /**
-     * Specifies whether instance properties are required in CreateSession requests with this
+     * Specifies whether instance properties are required in temporary credential requests with this
      * profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-requireinstanceproperties)
      *
      * @param requireInstanceProperties Specifies whether instance properties are required in
-     *   CreateSession requests with this profile.
+     *   temporary credential requests with this profile.
      */
     public fun requireInstanceProperties(requireInstanceProperties: Boolean) {
         cdkBuilder.requireInstanceProperties(requireInstanceProperties)
     }
 
     /**
-     * Specifies whether instance properties are required in CreateSession requests with this
+     * Specifies whether instance properties are required in temporary credential requests with this
      * profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-requireinstanceproperties)
      *
      * @param requireInstanceProperties Specifies whether instance properties are required in
-     *   CreateSession requests with this profile.
+     *   temporary credential requests with this profile.
      */
     public fun requireInstanceProperties(requireInstanceProperties: IResolvable) {
         cdkBuilder.requireInstanceProperties(requireInstanceProperties)
     }
 
     /**
-     * A list of IAM role ARNs that can be assumed when this profile is specified in a CreateSession
-     * request.
+     * A list of IAM role ARNs.
+     *
+     * During `CreateSession` , if a matching role ARN is provided, the properties in this profile
+     * will be applied to the intersection session policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-rolearns)
      *
-     * @param roleArns A list of IAM role ARNs that can be assumed when this profile is specified in
-     *   a CreateSession request.
+     * @param roleArns A list of IAM role ARNs.
      */
     public fun roleArns(vararg roleArns: String) {
         _roleArns.addAll(listOf(*roleArns))
     }
 
     /**
-     * A list of IAM role ARNs that can be assumed when this profile is specified in a CreateSession
-     * request.
+     * A list of IAM role ARNs.
+     *
+     * During `CreateSession` , if a matching role ARN is provided, the properties in this profile
+     * will be applied to the intersection session policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-rolearns)
      *
-     * @param roleArns A list of IAM role ARNs that can be assumed when this profile is specified in
-     *   a CreateSession request.
+     * @param roleArns A list of IAM role ARNs.
      */
     public fun roleArns(roleArns: Collection<String>) {
         _roleArns.addAll(roleArns)
     }
 
     /**
-     * A session policy that will applied to the trust boundary of the vended session credentials.
+     * A session policy that applies to the trust boundary of the vended session credentials.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-sessionpolicy)
      *
-     * @param sessionPolicy A session policy that will applied to the trust boundary of the vended
+     * @param sessionPolicy A session policy that applies to the trust boundary of the vended
      *   session credentials.
      */
     public fun sessionPolicy(sessionPolicy: String) {
@@ -198,22 +207,22 @@ public class CfnProfileDsl(
     }
 
     /**
-     * A list of Tags.
+     * The tags to attach to the profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-tags)
      *
-     * @param tags A list of Tags.
+     * @param tags The tags to attach to the profile.
      */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
     /**
-     * A list of Tags.
+     * The tags to attach to the profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-tags)
      *
-     * @param tags A list of Tags.
+     * @param tags The tags to attach to the profile.
      */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)

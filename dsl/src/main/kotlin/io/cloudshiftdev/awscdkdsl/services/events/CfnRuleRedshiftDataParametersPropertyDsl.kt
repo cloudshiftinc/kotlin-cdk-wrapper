@@ -29,10 +29,10 @@ import software.amazon.awscdk.services.events.CfnRule
  * RedshiftDataParametersProperty redshiftDataParametersProperty =
  * RedshiftDataParametersProperty.builder()
  * .database("database")
- * .sql("sql")
  * // the properties below are optional
  * .dbUser("dbUser")
  * .secretManagerArn("secretManagerArn")
+ * .sql("sql")
  * .statementName("statementName")
  * .withEvent(false)
  * .build();

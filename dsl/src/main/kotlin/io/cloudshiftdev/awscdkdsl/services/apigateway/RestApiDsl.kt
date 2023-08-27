@@ -21,6 +21,7 @@ import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.apigateway.ApiKeySourceType
 import software.amazon.awscdk.services.apigateway.CorsOptions
@@ -124,6 +125,21 @@ public class RestApiDsl(
      */
     public fun cloudWatchRole(cloudWatchRole: Boolean) {
         cdkBuilder.cloudWatchRole(cloudWatchRole)
+    }
+
+    /**
+     * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
+     * application.
+     *
+     * Requires `cloudWatchRole` to be enabled.
+     *
+     * Default: - RemovalPolicy.RETAIN
+     *
+     * @param cloudWatchRoleRemovalPolicy The removal policy applied to the AWS CloudWatch role when
+     *   this resource is removed from the application.
+     */
+    public fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
+        cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy)
     }
 
     /**

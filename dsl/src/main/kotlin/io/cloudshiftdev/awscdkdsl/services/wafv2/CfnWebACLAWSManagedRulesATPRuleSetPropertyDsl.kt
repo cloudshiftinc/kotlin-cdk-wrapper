@@ -72,12 +72,12 @@ public class CfnWebACLAWSManagedRulesATPRuleSetPropertyDsl {
     private val cdkBuilder: CfnWebACL.AWSManagedRulesATPRuleSetProperty.Builder =
         CfnWebACL.AWSManagedRulesATPRuleSetProperty.builder()
 
-    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
+    /** @param enableRegexInPath Allow the use of regular expressions in the login page path. */
     public fun enableRegexInPath(enableRegexInPath: Boolean) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }
 
-    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
+    /** @param enableRegexInPath Allow the use of regular expressions in the login page path. */
     public fun enableRegexInPath(enableRegexInPath: IResolvable) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }

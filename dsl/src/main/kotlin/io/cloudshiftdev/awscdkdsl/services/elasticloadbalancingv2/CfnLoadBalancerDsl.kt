@@ -166,24 +166,26 @@ public class CfnLoadBalancerDsl(
     }
 
     /**
-     * [Application Load Balancers] The IDs of the security groups for the load balancer.
+     * [Application Load Balancers and Network Load Balancers] The IDs of the security groups for
+     * the load balancer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-securitygroups)
      *
-     * @param securityGroups [Application Load Balancers] The IDs of the security groups for the
-     *   load balancer.
+     * @param securityGroups [Application Load Balancers and Network Load Balancers] The IDs of the
+     *   security groups for the load balancer.
      */
     public fun securityGroups(vararg securityGroups: String) {
         _securityGroups.addAll(listOf(*securityGroups))
     }
 
     /**
-     * [Application Load Balancers] The IDs of the security groups for the load balancer.
+     * [Application Load Balancers and Network Load Balancers] The IDs of the security groups for
+     * the load balancer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-securitygroups)
      *
-     * @param securityGroups [Application Load Balancers] The IDs of the security groups for the
-     *   load balancer.
+     * @param securityGroups [Application Load Balancers and Network Load Balancers] The IDs of the
+     *   security groups for the load balancer.
      */
     public fun securityGroups(securityGroups: Collection<String>) {
         _securityGroups.addAll(securityGroups)

@@ -41,8 +41,8 @@ public class ChoicePropsDsl {
 
     /**
      * @param inputPath JSONPath expression to select part of the state to be the input to this
-     *   state. May also be the special value DISCARD, which will cause the effective input to be
-     *   the empty object {}.
+     *   state. May also be the special value JsonPath.DISCARD, which will cause the effective input
+     *   to be the empty object {}.
      */
     public fun inputPath(inputPath: String) {
         cdkBuilder.inputPath(inputPath)
@@ -50,8 +50,8 @@ public class ChoicePropsDsl {
 
     /**
      * @param outputPath JSONPath expression to select part of the state to be the output to this
-     *   state. May also be the special value DISCARD, which will cause the effective output to be
-     *   the empty object {}.
+     *   state. May also be the special value JsonPath.DISCARD, which will cause the effective
+     *   output to be the empty object {}.
      */
     public fun outputPath(outputPath: String) {
         cdkBuilder.outputPath(outputPath)

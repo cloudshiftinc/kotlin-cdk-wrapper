@@ -485,9 +485,22 @@ public class ProjectDsl(
     /**
      * Where to place the network interfaces within the VPC.
      *
-     * Only used if 'vpc' is supplied.
+     * To access AWS services, your CodeBuild project needs to be in one of the following types of
+     * subnets:
+     * * Subnets with access to the internet (of type PRIVATE_WITH_EGRESS).
+     * * Private subnets unconnected to the internet, but with
+     *   [VPC endpoints](https://docs.aws.amazon.com/codebuild/latest/userguide/use-vpc-endpoints-with-codebuild.html)
+     *   for the necessary services.
      *
-     * Default: - All private subnets.
+     * If you don't specify a subnet selection, the default behavior is to use PRIVATE_WITH_EGRESS
+     * subnets first if they exist, then PRIVATE_WITHOUT_EGRESS, and finally PUBLIC subnets. If your
+     * VPC doesn't have PRIVATE_WITH_EGRESS subnets but you need AWS service access, add VPC
+     * Endpoints to your private subnets.
+     *
+     * Default: - private subnets if available else public subnets
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html for
+     * more details.)
      *
      * @param subnetSelection Where to place the network interfaces within the VPC.
      */
@@ -500,9 +513,22 @@ public class ProjectDsl(
     /**
      * Where to place the network interfaces within the VPC.
      *
-     * Only used if 'vpc' is supplied.
+     * To access AWS services, your CodeBuild project needs to be in one of the following types of
+     * subnets:
+     * * Subnets with access to the internet (of type PRIVATE_WITH_EGRESS).
+     * * Private subnets unconnected to the internet, but with
+     *   [VPC endpoints](https://docs.aws.amazon.com/codebuild/latest/userguide/use-vpc-endpoints-with-codebuild.html)
+     *   for the necessary services.
      *
-     * Default: - All private subnets.
+     * If you don't specify a subnet selection, the default behavior is to use PRIVATE_WITH_EGRESS
+     * subnets first if they exist, then PRIVATE_WITHOUT_EGRESS, and finally PUBLIC subnets. If your
+     * VPC doesn't have PRIVATE_WITH_EGRESS subnets but you need AWS service access, add VPC
+     * Endpoints to your private subnets.
+     *
+     * Default: - private subnets if available else public subnets
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html for
+     * more details.)
      *
      * @param subnetSelection Where to place the network interfaces within the VPC.
      */

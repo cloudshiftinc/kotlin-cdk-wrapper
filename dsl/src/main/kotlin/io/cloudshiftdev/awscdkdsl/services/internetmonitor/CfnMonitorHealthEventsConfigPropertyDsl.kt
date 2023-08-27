@@ -13,6 +13,7 @@ package io.cloudshiftdev.awscdkdsl.services.internetmonitor
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.Number
+import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 
 /**
@@ -31,7 +32,17 @@ import software.amazon.awscdk.services.internetmonitor.CfnMonitor
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.internetmonitor.*;
  * HealthEventsConfigProperty healthEventsConfigProperty = HealthEventsConfigProperty.builder()
+ * .availabilityLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+ * .healthScoreThreshold(123)
+ * .minTrafficImpact(123)
+ * .status("status")
+ * .build())
  * .availabilityScoreThreshold(123)
+ * .performanceLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+ * .healthScoreThreshold(123)
+ * .minTrafficImpact(123)
+ * .status("status")
+ * .build())
  * .performanceScoreThreshold(123)
  * .build();
  * ```
@@ -44,17 +55,59 @@ public class CfnMonitorHealthEventsConfigPropertyDsl {
         CfnMonitor.HealthEventsConfigProperty.builder()
 
     /**
+     * @param availabilityLocalHealthEventsConfig The configuration that determines the threshold
+     *   and other conditions for when Internet Monitor creates a health event for a local
+     *   availability issue.
+     */
+    public fun availabilityLocalHealthEventsConfig(
+        availabilityLocalHealthEventsConfig: IResolvable
+    ) {
+        cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig)
+    }
+
+    /**
+     * @param availabilityLocalHealthEventsConfig The configuration that determines the threshold
+     *   and other conditions for when Internet Monitor creates a health event for a local
+     *   availability issue.
+     */
+    public fun availabilityLocalHealthEventsConfig(
+        availabilityLocalHealthEventsConfig: CfnMonitor.LocalHealthEventsConfigProperty
+    ) {
+        cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig)
+    }
+
+    /**
      * @param availabilityScoreThreshold The health event threshold percentage set for availability
-     *   scores. When the global availability score is at or below this percentage, Internet Monitor
-     *   creates a health event.
+     *   scores. When the overall availability score is at or below this percentage, Internet
+     *   Monitor creates a health event.
      */
     public fun availabilityScoreThreshold(availabilityScoreThreshold: Number) {
         cdkBuilder.availabilityScoreThreshold(availabilityScoreThreshold)
     }
 
     /**
+     * @param performanceLocalHealthEventsConfig The configuration that determines the threshold and
+     *   other conditions for when Internet Monitor creates a health event for a local performance
+     *   issue.
+     */
+    public fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: IResolvable) {
+        cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig)
+    }
+
+    /**
+     * @param performanceLocalHealthEventsConfig The configuration that determines the threshold and
+     *   other conditions for when Internet Monitor creates a health event for a local performance
+     *   issue.
+     */
+    public fun performanceLocalHealthEventsConfig(
+        performanceLocalHealthEventsConfig: CfnMonitor.LocalHealthEventsConfigProperty
+    ) {
+        cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig)
+    }
+
+    /**
      * @param performanceScoreThreshold The health event threshold percentage set for performance
-     *   scores. When the global performance score is at or below this percentage, Internet Monitor
+     *   scores. When the overall performance score is at or below this percentage, Internet Monitor
      *   creates a health event.
      */
     public fun performanceScoreThreshold(performanceScoreThreshold: Number) {

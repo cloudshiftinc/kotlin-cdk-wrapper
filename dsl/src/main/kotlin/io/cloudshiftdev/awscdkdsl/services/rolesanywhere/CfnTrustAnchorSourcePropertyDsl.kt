@@ -17,7 +17,7 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor
 
 /**
- * Object representing the TrustAnchor type and its related certificate data.
+ * The trust anchor type and its related certificate data.
  *
  * Example:
  * ```
@@ -40,23 +40,21 @@ public class CfnTrustAnchorSourcePropertyDsl {
     private val cdkBuilder: CfnTrustAnchor.SourceProperty.Builder =
         CfnTrustAnchor.SourceProperty.builder()
 
-    /**
-     * @param sourceData A union object representing the data field of the TrustAnchor depending on
-     *   its type.
-     */
+    /** @param sourceData The data field of the trust anchor depending on its type. */
     public fun sourceData(sourceData: IResolvable) {
         cdkBuilder.sourceData(sourceData)
     }
 
-    /**
-     * @param sourceData A union object representing the data field of the TrustAnchor depending on
-     *   its type.
-     */
+    /** @param sourceData The data field of the trust anchor depending on its type. */
     public fun sourceData(sourceData: CfnTrustAnchor.SourceDataProperty) {
         cdkBuilder.sourceData(sourceData)
     }
 
-    /** @param sourceType The type of the TrustAnchor. */
+    /**
+     * @param sourceType The type of the TrustAnchor.
+     *
+     * `AWS_ACM_PCA` is not an allowed value in your region.
+     */
     public fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
     }

@@ -57,7 +57,7 @@ public class CatchPropsDsl {
 
     /**
      * @param resultPath JSONPath expression to indicate where to inject the error data. May also be
-     *   the special value DISCARD, which will cause the error data to be discarded.
+     *   the special value JsonPath.DISCARD, which will cause the error data to be discarded.
      */
     public fun resultPath(resultPath: String) {
         cdkBuilder.resultPath(resultPath)

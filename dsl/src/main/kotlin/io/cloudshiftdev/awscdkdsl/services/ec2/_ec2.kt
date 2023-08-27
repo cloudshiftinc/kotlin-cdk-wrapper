@@ -8903,12 +8903,19 @@ public object ec2 {
      * .subnetId("subnetId")
      * // the properties below are optional
      * .description("description")
-     * .enablePrimaryIpv6(false)
      * .groupSet(List.of("groupSet"))
      * .interfaceType("interfaceType")
+     * .ipv4PrefixCount(123)
+     * .ipv4Prefixes(List.of(Ipv4PrefixSpecificationProperty.builder()
+     * .ipv4Prefix("ipv4Prefix")
+     * .build()))
      * .ipv6AddressCount(123)
      * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
      * .ipv6Address("ipv6Address")
+     * .build()))
+     * .ipv6PrefixCount(123)
+     * .ipv6Prefixes(List.of(Ipv6PrefixSpecificationProperty.builder()
+     * .ipv6Prefix("ipv6Prefix")
      * .build()))
      * .privateIpAddress("privateIpAddress")
      * .privateIpAddresses(List.of(PrivateIpAddressSpecificationProperty.builder()
@@ -9021,6 +9028,54 @@ public object ec2 {
     }
 
     /**
+     * Describes an IPv4 prefix.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * Ipv4PrefixSpecificationProperty ipv4PrefixSpecificationProperty =
+     * Ipv4PrefixSpecificationProperty.builder()
+     * .ipv4Prefix("ipv4Prefix")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv4prefixspecification.html)
+     */
+    public inline fun cfnNetworkInterfaceIpv4PrefixSpecificationProperty(
+        block: CfnNetworkInterfaceIpv4PrefixSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnNetworkInterface.Ipv4PrefixSpecificationProperty {
+        val builder = CfnNetworkInterfaceIpv4PrefixSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Describes the IPv6 prefix.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ec2.*;
+     * Ipv6PrefixSpecificationProperty ipv6PrefixSpecificationProperty =
+     * Ipv6PrefixSpecificationProperty.builder()
+     * .ipv6Prefix("ipv6Prefix")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv6prefixspecification.html)
+     */
+    public inline fun cfnNetworkInterfaceIpv6PrefixSpecificationProperty(
+        block: CfnNetworkInterfaceIpv6PrefixSpecificationPropertyDsl.() -> Unit = {}
+    ): CfnNetworkInterface.Ipv6PrefixSpecificationProperty {
+        val builder = CfnNetworkInterfaceIpv6PrefixSpecificationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Specifies a permission for an Amazon EC2 network interface.
      *
      * For example, you can grant an AWS authorized partner account permission to attach the
@@ -9114,12 +9169,19 @@ public object ec2 {
      * .subnetId("subnetId")
      * // the properties below are optional
      * .description("description")
-     * .enablePrimaryIpv6(false)
      * .groupSet(List.of("groupSet"))
      * .interfaceType("interfaceType")
+     * .ipv4PrefixCount(123)
+     * .ipv4Prefixes(List.of(Ipv4PrefixSpecificationProperty.builder()
+     * .ipv4Prefix("ipv4Prefix")
+     * .build()))
      * .ipv6AddressCount(123)
      * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
      * .ipv6Address("ipv6Address")
+     * .build()))
+     * .ipv6PrefixCount(123)
+     * .ipv6Prefixes(List.of(Ipv6PrefixSpecificationProperty.builder()
+     * .ipv6Prefix("ipv6Prefix")
      * .build()))
      * .privateIpAddress("privateIpAddress")
      * .privateIpAddresses(List.of(PrivateIpAddressSpecificationProperty.builder()

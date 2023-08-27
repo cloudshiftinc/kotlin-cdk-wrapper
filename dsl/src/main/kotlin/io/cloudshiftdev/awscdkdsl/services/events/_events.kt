@@ -1402,10 +1402,10 @@ public object events {
      * .build())
      * .redshiftDataParameters(RedshiftDataParametersProperty.builder()
      * .database("database")
-     * .sql("sql")
      * // the properties below are optional
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
+     * .sql("sql")
      * .statementName("statementName")
      * .withEvent(false)
      * .build())
@@ -1935,10 +1935,10 @@ public object events {
      * .build())
      * .redshiftDataParameters(RedshiftDataParametersProperty.builder()
      * .database("database")
-     * .sql("sql")
      * // the properties below are optional
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
+     * .sql("sql")
      * .statementName("statementName")
      * .withEvent(false)
      * .build())
@@ -1986,10 +1986,10 @@ public object events {
      * RedshiftDataParametersProperty redshiftDataParametersProperty =
      * RedshiftDataParametersProperty.builder()
      * .database("database")
-     * .sql("sql")
      * // the properties below are optional
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
+     * .sql("sql")
      * .statementName("statementName")
      * .withEvent(false)
      * .build();
@@ -2285,10 +2285,10 @@ public object events {
      * .build())
      * .redshiftDataParameters(RedshiftDataParametersProperty.builder()
      * .database("database")
-     * .sql("sql")
      * // the properties below are optional
      * .dbUser("dbUser")
      * .secretManagerArn("secretManagerArn")
+     * .sql("sql")
      * .statementName("statementName")
      * .withEvent(false)
      * .build())

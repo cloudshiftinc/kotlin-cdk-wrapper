@@ -17,10 +17,14 @@ import software.amazon.awscdk.services.mediatailor.CfnChannel
 import software.amazon.awscdk.services.mediatailor.CfnChannelPolicy
 import software.amazon.awscdk.services.mediatailor.CfnChannelPolicyProps
 import software.amazon.awscdk.services.mediatailor.CfnChannelProps
+import software.amazon.awscdk.services.mediatailor.CfnLiveSource
+import software.amazon.awscdk.services.mediatailor.CfnLiveSourceProps
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps
 import software.amazon.awscdk.services.mediatailor.CfnSourceLocation
 import software.amazon.awscdk.services.mediatailor.CfnSourceLocationProps
+import software.amazon.awscdk.services.mediatailor.CfnVodSource
+import software.amazon.awscdk.services.mediatailor.CfnVodSourceProps
 import software.constructs.Construct
 
 public object mediatailor {
@@ -306,6 +310,102 @@ public object mediatailor {
         block: CfnChannelSlateSourcePropertyDsl.() -> Unit = {}
     ): CfnChannel.SlateSourceProperty {
         val builder = CfnChannelSlateSourcePropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Definition of AWS::MediaTailor::LiveSource Resource Type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnLiveSource cfnLiveSource = CfnLiveSource.Builder.create(this, "MyCfnLiveSource")
+     * .httpPackageConfigurations(List.of(HttpPackageConfigurationProperty.builder()
+     * .path("path")
+     * .sourceGroup("sourceGroup")
+     * .type("type")
+     * .build()))
+     * .liveSourceName("liveSourceName")
+     * .sourceLocationName("sourceLocationName")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-livesource.html)
+     */
+    public inline fun cfnLiveSource(
+        scope: Construct,
+        id: String,
+        block: CfnLiveSourceDsl.() -> Unit = {},
+    ): CfnLiveSource {
+        val builder = CfnLiveSourceDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The HTTP package configuration properties for the requested VOD source.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * HttpPackageConfigurationProperty httpPackageConfigurationProperty =
+     * HttpPackageConfigurationProperty.builder()
+     * .path("path")
+     * .sourceGroup("sourceGroup")
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-livesource-httppackageconfiguration.html)
+     */
+    public inline fun cfnLiveSourceHttpPackageConfigurationProperty(
+        block: CfnLiveSourceHttpPackageConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnLiveSource.HttpPackageConfigurationProperty {
+        val builder = CfnLiveSourceHttpPackageConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnLiveSource`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnLiveSourceProps cfnLiveSourceProps = CfnLiveSourceProps.builder()
+     * .httpPackageConfigurations(List.of(HttpPackageConfigurationProperty.builder()
+     * .path("path")
+     * .sourceGroup("sourceGroup")
+     * .type("type")
+     * .build()))
+     * .liveSourceName("liveSourceName")
+     * .sourceLocationName("sourceLocationName")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-livesource.html)
+     */
+    public inline fun cfnLiveSourceProps(
+        block: CfnLiveSourcePropsDsl.() -> Unit = {}
+    ): CfnLiveSourceProps {
+        val builder = CfnLiveSourcePropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -880,6 +980,102 @@ public object mediatailor {
         block: CfnSourceLocationSegmentDeliveryConfigurationPropertyDsl.() -> Unit = {}
     ): CfnSourceLocation.SegmentDeliveryConfigurationProperty {
         val builder = CfnSourceLocationSegmentDeliveryConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Definition of AWS::MediaTailor::VodSource Resource Type.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnVodSource cfnVodSource = CfnVodSource.Builder.create(this, "MyCfnVodSource")
+     * .httpPackageConfigurations(List.of(HttpPackageConfigurationProperty.builder()
+     * .path("path")
+     * .sourceGroup("sourceGroup")
+     * .type("type")
+     * .build()))
+     * .sourceLocationName("sourceLocationName")
+     * .vodSourceName("vodSourceName")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html)
+     */
+    public inline fun cfnVodSource(
+        scope: Construct,
+        id: String,
+        block: CfnVodSourceDsl.() -> Unit = {},
+    ): CfnVodSource {
+        val builder = CfnVodSourceDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The HTTP package configuration properties for the requested VOD source.</p>.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * HttpPackageConfigurationProperty httpPackageConfigurationProperty =
+     * HttpPackageConfigurationProperty.builder()
+     * .path("path")
+     * .sourceGroup("sourceGroup")
+     * .type("type")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-vodsource-httppackageconfiguration.html)
+     */
+    public inline fun cfnVodSourceHttpPackageConfigurationProperty(
+        block: CfnVodSourceHttpPackageConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnVodSource.HttpPackageConfigurationProperty {
+        val builder = CfnVodSourceHttpPackageConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnVodSource`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.mediatailor.*;
+     * CfnVodSourceProps cfnVodSourceProps = CfnVodSourceProps.builder()
+     * .httpPackageConfigurations(List.of(HttpPackageConfigurationProperty.builder()
+     * .path("path")
+     * .sourceGroup("sourceGroup")
+     * .type("type")
+     * .build()))
+     * .sourceLocationName("sourceLocationName")
+     * .vodSourceName("vodSourceName")
+     * // the properties below are optional
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-vodsource.html)
+     */
+    public inline fun cfnVodSourceProps(
+        block: CfnVodSourcePropsDsl.() -> Unit = {}
+    ): CfnVodSourceProps {
+        val builder = CfnVodSourcePropsDsl()
         builder.apply(block)
         return builder.build()
     }

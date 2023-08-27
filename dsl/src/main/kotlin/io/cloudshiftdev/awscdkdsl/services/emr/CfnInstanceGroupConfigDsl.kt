@@ -104,6 +104,7 @@ import software.constructs.Construct
  * .volumeType("volumeType")
  * // the properties below are optional
  * .iops(123)
+ * .throughput(123)
  * .build())
  * // the properties below are optional
  * .volumesPerInstance(123)

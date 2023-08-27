@@ -113,6 +113,8 @@ public class CfnAlarmDsl(
      *
      * The default is TRUE.
      *
+     * Default: - true
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-actionsenabled)
      *
      * @param actionsEnabled Indicates whether actions should be executed during any changes to the
@@ -126,6 +128,8 @@ public class CfnAlarmDsl(
      * Indicates whether actions should be executed during any changes to the alarm state.
      *
      * The default is TRUE.
+     *
+     * Default: - true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-actionsenabled)
      *

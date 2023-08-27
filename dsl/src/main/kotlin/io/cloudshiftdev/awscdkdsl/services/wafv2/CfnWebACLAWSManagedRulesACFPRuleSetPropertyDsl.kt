@@ -18,7 +18,10 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 /**
- * Not currently supported by AWS CloudFormation .
+ * Details for your use of the account creation fraud prevention managed rule group,
+ * `AWSManagedRulesACFPRuleSet` .
+ *
+ * This configuration is used in `ManagedRuleGroupConfig` .
  *
  * Example:
  * ```
@@ -80,42 +83,95 @@ public class CfnWebACLAWSManagedRulesACFPRuleSetPropertyDsl {
     private val cdkBuilder: CfnWebACL.AWSManagedRulesACFPRuleSetProperty.Builder =
         CfnWebACL.AWSManagedRulesACFPRuleSetProperty.builder()
 
-    /** @param creationPath Not currently supported by AWS CloudFormation . */
+    /**
+     * @param creationPath The path of the account creation endpoint for your application. This is
+     *   the page on your website that accepts the completed registration form for a new user. This
+     *   page must accept `POST` requests.
+     *
+     * For example, for the URL `https://example.com/web/signup` , you would provide the path
+     * `/web/signup` .
+     */
     public fun creationPath(creationPath: String) {
         cdkBuilder.creationPath(creationPath)
     }
 
-    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
+    /**
+     * @param enableRegexInPath Allow the use of regular expressions in the registration page path
+     *   and the account creation path.
+     */
     public fun enableRegexInPath(enableRegexInPath: Boolean) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }
 
-    /** @param enableRegexInPath Not currently supported by AWS CloudFormation . */
+    /**
+     * @param enableRegexInPath Allow the use of regular expressions in the registration page path
+     *   and the account creation path.
+     */
     public fun enableRegexInPath(enableRegexInPath: IResolvable) {
         cdkBuilder.enableRegexInPath(enableRegexInPath)
     }
 
-    /** @param registrationPagePath Not currently supported by AWS CloudFormation . */
+    /**
+     * @param registrationPagePath The path of the account registration endpoint for your
+     *   application.
+     *
+     * This is the page on your website that presents the registration form to new users.
+     *
+     * This page must accept `GET` text/html requests.
+     *
+     * For example, for the URL `https://example.com/web/register` , you would provide the path
+     * `/web/register` .
+     */
     public fun registrationPagePath(registrationPagePath: String) {
         cdkBuilder.registrationPagePath(registrationPagePath)
     }
 
-    /** @param requestInspection Not currently supported by AWS CloudFormation . */
+    /**
+     * @param requestInspection The criteria for inspecting account creation requests, used by the
+     *   ACFP rule group to validate and track account creation attempts.
+     */
     public fun requestInspection(requestInspection: IResolvable) {
         cdkBuilder.requestInspection(requestInspection)
     }
 
-    /** @param requestInspection Not currently supported by AWS CloudFormation . */
+    /**
+     * @param requestInspection The criteria for inspecting account creation requests, used by the
+     *   ACFP rule group to validate and track account creation attempts.
+     */
     public fun requestInspection(requestInspection: CfnWebACL.RequestInspectionACFPProperty) {
         cdkBuilder.requestInspection(requestInspection)
     }
 
-    /** @param responseInspection Not currently supported by AWS CloudFormation . */
+    /**
+     * @param responseInspection The criteria for inspecting responses to account creation requests,
+     *   used by the ACFP rule group to track account creation success rates.
+     *
+     * Response inspection is available only in web ACLs that protect Amazon CloudFront
+     * distributions.
+     *
+     * The ACFP rule group evaluates the responses that your protected resources send back to client
+     * account creation attempts, keeping count of successful and failed attempts from each IP
+     * address and client session. Using this information, the rule group labels and mitigates
+     * requests from client sessions and IP addresses that have had too many successful account
+     * creation attempts in a short amount of time.
+     */
     public fun responseInspection(responseInspection: IResolvable) {
         cdkBuilder.responseInspection(responseInspection)
     }
 
-    /** @param responseInspection Not currently supported by AWS CloudFormation . */
+    /**
+     * @param responseInspection The criteria for inspecting responses to account creation requests,
+     *   used by the ACFP rule group to track account creation success rates.
+     *
+     * Response inspection is available only in web ACLs that protect Amazon CloudFront
+     * distributions.
+     *
+     * The ACFP rule group evaluates the responses that your protected resources send back to client
+     * account creation attempts, keeping count of successful and failed attempts from each IP
+     * address and client session. Using this information, the rule group labels and mitigates
+     * requests from client sessions and IP addresses that have had too many successful account
+     * creation attempts in a short amount of time.
+     */
     public fun responseInspection(responseInspection: CfnWebACL.ResponseInspectionProperty) {
         cdkBuilder.responseInspection(responseInspection)
     }

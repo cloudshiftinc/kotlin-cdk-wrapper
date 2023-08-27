@@ -87,7 +87,7 @@ public class CfnReplicationConfigComputeConfigPropertyDsl {
     /**
      * @param maxCapacityUnits Specifies the maximum value of the AWS DMS capacity units (DCUs) for
      *   which a given AWS DMS Serverless replication can be provisioned. A single DCU is 2GB of
-     *   RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values includes 1, 2,
+     *   RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values includes 1, 2,
      *   4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for
      *   AWS DMS Serverless is 384. The `MaxCapacityUnits` parameter is the only DCU parameter you
      *   are required to specify.
@@ -99,7 +99,7 @@ public class CfnReplicationConfigComputeConfigPropertyDsl {
     /**
      * @param minCapacityUnits Specifies the minimum value of the AWS DMS capacity units (DCUs) for
      *   which a given AWS DMS Serverless replication can be provisioned. A single DCU is 2GB of
-     *   RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values includes 1, 2,
+     *   RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values includes 1, 2,
      *   4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify
      *   for AWS DMS Serverless is 1. You don't have to specify a value for the `MinCapacityUnits`
      *   parameter. If you don't set this value, AWS DMS scans the current activity of available

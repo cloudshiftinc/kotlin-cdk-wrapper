@@ -157,10 +157,10 @@ import software.constructs.Construct
  * .build())
  * .redshiftDataParameters(RedshiftDataParametersProperty.builder()
  * .database("database")
- * .sql("sql")
  * // the properties below are optional
  * .dbUser("dbUser")
  * .secretManagerArn("secretManagerArn")
+ * .sql("sql")
  * .statementName("statementName")
  * .withEvent(false)
  * .build())

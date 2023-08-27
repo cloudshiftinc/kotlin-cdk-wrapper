@@ -23,6 +23,8 @@ import software.amazon.awscdk.services.internetmonitor.CfnMonitor
  * store the measurements, and the delivery status. The delivery status is `ENABLED` if you choose
  * to deliver internet measurements to S3 logs, and `DISABLED` otherwise.
  *
+ * The measurements are also published to Amazon CloudWatch Logs.
+ *
  * Example:
  * ```
  * // The code below shows an example of how to instantiate this type.

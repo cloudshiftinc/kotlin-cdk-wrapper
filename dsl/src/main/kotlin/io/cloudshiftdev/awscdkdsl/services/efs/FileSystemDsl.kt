@@ -40,13 +40,15 @@ import software.constructs.Construct
  *
  * Example:
  * ```
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role = Role.Builder.create(this, "ClientRole")
+ * .assumedBy(new AnyPrincipal())
+ * .build();
  * FileSystem fileSystem = FileSystem.Builder.create(this, "MyEfsFileSystem")
  * .vpc(new Vpc(this, "VPC"))
- * .lifecyclePolicy(LifecyclePolicy.AFTER_14_DAYS) // files are not transitioned to infrequent
- * access (IA) storage by default
- * .performanceMode(PerformanceMode.GENERAL_PURPOSE) // default
- * .outOfInfrequentAccessPolicy(OutOfInfrequentAccessPolicy.AFTER_1_ACCESS)
+ * .allowAnonymousAccess(true)
  * .build();
+ * fileSystem.grantRead(role);
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
@@ -57,6 +59,19 @@ public class FileSystemDsl(
     id: String,
 ) {
     private val cdkBuilder: FileSystem.Builder = FileSystem.Builder.create(scope, id)
+
+    /**
+     * Allow access from anonymous client that doesn't use IAM authentication.
+     *
+     * Default: false when using `grantRead`, `grantWrite`, `grantRootAccess` or set
+     * `@aws-cdk/aws-efs:denyAnonymousAccess` feature flag, otherwise true
+     *
+     * @param allowAnonymousAccess Allow access from anonymous client that doesn't use IAM
+     *   authentication.
+     */
+    public fun allowAnonymousAccess(allowAnonymousAccess: Boolean) {
+        cdkBuilder.allowAnonymousAccess(allowAnonymousAccess)
+    }
 
     /**
      * Whether to enable automatic backups for the file system.

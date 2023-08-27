@@ -36,7 +36,9 @@ public class CfnPipeDeadLetterConfigPropertyDsl {
         CfnPipe.DeadLetterConfigProperty.builder()
 
     /**
-     * @param arn The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     * @param arn The ARN of the specified target for the dead-letter queue. For Amazon Kinesis
+     *   stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon SQS
+     *   queue ARN.
      */
     public fun arn(arn: String) {
         cdkBuilder.arn(arn)

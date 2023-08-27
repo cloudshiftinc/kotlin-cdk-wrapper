@@ -28,19 +28,14 @@ import software.amazon.awscdk.services.opensearchservice.EbsOptions
  * Example:
  * ```
  * Domain domain = Domain.Builder.create(this, "Domain")
- * .version(EngineVersion.OPENSEARCH_1_3)
+ * .version(EngineVersion.OPENSEARCH_1_0)
  * .ebs(EbsOptions.builder()
- * .volumeSize(10)
- * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD_GP3)
+ * .volumeSize(100)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD)
  * .build())
- * .zoneAwareness(ZoneAwarenessConfig.builder()
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
  * .enabled(true)
- * .availabilityZoneCount(3)
- * .build())
- * .capacity(CapacityConfig.builder()
- * .multiAzWithStandbyEnabled(true)
- * .masterNodes(3)
- * .dataNodes(3)
  * .build())
  * .build();
  * ```
@@ -59,10 +54,18 @@ public class EbsOptionsDsl {
 
     /**
      * @param iops The number of I/O operations per second (IOPS) that the volume supports. This
-     *   property applies only to the Provisioned IOPS (SSD) EBS volume type.
+     *   property applies only to the gp3 and Provisioned IOPS (SSD) EBS volume type.
      */
     public fun iops(iops: Number) {
         cdkBuilder.iops(iops)
+    }
+
+    /**
+     * @param throughput The throughput (in MiB/s) of the EBS volumes attached to data nodes. This
+     *   property applies only to the gp3 volume type.
+     */
+    public fun throughput(throughput: Number) {
+        cdkBuilder.throughput(throughput)
     }
 
     /**

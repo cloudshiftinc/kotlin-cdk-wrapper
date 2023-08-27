@@ -100,8 +100,7 @@ public class CfnTopicTopicColumnPropertyDsl {
 
     /**
      * @param aggregation The type of aggregation that is performed on the column data when it's
-     *   queried. Valid values for this structure are `SUM` , `MAX` , `MIN` , `COUNT` ,
-     *   `DISTINCT_COUNT` , and `AVERAGE` .
+     *   queried.
      */
     public fun aggregation(aggregation: String) {
         cdkBuilder.aggregation(aggregation)

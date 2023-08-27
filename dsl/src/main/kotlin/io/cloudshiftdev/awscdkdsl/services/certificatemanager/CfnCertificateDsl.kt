@@ -63,6 +63,7 @@ import software.constructs.Construct
  * .hostedZoneId("hostedZoneId")
  * .validationDomain("validationDomain")
  * .build()))
+ * .keyAlgorithm("keyAlgorithm")
  * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -201,6 +202,15 @@ public class CfnCertificateDsl(
      */
     public fun domainValidationOptions(domainValidationOptions: IResolvable) {
         cdkBuilder.domainValidationOptions(domainValidationOptions)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-keyalgorithm)
+     *
+     * @param keyAlgorithm
+     */
+    public fun keyAlgorithm(keyAlgorithm: String) {
+        cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
     /**

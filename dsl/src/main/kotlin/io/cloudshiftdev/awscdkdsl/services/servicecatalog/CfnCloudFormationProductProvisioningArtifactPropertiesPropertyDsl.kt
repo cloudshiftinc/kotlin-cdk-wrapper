@@ -121,8 +121,6 @@ public class CfnCloudFormationProductProvisioningArtifactPropertiesPropertyDsl {
     /**
      * @param type The type of provisioning artifact.
      * * `CLOUD_FORMATION_TEMPLATE` - AWS CloudFormation template
-     * * `MARKETPLACE_AMI` - AWS Marketplace AMI
-     * * `MARKETPLACE_CAR` - AWS Marketplace Clusters and AWS Resources
      * * `TERRAFORM_OPEN_SOURCE` - Terraform open source configuration file
      */
     public fun type(type: String) {

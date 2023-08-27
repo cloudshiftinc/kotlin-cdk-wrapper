@@ -200,6 +200,9 @@ public object gamelift {
     }
 
     /**
+     * The location in Amazon S3 where build or script files are stored for access by Amazon
+     * GameLift.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

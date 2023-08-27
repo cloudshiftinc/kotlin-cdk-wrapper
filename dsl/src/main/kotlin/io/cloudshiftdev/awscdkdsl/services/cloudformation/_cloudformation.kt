@@ -895,6 +895,9 @@ public object cloudformation {
      * In the stack set, you specify the template to use, in addition to any parameters and
      * capabilities that the template requires.
      *
+     * Run deployments to nested StackSets from the parent stack, not directly through the StackSet
+     * API.
+     *
      * Example:
      * ```
      * // The code below shows an example of how to instantiate this type.

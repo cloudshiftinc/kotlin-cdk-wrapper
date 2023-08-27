@@ -4706,6 +4706,7 @@ public object apigateway {
      * PolicyDocument policyDocument;
      * RestApiBaseProps restApiBaseProps = RestApiBaseProps.builder()
      * .cloudWatchRole(false)
+     * .cloudWatchRoleRemovalPolicy(RemovalPolicy.DESTROY)
      * .deploy(false)
      * .deployOptions(StageOptions.builder()
      * .accessLogDestination(accessLogDestination)

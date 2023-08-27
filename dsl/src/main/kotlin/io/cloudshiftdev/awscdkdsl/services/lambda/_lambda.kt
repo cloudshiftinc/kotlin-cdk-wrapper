@@ -3305,6 +3305,7 @@ public object lambda {
      * import software.amazon.awscdk.services.lambda.*;
      * LambdaRuntimeProps lambdaRuntimeProps = LambdaRuntimeProps.builder()
      * .bundlingDockerImage("bundlingDockerImage")
+     * .isVariable(false)
      * .supportsCodeGuruProfiling(false)
      * .supportsInlineCode(false)
      * .build();

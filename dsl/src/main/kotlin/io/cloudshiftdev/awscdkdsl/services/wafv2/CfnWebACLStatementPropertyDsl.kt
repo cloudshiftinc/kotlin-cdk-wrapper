@@ -200,9 +200,10 @@ public class CfnWebACLStatementPropertyDsl {
      * or `OrStatement` . It can only be referenced as a top-level statement within a rule.
      *
      * You are charged additional fees when you use the AWS WAF Bot Control managed rule group
-     * `AWSManagedRulesBotControlRuleSet` or the AWS WAF Fraud Control account takeover prevention
-     * (ATP) managed rule group `AWSManagedRulesATPRuleSet` . For more information, see
-     * [AWS WAF Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     * `AWSManagedRulesBotControlRuleSet` , the AWS WAF Fraud Control account takeover prevention
+     * (ATP) managed rule group `AWSManagedRulesATPRuleSet` , or the AWS WAF Fraud Control account
+     * creation fraud prevention (ACFP) managed rule group `AWSManagedRulesACFPRuleSet` . For more
+     * information, see [AWS WAF Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      */
     public fun managedRuleGroupStatement(managedRuleGroupStatement: IResolvable) {
         cdkBuilder.managedRuleGroupStatement(managedRuleGroupStatement)
@@ -218,9 +219,10 @@ public class CfnWebACLStatementPropertyDsl {
      * or `OrStatement` . It can only be referenced as a top-level statement within a rule.
      *
      * You are charged additional fees when you use the AWS WAF Bot Control managed rule group
-     * `AWSManagedRulesBotControlRuleSet` or the AWS WAF Fraud Control account takeover prevention
-     * (ATP) managed rule group `AWSManagedRulesATPRuleSet` . For more information, see
-     * [AWS WAF Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     * `AWSManagedRulesBotControlRuleSet` , the AWS WAF Fraud Control account takeover prevention
+     * (ATP) managed rule group `AWSManagedRulesATPRuleSet` , or the AWS WAF Fraud Control account
+     * creation fraud prevention (ACFP) managed rule group `AWSManagedRulesACFPRuleSet` . For more
+     * information, see [AWS WAF Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      */
     public fun managedRuleGroupStatement(
         managedRuleGroupStatement: CfnWebACL.ManagedRuleGroupStatementProperty

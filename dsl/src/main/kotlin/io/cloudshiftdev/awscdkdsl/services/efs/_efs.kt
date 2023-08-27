@@ -674,13 +674,15 @@ public object efs {
      *
      * Example:
      * ```
+     * import software.amazon.awscdk.services.iam.*;
+     * Role role = Role.Builder.create(this, "ClientRole")
+     * .assumedBy(new AnyPrincipal())
+     * .build();
      * FileSystem fileSystem = FileSystem.Builder.create(this, "MyEfsFileSystem")
      * .vpc(new Vpc(this, "VPC"))
-     * .lifecyclePolicy(LifecyclePolicy.AFTER_14_DAYS) // files are not transitioned to infrequent
-     * access (IA) storage by default
-     * .performanceMode(PerformanceMode.GENERAL_PURPOSE) // default
-     * .outOfInfrequentAccessPolicy(OutOfInfrequentAccessPolicy.AFTER_1_ACCESS)
+     * .allowAnonymousAccess(true)
      * .build();
+     * fileSystem.grantRead(role);
      * ```
      *
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
@@ -725,20 +727,14 @@ public object efs {
      * Example:
      * ```
      * import software.amazon.awscdk.services.iam.*;
-     * PolicyDocument myFileSystemPolicy = PolicyDocument.Builder.create()
-     * .statements(List.of(PolicyStatement.Builder.create()
-     * .actions(List.of("elasticfilesystem:ClientWrite", "elasticfilesystem:ClientMount"))
-     * .principals(List.of(new AccountRootPrincipal()))
-     * .resources(List.of("*"))
-     * .conditions(Map.of(
-     * "Bool", Map.of(
-     * "elasticfilesystem:AccessedViaMountTarget", "true")))
-     * .build()))
+     * Role role = Role.Builder.create(this, "ClientRole")
+     * .assumedBy(new AnyPrincipal())
      * .build();
      * FileSystem fileSystem = FileSystem.Builder.create(this, "MyEfsFileSystem")
      * .vpc(new Vpc(this, "VPC"))
-     * .fileSystemPolicy(myFileSystemPolicy)
+     * .allowAnonymousAccess(true)
      * .build();
+     * fileSystem.grantRead(role);
      * ```
      */
     public inline fun fileSystemProps(block: FileSystemPropsDsl.() -> Unit = {}): FileSystemProps {

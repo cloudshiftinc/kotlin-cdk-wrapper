@@ -466,6 +466,7 @@ public object ecr {
      * import software.amazon.awscdk.services.ecr.*;
      * Object repositoryPolicyText;
      * CfnRepository cfnRepository = CfnRepository.Builder.create(this, "MyCfnRepository")
+     * .emptyOnDelete(false)
      * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
      * .encryptionType("encryptionType")
      * // the properties below are optional
@@ -600,6 +601,7 @@ public object ecr {
      * import software.amazon.awscdk.services.ecr.*;
      * Object repositoryPolicyText;
      * CfnRepositoryProps cfnRepositoryProps = CfnRepositoryProps.builder()
+     * .emptyOnDelete(false)
      * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
      * .encryptionType("encryptionType")
      * // the properties below are optional

@@ -4570,6 +4570,7 @@ public object ecs {
      * .containerPort(123)
      * // the properties below are optional
      * .appProtocol(appProtocol)
+     * .containerPortRange("containerPortRange")
      * .hostPort(123)
      * .name("name")
      * .protocol(Protocol.TCP)
@@ -5737,6 +5738,7 @@ public object ecs {
      * .containerPort(123)
      * // the properties below are optional
      * .appProtocol(appProtocol)
+     * .containerPortRange("containerPortRange")
      * .hostPort(123)
      * .name("name")
      * .protocol(Protocol.TCP)
@@ -5835,6 +5837,7 @@ public object ecs {
      * .containerPort(123)
      * // the properties below are optional
      * .appProtocol(appProtocol)
+     * .containerPortRange("containerPortRange")
      * .hostPort(123)
      * .name("name")
      * .protocol(Protocol.TCP)
@@ -5932,6 +5935,7 @@ public object ecs {
      * .containerPort(123)
      * // the properties below are optional
      * .appProtocol(appProtocol)
+     * .containerPortRange("containerPortRange")
      * .hostPort(123)
      * .name("name")
      * .protocol(Protocol.TCP)
@@ -6515,6 +6519,7 @@ public object ecs {
      * .containerPort(123)
      * // the properties below are optional
      * .appProtocol(appProtocol)
+     * .containerPortRange("containerPortRange")
      * .hostPort(123)
      * .name("name")
      * .protocol(Protocol.TCP)
@@ -6536,30 +6541,11 @@ public object ecs {
      *
      * Example:
      * ```
-     * TaskDefinition taskDefinition;
-     * Cluster cluster;
-     * // Add a container to the task definition
-     * ContainerDefinition specificContainer = taskDefinition.addContainer("Container",
-     * ContainerDefinitionOptions.builder()
-     * .image(ContainerImage.fromRegistry("/aws/aws-example-app"))
-     * .memoryLimitMiB(2048)
+     * ContainerDefinition container;
+     * container.addPortMappings(PortMapping.builder()
+     * .containerPort(ContainerDefinition.CONTAINER_PORT_USE_RANGE)
+     * .containerPortRange("8080-8081")
      * .build());
-     * // Add a port mapping
-     * specificContainer.addPortMappings(PortMapping.builder()
-     * .containerPort(7600)
-     * .protocol(Protocol.TCP)
-     * .build());
-     * Ec2Service.Builder.create(this, "Service")
-     * .cluster(cluster)
-     * .taskDefinition(taskDefinition)
-     * .cloudMapOptions(CloudMapOptions.builder()
-     * // Create SRV records - useful for bridge networking
-     * .dnsRecordType(DnsRecordType.SRV)
-     * // Targets port TCP port 7600 `specificContainer`
-     * .container(specificContainer)
-     * .containerPort(7600)
-     * .build())
-     * .build();
      * ```
      */
     public inline fun portMapping(block: PortMappingDsl.() -> Unit = {}): PortMapping {
@@ -6816,6 +6802,7 @@ public object ecs {
      * .containerPort(123)
      * // the properties below are optional
      * .appProtocol(appProtocol)
+     * .containerPortRange("containerPortRange")
      * .hostPort(123)
      * .name("name")
      * .protocol(Protocol.TCP)

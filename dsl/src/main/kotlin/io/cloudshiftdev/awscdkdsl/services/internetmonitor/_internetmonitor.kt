@@ -45,7 +45,17 @@ public object internetmonitor {
      * .monitorName("monitorName")
      * // the properties below are optional
      * .healthEventsConfig(HealthEventsConfigProperty.builder()
+     * .availabilityLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+     * .healthScoreThreshold(123)
+     * .minTrafficImpact(123)
+     * .status("status")
+     * .build())
      * .availabilityScoreThreshold(123)
+     * .performanceLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+     * .healthScoreThreshold(123)
+     * .minTrafficImpact(123)
+     * .status("status")
+     * .build())
      * .performanceScoreThreshold(123)
      * .build())
      * .internetMeasurementsLogDelivery(InternetMeasurementsLogDeliveryProperty.builder()
@@ -96,7 +106,17 @@ public object internetmonitor {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.internetmonitor.*;
      * HealthEventsConfigProperty healthEventsConfigProperty = HealthEventsConfigProperty.builder()
+     * .availabilityLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+     * .healthScoreThreshold(123)
+     * .minTrafficImpact(123)
+     * .status("status")
+     * .build())
      * .availabilityScoreThreshold(123)
+     * .performanceLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+     * .healthScoreThreshold(123)
+     * .minTrafficImpact(123)
+     * .status("status")
+     * .build())
      * .performanceScoreThreshold(123)
      * .build();
      * ```
@@ -140,6 +160,46 @@ public object internetmonitor {
     }
 
     /**
+     * Configuration information that determines the threshold and other conditions for when
+     * Internet Monitor creates a health event for a local performance or availability issue, when
+     * scores cross a threshold for one or more city-networks.
+     *
+     * Defines the percentages, for performance scores or availability scores, that are the local
+     * thresholds for when Amazon CloudWatch Internet Monitor creates a health event. Also defines
+     * whether a local threshold is enabled or disabled, and the minimum percentage of overall
+     * traffic that must be impacted by an issue before Internet Monitor creates an event when a
+     * threshold is crossed for a local health score.
+     *
+     * If you don't set a local health event threshold, the default value is 60%.
+     *
+     * For more information, see
+     * [Change health event thresholds](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-overview.html#IMUpdateThresholdFromOverview)
+     * in the Internet Monitor section of the *Amazon CloudWatch User Guide* .
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.internetmonitor.*;
+     * LocalHealthEventsConfigProperty localHealthEventsConfigProperty =
+     * LocalHealthEventsConfigProperty.builder()
+     * .healthScoreThreshold(123)
+     * .minTrafficImpact(123)
+     * .status("status")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-internetmonitor-monitor-localhealtheventsconfig.html)
+     */
+    public inline fun cfnMonitorLocalHealthEventsConfigProperty(
+        block: CfnMonitorLocalHealthEventsConfigPropertyDsl.() -> Unit = {}
+    ): CfnMonitor.LocalHealthEventsConfigProperty {
+        val builder = CfnMonitorLocalHealthEventsConfigPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
      * Properties for defining a `CfnMonitor`.
      *
      * Example:
@@ -151,7 +211,17 @@ public object internetmonitor {
      * .monitorName("monitorName")
      * // the properties below are optional
      * .healthEventsConfig(HealthEventsConfigProperty.builder()
+     * .availabilityLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+     * .healthScoreThreshold(123)
+     * .minTrafficImpact(123)
+     * .status("status")
+     * .build())
      * .availabilityScoreThreshold(123)
+     * .performanceLocalHealthEventsConfig(LocalHealthEventsConfigProperty.builder()
+     * .healthScoreThreshold(123)
+     * .minTrafficImpact(123)
+     * .status("status")
+     * .build())
      * .performanceScoreThreshold(123)
      * .build())
      * .internetMeasurementsLogDelivery(InternetMeasurementsLogDeliveryProperty.builder()
@@ -189,6 +259,8 @@ public object internetmonitor {
      * The configuration includes the bucket name and (optionally) bucket prefix for the S3 bucket
      * to store the measurements, and the delivery status. The delivery status is `ENABLED` if you
      * choose to deliver internet measurements to S3 logs, and `DISABLED` otherwise.
+     *
+     * The measurements are also published to Amazon CloudWatch Logs.
      *
      * Example:
      * ```

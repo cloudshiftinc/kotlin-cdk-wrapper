@@ -568,8 +568,7 @@ public object sam {
      * .events(Map.of(
      * "eventsKey", EventSourceProperty.builder()
      * .properties(AlexaSkillEventProperty.builder()
-     * .variables(Map.of(
-     * "variablesKey", "variables"))
+     * .skillId("skillId")
      * .build())
      * .type("type")
      * .build()))
@@ -629,8 +628,7 @@ public object sam {
      * // The values are placeholders you should change.
      * import software.amazon.awscdk.services.sam.*;
      * AlexaSkillEventProperty alexaSkillEventProperty = AlexaSkillEventProperty.builder()
-     * .variables(Map.of(
-     * "variablesKey", "variables"))
+     * .skillId("skillId")
      * .build();
      * ```
      *
@@ -1152,8 +1150,7 @@ public object sam {
      * import software.amazon.awscdk.services.sam.*;
      * EventSourceProperty eventSourceProperty = EventSourceProperty.builder()
      * .properties(AlexaSkillEventProperty.builder()
-     * .variables(Map.of(
-     * "variablesKey", "variables"))
+     * .skillId("skillId")
      * .build())
      * .type("type")
      * .build();
@@ -1547,8 +1544,7 @@ public object sam {
      * .events(Map.of(
      * "eventsKey", EventSourceProperty.builder()
      * .properties(AlexaSkillEventProperty.builder()
-     * .variables(Map.of(
-     * "variablesKey", "variables"))
+     * .skillId("skillId")
      * .build())
      * .type("type")
      * .build()))

@@ -124,7 +124,7 @@ public class CodePipelineDsl(
      * Customize the CodeBuild projects created for this pipeline.
      *
      * Default: - All projects run non-privileged build, SMALL instance,
-     * LinuxBuildImage.STANDARD_6_0
+     * LinuxBuildImage.STANDARD_7_0
      *
      * @param codeBuildDefaults Customize the CodeBuild projects created for this pipeline.
      */
@@ -138,7 +138,7 @@ public class CodePipelineDsl(
      * Customize the CodeBuild projects created for this pipeline.
      *
      * Default: - All projects run non-privileged build, SMALL instance,
-     * LinuxBuildImage.STANDARD_6_0
+     * LinuxBuildImage.STANDARD_7_0
      *
      * @param codeBuildDefaults Customize the CodeBuild projects created for this pipeline.
      */

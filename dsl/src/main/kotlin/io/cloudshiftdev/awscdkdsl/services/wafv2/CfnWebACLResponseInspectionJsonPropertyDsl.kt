@@ -21,7 +21,8 @@ import software.amazon.awscdk.services.wafv2.CfnWebACL
  * Configures inspection of the response JSON.
  *
  * AWS WAF can inspect the first 65,536 bytes (64 KB) of the response JSON. This is part of the
- * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
+ * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` and
+ * `AWSManagedRulesACFPRuleSet` .
  *
  * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
  *
@@ -51,8 +52,9 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param failureValues Values for the specified identifier in the response JSON that indicate a
-     *   failed login attempt. To be counted as a failure, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   failed login or account creation attempt. To be counted as a failure, the value must be an
+     *   exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
      * JSON example: `"FailureValues": [ "False", "Failed" ]`
      */
@@ -62,8 +64,9 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param failureValues Values for the specified identifier in the response JSON that indicate a
-     *   failed login attempt. To be counted as a failure, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   failed login or account creation attempt. To be counted as a failure, the value must be an
+     *   exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
      * JSON example: `"FailureValues": [ "False", "Failed" ]`
      */
@@ -75,7 +78,8 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
      * @param identifier The identifier for the value to match against in the JSON. The identifier
      *   must be an exact match, including case.
      *
-     * JSON example: `"Identifier": [ "/login/success" ]`
+     * JSON examples: `"Identifier": [ "/login/success" ]` and `"Identifier":
+     * [ "/sign-up/success" ]`
      */
     public fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)
@@ -83,8 +87,9 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param successValues Values for the specified identifier in the response JSON that indicate a
-     *   successful login attempt. To be counted as a success, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   successful login or account creation attempt. To be counted as a success, the value must be
+     *   an exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
      * JSON example: `"SuccessValues": [ "True", "Succeeded" ]`
      */
@@ -94,8 +99,9 @@ public class CfnWebACLResponseInspectionJsonPropertyDsl {
 
     /**
      * @param successValues Values for the specified identifier in the response JSON that indicate a
-     *   successful login attempt. To be counted as a success, the value must be an exact match,
-     *   including case. Each value must be unique among the success and failure values.
+     *   successful login or account creation attempt. To be counted as a success, the value must be
+     *   an exact match, including case. Each value must be unique among the success and failure
+     *   values.
      *
      * JSON example: `"SuccessValues": [ "True", "Succeeded" ]`
      */

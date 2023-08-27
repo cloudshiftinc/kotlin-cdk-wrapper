@@ -32,6 +32,7 @@ import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig
  * .volumeType("volumeType")
  * // the properties below are optional
  * .iops(123)
+ * .throughput(123)
  * .build();
  * ```
  *
@@ -53,6 +54,11 @@ public class CfnInstanceFleetConfigVolumeSpecificationPropertyDsl {
      */
     public fun sizeInGb(sizeInGb: Number) {
         cdkBuilder.sizeInGb(sizeInGb)
+    }
+
+    /** @param throughput the value to be set. */
+    public fun throughput(throughput: Number) {
+        cdkBuilder.throughput(throughput)
     }
 
     /**

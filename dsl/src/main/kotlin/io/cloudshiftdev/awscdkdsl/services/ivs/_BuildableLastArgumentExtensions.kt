@@ -23,6 +23,15 @@ public inline fun CfnRecordingConfiguration.setDestinationConfiguration(
     return setDestinationConfiguration(builder.build())
 }
 
+/** A rendition configuration describes which renditions should be recorded for a stream. */
+public inline fun CfnRecordingConfiguration.setRenditionConfiguration(
+    block: CfnRecordingConfigurationRenditionConfigurationPropertyDsl.() -> Unit = {}
+) {
+    val builder = CfnRecordingConfigurationRenditionConfigurationPropertyDsl()
+    builder.apply(block)
+    return setRenditionConfiguration(builder.build())
+}
+
 /**
  * A thumbnail configuration enables/disables the recording of thumbnails for a live session and
  * controls the interval at which thumbnails are generated for the live session.

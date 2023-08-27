@@ -128,16 +128,16 @@ public class CfnLoadBalancerPropsDsl {
     }
 
     /**
-     * @param securityGroups [Application Load Balancers] The IDs of the security groups for the
-     *   load balancer.
+     * @param securityGroups [Application Load Balancers and Network Load Balancers] The IDs of the
+     *   security groups for the load balancer.
      */
     public fun securityGroups(vararg securityGroups: String) {
         _securityGroups.addAll(listOf(*securityGroups))
     }
 
     /**
-     * @param securityGroups [Application Load Balancers] The IDs of the security groups for the
-     *   load balancer.
+     * @param securityGroups [Application Load Balancers and Network Load Balancers] The IDs of the
+     *   security groups for the load balancer.
      */
     public fun securityGroups(securityGroups: Collection<String>) {
         _securityGroups.addAll(securityGroups)

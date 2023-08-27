@@ -22,9 +22,9 @@ import software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps
  *
  * Example:
  * ```
- * import software.amazon.awscdk.services.route53.HostedZone;
+ * import software.amazon.awscdk.services.route53.PublicHostedZone;
  * import software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName;
- * HostedZone zone;
+ * PublicHostedZone zone;
  * VpcEndpointService vpces;
  * VpcEndpointServiceDomainName.Builder.create(this, "EndpointDomain")
  * .endpointService(vpces)

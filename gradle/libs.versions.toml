@@ -6,6 +6,8 @@ kotlin = "1.9.10"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+release = { id = "io.cloudshiftdev.release", version = "0.2.4" }
+nexusPublish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0-rc-1" }
 
 [libraries]
 

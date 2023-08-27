@@ -23,8 +23,8 @@ import software.amazon.awscdk.services.datasync.CfnLocationNFS
 import software.constructs.Construct
 
 /**
- * The `AWS::DataSync::LocationNFS` resource specifies a file system on a Network File System (NFS)
- * server that can be read from or written to.
+ * The `AWS::DataSync::LocationNFS` resource specifies a Network File System (NFS) file server that
+ * AWS DataSync can use as a transfer source or destination.
  *
  * Example:
  * ```

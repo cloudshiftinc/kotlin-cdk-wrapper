@@ -75,8 +75,7 @@ public class CfnFrameworkFrameworkControlPropertyDsl {
     /**
      * @param controlScope The scope of a control. The control scope defines what the control will
      *   evaluate. Three examples of control scopes are: a specific backup plan, all backup plans
-     *   with a specific tag, or all backup plans. For more information, see
-     *   [`ControlScope` .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+     *   with a specific tag, or all backup plans.
      */
     public fun controlScope(controlScope: MapBuilder.() -> Unit = {}) {
         val builder = MapBuilder()
@@ -87,8 +86,7 @@ public class CfnFrameworkFrameworkControlPropertyDsl {
     /**
      * @param controlScope The scope of a control. The control scope defines what the control will
      *   evaluate. Three examples of control scopes are: a specific backup plan, all backup plans
-     *   with a specific tag, or all backup plans. For more information, see
-     *   [`ControlScope` .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+     *   with a specific tag, or all backup plans.
      */
     public fun controlScope(controlScope: Any) {
         cdkBuilder.controlScope(controlScope)

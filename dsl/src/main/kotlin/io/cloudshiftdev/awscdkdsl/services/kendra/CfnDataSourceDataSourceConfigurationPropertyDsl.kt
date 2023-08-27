@@ -287,6 +287,9 @@ import software.amazon.awscdk.services.kendra.CfnDataSource
  * .subnetIds(List.of("subnetIds"))
  * .build())
  * .build())
+ * .templateConfiguration(TemplateConfigurationProperty.builder()
+ * .template("template")
+ * .build())
  * .webCrawlerConfiguration(WebCrawlerConfigurationProperty.builder()
  * .urls(WebCrawlerUrlsProperty.builder()
  * .seedUrlConfiguration(WebCrawlerSeedUrlConfigurationProperty.builder()
@@ -483,6 +486,18 @@ public class CfnDataSourceDataSourceConfigurationPropertyDsl {
         sharePointConfiguration: CfnDataSource.SharePointConfigurationProperty
     ) {
         cdkBuilder.sharePointConfiguration(sharePointConfiguration)
+    }
+
+    /** @param templateConfiguration the value to be set. */
+    public fun templateConfiguration(templateConfiguration: IResolvable) {
+        cdkBuilder.templateConfiguration(templateConfiguration)
+    }
+
+    /** @param templateConfiguration the value to be set. */
+    public fun templateConfiguration(
+        templateConfiguration: CfnDataSource.TemplateConfigurationProperty
+    ) {
+        cdkBuilder.templateConfiguration(templateConfiguration)
     }
 
     /**

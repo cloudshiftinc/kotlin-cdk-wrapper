@@ -15,6 +15,7 @@ import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -34,6 +35,7 @@ import software.amazon.awscdk.services.ecr.CfnRepositoryProps
  * import software.amazon.awscdk.services.ecr.*;
  * Object repositoryPolicyText;
  * CfnRepositoryProps cfnRepositoryProps = CfnRepositoryProps.builder()
+ * .emptyOnDelete(false)
  * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
  * .encryptionType("encryptionType")
  * // the properties below are optional
@@ -63,6 +65,22 @@ public class CfnRepositoryPropsDsl {
     private val cdkBuilder: CfnRepositoryProps.Builder = CfnRepositoryProps.builder()
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
+     *   repository. Without a force delete, you can only delete empty repositories.
+     */
+    public fun emptyOnDelete(emptyOnDelete: Boolean) {
+        cdkBuilder.emptyOnDelete(emptyOnDelete)
+    }
+
+    /**
+     * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
+     *   repository. Without a force delete, you can only delete empty repositories.
+     */
+    public fun emptyOnDelete(emptyOnDelete: IResolvable) {
+        cdkBuilder.emptyOnDelete(emptyOnDelete)
+    }
 
     /**
      * @param encryptionConfiguration The encryption configuration for the repository. This

@@ -13,8 +13,6 @@ package io.cloudshiftdev.awscdkdsl.services.sam
 
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import kotlin.String
-import kotlin.collections.Map
-import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
 /**
@@ -24,8 +22,7 @@ import software.amazon.awscdk.services.sam.CfnFunction
  * // The values are placeholders you should change.
  * import software.amazon.awscdk.services.sam.*;
  * AlexaSkillEventProperty alexaSkillEventProperty = AlexaSkillEventProperty.builder()
- * .variables(Map.of(
- * "variablesKey", "variables"))
+ * .skillId("skillId")
  * .build();
  * ```
  *
@@ -36,14 +33,9 @@ public class CfnFunctionAlexaSkillEventPropertyDsl {
     private val cdkBuilder: CfnFunction.AlexaSkillEventProperty.Builder =
         CfnFunction.AlexaSkillEventProperty.builder()
 
-    /** @param variables the value to be set. */
-    public fun variables(variables: Map<String, String>) {
-        cdkBuilder.variables(variables)
-    }
-
-    /** @param variables the value to be set. */
-    public fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables)
+    /** @param skillId the value to be set. */
+    public fun skillId(skillId: String) {
+        cdkBuilder.skillId(skillId)
     }
 
     public fun build(): CfnFunction.AlexaSkillEventProperty = cdkBuilder.build()

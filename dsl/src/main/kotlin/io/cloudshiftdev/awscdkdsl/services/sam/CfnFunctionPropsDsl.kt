@@ -78,8 +78,7 @@ import software.amazon.awscdk.services.sam.CfnFunctionProps
  * .events(Map.of(
  * "eventsKey", EventSourceProperty.builder()
  * .properties(AlexaSkillEventProperty.builder()
- * .variables(Map.of(
- * "variablesKey", "variables"))
+ * .skillId("skillId")
  * .build())
  * .type("type")
  * .build()))

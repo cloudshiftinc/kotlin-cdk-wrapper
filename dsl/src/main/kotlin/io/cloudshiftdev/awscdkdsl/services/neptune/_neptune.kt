@@ -258,7 +258,7 @@ public object neptune {
     }
 
     /**
-     * Contains the scaling configuration of an Neptune Serverless DB cluster.
+     * Contains the scaling configuration of a Neptune Serverless DB cluster.
      *
      * Example:
      * ```

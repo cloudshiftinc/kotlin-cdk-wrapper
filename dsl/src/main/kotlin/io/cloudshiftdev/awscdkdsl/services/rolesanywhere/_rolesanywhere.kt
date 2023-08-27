@@ -23,7 +23,12 @@ import software.constructs.Construct
 
 public object rolesanywhere {
     /**
-     * Creates a Crl.
+     * Imports the certificate revocation list (CRL).
+     *
+     * A CRL is a list of certificates that have been revoked by the issuing certificate Authority
+     * (CA). IAM Roles Anywhere validates against the CRL before issuing credentials.
+     *
+     * *Required permissions:* `rolesanywhere:ImportCrl` .
      *
      * Example:
      * ```
@@ -85,7 +90,11 @@ public object rolesanywhere {
     }
 
     /**
-     * Creates a Profile.
+     * Creates a *profile* , a list of the roles that Roles Anywhere service is trusted to assume.
+     *
+     * You use profiles to intersect permissions with IAM managed policies.
+     *
+     * *Required permissions:* `rolesanywhere:CreateProfile` .
      *
      * Example:
      * ```
@@ -153,7 +162,14 @@ public object rolesanywhere {
     }
 
     /**
-     * Creates a TrustAnchor.
+     * Creates a trust anchor to establish trust between IAM Roles Anywhere and your certificate
+     * authority (CA).
+     *
+     * You can define a trust anchor as a reference to an AWS Private Certificate Authority ( AWS
+     * Private CA ) or by uploading a CA certificate. Your AWS workloads can authenticate with the
+     * trust anchor using certificates issued by the CA in exchange for temporary AWS credentials.
+     *
+     * *Required permissions:* `rolesanywhere:CreateTrustAnchor` .
      *
      * Example:
      * ```
@@ -227,7 +243,7 @@ public object rolesanywhere {
     }
 
     /**
-     * A union object representing the data field of the TrustAnchor depending on its type.
+     * The data field of the trust anchor depending on its type.
      *
      * Example:
      * ```
@@ -251,7 +267,7 @@ public object rolesanywhere {
     }
 
     /**
-     * Object representing the TrustAnchor type and its related certificate data.
+     * The trust anchor type and its related certificate data.
      *
      * Example:
      * ```

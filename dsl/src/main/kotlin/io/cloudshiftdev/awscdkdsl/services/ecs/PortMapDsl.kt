@@ -32,6 +32,7 @@ import software.amazon.awscdk.services.ecs.Protocol
  * .containerPort(123)
  * // the properties below are optional
  * .appProtocol(appProtocol)
+ * .containerPortRange("containerPortRange")
  * .hostPort(123)
  * .name("name")
  * .protocol(Protocol.TCP)
@@ -73,11 +74,37 @@ public class PortMapDsl(
      * For more information, see hostPort. Port mappings that are automatically assigned in this way
      * do not count toward the 100 reserved ports limit of a container instance.
      *
+     * If you want to expose a port range, you must specify `CONTAINER_PORT_USE_RANGE` as container
+     * port.
+     *
      * @param containerPort The port number on the container that is bound to the user-specified or
      *   automatically assigned host port.
      */
     public fun containerPort(containerPort: Number) {
         cdkBuilder.containerPort(containerPort)
+    }
+
+    /**
+     * The port number range on the container that's bound to the dynamically mapped host port
+     * range.
+     *
+     * The following rules apply when you specify a `containerPortRange`:
+     * * You must specify `CONTAINER_PORT_USE_RANGE` as `containerPort`
+     * * You must use either the `bridge` network mode or the `awsvpc` network mode.
+     * * The container instance must have at least version 1.67.0 of the container agent and at
+     *   least version 1.67.0-1 of the `ecs-init` package
+     * * You can specify a maximum of 100 port ranges per container.
+     * * A port can only be included in one port mapping per container.
+     * * You cannot specify overlapping port ranges.
+     * * The first port in the range must be less than last port in the range.
+     *
+     * If you want to expose a single port, you must not set a range.
+     *
+     * @param containerPortRange The port number range on the container that's bound to the
+     *   dynamically mapped host port range.
+     */
+    public fun containerPortRange(containerPortRange: String) {
+        cdkBuilder.containerPortRange(containerPortRange)
     }
 
     /**

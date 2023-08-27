@@ -62,10 +62,7 @@ public inline fun CfnConfigurationAggregator.setOrganizationAggregationSource(
     return setOrganizationAggregationSource(builder.build())
 }
 
-/**
- * Indicates whether to record configurations for all supported resources or for a list of resource
- * types.
- */
+/** Specifies which resource types AWS Config records for configuration changes. */
 public inline fun CfnConfigurationRecorder.setRecordingGroup(
     block: CfnConfigurationRecorderRecordingGroupPropertyDsl.() -> Unit = {}
 ) {

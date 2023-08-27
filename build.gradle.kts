@@ -3,9 +3,8 @@ import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
 plugins {
     java
     id("cloudshift.awscdkdsl.build.base")
-    id("io.github.gradle-nexus.publish-plugin") version "2.0.0-rc-1" // only on root project
-    id("de.undercouch.download") version "5.4.0"
-    id("io.cloudshiftdev.release") version "0.2.4"
+    alias(libs.plugins.release)
+    alias(libs.plugins.nexusPublish)
 }
 
 release {

@@ -50,12 +50,15 @@ public class CfnFleetServerProcessPropertyDsl {
     }
 
     /**
-     * @param launchPath The location of a game build executable or the Realtime script file that
-     *   contains the `Init()` function. Game builds and Realtime scripts are installed on instances
-     *   at the root:
+     * @param launchPath The location of a game build executable or Realtime script. Game builds and
+     *   Realtime scripts are installed on instances at the root:
      * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
      * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
      *   `/local/game/MyRealtimeScript.js` "
+     *
+     * Amazon GameLift doesn't support the use of setup scripts that launch the game executable. For
+     * custom game builds, this parameter must indicate the executable that calls the server SDK
+     * operations `initSDK()` and `ProcessReady()` .
      */
     public fun launchPath(launchPath: String) {
         cdkBuilder.launchPath(launchPath)

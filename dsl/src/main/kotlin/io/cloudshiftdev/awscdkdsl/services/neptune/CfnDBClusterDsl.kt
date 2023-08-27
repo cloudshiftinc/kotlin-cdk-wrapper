@@ -273,10 +273,10 @@ public class CfnDBClusterDsl(
     /**
      * The port number on which the DB instances in the DB cluster accept connections.
      *
-     * If not specified, the default port used is `8182`.
+     * If not specified, the default port used is `8182` .
      *
-     * Note: `Port` property will soon be deprecated from this resource. Please update existing
-     * templates to rename it with new property `DBPort` having same functionalities.
+     * The `Port` property will soon be deprecated. Please update existing templates to use the new
+     * `DBPort` property that has the same functionality.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbport)
      *

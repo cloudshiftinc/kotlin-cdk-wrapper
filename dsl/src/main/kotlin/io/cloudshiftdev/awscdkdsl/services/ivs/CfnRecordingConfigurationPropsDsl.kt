@@ -41,13 +41,18 @@ import software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps
  * // the properties below are optional
  * .name("name")
  * .recordingReconnectWindowSeconds(123)
+ * .renditionConfiguration(RenditionConfigurationProperty.builder()
+ * .renditions(List.of("renditions"))
+ * .renditionSelection("renditionSelection")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
  * .thumbnailConfiguration(ThumbnailConfigurationProperty.builder()
  * .recordingMode("recordingMode")
- * // the properties below are optional
+ * .resolution("resolution")
+ * .storage(List.of("storage"))
  * .targetIntervalSeconds(123)
  * .build())
  * .build();
@@ -64,9 +69,8 @@ public class CfnRecordingConfigurationPropsDsl {
 
     /**
      * @param destinationConfiguration A destination configuration contains information about where
-     *   recorded video will be stored. See the
-     *   [DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html)
-     *   property type for more information.
+     *   recorded video will be stored. See the DestinationConfiguration property type for more
+     *   information.
      */
     public fun destinationConfiguration(destinationConfiguration: IResolvable) {
         cdkBuilder.destinationConfiguration(destinationConfiguration)
@@ -74,9 +78,8 @@ public class CfnRecordingConfigurationPropsDsl {
 
     /**
      * @param destinationConfiguration A destination configuration contains information about where
-     *   recorded video will be stored. See the
-     *   [DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html)
-     *   property type for more information.
+     *   recorded video will be stored. See the DestinationConfiguration property type for more
+     *   information.
      */
     public fun destinationConfiguration(
         destinationConfiguration: CfnRecordingConfiguration.DestinationConfigurationProperty
@@ -96,6 +99,24 @@ public class CfnRecordingConfigurationPropsDsl {
      */
     public fun recordingReconnectWindowSeconds(recordingReconnectWindowSeconds: Number) {
         cdkBuilder.recordingReconnectWindowSeconds(recordingReconnectWindowSeconds)
+    }
+
+    /**
+     * @param renditionConfiguration A rendition configuration describes which renditions should be
+     *   recorded for a stream. See the RenditionConfiguration property type for more information.
+     */
+    public fun renditionConfiguration(renditionConfiguration: IResolvable) {
+        cdkBuilder.renditionConfiguration(renditionConfiguration)
+    }
+
+    /**
+     * @param renditionConfiguration A rendition configuration describes which renditions should be
+     *   recorded for a stream. See the RenditionConfiguration property type for more information.
+     */
+    public fun renditionConfiguration(
+        renditionConfiguration: CfnRecordingConfiguration.RenditionConfigurationProperty
+    ) {
+        cdkBuilder.renditionConfiguration(renditionConfiguration)
     }
 
     /**
@@ -119,9 +140,7 @@ public class CfnRecordingConfigurationPropsDsl {
     /**
      * @param thumbnailConfiguration A thumbnail configuration enables/disables the recording of
      *   thumbnails for a live session and controls the interval at which thumbnails are generated
-     *   for the live session. See the
-     *   [ThumbnailConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-thunbnailconfiguration.html)
-     *   property type for more information.
+     *   for the live session. See the ThumbnailConfiguration property type for more information.
      */
     public fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
         cdkBuilder.thumbnailConfiguration(thumbnailConfiguration)
@@ -130,9 +149,7 @@ public class CfnRecordingConfigurationPropsDsl {
     /**
      * @param thumbnailConfiguration A thumbnail configuration enables/disables the recording of
      *   thumbnails for a live session and controls the interval at which thumbnails are generated
-     *   for the live session. See the
-     *   [ThumbnailConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-thunbnailconfiguration.html)
-     *   property type for more information.
+     *   for the live session. See the ThumbnailConfiguration property type for more information.
      */
     public fun thumbnailConfiguration(
         thumbnailConfiguration: CfnRecordingConfiguration.ThumbnailConfigurationProperty

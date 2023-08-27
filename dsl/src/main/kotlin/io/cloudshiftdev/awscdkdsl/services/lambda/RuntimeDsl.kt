@@ -60,6 +60,17 @@ public class RuntimeDsl(
     }
 
     /**
+     * Whether the runtime enum is meant to change over time, IE NODEJS_LATEST.
+     *
+     * Default: false
+     *
+     * @param isVariable Whether the runtime enum is meant to change over time, IE NODEJS_LATEST.
+     */
+    public fun isVariable(isVariable: Boolean) {
+        cdkBuilder.isVariable(isVariable)
+    }
+
+    /**
      * Whether this runtime is integrated with and supported for profiling using Amazon CodeGuru
      * Profiler.
      *

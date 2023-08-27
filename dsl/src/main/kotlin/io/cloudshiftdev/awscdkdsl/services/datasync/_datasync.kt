@@ -15,6 +15,8 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.datasync.CfnAgent
 import software.amazon.awscdk.services.datasync.CfnAgentProps
+import software.amazon.awscdk.services.datasync.CfnLocationAzureBlob
+import software.amazon.awscdk.services.datasync.CfnLocationAzureBlobProps
 import software.amazon.awscdk.services.datasync.CfnLocationEFS
 import software.amazon.awscdk.services.datasync.CfnLocationEFSProps
 import software.amazon.awscdk.services.datasync.CfnLocationFSxLustre
@@ -111,6 +113,121 @@ public object datasync {
      */
     public inline fun cfnAgentProps(block: CfnAgentPropsDsl.() -> Unit = {}): CfnAgentProps {
         val builder = CfnAgentPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Creates an endpoint for a Microsoft Azure Blob Storage container that AWS DataSync can use as
+     * a transfer source or destination.
+     *
+     * Before you begin, make sure you know
+     * [how DataSync accesses Azure Blob Storage](https://docs.aws.amazon.com/datasync/latest/userguide/creating-azure-blob-location.html#azure-blob-access)
+     * and works with
+     * [access tiers](https://docs.aws.amazon.com/datasync/latest/userguide/creating-azure-blob-location.html#azure-blob-access-tiers)
+     * and
+     * [blob types](https://docs.aws.amazon.com/datasync/latest/userguide/creating-azure-blob-location.html#blob-types)
+     * . You also need a
+     * [DataSync agent](https://docs.aws.amazon.com/datasync/latest/userguide/creating-azure-blob-location.html#azure-blob-creating-agent)
+     * that can connect to your container.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * CfnLocationAzureBlob cfnLocationAzureBlob = CfnLocationAzureBlob.Builder.create(this,
+     * "MyCfnLocationAzureBlob")
+     * .agentArns(List.of("agentArns"))
+     * .azureBlobAuthenticationType("azureBlobAuthenticationType")
+     * // the properties below are optional
+     * .azureAccessTier("azureAccessTier")
+     * .azureBlobContainerUrl("azureBlobContainerUrl")
+     * .azureBlobSasConfiguration(AzureBlobSasConfigurationProperty.builder()
+     * .azureBlobSasToken("azureBlobSasToken")
+     * .build())
+     * .azureBlobType("azureBlobType")
+     * .subdirectory("subdirectory")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html)
+     */
+    public inline fun cfnLocationAzureBlob(
+        scope: Construct,
+        id: String,
+        block: CfnLocationAzureBlobDsl.() -> Unit = {},
+    ): CfnLocationAzureBlob {
+        val builder = CfnLocationAzureBlobDsl(scope, id)
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The shared access signature (SAS) configuration that allows AWS DataSync to access your
+     * Microsoft Azure Blob Storage.
+     *
+     * For more information, see
+     * [SAS tokens](https://docs.aws.amazon.com/datasync/latest/userguide/creating-azure-blob-location.html#azure-blob-sas-tokens)
+     * for accessing your Azure Blob Storage.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * AzureBlobSasConfigurationProperty azureBlobSasConfigurationProperty =
+     * AzureBlobSasConfigurationProperty.builder()
+     * .azureBlobSasToken("azureBlobSasToken")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationazureblob-azureblobsasconfiguration.html)
+     */
+    public inline fun cfnLocationAzureBlobAzureBlobSasConfigurationProperty(
+        block: CfnLocationAzureBlobAzureBlobSasConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnLocationAzureBlob.AzureBlobSasConfigurationProperty {
+        val builder = CfnLocationAzureBlobAzureBlobSasConfigurationPropertyDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * Properties for defining a `CfnLocationAzureBlob`.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.datasync.*;
+     * CfnLocationAzureBlobProps cfnLocationAzureBlobProps = CfnLocationAzureBlobProps.builder()
+     * .agentArns(List.of("agentArns"))
+     * .azureBlobAuthenticationType("azureBlobAuthenticationType")
+     * // the properties below are optional
+     * .azureAccessTier("azureAccessTier")
+     * .azureBlobContainerUrl("azureBlobContainerUrl")
+     * .azureBlobSasConfiguration(AzureBlobSasConfigurationProperty.builder()
+     * .azureBlobSasToken("azureBlobSasToken")
+     * .build())
+     * .azureBlobType("azureBlobType")
+     * .subdirectory("subdirectory")
+     * .tags(List.of(CfnTag.builder()
+     * .key("key")
+     * .value("value")
+     * .build()))
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html)
+     */
+    public inline fun cfnLocationAzureBlobProps(
+        block: CfnLocationAzureBlobPropsDsl.() -> Unit = {}
+    ): CfnLocationAzureBlobProps {
+        val builder = CfnLocationAzureBlobPropsDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -899,8 +1016,8 @@ public object datasync {
     }
 
     /**
-     * The `AWS::DataSync::LocationNFS` resource specifies a file system on a Network File System
-     * (NFS) server that can be read from or written to.
+     * The `AWS::DataSync::LocationNFS` resource specifies a Network File System (NFS) file server
+     * that AWS DataSync can use as a transfer source or destination.
      *
      * Example:
      * ```

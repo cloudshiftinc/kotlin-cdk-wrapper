@@ -99,6 +99,7 @@ import software.constructs.Construct
  * .containerPort(123)
  * // the properties below are optional
  * .appProtocol(appProtocol)
+ * .containerPortRange("containerPortRange")
  * .hostPort(123)
  * .name("name")
  * .protocol(Protocol.TCP)

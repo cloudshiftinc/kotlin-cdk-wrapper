@@ -32,20 +32,25 @@ public object customresources {
      *
      * Example:
      * ```
-     * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
-     * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
-     * .service("SSM")
-     * .action("getParameter")
+     * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this,
+     * "AssociateVPCWithHostedZone")
+     * .onCreate(AwsSdkCall.builder()
+     * .assumedRoleArn("arn:aws:iam::OTHERACCOUNT:role/CrossAccount/ManageHostedZoneConnections")
+     * .service("Route53")
+     * .action("associateVPCWithHostedZone")
      * .parameters(Map.of(
-     * "Name", "my-parameter",
-     * "WithDecryption", true))
-     * .physicalResourceId(PhysicalResourceId.of(Date.now().toString())).build())
+     * "HostedZoneId", "hz-123",
+     * "VPC", Map.of(
+     * "VPCId", "vpc-123",
+     * "VPCRegion", "region-for-vpc")))
+     * .physicalResourceId(PhysicalResourceId.of("${vpcStack.SharedVpc.VpcId}-${vpcStack.Region}-${PrivateHostedZone.HostedZoneId}"))
+     * .build())
+     * //Will ignore any resource and use the assumedRoleArn as resource and 'sts:AssumeRole' for
+     * service:action
      * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
      * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
      * .build()))
      * .build();
-     * // Use the value in another construct with
-     * getParameter.getResponseField("Parameter.Value");
      * ```
      */
     public inline fun awsCustomResource(
@@ -65,20 +70,25 @@ public object customresources {
      *
      * Example:
      * ```
-     * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
-     * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
-     * .service("SSM")
-     * .action("getParameter")
+     * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this,
+     * "AssociateVPCWithHostedZone")
+     * .onCreate(AwsSdkCall.builder()
+     * .assumedRoleArn("arn:aws:iam::OTHERACCOUNT:role/CrossAccount/ManageHostedZoneConnections")
+     * .service("Route53")
+     * .action("associateVPCWithHostedZone")
      * .parameters(Map.of(
-     * "Name", "my-parameter",
-     * "WithDecryption", true))
-     * .physicalResourceId(PhysicalResourceId.of(Date.now().toString())).build())
+     * "HostedZoneId", "hz-123",
+     * "VPC", Map.of(
+     * "VPCId", "vpc-123",
+     * "VPCRegion", "region-for-vpc")))
+     * .physicalResourceId(PhysicalResourceId.of("${vpcStack.SharedVpc.VpcId}-${vpcStack.Region}-${PrivateHostedZone.HostedZoneId}"))
+     * .build())
+     * //Will ignore any resource and use the assumedRoleArn as resource and 'sts:AssumeRole' for
+     * service:action
      * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
      * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
      * .build()))
      * .build();
-     * // Use the value in another construct with
-     * getParameter.getResponseField("Parameter.Value");
      * ```
      */
     public inline fun awsCustomResourceProps(

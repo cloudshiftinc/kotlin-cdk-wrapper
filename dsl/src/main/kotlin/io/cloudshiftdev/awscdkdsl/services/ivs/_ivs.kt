@@ -186,13 +186,18 @@ public object ivs {
      * // the properties below are optional
      * .name("name")
      * .recordingReconnectWindowSeconds(123)
+     * .renditionConfiguration(RenditionConfigurationProperty.builder()
+     * .renditions(List.of("renditions"))
+     * .renditionSelection("renditionSelection")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
      * .build()))
      * .thumbnailConfiguration(ThumbnailConfigurationProperty.builder()
      * .recordingMode("recordingMode")
-     * // the properties below are optional
+     * .resolution("resolution")
+     * .storage(List.of("storage"))
      * .targetIntervalSeconds(123)
      * .build())
      * .build();
@@ -258,13 +263,18 @@ public object ivs {
      * // the properties below are optional
      * .name("name")
      * .recordingReconnectWindowSeconds(123)
+     * .renditionConfiguration(RenditionConfigurationProperty.builder()
+     * .renditions(List.of("renditions"))
+     * .renditionSelection("renditionSelection")
+     * .build())
      * .tags(List.of(CfnTag.builder()
      * .key("key")
      * .value("value")
      * .build()))
      * .thumbnailConfiguration(ThumbnailConfigurationProperty.builder()
      * .recordingMode("recordingMode")
-     * // the properties below are optional
+     * .resolution("resolution")
+     * .storage(List.of("storage"))
      * .targetIntervalSeconds(123)
      * .build())
      * .build();
@@ -276,6 +286,32 @@ public object ivs {
         block: CfnRecordingConfigurationPropsDsl.() -> Unit = {}
     ): CfnRecordingConfigurationProps {
         val builder = CfnRecordingConfigurationPropsDsl()
+        builder.apply(block)
+        return builder.build()
+    }
+
+    /**
+     * The RenditionConfiguration property type describes which renditions should be recorded for a
+     * stream.
+     *
+     * Example:
+     * ```
+     * // The code below shows an example of how to instantiate this type.
+     * // The values are placeholders you should change.
+     * import software.amazon.awscdk.services.ivs.*;
+     * RenditionConfigurationProperty renditionConfigurationProperty =
+     * RenditionConfigurationProperty.builder()
+     * .renditions(List.of("renditions"))
+     * .renditionSelection("renditionSelection")
+     * .build();
+     * ```
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html)
+     */
+    public inline fun cfnRecordingConfigurationRenditionConfigurationProperty(
+        block: CfnRecordingConfigurationRenditionConfigurationPropertyDsl.() -> Unit = {}
+    ): CfnRecordingConfiguration.RenditionConfigurationProperty {
+        val builder = CfnRecordingConfigurationRenditionConfigurationPropertyDsl()
         builder.apply(block)
         return builder.build()
     }
@@ -317,7 +353,8 @@ public object ivs {
      * ThumbnailConfigurationProperty thumbnailConfigurationProperty =
      * ThumbnailConfigurationProperty.builder()
      * .recordingMode("recordingMode")
-     * // the properties below are optional
+     * .resolution("resolution")
+     * .storage(List.of("storage"))
      * .targetIntervalSeconds(123)
      * .build();
      * ```

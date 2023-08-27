@@ -5792,7 +5792,10 @@ public object wafv2 {
     }
 
     /**
-     * Not currently supported by AWS CloudFormation .
+     * Details for your use of the account creation fraud prevention managed rule group,
+     * `AWSManagedRulesACFPRuleSet` .
+     *
+     * This configuration is used in `ManagedRuleGroupConfig` .
      *
      * Example:
      * ```
@@ -6701,8 +6704,9 @@ public object wafv2 {
     /**
      * The identifier of a field in the web request payload that contains customer data.
      *
-     * This data type is used to specify fields in the `RequestInspection` configurations, for the
-     * managed rule group configuration `AWSManagedRulesATPRuleSet` .
+     * This data type is used to specify fields in the `RequestInspection` and
+     * `RequestInspectionACFP` configurations, which are used in the managed rule group
+     * configurations `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet` , respectively.
      *
      * Example:
      * ```
@@ -7193,6 +7197,10 @@ public object wafv2 {
      * require this.
      *
      * The rule groups used for intelligent threat mitigation require additional configuration:
+     * * Use the `AWSManagedRulesACFPRuleSet` configuration object to configure the account creation
+     *   fraud prevention managed rule group. The configuration includes the registration and
+     *   sign-up pages of your application and the locations in the account creation request payload
+     *   of data, such as the user email and phone number fields.
      * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account takeover
      *   prevention managed rule group. The configuration includes the sign-in page of your
      *   application and the locations in the login request payload of data such as the username and
@@ -7320,9 +7328,10 @@ public object wafv2 {
      * or `OrStatement` . It can only be referenced as a top-level statement within a rule.
      *
      * You are charged additional fees when you use the AWS WAF Bot Control managed rule group
-     * `AWSManagedRulesBotControlRuleSet` or the AWS WAF Fraud Control account takeover prevention
-     * (ATP) managed rule group `AWSManagedRulesATPRuleSet` . For more information, see
-     * [AWS WAF Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     * `AWSManagedRulesBotControlRuleSet` , the AWS WAF Fraud Control account takeover prevention
+     * (ATP) managed rule group `AWSManagedRulesATPRuleSet` , or the AWS WAF Fraud Control account
+     * creation fraud prevention (ACFP) managed rule group `AWSManagedRulesACFPRuleSet` . For more
+     * information, see [AWS WAF Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
      * Example:
      * ```
@@ -7958,7 +7967,14 @@ public object wafv2 {
     }
 
     /**
-     * Not currently supported by AWS CloudFormation .
+     * The criteria for inspecting account creation requests, used by the ACFP rule group to
+     * validate and track account creation attempts.
+     *
+     * This is part of the `AWSManagedRulesACFPRuleSet` configuration in `ManagedRuleGroupConfig` .
+     *
+     * In these settings, you specify how your application accepts account creation attempts by
+     * providing the request payload type and the names of the fields within the request body where
+     * the username, password, email, and primary address and phone number fields are provided.
      *
      * Example:
      * ```
@@ -8037,7 +8053,8 @@ public object wafv2 {
      * Configures inspection of the response body.
      *
      * AWS WAF can inspect the first 65,536 bytes (64 KB) of the response body. This is part of the
-     * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
+     * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` and
+     * `AWSManagedRulesACFPRuleSet` .
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.
@@ -8066,7 +8083,7 @@ public object wafv2 {
 
     /**
      * Configures inspection of the response header. This is part of the `ResponseInspection`
-     * configuration for `AWSManagedRulesATPRuleSet` .
+     * configuration for `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet` .
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.
@@ -8098,7 +8115,8 @@ public object wafv2 {
      * Configures inspection of the response JSON.
      *
      * AWS WAF can inspect the first 65,536 bytes (64 KB) of the response JSON. This is part of the
-     * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
+     * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` and
+     * `AWSManagedRulesACFPRuleSet` .
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.
@@ -8127,18 +8145,21 @@ public object wafv2 {
     }
 
     /**
-     * The criteria for inspecting responses to login requests, used by the ATP rule group to track
-     * login success and failure rates.
+     * The criteria for inspecting responses to login requests and account creation requests, used
+     * by the ATP and ACFP rule groups to track login and account creation success and failure
+     * rates.
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.
      *
-     * The rule group evaluates the responses that your protected resources send back to client
-     * login attempts, keeping count of successful and failed attempts from each IP address and
-     * client session. Using this information, the rule group labels and mitigates requests from
-     * client sessions and IP addresses with too much suspicious activity in a short amount of time.
+     * The rule groups evaluates the responses that your protected resources send back to client
+     * login and account creation attempts, keeping count of successful and failed attempts from
+     * each IP address and client session. Using this information, the rule group labels and
+     * mitigates requests from client sessions and IP addresses with too much suspicious activity in
+     * a short amount of time.
      *
-     * This is part of the `AWSManagedRulesATPRuleSet` configuration in `ManagedRuleGroupConfig` .
+     * This is part of the `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet`
+     * configurations in `ManagedRuleGroupConfig` .
      *
      * Enable response inspection by configuring exactly one component of the response to inspect,
      * for example, `Header` or `StatusCode` . You can't configure more than one component for
@@ -8183,9 +8204,8 @@ public object wafv2 {
     }
 
     /**
-     * Configures inspection of the response status code for success and failure indicators.
-     *
-     * This is part of the `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
+     * Configures inspection of the response status code. This is part of the `ResponseInspection`
+     * configuration for `AWSManagedRulesATPRuleSet` and `AWSManagedRulesACFPRuleSet` .
      *
      * Response inspection is available only in web ACLs that protect Amazon CloudFront
      * distributions.

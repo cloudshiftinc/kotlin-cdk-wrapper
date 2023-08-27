@@ -1035,19 +1035,14 @@ public object opensearchservice {
      * Example:
      * ```
      * Domain domain = Domain.Builder.create(this, "Domain")
-     * .version(EngineVersion.OPENSEARCH_1_3)
+     * .version(EngineVersion.OPENSEARCH_1_0)
      * .ebs(EbsOptions.builder()
-     * .volumeSize(10)
-     * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD_GP3)
+     * .volumeSize(100)
+     * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD)
      * .build())
-     * .zoneAwareness(ZoneAwarenessConfig.builder()
+     * .nodeToNodeEncryption(true)
+     * .encryptionAtRest(EncryptionAtRestOptions.builder()
      * .enabled(true)
-     * .availabilityZoneCount(3)
-     * .build())
-     * .capacity(CapacityConfig.builder()
-     * .multiAzWithStandbyEnabled(true)
-     * .masterNodes(3)
-     * .dataNodes(3)
      * .build())
      * .build();
      * ```

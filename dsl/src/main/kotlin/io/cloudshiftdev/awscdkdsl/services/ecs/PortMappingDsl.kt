@@ -24,30 +24,11 @@ import software.amazon.awscdk.services.ecs.Protocol
  *
  * Example:
  * ```
- * TaskDefinition taskDefinition;
- * Cluster cluster;
- * // Add a container to the task definition
- * ContainerDefinition specificContainer = taskDefinition.addContainer("Container",
- * ContainerDefinitionOptions.builder()
- * .image(ContainerImage.fromRegistry("/aws/aws-example-app"))
- * .memoryLimitMiB(2048)
+ * ContainerDefinition container;
+ * container.addPortMappings(PortMapping.builder()
+ * .containerPort(ContainerDefinition.CONTAINER_PORT_USE_RANGE)
+ * .containerPortRange("8080-8081")
  * .build());
- * // Add a port mapping
- * specificContainer.addPortMappings(PortMapping.builder()
- * .containerPort(7600)
- * .protocol(Protocol.TCP)
- * .build());
- * Ec2Service.Builder.create(this, "Service")
- * .cluster(cluster)
- * .taskDefinition(taskDefinition)
- * .cloudMapOptions(CloudMapOptions.builder()
- * // Create SRV records - useful for bridge networking
- * .dnsRecordType(DnsRecordType.SRV)
- * // Targets port TCP port 7600 `specificContainer`
- * .container(specificContainer)
- * .containerPort(7600)
- * .build())
- * .build();
  * ```
  */
 @CdkDslMarker
@@ -74,9 +55,31 @@ public class PortMappingDsl {
      *
      * For more information, see hostPort. Port mappings that are automatically assigned in this way
      * do not count toward the 100 reserved ports limit of a container instance.
+     *
+     * If you want to expose a port range, you must specify `CONTAINER_PORT_USE_RANGE` as container
+     * port.
      */
     public fun containerPort(containerPort: Number) {
         cdkBuilder.containerPort(containerPort)
+    }
+
+    /**
+     * @param containerPortRange The port number range on the container that's bound to the
+     *   dynamically mapped host port range. The following rules apply when you specify a
+     *   `containerPortRange`:
+     * * You must specify `CONTAINER_PORT_USE_RANGE` as `containerPort`
+     * * You must use either the `bridge` network mode or the `awsvpc` network mode.
+     * * The container instance must have at least version 1.67.0 of the container agent and at
+     *   least version 1.67.0-1 of the `ecs-init` package
+     * * You can specify a maximum of 100 port ranges per container.
+     * * A port can only be included in one port mapping per container.
+     * * You cannot specify overlapping port ranges.
+     * * The first port in the range must be less than last port in the range.
+     *
+     * If you want to expose a single port, you must not set a range.
+     */
+    public fun containerPortRange(containerPortRange: String) {
+        cdkBuilder.containerPortRange(containerPortRange)
     }
 
     /**

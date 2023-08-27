@@ -54,6 +54,8 @@ public class CfnNetworkInterfaceAttachmentDsl(
      *
      * By default, this value is set to `true` .
      *
+     * Default: - true
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html#cfn-ec2-networkinterfaceattachment-deleteontermination)
      *
      * @param deleteOnTermination Whether to delete the network interface when the instance
@@ -67,6 +69,8 @@ public class CfnNetworkInterfaceAttachmentDsl(
      * Whether to delete the network interface when the instance terminates.
      *
      * By default, this value is set to `true` .
+     *
+     * Default: - true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html#cfn-ec2-networkinterfaceattachment-deleteontermination)
      *

@@ -60,46 +60,49 @@ public class CfnProfilePropsDsl {
     private val _tags: MutableList<CfnTag> = mutableListOf()
 
     /**
-     * @param durationSeconds The number of seconds vended session credentials will be valid for.
+     * @param durationSeconds Sets the maximum number of seconds that vended temporary credentials
+     *   through
+     *   [CreateSession](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html)
+     *   will be valid for, between 900 and 3600.
      */
     public fun durationSeconds(durationSeconds: Number) {
         cdkBuilder.durationSeconds(durationSeconds)
     }
 
-    /** @param enabled The enabled status of the resource. */
+    /** @param enabled Indicates whether the profile is enabled. */
     public fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
     }
 
-    /** @param enabled The enabled status of the resource. */
+    /** @param enabled Indicates whether the profile is enabled. */
     public fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled)
     }
 
     /**
-     * @param managedPolicyArns A list of managed policy ARNs. Managed policies identified by this
-     *   list will be applied to the vended session credentials.
+     * @param managedPolicyArns A list of managed policy ARNs that apply to the vended session
+     *   credentials.
      */
     public fun managedPolicyArns(vararg managedPolicyArns: String) {
         _managedPolicyArns.addAll(listOf(*managedPolicyArns))
     }
 
     /**
-     * @param managedPolicyArns A list of managed policy ARNs. Managed policies identified by this
-     *   list will be applied to the vended session credentials.
+     * @param managedPolicyArns A list of managed policy ARNs that apply to the vended session
+     *   credentials.
      */
     public fun managedPolicyArns(managedPolicyArns: Collection<String>) {
         _managedPolicyArns.addAll(managedPolicyArns)
     }
 
-    /** @param name The customer specified name of the resource. */
+    /** @param name The name of the profile. */
     public fun name(name: String) {
         cdkBuilder.name(name)
     }
 
     /**
      * @param requireInstanceProperties Specifies whether instance properties are required in
-     *   CreateSession requests with this profile.
+     *   temporary credential requests with this profile.
      */
     public fun requireInstanceProperties(requireInstanceProperties: Boolean) {
         cdkBuilder.requireInstanceProperties(requireInstanceProperties)
@@ -107,42 +110,44 @@ public class CfnProfilePropsDsl {
 
     /**
      * @param requireInstanceProperties Specifies whether instance properties are required in
-     *   CreateSession requests with this profile.
+     *   temporary credential requests with this profile.
      */
     public fun requireInstanceProperties(requireInstanceProperties: IResolvable) {
         cdkBuilder.requireInstanceProperties(requireInstanceProperties)
     }
 
     /**
-     * @param roleArns A list of IAM role ARNs that can be assumed when this profile is specified in
-     *   a CreateSession request.
+     * @param roleArns A list of IAM role ARNs. During `CreateSession` , if a matching role ARN is
+     *   provided, the properties in this profile will be applied to the intersection session
+     *   policy.
      */
     public fun roleArns(vararg roleArns: String) {
         _roleArns.addAll(listOf(*roleArns))
     }
 
     /**
-     * @param roleArns A list of IAM role ARNs that can be assumed when this profile is specified in
-     *   a CreateSession request.
+     * @param roleArns A list of IAM role ARNs. During `CreateSession` , if a matching role ARN is
+     *   provided, the properties in this profile will be applied to the intersection session
+     *   policy.
      */
     public fun roleArns(roleArns: Collection<String>) {
         _roleArns.addAll(roleArns)
     }
 
     /**
-     * @param sessionPolicy A session policy that will applied to the trust boundary of the vended
+     * @param sessionPolicy A session policy that applies to the trust boundary of the vended
      *   session credentials.
      */
     public fun sessionPolicy(sessionPolicy: String) {
         cdkBuilder.sessionPolicy(sessionPolicy)
     }
 
-    /** @param tags A list of Tags. */
+    /** @param tags The tags to attach to the profile. */
     public fun tags(tags: CfnTagDsl.() -> Unit) {
         _tags.add(CfnTagDsl().apply(tags).build())
     }
 
-    /** @param tags A list of Tags. */
+    /** @param tags The tags to attach to the profile. */
     public fun tags(tags: Collection<CfnTag>) {
         _tags.addAll(tags)
     }

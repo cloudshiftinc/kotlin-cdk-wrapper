@@ -296,6 +296,10 @@ public inline fun IUsagePlan.addApiKey(arg0: IApiKey, block: AddApiKeyOptionsDsl
 /**
  * Add a method response to this method.
  *
+ * You should only add one method reponse for every status code. The API allows it for historical
+ * reasons, but will add a warning if this happens. If you do, your Method will nondeterministically
+ * use one of the responses, and ignore the rest.
+ *
  * @param methodResponse
  */
 public inline fun Method.addMethodResponse(block: MethodResponseDsl.() -> Unit = {}) {

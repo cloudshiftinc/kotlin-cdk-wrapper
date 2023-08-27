@@ -1133,7 +1133,7 @@ public class CfnDBInstanceDsl(
      *
      * *Oracle*
      *
-     * Valid values: `alert` , `audit` , `listener` , `trace`
+     * Valid values: `alert` , `audit` , `listener` , `trace` , `oemagent`
      *
      * *PostgreSQL*
      *
@@ -1173,7 +1173,7 @@ public class CfnDBInstanceDsl(
      *
      * *Oracle*
      *
-     * Valid values: `alert` , `audit` , `listener` , `trace`
+     * Valid values: `alert` , `audit` , `listener` , `trace` , `oemagent`
      *
      * *PostgreSQL*
      *

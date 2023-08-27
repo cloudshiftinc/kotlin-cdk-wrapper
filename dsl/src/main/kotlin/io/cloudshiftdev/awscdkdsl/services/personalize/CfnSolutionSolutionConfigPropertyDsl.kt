@@ -48,12 +48,12 @@ public class CfnSolutionSolutionConfigPropertyDsl {
     private val cdkBuilder: CfnSolution.SolutionConfigProperty.Builder =
         CfnSolution.SolutionConfigProperty.builder()
 
-    /** @param algorithmHyperParameters Lists the hyperparameter names and ranges. */
+    /** @param algorithmHyperParameters Lists the algorithm hyperparameters and their values. */
     public fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>) {
         cdkBuilder.algorithmHyperParameters(algorithmHyperParameters)
     }
 
-    /** @param algorithmHyperParameters Lists the hyperparameter names and ranges. */
+    /** @param algorithmHyperParameters Lists the algorithm hyperparameters and their values. */
     public fun algorithmHyperParameters(algorithmHyperParameters: IResolvable) {
         cdkBuilder.algorithmHyperParameters(algorithmHyperParameters)
     }

@@ -15,6 +15,7 @@ import io.cloudshiftdev.awscdkdsl.CfnTagDsl
 import io.cloudshiftdev.awscdkdsl.common.CdkDslMarker
 import io.cloudshiftdev.awscdkdsl.common.MapBuilder
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -40,6 +41,7 @@ import software.constructs.Construct
  * import software.amazon.awscdk.services.ecr.*;
  * Object repositoryPolicyText;
  * CfnRepository cfnRepository = CfnRepository.Builder.create(this, "MyCfnRepository")
+ * .emptyOnDelete(false)
  * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
  * .encryptionType("encryptionType")
  * // the properties below are optional
@@ -72,6 +74,34 @@ public class CfnRepositoryDsl(
     private val cdkBuilder: CfnRepository.Builder = CfnRepository.Builder.create(scope, id)
 
     private val _tags: MutableList<CfnTag> = mutableListOf()
+
+    /**
+     * If true, deleting the repository force deletes the contents of the repository.
+     *
+     * Without a force delete, you can only delete empty repositories.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-emptyondelete)
+     *
+     * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
+     *   repository.
+     */
+    public fun emptyOnDelete(emptyOnDelete: Boolean) {
+        cdkBuilder.emptyOnDelete(emptyOnDelete)
+    }
+
+    /**
+     * If true, deleting the repository force deletes the contents of the repository.
+     *
+     * Without a force delete, you can only delete empty repositories.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-emptyondelete)
+     *
+     * @param emptyOnDelete If true, deleting the repository force deletes the contents of the
+     *   repository.
+     */
+    public fun emptyOnDelete(emptyOnDelete: IResolvable) {
+        cdkBuilder.emptyOnDelete(emptyOnDelete)
+    }
 
     /**
      * The encryption configuration for the repository.

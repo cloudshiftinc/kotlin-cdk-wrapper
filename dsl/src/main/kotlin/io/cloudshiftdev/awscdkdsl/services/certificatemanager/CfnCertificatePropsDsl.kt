@@ -41,6 +41,7 @@ import software.amazon.awscdk.services.certificatemanager.CfnCertificateProps
  * .hostedZoneId("hostedZoneId")
  * .validationDomain("validationDomain")
  * .build()))
+ * .keyAlgorithm("keyAlgorithm")
  * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -145,6 +146,11 @@ public class CfnCertificatePropsDsl {
      */
     public fun domainValidationOptions(domainValidationOptions: IResolvable) {
         cdkBuilder.domainValidationOptions(domainValidationOptions)
+    }
+
+    /** @param keyAlgorithm the value to be set. */
+    public fun keyAlgorithm(keyAlgorithm: String) {
+        cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
     /**

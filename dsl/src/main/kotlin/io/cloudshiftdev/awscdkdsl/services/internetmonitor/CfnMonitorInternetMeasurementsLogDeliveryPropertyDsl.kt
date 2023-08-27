@@ -41,22 +41,16 @@ public class CfnMonitorInternetMeasurementsLogDeliveryPropertyDsl {
         CfnMonitor.InternetMeasurementsLogDeliveryProperty.builder()
 
     /**
-     * @param s3Config The configuration information for publishing Amazon CloudWatch Internet
-     *   Monitor internet measurements to Amazon S3. The configuration includes the bucket name and
-     *   (optionally) bucket prefix for the S3 bucket to store the measurements, and the delivery
-     *   status. The delivery status is `ENABLED` if you choose to deliver internet measurements to
-     *   an S3 bucket, and `DISABLED` otherwise.
+     * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor internet
+     *   measurements to Amazon S3.
      */
     public fun s3Config(s3Config: IResolvable) {
         cdkBuilder.s3Config(s3Config)
     }
 
     /**
-     * @param s3Config The configuration information for publishing Amazon CloudWatch Internet
-     *   Monitor internet measurements to Amazon S3. The configuration includes the bucket name and
-     *   (optionally) bucket prefix for the S3 bucket to store the measurements, and the delivery
-     *   status. The delivery status is `ENABLED` if you choose to deliver internet measurements to
-     *   an S3 bucket, and `DISABLED` otherwise.
+     * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor internet
+     *   measurements to Amazon S3.
      */
     public fun s3Config(s3Config: CfnMonitor.S3ConfigProperty) {
         cdkBuilder.s3Config(s3Config)
