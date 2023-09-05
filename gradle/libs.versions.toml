@@ -22,7 +22,7 @@ junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
 
 # Kotest
-kotest-bom = { module = "io.kotest:kotest-bom", version = "5.6.2" }
+kotest-bom = { module = "io.kotest:kotest-bom", version = "5.7.2" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core" }
 kotest-assertions-json = { module = "io.kotest:kotest-assertions-json" }
 kotest-framework-datatest = { module = "io.kotest:kotest-framework-datatest" }
